@@ -1,5 +1,5 @@
 {
-  "revision": "4b6f0629ffedd99c5529882ed74341d9402e6ef0",
+  "revision": "dcd1e1cfe4036c2af309c5a1a451adf659e62417",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "eecce7ca7bb0b4fd56041f5d36729dc914ad9e1348af18a469ed53800a8f511f",
-      "importedSha256": "eecce7ca7bb0b4fd56041f5d36729dc914ad9e1348af18a469ed53800a8f511f"
+      "sourceSha256": "022d65282fa6a3f9400919a4db172afa0fa6f1bdcfaefe108e4b4f672b25adf1",
+      "importedSha256": "022d65282fa6a3f9400919a4db172afa0fa6f1bdcfaefe108e4b4f672b25adf1"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -800,6 +800,21 @@
       "path": "content/laryngeal-muscle-imaging.ts",
       "sourceSha256": "0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb",
       "importedSha256": "0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb"
+    },
+    {
+      "path": "lib/glottic-muscle-imaging.ts",
+      "sourceSha256": "6a96c243bec49a5cfe910e86f96569de1160271b70c86d60fc1e31782ce3f513",
+      "importedSha256": "6a96c243bec49a5cfe910e86f96569de1160271b70c86d60fc1e31782ce3f513"
+    },
+    {
+      "path": "content/glottic-muscle-imaging-pins.json",
+      "sourceSha256": "d3aa44c74e940fe6d46bf44a045375b69aa8f06d6390599a58ca6351e3cecaef",
+      "importedSha256": "d3aa44c74e940fe6d46bf44a045375b69aa8f06d6390599a58ca6351e3cecaef"
+    },
+    {
+      "path": "content/glottic-muscle-imaging.ts",
+      "sourceSha256": "c2e291711712b7da77fe321410900141896b0fb904f1bc8b8151fd74ecaa1bc4",
+      "importedSha256": "c2e291711712b7da77fe321410900141896b0fb904f1bc8b8151fd74ecaa1bc4"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3153,8 +3168,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "fea1faebe397833cecc6b7c190bd3fbe706aaa72c4c99dfb4ff9ffa0a37afd17",
-      "importedSha256": "bcb6cabe6eb22df02559d74ad718a87d5a44620605c0cf09ee0bcab3d7c212f6"
+      "sourceSha256": "d905c5cfec26fcddbb522453e00dc244ebefd4c7bdfca19fa5cf8f7369581366",
+      "importedSha256": "b2a0fd49e2821bdbcf7990af7920c3664a72aea767dff4104182ab8043a25d97"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3514,7 +3529,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "8b26df21d1bc309a6f76608829572a0b82352b243a6d6d0508d5d3d3614131b4"
+      "importedSha256": "53d0bcb9ff1008af26c1f376317280c003f23914d74990cb5aab103277aa399a"
     },
     {
       "path": "app/review/review.css",
@@ -3548,8 +3563,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "4f3c2b9ccb122cea6193573e49a209473daaf59f5ae7791a2f9b5fad97f0c59e",
-      "importedSha256": "4f3c2b9ccb122cea6193573e49a209473daaf59f5ae7791a2f9b5fad97f0c59e"
+      "sourceSha256": "14eb2f8e2f5548f868a24fac2ec6cd171a1f91b5b8df0fbe221dba7d723b315d",
+      "importedSha256": "14eb2f8e2f5548f868a24fac2ec6cd171a1f91b5b8df0fbe221dba7d723b315d"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4998,5 +5013,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "5ed396603528e38e2e0141f4604c5dc73efde91a06715f22e5f7c5a5f1c26bcf"
+  "websiteIntegrationSha256": "2f763aaa9e13b7bc5fb1e24301e7adf011244e389dcb36fc296a2e2443afea9a"
 }

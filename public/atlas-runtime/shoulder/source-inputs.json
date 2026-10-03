@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "eecce7ca7bb0b4fd56041f5d36729dc914ad9e1348af18a469ed53800a8f511f"
+    "sha256": "022d65282fa6a3f9400919a4db172afa0fa6f1bdcfaefe108e4b4f672b25adf1"
   },
   {
     "path": "app/body-explorer.css",
@@ -590,6 +590,14 @@
   {
     "path": "content/genicular-study.ts",
     "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+  },
+  {
+    "path": "content/glottic-muscle-imaging-pins.json",
+    "sha256": "d3aa44c74e940fe6d46bf44a045375b69aa8f06d6390599a58ca6351e3cecaef"
+  },
+  {
+    "path": "content/glottic-muscle-imaging.ts",
+    "sha256": "c2e291711712b7da77fe321410900141896b0fb904f1bc8b8151fd74ecaa1bc4"
   },
   {
     "path": "content/hallux-xray.ts",
@@ -1694,6 +1702,10 @@
   {
     "path": "lib/genicular-study.ts",
     "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
+  },
+  {
+    "path": "lib/glottic-muscle-imaging.ts",
+    "sha256": "6a96c243bec49a5cfe910e86f96569de1160271b70c86d60fc1e31782ce3f513"
   },
   {
     "path": "lib/hallux-xray.ts",

@@ -1,0 +1,341 @@
+{
+  "parentCommit": "4b6f0629ffedd99c5529882ed74341d9402e6ef0",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "77d35582091422cdeff473e2c5177a4ff204d94b7293813ac56165ba0c00ed42",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-thyro-arytenoid",
+        "fmaId": "FMA46589",
+        "name": "Right thyro-arytenoid",
+        "sourceName": "right thyro-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46589",
+        "bounds": {
+          "min": [
+            -0.08777830004692078,
+            6.023499965667725,
+            0.45842498540878296
+          ],
+          "max": [
+            -0.002617579884827137,
+            6.299699783325195,
+            0.6751999855041504
+          ]
+        },
+        "center": [
+          -0.04519793996587396,
+          6.16159987449646,
+          0.5668124854564667
+        ],
+        "anchor": [
+          -0.05627499893307686,
+          6.156500339508057,
+          0.5651699900627136
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2802",
+            "sha256": "68d5990536538ba707bd1b1b967b7ab14266ed74e5f0d1e33230a5922181c322"
+          },
+          {
+            "file": "FJ2803",
+            "sha256": "fd38f2f5befd554ba19bd4fbab0d0a4ae137a59bb24d3dd0852eb5caa910d3e2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "thyroarytenoid",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-thyro-arytenoid",
+        "fmaId": "FMA46590",
+        "name": "Left thyro-arytenoid",
+        "sourceName": "left thyro-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46590",
+        "bounds": {
+          "min": [
+            -0.010459099896252155,
+            6.023199558258057,
+            0.45855697989463806
+          ],
+          "max": [
+            0.07469220459461212,
+            6.299699783325195,
+            0.6751899719238281
+          ]
+        },
+        "center": [
+          0.03211655234917998,
+          6.161449670791626,
+          0.5668734759092331
+        ],
+        "anchor": [
+          0.04407879710197449,
+          6.159899711608887,
+          0.5665500164031982
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2784",
+            "sha256": "6b0698f8b6a6cb877d3610dc959abe0b9c4691bb6e746fd85c8e523fcebc74a9"
+          },
+          {
+            "file": "FJ2785",
+            "sha256": "a785608978d62c2c14f2057cfe2606fe183523dbf92fc587801234bc0be41e2a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "thyroarytenoid",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+        "fmaId": "FMA46592",
+        "name": "Right vocalis",
+        "sourceName": "right vocalis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46592",
+        "bounds": {
+          "min": [
+            -0.0408702977001667,
+            6.036899566650391,
+            0.5087999701499939
+          ],
+          "max": [
+            -0.024958301335573196,
+            6.051300048828125,
+            0.6497099995613098
+          ]
+        },
+        "center": [
+          -0.03291429951786995,
+          6.044099807739258,
+          0.5792549848556519
+        ],
+        "anchor": [
+          -0.032070599496364594,
+          6.045300483703613,
+          0.5802200436592102
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2806",
+            "sha256": "f4b83790f1c6364785f6ec6a8428443e7f20cfe48ed9a14234bb8aff1d80f2a9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "vocalis",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+        "fmaId": "FMA46593",
+        "name": "Left vocalis",
+        "sourceName": "left vocalis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46593",
+        "bounds": {
+          "min": [
+            0.01183099951595068,
+            6.036999702453613,
+            0.5088300108909607
+          ],
+          "max": [
+            0.02770490013062954,
+            6.051300048828125,
+            0.6497899889945984
+          ]
+        },
+        "center": [
+          0.01976794982329011,
+          6.044149875640869,
+          0.5793099999427795
+        ],
+        "anchor": [
+          0.018701201304793358,
+          6.0455002784729,
+          0.579509973526001
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2788",
+            "sha256": "dd26f669e127e5c5fae7ff796da0f516887f8c3834bbde1f2881d3a222cc2375"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "vocalis",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

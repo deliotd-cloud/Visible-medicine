@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-glottic-imaging-history.ts';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build} from './atlas-pre-glottic-imaging-history.ts';
+import {emittedTeaching} from './atlas-pre-glottic-imaging-history.ts';
 const source='4b6f0629ffedd99c5529882ed74341d9402e6ef0',baseline='7ad008589684b622efc6a31f5254d05676991683';
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));

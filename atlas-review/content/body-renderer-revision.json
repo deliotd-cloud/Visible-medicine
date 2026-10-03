@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "eecce7ca7bb0b4fd56041f5d36729dc914ad9e1348af18a469ed53800a8f511f"
+      "sha256": "022d65282fa6a3f9400919a4db172afa0fa6f1bdcfaefe108e4b4f672b25adf1"
     },
     {
       "path": "app/body-education-link.ts",
@@ -967,6 +967,14 @@
     {
       "path": "content/genicular-study.ts",
       "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
+    },
+    {
+      "path": "content/glottic-muscle-imaging-pins.json",
+      "sha256": "d3aa44c74e940fe6d46bf44a045375b69aa8f06d6390599a58ca6351e3cecaef"
+    },
+    {
+      "path": "content/glottic-muscle-imaging.ts",
+      "sha256": "c2e291711712b7da77fe321410900141896b0fb904f1bc8b8151fd74ecaa1bc4"
     },
     {
       "path": "content/hallux-xray.ts",
@@ -2473,6 +2481,10 @@
       "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
     },
     {
+      "path": "lib/glottic-muscle-imaging.ts",
+      "sha256": "6a96c243bec49a5cfe910e86f96569de1160271b70c86d60fc1e31782ce3f513"
+    },
+    {
       "path": "lib/hallux-xray.ts",
       "sha256": "87f3bb780aeb9c25ca308059cae5207891ef69e5e6b5dc0616528f0ccc5eb699"
     },
@@ -3749,7 +3761,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "202cd3559bd18d06f7befd01287249c67ce7edf314bfdfada6e537ada36fd41f",
-  "sourceRendererSha256": "32d643e631c9bdc4f5ae17c9005e7a8389482a9d12069ef8c6d66822b616c77c",
-  "websiteIntegrationSha256": "5ed396603528e38e2e0141f4604c5dc73efde91a06715f22e5f7c5a5f1c26bcf"
+  "sha256": "1b297790d1f8c607991f07a307223534f340dada03dfaece55f635dc23587995",
+  "sourceRendererSha256": "d39b1626b3a1264da3192d2700cf249620bd9f62e1d44c86bb40380b91fdee00",
+  "websiteIntegrationSha256": "2f763aaa9e13b7bc5fb1e24301e7adf011244e389dcb36fc296a2e2443afea9a"
 }

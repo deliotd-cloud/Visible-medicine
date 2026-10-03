@@ -16,6 +16,7 @@ import { halluxXrayLesson } from '../lib/hallux-xray';
 import { properDigitalTeachingLesson } from '../lib/proper-digital-teaching';
 import { spinalDiscFunctionLesson } from '../lib/spinal-disc-function';
 import { laryngealMuscleImagingLesson } from '../lib/laryngeal-muscle-imaging';
+import { glotticMuscleImagingLesson } from '../lib/glottic-muscle-imaging';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -309,6 +310,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalMri) return orbitalMri;
   const laryngealMuscle = laryngealMuscleImagingLesson(s, tab);
   if (laryngealMuscle) return laryngealMuscle;
+  const glotticMuscle = glotticMuscleImagingLesson(s, tab);
+  if (glotticMuscle) return glotticMuscle;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);
