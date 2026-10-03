@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import { SiteFrame } from "../components/SiteFrame";
 import { SplashScreen } from "../components/SplashScreen";
+import { LocalAtlasDiagnostics } from "../components/LocalAtlasDiagnostics";
 import { SPLASH_BOOTSTRAP_SCRIPT } from "../lib/splash-intro";
 import { getChatGPTUser } from "./chatgpt-auth";
 import "./globals.css";
@@ -51,6 +52,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body className={geistMono.variable}>
         <SplashScreen />
         <SiteFrame signedIn={signedIn}>{children}</SiteFrame>
+        {process.env.NODE_ENV === "development" && <LocalAtlasDiagnostics enabled />}
       </body>
     </html>
   );
