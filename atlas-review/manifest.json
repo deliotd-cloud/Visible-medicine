@@ -1,5 +1,5 @@
 {
-  "revision": "182a60bd8942998f808fff87f8a6aa4d8c49f39a",
+  "revision": "4b6f0629ffedd99c5529882ed74341d9402e6ef0",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2778,8 +2778,8 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sourceSha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe",
-      "importedSha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
+      "sourceSha256": "634bf2054f1c1494609b094c11092e1ab5166833b9c5c16a805ab77ea439b4e5",
+      "importedSha256": "634bf2054f1c1494609b094c11092e1ab5166833b9c5c16a805ab77ea439b4e5"
     },
     {
       "path": "lib/forearm-reasoning.ts",
@@ -2870,6 +2870,16 @@
       "path": "content/thoracic-core-reasoning-pins.json",
       "sourceSha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f",
       "importedSha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
+    },
+    {
+      "path": "lib/lower-venous-reasoning.ts",
+      "sourceSha256": "5fa9a7498b80cd482474776dbc055bd3c157058519a49c293add1201bf197aa9",
+      "importedSha256": "5fa9a7498b80cd482474776dbc055bd3c157058519a49c293add1201bf197aa9"
+    },
+    {
+      "path": "content/lower-venous-reasoning-pins.json",
+      "sourceSha256": "58d093f2f9030b02a05272eacf9ea5168acf9c7acd6c4d5fa0cffe40b6e0f472",
+      "importedSha256": "58d093f2f9030b02a05272eacf9ea5168acf9c7acd6c4d5fa0cffe40b6e0f472"
     },
     {
       "path": "lib/regional-tours.ts",
@@ -3143,8 +3153,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "a5e4fc3f37e1ea3494e5988e55060bf828ae295744f4bd299d5f730b39be86b1",
-      "importedSha256": "7eb7df24f35a6713da01fb76240046e64e6f8e247310c200b6371c5305907dc6"
+      "sourceSha256": "fea1faebe397833cecc6b7c190bd3fbe706aaa72c4c99dfb4ff9ffa0a37afd17",
+      "importedSha256": "bcb6cabe6eb22df02559d74ad718a87d5a44620605c0cf09ee0bcab3d7c212f6"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3504,7 +3514,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "4a3226374da16ace3672992b6d3c8931e93f5a0ce301515042dfe7a5bdefbe25"
+      "importedSha256": "8b26df21d1bc309a6f76608829572a0b82352b243a6d6d0508d5d3d3614131b4"
     },
     {
       "path": "app/review/review.css",
@@ -3538,8 +3548,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "2124583662547e91c83079ee1353a33eec7133f6d21869be2e12455c151abbe5",
-      "importedSha256": "2124583662547e91c83079ee1353a33eec7133f6d21869be2e12455c151abbe5"
+      "sourceSha256": "4f3c2b9ccb122cea6193573e49a209473daaf59f5ae7791a2f9b5fad97f0c59e",
+      "importedSha256": "4f3c2b9ccb122cea6193573e49a209473daaf59f5ae7791a2f9b5fad97f0c59e"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4988,5 +4998,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "3c03b54a89f5625c23580b54816a4f3029dd65f2371f413c0e06ec62d97b1159"
+  "websiteIntegrationSha256": "5ed396603528e38e2e0141f4604c5dc73efde91a06715f22e5f7c5a5f1c26bcf"
 }

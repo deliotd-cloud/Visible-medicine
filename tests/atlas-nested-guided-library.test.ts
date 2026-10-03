@@ -8,7 +8,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {desktopLayoutImportMilestone,withoutCubitalVenousUltrasoundNotice} from './atlas-cubital-ultrasound-history.ts';
 
-const source='182a60bd8942998f808fff87f8a6aa4d8c49f39a';
+const source='4b6f0629ffedd99c5529882ed74341d9402e6ef0';
 const baseline='3d67b5575a49e302b0da7c4c55a5d6f3a033b003';
 const old=(path:string)=>Buffer.from(execFileSync('git',['show',baseline+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -30,7 +30,7 @@ async function load(previousRenderer=false){
 
 test('nested library source, exact eye options and credits reach learner and protected review without new models or access',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,994);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,996);assert.deepEqual(review.packages,prior.packages);
  const milestone=desktopLayoutImportMilestone();
  assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),
   ['content/nested-guided-learning-bindings.v1.json','lib/nested-guided-learning.ts']);
@@ -78,7 +78,7 @@ test('nested library source, exact eye options and credits reach learner and pro
   'Prior protected notice has exactly one source revision line');
  assert.equal(withoutCubitalVenousUltrasoundNotice(readFileSync('public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt','utf8')),
   priorCredits.replace('Atlas source: 03da432b035d1dca7cc9f3344ee2722af627d859\n',
-   'Atlas source: 182a60bd8942998f808fff87f8a6aa4d8c49f39a\n'),
+   'Atlas source: 4b6f0629ffedd99c5529882ed74341d9402e6ef0\n'),
   'Protected viewer credits retain every byte after the source revision header');
  // Source registry gained three exact MCA drafts later, tested across all live
  // contexts in atlas-mca-source-teaching; keep this epoch byte check historical.

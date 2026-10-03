@@ -1245,6 +1245,10 @@
       "sha256": "107dc5c3938bfe14c68d717ada5e703f7f3ae05462f50612827f3eb5265bc66b"
     },
     {
+      "path": "content/lower-venous-reasoning-pins.json",
+      "sha256": "58d093f2f9030b02a05272eacf9ea5168acf9c7acd6c4d5fa0cffe40b6e0f472"
+    },
+    {
       "path": "content/lumbar-sacral-quiz-pins.json",
       "sha256": "32b5975b8b2a0445cb20191611eb99c441b86000fc13df54fdcc2b10814715d2"
     },
@@ -2821,6 +2825,10 @@
       "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
     },
     {
+      "path": "lib/lower-venous-reasoning.ts",
+      "sha256": "5fa9a7498b80cd482474776dbc055bd3c157058519a49c293add1201bf197aa9"
+    },
+    {
       "path": "lib/lower-venous-tour.ts",
       "sha256": "74a74ed5a036b478766d965632f3ae501860b1aacb1b4bd9040116ba735efe06"
     },
@@ -3058,7 +3066,7 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
+      "sha256": "634bf2054f1c1494609b094c11092e1ab5166833b9c5c16a805ab77ea439b4e5"
     },
     {
       "path": "lib/rectal-deferent-imaging.ts",
@@ -3741,7 +3749,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f9c0a01a33110cd6a6ae34bbc097b626f18ab4ff406ad0e8298fa154ef99b86c",
-  "sourceRendererSha256": "9e31020f773418b716e699d2fb6026e4c9db2dd0bd54b10d3bd63535adf2c71b",
-  "websiteIntegrationSha256": "3c03b54a89f5625c23580b54816a4f3029dd65f2371f413c0e06ec62d97b1159"
+  "sha256": "202cd3559bd18d06f7befd01287249c67ce7edf314bfdfada6e537ada36fd41f",
+  "sourceRendererSha256": "32d643e631c9bdc4f5ae17c9005e7a8389482a9d12069ef8c6d66822b616c77c",
+  "websiteIntegrationSha256": "5ed396603528e38e2e0141f4604c5dc73efde91a06715f22e5f7c5a5f1c26bcf"
 }

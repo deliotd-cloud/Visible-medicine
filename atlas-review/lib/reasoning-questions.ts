@@ -16,6 +16,7 @@ import { upperArmReasoningConcepts } from './upper-arm-reasoning';
 import { upperLimbBoneReasoningConcepts, upperLimbBoneReasoningSourceMatches } from './upper-limb-bone-reasoning';
 import { lowerLimbBoneReasoningConcepts, lowerLimbBoneReasoningSourceMatches } from './lower-limb-bone-reasoning';
 import { thoracicCoreReasoningConcepts, thoracicCoreReasoningSourceMatches } from './thoracic-core-reasoning';
+import { lowerVenousReasoningConcepts, lowerVenousReasoningSourceMatches } from './lower-venous-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' | 'unspecified' } & (
   | { file: string; files?: never }
@@ -360,6 +361,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...upperLimbBoneReasoningConcepts,
   ...lowerLimbBoneReasoningConcepts,
   ...thoracicCoreReasoningConcepts,
+  ...lowerVenousReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
@@ -370,7 +372,7 @@ export function reasoningConceptFor(s: BodyStructure) {
     (c) =>
       s.system === (c.sourceTissue === 'bone' ? 'skeleton' : c.sourceTissue === 'organ' ? 'organs' : c.sourceTissue === 'neural-organ' ? 'nerves' : c.sourceTissue === 'vessel' ? 'vessels' : 'muscles') &&
       s.category === (c.sourceTissue === 'bone' ? 'bone' : c.sourceTissue === 'organ' || c.sourceTissue === 'neural-organ' ? 'organ' : c.sourceTissue === 'vessel' ? 'vessel' : 'muscle') &&
-      (c.sourceTissue !== 'vessel' || thoracicVesselReasoningSourceMatches(s, c.key)) &&
+      (c.sourceTissue !== 'vessel' || thoracicVesselReasoningSourceMatches(s, c.key) || lowerVenousReasoningSourceMatches(s, c.key)) &&
       (c.sourceTissue !== 'bone' || upperLimbBoneReasoningSourceMatches(s, c.key) || lowerLimbBoneReasoningSourceMatches(s, c.key)) &&
       (!c.key.startsWith('thoracic-core-') || thoracicCoreReasoningSourceMatches(s, c.key)) &&
       s.sourceTree === (c.sourceTree ?? 'isa') &&

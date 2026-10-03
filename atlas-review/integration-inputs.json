@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "182a60bd8942998f808fff87f8a6aa4d8c49f39a",
-  "sha256": "3c03b54a89f5625c23580b54816a4f3029dd65f2371f413c0e06ec62d97b1159",
+  "sourceCommit": "4b6f0629ffedd99c5529882ed74341d9402e6ef0",
+  "sha256": "5ed396603528e38e2e0141f4604c5dc73efde91a06715f22e5f7c5a5f1c26bcf",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "2124583662547e91c83079ee1353a33eec7133f6d21869be2e12455c151abbe5"
+      "sha256": "4f3c2b9ccb122cea6193573e49a209473daaf59f5ae7791a2f9b5fad97f0c59e"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1401,6 +1401,10 @@
     {
       "path": "atlas-review/content/lower-venous-imaging.ts",
       "sha256": "107dc5c3938bfe14c68d717ada5e703f7f3ae05462f50612827f3eb5265bc66b"
+    },
+    {
+      "path": "atlas-review/content/lower-venous-reasoning-pins.json",
+      "sha256": "58d093f2f9030b02a05272eacf9ea5168acf9c7acd6c4d5fa0cffe40b6e0f472"
     },
     {
       "path": "atlas-review/content/lumbar-sacral-quiz-pins.json",
@@ -3039,6 +3043,10 @@
       "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
     },
     {
+      "path": "atlas-review/lib/lower-venous-reasoning.ts",
+      "sha256": "5fa9a7498b80cd482474776dbc055bd3c157058519a49c293add1201bf197aa9"
+    },
+    {
       "path": "atlas-review/lib/lower-venous-tour.ts",
       "sha256": "74a74ed5a036b478766d965632f3ae501860b1aacb1b4bd9040116ba735efe06"
     },
@@ -3304,7 +3312,7 @@
     },
     {
       "path": "atlas-review/lib/reasoning-questions.ts",
-      "sha256": "6720580471dbc6ec84e54a50d3a5dc24818a67f529e8a5ed1674a4c57b5261fe"
+      "sha256": "634bf2054f1c1494609b094c11092e1ab5166833b9c5c16a805ab77ea439b4e5"
     },
     {
       "path": "atlas-review/lib/rectal-deferent-imaging.ts",
@@ -4060,7 +4068,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "2168f19d9f72a7ff536f0da4d598dcf76a6704c3d9bb0bce6eccaa18c408c201"
+      "sha256": "dce64346fb42bc2e24abc9fc685e3b4e5c3e0c06069c0a3ad9c4600a30239f99"
     }
   ]
 }

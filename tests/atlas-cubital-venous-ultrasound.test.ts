@@ -7,7 +7,7 @@ import {dirname} from 'node:path';
 import {build} from 'esbuild';
 import {withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 
-const source='182a60bd8942998f808fff87f8a6aa4d8c49f39a';
+const source='4b6f0629ffedd99c5529882ed74341d9402e6ef0';
 const beforeWebsite='4aa346e7923e3b303ad869d71e0ea36044d61aa6';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -27,7 +27,7 @@ async function reviewApi(previous=false,cubitalMilestone=false){
 
 test('four exact superficial veins deliver original ultrasound orientation to learner and protected review without new models or access',async()=>{
  const review=json('atlas-review/manifest.json'),priorReview=JSON.parse(old('atlas-review/manifest.json').toString('utf8'));
- assert.equal(review.revision,source);assert.equal(review.files.length,994);assert.deepEqual(review.packages,priorReview.packages);
+ assert.equal(review.revision,source);assert.equal(review.files.length,996);assert.deepEqual(review.packages,priorReview.packages);
  // Keep this editorial delta at its saved epoch; current Spread delta is tested separately.
  const cubitalMilestone=JSON.parse(execFileSync('git',['show','167c77f4da6ec16455093008dcacea250b0a6678:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
  assert.equal(cubitalMilestone.files.length,946);
@@ -37,7 +37,7 @@ test('four exact superficial veins deliver original ultrasound orientation to le
  assert.deepEqual(new Set(catalog.structures.map((s:any)=>s.fmaId)),targetFmas);
  assert.deepEqual(catalog.structures.map((s:any)=>s.sources[0].file),['FJ2287','FJ2235','FJ2286','FJ2234']);
  const learner=json('public/atlas-runtime/head-neck/manifest.json'),inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(learner.sourceCommit,source);assert.equal(inputs.length,967);
+ assert.equal(learner.sourceCommit,source);assert.equal(inputs.length,969);
  const text=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>{const b=readFileSync('public/atlas-runtime/head-neck/'+f.path);assert.equal(sha(b),f.sha256);return new TextDecoder().decode(b);}).join('\n');
  for(const p of ['content/cubital-venous-ultrasound.ts','lib/cubital-venous-ultrasound.ts'])assert(inputs.some((i:any)=>i.path===p));
  for(const s of catalog.structures){const packet=await api.bodyReviewMaterial(s.id);assert(packet);assert.equal(packet.approval,false);assert.deepEqual(packet.source.structure,s);
