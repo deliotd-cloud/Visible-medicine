@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "36a2ab5f8fe573347bdeda04def3eb5634b8c44607e9a1db6df6946b06aac3b9"
+    "sha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b"
   },
   {
     "path": "app/body-explorer.css",
@@ -686,6 +686,14 @@
   {
     "path": "content/hip-imaging-pins.json",
     "sha256": "aa6a306d480e42c8af77a628537fcb7fd694217e97a93e60bbd824c5fa8103c5"
+  },
+  {
+    "path": "content/hyoid-epiglottis-ultrasound-pins.json",
+    "sha256": "baa5d4b605502bb64702c1d7a0e642c34fdfb28fa564e380a6dff2f1c3b82467"
+  },
+  {
+    "path": "content/hyoid-epiglottis-ultrasound.ts",
+    "sha256": "3431e1f91b8a083525c1d8ab10680fd8b40b2d47233853084b8d642e97aa928e"
   },
   {
     "path": "content/iliac-arterial-imaging-pins.json",
@@ -1854,6 +1862,10 @@
   {
     "path": "lib/hippocampi.ts",
     "sha256": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31"
+  },
+  {
+    "path": "lib/hyoid-epiglottis-ultrasound.ts",
+    "sha256": "fc00e46a62afbdbd93e9cfb4f757c5274b3360054086cc8f96bde7b0f39b65e0"
   },
   {
     "path": "lib/iliac-arterial-imaging.ts",

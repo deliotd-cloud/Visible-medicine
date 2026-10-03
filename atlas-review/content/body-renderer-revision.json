@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "36a2ab5f8fe573347bdeda04def3eb5634b8c44607e9a1db6df6946b06aac3b9"
+      "sha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1099,6 +1099,14 @@
     {
       "path": "content/hra-renal-teaching.ts",
       "sha256": "71062f6e1be8255d660575d45ec19099b644d9383a8d0318a3e013ce5f952ac6"
+    },
+    {
+      "path": "content/hyoid-epiglottis-ultrasound-pins.json",
+      "sha256": "baa5d4b605502bb64702c1d7a0e642c34fdfb28fa564e380a6dff2f1c3b82467"
+    },
+    {
+      "path": "content/hyoid-epiglottis-ultrasound.ts",
+      "sha256": "3431e1f91b8a083525c1d8ab10680fd8b40b2d47233853084b8d642e97aa928e"
     },
     {
       "path": "content/iliac-arterial-imaging-pins.json",
@@ -2693,6 +2701,10 @@
       "sha256": "3b6d1e2cb4366a340f99ead5c92a94707ad583f12f4cf6699adaa90dcc1c945c"
     },
     {
+      "path": "lib/hyoid-epiglottis-ultrasound.ts",
+      "sha256": "fc00e46a62afbdbd93e9cfb4f757c5274b3360054086cc8f96bde7b0f39b65e0"
+    },
+    {
       "path": "lib/iliac-arterial-imaging.ts",
       "sha256": "88f5f3395a81f9712cbccc5dfdf5c111a03013012ecca26597383ac6662ec17d"
     },
@@ -3622,7 +3634,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "7b42b2fb48413d96a156d7b960c35f56ab623a2dd5ea1ff21912a351e1c9987c"
+      "sha256": "b0c00d81ba16cb9a85a72d5be30ef1db38080e46c769886a620aaedce55beaf8"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3837,7 +3849,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e58ef9bcffb3a6e33072602127e5d7f3e7dcd6caf0ba25a4c6b06ab7430c0710",
-  "sourceRendererSha256": "76c0deeaaed7ccdce9495f14157d1e1f2d48340004336dbcbfdb6ea02b097904",
-  "websiteIntegrationSha256": "40ee4aa18e99a768451cd59f4f57d7724712977818e55dc5f8dcbc2d5187d2a4"
+  "sha256": "527632d0beb6b82e2c8d5fa069abe41470a7ce9f8cf0f1947bb5951ce072427a",
+  "sourceRendererSha256": "99a437cede0c1f74acfa50f252581164e90d033a7933b968244426cf45864037",
+  "websiteIntegrationSha256": "6f5d2cbfd3b75f03407e83a0612042d8897aa85173d3cdd4c0250331cbe8e541"
 }

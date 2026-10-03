@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "6d1cece1ce6732070f0ea7a62cbc5e8690f4ef1f2df0a3742aec98d8ddba3397"
+    "sha256": "8b7d941b7df991b68a0b92200842976ad74e18700eb604adf18f4ee2437f4c80"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "36a2ab5f8fe573347bdeda04def3eb5634b8c44607e9a1db6df6946b06aac3b9"
+    "sha256": "e95640d66ab2cc88257091ea948a0048637032774efbcc53e0fb514f04641e4b"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1110,6 +1110,14 @@
   {
     "path": "content/hra-renal-teaching.ts",
     "sha256": "71062f6e1be8255d660575d45ec19099b644d9383a8d0318a3e013ce5f952ac6"
+  },
+  {
+    "path": "content/hyoid-epiglottis-ultrasound-pins.json",
+    "sha256": "baa5d4b605502bb64702c1d7a0e642c34fdfb28fa564e380a6dff2f1c3b82467"
+  },
+  {
+    "path": "content/hyoid-epiglottis-ultrasound.ts",
+    "sha256": "3431e1f91b8a083525c1d8ab10680fd8b40b2d47233853084b8d642e97aa928e"
   },
   {
     "path": "content/iliac-arterial-imaging-pins.json",
@@ -2786,6 +2794,10 @@
   {
     "path": "lib/hra-renal.ts",
     "sha256": "3b6d1e2cb4366a340f99ead5c92a94707ad583f12f4cf6699adaa90dcc1c945c"
+  },
+  {
+    "path": "lib/hyoid-epiglottis-ultrasound.ts",
+    "sha256": "fc00e46a62afbdbd93e9cfb4f757c5274b3360054086cc8f96bde7b0f39b65e0"
   },
   {
     "path": "lib/iliac-arterial-imaging.ts",
