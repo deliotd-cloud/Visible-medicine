@@ -35,6 +35,8 @@ import { handArterialTour } from './hand-arterial-tour';
 export { handArterialTour } from './hand-arterial-tour';
 import { lowerVenousTour } from './lower-venous-tour';
 export { lowerVenousTour } from './lower-venous-tour';
+import { handVenousTours,handVenousTourSourceMatches } from './hand-venous-tours';
+export { handVenousTours } from './hand-venous-tours';
 
 export type RegionalTour = {
   id: string; title: string; description: string; region: string; revision: string;
@@ -244,7 +246,7 @@ export const malePelvisTour: RegionalTour = {
     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
   ],
 };
-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour];
+export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
@@ -264,7 +266,8 @@ export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):Bo
     const matches=catalog.structures.filter(s=>s.id===id&&
       (scope?scope.some(region=>s.regions.includes(region)):s.regions.includes(tour.region)));
     if(matches.length!==1||catalog.bundles.filter(b=>b.id===matches[0].bundle).length!==1||
-      (tour.requiredDisplayBundles?.[id]&&matches[0].bundle!==tour.requiredDisplayBundles[id]))
+      (tour.requiredDisplayBundles?.[id]&&matches[0].bundle!==tour.requiredDisplayBundles[id])||
+      (handVenousTours.some(t=>t.id===tour.id)&&!handVenousTourSourceMatches(catalog,matches[0])))
       throw Error('The guided tour does not match the available anatomy source.');
     return matches[0];
   });

@@ -1,5 +1,5 @@
 {
-  "revision": "1517521a5ee3eed985fff01bcd8608965b693fae",
+  "revision": "2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2913,8 +2913,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "9d434a611ecd3dfa9132e363314f9cfd3900f2e84461e75e69eedfd0de2b6c59",
-      "importedSha256": "9d434a611ecd3dfa9132e363314f9cfd3900f2e84461e75e69eedfd0de2b6c59"
+      "sourceSha256": "64bf6534656a56d1f8439e82be1d937826ce8208c72cb8c3f8d18feb40df741b",
+      "importedSha256": "64bf6534656a56d1f8439e82be1d937826ce8208c72cb8c3f8d18feb40df741b"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -3010,6 +3010,11 @@
       "path": "lib/lower-venous-tour.ts",
       "sourceSha256": "74a74ed5a036b478766d965632f3ae501860b1aacb1b4bd9040116ba735efe06",
       "importedSha256": "74a74ed5a036b478766d965632f3ae501860b1aacb1b4bd9040116ba735efe06"
+    },
+    {
+      "path": "lib/hand-venous-tours.ts",
+      "sourceSha256": "bd9419cf7a23de7682d136e6516240984fe003d41672d7425bd445ff4035c404",
+      "importedSha256": "bd9419cf7a23de7682d136e6516240984fe003d41672d7425bd445ff4035c404"
     },
     {
       "path": "lib/nested-review-material.ts",
@@ -3183,8 +3188,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "926c72c3b8f5fa95f9e845b0c798500eab8147cc0eb86bbca8274fabadba31e9",
-      "importedSha256": "4d186b2c99d7cd50bbf35ce933a6aace1d1c77fe9a3b3bcee2107eddfdad8cf9"
+      "sourceSha256": "c727a2c2d9efbd4eabf7a00bf652a13a425a54e6cdb0656ac9dad18fe01a1103",
+      "importedSha256": "851bd462aef1a1f78fb2721af9717892bf9e91c542856567dc4301baca0e7ee4"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3544,7 +3549,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "f07ff3de3f5f0292a19657012c4360f936792eef46d2fa59591a5455e46179c2"
+      "importedSha256": "efe793d0366f771363098cb9a0681ecf62d08f3d53aa6b15eadad77d195ac8f4"
     },
     {
       "path": "app/review/review.css",
@@ -3578,8 +3583,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "355d478ec6b62d3fd316e687b7e2b23180eae80509673589ab4d2a616450f52f",
-      "importedSha256": "355d478ec6b62d3fd316e687b7e2b23180eae80509673589ab4d2a616450f52f"
+      "sourceSha256": "668737998fbb35835a8b4fd417eccb84792f3e07eee00307a0a733f6aa0cef75",
+      "importedSha256": "668737998fbb35835a8b4fd417eccb84792f3e07eee00307a0a733f6aa0cef75"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5028,5 +5033,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "3db25b1cb536e1324c41f38a5a437171580f7da8276586a6e5f9bef5fff1cf8e"
+  "websiteIntegrationSha256": "94a0301ad6bb977d246dfe6c232a5faf8c419f60ca81bec4bc14e48669f76cb2"
 }

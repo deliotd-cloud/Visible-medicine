@@ -16,7 +16,7 @@ test('held packet is distinct from unchanged learner and admitted review exports
  assert.equal(packet.meshes.filter((m:any)=>m.role==='candidate'&&m.held).length,4);
  assert.equal(packet.atlasInspectorRevision,'d9cd141f1fefae6842754e134a1ef18d5661c727');
  for(const path of ['atlas-review/manifest.json','public/atlas-runtime/head-neck/manifest.json','public/atlas-review-viewer/manifest.json']){
-  const imported=JSON.parse(readFileSync(path,'utf8'));assert.equal(imported.sourceCommit??imported.revision,'1517521a5ee3eed985fff01bcd8608965b693fae');
+  const imported=JSON.parse(readFileSync(path,'utf8'));assert.equal(imported.sourceCommit??imported.revision,'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
  }
  for(const path of ['public/optic-review','public/optic-comparison','public/atlas-review-viewer/scene.json'])assert.equal(existsSync(path),false,'Held geometry must not be public');
  assert.match(readFileSync('.local/optic-review/assets.ts','utf8'),/^import 'server-only';/);

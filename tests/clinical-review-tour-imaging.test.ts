@@ -21,11 +21,11 @@ async function teachingApi(historical=false){
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'1517521a5ee3eed985fff01bcd8608965b693fae');
+  assert.equal(review.revision,'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'1517521a5ee3eed985fff01bcd8608965b693fae');
+    assert.equal(learner.sourceCommit,'2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);
@@ -67,16 +67,16 @@ test('guided imaging notes reach both learners and review without inventing scan
   assert.ok(notes.includes('tabIndex={0}'));
 });
 
-test('current 163-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
-  const api=await teachingApi();let checked=0,handChecks=0,venousChecks=0;
-  const completedHandTours=api.regionalTours.filter((t:any)=>t.id!=='right-lower-limb-venous-orientation');
+test('current 177-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
+  const api=await teachingApi();let checked=0,handChecks=0,venousChecks=0,handVenousChecks=0;
+  const completedHandTours=api.regionalTours.filter((t:any)=>t.id!=='right-lower-limb-venous-orientation'&&!['right-hand-venous-orientation','left-hand-venous-orientation'].includes(t.id));
   assert.equal(completedHandTours.length,27);
   assert.equal(completedHandTours.reduce((n:number,t:any)=>n+t.steps.length,0),157);
   const earlierTours=completedHandTours.filter((t:any)=>t.id!=='right-hand-arterial-orientation');
   assert.equal(earlierTours.length,26);
   assert.equal(earlierTours.reduce((n:number,t:any)=>n+t.steps.length,0),150);
-  assert.equal(api.regionalTours.length,28);
-  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),163);
+  assert.equal(api.regionalTours.length,30);
+  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),177);
   assert.equal(api.regionalTours.find((t:any)=>t.id==='hepatobiliary-surface-orientation')?.steps.length,4);
   for(const tour of api.regionalTours)for(const step of tour.steps){
     const structure=api.regionalTourStructures(api.catalog,tour).find((s:any)=>s.id===step.selectedId);
@@ -89,6 +89,7 @@ test('current 163-stop guided imaging notes match unsigned learner/review teachi
       checked++;
       if(tour.id==='right-hand-arterial-orientation')handChecks++;
       if(tour.id==='right-lower-limb-venous-orientation')venousChecks++;
+      if(['right-hand-venous-orientation','left-hand-venous-orientation'].includes(tour.id))handVenousChecks++;
     }
   }
   for(const step of api.shoulderTour.steps){
@@ -97,8 +98,10 @@ test('current 163-stop guided imaging notes match unsigned learner/review teachi
   }
   assert.equal(handChecks,28);
   assert.equal(venousChecks,24);
-  assert.equal(checked-handChecks-venousChecks,620); // Original150 regional plus five shoulder stops.
-  assert.equal(checked-venousChecks,648); // Completed157 regional plus five shoulder stops.
-  assert.equal(checked,672); // Current163 regional plus five shoulder stops, four modalities.
+  assert.equal(handVenousChecks,56);
+  assert.equal(checked-handChecks-venousChecks-handVenousChecks,620); // Original150 regional plus five shoulder stops.
+  assert.equal(checked-venousChecks-handVenousChecks,648); // Completed157 regional plus five shoulder stops.
+  assert.equal(checked-handVenousChecks,672); // All 163 earlier regional plus five shoulder stops remain covered.
+  assert.equal(checked,728); // Current177 regional plus five shoulder stops, four modalities.
   assert.equal(api.circleWillisTour.steps.length,10);
 });
