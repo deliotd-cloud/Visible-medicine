@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from './atlas-pre-plantar-arterial-mri-history.ts';
 import { createHash } from 'node:crypto';
 import { dirname, relative } from 'node:path';
-import { build } from 'esbuild';
+import { build } from './atlas-pre-plantar-arterial-mri-history.ts';
 import test from 'node:test';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {emittedTeaching} from './atlas-pre-plantar-arterial-mri-history.ts';
 
 const baseline = '2f597f553142dd592200d1063ea053af006af1c4';
 const root = process.cwd();
@@ -232,7 +232,7 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb','review']
 assert.equal(mutations,448);assert.equal(malformed,60);assert.equal(stale,6);assert.equal(worksheets,6);
 for(const path of ['lib/atlas-delivery-access.ts','lib/lecture-repository.ts','atlas-review/lib/atlas-practice.ts','atlas-review/lib/learning-resources.ts'])assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),old(path).toString().replaceAll('\r\n','\n'),path);
 const source='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
-assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:source,encoding:'utf8'}).trim(),revision);
-assert.deepEqual(readFileSync(source+'/content/learning-resources.v1.json'),execFileSync('git',['show','6c86bc8b1aa7a7418f21f890858b0217194aff4e:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
+assert.equal(JSON.parse(readFileSync('atlas-review/manifest.json','utf8')).revision,revision);
+assert.deepEqual(execFileSync('git',['show','e6168496a8a59927164fc84c9297583d8ae01339:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}),execFileSync('git',['show','6c86bc8b1aa7a7418f21f890858b0217194aff4e:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
 
 });

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ae95d816b98e20e2fb17b105f4e5a01af8e0d32ffcf745cbfb200450f85dc04f"
+      "sha256": "365e997f8c82802eec07822c8ea4aca838ac5db9920e8758fdc058d82dad91f3"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1455,6 +1455,14 @@
     {
       "path": "content/plantar-arterial-ct.ts",
       "sha256": "c165473a0fb03e97d03203b40f137f09439cc6ffe81f5495858130844d212eb1"
+    },
+    {
+      "path": "content/plantar-arterial-mri-pins.json",
+      "sha256": "179dd7c16cc18b4fc412a951786feb413c08794fa569ea3b0b2693dd4255e61f"
+    },
+    {
+      "path": "content/plantar-arterial-mri.ts",
+      "sha256": "824dc4d6f516feb96197cfc732c03204e5a402852731d27019cad23927ee768c"
     },
     {
       "path": "content/plantar-arterial-us-pins.json",
@@ -3085,6 +3093,10 @@
       "sha256": "91c1cc8b21df7d6f05148515246bcbae1d6cb6f265f15f5d5bbf6a1410072887"
     },
     {
+      "path": "lib/plantar-arterial-mri.ts",
+      "sha256": "b4b3797b9b6c3240b940ad6a7af5b4bbfc6684d826fd236980e9b04bfb18e1c2"
+    },
+    {
       "path": "lib/plantar-arterial-us.ts",
       "sha256": "36a0e7b430ae197a2a46fbf3a1a8a63d8aa2639d0dd5c6e0ca8c04ea55aae59f"
     },
@@ -3813,7 +3825,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c73983822f389699855b8d6e4f7b5d7b35651f7a8b24fb0fbb9d79365008a854",
-  "sourceRendererSha256": "ef3b8931e398f99c1191b6af987620e8777fb4a9569fe479e76fe66dfcdfe342",
-  "websiteIntegrationSha256": "6eb869a266986db72c94fcac3d968b1336220940f431800b3b8f86c3908fe01a"
+  "sha256": "1f95930979c486e25b020802e21d6e8b511b158d768cf47dcc577e5d8862b20f",
+  "sourceRendererSha256": "5af83b8713b10bd299afafa4afb0ba16d68b3f75ca355b0bf05471d5bb61251b",
+  "websiteIntegrationSha256": "8121f683e72e36e7ed70bf28892e06a546d38b972421a6f5ce1fa87b469c189d"
 }

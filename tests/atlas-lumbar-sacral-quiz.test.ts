@@ -8,7 +8,7 @@ import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes,withoutLumbarSacralNotice} from './atlas-lumbar-sacral-history.ts';
 import {lumbarSacralMilestoneBytes} from './atlas-wrist-ultrasound-history.ts';
 
-const revision='e6168496a8a59927164fc84c9297583d8ae01339';
+const revision='67dd759d40e0c775620964d90e85de659f15d6cf';
 const baseline='968f502957088c8d53c9bac025db0746d4c1424a';
 const sourceParent='e3849b6a31eac0ae8e556d753d4fe86e5e19c90a';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -28,7 +28,7 @@ async function api(previous=false,lumbarMilestone=false){
 
 test('six exact lumbar/sacral questions reach lazy learner teaching and protected review as unsigned drafts',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,1012);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1015);assert.deepEqual(review.packages,prior.packages);
  // Retain the original six-question editorial delta at its saved epoch. The
  // wrist regression separately proves the current eight Ultrasound additions.
  const lumbarEpoch=JSON.parse(lumbarSacralMilestoneBytes('atlas-review/manifest.json').toString());
@@ -37,7 +37,7 @@ test('six exact lumbar/sacral questions reach lazy learner teaching and protecte
  const pins=json('atlas-review/content/lumbar-sacral-quiz-pins.json');assert.equal(pins.parentCommit,sourceParent);assert.equal(pins.entries.length,6);
  assert.deepEqual(pins.entries.map((e:any)=>e.identity.fmaId),['FMA13072','FMA13073','FMA13074','FMA13075','FMA13076','FMA16202']);
  const now=await api(),runtime=json('public/atlas-runtime/head-neck/manifest.json'),inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
- assert.equal(inputs.length,985);assert.equal(runtime.sourceCommit,revision);
+ assert.equal(inputs.length,988);assert.equal(runtime.sourceCommit,revision);
  const lazy=runtime.files.filter((f:any)=>/^assets\/body-content-[\w-]+\.js$/.test(f.path));assert.equal(lazy.length,1);
  const bytes=readFileSync('public/atlas-runtime/head-neck/'+lazy[0].path);assert.equal(sha(bytes),lazy[0].sha256);const text=bytes.toString();
  for(const entry of pins.entries){
@@ -60,7 +60,7 @@ test('six exact lumbar/sacral questions reach lazy learner teaching and protecte
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(execFileSync('git',['show',baseline+':lib/atlas-model-inventory.json'],{maxBuffer:32e6}).toString()).models);
  for(const name of ['head-neck','shoulder','lower-limb']){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),old=JSON.parse(regionalSpreadMilestoneBytes(base+'manifest.json').toString());
-  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':985,shoulder:658,'lower-limb':100} as Record<string,number>)[name]);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(json(base+'source-inputs.json').length,({'head-neck':988,shoulder:661,'lower-limb':100} as Record<string,number>)[name]);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),old.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],old[flag]);
   assert.equal(withoutLumbarSacralNotice(readFileSync(base+'LICENSES/THIRD_PARTY_NOTICES.md','utf8')),regionalSpreadMilestoneBytes(base+'LICENSES/THIRD_PARTY_NOTICES.md').toString());
