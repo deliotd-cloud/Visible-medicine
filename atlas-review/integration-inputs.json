@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6e134825dd189873d60846cacdc98a11983d6d16",
-  "sha256": "19edd8f0faca944c0f2df441896e2e437c50b45faba8a0a1dab022ded8ffdd19",
+  "sourceCommit": "2063af41c4207ea841a123bf942ef03962644a26",
+  "sha256": "37c255b18aa1a04023aaf3aca2554dc0858c89cd60ea569b17c78314e8b57e2e",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "a17e3da0ca457c5e436c2da133b78e283422de1711cbf91ed168bef9a06d5c8c"
+      "sha256": "eecce7ca7bb0b4fd56041f5d36729dc914ad9e1348af18a469ed53800a8f511f"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "e1caad4e8e25ac125d3249db962005e5d8d182abde1dc801a4aadf194f4c1a72"
+      "sha256": "44efcc62d9ecaa8c9474bcac25f07e2ffaece68b5e59a8f191fdb67dc56bdabb"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1137,6 +1137,14 @@
     {
       "path": "atlas-review/content/hand-arterial-ct.ts",
       "sha256": "c3b3dcdbe6d0b59823ba219e0d051a5a7cf4d6ba62d3b244e2840d91a8b66d24"
+    },
+    {
+      "path": "atlas-review/content/hand-arterial-ultrasound-pins.json",
+      "sha256": "c0849c2f8c3084f9bb3bcb79be5235f136ae980af83ecadabf31871c28d2ffda"
+    },
+    {
+      "path": "atlas-review/content/hand-arterial-ultrasound.ts",
+      "sha256": "ad0270c2ec43f08124abb3f5a0b46c092b62d54219b305bb7a01589944e9bb6b"
     },
     {
       "path": "atlas-review/content/hand-bone-xray.ts",
@@ -2691,6 +2699,10 @@
       "sha256": "0d1a7c89713111b0a52b76bff0624bc7bb8b33df7b0a83404a1a1394dc55fb85"
     },
     {
+      "path": "atlas-review/lib/hand-arterial-ultrasound.ts",
+      "sha256": "208de77dc3246d582e6fc7379eb125caa1a4faf5238822f69d0f277e69e93cd6"
+    },
+    {
       "path": "atlas-review/lib/hand-bone-xray.ts",
       "sha256": "3c2149eca9c8bcaa380f10feb48363dfaff58828c6400c5f88c8011c0a0417ef"
     },
@@ -4044,7 +4056,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "59a68de8191d1579c7813a3dfe187c60b7246965decba7392bb41912a90aa201"
+      "sha256": "5203f90e136934945b0cd932c74d1a0e96e5c93c96e2f5d714feb086f32e9123"
     }
   ]
 }

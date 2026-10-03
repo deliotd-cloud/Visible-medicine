@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a17e3da0ca457c5e436c2da133b78e283422de1711cbf91ed168bef9a06d5c8c"
+      "sha256": "eecce7ca7bb0b4fd56041f5d36729dc914ad9e1348af18a469ed53800a8f511f"
     },
     {
       "path": "app/body-education-link.ts",
@@ -979,6 +979,14 @@
     {
       "path": "content/hand-arterial-ct.ts",
       "sha256": "c3b3dcdbe6d0b59823ba219e0d051a5a7cf4d6ba62d3b244e2840d91a8b66d24"
+    },
+    {
+      "path": "content/hand-arterial-ultrasound-pins.json",
+      "sha256": "c0849c2f8c3084f9bb3bcb79be5235f136ae980af83ecadabf31871c28d2ffda"
+    },
+    {
+      "path": "content/hand-arterial-ultrasound.ts",
+      "sha256": "ad0270c2ec43f08124abb3f5a0b46c092b62d54219b305bb7a01589944e9bb6b"
     },
     {
       "path": "content/hand-bone-xray.ts",
@@ -2473,6 +2481,10 @@
       "sha256": "0d1a7c89713111b0a52b76bff0624bc7bb8b33df7b0a83404a1a1394dc55fb85"
     },
     {
+      "path": "lib/hand-arterial-ultrasound.ts",
+      "sha256": "208de77dc3246d582e6fc7379eb125caa1a4faf5238822f69d0f277e69e93cd6"
+    },
+    {
       "path": "lib/hand-bone-xray.ts",
       "sha256": "3c2149eca9c8bcaa380f10feb48363dfaff58828c6400c5f88c8011c0a0417ef"
     },
@@ -3510,7 +3522,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0b638cb3d82b0b13d1c836a814c25e6b2b978f244cc49fe0000fca640bdf731e"
+      "sha256": "2ca5113dcc70f58c98663884f720e8ddef66f8a08f8ab1a939330d227254bc90"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3725,7 +3737,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "7fab2b954586f8ecdd3ec35b3cb0e4d68c80d799a9e545971eed372631f87489",
-  "sourceRendererSha256": "e3a27c9564922fc99be754acd7d2c6bc2dfb5fb8215e2d2e89132ab2b3985d71",
-  "websiteIntegrationSha256": "19edd8f0faca944c0f2df441896e2e437c50b45faba8a0a1dab022ded8ffdd19"
+  "sha256": "f18b8b84fd0b1f85f597e75353e0bd579c785ef33dd16d100b327333cba0355b",
+  "sourceRendererSha256": "157bbfbc7fae5a3176a6a38dd5fea5a81296ff94350b0022a23bcc520f932e3c",
+  "websiteIntegrationSha256": "37c255b18aa1a04023aaf3aca2554dc0858c89cd60ea569b17c78314e8b57e2e"
 }

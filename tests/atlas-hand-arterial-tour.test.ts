@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {readFileSync,build,emittedTeaching} from './atlas-pre-hand-ultrasound-history.ts';
+// Immutable completed tour milestone; current ultrasound delivery has separate
+// live preservation/review tests rather than changing these historical goldens.
 const source='6e134825dd189873d60846cacdc98a11983d6d16',baseline='3887690204d123396bfa167188c173545ac3f6b9';
 const sha=(b:Buffer|string)=>createHash('sha256').update(b).digest('hex');
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
