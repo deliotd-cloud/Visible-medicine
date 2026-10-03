@@ -10,7 +10,7 @@ test('cricothyroid draft CT/MRI import preserves models and binds each part to i
  const prior=(p:string)=>JSON.parse(execFileSync('git',['show','a0841f3:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const manifest=json('atlas-review/manifest.json');
  const learner=json('public/atlas-runtime/head-neck/manifest.json');
- assert.equal(manifest.revision,'f97ea55ee2e7b57865c012650b40fc44041f45da');
+ assert.equal(manifest.revision,'6c86bc8b1aa7a7418f21f890858b0217194aff4e');
  assert.equal(learner.sourceCommit,manifest.revision);
  const before=prior('atlas-review/manifest.json');
  const saved=JSON.parse(execFileSync('git',['show','6302b12:atlas-review/manifest.json'],{encoding:'utf8'}));

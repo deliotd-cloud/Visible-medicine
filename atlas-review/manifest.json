@@ -1,5 +1,5 @@
 {
-  "revision": "f97ea55ee2e7b57865c012650b40fc44041f45da",
+  "revision": "6c86bc8b1aa7a7418f21f890858b0217194aff4e",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8",
-      "importedSha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8"
+      "sourceSha256": "5977e65b7a8fd60521526ba5f6f1631c1e982005dc4444abdc82d1fc206751ad",
+      "importedSha256": "5977e65b7a8fd60521526ba5f6f1631c1e982005dc4444abdc82d1fc206751ad"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -845,6 +845,21 @@
       "path": "content/genicular-mri.ts",
       "sourceSha256": "a14746291274f1716c522a5df12c21f2c3ce2fd7bd74232411fd50f2f98441f2",
       "importedSha256": "a14746291274f1716c522a5df12c21f2c3ce2fd7bd74232411fd50f2f98441f2"
+    },
+    {
+      "path": "lib/elbow-arterial-mri.ts",
+      "sourceSha256": "6cc612609d5c2373d36ae6e7017b01f938a490b039116844add90fec8ce61cb3",
+      "importedSha256": "6cc612609d5c2373d36ae6e7017b01f938a490b039116844add90fec8ce61cb3"
+    },
+    {
+      "path": "content/elbow-arterial-mri-pins.json",
+      "sourceSha256": "0c553bb3fd0645a96300a009024369d5151223c9ad6048f6e087556777dc32d3",
+      "importedSha256": "0c553bb3fd0645a96300a009024369d5151223c9ad6048f6e087556777dc32d3"
+    },
+    {
+      "path": "content/elbow-arterial-mri.ts",
+      "sourceSha256": "7ee67d44f5eee727019844c0e9f32c2eb50efecda3f67b3a439806636110eae4",
+      "importedSha256": "7ee67d44f5eee727019844c0e9f32c2eb50efecda3f67b3a439806636110eae4"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3203,8 +3218,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "0c1ccd2b77e850fe2aa4d3247734b7480700643999c3442010e481333651a36e",
-      "importedSha256": "10f55e8456e515054cd2163c0244563751e468043b0088362ecd1c4ea178b397"
+      "sourceSha256": "0e958b52f6dd3a47f07633f72d5b3dac191dc091a42a697e98b564c137ad8fad",
+      "importedSha256": "f0619aed74dcf0a4d7544fb537317fe873bb61fbe719566c84be828a491e5bbf"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3564,7 +3579,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "04d1f56597d807dca8ce7f9f9439c206ed6a18d657665229d5e35d63c77b076f"
+      "importedSha256": "809b344e9ed0f50ae433dd4406f74e16772cb5dfe2d35251cfeff41885d39161"
     },
     {
       "path": "app/review/review.css",
@@ -3598,8 +3613,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "3370b1c339e1ecb441cb872bb84393d227bba9230efe162510a2d1e5aa7ecbf4",
-      "importedSha256": "3370b1c339e1ecb441cb872bb84393d227bba9230efe162510a2d1e5aa7ecbf4"
+      "sourceSha256": "a096e7897e76c512ccbfa85117ecaa00ae799793ccd6101e322f2eee2b26aeaa",
+      "importedSha256": "a096e7897e76c512ccbfa85117ecaa00ae799793ccd6101e322f2eee2b26aeaa"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5048,5 +5063,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "69477ebd02956c16b38b53bcbd4e31ede79dcf609279e31e416a2b01000ae0d0"
+  "websiteIntegrationSha256": "718594fe70ec6262a4589cef032f9ce9dc37021c0ad35d1719d7a3f607ab8f52"
 }

@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8"
+    "sha256": "5977e65b7a8fd60521526ba5f6f1631c1e982005dc4444abdc82d1fc206751ad"
   },
   {
     "path": "app/body-education-link.ts",
@@ -838,6 +838,14 @@
   {
     "path": "content/elbow-arterial-ct.ts",
     "sha256": "38af68ce17b668e7ac373bcbd87d1c8e62c060a3807fd1de060a28120b5a5b7f"
+  },
+  {
+    "path": "content/elbow-arterial-mri-pins.json",
+    "sha256": "0c553bb3fd0645a96300a009024369d5151223c9ad6048f6e087556777dc32d3"
+  },
+  {
+    "path": "content/elbow-arterial-mri.ts",
+    "sha256": "7ee67d44f5eee727019844c0e9f32c2eb50efecda3f67b3a439806636110eae4"
   },
   {
     "path": "content/elbow-arterial.ts",
@@ -2466,6 +2474,10 @@
   {
     "path": "lib/elbow-arterial-ct.ts",
     "sha256": "a2fc77065a921cbbbcf71c637172baa70b3e128a6d713c3c71d5268e422e8827"
+  },
+  {
+    "path": "lib/elbow-arterial-mri.ts",
+    "sha256": "6cc612609d5c2373d36ae6e7017b01f938a490b039116844add90fec8ce61cb3"
   },
   {
     "path": "lib/elbow-arteries.ts",

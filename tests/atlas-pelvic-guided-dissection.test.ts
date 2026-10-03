@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {build} from 'esbuild';
 
-const source = 'f97ea55ee2e7b57865c012650b40fc44041f45da';
+const source = '6c86bc8b1aa7a7418f21f890858b0217194aff4e';
 const guidedMilestone = '944f57b801471c3b005a64ec83314188b2f06cf5';
 const sourceParent = 'e88e43b4c0c0aa5d2fa48c2ee5fc0b86c9519abe';
 const websiteBefore = 'c93ee19856ac4598de1fd8afd703b175dac4a6db';

@@ -10,12 +10,12 @@ test('laryngeal muscle CT/MRI drafts reach the shared viewer without new geometr
   const base='public/atlas-runtime/head-neck/';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const bytes=readFileSync(base+'manifest.json'),manifest=JSON.parse(bytes.toString());
-  assert.equal(sha(bytes),'3a02e800637efce34cf13a58773ae7f939e36e3ff44edb400eeb5d40f1a24534');
-  assert.equal(manifest.sourceCommit,'f97ea55ee2e7b57865c012650b40fc44041f45da');
+  assert.equal(sha(bytes),'511cdcfae5d23ff80cda6b09f4c4a682cd817337327a9c1f39403516a4fd90db');
+  assert.equal(manifest.sourceCommit,'6c86bc8b1aa7a7418f21f890858b0217194aff4e');
   for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
   for(const [path,sha256]of Object.entries({
-    'app/body-content.ts':'a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8',
+    'app/body-content.ts':'5977e65b7a8fd60521526ba5f6f1631c1e982005dc4444abdc82d1fc206751ad',
     'content/laryngeal-muscle-imaging.ts':'0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb',
     'lib/laryngeal-muscle-imaging.ts':'2a00cc7372638c9cbf096f62327fb4e387e75db6cca4897cdb21f37bb18bcade',
   }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);

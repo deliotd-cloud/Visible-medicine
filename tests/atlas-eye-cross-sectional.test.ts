@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
 import {build} from 'esbuild';
-const source='f97ea55ee2e7b57865c012650b40fc44041f45da',before='107b55dfd3511222755a7d35fc18e7058350bf4c';
+const source='6c86bc8b1aa7a7418f21f890858b0217194aff4e',before='107b55dfd3511222755a7d35fc18e7058350bf4c';
 const previousBytes=(path:string)=>Buffer.from(execFileSync('git',['show',before+':'+path],{maxBuffer:32e6}));
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "f97ea55ee2e7b57865c012650b40fc44041f45da",
-  "sha256": "69477ebd02956c16b38b53bcbd4e31ede79dcf609279e31e416a2b01000ae0d0",
+  "sourceCommit": "6c86bc8b1aa7a7418f21f890858b0217194aff4e",
+  "sha256": "718594fe70ec6262a4589cef032f9ce9dc37021c0ad35d1719d7a3f607ab8f52",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "a25c4346ea9586e657a5ea32ef433981a3ebfe306102b9943decec24b09a02d8"
+      "sha256": "5977e65b7a8fd60521526ba5f6f1631c1e982005dc4444abdc82d1fc206751ad"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "3370b1c339e1ecb441cb872bb84393d227bba9230efe162510a2d1e5aa7ecbf4"
+      "sha256": "a096e7897e76c512ccbfa85117ecaa00ae799793ccd6101e322f2eee2b26aeaa"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -985,6 +985,14 @@
     {
       "path": "atlas-review/content/elbow-arterial-ct.ts",
       "sha256": "38af68ce17b668e7ac373bcbd87d1c8e62c060a3807fd1de060a28120b5a5b7f"
+    },
+    {
+      "path": "atlas-review/content/elbow-arterial-mri-pins.json",
+      "sha256": "0c553bb3fd0645a96300a009024369d5151223c9ad6048f6e087556777dc32d3"
+    },
+    {
+      "path": "atlas-review/content/elbow-arterial-mri.ts",
+      "sha256": "7ee67d44f5eee727019844c0e9f32c2eb50efecda3f67b3a439806636110eae4"
     },
     {
       "path": "atlas-review/content/elbow-arterial.ts",
@@ -2591,6 +2599,10 @@
       "sha256": "a2fc77065a921cbbbcf71c637172baa70b3e128a6d713c3c71d5268e422e8827"
     },
     {
+      "path": "atlas-review/lib/elbow-arterial-mri.ts",
+      "sha256": "6cc612609d5c2373d36ae6e7017b01f938a490b039116844add90fec8ce61cb3"
+    },
+    {
       "path": "atlas-review/lib/elbow-arteries.ts",
       "sha256": "6b2b82e4cf22e9a07af4d29e7109769c30ae14b5d4cc994f4a23dfe01ce4c73c"
     },
@@ -4108,7 +4120,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "2dcb72e2a752750bd84bb7c853cf8c5637de6c20e7d409317b6376f48521f07b"
+      "sha256": "a122c44c933cfe9fab28524bfe6c2f43a93d08624aacbc09a070cf8dfab87d9d"
     }
   ]
 }
