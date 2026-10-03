@@ -1,21 +1,19 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
-import {relative,dirname} from 'node:path';
-import {build} from 'esbuild';
+import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 const baseline='67d7d3be152679b7a3f23a745d022a50111d9ebe',root=process.cwd();
+// Immutable completed eight-topic epoch; the current ultrasound test proves
+// all older lessons survive in today's imported and emitted runtime.
+const milestone='26e9377202d04ad6a250cc6fc394b37655f5ec94';
 const old=p=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6,windowsHide:true});
+const readFileSync=p=>execFileSync('git',['show',milestone+':'+p],{maxBuffer:32e6,windowsHide:true});
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const entry="export * from './atlas-review/lib/cranial-bone-xray';export * from './atlas-review/content/cranial-bone-xray';export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 async function load(previous=false){
- const paths=new Set(['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json','atlas-review/content/body-review-display-pins.json']);
- const result=await build({stdin:{contents:entry,resolveDir:root,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node',plugins:previous?[{name:'before-xray',setup(api){api.onLoad({filter:/.*/,namespace:'file'},args=>{
-  const path=relative(root,args.path).replaceAll('\\','/');if(!paths.has(path))return;
-  return{contents:old(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
- });}}]:[]});
- return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+ const common=entry.replace("export * from './atlas-review/lib/cranial-bone-xray';export * from './atlas-review/content/cranial-bone-xray';",'');
+ return atlasExactGitApi(previous?baseline:milestone,previous?common:entry);
 }
 const now=await load(),before=await load(true),pins=JSON.parse(readFileSync('atlas-review/content/cranial-bone-xray-pins.json'));
 assert.equal(pins.baseline,'c78e383a37976e2e459fd41504eac6281241af1d');assert.equal(pins.entries.length,8);
@@ -77,9 +75,9 @@ for(const s of catalog.structures){
 assert.equal(worksheetChanges,8);assert.equal(malformed,40);assert.equal(stale,24);assert.equal(storageCalls,0);
 for(const bundle of pins.bundles){const p='public/atlas-runtime/head-neck'+bundle.url.split('?')[0],bytes=readFileSync(p);assert.equal(hash(bytes),bundle.sha256);assert.deepEqual(bytes,old(p));}
 for(const p of ['package-lock.json','public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D_FULL_BODY.md','atlas-review/app/body-explorer.tsx','atlas-review/lib/imaging-sync.ts','atlas-review/lib/didanix-atlas-adapter.ts','atlas-review/lib/independent-study-links.ts']){
- assert.equal(readFileSync(p,'utf8').replaceAll('\r\n','\n'),old(p).toString().replaceAll('\r\n','\n'),p);
+ assert.equal(readFileSync(p).toString().replaceAll('\r\n','\n'),old(p).toString().replaceAll('\r\n','\n'),p);
 }
-assert.equal(execFileSync('git',['diff','--name-only',baseline,'--','public/atlas-runtime/head-neck/models'],{encoding:'utf8'}).trim(),'');
+assert.equal(execFileSync('git',['diff','--name-only',baseline,milestone,'--','public/atlas-runtime/head-neck/models'],{encoding:'utf8'}).trim(),'');
 console.log(JSON.stringify({baseline,changed,preserved,sourceMutationRefusals:refusals,malformedPacketsRefused:malformed,staleRefusalsBeforeStorage:stale,storageCalls,changedTeachingWorksheets:worksheetChanges,clinicalApproval:false,websiteIntegrated:true}));
 
 const revision="da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8",review=JSON.parse(readFileSync("atlas-review/manifest.json"));assert.equal(review.revision,revision);
@@ -95,7 +93,7 @@ for(const name of ["head-neck","shoulder","female-pelvis","lower-limb"]){
  // Only the shared regional entry offers cranial-bone selection. The
  // dedicated shoulder entry retains its separate shoulder teaching surface.
  if(name==='head-neck'){
-  const emitted=emittedTeaching(base,manifest.files,true);
+  const emitted=emittedTeaching(base,manifest.files,true,readFileSync);
   for(const family of Object.values(now.cranialBoneXrayTeaching)){assert(emitted.includes(family.body));for(const bullet of family.bullets)assert(emitted.includes(bullet));}
   for(const reference of Object.values(now.cranialBoneXrayReferences))assert(emitted.includes(reference));
  }

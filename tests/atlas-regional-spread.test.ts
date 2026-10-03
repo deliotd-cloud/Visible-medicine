@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 
-const revision='da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8';
+const revision='398edc60a43f8d0235d9e6963c1ad56954b3fa98';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -16,9 +16,11 @@ test('bounded regional Spread reaches learner and protected review without model
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
  const ultrasoundInputs=['content/hyoid-epiglottis-ultrasound-pins.json','content/hyoid-epiglottis-ultrasound.ts','lib/hyoid-epiglottis-ultrasound.ts'];
  const cranialInputs=['content/cranial-bone-xray-pins.json','content/cranial-bone-xray.ts','lib/cranial-bone-xray.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const suprascapularInputs=['content/suprascapular-vessel-ultrasound-pins.json','content/suprascapular-vessel-ultrasound.ts','lib/suprascapular-vessel-ultrasound.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length);assert.deepEqual(review.packages,prior.packages);
  assert.deepEqual(review.files.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),ultrasoundInputs);
  assert.deepEqual(review.files.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),cranialInputs);
+ assert.deepEqual(review.files.filter((f:any)=>suprascapularInputs.includes(f.path)).map((f:any)=>f.path).sort(),suprascapularInputs);
  // Preserve the exact Spread epoch; the lumbar regression proves the later delta.
  const spreadEpoch=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(spreadEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
@@ -27,9 +29,10 @@ test('bounded regional Spread reaches learner and protected review without model
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
   assert.deepEqual(inputs.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:ultrasoundInputs);
   assert.deepEqual(inputs.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:cranialInputs);
+  assert.deepEqual(inputs.filter((f:any)=>suprascapularInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:suprascapularInputs);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),previous.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],previous[flag]);
   const noticePath=base+'LICENSES/THIRD_PARTY_NOTICES.md';

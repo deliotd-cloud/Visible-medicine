@@ -1,5 +1,5 @@
 {
-  "revision": "da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8",
+  "revision": "398edc60a43f8d0235d9e6963c1ad56954b3fa98",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3",
-      "importedSha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
+      "sourceSha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d",
+      "importedSha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -935,6 +935,21 @@
       "path": "content/cranial-bone-xray.ts",
       "sourceSha256": "8b2b5e1d300c16a6f4b8802dae2b4d20eb4586fb24c261fe3599c75cb8ffb30e",
       "importedSha256": "8b2b5e1d300c16a6f4b8802dae2b4d20eb4586fb24c261fe3599c75cb8ffb30e"
+    },
+    {
+      "path": "lib/suprascapular-vessel-ultrasound.ts",
+      "sourceSha256": "8a1188e056258ab11b1092802969883f9384e80691cf6aa4d6c7a0fde27950e1",
+      "importedSha256": "8a1188e056258ab11b1092802969883f9384e80691cf6aa4d6c7a0fde27950e1"
+    },
+    {
+      "path": "content/suprascapular-vessel-ultrasound-pins.json",
+      "sourceSha256": "b27fef05423424ada2fd9fd409fed69df5738ab78935a3a7ad7e563827a77b1b",
+      "importedSha256": "b27fef05423424ada2fd9fd409fed69df5738ab78935a3a7ad7e563827a77b1b"
+    },
+    {
+      "path": "content/suprascapular-vessel-ultrasound.ts",
+      "sourceSha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929",
+      "importedSha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3293,8 +3308,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "793791e6471b16bf08d71e632c9247e1f6d22a633a6715f6aa23b21c266946c7",
-      "importedSha256": "30d06db78c501a3fd6f039db372069c30f0b4981f5ef99addbb9be89b4d568bb"
+      "sourceSha256": "cc2520e24a6d621b53b3e5d86cf7d44cdccd090e8180c53c5c5c0199ed8442aa",
+      "importedSha256": "1780427c713fb081fb096091a19810a349b58cec9eda2e4b142b1a31fa5f6b6f"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3654,7 +3669,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "c0881d51180eaa136280ae80335bf22ca9db5e998fd3fda30bc2ed3774ddedb4"
+      "importedSha256": "fc7d5b7c807289233b7b92913a40416bc62874e242e026cfc98771db519b9f98"
     },
     {
       "path": "app/review/review.css",
@@ -3688,8 +3703,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "df09e9270c7b61185841781f28c517b81bfefcc50264726fa8b6c564981af31d",
-      "importedSha256": "df09e9270c7b61185841781f28c517b81bfefcc50264726fa8b6c564981af31d"
+      "sourceSha256": "61fe85e611b06bca4e0f205d43b4ac212cca9b20c1c686e2743b8836a6279939",
+      "importedSha256": "61fe85e611b06bca4e0f205d43b4ac212cca9b20c1c686e2743b8836a6279939"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5138,5 +5153,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "f4021af7ea70747fc26117940a6ed5845edbe3d7ddfd1648171ce4611fe5afd0"
+  "websiteIntegrationSha256": "94ba1290af9315c764df0d936147fcd04f035da22dbc721ce8cec0bd95df0ef2"
 }

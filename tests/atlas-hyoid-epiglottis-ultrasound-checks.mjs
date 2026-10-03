@@ -2,23 +2,17 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {relative,dirname} from 'node:path';
-import {build} from 'esbuild';
+import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 const baseline='452f36b1ca5d86bdac8b7ce4c2bfc42da22fb712',root=process.cwd();
-// Replay the completed two-topic epoch; the cranial test proves today's delta.
+// Replay the completed two-topic epoch; current teaching has its own delta test.
 const milestone='67d7d3be152679b7a3f23a745d022a50111d9ebe';
 const old=p=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6,windowsHide:true});
 const hash=b=>createHash('sha256').update(b).digest('hex');
 const entry="export * from './atlas-review/lib/hyoid-epiglottis-ultrasound';export * from './atlas-review/content/hyoid-epiglottis-ultrasound';export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 async function load(previous=false){
- const paths=new Set(['atlas-review/app/body-content.ts','atlas-review/content/body-renderer-revision.json','atlas-review/content/body-review-display-pins.json']);
- const result=await build({stdin:{contents:entry,resolveDir:root,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node',plugins:[{name:'exact-ultrasound-epoch',setup(api){api.onLoad({filter:/.*/,namespace:'file'},args=>{
-  const path=relative(root,args.path).replaceAll('\\','/');if(!paths.has(path))return;
-  const contents=previous?old(path):execFileSync('git',['show',milestone+':'+path],{maxBuffer:32e6,windowsHide:true});
-  return{contents:contents.toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
- });}}]});
- return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+ const common=entry.replace("export * from './atlas-review/lib/hyoid-epiglottis-ultrasound';export * from './atlas-review/content/hyoid-epiglottis-ultrasound';",'');
+ return atlasExactGitApi(previous?baseline:milestone,previous?common:entry);
 }
 const now=await load(),before=await load(true),pins=JSON.parse(readFileSync('atlas-review/content/hyoid-epiglottis-ultrasound-pins.json'));
 assert.equal(pins.baseline,'e7355245ac0d5f92a7a76c6fb2c42f917c3675c3');assert.equal(pins.entries.length,2);
@@ -78,7 +72,7 @@ for(const p of ['package-lock.json','public/atlas-runtime/head-neck/LICENSES/BOD
 assert.equal(execFileSync('git',['diff','--name-only',baseline,'--','public/atlas-runtime/head-neck/models'],{encoding:'utf8'}).trim(),'');
 console.log(JSON.stringify({baseline,changed,preserved,sourceMutationRefusals:refusals,malformedPacketsRefused:malformed,staleRefusalsBeforeStorage:stale,storageCalls,changedTeachingWorksheets:worksheetChanges,clinicalApproval:false,websiteIntegrated:true}));
 
-const revision="da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8",review=JSON.parse(readFileSync("atlas-review/manifest.json"));assert.equal(review.revision,revision);
+const revision="398edc60a43f8d0235d9e6963c1ad56954b3fa98",review=JSON.parse(readFileSync("atlas-review/manifest.json"));assert.equal(review.revision,revision);
 const inputs=["app/body-content.ts","lib/hyoid-epiglottis-ultrasound.ts","content/hyoid-epiglottis-ultrasound.ts","content/hyoid-epiglottis-ultrasound-pins.json"];
 for(const name of ["head-neck","shoulder","female-pelvis","lower-limb"]){
  const base="public/atlas-runtime/"+name+"/",manifest=JSON.parse(readFileSync(base+"manifest.json"));

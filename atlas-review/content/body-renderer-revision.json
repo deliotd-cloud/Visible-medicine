@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
+      "sha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1655,6 +1655,14 @@
     {
       "path": "content/superior-temporal-mri.ts",
       "sha256": "6a9b9f8668ac513d3115083de2954f62eb304947b25e19a1646d7a4b1fadc42f"
+    },
+    {
+      "path": "content/suprascapular-vessel-ultrasound-pins.json",
+      "sha256": "b27fef05423424ada2fd9fd409fed69df5738ab78935a3a7ad7e563827a77b1b"
+    },
+    {
+      "path": "content/suprascapular-vessel-ultrasound.ts",
+      "sha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929"
     },
     {
       "path": "content/systemic-venous-pins.json",
@@ -3389,6 +3397,10 @@
       "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
+      "path": "lib/suprascapular-vessel-ultrasound.ts",
+      "sha256": "8a1188e056258ab11b1092802969883f9384e80691cf6aa4d6c7a0fde27950e1"
+    },
+    {
       "path": "lib/swallowing-curriculum.ts",
       "sha256": "74a5678392927149fbab787300d28347d2f613df6db1e9d753f7d3110dee7102"
     },
@@ -3646,7 +3658,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e763a45f1317bce5219544fbda031ba249e5f1ac0d56f74c2466d396abeeb39e"
+      "sha256": "c52bd87c0852e9942a0e0a63bc9fbf4cee4749e04ef63df5960816290a9782d3"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3861,7 +3873,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2bbaaba2917962c850c3561ee81de1ca7d3f77ae2c05351f818f2446ccbc5bce",
-  "sourceRendererSha256": "4bd9c9b31c77c1236de9d75409a8e24b6bc36ccaa82406fe5a62ef41793eca50",
-  "websiteIntegrationSha256": "f4021af7ea70747fc26117940a6ed5845edbe3d7ddfd1648171ce4611fe5afd0"
+  "sha256": "92c5e59a61801449036a4c400b8e9c0218ae298cb422d5bc9ea54eddd78901e8",
+  "sourceRendererSha256": "dff11d28cf6fcdc100111951cd24d3cf47062b1ee8c7281eb49312a4c1349899",
+  "websiteIntegrationSha256": "94ba1290af9315c764df0d936147fcd04f035da22dbc721ce8cec0bd95df0ef2"
 }

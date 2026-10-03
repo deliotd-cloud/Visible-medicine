@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
+    "sha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1706,6 +1706,14 @@
   {
     "path": "content/superior-temporal-mri.ts",
     "sha256": "6a9b9f8668ac513d3115083de2954f62eb304947b25e19a1646d7a4b1fadc42f"
+  },
+  {
+    "path": "content/suprascapular-vessel-ultrasound-pins.json",
+    "sha256": "b27fef05423424ada2fd9fd409fed69df5738ab78935a3a7ad7e563827a77b1b"
+  },
+  {
+    "path": "content/suprascapular-vessel-ultrasound.ts",
+    "sha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929"
   },
   {
     "path": "content/systemic-venous-pins.json",
@@ -3482,6 +3490,10 @@
   {
     "path": "lib/subscapular-tour.ts",
     "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
+  },
+  {
+    "path": "lib/suprascapular-vessel-ultrasound.ts",
+    "sha256": "8a1188e056258ab11b1092802969883f9384e80691cf6aa4d6c7a0fde27950e1"
   },
   {
     "path": "lib/swallowing-curriculum.ts",

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "da1c7f692fcaf318a9c059aa5cb4ef0db8bbd6e8",
-  "sha256": "f4021af7ea70747fc26117940a6ed5845edbe3d7ddfd1648171ce4611fe5afd0",
+  "sourceCommit": "398edc60a43f8d0235d9e6963c1ad56954b3fa98",
+  "sha256": "94ba1290af9315c764df0d936147fcd04f035da22dbc721ce8cec0bd95df0ef2",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "36dc4e365094d96a94f1c77bf2e3fd4d9e5264d182ceea567e8d9e4a5fb194c3"
+      "sha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "df09e9270c7b61185841781f28c517b81bfefcc50264726fa8b6c564981af31d"
+      "sha256": "61fe85e611b06bca4e0f205d43b4ac212cca9b20c1c686e2743b8836a6279939"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1809,6 +1809,14 @@
     {
       "path": "atlas-review/content/superior-temporal-mri.ts",
       "sha256": "6a9b9f8668ac513d3115083de2954f62eb304947b25e19a1646d7a4b1fadc42f"
+    },
+    {
+      "path": "atlas-review/content/suprascapular-vessel-ultrasound-pins.json",
+      "sha256": "b27fef05423424ada2fd9fd409fed69df5738ab78935a3a7ad7e563827a77b1b"
+    },
+    {
+      "path": "atlas-review/content/suprascapular-vessel-ultrasound.ts",
+      "sha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929"
     },
     {
       "path": "atlas-review/content/systemic-venous-pins.json",
@@ -3671,6 +3679,10 @@
       "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
+      "path": "atlas-review/lib/suprascapular-vessel-ultrasound.ts",
+      "sha256": "8a1188e056258ab11b1092802969883f9384e80691cf6aa4d6c7a0fde27950e1"
+    },
+    {
       "path": "atlas-review/lib/swallowing-curriculum.ts",
       "sha256": "74a5678392927149fbab787300d28347d2f613df6db1e9d753f7d3110dee7102"
     },
@@ -4180,7 +4192,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "5174dc7a008f61ded5560034eb18b4ce59b8d580a70cc5acd7ac43bc65595fc7"
+      "sha256": "4bfdb703e212f8f8b6843d8fe524cfa99224404f493923d1280dcfda83bdb678"
     }
   ]
 }
