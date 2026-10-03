@@ -9,7 +9,7 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 import {preProjectionImportBytes,preProjectionTeachingPlugin} from './atlas-interosseous-projection-history.ts';
 import {epochBytes} from './atlas-pre-lower-venous-reasoning-history.ts';
 const baseline='6d851df6891316da971430ca8ddf522d31df640b';
-const revision='67dd759d40e0c775620964d90e85de659f15d6cf';
+const revision='59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
@@ -44,7 +44,7 @@ test('four core thoracic questions ship over five exact roots without new models
  const api=await load(),prior=await load(true),review=json('atlas-review/manifest.json');
  const epoch=JSON.parse(old('atlas-review/manifest.json'));
  const milestone=JSON.parse(preProjectionImportBytes('atlas-review/manifest.json').toString());
- assert.equal(review.revision,revision);assert.equal(review.files.length,1015);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018);
  assert.deepEqual(review.packages,epoch.packages);
  assert.deepEqual(milestone.files.filter((f:any)=>!epoch.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),['content/thoracic-core-reasoning-pins.json','lib/thoracic-core-reasoning.ts']);
  assert.deepEqual(milestone.files.filter((f:any)=>epoch.files.some((p:any)=>p.path===f.path&&p.sourceSha256!==f.sourceSha256)).map((f:any)=>f.path).sort(),['content/body-renderer-revision.json','content/body-review-display-pins.json','lib/reasoning-questions.ts']);

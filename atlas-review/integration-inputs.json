@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "67dd759d40e0c775620964d90e85de659f15d6cf",
-  "sha256": "8121f683e72e36e7ed70bf28892e06a546d38b972421a6f5ce1fa87b469c189d",
+  "sourceCommit": "59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763",
+  "sha256": "45cd97aead672a93af1c89d354b21c786282c1cbd4f2346a44c11d435d508a33",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "365e997f8c82802eec07822c8ea4aca838ac5db9920e8758fdc058d82dad91f3"
+      "sha256": "36a2ab5f8fe573347bdeda04def3eb5634b8c44607e9a1db6df6946b06aac3b9"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "2d4bc79da6bb429195545aab576a1ace75240f33025e6a696a9a90993d42304e"
+      "sha256": "a19af7f29e6f9504b16b7a87f1fbc6929c95d28b815dbfa43c3411340bb353ae"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1761,6 +1761,14 @@
     {
       "path": "atlas-review/content/small-intestinal-mesentery-mri.ts",
       "sha256": "6ef7d1e95dbf84c797ceba73bed24dfc27898ee9cedca55a41df127bf7301d93"
+    },
+    {
+      "path": "atlas-review/content/spinal-bone-ultrasound-pins.json",
+      "sha256": "b89f75ae5e41774885cafb0c0aab1aadebae2d08ab859a8e9cb2c05d22ad4ac8"
+    },
+    {
+      "path": "atlas-review/content/spinal-bone-ultrasound.ts",
+      "sha256": "02901e9d37afff9883d191b82e1ffb5eb92cd1edcdb57a37932cf448cb6ca5fa"
     },
     {
       "path": "atlas-review/content/spinal-disc-function.ts",
@@ -3587,6 +3595,10 @@
       "sha256": "cd17bce6dedd162d374e0cf9e96a12d435294fb1ce81341c8a7c13af0d2c0f53"
     },
     {
+      "path": "atlas-review/lib/spinal-bone-ultrasound.ts",
+      "sha256": "ff25f8f9553f793d6f79c3405dea27d793f44ef74e3860130571190e22fd7ecf"
+    },
+    {
       "path": "atlas-review/lib/spinal-disc-function.ts",
       "sha256": "402ffd000cf3566b9bee54b71bf3e6a135846ce5a0b77245f94b6deae0fd3607"
     },
@@ -3888,7 +3900,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "9e5e4149b920a29ca9a9120e5784df76f914bd330d28d5badf9caa618cb75d6d"
+      "sha256": "6d1cece1ce6732070f0ea7a62cbc5e8690f4ef1f2df0a3742aec98d8ddba3397"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4144,7 +4156,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "797bbd3bc6eae8f5621c3694f39b77dbef3ab91d8815599a604f2188c77ea692"
+      "sha256": "6eec6cd8e2b5d92fa59b7abfcee9eb676f0083936646b7d0eb0a5a6ac3aff383"
     }
   ]
 }

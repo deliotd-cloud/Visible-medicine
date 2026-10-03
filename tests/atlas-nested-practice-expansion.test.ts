@@ -6,13 +6,13 @@ import {createHash} from 'node:crypto';
 import ts from 'typescript';
 
 test('expanded practice is the same reviewed source in learner and Clinical Review, with unchanged anatomy',()=>{
-  const revision='67dd759d40e0c775620964d90e85de659f15d6cf';
+  const revision='59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763';
   const read=(p:string)=>readFileSync(p,'utf8');
   const json=(p:string)=>JSON.parse(read(p));
   const sha=(s:string)=>createHash('sha256').update(s).digest('hex');
   const learner=json('public/atlas-runtime/head-neck/manifest.json');
   const review=json('atlas-review/manifest.json');
-  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,'67dd759d40e0c775620964d90e85de659f15d6cf');
+  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,'59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763');
   const page=read('app/atlas/head-neck-3d/page.tsx');
   assert(page.includes('{regionalManifest.structures} regional selections and {regionalManifest.nestedSelections} nested selections'));
   assert.equal(learner.structures,291);assert.equal(learner.nestedSelections,77);

@@ -1,5 +1,30 @@
 # Third-party notices
 
+## Open3DModel upper-limb candidate (3 October 2026, offline only)
+
+Original July 2025 OBJ acquired on E: from the
+[Open3DModel source page](https://anatomytool.org/open3dmodel-create), explicitly
+licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+Retain [team](https://anatomytool.org/open3dmodel-credit) and BodyParts3D/Z-Anatomy
+upstream credit, disclaimer and modification history. Not delivered in the
+website. Model derivatives require ShareAlike/reuse compliance; geometry must
+not be labelled MIT. No GPL viewer, texture or mixed-rights thorax asset imported.
+See [the source review](../docs/OPEN3DMODEL_PLEXUS_SOURCE_REVIEW.md) before admission.
+
+The offline conversion/review preview now selects 42 converted neural source
+objects, including all 15 core objects; eight entire problematic objects remain
+held. Original coordinates are retained; polygon tessellation, review colours
+and computed shading normals are disclosed adaptations, licensed CC BY-SA 4.0.
+No repair, mirroring, whole-body mapping or clinical acceptance is implied.
+The separate preview delivers these credits and renderer notices on screen and
+in THIRD_PARTY_NOTICES.txt. No new fee, package, external font or texture.
+
+Three.js's copied Earcut 3.0.2 polygon triangulator is ISC, copyright 2024 Mapbox.
+Its full notice is retained in [EARCUT_ISC.txt](EARCUT_ISC.txt) and the preview
+delivery. Verified against the
+[upstream tagged licence](https://github.com/mapbox/earcut/blob/v3.0.2/LICENSE).
+Original application code remains MIT; the model is not MIT.
+
 ## Circle of Willis guided orientation (2 October 2026)
 
 Ten original draft captions refer to UTHealth Neuroanatomy Online, Lab 4,
@@ -2244,3 +2269,17 @@ independently written questions and code use the project's MIT licence.
 The existing BodyParts3D CC BY 4.0 source obligations and holds remain intact.
 No new mesh, texture, font, dependency, paid service or mandatory fee is added.
 References and clinical limitations: `docs/THORACIC_BONE_QUIZ.md`.
+
+## Spinal-bone ultrasound orientation — 3 October 2026
+
+Thirteen independently written drafts cover existing T2–T11 and L2–L4 bone
+selections. Avramescu et al. (PMID22354105), Karmakar et al. (PMID22010025),
+Chang et al. (PMC5222601) and Doo et al. (PMC7713870) are factual reading links,
+not commercial asset grants. The latter two publication licences include
+non-commercial restrictions: no figures, study prose, tables, PDFs, ultrasound
+frames, scans or datasets from these papers are imported or redistributed.
+Do not use the reading citations as future permission to ingest their media.
+Original teaching and code use the project MIT terms. Existing BodyParts3D
+CC BY 4.0 geometry/credits, source holds and independent resource access remain.
+No new mesh, font, texture, dependency, paid service or mandatory licence fee.
+References and clinical boundaries: `docs/SPINAL_BONE_ULTRASOUND.md`.

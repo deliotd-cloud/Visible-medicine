@@ -22,6 +22,7 @@ import { genicularMriLesson } from '../lib/genicular-mri';
 import { elbowArterialMriLesson } from '../lib/elbow-arterial-mri';
 import { shoulderArterialImagingLesson } from '../lib/shoulder-arterial-imaging';
 import { plantarArterialMriLesson } from '../lib/plantar-arterial-mri';
+import { spinalBoneUltrasoundLesson } from '../lib/spinal-bone-ultrasound';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -327,6 +328,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderArterialImaging) return shoulderArterialImaging;
   const plantarArterialMri = plantarArterialMriLesson(s, tab);
   if (plantarArterialMri) return plantarArterialMri;
+  const spinalBoneUltrasound = spinalBoneUltrasoundLesson(s, tab);
+  if (spinalBoneUltrasound) return spinalBoneUltrasound;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);

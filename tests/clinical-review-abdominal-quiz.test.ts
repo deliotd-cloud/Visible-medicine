@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('six abdominal quizzes carry exact learner source, review identities and answer evidence',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'67dd759d40e0c775620964d90e85de659f15d6cf');
+ assert.equal(review.revision,'59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763');
  for(const path of ['content/abdominal-organ-quiz.ts','content/abdominal-organ-quiz-pins.json','lib/abdominal-organ-quiz.ts']) {
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

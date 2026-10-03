@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "9e5e4149b920a29ca9a9120e5784df76f914bd330d28d5badf9caa618cb75d6d"
+    "sha256": "6d1cece1ce6732070f0ea7a62cbc5e8690f4ef1f2df0a3742aec98d8ddba3397"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "365e997f8c82802eec07822c8ea4aca838ac5db9920e8758fdc058d82dad91f3"
+    "sha256": "36a2ab5f8fe573347bdeda04def3eb5634b8c44607e9a1db6df6946b06aac3b9"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1658,6 +1658,14 @@
   {
     "path": "content/sources/hra-renal/metadata.json",
     "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
+  },
+  {
+    "path": "content/spinal-bone-ultrasound-pins.json",
+    "sha256": "b89f75ae5e41774885cafb0c0aab1aadebae2d08ab859a8e9cb2c05d22ad4ac8"
+  },
+  {
+    "path": "content/spinal-bone-ultrasound.ts",
+    "sha256": "02901e9d37afff9883d191b82e1ffb5eb92cd1edcdb57a37932cf448cb6ca5fa"
   },
   {
     "path": "content/spinal-disc-function.ts",
@@ -3398,6 +3406,10 @@
   {
     "path": "lib/spinal-bone-curriculum.ts",
     "sha256": "cd17bce6dedd162d374e0cf9e96a12d435294fb1ce81341c8a7c13af0d2c0f53"
+  },
+  {
+    "path": "lib/spinal-bone-ultrasound.ts",
+    "sha256": "ff25f8f9553f793d6f79c3405dea27d793f44ef74e3860130571190e22fd7ecf"
   },
   {
     "path": "lib/spinal-disc-function.ts",

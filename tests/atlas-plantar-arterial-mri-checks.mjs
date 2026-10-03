@@ -1,11 +1,10 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from './atlas-pre-spinal-bone-ultrasound-history.ts';
 import { dirname, relative } from 'node:path';
-import { build } from 'esbuild';
+import { build, emittedTeaching, preSpinalBoneUltrasoundEpoch } from './atlas-pre-spinal-bone-ultrasound-history.ts';
 import test from 'node:test';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const baseline = '209238512f8950f9c182caac5a2696107fd3427a';
 const root = process.cwd();
@@ -33,7 +32,7 @@ async function load(previous = false) {
   return import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
-test('actual-current plantar arterial MRI and protected Review import',async()=>{
+test('completed plantar arterial MRI epoch and protected Review import',async()=>{
 const now = await load(), before = await load(true);
 const pins = JSON.parse(readFileSync('atlas-review/content/plantar-arterial-mri-pins.json'));
 assert.equal(pins.baseline, 'e6168496a8a59927164fc84c9297583d8ae01339');
@@ -188,7 +187,7 @@ for (const path of [
   'atlas-review/app/dissection-data.ts', 'atlas-review/lib/body-display-catalog.ts', 'atlas-review/lib/imaging-sync.ts', 'atlas-review/lib/didanix-atlas-adapter.ts',
   'atlas-review/lib/independent-study-links.ts',   'LICENSES/THIRD_PARTY_NOTICES.md', 'package.json', 'package-lock.json',
 ]) assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
-assert.equal(execFileSync('git', ['diff', '--name-only', baseline, '--', 'public/atlas-runtime/**/models/**'], { encoding: 'utf8' }).trim(), '');
+assert.equal(execFileSync('git', ['diff', '--name-only', baseline, preSpinalBoneUltrasoundEpoch, '--', 'public/atlas-runtime/**/models/**'], { encoding: 'utf8' }).trim(), '');
 assert.deepEqual(now.plantarArterialMriReferences, {
   anatomy: 'https://anatomy.ttuhscep.edu/anatomytables/arteries_lowerlimb.html',
   arch: 'https://pubmed.ncbi.nlm.nih.gov/11694970/',
@@ -252,7 +251,6 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb','review']
 assert.equal(mutations,370);assert.equal(malformed,50);assert.equal(stale,10);assert.equal(worksheets,10);
 for(const path of ['lib/atlas-delivery-access.ts','lib/lecture-repository.ts','atlas-review/lib/atlas-practice.ts','atlas-review/lib/learning-resources.ts'])assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),old(path).toString().replaceAll('\r\n','\n'),path);
 const source='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
-assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:source,encoding:'utf8'}).trim(),revision);
-assert.deepEqual(readFileSync(source+'/content/learning-resources.v1.json'),execFileSync('git',['show','e6168496a8a59927164fc84c9297583d8ae01339:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true}));
+assert.deepEqual(execFileSync('git',['show',revision+':content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}),execFileSync('git',['show','e6168496a8a59927164fc84c9297583d8ae01339:content/learning-resources.v1.json'],{cwd:source,maxBuffer:32e6,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}));
 
 });

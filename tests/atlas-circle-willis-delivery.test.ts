@@ -7,9 +7,9 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
   const root = 'public/atlas-runtime/head-neck/';
   const manifest = JSON.parse(readFileSync(root + 'manifest.json', 'utf8'));
   const inputs = JSON.parse(readFileSync(root + 'source-inputs.json', 'utf8')) as {path:string;sha256:string}[];
-  assert.equal(manifest.sourceCommit, '67dd759d40e0c775620964d90e85de659f15d6cf');
+  assert.equal(manifest.sourceCommit, '59c881d0eac308c8c5a2bc87f2c5a0f3f6d6c763');
   for (const [path, sha256] of Object.entries({
-    'app/body-content.ts': '365e997f8c82802eec07822c8ea4aca838ac5db9920e8758fdc058d82dad91f3',
+    'app/body-content.ts': '36a2ab5f8fe573347bdeda04def3eb5634b8c44607e9a1db6df6946b06aac3b9',
     'content/circle-willis-imaging-pins.json': '8891733101134e78fad8a36d1fd8b7387ea64b20ed2c2d36f3a20e978d6deece',
     'content/circle-willis-imaging.ts': 'd71c9cfe19ceb29934c91832cc3bd39d14a2dec405f4816e5eef4643d8eea2f1',
     'lib/circle-willis-imaging.ts': 'd4e7beb1ae7377777d6c9d93d16da8aac14384cd38e28a7de1cf7e2ecc803e2c',
@@ -31,5 +31,5 @@ test('regional and whole-body export delivers source-bound Circle of Willis draf
   }
   // The protected review export is separately built/bound, including the compact-controls update.
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
-  assert.equal(review.websiteIntegrationSha256, '8121f683e72e36e7ed70bf28892e06a546d38b972421a6f5ce1fa87b469c189d');
+  assert.equal(review.websiteIntegrationSha256, '45cd97aead672a93af1c89d354b21c786282c1cbd4f2346a44c11d435d508a33');
 });
