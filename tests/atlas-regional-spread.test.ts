@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 
-const revision='6d5caefe7cc90c03c16775126c939ac31956d90e';
+const revision='bd80e97dded3089f9306fa1878d7afca8990e403';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -110,7 +110,7 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  for(const p of ['content/body-review-display-pins.json','content/shoulder-arm-muscle-imaging.ts','content/shoulder-arm-muscle-imaging-pins.json','content/shoulder-arterial-ct.ts','content/shoulder-arterial-mri.ts','LICENSES/THIRD_PARTY_NOTICES.md'])assert.deepEqual(regionalSpreadMilestoneBytes('atlas-review/'+p),old('atlas-review/'+p));
  // The host binder conservatively fingerprints the whole review integration.
  // Preserve the exact Spread milestone's source invariants; the later guided
- // keyboard fix changes display geometry revisions, not authored teaching.
+ // keyboard/timing/recovery fixes change display geometry revisions, not authored teaching.
  const shoulder=json('atlas-review/content/review-revisions.json'),priorShoulder=JSON.parse(old('atlas-review/content/review-revisions.json').toString());
  const spreadShoulder=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/content/review-revisions.json').toString());
  assert.deepEqual(spreadShoulder.sourceRevisions,priorShoulder.sourceRevisions);
@@ -121,8 +121,10 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.deepEqual(Object.keys(shoulder.sourceRevisions),Object.keys(spreadShoulder.sourceRevisions));
  const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(shoulder.display);
  assert.deepEqual([...currentDisplay.keys()],[...previousDisplay.keys()]);
- assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),['app/fitted-camera.tsx']);
- assert.equal(currentDisplay.get('app/fitted-camera.tsx'),'5b645a3e14cc8792bdab2be9e5369d40add37005b53a6aa9b40dd39123fa96d9');
+ assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),['app/anatomy-scene.tsx','app/scene-recovery.tsx','app/fitted-camera.tsx']);
+ assert.equal(currentDisplay.get('app/anatomy-scene.tsx'),'65d63c2027cadef511391e414c3ae33f810f583939f55522c75855c73f437ef9');
+ assert.equal(currentDisplay.get('app/scene-recovery.tsx'),'b9f90de58345f2608ed60a5d9f649090a0a83a568d883783d6406dc8dd4291df');
+ assert.equal(currentDisplay.get('app/fitted-camera.tsx'),'9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0');
  for(const [id,tracks] of Object.entries(shoulder.sourceRevisions) as [string,Record<string,string|null>][]){
   assert.equal(tracks.teaching,spreadShoulder.sourceRevisions[id].teaching);
   assert.notEqual(tracks.geometry,spreadShoulder.sourceRevisions[id].geometry);

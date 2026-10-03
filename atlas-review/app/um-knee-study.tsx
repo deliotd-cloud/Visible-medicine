@@ -198,7 +198,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
           inspection={initialInspection} cameraBounds={closeUpBounds}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
-          transitionMs={guidance && !reducedMotion ? 1800 : 0} transitionPaused={!!guidance && (!ready || pageHidden)}
+          guidedRecovery={!!guidance} transitionMs={guidance && !reducedMotion ? 1800 : 0} transitionPaused={!!guidance && (!ready || pageHidden)}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
           onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}

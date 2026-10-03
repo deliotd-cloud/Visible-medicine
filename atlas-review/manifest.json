@@ -1,5 +1,5 @@
 {
-  "revision": "6d5caefe7cc90c03c16775126c939ac31956d90e",
+  "revision": "bd80e97dded3089f9306fa1878d7afca8990e403",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3323,8 +3323,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "0ca70b503d202c02d03bdb808b34ad32efd928a11221f52f7587837551389b3f",
-      "importedSha256": "2c1c2052cb2741aba12ea7b6c149d914261fd1d1a42fbe15ce26024237f5784c"
+      "sourceSha256": "a005785466f2144856f74b533f51bad2509b48565c3dd70ffdf53259bbce058d",
+      "importedSha256": "90a1dad35bf4361c700faf5620394e82053e14aa9777f4d77c4b860fbe1cfa49"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3683,8 +3683,8 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "f890cce2bd4714169d280d5a504a8efb64a25d7017468dd05e686374a58db39c"
+      "sourceSha256": "922eab774bd9304efc17b79a6f45f4b458746b7461eee09006d5efc250f11f65",
+      "importedSha256": "fd77a4579d0145a57b407d61d9d86dc3a9e15c8f5e9c6b020f116157692163c9"
     },
     {
       "path": "app/review/review.css",
@@ -3958,8 +3958,8 @@
     },
     {
       "path": "app/body-scene.tsx",
-      "sourceSha256": "81f65fba4f373635a3bde3a01e657e0890072a14dfa40813a2340322fb11783c",
-      "importedSha256": "9c78740c52efa4fac81342bc03aabbe2fe0cbf18b4c1ce8134eafb1b5f9250c5"
+      "sourceSha256": "3350aeb0ef4dfa7b4fd884f0877d8ce0166a90f2a1d49d1df987e68c5c613f9f",
+      "importedSha256": "62afad909aef90e756dd1c1d645c44872bece9b7f42280a7c25fd93612e0ad6e"
     },
     {
       "path": "app/anatomy-canvas.tsx",
@@ -3978,8 +3978,8 @@
     },
     {
       "path": "app/fitted-camera.tsx",
-      "sourceSha256": "5b645a3e14cc8792bdab2be9e5369d40add37005b53a6aa9b40dd39123fa96d9",
-      "importedSha256": "4145ea107b2e0474d5fab93560ab7accd04cb778083198c17c4d096eec451124"
+      "sourceSha256": "9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0",
+      "importedSha256": "c4c105b7b099375cb4c8ca797476e8c4c54362c06295b2bcfca2f788421f2543"
     },
     {
       "path": "lib/explode-layout.mjs",
@@ -4088,8 +4088,8 @@
     },
     {
       "path": "app/scene-recovery.tsx",
-      "sourceSha256": "c2b00f6a53f28b22f2815be96cd8a801ddd4d83540d0520f022c7e1923ec8616",
-      "importedSha256": "2121d6d1209ce5ccaa7d1a1cd5b928e11586ed4648c19e1832c857b6e04d89c0"
+      "sourceSha256": "b9f90de58345f2608ed60a5d9f649090a0a83a568d883783d6406dc8dd4291df",
+      "importedSha256": "0cd0d6335b7f8a0228148e84e5f2ad6490a0bfea3ddbe81850e97b80a34ed997"
     },
     {
       "path": "app/scene-recovery.css",
@@ -4938,8 +4938,8 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sourceSha256": "e100830b33643dc1696ebffed0e8f26254fdfbfc49f0911e1a649d56f0a4f7d7",
-      "importedSha256": "63a2cd4c1dd3f40eb5e3c6d038599af3df74f13fe1a0326219921597e5788ca4"
+      "sourceSha256": "40162143a83d5650cf24570e94a994323dcb65c9677682ccaf838696a8bbd2d6",
+      "importedSha256": "16a3bed3b7e6820ad89fd94f89721bf7ae3c55ef4114290252500eb54c13278c"
     },
     {
       "path": "app/specimen-removal-focus.ts",
@@ -5018,8 +5018,8 @@
     },
     {
       "path": "app/anatomy-scene.tsx",
-      "sourceSha256": "69a7df51013d5597f5bfcf7ef86208b8835c198d06c36a9ce80e7a9c71d48af8",
-      "importedSha256": "1afaffa9797c5af4787063f6b59b4c76bd5dd751ed216d9f65dd2482b3074119"
+      "sourceSha256": "65d63c2027cadef511391e414c3ae33f810f583939f55522c75855c73f437ef9",
+      "importedSha256": "2a9acb826d2f222a826f4bfafdffc5921edf9ed43ccea4904ea78a269eac0f6a"
     },
     {
       "path": "lib/shoulder-arrangement.ts",
@@ -5168,5 +5168,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "73ed91c4538d6c1c8de4fce5cd13be3f38b000e6807fdd83aa8c2ad325ff4bf0"
+  "websiteIntegrationSha256": "9d979e49ea79d48fbd66befe8f869f5c89316d407b5503c810119941ae64e69b"
 }

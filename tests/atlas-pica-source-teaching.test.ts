@@ -6,7 +6,7 @@ import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
-const revision='6d5caefe7cc90c03c16775126c939ac31956d90e';
+const revision='bd80e97dded3089f9306fa1878d7afca8990e403';
 const baseline='2df4395d6df36a53da361e1ab3b6c07ddbb67e2a';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});

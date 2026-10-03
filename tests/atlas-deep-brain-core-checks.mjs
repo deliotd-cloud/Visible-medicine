@@ -7,7 +7,7 @@ import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const baseline='3c0bf9383b9b1668bc51e39340c68d47850f0581';
-const revision='6d5caefe7cc90c03c16775126c939ac31956d90e';
+const revision='bd80e97dded3089f9306fa1878d7afca8990e403';
 const sourceBaseline='398edc60a43f8d0235d9e6963c1ad56954b3fa98';
 const hash=value=>createHash('sha256').update(typeof value==='string'||Buffer.isBuffer(value)?value:JSON.stringify(value)).digest('hex');
 const old=path=>execFileSync('git',['show',baseline+':'+path],{windowsHide:true,maxBuffer:32e6});

@@ -7,8 +7,8 @@ import { build } from 'esbuild';
 test('five cervical quick checks reach learner and review with exact identities and answer evidence', async () => {
   const review = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const learner = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
-  assert.equal(review.revision, '6d5caefe7cc90c03c16775126c939ac31956d90e');
-  assert.equal(learner.sourceCommit,'6d5caefe7cc90c03c16775126c939ac31956d90e');
+  assert.equal(review.revision, 'bd80e97dded3089f9306fa1878d7afca8990e403');
+  assert.equal(learner.sourceCommit,'bd80e97dded3089f9306fa1878d7afca8990e403');
   assert.equal(learner.patientDataIncluded, false);
   assert.equal(learner.clinicalApproved, false);
   const player=readFileSync('atlas-review/app/regional-guided-learning.tsx','utf8');

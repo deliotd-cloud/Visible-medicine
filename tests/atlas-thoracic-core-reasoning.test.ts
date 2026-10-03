@@ -9,7 +9,7 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 import {preProjectionImportBytes,preProjectionTeachingPlugin} from './atlas-interosseous-projection-history.ts';
 import {epochBytes} from './atlas-pre-lower-venous-reasoning-history.ts';
 const baseline='6d851df6891316da971430ca8ddf522d31df640b';
-const revision='6d5caefe7cc90c03c16775126c939ac31956d90e';
+const revision='bd80e97dded3089f9306fa1878d7afca8990e403';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6});
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');

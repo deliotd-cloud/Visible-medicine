@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "6d5caefe7cc90c03c16775126c939ac31956d90e",
+  "sourceCommit": "bd80e97dded3089f9306fa1878d7afca8990e403",
   "region": "independent-right-lower-limb",
   "structures": 67,
   "scopes": 5,
@@ -15,7 +15,7 @@
     {
       "path": "index.html",
       "bytes": 477,
-      "sha256": "26bef8b8d08cdcc3b39653a9a861e3e9af3d5a7221f96ffd563d5fb73de65516"
+      "sha256": "8460887bb6d72556160e2025db22a8f46201a5a1fd67b30a38ce6d5a34613b04"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -30,17 +30,17 @@
     {
       "path": "source-inputs.json",
       "bytes": 13193,
-      "sha256": "5972bc0f6cbb9e0d65be5b02dbf4c3fa7447a83eb4139b98c4bea3f794393498"
+      "sha256": "fc6b07c96a29c5d49b98eeced054113db5e5cb29cccf0eb72376838e8f1118d6"
+    },
+    {
+      "path": "assets/index-BqRbsjYP.js",
+      "bytes": 2220816,
+      "sha256": "b2070f65b347ed13425529d19782b934d184c44e9bf3589f37fe0087f16eda03"
     },
     {
       "path": "assets/index-D62gn2Nx.css",
       "bytes": 236361,
       "sha256": "89d44c71e06570d5ec7de85572b5d4350c1c33784f611f4da9f5ff690ed389cb"
-    },
-    {
-      "path": "assets/index-r3xUo1Gt.js",
-      "bytes": 2219505,
-      "sha256": "2e6477cf1a19ddeab0a08c4d1205b90ac2f678fc432496815d737d0378ac7488"
     },
     {
       "path": "models/um-knee/knee.glb",

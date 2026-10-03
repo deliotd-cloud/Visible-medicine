@@ -81,7 +81,11 @@ export function SceneRecoveryNotice({
 type Props = {
   className: string;
   cameraKey: string;
-  children: (onHealth: (health: RendererHealth) => void) => ReactNode;
+  children: (
+    onHealth: (health: RendererHealth) => void,
+    autoRecoveryCamera: RefObject<StudyCamera | null>,
+    cameraTransitionActive: RefObject<boolean>,
+  ) => ReactNode;
   onHealth: (health: RendererHealth) => void;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
@@ -96,6 +100,16 @@ export class SceneRecovery extends Component<Props, State> {
   private lastReadyCameraKey: string | null = null;
   private returnFocus = false;
   private container = createRef<HTMLElement>();
+  private autoRecoveryCamera: RefObject<StudyCamera | null> = { current: null };
+  private queuedRecoveryCamera: RefObject<StudyCamera | null> = { current: null };
+  private cameraTransitionActive: RefObject<boolean> = { current: false };
+  private clearAutoRecovery() {
+    const queued = this.queuedRecoveryCamera.current;
+    if (queued && this.props.cameraRestore?.current === queued)
+      this.props.cameraRestore.current = null;
+    this.autoRecoveryCamera.current = null;
+    this.queuedRecoveryCamera.current = null;
+  }
   static getDerivedStateFromError(): Partial<State> {
     return { health: 'failed' };
   }
@@ -108,9 +122,12 @@ export class SceneRecovery extends Component<Props, State> {
     this.props.onHealth('failed');
   }
   componentWillUnmount() {
+    this.clearAutoRecovery();
     this.alive = false;
   }
-  componentDidUpdate(_props: Props, previous: State) {
+  componentDidUpdate(previousProps: Props, previous: State) {
+    if (previousProps.cameraKey !== this.props.cameraKey)
+      this.clearAutoRecovery();
     if (this.state.health === 'ready')
       this.lastReadyCameraKey = this.props.cameraKey;
     if (
@@ -144,16 +161,30 @@ export class SceneRecovery extends Component<Props, State> {
   report = (health: RendererHealth) => this.updateHealth(0, health);
   retry = () => {
     if (!this.alive || this.state.health === 'ready') return;
+    if (this.lastReadyCameraKey !== this.props.cameraKey)
+      this.clearAutoRecovery();
+    else if (
+      this.queuedRecoveryCamera.current &&
+      this.props.cameraRestore?.current !== this.queuedRecoveryCamera.current
+    ) {
+      this.autoRecoveryCamera.current = null;
+      this.queuedRecoveryCamera.current = null;
+    }
     // An explicitly queued saved-view camera takes precedence over the last orbit.
     if (
       this.props.cameraRestore &&
       !this.props.cameraRestore.current &&
       this.lastReadyCameraKey !== null &&
       this.lastReadyCameraKey === this.props.cameraKey
-    )
-      this.props.cameraRestore.current = copyRecoveryCamera(
+    ) {
+      const copied = copyRecoveryCamera(
         this.props.cameraCapture?.current ?? null,
       );
+      this.props.cameraRestore.current = copied;
+      this.queuedRecoveryCamera.current = copied;
+      this.autoRecoveryCamera.current = this.cameraTransitionActive.current
+        ? copied : null;
+    }
     this.returnFocus = true;
     const generation = ++this.generation;
     this.terminalFailure = false;
@@ -179,7 +210,7 @@ export class SceneRecovery extends Component<Props, State> {
         >
           {this.state.health !== 'failed' && (
             <Fragment key={this.state.attempt}>
-              {this.props.children(this.report)}
+              {this.props.children(this.report, this.autoRecoveryCamera, this.cameraTransitionActive)}
             </Fragment>
           )}
         </div>

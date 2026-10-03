@@ -482,7 +482,7 @@ export function AnatomyScene(props: SceneProps) {
       cameraCapture={props.cameraCapture}
       cameraRestore={props.cameraRestore}
     >
-      {(onHealth) => (
+      {(onHealth, autoRecoveryCamera, cameraTransitionActive) => (
         <Canvas
           onFailure={() => onHealth('failed')}
           orthographic={orthographic}
@@ -582,6 +582,9 @@ export function AnatomyScene(props: SceneProps) {
             planar={layout === 'tray'}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
+            autoRecoveryCamera={autoRecoveryCamera}
+            cameraTransitionActive={cameraTransitionActive}
+            guidedRecovery={!!props.tourLocked}
           />
         </Canvas>
       )}

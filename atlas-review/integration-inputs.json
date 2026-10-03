@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6d5caefe7cc90c03c16775126c939ac31956d90e",
-  "sha256": "73ed91c4538d6c1c8de4fce5cd13be3f38b000e6807fdd83aa8c2ad325ff4bf0",
+  "sourceCommit": "bd80e97dded3089f9306fa1878d7afca8990e403",
+  "sha256": "9d979e49ea79d48fbd66befe8f869f5c89316d407b5503c810119941ae64e69b",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -64,7 +64,7 @@
     },
     {
       "path": "atlas-review/app/anatomy-scene.tsx",
-      "sha256": "1afaffa9797c5af4787063f6b59b4c76bd5dd751ed216d9f65dd2482b3074119"
+      "sha256": "2a9acb826d2f222a826f4bfafdffc5921edf9ed43ccea4904ea78a269eac0f6a"
     },
     {
       "path": "atlas-review/app/anatomy-tissue.tsx",
@@ -140,7 +140,7 @@
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
-      "sha256": "9c78740c52efa4fac81342bc03aabbe2fe0cbf18b4c1ce8134eafb1b5f9250c5"
+      "sha256": "62afad909aef90e756dd1c1d645c44872bece9b7f42280a7c25fd93612e0ad6e"
     },
     {
       "path": "atlas-review/app/body-selection-notice.tsx",
@@ -216,7 +216,7 @@
     },
     {
       "path": "atlas-review/app/fitted-camera.tsx",
-      "sha256": "4145ea107b2e0474d5fab93560ab7accd04cb778083198c17c4d096eec451124"
+      "sha256": "c4c105b7b099375cb4c8ca797476e8c4c54362c06295b2bcfca2f788421f2543"
     },
     {
       "path": "atlas-review/app/globals.css",
@@ -400,7 +400,7 @@
     },
     {
       "path": "atlas-review/app/scene-recovery.tsx",
-      "sha256": "2121d6d1209ce5ccaa7d1a1cd5b928e11586ed4648c19e1832c857b6e04d89c0"
+      "sha256": "0cd0d6335b7f8a0228148e84e5f2ad6490a0bfea3ddbe81850e97b80a34ed997"
     },
     {
       "path": "atlas-review/app/selection-visibility-notice.tsx",
@@ -508,7 +508,7 @@
     },
     {
       "path": "atlas-review/app/um-knee-study.tsx",
-      "sha256": "63a2cd4c1dd3f40eb5e3c6d038599af3df74f13fe1a0326219921597e5788ca4"
+      "sha256": "16a3bed3b7e6820ad89fd94f89721bf7ae3c55ef4114290252500eb54c13278c"
     },
     {
       "path": "atlas-review/app/um-limb-learning.tsx",
@@ -4204,7 +4204,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "0fabc95f2f233fdf864e1e2851cd6115fb4500d5e6587e7cc2a24a8e1231f52f"
+      "sha256": "52f15ccb9d936be5dd9f6209e0d5cf07eea409820a62978da5cbbf58b61b0cc3"
     }
   ]
 }

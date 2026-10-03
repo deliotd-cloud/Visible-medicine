@@ -53,6 +53,7 @@ import './scene-orientation.css';
 
 type Props = {
   tourLocked?: boolean;
+  guidedRecovery?: boolean;
   transitionMs?: number;
   transitionPaused?: boolean;
   /** Optional same-origin website delivery prefix; canonical anatomy remains unchanged. */
@@ -546,7 +547,7 @@ export function BodyScene(props: Props) {
       cameraCapture={props.cameraCapture}
       cameraRestore={props.cameraRestore}
     >
-      {(onHealth) => (
+      {(onHealth, autoRecoveryCamera, cameraTransitionActive) => (
         <div className="anatomy-oriented-scene" data-orientation={!props.exam}>
           {!props.exam && (
             <p className="anatomy-live-orientation" aria-live="off">
@@ -625,6 +626,9 @@ export function BodyScene(props: Props) {
             recenterKey={focusId ?? props.presetKey ?? ''}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
+            autoRecoveryCamera={autoRecoveryCamera}
+            cameraTransitionActive={cameraTransitionActive}
+            guidedRecovery={!!props.tourLocked || !!props.guidedRecovery}
             onKeyboardRotate={onKeyboardRotate}
           />
         </Canvas>
