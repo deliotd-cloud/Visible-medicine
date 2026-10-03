@@ -21,11 +21,11 @@ async function teachingApi(historical=false){
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'2063af41c4207ea841a123bf942ef03962644a26');
+  assert.equal(review.revision,'182a60bd8942998f808fff87f8a6aa4d8c49f39a');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'2063af41c4207ea841a123bf942ef03962644a26');
+    assert.equal(learner.sourceCommit,'182a60bd8942998f808fff87f8a6aa4d8c49f39a');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);
@@ -67,13 +67,16 @@ test('guided imaging notes reach both learners and review without inventing scan
   assert.ok(notes.includes('tabIndex={0}'));
 });
 
-test('current 157-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
-  const api=await teachingApi();let checked=0,handChecks=0;
-  const earlierTours=api.regionalTours.filter((t:any)=>t.id!=='right-hand-arterial-orientation');
+test('current 163-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
+  const api=await teachingApi();let checked=0,handChecks=0,venousChecks=0;
+  const completedHandTours=api.regionalTours.filter((t:any)=>t.id!=='right-lower-limb-venous-orientation');
+  assert.equal(completedHandTours.length,27);
+  assert.equal(completedHandTours.reduce((n:number,t:any)=>n+t.steps.length,0),157);
+  const earlierTours=completedHandTours.filter((t:any)=>t.id!=='right-hand-arterial-orientation');
   assert.equal(earlierTours.length,26);
   assert.equal(earlierTours.reduce((n:number,t:any)=>n+t.steps.length,0),150);
-  assert.equal(api.regionalTours.length,27);
-  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),157);
+  assert.equal(api.regionalTours.length,28);
+  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),163);
   assert.equal(api.regionalTours.find((t:any)=>t.id==='hepatobiliary-surface-orientation')?.steps.length,4);
   for(const tour of api.regionalTours)for(const step of tour.steps){
     const structure=api.regionalTourStructures(api.catalog,tour).find((s:any)=>s.id===step.selectedId);
@@ -85,6 +88,7 @@ test('current 157-stop guided imaging notes match unsigned learner/review teachi
       for(const key of ['title','body','bullets','citations','note','readiness'])assert.deepEqual(lesson[key]??null,topic[key]??null);
       checked++;
       if(tour.id==='right-hand-arterial-orientation')handChecks++;
+      if(tour.id==='right-lower-limb-venous-orientation')venousChecks++;
     }
   }
   for(const step of api.shoulderTour.steps){
@@ -92,7 +96,9 @@ test('current 157-stop guided imaging notes match unsigned learner/review teachi
     for(const tab of ['ct','mri','xray','ultrasound']){assert.ok(structure.sections[tab]?.body);checked++;}
   }
   assert.equal(handChecks,28);
-  assert.equal(checked-handChecks,620); // Original150 regional plus five shoulder stops.
-  assert.equal(checked,648); // Current157 regional plus five shoulder stops, four modalities.
+  assert.equal(venousChecks,24);
+  assert.equal(checked-handChecks-venousChecks,620); // Original150 regional plus five shoulder stops.
+  assert.equal(checked-venousChecks,648); // Completed157 regional plus five shoulder stops.
+  assert.equal(checked,672); // Current163 regional plus five shoulder stops, four modalities.
   assert.equal(api.circleWillisTour.steps.length,10);
 });

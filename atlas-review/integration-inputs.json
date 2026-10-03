@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "2063af41c4207ea841a123bf942ef03962644a26",
-  "sha256": "37c255b18aa1a04023aaf3aca2554dc0858c89cd60ea569b17c78314e8b57e2e",
+  "sourceCommit": "182a60bd8942998f808fff87f8a6aa4d8c49f39a",
+  "sha256": "3c03b54a89f5625c23580b54816a4f3029dd65f2371f413c0e06ec62d97b1159",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "44efcc62d9ecaa8c9474bcac25f07e2ffaece68b5e59a8f191fdb67dc56bdabb"
+      "sha256": "2124583662547e91c83079ee1353a33eec7133f6d21869be2e12455c151abbe5"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -3039,6 +3039,10 @@
       "sha256": "56d60e3802bfc6dd8797fa2c36048916306b0084142a4b59e07b070e0f2b7e76"
     },
     {
+      "path": "atlas-review/lib/lower-venous-tour.ts",
+      "sha256": "74a74ed5a036b478766d965632f3ae501860b1aacb1b4bd9040116ba735efe06"
+    },
+    {
       "path": "atlas-review/lib/lumbar-sacral-quiz.ts",
       "sha256": "13306ebd04e4800dfdb5d01361fd88753d75040a6e0504b1997ff52e05bd15ef"
     },
@@ -3332,7 +3336,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "c5f939f5a96a990d4bfe27aa31d74f8d291260bdc493cf7ff86542136480cc1a"
+      "sha256": "9d434a611ecd3dfa9132e363314f9cfd3900f2e84461e75e69eedfd0de2b6c59"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -4056,7 +4060,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "5203f90e136934945b0cd932c74d1a0e96e5c93c96e2f5d714feb086f32e9123"
+      "sha256": "2168f19d9f72a7ff536f0da4d598dcf76a6704c3d9bb0bce6eccaa18c408c201"
     }
   ]
 }

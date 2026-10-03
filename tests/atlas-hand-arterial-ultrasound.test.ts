@@ -2,10 +2,10 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
+// Replay the immutable completed US milestone; live lower-venous delivery has
+// independent whole-topic preservation and Review guards.
+import {readFileSync,build,emittedTeaching} from './atlas-pre-lower-venous-history.ts';
 import {dirname,relative} from 'node:path';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const source='2063af41c4207ea841a123bf942ef03962644a26';
 const parent='6e134825dd189873d60846cacdc98a11983d6d16';
