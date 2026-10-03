@@ -2,10 +2,11 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
 import {dirname,relative} from 'node:path';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build,emittedTeaching,readFileSync} from './atlas-pre-hand-tour-history.ts';
+
+// Preserve the exact completed hand-CT milestone; the arterial-tour test checks
+// current delivery and all unchanged CT/other topics independently.
 
 const baseline='5c1e040f4456b35a53950fdcd6b248d92551441a';
 const parentSource='946700cc8c5162076cd5e5d9f79a00ba72c6fda1';

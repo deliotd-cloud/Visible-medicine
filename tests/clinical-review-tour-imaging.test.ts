@@ -21,11 +21,11 @@ async function teachingApi(historical=false){
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'2413ff790069d5bfa6c2c507d67ebfa2a5b3fe51');
+  assert.equal(review.revision,'6e134825dd189873d60846cacdc98a11983d6d16');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'2413ff790069d5bfa6c2c507d67ebfa2a5b3fe51');
+    assert.equal(learner.sourceCommit,'6e134825dd189873d60846cacdc98a11983d6d16');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);
@@ -67,10 +67,13 @@ test('guided imaging notes reach both learners and review without inventing scan
   assert.ok(notes.includes('tabIndex={0}'));
 });
 
-test('current 150-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
-  const api=await teachingApi();let checked=0;
-  assert.equal(api.regionalTours.length,26);
-  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),150);
+test('current 157-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
+  const api=await teachingApi();let checked=0,handChecks=0;
+  const earlierTours=api.regionalTours.filter((t:any)=>t.id!=='right-hand-arterial-orientation');
+  assert.equal(earlierTours.length,26);
+  assert.equal(earlierTours.reduce((n:number,t:any)=>n+t.steps.length,0),150);
+  assert.equal(api.regionalTours.length,27);
+  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),157);
   assert.equal(api.regionalTours.find((t:any)=>t.id==='hepatobiliary-surface-orientation')?.steps.length,4);
   for(const tour of api.regionalTours)for(const step of tour.steps){
     const structure=api.regionalTourStructures(api.catalog,tour).find((s:any)=>s.id===step.selectedId);
@@ -81,12 +84,15 @@ test('current 150-stop guided imaging notes match unsigned learner/review teachi
       assert.ok(topic,structure.id+': '+tab);
       for(const key of ['title','body','bullets','citations','note','readiness'])assert.deepEqual(lesson[key]??null,topic[key]??null);
       checked++;
+      if(tour.id==='right-hand-arterial-orientation')handChecks++;
     }
   }
   for(const step of api.shoulderTour.steps){
     const structure=api.structures.find((s:any)=>s.id===step.selectedId);assert.ok(structure);
     for(const tab of ['ct','mri','xray','ultrasound']){assert.ok(structure.sections[tab]?.body);checked++;}
   }
-  assert.equal(checked,620); // 150 current regional plus five shoulder stops, four modalities.
+  assert.equal(handChecks,28);
+  assert.equal(checked-handChecks,620); // Original150 regional plus five shoulder stops.
+  assert.equal(checked,648); // Current157 regional plus five shoulder stops, four modalities.
   assert.equal(api.circleWillisTour.steps.length,10);
 });

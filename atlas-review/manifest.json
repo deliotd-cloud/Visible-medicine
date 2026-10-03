@@ -1,5 +1,5 @@
 {
-  "revision": "2413ff790069d5bfa6c2c507d67ebfa2a5b3fe51",
+  "revision": "6e134825dd189873d60846cacdc98a11983d6d16",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -2858,8 +2858,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "391d4118979b1bcdb5c8a3a4552d4caead84d812fd3b30a514601c28c63a5e85",
-      "importedSha256": "391d4118979b1bcdb5c8a3a4552d4caead84d812fd3b30a514601c28c63a5e85"
+      "sourceSha256": "c5f939f5a96a990d4bfe27aa31d74f8d291260bdc493cf7ff86542136480cc1a",
+      "importedSha256": "c5f939f5a96a990d4bfe27aa31d74f8d291260bdc493cf7ff86542136480cc1a"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -2945,6 +2945,11 @@
       "path": "lib/hepatobiliary-tour.ts",
       "sourceSha256": "0c405e8b10f99886262c68ed5957ceffec908206b312a81016f92f59ab897831",
       "importedSha256": "0c405e8b10f99886262c68ed5957ceffec908206b312a81016f92f59ab897831"
+    },
+    {
+      "path": "lib/hand-arterial-tour.ts",
+      "sourceSha256": "0d1a7c89713111b0a52b76bff0624bc7bb8b33df7b0a83404a1a1394dc55fb85",
+      "importedSha256": "0d1a7c89713111b0a52b76bff0624bc7bb8b33df7b0a83404a1a1394dc55fb85"
     },
     {
       "path": "lib/nested-review-material.ts",
@@ -3118,8 +3123,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "f004d04da7494ebc5f1a46ea85944040557c0bd79fed7f56209791462e80b60b",
-      "importedSha256": "ef5e495abdcc3122e927464b990626b2f32949e3ec50a7ec31fb100868c1c0e6"
+      "sourceSha256": "5a1d27e4159c5e306c37ec06995975e52cc6a71a202ef4150b97678e29f427b7",
+      "importedSha256": "30f969a24bf85867feda4c5b950a3a554d9368ab2307444f914055b7bfdbd1a3"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3479,7 +3484,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "14f370248599a22fff2fe6eea3cb3c5585eaaeb597b72adaf44f1b952ffec747"
+      "importedSha256": "1a68823be622dfd1d1db1986aab57095badd245a983adf5d126b3e895cca1af1"
     },
     {
       "path": "app/review/review.css",
@@ -3513,8 +3518,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "eacca40f146950f3b27bd0bd51ab3ecff83da65b9d87265e4f5f5dff42950d3b",
-      "importedSha256": "eacca40f146950f3b27bd0bd51ab3ecff83da65b9d87265e4f5f5dff42950d3b"
+      "sourceSha256": "e1caad4e8e25ac125d3249db962005e5d8d182abde1dc801a4aadf194f4c1a72",
+      "importedSha256": "e1caad4e8e25ac125d3249db962005e5d8d182abde1dc801a4aadf194f4c1a72"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -4963,5 +4968,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "142e7a9904694848c940b0d79575396854d0f2595592a57bb9dc501c175b09f6"
+  "websiteIntegrationSha256": "19edd8f0faca944c0f2df441896e2e437c50b45faba8a0a1dab022ded8ffdd19"
 }
