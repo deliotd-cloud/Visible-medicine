@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
 import {build} from 'esbuild';
 import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {epochBytes,epochImportPlugin,preFootWebsiteEpoch,readFileSync} from './atlas-foot-prior-epoch.mjs';
 
 const baseline='3c0bf9383b9b1668bc51e39340c68d47850f0581';
 const revision='88cea927d48729769b96ad8fe680b0872b7e6687';
@@ -13,7 +13,7 @@ const hash=value=>createHash('sha256').update(typeof value==='string'||Buffer.is
 const old=path=>execFileSync('git',['show',baseline+':'+path],{windowsHide:true,maxBuffer:32e6});
 const common="export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before=await atlasExactGitApi(baseline,common);
-const compiled=await build({stdin:{contents:common+"export * from './atlas-review/lib/deep-brain-core-teaching';export * from './atlas-review/content/deep-brain-core-teaching';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const compiled=await build({stdin:{contents:common+"export * from './atlas-review/lib/deep-brain-core-teaching';export * from './atlas-review/content/deep-brain-core-teaching';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:[epochImportPlugin()]});
 const now=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const pins=JSON.parse(readFileSync('atlas-review/content/deep-brain-core-teaching-pins.json'));
 // Immutable acceptance fixture from Atlas 6d5caefe:content/deep-brain-core-teaching.transition.json.
@@ -142,7 +142,7 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
  }
  assert(!sourceInputs.some(x=>x.path==='content/deep-brain-core-teaching.transition.json'));
  if(name==='head-neck'){
-  const emitted=emittedTeaching(base,manifest.files,true);
+  const emitted=emittedTeaching(base,manifest.files,true,epochBytes);
   for(const lessons of Object.values(now.deepBrainCoreTeaching))for(const lesson of Object.values(lessons)){
    assert(emitted.includes(lesson.body));for(const bullet of lesson.bullets)assert(emitted.includes(bullet));
   }
@@ -150,4 +150,4 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
   for(const ref of Object.values(now.deepBrainCoreReferences))assert(emitted.includes(ref.url));
  }
 }
-console.log(JSON.stringify({baseline,revision,changed,preserved,sourceMutationRefusals:refusals,malformedPacketsRefused:malformed,staleFingerprintsIndependentlyRefused:stale,storageCalls,changedTeachingWorksheets:worksheets,bundlesUnchanged:catalog.bundles.length,clinicalApproval:false,websiteIntegrated:true}));
+console.log(JSON.stringify({baseline,revision,websiteEpoch:preFootWebsiteEpoch,historicalMilestone:true,changed,preserved,sourceMutationRefusals:refusals,malformedPacketsRefused:malformed,staleFingerprintsIndependentlyRefused:stale,storageCalls,changedTeachingWorksheets:worksheets,bundlesUnchanged:catalog.bundles.length,clinicalApproval:false,websiteIntegratedAtEpoch:true}));

@@ -11,9 +11,11 @@ test('spinal notice extraction retains the exact preceding thoracic notice and a
  const start=canonical.indexOf(marker);
  assert(start>=0);
  assert.match(withoutSpinalNotice(canonical),/## Thoracic-bone quick checks — 2 October 2026/);
- assert.equal(withoutSpinalNotice(canonical),canonical.slice(0,start));
+ const next=canonical.indexOf('\n## ',start+marker.length),end=next<0?canonical.length:next;
+ const retained=canonical.slice(0,start)+canonical.slice(end);
+ assert.equal(withoutSpinalNotice(canonical),retained);
  const later='\n## Later independent notice\n\nRetained verbatim.\n';
- assert.equal(withoutSpinalNotice(canonical+later),canonical.slice(0,start)+later);
+ assert.equal(withoutSpinalNotice(canonical+later),retained+later);
 });
 
 test('spinal notice extraction refuses duplicate, moved and altered append',()=>{

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8"
+      "sha256": "60262c682d3e6c0013763370ef0b40dbe6e32af02055e73c7341eea9f49a7731"
     },
     {
       "path": "app/body-education-link.ts",
@@ -915,6 +915,14 @@
     {
       "path": "content/foot-sesamoid-teaching.ts",
       "sha256": "d25249c8f585bdf706c187c0e013342322ca85c073a3439a2efa187dcfcc6b7a"
+    },
+    {
+      "path": "content/foot-surface-imaging-pins.json",
+      "sha256": "5f30776e2326cce269861d29d16931dc4967b216c9575a5b63b86423d165fa1a"
+    },
+    {
+      "path": "content/foot-surface-imaging.ts",
+      "sha256": "c094fb283c89bc0065d6c03adc55333229ce9509174d33b666f7eac1972e3b33"
     },
     {
       "path": "content/foot-vascular-quiz-pins.json",
@@ -2509,6 +2517,10 @@
       "sha256": "3fff1e3731ad28496af251623c2719a9ac49317a899a8b3e6c6d1df552b99bef"
     },
     {
+      "path": "lib/foot-surface-imaging.ts",
+      "sha256": "46947593f3f8b88cd7e65b9063b64f9b356707ce1bdfff56751425b7656fc1ff"
+    },
+    {
       "path": "lib/foot-vascular-anatomy.ts",
       "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
     },
@@ -3670,7 +3682,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3624299fa3e19f688d01098b3b16c1ff1b95b1506e634c8607a78adb98dc8b93"
+      "sha256": "a34e696d27e319f9d0eea5386798d6d0f3e710890321d17fbd1a5b7895bcdb9f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3885,7 +3897,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bd20f24e74dd1b9583712bb83b43ee210f9daaa1e376dd622a59a327afe619fb",
-  "sourceRendererSha256": "7728287b17ed357d204a3e2a0940e0d1b6ed5a28d8c3c697cec60066e21ed969",
-  "websiteIntegrationSha256": "b3710b924c20be5f260be21498a8f0a6c5ded1e00f4d40209a9a83b0de787386"
+  "sha256": "ebea7fac527177a73089fc54eaa1e473bb74ffe1528058bfcdc5087b79ff2a26",
+  "sourceRendererSha256": "7c834007f28a2bcb70b032d2414ad31691ff5f1207dc894dc6e8a0d18cddefd6",
+  "websiteIntegrationSha256": "9dfc49448c371998534d57892791a019334c95174ed2400b07b59901f88f45ef"
 }

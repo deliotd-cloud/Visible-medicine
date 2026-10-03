@@ -2322,3 +2322,19 @@ Original teaching and code use the project MIT terms. Existing BodyParts3D
 CC BY 4.0 geometry/credits, source holds and independent resource access remain.
 No new mesh, font, texture, dependency, paid service or mandatory licence fee.
 References and clinical boundaries: `docs/SPINAL_BONE_ULTRASOUND.md`.
+
+## Foot ultrasound surface orientation — 3 October 2026
+
+Eight original drafts use factual interpretation of Hung et al. (Diagnostics
+2020, doi:10.3390/diagnostics10030160), Tsutsumi, Kudo, Nimura and Akita
+(Scientific Reports 2022, doi:10.1038/s41598-022-19543-4), and Noel-Barker et al.
+(Foot & Ankle Orthopaedics 2026, doi:10.1177/24730114261460463).
+Each publisher specifies CC BY 4.0: https://creativecommons.org/licenses/by/4.0/.
+Source links and author/year credits are retained in `docs/FOOT_SURFACE_IMAGING.md`.
+Our independently written interpretation is not publisher wording or endorsement.
+No figures, article prose, scans, ultrasound frames, tables, PDFs, meshes or
+datasets are imported. Separately credited third-party media is not cleared.
+NC-ND alternatives are excluded from these drafts. Original code/teaching use
+project MIT terms; existing BodyParts3D CC BY obligations and source holds remain.
+No new dependency, font, texture, model, paid service or mandatory licence fee.
+Clinical approval, diagnostic performance and patient correspondence are absent.

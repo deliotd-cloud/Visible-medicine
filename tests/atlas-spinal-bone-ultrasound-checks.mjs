@@ -1,16 +1,16 @@
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
-import { dirname, relative } from 'node:path';
 import { build } from 'esbuild';
 import test from 'node:test';
 import { emittedTeaching } from './atlas-emitted-teaching.ts';
+import { epochImportPlugin, epochReadFileSync, spinalEpochBytes, spinalWebsiteEpoch } from './atlas-foot-prior-epoch.mjs';
 
 const websiteBaseline = 'd6c37e4df4065fb832bf89b3a1a825de0d3033ff';
 const previousSourceRevision = '67dd759d40e0c775620964d90e85de659f15d6cf';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const root = process.cwd();
+const readFileSync = epochReadFileSync(spinalWebsiteEpoch);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const oldCache = new Map();
 function old(path) {
@@ -27,24 +27,14 @@ function sourceAt(revision, path) {
     env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
   });
 }
-const entry = "export * from './atlas-review/lib/spinal-bone-ultrasound';export * from './atlas-review/content/spinal-bone-ultrasound';export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
+const spinalExports = "export * from './atlas-review/lib/spinal-bone-ultrasound';export * from './atlas-review/content/spinal-bone-ultrasound';";
+const commonEntry = "export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 
 async function load(previous = false) {
-  const paths = new Set([
-    'atlas-review/app/body-content.ts',
-    'atlas-review/content/body-review-display-pins.json',
-    'atlas-review/content/body-renderer-revision.json',
-  ]);
   const result = await build({
-    stdin: { contents: entry, resolveDir: root, loader: 'ts' },
+    stdin: { contents: (previous ? '' : spinalExports) + commonEntry, resolveDir: root, loader: 'ts' },
     bundle: true, write: false, format: 'esm', platform: 'node',
-    plugins: previous ? [{ name: 'three-pre-import-website-files', setup(api) {
-      api.onLoad({ filter: /\.(?:ts|json)$/ }, args => {
-        const path = relative(root, args.path).replaceAll('\\', '/');
-        if (!paths.has(path)) return;
-        return { contents: old(path).toString(), loader: path.endsWith('.json') ? 'json' : 'ts', resolveDir: dirname(args.path) };
-      });
-    } }] : [],
+    plugins: [epochImportPlugin(previous ? websiteBaseline : spinalWebsiteEpoch)],
   });
   return import('data:text/javascript;base64,' + Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
@@ -61,7 +51,7 @@ function mutate(value, path) {
   return copy;
 }
 
-test('actual-current spinal bone ultrasound and protected Review import', async () => {
+test('saved spinal bone ultrasound and protected Review import before foot drafts', async () => {
   const now = await load(), beforeWebsite = await load(true);
   const pins = JSON.parse(readFileSync('atlas-review/content/spinal-bone-ultrasound-pins.json'));
   assert.equal(pins.baseline, 'a7ed1304b8ae3972dc5add5b1bb3ed8a35f671ce');
@@ -276,7 +266,7 @@ test('actual-current spinal bone ultrasound and protected Review import', async 
     // inventory includes body teaching, but that chunk is not an entry-reachable
     // spinal learning surface. The shared head-neck module serves all regions.
     if (name === 'shoulder') continue;
-    const code = emittedTeaching(base, manifest.files, true);
+    const code = emittedTeaching(base, manifest.files, true, spinalEpochBytes);
     for (const item of pins.entries) {
       const lesson = now.spinalBoneUltrasoundLesson(item.identity, 'ultrasound');
       // The title is built from the selected name at runtime; assert its emitted
@@ -292,13 +282,13 @@ test('actual-current spinal bone ultrasound and protected Review import', async 
   assert.equal(reviewManifest.mode, 'production');
   assert.equal(reviewManifest.websiteIntegrationSha256, review.websiteIntegrationSha256);
   for (const file of reviewManifest.files) assert.equal(sha(readFileSync(reviewBase + file.path)), file.sha256, `review:${file.path}`);
-  const reviewCode = emittedTeaching(reviewBase, reviewManifest.files, true);
+  const reviewCode = emittedTeaching(reviewBase, reviewManifest.files, true, spinalEpochBytes);
   for (const item of pins.entries) {
     const lesson = now.spinalBoneUltrasoundLesson(item.identity, 'ultrasound');
     for (const text of [item.identity.id, ' · ultrasound orientation · draft', lesson.body, ...lesson.bullets, lesson.note, ...lesson.citations])
       assert(reviewCode.includes(text) || reviewCode.includes(JSON.stringify(text).slice(1, -1)), `review: emitted ${item.level}: ${text.slice(0, 40)}`);
   }
-  console.log(JSON.stringify({ websiteBaseline, sourceRevision: review.revision, targets: changed, preservedTopicPlacements: preserved, changedTeachingWorksheets: worksheets, mutatedSourceRefusals: mutations,
+  console.log(JSON.stringify({ websiteBaseline, websiteEpoch: spinalWebsiteEpoch, historicalMilestone: true, sourceRevision: review.revision, targets: changed, preservedTopicPlacements: preserved, changedTeachingWorksheets: worksheets, mutatedSourceRefusals: mutations,
     malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale, storageCalls, earlierSpineDrafts: earlierIds.size,
     verifiedRuntimes: runtimes, clinicalApproval: false, browserAcceptance: false }));
 });

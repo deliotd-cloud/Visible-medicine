@@ -1,5 +1,5 @@
 {
-  "revision": "88cea927d48729769b96ad8fe680b0872b7e6687",
+  "revision": "cdc6ad23ad5c3c13a2f6588019a057d0a063818f",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8",
-      "importedSha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8"
+      "sourceSha256": "60262c682d3e6c0013763370ef0b40dbe6e32af02055e73c7341eea9f49a7731",
+      "importedSha256": "60262c682d3e6c0013763370ef0b40dbe6e32af02055e73c7341eea9f49a7731"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -965,6 +965,21 @@
       "path": "content/deep-brain-core-teaching.ts",
       "sourceSha256": "000621b68633c4778a6c6cf019ee7898d99c10fadca74b3c93e147123115acc6",
       "importedSha256": "000621b68633c4778a6c6cf019ee7898d99c10fadca74b3c93e147123115acc6"
+    },
+    {
+      "path": "lib/foot-surface-imaging.ts",
+      "sourceSha256": "46947593f3f8b88cd7e65b9063b64f9b356707ce1bdfff56751425b7656fc1ff",
+      "importedSha256": "46947593f3f8b88cd7e65b9063b64f9b356707ce1bdfff56751425b7656fc1ff"
+    },
+    {
+      "path": "content/foot-surface-imaging-pins.json",
+      "sourceSha256": "5f30776e2326cce269861d29d16931dc4967b216c9575a5b63b86423d165fa1a",
+      "importedSha256": "5f30776e2326cce269861d29d16931dc4967b216c9575a5b63b86423d165fa1a"
+    },
+    {
+      "path": "content/foot-surface-imaging.ts",
+      "sourceSha256": "c094fb283c89bc0065d6c03adc55333229ce9509174d33b666f7eac1972e3b33",
+      "importedSha256": "c094fb283c89bc0065d6c03adc55333229ce9509174d33b666f7eac1972e3b33"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3323,8 +3338,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "3cb98fbbe9840b49b799c3141f18dcce02ada50441e93c7849c9b9035f675956",
-      "importedSha256": "1b35dcf3ac892de9c949c67168fbb6006c6acc11d835961c8b4a7b3b28395748"
+      "sourceSha256": "c4188028e54df361da651a88a07dd147a910cde06dc5f9506178afcb10f939df",
+      "importedSha256": "5b5b4470bbe4f249a1fce952d059702bcd93a12d67989bf6a724613dbcdf7b6e"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3684,7 +3699,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "053c5153a0482a61f2b9825df331f80f0681217846b2f114e6ae98127aaa41d4",
-      "importedSha256": "7a2bfe3e997bee1fcfe0866eb380e6726b07a3ccf51ac56b315b5a0093427887"
+      "importedSha256": "686a4df7526f772bd0af3286470085ff8d0c1d99bcbe4030e2b50d546d4c153f"
     },
     {
       "path": "app/review/review.css",
@@ -3718,8 +3733,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "e027a2f7da3a2169bad6e650f7c22a9a63c16245036038d03a92b242d23ea900",
-      "importedSha256": "e027a2f7da3a2169bad6e650f7c22a9a63c16245036038d03a92b242d23ea900"
+      "sourceSha256": "e230e22b5434105a151ca0330539edc6ee6888568071923482466ed70dc2ddc1",
+      "importedSha256": "e230e22b5434105a151ca0330539edc6ee6888568071923482466ed70dc2ddc1"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5068,8 +5083,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "04da8d9ab1e38c8ade0f4b7ecacfc5c587642c9f0a6b0fb294f8fa412b105ff8",
-      "importedSha256": "04da8d9ab1e38c8ade0f4b7ecacfc5c587642c9f0a6b0fb294f8fa412b105ff8"
+      "sourceSha256": "54a91d9b050cc0baf1ae597cc16c5894b45430bdb670db78fc83a3ad194530e1",
+      "importedSha256": "54a91d9b050cc0baf1ae597cc16c5894b45430bdb670db78fc83a3ad194530e1"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5168,5 +5183,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "b3710b924c20be5f260be21498a8f0a6c5ded1e00f4d40209a9a83b0de787386"
+  "websiteIntegrationSha256": "9dfc49448c371998534d57892791a019334c95174ed2400b07b59901f88f45ef"
 }
