@@ -26,6 +26,7 @@ import { spinalBoneUltrasoundLesson } from '../lib/spinal-bone-ultrasound';
 import { hyoidEpiglottisUltrasoundLesson } from '../lib/hyoid-epiglottis-ultrasound';
 import { cranialBoneXrayLesson } from '../lib/cranial-bone-xray';
 import { suprascapularVesselUltrasoundLesson } from '../lib/suprascapular-vessel-ultrasound';
+import { deepBrainCoreLesson } from '../lib/deep-brain-core-teaching';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -339,6 +340,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (cranialBoneXray) return cranialBoneXray;
   const suprascapularVesselUltrasound = suprascapularVesselUltrasoundLesson(s, tab);
   if (suprascapularVesselUltrasound) return suprascapularVesselUltrasound;
+  const deepBrainCore = deepBrainCoreLesson(s, tab);
+  if (deepBrainCore) return deepBrainCore;
   const spinalDisc = spinalDiscFunctionLesson(s, tab);
   if (spinalDisc) return spinalDisc;
   const properDigital = properDigitalTeachingLesson(s, tab);

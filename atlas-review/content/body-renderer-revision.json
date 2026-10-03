@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
+      "sha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8"
     },
     {
       "path": "app/body-education-link.ts",
@@ -799,6 +799,14 @@
     {
       "path": "content/cubital-venous-ultrasound.ts",
       "sha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5"
+    },
+    {
+      "path": "content/deep-brain-core-teaching-pins.json",
+      "sha256": "a6bb83c2707a87aa4b16d00e05a7fd28c1da6ecedb49a0626e377caf386afaff"
+    },
+    {
+      "path": "content/deep-brain-core-teaching.ts",
+      "sha256": "000621b68633c4778a6c6cf019ee7898d99c10fadca74b3c93e147123115acc6"
     },
     {
       "path": "content/deep-venous-clinical-pins.json",
@@ -2373,6 +2381,10 @@
       "sha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b"
     },
     {
+      "path": "lib/deep-brain-core-teaching.ts",
+      "sha256": "afb18c8b19d7b2967622827a573ed2e594c02ac0653ed50e717968b119b0e50b"
+    },
+    {
       "path": "lib/deep-brain-reasoning.ts",
       "sha256": "0f18416cece4e887ff8916abf70667b6e9fcbbceff558863782e4e2038616a5f"
     },
@@ -3658,7 +3670,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c52bd87c0852e9942a0e0a63bc9fbf4cee4749e04ef63df5960816290a9782d3"
+      "sha256": "3624299fa3e19f688d01098b3b16c1ff1b95b1506e634c8607a78adb98dc8b93"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3873,7 +3885,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "92c5e59a61801449036a4c400b8e9c0218ae298cb422d5bc9ea54eddd78901e8",
-  "sourceRendererSha256": "dff11d28cf6fcdc100111951cd24d3cf47062b1ee8c7281eb49312a4c1349899",
-  "websiteIntegrationSha256": "94ba1290af9315c764df0d936147fcd04f035da22dbc721ce8cec0bd95df0ef2"
+  "sha256": "9b3ed37cc14e029d9ff3d6d9c28a569c4901cf34cbb4298a760661703cfdeae2",
+  "sourceRendererSha256": "a7089e4d42797865faf5692ababcd85618606a0154cfc43cd213c4cd6434797a",
+  "websiteIntegrationSha256": "73ed91c4538d6c1c8de4fce5cd13be3f38b000e6807fdd83aa8c2ad325ff4bf0"
 }

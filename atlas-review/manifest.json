@@ -1,5 +1,5 @@
 {
-  "revision": "398edc60a43f8d0235d9e6963c1ad56954b3fa98",
+  "revision": "6d5caefe7cc90c03c16775126c939ac31956d90e",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d",
-      "importedSha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
+      "sourceSha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8",
+      "importedSha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -950,6 +950,21 @@
       "path": "content/suprascapular-vessel-ultrasound.ts",
       "sourceSha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929",
       "importedSha256": "d87fdbfcc8b75981ffdc6a99bff097414105ce3eddc0a1c42d5624e95aa27929"
+    },
+    {
+      "path": "lib/deep-brain-core-teaching.ts",
+      "sourceSha256": "afb18c8b19d7b2967622827a573ed2e594c02ac0653ed50e717968b119b0e50b",
+      "importedSha256": "afb18c8b19d7b2967622827a573ed2e594c02ac0653ed50e717968b119b0e50b"
+    },
+    {
+      "path": "content/deep-brain-core-teaching-pins.json",
+      "sourceSha256": "a6bb83c2707a87aa4b16d00e05a7fd28c1da6ecedb49a0626e377caf386afaff",
+      "importedSha256": "a6bb83c2707a87aa4b16d00e05a7fd28c1da6ecedb49a0626e377caf386afaff"
+    },
+    {
+      "path": "content/deep-brain-core-teaching.ts",
+      "sourceSha256": "000621b68633c4778a6c6cf019ee7898d99c10fadca74b3c93e147123115acc6",
+      "importedSha256": "000621b68633c4778a6c6cf019ee7898d99c10fadca74b3c93e147123115acc6"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3308,8 +3323,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "cc2520e24a6d621b53b3e5d86cf7d44cdccd090e8180c53c5c5c0199ed8442aa",
-      "importedSha256": "1780427c713fb081fb096091a19810a349b58cec9eda2e4b142b1a31fa5f6b6f"
+      "sourceSha256": "0ca70b503d202c02d03bdb808b34ad32efd928a11221f52f7587837551389b3f",
+      "importedSha256": "2c1c2052cb2741aba12ea7b6c149d914261fd1d1a42fbe15ce26024237f5784c"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3669,7 +3684,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "e0d6e4581985a67ec82f0e43f0ad575b831cb80304ef7ce85b6d58cf5f389886",
-      "importedSha256": "fc7d5b7c807289233b7b92913a40416bc62874e242e026cfc98771db519b9f98"
+      "importedSha256": "f890cce2bd4714169d280d5a504a8efb64a25d7017468dd05e686374a58db39c"
     },
     {
       "path": "app/review/review.css",
@@ -3703,8 +3718,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "61fe85e611b06bca4e0f205d43b4ac212cca9b20c1c686e2743b8836a6279939",
-      "importedSha256": "61fe85e611b06bca4e0f205d43b4ac212cca9b20c1c686e2743b8836a6279939"
+      "sourceSha256": "e027a2f7da3a2169bad6e650f7c22a9a63c16245036038d03a92b242d23ea900",
+      "importedSha256": "e027a2f7da3a2169bad6e650f7c22a9a63c16245036038d03a92b242d23ea900"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5053,8 +5068,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "637041606ee5e36aec82549c99f3c8ce2b3e992b13ca00100b9660d5f6e714a2",
-      "importedSha256": "637041606ee5e36aec82549c99f3c8ce2b3e992b13ca00100b9660d5f6e714a2"
+      "sourceSha256": "04da8d9ab1e38c8ade0f4b7ecacfc5c587642c9f0a6b0fb294f8fa412b105ff8",
+      "importedSha256": "04da8d9ab1e38c8ade0f4b7ecacfc5c587642c9f0a6b0fb294f8fa412b105ff8"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5153,5 +5168,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "94ba1290af9315c764df0d936147fcd04f035da22dbc721ce8cec0bd95df0ef2"
+  "websiteIntegrationSha256": "73ed91c4538d6c1c8de4fce5cd13be3f38b000e6807fdd83aa8c2ad325ff4bf0"
 }

@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Deep-brain teaching (3 October 2026)
+
+Original factual drafts cite Akeret et al. (2022), Postans et al. (online 2019),
+Bárány et al. (2024) and Hitti et al. (2022). Article licence declarations are
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); exact reading links and
+scope appear in [the teaching record](../docs/DEEP_BRAIN_CORE_TEACHING.md).
+No reference prose, image, scan, tractogram, table or dataset is redistributed.
+No linked media are admitted. Independently authored wording retains MIT terms;
+existing models retain their own unchanged licences. No dependency, font,
+texture, geometry, service or mandatory fee is added. Radiologist approval
+remains separate and revision-bound.
+
 ## Cranial-bone X-ray teaching (3 October 2026)
 
 Eight source-bound selections use six original educational lesson families.

@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "f676d453b1cc7b760c4ee1b704bd08fa067c342cfbe86e89ca03729b7587fb6d"
+    "sha256": "4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8"
   },
   {
     "path": "app/body-explorer.css",
@@ -458,6 +458,14 @@
   {
     "path": "content/cubital-venous-ultrasound.ts",
     "sha256": "ba87a58db1a936bd7541b24f758d5b328f7e038af703412459d337ec22a4aac5"
+  },
+  {
+    "path": "content/deep-brain-core-teaching-pins.json",
+    "sha256": "a6bb83c2707a87aa4b16d00e05a7fd28c1da6ecedb49a0626e377caf386afaff"
+  },
+  {
+    "path": "content/deep-brain-core-teaching.ts",
+    "sha256": "000621b68633c4778a6c6cf019ee7898d99c10fadca74b3c93e147123115acc6"
   },
   {
     "path": "content/deep-venous-clinical-pins.json",
@@ -1642,6 +1650,10 @@
   {
     "path": "lib/cubital-venous-ultrasound.ts",
     "sha256": "bd250a8637fbdc438ae17e35912a3962fff9a12b34c0f5063c0689435f46134b"
+  },
+  {
+    "path": "lib/deep-brain-core-teaching.ts",
+    "sha256": "afb18c8b19d7b2967622827a573ed2e594c02ac0653ed50e717968b119b0e50b"
   },
   {
     "path": "lib/deep-leg-veins.ts",

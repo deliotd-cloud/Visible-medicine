@@ -1,17 +1,18 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
 import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 const baseline='26e9377202d04ad6a250cc6fc394b37655f5ec94',revision='398edc60a43f8d0235d9e6963c1ad56954b3fa98';
+// Complete immutable four-topic epoch; the current batch separately proves
+// that these lessons survive in today's imported and emitted application.
+const milestone='3c0bf9383b9b1668bc51e39340c68d47850f0581';
+const readFileSync=path=>execFileSync('git',['show',milestone+':'+path],{windowsHide:true,maxBuffer:32e6});
 const hash=value=>createHash('sha256').update(typeof value==='string'||Buffer.isBuffer(value)?value:JSON.stringify(value)).digest('hex');
 const old=path=>execFileSync('git',['show',baseline+':'+path],{windowsHide:true,maxBuffer:32e6});
 const common="export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before=await atlasExactGitApi(baseline,common);
-const compiled=await build({stdin:{contents:common+"export * from './atlas-review/lib/suprascapular-vessel-ultrasound';export * from './atlas-review/content/suprascapular-vessel-ultrasound';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
-const now=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const now=await atlasExactGitApi(milestone,common+"export * from './atlas-review/lib/suprascapular-vessel-ultrasound';export * from './atlas-review/content/suprascapular-vessel-ultrasound';");
 const pins=JSON.parse(readFileSync('atlas-review/content/suprascapular-vessel-ultrasound-pins.json'));
 assert.equal(hash(pins),'0ed9e6ba9dabbbad9079639a7ecc23cc203d6c25a78b3b8d11045804498c6389');
 assert.equal(pins.entries.length,4);assert.equal(pins.baseline,'cbca085f2862f14df28007b32a4f2cd688dd01d5');
@@ -88,7 +89,7 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
   for(const path of inputs){const exported=sourceInputs.find(f=>f.path===path),imported=review.files.find(f=>f.path===path);assert(exported&&imported);assert.equal(exported.sha256,imported.sourceSha256);}
  }
  if(name==='head-neck'){
-  const emitted=emittedTeaching(base,manifest.files,true);
+  const emitted=emittedTeaching(base,manifest.files,true,readFileSync);
   for(const family of Object.values(now.suprascapularVesselUltrasoundTeaching)){assert(emitted.includes(family.body));for(const bullet of family.bullets)assert(emitted.includes(bullet));}
   assert(emitted.includes(now.suprascapularVesselUltrasoundNote));
   for(const reference of Object.values(now.suprascapularVesselUltrasoundReferences))assert(emitted.includes(reference));
