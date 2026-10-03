@@ -1,11 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync as liveReadFileSync} from 'node:fs';
+import {readFileSync as liveReadFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build,emittedTeaching} from './atlas-pre-hepatobiliary-history.ts';
 import {shoulderGirdleEpochBytes,shoulderGirdleEpochPlugin} from './atlas-shoulder-girdle-imaging-history.ts';
 
 const baseline='e9542886d8db5ab02d9575f49990569e7ba7dc2f';

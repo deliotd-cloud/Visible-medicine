@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import {preMCAImportBytes} from './atlas-mca-history.ts';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
-import {build} from 'esbuild';
+import {build,circleWillisNoticeAtSavedEpoch} from './atlas-pre-hepatobiliary-history.ts';
 import {wristUltrasoundMilestoneBytes,withoutCircleWillisNotice} from './atlas-circle-willis-history.ts';
 import {circleWillisMilestoneBytes} from './atlas-carpal-bone-quiz-history.ts';
 const revision='aa290176f8bfdb02157f7197e4647508c9c41d87';
@@ -91,7 +91,8 @@ test('only ten tour teaching identities change; all topics/nested drafts remain 
  const oldMap=new Map(oldPins.pins.map((p:any)=>[p.structureId,p.sha256]));assert.equal(pins.pins.length,oldPins.pins.length);
  assert.deepEqual(pins.pins.filter((p:any)=>p.sha256!==oldMap.get(p.structureId)).map((p:any)=>p.structureId).sort(),[...ids].sort());
 });
-test('historical replay removes only the exact Circle of Willis notice',()=>{
+test('historical replay removes only the exact Circle of Willis notice',async()=>{
+ const {withoutCircleWillisNotice}=await circleWillisNoticeAtSavedEpoch();
  const current=readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8'),before=wristUltrasoundMilestoneBytes('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString();
  assert.equal(withoutCircleWillisNotice(current),before);assert.equal(withoutCircleWillisNotice(before),before);
  const suffix='\nAdditional dependency notice\n';assert.equal(withoutCircleWillisNotice(current+suffix),before+suffix);

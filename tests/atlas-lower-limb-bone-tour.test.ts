@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
+import {build} from './atlas-pre-hepatobiliary-history.ts';
 
 test('hip-to-heel learner and Clinical Review retain exact whole-body teaching evidence',async()=>{
   const source='aa290176f8bfdb02157f7197e4647508c9c41d87';

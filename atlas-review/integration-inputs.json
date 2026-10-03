@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "aa290176f8bfdb02157f7197e4647508c9c41d87",
-  "sha256": "19240ac3703bed2ada2a66834b4b76a47db13296d39ff9ca29e6f69ed39dcbf9",
+  "sourceCommit": "946700cc8c5162076cd5e5d9f79a00ba72c6fda1",
+  "sha256": "355e72699b4089bd0f5a6cb0e9d25dfaca4f15c68159704b53cb14d0374d9851",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "d2af7f9d6d37c1518a178ecd20528a4f1312b86a21509bcda3f922bdd9fc5500"
+      "sha256": "29cfef117576b5257914f0b90f13d8b0280be23d2332f9c124c452d35d12280e"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2755,6 +2755,10 @@
       "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
     },
     {
+      "path": "atlas-review/lib/hepatobiliary-tour.ts",
+      "sha256": "0c405e8b10f99886262c68ed5957ceffec908206b312a81016f92f59ab897831"
+    },
+    {
       "path": "atlas-review/lib/hilar-vessel-xray.ts",
       "sha256": "c06eb4cc8ab314c96b89656ab48c425882e63b1a332263e4065a80c70fa62f07"
     },
@@ -3300,7 +3304,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "f3bbaf1740d8bfe8a9d16bd4a79dc2060dd50fe6a1905fe92183e6be7a5cff1f"
+      "sha256": "391d4118979b1bcdb5c8a3a4552d4caead84d812fd3b30a514601c28c63a5e85"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -4024,7 +4028,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "682801a9952ff396f7a10df4991e01fb6a205a3a09759fc489371eb2ba14b013"
+      "sha256": "615a076ddfe1b9dd6b9d92b7a9810d1a2ee33086a3ab123cc02f67867f46afd4"
     }
   ]
 }

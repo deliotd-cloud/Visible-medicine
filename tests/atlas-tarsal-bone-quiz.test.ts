@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build} from './atlas-pre-hepatobiliary-history.ts';
+import {emittedTeaching} from './atlas-pre-hepatobiliary-history.ts';
 
 const baseline='70da224dc1648d346722f815a7e9c0b0c8049f97';
 const revision='aa290176f8bfdb02157f7197e4647508c9c41d87';

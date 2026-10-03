@@ -3,7 +3,7 @@
 // preserve these exact releases, not revert shoulder to older historical tests.
 // Historical model-preservation assertions remain in the individual tests.
 export const nonregionalAtlasSources = [
-  {module:'shoulder',sourceCommit:'aa290176f8bfdb02157f7197e4647508c9c41d87',manifestSha256:'359da92dfa76393d439136fe91825d42e296d771e1c648c6200698ab33d7adf7',modelPaths:1},
-  {module:'female-pelvis',sourceCommit:'aa290176f8bfdb02157f7197e4647508c9c41d87',manifestSha256:'bdcc39f34e7556710176f88b8b7cb6e641142cbb4773b0d001f3286d528479e3',modelPaths:2},
-  {module:'lower-limb',sourceCommit:'aa290176f8bfdb02157f7197e4647508c9c41d87',manifestSha256:'efd41d2c1bcf3b247bbb1d2b64d2840591a6dff37314a34d09ab573262c0d1ea',modelPaths:5},
+  {module:'shoulder',sourceCommit:'946700cc8c5162076cd5e5d9f79a00ba72c6fda1',manifestSha256:'7c6bbe1c6f89d4d6e21d382b2e2c1d837b8e5da8b3e1b9e4562c625b5a1f94a3',modelPaths:1},
+  {module:'female-pelvis',sourceCommit:'946700cc8c5162076cd5e5d9f79a00ba72c6fda1',manifestSha256:'368c888a2073b1ec8b49d12aa3ff1c5eb6a94741040f1f760c198d0e74b9a8b3',modelPaths:2},
+  {module:'lower-limb',sourceCommit:'946700cc8c5162076cd5e5d9f79a00ba72c6fda1',manifestSha256:'744873bee3505c2791452bcdfd8ae6874fb4be26d619dab240e79303e687eef2',modelPaths:5},
 ];

@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {dirname,relative} from 'node:path';
-import {build} from 'esbuild';
+import {build} from './atlas-pre-hepatobiliary-history.ts';
 import {preMCANestedPlugin,preMCAImportBytes} from './atlas-mca-history.ts';
 import {thoracicQuizMilestoneBytes} from './atlas-thoracic-bone-quiz-history.ts';
 import pins from '../atlas-review/content/thoracic-bone-quiz-pins.json' with {type:'json'};

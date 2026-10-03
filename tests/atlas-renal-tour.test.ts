@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
+import {build} from './atlas-pre-hepatobiliary-history.ts';
 
 test('renal learner and review imports bind the same unchanged geometry and four-step draft',async()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8')),review=json('atlas-review/manifest.json');

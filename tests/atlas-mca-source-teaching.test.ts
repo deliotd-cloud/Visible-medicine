@@ -6,7 +6,7 @@ import {execFileSync} from 'node:child_process';
 import {dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
-const revision='aa290176f8bfdb02157f7197e4647508c9c41d87';
+const revision='946700cc8c5162076cd5e5d9f79a00ba72c6fda1';
 const baseline='a8349b2fefbe8be1403c78822487ba7eb95d7d8c';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const old=(path:string)=>execFileSync('git',['show',baseline+':'+path],{encoding:'utf8',maxBuffer:32e6});
@@ -31,7 +31,7 @@ async function load(previous=false){
 
 test('three source-file MCA drafts and full credits reach local learners/review, without new models or rights',async()=>{
  const api=await load(),review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json'));
- assert.equal(review.revision,revision);assert.equal(review.files.length,985);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,986);
  assert.deepEqual(review.packages,prior.packages);
  const milestone=mcaImportMilestone();
  assert.deepEqual(milestone.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path).sort(),

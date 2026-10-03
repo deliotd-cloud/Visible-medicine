@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync} from 'node:fs';
+import {readFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {dirname} from 'node:path';
-import {build} from 'esbuild';
+import {build} from './atlas-pre-hepatobiliary-history.ts';
 import {withoutPelvicRingNotice} from './atlas-pelvic-notice-history.ts';
 import {desktopLayoutImportMilestone,desktopLayoutMilestoneBytes} from './atlas-cubital-ultrasound-history.ts';
 const source='aa290176f8bfdb02157f7197e4647508c9c41d87',before='443896f4f141266c4579fb4e1001c0097bb25479';

@@ -1,11 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import {readFileSync as liveReadFileSync} from 'node:fs';
+import {readFileSync as liveReadFileSync} from './atlas-pre-hepatobiliary-history.ts';
 import {execFileSync} from 'node:child_process';
 import {dirname,relative} from 'node:path';
 import {createHash} from 'node:crypto';
-import {build} from 'esbuild';
-import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {build,emittedTeaching} from './atlas-pre-hepatobiliary-history.ts';
 import {abdominalVascularMriEpochBytes,abdominalVascularMriEpochPlugin} from './atlas-abdominal-vascular-mri-history.ts';
 const baseline='48f697462c8d7445d0b9707b19a9ebce3adf48aa';
 const revision='732f5f56ff3708b9200b25f18ac3f6f175a438e5';
