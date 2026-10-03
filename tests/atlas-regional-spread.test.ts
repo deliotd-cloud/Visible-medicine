@@ -6,7 +6,7 @@ import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 
-const revision='bd80e97dded3089f9306fa1878d7afca8990e403';
+const revision='88cea927d48729769b96ad8fe680b0872b7e6687';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -110,7 +110,7 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  for(const p of ['content/body-review-display-pins.json','content/shoulder-arm-muscle-imaging.ts','content/shoulder-arm-muscle-imaging-pins.json','content/shoulder-arterial-ct.ts','content/shoulder-arterial-mri.ts','LICENSES/THIRD_PARTY_NOTICES.md'])assert.deepEqual(regionalSpreadMilestoneBytes('atlas-review/'+p),old('atlas-review/'+p));
  // The host binder conservatively fingerprints the whole review integration.
  // Preserve the exact Spread milestone's source invariants; the later guided
- // keyboard/timing/recovery fixes change display geometry revisions, not authored teaching.
+ // Camera/label/tour-layout fixes change display geometry revisions, not authored teaching.
  const shoulder=json('atlas-review/content/review-revisions.json'),priorShoulder=JSON.parse(old('atlas-review/content/review-revisions.json').toString());
  const spreadShoulder=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/content/review-revisions.json').toString());
  assert.deepEqual(spreadShoulder.sourceRevisions,priorShoulder.sourceRevisions);
@@ -121,7 +121,11 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.deepEqual(Object.keys(shoulder.sourceRevisions),Object.keys(spreadShoulder.sourceRevisions));
  const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(shoulder.display);
  assert.deepEqual([...currentDisplay.keys()],[...previousDisplay.keys()]);
- assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),['app/anatomy-scene.tsx','app/scene-recovery.tsx','app/fitted-camera.tsx']);
+ assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),["app/anatomy-scene.tsx","app/scene-label-layer.tsx","lib/screen-label-layout.ts","app/scene-recovery.tsx","app/fitted-camera.tsx","app/shoulder-tour-player.tsx","app/shoulder-tour-player.css"]);
+ assert.equal(currentDisplay.get('app/scene-label-layer.tsx'),'04f73a41f631b69164049ea3274959e8e51672a3f97a5a4bf017f00e415cfb7b');
+ assert.equal(currentDisplay.get('lib/screen-label-layout.ts'),'87854b4e74d2e98a928a2bd9e8b2450214fa16e7a339036f3838d7d848fe927a');
+ assert.equal(currentDisplay.get('app/shoulder-tour-player.tsx'),'0fb1f95ec82c2323b4bc01372fd5e7938c090df8a4b8513f8929c672cfde6740');
+ assert.equal(currentDisplay.get('app/shoulder-tour-player.css'),'cab61989340b515193dfa507a8224d63c24798ed64150d8a2130114303301700');
  assert.equal(currentDisplay.get('app/anatomy-scene.tsx'),'65d63c2027cadef511391e414c3ae33f810f583939f55522c75855c73f437ef9');
  assert.equal(currentDisplay.get('app/scene-recovery.tsx'),'b9f90de58345f2608ed60a5d9f649090a0a83a568d883783d6406dc8dd4291df');
  assert.equal(currentDisplay.get('app/fitted-camera.tsx'),'9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0');

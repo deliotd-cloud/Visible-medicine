@@ -20,7 +20,9 @@ export function withoutCarpalQuizNotice(text:string):string{
  const prefixes=[revision,'49db4337ad84bee7d1823050f5b90ed43cf647c1'].map(value=>'# Clinical Review third-party notices\n\nAtlas source: '+value+'\n\n');
  const prefix=prefixes.find(value=>text.startsWith(value))??prefixes[0];
  assert.equal(start,cut+(text.startsWith(prefix)?prefix.length:0),'Altered preceding notice or moved carpal notice');
- const addition=canonical.slice(cut);
+ const next=canonical.indexOf('\n## ',cut+marker.length);
+ assert(next>cut,'Carpal notice is not followed by the next saved notice');
+ const addition=canonical.slice(cut,next);
  assert.equal(createHash('sha256').update(addition).digest('hex'),'34786ade34eddd161388daabd2fc77ac5c55436c76697a78275172066dc312f5');
  assert.equal(text.slice(start,start+addition.length),addition,'Altered carpal notice');
  return text.slice(0,start)+text.slice(start+addition.length);

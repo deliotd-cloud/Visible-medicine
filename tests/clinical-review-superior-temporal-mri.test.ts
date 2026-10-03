@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 test('superior temporal MRI orientation reaches all four exact learner/review bindings without acquired imaging approval',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
- assert.equal(review.revision,'bd80e97dded3089f9306fa1878d7afca8990e403');
+ assert.equal(review.revision,'88cea927d48729769b96ad8fe680b0872b7e6687');
  for(const path of ['content/superior-temporal-mri.ts','content/cerebral-teaching.ts','content/nested-teaching.ts','content/nested-teaching-bindings.v1.json','lib/nested-teaching.ts']){
   const file=review.files.find((f:any)=>f.path===path);assert(file);
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,file.sourceSha256);

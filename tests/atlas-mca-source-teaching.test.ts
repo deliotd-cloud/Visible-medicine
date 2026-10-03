@@ -6,7 +6,7 @@ import {execFileSync} from 'node:child_process';
 import {dirname} from 'node:path';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
-const revision='bd80e97dded3089f9306fa1878d7afca8990e403';
+const revision='88cea927d48729769b96ad8fe680b0872b7e6687';
 const baseline='a8349b2fefbe8be1403c78822487ba7eb95d7d8c';
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const old=(path:string)=>execFileSync('git',['show',baseline+':'+path],{encoding:'utf8',maxBuffer:32e6});

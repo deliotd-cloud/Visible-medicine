@@ -72,7 +72,7 @@ for(const p of ['package-lock.json','public/atlas-runtime/head-neck/LICENSES/BOD
 assert.equal(execFileSync('git',['diff','--name-only',baseline,'--','public/atlas-runtime/head-neck/models'],{encoding:'utf8'}).trim(),'');
 console.log(JSON.stringify({baseline,changed,preserved,sourceMutationRefusals:refusals,malformedPacketsRefused:malformed,staleRefusalsBeforeStorage:stale,storageCalls,changedTeachingWorksheets:worksheetChanges,clinicalApproval:false,websiteIntegrated:true}));
 
-const revision="bd80e97dded3089f9306fa1878d7afca8990e403",review=JSON.parse(readFileSync("atlas-review/manifest.json"));assert.equal(review.revision,revision);
+const revision="88cea927d48729769b96ad8fe680b0872b7e6687",review=JSON.parse(readFileSync("atlas-review/manifest.json"));assert.equal(review.revision,revision);
 const inputs=["app/body-content.ts","lib/hyoid-epiglottis-ultrasound.ts","content/hyoid-epiglottis-ultrasound.ts","content/hyoid-epiglottis-ultrasound-pins.json"];
 for(const name of ["head-neck","shoulder","female-pelvis","lower-limb"]){
  const base="public/atlas-runtime/"+name+"/",manifest=JSON.parse(readFileSync(base+"manifest.json"));

@@ -17,7 +17,9 @@ export function withoutLumbarSacralNotice(text:string):string{
  const start=text.indexOf(marker);if(start<0)return text;
  assert.equal(text.indexOf(marker,start+marker.length),-1,'Duplicate lumbar/sacral notice');
  const canonical=withoutWristUltrasoundNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r',''));
- const cut=canonical.indexOf(marker);assert(cut>=0);const addition=canonical.slice(cut);
+ const cut=canonical.indexOf(marker);assert(cut>=0);
+ const next=canonical.indexOf('\n## ',cut+marker.length);assert(next>cut,'Lumbar/sacral notice is not followed by the next saved notice');
+ const addition=canonical.slice(cut,next);
  assert.equal(createHash('sha256').update(addition).digest('hex'),'85b095d343c1a82bb1463b4e039ceeee896fef70d11873c5786101e202c2caa0');
  assert.equal(text.slice(start,start+addition.length),addition,'Altered lumbar/sacral notice');
  return text.slice(0,start)+text.slice(start+addition.length);

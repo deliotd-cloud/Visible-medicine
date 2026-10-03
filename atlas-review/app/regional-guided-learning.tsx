@@ -86,12 +86,25 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
       <div className="regional-tour-heading"><h2 aria-live="polite" aria-atomic="true">{active?step.title:tour.title}</h2>{active&&<TourStepPicker steps={tour.steps} index={index} ready={ready}
         onPause={()=>{setPlaying(false);setMotionPaused(true);}}
         onStep={next=>{if(ready)changeStep(next);}}/>}</div>
+      <div className="regional-tour-primary">
+      <p className="regional-tour-caption" role="region" aria-label="Current step explanation" tabIndex={0} aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
+      {!ready&&<output>{resolved.error||retryError|| (failed.length?'Some anatomy failed to load. Retry the missing anatomy to continue.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}
+      <div className="regional-tour-controls" ref={controls}>
+        {retryPlan.length>0&&<Button variant="outline" disabled={retrying} onClick={retryAnatomy}>{retrying?'Retrying…':'Retry missing anatomy'}</Button>}
+        {!active?<Button data-tour-resume disabled={!ready} onClick={()=>{setPlaying(false);changeStep(0);}}>Start guided tour</Button>:<>
+          <Button variant="outline" disabled={!ready||index===0} onClick={()=>changeStep(index-1)}>Back</Button>
+          <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{setPlaying(p=>!p);setMotionPaused(playing);}}>{playing?'Pause':'Play'}</Button>
+          <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?onExit():changeStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
+        </>}
+        <Button variant="ghost" onClick={onExit}>Exit tour</Button>
+      </div>
+      </div>
       <details className="regional-tour-explanation" open={explanationOpen} onToggle={event=>{
         const open=event.currentTarget.open;setExplanationOpen(open);
         if(open){setPlaying(false);setMotionPaused(true);}
       }}>
-      <summary>Step explanation & imaging · Draft</summary>
-      <p aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
+      <summary>References, imaging & quick check · Draft</summary>
+      <div className="regional-tour-resources">
       <details onToggle={event=>{if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}}}><summary>References & limits · Draft, review pending</summary>
         <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
         {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
@@ -105,17 +118,8 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
         onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>}
         </>}
       </LazyBodyTeaching>}
-      </details>
-      {!ready&&<output>{resolved.error||retryError|| (failed.length?'Some anatomy failed to load. Retry the missing anatomy to continue.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}
-      <div className="regional-tour-controls" ref={controls}>
-        {retryPlan.length>0&&<Button variant="outline" disabled={retrying} onClick={retryAnatomy}>{retrying?'Retrying…':'Retry missing anatomy'}</Button>}
-        {!active?<Button data-tour-resume disabled={!ready} onClick={()=>{setPlaying(false);changeStep(0);}}>Start guided tour</Button>:<>
-          <Button variant="outline" disabled={!ready||index===0} onClick={()=>changeStep(index-1)}>Back</Button>
-          <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{setPlaying(p=>!p);setMotionPaused(playing);}}>{playing?'Pause':'Play'}</Button>
-          <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?onExit():changeStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
-        </>}
-        <Button variant="ghost" onClick={onExit}>Exit tour</Button>
       </div>
+      </details>
     </div>
     <div className="regional-tour-canvas">
       {!resolved.error&&<Scene key={scope.key} assetBase={assetBase} catalog={catalog} structures={resolved.structures} retries={retries}

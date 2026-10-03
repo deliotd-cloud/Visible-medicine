@@ -34,7 +34,17 @@ export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause
         <TourStepPicker steps={shoulderTour.steps} index={activeIndex} ready={ready}
           onPause={onReadImaging} onStep={onStep}/>
       </div>
-      <p aria-live="polite" aria-atomic="true">{step.caption}</p>
+      <div className="shoulder-tour-primary">
+        <p className="shoulder-tour-caption" role="region" aria-label="Current step explanation" tabIndex={0} aria-live="polite" aria-atomic="true">{step.caption}</p>
+        {!ready && <output>Playback paused while the model is unavailable. You can still exit.</output>}
+        <div className="shoulder-tour-controls">
+          <Button type="button" variant="outline" disabled={!ready || activeIndex === 0} onClick={() => onStep(activeIndex - 1)}>Back</Button>
+          <Button type="button" variant="outline" disabled={!ready} aria-pressed={playing} onClick={onPlayPause}>{playing ? 'Pause' : 'Play'}</Button>
+          <Button type="button" variant="outline" disabled={!ready} onClick={() => last ? onExit() : onStep(activeIndex + 1)}>{last ? 'Finish' : 'Next'}</Button>
+          <Button type="button" variant="ghost" onClick={onExit}>Exit tour</Button>
+        </div>
+      </div>
+      <div className="shoulder-tour-secondary">
       <details className="shoulder-tour-evidence" onToggle={event=>{if(event.currentTarget.open)onReadImaging();}}>
         <summary>References · draft, review pending</summary>
         <ul>{step.references.map(reference => <li key={reference}><a href={reference} target="_blank" rel="noreferrer">Upper limb muscle anatomy reference</a></li>)}</ul>
@@ -44,12 +54,6 @@ export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause
       {selected&&<TourImagingNotes key={step.id} structureName={selected.name}
         lessons={tourImagingModalities.map(({id,label})=>({id,label,content:selected.sections[id]}))}
         onOpen={onReadImaging}/>}
-      {!ready && <output>Playback paused while the model is unavailable. You can still exit.</output>}
-      <div className="shoulder-tour-controls">
-        <Button type="button" variant="outline" disabled={!ready || activeIndex === 0} onClick={() => onStep(activeIndex - 1)}>Back</Button>
-        <Button type="button" variant="outline" disabled={!ready} aria-pressed={playing} onClick={onPlayPause}>{playing ? 'Pause' : 'Play'}</Button>
-        <Button type="button" variant="outline" disabled={!ready} onClick={() => last ? onExit() : onStep(activeIndex + 1)}>{last ? 'Finish' : 'Next'}</Button>
-        <Button type="button" variant="ghost" onClick={onExit}>Exit tour</Button>
       </div>
     </section>
   );

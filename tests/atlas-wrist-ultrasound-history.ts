@@ -18,7 +18,9 @@ export function withoutWristUltrasoundNotice(text:string):string{
  const start=text.indexOf(marker);if(start<0)return text;
  assert.equal(text.indexOf(marker,start+marker.length),-1,'Duplicate wrist Ultrasound notice');
  const canonical=withoutCarpalQuizNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r',''));
- const cut=canonical.indexOf(marker);assert(cut>=0);const addition=canonical.slice(cut);
+ const cut=canonical.indexOf(marker);assert(cut>=0);
+ const next=canonical.indexOf('\n## ',cut+marker.length);assert(next>cut,'Wrist notice is not followed by the next saved notice');
+ const addition=canonical.slice(cut,next);
  assert.equal(createHash('sha256').update(addition).digest('hex'),'89bf5e195837ab6b02a71e0718c442c2c40accb6d5b9bb904f417e25aac9f28d');
  assert.equal(text.slice(start,start+addition.length),addition,'Altered wrist Ultrasound notice');
  return text.slice(0,start)+text.slice(start+addition.length);

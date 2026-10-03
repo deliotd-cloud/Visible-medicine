@@ -176,7 +176,9 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
       button.style.transform = `translate(${label.left}px, ${label.top}px)`;
       line.setAttribute(
         'd',
-        `M ${label.x} ${label.y} L ${label.endX} ${label.endY}`,
+        label.leader.map((point, index) =>
+          `${index ? 'L' : 'M'} ${point.x} ${point.y}`,
+        ).join(' '),
       );
       point.setAttribute('cx', String(label.x));
       point.setAttribute('cy', String(label.y));

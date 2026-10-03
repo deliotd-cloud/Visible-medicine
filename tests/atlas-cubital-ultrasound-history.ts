@@ -22,7 +22,9 @@ export function withoutCubitalVenousUltrasoundNotice(text:string):string{
  const start=text.indexOf(marker);if(start<0)return text;
  assert.equal(text.indexOf(marker,start+marker.length),-1,'Duplicate cubital notice');
  const canonical=withoutLumbarSacralNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r',''));
- const cut=canonical.indexOf(marker);assert(cut>=0);const addition=canonical.slice(cut);
+ const cut=canonical.indexOf(marker);assert(cut>=0);
+ const next=canonical.indexOf('\n## ',cut+marker.length);assert(next>cut,'Cubital notice is not followed by the next saved notice');
+ const addition=canonical.slice(cut,next);
  assert.equal(createHash('sha256').update(addition).digest('hex'),'592572427cd5bb772212819d163fe20ae6b5f26162e437e448f5388f47570b36');
  assert.equal(text.slice(start,start+addition.length),addition,'Altered cubital notice');
  return text.slice(0,start)+text.slice(start+addition.length);

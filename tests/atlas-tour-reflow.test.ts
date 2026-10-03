@@ -4,13 +4,13 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {desktopLayoutImportMilestone} from './atlas-cubital-ultrasound-history.ts';
+import {desktopLayoutImportMilestone,desktopLayoutMilestoneBytes} from './atlas-cubital-ultrasound-history.ts';
 
 test('tour title reflow ships matching learner/review styles without changing anatomy or teaching',()=>{
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'bd80e97dded3089f9306fa1878d7afca8990e403');
+ assert.equal(review.revision,'88cea927d48729769b96ad8fe680b0872b7e6687');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));
@@ -38,8 +38,17 @@ test('tour title reflow ships matching learner/review styles without changing an
   const retained=(f:any)=>f.path.endsWith('.glb')||f.path==='BUNDLED_NOTICES.txt'||f.path.includes('credits')||f.path==='bundled-dependencies.json';
   assert.deepEqual(manifest.files.filter(retained),old.files.filter(retained));
   const notice=prefix+'LICENSES/THIRD_PARTY_NOTICES.md';
+  const noticePath='LICENSES/THIRD_PARTY_NOTICES.md';
+  const noticeBytes=readFileSync(notice);
+  const noticeHash=createHash('sha256').update(noticeBytes).digest('hex');
+  const reviewNotice=review.files.find((f:any)=>f.path===noticePath);
+  assert.equal(noticeHash,manifest.files.find((f:any)=>f.path===noticePath)?.sha256);
+  assert.equal(noticeHash,reviewNotice?.importedSha256);
+  assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+noticePath)).digest('hex'),reviewNotice?.sourceSha256);
+  if(module==='head-neck')assert.equal(inputs.find((f:any)=>f.path===noticePath)?.sha256,reviewNotice?.sourceSha256);
+  assert.equal(noticeBytes.toString().replaceAll('\r',''),readFileSync('atlas-review/'+noticePath,'utf8').replaceAll('\r',''));
   const earlier=execFileSync('git',['show','047d488a:'+notice],{encoding:'utf8'}).replaceAll('\r','');
-  const currentNotice=withoutEyeCrossSectionalNotice(readFileSync(notice,'utf8').replaceAll('\r',''));
+  const currentNotice=withoutEyeCrossSectionalNotice(desktopLayoutMilestoneBytes(notice).toString().replaceAll('\r',''));
   const retainedNotice=execFileSync('git',['show','c0da7e2bf6a9f6f3e262b8c5326c369e5e6cafd2:'+notice],{encoding:'utf8'}).replaceAll('\r','');
   const renalNotice=execFileSync('git',['show','abfd5cf175f2b28417f43a34d34c3c730b453a4e:'+notice],{encoding:'utf8'}).replaceAll('\r','');
   const backNotice=execFileSync('git',['show','1377cba878403777924a82515a12faedb679363d:'+notice],{encoding:'utf8'}).replaceAll('\r','');

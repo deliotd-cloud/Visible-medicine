@@ -22,8 +22,13 @@ export function withoutThoracicQuizNotice(text:string):string{
  const revision=JSON.parse(readFileSync('atlas-review/manifest.json','utf8')).revision;
  const prefix='# Clinical Review third-party notices\n\nAtlas source: '+revision+'\n\n';
  assert.equal(start,cut+(text.startsWith(prefix)?prefix.length:0),'Altered preceding notice or moved thoracic notice');
- const addition=canonical.slice(cut);
+ // The milestone ends at this append; later independent notices remain in place.
+ const milestone=thoracicQuizMilestoneBytes('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString().replaceAll('\r','');
+ const milestoneCut=milestone.indexOf(marker);
+ assert(milestoneCut>=0,'Thoracic notice absent from saved milestone');
+ const addition=milestone.slice(milestoneCut);
  assert.equal(createHash('sha256').update(addition).digest('hex'),'ae9718302d2174518f6b60aaddb1f42baec1592dff98a9c5f4a54482f71a1300');
+ assert.equal(canonical.slice(cut,cut+addition.length),addition,'Altered canonical thoracic notice');
  assert.equal(text.slice(start,start+addition.length),addition,'Altered thoracic notice');
  return text.slice(0,start)+text.slice(start+addition.length);
 }
