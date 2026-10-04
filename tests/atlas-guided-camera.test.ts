@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import test from 'node:test';
 
 test('all integrated learner modules and Clinical Review bind the tested guided keyboard fix', () => {
-  const revision='8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5';
+  const revision='4bb78ac5a29c88984a735523775ec69aeff942d6';
   const cameraHash='9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0';
   const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));

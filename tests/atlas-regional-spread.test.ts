@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5';
+const revision='4bb78ac5a29c88984a735523775ec69aeff942d6';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -36,7 +36,10 @@ test('bounded regional Spread reaches learner and protected review without model
  const coronaryTourInput='lib/coronary-arterial-tour.ts';
  const cardiacCavityInput='content/cardiac-cavity-depth.ts';
  const selectedLabelInput='lib/scene-label-size.ts';
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3);assert.deepEqual(review.packages,prior.packages);
+ const thoracicInputs=['content/thoracic-spine-tour-pins.json','lib/thoracic-spine-tour.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length);assert.deepEqual(review.packages,prior.packages);
+ assert.deepEqual(review.files.filter((f:any)=>thoracicInputs.includes(f.path)).map((f:any)=>f.path).sort(),thoracicInputs);
+ for(const path of thoracicInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
  assert.equal(review.files.find((f:any)=>f.path===selectedLabelInput).sourceSha256,sha(sourceAt(selectedLabelInput)),'Exact selected-label helper Review source pin');
  assert.deepEqual(review.files.filter((f:any)=>f.path===cardiacCavityInput).map((f:any)=>f.path),[cardiacCavityInput]);
  assert.equal(review.files.find((f:any)=>f.path===cardiacCavityInput).sourceSha256,sha(sourceAt(cardiacCavityInput)),'Exact cardiac-cavity Review source pin');
@@ -73,7 +76,9 @@ test('bounded regional Spread reaches learner and protected review without model
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
   const coronarySceneInputs=['content/coronary-arterial-study-pins.json','lib/coronary-arterial-study.ts'];
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2+thoracicInputs.length:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.deepEqual(inputs.filter((f:any)=>thoracicInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='head-neck'?thoracicInputs:[]);
+  for(const file of inputs.filter((f:any)=>thoracicInputs.includes(f.path)))assert.equal(file.sha256,sha(sourceAt(file.path)),file.path);
   assert.equal(inputs.find((f:any)=>f.path===selectedLabelInput).sha256,sha(sourceAt(selectedLabelInput)),`${name}: exact selected-label helper input`);
   assert.deepEqual(inputs.filter((f:any)=>f.path===cardiacCavityInput).map((f:any)=>f.path),name==='head-neck'?[cardiacCavityInput]:[]);
   for(const f of inputs.filter((f:any)=>f.path===cardiacCavityInput))assert.equal(f.sha256,sha(sourceAt(f.path)),`${name}:${f.path}`);
@@ -111,7 +116,13 @@ test('bounded regional Spread reaches learner and protected review without model
   const sourceNotice=execFileSync('git',['show',revision+':LICENSES/THIRD_PARTY_NOTICES.md'],{cwd:'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs',maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString();
   assert.equal(current,sourceNotice,'Exact current source notice, not a rewritten historical fixture');
   const noticeTitle='# Third-party notices\n\n',toeHeading='## Toe-phalanx ultrasound teaching (4 October 2026)\n';
-  const preMidfoot=withoutMidfootNotice(withoutShoulderGirdleArterialNotice(Buffer.from(current))).toString();
+  // Preserve historical notice comparisons at their exact pre-schematic epoch.
+  const priorSchematic=execFileSync('git',['show','6636b2b82f85c66c0920c5dd8e5ed492c4c8f417:'+noticePath],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString();
+  const disclosureEnd=current.indexOf('## Shoulder-girdle arterial ultrasound teaching (4 October 2026)\n');
+  assert(disclosureEnd>noticeTitle.length);
+  assert.equal(sha(Buffer.from(current.slice(noticeTitle.length,disclosureEnd))),'a737df9ceba187829b0ef22a744355683eebd72a87616e14584784eb219d29d8');
+  assert.equal(noticeTitle+current.slice(disclosureEnd),priorSchematic,'Every preceding licence byte retained');
+  const preMidfoot=withoutMidfootNotice(withoutShoulderGirdleArterialNotice(Buffer.from(priorSchematic))).toString();
   assert(preMidfoot.startsWith(noticeTitle+toeHeading));
   assert.equal(preMidfoot.indexOf(toeHeading,noticeTitle.length+toeHeading.length),-1,'No duplicate toe notice');
   const toeEnd=preMidfoot.indexOf('## Deep-brain teaching (3 October 2026)\n',noticeTitle.length+toeHeading.length);

@@ -39,6 +39,8 @@ import { handVenousTours,handVenousTourSourceMatches } from './hand-venous-tours
 export { handVenousTours } from './hand-venous-tours';
 import { coronaryArterialTour,coronaryArterialTourMatches } from './coronary-arterial-tour';
 export { coronaryArterialTour } from './coronary-arterial-tour';
+import { thoracicSpineTour,thoracicSpineTourMatches } from './thoracic-spine-tour';
+export { thoracicSpineTour } from './thoracic-spine-tour';
 
 export type RegionalTour = {
   id: string; title: string; description: string; region: string; revision: string;
@@ -248,7 +250,7 @@ export const malePelvisTour: RegionalTour = {
     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
   ],
 };
-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour];
+export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour,thoracicSpineTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
@@ -257,6 +259,8 @@ export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Sel
 export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
   if(tour.id===coronaryArterialTour.id&&!coronaryArterialTourMatches(catalog,tour))
     throw Error('The coronary guided tour does not match the available anatomy source.');
+  if(tour.id===thoracicSpineTour.id&&!thoracicSpineTourMatches(catalog,tour))
+    throw Error('The thoracic spine guided tour does not match the available anatomy source.');
   const ids=[...new Set([...tour.contextIds,...tour.steps.map(s=>s.selectedId)])];
   const scope=tour.scopeRegions;
   // Cross-region tours never rewrite catalog membership or combine specimens.

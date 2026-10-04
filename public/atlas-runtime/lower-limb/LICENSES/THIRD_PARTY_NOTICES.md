@@ -1,5 +1,20 @@
 # Third-party notices
 
+## Original brachial plexus schematic candidate (4 October 2026)
+
+The 35 named parts, 38 connectivity edges, independently authored dimensionless
+procedural curves and candidate interface are original project work under MIT.
+No donor geometry, source drawing, photo, visual layout, texture, scan, font or
+new dependency is included. Existing dependency terms/notices remain unchanged.
+Anatomical facts were checked against the NCBI Bookshelf and primary cadaver
+studies linked in [the creation record](../docs/ORIGINAL_PLEXUS_CANDIDATE.md).
+References are reading links only: no article prose, figures, tables, coordinate
+measurements or supplements are redistributed. Consultation does not clear
+linked media or held meshes for commercial reuse. The candidate is outside
+learner inventories and export allowlists; its topology and presentation are
+unapproved, not a source segmentation or a patient/imaging registration. No
+account, paid service or mandatory future fee is introduced by this candidate.
+
 ## Shoulder-girdle arterial ultrasound teaching (4 October 2026)
 
 Ten source-bound selections receive five independently authored factual drafts.

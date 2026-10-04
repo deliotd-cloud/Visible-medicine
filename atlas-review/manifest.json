@@ -1,5 +1,5 @@
 {
-  "revision": "8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5",
+  "revision": "4bb78ac5a29c88984a735523775ec69aeff942d6",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3178,8 +3178,8 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sourceSha256": "a2839261b0bd7d80c7931422608b2dd8a6a4c27c887bb36e2ef7067543bcadff",
-      "importedSha256": "a2839261b0bd7d80c7931422608b2dd8a6a4c27c887bb36e2ef7067543bcadff"
+      "sourceSha256": "cbf020933185c704d293c92682056a41cce796fad351c5a5f716d1fad1d3d9c1",
+      "importedSha256": "cbf020933185c704d293c92682056a41cce796fad351c5a5f716d1fad1d3d9c1"
     },
     {
       "path": "lib/selection-visibility.ts",
@@ -3285,6 +3285,16 @@
       "path": "lib/coronary-arterial-tour.ts",
       "sourceSha256": "b596ea9047734d177b96396d0002fc01e954796fefa7f7686d995a521cf2a353",
       "importedSha256": "b596ea9047734d177b96396d0002fc01e954796fefa7f7686d995a521cf2a353"
+    },
+    {
+      "path": "lib/thoracic-spine-tour.ts",
+      "sourceSha256": "8ad142baf0666ed1edfac4d384c0336b5a1c113ca77a58a8872aa6d4db8f8dd0",
+      "importedSha256": "8ad142baf0666ed1edfac4d384c0336b5a1c113ca77a58a8872aa6d4db8f8dd0"
+    },
+    {
+      "path": "content/thoracic-spine-tour-pins.json",
+      "sourceSha256": "b896a2fe48cf7c28301c51ee856db8558815de5dcc96c6632880e8ff29dd9f2c",
+      "importedSha256": "b896a2fe48cf7c28301c51ee856db8558815de5dcc96c6632880e8ff29dd9f2c"
     },
     {
       "path": "lib/coronary-arterial-review.ts",
@@ -3468,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "87a100c4a4af9529a0ce15c4dc13d3e66ac0aeaefbf7f7ab12c960d8bf0df359",
-      "importedSha256": "945aab500a9563291089e3ee7578d755721b7cb3355993b6fcebbd20216944d2"
+      "sourceSha256": "2521b75cc2a97b0930974249e70561b646fc23304267f83c88c5c95e041aa5d3",
+      "importedSha256": "4de61be98c56ef14d964f0c464312180669a0683aba246edb1e1aded473bafbe"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3839,7 +3849,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "186fd987d841dc9d6771ab2a376de993496db314fd3500e17427f8538e1e2f77",
-      "importedSha256": "6d94f728145091cd30a018c3006690f76e3f9132711990adef5e8245f01d6fee"
+      "importedSha256": "9834e2bd656234986688f6cdbc6c2de8d7da06e13f14b77108c7dabebc1aad3d"
     },
     {
       "path": "app/review/review.css",
@@ -3873,8 +3883,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "4060d026abd227b7172ab2b7ecb445012f60ec39a6e7dffb6651a2baed3a4119",
-      "importedSha256": "4060d026abd227b7172ab2b7ecb445012f60ec39a6e7dffb6651a2baed3a4119"
+      "sourceSha256": "b0b2674e030f63d655cb56df6547807a602b326984b231c402398fac65eebba7",
+      "importedSha256": "b0b2674e030f63d655cb56df6547807a602b326984b231c402398fac65eebba7"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5243,8 +5253,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a",
-      "importedSha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a"
+      "sourceSha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7",
+      "importedSha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5343,5 +5353,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "6c3c60142ec392b68e67e532aa2f361c0d6ac19a17198ffdff338111fffcc2b0"
+  "websiteIntegrationSha256": "02f30f7a9dcf324e49b91e4ba30c565e8f535a6b3e23d55485fbc0ef1e8e6411"
 }

@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a"
+    "sha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -1884,6 +1884,10 @@
     "sha256": "581c485dd186321db1304024bc8226e34e8e250ce9a29727c65c40ef6f957d9f"
   },
   {
+    "path": "content/thoracic-spine-tour-pins.json",
+    "sha256": "b896a2fe48cf7c28301c51ee856db8558815de5dcc96c6632880e8ff29dd9f2c"
+  },
+  {
     "path": "content/thoracoabdominal-organ-imaging-pins.json",
     "sha256": "e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129"
   },
@@ -3429,7 +3433,7 @@
   },
   {
     "path": "lib/regional-tours.ts",
-    "sha256": "a2839261b0bd7d80c7931422608b2dd8a6a4c27c887bb36e2ef7067543bcadff"
+    "sha256": "cbf020933185c704d293c92682056a41cce796fad351c5a5f716d1fad1d3d9c1"
   },
   {
     "path": "lib/regional-vascular-clinical.ts",
@@ -3718,6 +3722,10 @@
   {
     "path": "lib/thoracic-quiz.ts",
     "sha256": "0fa4ec6755a44490a8fb8036be432fd52180151523fd4e79888a4ada416524ff"
+  },
+  {
+    "path": "lib/thoracic-spine-tour.ts",
+    "sha256": "8ad142baf0666ed1edfac4d384c0336b5a1c113ca77a58a8872aa6d4db8f8dd0"
   },
   {
     "path": "lib/thoracic-vessel-clinical-curriculum.ts",

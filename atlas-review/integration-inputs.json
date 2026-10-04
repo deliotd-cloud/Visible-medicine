@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5",
-  "sha256": "6c3c60142ec392b68e67e532aa2f361c0d6ac19a17198ffdff338111fffcc2b0",
+  "sourceCommit": "4bb78ac5a29c88984a735523775ec69aeff942d6",
+  "sha256": "02f30f7a9dcf324e49b91e4ba30c565e8f535a6b3e23d55485fbc0ef1e8e6411",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -748,7 +748,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "4060d026abd227b7172ab2b7ecb445012f60ec39a6e7dffb6651a2baed3a4119"
+      "sha256": "b0b2674e030f63d655cb56df6547807a602b326984b231c402398fac65eebba7"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1989,6 +1989,10 @@
     {
       "path": "atlas-review/content/thoracic-quiz.ts",
       "sha256": "581c485dd186321db1304024bc8226e34e8e250ce9a29727c65c40ef6f957d9f"
+    },
+    {
+      "path": "atlas-review/content/thoracic-spine-tour-pins.json",
+      "sha256": "b896a2fe48cf7c28301c51ee856db8558815de5dcc96c6632880e8ff29dd9f2c"
     },
     {
       "path": "atlas-review/content/thoracoabdominal-organ-imaging-pins.json",
@@ -3588,7 +3592,7 @@
     },
     {
       "path": "atlas-review/lib/regional-tours.ts",
-      "sha256": "a2839261b0bd7d80c7931422608b2dd8a6a4c27c887bb36e2ef7067543bcadff"
+      "sha256": "cbf020933185c704d293c92682056a41cce796fad351c5a5f716d1fad1d3d9c1"
     },
     {
       "path": "atlas-review/lib/regional-vascular-clinical.ts",
@@ -3915,6 +3919,10 @@
       "sha256": "0fa4ec6755a44490a8fb8036be432fd52180151523fd4e79888a4ada416524ff"
     },
     {
+      "path": "atlas-review/lib/thoracic-spine-tour.ts",
+      "sha256": "8ad142baf0666ed1edfac4d384c0336b5a1c113ca77a58a8872aa6d4db8f8dd0"
+    },
+    {
       "path": "atlas-review/lib/thoracic-vessel-clinical-curriculum.ts",
       "sha256": "9b0497b72c601d7ff89689d13c6efbf8804113d49790e901e3d5d02ed394a1d2"
     },
@@ -4088,7 +4096,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a"
+      "sha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4348,7 +4356,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "9a65357409b7cd0748fee8b505a6bdd79fff8347474e604e96e0774c7f9c2f43"
+      "sha256": "4b8e2e7ab1591b04bcf9bef60c44dc000791d754de339310540b7d23faac1942"
     }
   ]
 }

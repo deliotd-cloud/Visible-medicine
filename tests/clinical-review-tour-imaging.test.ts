@@ -21,11 +21,11 @@ async function teachingApi(historical=false){
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5');
+  assert.equal(review.revision,'4bb78ac5a29c88984a735523775ec69aeff942d6');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5');
+    assert.equal(learner.sourceCommit,'4bb78ac5a29c88984a735523775ec69aeff942d6');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);
@@ -67,16 +67,17 @@ test('guided imaging notes reach both learners and review without inventing scan
   assert.ok(notes.includes('tabIndex={0}'));
 });
 
-test('current 183-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
-  const api=await teachingApi();let checked=0,handChecks=0,venousChecks=0,handVenousChecks=0,coronaryChecks=0;
-  const completedHandTours=api.regionalTours.filter((t:any)=>t.id!=='coronary-arterial-orientation'&&t.id!=='right-lower-limb-venous-orientation'&&!['right-hand-venous-orientation','left-hand-venous-orientation'].includes(t.id));
+test('current 189-stop guided imaging notes match unsigned learner/review teaching for every modality',async()=>{
+  const api=await teachingApi();let checked=0,handChecks=0,venousChecks=0,handVenousChecks=0,coronaryChecks=0,thoracicChecks=0;
+  const completedHandTours=api.regionalTours.filter((t:any)=>t.id!=='thoracic-spine-discs-orientation'&&t.id!=='coronary-arterial-orientation'&&t.id!=='right-lower-limb-venous-orientation'&&!['right-hand-venous-orientation','left-hand-venous-orientation'].includes(t.id));
   assert.equal(completedHandTours.length,27);
   assert.equal(completedHandTours.reduce((n:number,t:any)=>n+t.steps.length,0),157);
   const earlierTours=completedHandTours.filter((t:any)=>t.id!=='right-hand-arterial-orientation');
   assert.equal(earlierTours.length,26);
   assert.equal(earlierTours.reduce((n:number,t:any)=>n+t.steps.length,0),150);
-  assert.equal(api.regionalTours.length,31);
-  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),183);
+  assert.equal(api.regionalTours.length,32);
+  assert.equal(api.regionalTours.reduce((n:number,t:any)=>n+t.steps.length,0),189);
+  assert.equal(api.regionalTours.find((t:any)=>t.id==='thoracic-spine-discs-orientation')?.steps.length,6);
   assert.equal(api.regionalTours.find((t:any)=>t.id==='coronary-arterial-orientation')?.steps.length,6);
   assert.equal(api.regionalTours.find((t:any)=>t.id==='hepatobiliary-surface-orientation')?.steps.length,4);
   for(const tour of api.regionalTours)for(const step of tour.steps){
@@ -92,6 +93,7 @@ test('current 183-stop guided imaging notes match unsigned learner/review teachi
       if(tour.id==='right-lower-limb-venous-orientation')venousChecks++;
       if(['right-hand-venous-orientation','left-hand-venous-orientation'].includes(tour.id))handVenousChecks++;
       if(tour.id==='coronary-arterial-orientation')coronaryChecks++;
+      if(tour.id==='thoracic-spine-discs-orientation')thoracicChecks++;
     }
   }
   for(const step of api.shoulderTour.steps){
@@ -102,10 +104,12 @@ test('current 183-stop guided imaging notes match unsigned learner/review teachi
   assert.equal(venousChecks,24);
   assert.equal(handVenousChecks,56);
   assert.equal(coronaryChecks,24);
-  assert.equal(checked-coronaryChecks-handChecks-venousChecks-handVenousChecks,620); // Original150 regional plus five shoulder stops.
-  assert.equal(checked-coronaryChecks-venousChecks-handVenousChecks,648); // Completed157 regional plus five shoulder stops.
-  assert.equal(checked-coronaryChecks-handVenousChecks,672); // All 163 earlier regional plus five shoulder stops remain covered.
-  assert.equal(checked-coronaryChecks,728); // Previous177 regional plus five shoulder stops, four modalities.
-  assert.equal(checked,752); // Current183 regional plus five shoulder stops, four modalities.
+  assert.equal(thoracicChecks,24);
+  assert.equal(checked-thoracicChecks-coronaryChecks-handChecks-venousChecks-handVenousChecks,620); // Original150 regional plus five shoulder stops.
+  assert.equal(checked-thoracicChecks-coronaryChecks-venousChecks-handVenousChecks,648); // Completed157 regional plus five shoulder stops.
+  assert.equal(checked-thoracicChecks-coronaryChecks-handVenousChecks,672); // All 163 earlier regional plus five shoulder stops remain covered.
+  assert.equal(checked-thoracicChecks-coronaryChecks,728); // Previous177 regional plus five shoulder stops, four modalities.
+  assert.equal(checked-thoracicChecks,752); // Previous183 regional plus five shoulder stops retained.
+  assert.equal(checked,776); // Current189 regional plus five shoulder stops, four modalities.
   assert.equal(api.circleWillisTour.steps.length,10);
 });

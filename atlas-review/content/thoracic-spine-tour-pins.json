@@ -1,0 +1,668 @@
+{
+  "schemaVersion": 1,
+  "baseline": "de82626457fb60c3b92b4e4d87a0016b6c3c09ce",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+      "fmaId": "FMA9165",
+      "name": "First thoracic vertebra",
+      "sourceName": "first thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9165",
+      "bounds": {
+        "min": [
+          -0.37382999062538147,
+          5.4721999168396,
+          -0.329133003950119
+        ],
+        "max": [
+          0.35916197299957275,
+          5.769000053405762,
+          0.3687190115451813
+        ]
+      },
+      "center": [
+        -0.007334008812904358,
+        5.620599985122681,
+        0.019793003797531128
+      ],
+      "anchor": [
+        0.021189598366618156,
+        5.618599891662598,
+        0.026789017021656036
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3158",
+          "sha256": "aa69c48def3434d6a3e1c56fc78af45f01545931fde5422af17d5f98ce9ed8a3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+      "fmaId": "FMA9187",
+      "name": "Second thoracic vertebra",
+      "sourceName": "second thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9187",
+      "bounds": {
+        "min": [
+          -0.3592210114002228,
+          5.265899658203125,
+          -0.37879499793052673
+        ],
+        "max": [
+          0.3457840085029602,
+          5.603600025177002,
+          0.3267579674720764
+        ]
+      },
+      "center": [
+        -0.006718501448631287,
+        5.4347498416900635,
+        -0.02601851522922516
+      ],
+      "anchor": [
+        0.020678000524640083,
+        5.457199573516846,
+        -0.02256900817155838
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3160",
+          "sha256": "20c1322be138314f42bbd1be3e69f3f6b590bbca7a8a3cd3414476f207721300"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+      "fmaId": "FMA9922",
+      "name": "Fifth thoracic vertebra",
+      "sourceName": "fifth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9922",
+      "bounds": {
+        "min": [
+          -0.36151501536369324,
+          4.397700309753418,
+          -0.500185489654541
+        ],
+        "max": [
+          0.3488970100879669,
+          4.972700119018555,
+          0.16009002923965454
+        ]
+      },
+      "center": [
+        -0.006309002637863159,
+        4.685200214385986,
+        -0.17004773020744324
+      ],
+      "anchor": [
+        -0.014510600827634335,
+        4.655699253082275,
+        -0.10752899199724197
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3169",
+          "sha256": "20c3b1dfed3a2ac5e631838ae924379672dac2047186711cfaa819b9a1db6e5b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+      "fmaId": "FMA9945",
+      "name": "Sixth thoracic vertebra",
+      "sourceName": "sixth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9945",
+      "bounds": {
+        "min": [
+          -0.3642269968986511,
+          4.093800067901611,
+          -0.48807570338249207
+        ],
+        "max": [
+          0.35033902525901794,
+          4.690799713134766,
+          0.15220901370048523
+        ]
+      },
+      "center": [
+        -0.006943985819816589,
+        4.3922998905181885,
+        -0.16793334484100342
+      ],
+      "anchor": [
+        -0.02785330079495907,
+        4.395999908447266,
+        -0.13166698813438416
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3171",
+          "sha256": "ebee2a07751de0aa0b33974eea0a9228fed9980f740c619776003d5a38c370c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+      "fmaId": "FMA9991",
+      "name": "Eighth thoracic vertebra",
+      "sourceName": "eighth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9991",
+      "bounds": {
+        "min": [
+          -0.33659401535987854,
+          3.5374999046325684,
+          -0.49068203568458557
+        ],
+        "max": [
+          0.32152697443962097,
+          4.130500316619873,
+          0.22027602791786194
+        ]
+      },
+      "center": [
+        -0.007533520460128784,
+        3.8340001106262207,
+        -0.13520300388336182
+      ],
+      "anchor": [
+        0.01775220036506653,
+        3.8291003704071045,
+        -0.09381000697612762
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3174",
+          "sha256": "531253894a89d60c78a5235bfba826e0c30c21003267258fe1fca244d9090c1a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+      "fmaId": "FMA10014",
+      "name": "Ninth thoracic vertebra",
+      "sourceName": "ninth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10014",
+      "bounds": {
+        "min": [
+          -0.34394797682762146,
+          3.2662999629974365,
+          -0.43843939900398254
+        ],
+        "max": [
+          0.3299800157546997,
+          3.8483996391296387,
+          0.2765290141105652
+        ]
+      },
+      "center": [
+        -0.0069839805364608765,
+        3.5573498010635376,
+        -0.08095519244670868
+      ],
+      "anchor": [
+        -0.013477400876581669,
+        3.556800603866577,
+        -0.04484100267291069
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3175",
+          "sha256": "34bd592e9f0282eea561a680697beeac655584ca9e4db9232b013535c57e7e61"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+      "fmaId": "FMA10059",
+      "name": "Eleventh thoracic vertebra",
+      "sourceName": "eleventh thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10059",
+      "bounds": {
+        "min": [
+          -0.26760998368263245,
+          2.757199764251709,
+          -0.3699110150337219
+        ],
+        "max": [
+          0.2555930018424988,
+          3.2927002906799316,
+          0.425324022769928
+        ]
+      },
+      "center": [
+        -0.0060084909200668335,
+        3.0249500274658203,
+        0.027706503868103027
+      ],
+      "anchor": [
+        -0.00616680970415473,
+        2.9952001571655273,
+        0.09152599424123764
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3155",
+          "sha256": "1f9c9f6dfcd5585e09abc2cf9a8f54ba1c33df399c6d4dad1a92301d85cd88b3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+      "fmaId": "FMA10081",
+      "name": "Twelfth thoracic vertebra",
+      "sourceName": "twelfth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10081",
+      "bounds": {
+        "min": [
+          -0.22386400401592255,
+          2.4995996952056885,
+          -0.2743909955024719
+        ],
+        "max": [
+          0.21054799854755402,
+          3.015899658203125,
+          0.5138500332832336
+        ]
+      },
+      "center": [
+        -0.006658002734184265,
+        2.7577496767044067,
+        0.11972951889038086
+      ],
+      "anchor": [
+        0.007555339951068163,
+        2.76680064201355,
+        0.16926902532577515
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3156",
+          "sha256": "ffeebd0dead6ed95395e35c0843888b079acf67543e2820437e99978c69642a0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+      "fmaId": "FMA10458",
+      "name": "Intervertebral disk of first thoracic vertebra",
+      "sourceName": "intervertebral disk of first thoracic vertebra",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-connective-gaps",
+      "nodeName": "FMA10458",
+      "bounds": {
+        "min": [
+          -0.1706399917602539,
+          5.419000148773193,
+          0.1390869915485382
+        ],
+        "max": [
+          0.15535800158977509,
+          5.547500133514404,
+          0.33781898021698
+        ]
+      },
+      "center": [
+        -0.00764099508523941,
+        5.483250141143799,
+        0.2384529858827591
+      ],
+      "anchor": [
+        -0.007474320009350777,
+        5.463499546051025,
+        0.23867301642894745
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3222",
+          "sha256": "b7387340fcd82362f86af387a7fe21a9a2e9ab9f4549ec539fc519112b4296d5"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+      "fmaId": "FMA13502",
+      "name": "Intervertebral disk of fifth thoracic vertebra",
+      "sourceName": "intervertebral disk of fifth thoracic vertebra",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-connective-gaps",
+      "nodeName": "FMA13502",
+      "bounds": {
+        "min": [
+          -0.15923400223255157,
+          4.545000076293945,
+          -0.1644349992275238
+        ],
+        "max": [
+          0.14632199704647064,
+          4.650000095367432,
+          0.15302497148513794
+        ]
+      },
+      "center": [
+        -0.006456002593040466,
+        4.5975000858306885,
+        -0.005705013871192932
+      ],
+      "anchor": [
+        -0.004380839876830578,
+        4.567800521850586,
+        -0.0011119842529296875
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3204",
+          "sha256": "70238a6e88e8bf340459cc030536bd591ea8eb55b60694e526b39b0a5ff141d0"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+      "fmaId": "FMA13505",
+      "name": "Intervertebral disk of eighth thoracic vertebra",
+      "sourceName": "intervertebral disk of eighth thoracic vertebra",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-connective-gaps",
+      "nodeName": "FMA13505",
+      "bounds": {
+        "min": [
+          -0.18475200235843658,
+          3.747199773788452,
+          -0.11617698520421982
+        ],
+        "max": [
+          0.17160700261592865,
+          3.893699884414673,
+          0.24182502925395966
+        ]
+      },
+      "center": [
+        -0.006572499871253967,
+        3.8204498291015625,
+        0.06282402202486992
+      ],
+      "anchor": [
+        -0.008365740068256855,
+        3.835400342941284,
+        0.03666599094867706
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3207",
+          "sha256": "7df1bee7ad9edd0e0405b052c62a16472f9f954c45203eb5a5f75fd311841a1b"
+        }
+      ],
+      "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "spine-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "bytes": 934264,
+      "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+      "structures": 22
+    }
+  ]
+}
