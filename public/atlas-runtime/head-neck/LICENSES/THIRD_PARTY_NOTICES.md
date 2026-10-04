@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Shoulder-girdle arterial ultrasound teaching (4 October 2026)
+
+Ten source-bound selections receive five independently authored factual drafts.
+Primary reading links cite van de Pol et al., Dabernig et al., Kayashima and
+Yamasaki, Demondion et al., Murata et al., and Lai and Ho. Exact links and
+study-specific limits are in [the evidence record](../docs/SHOULDER_GIRDLE_ARTERIAL_ULTRASOUND.md).
+No article prose, figure, sonogram, trace, table, mesh, dataset or supplementary
+asset is redistributed. Article-media rights are not cleared or used as an
+asset grant; a citation does not license linked media. Original project wording
+retains MIT terms. Existing model geometry/attribution remain unchanged; no
+dependency, font, texture, service, account or mandatory fee is added. Draft
+coverage is not scan availability, registration or clinical acceptance.
+Revision-bound radiologist review and future imaging-rights/privacy gates remain.
+
 ## Midfoot ultrasound and hallux-note follow-up (4 October 2026)
 
 Eight cuboid/cuneiform selections receive four original drafts; four hallux

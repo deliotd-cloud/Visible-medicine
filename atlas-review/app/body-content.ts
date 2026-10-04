@@ -1,4 +1,5 @@
 import { centralVesselImagingLesson } from '../lib/central-vessel-imaging';
+import { shoulderGirdleArterialUltrasoundLesson } from '../lib/shoulder-girdle-arterial-ultrasound';
 import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
 import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
 import { cerebellarMcaImagingLesson } from '../lib/cerebellar-mca-imaging';
@@ -274,6 +275,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const shoulderGirdleArterialUltrasound = shoulderGirdleArterialUltrasoundLesson(s, tab);
+  if (shoulderGirdleArterialUltrasound) return shoulderGirdleArterialUltrasound;
   const footUltrasoundFollowup = footUltrasoundFollowupLesson(s, tab);
   if (footUltrasoundFollowup) return footUltrasoundFollowup;
   const toeBoneUltrasound = toeBoneUltrasoundLesson(s, tab);

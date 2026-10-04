@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bbe33ea6ffff3503ae9cdabc0dd41350cece28cd",
-  "sha256": "f67aa58a860d9f14d1bcd68bbf939b89c7b4428db6cd78f3708fefcdf34d2877",
+  "sourceCommit": "c5c99ba11e6533d306587e71f5fc2854d882fbd6",
+  "sha256": "1461f001911423580fda7c7b40c3dab369cc748c479c72833d00c396350ed290",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "0a6e2ba2d8e4e41388160ad3b974deb96c5e91fba400fe309bdb3ed87de28854"
+      "sha256": "9b0af92a36c7f0048ad2329dc939efffbf6a99064c4f20ad66aafb7e7a2482e1"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -744,7 +744,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "9abd4186c88427ea66e975fba32512e6d435164deebaf790904662160e2757e1"
+      "sha256": "61a4252365ba2ccb160639c4815d837b73488158940b0f0c0b403c628aef256c"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1797,6 +1797,14 @@
     {
       "path": "atlas-review/content/shoulder-arterial-mri.ts",
       "sha256": "e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16"
+    },
+    {
+      "path": "atlas-review/content/shoulder-girdle-arterial-ultrasound-pins.json",
+      "sha256": "368940c5e8b6902b2c114620913b3dcd74238c69aab9bdc4eb247f7a40f03b8a"
+    },
+    {
+      "path": "atlas-review/content/shoulder-girdle-arterial-ultrasound.ts",
+      "sha256": "fd4a6f3694434ae7e18cc76f6b532d22728bdc6b18477415854b743cc0c7fa09"
     },
     {
       "path": "atlas-review/content/shoulder-girdle-imaging-pins.json",
@@ -3639,6 +3647,10 @@
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
     {
+      "path": "atlas-review/lib/shoulder-girdle-arterial-ultrasound.ts",
+      "sha256": "9be98e6a3a716f9cf27948ce9e5097ca5cc4d321135c89573af4fb4ff359c0cc"
+    },
+    {
       "path": "atlas-review/lib/shoulder-girdle-imaging.ts",
       "sha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6"
     },
@@ -4008,7 +4020,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "a59a08db24f13fa3d6ed03a7040afd468de66ef06d96873a58a4647256cc84f2"
+      "sha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4264,7 +4276,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "6f3b21e6fa68ec3478dd7b63e5760544164e8623cf0d80750330c0c9fc84056a"
+      "sha256": "94d78295ef4e5a3115aa59c12af70b2435fa2e18397f19964533b8976e646a61"
     }
   ]
 }

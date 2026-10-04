@@ -6,6 +6,7 @@ import test from 'node:test';
 import { preFootNotice, preFootNoticeBytes, preFootWebsiteEpoch,
   sourceFootNoticeBytes, withoutFootNotice } from './atlas-foot-notice-history.ts';
 import { withoutMidfootNotice } from './atlas-foot-ultrasound-notice-history.ts';
+import { withoutShoulderGirdleArterialNotice } from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
 const sha = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex');
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
@@ -13,7 +14,7 @@ const saved = (path: string) => execFileSync('git', ['show', `${preFootWebsiteEp
   maxBuffer: 32e6, windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
 });
 const notice = 'LICENSES/THIRD_PARTY_NOTICES.md';
-const currentSourceRevision = '537838f028f15e62a6642e7eb360cbaeea31fa20';
+const currentSourceRevision = 'c5c99ba11e6533d306587e71f5fc2854d882fbd6';
 const priorSourceRevision = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const sourceAt = (revision: string) => execFileSync('git', ['show', `${revision}:${notice}`], {
@@ -51,7 +52,8 @@ test('foot notice is one exact terminal appendix to the complete pre-foot epoch'
   assert.throws(() => withoutFootNotice('x' + foot), /Altered or moved preceding notice/);
   const current = readFileSync('atlas-review/' + notice);
   assert.deepEqual(current, currentSourceNoticeBytes, 'Review imports exact committed current Atlas notice bytes');
-  const toeCurrent = withoutMidfootNotice(current);
+  const postShoulder = withoutShoulderGirdleArterialNotice(current);
+  const toeCurrent = withoutMidfootNotice(postShoulder);
   const prior = withoutToeNotice(toeCurrent);
   assert.deepEqual(prior.subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, 'Complete foot epoch retained after toe section');
   assert.match(prior.subarray(sourceFootNoticeBytes.length).toString(), /^\n## Hand-bone ultrasound surface orientation — 4 October 2026\n/);
@@ -62,15 +64,25 @@ test('foot notice is one exact terminal appendix to the complete pre-foot epoch'
   assert.throws(() => withoutToeNotice(Buffer.concat([title, toeSection, toeSection, toeCurrent.subarray(title.length + toeSection.length)])), /Duplicate toe notice/);
   assert.throws(() => withoutToeNotice(Buffer.concat([title, toeCurrent.subarray(title.length + toeSection.length), toeSection])), /Toe notice missing or moved/);
 
+  const shoulderHeading = Buffer.from('## Shoulder-girdle arterial ultrasound teaching (4 October 2026)\n');
+  const shoulderSection = current.subarray(title.length, current.indexOf(Buffer.from('## Midfoot ultrasound and hallux-note follow-up (4 October 2026)\n'), title.length));
+  assert.deepEqual(shoulderSection.subarray(0, shoulderHeading.length), shoulderHeading);
+  const changedShoulder = Buffer.from(current);
+  changedShoulder[title.length + shoulderHeading.length + 10] ^= 1;
+  assert.throws(() => withoutShoulderGirdleArterialNotice(changedShoulder), /Shoulder-girdle notice changed/);
+  assert.throws(() => withoutShoulderGirdleArterialNotice(postShoulder), /Shoulder-girdle notice missing or moved/);
+  assert.throws(() => withoutShoulderGirdleArterialNotice(Buffer.concat([title, shoulderSection, shoulderSection, current.subarray(title.length + shoulderSection.length)])), /Duplicate shoulder-girdle notice/);
+  assert.throws(() => withoutShoulderGirdleArterialNotice(Buffer.concat([title, current.subarray(title.length + shoulderSection.length), shoulderSection])), /Shoulder-girdle notice missing or moved/);
+
   const midfootHeading = Buffer.from('## Midfoot ultrasound and hallux-note follow-up (4 October 2026)\n');
-  const midfootSection = current.subarray(title.length, current.indexOf(toeHeading, title.length));
+  const midfootSection = postShoulder.subarray(title.length, postShoulder.indexOf(toeHeading, title.length));
   assert.deepEqual(midfootSection.subarray(0, midfootHeading.length), midfootHeading);
-  const altered = Buffer.from(current);
+  const altered = Buffer.from(postShoulder);
   altered[title.length + midfootHeading.length + 10] ^= 1;
   assert.throws(() => withoutMidfootNotice(altered), /Midfoot notice changed/);
   assert.throws(() => withoutMidfootNotice(toeCurrent), /Midfoot notice missing or moved/);
-  assert.throws(() => withoutMidfootNotice(Buffer.concat([title, midfootSection, midfootSection, current.subarray(title.length + midfootSection.length)])), /Duplicate midfoot notice/);
-  assert.throws(() => withoutMidfootNotice(Buffer.concat([title, current.subarray(title.length + midfootSection.length), midfootSection])), /Midfoot notice missing or moved/);
+  assert.throws(() => withoutMidfootNotice(Buffer.concat([title, midfootSection, midfootSection, postShoulder.subarray(title.length + midfootSection.length)])), /Duplicate midfoot notice/);
+  assert.throws(() => withoutMidfootNotice(Buffer.concat([title, postShoulder.subarray(title.length + midfootSection.length), midfootSection])), /Midfoot notice missing or moved/);
   assert.match(midfootSection.toString(), /Savaşan et al\. \(2026\), declaring CC BY\s+with its exact version not independently established/);
   assert.match(midfootSection.toString(), /factual\s+reading only, not an asset\/adaptation grant/);
 });
@@ -91,7 +103,7 @@ test('four runtimes and protected Review ship source-bound notices with intact d
     assert.equal(manifest.clinicalApproved, false);
     const delivered = readFileSync(base + notice);
     assert.deepEqual(delivered, currentSourceNoticeBytes, `${name}: exact source notice`);
-    assert.deepEqual(withoutToeNotice(withoutMidfootNotice(delivered)).subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, `${name}: foot notice unchanged`);
+    assert.deepEqual(withoutToeNotice(withoutMidfootNotice(withoutShoulderGirdleArterialNotice(delivered))).subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, `${name}: foot notice unchanged`);
     const entry = manifest.files.find((file: { path: string }) => file.path === notice);
     assert(entry);
     assert.equal(delivered.length, entry.bytes);

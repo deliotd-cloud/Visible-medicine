@@ -10,7 +10,7 @@ const websiteBaseline = 'fdf1a982c2064786f0de8cc01c5ec895f2227d38';
 const sourceBaseline = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
 const sourceRevision = 'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb';
 const toeWebsiteEpoch = 'f71eaf068279f36c7b63c0ceb6435651a4c58ef6';
-const deliveryRevision = '537838f028f15e62a6642e7eb360cbaeea31fa20';
+const deliveryRevision = 'c5c99ba11e6533d306587e71f5fc2854d882fbd6';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const old = path => execFileSync('git', ['show', `${websiteBaseline}:${path}`], {maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}});

@@ -1,5 +1,5 @@
 {
-  "revision": "bbe33ea6ffff3503ae9cdabc0dd41350cece28cd",
+  "revision": "c5c99ba11e6533d306587e71f5fc2854d882fbd6",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "0a6e2ba2d8e4e41388160ad3b974deb96c5e91fba400fe309bdb3ed87de28854",
-      "importedSha256": "0a6e2ba2d8e4e41388160ad3b974deb96c5e91fba400fe309bdb3ed87de28854"
+      "sourceSha256": "9b0af92a36c7f0048ad2329dc939efffbf6a99064c4f20ad66aafb7e7a2482e1",
+      "importedSha256": "9b0af92a36c7f0048ad2329dc939efffbf6a99064c4f20ad66aafb7e7a2482e1"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -555,6 +555,21 @@
       "path": "content/central-vessel-imaging.ts",
       "sourceSha256": "829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a",
       "importedSha256": "829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a"
+    },
+    {
+      "path": "lib/shoulder-girdle-arterial-ultrasound.ts",
+      "sourceSha256": "9be98e6a3a716f9cf27948ce9e5097ca5cc4d321135c89573af4fb4ff359c0cc",
+      "importedSha256": "9be98e6a3a716f9cf27948ce9e5097ca5cc4d321135c89573af4fb4ff359c0cc"
+    },
+    {
+      "path": "content/shoulder-girdle-arterial-ultrasound-pins.json",
+      "sourceSha256": "368940c5e8b6902b2c114620913b3dcd74238c69aab9bdc4eb247f7a40f03b8a",
+      "importedSha256": "368940c5e8b6902b2c114620913b3dcd74238c69aab9bdc4eb247f7a40f03b8a"
+    },
+    {
+      "path": "content/shoulder-girdle-arterial-ultrasound.ts",
+      "sourceSha256": "fd4a6f3694434ae7e18cc76f6b532d22728bdc6b18477415854b743cc0c7fa09",
+      "importedSha256": "fd4a6f3694434ae7e18cc76f6b532d22728bdc6b18477415854b743cc0c7fa09"
     },
     {
       "path": "lib/tentorium-imaging.ts",
@@ -3383,8 +3398,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "0b4331e12dfdb4e846e77daba8d769710a953c5548c2979fc4c2eb4ebd1fb166",
-      "importedSha256": "d16c5aced06952780922a2b71ce0d8e9f80771a2290cf15f9f5eb8a1add79711"
+      "sourceSha256": "4ee108118e95f830503596d905aa68d8cb1072427400bc97f1651984ab743942",
+      "importedSha256": "24538921426cf6de7247bb476015a6430aed6f7863192698fdd0d5bf45e2c0e4"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3744,7 +3759,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d",
-      "importedSha256": "98c6873a704e02d5c8b0bdfd467d5df9b569cc0f6bb9ac6598ed3b35f4797fb3"
+      "importedSha256": "2b4ed7bff1490a685f2c8ff676d7da8238fa26bbc6d869fda2c1597d4b1471d8"
     },
     {
       "path": "app/review/review.css",
@@ -3778,8 +3793,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "9abd4186c88427ea66e975fba32512e6d435164deebaf790904662160e2757e1",
-      "importedSha256": "9abd4186c88427ea66e975fba32512e6d435164deebaf790904662160e2757e1"
+      "sourceSha256": "61a4252365ba2ccb160639c4815d837b73488158940b0f0c0b403c628aef256c",
+      "importedSha256": "61a4252365ba2ccb160639c4815d837b73488158940b0f0c0b403c628aef256c"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5143,8 +5158,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "a59a08db24f13fa3d6ed03a7040afd468de66ef06d96873a58a4647256cc84f2",
-      "importedSha256": "a59a08db24f13fa3d6ed03a7040afd468de66ef06d96873a58a4647256cc84f2"
+      "sourceSha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a",
+      "importedSha256": "ac0fc5d03a43c27d8505834eea0db6c5c8f1e40502c5bad79bed1acfc9264f8a"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5243,5 +5258,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "f67aa58a860d9f14d1bcd68bbf939b89c7b4428db6cd78f3708fefcdf34d2877"
+  "websiteIntegrationSha256": "1461f001911423580fda7c7b40c3dab369cc748c479c72833d00c396350ed290"
 }

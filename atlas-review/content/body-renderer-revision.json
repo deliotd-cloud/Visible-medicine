@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0a6e2ba2d8e4e41388160ad3b974deb96c5e91fba400fe309bdb3ed87de28854"
+      "sha256": "9b0af92a36c7f0048ad2329dc939efffbf6a99064c4f20ad66aafb7e7a2482e1"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1594,7 +1594,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "053c5153a0482a61f2b9825df331f80f0681217846b2f114e6ae98127aaa41d4"
+      "sha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -1643,6 +1643,14 @@
     {
       "path": "content/shoulder-arterial-mri.ts",
       "sha256": "e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16"
+    },
+    {
+      "path": "content/shoulder-girdle-arterial-ultrasound-pins.json",
+      "sha256": "368940c5e8b6902b2c114620913b3dcd74238c69aab9bdc4eb247f7a40f03b8a"
+    },
+    {
+      "path": "content/shoulder-girdle-arterial-ultrasound.ts",
+      "sha256": "fd4a6f3694434ae7e18cc76f6b532d22728bdc6b18477415854b743cc0c7fa09"
     },
     {
       "path": "content/shoulder-girdle-imaging-pins.json",
@@ -3381,6 +3389,10 @@
       "sha256": "dab771a8dee5c917271d3354d350922bea85d985583c863cf1ff1f4b6481b18b"
     },
     {
+      "path": "lib/shoulder-girdle-arterial-ultrasound.ts",
+      "sha256": "9be98e6a3a716f9cf27948ce9e5097ca5cc4d321135c89573af4fb4ff359c0cc"
+    },
+    {
       "path": "lib/shoulder-girdle-imaging.ts",
       "sha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6"
     },
@@ -3730,7 +3742,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "fd20bd595eca3fd682502f1bb610b007d4ac6bf8afb9151470b07e3ce5df4479"
+      "sha256": "c8e78a339164091f25175d8a0413c1491a764f233f4a681a4c9fefa23bdb3e4f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3945,7 +3957,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "205aa4c873c9fec1d7874bd3708590be4261264a67154164b94e73160c2a399e",
-  "sourceRendererSha256": "a3674f57fd2fb59e232eeef4f8307b65f54e47bc8cd750408e71bca34f5a9914",
-  "websiteIntegrationSha256": "f67aa58a860d9f14d1bcd68bbf939b89c7b4428db6cd78f3708fefcdf34d2877"
+  "sha256": "19ea3f6becb4891ec3d9de44d3986bb5fc80284f6b8cd7d03dfcce6c02e484df",
+  "sourceRendererSha256": "7471b4f7cc221504ed3a6abce15025cbcb1079ba544f1ba50d33ca13255455f3",
+  "websiteIntegrationSha256": "1461f001911423580fda7c7b40c3dab369cc748c479c72833d00c396350ed290"
 }

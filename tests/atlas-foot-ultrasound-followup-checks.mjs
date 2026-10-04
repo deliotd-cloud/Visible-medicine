@@ -7,17 +7,21 @@ import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const websiteBaseline = 'f71eaf068279f36c7b63c0ceb6435651a4c58ef6';
+const followupWebsiteEpoch = 'a67c16de99f7a4bd8e55d66c34d432e0946ba634';
 const sourceRevision = '537838f028f15e62a6642e7eb360cbaeea31fa20';
 const sourceBaseline = 'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb';
+const deliveryRevision = 'c5c99ba11e6533d306587e71f5fc2854d882fbd6';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const gitOptions = {maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}};
 const old = path => execFileSync('git', ['show', `${websiteBaseline}:${path}`], gitOptions);
+const admitted = path => execFileSync('git', ['show', `${followupWebsiteEpoch}:${path}`], gitOptions);
 const sourceAt = path => execFileSync('git', ['show', `${sourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
 const common = "export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before = await atlasExactGitApi(websiteBaseline, common);
-const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/foot-ultrasound-followup';export * from './atlas-review/content/foot-ultrasound-followup';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
-const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// Re-run the completed admission against one whole immutable website epoch.
+// Current delivery is verified separately below, never as a hybrid old API.
+const now = await atlasExactGitApi(followupWebsiteEpoch, common + "export * from './atlas-review/lib/foot-ultrasound-followup';export * from './atlas-review/content/foot-ultrasound-followup';");
 const pins = JSON.parse(sourceAt('content/foot-ultrasound-followup-pins.json'));
 const transition = JSON.parse(sourceAt('content/foot-ultrasound-followup.transition.json'));
 assert.equal(hash(pins), '87df5b06e49b9f5fa28dcaf226fd582fa5e9f7eb8b80a40301190906a811a48d');
@@ -25,7 +29,7 @@ assert.equal(hash(transition), 'f0bf6ae655f55e959dd0a4ff38269232dccc7a6c32d0cbbc
 assert.equal(pins.baseline, sourceBaseline);
 assert.equal(transition.baseline, sourceBaseline);
 assert.equal(transition.sourcePinsHash, hash(pins));
-assert.deepEqual(readFileSync('atlas-review/content/foot-ultrasound-followup-pins.json'), sourceAt('content/foot-ultrasound-followup-pins.json'));
+assert.deepEqual(admitted('atlas-review/content/foot-ultrasound-followup-pins.json'), sourceAt('content/foot-ultrasound-followup-pins.json'));
 assert.equal(pins.entries.length, 12);
 assert.equal(transition.entries.length, 12);
 const entries = new Map(pins.entries.map(entry => [entry.identity.id, entry]));
@@ -36,7 +40,7 @@ assert.deepEqual(pins.entries.reduce((counts, entry) => (counts[entry.family] = 
   halluxNote: 4, cuboid: 2, intermediateCuneiform: 2, lateralCuneiform: 2, medialCuneiform: 2,
 });
 
-const sourceCatalog = JSON.parse(readFileSync('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
+const sourceCatalog = JSON.parse(admitted('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
 const catalog = now.bodyDisplayCatalog(sourceCatalog);
 assert.equal(catalog.structures.length, 1104);
 assert.equal(catalog.bundles.length, 109);
@@ -190,16 +194,16 @@ for (const structure of catalog.structures) {
 assert.equal(worksheets, 12);
 for (const ref of Object.values(now.footUltrasoundFollowupReferences)) assert.match(ref.licence, /^CC BY(?: 4\.0)?$/);
 for (const bundle of catalog.bundles) {
-  const path = `public/atlas-runtime/head-neck${bundle.url.split('?')[0]}`, bytes = readFileSync(path);
+  const path = `public/atlas-runtime/head-neck${bundle.url.split('?')[0]}`, bytes = admitted(path);
   assert.equal(bytes.length, bundle.bytes);
   assert.equal(hash(bytes), bundle.sha256);
   assert.deepEqual(bytes, old(path));
 }
 for (const path of ['package-lock.json', 'atlas-review/app/body-explorer.tsx', 'atlas-review/lib/imaging-sync.ts', 'atlas-review/lib/didanix-atlas-adapter.ts', 'atlas-review/lib/independent-study-links.ts'])
-  assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
-const review = JSON.parse(readFileSync('atlas-review/manifest.json'));
+  assert.equal(admitted(path).toString().replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
+const review = JSON.parse(admitted('atlas-review/manifest.json'));
 assert.equal(review.revision, sourceRevision);
-for (const file of review.files) assert.equal(hash(readFileSync(`atlas-review/${file.path}`)), file.importedSha256, file.path);
+for (const file of review.files) assert.equal(hash(admitted(`atlas-review/${file.path}`)), file.importedSha256, file.path);
 for (const path of ['lib/foot-ultrasound-followup.ts', 'content/foot-ultrasound-followup.ts', 'content/foot-ultrasound-followup-pins.json']) {
   const file = review.files.find(item => item.path === path);
   assert(file, path);
@@ -207,18 +211,18 @@ for (const path of ['lib/foot-ultrasound-followup.ts', 'content/foot-ultrasound-
 }
 assert(!review.files.some(file => file.path === 'content/foot-ultrasound-followup.transition.json'));
 for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
-  const base = `public/atlas-runtime/${name}/`, manifest = JSON.parse(readFileSync(`${base}manifest.json`));
+  const base = `public/atlas-runtime/${name}/`, manifest = JSON.parse(admitted(`${base}manifest.json`));
   assert.equal(manifest.sourceCommit, sourceRevision);
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   for (const file of manifest.files) {
-    const bytes = readFileSync(base + file.path);
+    const bytes = admitted(base + file.path);
     assert.equal(bytes.length, file.bytes);
     assert.equal(hash(bytes), file.sha256);
   }
   const previous = JSON.parse(old(`${base}manifest.json`));
   assert.deepEqual(manifest.files.filter(file => file.path.startsWith('models/')), previous.files.filter(file => file.path.startsWith('models/')));
-  const inputs = JSON.parse(readFileSync(`${base}source-inputs.json`));
+  const inputs = JSON.parse(admitted(`${base}source-inputs.json`));
   for (const path of ['content/foot-ultrasound-followup-pins.json', 'content/foot-ultrasound-followup.ts', 'lib/foot-ultrasound-followup.ts']) {
     const actual = inputs.find(file => file.path === path), imported = review.files.find(file => file.path === path);
     assert.equal(Boolean(actual), name === 'head-neck' || name === 'shoulder', `${name}:${path}`);
@@ -226,7 +230,7 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   }
   assert(!inputs.some(file => file.path === 'content/foot-ultrasound-followup.transition.json'));
   if (name === 'head-neck') {
-    const emitted = emittedTeaching(base, manifest.files);
+    const emitted = emittedTeaching(base, manifest.files, false, admitted);
     for (const entry of pins.entries) {
       const lesson = now.footUltrasoundFollowupLesson(entry.identity, 'ultrasound');
       for (const value of [entry.identity.id, lesson.body, ...lesson.bullets, lesson.note, ...lesson.citations])
@@ -234,16 +238,38 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
     }
   }
 }
-const reviewBase = 'public/atlas-review-viewer/', reviewManifest = JSON.parse(readFileSync(`${reviewBase}manifest.json`));
+const reviewBase = 'public/atlas-review-viewer/', reviewManifest = JSON.parse(admitted(`${reviewBase}manifest.json`));
 assert.equal(reviewManifest.sourceCommit, sourceRevision);
 assert.equal(reviewManifest.personalRecordsIncluded, false);
 assert.equal(reviewManifest.mode, 'production');
 assert.equal(reviewManifest.websiteIntegrationSha256, review.websiteIntegrationSha256);
-for (const file of reviewManifest.files) assert.equal(hash(readFileSync(reviewBase + file.path)), file.sha256, `review:${file.path}`);
-const emittedReview = emittedTeaching(reviewBase, reviewManifest.files, true);
+for (const file of reviewManifest.files) assert.equal(hash(admitted(reviewBase + file.path)), file.sha256, `review:${file.path}`);
+const emittedReview = emittedTeaching(reviewBase, reviewManifest.files, true, admitted);
 for (const entry of pins.entries) {
   const lesson = now.footUltrasoundFollowupLesson(entry.identity, 'ultrasound');
   for (const value of [entry.identity.id, lesson.body, ...lesson.bullets, lesson.note, ...lesson.citations])
     assert(emittedReview.includes(value) || emittedReview.includes(JSON.stringify(value).slice(1, -1)), `review:${entry.identity.id}:${value.slice(0, 40)}`);
 }
-console.log(JSON.stringify({websiteBaseline, sourceRevision, changed, preserved, identityRefusals, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale, storageCalls, changedTeachingWorksheets: worksheets, footSkeletonUltrasoundDrafts: 54, verifiedRuntimes: 4, clinicalApproval: false, browserAcceptance: false}));
+const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/foot-ultrasound-followup';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
+const delivery = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+assert.deepEqual(readFileSync('atlas-review/content/foot-ultrasound-followup-pins.json'), admitted('atlas-review/content/foot-ultrasound-followup-pins.json'));
+assert.equal(JSON.parse(readFileSync('atlas-review/manifest.json')).revision, deliveryRevision);
+for (const {identity} of pins.entries)
+  assert.deepEqual(delivery.bodyLesson(identity, 'ultrasound'), now.bodyLesson(identity, 'ultrasound'), `${identity.id}: current foot lesson preserved`);
+for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb', 'review']) {
+  const base = name === 'review' ? reviewBase : `public/atlas-runtime/${name}/`;
+  const manifest = JSON.parse(readFileSync(base + 'manifest.json'));
+  assert.equal(manifest.sourceCommit, deliveryRevision);
+  if (name === 'review') assert.equal(manifest.personalRecordsIncluded, false);
+  else { assert.equal(manifest.patientDataIncluded, false); assert.equal(manifest.clinicalApproved, false); }
+  for (const file of manifest.files) assert.equal(hash(readFileSync(base + file.path)), file.sha256, `current:${name}:${file.path}`);
+  if (name === 'head-neck' || name === 'review') {
+    const emitted = emittedTeaching(base, manifest.files, name === 'review');
+    for (const {identity} of pins.entries) {
+      const lesson = delivery.bodyLesson(identity, 'ultrasound');
+      for (const value of [identity.id, lesson.body, ...lesson.bullets, lesson.note, ...lesson.citations])
+        assert(emitted.includes(value) || emitted.includes(JSON.stringify(value).slice(1, -1)), `current:${name}:${identity.id}:${value.slice(0, 40)}`);
+    }
+  }
+}
+console.log(JSON.stringify({websiteBaseline, followupWebsiteEpoch, sourceRevision, deliveryRevision, changed, preserved, identityRefusals, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale, storageCalls, changedTeachingWorksheets: worksheets, currentFootLessonsPreserved: 12, footSkeletonUltrasoundDrafts: 54, verifiedRuntimes: 4, clinicalApproval: false, browserAcceptance: false}));
