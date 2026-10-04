@@ -1,0 +1,42 @@
+.plexus-review{max-width:1120px;margin:0 auto;padding:24px 28px 52px;color:#17272b;font:inherit;line-height:1.5}
+.plexus-review *{box-sizing:border-box}
+.plexus-review__header{display:flex;align-items:start;justify-content:space-between;gap:24px;border-bottom:1px solid #c8d5d5;padding-bottom:15px}
+.plexus-review__header h1{font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.2;margin:2px 0}
+.plexus-review__eyebrow{text-transform:uppercase;letter-spacing:.08em;font-weight:700;font-size:.74rem;color:#356063;margin:0}
+.plexus-review__privacy{max-width:320px;margin:0;color:#39595b;font-size:.89rem}
+.plexus-review__scope{max-width:90ch;background:#eef5f3;border-left:4px solid #56827e;padding:10px 14px;margin:17px 0}
+.plexus-review__tabs{display:flex;gap:5px;border-bottom:1px solid #b7c9c8;margin-top:20px}
+.plexus-review__tabs button{border:1px solid transparent;border-radius:7px 7px 0 0;background:transparent;padding:9px 17px;min-width:170px;text-align:left;font:inherit;font-weight:700;color:inherit;cursor:pointer}
+.plexus-review__tabs button.is-active{background:#f5f9f7;border-color:#b7c9c8;border-bottom-color:#f5f9f7;margin-bottom:-1px}
+.plexus-review__tabs span{display:block;font-size:.77rem;font-weight:400;color:#53696a}
+.plexus-review__tabs i{font-style:normal;color:#994d2f;margin-left:4px}
+.plexus-review__toolbar,.plexus-review__actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin:14px 0}
+.plexus-review__toolbar span{margin-right:auto;font-size:.85rem;color:#39595b}
+.plexus-review button{font:inherit;border:1px solid #8ba5a1;background:#fff;color:#173f42;border-radius:5px;padding:7px 12px;cursor:pointer;min-height:36px}
+.plexus-review button:hover:not(:disabled){background:#eaf4f1}
+.plexus-review button:focus-visible,.plexus-review input:focus-visible,.plexus-review textarea:focus-visible,.plexus-review select:focus-visible,.plexus-review summary:focus-visible{outline:3px solid #256f91;outline-offset:2px}
+.plexus-review button:disabled{opacity:.5;cursor:not-allowed}
+.plexus-review__actions button:last-child{background:#1e605e;color:#fff;border-color:#1e605e}
+.plexus-review__actions button:last-child:hover:not(:disabled){background:#174f4e}
+.plexus-review__alert{background:#fff2ec;border-left:4px solid #bd673f;padding:10px 14px}
+.plexus-review__message{color:#20514c}
+.plexus-review__revision{font-size:.82rem;color:#4c6868;overflow-wrap:anywhere;margin:14px 0}
+.plexus-review__fields{border:1px solid #c8d5d5;border-radius:7px;padding:16px 20px 20px;margin:12px 0}
+.plexus-review__fields legend{font-weight:700;padding:0 6px}
+.plexus-review__fields label{display:block;font-weight:600;font-size:.89rem;margin:10px 0}
+.plexus-review__fields input:not([type=checkbox]),.plexus-review__fields textarea,.plexus-review__fields select{display:block;width:100%;padding:7px 9px;border:1px solid #9bb1af;border-radius:4px;background:#fff;color:#17272b;font:inherit;font-weight:400;margin-top:3px}
+.plexus-review__two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plexus-review details{border-top:1px solid #dce6e3;padding:10px 0}
+.plexus-review summary{cursor:pointer;font-weight:700}
+.plexus-review__checks{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;margin:9px 0}
+.plexus-review__checks label,.plexus-review__check{display:flex!important;align-items:start;gap:9px;font-weight:400!important}
+.plexus-review input[type=checkbox]{flex:none;width:17px;height:17px;margin:2px 0 0;accent-color:#1e605e}
+.plexus-review__fields fieldset{border:1px solid #d4e0de;border-radius:5px;margin:12px 0;padding:12px}
+.plexus-review__fields fieldset legend{font-size:.85rem}
+.plexus-review__approval{background:#f6f8f7;padding:10px 16px;border-radius:5px;margin:16px 0}
+.plexus-review__approval h2{font-size:1rem;margin:2px 0 5px}
+.plexus-review__approval ul{margin:4px 0;padding-left:22px;font-size:.87rem}
+.plexus-review__history{margin-top:22px}
+.plexus-review__history details{margin-left:12px}
+.plexus-review__history p{font-size:.86rem}
+@media(max-width:700px){.plexus-review{padding:16px}.plexus-review__header{display:block}.plexus-review__privacy{max-width:none;margin-top:9px}.plexus-review__two,.plexus-review__checks{grid-template-columns:1fr}.plexus-review__tabs button{min-width:0;flex:1;padding:8px}.plexus-review__fields{padding:12px}}

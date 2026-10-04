@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { verifyPlexusReview } from './verify-plexus-review.mjs';
 const sha = value => createHash('sha256').update(value).digest('hex');
 const read = path => JSON.parse(readFileSync(path));
 const source = read('atlas-review/manifest.json');
@@ -17,3 +18,4 @@ for (const file of viewer.files) assert.equal(sha(readFileSync('public/atlas-rev
 assert.equal(viewer.personalRecordsIncluded, false);
 assert.equal(viewer.mode, 'production', 'Rebuild the review viewer without --debug before publication.');
 console.log(JSON.stringify({sourceCommit:source.revision,integrationHash:receipt.sha256,sourceFiles:source.files.length,viewerFiles:viewer.files.length,packages:viewer.packages.length}));
+console.log(JSON.stringify(verifyPlexusReview()));

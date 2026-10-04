@@ -9,6 +9,7 @@ export default async function SourceComparisonsPage() {
     <h1>Source comparisons</h1>
     <p>Inspect held source geometry before deciding its identity or extent. Draft notes do not approve anatomy.</p>
     <ul>
+      <li><a href="/workspace/atlas-review/source-comparisons/plexus">Original brachial plexus schematic</a><p>Inspect 35 named parts and 38 typical connections. Separate revision-bound topology and presentation reviews; not a spatial nerve mesh or learner admission.</p></li>
       <li><a href="/workspace/atlas-review/source-comparisons/optic">Optic nerve alternatives</a><p>Compare original right and left candidates in matched views or overlay.</p></li>
       <li><a href="/workspace/atlas-review/source-comparisons/disc">Unresolved disc</a><p>Compare two generic source definitions with optional vertebral context. Named level remains unassigned.</p></li>
     </ul>
