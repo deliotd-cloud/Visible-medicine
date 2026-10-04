@@ -12,7 +12,7 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 const websiteBaseline = '37e2e9e900ef2cdd1b6b9000fb1a813b69e8495e';
 const sourceRevision = 'c5c99ba11e6533d306587e71f5fc2854d882fbd6';
 // Keep the completed source epoch fixed; only the current delivery moves.
-const deliveryRevision = '05a2e8a26325818675c4b98ab1d9b9c246028a5c';
+const deliveryRevision = '12570b5245dc6a253cbdd73ec4e044c58b81a927';
 const sourceBaseline = 'bbe33ea6ffff3503ae9cdabc0dd41350cece28cd';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
@@ -21,10 +21,13 @@ const old = path => execFileSync('git', ['show', `${websiteBaseline}:${path}`], 
 const sourceAt = path => execFileSync('git', ['show', `${sourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
 const quizSourceRevision = 'd6f25010210fd14aa2172605b78fa8cbc1875fb1';
 const quizSourceAt = path => execFileSync('git', ['show', `${quizSourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
-const coreSourceAt = path => execFileSync('git', ['show', `${deliveryRevision}:${path}`], {...gitOptions, cwd: atlasSource});
+const coreSourceRevision = '05a2e8a26325818675c4b98ab1d9b9c246028a5c';
+const coreSourceAt = path => execFileSync('git', ['show', `${coreSourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
+const respiratorySourceRevision = '12570b5245dc6a253cbdd73ec4e044c58b81a927';
+const respiratorySourceAt = path => execFileSync('git', ['show', `${respiratorySourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
 const common = "export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before = await atlasExactGitApi(websiteBaseline, common);
-const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/shoulder-girdle-arterial-ultrasound';export * from './atlas-review/content/shoulder-girdle-arterial-ultrasound';export * from './atlas-review/lib/pelvic-reproductive-core';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
+const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/shoulder-girdle-arterial-ultrasound';export * from './atlas-review/content/shoulder-girdle-arterial-ultrasound';export * from './atlas-review/lib/pelvic-reproductive-core';export * from './atlas-review/lib/respiratory-core-depth';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
 const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const pins = JSON.parse(sourceAt('content/shoulder-girdle-arterial-ultrasound-pins.json'));
 const transition = JSON.parse(sourceAt('content/shoulder-girdle-arterial-ultrasound.transition.json'));
@@ -74,6 +77,23 @@ const coreChanges = new Map(coreTransition.entries.map(entry => [`${entry.id}|${
 assert.equal(coreEntries.size, 8);
 assert.equal(coreChanges.size, 16);
 assert([...coreEntries.keys()].every(id => !entries.has(id) && !quizEntries.has(id)), 'Later pelvic roots are disjoint from arterial and Quiz targets');
+// Replay only the eight later respiratory placements after verifying their saved source epoch.
+const respiratoryPins = JSON.parse(respiratorySourceAt('content/respiratory-core-depth-pins.json'));
+const respiratoryTransition = JSON.parse(respiratorySourceAt('content/respiratory-core-depth.transition.json'));
+assert.equal(respiratoryPins.baseline, 'ae13b8de049671e2cac8dd789a6bfb385f147769');
+assert.equal(hash(respiratoryPins), 'c903690d5756f9bee82ce110cb62fd44afacdf960e85e8015fd24af0f68fbd4c');
+assert.equal(hash(respiratoryTransition), '65880a32a320f6bb2a867f41519da5cd1d65acc1ee4ea85a20f95df915b9c6e9');
+assert.equal(respiratoryTransition.baseline, respiratoryPins.baseline);
+assert.equal(respiratoryTransition.pinsHash, hash(respiratoryPins));
+assert.equal(respiratoryPins.entries.length, 5);
+assert.equal(respiratoryTransition.entries.length, 8);
+assert.deepEqual(readFileSync('atlas-review/content/respiratory-core-depth-pins.json'), respiratorySourceAt('content/respiratory-core-depth-pins.json'));
+const respiratoryEntries = new Map(respiratoryPins.entries.map(entry => [entry.identity.id, entry]));
+const respiratoryChanges = new Map(respiratoryTransition.entries.map(entry => [`${entry.id}|${entry.tab}`, entry]));
+assert.equal(respiratoryEntries.size, 5);
+assert.equal(respiratoryChanges.size, 8);
+assert([...respiratoryEntries.keys()].every(id => !entries.has(id) && !quizEntries.has(id) && !coreEntries.has(id)), 'Later respiratory roots are disjoint from preceding targets');
+assert.deepEqual([...respiratoryEntries.values()].map(entry => Object.keys(entry.previous).sort()).sort(), [['anatomy'], ['anatomy'], ['anatomy', 'function'], ['anatomy', 'function'], ['anatomy', 'function']]);
 
 const sourceCatalog = JSON.parse(readFileSync('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
 const catalog = now.bodyDisplayCatalog(sourceCatalog);
@@ -89,7 +109,7 @@ assert.deepEqual(pins.bundles, sourceCatalog.bundles.filter(bundle => ['shoulder
 const snapshot = api => ({catalog, body: catalog.structures.map(structure => ({id: structure.id, topics: Object.fromEntries(api.contentTabs.map(tab => [tab, api.bodyLesson(structure, tab)]))})), shoulder: api.structures, recipes: api.dissectionProfiles});
 assert.equal(hash(snapshot(before)), pins.beforeAllTeachingSnapshotHash);
 const recovered = snapshot(now);
-let changed = 0, preserved = 0, quizReversed = 0, coreReversed = 0, identityRefusals = 0, malformed = 0, stale = 0, storageCalls = 0, worksheets = 0;
+let changed = 0, preserved = 0, quizReversed = 0, coreReversed = 0, respiratoryReversed = 0, identityRefusals = 0, malformed = 0, stale = 0, storageCalls = 0, worksheets = 0;
 for (const row of recovered.body) {
   const structure = catalog.structures.find(item => item.id === row.id), entry = entries.get(row.id);
   for (const tab of now.contentTabs) {
@@ -127,6 +147,17 @@ for (const row of recovered.body) {
       assert.deepEqual(row.topics[tab], now.pelvicReproductiveCoreLesson(coreEntry.identity, tab));
       row.topics[tab] = structuredClone(prior);
       coreReversed++;
+    } else if (respiratoryChanges.has(`${row.id}|${tab}`)) {
+      const respiratoryEntry = respiratoryEntries.get(row.id), recorded = respiratoryChanges.get(`${row.id}|${tab}`);
+      assert(respiratoryEntry);
+      assert.equal(recorded.fmaId, structure.fmaId);
+      assert.deepEqual(structure, respiratoryEntry.identity, `${row.id}:exact respiratory source identity`);
+      assert.deepEqual(prior, respiratoryEntry.previous[tab]);
+      assert.equal(hash(prior), recorded.previousHash, `${row.id}:${tab}:recorded old respiratory lesson`);
+      assert.equal(hash(row.topics[tab]), recorded.currentHash, `${row.id}:${tab}:saved respiratory draft`);
+      assert.deepEqual(row.topics[tab], now.respiratoryCoreDepthLesson(respiratoryEntry.identity, tab));
+      row.topics[tab] = structuredClone(prior);
+      respiratoryReversed++;
     } else {
       assert.deepEqual(row.topics[tab], prior, `${row.id}:${tab}:unchanged`);
       preserved++;
@@ -136,7 +167,8 @@ for (const row of recovered.body) {
 assert.equal(changed, 10);
 assert.equal(quizReversed, 8);
 assert.equal(coreReversed, 16);
-assert.equal(preserved, 9902);
+assert.equal(respiratoryReversed, 8);
+assert.equal(preserved, 9894);
 assert.equal(hash(recovered), pins.beforeAllTeachingSnapshotHash);
 const pathsWhere = (value, predicate, path = []) => [
   ...(predicate(value) ? [path] : []),
@@ -224,7 +256,7 @@ const canonical = value => Array.isArray(value) ? `[${value.map(canonical).join(
   : value && typeof value === 'object' ? `{${Object.keys(value).sort().map(key => `${JSON.stringify(key)}:${canonical(value[key])}`).join(',')}}`
   : JSON.stringify(value);
 const reviewHash = value => hash(canonical(JSON.parse(JSON.stringify(value))));
-let quizWorksheets = 0, coreWorksheets = 0;
+let quizWorksheets = 0, coreWorksheets = 0, respiratoryWorksheets = 0;
 for (const structure of catalog.structures) {
   const prior = await before.bodyReviewMaterial(structure.id), current = await now.bodyReviewMaterial(structure.id);
   for (const key of ['source', 'reasoning', 'guidedTours']) assert.deepEqual(current[key], prior[key]);
@@ -273,6 +305,36 @@ for (const structure of catalog.structures) {
     assert.equal(oldMaterialHash, prior.materialHash);
     assert.deepEqual({...current, topics: restoredTopics, fingerprints: oldFingerprints, materialHash: oldMaterialHash}, prior);
     coreWorksheets++;
+  // Reconstruct only the eight source-pinned respiratory placements in five later worksheets.
+  } else if (respiratoryEntries.has(structure.id)) {
+    const respiratoryEntry = respiratoryEntries.get(structure.id);
+    assert.deepEqual(structure, respiratoryEntry.identity);
+    assert(await now.parseBodyReviewResponse(current, structure.id));
+    const restoredTopics = structuredClone(current.topics);
+    for (const tab of Object.keys(respiratoryEntry.previous)) {
+      const recorded = respiratoryChanges.get(`${structure.id}|${tab}`);
+      const currentLesson = now.bodyLesson(structure, tab), priorLesson = before.bodyLesson(structure, tab);
+      assert(recorded); assert.equal(recorded.fmaId, structure.fmaId);
+      assert.deepEqual(priorLesson, respiratoryEntry.previous[tab]);
+      assert.equal(hash(priorLesson), recorded.previousHash);
+      assert.equal(hash(currentLesson), recorded.currentHash);
+      assert.deepEqual(currentLesson, now.respiratoryCoreDepthLesson(respiratoryEntry.identity, tab));
+      assert.deepEqual(current.topics.find(topic => topic.tab === tab), {tab, ...currentLesson});
+      const index = restoredTopics.findIndex(topic => topic.tab === tab);
+      assert(index >= 0);
+      restoredTopics[index] = {tab, ...structuredClone(priorLesson)};
+    }
+    assert.deepEqual(restoredTopics, prior.topics);
+    assert.notEqual(current.fingerprints.teaching, prior.fingerprints.teaching);
+    const scope = {schema: current.schema, kind: current.kind, structureId: structure.id};
+    const oldTeachingHash = reviewHash({scope: {...scope, schema: 'vm-body-review-worksheet-2'}, topics: restoredTopics, reasoning: current.reasoning, ...(current.guidedTours.length ? {guidedTours: current.guidedTours} : {})});
+    assert.equal(oldTeachingHash, prior.fingerprints.teaching);
+    const oldFingerprints = {...current.fingerprints, teaching: oldTeachingHash};
+    const oldMaterialHash = reviewHash({scope, fingerprints: oldFingerprints});
+    assert.equal(oldMaterialHash, prior.materialHash);
+    assert.deepEqual({...current, topics: restoredTopics, fingerprints: oldFingerprints, materialHash: oldMaterialHash}, prior);
+    respiratoryWorksheets++;
+  // Frozen unchanged-material expectations resume here.
   } else {
     assert.deepEqual(current.topics, prior.topics);
     assert.equal(current.fingerprints.teaching, prior.fingerprints.teaching);
@@ -281,6 +343,7 @@ for (const structure of catalog.structures) {
 assert.equal(worksheets, 10);
 assert.equal(quizWorksheets, 8);
 assert.equal(coreWorksheets, 8);
+assert.equal(respiratoryWorksheets, 5);
 for (const bundle of catalog.bundles) {
   const path = `public/atlas-runtime/head-neck${bundle.url.split('?')[0]}`, bytes = readFileSync(path);
   assert.equal(bytes.length, bundle.bytes);

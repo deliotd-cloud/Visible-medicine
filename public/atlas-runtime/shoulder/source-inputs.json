@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
+    "sha256": "25158fc2310d44b38efc7ecddc905147918c3b02d9707abdee8cda6b165fadef"
   },
   {
     "path": "app/body-explorer.css",
@@ -1086,6 +1086,14 @@
   {
     "path": "content/regional-vascular-clinical.ts",
     "sha256": "a13e3d27e86dd9334a68781343db060cd1e9ecab45df992c796d67e3cbec054b"
+  },
+  {
+    "path": "content/respiratory-core-depth-pins.json",
+    "sha256": "439b291b0512bb9223eb6509ec1057daa33b49b31a806e8b670460056aa686d5"
+  },
+  {
+    "path": "content/respiratory-core-depth.ts",
+    "sha256": "25fe791bc71cbe56d8ef5ba4c7e700ff9580580f68c9c5315ae9fc47dcb8bf4a"
   },
   {
     "path": "content/review-revisions.json",
@@ -2318,6 +2326,10 @@
   {
     "path": "lib/renderer-health.ts",
     "sha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
+  },
+  {
+    "path": "lib/respiratory-core-depth.ts",
+    "sha256": "97fa6a7e9cf26d95d8dc0610d0b23a17cbc92d1e4fd4abfcb25b0e5a80811d5a"
   },
   {
     "path": "lib/review-status.ts",

@@ -81,6 +81,7 @@ import { orbitalNerveLesson } from '../lib/orbital-nerve-curriculum';
 import { centralNeuroLesson } from '../lib/central-neuro-curriculum';
 import { organLesson } from '../lib/organ-curriculum';
 import { pelvicReproductiveCoreLesson } from '../lib/pelvic-reproductive-core';
+import { respiratoryCoreDepthLesson } from '../lib/respiratory-core-depth';
 import { coreOrganFunctionLesson } from '../lib/core-organ-function';
 import { majorOrganFunctionLesson } from '../lib/major-organ-function';
 import { connectiveLesson } from '../lib/connective-curriculum';
@@ -609,6 +610,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalNerve) return orbitalNerve;
   const centralNeuro = centralNeuroLesson(s, tab);
   if (centralNeuro) return centralNeuro;
+  const respiratoryCoreDepth = respiratoryCoreDepthLesson(s, tab);
+  if (respiratoryCoreDepth) return respiratoryCoreDepth;
   const coreOrganFunction = coreOrganFunctionLesson(s, tab);
   if (coreOrganFunction) return coreOrganFunction;
   const majorOrganFunction = majorOrganFunctionLesson(s, tab);

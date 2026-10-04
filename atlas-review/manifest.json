@@ -1,5 +1,5 @@
 {
-  "revision": "05a2e8a26325818675c4b98ab1d9b9c246028a5c",
+  "revision": "12570b5245dc6a253cbdd73ec4e044c58b81a927",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828",
-      "importedSha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
+      "sourceSha256": "25158fc2310d44b38efc7ecddc905147918c3b02d9707abdee8cda6b165fadef",
+      "importedSha256": "25158fc2310d44b38efc7ecddc905147918c3b02d9707abdee8cda6b165fadef"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -1335,6 +1335,21 @@
       "path": "content/pelvic-reproductive-core.ts",
       "sourceSha256": "4f41357b407713f265b80d747b25aacb95ec206cdd6a0221747cadd08b270c80",
       "importedSha256": "4f41357b407713f265b80d747b25aacb95ec206cdd6a0221747cadd08b270c80"
+    },
+    {
+      "path": "lib/respiratory-core-depth.ts",
+      "sourceSha256": "97fa6a7e9cf26d95d8dc0610d0b23a17cbc92d1e4fd4abfcb25b0e5a80811d5a",
+      "importedSha256": "97fa6a7e9cf26d95d8dc0610d0b23a17cbc92d1e4fd4abfcb25b0e5a80811d5a"
+    },
+    {
+      "path": "content/respiratory-core-depth-pins.json",
+      "sourceSha256": "439b291b0512bb9223eb6509ec1057daa33b49b31a806e8b670460056aa686d5",
+      "importedSha256": "439b291b0512bb9223eb6509ec1057daa33b49b31a806e8b670460056aa686d5"
+    },
+    {
+      "path": "content/respiratory-core-depth.ts",
+      "sourceSha256": "25fe791bc71cbe56d8ef5ba4c7e700ff9580580f68c9c5315ae9fc47dcb8bf4a",
+      "importedSha256": "25fe791bc71cbe56d8ef5ba4c7e700ff9580580f68c9c5315ae9fc47dcb8bf4a"
     },
     {
       "path": "lib/core-organ-function.ts",
@@ -3428,8 +3443,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "b4843002f30e62a1b0be959b2ab4221c539f0fdec963a1708206cbd15bf945e3",
-      "importedSha256": "b2c4566e485127b4c7d2b2cb8983605dbe76097027371072f372fa6ab12fc5a6"
+      "sourceSha256": "3ad57970c7c3fee34a269505a2d79ea8c587ffec300d6fb5b73f585a6d4456d7",
+      "importedSha256": "a09db37ff97b8fed2f5c3ef67d6291c25687ef6ad5194225e4b205302c786f8c"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3799,7 +3814,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d",
-      "importedSha256": "d35883a3f752fcd077c80e0e5cc2d86e640ed0198fdf46d5d1f87348883fd78e"
+      "importedSha256": "f3c71e2f9a23ddf31ca216855bb8907e89735dbbda70f6276d836565bd4da503"
     },
     {
       "path": "app/review/review.css",
@@ -3833,8 +3848,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "c2e050ede8fc11ecca5d47b3ac79de53c94c0162912ef608dddb07433eda6cfb",
-      "importedSha256": "c2e050ede8fc11ecca5d47b3ac79de53c94c0162912ef608dddb07433eda6cfb"
+      "sourceSha256": "75361b1d58b9e63fe2ef4a08024594194a73c65517fcf29ebbeca23262b3d99a",
+      "importedSha256": "75361b1d58b9e63fe2ef4a08024594194a73c65517fcf29ebbeca23262b3d99a"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5298,5 +5313,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "d7450642986ab4a3125126b3c0f3f2f7e0383b567c163c1b115a66a70fa232c2"
+  "websiteIntegrationSha256": "40ba8bc77e7323a663b4c45369629d2601da9a161dc79f43ee13ad154f6588bf"
 }

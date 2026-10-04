@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "05a2e8a26325818675c4b98ab1d9b9c246028a5c",
-  "sha256": "d7450642986ab4a3125126b3c0f3f2f7e0383b567c163c1b115a66a70fa232c2",
+  "sourceCommit": "12570b5245dc6a253cbdd73ec4e044c58b81a927",
+  "sha256": "40ba8bc77e7323a663b4c45369629d2601da9a161dc79f43ee13ad154f6588bf",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
+      "sha256": "25158fc2310d44b38efc7ecddc905147918c3b02d9707abdee8cda6b165fadef"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -744,7 +744,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "c2e050ede8fc11ecca5d47b3ac79de53c94c0162912ef608dddb07433eda6cfb"
+      "sha256": "75361b1d58b9e63fe2ef4a08024594194a73c65517fcf29ebbeca23262b3d99a"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1757,6 +1757,14 @@
     {
       "path": "atlas-review/content/renal-teaching.ts",
       "sha256": "7512d9ce196363f9349e6740fd4a0fad9122f3677e468dfa9a411423ff5c8163"
+    },
+    {
+      "path": "atlas-review/content/respiratory-core-depth-pins.json",
+      "sha256": "439b291b0512bb9223eb6509ec1057daa33b49b31a806e8b670460056aa686d5"
+    },
+    {
+      "path": "atlas-review/content/respiratory-core-depth.ts",
+      "sha256": "25fe791bc71cbe56d8ef5ba4c7e700ff9580580f68c9c5315ae9fc47dcb8bf4a"
     },
     {
       "path": "atlas-review/content/sca-mca-clinical-pins.json",
@@ -3587,6 +3595,10 @@
       "sha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
     },
     {
+      "path": "atlas-review/lib/respiratory-core-depth.ts",
+      "sha256": "97fa6a7e9cf26d95d8dc0610d0b23a17cbc92d1e4fd4abfcb25b0e5a80811d5a"
+    },
+    {
       "path": "atlas-review/lib/review-http.ts",
       "sha256": "ca15e73dd39c39e4376f40f81373b6da5be5be64dc20a1521bcefb54654d7ad1"
     },
@@ -4308,7 +4320,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "2830ea2d435adf22f5cd47c3bb330cd2654b8573c38ba184b02608789b03f532"
+      "sha256": "ee0c084c1e6e31693890f2607fcbeb2f1df81379031e86db24922a0ed493b99e"
     }
   ]
 }

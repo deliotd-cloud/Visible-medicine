@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
+      "sha256": "25158fc2310d44b38efc7ecddc905147918c3b02d9707abdee8cda6b165fadef"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1599,6 +1599,14 @@
     {
       "path": "content/renal-teaching.ts",
       "sha256": "7512d9ce196363f9349e6740fd4a0fad9122f3677e468dfa9a411423ff5c8163"
+    },
+    {
+      "path": "content/respiratory-core-depth-pins.json",
+      "sha256": "439b291b0512bb9223eb6509ec1057daa33b49b31a806e8b670460056aa686d5"
+    },
+    {
+      "path": "content/respiratory-core-depth.ts",
+      "sha256": "25fe791bc71cbe56d8ef5ba4c7e700ff9580580f68c9c5315ae9fc47dcb8bf4a"
     },
     {
       "path": "content/review-revisions.json",
@@ -3341,6 +3349,10 @@
       "sha256": "59097c95fc681c20d4c448b9ed4df96a095def7be0424f9045edb9587c51164f"
     },
     {
+      "path": "lib/respiratory-core-depth.ts",
+      "sha256": "97fa6a7e9cf26d95d8dc0610d0b23a17cbc92d1e4fd4abfcb25b0e5a80811d5a"
+    },
+    {
       "path": "lib/review-status.ts",
       "sha256": "51d20ffc6983e8e99571f4aeb85f9fca1b0cec6040d1c267a9466b6e011de488"
     },
@@ -3770,7 +3782,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c17fbbd14bf024015af0ee77e871426a4d6041e3d92f738f2858ed1c93ede29d"
+      "sha256": "17fbd4a0be93c17f6982ebeb09981790d423fb8b940e6faa6393ba3160c7a7bd"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3993,7 +4005,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "61affd847df8ea99068c13328829c08cb7db8aaffb3aee07d9ee356b1371dbe2",
-  "sourceRendererSha256": "33206ef3a282ac293b4a2c7566bb6761a5f81a15b9ae9893f23eb104c6779dc9",
-  "websiteIntegrationSha256": "d7450642986ab4a3125126b3c0f3f2f7e0383b567c163c1b115a66a70fa232c2"
+  "sha256": "4fd833119c3d69cbe592ac45ccf1585cc09f8ec2f426bb09e36b4c81d9b9012a",
+  "sourceRendererSha256": "82168133a588462144cc8f72cf6fff2a74962957f1464d124c9ecdd456390da0",
+  "websiteIntegrationSha256": "40ba8bc77e7323a663b4c45369629d2601da9a161dc79f43ee13ad154f6588bf"
 }
