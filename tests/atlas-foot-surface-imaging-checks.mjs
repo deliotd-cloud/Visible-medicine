@@ -9,6 +9,8 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 const websiteBaseline='f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6';
 const sourceBaseline='88cea927d48729769b96ad8fe680b0872b7e6687';
 const sourceRevision='cdc6ad23ad5c3c13a2f6588019a057d0a063818f';
+const footWebsiteEpoch='7eacbbacc76f4e98288552614ce47e8e823d45a9';
+const deliveryRevision='90191b8b236bfed00db7c424dbacde915920460d';
 const atlasSource='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const hash=value=>createHash('sha256').update(typeof value==='string'||Buffer.isBuffer(value)?value:JSON.stringify(value)).digest('hex');
 const old=path=>execFileSync('git',['show',websiteBaseline+':'+path],{maxBuffer:32e6,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
@@ -16,7 +18,8 @@ const sourceAt=path=>execFileSync('git',['show',sourceRevision+':'+path],{cwd:at
 const common="export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before=await atlasExactGitApi(websiteBaseline,common);
 const compiled=await build({stdin:{contents:common+"export * from './atlas-review/lib/foot-surface-imaging';export * from './atlas-review/content/foot-surface-imaging';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
-const now=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const now=await atlasExactGitApi(footWebsiteEpoch,common+"export * from './atlas-review/lib/foot-surface-imaging';export * from './atlas-review/content/foot-surface-imaging';");
+const delivery=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const pins=JSON.parse(readFileSync('atlas-review/content/foot-surface-imaging-pins.json'));
 const transition=JSON.parse(sourceAt('content/foot-surface-imaging.transition.json'));
 assert.equal(hash(pins),'8dddeb76bd3578bc9c8494ffed9c0d580ebd1ff2c1e11ad6b76f77932f2fda85');
@@ -58,6 +61,7 @@ for(const row of recovered.body){
  }
 }
 assert.equal(changed,8);assert.equal(preserved,9928);assert.equal(hash(recovered),pins.beforeAllTeachingSnapshotHash);
+for(const {identity} of pins.entries)assert.deepEqual(delivery.footSurfaceImagingLesson(identity,'ultrasound'),now.footSurfaceImagingLesson(identity,'ultrasound'));
 const leaves=(value,path=[])=>value===null||typeof value!=='object'?[path]:Object.entries(value).flatMap(([key,part])=>leaves(part,[...path,key]));
 const arrays=(value,path=[])=>[
  ...(Array.isArray(value)?[path]:[]),
@@ -128,7 +132,7 @@ for(const bundle of pins.bundles){
 }
 for(const path of ['package-lock.json','atlas-review/app/body-explorer.tsx','atlas-review/lib/imaging-sync.ts','atlas-review/lib/didanix-atlas-adapter.ts','atlas-review/lib/independent-study-links.ts'])
  assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),old(path).toString().replaceAll('\r\n','\n'),path);
-const review=JSON.parse(readFileSync('atlas-review/manifest.json'));assert.equal(review.revision,sourceRevision);
+const review=JSON.parse(readFileSync('atlas-review/manifest.json'));assert.equal(review.revision,deliveryRevision);
 for(const file of review.files)assert.equal(hash(readFileSync('atlas-review/'+file.path)),file.importedSha256,file.path);
 for(const path of ['lib/foot-surface-imaging.ts','content/foot-surface-imaging.ts','content/foot-surface-imaging-pins.json']){
  const file=review.files.find(f=>f.path===path);assert(file,path);
@@ -137,7 +141,7 @@ for(const path of ['lib/foot-surface-imaging.ts','content/foot-surface-imaging.t
 }
 for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
  const base='public/atlas-runtime/'+name+'/',manifest=JSON.parse(readFileSync(base+'manifest.json'));
- assert.equal(manifest.sourceCommit,sourceRevision);assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
+ assert.equal(manifest.sourceCommit,deliveryRevision);assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
  for(const file of manifest.files){const bytes=readFileSync(base+file.path);assert.equal(bytes.length,file.bytes);assert.equal(hash(bytes),file.sha256);}
  const previous=JSON.parse(old(base+'manifest.json'));
  assert.deepEqual(manifest.files.filter(f=>f.path.startsWith('models/')),previous.files.filter(f=>f.path.startsWith('models/')));
@@ -150,19 +154,19 @@ for(const name of ['head-neck','shoulder','female-pelvis','lower-limb']){
  assert(!inputs.some(f=>f.path==='content/foot-surface-imaging.transition.json'));
  if(name==='head-neck'){
   const emitted=emittedTeaching(base,manifest.files);
-  for(const item of pins.entries){const lesson=now.footSurfaceImagingLesson(item.identity,'ultrasound');
+  for(const item of pins.entries){const lesson=delivery.footSurfaceImagingLesson(item.identity,'ultrasound');
    for(const text of [item.identity.id,lesson.body,...lesson.bullets,lesson.note,...lesson.citations])
     assert(emitted.includes(text)||emitted.includes(JSON.stringify(text).slice(1,-1)),`learner:${item.identity.id}:${text.slice(0,40)}`);
   }
  }
 }
 const reviewBase='public/atlas-review-viewer/',reviewManifest=JSON.parse(readFileSync(reviewBase+'manifest.json'));
-assert.equal(reviewManifest.sourceCommit,sourceRevision);assert.equal(reviewManifest.personalRecordsIncluded,false);
+assert.equal(reviewManifest.sourceCommit,deliveryRevision);assert.equal(reviewManifest.personalRecordsIncluded,false);
 assert.equal(reviewManifest.mode,'production');assert.equal(reviewManifest.websiteIntegrationSha256,review.websiteIntegrationSha256);
 for(const file of reviewManifest.files)assert.equal(hash(readFileSync(reviewBase+file.path)),file.sha256,'review:'+file.path);
 const emittedReview=emittedTeaching(reviewBase,reviewManifest.files,true);
-for(const item of pins.entries){const lesson=now.footSurfaceImagingLesson(item.identity,'ultrasound');
+for(const item of pins.entries){const lesson=delivery.footSurfaceImagingLesson(item.identity,'ultrasound');
  for(const text of [item.identity.id,lesson.body,...lesson.bullets,lesson.note,...lesson.citations])
   assert(emittedReview.includes(text)||emittedReview.includes(JSON.stringify(text).slice(1,-1)),`review:${item.identity.id}:${text.slice(0,40)}`);
 }
-console.log(JSON.stringify({websiteBaseline,sourceRevision,changed,preserved,identityRefusals,malformedPacketsRefused:malformed,staleRefusalsBeforeStorage:stale,storageCalls,changedTeachingWorksheets:worksheets,verifiedRuntimes:4,clinicalApproval:false,browserAcceptance:false}));
+console.log(JSON.stringify({websiteBaseline,sourceRevision,footWebsiteEpoch,deliveryRevision,changed,preserved,identityRefusals,malformedPacketsRefused:malformed,staleRefusalsBeforeStorage:stale,storageCalls,changedTeachingWorksheets:worksheets,verifiedRuntimes:4,clinicalApproval:false,browserAcceptance:false}));

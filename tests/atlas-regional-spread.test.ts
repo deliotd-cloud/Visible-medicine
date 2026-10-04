@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 
-const revision='cdc6ad23ad5c3c13a2f6588019a057d0a063818f';
+const revision='90191b8b236bfed00db7c424dbacde915920460d';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -20,12 +20,14 @@ test('bounded regional Spread reaches learner and protected review without model
  const suprascapularInputs=['content/suprascapular-vessel-ultrasound-pins.json','content/suprascapular-vessel-ultrasound.ts','lib/suprascapular-vessel-ultrasound.ts'];
  const deepBrainInputs=['content/deep-brain-core-teaching-pins.json','content/deep-brain-core-teaching.ts','lib/deep-brain-core-teaching.ts'];
  const footInputs=['content/foot-surface-imaging-pins.json','content/foot-surface-imaging.ts','lib/foot-surface-imaging.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const handInputs=['content/hand-bone-ultrasound-pins.json','content/hand-bone-ultrasound.ts','lib/hand-bone-ultrasound.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length);assert.deepEqual(review.packages,prior.packages);
  assert.deepEqual(review.files.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),ultrasoundInputs);
  assert.deepEqual(review.files.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),cranialInputs);
  assert.deepEqual(review.files.filter((f:any)=>suprascapularInputs.includes(f.path)).map((f:any)=>f.path).sort(),suprascapularInputs);
  assert.deepEqual(review.files.filter((f:any)=>deepBrainInputs.includes(f.path)).map((f:any)=>f.path).sort(),deepBrainInputs);
  assert.deepEqual(review.files.filter((f:any)=>footInputs.includes(f.path)).map((f:any)=>f.path).sort(),footInputs);
+ assert.deepEqual(review.files.filter((f:any)=>handInputs.includes(f.path)).map((f:any)=>f.path).sort(),handInputs);
  // Preserve the exact Spread epoch; the lumbar regression proves the later delta.
  const spreadEpoch=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(spreadEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
@@ -34,18 +36,23 @@ test('bounded regional Spread reaches learner and protected review without model
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
   assert.deepEqual(inputs.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:ultrasoundInputs);
   assert.deepEqual(inputs.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:cranialInputs);
   assert.deepEqual(inputs.filter((f:any)=>suprascapularInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:suprascapularInputs);
   assert.deepEqual(inputs.filter((f:any)=>deepBrainInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:deepBrainInputs);
   assert.deepEqual(inputs.filter((f:any)=>footInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:footInputs);
+  assert.deepEqual(inputs.filter((f:any)=>handInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:handInputs);
   assert.deepEqual(manifest.files.filter((f:any)=>f.path.startsWith('models/')),previous.files.filter((f:any)=>f.path.startsWith('models/')));
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.deepEqual(manifest[flag],previous[flag]);
   const noticePath=base+'LICENSES/THIRD_PARTY_NOTICES.md';
   const completed=execFileSync('git',['show','d6c37e4df4065fb832bf89b3a1a825de0d3033ff:'+noticePath],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString();
   const current=readFileSync(noticePath,'utf8');
-  const history=withoutFootNotice(current);
+  const footEpochNotice=execFileSync('git',['show','7eacbbacc76f4e98288552614ce47e8e823d45a9:'+noticePath],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString();
+  const sourceNotice=execFileSync('git',['show',revision+':LICENSES/THIRD_PARTY_NOTICES.md'],{cwd:'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs',maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString();
+  assert.equal(current,sourceNotice,'Exact current source notice, not a rewritten historical fixture');
+  assert(current.startsWith(footEpochNotice),'Complete foot epoch preserved before the hand appendix');
+  const history=withoutFootNotice(footEpochNotice);
   assert.deepEqual(regionalSpreadMilestoneBytes(noticePath),old(noticePath),'Spread did not change preceding licence bytes');
   const header='# Third-party notices\n\n',circle='## Circle of Willis guided orientation (2 October 2026)\n';
   const spinal='\n## Spinal-bone ultrasound orientation — 3 October 2026\n';

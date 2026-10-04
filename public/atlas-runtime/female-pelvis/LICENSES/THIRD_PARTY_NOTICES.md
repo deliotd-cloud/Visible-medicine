@@ -2338,3 +2338,23 @@ NC-ND alternatives are excluded from these drafts. Original code/teaching use
 project MIT terms; existing BodyParts3D CC BY obligations and source holds remain.
 No new dependency, font, texture, model, paid service or mandatory licence fee.
 Clinical approval, diagnostic performance and patient correspondence are absent.
+
+## Hand-bone ultrasound surface orientation — 4 October 2026
+
+Forty-six existing hand-bone selections gain eleven independently written
+teaching families, with thumb anatomy separated from the other fingers.
+Factual interpretation uses Wang et al. (Diagnostics 2021, DOI:
+10.3390/diagnostics11101834), Russo et al. (Journal of Personalized Medicine
+2022, DOI:10.3390/jpm12101733), and Balbach et al.'s hand-pain protocol in Diagnostics
+2024 (DOI:10.3390/diagnostics14070669). Each article expressly identifies
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/.
+Author/year and primary publication links appear in
+`docs/HAND_BONE_ULTRASOUND.md`; our interpretation is original, not publisher
+wording, endorsement or a reproduction of its protocol. No article prose,
+figures, ultrasound frames, patient scans, tables, PDFs, meshes or datasets
+are imported. Separately credited media would require its own clearance.
+NC-ND finger/hand articles are excluded from the new teaching. Original
+code/teaching use project MIT terms; BodyParts3D CC BY geometry obligations,
+credits and source holds remain. No dependency, font, texture, model, paid
+service or mandatory fee is added. Radiologist approval, acoustic simulation,
+marrow assessment, fracture exclusion and patient registration are not supplied.

@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "60262c682d3e6c0013763370ef0b40dbe6e32af02055e73c7341eea9f49a7731"
+    "sha256": "225dbd04964280aa2a992f39a9f4441a37f50b344867abd9d6c2720eb92aa335"
   },
   {
     "path": "app/body-explorer.css",
@@ -658,6 +658,14 @@
   {
     "path": "content/hand-arterial-ultrasound.ts",
     "sha256": "ad0270c2ec43f08124abb3f5a0b46c092b62d54219b305bb7a01589944e9bb6b"
+  },
+  {
+    "path": "content/hand-bone-ultrasound-pins.json",
+    "sha256": "da147eb7648c42819886ace8e0c65af2cac75f06c6a318a5749605fc463c2696"
+  },
+  {
+    "path": "content/hand-bone-ultrasound.ts",
+    "sha256": "c5042fd5d0096767f80f21ef50c54103984b4a040eaca3983933136ee94dd885"
   },
   {
     "path": "content/hand-bone-xray.ts",
@@ -1826,6 +1834,10 @@
   {
     "path": "lib/hand-arterial-ultrasound.ts",
     "sha256": "208de77dc3246d582e6fc7379eb125caa1a4faf5238822f69d0f277e69e93cd6"
+  },
+  {
+    "path": "lib/hand-bone-ultrasound.ts",
+    "sha256": "a209c94235f6d851c3ff4b951cc307cf767ff693c3b4a4edd14d6857b2092b84"
   },
   {
     "path": "lib/hand-bone-xray.ts",

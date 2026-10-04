@@ -1,5 +1,5 @@
 {
-  "revision": "cdc6ad23ad5c3c13a2f6588019a057d0a063818f",
+  "revision": "90191b8b236bfed00db7c424dbacde915920460d",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -538,8 +538,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "60262c682d3e6c0013763370ef0b40dbe6e32af02055e73c7341eea9f49a7731",
-      "importedSha256": "60262c682d3e6c0013763370ef0b40dbe6e32af02055e73c7341eea9f49a7731"
+      "sourceSha256": "225dbd04964280aa2a992f39a9f4441a37f50b344867abd9d6c2720eb92aa335",
+      "importedSha256": "225dbd04964280aa2a992f39a9f4441a37f50b344867abd9d6c2720eb92aa335"
     },
     {
       "path": "lib/central-vessel-imaging.ts",
@@ -980,6 +980,21 @@
       "path": "content/foot-surface-imaging.ts",
       "sourceSha256": "c094fb283c89bc0065d6c03adc55333229ce9509174d33b666f7eac1972e3b33",
       "importedSha256": "c094fb283c89bc0065d6c03adc55333229ce9509174d33b666f7eac1972e3b33"
+    },
+    {
+      "path": "lib/hand-bone-ultrasound.ts",
+      "sourceSha256": "a209c94235f6d851c3ff4b951cc307cf767ff693c3b4a4edd14d6857b2092b84",
+      "importedSha256": "a209c94235f6d851c3ff4b951cc307cf767ff693c3b4a4edd14d6857b2092b84"
+    },
+    {
+      "path": "content/hand-bone-ultrasound-pins.json",
+      "sourceSha256": "da147eb7648c42819886ace8e0c65af2cac75f06c6a318a5749605fc463c2696",
+      "importedSha256": "da147eb7648c42819886ace8e0c65af2cac75f06c6a318a5749605fc463c2696"
+    },
+    {
+      "path": "content/hand-bone-ultrasound.ts",
+      "sourceSha256": "c5042fd5d0096767f80f21ef50c54103984b4a040eaca3983933136ee94dd885",
+      "importedSha256": "c5042fd5d0096767f80f21ef50c54103984b4a040eaca3983933136ee94dd885"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -3338,8 +3353,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "c4188028e54df361da651a88a07dd147a910cde06dc5f9506178afcb10f939df",
-      "importedSha256": "5b5b4470bbe4f249a1fce952d059702bcd93a12d67989bf6a724613dbcdf7b6e"
+      "sourceSha256": "a40805d86f2261db0f32554d0c623343bcb1913b2d0900b6f71ea3ccba6bf747",
+      "importedSha256": "036922d13593af286c232c0cf5358fccef34630e17b1b4615d65f7b55284b6be"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3699,7 +3714,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "053c5153a0482a61f2b9825df331f80f0681217846b2f114e6ae98127aaa41d4",
-      "importedSha256": "686a4df7526f772bd0af3286470085ff8d0c1d99bcbe4030e2b50d546d4c153f"
+      "importedSha256": "cc9303b3d823c65e88eca173a5ce7ba2d4614d6f204eb2c660a3c991d3d266f0"
     },
     {
       "path": "app/review/review.css",
@@ -3733,8 +3748,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "e230e22b5434105a151ca0330539edc6ee6888568071923482466ed70dc2ddc1",
-      "importedSha256": "e230e22b5434105a151ca0330539edc6ee6888568071923482466ed70dc2ddc1"
+      "sourceSha256": "5d1e23beb809cd49f6d279386298b8b7ff822b100676d7794a10dae9009b23f5",
+      "importedSha256": "5d1e23beb809cd49f6d279386298b8b7ff822b100676d7794a10dae9009b23f5"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5083,8 +5098,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "54a91d9b050cc0baf1ae597cc16c5894b45430bdb670db78fc83a3ad194530e1",
-      "importedSha256": "54a91d9b050cc0baf1ae597cc16c5894b45430bdb670db78fc83a3ad194530e1"
+      "sourceSha256": "103ffe3a6c0b72007ea1a4dc67d8854422402bda73068e1cced12601c994ca8d",
+      "importedSha256": "103ffe3a6c0b72007ea1a4dc67d8854422402bda73068e1cced12601c994ca8d"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5183,5 +5198,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "9dfc49448c371998534d57892791a019334c95174ed2400b07b59901f88f45ef"
+  "websiteIntegrationSha256": "23d6f5357246721a6b5da1901b510d20edbc24755ebd3121b5a903a800acf3e3"
 }
