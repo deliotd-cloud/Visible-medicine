@@ -3,6 +3,7 @@ import { nestedCTOrientation, nestedCTOrientationReferences } from './nested-ct-
 import { eyeCrossSectionalTeaching, eyeCrossSectionalReferences } from './eye-cross-sectional-teaching.ts';
 import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-temporal-mri.ts';
 import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
+import { cardiacCavityDepthSections, cardiacCavityDepthReferences } from './cardiac-cavity-depth.ts';
 import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
@@ -71,6 +72,7 @@ export const nestedTeachingReferences: Record<
   ...nestedCTOrientationReferences,
   ...superiorTemporalMRIReferences,
   ...cardiacXrayReferences,
+  ...cardiacCavityDepthReferences,
   ...ventricularUltrasoundReferences,
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
@@ -387,16 +389,12 @@ export const nestedConcepts: NestedConcept[] = [
       ],
     ] as const
   ).map(
-    ([fma, id, chamber, functionText, question, answer]): NestedConcept => ({
+    ([fma, id, , , question, answer]): NestedConcept => ({
       id: `cardiac-${id}`,
       study: 'cardiac',
       fmaIds: [fma],
       sections: {
-        anatomy: section(
-          `The ${chamber} is one of the four heart chambers. This model shows its cavity space, not surrounding muscle.`,
-          'cardiacChambers',
-        ),
-        function: section(functionText, 'cardiacChambers'),
+        ...cardiacCavityDepthSections[`cardiac-${id}`],
         clinical: cardiacTeaching[id].clinical,
         pathology: cardiacTeaching[id].pathology,
       },

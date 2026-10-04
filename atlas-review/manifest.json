@@ -1,5 +1,5 @@
 {
-  "revision": "c52c9c690d790e4e921bde7ed5a943ef30a95001",
+  "revision": "b4be1f0f343e54ee0fc021bcebac7bb62e978deb",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3323,8 +3323,8 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sourceSha256": "415e77735aced6c54c46182c362682f26348c99317628548b4d80d1906d0691b",
-      "importedSha256": "415e77735aced6c54c46182c362682f26348c99317628548b4d80d1906d0691b"
+      "sourceSha256": "d1c89dc4a2153fcc277edcd04b8d147b08f8bb670bebad82d865aa39e08c79da",
+      "importedSha256": "d1c89dc4a2153fcc277edcd04b8d147b08f8bb670bebad82d865aa39e08c79da"
     },
     {
       "path": "content/nested-ct-orientation.ts",
@@ -3350,6 +3350,11 @@
       "path": "content/cardiac-xray-teaching.ts",
       "sourceSha256": "65ae09bf24479ff492b55304299a88fbfc15f0dde7277e35df4d856f59fe01a8",
       "importedSha256": "65ae09bf24479ff492b55304299a88fbfc15f0dde7277e35df4d856f59fe01a8"
+    },
+    {
+      "path": "content/cardiac-cavity-depth.ts",
+      "sourceSha256": "078ccda4b2770d2a7155a51ac1863e128c4a2701ad5dbb87903206aedb9a5b6b",
+      "importedSha256": "078ccda4b2770d2a7155a51ac1863e128c4a2701ad5dbb87903206aedb9a5b6b"
     },
     {
       "path": "content/ventricular-ultrasound-teaching.ts",
@@ -3463,8 +3468,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "60ec23cf5b50211c881853b4f16d46c7a55a4752e95a090efcda6bd3add0bc11",
-      "importedSha256": "99a1635b19317974c81a2e78f734ae2b8bbabb14191037795a1dfecca87423e8"
+      "sourceSha256": "3a0442a8145a08349db32bc4061346f66e96a9d473a63b3ea8005f81c33b6d40",
+      "importedSha256": "945f6a533dbd5fce27dcf3fdd1a06b46e33352bb7125407edf6298cc6b9cd22d"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3834,7 +3839,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d",
-      "importedSha256": "674f3402cff693d7ac2beacde154d733a8b27a78e036d242a38f58239a9d2cfd"
+      "importedSha256": "c6f520b84bb16b32c414e35759a10d367d8612e5fa0a68732fd84c0991c6d61e"
     },
     {
       "path": "app/review/review.css",
@@ -5333,5 +5338,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "d365ec76c782ece15861889770676065338dfc07070c79f4d2a3fe8f0df2679a"
+  "websiteIntegrationSha256": "43dbb13425e70e28e31545a6dd6902db2cd9ebc8efebff6386ec3f296d07c368"
 }

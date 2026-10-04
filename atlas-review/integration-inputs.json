@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "c52c9c690d790e4e921bde7ed5a943ef30a95001",
-  "sha256": "d365ec76c782ece15861889770676065338dfc07070c79f4d2a3fe8f0df2679a",
+  "sourceCommit": "b4be1f0f343e54ee0fc021bcebac7bb62e978deb",
+  "sha256": "43dbb13425e70e28e31545a6dd6902db2cd9ebc8efebff6386ec3f296d07c368",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -761,6 +761,10 @@
     {
       "path": "atlas-review/content/brain-imaging-teaching.ts",
       "sha256": "584e9bcf307fbb67ee58fb203e6763ee3f1e2f2411f2706b76f32deba75d253c"
+    },
+    {
+      "path": "atlas-review/content/cardiac-cavity-depth.ts",
+      "sha256": "078ccda4b2770d2a7155a51ac1863e128c4a2701ad5dbb87903206aedb9a5b6b"
     },
     {
       "path": "atlas-review/content/cardiac-teaching.ts",
@@ -1584,7 +1588,7 @@
     },
     {
       "path": "atlas-review/content/nested-teaching.ts",
-      "sha256": "415e77735aced6c54c46182c362682f26348c99317628548b4d80d1906d0691b"
+      "sha256": "d1c89dc4a2153fcc277edcd04b8d147b08f8bb670bebad82d865aa39e08c79da"
     },
     {
       "path": "atlas-review/content/ophthalmic-nerve-studies.ts",
@@ -4336,7 +4340,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "ce2e9d9de8117854ff97763cffe13152cac8c81d7ba4e351a36ad31babcc886f"
+      "sha256": "5150e3b8cfd15cc0268c1e6e7e6eec4051c09a11c98c90a53d6e0e252e2cb84c"
     }
   ]
 }
