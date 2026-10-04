@@ -1,5 +1,5 @@
 {
-  "revision": "c5c99ba11e6533d306587e71f5fc2854d882fbd6",
+  "revision": "910c553d21529f24d872c4c9e74d59aa7abc464a",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3228,8 +3228,8 @@
     },
     {
       "path": "lib/nested-review-material.ts",
-      "sourceSha256": "737be8fc002e4bd67a3b8ba56defe7ca89ea7cd4781deb9b1f2ab3b1e48ada22",
-      "importedSha256": "737be8fc002e4bd67a3b8ba56defe7ca89ea7cd4781deb9b1f2ab3b1e48ada22"
+      "sourceSha256": "0b0e5d2d849ab3663a1859863ea307b3758c1a2dd7682f77a247703bbdd0decf",
+      "importedSha256": "0b0e5d2d849ab3663a1859863ea307b3758c1a2dd7682f77a247703bbdd0decf"
     },
     {
       "path": "lib/nested-teaching.ts",
@@ -3398,13 +3398,23 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "4ee108118e95f830503596d905aa68d8cb1072427400bc97f1651984ab743942",
-      "importedSha256": "24538921426cf6de7247bb476015a6430aed6f7863192698fdd0d5bf45e2c0e4"
+      "sourceSha256": "5b1dbf89347680943ca7fc079aee452c8e1cf4961ed5836c438af426b8a1ed89",
+      "importedSha256": "24b0a9c7995f7b376f126ee9963cbe84ca77bb83a1eedcc6a5be17fe681d45db"
     },
     {
       "path": "lib/eye-layer-guide.ts",
       "sourceSha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
       "importedSha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb"
+    },
+    {
+      "path": "lib/coronary-venous-context.ts",
+      "sourceSha256": "18e5ff2a58d798def2fdffec251a7d65f2f41d9c97a84a2a8820af30adaea201",
+      "importedSha256": "18e5ff2a58d798def2fdffec251a7d65f2f41d9c97a84a2a8820af30adaea201"
+    },
+    {
+      "path": "public/models/bodyparts3d/coronary-venous/root-vessel-context.json",
+      "sourceSha256": "e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd",
+      "importedSha256": "e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3663,8 +3673,8 @@
     },
     {
       "path": "content/nested-review-bindings.json",
-      "sourceSha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d",
-      "importedSha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
+      "sourceSha256": "2834bbf05ce4f526cb3bb65ec9e67174937fd5d1fc607499c3b394dc850a5b2a",
+      "importedSha256": "2834bbf05ce4f526cb3bb65ec9e67174937fd5d1fc607499c3b394dc850a5b2a"
     },
     {
       "path": "lib/clinical-review-pilot.ts",
@@ -3759,7 +3769,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d",
-      "importedSha256": "2b4ed7bff1490a685f2c8ff676d7da8238fa26bbc6d869fda2c1597d4b1471d8"
+      "importedSha256": "1a2a79105b257d850c0d969e0eaa34c85f21e9df7e655ca79bc0529596397e1b"
     },
     {
       "path": "app/review/review.css",
@@ -3828,8 +3838,8 @@
     },
     {
       "path": "app/review/nested/workspace.tsx",
-      "sourceSha256": "89ac9a87f30ce89b76e96880f9564a5f01b7b718357a5afd29f2b796435afd5e",
-      "importedSha256": "4f067137691eb5f6c70606db6cd73432c748ff03a4bdf8fa6a885dbd6156d4b3"
+      "sourceSha256": "82ed6d904a3b17b06048faca82c22970dd2db0ac86284310b17b034196b3cfac",
+      "importedSha256": "e723e685343374e957de71b17b82c8589fba1516687102833d77d14c9c70b22d"
     },
     {
       "path": "lib/nested-review-client.ts",
@@ -4923,8 +4933,8 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sourceSha256": "08a2c1cd5d64cb9072d8fe80f2d95a40a7eb0611a2071043db45bc4a8f6f7ed0",
-      "importedSha256": "dace20b965bc3837808101f9304194e87ff2360c942b0a0687875a7b6930993a"
+      "sourceSha256": "e693f56ee69286484583a65b0ac8fc0afce517f035dd41c0105cf289b4b0cb2e",
+      "importedSha256": "d66692612517531c43e7b5a03498e24cadf0b3165bb9b7764ecb67efd2f1d9ff"
     },
     {
       "path": "app/femoral-components.tsx",
@@ -5258,5 +5268,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "1461f001911423580fda7c7b40c3dab369cc748c479c72833d00c396350ed290"
+  "websiteIntegrationSha256": "54ab2b5a61302164f1e074664e2ad9a76c7f08a7a3e9c882374ab8fa9c241e44"
 }

@@ -136,6 +136,12 @@ import {
   coronaryVenousNotes,
   coronaryVenousReferences,
 } from '@/atlas-review/lib/coronary-venous';
+import {
+  coronaryVenousContextFor,
+  coronaryVenousContextViewCatalog,
+  coronaryVenousContextColour,
+  coronaryVenousContextCopy,
+} from '@/atlas-review/lib/coronary-venous-context';
 import { ventricularRelationshipsFor } from '@/atlas-review/lib/ventricular-relationships';
 import {
   hepaticBiliaryRelationshipsFor,
@@ -562,12 +568,20 @@ export function VentricularView({
     () => (isPulmonary ? pulmonaryAirwayFor(parent) : []),
     [isPulmonary, parent],
   );
+  const coronaryContext = useMemo(
+    () => isCoronaryVenous
+      ? coronaryVenousContextFor(parent, educationCatalog)
+      : [],
+    [isCoronaryVenous, parent, educationCatalog],
+  );
   const ventricleCatalog = useMemo(
     () =>
       isCricothyroid
         ? cricothyroidViewCatalog(parent, context && explode === 0)
         : isCoronaryVenous
-          ? coronaryVenousCatalog
+          ? coronaryVenousContextViewCatalog(
+              parent, context && explode === 0, educationCatalog,
+            )
         : isPancreatic
           ? pancreaticViewCatalog(parent, context && explode === 0)
           : isVisual
@@ -603,6 +617,7 @@ export function VentricularView({
     [
       isCricothyroid,
       isCoronaryVenous,
+      educationCatalog,
       isPancreatic,
       isCardiac,
       isPulmonary,
@@ -691,7 +706,9 @@ export function VentricularView({
                       : isHepatic
                         ? hepaticBiliaryColour(s)
                         : index < 0
-                          ? isPulmonary
+                          ? isCoronaryVenous
+                            ? coronaryVenousContextColour(s)
+                            : isPulmonary
                             ? pulmonaryAirwayColour(s)
                             : isCardiac && guidedAppearance
                               ? cardiacVesselColour(s)
@@ -720,6 +737,8 @@ export function VentricularView({
                           : 0.45
                         : isPulmonary
                           ? 0.34
+                          : isCoronaryVenous
+                            ? 0.48
                           : guidedAppearance
                             ? 0.42
                             : 0.12
@@ -737,6 +756,7 @@ export function VentricularView({
       selectableIds,
       isCerebral,
       isPulmonary,
+      isCoronaryVenous,
       isHepatic,
       isCardiac,
       guidedAppearance,
@@ -1265,52 +1285,65 @@ export function VentricularView({
           >
             Reassemble
           </Button>
-          {!isCoronaryVenous && (!isPulmonary || airwayContext.length > 0) && (
-            <Button
-              size="sm"
-              variant={context ? 'default' : 'outline'}
-              aria-pressed={context}
-              disabled={explode > 0}
-              onClick={() => {
-                if (!isCardiac && !isVisual && !isRenal && !isHepatic)
-                  setRelationshipId(null);
-                setContext((v) => !v);
-              }}
-            >
-              {isCricothyroid
-                ? 'Show cartilage landmarks'
-                : isPancreatic
-                  ? 'Show pancreatic envelope'
-                  : isVisual
-                    ? relationship
-                      ? 'Show pituitary landmark'
-                      : 'Show brain landmarks'
-                    : isRenal
-                      ? relationship
-                        ? 'Show drainage landmarks'
-                        : 'Show kidney & vessel context'
-                      : isHepatic
+          {(!isCoronaryVenous || coronaryContext.length === 3) &&
+            (!isPulmonary || airwayContext.length > 0) && (
+              <Button
+                size="sm"
+                variant={context ? 'default' : 'outline'}
+                aria-pressed={context}
+                disabled={explode > 0}
+                onClick={() => {
+                  if (!isCardiac && !isVisual && !isRenal && !isHepatic)
+                    setRelationshipId(null);
+                  setContext((v) => !v);
+                }}
+              >
+                {isCoronaryVenous
+                  ? coronaryVenousContextCopy.button
+                  : isCricothyroid
+                    ? 'Show cartilage landmarks'
+                    : isPancreatic
+                      ? 'Show pancreatic envelope'
+                      : isVisual
                         ? relationship
-                          ? 'Show biliary landmarks'
-                          : 'Show liver tissue context'
-                        : isPulmonary
-                          ? 'Show airway landmarks'
-                          : isCardiac
+                          ? 'Show pituitary landmark'
+                          : 'Show brain landmarks'
+                        : isRenal
+                          ? relationship
+                            ? 'Show drainage landmarks'
+                            : 'Show kidney & vessel context'
+                          : isHepatic
                             ? relationship
-                              ? 'Show vessel landmarks'
-                              : 'Show atrial walls'
-                            : isCerebral
-                              ? 'Show lateral ventricles'
-                              : isBrainstem
-                                ? 'Show fourth ventricle'
-                                : 'Show brain context'}
-            </Button>
+                              ? 'Show biliary landmarks'
+                              : 'Show liver tissue context'
+                            : isPulmonary
+                              ? 'Show airway landmarks'
+                              : isCardiac
+                                ? relationship
+                                  ? 'Show vessel landmarks'
+                                  : 'Show atrial walls'
+                                : isCerebral
+                                  ? 'Show lateral ventricles'
+                                  : isBrainstem
+                                    ? 'Show fourth ventricle'
+                                    : 'Show brain context'}
+              </Button>
           )}
         </div>
         {isCoronaryVenous ? (
           <section className="ventricular-relationship" aria-label="Coronary venous source guide">
             <p>Two source-labelled venous selections. The small cardiac vein keeps two original files as one group. The heart aggregate is hidden in this study, including after Undo and reassembly.</p>
-            <p>Surface proximity does not establish a joined lumen, opening, drainage junction or flow.</p>
+            {context && explode === 0 && coronaryContext.length === 3 && (
+              <ul aria-label="Cardiac vein landmark colour key">
+                {coronaryContext.map((s) => (
+                  <li key={s.id}>
+                    <span aria-hidden="true" style={{ backgroundColor: coronaryVenousContextColour(s) }} />
+                    {s.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+            <p>{coronaryVenousContextCopy.guide}</p>
           </section>
         ) : isCricothyroid ? (
           <section
@@ -1525,8 +1558,10 @@ export function VentricularView({
             <p>
               {isCardiac
                 ? 'Faint atrial-wall references only; ventricular walls and valves are not shown. Coloured shapes represent chamber spaces, not tissue.'
-                : isCerebral
-                  ? 'Faint lateral ventricular spaces provide orientation, not a registered scan or cortical boundary.'
+                : isCoronaryVenous
+                  ? coronaryVenousContextCopy.visible
+                  : isCerebral
+                    ? 'Faint lateral ventricular spaces provide orientation, not a registered scan or cortical boundary.'
                   : isBrainstem
                     ? 'Faint context shows the fourth ventricular space, not tissue or a measured cavity wall.'
                     : 'Faint context: thalami, caudate nuclei and corpus callosum. These are whole structures, not separately segmented ventricular walls.'}
@@ -1668,6 +1703,7 @@ export function VentricularView({
           {isCoronaryVenous ? (
             <>
               <p>Coronary sinus FMA4706 is one original source surface. Small cardiac vein FMA4714 is one selection containing two original files. The two small-vein files are not named branches.</p>
+              <p>{coronaryVenousContextCopy.learning}</p>
               <p>Only source-labelled surface anatomy is shown. No opening, joined lumen, flow, procedure route, scan registration or clinical finding is validated.</p>
             </>
           ) : isCricothyroid ? (

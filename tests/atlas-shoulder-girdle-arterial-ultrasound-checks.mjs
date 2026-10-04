@@ -11,6 +11,8 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const websiteBaseline = '37e2e9e900ef2cdd1b6b9000fb1a813b69e8495e';
 const sourceRevision = 'c5c99ba11e6533d306587e71f5fc2854d882fbd6';
+// Keep the completed source epoch fixed; only the current delivery moves.
+const deliveryRevision = '910c553d21529f24d872c4c9e74d59aa7abc464a';
 const sourceBaseline = 'bbe33ea6ffff3503ae9cdabc0dd41350cece28cd';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
@@ -183,7 +185,7 @@ for (const bundle of catalog.bundles) {
 for (const path of ['package-lock.json', 'atlas-review/lib/imaging-sync.ts', 'atlas-review/lib/didanix-atlas-adapter.ts', 'atlas-review/lib/independent-study-links.ts'])
   assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
 const review = JSON.parse(readFileSync('atlas-review/manifest.json'));
-assert.equal(review.revision, sourceRevision);
+assert.equal(review.revision, deliveryRevision);
 for (const file of review.files) assert.equal(hash(readFileSync(`atlas-review/${file.path}`)), file.importedSha256, file.path);
 const addedPaths = ['lib/shoulder-girdle-arterial-ultrasound.ts', 'content/shoulder-girdle-arterial-ultrasound.ts', 'content/shoulder-girdle-arterial-ultrasound-pins.json'];
 for (const path of addedPaths) {
@@ -194,7 +196,7 @@ for (const path of addedPaths) {
 assert(!review.files.some(file => file.path === 'content/shoulder-girdle-arterial-ultrasound.transition.json'));
 for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   const base = `public/atlas-runtime/${name}/`, manifest = JSON.parse(readFileSync(`${base}manifest.json`));
-  assert.equal(manifest.sourceCommit, sourceRevision);
+  assert.equal(manifest.sourceCommit, deliveryRevision);
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   for (const file of manifest.files) {
@@ -275,7 +277,7 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   }
 }
 const reviewBase = 'public/atlas-review-viewer/', reviewManifest = JSON.parse(readFileSync(`${reviewBase}manifest.json`));
-assert.equal(reviewManifest.sourceCommit, sourceRevision);
+assert.equal(reviewManifest.sourceCommit, deliveryRevision);
 assert.equal(reviewManifest.personalRecordsIncluded, false);
 assert.equal(reviewManifest.mode, 'production');
 assert.equal(reviewManifest.websiteIntegrationSha256, review.websiteIntegrationSha256);

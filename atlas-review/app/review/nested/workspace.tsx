@@ -198,6 +198,15 @@ export function NestedReviewWorkspace({
                 and available draft copy. No patient registration, other
                 nested, paid lecture or interactive exam approval.
               </p>
+              {packet.source.orientationContext && <section aria-label="Coronary vein landmark source evidence">
+                <h3>Optional cardiac-vein landmarks · Unapproved</h3>
+                <p>Nonselectable orientation context in the same source frame. The heart aggregate is excluded.</p>
+                <ul>{packet.source.orientationContext.structures.map(s=><li key={s.id}>
+                  {s.name} · {s.fmaId} · {s.sources.length} source {s.sources.length===1?'file':'files'}
+                  <p>Ordered source IDs: {s.sources.map(file=>file.file).join(', ')} · Bundle: {s.bundle}</p>
+                </li>)}</ul>
+                <p>Export the unsigned worksheet below for each complete source record, file hash, bundle hash and frame.</p>
+              </section>}
               <p>
                 Material fingerprint: <code>{packet.context.materialHash}</code>
               </p>
@@ -236,6 +245,10 @@ export function NestedReviewWorkspace({
                   ))}
                 </section>
               ))}
+              {packet.teaching.orientationContext && <section aria-label="Coronary vein landmark teaching evidence">
+                <h3>Optional cardiac-vein context · Draft</h3>
+                {Object.entries(packet.teaching.orientationContext).map(([key,text])=><p key={key}>{text}</p>)}
+              </section>}
               {packet.teaching.guidedLearning && <section aria-label="Eye guided-learning evidence">
                 <h3>{packet.teaching.guidedLearning.title} · Draft</h3>
                 <p>{packet.teaching.guidedLearning.transitionMs / 1000}s camera sweep · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>

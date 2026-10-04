@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "c5c99ba11e6533d306587e71f5fc2854d882fbd6",
-  "sha256": "1461f001911423580fda7c7b40c3dab369cc748c479c72833d00c396350ed290",
+  "sourceCommit": "910c553d21529f24d872c4c9e74d59aa7abc464a",
+  "sha256": "54ab2b5a61302164f1e074664e2ad9a76c7f08a7a3e9c882374ab8fa9c241e44",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -348,7 +348,7 @@
     },
     {
       "path": "atlas-review/app/review/nested/workspace.tsx",
-      "sha256": "4f067137691eb5f6c70606db6cd73432c748ff03a4bdf8fa6a885dbd6156d4b3"
+      "sha256": "e723e685343374e957de71b17b82c8589fba1516687102833d77d14c9c70b22d"
     },
     {
       "path": "atlas-review/app/review/overview/overview.css",
@@ -544,7 +544,7 @@
     },
     {
       "path": "atlas-review/app/ventricles.tsx",
-      "sha256": "dace20b965bc3837808101f9304194e87ff2360c942b0a0687875a7b6930993a"
+      "sha256": "d66692612517531c43e7b5a03498e24cadf0b3165bb9b7764ecb67efd2f1d9ff"
     },
     {
       "path": "atlas-review/app/ventricular-relationships.css",
@@ -1572,7 +1572,7 @@
     },
     {
       "path": "atlas-review/content/nested-review-bindings.json",
-      "sha256": "ce08b922d13c6a76f6672de0ca73cceea2250c1208ee9edc8f3f59d05bf4b73d"
+      "sha256": "2834bbf05ce4f526cb3bb65ec9e67174937fd5d1fc607499c3b394dc850a5b2a"
     },
     {
       "path": "atlas-review/content/nested-teaching-bindings.v1.json",
@@ -2579,6 +2579,10 @@
       "sha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b"
     },
     {
+      "path": "atlas-review/lib/coronary-venous-context.ts",
+      "sha256": "18e5ff2a58d798def2fdffec251a7d65f2f41d9c97a84a2a8820af30adaea201"
+    },
+    {
       "path": "atlas-review/lib/coronary-venous.ts",
       "sha256": "7fe9f98f5ea4ac4e7e9a76cd25016b5461393ba3f25e52b7b2fc8215c64cd62e"
     },
@@ -3324,7 +3328,7 @@
     },
     {
       "path": "atlas-review/lib/nested-review-material.ts",
-      "sha256": "737be8fc002e4bd67a3b8ba56defe7ca89ea7cd4781deb9b1f2ab3b1e48ada22"
+      "sha256": "0b0e5d2d849ab3663a1859863ea307b3758c1a2dd7682f77a247703bbdd0decf"
     },
     {
       "path": "atlas-review/lib/nested-review-queue.ts",
@@ -4071,6 +4075,10 @@
       "sha256": "996d8ca712b12dc3c2b9df4a6bad372838aeca64f017574be244ffa0b129abfe"
     },
     {
+      "path": "atlas-review/public/models/bodyparts3d/coronary-venous/root-vessel-context.json",
+      "sha256": "e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd"
+    },
+    {
       "path": "atlas-review/public/models/bodyparts3d/corpus-spongiosum/catalog.json",
       "sha256": "edfe15182492244336b7cbddad0762f80e2e282e871f710c88afd6246453ce23"
     },
@@ -4276,7 +4284,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "94d78295ef4e5a3115aa59c12af70b2435fa2e18397f19964533b8976e646a61"
+      "sha256": "8e4c95be69f9cce33ad942cde3b4d42e2f239353a3bcb215e40c59851974f949"
     }
   ]
 }
