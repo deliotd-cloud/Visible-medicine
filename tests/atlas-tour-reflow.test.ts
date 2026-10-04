@@ -10,7 +10,7 @@ test('tour title reflow ships matching learner/review styles without changing an
  const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
  const previous=(p:string)=>JSON.parse(execFileSync('git',['show','047d488a:'+p],{encoding:'utf8',maxBuffer:32e6}));
  const review=json('atlas-review/manifest.json'),before=previous('atlas-review/manifest.json');
- assert.equal(review.revision,'bb4d1766b788d0236cc325eb11a6074d67fec0c7');
+ assert.equal(review.revision,'d6f25010210fd14aa2172605b78fa8cbc1875fb1');
  // Keep the exact historical reflow delta pinned to its delivered commit;
  // subsequent independently reviewed runtime fixes advance the current import.
  const reflow=JSON.parse(execFileSync('git',['show','1727b2e3:atlas-review/manifest.json'],{encoding:'utf8',maxBuffer:32e6}));

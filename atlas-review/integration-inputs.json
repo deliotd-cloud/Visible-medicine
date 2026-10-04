@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bb4d1766b788d0236cc325eb11a6074d67fec0c7",
-  "sha256": "382a1efed251dfcb5ccfcf49c62bbb486d23fcf7efa90e070864a3273d8face5",
+  "sourceCommit": "d6f25010210fd14aa2172605b78fa8cbc1875fb1",
+  "sha256": "ffd917cee4c1417492a18472a04cdd5d54a24d0a1b31ab95fa389a63b9b55605",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "9b0af92a36c7f0048ad2329dc939efffbf6a99064c4f20ad66aafb7e7a2482e1"
+      "sha256": "7149f42ce530695bef02d63205e12da9b0dd618d5c75dd8e41fd766fe837d33d"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -744,7 +744,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "61a4252365ba2ccb160639c4815d837b73488158940b0f0c0b403c628aef256c"
+      "sha256": "692cd06acc54a9c12268d84722ced2b097351fb5de0c312e3ae2866225e6910c"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1969,6 +1969,14 @@
     {
       "path": "atlas-review/content/thoracoabdominal-organ-imaging.ts",
       "sha256": "bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06"
+    },
+    {
+      "path": "atlas-review/content/thoracoabdominal-organ-quiz-pins.json",
+      "sha256": "1aa34fd8e31e74c77f2b47dec46ac40780ac0f3cd5fd91923c955dd42b20f485"
+    },
+    {
+      "path": "atlas-review/content/thoracoabdominal-organ-quiz.ts",
+      "sha256": "c66a4f65ca231e0c47c777113e6406332fc24dea2e2ac16e88b549850858511b"
     },
     {
       "path": "atlas-review/content/thoracoabdominal-orientation-pins.json",
@@ -3871,6 +3879,10 @@
       "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
     },
     {
+      "path": "atlas-review/lib/thoracoabdominal-organ-quiz.ts",
+      "sha256": "50a3d50410b7b080a9de234d56545dc8b46cfc078ac50f2f1507a27e8cbf9b46"
+    },
+    {
       "path": "atlas-review/lib/thoracoabdominal-orientation.ts",
       "sha256": "9cb290950814f9f13c2cd481cfb7697048c9f9ae42412bb3fe60398d9a333b3e"
     },
@@ -4284,7 +4296,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4f6604d6d67d829b2848fef639b4c4e738341fbc6893cb9d0f0e1dc6a51ff862"
+      "sha256": "d5de9322f795ddff0175d69e281001688c5d4d5ea0efb04253a13aabfef1d68f"
     }
   ]
 }

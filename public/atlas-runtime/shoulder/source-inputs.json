@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "9b0af92a36c7f0048ad2329dc939efffbf6a99064c4f20ad66aafb7e7a2482e1"
+    "sha256": "7149f42ce530695bef02d63205e12da9b0dd618d5c75dd8e41fd766fe837d33d"
   },
   {
     "path": "app/body-explorer.css",
@@ -1280,6 +1280,14 @@
     "sha256": "bebed40490aa6ba882c6a53d54db529564be3a3ee556d724605ba2748febcc06"
   },
   {
+    "path": "content/thoracoabdominal-organ-quiz-pins.json",
+    "sha256": "1aa34fd8e31e74c77f2b47dec46ac40780ac0f3cd5fd91923c955dd42b20f485"
+  },
+  {
+    "path": "content/thoracoabdominal-organ-quiz.ts",
+    "sha256": "c66a4f65ca231e0c47c777113e6406332fc24dea2e2ac16e88b549850858511b"
+  },
+  {
     "path": "content/thoracoabdominal-orientation-pins.json",
     "sha256": "01346fad2dd98a2483ab1dd722f23c3e3fc1b1d33e028b8fc779a5af6719d39d"
   },
@@ -2518,6 +2526,10 @@
   {
     "path": "lib/thoracoabdominal-organ-imaging.ts",
     "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
+  },
+  {
+    "path": "lib/thoracoabdominal-organ-quiz.ts",
+    "sha256": "50a3d50410b7b080a9de234d56545dc8b46cfc078ac50f2f1507a27e8cbf9b46"
   },
   {
     "path": "lib/thoracoabdominal-orientation.ts",

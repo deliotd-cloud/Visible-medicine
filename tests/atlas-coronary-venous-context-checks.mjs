@@ -9,7 +9,7 @@ import {build} from 'esbuild';
 
 const sourceRevision = '910c553d21529f24d872c4c9e74d59aa7abc464a';
 // Preserve the original teaching/source epoch while tracking the current delivery.
-const deliveryRevision = 'bb4d1766b788d0236cc325eb11a6074d67fec0c7';
+const deliveryRevision = 'd6f25010210fd14aa2172605b78fa8cbc1875fb1';
 const sourceDir = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const websiteBaseline = 'd661997c0854116e7e320415df9065d6582529e2';
 const websiteBaselineTree = 'ba09c3819384cf4d764040c995880178127726fe';

@@ -140,6 +140,7 @@ import { tarsalBoneQuizLesson } from '../lib/tarsal-bone-quiz';
 import { thoracicBoneQuizLesson } from '../lib/thoracic-bone-quiz';
 import { wristUltrasoundLesson } from '../lib/wrist-ultrasound';
 import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
+import { thoracoabdominalOrganQuizLesson } from '../lib/thoracoabdominal-organ-quiz';
 import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
 import { brainConnectionsQuizLesson } from '../lib/brain-connections-quiz';
 import { shoulderArterialCtLesson } from '../lib/shoulder-arterial-ct';
@@ -296,6 +297,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const footSesamoid = footSesamoidLesson(s, tab);
   if (footSesamoid) return footSesamoid;
   const abdominalOrganQuiz = abdominalOrganQuizLesson(s, tab);
+  const thoracoabdominalOrganQuiz = thoracoabdominalOrganQuizLesson(s, tab);
+  if (thoracoabdominalOrganQuiz) return thoracoabdominalOrganQuiz;
   const brainConnectionsQuiz = brainConnectionsQuizLesson(s, tab);
   if (brainConnectionsQuiz) return brainConnectionsQuiz;
   const pelvicOrganQuiz = pelvicOrganQuizLesson(s, tab);
