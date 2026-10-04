@@ -7,7 +7,7 @@ import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
 import test from 'node:test';
 
-const revision='910c553d21529f24d872c4c9e74d59aa7abc464a';
+const revision='bb4d1766b788d0236cc325eb11a6074d67fec0c7';
 const atlasSource='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const inputs=['lib/paused-tour-imaging.ts','app/paused-tour-imaging-link.tsx','app/body-education-link.ts','app/regional-guided-learning.tsx','app/whole-body-guided-learning.tsx'];
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');

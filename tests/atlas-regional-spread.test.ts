@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='910c553d21529f24d872c4c9e74d59aa7abc464a';
+const revision='bb4d1766b788d0236cc325eb11a6074d67fec0c7';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});

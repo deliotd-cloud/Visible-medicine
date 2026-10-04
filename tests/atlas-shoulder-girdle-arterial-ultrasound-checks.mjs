@@ -12,7 +12,7 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 const websiteBaseline = '37e2e9e900ef2cdd1b6b9000fb1a813b69e8495e';
 const sourceRevision = 'c5c99ba11e6533d306587e71f5fc2854d882fbd6';
 // Keep the completed source epoch fixed; only the current delivery moves.
-const deliveryRevision = '910c553d21529f24d872c4c9e74d59aa7abc464a';
+const deliveryRevision = 'bb4d1766b788d0236cc325eb11a6074d67fec0c7';
 const sourceBaseline = 'bbe33ea6ffff3503ae9cdabc0dd41350cece28cd';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
@@ -182,8 +182,12 @@ for (const bundle of catalog.bundles) {
   assert.equal(hash(bytes), bundle.sha256);
   assert.deepEqual(bytes, old(path));
 }
-for (const path of ['package-lock.json', 'atlas-review/lib/imaging-sync.ts', 'atlas-review/lib/didanix-atlas-adapter.ts', 'atlas-review/lib/independent-study-links.ts'])
+for (const path of ['package-lock.json', 'atlas-review/lib/imaging-sync.ts', 'atlas-review/lib/independent-study-links.ts'])
   assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
+// Shared adapter lifecycle can advance independently of this frozen teaching epoch.
+// Require the exact current saved source, rather than silently dropping its gate.
+const deliveredAdapter = execFileSync('git', ['show', `${deliveryRevision}:lib/didanix-atlas-adapter.ts`], {...gitOptions, cwd: atlasSource});
+assert.equal(readFileSync('atlas-review/lib/didanix-atlas-adapter.ts', 'utf8').replaceAll('\r\n', '\n'), deliveredAdapter.toString());
 const review = JSON.parse(readFileSync('atlas-review/manifest.json'));
 assert.equal(review.revision, deliveryRevision);
 for (const file of review.files) assert.equal(hash(readFileSync(`atlas-review/${file.path}`)), file.importedSha256, file.path);

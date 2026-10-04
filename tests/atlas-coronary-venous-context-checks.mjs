@@ -8,6 +8,8 @@ import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
 
 const sourceRevision = '910c553d21529f24d872c4c9e74d59aa7abc464a';
+// Preserve the original teaching/source epoch while tracking the current delivery.
+const deliveryRevision = 'bb4d1766b788d0236cc325eb11a6074d67fec0c7';
 const sourceDir = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const websiteBaseline = 'd661997c0854116e7e320415df9065d6582529e2';
 const websiteBaselineTree = 'ba09c3819384cf4d764040c995880178127726fe';
@@ -103,7 +105,7 @@ for (const mutate of [p => {p.sources[0].sha256 = '0'.repeat(64);}, p => {p.boun
 // Verify the emitted graph and the exact input list, not bundled string presence.
 for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   const folder = `public/atlas-runtime/${name}/`, manifest = json(folder + 'manifest.json');
-  assert.equal(manifest.sourceCommit, sourceRevision, name);
+  assert.equal(manifest.sourceCommit, deliveryRevision, name);
   assert.equal(manifest.patientDataIncluded, false);
   for (const file of manifest.files) {
     if (!file.path.endsWith('.js')) continue;
