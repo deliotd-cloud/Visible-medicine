@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='d6f25010210fd14aa2172605b78fa8cbc1875fb1';
+const revision='05a2e8a26325818675c4b98ab1d9b9c246028a5c';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -30,7 +30,10 @@ test('bounded regional Spread reaches learner and protected review without model
  const shoulderGirdleInputs=['content/shoulder-girdle-arterial-ultrasound-pins.json','content/shoulder-girdle-arterial-ultrasound.ts','lib/shoulder-girdle-arterial-ultrasound.ts'];
  const coronaryContextInputs=['lib/coronary-venous-context.ts','public/models/bodyparts3d/coronary-venous/root-vessel-context.json'];
  const organQuizInputs=['content/thoracoabdominal-organ-quiz-pins.json','content/thoracoabdominal-organ-quiz.ts','lib/thoracoabdominal-organ-quiz.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const pelvicCoreInputs=['content/pelvic-reproductive-core-pins.json','content/pelvic-reproductive-core.ts','lib/pelvic-reproductive-core.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length);assert.deepEqual(review.packages,prior.packages);
+ assert.deepEqual(review.files.filter((f:any)=>pelvicCoreInputs.includes(f.path)).map((f:any)=>f.path).sort(),pelvicCoreInputs);
+ for(const p of pelvicCoreInputs)assert.equal(review.files.find((f:any)=>f.path===p).sourceSha256,sha(sourceAt(p)),`Pelvic core source pin: ${p}`);
  assert.deepEqual(review.files.filter((f:any)=>organQuizInputs.includes(f.path)).map((f:any)=>f.path).sort(),organQuizInputs);
  for(const p of organQuizInputs)assert.equal(review.files.find((f:any)=>f.path===p).sourceSha256,sha(sourceAt(p)),`Organ Quiz source pin: ${p}`);
  assert.deepEqual(review.files.filter((f:any)=>coronaryContextInputs.includes(f.path)).map((f:any)=>f.path).sort(),coronaryContextInputs);
@@ -55,7 +58,9 @@ test('bounded regional Spread reaches learner and protected review without model
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.deepEqual(inputs.filter((f:any)=>pelvicCoreInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:pelvicCoreInputs);
+  for(const f of inputs.filter((f:any)=>pelvicCoreInputs.includes(f.path)))assert.equal(f.sha256,sha(sourceAt(f.path)),`${name}:${f.path}`);
   assert.deepEqual(inputs.filter((f:any)=>organQuizInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:organQuizInputs);
   for(const f of inputs.filter((f:any)=>organQuizInputs.includes(f.path)))assert.equal(f.sha256,sha(sourceAt(f.path)),`${name}:${f.path}`);
   assert.deepEqual(inputs.filter((f:any)=>coronaryContextInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='head-neck'?coronaryContextInputs:[]);

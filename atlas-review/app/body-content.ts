@@ -80,6 +80,7 @@ import { trunkMuscleLesson } from '../lib/trunk-curriculum';
 import { orbitalNerveLesson } from '../lib/orbital-nerve-curriculum';
 import { centralNeuroLesson } from '../lib/central-neuro-curriculum';
 import { organLesson } from '../lib/organ-curriculum';
+import { pelvicReproductiveCoreLesson } from '../lib/pelvic-reproductive-core';
 import { coreOrganFunctionLesson } from '../lib/core-organ-function';
 import { majorOrganFunctionLesson } from '../lib/major-organ-function';
 import { connectiveLesson } from '../lib/connective-curriculum';
@@ -612,6 +613,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (coreOrganFunction) return coreOrganFunction;
   const majorOrganFunction = majorOrganFunctionLesson(s, tab);
   if (majorOrganFunction) return majorOrganFunction;
+  const pelvicReproductiveCore = pelvicReproductiveCoreLesson(s, tab);
+  if (pelvicReproductiveCore) return pelvicReproductiveCore;
   const organ = organLesson(s, tab);
   if (organ) return organ;
   const connective = connectiveLesson(s, tab);

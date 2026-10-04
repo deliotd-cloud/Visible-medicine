@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "d6f25010210fd14aa2172605b78fa8cbc1875fb1",
-  "sha256": "ffd917cee4c1417492a18472a04cdd5d54a24d0a1b31ab95fa389a63b9b55605",
+  "sourceCommit": "05a2e8a26325818675c4b98ab1d9b9c246028a5c",
+  "sha256": "d7450642986ab4a3125126b3c0f3f2f7e0383b567c163c1b115a66a70fa232c2",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -124,7 +124,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "7149f42ce530695bef02d63205e12da9b0dd618d5c75dd8e41fd766fe837d33d"
+      "sha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -744,7 +744,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "692cd06acc54a9c12268d84722ced2b097351fb5de0c312e3ae2866225e6910c"
+      "sha256": "c2e050ede8fc11ecca5d47b3ac79de53c94c0162912ef608dddb07433eda6cfb"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1629,6 +1629,14 @@
     {
       "path": "atlas-review/content/pelvic-organ-quiz.ts",
       "sha256": "73a13609bad4ba553dcc37132400d11c18e7dd99a9f9ad4794ddc8c80ded0982"
+    },
+    {
+      "path": "atlas-review/content/pelvic-reproductive-core-pins.json",
+      "sha256": "fc1759b856c6172cb4beb6c772135999e184f627009e7308cd98cd2cd07350d1"
+    },
+    {
+      "path": "atlas-review/content/pelvic-reproductive-core.ts",
+      "sha256": "4f41357b407713f265b80d747b25aacb95ec206cdd6a0221747cadd08b270c80"
     },
     {
       "path": "atlas-review/content/pelvic-urethral-study.ts",
@@ -3443,6 +3451,10 @@
       "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
     },
     {
+      "path": "atlas-review/lib/pelvic-reproductive-core.ts",
+      "sha256": "da04fc4d2801e3ba4f6492e1b81aec991e124455b8182f9fe91e2e08e6f5a529"
+    },
+    {
       "path": "atlas-review/lib/pelvic-ring-tour.ts",
       "sha256": "6e73d09d97c75f9334146e28690205063f51f165b5a8071bec85e7e27cb835ea"
     },
@@ -4296,7 +4308,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "d5de9322f795ddff0175d69e281001688c5d4d5ea0efb04253a13aabfef1d68f"
+      "sha256": "2830ea2d435adf22f5cd47c3bb330cd2654b8573c38ba184b02608789b03f532"
     }
   ]
 }

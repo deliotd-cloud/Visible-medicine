@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "7149f42ce530695bef02d63205e12da9b0dd618d5c75dd8e41fd766fe837d33d"
+    "sha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1482,6 +1482,14 @@
   {
     "path": "content/pelvic-organ-quiz.ts",
     "sha256": "73a13609bad4ba553dcc37132400d11c18e7dd99a9f9ad4794ddc8c80ded0982"
+  },
+  {
+    "path": "content/pelvic-reproductive-core-pins.json",
+    "sha256": "fc1759b856c6172cb4beb6c772135999e184f627009e7308cd98cd2cd07350d1"
+  },
+  {
+    "path": "content/pelvic-reproductive-core.ts",
+    "sha256": "4f41357b407713f265b80d747b25aacb95ec206cdd6a0221747cadd08b270c80"
   },
   {
     "path": "content/pelvic-urethral-study.ts",
@@ -3290,6 +3298,10 @@
   {
     "path": "lib/pelvic-organ-reasoning.ts",
     "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
+  },
+  {
+    "path": "lib/pelvic-reproductive-core.ts",
+    "sha256": "da04fc4d2801e3ba4f6492e1b81aec991e124455b8182f9fe91e2e08e6f5a529"
   },
   {
     "path": "lib/pelvic-ring-tour.ts",

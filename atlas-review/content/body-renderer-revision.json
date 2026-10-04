@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "7149f42ce530695bef02d63205e12da9b0dd618d5c75dd8e41fd766fe837d33d"
+      "sha256": "dc7ecc20d14d9b69ae6fd32ea8ce2e01540c3e5330caf81eaa3e363a1ae12828"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1471,6 +1471,14 @@
     {
       "path": "content/pelvic-organ-quiz.ts",
       "sha256": "73a13609bad4ba553dcc37132400d11c18e7dd99a9f9ad4794ddc8c80ded0982"
+    },
+    {
+      "path": "content/pelvic-reproductive-core-pins.json",
+      "sha256": "fc1759b856c6172cb4beb6c772135999e184f627009e7308cd98cd2cd07350d1"
+    },
+    {
+      "path": "content/pelvic-reproductive-core.ts",
+      "sha256": "4f41357b407713f265b80d747b25aacb95ec206cdd6a0221747cadd08b270c80"
     },
     {
       "path": "content/pelvic-urethral-study.ts",
@@ -3197,6 +3205,10 @@
       "sha256": "f951d93412bcc797afabef89ca1d3ea7a0a6716a15493b9b9eabebb292487824"
     },
     {
+      "path": "lib/pelvic-reproductive-core.ts",
+      "sha256": "da04fc4d2801e3ba4f6492e1b81aec991e124455b8182f9fe91e2e08e6f5a529"
+    },
+    {
       "path": "lib/pelvic-ring-tour.ts",
       "sha256": "6e73d09d97c75f9334146e28690205063f51f165b5a8071bec85e7e27cb835ea"
     },
@@ -3758,7 +3770,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b5cb7eb1a933e9b318b5e61004a9361819cba5fda2e73ae5772f3fa2ee3b10a8"
+      "sha256": "c17fbbd14bf024015af0ee77e871426a4d6041e3d92f738f2858ed1c93ede29d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -3981,7 +3993,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6721879a948b8f637029fe7785a168ae79d49a0bee79d1c5f679b15ecfa81006",
-  "sourceRendererSha256": "72482e55c2f29e733d12d70d49beb5793f47f3e790bf230c26e7bfab149c8cd3",
-  "websiteIntegrationSha256": "ffd917cee4c1417492a18472a04cdd5d54a24d0a1b31ab95fa389a63b9b55605"
+  "sha256": "61affd847df8ea99068c13328829c08cb7db8aaffb3aee07d9ee356b1371dbe2",
+  "sourceRendererSha256": "33206ef3a282ac293b4a2c7566bb6761a5f81a15b9ae9893f23eb104c6779dc9",
+  "websiteIntegrationSha256": "d7450642986ab4a3125126b3c0f3f2f7e0383b567c163c1b115a66a70fa232c2"
 }
