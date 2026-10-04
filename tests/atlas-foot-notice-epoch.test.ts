@@ -12,11 +12,31 @@ const saved = (path: string) => execFileSync('git', ['show', `${preFootWebsiteEp
   maxBuffer: 32e6, windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
 });
 const notice = 'LICENSES/THIRD_PARTY_NOTICES.md';
-const handSourceRevision = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
+const currentSourceRevision = 'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb';
+const priorSourceRevision = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
-const handSourceNoticeBytes = execFileSync('git', ['show', `${handSourceRevision}:LICENSES/THIRD_PARTY_NOTICES.md`], {
+const sourceAt = (revision: string) => execFileSync('git', ['show', `${revision}:${notice}`], {
   cwd: atlasSource, maxBuffer: 32e6, windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
 });
+const currentSourceNoticeBytes = sourceAt(currentSourceRevision);
+const priorSourceNoticeBytes = sourceAt(priorSourceRevision);
+const title = Buffer.from('# Third-party notices\n\n');
+const toeHeading = Buffer.from('## Toe-phalanx ultrasound teaching (4 October 2026)\n');
+const nextHeading = Buffer.from('## Deep-brain teaching (3 October 2026)\n');
+const toeSectionSha256 = '93999b558889cd65f4edf95b7903b90b35a3a6a5a403a8abdb253e02feaf7e78';
+
+function withoutToeNotice(bytes: Buffer): Buffer {
+  assert.deepEqual(bytes.subarray(0, title.length), title, 'Source notice title changed');
+  const start = bytes.indexOf(toeHeading);
+  assert.equal(start, title.length, 'Toe notice missing or moved');
+  assert.equal(bytes.indexOf(toeHeading, start + toeHeading.length), -1, 'Duplicate toe notice');
+  const end = bytes.indexOf(nextHeading, start + toeHeading.length);
+  assert(end > start, 'Toe notice boundary missing');
+  assert.equal(sha(bytes.subarray(start, end)), toeSectionSha256, 'Toe notice changed');
+  const recovered = Buffer.concat([bytes.subarray(0, start), bytes.subarray(end)]);
+  assert.deepEqual(recovered, priorSourceNoticeBytes, 'Complete pre-toe notice changed');
+  return recovered;
+}
 
 test('foot notice is one exact terminal appendix to the complete pre-foot epoch', () => {
   const foot = sourceFootNoticeBytes.toString();
@@ -29,28 +49,35 @@ test('foot notice is one exact terminal appendix to the complete pre-foot epoch'
   assert.throws(() => withoutFootNotice(foot.slice(0, -20)), /Altered or incomplete foot appendix/);
   assert.throws(() => withoutFootNotice('x' + foot), /Altered or moved preceding notice/);
   const current = readFileSync('atlas-review/' + notice);
-  assert.deepEqual(current, handSourceNoticeBytes, 'Review imports exact committed current Atlas notice bytes');
-  assert.deepEqual(current.subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, 'Complete foot epoch retained as current prefix');
-  assert.match(current.subarray(sourceFootNoticeBytes.length).toString(), /^\n## Hand-bone ultrasound surface orientation — 4 October 2026\n/);
+  assert.deepEqual(current, currentSourceNoticeBytes, 'Review imports exact committed current Atlas notice bytes');
+  const prior = withoutToeNotice(current);
+  assert.deepEqual(prior.subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, 'Complete foot epoch retained after toe section');
+  assert.match(prior.subarray(sourceFootNoticeBytes.length).toString(), /^\n## Hand-bone ultrasound surface orientation — 4 October 2026\n/);
+  const changed = Buffer.from(current);
+  changed[title.length + toeHeading.length + 10] ^= 1;
+  assert.throws(() => withoutToeNotice(changed), /Toe notice changed/);
+  const toeSection = current.subarray(title.length, current.indexOf(nextHeading, title.length));
+  assert.throws(() => withoutToeNotice(Buffer.concat([title, toeSection, toeSection, current.subarray(title.length + toeSection.length)])), /Duplicate toe notice/);
+  assert.throws(() => withoutToeNotice(Buffer.concat([title, current.subarray(title.length + toeSection.length), toeSection])), /Toe notice missing or moved/);
 });
 
 test('four runtimes and protected Review ship source-bound notices with intact dependency notices', () => {
   const review = json('atlas-review/manifest.json');
-  assert.equal(review.revision, handSourceRevision);
+  assert.equal(review.revision, currentSourceRevision);
   const importedNotice = review.files.find((file: { path: string }) => file.path === notice);
   assert(importedNotice);
-  assert.equal(importedNotice.sourceSha256, sha(handSourceNoticeBytes));
+  assert.equal(importedNotice.sourceSha256, sha(currentSourceNoticeBytes));
   assert.equal(importedNotice.importedSha256, sha(readFileSync('atlas-review/' + notice)));
 
   for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
     const base = `public/atlas-runtime/${name}/`;
     const manifest = json(base + 'manifest.json');
-    assert.equal(manifest.sourceCommit, handSourceRevision);
+    assert.equal(manifest.sourceCommit, currentSourceRevision);
     assert.equal(manifest.patientDataIncluded, false);
     assert.equal(manifest.clinicalApproved, false);
     const delivered = readFileSync(base + notice);
-    assert.deepEqual(delivered, handSourceNoticeBytes, `${name}: exact source notice`);
-    assert.deepEqual(delivered.subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, `${name}: foot notice unchanged`);
+    assert.deepEqual(delivered, currentSourceNoticeBytes, `${name}: exact source notice`);
+    assert.deepEqual(withoutToeNotice(delivered).subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, `${name}: foot notice unchanged`);
     const entry = manifest.files.find((file: { path: string }) => file.path === notice);
     assert(entry);
     assert.equal(delivered.length, entry.bytes);
@@ -64,16 +91,16 @@ test('four runtimes and protected Review ship source-bound notices with intact d
 
   const viewerBase = 'public/atlas-review-viewer/';
   const viewer = json(viewerBase + 'manifest.json');
-  assert.equal(viewer.sourceCommit, handSourceRevision);
+  assert.equal(viewer.sourceCommit, currentSourceRevision);
   assert.equal(viewer.personalRecordsIncluded, false);
   const viewerNotice = readFileSync(viewerBase + 'THIRD_PARTY_NOTICES.txt');
   const priorViewerNotice = saved(viewerBase + 'THIRD_PARTY_NOTICES.txt');
   const priorPrefix = Buffer.from(`# Clinical Review third-party notices\n\nAtlas source: 88cea927d48729769b96ad8fe680b0872b7e6687\n\n`);
-  const currentPrefix = Buffer.from(`# Clinical Review third-party notices\n\nAtlas source: ${handSourceRevision}\n\n`);
+  const currentPrefix = Buffer.from(`# Clinical Review third-party notices\n\nAtlas source: ${currentSourceRevision}\n\n`);
   assert.deepEqual(priorViewerNotice.subarray(0, priorPrefix.length), priorPrefix);
   assert.deepEqual(priorViewerNotice.subarray(priorPrefix.length, priorPrefix.length + preFootNoticeBytes.length), preFootNoticeBytes);
   const oldDependencyTail = priorViewerNotice.subarray(priorPrefix.length + preFootNoticeBytes.length);
-  assert.deepEqual(viewerNotice, Buffer.concat([currentPrefix, handSourceNoticeBytes, oldDependencyTail]));
+  assert.deepEqual(viewerNotice, Buffer.concat([currentPrefix, currentSourceNoticeBytes, oldDependencyTail]));
   const entry = viewer.files.find((file: { path: string }) => file.path === 'THIRD_PARTY_NOTICES.txt');
   assert(entry);
   assert.equal(sha(viewerNotice), entry.sha256);

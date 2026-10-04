@@ -7,7 +7,7 @@ import {createHash} from 'node:crypto';
 // embedded browser journey; this gate proves those exact players reach both hosts.
 test('reference-reading pause reaches both learner modules and protected review',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,'a1cb14f05b3070b8553e85e3596f634b2bf36a5d');
+ assert.equal(review.revision,'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb');
  for(const [module,path,sourceHash,handler] of [
   ['shoulder','app/shoulder-tour-player.tsx','0fb1f95ec82c2323b4bc01372fd5e7938c090df8a4b8513f8929c672cfde6740','if(event.currentTarget.open)onReadImaging();'],
   ['head-neck','app/regional-guided-learning.tsx','5dad5eb8047c35766e7168afafcbd40cddd2beb086e20e6d385059858e37ab6b','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],
@@ -16,7 +16,7 @@ test('reference-reading pause reaches both learner modules and protected review'
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const record=review.files.find((f:any)=>f.path===path);assert(record,path);
-  assert.equal(learner.sourceCommit,'a1cb14f05b3070b8553e85e3596f634b2bf36a5d');
+  assert.equal(learner.sourceCommit,'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb');
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,sourceHash);
   assert.equal(record.sourceSha256,sourceHash);
   const imported=readFileSync('atlas-review/'+path);

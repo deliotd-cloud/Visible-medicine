@@ -1,5 +1,23 @@
 # Third-party notices
 
+## Toe-phalanx ultrasound teaching (4 October 2026)
+
+Twenty-eight source-bound selections use five original educational families.
+Reading references are Pistoia et al. (2025), *High-resolution ultrasound of the
+annular pulley system in the toes* ([publisher](https://link.springer.com/article/10.1007/s00256-025-04901-w)),
+Moroni et al. (2022), *The hallucal interphalangeal ossicle*
+([full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938480/)), and the existing
+Hung et al. (2020) forefoot reference. These articles declare
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Le Minor et al. (2016)
+is a factual-only reading link about phalangeal variation; its reuse rights
+are not established and none of its protected material is admitted.
+No article prose, figure, sonogram, dataset or supplementary media is copied.
+Original project wording retains MIT terms; model licences and attribution
+remain unchanged. No asset, dependency, font, service or mandatory fee is added.
+These drafts do not establish image correspondence or clinical acceptance;
+revision-bound radiologist review remains pending. See
+[the scope and reference record](../docs/TOE_BONE_ULTRASOUND.md).
+
 ## Deep-brain teaching (3 October 2026)
 
 Original factual drafts cite Akeret et al. (2022), Postans et al. (online 2019),

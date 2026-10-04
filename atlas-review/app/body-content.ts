@@ -29,6 +29,7 @@ import { suprascapularVesselUltrasoundLesson } from '../lib/suprascapular-vessel
 import { deepBrainCoreLesson } from '../lib/deep-brain-core-teaching';
 import { footSurfaceImagingLesson } from '../lib/foot-surface-imaging';
 import { handBoneUltrasoundLesson } from '../lib/hand-bone-ultrasound';
+import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -272,6 +273,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const toeBoneUltrasound = toeBoneUltrasoundLesson(s, tab);
+  if (toeBoneUltrasound) return toeBoneUltrasound;
   const handBoneUltrasound = handBoneUltrasoundLesson(s, tab);
   if (handBoneUltrasound) return handBoneUltrasound;
   const footSurfaceImaging = footSurfaceImagingLesson(s, tab);

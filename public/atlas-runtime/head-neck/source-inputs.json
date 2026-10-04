@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "103ffe3a6c0b72007ea1a4dc67d8854422402bda73068e1cced12601c994ca8d"
+    "sha256": "e15799c43231e25ffe7f75768fc7f8020b564623c053fb8d126eac6533e93240"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "225dbd04964280aa2a992f39a9f4441a37f50b344867abd9d6c2720eb92aa335"
+    "sha256": "50647b7d129ad7b72bc6996ff11d79d7adc7245face6e30bae50adb3ed0efe05"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1876,6 +1876,14 @@
     "sha256": "d518d47f775d876c802fb804251458e5b72ab328ef2ddbbf2daf5d750684f980"
   },
   {
+    "path": "content/toe-bone-ultrasound-pins.json",
+    "sha256": "3b06f84bf247280b2aa3e605f81197f352814a7dfa88fa4bb5ee59f83574e311"
+  },
+  {
+    "path": "content/toe-bone-ultrasound.ts",
+    "sha256": "e03d516c465c51f93b3016621f58d4f87eaa0611d7f022e28e9f5de37ceeff4c"
+  },
+  {
     "path": "content/tract-plantar-imaging-pins.json",
     "sha256": "9a9ebc2bcba1c77914492012642ec3046f365e7a407631b1ddb4ed4e7aa5f68b"
   },
@@ -3650,6 +3658,10 @@
   {
     "path": "lib/tissue-picking.ts",
     "sha256": "d8687a5538d6721a64928065df70b4a2b454dc478929a3ef1e67d8118c2628fd"
+  },
+  {
+    "path": "lib/toe-bone-ultrasound.ts",
+    "sha256": "4248c9b9eb1f8151bddbddfa7821e54bad055d7cf114a6ec13e53fbc99ce22b1"
   },
   {
     "path": "lib/tour-camera.ts",

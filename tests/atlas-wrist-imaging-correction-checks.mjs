@@ -1,33 +1,32 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
-import {build} from 'esbuild';
 import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const websiteBaseline = '0ffdb0ad6e0b729a4161f3a282389cc1daef1ce8';
 const sourceBaseline = '90191b8b236bfed00db7c424dbacde915920460d';
 const sourceRevision = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
+const wristWebsiteEpoch = 'fdf1a982c2064786f0de8cc01c5ec895f2227d38';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const tabs = ['ct', 'mri', 'xray'];
 const finalBullet = 'Return separation to zero before comparing source wrist relationships. Cutaway and Explode do not generate acquired scan slices, tissue signal or diagnostic measurements.';
 const hash = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const old = path => execFileSync('git', ['show', `${websiteBaseline}:${path}`], {maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}});
+const admitted = path => execFileSync('git', ['show', `${wristWebsiteEpoch}:${path}`], {maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}});
 const sourceAt = path => execFileSync('git', ['show', `${sourceRevision}:${path}`], {cwd: atlasSource, maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}});
 const common = "export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before = await atlasExactGitApi(websiteBaseline, common);
-const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/wrist-imaging';export * from './atlas-review/content/wrist-imaging-concepts';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
-const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const now = await atlasExactGitApi(wristWebsiteEpoch, common + "export * from './atlas-review/lib/wrist-imaging';export * from './atlas-review/content/wrist-imaging-concepts';");
 const pins = JSON.parse(sourceAt('content/wrist-imaging-correction-pins.json'));
 const transition = JSON.parse(sourceAt('content/wrist-imaging-correction.transition.json'));
-const wristPins = JSON.parse(readFileSync('atlas-review/content/wrist-imaging-pins.json'));
+const wristPins = JSON.parse(admitted('atlas-review/content/wrist-imaging-pins.json'));
 assert.equal(hash(pins), '15dfbad1c4484cfb90962ee158c2f12fd113f73edbd2ddb6999f79708668f343');
 assert.equal(hash(transition), '74b600dd3a73ac6258c026289fe629f41b16956295a8a73f2d2775867f51abd7');
 assert.equal(pins.baseline, sourceBaseline);
 assert.equal(transition.baseline, sourceBaseline);
 assert.equal(transition.sourcePinsHash, hash(pins));
-assert.deepEqual(readFileSync('atlas-review/content/wrist-imaging-pins.json'), sourceAt('content/wrist-imaging-pins.json'));
+assert.deepEqual(admitted('atlas-review/content/wrist-imaging-pins.json'), sourceAt('content/wrist-imaging-pins.json'));
 assert.equal(wristPins.entries.length, 16);
 assert.equal(pins.entries.length, 16);
 assert.equal(transition.entries.length, 48);
@@ -40,7 +39,7 @@ for (const entry of wristPins.entries) {
 }
 assert.deepEqual(pins.entries.map(entry => entry.identity.name).sort(), ['Left', 'Right'].flatMap(side => ['capitate', 'hamate', 'lunate', 'pisiform', 'scaphoid', 'trapezium', 'trapezoid', 'triquetral'].map(bone => `${side} ${bone}`)).sort());
 
-const sourceCatalog = JSON.parse(readFileSync('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
+const sourceCatalog = JSON.parse(admitted('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
 const catalog = now.bodyDisplayCatalog(sourceCatalog);
 assert.equal(catalog.structures.length, 1104);
 assert.equal(catalog.bundles.length, 109);
@@ -193,16 +192,16 @@ for (const structure of catalog.structures) {
 }
 assert.equal(worksheets, 16);
 for (const bundle of catalog.bundles) {
-  const path = `public/atlas-runtime/head-neck${bundle.url.split('?')[0]}`, bytes = readFileSync(path);
+  const path = `public/atlas-runtime/head-neck${bundle.url.split('?')[0]}`, bytes = admitted(path);
   assert.equal(bytes.length, bundle.bytes);
   assert.equal(hash(bytes), bundle.sha256);
   assert.deepEqual(bytes, old(path));
 }
 for (const path of ['package-lock.json', 'atlas-review/app/body-explorer.tsx', 'atlas-review/lib/imaging-sync.ts', 'atlas-review/lib/didanix-atlas-adapter.ts', 'atlas-review/lib/independent-study-links.ts'])
-  assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
-const review = JSON.parse(readFileSync('atlas-review/manifest.json'));
+  assert.equal(admitted(path).toString().replaceAll('\r\n', '\n'), old(path).toString().replaceAll('\r\n', '\n'), path);
+const review = JSON.parse(admitted('atlas-review/manifest.json'));
 assert.equal(review.revision, sourceRevision);
-for (const file of review.files) assert.equal(hash(readFileSync(`atlas-review/${file.path}`)), file.importedSha256, file.path);
+for (const file of review.files) assert.equal(hash(admitted(`atlas-review/${file.path}`)), file.importedSha256, file.path);
 for (const path of ['lib/wrist-imaging.ts', 'content/wrist-imaging-concepts.ts', 'content/wrist-imaging-pins.json']) {
   const file = review.files.find(item => item.path === path);
   assert(file, path);
@@ -210,18 +209,18 @@ for (const path of ['lib/wrist-imaging.ts', 'content/wrist-imaging-concepts.ts',
 }
 assert(!review.files.some(file => file.path === 'content/wrist-imaging-correction-pins.json' || file.path === 'content/wrist-imaging-correction.transition.json'));
 for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
-  const base = `public/atlas-runtime/${name}/`, manifest = JSON.parse(readFileSync(`${base}manifest.json`));
+  const base = `public/atlas-runtime/${name}/`, manifest = JSON.parse(admitted(`${base}manifest.json`));
   assert.equal(manifest.sourceCommit, sourceRevision);
   assert.equal(manifest.patientDataIncluded, false);
   assert.equal(manifest.clinicalApproved, false);
   for (const file of manifest.files) {
-    const bytes = readFileSync(base + file.path);
+    const bytes = admitted(base + file.path);
     assert.equal(bytes.length, file.bytes);
     assert.equal(hash(bytes), file.sha256);
   }
   const previous = JSON.parse(old(`${base}manifest.json`));
   assert.deepEqual(manifest.files.filter(file => file.path.startsWith('models/')), previous.files.filter(file => file.path.startsWith('models/')));
-  const inputs = JSON.parse(readFileSync(`${base}source-inputs.json`));
+  const inputs = JSON.parse(admitted(`${base}source-inputs.json`));
   for (const path of ['lib/wrist-imaging.ts', 'content/wrist-imaging-concepts.ts', 'content/wrist-imaging-pins.json']) {
     const actual = inputs.find(file => file.path === path), imported = review.files.find(file => file.path === path);
     assert.equal(Boolean(actual), name === 'head-neck' || name === 'shoulder', `${name}:${path}`);
@@ -229,7 +228,7 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   }
   assert(!inputs.some(file => file.path.startsWith('content/wrist-imaging-correction.')));
   if (name === 'head-neck') {
-    const emitted = emittedTeaching(base, manifest.files);
+    const emitted = emittedTeaching(base, manifest.files, false, admitted);
     for (const entry of pins.entries) for (const tab of tabs) {
       const lesson = now.wristImagingLesson(entry.identity, tab);
       for (const value of [entry.identity.id, lesson.body, ...lesson.bullets, lesson.note, ...lesson.citations])
@@ -237,13 +236,13 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
     }
   }
 }
-const reviewBase = 'public/atlas-review-viewer/', reviewManifest = JSON.parse(readFileSync(`${reviewBase}manifest.json`));
+const reviewBase = 'public/atlas-review-viewer/', reviewManifest = JSON.parse(admitted(`${reviewBase}manifest.json`));
 assert.equal(reviewManifest.sourceCommit, sourceRevision);
 assert.equal(reviewManifest.personalRecordsIncluded, false);
 assert.equal(reviewManifest.mode, 'production');
 assert.equal(reviewManifest.websiteIntegrationSha256, review.websiteIntegrationSha256);
-for (const file of reviewManifest.files) assert.equal(hash(readFileSync(reviewBase + file.path)), file.sha256, `review:${file.path}`);
-const emittedReview = emittedTeaching(reviewBase, reviewManifest.files, true);
+for (const file of reviewManifest.files) assert.equal(hash(admitted(reviewBase + file.path)), file.sha256, `review:${file.path}`);
+const emittedReview = emittedTeaching(reviewBase, reviewManifest.files, true, admitted);
 for (const entry of pins.entries) for (const tab of tabs) {
   const lesson = now.wristImagingLesson(entry.identity, tab);
   for (const value of [entry.identity.id, lesson.body, ...lesson.bullets, lesson.note, ...lesson.citations])
