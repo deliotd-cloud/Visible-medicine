@@ -7,7 +7,7 @@ import {build} from 'esbuild';
 import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 
-const revision='90191b8b236bfed00db7c424dbacde915920460d';
+const revision='a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});

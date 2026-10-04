@@ -1,5 +1,5 @@
 {
-  "revision": "90191b8b236bfed00db7c424dbacde915920460d",
+  "revision": "a1cb14f05b3070b8553e85e3596f634b2bf36a5d",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -1823,8 +1823,8 @@
     },
     {
       "path": "lib/wrist-imaging.ts",
-      "sourceSha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4",
-      "importedSha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4"
+      "sourceSha256": "6d9ad1c8da550f2b55f2652f15cb00759f8e25abf9166368e760fedff8f16cef",
+      "importedSha256": "6d9ad1c8da550f2b55f2652f15cb00759f8e25abf9166368e760fedff8f16cef"
     },
     {
       "path": "content/wrist-imaging-pins.json",
@@ -1833,8 +1833,8 @@
     },
     {
       "path": "content/wrist-imaging-concepts.ts",
-      "sourceSha256": "977984f68e2bf0eba819fa4b5332f9220dae56530311988a4a5a4b3f2c91f2e8",
-      "importedSha256": "977984f68e2bf0eba819fa4b5332f9220dae56530311988a4a5a4b3f2c91f2e8"
+      "sourceSha256": "501720d5408bbb8732542b2ed0b88e9b101d885d7a222bfca260b8b3e4f57898",
+      "importedSha256": "501720d5408bbb8732542b2ed0b88e9b101d885d7a222bfca260b8b3e4f57898"
     },
     {
       "path": "lib/deep-venous-clinical.ts",
@@ -3353,8 +3353,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "a40805d86f2261db0f32554d0c623343bcb1913b2d0900b6f71ea3ccba6bf747",
-      "importedSha256": "036922d13593af286c232c0cf5358fccef34630e17b1b4615d65f7b55284b6be"
+      "sourceSha256": "d9cd5ed2047900b56ccef1558bdfb9cf125b1cd171b27228940872137d322e2e",
+      "importedSha256": "2d5a4c3c3aecce2162a181e81b08582570216543fe58e21c4449422f7f12a241"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3714,7 +3714,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "053c5153a0482a61f2b9825df331f80f0681217846b2f114e6ae98127aaa41d4",
-      "importedSha256": "cc9303b3d823c65e88eca173a5ce7ba2d4614d6f204eb2c660a3c991d3d266f0"
+      "importedSha256": "dd0ea5b1cdf223b2f70566722b61a599c244ced3a7edeb053dc5ab2b7f2e4cc5"
     },
     {
       "path": "app/review/review.css",
@@ -3748,8 +3748,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "5d1e23beb809cd49f6d279386298b8b7ff822b100676d7794a10dae9009b23f5",
-      "importedSha256": "5d1e23beb809cd49f6d279386298b8b7ff822b100676d7794a10dae9009b23f5"
+      "sourceSha256": "0b265b860722bfa0d56d0a601bf6c651075467f4b754a07772c243ee181c6fc7",
+      "importedSha256": "0b265b860722bfa0d56d0a601bf6c651075467f4b754a07772c243ee181c6fc7"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5198,5 +5198,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "23d6f5357246721a6b5da1901b510d20edbc24755ebd3121b5a903a800acf3e3"
+  "websiteIntegrationSha256": "541f8ad37f0598f1f64b9e9684415982cd2507f2c01a2a1a112dc658a0f07479"
 }

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "90191b8b236bfed00db7c424dbacde915920460d",
-  "sha256": "23d6f5357246721a6b5da1901b510d20edbc24755ebd3121b5a903a800acf3e3",
+  "sourceCommit": "a1cb14f05b3070b8553e85e3596f634b2bf36a5d",
+  "sha256": "541f8ad37f0598f1f64b9e9684415982cd2507f2c01a2a1a112dc658a0f07479",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -736,7 +736,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "5d1e23beb809cd49f6d279386298b8b7ff822b100676d7794a10dae9009b23f5"
+      "sha256": "0b265b860722bfa0d56d0a601bf6c651075467f4b754a07772c243ee181c6fc7"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2092,7 +2092,7 @@
     },
     {
       "path": "atlas-review/content/wrist-imaging-concepts.ts",
-      "sha256": "977984f68e2bf0eba819fa4b5332f9220dae56530311988a4a5a4b3f2c91f2e8"
+      "sha256": "501720d5408bbb8732542b2ed0b88e9b101d885d7a222bfca260b8b3e4f57898"
     },
     {
       "path": "atlas-review/content/wrist-imaging-pins.json",
@@ -3960,7 +3960,7 @@
     },
     {
       "path": "atlas-review/lib/wrist-imaging.ts",
-      "sha256": "6d61c1e5e947e5d9f4067c40d9b97e996b40dbc07999cc773db43be471f58cf4"
+      "sha256": "6d9ad1c8da550f2b55f2652f15cb00759f8e25abf9166368e760fedff8f16cef"
     },
     {
       "path": "atlas-review/lib/wrist-ultrasound.ts",
@@ -4228,7 +4228,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "06eba5948e8c7dc9669992b43a964d768bab581a19cd97b6d326cbebe7ec2a01"
+      "sha256": "72e315d25ad07638f18d02e240d8254948219cef7d2e43453e1eafcf0866a8ea"
     }
   ]
 }

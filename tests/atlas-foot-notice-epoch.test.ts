@@ -12,7 +12,7 @@ const saved = (path: string) => execFileSync('git', ['show', `${preFootWebsiteEp
   maxBuffer: 32e6, windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
 });
 const notice = 'LICENSES/THIRD_PARTY_NOTICES.md';
-const handSourceRevision = '90191b8b236bfed00db7c424dbacde915920460d';
+const handSourceRevision = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const handSourceNoticeBytes = execFileSync('git', ['show', `${handSourceRevision}:LICENSES/THIRD_PARTY_NOTICES.md`], {
   cwd: atlasSource, maxBuffer: 32e6, windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },

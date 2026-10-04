@@ -7,6 +7,12 @@ export const wristImagingGroups = {
   centralDistal: ["FMA24446", "FMA24447", "FMA24448", "FMA24449"],
 } as const;
 export type WristImagingGroup = keyof typeof wristImagingGroups;
+export const wristImagingCentralGroups = {
+  capitate: ["FMA24446", "FMA24447"],
+  hamate: ["FMA24448", "FMA24449"],
+} as const;
+export type WristImagingTopicGroup =
+  Exclude<WristImagingGroup, "centralDistal"> | keyof typeof wristImagingCentralGroups;
 export type WristImagingModality = "ct" | "mri" | "xray";
 export const wristImagingReferences = {
   radiographs: "https://archive.rsna.org/2014/14011989.html",
@@ -57,7 +63,7 @@ type Topic = {
   references: (keyof typeof wristImagingReferences)[];
 };
 export const wristImagingTopics: Record<
-  WristImagingGroup,
+  WristImagingTopicGroup,
   Record<WristImagingModality, Topic>
 > = {
   scaphoid: {
@@ -164,9 +170,35 @@ export const wristImagingTopics: Record<
       references: ["trapezoid"],
     },
   },
-  centralDistal: {
+  capitate: {
     xray: {
-      body: "Check the central capitate separately from the ulnar hamate. The palmar hamate hook can be obscured by overlap on standard wrist projections.",
+      body: "Trace the central capitate from its proximal head beneath the lunate toward its distal relationship with the third metacarpal. Projected overlap can obscure which visible contour belongs to the capitate.",
+      bullets: [
+        "Keep the capitate separate from the ulnar hamate when reading a real wrist projection.",
+        "A model camera preset is not a validated radiographic projection or diagnostic positioning test.",
+      ],
+      references: ["radiographs", "sports", "nonscaphoid"],
+    },
+    ct: {
+      body: "Use multiplanar CT sections to follow the capitate head through its neck into the body and distinguish its cortical boundary from adjacent carpal surfaces. A single projected contour cannot show that full relationship.",
+      bullets: [
+        "Compare the capitate with the lunate proximally and neighbouring distal-row bones without assigning an adjacent finding to it.",
+        "The static source surface has no CT voxels, internal marrow detail, fracture line or validated articular measurement.",
+      ],
+      references: ["ctOrientation", "nonscaphoid"],
+    },
+    mri: {
+      body: "MRI can add capitate marrow and surrounding soft-tissue context to its outer cortical outline. Read signal in the acquired study and its planes; the selected bone surface contains no MR signal.",
+      bullets: [
+        "Relate the capitate head, neck and body to adjacent bones without treating their marrow or soft-tissue findings as one structure.",
+        "No marrow abnormality, cartilage condition or ligament integrity is established by this static capitate mesh.",
+      ],
+      references: ["sports", "nonscaphoid"],
+    },
+  },
+  hamate: {
+    xray: {
+      body: "Identify the hamate in the ulnar distal row. Its palmar hook can be obscured by overlap on standard wrist projections, so keep the hook and body distinct when reading a real study.",
       bullets: [
         "A hook abnormality can be missed despite an apparently intact hamate body.",
         "A model camera preset is not a validated carpal-tunnel projection or a diagnostic positioning test.",
@@ -182,10 +214,10 @@ export const wristImagingTopics: Record<
       references: ["ctOrientation", "nonscaphoid", "hamate"],
     },
     mri: {
-      body: "MRI provides marrow and soft-tissue context around the capitate and hamate. Signal around the hook is not equivalent to a fracture demonstrated in its cortex.",
+      body: "MRI provides marrow and soft-tissue context around the hamate body and palmar hook. Signal around the hook is not equivalent to a fracture demonstrated in its cortex.",
       bullets: [
-        "Review adjacent findings in a real study without assuming they belong to the same bone.",
-        "No median/ulnar nerve course, tendon lesion or carpal-tunnel contents are validated by selecting these bone surfaces.",
+        "Review adjacent carpal findings in a real study without assigning them to the hamate.",
+        "No median/ulnar nerve course, tendon lesion or carpal-tunnel contents are validated by selecting this bone surface.",
       ],
       references: ["sports", "hamate"],
     },

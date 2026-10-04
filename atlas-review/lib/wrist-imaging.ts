@@ -3,7 +3,9 @@ import {
   wristImagingTopics,
   wristImagingReferences,
   wristImagingSelectionNotes,
+  wristImagingCentralGroups,
   type WristImagingGroup,
+  type WristImagingTopicGroup,
   type WristImagingModality,
 } from "../content/wrist-imaging-concepts";
 import type { ContentTab } from "../app/anatomy-data";
@@ -29,6 +31,16 @@ const bound = new Map(
   ]),
 );
 const names = { ct: "CT", mri: "MRI", xray: "X-ray" };
+// Resolve a teaching family only after full-record admission below. The original
+// source admission groups/pins are immutable; a matching name/FMA alone is never
+// sufficient to obtain a lesson.
+const topicGroup = (group: WristImagingGroup, fmaId: string): WristImagingTopicGroup | undefined => {
+  if (group !== "centralDistal") return group;
+  for (const [family, ids] of Object.entries(wristImagingCentralGroups)) {
+    if ((ids as readonly string[]).includes(fmaId)) return family as WristImagingTopicGroup;
+  }
+  return undefined;
+};
 
 /** Full-record admission, not a name/FMA fallback or a patient-image mapping. */
 export function wristImagingLesson(
@@ -38,8 +50,10 @@ export function wristImagingLesson(
   if (!["ct", "mri", "xray"].includes(tab)) return undefined;
   const match = bound.get(s.id);
   if (!match || canonical(s) !== match.signature) return undefined;
+  const group = topicGroup(match.group, s.fmaId);
+  if (!group) return undefined;
   const modality = tab as WristImagingModality,
-    value = wristImagingTopics[match.group][modality];
+    value = wristImagingTopics[group][modality];
   const selection = wristImagingSelectionNotes.find((n) =>
     n.fmaIds.includes(s.fmaId),
   );
@@ -51,7 +65,7 @@ export function wristImagingLesson(
     bullets: [
       selection.note,
       ...value.bullets,
-      "Return separation to zero before comparing source relationswrists. Cutaway and Explode do not generate acquired scan slices, tissue signal or diagnostic measurements.",
+      "Return separation to zero before comparing source wrist relationships. Cutaway and Explode do not generate acquired scan slices, tissue signal or diagnostic measurements.",
     ],
     note: "Independent anatomy/radiology review pending. No patient images, scan registration or paid-lecture access. Confirm the actual patient, side, region, image orientation and series before comparison. This teaching does not select an examination or provide diagnosis, treatment or procedural planning.",
     citations: [
