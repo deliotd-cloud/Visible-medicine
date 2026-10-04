@@ -2,11 +2,11 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
-import { build } from 'esbuild';
 import { atlasExactGitApi } from './atlas-exact-git-api.mjs';
 
 const sourceDir = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const websiteBaseline = 'ec85edb86bb34c92c66e2f310da09904f27ea7c4';
+const geometryWebsiteEpoch = '77ac93cd45a6b7195f37b9122e7a526f6d547acd';
 const json = path => JSON.parse(readFileSync(path, 'utf8'));
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const review = json('atlas-review/manifest.json');
@@ -54,9 +54,10 @@ export * from './atlas-review/lib/body-review-response';
 export * from './atlas-review/lib/body-review-decisions';
 export * from './atlas-review/lib/body-review-api';
 export {learningResourceKinds,createLearningRegistry} from './atlas-review/lib/learning-resources';`;
-const compiled = await build({ stdin: { contents: entry, resolveDir: process.cwd(), loader: 'ts' },
-  bundle: true, platform: 'node', format: 'esm', write: false });
-const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// The 13/16-item geometry contract belongs to the saved pre-tour website epoch.
+// Current c52 transport and source bytes are checked above; its new teaching
+// revision and tour packets are covered by clinical-review-coronary-tour.test.ts.
+const now = await atlasExactGitApi(geometryWebsiteEpoch, entry);
 const prior = await atlasExactGitApi(websiteBaseline, `export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';
 export {bodyReviewContext} from './atlas-review/lib/body-review-context';`);
 const catalog = now.bodyDisplayCatalog(json('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
@@ -211,5 +212,5 @@ for (const item of all) {
 assert.equal(forgedPackets, 5);
 assert.equal(refusedSaves, 15);
 assert.equal(storageCalls, 0);
-console.log(JSON.stringify({ passed: true, revision, targets: 4, context: 1,
+console.log(JSON.stringify({ passed: true, revision, geometryWebsiteEpoch, targets: 4, context: 1,
   forgedPackets, refusedSaves, storageCalls, clinicalApproval: false }));

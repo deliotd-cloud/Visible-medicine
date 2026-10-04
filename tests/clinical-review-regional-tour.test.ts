@@ -2,13 +2,13 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
-import { build } from 'esbuild';
+import { atlasExactGitApi } from './atlas-exact-git-api.mjs';
 
-test('all thirty regional tours ship complete source-bound review evidence', async () => {
+test('historical 77ac milestone: all thirty regional tours retain complete source-bound review evidence', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'d3d7ef2b22ed5bfe872aa6fa4b54fb69d8747cda');
+  assert.equal(learner.sourceCommit,'c52c9c690d790e4e921bde7ed5a943ef30a95001');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   for(const path of ['lib/hand-venous-tours.ts','lib/lower-venous-tour.ts','lib/regional-tours.ts','lib/tarsal-tour.ts','lib/upper-limb-bone-tour.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','lib/deep-brain-tour.ts','lib/subscapular-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
@@ -16,13 +16,12 @@ test('all thirty regional tours ship complete source-bound review evidence', asy
     assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),file.importedSha256);
   }
   for(const flag of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(learner[flag],false);
-  const result=await build({stdin:{contents:`
+  const api=await atlasExactGitApi('77ac93cd45a6b7195f37b9122e7a526f6d547acd',`
     export * from './atlas-review/lib/regional-tours';
     export * from './atlas-review/lib/body-review-material';
     export * from './atlas-review/lib/body-review-response';
     export * from './atlas-review/lib/body-review-context';
-  `,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
-  const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+  `);
   assert.equal(api.thoraxTour.status,'draft'); assert.equal(api.thoraxTour.steps.length,6);
   assert.equal(api.cervicalSpineTour.status,'draft');assert.equal(api.cervicalSpineTour.steps.length,5);
   assert.equal(api.regionalTourFor('spine').id,'cervical-spine-orientation');
@@ -304,7 +303,7 @@ test('all structure-check hosts deliver the corrected success/retry component',(
     const base=`public/atlas-runtime/${module}/`;
     const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-    assert.equal(manifest.sourceCommit,'d3d7ef2b22ed5bfe872aa6fa4b54fb69d8747cda');
+    assert.equal(manifest.sourceCommit,'c52c9c690d790e4e921bde7ed5a943ef30a95001');
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,review.files.find((f:any)=>f.path===path)?.sourceSha256);
     const js=manifest.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
     for(const text of ['Practise again','Try again','Correct.','Incorrect.']) assert.ok(js.includes(text),module+': '+text);

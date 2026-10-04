@@ -3,20 +3,23 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
-import {build} from 'esbuild';
 import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const websiteBaseline = 'eed504734b845c635f23ee607c270abe34ed17a5';
 const coronaryWebsiteBaseline = 'ec85edb86bb34c92c66e2f310da09904f27ea7c4';
+const coronaryStudyWebsiteEpoch = '77ac93cd45a6b7195f37b9122e7a526f6d547acd';
 const respiratorySourceRevision = '12570b5245dc6a253cbdd73ec4e044c58b81a927';
+const coronaryStudySourceRevision = 'd3d7ef2b22ed5bfe872aa6fa4b54fb69d8747cda';
 const sourceBaseline = 'ae13b8de049671e2cac8dd789a6bfb385f147769';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const sha = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const gitOptions = {maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}};
 const old = path => execFileSync('git', ['show', `${websiteBaseline}:${path}`], gitOptions);
 const preCoronaryFile = path => execFileSync('git', ['show', `${coronaryWebsiteBaseline}:${path}`], gitOptions);
+const studyFile = path => execFileSync('git', ['show', `${coronaryStudyWebsiteEpoch}:${path}`], gitOptions);
 const respiratoryAt = path => execFileSync('git', ['show', `${respiratorySourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
+const studySourceAt = path => execFileSync('git', ['show', `${coronaryStudySourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
 const json = path => JSON.parse(readFileSync(path));
 const review = json('atlas-review/manifest.json');
 const sourceRevision = review.revision;
@@ -30,8 +33,10 @@ const common = "export {bodyLesson,bodyContent} from './atlas-review/app/body-co
 const before = await atlasExactGitApi(websiteBaseline, common);
 const preCoronary = await atlasExactGitApi(coronaryWebsiteBaseline,
   "export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';export {bodyReviewContext} from './atlas-review/lib/body-review-context';");
-const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/respiratory-core-depth';export * from './atlas-review/content/respiratory-core-depth';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
-const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// Preserve the original respiratory and coronary-study Review contract at its
+// exact saved epoch. The current coronary tour import is audited below.
+const now = await atlasExactGitApi(coronaryStudyWebsiteEpoch,
+  common + "export * from './atlas-review/lib/respiratory-core-depth';export * from './atlas-review/content/respiratory-core-depth';");
 const pins = JSON.parse(respiratoryAt('content/respiratory-core-depth-pins.json'));
 const transition = JSON.parse(respiratoryAt('content/respiratory-core-depth.transition.json'));
 assert.equal(pins.baseline, sourceBaseline);
@@ -65,6 +70,8 @@ assert.equal(catalog.structures.length, 1104);
 assert.equal(catalog.bundles.length, 109);
 assert.deepEqual(catalog, before.bodyDisplayCatalog(JSON.parse(old('atlas-review/public/models/bodyparts3d/full-body/catalog.json'))));
 for (const key of ['structures', 'regionalTours', 'reasoningConcepts', 'contentTabs']) assert.deepEqual(now[key], before[key], key);
+assert.equal(now.regionalTours.length, 30);
+assert.equal(now.regionalTours.reduce((count, tour) => count + tour.steps.length, 0), 177);
 assert.deepEqual(preCoronaryArterialStudyProfiles(now.dissectionProfiles), before.dissectionProfiles,
   'Frozen two-focus coronary transition reverses to the full prior recipe set');
 assert.equal(now.contentTabs.length, 9);
@@ -185,7 +192,7 @@ for (const structure of catalog.structures) {
     const coronaryBefore = await preCoronary.bodyReviewMaterial(structure.id);
     const coronaryBeforeContext = await preCoronary.bodyReviewContext(structure.id);
     const coronaryContext = await now.bodyReviewContext(structure.id);
-    assert.equal(coronaryContext.rendererHash, json('atlas-review/content/body-renderer-revision.json').sha256);
+    assert.equal(coronaryContext.rendererHash, JSON.parse(studyFile('atlas-review/content/body-renderer-revision.json')).sha256);
     assert.equal(coronaryBeforeContext.rendererHash, JSON.parse(preCoronaryFile('atlas-review/content/body-renderer-revision.json')).sha256);
     assert.notEqual(coronaryContext.rendererHash, coronaryBeforeContext.rendererHash, 'Saved coronary scene and website integration require renderer re-review');
     assert.equal(current.fingerprints.source, coronaryBefore.fingerprints.source);
@@ -267,12 +274,21 @@ const coronaryAddedPaths = ['content/coronary-arterial-study-pins.json', 'lib/co
 const coronaryChangedInputs = ['app/body-explorer.tsx', 'app/dissection-data.ts',
   'content/body-renderer-revision.json', 'content/body-review-display-pins.json',
   'lib/study-links.ts', 'lib/body-review-material.ts', 'lib/body-review-context.ts'];
-assert.equal(review.files.length, respiratoryReview.files.length + coronaryAddedPaths.length);
-for (const previous of respiratoryReview.files) assert(review.files.some(file => file.path === previous.path), `Retain prior coronary Review input: ${previous.path}`);
-assert.deepEqual(review.files.filter(file => !respiratoryReview.files.some(prior => prior.path === file.path)).map(file => file.path).sort(), [...coronaryAddedPaths].sort());
-assert.deepEqual(review.files.filter(file => respiratoryReview.files.some(prior => prior.path === file.path && prior.sourceSha256 !== file.sourceSha256)).map(file => file.path).sort(), [...coronaryChangedInputs].sort());
-for (const path of [...coronaryAddedPaths, ...coronaryChangedInputs]) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(sourceAt(path)), `Current coronary input: ${path}`);
-for (const path of addedPaths) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(respiratoryAt(path)), `Preserved respiratory input: ${path}`);
+const studyReview = JSON.parse(studyFile('atlas-review/manifest.json'));
+assert.equal(studyReview.files.length, respiratoryReview.files.length + coronaryAddedPaths.length);
+for (const previous of respiratoryReview.files) assert(studyReview.files.some(file => file.path === previous.path), `Retain prior coronary Review input: ${previous.path}`);
+assert.deepEqual(studyReview.files.filter(file => !respiratoryReview.files.some(prior => prior.path === file.path)).map(file => file.path).sort(), [...coronaryAddedPaths].sort());
+assert.deepEqual(studyReview.files.filter(file => respiratoryReview.files.some(prior => prior.path === file.path && prior.sourceSha256 !== file.sourceSha256)).map(file => file.path).sort(), [...coronaryChangedInputs].sort());
+for (const path of [...coronaryAddedPaths, ...coronaryChangedInputs]) assert.equal(studyReview.files.find(file => file.path === path)?.sourceSha256, sha(studySourceAt(path)), `Saved coronary-study input: ${path}`);
+for (const path of addedPaths) assert.equal(studyReview.files.find(file => file.path === path)?.sourceSha256, sha(respiratoryAt(path)), `Preserved respiratory input: ${path}`);
+const tourAddedPaths = ['lib/coronary-arterial-tour.ts'];
+const tourChangedInputs = ['lib/regional-tours.ts', 'content/body-renderer-revision.json', 'content/body-review-display-pins.json'];
+assert.equal(review.files.length, studyReview.files.length + tourAddedPaths.length);
+for (const previous of studyReview.files) assert(review.files.some(file => file.path === previous.path), `Retain pre-tour Review input: ${previous.path}`);
+assert.deepEqual(review.files.filter(file => !studyReview.files.some(prior => prior.path === file.path)).map(file => file.path).sort(), tourAddedPaths);
+assert.deepEqual(review.files.filter(file => studyReview.files.some(prior => prior.path === file.path && prior.sourceSha256 !== file.sourceSha256)).map(file => file.path).sort(), [...tourChangedInputs].sort());
+for (const path of [...tourAddedPaths, ...tourChangedInputs]) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(sourceAt(path)), `Current coronary-tour input: ${path}`);
+for (const path of addedPaths) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(respiratoryAt(path)), `Current respiratory input: ${path}`);
 assert(!review.files.some(file => file.path === 'content/respiratory-core-depth.transition.json'));
 assert(!review.files.some(file => file.path === 'content/coronary-arterial-study.transition.json'));
 for (const file of previousReview.files.filter(file => /^content\/.*-pins\.json$/.test(file.path) && file.path !== 'content/body-review-display-pins.json'))
@@ -288,6 +304,7 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   for (const file of manifest.files) assert.equal(sha(readFileSync(base + file.path)), file.sha256, `${name}:${file.path}`);
   const inputs = json(`${base}source-inputs.json`), previousInputs = JSON.parse(old(`${base}source-inputs.json`));
   const respiratoryInputs = JSON.parse(preCoronaryFile(`${base}source-inputs.json`));
+  const studyInputs = JSON.parse(studyFile(`${base}source-inputs.json`));
   for (const file of previousInputs) assert(inputs.some(item => item.path === file.path), `${name}: retained source input: ${file.path}`);
   assert.deepEqual(respiratoryInputs.filter(file => !previousInputs.some(prior => prior.path === file.path)).map(file => file.path).sort(),
     (name === 'head-neck' || name === 'shoulder' ? [...addedPaths].sort() : []), `${name}: original respiratory additions`);
@@ -296,7 +313,7 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
     assert.equal(Boolean(actual), name === 'head-neck' || name === 'shoulder', `${name}:${path}`);
     if (actual) assert.equal(actual.sha256, sha(sourceAt(path)));
   }
-  assert.deepEqual(inputs.filter(file => !respiratoryInputs.some(prior => prior.path === file.path)).map(file => file.path).sort(),
+  assert.deepEqual(studyInputs.filter(file => !respiratoryInputs.some(prior => prior.path === file.path)).map(file => file.path).sort(),
     (name === 'head-neck' || name === 'shoulder' ? ['content/coronary-arterial-study-pins.json', 'lib/coronary-arterial-study.ts'] : []), `${name}: exact coronary scene additions`);
   // The private worksheet helper belongs to the protected Review import,
   // not the learner scene dependency graph.
@@ -305,6 +322,14 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
     const actual = inputs.find(file => file.path === path);
     assert.equal(Boolean(actual), name === 'head-neck' || name === 'shoulder', `${name}:${path}`);
     if (actual) assert.equal(actual.sha256, sha(sourceAt(path)));
+  }
+  assert.deepEqual(inputs.filter(file => !studyInputs.some(prior => prior.path === file.path)).map(file => file.path),
+    name === 'head-neck' ? tourAddedPaths : [], `${name}: current tour source addition`);
+  assert.deepEqual(inputs.filter(file => studyInputs.some(prior => prior.path === file.path && prior.sha256 !== file.sha256)).map(file => file.path),
+    name === 'head-neck' ? ['lib/regional-tours.ts'] : [], `${name}: current tour source change`);
+  if (name === 'head-neck') {
+    for (const path of [...tourAddedPaths, 'lib/regional-tours.ts'])
+      assert.equal(inputs.find(file => file.path === path)?.sha256, sha(sourceAt(path)), `${name}: ${path}`);
   }
   assert(!inputs.some(file => file.path === 'content/respiratory-core-depth.transition.json'));
   assert(!inputs.some(file => file.path === 'content/coronary-arterial-study.transition.json'));
