@@ -85,7 +85,7 @@
   },
   {
     "path": "app/body-education-link.ts",
-    "sha256": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40"
+    "sha256": "0f10e688694744348ce768232d6d4805f8e20f645767866abed098da0c44ff1e"
   },
   {
     "path": "app/body-explorer.css",
@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "2dad1c22dfec424db6a4cdf578cb4f9cafe6a0e3295f95ed7d3318976aa62dc0"
+    "sha256": "f7042cdbb9a6b6730c45b1e7f9de4d55bbaf5b755ebdc6f0b1dd616cc3cf3453"
   },
   {
     "path": "app/body-scene.tsx",
@@ -244,6 +244,14 @@
     "sha256": "502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744"
   },
   {
+    "path": "app/paused-tour-imaging-link.css",
+    "sha256": "c5ea71b6920776fdc27a08d3d7ea14870fc4c777ff5a28eff4c44c3f8280f032"
+  },
+  {
+    "path": "app/paused-tour-imaging-link.tsx",
+    "sha256": "b617f1c497e18079d65424710bb997291eacde9db059ea38df530d6aba99e83e"
+  },
+  {
     "path": "app/practice-panel-navigation.tsx",
     "sha256": "e02be0b9fe8f12c2b52b27205880ae6a20d12bbf506cf91ce83cc36f352cf808"
   },
@@ -261,7 +269,7 @@
   },
   {
     "path": "app/regional-guided-learning.tsx",
-    "sha256": "5dad5eb8047c35766e7168afafcbd40cddd2beb086e20e6d385059858e37ab6b"
+    "sha256": "74f623f4d0cea33566b40e5278780a31a2618523631dcadbcee86436c35aadeb"
   },
   {
     "path": "app/related-study.tsx",
@@ -361,11 +369,11 @@
   },
   {
     "path": "app/tour-imaging-notes.tsx",
-    "sha256": "c8f877538452e077cbb2906ca451dcfbfc70ae409eb0f677fc5d4b9861a153dc"
+    "sha256": "f6ca24f0d0f00bc2b4fc002d5cc46297181ec8d8d1072aa9c768780f35e0f232"
   },
   {
     "path": "app/tour-quick-check.tsx",
-    "sha256": "7277f66586c2c54d5a7e175da1b5b821599d3f19e64eda4b65cab47adcae49bc"
+    "sha256": "d2386e228d454fac76800ba045e0a3337c90ce30e008c6cff2c88f29062f99f2"
   },
   {
     "path": "app/tour-step-picker.css",
@@ -433,7 +441,7 @@
   },
   {
     "path": "app/whole-body-guided-learning.tsx",
-    "sha256": "3632ccf1b955251eb5781cb052bb8023e82df96fbd991afff4c991655c8f4f78"
+    "sha256": "05a37afb364f0bc578e9ed781ab2fa681fbe28549cc12f04ec6382d86aa270ad"
   },
   {
     "path": "app/workspace-session.ts",
@@ -1597,7 +1605,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "053c5153a0482a61f2b9825df331f80f0681217846b2f114e6ae98127aaa41d4"
+    "sha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2545,7 +2553,7 @@
   },
   {
     "path": "lib/didanix-atlas-adapter.ts",
-    "sha256": "70790616278d53e1f223fb06a1d82a6721d40642e2f6d45cec03c4ac4bfd6e2a"
+    "sha256": "c3b4b125b2467931e557ac1d9088a865e6232cbfc0dd58757909820fd62da569"
   },
   {
     "path": "lib/dissection-guidance.ts",
@@ -3240,6 +3248,10 @@
     "sha256": "ad475405272bc11360d3d9242e2a85d92c58997d8489f3f4fb54119e741cb8f9"
   },
   {
+    "path": "lib/paused-tour-imaging.ts",
+    "sha256": "45874d51d55ad1851d9b672dfb4da6da99f476644d9e1aac4a429b59c23d2ab4"
+  },
+  {
     "path": "lib/pelvic-curriculum.ts",
     "sha256": "15133293e5986e463adc1fca007da3d85e5da435db2986e93cb0f02504aa8e91"
   },
@@ -3401,7 +3413,7 @@
   },
   {
     "path": "lib/root-education-api.ts",
-    "sha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
+    "sha256": "a4b99210c33d5cbfe21ee5d0f850150ccf688f6b2b81c38ae180e1f2c2eaad3c"
   },
   {
     "path": "lib/sca-mca-clinical.ts",

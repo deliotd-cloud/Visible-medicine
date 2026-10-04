@@ -92,6 +92,9 @@ export function connectDidanixEducation({bridge,registry,viewer,scope,onStatus=(
   } catch(error) { try{stopSelection();}finally{registered.dispose();}throw error; }
   report('paused');
   return {
+    /** Abort a superseded conceptual request without changing the viewer's
+     * independent opt-in. Current source/access gates still recheck on reveal. */
+    cancelPending(){cancel();},
     setEnabled(value:boolean){cancel();enabled=value===true && !disposed;if(!enabled)registered.pause();report('paused');},
     /** Re-resolve current rights and revision; return copies, never stale cached matches. */
     choices(){return choices.map(resolve).filter((m):m is ImagingMatch=>m!==null).map(m=>({match:structuredClone(m),destination}));},

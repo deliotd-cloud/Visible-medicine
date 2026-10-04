@@ -8,11 +8,12 @@ import {regionalSpreadMilestoneBytes} from './atlas-lumbar-sacral-history.ts';
 import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 
-const revision='537838f028f15e62a6642e7eb360cbaeea31fa20';
+const revision='bbe33ea6ffff3503ae9cdabc0dd41350cece28cd';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
 const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
+const sourceAt=(p:string)=>execFileSync('git',['show',revision+':'+p],{cwd:'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs',maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
 
 test('bounded regional Spread reaches learner and protected review without model, licence or access changes',async()=>{
  const review=json('atlas-review/manifest.json'),prior=JSON.parse(old('atlas-review/manifest.json').toString());
@@ -24,7 +25,8 @@ test('bounded regional Spread reaches learner and protected review without model
  const handInputs=['content/hand-bone-ultrasound-pins.json','content/hand-bone-ultrasound.ts','lib/hand-bone-ultrasound.ts'];
  const toeInputs=['content/toe-bone-ultrasound-pins.json','content/toe-bone-ultrasound.ts','lib/toe-bone-ultrasound.ts'];
  const midfootInputs=['content/foot-ultrasound-followup-pins.json','content/foot-ultrasound-followup.ts','lib/foot-ultrasound-followup.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const pausedTourInputs=['app/paused-tour-imaging-link.css','app/paused-tour-imaging-link.tsx','lib/paused-tour-imaging.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length);assert.deepEqual(review.packages,prior.packages);
  assert.deepEqual(review.files.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),ultrasoundInputs);
  assert.deepEqual(review.files.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),cranialInputs);
  assert.deepEqual(review.files.filter((f:any)=>suprascapularInputs.includes(f.path)).map((f:any)=>f.path).sort(),suprascapularInputs);
@@ -33,6 +35,8 @@ test('bounded regional Spread reaches learner and protected review without model
  assert.deepEqual(review.files.filter((f:any)=>handInputs.includes(f.path)).map((f:any)=>f.path).sort(),handInputs);
  assert.deepEqual(review.files.filter((f:any)=>toeInputs.includes(f.path)).map((f:any)=>f.path).sort(),toeInputs);
  assert.deepEqual(review.files.filter((f:any)=>midfootInputs.includes(f.path)).map((f:any)=>f.path).sort(),midfootInputs);
+ assert.deepEqual(review.files.filter((f:any)=>pausedTourInputs.includes(f.path)).map((f:any)=>f.path).sort(),pausedTourInputs);
+ for(const p of pausedTourInputs)assert.equal(review.files.find((f:any)=>f.path===p).sourceSha256,sha(sourceAt(p)),`Paused-tour source pin: ${p}`);
  // Preserve the exact Spread epoch; the lumbar regression proves the later delta.
  const spreadEpoch=JSON.parse(regionalSpreadMilestoneBytes('atlas-review/manifest.json').toString());
  assert.deepEqual(spreadEpoch.files.filter((f:any)=>!prior.files.some((p:any)=>p.path===f.path)).map((f:any)=>f.path),['lib/body-spread.ts']);
@@ -41,7 +45,9 @@ test('bounded regional Spread reaches learner and protected review without model
  assert.deepEqual(json('lib/atlas-model-inventory.json').models,JSON.parse(old('lib/atlas-model-inventory.json').toString()).models);
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length)+(name==='head-neck'?pausedTourInputs.length:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.deepEqual(inputs.filter((f:any)=>pausedTourInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='head-neck'?pausedTourInputs:[]);
+  for(const f of inputs.filter((f:any)=>pausedTourInputs.includes(f.path)))assert.equal(f.sha256,sha(sourceAt(f.path)),`${name}:${f.path}`);
   assert.deepEqual(inputs.filter((f:any)=>ultrasoundInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:ultrasoundInputs);
   assert.deepEqual(inputs.filter((f:any)=>cranialInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:cranialInputs);
   assert.deepEqual(inputs.filter((f:any)=>suprascapularInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='lower-limb'?[]:suprascapularInputs);
@@ -150,7 +156,7 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.deepEqual(Object.keys(shoulder.sourceRevisions),Object.keys(spreadShoulder.sourceRevisions));
  const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(shoulder.display);
  assert.deepEqual([...currentDisplay.keys()],[...previousDisplay.keys()]);
- assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),["app/anatomy-scene.tsx","app/scene-label-layer.tsx","lib/screen-label-layout.ts","app/scene-recovery.tsx","app/fitted-camera.tsx","app/shoulder-tour-player.tsx","app/shoulder-tour-player.css"]);
+ assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),["app/anatomy-scene.tsx","app/scene-label-layer.tsx","lib/screen-label-layout.ts","app/scene-recovery.tsx","app/fitted-camera.tsx","app/shoulder-tour-player.tsx","app/shoulder-tour-player.css","app/tour-imaging-notes.tsx"]);
  assert.equal(currentDisplay.get('app/scene-label-layer.tsx'),'04f73a41f631b69164049ea3274959e8e51672a3f97a5a4bf017f00e415cfb7b');
  assert.equal(currentDisplay.get('lib/screen-label-layout.ts'),'87854b4e74d2e98a928a2bd9e8b2450214fa16e7a339036f3838d7d848fe927a');
  assert.equal(currentDisplay.get('app/shoulder-tour-player.tsx'),'0fb1f95ec82c2323b4bc01372fd5e7938c090df8a4b8513f8929c672cfde6740');
@@ -158,6 +164,7 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.equal(currentDisplay.get('app/anatomy-scene.tsx'),'65d63c2027cadef511391e414c3ae33f810f583939f55522c75855c73f437ef9');
  assert.equal(currentDisplay.get('app/scene-recovery.tsx'),'b9f90de58345f2608ed60a5d9f649090a0a83a568d883783d6406dc8dd4291df');
  assert.equal(currentDisplay.get('app/fitted-camera.tsx'),'9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0');
+ assert.equal(currentDisplay.get('app/tour-imaging-notes.tsx'),sha(sourceAt('app/tour-imaging-notes.tsx')));
  for(const [id,tracks] of Object.entries(shoulder.sourceRevisions) as [string,Record<string,string|null>][]){
   assert.equal(tracks.teaching,spreadShoulder.sourceRevisions[id].teaching);
   assert.notEqual(tracks.geometry,spreadShoulder.sourceRevisions[id].geometry);

@@ -89,6 +89,7 @@ import type { NestedImagingTopic } from '@/atlas-review/content/nested-teaching'
 import { bodyLinkEntries } from '@/atlas-review/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
 import { useBodyEducationLink } from './body-education-link';
+import {createPausedTourImaging} from '@/atlas-review/lib/paused-tour-imaging';
 import { ImagingComparisonWorkspace } from './imaging-comparison';
 import {
   dissectionProfiles,
@@ -814,10 +815,18 @@ export default function BodyExplorer({
   });
   const publishSelection = imagingLink.publish;
   const educationAllowedIds = useMemo(() => regionStructures.map(s => s.id), [regionStructures]);
+  const pausedTourImaging = useMemo(() => createPausedTourImaging({
+    entries: linkEntries, allowedIds: educationAllowedIds,
+  }), [linkEntries, educationAllowedIds]);
+  // Subscription owners detach the observer. Suspend, rather than terminally
+  // dispose this memo, so development StrictMode replay remains fail-closed.
+  useEffect(() => () => pausedTourImaging.suspend(), [pausedTourImaging]);
   useBodyEducationLink({
     entries: linkEntries, allowedIds: educationAllowedIds,
     disabled: exam || inlineStudy || guidedLearning, contextKey: `${initialRegion}/${side}`,
     enabled: presentation === 'panel',
+    pausedTour: pausedTourImaging,
+    allowPausedTour: presentation === 'panel' && guidedLearning && !exam && !inlineStudy,
   });
   const select = useCallback(
     (id: string) => {
@@ -1825,7 +1834,7 @@ export default function BodyExplorer({
         </WorkspaceOnly>
         </>}
       </header>
-      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
+      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : <>
       <div className="body-layout" hidden={inlineStudy}>
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>

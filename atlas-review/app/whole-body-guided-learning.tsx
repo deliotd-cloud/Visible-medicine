@@ -5,6 +5,7 @@ import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/atlas
 import {regionalTours} from '@/atlas-review/lib/regional-tours';
 import {nestedGuidedStudyOptions} from '@/atlas-review/lib/nested-guided-learning';
 import type {BodyCatalog} from './body-types';
+import type {PausedTourImaging} from '@/atlas-review/lib/paused-tour-imaging';
 import {RegionalGuidedLearning} from './regional-guided-learning';
 import './whole-body-guided-learning.css';
 
@@ -18,7 +19,7 @@ const EyeLayerView=dynamic(()=>import('./eye-layers').then(module=>module.EyeLay
 const order=['whole-body','head-neck','spine','thorax','abdomen','pelvis','shoulder-arm','forearm','hand','thigh','leg','foot'];
 export const wholeBodyTourOptions=order.flatMap(region=>regionalTours.filter(t=>t.region===region));
 
-export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-body'}:{catalog:BodyCatalog;assetBase?:string;onExit:()=>void;region?:string}) {
+export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-body',pausedImaging}:{catalog:BodyCatalog;assetBase?:string;onExit:()=>void;region?:string;pausedImaging?:PausedTourImaging}) {
   const labelId=useId();
   const regional=region==='whole-body'?wholeBodyTourOptions:wholeBodyTourOptions.filter(t=>t.region===region);
   const nested=nestedGuidedStudyOptions(catalog,region);
@@ -33,7 +34,7 @@ export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-
     <div className="whole-body-tour-picker">
       <span id={labelId}>Tour</span>
       <Select value={tour.id} onValueChange={id=>{
-        if(options.some(t=>t.id===id))setTourId(id as string);
+        if(options.some(t=>t.id===id)&&id!==tour.id){pausedImaging?.suspend();setTourId(id as string);}
       }}>
         <SelectTrigger aria-labelledby={labelId}><SelectValue>{tour.title}</SelectValue></SelectTrigger>
         <SelectContent>{options.map(t=><SelectItem key={t.id} value={t.id}>{t.title}</SelectItem>)}</SelectContent>
@@ -41,7 +42,7 @@ export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-
     </div>
     {/* A new key discards old timers, step, readiness, reading and camera state.
         The next tour waits for its own sources and an explicit Start action. */}
-    {tour.tour ? <RegionalGuidedLearning key={`${tour.id}:${tour.tour.revision}`} catalog={catalog} tour={tour.tour} assetBase={assetBase} onExit={onExit}/>
+    {tour.tour ? <RegionalGuidedLearning key={`${tour.id}:${tour.tour.revision}`} catalog={catalog} tour={tour.tour} assetBase={assetBase} pausedImaging={pausedImaging} onExit={onExit}/>
       : tour.eye ? <div className="whole-body-nested-guidance" key={`${tour.id}:${tour.eye.parentHash}:${tour.eye.sourceHash}:${JSON.stringify(tour.eye.guide)}`}>
         <header><h2>{tour.title}</h2><button type="button" onClick={onExit}>Exit tour</button></header>
         <EyeLayerView parent={tour.eye.parent} educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>

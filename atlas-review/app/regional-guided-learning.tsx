@@ -1,5 +1,5 @@
 'use client';
-import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
+import {useCallback,useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import dynamic from 'next/dynamic';
 import {Button} from '@/atlas-review/components/ui/button';
 import {allBodySystems,type BodyCatalog} from './body-types';
@@ -12,16 +12,19 @@ import {LazyBodyTeaching} from './lazy-body-teaching';
 import {TourImagingNotes,tourImagingModalities} from './tour-imaging-notes';
 import {TourQuickCheck} from './tour-quick-check';
 import {TourStepPicker} from './tour-step-picker';
+import {PausedTourImagingLink} from './paused-tour-imaging-link';
+import type {PausedTourImaging} from '@/atlas-review/lib/paused-tour-imaging';
 import './regional-guided-learning.css';
 const Scene=dynamic(()=>import('./body-scene').then(m=>m.BodyScene),{ssr:false});
 const empty:string[]=[];
 const noSelection=()=>{};
 
-export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:BodyCatalog;tour:RegionalTour;assetBase?:string;onExit:()=>void}) {
+export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImaging}:{catalog:BodyCatalog;tour:RegionalTour;assetBase?:string;onExit:()=>void;pausedImaging?:PausedTourImaging}) {
   const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frames:tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)),error:''};}catch{return {structures:[],frames:[],error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
   const [index,setIndex]=useState<number|null>(null),[playing,setPlaying]=useState(false);
   const [motionPaused,setMotionPaused]=useState(false),[reduced,setReduced]=useState(false);
   const [explanationOpen,setExplanationOpen]=useState(true);
+  const [quickCheckOpen,setQuickCheckOpen]=useState(false);
   const [health,setHealth]=useState<RendererHealth>('starting');
   const [loaded,setLoaded]=useState<string[]>([]),[failed,setFailed]=useState<string[]>([]);
   const [retries,setRetries]=useState<Record<string,number>>({}),[retrying,setRetrying]=useState(false),[retryError,setRetryError]=useState('');
@@ -38,16 +41,16 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
   // A passive reset could discard the new scene's mount/load callbacks.
   if(scopeChanged){
     previousScope.current=scope;
-    setLoaded([]);setFailed([]);setRetries({});setRetrying(false);setRetryError('');setHealth('starting');setIndex(null);setPlaying(false);setMotionPaused(true);
+    setLoaded([]);setFailed([]);setRetries({});setRetrying(false);setRetryError('');setHealth('starting');setIndex(null);setPlaying(false);setMotionPaused(true);setQuickCheckOpen(false);
   }
   useEffect(()=>{scope.active=true;return()=>{scope.active=false;};},[scope]);
   const onLoaded=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id))setLoaded(current=>current.includes(id)?current:[...current,id]);},[required,scope]);
-  const onFailure=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id))setFailed(current=>current.includes(id)?current:[...current,id]);},[required,scope]);
+  const onFailure=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id)){pausedImaging?.suspend();setFailed(current=>current.includes(id)?current:[...current,id]);}},[required,scope,pausedImaging]);
   const retryPlan=anatomyRetryPlan(catalog.bundles,failed,required);
   async function retryAnatomy(event?:{currentTarget:HTMLButtonElement}) {
     if(!scope.active||currentScope.current!==scope||scope.pending||!retryPlan.length)return;
     returnRetryFocus.current=!!event&&document.activeElement===event.currentTarget;
-    scope.pending=true;setRetrying(true);setRetryError('');setPlaying(false);setMotionPaused(true);
+    pausedImaging?.suspend();scope.pending=true;setRetrying(true);setRetryError('');setPlaying(false);setMotionPaused(true);
     const current=()=>scope.active&&currentScope.current===scope;
     try {
       const {retryBodyAssets}=await import('./body-scene');
@@ -72,14 +75,25 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
     if(document.activeElement===document.body)controls.current?.querySelector<HTMLButtonElement>('[data-tour-resume]')?.focus({preventScroll:true});
   },[ready]);
   const step=tour.steps[(scopeChanged?null:index)??0];
-  const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;setIndex(next);setMotionPaused(false);},[tour]);
+  const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;pausedImaging?.suspend();setIndex(next);setMotionPaused(false);setQuickCheckOpen(false);},[tour,pausedImaging]);
   useEffect(()=>{const q=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setReduced(q.matches);update();q.addEventListener('change',update);return()=>q.removeEventListener('change',update);},[]);
   // Keep mobile anatomy in view; the complete teaching remains one disclosure away.
   useEffect(()=>{setExplanationOpen(!window.matchMedia('(max-width: 600px)').matches);},[]);
-  useEffect(()=>{const pause=()=>{setPlaying(false);setMotionPaused(true);};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);return()=>document.removeEventListener('visibilitychange',visibility);},[ready]);
+  useEffect(()=>{const pause=()=>{pausedImaging?.suspend();setPlaying(false);setMotionPaused(true);};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pause);return()=>{document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pause);};},[ready,pausedImaging]);
   useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;const timer=window.setTimeout(()=>{if(document.hidden)return;if(index+1<tour.steps.length)changeStep(index+1);else setPlaying(false);},step.durationMs);return()=>window.clearTimeout(timer);},[playing,index,ready,step.durationMs,tour,changeStep]);
   const active=!scopeChanged&&index!==null;
   const selected=resolved.structures.find(s=>s.id===step.selectedId);
+  useLayoutEffect(()=>{
+    pausedImaging?.setStop(active&&selected?{tourId:tour.id,revision:tour.revision,stepId:step.id,structureId:selected.id,sources:selected.sources}:null,
+      active&&ready&&!playing&&motionPaused&&!quickCheckOpen&&!document.hidden);
+  },[pausedImaging,active,selected,tour,step,ready,playing,motionPaused,quickCheckOpen]);
+  useLayoutEffect(()=>()=>pausedImaging?.suspend(),[pausedImaging,scope]);
+  const exit=()=>{pausedImaging?.suspend();onExit();};
+  const onHealth=useCallback((next:RendererHealth)=>{
+    if(!scope.active||currentScope.current!==scope)return;
+    if(!rendererReady(next))pausedImaging?.suspend();
+    setHealth(next);
+  },[scope,pausedImaging]);
   useEffect(()=>{if(active)controls.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus({preventScroll:true});},[active]);
   return <section className="regional-tour" aria-label={tour.title}>
     <div className="regional-tour-panel">
@@ -93,10 +107,10 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
         {retryPlan.length>0&&<Button variant="outline" disabled={retrying} onClick={retryAnatomy}>{retrying?'Retrying…':'Retry missing anatomy'}</Button>}
         {!active?<Button data-tour-resume disabled={!ready} onClick={()=>{setPlaying(false);changeStep(0);}}>Start guided tour</Button>:<>
           <Button variant="outline" disabled={!ready||index===0} onClick={()=>changeStep(index-1)}>Back</Button>
-          <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{setPlaying(p=>!p);setMotionPaused(playing);}}>{playing?'Pause':'Play'}</Button>
-          <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?onExit():changeStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
+          <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{pausedImaging?.suspend();setPlaying(p=>!p);setMotionPaused(playing);}}>{playing?'Pause':'Play'}</Button>
+          <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?exit():changeStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
         </>}
-        <Button variant="ghost" onClick={onExit}>Exit tour</Button>
+        <Button variant="ghost" onClick={exit}>Exit tour</Button>
       </div>
       </div>
       <details className="regional-tour-explanation" open={explanationOpen} onToggle={event=>{
@@ -112,9 +126,11 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
       {active&&selected&&<LazyBodyTeaching key={`teaching:${step.id}:${selected.id}`} enabled={explanationOpen}>
         {({bodyLesson}) => <>
       <TourImagingNotes key={`imaging:${step.id}`} structureName={selected.name}
+        linkControl={<PausedTourImagingLink link={pausedImaging}/>}
         lessons={tourImagingModalities.map(({id,label})=>({id,label,content:bodyLesson(selected,id)}))}
         onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>
       {active&&ready&&selected&&<TourQuickCheck key={`quiz:${step.id}`} lesson={bodyLesson(selected,'quiz')}
+        onChange={open=>{pausedImaging?.suspend();setQuickCheckOpen(open);}}
         onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>}
         </>}
       </LazyBodyTeaching>}
@@ -128,7 +144,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit}:{catalog:
         showOrigins={false} labels view={step.view} zoom={1} reset={index??0} focus={false} exam={false}
         inspection={initialInspection} presetBounds={resolved.frames[(scopeChanged?null:index)??0]} presetKey={tour.id} plate={false}
         tourLocked transitionMs={active&&!reduced?1800:0} transitionPaused={motionPaused||!ready}
-        onSelect={noSelection} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth}/>}
+        onSelect={noSelection} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={onHealth}/>}
     </div>
     <a className="regional-tour-credit" href={modelDeliveryUrl('/models/bodyparts3d/credits.html',assetBase)} target="_blank" rel="noreferrer">BodyParts3D · CC BY 4.0 · Adapted</a>
   </section>;

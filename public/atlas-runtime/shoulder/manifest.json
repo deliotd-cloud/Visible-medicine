@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "537838f028f15e62a6642e7eb360cbaeea31fa20",
+  "sourceCommit": "bbe33ea6ffff3503ae9cdabc0dd41350cece28cd",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "271d0e9d46f1877423cc26c95ce0b521df137c9d82d7a96b8035a7a734b1d9fd"
+      "sha256": "372e508677273cc4b25b32fc74a7dfaf116a1d4ae8bd0a8b97b2806754837f7d"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -25,12 +25,12 @@
     {
       "path": "source-inputs.json",
       "bytes": 94565,
-      "sha256": "1151b993cd191be8129c22aa95323769fdf41b329cdb80b9470a3ba1df0bca42"
+      "sha256": "517bdbe562dfb04be909030b47a71b32d3b7e8309ca3af07302d251e8f241d53"
     },
     {
-      "path": "assets/anatomy-scene-DWcxLJdA.js",
+      "path": "assets/anatomy-scene-B3YC8g5u.js",
       "bytes": 1071220,
-      "sha256": "06818d29ce5258c12299b14ae6508e5985b89082f5f4588f85ec351ceabd0441"
+      "sha256": "33b612df2b74b48379298f9742412fbf2a726a780166cd1b47cb63617821e7c3"
     },
     {
       "path": "assets/anatomy-scene-DWpmDIUC.css",
@@ -38,19 +38,19 @@
       "sha256": "dd7c542a365357d2921742ad887ebff8660a31d404fca8b512e450865cc2896d"
     },
     {
-      "path": "assets/body-content-ytq1hvCB.js",
+      "path": "assets/body-content-DybwSfe2.js",
       "bytes": 4808760,
-      "sha256": "20e831839f2a9e9ab0dee00a6802b04add10a7fc0f8c324d929f6b3a8546cad1"
+      "sha256": "1b3b73f53ccbb6e63992dff06d8391511d160cc567c92d32cc414d5a4081eb4f"
+    },
+    {
+      "path": "assets/index-DpbmYwea.js",
+      "bytes": 1014882,
+      "sha256": "a2e480fcb939c8436a2c34b32e551f1ad12e8c6860e7202baff4dfe11171ef5c"
     },
     {
       "path": "assets/index-HTd6YcAj.css",
       "bytes": 304921,
       "sha256": "01262686eaa8fa34344fd4165c9a9cbfffbabc0f13fd53373101240c7b8d8159"
-    },
-    {
-      "path": "assets/index-MS4_N-Wd.js",
-      "bytes": 1014806,
-      "sha256": "1c085d9aeb517cad386513eefa37c6382e49b2065d2bbc3cc81e8d0273281453"
     },
     {
       "path": "models/bodyparts3d/shoulder-right.glb",

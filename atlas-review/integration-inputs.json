@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "537838f028f15e62a6642e7eb360cbaeea31fa20",
-  "sha256": "2893cfec826629bd0fd9daa619da103bf4ee321d4eb94fc26d02f92de646f136",
+  "sourceCommit": "bbe33ea6ffff3503ae9cdabc0dd41350cece28cd",
+  "sha256": "f67aa58a860d9f14d1bcd68bbf939b89c7b4428db6cd78f3708fefcdf34d2877",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -128,7 +128,7 @@
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
-      "sha256": "47a0a195899e3efedc743b7923c9a52f4a8c1943da5613285fc7a398e4448c40"
+      "sha256": "0f10e688694744348ce768232d6d4805f8e20f645767866abed098da0c44ff1e"
     },
     {
       "path": "atlas-review/app/body-explorer.css",
@@ -136,7 +136,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "37e61d98bcf7fe0512f919bab2406115002844d185fff0be016798b873ce93a0"
+      "sha256": "112b437181f130ee5879c83b4c6edbaa7e968bf2485c816465d058d5cc52af4b"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -287,6 +287,14 @@
       "sha256": "1da791cfa17862157c243831b01fced3394c304e57363933343a50e97101ba75"
     },
     {
+      "path": "atlas-review/app/paused-tour-imaging-link.css",
+      "sha256": "c5ea71b6920776fdc27a08d3d7ea14870fc4c777ff5a28eff4c44c3f8280f032"
+    },
+    {
+      "path": "atlas-review/app/paused-tour-imaging-link.tsx",
+      "sha256": "b617f1c497e18079d65424710bb997291eacde9db059ea38df530d6aba99e83e"
+    },
+    {
       "path": "atlas-review/app/practice-panel-navigation.tsx",
       "sha256": "e02be0b9fe8f12c2b52b27205880ae6a20d12bbf506cf91ce83cc36f352cf808"
     },
@@ -304,7 +312,7 @@
     },
     {
       "path": "atlas-review/app/regional-guided-learning.tsx",
-      "sha256": "4f00459b950afc82e2f838bb5f9b0cc1258e3d6986b4bf6c2c15db2c3a89e41e"
+      "sha256": "7c4760fb9aa85eecdfe0a6cc1978d16030698b717aed625f742441d5e2f09fce"
     },
     {
       "path": "atlas-review/app/related-study.tsx",
@@ -484,11 +492,11 @@
     },
     {
       "path": "atlas-review/app/tour-imaging-notes.tsx",
-      "sha256": "5667a7b3426bbd8ed205a89cee4dbf3d87897f253c5ba043c4e90affa31a7803"
+      "sha256": "cac6a10d4d47477cdbe0891a933bd68b87ae6be261702222695c37ece216cc8e"
     },
     {
       "path": "atlas-review/app/tour-quick-check.tsx",
-      "sha256": "ef9c5dfa93e94d241b1b12037d560632ead5f4b35e3d0490897d49ed3fee04d3"
+      "sha256": "618395c6a95b36cfe1be83cfaca074bb48ae6a81b16aa82d7eec6a5de7b0c0a5"
     },
     {
       "path": "atlas-review/app/tour-step-picker.css",
@@ -556,7 +564,7 @@
     },
     {
       "path": "atlas-review/app/whole-body-guided-learning.tsx",
-      "sha256": "ecf9ef2c6b9404f2597879a26049f917ca6159ef006575f00cdaff7676cbbf51"
+      "sha256": "4c271a2f6e35b236f6b3bdce808eadf8ade8d774c9704bfb443ca5e69af63a61"
     },
     {
       "path": "atlas-review/app/workspace-session.ts",
@@ -2668,7 +2676,7 @@
     },
     {
       "path": "atlas-review/lib/didanix-atlas-adapter.ts",
-      "sha256": "4a81117559f93422222550249ca627d31355ee5cefaa9eda0adf4975e6bb4729"
+      "sha256": "9e6116b60c5d3df5a49ecf321f48001545e375558163a85862d6189fc1b4ff9f"
     },
     {
       "path": "atlas-review/lib/dissection-guidance.ts",
@@ -3391,6 +3399,10 @@
       "sha256": "ad475405272bc11360d3d9242e2a85d92c58997d8489f3f4fb54119e741cb8f9"
     },
     {
+      "path": "atlas-review/lib/paused-tour-imaging.ts",
+      "sha256": "45874d51d55ad1851d9b672dfb4da6da99f476644d9e1aac4a429b59c23d2ab4"
+    },
+    {
       "path": "atlas-review/lib/pelvic-curriculum.ts",
       "sha256": "15133293e5986e463adc1fca007da3d85e5da435db2986e93cb0f02504aa8e91"
     },
@@ -3560,7 +3572,7 @@
     },
     {
       "path": "atlas-review/lib/root-education-api.ts",
-      "sha256": "50b9f4c223cf550c232366368849745b82ca2c6935162535c279e51deabe5554"
+      "sha256": "a4b99210c33d5cbfe21ee5d0f850150ccf688f6b2b81c38ae180e1f2c2eaad3c"
     },
     {
       "path": "atlas-review/lib/sca-mca-clinical.ts",
@@ -4252,7 +4264,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "de6f850485b44631d163813117d887328c5fd3483f1ee5cbb7d8c9bcac635274"
+      "sha256": "6f3b21e6fa68ec3478dd7b63e5760544164e8623cf0d80750330c0c9fc84056a"
     }
   ]
 }

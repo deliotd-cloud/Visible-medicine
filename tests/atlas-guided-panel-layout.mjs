@@ -51,6 +51,7 @@ test('Regional caption remains visible outside optional resources, with controls
     useMemo(fn){const i=cursor++;return slots[i]??=fn()},
     useCallback(fn){return fn},
     useEffect(fn){pending.push(fn);cursor++},
+    useLayoutEffect(fn){pending.push(fn);cursor++},
   };
   const window={matchMedia:query=>({matches:query.includes('max-width')?false:false,addEventListener(){},removeEventListener(){}})};
   const document={hidden:false,addEventListener(){},removeEventListener(){}};
