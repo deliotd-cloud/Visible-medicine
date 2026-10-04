@@ -16,6 +16,7 @@ import { Html } from '@react-three/drei';
 import { Group, Vector3 } from 'three';
 import { createLabelDepthProbe, coveredLabelDescription } from '@/atlas-review/lib/label-depth';
 import { returnHiddenLabelFocus } from '@/atlas-review/lib/scene-label-focus';
+import { selectedLabelNeedsCompact } from '@/atlas-review/lib/scene-label-size';
 import {
   layoutScreenLabels,
   projectLabelAnchor,
@@ -108,7 +109,6 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
       if (line) line.dataset.depth = '';
       if (button) {
         button.dataset.depth = '';
-        button.title = '';
         button.setAttribute('aria-description', '');
       }
     }
@@ -127,7 +127,6 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
         const covered = entry === selected && depth === 'covered';
         button.dataset.depth = covered ? 'covered' : '';
         line.dataset.depth = covered ? 'covered' : '';
-        button.title = covered ? coveredLabelDescription : '';
         button.setAttribute('aria-description', covered ? coveredLabelDescription : '');
       }
     } else if (selected && depthFrame.current.timer === null) {
@@ -137,13 +136,20 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
       }, Math.max(1, 101 - (now - depthFrame.current.last)));
     }
     const projected: ScreenLabel[] = [];
+    const projectedPoints = new Map<string, { x: number; y: number }>();
     for (const entry of entries) {
       const anchor = entry.anchor.current,
         button = buttons.current.get(entry.id);
       if (!anchor || !button) continue;
       anchor.getWorldPosition(world);
       const point = projectLabelAnchor(world, camera, size.width, size.height);
-      if (point)
+      if (point) {
+        projectedPoints.set(entry.id, point);
+        // Read the full name from an off-layout span. Compacting the displayed
+        // text cannot change this measurement and cause ResizeObserver churn.
+        button.dataset.compact = entry.selected &&
+          selectedLabelNeedsCompact(button, size.height - 20)
+          ? 'true' : 'false';
         projected.push({
           ...point,
           id: entry.id,
@@ -152,6 +158,7 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
           width: button.offsetWidth,
           height: button.offsetHeight,
         });
+      } else button.dataset.compact = 'false';
     }
     const placements = new Map(
       layoutScreenLabels(projected, size.width, size.height).map((label) => [
@@ -165,6 +172,16 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
         point = points.current.get(entry.id);
       if (!button || !line || !point) continue;
       const label = placements.get(entry.id);
+      // Set the tooltip after the current compact/depth decisions, not one
+      // demand frame later. The accessible name always remains unshortened.
+      button.title = button.dataset.depth === 'covered'
+        ? `${entry.name} — ${coveredLabelDescription}`
+        : button.dataset.compact === 'true' ? entry.name : '';
+      const projectedPoint = projectedPoints.get(entry.id);
+      if (projectedPoint) {
+        point.setAttribute('cx', String(projectedPoint.x));
+        point.setAttribute('cy', String(projectedPoint.y));
+      }
       if (!label) returnHiddenLabelFocus(button, canvas);
       button.style.visibility =
         line.style.visibility =
@@ -180,8 +197,6 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
           `${index ? 'L' : 'M'} ${point.x} ${point.y}`,
         ).join(' '),
       );
-      point.setAttribute('cx', String(label.x));
-      point.setAttribute('cy', String(label.y));
     }
   });
 
@@ -261,7 +276,10 @@ export function SceneLabelLayer({ children }: { children: ReactNode }) {
                 entry.onSelect(entry.id);
               }}
             >
-              {entry.name}
+              <span className="scene-label-name">{entry.name}</span>
+              <span className="scene-label-measure-clip" aria-hidden="true">
+                <span className="scene-label-measure">{entry.name}</span>
+              </span>
               <span className="scene-label-depth" aria-hidden="true">Behind tissue</span>
             </button>
           ))}

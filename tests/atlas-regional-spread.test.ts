@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='b4be1f0f343e54ee0fc021bcebac7bb62e978deb';
+const revision='8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -35,7 +35,9 @@ test('bounded regional Spread reaches learner and protected review without model
  const coronaryArterialInputs=['content/coronary-arterial-study-pins.json','lib/coronary-arterial-review.ts','lib/coronary-arterial-study.ts'];
  const coronaryTourInput='lib/coronary-arterial-tour.ts';
  const cardiacCavityInput='content/cardiac-cavity-depth.ts';
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+2);assert.deepEqual(review.packages,prior.packages);
+ const selectedLabelInput='lib/scene-label-size.ts';
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.files.find((f:any)=>f.path===selectedLabelInput).sourceSha256,sha(sourceAt(selectedLabelInput)),'Exact selected-label helper Review source pin');
  assert.deepEqual(review.files.filter((f:any)=>f.path===cardiacCavityInput).map((f:any)=>f.path),[cardiacCavityInput]);
  assert.equal(review.files.find((f:any)=>f.path===cardiacCavityInput).sourceSha256,sha(sourceAt(cardiacCavityInput)),'Exact cardiac-cavity Review source pin');
  assert.deepEqual(review.files.filter((f:any)=>f.path===coronaryTourInput).map((f:any)=>f.path),[coronaryTourInput]);
@@ -71,7 +73,8 @@ test('bounded regional Spread reaches learner and protected review without model
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
   const coronarySceneInputs=['content/coronary-arterial-study-pins.json','lib/coronary-arterial-study.ts'];
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(inputs.find((f:any)=>f.path===selectedLabelInput).sha256,sha(sourceAt(selectedLabelInput)),`${name}: exact selected-label helper input`);
   assert.deepEqual(inputs.filter((f:any)=>f.path===cardiacCavityInput).map((f:any)=>f.path),name==='head-neck'?[cardiacCavityInput]:[]);
   for(const f of inputs.filter((f:any)=>f.path===cardiacCavityInput))assert.equal(f.sha256,sha(sourceAt(f.path)),`${name}:${f.path}`);
   assert.deepEqual(inputs.filter((f:any)=>f.path===coronaryTourInput).map((f:any)=>f.path),name==='head-neck'?[coronaryTourInput]:[]);
@@ -198,9 +201,12 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.equal(shoulder.modelHash,spreadShoulder.modelHash);
  assert.deepEqual(Object.keys(shoulder.sourceRevisions),Object.keys(spreadShoulder.sourceRevisions));
  const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(shoulder.display);
- assert.deepEqual([...currentDisplay.keys()],[...previousDisplay.keys()]);
- assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),["app/anatomy-scene.tsx","app/scene-label-layer.tsx","lib/screen-label-layout.ts","app/scene-recovery.tsx","app/fitted-camera.tsx","app/shoulder-tour-player.tsx","app/shoulder-tour-player.css","app/tour-imaging-notes.tsx"]);
- assert.equal(currentDisplay.get('app/scene-label-layer.tsx'),'04f73a41f631b69164049ea3274959e8e51672a3f97a5a4bf017f00e415cfb7b');
+ const expectedDisplayKeys=[...previousDisplay.keys()];
+ expectedDisplayKeys.splice(expectedDisplayKeys.indexOf('app/scene-label-layer.css')+1,0,'lib/scene-label-size.ts','lib/scene-label-focus.ts');
+ assert.deepEqual([...currentDisplay.keys()],expectedDisplayKeys);
+ assert.deepEqual([...currentDisplay].filter(([path,hash])=>previousDisplay.get(path)!==hash).map(([path])=>path),["app/anatomy-scene.tsx","app/scene-label-layer.tsx","app/scene-label-layer.css","lib/scene-label-size.ts","lib/scene-label-focus.ts","lib/screen-label-layout.ts","app/scene-recovery.tsx","app/fitted-camera.tsx","app/shoulder-tour-player.tsx","app/shoulder-tour-player.css","app/tour-imaging-notes.tsx"]);
+ for(const path of ['app/scene-label-layer.tsx','app/scene-label-layer.css','lib/scene-label-size.ts','lib/scene-label-focus.ts'])
+  assert.equal(currentDisplay.get(path),sha(sourceAt(path)),`Exact current selected-label display source: ${path}`);
  assert.equal(currentDisplay.get('lib/screen-label-layout.ts'),'87854b4e74d2e98a928a2bd9e8b2450214fa16e7a339036f3838d7d848fe927a');
  assert.equal(currentDisplay.get('app/shoulder-tour-player.tsx'),'0fb1f95ec82c2323b4bc01372fd5e7938c090df8a4b8513f8929c672cfde6740');
  assert.equal(currentDisplay.get('app/shoulder-tour-player.css'),'cab61989340b515193dfa507a8224d63c24798ed64150d8a2130114303301700');

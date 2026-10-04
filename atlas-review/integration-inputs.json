@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "b4be1f0f343e54ee0fc021bcebac7bb62e978deb",
-  "sha256": "43dbb13425e70e28e31545a6dd6902db2cd9ebc8efebff6386ec3f296d07c368",
+  "sourceCommit": "8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5",
+  "sha256": "598ced592872bdf2a6d0bf65d5b7b2da832d8b4f72c75092d3c9450571a277f2",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -388,11 +388,11 @@
     },
     {
       "path": "atlas-review/app/scene-label-layer.css",
-      "sha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
+      "sha256": "c1b5e4c0d80d818e30feb54e451b944ad9e4ea9baec431fd63769ed4d7bccf7f"
     },
     {
       "path": "atlas-review/app/scene-label-layer.tsx",
-      "sha256": "f14068949ef1d7e9609138e9d6c74bcad8fe7a41864884f29b56b9f76fc4bbac"
+      "sha256": "5088c51a0a261813550abaf9dda137caa382aec3142b5f4d7e92a8237ba17f0d"
     },
     {
       "path": "atlas-review/app/scene-orientation.css",
@@ -3651,6 +3651,10 @@
       "sha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
     },
     {
+      "path": "atlas-review/lib/scene-label-size.ts",
+      "sha256": "60be0562f205e4c956c1b9293ea577412cc397525da154ec84e6a0d120e90cb3"
+    },
+    {
       "path": "atlas-review/lib/scene-labels.ts",
       "sha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99"
     },
@@ -4340,7 +4344,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "5150e3b8cfd15cc0268c1e6e7e6eec4051c09a11c98c90a53d6e0e252e2cb84c"
+      "sha256": "9a65357409b7cd0748fee8b505a6bdd79fff8347474e604e96e0774c7f9c2f43"
     }
   ]
 }

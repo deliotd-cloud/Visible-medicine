@@ -270,11 +270,11 @@
     },
     {
       "path": "app/scene-label-layer.css",
-      "sha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
+      "sha256": "c1b5e4c0d80d818e30feb54e451b944ad9e4ea9baec431fd63769ed4d7bccf7f"
     },
     {
       "path": "app/scene-label-layer.tsx",
-      "sha256": "04f73a41f631b69164049ea3274959e8e51672a3f97a5a4bf017f00e415cfb7b"
+      "sha256": "2a3cd4934709c711e8512d6d2a34cd6225a52dc1fa00398d0bf14646be78077c"
     },
     {
       "path": "app/scene-orientation.css",
@@ -1618,7 +1618,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d"
+      "sha256": "23837342dcd31211e5c1efd87520fd458daf7afe916db38379d7f7cc9e5f4e78"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -3393,6 +3393,10 @@
       "sha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
     },
     {
+      "path": "lib/scene-label-size.ts",
+      "sha256": "60be0562f205e4c956c1b9293ea577412cc397525da154ec84e6a0d120e90cb3"
+    },
+    {
       "path": "lib/scene-labels.ts",
       "sha256": "06d0e7404acfe9785f2c091910d14bd6244103c528139b82b9696713c23c4b99"
     },
@@ -3798,7 +3802,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b76e55d6c13b3e6243d11e75b985246dcaaaaa909fa9a91ba408bcfdb894c144"
+      "sha256": "03bff998fd38140a5e211ca4b05b44262ec8063be3af031bd020c8d68748efa9"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4021,7 +4025,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2a7b94b468e5facda99d5690c1e7425864365d28abe5aa6c35cd7d7a3bbd9d5a",
-  "sourceRendererSha256": "7733cb17cc34eeec95accf1c5675a0d5225b8420e5b0ff77b141379e8e07ac37",
-  "websiteIntegrationSha256": "43dbb13425e70e28e31545a6dd6902db2cd9ebc8efebff6386ec3f296d07c368"
+  "sha256": "5ae4241f14aa43cdcd76f8ef9bc89a41151005f8ad46fc7789d5fe60058c3b52",
+  "sourceRendererSha256": "71d64bd4eded78d55bd5b628374d3955853099e97c552911502d2e085c4de31f",
+  "websiteIntegrationSha256": "598ced592872bdf2a6d0bf65d5b7b2da832d8b4f72c75092d3c9450571a277f2"
 }

@@ -1,6 +1,7 @@
 // Actual imported UI regression, mechanically adapted from Atlas 88cea927d48729769b96ad8fe680b0872b7e6687. All assertions retained.
 import assert from 'node:assert/strict';
 import * as labelFocus from '../atlas-review/lib/scene-label-focus.ts';
+import * as labelSize from '../atlas-review/lib/scene-label-size.ts';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { Group, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
@@ -460,6 +461,7 @@ runInNewContext(
       if (name === '@/atlas-review/lib/screen-label-layout') return labelLayout;
       if (name === '@/atlas-review/lib/label-depth') return labelDepth;
       if (name === '@/atlas-review/lib/scene-label-focus') return labelFocus;
+      if (name === '@/atlas-review/lib/scene-label-size') return labelSize;
       if (name === './scene-label-layer.css') return {};
       if (name === 'react/jsx-runtime') return require(name);
       throw Error('Unexpected component import: ' + name);
@@ -485,7 +487,7 @@ same(
 );
 const buttonElement = elements.find((element) => element.type === 'button');
 same(
-  buttonElement.props.children[0],
+  buttonElement.props.children[0].props.children,
   'Right structure',
   'Anatomical text is not relabelled to screen laterality',
 );

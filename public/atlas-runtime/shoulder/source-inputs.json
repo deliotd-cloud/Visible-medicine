@@ -89,11 +89,11 @@
   },
   {
     "path": "app/scene-label-layer.css",
-    "sha256": "2c7a8f927e17f570fdcb83bb74010afc219f47d85d473e4b56c0c339f70ba53f"
+    "sha256": "c1b5e4c0d80d818e30feb54e451b944ad9e4ea9baec431fd63769ed4d7bccf7f"
   },
   {
     "path": "app/scene-label-layer.tsx",
-    "sha256": "04f73a41f631b69164049ea3274959e8e51672a3f97a5a4bf017f00e415cfb7b"
+    "sha256": "2a3cd4934709c711e8512d6d2a34cd6225a52dc1fa00398d0bf14646be78077c"
   },
   {
     "path": "app/scene-recovery.css",
@@ -1101,7 +1101,7 @@
   },
   {
     "path": "content/review-revisions.json",
-    "sha256": "dcdb7e4c268154285c25e28ca978a88e6c524b720e48cad2fc5ebf208722d95d"
+    "sha256": "186fd987d841dc9d6771ab2a376de993496db314fd3500e17427f8538e1e2f77"
   },
   {
     "path": "content/sca-mca-clinical-pins.json",
@@ -2362,6 +2362,10 @@
   {
     "path": "lib/scene-label-focus.ts",
     "sha256": "14439031e43a85e211ae917e779cda8f15d0d77a3259aae0b71cb6bed444c4b8"
+  },
+  {
+    "path": "lib/scene-label-size.ts",
+    "sha256": "60be0562f205e4c956c1b9293ea577412cc397525da154ec84e6a0d120e90cb3"
   },
   {
     "path": "lib/screen-label-layout.ts",

@@ -32,6 +32,31 @@
 .scene-label-depth {
   display: none;
 }
+.scene-label-name {
+  display: block;
+}
+.scene-label-measure-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.scene-label-measure {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.scene-label-overlay button.scene-label.selected[data-compact='true'] .scene-label-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
 .scene-label.selected[data-depth='covered'] .scene-label-depth {
   display: block;
   font-size: 0.875rem;
