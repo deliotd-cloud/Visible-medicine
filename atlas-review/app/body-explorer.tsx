@@ -190,6 +190,7 @@ import { eyeLayersFor } from '@/atlas-review/lib/eye-layers';
 import { ventriclesFor } from '@/atlas-review/lib/ventricles';
 import { cardiacFor } from '@/atlas-review/lib/cardiac';
 import { coronaryVenousFor } from '@/atlas-review/lib/coronary-venous';
+import { coronaryArterialStudyId, coronaryArterialStudyFor, coronaryArterialScenePlan } from '@/atlas-review/lib/coronary-arterial-study';
 import { pulmonaryFor } from '@/atlas-review/lib/pulmonary';
 import { hepaticFor } from '@/atlas-review/lib/hepatic';
 import { renalFor } from '@/atlas-review/lib/renal';
@@ -612,6 +613,10 @@ export default function BodyExplorer({
     [regionStructures, systems, hiddenIds],
   );
   const enabledIds = useMemo(() => new Set(available.map((item) => item.id)), [available]);
+  const coronaryScene = useMemo(() => coronaryArterialScenePlan(catalog, {
+    region: initialRegion, focusId: dissection.focusId, exam, explode,
+    visibleIds: available.map(s => s.id), scope: regionStructures,
+  }), [catalog, initialRegion, dissection.focusId, exam, explode, available, regionStructures]);
   const framingRegion = regionalFramingRegion(initialRegion, side);
   const cameraRecipeId = dissection.focusId ?? dissection.stageId;
   const dedicatedCameraRecipe = (initialRegion === 'leg' &&
@@ -730,8 +735,10 @@ export default function BodyExplorer({
   const sceneStructures = useMemo(
     () => exam
       ? presentationStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
-      : presentationStructures,
-    [exam, presentationStructures, practice],
+      : coronaryScene.omitIds.length
+        ? presentationStructures.filter(s => !coronaryScene.omitIds.includes(s.id))
+        : presentationStructures,
+    [exam, presentationStructures, practice, coronaryScene.omitIds],
   );
   const required = useMemo(
     () => requestedAnatomyBundles(sceneStructures, systems, hiddenIds, ghostRemoved && !exam),
@@ -905,6 +912,9 @@ export default function BodyExplorer({
   }
   function changeFocus(id: string, beforeApply?: () => void) {
     if (exam || !profile.focuses.some((item) => item.id === id)) return false;
+    if (id === coronaryArterialStudyId &&
+        (!['thorax', 'whole-body'].includes(initialRegion) ||
+         !coronaryArterialStudyFor(catalog, regionStructures))) return false;
     if (!limbVascularStudyReady(catalog, initialRegion, id)) return false;
     if (!longusColliStudyReady(catalog, initialRegion, id, side)) return false;
     beforeApply?.();
@@ -1166,6 +1176,7 @@ export default function BodyExplorer({
   }
   function onSceneSelect(id: string) {
     if (!displayReady) return;
+    if (coronaryScene.contextIds.includes(id)) return;
     if (exam) {
       if (practice.mode === 'find' || practice.mode === 'reason')
         submitPractice(id);
@@ -1924,6 +1935,8 @@ export default function BodyExplorer({
                   assetBase={assetBase}
                   catalog={catalog}
                   structures={sceneStructures}
+                  contextIds={coronaryScene.contextIds}
+                  appearance={coronaryScene.appearance}
                   selectedId={selectedId}
                   systems={systems}
                   isolated={isolated && !exam}

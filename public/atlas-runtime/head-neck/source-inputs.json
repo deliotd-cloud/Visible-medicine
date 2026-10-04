@@ -93,7 +93,7 @@
   },
   {
     "path": "app/body-explorer.tsx",
-    "sha256": "f7042cdbb9a6b6730c45b1e7f9de4d55bbaf5b755ebdc6f0b1dd616cc3cf3453"
+    "sha256": "f507f15a60e4045183e98d677ca941ba2ad5ba8e31a258d333caa34c5ec0b40c"
   },
   {
     "path": "app/body-scene.tsx",
@@ -145,7 +145,7 @@
   },
   {
     "path": "app/dissection-data.ts",
-    "sha256": "e4612894eda280188f24aa96ea4095795ead893ff5509a4e07d0389a5623e6e4"
+    "sha256": "b2de5ed8fa35e71c62f6233b570874705f0950e33ee24b281bb3a2aa2e10f139"
   },
   {
     "path": "app/dissection-orientation.tsx",
@@ -730,6 +730,10 @@
   {
     "path": "content/core-organ-function.ts",
     "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
+  },
+  {
+    "path": "content/coronary-arterial-study-pins.json",
+    "sha256": "df4e237a595a6c421c2e5087bc5b7a1ca664f3f0cde491da4441cf2d22137caf"
   },
   {
     "path": "content/coronary-arterial-us-pins.json",
@@ -2476,6 +2480,10 @@
     "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
   },
   {
+    "path": "lib/coronary-arterial-study.ts",
+    "sha256": "608ca9032a442c39cdf80358f6f950900630a36b98398cdf168d800e72448e7c"
+  },
+  {
     "path": "lib/coronary-arterial-us.ts",
     "sha256": "6ca30f92e3085c431325c681b2bcd17ab867da6e3dd8a935acb38470332bfe59"
   },
@@ -3589,7 +3597,7 @@
   },
   {
     "path": "lib/study-links.ts",
-    "sha256": "70ec07874a09584d15f7d2a264061988b561972ff62ed2f8f38207b36d886b6f"
+    "sha256": "b39eacda37da3aa9a779d3b015ac70863478171ea641ea9fcec7e7f2c5c5faff"
   },
   {
     "path": "lib/study-navigation.ts",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "12570b5245dc6a253cbdd73ec4e044c58b81a927",
+  "sourceCommit": "d3d7ef2b22ed5bfe872aa6fa4b54fb69d8747cda",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "dd6235d38cb17f0cbfbb1a8238cfc664b362c34fc24ed36f2eb74b4f012cb087"
+      "sha256": "31d2538a03b4b82774853c5e5822363a2a1de58fae07e827e8a045e3806eeff2"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,13 +24,8 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 96305,
-      "sha256": "969dffe767b9ac070f67a8123be0252db07fd90c471a0c6a608daefa3cb344eb"
-    },
-    {
-      "path": "assets/anatomy-scene-BiKOFRRy.js",
-      "bytes": 1071220,
-      "sha256": "7e4da621301aeab9b514d95940fc34f2cdeb40bcff8d9d7dc02fab4f54550840"
+      "bytes": 96588,
+      "sha256": "29f319cf010f4c9188eacde223e4fd4780dd3c0a3f8bfeb0481f20819dcc743e"
     },
     {
       "path": "assets/anatomy-scene-DWpmDIUC.css",
@@ -38,14 +33,19 @@
       "sha256": "dd7c542a365357d2921742ad887ebff8660a31d404fca8b512e450865cc2896d"
     },
     {
-      "path": "assets/body-content-CrfM_lKr.js",
-      "bytes": 4929106,
-      "sha256": "056d18453dd9e7656f155dc1381ef96fd62ff43eaa577700fb91b1d44f6a0b9e"
+      "path": "assets/anatomy-scene-pLiCFNSF.js",
+      "bytes": 1071220,
+      "sha256": "100c9a8ff000b9182d2791e19246681f7dd67fe44b93bd466d344fbca376b659"
     },
     {
-      "path": "assets/index-Dnrca3fq.js",
-      "bytes": 1014917,
-      "sha256": "5f5bbc57493c450ec744b9784b8558c33a63689569aa3044d9ae9814e59cc787"
+      "path": "assets/body-content-DTxdY_OC.js",
+      "bytes": 4929106,
+      "sha256": "384809fa1f4fbc960a2e784c31cd57b2645434a145b1184f8f8cba0bdefe4390"
+    },
+    {
+      "path": "assets/index-BXfd0kSh.js",
+      "bytes": 1029685,
+      "sha256": "62bbec7bb8867f66c3742d2d5b16e79661f6443679f96b5c55ae412347a8b553"
     },
     {
       "path": "assets/index-HTd6YcAj.css",

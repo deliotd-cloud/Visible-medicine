@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "12570b5245dc6a253cbdd73ec4e044c58b81a927",
-  "sha256": "40ba8bc77e7323a663b4c45369629d2601da9a161dc79f43ee13ad154f6588bf",
+  "sourceCommit": "d3d7ef2b22ed5bfe872aa6fa4b54fb69d8747cda",
+  "sha256": "d2bc38414aef4814ef120cac2144777c2fa377f3b30f3d974569a3609f1fbf72",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -136,7 +136,7 @@
     },
     {
       "path": "atlas-review/app/body-explorer.tsx",
-      "sha256": "112b437181f130ee5879c83b4c6edbaa7e968bf2485c816465d058d5cc52af4b"
+      "sha256": "65cf370e22af4196634973618634309f21a9f27259086cb466ea44db557fb768"
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
@@ -188,7 +188,7 @@
     },
     {
       "path": "atlas-review/app/dissection-data.ts",
-      "sha256": "e4612894eda280188f24aa96ea4095795ead893ff5509a4e07d0389a5623e6e4"
+      "sha256": "b2de5ed8fa35e71c62f6233b570874705f0950e33ee24b281bb3a2aa2e10f139"
     },
     {
       "path": "atlas-review/app/dissection-orientation.tsx",
@@ -744,7 +744,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "75361b1d58b9e63fe2ef4a08024594194a73c65517fcf29ebbeca23262b3d99a"
+      "sha256": "10e1bb5dc6f43b01d038cc0f18c853750141ecb834dfad6f65be910fd48f26ed"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -877,6 +877,10 @@
     {
       "path": "atlas-review/content/core-organ-function.ts",
       "sha256": "ea4eb8d886f03cab39025dbdcbf1a4a630be83f04254cf731eab7b580222afd3"
+    },
+    {
+      "path": "atlas-review/content/coronary-arterial-study-pins.json",
+      "sha256": "df4e237a595a6c421c2e5087bc5b7a1ca664f3f0cde491da4441cf2d22137caf"
     },
     {
       "path": "atlas-review/content/coronary-arterial-us-pins.json",
@@ -2388,7 +2392,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-context.ts",
-      "sha256": "c675ae2322ef4e75172e34415a9c3e049325bfc3e166b0a3bdf3be71e2d0c3d3"
+      "sha256": "bf288ecdcb0f8932aa71a3a26c2a3f889aa028013a45c392c26d157001771a06"
     },
     {
       "path": "atlas-review/lib/body-review-decisions.ts",
@@ -2404,7 +2408,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-material.ts",
-      "sha256": "71b8c26fb077860bc5e37a0f39cfd7717e96514fde6ac1df7094e349ed6bce00"
+      "sha256": "75e927f73854fd44554a34e9d8e9a923a3b7a0108b39489132c85c0243ce303e"
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
@@ -2597,6 +2601,14 @@
     {
       "path": "atlas-review/lib/core-organ-function.ts",
       "sha256": "6ecbd0d421c6caa5ffd3f02edadf8cfdbf49ef7bbab20ea3926054544c896925"
+    },
+    {
+      "path": "atlas-review/lib/coronary-arterial-review.ts",
+      "sha256": "bd2da8a5c30e11d2af0ff97bfd8fc2e1c935db3fcb9c2fcce50e0305116a0031"
+    },
+    {
+      "path": "atlas-review/lib/coronary-arterial-study.ts",
+      "sha256": "608ca9032a442c39cdf80358f6f950900630a36b98398cdf168d800e72448e7c"
     },
     {
       "path": "atlas-review/lib/coronary-arterial-us.ts",
@@ -3776,7 +3788,7 @@
     },
     {
       "path": "atlas-review/lib/study-links.ts",
-      "sha256": "70ec07874a09584d15f7d2a264061988b561972ff62ed2f8f38207b36d886b6f"
+      "sha256": "b39eacda37da3aa9a779d3b015ac70863478171ea641ea9fcec7e7f2c5c5faff"
     },
     {
       "path": "atlas-review/lib/study-navigation.ts",
@@ -4320,7 +4332,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "ee0c084c1e6e31693890f2607fcbeb2f1df81379031e86db24922a0ed493b99e"
+      "sha256": "2dd5fe2cfc402078e6075744794da775bcf44ade0704b32741010a0a6353b1ab"
     }
   ]
 }

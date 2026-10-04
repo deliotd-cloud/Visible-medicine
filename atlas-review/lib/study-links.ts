@@ -8,6 +8,7 @@ import {
 import { relatedStudyViews } from './study-navigation.ts';
 import { limbVascularStudyReady } from './limb-vascular-studies.ts';
 import { longusColliStudyReady } from './longus-colli.ts';
+import { coronaryArterialStudyId, coronaryArterialStudyFor } from './coronary-arterial-study.ts';
 import { resolveNestedTarget, type NestedSelection } from './nested-anatomy.ts';
 
 export type StudySide = 'both' | 'right' | 'left';
@@ -141,6 +142,10 @@ export function resolveStudyLink(
     return { status: 'rejected' as const, reason: 'invalid' as const };
   const request = link.request;
   const scope = bodyStudyScope(catalog, region, request.side);
+  if (request.focusId === coronaryArterialStudyId &&
+      (!['thorax', 'whole-body'].includes(region) ||
+       !coronaryArterialStudyFor(catalog, scope)))
+    return { status: 'rejected' as const, reason: 'focus-unavailable' as const };
   const selected = scope.find((item) => item.id === request.structureId);
   if (!selected)
     return { status: 'rejected' as const, reason: 'out-of-scope' as const };

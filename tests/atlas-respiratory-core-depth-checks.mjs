@@ -2,33 +2,52 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
 import {build} from 'esbuild';
 import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const websiteBaseline = 'eed504734b845c635f23ee607c270abe34ed17a5';
-const sourceRevision = '12570b5245dc6a253cbdd73ec4e044c58b81a927';
+const coronaryWebsiteBaseline = 'ec85edb86bb34c92c66e2f310da09904f27ea7c4';
+const respiratorySourceRevision = '12570b5245dc6a253cbdd73ec4e044c58b81a927';
 const sourceBaseline = 'ae13b8de049671e2cac8dd789a6bfb385f147769';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const sha = value => createHash('sha256').update(typeof value === 'string' || Buffer.isBuffer(value) ? value : JSON.stringify(value)).digest('hex');
 const gitOptions = {maxBuffer: 32e6, windowsHide: true, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}};
 const old = path => execFileSync('git', ['show', `${websiteBaseline}:${path}`], gitOptions);
-const sourceAt = path => execFileSync('git', ['show', `${sourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
+const preCoronaryFile = path => execFileSync('git', ['show', `${coronaryWebsiteBaseline}:${path}`], gitOptions);
+const respiratoryAt = path => execFileSync('git', ['show', `${respiratorySourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
 const json = path => JSON.parse(readFileSync(path));
+const review = json('atlas-review/manifest.json');
+const sourceRevision = review.revision;
+assert.match(sourceRevision, /^[a-f0-9]{40}$/);
+execFileSync('git', ['merge-base', '--is-ancestor', respiratorySourceRevision, sourceRevision], {...gitOptions, cwd: atlasSource});
+const sourceAt = path => execFileSync('git', ['show', `${sourceRevision}:${path}`], {...gitOptions, cwd: atlasSource});
+const coronaryHistoryPath = `${atlasSource}/scripts/coronary-arterial-study-history.mjs`;
+assert.deepEqual(readFileSync(coronaryHistoryPath), sourceAt('scripts/coronary-arterial-study-history.mjs'));
+const {preCoronaryArterialStudyProfiles} = await import(pathToFileURL(coronaryHistoryPath).href);
 const common = "export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export {nestedReviewRows,nestedReviewMaterial} from './atlas-review/lib/nested-review-material';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
 const before = await atlasExactGitApi(websiteBaseline, common);
+const preCoronary = await atlasExactGitApi(coronaryWebsiteBaseline,
+  "export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';export {bodyReviewContext} from './atlas-review/lib/body-review-context';");
 const compiled = await build({stdin: {contents: common + "export * from './atlas-review/lib/respiratory-core-depth';export * from './atlas-review/content/respiratory-core-depth';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, platform: 'node', format: 'esm'});
 const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
-const pins = JSON.parse(sourceAt('content/respiratory-core-depth-pins.json'));
-const transition = JSON.parse(sourceAt('content/respiratory-core-depth.transition.json'));
+const pins = JSON.parse(respiratoryAt('content/respiratory-core-depth-pins.json'));
+const transition = JSON.parse(respiratoryAt('content/respiratory-core-depth.transition.json'));
 assert.equal(pins.baseline, sourceBaseline);
 assert.equal(transition.baseline, sourceBaseline);
 assert.equal(transition.pinsHash, sha(pins));
 assert.equal(pins.entries.length, 5);
 assert.equal(transition.entries.length, 8);
-assert.deepEqual(readFileSync('atlas-review/content/respiratory-core-depth-pins.json'), sourceAt('content/respiratory-core-depth-pins.json'));
+assert.deepEqual(sourceAt('content/respiratory-core-depth-pins.json'), respiratoryAt('content/respiratory-core-depth-pins.json'));
+assert.deepEqual(readFileSync('atlas-review/content/respiratory-core-depth-pins.json'), respiratoryAt('content/respiratory-core-depth-pins.json'));
 const entries = new Map(pins.entries.map(entry => [entry.identity.id, entry]));
 assert.equal(entries.size, 5);
+const coronaryPins = json('atlas-review/content/coronary-arterial-study-pins.json');
+const coronaryIds = new Set(coronaryPins.entries.map(entry => entry.id));
+assert.deepEqual(coronaryPins.entries.map(entry => entry.fmaId),
+  ['FMA3802', 'FMA3855', 'FMA3862', 'FMA3895', 'FMA7088']);
+assert.equal(coronaryIds.size, 5);
 assert.deepEqual(Object.fromEntries(Object.entries(now.respiratoryCoreDepthGroups).map(([group, ids]) => [group, [...ids]])), {
   rightLung: ['FMA7309'], leftLung: ['FMA7310'], trachea: ['FMA7394'], rightBronchus: ['FMA7395'], leftBronchus: ['FMA7396'],
 });
@@ -45,7 +64,9 @@ const catalog = now.bodyDisplayCatalog(sourceCatalog);
 assert.equal(catalog.structures.length, 1104);
 assert.equal(catalog.bundles.length, 109);
 assert.deepEqual(catalog, before.bodyDisplayCatalog(JSON.parse(old('atlas-review/public/models/bodyparts3d/full-body/catalog.json'))));
-for (const key of ['structures', 'dissectionProfiles', 'regionalTours', 'reasoningConcepts', 'contentTabs']) assert.deepEqual(now[key], before[key], key);
+for (const key of ['structures', 'regionalTours', 'reasoningConcepts', 'contentTabs']) assert.deepEqual(now[key], before[key], key);
+assert.deepEqual(preCoronaryArterialStudyProfiles(now.dissectionProfiles), before.dissectionProfiles,
+  'Frozen two-focus coronary transition reverses to the full prior recipe set');
 assert.equal(now.contentTabs.length, 9);
 assert.equal(pins.sourceVersion, sourceCatalog.sourceVersion);
 assert.deepEqual(pins.coordinateSystem, sourceCatalog.coordinateSystem);
@@ -92,7 +113,7 @@ const pathsWhere = (value, predicate, path = []) => [
   ...(value && typeof value === 'object' ? Object.entries(value).flatMap(([key, part]) => pathsWhere(part, predicate, [...path, key])) : []),
 ];
 const at = (value, path) => path.reduce((part, key) => part[key], value);
-let forged = 0, stale = 0, storageCalls = 0, changedReview = 0, preservedReview = 0;
+let forged = 0, stale = 0, storageCalls = 0, changedReview = 0, preservedReview = 0, coronaryReview = 0;
 for (const {identity} of pins.entries) {
   const tabs = [...changedKeys].filter(key => key.startsWith(identity.id + ':')).map(key => key.slice(identity.id.length + 1));
   for (const tab of tabs) {
@@ -159,6 +180,45 @@ for (const structure of catalog.structures) {
   assert(await now.parseBodyReviewResponse(current, structure.id), structure.id);
   for (const key of ['source', 'reasoning', 'guidedTours']) assert.deepEqual(current[key], previous[key]);
   assert.equal(current.approval, false);
+  if (coronaryIds.has(structure.id)) {
+    coronaryReview++;
+    const coronaryBefore = await preCoronary.bodyReviewMaterial(structure.id);
+    const coronaryBeforeContext = await preCoronary.bodyReviewContext(structure.id);
+    const coronaryContext = await now.bodyReviewContext(structure.id);
+    assert.equal(coronaryContext.rendererHash, json('atlas-review/content/body-renderer-revision.json').sha256);
+    assert.equal(coronaryBeforeContext.rendererHash, JSON.parse(preCoronaryFile('atlas-review/content/body-renderer-revision.json')).sha256);
+    assert.notEqual(coronaryContext.rendererHash, coronaryBeforeContext.rendererHash, 'Saved coronary scene and website integration require renderer re-review');
+    assert.equal(current.fingerprints.source, coronaryBefore.fingerprints.source);
+    assert.equal(current.fingerprints.teaching, coronaryBefore.fingerprints.teaching);
+    assert.notEqual(current.fingerprints.checklist, coronaryBefore.fingerprints.checklist);
+    assert.notEqual(current.materialHash, coronaryBefore.materialHash);
+    assert.equal(coronaryBefore.checklist.geometry.length, 3);
+    assert.equal(current.checklist.geometry.length, 13);
+    const oldPacket = structuredClone(coronaryBefore), newPacket = structuredClone(current);
+    for (const packet of [oldPacket, newPacket]) {
+      delete packet.checklist.geometry;
+      delete packet.fingerprints.checklist;
+      delete packet.materialHash;
+    }
+    assert.deepEqual(newPacket, oldPacket, `${structure.id}: only coronary checklist and hashes changed`);
+    assert.equal(coronaryContext.sourceHash, coronaryBeforeContext.sourceHash);
+    assert.equal(coronaryContext.teachingHash, coronaryBeforeContext.teachingHash);
+    assert.equal(coronaryContext.revisions.teaching, coronaryBeforeContext.revisions.teaching);
+    assert.equal(coronaryContext.revisions.imaging, null);
+    assert.notEqual(coronaryContext.revisions.geometry, coronaryBeforeContext.revisions.geometry);
+    assert.equal(coronaryBeforeContext.checklists.geometry.length, 6);
+    assert.equal(coronaryContext.checklists.geometry.length, 16);
+    assert.deepEqual(coronaryContext.checklists.geometry.slice(6).map(check => check.id),
+      Array.from({length: 10}, (_, index) => `source-study-${index + 1}`));
+    const oldContext = structuredClone(coronaryBeforeContext), newContext = structuredClone(coronaryContext);
+    for (const context of [oldContext, newContext]) {
+      delete context.checklists.geometry;
+      delete context.revisions.geometry;
+      delete context.materialHash;
+      delete context.rendererHash;
+    }
+    assert.deepEqual(newContext, oldContext, `${structure.id}: only coronary geometry, exact renderer binding and material hash changed`);
+  }
   if (entries.has(structure.id)) {
     assert.notEqual(current.fingerprints.teaching, previous.fingerprints.teaching);
     for (const tab of now.contentTabs.filter(tab => !changedKeys.has(`${structure.id}:${tab}`)))
@@ -172,6 +232,7 @@ for (const structure of catalog.structures) {
 }
 assert.equal(changedReview, 5);
 assert.equal(preservedReview, 1099);
+assert.equal(coronaryReview, 5);
 assert.deepEqual(now.nestedReviewRows, before.nestedReviewRows);
 let preservedNested = 0;
 for (const row of now.nestedReviewRows) for (const surface of row.surfaces) {
@@ -184,24 +245,36 @@ for (const row of now.nestedReviewRows) for (const surface of row.surfaces) {
   preservedNested++;
 }
 assert.equal(preservedNested, 108);
-const unaffectedId = catalog.structures.find(structure => !entries.has(structure.id)).id;
+const unaffectedId = catalog.structures.find(structure => !entries.has(structure.id) && !coronaryIds.has(structure.id)).id;
 const unaffectedBefore = await before.bodyReviewContext(unaffectedId), unaffectedNow = await now.bodyReviewContext(unaffectedId);
 assert.equal(unaffectedNow.sourceHash, unaffectedBefore.sourceHash);
 assert.equal(unaffectedNow.revisions.teaching, unaffectedBefore.revisions.teaching);
 assert.notEqual(unaffectedNow.revisions.geometry, unaffectedBefore.revisions.geometry);
 
-const review = json('atlas-review/manifest.json');
 assert.equal(review.revision, sourceRevision);
 for (const file of review.files) assert.equal(sha(readFileSync(`atlas-review/${file.path}`)), file.importedSha256, file.path);
 const previousReview = JSON.parse(old('atlas-review/manifest.json'));
 const addedPaths = ['content/respiratory-core-depth-pins.json', 'content/respiratory-core-depth.ts', 'lib/respiratory-core-depth.ts'];
-assert.equal(review.files.length, previousReview.files.length + addedPaths.length);
-for (const previous of previousReview.files) assert(review.files.some(file => file.path === previous.path), `Retain prior Review input: ${previous.path}`);
-assert.deepEqual(review.files.filter(file => !previousReview.files.some(prior => prior.path === file.path)).map(file => file.path).sort(), [...addedPaths].sort());
+const respiratoryReview = JSON.parse(preCoronaryFile('atlas-review/manifest.json'));
+assert.equal(respiratoryReview.revision, respiratorySourceRevision);
+assert.equal(respiratoryReview.files.length, previousReview.files.length + addedPaths.length);
+for (const previous of previousReview.files) assert(respiratoryReview.files.some(file => file.path === previous.path), `Retain prior respiratory Review input: ${previous.path}`);
+assert.deepEqual(respiratoryReview.files.filter(file => !previousReview.files.some(prior => prior.path === file.path)).map(file => file.path).sort(), [...addedPaths].sort());
 const changedInputs = ['app/body-content.ts', 'content/body-renderer-revision.json', 'content/body-review-display-pins.json'];
-assert.deepEqual(review.files.filter(file => previousReview.files.some(prior => prior.path === file.path && prior.sourceSha256 !== file.sourceSha256)).map(file => file.path).sort(), changedInputs);
-for (const path of [...addedPaths, ...changedInputs]) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(sourceAt(path)), path);
+assert.deepEqual(respiratoryReview.files.filter(file => previousReview.files.some(prior => prior.path === file.path && prior.sourceSha256 !== file.sourceSha256)).map(file => file.path).sort(), changedInputs);
+for (const path of [...addedPaths, ...changedInputs]) assert.equal(respiratoryReview.files.find(file => file.path === path)?.sourceSha256, sha(respiratoryAt(path)), `Frozen respiratory input: ${path}`);
+const coronaryAddedPaths = ['content/coronary-arterial-study-pins.json', 'lib/coronary-arterial-study.ts', 'lib/coronary-arterial-review.ts'];
+const coronaryChangedInputs = ['app/body-explorer.tsx', 'app/dissection-data.ts',
+  'content/body-renderer-revision.json', 'content/body-review-display-pins.json',
+  'lib/study-links.ts', 'lib/body-review-material.ts', 'lib/body-review-context.ts'];
+assert.equal(review.files.length, respiratoryReview.files.length + coronaryAddedPaths.length);
+for (const previous of respiratoryReview.files) assert(review.files.some(file => file.path === previous.path), `Retain prior coronary Review input: ${previous.path}`);
+assert.deepEqual(review.files.filter(file => !respiratoryReview.files.some(prior => prior.path === file.path)).map(file => file.path).sort(), [...coronaryAddedPaths].sort());
+assert.deepEqual(review.files.filter(file => respiratoryReview.files.some(prior => prior.path === file.path && prior.sourceSha256 !== file.sourceSha256)).map(file => file.path).sort(), [...coronaryChangedInputs].sort());
+for (const path of [...coronaryAddedPaths, ...coronaryChangedInputs]) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(sourceAt(path)), `Current coronary input: ${path}`);
+for (const path of addedPaths) assert.equal(review.files.find(file => file.path === path)?.sourceSha256, sha(respiratoryAt(path)), `Preserved respiratory input: ${path}`);
 assert(!review.files.some(file => file.path === 'content/respiratory-core-depth.transition.json'));
+assert(!review.files.some(file => file.path === 'content/coronary-arterial-study.transition.json'));
 for (const file of previousReview.files.filter(file => /^content\/.*-pins\.json$/.test(file.path) && file.path !== 'content/body-review-display-pins.json'))
   assert.deepEqual(readFileSync(`atlas-review/${file.path}`), old(`atlas-review/${file.path}`), `No immutable pin repin: ${file.path}`);
 
@@ -214,13 +287,27 @@ for (const name of ['head-neck', 'shoulder', 'female-pelvis', 'lower-limb']) {
   assert.deepEqual(manifest.files.filter(file => file.path.startsWith('models/')), previous.files.filter(file => file.path.startsWith('models/')));
   for (const file of manifest.files) assert.equal(sha(readFileSync(base + file.path)), file.sha256, `${name}:${file.path}`);
   const inputs = json(`${base}source-inputs.json`), previousInputs = JSON.parse(old(`${base}source-inputs.json`));
+  const respiratoryInputs = JSON.parse(preCoronaryFile(`${base}source-inputs.json`));
   for (const file of previousInputs) assert(inputs.some(item => item.path === file.path), `${name}: retained source input: ${file.path}`);
+  assert.deepEqual(respiratoryInputs.filter(file => !previousInputs.some(prior => prior.path === file.path)).map(file => file.path).sort(),
+    (name === 'head-neck' || name === 'shoulder' ? [...addedPaths].sort() : []), `${name}: original respiratory additions`);
   for (const path of addedPaths) {
     const actual = inputs.find(file => file.path === path);
     assert.equal(Boolean(actual), name === 'head-neck' || name === 'shoulder', `${name}:${path}`);
     if (actual) assert.equal(actual.sha256, sha(sourceAt(path)));
   }
+  assert.deepEqual(inputs.filter(file => !respiratoryInputs.some(prior => prior.path === file.path)).map(file => file.path).sort(),
+    (name === 'head-neck' || name === 'shoulder' ? ['content/coronary-arterial-study-pins.json', 'lib/coronary-arterial-study.ts'] : []), `${name}: exact coronary scene additions`);
+  // The private worksheet helper belongs to the protected Review import,
+  // not the learner scene dependency graph.
+  assert(!inputs.some(file => file.path === 'lib/coronary-arterial-review.ts'));
+  for (const path of ['content/coronary-arterial-study-pins.json', 'lib/coronary-arterial-study.ts']) {
+    const actual = inputs.find(file => file.path === path);
+    assert.equal(Boolean(actual), name === 'head-neck' || name === 'shoulder', `${name}:${path}`);
+    if (actual) assert.equal(actual.sha256, sha(sourceAt(path)));
+  }
   assert(!inputs.some(file => file.path === 'content/respiratory-core-depth.transition.json'));
+  assert(!inputs.some(file => file.path === 'content/coronary-arterial-study.transition.json'));
   if (name === 'head-neck') {
     const emitted = emittedTeaching(base, manifest.files);
     for (const entry of pins.entries) for (const tab of Object.keys(entry.previous)) {
@@ -244,4 +331,4 @@ for (const entry of pins.entries) for (const tab of Object.keys(entry.previous))
   for (const value of [entry.identity.id, entry.identity.name, section.title, lesson.body, ...section.bullets, topic.limit, entry.identity.coverageNote, lesson.note, ...lesson.citations].filter(Boolean))
     assert(emittedReview.includes(value) || emittedReview.includes(JSON.stringify(value).slice(1, -1)), `review:${entry.identity.id}:${tab}:${value.slice(0, 40)}`);
 }
-console.log(JSON.stringify({websiteBaseline, sourceRevision, changed, preserved, forgedMaterialRefusals: forged, staleRefusalsBeforeStorage: stale, storageCalls, changedReview, preservedReview, preservedNested, clinicalApproval: false}));
+console.log(JSON.stringify({websiteBaseline, sourceRevision, changed, preserved, forgedMaterialRefusals: forged, staleRefusalsBeforeStorage: stale, storageCalls, changedReview, preservedReview, coronaryReview, preservedNested, clinicalApproval: false}));
