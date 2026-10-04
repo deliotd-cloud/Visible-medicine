@@ -7,13 +7,13 @@ import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 import {admission,pins,common,hash,handWebsiteEpoch} from './atlas-hand-bone-ultrasound-checks.mjs';
 
-const sourceRevision='ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb';
+const sourceRevision='537838f028f15e62a6642e7eb360cbaeea31fa20';
 const atlasSource='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const saved=(path:string)=>execFileSync('git',['show',`${handWebsiteEpoch}:${path}`],{maxBuffer:32e6,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
 const sourceAt=(path:string)=>execFileSync('git',['show',`${sourceRevision}:${path}`],{cwd:atlasSource,maxBuffer:32e6,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 
-test('current toe ultrasound import preserves all 46 hand ultrasound drafts and exact source delivery',async()=>{
+test('current midfoot ultrasound import preserves all 46 hand ultrasound drafts and exact source delivery',async()=>{
  const compiled=await build({stdin:{contents:common+"export * from './atlas-review/lib/hand-bone-ultrasound';export * from './atlas-review/content/hand-bone-ultrasound';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
  const delivery=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
  const catalogue=json('atlas-review/public/models/bodyparts3d/full-body/catalog.json');

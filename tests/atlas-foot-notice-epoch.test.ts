@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import test from 'node:test';
 import { preFootNotice, preFootNoticeBytes, preFootWebsiteEpoch,
   sourceFootNoticeBytes, withoutFootNotice } from './atlas-foot-notice-history.ts';
+import { withoutMidfootNotice } from './atlas-foot-ultrasound-notice-history.ts';
 
 const sha = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex');
 const json = (path: string) => JSON.parse(readFileSync(path, 'utf8'));
@@ -12,7 +13,7 @@ const saved = (path: string) => execFileSync('git', ['show', `${preFootWebsiteEp
   maxBuffer: 32e6, windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
 });
 const notice = 'LICENSES/THIRD_PARTY_NOTICES.md';
-const currentSourceRevision = 'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb';
+const currentSourceRevision = '537838f028f15e62a6642e7eb360cbaeea31fa20';
 const priorSourceRevision = 'a1cb14f05b3070b8553e85e3596f634b2bf36a5d';
 const atlasSource = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const sourceAt = (revision: string) => execFileSync('git', ['show', `${revision}:${notice}`], {
@@ -50,15 +51,28 @@ test('foot notice is one exact terminal appendix to the complete pre-foot epoch'
   assert.throws(() => withoutFootNotice('x' + foot), /Altered or moved preceding notice/);
   const current = readFileSync('atlas-review/' + notice);
   assert.deepEqual(current, currentSourceNoticeBytes, 'Review imports exact committed current Atlas notice bytes');
-  const prior = withoutToeNotice(current);
+  const toeCurrent = withoutMidfootNotice(current);
+  const prior = withoutToeNotice(toeCurrent);
   assert.deepEqual(prior.subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, 'Complete foot epoch retained after toe section');
   assert.match(prior.subarray(sourceFootNoticeBytes.length).toString(), /^\n## Hand-bone ultrasound surface orientation — 4 October 2026\n/);
-  const changed = Buffer.from(current);
+  const changed = Buffer.from(toeCurrent);
   changed[title.length + toeHeading.length + 10] ^= 1;
   assert.throws(() => withoutToeNotice(changed), /Toe notice changed/);
-  const toeSection = current.subarray(title.length, current.indexOf(nextHeading, title.length));
-  assert.throws(() => withoutToeNotice(Buffer.concat([title, toeSection, toeSection, current.subarray(title.length + toeSection.length)])), /Duplicate toe notice/);
-  assert.throws(() => withoutToeNotice(Buffer.concat([title, current.subarray(title.length + toeSection.length), toeSection])), /Toe notice missing or moved/);
+  const toeSection = toeCurrent.subarray(title.length, toeCurrent.indexOf(nextHeading, title.length));
+  assert.throws(() => withoutToeNotice(Buffer.concat([title, toeSection, toeSection, toeCurrent.subarray(title.length + toeSection.length)])), /Duplicate toe notice/);
+  assert.throws(() => withoutToeNotice(Buffer.concat([title, toeCurrent.subarray(title.length + toeSection.length), toeSection])), /Toe notice missing or moved/);
+
+  const midfootHeading = Buffer.from('## Midfoot ultrasound and hallux-note follow-up (4 October 2026)\n');
+  const midfootSection = current.subarray(title.length, current.indexOf(toeHeading, title.length));
+  assert.deepEqual(midfootSection.subarray(0, midfootHeading.length), midfootHeading);
+  const altered = Buffer.from(current);
+  altered[title.length + midfootHeading.length + 10] ^= 1;
+  assert.throws(() => withoutMidfootNotice(altered), /Midfoot notice changed/);
+  assert.throws(() => withoutMidfootNotice(toeCurrent), /Midfoot notice missing or moved/);
+  assert.throws(() => withoutMidfootNotice(Buffer.concat([title, midfootSection, midfootSection, current.subarray(title.length + midfootSection.length)])), /Duplicate midfoot notice/);
+  assert.throws(() => withoutMidfootNotice(Buffer.concat([title, current.subarray(title.length + midfootSection.length), midfootSection])), /Midfoot notice missing or moved/);
+  assert.match(midfootSection.toString(), /Savaşan et al\. \(2026\), declaring CC BY\s+with its exact version not independently established/);
+  assert.match(midfootSection.toString(), /factual\s+reading only, not an asset\/adaptation grant/);
 });
 
 test('four runtimes and protected Review ship source-bound notices with intact dependency notices', () => {
@@ -77,7 +91,7 @@ test('four runtimes and protected Review ship source-bound notices with intact d
     assert.equal(manifest.clinicalApproved, false);
     const delivered = readFileSync(base + notice);
     assert.deepEqual(delivered, currentSourceNoticeBytes, `${name}: exact source notice`);
-    assert.deepEqual(withoutToeNotice(delivered).subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, `${name}: foot notice unchanged`);
+    assert.deepEqual(withoutToeNotice(withoutMidfootNotice(delivered)).subarray(0, sourceFootNoticeBytes.length), sourceFootNoticeBytes, `${name}: foot notice unchanged`);
     const entry = manifest.files.find((file: { path: string }) => file.path === notice);
     assert(entry);
     assert.equal(delivered.length, entry.bytes);
@@ -85,8 +99,15 @@ test('four runtimes and protected Review ship source-bound notices with intact d
     for (const path of ['bundled-dependencies.json', 'BUNDLED_NOTICES.txt'])
       assert.deepEqual(readFileSync(base + path), saved(base + path), `${name}: dependency notice unchanged`);
     const prior = jsonFromSaved(base + 'manifest.json');
-    assert.deepEqual(manifest.files.filter((file: { path: string }) => file.path.startsWith('models/')),
+    const models: { path: string; bytes: number; sha256: string }[] =
+      manifest.files.filter((file: { path: string }) => file.path.startsWith('models/'));
+    assert.deepEqual(models,
       prior.files.filter((file: { path: string }) => file.path.startsWith('models/')), `${name}: model assets unchanged`);
+    for (const model of models) {
+      const bytes = readFileSync(base + model.path);
+      assert.equal(bytes.length, model.bytes, `${name}: ${model.path} model size`);
+      assert.equal(sha(bytes), model.sha256, `${name}: ${model.path} model bytes`);
+    }
   }
 
   const viewerBase = 'public/atlas-review-viewer/';

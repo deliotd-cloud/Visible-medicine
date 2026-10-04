@@ -1,5 +1,21 @@
 # Third-party notices
 
+## Midfoot ultrasound and hallux-note follow-up (4 October 2026)
+
+Eight cuboid/cuneiform selections receive four original drafts; four hallux
+Ultrasound notes are corrected without changing their original lesson text.
+Reading references are Hung et al. (2020), Maeda et al. (2022) and Requist et al.
+(2023), each declaring CC BY 4.0, and Savaşan et al. (2026), declaring CC BY
+with its exact version not independently established. The latter is factual
+reading only, not an asset/adaptation grant used by this project. Exact titles,
+links and scope are in [the reference audit](../docs/FOOT_ULTRASOUND_FOLLOWUP.md).
+No article prose, figure, ultrasound frame, scan, table, dataset, segmentation
+or supplement is redistributed. Independently authored wording retains MIT
+terms; model licensing and previous notices remain unchanged. No dependency,
+font, texture, geometry, service, account or mandatory fee is added. Draft
+coverage is not ultrasound availability, clinical acceptance or registration;
+revision-bound radiologist and future imaging-rights/privacy review remain.
+
 ## Toe-phalanx ultrasound teaching (4 October 2026)
 
 Twenty-eight source-bound selections use five original educational families.

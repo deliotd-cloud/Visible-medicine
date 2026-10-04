@@ -17,7 +17,7 @@
   },
   {
     "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-    "sha256": "e15799c43231e25ffe7f75768fc7f8020b564623c053fb8d126eac6533e93240"
+    "sha256": "a59a08db24f13fa3d6ed03a7040afd468de66ef06d96873a58a4647256cc84f2"
   },
   {
     "path": "LICENSES/bodyparts3d-license-evidence.html",
@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "50647b7d129ad7b72bc6996ff11d79d7adc7245face6e30bae50adb3ed0efe05"
+    "sha256": "0a6e2ba2d8e4e41388160ad3b974deb96c5e91fba400fe309bdb3ed87de28854"
   },
   {
     "path": "app/body-education-link.ts",
@@ -934,6 +934,14 @@
   {
     "path": "content/foot-surface-imaging.ts",
     "sha256": "c094fb283c89bc0065d6c03adc55333229ce9509174d33b666f7eac1972e3b33"
+  },
+  {
+    "path": "content/foot-ultrasound-followup-pins.json",
+    "sha256": "73cc0352b06831e09d60280d2f69dcd94141874abd0124b18ba3ba24c0938e06"
+  },
+  {
+    "path": "content/foot-ultrasound-followup.ts",
+    "sha256": "78295dfbcd898c38764d4ceb14c921353140f90a1c5175916871dadcbe0bcd00"
   },
   {
     "path": "content/foot-vascular-quiz-pins.json",
@@ -2630,6 +2638,10 @@
   {
     "path": "lib/foot-surface-imaging.ts",
     "sha256": "46947593f3f8b88cd7e65b9063b64f9b356707ce1bdfff56751425b7656fc1ff"
+  },
+  {
+    "path": "lib/foot-ultrasound-followup.ts",
+    "sha256": "da1eafd696222701e71ced7e4ddeda29264dea577b9587f5c3a9611df5a2021a"
   },
   {
     "path": "lib/foot-vascular-anatomy.ts",

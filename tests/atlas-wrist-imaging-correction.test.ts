@@ -10,7 +10,7 @@ import {atlasExactGitApi} from './atlas-exact-git-api.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const wristWebsiteEpoch='fdf1a982c2064786f0de8cc01c5ec895f2227d38';
-const sourceRevision='ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb';
+const sourceRevision='537838f028f15e62a6642e7eb360cbaeea31fa20';
 const atlasSource='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const tabs=['ct','mri','xray'];
 const common="export {bodyLesson,bodyContent} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';export {contentTabs} from './atlas-review/lib/content-types';export {structures} from './atlas-review/app/anatomy-data';export {dissectionProfiles} from './atlas-review/app/dissection-data';export {regionalTours} from './atlas-review/lib/regional-tours';export {reasoningConcepts} from './atlas-review/lib/reasoning-questions';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-response';export * from './atlas-review/lib/body-review-api';export * from './atlas-review/lib/body-review-decisions';";
@@ -20,7 +20,7 @@ const sourceAt=(path:string)=>execFileSync('git',['show',`${sourceRevision}:${pa
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const hash=(value:Buffer|string)=>createHash('sha256').update(value).digest('hex');
 
-test('current toe import preserves all 48 wrist correction topics and exact source delivery',async()=>{
+test('current midfoot import preserves all 48 wrist correction topics and exact source delivery',async()=>{
  const admission=await atlasExactGitApi(wristWebsiteEpoch,common+"export * from './atlas-review/lib/wrist-imaging';export * from './atlas-review/content/wrist-imaging-concepts';");
  const compiled=await build({stdin:{contents:common+"export * from './atlas-review/lib/wrist-imaging';export * from './atlas-review/content/wrist-imaging-concepts';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
  const delivery=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
