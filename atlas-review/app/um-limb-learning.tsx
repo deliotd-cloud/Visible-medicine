@@ -80,17 +80,33 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
   const [zoomStep, setZoomStep] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting'), [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]);
   const questionHeading = useRef<HTMLHeadingElement | null>(null);
+  const readyRef = useRef(false);
+  const questionEpoch = useRef(0), epoch = questionEpoch.current;
   useEffect(() => { questionHeading.current?.focus(); }, [state.index, state.questions]);
   const question = state.questions[state.index], target = definition.surfaces.find(s => s.id === question?.targetId);
   const answered = state.feedback === 'correct' || state.feedback === 'revealed';
   const hidden = definition.surfaces.filter(s => !visibleIds.includes(s.id)).map(s => s.id);
   const required = definition.catalog.bundles.filter(b => definition.surfaces.some(s => visibleIds.includes(s.id) && s.bundle === b.id));
   const ready = rendererReady(health) && required.every(b => loaded.includes(b.id) && !failed.includes(b.id));
-  function next() { setState(s => reduceIdentification(s, { type: 'next' })); setZoom(1); setReset(n => n + 1); }
-  function again(missed: boolean) {
-    const round = (adapter?.createRound ?? createIdentification)(definition, visibleIds, Math.random, missed ? state.results.filter(r => !r.firstTry).map(r => r.targetId) : undefined);
-    if (round) { setState(round); setZoom(1); setReset(n => n + 1); }
+  readyRef.current = ready;
+  function currentQuestion(s: IdentificationState) {
+    return s.questions === state.questions && s.index === state.index
+      && s.questions[s.index]?.targetId === question?.targetId;
   }
+  function acceptsEvent() { return readyRef.current && epoch === questionEpoch.current; }
+  function next() {
+    if (!acceptsEvent() || !answered) return;
+    questionEpoch.current++;
+    setState(s => currentQuestion(s) ? reduceIdentification(s, { type: 'next' }) : s);
+    setZoom(1); setReset(n => n + 1);
+  }
+  function again(missed: boolean) {
+    if (!acceptsEvent()) return;
+    const round = (adapter?.createRound ?? createIdentification)(definition, visibleIds, Math.random, missed ? state.results.filter(r => !r.firstTry).map(r => r.targetId) : undefined);
+    if (round) { questionEpoch.current++; setState(round); setZoom(1); setReset(n => n + 1); }
+  }
+  function answer(id: string) { if (acceptsEvent()) setState(s => currentQuestion(s) ? reduceIdentification(s, { type: 'answer', id }) : s); }
+  function reveal() { if (acceptsEvent()) setState(s => currentQuestion(s) ? reduceIdentification(s, { type: 'reveal' }) : s); }
   return <div className="eye-layer-workbench um-knee-workbench">
     <section className="um-knee-image" aria-label="Structure identification model">
       <div className="um-knee-camera-tools"><Button size="sm" variant="outline" onClick={onClose}>Back to dissection</Button>
@@ -105,7 +121,8 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
         landmarks={[]} explode={0} layout="spatial" anchorSkeleton={false} showOrigins={false} labels={false} view={view} zoom={zoom} zoomStep={zoomStep}
         reset={reset + state.index} focus exam={false} inspection={initialInspection} cameraBounds={null} plate={false}
         onSelect={() => {}} onLoaded={id => setLoaded(p => p.includes(id) ? p : [...p, id])}
-        onFailure={id => setFailed(p => p.includes(id) ? p : [...p, id])} onRendererHealth={setHealth} />}
+        onFailure={id => { readyRef.current = false; setFailed(p => p.includes(id) ? p : [...p, id]); }}
+        onRendererHealth={next => { if (!rendererReady(next)) readyRef.current = false; setHealth(next); }} />}
         {!target && <div className="eye-layer-status">Round complete</div>}
         {target && !ready && <div className="eye-layer-status">{failed.length ? 'Some tissues could not load. Return to dissection to retry.' : 'Preparing the identification model…'}</div>}
       </div>
@@ -117,13 +134,13 @@ export function SpecimenIdentification({ definition, initial, visibleIds, initia
       {question && target ? <>
         <p>Question {state.index + 1} of {state.questions.length}</p>
         <div className="um-limb-answer-options">{question.options.map(id => <Button key={id} variant="outline" disabled={!ready || answered || state.wrong.includes(id)}
-          onClick={() => setState(s => reduceIdentification(s, { type: 'answer', id }))}>{definition.surfaces.find(s => s.id === id)?.name}</Button>)}</div>
+          onClick={() => answer(id)}>{definition.surfaces.find(s => s.id === id)?.name}</Button>)}</div>
         <p role="status">{!ready ? 'Answering is paused until the model is ready.' : state.feedback === 'wrong' ? 'Not this surface. Rotate the model and try again.' : answered ? `${state.feedback === 'revealed' ? 'Answer' : 'Correct'}: ${target.name}` : 'Choose an answer using the buttons.'}</p>
-        {answered ? <><p>{adapter ? adapter.feedback(definition, target) : specimenTeachingFor(definition, target)?.function}</p><Button onClick={next}>{state.index + 1 === state.questions.length ? 'Finish round' : 'Next structure'}</Button></>
-          : <Button variant="ghost" disabled={!ready} onClick={() => setState(s => reduceIdentification(s, { type: 'reveal' }))}>Reveal answer</Button>}
+        {answered ? <><p>{adapter ? adapter.feedback(definition, target) : specimenTeachingFor(definition, target)?.function}</p><Button disabled={!ready} onClick={next}>{state.index + 1 === state.questions.length ? 'Finish round' : 'Next structure'}</Button></>
+          : <Button variant="ghost" disabled={!ready} onClick={reveal}>Reveal answer</Button>}
       </> : <>
         <p>{state.results.filter(r => r.firstTry).length} of {state.results.length} identified on the first try. Revealed answers do not count as correct.</p>
-        <div className="eye-layer-actions"><Button onClick={() => again(false)}>New round</Button><Button variant="outline" disabled={state.results.every(r => r.firstTry)} onClick={() => again(true)}>Retry missed</Button></div>
+        <div className="eye-layer-actions"><Button disabled={!ready} onClick={() => again(false)}>New round</Button><Button variant="outline" disabled={!ready || state.results.every(r => r.firstTry)} onClick={() => again(true)}>Retry missed</Button></div>
         <ul>{state.results.map(r => <li key={r.targetId}>{definition.surfaces.find(s => s.id === r.targetId)?.name} · {r.firstTry ? 'First try' : r.revealed ? 'Revealed' : 'After retry'}</li>)}</ul>
       </>}
       <p>{adapter?.scopeNote ?? 'Rounds use up to ten of the tissues visible when you started. Your dissection and its history are preserved on return. Progress lasts only for this round.'}</p>
