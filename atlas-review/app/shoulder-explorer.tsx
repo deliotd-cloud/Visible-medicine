@@ -158,16 +158,6 @@ export default function ShoulderExplorer({
   const modelReadyRef = useRef(false);
   const examReadyRef = useRef(false);
   const displayReady = rendererReady(rendererHealth) && modelReady;
-  const reportRendererHealth = useCallback((health: RendererHealth) => {
-    rendererHealthRef.current = health;
-    examReadyRef.current = rendererReady(health) && modelReadyRef.current;
-    setRendererHealth(health);
-  }, []);
-  const reportModelReady = useCallback((ready: boolean) => {
-    modelReadyRef.current = ready;
-    examReadyRef.current = rendererReady(rendererHealthRef.current) && ready;
-    setModelReady(ready);
-  }, []);
   const [view, setView] = useState<CameraView>('posterior');
   const [layer, setLayer] = useState<AnatomyLayer>('surface');
   const [zoom, setZoom] = useState(1);
@@ -310,6 +300,29 @@ export default function ShoulderExplorer({
     setZoomStep(0);
     applyStudyView(state);
   }, [applyStudyView]);
+  const pauseTourPlayback = useCallback(() => {
+    tourPlaybackEpoch.current++;
+    setTourPlaying(false);
+    setTourMotionPaused(true);
+  }, []);
+  const reportRendererHealth = useCallback((health: RendererHealth) => {
+    rendererHealthRef.current = health;
+    examReadyRef.current = rendererReady(health) && modelReadyRef.current;
+    if (!examReadyRef.current && tourActiveRef.current) pauseTourPlayback();
+    setRendererHealth(health);
+  }, [pauseTourPlayback]);
+  const reportModelReady = useCallback((ready: boolean) => {
+    modelReadyRef.current = ready;
+    examReadyRef.current = rendererReady(rendererHealthRef.current) && ready;
+    if (!examReadyRef.current && tourActiveRef.current) pauseTourPlayback();
+    setModelReady(ready);
+  }, [pauseTourPlayback]);
+  const manualTourStep = useCallback((index: number) => {
+    if (!tourActiveRef.current || tourIndex === null || !Number.isInteger(index) ||
+        index < 0 || index >= shoulderTour.steps.length || index === tourIndex) return;
+    tourPlaybackEpoch.current++;
+    applyTourStep(index);
+  }, [applyTourStep, tourIndex]);
   function startTour() {
     if (!guidedLearning || tourActiveRef.current || !displayReady || mode !== 'study' || workspace.mode === 'practice') return;
     beforeTour.current = { view: structuredClone(captureView()), zoomStep };
@@ -979,13 +992,13 @@ export default function ShoulderExplorer({
                 playing={tourPlaying}
                 ready={displayReady}
                 onStart={startTour}
-                onReadImaging={() => { setTourPlaying(false); setTourMotionPaused(true); }}
+                onReadImaging={pauseTourPlayback}
                 onPlayPause={() => {
                   if (!displayReady) return;
-                  setTourPlaying(!tourPlaying);
-                  setTourMotionPaused(tourPlaying);
+                  if (tourPlaying) pauseTourPlayback();
+                  else { setTourPlaying(true); setTourMotionPaused(false); }
                 }}
-                onStep={index => { if (displayReady) applyTourStep(index); }}
+                onStep={index => { if (displayReady) manualTourStep(index); }}
                 onExit={exitTour}
               />
               {tourActive && <a className="shoulder-tour-credits" href={`${assetBase}/models/bodyparts3d/credits.html`} target="_blank" rel="noreferrer">BodyParts3D · CC BY 4.0 · Adapted</a>}

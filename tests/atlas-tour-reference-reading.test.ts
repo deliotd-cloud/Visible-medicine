@@ -8,7 +8,7 @@ import {execFileSync} from 'node:child_process';
 // embedded browser journey; this gate proves those exact players reach both hosts.
 test('reference-reading pause reaches both learner modules and protected review',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,'980b79d2201523cf069c06d628803ff7eb6fcac1');
+ assert.equal(review.revision,'9b2003d75b9c27861befeaf253ce7d52cce497a6');
  // motion-safety-old-player:start
  const oldManifest=JSON.parse(execFileSync('git',['show','a0df5f3d4df65f6d45ea6e6d71d6a196c22b51ef:atlas-review/manifest.json'],
   {maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
@@ -20,13 +20,13 @@ test('reference-reading pause reaches both learner modules and protected review'
  // motion-safety-old-player:end
  for(const [module,path,sourceHash,handler] of [
   ['shoulder','app/shoulder-tour-player.tsx','0fb1f95ec82c2323b4bc01372fd5e7938c090df8a4b8513f8929c672cfde6740','if(event.currentTarget.open)onReadImaging();'],
-  ['head-neck','app/regional-guided-learning.tsx','ad05438dd3e0e5bf22a92370777f116dbb6e362e7b4260cd1fb8fffa13eebedb','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],
+  ['head-neck','app/regional-guided-learning.tsx','f4c0d9d484a2b4a8ee2e4e258cf20e38b433d188e8123bbd673c5e67c1e40fb3','if(event.currentTarget.open)revokePlayback();'],
  ]){
   const base=`public/atlas-runtime/${module}/`;
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const record=review.files.find((f:any)=>f.path===path);assert(record,path);
-  assert.equal(learner.sourceCommit,'980b79d2201523cf069c06d628803ff7eb6fcac1');
+  assert.equal(learner.sourceCommit,'9b2003d75b9c27861befeaf253ce7d52cce497a6');
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,sourceHash);
   assert.equal(record.sourceSha256,sourceHash);
   const imported=readFileSync('atlas-review/'+path);

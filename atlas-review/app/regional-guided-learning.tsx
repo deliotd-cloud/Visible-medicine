@@ -78,6 +78,12 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   },[ready]);
   const step=tour.steps[(scopeChanged?null:index)??0];
   const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;pausedImaging?.suspend();setIndex(next);setMotionPaused(false);setQuickCheckOpen(false);},[tour,pausedImaging]);
+  // Manual navigation invalidates the old timer without changing whether Play
+  // was active; the next committed stop gets its own full-duration timeout.
+  const manualStep=useCallback((next:number)=>{
+    if(index===null||!Number.isInteger(next)||next<0||next>=tour.steps.length||next===index)return;
+    playbackEpoch.current++;changeStep(next);
+  },[changeStep,index,tour.steps.length]);
   useEffect(()=>{const q=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>{
     if(q.matches){playbackEpoch.current++;pausedImaging?.suspend();setPlaying(false);setMotionPaused(true);}
     setReduced(q.matches);
@@ -98,7 +104,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
       active&&ready&&!playing&&motionPaused&&!quickCheckOpen&&!document.hidden);
   },[pausedImaging,active,selected,tour,step,ready,playing,motionPaused,quickCheckOpen]);
   useLayoutEffect(()=>()=>pausedImaging?.suspend(),[pausedImaging,scope]);
-  const exit=()=>{pausedImaging?.suspend();onExit();};
+  const exit=()=>{pausedImaging?.suspend();revokePlayback();onExit();};
   const onHealth=useCallback((next:RendererHealth)=>{
     if(!scope.active||currentScope.current!==scope)return;
     if(!rendererReady(next)){pausedImaging?.suspend();revokePlayback();}
@@ -108,28 +114,28 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   return <section className="regional-tour" aria-label={tour.title}>
     <div className="regional-tour-panel">
       <div className="regional-tour-heading"><h2 aria-live="polite" aria-atomic="true">{active?step.title:tour.title}</h2>{active&&<TourStepPicker steps={tour.steps} index={index} ready={ready}
-        onPause={()=>{setPlaying(false);setMotionPaused(true);}}
-        onStep={next=>{if(ready)changeStep(next);}}/>}</div>
+        onPause={revokePlayback}
+        onStep={next=>{if(ready)manualStep(next);}}/>}</div>
       <div className="regional-tour-primary">
       <p className="regional-tour-caption" role="region" aria-label="Current step explanation" tabIndex={0} aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
       {!ready&&<output>{resolved.error||retryError|| (failed.length?'Some anatomy failed to load. Retry the missing anatomy to continue.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}
       <div className="regional-tour-controls" ref={controls}>
         {retryPlan.length>0&&<Button variant="outline" disabled={retrying} onClick={retryAnatomy}>{retrying?'Retrying…':'Retry missing anatomy'}</Button>}
         {!active?<Button data-tour-resume disabled={!ready} onClick={()=>{setPlaying(false);changeStep(0);}}>Start guided tour</Button>:<>
-          <Button variant="outline" disabled={!ready||index===0} onClick={()=>changeStep(index-1)}>Back</Button>
-          <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{pausedImaging?.suspend();setPlaying(p=>!p);setMotionPaused(playing);}}>{playing?'Pause':'Play'}</Button>
-          <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?exit():changeStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
+          <Button variant="outline" disabled={!ready||index===0} onClick={()=>manualStep(index-1)}>Back</Button>
+          <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{pausedImaging?.suspend();if(playing)revokePlayback();else{setPlaying(true);setMotionPaused(false);}}}>{playing?'Pause':'Play'}</Button>
+          <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?exit():manualStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
         </>}
         <Button variant="ghost" onClick={exit}>Exit tour</Button>
       </div>
       </div>
       <details className="regional-tour-explanation" open={explanationOpen} onToggle={event=>{
         const open=event.currentTarget.open;setExplanationOpen(open);
-        if(open){setPlaying(false);setMotionPaused(true);}
+        if(open)revokePlayback();
       }}>
       <summary>References, imaging & quick check · Draft</summary>
       <div className="regional-tour-resources">
-      <details onToggle={event=>{if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}}}><summary>References & limits · Draft, review pending</summary>
+      <details onToggle={event=>{if(event.currentTarget.open)revokePlayback();}}><summary>References & limits · Draft, review pending</summary>
         <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
         {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
       </details>
@@ -138,10 +144,10 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
       <TourImagingNotes key={`imaging:${step.id}`} structureName={selected.name}
         linkControl={<PausedTourImagingLink link={pausedImaging}/>}
         lessons={tourImagingModalities.map(({id,label})=>({id,label,content:bodyLesson(selected,id)}))}
-        onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>
+        onOpen={revokePlayback}/>
       {active&&ready&&selected&&<TourQuickCheck key={`quiz:${step.id}`} lesson={bodyLesson(selected,'quiz')}
         onChange={open=>{pausedImaging?.suspend();setQuickCheckOpen(open);}}
-        onOpen={()=>{setPlaying(false);setMotionPaused(true);}}/>}
+        onOpen={revokePlayback}/>}
         </>}
       </LazyBodyTeaching>}
       </div>
