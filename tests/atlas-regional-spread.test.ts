@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='adba85b029cefebb5cecfb53b281d69276f2803c';
+const revision='1cb9469a39d15c5c60dcedb53c3ca2a6e459815e';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -235,7 +235,15 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.deepEqual(stable,priorStable);
  assert.equal(shoulder.modelHash,spreadShoulder.modelHash);
  assert.deepEqual(Object.keys(shoulder.sourceRevisions),Object.keys(spreadShoulder.sourceRevisions));
- const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(shoulder.display);
+ // Preserve the exact pre-motion display milestone's original assertions.
+ // The current shoulder callback safeguard is checked as a separate one-file
+ // delta against this immutable saved host, not added to the historical list.
+ const savedDisplayShoulder=JSON.parse(execFileSync('git',['show','34594657e4e20d460921246f9d66a1a22bea5ba6:atlas-review/content/review-revisions.json'],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
+ const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(savedDisplayShoulder.display);
+ const liveDisplay=new Map<string,string>(shoulder.display);
+ assert.deepEqual([...liveDisplay.keys()],[...currentDisplay.keys()]);
+ assert.deepEqual([...liveDisplay].filter(([path,hash])=>currentDisplay.get(path)!==hash).map(([path])=>path),['app/shoulder-explorer.tsx']);
+ assert.equal(liveDisplay.get('app/shoulder-explorer.tsx'),sha(sourceAt('app/shoulder-explorer.tsx')),'Exact current shoulder motion safeguard source');
  const expectedDisplayKeys=[...previousDisplay.keys()];
  expectedDisplayKeys.splice(expectedDisplayKeys.indexOf('app/scene-label-layer.css')+1,0,'lib/scene-label-size.ts','lib/scene-label-focus.ts');
  assert.deepEqual([...currentDisplay.keys()],expectedDisplayKeys);

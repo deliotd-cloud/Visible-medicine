@@ -183,6 +183,7 @@ export default function ShoulderExplorer({
   const [reducedMotion, setReducedMotion] = useState(false);
   const beforeTour = useRef<{ view: StudyView; zoomStep: number } | null>(null);
   const tourActiveRef = useRef(false);
+  const tourPlaybackEpoch = useRef(0);
   const tourControls = useRef<HTMLDivElement>(null);
   const tourHadFocus = useRef(false);
   const tourActive = tourIndex !== null;
@@ -322,7 +323,14 @@ export default function ShoulderExplorer({
   }, [tourActive]);
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setReducedMotion(preference.matches);
+    const update = () => {
+      if (preference.matches) {
+        tourPlaybackEpoch.current++;
+        setTourPlaying(false);
+        setTourMotionPaused(true);
+      }
+      setReducedMotion(preference.matches);
+    };
     update();
     preference.addEventListener('change', update);
     return () => preference.removeEventListener('change', update);
@@ -337,12 +345,14 @@ export default function ShoulderExplorer({
   }, [tourActive, displayReady]);
   useEffect(() => {
     if (!tourPlaying || tourIndex === null || !displayReady || document.hidden) return;
+    let active = true;
+    const epoch = tourPlaybackEpoch.current;
     const timer = window.setTimeout(() => {
-      if (!tourActiveRef.current || document.hidden) return;
+      if (!active || epoch !== tourPlaybackEpoch.current || !tourActiveRef.current || document.hidden) return;
       if (tourIndex + 1 < shoulderTour.steps.length) applyTourStep(tourIndex + 1);
       else setTourPlaying(false);
     }, shoulderTour.steps[tourIndex].durationMs);
-    return () => window.clearTimeout(timer);
+    return () => { active = false; window.clearTimeout(timer); };
   }, [tourPlaying, tourIndex, displayReady, applyTourStep]);
 
   const searchOptions = useMemo<SearchOption[]>(

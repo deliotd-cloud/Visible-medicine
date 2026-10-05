@@ -7,8 +7,8 @@ import { build } from 'esbuild';
 test('interactive reasoning reaches learner and protected review with source-bound answers', async () => {
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const learner=JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json','utf8'));
-  assert.equal(review.revision,'adba85b029cefebb5cecfb53b281d69276f2803c');
-  assert.equal(learner.sourceCommit,'adba85b029cefebb5cecfb53b281d69276f2803c');
+  assert.equal(review.revision,'1cb9469a39d15c5c60dcedb53c3ca2a6e459815e');
+  assert.equal(learner.sourceCommit,'1cb9469a39d15c5c60dcedb53c3ca2a6e459815e');
   const inputs=JSON.parse(readFileSync('public/atlas-runtime/head-neck/source-inputs.json','utf8'));
   for(const path of ['lib/reasoning-questions.ts','lib/thoracic-vessel-reasoning.ts','lib/atlas-practice.ts']) {
     const file=review.files.find((f:any)=>f.path===path);assert(file);

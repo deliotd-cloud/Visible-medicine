@@ -184,9 +184,9 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           <SelectTrigger aria-label={`${specimen.label} camera direction`}><SelectValue /></SelectTrigger>
           <SelectContent>{cameraViews.map((v) => <SelectItem key={v} value={v}>{v[0].toUpperCase() + v.slice(1)}</SelectItem>)}</SelectContent>
         </Select>
-        <Button variant="outline" size="sm" onClick={() => setZoomStep(s => s - 1)} aria-label="Zoom out">−</Button>
-        <Button variant="outline" size="sm" onClick={() => setZoomStep(s => s + 1)} aria-label="Zoom in">+</Button>
-        <Button variant="outline" size="sm" aria-pressed={labels} onClick={() => setLabels((v) => !v)}><Tags />Labels</Button>
+        <Button variant="outline" size="sm" disabled={!!guidance} onClick={() => { if (!guidance) setZoomStep(s => s - 1); }} aria-label="Zoom out">−</Button>
+        <Button variant="outline" size="sm" disabled={!!guidance} onClick={() => { if (!guidance) setZoomStep(s => s + 1); }} aria-label="Zoom in">+</Button>
+        <Button variant="outline" size="sm" disabled={!!guidance} aria-pressed={labels} onClick={() => { if (!guidance) setLabels((v) => !v); }}><Tags />Labels</Button>
         <Button variant="outline" size="sm" disabled={!!guidance} onClick={resetAll}><RotateCcw />Reset</Button>
         {(!supplement || practiceAdapter) && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!!guidance || !ready || practiceCount < 2} onClick={() => { if (!guidance) setPractice((practiceAdapter?.createRound ?? createIdentification)(specimen, visible.map(s => s.id))); }}>Practise identification</Button>}
       </div>
@@ -231,7 +231,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         </>}
         <details><summary>Source limits</summary><p>{guide.limitation}</p></details>
       </details>}
-      <fieldset className="um-specimen-manual-controls" disabled={!!guidance}>
+      <fieldset className="um-specimen-manual-controls" disabled={!!guidance} inert={!!guidance}>
       <legend className="sr-only">Manual dissection controls{guidance ? ' — exit guided learning to change tissues' : ''}</legend>
       <label className="um-knee-label" htmlFor="um-knee-study">Study</label>
       <Select disabled={!!guidance} value={active?.id ?? 'custom'} items={[{value:'custom',label:'Custom dissection'},...kneeSpecimenStudies.map(s=>({value:s.id,label:s.title}))]} onValueChange={(v) => { if (v) preset(v); }}>
@@ -245,11 +245,12 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       <p className="um-knee-guide">{active?.note ?? 'Your custom tissue selection. Undo restores the previous dissection step.'}</p>
       {supplement?.studySupplement?.(specimen, active?.id ?? null)}
       <div className="eye-layer-actions">
-        <Button ref={undoButton} size="sm" variant="outline" disabled={!history.length} onClick={(event) => historyStep('undo', event.currentTarget)}><Undo2 />Undo</Button>
-        <Button ref={redoButton} size="sm" variant="outline" disabled={!future.length} onClick={(event) => historyStep('redo', event.currentTarget)}><Redo2 />Redo</Button>
+        <Button ref={undoButton} size="sm" variant="outline" disabled={!!guidance || !history.length} onClick={(event) => historyStep('undo', event.currentTarget)}><Undo2 />Undo</Button>
+        <Button ref={redoButton} size="sm" variant="outline" disabled={!!guidance || !future.length} onClick={(event) => historyStep('redo', event.currentTarget)}><Redo2 />Redo</Button>
         <span aria-live="polite">{visible.length}/{kneeStructures.length} visible</span>
       </div>
-      {!supplement && <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} onSelect={select} onExplore={nerve => {
+      {!supplement && <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} disabled={!!guidance} onSelect={select} onExplore={nerve => {
+        if (guidance) return;
         const action = motorStudyAction(specimen, nerve), group = specimenMotorGroups(specimen).find(g => g.key === nerve);
         if (!action || !group) return;
         dispatch(action); assembledDisplay(); setQuery(''); setJointCloseUp(false); setView(group.view);
@@ -276,7 +277,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           </>}
         </>}
       </section>
-      <fieldset className="um-specimen-manual-controls" disabled={!!guidance}>
+      <fieldset className="um-specimen-manual-controls" disabled={!!guidance} inert={!!guidance}>
       <legend className="sr-only">Tissue visibility and display controls</legend>
       <div className="um-knee-separation">
         <label className="um-knee-label">Separation <output>{explode}%</output></label>
@@ -284,7 +285,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <Slider value={[explode]} min={0} max={100} step={5} disabled={!!guidance || !ready || !visible.length || (layout === 'extract' && !selected)}
           aria-valuetext={`${explode}%`}
           onValueChange={(v) => { const n = Array.isArray(v) ? v[0] : v; if (!guidance && Number.isFinite(n)) { setExplode(n); setFocus(false); } }} aria-label={`${specimen.label} tissue separation`} />
-        {explode > 0 && <Button size="sm" variant="ghost" onClick={(event) => { focusSpecimenSeparation(event.currentTarget); setExplode(0); }}>Return to source positions</Button>}
+        {explode > 0 && <Button size="sm" variant="ghost" disabled={!!guidance} onClick={(event) => { if (guidance) return; focusSpecimenSeparation(event.currentTarget); setExplode(0); }}>Return to source positions</Button>}
       </div>
       <details className="um-knee-details" open>
         <summary>Tissues & search</summary>
@@ -292,21 +293,21 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           const members = kneeSpecimen.structures.filter((s) => s.tissue === group.id);
           const count = members.filter((s) => !hidden.includes(s.id)).length;
           return <label key={group.id}><span style={{ color: 'color' in group ? group.color as string : kneeTissueColours[group.id] }}>●</span>{group.name}<small>{count}/{members.length}</small>
-            <Switch checked={count > 0} aria-label={`Show ${specimen.label.toLowerCase()} ${group.name.toLowerCase()}`} onCheckedChange={(checked) => {
+            <Switch checked={count > 0} disabled={!!guidance} aria-label={`Show ${specimen.label.toLowerCase()} ${group.name.toLowerCase()}`} onCheckedChange={(checked) => {
               if (guidance) return;
               // One atomic history step for the entire group, not one per surface.
               dispatch({ type: 'group', tissue: group.id, visible: checked }); setFocus(false);
             }} /></label>;
         })}</div>
-        <SpecimenStructureSearch specimen={specimen} query={query} onQueryChange={setQuery}
+        <SpecimenStructureSearch specimen={specimen} query={query} onQueryChange={next => { if (!guidance) setQuery(next); }}
           selectedId={selectedId} hidden={hidden} onSelect={select}
           onVisibility={(id, visible) => { if (!guidance) { dispatch({ type: 'visibility', id, visible }); setFocus(false); } }} />
       </details>
       <details className="um-knee-details"><summary>Display options</summary>
-        {specimen.closeUp && <><label className="um-knee-toggle">Regional close-up<Switch checked={jointCloseUp} onCheckedChange={(v) => { setJointCloseUp(v); setFocus(false); }} /></label>
+        {specimen.closeUp && <><label className="um-knee-toggle">Regional close-up<Switch checked={jointCloseUp} disabled={!!guidance} onCheckedChange={(v) => { if (guidance) return; setJointCloseUp(v); setFocus(false); }} /></label>
         <p>Turn off for the full visible model. Close-up pauses while separated, fading others or framing a selected structure; geometry is unchanged.</p></>}
-        <label className="um-knee-toggle">Illustrated surfaces<Switch checked={illustrated} onCheckedChange={setIllustrated} /></label>
-        <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={setShowOrigins} disabled={layout === 'tray'} /></label>
+        <label className="um-knee-toggle">Illustrated surfaces<Switch checked={illustrated} disabled={!!guidance} onCheckedChange={v => { if (!guidance) setIllustrated(v); }} /></label>
+        <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={v => { if (!guidance) setShowOrigins(v); }} disabled={!!guidance || layout === 'tray'} /></label>
       </details>
       </fieldset>
       <details className="um-knee-details"><summary>Source & limitations</summary>
