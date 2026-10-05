@@ -69,7 +69,7 @@
   },
   {
     "path": "app/specimen-depth-notes.tsx",
-    "sha256": "e1cf1e9c6ba1fba1022b92742c1a3ef5c20ecb0f65bb8f2db251f3e8110b8549"
+    "sha256": "63d9d19a5664f9e2cbaa24a72dc244221100406f09e8086a79583aaa4ef63bb8"
   },
   {
     "path": "app/specimen-removal-focus.ts",
@@ -85,7 +85,7 @@
   },
   {
     "path": "app/um-knee-study.css",
-    "sha256": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703"
+    "sha256": "58f25b5fd307d00a7e253a91b96e38c506572c82563c4d608cb22596472559c7"
   },
   {
     "path": "app/um-knee-study.tsx",
@@ -165,7 +165,7 @@
   },
   {
     "path": "content/um-limb-teaching-bindings.v1.json",
-    "sha256": "337a1d1717baa08396225b889ef68cdb0e2d54594122f77b6f09584e7fcf44a2"
+    "sha256": "f5a6c2d6290b4455d2488cea0df3c7dffa5278405d8fbeb1c61966dc17285198"
   },
   {
     "path": "content/um-proximal-topic-completion.ts",
@@ -310,6 +310,10 @@
   {
     "path": "lib/screen-label-layout.ts",
     "sha256": "87854b4e74d2e98a928a2bd9e8b2450214fa16e7a339036f3838d7d848fe927a"
+  },
+  {
+    "path": "lib/specimen-depth-scope.ts",
+    "sha256": "63fa0ece12a9965f224784345692878e7ebc00611f3d44d6be22390da26a957d"
   },
   {
     "path": "lib/specimen-guided-dissection.ts",

@@ -2,11 +2,12 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { join } from 'node:path';
 import { runInNewContext } from 'node:vm';
 import { build } from 'esbuild';
+import { calfDepthEpochRead as readFileSync, calfDepthEpochPlugin, calfDepthWebsiteEpoch } from './atlas-calf-depth-history.ts';
 
 const oldSource = '4bb78ac5a29c88984a735523775ec69aeff942d6';
 const newSource = '5acfa46b7fcef876fc2f55f8ed122de46b29bb03';
@@ -29,7 +30,7 @@ async function reviewApi(): Promise<Imported> {
     "export { umCalfDepth } from './atlas-review/content/um-calf-depth';",
     "export { blankSpecimenReview, parseSavedSpecimenReview, specimenReviewStale } from './atlas-review/lib/specimen-review';",
     "export { postSpecimenReview } from './atlas-review/lib/specimen-review-api';",
-  ].join('\n'), resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, platform: 'node', format: 'esm' });
+  ].join('\n'), resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, platform: 'node', format: 'esm', plugins: [calfDepthEpochPlugin()] });
   return import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
 }
 
@@ -69,7 +70,7 @@ if (process.argv.includes('--capture')) {
   writeFileSync(baselinePath, JSON.stringify(baseline));
   console.log(JSON.stringify({ baselinePath, sha256: sha(readFileSync(baselinePath)), specimens: specimenPackets.length, umPins: pins.bindings.length, source: oldSource, website: oldWebsite }));
 } else {
-  test('calf-depth website import preserves source packets and scopes teaching revisions', { timeout: 120000 }, async () => {
+  test('saved calf-depth website epoch preserves source packets and scopes teaching revisions', { timeout: 120000 }, async () => {
     const baselineBytes = readFileSync(baselinePath);
     assert.equal(sha(baselineBytes), baselineSha, 'immutable public pre-import fixture');
     const baseline = JSON.parse(baselineBytes.toString());
@@ -249,7 +250,7 @@ if (process.argv.includes('--capture')) {
     assert.equal(api.specimenReviewStale(event, c), false, 'synthetic exact revision only');
     const rendered = await build({ entryPoints: ['atlas-review/app/specimen-depth-notes.tsx'],
       bundle: true, write: false, platform: 'node', format: 'cjs', packages: 'external',
-      tsconfigRaw: { compilerOptions: { jsx: 'react-jsx' } } });
+      tsconfigRaw: { compilerOptions: { jsx: 'react-jsx' } }, plugins: [calfDepthEpochPlugin()] });
     const require = createRequire(join(process.cwd(), 'package.json'));
     const component: { exports: Imported } = { exports: {} };
     runInNewContext(rendered.outputFiles[0].text, { module: component, exports: component.exports, require });
@@ -269,7 +270,7 @@ if (process.argv.includes('--capture')) {
         for (const ref of depth[topic].references) if (expected) assert.ok(html.includes(escape(ref.title)), `${slug}/${section}: source title`);
       }
     }
-    console.log(JSON.stringify({ affectedTeachingContexts: changed, unchangedTeachingContexts: unchanged,
+    console.log(JSON.stringify({ historicalWebsiteEpoch: calfDepthWebsiteEpoch, affectedTeachingContexts: changed, unchangedTeachingContexts: unchanged,
       sourcePackets: prior.size, pinnedLessons: nowPins.length, foreignRejected, staleRejected,
       renderedDepthModes: 27, clinicalApproved: false }));
   });

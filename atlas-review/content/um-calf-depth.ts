@@ -4,6 +4,7 @@ export type SpecimenDepthNote = { body: string; references: Array<{ title: strin
 export type SpecimenDepthLesson = {
   status: 'draft';
   revision: string;
+  reviewScope?: 'calf-depth' | 'thigh-depth';
   relationships: SpecimenDepthNote;
   arterialSupply: SpecimenDepthNote;
   clinicalPitfall: SpecimenDepthNote;

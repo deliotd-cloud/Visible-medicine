@@ -33,6 +33,7 @@ import knee from '../public/models/um-knee/catalog.json';
 import type { SpecimenDefinition, SpecimenSurface } from './independent-specimen';
 import type { SpecimenLesson } from '../content/um-limb-teaching';
 import { motorNerves } from '../content/um-limb-motor';
+import { specimenDepthReviewScope } from './specimen-depth-scope';
 import {
   specimenChecklists,
   specimenChecklistVersion,
@@ -141,7 +142,8 @@ export async function specimenReviewMaterial(
   const checklists = structuredClone(specimenChecklists);
   if (guidedDissection) checklists.teaching.push({ id: 'guided-dissection',
     label: 'Inspect every guided step in the actual source viewer: caption, side, visible neighbours, selection and camera frame. These steps do not validate surgical planes or scan registration.' });
-  if (lesson?.depth) checklists.teaching.push({ id: 'calf-depth',
+  const depthScope = specimenDepthReviewScope(lesson?.depth);
+  if (depthScope) checklists.teaching.push({ id: depthScope,
     label: 'Review the additional compartment relationships, typical blood supply and clinical pitfall against the exact source surfaces and references. Vessels, nerves, fascial planes, perfusion and pathology are not thereby modelled or approved.' });
   const identity = {
     catalogScope: specimenReviewScope,
@@ -161,7 +163,7 @@ export async function specimenReviewMaterial(
     ...topics.filter((t) => t.body !== null).map((t) => t.tab),
     ...(lesson?.extended?.selfCheck ? ["self-check"] : []),
     ...(guidedDissection ? ['guided-dissection'] : []),
-    ...(lesson?.depth ? ['calf-depth'] : []),
+    ...(depthScope ? [depthScope] : []),
   ];
   const context: SpecimenReviewContext = {
     ...identity,
@@ -174,12 +176,12 @@ export async function specimenReviewMaterial(
     checklists,
     blockers: {
       geometry: atlasLink ? [] : ['The exact source/study link is unavailable. Resolve this binding before geometry approval.'],
-      teaching: ["anatomy", "function", "clinical", "pathology"]
+      teaching: [...["anatomy", "function", "clinical", "pathology"]
         .filter((t) => !teachingTabs.includes(t))
         .map(
           (t) =>
             `The ${t} topic is pending; complete it before teaching sign-off.`,
-        ),
+        ), ...(lesson?.depth && !depthScope ? ['Additional depth has an unsupported source/revision scope; resolve it before teaching sign-off.'] : [])],
       imaging: [
         "No validated acquired-image series or spatial registration is connected. Imaging approval is unavailable.",
       ],

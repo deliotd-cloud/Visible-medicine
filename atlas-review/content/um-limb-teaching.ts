@@ -4,6 +4,7 @@ import { footMuscleLessons } from '../lib/foot-curriculum';
 import { specimenClinicalLessons, type SpecimenClinicalLesson } from './um-limb-clinical';
 import { specimenMotorBindings, type MotorSupply } from './um-limb-motor';
 import { umCalfDepth, type SpecimenDepthLesson } from './um-calf-depth';
+import { umThighDepth } from './um-thigh-depth';
 
 export type SpecimenLesson = {
   anatomy: string; function: string; references: readonly string[];
@@ -101,5 +102,9 @@ for (const [slug, motorGroups] of Object.entries(specimenMotorBindings)) {
 // source identity. These notes become part of the exact pinned lesson/review.
 for (const [slug, depth] of Object.entries(umCalfDepth)) {
   if (!specimenLessons[slug]?.attachments || specimenLessons[slug].depth) throw new Error(`Invalid calf-depth teaching binding: ${slug}`);
+  specimenLessons[slug].depth = depth;
+}
+for (const [slug, depth] of Object.entries(umThighDepth)) {
+  if (!specimenLessons[slug]?.attachments || specimenLessons[slug].depth) throw new Error(`Invalid thigh-depth teaching binding: ${slug}`);
   specimenLessons[slug].depth = depth;
 }

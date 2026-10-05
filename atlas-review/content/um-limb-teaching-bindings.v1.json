@@ -3310,7 +3310,40 @@
           {
             "nerve": "obturator"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Adductor longus is an anterior medial-thigh adductor. It overlies adductor brevis proximally; the profunda femoris passes deeper, while its medial border helps define the femoral triangle.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Obturator and profunda femoris arterial branches typically supply adductor longus.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Groin pain along the medial thigh does not by itself establish an adductor-longus tendon injury. The pubic attachment and neighboring adductors, joint and neural structures require assessment.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "modelLimit": "Proximal tendon architecture, femoral-triangle fascia, vessels and nerves are not mapped. No pain generator, perfusion or tendon lesion is shown."
+        }
       }
     },
     {
@@ -3455,7 +3488,48 @@
             "nerve": "sciatic-tibial",
             "part": "Hamstring part"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Adductor magnus spans the deep medial thigh. Its adductor and hamstring portions have different typical actions; the distal adductor hiatus is the passage where the femoral vessels reach the posterior knee.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Adductor magnus",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              },
+              {
+                "title": "NCBI Bookshelf · Adductor canal",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK556046/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating profunda femoris branches are a major supply. Medial circumflex femoral branches contribute proximally, with variable distal femoral, popliteal or genicular contributions.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Adductor magnus",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "The muscle silhouette cannot locate the adductor hiatus or prove femoral-vessel patency. An apparent division of the muscle is not a validated map of the two motor portions.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Adductor magnus",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              },
+              {
+                "title": "NCBI Bookshelf · Adductor canal",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK556046/"
+              }
+            ]
+          },
+          "modelLimit": "The adductor hiatus, internal portions, fascial boundaries, vessels and nerves are not individually mapped. No perfusion, entrapment or regional motor loss is simulated."
+        }
       }
     },
     {
@@ -3590,7 +3664,44 @@
           {
             "nerve": "sciatic-tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "The long head arises near semitendinosus at the ischial tuberosity, descends laterally and meets the short head near the fibular head. Only the long head crosses hip and knee.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating profunda femoris branches are the usual supply; proximal hamstrings may also receive inferior gluteal contributions.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A lateral hamstring selection cannot distinguish proximal tendon avulsion from belly strain, short-head disease or a neural cause of weakness. The two heads have different proximal attachments and motor supply.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "modelLimit": "Common proximal tendon, distal tendon details, sciatic nerve branches, vessels and injury planes are not mapped. No loading, perfusion or avulsion is simulated."
+        }
       }
     },
     {
@@ -5246,7 +5357,48 @@
           {
             "nerve": "superior-gluteal"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Gluteus medius lies over gluteus minimus on the lateral ilium; only its posterior portion is covered by gluteus maximus. It contributes to hip abduction and pelvic support during single-leg stance.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gluteus medius",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557509/"
+              },
+              {
+                "title": "NCBI Bookshelf · Superior gluteal nerve",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK535408/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Deep branches of the superior gluteal artery typically supply gluteus medius.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gluteus medius",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557509/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Pelvic drop or lateral hip pain cannot be attributed to this muscle from shape alone. Tendon integrity, superior gluteal nerve function and competing hip causes require examination.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gluteus medius",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557509/"
+              },
+              {
+                "title": "NCBI Bookshelf · Superior gluteal nerve",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK535408/"
+              }
+            ]
+          },
+          "modelLimit": "Superior gluteal vessels and nerve, tendon subdivisions and adjacent bursae are not resolved. No gait, tendon tear, perfusion or functional weakness is simulated."
+        }
       }
     },
     {
@@ -6980,7 +7132,44 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Rectus femoris is the superficial central quadriceps head, overlying vastus intermedius. Unlike the three vasti it crosses both hip and knee; its proximal attachment lies near the anterior inferior iliac spine.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Femoral and lateral circumflex femoral arterial branches typically supply rectus femoris.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Anterior thigh pain or weak knee extension cannot be assigned to rectus femoris by its position alone. Its hip action and shared distal extensor apparatus require examination beyond a static muscle surface.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "The two proximal tendon origins, intramuscular tendon, vessels, nerves and fibre injury are not resolved. No hip or knee movement, strength, perfusion or tear is simulated."
+        }
       }
     },
     {
@@ -7238,7 +7427,44 @@
           {
             "nerve": "sciatic-tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Semimembranosus lies deeper and more medial than semitendinosus in the posterior thigh. It crosses hip and knee and attaches near the posterior medial tibial condyle.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating profunda femoris branches typically supply semimembranosus, with possible proximal inferior gluteal contribution to the hamstring group.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A deep medial hamstring surface does not depict the posteromedial knee stabilising complex. A distal finding needs separate evaluation of tendon, capsule and adjacent structures.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "modelLimit": "Distal capsular expansions, tendon layers, vessels and nerves are not resolved. No knee stability, perfusion or lesion is simulated."
+        }
       }
     },
     {
@@ -7368,7 +7594,44 @@
           {
             "nerve": "sciatic-tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Semitendinosus runs on the superficial medial side of the posterior thigh, near semimembranosus, and continues distally toward the medial tibia as part of the pes anserinus.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating branches of the profunda femoris typically supply semitendinosus; inferior gluteal contributions may supply proximal hamstrings.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Medial posterior thigh pain cannot be localised to this muscle from a separated surface. The proximal common tendon and neighboring semimembranosus, adductor magnus and neurovascular structures need independent assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "modelLimit": "Pes anserinus layers, common proximal tendon, vessels, nerves and injury planes are not validated. No contraction, perfusion or strain grade is shown."
+        }
       }
     },
     {
@@ -8395,7 +8658,40 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Vastus intermedius lies deep to rectus femoris against the anterior femur and joins the quadriceps extensor apparatus. It crosses the knee but not the hip.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Lateral circumflex femoral arterial branches typically supply vastus intermedius.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A deep anterior thigh finding should not be called an isolated intermedius injury from this surface. Rectus femoris overlies it, and the shared tendon and nearby tissues require separate assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "Deep fibre planes, articularis genu, vessels, nerves and layered quadriceps tendon continuity are not validated. No injury, perfusion or active extension is shown."
+        }
       }
     },
     {
@@ -8525,7 +8821,40 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Vastus lateralis occupies the lateral anterior thigh beside intermedius and contributes to the common quadriceps tendon at the patella. Its femoral origin leaves it acting across the knee, not the hip.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Lateral circumflex femoral and perforating profunda femoris branches commonly supply vastus lateralis.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A lateral quadriceps surface does not establish integrity of the whole extensor mechanism. Patellar tracking and tendon continuity depend on structures and movement outside this selection.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "Lateral septum, retinacular fibres, layered tendon, vessels and nerves are not resolved. No patellar tracking, perfusion or tear can be assessed."
+        }
       }
     },
     {
@@ -8654,7 +8983,44 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Vastus medialis lies along the medial femur and joins the distal quadriceps apparatus beside the other vasti. The supplied surface is the whole muscle, without a separately identified oblique fibre part.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Femoral and lateral circumflex femoral arterial branches commonly contribute to vastus medialis supply.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Do not infer isolated oblique-fibre weakness or a patellar maltracking mechanism from the whole-muscle surface. Such findings require functional and clinical assessment of the wider extensor apparatus.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "No separately validated VMO subdivision, medial retinaculum, vessels, nerves or layered tendon is mapped. No tracking, force or perfusion is measured."
+        }
       }
     },
     {

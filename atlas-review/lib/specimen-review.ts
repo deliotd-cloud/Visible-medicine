@@ -241,9 +241,11 @@ export function parseSavedSpecimenReview(v: unknown): SavedSpecimenReview {
           "self-check",
           "guided-dissection",
           "calf-depth",
+          "thigh-depth",
         ].includes(String(t)),
     ) ||
-    new Set(m.teachingTabs).size !== m.teachingTabs.length
+    new Set(m.teachingTabs).size !== m.teachingTabs.length ||
+    (m.teachingTabs.includes('calf-depth') && m.teachingTabs.includes('thigh-depth'))
   )
     throw Error("Invalid teaching scope.");
   if (

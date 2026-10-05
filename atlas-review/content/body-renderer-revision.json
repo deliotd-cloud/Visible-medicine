@@ -306,7 +306,7 @@
     },
     {
       "path": "app/specimen-depth-notes.tsx",
-      "sha256": "e1cf1e9c6ba1fba1022b92742c1a3ef5c20ecb0f65bb8f2db251f3e8110b8549"
+      "sha256": "63d9d19a5664f9e2cbaa24a72dc244221100406f09e8086a79583aaa4ef63bb8"
     },
     {
       "path": "app/specimen-removal-focus.ts",
@@ -382,7 +382,7 @@
     },
     {
       "path": "app/um-knee-study.css",
-      "sha256": "b8d7a6ba20a215d601f04fe68673f6c1e4a9744ade2b91f34ff8ccd55ce6c703"
+      "sha256": "58f25b5fd307d00a7e253a91b96e38c506572c82563c4d608cb22596472559c7"
     },
     {
       "path": "app/um-knee-study.tsx",
@@ -1926,7 +1926,7 @@
     },
     {
       "path": "content/um-calf-depth.ts",
-      "sha256": "85cbf61685bb5a9e545a31ba74c009b2658923f6e14590e998f8290a4bbf6458"
+      "sha256": "935960a2cd795bc0a621c7d05fe0239b1a211e383d1af829bd1642136d4085f6"
     },
     {
       "path": "content/um-calf-foot-clinical.ts",
@@ -1962,15 +1962,19 @@
     },
     {
       "path": "content/um-limb-teaching-bindings.v1.json",
-      "sha256": "337a1d1717baa08396225b889ef68cdb0e2d54594122f77b6f09584e7fcf44a2"
+      "sha256": "f5a6c2d6290b4455d2488cea0df3c7dffa5278405d8fbeb1c61966dc17285198"
     },
     {
       "path": "content/um-limb-teaching.ts",
-      "sha256": "579f39a8147514a6801681b7fdf86d294eb34c0be587d2bfa28dea45a1474e4e"
+      "sha256": "976a71817fa3c18db28c94e016cd41f5e573016ecd41ff6da00904a16edc573a"
     },
     {
       "path": "content/um-proximal-topic-completion.ts",
       "sha256": "df26a9fa11c9ff043cd4a1ce04bf0a466d64daf4ae4609621cb332fae82c10bd"
+    },
+    {
+      "path": "content/um-thigh-depth.ts",
+      "sha256": "f85316cdc7a8a0508a57b10655f883f868e1efa1290bc1f305f3dc637ffe76e8"
     },
     {
       "path": "content/upper-limb-arterial-pins.json",
@@ -3477,6 +3481,10 @@
       "sha256": "b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2"
     },
     {
+      "path": "lib/specimen-depth-scope.ts",
+      "sha256": "63fa0ece12a9965f224784345692878e7ebc00611f3d44d6be22390da26a957d"
+    },
+    {
       "path": "lib/specimen-guided-dissection.ts",
       "sha256": "916c5d9a39d6d78c00a2a4c09a9577e9a1c07c03fb5783b25f807c82d28608be"
     },
@@ -3818,7 +3826,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "88caf19233c8095672b6280e467101ef3ceec225a91bac7d1fc262f6f4a44677"
+      "sha256": "523eab081a443fc58cd43fc33d2d517ad2f259bb5090eef7584b6e97ab83ebf7"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4041,7 +4049,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d7fde5a2912b5316f8950061e0edbec69b7a9f39eba35e6a8abbe52a1100af87",
-  "sourceRendererSha256": "264605dcf2bb028a904d82b917ac7dfa05d371b064717a5d9ae7799ccfed6ccc",
-  "websiteIntegrationSha256": "73729c83d3594b4979a126158f7462a1c0831ffbc49960853453e6f30c73d927"
+  "sha256": "f7b8d645135fac9c6647f3f51f08420c934e20c4747b01e598e10d9a0a856bd4",
+  "sourceRendererSha256": "e0ae81162755b5f38e9dfd1040f439c0e2a9af428c6b6b5f5e6679b3f320871e",
+  "websiteIntegrationSha256": "6cee32a159d49867cbfb4c4d06f6377b32552873d822c3645c6b42f06319c535"
 }
