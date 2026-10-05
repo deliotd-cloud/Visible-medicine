@@ -15,10 +15,10 @@ test('current review includes draft answer evidence and admitted teaching withou
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review and learner exports retain their independently verified source pins.
-  assert.equal(review.revision, 'd5e5641e600eb6cfaf77ecde760cca81721e2c66');
+  assert.equal(review.revision, '05596d396d104a65cdd7a1fdf770505c3dfb3139');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
-  assert.equal(regional.sourceCommit, 'd5e5641e600eb6cfaf77ecde760cca81721e2c66');
+  assert.equal(regional.sourceCommit, '05596d396d104a65cdd7a1fdf770505c3dfb3139');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
   for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);
@@ -90,7 +90,15 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
           payload:{catalogScope:thighContext.catalogScope,specimenKey:thighContext.specimenKey,sourceFrame:thighContext.sourceFrame,structureId:thighContext.structureId,
             track:'teaching',expectedVersion:0,materialHash:thighContext.materialHash,revisionHash:thighContext.revisions.teaching,
             checklistVersion:thighContext.checklistVersion,draft:blankSpecimenReview(thighContext,'teaching')}};
-        return Response.json({count:clinicalReviewEntries.length,fixtures,calf,thigh});
+        const deepHipEntry=clinicalReviewEntries.find(e=>e.scope==='specimens'&&e.id==='vm:reference:um-5t6tz7-v1-2:lower-limb:piriformis'&&JSON.parse(e.key.slice('specimens:'.length))[0].endsWith(':hip-thigh'));
+        if(!deepHipEntry)throw Error('Missing exact deep-hip source fixture');
+        const deepHipPair=JSON.parse(deepHipEntry.key.slice('specimens:'.length)),deepHipMaterial=await specimenReviewMaterial(...deepHipPair),deepHipContext=deepHipMaterial.context;
+        if(deepHipMaterial.teaching.lesson.depth.revision!=='um-deep-hip-depth-20261005-v1')throw Error('Wrong deep-hip teaching revision');
+        const deepHip={endpoint:'specimen-review',query:'?'+new URLSearchParams({specimenKey:deepHipContext.specimenKey,structureId:deepHipContext.structureId,track:'teaching'}),depthRevision:deepHipMaterial.teaching.lesson.depth.revision,
+          payload:{catalogScope:deepHipContext.catalogScope,specimenKey:deepHipContext.specimenKey,sourceFrame:deepHipContext.sourceFrame,structureId:deepHipContext.structureId,
+            track:'teaching',expectedVersion:0,materialHash:deepHipContext.materialHash,revisionHash:deepHipContext.revisions.teaching,
+            checklistVersion:deepHipContext.checklistVersion,draft:blankSpecimenReview(deepHipContext,'teaching')}};
+        return Response.json({count:clinicalReviewEntries.length,fixtures,calf,thigh,deepHip});
       }
       const route=routes[url.pathname.slice('/api/atlas-review/'.length)];
       return route?.[request.method]?.(request) ?? new Response('Not found',{status:404});
@@ -124,7 +132,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     };
     const seedResponse=await mf.dispatchFetch('https://review.test/__fixtures');
     assert.equal(seedResponse.status,200,await seedResponse.clone().text());
-    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any};thigh:{endpoint:string;query:string;payload:any}};
+    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any};thigh:{endpoint:string;query:string;payload:any};deepHip:{endpoint:string;query:string;payload:any;depthRevision:string}};
     assert.equal(seed.count,1577);
     assert.equal((await call('reviews','a',seed.fixtures[0].payload)).status,409,'save requires loaded account context');
     await call('reviews');
@@ -227,6 +235,43 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     assert.equal(thighAfter.history[0].material.teachingTabs.length,11);
     assert.equal(thighAfter.history[0].status,'approved');
     for(const other of ['b','c'])assert.equal(((await (await call(thigh.endpoint+thigh.query,other)).json()) as any).history.length,0);
+    const deepHip=seed.deepHip;
+    assert.equal(deepHip.depthRevision,'um-deep-hip-depth-20261005-v1');
+    assert.equal(deepHip.payload.draft.checks['thigh-depth'],false);
+    assert.equal(deepHip.payload.draft.checks['calf-depth'],undefined);
+    assert.equal((await call(deepHip.endpoint,null,deepHip.payload)).status,401);
+    const beforeDeepHip=JSON.parse(readFileSync('tests/atlas-deep-hip-depth-baseline.json','utf8')).specimenPackets
+      .find((packet:any)=>packet.key===deepHip.payload.specimenKey+'|'+deepHip.payload.structureId);
+    assert(beforeDeepHip,'exact prior deep-hip source context');
+    assert.notEqual(beforeDeepHip.teachingRevision,deepHip.payload.revisionHash);
+    const countBeforeDeepHip=await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_specimen_review_events').first<{n:number}>();
+    assert.equal((await call(deepHip.endpoint,'a',{...deepHip.payload,materialHash:beforeDeepHip.materialHash,revisionHash:beforeDeepHip.teachingRevision})).status,409);
+    assert.deepEqual(await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_specimen_review_events').first<{n:number}>(),countBeforeDeepHip,'stale source cannot append an event');
+    deepHip.payload.draft.notes='Synthetic deep-hip teaching persistence; not clinical review.';
+    const deepHipSaved=await call(deepHip.endpoint,'a',deepHip.payload);
+    assert.equal(deepHipSaved.status,201,await deepHipSaved.clone().text());
+    const deepHipDraft=await deepHipSaved.json() as any;
+    assert.equal(deepHipDraft.review.status,'draft');
+    assert.equal(deepHipDraft.review.material.teachingTabs.length,11);
+    assert(deepHipDraft.review.material.teachingTabs.includes('thigh-depth'));
+    assert(!deepHipDraft.review.material.teachingTabs.includes('calf-depth'));
+    const deepHipHistory=await (await call(deepHip.endpoint+deepHip.query)).json() as any;
+    assert.equal(deepHipHistory.history[0].notes,deepHip.payload.draft.notes);
+    assert.equal((await call(deepHip.endpoint,'a',deepHip.payload)).status,409);
+    const deepHipApproval={...deepHip.payload,expectedVersion:1,draft:{...deepHip.payload.draft,status:'approved',
+      reviewer:'SOFTWARE TEST ONLY',qualification:'Not radiologist sign-off',scope:'Synthetic exact-source deep-hip teaching check',
+      attested:true,checks:Object.fromEntries(Object.keys(deepHip.payload.draft.checks).map(id=>[id,true])),
+      evidence:[{title:'Synthetic fixture',url:'https://example.test/fixture',note:'Not clinical evidence'}]}};
+    assert.equal((await call(deepHip.endpoint,'a',{...deepHipApproval,draft:{...deepHipApproval.draft,checks:{...deepHipApproval.draft.checks,'thigh-depth':false}}})).status,422);
+    assert.equal((await call(deepHip.endpoint,'a',{...deepHipApproval,draft:{...deepHipApproval.draft,attested:false}})).status,422);
+    const deepHipApproved=await call(deepHip.endpoint,'a',deepHipApproval);
+    assert.equal(deepHipApproved.status,201,await deepHipApproved.clone().text());
+    const deepHipAfter=await (await call(deepHip.endpoint+deepHip.query)).json() as any;
+    assert.deepEqual(deepHipAfter.history.map((r:any)=>r.version),[2,1]);
+    assert.equal(deepHipAfter.history[0].material.teachingTabs.length,11);
+    assert.equal(deepHipAfter.history[0].status,'approved');
+    assert.equal(deepHipAfter.history[1].status,'draft');
+    for(const other of ['b','c'])assert.equal(((await (await call(deepHip.endpoint+deepHip.query,other)).json()) as any).history.length,0);
     await call('reviews','b');
     assert.equal((await call('reviews','b',seed.fixtures[0].payload,{'X-Clinical-Review-Context':contexts.a})).status,409,'old document cannot save under another account');
     // Revocations are checked freshly and never healed by reading review APIs.
@@ -248,9 +293,9 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     const overview=await call('review-overview');assert.equal(overview.status,200);assert.match(overview.headers.get('cache-control')! ,/no-store/);
     assert.equal((await call('review-overview?userId=b')).status,400);
     for(const table of ['atlas_personal_review_events','atlas_personal_body_review_events','atlas_personal_nested_review_events','atlas_personal_specimen_review_events']) {
-      const expectedCount=table==='atlas_personal_specimen_review_events'?7:3;
+      const expectedCount=table==='atlas_personal_specimen_review_events'?9:3;
       assert.equal((await db.prepare(`SELECT COUNT(*) AS n FROM ${table}`).first<{n:number}>())?.n,expectedCount,
-        'original three events per scope plus only two calf and two thigh synthetic teaching events');
+        'original three events per scope plus only two calf, two thigh and two deep-hip synthetic teaching events');
       const row=await db.prepare(`SELECT user_id FROM ${table} LIMIT 1`).first<{user_id:string}>();
       assert.deepEqual(JSON.parse(row!.user_id),['vm-website-personal-review-1','edu:a','org-a']);
     }

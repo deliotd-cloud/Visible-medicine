@@ -1,5 +1,5 @@
 {
-  "revision": "d5e5641e600eb6cfaf77ecde760cca81721e2c66",
+  "revision": "05596d396d104a65cdd7a1fdf770505c3dfb3139",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3478,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "9930bce185b187bdf0e956a8702b065bebae843e7d8bad7f30dac6c53682a590",
-      "importedSha256": "7e1dbcd93a49189f956fec5d13b699a37bd0cd294ddb438d88646a7a572a7b3f"
+      "sourceSha256": "a2b04d95146200eab52ef3a280cf72ddd429d87137cfaa5572a806f9607774eb",
+      "importedSha256": "9c24cbfb19a4a168600c03c409ba10fac45d40ac5bfc5afeab1f45c11828366f"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3523,8 +3523,8 @@
     },
     {
       "path": "content/um-limb-teaching.ts",
-      "sourceSha256": "976a71817fa3c18db28c94e016cd41f5e573016ecd41ff6da00904a16edc573a",
-      "importedSha256": "976a71817fa3c18db28c94e016cd41f5e573016ecd41ff6da00904a16edc573a"
+      "sourceSha256": "28ae27ca3eec746688429b125730fbe7cc088e8726c0a42c771118c2278f662f",
+      "importedSha256": "28ae27ca3eec746688429b125730fbe7cc088e8726c0a42c771118c2278f662f"
     },
     {
       "path": "content/um-limb-clinical.ts",
@@ -3580,6 +3580,11 @@
       "path": "content/um-thigh-depth.ts",
       "sourceSha256": "f85316cdc7a8a0508a57b10655f883f868e1efa1290bc1f305f3dc637ffe76e8",
       "importedSha256": "f85316cdc7a8a0508a57b10655f883f868e1efa1290bc1f305f3dc637ffe76e8"
+    },
+    {
+      "path": "content/um-deep-hip-depth.ts",
+      "sourceSha256": "f6736e92154dc3ef6109cd08e275b495ec2052178e7019c2cb11096baa16a1a1",
+      "importedSha256": "f6736e92154dc3ef6109cd08e275b495ec2052178e7019c2cb11096baa16a1a1"
     },
     {
       "path": "content/hra-renal-clinical.ts",
@@ -3718,8 +3723,8 @@
     },
     {
       "path": "content/um-limb-teaching-bindings.v1.json",
-      "sourceSha256": "f5a6c2d6290b4455d2488cea0df3c7dffa5278405d8fbeb1c61966dc17285198",
-      "importedSha256": "f5a6c2d6290b4455d2488cea0df3c7dffa5278405d8fbeb1c61966dc17285198"
+      "sourceSha256": "cb526ef39c54bb49d9ad93bb4695c6915dae6b6ca9602575d2160002cff11637",
+      "importedSha256": "cb526ef39c54bb49d9ad93bb4695c6915dae6b6ca9602575d2160002cff11637"
     },
     {
       "path": "lib/abdominal-wall-teaching.ts",
@@ -3758,8 +3763,8 @@
     },
     {
       "path": "lib/specimen-depth-scope.ts",
-      "sourceSha256": "63fa0ece12a9965f224784345692878e7ebc00611f3d44d6be22390da26a957d",
-      "importedSha256": "63fa0ece12a9965f224784345692878e7ebc00611f3d44d6be22390da26a957d"
+      "sourceSha256": "8bd5d0991a07093499e6978bb4b2f0f39a97917bd81c2e48baf532842b4b4e94",
+      "importedSha256": "8bd5d0991a07093499e6978bb4b2f0f39a97917bd81c2e48baf532842b4b4e94"
     },
     {
       "path": "lib/specimen-review.ts",
@@ -3864,7 +3869,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "186fd987d841dc9d6771ab2a376de993496db314fd3500e17427f8538e1e2f77",
-      "importedSha256": "bab4e95e138e028df23b43d23d881f6aee0dde634050224bf5e10a61da5d2b20"
+      "importedSha256": "8fde8c993d49045a329031c933e89d47a578eeb18c1d2f1ca72845769f23ccbf"
     },
     {
       "path": "app/review/review.css",
@@ -5373,5 +5378,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "6cee32a159d49867cbfb4c4d06f6377b32552873d822c3645c6b42f06319c535"
+  "websiteIntegrationSha256": "3270b3a447f039e43ffdd38768e65b4cb7fda4be26f917c271ef4f8827bbfff6"
 }

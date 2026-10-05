@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "d5e5641e600eb6cfaf77ecde760cca81721e2c66",
-  "sha256": "6cee32a159d49867cbfb4c4d06f6377b32552873d822c3645c6b42f06319c535",
+  "sourceCommit": "05596d396d104a65cdd7a1fdf770505c3dfb3139",
+  "sha256": "3270b3a447f039e43ffdd38768e65b4cb7fda4be26f917c271ef4f8827bbfff6",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2091,6 +2091,10 @@
       "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
     },
     {
+      "path": "atlas-review/content/um-deep-hip-depth.ts",
+      "sha256": "f6736e92154dc3ef6109cd08e275b495ec2052178e7019c2cb11096baa16a1a1"
+    },
+    {
       "path": "atlas-review/content/um-distal-topic-completion.ts",
       "sha256": "7d09851523fb515f33942710b7f2a171ae612881b5b5e2372fa75444b07fafe2"
     },
@@ -2120,11 +2124,11 @@
     },
     {
       "path": "atlas-review/content/um-limb-teaching-bindings.v1.json",
-      "sha256": "f5a6c2d6290b4455d2488cea0df3c7dffa5278405d8fbeb1c61966dc17285198"
+      "sha256": "cb526ef39c54bb49d9ad93bb4695c6915dae6b6ca9602575d2160002cff11637"
     },
     {
       "path": "atlas-review/content/um-limb-teaching.ts",
-      "sha256": "976a71817fa3c18db28c94e016cd41f5e573016ecd41ff6da00904a16edc573a"
+      "sha256": "28ae27ca3eec746688429b125730fbe7cc088e8726c0a42c771118c2278f662f"
     },
     {
       "path": "atlas-review/content/um-proximal-topic-completion.ts",
@@ -3752,7 +3756,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-depth-scope.ts",
-      "sha256": "63fa0ece12a9965f224784345692878e7ebc00611f3d44d6be22390da26a957d"
+      "sha256": "8bd5d0991a07093499e6978bb4b2f0f39a97917bd81c2e48baf532842b4b4e94"
     },
     {
       "path": "atlas-review/lib/specimen-guided-dissection.ts",
@@ -4372,7 +4376,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4b094085cc5f862fefcf01f09933f4c7f0adbe837139606d886403ccc5b0baf0"
+      "sha256": "bdfbe41aadf64bcebc9ddc54e9b0d2433247e404933ff89530adc8620ccbff85"
     }
   ]
 }
