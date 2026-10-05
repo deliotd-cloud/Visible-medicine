@@ -13,7 +13,7 @@
   },
   {
     "path": "app/body-scene.tsx",
-    "sha256": "3350aeb0ef4dfa7b4fd884f0877d8ce0166a90f2a1d49d1df987e68c5c613f9f"
+    "sha256": "785e671b55ea980b4a77d2cb9d3f0e4ba8d78e0625dfc285fe7a068227552d9b"
   },
   {
     "path": "app/body-types.ts",
@@ -22,6 +22,10 @@
   {
     "path": "app/camera-keyboard.css",
     "sha256": "98d5bb8c7fe828c06e13f065fa7628aeeeb3638bedaea07a963ee3712ba4e7de"
+  },
+  {
+    "path": "app/csf-motion.tsx",
+    "sha256": "5b01e7a24d4b2cc912c34b39a586574e9360afd8bb6f87df8f0b91f5fb5ac96d"
   },
   {
     "path": "app/explode-style-select.css",
@@ -33,7 +37,7 @@
   },
   {
     "path": "app/eye-layers.css",
-    "sha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
+    "sha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8"
   },
   {
     "path": "app/fitted-camera.tsx",
@@ -132,6 +136,10 @@
     "sha256": "dd914d769bc223b5d5ea56839a7752e534eb475f8d2897d5675606c368bbca1f"
   },
   {
+    "path": "content/csf-motion.v1.json",
+    "sha256": "9cd2f572007536fc7ad761d037d0bd90a8485783a9c2fa65f1fe1c8efe473685"
+  },
+  {
     "path": "content/hra-pelvic-teaching.ts",
     "sha256": "0ccbf9e59a351b9cffda708493d5be849ed30fdb4154537a5fe50fff1bfa8b50"
   },
@@ -142,6 +150,10 @@
   {
     "path": "content/hra-renal-teaching.ts",
     "sha256": "71062f6e1be8255d660575d45ec19099b644d9383a8d0318a3e013ce5f952ac6"
+  },
+  {
+    "path": "content/nested-teaching-bindings.v1.json",
+    "sha256": "333fe4f02e3a776c119bd8d6af75787da27ebdd0d777fa5e028fe60cfd42a81e"
   },
   {
     "path": "content/um-bone-cartilage-clinical.ts",
@@ -262,6 +274,10 @@
   {
     "path": "lib/close-up-labels.ts",
     "sha256": "088b9434143cc6885d80fa0ef90de7ff437f863f1b19fc6df4faf7c6ad3e5bec"
+  },
+  {
+    "path": "lib/csf-motion.ts",
+    "sha256": "50ea0f755e8654470c1db00e276512c940158b1ba1899616e3f11f28255fd3f9"
   },
   {
     "path": "lib/explode-layout.mjs",
@@ -422,6 +438,10 @@
   {
     "path": "lib/ventricles.ts",
     "sha256": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c"
+  },
+  {
+    "path": "lib/ventricular-guide.ts",
+    "sha256": "9d65840d18391920d5299914fb6075db7f6c05c4d0e84b7e18e0b53a5b0bfd64"
   },
   {
     "path": "package-lock.json",

@@ -1,5 +1,5 @@
 {
-  "revision": "9fcf6007719b78c83979a1fbfbca0e4eadbcc42b",
+  "revision": "0e988a782fb3e6f71bb9220b53aebeedbadd30f9",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3303,8 +3303,8 @@
     },
     {
       "path": "lib/nested-review-material.ts",
-      "sourceSha256": "0b0e5d2d849ab3663a1859863ea307b3758c1a2dd7682f77a247703bbdd0decf",
-      "importedSha256": "0b0e5d2d849ab3663a1859863ea307b3758c1a2dd7682f77a247703bbdd0decf"
+      "sourceSha256": "b33c34e4aa203680ce4d9ca367cfa526cedc7d1d8332ebd9f05721122675d9b4",
+      "importedSha256": "b33c34e4aa203680ce4d9ca367cfa526cedc7d1d8332ebd9f05721122675d9b4"
     },
     {
       "path": "lib/nested-teaching.ts",
@@ -3478,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "b62617d8566cc60ff0cb8eb075600da306d8ff9d3b30bd46d035333f03343c50",
-      "importedSha256": "0b6af56d91a31ee1c7eb48ae02a1afc8c91839ecadf7f63ad453f5f2a9b529cc"
+      "sourceSha256": "f36c79b8f1e79d92b74654aafe6476b26fa549b5950ef08b3a7a1606976b9c16",
+      "importedSha256": "dfecd311219d827c1ebe2be28fc8eb7ae4b4737afc0fbac370229577352c8799"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3495,6 +3495,21 @@
       "path": "public/models/bodyparts3d/coronary-venous/root-vessel-context.json",
       "sourceSha256": "e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd",
       "importedSha256": "e5dcb3890adab48be1e13134f76d7e4c4b274c1248aca84791c240f429ab3ffd"
+    },
+    {
+      "path": "lib/ventricular-guide.ts",
+      "sourceSha256": "9d65840d18391920d5299914fb6075db7f6c05c4d0e84b7e18e0b53a5b0bfd64",
+      "importedSha256": "9d65840d18391920d5299914fb6075db7f6c05c4d0e84b7e18e0b53a5b0bfd64"
+    },
+    {
+      "path": "lib/csf-motion.ts",
+      "sourceSha256": "50ea0f755e8654470c1db00e276512c940158b1ba1899616e3f11f28255fd3f9",
+      "importedSha256": "50ea0f755e8654470c1db00e276512c940158b1ba1899616e3f11f28255fd3f9"
+    },
+    {
+      "path": "content/csf-motion.v1.json",
+      "sourceSha256": "9cd2f572007536fc7ad761d037d0bd90a8485783a9c2fa65f1fe1c8efe473685",
+      "importedSha256": "9cd2f572007536fc7ad761d037d0bd90a8485783a9c2fa65f1fe1c8efe473685"
     },
     {
       "path": "lib/specimen-review-material.ts",
@@ -3874,7 +3889,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "186fd987d841dc9d6771ab2a376de993496db314fd3500e17427f8538e1e2f77",
-      "importedSha256": "4a8c03908f8c8e453d19e93752d84244a8fb36e0883c0c375ff47a61836df142"
+      "importedSha256": "d32ac2016cac5eb28b754121d52f233378dd9a51a5fb3a5dc81d3f149a368b65"
     },
     {
       "path": "app/review/review.css",
@@ -3943,8 +3958,8 @@
     },
     {
       "path": "app/review/nested/workspace.tsx",
-      "sourceSha256": "82ed6d904a3b17b06048faca82c22970dd2db0ac86284310b17b034196b3cfac",
-      "importedSha256": "e723e685343374e957de71b17b82c8589fba1516687102833d77d14c9c70b22d"
+      "sourceSha256": "b272ed58fe69f48e2e64efb838a8040356c3a6039f0057eb6f05a64cd94e6f5a",
+      "importedSha256": "3b116343c793110375901d1c61338d7dd34ebe89349735e5a2211fb809644f2f"
     },
     {
       "path": "lib/nested-review-client.ts",
@@ -4178,8 +4193,8 @@
     },
     {
       "path": "app/body-scene.tsx",
-      "sourceSha256": "3350aeb0ef4dfa7b4fd884f0877d8ce0166a90f2a1d49d1df987e68c5c613f9f",
-      "importedSha256": "62afad909aef90e756dd1c1d645c44872bece9b7f42280a7c25fd93612e0ad6e"
+      "sourceSha256": "785e671b55ea980b4a77d2cb9d3f0e4ba8d78e0625dfc285fe7a068227552d9b",
+      "importedSha256": "487b3747de947fca4b70f058508922dcf20ecb46dab44a8ed62ef21f2c1e26b2"
     },
     {
       "path": "app/anatomy-canvas.tsx",
@@ -4347,19 +4362,24 @@
       "importedSha256": "49c0358f4dce010f4dc33f6e1676253bcb8a74128ec019e679d3234504a3ad23"
     },
     {
+      "path": "app/csf-motion.tsx",
+      "sourceSha256": "5b01e7a24d4b2cc912c34b39a586574e9360afd8bb6f87df8f0b91f5fb5ac96d",
+      "importedSha256": "7180a19f99abbe0f81ede6379d785c89d3f383823eeb7de08ef901053a973419"
+    },
+    {
       "path": "app/whole-body-guided-learning.tsx",
-      "sourceSha256": "05a37afb364f0bc578e9ed781ab2fa681fbe28549cc12f04ec6382d86aa270ad",
-      "importedSha256": "4c271a2f6e35b236f6b3bdce808eadf8ade8d774c9704bfb443ca5e69af63a61"
+      "sourceSha256": "e987425ecd8481efef879c4d3af7c03c9611bb968e13c0afb8a13e4fa09da720",
+      "importedSha256": "fda97942a288134fa98dbc75b61355dfcee5b69f8c287611b7b83ef6877d642f"
     },
     {
       "path": "lib/nested-guided-learning.ts",
-      "sourceSha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972",
-      "importedSha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972"
+      "sourceSha256": "058aeef642549a79d036f601013cc4f7c5cdf08acde3db4c9ea3819b5d680b49",
+      "importedSha256": "058aeef642549a79d036f601013cc4f7c5cdf08acde3db4c9ea3819b5d680b49"
     },
     {
       "path": "content/nested-guided-learning-bindings.v1.json",
-      "sourceSha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14",
-      "importedSha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14"
+      "sourceSha256": "cbeab92610bf444684099c9459cd11e6ad44e32ec8f0c5549849fc03d1f841fd",
+      "importedSha256": "cbeab92610bf444684099c9459cd11e6ad44e32ec8f0c5549849fc03d1f841fd"
     },
     {
       "path": "app/whole-body-guided-learning.css",
@@ -4458,8 +4478,108 @@
     },
     {
       "path": "app/eye-layers.css",
-      "sourceSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361",
-      "importedSha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
+      "sourceSha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8",
+      "importedSha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8"
+    },
+    {
+      "path": "app/ventricles.tsx",
+      "sourceSha256": "979a0be46f2e63d16c18e1f2f8a8fcb636e9e7d822f092e91dada56b43d3c11e",
+      "importedSha256": "1557f6fcf53b91fb0ffca7e724bfdbaea0043188a951cda1e890a7b7a60b6162"
+    },
+    {
+      "path": "app/femoral-components.tsx",
+      "sourceSha256": "0bcd8922fb70204b272a1083c67a6bfda8b3af20eb20f870ef19be0700aa05ae",
+      "importedSha256": "d98c4ebd591590669a067483d6883b0d934032f2009a54d5fdfa9e766c07b30c"
+    },
+    {
+      "path": "lib/cardiac-circulation.ts",
+      "sourceSha256": "5624f356ff6354ace8742f9201e3303da2c095f633460d2f56c4835f1068cdca",
+      "importedSha256": "5624f356ff6354ace8742f9201e3303da2c095f633460d2f56c4835f1068cdca"
+    },
+    {
+      "path": "lib/cardiac-context.ts",
+      "sourceSha256": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
+      "importedSha256": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef"
+    },
+    {
+      "path": "public/models/bodyparts3d/cardiac/great-vessel-context.json",
+      "sourceSha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
+      "importedSha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85"
+    },
+    {
+      "path": "lib/pulmonary-roles.ts",
+      "sourceSha256": "487419f2eb6b63635e93ad39b9cbf5ca06df694f502f7d3c96f6b3ced4b1813c",
+      "importedSha256": "487419f2eb6b63635e93ad39b9cbf5ca06df694f502f7d3c96f6b3ced4b1813c"
+    },
+    {
+      "path": "public/models/bodyparts3d/pulmonary/branch-types.json",
+      "sourceSha256": "466c03022265e31a0fd0e3c3bfa9f76062c1d53ee4cd369d9e1945f0d03e0be4",
+      "importedSha256": "466c03022265e31a0fd0e3c3bfa9f76062c1d53ee4cd369d9e1945f0d03e0be4"
+    },
+    {
+      "path": "lib/visual-pathway-context.ts",
+      "sourceSha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd",
+      "importedSha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd"
+    },
+    {
+      "path": "public/models/bodyparts3d/visual-pathway/sellar-context.json",
+      "sourceSha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16",
+      "importedSha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16"
+    },
+    {
+      "path": "lib/renal-relationships.ts",
+      "sourceSha256": "f9a070d2b59be090ab63c591c555410cd0b13833c692e2c9e587236e6a173a2a",
+      "importedSha256": "f9a070d2b59be090ab63c591c555410cd0b13833c692e2c9e587236e6a173a2a"
+    },
+    {
+      "path": "app/nested-practice.tsx",
+      "sourceSha256": "37917409e0021403ffd4ed7fa92b3371af250e31b1411abbf697644610bf8c5e",
+      "importedSha256": "dbe2c5d6f4b9bc5e1222210586068e17def3cd8406f2be7ff385344266ff73a5"
+    },
+    {
+      "path": "lib/nested-practice.ts",
+      "sourceSha256": "6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82",
+      "importedSha256": "6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82"
+    },
+    {
+      "path": "app/nested-practice.css",
+      "sourceSha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591",
+      "importedSha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
+    },
+    {
+      "path": "app/cerebral-layers.tsx",
+      "sourceSha256": "8c4fdcbbb15717997f991641b9a9c8ab93987686c0dd9496e2643de9d0486215",
+      "importedSha256": "8008c7ea4cb39100a772b86585ef361b5ee090e3d44cc32a052504d7eff7f916"
+    },
+    {
+      "path": "lib/ventricular-relationships.ts",
+      "sourceSha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
+      "importedSha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df"
+    },
+    {
+      "path": "lib/hepatic-biliary-context.ts",
+      "sourceSha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92",
+      "importedSha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92"
+    },
+    {
+      "path": "public/models/bodyparts3d/hepatic/biliary-context.json",
+      "sourceSha256": "8f900245b094c2221b2a031adc3f29ae042c1b71f1d3d9a4f0783e48d4976969",
+      "importedSha256": "8f900245b094c2221b2a031adc3f29ae042c1b71f1d3d9a4f0783e48d4976969"
+    },
+    {
+      "path": "lib/pulmonary-context.ts",
+      "sourceSha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c",
+      "importedSha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c"
+    },
+    {
+      "path": "public/models/bodyparts3d/pulmonary/airway-context.json",
+      "sourceSha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4",
+      "importedSha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4"
+    },
+    {
+      "path": "app/ventricular-relationships.css",
+      "sourceSha256": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743",
+      "importedSha256": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743"
     },
     {
       "path": "app/upper-limb-motor.css",
@@ -5047,106 +5167,6 @@
       "importedSha256": "67b34405e32541d49c85ad931cc818d5a1d9ab923b317f91e83d9a0fb6fbe285"
     },
     {
-      "path": "app/ventricles.tsx",
-      "sourceSha256": "e693f56ee69286484583a65b0ac8fc0afce517f035dd41c0105cf289b4b0cb2e",
-      "importedSha256": "d66692612517531c43e7b5a03498e24cadf0b3165bb9b7764ecb67efd2f1d9ff"
-    },
-    {
-      "path": "app/femoral-components.tsx",
-      "sourceSha256": "0bcd8922fb70204b272a1083c67a6bfda8b3af20eb20f870ef19be0700aa05ae",
-      "importedSha256": "d98c4ebd591590669a067483d6883b0d934032f2009a54d5fdfa9e766c07b30c"
-    },
-    {
-      "path": "lib/cardiac-circulation.ts",
-      "sourceSha256": "5624f356ff6354ace8742f9201e3303da2c095f633460d2f56c4835f1068cdca",
-      "importedSha256": "5624f356ff6354ace8742f9201e3303da2c095f633460d2f56c4835f1068cdca"
-    },
-    {
-      "path": "lib/cardiac-context.ts",
-      "sourceSha256": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef",
-      "importedSha256": "428c871b7a942e34c87833ff97441e59e7757c4ae0f5610713e779396df432ef"
-    },
-    {
-      "path": "public/models/bodyparts3d/cardiac/great-vessel-context.json",
-      "sourceSha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85",
-      "importedSha256": "fac546e54237db4bed783d583b01c583f423a35a74bd759727d519074de0af85"
-    },
-    {
-      "path": "lib/pulmonary-roles.ts",
-      "sourceSha256": "487419f2eb6b63635e93ad39b9cbf5ca06df694f502f7d3c96f6b3ced4b1813c",
-      "importedSha256": "487419f2eb6b63635e93ad39b9cbf5ca06df694f502f7d3c96f6b3ced4b1813c"
-    },
-    {
-      "path": "public/models/bodyparts3d/pulmonary/branch-types.json",
-      "sourceSha256": "466c03022265e31a0fd0e3c3bfa9f76062c1d53ee4cd369d9e1945f0d03e0be4",
-      "importedSha256": "466c03022265e31a0fd0e3c3bfa9f76062c1d53ee4cd369d9e1945f0d03e0be4"
-    },
-    {
-      "path": "lib/visual-pathway-context.ts",
-      "sourceSha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd",
-      "importedSha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd"
-    },
-    {
-      "path": "public/models/bodyparts3d/visual-pathway/sellar-context.json",
-      "sourceSha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16",
-      "importedSha256": "f3ba11e16956eed6530df9449cdbca919364d76d8d838df2b3520ef678125c16"
-    },
-    {
-      "path": "lib/renal-relationships.ts",
-      "sourceSha256": "f9a070d2b59be090ab63c591c555410cd0b13833c692e2c9e587236e6a173a2a",
-      "importedSha256": "f9a070d2b59be090ab63c591c555410cd0b13833c692e2c9e587236e6a173a2a"
-    },
-    {
-      "path": "app/nested-practice.tsx",
-      "sourceSha256": "37917409e0021403ffd4ed7fa92b3371af250e31b1411abbf697644610bf8c5e",
-      "importedSha256": "dbe2c5d6f4b9bc5e1222210586068e17def3cd8406f2be7ff385344266ff73a5"
-    },
-    {
-      "path": "lib/nested-practice.ts",
-      "sourceSha256": "6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82",
-      "importedSha256": "6e21a6dc48dc026110e76138d3705f8b5a94146df3b48767d31275c5bf04ce82"
-    },
-    {
-      "path": "app/nested-practice.css",
-      "sourceSha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591",
-      "importedSha256": "8e0c687cecb73a74e65f6a574ad0858237d9f61680732eafb140c760779f1591"
-    },
-    {
-      "path": "app/cerebral-layers.tsx",
-      "sourceSha256": "8c4fdcbbb15717997f991641b9a9c8ab93987686c0dd9496e2643de9d0486215",
-      "importedSha256": "8008c7ea4cb39100a772b86585ef361b5ee090e3d44cc32a052504d7eff7f916"
-    },
-    {
-      "path": "lib/ventricular-relationships.ts",
-      "sourceSha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df",
-      "importedSha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df"
-    },
-    {
-      "path": "lib/hepatic-biliary-context.ts",
-      "sourceSha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92",
-      "importedSha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92"
-    },
-    {
-      "path": "public/models/bodyparts3d/hepatic/biliary-context.json",
-      "sourceSha256": "8f900245b094c2221b2a031adc3f29ae042c1b71f1d3d9a4f0783e48d4976969",
-      "importedSha256": "8f900245b094c2221b2a031adc3f29ae042c1b71f1d3d9a4f0783e48d4976969"
-    },
-    {
-      "path": "lib/pulmonary-context.ts",
-      "sourceSha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c",
-      "importedSha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c"
-    },
-    {
-      "path": "public/models/bodyparts3d/pulmonary/airway-context.json",
-      "sourceSha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4",
-      "importedSha256": "294ba340df060770edf390bc08f4260f8ed3cbd08250d39ef9b40c611a7ca5d4"
-    },
-    {
-      "path": "app/ventricular-relationships.css",
-      "sourceSha256": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743",
-      "importedSha256": "a0aa30cb8500f11382ddd18120660c8e4df68b60369e3b6c487f98b12f0fe743"
-    },
-    {
       "path": "app/um-limb-study.tsx",
       "sourceSha256": "a9cb5b3d7446575a5b8f544131f14be5ce2edbd0afdc5a8125caba2b88d39181",
       "importedSha256": "9dcc9d308cd50b04c408cb073e5f592fbb67ae4146eb398b421cb19684a29af4"
@@ -5283,8 +5303,8 @@
     },
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "sourceSha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7",
-      "importedSha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7"
+      "sourceSha256": "dd4be414cbcf07498a7b6552bdcc6541057af662804231aa2f80776842ada2cc",
+      "importedSha256": "dd4be414cbcf07498a7b6552bdcc6541057af662804231aa2f80776842ada2cc"
     },
     {
       "path": "app/api/reviews/route.ts",
@@ -5383,5 +5403,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "50ad81727883197ba212fc892aef761aa5e46a91338c6e418cc43d4e675b6580"
+  "websiteIntegrationSha256": "134407d077c71813a6d46f738ba9eddc38c7bf60216d4b1e885e9e73d0e7784f"
 }

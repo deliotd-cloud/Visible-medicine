@@ -15,10 +15,10 @@ test('current review includes draft answer evidence and admitted teaching withou
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review and learner exports retain their independently verified source pins.
-  assert.equal(review.revision, '9fcf6007719b78c83979a1fbfbca0e4eadbcc42b');
+  assert.equal(review.revision, '0e988a782fb3e6f71bb9220b53aebeedbadd30f9');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
-  assert.equal(regional.sourceCommit, '9fcf6007719b78c83979a1fbfbca0e4eadbcc42b');
+  assert.equal(regional.sourceCommit, '0e988a782fb3e6f71bb9220b53aebeedbadd30f9');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
   for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);
@@ -52,7 +52,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     import { bodyReviewContext } from './atlas-review/lib/body-review-context';
     import { blankBodyReview } from './atlas-review/lib/body-review-decisions';
     import { nestedReviewMaterial } from './atlas-review/lib/nested-review-material';
-    import { blankNestedReview } from './atlas-review/lib/nested-review';
+    import { blankNestedReview, nestedApprovalProblems } from './atlas-review/lib/nested-review';
     import { specimenReviewMaterial } from './atlas-review/lib/specimen-review-material';
     import { blankSpecimenReview } from './atlas-review/lib/specimen-review';
     const routes = {reviews:shoulder, 'body-review/decisions':body, 'nested-review':nested, 'specimen-review':specimen, 'review-overview':overview, 'body-review':material};
@@ -116,7 +116,32 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
           payload:{catalogScope:footContext.catalogScope,specimenKey:footContext.specimenKey,sourceFrame:footContext.sourceFrame,structureId:footContext.structureId,
             track:'teaching',expectedVersion:0,materialHash:footContext.materialHash,revisionHash:footContext.revisions.teaching,
             checklistVersion:footContext.checklistVersion,draft:blankSpecimenReview(footContext,'teaching')}};
-        return Response.json({count:clinicalReviewEntries.length,fixtures,calf,thigh,deepHip,knee,foot});
+        // Optional CSF illustration needs explicit, revision-bound display and
+        // teaching review. These synthetic records do not grant clinical approval.
+        const csf=[];
+        for(const id of ["vm:anatomy:body:head-neck:left:space:left-lateral-ventricle","vm:anatomy:body:head-neck:right:space:right-lateral-ventricle","vm:anatomy:body:head-neck:midline:space:third-ventricle","vm:anatomy:body:head-neck:midline:space:fourth-ventricle"]) {
+          const csfEntry=clinicalReviewEntries.find(e=>e.scope==='nested'&&e.id===id);
+          if(!csfEntry)throw Error('Missing exact ventricular source fixture');
+          const pair=JSON.parse(csfEntry.key.slice('nested:'.length));
+          const packet=await nestedReviewMaterial(...pair),c=packet.context;
+          if(packet.teaching.guidedLearning?.steps.length!==5||packet.teaching.csfMotion?.markerCount!==160)
+            throw Error('Missing exact guided learning/CSF metadata');
+          for(const track of ['geometry','teaching']) {
+            const draft=blankNestedReview(c,track);
+            const complete={...draft,status:'approved',reviewer:'SOFTWARE TEST ONLY',qualification:'Not radiologist sign-off',
+              scope:'Synthetic exact-source CSF safeguard check',attested:true,
+              checks:Object.fromEntries(Object.keys(draft.checks).map(id=>[id,true])),
+              evidence:[{title:'Synthetic fixture',url:'https://example.test/csf-fixture',note:'Not clinical evidence'}]};
+            if(nestedApprovalProblems(complete,c,track).length)throw Error('Invalid complete CSF test control');
+            csf.push({complete,
+            endpoint:'nested-review',query:'?'+new URLSearchParams({nestedKey:c.nestedKey,structureId:c.structureId,track}),
+            motion:packet.teaching.csfMotion,guideSteps:packet.teaching.guidedLearning.steps.length,
+            payload:{catalogScope:c.catalogScope,nestedKey:c.nestedKey,structureId:c.structureId,sourceFrame:c.sourceFrame,
+              track,expectedVersion:0,materialHash:c.materialHash,revisionHash:c.revisions[track],
+              checklistVersion:c.checklistVersion,draft}});
+          }
+        }
+        return Response.json({count:clinicalReviewEntries.length,fixtures,calf,thigh,deepHip,knee,foot,csf});
       }
       const route=routes[url.pathname.slice('/api/atlas-review/'.length)];
       return route?.[request.method]?.(request) ?? new Response('Not found',{status:404});
@@ -150,7 +175,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     };
     const seedResponse=await mf.dispatchFetch('https://review.test/__fixtures');
     assert.equal(seedResponse.status,200,await seedResponse.clone().text());
-    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any};thigh:{endpoint:string;query:string;payload:any};deepHip:{endpoint:string;query:string;payload:any;depthRevision:string};knee:{endpoint:string;query:string;payload:any;guideSteps:number;comparisonStep:string};foot:{endpoint:string;query:string;payload:any;depthRevision:string}};
+    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any};thigh:{endpoint:string;query:string;payload:any};deepHip:{endpoint:string;query:string;payload:any;depthRevision:string};knee:{endpoint:string;query:string;payload:any;guideSteps:number;comparisonStep:string};foot:{endpoint:string;query:string;payload:any;depthRevision:string};csf:Array<{endpoint:string;query:string;payload:any;complete:any;motion:any;guideSteps:number}>};
     assert.equal(seed.count,1577);
     assert.equal((await call('reviews','a',seed.fixtures[0].payload)).status,409,'save requires loaded account context');
     await call('reviews');
@@ -368,6 +393,54 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     assert.equal(footAfter.history[1].notes,foot.payload.draft.notes);
     assert.equal(footAfter.history[0].material.teachingTabs.length,11);
     for(const other of ['b','c'])assert.equal(((await (await call(foot.endpoint+foot.query,other)).json()) as any).history.length,0);
+    assert.equal(seed.csf.length,8,'four spaces, explicit display and teaching scopes');
+    const priorCSF=JSON.parse(readFileSync('tests/atlas-csf-motion-baseline.json','utf8'));
+    assert.equal(priorCSF.atlasSource,'9fcf6007719b78c83979a1fbfbca0e4eadbcc42b','immutable historical fixture, not current delivery pin');
+    for(const item of seed.csf) {
+      const p=item.payload,track=p.track;
+      assert.equal(item.motion.markerCount,160);assert.equal(item.motion.periodSeconds,4);
+      assert.equal(item.guideSteps,5);assert.equal(item.motion.status,'draft');
+      assert.match(item.motion.limitation,/not measured physiology/u);
+      assert.equal(p.draft.checks['csf-motion'],false);
+      if(track==='teaching')assert.equal(p.draft.checks['guided-learning'],false);
+      const prior=priorCSF.contexts.find((row:any)=>row.context.structureId===p.structureId)?.context;
+      assert(prior,'exact pre-import ventricular context');
+      assert.notEqual(prior.revisions[track],p.revisionHash);
+      assert.equal((await call(item.endpoint,null,p)).status,401);
+      const before=await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_nested_review_events').first<{n:number}>();
+      for(const patch of [{revisionHash:prior.revisions[track]},{materialHash:prior.materialHash},{sourceFrame:'foreign-frame'}]) {
+        assert.equal((await call(item.endpoint,'a',{...p,...patch})).status,409);
+        assert.deepEqual(await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_nested_review_events').first<{n:number}>(),before,
+          'stale CSF/walkthrough or foreign frame must refuse before storage');
+      }
+      p.draft.notes='Synthetic schematic CSF persistence; not radiologist sign-off.';
+      const saved=await call(item.endpoint,'a',p);
+      assert.equal(saved.status,201,await saved.clone().text());
+      const record=await saved.json() as any;
+      assert.equal(record.review.status,'draft');
+      assert.equal(record.review.material.materialHash,p.materialHash);
+      assert.equal(record.review.checks['csf-motion'],false);
+      if(track==='teaching')assert.equal(record.review.material.teachingTabs.length,9,'eight earlier topics plus guided learning; CSF is a checklist, not another tab');
+      const history=await (await call(item.endpoint+item.query)).json() as any;
+      assert.equal(history.history.length,1);assert.equal(history.history[0].notes,p.draft.notes);
+      assert.equal(history.history[0].revisionHash,p.revisionHash);
+      assert.equal(history.history[0].checks['csf-motion'],false);
+      assert.equal((await call(item.endpoint,'a',p)).status,409,'append-only optimistic conflict');
+      const complete=item.complete;
+      assert.equal(complete.evidence[0].url,'https://example.test/csf-fixture');
+      const refusals=[{...complete,checks:{...complete.checks,'csf-motion':false}},{...complete,attested:false},
+        ...(track==='teaching'?[{...complete,checks:{...complete.checks,'guided-learning':false}}]:[])];
+      for(const draft of refusals) {
+        const refused=await call(item.endpoint,'a',{...p,expectedVersion:1,draft});
+        assert.equal(refused.status,422);
+        assert.match(JSON.stringify(await refused.json()),draft.attested?/Complete every checklist item/u:/Confirm you personally performed the review/u,
+          'refusal must name the flipped safeguard, not an unrelated invalid input');
+        assert.equal((await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_nested_review_events').first<{n:number}>())?.n,before!.n+1,
+          'unchecked illustration/walkthrough/attestation cannot append approval');
+      }
+      for(const other of ['b','c'])assert.equal(((await (await call(item.endpoint+item.query,other)).json()) as any).history.length,0,
+        'CSF review remains private to account and institution');
+    }
     await call('reviews','b');
     assert.equal((await call('reviews','b',seed.fixtures[0].payload,{'X-Clinical-Review-Context':contexts.a})).status,409,'old document cannot save under another account');
     // Revocations are checked freshly and never healed by reading review APIs.
@@ -389,9 +462,9 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     const overview=await call('review-overview');assert.equal(overview.status,200);assert.match(overview.headers.get('cache-control')! ,/no-store/);
     assert.equal((await call('review-overview?userId=b')).status,400);
     for(const table of ['atlas_personal_review_events','atlas_personal_body_review_events','atlas_personal_nested_review_events','atlas_personal_specimen_review_events']) {
-      const expectedCount=table==='atlas_personal_specimen_review_events'?13:3;
+      const expectedCount=table==='atlas_personal_specimen_review_events'?13:table==='atlas_personal_nested_review_events'?11:3;
       assert.equal((await db.prepare(`SELECT COUNT(*) AS n FROM ${table}`).first<{n:number}>())?.n,expectedCount,
-        'original three events per scope plus only two each calf, thigh, deep-hip, knee and foot synthetic teaching events');
+        'original three events per scope plus two each calf, thigh, deep-hip, knee and foot and eight draft-only ventricular scope events');
       const row=await db.prepare(`SELECT user_id FROM ${table} LIMIT 1`).first<{user_id:string}>();
       assert.deepEqual(JSON.parse(row!.user_id),['vm-website-personal-review-1','edu:a','org-a']);
     }

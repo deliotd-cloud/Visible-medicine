@@ -12,6 +12,8 @@ import renderer from '../content/body-renderer-revision.json';
 import { eyeLayerGuide } from './eye-layer-guide';
 import { eyeReferences } from './eye-layers';
 import { coronaryVenousContextMaterial } from './coronary-venous-context';
+import { ventricularGuide, ventricularGuideReferences } from './ventricular-guide';
+import { csfMotionFor, csfMotionReferences } from './csf-motion';
 
 const catalog = bodyDisplayCatalog(raw as unknown as BodyCatalog);
 const targets = nestedStudyTargets(catalog);
@@ -44,10 +46,11 @@ export async function nestedReviewMaterial(key:string,structureId:string) {
     return {tab,readiness:lesson?.readiness??'pending',body:lesson?.body??null,
       note:lesson?.note??null,bullets:lesson?.bullets??[],references:lesson?.citations??[]};
   });
-  const eyeGuide=target.study==='eye'?eyeLayerGuide(parent):null;
+  const eyeGuide=target.study==='eye'?eyeLayerGuide(parent):target.study==='ventricles'?ventricularGuide(parent):null;
   const guide=eyeGuide?.steps.some(step=>step.ids.includes(structureId))?eyeGuide:null;
+  const csfMotion=target.study==='ventricles'?csfMotionFor(parent):null;
   const usedUrls=new Set([...topics.flatMap(t=>t.references),...(concept?.quiz.references.map(r=>nestedTeachingReferences[r].url)??[]),
-    ...(guide?.steps.flatMap(step=>step.references)??[])]);
+    ...(guide?.steps.flatMap(step=>step.references)??[]),...(csfMotion?.references.map(r=>r.url)??[])]);
   // Scoped additions cannot relabel an unrelated lesson sharing the same URL.
   // Legacy title lookup remains stable for its existing review revisions.
   const citedKeys=new Set([
@@ -59,6 +62,7 @@ export async function nestedReviewMaterial(key:string,structureId:string) {
     ...Object.entries(nestedTeachingReferences).filter(([key,r])=>usedUrls.has(r.url)&&
       (!('scopedToConcept' in r&&r.scopedToConcept===true)||citedKeys.has(key))).map(([,r])=>[r.url,r.title]),
     ...(guide?eyeReferences.filter(r=>usedUrls.has(r.url)&&!Object.values(nestedTeachingReferences).some(item=>item.url===r.url)).map(r=>[r.url,r.label]):[]),
+    ...(target.study==='ventricles'?[...ventricularGuideReferences,...csfMotionReferences].filter(r=>usedUrls.has(r.url)&&!Object.values(nestedTeachingReferences).some(item=>item.url===r.url)).map(r=>[r.url,r.title]):[]),
   ]);
   const lesson=concept?{extended:{modelLimit:concept.modelLimit,selfCheck:{
     question:concept.quiz.question,answer:concept.quiz.answer,basis:concept.quiz.basis,
@@ -76,13 +80,18 @@ export async function nestedReviewMaterial(key:string,structureId:string) {
     limitations:'This is one source-defined child in its exact parent/study scope. It does not validate the whole organ, complete internal anatomy, independent specimens, patient imaging or paid lectures.',
     ...(landmarkSource?{orientationContext:landmarkSource}:{} )};
   const teaching={topics,lesson,concept,referenceTitles,...(guide?{guidedLearning:guide}:{}),
+    ...(csfMotion?{csfMotion}:{}),
     ...(orientationContext?{orientationContext:orientationContext.copy}:{} )};
   const atlasLink=makeStudyLink(catalog,parent.region,parent.id,'both',null,target);
   const sourceHash=await digest(source),teachingHash=await digest(teaching);
   const bound={catalogScope:nestedReviewScope,nestedKey:key,sourceFrame,structureId,checklistVersion:nestedChecklistVersion};
   const teachingTabs=[...topics.filter(t=>t.readiness==='draft').map(t=>t.tab),...(concept?['self-check']:[]),...(guide?['guided-learning']:[])];
   const checklists=structuredClone(nestedChecklists);
-  if(guide)checklists.teaching.push({id:'guided-learning',label:'Review every eye walkthrough caption, selected source component, visibility preset and camera direction, plus source omissions and restoration. Guidance is not a surgical plane, scan registration or clinical approval.'});
+  if(guide)checklists.teaching.push({id:'guided-learning',label:target.study==='eye'?'Review every eye walkthrough caption, selected source component, visibility preset and camera direction, plus source omissions and restoration. Guidance is not a surgical plane, scan registration or clinical approval.':'Review all five ventricular walkthrough captions, selected spaces, visibility and camera directions, source omissions and restoration. Guidance is not a CSF pathway, scan registration or clinical approval.'});
+  if(csfMotion){
+    checklists.geometry.push({id:'csf-motion',label:'Inspect the optional non-selectable CSF markers inside each of the four supplied spaces, transparency, containment, start/pause, hidden/cut/exploded and reduced-motion behavior. The markers do not resolve missing CSF connections or validate fluid physiology.'});
+    checklists.teaching.push({id:'csf-motion',label:'Review the exact schematic CSF-motion parameters, source identity, citations and limitations. Arbitrary reversible motion must not be taught as measured flow, net circulation, pressure, obstruction, clearance or acquired-image registration.'});
+  }
   if(orientationContext){
     checklists.geometry.push({id:'coronary-landmarks',label:'Inspect the optional anterior cardiac vein group, great and middle cardiac vein landmarks, source identity, labels, visibility and separation/reassembly. Proximity is not a validated ostium or drainage connection.'});
     checklists.teaching.push({id:'coronary-landmarks',label:'Review every optional cardiac-vein landmark caption and grouped-source limitation. The context is not selectable child anatomy, joined lumen, flow or patient correspondence.'});

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "9fcf6007719b78c83979a1fbfbca0e4eadbcc42b",
-  "sha256": "50ad81727883197ba212fc892aef761aa5e46a91338c6e418cc43d4e675b6580",
+  "sourceCommit": "0e988a782fb3e6f71bb9220b53aebeedbadd30f9",
+  "sha256": "134407d077c71813a6d46f738ba9eddc38c7bf60216d4b1e885e9e73d0e7784f",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -144,7 +144,7 @@
     },
     {
       "path": "atlas-review/app/body-scene.tsx",
-      "sha256": "62afad909aef90e756dd1c1d645c44872bece9b7f42280a7c25fd93612e0ad6e"
+      "sha256": "487b3747de947fca4b70f058508922dcf20ecb46dab44a8ed62ef21f2c1e26b2"
     },
     {
       "path": "atlas-review/app/body-selection-notice.tsx",
@@ -183,6 +183,10 @@
       "sha256": "687b2b2f9cd199b7b5a48bd8388a395b38cfd5988166247eda800ce181aeb6bc"
     },
     {
+      "path": "atlas-review/app/csf-motion.tsx",
+      "sha256": "7180a19f99abbe0f81ede6379d785c89d3f383823eeb7de08ef901053a973419"
+    },
+    {
       "path": "atlas-review/app/cutaway-controls.tsx",
       "sha256": "9ee12ddd1d2d5fb030616f57457dc19d19b39ed84c6be5a1c1b740b2c6962e36"
     },
@@ -208,7 +212,7 @@
     },
     {
       "path": "atlas-review/app/eye-layers.css",
-      "sha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
+      "sha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8"
     },
     {
       "path": "atlas-review/app/eye-layers.tsx",
@@ -352,7 +356,7 @@
     },
     {
       "path": "atlas-review/app/review/nested/workspace.tsx",
-      "sha256": "e723e685343374e957de71b17b82c8589fba1516687102833d77d14c9c70b22d"
+      "sha256": "3b116343c793110375901d1c61338d7dd34ebe89349735e5a2211fb809644f2f"
     },
     {
       "path": "atlas-review/app/review/overview/overview.css",
@@ -552,7 +556,7 @@
     },
     {
       "path": "atlas-review/app/ventricles.tsx",
-      "sha256": "d66692612517531c43e7b5a03498e24cadf0b3165bb9b7764ecb67efd2f1d9ff"
+      "sha256": "1557f6fcf53b91fb0ffca7e724bfdbaea0043188a951cda1e890a7b7a60b6162"
     },
     {
       "path": "atlas-review/app/ventricular-relationships.css",
@@ -572,7 +576,7 @@
     },
     {
       "path": "atlas-review/app/whole-body-guided-learning.tsx",
-      "sha256": "4c271a2f6e35b236f6b3bdce808eadf8ade8d774c9704bfb443ca5e69af63a61"
+      "sha256": "fda97942a288134fa98dbc75b61355dfcee5b69f8c287611b7b83ef6877d642f"
     },
     {
       "path": "atlas-review/app/workspace-session.ts",
@@ -969,6 +973,10 @@
     {
       "path": "atlas-review/content/cricothyroid-teaching.ts",
       "sha256": "ad6404871498f39639a478eef5a17c6abe8395e7351d2a6c8595606d2533b68d"
+    },
+    {
+      "path": "atlas-review/content/csf-motion.v1.json",
+      "sha256": "9cd2f572007536fc7ad761d037d0bd90a8485783a9c2fa65f1fe1c8efe473685"
     },
     {
       "path": "atlas-review/content/cubital-studies.ts",
@@ -1584,7 +1592,7 @@
     },
     {
       "path": "atlas-review/content/nested-guided-learning-bindings.v1.json",
-      "sha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14"
+      "sha256": "cbeab92610bf444684099c9459cd11e6ad44e32ec8f0c5549849fc03d1f841fd"
     },
     {
       "path": "atlas-review/content/nested-review-bindings.json",
@@ -2711,6 +2719,10 @@
       "sha256": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9"
     },
     {
+      "path": "atlas-review/lib/csf-motion.ts",
+      "sha256": "50ea0f755e8654470c1db00e276512c940158b1ba1899616e3f11f28255fd3f9"
+    },
+    {
       "path": "atlas-review/lib/cubital-studies.ts",
       "sha256": "11b9e624adc0c5034ad0b6f31d0399e5f1854d65230d1e30803e6fbebbb6b33d"
     },
@@ -3372,7 +3384,7 @@
     },
     {
       "path": "atlas-review/lib/nested-guided-learning.ts",
-      "sha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972"
+      "sha256": "058aeef642549a79d036f601013cc4f7c5cdf08acde3db4c9ea3819b5d680b49"
     },
     {
       "path": "atlas-review/lib/nested-learning-anatomy.ts",
@@ -3400,7 +3412,7 @@
     },
     {
       "path": "atlas-review/lib/nested-review-material.ts",
-      "sha256": "0b0e5d2d849ab3663a1859863ea307b3758c1a2dd7682f77a247703bbdd0decf"
+      "sha256": "b33c34e4aa203680ce4d9ca367cfa526cedc7d1d8332ebd9f05721122675d9b4"
     },
     {
       "path": "atlas-review/lib/nested-review-queue.ts",
@@ -4091,6 +4103,10 @@
       "sha256": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c"
     },
     {
+      "path": "atlas-review/lib/ventricular-guide.ts",
+      "sha256": "9d65840d18391920d5299914fb6075db7f6c05c4d0e84b7e18e0b53a5b0bfd64"
+    },
+    {
       "path": "atlas-review/lib/ventricular-relationships.ts",
       "sha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df"
     },
@@ -4120,7 +4136,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "d10834f6cc5de741c2346cc5fe313d59477ff316a663713e1d8f83a25598c1b7"
+      "sha256": "dd4be414cbcf07498a7b6552bdcc6541057af662804231aa2f80776842ada2cc"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4380,7 +4396,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "d50d4e98eef9bf8817f386af059559be7a3423c2e5c91d238e921a0bbc0cb211"
+      "sha256": "a8a385bf60c1a39e2cd189a758ac779346e42adad54b695464f08794ed60a55d"
     }
   ]
 }

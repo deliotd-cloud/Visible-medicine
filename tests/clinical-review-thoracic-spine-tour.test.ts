@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {createHash} from 'node:crypto';
-import {readFileSync} from 'node:fs';
+// Exact saved pre-CSF import; current CSF and 189-stop tests cover live retention.
+import {intrinsicFootDepthEpochRead as readFileSync, intrinsicFootDepthEpochPlugin} from './atlas-foot-depth-history.ts';
 import {createRequire} from 'node:module';
 import {join} from 'node:path';
 import {runInNewContext} from 'node:vm';
@@ -37,7 +38,7 @@ async function load(){
   import raw from './atlas-review/public/models/bodyparts3d/full-body/catalog.json';
   import {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';
   export const catalog=bodyDisplayCatalog(raw as any);`,
-  resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'cjs',packages:'external'});
+  resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'cjs',packages:'external',plugins:[intrinsicFootDepthEpochPlugin()]});
  const module={exports:{} as any},require=createRequire(join(process.cwd(),'package.json'));
  runInNewContext(built.outputFiles[0].text,{module,exports:module.exports,require,crypto,Request,Response,
   URL,URLSearchParams,TextEncoder,TextDecoder,structuredClone,console,setTimeout,clearTimeout});

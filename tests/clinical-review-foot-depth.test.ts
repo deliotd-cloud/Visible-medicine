@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
+import { intrinsicFootDepthEpochRead as readFileSync, intrinsicFootDepthEpochPlugin } from './atlas-foot-depth-history.ts';
 import { build } from 'esbuild';
 
 const oldSource = '19f9a7fa02b98b3df8a71a645fe68d3894094178';
@@ -36,7 +37,7 @@ async function api(includeFoot = false): Promise<Any> {
     "export { blankSpecimenReview } from './atlas-review/lib/specimen-review';",
     "export { postSpecimenReview } from './atlas-review/lib/specimen-review-api';",
   ].join('\n'), resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false,
-  platform: 'node', format: 'esm' });
+  platform: 'node', format: 'esm', plugins:[intrinsicFootDepthEpochPlugin()] });
   return import('data:text/javascript;base64,' + Buffer.from(bundled.outputFiles[0].text).toString('base64'));
 }
 

@@ -82,7 +82,7 @@
     },
     {
       "path": "app/body-scene.tsx",
-      "sha256": "3350aeb0ef4dfa7b4fd884f0877d8ce0166a90f2a1d49d1df987e68c5c613f9f"
+      "sha256": "785e671b55ea980b4a77d2cb9d3f0e4ba8d78e0625dfc285fe7a068227552d9b"
     },
     {
       "path": "app/body-selection-notice.tsx",
@@ -121,6 +121,10 @@
       "sha256": "5c6d0606c23c91801d5c750201cd2618b4fd0f1e686aff18574aef586cec2ca5"
     },
     {
+      "path": "app/csf-motion.tsx",
+      "sha256": "5b01e7a24d4b2cc912c34b39a586574e9360afd8bb6f87df8f0b91f5fb5ac96d"
+    },
+    {
       "path": "app/cutaway-controls.tsx",
       "sha256": "249e53bbccbbcbfd349692d20978b7341001ff5346973297b30ca9e89c547f47"
     },
@@ -146,7 +150,7 @@
     },
     {
       "path": "app/eye-layers.css",
-      "sha256": "2a41b0ec2acdf38eda670d60702bc6e918cafdecedbaa33c671323bf3b6e5361"
+      "sha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8"
     },
     {
       "path": "app/eye-layers.tsx",
@@ -414,7 +418,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "e693f56ee69286484583a65b0ac8fc0afce517f035dd41c0105cf289b4b0cb2e"
+      "sha256": "979a0be46f2e63d16c18e1f2f8a8fcb636e9e7d822f092e91dada56b43d3c11e"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -434,7 +438,7 @@
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
-      "sha256": "05a37afb364f0bc578e9ed781ab2fa681fbe28549cc12f04ec6382d86aa270ad"
+      "sha256": "e987425ecd8481efef879c4d3af7c03c9611bb968e13c0afb8a13e4fa09da720"
     },
     {
       "path": "app/workspace-session.ts",
@@ -807,6 +811,10 @@
     {
       "path": "content/cricothyroid-teaching.ts",
       "sha256": "ad6404871498f39639a478eef5a17c6abe8395e7351d2a6c8595606d2533b68d"
+    },
+    {
+      "path": "content/csf-motion.v1.json",
+      "sha256": "9cd2f572007536fc7ad761d037d0bd90a8485783a9c2fa65f1fe1c8efe473685"
     },
     {
       "path": "content/cubital-studies.ts",
@@ -1422,7 +1430,7 @@
     },
     {
       "path": "content/nested-guided-learning-bindings.v1.json",
-      "sha256": "6929af9e77abcd8ee3a3f1b9bda8f4affeb1b21b35d513854d1bd68a03034c14"
+      "sha256": "cbeab92610bf444684099c9459cd11e6ad44e32ec8f0c5549849fc03d1f841fd"
     },
     {
       "path": "content/nested-review-bindings.json",
@@ -2485,6 +2493,10 @@
       "sha256": "1e7d88df1c8f24a4b33b520637d00bdf64d498a5017c332a6ce4d2a1cc0828b9"
     },
     {
+      "path": "lib/csf-motion.ts",
+      "sha256": "50ea0f755e8654470c1db00e276512c940158b1ba1899616e3f11f28255fd3f9"
+    },
+    {
       "path": "lib/cubital-studies.ts",
       "sha256": "11b9e624adc0c5034ad0b6f31d0399e5f1854d65230d1e30803e6fbebbb6b33d"
     },
@@ -3146,7 +3158,7 @@
     },
     {
       "path": "lib/nested-guided-learning.ts",
-      "sha256": "56ce7db943ebe22f92733b8173a7dcaea4e59d921463d10ea3710cf029486972"
+      "sha256": "058aeef642549a79d036f601013cc4f7c5cdf08acde3db4c9ea3819b5d680b49"
     },
     {
       "path": "lib/nested-learning-anatomy.ts",
@@ -3801,6 +3813,10 @@
       "sha256": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c"
     },
     {
+      "path": "lib/ventricular-guide.ts",
+      "sha256": "9d65840d18391920d5299914fb6075db7f6c05c4d0e84b7e18e0b53a5b0bfd64"
+    },
+    {
       "path": "lib/ventricular-relationships.ts",
       "sha256": "b9d2bd5ea079a600c2593ca522f325ceb03c2f2704a26747b4262ef6838c84df"
     },
@@ -3834,7 +3850,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "809bf692e835ea9844d9e02a863de857b60a265ab4aa45a0b128ccd5b3bddc4a"
+      "sha256": "662f31b8d8dfd2a7bc448a04f15599c033094c6dcbe51131f3edc5d7c7e85e32"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4057,7 +4073,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "89bdd404d2ec344005e4f22bda51053702b21edef263ffe4799ea0d3a38dfa0e",
-  "sourceRendererSha256": "786a2f86109165314be304d68505e5f93c71c7a1fb32ee9fc31d4390bfdf1d82",
-  "websiteIntegrationSha256": "50ad81727883197ba212fc892aef761aa5e46a91338c6e418cc43d4e675b6580"
+  "sha256": "7698fa3f9b31a207d355da8e4698e9d40168fab3890cfa8b9e65a41967ff8627",
+  "sourceRendererSha256": "efe56e5185daa8f84c912dfe0ed071f14c5281a86b20611439b7c4ecf85fc18c",
+  "websiteIntegrationSha256": "134407d077c71813a6d46f738ba9eddc38c7bf60216d4b1e885e9e73d0e7784f"
 }

@@ -13,6 +13,8 @@ import './whole-body-guided-learning.css';
 // for every region. Use the same deferred boundary as manual eye exploration.
 const EyeLayerView=dynamic(()=>import('./eye-layers').then(module=>module.EyeLayerView),{ssr:false,
   loading:()=> <p role="status">Loading eye layers…</p>});
+const VentricularView=dynamic(()=>import('./ventricles').then(module=>module.VentricularView),{ssr:false,
+  loading:()=> <p role="status">Loading ventricular spaces…</p>});
 
 // Whole-body tours explicitly declare their same-catalog regional union.
 // Regional membership is never rewritten, nor independent specimens combined.
@@ -45,7 +47,8 @@ export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-
     {tour.tour ? <RegionalGuidedLearning key={`${tour.id}:${tour.tour.revision}`} catalog={catalog} tour={tour.tour} assetBase={assetBase} pausedImaging={pausedImaging} onExit={onExit}/>
       : tour.eye ? <div className="whole-body-nested-guidance" key={`${tour.id}:${tour.eye.parentHash}:${tour.eye.sourceHash}:${JSON.stringify(tour.eye.guide)}`}>
         <header><h2>{tour.title}</h2><button type="button" onClick={onExit}>Exit tour</button></header>
-        <EyeLayerView parent={tour.eye.parent} educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>
+        {tour.eye.kind==='eye'?<EyeLayerView parent={tour.eye.parent} educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>
+          :<VentricularView parent={tour.eye.parent} study="ventricles" educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>}
       </div> : null}
   </section>;
 }

@@ -2421,3 +2421,18 @@ code/teaching use project MIT terms; BodyParts3D CC BY geometry obligations,
 credits and source holds remain. No dependency, font, texture, model, paid
 service or mandatory fee is added. Radiologist approval, acoustic simulation,
 marrow assessment, fracture exclusion and patient registration are not supplied.
+
+## Ventricular walkthrough and schematic CSF movement — 5 October 2026
+
+Original guide captions and CSF-motion code use project MIT terms. The generated
+marker coordinates in `content/csf-motion.v1.json` are derived from the existing
+admitted BodyParts3D ventricular surfaces and retain their CC BY 4.0 credit and
+source obligations. No new mesh, media, font, texture, dependency or fee is added.
+Chen, Beckett, Verma and Feinberg, NeuroImage 2015 (DOI
+10.1016/j.neuroimage.2015.07.073, https://pubmed.ncbi.nlm.nih.gov/26241682/) is a
+factual reference only; its copyright is not treated as permission to import
+figures, scans, flow data or prose. None is reproduced. UT Neuroanatomy Online
+and NCBI Bookshelf are likewise linked factual references, not imported assets.
+The animation is an original arbitrary teaching illustration, not their measured
+results, endorsement, calibrated fluid simulation or clinical validation.
+See `docs/CSF_MOTION.md` and `docs/VENTRICULAR_GUIDED_LEARNING.md` for scope.

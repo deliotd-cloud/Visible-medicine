@@ -3,10 +3,11 @@ import {eyeLayerGuide,type EyeLayerGuide} from './eye-layer-guide';
 import {eyeDisplayCorrection} from './body-display-catalog';
 import {nestedStudyTargets} from './nested-anatomy';
 import bindings from '../content/nested-guided-learning-bindings.v1.json' with {type:'json'};
+import {ventricularGuide,type VentricularGuide} from './ventricular-guide';
 
 export type NestedGuidedStudyOption={
-  id:string;title:string;region:'head-neck';kind:'eye';
-  parent:BodyStructure;guide:EyeLayerGuide;sourceHash:string;parentHash:string;
+  id:string;title:string;region:'head-neck';kind:'eye'|'ventricles';
+  parent:BodyStructure;guide:EyeLayerGuide|VentricularGuide;sourceHash:string;parentHash:string;
 };
 const canonical=(v:unknown):string=>Array.isArray(v)?`[${v.map(canonical).join(',')}]`:
   v&&typeof v==='object'?`{${Object.keys(v).sort().map(k=>`${JSON.stringify(k)}:${canonical((v as Record<string,unknown>)[k])}`).join(',')}}`:JSON.stringify(v);
@@ -18,10 +19,10 @@ export function nestedGuidedStudyOptions(catalog:BodyCatalog,region='whole-body'
     canonical(catalog.coordinateSystem)!==canonical(eyeDisplayCorrection.coordinateSystem))return[];
   const targets=nestedStudyTargets(catalog);
   return catalog.structures.flatMap(parent=>{
-    if(parent.region!=='head-neck'||!['right','left'].includes(parent.laterality)||
+    if(parent.region!=='head-neck'||
       catalog.structures.filter(s=>s.id===parent.id).length!==1)return[];
-    const guide=eyeLayerGuide(parent);if(!guide)return[];
-    const entries=targets.filter(t=>t.study==='eye'&&t.parentId===parent.id);
+    const guide=eyeLayerGuide(parent)??ventricularGuide(parent);if(!guide)return[];
+    const entries=targets.filter(t=>t.study===guide.study&&t.parentId===parent.id);
     const ids=new Set(guide.steps.flatMap(s=>s.ids));
     if(entries.length!==ids.size||entries.some(t=>!ids.has(t.structureId))||
       new Set(entries.map(t=>t.structureId)).size!==ids.size||
@@ -30,7 +31,7 @@ export function nestedGuidedStudyOptions(catalog:BodyCatalog,region='whole-body'
     const pinned=bindings.bindings.filter(b=>b.parentId===parent.id);
     if(bundle.length!==1||bundle[0].sha256!==entries[0].parentHash||pinned.length!==1||
       canonical(bundle[0])!==canonical(pinned[0].parentBundle))return[];
-    return[{id:guide.id,title:`${parent.laterality==='right'?'Right':'Left'} eye layers`,region:'head-neck' as const,
-      kind:'eye' as const,parent,guide,sourceHash:entries[0].sourceHash,parentHash:entries[0].parentHash}];
+    return[{id:guide.id,title:guide.study==='eye'?`${parent.laterality==='right'?'Right':'Left'} eye layers`:'Ventricular spaces',region:'head-neck' as const,
+      kind:guide.study,parent,guide,sourceHash:entries[0].sourceHash,parentHash:entries[0].parentHash}];
   }).sort((a,b)=>a.parent.laterality==='right'?-1:b.parent.laterality==='right'?1:0);
 }

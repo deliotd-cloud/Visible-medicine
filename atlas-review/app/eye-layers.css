@@ -379,3 +379,8 @@
     min-height: 36px;
   }
 }
+.eye-layer-guided-learning [data-testid='csf-motion-status'] {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}

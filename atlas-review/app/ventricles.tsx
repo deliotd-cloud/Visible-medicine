@@ -6,6 +6,7 @@ import { femoralComponentsFor } from '@/atlas-review/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/atlas-review/lib/cranial-artery-components';
 import {
   useCallback,
+  useEffect,
   useLayoutEffect,
   useMemo,
   useReducer,
@@ -178,6 +179,9 @@ import {
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/atlas-review/lib/body-arrangement';
 import type { RendererHealth } from '@/atlas-review/lib/renderer-health';
+import type { StudyCamera } from '@/atlas-review/lib/study-views';
+import { ventricularGuide, ventricularGuideReferences } from '@/atlas-review/lib/ventricular-guide';
+import { csfMotionAllowed, csfMotionFor } from '@/atlas-review/lib/csf-motion';
 import './eye-layers.css';
 import './ventricular-relationships.css';
 
@@ -216,6 +220,7 @@ export function VentricularView({
   study = 'ventricles',
   initialSelectedId,
   initialTeachingTopic,
+  initialGuidedLearningExpanded = false,
   assetBase = '',
 }: {
   parent: BodyStructure;
@@ -223,6 +228,7 @@ export function VentricularView({
   study?: ComponentStudy;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  initialGuidedLearningExpanded?: boolean;
   assetBase?: string;
 }) {
   const isBrainstem = study === 'brainstem';
@@ -300,7 +306,6 @@ export function VentricularView({
   const selectableIds = useMemo(() => layers.map((s) => s.id), [layers]);
   // Only the complete selectable source set defines the cut; context/hiding never shifts it.
   const inspectionBounds = useMemo(() => selectionBounds(layers), [layers]);
-  const [inspection, setInspection] = useState(initialInspection);
   const initialSelection = layers.find((s) => s.id === initialSelectedId)?.id;
   const relationships = useMemo(
     () =>
@@ -524,7 +529,7 @@ export function VentricularView({
                   : isBrainstem
                     ? brainstemNotes
                     : ventricleNotes;
-  const [{ selectedId, hidden, history, future }, dispatch] = useReducer(
+  const [{ selectedId: manualSelectedId, hidden: manualHidden, history, future }, dispatch] = useReducer(
     (state: VentricularState, action: VentricularAction) =>
       reduceVentricles(layers, state, action, presets),
     layers,
@@ -533,19 +538,19 @@ export function VentricularView({
       ...(initialSelection ? { selectedId: initialSelection } : {}),
     }),
   );
-  const [context, setContext] = useState(
+  const [manualContext, setContext] = useState(
       isRenal || isPancreatic || isCricothyroid,
     ),
-    [labels, setLabels] = useState(true);
-  const [explode, setExplode] = useState(0),
-    [layout, setLayout] = useState<BodyLayout>('extract');
-  const [showOrigins, setShowOrigins] = useState(false);
-  const [view, setView] = useState<DissectionView>(
+    [manualLabels, setLabels] = useState(true);
+  const [manualExplode, setExplode] = useState(0),
+    [manualLayout, setLayout] = useState<BodyLayout>('extract');
+  const [manualShowOrigins, setShowOrigins] = useState(false);
+  const [manualView, setView] = useState<DissectionView>(
       isVisual ? 'inferior' : isCoronaryVenous ? 'posterior' : 'anterior',
     ),
     [reset, setReset] = useState(0);
-  const [focus, setFocus] = useState(false),
-    [isolated, setIsolated] = useState(!!initialSelection);
+  const [manualFocus, setFocus] = useState(false),
+    [manualIsolated, setIsolated] = useState(!!initialSelection);
   const [loaded, setLoaded] = useState<string[]>([]),
     [failed, setFailed] = useState<string[]>([]),
     [retry, setRetry] = useState(0);
@@ -556,8 +561,54 @@ export function VentricularView({
   );
   const practiceLauncher = useRef<HTMLElement>(null);
   const restorePracticeFocus = useRef(false);
-  const [relationshipId, setRelationshipId] = useState<string | null>(null);
-  const [circulationIndex, setCirculationIndex] = useState<number | null>(null);
+  const [manualRelationshipId, setRelationshipId] = useState<string | null>(null);
+  const [manualCirculationIndex, setCirculationIndex] = useState<number | null>(null);
+  const [manualInspection, setInspection] = useState(initialInspection);
+  const guide = useMemo(() => study === 'ventricles' ? ventricularGuide(parent) : null, [parent, study]);
+  const motion = useMemo(() => study === 'ventricles' ? csfMotionFor(parent) : null, [parent, study]);
+  const cameraCapture = useRef<StudyCamera | null>(null);
+  const cameraRestore = useRef<StudyCamera | null>(null);
+  const guideLauncher = useRef<HTMLButtonElement | null>(null);
+  const restoreGuideFocus = useRef(false);
+  const [guideExpanded, setGuideExpanded] = useState(initialGuidedLearningExpanded);
+  const [reducedMotion, setReducedMotion] = useState(true);
+  const [pageHidden, setPageHidden] = useState(false);
+  const [guidance, setGuidance] = useState<{ id: string; index: number; camera: StudyCamera | null } | null>(null);
+  const [motionRequested, setMotionRequested] = useState(false);
+  const step = guidance?.id === guide?.id ? guide?.steps[guidance!.index] : undefined;
+  // Walkthrough visibility and camera are presentation-only; reducer state and history stay manual.
+  const selectedId = step?.selectedId ?? manualSelectedId;
+  const hidden = step ? layers.filter((s) => !step.ids.includes(s.id)).map((s) => s.id) : manualHidden;
+  const context = step ? false : manualContext;
+  const labels = step ? true : manualLabels;
+  const explode = step ? 0 : manualExplode;
+  const layout = step ? 'spatial' : manualLayout;
+  const showOrigins = step ? false : manualShowOrigins;
+  const view = step?.view ?? manualView;
+  const focus = step ? false : manualFocus;
+  const isolated = step ? guide!.fadeOthers : manualIsolated;
+  const relationshipId = step ? null : manualRelationshipId;
+  const circulationIndex = step ? null : manualCirculationIndex;
+  const inspection = step ? initialInspection : manualInspection;
+  useEffect(() => {
+    if (!guide && !motion) return;
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const updateMotion = () => setReducedMotion(preference.matches);
+    const updateVisibility = () => setPageHidden(document.hidden);
+    updateMotion(); updateVisibility();
+    preference.addEventListener('change', updateMotion);
+    document.addEventListener('visibilitychange', updateVisibility);
+    return () => {
+      preference.removeEventListener('change', updateMotion);
+      document.removeEventListener('visibilitychange', updateVisibility);
+    };
+  }, [guide, motion]);
+  useLayoutEffect(() => {
+    if (!guidance && restoreGuideFocus.current) {
+      guideLauncher.current?.focus();
+      restoreGuideFocus.current = false;
+    }
+  }, [guidance]);
   const circulationSteps = useMemo(
     () => (isCardiac ? cardiacCirculationFor(parent) : []),
     [isCardiac, parent],
@@ -675,6 +726,11 @@ export function VentricularView({
     (id) => !loaded.includes(id) && !failed.includes(id),
   );
   const hasFailed = required.some((id) => failed.includes(id));
+  const ready = health === 'ready' && !loading && !hasFailed && required.length > 0;
+  const csfMotion = !!motion && csfMotionAllowed({
+    requested: motionRequested, reducedMotion, pageHidden, ready,
+    explode, cut: inspection.plane !== 'off', exam: !!practiceSnapshot,
+  });
   const practicePool = useMemo(
     () => nestedPracticePool(parent, study, layers, loaded, hidden),
     [parent, study, layers, loaded, hidden],
@@ -742,7 +798,9 @@ export function VentricularView({
                           : guidedAppearance
                             ? 0.42
                             : 0.12
-                  : guidedAppearance
+                  : csfMotion
+                    ? 0.18
+                    : guidedAppearance
                     ? 0.7
                     : 1,
             },
@@ -760,13 +818,14 @@ export function VentricularView({
       isHepatic,
       isCardiac,
       guidedAppearance,
+      csfMotion,
       isRenal,
       isVisual,
       pulmonaryRole,
     ],
   );
   function applySelection(id: string) {
-    if (!selectableIds.includes(id)) return;
+    if (step || !selectableIds.includes(id)) return;
     if (circulation && !circulation.selectedIds.includes(id))
       setCirculationIndex(null);
     dispatch({ type: 'select', id });
@@ -781,18 +840,18 @@ export function VentricularView({
   const educationLink = useNestedEducationLink({
     catalog: educationCatalog, parent, study, layers,
     allowedIds: educationAllowedIds,
-    disabled: !!practiceSnapshot || health !== 'ready' || loading || hasFailed ||
+    disabled: !!step || !!practiceSnapshot || health !== 'ready' || loading || hasFailed ||
       isolated || inspection.plane !== 'off' || practiceBranchFiltered ||
       (initialSelectedId !== undefined && !initialSelection),
     onSelect: applySelection,
   });
   function select(id: string) {
-    if (!selectableIds.includes(id)) return;
+    if (step || !selectableIds.includes(id)) return;
     applySelection(id);
     educationLink.publish(id);
   }
   function preset(value: string, selection?: string) {
-    if (!Object.hasOwn(presets, value)) return;
+    if (step || !Object.hasOwn(presets, value)) return;
     setCirculationIndex(null);
     const nextRelationship = relationships.find((r) => r.id === value);
     dispatch({
@@ -822,8 +881,26 @@ export function VentricularView({
     setReset((v) => v + 1);
     setCirculationIndex(index);
   }
+  function guideStep(index: number) {
+    if (!guide || !ready || pageHidden || !!practiceSnapshot ||
+      !Number.isInteger(index) || !guide.steps[index] ||
+      (initialSelectedId !== undefined && !initialSelection)) return;
+    setGuidance((previous) => ({
+      id: guide.id, index,
+      camera: previous?.id === guide.id ? previous.camera : structuredClone(cameraCapture.current),
+    }));
+    setReset((value) => value + 1);
+    setGuideExpanded(true);
+  }
+  function exitGuide() {
+    if (!guidance) return;
+    cameraRestore.current = structuredClone(guidance.camera);
+    restoreGuideFocus.current = true;
+    setGuidance(null);
+    setReset((value) => value + 1);
+  }
   const presetValue =
-    relationship?.id ??
+    step?.preset ?? relationship?.id ??
     Object.keys(presets)
       .filter((value) => !relationships.some((r) => r.id === value))
       .find((value) =>
@@ -897,9 +974,16 @@ export function VentricularView({
           inspectionBounds={inspectionBounds}
           plate={false}
           appearance={appearance}
+          csfMotion={csfMotion}
           retries={Object.fromEntries(
             ventricleCatalog.bundles.map((b) => [b.id, retry]),
           )}
+          cameraBounds={step ? selectionBounds(layers.filter((s) => step.ids.includes(s.id))) : undefined}
+          cameraCapture={cameraCapture}
+          cameraRestore={cameraRestore}
+          tourLocked={!!step}
+          transitionMs={step && !reducedMotion ? guide!.transitionMs : 0}
+          transitionPaused={!!step && (!ready || pageHidden)}
           onSelect={select}
           onLoaded={onLoaded}
           onFailure={onFailure}
@@ -943,11 +1027,11 @@ export function VentricularView({
           <Select
             value={view}
             onValueChange={(v) => {
-              if (v && cameraViews.includes(v as DissectionView))
+              if (!step && v && cameraViews.includes(v as DissectionView))
                 setView(v as DissectionView);
             }}
           >
-            <SelectTrigger aria-label={`${title} camera view`}>
+            <SelectTrigger disabled={!!step} aria-label={`${title} camera view`}>
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
@@ -962,14 +1046,17 @@ export function VentricularView({
             size="sm"
             variant={labels ? 'default' : 'outline'}
             aria-pressed={labels}
-            onClick={() => setLabels((v) => !v)}
+            disabled={!!step}
+            onClick={() => { if (!step) setLabels((v) => !v); }}
           >
             <Tags /> Labels
           </Button>
           <Button
             size="sm"
             variant="outline"
+            disabled={!!step}
             onClick={() => {
+              if (step) return;
               setReset((v) => v + 1);
               setFocus(false);
             }}
@@ -1008,6 +1095,68 @@ export function VentricularView({
             not supplied.
           </p>
         )}
+        {guide && <details className="eye-layer-guided-learning" open={guideExpanded}
+          onToggle={(event) => {
+            if (step && !event.currentTarget.open) exitGuide();
+            else if (!step) setGuideExpanded(event.currentTarget.open);
+          }}>
+          <summary>Guided learning</summary>
+          {step ? <section aria-label="Ventricular walkthrough" aria-live="polite">
+            <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
+            <h3>{step.title}</h3>
+            <p>{step.caption}</p>
+            {!ready || pageHidden ? <p role="status">Walkthrough paused until the model is ready and this page is visible.</p> : null}
+            <div className="eye-layer-actions">
+              <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance!.index === 0}
+                onClick={() => guideStep(guidance!.index - 1)}>Previous step</Button>
+              <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance!.index === guide.steps.length - 1}
+                onClick={() => guideStep(guidance!.index + 1)}>Next step</Button>
+              <Button size="sm" variant="outline" onClick={exitGuide}>End walkthrough</Button>
+            </div>
+            {step.references.map((url) => <a key={url} href={url} target="_blank" rel="noreferrer">
+              {ventricularGuideReferences.find((reference) => reference.url === url)?.title ?? 'Anatomy reference'}
+            </a>)}
+          </section> : <>
+            <p>{guide.title} · Five source-bound stops · Draft</p>
+            <Button ref={guideLauncher} size="sm" variant="outline"
+              disabled={!ready || pageHidden || !!practiceSnapshot || (initialSelectedId !== undefined && !initialSelection)}
+              onClick={() => guideStep(0)}>Start ventricular walkthrough</Button>
+          </>}
+          <p>{guide.limitation}</p>
+        </details>}
+        {motion && <details data-testid="csf-motion-controls" className="eye-layer-guided-learning">
+          <summary>{motion.title}</summary>
+          <p>Optional draft illustration within four separate source-labelled spaces.</p>
+          <Button size="sm" variant="outline" aria-pressed={csfMotion}
+            disabled={!motionRequested && (reducedMotion || pageHidden || !ready || explode !== 0 || inspection.plane !== 'off' || !!practiceSnapshot || (initialSelectedId !== undefined && !initialSelection))}
+            onClick={() => {
+              if (motionRequested) { setMotionRequested(false); return; }
+              if (!reducedMotion && !pageHidden && ready && explode === 0 && inspection.plane === 'off' &&
+                !practiceSnapshot && (initialSelectedId === undefined || !!initialSelection)) setMotionRequested(true);
+            }}>
+            {motionRequested ? 'Pause CSF motion' : 'Start CSF motion'}
+          </Button>
+          <output data-testid="csf-motion-status">
+            {csfMotion
+              ? 'Schematic motion active within separate ventricular spaces.'
+              : motionRequested
+                ? reducedMotion ? 'Paused: reduced-motion preference is active.'
+                  : pageHidden ? 'Paused: this page is hidden.'
+                    : !ready ? 'Paused: the 3D view is not ready.'
+                      : explode !== 0 || inspection.plane !== 'off' || !!practiceSnapshot
+                        ? 'Paused: restore the whole, assembled teaching view.'
+                        : 'Paused.'
+                : reducedMotion ? 'Stopped: reduced-motion preference is active.'
+                  : 'Stopped. Start only from a ready, whole teaching view.'}
+          </output>
+          <p>Back-and-forth markers, not measured flow or connected CSF circulation.</p>
+          <details><summary>About this illustration</summary>
+            <p>{motion.limitation}</p>
+            {motion.references.map((reference) => <p key={reference.url}><a href={reference.url} target="_blank" rel="noreferrer">{reference.title}</a></p>)}
+          </details>
+        </details>}
+        <fieldset className="eye-layer-manual-controls" disabled={!!step} inert={!!step}>
+          <legend className="sr-only">Manual {title.toLowerCase()} dissection controls</legend>
         <div className="eye-layer-presets">
           <label htmlFor="ventricular-preset">Study view</label>
           <Select
@@ -1231,9 +1380,11 @@ export function VentricularView({
                     : s.name.replace(' ventricle', '')}
                 </Button>
                 <Switch
+                  disabled={!!step}
                   checked={!hidden.includes(s.id)}
                   aria-label={`Show ${s.name.toLowerCase()}`}
                   onCheckedChange={(visible) => {
+                    if (step) return;
                     setCirculationIndex(null);
                     setRelationshipId(null);
                     dispatch({ type: 'visibility', id: s.id, visible });
@@ -1573,6 +1724,7 @@ export function VentricularView({
           subject={title}
           positionId={`nested-${study}-cut-position`}
           onChange={(next) => {
+            if (step) return;
             setInspection(next);
             setFocus(false);
           }}
@@ -1586,7 +1738,7 @@ export function VentricularView({
           <Select
             value={layout}
             onValueChange={(v) => {
-              if (v === 'extract' || v === 'tray' || v === 'spatial') {
+              if (!step && (v === 'extract' || v === 'tray' || v === 'spatial')) {
                 setLayout(v);
                 setExplode(0);
               }
@@ -1610,8 +1762,8 @@ export function VentricularView({
             max={100}
             step={1}
             value={[explode]}
-            disabled={layout === 'extract' && !selected}
-            onValueChange={(v) => setExplode(Array.isArray(v) ? v[0] : v)}
+            disabled={!!step || (layout === 'extract' && !selected)}
+            onValueChange={(v) => { if (!step) setExplode(Array.isArray(v) ? v[0] : v); }}
           />
           <p>
             Separate for shape comparison; return to 0% to study anatomical
@@ -1620,9 +1772,10 @@ export function VentricularView({
           <label className="origin-guide-toggle" htmlFor="nested-origin-guide">
             Show original position
             <Switch
+              disabled={!!step}
               id="nested-origin-guide"
               checked={showOrigins}
-              onCheckedChange={setShowOrigins}
+              onCheckedChange={(value) => { if (!step) setShowOrigins(value); }}
               aria-label="Show original position"
               aria-describedby="nested-origin-guide-note"
             />
@@ -1698,6 +1851,7 @@ export function VentricularView({
             />
           </section>
         )}
+        </fieldset>
         <details className="eye-layer-limits">
           <summary>Learning and limitations</summary>
           {isCoronaryVenous ? (
@@ -1962,6 +2116,7 @@ function LegacyVentricles({
   initialStudy,
   initialSelectedId,
   initialTeachingTopic,
+  initialGuidedLearningExpanded = false,
   assetBase = '',
 }: {
   parent: BodyStructure;
@@ -1970,6 +2125,7 @@ function LegacyVentricles({
   initialStudy?: ComponentStudy;
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  initialGuidedLearningExpanded?: boolean;
   assetBase?: string;
 }) {
   const isCardiac = cardiacFor(parent).length > 0;
@@ -2090,6 +2246,7 @@ function LegacyVentricles({
           key={`${parent.id}:${study}`}
           parent={parent}
           study={study}
+          initialGuidedLearningExpanded={study === startingStudy ? initialGuidedLearningExpanded : false}
           initialSelectedId={
             study === startingStudy ? initialSelectedId : undefined
           }
@@ -2112,9 +2269,10 @@ export default function Ventricles(props: {
     | 'cranial-artery-components';
   initialSelectedId?: string;
   initialTeachingTopic?: NestedImagingTopic;
+  initialGuidedLearningExpanded?: boolean;
   assetBase?: string;
 }) {
-  const { initialStudy, educationCatalog, ...rest } = props;
+  const { initialStudy, educationCatalog, initialGuidedLearningExpanded, ...rest } = props;
   if (
     initialStudy === 'cranial-artery-components' ||
     (!initialStudy && cranialArteryComponentsFor(props.parent).length)
@@ -2125,5 +2283,6 @@ export default function Ventricles(props: {
     (!initialStudy && femoralComponentsFor(props.parent).length)
   )
     return <FemoralComponents {...rest} educationCatalog={educationCatalog} />;
-  return <LegacyVentricles {...rest} educationCatalog={educationCatalog} initialStudy={initialStudy} />;
+  return <LegacyVentricles {...rest} educationCatalog={educationCatalog} initialStudy={initialStudy}
+    initialGuidedLearningExpanded={initialGuidedLearningExpanded} />;
 }

@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='9fcf6007719b78c83979a1fbfbca0e4eadbcc42b';
+const revision='0e988a782fb3e6f71bb9220b53aebeedbadd30f9';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -40,10 +40,13 @@ test('bounded regional Spread reaches learner and protected review without model
  const calfInputs=['app/specimen-depth-notes.tsx','content/um-calf-depth.ts'];
  const thighInputs=['content/um-thigh-depth.ts','lib/specimen-depth-scope.ts'];
  const deepHipInputs=['content/um-deep-hip-depth.ts'];
+ const csfInputs=['app/csf-motion.tsx','content/csf-motion.v1.json','lib/csf-motion.ts','lib/ventricular-guide.ts'];
+ assert.deepEqual(review.files.filter((f:any)=>csfInputs.includes(f.path)).map((f:any)=>f.path).sort(),csfInputs);
+ for(const path of csfInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
  const intrinsicFootInputs=['content/um-foot-depth.ts'];
  assert.deepEqual(review.files.filter((f:any)=>intrinsicFootInputs.includes(f.path)).map((f:any)=>f.path),intrinsicFootInputs);
  for(const path of intrinsicFootInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length+calfInputs.length+thighInputs.length+deepHipInputs.length+intrinsicFootInputs.length);assert.deepEqual(review.packages,prior.packages);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length+calfInputs.length+thighInputs.length+deepHipInputs.length+intrinsicFootInputs.length+csfInputs.length);assert.deepEqual(review.packages,prior.packages);
  assert.deepEqual(review.files.filter((f:any)=>deepHipInputs.includes(f.path)).map((f:any)=>f.path),deepHipInputs);
  for(const path of deepHipInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
  assert.deepEqual(review.files.filter((f:any)=>thighInputs.includes(f.path)).map((f:any)=>f.path).sort(),thighInputs);
@@ -90,7 +93,7 @@ test('bounded regional Spread reaches learner and protected review without model
   const coronarySceneInputs=['content/coronary-arterial-study-pins.json','lib/coronary-arterial-study.ts'];
   const calfSceneInputs=name==='shoulder'?[]:['app/specimen-depth-notes.tsx'];
   const thighSceneInputs=name==='shoulder'?[]:['lib/specimen-depth-scope.ts'];
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2+thoracicInputs.length:0)+calfSceneInputs.length+thighSceneInputs.length);assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2+thoracicInputs.length:0)+calfSceneInputs.length+thighSceneInputs.length+(name==='head-neck'?csfInputs.length:name==='lower-limb'?csfInputs.length+1:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
   assert.deepEqual(inputs.filter((f:any)=>thighInputs.includes(f.path)).map((f:any)=>f.path).sort(),thighSceneInputs);
   for(const file of inputs.filter((f:any)=>thighSceneInputs.includes(f.path)))assert.equal(file.sha256,sha(sourceAt(file.path)),file.path);
   assert.deepEqual(inputs.filter((f:any)=>calfInputs.includes(f.path)).map((f:any)=>f.path).sort(),calfSceneInputs);
@@ -139,7 +142,10 @@ test('bounded regional Spread reaches learner and protected review without model
   const disclosureEnd=current.indexOf('## Shoulder-girdle arterial ultrasound teaching (4 October 2026)\n');
   assert(disclosureEnd>noticeTitle.length);
   assert.equal(sha(Buffer.from(current.slice(noticeTitle.length,disclosureEnd))),'a737df9ceba187829b0ef22a744355683eebd72a87616e14584784eb219d29d8');
-  assert.equal(noticeTitle+current.slice(disclosureEnd),priorSchematic,'Every preceding licence byte retained');
+  const beforeCSFNotice=execFileSync('git',['show','9fcf6007719b78c83979a1fbfbca0e4eadbcc42b:LICENSES/THIRD_PARTY_NOTICES.md'],{cwd:'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs',maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString();
+  assert(current.startsWith(beforeCSFNotice),'Every pre-CSF notice byte retained');
+  assert.equal(sha(Buffer.from(current.slice(beforeCSFNotice.length))),'12f119b1ad3f18a702056dd55da869e02c844fccc71277baf0050af2e9180a1b','Exact original CSF factual-reference/derived-marker appendix');
+  assert.equal(noticeTitle+current.slice(disclosureEnd,beforeCSFNotice.length),priorSchematic,'Every preceding licence byte retained');
   const preMidfoot=withoutMidfootNotice(withoutShoulderGirdleArterialNotice(Buffer.from(priorSchematic))).toString();
   assert(preMidfoot.startsWith(noticeTitle+toeHeading));
   assert.equal(preMidfoot.indexOf(toeHeading,noticeTitle.length+toeHeading.length),-1,'No duplicate toe notice');

@@ -249,7 +249,7 @@ export function NestedReviewWorkspace({
                 <h3>Optional cardiac-vein context · Draft</h3>
                 {Object.entries(packet.teaching.orientationContext).map(([key,text])=><p key={key}>{text}</p>)}
               </section>}
-              {packet.teaching.guidedLearning && <section aria-label="Eye guided-learning evidence">
+              {packet.teaching.guidedLearning && <section aria-label="Nested guided-learning evidence">
                 <h3>{packet.teaching.guidedLearning.title} · Draft</h3>
                 <p>{packet.teaching.guidedLearning.transitionMs / 1000}s camera sweep · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>
                 <p>{packet.teaching.guidedLearning.limitation}</p>
@@ -259,6 +259,13 @@ export function NestedReviewWorkspace({
                   <ul>{step.ids.map(id => <li key={id}>{id}</li>)}</ul>
                   {step.references.map(url => <p key={url}><a href={url} target="_blank" rel="noreferrer">{packet.teaching.referenceTitles[url] ?? 'Source reference'}</a></p>)}
                 </li>)}</ol>
+              </section>}
+              {packet.teaching.csfMotion && <section aria-label="Schematic CSF-motion evidence">
+                <h3>{packet.teaching.csfMotion.title} · Draft</h3>
+                <p>{packet.teaching.csfMotion.markerCount} non-selectable markers · {packet.teaching.csfMotion.periodSeconds}s arbitrary display cycle · source axis {packet.teaching.csfMotion.axis.join(', ')}</p>
+                <p>Exact ventricular source bundle: <code>{packet.teaching.csfMotion.sourceBundleHash}</code>. Marker coordinates are bound by the renderer revision. Start/Pause, reduced-motion, readiness, cut/explode and hidden-page gates require display review.</p>
+                <p>{packet.teaching.csfMotion.limitation}</p>
+                {packet.teaching.csfMotion.references.map(reference=><p key={reference.url}><a href={reference.url} target="_blank" rel="noreferrer">{reference.title}</a></p>)}
               </section>}
               {packet.teaching.lesson?.extended && (
                 <>

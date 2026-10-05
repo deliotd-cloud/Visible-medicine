@@ -1,0 +1,369 @@
+{
+  "schema": 1,
+  "atlasSource": "9fcf6007719b78c83979a1fbfbca0e4eadbcc42b",
+  "websiteSource": "44f543d655c787abae0a71764900ab631167c727",
+  "manifestSha256": "93f982a03ca1099b7d9fa71d08b02ffcd0ab188d59102f325eb05c12a730fe3e",
+  "dataPolicy": "Public source/review hashes only; no personal histories, scans or identifiers",
+  "contexts": [
+    {
+      "fmaId": "FMA78450",
+      "context": {
+        "catalogScope": "nested-dissection",
+        "nestedKey": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"ventricles\"]",
+        "sourceFrame": "bodyparts3d:4.0:0a3a8b065445d573419e3948b2d4bbcc28d1c7b506514dc5f99a20a4e7007a56",
+        "structureId": "vm:anatomy:body:head-neck:left:space:left-lateral-ventricle",
+        "checklistVersion": "nested-review-1",
+        "structureName": "Left lateral ventricle",
+        "sourceHash": "8645e894c06c7d3e1747697930b6b52c3268a3fb1ac1a1108ef0dd92ef548b90",
+        "teachingHash": "26c4508fb0efe6bd07a7011691bd0ce1b9aa7494b3147aeef14490b364faa089",
+        "rendererHash": "89bdd404d2ec344005e4f22bda51053702b21edef263ffe4799ea0d3a38dfa0e",
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "self-check"
+        ],
+        "materialHash": "dc8e4a12b5e39290f250fa273208c3758e12a800148918891b85c522c3cfa676",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm this exact parent, dissection study, child source, laterality, grouped parts and source frame."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect this child's shape, retained source boundaries, landmarks and relationships in the actual nested 3D study."
+            },
+            {
+              "id": "relations",
+              "label": "Review neighbouring surfaces and source holds. Do not infer missing tissues, lumens or drainage connections."
+            },
+            {
+              "id": "dissection",
+              "label": "Check labels, rotation, isolation, separation and exact reassembly on the intended devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope, omissions and limitations; this is not patient or operative anatomy certification."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "copy",
+              "label": "Read every available topic and its source references, including modality descriptions."
+            },
+            {
+              "id": "limits",
+              "label": "Check model-specific cautions, laterality, clinical/pathology wording and all pending topics."
+            },
+            {
+              "id": "assessment",
+              "label": "Check the supplied self-check question and answer. Interactive identification practice is outside this sign-off."
+            },
+            {
+              "id": "scope",
+              "label": "Record learner level and exact scope. Text review does not validate acquired scans, registration or separate lectures."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image rights, de-identification and patient/reference identity."
+            },
+            {
+              "id": "frame",
+              "label": "Validate series/frame metadata, orientation, units, measured registration error and both-direction mappings."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging review is unavailable."
+          ]
+        },
+        "revisions": {
+          "geometry": "717cff1e62a6fb6062fe5046ca5a8446d25bba3b5a335cd449ee50bd27603e87",
+          "teaching": "af81a3c2a008acbab31b0c231f6a31d43c036af9333c6b33ac6a92969cfbccc6",
+          "imaging": null
+        }
+      },
+      "sourceSha256": "e4ddc819780fcf93852c6d0eb5ffe7f448ac2aa7d12ebdf8e65bc7291396797d"
+    },
+    {
+      "fmaId": "FMA78449",
+      "context": {
+        "catalogScope": "nested-dissection",
+        "nestedKey": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"ventricles\"]",
+        "sourceFrame": "bodyparts3d:4.0:0a3a8b065445d573419e3948b2d4bbcc28d1c7b506514dc5f99a20a4e7007a56",
+        "structureId": "vm:anatomy:body:head-neck:right:space:right-lateral-ventricle",
+        "checklistVersion": "nested-review-1",
+        "structureName": "Right lateral ventricle",
+        "sourceHash": "aa7593a3ac399fc6c24ba3485d0b2307ba85c0f6c1243c29751509ab1043cf9e",
+        "teachingHash": "26c4508fb0efe6bd07a7011691bd0ce1b9aa7494b3147aeef14490b364faa089",
+        "rendererHash": "89bdd404d2ec344005e4f22bda51053702b21edef263ffe4799ea0d3a38dfa0e",
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "self-check"
+        ],
+        "materialHash": "53518cdb99874ab683d7a3385046fe421ddc53ab07212d99bb99418200754fc0",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm this exact parent, dissection study, child source, laterality, grouped parts and source frame."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect this child's shape, retained source boundaries, landmarks and relationships in the actual nested 3D study."
+            },
+            {
+              "id": "relations",
+              "label": "Review neighbouring surfaces and source holds. Do not infer missing tissues, lumens or drainage connections."
+            },
+            {
+              "id": "dissection",
+              "label": "Check labels, rotation, isolation, separation and exact reassembly on the intended devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope, omissions and limitations; this is not patient or operative anatomy certification."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "copy",
+              "label": "Read every available topic and its source references, including modality descriptions."
+            },
+            {
+              "id": "limits",
+              "label": "Check model-specific cautions, laterality, clinical/pathology wording and all pending topics."
+            },
+            {
+              "id": "assessment",
+              "label": "Check the supplied self-check question and answer. Interactive identification practice is outside this sign-off."
+            },
+            {
+              "id": "scope",
+              "label": "Record learner level and exact scope. Text review does not validate acquired scans, registration or separate lectures."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image rights, de-identification and patient/reference identity."
+            },
+            {
+              "id": "frame",
+              "label": "Validate series/frame metadata, orientation, units, measured registration error and both-direction mappings."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging review is unavailable."
+          ]
+        },
+        "revisions": {
+          "geometry": "a5509472be25fa142f53dad7ef846b94c9825d2f9fabd951ffdecfbfd358b3ca",
+          "teaching": "c0a29ee6a91a2076d484e39a66108ac15451551af2b91da511dd5fa4636a029b",
+          "imaging": null
+        }
+      },
+      "sourceSha256": "129b644b1e5b6f70be4450d7c6eb1278020739c3796b15efcbf1def994edfb18"
+    },
+    {
+      "fmaId": "FMA78454",
+      "context": {
+        "catalogScope": "nested-dissection",
+        "nestedKey": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"ventricles\"]",
+        "sourceFrame": "bodyparts3d:4.0:0a3a8b065445d573419e3948b2d4bbcc28d1c7b506514dc5f99a20a4e7007a56",
+        "structureId": "vm:anatomy:body:head-neck:midline:space:third-ventricle",
+        "checklistVersion": "nested-review-1",
+        "structureName": "Third ventricle",
+        "sourceHash": "42c6605324fd5b3abbab49cc82838aec993bee789efec217d6e2998000f950f3",
+        "teachingHash": "ab97f33070f62862435cc91179f6f06d2e4ad014f71d452397e5f5d1d91df6aa",
+        "rendererHash": "89bdd404d2ec344005e4f22bda51053702b21edef263ffe4799ea0d3a38dfa0e",
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "self-check"
+        ],
+        "materialHash": "be62e5f30e849abf3454e67afd6e1da47813513024be679de73c47e999ebb9ad",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm this exact parent, dissection study, child source, laterality, grouped parts and source frame."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect this child's shape, retained source boundaries, landmarks and relationships in the actual nested 3D study."
+            },
+            {
+              "id": "relations",
+              "label": "Review neighbouring surfaces and source holds. Do not infer missing tissues, lumens or drainage connections."
+            },
+            {
+              "id": "dissection",
+              "label": "Check labels, rotation, isolation, separation and exact reassembly on the intended devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope, omissions and limitations; this is not patient or operative anatomy certification."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "copy",
+              "label": "Read every available topic and its source references, including modality descriptions."
+            },
+            {
+              "id": "limits",
+              "label": "Check model-specific cautions, laterality, clinical/pathology wording and all pending topics."
+            },
+            {
+              "id": "assessment",
+              "label": "Check the supplied self-check question and answer. Interactive identification practice is outside this sign-off."
+            },
+            {
+              "id": "scope",
+              "label": "Record learner level and exact scope. Text review does not validate acquired scans, registration or separate lectures."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image rights, de-identification and patient/reference identity."
+            },
+            {
+              "id": "frame",
+              "label": "Validate series/frame metadata, orientation, units, measured registration error and both-direction mappings."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging review is unavailable."
+          ]
+        },
+        "revisions": {
+          "geometry": "c478f8ccac41dc832f7e6a98b7af1d1ec93aae4025084f104b05de2892ea5fc4",
+          "teaching": "40818b1753ca75a369dbb0f6c07b7c47231d0045f6094c0ff67883efe6152d89",
+          "imaging": null
+        }
+      },
+      "sourceSha256": "8720fea8894366494b5d7c473e35108fcbce98c98062d024a7a8cad8b12767d9"
+    },
+    {
+      "fmaId": "FMA78469",
+      "context": {
+        "catalogScope": "nested-dissection",
+        "nestedKey": "[\"vm:anatomy:body:head-neck:midline:organ:brain\",\"ventricles\"]",
+        "sourceFrame": "bodyparts3d:4.0:0a3a8b065445d573419e3948b2d4bbcc28d1c7b506514dc5f99a20a4e7007a56",
+        "structureId": "vm:anatomy:body:head-neck:midline:space:fourth-ventricle",
+        "checklistVersion": "nested-review-1",
+        "structureName": "Fourth ventricle",
+        "sourceHash": "ea3b3ea1041e209ba462de5c2c8683f59efedbb7be1732681fafd1f4c860da46",
+        "teachingHash": "952638db80712192797dd8a562d28b7785e6dd04b1421090a90c534859277cc4",
+        "rendererHash": "89bdd404d2ec344005e4f22bda51053702b21edef263ffe4799ea0d3a38dfa0e",
+        "teachingTabs": [
+          "anatomy",
+          "function",
+          "ct",
+          "mri",
+          "ultrasound",
+          "pathology",
+          "clinical",
+          "self-check"
+        ],
+        "materialHash": "58c4511896f7272d17ab3c31c89bbc999099d1257f6063f63278357f77f86a73",
+        "checklists": {
+          "geometry": [
+            {
+              "id": "identity",
+              "label": "Confirm this exact parent, dissection study, child source, laterality, grouped parts and source frame."
+            },
+            {
+              "id": "shape",
+              "label": "Inspect this child's shape, retained source boundaries, landmarks and relationships in the actual nested 3D study."
+            },
+            {
+              "id": "relations",
+              "label": "Review neighbouring surfaces and source holds. Do not infer missing tissues, lumens or drainage connections."
+            },
+            {
+              "id": "dissection",
+              "label": "Check labels, rotation, isolation, separation and exact reassembly on the intended devices."
+            },
+            {
+              "id": "scope",
+              "label": "Record the specific educational scope, omissions and limitations; this is not patient or operative anatomy certification."
+            }
+          ],
+          "teaching": [
+            {
+              "id": "copy",
+              "label": "Read every available topic and its source references, including modality descriptions."
+            },
+            {
+              "id": "limits",
+              "label": "Check model-specific cautions, laterality, clinical/pathology wording and all pending topics."
+            },
+            {
+              "id": "assessment",
+              "label": "Check the supplied self-check question and answer. Interactive identification practice is outside this sign-off."
+            },
+            {
+              "id": "scope",
+              "label": "Record learner level and exact scope. Text review does not validate acquired scans, registration or separate lectures."
+            }
+          ],
+          "imaging": [
+            {
+              "id": "rights",
+              "label": "Verify acquired-image rights, de-identification and patient/reference identity."
+            },
+            {
+              "id": "frame",
+              "label": "Validate series/frame metadata, orientation, units, measured registration error and both-direction mappings."
+            }
+          ]
+        },
+        "blockers": {
+          "geometry": [],
+          "teaching": [],
+          "imaging": [
+            "No validated acquired-image series or spatial registration is connected. Imaging review is unavailable."
+          ]
+        },
+        "revisions": {
+          "geometry": "9429133158515861714eab612108f4c0fc1df1c403e20718829fb46525a830dd",
+          "teaching": "7f81b7cf8f2379a7648ef6c6ea6dc14a1f76665065405f001bfcfc6db763d81f",
+          "imaging": null
+        }
+      },
+      "sourceSha256": "379007dd3d7dd7f13a1b7f7c0ae7aa4f20e8f6cc818b5d4a11791096f21469df"
+    }
+  ]
+}

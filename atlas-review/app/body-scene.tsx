@@ -50,8 +50,11 @@ import { cameraOrientation, orientationBasis, orientationText } from '@/atlas-re
 import { modelDeliveryUrl } from '@/atlas-review/lib/model-delivery';
 import { bodyBundleGeometries } from '@/atlas-review/lib/body-bundle-geometry';
 import './scene-orientation.css';
+import { CsfMotion } from './csf-motion';
 
 type Props = {
+  /** Optional illustrative particles only; source-space guards live in CsfMotion. */
+  csfMotion?: boolean;
   tourLocked?: boolean;
   guidedRecovery?: boolean;
   transitionMs?: number;
@@ -282,6 +285,9 @@ function Bundle({
               </group>
             )}
             <group position={position}>
+              {props.csfMotion && !props.exam && !removed && props.explode === 0 &&
+                props.inspection.plane === 'off' && props.systems[structure.system] &&
+                <CsfMotion structure={structure} bundleHash={bundle.sha256}/>}
               <group
                 onClick={select}
                 onPointerOver={(e) => {
@@ -313,7 +319,7 @@ function Bundle({
                 labelAnchor &&
                 !props.exam &&
                 !faded &&
-                opacity >= 0.2 &&
+                (opacity >= 0.2 || (props.csfMotion && opacity >= 0.15)) &&
                 pointRetained(
                   new THREE.Vector3(...labelAnchor).add(position),
                   clippingPlanes,
