@@ -292,6 +292,7 @@ export function EyeLayerView({
             disabled={!!step}
             value={view}
             onValueChange={(v) => {
+              if (step) return;
               if (
                 v &&
                 [
@@ -331,7 +332,7 @@ export function EyeLayerView({
             variant={labels ? 'default' : 'outline'}
             disabled={!!step}
             aria-pressed={labels}
-            onClick={() => setLabels((v) => !v)}
+            onClick={() => { if (!step) setLabels((v) => !v); }}
           >
             <Tags /> Labels
           </Button>
@@ -340,6 +341,7 @@ export function EyeLayerView({
             variant="outline"
             disabled={!!step}
             onClick={() => {
+              if (step) return;
               setReset((r) => r + 1);
               setFocus(false);
             }}
@@ -360,7 +362,8 @@ export function EyeLayerView({
               <Button
                 size="sm"
                 variant="outline"
-                onClick={() => setInspection(initialInspection)}
+                disabled={!!step}
+                onClick={() => { if (!step) setInspection(initialInspection); }}
               >
                 Restore whole view
               </Button>
@@ -393,13 +396,14 @@ export function EyeLayerView({
               onClick={() => guideStep(0)}>Start eye walkthrough</Button></>}
           <p>{guide.limitation}</p>
         </details>}
-        <fieldset className="eye-layer-manual-controls" disabled={!!step}>
+        <fieldset className="eye-layer-manual-controls" disabled={!!step} inert={!!step}>
         <legend className="sr-only">Manual eye dissection controls</legend>
         {educationLink.adapter && <ImagingLink link={educationLink} />}
         <div className="eye-layer-presets">
           <label htmlFor="eye-layer-preset">Study view</label>
           <Select
             value={currentPreset}
+            disabled={!!step}
             onValueChange={(v) => {
               if (v && v !== 'custom') preset(v as EyePreset);
             }}
@@ -440,13 +444,16 @@ export function EyeLayerView({
                 size="sm"
                 variant={selectedId === s.id ? 'secondary' : 'ghost'}
                 aria-pressed={selectedId === s.id}
+                disabled={!!step}
                 onClick={() => select(s.id)}
               >
                 {eyeNotes[s.kind].label}
               </Button>
               <Switch
                 checked={!hidden.includes(s.id)}
+                disabled={!!step}
                 onCheckedChange={(visible) => {
+                  if (step) return;
                   dispatch({ type: 'visibility', id: s.id, visible });
                   setFocus(false);
                   if (!visible && selectedId === s.id) setIsolated(false);
@@ -460,8 +467,9 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
-            disabled={!history.length}
+            disabled={!!step || !history.length}
             onClick={() => {
+              if (step) return;
               dispatch({ type: 'undo' });
               setFocus(false);
               setIsolated(false);
@@ -472,9 +480,10 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
-            disabled={!future.length}
+            disabled={!!step || !future.length}
             title="Reapply the last undone layer or selection change"
             onClick={() => {
+              if (step) return;
               dispatch({ type: 'redo' });
               setFocus(false);
               setIsolated(false);
@@ -485,7 +494,9 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
+            disabled={!!step}
             onClick={() => {
+              if (step) return;
               preset('all');
               setReset((r) => r + 1);
             }}
@@ -496,6 +507,7 @@ export function EyeLayerView({
         <EyeCutawayControls
           value={inspection}
           onChange={(next) => {
+            if (step) return;
             setInspection(next);
             setFocus(false);
           }}
@@ -504,7 +516,9 @@ export function EyeLayerView({
           <summary>Separate components</summary>
           <Select
             value={layout}
+            disabled={!!step}
             onValueChange={(v) => {
+              if (step) return;
               if (v === 'extract' || v === 'tray') {
                 setLayout(v);
                 setExplode(0);
@@ -528,8 +542,8 @@ export function EyeLayerView({
             max={100}
             step={1}
             value={[explode]}
-            disabled={layout === 'extract' && !selected}
-            onValueChange={(v) => setExplode(Array.isArray(v) ? v[0] : v)}
+            disabled={!!step || (layout === 'extract' && !selected)}
+            onValueChange={(v) => { if (!step) setExplode(Array.isArray(v) ? v[0] : v); }}
           />
           <p>
             Drag to rotate in lift mode; spread mode uses a flat teaching
@@ -540,7 +554,8 @@ export function EyeLayerView({
             <Switch
               id="eye-origin-guide"
               checked={showOrigins}
-              onCheckedChange={setShowOrigins}
+              disabled={!!step}
+              onCheckedChange={(visible) => { if (!step) setShowOrigins(visible); }}
               aria-label="Show original position"
               aria-describedby="eye-origin-guide-note"
             />
@@ -551,6 +566,7 @@ export function EyeLayerView({
             cutaway views, or when the part is hidden or not moving.
           </p>
         </details>
+        </fieldset>
         {selected && (
           <section className="eye-layer-teaching" aria-live="polite">
             <h3>{selected.name}</h3>
@@ -569,17 +585,18 @@ export function EyeLayerView({
             <div className="eye-layer-actions">
               <Button
                 size="sm"
-                variant={isolated ? 'default' : 'outline'}
-                aria-pressed={isolated}
-                onClick={() => setIsolated((v) => !v)}
+                 variant={isolated ? 'default' : 'outline'}
+                 aria-pressed={isolated}
+                 disabled={!!step}
+                 onClick={() => { if (!step) setIsolated((v) => !v); }}
               >
                 <Eye /> Fade others
               </Button>
               <Button
-                size="sm"
-                variant="outline"
-                disabled={health !== 'ready' || !loaded}
-                onClick={() => setFocus((v) => !v)}
+                 size="sm"
+                 variant="outline"
+                 disabled={!!step || health !== 'ready' || !loaded}
+                 onClick={() => { if (!step) setFocus((v) => !v); }}
               >
                 <Focus /> Frame
               </Button>
@@ -648,7 +665,6 @@ export function EyeLayerView({
             </a>
           ))}
         </details>
-        </fieldset>
       </aside>
     </div>
   );
