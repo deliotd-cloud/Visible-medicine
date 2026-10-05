@@ -376,7 +376,10 @@ export function EyeLayerView({
         aria-label="Eye dissection controls"
       >
         {guide && <details className="eye-layer-guided-learning" open={guideExpanded}
-          onToggle={event => { if (!step) setGuideExpanded(event.currentTarget.open); }}>
+          onToggle={event => {
+            if (event.target !== event.currentTarget) return;
+            if (!step) setGuideExpanded(event.currentTarget.open);
+          }}>
           <summary>Guided learning</summary>
           {step ? <section aria-label="Eye-layer walkthrough" aria-live="polite">
             <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
@@ -394,7 +397,11 @@ export function EyeLayerView({
             <Button ref={guideLauncher} size="sm" variant="outline"
               disabled={!ready || pageHidden || (!!initialSelectedId && !initialSelection)}
               onClick={() => guideStep(0)}>Start eye walkthrough</Button></>}
-          <p>{guide.limitation}</p>
+          <p data-testid="eye-tour-source-scope">Draft source-component teaching · not clinical approval or scan registration.</p>
+          <details data-testid="eye-tour-limitations">
+            <summary>Tour scope &amp; limitations</summary>
+            <p>{guide.limitation}</p>
+          </details>
         </details>}
         <fieldset className="eye-layer-manual-controls" disabled={!!step} inert={!!step} hidden={!!step}>
         <legend className="sr-only">Manual eye dissection controls</legend>

@@ -1097,6 +1097,7 @@ export function VentricularView({
         )}
         {guide && <details className="eye-layer-guided-learning" open={guideExpanded}
           onToggle={(event) => {
+            if (event.target !== event.currentTarget) return;
             if (step && !event.currentTarget.open) exitGuide();
             else if (!step) setGuideExpanded(event.currentTarget.open);
           }}>
@@ -1122,7 +1123,11 @@ export function VentricularView({
               disabled={!ready || pageHidden || !!practiceSnapshot || (initialSelectedId !== undefined && !initialSelection)}
               onClick={() => guideStep(0)}>Start ventricular walkthrough</Button>
           </>}
-          <p>{guide.limitation}</p>
+          <p data-testid="ventricular-tour-source-scope">Draft source-space teaching · CSF markers are schematic, not measured physiology or connected circulation.</p>
+          <details data-testid="ventricular-tour-limitations">
+            <summary>Tour scope &amp; limitations</summary>
+            <p>{guide.limitation}</p>
+          </details>
         </details>}
         {motion && <details data-testid="csf-motion-controls" className="eye-layer-guided-learning">
           <summary>{motion.title}</summary>
