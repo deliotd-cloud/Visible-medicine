@@ -7,7 +7,7 @@ import {join} from 'node:path';
 import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
 
-const source='05596d396d104a65cdd7a1fdf770505c3dfb3139';
+const source='19f9a7fa02b98b3df8a71a645fe68d3894094178';
 const previous='8c4bcccaf9d0bb5ed3da8d974df7e4d6035430c5';
 const website='6636b2b82f85c66c0920c5dd8e5ed492c4c8f417';
 const fixtureSha='96ae6f742f2a3cc366d788a052f8be544791b9c523951a2337c78e4767ccfc17';

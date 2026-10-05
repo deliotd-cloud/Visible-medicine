@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
+import { deepHipDepthEpochRead as readFileSync, deepHipDepthEpochPlugin, deepHipDepthWebsiteEpoch } from './atlas-deep-hip-depth-history.ts';
 import { createRequire } from 'node:module';
 import { join } from 'node:path';
 import { runInNewContext } from 'node:vm';
@@ -40,7 +41,7 @@ async function reviewApi(before = false): Promise<Imported> {
     "export { blankSpecimenReview, parseSavedSpecimenReview, specimenReviewStale } from './atlas-review/lib/specimen-review';",
     "export { postSpecimenReview } from './atlas-review/lib/specimen-review-api';",
   ].join('\n'), resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false,
-  platform: 'node', format: 'esm' });
+  platform: 'node', format: 'esm', plugins: [deepHipDepthEpochPlugin()] });
   return import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
 }
 
@@ -289,7 +290,7 @@ if (process.argv.includes('--capture')) {
 
     const rendered = await build({ entryPoints: ['atlas-review/app/specimen-depth-notes.tsx'],
       bundle: true, write: false, platform: 'node', format: 'cjs', packages: 'external',
-      tsconfigRaw: { compilerOptions: { jsx: 'react-jsx', paths: { '@/*': ['./*'] } } } });
+      tsconfigRaw: { compilerOptions: { jsx: 'react-jsx', paths: { '@/*': ['./*'] } } }, plugins: [deepHipDepthEpochPlugin()] });
     const require = createRequire(join(process.cwd(), 'package.json'));
     const component: { exports: Imported } = { exports: {} };
     runInNewContext(rendered.outputFiles[0].text, { module: component, exports: component.exports, require });
@@ -316,7 +317,7 @@ if (process.argv.includes('--capture')) {
       { depth: invalid, section: 'review' }));
     assert.match(invalidHtml, /Additional depth is unavailable for this source\/revision scope/);
     assert.doesNotMatch(invalidHtml, /Calf relationships|Hip\/thigh relationships/);
-    console.log(JSON.stringify({ affectedTeachingContexts: changed, unchangedTeachingContexts: unchanged,
+    console.log(JSON.stringify({ savedWebsiteEpoch: deepHipDepthWebsiteEpoch, affectedTeachingContexts: changed, unchangedTeachingContexts: unchanged,
       existingCalfContexts: calf, earlierThighContexts: earlierThigh, sourcePackets: prior.size, pinnedLessons: currentPins.length,
       foreignRejected, staleRejected, renderedDepthModes: 18, clinicalApproved: false }));
   });

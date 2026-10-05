@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "05596d396d104a65cdd7a1fdf770505c3dfb3139",
-  "sha256": "3270b3a447f039e43ffdd38768e65b4cb7fda4be26f917c271ef4f8827bbfff6",
+  "sourceCommit": "19f9a7fa02b98b3df8a71a645fe68d3894094178",
+  "sha256": "2a97714447fcecdd6a2f090efc77d0ffe40cf618b2c8f553c22baf43db545130",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -4040,7 +4040,7 @@
     },
     {
       "path": "atlas-review/lib/um-proximal-guided-dissection.ts",
-      "sha256": "97473c256223e2c83a7884065a26bde4fa093000f533726a01d4058b97c980f5"
+      "sha256": "8e3290f4969fddaa004556ac9cb2b64b4667803af0185a4ce52530178f215bac"
     },
     {
       "path": "atlas-review/lib/upper-arm-reasoning.ts",
@@ -4376,7 +4376,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "bdfbe41aadf64bcebc9ddc54e9b0d2433247e404933ff89530adc8620ccbff85"
+      "sha256": "0720d9404c36a0430c9efdd129cb15c3ccaafec8cdfe7372c26041cdbb265523"
     }
   ]
 }
