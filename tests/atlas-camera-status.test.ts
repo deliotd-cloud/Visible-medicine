@@ -7,7 +7,7 @@ import {runInNewContext} from 'node:vm';
 import {build} from 'esbuild';
 
 const sha=(bytes: Uint8Array|string)=>createHash('sha256').update(bytes).digest('hex');
-const revision='0e988a782fb3e6f71bb9220b53aebeedbadd30f9';
+const revision='4ee8d5273bc325e7f27494e27d0b704b0565f2b8';
 test('camera status is imported from one source revision without changing models or access',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
  assert.equal(review.revision,revision);

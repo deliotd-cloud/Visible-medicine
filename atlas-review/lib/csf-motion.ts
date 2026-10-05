@@ -12,6 +12,7 @@ export function csfMotionFor(parent:BodyStructure){
     !ventricularGuide(parent)||canonical(parent)!==canonical(data.parent)||
     canonical(data.bundle)!==canonical(ventricleCatalog.bundles.find(b=>b.id==='ventricles'))||
     data.records.length!==4||new Set(data.records.map(r=>r.structure.id)).size!==4||
+    canonical(data.records.map(r=>r.structure.id))!==canonical(ventricleCatalog.ventricularIds)||
     data.records.some(r=>canonical(r.structure)!==canonical(ventricleCatalog.structures.find(s=>s.id===r.structure.id))||
       r.tracks.length!==40||r.tracks.some(t=>t.center.length!==3||!t.center.every(Number.isFinite)||
         !Number.isFinite(t.phase)||!Number.isFinite(t.amplitude)||t.amplitude<=0)))return null;

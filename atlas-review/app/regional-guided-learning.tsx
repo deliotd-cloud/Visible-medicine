@@ -36,6 +36,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   currentScope.current=scope;
   const controls=useRef<HTMLDivElement>(null);
   const returnRetryFocus=useRef(false);
+  const playbackEpoch=useRef(0);
   const scopeChanged=previousScope.current!==scope;
   // Reset our own state before React commits children for a changed source.
   // A passive reset could discard the new scene's mount/load callbacks.
@@ -76,11 +77,19 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   },[ready]);
   const step=tour.steps[(scopeChanged?null:index)??0];
   const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;pausedImaging?.suspend();setIndex(next);setMotionPaused(false);setQuickCheckOpen(false);},[tour,pausedImaging]);
-  useEffect(()=>{const q=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setReduced(q.matches);update();q.addEventListener('change',update);return()=>q.removeEventListener('change',update);},[]);
+  useEffect(()=>{const q=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>{
+    if(q.matches){playbackEpoch.current++;pausedImaging?.suspend();setPlaying(false);setMotionPaused(true);}
+    setReduced(q.matches);
+  };update();q.addEventListener('change',update);return()=>q.removeEventListener('change',update);},[pausedImaging]);
   // Keep mobile anatomy in view; the complete teaching remains one disclosure away.
   useEffect(()=>{setExplanationOpen(!window.matchMedia('(max-width: 600px)').matches);},[]);
   useEffect(()=>{const pause=()=>{pausedImaging?.suspend();setPlaying(false);setMotionPaused(true);};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pause);return()=>{document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pause);};},[ready,pausedImaging]);
-  useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;const timer=window.setTimeout(()=>{if(document.hidden)return;if(index+1<tour.steps.length)changeStep(index+1);else setPlaying(false);},step.durationMs);return()=>window.clearTimeout(timer);},[playing,index,ready,step.durationMs,tour,changeStep]);
+  useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;
+    let active=true;const epoch=playbackEpoch.current;
+    const timer=window.setTimeout(()=>{if(!active||epoch!==playbackEpoch.current||document.hidden)return;
+      if(index+1<tour.steps.length)changeStep(index+1);else setPlaying(false);},step.durationMs);
+    return()=>{active=false;window.clearTimeout(timer);};
+  },[playing,index,ready,step.durationMs,tour,changeStep]);
   const active=!scopeChanged&&index!==null;
   const selected=resolved.structures.find(s=>s.id===step.selectedId);
   useLayoutEffect(()=>{
