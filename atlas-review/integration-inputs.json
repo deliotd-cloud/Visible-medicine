@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "4bb78ac5a29c88984a735523775ec69aeff942d6",
-  "sha256": "02f30f7a9dcf324e49b91e4ba30c565e8f535a6b3e23d55485fbc0ef1e8e6411",
+  "sourceCommit": "5acfa46b7fcef876fc2f55f8ed122de46b29bb03",
+  "sha256": "73729c83d3594b4979a126158f7462a1c0831ffbc49960853453e6f30c73d927",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -388,7 +388,7 @@
     },
     {
       "path": "atlas-review/app/review/specimens/workspace.tsx",
-      "sha256": "8bac7aa04c912902df0f91f9bcafb4e28909bc26de192da795c0a56cf080bd73"
+      "sha256": "d98912bc754c7a2119ff4f89e5841cf54db2cc06b3a85e4eb05168a8b971ff1d"
     },
     {
       "path": "atlas-review/app/scene-label-layer.css",
@@ -441,6 +441,10 @@
     {
       "path": "atlas-review/app/source-display-notes.tsx",
       "sha256": "957441b199a4eb2d29498c4e38a057fe09c0527af0807009844eaf5eda176713"
+    },
+    {
+      "path": "atlas-review/app/specimen-depth-notes.tsx",
+      "sha256": "8b982d53cf79f0714f9d58c5bd454c3773e607342b541ab63c373aca84f29d54"
     },
     {
       "path": "atlas-review/app/specimen-removal-focus.ts",
@@ -524,7 +528,7 @@
     },
     {
       "path": "atlas-review/app/um-limb-learning.tsx",
-      "sha256": "eb139a614b745cc64a01f3a8455fb00e297a2c6d4abb821e806d3b967ee83969"
+      "sha256": "27483f18d28e1321153dc7c52353ead414a3edb1434dddc9068d18bc58838e29"
     },
     {
       "path": "atlas-review/app/um-limb-motor.tsx",
@@ -2079,6 +2083,10 @@
       "sha256": "a4fe264638d77bf5d2fb5dfeaaca2f69466075b5bbcd3f2f66f978c8204c0a8e"
     },
     {
+      "path": "atlas-review/content/um-calf-depth.ts",
+      "sha256": "85cbf61685bb5a9e545a31ba74c009b2658923f6e14590e998f8290a4bbf6458"
+    },
+    {
       "path": "atlas-review/content/um-calf-foot-clinical.ts",
       "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
     },
@@ -2112,11 +2120,11 @@
     },
     {
       "path": "atlas-review/content/um-limb-teaching-bindings.v1.json",
-      "sha256": "a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4"
+      "sha256": "337a1d1717baa08396225b889ef68cdb0e2d54594122f77b6f09584e7fcf44a2"
     },
     {
       "path": "atlas-review/content/um-limb-teaching.ts",
-      "sha256": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7"
+      "sha256": "579f39a8147514a6801681b7fdf86d294eb34c0be587d2bfa28dea45a1474e4e"
     },
     {
       "path": "atlas-review/content/um-proximal-topic-completion.ts",
@@ -3760,7 +3768,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review-material.ts",
-      "sha256": "33e4deca7d8c2fed6cab7753ab9a6671fbaeb73e5c26a49bda42274b782b68e1"
+      "sha256": "ca48a6d27fc90a92f261e86b684c0abcba39ffa12430442f9c6ed7f1ef4f2191"
     },
     {
       "path": "atlas-review/lib/specimen-review-store.ts",
@@ -3768,7 +3776,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review.ts",
-      "sha256": "dbb0febff23ed1e89cbb1e11f48d901ca1424c5a13fe90501bb81ef59493f073"
+      "sha256": "84b9b9485073d327443ae6709d09724da63dd67f018adffb360a663dc14a8e38"
     },
     {
       "path": "atlas-review/lib/spinal-bone-curriculum.ts",
@@ -4356,7 +4364,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4b8e2e7ab1591b04bcf9bef60c44dc000791d754de339310540b7d23faac1942"
+      "sha256": "2668b8a642b186d36a61f6f4d90d79259c713d43d83e350a0c249f68a1a221f4"
     }
   ]
 }

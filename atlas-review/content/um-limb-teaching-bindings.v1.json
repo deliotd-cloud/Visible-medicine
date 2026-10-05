@@ -1694,7 +1694,39 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Popliteus crosses the posterior knee deep to the superficial calf muscles, with its muscle belly on the posterior proximal tibia. Its tendon relates to the lateral knee; adjacent popliteal vessels are not represented.",
+            "references": [
+              {
+                "title": "Jeon et al. · Popliteus arterial dissection (2022)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/35047639/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Inferior medial genicular, posterior tibial and sometimes anterior tibial branches contribute variably; no single source is universal.",
+            "references": [
+              {
+                "title": "Jeon et al. · Popliteus arterial dissection (2022)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/35047639/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "An isolated popliteus surface is not the complete posterolateral corner. Its appearance cannot establish tendon injury or knee instability, and an artery inferred from a generic diagram may miss normal variation.",
+            "references": [
+              {
+                "title": "Jeon et al. · Popliteus arterial dissection (2022)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/35047639/"
+              }
+            ]
+          },
+          "modelLimit": "Capsular and fascial details, vessels and nerves are absent. No arterial entry, perfusion, tendon injury or knee instability is simulated."
+        }
       }
     },
     {
@@ -4420,7 +4452,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Flexor digitorum longus starts in the deep posterior leg. Its tendon crosses behind the medial malleolus, posterior to tibialis posterior, then travels into the sole where quadratus plantae joins the long-flexor apparatus.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "The posterior tibial artery is a typical arterial source for this deep posterior muscle.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "At the medial ankle, an apparent long-flexor course is not a complete tarsal-tunnel map. The nerve and vessels are unsegmented, and four separate digital tendon slips are not validated.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "modelLimit": "The surface lacks flexor retinaculum, compartment fascia, vessels, nerves and validated individual toe slips. It cannot measure perfusion or simulate entrapment."
+        }
       }
     },
     {
@@ -4549,7 +4617,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Flexor hallucis longus lies lateral to the other deep posterior flexors. Its tendon passes behind the medial ankle, courses under the sustentaculum tali and continues toward the great toe beneath the sole.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Flexor hallucis longus anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539776/?report=printable"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Fibular and posterior tibial arterial branches commonly contribute to flexor hallucis longus.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Posteromedial ankle pain should not be assigned to this tendon from position alone. Dynamic tendon motion, its sheath and neighboring neurovascular structures require examination beyond the static muscle surface.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Flexor hallucis longus anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539776/?report=printable"
+              }
+            ]
+          },
+          "modelLimit": "Tendon sheath, retinaculum, fascia, vessels and nerves are absent. The surface cannot show tendon motion, impingement, perfusion or disease."
+        }
       }
     },
     {
@@ -4676,7 +4780,47 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "The lateral head occupies the superficial posterolateral calf beside the medial head, with soleus deep to both. Their distal contributions converge toward the calcaneal tendon; the lateral head borders the popliteal fossa.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Sural branches from the popliteal artery, with posterior tibial contributions, typically supply gastrocnemius.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Evidence about medial-head tennis leg does not establish a lateral-head injury frequency. Lateral calf pain requires its own tissue assessment, including nearby tendon and nonmuscular causes.",
+            "references": [
+              {
+                "title": "Delgado et al. · Tennis-leg ultrasound differential (2002)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              }
+            ]
+          },
+          "modelLimit": "Detailed fascia, vessels and nerves are absent. This head cannot show a tear, venous disorder, measured perfusion or disease progression."
+        }
       }
     },
     {
@@ -4803,7 +4947,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "The medial gastrocnemius head is superficial to soleus and joins the lateral head in the calcaneal tendon apparatus. Plantaris may course between these posterior calf structures; the popliteal fossa lies proximally.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Sural branches of the popliteal artery and posterior tibial branches typically contribute.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A medial calf lesion may involve gastrocnemius, plantaris or neighboring tissues. The tennis-leg ultrasound series also evaluated venous thrombosis; this reference surface cannot rule out a vascular cause.",
+            "references": [
+              {
+                "title": "Delgado et al. · Tennis-leg ultrasound differential (2002)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              }
+            ]
+          },
+          "modelLimit": "Plantaris course, detailed fascia, vessels and nerves are absent. The head cannot display fluid, tear, thrombosis or measured perfusion."
+        }
       }
     },
     {
@@ -6118,7 +6298,43 @@
           {
             "nerve": "superficial-fibular"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Fibularis longus, named peroneus longus in the source, lies superficial to fibularis brevis laterally. Its tendon turns behind the lateral malleolus and crosses the sole toward the medial cuneiform and first metatarsal.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Branches of the fibular artery usually supply this lateral-compartment muscle.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Lateral ankle pain cannot be assigned to longus from this muscle selection. Brevis, retinacula, tendon sheath and dynamic instability need separate evaluation; the displayed separation is only a viewing control.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "modelLimit": "Lateral compartment fascia, retinacula, vessels and nerves are absent. Brevis and tendon sheath are not validated disease models; no perfusion or instability is simulated."
+        }
       }
     },
     {
@@ -7280,7 +7496,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Soleus lies deep to both gastrocnemius heads and superficial to the deep posterior leg muscles. Its aponeurotic contribution joins the gastrocnemius contribution in the calcaneal tendon; popliteal structures lie more proximally.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Popliteal, posterior tibial and fibular arterial branches contribute; their relative contributions can vary.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Separating soleus from gastrocnemius does not expose an injury plane. A deeper calf lesion may need targeted imaging; static muscle spacing does not grade strain or identify venous disease.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              },
+              {
+                "title": "Delgado et al. · Tennis-leg ultrasound differential (2002)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              }
+            ]
+          },
+          "modelLimit": "Intramuscular aponeuroses, compartment fascia, vessels and nerves are absent. No perfusion, strain, compartment pressure or venous disease is simulated."
+        }
       }
     },
     {
@@ -7772,7 +8024,43 @@
           {
             "nerve": "deep-fibular"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "In the anterior leg, tibialis anterior lies beside the long toe extensors. Its tendon passes most medially across the front of the ankle; the anterior tibial vessels continue deeper in this compartment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Tibialis anterior anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513304/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Branches of the anterior tibial artery typically supply the muscle in the anterior leg.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A visible anterior tendon course does not identify a cause of weak dorsiflexion. Tendon injury, muscle injury and neurological causes require separate assessment; the adjacent vessels and deep fibular nerve are absent here.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Tibialis anterior anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513304/"
+              }
+            ]
+          },
+          "modelLimit": "The surface shows no extensor retinacula, compartment fascia, vessels or nerves. It cannot measure perfusion, pressure or simulate foot drop."
+        }
       }
     },
     {
@@ -7937,7 +8225,47 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Tibialis posterior is deep to soleus in the posterior leg. At the medial ankle its tendon passes anterior to flexor digitorum longus, then turns toward the medial foot beneath the flexor retinaculum.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Branches of posterior tibial and fibular arteries commonly contribute to its muscle supply.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "The medial ankle tendon is one element of arch support. A separated reference muscle cannot demonstrate weight-bearing arch collapse or distinguish tendon disease from ligament and joint pathology.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              },
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "modelLimit": "Flexor retinaculum, detailed fascia, vessels, nerves and distal tendon slips are absent. No perfusion, load or deformity simulation is available."
+        }
       }
     },
     {

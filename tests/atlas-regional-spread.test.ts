@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='4bb78ac5a29c88984a735523775ec69aeff942d6';
+const revision='5acfa46b7fcef876fc2f55f8ed122de46b29bb03';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -37,7 +37,10 @@ test('bounded regional Spread reaches learner and protected review without model
  const cardiacCavityInput='content/cardiac-cavity-depth.ts';
  const selectedLabelInput='lib/scene-label-size.ts';
  const thoracicInputs=['content/thoracic-spine-tour-pins.json','lib/thoracic-spine-tour.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const calfInputs=['app/specimen-depth-notes.tsx','content/um-calf-depth.ts'];
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length+calfInputs.length);assert.deepEqual(review.packages,prior.packages);
+ assert.deepEqual(review.files.filter((f:any)=>calfInputs.includes(f.path)).map((f:any)=>f.path).sort(),calfInputs);
+ for(const path of calfInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
  assert.deepEqual(review.files.filter((f:any)=>thoracicInputs.includes(f.path)).map((f:any)=>f.path).sort(),thoracicInputs);
  for(const path of thoracicInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
  assert.equal(review.files.find((f:any)=>f.path===selectedLabelInput).sourceSha256,sha(sourceAt(selectedLabelInput)),'Exact selected-label helper Review source pin');
@@ -76,7 +79,10 @@ test('bounded regional Spread reaches learner and protected review without model
  for(const [name,count,added] of [['head-neck',991,true],['shoulder',664,false],['lower-limb',100,true]] as const){
   const base='public/atlas-runtime/'+name+'/',manifest=json(base+'manifest.json'),previous=JSON.parse(old(base+'manifest.json').toString()),inputs=json(base+'source-inputs.json');
   const coronarySceneInputs=['content/coronary-arterial-study-pins.json','lib/coronary-arterial-study.ts'];
-  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2+thoracicInputs.length:0));assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  const calfSceneInputs=name==='shoulder'?[]:['app/specimen-depth-notes.tsx'];
+  assert.equal(manifest.sourceCommit,revision);assert.equal(inputs.length,count+1+(name==='lower-limb'?0:ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+shoulderGirdleInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronarySceneInputs.length)+(name==='head-neck'?pausedTourInputs.length+coronaryContextInputs.length+2+thoracicInputs.length:0)+calfSceneInputs.length);assert.equal(inputs.some((f:any)=>f.path==='lib/body-spread.ts'),added);
+  assert.deepEqual(inputs.filter((f:any)=>calfInputs.includes(f.path)).map((f:any)=>f.path).sort(),calfSceneInputs);
+  for(const file of inputs.filter((f:any)=>calfSceneInputs.includes(f.path)))assert.equal(file.sha256,sha(sourceAt(file.path)),file.path);
   assert.deepEqual(inputs.filter((f:any)=>thoracicInputs.includes(f.path)).map((f:any)=>f.path).sort(),name==='head-neck'?thoracicInputs:[]);
   for(const file of inputs.filter((f:any)=>thoracicInputs.includes(f.path)))assert.equal(file.sha256,sha(sourceAt(file.path)),file.path);
   assert.equal(inputs.find((f:any)=>f.path===selectedLabelInput).sha256,sha(sourceAt(selectedLabelInput)),`${name}: exact selected-label helper input`);

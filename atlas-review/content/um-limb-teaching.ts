@@ -3,12 +3,14 @@ import { legMuscleLessons } from '../lib/leg-curriculum';
 import { footMuscleLessons } from '../lib/foot-curriculum';
 import { specimenClinicalLessons, type SpecimenClinicalLesson } from './um-limb-clinical';
 import { specimenMotorBindings, type MotorSupply } from './um-limb-motor';
+import { umCalfDepth, type SpecimenDepthLesson } from './um-calf-depth';
 
 export type SpecimenLesson = {
   anatomy: string; function: string; references: readonly string[];
   attachments?: { proximal: string; distal: string; motor: string };
   extended?: SpecimenClinicalLesson;
   motorGroups?: MotorSupply[];
+  depth?: SpecimenDepthLesson;
 };
 const bones = 'https://openstax.org/books/anatomy-and-physiology-2e/pages/8-4-bones-of-the-lower-limb';
 const joints = 'https://openstax.org/books/anatomy-and-physiology-2e/pages/9-6-anatomy-of-selected-synovial-joints';
@@ -93,4 +95,11 @@ for (const [slug, extended] of Object.entries(specimenClinicalLessons)) {
 for (const [slug, motorGroups] of Object.entries(specimenMotorBindings)) {
   if (!specimenLessons[slug]?.attachments) throw new Error(`Motor relationship lacks authored muscle teaching: ${slug}`);
   specimenLessons[slug].motorGroups = motorGroups;
+}
+
+// Additive original depth, never a replacement for earlier authored topics or
+// source identity. These notes become part of the exact pinned lesson/review.
+for (const [slug, depth] of Object.entries(umCalfDepth)) {
+  if (!specimenLessons[slug]?.attachments || specimenLessons[slug].depth) throw new Error(`Invalid calf-depth teaching binding: ${slug}`);
+  specimenLessons[slug].depth = depth;
 }

@@ -141,6 +141,8 @@ export async function specimenReviewMaterial(
   const checklists = structuredClone(specimenChecklists);
   if (guidedDissection) checklists.teaching.push({ id: 'guided-dissection',
     label: 'Inspect every guided step in the actual source viewer: caption, side, visible neighbours, selection and camera frame. These steps do not validate surgical planes or scan registration.' });
+  if (lesson?.depth) checklists.teaching.push({ id: 'calf-depth',
+    label: 'Review the additional compartment relationships, typical blood supply and clinical pitfall against the exact source surfaces and references. Vessels, nerves, fascial planes, perfusion and pathology are not thereby modelled or approved.' });
   const identity = {
     catalogScope: specimenReviewScope,
     specimenKey,
@@ -159,6 +161,7 @@ export async function specimenReviewMaterial(
     ...topics.filter((t) => t.body !== null).map((t) => t.tab),
     ...(lesson?.extended?.selfCheck ? ["self-check"] : []),
     ...(guidedDissection ? ['guided-dissection'] : []),
+    ...(lesson?.depth ? ['calf-depth'] : []),
   ];
   const context: SpecimenReviewContext = {
     ...identity,

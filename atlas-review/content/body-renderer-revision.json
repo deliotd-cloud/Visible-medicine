@@ -305,6 +305,10 @@
       "sha256": "57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183"
     },
     {
+      "path": "app/specimen-depth-notes.tsx",
+      "sha256": "e1cf1e9c6ba1fba1022b92742c1a3ef5c20ecb0f65bb8f2db251f3e8110b8549"
+    },
+    {
       "path": "app/specimen-removal-focus.ts",
       "sha256": "eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362"
     },
@@ -386,7 +390,7 @@
     },
     {
       "path": "app/um-limb-learning.tsx",
-      "sha256": "68032fe4e72628eb0af7c9b841aa4022512f39d2457779a069dee46fa841d6d0"
+      "sha256": "b153fe3aa41c39b8503c8f596699f4c528f220008ea0f6640e75e8f7cf333c4f"
     },
     {
       "path": "app/um-limb-motor.tsx",
@@ -1921,6 +1925,10 @@
       "sha256": "a4fe264638d77bf5d2fb5dfeaaca2f69466075b5bbcd3f2f66f978c8204c0a8e"
     },
     {
+      "path": "content/um-calf-depth.ts",
+      "sha256": "85cbf61685bb5a9e545a31ba74c009b2658923f6e14590e998f8290a4bbf6458"
+    },
+    {
       "path": "content/um-calf-foot-clinical.ts",
       "sha256": "557ae3859bea0db95f70303474d9afa053a8dec0380a6ffc325c070f281c9fd1"
     },
@@ -1954,11 +1962,11 @@
     },
     {
       "path": "content/um-limb-teaching-bindings.v1.json",
-      "sha256": "a23f2358e2d4392812969dfb32b2081368c718928ec8633174ec21ac875ef7c4"
+      "sha256": "337a1d1717baa08396225b889ef68cdb0e2d54594122f77b6f09584e7fcf44a2"
     },
     {
       "path": "content/um-limb-teaching.ts",
-      "sha256": "a595b6a56d315fe1a08e77aa8dcb3c4f1b7fe74589ef72140d38d605e8b2abb7"
+      "sha256": "579f39a8147514a6801681b7fdf86d294eb34c0be587d2bfa28dea45a1474e4e"
     },
     {
       "path": "content/um-proximal-topic-completion.ts",
@@ -3810,7 +3818,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "30faec8b887138d6d77d63acc1ce1d9e5a754646f0410dde9ebf3d973c6ca7f3"
+      "sha256": "88caf19233c8095672b6280e467101ef3ceec225a91bac7d1fc262f6f4a44677"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -4033,7 +4041,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9a0be91c13d44acd51d060a0c4a6aef8a591908cf395bead25814ddc1c612968",
-  "sourceRendererSha256": "849bc19219779c6ae195bf09ee74dd060d8634a8bf42f0733ce6bfa202bfa598",
-  "websiteIntegrationSha256": "02f30f7a9dcf324e49b91e4ba30c565e8f535a6b3e23d55485fbc0ef1e8e6411"
+  "sha256": "d7fde5a2912b5316f8950061e0edbec69b7a9f39eba35e6a8abbe52a1100af87",
+  "sourceRendererSha256": "264605dcf2bb028a904d82b917ac7dfa05d371b064717a5d9ae7799ccfed6ccc",
+  "websiteIntegrationSha256": "73729c83d3594b4979a126158f7462a1c0831ffbc49960853453e6f30c73d927"
 }

@@ -1,6 +1,7 @@
 "use client";
 import { reviewModelHref } from '@/lib/clinical-review-links';
 import { clinicalReviewFetch } from '@/lib/clinical-review-fetch';
+import { SpecimenDepthNotes } from '../../specimen-depth-notes';
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/atlas-review/components/ui/button";
 import { ReviewSignInLink } from '@/atlas-review/components/review-sign-in-link';
@@ -220,6 +221,7 @@ export function SpecimenReviewWorkspace({
                   ))}
                 </section>
               ))}
+              {packet.teaching.lesson?.depth && <SpecimenDepthNotes depth={packet.teaching.lesson.depth} section="review" />}
               {packet.teaching.guidedDissection && <section aria-label="Guided dissection to review">
                 <h3>{packet.teaching.guidedDissection.title} · Draft</h3>
                 <p>{packet.teaching.guidedDissection.limitation}</p>

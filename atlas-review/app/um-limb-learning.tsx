@@ -15,6 +15,7 @@ import type { SpecimenTopic } from '@/atlas-review/lib/specimen-links';
 import { specimenTopicLabels } from '@/atlas-review/lib/specimen-links';
 import { specimenClinicalReferences } from '@/atlas-review/content/um-limb-clinical';
 import type { SpecimenLesson } from '@/atlas-review/content/um-limb-teaching';
+import { SpecimenDepthNotes } from './specimen-depth-notes';
 
 const clinicalTopics = ['clinical', 'pathology'] as const;
 const imagingTopics = ['ct', 'mri', 'xray', 'ultrasound'] as const;
@@ -40,7 +41,7 @@ export function SpecimenLearning({ definition, selected, initialTopic, resolveLe
         <TabsList aria-label="Specimen teaching topics" variant="line"><TabsTrigger value="anatomy">Anatomy</TabsTrigger><TabsTrigger value="function">Function</TabsTrigger></TabsList>
         <TabsContent value="anatomy"><p>{lesson.anatomy}</p>{lesson.attachments && <dl>
           <dt>{attachmentLabels?.proximal ?? 'Proximal attachment'}</dt><dd>{lesson.attachments.proximal}</dd><dt>{attachmentLabels?.distal ?? 'Distal attachment'}</dt><dd>{lesson.attachments.distal}</dd>
-        </dl>}</TabsContent>
+        </dl>}{lesson.depth && <SpecimenDepthNotes depth={lesson.depth} section="anatomy" />}</TabsContent>
         <TabsContent value="function"><p>{lesson.function}</p>{lesson.attachments && <dl><dt>Motor supply</dt><dd>{lesson.attachments.motor}</dd></dl>}
           <p>Typical function, not simulated motion. Nerve routes and attachment footprints are not reconstructed.</p>
         </TabsContent>
@@ -53,6 +54,7 @@ export function SpecimenLearning({ definition, selected, initialTopic, resolveLe
             {(g === 'clinical' ? clinicalTopics : imagingTopics).map(t => {
               const draft = lesson.extended?.topics[t];
               return <TabsContent key={t} value={t}>{draft ? <><p>{draft.body}</p><ClinicalReferences urls={draft.references} titles={referenceTitles} /></> : <p>{specimenTopicLabels[t]} teaching is pending for this source selection. No generic lesson or different structure has been substituted.</p>}
+                {t === 'clinical' && lesson.depth && <SpecimenDepthNotes depth={lesson.depth} section="clinical" />}
                 {g === 'imaging' && <p className="um-knee-scene-caption">Modality teaching only · No patient images, scan alignment or measured pathology.</p>}
               </TabsContent>;
             })}

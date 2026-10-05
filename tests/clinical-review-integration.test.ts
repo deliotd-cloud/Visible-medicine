@@ -15,10 +15,10 @@ test('current review includes draft answer evidence and admitted teaching withou
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review and learner exports retain their independently verified source pins.
-  assert.equal(review.revision, '4bb78ac5a29c88984a735523775ec69aeff942d6');
+  assert.equal(review.revision, '5acfa46b7fcef876fc2f55f8ed122de46b29bb03');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
-  assert.equal(regional.sourceCommit, '4bb78ac5a29c88984a735523775ec69aeff942d6');
+  assert.equal(regional.sourceCommit, '5acfa46b7fcef876fc2f55f8ed122de46b29bb03');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
   for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);
@@ -74,7 +74,16 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
           }
           Object.assign(fixtures.at(-1),{key:entry.key,scope:entry.scope});
         }
-        return Response.json({count:clinicalReviewEntries.length,fixtures});
+        // Additional teaching scope exercises the real website authorization,
+        // namespaced D1 storage and eleven-tab saved-event parser together.
+        const calfEntry=clinicalReviewEntries.find(e=>e.scope==='specimens'&&e.id==='vm:reference:um-5t6tz7-v1-2:lower-limb:soleus'&&JSON.parse(e.key.slice('specimens:'.length))[0].endsWith(':calf'));
+        if(!calfEntry)throw Error('Missing exact calf source fixture');
+        const calfPair=JSON.parse(calfEntry.key.slice('specimens:'.length)),calfContext=(await specimenReviewMaterial(...calfPair)).context;
+        const calf={endpoint:'specimen-review',query:'?'+new URLSearchParams({specimenKey:calfContext.specimenKey,structureId:calfContext.structureId,track:'teaching'}),
+          payload:{catalogScope:calfContext.catalogScope,specimenKey:calfContext.specimenKey,sourceFrame:calfContext.sourceFrame,structureId:calfContext.structureId,
+            track:'teaching',expectedVersion:0,materialHash:calfContext.materialHash,revisionHash:calfContext.revisions.teaching,
+            checklistVersion:calfContext.checklistVersion,draft:blankSpecimenReview(calfContext,'teaching')}};
+        return Response.json({count:clinicalReviewEntries.length,fixtures,calf});
       }
       const route=routes[url.pathname.slice('/api/atlas-review/'.length)];
       return route?.[request.method]?.(request) ?? new Response('Not found',{status:404});
@@ -108,7 +117,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     };
     const seedResponse=await mf.dispatchFetch('https://review.test/__fixtures');
     assert.equal(seedResponse.status,200,await seedResponse.clone().text());
-    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>};
+    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any}};
     assert.equal(seed.count,1577);
     assert.equal((await call('reviews','a',seed.fixtures[0].payload)).status,409,'save requires loaded account context');
     await call('reviews');
@@ -160,6 +169,30 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
       assert.equal(currentQueue.items.find((row:any)=>row.key===fixture.key)?.geometry,'in-progress','fresh draft is current, not approved');
       assert.equal((await call(endpoint+'?userId=b&organizationId=org-b','a',{...correction,expectedVersion:2})).status,201,'client IDs cannot select a different store');
     }
+    const calf=seed.calf;
+    assert.equal(calf.payload.draft.checks['calf-depth'],false);
+    calf.payload.draft.notes='Synthetic calf teaching persistence; not clinical review.';
+    const calfSaved=await call(calf.endpoint,'a',calf.payload);
+    assert.equal(calfSaved.status,201,await calfSaved.clone().text());
+    const calfDraft=await calfSaved.json() as any;
+    assert.equal(calfDraft.review.material.teachingTabs.length,11);
+    assert(calfDraft.review.material.teachingTabs.includes('calf-depth'));
+    assert.equal(calfDraft.review.status,'draft');
+    const calfHistory=await (await call(calf.endpoint+calf.query)).json() as any;
+    assert.equal(calfHistory.history[0].notes,calf.payload.draft.notes);
+    assert.equal((await call(calf.endpoint,'a',calf.payload)).status,409);
+    const syntheticApproval={...calf.payload,expectedVersion:1,draft:{...calf.payload.draft,status:'approved',
+      reviewer:'SOFTWARE TEST ONLY',qualification:'Not radiologist sign-off',scope:'Synthetic exact-source calf teaching persistence check',
+      attested:true,checks:Object.fromEntries(Object.keys(calf.payload.draft.checks).map(id=>[id,true])),
+      evidence:[{title:'Synthetic fixture',url:'https://example.test/fixture',note:'Not clinical evidence'}]}};
+    assert.equal((await call(calf.endpoint,'a',{...syntheticApproval,draft:{...syntheticApproval.draft,checks:{...syntheticApproval.draft.checks,'calf-depth':false}}})).status,422);
+    const calfApproved=await call(calf.endpoint,'a',syntheticApproval);
+    assert.equal(calfApproved.status,201,await calfApproved.clone().text());
+    const calfAfter=await (await call(calf.endpoint+calf.query)).json() as any;
+    assert.deepEqual(calfAfter.history.map((r:any)=>r.version),[2,1]);
+    assert.equal(calfAfter.history[0].material.teachingTabs.length,11);
+    assert.equal(calfAfter.history[0].status,'approved');
+    for(const other of ['b','c'])assert.equal(((await (await call(calf.endpoint+calf.query,other)).json()) as any).history.length,0);
     await call('reviews','b');
     assert.equal((await call('reviews','b',seed.fixtures[0].payload,{'X-Clinical-Review-Context':contexts.a})).status,409,'old document cannot save under another account');
     // Revocations are checked freshly and never healed by reading review APIs.
@@ -181,7 +214,9 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     const overview=await call('review-overview');assert.equal(overview.status,200);assert.match(overview.headers.get('cache-control')! ,/no-store/);
     assert.equal((await call('review-overview?userId=b')).status,400);
     for(const table of ['atlas_personal_review_events','atlas_personal_body_review_events','atlas_personal_nested_review_events','atlas_personal_specimen_review_events']) {
-      assert.equal((await db.prepare(`SELECT COUNT(*) AS n FROM ${table}`).first<{n:number}>())?.n,3);
+      const expectedCount=table==='atlas_personal_specimen_review_events'?5:3;
+      assert.equal((await db.prepare(`SELECT COUNT(*) AS n FROM ${table}`).first<{n:number}>())?.n,expectedCount,
+        'original three events per scope plus only the two additional synthetic calf teaching events');
       const row=await db.prepare(`SELECT user_id FROM ${table} LIMIT 1`).first<{user_id:string}>();
       assert.deepEqual(JSON.parse(row!.user_id),['vm-website-personal-review-1','edu:a','org-a']);
     }
