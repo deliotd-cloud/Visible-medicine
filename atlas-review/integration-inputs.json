@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "19f9a7fa02b98b3df8a71a645fe68d3894094178",
-  "sha256": "2a97714447fcecdd6a2f090efc77d0ffe40cf618b2c8f553c22baf43db545130",
+  "sourceCommit": "9fcf6007719b78c83979a1fbfbca0e4eadbcc42b",
+  "sha256": "50ad81727883197ba212fc892aef761aa5e46a91338c6e418cc43d4e675b6580",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -2084,7 +2084,7 @@
     },
     {
       "path": "atlas-review/content/um-calf-depth.ts",
-      "sha256": "935960a2cd795bc0a621c7d05fe0239b1a211e383d1af829bd1642136d4085f6"
+      "sha256": "c8f870395672c1c5e919606b9b8c88c1107c93ce3a9bfe784be3f1a3bb1477fe"
     },
     {
       "path": "atlas-review/content/um-calf-foot-clinical.ts",
@@ -2097,6 +2097,10 @@
     {
       "path": "atlas-review/content/um-distal-topic-completion.ts",
       "sha256": "7d09851523fb515f33942710b7f2a171ae612881b5b5e2372fa75444b07fafe2"
+    },
+    {
+      "path": "atlas-review/content/um-foot-depth.ts",
+      "sha256": "8ba0dd10441a6e8a802cb5497eb46d238d444940d20c3ff14dc76ca6195a4f71"
     },
     {
       "path": "atlas-review/content/um-hip-muscle-clinical.ts",
@@ -2124,11 +2128,11 @@
     },
     {
       "path": "atlas-review/content/um-limb-teaching-bindings.v1.json",
-      "sha256": "cb526ef39c54bb49d9ad93bb4695c6915dae6b6ca9602575d2160002cff11637"
+      "sha256": "f35686e97f962343b3d1d58b5bb6eaf4dba89f09ec202bdc4dd7b0fac753ea36"
     },
     {
       "path": "atlas-review/content/um-limb-teaching.ts",
-      "sha256": "28ae27ca3eec746688429b125730fbe7cc088e8726c0a42c771118c2278f662f"
+      "sha256": "d7f7a9e22076ab958f2134d5bb09a19301f80944062309c2f9a87e974fdffe7a"
     },
     {
       "path": "atlas-review/content/um-proximal-topic-completion.ts",
@@ -3756,7 +3760,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-depth-scope.ts",
-      "sha256": "8bd5d0991a07093499e6978bb4b2f0f39a97917bd81c2e48baf532842b4b4e94"
+      "sha256": "e9a43357817b534b912f32ddfbae71d88e0bf21dc23abb315317da724ea31a31"
     },
     {
       "path": "atlas-review/lib/specimen-guided-dissection.ts",
@@ -3788,7 +3792,7 @@
     },
     {
       "path": "atlas-review/lib/specimen-review.ts",
-      "sha256": "e7b9e0f1a165a2b0b81dfe3fd9b86a64ab65db3b0cb691b6ae2c33b1b7549b69"
+      "sha256": "5665f337e14abfa858f77009a2fb6f021006de3facfcf98ef84867e2e92217e3"
     },
     {
       "path": "atlas-review/lib/spinal-bone-curriculum.ts",
@@ -4376,7 +4380,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "0720d9404c36a0430c9efdd129cb15c3ccaafec8cdfe7372c26041cdbb265523"
+      "sha256": "d50d4e98eef9bf8817f386af059559be7a3423c2e5c91d238e921a0bbc0cb211"
     }
   ]
 }

@@ -5,6 +5,7 @@ import type { SpecimenDepthLesson } from '../content/um-calf-depth';
 const scopes = {
   'calf-depth': { revisions: ['um-calf-depth-20261005-v1'], name: 'Calf' },
   'thigh-depth': { revisions: ['um-thigh-depth-20261005-v1', 'um-deep-hip-depth-20261005-v1'], name: 'Hip/thigh' },
+  'foot-depth': { revisions: ['um-foot-depth-20261005-v1'], name: 'Foot' },
 } as const;
 export function specimenDepthReviewScope(depth: SpecimenDepthLesson | undefined) {
   if (!depth || depth.status !== 'draft') return null;

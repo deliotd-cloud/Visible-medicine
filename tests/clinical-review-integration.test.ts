@@ -15,10 +15,10 @@ test('current review includes draft answer evidence and admitted teaching withou
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
   const regional = JSON.parse(readFileSync('public/atlas-runtime/head-neck/manifest.json', 'utf8'));
   // Review and learner exports retain their independently verified source pins.
-  assert.equal(review.revision, '19f9a7fa02b98b3df8a71a645fe68d3894094178');
+  assert.equal(review.revision, '9fcf6007719b78c83979a1fbfbca0e4eadbcc42b');
   assert.equal(viewer.sourceCommit, review.revision);
   assert.equal(viewer.websiteIntegrationSha256, review.websiteIntegrationSha256);
-  assert.equal(regional.sourceCommit, '19f9a7fa02b98b3df8a71a645fe68d3894094178');
+  assert.equal(regional.sourceCommit, '9fcf6007719b78c83979a1fbfbca0e4eadbcc42b');
   assert.notEqual(review.revision, priorMaterial.atlasSource);
   const paths = new Set(review.files.map((file: {path:string}) => file.path));
   for (const path of ['app/structure-quick-check.tsx', 'content/coronary-arterial-us.ts', 'content/elbow-arterial-ct.ts', 'content/achilles-ct.ts']) assert.ok(paths.has(path), path);
@@ -108,7 +108,15 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
           payload:{catalogScope:kneeContext.catalogScope,specimenKey:kneeContext.specimenKey,sourceFrame:kneeContext.sourceFrame,structureId:kneeContext.structureId,
             track:'teaching',expectedVersion:0,materialHash:kneeContext.materialHash,revisionHash:kneeContext.revisions.teaching,
             checklistVersion:kneeContext.checklistVersion,draft:blankSpecimenReview(kneeContext,'teaching')}};
-        return Response.json({count:clinicalReviewEntries.length,fixtures,calf,thigh,deepHip,knee});
+        const footEntry=clinicalReviewEntries.find(e=>e.scope==='specimens'&&e.id==='vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-brevis'&&JSON.parse(e.key.slice('specimens:'.length))[0].endsWith(':foot'));
+        if(!footEntry)throw Error('Missing exact intrinsic-foot source fixture');
+        const footPair=JSON.parse(footEntry.key.slice('specimens:'.length)),footMaterial=await specimenReviewMaterial(...footPair),footContext=footMaterial.context;
+        if(footMaterial.teaching.lesson.depth.revision!=='um-foot-depth-20261005-v1')throw Error('Wrong foot teaching revision');
+        const foot={endpoint:'specimen-review',query:'?'+new URLSearchParams({specimenKey:footContext.specimenKey,structureId:footContext.structureId,track:'teaching'}),depthRevision:footMaterial.teaching.lesson.depth.revision,
+          payload:{catalogScope:footContext.catalogScope,specimenKey:footContext.specimenKey,sourceFrame:footContext.sourceFrame,structureId:footContext.structureId,
+            track:'teaching',expectedVersion:0,materialHash:footContext.materialHash,revisionHash:footContext.revisions.teaching,
+            checklistVersion:footContext.checklistVersion,draft:blankSpecimenReview(footContext,'teaching')}};
+        return Response.json({count:clinicalReviewEntries.length,fixtures,calf,thigh,deepHip,knee,foot});
       }
       const route=routes[url.pathname.slice('/api/atlas-review/'.length)];
       return route?.[request.method]?.(request) ?? new Response('Not found',{status:404});
@@ -142,7 +150,7 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     };
     const seedResponse=await mf.dispatchFetch('https://review.test/__fixtures');
     assert.equal(seedResponse.status,200,await seedResponse.clone().text());
-    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any};thigh:{endpoint:string;query:string;payload:any};deepHip:{endpoint:string;query:string;payload:any;depthRevision:string};knee:{endpoint:string;query:string;payload:any;guideSteps:number;comparisonStep:string}};
+    const seed=await seedResponse.json() as {count:number;fixtures:Array<{key:string;scope:string;endpoint:string;query:string;payload:any}>;calf:{endpoint:string;query:string;payload:any};thigh:{endpoint:string;query:string;payload:any};deepHip:{endpoint:string;query:string;payload:any;depthRevision:string};knee:{endpoint:string;query:string;payload:any;guideSteps:number;comparisonStep:string};foot:{endpoint:string;query:string;payload:any;depthRevision:string}};
     assert.equal(seed.count,1577);
     assert.equal((await call('reviews','a',seed.fixtures[0].payload)).status,409,'save requires loaded account context');
     await call('reviews');
@@ -316,6 +324,50 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     assert.deepEqual(kneeAfter.history.map((r:any)=>r.version),[2,1]);
     assert.equal(kneeAfter.history[0].status,'approved');assert.equal(kneeAfter.history[1].status,'draft');
     for(const other of ['b','c'])assert.equal(((await (await call(knee.endpoint+knee.query,other)).json()) as any).history.length,0);
+    const foot=seed.foot;
+    assert.equal(foot.depthRevision,'um-foot-depth-20261005-v1');
+    assert.equal(foot.payload.draft.checks['foot-depth'],false);
+    assert.equal(foot.payload.draft.checks['calf-depth'],undefined);
+    assert.equal(foot.payload.draft.checks['thigh-depth'],undefined);
+    assert.equal((await call(foot.endpoint,null,foot.payload)).status,401);
+    const beforeFoot=JSON.parse(readFileSync('tests/atlas-foot-depth-baseline.json','utf8')).packets
+      .find((packet:any)=>packet.key===foot.payload.specimenKey+'|'+foot.payload.structureId);
+    assert(beforeFoot,'actual pre-import intrinsic-foot context');
+    assert.notEqual(beforeFoot.teachingRevision,foot.payload.revisionHash);
+    const countBeforeFoot=await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_specimen_review_events').first<{n:number}>();
+    for(const patch of [{revisionHash:beforeFoot.teachingRevision},{materialHash:beforeFoot.materialHash},{sourceFrame:'foreign-frame'}]) {
+      assert.equal((await call(foot.endpoint,'a',{...foot.payload,...patch})).status,409);
+      assert.deepEqual(await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_specimen_review_events').first<{n:number}>(),countBeforeFoot,'stale or foreign foot teaching cannot append history');
+    }
+    foot.payload.draft.notes='Synthetic intrinsic-foot persistence; not clinical approval.';
+    const footSaved=await call(foot.endpoint,'a',foot.payload);
+    assert.equal(footSaved.status,201,await footSaved.clone().text());
+    const footDraft=await footSaved.json() as any;
+    assert.equal(footDraft.review.material.teachingTabs.length,11);
+    assert(footDraft.review.material.teachingTabs.includes('foot-depth'));
+    assert(!footDraft.review.material.teachingTabs.includes('thigh-depth'));
+    const footHistory=await (await call(foot.endpoint+foot.query)).json() as any;
+    assert.equal(footHistory.history[0].status,'draft');
+    assert.equal(footHistory.history[0].notes,foot.payload.draft.notes);
+    assert.equal(footHistory.history[0].checks['foot-depth'],false);
+    assert.equal(footHistory.history[0].revisionHash,foot.payload.revisionHash);
+    assert.equal((await call(foot.endpoint,'a',foot.payload)).status,409);
+    const footApproval={...foot.payload,expectedVersion:1,draft:{...foot.payload.draft,status:'approved',
+      reviewer:'SOFTWARE TEST ONLY',qualification:'Not radiologist sign-off',scope:'Synthetic exact-source intrinsic-foot teaching check',
+      attested:true,checks:Object.fromEntries(Object.keys(foot.payload.draft.checks).map(id=>[id,true])),
+      evidence:[{title:'Synthetic fixture',url:'https://example.test/fixture',note:'Not clinical evidence'}]}};
+    for(const draft of [{...footApproval.draft,checks:{...footApproval.draft.checks,'foot-depth':false}},{...footApproval.draft,attested:false}]) {
+      assert.equal((await call(foot.endpoint,'a',{...footApproval,draft})).status,422);
+      assert.equal((await db.prepare('SELECT COUNT(*) AS n FROM atlas_personal_specimen_review_events').first<{n:number}>())?.n,countBeforeFoot!.n+1,'failed approval cannot append history');
+    }
+    const footApproved=await call(foot.endpoint,'a',footApproval);
+    assert.equal(footApproved.status,201,await footApproved.clone().text());
+    const footAfter=await (await call(foot.endpoint+foot.query)).json() as any;
+    assert.deepEqual(footAfter.history.map((r:any)=>r.version),[2,1]);
+    assert.equal(footAfter.history[0].status,'approved');assert.equal(footAfter.history[1].status,'draft');
+    assert.equal(footAfter.history[1].notes,foot.payload.draft.notes);
+    assert.equal(footAfter.history[0].material.teachingTabs.length,11);
+    for(const other of ['b','c'])assert.equal(((await (await call(foot.endpoint+foot.query,other)).json()) as any).history.length,0);
     await call('reviews','b');
     assert.equal((await call('reviews','b',seed.fixtures[0].payload,{'X-Clinical-Review-Context':contexts.a})).status,409,'old document cannot save under another account');
     // Revocations are checked freshly and never healed by reading review APIs.
@@ -337,9 +389,9 @@ test('actual website endpoints: authorization, isolated durable decisions, confl
     const overview=await call('review-overview');assert.equal(overview.status,200);assert.match(overview.headers.get('cache-control')! ,/no-store/);
     assert.equal((await call('review-overview?userId=b')).status,400);
     for(const table of ['atlas_personal_review_events','atlas_personal_body_review_events','atlas_personal_nested_review_events','atlas_personal_specimen_review_events']) {
-      const expectedCount=table==='atlas_personal_specimen_review_events'?11:3;
+      const expectedCount=table==='atlas_personal_specimen_review_events'?13:3;
       assert.equal((await db.prepare(`SELECT COUNT(*) AS n FROM ${table}`).first<{n:number}>())?.n,expectedCount,
-        'original three events per scope plus only two each calf, thigh, deep-hip and knee synthetic teaching events');
+        'original three events per scope plus only two each calf, thigh, deep-hip, knee and foot synthetic teaching events');
       const row=await db.prepare(`SELECT user_id FROM ${table} LIMIT 1`).first<{user_id:string}>();
       assert.deepEqual(JSON.parse(row!.user_id),['vm-website-personal-review-1','edu:a','org-a']);
     }

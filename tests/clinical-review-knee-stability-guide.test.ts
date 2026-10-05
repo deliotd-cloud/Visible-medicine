@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
+import { kneeStabilityGuideEpochRead as readFileSync, kneeStabilityGuideEpochPlugin } from './atlas-knee-stability-guide-history.ts';
 import { build } from 'esbuild';
 
 const oldSource = '05596d396d104a65cdd7a1fdf770505c3dfb3139';
@@ -33,7 +34,7 @@ async function api(): Promise<Any> {
     "export { blankSpecimenReview, specimenApprovalProblems } from './atlas-review/lib/specimen-review';",
     "export { postSpecimenReview } from './atlas-review/lib/specimen-review-api';",
   ].join('\n'), resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false,
-  platform: 'node', format: 'esm' });
+    platform: 'node', format: 'esm', plugins:[kneeStabilityGuideEpochPlugin()] });
   return import('data:text/javascript;base64,' + Buffer.from(bundled.outputFiles[0].text).toString('base64'));
 }
 

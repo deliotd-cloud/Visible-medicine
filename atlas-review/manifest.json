@@ -1,5 +1,5 @@
 {
-  "revision": "19f9a7fa02b98b3df8a71a645fe68d3894094178",
+  "revision": "9fcf6007719b78c83979a1fbfbca0e4eadbcc42b",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3478,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "fd8d8ff8e8d823e018adf49f1e7acea1f12aac741df84cea2f15d8447948e008",
-      "importedSha256": "dec02ab096e5adc9bb6c9583fa0d27c7e86f12d87d3e84311341da2362fc11ce"
+      "sourceSha256": "b62617d8566cc60ff0cb8eb075600da306d8ff9d3b30bd46d035333f03343c50",
+      "importedSha256": "0b6af56d91a31ee1c7eb48ae02a1afc8c91839ecadf7f63ad453f5f2a9b529cc"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3523,8 +3523,8 @@
     },
     {
       "path": "content/um-limb-teaching.ts",
-      "sourceSha256": "28ae27ca3eec746688429b125730fbe7cc088e8726c0a42c771118c2278f662f",
-      "importedSha256": "28ae27ca3eec746688429b125730fbe7cc088e8726c0a42c771118c2278f662f"
+      "sourceSha256": "d7f7a9e22076ab958f2134d5bb09a19301f80944062309c2f9a87e974fdffe7a",
+      "importedSha256": "d7f7a9e22076ab958f2134d5bb09a19301f80944062309c2f9a87e974fdffe7a"
     },
     {
       "path": "content/um-limb-clinical.ts",
@@ -3573,8 +3573,8 @@
     },
     {
       "path": "content/um-calf-depth.ts",
-      "sourceSha256": "935960a2cd795bc0a621c7d05fe0239b1a211e383d1af829bd1642136d4085f6",
-      "importedSha256": "935960a2cd795bc0a621c7d05fe0239b1a211e383d1af829bd1642136d4085f6"
+      "sourceSha256": "c8f870395672c1c5e919606b9b8c88c1107c93ce3a9bfe784be3f1a3bb1477fe",
+      "importedSha256": "c8f870395672c1c5e919606b9b8c88c1107c93ce3a9bfe784be3f1a3bb1477fe"
     },
     {
       "path": "content/um-thigh-depth.ts",
@@ -3585,6 +3585,11 @@
       "path": "content/um-deep-hip-depth.ts",
       "sourceSha256": "f6736e92154dc3ef6109cd08e275b495ec2052178e7019c2cb11096baa16a1a1",
       "importedSha256": "f6736e92154dc3ef6109cd08e275b495ec2052178e7019c2cb11096baa16a1a1"
+    },
+    {
+      "path": "content/um-foot-depth.ts",
+      "sourceSha256": "8ba0dd10441a6e8a802cb5497eb46d238d444940d20c3ff14dc76ca6195a4f71",
+      "importedSha256": "8ba0dd10441a6e8a802cb5497eb46d238d444940d20c3ff14dc76ca6195a4f71"
     },
     {
       "path": "content/hra-renal-clinical.ts",
@@ -3723,8 +3728,8 @@
     },
     {
       "path": "content/um-limb-teaching-bindings.v1.json",
-      "sourceSha256": "cb526ef39c54bb49d9ad93bb4695c6915dae6b6ca9602575d2160002cff11637",
-      "importedSha256": "cb526ef39c54bb49d9ad93bb4695c6915dae6b6ca9602575d2160002cff11637"
+      "sourceSha256": "f35686e97f962343b3d1d58b5bb6eaf4dba89f09ec202bdc4dd7b0fac753ea36",
+      "importedSha256": "f35686e97f962343b3d1d58b5bb6eaf4dba89f09ec202bdc4dd7b0fac753ea36"
     },
     {
       "path": "lib/abdominal-wall-teaching.ts",
@@ -3763,13 +3768,13 @@
     },
     {
       "path": "lib/specimen-depth-scope.ts",
-      "sourceSha256": "8bd5d0991a07093499e6978bb4b2f0f39a97917bd81c2e48baf532842b4b4e94",
-      "importedSha256": "8bd5d0991a07093499e6978bb4b2f0f39a97917bd81c2e48baf532842b4b4e94"
+      "sourceSha256": "e9a43357817b534b912f32ddfbae71d88e0bf21dc23abb315317da724ea31a31",
+      "importedSha256": "e9a43357817b534b912f32ddfbae71d88e0bf21dc23abb315317da724ea31a31"
     },
     {
       "path": "lib/specimen-review.ts",
-      "sourceSha256": "e7b9e0f1a165a2b0b81dfe3fd9b86a64ab65db3b0cb691b6ae2c33b1b7549b69",
-      "importedSha256": "e7b9e0f1a165a2b0b81dfe3fd9b86a64ab65db3b0cb691b6ae2c33b1b7549b69"
+      "sourceSha256": "5665f337e14abfa858f77009a2fb6f021006de3facfcf98ef84867e2e92217e3",
+      "importedSha256": "5665f337e14abfa858f77009a2fb6f021006de3facfcf98ef84867e2e92217e3"
     },
     {
       "path": "content/nested-review-bindings.json",
@@ -3869,7 +3874,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "186fd987d841dc9d6771ab2a376de993496db314fd3500e17427f8538e1e2f77",
-      "importedSha256": "8046db85b5b9ad589da9638650b8ed4fe6724f2c8c1e492a584aa177153d66e8"
+      "importedSha256": "4a8c03908f8c8e453d19e93752d84244a8fb36e0883c0c375ff47a61836df142"
     },
     {
       "path": "app/review/review.css",
@@ -5378,5 +5383,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "2a97714447fcecdd6a2f090efc77d0ffe40cf618b2c8f553c22baf43db545130"
+  "websiteIntegrationSha256": "50ad81727883197ba212fc892aef761aa5e46a91338c6e418cc43d4e675b6580"
 }

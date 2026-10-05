@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='19f9a7fa02b98b3df8a71a645fe68d3894094178';
+const revision='9fcf6007719b78c83979a1fbfbca0e4eadbcc42b';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -40,7 +40,10 @@ test('bounded regional Spread reaches learner and protected review without model
  const calfInputs=['app/specimen-depth-notes.tsx','content/um-calf-depth.ts'];
  const thighInputs=['content/um-thigh-depth.ts','lib/specimen-depth-scope.ts'];
  const deepHipInputs=['content/um-deep-hip-depth.ts'];
- assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length+calfInputs.length+thighInputs.length+deepHipInputs.length);assert.deepEqual(review.packages,prior.packages);
+ const intrinsicFootInputs=['content/um-foot-depth.ts'];
+ assert.deepEqual(review.files.filter((f:any)=>intrinsicFootInputs.includes(f.path)).map((f:any)=>f.path),intrinsicFootInputs);
+ for(const path of intrinsicFootInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
+ assert.equal(review.revision,revision);assert.equal(review.files.length,1018+ultrasoundInputs.length+cranialInputs.length+suprascapularInputs.length+deepBrainInputs.length+footInputs.length+handInputs.length+toeInputs.length+midfootInputs.length+pausedTourInputs.length+shoulderGirdleInputs.length+coronaryContextInputs.length+organQuizInputs.length+pelvicCoreInputs.length+respiratoryInputs.length+coronaryArterialInputs.length+3+thoracicInputs.length+calfInputs.length+thighInputs.length+deepHipInputs.length+intrinsicFootInputs.length);assert.deepEqual(review.packages,prior.packages);
  assert.deepEqual(review.files.filter((f:any)=>deepHipInputs.includes(f.path)).map((f:any)=>f.path),deepHipInputs);
  for(const path of deepHipInputs)assert.equal(review.files.find((f:any)=>f.path===path).sourceSha256,sha(sourceAt(path)),path);
  assert.deepEqual(review.files.filter((f:any)=>thighInputs.includes(f.path)).map((f:any)=>f.path).sort(),thighInputs);

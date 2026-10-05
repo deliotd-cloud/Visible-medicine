@@ -6,6 +6,7 @@ import { specimenMotorBindings, type MotorSupply } from './um-limb-motor';
 import { umCalfDepth, type SpecimenDepthLesson } from './um-calf-depth';
 import { umThighDepth } from './um-thigh-depth';
 import { umDeepHipDepth } from './um-deep-hip-depth';
+import { umFootDepth } from './um-foot-depth';
 
 export type SpecimenLesson = {
   anatomy: string; function: string; references: readonly string[];
@@ -111,5 +112,9 @@ for (const [slug, depth] of Object.entries(umThighDepth)) {
 }
 for (const [slug, depth] of Object.entries(umDeepHipDepth)) {
   if (!specimenLessons[slug]?.attachments || specimenLessons[slug].depth) throw new Error(`Invalid deep-hip-depth teaching binding: ${slug}`);
+  specimenLessons[slug].depth = depth;
+}
+for (const [slug, depth] of Object.entries(umFootDepth)) {
+  if (!specimenLessons[slug]?.attachments || specimenLessons[slug].depth) throw new Error(`Invalid foot-depth teaching binding: ${slug}`);
   specimenLessons[slug].depth = depth;
 }
