@@ -6,7 +6,7 @@ import {createRequire} from 'node:module';
 import test from 'node:test';
 import {build} from 'esbuild';
 
-const revision='420f4025b156ecc8f8cf5a864f60876c1fd0c56b';
+const revision='980b79d2201523cf069c06d628803ff7eb6fcac1';
 const sourceDir='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const inputs=['app/study-surface.css','lib/didanix-atlas-adapter.ts','content/body-renderer-revision.json'];
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');

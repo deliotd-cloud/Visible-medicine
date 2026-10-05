@@ -6,7 +6,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, relative } from 'node:path';
 import { build, type Plugin } from 'esbuild';
 
-const sourceRevision = '420f4025b156ecc8f8cf5a864f60876c1fd0c56b';
+const sourceRevision = '980b79d2201523cf069c06d628803ff7eb6fcac1';
 const websiteBaseline = '44f543d655c787abae0a71764900ab631167c727';
 const atlasRepo = 'C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
 const gitOptions = { maxBuffer: 32e6, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' } };

@@ -154,7 +154,20 @@ export default function ShoulderExplorer({
   const [rendererHealth, setRendererHealth] =
     useState<RendererHealth>('starting');
   const [modelReady, setModelReady] = useState(false);
+  const rendererHealthRef = useRef<RendererHealth>('starting');
+  const modelReadyRef = useRef(false);
+  const examReadyRef = useRef(false);
   const displayReady = rendererReady(rendererHealth) && modelReady;
+  const reportRendererHealth = useCallback((health: RendererHealth) => {
+    rendererHealthRef.current = health;
+    examReadyRef.current = rendererReady(health) && modelReadyRef.current;
+    setRendererHealth(health);
+  }, []);
+  const reportModelReady = useCallback((ready: boolean) => {
+    modelReadyRef.current = ready;
+    examReadyRef.current = rendererReady(rendererHealthRef.current) && ready;
+    setModelReady(ready);
+  }, []);
   const [view, setView] = useState<CameraView>('posterior');
   const [layer, setLayer] = useState<AnatomyLayer>('surface');
   const [zoom, setZoom] = useState(1);
@@ -220,7 +233,7 @@ export default function ShoulderExplorer({
       index: 0,
       questions: quizQuestions.map((q) => ({
         target: q.answer,
-        choices: [],
+        choices: q.options,
       })),
       renderedIds: structures.map((s) => s.id),
       responses: [],
@@ -420,6 +433,12 @@ export default function ShoulderExplorer({
         index: questionIndex,
         chosen: id,
       });
+  };
+
+  const answerExamOption = (id: string, sessionId: number, index: number) => {
+    if (!examReadyRef.current || tourActiveRef.current || mode !== 'exam' ||
+        !quizQuestions[index]?.options.includes(id)) return;
+    practiceDispatch({ type: 'answer', sessionId, index, chosen: id });
   };
 
   const nextQuestion = () => {
@@ -1103,8 +1122,8 @@ export default function ShoulderExplorer({
                 tourLocked={tourActive}
                 transitionMs={tourActive && !reducedMotion ? 1800 : 0}
                 transitionPaused={tourMotionPaused}
-                onRendererHealth={setRendererHealth}
-                onModelReady={setModelReady}
+                onRendererHealth={reportRendererHealth}
+                onModelReady={reportModelReady}
               />
             </section>
             <div className="shoulder-view-footer illustration-mode" inert={tourActive}>
@@ -1263,11 +1282,22 @@ export default function ShoulderExplorer({
                     </output>
                   )}
                   {!answerId ? (
-                    <div className="waiting-card">
-                      <ScanLine />
-                      <strong>Choose on the model</strong>
-                      <span>Rotate to inspect, then select a structure.</span>
-                    </div>
+                    <>
+                      <div className="waiting-card">
+                        <ScanLine />
+                        <strong>Choose on the model or by name</strong>
+                        <span>Rotate to inspect and select a structure, or use an answer button below.</span>
+                      </div>
+                      <div role="group" aria-label="Answer by structure name"
+                        style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                        {currentQuestion.options.map((id) => (
+                          <Button key={id} variant="outline" disabled={!displayReady}
+                            onClick={() => answerExamOption(id, shoulderPractice.id, questionIndex)}>
+                            {structureById.get(id)?.name}
+                          </Button>
+                        ))}
+                      </div>
+                    </>
                   ) : (
                     <div
                       className={`answer-card ${answerCorrect ? 'correct' : 'incorrect'}`}

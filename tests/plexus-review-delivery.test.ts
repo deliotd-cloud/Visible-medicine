@@ -23,7 +23,7 @@ test('exact private bytes verify; renderer-only changes preserve topology but gr
   assert.equal(packet.study.parts.length,35);assert.equal(packet.study.connections.length,38);
   assert(packet.packages.every((p:{license:string})=>['MIT','ISC','BSD-2-Clause','BSD-3-Clause','Apache-2.0','Zlib'].includes(p.license)));
   const broad=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(broad.revision,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
+  assert.equal(broad.revision,'980b79d2201523cf069c06d628803ff7eb6fcac1');
   assert(!broad.files.some((f:{path:string})=>f.path.includes('original-plexus')||f.path.startsWith('app/review/candidates/')));
   assert(!readFileSync('lib/atlas-model-delivery.ts','utf8').includes('vm:schematic:brachial-plexus'));
 });
