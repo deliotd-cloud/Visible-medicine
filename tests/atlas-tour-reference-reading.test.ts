@@ -8,7 +8,7 @@ import {execFileSync} from 'node:child_process';
 // embedded browser journey; this gate proves those exact players reach both hosts.
 test('reference-reading pause reaches both learner modules and protected review',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,'3a60c543c292066864437e4721efaded5c48bf64');
+ assert.equal(review.revision,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
  // motion-safety-old-player:start
  const oldManifest=JSON.parse(execFileSync('git',['show','a0df5f3d4df65f6d45ea6e6d71d6a196c22b51ef:atlas-review/manifest.json'],
   {maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
@@ -20,13 +20,13 @@ test('reference-reading pause reaches both learner modules and protected review'
  // motion-safety-old-player:end
  for(const [module,path,sourceHash,handler] of [
   ['shoulder','app/shoulder-tour-player.tsx','0fb1f95ec82c2323b4bc01372fd5e7938c090df8a4b8513f8929c672cfde6740','if(event.currentTarget.open)onReadImaging();'],
-  ['head-neck','app/regional-guided-learning.tsx','fa41afd1de2558b5eae3e9445911b6cf6538f6f5df9571835a40aa786157b9e0','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],
+  ['head-neck','app/regional-guided-learning.tsx','ad05438dd3e0e5bf22a92370777f116dbb6e362e7b4260cd1fb8fffa13eebedb','if(event.currentTarget.open){setPlaying(false);setMotionPaused(true);}'],
  ]){
   const base=`public/atlas-runtime/${module}/`;
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const record=review.files.find((f:any)=>f.path===path);assert(record,path);
-  assert.equal(learner.sourceCommit,'3a60c543c292066864437e4721efaded5c48bf64');
+  assert.equal(learner.sourceCommit,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,sourceHash);
   assert.equal(record.sourceSha256,sourceHash);
   const imported=readFileSync('atlas-review/'+path);

@@ -9,8 +9,8 @@ test('regional and whole-body learners deliver the verified source-bound tour re
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'3a60c543c292066864437e4721efaded5c48bf64');
-  assert.equal(review.revision,'3a60c543c292066864437e4721efaded5c48bf64');
+  assert.equal(learner.sourceCommit,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
+  assert.equal(review.revision,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
   // motion-safety-old-player:start
   const oldManifest=JSON.parse(execFileSync('git',['show','a0df5f3d4df65f6d45ea6e6d71d6a196c22b51ef:atlas-review/manifest.json'],
     {maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
@@ -26,7 +26,7 @@ test('regional and whole-body learners deliver the verified source-bound tour re
     assert.equal(createHash('sha256').update(readFileSync('atlas-review/'+path)).digest('hex'),record.importedSha256,path);
   }
   assert.equal(inputs.find((f:any)=>f.path==='app/regional-guided-learning.tsx').sha256,
-    'fa41afd1de2558b5eae3e9445911b6cf6538f6f5df9571835a40aa786157b9e0');
+    'ad05438dd3e0e5bf22a92370777f116dbb6e362e7b4260cd1fb8fffa13eebedb');
   assert(learner.regionalScopes.some((scope:any)=>scope.region==='whole-body'));
   const compiled=learner.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
   for(const text of ['Retry the missing anatomy to continue.','data-tour-resume','The retry could not start. Try again when the connection returns.'])assert(compiled.includes(text),text);

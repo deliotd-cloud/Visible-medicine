@@ -37,6 +37,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   const controls=useRef<HTMLDivElement>(null);
   const returnRetryFocus=useRef(false);
   const playbackEpoch=useRef(0);
+  const revokePlayback=useCallback(()=>{playbackEpoch.current++;setPlaying(false);setMotionPaused(true);},[]);
   const scopeChanged=previousScope.current!==scope;
   // Reset our own state before React commits children for a changed source.
   // A passive reset could discard the new scene's mount/load callbacks.
@@ -46,7 +47,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   }
   useEffect(()=>{scope.active=true;return()=>{scope.active=false;};},[scope]);
   const onLoaded=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id))setLoaded(current=>current.includes(id)?current:[...current,id]);},[required,scope]);
-  const onFailure=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id)){pausedImaging?.suspend();setFailed(current=>current.includes(id)?current:[...current,id]);}},[required,scope,pausedImaging]);
+  const onFailure=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id)){pausedImaging?.suspend();revokePlayback();setFailed(current=>current.includes(id)?current:[...current,id]);}},[required,scope,pausedImaging,revokePlayback]);
   const retryPlan=anatomyRetryPlan(catalog.bundles,failed,required);
   async function retryAnatomy(event?:{currentTarget:HTMLButtonElement}) {
     if(!scope.active||currentScope.current!==scope||scope.pending||!retryPlan.length)return;
@@ -83,7 +84,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   };update();q.addEventListener('change',update);return()=>q.removeEventListener('change',update);},[pausedImaging]);
   // Keep mobile anatomy in view; the complete teaching remains one disclosure away.
   useEffect(()=>{setExplanationOpen(!window.matchMedia('(max-width: 600px)').matches);},[]);
-  useEffect(()=>{const pause=()=>{pausedImaging?.suspend();setPlaying(false);setMotionPaused(true);};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pause);return()=>{document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pause);};},[ready,pausedImaging]);
+  useEffect(()=>{const pause=()=>{pausedImaging?.suspend();revokePlayback();};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pause);return()=>{document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pause);};},[ready,pausedImaging,revokePlayback]);
   useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;
     let active=true;const epoch=playbackEpoch.current;
     const timer=window.setTimeout(()=>{if(!active||epoch!==playbackEpoch.current||document.hidden)return;
@@ -100,9 +101,9 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   const exit=()=>{pausedImaging?.suspend();onExit();};
   const onHealth=useCallback((next:RendererHealth)=>{
     if(!scope.active||currentScope.current!==scope)return;
-    if(!rendererReady(next))pausedImaging?.suspend();
+    if(!rendererReady(next)){pausedImaging?.suspend();revokePlayback();}
     setHealth(next);
-  },[scope,pausedImaging]);
+  },[scope,pausedImaging,revokePlayback]);
   useEffect(()=>{if(active)controls.current?.querySelector<HTMLButtonElement>('button:not(:disabled)')?.focus({preventScroll:true});},[active]);
   return <section className="regional-tour" aria-label={tour.title}>
     <div className="regional-tour-panel">

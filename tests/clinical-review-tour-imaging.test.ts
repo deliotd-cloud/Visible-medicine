@@ -21,11 +21,11 @@ async function teachingApi(historical=false){
 
 test('guided imaging notes reach both learners and review without inventing scan access',async()=>{
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(review.revision,'3a60c543c292066864437e4721efaded5c48bf64');
+  assert.equal(review.revision,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
   for(const module of ['head-neck','shoulder']){
     const base=`public/atlas-runtime/${module}/`;
     const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-    assert.equal(learner.sourceCommit,'3a60c543c292066864437e4721efaded5c48bf64');
+    assert.equal(learner.sourceCommit,'420f4025b156ecc8f8cf5a864f60876c1fd0c56b');
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
     for(const path of ['app/tour-imaging-notes.tsx','app/tour-imaging-notes.css']){
       const f=review.files.find((f:any)=>f.path===path);assert.ok(f,path);

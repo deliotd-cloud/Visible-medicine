@@ -1,5 +1,5 @@
 {
-  "revision": "3a60c543c292066864437e4721efaded5c48bf64",
+  "revision": "420f4025b156ecc8f8cf5a864f60876c1fd0c56b",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3478,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "ffdd93e2f5aad8191052846b603fdd7d2a984ce61835a1564d01fff0eecde6c1",
-      "importedSha256": "b46228161ce557fa397d200424f56cfd4cbb98d6414aaf8d5ea2b46fb0b022e7"
+      "sourceSha256": "5d2c91e95eded1950710a08469ced509f0c1cf5d74962b864b619f7bee022cd2",
+      "importedSha256": "1d9d87e6b405962d320cf9c700b0e95131af6c60fbd6589aef85ddb04f08539d"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3889,7 +3889,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "a8afacec9bb4930a4c560ceb4f4f8765c3164500b7ceb0bb61b25fa9cead16ab",
-      "importedSha256": "78360bb8af0ee759b578d341e45a77abbf758b0c6aae6bf4ab9c571e449245a8"
+      "importedSha256": "20ff58f1e79eed1c5a37da7e14ffafcb01d2678e5909b5bb8b0130fc558a1067"
     },
     {
       "path": "app/review/review.css",
@@ -4118,8 +4118,8 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sourceSha256": "fa41afd1de2558b5eae3e9445911b6cf6538f6f5df9571835a40aa786157b9e0",
-      "importedSha256": "a7805340f724584ede4ee5a40c8fae671c02640c09315781be88e455c3495fac"
+      "sourceSha256": "ad05438dd3e0e5bf22a92370777f116dbb6e362e7b4260cd1fb8fffa13eebedb",
+      "importedSha256": "46a7b3bac4c3c398894f6912c7411214d7acb663d7432c9199fed6ab2fdf1922"
     },
     {
       "path": "lib/renderer-health.ts",
@@ -5403,5 +5403,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "1b95c1aeeb84cdbbb3b4fc79fca731ec11f74e15027f386dc8a6927369031959"
+  "websiteIntegrationSha256": "524e27624f76ceab0111f24bbb6aa5910f384836d8ced76342da0308b4eb9328"
 }
