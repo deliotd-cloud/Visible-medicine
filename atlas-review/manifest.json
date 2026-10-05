@@ -1,5 +1,5 @@
 {
-  "revision": "1445d904f96a1e3d3f617b3ddf7c3013b78c4099",
+  "revision": "e156e68d031fbc77440344fbf054f9fbe024c8ab",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -3478,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "b63f515c30d6f7eb5e07829af1df7519884ee38c96392378aabf072f7a7a6606",
-      "importedSha256": "7f4c91337952f901765dfdcb46e1166544ed89d8f7f20b019f6f721927eae2c0"
+      "sourceSha256": "c19caf1f03836c7a9cb5cd644daea9065d4d9208ce3e84d8c92fe396b0532a5f",
+      "importedSha256": "cb243abfe2c0ecd189fa573e9aadb7589adc1a65fa7f27c812ff480265a9070a"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3889,7 +3889,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "186fd987d841dc9d6771ab2a376de993496db314fd3500e17427f8538e1e2f77",
-      "importedSha256": "c1b6c28c2c90c54c9810fed2ce649259650c6f87d256e2be178873ff3f8b16b7"
+      "importedSha256": "2f31d249a4650aff4e7ba4084fa34d7a18bd000b5435e80a8b6c06357e1f92fb"
     },
     {
       "path": "app/review/review.css",
@@ -4388,8 +4388,8 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sourceSha256": "da3e5e92e05d87831d09d0eb931eceb58af39a7d48c4a2f880fcb6ff384d9541",
-      "importedSha256": "0029bb573904477abc4472a1277519f1d6874232ce70ae34c3e96a31d63b1995"
+      "sourceSha256": "cfe8d9ce895387979b759b52f2978542c1dfe41927e18202af1dc7badb156cc5",
+      "importedSha256": "6bbce70ff51aeabe122816eae9acb7e76c9f89ded8bab0e51b4882f63c7d7725"
     },
     {
       "path": "app/nested-teaching.tsx",
@@ -4478,8 +4478,8 @@
     },
     {
       "path": "app/eye-layers.css",
-      "sourceSha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8",
-      "importedSha256": "1aeccc0eca854b9c86de15bdc6722f95740cfabfec7e2cd6dae149933bc87dc8"
+      "sourceSha256": "5c9d321e02a0d7ab2bd6482241a37627b5ee27180b1ae463bc536128e011138f",
+      "importedSha256": "5c9d321e02a0d7ab2bd6482241a37627b5ee27180b1ae463bc536128e011138f"
     },
     {
       "path": "app/ventricles.tsx",
@@ -5403,5 +5403,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "f12125e85967e44644e9c7ba593f6c414eb7e51af50d2a59455710ca139b7850"
+  "websiteIntegrationSha256": "cd67dbc4d4d4c3b732cfddd6c10bd2c62e6676fc0c57ea9a8ee4a8e6d63ba3bf"
 }

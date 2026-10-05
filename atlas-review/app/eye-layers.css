@@ -67,6 +67,7 @@
   font-size: 0.875rem;
 }
 .eye-layer-manual-controls { border: 0; padding: 0; margin: 0; min-width: 0; }
+.eye-layer-manual-controls[hidden] { display: none; }
 .eye-layer-guided-learning { border-bottom: 1px solid var(--border); padding: 0.5rem 0; }
 .eye-layer-guided-learning summary { cursor: pointer; font-weight: 600; }
 .eye-layer-guided-learning :is(p, h3) { line-height: 1.5; margin: 0.5rem 0; }

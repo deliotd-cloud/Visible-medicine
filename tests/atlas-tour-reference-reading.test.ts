@@ -8,7 +8,7 @@ import {execFileSync} from 'node:child_process';
 // embedded browser journey; this gate proves those exact players reach both hosts.
 test('reference-reading pause reaches both learner modules and protected review',()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,'1445d904f96a1e3d3f617b3ddf7c3013b78c4099');
+ assert.equal(review.revision,'e156e68d031fbc77440344fbf054f9fbe024c8ab');
  // motion-safety-old-player:start
  const oldManifest=JSON.parse(execFileSync('git',['show','a0df5f3d4df65f6d45ea6e6d71d6a196c22b51ef:atlas-review/manifest.json'],
   {maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
@@ -26,7 +26,7 @@ test('reference-reading pause reaches both learner modules and protected review'
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const record=review.files.find((f:any)=>f.path===path);assert(record,path);
-  assert.equal(learner.sourceCommit,'1445d904f96a1e3d3f617b3ddf7c3013b78c4099');
+  assert.equal(learner.sourceCommit,'e156e68d031fbc77440344fbf054f9fbe024c8ab');
   assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,sourceHash);
   assert.equal(record.sourceSha256,sourceHash);
   const imported=readFileSync('atlas-review/'+path);

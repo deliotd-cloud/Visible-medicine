@@ -396,7 +396,7 @@ export function EyeLayerView({
               onClick={() => guideStep(0)}>Start eye walkthrough</Button></>}
           <p>{guide.limitation}</p>
         </details>}
-        <fieldset className="eye-layer-manual-controls" disabled={!!step} inert={!!step}>
+        <fieldset className="eye-layer-manual-controls" disabled={!!step} inert={!!step} hidden={!!step}>
         <legend className="sr-only">Manual eye dissection controls</legend>
         {educationLink.adapter && <ImagingLink link={educationLink} />}
         <div className="eye-layer-presets">
