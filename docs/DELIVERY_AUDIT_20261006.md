@@ -1,5 +1,36 @@
 # Website and Atlas delivery audit — 6 October 2026
 
+## Same-day safety follow-up
+
+- Atlas validation-only commit `aa4a92a` repairs the direct organ Anatomy epoch
+  and lazy-note callback selector. Original 392 pin/transition files, history
+  chain, runtime, teaching, models and Review bytes remain unchanged. Four
+  canonical phases pass, including 42 real note renders and 798 altered-source
+  refusals. This does not certify every historical suite or clinical acceptance.
+- The E-only receipt/audit candidate passes 56 native groups against the exact
+  committed schema. A separate 10-group run **reproduces**, rather than accepts,
+  the combined ignored-guard/seal defect, then proves an atomic first-receipt
+  main-schema trigger gate refuses that and a late-created trigger without writes
+  or access. Independent review accepts only the declared local profile. Neither
+  proposal is integrated; invitation self-enrolment remains false.
+- Added the [read-only audit-chain component](AUDIT_CHAIN_INTEGRITY.md). It uses
+  the actual production hash format and refuses altered, missing, reordered or
+  malformed supplied records. Complete target snapshot origin/data, cryptographic
+  authenticity and hosted readiness remain unproved. Independent review caught
+  iterator exception redaction and full-row encoding faults; regression evidence
+  is retained and both are repaired. The final focused 34 cases pass.
+- Eight [learner route contract checks](LEARNER_ROUTE_CONTRACT.md) compile the
+  actual handler and request-security helpers with explicit synthetic server
+  seams. Body identity/role/organisation keys cannot select another learner;
+  request refusals preserve the tested boundaries. This is not trusted-host or
+  signed-in-browser authentication evidence. The declared-header-only size
+  guard and advisory concurrent rate limiter remain separate hardening work.
+
+Next: trusted hosting/provisioning, actual target schema/ledger/data transition
+and cleared publication/version contract. Do not admit the pending fracture
+`0009` or enable invitations to bypass these gates. The broader priority order
+below remains unchanged; known local proofs are not real-account acceptance.
+
 This is an ordered engineering queue, not clinical acceptance or authority to
 publish. Website audit baseline: `c8f6cd2`; integrated Atlas source: `3954cf5`.
 Fifty unrelated pending website paths, including fracture migration `0009`, are
@@ -76,10 +107,10 @@ preserved and excluded from this checkpoint. The full existing goal remains inta
    restore; the raw Atlas upload remains held. A sanitised website backup is not
    a complete off-device authoring-source backup or a public deployment.
 
-The broader historical organ replay gate also retains a pre-existing right-lung
-Anatomy epoch mismatch. Exact-source evidence proves it predates this topic;
-preserve original pins and repair the projection before claiming broad historical
-acceptance. The focused current-topic, Review and build checks do not erase that debt.
+The pre-existing right-lung Anatomy epoch mismatch and separate lazy callback
+selection fault are now repaired in Atlas `aa4a92a` without changing original pins
+or the already-correct history chain. The full organ validator passes locally;
+other historical suites and clinical acceptance remain separate gates.
 
 Cloudflare guidance informed the versioned migration/ledger separation and
 read-only, fail-closed audit. No remote database, payment, email, scan, clinical
