@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
 
-const revision='44e3807503af91a2cc32c74651584eb2139dcfff';
+const revision='e3e292f234d4e9e9c96903a67703f9ec92678626';
 const targetId='vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta';
 const sha=(value:string|Buffer)=>createHash('sha256').update(value).digest('hex');
 

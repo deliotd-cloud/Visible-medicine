@@ -1,5 +1,41 @@
 # Website and Atlas delivery audit — 6 October 2026
 
+## Latest checkpoint: lumbar MRI drafts imported locally
+
+The private candidate now embeds Atlas `e3e292f234d4e9e9c96903a67703f9ec92678626`
+through the four generated modules and protected Review. Independent exact-Git
+verification covers all1,077 source/imported files. Actual old/new website
+helpers prove five MRI changes,9,931 other topics and1,099 other Review packets
+unchanged; five authentic prior MRI packets and15 forged packets refuse.
+All1,104 current packets remain unsigned and unapproved. Fifty fresh selected
+Review/delivery cases pass, including model return, admission/isolation,
+guided-learning recovery, camera, Spread, CSF and private schematic delivery.
+Current-manifest test pins advance only from verified bytes; immutable historical
+Git fixtures and clinical approval gates remain intact.
+
+All137 model payloads/144 paths, dependency and licence notices remain unchanged.
+The complete new inventory SHA is bound to `administrator-review`, with no
+approved revision or learner activation. The new nomenclature reference is a
+reading link, not a reusable commercial image/prose asset. No dependency, font,
+texture, dataset, patient image, new mesh or paid-service requirement is added.
+Superseded generated chunks have exact E recovery copies. The50 pending
+specialist paths and private plexus material remain preserved and excluded.
+
+The elbow historical-state conflict has an independently reviewed E-only
+terminal proposal covering its actual six-MRI/fourteen-clinical predecessor
+composition and50 focused refusals. It is **not integrated**; the full historical
+chain is still unaccepted. A no-catalog replay cannot independently verify the
+current display catalog. This limitation must not be broadened into acceptance.
+
+Priority remains: target admission/identity/publication safeguards; genuine
+revision-bound Clinical Review; major missing anatomy and a cleared 3D/imaging/
+lecture pilot; desktop account/device assurance; then sanitized restoration and
+operational release. All six release gates remain pending. Final local type/build
+and E recovery receipts are recorded in the current restart pointer; the local
+build includes pending specialist work and is not an isolated release build.
+No public deployment, default-branch mutation, D write, desktop clinical-PACS
+change, scan publication or clinical completion is authorized by this checkpoint.
+
 ## Same-day safety follow-up
 
 - Integrated [free/institution admission hardening](FREE_INSTITUTION_ATOMIC_ADMISSION.md)

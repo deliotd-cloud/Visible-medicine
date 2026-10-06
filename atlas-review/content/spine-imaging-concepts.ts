@@ -60,6 +60,7 @@ export const spineImagingReferences = {
   mrAnatomy: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/',
   sacralStudy: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9456416/',
   disc: 'https://orthoinfo.aaos.org/globalassets/pdfs/herniated-disk.pdf',
+  lumbarDiscNomenclature: 'https://radiology.queensu.ca/source/Lumbar_Disc_Nomenclature.pdf',
   adultUltrasound: 'https://www.aium.org/resources/official-statements/view/nonoperative-spinal-paraspinal-ultrasound-in-adults',
   ultrasoundBone: 'https://www.radiologyinfo.org/en/info/musculous',
   infantUltrasound: 'https://www.acr.org/-/media/ACR/Files/Practice-Parameters/US-NeonatalSpine.pdf',
@@ -313,13 +314,16 @@ export const spineImagingTopics: Record<
       'disc',
     ),
     mri: topic(
-      'Follow the lumbar disc in more than one plane and relate its posterior margin to the canal and foramina. Disc shape and nerve involvement are separate observations.',
+      'On acquired sagittal and axial MRI, confirm the lumbar disc level, then follow its posterior and lateral contour from the central canal through the subarticular zone (lateral recess) to the neural foramen and extraforaminal region. Describe the observed location separately from any neural finding.',
       [
-        'MRI can show disc and neural abnormalities; an imaging finding does not by itself establish the source of symptoms.',
-        'Whole-disc geometry has no segmented nucleus, annulus, cauda equina or exiting/traversing root to diagnose or simulate.',
+        'Compare adjacent sections and both planes: a central or subarticular finding and a foraminal or extraforaminal finding occupy different regions, even when they arise from the same disc.',
+        'As a regional principle, a subarticular finding may relate to a traversing root, while a foraminal or extraforaminal finding may relate to an exiting root. Confirm the patient level, side and actual root course; the source label cannot assign a root in a patient.',
+        'Consensus nomenclature separates a generalized disc bulge from localized herniation, with protrusion and extrusion describing herniation shapes. Apply those terms only to acquired images; neither morphology nor proximity alone establishes symptom causation.',
+        'This whole-disc mesh has no segmented annulus, nucleus, cauda equina or nerve roots, and supplies no MR signal, measured narrowing or patient registration.',
       ],
       'mri',
       'disc',
+      'lumbarDiscNomenclature',
     ),
     xray: topic(
       'Compare the indirect endplate-to-endplate interval, not an imagined visible nucleus. Lumbar radiographs cannot directly diagnose a herniated disc.',
