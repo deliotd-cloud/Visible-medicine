@@ -23,8 +23,8 @@
   actual handler and request-security helpers with explicit synthetic server
   seams. Body identity/role/organisation keys cannot select another learner;
   request refusals preserve the tested boundaries. This is not trusted-host or
-  signed-in-browser authentication evidence. The declared-header-only size
-  guard remains separate hardening work.
+  signed-in-browser authentication evidence. The measured stream parser and its
+  separate negative evidence are now integrated as described below.
 - Integrated the reviewed [atomic request throttle](ATOMIC_RATE_LIMIT.md),
   closing actual first-use/last-slot races and recovering expired historical
   over-limit counters. Eight current-function SQLite groups pass; the exact
@@ -32,8 +32,16 @@
   verified disposal. Learner/Studio/lecture now preserve limiter429 and known500
   privately; thirteen actual Studio/lecture cases complement the eleven learner
   cases. Auth/services are explicitly synthetic. Target data/triggers, full
-  bootstrap, six legacy API error boundaries and streamed JSON hardening remain
-  open. This is not an admission receipt, quota proof or invitation re-enablement.
+  bootstrap remain open. This is not an admission receipt, quota proof or
+  invitation re-enablement.
+- Integrated reviewed [mutation request boundaries](MUTATION_REQUEST_BOUNDARIES.md):
+  learner/Studio now measure streamed bytes, reject malformed/non-object/fatal
+  UTF-8 JSON and use exact JSON media type plus the existing origin policy.
+  Eighteen actual-source groups retain fifteen baseline negative probes. Six
+  other throttle routes now return private/no-store errors and type-only logs;
+  twenty-five groups retain eighteen baseline negative probes. Their known429
+  mapping was already correct. Auth/services remain synthetic; no target database,
+  real identity, invitation, anatomical or clinical gate is certified.
 
 Next: trusted hosting/provisioning, actual target schema/ledger/data transition
 and cleared publication/version contract. Do not admit the pending fracture

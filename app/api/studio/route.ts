@@ -16,6 +16,7 @@ import {
   submitCourseRelease,
 } from "@/lib/education-platform";
 import { enforceRateLimit, InstitutionOperationsError } from "@/lib/institution-operations";
+import { readBoundedMutationJson } from "@/lib/mutation-json";
 
 export const dynamic = "force-dynamic";
 
@@ -40,8 +41,12 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
-    if (Number(request.headers.get("content-length") ?? 0) > 48_000) throw new EducationPlatformError("The request is too large.", 413);
-    const input = await request.json() as Record<string, unknown>;
+    const input = await readBoundedMutationJson(request, {
+      maxBytes: 48_000,
+      error: (message, status) => new EducationPlatformError(message, status),
+      crossOriginMessage: "Cross-origin Studio changes are not allowed.",
+      jsonMessage: "Send Studio changes as JSON.",
+    });
     const action = typeof input.action === "string" ? input.action : "";
     const auth = await authenticate();
     await enforceRateLimit(auth.userId, "studio-write", 45, 60);

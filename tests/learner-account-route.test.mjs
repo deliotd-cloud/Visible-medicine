@@ -54,7 +54,7 @@ const stubs = {
     }`,
 };
 
-// Bundle the actual route and actual request-security helpers. Only the three
+// Bundle the actual route, streamed JSON parser and request-security helpers. Only the three
 // server seams above are replaced; unexpected imports must fail the build.
 const bundle = await build({
   entryPoints: [resolve(root, 'app/api/learner/account/route.ts')],
@@ -69,6 +69,8 @@ const bundle = await build({
       if (Object.hasOwn(stubs, args.path)) return { path: args.path, namespace: 'server-seam' };
       if (args.path === '@/lib/request-security')
         return { path: resolve(root, 'lib/request-security.ts') };
+      if (args.path === '@/lib/mutation-json')
+        return { path: resolve(root, 'lib/mutation-json.ts') };
       throw Error(`Unexpected route dependency: ${args.path}`);
     });
     plugin.onLoad({ filter: /.*/, namespace: 'server-seam' }, args => ({
@@ -79,6 +81,7 @@ const bundle = await build({
 const compiledInputs = Object.keys(bundle.metafile.inputs).map(path => path.replaceAll('\\', '/'));
 assert.ok(compiledInputs.some(path => /(?:^|\/)app\/api\/learner\/account\/route\.ts$/.test(path)));
 assert.ok(compiledInputs.some(path => /(?:^|\/)lib\/request-security\.ts$/.test(path)));
+assert.ok(compiledInputs.some(path => /(?:^|\/)lib\/mutation-json\.ts$/.test(path)));
 const { POST } = await import(`data:text/javascript;base64,${Buffer.from(bundle.outputFiles[0].text).toString('base64')}`);
 
 const serverAuth = Object.freeze({

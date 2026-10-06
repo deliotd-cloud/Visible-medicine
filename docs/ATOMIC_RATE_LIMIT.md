@@ -46,9 +46,12 @@ Learner, Studio and lecture return known limiter 429/500 privately without
 mutation; unexpected messages are hidden from their responses and logs. Exact
 preceding Studio/lecture sources reproduce their old 429-to-500 errors.
 Studio still parses before throttling; lecture throttles before its bounded
-parser. Learner/Studio stream-size and stricter JSON/security work is separate.
-Six other limiter routes retain legacy unexpected-error logging/cache-header
-debt; do not infer that every API boundary was hardened.
+parser. Learner/Studio now use a measured bounded JSON stream with exact media
+type and existing origin policy. Six remaining throttle error boundaries now
+use private/no-store refusals and type-only unexpected-error logs; 25 additional
+actual-route groups verify this without changing their action/auth/rate ordering.
+See [mutation request boundaries](MUTATION_REQUEST_BOUNDARIES.md) for scope and
+remaining parser/host-auth limits; not every API or known service message is audited.
 
 Cloudflare/Sites guidance informed local API/result verification and retained
 deployment boundaries. Current [D1 method documentation](https://developers.cloudflare.com/d1/worker-api/prepared-statements/)

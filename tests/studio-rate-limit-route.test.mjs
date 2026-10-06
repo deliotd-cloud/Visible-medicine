@@ -13,7 +13,7 @@ const require=createRequire(resolve(site,'package.json'));
 const {build}=require('esbuild');
 const paths={studio:'app/api/studio/route.ts',lecture:'app/api/studio/workbooks/[workbook_id]/lecture/route.ts'};
 const sources={};
-for(const path of [...Object.values(paths),'lib/lecture-api.ts','lib/request-security.ts']) {
+for(const path of [...Object.values(paths),'lib/lecture-api.ts','lib/request-security.ts',...(!baseline?['lib/mutation-json.ts']:[])]) {
  const bytes=baseline?execFileSync('git',['-C',site,'show',`7c46160:${path}`]):readFileSync(resolve(site,path));
  sources[path]=bytes.toString('utf8');
  if(!process.argv.includes('--snapshot'))console.log(JSON.stringify({source:path,baseline,sha256:createHash('sha256').update(bytes).digest('hex'),bytes:bytes.length}));
@@ -47,7 +47,7 @@ for(const [name,path]of Object.entries(paths)){
  const built=await build({entryPoints:[path],bundle:true,platform:'node',format:'cjs',write:false,logLevel:'silent',plugins:[{
   name:'explicit-synthetic-server-seams',setup(b){
    b.onResolve({filter:/.*/},args=>{
-    if(args.path==='test-seams')return{path:args.path,external:true};
+    if(args.path==='test-seams'&&args.namespace==='seam')return{path:args.path,external:true};
     const key=args.path.startsWith('@/')?args.path.slice(2):args.path.replace(/^\.\//,'');
     if(seamModules[key])return{path:key,namespace:'seam'};
     if(sources[key]||sources[`${key}.ts`])return{path:sources[key]?key:`${key}.ts`,namespace:'actual'};
@@ -60,12 +60,12 @@ for(const [name,path]of Object.entries(paths)){
  const module={exports:{}};
  new Function('module','exports','require',built.outputFiles[0].text)(module,module.exports,id=>{assert.equal(id,'test-seams');return seams;});
  routes[name]=module.exports;
- console.log(JSON.stringify({bundle:name,sha256:createHash('sha256').update(built.outputFiles[0].contents).digest('hex'),syntheticSeams:Object.keys(seamModules),actualHelpers:name==='lecture'?['lib/lecture-api.ts','lib/request-security.ts']:[]}));
+ console.log(JSON.stringify({bundle:name,sha256:createHash('sha256').update(built.outputFiles[0].contents).digest('hex'),syntheticSeams:Object.keys(seamModules),actualHelpers:name==='lecture'?['lib/lecture-api.ts','lib/request-security.ts']:baseline?[]:['lib/mutation-json.ts','lib/request-security.ts']}));
 }
 function reset(){state={auth,calls:[],reads:0};}
 function request(name,body='{"action":"create-course","userId":"body-forged"}',headers={}){
  const req=new Request('https://synthetic.invalid/api',{method:'POST',body,headers:{'content-type':'application/json',origin:'https://synthetic.invalid',...headers}});
- if(name==='studio'){const real=req.json.bind(req);req.json=async()=>{state.reads++;return real();};}
+ if(name==='studio'&&baseline){const real=req.json.bind(req);req.json=async()=>{state.reads++;return real();};}
  else{const reader=req.body.getReader.bind(req.body);req.body.getReader=()=>{state.reads++;return reader();};}
  return req;
 }
