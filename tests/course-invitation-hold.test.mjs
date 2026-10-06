@@ -15,7 +15,7 @@ globalThis.__courseInvitationHoldTestEnv=env;
 globalThis.__courseInvitationHoldTestAudits=[];
 const stubs={
  'cloudflare:workers':`export const env=globalThis.__courseInvitationHoldTestEnv;`,
- '@/db/bootstrap':`export async function ensureEducationUser(){return {status:'active',bootstrapDefaultOrganization:true};} export async function ensureDatabase(){} export async function appendAudit(...args){globalThis.__courseInvitationHoldTestAudits.push(args);}`,
+ '@/db/bootstrap':`export async function ensureEducationUser(){return {status:'active',identityProvider:'external-identity',localDemo:false,bootstrapDefaultOrganization:true};} export async function ensureDatabase(){} export async function appendAudit(...args){globalThis.__courseInvitationHoldTestAudits.push(args);throw Error('Separate enrolment audit must not execute');}`,
  '@/db/platform':`export async function ensurePlatformSchema(){} export async function getPlatformSnapshot(){throw Error('Unexpected platform snapshot');}`,
  '@/lib/domain':`export async function sha256(v){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v)))).map(x=>x.toString(16).padStart(2,'0')).join('');}`,
  '@/lib/studio-templates':`export function studioTemplate(){throw Error('Unexpected studio template');}`,
@@ -48,24 +48,25 @@ CREATE TABLE workbook_assignment_rules(assignment_id TEXT PRIMARY KEY,available_
 CREATE TABLE notification_outbox(id TEXT PRIMARY KEY,organization_id TEXT,recipient TEXT,template TEXT,payload_json TEXT,status TEXT,reason TEXT,created_at TEXT,sent_at TEXT);
 CREATE TABLE account_security_profiles(user_id TEXT PRIMARY KEY,status TEXT,identity_provider TEXT,terms_version TEXT,privacy_version TEXT,terms_accepted_at TEXT,privacy_accepted_at TEXT);
 CREATE TABLE learner_profiles(user_id TEXT PRIMARY KEY,onboarding_status TEXT,training_stage TEXT,discipline TEXT,interests_json TEXT,institution_name TEXT,country_code TEXT,timezone TEXT,marketing_opt_in INTEGER,updated_at TEXT);
+CREATE TABLE audit_events(id TEXT PRIMARY KEY,sequence INTEGER NOT NULL UNIQUE,actor_id TEXT NOT NULL,action TEXT NOT NULL,target_type TEXT NOT NULL,target_id TEXT NOT NULL,outcome TEXT NOT NULL,reason TEXT NOT NULL,occurred_at TEXT NOT NULL,integrity_hash TEXT NOT NULL);
 `;
-function fixture({uses=0,model='invitation',member=true,onAssignmentLookup}={}){
+function fixture({uses=0,model='invitation',member=true,beforeFirstBatch}={}){
  const sqlite=new DatabaseSync(':memory:');sqlite.exec(schema);
  sqlite.exec("INSERT INTO course_releases VALUES('release','course','published',1,'invitation','private','org','synthetic-course','Synthetic course');INSERT INTO modules VALUES('module','course');INSERT INTO workbooks VALUES('workbook','published','module');INSERT INTO course_release_workbooks VALUES('release','workbook',1);INSERT INTO workbook_cases VALUES('workbook','synthetic-case',1);");
  sqlite.prepare('UPDATE course_releases SET access_model=?,visibility=?').run(model,model==='free'?'public':'private');
  if(member)sqlite.exec("INSERT INTO organization_memberships VALUES('org','alpha','active');");
  sqlite.prepare('INSERT INTO course_invitations VALUES(?,?,?,?,?,?,?)').run('invite','release',createHash('sha256').update('SYNTHETIC').digest('hex'),'active',uses,1,'2099-01-01T00:00:00.000Z');
  for(const user of ['alpha','beta']){
-  sqlite.prepare('INSERT INTO account_security_profiles VALUES(?,?,?,?,?,?,?)').run(user,'active','synthetic','2026-08-31','2026-08-31','2026-01-01','2026-01-01');
+  sqlite.prepare('INSERT INTO account_security_profiles VALUES(?,?,?,?,?,?,?)').run(user,'active','external-identity','2026-08-31','2026-08-31','2026-01-01','2026-01-01');
   sqlite.prepare('INSERT INTO learner_profiles VALUES(?,?,?,?,?,?,?,?,?,?)').run(user,'complete','trainee','radiology','[]','Synthetic','GB','UTC',0,'2026-01-01');
  }
- const writes=[];let invitationLookups=0;
- env.DB={prepare(sql){return {bind(...values){return {
-  async first(){if(sql.startsWith('SELECT * FROM course_invitations')){invitationLookups++;throw Error('Held invitation reached lookup');}const result=sqlite.prepare(sql).get(...values)||null;if(sql.startsWith('SELECT id, version FROM workbook_assignments'))onAssignmentLookup?.(sqlite);return result;},
+ const writes=[];let invitationLookups=0,batchCalls=0;
+ env.DB={prepare(sql){const bind=(...values)=>({
+  async first(){if(sql.startsWith('SELECT * FROM course_invitations')){invitationLookups++;throw Error('Held invitation reached lookup');}return sqlite.prepare(sql).get(...values)||null;},
   async all(){return {results:sqlite.prepare(sql).all(...values)};},
   execute(){writes.push(sql);return {success:true,meta:{changes:Number(sqlite.prepare(sql).run(...values).changes)}};},
   async run(){return this.execute();}
- };}};},async batch(statements){sqlite.exec('BEGIN');try{const out=statements.map(s=>s.execute());sqlite.exec('COMMIT');return out;}catch(e){sqlite.exec('ROLLBACK');throw e;}}};
+ });return {bind,first:()=>bind().first(),all:()=>bind().all(),run:()=>bind().run()};},async batch(statements){if(++batchCalls===1)beforeFirstBatch?.(sqlite);sqlite.exec('BEGIN');try{const out=statements.map(s=>s.execute());sqlite.exec('COMMIT');return out;}catch(e){sqlite.exec('ROLLBACK');throw e;}}};
  globalThis.__courseInvitationHoldTestAudits=[];
  return {sqlite,writes,get invitationLookups(){return invitationLookups;},noGrants(){
   assert.equal(sqlite.prepare('SELECT COUNT(*) AS n FROM enrolments').get().n,0);
@@ -138,9 +139,9 @@ for(const model of ['free','institution'])for(const status of ['revoked','suspen
 for(const model of ['free','institution'])for(const [name,options,allowed]of [
  ['revoked with rules',{status:'revoked',expires:'2000-01-01',prerequisite:'required-workbook'},false],
  ['active without rules',{noRules:true},true],
-])test(`${model} preserves concurrent ${name} instructor allocation after empty lookup`,{concurrency:false},async()=>{
+])test(`${model} preserves concurrent ${name} instructor allocation before atomic batch`,{concurrency:false},async()=>{
  let protectedRows;
- const f=fixture({model,onAssignmentLookup(db){instructorAllocation(db,options);protectedRows={assignments:rows(db,'workbook_assignments'),rules:rows(db,'workbook_assignment_rules')};}});
+ const f=fixture({model,beforeFirstBatch(db){instructorAllocation(db,options);protectedRows={assignments:rows(db,'workbook_assignments'),rules:rows(db,'workbook_assignment_rules')};}});
  try{
   await enrolInCourse(auth('alpha'),'release');
   assert(protectedRows);assert.deepEqual(rows(f.sqlite,'workbook_assignments'),protectedRows.assignments);assert.deepEqual(rows(f.sqlite,'workbook_assignment_rules'),protectedRows.rules);

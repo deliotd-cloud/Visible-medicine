@@ -385,32 +385,133 @@ export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, 
   const existing = await env.DB.prepare(`SELECT id, status FROM enrolments WHERE user_id=? AND course_id=? ORDER BY enrolled_at LIMIT 1`).bind(auth.userId, String(release.course_id)).first<{ id: string; status: string }>();
   if (existing && existing.status !== "active")
     throw new EducationPlatformError("Your existing course enrolment requires instructor review before re-enrolment.", 409);
+  // Free/institution admission is one conditional batch. Invitations stay held.
+  if (accessModel === 'invitation') throw new EducationPlatformError(INVITATION_SELF_ENROLMENT_HOLD_MESSAGE, 409);
+  if (account.localDemo) throw new EducationPlatformError('A trusted account is required for enrolment.', 403);
+  const workbookRows = await env.DB.prepare(`SELECT crw.workbook_id FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id WHERE crw.release_id=? AND w.status='published' ORDER BY crw.position`).bind(releaseId).all<{workbook_id:string}>();
   const now = new Date().toISOString();
-  if (!existing)
-    await env.DB.prepare(`INSERT INTO enrolments (id, user_id, course_id, status, enrolled_at) VALUES (?, ?, ?, 'active', ?) ON CONFLICT(id) DO NOTHING`).bind(crypto.randomUUID(), auth.userId, String(release.course_id), now).run();
-  const workbookRows = await env.DB.prepare(`SELECT crw.workbook_id FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id WHERE crw.release_id=? AND w.status='published' ORDER BY crw.position`).bind(releaseId).all<{ workbook_id: string }>();
-  for (const row of workbookRows.results) {
-    const current = await env.DB.prepare(`SELECT id, version FROM workbook_assignments WHERE workbook_id=? AND learner_id=?`).bind(row.workbook_id, auth.userId).first<{ id: string; version: number }>();
-    // Self-enrolment must not revive or relax an existing instructor allocation.
-    if (current) continue;
-    const assignmentId = crypto.randomUUID();
-    await env.DB.batch([
-      env.DB.prepare(`INSERT INTO workbook_assignments (id, workbook_id, learner_id, status, assigned_by, assigned_at, due_at, revoked_at, version) VALUES (?, ?, ?, 'active', ?, ?, NULL, NULL, 1) ON CONFLICT(workbook_id, learner_id) DO NOTHING`).bind(assignmentId, row.workbook_id, auth.userId, auth.userId, now),
-      // A concurrent allocation may win the unique key. Only our fresh ID may get rules.
-      env.DB.prepare(`INSERT INTO workbook_assignment_rules (assignment_id, available_from, expires_at, prerequisite_workbook_id, prerequisite_min_percent, updated_at) SELECT id, ?, NULL, NULL, 100, ? FROM workbook_assignments WHERE id=? AND workbook_id=? AND learner_id=? ON CONFLICT(assignment_id) DO NOTHING`).bind(now, now, assignmentId, row.workbook_id, auth.userId),
-    ]);
+  const courseId = String(release.course_id);
+  const organizationId = String(release.organization_id);
+  const workbookIds = workbookRows.results.map((row) => row.workbook_id);
+  const workbookIdsJson = JSON.stringify(workbookIds);
+  const outboxId = `course-enrolment:${await sha256(JSON.stringify([releaseId,auth.userId,auth.email,String(release.slug)]))}`;
+  const outboxPayload = JSON.stringify({releaseId,courseSlug:String(release.slug)});
+  const auditReason = `access=${accessModel};workbooks=${workbookIds.length}`;
+  const triggerGate = `NOT EXISTS (SELECT 1 FROM sqlite_schema WHERE type='trigger' AND tbl_name IN
+    ('enrolments','workbook_assignments','workbook_assignment_rules','audit_events','notification_outbox'))`;
+  const admissionGate = `EXISTS (SELECT 1 FROM course_releases cr WHERE cr.id=? AND cr.course_id=? AND cr.organization_id=?
+      AND cr.status='published' AND cr.enrolment_open=1 AND cr.access_model=?
+      AND ((cr.access_model='free' AND cr.visibility='public') OR
+        (cr.access_model='institution' AND EXISTS (SELECT 1 FROM organization_memberships om
+          WHERE om.organization_id=cr.organization_id AND om.user_id=? AND om.status='active'))))
+    AND EXISTS (SELECT 1 FROM account_security_profiles asp JOIN learner_profiles lp ON lp.user_id=asp.user_id
+      WHERE asp.user_id=? AND asp.status='active' AND asp.identity_provider=?
+        AND asp.identity_provider NOT IN ('local-evaluation','seed-fixture')
+        AND lp.onboarding_status IS NOT NULL AND lp.onboarding_status<>'' AND lp.onboarding_status<>'not-started'
+        AND asp.terms_version=? AND asp.privacy_version=?
+        AND asp.terms_accepted_at IS NOT NULL AND asp.terms_accepted_at<>''
+        AND asp.privacy_accepted_at IS NOT NULL AND asp.privacy_accepted_at<>'')
+    AND EXISTS (SELECT 1 FROM enrolments e WHERE e.user_id=? AND e.course_id=? AND e.status='active')
+    AND NOT EXISTS (SELECT 1 FROM enrolments e WHERE e.user_id=? AND e.course_id=? AND e.status<>'active')
+    AND (SELECT COUNT(*) FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id
+      WHERE crw.release_id=? AND w.status='published')=?
+    AND NOT EXISTS (SELECT 1 FROM json_each(?) expected WHERE NOT EXISTS
+      (SELECT 1 FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id
+        WHERE crw.release_id=? AND crw.workbook_id=expected.value AND w.status='published'))
+    AND (SELECT COUNT(*) FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id
+      JOIN workbook_assignments wa ON wa.workbook_id=crw.workbook_id AND wa.learner_id=?
+      WHERE crw.release_id=? AND w.status='published')=?`;
+  const admissionValues=[releaseId,courseId,organizationId,accessModel,auth.userId,
+    auth.userId,account.identityProvider,CURRENT_TERMS_VERSION,CURRENT_PRIVACY_VERSION,
+    auth.userId,courseId,auth.userId,courseId,releaseId,workbookIds.length,
+    workbookIdsJson,releaseId,auth.userId,releaseId,workbookIds.length];
+  let committedAuditId:string|null=null;
+  for (let collision=0;collision<5 && !committedAuditId;collision+=1) {
+    const previous=await env.DB.prepare(`SELECT sequence, integrity_hash FROM audit_events ORDER BY sequence DESC LIMIT 1`).first<{sequence:number;integrity_hash:string}>();
+    const sequence=(previous?.sequence??0)+1;
+    const occurredAt=new Date().toISOString();
+    const auditId=crypto.randomUUID();
+    const assignmentRowsJson=JSON.stringify(workbookIds.map((workbookId)=>({id:crypto.randomUUID(),workbookId})));
+    const integrityHash=await sha256(`${previous?.integrity_hash??'GENESIS'}|${sequence}|${auth.userId}|course.self-enrolled|course-release|${releaseId}|success|${auditReason}|${occurredAt}`);
+    // Five statements regardless of workbook count: enrolment, assignments,
+    // own-ID rules, chain audit and held outbox. JSON is server-generated.
+    const statements=[
+      env.DB.prepare(`INSERT INTO enrolments (id,user_id,course_id,status,enrolled_at)
+        SELECT ?,?,?,'active',? WHERE ${triggerGate} AND NOT EXISTS
+          (SELECT 1 FROM enrolments WHERE user_id=? AND course_id=? AND status<>'active')
+        ON CONFLICT(user_id,course_id) DO NOTHING`).bind(crypto.randomUUID(),auth.userId,courseId,now,auth.userId,courseId),
+      env.DB.prepare(`INSERT INTO workbook_assignments
+        (id,workbook_id,learner_id,status,assigned_by,assigned_at,due_at,revoked_at,version)
+        SELECT json_extract(j.value,'$.id'),json_extract(j.value,'$.workbookId'),?,'active',?,?,NULL,NULL,1
+          FROM json_each(?) j JOIN course_release_workbooks crw
+            ON crw.release_id=? AND crw.workbook_id=json_extract(j.value,'$.workbookId')
+          JOIN workbooks w ON w.id=crw.workbook_id AND w.status='published'
+          WHERE ${triggerGate}
+        ON CONFLICT(workbook_id,learner_id) DO NOTHING`).bind(auth.userId,auth.userId,now,assignmentRowsJson,releaseId),
+      env.DB.prepare(`INSERT INTO workbook_assignment_rules
+        (assignment_id,available_from,expires_at,prerequisite_workbook_id,prerequisite_min_percent,updated_at)
+        SELECT wa.id,?,NULL,NULL,100,? FROM json_each(?) j
+          JOIN workbook_assignments wa ON wa.id=json_extract(j.value,'$.id')
+            AND wa.workbook_id=json_extract(j.value,'$.workbookId') AND wa.learner_id=?
+          WHERE ${triggerGate}
+        ON CONFLICT(assignment_id) DO NOTHING`).bind(now,now,assignmentRowsJson,auth.userId),
+    ];
+    const outboxGuard=`NOT EXISTS (SELECT 1 FROM notification_outbox no WHERE no.id=? AND NOT
+      (no.organization_id IS ? AND no.recipient IS ? AND no.template IS 'course-enrolment'
+        AND no.payload_json IS ? AND no.status IN ('held','sent')))`;
+    const headGuard=`(SELECT COUNT(*) FROM audit_events WHERE sequence=? AND integrity_hash=?)=?`;
+    statements.push(env.DB.prepare(`INSERT INTO audit_events
+      (id,sequence,actor_id,action,target_type,target_id,outcome,reason,occurred_at,integrity_hash)
+      VALUES (?, ?, ?, 'course.self-enrolled','course-release',?,'success',
+        CASE WHEN ${triggerGate} AND ${admissionGate}
+          AND NOT EXISTS (SELECT 1 FROM json_each(?) j
+            JOIN workbook_assignments wa ON wa.id=json_extract(j.value,'$.id')
+              AND wa.workbook_id=json_extract(j.value,'$.workbookId') AND wa.learner_id=?
+            WHERE NOT EXISTS (SELECT 1 FROM workbook_assignment_rules war WHERE war.assignment_id=wa.id))
+          AND ${outboxGuard} AND ${headGuard}
+          THEN ? ELSE NULL END, ?, ?)`)
+      .bind(auditId,sequence,auth.userId,releaseId,...admissionValues,assignmentRowsJson,auth.userId,
+        outboxId,organizationId,auth.email,outboxPayload,
+        previous?.sequence??0,previous?.integrity_hash??'GENESIS',previous?1:0,
+        auditReason,occurredAt,integrityHash));
+    statements.push(env.DB.prepare(`INSERT INTO notification_outbox
+      (id,organization_id,recipient,template,payload_json,status,reason,created_at,sent_at)
+      SELECT ?,?,?,'course-enrolment',?,'held','EMAIL_DELIVERY_PENDING',?,NULL
+      WHERE ${triggerGate} AND NOT EXISTS (SELECT 1 FROM notification_outbox WHERE id=?)`)
+      .bind(outboxId,organizationId,auth.email,outboxPayload,now,outboxId));
+    try { await env.DB.batch(statements); }
+    catch(error) {
+      const ownAudit=await env.DB.prepare(`SELECT id,sequence,integrity_hash,reason FROM audit_events WHERE id=?`).bind(auditId).first<{id:string;sequence:number;integrity_hash:string;reason:string}>();
+      if(ownAudit){
+        if(ownAudit.sequence!==sequence||ownAudit.integrity_hash!==integrityHash||ownAudit.reason!==auditReason)
+          throw new EducationPlatformError('Enrolment audit could not be verified.',409);
+        committedAuditId=auditId;break;
+      }
+      const current=await env.DB.prepare(`SELECT sequence,integrity_hash FROM audit_events ORDER BY sequence DESC LIMIT 1`).first<{sequence:number;integrity_hash:string}>();
+      if(collision===4||((current?.sequence??0)===(previous?.sequence??0)&&
+          (current?.integrity_hash??'GENESIS')===(previous?.integrity_hash??'GENESIS')))throw error;
+      continue;
+    }
+    const ownAudit=await env.DB.prepare(`SELECT id,sequence,integrity_hash,reason FROM audit_events WHERE id=?`).bind(auditId).first<{id:string;sequence:number;integrity_hash:string;reason:string}>();
+    if(!ownAudit||ownAudit.sequence!==sequence||ownAudit.integrity_hash!==integrityHash||ownAudit.reason!==auditReason)
+      throw new EducationPlatformError('Enrolment audit could not be verified.',409);
+    committedAuditId=auditId;
   }
-  if (invitationId) await env.DB.prepare(`UPDATE course_invitations SET uses=uses+1 WHERE id=? AND uses < max_uses`).bind(invitationId).run();
-  await appendAudit(auth.userId, "course.self-enrolled", "course-release", releaseId, "success", `access=${accessModel};workbooks=${workbookRows.results.length}`);
-  const outboxId = crypto.randomUUID();
-  const emailConfig = getEmailProviderConfig();
-  const coursePath = `/courses/${String(release.slug)}`;
-  const courseUrl = emailConfig.publicSiteUrl ? `${emailConfig.publicSiteUrl}${coursePath}` : coursePath;
-  const message = courseEnrolmentEmail({ courseTitle: String(release.title), courseUrl });
-  await env.DB.prepare(`INSERT INTO notification_outbox (id, organization_id, recipient, template, payload_json, status, reason, created_at, sent_at) VALUES (?, ?, ?, 'course-enrolment', ?, 'held', 'EMAIL_DELIVERY_PENDING', ?, NULL)`).bind(outboxId, String(release.organization_id), auth.email, JSON.stringify({ releaseId, courseSlug: String(release.slug) }), now).run();
-  const delivery = await sendTransactionalEmail({ to: auth.email, ...message });
-  await env.DB.prepare(`UPDATE notification_outbox SET status=?, reason=?, sent_at=? WHERE id=?`).bind(delivery.status, delivery.reason, delivery.sentAt, outboxId).run();
-  return { slug: String(release.slug), workbookId: workbookRows.results[0]?.workbook_id ?? null };
+  if(!committedAuditId)throw new EducationPlatformError('Enrolment could not be completed.',409);
+  const outbox=await env.DB.prepare(`SELECT organization_id,recipient,template,payload_json,status FROM notification_outbox WHERE id=?`).bind(outboxId).first<{organization_id:string;recipient:string;template:string;payload_json:string;status:string}>();
+  if(!outbox||outbox.organization_id!==organizationId||outbox.recipient!==auth.email||outbox.template!=='course-enrolment'||
+      outbox.payload_json!==outboxPayload||!['held','sent'].includes(outbox.status))
+    throw new EducationPlatformError('Enrolment notification could not be verified.',409);
+  if(outbox.status==='held'){
+    const emailConfig=getEmailProviderConfig();
+    const coursePath=`/courses/${String(release.slug)}`;
+    const courseUrl=emailConfig.publicSiteUrl?`${emailConfig.publicSiteUrl}${coursePath}`:coursePath;
+    const message=courseEnrolmentEmail({courseTitle:String(release.title),courseUrl});
+    const delivery=await sendTransactionalEmail({to:auth.email,...message});
+    await env.DB.prepare(`UPDATE notification_outbox SET status=?,reason=?,sent_at=? WHERE id=? AND status='held' AND ${triggerGate}`)
+      .bind(delivery.status==='sent'?'sent':'held',delivery.reason,delivery.sentAt,outboxId).run();
+  }
+  return {slug:String(release.slug),workbookId:workbookIds[0]??null};
 }
 
 export async function getLearnerEnrolments(auth: AuthContext) {

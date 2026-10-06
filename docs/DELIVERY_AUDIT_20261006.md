@@ -2,6 +2,21 @@
 
 ## Same-day safety follow-up
 
+- Integrated [free/institution admission hardening](FREE_INSTITUTION_ATOMIC_ADMISSION.md)
+  after exact-source partial-grant reproductions and retained V1/V2 failures.
+  Enrolment, allocations/rules, chain audit and held notification now use five
+  conditional statements; instructor restrictions, NULL-safe outbox identity,
+  nonempty consent and unsupported-trigger refusal are covered. Final E-only
+  V3 has65 SQLite checks;32 native D1 checks replay committed0000–0008, including
+  500 workbooks/five statements/36 maximum bindings. Canonical checks compile
+  actual source; native auth/services remain synthetic. Invitations stay false;
+  target data/identity/release/delivery and all six release gates remain open.
+- A five-lumbar-disc MRI teaching refinement is staged only. The actual app
+  helper/learner dispatch and strict rollback match five new/old lessons; all141
+  original spine hashes survive the focused rollback. Its full older history
+  chain separately fails at an existing aorta predecessor assertion. That
+  failure is retained, not weakened or converted to acceptance; no MRI draft,
+  source pin, model or clinical approval is imported by this website change.
 - Added a [supplied admission diagnostic](D1_TARGET_ADMISSION_PREFLIGHT.md):
   exact committed migration identities, captured schema/trigger drift and the
   bounded audit helper can now be compared in one read-only report. Every report
