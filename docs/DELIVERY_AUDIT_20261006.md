@@ -43,6 +43,12 @@
   mapping was already correct. Auth/services remain synthetic; no target database,
   real identity, invitation, anatomical or clinical gate is certified.
 
+- Added fifteen [actual authentication contract groups](AUTHENTICATION_CONTRACT.md)
+  with only header/navigation seams. Production refuses absent identity without
+  demo fallback; nonproduction retains the existing demo. External returns refuse;
+  same-origin reserved aliases remain an unverified dispatch gate. Source helpers
+  are unchanged. This is not upstream provenance, permissions or owner sign-off.
+
 Next: trusted hosting/provisioning, actual target schema/ledger/data transition
 and cleared publication/version contract. Do not admit the pending fracture
 `0009` or enable invitations to bypass these gates. The broader priority order
