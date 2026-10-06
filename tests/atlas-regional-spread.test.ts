@@ -9,7 +9,7 @@ import {withoutFootNotice} from './atlas-foot-notice-history.ts';
 import {withoutMidfootNotice} from './atlas-foot-ultrasound-notice-history.ts';
 import {withoutShoulderGirdleArterialNotice} from './atlas-shoulder-girdle-ultrasound-notice-history.ts';
 
-const revision='9b2003d75b9c27861befeaf253ce7d52cce497a6';
+const revision='3954cf5a8f7fff29bd2a253d586981d855d0fb29';
 const baseline='167c77f4da6ec16455093008dcacea250b0a6678';
 const json=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
 const old=(p:string)=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
@@ -236,13 +236,17 @@ test('Spread preserves all teaching and rejects stale root/nested geometry befor
  assert.equal(shoulder.modelHash,spreadShoulder.modelHash);
  assert.deepEqual(Object.keys(shoulder.sourceRevisions),Object.keys(spreadShoulder.sourceRevisions));
  // Preserve the exact pre-motion display milestone's original assertions.
- // The current shoulder callback safeguard is checked as a separate one-file
- // delta against this immutable saved host, not added to the historical list.
+ // Preserve the shoulder safeguard's original one-file delta at its saved
+ // website epoch. The later search vocabulary change is a separate delta.
  const savedDisplayShoulder=JSON.parse(execFileSync('git',['show','34594657e4e20d460921246f9d66a1a22bea5ba6:atlas-review/content/review-revisions.json'],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
  const previousDisplay=new Map<string,string>(spreadShoulder.display),currentDisplay=new Map<string,string>(savedDisplayShoulder.display);
  const liveDisplay=new Map<string,string>(shoulder.display);
+ const priorSearchShoulder=JSON.parse(execFileSync('git',['show','c8f6cd230fecd1009bd39f98a29bbf72bcb1202b:atlas-review/content/review-revisions.json'],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());
+ const priorSearchDisplay=new Map<string,string>(priorSearchShoulder.display);
  assert.deepEqual([...liveDisplay.keys()],[...currentDisplay.keys()]);
- assert.deepEqual([...liveDisplay].filter(([path,hash])=>currentDisplay.get(path)!==hash).map(([path])=>path),['app/shoulder-explorer.tsx']);
+ assert.deepEqual([...priorSearchDisplay].filter(([path,hash])=>currentDisplay.get(path)!==hash).map(([path])=>path),['app/shoulder-explorer.tsx']);
+ assert.deepEqual([...liveDisplay].filter(([path,hash])=>priorSearchDisplay.get(path)!==hash).map(([path])=>path),['lib/anatomy-search.ts']);
+ assert.equal(liveDisplay.get('lib/anatomy-search.ts'),sha(sourceAt('lib/anatomy-search.ts')),'Exact source-bound search vocabulary delta');
  assert.equal(liveDisplay.get('app/shoulder-explorer.tsx'),sha(sourceAt('app/shoulder-explorer.tsx')),'Exact current shoulder motion safeguard source');
  const expectedDisplayKeys=[...previousDisplay.keys()];
  expectedDisplayKeys.splice(expectedDisplayKeys.indexOf('app/scene-label-layer.css')+1,0,'lib/scene-label-size.ts','lib/scene-label-focus.ts');

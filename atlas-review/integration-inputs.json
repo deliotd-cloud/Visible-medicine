@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "9b2003d75b9c27861befeaf253ce7d52cce497a6",
-  "sha256": "cfd702be3a3f88b5539cf2666fd42fdd4e979905b329cb31d0073f287955f03a",
+  "sourceCommit": "3954cf5a8f7fff29bd2a253d586981d855d0fb29",
+  "sha256": "9cb8c1fbf02a7a16e2342006c414f4a617f0ae2c2e0ba397c73fcb4961b512b0",
   "inputs": [
     {
       "path": "app/workspace/atlas-review/body/page.tsx",
@@ -192,7 +192,7 @@
     },
     {
       "path": "atlas-review/app/dissection-controls.tsx",
-      "sha256": "3d6c9cf99c5219087104c2ec1f422358ffcea4b3d6d30a24f7da9edfabb6eea1"
+      "sha256": "b51fb422fdc1be16db475da8e852ca5e79ad37a9d3f470a4f22606936a37dba1"
     },
     {
       "path": "atlas-review/app/dissection-data.ts",
@@ -756,7 +756,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "b0b2674e030f63d655cb56df6547807a602b326984b231c402398fac65eebba7"
+      "sha256": "940577bf1c25056b96f7d775324f156dd716c1121b748a79b3b24613e9418101"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -808,7 +808,7 @@
     },
     {
       "path": "atlas-review/content/central-vessel-imaging.ts",
-      "sha256": "829915273c8d8f8f2b8fb064662d9cbf27d3cfa147701e00625f016fc830427a"
+      "sha256": "66478a879f11c5f81c0caea5c066b6d49aae4efc9dc92597cd496503972e1e82"
     },
     {
       "path": "atlas-review/content/cerebellar-mca-imaging-pins.json",
@@ -2324,7 +2324,7 @@
     },
     {
       "path": "atlas-review/lib/anatomy-search.ts",
-      "sha256": "a761621615a6ba52e8c9742b2d9771f4b3e71447b52229ad78f4883185fedca2"
+      "sha256": "e9398dc47500154d91f96f0974e95c8bf7c3a88a8423e3e05261a6d651606f4a"
     },
     {
       "path": "atlas-review/lib/anatomy-vessels.ts",
@@ -4396,7 +4396,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "75729568c5e5807fdce64e22526d3ee54648d57b4a10eefa2bb8553cab5b356c"
+      "sha256": "1a5d3a58fc890e0561bf974562a41e593ffeb48d21afe18f23cfe111327637a1"
     }
   ]
 }

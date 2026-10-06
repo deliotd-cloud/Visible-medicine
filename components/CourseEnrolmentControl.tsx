@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { INVITATION_SELF_ENROLMENT_ENABLED, INVITATION_SELF_ENROLMENT_HOLD_MESSAGE } from "@/lib/course-enrolment-policy";
 
 type Props = { releaseId: string; slug: string; accessModel: string; enrolled: boolean; firstWorkbookId: string | null; signedIn: boolean; profileComplete?: boolean; enrolmentOpen: boolean; invitationCode?: string };
 
@@ -11,6 +12,7 @@ export function CourseEnrolmentControl({ releaseId, slug, accessModel, enrolled,
   const [error, setError] = useState("");
   const learningHref = firstWorkbookId ? `/learn/${slug}/${encodeURIComponent(firstWorkbookId)}` : "/my-learning";
   if (enrolled) return <div className="course-enrolment-control"><Link className="primary-button" href={learningHref}>Continue course <span>→</span></Link><small>Available in My Learning</small></div>;
+  if (accessModel === "invitation" && !INVITATION_SELF_ENROLMENT_ENABLED) return <div className="course-enrolment-control"><button className="primary-button" disabled>Invitation enrolment unavailable</button><small>{INVITATION_SELF_ENROLMENT_HOLD_MESSAGE}</small></div>;
   if (!signedIn) return <div className="course-enrolment-control"><Link className="primary-button" href={`/join?course=${encodeURIComponent(slug)}`}>Create learner profile <span>→</span></Link><small>Sign in, complete your education profile and enrol.</small></div>;
   if (!profileComplete) return <div className="course-enrolment-control"><Link className="primary-button" href={`/onboarding?returnTo=${encodeURIComponent(`/courses/${slug}`)}`}>Complete learner profile <span>→</span></Link><small>Review your profile, education terms and privacy notice before enrolling.</small></div>;
   if (!enrolmentOpen) return <div className="course-enrolment-control"><button className="primary-button" disabled>Enrolment closed</button></div>;

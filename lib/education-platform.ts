@@ -1,4 +1,5 @@
 import { env } from "cloudflare:workers";
+import { INVITATION_SELF_ENROLMENT_ENABLED, INVITATION_SELF_ENROLMENT_HOLD_MESSAGE } from "@/lib/course-enrolment-policy";
 import { appendAudit, ensureDatabase, ensureEducationUser } from "@/db/bootstrap";
 import { ensurePlatformSchema, getPlatformSnapshot } from "@/db/platform";
 import type { AuthContext } from "@/lib/auth";
@@ -360,6 +361,8 @@ export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, 
   if (!release) throw new EducationPlatformError("This course release is not available.", 404);
   if (!Boolean(release.enrolment_open)) throw new EducationPlatformError("Enrolment is currently closed for this course.", 409);
   const accessModel = String(release.access_model);
+  if (accessModel === "invitation" && !INVITATION_SELF_ENROLMENT_ENABLED)
+    throw new EducationPlatformError(INVITATION_SELF_ENROLMENT_HOLD_MESSAGE, 409);
   if (String(release.visibility) === "private" && !new Set(["invitation", "institution"]).has(accessModel))
     throw new EducationPlatformError("Private releases require an invitation or active institution membership.", 403);
   let invitationId: string | null = null;

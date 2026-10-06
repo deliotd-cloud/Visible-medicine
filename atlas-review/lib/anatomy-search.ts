@@ -223,6 +223,7 @@ export function normalizeAnatomySearch(value: string): string {
 const searchWordForms = [
   ['colliculus', 'colliculi', 'collicular'],
   ['brachium', 'brachia'],
+  ['hilum', 'hila', 'hilar'],
 ] as const;
 const wordForms = new Map<string, readonly string[]>(
   searchWordForms.flatMap(group => group.map(word => [word, group] as const)),
