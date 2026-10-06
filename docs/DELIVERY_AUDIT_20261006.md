@@ -2,6 +2,18 @@
 
 ## Same-day safety follow-up
 
+- Added a [supplied admission diagnostic](D1_TARGET_ADMISSION_PREFLIGHT.md):
+  exact committed migration identities, captured schema/trigger drift and the
+  bounded audit helper can now be compared in one read-only report. Every report
+  retains target/production/invitation false. Expected and observed captures are
+  supplied, including unadmitted proposal tables; no authentic target, migration
+  or failure-atomic receipt integration is inferred.
+- Integrated [course-tab history](STUDIO_COURSE_HISTORY.md). Main review and the
+  isolated actual-router browser sample caught the prior proposal's app-owned
+  history notification defect; explicit local pane updates repair it. Back/
+  Forward, duplicate clicks, query/fragment/state, focus and a fixture draft are
+  covered locally. Real-account course routing/SSR hydration remain open.
+
 - Source `44e3807` includes the abdominal-aorta ultrasound refinement and its
   regenerated current Review display evidence. Only one topic and one current
   display pin change;9,935 other topics and1,103 other display pins stay exact.
@@ -127,9 +139,11 @@ preserved and excluded from this checkpoint. The full existing goal remains inta
    workflows already exist; test them with genuine accounts rather than rebuild
    them. Decide Back semantics for meaningful course/workbook navigation:
    `EducationRuntime` replaces history when selecting a workbook, not when
-   switching course-editor tabs. `StudioCourseEditor` currently stores its tab
-   in component state with no URL/history restoration; a bounded E-only push/
-   Back/Forward proposal passes four synthetic cases but is not integrated.
+   switching course-editor tabs. `StudioCourseEditor` now binds its local pane
+   to URL/history with a guarded native push and explicit local update, plus
+   course/search/popstate restoration. Focused tests and an isolated actual-router
+   browser sample cover this narrow interaction; genuine course-route/hydration
+   and wider authoring acceptance remain open.
    Draft outlines currently order
    by module position then workbook title; persisted author sequence needs a
    reviewed schema change. Verify keyboard focus, representative devices,

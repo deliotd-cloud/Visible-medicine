@@ -53,6 +53,7 @@ test('course editor opens on Content with Preview and Review hidden', () => {
   const forms = formModule();
   const { StudioCourseEditor } = compile('components/StudioCourseEditor.tsx', {
     'next/link': Link,
+    'next/navigation': { useSearchParams: () => null },
     './StudioForms': forms,
   });
   const html = renderToStaticMarkup(React.createElement(StudioCourseEditor, { course, workbooks: [workbook], releases: [release] }));
@@ -66,6 +67,7 @@ test('outline and release preview links encode exact identifiers', () => {
   const forms = formModule();
   const { StudioCourseEditor } = compile('components/StudioCourseEditor.tsx', {
     'next/link': Link,
+    'next/navigation': { useSearchParams: () => null },
     './StudioForms': forms,
   });
   const html = renderToStaticMarkup(React.createElement(StudioCourseEditor, { course, workbooks: [workbook], releases: [release] }));
@@ -77,6 +79,7 @@ test('an empty course cannot render release settings', () => {
   const forms = formModule();
   const { StudioCourseEditor } = compile('components/StudioCourseEditor.tsx', {
     'next/link': Link,
+    'next/navigation': { useSearchParams: () => null },
     './StudioForms': forms,
   });
   const html = renderToStaticMarkup(React.createElement(StudioCourseEditor, { course: { ...course, workbookCount: 0 }, workbooks: [], releases: [] }));

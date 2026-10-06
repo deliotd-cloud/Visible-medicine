@@ -1,16 +1,39 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import type { StudioCourse, StudioRelease, StudioWorkbook } from "@/lib/education-platform";
 import { CreateWorkbookForm, DuplicateCourseButton, ReleaseDraftForm } from "./StudioForms";
 
+type CoursePane = "content" | "preview" | "review";
+
+function paneFromValue(value: string | null): CoursePane {
+  return value === "preview" || value === "review" ? value : "content";
+}
+
 export function StudioCourseEditor({ course, workbooks, releases }: { course: StudioCourse; workbooks: StudioWorkbook[]; releases: StudioRelease[] }) {
-  const [section, setSection] = useState<"content" | "preview" | "review">("content");
+  const searchParams = useSearchParams();
+  const searchKey = searchParams?.toString() ?? "";
+  const [section, setSection] = useState<CoursePane>(() => paneFromValue(searchParams?.get("pane") ?? null));
+  useEffect(() => {
+    const restore = () => setSection(paneFromValue(new URLSearchParams(window.location.search).get("pane")));
+    restore();
+    window.addEventListener("popstate", restore);
+    return () => window.removeEventListener("popstate", restore);
+  }, [course.id, searchKey]);
+  function choosePane(next: CoursePane) {
+    const url = new URL(window.location.href);
+    if (paneFromValue(url.searchParams.get("pane")) !== next) {
+      url.searchParams.set("pane", next);
+      window.history.pushState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
+    }
+    setSection(next);
+  }
   const draftRelease = releases.find((release) => ["draft", "changes-requested"].includes(release.status));
   return <section className="course-editor">
     <nav className="course-editor-tabs" aria-label="Course editor">
-      {([['content', 'Content'], ['preview', 'Preview'], ['review', 'Review & publish']] as const).map(([value, label]) => <button type="button" aria-pressed={section === value} aria-controls={`course-${value}`} onClick={() => setSection(value)} key={value}>{label}</button>)}
+      {([['content', 'Content'], ['preview', 'Preview'], ['review', 'Review & publish']] as const).map(([value, label]) => <button type="button" aria-pressed={section === value} aria-controls={`course-${value}`} onClick={() => choosePane(value)} key={value}>{label}</button>)}
       <details className="course-options"><summary>Course options</summary><DuplicateCourseButton courseId={course.id} /><p>Duplicates contain structure only, never learner attempts or publication history.</p></details>
     </nav>
     <div id="course-content" hidden={section !== "content"}>
