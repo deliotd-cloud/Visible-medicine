@@ -1,5 +1,5 @@
 {
-  "revision": "3954cf5a8f7fff29bd2a253d586981d855d0fb29",
+  "revision": "44e3807503af91a2cc32c74651584eb2139dcfff",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -563,8 +563,8 @@
     },
     {
       "path": "content/central-vessel-imaging.ts",
-      "sourceSha256": "66478a879f11c5f81c0caea5c066b6d49aae4efc9dc92597cd496503972e1e82",
-      "importedSha256": "66478a879f11c5f81c0caea5c066b6d49aae4efc9dc92597cd496503972e1e82"
+      "sourceSha256": "a28ba4dafcc0a807dfb15f22e3b1482f90d60aece3ca7b1ea958a8e3c515c89f",
+      "importedSha256": "a28ba4dafcc0a807dfb15f22e3b1482f90d60aece3ca7b1ea958a8e3c515c89f"
     },
     {
       "path": "lib/shoulder-girdle-arterial-ultrasound.ts",
@@ -3478,8 +3478,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "14cfa8b2a133081be1ad076581b0c0f59438bef5fe53b827629119fb4ba39672",
-      "importedSha256": "3797b815314067934dd9b34080c2b46e7b009cf27340b083ebb1c16c5007b6b1"
+      "sourceSha256": "75ae570e977561140c45e7e312a23fd2f3c87cdd9c68792c83f218161fba6888",
+      "importedSha256": "6459d0b15e102e2cd6a14bc46a6cae3eda1c51b7a1ba3e16796148dd99809194"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -3889,7 +3889,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "71a6ba5f7a8c584ba3df82a6a57925a1287da3d4c07cdfbdc248d3dc27e36492",
-      "importedSha256": "8a7abe4b4a3088ba96cea8d3e7f136d0726b65501788e46c071749ea1d820a8a"
+      "importedSha256": "e51d7455a268667cd8d5e427b8585f868017c2630ab6238971696837f5ea6e79"
     },
     {
       "path": "app/review/review.css",
@@ -3923,8 +3923,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "940577bf1c25056b96f7d775324f156dd716c1121b748a79b3b24613e9418101",
-      "importedSha256": "940577bf1c25056b96f7d775324f156dd716c1121b748a79b3b24613e9418101"
+      "sourceSha256": "beee6d0559bc7ea226f4a1398566fbd8413eb00775956482fa5af524f46e0e6e",
+      "importedSha256": "beee6d0559bc7ea226f4a1398566fbd8413eb00775956482fa5af524f46e0e6e"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -5403,5 +5403,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "9cb8c1fbf02a7a16e2342006c414f4a617f0ae2c2e0ba397c73fcb4961b512b0"
+  "websiteIntegrationSha256": "369960d979d5eff509ac4083e0754eaca127630a41a6215de92f444aa57169f9"
 }

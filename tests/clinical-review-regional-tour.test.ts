@@ -8,7 +8,7 @@ test('historical 77ac milestone: all thirty regional tours retain complete sourc
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
   const base='public/atlas-runtime/head-neck/';
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'3954cf5a8f7fff29bd2a253d586981d855d0fb29');
+  assert.equal(learner.sourceCommit,'44e3807503af91a2cc32c74651584eb2139dcfff');
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   for(const path of ['lib/hand-venous-tours.ts','lib/lower-venous-tour.ts','lib/regional-tours.ts','lib/tarsal-tour.ts','lib/upper-limb-bone-tour.ts','lib/chest-wall-tour.ts','lib/orbital-tour.ts','lib/intrinsic-larynx-tour.ts','lib/male-duct-tour.ts','lib/deep-brain-tour.ts','lib/subscapular-tour.ts','app/regional-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx']) {
     const file=review.files.find((f:any)=>f.path===path); assert.ok(file,path);
@@ -289,7 +289,8 @@ test('regional learner and review retain compact guided teaching and reading pau
   const player=readFileSync('atlas-review/app/regional-guided-learning.tsx','utf8');
   assert.ok(player.includes("setExplanationOpen(!window.matchMedia('(max-width: 600px)').matches)"));
   assert.ok(player.includes('<details className="regional-tour-explanation" open={explanationOpen}'));
-  assert.ok(player.includes('if(open){setPlaying(false);setMotionPaused(true);}'));
+  assert.ok(player.includes('const revokePlayback=useCallback(()=>{playbackEpoch.current++;setPlaying(false);setMotionPaused(true);},[])'));
+  assert.ok(player.includes('const open=event.currentTarget.open;setExplanationOpen(open);\n        if(open)revokePlayback();'));
   const css=readFileSync('atlas-review/app/regional-guided-learning.css','utf8');
   assert.ok(css.includes('[data-shared-header="true"][data-guided-learning="true"]>.region-heading-compact'));
 });
@@ -303,7 +304,7 @@ test('all structure-check hosts deliver the corrected success/retry component',(
     const base=`public/atlas-runtime/${module}/`;
     const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
     const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
-    assert.equal(manifest.sourceCommit,'3954cf5a8f7fff29bd2a253d586981d855d0fb29');
+    assert.equal(manifest.sourceCommit,'44e3807503af91a2cc32c74651584eb2139dcfff');
     assert.equal(inputs.find((f:any)=>f.path===path)?.sha256,review.files.find((f:any)=>f.path===path)?.sourceSha256);
     const js=manifest.files.filter((f:any)=>f.path.endsWith('.js')).map((f:any)=>readFileSync(base+f.path,'utf8')).join('\n');
     for(const text of ['Practise again','Try again','Correct.','Incorrect.']) assert.ok(js.includes(text),module+': '+text);

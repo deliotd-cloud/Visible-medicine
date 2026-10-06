@@ -9,8 +9,8 @@ test('regional and whole-body learners deliver the verified source-bound tour re
   const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
-  assert.equal(learner.sourceCommit,'3954cf5a8f7fff29bd2a253d586981d855d0fb29');
-  assert.equal(review.revision,'3954cf5a8f7fff29bd2a253d586981d855d0fb29');
+  assert.equal(learner.sourceCommit,'44e3807503af91a2cc32c74651584eb2139dcfff');
+  assert.equal(review.revision,'44e3807503af91a2cc32c74651584eb2139dcfff');
   // motion-safety-old-player:start
   const oldManifest=JSON.parse(execFileSync('git',['show','a0df5f3d4df65f6d45ea6e6d71d6a196c22b51ef:atlas-review/manifest.json'],
     {maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).toString());

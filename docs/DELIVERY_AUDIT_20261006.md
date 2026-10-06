@@ -2,6 +2,15 @@
 
 ## Same-day safety follow-up
 
+- Source `44e3807` includes the abdominal-aorta ultrasound refinement and its
+  regenerated current Review display evidence. Only one topic and one current
+  display pin change;9,935 other topics and1,103 other display pins stay exact.
+  The website pipeline imports four generated modules and protected Review,
+  preserving137 model payloads/notices and50 pending specialist paths. The
+  original stale-pin rejection is retained as a failure, not relabelled a pass.
+  Actual source direct/JSON acceptance covers all1,104 worksheets; no approval
+  migrates. Final website validation and saved evidence remain distinct from
+  clinical/real-account/browser acceptance; see the current restart pointer.
 - Atlas validation-only commit `aa4a92a` repairs the direct organ Anatomy epoch
   and lazy-note callback selector. Original 392 pin/transition files, history
   chain, runtime, teaching, models and Review bytes remain unchanged. Four
@@ -117,7 +126,11 @@ preserved and excluded from this checkpoint. The full existing goal remains inta
 4. **Desktop learning and authoring acceptance.** Studio/course/workbook/review
    workflows already exist; test them with genuine accounts rather than rebuild
    them. Decide Back semantics for meaningful course/workbook navigation:
-   `EducationRuntime` currently replaces history. Draft outlines currently order
+   `EducationRuntime` replaces history when selecting a workbook, not when
+   switching course-editor tabs. `StudioCourseEditor` currently stores its tab
+   in component state with no URL/history restoration; a bounded E-only push/
+   Back/Forward proposal passes four synthetic cases but is not integrated.
+   Draft outlines currently order
    by module position then workbook title; persisted author sequence needs a
    reviewed schema change. Verify keyboard focus, representative devices,
    actual 200% browser zoom, screen readers and measured load/memory/frame rate.

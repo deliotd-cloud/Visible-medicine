@@ -3,6 +3,8 @@ export const centralVesselImagingReferences={
   aortaCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC5329815/',
   aortaMRI:'https://pmc.ncbi.nlm.nih.gov/articles/PMC3874367/',
   aortaEcho:'https://pmc.ncbi.nlm.nih.gov/articles/PMC9876736/',
+  aortaAiumUS:'https://onlinelibrary.wiley.com/doi/10.1002/jum.70167',
+  aortaNhsScreen:'https://www.gov.uk/government/publications/aaa-screening-standard-operating-procedures/aaa-screening-programme-guidance',
   aortaMeasure:'https://pmc.ncbi.nlm.nih.gov/articles/PMC11656620/',
   systemicMR:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10156895/',
   azygosCT:'https://pmc.ncbi.nlm.nih.gov/articles/PMC10864146/',
@@ -95,7 +97,7 @@ export const centralVesselImagingGroups:Record<string,Group>={
   'abdominal-aorta':{fmaId:'FMA3789',region:'abdomen',laterality:'midline',focus:{
     ct:fact('Follow the aorta from the hiatus to the iliac bifurcation, locating visceral and renal origins. Review true cross-sections rather than an oblique diameter.','The donor outline is not a patient calibre reference or aneurysm measurement.','aortaMeasure'),
     mri:fact('Relate the abdominal lumen and branch origins across acquired angiographic source images. Contrast-enhanced and noncontrast techniques have different signal behaviour.','Missing signal on one sequence does not prove an absent branch.','visceralMR'),
-    ultrasound:fact('Survey the aorta longitudinally and transversely, retaining a consistent measurement convention and identifying the bifurcation where visible.','Gas or obliquity can hide or distort segments; document incomplete coverage.','aortaEcho'),
+    ultrasound:fact('On an acquired abdominal aortic ultrasound, identify proximal, mid and distal segments in longitudinal and transverse planes where visible. Diagnostic AIUM/ACR/SRU measurements use the greatest outer-wall-to-outer-wall diameter; the NHS England AAA screening programme records maximal anteroposterior inner-to-inner diameters in longitudinal and transverse views. State which protocol and caliper convention produced a measurement.','Tortuosity or an oblique plane can exaggerate apparent calibre, and bowel gas or depth may leave a segment unseen. Do not compare outer-to-outer and inner-to-inner values as interchangeable serial measurements. This donor mesh supplies no wall thickness, calibrated diameter, acoustic window, patient correspondence or screening result.','aortaAiumUS','aortaNhsScreen'),
   }},
   'inferior-cava':{fmaId:'FMA10951',region:'abdomen',laterality:'unspecified',focus:{
     ct:fact('Follow iliac venous confluence, renal inflow and the retrohepatic IVC. Compare apparent defects with the enhancement pattern across available phases.','Enhanced renal inflow mixing with less opacified blood can mimic thrombus.','ivc'),
