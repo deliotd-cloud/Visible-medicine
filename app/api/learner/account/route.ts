@@ -6,15 +6,17 @@ import {
   getLearnerProfile,
   saveLearnerProfile,
 } from "@/lib/education-platform";
-import { enforceRateLimit } from "@/lib/institution-operations";
+import { enforceRateLimit, InstitutionOperationsError } from "@/lib/institution-operations";
 import { isJsonRequest, isSameOriginMutation } from "@/lib/request-security";
 
 export const dynamic = "force-dynamic";
 
 function failure(error: unknown) {
-  if (error instanceof EducationPlatformError) return Response.json({ error: error.message }, { status: error.status });
-  console.error("Visible Medicine learner account error", error);
-  return Response.json({ error: "The learner account service could not complete this request." }, { status: 500 });
+  const headers = { "Cache-Control": "private, no-store" };
+  if (error instanceof EducationPlatformError || error instanceof InstitutionOperationsError)
+    return Response.json({ error: error.message }, { status: error.status, headers });
+  console.error("Visible Medicine learner account error", { type: error instanceof Error ? error.name : "unknown" });
+  return Response.json({ error: "The learner account service could not complete this request." }, { status: 500, headers });
 }
 
 async function authenticate() {

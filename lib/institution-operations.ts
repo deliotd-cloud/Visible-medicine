@@ -37,18 +37,37 @@ async function requireAdministrator(auth: AuthContext) {
 }
 
 export async function enforceRateLimit(actor: string, scope: string, limit = 30, windowSeconds = 60) {
+  if (!Number.isSafeInteger(limit) || limit < 1 || !Number.isSafeInteger(windowSeconds) || windowSeconds < 1 || !Number.isSafeInteger(windowSeconds * 1000))
+    throw new InstitutionOperationsError("Rate limit configuration is invalid.", 500);
   await ensurePlatformSchema();
   const bucketKey = `${scope}:${actor}`.slice(0, 220);
   const now = Date.now();
-  const row = await env.DB.prepare(`SELECT window_start, count FROM api_rate_limits WHERE bucket_key = ?`).bind(bucketKey).first<{ window_start: string; count: number }>();
-  const windowStart = row ? new Date(row.window_start).getTime() : 0;
-  if (!row || !Number.isFinite(windowStart) || now - windowStart >= windowSeconds * 1000) {
-    const iso = new Date(now).toISOString();
-    await env.DB.prepare(`INSERT INTO api_rate_limits (bucket_key, window_start, count, updated_at) VALUES (?, ?, 1, ?) ON CONFLICT(bucket_key) DO UPDATE SET window_start=excluded.window_start, count=1, updated_at=excluded.updated_at`).bind(bucketKey, iso, iso).run();
-    return;
-  }
-  if (Number(row.count) >= limit) throw new InstitutionOperationsError("Too many requests. Please wait and try again.", 429);
-  await env.DB.prepare(`UPDATE api_rate_limits SET count=count+1, updated_at=? WHERE bucket_key=?`).bind(new Date(now).toISOString(), bucketKey).run();
+  const iso = new Date(now).toISOString();
+  const cutoff = new Date(now - windowSeconds * 1000).toISOString();
+  // One write decides insert, expired reset, or live increment. An expired
+  // canonical row may carry zero or an over-limit count from historical races.
+  // A live row must be positive and below limit. RETURNING is the admission
+  // receipt; no returned row means the request was refused.
+  const result = await env.DB.prepare(`
+    INSERT INTO api_rate_limits (bucket_key, window_start, count, updated_at)
+    VALUES (?, ?, 1, ?)
+    ON CONFLICT(bucket_key) DO UPDATE SET
+      window_start = CASE WHEN api_rate_limits.window_start <= ? THEN excluded.window_start ELSE api_rate_limits.window_start END,
+      count = CASE WHEN api_rate_limits.window_start <= ? THEN 1 ELSE api_rate_limits.count + 1 END,
+      updated_at = excluded.updated_at
+    WHERE typeof(api_rate_limits.count) = 'integer'
+      AND api_rate_limits.count BETWEEN 0 AND 9007199254740991
+      AND api_rate_limits.window_start = strftime('%Y-%m-%dT%H:%M:%fZ', api_rate_limits.window_start)
+      AND api_rate_limits.window_start <= ?
+      AND (api_rate_limits.window_start <= ? OR (api_rate_limits.count >= 1 AND api_rate_limits.count < ?))
+    RETURNING count, window_start
+  `).bind(bucketKey, iso, iso, cutoff, cutoff, iso, cutoff, limit).all<{ count: number; window_start: string }>();
+  if (!result.success || !Array.isArray(result.results))
+    throw new InstitutionOperationsError("The request limit could not be checked.", 500);
+  if (result.results.length === 0)
+    throw new InstitutionOperationsError("Too many requests. Please wait and try again.", 429);
+  if (result.results.length !== 1 || !Number.isSafeInteger(result.results[0].count) || result.results[0].count < 1 || result.results[0].count > limit)
+    throw new InstitutionOperationsError("The request limit could not be checked.", 500);
 }
 
 export async function submitPilotApplication(auth: AuthContext | null, input: Record<string, unknown>) {

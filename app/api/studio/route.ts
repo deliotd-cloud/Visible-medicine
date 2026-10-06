@@ -15,14 +15,16 @@ import {
   saveCourseReleaseDraft,
   submitCourseRelease,
 } from "@/lib/education-platform";
-import { enforceRateLimit } from "@/lib/institution-operations";
+import { enforceRateLimit, InstitutionOperationsError } from "@/lib/institution-operations";
 
 export const dynamic = "force-dynamic";
 
 function failure(error: unknown) {
-  if (error instanceof EducationPlatformError) return Response.json({ error: error.message }, { status: error.status });
-  console.error("Visible Medicine Studio API error", error);
-  return Response.json({ error: "Studio could not complete this request." }, { status: 500 });
+  const headers = { "Cache-Control": "private, no-store" };
+  if (error instanceof EducationPlatformError || error instanceof InstitutionOperationsError)
+    return Response.json({ error: error.message }, { status: error.status, headers });
+  console.error("Visible Medicine Studio API error", { type: error instanceof Error ? error.name : "unknown" });
+  return Response.json({ error: "Studio could not complete this request." }, { status: 500, headers });
 }
 
 async function authenticate() {

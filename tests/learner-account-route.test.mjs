@@ -21,6 +21,8 @@ const fixture = {
   rateLimits: [],
   enrolment: { id: 'synthetic-enrolment' },
   denial: null,
+  rateDenial: null,
+  rateFailure: null,
 };
 globalThis.__learnerAccountRouteFixture = fixture;
 
@@ -40,7 +42,16 @@ const stubs = {
     export async function getLearnerProfile(){throw Error('Unexpected GET service call');}
     export async function saveLearnerProfile(){throw Error('Unexpected profile write');}
   `,
-  '@/lib/institution-operations': `export async function enforceRateLimit(...args){globalThis.__learnerAccountRouteFixture.rateLimits.push(args);}`,
+  '@/lib/institution-operations': `
+    export class InstitutionOperationsError extends Error {
+      constructor(message,status=422){super(message);this.status=status;}
+    }
+    export async function enforceRateLimit(...args){
+      const fixture=globalThis.__learnerAccountRouteFixture;
+      fixture.rateLimits.push(args);
+      if(fixture.rateDenial)throw new InstitutionOperationsError(fixture.rateDenial.message,fixture.rateDenial.status);
+      if(fixture.rateFailure)throw fixture.rateFailure;
+    }`,
 };
 
 // Bundle the actual route and actual request-security helpers. Only the three
@@ -100,10 +111,13 @@ function reset(auth = serverAuth) {
   fixture.calls.length = 0;
   fixture.rateLimits.length = 0;
   fixture.denial = null;
+  fixture.rateDenial = null;
+  fixture.rateFailure = null;
 }
 
 async function assertRefusal(response, status, pattern, { rateLimit = false, authenticate = false } = {}) {
   assert.equal(response.status, status);
+  assert.equal(response.headers.get('cache-control'), 'private, no-store');
   assert.match((await response.json()).error, pattern);
   assert.equal(fixture.calls.length, 0, 'refused request must not reach enrolment service');
   assert.equal(fixture.rateLimits.length, rateLimit ? 1 : 0);
@@ -161,9 +175,31 @@ test('service denial is returned without a successful enrolment payload', async 
   fixture.denial = { message: 'Synthetic admission refusal.', status: 409 };
   const response = await POST(request());
   assert.equal(response.status, 409);
+  assert.equal(response.headers.get('cache-control'), 'private, no-store');
   assert.deepEqual(await response.json(), { error: 'Synthetic admission refusal.' });
   assert.equal(fixture.calls.length, 1);
   assert.strictEqual(fixture.calls[0][0], serverAuth);
   assert.equal(fixture.rateLimits.length, 1);
   assert.equal(fixture.authCalls, 1);
+});
+
+test('rate-limit 429 is returned privately before enrolment', async () => {
+  reset();
+  fixture.rateDenial={message:'Too many requests. Please wait and try again.',status:429};
+  await assertRefusal(await POST(request()),429,/Too many requests/,{rateLimit:true,authenticate:true});
+});
+
+test('known limiter failure returns its 500 without invoking enrolment', async () => {
+  reset();
+  fixture.rateDenial={message:'The request limit could not be checked.',status:500};
+  await assertRefusal(await POST(request()),500,/request limit could not be checked/,{rateLimit:true,authenticate:true});
+});
+
+test('unexpected limiter failure hides its message in response and log', async () => {
+  reset(); fixture.rateFailure=new Error('synthetic private database detail');
+  const realError=console.error,logs=[];console.error=(...args)=>logs.push(args);
+  try {
+    await assertRefusal(await POST(request()),500,/learner account service/,{rateLimit:true,authenticate:true});
+  }finally{console.error=realError;}
+  assert.deepEqual(logs,[['Visible Medicine learner account error',{type:'Error'}]]);
 });

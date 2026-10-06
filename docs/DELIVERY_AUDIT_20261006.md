@@ -19,12 +19,21 @@
   authenticity and hosted readiness remain unproved. Independent review caught
   iterator exception redaction and full-row encoding faults; regression evidence
   is retained and both are repaired. The final focused 34 cases pass.
-- Eight [learner route contract checks](LEARNER_ROUTE_CONTRACT.md) compile the
+- Eleven [learner route contract checks](LEARNER_ROUTE_CONTRACT.md) compile the
   actual handler and request-security helpers with explicit synthetic server
   seams. Body identity/role/organisation keys cannot select another learner;
   request refusals preserve the tested boundaries. This is not trusted-host or
   signed-in-browser authentication evidence. The declared-header-only size
-  guard and advisory concurrent rate limiter remain separate hardening work.
+  guard remains separate hardening work.
+- Integrated the reviewed [atomic request throttle](ATOMIC_RATE_LIMIT.md),
+  closing actual first-use/last-slot races and recovering expired historical
+  over-limit counters. Eight current-function SQLite groups pass; the exact
+  proposal has ten cheap groups plus nine native groups/27 assertions with
+  verified disposal. Learner/Studio/lecture now preserve limiter429 and known500
+  privately; thirteen actual Studio/lecture cases complement the eleven learner
+  cases. Auth/services are explicitly synthetic. Target data/triggers, full
+  bootstrap, six legacy API error boundaries and streamed JSON hardening remain
+  open. This is not an admission receipt, quota proof or invitation re-enablement.
 
 Next: trusted hosting/provisioning, actual target schema/ledger/data transition
 and cleared publication/version contract. Do not admit the pending fracture

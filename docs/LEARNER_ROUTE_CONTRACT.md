@@ -1,6 +1,6 @@
 # Learner enrolment request contract checks
 
-Run `node --test tests/learner-account-route.test.mjs`. Eight checks compile the
+Run `node --test tests/learner-account-route.test.mjs`. Eleven checks compile the
 actual `POST /api/learner/account` handler and actual request-security helpers,
 replacing only its explicit server auth, education-service and rate-limit seams.
 All records, identifiers and email addresses are synthetic; no database, bootstrap,
@@ -15,10 +15,15 @@ declared oversized content length, absent server auth, unknown action and an
 education-service refusal. They record auth/rate-limit calls to verify which
 boundaries run before refusal.
 
+Three additional checks return limiter429 and known500 before enrolment and
+hide an unexpected database message in both response and type-only log. All
+failure responses now explicitly remain private/no-store.
+
 These are route contract tests, not authentication acceptance. The auth seam
 does not prove trusted upstream header stripping or a genuine signed-in browser
 session. The existing size guard is **declared-header-only**, not a measured
-stream bound. The rate limiter is stubbed here, not proven concurrency-safe.
+stream bound. The rate limiter is stubbed here; separate
+[atomic limiter evidence](ATOMIC_RATE_LIMIT.md) covers its local concurrency.
 The route's current extra JSON keys are ignored; this test does not invent a
 strict request parser, durable request key, replay contract or rights gate.
 

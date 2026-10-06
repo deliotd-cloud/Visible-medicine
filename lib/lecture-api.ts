@@ -1,6 +1,7 @@
 import { EducationApiError } from "@/lib/education-api";
 import { LectureError } from "@/lib/lecture-repository";
 import { isSameOriginMutation } from "@/lib/request-security";
+import { InstitutionOperationsError } from "@/lib/institution-operations";
 
 export async function readLectureRequest(request: Request): Promise<Record<string,unknown>> {
   if(!isSameOriginMutation(request)) throw new LectureError("Cross-origin lecture changes are not allowed.",403);
@@ -29,7 +30,7 @@ export async function readLectureRequest(request: Request): Promise<Record<strin
 
 export function lectureApiFailure(error: unknown) {
   const headers={"Cache-Control":"private, no-store"};
-  if(error instanceof LectureError || error instanceof EducationApiError)
+  if(error instanceof LectureError || error instanceof EducationApiError || error instanceof InstitutionOperationsError)
     return Response.json({error:error.message},{status:error.status,headers});
   console.error("Lecture request failed",{type:error instanceof Error?error.name:"unknown"});
   return Response.json({error:"The lecture service could not complete this request."},{status:500,headers});

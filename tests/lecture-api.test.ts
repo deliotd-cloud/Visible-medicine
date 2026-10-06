@@ -11,6 +11,7 @@ new Function("require","module","exports",code)((name:string)=>{
   if(name==="@/lib/education-api")return {EducationApiError:TestError};
   if(name==="@/lib/lecture-repository")return {LectureError:TestError};
   if(name==="@/lib/request-security")return {isSameOriginMutation};
+  if(name==="@/lib/institution-operations")return {InstitutionOperationsError:TestError};
   throw new Error(`Unexpected dependency ${name}`);
 },compiledModule,compiledModule.exports);
 const {readLectureRequest,lectureApiFailure}=compiledModule.exports;
