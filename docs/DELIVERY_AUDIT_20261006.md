@@ -1,6 +1,28 @@
 # Website and Atlas delivery audit — 6 October 2026
 
-## Latest checkpoint: lumbar MRI drafts imported locally
+## Latest checkpoint: local enrolment safeguards and Atlas history
+
+The course-enrolment service now refuses known-ineligible account, consent,
+course and held-invitation requests using bound reads before account/schema
+bootstrap. All code shapes, including empty/missing invitation codes, are
+covered. Missing/incompatible read prerequisites return a recoverable503 rather
+than preparing tables through enrolment. Readable status/profile/release refusal
+precedence is retained; eligible requests still use the original fresh checks
+and five-statement free/institution batch. See
+[the exact scope and limits](COURSE_ENROLMENT_READONLY_PREFLIGHT.md).
+Independent review found no P1/P2 issue in this local scope. Authentication,
+rate-limiter, schema/migrations/journal and independent entitlement policies
+are unchanged. The limiter may still write first; later concurrent state changes
+and actual target admission remain separate safeguards, not a zero-write claim.
+
+Offline Atlas source `15c93785186ca2cd19e1dcf3bf8d76116e4f7a0f` integrates
+the narrowly pinned elbow terminal:60 focused refusals/six phases pass.
+Both canonical and observation-only history advance to
+`genicular-mri: foreign teaching`; its actual eight-slot composition still needs
+capture before any new bridge. Runtime, generic replay and original manifests
+remain unchanged; the website still embeds the runtime checkpoint below.
+
+## Current website runtime: lumbar MRI drafts imported locally
 
 The private candidate now embeds Atlas `e3e292f234d4e9e9c96903a67703f9ec92678626`
 through the four generated modules and protected Review. Independent exact-Git
@@ -21,9 +43,8 @@ texture, dataset, patient image, new mesh or paid-service requirement is added.
 Superseded generated chunks have exact E recovery copies. The50 pending
 specialist paths and private plexus material remain preserved and excluded.
 
-The elbow historical-state conflict has an independently reviewed E-only
-terminal proposal covering its actual six-MRI/fourteen-clinical predecessor
-composition and50 focused refusals. It is **not integrated**; the full historical
+The elbow historical-state conflict is repaired only for its actually observed
+six-MRI/fourteen-clinical predecessor composition. The full historical
 chain is still unaccepted. A no-catalog replay cannot independently verify the
 current display catalog. This limitation must not be broadened into acceptance.
 
@@ -47,12 +68,11 @@ change, scan publication or clinical completion is authorized by this checkpoint
   500 workbooks/five statements/36 maximum bindings. Canonical checks compile
   actual source; native auth/services remain synthetic. Invitations stay false;
   target data/identity/release/delivery and all six release gates remain open.
-- A five-lumbar-disc MRI teaching refinement is staged only. The actual app
-  helper/learner dispatch and strict rollback match five new/old lessons; all141
-  original spine hashes survive the focused rollback. Its full older history
-  chain separately fails at an existing aorta predecessor assertion. That
-  failure is retained, not weakened or converted to acceptance; no MRI draft,
-  source pin, model or clinical approval is imported by this website change.
+- The earlier E-only five-lumbar-disc MRI snapshot is superseded by source
+  `e3e292f` and the current website import above. Its exact predecessor,
+  strict rollback and all141 original spine hashes remain evidence; the original
+  aorta failure and later respiratory/foot/elbow failures are retained, not
+  relabelled passes. The current full-history refusal is genicular MRI.
 - Added a [supplied admission diagnostic](D1_TARGET_ADMISSION_PREFLIGHT.md):
   exact committed migration identities, captured schema/trigger drift and the
   bounded audit helper can now be compared in one read-only report. Every report

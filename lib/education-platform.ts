@@ -349,6 +349,37 @@ export async function saveLearnerProfile(auth: AuthContext, input: Record<string
 }
 
 export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, invitationCodeValue?: unknown) {
+  // Refuse known-ineligible requests using reads only, before account/schema bootstrap.
+  // This is not target-schema admission or a grant; all later checks still run.
+  const releaseId = boundedText(releaseIdValue, 120);
+  let preflightProfile: Row | null;
+  let preflightRelease: Row | null;
+  try {
+    preflightProfile = await env.DB.prepare(`SELECT lp.*, asp.status AS account_status, asp.terms_version, asp.privacy_version, asp.terms_accepted_at AS current_terms_accepted_at, asp.privacy_accepted_at FROM (SELECT ? AS user_id) subject LEFT JOIN account_security_profiles asp ON asp.user_id=subject.user_id LEFT JOIN learner_profiles lp ON lp.user_id=subject.user_id`).bind(auth.userId).first<Row>();
+  } catch {
+    throw new EducationPlatformError("Course enrolment is unavailable while the platform is prepared for review. Please try again later.", 503);
+  }
+  const preflightAccountStatus = preflightProfile?.account_status == null ? "active" : String(preflightProfile.account_status);
+  if (!accountMayWrite(preflightAccountStatus))
+    throw new EducationPlatformError(accountWriteBlockReason(preflightAccountStatus) ?? "This account cannot enrol in courses.", 403);
+  const preflightOnboarding = learnerOnboardingStatus({
+    profileStatus: preflightProfile?.onboarding_status ? String(preflightProfile.onboarding_status) : "not-started",
+    termsVersion: preflightProfile?.terms_version ? String(preflightProfile.terms_version) : "",
+    privacyVersion: preflightProfile?.privacy_version ? String(preflightProfile.privacy_version) : "",
+    termsAcceptedAt: preflightProfile?.current_terms_accepted_at ? String(preflightProfile.current_terms_accepted_at) : preflightProfile?.terms_accepted_at ? String(preflightProfile.terms_accepted_at) : null,
+    privacyAcceptedAt: preflightProfile?.privacy_accepted_at ? String(preflightProfile.privacy_accepted_at) : null,
+  });
+  if (preflightOnboarding !== "complete")
+    throw new EducationPlatformError(preflightOnboarding === "consent-required" ? "Review the current education terms and privacy notice before enrolling." : "Complete your learner profile before enrolling.", 409);
+  try {
+    preflightRelease = await env.DB.prepare(`SELECT * FROM course_releases WHERE id=? AND status='published'`).bind(releaseId).first<Row>();
+  } catch {
+    throw new EducationPlatformError("Course enrolment is unavailable while the platform is prepared for review. Please try again later.", 503);
+  }
+  if (!preflightRelease) throw new EducationPlatformError("This course release is not available.", 404);
+  if (!Boolean(preflightRelease.enrolment_open)) throw new EducationPlatformError("Enrolment is currently closed for this course.", 409);
+  if (String(preflightRelease.access_model) === "invitation" && !INVITATION_SELF_ENROLMENT_ENABLED)
+    throw new EducationPlatformError(INVITATION_SELF_ENROLMENT_HOLD_MESSAGE, 409);
   const account = await ensureEducationUser(auth);
   await ensurePlatformSchema();
   if (!accountMayWrite(account.status))
@@ -356,7 +387,6 @@ export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, 
   const profile = await getLearnerProfile(auth);
   if (profile.onboardingStatus !== "complete")
     throw new EducationPlatformError(profile.onboardingStatus === "consent-required" ? "Review the current education terms and privacy notice before enrolling." : "Complete your learner profile before enrolling.", 409);
-  const releaseId = boundedText(releaseIdValue, 120);
   const release = await env.DB.prepare(`SELECT * FROM course_releases WHERE id=? AND status='published'`).bind(releaseId).first<Row>();
   if (!release) throw new EducationPlatformError("This course release is not available.", 404);
   if (!Boolean(release.enrolment_open)) throw new EducationPlatformError("Enrolment is currently closed for this course.", 409);
