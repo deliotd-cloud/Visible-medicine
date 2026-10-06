@@ -21,11 +21,11 @@ const stubs={
  '@/lib/studio-templates':`export function studioTemplate(){throw Error('Unexpected studio template');}`,
  '@/lib/transactional-email':`export function getEmailProviderConfig(){return {publicSiteUrl:null};} export function courseEnrolmentEmail(){return {subject:'synthetic',text:'synthetic'};} export async function sendTransactionalEmail(){return {status:'held',reason:'TEST_NO_SEND',sentAt:null};}`,
 };
-const compiled=await build({stdin:{contents:"export {enrolInCourse} from './lib/education-platform.ts';export {canAccessPublishedWorkbook} from './lib/workbook-access.ts';export * from './lib/course-enrolment-policy.ts';",resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',tsconfigRaw:{},plugins:[{name:'synthetic-service-boundaries',setup(b){
+const compiled=await build({stdin:{contents:"export {enrolInCourse} from './lib/education-platform.ts';export {canAccessPublishedWorkbook,canAccessPublishedCase} from './lib/workbook-access.ts';export * from './lib/course-enrolment-policy.ts';",resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',tsconfigRaw:{},plugins:[{name:'synthetic-service-boundaries',setup(b){
  b.onResolve({filter:/.*/},a=>{if(Object.hasOwn(stubs,a.path))return {path:a.path,namespace:'stub'};if(['@/lib/account-policy','@/lib/workbook-access-policy','@/lib/course-enrolment-policy'].includes(a.path))return {path:resolve(root,a.path.slice(2)+'.ts')};});
  b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:stubs[a.path],loader:'js'}));
 }}]});
-const {enrolInCourse,canAccessPublishedWorkbook,INVITATION_SELF_ENROLMENT_ENABLED,INVITATION_SELF_ENROLMENT_HOLD_MESSAGE}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const {enrolInCourse,canAccessPublishedWorkbook,canAccessPublishedCase,INVITATION_SELF_ENROLMENT_ENABLED,INVITATION_SELF_ENROLMENT_HOLD_MESSAGE}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const auth=userId=>({userId,email:userId+'@example.invalid',externalSubject:'synthetic:'+userId});
 
 // Minimal synthetic schema only. Actual production SQL executes unchanged.
@@ -36,6 +36,7 @@ CREATE TABLE course_invitations(id TEXT PRIMARY KEY,release_id TEXT,code_hash TE
 CREATE TABLE enrolments(id TEXT PRIMARY KEY,user_id TEXT,course_id TEXT,status TEXT,enrolled_at TEXT,UNIQUE(user_id,course_id));
 CREATE TABLE workbooks(id TEXT PRIMARY KEY,status TEXT,module_id TEXT);
 CREATE TABLE modules(id TEXT PRIMARY KEY,course_id TEXT);
+CREATE TABLE workbook_cases(workbook_id TEXT,case_id TEXT,position INTEGER);
 CREATE TABLE workbook_progress(workbook_id TEXT,learner_id TEXT,percent_complete INTEGER);
 CREATE TABLE cohort_workbook_assignments(id TEXT,cohort_id TEXT,workbook_id TEXT,prerequisite_workbook_id TEXT,prerequisite_min_percent INTEGER,status TEXT,available_from TEXT,expires_at TEXT);
 CREATE TABLE cohort_members(cohort_id TEXT,learner_id TEXT,status TEXT);
@@ -48,9 +49,9 @@ CREATE TABLE notification_outbox(id TEXT PRIMARY KEY,organization_id TEXT,recipi
 CREATE TABLE account_security_profiles(user_id TEXT PRIMARY KEY,status TEXT,identity_provider TEXT,terms_version TEXT,privacy_version TEXT,terms_accepted_at TEXT,privacy_accepted_at TEXT);
 CREATE TABLE learner_profiles(user_id TEXT PRIMARY KEY,onboarding_status TEXT,training_stage TEXT,discipline TEXT,interests_json TEXT,institution_name TEXT,country_code TEXT,timezone TEXT,marketing_opt_in INTEGER,updated_at TEXT);
 `;
-function fixture({uses=0,model='invitation',member=true}={}){
+function fixture({uses=0,model='invitation',member=true,onAssignmentLookup}={}){
  const sqlite=new DatabaseSync(':memory:');sqlite.exec(schema);
- sqlite.exec("INSERT INTO course_releases VALUES('release','course','published',1,'invitation','private','org','synthetic-course','Synthetic course');INSERT INTO modules VALUES('module','course');INSERT INTO workbooks VALUES('workbook','published','module');INSERT INTO course_release_workbooks VALUES('release','workbook',1);");
+ sqlite.exec("INSERT INTO course_releases VALUES('release','course','published',1,'invitation','private','org','synthetic-course','Synthetic course');INSERT INTO modules VALUES('module','course');INSERT INTO workbooks VALUES('workbook','published','module');INSERT INTO course_release_workbooks VALUES('release','workbook',1);INSERT INTO workbook_cases VALUES('workbook','synthetic-case',1);");
  sqlite.prepare('UPDATE course_releases SET access_model=?,visibility=?').run(model,model==='free'?'public':'private');
  if(member)sqlite.exec("INSERT INTO organization_memberships VALUES('org','alpha','active');");
  sqlite.prepare('INSERT INTO course_invitations VALUES(?,?,?,?,?,?,?)').run('invite','release',createHash('sha256').update('SYNTHETIC').digest('hex'),'active',uses,1,'2099-01-01T00:00:00.000Z');
@@ -60,7 +61,7 @@ function fixture({uses=0,model='invitation',member=true}={}){
  }
  const writes=[];let invitationLookups=0;
  env.DB={prepare(sql){return {bind(...values){return {
-  async first(){if(sql.startsWith('SELECT * FROM course_invitations')){invitationLookups++;throw Error('Held invitation reached lookup');}return sqlite.prepare(sql).get(...values)||null;},
+  async first(){if(sql.startsWith('SELECT * FROM course_invitations')){invitationLookups++;throw Error('Held invitation reached lookup');}const result=sqlite.prepare(sql).get(...values)||null;if(sql.startsWith('SELECT id, version FROM workbook_assignments'))onAssignmentLookup?.(sqlite);return result;},
   async all(){return {results:sqlite.prepare(sql).all(...values)};},
   execute(){writes.push(sql);return {success:true,meta:{changes:Number(sqlite.prepare(sql).run(...values).changes)}};},
   async run(){return this.execute();}
@@ -95,6 +96,66 @@ for(const model of ['free','institution'])test(model+' self-enrolment and actual
 });
 test('institution nonmember remains denied',{concurrency:false},async()=>{
  const f=fixture({model:'institution',member:false});try{await assert.rejects(enrolInCourse(auth('alpha'),'release'),e=>e.status===403);f.noGrants();}finally{f.sqlite.close();}
+});
+
+const rows=(db,table)=>db.prepare(`SELECT * FROM ${table} ORDER BY 1`).all();
+function instructorAllocation(db,{status='active',expires=null,available='2020-01-01',prerequisite=null,noRules=false}={}){
+ db.prepare('INSERT INTO workbook_assignments VALUES(?,?,?,?,?,?,?,?,?)').run('instructor-allocation','workbook','alpha',status,'instructor','2020-01-01','2098-01-01',status==='revoked'?'2021-01-01':null,7);
+ if(!noRules)db.prepare('INSERT INTO workbook_assignment_rules VALUES(?,?,?,?,?,?)').run('instructor-allocation',available,expires,prerequisite,85,'2020-01-01');
+ if(prerequisite)db.prepare('INSERT INTO workbook_progress VALUES(?,?,?)').run(prerequisite,'alpha',20);
+}
+for(const model of ['free','institution'])for(const [name,options,allowed]of [
+ ['revoked',{status:'revoked'},false],
+ ['expired',{expires:'2000-01-01'},false],
+ ['future',{available:'2099-01-01'},false],
+ ['prerequisite',{prerequisite:'required-workbook'},false],
+ ['active restricted',{expires:'2099-01-01'},true],
+ ['active without rules',{noRules:true},true],
+])test(`${model} preserves ${name} instructor allocation and case access`,{concurrency:false},async()=>{
+ const f=fixture({model});try{
+  f.sqlite.exec("INSERT INTO enrolments VALUES('existing-enrolment','alpha','course','active','2020-01-01');");
+  instructorAllocation(f.sqlite,options);
+  const before={enrolments:rows(f.sqlite,'enrolments'),assignments:rows(f.sqlite,'workbook_assignments'),rules:rows(f.sqlite,'workbook_assignment_rules')};
+  assert.equal(await canAccessPublishedWorkbook('alpha',['learner'],'workbook'),allowed);
+  assert.equal(await canAccessPublishedCase('alpha',['learner'],'synthetic-case'),allowed);
+  await enrolInCourse(auth('alpha'),'release');
+  assert.deepEqual(rows(f.sqlite,'enrolments'),before.enrolments);
+  assert.deepEqual(rows(f.sqlite,'workbook_assignments'),before.assignments);
+  assert.deepEqual(rows(f.sqlite,'workbook_assignment_rules'),before.rules);
+  assert.equal(await canAccessPublishedWorkbook('alpha',['learner'],'workbook'),allowed);
+  assert.equal(await canAccessPublishedCase('alpha',['learner'],'synthetic-case'),allowed);
+ }finally{f.sqlite.close();}
+});
+for(const model of ['free','institution'])for(const status of ['revoked','suspended'])test(`${model} cannot revive ${status} course enrolment`,{concurrency:false},async()=>{
+ const f=fixture({model});try{
+  f.sqlite.prepare('INSERT INTO enrolments VALUES(?,?,?,?,?)').run('restricted-enrolment','alpha','course',status,'2020-01-01');
+  const before=rows(f.sqlite,'enrolments');
+  await assert.rejects(enrolInCourse(auth('alpha'),'release'),e=>e.status===409&&/existing course enrolment requires instructor review/i.test(e.message));
+  assert.deepEqual(rows(f.sqlite,'enrolments'),before);assert.deepEqual(f.writes,[]);
+  assert.deepEqual(rows(f.sqlite,'workbook_assignments'),[]);assert.deepEqual(rows(f.sqlite,'notification_outbox'),[]);assert.deepEqual(globalThis.__courseInvitationHoldTestAudits,[]);
+ }finally{f.sqlite.close();}
+});
+for(const model of ['free','institution'])for(const [name,options,allowed]of [
+ ['revoked with rules',{status:'revoked',expires:'2000-01-01',prerequisite:'required-workbook'},false],
+ ['active without rules',{noRules:true},true],
+])test(`${model} preserves concurrent ${name} instructor allocation after empty lookup`,{concurrency:false},async()=>{
+ let protectedRows;
+ const f=fixture({model,onAssignmentLookup(db){instructorAllocation(db,options);protectedRows={assignments:rows(db,'workbook_assignments'),rules:rows(db,'workbook_assignment_rules')};}});
+ try{
+  await enrolInCourse(auth('alpha'),'release');
+  assert(protectedRows);assert.deepEqual(rows(f.sqlite,'workbook_assignments'),protectedRows.assignments);assert.deepEqual(rows(f.sqlite,'workbook_assignment_rules'),protectedRows.rules);
+  assert.equal(await canAccessPublishedWorkbook('alpha',['learner'],'workbook'),allowed);assert.equal(await canAccessPublishedCase('alpha',['learner'],'synthetic-case'),allowed);
+  assert.equal(rows(f.sqlite,'workbook_assignment_rules').length,options.noRules?0:1);
+ }finally{f.sqlite.close();}
+});
+for(const model of ['free','institution'])test(`${model} repeated self-enrolment preserves its first allocation`,{concurrency:false},async()=>{
+ const f=fixture({model});try{
+  await enrolInCourse(auth('alpha'),'release');
+  const before={enrolments:rows(f.sqlite,'enrolments'),assignments:rows(f.sqlite,'workbook_assignments'),rules:rows(f.sqlite,'workbook_assignment_rules')};
+  await enrolInCourse(auth('alpha'),'release');
+  assert.deepEqual(rows(f.sqlite,'enrolments'),before.enrolments);assert.deepEqual(rows(f.sqlite,'workbook_assignments'),before.assignments);assert.deepEqual(rows(f.sqlite,'workbook_assignment_rules'),before.rules);
+  assert.equal(await canAccessPublishedWorkbook('alpha',['learner'],'workbook'),true);
+ }finally{f.sqlite.close();}
 });
 
 // Real current component and shared policy; only Next Link is a render boundary.

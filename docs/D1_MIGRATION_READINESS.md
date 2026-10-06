@@ -30,6 +30,12 @@ Drizzle/platform/lecture/request-bootstrap schemas. Application bootstrap still
 does DDL, seed and backfill work; merely removing it could break preserved data
 or omit tables, columns and records not covered by the migration chain.
 
+The independent [application contract](D1_SCHEMA_CONTRACT.md) now compares
+hash-pinned Drizzle declarations against a separately replayed committed baseline.
+Only the two pending fracture tables are missing from its checked requirements.
+It does not certify check-expression, data-transition, current-target or ledger parity.
+Request-time table/column-name coverage does not make seed/backfill removal safe.
+
 Next integration work: establish exact target and preserved schema/data baseline;
 reconcile the complete application schema and required data transitions; prepare
 a reviewed deploy-time migration sequence; test fresh and upgraded disposable

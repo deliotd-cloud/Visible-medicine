@@ -19,9 +19,20 @@ preserved and excluded from this checkpoint. The full existing goal remains inta
   closed in the server, course control and invitation page. Existing Continue,
   free enrolment and institution membership paths remain available. Seventeen
   focused tests pass. See [invitation hold](COURSE_INVITATION_HOLD.md).
+- Closed a related free/institution retry bypass: learner re-enrolment no longer
+  revives non-active course enrolment or rewrites instructor allocation/rules.
+  Fresh assignment insertion and fresh-ID-only rule creation also preserve a
+  concurrent instructor allocation. Twenty new cases fail against the preceding
+  server and pass after repair; 39 invitation/page/allocation checks pass. This
+  remains narrower than a complete failure-atomic admission ledger.
 - Added a read-only migration audit with ten focused tests, including filesystem
   refusal and SQL-literal-preserving schema comparisons. It never changes D1 or
   certifies readiness. See [migration readiness](D1_MIGRATION_READINESS.md).
+- Added an independent, pinned Drizzle schema-contract checker with twelve
+  synthetic tests. The committed baseline covers its checked requirements apart
+  from two pending fracture tables; startup data transitions, actual target,
+  ledger and check-expression parity remain open. No pending migration is admitted.
+  See [independent contract](D1_SCHEMA_CONTRACT.md).
 
 ## Remaining work, in delivery order
 

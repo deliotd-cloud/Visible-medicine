@@ -382,17 +382,22 @@ export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, 
   }
   if (!new Set(["free", "invitation", "institution"]).has(accessModel))
     throw new EducationPlatformError("This course does not support self-enrolment.", 409);
-  const existing = await env.DB.prepare(`SELECT id FROM enrolments WHERE user_id=? AND course_id=? ORDER BY enrolled_at LIMIT 1`).bind(auth.userId, String(release.course_id)).first<{ id: string }>();
+  const existing = await env.DB.prepare(`SELECT id, status FROM enrolments WHERE user_id=? AND course_id=? ORDER BY enrolled_at LIMIT 1`).bind(auth.userId, String(release.course_id)).first<{ id: string; status: string }>();
+  if (existing && existing.status !== "active")
+    throw new EducationPlatformError("Your existing course enrolment requires instructor review before re-enrolment.", 409);
   const now = new Date().toISOString();
-  await env.DB.prepare(`INSERT INTO enrolments (id, user_id, course_id, status, enrolled_at) VALUES (?, ?, ?, 'active', ?) ON CONFLICT(id) DO UPDATE SET status='active', enrolled_at=excluded.enrolled_at`).bind(existing?.id ?? crypto.randomUUID(), auth.userId, String(release.course_id), now).run();
+  if (!existing)
+    await env.DB.prepare(`INSERT INTO enrolments (id, user_id, course_id, status, enrolled_at) VALUES (?, ?, ?, 'active', ?) ON CONFLICT(id) DO NOTHING`).bind(crypto.randomUUID(), auth.userId, String(release.course_id), now).run();
   const workbookRows = await env.DB.prepare(`SELECT crw.workbook_id FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id WHERE crw.release_id=? AND w.status='published' ORDER BY crw.position`).bind(releaseId).all<{ workbook_id: string }>();
   for (const row of workbookRows.results) {
     const current = await env.DB.prepare(`SELECT id, version FROM workbook_assignments WHERE workbook_id=? AND learner_id=?`).bind(row.workbook_id, auth.userId).first<{ id: string; version: number }>();
-    const assignmentId = current?.id ?? crypto.randomUUID();
-    const version = (current?.version ?? 0) + 1;
+    // Self-enrolment must not revive or relax an existing instructor allocation.
+    if (current) continue;
+    const assignmentId = crypto.randomUUID();
     await env.DB.batch([
-      env.DB.prepare(`INSERT INTO workbook_assignments (id, workbook_id, learner_id, status, assigned_by, assigned_at, due_at, revoked_at, version) VALUES (?, ?, ?, 'active', ?, ?, NULL, NULL, ?) ON CONFLICT(workbook_id, learner_id) DO UPDATE SET status='active', assigned_by=excluded.assigned_by, assigned_at=excluded.assigned_at, revoked_at=NULL, version=excluded.version`).bind(assignmentId, row.workbook_id, auth.userId, auth.userId, now, version),
-      env.DB.prepare(`INSERT INTO workbook_assignment_rules (assignment_id, available_from, expires_at, prerequisite_workbook_id, prerequisite_min_percent, updated_at) VALUES (?, ?, NULL, NULL, 100, ?) ON CONFLICT(assignment_id) DO UPDATE SET available_from=excluded.available_from, expires_at=NULL, prerequisite_workbook_id=NULL, prerequisite_min_percent=100, updated_at=excluded.updated_at`).bind(assignmentId, now, now),
+      env.DB.prepare(`INSERT INTO workbook_assignments (id, workbook_id, learner_id, status, assigned_by, assigned_at, due_at, revoked_at, version) VALUES (?, ?, ?, 'active', ?, ?, NULL, NULL, 1) ON CONFLICT(workbook_id, learner_id) DO NOTHING`).bind(assignmentId, row.workbook_id, auth.userId, auth.userId, now),
+      // A concurrent allocation may win the unique key. Only our fresh ID may get rules.
+      env.DB.prepare(`INSERT INTO workbook_assignment_rules (assignment_id, available_from, expires_at, prerequisite_workbook_id, prerequisite_min_percent, updated_at) SELECT id, ?, NULL, NULL, 100, ? FROM workbook_assignments WHERE id=? AND workbook_id=? AND learner_id=? ON CONFLICT(assignment_id) DO NOTHING`).bind(now, now, assignmentId, row.workbook_id, auth.userId),
     ]);
   }
   if (invitationId) await env.DB.prepare(`UPDATE course_invitations SET uses=uses+1 WHERE id=? AND uses < max_uses`).bind(invitationId).run();
