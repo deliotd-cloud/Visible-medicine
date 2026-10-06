@@ -10,7 +10,10 @@
   or failure-atomic receipt integration is inferred.
 - Integrated [course-tab history](STUDIO_COURSE_HISTORY.md). Main review and the
   isolated actual-router browser sample caught the prior proposal's app-owned
-  history notification defect; explicit local pane updates repair it. Back/
+  history notification defect; explicit local pane updates repair it. A deeper
+  installed-controller probe then caught reused traversal indices. Caller-owned
+  History API writes claim distinct indices when the current tree snapshot is
+  retained, without private flag edits. Back/
   Forward, duplicate clicks, query/fragment/state, focus and a fixture draft are
   covered locally. Real-account course routing/SSR hydration remain open.
 
@@ -140,7 +143,7 @@ preserved and excluded from this checkpoint. The full existing goal remains inta
    them. Decide Back semantics for meaningful course/workbook navigation:
    `EducationRuntime` replaces history when selecting a workbook, not when
    switching course-editor tabs. `StudioCourseEditor` now binds its local pane
-   to URL/history with a guarded native push and explicit local update, plus
+   to URL/history with a guarded caller-owned native push and local update, plus
    course/search/popstate restoration. Focused tests and an isolated actual-router
    browser sample cover this narrow interaction; genuine course-route/hydration
    and wider authoring acceptance remain open.

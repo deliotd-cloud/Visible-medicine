@@ -8,7 +8,8 @@ const ts = requireSite('typescript');
 const shim = await import(new URL('../node_modules/vinext/dist/server/app-history-state.js', import.meta.url));
 const candidate = readFileSync(new URL('../components/StudioCourseEditor.tsx', import.meta.url), 'utf8');
 // Deliberate exact-source mutant: installed app-owned pushes skip the hook update.
-const v2 = candidate.replace('    setSection(next);', '    // Removed local update for the regression probe.');
+const v2 = candidate.replace('window.history.pushState(null,', 'window.history.pushState(window.history.state,')
+  .replace('    setSection(next);', '    // Removed local update for the regression probe.');
 assert.notEqual(v2, candidate);
 
 function compile(source, mocks) {
@@ -110,14 +111,15 @@ test('installed Vinext app-owned state needs the explicit local pane update', ()
   } finally { app.unmount(); }
 });
 
-test('v3 reacts locally to app-owned pushes while preserving state, search and hash', () => {
+test('v4 uses caller-owned history and retains pane behavior, search and hash', () => {
   const app = fixture(candidate, 'https://example.test/studio/courses/course-1?source=workspace#detail');
   try {
     assert.equal(app.pane(), 'content'); assert.equal(app.listeners, 1);
     assert.equal(app.click('preview'), 'preview'); assert.equal(app.click('review'), 'review');
     assert.equal(app.click('review'), 'review'); assert.equal(app.pushes, 2);
     assert.equal(app.window.location.href, 'https://example.test/studio/courses/course-1?source=workspace&pane=review#detail');
-    assert.deepEqual(app.window.history.state, { host: 'preserved', __vinext_historyIndex: 7 });
+    assert.deepEqual(app.window.history.state, shim.createExternalHistoryStatePreservingMetadata(null, { host: 'preserved', __vinext_historyIndex: 7 }));
+    assert.equal('host' in app.window.history.state, false);
     app.window.history.back(); assert.equal(app.pane(), 'preview');
     app.window.history.back(); assert.equal(app.pane(), 'content');
     app.window.history.forward(); assert.equal(app.pane(), 'preview');

@@ -26,7 +26,7 @@ export function StudioCourseEditor({ course, workbooks, releases }: { course: St
     const url = new URL(window.location.href);
     if (paneFromValue(url.searchParams.get("pane")) !== next) {
       url.searchParams.set("pane", next);
-      window.history.pushState(window.history.state, "", `${url.pathname}${url.search}${url.hash}`);
+      window.history.pushState(null, "", `${url.pathname}${url.search}${url.hash}`);
     }
     setSection(next);
   }
