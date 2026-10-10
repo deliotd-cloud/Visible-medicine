@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "030789fcde835f9c562c3888274fcdd80b3fd78960c30ace83b8cab2cbe7c5fe"
+      "sha256": "58f0583744ad9b11d9c51778664f86baa686a0467b4c99e48f03aac3d37807dd"
     },
     {
       "path": "app/body-education-link.ts",
@@ -827,6 +827,10 @@
     {
       "path": "content/coronary-arterial-us.ts",
       "sha256": "64598a6dcb26aa59123b20539911faa9e3eabebb2015ad7198e105d341865efb"
+    },
+    {
+      "path": "content/coronary-arterial-xray.ts",
+      "sha256": "e85cae9bfeb23f0b5b4dd619eb13c38d73743ef9a7a1c43f91bba84b5bcc2ef8"
     },
     {
       "path": "content/coronary-venous-teaching.ts",
@@ -3141,6 +3145,10 @@
       "sha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b"
     },
     {
+      "path": "lib/coronary-arterial-xray.ts",
+      "sha256": "399c041f58d26fbd9af7628dc7e18daea97f8a2e234961a08a4f699148274c16"
+    },
+    {
       "path": "lib/coronary-venous-context.ts",
       "sha256": "18e5ff2a58d798def2fdffec251a7d65f2f41d9c97a84a2a8820af30adaea201"
     },
@@ -4906,7 +4914,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "9a6e43c45876d6f7dbc2f65f4e732759a2d5942a5209c61101f9f2f187ed7c3f"
+      "sha256": "f3bdfd81aa343187992199ce4ddffa40d5c9c368f06c0b85a3dac2f8a3908218"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5129,5 +5137,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ef1442d1f69c3547077742caa26e0bf0e525bf1260a2470cfcc66821fd63b00a"
+  "sha256": "755665a276d81f10becbbea4a92e1b148ebdd2d37dedc522b2607a8ab4d86b32"
 }

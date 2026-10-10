@@ -8,6 +8,7 @@ import { commissuralLandmarkQuizLesson } from '../lib/commissural-landmark-quiz'
 import { footVariantQuizLesson } from '../lib/foot-variant-quiz';
 import { abdominalEusOrientationLesson } from '../lib/abdominal-eus-orientation';
 import { thoracicEusOrientationLesson } from '../lib/thoracic-eus-orientation';
+import { coronaryArterialXrayLesson } from '../lib/coronary-arterial-xray';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
@@ -554,6 +555,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (abdominalEusOrientation) return abdominalEusOrientation;
   const thoracicEusOrientation = thoracicEusOrientationLesson(s, tab);
   if (thoracicEusOrientation) return thoracicEusOrientation;
+  const coronaryArterialXray = coronaryArterialXrayLesson(s, tab);
+  if (coronaryArterialXray) return coronaryArterialXray;
   const abdominalFoldUltrasound = abdominalFoldUltrasoundLesson(s, tab);
   if (abdominalFoldUltrasound) return abdominalFoldUltrasound;
   const spinalDiscUltrasound = spinalDiscUltrasoundLesson(s, tab);

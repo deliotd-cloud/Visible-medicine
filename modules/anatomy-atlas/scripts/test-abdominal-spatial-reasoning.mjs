@@ -10,8 +10,10 @@ import { build } from './workspace-component-test-build.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const baseline = 'f89b6c01aec40fba4de81e26ec433ef4fe2b5e96';
+const completedCommit = '61ff057d5204caaaa4be654bacb371de7de8f038';
 const read = path => readFile(new URL(path, new URL('../', import.meta.url)), 'utf8');
 const old = path => execFileSync('git', ['show', `${baseline}:${path}`], { cwd: root, encoding: 'utf8', maxBuffer: 32e6 });
+const atCommit = (commit, path) => execFileSync('git', ['show', `${commit}:${path}`], { cwd: root, encoding: 'utf8', maxBuffer: 32e6 });
 const same = (actual, expected, message) => assert.deepEqual(structuredClone(actual), structuredClone(expected), message);
 const entrypoint = `export * from './lib/reasoning-questions';
 export * from './lib/abdominal-spatial-reasoning';
@@ -24,15 +26,15 @@ export * from './lib/body-review-api';
 export * from './lib/body-review-display-integrity';
 export { bodyDisplayCatalog } from './lib/body-display-catalog';
 export { ReasoningFeedback } from './app/reasoning-feedback';`;
-async function load(previous = false) {
-  const contents = previous ? entrypoint.replace("export * from './lib/abdominal-spatial-reasoning';", '') : entrypoint;
+async function load(epoch = 'current') {
+  const contents = epoch === 'baseline' ? entrypoint.replace("export * from './lib/abdominal-spatial-reasoning';", '') : entrypoint;
   const result = await build({
     stdin: { contents, resolveDir: root, loader: 'ts' },
     bundle: true, write: false, format: 'cjs', platform: 'node', packages: 'external', jsx: 'automatic',
-    plugins: previous ? [{ name: 'immutable-pre-abdominal-spatial-closure', setup(api) {
+    plugins: epoch !== 'current' ? [{ name: 'immutable-abdominal-spatial-closure', setup(api) {
       api.onLoad({ filter: /\.(?:ts|tsx|json)$/ }, args => {
         const path = relative(root, args.path).replaceAll('\\', '/');
-        return { contents: old(path), loader: path.endsWith('.json') ? 'json' : path.endsWith('.tsx') ? 'tsx' : 'ts', resolveDir: dirname(args.path) };
+        return { contents: atCommit(epoch === 'baseline' ? baseline : completedCommit, path), loader: path.endsWith('.json') ? 'json' : path.endsWith('.tsx') ? 'tsx' : 'ts', resolveDir: dirname(args.path) };
       });
     } }] : [],
   });
@@ -41,7 +43,7 @@ async function load(previous = false) {
   return module.exports;
 }
 
-const previous = await load(true), current = await load();
+const previous = await load('baseline'), completed = await load('completed'), current = await load();
 const catalog = current.bodyDisplayCatalog(JSON.parse(await read('public/models/bodyparts3d/full-body/catalog.json')));
 const pins = JSON.parse(await read('content/abdominal-spatial-reasoning-pins.json'));
 const expected = [
@@ -55,6 +57,7 @@ assert.equal(previous.reasoningConcepts.length, 186);
 assert.equal(catalog.structures.filter(previous.reasoningConceptFor).length, 337);
 same(current.reasoningConcepts.slice(0, 186), previous.reasoningConcepts, 'All 186 prior concepts and order retained');
 same(current.reasoningConcepts.slice(186).map(c => c.key), expected.map(([key]) => key));
+same(current.reasoningConcepts.slice(186), completed.reasoningConcepts.slice(186), 'Current abdominal spatial concepts retain the completed transition');
 assert.equal(current.reasoningConcepts.length, 190);
 assert.equal(catalog.structures.filter(current.reasoningConceptFor).length, 343);
 assert.equal(pins.entries.length, 6);
@@ -168,6 +171,8 @@ for (const entry of pins.entries) {
   assert.equal(create(catalog.structures, target.id, loaded, { sampling: 'focus', focusIds: [target.id] }), null);
   const material = await current.bodyReviewMaterial(target.id);
   assert(material?.reasoning);
+  same(material.reasoning, (await completed.bodyReviewMaterial(target.id)).reasoning,
+    `${entry.key}: current reasoning retains completed transition`);
   const parsed = await current.parseBodyReviewResponse(material, target.id);
   if (!parsed) console.error(JSON.stringify({ failedReview: entry.key,
     displayMatches: await current.bodyReviewDisplayMatches(material, target.id),
@@ -197,7 +202,7 @@ for (const entry of pins.entries) {
   assert.equal(response.status, 409); assert.equal(storageCalls, 0);
 }
 for (const structure of catalog.structures) {
-  const before = await previous.bodyReviewMaterial(structure.id), after = await current.bodyReviewMaterial(structure.id);
+  const before = await previous.bodyReviewMaterial(structure.id), after = await completed.bodyReviewMaterial(structure.id);
   same(after.source, before.source); same(after.topics, before.topics); topicPlacements += after.topics.length;
   same(after.guidedTours, before.guidedTours); same(after.fingerprints.source, before.fingerprints.source);
   assert.equal(after.approval, false); assert.equal(after.status, 'worksheet-not-submitted');
@@ -209,13 +214,17 @@ for (const structure of catalog.structures) {
     same(after.fingerprints.teaching, before.fingerprints.teaching, `${structure.id}: teaching fingerprint preserved`); unchanged++;
   }
   if (previous.reasoningConceptFor(structure)) {
-    same(create(catalog.structures, structure.id), previous.createPracticeSession(catalog.structures, loaded,
+    const completedSession = completed.createPracticeSession(catalog.structures, loaded,
+      { id: 1, mode: 'reason', sampling: 'all', count: 1, retryIds: [structure.id] }, () => 0.314159);
+    same(completedSession, previous.createPracticeSession(catalog.structures, loaded,
       { id: 1, mode: 'reason', sampling: 'all', count: 1, retryIds: [structure.id] }, () => 0.314159),
     `${structure.id}: prior actual session unchanged`); oldQuestions++;
+    same(create(catalog.structures, structure.id), completedSession,
+      `${structure.id}: current prior session unchanged`);
   }
 }
 assert.equal(changed, 6); assert.equal(unchanged, 1098); assert.equal(topicPlacements, 9936); assert.equal(oldQuestions, 337);
-console.log(JSON.stringify({ baseline, baselineConceptsSha256: createHash('sha256').update(JSON.stringify(previous.reasoningConcepts)).digest('hex'),
+console.log(JSON.stringify({ baseline, completedCommit, fullCountsScope: 'baseline-to-completed', baselineConceptsSha256: createHash('sha256').update(JSON.stringify(previous.reasoningConcepts)).digest('hex'),
   concepts: current.reasoningConcepts.length, boundRepresentations: 343, newConcepts: 4,
   newRootTargets: changed, priorQuestionsPreserved: oldQuestions, unchangedRootTeaching: unchanged,
   unchangedTopicPlacements: topicPlacements, referenceWords: Object.fromEntries(referenceWords),

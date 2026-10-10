@@ -7,6 +7,7 @@ import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = 'b03ba458907946c1b1c152149ee5867f8d6a62df';
+const completedCommit = 'f89b6c01aec40fba4de81e26ec433ef4fe2b5e96';
 const targetId = 'vm:anatomy:body:thorax:unspecified:vessel:azygos-vein';
 const pins = JSON.parse(readFileSync('content/central-vessel-imaging-pins.json', 'utf8'));
 const matches = pins.entries.filter(entry => entry.identity.fmaId === 'FMA4838');
@@ -23,6 +24,7 @@ const hemiazygos = pins.entries.find(entry => entry.identity.fmaId === 'FMA4944'
 assert.equal(hemiazygos?.id, 'vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein');
 
 const old = await exactSourceHistoryApi(baseline, 'review-security');
+const completed = await exactSourceHistoryApi(completedCommit, 'review-security');
 const compiled = await build({
   stdin: {
     contents: "export {thoracicEusOrientationLesson} from './lib/thoracic-eus-orientation';" +
@@ -77,10 +79,12 @@ let malformed = 0, stale = 0, forgedSaves = 0, storageCalls = 0;
 for (const structure of catalog.structures) {
   for (const tab of now.contentTabs) {
     const previous = old.bodyLesson(structure, tab);
+    const completedLesson = completed.bodyLesson(structure, tab);
     const lesson = now.bodyLesson(structure, tab);
     const orientation = now.thoracicEusOrientationLesson(structure, tab);
     if (structure.id === targetId && tab === 'ultrasound') {
       assert.equal(previous.readiness, 'pending');
+      assert.deepEqual(completedLesson, lesson, `${structure.id}: completed thoracic EUS lesson`);
       assert.deepEqual(lesson, orientation);
       assert.equal(lesson.readiness, 'draft');
       assert.equal(lesson.body, topic.body);
@@ -98,15 +102,17 @@ for (const structure of catalog.structures) {
       assert.deepEqual(now.bodyContent(structure, tab), shown);
       changed++;
     } else {
-      assert.deepEqual(lesson, previous, `${structure.id}:${tab}`);
+      assert.deepEqual(completedLesson, previous, `${structure.id}:${tab}: original thoracic EUS transition`);
       assert.equal(orientation, undefined, `${structure.id}:${tab}`);
       preserved++;
     }
   }
   const previousPacket = await old.bodyReviewMaterial(structure.id);
   const packet = await now.bodyReviewMaterial(structure.id);
+  const completedPacket = await completed.bodyReviewMaterial(structure.id);
   assert.equal(packet.approval, false);
   if (structure.id === targetId) {
+    assert.deepEqual(packet, completedPacket, `${structure.id}: completed thoracic EUS Review`);
     for (const key of ['source', 'reasoning', 'guidedTours', 'checklist', 'atlasLink', 'limits'])
       assert.deepEqual(packet[key], previousPacket[key], key);
     assert.equal(packet.fingerprints.source, previousPacket.fingerprints.source);
@@ -162,7 +168,7 @@ for (const structure of catalog.structures) {
     forgedSaves++;
     changedPackets++;
   } else {
-    assert.deepEqual(packet, previousPacket, `${structure.id}: Review packet`);
+    assert.deepEqual(completedPacket, previousPacket, `${structure.id}: original thoracic EUS Review`);
     preservedPackets++;
   }
 }
@@ -212,7 +218,7 @@ for (const bundle of catalog.bundles) {
   assert.equal(sha256(bytes), bundle.sha256, path);
   assert.deepEqual(bytes, gitBytes(path), `${path} remains unchanged`);
 }
-console.log(JSON.stringify({ baseline, changed, preserved, changedPackets, preservedPackets,
+console.log(JSON.stringify({ baseline, completedCommit, fullCountsScope: 'baseline-to-completed', changed, preserved, changedPackets, preservedPackets,
   refusedIdentities, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale,
   forgedSavesRefusedBeforeStorage: forgedSaves,
   storageCalls, sourceBundlesUnchanged: catalog.bundles.length, clinicalApproval: false }));

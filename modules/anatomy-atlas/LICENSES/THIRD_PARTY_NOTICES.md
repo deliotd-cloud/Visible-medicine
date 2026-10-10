@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Coronary arterial X-ray orientation (10 October 2026)
+
+Four original short drafts cite University of Minnesota coronary anatomy,
+NHLBI catheterisation education and Green et al. (2005) as factual references.
+Exact links and limits: `docs/CORONARY_ARTERIAL_XRAY.md`. No publisher text,
+figures, tables, angiograms or models are reproduced or adapted. Reading access
+is not treated as permission to redistribute source media. New code/prose use
+the project's MIT terms; retained BodyParts3D data keep CC BY 4.0 attribution.
+No new dependency, paid service, patient data or asset licence is introduced.
+
 ## Abdominal spatial reasoning (10 October 2026)
 
 Four original relationship questions cite Texas Tech university anatomy teaching

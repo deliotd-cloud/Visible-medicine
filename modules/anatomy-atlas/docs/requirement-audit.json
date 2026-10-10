@@ -4,11 +4,14 @@
   "sourceHashes": {
     "content/abdominal-eus-orientation.ts": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37",
     "lib/abdominal-eus-orientation.ts": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13",
-    "scripts/test-abdominal-eus-orientation.mjs": "a7c216c6f10266d3a79a06a33d1a92ef82da55ca3e6f38a1d4eb48dda5c4807e",
+    "scripts/test-abdominal-eus-orientation.mjs": "b7c0de24da001350c5e488f55e79dd1c9742d6b3026df1c8d9d5cc7904ba3fd1",
     "docs/ABDOMINAL_EUS_ORIENTATION.md": "241d07fa6a53cb715e8659b85f10f86f304ec0f90b67384184349a3d6ce70283",
     "content/thoracic-eus-orientation.ts": "d45a5ff866014539224a80ab3183f4737f72ca098f6c003fe0ef0ded92678b92",
     "lib/thoracic-eus-orientation.ts": "7ccab068671c7eea2eb05ce1bc62ed88e686d7d6336017b94a0c3048841b425e",
-    "scripts/test-thoracic-eus-orientation.mjs": "5455e00d3a424c14db26f229f436b600ecbab90780095433218ff38a2d5ee89c",
+    "scripts/test-thoracic-eus-orientation.mjs": "db57e6ebd37af298522551f67fa06fbb63da323da40b9490bada4ebc859b94dc",
+    "content/coronary-arterial-xray.ts": "e85cae9bfeb23f0b5b4dd619eb13c38d73743ef9a7a1c43f91bba84b5bcc2ef8",
+    "lib/coronary-arterial-xray.ts": "399c041f58d26fbd9af7628dc7e18daea97f8a2e234961a08a4f699148274c16",
+    "scripts/test-coronary-arterial-xray.mjs": "8eca6770b3994dd50021356e0864e86fae2074d5b7d67284b1dca98e511fb296",
     "docs/THORACIC_EUS_ORIENTATION.md": "92aba0f48f5199cd81769c45a53bb43ed2e3839e705caa84e08fe9c8c05e88e6",
     "content/foot-variant-quiz.ts": "303b622326b00a1de4fd95350d1d751c18a082de89557b208fb028f71683ca1a",
     "lib/foot-variant-quiz.ts": "4d071bb249f719eada4ad4df4da016246d026c0346561ac91627d71c100fc89a",
@@ -607,7 +610,7 @@
     "lib/abdominal-spatial-reasoning.ts": "c0b181982c21c1efe893ec8f9be9f3382809fbd6ed9770508309d50c358d94d4",
     "content/abdominal-spatial-reasoning-pins.json": "d9c0cebf0c7b85102a3738e8e80bb3efdf05c0f0a874643a8979fbcb1377cce1",
     "scripts/pin-abdominal-spatial-reasoning.mjs": "f5ee9d0e55cd4ef07cd82abe147611a540f29a1000424847f9a9e3b26a2a3473",
-    "scripts/test-abdominal-spatial-reasoning.mjs": "4d70403d1641c4766406da84676c243ca3b421659a3707432de147e37643f63d",
+    "scripts/test-abdominal-spatial-reasoning.mjs": "1306f4454e8b57a4795387898a339b3e0b13d76b62f33e8eecd6b818f014383d",
     "content/brain-connections-reasoning-pins.json": "2b2431ad4188a30211a200a3d162c8bc2aa57102d77a24f790b35134449592b7",
     "scripts/pin-brain-connections-reasoning.mjs": "8030bdacdf9c6d7d658b78d84f84868d0557150616a7e195533909634ef365ff",
     "scripts/test-brain-connections-reasoning.mjs": "7a70b6fe7744da8b7b7a56e29edc4260649672472300018b63c35262bf0f16a1",
@@ -732,8 +735,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "6de24d265e22c59a8ceabf5cf0b32af3ea79b06571ac5f7e9046a12abbb35898",
-    "explicitTopicReadiness": "39ea3c38324719a444b14705f5824beac5d9538b75e9269c39b927f618884194",
+    "resolvedContentAndRecipeData": "65356b6f1744d3f97fdecf412f91e08d4a101e69007fe332125c898552074fa4",
+    "explicitTopicReadiness": "46473327517ed11db6235522e12ea31542a54810f427e2e5a818b8950df43873",
     "reasoningQuestionData": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa",
     "guidedLearningData": "99c0d622f6e194412ae6a92d4f60e70aee212fe8ef1a39d02167331cb2d51572",
     "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
@@ -2766,9 +2769,9 @@
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 482,
+        "specificDraft": 486,
         "identityOnly": 0,
-        "pending": 622,
+        "pending": 618,
         "generatedIdentification": 0
       },
       "ultrasound": {
@@ -2998,9 +3001,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 107,
+          "specificDraft": 111,
           "identityOnly": 0,
-          "pending": 51,
+          "pending": 47,
           "generatedIdentification": 0
         },
         "ultrasound": {

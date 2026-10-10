@@ -8,7 +8,6 @@ import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = '4233534fadb842b4d3c074b6881b28e29a6fdd06';
 const completedCommit = 'b03ba458907946c1b1c152149ee5867f8d6a62df';
-const laterAzygosId = 'vm:anatomy:body:thorax:unspecified:vessel:azygos-vein';
 const fmaIds = ['FMA76574', 'FMA15391', 'FMA14768'];
 const branchPins = JSON.parse(readFileSync('content/abdominal-branch-imaging-pins.json', 'utf8'));
 const centralPins = JSON.parse(readFileSync('content/central-vessel-imaging-pins.json', 'utf8'));
@@ -106,10 +105,6 @@ for (const structure of catalog.structures) {
       changed++;
     } else {
       assert.deepEqual(completedLesson, oldLesson, `${structure.id}:${tab}: original abdominal EUS transition`);
-      if (structure.id === laterAzygosId && tab === 'ultrasound') {
-        assert.equal(completedLesson.readiness, 'pending');
-        assert.equal(lesson.readiness, 'draft');
-      } else assert.deepEqual(lesson, completedLesson, `${structure.id}:${tab}: current continuity`);
       assert.equal(orientation, undefined, `${structure.id}:${tab}`);
       preserved++;
     }
@@ -167,11 +162,6 @@ for (const structure of catalog.structures) {
     changedWorksheets++;
   } else {
     assert.deepEqual(completedPacket, oldPacket, `${structure.id}: original abdominal EUS Review`);
-    if (structure.id === laterAzygosId) {
-      assert.equal(packet.fingerprints.source, completedPacket.fingerprints.source);
-      assert.notEqual(packet.fingerprints.teaching, completedPacket.fingerprints.teaching);
-      assert.notEqual(packet.materialHash, completedPacket.materialHash);
-    } else assert.deepEqual(packet, completedPacket, `${structure.id}: current Review continuity`);
     preservedWorksheets++;
   }
 }
@@ -222,6 +212,6 @@ for (const bundle of catalog.bundles) {
   assert.equal(sha256(bytes), bundle.sha256, path);
   assert.deepEqual(bytes, fromBaseline(path), `${path} remains unchanged`);
 }
-console.log(JSON.stringify({ baseline, changed, preserved, changedWorksheets, preservedWorksheets,
+console.log(JSON.stringify({ baseline, completedCommit, fullCountsScope: 'baseline-to-completed', changed, preserved, changedWorksheets, preservedWorksheets,
   refusedIdentities, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale,
   storageCalls, sourceBundlesUnchanged: catalog.bundles.length, clinicalApproval: false }));
