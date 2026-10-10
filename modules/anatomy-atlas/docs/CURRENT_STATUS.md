@@ -12,7 +12,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 - Nested eye guided learning: 2 source-bound draft guides / 8 stops across 15 existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.
 - Nested ventricular guided learning: 1 draft guide / 5 stops over four existing source spaces, with optional [schematic CSF movement](CSF_MOTION.md). No new geometry, resolved fluid pathway, measured physiology or clinical approval. Combined nested guidance covers 19 existing children.
 - Independent source-guided dissection: 9 draft sequences / 73 steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.
-- Find/name identification; 186 draft reasoning concepts bound to 337 root-body representations in shoulder-arm, foot, thigh, pelvis, leg, forearm, head-neck, spine, thorax, abdomen, hand. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
+- Find/name identification; 190 draft reasoning concepts bound to 343 root-body representations in shoulder-arm, foot, thigh, pelvis, leg, forearm, head-neck, spine, thorax, abdomen, hand. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 
 Independent specimens retain separate source frames and teaching inventories. These counts are not added to root-body or nested coverage; lower-limb regional scopes overlap the same specimen.
 

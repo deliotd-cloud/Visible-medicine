@@ -1,5 +1,16 @@
 # Source-bound anatomical reasoning pilot
 
+## Abdominal spatial relationships — 10 October 2026
+
+Four new draft concepts cover six existing displayed roots: liver, corrected
+pancreas, paired kidneys and adrenal glands. They reuse Apply anatomy and bind
+complete source identities; no new geometry or clinical approval. The bank now
+has 190 concepts / 343 representations. The preceding 186 concepts / 337 roots
+and nine-topic lessons remain outside this authored change. See
+[source scope and reference limits](ABDOMINAL_SPATIAL_REASONING.md).
+Current verification is recorded with the coordinating checkpoint; the historical
+brain-connections transition below remains pinned to its completed Git epoch.
+
 ## Brain connections — 10 October 2026
 
 Four appended draft concepts cover six existing roots: paired amygdala and fornix,

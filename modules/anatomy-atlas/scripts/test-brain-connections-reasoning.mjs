@@ -10,6 +10,9 @@ import { build } from './workspace-component-test-build.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const baseline = '456e6d7358e0648b8d7bc8f0f706a4c74f14c5bd';
+// Replay the completed brain-connections transition without treating later,
+// independently checked teaching batches as part of that original milestone.
+const completedEpoch = 'c3485ce80f2db471e0a12c678a9632f8ad7d3607';
 const read = path => readFile(new URL(path, new URL('../', import.meta.url)), 'utf8');
 const old = path => execFileSync('git', ['show', `${baseline}:${path}`], { cwd: root, encoding: 'utf8', maxBuffer: 32e6 });
 const same = (actual, expected, message) => assert.deepEqual(structuredClone(actual), structuredClone(expected), message);
@@ -24,16 +27,17 @@ export * from './lib/brain-connections-reasoning';
 export { bodyDisplayCatalog } from './lib/body-display-catalog';
 export { ReasoningFeedback } from './app/reasoning-feedback';`;
 async function load(previous = false) {
+  const revision = previous ? baseline : completedEpoch;
   const contents = previous ? entrypoint.replace("export * from './lib/brain-connections-reasoning';", '') : entrypoint;
   const result = await build({
     stdin: { contents, resolveDir: root, loader: 'ts' },
     bundle: true, write: false, format: 'cjs', platform: 'node', packages: 'external', jsx: 'automatic',
-    plugins: previous ? [{ name: 'immutable-pre-brain-connections-closure', setup(api) {
+    plugins: [{ name: 'immutable-brain-connections-epoch', setup(api) {
       api.onLoad({ filter: /\.(?:ts|tsx|json)$/ }, args => {
         const path = relative(root, args.path).replaceAll('\\', '/');
-        return { contents: old(path), loader: path.endsWith('.json') ? 'json' : path.endsWith('.tsx') ? 'tsx' : 'ts', resolveDir: dirname(args.path) };
+        return { contents: execFileSync('git', ['show', `${revision}:${path}`], { cwd: root, encoding: 'utf8', maxBuffer: 32e6 }), loader: path.endsWith('.json') ? 'json' : path.endsWith('.tsx') ? 'tsx' : 'ts', resolveDir: dirname(args.path) };
       });
-    } }] : [],
+    } }],
   });
   const module = { exports: {} }, require = createRequire(new URL('../package.json', import.meta.url));
   runInNewContext(result.outputFiles[0].text, { module, exports: module.exports, require, crypto, TextEncoder, TextDecoder, Request, Response, structuredClone, URL, URLSearchParams });
@@ -241,7 +245,7 @@ assert.equal(changed, 6);
 assert.equal(unchanged, 1098);
 assert.equal(topicPlacements, 9936);
 assert.equal(oldQuestions, 331);
-console.log(JSON.stringify({ baseline, baselineConceptsSha256: createHash('sha256').update(JSON.stringify(previous.reasoningConcepts)).digest('hex'),
+console.log(JSON.stringify({ baseline, completedEpoch, scope: 'immutable historical transition; current additions checked separately', baselineConceptsSha256: createHash('sha256').update(JSON.stringify(previous.reasoningConcepts)).digest('hex'),
   concepts: current.reasoningConcepts.length, boundRepresentations: 337,
   newConcepts: 4, newRootTargets: changed, priorQuestionsPreserved: oldQuestions,
   unchangedRootTeaching: unchanged, unchangedTopicPlacements: topicPlacements,

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checks": 21613,
-  "negativeIdentityCases": 5282,
-  "concepts": 186,
-  "exactRepresentations": 337,
+  "checks": 22175,
+  "negativeIdentityCases": 5380,
+  "concepts": 190,
+  "exactRepresentations": 343,
   "regionalConcepts": {
     "shoulder-arm": 23,
     "forearm": 11,
@@ -13,11 +13,11 @@
     "foot": 12,
     "head-neck": 34,
     "spine": 12,
-    "abdomen": 15,
+    "abdomen": 19,
     "thorax": 20,
     "pelvis": 9
   },
-  "multiPartRepresentations": 17,
+  "multiPartRepresentations": 19,
   "sharedRegionConcepts": {
     "pelvis": 9,
     "abdomen": 1,
@@ -66,13 +66,15 @@
     "https://anatomy.ttuhscep.edu/anatomytables/viscera_head_neck.html": 41,
     "https://nba.uth.tmc.edu/neuroanatomy/L5/Lab05p12_index.html": 76,
     "https://www.niddk.nih.gov/health-information/urologic-diseases/urinary-tract-how-it-works": 116,
-    "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/viscera-tables/visceral-structures-of-the-pelvis-and-perineum/": 161
+    "https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/viscera-tables/visceral-structures-of-the-pelvis-and-perineum/": 161,
+    "https://anatomy.ttuhscep.edu/gastrointestinal_system/duodenum_tables.html": 95,
+    "https://anatomy.ttuhscep.edu/gastrointestinal_system/kidney_ans.html": 99
   },
   "sourceHashes": {
     "catalog": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
     "officialElementIndex": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf",
     "officialPartofElementIndex": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea",
-    "questions": "2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62"
+    "questions": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa"
   },
   "verification": [
     "Official complete FMA/file membership",

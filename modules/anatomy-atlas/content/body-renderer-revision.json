@@ -553,6 +553,10 @@
       "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
     },
     {
+      "path": "content/abdominal-spatial-reasoning-pins.json",
+      "sha256": "d9c0cebf0c7b85102a3738e8e80bb3efdf05c0f0a874643a8979fbcb1377cce1"
+    },
+    {
       "path": "content/abdominal-vascular-mri-pins.json",
       "sha256": "97300443f3ca6bde73a55d479a5e14ff493b8970081ce5f7462380cd24f552ad"
     },
@@ -2745,6 +2749,10 @@
       "sha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
     },
     {
+      "path": "lib/abdominal-spatial-reasoning.ts",
+      "sha256": "c0b181982c21c1efe893ec8f9be9f3382809fbd6ed9770508309d50c358d94d4"
+    },
+    {
       "path": "lib/abdominal-vascular-mri.ts",
       "sha256": "0cc66432dbb41466b08eccc3a7a3e8eae2a49320ff1223b40d2163fbce0a3823"
     },
@@ -4278,7 +4286,7 @@
     },
     {
       "path": "lib/reasoning-questions.ts",
-      "sha256": "ee06af4b35a2f0328b34907618bcce7c0612d702f264cfaddc0ffbe8ae4f9a8c"
+      "sha256": "c6b053f9b2d199bfcd3cb1508c833f5f6ccf1a7b2331c1ab073aa1a32a117824"
     },
     {
       "path": "lib/rectal-deferent-imaging.ts",
@@ -4898,7 +4906,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "46d44a4001d7fb8838d4d651a4764e239db9634da9e5d3a6206799b07c595318"
+      "sha256": "9a6e43c45876d6f7dbc2f65f4e732759a2d5942a5209c61101f9f2f187ed7c3f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5121,5 +5129,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6f0ce83ebf278b270ce4c054928020514fa7f777cbe314e0734a5050478d7c07"
+  "sha256": "ef1442d1f69c3547077742caa26e0bf0e525bf1260a2470cfcc66821fd63b00a"
 }

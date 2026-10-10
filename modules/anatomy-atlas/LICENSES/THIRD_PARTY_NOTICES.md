@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Abdominal spatial reasoning (10 October 2026)
+
+Four original relationship questions cite Texas Tech university anatomy teaching
+as factual reading references; exact URLs and scope are recorded in
+`docs/ABDOMINAL_SPATIAL_REASONING.md`. No publisher text, questions, tables,
+images or geometry are imported. Original code/prose retain project MIT terms;
+retained BodyParts3D identities/geometry retain CC BY 4.0 credit. No new dependency,
+fee, private scan or patient derivative is introduced. Clinical review pending.
+
 ## Abdominal vascular EUS orientation (10 October 2026)
 
 Three original Ultrasound drafts use factual reading references described in

@@ -19,6 +19,7 @@ import { thoracicCoreReasoningConcepts, thoracicCoreReasoningSourceMatches } fro
 import { lowerVenousReasoningConcepts, lowerVenousReasoningSourceMatches } from './lower-venous-reasoning';
 import { abdominalVesselReasoningConcepts, abdominalVesselReasoningSourceMatches } from './abdominal-vessel-reasoning';
 import { brainConnectionsReasoningConcepts, brainConnectionsReasoningSourceMatches } from './brain-connections-reasoning';
+import { abdominalSpatialReasoningConcepts, abdominalSpatialReasoningSourceMatches } from './abdominal-spatial-reasoning';
 // "midline" retains the exact catalogue tag, including bilateral source groups.
 type ReasoningBinding = { fma: string; side: 'right' | 'left' | 'midline' | 'unpaired' | 'unspecified' } & (
   | { file: string; files?: never }
@@ -366,6 +367,7 @@ export const reasoningConcepts: readonly ReasoningConcept[] = [
   ...lowerVenousReasoningConcepts,
   ...abdominalVesselReasoningConcepts,
   ...brainConnectionsReasoningConcepts,
+  ...abdominalSpatialReasoningConcepts,
 ];
 export function reasoningConceptFor(s: BodyStructure) {
   if (
@@ -380,6 +382,7 @@ export function reasoningConceptFor(s: BodyStructure) {
       (c.sourceTissue !== 'bone' || upperLimbBoneReasoningSourceMatches(s, c.key) || lowerLimbBoneReasoningSourceMatches(s, c.key)) &&
       (!c.key.startsWith('thoracic-core-') || thoracicCoreReasoningSourceMatches(s, c.key)) &&
       (!c.key.startsWith('brain-connections-') || brainConnectionsReasoningSourceMatches(s, c.key)) &&
+      (!c.key.startsWith('abdominal-spatial-') || abdominalSpatialReasoningSourceMatches(s, c.key)) &&
       s.sourceTree === (c.sourceTree ?? 'isa') &&
       s.region === c.region &&
       s.regions.length === (c.sourceRegions ?? [c.region]).length &&

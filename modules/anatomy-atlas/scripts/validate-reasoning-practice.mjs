@@ -101,9 +101,14 @@ const lowerVenousKeys = ['small-saphenous-vein','popliteal-vein','femoral-vein',
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,176))), 'c863500fd6bc4ff38ea902e73b334cb1b4fc7af5350b1e8f4987402455e0347f', 'All preceding176 definitions and order preserved against ff5ff419');
 same(api.reasoningConcepts.slice(170,176).map(c=>c.key),lowerVenousKeys);
 same(api.reasoningConcepts.slice(176,182).map(c=>c.key), ['celiac-artery','superior-mesenteric-artery','inferior-mesenteric-artery','hepatic-portal-vein','abdominal-aorta','inferior-vena-cava'].map(k=>'abdominal-vessel-'+k));
-same(api.reasoningConcepts.slice(182).map(c=>c.key), ['amygdala','fornix','anterior-commissure','corpus-callosum'].map(k=>'brain-connections-'+k));
-same(api.reasoningConcepts.length, 186);
-same(bound.length, 337);
+same(api.reasoningConcepts.slice(182,186).map(c=>c.key), ['amygdala','fornix','anterior-commissure','corpus-callosum'].map(k=>'brain-connections-'+k));
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,186))),
+  '2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62',
+  'All preceding 186 definitions and order preserved');
+const spatialKeys = ['liver', 'pancreas', 'kidney', 'adrenal'].map(k => 'abdominal-spatial-' + k);
+same(api.reasoningConcepts.slice(186).map(c => c.key), spatialKeys, 'Only four abdominal spatial concepts follow the previous 186');
+same(api.reasoningConcepts.length, 190);
+same(bound.length, 343);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 46);
 same(bound.filter((s) => s.region === 'forearm').length, 22);
 same(bound.filter((s) => s.region === 'hand').length, 20);
@@ -113,9 +118,19 @@ same(bound.filter((s) => s.region === 'foot').length, 24);
 same(bound.filter((s) => s.region === 'head-neck').length, 66);
 same(bound.filter((s) => s.region === 'spine').length, 24);
 same(bound.filter((s) => s.region === 'thorax').length, 24);
-same(bound.filter((s) => s.region === 'abdomen').length, 17);
+same(bound.filter((s) => s.region === 'abdomen').length, 23);
 same(bound.filter((s) => s.region === 'pelvis').length, 14);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 186);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 190);
+const spatialConcepts = api.reasoningConcepts.slice(186);
+same(spatialConcepts.map(c => [c.sourceTissue, c.region, c.sourceTree ?? 'isa']), [
+  ['organ', 'abdomen', 'partof'], ['organ', 'abdomen', 'partof'],
+  ['organ', 'abdomen', 'partof'], ['organ', 'abdomen', 'isa'],
+]);
+same(spatialConcepts.map(c => c.bindings.map(b => [b.fma, b.side])), [
+  [['FMA7197', 'unpaired']], [['FMA7198', 'unpaired']],
+  [['FMA7204', 'right'], ['FMA7205', 'left']],
+  [['FMA15629', 'right'], ['FMA15630', 'left']],
+], 'Six exact displayed organ roots, with source laterality intact');
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -182,12 +197,14 @@ for (const concept of api.reasoningConcepts) {
   const midlineBrainConnection = brainConnection && ['brain-connections-anterior-commissure','brain-connections-corpus-callosum'].includes(concept.key);
   const bone = concept.sourceTissue === 'bone';
   const vesselSides = { FMA3736: 'midline', FMA3768: 'midline', FMA87217: 'unspecified', FMA4720: 'unspecified', FMA4838: 'unspecified', FMA4944: 'midline', FMA50737: 'unspecified', FMA14749: 'midline', FMA14750: 'unspecified', FMA50735: 'unspecified', FMA3789: 'midline', FMA10951: 'unspecified' };
-  const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter','thoracic-core-lung'].includes(concept.key);
+  const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter','thoracic-core-lung', 'abdominal-spatial-kidney', 'abdominal-spatial-adrenal'].includes(concept.key);
   const sidedBronchus = concept.key === 'thoracic-core-right-main-bronchus' ? 'right' : concept.key === 'thoracic-core-left-main-bronchus' ? 'left' : undefined;
   same(concept.bindings.length, (vessel && !lowerVein) || grouped || midlineBrainConnection || (organ && !pairedOrgan) ? 1 : 2);
   if (vessel && !lowerVein) check(Object.hasOwn(vesselSides, concept.bindings[0].fma), 'Thoracic and abdominal vessel sides stay exact');
   same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), vessel && !lowerVein ? [vesselSides[concept.bindings[0].fma]] : sidedBronchus ? [sidedBronchus] : organ && !pairedOrgan ? ['unpaired'] : grouped || midlineBrainConnection ? ['midline'] : ['left', 'right']);
-  same(new Set(concept.distractors).size, concept.key.startsWith('upper-limb-bone-') ? 4 : (abdominalVessel && concept.bindings[0].side === 'midline') || midlineBrainConnection ? 1 : 3);
+  same(new Set(concept.distractors).size, concept.key.startsWith('upper-limb-bone-') ? 4 :
+    (abdominalVessel && concept.bindings[0].side === 'midline') || midlineBrainConnection ? 1 :
+    ['abdominal-spatial-kidney', 'abdominal-spatial-adrenal'].includes(concept.key) ? 2 : 3);
   check(!concept.distractors.includes(concept.key));
   check(concept.prompt.length > 40 && concept.explanation.length > 40);
   check(concept.references.length > 0);
@@ -215,6 +232,15 @@ for (const concept of api.reasoningConcepts) {
         'FJ2650','FJ2651','FJ2652','FJ2653','FJ2654','FJ2656','FJ2723','FJ2737',
       ],'Exact prior excluded heart components stay excluded');
       same(officialFiles.filter(file=>files.includes(file)),files,'Every admitted heart component retains official order');
+    }else if (concept.key === 'abdominal-spatial-liver' || concept.key === 'abdominal-spatial-pancreas') {
+      const excluded = concept.key === 'abdominal-spatial-liver'
+        ? ['FJ2415', 'FJ2416', 'FJ3081'] : ['FJ2629'];
+      same(officialFiles.filter(file => !files.includes(file)), excluded,
+        'Only the explicitly excluded archive components are absent from the display');
+      same(officialFiles.filter(file => files.includes(file)), files,
+        'Admitted abdominal organ components preserve official order');
+      same(files.length, concept.key === 'abdominal-spatial-liver' ? 57 : 3,
+        'Displayed liver and pancreas retain their exact part counts');
     }else same(officialFiles,files,'Complete official element-file membership');
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
@@ -230,7 +256,7 @@ for (const concept of api.reasoningConcepts) {
         name: 'Unrelated display label',
         sourceName: 'Changed display label',
       })?.key,
-      concept.key.startsWith('thoracic-core-') || lowerVein || abdominalVessel || brainConnection ? undefined : concept.key,
+      concept.key.startsWith('thoracic-core-') || lowerVein || abdominalVessel || brainConnection || spatialKeys.includes(concept.key) ? undefined : concept.key,
       'Existing label-independent lookup preserved; new exact-record pins reject altered records',
     );
     for (const mutation of [
@@ -332,7 +358,7 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     if (!session) continue;
     const historicalExpected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 20, forearm: 12,
       hand: 10, thigh: 18, pelvis: 16, leg: 18, foot: 12, spine: 12, thorax: side==='both'?20:19, abdomen: 9 }[region];
-    const historicalScope=scope.filter(s=>!lowerVenousKeys.includes(api.reasoningConceptFor(s)?.key) && !api.reasoningConceptFor(s)?.key.startsWith('abdominal-vessel-') && !api.reasoningConceptFor(s)?.key.startsWith('brain-connections-'));
+    const historicalScope=scope.filter(s=>!lowerVenousKeys.includes(api.reasoningConceptFor(s)?.key) && !api.reasoningConceptFor(s)?.key.startsWith('abdominal-vessel-') && !api.reasoningConceptFor(s)?.key.startsWith('brain-connections-') && !api.reasoningConceptFor(s)?.key.startsWith('abdominal-spatial-'));
     same(create(historicalScope)?.questions.length,historicalExpected,'Original regional session goldens retained');
     const added=api.practiceQuestionCount(scope,'reason',scope.filter(s=>lowerVenousKeys.includes(api.reasoningConceptFor(s)?.key)).map(s=>s.id));
     same(added,{'whole-body':6,thigh:4,pelvis:4,leg:4,foot:2,abdomen:2}[region]??0,'Only exact new venous concepts extend regional sessions');
@@ -340,7 +366,9 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     same(abdominalAdded, ['whole-body','abdomen'].includes(region)?6:0, 'Abdominal questions require visible authored alternatives');
     const brainAdded=api.practiceQuestionCount(scope,'reason',scope.filter(s=>api.reasoningConceptFor(s)?.key.startsWith('brain-connections-')).map(s=>s.id));
     same(brainAdded, ['whole-body','head-neck'].includes(region)?4:0, 'Brain questions require exact visible alternatives');
-    const expected=Math.min(20,historicalExpected+added+abdominalAdded+brainAdded);
+    const spatialAdded=api.practiceQuestionCount(scope,'reason',scope.filter(s=>spatialKeys.includes(api.reasoningConceptFor(s)?.key)).map(s=>s.id));
+    same(spatialAdded, ['whole-body','abdomen'].includes(region)?4:0, 'Four spatial questions require their exact abdominal display scope');
+    const expected=Math.min(20,historicalExpected+added+abdominalAdded+brainAdded+spatialAdded);
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -402,7 +430,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      186,
+      190,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -537,6 +565,38 @@ for (const concept of organConcepts) {
   }
   same(create([target]),null,'No isolated-organ answer giveaway');
 }
+const spatialDisplay = liveDisplay.structures.filter(s => spatialKeys.includes(api.reasoningConceptFor(s)?.key));
+same(spatialDisplay.map(s => s.fmaId).sort(),
+  ['FMA7197', 'FMA7198', 'FMA7204', 'FMA7205', 'FMA15629', 'FMA15630'].sort(),
+  'The six spatial identities are actual display records');
+for (const concept of spatialConcepts) {
+  const targets = spatialDisplay.filter(s => api.reasoningConceptFor(s)?.key === concept.key);
+  same(targets.length, concept.bindings.length);
+  for (const target of targets) {
+    const files = target.sources.map(source => source.file);
+    if (concept.key === 'abdominal-spatial-liver') same(files.length, 57);
+    if (concept.key === 'abdominal-spatial-pancreas') {
+      same(files, ['FJ1895', 'FJ1896', 'FJ2630'], 'Displayed pancreas excludes FJ2629');
+    }
+    for (const region of ['whole-body', 'abdomen']) {
+      const scope = liveDisplay.structures.filter(s => region === 'whole-body' || s.regions.includes(region));
+      const session = create(scope, { retryIds: [target.id] }, liveDisplay.bundles.map(b => b.id));
+      same(session?.questions.length, 1, 'Each displayed spatial root is independently playable');
+      const question = session.questions[0];
+      check(question.choices.length >= 2, 'A spatial question requires a visible alternative');
+      for (const id of question.choices) {
+        const choice = scope.find(s => s.id === id);
+        check(choice && choice.system === 'organs' && choice.laterality === target.laterality);
+        check(id === target.id || concept.distractors.includes(api.reasoningConceptFor(choice)?.key));
+      }
+      same(create(scope.filter(s => s.id !== target.id), { retryIds: [target.id] }), null,
+        'Hidden spatial root cannot be asked');
+      same(create(scope, { retryIds: [target.id] }, liveDisplay.bundles.map(b => b.id).filter(id => id !== target.bundle)), null,
+        'Unloaded spatial root cannot be asked');
+      same(create([target]), null, 'A spatial root alone cannot reveal its answer');
+    }
+  }
+}
 same(api.reasoningConceptFor(liveDisplay.structures.find(s=>s.fmaId==='FMA7201')),undefined,'Partial large-intestine group is not silently admitted');
 same(limbConcepts.length, 12);
 for (const concept of limbConcepts) for (const side of ['left', 'right']) {
@@ -559,7 +619,7 @@ for (const side of ['left', 'right']) {
   for (const q of session.questions) same(q.choices.length, 4, 'All four same-side neck choices loaded');
   for (const target of scope) same(create([target]), null, 'No lone-neck-target fallback');
 }
-for (const concept of [...newConcepts, ...deepConcepts, ...pelvicConcepts]) {
+for (const concept of [...newConcepts, ...deepConcepts, ...pelvicConcepts, ...spatialConcepts]) {
   for (const ref of concept.references) referenceWords[ref.url] = (referenceWords[ref.url] ?? 0) + (concept.prompt + ' ' + concept.explanation).split(/\s+/).length;
   const identities = bound.filter(s => api.reasoningConceptFor(s).key === concept.key);
   const oneQuestion = create(all, { retryIds: identities.map(s => s.id) });
@@ -575,7 +635,7 @@ for (const concept of [...newConcepts, ...deepConcepts, ...pelvicConcepts]) {
 }
 for (const [url, words] of Object.entries(referenceWords)) check(words <= 200, `Brief original synthesis per reference: ${url} (${words})`);
 const groupedTargets = bound.filter(s => s.laterality === 'midline');
-same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA15571', 'FMA15572', 'FMA15900', 'FMA7088', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7309', 'FMA7310', 'FMA7394', 'FMA7395', 'FMA9600', 'FMA9607']);
+same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA15571', 'FMA15572', 'FMA15900', 'FMA7088', 'FMA7131', 'FMA7148', 'FMA7197', 'FMA7198', 'FMA7202', 'FMA7204', 'FMA7205', 'FMA7309', 'FMA7310', 'FMA7394', 'FMA7395', 'FMA9600', 'FMA9607'].sort());
 const priorMidlineTargets=groupedTargets.filter(s=>!api.reasoningConceptFor(s)?.key.startsWith('brain-connections-'));
 same(priorMidlineTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758', 'FMA3736', 'FMA3768', 'FMA4944', 'FMA14749', 'FMA3789'].sort());
 same(create(priorMidlineTargets).questions.length, 9, 'Four prior muscle groups and five exact catalogue-midline vessels work together');
