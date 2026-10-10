@@ -60,6 +60,9 @@ export const spineImagingReferences = {
   mrAnatomy: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/',
   sacralStudy: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9456416/',
   disc: 'https://orthoinfo.aaos.org/globalassets/pdfs/herniated-disk.pdf',
+  lumbarDiscNomenclature: 'https://radiology.queensu.ca/source/Lumbar_Disc_Nomenclature.pdf',
+  thoracicMriCoverage: 'https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-',
+  cervicalMriCoverage: 'https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-',
   adultUltrasound: 'https://www.aium.org/resources/official-statements/view/nonoperative-spinal-paraspinal-ultrasound-in-adults',
   ultrasoundBone: 'https://www.radiologyinfo.org/en/info/musculous',
   infantUltrasound: 'https://www.acr.org/-/media/ACR/Files/Practice-Parameters/US-NeonatalSpine.pdf',
@@ -258,13 +261,15 @@ export const spineImagingTopics: Record<
       'disc',
     ),
     mri: topic(
-      'On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.',
+      'Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.',
       [
-        'Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.',
-        'Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.',
+        'At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.',
+        'A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.',
+        'Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.',
       ],
       'mrAnatomy',
       'mri',
+      'cervicalMriCoverage',
     ),
     xray: topic(
       'Radiographs depict the interval between adjacent vertebral endplates rather than the disc’s internal tissues. A reduced interval is not a complete diagnosis of the disc.',
@@ -285,13 +290,15 @@ export const spineImagingTopics: Record<
       'ct',
     ),
     mri: topic(
-      'Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.',
+      'Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.',
       [
-        'A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.',
-        'There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.',
+        'Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.',
+        'Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.',
+        'This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.',
       ],
       'mri',
       'mrAnatomy',
+      'thoracicMriCoverage',
     ),
     xray: topic(
       'The radiographic disc space is an indirect interval framed by vertebral endplates. It should not be confused with the rendered disc surface.',
@@ -313,13 +320,16 @@ export const spineImagingTopics: Record<
       'disc',
     ),
     mri: topic(
-      'Follow the lumbar disc in more than one plane and relate its posterior margin to the canal and foramina. Disc shape and nerve involvement are separate observations.',
+      'On acquired sagittal and axial MRI, confirm the lumbar disc level, then follow its posterior and lateral contour from the central canal through the subarticular zone (lateral recess) to the neural foramen and extraforaminal region. Describe the observed location separately from any neural finding.',
       [
-        'MRI can show disc and neural abnormalities; an imaging finding does not by itself establish the source of symptoms.',
-        'Whole-disc geometry has no segmented nucleus, annulus, cauda equina or exiting/traversing root to diagnose or simulate.',
+        'Compare adjacent sections and both planes: a central or subarticular finding and a foraminal or extraforaminal finding occupy different regions, even when they arise from the same disc.',
+        'As a regional principle, a subarticular finding may relate to a traversing root, while a foraminal or extraforaminal finding may relate to an exiting root. Confirm the patient level, side and actual root course; the source label cannot assign a root in a patient.',
+        'Consensus nomenclature separates a generalized disc bulge from localized herniation, with protrusion and extrusion describing herniation shapes. Apply those terms only to acquired images; neither morphology nor proximity alone establishes symptom causation.',
+        'This whole-disc mesh has no segmented annulus, nucleus, cauda equina or nerve roots, and supplies no MR signal, measured narrowing or patient registration.',
       ],
       'mri',
       'disc',
+      'lumbarDiscNomenclature',
     ),
     xray: topic(
       'Compare the indirect endplate-to-endplate interval, not an imagined visible nucleus. Lumbar radiographs cannot directly diagnose a herniated disc.',

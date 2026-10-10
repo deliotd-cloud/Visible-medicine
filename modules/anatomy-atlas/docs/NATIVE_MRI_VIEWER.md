@@ -38,6 +38,24 @@ Coordinate basis: [DICOM PS3.3 Image Plane Module](https://dicom.nema.org/medica
 
 ## Verification and remaining acceptance
 
+### Caller-buffer integrity, 4 October 2026
+
+The parser now copies the admitted scalar body before its asynchronous SHA-256
+check and creates its signal array from that same copy. Previously, the returned
+array referenced the caller's input buffer: later mutation could change displayed
+signal without changing the already-verified digest. New synthetic regressions
+first reproduced that failure, then passed for unsigned and signed packets with
+mutations both after parsing and during an explicitly held digest. They check
+signal, source LPS point, rendered slice, body hash and the original fixture.
+
+This is input-buffer isolation, not an immutable public study API or source
+authentication. The returned typed array is still mutable. Copying may add nearly
+128 MiB of transient memory at the existing packet limit; large-file memory and
+device acceptance remain unverified. No format, size limit, registration, privacy
+clearance, clinical approval, Didanix transport or learner-viewer capability is
+added. The native-MRI validator passes150 synthetic checks with zero private frames.
+Failure/pass evidence: `E:/VisibleMedicine-LocalStaging/20261004-native-mr-buffer-integrity/`.
+
 ### Duplicate JSON-header key boundary, 24 September 2026
 
 Before interpreting a `.vmmr` header, the local parser now scans JSON object

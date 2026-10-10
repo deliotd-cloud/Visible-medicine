@@ -2,7 +2,7 @@
 
 import { useLayoutEffect, useRef } from 'react';
 
-type PracticePanelPhase = 'question' | 'feedback';
+type PracticePanelPhase = 'question' | 'feedback' | 'results';
 
 /** Move only the panel's own scroller; focusing must not move the page/model. */
 export function revealPracticePanelTarget(
@@ -10,12 +10,13 @@ export function revealPracticePanelTarget(
   phase: PracticePanelPhase,
 ): boolean {
   if (!target?.isConnected) return false;
+  if (target.closest('[hidden], [inert]')) return false;
   const info = target.closest<HTMLElement>('.body-info');
   if (!info) return false;
   const popup = target.closest<HTMLElement>('.anatomy-controls-popup');
   if (popup?.hasAttribute('data-closed')) return false;
   const scroller = popup ?? info;
-  if (phase === 'question') scroller.scrollTop = 0;
+  if (phase === 'question' || phase === 'results') scroller.scrollTop = 0;
   target.focus({ preventScroll: true });
   const bounds = scroller.getBoundingClientRect();
   const targetBounds = target.getBoundingClientRect();
@@ -28,15 +29,21 @@ export function PracticePanelNavigation({
   sessionId,
   index,
   answered,
+  phase: requestedPhase,
 }: {
   sessionId: number;
   index: number;
   answered: boolean;
+  /** Null disables navigation outside active/completed Practice. */
+  phase?: PracticePanelPhase | null;
 }) {
   const marker = useRef<HTMLSpanElement>(null);
   const handled = useRef<string | null>(null);
   useLayoutEffect(() => {
-    const phase = answered ? 'feedback' : 'question';
+    const phase = requestedPhase === undefined
+      ? answered ? 'feedback' : 'question'
+      : requestedPhase;
+    if (phase === null) return;
     const key = `${sessionId}:${index}:${phase}`;
     if (handled.current === key) return;
     const info = marker.current?.closest<HTMLElement>('.body-info');
@@ -58,6 +65,6 @@ export function PracticePanelNavigation({
     });
     observer.observe(popup, { attributes: true, attributeFilter: ['data-closed'] });
     return () => { observer.disconnect();if(pendingFrame)cancelAnimationFrame(pendingFrame); };
-  }, [sessionId, index, answered]);
+  }, [sessionId, index, answered, requestedPhase]);
   return <span ref={marker} hidden aria-hidden="true" />;
 }

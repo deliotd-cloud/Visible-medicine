@@ -82,6 +82,7 @@ const shim = {
   useCallback: (fn, deps) => (active ? fn : React.useCallback(fn, deps)),
   useLayoutEffect: (fn, deps) =>
     active ? undefined : React.useLayoutEffect(fn, deps),
+  useEffect: (fn, deps) => (active ? undefined : React.useEffect(fn, deps)),
 };
 const scope = { exports: {} };
 const Link = ({ children, ...props }) =>

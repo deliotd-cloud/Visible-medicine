@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import {beforeRespiratoryCoreDepth} from './respiratory-core-depth-history.mjs';
 import {readFile,writeFile,access} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
@@ -20,9 +21,11 @@ for(const b of bundles)assert.equal(createHash('sha256').update(await readFile('
 const path='content/thoracoabdominal-organ-imaging-pins.json',sourceCommit='76e0d191c683f273d2399216d82a592b14438b7d';
 const base={sourceCommit,sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,bundles};
 if(process.argv.includes('--check')){
+ const anatomyEpoch=beforeRespiratoryCoreDepth(api,raw);
+ assert.notEqual(anatomyEpoch,api,'Current pin check requires exact authored respiratory depth, not stale replay');
  const saved=JSON.parse(await readFile(path));assert.deepEqual(saved.entries.map(({previous:_previous,anatomy:_anatomy,...e})=>e),entries);
  for(const k of Object.keys(base))assert.deepEqual(saved[k],base[k]);
- for(const e of saved.entries)assert.deepEqual(e.anatomy,api.bodyLesson(e.identity,'anatomy'));
+ for(const e of saved.entries)assert.deepEqual(e.anatomy,anatomyEpoch.bodyLesson(e.identity,'anatomy'));
 }else{
  assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),sourceCommit);
  await assert.rejects(access(path),'Never overwrite pins');

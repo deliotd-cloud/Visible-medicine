@@ -4,6 +4,7 @@ import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 import { nestedConcepts } from '../content/nested-teaching.ts';
+import { picaSourceFiles } from '../content/pica-source-teaching.ts';
 const require = createRequire(import.meta.url);
 const compiled = await build({
   stdin: {
@@ -28,14 +29,13 @@ const catalog = scope.exports.bodyDisplayCatalog(
     await readFile('public/models/bodyparts3d/full-body/catalog.json'),
   ),
 );
-// Femoral lessons have separate supplemental pins. Unnamed cranial source
-// partitions deliberately have no independent teaching (the component suite
-// verifies that parent lessons are not inherited). Neither belongs to this
+// Femoral and explicitly authored MCA/PICA source lessons have supplemental pins.
+// Neither belongs to this
 // immutable 71-binding corpus; never exclude arbitrary unmatched targets.
-assert.equal(
-  nestedConcepts.some(c => c.study === 'cranial-artery-components'),
-  false,
-  'Cranial component teaching requires an explicit source-pinning workflow',
+assert.deepEqual(
+  nestedConcepts.filter(c => c.study === 'cranial-artery-components').map(c => c.id),
+  ['mca-source-fj1662', 'mca-source-fj1663', 'mca-source-fj1692',...picaSourceFiles.map(f=>'pica-source-'+f.file.toLowerCase())],
+  'Only the explicit supplemental source-file lessons are admitted; no parent inheritance',
 );
 const targets = scope.exports.nestedStudyTargets(catalog).filter(
   t => !['femoral-components', 'cranial-artery-components'].includes(t.study),

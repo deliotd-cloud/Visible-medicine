@@ -17,7 +17,7 @@ const state=value=>{const i=cursor++;if(!(i in slots))slots[i]=typeof value==='f
 const sameDeps=(a,b)=>a&&b&&a.length===b.length&&a.every((value,i)=>Object.is(value,b[i]));
 const memo=(fn,deps)=>{const i=cursor++;if(!sameDeps(slots[i]?.deps,deps))slots[i]={deps,value:fn()};return slots[i].value;};
 const effect=(fn,deps)=>{const i=cursor++;if(!sameDeps(slots[i]?.deps,deps)){slots[i]?.cleanup?.();slots[i]={deps};after.push(()=>slots[i].cleanup=fn());}};
-const shim={...React,useState:state,useMemo:memo,useCallback:(fn,deps)=>memo(()=>fn,deps),useRef:value=>state(()=>({current:value}))[0],
+const shim={...React,useContext:()=>null,useState:state,useMemo:memo,useCallback:(fn,deps)=>memo(()=>fn,deps),useRef:value=>state(()=>({current:value}))[0],
  useEffect:effect,useLayoutEffect:effect,useReducer:(reduce,arg,init)=>{const[value,set]=state(()=>init?init(arg):arg);return[value,action=>set(old=>reduce(old,action))];}};
 const education={options:null,published:[],use(options){this.options=options;return{adapter:null,publish:id=>this.published.push(id)};}};
 const events=new Map(),preference={matches:true,addEventListener:(name,fn)=>events.set('motion:'+name,fn),removeEventListener:name=>events.delete('motion:'+name)};
@@ -36,25 +36,71 @@ for(const parent of parents){
  const render=(extra={})=>{cursor=0;after=[];tree=api.EyeLayerView({parent,educationCatalog:catalog,...extra});after.forEach(fn=>fn());};
  const scene=()=>nodes(tree).find(n=>n.props?.onRendererHealth)?.props;
  const button=label=>nodes(tree).find(n=>n.props?.onClick&&text(n).trim()===label)?.props;
+ const control=label=>nodes(tree).find(n=>n.props?.['aria-label']===label)?.props;
+ const selectWith=trigger=>nodes(tree).find(n=>n.props?.onValueChange&&nodes(n).some(child=>child.props?.['aria-label']===trigger))?.props;
+ const cutaway=()=>nodes(tree).find(n=>n.props?.onChange&&n.props?.value?.plane)?.props;
+ const guidedPanel=()=>nodes(tree).find(n=>n.type==='details'&&n.props?.className==='eye-layer-guided-learning');
+ const scopeDisclosure=()=>nodes(guidedPanel()).find(n=>n.type==='details'&&n.props?.['data-testid']==='eye-tour-limitations');
+ const snapshot=()=>({selectedId:scene().selectedId,hidden:scene().hiddenIds,explode:scene().explode,
+  layout:scene().layout,view:scene().view,inspection:scene().inspection,labels:scene().labels,
+  origins:scene().showOrigins,isolated:scene().isolated,focus:scene().focus});
  render();render();check(button('Start eye walkthrough').disabled,'Loading denies start');
  button('Start eye walkthrough').onClick();render();check(!button('End walkthrough'),'Callback also denies loading start');
  scene().onLoaded();scene().onRendererHealth('ready');render();check(!button('Start eye walkthrough').disabled,'Loaded ready guide admitted');
+ const idlePanel=guidedPanel(),idleScope=scopeDisclosure();
+ idlePanel.props.onToggle({target:idleScope,currentTarget:{open:true}});render();
+ check(!guidedPanel().props.open&&!button('End walkthrough'),'Reading scope does not expand or autoplay the idle guide');
  // Save a non-default manual state and a real-shaped camera snapshot.
  const preset=nodes(tree).find(n=>n.props?.onValueChange&&n.props.value==='anterior'&&nodes(n).some(child=>child.props?.id==='eye-layer-preset'));
  preset.props.onValueChange('lens');render();
  const slider=nodes(tree).find(n=>n.props?.['aria-label']==='Eye component separation');slider.props.onValueChange([37]);render();
- const before={selectedId:scene().selectedId,hidden:scene().hiddenIds,explode:scene().explode,layout:scene().layout,view:scene().view,inspection:scene().inspection};
+ const before=snapshot();
  const camera={direction:[0.2672612419,0.5345224838,0.8017837257],up:[0,1,0],pan:[0.1,0.2,0],scale:1.25};
  scene().cameraCapture.current=camera;
  button('Start eye walkthrough').onClick();render();
  const guide=api.eyeLayerGuide(parent);
  for(const [index,step]of guide.steps.entries()){
+  const panel=guidedPanel(),scope=scopeDisclosure();
+  const notice=nodes(panel).find(n=>n.props?.['data-testid']==='eye-tour-source-scope');
+  check(text(notice)==='Draft source-component teaching · not clinical approval or scan registration.','Compact source warning remains visible at every stop');
+  check(scope?.props.open!==true&&nodes(scope).some(n=>n.type==='summary'&&text(n)==='Tour scope & limitations'),'Full scope starts in a closed disclosure');
+  check(nodes(scope).some(n=>n.type==='p'&&text(n)===guide.limitation),'Exact eye-guide limitation retained in disclosure');
+  const beforeScope=snapshot();
+  panel.props.onToggle({target:scope,currentTarget:{open:false}});render();
+  same(snapshot(),beforeScope,'Reading nested scope does not change active guide state');
+  check(!!button('End walkthrough')&&guidedPanel().props.open,'Nested disclosure cannot end the eye guide');
   same(scene().selectedId,step.selectedId,'Exact selected child');same(scene().view,step.view,'Requested camera direction');
   same(scene().hiddenIds,scene().structures.filter(s=>!step.ids.includes(s.id)).map(s=>s.id),'Only preset source children shown');
   same(scene().explode,0,'No tissue translation');same(scene().layout,'spatial','Assembled source positions');
   check(scene().tourLocked,'Tour camera protected');check(scene().isolated,'Context surfaces faded');
   same(scene().transitionMs,0,'Reduced motion honoured');check(education.options.disabled,'Imaging sync paused for guidance');
-  check(nodes(tree).some(n=>n.type==='fieldset'&&n.props.disabled),'Manual controls disabled');
+  check(nodes(tree).some(n=>n.type==='fieldset'&&n.props.disabled&&n.props.inert),'Manual subtree disabled and inert');
+  const manual=nodes(tree).find(n=>n.type==='fieldset'&&n.props.className==='eye-layer-manual-controls');
+  check(manual.props.hidden===true,'Manual controls removed from guided layout');
+  const teaching=nodes(tree).find(n=>n.props?.className==='eye-layer-teaching');
+  check(!!teaching&&!nodes(manual).includes(teaching),'Selected teaching remains outside inert controls');
+  check(text(teaching).includes(scene().structures.find(s=>s.id===step.selectedId).name),'Teaching follows exact guided child');
+  check(!nodes(manual).some(n=>n.type==='summary'&&text(n)==='Source and limitations'),'Source limits remain outside inert controls');
+  check(selectWith('Eye separation mechanism').disabled,'Separation select explicitly disabled');
+  check(selectWith('Eye camera view').disabled,'Camera select explicitly disabled');
+  check(nodes(tree).find(n=>n.props?.onValueChange&&nodes(n).some(child=>child.props?.id==='eye-layer-preset')).props.disabled,'Preset select explicitly disabled');
+  check(control('Eye component separation').disabled,'Separation slider explicitly disabled');
+  check(control('Show original position').disabled,'Origin switch explicitly disabled');
+  for(const s of scene().structures)check(control(`Show ${s.name.toLowerCase()}`).disabled,'Layer switch explicitly disabled');
+  const visible=snapshot(),reset=scene().reset,source=scene().structures[0];
+  selectWith('Eye camera view').onValueChange('posterior');
+  nodes(tree).find(n=>n.props?.onValueChange&&nodes(n).some(child=>child.props?.id==='eye-layer-preset')).props.onValueChange('all');
+  selectWith('Eye separation mechanism').onValueChange('tray');
+  control('Eye component separation').onValueChange([91]);
+  control('Show original position').onCheckedChange(true);
+  control(`Show ${source.name.toLowerCase()}`).onCheckedChange(false);
+  cutaway().onChange({...cutaway().value,plane:'sagittal'});
+  for(const label of ['Undo layers','Redo layers','Reassemble','Fade others','Frame','Labels','Frame eye']){
+   check(!!button(label),`${label} callback available`);button(label).onClick();
+  }
+  render();same(snapshot(),visible,'Forced manual callbacks cannot mutate active guide or camera');
+  same(scene().reset,reset,'Forced manual callbacks cannot reset the guide camera');
+  same(education.published,[],'Forced controls never publish scan selections');
   check(text(tree).includes(step.caption),'Full caption rendered');
   same(button('Previous step').disabled,index===0,'First boundary');same(button('Next step').disabled,index===guide.steps.length-1,'Last boundary');
   const selected=scene().selectedId;scene().onSelect(scene().structures.find(s=>s.id!==selected).id);render();same(scene().selectedId,selected,'Scene selections cannot override guidance');
@@ -72,7 +118,27 @@ for(const parent of parents){
  }
  button('Next step').onClick();render();same(scene().selectedId,guide.steps.at(-1).selectedId,'Out-of-range callback denied');
  button('End walkthrough').onClick();render();
- same({selectedId:scene().selectedId,hidden:scene().hiddenIds,explode:scene().explode,layout:scene().layout,view:scene().view,inspection:scene().inspection},before,'Manual state restored unchanged');
+ same(snapshot(),before,'Manual state and history presentation restored unchanged');
+ const restoredManual=nodes(tree).find(n=>n.type==='fieldset'&&n.props.className==='eye-layer-manual-controls');
+ check(restoredManual.props.hidden===false&&!restoredManual.props.disabled&&!restoredManual.props.inert,'Manual controls visible and interactive after End');
+ check(!selectWith('Eye camera view').disabled,'Camera control re-enabled after End');
+ check(!nodes(tree).find(n=>n.props?.onValueChange&&nodes(n).some(child=>child.props?.id==='eye-layer-preset')).props.disabled,'Preset control re-enabled after End');
+ check(!selectWith('Eye separation mechanism').disabled,'Separation control re-enabled after End');
+ check(!control('Eye component separation').disabled,'Separation slider re-enabled after End');
+ check(!control('Show original position').disabled,'Origin switch re-enabled after End');
+ check(!control(`Show ${scene().structures[0].name.toLowerCase()}`).disabled,'Layer switch re-enabled after End');
+ const ordinaryCut=cutaway();ordinaryCut.onChange({...ordinaryCut.value,plane:'sagittal'});render();same(scene().inspection.plane,'sagittal','Ordinary cutaway still works');
+ button('Restore whole view').onClick();render();same(scene().inspection.plane,'off','Ordinary cutaway restoration still works');
+ const ordinaryLayer=scene().structures.find(s=>!scene().hiddenIds.includes(s.id));check(ordinaryLayer,'Visible ordinary layer exists');
+ control(`Show ${ordinaryLayer.name.toLowerCase()}`).onCheckedChange(false);render();
+ check(scene().hiddenIds.includes(ordinaryLayer.id),'Ordinary layer switch still works');
+ button('Undo layers').onClick();render();check(!scene().hiddenIds.includes(ordinaryLayer.id),'Ordinary Undo still works');
+ nodes(tree).find(n=>n.props?.onValueChange&&nodes(n).some(child=>child.props?.id==='eye-layer-preset')).props.onValueChange('all');render();
+ same(scene().hiddenIds,[],'Ordinary preset still works');
+ control('Eye component separation').onValueChange([19]);render();same(scene().explode,19,'Ordinary separation still works');
+ control('Show original position').onCheckedChange(true);render();check(scene().showOrigins,'Ordinary origin guide still works');
+ selectWith('Eye separation mechanism').onValueChange('tray');render();same(scene().layout,'tray','Ordinary layout select still works');
+ selectWith('Eye camera view').onValueChange('posterior');render();same(scene().view,'posterior','Ordinary camera select still works');
  same(scene().cameraRestore.current,camera,'Exact prior camera supplied for restoration');check(!scene().tourLocked,'Camera unlocked');
  same(scene().transitionMs,0,'Ordinary camera unchanged');check(!button('End walkthrough'),'Guide ended');
  const launch=button('Start eye walkthrough');let focused=false;launch.ref.current={focus(){focused=true;}};

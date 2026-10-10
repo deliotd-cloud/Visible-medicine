@@ -9,7 +9,7 @@ const built=await build({stdin:{contents:`export {NestedPractice} from './app/ne
 let slots=[],cursor=0,checks=0,effectSlots=[],effectCursor=0,pendingEffects=[];
 const state=value=>{const i=cursor++;if(!(i in slots))slots[i]=typeof value==='function'?value():value;return [slots[i],next=>{slots[i]=typeof next==='function'?next(slots[i]):next;}];};
 const layoutEffect=(fn,deps)=>{const i=effectCursor++;const prior=effectSlots[i];if(!prior||!deps||deps.some((value,index)=>!Object.is(value,prior[index])))pendingEffects.push(fn);effectSlots[i]=deps;};
-const shim={...React,useState:state,useReducer:(reduce,arg,init)=>{const [value,set]=state(()=>init?init(arg):arg);return [value,action=>set(previous=>reduce(previous,action))];},useRef:value=>state(()=>({current:value}))[0],useMemo:fn=>fn(),useCallback:fn=>fn,useLayoutEffect:layoutEffect,useEffect:()=>{}};
+const shim={...React,useContext:()=>null,useState:state,useReducer:(reduce,arg,init)=>{const [value,set]=state(()=>init?init(arg):arg);return [value,action=>set(previous=>reduce(previous,action))];},useRef:value=>state(()=>({current:value}))[0],useMemo:fn=>fn(),useCallback:fn=>fn,useLayoutEffect:layoutEffect,useEffect:()=>{}};
 const scope={exports:{}};
 runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require:id=>id==='react'?shim:id==='next/link'?{__esModule:true,...actualLink}:require(id),structuredClone,requestAnimationFrame:fn=>fn()});
 const api=scope.exports, clone=v=>JSON.parse(JSON.stringify(v));

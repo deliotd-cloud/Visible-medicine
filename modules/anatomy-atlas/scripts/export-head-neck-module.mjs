@@ -10,6 +10,8 @@ try{await lstat(target);throw Error('Destination exists; preserve it before expo
 if(execFileSync('git',['status','--porcelain'],{cwd:root,encoding:'utf8'}).trim())throw Error('Commit and verify the Atlas before exporting');
 const sourceCommit=execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
 const build=join(root,'.sites-runtime/head-neck-module');
+const channel=JSON.parse(await readFile(join(build,'selection-channel.json'),'utf8'));
+if(channel.version!==1||channel.sourceCommit!==sourceCommit)throw Error('Stale selection channel: rebuild from the committed Atlas revision');
 const inputs=JSON.parse(await readFile(join(build,'source-inputs.json'),'utf8'));
 if(!inputs.some(i=>i.path==='scripts/independent-source-contract.mjs'))throw Error('Missing independent source contract binding');
 for(const path of ['scripts/export-head-neck-module.mjs','scripts/export-space-preflight.mjs'])
@@ -24,8 +26,8 @@ for(const input of inputs){
 const {plan,models}=await headNeckModuleInputs(true);
 const primary=plan.scopes.find(s=>s.region===plan.defaultRegion);
 if(!primary)throw Error('Default scope missing');
-const generated=['index.html','BUNDLED_NOTICES.txt','bundled-dependencies.json','source-inputs.json',...(await readdir(join(build,'assets'))).map(n=>'assets/'+n)];
-if(generated.some(n=>!/^(?:index\.html|BUNDLED_NOTICES\.txt|(?:bundled-dependencies|source-inputs)\.json|assets\/[a-zA-Z0-9_.-]+\.(?:js|css))$/.test(n)))throw Error('Unexpected generated file');
+const generated=['index.html','BUNDLED_NOTICES.txt','bundled-dependencies.json','source-inputs.json','selection-channel.json',...(await readdir(join(build,'assets'))).map(n=>'assets/'+n)];
+if(generated.some(n=>!/^(?:index\.html|BUNDLED_NOTICES\.txt|(?:bundled-dependencies|source-inputs|selection-channel)\.json|assets\/[a-zA-Z0-9_.-]+\.(?:js|css))$/.test(n)))throw Error('Unexpected generated file');
 const copies=[...generated.map(n=>[join(build,n),n]),...models.map(m=>[m.file,m.path])];
 copies.push(...regionalCompanions.map(([from,to])=>[join(root,from),to]));
 if(new Set(copies.map(([,name])=>name)).size!==copies.length)throw Error('Duplicate output path');

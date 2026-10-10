@@ -1,5 +1,13 @@
 # Brachial plexus: source decision, 28 September 2026
 
+3 October update: the owner authorised an author request; it is drafted but
+**unsent** because no email account is connected. A distinct
+[Open3DModel source acquisition](OPEN3DMODEL_PLEXUS_SOURCE_REVIEW.md) now provides
+an original, explicitly CC BY-SA 4.0 upper-limb OBJ archive with 50 named neural
+objects. It stays offline pending conversion/boundary/rights review. The status
+below describes this earlier Cevallos/Sketchfab audit; no asset from those sources
+has been downloaded or admitted. No author response or clinical approval inferred.
+
 Status: **no model admitted or downloaded**. This audit advances the peripheral-
 nerve gap in [the acceptance audit](REQUIREMENT_AUDIT.md); it does not resolve it.
 The current atlas must not imply that the plexus is present. No new dependency,

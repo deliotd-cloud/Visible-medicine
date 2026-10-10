@@ -1,0 +1,260 @@
+{
+  "schemaVersion": 1,
+  "purpose": "open3dmodel-plexus-original-frame-bone-context-audit",
+  "source": "Open3DModel upper limb, July 2025",
+  "sourceObjSha256": "5c06349599cdf88aea078f56ea244a5e65b4242ea0b7af361aaebe8fd05a4bf7",
+  "sourceInventorySha256": "2dfd9f51ffb03e54c14b90ff1f0338db866f7d03801312272ce7550f32bb123a",
+  "fullOfflineInventorySha256": "ea074723d7b0aa3669609eaec8e32e30bd84b3eb059ebaec94a2575a48a8afab",
+  "dependencies": [
+    {
+      "name": "open3dmodel-obj-source.mjs",
+      "sha256": "b2fca3139866381166a75b2cb271e528558938347829e5dba9afd2a256cd6f55"
+    },
+    {
+      "name": "open3dmodel-triangulation.mjs",
+      "sha256": "638087c71b1322f3503188c8deaa907d663accc6453e6b14be1b692c7a0f4909"
+    },
+    {
+      "name": "source-topology.mjs",
+      "sha256": "fe68b381c4a5ae23ac858e9d790e531270699c02a29629255373e00c9150f4fe"
+    },
+    {
+      "name": "vessel-shape-math.mjs",
+      "sha256": "a8f7d58164a50be8245ed060886ee0ce0581da96c5f689afd10d20449b185374"
+    },
+    {
+      "name": "audit-open3dmodel-plexus-context.mjs",
+      "sha256": "adf10f458267bb0e48e867422190974efe8dc92605b275ec961931677a911671"
+    }
+  ],
+  "threeVersion": "0.185.1",
+  "coordinateFrame": "unaltered-source-OBJ",
+  "units": "unknown-source-units",
+  "sourceCoordinatesChanged": false,
+  "mirrored": false,
+  "registered": false,
+  "admitted": false,
+  "clinicalApproved": false,
+  "sourceObjects": 532,
+  "auditedObjects": 3,
+  "eligibleOfflineContextObjects": 3,
+  "heldObjects": 0,
+  "objects": [
+    {
+      "sourceName": "Humerus.r",
+      "sourceNamedRight": true,
+      "startLine": 269833,
+      "sourceVertices": 4226,
+      "sourceFaces": 4224,
+      "sourceFaceSizes": {
+        "4": 4224
+      },
+      "sourceBounds": {
+        "min": [
+          -0.247877,
+          1.087752,
+          -0.057387
+        ],
+        "max": [
+          -0.145267,
+          1.404927,
+          -0.005733
+        ]
+      },
+      "sourceGeometrySha256": "e12c2e0697f9619e340bdef60a254b0bcb940002d92b3900be86b1f072558c73",
+      "failedFaces": [],
+      "nonplanarQuads": 4224,
+      "maxPlaneDistanceFraction": 0.17427355833604447,
+      "nGons": [],
+      "disposition": "offline-context-candidate",
+      "triangles": 8448,
+      "derivedGeometrySha256": "1139d87cd80db143a4003d8777c5ef0aaa75969af99f8c52a50e0df23876bc2b",
+      "polygonMapSha256": "506ed72b686d8dc92d10d9b45ad85c729569c8e5f1101f1c29834c18c73fcbe9",
+      "topology": {
+        "sourceVertices": 4226,
+        "exactUniqueVertices": 4226,
+        "unusedUniqueVertices": 0,
+        "triangles": 8448,
+        "edges": 12672,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 8448,
+            "vertices": 4226,
+            "bounds": {
+              "min": [
+                -0.247877,
+                1.087752,
+                -0.057387
+              ],
+              "max": [
+                -0.145267,
+                1.404927,
+                -0.005733
+              ]
+            },
+            "areaSourceUnitsSquared": 0.029999057769088868,
+            "algebraicVolumeSourceUnitsCubed": 0.0001672774565722821
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "maxFloat32PositionDifferenceSourceUnits": 5.9577941913246946e-8
+    },
+    {
+      "sourceName": "Scapula.r.",
+      "sourceNamedRight": true,
+      "startLine": 2010532,
+      "sourceVertices": 4929,
+      "sourceFaces": 9180,
+      "sourceFaceSizes": {
+        "3": 9180
+      },
+      "sourceBounds": {
+        "min": [
+          -0.173374,
+          1.254859,
+          -0.117133
+        ],
+        "max": [
+          -0.060218,
+          1.418264,
+          -0.00287
+        ]
+      },
+      "sourceGeometrySha256": "9e7a2f8484c164abd7d49ba2a86bca2ff4de3272610e89858e38c79ef942a038",
+      "failedFaces": [],
+      "nonplanarQuads": 0,
+      "maxPlaneDistanceFraction": 9.929923349775673e-16,
+      "nGons": [],
+      "disposition": "offline-context-candidate",
+      "triangles": 9180,
+      "derivedGeometrySha256": "9e7a2f8484c164abd7d49ba2a86bca2ff4de3272610e89858e38c79ef942a038",
+      "polygonMapSha256": "7be1c6392f7c5a4f70028b756f74ccfe81e3469f7b4dda1b56c58aa1ef8011a3",
+      "topology": {
+        "sourceVertices": 4929,
+        "exactUniqueVertices": 4592,
+        "unusedUniqueVertices": 0,
+        "triangles": 9180,
+        "edges": 13770,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 9180,
+            "vertices": 4592,
+            "bounds": {
+              "min": [
+                -0.173374,
+                1.254859,
+                -0.117133
+              ],
+              "max": [
+                -0.060218,
+                1.418264,
+                -0.00287
+              ]
+            },
+            "areaSourceUnitsSquared": 0.034006032838607224,
+            "algebraicVolumeSourceUnitsCubed": 0.00008779696178384889
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "maxFloat32PositionDifferenceSourceUnits": 5.958557136587217e-8
+    },
+    {
+      "sourceName": "Clavicle.r",
+      "sourceNamedRight": true,
+      "startLine": 2034317,
+      "sourceVertices": 2670,
+      "sourceFaces": 4942,
+      "sourceFaceSizes": {
+        "3": 4942
+      },
+      "sourceBounds": {
+        "min": [
+          -0.149956,
+          1.390257,
+          -0.053988
+        ],
+        "max": [
+          -0.010211,
+          1.423055,
+          0.0475
+        ]
+      },
+      "sourceGeometrySha256": "1c1011c88d97f34bd2188badc32300ac7f966d2209df2a1c0c1c098a57755bdc",
+      "failedFaces": [],
+      "nonplanarQuads": 0,
+      "maxPlaneDistanceFraction": 2.8246878845397586e-16,
+      "nGons": [],
+      "disposition": "offline-context-candidate",
+      "triangles": 4942,
+      "derivedGeometrySha256": "1c1011c88d97f34bd2188badc32300ac7f966d2209df2a1c0c1c098a57755bdc",
+      "polygonMapSha256": "95ba621b8f7a9da3cf0034ab24835be19b3ffd14f760325328d607735d699c1a",
+      "topology": {
+        "sourceVertices": 2670,
+        "exactUniqueVertices": 2473,
+        "unusedUniqueVertices": 0,
+        "triangles": 4942,
+        "edges": 7413,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 4942,
+            "vertices": 2473,
+            "bounds": {
+              "min": [
+                -0.149956,
+                1.390257,
+                -0.053988
+              ],
+              "max": [
+                -0.010211,
+                1.423055,
+                0.0475
+              ]
+            },
+            "areaSourceUnitsSquared": 0.009095657429970358,
+            "algebraicVolumeSourceUnitsCubed": 0.000031254018667336193
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "maxFloat32PositionDifferenceSourceUnits": 5.958557136587217e-8
+    }
+  ],
+  "limitations": [
+    "Exact original object labels identify source objects; they do not independently establish anatomical boundaries or laterality.",
+    "Deterministic projected tessellation is a display derivative; nonplanar quads have no unique implied source surface.",
+    "Unknown units; topology and source-frame proximity do not prove anatomical accuracy, branch continuity, registration or clinical suitability.",
+    "No source object, polygon or failed face is repaired or omitted for admission."
+  ]
+}

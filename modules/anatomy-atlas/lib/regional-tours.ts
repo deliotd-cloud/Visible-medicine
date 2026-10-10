@@ -27,6 +27,42 @@ import { lowerLimbBoneTour } from './lower-limb-bone-tour';
 export { lowerLimbBoneTour } from './lower-limb-bone-tour';
 import { upperLimbBoneTour } from './upper-limb-bone-tour';
 export { upperLimbBoneTour } from './upper-limb-bone-tour';
+import { circleWillisTour } from './circle-willis-tour';
+export { circleWillisTour } from './circle-willis-tour';
+import { hepatobiliaryTour } from './hepatobiliary-tour';
+export { hepatobiliaryTour } from './hepatobiliary-tour';
+import { handArterialTour } from './hand-arterial-tour';
+export { handArterialTour } from './hand-arterial-tour';
+import { lowerVenousTour } from './lower-venous-tour';
+export { lowerVenousTour } from './lower-venous-tour';
+import { handVenousTours,handVenousTourSourceMatches } from './hand-venous-tours';
+export { handVenousTours } from './hand-venous-tours';
+import { coronaryArterialTour,coronaryArterialTourMatches } from './coronary-arterial-tour';
+export { coronaryArterialTour } from './coronary-arterial-tour';
+import { thoracicSpineTour,thoracicSpineTourMatches } from './thoracic-spine-tour';
+export { thoracicSpineTour } from './thoracic-spine-tour';
+import { lowerArterialTour,lowerArterialTourMatches } from './lower-arterial-tour';
+export { lowerArterialTour } from './lower-arterial-tour';
+import { cardiacVenousTour,cardiacVenousTourMatches } from './cardiac-venous-tour';
+export { cardiacVenousTour } from './cardiac-venous-tour';
+import { upperVenousTour,upperVenousTourMatches } from './upper-venous-tour';
+export { upperVenousTour } from './upper-venous-tour';
+import {mesentericTour,mesentericTourMatches} from './mesenteric-tour';
+export {mesentericTour} from './mesenteric-tour';
+import {lowerNeckTour,lowerNeckTourMatches} from './lower-neck-tour';
+export {lowerNeckTour} from './lower-neck-tour';
+import {forearmArterialTour,forearmArterialTourMatches} from './forearm-arterial-tour';
+export {forearmArterialTour} from './forearm-arterial-tour';
+import {orbitalNerveTour,orbitalNerveTourMatches} from './orbital-nerve-tour';
+export {orbitalNerveTour} from './orbital-nerve-tour';
+import {urinaryTractTour,urinaryTractTourMatches} from './urinary-tract-tour';
+export {urinaryTractTour} from './urinary-tract-tour';
+import {digestiveTractTour,digestiveTractTourMatches} from './digestive-tract-tour';
+export {digestiveTractTour} from './digestive-tract-tour';
+import {pelvicVenousTour,pelvicVenousTourMatches} from './pelvic-venous-tour';
+export {pelvicVenousTour} from './pelvic-venous-tour';
+import {diaphragmTour,diaphragmTourMatches} from './diaphragm-tour';
+export {diaphragmTour} from './diaphragm-tour';
 
 export type RegionalTour = {
   id: string; title: string; description: string; region: string; revision: string;
@@ -236,13 +272,39 @@ export const malePelvisTour: RegionalTour = {
     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
   ],
 };
-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour];
+export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour,thoracicSpineTour,lowerArterialTour,cardiacVenousTour,upperVenousTour,mesentericTour,lowerNeckTour,forearmArterialTour,orbitalNerveTour,urinaryTractTour,digestiveTractTour,pelvicVenousTour,diaphragmTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 
 /** Resolve exact identities; never substitute a similarly named surface. */
 export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
+  if(tour.id===diaphragmTour.id&&!diaphragmTourMatches(catalog,tour))
+    throw Error('The diaphragm guided tour does not match the available anatomy source.');
+  if(tour.id===pelvicVenousTour.id&&!pelvicVenousTourMatches(catalog,tour))
+    throw Error('The pelvic venous guided tour does not match the available anatomy source.');
+  if(tour.id===digestiveTractTour.id&&!digestiveTractTourMatches(catalog,tour))
+    throw Error('The digestive tract guided tour does not match the available anatomy source.');
+  if(tour.id===urinaryTractTour.id&&!urinaryTractTourMatches(catalog,tour))
+    throw Error('The urinary tract guided tour does not match the available anatomy source.');
+  if(tour.id===orbitalNerveTour.id&&!orbitalNerveTourMatches(catalog,tour))
+    throw Error('The orbital nerve guided tour does not match the available anatomy source.');
+  if(tour.id===forearmArterialTour.id&&!forearmArterialTourMatches(catalog,tour))
+    throw Error('The forearm arterial guided tour does not match the available anatomy source.');
+  if(tour.id===lowerNeckTour.id&&!lowerNeckTourMatches(catalog,tour))
+    throw Error('The lower-neck guided tour does not match the available anatomy source.');
+  if(tour.id===mesentericTour.id&&!mesentericTourMatches(catalog,tour))
+    throw Error('The mesenteric guided tour does not match the available anatomy source.');
+  if(tour.id===upperVenousTour.id&&!upperVenousTourMatches(catalog,tour))
+    throw Error('The upper venous guided tour does not match the available anatomy source.');
+  if(tour.id===cardiacVenousTour.id&&!cardiacVenousTourMatches(catalog,tour))
+    throw Error('The cardiac venous guided tour does not match the available anatomy source.');
+  if(tour.id===coronaryArterialTour.id&&!coronaryArterialTourMatches(catalog,tour))
+    throw Error('The coronary guided tour does not match the available anatomy source.');
+  if(tour.id===thoracicSpineTour.id&&!thoracicSpineTourMatches(catalog,tour))
+    throw Error('The thoracic spine guided tour does not match the available anatomy source.');
+  if(tour.id===lowerArterialTour.id&&!lowerArterialTourMatches(catalog,tour))
+    throw Error('The lower arterial guided tour does not match the available anatomy source.');
   const ids=[...new Set([...tour.contextIds,...tour.steps.map(s=>s.selectedId)])];
   const scope=tour.scopeRegions;
   // Cross-region tours never rewrite catalog membership or combine specimens.
@@ -256,7 +318,8 @@ export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):Bo
     const matches=catalog.structures.filter(s=>s.id===id&&
       (scope?scope.some(region=>s.regions.includes(region)):s.regions.includes(tour.region)));
     if(matches.length!==1||catalog.bundles.filter(b=>b.id===matches[0].bundle).length!==1||
-      (tour.requiredDisplayBundles?.[id]&&matches[0].bundle!==tour.requiredDisplayBundles[id]))
+      (tour.requiredDisplayBundles?.[id]&&matches[0].bundle!==tour.requiredDisplayBundles[id])||
+      (handVenousTours.some(t=>t.id===tour.id)&&!handVenousTourSourceMatches(catalog,matches[0])))
       throw Error('The guided tour does not match the available anatomy source.');
     return matches[0];
   });

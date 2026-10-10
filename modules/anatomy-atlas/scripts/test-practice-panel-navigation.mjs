@@ -16,7 +16,7 @@ class MutationObserverMock{
  disconnect(){this.disconnected=true;}
 }
 const built=await build({
- stdin:{contents:"export {PracticePanelNavigation} from './app/practice-panel-navigation'; export {practiceReducer,initialPractice} from './lib/atlas-practice';",resolveDir:process.cwd(),loader:'tsx'},
+ stdin:{contents:"export {PracticePanelNavigation,revealPracticePanelTarget} from './app/practice-panel-navigation'; export {practiceReducer,initialPractice} from './lib/atlas-practice';",resolveDir:process.cwd(),loader:'tsx'},
  bundle:true,platform:'node',format:'cjs',write:false,external:['react','react/*'],
 });
 const scope={exports:{}};
@@ -28,10 +28,10 @@ runInNewContext(built.outputFiles[0].text,{
  cancelAnimationFrame:id=>{frames[id-1]=null;},
  window:{scrollTo(){throw Error('Outer page scroll requested');}},
 });
-const {PracticePanelNavigation,practiceReducer,initialPractice}=scope.exports;
-const desktop={scrollTop:90,getBoundingClientRect:()=>({top:0,bottom:500}),querySelector:selector=>selector==='[data-practice-question]'?heading:feedback};
+const {PracticePanelNavigation,revealPracticePanelTarget,practiceReducer,initialPractice}=scope.exports;
+const desktop={scrollTop:90,getBoundingClientRect:()=>({top:0,bottom:500}),querySelector:selector=>selector==='[data-practice-question]'?heading:selector==='[data-practice-feedback]'?feedback:selector==='[data-practice-results]'?results:null};
 const popup={scrollTop:75,closed:true,hasAttribute:name=>name==='data-closed'&&popup.closed,getBoundingClientRect:()=>({top:0,bottom:500})};
-const mobile={scrollTop:0,querySelector:selector=>selector==='[data-practice-question]'?mobileHeading:mobileFeedback};
+const mobile={scrollTop:0,querySelector:selector=>selector==='[data-practice-question]'?mobileHeading:selector==='[data-practice-feedback]'?mobileFeedback:selector==='[data-practice-results]'?mobileResults:null};
 function target(name,info,{mobilePanel=false,top=40,bottom=80}={}){
  return {name,isConnected:true,focusCalls:[],
   closest(selector){return selector==='.body-info'?info:selector==='.anatomy-controls-popup'&&mobilePanel?popup:null;},
@@ -41,8 +41,10 @@ function target(name,info,{mobilePanel=false,top=40,bottom=80}={}){
  };
 }
 const heading=target('question',desktop),feedback=target('feedback',desktop,{top:600,bottom:640});
+const results=target('results',desktop,{top:40,bottom:80});
 const mobileHeading=target('mobile question',mobile,{mobilePanel:true,top:80,bottom:120});
 const mobileFeedback=target('mobile feedback',mobile,{mobilePanel:true,top:600,bottom:640});
+const mobileResults=target('mobile results',mobile,{mobilePanel:true,top:80,bottom:120});
 function render(props,info=desktop){
  cursor=0;effects=[];
  const element=PracticePanelNavigation(props);
@@ -88,4 +90,65 @@ slots=[];popup.closed=false;popup.scrollTop=88;
 render({sessionId:5,index:0,answered:false},mobile);
 assert.equal(popup.scrollTop,0,'Layout remount reveals the same prompt');
 assert.equal(mobileHeading.focusCalls.length,2,'Layout remount focuses the new panel');
-console.log(JSON.stringify({passed:true,outcomes:3,desktop:true,mobile:true,remount:true}));
+// Finishing the last answer replaces the question branch with results. A
+// completed session must focus the results heading once, in its own scroller.
+let finished=practiceReducer(initialPractice,{type:'start',session:{...initialPractice,id:10,status:'active',mode:'name',questions:questions.slice(0,1),renderedIds:['a','b'],index:0,responses:[]}});
+finished=practiceReducer(finished,{type:'answer',sessionId:10,index:0,chosen:'a'});
+finished=practiceReducer(finished,{type:'next',sessionId:10,index:0});
+assert.equal(finished.status,'complete','Finishing the last answer completes the session');
+assert.equal(finished.responses.length,1,'Normal finish retains its scored response');
+slots=[];desktop.scrollTop=175;
+render({sessionId:finished.id,index:finished.index,answered:true,phase:'results'});
+assert.equal(results.focusCalls.at(-1)?.preventScroll,true,'Normal finish focuses results without scrolling the outer page');
+assert.equal(desktop.scrollTop,0,'Normal finish resets the results panel scroll');
+const desktopResultsFocus=results.focusCalls.length;
+desktop.scrollTop=42;
+render({sessionId:10,index:0,answered:true,phase:'results'});
+assert.equal(results.focusCalls.length,desktopResultsFocus,'Unrelated results rerender does not steal focus');
+assert.equal(desktop.scrollTop,42,'Unrelated results rerender preserves reading position');
+// An early exit has fewer responses than questions but reaches the same results
+// heading. The reducer's completion state is the source of that phase.
+let early=practiceReducer(initialPractice,{type:'start',session:{...initialPractice,id:11,status:'active',mode:'name',questions,renderedIds:['a','b'],index:0,responses:[]}});
+early=practiceReducer(early,{type:'answer',sessionId:11,index:0,chosen:null});
+early=practiceReducer(early,{type:'exit'});
+assert.equal(early.status,'complete','Early exit produces completed results');
+assert(early.responses.length<early.questions.length,'Early results retain partial score');
+desktop.scrollTop=98;
+render({sessionId:early.id,index:early.index,answered:true,phase:'results'});
+assert.equal(results.focusCalls.length,desktopResultsFocus+1,'Early exit focuses results');
+assert.equal(desktop.scrollTop,0,'Early exit resets panel scroll');
+const focusBeforeNull=results.focusCalls.length;
+const questionBeforeNull=heading.focusCalls.length;
+render({sessionId:12,index:0,answered:false,phase:null});
+assert.equal(results.focusCalls.length,focusBeforeNull,'Null phase has no focus target');
+assert.equal(heading.focusCalls.length,questionBeforeNull,'Null phase does not fall back to question');
+const detached=target('detached',desktop);detached.isConnected=false;
+assert.equal(revealPracticePanelTarget(detached,'results'),false,'Disconnected heading is ignored');
+const outside=target('outside',desktop);outside.closest=()=>null;
+assert.equal(revealPracticePanelTarget(outside,'results'),false,'Heading outside info panel is ignored');
+for(const ancestor of ['hidden','inert']){
+ const concealed=target(ancestor,desktop);
+ concealed.closest=selector=>selector==='[hidden], [inert]'?{ancestor}:selector==='.body-info'?desktop:null;
+ assert.equal(revealPracticePanelTarget(concealed,'results'),false,`${ancestor} heading is ignored`);
+ assert.equal(concealed.focusCalls.length,0,`${ancestor} heading never receives focus`);
+}
+assert.equal(revealPracticePanelTarget(null,'results'),false,'Missing heading is ignored');
+slots=[];popup.closed=true;popup.scrollTop=122;
+render({sessionId:13,index:0,answered:true,phase:'results'},mobile);
+assert.equal(mobileResults.focusCalls.length,0,'Closed compact sheet retains launcher focus');
+assert.equal(popup.scrollTop,122,'Closed compact sheet retains its scroll offset');
+popup.closed=false;observer.callback();
+assert.equal(mobileResults.focusCalls.length,0,'Compact sheet waits for BaseUI focus transition');
+frames.at(-1)?.();
+assert.equal(mobileResults.focusCalls.at(-1)?.preventScroll,true,'Opening compact results focuses heading');
+assert.equal(popup.scrollTop,0,'Opening compact results resets sheet scroll');
+const mobileResultsFocus=mobileResults.focusCalls.length;
+popup.scrollTop=65;
+render({sessionId:13,index:0,answered:true,phase:'results'},mobile);
+assert.equal(mobileResults.focusCalls.length,mobileResultsFocus,'Open compact rerender does not steal focus');
+assert.equal(popup.scrollTop,65,'Open compact rerender retains scroll');
+slots=[];popup.scrollTop=75;
+render({sessionId:13,index:0,answered:true,phase:'results'},mobile);
+assert.equal(mobileResults.focusCalls.length,mobileResultsFocus+1,'Compact remount reveals results in its new panel');
+assert.equal(popup.scrollTop,0,'Compact remount resets its own scroll');
+console.log(JSON.stringify({passed:true,outcomes:3,desktop:true,mobile:true,results:true,earlyExit:true,remount:true}));

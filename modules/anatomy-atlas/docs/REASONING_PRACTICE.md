@@ -1,5 +1,48 @@
 # Source-bound anatomical reasoning pilot
 
+## Brain connections — 10 October 2026
+
+Four appended draft concepts cover six existing roots: paired amygdala and fornix,
+anterior commissure and corpus callosum. They reuse Apply anatomy and explain
+regional relationships without claiming traced axons or scan registration.
+Current bank:186 concepts /337 representations. The previous182 concepts and331
+bound questions remain unchanged, as do all9,936 topic placements. Exact current
+teaching revisions require new radiologist review; no approvals transfer. See
+[scope, primary references and source pins](BRAIN_CONNECTIONS_REASONING.md).
+Older milestone counts below are historical.
+
+## Abdominal vessels — 10 October 2026
+
+Six appended draft concepts cover six exact source records using existing Apply
+anatomy controls. Current bank: 182 concepts / 331 representations. All prior
+176 definitions and 325 bound questions are preserved. Six teaching worksheets
+expand; all 9,936 topic placements remain unchanged. No geometry, flow model,
+patient registration or approval is added. See [scope and source pins](ABDOMINAL_VESSEL_REASONING.md).
+Counts in older milestones below are historical.
+
+## Lower-limb veins — 3 October 2026
+
+Six appended draft concepts cover 12 exact bilateral source selections using the
+existing practice controls. Current bank: 176 concepts / 325 representations;
+all preceding 170 concepts and 313 bound questions preserved. Only 12 teaching
+worksheets expand; all 9,936 topic placements remain exact. See
+[scope, source pins and radiologist checks](LOWER_VENOUS_REASONING.md).
+Older milestone counts below are historical, not current totals.
+
+## Heart, lungs and main bronchi — 2 October 2026
+
+Four appended concepts cover five exact roots through existing Apply anatomy:
+systemic pumping, pulmonary gas exchange and sided main-bronchus conduction.
+The current bank is170 concepts/313 representations; the preceding166 questions
+and the same-side answer/filter/retry engine remain exact. No new panel or model.
+Heart is a partial56-source root; lung roots are supplied bronchovascular groups,
+not alveolar/parenchymal models. See [exact scope](THORACIC_CORE_REASONING.md).
+The actual root-specific question/answer/alternatives/explanation/references are
+included in the current review worksheet: five teaching fingerprints advance,
+the other1,099 remain exact. Geometry/imaging and clinical assessment validation
+remain separate. Older "current bank" counts and worksheet limitations below
+describe their dated milestones, not today's coverage or approval.
+
 ## Upper arm and scapular muscles — 29 September 2026
 
 Seven new draft concepts cover anconeus, short-head biceps, medial/lateral

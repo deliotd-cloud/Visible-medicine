@@ -1,8 +1,14 @@
 # Independent lower-limb clinical teaching
 
-## Delivered scope
+## Current delivered scope — 10 October 2026
 
-Sixty-five exact source selections now have 228 introductory topic drafts and 65 clinical self-checks: Clinical 65, Pathology 65, CT 11, MRI 35, X-ray 31 and Ultrasound 21. All 42 supplied muscles have Clinical/Pathology drafts. This is introductory coverage, not complete radiology or clinical validation. The existing Learn panel retains three compact groups: Anatomy (Overview/Function), Clinical (Context/Pathology) and Imaging (CT/MRI/X-ray/Ultrasound). All 67 baseline anatomy/function lessons remain. The unresolved pelvic and foot-bone groups remain extended-topic pending; no generic filler or additional controls were added.
+Sixty-five exact source selections have 390 introductory extended-topic draft placements: 65 each for Clinical, Pathology, CT, MRI, X-ray and Ultrasound, plus 65 clinical self-checks. All 67 baseline anatomy/function lessons remain. The two unresolved selections, `pelvis-group` and `foot-bone-group`, retain pending extended topics; their individual bones must not be invented. Counts describe placements, not unique lessons, diagnostic capability or clinical approval.
+
+The existing Learn panel retains three compact groups: Anatomy (Overview/Function), Clinical (Context/Pathology) and Imaging (CT/MRI/X-ray/Ultrasound). The current resolver incorporates the later proximal/distal modality-completion modules as well as the historical batches below. Use the source-derived [current status](CURRENT_STATUS.md#independent-specimen-teaching-readiness) and [JSON inventory](requirement-audit.json), not historical tables, to select remaining work. No new teaching or geometry is added by this documentation correction.
+
+## Historical additions
+
+The dated milestones below preserve their original scope and counts. A historical Pending cell does not mean that topic is still absent from the current resolver.
 
 ### Bones and cartilage — 11 September 2026
 
@@ -92,7 +98,7 @@ The material distinguishes partial/complete disruption, accompanying injuries an
 
 ## Exact identity and navigation
 
-`content/um-limb-clinical.ts` incorporates explicit concepts from `content/um-hip-thigh-clinical.ts`, `content/um-calf-foot-clinical.ts`, `content/um-hip-muscle-clinical.ts` and `content/um-bone-cartilage-clinical.ts`; `content/um-limb-teaching.ts` attaches them only to existing named concepts. The teaching-pin script binds complete source entries, bundle hashes and lessons. Runtime resolution returns detached exact-bound content and rejects foreign or altered source entries. Grouped menisci stay grouped; source defects cannot be interpreted as disease. Reusing authored prose is not registration to another subject.
+`content/um-limb-clinical.ts` incorporates explicit concepts from `content/um-hip-thigh-clinical.ts`, `content/um-calf-foot-clinical.ts`, `content/um-hip-muscle-clinical.ts`, `content/um-bone-cartilage-clinical.ts` and the later `content/um-proximal-topic-completion.ts` / `content/um-distal-topic-completion.ts`; `content/um-limb-teaching.ts` attaches them only to existing named concepts. The teaching-pin script binds complete source entries, bundle hashes and lessons. Runtime resolution returns detached exact-bound content and rejects foreign or altered source entries. Grouped menisci stay grouped; source defects cannot be interpreted as disease. Reusing authored prose is not registration to another subject.
 
 `availableSpecimenTopics` uses the actual bound lesson, not a global promise of availability. Copy/open links offer only available drafts; manually supplied unsupported topic requests fail closed with `topic-unavailable`. The dedicated route opens the appropriate outer group and topic. Existing Anatomy/Function links remain compatible. Opening Imaging normally chooses an available modality, preferring MRI where authored. No pending topic silently becomes an alternative.
 
@@ -106,9 +112,9 @@ These are reference-only sources for brief original factual synthesis. No articl
 
 ## Verification and outstanding review
 
-`npm run um-limb-clinical:test` passes 6,080 checks: all 67 pins, 65 extended lessons, the 228-topic matrix, exact regional coverage, detachment/foreign-source rejection and available/pending links in all five scopes. Installed React markup covers 402 topic states, including all twelve states of the two held groups. There are 535 source-bound extended-topic links across overlapping scopes. All 42 muscles retain Clinical/Pathology drafts and all 65 self-check questions are distinct. Explicit guards retain prior muscle cautions, grouped-cartilage limits, separate femoral-head identity, occult-navicular cautions and unresolved metatarsal identities. These are regression checks, not specialist or browser acceptance.
+The historical 228-topic milestone passed 6,080 checks and exercised 535 source-bound extended-topic links. Those are historical results, not current coverage or a new test run. Run `npm run um-limb-clinical:test` for the current 390-topic matrix, exact bindings, historical-topic preservation, regional navigation, detachment/foreign-source refusal and learner markup. The source-derived inventory and its summary checks additionally distinguish the five independent specimens from root-body and nested coverage. Automated checks are not specialist or browser acceptance.
 
-Required before clinical release: clinician/radiologist review of claims, nuance, local practice and references; orthopedic review of attachment/ligament grouping and source defects; real modality-specific image examples with de-identification and rights; scan-to-model registration validation before synchronized highlighting; browser/GPU/mobile, screen-reader, touch, keyboard and clipboard acceptance. The two unresolved source groups and many unauthored modality topics remain pending. The broader atlas remains incomplete, including major peripheral nerves and many joint/fascial structures. Routine oral detail remains deferred.
+Required before clinical release: clinician/radiologist review of claims, nuance, local practice and references; orthopedic review of attachment/ligament grouping and source defects; real modality-specific image examples with de-identification and rights; scan-to-model registration validation before synchronized highlighting; browser/GPU/mobile, screen-reader, touch, keyboard and clipboard acceptance. The two unresolved source groups remain extended-topic pending. Authored introductory modality drafts do not establish comprehensive radiology teaching or acquired imaging. The broader atlas remains incomplete, including major peripheral nerves and many joint/fascial structures. Routine oral detail remains deferred.
 
 Bone/cartilage references checked 11 September 2026: AAOS proximal-tibia, ankle/patella fracture, knee/patellofemoral arthritis and Lisfranc teaching; AO proximal-fibular injury definition; AOFAS navicular stress-fracture teaching; Angoules et al. cuboid review (2019); OpenStax lower-limb anatomy. Exact links are retained in `boneCartilageClinicalReferences` and attached to each draft. Brief original synthesis and appropriate existing MIT prose are reused, not publisher articles, diagrams or protocols. All independent cited topic/self-check text remains below 200 words per reference (maximum 185). No surgical thresholds, current treatment pathway, paid service or new asset is added.
 

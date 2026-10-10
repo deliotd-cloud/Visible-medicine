@@ -179,11 +179,18 @@ for (const parent of catalog.parents) {
   same(routed.props.study, study);
   check(routed.type === api.Components);
   for (const part of parts) {
-    same(
-      api.nestedTeachingFor(parent, study, part),
-      null,
-      'No inherited parent lesson as child teaching',
-    );
+    const teaching = api.nestedTeachingFor(parent, study, part);
+    if (parent.fmaId === 'FMA50082') {
+      same(teaching?.id, 'mca-source-' + part.sources[0].file.toLowerCase());
+      same(teaching.sections.function.readiness, 'pending');
+      same(teaching.sections.clinical.readiness, 'pending');
+      same(teaching.sections.pathology.readiness, 'pending');
+    } else {
+      same(teaching?.id,'pica-source-'+part.sources[0].file.toLowerCase());
+      same(teaching.sections.function.readiness,'pending');
+      same(teaching.sections.clinical.readiness,'pending');
+      same(teaching.sections.pathology.readiness,'pending');
+    }
     const target = targets.find((t) => t.structureId === part.id);
     for (const region of ['head-neck', 'whole-body'])
       for (const side of ['both', 'right', 'left']) {

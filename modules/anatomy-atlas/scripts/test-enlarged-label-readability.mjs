@@ -6,7 +6,7 @@ const [url,report]=process.argv.slice(2);
 assert(url&&report,'Supply a loopback shoulder module URL and local report path');
 assert(['127.0.0.1','localhost'].includes(new URL(url).hostname),'Loopback only');
 const inputs=await (await fetch(new URL('source-inputs.json',url))).json();
-for(const path of ['app/scene-label-layer.tsx','lib/screen-label-layout.ts','app/atlas-panel.css']){
+for(const path of ['app/scene-label-layer.tsx','app/scene-label-layer.css','lib/scene-label-size.ts','lib/screen-label-layout.ts','app/atlas-panel.css']){
   const candidate=createHash('sha256').update(await readFile(new URL('../'+path,import.meta.url))).digest('hex');
   assert.equal(inputs.find(i=>i.path===path)?.sha256,candidate,'Production source mismatch: '+path);
 }
@@ -25,7 +25,7 @@ try{
       const overlay=document.querySelector('.scene-label-overlay').getBoundingClientRect();
       const buttons=[...document.querySelectorAll('button.scene-label')],dots=[...document.querySelectorAll('.scene-label-leaders circle')];
       return buttons.filter(e=>getComputedStyle(e).visibility==='visible').map(e=>{
-        const rect=e.getBoundingClientRect(),text=e.firstChild,words=[];
+        const rect=e.getBoundingClientRect(),text=e.querySelector('.scene-label-name').firstChild,words=[];
         for(const match of text.textContent.matchAll(/\S+/g)){
           const range=document.createRange();range.setStart(text,match.index);range.setEnd(text,match.index+match[0].length);
           words.push({word:match[0],lines:range.getClientRects().length});

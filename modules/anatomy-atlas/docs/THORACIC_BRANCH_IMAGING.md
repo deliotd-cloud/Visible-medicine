@@ -1,5 +1,11 @@
 # Thoracic branch imaging — 13 September 2026
 
+2 October extension: [thoracoabdominal orientation](THORACOABDOMINAL_ORIENTATION.md)
+adds six MRI drafts for the paired superior epigastric arteries and musculophrenic
+arteries/veins. Routine/dedicated MR visibility remains qualified; no vessel
+continuity or clinical approval is asserted. Pending counts below describe this
+original milestone, not current generated coverage in CURRENT_STATUS.md.
+
 50 original draft placements extend 26 exact existing thoracic vessel selections:
 26 CT, 13 MRI and 11 ultrasound. They complement the preceding central-vessel
 increment, not replace it. Scope is seven inlet vessels, four coronary arteries,

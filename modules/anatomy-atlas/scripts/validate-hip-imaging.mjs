@@ -12,9 +12,10 @@ import {
 } from './content-contract-tools.mjs';
 import { authoringBeforeHipImaging } from './hip-imaging-history.mjs';
 import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
+import { beforeRegionalQuickCheckKeysOnly } from './regional-quick-check-history.mjs';
 const context = await contentContext(),
   { api, catalog, body, registry } = context;
-const afterHip = authoringBeforeWristImaging(context);
+const afterHip = beforeRegionalQuickCheckKeysOnly(authoringBeforeWristImaging(context), context.catalog);
 const previous = authoringBeforeHipImaging(context),
   pins = await readContentJson('content/hip-imaging-pins.json'),
   before = await readContentJson('content/hip-imaging.before.json');
@@ -28,7 +29,7 @@ assert.equal(
         api.contentTabs.map((t) => [t, previous.bodyLesson(s, t)]),
       ),
     })),
-    shoulder: api.structures,
+    shoulder: previous.structures,
     recipes: previous.dissectionProfiles,
   }),
   before.allLessonsAndRecipesHash,

@@ -77,6 +77,11 @@ const kneeSteps: SpecimenGuidedStepSource[] = [
     slugs: ['tibia', 'fibula', 'meniscus-group', 'acl', 'pcl'], selected: 'acl', view: 'anterior',
   },
   {
+    id: 'um-knee-stability-compare', title: 'Compare knee stabilizers',
+    caption: 'Compare all four ligament surfaces with the whole tibia and fibula. The femur is hidden for visibility only. ACL and PCL help limit anterior and posterior tibial translation respectively; MCL and LCL help resist valgus and varus opening. These static surfaces do not simulate loading, injury or measured attachment footprints.',
+    slugs: ['tibia', 'fibula', 'acl', 'pcl', 'mcl', 'lcl'], selected: 'acl', view: 'anterior',
+  },
+  {
     id: 'um-knee-posterior', title: 'Posterior source surfaces',
     caption: 'Turn posteriorly to inspect popliteus alongside the supplied PCL and LCL surfaces. The joint capsule, nerves and vessels are absent.',
     slugs: ['femur', 'tibia', 'fibula', 'pcl', 'lcl', 'popliteus'], selected: 'popliteus', view: 'posterior',

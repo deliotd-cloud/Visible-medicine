@@ -1,5 +1,10 @@
 # Agent-authored guided learning
 
+2 October: [keyboard camera interruption](GUIDED_CAMERA_KEYBOARD.md) makes
+accepted arrow-key inspection interrupt a running guided sweep, just as pointer
+orbit already does. Paused keyboard input survives resume; rejected keys do not
+cancel a sweep. No extra controls, anatomy or teaching are introduced.
+
 1 October: [pelvic ring & hips](PELVIC_RING_GUIDED_TOUR.md) adds six draft
 assembled-view stops to Pelvis and Whole body, retaining the existing default
 and selector. Five exact hip-bone/sacrum/femur surfaces remain unchanged;

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from './workspace-test-build.mjs';
+import {build} from './hepatobiliary-tour-history.mjs';
 const parent='b65b8c40bd3fb428b2b4688c695039e2e3a3554c';
 const compile=async contents=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
 const api=await compile(`export * from './lib/regional-tours';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`);
@@ -10,7 +10,7 @@ const prior=await compile(execFileSync('git',['show',parent+':lib/regional-tours
 const tour=api.lumbarTour,ids=tour.steps.map(s=>s.selectedId);
 assert.equal(tour.status,'draft');assert.equal(tour.region,'spine');
 assert.equal(tour.revision,'lower-lumbar-sacral-orientation-v1');
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id),prior.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id&&t.id!==api.circleWillisTour.id),prior.regionalTours);
 assert.equal(api.regionalToursFor('spine').length,2);
 assert.equal(api.regionalTourFor('spine').id,api.cervicalSpineTour.id);
 const selected=api.regionalTourStructures(api.catalog,tour);
@@ -26,7 +26,7 @@ for(const s of selected){
   {...api.catalog,structures:api.catalog.structures.map(x=>x.id===s.id?{...x,bundle:'head-neck-skeleton'}:x)},
  ])assert.throws(()=>api.regionalTourStructures(changed,tour));
  const evidence=api.regionalTourEvidence(api.catalog,s.id);
- assert.deepEqual(evidence.filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.pelvicRingTour.id),prior.regionalTourEvidence(api.catalog,s.id));
+ assert.deepEqual(evidence.filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.pelvicRingTour.id&&e.tour.id!==api.circleWillisTour.id),prior.regionalTourEvidence(api.catalog,s.id));
  const added=evidence.find(e=>e.tour.id===tour.id);
  assert.deepEqual(added.structures,selected);assert.deepEqual(added.tour,tour);
  assert.equal(added.transitionMs,1800);assert.equal(added.transition,'quintic-orbit');assert.equal(added.separation,0);

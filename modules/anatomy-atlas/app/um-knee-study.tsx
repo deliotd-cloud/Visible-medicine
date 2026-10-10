@@ -14,6 +14,7 @@ import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import { initialInspection } from '@/lib/inspection-state';
 import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
+import { modelLoadAccessNotice, type ModelLoadFailure } from '@/lib/model-load-failure';
 import { kneeTissueColours } from '@/lib/um-knee-study';
 import { kneeDefinition } from '@/lib/um-limb-studies';
 import { initialSpecimen, reduceSpecimen, activeSpecimenStudy, specimenAction, type SpecimenDefinition, type SpecimenAction, type SpecimenSurface } from '@/lib/independent-specimen';
@@ -107,8 +108,15 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       historyTrigger === undoButton.current ? redoButton.current : undoButton.current);
   }, [state]);
   const [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]), [retry, setRetry] = useState(0);
-  const onLoaded = useCallback((id: string) => { setLoaded((p) => p.includes(id) ? p : [...p, id]); setFailed((p) => p.filter((v) => v !== id)); }, []);
-  const onFailure = useCallback((id: string) => setFailed((p) => p.includes(id) ? p : [...p, id]), []);
+  const [failureReasons, setFailureReasons] = useState<Record<string, ModelLoadFailure>>({});
+  const onLoaded = useCallback((id: string) => {
+    setLoaded((p) => p.includes(id) ? p : [...p, id]); setFailed((p) => p.filter((v) => v !== id));
+    setFailureReasons(p => { const next = {...p}; delete next[id]; return next; });
+  }, []);
+  const onFailure = useCallback((id: string, reason: ModelLoadFailure = 'unavailable') => {
+    setFailed((p) => p.includes(id) ? p : [...p, id]);
+    setFailureReasons(p => ({...p, [id]: reason}));
+  }, []);
   const selected = kneeSpecimen.structures.find((s) => s.id === selectedId);
   const active = activeSpecimenStudy(specimen, hidden);
   const closeUpBounds = (guidance ? guide?.steps[guidance.index]?.cameraBounds : null)
@@ -117,6 +125,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const required = kneeCatalog.bundles.filter((b) => visible.some((s) => s.bundle === b.id));
   const pending = required.filter((b) => !loaded.includes(b.id) && !failed.includes(b.id));
   const errors = required.filter((b) => failed.includes(b.id));
+  const accessNotice = modelLoadAccessNotice(errors.map(b => failureReasons[b.id] ?? 'unavailable'));
   const ready = required.length > 0 && !pending.length && !errors.length && rendererReady(health);
   const practiceAdapter = supplement?.identification;
   const practiceCount = practiceAdapter ? practiceAdapter.eligibleIds(specimen, visible.map(s => s.id)).length : supplement ? 0 : visible.length;
@@ -184,9 +193,9 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           <SelectTrigger aria-label={`${specimen.label} camera direction`}><SelectValue /></SelectTrigger>
           <SelectContent>{cameraViews.map((v) => <SelectItem key={v} value={v}>{v[0].toUpperCase() + v.slice(1)}</SelectItem>)}</SelectContent>
         </Select>
-        <Button variant="outline" size="sm" onClick={() => setZoomStep(s => s - 1)} aria-label="Zoom out">−</Button>
-        <Button variant="outline" size="sm" onClick={() => setZoomStep(s => s + 1)} aria-label="Zoom in">+</Button>
-        <Button variant="outline" size="sm" aria-pressed={labels} onClick={() => setLabels((v) => !v)}><Tags />Labels</Button>
+        <Button variant="outline" size="sm" disabled={!!guidance} onClick={() => { if (!guidance) setZoomStep(s => s - 1); }} aria-label="Zoom out">−</Button>
+        <Button variant="outline" size="sm" disabled={!!guidance} onClick={() => { if (!guidance) setZoomStep(s => s + 1); }} aria-label="Zoom in">+</Button>
+        <Button variant="outline" size="sm" disabled={!!guidance} aria-pressed={labels} onClick={() => { if (!guidance) setLabels((v) => !v); }}><Tags />Labels</Button>
         <Button variant="outline" size="sm" disabled={!!guidance} onClick={resetAll}><RotateCcw />Reset</Button>
         {(!supplement || practiceAdapter) && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!!guidance || !ready || practiceCount < 2} onClick={() => { if (!guidance) setPractice((practiceAdapter?.createRound ?? createIdentification)(specimen, visible.map(s => s.id))); }}>Practise identification</Button>}
       </div>
@@ -198,13 +207,13 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
           inspection={initialInspection} cameraBounds={closeUpBounds}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
-          transitionMs={guidance && !reducedMotion ? 1800 : 0} transitionPaused={!!guidance && (!ready || pageHidden)}
+          guidedRecovery={!!guidance} transitionMs={guidance && !reducedMotion ? 1800 : 0} transitionPaused={!!guidance && (!ready || pageHidden)}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
           onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}
-        {!!errors.length && <div className="eye-layer-status" role="alert">Some specimen tissues could not load. <Button size="sm" onClick={() => {
-          retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); setLoaded([]); setFailed([]); setRetry((n) => n + 1);
-        }}>Retry</Button></div>}
+        {!!errors.length && <div className="eye-layer-status" role="alert">{accessNotice?.message ?? 'Some specimen tissues could not load.'} <Button size="sm" onClick={() => {
+          retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); setLoaded([]); setFailed([]); setFailureReasons({}); setRetry((n) => n + 1);
+        }}>{accessNotice?.retryLabel ?? 'Retry'}</Button></div>}
         {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={showAll}>Show all</Button></div>}
       </div>
       <p className="um-knee-scene-caption">{explode > 0 ? supplement ? 'Separated teaching view — not tissue motion or a surgical plane. Return to 0% for source positions.' : 'Separated teaching view — not joint motion. Return to 0% for source positions.' : closeUpBounds ? 'Source positions · Regional close-up · Long structures continue beyond this view. Drag to rotate; scroll or pinch to zoom.' : 'Source positions · Drag to rotate · Scroll or pinch to zoom'}</p>
@@ -231,7 +240,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         </>}
         <details><summary>Source limits</summary><p>{guide.limitation}</p></details>
       </details>}
-      <fieldset className="um-specimen-manual-controls" disabled={!!guidance}>
+      <fieldset className="um-specimen-manual-controls" disabled={!!guidance} inert={!!guidance}>
       <legend className="sr-only">Manual dissection controls{guidance ? ' — exit guided learning to change tissues' : ''}</legend>
       <label className="um-knee-label" htmlFor="um-knee-study">Study</label>
       <Select disabled={!!guidance} value={active?.id ?? 'custom'} items={[{value:'custom',label:'Custom dissection'},...kneeSpecimenStudies.map(s=>({value:s.id,label:s.title}))]} onValueChange={(v) => { if (v) preset(v); }}>
@@ -245,11 +254,12 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       <p className="um-knee-guide">{active?.note ?? 'Your custom tissue selection. Undo restores the previous dissection step.'}</p>
       {supplement?.studySupplement?.(specimen, active?.id ?? null)}
       <div className="eye-layer-actions">
-        <Button ref={undoButton} size="sm" variant="outline" disabled={!history.length} onClick={(event) => historyStep('undo', event.currentTarget)}><Undo2 />Undo</Button>
-        <Button ref={redoButton} size="sm" variant="outline" disabled={!future.length} onClick={(event) => historyStep('redo', event.currentTarget)}><Redo2 />Redo</Button>
+        <Button ref={undoButton} size="sm" variant="outline" disabled={!!guidance || !history.length} onClick={(event) => historyStep('undo', event.currentTarget)}><Undo2 />Undo</Button>
+        <Button ref={redoButton} size="sm" variant="outline" disabled={!!guidance || !future.length} onClick={(event) => historyStep('redo', event.currentTarget)}><Redo2 />Redo</Button>
         <span aria-live="polite">{visible.length}/{kneeStructures.length} visible</span>
       </div>
-      {!supplement && <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} onSelect={select} onExplore={nerve => {
+      {!supplement && <SpecimenMotorExplorer definition={specimen} selectedId={selectedId} disabled={!!guidance} onSelect={select} onExplore={nerve => {
+        if (guidance) return;
         const action = motorStudyAction(specimen, nerve), group = specimenMotorGroups(specimen).find(g => g.key === nerve);
         if (!action || !group) return;
         dispatch(action); assembledDisplay(); setQuery(''); setJointCloseUp(false); setView(group.view);
@@ -276,7 +286,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           </>}
         </>}
       </section>
-      <fieldset className="um-specimen-manual-controls" disabled={!!guidance}>
+      <fieldset className="um-specimen-manual-controls" disabled={!!guidance} inert={!!guidance}>
       <legend className="sr-only">Tissue visibility and display controls</legend>
       <div className="um-knee-separation">
         <label className="um-knee-label">Separation <output>{explode}%</output></label>
@@ -284,7 +294,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <Slider value={[explode]} min={0} max={100} step={5} disabled={!!guidance || !ready || !visible.length || (layout === 'extract' && !selected)}
           aria-valuetext={`${explode}%`}
           onValueChange={(v) => { const n = Array.isArray(v) ? v[0] : v; if (!guidance && Number.isFinite(n)) { setExplode(n); setFocus(false); } }} aria-label={`${specimen.label} tissue separation`} />
-        {explode > 0 && <Button size="sm" variant="ghost" onClick={(event) => { focusSpecimenSeparation(event.currentTarget); setExplode(0); }}>Return to source positions</Button>}
+        {explode > 0 && <Button size="sm" variant="ghost" disabled={!!guidance} onClick={(event) => { if (guidance) return; focusSpecimenSeparation(event.currentTarget); setExplode(0); }}>Return to source positions</Button>}
       </div>
       <details className="um-knee-details" open>
         <summary>Tissues & search</summary>
@@ -292,21 +302,21 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           const members = kneeSpecimen.structures.filter((s) => s.tissue === group.id);
           const count = members.filter((s) => !hidden.includes(s.id)).length;
           return <label key={group.id}><span style={{ color: 'color' in group ? group.color as string : kneeTissueColours[group.id] }}>●</span>{group.name}<small>{count}/{members.length}</small>
-            <Switch checked={count > 0} aria-label={`Show ${specimen.label.toLowerCase()} ${group.name.toLowerCase()}`} onCheckedChange={(checked) => {
+            <Switch checked={count > 0} disabled={!!guidance} aria-label={`Show ${specimen.label.toLowerCase()} ${group.name.toLowerCase()}`} onCheckedChange={(checked) => {
               if (guidance) return;
               // One atomic history step for the entire group, not one per surface.
               dispatch({ type: 'group', tissue: group.id, visible: checked }); setFocus(false);
             }} /></label>;
         })}</div>
-        <SpecimenStructureSearch specimen={specimen} query={query} onQueryChange={setQuery}
+        <SpecimenStructureSearch specimen={specimen} query={query} onQueryChange={next => { if (!guidance) setQuery(next); }}
           selectedId={selectedId} hidden={hidden} onSelect={select}
           onVisibility={(id, visible) => { if (!guidance) { dispatch({ type: 'visibility', id, visible }); setFocus(false); } }} />
       </details>
       <details className="um-knee-details"><summary>Display options</summary>
-        {specimen.closeUp && <><label className="um-knee-toggle">Regional close-up<Switch checked={jointCloseUp} onCheckedChange={(v) => { setJointCloseUp(v); setFocus(false); }} /></label>
+        {specimen.closeUp && <><label className="um-knee-toggle">Regional close-up<Switch checked={jointCloseUp} disabled={!!guidance} onCheckedChange={(v) => { if (guidance) return; setJointCloseUp(v); setFocus(false); }} /></label>
         <p>Turn off for the full visible model. Close-up pauses while separated, fading others or framing a selected structure; geometry is unchanged.</p></>}
-        <label className="um-knee-toggle">Illustrated surfaces<Switch checked={illustrated} onCheckedChange={setIllustrated} /></label>
-        <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={setShowOrigins} disabled={layout === 'tray'} /></label>
+        <label className="um-knee-toggle">Illustrated surfaces<Switch checked={illustrated} disabled={!!guidance} onCheckedChange={v => { if (!guidance) setIllustrated(v); }} /></label>
+        <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={v => { if (!guidance) setShowOrigins(v); }} disabled={!!guidance || layout === 'tray'} /></label>
       </details>
       </fieldset>
       <details className="um-knee-details"><summary>Source & limitations</summary>

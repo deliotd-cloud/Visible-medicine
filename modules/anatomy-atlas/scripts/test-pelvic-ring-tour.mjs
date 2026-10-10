@@ -3,7 +3,8 @@ import {execFileSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {dirname,relative} from 'node:path';
-import {build} from './workspace-test-build.mjs';
+import {build} from './hepatobiliary-tour-history.mjs';
+import {assertRecordedGuidedCameraTransition} from './recorded-camera-transition.mjs';
 const base='a10f1fd19c7dcf27470943f4775cb509f7da811f';
 const old=path=>execFileSync('git',['show',base+':'+path],{maxBuffer:16e6});
 const entry=`export * from './lib/regional-tours';export * from './lib/body-review-material';
@@ -31,17 +32,18 @@ const identities=[
 assert.equal(tour.id,'pelvic-ring-hip-orientation');assert.equal(tour.region,'pelvis');assert.equal(tour.status,'draft');
 assert.equal(tour.revision,tour.id+'-v1');assert.equal(tour.steps.length,6);assert.deepEqual(tour.contextIds,[]);
 assert.equal(new Set(tour.steps.map(s=>s.id)).size,6,'Revisited structures still have distinct stop identities');
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id),previous.regionalTours,'Every earlier tour unchanged');
-assert.equal(api.regionalTours.length,24);assert.equal(api.regionalTours.reduce((n,t)=>n+t.steps.length,0),136);
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.circleWillisTour.id),previous.regionalTours,'Every earlier tour unchanged');
+assert.equal(api.regionalTours.length,25);assert.equal(api.regionalTours.reduce((n,t)=>n+t.steps.length,0),146);
 assert.equal(api.regionalToursFor('pelvis').length,3);assert.equal(api.regionalTourFor('pelvis').id,previous.regionalTourFor('pelvis').id);
 assert.deepEqual(api.regionalTourStructures(api.catalog,tour).map(s=>[s.id,s.fmaId,s.laterality,s.bundle]),identities);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 for(const path of ['public/models/bodyparts3d/full-body/catalog.json','lib/body-display-catalog.ts','lib/body-review-api.ts',
  'lib/body-review-material.ts','lib/body-review-response.ts','app/regional-guided-learning.tsx','app/fitted-camera.tsx','lib/tour-camera.ts'])
- assert.deepEqual(readFileSync(path),old(path),path+' unchanged');
+ if(path==='app/fitted-camera.tsx')assertRecordedGuidedCameraTransition(base,readFileSync(path));
+ else assert.deepEqual(readFileSync(path),old(path),path+' unchanged');
 let preserved=0,rejectedSources=0,rejectedPackets=0,stale=0;
 for(const s of api.catalog.structures){
- assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==tour.id),previous.regionalTourEvidence(api.catalog,s.id));preserved++;
+ assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.circleWillisTour.id),previous.regionalTourEvidence(api.catalog,s.id));preserved++;
 }
 assert.equal(preserved,1104);
 for(const bundleId of new Set(identities.map(row=>row[3]))){
@@ -81,7 +83,9 @@ for(const id of ids){
    body:JSON.stringify({...payload,...delta})}),storage);assert.equal(response.status,409);stale++;
  }
 }
-const pinsPath='content/body-review-display-pins.json',before=JSON.parse(old(pinsPath)),after=JSON.parse(readFileSync(pinsPath));
+// The pelvic milestone predates subsequent independent teaching additions.
+// Today's complete pin delta is separately checked by circle-willis-tour-review.
+const pinsPath='content/body-review-display-pins.json',before=JSON.parse(old(pinsPath)),after=JSON.parse(execFileSync('git',['show','31a6ae7d0a823374b97c21cd7e810070e056d352:'+pinsPath],{maxBuffer:2e6}));
 assert.deepEqual({...after,pins:[]},{...before,pins:[]});assert.equal(after.pins.length,before.pins.length);
 const priorPins=new Map(before.pins.map(p=>[p.structureId,p.sha256]));assert.deepEqual(after.pins.map(p=>p.structureId),before.pins.map(p=>p.structureId));
 assert.deepEqual(after.pins.filter(p=>p.sha256!==priorPins.get(p.structureId)).map(p=>p.structureId).sort(),[...ids].sort());

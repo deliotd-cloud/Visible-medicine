@@ -82,16 +82,23 @@ export function connectDidanixEducation({bridge,registry,viewer,scope,onStatus=(
   try {
     stopSelection=viewer.subscribeSelection(event=>{
       if(!event || typeof event.messageId!=='string' || !/^[A-Za-z0-9:._-]{1,220}$/.test(event.messageId)) return {messageId:null,status:'invalid'};
-      cancel();const match=resolve(event.locator);
-      if(!match){report(allowed()?'unavailable':'paused');return {messageId:null,status:'paused'};}
-      if(match.link.relation!=='exact'){choices=[match.locator];destination='atlas';report('choice-required');return {messageId:event.messageId,status:'choice-required'};}
+      const match=resolve(event.locator);
+      if(!match){cancel();report(allowed()?'unavailable':'paused');return {messageId:null,status:'paused'};}
+      if(match.link.relation!=='exact'){cancel();choices=[match.locator];destination='atlas';report('choice-required');return {messageId:event.messageId,status:'choice-required'};}
       const result=registered.selectStructure({version:1,origin:'imaging',messageId:event.messageId,structureId:match.link.anatomy.structureId});
+      // The bridge owns its bounded replay cache. An already handled event
+      // cannot supersede a later Atlas-to-viewer reveal or clear its choices.
+      if(result.status==='duplicate') return result;
+      cancel();
       report(result.status==='selected'?'selected':result.status==='choice-required'?'choice-required':'paused');return result;
     });
     stopContext=viewer.subscribeContext(()=>{cancel();enabled=false;registered.pause();report('paused');});
   } catch(error) { try{stopSelection();}finally{registered.dispose();}throw error; }
   report('paused');
   return {
+    /** Abort a superseded conceptual request without changing the viewer's
+     * independent opt-in. Current source/access gates still recheck on reveal. */
+    cancelPending(){cancel();},
     setEnabled(value:boolean){cancel();enabled=value===true && !disposed;if(!enabled)registered.pause();report('paused');},
     /** Re-resolve current rights and revision; return copies, never stale cached matches. */
     choices(){return choices.map(resolve).filter((m):m is ImagingMatch=>m!==null).map(m=>({match:structuredClone(m),destination}));},

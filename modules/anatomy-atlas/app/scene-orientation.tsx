@@ -6,10 +6,13 @@ import { Vector3 } from 'three';
 import type { SourceCoordinates } from '@/lib/anatomy-coordinates';
 import { cameraOrientation, orientationBasis, orientationText, type OrientationCode } from '@/lib/camera-orientation';
 
-/** No extra animation loop, camera writes, React frame updates or live-region
- * announcements. SceneRecovery hides this whole view when the renderer fails. */
-export function SceneOrientation({ output, coordinates, enabled }: {
+/** No extra animation loop, camera writes or React frame updates. The visual
+ * label stays silent; the accessible direction changes only with the pose.
+ * SceneRecovery hides this whole view when the renderer fails. */
+export function SceneOrientation({ output, statusOutput, keyboardCameraFrom, coordinates, enabled }: {
   output: RefObject<HTMLSpanElement | null>;
+  statusOutput?: RefObject<HTMLOutputElement | null>;
+  keyboardCameraFrom?: RefObject<Vector3 | null>;
   coordinates: SourceCoordinates;
   enabled: boolean;
 }) {
@@ -20,8 +23,11 @@ export function SceneOrientation({ output, coordinates, enabled }: {
   useLayoutEffect(() => {
     previous.current = [];
     if (output.current) output.current.textContent = 'unavailable';
+    if (keyboardCameraFrom) keyboardCameraFrom.current = null;
+    if (statusOutput?.current?.textContent)
+      statusOutput.current.textContent = 'View from: unavailable.';
     invalidate();
-  }, [basis, enabled, output, invalidate]);
+  }, [basis, enabled, output, statusOutput, keyboardCameraFrom, invalidate]);
   useFrame(({ camera }) => {
     const node = output.current;
     if (!enabled || !node) return;
@@ -30,6 +36,16 @@ export function SceneOrientation({ output, coordinates, enabled }: {
     previous.current = codes;
     const text = orientationText(codes);
     if (node.textContent !== text) node.textContent = text;
+    const status = statusOutput?.current;
+    if (!status) return;
+    const keyboardFrom = keyboardCameraFrom?.current;
+    if (keyboardFrom && from.distanceToSquared(keyboardFrom) <= 1e-8) return;
+    if (keyboardCameraFrom) keyboardCameraFrom.current = null;
+    // An orbit gesture or preset invalidates keyboard-only angle details. Keep
+    // the accessible direction in step with the actual camera, without a DOM
+    // write or live announcement on every rendered frame.
+    const statusText = `View from: ${text}.`;
+    if (status.textContent !== statusText) status.textContent = statusText;
   });
   return null;
 }

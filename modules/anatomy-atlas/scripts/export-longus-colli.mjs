@@ -31,13 +31,17 @@ const scene = new Scene(),
   structures = [],
   expected = new Map();
 const retained = [];
+// Reproduction checks use the retained source, not an old workstation staging path.
+const inputDirectory = process.argv.includes('--check')
+  ? 'content/sources/longus-colli'
+  : '../work/bodyparts3d/isa';
 for (const candidate of longusColliSources.filter(
   (c) => c.status === 'candidate',
 )) {
   assert(audit.groups.some((g) => g.id === candidate.id));
   const sourceShapes = [];
   for (const source of candidate.files) {
-    const bytes = await readFile(`../work/bodyparts3d/isa/${source.file}.obj`);
+    const bytes = await readFile(`${inputDirectory}/${source.file}.obj`);
     assert.equal(hash(bytes), source.sha256);
     retained.push({ file: source.file, bytes });
     sourceShapes.push(sourceObjShape(bytes));

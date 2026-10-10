@@ -15,7 +15,7 @@ const scope = { exports: {} };
 // Only framework brand wrappers are substituted; the page, metadata and index
 // are real. This verifies server output, not browser CSS or authentication.
 runInNewContext(built.outputFiles[0].text, {
-  module: scope, exports: scope.exports, URLSearchParams,
+  module: scope, exports: scope.exports, URLSearchParams, structuredClone,
   require(name) {
     if (name === 'next/link') return ({ children, ...props }) => React.createElement('a', props, children);
     if (name === 'next/image') return ({ unoptimized: _unoptimized, ...props }) => React.createElement('img', props);

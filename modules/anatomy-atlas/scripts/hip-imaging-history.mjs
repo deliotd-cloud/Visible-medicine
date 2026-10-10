@@ -1,13 +1,16 @@
 // Offline, exact teaching-history reconstruction; never runtime content or approvals.
 import assert from 'node:assert/strict';
+import { beforeLumbarDiscMri } from './lumbar-disc-mri-history.mjs';
 import { createHash } from 'node:crypto';
 import { authoringBeforeWristImaging } from './wrist-imaging-history.mjs';
+import { beforeRegionalQuickCheckKeysOnly, beforeRegionalShoulderQuickCheckKeys } from './regional-quick-check-history.mjs';
 import before from '../content/hip-imaging.before.json' with { type: 'json' };
 import after from '../content/hip-imaging.transition.json' with { type: 'json' };
 import pins from '../content/hip-imaging-pins.json' with { type: 'json' };
 const hash = (v) =>
   createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export function authoringBeforeHipImaging({ api, catalog }) {
+  api = beforeLumbarDiscMri(api, catalog);
   api = authoringBeforeWristImaging({ api, catalog });
   assert.equal(
     hash(before),
@@ -65,5 +68,9 @@ export function authoringBeforeHipImaging({ api, catalog }) {
     const { readiness: _r, ...shown } = bodyLesson(s, tab);
     return shown;
   };
-  return { ...api, bodyLesson, bodyContent };
+  const previous = { ...api, bodyLesson, bodyContent };
+  return {
+    ...beforeRegionalQuickCheckKeysOnly(previous, catalog),
+    structures: beforeRegionalShoulderQuickCheckKeys(previous.structures),
+  };
 }

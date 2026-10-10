@@ -1,5 +1,601 @@
 # Third-party notices
 
+## Brain-connections reasoning (10 October 2026)
+
+Four original application questions reference UTHealth Neuroanatomy Online,
+Lab 10: https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p21_index.html and
+https://nba.uth.tmc.edu/neuroanatomy/L10/Lab10p18_index.html.
+These are factual reading links, not licences for publisher assets. No diagrams,
+images, scans, tables or question-bank text are imported. Original project prose
+and code retain MIT terms; the six existing BodyParts3D source surfaces retain
+their CC BY 4.0 credits. No model, dependency, paid service or source geometry
+is added. Questions remain draft; mesh positions do not establish neural
+connectivity or patient-space registration. See `docs/BRAIN_CONNECTIONS_REASONING.md`.
+
+## Diaphragm boundary guided tour (10 October 2026)
+
+Five original short captions use anatomical facts referenced to TTUHSC's
+peritoneal cavity teaching (https://anatomy.ttuhscep.edu/schemes/peritoneum_case.html)
+and Koo et al.'s diaphragm imaging review (https://pmc.ncbi.nlm.nih.gov/articles/PMC6209484/).
+These links are reading references, not permission to redistribute publisher
+content. No source prose, figures, scans or tables are copied or adapted.
+Original text/code retain MIT terms; the six existing BodyParts3D surfaces and
+their CC BY 4.0 credits are unchanged. No new asset, dependency or paid service.
+See `docs/DIAPHRAGM_TOUR.md`; clinical approval remains separate.
+
+## Root-body rotator-cuff X-ray orientation (10 October 2026)
+
+Eight retained muscle selections receive four original landmark summaries and
+shared radiographic limitations, citing the TTUHSC upper-limb anatomy tables
+(https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html) and AAOS
+OrthoInfo (https://www.orthoinfo.org/diseases--conditions/rotator-cuff-tears).
+These are factual reading references, not asset licences. No publisher table,
+prose, diagram, scan or texture is imported or adapted. Original project text
+and code retain MIT terms; source-model CC BY 4.0 credits remain unchanged.
+No new dependency, paid asset or service. See `docs/ROOT_CUFF_XRAY.md`.
+
+## Internal iliac ultrasound orientation (10 October 2026)
+
+Original brief teaching cites the Polish Ultrasound Society's 2014 standard
+(https://jultrason.pl/artykul.php?a=258) and Whiteley et al.'s 1995 iliac duplex
+study (https://pubmed.ncbi.nlm.nih.gov/8544154/) as factual reading references.
+The standard's non-commercial/no-derivatives media are not imported or adapted:
+no publisher prose, figures, tables, scan pixels or datasets are distributed.
+New original text/code use project MIT terms; existing BodyParts3D attribution,
+CC BY 4.0 geometry and change notices are unchanged. No new assets or fees.
+See `docs/INTERNAL_ILIAC_ULTRASOUND.md` for scope and clinical-review limits.
+
+## Biliary duct X-ray orientation (10 October 2026)
+
+Two original draft summaries cite RadiologyInfo's biliary-intervention overview
+and SAGES' Clinical Spotlight Review on laparoscopic common bile duct exploration.
+These are factual reading references, not commercial-media licences. No source
+prose extracts, figures, tables, scans or datasets are imported. New text/code
+follow project MIT terms; existing BodyParts3D CC BY 4.0 geometry, credits and
+change notices are unchanged. No new dependencies, services or fees.
+See `docs/BILIARY_DUCT_XRAY.md` for exact scope, references and review limits.
+
+## Pelvic venous guided tour (10 October 2026)
+
+Original inspection captions cite TTUHSC El Paso pelvic/perineal vein and
+pelvic-wall tables, and Hamid et al. (2007), DOI 10.1002/ca.20489,
+https://pubmed.ncbi.nlm.nih.gov/17373712/. These are factual references, not
+commercial media licences. No source prose extracts, diagrams, tables or scans
+are imported. Existing BodyParts3D CC BY 4.0 geometry/credits are unchanged;
+new code/text follow project MIT terms. No added assets, dependencies or fees.
+See `docs/PELVIC_VENOUS_TOUR.md` for source scope and review limits.
+
+## Pectoral thoracoacromial branch ultrasound (10 October 2026)
+
+Two original educational drafts cite Kompatscher et al. (2005),
+"The thoracoacromial vessels as recipient vessels in microsurgery and
+supermicrosurgery: an anatomical and sonographic study",
+DOI 10.1097/01.PRS.0000146034.16752.68,
+https://pubmed.ncbi.nlm.nih.gov/15622236/.
+This is a factual reading reference, not a grant of commercial media rights.
+No source prose, figures, tables, scans or datasets are imported. Newly written
+text/code follow project MIT terms; existing mesh licences are unchanged.
+No new dependency, fee or external service. Clinical review remains pending.
+
+## Elbow arterial ultrasound orientation (10 October 2026)
+
+Original educational drafts cite Ferre-Martinez et al. (2023),
+DOI 10.3390/diagnostics13071332, and Mohana-Borges et al. (online 2024; issue 2025),
+DOI 10.1007/s00256-024-04740-1. Both declare
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); credit and reading links
+are retained. Rossmann et al. (2021), DOI 10.1016/j.ultrasmedbio.2021.08.006,
+reserves rights; it is a factual reading reference, not licensed image content.
+No publisher figures, prose extracts, tables, scans or other article assets are
+imported. Wording is newly written and qualified, not a reproduced protocol.
+Original text/code follow project MIT terms; mesh licences remain unchanged.
+No new dependencies or fees. See `docs/ELBOW_ARTERIAL_ULTRASOUND.md`.
+
+## Orbital sensory MRI teaching (10 October 2026)
+
+Original educational summaries cite Texas Tech El Paso's eye anatomy tables,
+Arizono et al. (2026), DOI 10.3174/ajnr.A9376, and Casselman et al. (2023),
+DOI 10.1007/s00330-022-09269-2. These are factual reading references; no publisher
+prose, figures, tables, scans, fonts or models are imported. The AJNR publication
+reserves its rights; no commercial-media grant is assumed. Casselman's article
+declares CC BY 4.0, but no article assets are reused. Original wording/code follow
+the project MIT terms; existing mesh licences remain unchanged. No new dependency,
+service or fee. See `docs/ORBITAL_SENSORY_MRI.md`; clinical review remains pending.
+
+## Spinal-disc ultrasound teaching (10 October 2026)
+
+Three original regional drafts cover nineteen previously pending disc selections.
+Factual reading references are Nwawka et al. (2023), DOI 10.14444/8546;
+Avramescu et al. (2012), DOI 10.1097/AAP.0b013e3182464be2; Winn et al. (2021),
+DOI 10.1177/87564793211008342; and the University of Toronto spinal ultrasound
+teaching module. These are not imported content licences: ISASS reserves rights,
+SAGE directs reuse to permissions, and no commercial-media grant is asserted for
+the other references. No source prose, images, figures, tables, datasets or
+screenshots are included. Independently authored wording/code follow the project
+MIT terms; existing anatomical mesh licences and notices remain unchanged.
+No new dependency, font, service or fee. See `docs/SPINAL_DISC_ULTRASOUND.md`.
+
+## Abdominal-fold ultrasound teaching (10 October 2026)
+
+Three entries are original factual teaching synthesis with outbound reading
+references, not imported publisher content. Atkinson et al. (2017), DOI
+10.3748/wjg.v23.i38.6931, is CC BY-NC 4.0 and supplies no redistributed assets.
+Sharma et al. (2015), DOI 10.4103/2303-9027.151317, is a reading reference only;
+no reuse rights are asserted. Walid et al. (2021), DOI 10.7759/cureus.16321,
+is CC BY 4.0, but neither its material nor its separately credited illustration
+is imported. No publisher prose, tables, figures, scans or screenshots are
+included. Existing mesh licences remain unchanged; no new dependency or fee.
+See `docs/ABDOMINAL_FOLD_ULTRASOUND.md` for scope and citations. Clinical review
+is pending and access to a source is not a commercial-media clearance.
+
+## Foot dorsal venous arch imaging teaching (10 October 2026)
+
+Original CT/MRI/ultrasound draft text uses factual reading references listed in
+`docs/FOOT_VENOUS_ARCH_IMAGING.md`. No publisher prose, figures, tables, scans,
+datasets or meshes are imported. Reading access does not grant asset-reuse rights.
+Original wording/code follow project MIT terms; existing model attribution and
+licences remain unchanged. No dependencies, services or fees are introduced.
+Revision-bound radiologist review is still required.
+
+## Central-canal imaging teaching (10 October 2026)
+
+Three original CT/MRI/ultrasound orientation drafts cite primary MRI research,
+NINDS and professional-society reading resources listed in
+`docs/CENTRAL_CANAL_IMAGING.md`. Citations are not media licences. No third-party
+prose, figures, tables, scans, models or datasets are redistributed. Original
+wording/code follow project MIT terms; existing source-model credit and licences
+are unchanged. No new dependency, service or mandatory fee is introduced.
+These source-bound drafts require radiologist review; no approval is implied.
+
+## Lacrimal questions (10 October 2026)
+
+Four original formative questions cover eight retained bilateral source records.
+Factual reading links and scope appear in content/lacrimal-quiz.ts and
+docs/LACRIMAL_QUIZ.md. No publisher prose, exam items, tables, figures, scans,
+datasets or models are imported. Citations do not grant media redistribution
+rights. Original wording/code follow project MIT terms; existing model licences,
+attribution and holds remain. Drafts require revision-bound radiologist review.
+No new assets, dependencies, paid services or fees.
+
+## Laryngeal muscle questions (10 October 2026)
+
+Six original formative questions cover eleven retained source selections.
+Factual reading links are recorded in content/laryngeal-muscle-quiz.ts and
+scope in docs/LARYNGEAL_MUSCLE_QUIZ.md. No publisher text, questions, tables,
+figures, datasets or models are imported. Reference access grants no media
+redistribution rights. Original wording/code follow project MIT terms; all
+existing model licences and attribution remain. Drafts require revision-bound
+radiologist review. No new assets, dependencies, services or fees.
+
+## Regional muscle anatomy questions (10 October 2026)
+
+Six original questions cover twelve retained cervical, foot and pelvic-floor
+muscle selections. Texas Tech anatomy tables and Elsevier's transverse-head
+anatomy reference are factual references only;
+see [scope and provenance](../docs/REGIONAL_MUSCLE_COMPLETION_QUIZ.md).
+No source prose, tables, exercises, images, scans, models or datasets are copied.
+Reference links grant no media redistribution rights. Original wording/code
+retain project MIT terms; existing model licences, attribution and holds remain.
+Drafts require revision-bound radiologist review. No new dependency or fees.
+
+## Upper-limb connective and venous questions (10 October 2026)
+
+Five original questions cover ten retained bilateral source selections. Texas
+Tech, Elsevier anatomy reference text and the Polguj et al. cadaveric study are
+factual references only; see [scope and provenance](../docs/UPPER_LIMB_COMPLETION_QUIZ.md).
+No publisher prose, questions, images, tables, meshes or datasets are imported.
+Links do not grant redistribution rights. Original code and wording retain
+project MIT terms; existing asset licences and holds are unchanged. Drafts need
+revision-bound radiologist review. No dependency, paid service or fee added.
+
+## Scapular muscle anatomy questions (10 October 2026)
+
+Four original formative questions cover eight retained subclavius and trapezius
+portion selections. University anatomy pages serve as factual references only;
+see [scope and references](../docs/SCAPULAR_MUSCLE_QUIZ.md). No publisher prose,
+tables, exercises, images, scans, meshes or datasets are imported. Links do not
+grant rights to redistribute reference media. Original wording and code follow
+project MIT terms; retained model licences, attribution and holds are unchanged.
+Draft questions require revision-bound radiologist review. No new dependency,
+font, asset, paid service or fee is introduced.
+
+## Neuro-organ anatomy questions (10 October 2026)
+
+Five original questions cover six retained brain, central-canal, pituitary,
+globe and tentorium selections. Texas Tech anatomy teaching, the original
+adult spinal ependymal study, Society for Endocrinology and National Eye
+Institute pages serve as factual references only. See
+[scope, references and access limits](../docs/NEURO_ORGAN_QUIZ.md).
+No publisher prose, exercises, figures, scans, meshes or datasets are imported.
+References grant no redistribution rights to their media. Original code and
+question wording retain project MIT terms; existing model licences,
+attribution and holds are unchanged. Drafts require revision-bound radiologist
+review. No new dependency, paid service or fee is introduced.
+
+## Thoraco-acromial anatomy questions (9 October 2026)
+
+Four original formative questions use TTUHSC anatomy teaching, the abstracts of
+two anatomical studies, and Elsevier's published anatomy reference as factual
+reading sources only. See [scope and references](../docs/THORACOACROMIAL_QUIZ.md).
+No publisher prose, exercises, illustrations, meshes, scans or datasets are
+copied or imported. Access to a reference does not grant rights to its assets.
+Original questions and code retain project MIT terms; existing model licences,
+attribution and source holds remain unchanged. Review remains revision-bound.
+No new dependency, subscription or paid runtime service is added.
+
+## Deep-brain anatomy questions (9 October 2026)
+
+Six original formative questions use UTHealth neuroanatomy and neuroscience
+teaching pages as factual reading references. See [scope and sources](../docs/DEEP_BRAIN_QUIZ.md).
+No publisher text, figures, exercises, scans or datasets are imported. Citations
+do not grant redistribution rights for source media. Original questions and
+code retain project MIT terms; model licences, attribution and source holds
+remain unchanged. These are revision-bound radiologist-review drafts, not
+clinical acceptance. No new asset, dependency or fee is introduced.
+
+## Trunk core anatomy questions (9 October 2026)
+
+Three original formative questions cite TTUHSC and UAMS anatomy tables as factual
+reading references for rectal continuity and sternocostal joint types. See
+[scope and sources](../docs/TRUNK_CORE_QUIZ.md). No publisher wording, tables,
+figures, exercises, scans or datasets are imported. Citations do not grant media
+redistribution rights. Original questions and code retain project MIT terms;
+existing model licences, attribution, source holds and exact-revision radiologist
+review remain unchanged. No new asset, dependency or fee is added.
+
+## Head and neck vessel questions (9 October 2026)
+
+Four original formative questions use TTUHSC's head-and-neck artery and vein
+tables as factual reading references only; see [scope and sources](../docs/HEAD_NECK_VESSEL_QUIZ.md).
+No publisher prose, tables, illustrations, exercises, scans or datasets are copied
+or imported. Citations do not grant media redistribution rights. Original wording
+and code retain project MIT terms; model licences, attribution, source holds and
+revision-bound radiologist review remain unchanged. No dependency or fee is added.
+
+## Craniofacial bone questions (9 October 2026)
+
+Nine newly written factual questions cite TTUHSC and OpenStax as reading references
+only; see [scope and sources](../docs/CRANIOFACIAL_BONE_QUIZ.md). No publisher prose,
+tables, exercises, illustrations, scans or datasets are reproduced or adapted.
+The current OpenStax page states CC-BY-NC-SA: its citation is NOT a commercial-use
+asset grant. Neither that licence nor the copyrighted TTUHSC table is imported.
+Original wording/code retain project MIT terms; existing model licences, attribution,
+holds and revision-bound radiologist-review requirements remain unchanged.
+No dependency, font, model, paid service or fee is added.
+
+## Iliac vessel questions (9 October 2026)
+
+Six original formative questions use university resources for factual reading;
+see [scope and sources](../docs/ILIAC_VESSEL_QUIZ.md). No source tables, figures,
+publisher question banks, scans or meshes are reproduced. Citations confer no
+media redistribution rights. Original wording/code retain project MIT terms;
+existing asset licences, attribution, holds and revision-bound radiologist review
+remain unchanged. No new dependency, paid service or fee.
+
+## Abdominal connective-tissue questions (9 October 2026)
+
+Four original formative questions use university resources for factual reading;
+see [scope and sources](../docs/ABDOMINAL_CONNECTIVE_QUIZ.md). No source prose,
+tables, figures, publisher examination questions, scans or meshes are copied.
+References confer no media redistribution rights. Original wording/code retain
+project MIT terms; existing asset licences, attribution, holds and exact-revision
+radiologist review remain unchanged. No new dependency, paid service or fee.
+
+## Shoulder/upper-arm artery questions (9 October 2026)
+
+Seven original formative questions use university resources for factual
+reference; see [scope and sources](../docs/SHOULDER_ARM_ARTERY_QUIZ.md). No source
+prose, tables, illustrations, publisher question banks, scans or meshes are
+copied. Reading citations do not grant media redistribution rights. Original
+wording/code retain project MIT terms. Existing model licences, attribution,
+holds and revision-bound radiologist review remain unchanged. No new dependency,
+paid service or fee is introduced.
+
+## Orbital-nerve guided orientation (9 October 2026)
+
+Six original teaching captions use university anatomy references as factual
+reading sources; see [scope and sources](../docs/ORBITAL_NERVE_TOUR.md). No source
+prose, tables, figures, examinations, scans or meshes are copied. Referencing a
+page grants no rights to its media. Original wording/code retain project MIT
+terms. Existing model licences, credits, holds and revision-bound radiologist
+review remain unchanged. No dependency, paid service or fee is added.
+
+## Orbital-nerve formative questions (9 October 2026)
+
+Fifteen original questions use university anatomy resources as factual reading
+references; see [scope and sources](../docs/ORBITAL_NERVE_QUIZ.md). No publisher
+prose, tables, figures, question banks, scans or meshes are imported. References
+do not grant reuse rights to their media. Original wording/code retain project
+MIT terms; existing source-model licences, credits, holds and exact-revision
+radiologist review remain unchanged. No new dependency, service or fee.
+
+## Foot-muscle formative questions (9 October 2026)
+
+Six original factual questions use university anatomy reading references;
+see [scope and sources](../docs/PLANTAR_MUSCLE_QUIZ.md). No source prose, tables,
+diagrams, examinations, scans or meshes are imported. Reference links do not
+grant rights to publisher media. Original wording/code retain project MIT
+terms; existing mesh licences, credits, holds and exact-revision radiologist
+review remain unchanged. No new dependency, service or fee is introduced.
+
+## Neck-muscle formative questions (9 October 2026)
+
+Short original factual questions cite TTUHSC and Advanced Anatomy as reading
+references; see [scope and sources](../docs/NECK_MUSCLE_QUIZ.md). Source books'
+non-commercial or other publication terms are not project asset licences.
+No publisher prose, tables, diagrams, scans or meshes are imported. Citations
+do not grant commercial rights to the source media. Original wording/code
+retain the project MIT licence; existing BodyParts3D CC BY 4.0 credits, source
+holds and exact-revision radiologist review remain unchanged.
+
+## Lower-neck guided learning (9 October 2026)
+
+Original orientation captions cite TTUHSC university anatomy pages as factual
+reading references; see [scope and sources](../docs/LOWER_NECK_TOUR.md).
+No third-party prose, illustrations, tables, patient images or models are imported.
+References do not confer commercial rights to the publishers' media. Original
+wording/code use the project MIT licence; existing BodyParts3D CC BY 4.0 credits,
+source holds and exact-revision radiologist review remain unchanged.
+
+## Suprascapular arterial CT orientation (9 October 2026)
+
+Two exact-source CT drafts cite primary research as factual reading references;
+see [scope and sources](../docs/SUPRASCAPULAR_ARTERIAL_CT.md). No publisher prose,
+figures, tables, patient images, meshes or datasets are imported. The citations
+do not grant asset-reuse rights. Original authored wording and code use the
+project MIT licence; existing mesh credits, source holds and revision-bound
+radiologist-review requirements are preserved.
+
+## Lower-limb vessel questions (9 October 2026)
+
+Original factual questions cite university anatomy tables and medical research
+as reading references; see [source notes](../docs/LOWER_LIMB_VESSEL_QUIZ.md).
+No publisher prose, tables, figures, images or meshes are imported. References
+are not asset licences or permission to reuse their content commercially.
+New authored wording and code use the project MIT licence; existing credits,
+source holds and exact-revision clinical-review requirements remain unchanged.
+
+## Laryngeal-support imaging notes (9 October 2026)
+
+Short original factual orientation notes cite university, research and publisher
+reading pages; see [source notes](../docs/LARYNGEAL_SUPPORT_IMAGING.md). No publisher
+prose, figures, tables, meshes or patient images are imported. In particular the
+non-commercial Joshi article is a factual reading reference, not an asset licensed
+for product reuse. Citations do not grant source-content rights. New project code
+and authored wording use the project MIT licence; existing asset attributions,
+holds and exact-revision clinical-review requirements remain unchanged.
+
+## Thoracic-vessel formative questions (9 October 2026)
+
+The thoracic-vessel quiz batch adds short original factual questions with
+university/reference reading links. No source tables, publisher question banks,
+prose, figures, meshes or scans are imported. Citations are not asset licences;
+mirrored reference rows share the same derivation budget. Existing asset
+attributions, source holds and revision-bound clinical-review requirements
+remain unchanged. Original project code and authored wording use the project
+MIT licence, without granting rights to the cited sites' content.
+
+## Deep back and suboccipital quick checks (9 October 2026)
+
+Original short formative questions use university anatomy pages as factual
+reading references, documented in [the source notes](../docs/SPINE_MUSCLE_QUIZ.md).
+Copyrighted source tables, publisher questions, prose, illustrations and datasets
+are not imported or licensed as product assets. Mirrored reference tables share
+one derivation budget. No OpenStax material is added. Original wording/code retain
+project MIT terms; existing mesh attribution and source holds remain unchanged.
+No new model, font, image, dependency, service or fee. All questions remain
+exact-source-bound radiologist-review drafts, not validation of mesh anatomy.
+
+## Hand bone quick checks (9 October 2026)
+
+Ten original question groups cite TTUHSC El Paso and OpenStax factual reading
+links, recorded in [the question notes](../docs/HAND_BONE_QUIZ.md). No reference
+table, publisher question bank, source prose, image or dataset is imported.
+Original wording/code use project MIT terms; reference links do not license
+external assets. Existing mesh licences, attribution and source holds remain
+unchanged. No new dependency, font, model, service or fee. Questions remain
+exact-source-bound radiologist-review drafts, not clinical or geometry approval.
+
+## Foot bone quick checks (9 October 2026)
+
+Original short formative questions use factual reading links recorded in
+[the question notes](../docs/FOOT_BONE_QUIZ.md). No reference table, publisher
+question bank, image or source prose is imported or licensed as a project asset.
+Original project wording/code retain MIT terms; existing mesh licences,
+attribution and holds are unchanged. No new media, model, font, dependency,
+service or fee is introduced. The questions remain exact-source-bound drafts
+for radiologist review, not evidence of clinical or geometry approval.
+
+## Major limb bone quick checks (9 October 2026)
+
+Ten original short question groups cite factual reading links to the TTUHSC
+El Paso upper- and lower-limb bone tables, recorded in
+[the question notes](../docs/MAJOR_LIMB_BONE_QUIZ.md). The copyrighted tables,
+source prose and images are not copied or licensed as project assets. Original
+project wording retains MIT terms; existing model licences and attribution
+remain unchanged. No new model, media, dependency, font, service or fee is added.
+The questions remain drafts for revision-bound radiologist review.
+
+## Forefoot muscle quick checks (9 October 2026)
+
+Three original short question groups use factual reading links to the TTUHSC
+El Paso lower-limb anatomy table, recorded in
+[the question notes](../docs/FOREFOOT_MUSCLE_QUIZ.md). Its copyrighted tables,
+prose and images are not copied or licensed as project assets. Original project
+wording retains MIT terms; existing model licences and attribution are unchanged.
+No new models, media, dependencies, fonts, services or mandatory fees are added.
+The questions remain drafts for revision-bound radiologist review.
+
+## Pharyngeal CT/MRI orientation (8 October 2026)
+
+Eight draft placements use original project wording with factual reading links
+to the TTUHSC El Paso anatomy table and original CT/MRI studies listed in
+[the teaching record](../docs/PHARYNGEAL_CONSTRICTOR_IMAGING.md). No article
+text, tables, figures, contours or acquired images are copied or redistributed.
+Reference access is not an asset licence grant. Existing model attribution
+and project code terms remain unchanged; no new dependency, asset or fee.
+
+## Chest-wall and diaphragm quick checks (8 October 2026)
+
+Five original question concepts cover six existing source selections. Factual
+references are the TTUHSC El Paso thoracic muscle table, Wilson et al. (2001,
+PMCID PMC2278403), and NHLBI's breathing overview, linked in
+[the question record](../docs/CHEST_WALL_QUIZ.md). Copyrighted tables, article
+text, figures and NHLBI third-party animations are not licensed as project
+assets and are not copied or redistributed. Original project wording retains
+MIT terms; existing model attribution is unchanged. No new asset, font,
+dependency, payment or mandatory fee. Draft questions are not clinical approval.
+
+## Lower-limb arterial guided orientation (8 October 2026)
+
+Nine original factual captions cite the TTUHSC El Paso anatomy tables linked in
+[the tour record](../docs/LOWER_ARTERIAL_TOUR.md). These copyrighted references
+are reading links, not an asset licence: no source prose, figures, tables,
+images or meshes are redistributed. Original project wording retains MIT terms.
+Existing model attribution/licences remain unchanged; no asset, dependency,
+font, paid service or mandatory fee is added. The sequence remains a draft for
+revision-bound anatomical review, not evidence of continuous vessels or imaging
+registration.
+
+## Original brachial plexus schematic candidate (4 October 2026)
+
+The 35 named parts, 38 connectivity edges, independently authored dimensionless
+procedural curves and candidate interface are original project work under MIT.
+No donor geometry, source drawing, photo, visual layout, texture, scan, font or
+new dependency is included. Existing dependency terms/notices remain unchanged.
+Anatomical facts were checked against the NCBI Bookshelf and primary cadaver
+studies linked in [the creation record](../docs/ORIGINAL_PLEXUS_CANDIDATE.md).
+References are reading links only: no article prose, figures, tables, coordinate
+measurements or supplements are redistributed. Consultation does not clear
+linked media or held meshes for commercial reuse. The candidate is outside
+learner inventories and export allowlists; its topology and presentation are
+unapproved, not a source segmentation or a patient/imaging registration. No
+account, paid service or mandatory future fee is introduced by this candidate.
+
+## Shoulder-girdle arterial ultrasound teaching (4 October 2026)
+
+Ten source-bound selections receive five independently authored factual drafts.
+Primary reading links cite van de Pol et al., Dabernig et al., Kayashima and
+Yamasaki, Demondion et al., Murata et al., and Lai and Ho. Exact links and
+study-specific limits are in [the evidence record](../docs/SHOULDER_GIRDLE_ARTERIAL_ULTRASOUND.md).
+No article prose, figure, sonogram, trace, table, mesh, dataset or supplementary
+asset is redistributed. Article-media rights are not cleared or used as an
+asset grant; a citation does not license linked media. Original project wording
+retains MIT terms. Existing model geometry/attribution remain unchanged; no
+dependency, font, texture, service, account or mandatory fee is added. Draft
+coverage is not scan availability, registration or clinical acceptance.
+Revision-bound radiologist review and future imaging-rights/privacy gates remain.
+
+## Midfoot ultrasound and hallux-note follow-up (4 October 2026)
+
+Eight cuboid/cuneiform selections receive four original drafts; four hallux
+Ultrasound notes are corrected without changing their original lesson text.
+Reading references are Hung et al. (2020), Maeda et al. (2022) and Requist et al.
+(2023), each declaring CC BY 4.0, and Savaşan et al. (2026), declaring CC BY
+with its exact version not independently established. The latter is factual
+reading only, not an asset/adaptation grant used by this project. Exact titles,
+links and scope are in [the reference audit](../docs/FOOT_ULTRASOUND_FOLLOWUP.md).
+No article prose, figure, ultrasound frame, scan, table, dataset, segmentation
+or supplement is redistributed. Independently authored wording retains MIT
+terms; model licensing and previous notices remain unchanged. No dependency,
+font, texture, geometry, service, account or mandatory fee is added. Draft
+coverage is not ultrasound availability, clinical acceptance or registration;
+revision-bound radiologist and future imaging-rights/privacy review remain.
+
+## Toe-phalanx ultrasound teaching (4 October 2026)
+
+Twenty-eight source-bound selections use five original educational families.
+Reading references are Pistoia et al. (2025), *High-resolution ultrasound of the
+annular pulley system in the toes* ([publisher](https://link.springer.com/article/10.1007/s00256-025-04901-w)),
+Moroni et al. (2022), *The hallucal interphalangeal ossicle*
+([full text](https://pmc.ncbi.nlm.nih.gov/articles/PMC8938480/)), and the existing
+Hung et al. (2020) forefoot reference. These articles declare
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Le Minor et al. (2016)
+is a factual-only reading link about phalangeal variation; its reuse rights
+are not established and none of its protected material is admitted.
+No article prose, figure, sonogram, dataset or supplementary media is copied.
+Original project wording retains MIT terms; model licences and attribution
+remain unchanged. No asset, dependency, font, service or mandatory fee is added.
+These drafts do not establish image correspondence or clinical acceptance;
+revision-bound radiologist review remains pending. See
+[the scope and reference record](../docs/TOE_BONE_ULTRASOUND.md).
+
+## Deep-brain teaching (3 October 2026)
+
+Original factual drafts cite Akeret et al. (2022), Postans et al. (online 2019),
+Bárány et al. (2024) and Hitti et al. (2022). Article licence declarations are
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); exact reading links and
+scope appear in [the teaching record](../docs/DEEP_BRAIN_CORE_TEACHING.md).
+No reference prose, image, scan, tractogram, table or dataset is redistributed.
+No linked media are admitted. Independently authored wording retains MIT terms;
+existing models retain their own unchanged licences. No dependency, font,
+texture, geometry, service or mandatory fee is added. Radiologist approval
+remains separate and revision-bound.
+
+## Cranial-bone X-ray teaching (3 October 2026)
+
+Eight source-bound selections use six original educational lesson families.
+Reading links cite UAMS head/neck bone relationships, Dartmouth Hitchcock's
+historical skull/sinus projection protocol and RadiologyInfo's explanation of
+projection overlap. No reference prose, image, figure, scan, trace, table or
+dataset is redistributed. The protocol is not presented as current acquisition
+or diagnostic advice. Citations do not grant rights to the linked media.
+Original project wording retains MIT terms; existing model geometry retains
+its unchanged BodyParts3D CC BY 4.0 attribution. No new dependency, font,
+texture, model, service or licence fee. Radiologist review and any future
+image-rights/patient-correspondence approval remain separate gates.
+
+## Hyoid and epiglottis ultrasound teaching (3 October 2026)
+
+Original short factual teaching drafts cite Parmar et al., *Ultrasound: A novel
+tool for airway imaging* (2014), [PMC4126113](https://pmc.ncbi.nlm.nih.gov/articles/PMC4126113/).
+The article is CC BY-NC-SA 3.0 and is **not an admitted commercial asset**.
+No article prose, figure, sonogram, trace, table or supplementary data is copied
+or redistributed. The citation is a reading link, not a licence to reuse its
+images. Original independently worded factual summaries retain project MIT
+terms; existing source meshes retain their unchanged BodyParts3D CC BY 4.0
+notices. No new model, dependency, texture, font, fee or service was introduced.
+The drafts remain subject to revision-bound radiologist review; they do not
+establish scan correspondence, patient-specific findings or anatomical approval.
+
+
+## Open3DModel upper-limb candidate (3 October 2026, offline only)
+
+Original July 2025 OBJ acquired on E: from the
+[Open3DModel source page](https://anatomytool.org/open3dmodel-create), explicitly
+licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+Retain [team](https://anatomytool.org/open3dmodel-credit) and BodyParts3D/Z-Anatomy
+upstream credit, disclaimer and modification history. Not delivered in the
+website. Model derivatives require ShareAlike/reuse compliance; geometry must
+not be labelled MIT. No GPL viewer, texture or mixed-rights thorax asset imported.
+See [the source review](../docs/OPEN3DMODEL_PLEXUS_SOURCE_REVIEW.md) before admission.
+
+The offline conversion/review preview now selects 42 converted neural source
+objects, including all 15 core objects; eight entire problematic objects remain
+held. Original coordinates are retained; polygon tessellation, review colours
+and computed shading normals are disclosed adaptations, licensed CC BY-SA 4.0.
+No repair, mirroring, whole-body mapping or clinical acceptance is implied.
+The separate preview delivers these credits and renderer notices on screen and
+in THIRD_PARTY_NOTICES.txt. No new fee, package, external font or texture.
+
+Three.js's copied Earcut 3.0.2 polygon triangulator is ISC, copyright 2024 Mapbox.
+Its full notice is retained in [EARCUT_ISC.txt](EARCUT_ISC.txt) and the preview
+delivery. Verified against the
+[upstream tagged licence](https://github.com/mapbox/earcut/blob/v3.0.2/LICENSE).
+Original application code remains MIT; the model is not MIT.
+
+## Circle of Willis guided orientation (2 October 2026)
+
+Ten original draft captions refer to UTHealth Neuroanatomy Online, Lab 4,
+[internal carotid system](https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p06_index.html)
+and [vertebrobasilar system](https://nba.uth.tmc.edu/neuroanatomy/l4/Lab04p07_index.html),
+plus ACR/RSNA [CTA](https://www.radiologyinfo.org/en/info/angioct) and
+[MRA](https://www.radiologyinfo.org/en/info/angiomr) information. Factual references
+only: no illustration, scan, publisher prose, table or dataset redistributed.
+Original authored text/code retain project MIT terms; existing BodyParts3D
+surfaces retain CC BY 4.0 notices. No new mesh, dependency, font, texture, paid
+service or mandatory future product fee. Anatomy, imaging and clinical approval
+remain separate and pending.
+
 ## Eye cross-sectional teaching (1 October 2026)
 
 Twelve original introductory draft notes adapt normal anatomical/MR facts from:
@@ -1164,7 +1760,7 @@ BodyParts3D, © The Database Center for Life Science licensed under CC Attributi
 
 Official licence: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (updated 2025-02-27). See `BODYPARTS3D.md`, `CC-BY-4.0.txt` and the mesh manifest for the audited grant, adaptations and source hashes. Preserve the viewer's attribution and linked full credits with commercial distribution. The licence requires attribution but has no non-commercial restriction, share-alike requirement or mandatory licence fee.
 
-The expanded whole-body/regional library is covered by the same grant. See `BODYPARTS3D_FULL_BODY.md` for its two official source archives, 924 selectable entries, modifications and quarantined source discrepancies. The 22 deep-brain entries and 24 source components retain the same CC BY 4.0 attribution; display colours and short original teaching notes do not relicense anatomy or imply clinical approval. The eleven connective/deep-spinal entries / fifteen components use the same grant; see `docs/AXIAL_DETAIL.md`. No new runtime packages or bundled fonts/textures were added for the expansion. The targeted-practice update adds no assets or dependencies. The six legacy abdominal-wall candidates are diagnostic evidence only, not redistributed anatomy meshes or approved additions; exact-version rights and registration must be confirmed before admission.
+The expanded whole-body/regional library is covered by the same grant. See `BODYPARTS3D_FULL_BODY.md` for its two official source archives, current 1,022 source representations / 86 GLB bundles, modifications and quarantined source discrepancies. Dated milestone counts are historical, not additional current totals or the whole-body Review count. The 22 deep-brain entries and 24 source components retain the same CC BY 4.0 attribution; display colours and short original teaching notes do not relicense anatomy or imply clinical approval. The eleven connective/deep-spinal entries / fifteen components use the same grant; see `docs/AXIAL_DETAIL.md`. No new runtime packages or bundled fonts/textures were added for the expansion. The targeted-practice update adds no assets or dependencies. The six legacy abdominal-wall candidates are diagnostic evidence only, not redistributed anatomy meshes or approved additions; exact-version rights and registration must be confirmed before admission. Attribution/licence/change notices must accompany distributions and exports; independent product entitlements do not cancel the underlying CC-licensed asset rights. This notice does not itself admit held source paths or clear privacy or clinical release.
 
 ## Anatomical illustrations
 
@@ -2156,3 +2752,488 @@ figure permissions are not assumed to cover reuse. Existing models/credits and
 recipient rights remain unchanged; no new font, texture, dependency, scan, paid
 service or mandatory fee. Prior materials are not retrospectively cleared.
 Draft/source limits and clinical review: `docs/NESTED_CT_ORIENTATION.md`.
+
+## Superficial forearm venous ultrasound orientation — 2 October 2026
+
+Four draft placements reuse the admitted BodyParts3D median cubital and median
+antebrachial vein surfaces without changing their geometry or CC BY 4.0 credits.
+Original brief teaching and integration code use the project's MIT terms. UAMS
+upper-limb anatomy, ACR/RSNA RadiologyInfo venous ultrasound, and Mukai et al.'s
+primary cubital ultrasound study (PMID29140886) are outbound reading references,
+not imported assets or commercial redistribution licences. No publisher prose,
+image, table, diagram, scan, article PDF or third-party dataset is copied. No new
+dependency, font, texture, paid API or mandatory fee is introduced. Source limits,
+reference scope and radiologist review requirements are documented in
+`docs/CUBITAL_VENOUS_ULTRASOUND.md`. No patient registration, access entitlement,
+compressibility, Doppler finding or procedural safety is supplied by these meshes.
+
+## Lumbar and sacral structure checks — 2 October 2026
+
+Six original draft questions use factual reading references to AAOS OrthoInfo,
+Konin and Walz (AJNR 2010, PMID20203111), and Lyders et al. (AJNR 2010,
+PMC7964142). No publisher prose, diagram, photograph, table, scan, PDF or dataset
+is imported. Reading access does not grant redistribution rights or endorsement.
+Original questions/code use the project's MIT terms; existing BodyParts3D CC BY
+4.0 models, attribution and held anatomy are unchanged. No new model, font,
+texture, dependency, paid API or mandatory fee. References and clinical review
+scope: `docs/LUMBAR_SACRAL_QUIZ.md`. No patient-level numbering, CT/MRI registration,
+diagnostic result or clinical approval is supplied by these questions.
+
+## Wrist ultrasound orientation — 2 October 2026
+
+Original four draft lessons for eight existing wrist-bone selections use outbound
+ESSR wrist technical-guideline and ACR/RSNA musculoskeletal ultrasound reading
+links. No publisher prose, diagram, image, scan, table, PDF or dataset imported;
+reading access is not a redistribution licence or endorsement. Original code and
+prose use project MIT terms. Existing BodyParts3D CC BY 4.0 attribution/models
+and anatomical validation holds remain unchanged. No new asset, dependency,
+font, texture, paid API or mandatory fee. See `docs/WRIST_ULTRASOUND.md` for exact
+references and review boundaries. No echoes, patient registration, diagnostic
+findings or procedural safety are supplied by the model.
+
+## Carpal-bone structure checks — 2 October 2026
+
+Eight original questions serve sixteen existing bilateral bone selections.
+Włodarczyk, J., Czaplicka, K., Tabor, Z., Wojciechowski, W. and Urbanik, A.:
+Segmentation of bones in magnetic resonance images of the wrist, Int J CARS
+10:419–431 (2015), https://doi.org/10.1007/s11548-014-1105-x. Publisher rights:
+https://link.springer.com/article/10.1007/s11548-014-1105-x identifies Creative
+Commons Attribution allowing any use with author/source credit; the HTML does
+not specify a licence version, so none is invented here. Rusli, W.M.R. and
+Kedgley, A.E.: Statistical shape modelling of the first carpometacarpal joint
+reveals high variation in morphology, Biomech Model Mechanobiol 19:1203–1210
+(2020), https://doi.org/10.1007/s10237-019-01257-8, CC BY 4.0,
+https://creativecommons.org/licenses/by/4.0/. These factual question adaptations
+and explanations are our original interpretation, not publisher wording or
+endorsement. Author/year credits, source and licence information are retained.
+No article prose, figure, scan, table, PDF, algorithm or dataset is imported.
+
+AAOS OrthoInfo scaphoid-fracture and ESSR wrist-guideline links support factual
+reading only; they are not permission to redistribute their images or prose.
+OpenStax's non-commercial current edition is excluded from these questions and
+citations. Original teaching/code uses project MIT terms; existing BodyParts3D
+CC BY 4.0 models/credits and anatomical holds remain unchanged. No new model,
+font, texture, dependency, paid service or mandatory fee is introduced.
+Exact references, scope and clinical review: `docs/CARPAL_BONE_QUIZ.md`.
+
+## Thoracic-bone quick checks — 2 October 2026
+
+Nine original formative questions cover 27 existing rib/sternal selections.
+Safarini/Bordoni and Altalib/Miao/Menezes StatPearls chapters (NCBI Bookshelf)
+and Patel et al., J Trauma Acute Care Surg (2023), PMID 37982795, support factual
+verification only. Their publication rights are not commercial asset grants.
+No source prose, question bank, image, table, figure, scan or dataset is imported;
+independently written questions and code use the project's MIT licence.
+The existing BodyParts3D CC BY 4.0 source obligations and holds remain intact.
+No new mesh, texture, font, dependency, paid service or mandatory fee is added.
+References and clinical limitations: `docs/THORACIC_BONE_QUIZ.md`.
+
+## Spinal-bone ultrasound orientation — 3 October 2026
+
+Thirteen independently written drafts cover existing T2–T11 and L2–L4 bone
+selections. Avramescu et al. (PMID22354105), Karmakar et al. (PMID22010025),
+Chang et al. (PMC5222601) and Doo et al. (PMC7713870) are factual reading links,
+not commercial asset grants. The latter two publication licences include
+non-commercial restrictions: no figures, study prose, tables, PDFs, ultrasound
+frames, scans or datasets from these papers are imported or redistributed.
+Do not use the reading citations as future permission to ingest their media.
+Original teaching and code use the project MIT terms. Existing BodyParts3D
+CC BY 4.0 geometry/credits, source holds and independent resource access remain.
+No new mesh, font, texture, dependency, paid service or mandatory licence fee.
+References and clinical boundaries: `docs/SPINAL_BONE_ULTRASOUND.md`.
+
+## Foot ultrasound surface orientation — 3 October 2026
+
+Eight original drafts use factual interpretation of Hung et al. (Diagnostics
+2020, doi:10.3390/diagnostics10030160), Tsutsumi, Kudo, Nimura and Akita
+(Scientific Reports 2022, doi:10.1038/s41598-022-19543-4), and Noel-Barker et al.
+(Foot & Ankle Orthopaedics 2026, doi:10.1177/24730114261460463).
+Each publisher specifies CC BY 4.0: https://creativecommons.org/licenses/by/4.0/.
+Source links and author/year credits are retained in `docs/FOOT_SURFACE_IMAGING.md`.
+Our independently written interpretation is not publisher wording or endorsement.
+No figures, article prose, scans, ultrasound frames, tables, PDFs, meshes or
+datasets are imported. Separately credited third-party media is not cleared.
+NC-ND alternatives are excluded from these drafts. Original code/teaching use
+project MIT terms; existing BodyParts3D CC BY obligations and source holds remain.
+No new dependency, font, texture, model, paid service or mandatory licence fee.
+Clinical approval, diagnostic performance and patient correspondence are absent.
+
+## Hand-bone ultrasound surface orientation — 4 October 2026
+
+Forty-six existing hand-bone selections gain eleven independently written
+teaching families, with thumb anatomy separated from the other fingers.
+Factual interpretation uses Wang et al. (Diagnostics 2021, DOI:
+10.3390/diagnostics11101834), Russo et al. (Journal of Personalized Medicine
+2022, DOI:10.3390/jpm12101733), and Balbach et al.'s hand-pain protocol in Diagnostics
+2024 (DOI:10.3390/diagnostics14070669). Each article expressly identifies
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0/.
+Author/year and primary publication links appear in
+`docs/HAND_BONE_ULTRASOUND.md`; our interpretation is original, not publisher
+wording, endorsement or a reproduction of its protocol. No article prose,
+figures, ultrasound frames, patient scans, tables, PDFs, meshes or datasets
+are imported. Separately credited media would require its own clearance.
+NC-ND finger/hand articles are excluded from the new teaching. Original
+code/teaching use project MIT terms; BodyParts3D CC BY geometry obligations,
+credits and source holds remain. No dependency, font, texture, model, paid
+service or mandatory fee is added. Radiologist approval, acoustic simulation,
+marrow assessment, fracture exclusion and patient registration are not supplied.
+
+## Ventricular walkthrough and schematic CSF movement — 5 October 2026
+
+Original guide captions and CSF-motion code use project MIT terms. The generated
+marker coordinates in `content/csf-motion.v1.json` are derived from the existing
+admitted BodyParts3D ventricular surfaces and retain their CC BY 4.0 credit and
+source obligations. No new mesh, media, font, texture, dependency or fee is added.
+Chen, Beckett, Verma and Feinberg, NeuroImage 2015 (DOI
+10.1016/j.neuroimage.2015.07.073, https://pubmed.ncbi.nlm.nih.gov/26241682/) is a
+factual reference only; its copyright is not treated as permission to import
+figures, scans, flow data or prose. None is reproduced. UT Neuroanatomy Online
+and NCBI Bookshelf are likewise linked factual references, not imported assets.
+The animation is an original arbitrary teaching illustration, not their measured
+results, endorsement, calibrated fluid simulation or clinical validation.
+See `docs/CSF_MOTION.md` and `docs/VENTRICULAR_GUIDED_LEARNING.md` for scope.
+
+## Girdle-bone ultrasound orientation — 8 October 2026
+
+Five original teaching placements cite the ESSR shoulder and hip technical
+guidelines and RSNA/ACR RadiologyInfo as factual reading references. No wording,
+figures, PDF files, ultrasound images, patient data or other media are imported;
+reference availability is not a licence to redistribute their assets. New code
+and original summaries use the project MIT terms. Existing BodyParts3D geometry,
+CC BY 4.0 credits and source holds are unchanged. No dependency, model, font,
+texture, service or fee is added. These are drafts, not a scanning protocol,
+ultrasound simulation, validated registration or clinical approval.
+See `docs/GIRDLE_BONE_ULTRASOUND.md` for exact source and review scope.
+
+## Pelvic duct quick checks — 8 October 2026
+
+Three original question concepts in five source-bound placements cite NIH/NCI
+SEER Testes, Duct System and Urethra teaching as factual reading references.
+No source prose, diagrams, images or datasets are reproduced. Original questions
+and code use the project MIT terms; existing geometry attribution and holds are
+unchanged. No dependencies, fonts, models, textures, services or fees are added.
+These are educational drafts, not clinical approval or patient registration.
+See `docs/PELVIC_DUCT_QUIZ.md` for source links and limits.
+
+## Hepatobiliary quick checks — 8 October 2026
+
+Five original questions cite NIH/NCI SEER, NIDDK and TTUHSC El Paso anatomy
+teaching as factual reading references. No reference prose, images, diagrams,
+scans or datasets are imported. The project MIT terms apply to new original
+question text and code; existing geometry licences, credits and source holds
+remain unchanged. No dependency, font, model, texture, service or fee is added.
+These are revision-bound educational drafts, not clinical approval. See
+`docs/HEPATOBILIARY_QUIZ.md` for exact source and reference scope.
+
+## Cardiac venous guided learning — 8 October 2026
+
+Four original short captions use TTUHSC El Paso's thoracic-vein anatomy table
+as a factual reference and reading link. No table, prose, illustration, image,
+scan or dataset is reproduced. Original code and captions use project MIT terms;
+existing BodyParts3D CC BY 4.0 attribution and source holds remain unchanged.
+No dependency, asset, font, texture, service or fee is added. This is draft
+orientation, not a complete venous tree, acquired imaging or clinical approval.
+See `docs/CARDIAC_VENOUS_TOUR.md` for source bindings and limitations.
+
+## Lower-limb connective questions — 8 October 2026
+
+Four original questions use TTUHSC El Paso and OpenStax anatomy pages as factual
+references and reading links. No tables, images, prose or datasets are reproduced.
+Original wording/code use project MIT terms; existing geometry attribution and
+source holds are unchanged. No dependency, font, model, texture, service or fee
+is added. Eight source-bound bilateral placements remain educational drafts,
+not clinical approval. See `docs/LOWER_LIMB_CONNECTIVE_QUIZ.md`.
+
+## Thigh muscle questions — 9 October 2026
+
+Seven original formative questions cite TTUHSC El Paso anatomy tables for facts
+and further reading. No source tables, prose, images, scans or datasets are
+reproduced. Original wording/code use project MIT terms; existing geometry
+attribution and source holds remain unchanged. No dependency, font, model,
+texture, service or fee is added. Twenty-two exact-source bilateral placements
+remain drafts, not clinical approval. See `docs/THIGH_MUSCLE_QUIZ.md`.
+
+## Shoulder and upper-arm muscle questions — 9 October 2026
+
+Original formative questions use university anatomy references for factual
+checking and reading links only. No publisher tables, questions, images or
+datasets are imported. The project's original code and wording retain MIT
+terms; linked third-party pages retain their own terms and are not redistributed
+assets. Existing mesh licences, attribution and source holds are unchanged.
+No dependency, model, texture, font, service or fee is added. Material remains
+draft teaching requiring revision-bound radiologist review. See
+`docs/SHOULDER_ARM_MUSCLE_QUIZ.md` for exact scope and references.
+
+## Forearm venous CT/MRI orientation — 9 October 2026
+
+Twelve exact-source draft placements use original short teaching prompts and
+reading links to primary anatomy and venography papers. No publisher prose,
+table, figure, scan, model, or dataset is redistributed. The linked papers keep
+their own terms; citation is not permission to import their images or assets.
+Original code and wording retain project MIT terms. Existing mesh licences and
+attribution remain unchanged. No dependency, font, service, payment or clinical
+approval is added. See `docs/FOREARM_VENOUS_CROSS_SECTIONAL.md` for scope,
+references and evidence limitations.
+The linked Anatomy & Cell Biology article PMC9256478 carries CC BY-NC 4.0
+reuse terms; no article media, tables or expressive text
+are included, and those terms do not authorize importing such material here.
+
+## Forearm muscle questions — 9 October 2026
+
+Original formative questions use TTUHSC anatomy references for factual checking
+and reading links, not as imported tables, publisher questions, images or
+datasets. Original wording/code retains project MIT terms; the linked pages
+remain subject to their own terms and are not licensed product assets. Existing
+mesh attribution and source holds remain unchanged. No new dependency, font,
+model, texture, service or fee is introduced. Source-bound teaching remains
+draft material requiring revision-bound radiologist review. See
+`docs/FOREARM_MUSCLE_QUIZ.md`.
+
+## Intrinsic hand muscle questions — 9 October 2026
+
+Nine original formative questions cite the TTUHSC El Paso hand anatomy table
+as a factual reference and reading link, not an imported dataset or licensed
+asset. No source table, prose, question, image or patient data is reproduced.
+Original wording and code use project MIT terms. Existing source-mesh licences
+and attribution remain unchanged; no new font, model, dependency, fee or service
+is introduced. Twenty exact-source placements remain radiologist-review drafts.
+See `docs/HAND_MUSCLE_QUIZ.md`.
+
+## Lower-leg muscle questions — 9 October 2026
+
+Thirteen original formative questions cite the TTUHSC El Paso lower-limb anatomy
+table for factual reference and further reading. No source table, image, scan,
+dataset or prose is reproduced. Original wording/code use project MIT terms;
+existing model licences, attribution and source holds are unchanged. No new
+dependency, model, font, service or fee. Twenty-eight full-identity-bound muscle
+placements remain review drafts. See `docs/LEG_MUSCLE_QUIZ.md`.
+
+## Forearm vessel questions — 9 October 2026
+
+Seven original formative question groups cite the TTUHSC El Paso upper-limb
+artery and vein tables solely for factual reference and further reading. Those
+tables retain their copyright restrictions; no table, prose, image, model or
+dataset is imported. Original question wording/code use project MIT terms.
+Existing source-mesh licences and attribution remain unchanged. No new asset,
+dependency, font, service or fee is introduced. Fourteen exact-identity-bound
+placements remain radiologist-review drafts. See `docs/FOREARM_VESSEL_QUIZ.md`.
+
+## Cervical/thoracic bone questions — 9 October 2026
+
+Four original shared question groups cite TTUHSC El Paso back anatomy tables
+for factual reading only. No copyrighted prose, table, image or model is copied.
+Original question wording/code follow project MIT terms; source-mesh licences
+and attribution remain unchanged. Fourteen exact-identity-bound placements
+remain radiologist-review drafts. No new asset, dependency, font, service or fee.
+See `docs/SPINAL_BONE_QUIZ.md`.
+
+## Mesenteric arterial guided learning — 9 October 2026
+
+Five original short captions cite the TTUHSC El Paso abdominal artery table
+as a factual reference and reading link only. No table, image, scan, model,
+dataset or copied passage is imported. Original wording/code follow project
+MIT terms; existing mesh licensing, attribution and source holds are unchanged.
+No new asset, dependency, font, service or fee. Six exact-source Review packets
+remain radiologist-review drafts. See `docs/MESENTERIC_TOUR.md`.
+
+## Hip and thigh question extensions — 9 October 2026
+
+Fifteen original question groups cite TTUHSC El Paso anatomy tables, movement
+teaching and laboratory pages as factual reading links. No source table, prose,
+question, image, dataset or model is imported. Original wording/code follow
+project MIT terms; mesh licences, attribution and holds are unchanged. Thirty
+exact-source placements remain radiologist-review drafts. No new asset,
+dependency, font, service or fee. See `docs/THIGH_DEEP_MUSCLE_QUIZ.md`.
+
+## Abdominal vessel questions — 9 October 2026
+
+Eight original question groups cite TTUHSC El Paso abdominal artery and vein
+tables as factual reading links only. No source prose, table, figure, image or
+dataset is imported. Original wording/code follow project MIT terms; existing
+mesh licences, attribution and holds remain unchanged. Thirteen exact-source
+placements remain radiologist-review drafts. No new asset, dependency, font,
+service or fee. See `docs/ABDOMINAL_VESSEL_QUIZ.md`.
+
+## Orbital muscle questions — 9 October 2026
+
+Seven original formative question groups use anatomy reference links for factual
+reading only. No source prose, examination questions, tables, diagrams, scans,
+models or datasets are imported. Original wording/code follow project MIT terms;
+mesh licences, attribution and holds remain unchanged. Fourteen exact-source
+placements remain radiologist-review drafts. No new dependency, font, service or
+fee. See `docs/ORBITAL_MUSCLE_QUIZ.md` for reference and delivery scope.
+
+## Forearm arterial guided learning — 9 October 2026
+
+Four original captions cite TTUHSC El Paso university anatomy tables as factual
+reading links only. No publisher prose, table, image, model or dataset is imported.
+Original wording/code follow project MIT terms; existing mesh licences,
+attribution and source holds remain unchanged. Six exact-source selections are
+bound to draft Review packets, not clinical approvals. No new asset, dependency,
+font, service or fee. See `docs/FOREARM_ARTERIAL_TOUR.md`.
+
+## Limb connective CT teaching — 9 October 2026
+
+Three original educational drafts link primary anatomical/imaging research and
+ACR guidance as factual references only. No publisher prose, tables, figures,
+scans, models or datasets are imported. New wording/code follow project MIT
+terms; existing mesh licences, attribution and source holds remain unchanged.
+Six exact-source placements require revision-bound radiologist review. No new
+asset, dependency, font, service or fee. See `docs/LIMB_CONNECTIVE_CT.md`.
+
+## Spinal muscle questions — 9 October 2026
+
+Original formative questions use university anatomy references for factual
+reading only. No publisher prose, tables, examination questions, figures,
+models or datasets are imported. New wording/code follow project MIT terms;
+existing mesh licences, attribution and source holds remain unchanged. These
+source-bound drafts require radiologist review. No new asset, dependency,
+font, service or fee. See `docs/SPINAL_MUSCLE_QUIZ.md`.
+
+## Trunk muscle questions — 9 October 2026
+
+Original formative wording links university anatomy references for factual
+reading only; no publisher prose, tables, examination questions, images or
+datasets are imported. New wording/code follow project MIT terms. Existing
+mesh licences, attribution and source holds remain unchanged. These are
+source-bound radiologist-review drafts, not clinical approvals. No new asset,
+dependency, font, paid service or fee. See `docs/TRUNK_MUSCLE_QUIZ.md`.
+
+## Foregut vessel questions — 9 October 2026
+
+Original formative questions cite university anatomy tables as factual reading
+links only. No publisher prose, tables, examination questions, figures, scans,
+models or datasets are imported. Original wording/code follow project MIT
+terms; existing mesh licences, attribution and holds remain unchanged. Exact
+source-bound placements remain radiologist-review drafts. No new dependency,
+font, service or fee. See `docs/FOREGUT_VESSEL_QUIZ.md`.
+
+## Thoracic small-vessel MRI teaching — 9 October 2026
+
+Original concise orientation and evidence-limit notes cite university anatomy
+tables and primary MRI research as reading links only. No publisher text,
+figures, tables, questions, scans or datasets are imported. Public access to
+those references is not permission to reuse their media. New wording/code
+follow project MIT terms; existing BodyParts3D attribution and other source
+licences remain unchanged. These are source-bound radiologist-review drafts,
+not validated MRI targets or patient registration. No dependency, font, mesh,
+paid service or fee added. See `docs/THORACIC_SMALL_VESSEL_MRI.md`.
+
+## Cerebral arterial questions — 9 October 2026
+
+Five original formative questions cite UTHealth university anatomy pages as
+factual reading links only. No publisher prose, exercises, figures, tables,
+scans, models or datasets are imported. New wording/code follow project MIT
+terms; existing model licences, attribution and source holds remain unchanged.
+Eight exact-source placements require revision-bound radiologist review. No new
+dependency, font, asset, paid service or fee. See `docs/CEREBRAL_ARTERIAL_QUIZ.md`.
+
+## Hand arterial questions — 9 October 2026
+
+Seven original concise formative questions cite TTUHSC El Paso's upper-limb
+artery anatomy table as a factual reading link only. The reference is not an
+asset licence: no publisher prose, tables, exercises, images, scans or datasets
+are imported. New wording/code follow project MIT terms; retained model
+licences, attribution and source holds are unchanged. Exact-source drafts
+require revision-bound radiologist review. No dependency, font, model, paid
+service or fee added. See `docs/HAND_ARTERIAL_QUIZ.md`.
+
+## Shoulder-girdle arterial questions — 10 October 2026
+
+Four original formative questions cite TTUHSC El Paso anatomy tables, a
+StatPearls costocervical-trunk chapter and primary dorsal-scapular research as
+factual reading references. No publisher prose, figures, tables, question-bank
+items, images, scans or models are copied or redistributed. Reference access
+does not license its media; any restrictive publication terms are not
+relicensed here. New application wording/code follow project MIT terms;
+existing asset licences, attribution and source holds remain unchanged.
+Eight exact-source placements remain drafts for revision-bound radiologist
+review. No new dependency, font, asset, paid service or fee is introduced.
+See `docs/SHOULDER_GIRDLE_ARTERY_QUIZ.md` for provenance and scope.
+
+## Digestive tract guided tour — 10 October 2026
+
+Six original short captions cite the NIH NIDDK digestive-system overview as a
+factual reading reference. No source prose, images, tables, scan data or meshes
+are imported. New code and captions use project MIT terms; existing model
+licences, BodyParts3D attribution and source limitations remain unchanged.
+No dependency, font, paid service or fee. See `docs/DIGESTIVE_TRACT_TOUR.md`.
+
+## Urinary tract guided tour — 10 October 2026
+
+Five original short captions cite the TTUHSC El Paso kidney and retroperitoneum
+table as a factual reading reference. No source prose, tables, illustrations,
+scan data or new meshes are imported. Original code and captions use project
+MIT terms; existing BodyParts3D CC-BY-4.0 attribution and source limitations
+remain unchanged. Recovered ureters are not newly validated anatomy. No new
+dependency, font, paid service or fee. See `docs/URINARY_TRACT_TOUR.md`.
+
+## Laryngeal framework questions — 10 October 2026
+
+Thirteen original self-checks cite TTUHSC and University of Michigan teaching
+pages as factual reading references. No publisher prose, diagrams, question bank
+or other media is imported or relicensed. Original code and wording follow MIT
+project terms; existing model attribution and asset licences remain unchanged.
+Nineteen exact-source placements are drafts, not clinical approval. No new paid
+service, dependency or font. See `docs/LARYNGEAL_FRAMEWORK_QUIZ.md`.
+
+## Orbital support MRI teaching — 10 October 2026
+
+Six original summaries (twelve bilateral source placements) reference published
+orbital MRI and cadaver studies listed in `docs/ORBITAL_SUPPORT_MRI.md`. These
+links are factual references, not licences to reuse publisher assets. No figures,
+scans, contours, tables or article prose are bundled or relicensed. Original code
+and wording follow project MIT terms; existing BodyParts3D attribution remains.
+No new asset, dependency, font, paid service or fee. Routine visibility is not
+assumed for tiny structures; detailed annular boundaries remain disputed. All
+entries are revision-bound radiologist-review drafts, not clinical approval.
+
+## Orbital support questions — 10 October 2026
+
+Two original short questions cite the TTUHSC El Paso Eye anatomy table for
+anatomical facts. No source table, prose, image or question-bank asset is copied
+or relicensed. Original code and wording follow project MIT terms; existing model
+attribution remains. No new dependency, asset, font, fee or service. Four exact
+source placements remain review-pending drafts. See `docs/ORBITAL_SUPPORT_QUIZ.md`.
+
+## Longus-colli attachment questions — 10 October 2026
+
+Three original short questions reference Robert Frysztak's Loyola/Stritch
+Head-Neck Muscle Table (2015) for anatomical facts. The table, diagrams, prose
+and question-bank assets are not bundled or relicensed. Public access is not a
+commercial image licence. Original questions/code use project MIT terms; existing
+BodyParts3D attribution remains. No new assets, dependencies, fonts or paid
+services. Questions remain revision-bound drafts. See `docs/LONGUS_COLLI.md`.
+
+## Abdominal vessel reasoning — 10 October 2026
+
+Six original draft questions refer to the TTUHSC abdominal artery/vein tables
+and UAMS abdominal artery teaching as factual reading references only. Their
+copyrighted tables, wording, question banks and images are not reproduced or
+relicensed. No new assets, scans, dependencies, fonts or fees are introduced.
+Original application wording/code retain project MIT terms; existing BodyParts3D
+CC BY 4.0 credits and change notices remain intact. Exact source-bound questions
+require revision-bound radiologist review. See `docs/ABDOMINAL_VESSEL_REASONING.md`.
+
+## Thoracoacromial ultrasound orientation — 10 October 2026
+
+Six exact-source draft placements use original short factual summaries with
+reading links to Bonczar et al. (2022), Hue et al. (1998), Kompatscher et al.
+(2005) and Delforge et al. (2014). No publisher images, tables, scan data or
+verbatim passages are imported or relicensed. Open access/free-to-read status
+is not treated as permission to reuse third-party assets. Original text/code
+retain project MIT terms; existing BodyParts3D CC BY 4.0 credit and change
+notices remain intact. No new assets, dependencies, fonts or fees. Drafts
+separate anatomical/CTA evidence from pectoral-branch Doppler evidence and do
+not certify visibility of other branches. See `docs/THORACOACROMIAL_ULTRASOUND.md`.
+
+## Hand venous questions — 9 October 2026
+
+Five original formative questions use the TTUHSC El Paso upper-limb venous
+table and StatPearls Hand Volar Arch Arteries chapter as factual reading links.
+Their copyright and any non-commercial/no-derivatives conditions are not
+relicensed: no prose, tables, question bank, illustrations or other publisher
+assets are imported. Original application wording/code follow project MIT
+terms; existing model licences and attribution remain unchanged. Fourteen
+exact-source placements remain drafts requiring radiologist sign-off. No new
+asset, dependency, font, service or fee. See `docs/HAND_VENOUS_QUIZ.md`.

@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import previousPins from '../content/abdominal-branch-imaging-pins.json' with {type:'json'};
+import {build} from './workspace-component-test-build.mjs';
+const parentCommit='806d7839d65f107e6cf04e236cab314f7d30c388',root=process.cwd();
+assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),parentCommit);
+assert.equal(await readFile('app/body-content.ts','utf8'),execFileSync('git',['show',parentCommit+':app/body-content.ts'],{encoding:'utf8'}),'Pin before dispatch integration');
+const result=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog';export {bodyLesson} from './app/body-content';export {contentTabs} from './lib/content-types';",resolveDir:root,loader:'ts'},bundle:true,write:false,format:'cjs',platform:'node',packages:'external'});
+const module={exports:{}},require=createRequire(root+'/package.json');
+runInNewContext(result.outputFiles[0].text,{module,exports:module.exports,require,crypto,TextEncoder,structuredClone,URL,URLSearchParams});
+const api=module.exports,catalog=api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json')));
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const groups=previousPins.entries.filter(e=>api.bodyLesson(e.identity,'mri').readiness==='pending').map(e=>e.group);assert.equal(groups.length,18);
+const entries=groups.map(group=>{
+ const original=previousPins.entries.find(e=>e.group===group);assert(original);
+ const identity=catalog.structures.find(s=>s.id===original.identity.id);assert.deepEqual(structuredClone(identity),original.identity);
+ const previous={mri:api.bodyLesson(identity,'mri')};assert.equal(previous.mri.readiness,'pending');
+ return{identity,group,topics:['mri'],previous};
+});
+assert.equal(new Set(entries.map(e=>e.identity.id)).size,18);
+const ids=new Set(entries.map(e=>e.identity.bundle)),bundles=catalog.bundles.filter(b=>ids.has(b.id));
+for(const b of bundles){const bytes=await readFile('public'+b.url.split('?')[0]);assert.equal(bytes.length,b.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),b.sha256);}
+const allTopics=catalog.structures.map(s=>({id:s.id,topics:api.contentTabs.map(tab=>({tab,...api.bodyLesson(s,tab)}))}));
+const pins={schemaVersion:1,parentCommit,sourceVersion:catalog.sourceVersion,coordinateSystem:catalog.coordinateSystem,bundles,entries,previousCatalogHash:hash(catalog),previousAllTopicsHash:hash(allTopics)};
+await writeFile('content/abdominal-vascular-mri-pins.json',JSON.stringify(pins,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({roots:entries.length,placements:18,bundles:bundles.length,pinsHash:hash(pins)}));

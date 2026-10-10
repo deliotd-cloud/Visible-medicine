@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import ts from 'typescript';
+import {bodyNoteRenderCallback} from './body-note-render-callback.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import {authoringBeforeThoracoabdominalOrganImaging,thoracoabdominalOrganImagingHash as hash} from './thoracoabdominal-organ-imaging-history.mjs';
 import {authoringBeforeThoracoabdominalOrganXray} from './thoracoabdominal-organ-xray-history.mjs';
@@ -106,10 +107,7 @@ const require=createRequire(import.meta.url),React=require('react'),render=requi
 const built=await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
 const scope={exports:{}};runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require});
 const {SourceDisplayNotes}=scope.exports;
-const source=await readFile('app/body-explorer.tsx','utf8'),ast=ts.createSourceFile('body.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
-let callback;
-function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const content = bodyContent(selected, value);')){assert(!callback);callback=n.getText(ast);}ts.forEachChild(n,visit);}
-visit(ast);assert(callback);
+const source=await readFile('app/body-explorer.tsx','utf8'),callback=bodyNoteRenderCallback(source);
 const callbackJs=ts.transpile('const renderNote='+callback,{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React});
 for(const s of catalog.structures)for(const tab of api.contentTabs) {
   // Later X-ray and main-bronchus external ultrasound extensions have separate transitions.

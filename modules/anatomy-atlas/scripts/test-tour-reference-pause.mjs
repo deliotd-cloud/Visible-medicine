@@ -39,6 +39,24 @@ test('Shoulder references call the existing reading pause only on opening at eve
   }
 });
 
+test('Shoulder caption and already-open resources pause for reading without toggling or navigating',()=>{
+  const api=load();
+  for(const index of api.shoulderTour.steps.keys()){
+    let pauses=0,toggles=0,steps=0;
+    const tree=api.ShoulderTourPlayer({index,playing:true,ready:true,onStart(){},onReadImaging(){pauses++;},onPlayPause(){toggles++;},onStep(){steps++;},onExit(){}});
+    const caption=nodes(tree).find(n=>n.props?.className==='shoulder-tour-caption').props;
+    const resources=nodes(tree).find(n=>n.props?.className==='shoulder-tour-secondary').props;
+    assert.equal(typeof caption.onFocus,'function');
+    assert.equal(typeof resources.onFocusCapture,'function');
+    caption.onFocus();resources.onFocusCapture();assert.equal(pauses,2);
+    assert.equal(caption.onBlur,undefined,'Leaving the reading area never resumes');
+    assert.equal(resources.onBlurCapture,undefined);
+    assert.equal(toggles,0);assert.equal(steps,0);
+    nodes(tree).find(n=>n.props?.onClick&&text(n)==='Pause').props.onClick();
+    assert.equal(toggles,1,'Playback controls remain outside reading pause areas');
+  }
+});
+
 function regionalHarness(compact,reduced){
   const slots=[],timers=new Map();let cursor=0,pending=[],dirty=false,tree,serial=0,exits=0;
   const changed=(old,next)=>!old||old.length!==next.length||old.some((value,i)=>!Object.is(value,next[i]));
@@ -48,8 +66,9 @@ function regionalHarness(compact,reduced){
     useMemo(fn,deps){const i=cursor++;if(changed(slots[i]?.deps,deps))slots[i]={deps,value:fn()};return slots[i].value;},
     useCallback(fn,deps){return shim.useMemo(()=>fn,deps);},
     useEffect(fn,deps){const i=cursor++;if(changed(slots[i]?.deps,deps))pending.push(()=>{slots[i]?.cleanup?.();slots[i]={deps,cleanup:fn()};});},
+    useLayoutEffect(fn,deps){return shim.useEffect(fn,deps);},
   };
-  const window={matchMedia:query=>({matches:query.includes('max-width')?compact:reduced,addEventListener(){},removeEventListener(){}}),setTimeout(fn,delay){const id=++serial;timers.set(id,{fn,delay});return id;},clearTimeout(id){timers.delete(id);}};
+  const window={matchMedia:query=>({matches:query.includes('max-width')?compact:reduced,addEventListener(){},removeEventListener(){}}),setTimeout(fn,delay){const id=++serial;timers.set(id,{fn,delay});return id;},clearTimeout(id){timers.delete(id);},addEventListener(){},removeEventListener(){}};
   const document={hidden:false,addEventListener(){},removeEventListener(){}};
   const api=load(shim,{window,document}),props={catalog:api.bodyDisplayCatalog(catalog),tour:api.thoraxTour,onExit(){exits++;}};
   function render(){let rounds=0;do{dirty=false;cursor=0;pending=[];tree=api.RegionalGuidedLearning(props);for(const effect of pending)effect();assert(++rounds<15);}while(dirty);}
@@ -60,8 +79,29 @@ function regionalHarness(compact,reduced){
   const references=()=>find(n=>n.type==='details'&&text(n.props.children?.[0]).startsWith('References & limits'));
   function click(label){const control=button(label);assert(!control.disabled);control.onClick();render();}
   render();
-  return {render,scene,button,explanation,references,click,timers,props,exits:()=>exits,ready(){for(const id of new Set(scene().structures.map(s=>s.bundle)))scene().onLoaded(id);scene().onRendererHealth('ready');render();}};
+  return {render,scene,button,explanation,references,click,timers,props,find,exits:()=>exits,ready(){for(const id of new Set(scene().structures.map(s=>s.bundle)))scene().onLoaded(id);scene().onRendererHealth('ready');render();}};
 }
+
+test('Regional reading focus pauses camera and invalidates a queued step until explicit Play',()=>{
+  for(const compact of [false,true])for(const reduced of [false,true])for(const area of ['caption','resources']){
+    const h=regionalHarness(compact,reduced);h.ready();h.click('Start guided tour');h.click('Next');
+    h.explanation().onToggle({currentTarget:{open:true}});h.render();h.click('Play');
+    const queued=[...h.timers.values()][0],before={index:h.scene().reset,selected:h.scene().selectedId,frame:plain(h.scene().presetBounds)};
+    const reading=h.find(n=>n.props?.className===(area==='caption'?'regional-tour-caption':'regional-tour-resources'));
+    const focus=area==='caption'?reading.onFocus:reading.onFocusCapture;
+    assert.equal(typeof focus,'function');focus();
+    // Even an already-dispatched timeout must not advance before React commits.
+    queued.fn();h.render();
+    assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+    assert.deepEqual({index:h.scene().reset,selected:h.scene().selectedId,frame:plain(h.scene().presetBounds)},before);
+    assert.equal(reading.onBlur,undefined);assert.equal(reading.onBlurCapture,undefined);
+    focus();h.render();assert.equal(h.timers.size,0,'Repeated focus remains paused');
+    h.click('Play');assert.equal(h.timers.size,1);assert.equal(h.scene().transitionPaused,false);
+    const [id,timer]=[...h.timers][0];h.timers.delete(id);timer.fn();h.render();
+    assert.equal(h.scene().reset,before.index+1);
+    assert.equal(h.scene().transitionMs,reduced?0:1800);
+  }
+});
 
 test('Regional nested references pause timer and camera after Play with explanation already open',()=>{
   for(const compact of [false,true])for(const reduced of [false,true]){

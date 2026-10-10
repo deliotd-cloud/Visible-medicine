@@ -1,8 +1,12 @@
 {
   "baselineSource": "193de0e4273fee3ae69cf3f4402b74b6cde5e118",
+  "historicalEpoch": "e8350cc87eb019a35148d5cc85af343ab30b4721",
+  "originalChecksum": "51321821be2ecf570797817581b626ed0f9b9448359ded72e9de3802fc136166",
+  "historicalPreservationScope": "Recorded Git module graph; installed build dependencies are current. Later unrelated teaching and corrections are not rolled back.",
   "groups": 34,
   "sourceSelections": 34,
   "addedDraftPlacements": 48,
+  "currentSourceBoundDraftsRetained": 48,
   "modalities": {
     "ct": 34,
     "mri": 7,
@@ -69,7 +73,8 @@
       "FMA76574"
     ]
   },
-  "bodySchemaRecords": 1101,
+  "pendingTopicsScope": "Historical readiness; current branch-specific getter still refuses these placements. Later teaching from other batches is independently validated.",
+  "bodySchemaRecords": 1104,
   "actualNoteRenders": 48,
   "rejectedSourceTopicCombinations": 912,
   "uniqueReferenceFacts": 39,

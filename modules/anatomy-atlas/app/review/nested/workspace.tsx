@@ -177,7 +177,7 @@ export function NestedReviewWorkspace({
             <h2>{packet.context.structureName}</h2>
             <p>{packet.source.parent.name} · {packet.source.studyTitle}</p><p>{packet.source.limitations}</p>
             <p>
-              {packet.atlasLink ? <a href={packet.atlasLink} >Return to this exact dissection</a> : 'The exact source link is unavailable.'}{' '}
+              {packet.atlasLink ? <a href={packet.atlasLink} target="_blank" rel="noopener noreferrer">Open this exact dissection in a separate tab</a> : 'The exact source link is unavailable.'}{' '}
               · Opens the exact parent, study and child. Opening it alone does not complete a review.
             </p>
             <code className="nested-review-id">
@@ -196,6 +196,15 @@ export function NestedReviewWorkspace({
                 and available draft copy. No patient registration, other
                 nested, paid lecture or interactive exam approval.
               </p>
+              {packet.source.orientationContext && <section aria-label="Coronary vein landmark source evidence">
+                <h3>Optional cardiac-vein landmarks · Unapproved</h3>
+                <p>Nonselectable orientation context in the same source frame. The heart aggregate is excluded.</p>
+                <ul>{packet.source.orientationContext.structures.map(s=><li key={s.id}>
+                  {s.name} · {s.fmaId} · {s.sources.length} source {s.sources.length===1?'file':'files'}
+                  <p>Ordered source IDs: {s.sources.map(file=>file.file).join(', ')} · Bundle: {s.bundle}</p>
+                </li>)}</ul>
+                <p>Export the unsigned worksheet below for each complete source record, file hash, bundle hash and frame.</p>
+              </section>}
               <p>
                 Material fingerprint: <code>{packet.context.materialHash}</code>
               </p>
@@ -234,7 +243,11 @@ export function NestedReviewWorkspace({
                   ))}
                 </section>
               ))}
-              {packet.teaching.guidedLearning && <section aria-label="Eye guided-learning evidence">
+              {packet.teaching.orientationContext && <section aria-label="Coronary vein landmark teaching evidence">
+                <h3>Optional cardiac-vein context · Draft</h3>
+                {Object.entries(packet.teaching.orientationContext).map(([key,text])=><p key={key}>{text}</p>)}
+              </section>}
+              {packet.teaching.guidedLearning && <section aria-label="Nested guided-learning evidence">
                 <h3>{packet.teaching.guidedLearning.title} · Draft</h3>
                 <p>{packet.teaching.guidedLearning.transitionMs / 1000}s camera sweep · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>
                 <p>{packet.teaching.guidedLearning.limitation}</p>
@@ -244,6 +257,13 @@ export function NestedReviewWorkspace({
                   <ul>{step.ids.map(id => <li key={id}>{id}</li>)}</ul>
                   {step.references.map(url => <p key={url}><a href={url} target="_blank" rel="noreferrer">{packet.teaching.referenceTitles[url] ?? 'Source reference'}</a></p>)}
                 </li>)}</ol>
+              </section>}
+              {packet.teaching.csfMotion && <section aria-label="Schematic CSF-motion evidence">
+                <h3>{packet.teaching.csfMotion.title} · Draft</h3>
+                <p>{packet.teaching.csfMotion.markerCount} non-selectable markers · {packet.teaching.csfMotion.periodSeconds}s arbitrary display cycle · source axis {packet.teaching.csfMotion.axis.join(', ')}</p>
+                <p>Exact ventricular source bundle: <code>{packet.teaching.csfMotion.sourceBundleHash}</code>. Marker coordinates are bound by the renderer revision. Start/Pause, reduced-motion, readiness, cut/explode and hidden-page gates require display review.</p>
+                <p>{packet.teaching.csfMotion.limitation}</p>
+                {packet.teaching.csfMotion.references.map(reference=><p key={reference.url}><a href={reference.url} target="_blank" rel="noreferrer">{reference.title}</a></p>)}
               </section>}
               {packet.teaching.lesson?.extended && (
                 <>

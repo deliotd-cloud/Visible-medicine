@@ -1,16 +1,10 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFile,writeFile} from 'node:fs/promises';
-import {build} from './workspace-test-build.mjs';
+import {readFile,writeFile,historicalReviewApi} from './nested-guided-library-review-history.mjs';
 const baseline='03da432b035d1dca7cc9f3344ee2722af627d859';
 const old=p=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6});
 async function load(previous=false){
- const result=await build({stdin:{contents:`export * from './lib/nested-review-material';
- export * from './lib/nested-review';export * from './lib/nested-review-api';export * from './lib/nested-review-client';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
- plugins:previous?[{name:'exact-previous-guide-library-renderer',setup(api){
-  api.onLoad({filter:/body-renderer-revision\.json$/},()=>({contents:old('content/body-renderer-revision.json').toString(),loader:'json'}));
- }}]:[]});
- return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+ return historicalReviewApi(previous);
 }
 const now=await load(),before=await load(true),storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
 let count=0,materialRejected=0,geometryRejected=0;

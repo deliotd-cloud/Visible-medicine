@@ -1,5 +1,10 @@
 # Small-intestinal mesentery MRI teaching
 
+2 October extension: mesoappendix now has its own
+[source-bound CT/MRI orientation drafts](THORACOABDOMINAL_ORIENTATION.md), not
+inherited small-intestinal/appendix imaging appearance. Membrane visibility,
+extent and boundaries remain unvalidated; the original scope below is retained.
+
 26 September 2026. One previously pending MRI topic for FMA14643 is filled in
 the existing Abdomen/Whole body notes. Full source identity, not just the FMA
 identifier, controls admission. Existing geometry and all other topics remain

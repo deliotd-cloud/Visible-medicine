@@ -164,7 +164,9 @@ function validReasoning(
 function validTours(value: unknown, source: Record<string, unknown>): boolean {
   if (
     !Array.isArray(value) ||
-    value.length > 4 ||
+    // A structure may be shared by multiple sequences. Bound payload size by
+    // the trusted registry; the exact per-structure set is checked below.
+    value.length > regionalTours.length ||
     !object(source.structure) ||
     !object(source.bundle)
   )

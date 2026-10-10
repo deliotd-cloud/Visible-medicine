@@ -58,6 +58,8 @@ const hooks = {
 };
 const scope = { exports: {} };
 const pendingDigests = [];
+let holdNextDigest = false;
+let heldDigest = null;
 const readers = [];
 const forbiddenEffects = [];
 const forbidden = (name) => {
@@ -106,6 +108,12 @@ runInNewContext(compiled.outputFiles[0].text, {
       digest(...args) {
         const pending = webcrypto.subtle.digest(...args);
         pendingDigests.push(pending);
+        if (holdNextDigest) {
+          holdNextDigest = false;
+          return new Promise((resolve, reject) => {
+            heldDigest = { release: () => pending.then(resolve, reject) };
+          });
+        }
         return pending;
       },
     },
@@ -279,6 +287,46 @@ same(
   ).range,
   [-18, 17],
 );
+// The admitted scalar values must come from the bytes that were hashed, not
+// from a caller-owned ArrayBuffer that can change after or during validation.
+for (const scalarType of ['uint16', 'int16']) {
+  const header = fixture();
+  header.scalarType = scalarType;
+  const values = scalarType === 'uint16'
+    ? Uint16Array.from({ length: 36 }, (_, i) => i)
+    : Int16Array.from({ length: 36 }, (_, i) => i - 18);
+  const expectedSignal = scalarType === 'uint16' ? 21 : 3;
+  const original = encode(header, values);
+  const headerLength = new DataView(original).getUint32(8, true);
+  const start = Math.ceil((16 + headerLength) / 8) * 8;
+  const originalBytes = new Uint8Array(original);
+  const originalHash = hash(originalBytes);
+  const bodyHash = hash(originalBytes.subarray(start));
+  const expectedPoint = { lps: [46, 43, 33.6], signal: expectedSignal };
+
+  const afterPacket = original.slice(0);
+  const admitted = await api.readNativeMr(afterPacket);
+  const expectedImage = Array.from(api.renderNativeMr(admitted, 1, -20, 40));
+  new DataView(afterPacket).setUint16(start + 21 * 2, 65500, true);
+  same(api.nativeMrPoint(admitted, 1, 2, 1), expectedPoint);
+  same(Array.from(api.renderNativeMr(admitted, 1, -20, 40)), expectedImage);
+  same(hash(new Uint8Array(admitted.values.buffer, admitted.values.byteOffset, admitted.values.byteLength)), bodyHash);
+  check(hash(originalBytes) === originalHash);
+
+  const duringPacket = original.slice(0);
+  holdNextDigest = true;
+  const reading = api.readNativeMr(duringPacket);
+  check(heldDigest !== null);
+  const release = heldDigest.release;
+  heldDigest = null;
+  new DataView(duringPacket).setUint16(start + 21 * 2, 65500, true);
+  release();
+  const admittedDuring = await reading;
+  same(api.nativeMrPoint(admittedDuring, 1, 2, 1), expectedPoint);
+  same(Array.from(api.renderNativeMr(admittedDuring, 1, -20, 40)), expectedImage);
+  same(hash(new Uint8Array(admittedDuring.values.buffer, admittedDuring.values.byteOffset, admittedDuring.values.byteLength)), bodyHash);
+  check(hash(originalBytes) === originalHash);
+}
 const oblique = fixture(),
   a = Math.sqrt(0.5);
 oblique.directions = [

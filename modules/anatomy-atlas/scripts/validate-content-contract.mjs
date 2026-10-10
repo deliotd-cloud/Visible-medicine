@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { dirname, extname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { copyBeforeShoulderArmCurriculum } from './curriculum-transition.mjs';
+import { verifyCompletedCurriculumEpochs } from './content-contract-curriculum-epoch.mjs';
 import { reviewDocumentBeforeSearch } from './review-history.mjs';
 import { build } from './workspace-test-build.mjs';
 import {
@@ -65,7 +65,7 @@ same(
   'Original review baseline retained through the exact search-display revision transition',
 );
 // The baseline predates later authored lessons. Replay its exact recorded source
-// tree for the whole-curriculum proof; the current replay below still checks
+// tree for the whole-curriculum proof; the completed-era replay below checks
 // the individually pinned shoulder/arm and forearm transitions.
 const root = fileURLToPath(contentRoot);
 const historical = await build({
@@ -133,7 +133,7 @@ same(
   baseline.copyAndRecipeHash,
   'Original copy and recipes from the exact recorded Git tree',
 );
-await copyBeforeShoulderArmCurriculum(context);
+const completedCurriculum = await verifyCompletedCurriculumEpochs(context);
 same(shoulder.length, 9);
 same(body.length, 1022);
 same(registry.size, 1031, 'Keys are scope plus identity, not identity alone');
@@ -482,7 +482,7 @@ const report = {
   glbAssetsVerified: assets.size,
   rejectionCases: negative.length + quizNegatives.length + 3,
   originalCopyAndRecipesVerifiedFromRecordedGitTree: true,
-  currentPinnedCurriculumTransitionsChecked: true,
+  completedCurriculumEpochTransitionsChecked: completedCurriculum,
   explicitlyUpdatedBodySections: 3634,
   additionalSpinalImagingSections: catalog.structures.reduce(
     (n, s) =>

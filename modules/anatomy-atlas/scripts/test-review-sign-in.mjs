@@ -17,6 +17,8 @@ const shim = { ...React,
 const built = await build({ stdin: { contents: `
   export * from './components/review-sign-in-link';
   export * from './lib/clinical-review-index';
+  export { checklist } from './lib/review-workspace';
+  export { Checkbox } from './components/ui/checkbox';
   export { bodyReviewSummaries, bodyReviewRegions } from './lib/body-review-material';
   export { nestedReviewMaterial } from './lib/nested-review-material';
   export { specimenReviewMaterial } from './lib/specimen-review-material';
@@ -74,6 +76,44 @@ function assertLink(tree, entry) {
   assert.equal(anchor.props.onClick, undefined);
   sameSelection(destination(anchor.props.href), entry.href);
 }
+
+test('each shoulder checklist uses its single visible label without a redundant accessible name', () => {
+  const entry = api.clinicalReviewEntries.find(e => e.scope === 'shoulder');
+  const elements = node => {
+    const found = [];
+    function visit(child) {
+      if (!React.isValidElement(child)) return;
+      found.push(child);
+      React.Children.forEach(child.props.children, visit);
+    }
+    visit(node);
+    return found;
+  };
+  for (const track of ['geometry', 'teaching', 'imaging']) {
+    const tree = render(api.ReviewDashboard, { initialId: entry.id }, { 1: track, 4: true });
+    const containers = elements(tree).filter(el => el.props.className === 'review-checklist');
+    assert.equal(containers.length, 1);
+    const labels = elements(containers[0]).filter(el => el.type === 'label');
+    const expected = api.checklist(entry.id, track);
+    assert.equal(labels.length, expected.length);
+    for (const item of expected) {
+      const id = 'review-check-' + item.id;
+      const matching = labels.filter(el => el.props.htmlFor === id);
+      assert.equal(matching.length, 1, track + ':' + id);
+      const children = React.Children.toArray(matching[0].props.children);
+      const checks = children.filter(el => el.type === api.Checkbox);
+      assert.equal(checks.length, 1);
+      assert.equal(checks[0].props.id, id);
+      assert.equal(checks[0].props['aria-label'], undefined);
+      assert.equal(checks[0].props['aria-labelledby'], undefined);
+      const text = children.filter(el => el.type === 'span');
+      assert.equal(text.length, 1);
+      assert.equal(text[0].props.children, item.label);
+    }
+  }
+  // Structural regression only: actual Base UI accessible names are also
+  // exercised in the local browser, not inferred from this element tree.
+});
 
 test('all admitted review selections survive sign-in without changing model scope or source token', () => {
   // Includes the two admitted hippocampi; continue testing every exact return.

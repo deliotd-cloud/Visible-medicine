@@ -1,5 +1,79 @@
 # Continuous atlas improvement plan
 
+**4 October — coronary venous orientation context:** [Three existing root
+landmarks](CORONARY_VENOUS_CONTEXT.md) can accompany the two selectable coronary
+venous parts without adding selectable targets or a permanent toolbar. Context
+is hidden during separation; source groups do not establish branches, ostia,
+flow or registration. Both child Review packets bind the new full source
+records and captions, so earlier approvals require re-review. No new geometry,
+private review decisions or patient data are introduced. Verify the desktop
+source runtime and save E: recovery before generated website integration.
+Original DBCLS 4.3 metadata also identifies six left-sided plexus trunks/cords;
+geometry, bilateral coverage and the exact distribution grant remain held.
+
+**4 October — shoulder-girdle arterial ultrasound:** [Ten exact existing selections](SHOULDER_GIRDLE_ARTERIAL_ULTRASOUND.md)
+gain five bilateral orientation drafts. Cohort/one-observation limits and the
+distinction between a deep cervical daughter branch and costocervical parent
+remain explicit. No pixels, geometry, procedural advice, registration, approval
+or new controls. Exact current-content/Review preservation and a bounded
+test-only history reversal protect earlier teaching. Generate/import website
+runtimes and protected Review only after source verification and E: recovery.
+The separately held brachial-plexus alternative remains available for source
+review, not learner admission.
+
+**3 October — deep-brain teaching:** [Four exact source selections](DEEP_BRAIN_CORE_TEACHING.md)
+gain ten draft Function/Clinical/Pathology placements. Unresolved physiology,
+research-method limits and broad septal scope remain explicit; no new anatomy,
+registration, approvals or controls. Current all-topic/Review preservation and
+immutable completed epochs protect previous teaching. Generate website runtimes
+and protected Review only after source acceptance and strict E: recovery.
+
+**3 October — suprascapular ultrasound teaching:** [Both arteries and veins](SUPRASCAPULAR_VESSEL_ULTRASOUND.md)
+gain four exact-source draft placements, with Doppler landmarks, anatomical
+variation and non-visualisation limits. No sonograms, geometry, registration,
+approval or new visible controls are introduced. Current all-topic/Review checks
+preserve earlier teaching; the completed cranial X-ray epoch stays independently
+bound to its original Git trees. Integrate generated website modules and protected
+Review after source acceptance/recovery, then seek revision-bound radiologist
+review. The candidate plexus and original CT-head masks remain separate.
+
+**3 October — plexus alternative selected for further review:** A bounded
+institutional/research archive recheck found no new fully evidenced replacement.
+The acquired Open3DModel remains the preferred inspectable candidate under its
+explicit CC BY-SA 4.0 conditions, not a clinically accepted learner model. Keep
+its grouped divisions, eight object holds, unknown units and registration gates.
+[Selection evidence and next acceptance step](BRACHIAL_PLEXUS_ALTERNATIVES.md).
+Exact original archive/rights pins and non-admission are rechecked; website and
+geometry remain unchanged. Continue independent anatomy work while the owner
+reviews the exact source candidate, rather than importing an ambiguous archive.
+
+**3 October — plexus alternatives and exact historical replay:** Three new
+downloadable CC BY 4.0 plexus listings were screened. The 3dCAMP left plexus public
+viewer renders and offers ten nerve annotations; original mesh access requires
+Sketchfab sign-in. No new asset is acquired/admitted and labels are not clinical
+approval. [Candidates and acceptance gates](BRACHIAL_PLEXUS_ALTERNATIVES.md).
+Separately, [fixed cranial/costal epochs](CRANIAL_HISTORY_EPOCHS.md) retain the
+original expected hashes while checking dated source trees separately from live
+teaching. Current runtime, website, geometry and approvals stay unchanged. Save
+focused evidence and recovery; continue anatomy work after exact-archive review,
+not by inventing missing nerve branches or inferring CT/MRI registration.
+
+**3 October — cranial X-ray source batch:** Eight exact-source head/neck bone
+selections now have original X-ray orientation drafts: frontal, paired parietal,
+paired temporal, occipital, sphenoid and ethmoid. Six shared lesson families
+retain eight independent identity pins and distinguish source side from image
+laterality. Existing CT/MRI and all unrelated teaching/geometry remain outside
+the intended change. [Batch scope and review requirements](CRANIAL_BONE_XRAY.md).
+These are source drafts, not learner image delivery, clinical approval or new
+patient registration. Generate/import the website only after current checks
+and recovery pass; never hand-edit generated modules.
+
+**3 October — source-bound hyoid/epiglottis ultrasound:** [Two new teaching drafts](HYOID_EPIGLOTTIS_ULTRASOUND.md) replace only their pending ultrasound topics. The complete hyoid composite and recovered epiglottis identities stay exact; no geometry, model, scan, acquisition mapping, tour or entitlement changes. A reading citation is not asset admission: the cited non-commercial article's figures and prose are excluded. Both teaching revisions remain pending radiologist sign-off. Current source acceptance covers all 9,936 topics and 1,104 root Review contexts, altered source identities, malformed worksheets and stale teaching submissions. Older source epochs are preserved explicitly rather than broadening their assertions. Generated website integration and browser acceptance remain the next checkpoint before learner delivery; the full existing goal stays active.
+
+**3 October — camera status consistency:** [Camera status](CAMERA_STATUS.md) corrects stale keyboard orientation after a later preset/orbit in the shared body viewer, without changing camera trajectories or visible controls. Identical frames do not rewrite status and exam mode remains undisclosed. New controlled-component tests and current renderer/review checks are separate from actual assistive-device, smoothness and clinical acceptance. A read-only current-content triage identifies hyoid/epiglottis ultrasound and cranial X-ray drafts as upcoming source-gated batches; longus-colli ultrasound needs a directly applicable primary reference before authoring. Keep the full goal active and all source/clinical/privacy gates intact.
+
+**3 October — integrated desktop spine acceptance:** [Pinned explode evidence](DESKTOP_EXPLODE_EVIDENCE.md) adds a dependency-free report checker and synthetic negative tests, plus twenty actual 1280 × 900 browser captures covering Spread, Extract selected, Tray and bilateral screen-space labels. Dissection history/reassembly was exercised. No production anatomy, teaching, UI, approvals or access gates change; camera smoothness and wider-region/clinical acceptance remain unproven. The earlier MutationObserver error was not reproduced after a fresh load, not declared fixed. Continue substantive broader atlas work rather than treating this bounded QA sample as full release acceptance.
+
 **12 September — reuse the existing CT-head master.** Subsequent inspection of the separate CT Head Atlas task found its saved Slicer scene, 24 accepted masks, additional partial/draft geometry and pending midbrain corrections. The earlier no-mask finding applies only to the newly supplied ZIP folder, not the whole project. Keep that task's segmentation and scoped approvals authoritative; build a private same-study volume/mask integration without restarting segmentation, altering accepted boundaries or treating NOT_FOR_PUBLICATION material as cleared for hosting. A generic atlas mesh is not a patient-aligned segmentation. No raw imaging or case manifest belongs in this repository.
 
 **12 September — next priority: owner's imaging data.** The owner supplied a local dataset location after reporting multiple anonymized scan types approved for use. A private, read-only header inventory is now complete; CT candidates are identified, no segmentation masks were found, and de-identification verification remains pending. No scan, raw metadata or private intake manifest is included in this checkout or uploaded. Complete and save the [deep-femoral component dissection](FEMORAL_COMPONENT_DISSECTION.md), then prepare one private real-volume pilot after the intake checks. Reuse the comparison shell and reslicer; keep unrelated-subject teaching links distinct from same-study spatial correspondence. This is not blanket approval of the separate provisional CT-head project's revisions or public deployment.

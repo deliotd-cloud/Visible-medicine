@@ -81,7 +81,8 @@ const snapshot = { schemaVersion: 1, purpose: 'First-release review pilot; not a
   ], entries };
 const serialized = JSON.stringify(snapshot, null, 2) + '\n';
 if (mode === '--write') await writeFile(destination, serialized);
-else assert.equal(await readFile(destination, 'utf8'), serialized, 'Pilot index is stale; regenerate and re-review changed material.');
+else assert((await readFile(destination, 'utf8')) === serialized,
+  'Pilot index is stale; regenerate and re-review changed material.');
 console.log(JSON.stringify({ mode, entries: entries.length, approval: false,
   rendererHash: entries[0].context.rendererHash,
   teachingBlocked: entries.filter(e => e.context.blockers.teaching.length).map(e => e.name),

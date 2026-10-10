@@ -7,7 +7,7 @@ import {hraSource,hraAccessor,hraDigest} from './hra-pelvis-source.mjs';
 
 const args=process.argv.slice(2);
 assert(args.length<=1&&args.every(a=>a.startsWith('--source=')));
-const directory=args[0]?.slice(9)??'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+const directory=args[0]?.slice(9)??'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const auditBytes=await readFile('docs/hra-urinary-junction-source-audit.json');
 const auditHash=hraDigest(auditBytes.toString().replaceAll('\r\n','\n'));
 assert.equal(auditHash,'b251217d72ad5d3ffa2db9b873fcb7040d27a7acff2a9e7f844affd974ce2a62');

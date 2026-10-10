@@ -1,0 +1,30 @@
+// Mechanical, exact source-identity recording; never clinical approval.
+import assert from 'node:assert/strict';
+import {readFile, writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {contentContext} from './content-contract-tools.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+import pins from '../content/spine-imaging-pins.json' with {type:'json'};
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const baselineCommit='2f21cc4522ccd27756220c63b98e1a2de122ef36';
+const {api,catalog}=await contentContext(),old=await exactSourceHistoryApi(baselineCommit,'display-review');
+const display=api.bodyDisplayCatalog(catalog);assert.deepEqual(display,old.bodyDisplayCatalog(catalog));
+const groups=Object.entries(api.spinalDiscQuizGroups).flatMap(([group,ids])=>ids.map(fmaId=>({group,fmaId})));
+assert.equal(groups.length,22);assert.equal(new Set(groups.map(e=>e.fmaId)).size,22);
+const source=pins.entries.filter(e=>['cervicalDisc','thoracicDisc','lumbarDisc'].includes(e.group));
+assert.equal(source.length,22);assert.deepEqual(new Set(source.map(e=>e.identity.fmaId)),new Set(groups.map(e=>e.fmaId)));
+const snapshot={body:display.structures.map(s=>({id:s.id,sections:Object.fromEntries(old.contentTabs.map(t=>[t,old.bodyLesson(s,t)]))})),shoulder:old.structures,recipes:old.dissectionProfiles};
+const entries=source.map(e=>{
+  assert.deepEqual(display.structures.filter(s=>s.id===e.identity.id),[e.identity]);
+  const oldLesson=old.bodyLesson(e.identity,'quiz'),newLesson=api.spinalDiscQuizLesson(e.identity,'quiz');
+  assert.equal(oldLesson.readiness,'generated-identification');assert.equal(oldLesson.correctAnswer,undefined);
+  assert.equal(newLesson.readiness,'draft');assert.equal(newLesson.bullets.length,4);
+  assert.equal(newLesson.bullets.filter(x=>x===newLesson.correctAnswer).length,1);
+  assert.deepEqual(api.bodyLesson(e.identity,'quiz'),newLesson);assert.notDeepEqual(oldLesson,newLesson);
+  return {identity:e.identity,group:groups.find(g=>g.fmaId===e.identity.fmaId).group,oldLesson,newLesson,oldSha256:hash(oldLesson),newSha256:hash(newLesson)};
+});
+const value={schemaVersion:1,baselineCommit,scope:'Five original MRI quick-check templates on 22 existing whole-disc selections; draft, not anatomy admission or clinical approval',originalSpinePinsJsonSha256:hash(pins),catalogSha256:hash(display),previousAllLessonsAndRecipesHash:hash(snapshot),groupsSha256:hash(api.spinalDiscQuizGroups),questionsSha256:hash(api.spinalDiscQuizQuestions),entries};
+const target='content/spinal-disc-quiz.transition.json';
+if(process.argv.includes('--check'))assert.deepEqual(JSON.parse(await readFile(target,'utf8')),value,'Unrecorded disc quiz transition');
+else await writeFile(target,JSON.stringify(value,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({transitionSha256:hash(value),placements:entries.length,templates:Object.keys(api.spinalDiscQuizQuestions).length,clinicalApproval:false}));

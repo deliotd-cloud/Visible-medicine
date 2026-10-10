@@ -12,6 +12,7 @@ const compiled = await build({
   stdin: {
     contents: `export * from 'three';
  export * from './lib/body-arrangement'; export * from './lib/shoulder-arrangement';
+ export * from './lib/body-spread';
  export * from './lib/explode-layout.mjs'; export * from './lib/study-views';
  export * from './lib/inspection-geometry'; export * from './lib/inspection-state';
  export * from './lib/anatomy-load-state'; export * from './lib/scene-labels';
@@ -522,6 +523,7 @@ const replacements = {
   './fitted-camera': { FittedCamera: 'FittedCamera' },
   '@/lib/explode-layout.mjs': a,
   '@/lib/body-arrangement': a,
+  '@/lib/body-spread': a,
   '@/lib/shoulder-arrangement': a,
   '@/public/models/bodyparts3d/manifest.json': manifest,
   './body-types': a,
@@ -590,6 +592,7 @@ for (const kind of ['body', 'shoulder'])
         view: 'anterior',
         explode: 100,
         layout,
+        adaptiveSpread: kind === 'body',
         exam,
         plate: false,
         hiddenIds: [],

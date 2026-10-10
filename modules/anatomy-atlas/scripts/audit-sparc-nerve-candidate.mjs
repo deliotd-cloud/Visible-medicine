@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 const root = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const source =
   process.argv.find((arg) => arg.startsWith('--source='))?.slice(9) ??
-  'D:/VisibleMedicine-Atlas-Recovery/source-candidates/sparc-307-v8';
+  'F:/VisibleMedicine/recovery/atlas/source-candidates/sparc-307-v8';
 const pins = {
   'nervesWithVagus_annotations.json': [
     132758,

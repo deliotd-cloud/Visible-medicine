@@ -5,14 +5,27 @@ import pins from '../content/cerebellar-mca-imaging-pins.json' with {type:'json'
 import transition from '../content/cerebellar-mca-imaging-transition.json' with {type:'json'};
 import {hash,snapshot} from './pin-cerebellar-mca-imaging.mjs';
 import {beforeTentoriumImaging} from './tentorium-imaging-history.mjs';
+import {beforeInterosseousMembraneProjection} from './interosseous-membrane-projection-history.mjs';
+import {beforeColicArterialMri} from './colic-arterial-mri-history.mjs';
+import {beforeAbdominalVascularMri} from './abdominal-vascular-mri-history.mjs';
+import {beforeThoracicBoneEpoch} from './late-teaching-epoch-history.mjs';
+import {beforeCubitalVenousUltrasound} from './cubital-venous-ultrasound-history.mjs';
 export function beforeCerebellarMcaImaging(api,display){
- api=beforeTentoriumImaging(api,display);
- if(typeof api.bodyLesson!=='function')return api;
- if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  assert.equal(hash(pins),'829a111dcd6bb74dfcffe9fb1da5119c7988d002b84f3896b944022443235386');
  assert.equal(hash(transition),'54aaf459003143bf0f1e1e31a36bf8978e6322b3789656617a7abe534a54d82d');
  assert.equal(transition.pinsHash,hash(pins));assert.equal(transition.parentCommit,pins.parentCommit);
  assert.equal(transition.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);
+ api=beforeThoracicBoneEpoch(api,display);
+ if(display&&typeof api.bodyLesson==='function'&&hash(snapshot(api,display))===pins.previousAllLessonsAndRecipesHash){
+  assert.equal(beforeCubitalVenousUltrasound(api,display),api);
+  return api;
+ }
+ api=beforeAbdominalVascularMri(api);
+ api=beforeColicArterialMri(api);
+ api=beforeInterosseousMembraneProjection(api);
+ api=beforeTentoriumImaging(api,display);
+ if(typeof api.bodyLesson!=='function')return api;
+ if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  const rows=new Map(transition.entries.map(r=>[r.id+'|'+r.tab,r]));assert.equal(rows.size,10);assert.equal(transition.entries.length,10);
  let old=0,current=0;const previous=new Map();
  for(const e of pins.entries)for(const t of e.topics){

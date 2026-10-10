@@ -89,6 +89,7 @@ const context = {
   module: vmModule,
   exports: vmModule.exports,
   console,
+  structuredClone,
   URLSearchParams,
   process: { env: { NODE_ENV: 'test' } },
   __mode: 'explore',

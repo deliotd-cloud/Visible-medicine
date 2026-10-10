@@ -1,0 +1,434 @@
+{
+  "baseline": "97ae6cea1b580c88d8de9ae9d0270400acac1dac",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    }
+  ],
+  "entries": [
+    {
+      "family": "trunk",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA66563",
+        "name": "Trunk of right thoraco-acromial artery",
+        "sourceName": "trunk of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA66563",
+        "bounds": {
+          "min": [
+            -0.9646859765052795,
+            5.183399677276611,
+            0.4785099923610687
+          ],
+          "max": [
+            -0.9166169762611389,
+            5.309200286865234,
+            0.5283600091934204
+          ]
+        },
+        "center": [
+          -0.9406514763832092,
+          5.246299982070923,
+          0.5034350007772446
+        ],
+        "anchor": [
+          -0.9337560534477234,
+          5.278399467468262,
+          0.4792209565639496
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2304",
+            "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "trunk",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA66564",
+        "name": "Trunk of left thoraco-acromial artery",
+        "sourceName": "trunk of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA66564",
+        "bounds": {
+          "min": [
+            0.9166539907455444,
+            5.183299541473389,
+            0.4786139726638794
+          ],
+          "max": [
+            0.9652439951896667,
+            5.309000015258789,
+            0.528659999370575
+          ]
+        },
+        "center": [
+          0.9409489929676056,
+          5.246149778366089,
+          0.5036369860172272
+        ],
+        "anchor": [
+          0.9215799570083618,
+          5.276999473571777,
+          0.48698097467422485
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2252",
+            "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "acromial",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23068",
+        "name": "Acromial branch of right thoraco-acromial artery",
+        "sourceName": "acromial branch of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23068",
+        "bounds": {
+          "min": [
+            -1.3827999830245972,
+            5.175000190734863,
+            0.46362799406051636
+          ],
+          "max": [
+            -0.9414899945259094,
+            5.349799633026123,
+            0.5357099771499634
+          ]
+        },
+        "center": [
+          -1.1621449887752533,
+          5.262399911880493,
+          0.49966898560523987
+        ],
+        "anchor": [
+          -1.1718900203704834,
+          5.241800308227539,
+          0.4815899729728699
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2263",
+            "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "acromial",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23069",
+        "name": "Acromial branch of left thoraco-acromial artery",
+        "sourceName": "acromial branch of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23069",
+        "bounds": {
+          "min": [
+            0.9414849877357483,
+            5.174900054931641,
+            0.4637850224971771
+          ],
+          "max": [
+            1.3825300931930542,
+            5.349799633026123,
+            0.5355899930000305
+          ]
+        },
+        "center": [
+          1.1620075404644012,
+          5.262349843978882,
+          0.4996875077486038
+        ],
+        "anchor": [
+          1.169390082359314,
+          5.241700649261475,
+          0.47968003153800964
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2211",
+            "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "deltoid",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23072",
+        "name": "Deltoid branch of right thoraco-acromial artery",
+        "sourceName": "deltoid branch of right thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23072",
+        "bounds": {
+          "min": [
+            -1.6184399127960205,
+            5.1080002784729,
+            0.4776820242404938
+          ],
+          "max": [
+            -1.1191400289535522,
+            5.21150016784668,
+            0.5387200117111206
+          ]
+        },
+        "center": [
+          -1.3687899708747864,
+          5.15975022315979,
+          0.5082010179758072
+        ],
+        "anchor": [
+          -1.3607699871063232,
+          5.134900093078613,
+          0.5233399868011475
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2282",
+            "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "deltoid",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23073",
+        "name": "Deltoid branch of left thoraco-acromial artery",
+        "sourceName": "deltoid branch of left thoraco-acromial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA23073",
+        "bounds": {
+          "min": [
+            1.1192200183868408,
+            5.108100414276123,
+            0.47790297865867615
+          ],
+          "max": [
+            1.6182299852371216,
+            5.211400032043457,
+            0.5388400554656982
+          ]
+        },
+        "center": [
+          1.3687250018119812,
+          5.15975022315979,
+          0.5083715170621872
+        ],
+        "anchor": [
+          1.3586399555206299,
+          5.135500431060791,
+          0.5237900018692017
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2230",
+            "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

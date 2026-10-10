@@ -1,0 +1,19 @@
+{
+  "baseline": "dcd1e1cfe4036c2af309c5a1a451adf659e62417",
+  "teachingEpoch": "1517521a5ee3eed985fff01bcd8608965b693fae",
+  "validatorSourceSha256": "5e7b9bb85e82a7c53d2c4a4015f4433bba165d93e48f407cb23e786fe2caac58",
+  "historicalReplaySha256": "b28c05b98fe7272a1f41dcabfd42a294af7059bc8b53db2cf47b7f3eb1f2fc0b",
+  "sources": 14,
+  "changedTopicPlacements": 28,
+  "preservedTopicPlacements": 9908,
+  "changedReviewWorksheets": 14,
+  "preservedTeachingFingerprints": 1090,
+  "mutatedSourceCases": 1104,
+  "malformedPackets": 112,
+  "staleRefusalsBeforeStorage": 14,
+  "authoredWords": 324,
+  "allEarlierReasoningAndToursPreserved": true,
+  "geometryAndUiUnchanged": true,
+  "clinicalApproval": false,
+  "browserAcceptance": false
+}

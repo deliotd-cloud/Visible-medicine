@@ -348,6 +348,7 @@ runInNewContext(compiled.outputFiles[0].text, {
   module,
   exports: module.exports,
   require,
+  structuredClone,
   console,
   process: { env: { NODE_ENV: 'test' } },
 });

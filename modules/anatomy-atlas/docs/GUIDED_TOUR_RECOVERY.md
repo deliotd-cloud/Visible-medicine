@@ -25,3 +25,34 @@ The shared renderer validator also needed its extracted shoulder handlers update
 to supply the existing tour-active ref. It now checks selection in both active
 and inactive tour states, retaining the existing renderer/exam expectations.
 This corrects stale test context, not production shoulder behavior.
+
+## Guided camera timing and renderer retry — 3 October 2026
+
+Guided sweeps now measure active frame time without a 50 ms cap, which had
+stretched a configured 1.8-second sweep to roughly twice that duration at 10 FPS.
+The first demand-render frame after starting or resuming is ignored so time
+spent waiting for anatomy or in a hidden tab cannot jump the camera. Invalid
+frame deltas are ignored; the existing smooth quaternion interpolation and
+manual-orbit/keyboard interruption remain in place.
+
+An automatic renderer retry may capture the camera part-way through a sweep.
+`SceneRecovery` now marks only its own actively moving camera copy with a
+private, transient object-identity ref. The fresh camera uses that pose as the start of a new sweep
+toward the selected guided preset, waiting for renderer/anatomy readiness. This
+restarts the configured duration; it does not claim to preserve the original
+remaining milliseconds. Reduced motion reaches the preset immediately.
+
+An explicitly queued saved view takes precedence and is restored exactly, as
+are ordinary non-guided views and guided views whose sweep was completed or
+cancelled by manual orbit/keyboard input. The marker survives repeated retries before
+consumption but is cleared on an explicit override, camera-key change or unmount.
+It is not added to saved-view data, URLs or storage. The specimen player retains
+manual orbit rather than introducing a new tour lock.
+
+Regression tests execute the real camera component on a fresh mount and cover
+low frame rates, stale deltas, pause/resume, reduced motion, manual restores,
+ordinary recovery and scene-wrapper wiring. The new low-FPS and fresh-mount
+recovery cases fail against their respective pre-fix sources. Controlled
+renderer tests do not substitute for a real GPU/context-loss test. Integration,
+browser evidence and exact E-drive recovery are recorded in the coordination
+checkpoint; no clinical approval or publication is implied.

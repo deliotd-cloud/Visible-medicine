@@ -2,8 +2,9 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {contentContext} from './content-contract-tools.mjs';
 import {prePoplitealVesselProfiles} from './popliteal-vessel-study-history.mjs';
+import {preCoronaryArterialStudyProfiles} from './coronary-arterial-study-history.mjs';
 import record from '../content/popliteal-vessel-study.transition.json' with {type:'json'};
-const {api}=await contentContext(),profiles=api.dissectionProfiles;
+const {api}=await contentContext(),current=api.dissectionProfiles,original=JSON.stringify(current),profiles=preCoronaryArterialStudyProfiles(current);
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 const previous=prePoplitealVesselProfiles(profiles);
 assert.equal(hash(previous),record.beforeHash);
@@ -18,5 +19,7 @@ const mutations=[
  p=>p.leg.focuses.find(f=>f.id===record.id).requiredSourceBindings[0].sources[0].sha256='foreign',
 ];
 for(const mutate of mutations){const changed=structuredClone(profiles);mutate(changed);assert.throws(()=>prePoplitealVesselProfiles(changed),/Unrecorded/);}
+for(const mutate of mutations){const changed=structuredClone(current);mutate(changed);assert.throws(()=>prePoplitealVesselProfiles(changed),/Unrecorded/);}
 assert.equal(hash(profiles),record.afterHash);
-console.log(JSON.stringify({passed:true,rejectedChanges:mutations.length,priorProfilesPreserved:true}));
+assert.equal(JSON.stringify(current),original,'Runtime profiles are unchanged');
+console.log(JSON.stringify({passed:true,rejectedChanges:mutations.length*2,priorProfilesPreserved:true,runtimeUnchanged:true}));

@@ -42,7 +42,13 @@ for(const group of api.nestedReviewRows)for(const row of group.surfaces){
  const href=nav.nestedReviewHref(p.source.parent,p.source.study,p.source.structure);assert(href);assert.equal(new URL(href,'https://atlas.test').searchParams.get('source'),c.sourceHash);
  assert.equal(nav.nestedReviewHref({...p.source.parent,name:'foreign'},p.source.study,p.source.structure),null);
  const used=new Set([...p.teaching.topics.flatMap(t=>t.references),...(p.teaching.lesson?.extended.selfCheck.references??[]),
-   ...(p.teaching.guidedLearning?.steps.flatMap(step=>step.references)??[])]);
+   ...(p.teaching.guidedLearning?.steps.flatMap(step=>step.references)??[]),
+   ...(p.teaching.csfMotion?.references.map(reference=>reference.url)??[])]);
+ if(p.teaching.csfMotion){
+   assert.equal(p.source.study,'ventricles');assert.equal(p.teaching.csfMotion.markerCount,160);
+   assert(c.checklists.geometry.some(item=>item.id==='csf-motion'));
+   assert(c.checklists.teaching.some(item=>item.id==='csf-motion'));
+ }
  assert(Object.keys(p.teaching.referenceTitles).every(url=>used.has(url)));
  assert.equal(nav.nestedReviewHref(p.source.parent,p.source.study,{...p.source.structure,name:'foreign'}),null);
  assert.equal(await api.nestedReviewMaterial(group.key,row.id+'-invalid'),null);

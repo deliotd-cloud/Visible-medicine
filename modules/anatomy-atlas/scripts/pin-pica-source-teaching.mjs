@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {build} from './workspace-test-build.mjs';
+const result=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog';export {nestedStudyTargets} from './lib/nested-anatomy';export {picaSourceConcepts,picaSourceFiles} from './content/pica-source-teaching';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+const catalog=api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json','utf8')));
+const targets=api.nestedStudyTargets(catalog).filter(t=>t.study==='cranial-artery-components'&&['FMA50519','FMA50520'].includes(t.structure.fmaId));
+const audit=JSON.parse(await readFile('docs/cranial-artery-component-audit.json','utf8'));
+assert.equal(targets.length,26);assert.equal(api.picaSourceConcepts.length,26);assert.equal(api.picaSourceFiles.length,26);
+assert.deepEqual(targets.map(t=>t.structure.sources[0].file),api.picaSourceFiles.map(f=>f.file));
+const bindings=targets.map(t=>{
+ assert.equal(t.structure.sources.length,1);
+ const fact=api.picaSourceFiles.find(f=>f.file===t.structure.sources[0].file),conceptId='pica-source-'+fact.file.toLowerCase();
+ assert.equal(t.structure.laterality,fact.side);assert.equal(t.structure.fmaId,fact.fmaId);assert.equal(t.structure.sourceOrder,fact.order);
+ const proof=audit.proofs.find(p=>p.parentId===t.parentId).parts.find(p=>p.id===t.structureId);
+ assert.equal(proof.source.sha256,t.structure.sources[0].sha256);assert.equal(proof.triangles,fact.triangles);assert.equal(proof.topology.components.length,fact.components);
+ assert.equal(api.picaSourceConcepts.filter(c=>c.id===conceptId&&c.study===t.study&&c.fmaIds.includes(t.structure.fmaId)).length,1);
+ return {conceptId,study:t.study,sourceHash:t.sourceHash,parentId:t.parentId,parentHash:t.parentHash,structure:t.structure};
+});
+const parents=[...new Set(targets.map(t=>t.parentId))].map(id=>catalog.structures.find(s=>s.id===id));assert.equal(parents.length,2);
+const text=JSON.stringify({schemaVersion:1,purpose:'Exact supplied PICA source-file teaching drafts only; no named branch, clinical approval or imaging registration',parents,bindings},null,2)+'\n';
+const path='content/pica-source-teaching-bindings.v1.json';
+const previous=await readFile(path,'utf8').catch(e=>{if(e.code!=='ENOENT')throw e;return null;});
+if(process.argv.includes('--check')||previous!==null)assert.equal(previous,text,'PICA source teaching pins changed; explicit editorial review required');
+else await writeFile(path,text);
+console.log(JSON.stringify({bindings:26,parents:2,sourceFactsVerified:true,checked:process.argv.includes('--check'),clinicalApproval:false}));

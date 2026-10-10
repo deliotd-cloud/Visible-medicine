@@ -1,0 +1,29 @@
+{
+  "baseline": "e6168496a8a59927164fc84c9297583d8ae01339",
+  "sourceTargets": 10,
+  "newMriPlacements": 10,
+  "changedTopicPlacements": 10,
+  "otherTopicPlacementsPreserved": 9926,
+  "changedTeachingWorksheets": 10,
+  "preservedTeachingWorksheets": 1094,
+  "mutatedSourceRefusals": 370,
+  "malformedPacketsRefused": 50,
+  "staleRefusalsBeforeStorage": 10,
+  "storageCalls": 0,
+  "landmarkWords": 149,
+  "readinessCounts": {
+    "mri": {
+      "draft": 991,
+      "pending": 113
+    },
+    "ultrasound": {
+      "draft": 672,
+      "pending": 432
+    }
+  },
+  "earlierShoulderDraftPlacementsPreserved": 12,
+  "allEarlierReasoningAndToursPreserved": true,
+  "geometryAndUiUnchanged": true,
+  "clinicalApproval": false,
+  "browserAcceptance": false
+}

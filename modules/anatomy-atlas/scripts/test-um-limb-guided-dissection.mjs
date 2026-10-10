@@ -1,15 +1,49 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { execFileSync } from 'node:child_process';
+import { readFileSync } from 'node:fs';
 import { limbDefinitions } from '../lib/um-limb-studies.ts';
 import { umLimbGuidedDissection } from '../lib/um-limb-guided-dissection.ts';
 import { guidedDissectionAction } from '../lib/specimen-guided-dissection.ts';
 import { initialSpecimen, reduceSpecimen } from '../lib/independent-specimen.ts';
 
-const counts = { knee: 6, 'hip-thigh': 9, calf: 7, foot: 8, whole: 16 };
+const counts = { knee: 7, 'hip-thigh': 9, calf: 7, foot: 8, whole: 16 };
 const wholeOrder = ['whole-source-skeleton', 'whole-gluteal', 'whole-hip-cartilage', 'whole-short-rotators',
   'whole-hip-flexors', 'whole-medial-thigh', 'whole-extensor', 'whole-posterior-thigh',
   'whole-articular-knee', 'whole-knee', 'whole-calf', 'whole-deep-calf', 'whole-fibularis',
   'whole-foot-bones', 'whole-plantar', 'whole-dorsal'];
+
+void test('whole and distal guide source files remain byte-exact to the saved milestone', () => {
+  const milestone = '05596d396d104a65cdd7a1fdf770505c3dfb3139';
+  for (const path of ['lib/um-limb-guided-dissection.ts', 'lib/um-distal-guided-dissection.ts']) {
+    const old = execFileSync('git', ['show', `${milestone}:${path}`],
+      { maxBuffer: 8e6, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' } });
+    assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old.toString('utf8'),
+      `${path}: unchanged whole/distal plan (checkout line endings normalized)`);
+  }
+});
+
+void test('new knee comparison resolves exactly six source IDs and applies visible action', () => {
+  const definition = limbDefinitions.knee, guide = umLimbGuidedDissection(definition);
+  assert(guide);assert.equal(guide.steps.length, 7);
+  const step = guide.steps[5];
+  assert.equal(step.id, 'um-knee-stability-compare');
+  assert.equal(step.title, 'Compare knee stabilizers');
+  assert.equal(step.selectedId, 'vm:reference:um-5t6tz7-v1-2:knee:acl');
+  assert.equal(step.view, 'anterior');
+  assert.deepEqual(step.ids, ['tibia', 'fibula', 'acl', 'pcl', 'mcl', 'lcl']
+    .map(slug => `vm:reference:um-5t6tz7-v1-2:knee:${slug}`));
+  assert.ok(!step.ids.some(id => id.endsWith(':femur')));
+  assert.ok(!step.ids.some(id => id.endsWith(':meniscus-group')));
+  assert.match(step.caption, /femur is hidden for visibility only/iu);
+  assert.match(step.caption, /static surfaces do not simulate loading, injury/iu);
+  const action = guidedDissectionAction(definition, guide, 5);
+  assert(action);
+  const state = reduceSpecimen(definition, initialSpecimen(definition), action);
+  assert.equal(state.selectedId, step.selectedId);
+  assert.deepEqual(new Set(definition.surfaces.filter(surface => !state.hidden.includes(surface.id)).map(surface => surface.id)), new Set(step.ids));
+  assert.equal(guide.steps[6].id, 'um-knee-posterior');
+});
 
 for (const [scope, definition] of Object.entries(limbDefinitions)) {
   void test(`${scope} guide binds exact admitted source and covers every regional surface`, () => {

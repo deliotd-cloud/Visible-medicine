@@ -1,0 +1,184 @@
+{
+  "baseline": "e7355245ac0d5f92a7a76c6fb2c42f917c3675c3",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "head-neck-organs-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "bytes": 65180,
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "structures": 1
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "a9bd5b2629e6147f0392ca14048c89598b5d49c5ca549e02a3bdd535fae841b1",
+  "entries": [
+    {
+      "family": "hyoid",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+        "fmaId": "FMA52749",
+        "name": "Hyoid bone",
+        "sourceName": "hyoid bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-skeleton",
+        "nodeName": "FMA52749",
+        "bounds": {
+          "min": [
+            -0.1952420026063919,
+            6.223700046539307,
+            0.4441870152950287
+          ],
+          "max": [
+            0.1828249990940094,
+            6.408599853515625,
+            0.7900000214576721
+          ]
+        },
+        "center": [
+          -0.006208501756191254,
+          6.316149950027466,
+          0.6170935183763504
+        ],
+        "anchor": [
+          -0.00045426300494000316,
+          6.312399864196777,
+          0.7346499562263489
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2772",
+            "sha256": "c8c6cfdd66285cdda16fa441829f723d3943823d0ffebf5e394ff8dc49a598b1"
+          },
+          {
+            "file": "FJ3201",
+            "sha256": "c52dd55001d86286d6469190d3673cc8b2b03fb3d9c29d45cec211192950c027"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "epiglottis",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+        "fmaId": "FMA55130",
+        "name": "Epiglottis",
+        "sourceName": "epiglottis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-visceral-detail",
+        "nodeName": "FMA55130",
+        "bounds": {
+          "min": [
+            -0.08592019975185394,
+            6.087299823760986,
+            0.5818900465965271
+          ],
+          "max": [
+            0.07234429568052292,
+            6.382299900054932,
+            0.659000039100647
+          ]
+        },
+        "center": [
+          -0.006787952035665512,
+          6.234799861907959,
+          0.620445042848587
+        ],
+        "anchor": [
+          -0.0122231999412179,
+          6.230400562286377,
+          0.6208699941635132
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2770",
+            "sha256": "05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

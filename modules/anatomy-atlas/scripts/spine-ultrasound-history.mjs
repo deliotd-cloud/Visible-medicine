@@ -1,6 +1,7 @@
 // Offline reconstruction of the 15 prior pending ultrasound sections.
 // Integration may compose this before older whole-body snapshot adapters.
 import assert from 'node:assert/strict';
+import { beforeLumbarDiscMri } from './lumbar-disc-mri-history.mjs';
 import { createHash } from 'node:crypto';
 import pins from '../content/spine-ultrasound-pins.json' with { type: 'json' };
 import transition from '../content/spine-ultrasound.transition.json' with { type: 'json' };
@@ -9,6 +10,7 @@ import spinePins from '../content/spine-imaging-pins.json' with { type: 'json' }
 const hash = (value) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 
 export function authoringBeforeSpineUltrasound({ api, catalog }) {
+  api = beforeLumbarDiscMri(api, catalog);
   assert.equal(hash(pins), '5be1ddb61ede871483ff7478546fde3cac3faa7755fc4c1a18346c3622ccdd57');
   assert.equal(hash(transition), '0f1980dfc7f16dd7e48c2bc5c33b2ed6d84a1897844492256eabd9a646502050');
   assert.equal(hash(spinePins), pins.parentPinsHash);

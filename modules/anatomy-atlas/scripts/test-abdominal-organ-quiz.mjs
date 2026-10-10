@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import {beforePelvicOrganQuiz} from './pelvic-organ-quiz-history.mjs';
+import {beforeLumbarDiscMri} from './lumbar-disc-mri-history.mjs';
+import {preCoronaryArterialStudyProfiles} from './coronary-arterial-study-history.mjs';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -16,7 +18,11 @@ const integrated = process.argv.includes('--integrated');
 const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const snapshot = (api, display) => ({ body: display.structures.map(s => ({ id: s.id, sections: Object.fromEntries(api.contentTabs.map(t => [t, api.bodyLesson(s, t)])) })), shoulder: api.structures, recipes: api.dissectionProfiles });
 const { api: currentApi, catalog, registry } = await contentContext();
-const api = beforePelvicOrganQuiz(currentApi);
+// Rewind only the recorded later studies before comparing this original epoch.
+// The immutable parent, pins and full-snapshot assertions below stay unchanged.
+const noLumbar = beforeLumbarDiscMri(currentApi, catalog);
+const beforeLateStudies = { ...noLumbar, dissectionProfiles: preCoronaryArterialStudyProfiles(noLumbar.dissectionProfiles) };
+const api = beforePelvicOrganQuiz(beforeLateStudies);
 const display = api.bodyDisplayCatalog(catalog), parent = await exactSourceHistoryApi(pins.parentCommit, 'display-content');
 const built = await build({ stdin: { contents: "export {abdominalOrganQuizLesson} from './lib/abdominal-organ-quiz';", resolveDir: process.cwd(), loader: 'ts' }, bundle: true, write: false, platform: 'node', format: 'esm' });
 const { abdominalOrganQuizLesson } = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
@@ -134,7 +140,7 @@ const require = createRequire(import.meta.url), React = require('react'), render
 const component = await componentBuild({ stdin: { contents: "export {StructureQuickCheck} from './app/structure-quick-check'; export {QuizNotes,AtlasWorkspace} from './app/atlas-workspace';", resolveDir: process.cwd(), loader: 'tsx' }, bundle: true, platform: 'node', format: 'cjs', write: false });
 const load = react => {
   const scope = { exports: {} };
-  runInNewContext(component.outputFiles[0].text, { module: scope, exports: scope.exports,
+  runInNewContext(component.outputFiles[0].text, { module: scope, exports: scope.exports, structuredClone,
     require: id => id === 'react' ? react : id === 'next/link' ? () => { throw Error('Unrelated Next Link must not render'); } : require(id), console });
   return scope.exports;
 };

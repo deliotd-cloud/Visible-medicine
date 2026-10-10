@@ -1,0 +1,305 @@
+{
+  "baseline": "cbca085f2862f14df28007b32a4f2cd688dd01d5",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "1280de5f77e3167794d95f103a96758b1c47bb4366b96febc3b8850c15b962d7",
+  "entries": [
+    {
+      "family": "artery",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+        "fmaId": "FMA10698",
+        "name": "Right suprascapular artery",
+        "sourceName": "right suprascapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10698",
+        "bounds": {
+          "min": [
+            -1.381119966506958,
+            4.914899826049805,
+            -0.13162700831890106
+          ],
+          "max": [
+            -0.4103670120239258,
+            5.548199653625488,
+            0.5230500102043152
+          ]
+        },
+        "center": [
+          -0.8957434892654419,
+          5.2315497398376465,
+          0.19571150094270706
+        ],
+        "anchor": [
+          -1.0132700204849243,
+          5.3201003074646,
+          0.17565597593784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2303",
+            "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "artery",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+        "fmaId": "FMA10681",
+        "name": "Left suprascapular artery",
+        "sourceName": "left suprascapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10681",
+        "bounds": {
+          "min": [
+            0.4103490114212036,
+            4.914899826049805,
+            -0.13112300634384155
+          ],
+          "max": [
+            1.3812099695205688,
+            5.548199653625488,
+            0.5229499936103821
+          ]
+        },
+        "center": [
+          0.8957794904708862,
+          5.2315497398376465,
+          0.19591349363327026
+        ],
+        "anchor": [
+          1.0131900310516357,
+          5.319499492645264,
+          0.17460602521896362
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2251",
+            "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "vein",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+        "fmaId": "FMA50859",
+        "name": "Right suprascapular vein",
+        "sourceName": "right suprascapular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA50859",
+        "bounds": {
+          "min": [
+            -1.3964999914169312,
+            4.831300258636475,
+            0.01680198684334755
+          ],
+          "max": [
+            -0.6351689696311951,
+            5.439599514007568,
+            0.6387699842453003
+          ]
+        },
+        "center": [
+          -1.015834480524063,
+          5.1354498863220215,
+          0.3277859855443239
+        ],
+        "anchor": [
+          -1.0245000123977661,
+          5.289799690246582,
+          0.23821403086185455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2302",
+            "sha256": "05a1af2bdafa5d179753ce923971e3300a4451ce71788d9fc3bf115897dc92db"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "vein",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+        "fmaId": "FMA50860",
+        "name": "Left suprascapular vein",
+        "sourceName": "left suprascapular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA50860",
+        "bounds": {
+          "min": [
+            0.6352019906044006,
+            4.831200122833252,
+            0.016885986551642418
+          ],
+          "max": [
+            1.3961501121520996,
+            5.439599514007568,
+            0.6388300061225891
+          ]
+        },
+        "center": [
+          1.0156760513782501,
+          5.13539981842041,
+          0.32785799633711576
+        ],
+        "anchor": [
+          1.0412299633026123,
+          5.273900032043457,
+          0.21618598699569702
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2250",
+            "sha256": "50bcc347434326f06d5db0054036b90215f78f964c3d00c0c94cd0b981dd558b"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

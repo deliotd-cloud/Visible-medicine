@@ -1,0 +1,388 @@
+{
+  "parentCommit": "343bbe3d2402502b698659fe5b9e5f9f2c2ff9c3",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "pelvis-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "bytes": 16892,
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "structures": 3
+    },
+    {
+      "id": "deferent-ducts",
+      "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "structures": 2
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+        "fmaId": "FMA7211",
+        "name": "Right testis",
+        "sourceName": "right testis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA7211",
+        "bounds": {
+          "min": [
+            -0.308459997177124,
+            -1.0944000482559204,
+            0.9119000434875488
+          ],
+          "max": [
+            -0.10459699481725693,
+            -0.8101202249526978,
+            1.1335499286651611
+          ]
+        },
+        "center": [
+          -0.20652849599719048,
+          -0.9522601366043091,
+          1.022724986076355
+        ],
+        "anchor": [
+          -0.11235500127077103,
+          -0.9619299173355103,
+          1.0534300804138184
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3142",
+            "sha256": "1dc84c4d16139902662f08c97bc2581cb698cf8411855bcca5474e154f4ad86e"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "testis",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right testis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+        "fmaId": "FMA7212",
+        "name": "Left testis",
+        "sourceName": "left testis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA7212",
+        "bounds": {
+          "min": [
+            0.0749754011631012,
+            -1.10247004032135,
+            0.9135499596595764
+          ],
+          "max": [
+            0.2755810022354126,
+            -0.8131701946258545,
+            1.135140061378479
+          ]
+        },
+        "center": [
+          0.1752782016992569,
+          -0.9578201174736023,
+          1.0243450105190277
+        ],
+        "anchor": [
+          0.11665699630975723,
+          -0.9606097340583801,
+          1.1039799451828003
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3138",
+            "sha256": "bb9e548f7059fb21370b8c9612ce10fe70aa9b96945c1faea33d7cc9ed113639"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "testis",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left testis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+        "fmaId": "FMA19235",
+        "name": "Right deferent duct",
+        "sourceName": "right deferent duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "deferent-ducts",
+        "nodeName": "FMA19235",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3140",
+            "sha256": "f5fa6eca33541ceffdd87a910e4fb2e804f3bcd4418ee06555dcbb0b60aa581d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.8408430218696594,
+            -1.0541000366210938,
+            0.029635999351739883
+          ],
+          "max": [
+            -0.03898070007562637,
+            0.6093999743461609,
+            1.0447900295257568
+          ]
+        },
+        "center": [
+          -0.4399118609726429,
+          -0.22235003113746643,
+          0.5372130144387484
+        ],
+        "anchor": [
+          -0.22347700595855713,
+          -0.2893500030040741,
+          0.9433799982070923
+        ],
+        "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "duct",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right deferent duct · Self-check · draft",
+        "body": "Which duct joins the terminal deferent duct to form the ejaculatory duct?",
+        "bullets": [
+          "Answer: the duct of the seminal vesicle.",
+          "A typical anatomical relationship is not proof of a connected source lumen."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. Complete source files do not establish complete anatomical extent, a continuous lumen or patient correspondence.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+        "fmaId": "FMA19236",
+        "name": "Left deferent duct",
+        "sourceName": "left deferent duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "deferent-ducts",
+        "nodeName": "FMA19236",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3135",
+            "sha256": "75091a49ea2b9d0074eab9564d9d484094c82006a2e10bcb7d4f5f1c4e2b5648"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.02551710046827793,
+            -1.054010033607483,
+            0.025624999776482582
+          ],
+          "max": [
+            1.0262500047683716,
+            0.5781099796295166,
+            1.048050045967102
+          ]
+        },
+        "center": [
+          0.5258835526183248,
+          -0.23795002698898315,
+          0.5368375228717923
+        ],
+        "anchor": [
+          0.21995200216770172,
+          -0.23739999532699585,
+          0.9566500186920166
+        ],
+        "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "duct",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left deferent duct · Self-check · draft",
+        "body": "Which duct joins the terminal deferent duct to form the ejaculatory duct?",
+        "bullets": [
+          "Answer: the duct of the seminal vesicle.",
+          "A typical anatomical relationship is not proof of a connected source lumen."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. Complete source files do not establish complete anatomical extent, a continuous lumen or patient correspondence.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+        "fmaId": "FMA19667",
+        "name": "Urethra",
+        "sourceName": "urethra",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-gaps",
+        "nodeName": "FMA19667",
+        "bounds": {
+          "min": [
+            -0.0160824004560709,
+            -0.9143102765083313,
+            0.29952698945999146
+          ],
+          "max": [
+            0.0031363300513476133,
+            -0.07487975805997849,
+            1.3417400121688843
+          ]
+        },
+        "center": [
+          -0.006473035202361643,
+          -0.4945950172841549,
+          0.8206335008144379
+        ],
+        "anchor": [
+          -0.009616579860448837,
+          -0.29971984028816223,
+          0.7556800246238708
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3148",
+            "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+          }
+        ],
+        "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "urethra",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find urethra on the model."
+      }
+    }
+  ]
+}

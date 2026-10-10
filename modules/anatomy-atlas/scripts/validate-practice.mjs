@@ -237,11 +237,22 @@ for (const [region, profile] of Object.entries(api.dissectionProfiles))
       const fullScope = catalog.structures.filter(s => region === 'whole-body' || s.regions.includes(region));
       const fullTargets = api.stageStructures(fullScope, profile, 'free', focus.id).filter(s => api.matchesRule(s, focus.rule));
       check(fullTargets.length > 0, `Focus must have actual source targets before side filtering: ${region}/${focus.id}`);
-      same(targets.slice().sort(), fullTargets.filter(s => scope.some(x => x.id === s.id)).map(s => s.id).sort(), 'Side filtering does not invent or lose eligible focus targets');
+      // Exact cross-side studies are all-or-nothing, not partial intersections.
+      // The complete-scope/source checks above still apply to every focus.
+      const missingRequired = (focus.requiredSources ?? []).filter(expected =>
+        !scope.some(s => s.id === expected.id || s.fmaId === expected.fmaId));
+      if (missingRequired.length) {
+        same(targets, [], 'Missing required source refuses the entire focused target set');
+        same(sample, [], 'Missing required source never produces a context-only sample');
+        same(api.createPracticeSession(visible, loaded, { id: ++serial, mode: 'find', sampling: 'focus', count: 5, focusIds: targets }), null, 'Missing required source never starts focus practice');
+      } else {
+        same(targets.slice().sort(), fullTargets.filter(s => scope.some(x => x.id === s.id)).map(s => s.id).sort(), 'Side filtering does not invent or lose eligible focus targets');
+      }
       same(sample.length, Math.min(20, targets.length), `Exact focused count: ${region}/${side}/${focus.id}`);
       if (!targets.length) {
         check(side !== 'both', 'Only a side filter may empty this valid focus');
-        check(fullTargets.every(s => s.laterality === (side === 'left' ? 'right' : 'left')), 'Every excluded target is on the opposite side');
+        if (!missingRequired.length)
+          check(fullTargets.every(s => s.laterality === (side === 'left' ? 'right' : 'left')), 'Every excluded target is on the opposite side');
         same(api.createPracticeSession(visible, loaded, { id: ++serial, mode: 'find', sampling: 'focus', count: 5, focusIds: targets }), null, 'No context-only question when the target side is excluded');
       }
       check(

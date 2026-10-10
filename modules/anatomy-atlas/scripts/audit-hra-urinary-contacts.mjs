@@ -32,7 +32,7 @@ assert.equal(intersections(adjacent,adjacent,true).excludedSharedVertexPairs,1);
 assert.equal(intersections(adjacent,adjacent,true).count,0);
 const args=process.argv.slice(2);assert(args.every(v=>['--record','--check'].includes(v)||v.startsWith('--source=')));
 assert.equal(args.filter(v=>v==='--record'||v==='--check').length,1);assert(args.filter(v=>v.startsWith('--source=')).length<=1);
-const directory=args.find(v=>v.startsWith('--source='))?.slice(9)??'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+const directory=args.find(v=>v.startsWith('--source='))?.slice(9)??'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const source=await readFile(directory+'/3d-vh-f-united.glb');assert.equal(source.length,hraSource.bytes);assert.equal(hraDigest(source),hraSource.sha256);
 const auditBytes=await readFile('docs/hra-urinary-junction-source-audit.json'),audit=JSON.parse(auditBytes);
 const auditHash=hraDigest(auditBytes.toString().replaceAll('\r\n','\n'));assert.equal(auditHash,'b251217d72ad5d3ffa2db9b873fcb7040d27a7acff2a9e7f844affd974ce2a62');

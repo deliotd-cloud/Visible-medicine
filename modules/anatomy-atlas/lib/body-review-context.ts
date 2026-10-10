@@ -1,4 +1,4 @@
-import { bodyReviewMaterial } from './body-review-material';
+import { bodyReviewChecks, bodyReviewMaterial } from './body-review-material';
 import renderer from '../content/body-renderer-revision.json';
 import {
   bodyChecklists,
@@ -24,6 +24,10 @@ export async function bodyReviewContext(
   if (!material) return null;
   const { source, fingerprints, topics } = material;
   const checklists = structuredClone(bodyChecklists);
+  // Source-specific worksheet checks are mandatory in this exact geometry
+  // revision. Do not widen old approvals or invalidate unrelated selections.
+  checklists.geometry.push(...material.checklist.geometry.slice(bodyReviewChecks.geometry.length)
+    .map((label, index) => ({id: `source-study-${index + 1}`, label})));
   if (material.guidedTours.length) checklists.teaching.push({id:'guided-tour',label:'Review the complete guided tour: all captions, source surfaces, references, selected targets, fading and camera transitions. Record corrections in the intended learner scope.'});
   const scope = {
     catalogScope: bodyDecisionScope,
@@ -63,7 +67,7 @@ export async function bodyReviewContext(
         ...scope,
         source: fingerprints.source,
         renderer: renderer.sha256,
-        checks: bodyChecklists.geometry,
+        checks: checklists.geometry,
       }),
       teaching: await hash({
         ...scope,

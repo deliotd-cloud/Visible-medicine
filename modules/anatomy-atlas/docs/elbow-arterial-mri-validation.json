@@ -1,0 +1,20 @@
+{
+  "testedTeachingEpoch": "6c86bc8b1aa7a7418f21f890858b0217194aff4e",
+  "historicalMilestone": true,
+  "actualCurrentTeachingTest": "scripts/test-shoulder-arterial-imaging.mjs",
+  "baseline": "f97ea55ee2e7b57865c012650b40fc44041f45da",
+  "sourceTargets": 20,
+  "newMriPlacements": 20,
+  "otherTopicPlacementsPreserved": 9916,
+  "changedTeachingWorksheets": 20,
+  "preservedTeachingWorksheets": 1084,
+  "mutatedSourceRefusals": 756,
+  "malformedPacketsRefused": 100,
+  "staleRefusalsBeforeStorage": 20,
+  "storageCalls": 0,
+  "authoredWords": 208,
+  "allEarlierReasoningAndToursPreserved": true,
+  "geometryAndUiUnchanged": true,
+  "clinicalApproval": false,
+  "browserAcceptance": false
+}

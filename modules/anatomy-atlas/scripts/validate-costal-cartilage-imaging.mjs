@@ -2,13 +2,16 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
-import {context,hash,snapshot} from './pin-costal-cartilage-imaging.mjs';
+import {hash,snapshot} from './pin-costal-cartilage-imaging.mjs';
+import {exactCranialEpochContext} from './exact-cranial-epoch-context.mjs';
 import {authoringBeforeCostalCartilageImaging} from './costal-cartilage-imaging-history.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/costal-cartilage-imaging-pins.json' with {type:'json'};
 import after from '../content/costal-cartilage-imaging.transition.json' with {type:'json'};
 import {authoringBeforeCorpusImaging} from './corpus-imaging-history.mjs';
-const raw=await context(),c={...raw,api:authoringBeforeCorpusImaging(raw)}, {api,display}=c,before=authoringBeforeCostalCartilageImaging(c),original=JSON.stringify(display);
+// These dated full hashes belong to the immutable costal transition, not HEAD.
+// The live export/schema check below still reads today's application content.
+const raw=await exactCranialEpochContext('costal-after'),c={...raw,api:authoringBeforeCorpusImaging(raw)}, {api,display}=c,before=authoringBeforeCostalCartilageImaging(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeCostalCartilageImaging({...c,api:before}),before);

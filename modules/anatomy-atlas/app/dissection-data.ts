@@ -1,4 +1,6 @@
 import type { BodyStructure, BodySystem } from './body-types';
+import coronaryArterialPins from '../content/coronary-arterial-study-pins.json' with { type: 'json' };
+import { coronaryArterialStudyId, coronaryArterialStudyCopy } from '../lib/coronary-arterial-study.ts';
 import { sourceCanonical } from '../lib/body-source-additions.ts';
 import { thoraxRespiratoryBindings, thoraxRespiratoryStudies } from '../content/thorax-respiratory-study.ts';
 import { thoraxCentralAirwayBindings, thoraxCentralAirwayStudy } from '../content/thorax-central-airway-study.ts';
@@ -1550,6 +1552,25 @@ for (const region of ['head-neck', 'whole-body'] as const) {
     });
   }
   dissectionProfiles[region].references.push(...ophthalmicNerveReferences);
+}
+
+for (const region of ['thorax', 'whole-body'] as const) {
+  dissectionProfiles[region].focuses.push({
+    id: coronaryArterialStudyId,
+    title: coronaryArterialStudyCopy.title,
+    rule: { fmaIds: ['FMA3802', 'FMA3855', 'FMA3862', 'FMA3895'] },
+    context: [{ fmaIds: ['FMA7088'] }],
+    includeSkeleton: false,
+    view: 'anterior',
+    description: coronaryArterialStudyCopy.description,
+    inspect: coronaryArterialStudyCopy.inspect,
+    landmarks: ['trunk of right coronary artery', 'trunk of left coronary artery', 'anterior interventricular branch', 'circumflex branch'],
+    requiredSources: structuredClone(coronaryArterialPins.entries) as unknown as BodyStructure[],
+  });
+  for (const reference of coronaryArterialStudyCopy.references) {
+    if (!dissectionProfiles[region].references.includes(reference))
+      dissectionProfiles[region].references.push(reference);
+  }
 }
 
 export function matchesRule(s: BodyStructure, rule: TissueRule): boolean {

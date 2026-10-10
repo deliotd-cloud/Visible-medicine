@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {relative,dirname} from 'node:path';
+import {build} from './workspace-test-build.mjs';
+const parentCommit='dcd1e1cfe4036c2af309c5a1a451adf659e62417',root=process.cwd();
+const old=p=>execFileSync('git',['show',parentCommit+':'+p],{encoding:'utf8',windowsHide:true,maxBuffer:32e6});
+const compiled=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog';export {bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {contentTabs} from './lib/content-types';export {handVenousGroups} from './lib/hand-venous-anatomy';",resolveDir:root},bundle:true,write:false,format:'esm',platform:'node',plugins:[{name:'exact-hand-veins-before-authoring',setup(api){api.onLoad({filter:/body-content\.ts$/},args=>relative(root,args.path).replaceAll('\\','/')==='app/body-content.ts'?{contents:old('app/body-content.ts'),loader:'ts',resolveDir:dirname(args.path)}:undefined);}}]});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const path='public/models/bodyparts3d/full-body/catalog.json';assert.equal(readFileSync(path,'utf8'),old(path));
+assert.equal(readFileSync('lib/hand-venous-anatomy.ts','utf8'),old('lib/hand-venous-anatomy.ts'));
+const catalog=api.bodyDisplayCatalog(JSON.parse(old(path)));
+const entries=api.handVenousGroups.flatMap(group=>group.fmaIds.map((fma,i)=>{
+ const matches=catalog.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);const identity=matches[0];
+ assert.equal(identity.laterality,i%2===0?'right':'left');assert.equal(identity.sourceTree,'isa');assert.equal(identity.system,'vessels');assert.equal(identity.category,'vessel');assert(identity.regions.includes('hand'));
+ assert.equal(identity.sources.length,group.id==='palmar-metacarpal-venous-detail'?3:group.id==='proper-digital-venous-detail'?2:1);
+ const previous=Object.fromEntries(['ct','mri'].map(t=>{const lesson=api.bodyLesson(identity,t);assert.equal(lesson.readiness,'pending');return[t,lesson];}));return{identity,group:group.id,previous};
+}));
+assert.equal(entries.length,14);assert.equal(new Set(entries.map(e=>e.identity.id)).size,14);
+assert(!entries.some(e=>/little|thumb/i.test(e.identity.name)));
+const snapshot={catalog,body:catalog.structures.map(s=>({id:s.id,topics:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles};
+const bundles=catalog.bundles.filter(b=>entries.some(e=>e.identity.bundle===b.id));
+for(const b of bundles)assert.equal(createHash('sha256').update(readFileSync('public'+b.url.split('?')[0])).digest('hex'),b.sha256);
+const data={parentCommit,sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,bundles,beforeAllTeachingSnapshotHash:createHash('sha256').update(JSON.stringify(snapshot)).digest('hex'),entries};
+const output=JSON.stringify(data,null,2)+'\n',destination='content/hand-venous-imaging-pins.json';
+if(process.argv.includes('--check'))assert.equal(readFileSync(destination,'utf8'),output);else writeFileSync(destination,output,{flag:'wx'});
+console.log(JSON.stringify({parentCommit,exactSources:entries.length,newPlacements:28,beforeHash:data.beforeAllTeachingSnapshotHash}));

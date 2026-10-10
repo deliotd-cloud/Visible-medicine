@@ -11,6 +11,7 @@ import { nestedBeforeLobarImaging, lobarIds } from './cerebral-lobar-imaging-his
 import { nestedBeforeVentricularUltrasound } from './ventricular-ultrasound-history.mjs';
 import { nestedBeforeEyeCrossSectional, eyeCrossSectionalScope } from './eye-cross-sectional-history.mjs';
 import { nestedBeforeCTOrientation, nestedCTOrientationIds } from './nested-ct-orientation-history.mjs';
+import { cardiacBeforeCavityDepth } from './cardiac-cavity-depth-history.mjs';
 
 const require = createRequire(import.meta.url);
 const React = require('react');
@@ -50,15 +51,24 @@ runInNewContext(compiled.outputFiles[0].text, {
 });
 const api = {
   ...scope.exports,
-  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous' && c.id !== 'cerebral-hippocampus'),
+  nestedConcepts: scope.exports.nestedConcepts.filter(c => c.study !== 'femoral-components' && c.study !== 'coronary-venous' && c.study !== 'cranial-artery-components' && c.id !== 'cerebral-hippocampus'),
   nestedTeachingReferences: Object.fromEntries(Object.entries(scope.exports.nestedTeachingReferences).filter(([key]) => !['femoralComponentAnatomy', 'femoralComponentVariation', 'femoralComponentInjury', 'femoralComponentCTA', 'femoralComponentMRA', 'femoralComponentDoppler', 'coronarySinusEchoView', 'coronarySinusEchoDilation', 'coronaryVenousAnatomy', 'coronaryVenousHeart', 'coronarySinusImaging', 'smallCardiacVariation', 'hippocampalTopography', 'hippocampalMemory', 'hippocampalLearning', 'hippocampalMRI'].includes(key))),
 };
+// Keep the historical reference digest exact; these two supplemental entries
+// are independently verified with their source-bound MCA lessons.
+delete api.nestedTeachingReferences.mcaSourceParentAnatomy;
+delete api.nestedTeachingReferences.mcaSourceAngiography;
+// Supplemental PICA source explanations have their own exact pins/tests; the
+// legacy historical corpus and its digest remain unchanged.
+delete api.nestedTeachingReferences.picaSourceParentAnatomy;
+delete api.nestedTeachingReferences.picaSourceAngiography;
 // Exact two-field extension; verify new bytes before restoring older snapshots.
 const eyeUsHashes = {
   'eye-lens': 'c71308116b8adbda8d67d4b9dec4bd53db697052e60c88ce73d96682921a3e14',
   'eye-sclera': 'a147afbfcbe303730892a7399f793f8d1d90e7ca88765331aff4da34a7b8181d',
 };
-const beforeCrossSectional = nestedBeforeEyeCrossSectional(nestedBeforeCTOrientation(api));
+const beforeCavityDepth = cardiacBeforeCavityDepth(api);
+const beforeCrossSectional = nestedBeforeEyeCrossSectional(nestedBeforeCTOrientation(beforeCavityDepth));
 const beforeEyeUs = {
   ...beforeCrossSectional,
   nestedConcepts: beforeCrossSectional.nestedConcepts.map(c => {
@@ -88,8 +98,8 @@ const catalog = api.bodyDisplayCatalog(
 );
 // Preserve this historical corpus and its pinned digests; supplemental femoral
 // lessons and their UI/source guards are covered in validate-femoral-components.
-// Unnamed cranial source partitions have no independent teaching concepts;
-// their absence of inherited lessons is tested in validate-cranial-artery-components.
+// Supplemental MCA source-scope lessons are tested separately in
+// test-mca-source-teaching/test-pica-source-teaching, never parent inheritance.
 // Hippocampal lessons are checked in validate-hippocampal-teaching, separately
 // from this legacy corpus; none of these older lesson snapshots is repinned.
 const targets = api.nestedStudyTargets(catalog).filter(t => !['femoral-components', 'cranial-artery-components', 'coronary-venous'].includes(t.study)
@@ -736,13 +746,19 @@ for (const concept of api.nestedConcepts) {
     }
   }
 }
-same(Object.keys(wordsBySource).length, 107);
+same(Object.keys(wordsBySource).length, 115, 'Current corpus includes eight separately scoped primary references');
+const previousUsedKeys = new Set(beforeCavityDepth.nestedConcepts.flatMap(c => [
+  ...Object.values(c.sections), ...Object.values(c.imaging ?? {}), c.quiz,
+]).flatMap(section => section.references).filter(key => !['renalReuseLicense','nestedCTReuseLicense'].includes(key)));
+same(previousUsedKeys.size, 107, 'Frozen pre-cavity reference coverage retained');
 same(
-  new Set(Object.values(api.nestedTeachingReferences).map((ref) => ref.url))
+  new Set(Object.values(beforeCavityDepth.nestedTeachingReferences).map((ref) => ref.url))
     .size,
   108,
   'Do not split one source into duplicate reference keys',
 );
+same(new Set(Object.values(api.nestedTeachingReferences).map(ref => ref.url)).size, 116,
+  'New references have eight distinct URLs, not duplicate keys to evade source budgets');
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
   const missing = copy(concept);
   delete missing.imaging;

@@ -83,6 +83,7 @@ const uiModule = { exports: {} },
   uiEnv = {
     module: uiModule,
     exports: uiModule.exports,
+    structuredClone,
     console,
     URLSearchParams,
     window: { innerWidth: 1280, innerHeight: 720 },

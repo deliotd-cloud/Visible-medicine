@@ -3,9 +3,12 @@ import {execFileSync} from 'node:child_process';
 import {readFileSync} from 'node:fs';
 import {build} from './workspace-test-build.mjs';
 const baseline='33566ee21aa65ed1a370a5e7653337048656a13e';
+// This exact historical modality-completion epoch remains frozen. Additive
+// calf-depth has its own current-source/67-lesson transition and review tests.
+const milestone='4b0c1958e67d99a8d0a0b5da3ef98f23ac1d43b5';
 const oldFile=path=>execFileSync('git',['show',baseline+':'+path],{maxBuffer:32e6});
 const prior=JSON.parse(oldFile('content/um-limb-teaching-bindings.v1.json'));
-const built=await build({stdin:{contents:"export * from './lib/um-limb-teaching'; export {limbDefinitions} from './lib/um-limb-studies'; export {specimenClinicalLessons,specimenClinicalReferences} from './content/um-limb-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const built=await build({stdin:{contents:"export * from './lib/um-limb-teaching'; export {limbDefinitions} from './lib/um-limb-studies'; export {specimenClinicalLessons,specimenClinicalReferences} from './content/um-limb-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:[{name:'frozen-um-modality-bindings',setup(builder){builder.onLoad({filter:/[\\/]content[\\/]um-limb-teaching-bindings\.v1\.json$/},()=>({contents:execFileSync('git',['show',milestone+':content/um-limb-teaching-bindings.v1.json'],{encoding:'utf8',maxBuffer:32e6}),loader:'json',resolveDir:process.cwd()+'/content'}));}}]});
 const api=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
 const oldReferencesBuild=await build({stdin:{contents:"export {specimenClinicalReferences} from './content/um-limb-clinical';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:[{name:'original-um-references',setup(builder){builder.onLoad({filter:/[\\/]content[\\/]um-limb-clinical\.ts$/},()=>({contents:oldFile('content/um-limb-clinical.ts').toString(),loader:'ts',resolveDir:process.cwd()+'/content'}));}}]});
 const oldReferences=await import('data:text/javascript;base64,'+Buffer.from(oldReferencesBuild.outputFiles[0].text).toString('base64'));

@@ -1,5 +1,11 @@
 # Abdominal connective-tissue imaging drafts
 
+2 October extension: [thoracoabdominal orientation](THORACOABDOMINAL_ORIENTATION.md)
+adds linea-alba MRI and separately source-bound mesoappendix CT/MRI orientation.
+These drafts do not establish mesoappendix visibility/boundaries, signal, patient
+measurements, registration or approval. The pending statements below describe
+this original milestone; current coverage is generated in CURRENT_STATUS.md.
+
 Four original topic texts extend three existing source selections through the
 current Imaging tabs; no extra navigation, geometry or permanent controls.
 

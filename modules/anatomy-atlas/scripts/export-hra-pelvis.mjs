@@ -12,7 +12,7 @@ import {
 } from './hra-pelvis-source.mjs';
 const sourceDirectory =
   process.argv.find((a) => a.startsWith('--source='))?.slice(9) ??
-  'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+  'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const retained = 'content/sources/hra-pelvis',
   out = 'public/models/hra-pelvis';
 const check = process.argv.includes('--check'),

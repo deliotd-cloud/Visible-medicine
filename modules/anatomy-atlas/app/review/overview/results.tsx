@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { ClinicalReviewEntry } from '@/lib/clinical-review-index';
-import { clinicalStatusLabels, parseClinicalStatusPage, type ClinicalStatusItem } from '@/lib/clinical-review-status';
+import { clinicalPageAttention, clinicalStatusLabels, parseClinicalStatusPage, type ClinicalStatusItem } from '@/lib/clinical-review-status';
 
 export function ClinicalReviewResults({ entries, query }: { entries: ClinicalReviewEntry[]; query: string }) {
   const [attempt, setAttempt] = useState(0);
@@ -41,6 +41,25 @@ export function ClinicalReviewResults({ entries, query }: { entries: ClinicalRev
         setAttempt(value => value + 1);
       }} disabled={snapshot.loading}>Refresh status</button>
     </div>
+    {!snapshot.loading && snapshot.items.length === entries.length && entries.length > 0 &&
+      <section className="clinical-review-attention" aria-label="Review attention on this page">
+        <p><strong>Needing review on this page</strong> · {entries.length} selections. Re-review and corrections come first.</p>
+        <div className="clinical-review-attention-tracks">
+          {(['geometry', 'teaching'] as const).map(track => {
+            const attention = clinicalPageAttention(snapshot.items, track);
+            const next = attention.next;
+            const entry = next && entries.find(item => item.key === next.key);
+            return <div key={track}>
+              <strong>{track === 'geometry' ? 'Anatomy' : 'Teaching'} · {attention.count} needing review</strong>
+              {entry && next ? <Link href={entry.href} prefetch={false}>
+                Next {track === 'geometry' ? 'Anatomy' : 'Teaching'} selection: {entry.name}<small>{clinicalStatusLabels[next.status]}</small>
+              </Link> : <span>No known items needing review on this page.</span>}
+              {attention.unavailable > 0 && <small>{attention.unavailable} status{attention.unavailable === 1 ? '' : 'es'} unavailable — not counted as reviewed or unreviewed.</small>}
+            </div>;
+          })}
+        </div>
+        <small>Open the selection, then choose Anatomy or Teaching. Recorded approvals are not publication approval.</small>
+      </section>}
     <ul className="clinical-review-results">
       {entries.map((entry, index) => {
         const saved = snapshot.items[index];

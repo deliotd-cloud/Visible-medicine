@@ -1,0 +1,26 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {relative,dirname} from 'node:path';
+import {build} from './workspace-test-build.mjs';
+const baseline='c78e383a37976e2e459fd41504eac6281241af1d',root=process.cwd();
+const old=p=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',maxBuffer:32e6,windowsHide:true});
+const compiled=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog';export {bodyLesson} from './app/body-content';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';",resolveDir:root,loader:'ts'},bundle:true,write:false,format:'esm',platform:'node',plugins:[{name:'before-cranial-bone-xray',setup(api){api.onLoad({filter:/body-content\.ts$/,namespace:'workspace-test'},args=>relative(root,args.path).replaceAll('\\','/')==='app/body-content.ts'?{contents:old('app/body-content.ts'),loader:'ts',resolveDir:dirname(args.path)}:undefined);}}]});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const catalog=api.bodyDisplayCatalog(JSON.parse(old('public/models/bodyparts3d/full-body/catalog.json')));
+const specifications=[['frontal','FMA52734','midline','bone',['FJ3200']],['parietal','FMA52788','right','bone',['FJ3380']],['parietal','FMA52789','left','bone',['FJ3274']],['temporal','FMA52738','right','bone',['FJ3386']],['temporal','FMA52739','left','bone',['FJ3281']],['occipital','FMA52735','midline','bone',['FJ3309']],['sphenoid','FMA52736','midline','bone',['FJ3394']],['ethmoid','FMA52740','midline','bone',['FJ3199']]];
+const entries=specifications.map(([family,fma,laterality,category,files])=>{
+ const rows=catalog.structures.filter(s=>s.fmaId===fma);assert.equal(rows.length,1,family);
+ const identity=rows[0];assert.equal(identity.region,'head-neck');assert.equal(identity.category,category);assert.equal(identity.laterality,laterality);assert.deepEqual(identity.sources.map(s=>s.file),files);
+ const previous=api.bodyLesson(identity,'xray');assert.equal(previous.readiness,'pending');
+ return{family,identity,previous};
+});
+assert.equal(catalog.structures.length,1104);
+const snapshot={catalog,body:catalog.structures.map(s=>({id:s.id,topics:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles};
+const sha=b=>createHash('sha256').update(b).digest('hex'),bundles=catalog.bundles.filter(b=>entries.some(e=>e.identity.bundle===b.id));
+for(const b of bundles)assert.equal(sha(readFileSync('public'+b.url.split('?')[0])),b.sha256);
+const report={baseline,sourceVersion:catalog.sourceVersion,license:catalog.license,coordinateSystem:catalog.coordinateSystem,bundles,beforeAllTeachingSnapshotHash:sha(JSON.stringify(snapshot)),entries};
+const text=JSON.stringify(report,null,2)+'\n',path='content/cranial-bone-xray-pins.json';
+if(process.argv.includes('--check'))assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),text);else writeFileSync(path,text,{flag:'wx'});
+console.log(JSON.stringify({sources:entries.length,snapshotHash:report.beforeAllTeachingSnapshotHash}));

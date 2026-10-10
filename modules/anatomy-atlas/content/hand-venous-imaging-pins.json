@@ -1,0 +1,1093 @@
+{
+  "parentCommit": "dcd1e1cfe4036c2af309c5a1a451adf659e62417",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-vessels-hand-venous",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "bytes": 577748,
+      "sha256": "3fd81ec284853b9e7eae84b3a4282ba0e5713160f07b1b5d6d8a70f8bb7d502e",
+      "structures": 14
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "96614d9c263e0cfdd3a3f2920a4ce2a73da558e98ab38c7063c41c2dcf4f061d",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-venous-arch",
+        "fmaId": "FMA22912",
+        "name": "Right deep palmar venous arch",
+        "sourceName": "right deep palmar venous arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA22912",
+        "bounds": {
+          "min": [
+            -2.848299980163574,
+            -0.2911401391029358,
+            0.7091000080108643
+          ],
+          "max": [
+            -2.358410120010376,
+            0.19278991222381592,
+            0.888450026512146
+          ]
+        },
+        "center": [
+          -2.603355050086975,
+          -0.049175113439559937,
+          0.7987750172615051
+        ],
+        "anchor": [
+          -2.4381399154663086,
+          -0.030170287936925888,
+          0.839389979839325
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2281",
+            "sha256": "095afd7aefd27582b3d2c7607517ad34aee651a6106c324e619c1837d7a758a2"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmar-venous-arch-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-venous-arch",
+        "fmaId": "FMA22913",
+        "name": "Left deep palmar venous arch",
+        "sourceName": "left deep palmar venous arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA22913",
+        "bounds": {
+          "min": [
+            2.358690023422241,
+            -0.2910998463630676,
+            0.7090499997138977
+          ],
+          "max": [
+            2.8482000827789307,
+            0.19268006086349487,
+            0.8885299563407898
+          ]
+        },
+        "center": [
+          2.603445053100586,
+          -0.04920989274978638,
+          0.7987899780273438
+        ],
+        "anchor": [
+          2.437920093536377,
+          -0.022819824516773224,
+          0.8365899920463562
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2229",
+            "sha256": "0ae442d1910c307e8920b7575389171f1d711fc6c003ac82569f3ad684bde2bf"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmar-venous-arch-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-venous-arch",
+        "fmaId": "FMA22915",
+        "name": "Right superficial palmar venous arch",
+        "sourceName": "right superficial palmar venous arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA22915",
+        "bounds": {
+          "min": [
+            -2.692189931869507,
+            -0.46007996797561646,
+            0.7401000261306763
+          ],
+          "max": [
+            -2.387320041656494,
+            0.20763976871967316,
+            0.8727699518203735
+          ]
+        },
+        "center": [
+          -2.5397549867630005,
+          -0.12622009962797165,
+          0.8064349889755249
+        ],
+        "anchor": [
+          -2.5510001182556152,
+          -0.13127990067005157,
+          0.8068499565124512
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2301",
+            "sha256": "716edc2ea5cb5afd7fce5cb66753b8f235e50e5f4667aefe64e06b04953b997d"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmar-venous-arch-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-venous-arch",
+        "fmaId": "FMA22916",
+        "name": "Left superficial palmar venous arch",
+        "sourceName": "left superficial palmar venous arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA22916",
+        "bounds": {
+          "min": [
+            2.3872599601745605,
+            -0.4600500464439392,
+            0.7400499582290649
+          ],
+          "max": [
+            2.6920599937438965,
+            0.20791015028953552,
+            0.8728399872779846
+          ]
+        },
+        "center": [
+          2.5396599769592285,
+          -0.12606994807720184,
+          0.8064449727535248
+        ],
+        "anchor": [
+          2.543139934539795,
+          -0.12244018912315369,
+          0.806670069694519
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2249",
+            "sha256": "7ffbee0f5681da09c4ca670aadcb33110b0d06a5bd2baa5c7a357438b92381f8"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmar-venous-arch-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+        "fmaId": "FMA62506",
+        "name": "Dorsal venous network of right hand",
+        "sourceName": "dorsal venous network of right hand",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA62506",
+        "bounds": {
+          "min": [
+            -2.8991599082946777,
+            -0.783140242099762,
+            0.6212100386619568
+          ],
+          "max": [
+            -2.2986299991607666,
+            -0.08481018245220184,
+            0.8272700309753418
+          ]
+        },
+        "center": [
+          -2.598894953727722,
+          -0.4339752122759819,
+          0.7242400348186493
+        ],
+        "anchor": [
+          -2.779679775238037,
+          -0.4008801281452179,
+          0.7057299613952637
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2280",
+            "sha256": "58c25d369779e6a50757cd89d1deefb7da82d5790e1242cea4b9b7e3d5e77759"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsal-hand-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+        "fmaId": "FMA62507",
+        "name": "Dorsal venous network of left hand",
+        "sourceName": "dorsal venous network of left hand",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA62507",
+        "bounds": {
+          "min": [
+            2.2985401153564453,
+            -0.7830902338027954,
+            0.6212199926376343
+          ],
+          "max": [
+            2.899129867553711,
+            -0.08487976342439651,
+            0.8272799849510193
+          ]
+        },
+        "center": [
+          2.598834991455078,
+          -0.43398499861359596,
+          0.7242499887943268
+        ],
+        "anchor": [
+          2.779670000076294,
+          -0.402130126953125,
+          0.7050299644470215
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2228",
+            "sha256": "f7ae1f851f00eb4378438f6de6a4bb9e109a9e2086a4475b9779cbe808e71d3e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsal-hand-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-vein",
+        "fmaId": "FMA22920",
+        "name": "Right palmar metacarpal vein",
+        "sourceName": "right palmar metacarpal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA22920",
+        "bounds": {
+          "min": [
+            -3.2434298992156982,
+            -0.8076300024986267,
+            0.7400499582290649
+          ],
+          "max": [
+            -2.6516101360321045,
+            0.20786987245082855,
+            1.2598899602890015
+          ]
+        },
+        "center": [
+          -2.9475200176239014,
+          -0.2998800650238991,
+          0.9999699592590332
+        ],
+        "anchor": [
+          -2.9439098834991455,
+          -0.34104979038238525,
+          0.9043099880218506
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2290",
+            "sha256": "fb4202503861d0fa42010ef239882ae6f4b39766bc1e638f73c43222c168335d"
+          },
+          {
+            "file": "FJ2350",
+            "sha256": "dc00c90a13ef5e2efbc3163f9ba540bd85a877fff33f0ae168979711a7cde95c"
+          },
+          {
+            "file": "FJ2353",
+            "sha256": "0aa3af52d7539644efc4c51dea47a94e35ad45ba681760e474e1507b0d1cf813"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmar-metacarpal-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-vein",
+        "fmaId": "FMA22921",
+        "name": "Left palmar metacarpal vein",
+        "sourceName": "left palmar metacarpal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA22921",
+        "bounds": {
+          "min": [
+            2.6516599655151367,
+            -0.8076397776603699,
+            0.7400800585746765
+          ],
+          "max": [
+            3.243420124053955,
+            0.20796020328998566,
+            1.2598299980163574
+          ]
+        },
+        "center": [
+          2.947540044784546,
+          -0.2998397871851921,
+          0.999955028295517
+        ],
+        "anchor": [
+          2.9466500282287598,
+          -0.3469897508621216,
+          0.9073699712753296
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2238",
+            "sha256": "bdd11265f9ac62fa8076e921d2bf4bb4f9c034c4ce3326fe061b5315f4e2c39d"
+          },
+          {
+            "file": "FJ2320",
+            "sha256": "6fe8ff895fb5163b390317fbaf198085f8cc370629cef19f317d71da50c2a8e5"
+          },
+          {
+            "file": "FJ2323",
+            "sha256": "cb480f81ed560804e2bd082c93fc26c15853611965e0cbaf8064dd773b20b41b"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmar-metacarpal-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-index-finger",
+        "fmaId": "FMA85096",
+        "name": "Proper palmar digital vein of right index finger",
+        "sourceName": "proper palmar digital vein of right index finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA85096",
+        "bounds": {
+          "min": [
+            -3.1220498085021973,
+            -1.364609956741333,
+            0.8653500080108643
+          ],
+          "max": [
+            -2.7496399879455566,
+            -0.7584198117256165,
+            1.3574800491333008
+          ]
+        },
+        "center": [
+          -2.935844898223877,
+          -1.0615148842334747,
+          1.1114150285720825
+        ],
+        "anchor": [
+          -2.933799982070923,
+          -1.1325597763061523,
+          1.0456199645996094
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2354",
+            "sha256": "2af746f5f7344e98abdc726776960ea2c2d8fa5feebc87493274e8e113cd222f"
+          },
+          {
+            "file": "FJ2355",
+            "sha256": "6d41a6ede55df6a1592c48529b47a7a920d00da9006384513a7e6dc4f32fc913"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-index-finger",
+        "fmaId": "FMA85097",
+        "name": "Proper palmar digital vein of left index finger",
+        "sourceName": "proper palmar digital vein of left index finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA85097",
+        "bounds": {
+          "min": [
+            2.749619960784912,
+            -1.3644397258758545,
+            0.866089940071106
+          ],
+          "max": [
+            3.122080087661743,
+            -0.7582299709320068,
+            1.3574299812316895
+          ]
+        },
+        "center": [
+          2.9358500242233276,
+          -1.0613348484039307,
+          1.1117599606513977
+        ],
+        "anchor": [
+          2.93710994720459,
+          -1.1341699361801147,
+          1.0482499599456787
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2324",
+            "sha256": "41342ffcdbca59a47bfa320156f2565ddea623286e4fdf0cf3f60bb3184a9ef9"
+          },
+          {
+            "file": "FJ2325",
+            "sha256": "b60816a4454c6ab99dd7a2dba84347c6c5d8345c55ee37df9c34a43aae11f508"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-middle-finger",
+        "fmaId": "FMA85098",
+        "name": "Proper palmar digital vein of right middle finger",
+        "sourceName": "proper palmar digital vein of right middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA85098",
+        "bounds": {
+          "min": [
+            -2.8117599487304688,
+            -1.4505798816680908,
+            0.8955600261688232
+          ],
+          "max": [
+            -2.5664000511169434,
+            -0.758740246295929,
+            1.4366799592971802
+          ]
+        },
+        "center": [
+          -2.689079999923706,
+          -1.1046600639820099,
+          1.1661199927330017
+        ],
+        "anchor": [
+          -2.6584601402282715,
+          -1.1419299840927124,
+          1.1038498878479004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2356",
+            "sha256": "f4058820587777355451073cd426639aab72622d4d5d3e288d625274d1c1e851"
+          },
+          {
+            "file": "FJ2357",
+            "sha256": "5fa58ff7b4f361d5a8b73267a51e47bc134be147303c5947c53f331361c86455"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-middle-finger",
+        "fmaId": "FMA85099",
+        "name": "Proper palmar digital vein of left middle finger",
+        "sourceName": "proper palmar digital vein of left middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA85099",
+        "bounds": {
+          "min": [
+            2.566610097885132,
+            -1.4507098197937012,
+            0.8955399990081787
+          ],
+          "max": [
+            2.8115499019622803,
+            -0.7587798833847046,
+            1.436560034751892
+          ]
+        },
+        "center": [
+          2.689079999923706,
+          -1.1047448515892029,
+          1.1660500168800354
+        ],
+        "anchor": [
+          2.663250207901001,
+          -1.1528400182724,
+          1.110529899597168
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2326",
+            "sha256": "6e39c6224a448138e565984a85da39cb4a4ed99229e5c50dad86764d5fa6b05f"
+          },
+          {
+            "file": "FJ2340",
+            "sha256": "e5750ba976e298e85152c0819366e2f56c3b9117f1c8fab7bad641048ec9d9b8"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:proper-palmar-digital-vein-of-right-ring-finger",
+        "fmaId": "FMA85100",
+        "name": "Proper palmar digital vein of right ring finger",
+        "sourceName": "proper palmar digital vein of right ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA85100",
+        "bounds": {
+          "min": [
+            -2.580780029296875,
+            -1.3335700035095215,
+            0.8955299258232117
+          ],
+          "max": [
+            -2.3785898685455322,
+            -0.7188299298286438,
+            1.3957699537277222
+          ]
+        },
+        "center": [
+          -2.4796849489212036,
+          -1.0261999666690826,
+          1.145649939775467
+        ],
+        "anchor": [
+          -2.4309699535369873,
+          -1.0645098686218262,
+          1.0910899639129639
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2358",
+            "sha256": "1e531628f417d3ee7c30403a581b98afaa530e0c7cd2f86402079e02869aa674"
+          },
+          {
+            "file": "FJ2359",
+            "sha256": "b78fd325bc001dcb35c039c966c23a00630266eee7bfc7cdb981add13a7b7c50"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:proper-palmar-digital-vein-of-left-ring-finger",
+        "fmaId": "FMA85101",
+        "name": "Proper palmar digital vein of left ring finger",
+        "sourceName": "proper palmar digital vein of left ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA85101",
+        "bounds": {
+          "min": [
+            2.378499984741211,
+            -1.3339000940322876,
+            0.8955499529838562
+          ],
+          "max": [
+            2.580929756164551,
+            -0.718859851360321,
+            1.3955999612808228
+          ]
+        },
+        "center": [
+          2.479714870452881,
+          -1.0263799726963043,
+          1.1455749571323395
+        ],
+        "anchor": [
+          2.428689956665039,
+          -1.0590100288391113,
+          1.093630075454712
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2327",
+            "sha256": "fa915287ef71a84cfdad961bdac45e047e35dd2820cdb4d353883a074c45b0f0"
+          },
+          {
+            "file": "FJ2328",
+            "sha256": "38ff5672c808b27e2e5882d2d22d30d17fe7fadf9faa2590e05e20219b5a5808"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital-venous-detail",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1119 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "591550a37e707d9920aa3265dc604bf79b9d68a5",
+  "scope": "Existing eleven source-bound thoracic-disc MRI drafts only; not clinical approval or geometry change",
+  "originalPinsJsonSha256": "a455b8ec9be49820f02c728c49cabbcebc6eb4504c64d1ce2d7766cfc844e7a6",
+  "originalBeforeJsonSha256": "4efe17d830f8442d48bba78cfe9cb690f4f3fa08a4ebc9adfabd0a8bd134803f",
+  "oldTopic": {
+    "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+    "bullets": [
+      "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+      "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection."
+    ],
+    "references": [
+      "mri",
+      "mrAnatomy"
+    ]
+  },
+  "newTopic": {
+    "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+    "bullets": [
+      "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+      "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+      "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied."
+    ],
+    "references": [
+      "mri",
+      "mrAnatomy",
+      "thoracicMriCoverage"
+    ]
+  },
+  "oldTopicsSha256": "21ca371a9c7366bcb7d2c0f2a2154c36e5211b1f1437a4f0ae29bdbfd9e06987",
+  "newTopicsSha256": "6341ae3712b01914b1e4bc8f3799978e70bb2a67ff8e321e206704ba1f8bf562",
+  "oldReferencesSha256": "13deb3813ed048d9cccb8b4448f39cead68c4df9afc44c24e4f79eaa3c3603e3",
+  "newReferencesSha256": "9bc53ae7756476fc50bef278698a4d21b333e35b284b1fa7fd2e3ae0bcd36c16",
+  "addedReference": {
+    "key": "thoracicMriCoverage",
+    "url": "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+  },
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-first-thoracic-vertebra",
+        "fmaId": "FMA10458",
+        "name": "Intervertebral disk of first thoracic vertebra",
+        "sourceName": "intervertebral disk of first thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA10458",
+        "bounds": {
+          "min": [
+            -0.1706399917602539,
+            5.419000148773193,
+            0.1390869915485382
+          ],
+          "max": [
+            0.15535800158977509,
+            5.547500133514404,
+            0.33781898021698
+          ]
+        },
+        "center": [
+          -0.00764099508523941,
+          5.483250141143799,
+          0.2384529858827591
+        ],
+        "anchor": [
+          -0.007474320009350777,
+          5.463499546051025,
+          0.23867301642894745
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3222",
+            "sha256": "b7387340fcd82362f86af387a7fe21a9a2e9ab9f4549ec539fc519112b4296d5"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of first thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of first thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "d44e05a1ae494f0aee81ed1ee7962a8b49a0c439353c011d99aad88023064d65",
+      "newSha256": "bfe09e56097035f0c0bd96a76f2e5dd84e554d30a736a39b50125b7b6f1b5f10"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-second-thoracic-vertebra",
+        "fmaId": "FMA13495",
+        "name": "Intervertebral disk of second thoracic vertebra",
+        "sourceName": "intervertebral disk of second thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13495",
+        "bounds": {
+          "min": [
+            -0.16608400642871857,
+            5.207399845123291,
+            0.05354400724172592
+          ],
+          "max": [
+            0.15304699540138245,
+            5.356199741363525,
+            0.28266197443008423
+          ]
+        },
+        "center": [
+          -0.00651850551366806,
+          5.281799793243408,
+          0.16810299083590508
+        ],
+        "anchor": [
+          -0.011264699511229992,
+          5.320699691772461,
+          0.1755940318107605
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3223",
+            "sha256": "108dd5e9e772425ec890afc92d633de4c345c6ff3ad7cb4e31c744b407742777"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of second thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of second thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "b5c997c1f6e7b8925aeb60b0f601deca84044609d085c8f19fe30b57c39718b8",
+      "newSha256": "77dcef1f1b2c192e9e11f4ed0926dd769c8fb7f8ad884c78acbcbc7e6b0628e4"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-thoracic-vertebra",
+        "fmaId": "FMA13500",
+        "name": "Intervertebral disk of third thoracic vertebra",
+        "sourceName": "intervertebral disk of third thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13500",
+        "bounds": {
+          "min": [
+            -0.1554419994354248,
+            4.997299671173096,
+            -0.043102990835905075
+          ],
+          "max": [
+            0.1420619934797287,
+            5.144000053405762,
+            0.21583396196365356
+          ]
+        },
+        "center": [
+          -0.006690002977848053,
+          5.070649862289429,
+          0.08636548556387424
+        ],
+        "anchor": [
+          -0.005978099536150694,
+          5.04189920425415,
+          0.06791000068187714
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3224",
+            "sha256": "99e4ff2970050012f88b9a70e5bb9f3cd647bd3091a53238aa1619a65d591ed5"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of third thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of third thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "2dc2f3f4b652155b06586b780f9e46d3c9071dd744e9610df6dfa137968141a5",
+      "newSha256": "03f5ef071500556f09f3a26fdfb06db30569b3e8bad3c67dd8c7f34ffbedebfe"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-thoracic-vertebra",
+        "fmaId": "FMA13501",
+        "name": "Intervertebral disk of fourth thoracic vertebra",
+        "sourceName": "intervertebral disk of fourth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13501",
+        "bounds": {
+          "min": [
+            -0.15493899583816528,
+            4.780300140380859,
+            -0.1231670007109642
+          ],
+          "max": [
+            0.14234700798988342,
+            4.913299560546875,
+            0.16735900938510895
+          ]
+        },
+        "center": [
+          -0.00629599392414093,
+          4.846799850463867,
+          0.022096004337072372
+        ],
+        "anchor": [
+          -0.009149219840765,
+          4.875799655914307,
+          0.019243011251091957
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3203",
+            "sha256": "3c1e8acf2db66d447c91e29e1df800cc9eed605fc7adcc7b70d2aeb585f24287"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fourth thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fourth thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "2e97a1a66d607ae81eb1cfa57545c0bc21f74ae527611e2e53ad05c1ae406d91",
+      "newSha256": "a7969883a2db078910d4dbe4dc06df490be0fbf54c04509c61eac0b480fe9e15"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-thoracic-vertebra",
+        "fmaId": "FMA13502",
+        "name": "Intervertebral disk of fifth thoracic vertebra",
+        "sourceName": "intervertebral disk of fifth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13502",
+        "bounds": {
+          "min": [
+            -0.15923400223255157,
+            4.545000076293945,
+            -0.1644349992275238
+          ],
+          "max": [
+            0.14632199704647064,
+            4.650000095367432,
+            0.15302497148513794
+          ]
+        },
+        "center": [
+          -0.006456002593040466,
+          4.5975000858306885,
+          -0.005705013871192932
+        ],
+        "anchor": [
+          -0.004380839876830578,
+          4.567800521850586,
+          -0.0011119842529296875
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3204",
+            "sha256": "70238a6e88e8bf340459cc030536bd591ea8eb55b60694e526b39b0a5ff141d0"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fifth thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fifth thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "a42585f0a1ebaf5eea6010264b4cbb0c31e8b5429b78ad12036e59d1c0460cc4",
+      "newSha256": "dd4d7882286308d164e3ee9ec5c08a4602336abbfa4e889082af4079f2636f5c"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-thoracic-vertebra",
+        "fmaId": "FMA13503",
+        "name": "Intervertebral disk of sixth thoracic vertebra",
+        "sourceName": "intervertebral disk of sixth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13503",
+        "bounds": {
+          "min": [
+            -0.17654100060462952,
+            4.270899772644043,
+            -0.19393499195575714
+          ],
+          "max": [
+            0.16352199018001556,
+            4.391400337219238,
+            0.1619889885187149
+          ]
+        },
+        "center": [
+          -0.006509505212306976,
+          4.331150054931641,
+          -0.015973001718521118
+        ],
+        "anchor": [
+          -0.011805299669504166,
+          4.364100456237793,
+          -0.00856700912117958
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3205",
+            "sha256": "678096eb026ccb41a9d9c9feb36336859543aba2e2b4130d2852d69da5a56bb0"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of sixth thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of sixth thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "2b5e081db5150d8890cdfc42360d91e3988128bbc5990806ab2a1fb30ef4282c",
+      "newSha256": "797dc253776f3169d5d17ff5bb65e5b8c4559282f2903d000e4618a2c2aaaf20"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-thoracic-vertebra",
+        "fmaId": "FMA13504",
+        "name": "Intervertebral disk of seventh thoracic vertebra",
+        "sourceName": "intervertebral disk of seventh thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13504",
+        "bounds": {
+          "min": [
+            -0.17618998885154724,
+            4.009499549865723,
+            -0.1715650111436844
+          ],
+          "max": [
+            0.16288700699806213,
+            4.131800651550293,
+            0.19492599368095398
+          ]
+        },
+        "center": [
+          -0.006651490926742554,
+          4.070650100708008,
+          0.011680491268634796
+        ],
+        "anchor": [
+          -0.006233209744095802,
+          4.031099796295166,
+          0.0002700042678043246
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3206",
+            "sha256": "ea58f9563a87ea209a665232bef9924be84b89c5614ddcc0bc2bb51dfaea6068"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of seventh thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of seventh thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "b5301d89478d3f3e9b206ec40ea95e694b2726c1eeca4510faca93b4e38531ee",
+      "newSha256": "5c6e997a7374c2a0b147398d143f886c5240a3b1886c387c6b3ab6d230c565da"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eighth-thoracic-vertebra",
+        "fmaId": "FMA13505",
+        "name": "Intervertebral disk of eighth thoracic vertebra",
+        "sourceName": "intervertebral disk of eighth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13505",
+        "bounds": {
+          "min": [
+            -0.18475200235843658,
+            3.747199773788452,
+            -0.11617698520421982
+          ],
+          "max": [
+            0.17160700261592865,
+            3.893699884414673,
+            0.24182502925395966
+          ]
+        },
+        "center": [
+          -0.006572499871253967,
+          3.8204498291015625,
+          0.06282402202486992
+        ],
+        "anchor": [
+          -0.008365740068256855,
+          3.835400342941284,
+          0.03666599094867706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3207",
+            "sha256": "7df1bee7ad9edd0e0405b052c62a16472f9f954c45203eb5a5f75fd311841a1b"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of eighth thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of eighth thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "444bd709f2ea454849af21d9dc590b3b3686039ebc54abf89128237f241085ae",
+      "newSha256": "36a5e94484f0d5ed6fcee63a6d4c090ede241aad937d2cc7834becd5a25caeb5"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-ninth-thoracic-vertebra",
+        "fmaId": "FMA13506",
+        "name": "Intervertebral disk of ninth thoracic vertebra",
+        "sourceName": "intervertebral disk of ninth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13506",
+        "bounds": {
+          "min": [
+            -0.19579099118709564,
+            3.471099853515625,
+            -0.06414798647165298
+          ],
+          "max": [
+            0.1826220005750656,
+            3.6254003047943115,
+            0.2963169813156128
+          ]
+        },
+        "center": [
+          -0.006584495306015015,
+          3.5482500791549683,
+          0.1160844974219799
+        ],
+        "anchor": [
+          -0.017035100609064102,
+          3.5726001262664795,
+          0.11290401220321655
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3208",
+            "sha256": "0e56e370d55f029013aab8d837822c21c5ab1bdbbb98109a740d669eb15ee075"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of ninth thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of ninth thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "6509d3758be44653db0efbaeb90e55f5e68599e8c5ca566a7c1613aa3eb846f1",
+      "newSha256": "640065c179afde1d7489ca46851fb67fdaeaa84d588f11e587af4a3925baa723"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-tenth-thoracic-vertebra",
+        "fmaId": "FMA13507",
+        "name": "Intervertebral disk of tenth thoracic vertebra",
+        "sourceName": "intervertebral disk of tenth thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13507",
+        "bounds": {
+          "min": [
+            -0.19966499507427216,
+            3.1991002559661865,
+            -0.003185005160048604
+          ],
+          "max": [
+            0.18669599294662476,
+            3.353100538253784,
+            0.37794196605682373
+          ]
+        },
+        "center": [
+          -0.0064845010638237,
+          3.2761003971099854,
+          0.18737848044838756
+        ],
+        "anchor": [
+          -0.008348490111529827,
+          3.257700204849243,
+          0.18977096676826477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3209",
+            "sha256": "84ebc4e0ab44c57246f189d0ccf5fe212d1f4ec9f64eb8f8c5a7143adba4b5b8"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of tenth thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of tenth thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "e06fc3fb0f127562a4f5fea659c50f24cc5c71d369349a034f22aa37e39b9e59",
+      "newSha256": "37912d7b06d5cce33c2735aa361b86ebb637681d31a22bd9c817baa24911460a"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-eleventh-thoracic-vertebra",
+        "fmaId": "FMA13508",
+        "name": "Intervertebral disk of eleventh thoracic vertebra",
+        "sourceName": "intervertebral disk of eleventh thoracic vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thorax"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13508",
+        "bounds": {
+          "min": [
+            -0.20772799849510193,
+            2.916099786758423,
+            0.06986900418996811
+          ],
+          "max": [
+            0.19428600370883942,
+            3.082399845123291,
+            0.47012197971343994
+          ]
+        },
+        "center": [
+          -0.006720997393131256,
+          2.999249815940857,
+          0.269995491951704
+        ],
+        "anchor": [
+          -0.003259439952671528,
+          2.9774999618530273,
+          0.2717849612236023
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3210",
+            "sha256": "8f2a670e4c8271c8ac6c1195cd324e1d5e69255b937e759c99c6ee90279bc21f"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of eleventh thoracic vertebra · MRI orientation · draft",
+        "body": "Trace a thoracic disc relative to the vertebral endplates and spinal canal. Evaluate its signal and any relation to neural structures on actual MR images.",
+        "bullets": [
+          "A bright or dark atlas material does not reproduce T1, T2 or fluid-sensitive disc appearance.",
+          "There are no separate annular tears, nucleus surfaces or validated thoracic nerve roots in this source selection.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of eleventh thoracic vertebra · MRI orientation · draft",
+        "body": "Use the rendered thoracic disc to orient yourself between its source-labelled neighbouring endplates, not as a patient-level marker or MR slice. On actual MRI, establish the level from the localizer and sagittal series using visible landmarks, and confirm that the level is within the acquired coverage.",
+        "bullets": [
+          "Follow the disc margin toward the canal on sagittal images, then correlate the same level on axial images. Assess the disc–canal–cord relationship and surrounding CSF space; check whether the foraminal regions are adequately shown.",
+          "Appearance depends on the sequence and image quality. An unacquired or poorly depicted structure is not established as normal; compare the actual images rather than the atlas material colour.",
+          "This exterior disc surface supplies no MR signal or verified internal disc layers, cord or thoracic nerve roots. It cannot establish compression, cord signal change or a patient’s exact level. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "9d30db14df914c9e0250e480e8aaf0a3dfefea3ed70729ac75719e1783bd83dd",
+      "newSha256": "a96da3e7cc998a6d67c69d1d0b1957e956c2230af855ac7ca8c520fb49116366"
+    }
+  ]
+}

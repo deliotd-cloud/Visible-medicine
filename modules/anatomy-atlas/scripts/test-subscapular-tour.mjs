@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from './workspace-test-build.mjs';
+import {build} from './hepatobiliary-tour-history.mjs';
 const parent='fa745fd955905b8ee75c6a471482aae42ec5b345';
 const compile=async contents=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
 const api=await compile(`export * from './lib/regional-tours';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`);
@@ -12,7 +12,7 @@ const scapula='vm:anatomy:upper-limb:shoulder:right:bone:scapula';
 assert.equal(tour.status,'draft');assert.equal(tour.region,'shoulder-arm');assert.equal(tour.revision,'right-subscapular-arterial-relationships-v1');
 assert.deepEqual(tour.steps.map(s=>s.selectedId),targets);assert.deepEqual(tour.contextIds,[scapula]);
 assert.deepEqual(tour.steps.map(s=>s.view),['anterior','right','posterior','right']);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id),prior.regionalTours,'All sixteen preceding tour definitions preserved');
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id&&t.id!==api.circleWillisTour.id),prior.regionalTours,'All sixteen preceding tour definitions preserved');
 assert.equal(api.regionalToursFor('shoulder-arm').length,2);assert.equal(api.regionalTourFor('shoulder-arm').id,api.upperArmTour.id,'Existing default stays unchanged');
 const selected=api.regionalTourStructures(api.catalog,tour);assert.equal(selected.length,5);
 assert.deepEqual(selected.filter(s=>targets.includes(s.id)).map(s=>s.fmaId),['FMA22655','FMA22678','FMA23180','FMA66321']);
@@ -26,7 +26,7 @@ for(const s of selected){
   {...api.catalog,structures:api.catalog.structures.map(x=>x.id===s.id?{...x,bundle:'head-neck-skeleton'}:x)},
  ])assert.throws(()=>api.regionalTourStructures(changed,tour));
  const current=api.regionalTourEvidence(api.catalog,s.id),old=prior.regionalTourEvidence(api.catalog,s.id);
- assert.deepEqual(current.filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id),old,'Prior per-structure evidence unchanged outside separately tested upper-limb addition');
+ assert.deepEqual(current.filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id&&e.tour.id!==api.circleWillisTour.id),old,'Prior per-structure evidence unchanged outside separately tested upper-limb addition');
  const added=current.find(e=>e.tour.id===tour.id);
  assert.deepEqual(added.structures,selected);assert.deepEqual(added.tour,tour);
  assert.equal(added.transitionMs,1800);assert.equal(added.separation,0);assert.equal(added.transition,'quintic-orbit');

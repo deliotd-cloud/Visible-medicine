@@ -10,7 +10,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const fixturePrefix = 'git-object-reader-test-';
 
 test('real Git objects retain original bytes with parallel reads, strict limits and explicit closure', { timeout: 30000 }, async () => {
-  const local = join(root, '.local');
+  const local = process.env.VM_ATLAS_TEST_TMP || join(root, '.local');
   await mkdir(local, { recursive: true });
   const fixture = await mkdtemp(join(local, fixturePrefix));
   const readers = [];

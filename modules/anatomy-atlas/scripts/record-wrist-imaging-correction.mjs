@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import {readFileSync, writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {build} from './workspace-test-build.mjs';
+const hash = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
+const pins = JSON.parse(readFileSync('content/wrist-imaging-correction-pins.json'));
+assert.equal(pins.baseline, '90191b8b236bfed00db7c424dbacde915920460d');
+const compiled = await build({stdin: {contents: "export {wristImagingLesson} from './lib/wrist-imaging';", resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false, format: 'esm', platform: 'node'});
+const api = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const record = {baseline: pins.baseline, sourcePinsHash: hash(pins), reason: 'Separate capitate and hamate CT/MRI/X-ray orientation and correct the common wrist relationship bullet. All source identities and models remain unchanged; no acquired imaging, registration or clinical approval.', entries: pins.entries.flatMap(({identity, previous}) => Object.keys(previous).map(tab => {
+  const lesson = api.wristImagingLesson(identity, tab);
+  assert.equal(lesson.readiness, 'draft'); assert.notDeepEqual(lesson, previous[tab]);
+  assert(!JSON.stringify(lesson).includes('relationswrists'));
+  return {id: identity.id, fmaId: identity.fmaId, tab, draftHash: hash(lesson)};
+}))};
+assert.equal(record.entries.length, 48);
+const file = 'content/wrist-imaging-correction.transition.json', output = JSON.stringify(record, null, 2) + '\n';
+if (process.argv.includes('--check')) assert.equal(readFileSync(file, 'utf8').replaceAll('\r\n', '\n'), output);
+else writeFileSync(file, output, {flag: 'wx'});
+console.log(JSON.stringify({topics: 48, transitionHash: hash(record)}));

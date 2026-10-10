@@ -1,0 +1,667 @@
+{
+  "schemaVersion": 1,
+  "parentCommit": "24e82d38d226eac294ffa5f3a922448f4904cec0",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+        "fmaId": "FMA14810",
+        "name": "Middle colic artery",
+        "sourceName": "middle colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14810",
+        "bounds": {
+          "min": [
+            -0.6839800477027893,
+            2.1338000297546387,
+            0.6944400072097778
+          ],
+          "max": [
+            0.6255369782447815,
+            2.6506993770599365,
+            1.2945899963378906
+          ]
+        },
+        "center": [
+          -0.029221534729003906,
+          2.3922497034072876,
+          0.9945150017738342
+        ],
+        "anchor": [
+          -0.14844399690628052,
+          2.249000310897827,
+          0.9807400703430176
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3542",
+            "sha256": "b77b34cda312ffba8034c41a5457a0ad052d28439efd228ef90724ec3c4adce4"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle-colic-artery",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-artery",
+        "fmaId": "FMA14811",
+        "name": "Right colic artery",
+        "sourceName": "right colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14811",
+        "bounds": {
+          "min": [
+            -0.6894599795341492,
+            1.8567700386047363,
+            0.6876000165939331
+          ],
+          "max": [
+            -0.05397089943289757,
+            2.3912999629974365,
+            0.996929943561554
+          ]
+        },
+        "center": [
+          -0.37171543948352337,
+          2.1240350008010864,
+          0.8422649800777435
+        ],
+        "anchor": [
+          -0.5011640191078186,
+          2.0259997844696045,
+          0.8319999575614929
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3590",
+            "sha256": "d4099403f391139ea5716f10f441489d1f8abaa7b39a0e21596efe5457bddbd0"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right-colic-artery",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+        "fmaId": "FMA14815",
+        "name": "Ileocolic artery",
+        "sourceName": "ileocolic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14815",
+        "bounds": {
+          "min": [
+            -0.3138050138950348,
+            1.5446600914001465,
+            0.7963600158691406
+          ],
+          "max": [
+            -0.054398197680711746,
+            1.8339098691940308,
+            0.9436999559402466
+          ]
+        },
+        "center": [
+          -0.18410160578787327,
+          1.6892849802970886,
+          0.8700299859046936
+        ],
+        "anchor": [
+          -0.1850760132074356,
+          1.7021899223327637,
+          0.8727099895477295
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3439",
+            "sha256": "a0e7715dace7a22773b5e976f415b6049fe84eeb8e91f01cb6a4582c31ced81a"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ileocolic-artery",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "fmaId": "FMA14818",
+        "name": "Appendicular artery",
+        "sourceName": "appendicular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14818",
+        "bounds": {
+          "min": [
+            -0.5570880174636841,
+            0.7271197438240051,
+            0.38387396931648254
+          ],
+          "max": [
+            -0.2348489910364151,
+            1.398610234260559,
+            0.7455199956893921
+          ]
+        },
+        "center": [
+          -0.3959685042500496,
+          1.062864989042282,
+          0.5646969825029373
+        ],
+        "anchor": [
+          -0.5143510103225708,
+          1.0382500886917114,
+          0.6276699900627136
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3410",
+            "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "appendicular-artery",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "fmaId": "FMA14820",
+        "name": "Ascending branch of inferior branch of ileocolic artery",
+        "sourceName": "ascending branch of inferior branch of ileocolic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14820",
+        "bounds": {
+          "min": [
+            -0.7209670543670654,
+            1.5661797523498535,
+            0.6525900363922119
+          ],
+          "max": [
+            -0.2584350109100342,
+            1.9032201766967773,
+            0.839259922504425
+          ]
+        },
+        "center": [
+          -0.4897010326385498,
+          1.7346999645233154,
+          0.7459249794483185
+        ],
+        "anchor": [
+          -0.4870989918708801,
+          1.5928802490234375,
+          0.758679986000061
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3414",
+            "sha256": "af7a27732bb6fc2b63ff7024ce36384f25ffae44952c7899a773aa1f7a2df84f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ileocolic-ascending-branch",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:marginal-colic-artery",
+        "fmaId": "FMA14824",
+        "name": "Marginal colic artery",
+        "sourceName": "marginal colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14824",
+        "bounds": {
+          "min": [
+            -0.702111005783081,
+            1.3085699081420898,
+            0.5149999856948853
+          ],
+          "max": [
+            0.6869470477104187,
+            2.6558997631073,
+            1.19923996925354
+          ]
+        },
+        "center": [
+          -0.007581979036331177,
+          1.9822348356246948,
+          0.8571199774742126
+        ],
+        "anchor": [
+          0.5225780010223389,
+          1.7889001369476318,
+          0.6671399474143982
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2025",
+            "sha256": "963b07fc664a9bfdeaab8c9d813a90b415aa6c97fe89c7db5713b5600a406400"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "marginal-colic-artery",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+        "fmaId": "FMA14826",
+        "name": "Left colic artery",
+        "sourceName": "left colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14826",
+        "bounds": {
+          "min": [
+            0.129721999168396,
+            1.7187902927398682,
+            0.766539990901947
+          ],
+          "max": [
+            0.3179999887943268,
+            1.790809988975525,
+            0.8679499626159668
+          ]
+        },
+        "center": [
+          0.2238609939813614,
+          1.7548001408576965,
+          0.8172449767589569
+        ],
+        "anchor": [
+          0.23304501175880432,
+          1.7509698867797852,
+          0.8227400183677673
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3494",
+            "sha256": "ee66dc3feb19c5b6c8500420c2e67a04f593045ddcdcfd24ac1faf1412a52bd1"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-colic-artery",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:ascending-branch-of-left-colic-artery",
+        "fmaId": "FMA14828",
+        "name": "Ascending branch of left colic artery",
+        "sourceName": "ascending branch of left colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14828",
+        "bounds": {
+          "min": [
+            0.3044770061969757,
+            1.7703900337219238,
+            0.5408799648284912
+          ],
+          "max": [
+            0.6261420249938965,
+            2.6643004417419434,
+            0.7884800434112549
+          ]
+        },
+        "center": [
+          0.4653095155954361,
+          2.2173452377319336,
+          0.664680004119873
+        ],
+        "anchor": [
+          0.5019680261611938,
+          2.2021002769470215,
+          0.6700499653816223
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3399",
+            "sha256": "a0d0d7017082c40cdae252f18e5274abb435b05b64c835eea05bd6c0306e3dd3"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-colic-ascending-branch",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:descending-branch-of-left-colic-artery",
+        "fmaId": "FMA14829",
+        "name": "Descending branch of left colic artery",
+        "sourceName": "descending branch of left colic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA14829",
+        "bounds": {
+          "min": [
+            0.2803120017051697,
+            1.4231500625610352,
+            0.6067000031471252
+          ],
+          "max": [
+            0.6521959900856018,
+            1.807639718055725,
+            0.798289954662323
+          ]
+        },
+        "center": [
+          0.46625399589538574,
+          1.6153948903083801,
+          0.7024949789047241
+        ],
+        "anchor": [
+          0.6062909960746765,
+          1.6624597311019897,
+          0.6194999814033508
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3428",
+            "sha256": "1428965636dc55745b205ce70dd0a630eb0b6cc89d753a5bb89d1a0fbd45ac33"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left-colic-descending-branch",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousCatalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllTopicsHash": "56b42e6f8499b58c87368e78d082d9a1e3ddd50d0e1d816bcc4d23e0c3992816"
+}

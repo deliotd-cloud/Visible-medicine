@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {build} from './workspace-test-build.mjs';
+const pins=JSON.parse(readFileSync('content/hyoid-epiglottis-ultrasound-pins.json'));
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+assert.equal(hash(pins),'ea6399502b197a1a7aec1646d0808d74b0e207dbf69134fb74371ac915a9443b');
+const compiled=await build({stdin:{contents:"export {hyoidEpiglottisUltrasoundLesson} from './lib/hyoid-epiglottis-ultrasound';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const record={baseline:pins.baseline,sourcePinsHash:hash(pins),reason:'Two exact-source hyoid/epiglottis ultrasound drafts; prior pending teaching reconstructs historical snapshots only.',entries:pins.entries.map(({identity})=>({id:identity.id,fmaId:identity.fmaId,draftHash:hash(api.hyoidEpiglottisUltrasoundLesson(identity,'ultrasound'))}))};
+const path='content/hyoid-epiglottis-ultrasound.transition.json',text=JSON.stringify(record,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),text);else writeFileSync(path,text,{flag:'wx'});
+console.log(JSON.stringify({entries:record.entries.length,transitionHash:hash(record)}));

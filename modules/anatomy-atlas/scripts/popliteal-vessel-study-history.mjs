@@ -2,9 +2,11 @@
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import record from '../content/popliteal-vessel-study.transition.json' with {type:'json'};
+import {preCoronaryArterialStudyProfiles} from './coronary-arterial-study-history.mjs';
 const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
 export const hasPoplitealVesselProfiles=profiles=>record.regions.some(region=>profiles[region].focuses.some(f=>f.id===record.id));
 export function prePoplitealVesselProfiles(profiles){
+ if(profiles.thorax.focuses.some(f=>f.id==='coronary-arterial-surfaces')||profiles['whole-body'].focuses.some(f=>f.id==='coronary-arterial-surfaces'))profiles=preCoronaryArterialStudyProfiles(profiles);
  assert.equal(hash(record),'92b4aa63f8f6ebe2ed538cff582fd0e16bcc45cd5e4372c16acdff323f5da3fc');
  if(hash(profiles)===record.beforeHash)return structuredClone(profiles);
  assert.equal(hash(profiles),record.afterHash,'Unrecorded popliteal vessel study edit');

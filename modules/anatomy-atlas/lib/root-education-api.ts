@@ -50,6 +50,7 @@ function installEducationApi(target:Window,key:string,scope:'body'|'shoulder-pil
   });
   Object.defineProperty(target,key,{value:api,configurable:true,enumerable:false,writable:false});
   return {
+    cancelPending(){if(!removed)active?.cancelPending();},
     pause(){if(!removed)active?.setEnabled(false);},
     dispose(){
       if(removed)return;removed=true;

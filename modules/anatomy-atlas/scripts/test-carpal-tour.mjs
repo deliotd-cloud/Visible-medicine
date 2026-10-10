@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from './workspace-test-build.mjs';
+import {build} from './hepatobiliary-tour-history.mjs';
 const baseline='e1aeae3';
 const compile=async contents=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
 const api=await compile(`export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-response';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`);
@@ -15,11 +15,11 @@ assert.deepEqual(tour.steps.map(s=>s.selectedId),ids);assert.deepEqual(tour.requ
 assert.deepEqual(tour.steps.map(s=>s.view),['posterior','posterior','posterior','anterior','anterior','posterior','posterior','anterior']);
 assert.equal(api.regionalToursFor('hand').length,2);assert.equal(api.regionalTourFor('hand').id,api.handTour.id);
 // Preserve the original carpal-admission snapshot; later renal addition is tested separately.
-const historicalTours=api.regionalTours.filter(t=>t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id);
+const historicalTours=api.regionalTours.filter(t=>t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id&&t.id!==api.circleWillisTour.id);
 assert.equal(historicalTours.length,19);assert.equal(historicalTours.reduce((n,t)=>n+t.steps.length,0),105);
 assert.equal(new Set(historicalTours.flatMap(t=>api.regionalTourStructures(api.catalog,t).map(s=>s.id))).size,130);
 assert.deepEqual(historicalTours.filter(t=>t.id!==tour.id),prior.regionalTours,'All eighteen preceding definitions are preserved');
-for(const structure of api.catalog.structures)assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id),prior.regionalTourEvidence(api.catalog,structure.id),'All preceding per-structure evidence is preserved');
+for(const structure of api.catalog.structures)assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(e=>e.tour.id!==tour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id&&e.tour.id!==api.circleWillisTour.id),prior.regionalTourEvidence(api.catalog,structure.id),'All preceding per-structure evidence is preserved');
 const selected=api.regionalTourStructures(api.catalog,tour);
 assert.deepEqual(selected.map(s=>s.id),ids);
 assert.deepEqual(selected.map(s=>s.fmaId),['FMA24435','FMA24437','FMA24439','FMA24441','FMA24443','FMA23725','FMA24446','FMA24448']);

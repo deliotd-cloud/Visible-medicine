@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { spawnSync } from 'node:child_process';
 import { build } from './workspace-test-build.mjs';
 import bindings from '../content/nested-review-bindings.json' with { type: 'json' };
 
@@ -13,6 +14,21 @@ export {specimenReviewRows} from './lib/specimen-review-material';
 ` }, bundle: true, write: false, platform: 'node', format: 'esm' });
 const api = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
 const { clinicalReviewEntries: entries, clinicalReviewScopes: scopes, findClinicalReviewEntries: find, clinicalReviewHref: href } = api;
+
+test('unsigned starter worksheet remains exact to current renderer and teaching revisions', () => {
+  const result = spawnSync(process.execPath, ['scripts/prepare-first-release-review.mjs', '--check'], {
+    cwd: process.cwd(), encoding: 'utf8', windowsHide: true, maxBuffer: 4e6,
+  });
+  assert.ifError(result.error);
+  assert.equal(result.status, 0,
+    'Unsigned review pilot is stale or invalid; refresh it through prepare-first-release-review.mjs --write. ' +
+    (result.stderr.includes('Pilot index is stale') ? 'Current source differs from the saved worksheet.' : result.stderr.slice(-500)));
+  const receipt = JSON.parse(result.stdout.trim());
+  assert.equal(receipt.mode, '--check');
+  assert.equal(receipt.entries, 11);
+  assert.equal(receipt.approval, false);
+  assert.equal(receipt.imagingBlocked, 11);
+});
 
 test('all public rows are represented once with exact scoped links', () => {
   const counts = { shoulder: api.structures.length, body: api.bodyReviewSummaries.length,

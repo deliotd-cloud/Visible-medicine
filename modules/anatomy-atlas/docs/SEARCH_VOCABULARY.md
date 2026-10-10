@@ -32,6 +32,15 @@ Global search keeps its spaced vocabulary too, so `shoulder-blade` still finds
 the existing scapula alias. Source names, identities, side-sensitive navigation,
 and cranial-nerve number distinctions are preserved.
 
+## Hilum study discovery, 6 October 2026
+
+`hilum`, `hila` and `hilar` now find the same existing pulmonary-hilum study
+views. For example, `left pulmonary hilar` locates the left source-bound study.
+These are whole-word search forms, not new structures or clinical equivalence
+claims; `hilarity` and `prehilum` do not match. Exact labels, actions, source
+identities, laterality, study preview and exam safeguards remain unchanged.
+The regression checks the six existing study scopes and preserves result order.
+
 ## References and rights
 
 ### Bounded word forms, 29 September 2026

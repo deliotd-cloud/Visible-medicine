@@ -1,7 +1,7 @@
 # Independent lower-limb guided dissection
 
 Five original draft sequences extend the existing collapsed **Guided learning**
-panel: hip/thigh9 steps, knee6, calf7, ankle/foot8, whole-limb16 (46 total).
+panel: hip/thigh9 steps, knee7, calf7, ankle/foot8, whole-limb16 (47 total).
 Each regional sequence includes every admitted surface in its scope; the
 whole-limb sequence visits all67 supplied surfaces. These counts describe this
 incomplete right adult-male specimen, not anatomical completeness or whole-body
@@ -22,7 +22,7 @@ continues to disclose long structures beyond the regional view.
 The existing smooth1800ms camera transition is reused, with reduced-motion
 preference, hidden-document pause and renderer/bundle readiness gates. This
 release adds sequence data rather than a new animation engine. Production hook
-tests verify92 guided camera states (46 steps in both motion modes); they do not
+tests verify94 guided camera states (47 steps in both motion modes); they do not
 prove GPU smoothness or actual browser appearance.
 
 ## Boundaries and review
@@ -38,12 +38,24 @@ vessel, fascia, retinaculum, capsule, labrum, individual digit or separate menis
 is invented. Visibility changes are not surgical planes, simulated procedures,
 anatomical boundary validation, tendon continuity or scan registration.
 
-Clinical Review includes the exact captions, order, views and context/selection
+The original guide-introduction checks cover this boundary: Clinical Review
+includes the exact captions, order, views and context/selection
 IDs, with a guided-step checklist on154 overlapping regional contexts. Their
 teaching revisions change; all356 source packets and202 unrelated teaching
 packets remain exact. The four grouped contexts retain their identity holds and
 all previous approvals require their own current revision/scope.462 stale or
 foreign-frame requests must reject before storage. No approval is migrated.
+
+The later **Compare knee stabilizers** step adds all four supplied ligament
+surfaces beside the whole tibia and fibula, after the cruciate step. The femur
+stays hidden solely for visibility; actual desktop QA caught it obstructing the
+selected ACL when restored. Nothing is cut, shifted or simulated. All six earlier
+knee step definitions/captions and the four other limb guides remain exact.
+This addition advances15 knee-guide teaching contexts;341 other teaching contexts,
+all356 source packets and all67 pinned lessons remain exact.386 stale/foreign
+save cases refuse before storage, and `guided-dissection` stays unchecked.
+Renderer-bound display approvals expire conservatively; acquired-image mapping,
+clinical sign-off and separate paid-resource access do not change.
 
 The selected structure retains its existing CT/MRI/X-ray/ultrasound draft notes,
 anatomy/function and source reading. Stable IDs are future imaging-link hooks,

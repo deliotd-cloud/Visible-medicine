@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFile,writeFile} from './pre-hand-venous-tour-history.mjs';
+import {createHash} from 'node:crypto';
+import {relative,dirname} from 'node:path';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import {build} from './pre-hand-venous-tour-history.mjs';
+const baseline='4b6f0629ffedd99c5529882ed74341d9402e6ef0',root=process.cwd(),old=p=>execFileSync('git',['show',baseline+':'+p],{encoding:'utf8',windowsHide:true,maxBuffer:32e6});
+const same=(a,b,m)=>assert.deepEqual(structuredClone(a),structuredClone(b),m),sha=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+async function load(previous=false){
+ const paths=new Set(['app/body-content.ts','content/body-review-display-pins.json','content/body-renderer-revision.json']);
+ // Replay the completed glottic milestone. The hand-venous suite independently
+ // checks every actual current topic, including all eight glottic placements.
+ const epoch=previous?baseline:'dcd1e1cfe4036c2af309c5a1a451adf659e62417';
+ const result=await build({stdin:{contents:"export * from './lib/glottic-muscle-imaging'; export * from './content/glottic-muscle-imaging'; export {bodyLesson,bodyContent} from './app/body-content'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {structures} from './app/anatomy-data'; export {dissectionProfiles} from './app/dissection-data'; export {contentTabs} from './lib/content-types'; export * from './lib/body-review-material'; export * from './lib/body-review-context'; export * from './lib/body-review-api'; export * from './lib/body-review-response'; export * from './lib/body-review-decisions';",resolveDir:root},bundle:true,write:false,format:'cjs',platform:'node',packages:'external',plugins:[{name:'exact-completed-glottic-drafts',setup(api){api.onLoad({filter:/\.(?:ts|json)$/},args=>{const path=relative(root,args.path).replaceAll('\\','/');if(!paths.has(path))return;return{contents:execFileSync('git',['show',epoch+':'+path],{encoding:'utf8',windowsHide:true,maxBuffer:32e6}),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};});}}]});
+ const module={exports:{}};runInNewContext(result.outputFiles[0].text,{module,exports:module.exports,require:createRequire(root+'/package.json'),crypto,TextEncoder,TextDecoder,Request,Response,structuredClone,URL,URLSearchParams});return module.exports;
+}
+const before=await load(true),now=await load(),pins=JSON.parse(await readFile('content/glottic-muscle-imaging-pins.json','utf8'));
+const catalog=now.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json','utf8'))),targets=new Set(pins.entries.map(e=>e.identity.id));
+assert.equal(catalog.structures.length,1104);assert.equal(targets.size,4);
+const snapshot=api=>({catalog,body:catalog.structures.map(s=>({id:s.id,topics:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles});
+assert.equal(sha(snapshot(before)),pins.beforeAllTeachingSnapshotHash,'Pinned actual complete earlier teaching');
+same(now.structures,before.structures);same(now.dissectionProfiles,before.dissectionProfiles);
+for(const path of ['app/body-explorer.tsx','lib/reasoning-questions.ts','lib/regional-tours.ts','package.json','package-lock.json','LICENSES/THIRD_PARTY_NOTICES.md','public/models/bodyparts3d/full-body/catalog.json'])assert.equal(await readFile(path,'utf8'),old(path),'No engine, UI, anatomy, licence or prior tours changed: '+path);
+let changed=0,preserved=0,mutations=0,malformed=0,stale=0;
+const recovered=snapshot(now);for(const row of recovered.body)for(const tab of now.contentTabs){const s=catalog.structures.find(s=>s.id===row.id),prior=before.bodyLesson(s,tab),lesson=now.bodyLesson(s,tab);if(targets.has(s.id)&&['ct','mri'].includes(tab)){assert.equal(prior.readiness,'pending');assert.equal(lesson.readiness,'draft');assert.notDeepEqual(lesson,prior);same(lesson,now.glotticMuscleImagingLesson(s,tab));const{readiness,...section}=lesson;same(now.bodyContent(s,tab),section,'Actual learner resolver exports these notes');row.topics[tab]=prior;changed++;}else{same(lesson,prior,'All other displayed topics exact');preserved++;}}
+assert.equal(changed,8);assert.equal(preserved,9928);assert.equal(sha(recovered),pins.beforeAllTeachingSnapshotHash,'All outside edits detected by complete snapshot');
+function leaves(v,path=[]){return v===null||typeof v!=='object'?[path]:Object.entries(v).flatMap(([k,x])=>leaves(x,[...path,k]));}
+function mutate(v,path){const copy=structuredClone(v);let p=copy;for(const k of path.slice(0,-1))p=p[k];const k=path.at(-1),value=p[k];p[k]=typeof value==='number'?value+0.01:typeof value==='string'?value+'-foreign':value===null?'foreign':!value;return copy;}
+for(const e of pins.entries){const s=catalog.structures.find(s=>s.id===e.identity.id);same(s,e.identity);same(catalog.coordinateSystem,pins.coordinateSystem);
+ for(const path of leaves(s))for(const tab of ['ct','mri']){assert.equal(now.glotticMuscleImagingLesson(mutate(s,path),tab),undefined,path.join('.'));mutations++;}
+ for(const patch of [{sources:[]},{sources:[...s.sources,...s.sources]},{regions:[]},{foreign:'unaccepted'}, {sources:s.sources.slice(1)}])for(const t of ['ct','mri']){assert.equal(now.glotticMuscleImagingLesson({...s,...patch},t),undefined);mutations++;}
+ for(const t of now.contentTabs.filter(t=>!['ct','mri'].includes(t)))assert.equal(now.glotticMuscleImagingLesson(s,t),undefined);
+ for(const t of ['ct','mri']){same(before.bodyLesson(s,t),e.previous[t]);const detached=now.glotticMuscleImagingLesson(s,t),original=structuredClone(detached);detached.bullets.push('foreign');detached.citations.push('foreign');same(now.glotticMuscleImagingLesson(s,t),original,'Fresh detached lessons');assert.match(original.note,/revision-bound radiologist/);assert.match(original.note,/access remain independent/);}
+ const material=await now.bodyReviewMaterial(s.id),priorMaterial=await before.bodyReviewMaterial(s.id);assert(await now.parseBodyReviewResponse(material,s.id));same(material.source,priorMaterial.source);same(material.reasoning,priorMaterial.reasoning);same(material.guidedTours,priorMaterial.guidedTours);assert.equal(material.approval,false);
+ for(const t of ['ct','mri']){same(material.topics.find(x=>x.tab===t),{tab:t,...now.bodyLesson(s,t)},'Actual shared Review lesson');for(const edit of [p=>p.topics.find(x=>x.tab===t).body+=' foreign',p=>p.topics.find(x=>x.tab===t).readiness='approved',p=>p.topics.find(x=>x.tab===t).citations=['https://foreign.example'],p=>p.source.structure.sources=[]]){const packet=structuredClone(material);edit(packet);assert.equal(await now.parseBodyReviewResponse(packet,s.id),null);malformed++;}}
+ const previous=await before.bodyReviewContext(s.id),current=await now.bodyReviewContext(s.id);assert.notEqual(previous.revisions.teaching,current.revisions.teaching);assert.equal(current.revisions.imaging,null);
+ let calls=0;const packet={catalogScope:previous.catalogScope,structureId:s.id,track:'teaching',expectedVersion:0,materialHash:previous.materialHash,revisionHash:previous.revisions.teaching,checklistVersion:previous.checklistVersion,draft:now.blankBodyReview(previous,'teaching')};
+ const response=await now.postBodyDecision(new Request('https://atlas.example/api/body-review/decisions',{method:'POST',headers:{'oai-authenticated-user-id':'synthetic-reviewer','content-type':'application/json',origin:'https://atlas.example'},body:JSON.stringify(packet)}),{prepare(){calls++;throw Error('Stale request cannot touch storage');}});assert.equal(response.status,409);assert.equal(calls,0);stale++;
+}
+let worksheets=0;for(const s of catalog.structures){const prior=await before.bodyReviewMaterial(s.id),current=await now.bodyReviewMaterial(s.id);same(current.source,prior.source);same(current.reasoning,prior.reasoning);same(current.guidedTours,prior.guidedTours);if(targets.has(s.id)){assert.notEqual(current.fingerprints.teaching,prior.fingerprints.teaching);worksheets++;}else{same(current.fingerprints.teaching,prior.fingerprints.teaching,'All1100 unrelated teaching fingerprints exact');same(current.topics,prior.topics);}}
+assert.equal(worksheets,4);for(const b of pins.bundles)assert.equal(createHash('sha256').update(await readFile('public'+b.url.split('?')[0])).digest('hex'),b.sha256);
+const authored=Object.values(now.glotticMuscleImagingTopics).flatMap(t=>[t.landmark,t.ct,t.mri]).join(' '),referenceWords=authored.trim().split(/\s+/).length;assert(referenceWords<=200,'Bounded original factual synthesis');
+for(const ref of Object.values(now.glotticMuscleImagingReferences))assert.equal(new URL(ref).protocol,'https:');
+const report={baseline,teachingEpoch:'dcd1e1cfe4036c2af309c5a1a451adf659e62417',currentTeachingCheckedBy:'scripts/test-hand-venous-imaging.mjs',sources:4,changedTopicPlacements:changed,preservedTopicPlacements:preserved,changedReviewWorksheets:worksheets,preservedTeachingFingerprints:1100,mutatedSourceCases:mutations,malformedPackets:malformed,staleRefusalsBeforeStorage:stale,authoredWords:referenceWords,allEarlierReasoningAndToursPreserved:true,geometryAndUiUnchanged:true,clinicalApproval:false,browserAcceptance:false};
+await writeFile('docs/glottic-muscle-imaging-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));

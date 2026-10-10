@@ -50,8 +50,9 @@ const rows = indexBytes
   .map((line) => line.split('\t'));
 const partofIndexBytes = await read('LICENSES/bodyparts3d-v4-index/partof_element_parts.txt');
 const partofRows = partofIndexBytes.trim().split(/\r?\n/).slice(1).map(line => line.split('\t'));
-const loaded = catalog.bundles.map((b) => b.id);
-const all = catalog.structures;
+const currentDisplay = api.bodyDisplayCatalog(catalog);
+const loaded = currentDisplay.bundles.map((b) => b.id);
+const all = currentDisplay.structures;
 const definitionsBefore = JSON.stringify(api.reasoningConcepts);
 let checks = 0,
   serial = 0,
@@ -95,20 +96,26 @@ same(api.reasoningConcepts.slice(123,126).map(c => c.key), ['thoracic-trachea','
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,126))), '523ab89c9c6313eec445979978777283e316b118328bd18ddde80a47ecfd3a32', 'All preceding 126 concepts remain unchanged and ordered');
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,132))), '256305e55245d7595c03cc888c3bb8a4918debd6bf6055419860cf66555c892e', 'All preceding 132 concepts remain unchanged and ordered');
 same(hash(JSON.stringify(api.reasoningConcepts.slice(0,140))), '2b5f7d7e84abdb80f494c0e0a6d3b371e8cb122abf46b9da69b8d555a9eebe66', 'All preceding 140 concepts remain unchanged and ordered');
-same(api.reasoningConcepts.length, 166);
-same(bound.length, 308);
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,170))), 'e75f352d2d16b1da3530c37ce19e76e09f14e8ee0774a5c189770592574432bc', 'All previous170 definitions and order preserved');
+const lowerVenousKeys = ['small-saphenous-vein','popliteal-vein','femoral-vein','great-saphenous-vein','external-iliac-vein','common-iliac-vein'].map(k=>'lower-venous-'+k);
+same(hash(JSON.stringify(api.reasoningConcepts.slice(0,176))), 'c863500fd6bc4ff38ea902e73b334cb1b4fc7af5350b1e8f4987402455e0347f', 'All preceding176 definitions and order preserved against ff5ff419');
+same(api.reasoningConcepts.slice(170,176).map(c=>c.key),lowerVenousKeys);
+same(api.reasoningConcepts.slice(176,182).map(c=>c.key), ['celiac-artery','superior-mesenteric-artery','inferior-mesenteric-artery','hepatic-portal-vein','abdominal-aorta','inferior-vena-cava'].map(k=>'abdominal-vessel-'+k));
+same(api.reasoningConcepts.slice(182).map(c=>c.key), ['amygdala','fornix','anterior-commissure','corpus-callosum'].map(k=>'brain-connections-'+k));
+same(api.reasoningConcepts.length, 186);
+same(bound.length, 337);
 same(bound.filter((s) => s.region === 'shoulder-arm').length, 46);
 same(bound.filter((s) => s.region === 'forearm').length, 22);
 same(bound.filter((s) => s.region === 'hand').length, 20);
-same(bound.filter((s) => s.region === 'thigh').length, 38);
-same(bound.filter((s) => s.region === 'leg').length, 34);
+same(bound.filter((s) => s.region === 'thigh').length, 42);
+same(bound.filter((s) => s.region === 'leg').length, 38);
 same(bound.filter((s) => s.region === 'foot').length, 24);
-same(bound.filter((s) => s.region === 'head-neck').length, 60);
+same(bound.filter((s) => s.region === 'head-neck').length, 66);
 same(bound.filter((s) => s.region === 'spine').length, 24);
-same(bound.filter((s) => s.region === 'thorax').length, 19);
-same(bound.filter((s) => s.region === 'abdomen').length, 11);
-same(bound.filter((s) => s.region === 'pelvis').length, 10);
-same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 166);
+same(bound.filter((s) => s.region === 'thorax').length, 24);
+same(bound.filter((s) => s.region === 'abdomen').length, 17);
+same(bound.filter((s) => s.region === 'pelvis').length, 14);
+same(new Set(api.reasoningConcepts.map((c) => c.key)).size, 186);
 same(hash(JSON.stringify(precedingConcepts.filter(c => !c.key.startsWith('neck-')))),
   'caafb323ca7d5a04971f91ad369d68c3a8da5e43839b39d8cd76192d1497bad2',
   'All 100 preceding concepts remain unchanged and in order');
@@ -169,13 +176,18 @@ for (const concept of api.reasoningConcepts) {
   const organ = concept.sourceTissue === 'organ';
   const neuralOrgan = concept.sourceTissue === 'neural-organ';
   const vessel = concept.sourceTissue === 'vessel';
+  const lowerVein = lowerVenousKeys.includes(concept.key);
+  const abdominalVessel = concept.key.startsWith('abdominal-vessel-');
+  const brainConnection = concept.key.startsWith('brain-connections-');
+  const midlineBrainConnection = brainConnection && ['brain-connections-anterior-commissure','brain-connections-corpus-callosum'].includes(concept.key);
   const bone = concept.sourceTissue === 'bone';
-  const vesselSides = { FMA3736: 'midline', FMA3768: 'midline', FMA87217: 'unspecified', FMA4720: 'unspecified', FMA4838: 'unspecified', FMA4944: 'midline' };
-  const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter'].includes(concept.key);
-  same(concept.bindings.length, vessel || grouped || (organ && !pairedOrgan) ? 1 : 2);
-  if (vessel) check(Object.hasOwn(vesselSides, concept.bindings[0].fma), 'Only the six explicitly authored vessels');
-  same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), vessel ? [vesselSides[concept.bindings[0].fma]] : organ && !pairedOrgan ? ['unpaired'] : grouped ? ['midline'] : ['left', 'right']);
-  same(new Set(concept.distractors).size, concept.key.startsWith('upper-limb-bone-') ? 4 : 3);
+  const vesselSides = { FMA3736: 'midline', FMA3768: 'midline', FMA87217: 'unspecified', FMA4720: 'unspecified', FMA4838: 'unspecified', FMA4944: 'midline', FMA50737: 'unspecified', FMA14749: 'midline', FMA14750: 'unspecified', FMA50735: 'unspecified', FMA3789: 'midline', FMA10951: 'unspecified' };
+  const pairedOrgan = ['pelvic-testis', 'pelvic-epididymis', 'pelvic-seminal-vesicle', 'pelvic-ureter','thoracic-core-lung'].includes(concept.key);
+  const sidedBronchus = concept.key === 'thoracic-core-right-main-bronchus' ? 'right' : concept.key === 'thoracic-core-left-main-bronchus' ? 'left' : undefined;
+  same(concept.bindings.length, (vessel && !lowerVein) || grouped || midlineBrainConnection || (organ && !pairedOrgan) ? 1 : 2);
+  if (vessel && !lowerVein) check(Object.hasOwn(vesselSides, concept.bindings[0].fma), 'Thoracic and abdominal vessel sides stay exact');
+  same([...new Set(concept.bindings.map(b => b.side))].sort((a, b) => a.localeCompare(b)), vessel && !lowerVein ? [vesselSides[concept.bindings[0].fma]] : sidedBronchus ? [sidedBronchus] : organ && !pairedOrgan ? ['unpaired'] : grouped || midlineBrainConnection ? ['midline'] : ['left', 'right']);
+  same(new Set(concept.distractors).size, concept.key.startsWith('upper-limb-bone-') ? 4 : (abdominalVessel && concept.bindings[0].side === 'midline') || midlineBrainConnection ? 1 : 3);
   check(!concept.distractors.includes(concept.key));
   check(concept.prompt.length > 40 && concept.explanation.length > 40);
   check(concept.references.length > 0);
@@ -192,11 +204,18 @@ for (const concept of api.reasoningConcepts) {
       'file' in binding !== 'files' in binding,
       'One unambiguous binding format',
     );
-    same(
-      (concept.sourceTree === 'partof' ? partofRows : rows).filter((row) => row[0] === binding.fma).map((row) => row[2]),
-      files,
-      'Complete official element-file membership',
-    );
+    const officialFiles=(concept.sourceTree === 'partof' ? partofRows : rows).filter((row) => row[0] === binding.fma).map((row) => row[2]);
+    if(concept.key==='thoracic-core-heart'){
+      // Existing admitted root is intentionally partial, not the full official
+      // aggregate. Preserve its56 exact sources and all27 excluded components.
+      same(files.length,56);
+      same(officialFiles.filter(file=>!files.includes(file)),[
+        'FJ2631','FJ2632','FJ2633','FJ2634','FJ2635','FJ2636','FJ2637','FJ2638','FJ2639',
+        'FJ2640','FJ2641','FJ2642','FJ2643','FJ2644','FJ2645','FJ2646','FJ2647','FJ2648','FJ2649',
+        'FJ2650','FJ2651','FJ2652','FJ2653','FJ2654','FJ2656','FJ2723','FJ2737',
+      ],'Exact prior excluded heart components stay excluded');
+      same(officialFiles.filter(file=>files.includes(file)),files,'Every admitted heart component retains official order');
+    }else same(officialFiles,files,'Complete official element-file membership');
     const s = bound.find((s) => s.fmaId === binding.fma);
     check(s && s.laterality === binding.side);
     same(s.system, bone ? 'skeleton' : vessel ? 'vessels' : neuralOrgan ? 'nerves' : organ ? 'organs' : 'muscles');
@@ -211,8 +230,8 @@ for (const concept of api.reasoningConcepts) {
         name: 'Unrelated display label',
         sourceName: 'Changed display label',
       })?.key,
-      concept.key,
-      'No display-name matching',
+      concept.key.startsWith('thoracic-core-') || lowerVein || abdominalVessel || brainConnection ? undefined : concept.key,
+      'Existing label-independent lookup preserved; new exact-record pins reject altered records',
     );
     for (const mutation of [
       { fmaId: 'FMA000000' },
@@ -311,8 +330,17 @@ for (const region of ['whole-body', ...catalog.regions.map((r) => r.id)]) {
     )
       same(session, null, 'No unbound regional question is invented');
     if (!session) continue;
-    const expected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 20, forearm: 12,
-      hand: 10, thigh: 18, pelvis: 16, leg: 18, foot: 12, spine: 12, thorax: 16, abdomen: 9 }[region];
+    const historicalExpected = { 'whole-body': 20, 'head-neck': 20, 'shoulder-arm': 20, forearm: 12,
+      hand: 10, thigh: 18, pelvis: 16, leg: 18, foot: 12, spine: 12, thorax: side==='both'?20:19, abdomen: 9 }[region];
+    const historicalScope=scope.filter(s=>!lowerVenousKeys.includes(api.reasoningConceptFor(s)?.key) && !api.reasoningConceptFor(s)?.key.startsWith('abdominal-vessel-') && !api.reasoningConceptFor(s)?.key.startsWith('brain-connections-'));
+    same(create(historicalScope)?.questions.length,historicalExpected,'Original regional session goldens retained');
+    const added=api.practiceQuestionCount(scope,'reason',scope.filter(s=>lowerVenousKeys.includes(api.reasoningConceptFor(s)?.key)).map(s=>s.id));
+    same(added,{'whole-body':6,thigh:4,pelvis:4,leg:4,foot:2,abdomen:2}[region]??0,'Only exact new venous concepts extend regional sessions');
+    const abdominalAdded=api.practiceQuestionCount(scope,'reason',scope.filter(s=>api.reasoningConceptFor(s)?.key.startsWith('abdominal-vessel-')).map(s=>s.id));
+    same(abdominalAdded, ['whole-body','abdomen'].includes(region)?6:0, 'Abdominal questions require visible authored alternatives');
+    const brainAdded=api.practiceQuestionCount(scope,'reason',scope.filter(s=>api.reasoningConceptFor(s)?.key.startsWith('brain-connections-')).map(s=>s.id));
+    same(brainAdded, ['whole-body','head-neck'].includes(region)?4:0, 'Brain questions require exact visible alternatives');
+    const expected=Math.min(20,historicalExpected+added+abdominalAdded+brainAdded);
     same(session.questions.length, expected);
     same(
       new Set(session.questions.map((q) => q.reasoning.key)).size,
@@ -374,7 +402,7 @@ for (const count of [1, 5, 10, 20, 100, NaN, Infinity, -10]) {
   same(
     create(all, { count }).questions.length,
     Math.min(
-      166,
+      186,
       Math.max(1, Math.min(20, Math.floor(Number.isFinite(count) ? count : 5))),
     ),
   );
@@ -386,7 +414,7 @@ for (const value of [NaN, Infinity, -Infinity, -1, 0, 1, 20])
   );
 same(create(all, { id: 0 }), null);
 same(create(all, { id: 1.5 }), null);
-const newConcepts = api.reasoningConcepts.filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-') || c.key.startsWith('limb-') || c.key.startsWith('abdominal-') || c.key.startsWith('thoracic-'));
+const newConcepts = api.reasoningConcepts.slice(0,166).filter(c => c.key.startsWith('trunk-') || c.key.startsWith('neck-') || c.key.startsWith('limb-') || c.key.startsWith('abdominal-') || c.key.startsWith('thoracic-'));
 const referenceWords = {};
 same(newConcepts.length, 52);
 const limbConcepts = newConcepts.filter(c => c.key.startsWith('limb-'));
@@ -547,9 +575,12 @@ for (const concept of [...newConcepts, ...deepConcepts, ...pelvicConcepts]) {
 }
 for (const [url, words] of Object.entries(referenceWords)) check(words <= 200, `Brief original synthesis per reference: ${url} (${words})`);
 const groupedTargets = bound.filter(s => s.laterality === 'midline');
-same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA15571', 'FMA15572', 'FMA15900', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7394', 'FMA9600', 'FMA9607']);
-same(groupedTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758', 'FMA3736', 'FMA3768', 'FMA4944'].sort());
-same(create(groupedTargets).questions.length, 7, 'Four prior muscle groups and three exact catalogue-midline vessels work together');
+same(bound.filter(s => s.sourceTree === 'partof').map(s => s.fmaId).sort(), ['FMA13373', 'FMA13374', 'FMA15571', 'FMA15572', 'FMA15900', 'FMA7088', 'FMA7131', 'FMA7148', 'FMA7202', 'FMA7309', 'FMA7310', 'FMA7394', 'FMA7395', 'FMA9600', 'FMA9607']);
+const priorMidlineTargets=groupedTargets.filter(s=>!api.reasoningConceptFor(s)?.key.startsWith('brain-connections-'));
+same(priorMidlineTargets.map(s => s.fmaId).sort(), ['FMA13295', 'FMA9756', 'FMA9757', 'FMA9758', 'FMA3736', 'FMA3768', 'FMA4944', 'FMA14749', 'FMA3789'].sort());
+same(create(priorMidlineTargets).questions.length, 9, 'Four prior muscle groups and five exact catalogue-midline vessels work together');
+same(groupedTargets.map(s=>s.fmaId).sort(), [...priorMidlineTargets.map(s=>s.fmaId),'FMA61961','FMA86464'].sort());
+same(create(groupedTargets).questions.length,11,'Two exact commissural roots extend the original midline pool');
 for (const group of groupedTargets) {
   for (const laterality of ['left', 'right', 'unpaired', 'unspecified'])
     same(api.reasoningConceptFor({ ...group, laterality }), undefined, 'Never split/relabel a catalogue group');
@@ -738,6 +769,7 @@ for (const mode of ['find', 'name', 'reason'])
       handler('onSceneSelect', {
         displayReady,
         exam,
+        coronaryScene: { contextIds: [] },
         practice: { mode },
         submitPractice: (id) => calls.push(['answer', id]),
         select: (id) => calls.push(['select', id]),
@@ -858,6 +890,8 @@ const report = {
   regionalConcepts: Object.fromEntries([...new Set(api.reasoningConcepts.map(c => c.region))].map(region => [region, api.reasoningConcepts.filter(c => c.region === region).length])),
   multiPartRepresentations: bound.filter((s) => s.sources.length > 1).length,
   sharedRegionConcepts: { pelvis: 9, abdomen: 1, thigh: 1 },
+  sharedRegionConceptsSnapshot: 'Earlier muscle/organ milestone retained; not current venous eligibility.',
+  lowerVenousConceptsByScope: { 'whole-body': 6, thigh: 4, pelvis: 4, leg: 4, foot: 2, abdomen: 2 },
   sharedRegionNote: 'Membership does not guarantee question eligibility without a curated visible alternative; psoas remains unavailable in thigh-only reasoning and ureters in abdomen-only reasoning.',
   groupedOrMidlineRepresentations: groupedTargets.length,
   newReferenceWords: referenceWords,

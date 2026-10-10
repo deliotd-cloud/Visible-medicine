@@ -10,6 +10,9 @@ import {
 } from './nested-ct-orientation-history.mjs';
 
 const base = '31a6ae7d0a823374b97c21cd7e810070e056d352';
+// Exact historical CT transition; later MCA/PICA changes have live transition tests.
+const epoch = '927180af8a7d04a96cd54088953dc68a1dd54588';
+const current = path => execFileSync('git', ['show', `${epoch}:${path}`], { maxBuffer: 16e6 });
 const old = path => execFileSync('git', ['show', `${base}:${path}`], { maxBuffer: 16e6 });
 const copy = value => JSON.parse(JSON.stringify(value));
 const require = createRequire(import.meta.url);
@@ -26,14 +29,14 @@ async function load(previous = false) {
   const result = await build({
     stdin: { contents: entry, resolveDir: process.cwd(), loader: 'tsx' },
     bundle: true, write: false, platform: 'node', format: 'cjs',
-    plugins: previous ? [{ name: 'exact-pre-ct-source', setup(api) {
-      api.onLoad({ filter: /(?:nested-teaching\.ts|body-renderer-revision\.json)$/, namespace: 'component-test' }, args => {
+    plugins: [{ name: 'exact-ct-epochs', setup(api) {
+      api.onLoad({ filter: /(?:nested-teaching\.ts|nested-review-material\.ts|body-renderer-revision\.json)$/, namespace: 'component-test' }, args => {
         const path = relative(process.cwd(), args.path).replaceAll('\\', '/');
-        if (!['content/nested-teaching.ts', 'content/body-renderer-revision.json'].includes(path)) return;
-        return { contents: old(path).toString('utf8'), resolveDir: dirname(args.path),
+        if (!['content/nested-teaching.ts', 'content/body-renderer-revision.json', 'lib/nested-teaching.ts', 'lib/nested-review-material.ts'].includes(path)) return;
+        return { contents: (previous?old(path):current(path)).toString('utf8'), resolveDir: dirname(args.path),
           loader: path.endsWith('.json') ? 'json' : 'ts' };
       });
-    } }] : [],
+    } }],
   });
   const module = { exports: {} };
   runInNewContext(result.outputFiles[0].text, { module, exports: module.exports, require,
@@ -86,14 +89,14 @@ for (const path of [
   'public/models/bodyparts3d/full-body/catalog.json',
   'lib/nested-teaching.ts', 'lib/nested-review-api.ts',
   'lib/nested-review-material.ts', 'app/nested-teaching.tsx',
-]) assert.deepEqual(await readFile(path), old(path), `${path} preserved`);
+]) assert.deepEqual(current(path), old(path), `${path} preserved within the CT epoch`);
 
 const changedIds = new Set(nestedCTOrientationIds);
 const storage = { prepare() { throw Error('Stale request reached storage'); } };
 let contexts = 0, changed = 0, unchanged = 0, staleRejects = 0;
 let rendererGeometryChanged = 0, staleGeometryRejects = 0;
 let unnamedPending = 0, remainderPending = 0;
-const currentRenderer = JSON.parse(await readFile('content/body-renderer-revision.json'));
+const currentRenderer = JSON.parse(current('content/body-renderer-revision.json'));
 const previousRenderer = JSON.parse(old('content/body-renderer-revision.json'));
 const placements = new Map(nestedCTOrientationIds.map(id => [id, 0]));
 for (const group of api.nestedReviewRows) for (const row of group.surfaces) {

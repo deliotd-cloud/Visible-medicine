@@ -12,7 +12,7 @@ import {
 } from './source-surface-audit.mjs';
 const directory =
   process.argv.find((a) => a.startsWith('--source='))?.slice(9) ??
-  'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+  'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const bytes = await readFile(directory + '/3d-vh-f-united.glb');
 const hash = (b) => createHash('sha256').update(b).digest('hex');
 assert.equal(

@@ -1,11 +1,14 @@
 'use client';
+import { modelLoadAccessNotice, type ModelLoadFailure } from '@/lib/model-load-failure';
 import { bodySideMatches, bodyPresentationStructure, bodyPresentationRevision } from '@/lib/body-presentation-parts';
 import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
+import {useHeadRootSelection,headRootSelection} from './head-selection-channel';
 import { PracticePanelNavigation } from './practice-panel-navigation';
 import { SourceDisplayNotes } from './source-display-notes';
+import { teachingHeading } from '@/lib/teaching-heading';
 import { BodySelectionNotice, focusRemovalFeedback } from './body-selection-notice';
 import { lastSingleRemoval } from '@/lib/contextual-dissection-undo';
 import { InlineStudy } from './study-surface';
@@ -47,6 +50,7 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
+import { bodySystemToggle } from '@/lib/body-system-toggle';
 import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
 import { cubitalStudyBounds } from '@/lib/cubital-studies';
@@ -88,6 +92,7 @@ import type { NestedImagingTopic } from '@/content/nested-teaching';
 import { bodyLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
 import { useBodyEducationLink } from './body-education-link';
+import {createPausedTourImaging} from '@/lib/paused-tour-imaging';
 import { ImagingComparisonWorkspace } from './imaging-comparison';
 import {
   dissectionProfiles,
@@ -188,6 +193,7 @@ import { eyeLayersFor } from '@/lib/eye-layers';
 import { ventriclesFor } from '@/lib/ventricles';
 import { cardiacFor } from '@/lib/cardiac';
 import { coronaryVenousFor } from '@/lib/coronary-venous';
+import { coronaryArterialStudyId, coronaryArterialStudyFor, coronaryArterialScenePlan } from '@/lib/coronary-arterial-study';
 import { pulmonaryFor } from '@/lib/pulmonary';
 import { hepaticFor } from '@/lib/hepatic';
 import { renalFor } from '@/lib/renal';
@@ -315,7 +321,7 @@ export default function BodyExplorer({
   const guidedReturnCamera = useRef<StudyCamera | null>(null);
   const guidedReturnFocus = useRef<HTMLElement | null>(null);
   const regionalTour = regionalTourFor(initialRegion);
-  function changeGuidedLearning(active: boolean) {
+  function changeGuidedLearning(active: boolean, reason?: 'mode-switch') {
     if (active && ((!regionalTour && initialRegion !== 'whole-body') || practice.status === 'active')) return;
     if (active && !guidedLearning) {
       guidedReturnCamera.current = cameraCapture.current ? structuredClone(cameraCapture.current) : null;
@@ -323,7 +329,8 @@ export default function BodyExplorer({
     } else if (!active && guidedLearning) {
       cameraRestore.current = guidedReturnCamera.current;
       setReset(n => n + 1);
-      requestAnimationFrame(() => guidedReturnFocus.current?.focus({preventScroll:true}));
+      if (reason !== 'mode-switch')
+        requestAnimationFrame(() => guidedReturnFocus.current?.focus({preventScroll:true}));
     }
     setGuidedLearning(active);
   }
@@ -412,6 +419,7 @@ export default function BodyExplorer({
     'selectedId' | 'isolated' | 'focus' | 'explode' | 'layout' | 'plate' |
     'zoom' | 'view' | 'camera'>) | null>(null);
   const practicePromptId = useId();
+  const practiceResultSummaryId = useId();
   const [practiceMode, setPracticeMode] = useState<PracticeMode>('find');
   const [practiceSampling, setPracticeSampling] =
     useState<PracticeSampling>('landmarks');
@@ -564,6 +572,19 @@ export default function BodyExplorer({
     [stage, focusedStudy, resolved, systems],
   );
   const selected = catalog?.structures.find((s) => s.id === selectedId) ?? null;
+  useHeadRootSelection({nested:inlineStudy,state:
+    exam || workspace.mode === 'practice' ? {status:'blocked',reason:'practice'} :
+    guidedLearning ? {status:'blocked',reason:'guided'} :
+    !catalog || (!inlineStudy && (!displayReady || (selected && (!loaded.includes(selected.bundle) || failed.includes(selected.bundle)))) )
+      ? {status:'blocked',reason:'unavailable'} : headRootSelection(catalog,selected)},target=>{
+    if(document.hidden||initialRegion!=='head-neck'||target.kind!=='root'||exam||workspace.mode==='practice'||guidedLearning||inlineStudy||!displayReady||!catalog)return false;
+    const candidate=regionStructures.find(s=>s.id===target.id);
+    const bundle=candidate&&catalog.bundles.find(b=>b.id===candidate.bundle);
+    if(!candidate||candidate.laterality!==target.laterality||bundle?.sha256!==target.source||
+      !loaded.includes(candidate.bundle)||failed.includes(candidate.bundle)||!resolved.visible.some(s=>s.id===candidate.id)||!systems[candidate.system])return false;
+    applySelection(candidate.id,false);
+    return true;
+  });
   // Spatial view records are deliberately separate from canonical teaching,
   // review, practice identity and imaging-link records.
   const presentationStructures = useMemo(
@@ -610,6 +631,10 @@ export default function BodyExplorer({
     [regionStructures, systems, hiddenIds],
   );
   const enabledIds = useMemo(() => new Set(available.map((item) => item.id)), [available]);
+  const coronaryScene = useMemo(() => coronaryArterialScenePlan(catalog, {
+    region: initialRegion, focusId: dissection.focusId, exam, explode,
+    visibleIds: available.map(s => s.id), scope: regionStructures,
+  }), [catalog, initialRegion, dissection.focusId, exam, explode, available, regionStructures]);
   const framingRegion = regionalFramingRegion(initialRegion, side);
   const cameraRecipeId = dissection.focusId ?? dissection.stageId;
   const dedicatedCameraRecipe = (initialRegion === 'leg' &&
@@ -728,8 +753,10 @@ export default function BodyExplorer({
   const sceneStructures = useMemo(
     () => exam
       ? presentationStructures.filter((s) => practiceRenderIds(practice).includes(s.id))
-      : presentationStructures,
-    [exam, presentationStructures, practice],
+      : coronaryScene.omitIds.length
+        ? presentationStructures.filter(s => !coronaryScene.omitIds.includes(s.id))
+        : presentationStructures,
+    [exam, presentationStructures, practice, coronaryScene.omitIds],
   );
   const required = useMemo(
     () => requestedAnatomyBundles(sceneStructures, systems, hiddenIds, ghostRemoved && !exam),
@@ -739,6 +766,8 @@ export default function BodyExplorer({
     () => anatomyLoadSummary(required, loaded, failed),
     [required, loaded, failed],
   );
+  const [failureReasons, setFailureReasons] = useState<Record<string, ModelLoadFailure>>({});
+  const accessNotice = modelLoadAccessNotice(loadStatus.failed.map((id) => failureReasons[id] ?? 'unavailable'));
   const pending = loadStatus.pending;
   const practicePaused =
     exam &&
@@ -748,7 +777,10 @@ export default function BodyExplorer({
     [],
   );
   const onFailure = useCallback(
-    (id: string) => loadDispatch({ type: 'failed', id }),
+    (id: string, reason: ModelLoadFailure = 'unavailable') => {
+      loadDispatch({ type: 'failed', id });
+      setFailureReasons((v) => ({ ...v, [id]: reason }));
+    },
     [],
   );
   async function retryAnatomy() {
@@ -813,10 +845,18 @@ export default function BodyExplorer({
   });
   const publishSelection = imagingLink.publish;
   const educationAllowedIds = useMemo(() => regionStructures.map(s => s.id), [regionStructures]);
+  const pausedTourImaging = useMemo(() => createPausedTourImaging({
+    entries: linkEntries, allowedIds: educationAllowedIds,
+  }), [linkEntries, educationAllowedIds]);
+  // Subscription owners detach the observer. Suspend, rather than terminally
+  // dispose this memo, so development StrictMode replay remains fail-closed.
+  useEffect(() => () => pausedTourImaging.suspend(), [pausedTourImaging]);
   useBodyEducationLink({
     entries: linkEntries, allowedIds: educationAllowedIds,
     disabled: exam || inlineStudy || guidedLearning, contextKey: `${initialRegion}/${side}`,
     enabled: presentation === 'panel',
+    pausedTour: pausedTourImaging,
+    allowPausedTour: presentation === 'panel' && guidedLearning && !exam && !inlineStudy,
   });
   const select = useCallback(
     (id: string) => {
@@ -895,6 +935,9 @@ export default function BodyExplorer({
   }
   function changeFocus(id: string, beforeApply?: () => void) {
     if (exam || !profile.focuses.some((item) => item.id === id)) return false;
+    if (id === coronaryArterialStudyId &&
+        (!['thorax', 'whole-body'].includes(initialRegion) ||
+         !coronaryArterialStudyFor(catalog, regionStructures))) return false;
     if (!limbVascularStudyReady(catalog, initialRegion, id)) return false;
     if (!longusColliStudyReady(catalog, initialRegion, id, side)) return false;
     beforeApply?.();
@@ -1156,6 +1199,7 @@ export default function BodyExplorer({
   }
   function onSceneSelect(id: string) {
     if (!displayReady) return;
+    if (coronaryScene.contextIds.includes(id)) return;
     if (exam) {
       if (practice.mode === 'find' || practice.mode === 'reason')
         submitPractice(id);
@@ -1516,9 +1560,10 @@ export default function BodyExplorer({
               />
             );
           const Icon = icons[system],
-            count = regionStructures.filter((s) => s.system === system).length;
+            count = regionStructures.filter((s) => s.system === system).length,
+            toggle = bodySystemToggle(count, systems[system], exam);
           return (
-            <div key={system} className={systems[system] ? 'active' : ''}>
+            <div key={system} className={toggle.checked ? 'active' : ''}>
               <Icon style={{ color: bodySystems[system].color }} />
               <span>
                 {bodySystems[system].name}
@@ -1528,12 +1573,13 @@ export default function BodyExplorer({
                 </small>
               </span>
               <Switch
-                checked={systems[system]}
-                disabled={exam || count === 0}
+                checked={toggle.checked}
+                disabled={toggle.disabled}
                 onCheckedChange={(checked) =>
                   setSystems((prev) => ({ ...prev, [system]: checked }))
                 }
                 aria-label={`Show ${bodySystems[system].name}`}
+                aria-description={!toggle.available ? 'No source structures are available for this system in this region.' : undefined}
               />
             </div>
           );
@@ -1679,7 +1725,7 @@ export default function BodyExplorer({
                 ? 'Same-scale surfaces, grouped by system. At 100%, each catalogue entry has its own space—not an anatomical position.'
                 : layout === 'extract' && !exam
                   ? 'Only the selected structure moves. Others remain assembled. This is a teaching view, not a surgical extraction path.'
-                  : 'Source anatomy at 0% separation. Rotate freely or choose a standard direction.'}
+                  : 'Source anatomy at 0% separation. Spread adds more space across narrow regions; it is a teaching arrangement, not anatomical displacement.'}
             </p>
           </div>
           {!exam && (
@@ -1822,7 +1868,7 @@ export default function BodyExplorer({
         </WorkspaceOnly>
         </>}
       </header>
-      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} onExit={()=>changeGuidedLearning(false)} /> : <>
+      {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : <>
       <div className="body-layout" hidden={inlineStudy}>
         <AnatomyControlRail>{railContent}</AnatomyControlRail>
         <section className="body-workspace" aria-label={`${title} 3D anatomy`}>
@@ -1912,6 +1958,8 @@ export default function BodyExplorer({
                   assetBase={assetBase}
                   catalog={catalog}
                   structures={sceneStructures}
+                  contextIds={coronaryScene.contextIds}
+                  appearance={coronaryScene.appearance}
                   selectedId={selectedId}
                   systems={systems}
                   isolated={isolated && !exam}
@@ -1922,6 +1970,7 @@ export default function BodyExplorer({
                   explode={explode}
                   layout={exam ? 'spatial' : layout}
                   anchorSkeleton={anchorSkeleton}
+                  adaptiveSpread
                   showOrigins={showOrigins && !exam}
                   labels={labels && !exam}
                   view={view}
@@ -1958,8 +2007,7 @@ export default function BodyExplorer({
               {loadStatus.failed.length > 0 && (
                 <div className="body-loading error" role="alert">
                   <p>
-                    Some anatomy could not load. Your dissection settings are
-                    retained.
+                    {accessNotice?.message ?? 'Some anatomy could not load. Your dissection settings are retained.'}
                   </p>
                   <Button
                     size="sm"
@@ -1967,7 +2015,7 @@ export default function BodyExplorer({
                     disabled={retrying}
                     onClick={() => void retryAnatomy()}
                   >
-                    {retrying ? 'Retrying…' : 'Retry missing anatomy'}
+                    {retrying ? 'Retrying…' : accessNotice?.retryLabel ?? 'Retry missing anatomy'}
                   </Button>
                   {retryError && <p role="alert">{retryError}</p>}
                 </div>
@@ -2112,6 +2160,14 @@ export default function BodyExplorer({
         </section>
         <BodyTeachingVisibility.Provider value={!inlineStudy}>
         <AnatomyInfoPanel practice={exam}>
+          <PracticePanelNavigation
+            sessionId={practice.id}
+            index={question}
+            answered={answered}
+            phase={exam
+              ? answered ? 'feedback' : 'question'
+              : workspace.mode === 'practice' && practiceResult ? 'results' : null}
+          />
           {!exam && linkIssue && (
             <div className="body-study-link-issue">
               <output aria-live="polite">{linkIssue}</output>
@@ -2126,7 +2182,6 @@ export default function BodyExplorer({
           )}
           {exam ? (
             <>
-              <PracticePanelNavigation sessionId={practice.id} index={question} answered={answered} />
               <output className="sr-only" aria-live="polite" aria-atomic="true">
                 {`Question ${question + 1} of ${examTargets.length}. ${
                   answered
@@ -2404,12 +2459,12 @@ export default function BodyExplorer({
                     className="vm-practice-result"
                     aria-label="Completed practice results"
                   >
-                    <h2>
+                    <h2 data-practice-results tabIndex={-1} aria-describedby={practiceResultSummaryId}>
                       {practiceResult.length === practice.questions.length
                         ? 'Practice complete'
                         : 'Practice ended'}
                     </h2>
-                    <p>
+                    <p id={practiceResultSummaryId}>
                       {
                         practiceResult.filter((r) => r.target === r.chosen)
                           .length
@@ -2668,7 +2723,7 @@ export default function BodyExplorer({
                         const content = bodyContent(selected, value);
                         return (
                           <div className="atlas-note-body">
-                            <div className="eyebrow">{content.title}</div>
+                            <div className="eyebrow">{teachingHeading(content.title, selected.name)}</div>
                             <p>{content.body}</p>
                             {content.bullets && (
                               <ul>

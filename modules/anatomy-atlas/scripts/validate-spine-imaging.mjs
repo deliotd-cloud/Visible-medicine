@@ -6,6 +6,7 @@ import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import ts from 'typescript';
+import { build } from './workspace-component-test-build.mjs';
 import {
   contentContext,
   contentValidator,
@@ -368,6 +369,10 @@ for (const { identity: s } of pins.entries) {
 const require = createRequire(import.meta.url),
   React = require('react');
 const { renderToStaticMarkup } = require('react-dom/server');
+const built = await build({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const scope = {exports:{}};
+runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,require});
+const {SourceDisplayNotes} = scope.exports;
 const source = await readFile('app/body-explorer.tsx', 'utf8');
 const ast = ts.createSourceFile(
   'body.tsx',
@@ -398,6 +403,7 @@ for (const { identity: selected } of pins.entries)
     const html = renderToStaticMarkup(
       runInNewContext(js, {
         React,
+        SourceDisplayNotes,
         selected,
         topic,
         bodyContent: api.bodyContent,

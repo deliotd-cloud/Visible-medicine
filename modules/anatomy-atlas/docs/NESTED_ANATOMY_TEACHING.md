@@ -1,5 +1,13 @@
 # Nested brain and eye teaching
 
+Current: [right-MCA source explanations](MCA_SOURCE_TEACHING.md) add three explicit
+file-bound Anatomy/CT/MRI drafts and distinct model-scope self-checks. Their
+component-specific Function/Clinical/Pathology and imaging registration remain
+pending. [PICA source explanations](PICA_SOURCE_TEACHING.md) now explicitly bind
+all 26 supplied PICA files to original notes and model-scope checks, still without
+parent inheritance or independently named branches. See CURRENT_STATUS.md for
+current totals; milestone counts below remain historical.
+
 [Component imaging shortcuts](COMPONENT_IMAGING_NAVIGATION.md) now connect a parent organ's imaging tab to its available source-bound child drafts. Requested notes open directly in the existing workbench; ordinary entry remains collapsed. Child coverage is not copied into whole-organ teaching and no scan/lecture entitlement changes.
 
 The [pancreatic/biliary imaging extension](DUCT_IMAGING_TEACHING.md) adds four shared sections across four existing selections, without changing 40 concepts / 65 source representations / ten parents. References now total 78. CT readiness is 35 draft / 30 pending; MRI 35 / 30; ultrasound 28 / 37. Core content and source pins are unchanged. Earlier totals below are historical.

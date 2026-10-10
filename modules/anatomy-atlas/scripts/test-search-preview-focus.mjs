@@ -33,7 +33,7 @@ const built=await build({
 });
 const scope={exports:{}},uiWindow={innerWidth:1280,innerHeight:720};
 runInNewContext(built.outputFiles[0].text,{
-  module:scope,exports:scope.exports,console,URLSearchParams,window:uiWindow,
+  module:scope,exports:scope.exports,console,structuredClone,URLSearchParams,window:uiWindow,
   process:{env:{NODE_ENV:'test'}},
   require:id=>id==='react'?shim:id==='next/link'?()=>null:require(id),
 });

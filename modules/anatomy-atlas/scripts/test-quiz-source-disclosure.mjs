@@ -1,0 +1,38 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import {build} from './workspace-component-test-build.mjs';
+const require=createRequire(import.meta.url),React=require('react');
+const {renderToStaticMarkup}=require('react-dom/server');
+const bundled=await build({stdin:{contents:"export {QuizNotes,AtlasWorkspace} from './app/atlas-workspace';export {BodyTeachingVisibility} from './app/lazy-body-teaching';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+let open=false,exam=false;
+const shim={...React,useState:()=>[open,value=>{open=value;}],useContext:context=>context===events.BodyTeachingVisibility?true:{exam}};
+function load(react){const scope={exports:{}};runInNewContext(bundled.outputFiles[0].text,{module:scope,exports:scope.exports,structuredClone,require:id=>id==='react'?react:id==='next/link'?()=>{throw Error('Unrelated Next Link must not render');}:require(id),console});return scope.exports;}
+const events=load(shim),actual=load(React);
+const walk=(node,found=[])=>{if(React.isValidElement(node)){found.push(node);React.Children.forEach(node.props.children,c=>walk(c,found));}return found;};
+const structure={id:'test:one',name:'First structure'};
+const content={body:'Question?',bullets:['A','B'],correctAnswer:'B',explanation:'Explanation',note:'Exact source limits; review pending.',citations:['https://example.org/reference']};
+function loaded(s=structure,c=content){const outer=events.QuizNotes({structure:s});const lazy=walk(outer).find(n=>n.type.name==='LazyBodyTeaching');return {outer,lazy,tree:lazy.props.children({bodyContent:()=>c})};}
+let result=loaded();assert.equal(result.lazy.props.enabled,false);
+result.outer.props.onToggle({currentTarget:{open:true}});result=loaded();assert.equal(result.lazy.props.enabled,true);
+const sources=tree=>walk(tree).find(n=>n.props.className==='atlas-quiz-sources');
+const disclosure=sources(result.tree);assert.equal(disclosure.type,'details');assert.equal(disclosure.props.open,undefined);
+assert.equal(walk(disclosure).find(n=>n.type==='summary').props.children,'Sources & limitations');
+assert.equal(walk(disclosure).find(n=>n.type==='p').props.children,content.note);
+const link=walk(disclosure).find(n=>n.type==='a');assert.equal(link.props.href,content.citations[0]);assert.equal(link.props.target,'_blank');assert.equal(link.props.rel,'noreferrer');
+assert(!walk(disclosure).some(n=>n.type.name==='StructureQuickCheck'),'Question is not inside collapsed sources');
+const quiz=walk(result.tree).find(n=>n.type.name==='StructureQuickCheck');
+assert.deepEqual(JSON.parse(JSON.stringify(quiz.props)),{question:content.body,choices:content.bullets,correctAnswer:'B',explanation:content.explanation});
+const html=renderToStaticMarkup(result.tree);assert(html.includes('Formative draft · not a scored assessment'));
+assert(!/<details[^>]*open/.test(html));assert.equal((html.match(/type="radio"/g)||[]).length,2);
+for(const changed of [{...content,body:'New question?'},{...content,note:'New limits'},{...content,citations:['https://example.org/new']}])assert.notEqual(sources(loaded(structure,changed).tree).key,disclosure.key);
+assert.notEqual(sources(loaded({...structure,id:'test:two'}).tree).key,disclosure.key);
+assert.equal(sources(loaded(structure,{...content,note:undefined,citations:[]}).tree),undefined);
+assert(sources(loaded(structure,{...content,note:undefined}).tree));
+assert(sources(loaded(structure,{...content,citations:undefined}).tree));
+const fallback=loaded(structure,{...content,correctAnswer:undefined}).tree;
+assert(!walk(fallback).some(n=>n.type.name==='StructureQuickCheck'));assert(sources(fallback));
+result.outer.props.onToggle({currentTarget:{open:false}});assert.equal(loaded().lazy.props.enabled,false);
+exam=true;assert.equal(events.QuizNotes({structure}),null);
+assert.equal(renderToStaticMarkup(React.createElement(actual.AtlasWorkspace,{exam:true},React.createElement(actual.QuizNotes,{structure}))).includes('Sources &amp; limitations'),false);
+console.log('Quiz sources: collapsed native disclosure, complete provenance, content reset keys, lazy loading, unchanged answer props and exam isolation pass.');

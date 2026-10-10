@@ -5,14 +5,23 @@ import pins from '../content/tentorium-imaging-pins.json' with {type:'json'};
 import transition from '../content/tentorium-imaging-transition.json' with {type:'json'};
 import {hash,snapshot} from './pin-tentorium-imaging.mjs';
 import {beforeCranialBoneQuiz} from './cranial-bone-quiz-history.mjs';
+import {beforeThoracicBoneEpoch} from './late-teaching-epoch-history.mjs';
+import {beforeCubitalVenousUltrasound} from './cubital-venous-ultrasound-history.mjs';
 export function beforeTentoriumImaging(api,display){
- api=beforeCranialBoneQuiz(api,display);
- if(typeof api.bodyLesson!=='function')return api;
- if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  assert.equal(hash(pins),'47d878a56e0e7643ca3f45ce6ce2e1d67f4554b275604d401f670ba777a248ff');
  assert.equal(hash(transition),'e625cfceb507042600f1111b34ab9f5faba10b612e203c89ef50f940cd2a804e');
  assert.equal(transition.pinsHash,hash(pins));assert.equal(transition.parentCommit,pins.parentCommit);
  assert.equal(transition.previousAllLessonsAndRecipesHash,pins.previousAllLessonsAndRecipesHash);
+ // An exact earlier whole epoch must not be reinterpreted as the cranial
+ // epoch. Still verify all registered later helpers and pinned source bodies.
+ api=beforeThoracicBoneEpoch(api,display);
+ if(display&&typeof api.bodyLesson==='function'&&hash(snapshot(api,display))===pins.previousAllLessonsAndRecipesHash){
+  assert.equal(beforeCubitalVenousUltrasound(api,display),api);
+  return api;
+ }
+ api=beforeCranialBoneQuiz(api,display);
+ if(typeof api.bodyLesson!=='function')return api;
+ if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>e.topics.every(t=>api.bodyLesson(e.identity,t)===undefined)))return api;
  const rows=new Map(transition.entries.map(r=>[r.id+'|'+r.tab,r]));assert.equal(rows.size,2);assert.equal(transition.entries.length,2);
  let old=0,current=0;const previous=new Map();
  for(const e of pins.entries)for(const t of e.topics){

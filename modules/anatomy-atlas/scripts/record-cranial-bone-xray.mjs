@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {build} from './workspace-test-build.mjs';
+const pins=JSON.parse(readFileSync('content/cranial-bone-xray-pins.json'));
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+assert.equal(hash(pins),'5497466123cc60d6542f4db556d118f00749ad8558f907d15b60e5861a420423');
+const compiled=await build({stdin:{contents:"export {cranialBoneXrayLesson} from './lib/cranial-bone-xray';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const record={baseline:pins.baseline,sourcePinsHash:hash(pins),reason:'Eight exact-source cranial-bone X-ray drafts; prior pending teaching reconstructs historical snapshots only.',entries:pins.entries.map(({identity})=>({id:identity.id,fmaId:identity.fmaId,draftHash:hash(api.cranialBoneXrayLesson(identity,'xray'))}))};
+const path='content/cranial-bone-xray.transition.json',text=JSON.stringify(record,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),text);else writeFileSync(path,text,{flag:'wx'});
+console.log(JSON.stringify({entries:record.entries.length,transitionHash:hash(record)}));

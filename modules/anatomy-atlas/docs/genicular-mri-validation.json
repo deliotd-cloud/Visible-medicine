@@ -1,0 +1,19 @@
+{
+  "historicalValidationEpoch": "f97ea55ee2e7b57865c012650b40fc44041f45da",
+  "actualCurrentValidation": "scripts/test-elbow-arterial-mri.mjs",
+  "baseline": "2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5",
+  "sourceTargets": 8,
+  "newMriPlacements": 8,
+  "otherTopicPlacementsPreserved": 9928,
+  "changedTeachingWorksheets": 8,
+  "preservedTeachingWorksheets": 1096,
+  "mutatedSourceRefusals": 304,
+  "malformedPacketsRefused": 40,
+  "staleRefusalsBeforeStorage": 8,
+  "storageCalls": 0,
+  "authoredWords": 139,
+  "allEarlierReasoningAndToursPreserved": true,
+  "geometryAndUiUnchanged": true,
+  "clinicalApproval": false,
+  "browserAcceptance": false
+}

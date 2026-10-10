@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFileSync,writeFileSync} from 'node:fs';
+const parentCommit='193fb837176dd3bb2a991754f2f2f087c55978b3';
+const path='public/models/bodyparts3d/full-body/catalog.json';
+const bytes=readFileSync(path,'utf8');
+assert.equal(bytes,execFileSync('git',['show',parentCommit+':'+path],{encoding:'utf8',maxBuffer:32e6}),'No source substitution');
+const catalog=JSON.parse(bytes);
+const names=['small-saphenous-vein','popliteal-vein','femoral-vein','great-saphenous-vein','external-iliac-vein','common-iliac-vein'];
+const entries=names.flatMap(name=>catalog.structures.filter(s=>['right','left'].includes(s.laterality)&&s.id.endsWith(':'+s.laterality+'-'+name)).map(identity=>({key:'lower-venous-'+name,identity})));
+assert.equal(entries.length,12);assert.equal(new Set(entries.map(e=>e.identity.id)).size,12);
+for(const name of names)assert.deepEqual(entries.filter(e=>e.key==='lower-venous-'+name).map(e=>e.identity.laterality).sort(),['left','right']);
+const data={parentCommit,sourceVersion:catalog.sourceVersion,coordinateSystem:catalog.coordinateSystem,bundles:catalog.bundles.filter(b=>entries.some(e=>e.identity.bundle===b.id)),entries};
+const output=JSON.stringify(data,null,2)+'\n',target='content/lower-venous-reasoning-pins.json';
+if(process.argv.includes('--check'))assert.equal(readFileSync(target,'utf8'),output);else writeFileSync(target,output);
+console.log('12 complete lower-limb venous source identities pinned; anatomy unchanged');

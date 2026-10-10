@@ -373,7 +373,9 @@ export function BodyReviewDetails({
       </p>
       <div className="body-review-actions">
         {material.atlasLink && (
-          <Link href={material.atlasLink}>Open this model</Link>
+          <a href={material.atlasLink} target="_blank" rel="noopener noreferrer">
+            Open this model in a separate tab
+          </a>
         )}
         <a
           href={`/api/body-review?structure=${encodeURIComponent(s.id)}&download=1`}

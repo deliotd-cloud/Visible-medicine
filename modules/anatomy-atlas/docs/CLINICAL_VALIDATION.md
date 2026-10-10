@@ -1,5 +1,25 @@
 # Clinical validation checklist
 
+Cardiac cavity Anatomy/Function depth: review the eight original draft notes in
+[the cavity teaching module](../content/cardiac-cavity-depth.ts) against the four
+exact existing heart-cavity selections. Check right-ventricular anterior position,
+left-atrial posterior relationships, venous return and valve-route explanations.
+The selected surfaces are static cavity spaces, not myocardium, septal tissue,
+valve leaflets, labelled ostia, joined lumens, motion or acquired imaging. Do not
+infer pressure, contractility, wall thickness, volumes or ejection fraction.
+The new teaching revisions require fresh owner-radiologist sign-off; earlier
+approvals are not transferred. All other nested teaching, modality notes, quizzes
+and source identities are retained. Primary references inform original prose;
+their protected illustrations and videos have not been imported.
+
+[Coronary arterial tour](CORONARY_ARTERIAL_TOUR.md): review six source-bound
+camera stops, the repeated circumflex comparison, all four artery selections and
+heart context. Confirm grouped LAD/circumflex source-file counts are not taught as
+clinical segments, and that missing ostia, lumens, posterior interventricular supply,
+dominance, flow and patient registration remain explicit. Verify labels, tiny-trunk
+framing, fading, smooth/pause-safe motion and exact teaching-review scope. No source
+fixture, component harness or prior dissection approval accepts these new captions.
+
 [Worksheet integrity](BODY_REVIEW_INTEGRITY.md): current-build display comparisons
 reject altered source or teaching evidence under unchanged claimed revisions.
 This preserves existing decisions; it does not grant clinical approval, verify

@@ -1,0 +1,817 @@
+{
+  "parentCommit": "e7608c0719fbf77b0f1a350d648dd695be23be6b",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "spine-muscles",
+      "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+      "bytes": 5127960,
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "structures": 52
+    },
+    {
+      "id": "pelvis-muscles",
+      "url": "/models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "bytes": 115108,
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+      "structures": 2
+    },
+    {
+      "id": "foot-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "bytes": 178072,
+      "sha256": "3a85853e4f552b5d2f4a9a63bc5efec306d13205a08633125cc0ff78939c2a63",
+      "structures": 8
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:muscle:left-coccygeus",
+        "fmaId": "FMA46444",
+        "name": "Left coccygeus",
+        "sourceName": "left coccygeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-muscles",
+        "nodeName": "FMA46444",
+        "bounds": {
+          "min": [
+            0.024764901027083397,
+            -0.11950012296438217,
+            -0.41240960359573364
+          ],
+          "max": [
+            0.48713797330856323,
+            0.28689026832580566,
+            -0.11961498111486435
+          ]
+        },
+        "center": [
+          0.2559514371678233,
+          0.08369507268071175,
+          -0.266012292355299
+        ],
+        "anchor": [
+          0.2823669910430908,
+          0.08296997100114822,
+          -0.2965199947357178
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1449M",
+            "sha256": "9ef81d97ab697662e5701385dd7a92a3528612f7a98ef042bbaafde2f1426d24"
+          },
+          {
+            "file": "FJ2542",
+            "sha256": "c2599aa898ecec192abe6441c4764e04cd25642255175ac4f676424be2fe5846"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "coccygeus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left coccygeus on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+        "fmaId": "FMA46310",
+        "name": "Left longus capitis",
+        "sourceName": "left longus capitis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA46310",
+        "bounds": {
+          "min": [
+            0.010373200289905071,
+            5.856999397277832,
+            0.27329200506210327
+          ],
+          "max": [
+            0.2548089921474457,
+            6.966400146484375,
+            0.4504860043525696
+          ]
+        },
+        "center": [
+          0.13259109621867537,
+          6.4116997718811035,
+          0.3618890047073364
+        ],
+        "anchor": [
+          0.17037099599838257,
+          6.4205002784729,
+          0.3883119821548462
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1561",
+            "sha256": "a805c03e24aadb8da137abb8533543f4561db28e050b7bc6bb6f7ba70a0f1ac0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "longus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left longus capitis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+        "fmaId": "FMA46314",
+        "name": "Left rectus capitis anterior",
+        "sourceName": "left rectus capitis anterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA46314",
+        "bounds": {
+          "min": [
+            0.020251600071787834,
+            6.71660041809082,
+            0.27399298548698425
+          ],
+          "max": [
+            0.27686500549316406,
+            6.932700157165527,
+            0.37695297598838806
+          ]
+        },
+        "center": [
+          0.14855830278247595,
+          6.824650287628174,
+          0.32547298073768616
+        ],
+        "anchor": [
+          0.1467140018939972,
+          6.833799839019775,
+          0.33051598072052
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1566",
+            "sha256": "f063c76b3d4b1b6ebdd8f7504fa7a0d1d8f3b8d2e1e3bb45da9fb46ff42db15e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anterior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left rectus capitis anterior on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+        "fmaId": "FMA46318",
+        "name": "Left rectus capitis lateralis",
+        "sourceName": "left rectus capitis lateralis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA46318",
+        "bounds": {
+          "min": [
+            0.2597769796848297,
+            6.665400505065918,
+            0.11664600670337677
+          ],
+          "max": [
+            0.4003320038318634,
+            6.896100044250488,
+            0.27531898021698
+          ]
+        },
+        "center": [
+          0.33005449175834656,
+          6.780750274658203,
+          0.19598249346017838
+        ],
+        "anchor": [
+          0.3532640039920807,
+          6.774899959564209,
+          0.20987999439239502
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1569",
+            "sha256": "d5cee1b4060b42602f81ab57e0fe7ae8da4288e8dd215928d2f369715524ee1d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateralis",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left rectus capitis lateralis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+        "fmaId": "FMA46309",
+        "name": "Right longus capitis",
+        "sourceName": "right longus capitis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA46309",
+        "bounds": {
+          "min": [
+            -0.26782000064849854,
+            5.856800556182861,
+            0.27195602655410767
+          ],
+          "max": [
+            -0.023114299401640892,
+            6.966899394989014,
+            0.45033302903175354
+          ]
+        },
+        "center": [
+          -0.1454671500250697,
+          6.4118499755859375,
+          0.3611445277929306
+        ],
+        "anchor": [
+          -0.17915600538253784,
+          6.406500339508057,
+          0.393636018037796
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1582",
+            "sha256": "2b0def59b27f6f6c654983b04daf3401997517a7c93bfff5bf70d0d0eb875ac9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "longus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right longus capitis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+        "fmaId": "FMA46313",
+        "name": "Right rectus capitis anterior",
+        "sourceName": "right rectus capitis anterior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA46313",
+        "bounds": {
+          "min": [
+            -0.28919801115989685,
+            6.724300384521484,
+            0.2807389795780182
+          ],
+          "max": [
+            0.20023299753665924,
+            6.933800220489502,
+            0.3768109977245331
+          ]
+        },
+        "center": [
+          -0.044482506811618805,
+          6.829050302505493,
+          0.32877498865127563
+        ],
+        "anchor": [
+          -0.06414730101823807,
+          6.851999282836914,
+          0.3364199697971344
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1588",
+            "sha256": "b7ad7dca09e8946a29dbcabf3cd2a01e724df5b4a2e5da0d67eadd5017eb736b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "anterior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right rectus capitis anterior on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+        "fmaId": "FMA46317",
+        "name": "Right rectus capitis lateralis",
+        "sourceName": "right rectus capitis lateralis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA46317",
+        "bounds": {
+          "min": [
+            -0.4124950170516968,
+            6.681099891662598,
+            0.11695201694965363
+          ],
+          "max": [
+            -0.2819400131702423,
+            6.896600246429443,
+            0.2793419659137726
+          ]
+        },
+        "center": [
+          -0.34721751511096954,
+          6.7888500690460205,
+          0.1981469914317131
+        ],
+        "anchor": [
+          -0.37005698680877686,
+          6.780600547790527,
+          0.20153602957725525
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1591",
+            "sha256": "7c7266e6c06e8b74784c92b7be97c2bef843252fbb8a493d21db31e6c226b828"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateralis",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right rectus capitis lateralis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:muscle:right-coccygeus",
+        "fmaId": "FMA46443",
+        "name": "Right coccygeus",
+        "sourceName": "right coccygeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-muscles",
+        "nodeName": "FMA46443",
+        "bounds": {
+          "min": [
+            -0.48713797330856323,
+            -0.11921997368335724,
+            -0.4129047989845276
+          ],
+          "max": [
+            -0.024764901027083397,
+            0.28624022006988525,
+            -0.11961498111486435
+          ]
+        },
+        "center": [
+          -0.2559514371678233,
+          0.08351012319326401,
+          -0.26625989004969597
+        ],
+        "anchor": [
+          -0.2826650142669678,
+          0.08257995545864105,
+          -0.2961759865283966
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2547",
+            "sha256": "d35abd27f997258397ede969ad78b9943c1f7f52bf7dd564d106cfc32af6eb5b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "coccygeus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right coccygeus on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:oblique-head-of-right-adductor-hallucis",
+        "fmaId": "FMA46018",
+        "name": "Oblique head of right adductor hallucis",
+        "sourceName": "oblique head of right adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46018",
+        "bounds": {
+          "min": [
+            -1.1313400268554688,
+            -8.656678199768066,
+            0.5724199414253235
+          ],
+          "max": [
+            -0.9530239701271057,
+            -8.36751937866211,
+            1.2364000082015991
+          ]
+        },
+        "center": [
+          -1.0421819984912872,
+          -8.512098789215088,
+          0.9044099748134613
+        ],
+        "anchor": [
+          -1.0516899824142456,
+          -8.541279792785645,
+          0.917389988899231
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1398",
+            "sha256": "346020de3eb54e85a76fed52b2742fb86c596db4a413a717ce93d55a6d589b34"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "oblique",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find oblique head of right adductor hallucis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
+        "fmaId": "FMA46019",
+        "name": "Oblique head of left adductor hallucis",
+        "sourceName": "oblique head of left adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46019",
+        "bounds": {
+          "min": [
+            0.9530239701271057,
+            -8.656678199768066,
+            0.5724199414253235
+          ],
+          "max": [
+            1.1313400268554688,
+            -8.36751937866211,
+            1.2364000082015991
+          ]
+        },
+        "center": [
+          1.0421819984912872,
+          -8.512098789215088,
+          0.9044099748134613
+        ],
+        "anchor": [
+          1.0516899824142456,
+          -8.541280746459961,
+          0.917389988899231
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1398M",
+            "sha256": "b5ac05430038cb79e795e8f957219f2cb1c4a7f5c30139745a8d44f7cd562bd9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "oblique",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find oblique head of left adductor hallucis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "fmaId": "FMA46020",
+        "name": "Transverse head of right adductor hallucis",
+        "sourceName": "transverse head of right adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46020",
+        "bounds": {
+          "min": [
+            -1.4013299942016602,
+            -8.655768394470215,
+            0.9792900085449219
+          ],
+          "max": [
+            -0.9830909967422485,
+            -8.583616256713867,
+            1.2895199060440063
+          ]
+        },
+        "center": [
+          -1.1922104954719543,
+          -8.619692325592041,
+          1.1344049572944641
+        ],
+        "anchor": [
+          -1.1960399150848389,
+          -8.611153602600098,
+          1.1220300197601318
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1445",
+            "sha256": "b62f353790db0c2b504f502e6fadd1be4f951290dc76bd39a8019fe202ef36c9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transverse",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find transverse head of right adductor hallucis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "fmaId": "FMA46021",
+        "name": "Transverse head of left adductor hallucis",
+        "sourceName": "transverse head of left adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46021",
+        "bounds": {
+          "min": [
+            0.9830909967422485,
+            -8.655768394470215,
+            0.9792900085449219
+          ],
+          "max": [
+            1.4013299942016602,
+            -8.583616256713867,
+            1.2895199060440063
+          ]
+        },
+        "center": [
+          1.1922104954719543,
+          -8.619692325592041,
+          1.1344049572944641
+        ],
+        "anchor": [
+          1.1960399150848389,
+          -8.611153602600098,
+          1.1220399141311646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1445M",
+            "sha256": "35d51d3af78f7bbb4bf1bf10292f66a3c82485d66c0cdab1a38d3b0bb329b8c2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transverse",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find transverse head of left adductor hallucis on the model."
+      }
+    }
+  ]
+}

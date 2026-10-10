@@ -4,7 +4,11 @@ import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/cranial-bone-quiz-pins.json' with {type:'json'};
 import transition from '../content/cranial-bone-quiz-transition.json' with {type:'json'};
 import {hash,snapshot} from './cranial-bone-quiz-transition.mjs';
+import {beforeLumbarSacralQuiz} from './lumbar-sacral-quiz-history.mjs';
+import {beforeCubitalVenousUltrasound} from './cubital-venous-ultrasound-history.mjs';
 export function beforeCranialBoneQuiz(api,display){
+ api=beforeLumbarSacralQuiz(api);
+ api=beforeCubitalVenousUltrasound(api,display);
  if(typeof api.bodyLesson!=='function')return api;
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>api.bodyLesson(e.identity,'quiz')===undefined))return api;
  assert.equal(hash(pins),'f7df7164f4ab0a662fa77027ca8825a8c8193fb46d07ae6f1e559c5d02d5cc56');
@@ -19,7 +23,11 @@ export function beforeCranialBoneQuiz(api,display){
   else{assert.equal(hash(now),row.currentHash,'Unrecorded cranial bone quiz change');current++;}
   previous.set(e.identity.id,e);
  }
- assert(old===8||current===8,'Mixed cranial bone quiz history');if(old===8)return api;
+ assert(old===8||current===8,'Mixed cranial bone quiz history');
+ if(old===8){
+  if(display)assert.equal(hash(snapshot(api,display)),pins.previousAllLessonsAndRecipesHash,'Unrecorded complete prior cranial teaching snapshot');
+  return api;
+ }
  if(display)assert.equal(hash(snapshot(api,display)),transition.currentAllLessonsAndRecipesHash,'Unrecorded complete teaching snapshot');
  const matches=(s,t)=>t==='quiz'&&isDeepStrictEqual(s,previous.get(s.id)?.identity);
  const bodyLesson=(s,t)=>matches(s,t)?structuredClone(previous.get(s.id).previous.quiz):api.bodyLesson(s,t);

@@ -115,3 +115,11 @@
 .body-app[data-presentation='panel'][data-panel-short='true'][data-panel-tools='false'][data-focus-view='false'] .body-workspace {
   overflow-y:auto;
 }
+
+/* Keep questions primary; full provenance remains one native disclosure away. */
+.atlas-quiz-sources { margin-top:1rem; }
+.atlas-quiz-sources > summary { cursor:pointer; padding:.5rem 0; }
+.atlas-quiz-sources > summary:focus-visible {
+  outline:2px solid currentColor; outline-offset:3px; border-radius:2px;
+}
+.atlas-quiz-sources > a { display:block; padding:.35rem 0; overflow-wrap:anywhere; }

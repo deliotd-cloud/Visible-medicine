@@ -7,6 +7,7 @@ import { makeStudyLink } from './study-links';
 import { structureSearchAliases } from './anatomy-search';
 import { bodyReasoningReview } from './body-reasoning-review';
 import { regionalTourEvidence } from './regional-tours';
+import { coronaryArterialReviewChecks } from './coronary-arterial-review';
 
 // Read-only review material, separate from private signed shoulder decisions.
 const catalog = bodyDisplayCatalog(rawCatalog as unknown as BodyCatalog);
@@ -94,7 +95,8 @@ export function bodyReviewSnapshot(id: string) {
   }));
   const reasoning = bodyReasoningReview(catalog, id);
   const guidedTours = regionalTourEvidence(catalog, id);
-  const checks = {geometry:[...bodyReviewChecks.geometry],teaching:[...bodyReviewChecks.teaching] as string[],imaging:[...bodyReviewChecks.imaging]};
+  const checks = {geometry:[...bodyReviewChecks.geometry] as string[],teaching:[...bodyReviewChecks.teaching] as string[],imaging:[...bodyReviewChecks.imaging]};
+  checks.geometry.push(...coronaryArterialReviewChecks(catalog, id));
   if (guidedTours.length) checks.teaching.push('Review the entire displayed guided tour, all context surfaces, captions, references, target selections and camera transitions; record framing or teaching corrections.');
   return structuredClone({
     source,

@@ -1,0 +1,1249 @@
+{
+  "schemaVersion": 1,
+  "purpose": "source-only-unresolved-disc-review",
+  "sourceVersion": "4.0",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "preparationSha256": "80a31dc88bc8e85561e5f3702b7697485ea547a4a85c7b3264ceb24291c66cd7",
+  "algorithmSha256": {
+    "disc-source-review-report.mjs": "5b5a88b93c68dfcd4e67042487aa7c218846674405c91d9a5a248fc8760d229c",
+    "source-surface-audit.mjs": "506c82a42b440186655d8ad8ebcb452cef60af51cba07a697827d83bd9d6960b",
+    "source-spatial-math.mjs": "de2042103697c693309ea618391ff27a1a406304aef7c04980d5728ba72b05c3",
+    "source-topology.mjs": "fe68b381c4a5ae23ac858e9d790e531270699c02a29629255373e00c9150f4fe"
+  },
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "sourceArchives": [
+    {
+      "tree": "isa",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "directorySha256": "879093c967e40eca17a8f21ba5b08ba9913760118502e99f68ce3c03f659b559",
+      "entryCount": 2234
+    },
+    {
+      "tree": "partof",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip",
+      "directorySha256": "eec3420cee5f54a6039a441b9801402bf205145719dedaf72fbfd03538fde144",
+      "entryCount": 1258
+    }
+  ],
+  "meshes": [
+    {
+      "key": "isa/FJ3211",
+      "role": "candidate",
+      "tree": "isa",
+      "file": "FJ3211",
+      "id": "FMA10446",
+      "name": "intervertebral disk",
+      "held": true,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3211",
+          "sha256": "2b1d69b821267f6446dab98a17ded12898ae2c68890575b435556f1aaf6cc78f",
+          "bytes": 358663
+        }
+      ],
+      "vertices": 4131,
+      "triangles": 3476,
+      "bounds": {
+        "min": [
+          -21.7746,
+          -105.126,
+          1061.5
+        ],
+        "max": [
+          20.4661,
+          -65.797,
+          1078.89
+        ]
+      },
+      "geometrySha256": "4a3145d732f76ac0c3ea77466a7e0465837a88a73db343f1c2f740484d901677"
+    },
+    {
+      "key": "partof/FJ3211",
+      "role": "candidate",
+      "tree": "partof",
+      "file": "FJ3211",
+      "id": "FMA25511",
+      "name": "intervertebral symphysis",
+      "held": true,
+      "sources": [
+        {
+          "tree": "partof",
+          "file": "FJ3211",
+          "sha256": "312819388c2857a2908b6529b463f43406f090748a464d3aa4bd00f0f3920ccd",
+          "bytes": 358666
+        }
+      ],
+      "vertices": 4131,
+      "triangles": 3476,
+      "bounds": {
+        "min": [
+          -21.7746,
+          -105.126,
+          1061.5
+        ],
+        "max": [
+          20.4661,
+          -65.797,
+          1078.89
+        ]
+      },
+      "geometrySha256": "4a3145d732f76ac0c3ea77466a7e0465837a88a73db343f1c2f740484d901677"
+    },
+    {
+      "key": "isa/FJ3155",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3155",
+      "id": "FMA10059",
+      "name": "eleventh thoracic vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3155",
+          "sha256": "1f9c9f6dfcd5585e09abc2cf9a8f54ba1c33df399c6d4dad1a92301d85cd88b3",
+          "bytes": 178070
+        }
+      ],
+      "vertices": 1593,
+      "triangles": 2674,
+      "bounds": {
+        "min": [
+          -26.761,
+          -92.5324,
+          1075.72
+        ],
+        "max": [
+          25.5593,
+          -13.0089,
+          1129.27
+        ]
+      },
+      "geometrySha256": "37301162b6739345c8cdeae2a6e0abde53627bf7f59c7990f6b687b29bce5075"
+    },
+    {
+      "key": "isa/FJ3156",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3156",
+      "id": "FMA10081",
+      "name": "twelfth thoracic vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3156",
+          "sha256": "ffeebd0dead6ed95395e35c0843888b079acf67543e2820437e99978c69642a0",
+          "bytes": 181653
+        }
+      ],
+      "vertices": 1593,
+      "triangles": 2772,
+      "bounds": {
+        "min": [
+          -22.3864,
+          -101.385,
+          1049.96
+        ],
+        "max": [
+          21.0548,
+          -22.5609,
+          1101.59
+        ]
+      },
+      "geometrySha256": "57d14a833ca64293ebce4d043ffe7160c207bb0d7a88200d7ae650d2c656a1cd"
+    },
+    {
+      "key": "isa/FJ3157",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3157",
+      "id": "FMA13072",
+      "name": "first lumbar vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3157",
+          "sha256": "67940f16382935851ebeb7a86c926dbf922070f390c438fdbbb56f7b7fb76057",
+          "bytes": 193798
+        }
+      ],
+      "vertices": 1682,
+      "triangles": 2972,
+      "bounds": {
+        "min": [
+          -35.7798,
+          -109.48,
+          1015.2
+        ],
+        "max": [
+          34.4614,
+          -29.2224,
+          1071.98
+        ]
+      },
+      "geometrySha256": "ed6d763487e7158055149ff6bd994838c2ba02fa2756002261110c18f1b09354"
+    },
+    {
+      "key": "isa/FJ3159",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3159",
+      "id": "FMA13073",
+      "name": "second lumbar vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3159",
+          "sha256": "5e6301d2020ba73167e71c274848ddcbec0f7936d9f26a78f2de8ffa82f095c7",
+          "bytes": 214016
+        }
+      ],
+      "vertices": 1875,
+      "triangles": 3214,
+      "bounds": {
+        "min": [
+          -40.3509,
+          -114.72,
+          992.316
+        ],
+        "max": [
+          39.0608,
+          -34.3488,
+          1039.76
+        ]
+      },
+      "geometrySha256": "d90f6e70424cd7dc387df7dbec8c5224ba67a83e2ebb42ff98bfb5f127286281"
+    },
+    {
+      "key": "isa/FJ3210",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3210",
+      "id": "FMA13508",
+      "name": "intervertebral disk of eleventh thoracic vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3210",
+          "sha256": "8f2a670e4c8271c8ac6c1195cd324e1d5e69255b937e759c99c6ee90279bc21f",
+          "bytes": 308298
+        }
+      ],
+      "vertices": 3353,
+      "triangles": 3336,
+      "bounds": {
+        "min": [
+          -20.7728,
+          -97.0122,
+          1091.61
+        ],
+        "max": [
+          19.4286,
+          -56.9869,
+          1108.24
+        ]
+      },
+      "geometrySha256": "33424e5e9ee868aa4bb1ee09e9790f2c37f67285559a9c6e6bf25e5cffb1de98"
+    },
+    {
+      "key": "isa/FJ3212",
+      "role": "context",
+      "tree": "isa",
+      "file": "FJ3212",
+      "id": "FMA16033",
+      "name": "intervertebral disk of first lumbar vertebra",
+      "held": false,
+      "sources": [
+        {
+          "tree": "isa",
+          "file": "FJ3212",
+          "sha256": "5bcf1493e5210294ed340c9d3146cf28f8961a255cc9bbcbe38526342baefcc1",
+          "bytes": 344934
+        }
+      ],
+      "vertices": 3874,
+      "triangles": 3498,
+      "bounds": {
+        "min": [
+          -21.8952,
+          -112.303,
+          1032.56
+        ],
+        "max": [
+          20.5982,
+          -74.5321,
+          1048.57
+        ]
+      },
+      "geometrySha256": "1fd11972fc234069a96f3d6e6544a04dcbaee1e1852ff4e0425d64bf9f50be64"
+    }
+  ],
+  "sourceDefinitions": [
+    {
+      "tree": "isa",
+      "id": "FMA10446",
+      "name": "intervertebral disk",
+      "representedFile": "FJ3211",
+      "role": "One member of a 23-file generic aggregate, not the whole named organ"
+    },
+    {
+      "tree": "partof",
+      "id": "FMA25511",
+      "name": "intervertebral symphysis",
+      "representedFile": "FJ3211",
+      "role": "Single generic source definition; named vertebral level unresolved"
+    }
+  ],
+  "crossTree": {
+    "bytesIdentical": false,
+    "orderedGeometryIdentical": true,
+    "exactSharedTriangles": 3476,
+    "isaToPartof": {
+      "vertices": {
+        "samples": 1698,
+        "minMm": 0,
+        "medianMm": 0,
+        "maxMm": 0,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1698,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 0.25,
+            "count": 1698,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 1,
+            "count": 1698,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 2,
+            "count": 1698,
+            "weightedFraction": 1
+          }
+        ]
+      },
+      "areaWeightedTriangleCentroids": {
+        "samples": 3476,
+        "minMm": 0,
+        "medianMm": 3.019806626980426e-14,
+        "maxMm": 4.622352198365034e-13,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 3476,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 0.25,
+            "count": 3476,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 1,
+            "count": 3476,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 2,
+            "count": 3476,
+            "weightedFraction": 1
+          }
+        ]
+      }
+    },
+    "partofToIsa": {
+      "vertices": {
+        "samples": 1698,
+        "minMm": 0,
+        "medianMm": 0,
+        "maxMm": 0,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 1698,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 0.25,
+            "count": 1698,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 1,
+            "count": 1698,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 2,
+            "count": 1698,
+            "weightedFraction": 1
+          }
+        ]
+      },
+      "areaWeightedTriangleCentroids": {
+        "samples": 3476,
+        "minMm": 0,
+        "medianMm": 3.019806626980426e-14,
+        "maxMm": 4.622352198365034e-13,
+        "thresholds": [
+          {
+            "mm": 0.1,
+            "count": 3476,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 0.25,
+            "count": 3476,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 1,
+            "count": 3476,
+            "weightedFraction": 1
+          },
+          {
+            "mm": 2,
+            "count": 3476,
+            "weightedFraction": 1
+          }
+        ]
+      }
+    }
+  },
+  "contextDistances": [
+    {
+      "key": "isa/FJ3155",
+      "id": "FMA10059",
+      "name": "eleventh thoracic vertebra",
+      "diagnosticOnly": true,
+      "fromCandidates": [
+        {
+          "key": "isa/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 28.016594062146055,
+            "medianMm": 32.28183103588927,
+            "maxMm": 37.58778272317062,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 28.142637433559084,
+            "medianMm": 32.22145083334333,
+            "maxMm": 37.54783612156112,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        },
+        {
+          "key": "partof/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 28.016594062146055,
+            "medianMm": 32.28183103588927,
+            "maxMm": 37.58778272317062,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 28.142637433559084,
+            "medianMm": 32.22145083334333,
+            "maxMm": 37.54783612156112,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "isa/FJ3156",
+      "id": "FMA10081",
+      "name": "twelfth thoracic vertebra",
+      "diagnosticOnly": true,
+      "fromCandidates": [
+        {
+          "key": "isa/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 0.0005475414476951645,
+            "medianMm": 2.754706464603564,
+            "maxMm": 7.875177491166622,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 88,
+                "weightedFraction": 0.05182567726737338
+              },
+              {
+                "mm": 0.25,
+                "count": 357,
+                "weightedFraction": 0.21024734982332155
+              },
+              {
+                "mm": 1,
+                "count": 771,
+                "weightedFraction": 0.4540636042402827
+              },
+              {
+                "mm": 2,
+                "count": 820,
+                "weightedFraction": 0.4829210836277974
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 0.0004410932222002732,
+            "medianMm": 2.713953615677929,
+            "maxMm": 7.7830327041445235,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 238,
+                "weightedFraction": 0.19108852350001948
+              },
+              {
+                "mm": 0.25,
+                "count": 729,
+                "weightedFraction": 0.3039082005496869
+              },
+              {
+                "mm": 1,
+                "count": 1564,
+                "weightedFraction": 0.39434394487314045
+              },
+              {
+                "mm": 2,
+                "count": 1680,
+                "weightedFraction": 0.4400657280322154
+              }
+            ]
+          }
+        },
+        {
+          "key": "partof/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 0.0005475414476951645,
+            "medianMm": 2.754706464603564,
+            "maxMm": 7.875177491166622,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 88,
+                "weightedFraction": 0.05182567726737338
+              },
+              {
+                "mm": 0.25,
+                "count": 357,
+                "weightedFraction": 0.21024734982332155
+              },
+              {
+                "mm": 1,
+                "count": 771,
+                "weightedFraction": 0.4540636042402827
+              },
+              {
+                "mm": 2,
+                "count": 820,
+                "weightedFraction": 0.4829210836277974
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 0.0004410932222002732,
+            "medianMm": 2.713953615677929,
+            "maxMm": 7.7830327041445235,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 238,
+                "weightedFraction": 0.19108852350001948
+              },
+              {
+                "mm": 0.25,
+                "count": 729,
+                "weightedFraction": 0.3039082005496869
+              },
+              {
+                "mm": 1,
+                "count": 1564,
+                "weightedFraction": 0.39434394487314045
+              },
+              {
+                "mm": 2,
+                "count": 1680,
+                "weightedFraction": 0.4400657280322154
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "isa/FJ3157",
+      "id": "FMA13072",
+      "name": "first lumbar vertebra",
+      "diagnosticOnly": true,
+      "fromCandidates": [
+        {
+          "key": "isa/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 0.00024234258281599977,
+            "medianMm": 3.9904971022777995,
+            "maxMm": 7.937519085431939,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 285,
+                "weightedFraction": 0.16784452296819788
+              },
+              {
+                "mm": 0.25,
+                "count": 555,
+                "weightedFraction": 0.32685512367491165
+              },
+              {
+                "mm": 1,
+                "count": 736,
+                "weightedFraction": 0.4334511189634865
+              },
+              {
+                "mm": 2,
+                "count": 765,
+                "weightedFraction": 0.450530035335689
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 0.00018516944867931674,
+            "medianMm": 3.9698812103482015,
+            "maxMm": 7.898322192695735,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 670,
+                "weightedFraction": 0.1911912464029516
+              },
+              {
+                "mm": 0.25,
+                "count": 1143,
+                "weightedFraction": 0.3336210956664891
+              },
+              {
+                "mm": 1,
+                "count": 1513,
+                "weightedFraction": 0.4051771285282433
+              },
+              {
+                "mm": 2,
+                "count": 1588,
+                "weightedFraction": 0.4534278169925562
+              }
+            ]
+          }
+        },
+        {
+          "key": "partof/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 0.00024234258281599977,
+            "medianMm": 3.9904971022777995,
+            "maxMm": 7.937519085431939,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 285,
+                "weightedFraction": 0.16784452296819788
+              },
+              {
+                "mm": 0.25,
+                "count": 555,
+                "weightedFraction": 0.32685512367491165
+              },
+              {
+                "mm": 1,
+                "count": 736,
+                "weightedFraction": 0.4334511189634865
+              },
+              {
+                "mm": 2,
+                "count": 765,
+                "weightedFraction": 0.450530035335689
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 0.00018516944867931674,
+            "medianMm": 3.9698812103482015,
+            "maxMm": 7.898322192695735,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 670,
+                "weightedFraction": 0.1911912464029516
+              },
+              {
+                "mm": 0.25,
+                "count": 1143,
+                "weightedFraction": 0.3336210956664891
+              },
+              {
+                "mm": 1,
+                "count": 1513,
+                "weightedFraction": 0.4051771285282433
+              },
+              {
+                "mm": 2,
+                "count": 1588,
+                "weightedFraction": 0.4534278169925562
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "isa/FJ3159",
+      "id": "FMA13073",
+      "name": "second lumbar vertebra",
+      "diagnosticOnly": true,
+      "fromCandidates": [
+        {
+          "key": "isa/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 23.311249986412488,
+            "medianMm": 32.18268065725529,
+            "maxMm": 40.040402854027626,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 23.40886273763266,
+            "medianMm": 32.19369184935506,
+            "maxMm": 40.015887860123215,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        },
+        {
+          "key": "partof/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 23.311249986412488,
+            "medianMm": 32.18268065725529,
+            "maxMm": 40.040402854027626,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 23.40886273763266,
+            "medianMm": 32.19369184935506,
+            "maxMm": 40.015887860123215,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "isa/FJ3210",
+      "id": "FMA13508",
+      "name": "intervertebral disk of eleventh thoracic vertebra",
+      "diagnosticOnly": true,
+      "fromCandidates": [
+        {
+          "key": "isa/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 21.675064317321077,
+            "medianMm": 25.93212475253217,
+            "maxMm": 31.297458683669664,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 21.69126002615405,
+            "medianMm": 25.97015254980232,
+            "maxMm": 31.27316587669135,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        },
+        {
+          "key": "partof/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 21.675064317321077,
+            "medianMm": 25.93212475253217,
+            "maxMm": 31.297458683669664,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 21.69126002615405,
+            "medianMm": 25.97015254980232,
+            "maxMm": 31.27316587669135,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "key": "isa/FJ3212",
+      "id": "FMA16033",
+      "name": "intervertebral disk of first lumbar vertebra",
+      "diagnosticOnly": true,
+      "fromCandidates": [
+        {
+          "key": "isa/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 21.092121559482756,
+            "medianMm": 27.4949650694159,
+            "maxMm": 32.040645318407655,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 21.12749115686293,
+            "medianMm": 27.551681170630857,
+            "maxMm": 31.959549219755928,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        },
+        {
+          "key": "partof/FJ3211",
+          "vertices": {
+            "samples": 1698,
+            "minMm": 21.092121559482756,
+            "medianMm": 27.4949650694159,
+            "maxMm": 32.040645318407655,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 3476,
+            "minMm": 21.12749115686293,
+            "medianMm": 27.551681170630857,
+            "maxMm": 31.959549219755928,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 0.25,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 1,
+                "count": 0,
+                "weightedFraction": 0
+              },
+              {
+                "mm": 2,
+                "count": 0,
+                "weightedFraction": 0
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "admissions": 0,
+  "clinicalValidation": false,
+  "sourceGeometryChanged": false,
+  "levelAssigned": false,
+  "admissionApproved": false,
+  "patientRegistration": false,
+  "limitations": [
+    "FJ3211 remains excluded from the learner atlas. No radiological level is assigned, and the PART-OF hold remains in force.",
+    "The IS-A FMA10446 label describes a 23-file aggregate. Its one FJ3211 component is not a complete intervertebral disk collection or a named-level identity.",
+    "Source trees have separate bytes and metadata. File-name equality does not establish geometry or anatomical equivalence.",
+    "Original millimetre coordinates and triangles are preserved. Existing T11, T12, L1, L2 and two neighbouring source-labelled discs provide unvalidated context, not level certification.",
+    "Unsigned distances sample all unique candidate vertices and area-weighted triangle centroids. They are not endplate contact, intersection, tissue continuity, shape validity or automatic level assignment.",
+    "No endplate subdivisions, annulus, nucleus, ligament, nerve, scan or patient registration is created. Revision-bound radiologist adjudication is required before admission."
+  ],
+  "reportRevision": "1538143fd6081ebb3746e6e377765ead025478ab9de94462a2e03e799f3c46b0"
+}

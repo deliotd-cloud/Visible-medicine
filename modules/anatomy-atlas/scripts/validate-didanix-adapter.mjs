@@ -26,6 +26,37 @@ function fixture(kind='ct',relation='exact',count=1){
  return {adapter,bridge,registry,locator,selected,revealed,guards,status,detach,reattach:()=>bridge.attachAtlas(receiver),send:(messageId='event-1',value=locator)=>incoming({messageId,locator:value}),context:()=>context(),access:v=>{access=v;},navigate:v=>{navigate=v;},study:v=>{study=v;},getDisposed:()=>disposed,wait:()=>{let done;const promise=new Promise(r=>{done=r;});pending={promise,done};return done;}};
 }
 const tick=()=>new Promise(r=>setTimeout(r,0));
+// An already accepted viewer event is a bridge-level duplicate. It must not
+// cancel a later outgoing reveal while that reveal waits for the viewer.
+for(const kind of ['ct','mri','xray','ultrasound']) {
+ const f=fixture(kind);f.adapter.setEnabled(true);
+ same(f.send('stable-annotation').status,'selected');
+ const done=f.wait();f.bridge.publish(sourceEntry);
+ same(f.guards.length,1);same(f.guards[0].isCurrent(),true);
+ const status=[...f.status],choices=f.adapter.choices();
+ same(f.send('stable-annotation').status,'duplicate');
+ same(f.guards[0].signal.aborted,false);same(f.guards[0].isCurrent(),true);
+ same(f.status,status);same(f.adapter.choices(),choices);
+ done();await tick();same(f.revealed.length,1);same(f.status.at(-1),'revealed');
+ f.adapter.dispose();
+}
+// A new event still supersedes work. A revoked or stale locator cannot reuse
+// the duplicate exception to leave a pending reveal current.
+for(const kind of ['ct','mri','xray','ultrasound']) {
+ for(const action of ['new','revoked','stale']) {
+  const f=fixture(kind);f.adapter.setEnabled(true);
+  same(f.send('stable-annotation').status,'selected');
+  const done=f.wait();f.bridge.publish(sourceEntry);
+  same(f.guards.length,1);
+  if(action==='revoked')f.access(false);
+  const locator=action==='stale'?{...f.locator,resourceRevision:2}:f.locator;
+  const result=f.send(action==='new'?'fresh-annotation':'stable-annotation',locator);
+  same(result.status,action==='new'?'selected':'paused');
+  same(f.guards[0].signal.aborted,true);same(f.guards[0].isCurrent(),false);
+  done();await tick();same(f.revealed.length,0);
+  f.adapter.dispose();
+ }
+}
 // Closing/replacing the source Atlas must cancel in-flight reveals even when
 // the Education study, entitlement and resource revisions remain unchanged.
 for(const kind of ['ct','mri','xray','ultrasound']) {

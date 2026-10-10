@@ -1694,7 +1694,39 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Popliteus crosses the posterior knee deep to the superficial calf muscles, with its muscle belly on the posterior proximal tibia. Its tendon relates to the lateral knee; adjacent popliteal vessels are not represented.",
+            "references": [
+              {
+                "title": "Jeon et al. · Popliteus arterial dissection (2022)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/35047639/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Inferior medial genicular, posterior tibial and sometimes anterior tibial branches contribute variably; no single source is universal.",
+            "references": [
+              {
+                "title": "Jeon et al. · Popliteus arterial dissection (2022)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/35047639/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "An isolated popliteus surface is not the complete posterolateral corner. Its appearance cannot establish tendon injury or knee instability, and an artery inferred from a generic diagram may miss normal variation.",
+            "references": [
+              {
+                "title": "Jeon et al. · Popliteus arterial dissection (2022)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/35047639/"
+              }
+            ]
+          },
+          "modelLimit": "Capsular and fascial details, vessels and nerves are absent. No arterial entry, perfusion, tendon injury or knee instability is simulated."
+        }
       }
     },
     {
@@ -2894,7 +2926,40 @@
           {
             "nerve": "lateral-plantar"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-foot-depth-20261005-v1",
+          "reviewScope": "foot-depth",
+          "relationships": {
+            "body": "The foot abductor digiti minimi follows the lateral sole from the calcaneal tuberosity to the fifth toe proximal phalanx. It is distinct from the hand muscle of the same name.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "The lateral plantar artery is the main reported supply to foot abductor digiti minimi. Its course and branching are not visible on this reference surface.",
+            "references": [
+              {
+                "title": "Orbay et al. · Cadaveric plantar muscle vascular anatomy",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17413886/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Fatty infiltration of this muscle on MRI alone does not establish Baxter neuropathy. A systematic review found the proposed association uncertain because robust evidence is lacking.",
+            "references": [
+              {
+                "title": "Chen et al. · ADM fatty infiltration and Baxter neuropathy systematic review",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/40836398/"
+              }
+            ]
+          },
+          "modelLimit": "Plantar fascia, nerves and vessels are absent. No fatty infiltration, denervation, compression, measured perfusion, loaded foot behavior or diagnosis is shown."
+        }
       }
     },
     {
@@ -3020,7 +3085,40 @@
           {
             "nerve": "medial-plantar"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-foot-depth-20261005-v1",
+          "reviewScope": "foot-depth",
+          "relationships": {
+            "body": "Abductor hallucis runs along the medial sole from the calcaneal tuberosity toward the hallux proximal phalanx. Its position marks the medial plantar margin, beside deeper plantar structures.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "The medial plantar artery is the principal reported supply to abductor hallucis. This reference muscle does not map its branches or an individual vascular territory.",
+            "references": [
+              {
+                "title": "Orbay et al. · Cadaveric plantar muscle vascular anatomy",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17413886/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A medial plantar muscle silhouette cannot locate tarsal-tunnel nerve compression. The relevant nerve branching and fascial boundaries need an independent examination.",
+            "references": [
+              {
+                "title": "Harej et al. · Sonographic and cadaveric tarsal tunnel anatomy",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/37701055/"
+              }
+            ]
+          },
+          "modelLimit": "Plantar fascia and deeper fascial boundaries are not resolved; nerves and vessels are absent. No compression, measured perfusion, loaded arch behavior or diagnosis is shown."
+        }
       }
     },
     {
@@ -3278,7 +3376,40 @@
           {
             "nerve": "obturator"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Adductor longus is an anterior medial-thigh adductor. It overlies adductor brevis proximally; the profunda femoris passes deeper, while its medial border helps define the femoral triangle.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Obturator and profunda femoris arterial branches typically supply adductor longus.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Groin pain along the medial thigh does not by itself establish an adductor-longus tendon injury. The pubic attachment and neighboring adductors, joint and neural structures require assessment.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "modelLimit": "Proximal tendon architecture, femoral-triangle fascia, vessels and nerves are not mapped. No pain generator, perfusion or tendon lesion is shown."
+        }
       }
     },
     {
@@ -3423,7 +3554,48 @@
             "nerve": "sciatic-tibial",
             "part": "Hamstring part"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Adductor magnus spans the deep medial thigh. Its adductor and hamstring portions have different typical actions; the distal adductor hiatus is the passage where the femoral vessels reach the posterior knee.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Adductor magnus",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              },
+              {
+                "title": "NCBI Bookshelf · Adductor canal",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK556046/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating profunda femoris branches are a major supply. Medial circumflex femoral branches contribute proximally, with variable distal femoral, popliteal or genicular contributions.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Adductor magnus",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "The muscle silhouette cannot locate the adductor hiatus or prove femoral-vessel patency. An apparent division of the muscle is not a validated map of the two motor portions.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Adductor magnus",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK534842/"
+              },
+              {
+                "title": "NCBI Bookshelf · Adductor canal",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK556046/"
+              }
+            ]
+          },
+          "modelLimit": "The adductor hiatus, internal portions, fascial boundaries, vessels and nerves are not individually mapped. No perfusion, entrapment or regional motor loss is simulated."
+        }
       }
     },
     {
@@ -3558,7 +3730,44 @@
           {
             "nerve": "sciatic-tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "The long head arises near semitendinosus at the ischial tuberosity, descends laterally and meets the short head near the fibular head. Only the long head crosses hip and knee.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating profunda femoris branches are the usual supply; proximal hamstrings may also receive inferior gluteal contributions.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A lateral hamstring selection cannot distinguish proximal tendon avulsion from belly strain, short-head disease or a neural cause of weakness. The two heads have different proximal attachments and motor supply.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "modelLimit": "Common proximal tendon, distal tendon details, sciatic nerve branches, vessels and injury planes are not mapped. No loading, perfusion or avulsion is simulated."
+        }
       }
     },
     {
@@ -3815,7 +4024,40 @@
           {
             "nerve": "deep-fibular"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-foot-depth-20261005-v1",
+          "reviewScope": "foot-depth",
+          "relationships": {
+            "body": "Extensor digitorum brevis begins on the superolateral calcaneus and crosses the dorsal foot toward the toe extensor apparatus. Its hallux-directed part is often termed extensor hallucis brevis.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "The dorsalis pedis artery is listed as the usual supply to extensor digitorum brevis. No artery or branch is mapped on this dorsal muscle surface.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A deep fibular nerve pattern cannot be diagnosed from this isolated dorsal muscle. The hallux-directed part is not a separately validated extensor hallucis brevis selection in this source.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscle anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+              }
+            ]
+          },
+          "modelLimit": "Separate extensor hallucis brevis, individual slips, retinacula, nerves and vessels are absent. No weakness, measured perfusion, loaded toe extension or diagnosis is shown."
+        }
       }
     },
     {
@@ -4209,7 +4451,40 @@
           {
             "nerve": "medial-plantar"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-foot-depth-20261005-v1",
+          "reviewScope": "foot-depth",
+          "relationships": {
+            "body": "Flexor digitorum brevis lies in the superficial central sole. Its tendons reach the middle phalanges of toes two through five after splitting around the deeper long-flexor tendons.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Cadaveric dissection found branches from both medial and lateral plantar arteries supplying flexor digitorum brevis. This mesh resolves neither branch nor its territory.",
+            "references": [
+              {
+                "title": "Orbay et al. · Cadaveric plantar muscle vascular anatomy",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17413886/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A selected short-flexor belly does not prove damage to one digital slip. Distinguish its middle-phalanx attachments from the deeper long flexor reaching the distal phalanges.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscle anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+              }
+            ]
+          },
+          "modelLimit": "Individual tendon slips, plantar fascia, nerves and vessels are not resolved. No tendon tear, measured perfusion, toe loading or diagnosis is shown."
+        }
       }
     },
     {
@@ -4420,7 +4695,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Flexor digitorum longus starts in the deep posterior leg. Its tendon crosses behind the medial malleolus, posterior to tibialis posterior, then travels into the sole where quadratus plantae joins the long-flexor apparatus.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "The posterior tibial artery is a typical arterial source for this deep posterior muscle.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "At the medial ankle, an apparent long-flexor course is not a complete tarsal-tunnel map. The nerve and vessels are unsegmented, and four separate digital tendon slips are not validated.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "modelLimit": "The surface lacks flexor retinaculum, compartment fascia, vessels, nerves and validated individual toe slips. It cannot measure perfusion or simulate entrapment."
+        }
       }
     },
     {
@@ -4549,7 +4860,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Flexor hallucis longus lies lateral to the other deep posterior flexors. Its tendon passes behind the medial ankle, courses under the sustentaculum tali and continues toward the great toe beneath the sole.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Flexor hallucis longus anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539776/?report=printable"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Fibular and posterior tibial arterial branches commonly contribute to flexor hallucis longus.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Posteromedial ankle pain should not be assigned to this tendon from position alone. Dynamic tendon motion, its sheath and neighboring neurovascular structures require examination beyond the static muscle surface.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Flexor hallucis longus anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539776/?report=printable"
+              }
+            ]
+          },
+          "modelLimit": "Tendon sheath, retinaculum, fascia, vessels and nerves are absent. The surface cannot show tendon motion, impingement, perfusion or disease."
+        }
       }
     },
     {
@@ -4676,7 +5023,47 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "The lateral head occupies the superficial posterolateral calf beside the medial head, with soleus deep to both. Their distal contributions converge toward the calcaneal tendon; the lateral head borders the popliteal fossa.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Sural branches from the popliteal artery, with posterior tibial contributions, typically supply gastrocnemius.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Evidence about medial-head tennis leg does not establish a lateral-head injury frequency. Lateral calf pain requires its own tissue assessment, including nearby tendon and nonmuscular causes.",
+            "references": [
+              {
+                "title": "Delgado et al. · Tennis-leg ultrasound differential (2002)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              }
+            ]
+          },
+          "modelLimit": "Detailed fascia, vessels and nerves are absent. This head cannot show a tear, venous disorder, measured perfusion or disease progression."
+        }
       }
     },
     {
@@ -4803,7 +5190,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "The medial gastrocnemius head is superficial to soleus and joins the lateral head in the calcaneal tendon apparatus. Plantaris may course between these posterior calf structures; the popliteal fossa lies proximally.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Sural branches of the popliteal artery and posterior tibial branches typically contribute.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A medial calf lesion may involve gastrocnemius, plantaris or neighboring tissues. The tennis-leg ultrasound series also evaluated venous thrombosis; this reference surface cannot rule out a vascular cause.",
+            "references": [
+              {
+                "title": "Delgado et al. · Tennis-leg ultrasound differential (2002)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              }
+            ]
+          },
+          "modelLimit": "Plantaris course, detailed fascia, vessels and nerves are absent. The head cannot display fluid, tear, thrombosis or measured perfusion."
+        }
       }
     },
     {
@@ -5066,7 +5489,48 @@
           {
             "nerve": "superior-gluteal"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Gluteus medius lies over gluteus minimus on the lateral ilium; only its posterior portion is covered by gluteus maximus. It contributes to hip abduction and pelvic support during single-leg stance.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gluteus medius",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557509/"
+              },
+              {
+                "title": "NCBI Bookshelf · Superior gluteal nerve",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK535408/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Deep branches of the superior gluteal artery typically supply gluteus medius.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gluteus medius",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557509/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Pelvic drop or lateral hip pain cannot be attributed to this muscle from shape alone. Tendon integrity, superior gluteal nerve function and competing hip causes require examination.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gluteus medius",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557509/"
+              },
+              {
+                "title": "NCBI Bookshelf · Superior gluteal nerve",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK535408/"
+              }
+            ]
+          },
+          "modelLimit": "Superior gluteal vessels and nerve, tendon subdivisions and adjacent bursae are not resolved. No gait, tendon tear, perfusion or functional weakness is simulated."
+        }
       }
     },
     {
@@ -5593,7 +6057,44 @@
             "nerve": "quadratus-femoris",
             "caveat": "Alternative gemellar innervation is reported."
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-deep-hip-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Inferior gemellus arises from the ischial tuberosity below obturator internus and joins its tendon near the medial greater trochanter. The gemelli have distinct origins and typical motor supplies.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gemelli muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Anatomy references describe inferior gluteal and medial circumflex femoral supply to inferior gemellus. This isolated muscle surface cannot establish either branch or its territory.",
+            "references": [
+              {
+                "title": "UW Radiology · Inferior gemellus",
+                "url": "https://rad.uw.edu/muscle-atlas/inferior-gemellus"
+              },
+              {
+                "title": "Elsevier · Inferior gemellus arterial supply",
+                "url": "https://www.elsevier.com/resources/anatomy/muscular-system/muscles-of-lower-limb/inferior-gemellus-muscle/20349"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "An inferior gemellus selection cannot isolate a deep-gluteal pain generator. Its shared tendon, neighboring obturator internus and absent neural anatomy require independent assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gemelli muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+              }
+            ]
+          },
+          "modelLimit": "The conjoined tendon, adjacent sciatic relationship and arterial branches are not resolved; vessels and nerves are absent. No entrapment, perfusion or diagnosis is shown."
+        }
       }
     },
     {
@@ -5724,7 +6225,44 @@
           {
             "nerve": "obturator"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-deep-hip-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Obturator externus starts outside the obturator membrane, passes below and behind the femoral neck, and reaches the trochanteric fossa. Its course differs from obturator internus.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Obturator muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK589636/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Obturator and medial circumflex femoral arterial branches may supply obturator externus, with variable contributions. The source surface does not show either arterial course.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Obturator muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK589636/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A deep hip surface cannot show obturator-externus tendon injury or establish femoral-head perfusion. Nearby medial circumflex femoral branches require independent vascular assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Obturator muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK589636/"
+              }
+            ]
+          },
+          "modelLimit": "The trochanteric-fossa tendon, femoral-neck vessel relationship and bursa are not resolved; vessels and nerves are absent. No injury, perfusion or diagnosis is shown."
+        }
       }
     },
     {
@@ -5858,7 +6396,44 @@
           {
             "nerve": "obturator-internus"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-deep-hip-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Obturator internus begins on the inner obturator membrane, leaves the pelvis through the lesser sciatic foramen, and turns toward the medial greater trochanter with both gemelli.",
+            "references": [
+              {
+                "title": "Texas Tech · Hip and posterior thigh anatomy",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Gemelli muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Obturator and inferior gluteal branches supply obturator internus; internal pudendal contributions are also described and variable. No arterial branch is mapped on this surface.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Obturator muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK589636/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A posterior hip surface cannot distinguish obturator-internus strain from adjacent joint or neural causes of buttock pain. Its tendon and neighboring sciatic nerve need separate assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Obturator muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK589636/"
+              }
+            ]
+          },
+          "modelLimit": "The lesser sciatic foramen, tendon bend and fascial relations are not fully mapped; vessels and nerves are absent. No strain, perfusion, entrapment or diagnosis is shown."
+        }
       }
     },
     {
@@ -6118,7 +6693,43 @@
           {
             "nerve": "superficial-fibular"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Fibularis longus, named peroneus longus in the source, lies superficial to fibularis brevis laterally. Its tendon turns behind the lateral malleolus and crosses the sole toward the medial cuneiform and first metatarsal.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Branches of the fibular artery usually supply this lateral-compartment muscle.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Lateral ankle pain cannot be assigned to longus from this muscle selection. Brevis, retinacula, tendon sheath and dynamic instability need separate evaluation; the displayed separation is only a viewing control.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "modelLimit": "Lateral compartment fascia, retinacula, vessels and nerves are absent. Brevis and tendon sheath are not validated disease models; no perfusion or instability is simulated."
+        }
       }
     },
     {
@@ -6247,7 +6858,48 @@
           {
             "nerve": "piriformis"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-deep-hip-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Piriformis leaves the anterior sacrum through the greater sciatic foramen toward the upper greater trochanter. The sciatic nerve usually passes below it, but the nerve-muscle relationship varies.",
+            "references": [
+              {
+                "title": "Texas Tech · Hip and posterior thigh anatomy",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Piriformis muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK519497/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Superior and inferior gluteal branches commonly contribute to piriformis supply. Lateral sacral or internal pudendal contributions are also described; none is resolved here.",
+            "references": [
+              {
+                "title": "Texas Tech · Hip and posterior thigh anatomy",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Piriformis muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK519497/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A piriformis silhouette cannot establish sciatic entrapment or a through-muscle nerve variant. Buttock or radiating pain requires clinical assessment beyond this static surface.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Piriformis muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK519497/"
+              }
+            ]
+          },
+          "modelLimit": "Sciatic nerve variants, arterial branches and tendon details are not mapped; vessels and nerves are absent. No compression, perfusion or diagnosis is shown."
+        }
       }
     },
     {
@@ -6509,7 +7161,40 @@
           {
             "nerve": "quadratus-femoris"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-deep-hip-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Quadratus femoris spans the lateral ischial tuberosity to the posterior proximal femur below the gemelli-obturator complex. The ischiofemoral interval includes neighboring bone and soft tissue.",
+            "references": [
+              {
+                "title": "Texas Tech · Hip and posterior thigh anatomy",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_tables.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Inferior gluteal and medial circumflex femoral branches both contribute to quadratus femoris supply. This isolated muscle surface maps neither branch nor an individual perfusion territory.",
+            "references": [
+              {
+                "title": "Cadaveric study · Quadratus femoris arterial supply",
+                "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9773483/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Posterior hip pain cannot be labelled ischiofemoral impingement from quadratus femoris shape. Reported MRI findings include narrowed space and muscle signal change, requiring clinical and imaging correlation.",
+            "references": [
+              {
+                "title": "Torriani et al. · Ischiofemoral MRI study",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/19542413/"
+              }
+            ]
+          },
+          "modelLimit": "The ischiofemoral space, sciatic relationship and tendon boundaries are not measured; vessels and nerves are absent. No impingement, perfusion or diagnosis is shown."
+        }
       }
     },
     {
@@ -6637,7 +7322,52 @@
           {
             "nerve": "lateral-plantar"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-foot-depth-20261005-v1",
+          "reviewScope": "foot-depth",
+          "relationships": {
+            "body": "Quadratus plantae arises near the plantar calcaneus and joins the flexor digitorum longus tendon apparatus. Its usual medial and lateral heads are anatomically variable, not separate selections here.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "Cadaveric study · Quadratus plantae morphology and variation",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/29166622/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Sources describe lateral plantar arterial supply and a direct posterior tibial branch in cadaveric specimens. Neither course nor contribution is established for this source surface.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "Orbay et al. · Cadaveric plantar muscle vascular anatomy",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/17413886/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "This muscle acts through the long-flexor tendon apparatus, not a direct toe-phalanx insertion. One surface cannot identify which head or tendon connection explains an individual symptom.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Foot muscle anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/"
+              },
+              {
+                "title": "Cadaveric study · Quadratus plantae morphology and variation",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/29166622/"
+              }
+            ]
+          },
+          "modelLimit": "Two heads and their tendon connections are not separately validated; plantar fascia, nerves and vessels are absent. No measured perfusion, toe loading or diagnosis is shown."
+        }
       }
     },
     {
@@ -6764,7 +7494,44 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Rectus femoris is the superficial central quadriceps head, overlying vastus intermedius. Unlike the three vasti it crosses both hip and knee; its proximal attachment lies near the anterior inferior iliac spine.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Femoral and lateral circumflex femoral arterial branches typically supply rectus femoris.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Anterior thigh pain or weak knee extension cannot be assigned to rectus femoris by its position alone. Its hip action and shared distal extensor apparatus require examination beyond a static muscle surface.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "The two proximal tendon origins, intramuscular tendon, vessels, nerves and fibre injury are not resolved. No hip or knee movement, strength, perfusion or tear is simulated."
+        }
       }
     },
     {
@@ -7022,7 +7789,44 @@
           {
             "nerve": "sciatic-tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Semimembranosus lies deeper and more medial than semitendinosus in the posterior thigh. It crosses hip and knee and attaches near the posterior medial tibial condyle.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating profunda femoris branches typically supply semimembranosus, with possible proximal inferior gluteal contribution to the hamstring group.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A deep medial hamstring surface does not depict the posteromedial knee stabilising complex. A distal finding needs separate evaluation of tendon, capsule and adjacent structures.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "modelLimit": "Distal capsular expansions, tendon layers, vessels and nerves are not resolved. No knee stability, perfusion or lesion is simulated."
+        }
       }
     },
     {
@@ -7152,7 +7956,44 @@
           {
             "nerve": "sciatic-tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Semitendinosus runs on the superficial medial side of the posterior thigh, near semimembranosus, and continues distally toward the medial tibia as part of the pes anserinus.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Perforating branches of the profunda femoris typically supply semitendinosus; inferior gluteal contributions may supply proximal hamstrings.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Medial posterior thigh pain cannot be localised to this muscle from a separated surface. The proximal common tendon and neighboring semimembranosus, adductor magnus and neurovascular structures need independent assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Hamstring muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK546688/"
+              }
+            ]
+          },
+          "modelLimit": "Pes anserinus layers, common proximal tendon, vessels, nerves and injury planes are not validated. No contraction, perfusion or strain grade is shown."
+        }
       }
     },
     {
@@ -7280,7 +8121,43 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Soleus lies deep to both gastrocnemius heads and superficial to the deep posterior leg muscles. Its aponeurotic contribution joins the gastrocnemius contribution in the calcaneal tendon; popliteal structures lie more proximally.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Popliteal, posterior tibial and fibular arterial branches contribute; their relative contributions can vary.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Separating soleus from gastrocnemius does not expose an injury plane. A deeper calf lesion may need targeted imaging; static muscle spacing does not grade strain or identify venous disease.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              },
+              {
+                "title": "Delgado et al. · Tennis-leg ultrasound differential (2002)",
+                "url": "https://pubmed.ncbi.nlm.nih.gov/12091669/"
+              }
+            ]
+          },
+          "modelLimit": "Intramuscular aponeuroses, compartment fascia, vessels and nerves are absent. No perfusion, strain, compartment pressure or venous disease is simulated."
+        }
       }
     },
     {
@@ -7413,7 +8290,40 @@
             "nerve": "obturator-internus",
             "caveat": "Additional supply from the nerve to quadratus femoris is reported."
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-deep-hip-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Superior gemellus arises at the ischial spine above obturator internus and joins its tendon toward the medial greater trochanter. It remains a distinct muscle despite the shared insertion.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gemelli muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Inferior gluteal arterial branches typically supply superior gemellus. Their course and individual contribution are not represented by this muscle surface.",
+            "references": [
+              {
+                "title": "Texas Tech · Hip and posterior thigh anatomy",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/gluteal_tables.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "The superior gemellus surface cannot identify its motor nerve or prove gemelli-obturator entrapment. Variable innervation and absent sciatic anatomy require separate clinical assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Gemelli muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK557420/"
+              }
+            ]
+          },
+          "modelLimit": "Shared tendon layers, sciatic relationships and small arterial branches are not resolved; vessels and nerves are absent. No compression, perfusion or diagnosis is shown."
+        }
       }
     },
     {
@@ -7772,7 +8682,43 @@
           {
             "nerve": "deep-fibular"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "In the anterior leg, tibialis anterior lies beside the long toe extensors. Its tendon passes most medially across the front of the ankle; the anterior tibial vessels continue deeper in this compartment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Tibialis anterior anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513304/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Branches of the anterior tibial artery typically supply the muscle in the anterior leg.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A visible anterior tendon course does not identify a cause of weak dorsiflexion. Tendon injury, muscle injury and neurological causes require separate assessment; the adjacent vessels and deep fibular nerve are absent here.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Tibialis anterior anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513304/"
+              }
+            ]
+          },
+          "modelLimit": "The surface shows no extensor retinacula, compartment fascia, vessels or nerves. It cannot measure perfusion, pressure or simulate foot drop."
+        }
       }
     },
     {
@@ -7937,7 +8883,47 @@
           {
             "nerve": "tibial"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-calf-depth-20261005-v1",
+          "relationships": {
+            "body": "Tibialis posterior is deep to soleus in the posterior leg. At the medial ankle its tendon passes anterior to flexor digitorum longus, then turns toward the medial foot beneath the flexor retinaculum.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Branches of posterior tibial and fibular arteries commonly contribute to its muscle supply.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Lower-limb arteries",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK544319/?report=classic"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "The medial ankle tendon is one element of arch support. A separated reference muscle cannot demonstrate weight-bearing arch collapse or distinguish tendon disease from ligament and joint pathology.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Leg anatomy",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK537024/"
+              },
+              {
+                "title": "NCBI Bookshelf · Foot muscles",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK539705/?report=printable"
+              }
+            ]
+          },
+          "modelLimit": "Flexor retinaculum, detailed fascia, vessels, nerves and distal tendon slips are absent. No perfusion, load or deformity simulation is available."
+        }
       }
     },
     {
@@ -8067,7 +9053,40 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Vastus intermedius lies deep to rectus femoris against the anterior femur and joins the quadriceps extensor apparatus. It crosses the knee but not the hip.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Lateral circumflex femoral arterial branches typically supply vastus intermedius.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A deep anterior thigh finding should not be called an isolated intermedius injury from this surface. Rectus femoris overlies it, and the shared tendon and nearby tissues require separate assessment.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "Deep fibre planes, articularis genu, vessels, nerves and layered quadriceps tendon continuity are not validated. No injury, perfusion or active extension is shown."
+        }
       }
     },
     {
@@ -8197,7 +9216,40 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Vastus lateralis occupies the lateral anterior thigh beside intermedius and contributes to the common quadriceps tendon at the patella. Its femoral origin leaves it acting across the knee, not the hip.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Lateral circumflex femoral and perforating profunda femoris branches commonly supply vastus lateralis.",
+            "references": [
+              {
+                "title": "Texas Tech · Lower-limb muscle anatomy",
+                "url": "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "A lateral quadriceps surface does not establish integrity of the whole extensor mechanism. Patellar tracking and tendon continuity depend on structures and movement outside this selection.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "Lateral septum, retinacular fibres, layered tendon, vessels and nerves are not resolved. No patellar tracking, perfusion or tear can be assessed."
+        }
       }
     },
     {
@@ -8326,7 +9378,44 @@
           {
             "nerve": "femoral"
           }
-        ]
+        ],
+        "depth": {
+          "status": "draft",
+          "revision": "um-thigh-depth-20261005-v1",
+          "reviewScope": "thigh-depth",
+          "relationships": {
+            "body": "Vastus medialis lies along the medial femur and joins the distal quadriceps apparatus beside the other vasti. The supplied surface is the whole muscle, without a separately identified oblique fibre part.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              },
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "arterialSupply": {
+            "body": "Femoral and lateral circumflex femoral arterial branches commonly contribute to vastus medialis supply.",
+            "references": [
+              {
+                "title": "Texas Tech · Anterior and medial thigh",
+                "url": "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh_tables.html"
+              }
+            ]
+          },
+          "clinicalPitfall": {
+            "body": "Do not infer isolated oblique-fibre weakness or a patellar maltracking mechanism from the whole-muscle surface. Such findings require functional and clinical assessment of the wider extensor apparatus.",
+            "references": [
+              {
+                "title": "NCBI Bookshelf · Quadriceps muscle",
+                "url": "https://www.ncbi.nlm.nih.gov/books/NBK513334/"
+              }
+            ]
+          },
+          "modelLimit": "No separately validated VMO subdivision, medial retinaculum, vessels, nerves or layered tendon is mapped. No tracking, force or perfusion is measured."
+        }
       }
     },
     {

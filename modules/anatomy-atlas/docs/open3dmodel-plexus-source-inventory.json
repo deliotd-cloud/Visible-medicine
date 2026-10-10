@@ -1,0 +1,1372 @@
+{
+  "createdAt": "2026-10-03T11:55:27.767Z",
+  "source": "Open3DModel upper limb, July 2025",
+  "download": "https://caskanatomy.info/open3dmodelfiles/upper-limb/upper-limb-obj.zip",
+  "grantPage": "https://anatomytool.org/open3dmodel-create",
+  "provenancePage": "https://anatomytool.org/open3dmodel-about",
+  "creditPage": "https://anatomytool.org/open3dmodel-credit",
+  "declaredModelLicense": "CC-BY-SA-4.0",
+  "licenseUri": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "zip": {
+    "bytes": 21336550,
+    "sha256": "70855490e82fc8cde6a30da60a46c1dfa62f32f115d3d5c1dd6dc496124c466b",
+    "entries": [
+      "upper-limb.obj"
+    ]
+  },
+  "obj": {
+    "bytes": 106049758,
+    "sha256": "5c06349599cdf88aea078f56ea244a5e65b4242ea0b7af361aaebe8fd05a4bf7",
+    "lines": 2611540,
+    "objects": 532,
+    "vertices": 706237,
+    "faces": 775646,
+    "materialLibraries": []
+  },
+  "snapshots": [
+    {
+      "name": "create.html",
+      "bytes": 56366,
+      "sha256": "b6310fe779fe228b860dacf12427d7827e34c373e441cace173924661c307ff1"
+    },
+    {
+      "name": "about.html",
+      "bytes": 46276,
+      "sha256": "ed49e071a9548c0b72be85e4fa513547aae6e72bda093fc6b5f4772871ae2935"
+    },
+    {
+      "name": "credit.html",
+      "bytes": 22436,
+      "sha256": "af4e58814a26ef8406f6679d87b735b8a8c5b08dd9f8a5e5477fa6109bb318af"
+    }
+  ],
+  "neuralObjects": [
+    {
+      "name": "Ulnar_nerve.r",
+      "startLine": 328107,
+      "vertices": 1764,
+      "faces": 1748,
+      "faceSizes": {
+        "3": 20,
+        "4": 1728
+      },
+      "min": [
+        -0.249765,
+        0.8385,
+        -0.05361
+      ],
+      "max": [
+        -0.134446,
+        1.362127,
+        0.032008
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "ca29b974073bbb8d0cfbcf740c6f362ee8e09e03d03f19ff21872baa5615113e",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve.r",
+      "startLine": 335275,
+      "vertices": 2160,
+      "faces": 2096,
+      "faceSizes": {
+        "3": 80,
+        "4": 2016
+      },
+      "min": [
+        -0.238634,
+        1.098591,
+        -0.061122
+      ],
+      "max": [
+        -0.132989,
+        1.358195,
+        -0.01317
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "3a30ed01e49e3ca9627bfc246dee9a1e8a529ef4d72e0c1b82d8f7736c80232c",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve_(superficial_br).r",
+      "startLine": 343266,
+      "vertices": 900,
+      "faces": 884,
+      "faceSizes": {
+        "3": 20,
+        "4": 864
+      },
+      "min": [
+        -0.291393,
+        0.866511,
+        -0.041814
+      ],
+      "max": [
+        -0.236493,
+        1.132714,
+        0.012111
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "5cff0698a96142e7f00941e20b39717555a9c81fc9ab42ece1ac4353f5087431",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve_(posterior_interosseus_n).r",
+      "startLine": 346904,
+      "vertices": 1620,
+      "faces": 1540,
+      "faceSizes": {
+        "3": 100,
+        "4": 1440
+      },
+      "min": [
+        -0.262031,
+        0.881713,
+        -0.04843
+      ],
+      "max": [
+        -0.227294,
+        1.029237,
+        0.003054
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "17bd2f3d989af0341c012b3ca168c2a0971509ca3b665dc9b8f473808431becb",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve_(posterior_brachial_cutaneous_n).r",
+      "startLine": 352637,
+      "vertices": 1224,
+      "faces": 1182,
+      "faceSizes": {
+        "3": 30,
+        "4": 1152
+      },
+      "min": [
+        -0.20472,
+        1.159566,
+        -0.088579
+      ],
+      "max": [
+        -0.149753,
+        1.330754,
+        -0.020539
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "4907f5837ed1e3da67c5b2a64a0e5d99e9a2dbf8f486c205a0c83a712264eb48",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve_(posterior_antebrachial_cutaneous_n).r",
+      "startLine": 356911,
+      "vertices": 2988,
+      "faces": 2930,
+      "faceSizes": {
+        "3": 50,
+        "4": 2880
+      },
+      "min": [
+        -0.267099,
+        0.947948,
+        -0.065592
+      ],
+      "max": [
+        -0.211455,
+        1.225582,
+        -0.012512
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "61343850b866eedfb1e9a495870c552f2d210d9f4550d31195d0712a9437b748",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve_(inferior_lateral_brachial_cutaneous_n).r",
+      "startLine": 367086,
+      "vertices": 3000,
+      "faces": 2930,
+      "faceSizes": {
+        "3": 50,
+        "4": 2880
+      },
+      "min": [
+        -0.242116,
+        1.172662,
+        -0.082352
+      ],
+      "max": [
+        -0.182466,
+        1.311151,
+        0.000526
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "9cd419fc3f82c3b1eefab3ac6de2014c5e44228274fa049f034fd40a5bab3a06",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Radial_nerve_(deep_branch).r",
+      "startLine": 377590,
+      "vertices": 756,
+      "faces": 740,
+      "faceSizes": {
+        "3": 20,
+        "4": 720
+      },
+      "min": [
+        -0.250679,
+        1.012032,
+        -0.038234
+      ],
+      "max": [
+        -0.240634,
+        1.125656,
+        -0.025898
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "4b3ea5ad53e7f5f0311e04721fa7e3c12d8b8dce784f90fcfcd7521fa1cde375",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Musculocutaneus_nerve.r",
+      "startLine": 380642,
+      "vertices": 1872,
+      "faces": 1808,
+      "faceSizes": {
+        "3": 80,
+        "4": 1728
+      },
+      "min": [
+        -0.239221,
+        1.113605,
+        -0.026231
+      ],
+      "max": [
+        -0.139571,
+        1.369431,
+        -0.009073
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "823fbe570bb5db210a67429404b20f25d82cf2a078466752b9d6612f3cb306f3",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Median_nerve.r",
+      "startLine": 387452,
+      "vertices": 2448,
+      "faces": 2384,
+      "faceSizes": {
+        "3": 80,
+        "4": 2304
+      },
+      "min": [
+        -0.275823,
+        0.839409,
+        -0.026505
+      ],
+      "max": [
+        -0.146851,
+        1.348878,
+        0.03222
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "75731ed3fbb12d13b08bae5fc978e764cb3ad4be4f0c69dd1b49d29de4005236",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Medial_root_of_median_nerve.r",
+      "startLine": 396614,
+      "vertices": 180,
+      "faces": 164,
+      "faceSizes": {
+        "3": 20,
+        "4": 144
+      },
+      "min": [
+        -0.148909,
+        1.347618,
+        -0.013954
+      ],
+      "max": [
+        -0.13489,
+        1.362258,
+        -0.009768
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "005a5519f6d92b19788c599e945d9680cb08d33c45d99823e9bc70fb4965e240",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Medial_brachial_cutaneous_nerve.r",
+      "startLine": 397312,
+      "vertices": 4332,
+      "faces": 4246,
+      "faceSizes": {
+        "3": 70,
+        "4": 4176
+      },
+      "min": [
+        -0.21236,
+        1.179255,
+        -0.008665
+      ],
+      "max": [
+        -0.130145,
+        1.368984,
+        0.009609
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "1e75cee7c96101e51a0629e02524a491942db9a9f9ed730cbf56a7face13af61",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Lateral_root_of_median_nerve.r",
+      "startLine": 413049,
+      "vertices": 180,
+      "faces": 164,
+      "faceSizes": {
+        "3": 20,
+        "4": 144
+      },
+      "min": [
+        -0.148757,
+        1.34804,
+        -0.013655
+      ],
+      "max": [
+        -0.138983,
+        1.370679,
+        -0.01092
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "747d165c4dbde2f33a16c760192f63007153bf48442c1c15ea146045973cc09d",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Axillary_nerve_-_superior_lateral_br_cutaneous_nerve.r",
+      "startLine": 413752,
+      "vertices": 4380,
+      "faces": 4212,
+      "faceSizes": {
+        "3": 180,
+        "4": 4032
+      },
+      "min": [
+        -0.234265,
+        1.303426,
+        -0.089263
+      ],
+      "max": [
+        -0.132687,
+        1.402808,
+        -0.004316
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "a8a48634a8208b2ede1fb66fd367d199214f26c5b0377fa6a56b15c3d80cb45e",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Musculocutaneus_nerve__-_lateral_antebrachial_cutaneous_nerve.r",
+      "startLine": 995286,
+      "vertices": 3240,
+      "faces": 3144,
+      "faceSizes": {
+        "3": 120,
+        "4": 3024
+      },
+      "min": [
+        -0.285706,
+        0.879179,
+        -0.039827
+      ],
+      "max": [
+        -0.237655,
+        1.114351,
+        0.015974
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "1e1fda3f8f801a4d936e83ced702ba5477568fcdb78bc6e35f42c7351d8918c5",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Medial_antebrachial_cutaneous_nerve.r",
+      "startLine": 1005543,
+      "vertices": 9576,
+      "faces": 9416,
+      "faceSizes": {
+        "3": 200,
+        "4": 9216
+      },
+      "min": [
+        -0.243949,
+        0.878633,
+        -0.052299
+      ],
+      "max": [
+        -0.132512,
+        1.365695,
+        0.021465
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "a089bbb6772f65625d52f11c237ef728c1caeddf004f25c8fcd8ae87020aec78",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Ulnar_nerve_Superficial_br_Proper_palmar_digital_nn",
+      "startLine": 1439883,
+      "vertices": 3132,
+      "faces": 3084,
+      "faceSizes": {
+        "3": 60,
+        "4": 3024
+      },
+      "min": [
+        -0.258486,
+        0.715387,
+        0.040224
+      ],
+      "max": [
+        -0.229142,
+        0.792167,
+        0.088792
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "ac02db44d24d79d9710529f8dc81b2988fa98d35420acb07a458c5033d253bfb",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Ulnar_nerve_Superficial_br_Common_palmar_digital_n",
+      "startLine": 1452059,
+      "vertices": 792,
+      "faces": 760,
+      "faceSizes": {
+        "3": 40,
+        "4": 720
+      },
+      "min": [
+        -0.250235,
+        0.78839,
+        0.030871
+      ],
+      "max": [
+        -0.234045,
+        0.842825,
+        0.041704
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "108016e005ab2d06f89683b3aee500195ff51b964c4ef8da4c89ba8473e734ef",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Ulnar_nerve_Palmar_cutaneous_br",
+      "startLine": 1455040,
+      "vertices": 2664,
+      "faces": 2622,
+      "faceSizes": {
+        "3": 30,
+        "4": 2592
+      },
+      "min": [
+        -0.253476,
+        0.728732,
+        0.016409
+      ],
+      "max": [
+        -0.225983,
+        0.879927,
+        0.07814
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "61b75a2c1ed8ab1c14dff8f8312cc7592592000b3361acded4dfe9d3e150510c",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Ulnar_nerve_Dorsal_cutaneous_br",
+      "startLine": 1465194,
+      "vertices": 4418,
+      "faces": 4451,
+      "faceSizes": {
+        "3": 94,
+        "4": 4356,
+        "12": 1
+      },
+      "min": [
+        -0.261222,
+        0.712819,
+        0.007542
+      ],
+      "max": [
+        -0.225834,
+        0.88018,
+        0.085986
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "ce76b2b7fbd867b0ab49babb685240fc203eafca4de940d0789c3305fd2e0dc4",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Ulnar_nerve_Deep_br",
+      "startLine": 1481753,
+      "vertices": 1656,
+      "faces": 1560,
+      "faceSizes": {
+        "3": 120,
+        "4": 1440
+      },
+      "min": [
+        -0.291293,
+        0.806787,
+        0.02521
+      ],
+      "max": [
+        -0.248677,
+        0.839043,
+        0.037642
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "d24a1336322e209050173d022f5fef4ef7fb2c8ff12e9466d438322ca2ac1318",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Ulnar_nerve_Communicating_br",
+      "startLine": 1487269,
+      "vertices": 180,
+      "faces": 164,
+      "faceSizes": {
+        "3": 20,
+        "4": 144
+      },
+      "min": [
+        -0.265171,
+        0.816366,
+        0.032359
+      ],
+      "max": [
+        -0.248564,
+        0.838415,
+        0.03453
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "df7968b849901984a210256696fc18d196a895bc37291bab69a6e5e0e8165d2f",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Radial_nerve_(dorsal_digital_nn).r",
+      "startLine": 1487972,
+      "vertices": 7488,
+      "faces": 7360,
+      "faceSizes": {
+        "3": 160,
+        "4": 7200
+      },
+      "min": [
+        -0.33473,
+        0.713658,
+        0.003669
+      ],
+      "max": [
+        -0.258142,
+        0.866863,
+        0.066688
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "536c4b955851e58c0bdf7a55034a53f965a565616cd40982b2fd36c01b8ad0c7",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Median_nerve_Recurrent_br",
+      "startLine": 1513280,
+      "vertices": 828,
+      "faces": 780,
+      "faceSizes": {
+        "3": 60,
+        "4": 720
+      },
+      "min": [
+        -0.300672,
+        0.831136,
+        0.033558
+      ],
+      "max": [
+        -0.279197,
+        0.844194,
+        0.043598
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "fc234f25170efcb0b78df93ba0cb3f5f030678d366e8ce014e0a13cb3a6cdd8c",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Median_nerve_Proper_palmar_digital_nerves_of_the_thumb",
+      "startLine": 1516051,
+      "vertices": 1512,
+      "faces": 1480,
+      "faceSizes": {
+        "3": 40,
+        "4": 1440
+      },
+      "min": [
+        -0.331165,
+        0.773698,
+        0.041696
+      ],
+      "max": [
+        -0.294224,
+        0.827189,
+        0.068184
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "fecde58e4e8a7845836a8dac6d4117cb3601b2c35f71841ce0bbc2d66b75d8b0",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Median_nerve_Proper_palmar_digital_nerves",
+      "startLine": 1521823,
+      "vertices": 8964,
+      "faces": 8692,
+      "faceSizes": {
+        "3": 340,
+        "4": 8352
+      },
+      "min": [
+        -0.321931,
+        0.703351,
+        0.037001
+      ],
+      "max": [
+        -0.259561,
+        0.79556,
+        0.088956
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "3671d7c3b9c791fb9f16c888ef5366f29b492c6715b3ad19c45a12567b6aef84",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Median_nerve_Palmar_br",
+      "startLine": 1552476,
+      "vertices": 828,
+      "faces": 780,
+      "faceSizes": {
+        "3": 60,
+        "4": 720
+      },
+      "min": [
+        -0.287822,
+        0.808974,
+        0.025814
+      ],
+      "max": [
+        -0.264894,
+        0.860197,
+        0.045047
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "76aa55869311170e17af08172899de91e8cbe89f3cd3579c60a0fbaef1e7cf92",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Median_nerve_Common_palmar_digital_nerves",
+      "startLine": 1555398,
+      "vertices": 1260,
+      "faces": 1212,
+      "faceSizes": {
+        "3": 60,
+        "4": 1152
+      },
+      "min": [
+        -0.293915,
+        0.789703,
+        0.028546
+      ],
+      "max": [
+        -0.261458,
+        0.846958,
+        0.038583
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "872a4a4253a13b0ce018a17c08a93c13a0f1e9b34684e7a3a3821ffbea75bf4d",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "Median_nerve_Common_palmar_digital_nerve_of_the_thumb",
+      "startLine": 1559764,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.294774,
+        0.826258,
+        0.031039
+      ],
+      "max": [
+        -0.274731,
+        0.840524,
+        0.042676
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "4dbe0a28be6837fc2c60d525d3649bcf11c90514ac0d0987d96b5c34c699d226",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": false
+    },
+    {
+      "name": "C8_root.r",
+      "startLine": 2005401,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.051717,
+        1.42767,
+        -0.028015
+      ],
+      "max": [
+        -0.017168,
+        1.449782,
+        -0.001558
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "c95850a0d4ab8ffe1cf428d6bd90341ae86a761b87504364a7fc12d9bb9d78c4",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "C7_root.r",
+      "startLine": 2006683,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.053395,
+        1.429923,
+        -0.02455
+      ],
+      "max": [
+        -0.017154,
+        1.461675,
+        -0.004605
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "ffacc528d850fc9b36576660443840df169600cd756c8a743bdb66368e8a66f4",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "C6_root.r",
+      "startLine": 2007963,
+      "vertices": 468,
+      "faces": 452,
+      "faceSizes": {
+        "3": 20,
+        "4": 432
+      },
+      "min": [
+        -0.055545,
+        1.433816,
+        -0.01882
+      ],
+      "max": [
+        -0.015542,
+        1.47466,
+        -0.004674
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "1b48eaa6fd8b3ffb77a7b97beb56cdadf4dc0eb0c2d0d0ac6a8f131739baa3f8",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "C5_root.r",
+      "startLine": 2009834,
+      "vertices": 180,
+      "faces": 164,
+      "faceSizes": {
+        "3": 20,
+        "4": 144
+      },
+      "min": [
+        -0.038388,
+        1.455401,
+        -0.014702
+      ],
+      "max": [
+        -0.014758,
+        1.491547,
+        -0.007771
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "5c69fd00ac0cc0f47183d123b6630a434d43cf1fafc0b1001c4fb4b1acf5de17",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Upper_subscapular_nerve.r",
+      "startLine": 2123217,
+      "vertices": 1404,
+      "faces": 1356,
+      "faceSizes": {
+        "3": 60,
+        "4": 1296
+      },
+      "min": [
+        -0.123975,
+        1.353107,
+        -0.083396
+      ],
+      "max": [
+        -0.081922,
+        1.390328,
+        -0.012869
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "52c4078c21438558f34f655c3284de80228b2b6f829aa35986a3b1d89a6a1a2b",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Suprascapular_nerve.r",
+      "startLine": 2128337,
+      "vertices": 5112,
+      "faces": 4952,
+      "faceSizes": {
+        "3": 200,
+        "4": 4752
+      },
+      "min": [
+        -0.175922,
+        1.28117,
+        -0.117122
+      ],
+      "max": [
+        -0.058091,
+        1.432416,
+        -0.005768
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "92803958c1511a9e27a662dda71b1dd049df5c1f44dc4de65e82f2868ce583fd",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Lower_subscapular_nerve.r",
+      "startLine": 2146018,
+      "vertices": 4032,
+      "faces": 3904,
+      "faceSizes": {
+        "3": 160,
+        "4": 3744
+      },
+      "min": [
+        -0.155133,
+        1.27389,
+        -0.093891
+      ],
+      "max": [
+        -0.078806,
+        1.379479,
+        -0.012882
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "372402ec7db6082528b784d3e13fab15aef8468423d7af8d5e15e25f7e3325c2",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Dorsal_scapular_nerve.r",
+      "startLine": 2160504,
+      "vertices": 3636,
+      "faces": 3492,
+      "faceSizes": {
+        "3": 180,
+        "4": 3312
+      },
+      "min": [
+        -0.0641,
+        1.299345,
+        -0.110657
+      ],
+      "max": [
+        -0.019254,
+        1.474971,
+        -0.00912
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "f2e01ef715e6cbfe51d749c1141f4d53bdc9ac03939602871e09d0ab721339a5",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Anterior_divisions_of_brachial_plexus.r",
+      "startLine": 2382124,
+      "vertices": 972,
+      "faces": 924,
+      "faceSizes": {
+        "3": 60,
+        "4": 864
+      },
+      "min": [
+        -0.113671,
+        1.390282,
+        -0.014962
+      ],
+      "max": [
+        -0.075588,
+        1.418268,
+        -0.0016
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "b91bd065c7f57f5dcdce148b46410bf62dbfc503ff768c976162cedded2f46dc",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Superior_trunk_of_brachial_plexus.r",
+      "startLine": 2385624,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.079021,
+        1.417021,
+        -0.01195
+      ],
+      "max": [
+        -0.054003,
+        1.435466,
+        -0.005074
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "4b77f9f41ddb00403b215708d4466639e9b317ece9e7044f92e292115c23d1b3",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Posterior_divisions_of_brachial_plexus.r",
+      "startLine": 2386911,
+      "vertices": 828,
+      "faces": 780,
+      "faceSizes": {
+        "3": 60,
+        "4": 720
+      },
+      "min": [
+        -0.109992,
+        1.391152,
+        -0.015403
+      ],
+      "max": [
+        -0.076136,
+        1.416562,
+        -0.002277
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "0b109dfa212d997a1a68610111f33cf66a10cd82529c8641ff30b96bce3103b6",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Middle_trunk_of_brachial_plexus.r",
+      "startLine": 2389669,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.077493,
+        1.414653,
+        -0.007349
+      ],
+      "max": [
+        -0.052146,
+        1.431574,
+        -0.003203
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "093c7fc71a2f2547273bbc397ac6b489166a6d6a627594e9d0468d5940633ee9",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Inferior_trunk_of_brachial_plexus.r",
+      "startLine": 2390955,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.076552,
+        1.411088,
+        -0.003959
+      ],
+      "max": [
+        -0.05046,
+        1.429457,
+        -0.000669
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "8ed991a1e3a44355c743c57e83881bc93518c48f94d6ed5efdb6df50d705d3aa",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Lateral_cord_of_brachial_plexus.r",
+      "startLine": 2392238,
+      "vertices": 180,
+      "faces": 164,
+      "faceSizes": {
+        "3": 20,
+        "4": 144
+      },
+      "min": [
+        -0.141308,
+        1.368097,
+        -0.015069
+      ],
+      "max": [
+        -0.112795,
+        1.398231,
+        -0.011326
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "a95f3a27739d827a28e1f6674fdedb016cd475448ddcb62ac7a5599eb7a50be4",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Lateral_pectoral_nerve.r",
+      "startLine": 2392936,
+      "vertices": 2664,
+      "faces": 2568,
+      "faceSizes": {
+        "3": 120,
+        "4": 2448
+      },
+      "min": [
+        -0.123289,
+        1.239661,
+        -0.01435
+      ],
+      "max": [
+        -0.037118,
+        1.396955,
+        0.100984
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "f62dac18692a3b4bb74b6a4234fe1fddeecbea581d8fd212f3af1d45ec2adf5b",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Long_thoracic_nerve.r",
+      "startLine": 2401781,
+      "vertices": 3348,
+      "faces": 3204,
+      "faceSizes": {
+        "3": 180,
+        "4": 3024
+      },
+      "min": [
+        -0.145881,
+        1.182517,
+        -0.067205
+      ],
+      "max": [
+        -0.030124,
+        1.470345,
+        0.018247
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "a7b6fde0f9baed9dbd3e4bec6be8eaebcb2950a6622c68f38ec730b12cca6665",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Medial_cord_of_brachial_plexus.r",
+      "startLine": 2413239,
+      "vertices": 468,
+      "faces": 452,
+      "faceSizes": {
+        "3": 20,
+        "4": 432
+      },
+      "min": [
+        -0.135908,
+        1.361164,
+        -0.011219
+      ],
+      "max": [
+        -0.108251,
+        1.392021,
+        -0.005427
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "09cdd1199ac51f42a74eec8490210f05a3495c4e973016600929df4752c2d027",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Medial_pectoral_nerve.r",
+      "startLine": 2415110,
+      "vertices": 2304,
+      "faces": 2240,
+      "faceSizes": {
+        "3": 80,
+        "4": 2160
+      },
+      "min": [
+        -0.148579,
+        1.246044,
+        -0.007736
+      ],
+      "max": [
+        -0.111971,
+        1.381389,
+        0.09039
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "4778552d51f0b10c22ba3aaecda1ca2601448289093c7e5be44425d674d050c1",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Posterior_cord_of_brachial_plexus.r",
+      "startLine": 2423542,
+      "vertices": 324,
+      "faces": 308,
+      "faceSizes": {
+        "3": 20,
+        "4": 288
+      },
+      "min": [
+        -0.134995,
+        1.357143,
+        -0.015656
+      ],
+      "max": [
+        -0.108879,
+        1.392729,
+        -0.012119
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "dc81c28609f9248739a34d1b6a21c58ca414efd912d4edfbeb60c68b9916e06a",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "Subclavian_nerve.r",
+      "startLine": 2424831,
+      "vertices": 684,
+      "faces": 636,
+      "faceSizes": {
+        "3": 60,
+        "4": 576
+      },
+      "min": [
+        -0.072751,
+        1.397448,
+        -0.006593
+      ],
+      "max": [
+        -0.055813,
+        1.433292,
+        0.030256
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "476076df45a21891def0aa9f72cdac62e851d8ffe47fb6ff1c9f4fecab9c6bf6",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    },
+    {
+      "name": "T1_root.r",
+      "startLine": 2427171,
+      "vertices": 180,
+      "faces": 164,
+      "faceSizes": {
+        "3": 20,
+        "4": 144
+      },
+      "min": [
+        -0.050984,
+        1.42806,
+        -0.028304
+      ],
+      "max": [
+        -0.01873,
+        1.433083,
+        -0.002316
+      ],
+      "crossObjectReferences": 0,
+      "sourceGeometrySha256": "3c45e310cf5318e5378cf694ca12e88dd335a39fed435892cb128c3875cb0802",
+      "normalsIgnoredForInventoryOnly": true,
+      "triangulated": false,
+      "topologyChecked": false,
+      "originalSourceNamedRight": true
+    }
+  ],
+  "expectedCoreObjectNames": [
+    "C5_root.r",
+    "C6_root.r",
+    "C7_root.r",
+    "C8_root.r",
+    "T1_root.r",
+    "Superior_trunk_of_brachial_plexus.r",
+    "Middle_trunk_of_brachial_plexus.r",
+    "Inferior_trunk_of_brachial_plexus.r",
+    "Anterior_divisions_of_brachial_plexus.r",
+    "Posterior_divisions_of_brachial_plexus.r",
+    "Lateral_cord_of_brachial_plexus.r",
+    "Medial_cord_of_brachial_plexus.r",
+    "Posterior_cord_of_brachial_plexus.r",
+    "Medial_root_of_median_nerve.r",
+    "Lateral_root_of_median_nerve.r"
+  ],
+  "coordinateUnits": "not independently established; do not label distances mm",
+  "sourceToBodyTransform": null,
+  "mirrored": false,
+  "registered": false,
+  "assetAdmitted": false,
+  "clinicalApproved": false,
+  "scope": "Offline original-source inventory only; exact labelled boundaries, topology, branching relationships and rights lineage still require review",
+  "fullOfflineInventorySha256": "ea074723d7b0aa3669609eaec8e32e30bd84b3eb059ebaec94a2575a48a8afab",
+  "fullOfflineInventory": "E:/VisibleMedicine-LocalStaging/20261003-open3dmodel-plexus/source-inventory.json"
+}

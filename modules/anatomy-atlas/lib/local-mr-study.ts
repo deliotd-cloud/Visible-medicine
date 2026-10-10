@@ -238,17 +238,21 @@ export async function readNativeMr(
     h.window[1] > 131072
   )
     fail();
+  // Hash and expose the same parser-owned scalar bytes. The caller can still
+  // mutate its input ArrayBuffer while an asynchronous digest is pending or
+  // after this function returns.
+  const scalarBytes = bytes.slice(start);
   const digest = Array.from(
     new Uint8Array(
-      await crypto.subtle.digest('SHA-256', bytes.subarray(start)),
+      await crypto.subtle.digest('SHA-256', scalarBytes),
     ),
     (n) => n.toString(16).padStart(2, '0'),
   ).join('');
   if (digest !== h.bodySha256) fail();
   const values =
     h.scalarType === 'uint16'
-      ? new Uint16Array(buffer, start, bodySize / 2)
-      : new Int16Array(buffer, start, bodySize / 2);
+      ? new Uint16Array(scalarBytes.buffer, scalarBytes.byteOffset, bodySize / 2)
+      : new Int16Array(scalarBytes.buffer, scalarBytes.byteOffset, bodySize / 2);
   let min = Infinity,
     max = -Infinity;
   for (const n of values) {

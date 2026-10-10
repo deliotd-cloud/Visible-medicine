@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 /* oxlint-disable typescript/unbound-method -- Tests retain original method identities and invoke retired methods with an explicit receiver. */
 import assert from 'node:assert/strict';
 import { historicalRecipeProfiles } from './recipe-history.mjs';
+import { preCoronaryArterialStudyProfiles } from './coronary-arterial-study-history.mjs';
 import { reviewDisplayPaths } from './review-revision-evidence.mjs';
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
@@ -16,6 +17,7 @@ import {
   guardRenderer,
 } from '../lib/renderer-health.ts';
 import { dissectionProfiles } from '../app/dissection-data.ts';
+const focusedCamera = process.argv.includes('--focused-camera');
 let checks = 0;
 const same = (a, b, m) => {
   checks++;
@@ -36,7 +38,7 @@ same(
   '109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7',
 );
 same(
-  hash(JSON.stringify(historicalRecipeProfiles(dissectionProfiles))),
+  hash(JSON.stringify(historicalRecipeProfiles(preCoronaryArterialStudyProfiles(dissectionProfiles)))),
   'd127268c45678a49ff8eeae4c5622172d4549497aca33d5b3b19507557d83e9c',
 );
 for (const b of catalog.bundles)
@@ -402,6 +404,10 @@ same(recovery.state.attempt, 1);
 same(recovery.state.health, 'starting');
 same(JSON.stringify(restore.current), JSON.stringify(camera));
 check(restore.current !== camera);
+same(recovery.autoRecoveryCamera.current, null,
+  'An ordinary captured pose cannot restart a guided sweep');
+same(recovery.queuedRecoveryCamera.current, restore.current,
+  'The recovery boundary still tracks its ordinary auto-copy');
 oldReport('ready');
 same(
   recovery.state.health,
@@ -415,6 +421,8 @@ restore.current = pendingCamera;
 recovery.report('lost');
 recovery.retry();
 same(restore.current, pendingCamera);
+same(recovery.autoRecoveryCamera.current, null,
+  'An explicit queued camera supersedes the auto-copy mark');
 recovery.state = {
   ...recovery.state,
   ...api.SceneRecovery.getDerivedStateFromError(),
@@ -449,6 +457,7 @@ same(
   null,
   'A camera preset chosen while interrupted takes precedence',
 );
+same(recovery.autoRecoveryCamera.current, null);
 recovery.report('ready');
 {
   const freshRestore = { current: null };
@@ -477,6 +486,39 @@ const terminal = notices.length;
 recovery.report('lost');
 recovery.retry();
 same(notices.length, terminal);
+{
+  const queued = { current: null }, seen = [];
+  const repeated = new api.SceneRecovery({
+    className: 'body-scene', cameraKey: 'guided', onHealth: () => {},
+    cameraCapture: capture, cameraRestore: queued,
+    children: (_onHealth, autoRecoveryCamera, cameraTransitionActive) => {
+      seen.push([autoRecoveryCamera, cameraTransitionActive]);
+      return null;
+    },
+  });
+  repeated.setState = (update) => {
+    repeated.state = { ...repeated.state, ...update };
+  };
+  repeated.componentDidMount();
+  repeated.report('ready');
+  repeated.cameraTransitionActive.current = true;
+  repeated.report('lost');
+  repeated.retry();
+  const firstCopy = queued.current;
+  check(firstCopy && firstCopy !== camera);
+  same(repeated.autoRecoveryCamera.current, firstCopy);
+  renderToStaticMarkup(repeated.render());
+  same(seen[0], [repeated.autoRecoveryCamera, repeated.cameraTransitionActive],
+    'The camera receives the private identity and capture-status refs');
+  repeated.retry();
+  same(queued.current, firstCopy, 'Repeated retry preserves the queued auto-copy');
+  same(repeated.autoRecoveryCamera.current, firstCopy);
+  repeated.props = { ...repeated.props, cameraKey: 'new-guided-view' };
+  repeated.componentDidUpdate({ ...repeated.props, cameraKey: 'guided' }, repeated.state);
+  same(queued.current, null, 'Changing selected view drops stale auto recovery');
+  same(repeated.autoRecoveryCamera.current, null);
+  repeated.componentWillUnmount();
+}
 
 // Execute extracted application handlers and their actual readiness expressions.
 const body = await fs.readFile('app/body-explorer.tsx', 'utf8'),
@@ -573,6 +615,22 @@ for (const displayReady of [false, true])
     same(calls.length, displayReady && !tourActive ? (mode === 'exam' ? 2 : 1) : 0);
     handlerCases++;
   }
+for (const displayReady of [false, true])
+  for (const contextHeart of [false, true]) {
+    const calls = [];
+    runInNewContext(
+      extract(body, 'onSceneSelect') + ";onSceneSelect('heart');",
+      {
+        displayReady,
+        coronaryScene: { contextIds: contextHeart ? ['heart'] : [] },
+        exam: false,
+        select: (id) => calls.push(id),
+      },
+    );
+    same(calls, displayReady && !contextHeart ? ['heart'] : [],
+      'The actual scene handler cannot select muted coronary heart context');
+    handlerCases++;
+  }
 for (const name of ['nextQuestion', 'beginShoulderPractice', 'toggleMode']) {
   const calls = [];
   runInNewContext(extract(shoulder, name) + ';' + name + '();', {
@@ -592,11 +650,21 @@ for (const [file, source] of [
   check(scene.includes('<SceneRecovery'));
   check(scene.includes('<RendererMonitor onHealth={onHealth}'));
   check(scene.includes('cameraRestore={props.cameraRestore}'));
+  check(scene.includes('autoRecoveryCamera={autoRecoveryCamera}'));
+  check(scene.includes('cameraTransitionActive={cameraTransitionActive}'));
+  check(scene.includes('guidedRecovery={'));
   check(scene.includes('onHealth={props.onRendererHealth}'));
   check(scene.includes('cameraKey={'));
-  check(source.includes('onRendererHealth={setRendererHealth}'));
+  check(source.includes(file === 'app/anatomy-scene.tsx'
+    ? 'onRendererHealth={reportRendererHealth}'
+    : 'onRendererHealth={setRendererHealth}'));
 }
-check(shoulder.includes('onModelReady={setModelReady}'));
+check(shoulder.includes('onModelReady={reportModelReady}'));
+check(shoulder.includes('setRendererHealth(health);'));
+check(shoulder.includes('setModelReady(ready);'));
+check(shoulder.includes('examReadyRef.current = rendererReady(health) && modelReadyRef.current;'));
+check(shoulder.includes('examReadyRef.current = rendererReady(rendererHealthRef.current) && ready;'));
+check((await fs.readFile('app/um-knee-study.tsx', 'utf8')).includes('guidedRecovery={!!guidance}'));
 check(shoulder.includes('rendererReady(rendererHealth) && modelReady'));
 check(shoulder.includes("mode === 'study' && !displayReady"));
 check(shoulder.includes('onClick={nextQuestion} disabled={!displayReady}'));
@@ -656,7 +724,7 @@ check(css.includes('visibility: hidden'));
 check(css.includes('pointer-events: none'));
 check(css.includes('var(--vm-teal)'));
 const revisions = JSON.parse(await fs.readFile('content/review-revisions.json', 'utf8'));
-for (const path of [
+for (const path of focusedCamera ? [] : [
   'app/scene-recovery.tsx',
   'app/scene-recovery.css',
   'lib/renderer-health.ts',
@@ -686,8 +754,9 @@ const result = {
   limitations:
     'Real observer events, per-renderer guard and recovery methods, injected monitor hooks, extracted application handlers and server-rendered notices. Synchronous render exceptions and shader-error callbacks use test doubles, not a GPU. No hardware reset, pixels, async browser/WebGL initialization failure, unrelated frame-callback failure, touch or assistive-technology acceptance is claimed.',
 };
-await fs.writeFile(
-  'docs/scene-recovery-validation.json',
-  JSON.stringify(result, null, 2) + '\n',
-);
+if (!focusedCamera)
+  await fs.writeFile(
+    'docs/scene-recovery-validation.json',
+    JSON.stringify(result, null, 2) + '\n',
+  );
 console.log(result);

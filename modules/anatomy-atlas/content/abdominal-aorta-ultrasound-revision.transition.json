@@ -1,0 +1,19 @@
+{
+  "kind": "one-topic-revision-proposal",
+  "baselineCommit": "aa4a92a958408d665eafceacbd9850dd5712cb41",
+  "representationScope": "body",
+  "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+  "fmaId": "FMA3789",
+  "sourceComponent": {
+    "file": "FJ1932",
+    "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+  },
+  "originalCentralEpochSectionSha256": "5838df6120062a0ab9dc23e5452b80356de2b8ed4f474e707a0a2cc768125ebe",
+  "beforeLessonSha256": "5838df6120062a0ab9dc23e5452b80356de2b8ed4f474e707a0a2cc768125ebe",
+  "afterLessonSha256": "958d0ae247bdcd128fcb61493208080306eedd171322752643a4aac7031723bb",
+  "proposedSourceFileSha256": "a28ba4dafcc0a807dfb15f22e3b1482f90d60aece3ca7b1ea958a8e3c515c89f",
+  "changedTopicCount": 1,
+  "unchangedRootTopicCount": 9935,
+  "clinicalApproval": false,
+  "note": "The original central-vessel-imaging.transition.json remains immutable; this is a later one-topic revision with its own strict predecessor adapter."
+}

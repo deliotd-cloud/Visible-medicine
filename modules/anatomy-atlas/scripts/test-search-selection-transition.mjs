@@ -51,7 +51,7 @@ async function compile(oldSearch){
     plugins:oldSearch?[{name:'baseline-search',setup(api){api.onLoad({filter:/[\\/]app[\\/]atlas-workspace\.tsx$/,namespace:'component-test'},()=>({contents:oldSearch,loader:'tsx',resolveDir:`${process.cwd()}/app`}));}}]:[],
   });
   const scope={exports:{}};
-  runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,console,URLSearchParams,window:{innerWidth:1280,innerHeight:720},process:{env:{NODE_ENV:'test'}},require:id=>id==='react'?shim:id==='next/link'?()=>null:require(id)});
+  runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,console,structuredClone,URLSearchParams,window:{innerWidth:1280,innerHeight:720},process:{env:{NODE_ENV:'test'}},require:id=>id==='react'?shim:id==='next/link'?()=>null:require(id)});
   return scope.exports;
 }
 const api=await compile();
@@ -65,7 +65,7 @@ const walk=(node,predicate)=>{
   return found;
 };
 let scenarios=0;
-function scenario({mode='practice',origin='explore',removed=false,enabled=false,practiceEnabled=false,exam=false,Api=api,source=bodySource}={}){
+function scenario({mode='practice',origin='explore',removed=false,enabled=false,practiceEnabled=false,exam=false,guidedLearning=false,Api=api,source=bodySource}={}){
   const {initialDissection,dissectionReducer,resolveDissection,dissectionProfiles,AtlasSearch,atlasSearchIndex}=Api;
   const profile=dissectionProfiles['head-neck'],regionStructures=catalog.structures.filter(s=>s.regions.includes('head-neck'));
   const initial=()=>({systems:{skeleton:true,muscles:enabled,organs:false},
@@ -81,7 +81,7 @@ function scenario({mode='practice',origin='explore',removed=false,enabled=false,
   if(mode==='practice'){session.chooseMode('practice');renderSession();
     model={systems:{...model.systems,muscles:practiceEnabled},dissection:{...structuredClone(initialDissection),stageId:'free'}};renderSession();}
   const before=structuredClone(model),restoreBefore=restoreCount;
-  const captured={exam,regionStructures,profile,systems:model.systems,
+  const captured={exam,guidedLearning,regionStructures,profile,systems:model.systems,
     hiddenIds:resolveDissection(regionStructures,profile,model.dissection).removed.map(s=>s.id),
     bodySystems:{muscles:{name:'Muscles'}},resolveDissection,dissectionReducer,
     setSelectedId:id=>{selected=id;},setSelectionNotice:notice=>notices.push(notice),
@@ -99,7 +99,7 @@ function scenario({mode='practice',origin='explore',removed=false,enabled=false,
   const tree=AtlasSearch({catalog,region:'head-neck',side:'both',onSelect:select,onWindow:()=>{},onFocus:()=>{},onDissect:()=>{}});active=false;
   const result=walk(tree,node=>node.type==='button'&&node.key===entry.key);assert(result,'actual Search result');
   result.props.onClick({currentTarget:{isConnected:true,focus(){}}});renderSession();
-  if(exam){assert.deepEqual(structuredClone(model),before);assert.equal(selected,null);assert.equal(restoreCount,restoreBefore);assert.equal(published.length,0);}
+  if(exam||guidedLearning){assert.deepEqual(structuredClone(model),before);assert.equal(selected,null);assert.equal(restoreCount,restoreBefore);assert.equal(published.length,0);}
   else{
     assert.equal(session.mode,mode==='practice'?'explore':origin);
     assert.equal(model.systems.muscles,true,'searched structure system stays enabled after workspace restoration');
@@ -120,6 +120,7 @@ function scenario({mode='practice',origin='explore',removed=false,enabled=false,
 for(const origin of ['explore','dissect'])for(const removed of [false,true])for(const enabled of [false,true])for(const practiceEnabled of [false,true])scenario({origin,removed,enabled,practiceEnabled});
 for(const origin of ['explore','dissect'])scenario({origin,mode:origin,removed:true});
 scenario({exam:true});
+scenario({mode:'explore',guidedLearning:true});
 if(process.argv.includes('--pre-fix-probe')){
   const oldSearch=execFileSync('git',['show',`${baseline}:app/atlas-workspace.tsx`],{encoding:'utf8'});
   const oldBody=execFileSync('git',['show',`${baseline}:app/body-explorer.tsx`],{encoding:'utf8'});

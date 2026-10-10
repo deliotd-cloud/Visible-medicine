@@ -12,6 +12,7 @@ const compiled = await build({
 export * from './lib/body-display-catalog';
 export * from './lib/body-presentation-parts';
 export * from './lib/body-arrangement';
+export * from './lib/body-spread';
 export * from './lib/explode-layout.mjs';
 export * from './lib/anatomy-load-state';
 export * from './app/body-types';`, resolveDir: process.cwd(), loader: 'ts' },

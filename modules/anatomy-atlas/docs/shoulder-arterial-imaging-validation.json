@@ -1,0 +1,22 @@
+{
+  "testedTeachingEpoch": "e6168496a8a59927164fc84c9297583d8ae01339",
+  "historicalMilestone": true,
+  "actualCurrentTeachingTest": "scripts/test-plantar-arterial-mri.mjs",
+  "baseline": "6c86bc8b1aa7a7418f21f890858b0217194aff4e",
+  "sourceTargets": 6,
+  "newMriPlacements": 6,
+  "newUltrasoundPlacements": 6,
+  "changedTopicPlacements": 12,
+  "otherTopicPlacementsPreserved": 9924,
+  "changedTeachingWorksheets": 6,
+  "preservedTeachingWorksheets": 1098,
+  "mutatedSourceRefusals": 448,
+  "malformedPacketsRefused": 60,
+  "staleRefusalsBeforeStorage": 6,
+  "storageCalls": 0,
+  "landmarkWords": 87,
+  "allEarlierReasoningAndToursPreserved": true,
+  "geometryAndUiUnchanged": true,
+  "clinicalApproval": false,
+  "browserAcceptance": false
+}

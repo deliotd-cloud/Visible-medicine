@@ -180,6 +180,7 @@ runInNewContext(output.outputFiles[0].text, {
   module: vmModule,
   exports: vmModule.exports,
   console,
+  structuredClone,
   URLSearchParams,
   window: { innerWidth: 1280, innerHeight: 720 },
   process: { env: { NODE_ENV: 'test' } },

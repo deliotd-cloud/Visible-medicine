@@ -1,37 +1,58 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
+import { execFileSync } from 'node:child_process';
 import { createRequire } from "node:module";
 import { runInNewContext } from "node:vm";
 import ts from "typescript";
 import {
-  contentContext,
   contentValidator,
   readContentJson,
 } from "./content-contract-tools.mjs";
-import { authoringBeforeWristImaging } from "./wrist-imaging-history.mjs";
-import { authoringBeforeTarsalImaging } from './tarsal-imaging-history.mjs';
-const context = await contentContext(),
-  { api, catalog, body, registry } = context;
-const previous = authoringBeforeWristImaging(context),
-  pins = await readContentJson("content/wrist-imaging-pins.json"),
-  before = await readContentJson("content/wrist-imaging.before.json");
-const afterWrist = authoringBeforeTarsalImaging(context);
+import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
+import { build as componentBuild } from './workspace-component-test-build.mjs';
+const wristEpoch='6c9acd0c0ea1ae10f10f363495d8052242901168';
+const pins = await readContentJson("content/wrist-imaging-pins.json"),
+  before = await readContentJson("content/wrist-imaging.before.json"),
+  after = await readContentJson("content/wrist-imaging.transition.json");
 const hash = (v) =>
   createHash("sha256").update(JSON.stringify(v)).digest("hex");
+assert.equal(before.sourceCommit,'56e9dc9e0e16f6cfbf3087a5af01aefde50e30d1');
+assert.equal(before.allLessonsAndRecipesHash,'7e5592d21db98475fb72da072a073eaa1f00b0edafdc844fe38320f4f86cffe9');
+assert.equal(hash(before),'6503f2a45ef89001cf485ad5a0397606f2bcd2616593c958e347da69ed606c3c');
+assert.equal(hash(after),'916ff46a96c43f2d2a67d69ce140b2c027e1cc9595276d1a4ebeaf350a7f0e7a');
+assert.equal(hash(pins),'318ca7e848669adbbde6b5c3f2092dc750f346c5412db0558a8b68abe6efe878');
+assert.equal(after.sourceCommit,before.sourceCommit);
+assert.equal(pins.sourceCommit,before.sourceCommit);
+assert.deepEqual(before.tabs,['ct','mri','xray']);
+assert.deepEqual(before.entries.map(({identity,group})=>({identity,group})),pins.entries);
+assert.deepEqual(after.entries.map(e=>e.id),pins.entries.map(e=>e.identity.id));
+const historical = await exactSourceHistoryApi(before.sourceCommit,'display-content');
+const api = await exactSourceHistoryApi(wristEpoch,'wrist-initial');
+const afterWrist=api,previous=historical;
+assert.deepEqual(api.contentTabs,historical.contentTabs);
+const cataloguePath='public/models/bodyparts3d/full-body/catalog.json';
+const gitAt=(commit,path)=>execFileSync('git',['show',commit+':'+path],{maxBuffer:32e6,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+const catalog=JSON.parse(gitAt(wristEpoch,cataloguePath).toString());
+assert.deepEqual(catalog,JSON.parse(gitAt(before.sourceCommit,cataloguePath).toString()));
+const body=api.bodyContentRecords(catalog);
+const registry=new Map(body.map(record=>[`${record.representationScope}|${record.id}`,record]));
+assert.equal(registry.size,body.length);
+// The immutable global baseline includes the shoulder and recipes from its own
+// Git epoch, not later source geometry. Keep the per-identity/live checks below.
 assert.equal(
   hash({
     body: catalog.structures.map((s) => ({
       id: s.id,
       sections: Object.fromEntries(
-        api.contentTabs.map((t) => [t, previous.bodyLesson(s, t)]),
+        historical.contentTabs.map((t) => [t, historical.bodyLesson(s, t)]),
       ),
     })),
-    shoulder: api.structures,
-    recipes: previous.dissectionProfiles,
+    shoulder: historical.structures,
+    recipes: historical.dissectionProfiles,
   }),
   before.allLessonsAndRecipesHash,
-  "Every earlier lesson and study recipe preserved",
+  "Exact pre-wrist Git snapshot, including historical shoulder and recipes",
 );
 assert.equal(pins.sourceVersion, catalog.sourceVersion);
 assert.deepEqual(pins.coordinateSystem, catalog.coordinateSystem);
@@ -41,6 +62,25 @@ assert.deepEqual(
 );
 const admitted = new Map(pins.entries.map((e) => [e.identity.id, e]));
 assert.equal(admitted.size, 16);
+const original=new Map();
+for(const [index,entry] of before.entries.entries()){
+ assert.deepEqual(catalog.structures.find(s=>s.id===entry.identity.id),entry.identity);
+ assert.deepEqual(Object.keys(entry.sections),before.tabs);
+ assert.deepEqual(Object.keys(after.entries[index].sections),before.tabs);
+ for(const tab of before.tabs){
+  assert.equal(entry.sections[tab].readiness,'pending');
+  original.set(`${entry.identity.id}|${tab}`,{identity:entry.identity,lesson:entry.sections[tab],golden:after.entries[index].sections[tab]});
+ }
+}
+assert.equal(original.size,48);
+function initialWristBefore(s,tab,lesson=api.bodyLesson(s,tab)){
+ const entry=original.get(`${s.id}|${tab}`);
+ if(!entry)return lesson;
+ assert.deepEqual(s,entry.identity,'Historical wrist identity changed');
+ assert.equal(hash(lesson),entry.golden,'Unrecorded wrist teaching change');
+ return structuredClone(entry.lesson);
+}
+assert.equal(hash({body:catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(tab=>[tab,initialWristBefore(s,tab)]))})),shoulder:historical.structures,recipes:historical.dissectionProfiles}),before.allLessonsAndRecipesHash,'Exact reversal of initial wrist epoch');
 assert.equal(
   pins.entries.filter((e) => e.identity.laterality === "right").length,
   8,
@@ -69,6 +109,7 @@ for (const s of catalog.structures) {
     sections++;
     topics.add(admitted.get(s.id).group + "/" + tab);
     assert.equal(previous.bodyLesson(s, tab).readiness, "pending");
+    assert.deepEqual(initialWristBefore(s,tab),previous.bodyLesson(s,tab));
     assert.deepEqual(api.bodyLesson(s, tab), lesson);
     assert.deepEqual(record.content[tab], lesson);
     assert.equal(lesson.readiness, "draft");
@@ -205,26 +246,20 @@ assert(
 );
 assert(api.bodyLesson(find("FMA24448"), "ct").bullets[0].includes("hook"));
 assert.throws(
-  () =>
-    authoringBeforeWristImaging({
-      catalog,
-      api: {
-        ...api,
-        bodyLesson(s, t) {
-          const value = api.bodyLesson(s, t);
-          return s.id === pins.entries[0].identity.id && t === "ct"
-            ? { ...value, body: "unrecorded" }
-            : value;
-        },
-      },
-    }),
+  () => initialWristBefore(pins.entries[0].identity,'ct',{
+    ...api.bodyLesson(pins.entries[0].identity,'ct'),body:'unrecorded',
+  }),
   /Unrecorded wrist teaching change/,
 );
 // Render the real existing notes callback, not a replacement view or browser session.
 const require = createRequire(import.meta.url),
   React = require("react"),
   { renderToStaticMarkup } = require("react-dom/server");
-const source = await readFile("app/body-explorer.tsx", "utf8"),
+const noteComponent=await componentBuild({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs'});
+const noteScope={exports:{}};
+runInNewContext(noteComponent.outputFiles[0].text,{module:noteScope,exports:noteScope.exports,require,console});
+const {SourceDisplayNotes}=noteScope.exports;
+const source = gitAt(wristEpoch,"app/body-explorer.tsx").toString(),
   ast = ts.createSourceFile(
     "body.tsx",
     source,
@@ -254,6 +289,7 @@ for (const { identity: selected } of pins.entries)
     const html = renderToStaticMarkup(
       runInNewContext(js, {
         React,
+        SourceDisplayNotes,
         selected,
         topic,
         bodyContent: api.bodyContent,

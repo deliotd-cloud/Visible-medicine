@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 
 const topics = { anatomy: 'Anatomy', function: 'Function', ct: 'CT', mri: 'MRI', xray: 'X-ray', ultrasound: 'Ultrasound', pathology: 'Pathology', clinical: 'Clinical', quiz: 'Quiz notes' };
 const categories = ['specificDraft', 'identityOnly', 'pending', 'generatedIdentification'];
+const independentTopics = { clinical: 'Clinical', pathology: 'Pathology', ct: 'CT', mri: 'MRI', xray: 'X-ray', ultrasound: 'Ultrasound' };
 function readinessTable(counts, representations) {
   const rows = Object.entries(topics).map(([topic, label]) => {
     const values = categories.map(category => counts[topic][category]);
@@ -14,12 +15,38 @@ function readinessTable(counts, representations) {
 ${rows.join('\n')}`;
 }
 
+function independentTeachingTable(anatomy) {
+  const specimens = [
+    ['Lower limb', anatomy.independentSpecimens[0], 'UM_LIMB_DISSECTION.md', anatomy.independentSpecimens[0].detailedTeaching.extendedTopics],
+    ['Kidneys', anatomy.renalSpecimen, 'HRA_KIDNEY_SPECIMEN.md', anatomy.renalSpecimen.extendedByTopic],
+    ['Female pelvis', anatomy.femalePelvicSpecimen, 'HRA_FEMALE_PELVIS.md', anatomy.femalePelvicSpecimen.extendedByTopic],
+    ['Abdominal wall', anatomy.abdominalWallSpecimen, 'ABDOMINAL_WALL_SPECIMEN.md', anatomy.abdominalWallSpecimen.detailedTeaching.extendedByTopic],
+    ['Back layers', anatomy.backLayersSpecimen, 'BACK_LAYERS_SPECIMEN.md', anatomy.backLayersSpecimen.extendedTopicDrafts],
+  ];
+  const rows = specimens.map(([name, specimen, link, byTopic]) => {
+    const representations = specimen.representations;
+    assert(Number.isSafeInteger(representations) && representations >= 0, `Invalid ${name} representation count`);
+    const cells = Object.keys(independentTopics).map(topic => {
+      const entry = byTopic[topic];
+      const draft = name === 'Lower limb' ? entry?.draft : entry;
+      const pending = name === 'Lower limb' ? entry?.pending : representations - draft;
+      assert(Number.isSafeInteger(draft) && draft >= 0 && draft <= representations, `Invalid ${name} ${topic} draft count`);
+      assert(Number.isSafeInteger(pending) && pending >= 0 && pending <= representations, `Invalid ${name} ${topic} pending count`);
+      assert.equal(draft + pending, representations, `${name} ${topic} readiness must cover its scope`);
+      return `${draft} / ${pending}`;
+    });
+    return `| [${name}](${link}) | ${cells.join(' | ')} |`;
+  });
+  return `| Independent specimen | ${Object.values(independentTopics).join(' | ')} |\n| --- | ${Object.keys(independentTopics).map(() => '---:').join(' | ')} |\n${rows.join('\n')}`;
+}
+
 // Current inventory only. Historical milestone narratives remain in dated docs/Git.
 export function renderRequirementSummary(report) {
   const { anatomy, study, teaching, practice, assetsAndRights, learningIntegration } = report;
   const body = readinessTable(teaching.body, anatomy.bodyRepresentations);
   const nested = readinessTable(teaching.nested.topics, teaching.nested.representations);
   const shoulder = readinessTable(teaching.shoulder, anatomy.shoulderRepresentations);
+  const independentTeaching = independentTeachingTable(anatomy);
   const nestedGuides=study.guidedLearning.nestedStudies??[];
   for(const guide of nestedGuides){
     assert(Number.isSafeInteger(guide.steps)&&guide.steps>0,'Invalid nested guide stop count');
@@ -27,6 +54,9 @@ export function renderRequirementSummary(report) {
     assert.equal(new Set(guide.children.map(child=>child.id)).size,guide.children.length,'Nested guide children must be distinct');
   }
   const distinctGuidedChildren=new Set(nestedGuides.flatMap(guide=>guide.children.map(child=>child.id))).size;
+  const eyeGuides=nestedGuides.filter(guide=>guide.study==='eye');
+  const ventricularGuides=nestedGuides.filter(guide=>guide.study==='ventricles');
+  const eyeChildren=new Set(eyeGuides.flatMap(guide=>guide.children.map(child=>child.id))).size;
   const independent = [
     ['Lower limb', anatomy.independentSpecimens[0].representations, 'UM_LIMB_DISSECTION.md'],
     ['Kidneys', anatomy.renalSpecimen.representations, 'HRA_KIDNEY_SPECIMEN.md'],
@@ -45,7 +75,8 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 - Nested dissections: ${teaching.nested.representations} selectable parts, ${teaching.nested.concepts} teaching concepts / ${teaching.nested.references} references; ${teaching.nested.geometryOnlyRepresentations.length} geometry-only selections retain pending teaching.
 - ${study.stages} dissection stages / ${study.focuses} focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: ${study.guidedLearning.regionalTours} regional tours / ${study.guidedLearning.regionalStops} stops; dedicated shoulder ${study.guidedLearning.shoulderTours} tour / ${study.guidedLearning.shoulderStops} stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
-${nestedGuides.length ? `- Nested eye guided learning: ${nestedGuides.length} source-bound draft guides / ${nestedGuides.reduce((n, guide) => n + guide.steps, 0)} stops across ${distinctGuidedChildren} existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.\n` : ''}\
+${eyeGuides.length ? `- Nested eye guided learning: ${eyeGuides.length} source-bound draft guides / ${eyeGuides.reduce((n, guide) => n + guide.steps, 0)} stops across ${eyeChildren} existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.\n` : ''}\
+${ventricularGuides.length ? `- Nested ventricular guided learning: ${ventricularGuides.length} draft guide / ${ventricularGuides.reduce((n, guide) => n + guide.steps, 0)} stops over four existing source spaces, with optional [schematic CSF movement](CSF_MOTION.md). No new geometry, resolved fluid pathway, measured physiology or clinical approval. Combined nested guidance covers ${distinctGuidedChildren} existing children.\n` : ''}\
 ${study.guidedLearning.independentSpecimens?.length ? `- Independent source-guided dissection: ${study.guidedLearning.independentSpecimens.length} draft sequences / ${study.guidedLearning.independentSpecimens.reduce((n, guide) => n + guide.steps, 0)} steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.\n` : ''}\
 - Find/name identification; ${practice.reasoning.concepts} draft reasoning concepts bound to ${practice.reasoning.exactRepresentations} root-body representations in ${practice.reasoning.regions.join(', ')}. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 
@@ -55,6 +86,12 @@ Independent specimens retain separate source frames and teaching inventories. Th
 | --- | ---: |
 ${independent}
 
+## Independent specimen teaching readiness
+
+Each cell shows draft / pending placements within that specimen's own source frame. Drafts may reuse shared text. Held groups and context surfaces remain within the stated source scope; these counts do not establish clinical approval, spatial registration or imaging assets. They are separate from root-body and nested teaching and do not measure unique lessons.
+
+${independentTeaching}
+
 ## Root-body teaching readiness
 
 ${Object.keys(topics).length * anatomy.bodyRepresentations} topic placements across nine displayed topics. Counts describe displayed copy per representation, including shared source-group text, not unique lessons, medical correctness or approvals. The original eight topics remain; X-ray is additional. See [content contract](CONTENT_CONTRACT.md).
@@ -63,7 +100,7 @@ ${body}
 
 ## Nested teaching readiness
 
-Separate from root-body coverage and overlapping parent anatomy. Unnamed cranial pieces receive no inherited parent teaching. Brief drafts and model-scope self-checks are not full curricula or complete organ interiors. See [nested teaching](NESTED_ANATOMY_TEACHING.md) and [nested reviews](NESTED_REVIEWS.md).
+Separate from root-body coverage and overlapping parent anatomy. All 29 cranial source-file pieces have explicitly source-bound explanations (three right-MCA and 26 PICA), never inherited parent lessons or newly accepted branch identities. Their component-specific function and clinical topics remain pending. Brief drafts and model-scope self-checks are not full curricula or complete organ interiors. See [nested teaching](NESTED_ANATOMY_TEACHING.md) and [nested reviews](NESTED_REVIEWS.md).
 
 ${nested}
 

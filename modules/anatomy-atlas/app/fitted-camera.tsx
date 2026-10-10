@@ -32,6 +32,9 @@ export function FittedCamera({
   recenterKey = '',
   cameraCapture,
   cameraRestore,
+  autoRecoveryCamera,
+  cameraTransitionActive,
+  guidedRecovery = false,
   onKeyboardRotate,
   transitionMs = 0,
   transitionPaused = false,
@@ -51,6 +54,11 @@ export function FittedCamera({
   recenterKey?: string;
   cameraCapture?: RefObject<StudyCamera | null>;
   cameraRestore?: RefObject<StudyCamera | null>;
+  /** Private SceneRecovery marker; only its own queued camera may resume a guide. */
+  autoRecoveryCamera?: RefObject<StudyCamera | null>;
+  /** Last captured pose belongs to an actively moving guide. */
+  cameraTransitionActive?: RefObject<boolean>;
+  guidedRecovery?: boolean;
   onKeyboardRotate?: (cameraFrom: Vector3, azimuth: number, polar: number) => void;
   /** Opt-in guided tours only. Ordinary atlas camera behaviour stays immediate. */
   transitionMs?: number;
@@ -59,6 +67,7 @@ export function FittedCamera({
   const { camera, size, invalidate, gl } = useThree();
   const controls = useRef<Controls>(null);
   const transition = useRef<{ from: TourCameraPose; to: TourCameraPose; elapsed: number; duration: number } | null>(null);
+  const skipTransitionDelta = useRef(true);
   const previous = useRef<{
     key: string;
     bounds: Box3;
@@ -93,11 +102,19 @@ export function FittedCamera({
         bounds,
         size.width / Math.max(1, size.height),
       );
-  }, [cameraCapture, camera, bounds, size.width, size.height]);
+    if (cameraTransitionActive)
+      cameraTransitionActive.current = transition.current !== null;
+  }, [cameraCapture, cameraTransitionActive, camera, bounds, size.width, size.height]);
   useFrame((_state, delta) => {
     const motion = transition.current;
     if (!motion || transitionPaused) return;
-    motion.elapsed += Math.min(delta, 0.05) * 1000;
+    // Demand rendering can report the entire time since its previous frame on
+    // the first frame of a tour or after a pause. Subsequent valid deltas are
+    // real active time, even on a slow device.
+    const activeDelta = skipTransitionDelta.current || !Number.isFinite(delta) || delta <= 0
+      ? 0 : delta;
+    skipTransitionDelta.current = false;
+    motion.elapsed += activeDelta * 1000;
     const progress = Math.min(1, motion.elapsed / motion.duration);
     const pose = interpolateTourCamera(motion.from, motion.to, progress);
     camera.position.copy(pose.position);
@@ -105,15 +122,18 @@ export function FittedCamera({
     camera.lookAt(pose.target);
     controls.current?.target.copy(pose.target);
     controls.current?.update();
-    capture();
     if (progress === 1) transition.current = null;
-    else invalidate();
+    capture();
+    if (progress !== 1) invalidate();
   });
-  useEffect(() => { if (!transitionPaused) invalidate(); }, [transitionPaused, invalidate]);
+  useEffect(() => {
+    if (transitionPaused) skipTransitionDelta.current = true;
+    else invalidate();
+  }, [transitionPaused, invalidate]);
   useEffect(() => {
     const interruptedTransition = transition.current !== null;
     transition.current = null;
-    const from = controls.current && previous.current ? {
+    let from = controls.current && previous.current ? {
       position: camera.position.clone(), target: controls.current.target.clone(), up: camera.up.clone(),
     } : null;
     // This component owns the orthographic frustum. Fiber's automatic resize
@@ -127,6 +147,8 @@ export function FittedCamera({
       (camera instanceof PerspectiveCamera ||
         camera instanceof OrthographicCamera)
     ) {
+      const resumeGuide = guidedRecovery && camera instanceof PerspectiveCamera &&
+        autoRecoveryCamera?.current === cameraRestore.current;
       const restored = restoreStudyCamera(
         camera,
         bounds,
@@ -136,22 +158,31 @@ export function FittedCamera({
           : cameraRestore.current,
       );
       cameraRestore.current = null;
+      if (autoRecoveryCamera) autoRecoveryCamera.current = null;
       controls.current?.target.copy(restored.target);
       controls.current?.update();
-      previous.current = {
-        key,
-        bounds: bounds.clone(),
-        aspect,
-        fov,
-        occupancy: [horizontalFill, verticalFill],
-        recenterKey,
-        zoom,
-        zoomStep,
-        center: bounds.getCenter(new Vector3()),
-      };
-      capture();
-      invalidate();
-      return;
+      if (resumeGuide) {
+        // The captured pose is the new start; the selected preset remains the
+        // destination. Reduced motion takes the same path with zero duration.
+        from = {
+          position: camera.position.clone(), target: restored.target.clone(), up: camera.up.clone(),
+        };
+      } else {
+        previous.current = {
+          key,
+          bounds: bounds.clone(),
+          aspect,
+          fov,
+          occupancy: [horizontalFill, verticalFill],
+          recenterKey,
+          zoom,
+          zoomStep,
+          center: bounds.getCenter(new Vector3()),
+        };
+        capture();
+        invalidate();
+        return;
+      }
     }
     // Resize or reduced-motion changes must still arrive at the selected preset,
     // not accidentally adopt an intermediate animated orbit as the new view.
@@ -255,6 +286,7 @@ export function FittedCamera({
         elapsed: 0,
         duration: transitionMs,
       };
+      skipTransitionDelta.current = true;
       camera.position.copy(from.position);
       camera.up.copy(from.up);
       camera.lookAt(from.target);
@@ -279,6 +311,9 @@ export function FittedCamera({
     uz,
     invalidate,
     cameraRestore,
+    autoRecoveryCamera,
+    cameraTransitionActive,
+    guidedRecovery,
     capture,
     planar,
     recenterKey,
@@ -299,6 +334,9 @@ export function FittedCamera({
       });
     }
     return bindCameraKeyboard(gl.domElement, () => controls.current, () => {
+      // A consumed keyboard rotation is manual inspection, just like an orbit
+      // gesture. Do not overwrite its live pose on the next guided-tour frame.
+      transition.current = null;
       capture();
       invalidate();
       if (onKeyboardRotate && controls.current) {

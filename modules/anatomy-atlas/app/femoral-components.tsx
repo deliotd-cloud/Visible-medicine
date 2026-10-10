@@ -48,6 +48,7 @@ import {
 } from '@/lib/femoral-components';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
+import { modelLoadAccessNotice, type ModelLoadFailure } from '@/lib/model-load-failure';
 import type { DissectionView } from './dissection-data';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
 import './eye-layers.css';
@@ -141,13 +142,17 @@ export function FemoralComponentView({
     [failed, setFailed] = useState(false),
     [retry, setRetry] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
+  const [failureReason, setFailureReason] = useState<ModelLoadFailure>('unavailable');
+  const accessNotice = failed ? modelLoadAccessNotice([failureReason]) : null;
   const onLoaded = useCallback(() => {
     setLoaded(true);
     setFailed(false);
+    setFailureReason('unavailable');
   }, []);
-  const onFailure = useCallback(() => {
+  const onFailure = useCallback((_id: string, reason: ModelLoadFailure = 'unavailable') => {
     setFailed(true);
     setLoaded(false);
+    setFailureReason(reason);
   }, []);
   const selected = parts.find((s) => s.id === selectedId);
   const appearance = useMemo(
@@ -260,18 +265,19 @@ export function FemoralComponentView({
         )}
         {failed && (
           <div className="eye-layer-status" role="alert">
-            Components could not load.{' '}
+            {accessNotice?.message ?? 'Components could not load.'}{' '}
             <Button
               size="sm"
               onClick={() => {
                 retryBodyAssets(catalog.bundles.map((b) => b.url), assetBase);
                 setLoaded(false);
                 setFailed(false);
-                setHealth('starting');
+                setFailureReason('unavailable');
+                // Retrying this asset does not restart the existing canvas.
                 setRetry((r) => r + 1);
               }}
             >
-              Retry
+              {accessNotice?.retryLabel ?? 'Retry'}
             </Button>
           </div>
         )}

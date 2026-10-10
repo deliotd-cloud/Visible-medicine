@@ -1,5 +1,47 @@
 # Wrist-bone imaging orientation
 
+## 4 October 2026 correction — current source
+
+The original shared central-distal family gave capitate selections hamate-hook
+guidance. Capitate and hamate now have separate CT, MRI and X-ray drafts: **six
+teaching families / 18 modality topics**, reused across the same 16 source
+selections. Capitate follows its own head, neck, body and metacarpal relationships;
+hamate retains hook/body distinctions. Neither supplies acquired images or a
+diagnostic finding. The complete original admission groups, source identities,
+arrays, frame and model bytes remain unchanged; the family lookup occurs only
+after full-record admission, with no name/FMA-only fallback.
+
+A shared `source relationswrists` typo is also corrected. Against the exact
+`90191b8b236bfed00db7c424dbacde915920460d` parent, only **48 draft placements**
+change: 12 central-distal topics and 36 common-bullet-only corrections. All
+**9,888 other topics and 109 model bundles** remain exact. Sixteen teaching
+worksheets change and require fresh revision-bound radiologist review; no prior
+approval is migrated. This is a source correction awaiting separately verified
+website generation, not a claim that the live site is updated.
+
+Reproduce with `npm run wrist-imaging-correction:test`. It checks the full parent
+snapshot, complete recursive identity refusal, detached arrays, distinct
+capitate/hamate teaching, malformed Review material and independently stale
+material/revision submissions before storage. `npm run wrist-imaging:test`
+separately replays the complete immutable first-admission epoch; its older
+coverage totals below are historical, not today's atlas readiness. The hand
+ultrasound epoch is similarly preserved, with current preservation independently
+proved by the new correction suite. No historical golden hashes were replaced.
+
+The primary reading references below remain; the [capitate technical anatomy
+note](https://pmc.ncbi.nlm.nih.gov/articles/PMC7395839/) also corroborates the
+head/neck/body and third-metacarpal relationship in its indexed anatomy section.
+Its direct full-page request returned a browser challenge; no bypass, full-text
+access or article/figure import is claimed. These are reading links supporting
+original draft text, not imported scans, figures, meshes, publisher prose or an
+anatomy dataset. No dependency, font, texture or licence grant changes.
+
+The source-bound model still needs your clinical approval. Registration to
+patient CT/MRI, imaging resources and independent case/lecture entitlements
+retain their separate gates.
+
+## Original first-admission checkpoint — historical
+
 In **Hand** or the whole-body atlas, select a carpal bone and open **Imaging → X-ray / CT / MRI**. The existing bone exposure studies, source selections and notes panel are reused. No new control, scan viewer or additional scrolling requirement.
 
 ## Coverage and boundaries

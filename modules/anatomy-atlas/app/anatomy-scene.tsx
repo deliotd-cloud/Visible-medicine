@@ -35,6 +35,7 @@ import { Button } from '@/components/ui/button';
 import { SceneRecovery, RendererMonitor } from './scene-recovery';
 import type { RendererHealth } from '@/lib/renderer-health';
 import { SceneLabel, SceneLabelLayer } from './scene-label-layer';
+import { modelLoadAccessNotice, modelLoadFailure } from '@/lib/model-load-failure';
 
 const noPlanes: THREE.Plane[] = [];
 const sectionFrame = new THREE.Box3();
@@ -393,31 +394,38 @@ function Model(props: SceneProps & { offsets: Map<string, THREE.Vector3> }) {
 
 class ModelBoundary extends Component<
   { children: ReactNode; onModelReady: (ready: boolean) => void; modelUrl?: string },
-  { failed: boolean }
+  { failed: boolean; error: unknown }
 > {
-  state = { failed: false };
-  static getDerivedStateFromError() {
-    return { failed: true };
+  state = { failed: false, error: null as unknown };
+  static getDerivedStateFromError(error: unknown) {
+    return { failed: true, error };
   }
   componentDidCatch() {
     this.props.onModelReady(false);
   }
   render() {
+    const modelUrl = this.props.modelUrl ?? '/models/bodyparts3d/shoulder-right.glb';
+    let requested = modelUrl;
+    try {
+      if (typeof window !== 'undefined') requested = new URL(modelUrl, window.location.href).href;
+    } catch { /* Unverified URLs retain the generic failure message. */ }
+    const accessNotice = this.state.failed
+      ? modelLoadAccessNotice([modelLoadFailure(this.state.error, requested)]) : null;
     return this.state.failed ? (
       <Html center>
         <div className="model-loading">
-          <p>
-            The anatomy model could not load. Your view settings are retained.
+          <p role="status">
+            {accessNotice?.message ?? 'The anatomy model could not load. Your view settings are retained.'}
           </p>
           <Button
             size="sm"
             variant="outline"
             onClick={() => {
-              useGLTF.clear(this.props.modelUrl ?? '/models/bodyparts3d/shoulder-right.glb');
-              this.setState({ failed: false });
+              useGLTF.clear(modelUrl);
+              this.setState({ failed: false, error: null });
             }}
           >
-            Retry shoulder anatomy
+            {accessNotice?.retryLabel ?? 'Retry shoulder anatomy'}
           </Button>
         </div>
       </Html>
@@ -482,7 +490,7 @@ export function AnatomyScene(props: SceneProps) {
       cameraCapture={props.cameraCapture}
       cameraRestore={props.cameraRestore}
     >
-      {(onHealth) => (
+      {(onHealth, autoRecoveryCamera, cameraTransitionActive) => (
         <Canvas
           onFailure={() => onHealth('failed')}
           orthographic={orthographic}
@@ -524,7 +532,7 @@ export function AnatomyScene(props: SceneProps) {
             color="#eef5ff"
           />
           <SceneLabelLayer>
-            <ModelBoundary onModelReady={props.onModelReady} modelUrl={props.modelUrl}>
+            <ModelBoundary key={props.modelUrl ?? '/models/bodyparts3d/shoulder-right.glb'} onModelReady={props.onModelReady} modelUrl={props.modelUrl}>
               <Suspense
                 fallback={
                   <Html center>
@@ -582,6 +590,9 @@ export function AnatomyScene(props: SceneProps) {
             planar={layout === 'tray'}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
+            autoRecoveryCamera={autoRecoveryCamera}
+            cameraTransitionActive={cameraTransitionActive}
+            guidedRecovery={!!props.tourLocked}
           />
         </Canvas>
       )}

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from './workspace-test-build.mjs';
+import {build} from './hepatobiliary-tour-history.mjs';
 const parent='e1ad6b0c2aa62cb0f719ef666d559ec0bc8c9eed';
 const compile=async contents=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64')).catch(e=>{e.stack=e.message;throw e;});};
 const api=await compile(`export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-response';export * from './lib/body-source-additions';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`);
@@ -13,7 +13,7 @@ const fmas=['FMA86464','FMA61961','FMA72924','FMA72925','FMA72832','FMA74877'];
 assert.deepEqual(tour.steps.map(step=>structures.find(s=>s.id===step.selectedId).fmaId),fmas);
 assert.deepEqual(structures.filter(s=>tour.contextIds.includes(s.id)).map(s=>s.fmaId),['FMA72833']);
 assert(!structures.some(s=>s.fmaId==='FMA61970'));assert.equal(structures.find(s=>s.fmaId==='FMA74877').sources.length,2);
-assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.subscapularTour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id),previous.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>t.id!==tour.id&&t.id!==api.subscapularTour.id&&t.id!==api.lumbarTour.id&&t.id!==api.carpalTour.id&&t.id!==api.renalTour.id&&t.id!==api.tarsalTour.id&&t.id!==api.lowerLimbBoneTour.id&&t.id!==api.upperLimbBoneTour.id&&t.id!==api.pelvicRingTour.id&&t.id!==api.circleWillisTour.id),previous.regionalTours);
 const raw=JSON.parse(execFileSync('git',['show',parent+':public/models/bodyparts3d/full-body/catalog.json'],{encoding:'utf8',maxBuffer:8e6}));
 for(const s of structures){
  assert.deepEqual(s,raw.structures.find(old=>old.id===s.id),'Exact immutable source identity');
@@ -48,7 +48,7 @@ for(const s of api.catalog.structures){
  if(!structures.some(t=>t.id===s.id)){
   // Compare this historical milestone's evidence without the later, separately
   // tested later sequences; do not carry their new review hashes backwards.
-  const historical=packet.guidedTours.filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id);
+  const historical=packet.guidedTours.filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id&&e.tour.id!==api.circleWillisTour.id);
   assert.equal(digest({scope,topics:packet.topics,reasoning:packet.reasoning,...(historical.length?{guidedTours:historical}:{})}),oldHash);
   unchanged++;continue;
  }

@@ -3,17 +3,20 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {build} from './workspace-test-build.mjs';
-const compile=async contents=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
-const api=await compile(`export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-decisions';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`);
+import {preCoronaryTourPlugin} from './coronary-tour-history.mjs';
+const compile=async (contents,completedEpoch=false)=>{const r=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins:completedEpoch?[preCoronaryTourPlugin()]:[]});return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));};
+// Preserve every assertion at its completed 30-tour epoch. The new tour suite
+// independently checks current 31-tour material, source pins and all1104 deltas.
+const api=await compile(`export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-decisions';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`,true);
 // Keep all fourteen prior definitions/context/captions unchanged. Shared context
 // gains another reviewed tour; previous individual tour evidence stays exact.
 const parent='8da967df7f4f419014ea03b323d239732a787be1';
 assert.equal(readFileSync('lib/chest-wall-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/chest-wall-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
 const priorTours=await compile(execFileSync('git',['show',parent+':lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.equal(readFileSync('lib/orbital-tour.ts','utf8').replace(/\r/g,''),execFileSync('git',['show',parent+':lib/orbital-tour.ts'],{encoding:'utf8'}).replace(/\r/g,''));
-assert.deepEqual(api.regionalTours.filter(t=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id,api.upperLimbBoneTour.id,api.pelvicRingTour.id].includes(t.id)),priorTours.regionalTours);
+assert.deepEqual(api.regionalTours.filter(t=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id,api.upperLimbBoneTour.id,api.pelvicRingTour.id,api.circleWillisTour.id,api.hepatobiliaryTour.id,api.handArterialTour.id,api.lowerVenousTour.id,...api.handVenousTours.map(t=>t.id)].includes(t.id)),priorTours.regionalTours);
 for(const s of priorTours.regionalTours.flatMap(t=>priorTours.regionalTourStructures(api.catalog,t))){
- assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id,api.upperLimbBoneTour.id,api.pelvicRingTour.id].includes(e.tour.id)),priorTours.regionalTourEvidence(api.catalog,s.id),'Every prior individual tour retains its evidence');
+ assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>![api.maleDuctTour.id,api.deepBrainTour.id,api.subscapularTour.id,api.lumbarTour.id,api.carpalTour.id,api.renalTour.id,api.tarsalTour.id,api.lowerLimbBoneTour.id,api.upperLimbBoneTour.id,api.pelvicRingTour.id,api.circleWillisTour.id,api.hepatobiliaryTour.id,api.handArterialTour.id,api.lowerVenousTour.id,...api.handVenousTours.map(t=>t.id)].includes(e.tour.id)),priorTours.regionalTourEvidence(api.catalog,s.id),'Every prior individual tour retains its evidence');
 }
 const oldParser=await compile(execFileSync('git',['show','6b1539f:lib/body-review-response.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 const canonical=v=>Array.isArray(v)?'['+v.map(canonical).join(',')+']':v&&typeof v==='object'?'{'+Object.keys(v).sort().map(k=>JSON.stringify(k)+':'+canonical(v[k])).join(',')+'}':JSON.stringify(v);
@@ -64,7 +67,7 @@ for(const spec of limbCases){
 const oldTours=await compile(execFileSync('git',['show','82dee8b:lib/regional-tours.ts'],{encoding:'utf8'}).replaceAll("from './","from './lib/"));
 assert.deepEqual(api.regionalTourEvidence(api.catalog,selected[0].id),oldTours.regionalTourEvidence(api.catalog,selected[0].id),'Existing thorax evidence unchanged');
 assert.deepEqual(api.regionalTourEvidence(api.catalog,cervical[0].id),oldTours.regionalTourEvidence(api.catalog,cervical[0].id),'Existing cervical evidence unchanged');
-for(const s of oldTours.regionalTours.flatMap(t=>oldTours.regionalTourStructures(api.catalog,t)))assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id),oldTours.regionalTourEvidence(api.catalog,s.id),'All 65 prior individual tour sequences unchanged; shared scapula also gains new tour evidence');
+for(const s of oldTours.regionalTours.flatMap(t=>oldTours.regionalTourStructures(api.catalog,t)))assert.deepEqual(api.regionalTourEvidence(api.catalog,s.id).filter(e=>e.tour.id!==api.subscapularTour.id&&e.tour.id!==api.lumbarTour.id&&e.tour.id!==api.carpalTour.id&&e.tour.id!==api.renalTour.id&&e.tour.id!==api.tarsalTour.id&&e.tour.id!==api.lowerLimbBoneTour.id&&e.tour.id!==api.upperLimbBoneTour.id&&e.tour.id!==api.pelvicRingTour.id&&e.tour.id!==api.circleWillisTour.id&&e.tour.id!==api.hepatobiliaryTour.id&&e.tour.id!==api.handArterialTour.id&&e.tour.id!==api.lowerVenousTour.id&&!api.handVenousTours.some(t=>t.id===e.tour.id)),oldTours.regionalTourEvidence(api.catalog,s.id),'All 65 prior individual tour sequences unchanged; shared scapula also gains new tour evidence');
 let checked=0;
 for(const s of api.catalog.structures){
  const m=await api.bodyReviewMaterial(s.id),c=await api.bodyReviewContext(s.id);
@@ -74,10 +77,10 @@ for(const s of api.catalog.structures){
  const previous=digest({scope,topics:m.topics,reasoning:m.reasoning});
  const priorEvidence=priorTours.regionalTourEvidence(api.catalog,s.id);
  const beforeDuct=digest({scope,topics:m.topics,reasoning:m.reasoning,...(priorEvidence.length?{guidedTours:priorEvidence}:{})});
- const gainsDuct=[...api.maleDuctTour.contextIds,...api.maleDuctTour.steps.map(step=>step.selectedId)].includes(s.id);
+ const gainsDuct=[...api.maleDuctTour.contextIds,...api.maleDuctTour.steps.map(step=>step.selectedId),...api.hepatobiliaryTour.steps.map(step=>step.selectedId)].includes(s.id);
  const gainsBrain=[...api.deepBrainTour.contextIds,...api.deepBrainTour.steps.map(step=>step.selectedId)].includes(s.id);
  const gainsUpperLimb=[...api.upperLimbBoneTour.contextIds,...api.upperLimbBoneTour.steps.map(step=>step.selectedId)].includes(s.id);
- if(api.pelvicRingTour.steps.some(step=>step.selectedId===s.id)||gainsUpperLimb||api.lowerLimbBoneTour.steps.some(step=>step.selectedId===s.id)||api.tarsalTour.steps.some(step=>step.selectedId===s.id)||[...api.renalTour.contextIds,...api.renalTour.steps.map(step=>step.selectedId)].includes(s.id)||api.carpalTour.steps.some(step=>step.selectedId===s.id)||api.lumbarTour.steps.some(step=>step.selectedId===s.id)||gainsDuct||gainsBrain||[...api.subscapularTour.contextIds,...api.subscapularTour.steps.map(step=>step.selectedId)].includes(s.id))assert.notEqual(m.fingerprints.teaching,beforeDuct,'New tour teaching requires fresh review');
+ if(api.handVenousTours.some(t=>t.steps.some(step=>step.selectedId===s.id))||api.lowerVenousTour.steps.some(step=>step.selectedId===s.id)||api.handArterialTour.steps.some(step=>step.selectedId===s.id)||api.circleWillisTour.steps.some(step=>step.selectedId===s.id)||api.pelvicRingTour.steps.some(step=>step.selectedId===s.id)||gainsUpperLimb||api.lowerLimbBoneTour.steps.some(step=>step.selectedId===s.id)||api.tarsalTour.steps.some(step=>step.selectedId===s.id)||[...api.renalTour.contextIds,...api.renalTour.steps.map(step=>step.selectedId)].includes(s.id)||api.carpalTour.steps.some(step=>step.selectedId===s.id)||api.lumbarTour.steps.some(step=>step.selectedId===s.id)||gainsDuct||gainsBrain||[...api.subscapularTour.contextIds,...api.subscapularTour.steps.map(step=>step.selectedId)].includes(s.id))assert.notEqual(m.fingerprints.teaching,beforeDuct,'New tour teaching requires fresh review');
  else assert.equal(m.fingerprints.teaching,beforeDuct,'No unrelated teaching review is invalidated');
  const tours=api.regionalTours.filter(t=>[...t.contextIds,...t.steps.map(step=>step.selectedId)].includes(s.id));
  if(tours.length){
@@ -88,9 +91,15 @@ for(const s of api.catalog.structures){
  }else{assert.equal(m.guidedTours.length,0);assert.equal(m.fingerprints.teaching,previous,'Unrelated teaching history retained');assert(!c.checklists.teaching.some(v=>v.id==='guided-tour'));}
  assert.equal(c.revisions.imaging,null);
 }
-assert.equal(api.catalog.structures.length,1104);assert.equal(checked,143);assert.equal(api.regionalTours.length,24);
+assert.equal(api.catalog.structures.length,1104);
+assert.equal(checked-api.handArterialTour.steps.length-api.lowerVenousTour.steps.length-api.handVenousTours.reduce((n,t)=>n+t.steps.length,0),157,'Earlier guided-review participant count retained');
+assert.equal(checked-api.lowerVenousTour.steps.length-api.handVenousTours.reduce((n,t)=>n+t.steps.length,0),164,'Completed hand tour participant count retained');
+assert.equal(checked-api.handVenousTours.reduce((n,t)=>n+t.steps.length,0),170,'Six earlier lower-limb veins retain their review evidence');
+assert.equal(checked,184,'Fourteen existing hand-vein groups gain exact tour evidence');
+assert.equal(api.regionalTours.filter(t=>t.id!==api.handArterialTour.id&&t.id!==api.lowerVenousTour.id&&!api.handVenousTours.some(h=>h.id===t.id)).length,26);
+assert.equal(api.regionalTours.length,30);
 const orbitalStructures=api.regionalTourStructures(api.catalog,api.orbitalTour);
-assert.equal(orbitalStructures.length,7);assert.equal(api.regionalToursFor('head-neck').length,4);
+assert.equal(orbitalStructures.length,7);assert.equal(api.regionalToursFor('head-neck').length,5);
 let orbitalRejected=0;
 for(const structure of orbitalStructures){
  const packet=await api.bodyReviewMaterial(structure.id);
@@ -263,7 +272,7 @@ for(const structure of ductStructures){
  const packet=await api.bodyReviewMaterial(structure.id),index=packet.guidedTours.findIndex(e=>e.tour.id===api.maleDuctTour.id);
  assert(index>=0);assert.equal(packet.approval,false);assert.equal(packet.guidedTours[index].stepFrames.length,6);
  const prior=priorTours.regionalTourEvidence(api.catalog,structure.id);
- const historical=packet.guidedTours.filter(e=>e.tour.id!==api.pelvicRingTour.id);
+ const historical=packet.guidedTours.filter(e=>e.tour.id!==api.pelvicRingTour.id&&e.tour.id!==api.circleWillisTour.id);
  assert.equal(historical.length,prior.length+1);
  assert.deepEqual(historical.filter(e=>e.tour.id!==api.maleDuctTour.id),prior);
  if(prior.length){sharedPelvic++;const p=structuredClone(packet);p.guidedTours=[p.guidedTours[index]];assert.equal((await api.parseBodyReviewResponse(p,structure.id)),null);ductRejected++;}

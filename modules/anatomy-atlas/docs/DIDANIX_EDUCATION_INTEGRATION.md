@@ -43,6 +43,36 @@ Use the existing `LearningLocator` and resource registry (`lib/learning-resource
 
 ## Existing private tools
 
+### Paused regional/whole-body tour stops
+
+The integrated root-body panel can offer an opt-in control inside its collapsed
+imaging notes. Start a source-ready tour, open the imaging notes to pause camera
+motion, then explicitly allow the current stop and request imaging. The trusted
+host must separately connect and enable its Education link; a registered adapter
+does not prove that a study is loaded, entitled, cleared or revealed.
+
+The stop binds tour ID/revision, step ID, exact anatomical ID and ordered source
+hashes to the current region/side. Playback, step/tour/source changes, renderer
+failure, retry, hidden/pagehide state, assessment and exit revoke consent and
+cancel in-flight navigation. A tour quick check also holds the link while open.
+The existing manual incoming receiver remains disabled throughout tours: viewer
+annotation clicks cannot change the selected stop, camera or tour. Nested eye
+guides and the separate shoulder-pilot player do not inherit this root capability.
+
+The request carries source identity and the assembled reference-model centre,
+not patient coordinates, scans or measured landmarks. The Didanix port resolves
+only already-cleared, independently authorised source-bound resource/anchor
+revisions in its current study. Multiple/non-exact matches retain the host's
+explicit choice requirement. No guessed alignment, new resource, launch URL,
+server access grant or automatic case switch is added. Soft cancellation aborts
+superseded requests without enabling a host-disabled link; assessment/exit and
+normal root scope changes still hard-pause the existing connection.
+
+Synthetic checks and local UI acceptance are not acquired CT/MRI/X-ray/US
+acceptance or clinical approval. Cleared representative studies, reviewed
+correspondences, actual Education transport, spatial validation, independent
+entitlements and revision-bound radiologist sign-off remain required.
+
 The local CT workbench and MRI import checker are internal engineering/radiologist review aids. They do not add a learner PACS, clinical worklists, diagnostic workflow, AI marketplace or clinical archive access. Their `.vmatlas`, `.vmcompare` and `.vmmr` files are local QA/review formats, **not** a requirement for Didanix Education or permission to redistribute scans. MRI source preparation can help verify future ingestion, but must not develop into a competing DICOM implementation.
 
 Continue atlas anatomy, teaching and dissection improvements while the Education production/adapter gates are completed in their own task. Do not broaden the atlas goal to silently implement or alter that separate product.

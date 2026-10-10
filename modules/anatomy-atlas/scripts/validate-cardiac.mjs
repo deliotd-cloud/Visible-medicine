@@ -86,6 +86,8 @@ const shim = {
   },
   useLayoutEffect: (fn, deps) =>
     active ? undefined : React.useLayoutEffect(fn, deps),
+  // Controlled callback/SSR check only: no browser transport effects run here.
+  useEffect: (fn, deps) => active ? undefined : React.useEffect(fn, deps),
 };
 const scope = { exports: {} };
 runInNewContext(compiled.outputFiles[0].text, {
@@ -272,10 +274,14 @@ const pins = JSON.parse(
 );
 const previousBindings = pins.bindings.filter((b) =>
   // This immutable 37-row snapshot predates the separately bound collicular
-  // brachia. Keep its original hashes; current additions have their own tests.
+  // brachia and two hippocampi. Keep its original hashes; current additions
+  // have their own exact-source teaching validation.
   ['eye', 'ventricles', 'brainstem', 'cerebral'].includes(b.study) &&
-  !['FMA73464', 'FMA73463'].includes(b.structure.fmaId),
+  !['FMA73464', 'FMA73463', 'FMA72714', 'FMA72713'].includes(b.structure.fmaId),
 );
+same(pins.bindings.filter(b => b.conceptId === 'cerebral-hippocampus')
+  .map(b => b.structure.fmaId).sort(), ['FMA72713', 'FMA72714'],
+  'The two later hippocampal bindings remain present, not dropped from current scope');
 const previousParents = pins.parents.filter((p) =>
   previousBindings.some((b) => b.parentId === p.id),
 );

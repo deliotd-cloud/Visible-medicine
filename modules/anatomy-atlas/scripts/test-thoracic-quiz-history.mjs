@@ -3,9 +3,15 @@ import { contentContext } from './content-contract-tools.mjs';
 import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 import { beforeThoracicQuiz } from './thoracic-quiz-history.mjs';
 import { beforeShoulderArterialCt } from './shoulder-arterial-ct-history.mjs';
+import { beforeLumbarDiscMri } from './lumbar-disc-mri-history.mjs';
+import { preCoronaryArterialStudyProfiles } from './coronary-arterial-study-history.mjs';
 import pins from '../content/thoracic-quiz-pins.json' with { type: 'json' };
 const { api: currentApi, catalog } = await contentContext();
-const api = beforeShoulderArterialCt(currentApi);
+// Compare the original epoch only after exact later MRI/Quiz/renal/pulmonary
+// and coronary-study reversals. Original source pins and assertions stay fixed.
+const earlier = beforeLumbarDiscMri(currentApi, catalog);
+const api = beforeShoulderArterialCt({ ...earlier,
+  dissectionProfiles: preCoronaryArterialStudyProfiles(earlier.dissectionProfiles) });
 const parent = await exactSourceHistoryApi(pins.parentCommit);
 const prior = beforeThoracicQuiz(api);
 const display = api.bodyDisplayCatalog(catalog);

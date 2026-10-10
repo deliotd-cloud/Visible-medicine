@@ -12,7 +12,8 @@ const compiled = await build({
   stdin: {
     contents: `export * from './lib/study-library';
 export * from './lib/body-display-catalog';
-export * from './app/dissection-data';`,
+export * from './app/dissection-data';
+export {sourceCanonical} from './lib/body-source-additions';`,
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -30,6 +31,7 @@ const {
   dissectionReducer,
   resolveDissection,
   matchesRule,
+  sourceCanonical,
 } = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 
 const catalog = bodyDisplayCatalog(JSON.parse(
@@ -202,8 +204,15 @@ for (const [region, profile] of Object.entries(dissectionProfiles)) {
       // the opposite side; context alone must not make that recipe available.
       const recipe = studyLibrary(scope, profile).flatMap((card) => card.recipes)
         .find((entry) => entry.kind === 'focus' && entry.id === focus.id);
-      assert.equal(recipe.available, targets.length > 0);
-      assert(targets.every((s) => list.includes(s)));
+      // A complete-source comparison remains unavailable even if some target
+      // labels occur in a sided scope. Verify the full records independently.
+      const sourceReady = (focus.requiredSources ?? []).every(expected => {
+        const found = scope.filter(s => s.id === expected.id || s.fmaId === expected.fmaId);
+        return found.length === 1 && sourceCanonical(found[0]) === sourceCanonical(expected);
+      });
+      assert.equal(recipe.available, targets.length > 0 && sourceReady);
+      if (sourceReady) assert(targets.every((s) => list.includes(s)));
+      else assert.deepEqual(list, [], `Held incomplete source focus ${region}/${focus.id}/${side}`);
       assert(list.every((s) => scope.includes(s)));
       checks++;
     }

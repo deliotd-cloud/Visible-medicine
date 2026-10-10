@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import * as labelFocus from '../lib/scene-label-focus.ts';
+import * as labelSize from '../lib/scene-label-size.ts';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { Group, Vector3, PerspectiveCamera, OrthographicCamera } from 'three';
@@ -82,6 +83,66 @@ function validate(labels, width, height) {
   }
   return result;
 }
+
+// Interior intersections are independent of the router's implementation.
+// Shared anchor/end points are allowed; a crossing between distinct leaders is not.
+function interiorIntersection(a, b, c, d) {
+  const cross = (u, v) => u.x * v.y - u.y * v.x;
+  const ab = { x: b.x - a.x, y: b.y - a.y };
+  const cd = { x: d.x - c.x, y: d.y - c.y };
+  const denominator = cross(ab, cd);
+  if (Math.abs(denominator) < 1e-9) return false;
+  const ac = { x: c.x - a.x, y: c.y - a.y };
+  const t = cross(ac, cd) / denominator;
+  const u = cross(ac, ab) / denominator;
+  return t > 1e-7 && t < 1 - 1e-7 && u > 1e-7 && u < 1 - 1e-7;
+}
+function leadersCross(a, b) {
+  for (let i = 1; i < a.leader.length; i++)
+    for (let j = 1; j < b.leader.length; j++)
+      if (interiorIntersection(a.leader[i-1], a.leader[i], b.leader[j-1], b.leader[j])) return true;
+  return false;
+}
+function inspectRoutes(placed, width, height) {
+  for (const label of placed) {
+    check(label.leader.length >= 2 && label.leader.length <= 3, 'Leader uses a bounded number of segments');
+    same(label.leader[0], {x:label.x,y:label.y}, 'Route starts at projected anatomy anchor');
+    same(label.leader.at(-1), {x:label.endX,y:label.endY}, 'Route ends at measured box edge');
+    check(label.leader.every(point => point.x >= 0 && point.x <= width && point.y >= 0 && point.y <= height), 'Route stays inside canvas');
+    let length=0;
+    for(let i=1;i<label.leader.length;i++)length+=Math.hypot(label.leader[i].x-label.leader[i-1].x,label.leader[i].y-label.leader[i-1].y);
+    check(length <= Math.abs(label.x-label.endX)+Math.abs(label.y-label.endY)+1e-8, 'Route length is at most Manhattan distance');
+  }
+  for(let i=0;i<placed.length;i++)for(let j=0;j<i;j++)
+    if(placed[i].side!==placed[j].side)check(!leadersCross(placed[i],placed[j]),'Opposite screen-side routes remain separate');
+}
+for (const mirror of [false, true]) {
+  const anchors = [{id:'A',x:200,y:50},{id:'B',x:300,y:100},{id:'C',x:120,y:130}]
+    .map((point, priority) => ({...point,x:mirror?800-point.x:point.x,width:100,height:80,priority}));
+  const placed = validate(anchors,800,500);
+  same(placed.map(label => label.top + label.height/2),[50,136,222], 'Fixture preserves packed box centres');
+  const [b,c] = placed.slice(1);
+  check(interiorIntersection({x:b.x,y:b.y},{x:b.endX,y:b.endY},{x:c.x,y:c.y},{x:c.endX,y:c.endY}), 'Fixture independently reproduces straight B/C crossing');
+  for(let i=0;i<placed.length;i++)for(let j=0;j<i;j++)
+    check(!leadersCross(placed[i],placed[j]),'Routed same-side leaders have no interior crossing');
+  inspectRoutes(placed,800,500);
+  check(placed.filter(label=>label.side===(mirror?'right':'left')).length===3,'Routing preserves all accepted labels');
+}
+for(const width of [240,320,800])for(const mirror of [false,true]) {
+  const x = mirror ? width-22 : 22;
+  const placed=validate([
+    {id:'selected',x,y:65,width:Math.min(80,screenLabelMaxWidth(width)),height:62,selected:true},
+    {id:'tied',x,y:65,width:Math.min(65,screenLabelMaxWidth(width)),height:62},
+    {id:'lower',x:mirror?width-110:110,y:130,width:Math.min(75,screenLabelMaxWidth(width)),height:62},
+  ],width,500);
+  inspectRoutes(placed,width,500);
+  check(placed.some(label=>label.id==='selected'),'Selected anchor-in-gutter label survives routing');
+  check(placed.every(label=>label.side===(mirror?'right':'left')),'Tied and gutter anchors retain actual screen side');
+}
+inspectRoutes(validate([
+  {id:'left',x:190,y:180,width:110,height:70},
+  {id:'right',x:610,y:185,width:130,height:80,selected:true},
+],800,500),800,500);
 
 // Small extracted structures can sit inside the label rail itself. Protect
 // their anchor with clearance when a free vertical slot exists, on either side.
@@ -399,6 +460,7 @@ runInNewContext(
       if (name === '@/lib/screen-label-layout') return labelLayout;
       if (name === '@/lib/label-depth') return labelDepth;
       if (name === '@/lib/scene-label-focus') return labelFocus;
+      if (name === '@/lib/scene-label-size') return labelSize;
       if (name === './scene-label-layer.css') return {};
       if (name === 'react/jsx-runtime') return require(name);
       throw Error('Unexpected component import: ' + name);
@@ -424,7 +486,7 @@ same(
 );
 const buttonElement = elements.find((element) => element.type === 'button');
 same(
-  buttonElement.props.children[0],
+  buttonElement.props.children[0].props.children,
   'Right structure',
   'Anatomical text is not relabelled to screen laterality',
 );
@@ -516,6 +578,51 @@ check(
   observers.every((observer) => observer.nodes.size === 0),
   'Observers release on unmount',
 );
+
+// Run the exact component callback with the crossing fixture. The SVG d values
+// must consume the routed polyline, rather than recomputing straight leaders.
+size.width=800; size.height=500;
+for(const mirror of [false,true]) {
+  const anchors=[{id:'A',x:200,y:50},{id:'B',x:300,y:100},{id:'C',x:120,y:130}]
+    .map((point,priority)=>({...point,x:mirror?800-point.x:point.x,width:100,height:80,priority}));
+  entries.splice(0,entries.length,...anchors.map(label=>({
+    id:label.id,name:label.id,selected:false,priority:label.priority,
+    anchor:{current:new Group()},onSelect:()=>{},
+  })));
+  anchors.forEach((label,index)=>{
+    entries[index].anchor.current.position.set(label.x-400,250-label.y,0);
+    fixtureScene.add(entries[index].anchor.current);
+  });
+  const routedTree=fixtureModule.exports.SceneLabelLayer({children:null});
+  const routedElements=[];
+  function collect(element) {
+    if(!element||typeof element!=='object')return;
+    if(Array.isArray(element))return element.forEach(collect);
+    routedElements.push(element);collect(element.props?.children);
+  }
+  collect(routedTree);
+  const paths=routedElements.filter(element=>element.type==='path');
+  const buttons=routedElements.filter(element=>element.type==='button');
+  const circles=routedElements.filter(element=>element.type==='circle');
+  const pathNodes=paths.map(()=>({style:{},dataset:{},attributes:{},setAttribute(key,value){this.attributes[key]=value;}}));
+  paths.forEach((element,index)=>element.props.ref(pathNodes[index]));
+  buttons.forEach(element=>element.props.ref({style:{},dataset:{},attributes:{},offsetWidth:100,offsetHeight:80,setAttribute(key,value){this.attributes[key]=value;}}));
+  circles.forEach(element=>element.props.ref({style:{},dataset:{},attributes:{},setAttribute(key,value){this.attributes[key]=value;}}));
+  const routeCamera=new OrthographicCamera(-400,400,250,-250,0.1,100);
+  routeCamera.position.set(0,0,10);routeCamera.lookAt(0,0,0);
+  frame({camera:routeCamera});
+  const expected=layoutScreenLabels(anchors.map((label,index)=>({
+    ...label,...projectLabelAnchor(entries[index].anchor.current.getWorldPosition(new Vector3()),routeCamera,800,500),
+  })),800,500);
+  paths.forEach((element,index)=>{
+    const label=expected.find(item=>item.id===anchors[index].id);
+    const expectedD=label.leader.map((point,j)=>`${j?'L':'M'} ${point.x} ${point.y}`).join(' ');
+    same(pathNodes[index].attributes.d,expectedD,'Exact component callback renders routed SVG path');
+  });
+  check(pathNodes[1].attributes.d.includes(' L ') && pathNodes[1].attributes.d.split(' L ').length===3,'Crossing leader gains a visible bend in SVG');
+  for(const element of [...paths,...buttons,...circles])element.props.ref(null);
+  for(const entry of entries)fixtureScene.remove(entry.anchor.current);
+}
 
 const report = {
   passed: true,

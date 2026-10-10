@@ -178,7 +178,7 @@ export function AtlasWorkspace({
 }
 export function WorkspaceModes({ guidedLearning }: {
   /** Optional library surface; preserves the underlying Explore/Dissect snapshot. */
-  guidedLearning?: { active: boolean; onChange: (active: boolean) => void };
+  guidedLearning?: { active: boolean; onChange: (active: boolean, reason?: 'mode-switch') => void };
 } = {}) {
   const { mode, exam, chooseMode, setPanelOpen } = useAtlasWorkspace(),
     id = useId();
@@ -193,7 +193,7 @@ export function WorkspaceModes({ guidedLearning }: {
           setPanelOpen(true, false);
           guidedLearning.onChange(true);
         } else if (workspaceModes.includes(value as WorkspaceMode)) {
-          guidedLearning?.onChange(false);
+          guidedLearning?.onChange(false, 'mode-switch');
           chooseMode(value as WorkspaceMode);
         }
       }}
@@ -463,12 +463,20 @@ export function QuizNotes({ structure }: { structure: BodyStructure }) {
           )}
         </>
       )}
-      {content.note && <p className="body-content-note">{content.note}</p>}
-      {content.citations?.map((url, i) => (
-        <a key={url} href={url} target="_blank" rel="noreferrer">
-          Reference {i + 1} ↗
-        </a>
-      ))}
+      {(content.note || content.citations?.length) ? (
+        <details
+          className="atlas-quiz-sources"
+          key={JSON.stringify([structure.id, content.body, content.note, content.citations])}
+        >
+          <summary>Sources &amp; limitations</summary>
+          {content.note && <p className="body-content-note">{content.note}</p>}
+          {content.citations?.map((url, i) => (
+            <a key={url} href={url} target="_blank" rel="noreferrer">
+              Reference {i + 1} ↗
+            </a>
+          ))}
+        </details>
+      ) : null}
         </>;
       }}</LazyBodyTeaching>
     </details>

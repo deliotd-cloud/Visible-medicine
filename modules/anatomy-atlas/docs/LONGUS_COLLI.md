@@ -37,6 +37,38 @@ The owner is the designated clinical signer, not an automatic approval. Review t
 
 Technical verification: npm run longus-colli:test reproduces the GLB, preserves the exact earlier recipe snapshot, checks 18 direct links, 80 focused links in six side/region scopes, 135 altered-source rejection cases and 12 actual parent-handler cases. Run the existing shared dissection, study, label/explode, review and imaging-link regressions before publishing. These checks are not browser/device or clinical certification.
 
+## Attachment checks added 10 October 2026
+
+The three exact supplied left identities now have original four-choice attachment
+questions instead of name-only checks. Answers have explicit explanations; the
+existing source-identity comparison rejects modified or mirrored records.
+Anatomy/Function and all other topics are unchanged. Questions describe typical
+teaching anatomy, not measured donor footprints; they remain drafts for the owner's
+revision-bound review. No new imaging, geometry, assets or clinical approval.
+
+Run `npm run longus-colli-quiz:test` for the exact transition from Atlas
+`c4aa4ed6a2d4831e51e8c877fbcfa0d66d265bf6`, unchanged-topic/geometry checks,
+identity mutations and stale/forged Review packet rejection. The earlier elbow
+transition remains tested at that completed revision, alongside live elbow checks.
+Website delivery requires the normal generated import; source changes alone are
+not a deployed learner release.
+
+The reproduction exporter in `--check` mode now reads the three retained OBJ
+files in `content/sources/longus-colli`, still enforcing each original SHA-256 and
+identical generated GLB/catalogue output. Checks no longer require the historical
+external staging directory. No geometry or original files were modified.
+
+Verification: the quiz transition preserves 9,933 other topics and all 109 body
+bundles, rejects 123 changed identities and stale/forged Review packets. Shared
+content checks (33,468), TypeScript, source holds and generated review checks pass.
+The older study test now uses the exact completed catalogue/teaching baseline and
+current parent-handler inputs: its original geometry/link/refusal assertions are
+retained. Existing clinical/pathology/CT/MRI notes are drafts; X-ray/US are pending.
+Initial stale-path/count/topic/handler failures are retained with corrected runs
+under `F:/VisibleMedicine/staging/20261010-longus-colli-quiz`.
+No new production build, browser acceptance, website import or clinical approval
+is claimed for this source-only batch.
+
 ## Rights and factual references
 
 BodyParts3D v4 uses CC BY 4.0. **BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International.** Preserve this credit, licence and the export modification notice. The [official licence](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html) was checked on 11 September 2026.

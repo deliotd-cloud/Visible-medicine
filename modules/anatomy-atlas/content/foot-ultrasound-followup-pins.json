@@ -1,0 +1,867 @@
+{
+  "baseline": "ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "14f2cc5091adcea902b357bd63ced0d2738def7213bee739eafc087d894ec3d0",
+  "entries": [
+    {
+      "family": "halluxNote",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-big-toe",
+        "fmaId": "FMA32651",
+        "name": "Distal phalanx of left big toe",
+        "sourceName": "distal phalanx of left big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32651",
+        "bounds": {
+          "min": [
+            1.0250400304794312,
+            -8.700064659118652,
+            1.6072500944137573
+          ],
+          "max": [
+            1.2505600452423096,
+            -8.590411186218262,
+            1.8591901063919067
+          ]
+        },
+        "center": [
+          1.1378000378608704,
+          -8.645237922668457,
+          1.733220100402832
+        ],
+        "anchor": [
+          1.1560699939727783,
+          -8.621658325195312,
+          1.753059983253479
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3182",
+            "sha256": "aa0a98125fc8e3cfafa4eb1a4a00df9f21b7eefbd6d66327561a70be6f15c5d9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "draft",
+          "title": "Distal phalanx of left big toe · ultrasound evidence & limits · draft",
+          "body": "The hallux distal phalanx begins at the hallux interphalangeal joint and extends toward the terminal tuft. Sagittal and axial ultrasound accounts of that joint distinguish proximal and distal phalanges with nearby plantar soft tissues. Use those as local orientation relationships, keeping the distal phalanx base separate from its terminal end. An interphalangeal ossicle may occur at the plantar joint but is not a universal or independently selected structure here.",
+          "bullets": [
+            "Use the hallux IP label, not a lesser-toe DIP label; there is no intervening middle hallux phalanx.",
+            "The source cannot establish an ossicle, plantar-plate or tendon finding, nail-region condition or internal marrow state."
+          ],
+          "citations": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8938480/"
+          ],
+          "note": "Original educational draft; revision-bound radiologist review pending. The selected three-phalangeal lesser-toe pattern is not universal: biphalangeal variants occur, particularly in the fifth toe. The whole-bone mesh is not an ultrasound frame, patient registration, acquisition simulator or diagnostic test. A local acoustic window does not show the entire bone or its marrow. Atlas, imaging-case and paid-lecture access remain independent."
+        }
+      }
+    },
+    {
+      "family": "halluxNote",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-big-toe",
+        "fmaId": "FMA32650",
+        "name": "Distal phalanx of right big toe",
+        "sourceName": "distal phalanx of right big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32650",
+        "bounds": {
+          "min": [
+            -1.2511900663375854,
+            -8.698979377746582,
+            1.6078200340270996
+          ],
+          "max": [
+            -1.0239800214767456,
+            -8.59005355834961,
+            1.8604400157928467
+          ]
+        },
+        "center": [
+          -1.1375850439071655,
+          -8.644516468048096,
+          1.7341300249099731
+        ],
+        "anchor": [
+          -1.13850998878479,
+          -8.620617866516113,
+          1.7453700304031372
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3192",
+            "sha256": "aa15fa88eb0a4643efca0763a8088091f970ae510003dcc78c63e9a3dece5b03"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "draft",
+          "title": "Distal phalanx of right big toe · ultrasound evidence & limits · draft",
+          "body": "The hallux distal phalanx begins at the hallux interphalangeal joint and extends toward the terminal tuft. Sagittal and axial ultrasound accounts of that joint distinguish proximal and distal phalanges with nearby plantar soft tissues. Use those as local orientation relationships, keeping the distal phalanx base separate from its terminal end. An interphalangeal ossicle may occur at the plantar joint but is not a universal or independently selected structure here.",
+          "bullets": [
+            "Use the hallux IP label, not a lesser-toe DIP label; there is no intervening middle hallux phalanx.",
+            "The source cannot establish an ossicle, plantar-plate or tendon finding, nail-region condition or internal marrow state."
+          ],
+          "citations": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8938480/"
+          ],
+          "note": "Original educational draft; revision-bound radiologist review pending. The selected three-phalangeal lesser-toe pattern is not universal: biphalangeal variants occur, particularly in the fifth toe. The whole-bone mesh is not an ultrasound frame, patient registration, acquisition simulator or diagnostic test. A local acoustic window does not show the entire bone or its marrow. Atlas, imaging-case and paid-lecture access remain independent."
+        }
+      }
+    },
+    {
+      "family": "cuboid",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+        "fmaId": "FMA24529",
+        "name": "Left cuboid bone",
+        "sourceName": "left cuboid bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24529",
+        "bounds": {
+          "min": [
+            0.8196499347686768,
+            -8.515222549438477,
+            0.33163002133369446
+          ],
+          "max": [
+            1.1513400077819824,
+            -8.21852970123291,
+            0.6668499708175659
+          ]
+        },
+        "center": [
+          0.9854949712753296,
+          -8.366876125335693,
+          0.4992399960756302
+        ],
+        "anchor": [
+          0.9507219791412354,
+          -8.351799964904785,
+          0.5837299823760986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3258",
+            "sha256": "1d9269949005e15c6a39fc30cbe5499468e99c074d5ccf48e1032c8689e12664"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "intermediateCuneiform",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-intermediate-cuneiform-bone",
+        "fmaId": "FMA24524",
+        "name": "Left intermediate cuneiform bone",
+        "sourceName": "left intermediate cuneiform bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24524",
+        "bounds": {
+          "min": [
+            0.8201360106468201,
+            -8.344287872314453,
+            0.5963200330734253
+          ],
+          "max": [
+            1.0195499658584595,
+            -8.113103866577148,
+            0.8033000230789185
+          ]
+        },
+        "center": [
+          0.9198429882526398,
+          -8.2286958694458,
+          0.6998100280761719
+        ],
+        "anchor": [
+          0.9332720041275024,
+          -8.259506225585938,
+          0.6752400398254395
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3264",
+            "sha256": "6770594a46c236c3585febbea87f2e19ce4e27e83def3f37d2a653888c7e60dc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "lateralCuneiform",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+        "fmaId": "FMA24526",
+        "name": "Left lateral cuneiform bone",
+        "sourceName": "left lateral cuneiform bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24526",
+        "bounds": {
+          "min": [
+            0.8722599744796753,
+            -8.406270980834961,
+            0.5089800357818604
+          ],
+          "max": [
+            1.128849983215332,
+            -8.148154258728027,
+            0.7514600157737732
+          ]
+        },
+        "center": [
+          1.0005549788475037,
+          -8.277212619781494,
+          0.6302200257778168
+        ],
+        "anchor": [
+          0.9642269611358643,
+          -8.255325317382812,
+          0.660830020904541
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3267",
+            "sha256": "60757ac856520feaac072a47e77d7fffb98571d099838a9c628ccad8fba28bbc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "medialCuneiform",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-medial-cuneiform-bone",
+        "fmaId": "FMA24522",
+        "name": "Left medial cuneiform bone",
+        "sourceName": "left medial cuneiform bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24522",
+        "bounds": {
+          "min": [
+            0.6604260206222534,
+            -8.451443672180176,
+            0.6206099987030029
+          ],
+          "max": [
+            0.9410939812660217,
+            -8.141921043395996,
+            0.9051899909973145
+          ]
+        },
+        "center": [
+          0.8007600009441376,
+          -8.296682357788086,
+          0.7628999948501587
+        ],
+        "anchor": [
+          0.8285470008850098,
+          -8.293458938598633,
+          0.7341600060462952
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3271",
+            "sha256": "0924246c1693b45623469428ccc7dd86688078edbf7d3e43471f3b8d37e3644d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "halluxNote",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+        "fmaId": "FMA43253",
+        "name": "Proximal phalanx of right big toe",
+        "sourceName": "proximal phalanx of right big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA43253",
+        "bounds": {
+          "min": [
+            -1.1719599962234497,
+            -8.68639087677002,
+            1.3607001304626465
+          ],
+          "max": [
+            -0.866595983505249,
+            -8.514086723327637,
+            1.6928900480270386
+          ]
+        },
+        "center": [
+          -1.0192779898643494,
+          -8.600238800048828,
+          1.5267950892448425
+        ],
+        "anchor": [
+          -1.0429099798202515,
+          -8.565116882324219,
+          1.5583900213241577
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3310",
+            "sha256": "bb72eb8ed4cedf8ad2ab9a0ee2de9c80232ab6bd0e8840259beb59b8bac3bd07"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "draft",
+          "title": "Proximal phalanx of right big toe · ultrasound evidence & limits · draft",
+          "body": "The hallux proximal phalanx lies between the first metatarsophalangeal and interphalangeal joints. High-resolution toe ultrasound can use long- and short-axis views to relate a local plantar soft-tissue window to the selected bone and joint level. At the interphalangeal level, distinguish this proximal phalanx from the distal phalanx across the joint. The hallux has no middle phalanx; a local contour does not show the whole bone.",
+          "bullets": [
+            "Keep the first metatarsophalangeal and hallux interphalangeal levels separate; do not transfer lesser-toe PIP or DIP labels.",
+            "A plantar interphalangeal ossicle is variable, not a required feature of this source or any individual view; adjacent soft tissue needs acquired images."
+          ],
+          "citations": [
+            "https://link.springer.com/article/10.1007/s00256-025-04901-w",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8938480/"
+          ],
+          "note": "Original educational draft; revision-bound radiologist review pending. The selected three-phalangeal lesser-toe pattern is not universal: biphalangeal variants occur, particularly in the fifth toe. The whole-bone mesh is not an ultrasound frame, patient registration, acquisition simulator or diagnostic test. A local acoustic window does not show the entire bone or its marrow. Atlas, imaging-case and paid-lecture access remain independent."
+        }
+      }
+    },
+    {
+      "family": "halluxNote",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+        "fmaId": "FMA43254",
+        "name": "Proximal phalanx of left big toe",
+        "sourceName": "proximal phalanx of left big toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA43254",
+        "bounds": {
+          "min": [
+            0.8670330047607422,
+            -8.684151649475098,
+            1.3603599071502686
+          ],
+          "max": [
+            1.1708199977874756,
+            -8.515522003173828,
+            1.6927099227905273
+          ]
+        },
+        "center": [
+          1.0189265012741089,
+          -8.599836826324463,
+          1.526534914970398
+        ],
+        "anchor": [
+          0.9830190539360046,
+          -8.58358383178711,
+          1.5520700216293335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3329",
+            "sha256": "3b6770f4dd2bfc54fea30468a90eafd63c21aea8381688ce0912f85502f86f25"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "draft",
+          "title": "Proximal phalanx of left big toe · ultrasound evidence & limits · draft",
+          "body": "The hallux proximal phalanx lies between the first metatarsophalangeal and interphalangeal joints. High-resolution toe ultrasound can use long- and short-axis views to relate a local plantar soft-tissue window to the selected bone and joint level. At the interphalangeal level, distinguish this proximal phalanx from the distal phalanx across the joint. The hallux has no middle phalanx; a local contour does not show the whole bone.",
+          "bullets": [
+            "Keep the first metatarsophalangeal and hallux interphalangeal levels separate; do not transfer lesser-toe PIP or DIP labels.",
+            "A plantar interphalangeal ossicle is variable, not a required feature of this source or any individual view; adjacent soft tissue needs acquired images."
+          ],
+          "citations": [
+            "https://link.springer.com/article/10.1007/s00256-025-04901-w",
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC8938480/"
+          ],
+          "note": "Original educational draft; revision-bound radiologist review pending. The selected three-phalangeal lesser-toe pattern is not universal: biphalangeal variants occur, particularly in the fifth toe. The whole-bone mesh is not an ultrasound frame, patient registration, acquisition simulator or diagnostic test. A local acoustic window does not show the entire bone or its marrow. Atlas, imaging-case and paid-lecture access remain independent."
+        }
+      }
+    },
+    {
+      "family": "cuboid",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+        "fmaId": "FMA24528",
+        "name": "Right cuboid bone",
+        "sourceName": "right cuboid bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24528",
+        "bounds": {
+          "min": [
+            -1.1508499383926392,
+            -8.511216163635254,
+            0.3373269736766815
+          ],
+          "max": [
+            -0.8236650228500366,
+            -8.2208833694458,
+            0.6676799654960632
+          ]
+        },
+        "center": [
+          -0.9872574806213379,
+          -8.366049766540527,
+          0.5025034695863724
+        ],
+        "anchor": [
+          -0.9330989718437195,
+          -8.329702377319336,
+          0.5668100118637085
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3364",
+            "sha256": "d5ac55e9aa466b0e14d8d7760f7ef2a6edb0d95cfea56205557f647c451a8079"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "intermediateCuneiform",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-intermediate-cuneiform-bone",
+        "fmaId": "FMA24523",
+        "name": "Right intermediate cuneiform bone",
+        "sourceName": "right intermediate cuneiform bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24523",
+        "bounds": {
+          "min": [
+            -1.0200700759887695,
+            -8.344366073608398,
+            0.5958499908447266
+          ],
+          "max": [
+            -0.8185949921607971,
+            -8.11385440826416,
+            0.8053399920463562
+          ]
+        },
+        "center": [
+          -0.9193325340747833,
+          -8.22911024093628,
+          0.7005949914455414
+        ],
+        "anchor": [
+          -0.946753978729248,
+          -8.245765686035156,
+          0.6862199902534485
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3370",
+            "sha256": "3501e34aec7f81bd12b237c9bdccf2c8185d05895637427a92b210edc8423c33"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "lateralCuneiform",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+        "fmaId": "FMA24525",
+        "name": "Right lateral cuneiform bone",
+        "sourceName": "right lateral cuneiform bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24525",
+        "bounds": {
+          "min": [
+            -1.128749966621399,
+            -8.405644416809082,
+            0.5083799958229065
+          ],
+          "max": [
+            -0.8719830513000488,
+            -8.14856243133545,
+            0.7523200511932373
+          ]
+        },
+        "center": [
+          -1.0003665089607239,
+          -8.277103424072266,
+          0.6303500235080719
+        ],
+        "anchor": [
+          -0.9971530437469482,
+          -8.328696250915527,
+          0.609470009803772
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3373",
+            "sha256": "628c8da7294f477a1c8c50d6445159bbff0ecda91d35dde48f780eec9eb9657c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "medialCuneiform",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-medial-cuneiform-bone",
+        "fmaId": "FMA24521",
+        "name": "Right medial cuneiform bone",
+        "sourceName": "right medial cuneiform bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24521",
+        "bounds": {
+          "min": [
+            -0.9412760138511658,
+            -8.45273208618164,
+            0.6198199987411499
+          ],
+          "max": [
+            -0.6600440144538879,
+            -8.142295837402344,
+            0.9050700664520264
+          ]
+        },
+        "center": [
+          -0.8006600141525269,
+          -8.297513961791992,
+          0.7624450325965881
+        ],
+        "anchor": [
+          -0.8302029967308044,
+          -8.292115211486816,
+          0.7366200089454651
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3377",
+            "sha256": "7ae757be0a8a55129816045c2e92b32576e2c96fe3b047f7841807092b5bf8f4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

@@ -12,7 +12,7 @@ const args=process.argv.slice(2);
 assert(args.every(a=>['--record','--check'].includes(a)||a.startsWith('--source=')));
 assert.equal(args.filter(a=>a==='--record'||a==='--check').length,1);
 assert(args.filter(a=>a.startsWith('--source=')).length<=1);
-const directory=args.find(a=>a.startsWith('--source='))?.slice(9)??'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+const directory=args.find(a=>a.startsWith('--source='))?.slice(9)??'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const bytes=await readFile(directory+'/3d-vh-f-united.glb');
 assert.equal(bytes.length,hraSource.bytes);assert.equal(hraDigest(bytes),hraSource.sha256);
 const metadata=await readFile(directory+'/metadata.json'),crosswalk=await readFile(directory+'/crosswalk.csv');

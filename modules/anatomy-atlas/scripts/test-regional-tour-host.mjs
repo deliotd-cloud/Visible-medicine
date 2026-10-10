@@ -54,4 +54,66 @@ for(const expression of exitBindings){
   const calls=[];runInNewContext(compileBinding(expression)+';callback()',{changeGuidedLearning:value=>calls.push(value)});
   assert.deepEqual(calls,[false],'Each player exits through the shared restoration handler');
 }
-console.log(JSON.stringify({exactDetachedCameraRestore:true,workspaceStateUntouched:true,examBlocked:true,undefinedTourBlocked:true,exclusiveSceneBranch:true}));
+// Run the actual WorkspaceModes radio callback against the actual host handler.
+// Queue RAF instead of invoking it synchronously: a mode-switch must not steal
+// focus back from the selected radio after React has committed the new mode.
+const modesSource=readFileSync('app/atlas-workspace.tsx','utf8');
+const modesAst=ts.createSourceFile('modes.tsx',modesSource,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
+let modeCallback;
+function collectModeCallback(n){
+  if(ts.isFunctionDeclaration(n)&&n.name?.text==='WorkspaceModes'){
+    function find(n){
+      if(ts.isJsxAttribute(n)&&n.name.text==='onValueChange'&&ts.isJsxExpression(n.initializer)){
+        assert(!modeCallback,'One WorkspaceModes radio callback');
+        modeCallback=n.initializer.expression.getText(modesAst);
+      }
+      ts.forEachChild(n,find);
+    }
+    find(n.body);
+  }
+  ts.forEachChild(n,collectModeCallback);
+}
+collectModeCallback(modesAst);assert(modeCallback);
+const modeFactory=ts.transpileModule(`function makeModeCallback(guidedLearning, exam, setPanelOpen, chooseMode, workspaceModes) { return ${modeCallback}; }`,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText;
+for(const region of ['thorax','whole-body'])for(const destination of ['explore','dissect','practice']){
+  const frames=[], launcher=new Element(), chosenRadio=new Element(), choices=[], panels=[];
+  const host={initialRegion:region,regionalTour:region==='whole-body'?null:{id:region},practice:{status:'idle'},guidedLearning:false,
+    cameraCapture:{current:{position:[2,4,6],target:[0,1,0],up:[0,1,0]}},cameraRestore:{current:null},
+    guidedReturnCamera:{current:null},guidedReturnFocus:{current:null},document:{activeElement:launcher},HTMLElement:Element,
+    structuredClone,requestAnimationFrame:fn=>frames.push(fn),reset:0};
+  host.setGuidedLearning=value=>host.guidedLearning=value;
+  host.setReset=update=>host.reset=update(host.reset);
+  runInNewContext(compiled+modeFactory+';this.change=changeGuidedLearning;this.makeModeCallback=makeModeCallback',host);
+  const radio=host.makeModeCallback({active:false,onChange:host.change},false,(...args)=>panels.push(args),value=>choices.push(value),['explore','dissect','practice']);
+  const camera=structuredClone(host.cameraCapture.current);
+  radio('guided-learning');
+  assert(host.guidedLearning,`${region}: library entered`);
+  assert.deepEqual(panels,[[false,false],[true,false]],`${region}: entry closes panels`);
+  assert.deepEqual(choices,[],`${region}: entry preserves underlying mode`);
+  host.document.activeElement=chosenRadio;
+  radio(destination);
+  assert(!host.guidedLearning,`${region}/${destination}: library closed`);
+  assert.deepEqual(choices,[destination],`${region}/${destination}: mode selected`);
+  assert.deepEqual(host.cameraRestore.current,camera,`${region}/${destination}: camera restored`);
+  assert.equal(host.reset,1,`${region}/${destination}: reset requested`);
+  assert.equal(frames.length,0,`${region}/${destination}: no launcher-focus frame queued`);
+  assert.equal(host.document.activeElement,chosenRadio,`${region}/${destination}: selected radio keeps focus`);
+  assert(!launcher.focused,`${region}/${destination}: launcher remains unfocused`);
+}
+for(const region of ['thorax','whole-body']){
+  const frames=[],launcher=new Element(),exit=new Element();
+  const host={initialRegion:region,regionalTour:region==='whole-body'?null:{id:region},practice:{status:'idle'},guidedLearning:false,
+    cameraCapture:{current:{position:[2,4,6]}},cameraRestore:{current:null},guidedReturnCamera:{current:null},guidedReturnFocus:{current:null},
+    document:{activeElement:launcher},HTMLElement:Element,structuredClone,requestAnimationFrame:fn=>frames.push(fn),reset:0};
+  host.setGuidedLearning=value=>host.guidedLearning=value;
+  host.setReset=update=>host.reset=update(host.reset);
+  runInNewContext(compiled+';this.change=changeGuidedLearning',host);
+  host.change(true);host.document.activeElement=exit;
+  runInNewContext(compileBinding(exitBindings[region==='whole-body'?0:1])+';callback()',host);
+  assert.deepEqual(host.cameraRestore.current,{position:[2,4,6]},`${region}: explicit Exit restores camera`);
+  assert.equal(host.reset,1);
+  assert.equal(frames.length,1,`${region}: explicit Exit queues launcher focus`);
+  assert(!launcher.focused,`${region}: focus waits for RAF`);
+  frames.shift()();assert(launcher.focused,`${region}: explicit Exit returns focus to launcher`);
+}
+console.log(JSON.stringify({exactDetachedCameraRestore:true,workspaceStateUntouched:true,examBlocked:true,undefinedTourBlocked:true,exclusiveSceneBranch:true,queuedModeFocusPreserved:true,explicitExitFocusRestored:true}));

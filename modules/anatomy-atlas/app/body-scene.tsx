@@ -15,6 +15,7 @@ import { Line, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import { FittedCamera } from './fitted-camera';
 import { translatedBox } from '@/lib/explode-layout.mjs';
+import { bodySpreadOffset, bodySpreadScale } from '@/lib/body-spread';
 import {
   arrangeBodyStructures,
   bodyPresentationOffset,
@@ -47,11 +48,16 @@ import { selectedOriginGuide, type OriginGuide } from '@/lib/origin-guides';
 import { SceneOrientation } from './scene-orientation';
 import { cameraOrientation, orientationBasis, orientationText } from '@/lib/camera-orientation';
 import { modelDeliveryUrl } from '@/lib/model-delivery';
+import { modelLoadFailure, type ModelLoadFailure } from '@/lib/model-load-failure';
 import { bodyBundleGeometries } from '@/lib/body-bundle-geometry';
 import './scene-orientation.css';
+import { CsfMotion } from './csf-motion';
 
 type Props = {
+  /** Optional illustrative particles only; source-space guards live in CsfMotion. */
+  csfMotion?: boolean;
   tourLocked?: boolean;
+  guidedRecovery?: boolean;
   transitionMs?: number;
   transitionPaused?: boolean;
   /** Optional same-origin website delivery prefix; canonical anatomy remains unchanged. */
@@ -67,6 +73,8 @@ type Props = {
   landmarks: string[];
   explode: number;
   layout: BodyLayout;
+  /** Root-body display only; independent specimens retain their own layouts. */
+  adaptiveSpread?: boolean;
   anchorSkeleton: boolean;
   showOrigins: boolean;
   /** Default preserves the regional viewer's existing whole-model wireframes. */
@@ -99,7 +107,7 @@ type Props = {
   contextIds?: string[];
   onSelect: (id: string) => void;
   onLoaded: (id: string) => void;
-  onFailure: (id: string) => void;
+  onFailure: (id: string, reason?: ModelLoadFailure) => void;
   onRendererHealth: (health: RendererHealth) => void;
 };
 const vectors = {
@@ -278,6 +286,9 @@ function Bundle({
               </group>
             )}
             <group position={position}>
+              {props.csfMotion && !props.exam && !removed && props.explode === 0 &&
+                props.inspection.plane === 'off' && props.systems[structure.system] &&
+                <CsfMotion structure={structure} bundleHash={bundle.sha256}/>}
               <group
                 onClick={select}
                 onPointerOver={(e) => {
@@ -309,7 +320,7 @@ function Bundle({
                 labelAnchor &&
                 !props.exam &&
                 !faded &&
-                opacity >= 0.2 &&
+                (opacity >= 0.2 || (props.csfMotion && opacity >= 0.15)) &&
                 pointRetained(
                   new THREE.Vector3(...labelAnchor).add(position),
                   clippingPlanes,
@@ -332,15 +343,19 @@ function Bundle({
   );
 }
 class AssetBoundary extends Component<
-  { id: string; onFailure: (id: string) => void; children: ReactNode },
+  { id: string; url: string; onFailure: (id: string, reason?: ModelLoadFailure) => void; children: ReactNode },
   { failed: boolean }
 > {
   state = { failed: false };
   static getDerivedStateFromError() {
     return { failed: true };
   }
-  componentDidCatch() {
-    this.props.onFailure(this.props.id);
+  componentDidCatch(error: unknown) {
+    let requested = this.props.url;
+    try {
+      if (typeof window !== 'undefined') requested = new URL(requested, window.location.href).href;
+    } catch { /* Unknown URLs retain the generic failure message. */ }
+    this.props.onFailure(this.props.id, modelLoadFailure(error, requested));
   }
   render() {
     return this.state.failed ? null : this.props.children;
@@ -397,19 +412,34 @@ export function BodyScene(props: Props) {
           : undefined,
     [layout, rendered, center, props.view, props.hiddenIds, props.selectedId],
   );
+  // Full source-scope proportions, never the visible pool or camera orientation.
+  // Thin regional frames need greater transverse separation, without stretching
+  // anatomy or causing structures to jump when another entry is hidden.
+  const spreadScale = useMemo(
+    () => props.adaptiveSpread ? bodySpreadScale(frame) : new THREE.Vector3(1, 1, 1),
+    [props.adaptiveSpread, frame],
+  );
   const offsets = useMemo(
     () =>
       new Map(
         rendered.map((item) => [
           item.id,
-          bodyPresentationOffset(
-            item,
-            center,
-            props.exam ? (practiceTray ? 100 : 0) : props.explode,
-            layout,
-            props.anchorSkeleton,
-            tray,
-          ),
+          layout === 'spatial' && props.adaptiveSpread
+            ? bodySpreadOffset(
+                item.center,
+                center,
+                props.exam ? 0 : props.explode,
+                props.anchorSkeleton && item.system === 'skeleton',
+                spreadScale,
+              )
+            : bodyPresentationOffset(
+                item,
+                center,
+                props.exam ? (practiceTray ? 100 : 0) : props.explode,
+                layout,
+                props.anchorSkeleton,
+                tray,
+              ),
         ]),
       ),
     [
@@ -421,6 +451,8 @@ export function BodyScene(props: Props) {
       layout,
       props.anchorSkeleton,
       tray,
+      props.adaptiveSpread,
+      spreadScale,
     ],
   );
   const originGuide = useMemo(
@@ -495,6 +527,7 @@ export function BodyScene(props: Props) {
   const orthographic = props.plate || layout === 'tray';
   const orientationOutput = useMemo(() => createRef<HTMLSpanElement>(), []);
   const keyboardOrientationOutput = useMemo(() => createRef<HTMLOutputElement>(), []);
+  const keyboardCameraFrom = useMemo(() => createRef<THREE.Vector3>(), []);
   const orientationAxes = useMemo(
     () => orientationBasis(props.catalog.coordinateSystem),
     [props.catalog.coordinateSystem],
@@ -504,6 +537,7 @@ export function BodyScene(props: Props) {
     if (!node || props.exam) return;
     const direction = orientationText(cameraOrientation(cameraFrom, orientationAxes));
     const degrees = (angle: number) => Math.round(angle * 180 / Math.PI);
+    keyboardCameraFrom.current = cameraFrom.clone();
     // oxlint-disable-next-line react/react-compiler -- This read-only live status is an imperative DOM sink for Three camera input.
     node.textContent = `View from: ${direction}. Orbit angle: ${degrees(azimuth)}° around, ${degrees(polar)}° from above.`;
   };
@@ -524,7 +558,7 @@ export function BodyScene(props: Props) {
       cameraCapture={props.cameraCapture}
       cameraRestore={props.cameraRestore}
     >
-      {(onHealth) => (
+      {(onHealth, autoRecoveryCamera, cameraTransitionActive) => (
         <div className="anatomy-oriented-scene" data-orientation={!props.exam}>
           {!props.exam && (
             <p className="anatomy-live-orientation" aria-live="off">
@@ -545,6 +579,8 @@ export function BodyScene(props: Props) {
           <RendererMonitor onHealth={onHealth} />
           <SceneOrientation
             output={orientationOutput}
+            statusOutput={keyboardOrientationOutput}
+            keyboardCameraFrom={keyboardCameraFrom}
             coordinates={props.catalog.coordinateSystem}
             enabled={!props.exam}
           />
@@ -557,6 +593,7 @@ export function BodyScene(props: Props) {
               <AssetBoundary
                 key={`${bundle.id}:${props.retries?.[bundle.id] ?? 0}`}
                 id={bundle.id}
+                url={modelDeliveryUrl(bundle.url, props.assetBase)}
                 onFailure={props.onFailure}
               >
                 <Suspense fallback={null}>
@@ -601,6 +638,9 @@ export function BodyScene(props: Props) {
             recenterKey={focusId ?? props.presetKey ?? ''}
             cameraCapture={props.cameraCapture}
             cameraRestore={props.cameraRestore}
+            autoRecoveryCamera={autoRecoveryCamera}
+            cameraTransitionActive={cameraTransitionActive}
+            guidedRecovery={!!props.tourLocked || !!props.guidedRecovery}
             onKeyboardRotate={onKeyboardRotate}
           />
         </Canvas>

@@ -1,9 +1,18 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { test } from 'node:test';
+import { createHash } from 'node:crypto';
 import { renderRequirementSummary } from './requirement-summary.mjs';
+import { build } from './workspace-test-build.mjs';
 
 const report = JSON.parse(await readFile(new URL('../docs/requirement-audit.json', import.meta.url), 'utf8'));
+const compiled = await build({
+  stdin: { contents: "export { regionalTours } from './lib/regional-tours'; export { shoulderTour } from './lib/shoulder-tours'; export { ventricularGuide } from './lib/ventricular-guide'; export { ventricleCatalog } from './lib/ventricles';",
+    resolveDir: process.cwd(), loader: 'ts' },
+  bundle: true, write: false, format: 'esm', platform: 'node',
+});
+const { regionalTours, shoulderTour, ventricularGuide, ventricleCatalog } = await import('data:text/javascript;base64,' +
+  Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const names = { anatomy: 'Anatomy', function: 'Function', ct: 'CT', mri: 'MRI', xray: 'X-ray', ultrasound: 'Ultrasound', pathology: 'Pathology', clinical: 'Clinical', quiz: 'Quiz notes' };
 const categories = ['specificDraft', 'identityOnly', 'pending', 'generatedIdentification'];
 
@@ -64,17 +73,23 @@ test('guided learning uses resolved inventory counts and keeps shoulder scope se
   assert(report.sourceHashes['lib/eye-layer-guide.ts']);
   assert(report.sourceHashes.nestedEyeGuidedLearningData);
   assert(output.includes(`${tours.regionalTours} regional tours / ${tours.regionalStops} stops; dedicated shoulder ${tours.shoulderTours} tour / ${tours.shoulderStops} stops`));
-  assert.equal(tours.regionalTours, 24);
-  assert.equal(tours.nestedStudies.length, 2);
-  assert.deepEqual(tours.nestedStudies.map(guide => guide.parentId).sort(), [
+  assert.equal(tours.regionalTours, regionalTours.length);
+  assert.equal(tours.regionalStops, regionalTours.reduce((total, tour) => total + tour.steps.length, 0));
+  assert.equal(tours.shoulderTours, 1);
+  assert.equal(tours.shoulderStops, shoulderTour.steps.length);
+  assert.equal(report.sourceHashes.guidedLearningData,
+    createHash('sha256').update(JSON.stringify({ regionalTours, shoulderTour })).digest('hex'));
+  const eyeGuides = tours.nestedStudies.filter(guide => guide.study === 'eye');
+  assert.equal(eyeGuides.length, 2);
+  assert.deepEqual(eyeGuides.map(guide => guide.parentId).sort(), [
     'vm:anatomy:body:head-neck:left:organ:left-eyeball',
     'vm:anatomy:body:head-neck:right:organ:right-eyeball',
   ]);
-  assert.equal(tours.nestedStudies.reduce((n, guide) => n + guide.steps, 0), 8);
-  assert.equal(tours.nestedStudies.reduce((n, guide) => n + guide.representations, 0), 15);
-  assert.equal(new Set(tours.nestedStudies.flatMap(guide => guide.children.map(child => child.id))).size, 15);
+  assert.equal(eyeGuides.reduce((n, guide) => n + guide.steps, 0), 8);
+  assert.equal(eyeGuides.reduce((n, guide) => n + guide.representations, 0), 15);
+  assert.equal(new Set(eyeGuides.flatMap(guide => guide.children.map(child => child.id))).size, 15);
   for (const guide of tours.nestedStudies) {
-    assert.equal(guide.study, 'eye');
+    assert(['eye', 'ventricles'].includes(guide.study));
     assert.equal(guide.readiness, 'draft');
     assert.equal(guide.geometryChanged, false);
     assert.equal(guide.representations, guide.children.length);
@@ -96,4 +111,30 @@ test('guided learning uses resolved inventory counts and keeps shoulder scope se
   const duplicate=structuredClone(report),guide=duplicate.study.guidedLearning.nestedStudies[0];
   guide.children[1]=structuredClone(guide.children[0]);
   assert.throws(()=>renderRequirementSummary(duplicate),/children must be distinct/);
+});
+
+test('existing ventricular guidance is counted separately and matches its resolved source', () => {
+  const output = renderRequirementSummary(report);
+  const inventory = report.study.guidedLearning.nestedStudies.filter(guide => guide.study === 'ventricles');
+  const guide = ventricularGuide(ventricleCatalog.parent);
+  assert(guide);
+  assert.equal(inventory.length, 1);
+  const [record] = inventory;
+  assert.equal(record.parentId, guide.parentId);
+  assert.equal(record.guideId, guide.id);
+  assert.equal(record.steps, guide.steps.length);
+  assert.equal(record.steps, 5);
+  assert.equal(record.representations, 4);
+  assert.deepEqual(record.children.map(child => child.id), ventricleCatalog.ventricularIds);
+  assert.equal(record.readiness, guide.status);
+  assert.equal(record.geometryChanged, false);
+  assert(report.sourceHashes['lib/ventricular-guide.ts']);
+  assert.equal(report.sourceHashes.nestedVentricularGuidedLearningData,
+    createHash('sha256').update(JSON.stringify({ inventory, guide })).digest('hex'));
+  assert(output.includes('Nested ventricular guided learning: 1 draft guide / 5 stops over four existing source spaces'));
+  assert(output.includes('Combined nested guidance covers 19 existing children'));
+  assert(output.includes('No new geometry, resolved fluid pathway, measured physiology or clinical approval'));
+  const changed = structuredClone(report);
+  changed.study.guidedLearning.nestedStudies.find(item => item.study === 'ventricles').steps++;
+  assert.notEqual(renderRequirementSummary(changed), output);
 });

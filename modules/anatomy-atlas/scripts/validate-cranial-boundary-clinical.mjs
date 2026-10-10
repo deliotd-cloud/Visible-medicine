@@ -2,14 +2,16 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {build} from './workspace-test-build.mjs';
-import {context,hash,snapshot} from './pin-cranial-boundary-clinical.mjs';
+import {hash,snapshot} from './pin-cranial-boundary-clinical.mjs';
+import {exactCranialEpochContext} from './exact-cranial-epoch-context.mjs';
 import {authoringBeforeCranialBoundaryClinical} from './cranial-boundary-clinical-history.mjs';
 import {contentContext,contentValidator} from './content-contract-tools.mjs';
 import pins from '../content/cranial-boundary-clinical-pins.json' with {type:'json'};
 import after from '../content/cranial-boundary-clinical.transition.json' with {type:'json'};
 import {authoringBeforeCostalCartilageImaging} from './costal-cartilage-imaging-history.mjs';
 import {beforeLaminaPathology} from './lamina-pathology-history.mjs';
-const live=await context(),c={...live,api:authoringBeforeCostalCartilageImaging(live)}, {api,display}=c,before=authoringBeforeCranialBoundaryClinical(c),original=JSON.stringify(display);
+// Preserve the original three-topic epoch; current export checks remain live.
+const epoch=await exactCranialEpochContext('cranial-boundary-after'),c={...epoch,api:authoringBeforeCostalCartilageImaging(epoch)}, {api,display}=c,before=authoringBeforeCranialBoundaryClinical(c),original=JSON.stringify(display);
 assert.equal(hash(snapshot(api,display)),after.currentAllLessonsAndRecipesHash);
 assert.equal(hash(snapshot(before,display)),pins.previousAllLessonsAndRecipesHash);
 assert.equal(authoringBeforeCranialBoundaryClinical({...c,api:before}),before);

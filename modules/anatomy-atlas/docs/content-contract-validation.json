@@ -7,7 +7,15 @@
   "glbAssetsVerified": 87,
   "rejectionCases": 48,
   "originalCopyAndRecipesVerifiedFromRecordedGitTree": true,
-  "currentPinnedCurriculumTransitionsChecked": true,
+  "completedCurriculumEpochTransitionsChecked": {
+    "epochs": {
+      "beforeShoulder": "4a180683536f6c67035d0cfca54aac9f91cb0fc1",
+      "beforeForearm": "c8cd866894e0254c0a92cd5d0b5f7012ccd25714",
+      "completedForearm": "bb8504c368a09d3455f0fde460106dccfa91bd31"
+    },
+    "shoulderSections": 64,
+    "forearmSections": 84
+  },
   "explicitlyUpdatedBodySections": 3634,
   "additionalSpinalImagingSections": 156,
   "sourceGeometryChanged": false,

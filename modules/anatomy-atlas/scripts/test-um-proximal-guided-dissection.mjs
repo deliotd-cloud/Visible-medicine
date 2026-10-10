@@ -1,7 +1,15 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { execFileSync } from 'node:child_process';
+import { transformSync } from 'esbuild';
 import { umProximalGuideSteps } from '../lib/um-proximal-guided-dissection.ts';
 import { limbDefinitions } from '../lib/um-limb-studies.ts';
+
+const milestone = '05596d396d104a65cdd7a1fdf770505c3dfb3139';
+const original = execFileSync('git', ['show', `${milestone}:lib/um-proximal-guided-dissection.ts`],
+  { encoding: 'utf8', maxBuffer: 8e6, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' } });
+const originalJs = transformSync(original, { loader: 'ts', format: 'esm' }).code;
+const { umProximalGuideSteps: priorSteps } = await import('data:text/javascript;base64,' + Buffer.from(originalJs).toString('base64'));
 
 const expected = {
   'hip-thigh': [
@@ -21,6 +29,7 @@ const expected = {
     ['um-knee-collateral', 'mcl', 'anterior'],
     ['um-knee-articular', 'meniscus-group', 'superior'],
     ['um-knee-cruciate', 'acl', 'anterior'],
+    ['um-knee-stability-compare', 'acl', 'anterior'],
     ['um-knee-posterior', 'popliteus', 'posterior'],
   ],
 };
@@ -58,14 +67,31 @@ void test('hip comparisons remove the named superficial selections and keep whol
 
 void test('knee comparisons retain grouped menisci and only admitted source surfaces', () => {
   const steps = umProximalGuideSteps('knee');
+  assert.equal(steps.length, 7);
   const admitted = limbDefinitions.knee.surfaces.map(surface => surface.slug);
   assert.deepEqual(new Set(steps[0].slugs), new Set(admitted));
   assert.deepEqual(steps[3].slugs, ['femoral-cartilage', 'tibial-cartilage', 'patellar-cartilage', 'meniscus-group']);
   assert.ok(steps[4].slugs.includes('meniscus-group'));
   assert.ok(!steps[4].slugs.includes('femur'));
+  assert.deepEqual(steps[5].slugs, ['tibia', 'fibula', 'acl', 'pcl', 'mcl', 'lcl']);
+  assert.equal(steps[5].title, 'Compare knee stabilizers');
+  assert.equal(steps[5].selected, 'acl');
+  assert.equal(steps[5].view, 'anterior');
+  assert.ok(!steps[5].slugs.includes('femur'));
   assert.ok(!steps[5].slugs.includes('meniscus-group'));
-  assert.ok(steps[5].slugs.includes('popliteus'));
+  assert.match(steps[5].caption, /femur is hidden for visibility only/iu);
+  assert.match(steps[5].caption, /static surfaces do not simulate loading, injury/iu);
+  assert.ok(!steps[6].slugs.includes('meniscus-group'));
+  assert.ok(steps[6].slugs.includes('popliteus'));
   assert.ok(!steps.some(step => step.slugs.some(slug => /^(?:medial|lateral)-meniscus$/.test(slug))));
+});
+
+void test('original six complete knee steps and all hip steps match immutable source milestone', () => {
+  const oldKnee = priorSteps('knee'), currentKnee = umProximalGuideSteps('knee');
+  assert.equal(oldKnee.length, 6);
+  assert.deepEqual(currentKnee.filter(step => step.id !== 'um-knee-stability-compare'), oldKnee,
+    'Every earlier slug, selection, view, title and caption remains exact');
+  assert.deepEqual(umProximalGuideSteps('hip-thigh'), priorSteps('hip-thigh'));
 });
 
 void test('returned plans are detached from future calls and source definitions', () => {

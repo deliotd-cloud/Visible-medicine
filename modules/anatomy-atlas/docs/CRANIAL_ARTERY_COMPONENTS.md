@@ -34,6 +34,16 @@ BodyParts3D, © The Database Center for Life Science licensed under CC Attributi
 
 AICA remains a documented gap: the pinned official definition FMA50544 combines FJ1656 and FJ1656M and does not independently identify the two sides. This change does not relabel that group as two named FMA arteries or let bilateral tissue leak into a single-side view. The absent left-MCA definition is not manufactured by mirroring the right side.
 
+## Source-scoped teaching extension
+
+[Right-MCA source explanations](MCA_SOURCE_TEACHING.md) now add three explicitly
+file-bound drafts through the existing folded panel, not inherited parent lessons
+or independently verified branch names. Component-specific function, clinical
+and pathology remain pending. [PICA source explanations](PICA_SOURCE_TEACHING.md)
+now add 26 exact file-bound drafts/model-scope checks; no finer branch identity,
+territory or clinical topic is inferred from an inherited parent FMA.
+Geometry, archive identity and clinical holds are unchanged.
+
 ## Verification and next clinical checks
 
 Run `npm run cranial-artery-components:test`, plus the femoral-component, nested-navigation, nested-learning, nested-history and nested-teaching suites. Automated tests cover source partition, side/link/source guards, actual component callbacks and server rendering. They do not constitute browser, GPU, touch-device or radiologist acceptance.

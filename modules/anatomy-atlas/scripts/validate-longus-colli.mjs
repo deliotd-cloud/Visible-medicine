@@ -5,10 +5,15 @@ import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { build } from './workspace-test-build.mjs';
+import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
+const completedBaseline = await exactSourceHistoryApi(
+  'c4aa4ed6a2d4831e51e8c877fbcfa0d66d265bf6',
+  'display',
+);
 const compiled = await build({
   stdin: {
     contents:
-      "export * from './lib/longus-colli'; export * from './content/longus-colli-studies'; export * from './lib/limb-vascular-studies'; export * from './lib/study-library'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
+      "export * from './lib/longus-colli'; export * from './lib/neck-teaching'; export * from './lib/coronary-arterial-study'; export * from './content/longus-colli-studies'; export * from './lib/limb-vascular-studies'; export * from './lib/study-library'; export * from './lib/body-display-catalog'; export * from './lib/anatomy-link-registry'; export * from './lib/anatomy-coordinates'; export * from './lib/study-links'; export * from './app/dissection-data'; export {bodyLesson} from './app/body-content';",
     resolveDir: process.cwd(),
     loader: 'ts',
   },
@@ -38,7 +43,10 @@ assert(
   !catalog.structures.some((s) => ['FMA44885', 'FMA44886'].includes(s.fmaId)),
 );
 assert.equal(raw.structures.length, 1022);
-assert.equal(catalog.structures.length, 1060);
+// The completed c4aa4ed6 baseline pins 1,104 displayed structures; newer
+// source additions predate this quiz and remain part of the full Atlas catalog.
+assert.equal(catalog.structures.length, 1104);
+assert.deepEqual(catalog, completedBaseline.bodyDisplayCatalog(raw));
 assert.equal(JSON.stringify(raw), before);
 assert.equal(api.bodyDisplayCatalog(catalog), catalog);
 assert.deepEqual(
@@ -177,8 +185,14 @@ for (const s of pins.structures) {
   );
   for (const tab of ['anatomy', 'function'])
     assert.equal(api.bodyLesson(s, tab).readiness, 'draft');
-  for (const tab of ['ct', 'mri', 'xray', 'ultrasound'])
-    assert.equal(api.bodyLesson(s, tab).readiness, 'pending');
+  for (const tab of ['clinical', 'pathology', 'ct', 'mri', 'xray', 'ultrasound'])
+    assert.deepEqual(api.bodyLesson(s, tab), completedBaseline.bodyLesson(s, tab), `${s.fmaId}:${tab} completed baseline`);
+  for (const tab of ['clinical', 'pathology', 'ct', 'mri']) {
+    assert.equal(api.bodyLesson(s, tab).readiness, 'draft', `${s.fmaId}:${tab}`);
+    assert.deepEqual(api.bodyLesson(s, tab), api.neckTeachingLesson(s, tab));
+  }
+  for (const tab of ['xray', 'ultrasound'])
+    assert.equal(api.bodyLesson(s, tab).readiness, 'pending', `${s.fmaId}:${tab}`);
   assert.equal(
     api.longusColliLesson({ ...s, anchor: [0, 0, 0] }, 'anatomy'),
     undefined,
@@ -340,6 +354,9 @@ for (const region of study.regions)
       initialInspection: { plane: 'off' },
       allBodySystems: {},
       cameraRestore,
+      coronaryArterialStudyId: api.coronaryArterialStudyId,
+      coronaryArterialStudyFor: api.coronaryArterialStudyFor,
+      regionStructures: api.bodyStudyScope(actualCatalog, region, 'both'),
       limbVascularStudyReady: api.limbVascularStudyReady,
       longusColliStudyReady: api.longusColliStudyReady,
       dispatch: (v) => calls.push(['dispatch', v]),
@@ -381,7 +398,7 @@ console.log(
     studyLinks,
     actualParentHandlers: handlers,
     sourceSelections: 3,
-    displaySelections: 1060,
+    displaySelections: 1104,
     triangles,
     links,
     rejections,

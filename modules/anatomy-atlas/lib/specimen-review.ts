@@ -226,7 +226,7 @@ export function parseSavedSpecimenReview(v: unknown): SavedSpecimenReview {
     m = v.material;
   if (
     !Array.isArray(m.teachingTabs) ||
-    m.teachingTabs.length > 10 ||
+    m.teachingTabs.length > 11 ||
     m.teachingTabs.some(
       (t) =>
         ![
@@ -240,9 +240,13 @@ export function parseSavedSpecimenReview(v: unknown): SavedSpecimenReview {
           "ultrasound",
           "self-check",
           "guided-dissection",
+          "calf-depth",
+          "thigh-depth",
+          "foot-depth",
         ].includes(String(t)),
     ) ||
-    new Set(m.teachingTabs).size !== m.teachingTabs.length
+    new Set(m.teachingTabs).size !== m.teachingTabs.length ||
+    m.teachingTabs.filter(t => ['calf-depth', 'thigh-depth', 'foot-depth'].includes(String(t))).length > 1
   )
     throw Error("Invalid teaching scope.");
   if (

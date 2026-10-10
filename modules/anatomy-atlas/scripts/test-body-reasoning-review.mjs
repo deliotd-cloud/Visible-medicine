@@ -54,12 +54,18 @@ for (const s of api.catalog.structures) {
   const oldRecord = {catalogScope:context.catalogScope,structureId:s.id,track:'teaching',revisionHash:oldRevision,checklistVersion:old.bodyChecklistVersion};
   assert(api.bodyReviewStale(oldRecord,context));
   assert(!api.bodyReviewStale({...oldRecord,revisionHash:context.revisions.teaching},context));
+  const geometryChecks = [...old.bodyChecklists.geometry,
+    ...material.checklist.geometry.slice(api.bodyReviewChecks.geometry.length)
+      .map((label,index)=>({id:`source-study-${index+1}`,label}))];
+  assert.deepEqual(context.checklists.geometry,geometryChecks,'Existing source-specific geometry checks stay mandatory');
   assert.equal(context.revisions.geometry,sha(JSON.stringify({catalogScope:context.catalogScope,structureId:s.id,
     checklistVersion:old.bodyChecklistVersion,source:material.fingerprints.source,
-    renderer:context.rendererHash,checks:old.bodyChecklists.geometry})), 'No blanket geometry re-review for a teaching-only change');
+    renderer:context.rendererHash,checks:geometryChecks})), 'Geometry revision retains exact source-specific checks and current renderer');
 }
-assert.equal(eligible,308);
-assert.equal(absent,796);
+// The original308/796 milestone is retained in an explicit immutable replay;
+// Live coverage also includes four brain concepts across six exact roots.
+assert.equal(eligible,337);
+assert.equal(absent,767);
 const s = api.catalog.structures.find(s=>api.reasoningConceptFor(s)?.key==='thoracic-ascending-aorta');
 const original = await api.bodyReviewMaterial(s.id);
 assert.equal(oldParser.parseBodyReviewResponse(original,s.id),null,'Cached old UI must not hide newly reviewable questions');

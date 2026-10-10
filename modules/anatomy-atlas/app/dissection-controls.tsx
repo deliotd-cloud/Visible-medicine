@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useRef, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import {
   ArrowLeft,
   ArrowRight,
@@ -76,6 +76,40 @@ export function DissectionControls({
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [libraryOpened, setLibraryOpened] = useState(false);
   const libraryTrigger = useRef<HTMLButtonElement>(null);
+  const deck = useRef<HTMLElement>(null);
+  const undoButton = useRef<HTMLButtonElement>(null);
+  const redoButton = useRef<HTMLButtonElement>(null);
+  const resetButton = useRef<HTMLButtonElement>(null);
+  const focusHandover = useRef<{ kind: 'undo' | 'redo'; source: HTMLButtonElement } | null>(null);
+  const rememberHistoryAction = (kind: 'undo' | 'redo') => {
+    const source = kind === 'undo' ? undoButton.current : redoButton.current;
+    if (!source || disabled || source.disabled || source.ownerDocument.activeElement !== source) {
+      focusHandover.current = null;
+      return;
+    }
+    const pending = { kind, source };
+    focusHandover.current = pending;
+    // A no-op action must not leave a future, unrelated history update armed.
+    setTimeout(() => { if (focusHandover.current === pending) focusHandover.current = null; }, 0);
+  };
+  useLayoutEffect(() => {
+    const pending = focusHandover.current;
+    focusHandover.current = null;
+    if (!pending || disabled) return;
+    const root = deck.current, source = pending.source, doc = source.ownerDocument;
+    if (!root?.isConnected || !source.isConnected || !source.disabled ||
+        source.closest('.dissection-deck') !== root ||
+        root.closest('[hidden], [inert], [aria-hidden="true"]') ||
+        source.closest('[hidden], [inert], [aria-hidden="true"]') ||
+        !root.getClientRects().length || !source.getClientRects().length ||
+        (doc.activeElement !== source && doc.activeElement !== doc.body)) return;
+    const alternate = pending.kind === 'undo' ? redoButton.current : undoButton.current;
+    const target = alternate && !alternate.disabled ? alternate : resetButton.current;
+    if (target?.isConnected && !target.disabled && target.ownerDocument === doc &&
+        root.contains(target) &&
+        !target.closest('[hidden], [inert], [aria-hidden="true"]') &&
+        target.getClientRects().length) target.focus({ preventScroll: true });
+  }, [state.history.length, state.future.length, disabled]);
   const layerMode =
     layers.length > 0 && stage?.kind !== 'window' && !state.focusId;
   const choices = layerMode ? layers : windows;
@@ -104,6 +138,7 @@ export function DissectionControls({
     : (stage?.title ?? 'Free exploration');
   return (
     <section
+      ref={deck}
       className="dissection-deck"
       aria-label="Guided dissection controls"
     >
@@ -114,9 +149,11 @@ export function DissectionControls({
           {visibleCount} enabled
         </span>
         <Button
+          ref={undoButton}
           size="sm"
           variant="ghost"
           onClick={onUndo}
+          onClickCapture={() => rememberHistoryAction('undo')}
           disabled={disabled || !state.history.length}
           aria-label="Undo last dissection change"
           aria-keyshortcuts="Control+Z Meta+Z"
@@ -126,9 +163,11 @@ export function DissectionControls({
           Undo
         </Button>
         <Button
+          ref={redoButton}
           size="sm"
           variant="ghost"
           onClick={onRedo}
+          onClickCapture={() => rememberHistoryAction('redo')}
           disabled={disabled || !state.future.length}
           aria-label="Redo last undone dissection change"
           aria-keyshortcuts="Control+Shift+Z Meta+Shift+Z Control+Y"
@@ -137,7 +176,7 @@ export function DissectionControls({
           <Redo2 />
           Redo
         </Button>
-        <Button size="sm" variant="ghost" onClick={onReset} disabled={disabled}>
+        <Button ref={resetButton} size="sm" variant="ghost" onClick={onReset} disabled={disabled}>
           <RotateCcw />
           Reassemble
         </Button>

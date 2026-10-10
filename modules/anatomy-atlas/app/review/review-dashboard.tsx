@@ -555,7 +555,6 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
                               checks: { ...draft.checks, [c.id]: v === true },
                             })
                           }
-                          aria-label={c.label}
                         />
                         <span>{c.label}</span>
                       </label>

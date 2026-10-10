@@ -1,0 +1,52 @@
+// Original formative wording about usual anatomy, not motion of source surfaces.
+const upperLimb = 'https://anatomy.ttuhscep.edu/anatomytables/muscles_upperlimb.html';
+const muscleTable = 'https://anatomy.ttuhscep.edu/anatomytables/muscles_alpha.html';
+const question = (body: string, choices: string[], correctAnswer: string, explanation: string, reference: string) => ({
+  body, choices, correctAnswer, explanation, references: [reference],
+});
+
+export const shoulderArmMuscleQuizQuestions = {
+  serratusAnterior: question('Which scapular movement does serratus anterior assist?',
+    ['Retraction', 'Forward movement', 'Depression only', 'Downward rotation only'],
+    'Forward movement', 'It draws the scapula forwards against the thorax.', upperLimb),
+  anconeus: question('What elbow action does anconeus assist?',
+    ['Flexion', 'Supination', 'Extension', 'Pronation'],
+    'Extension', 'It contributes to forearm extension at the elbow.', upperLimb),
+  brachialis: question('Which bone receives the brachialis insertion?',
+    ['Radius', 'Scapula', 'Clavicle', 'Ulna'],
+    'Ulna', 'Its distal attachment includes the ulnar coronoid process.', upperLimb),
+  coracobrachialis: question('Where does coracobrachialis begin?',
+    ['Scapular coracoid process', 'Olecranon', 'Deltoid tuberosity', 'Radial tuberosity'],
+    'Scapular coracoid process', 'Its proximal attachment is on the scapular coracoid.', upperLimb),
+  infraspinatus: question('Which arm rotation does infraspinatus assist?',
+    ['Medial rotation', 'Lateral rotation', 'Pronation', 'Supination'],
+    'Lateral rotation', 'It is a rotator cuff muscle that turns the arm laterally.', upperLimb),
+  subscapularis: question('Which humeral landmark receives subscapularis?',
+    ['Greater tubercle', 'Deltoid tuberosity', 'Lesser tubercle', 'Lateral epicondyle'],
+    'Lesser tubercle', 'Its tendon attaches to the lesser tubercle.', upperLimb),
+  supraspinatus: question('Which movement does supraspinatus help initiate?',
+    ['Adduction', 'Elbow flexion', 'Medial rotation', 'Arm abduction'],
+    'Arm abduction', 'It assists abduction at the shoulder.', upperLimb),
+  teresMajor: question('Which arm rotation does teres major assist?',
+    ['Medial rotation', 'Lateral rotation', 'Supination', 'Pronation'],
+    'Medial rotation', 'Teres major also adducts the arm.', muscleTable),
+  teresMinor: question('Which arm rotation does teres minor assist?',
+    ['Medial rotation', 'Lateral rotation', 'Pronation', 'Supination'],
+    'Lateral rotation', 'This cuff muscle rotates the arm laterally.', muscleTable),
+  levatorScapulae: question('Which scapular action gives levator scapulae its name?',
+    ['Retraction', 'Protraction', 'Elevation', 'Depression'],
+    'Elevation', 'It lifts the scapula.', muscleTable),
+  rhomboids: question('What scapular action is shared by rhomboid major and minor?',
+    ['Protraction', 'Arm abduction', 'Elbow extension', 'Retraction'],
+    'Retraction', 'Both rhomboids pull the scapula towards the spine.', muscleTable),
+  deltoid: question('Where does the deltoid as a whole insert?',
+    ['Humeral deltoid tuberosity', 'Ulnar olecranon', 'Radial tuberosity', 'Scapular coracoid'],
+    'Humeral deltoid tuberosity', 'Its clavicular, acromial and spinal portions share that humeral insertion.', muscleTable),
+  bicepsBrachii: question('Which forearm action belongs to biceps brachii as a whole?',
+    ['Pronation', 'Supination', 'Wrist extension', 'Finger flexion'],
+    'Supination', 'The two heads contribute to forearm supination.', muscleTable),
+  tricepsBrachii: question('Which elbow action belongs to triceps brachii as a whole?',
+    ['Flexion', 'Pronation', 'Extension', 'Supination'],
+    'Extension', 'The muscle extends the forearm at the elbow.', muscleTable),
+} as const;
+export type ShoulderArmMuscleQuizGroup = keyof typeof shoulderArmMuscleQuizQuestions;

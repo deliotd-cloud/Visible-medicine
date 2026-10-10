@@ -6,12 +6,13 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 
 - 1104 displayed root-body representations, 109 body GLBs (104390180 canonical bytes), 11 regions plus whole body; 1022 retained archival records.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 108 selectable parts, 47 teaching concepts / 125 references; 29 geometry-only selections retain pending teaching.
-- 159 dissection stages / 207 focuses. These operate on supplied surfaces, not complete anatomy.
-- Guided learning: 24 regional tours / 136 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
+- Nested dissections: 108 selectable parts, 76 teaching concepts / 137 references; 0 geometry-only selections retain pending teaching.
+- 159 dissection stages / 209 focuses. These operate on supplied surfaces, not complete anatomy.
+- Guided learning: 43 regional tours / 255 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Nested eye guided learning: 2 source-bound draft guides / 8 stops across 15 existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.
-- Independent source-guided dissection: 9 draft sequences / 72 steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.
-- Find/name identification; 166 draft reasoning concepts bound to 308 root-body representations in shoulder-arm, foot, thigh, pelvis, leg, forearm, head-neck, spine, thorax, abdomen, hand. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
+- Nested ventricular guided learning: 1 draft guide / 5 stops over four existing source spaces, with optional [schematic CSF movement](CSF_MOTION.md). No new geometry, resolved fluid pathway, measured physiology or clinical approval. Combined nested guidance covers 19 existing children.
+- Independent source-guided dissection: 9 draft sequences / 73 steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.
+- Find/name identification; 186 draft reasoning concepts bound to 337 root-body representations in shoulder-arm, foot, thigh, pelvis, leg, forearm, head-neck, spine, thorax, abdomen, hand. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 
 Independent specimens retain separate source frames and teaching inventories. These counts are not added to root-body or nested coverage; lower-limb regional scopes overlap the same specimen.
 
@@ -23,6 +24,18 @@ Independent specimens retain separate source frames and teaching inventories. Th
 | [Abdominal wall](ABDOMINAL_WALL_SPECIMEN.md) | 29 |
 | [Back layers](BACK_LAYERS_SPECIMEN.md) | 48 |
 
+## Independent specimen teaching readiness
+
+Each cell shows draft / pending placements within that specimen's own source frame. Drafts may reuse shared text. Held groups and context surfaces remain within the stated source scope; these counts do not establish clinical approval, spatial registration or imaging assets. They are separate from root-body and nested teaching and do not measure unique lessons.
+
+| Independent specimen | Clinical | Pathology | CT | MRI | X-ray | Ultrasound |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| [Lower limb](UM_LIMB_DISSECTION.md) | 65 / 2 | 65 / 2 | 65 / 2 | 65 / 2 | 65 / 2 | 65 / 2 |
+| [Kidneys](HRA_KIDNEY_SPECIMEN.md) | 82 / 0 | 82 / 0 | 82 / 0 | 82 / 0 | 82 / 0 | 82 / 0 |
+| [Female pelvis](HRA_FEMALE_PELVIS.md) | 43 / 0 | 43 / 0 | 43 / 0 | 43 / 0 | 43 / 0 | 43 / 0 |
+| [Abdominal wall](ABDOMINAL_WALL_SPECIMEN.md) | 29 / 0 | 29 / 0 | 29 / 0 | 29 / 0 | 29 / 0 | 29 / 0 |
+| [Back layers](BACK_LAYERS_SPECIMEN.md) | 48 / 0 | 48 / 0 | 48 / 0 | 48 / 0 | 48 / 0 | 48 / 0 |
+
 ## Root-body teaching readiness
 
 9936 topic placements across nine displayed topics. Counts describe displayed copy per representation, including shared source-group text, not unique lessons, medical correctness or approvals. The original eight topics remain; X-ray is additional. See [content contract](CONTENT_CONTRACT.md).
@@ -30,30 +43,30 @@ Independent specimens retain separate source frames and teaching inventories. Th
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
 | Anatomy | 1104 | 0 | 0 | 0 |
-| Function | 1101 | 0 | 3 | 0 |
-| CT | 906 | 0 | 198 | 0 |
-| MRI | 878 | 0 | 226 | 0 |
-| X-ray | 456 | 0 | 648 | 0 |
-| Ultrasound | 626 | 0 | 478 | 0 |
-| Pathology | 1099 | 0 | 5 | 0 |
-| Clinical | 1099 | 0 | 5 | 0 |
-| Quiz notes | 124 | 0 | 1 | 979 |
+| Function | 1103 | 0 | 1 | 0 |
+| CT | 1004 | 0 | 100 | 0 |
+| MRI | 1045 | 0 | 59 | 0 |
+| X-ray | 478 | 0 | 626 | 0 |
+| Ultrasound | 840 | 0 | 264 | 0 |
+| Pathology | 1103 | 0 | 1 | 0 |
+| Clinical | 1103 | 0 | 1 | 0 |
+| Quiz notes | 1033 | 0 | 1 | 70 |
 
 ## Nested teaching readiness
 
-Separate from root-body coverage and overlapping parent anatomy. Unnamed cranial pieces receive no inherited parent teaching. Brief drafts and model-scope self-checks are not full curricula or complete organ interiors. See [nested teaching](NESTED_ANATOMY_TEACHING.md) and [nested reviews](NESTED_REVIEWS.md).
+Separate from root-body coverage and overlapping parent anatomy. All 29 cranial source-file pieces have explicitly source-bound explanations (three right-MCA and 26 PICA), never inherited parent lessons or newly accepted branch identities. Their component-specific function and clinical topics remain pending. Brief drafts and model-scope self-checks are not full curricula or complete organ interiors. See [nested teaching](NESTED_ANATOMY_TEACHING.md) and [nested reviews](NESTED_REVIEWS.md).
 
 | Topic | Specific/source-group draft | Identity only | Pending | Generated identification |
 | --- | ---: | ---: | ---: | ---: |
-| Anatomy | 79 | 0 | 29 | 0 |
+| Anatomy | 108 | 0 | 0 | 0 |
 | Function | 77 | 0 | 31 | 0 |
-| CT | 77 | 0 | 31 | 0 |
-| MRI | 77 | 0 | 31 | 0 |
+| CT | 106 | 0 | 2 | 0 |
+| MRI | 106 | 0 | 2 | 0 |
 | X-ray | 9 | 0 | 99 | 0 |
 | Ultrasound | 44 | 0 | 64 | 0 |
 | Pathology | 77 | 0 | 31 | 0 |
 | Clinical | 77 | 0 | 31 | 0 |
-| Quiz notes | 79 | 0 | 29 | 0 |
+| Quiz notes | 108 | 0 | 0 | 0 |
 
 ## Dedicated shoulder teaching readiness
 

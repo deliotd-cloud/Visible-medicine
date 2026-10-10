@@ -3,10 +3,13 @@ import { nestedCTOrientation, nestedCTOrientationReferences } from './nested-ct-
 import { eyeCrossSectionalTeaching, eyeCrossSectionalReferences } from './eye-cross-sectional-teaching.ts';
 import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-temporal-mri.ts';
 import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
+import { cardiacCavityDepthSections, cardiacCavityDepthReferences } from './cardiac-cavity-depth.ts';
 import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
 import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
+import { mcaSourceConcepts, mcaSourceTeachingReferences } from './mca-source-teaching.ts';
+import { picaSourceConcepts, picaSourceTeachingReferences } from './pica-source-teaching.ts';
 import { collicularBrachiaConcepts, collicularBrachiaReferences } from './collicular-brachia-teaching.ts';
 import {
   eyeImagingTeaching,
@@ -69,9 +72,12 @@ export const nestedTeachingReferences: Record<
   ...nestedCTOrientationReferences,
   ...superiorTemporalMRIReferences,
   ...cardiacXrayReferences,
+  ...cardiacCavityDepthReferences,
   ...ventricularUltrasoundReferences,
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
+  ...mcaSourceTeachingReferences,
+  ...picaSourceTeachingReferences,
   ...eyeImagingReferences,
   ...eyeCrossSectionalReferences,
   ...visualPathwayImagingReferences,
@@ -233,6 +239,8 @@ export const nestedConcepts: NestedConcept[] = [
   ...hippocampalConcepts,
   ...coronaryVenousConcepts,
   ...femoralComponentConcepts,
+  ...mcaSourceConcepts,
+  ...picaSourceConcepts,
   ...collicularBrachiaConcepts.map(concept => ({ ...concept,
     imaging: { ...concept.imaging, ct: nestedCTOrientation[concept.id] },
   })),
@@ -381,16 +389,12 @@ export const nestedConcepts: NestedConcept[] = [
       ],
     ] as const
   ).map(
-    ([fma, id, chamber, functionText, question, answer]): NestedConcept => ({
+    ([fma, id, , , question, answer]): NestedConcept => ({
       id: `cardiac-${id}`,
       study: 'cardiac',
       fmaIds: [fma],
       sections: {
-        anatomy: section(
-          `The ${chamber} is one of the four heart chambers. This model shows its cavity space, not surrounding muscle.`,
-          'cardiacChambers',
-        ),
-        function: section(functionText, 'cardiacChambers'),
+        ...cardiacCavityDepthSections[`cardiac-${id}`],
         clinical: cardiacTeaching[id].clinical,
         pathology: cardiacTeaching[id].pathology,
       },

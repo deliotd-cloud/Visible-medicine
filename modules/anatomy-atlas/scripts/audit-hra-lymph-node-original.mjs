@@ -7,7 +7,7 @@ import {hraSource,hraAccessor,hraDigest} from './hra-pelvis-source.mjs';
 import {prepareShape} from './vessel-shape-math.mjs';
 import {sourceTopology} from './source-topology.mjs';
 import {sourceTriangleSet} from './source-surface-audit.mjs';
-const directory=process.argv.find(a=>a.startsWith('--source='))?.slice(9)??'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+const directory=process.argv.find(a=>a.startsWith('--source='))?.slice(9)??'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const bytes=await readFile(directory+'/3d-vh-f-united.glb');
 assert.equal(bytes.length,hraSource.bytes);assert.equal(hraDigest(bytes),hraSource.sha256);
 const metadata=await readFile(directory+'/metadata.json'),crosswalk=await readFile(directory+'/crosswalk.csv');

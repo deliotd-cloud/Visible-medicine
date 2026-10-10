@@ -14,7 +14,88 @@ export type PlacedLabel = ScreenLabel & {
   top: number;
   endX: number;
   endY: number;
+  leader: ScreenAnchor[];
 };
+
+const routeEpsilon = 1e-7;
+function segmentsMeet(a: ScreenAnchor, b: ScreenAnchor, c: ScreenAnchor, d: ScreenAnchor) {
+  const cross = (u: ScreenAnchor, v: ScreenAnchor) => u.x * v.y - u.y * v.x;
+  const ab = { x: b.x - a.x, y: b.y - a.y };
+  const cd = { x: d.x - c.x, y: d.y - c.y };
+  const ac = { x: c.x - a.x, y: c.y - a.y };
+  const denominator = cross(ab, cd);
+  if (Math.abs(denominator) < routeEpsilon) {
+    if (Math.abs(cross(ac, ab)) > routeEpsilon) return false;
+    const axis = Math.abs(ab.x) >= Math.abs(ab.y) ? 'x' : 'y';
+    const overlap = Math.min(Math.max(a[axis], b[axis]), Math.max(c[axis], d[axis])) -
+      Math.max(Math.min(a[axis], b[axis]), Math.min(c[axis], d[axis]));
+    return overlap > routeEpsilon;
+  }
+  const t = cross(ac, cd) / denominator;
+  const u = cross(ac, ab) / denominator;
+  // Coincident anchors and box endpoints are unavoidable and are not crossings.
+  return t >= -routeEpsilon && t <= 1 + routeEpsilon &&
+    u >= -routeEpsilon && u <= 1 + routeEpsilon &&
+    !((t <= routeEpsilon || t >= 1 - routeEpsilon) &&
+      (u <= routeEpsilon || u >= 1 - routeEpsilon));
+}
+function routesMeet(a: ScreenAnchor[], b: ScreenAnchor[]) {
+  for (let i = 1; i < a.length; i++)
+    for (let j = 1; j < b.length; j++)
+      if (segmentsMeet(a[i - 1], a[i], b[j - 1], b[j])) return true;
+  return false;
+}
+function routeColumn(labels: PlacedLabel[]) {
+  if (labels.length < 2) return;
+  // Most frames already have clear straight leaders. Avoid the bounded search
+  // and length calculations unless there is a real pairwise conflict to fix.
+  if (!labels.some((label, i) => labels.slice(0, i)
+    .some(other => routesMeet(label.leader, other.leader)))) return;
+  const options = labels.map((label) => {
+    const start = { x: label.x, y: label.y };
+    const end = { x: label.endX, y: label.endY };
+    return [
+      [start, end],
+      [start, { x: end.x, y: start.y }, end],
+      [start, { x: start.x, y: end.y }, end],
+    ].filter(route => route.every(point => Number.isFinite(point.x) && Number.isFinite(point.y)));
+  });
+  const choices = labels.map(() => 0);
+  const routeCost = (index: number, choice: number) => {
+    const route = options[index][choice];
+    let length = 0;
+    for (let i = 1; i < route.length; i++)
+      length += Math.hypot(route[i].x - route[i - 1].x, route[i].y - route[i - 1].y);
+    return (length + (route.length - 2) * 12) * (labels[index].selected ? 3 : 1);
+  };
+  const totalCost = () => {
+    let cost = 0;
+    for (let i = 0; i < labels.length; i++) {
+      cost += routeCost(i, choices[i]);
+      for (let j = 0; j < i; j++)
+        if (routesMeet(options[i][choices[i]], options[j][choices[j]])) cost += 1_000_000;
+    }
+    return cost;
+  };
+  // A bounded local search keeps leaders short and changes only crossings it can
+  // improve. Coincident anchors or dense columns may have no clear solution.
+  for (let pass = 0; pass < 3; pass++) {
+    let changed = false;
+    for (let i = labels.length - 1; i >= 0; i--) {
+      const previous = choices[i];
+      let best = previous, bestCost = totalCost();
+      for (let choice = 0; choice < options[i].length; choice++) {
+        choices[i] = choice;
+        const cost = totalCost();
+        if (cost < bestCost - routeEpsilon) { best = choice; bestCost = cost; }
+      }
+      changed ||= previous !== best;
+      choices[i] = best;
+    }
+    if (!changed) break;
+  }
+  labels.forEach((label, index) => { label.leader = options[index][choices[index]]; });
+}
 
 /** Project the actual world anchor, after all parent/explode transforms.
  * The caller updates camera/world matrices once per frame. Anatomical laterality
@@ -101,6 +182,7 @@ export function layoutScreenLabels(
     available = height - labelGutter * 2,
     limit = screenLabelLimitPerSide(width, height);
   for (const side of ['left', 'right'] as const) {
+    const resultStart = result.length;
     const candidates = valid.filter(
       (label) => (label.x < width / 2 ? 'left' : 'right') === side,
     );
@@ -166,8 +248,13 @@ export function layoutScreenLabels(
         top: tops[i],
         endX: side === 'left' ? left + label.width : left,
         endY: tops[i] + label.height / 2,
+        leader: [{ x: label.x, y: label.y }, {
+          x: side === 'left' ? left + label.width : left,
+          y: tops[i] + label.height / 2,
+        }],
       });
     });
+    routeColumn(result.slice(resultStart));
   }
   return result;
 }

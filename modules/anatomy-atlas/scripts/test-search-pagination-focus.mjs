@@ -42,7 +42,7 @@ plugins: baseline ? [{ name: 'exact-baseline-component', setup(api) {
 });
 if (baseline) assert.equal(baselineOverrides, 1, 'exact Git component override executed once');
 const scope = { exports: {} }, document = { activeElement: null };
-runInNewContext(built.outputFiles[0].text, { module: scope, exports: scope.exports, console, document,
+runInNewContext(built.outputFiles[0].text, { module: scope, exports: scope.exports, console, document, structuredClone,
   URLSearchParams, window: { innerWidth: 1280, innerHeight: 720 }, process: { env: { NODE_ENV: 'test' } },
   require: id => id === 'react' ? shim : id === 'next/link' ? () => null : require(id),
 });

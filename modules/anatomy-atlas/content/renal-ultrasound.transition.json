@@ -1,0 +1,236 @@
+{
+  "parentCommit": "d517b77d2df2feb465b4d557e4446ef2451cbaa2",
+  "originalPinsHash": "4eaecd43646f4f7f2df08ee3dfb0846e3f372341009b4034b26695b38a5bfc69",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousSnapshotHash": "2f4f5f237bb1b847ce88469911977ecdef159e2ebace4bda2c1f3068dd5e4227",
+  "currentSnapshotHash": "09f2150830c306223af5139d07defb71b05c73252a7c26a0cb45835a291ca40b",
+  "previousMetadataHash": "f2583cb962846f465abd4101a8d3d985d8a63a6040c8979e475df8a3cc4abe23",
+  "currentMetadataHash": "c7bfc2b38383b4776d1e96bc5d39461ca3e52730b499d4b2c5cddb03df8fd2dc",
+  "focus": {
+    "previous": {
+      "topic": {
+        "body": "Ultrasound can evaluate renal structure; Doppler adds information about blood flow. The root atlas selection supplies neither tissue echoes nor a Doppler waveform.",
+        "bullets": [
+          "Inspect the actual kidney in the acquired planes rather than judging it from its silhouette.",
+          "The separately available kidney specimen does not establish the anatomy or findings of this examination."
+        ],
+        "references": [
+          "ultrasound"
+        ]
+      },
+      "groups": [
+        "FMA7204",
+        "FMA7205"
+      ],
+      "landmark": "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+      "scope": "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan.",
+      "references": {
+        "landmarks": "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "liver": "https://www.ncbi.nlm.nih.gov/books/NBK543812/",
+        "ultrasound": "https://www.radiologyinfo.org/en/info/abdominus",
+        "ct": "https://www.radiologyinfo.org/en/info/bodyct",
+        "mrcp": "https://www.radiologyinfo.org/en/info/mrcp",
+        "gallstones": "https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/diagnosis",
+        "spleen": "https://pubmed.ncbi.nlm.nih.gov/25820845/",
+        "renal": "https://www.ncbi.nlm.nih.gov/books/NBK543811/",
+        "urography": "https://www.radiologyinfo.org/en/info/urography",
+        "adrenal": "https://www.ncbi.nlm.nih.gov/books/NBK543796/",
+        "adrenalUltrasound": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4710689/",
+        "xray": "https://www.radiologyinfo.org/en/info/abdominrad"
+      }
+    },
+    "current": {
+      "topic": {
+        "body": "Renal ultrasound provides acquired slices, not the complete volume suggested by an atlas surface. Establish the recorded side and image plane before following the visible parenchyma and central collecting region across views. Grayscale appearance and Doppler flow information are distinct; neither is encoded by this outer reference mesh.",
+        "bullets": [
+          "When a complete kidney examination is acquired, compare long-axis and transverse views and check which upper- and lower-pole regions were actually shown on each side.",
+          "Where discernible, distinguish cortical tissue and medullary pyramids from the central sinus and renal pelvis; the sinus is not simply a fluid-filled collecting space.",
+          "Use acquired grayscale images for tissue echoes and contour. Flow assessment requires separately acquired Doppler data; mesh colour is not a Doppler result.",
+          "Recognise a poorly seen pole or other coverage limit. A clear model silhouette cannot establish sonographic visibility, a complete examination or normality."
+        ],
+        "references": [
+          "renalUltrasound",
+          "renalDuplex",
+          "renalGrayscale"
+        ]
+      },
+      "groups": [
+        "FMA7204",
+        "FMA7205"
+      ],
+      "landmark": "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+      "scope": "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan.",
+      "references": {
+        "landmarks": "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "liver": "https://www.ncbi.nlm.nih.gov/books/NBK543812/",
+        "ultrasound": "https://www.radiologyinfo.org/en/info/abdominus",
+        "ct": "https://www.radiologyinfo.org/en/info/bodyct",
+        "mrcp": "https://www.radiologyinfo.org/en/info/mrcp",
+        "gallstones": "https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/diagnosis",
+        "spleen": "https://pubmed.ncbi.nlm.nih.gov/25820845/",
+        "renal": "https://www.ncbi.nlm.nih.gov/books/NBK543811/",
+        "renalUltrasound": "https://onlinelibrary.wiley.com/doi/10.1002/jum.70430",
+        "renalDuplex": "https://onlinelibrary.wiley.com/doi/10.1002/jum.16353",
+        "renalGrayscale": "https://pubmed.ncbi.nlm.nih.gov/674648/",
+        "urography": "https://www.radiologyinfo.org/en/info/urography",
+        "adrenal": "https://www.ncbi.nlm.nih.gov/books/NBK543796/",
+        "adrenalUltrasound": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4710689/",
+        "xray": "https://www.radiologyinfo.org/en/info/abdominrad"
+      }
+    }
+  },
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+        "fmaId": "FMA7204",
+        "name": "Right kidney",
+        "sourceName": "right kidney",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7204",
+        "bounds": {
+          "min": [
+            -0.8757539987564087,
+            1.6681201457977295,
+            0.14700104296207428
+          ],
+          "max": [
+            -0.3042760193347931,
+            2.712399959564209,
+            0.6185500621795654
+          ]
+        },
+        "center": [
+          -0.5900150090456009,
+          2.1902600526809692,
+          0.38277555257081985
+        ],
+        "anchor": [
+          -0.5424100160598755,
+          2.2017998695373535,
+          0.428384006023407
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3147",
+            "sha256": "e21e2ebd5224b1cbf8caabbf4fa788d894819a328a006dcdb2eb8aa6eee5875a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right kidney · Ultrasound orientation · draft",
+        "body": "Ultrasound can evaluate renal structure; Doppler adds information about blood flow. The root atlas selection supplies neither tissue echoes nor a Doppler waveform.",
+        "bullets": [
+          "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+          "Inspect the actual kidney in the acquired planes rather than judging it from its silhouette.",
+          "The separately available kidney specimen does not establish the anatomy or findings of this examination.",
+          "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+          "https://www.radiologyinfo.org/en/info/abdominus"
+        ],
+        "note": "Independent anatomy/radiology review pending. Compare spatial relationships with separation at zero. No patient images, scan registration or paid-lecture access. Confirm patient, organ, side, sequence and contrast phase before future image comparison. Not a diagnosis, acquisition protocol or management guideline."
+      },
+      "previousHash": "b267e911c71ffd58bc56b9a61105653655078ad0373deb25a570a7ddf78f7f71",
+      "currentHash": "6dba5604aee2954b9c5101e1ec434b8c3015419ecdfc4c93157ec161ee1662c3"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+        "fmaId": "FMA7205",
+        "name": "Left kidney",
+        "sourceName": "left kidney",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7205",
+        "bounds": {
+          "min": [
+            0.32839900255203247,
+            1.844940185546875,
+            0.09591399878263474
+          ],
+          "max": [
+            0.9038300514221191,
+            2.9043993949890137,
+            0.5018499493598938
+          ]
+        },
+        "center": [
+          0.6161145269870758,
+          2.3746697902679443,
+          0.29888197407126427
+        ],
+        "anchor": [
+          0.6226660013198853,
+          2.373699903488159,
+          0.3074040114879608
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3145",
+            "sha256": "b52066a987f767ad9e5c3092958bf5dd760d9f05f1497d1fc7f7ff11539bdfd2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left kidney · Ultrasound orientation · draft",
+        "body": "Ultrasound can evaluate renal structure; Doppler adds information about blood flow. The root atlas selection supplies neither tissue echoes nor a Doppler waveform.",
+        "bullets": [
+          "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+          "Inspect the actual kidney in the acquired planes rather than judging it from its silhouette.",
+          "The separately available kidney specimen does not establish the anatomy or findings of this examination.",
+          "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+          "https://www.radiologyinfo.org/en/info/abdominus"
+        ],
+        "note": "Independent anatomy/radiology review pending. Compare spatial relationships with separation at zero. No patient images, scan registration or paid-lecture access. Confirm patient, organ, side, sequence and contrast phase before future image comparison. Not a diagnosis, acquisition protocol or management guideline."
+      },
+      "previousHash": "f96454f78854d804207f580fea1a4f63f5d0111cfc122e01e6c6f31912bff376",
+      "currentHash": "e2ca998670ad27ade8099262e896764729c47dacb897f4959980f2fe6d7c9658"
+    }
+  ]
+}

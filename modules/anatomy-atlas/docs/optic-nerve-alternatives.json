@@ -1,0 +1,1079 @@
+{
+  "schemaVersion": 1,
+  "purpose": "source-only-optic-alternative-review",
+  "sourceVersion": "4.0",
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "preparationSha256": "80a31dc88bc8e85561e5f3702b7697485ea547a4a85c7b3264ceb24291c66cd7",
+  "visualAuditSha256": "5b1a018edcc3b4d271eeb5ae0fe81aef1b92161e1c179585573602ffd57184f6",
+  "algorithmSha256": {
+    "optic-alternative-report.mjs": "bf0c23fccbd5353db98dd6c3c870e06d1c36718a077c68e55797d3dcf007ed58",
+    "source-surface-audit.mjs": "506c82a42b440186655d8ad8ebcb452cef60af51cba07a697827d83bd9d6960b",
+    "source-spatial-math.mjs": "de2042103697c693309ea618391ff27a1a406304aef7c04980d5728ba72b05c3",
+    "source-topology.mjs": "fe68b381c4a5ae23ac858e9d790e531270699c02a29629255373e00c9150f4fe"
+  },
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "licenseUrl": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "sourceArchives": [
+    {
+      "tree": "isa",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+      "directorySha256": "879093c967e40eca17a8f21ba5b08ba9913760118502e99f68ce3c03f659b559",
+      "entryCount": 2234
+    },
+    {
+      "tree": "partof",
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/partof_BP3D_4.0_obj_99.zip",
+      "directorySha256": "eec3420cee5f54a6039a441b9801402bf205145719dedaf72fbfd03538fde144",
+      "entryCount": 1258
+    }
+  ],
+  "meshes": [
+    {
+      "key": "isa/FJ1364",
+      "id": "FMA50875",
+      "name": "right optic nerve FJ1364",
+      "side": "right",
+      "role": "candidate",
+      "tree": "isa",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1364",
+          "sha256": "e6a52be718612218521df5194422c0fe7b05fd2f94976ac8e5c526b1fb743b5c",
+          "bytes": 117132,
+          "geometrySha256": "39f26eaf5075074b294b9d76ea3b3993f05631148322b2a62b850d8fde4c4702"
+        }
+      ],
+      "vertices": 1041,
+      "triangles": 1858,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -31.3523,
+          -142.503,
+          1518.29
+        ],
+        "max": [
+          -1.31636,
+          -102.147,
+          1542.24
+        ]
+      },
+      "geometrySha256": "130dd4b19dafe7faafbcd46e41f19f248275bbb8972bcaec7cf29c15e35ccdfb"
+    },
+    {
+      "key": "isa/FJ1819",
+      "id": "FMA50875",
+      "name": "right optic nerve FJ1819",
+      "side": "right",
+      "role": "candidate",
+      "tree": "isa",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1819",
+          "sha256": "3fde0d489978522bb0c916db61287c42aedfb4c6660b6f8016a148ffccef89f4",
+          "bytes": 146608,
+          "geometrySha256": "841be24e1f4cc40befbee26c177e663661382f77585b686ec89d5cba4217333d"
+        }
+      ],
+      "vertices": 1242,
+      "triangles": 2378,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -33.3074,
+          -151.746,
+          1520.22
+        ],
+        "max": [
+          -1.28971,
+          -102.175,
+          1542.31
+        ]
+      },
+      "geometrySha256": "c19385b1945c40e5cf7337d58dc7186e522655a707885903fce3749243dbdee1"
+    },
+    {
+      "key": "isa/FJ1313",
+      "id": "FMA50878",
+      "name": "left optic nerve FJ1313",
+      "side": "left",
+      "role": "candidate",
+      "tree": "isa",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1313",
+          "sha256": "a20cd06d796575d9041a6b6e01724f70fb50f1807e324941f43dcdc3e8c51e40",
+          "bytes": 115439,
+          "geometrySha256": "05806d4d1a81584a5cbd4cdcd6da1aa9a11e0cd61e3172a216fd8826af7fc0c7"
+        }
+      ],
+      "vertices": 1027,
+      "triangles": 1860,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          0.0202998,
+          -142.537,
+          1518.28
+        ],
+        "max": [
+          30.0673,
+          -102.154,
+          1542.23
+        ]
+      },
+      "geometrySha256": "49cacf0782004f51fef07a8d262d5a0c24ddbee644e37bcf0dbd2686f5bc1897"
+    },
+    {
+      "key": "isa/FJ1772",
+      "id": "FMA50878",
+      "name": "left optic nerve FJ1772",
+      "side": "left",
+      "role": "candidate",
+      "tree": "isa",
+      "held": true,
+      "sources": [
+        {
+          "file": "FJ1772",
+          "sha256": "314b4a735672c1ce6690d29199856569fa3db4864f2d94690e091432e085e057",
+          "bytes": 146521,
+          "geometrySha256": "4251a2ae961e46691fe627890f32f09426e640e3f4901c1dcd69c1b259d24310"
+        }
+      ],
+      "vertices": 1251,
+      "triangles": 2376,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -0.00264154,
+          -151.743,
+          1520.2
+        ],
+        "max": [
+          31.9976,
+          -102.141,
+          1542.31
+        ]
+      },
+      "geometrySha256": "fb5a28e7eb42465b3b70695f268cd7b8f4563db085ec441eb70d95270f28d1ad"
+    },
+    {
+      "key": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "id": "FMA12514",
+      "name": "right eyeball",
+      "side": "right",
+      "role": "globe-context",
+      "tree": "partof",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1336",
+          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+        },
+        {
+          "file": "FJ1337",
+          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+        },
+        {
+          "file": "FJ1340",
+          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+        },
+        {
+          "file": "FJ1348",
+          "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+        },
+        {
+          "file": "FJ1356",
+          "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+        },
+        {
+          "file": "FJ1368",
+          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+        },
+        {
+          "file": "FJ1371",
+          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+        },
+        {
+          "file": "FJ1382",
+          "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+        }
+      ],
+      "vertices": 55868,
+      "triangles": 97374,
+      "degenerateTriangles": 18,
+      "bounds": {
+        "min": [
+          -43.6181,
+          -166.051,
+          1504.96
+        ],
+        "max": [
+          37.3922,
+          -138.829,
+          1531.19
+        ]
+      },
+      "geometrySha256": "a958e1b6bc47aaea7c808e0b71f10388bba28ea72a7f2e0eb5d0a0dddb29c1b0"
+    },
+    {
+      "key": "vm:anatomy:body:head-neck:left:organ:left-eyeball",
+      "id": "FMA12515",
+      "name": "left eyeball",
+      "side": "left",
+      "role": "globe-context",
+      "tree": "partof",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1282",
+          "sha256": "c66ed172ed90448e3e9508f21b116f319cfd1036cb7281e2f3541ede5f2adb1f"
+        },
+        {
+          "file": "FJ1285",
+          "sha256": "dd7677f804c1c370a2c6d11966877934efa9ca09c6b100e18f06fd4508ccbbb6"
+        },
+        {
+          "file": "FJ1286",
+          "sha256": "ba4e6f7156124700b63d526a882933b35b89fa0e9fd53495964d57aa5de1c989"
+        },
+        {
+          "file": "FJ1289",
+          "sha256": "6edadfa812d834f5b90d17d427baa0c6688a4cc32856c2b8c6320907bbc05150"
+        },
+        {
+          "file": "FJ1297",
+          "sha256": "e9359237794eef61117f1c12a6822dafdd0cfc70ada8d2447e3d26d4fcda9bd7"
+        },
+        {
+          "file": "FJ1305",
+          "sha256": "a2b7f9b53dd2d14a352dfa0d3e01452031a2957aae62aa7c904d7c1d1922954c"
+        },
+        {
+          "file": "FJ1317",
+          "sha256": "81a184bd0d3d8602af3c2186405a16565bcabd0d305fcbad7e02b979335d9582"
+        },
+        {
+          "file": "FJ1320",
+          "sha256": "a73a8e48e83cd65e15eda97533b59cac7f3f687a7b117e587bc561bf4f7b50a1"
+        },
+        {
+          "file": "FJ1331",
+          "sha256": "417bc91c6719b2982cb60640058ddcce9f50ecfb5a20db02393f2cf7bad82a0b"
+        }
+      ],
+      "vertices": 55568,
+      "triangles": 100388,
+      "degenerateTriangles": 4,
+      "bounds": {
+        "min": [
+          15.9892,
+          -166.049,
+          1504.96
+        ],
+        "max": [
+          42.3104,
+          -138.829,
+          1531.19
+        ]
+      },
+      "geometrySha256": "712622051b3ad40afc422a4c4dcc3033d3bca27abad219a2aaf425ecf3a66592"
+    },
+    {
+      "key": "isa/FMA62045",
+      "id": "FMA62045",
+      "name": "optic chiasm",
+      "side": "midline",
+      "role": "visual-context",
+      "tree": "isa",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1771",
+          "sha256": "35525fbff0dae57779ca901612c148df339e2ff9dc01ad265577e2aacd7b10c1",
+          "bytes": 53200,
+          "geometrySha256": "c99539e8182db029c475425dacc2bd72cb38b788a9df11509486390239ec5d65"
+        },
+        {
+          "file": "FJ1818",
+          "sha256": "080b278fab566f29df1aa026d562b722ddc4c1d77172527be9bb0eb253fe8ef8",
+          "bytes": 53023,
+          "geometrySha256": "84fd7616d29099c46eb16dc07172eb7ae7fc920f49382f8aed456291c3096719"
+        }
+      ],
+      "vertices": 909,
+      "triangles": 1788,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -7.97858,
+          -110.431,
+          1535.91
+        ],
+        "max": [
+          6.64236,
+          -100.112,
+          1544.01
+        ]
+      },
+      "geometrySha256": "d0b2783f447f0b76c49e0664e94db684c5b4d5a4f791a6625464851be8d7c742"
+    },
+    {
+      "key": "isa/FMA62382",
+      "id": "FMA62382",
+      "name": "right optic tract",
+      "side": "right",
+      "role": "visual-context",
+      "tree": "isa",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1820",
+          "sha256": "53b9d1b4f549c2e3926e110dac77a665b1627517f5c9309a9c3b1f1dfaf1b176",
+          "bytes": 142055,
+          "geometrySha256": "9aef863a50bdff13756ebcb74d9341aea828473f2ebf98078e6b637b5cd74158"
+        }
+      ],
+      "vertices": 1195,
+      "triangles": 2332,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -26.0716,
+          -107.443,
+          1535.98
+        ],
+        "max": [
+          -1.27072,
+          -69.6285,
+          1544
+        ]
+      },
+      "geometrySha256": "9189d64776e3e72d5b2dac7f998231593ac8fe0f399dd710f8e845c7522e6f3e"
+    },
+    {
+      "key": "isa/FMA67936",
+      "id": "FMA67936",
+      "name": "left optic tract",
+      "side": "left",
+      "role": "visual-context",
+      "tree": "isa",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ1773",
+          "sha256": "c6b08e9c445dcf174e31bb91f3034dcdec7317782dcbdf0aa3c9cc2fa92d50a1",
+          "bytes": 141140,
+          "geometrySha256": "5c2cb95c8b6460a812c4676ff4f941b0d6b20d403bb5589577159c8160c22845"
+        }
+      ],
+      "vertices": 1194,
+      "triangles": 2336,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -0.0205644,
+          -107.439,
+          1536
+        ],
+        "max": [
+          24.7615,
+          -69.6134,
+          1544
+        ]
+      },
+      "geometrySha256": "c5caa6113f5bb3fd4d11deaab5b2c90d68494c26085ad4502c0c807a07fd73b9"
+    },
+    {
+      "key": "vm:anatomy:body:head-neck:midline:bone:sphenoid-bone",
+      "id": "FMA52736",
+      "name": "whole sphenoid bone",
+      "side": "midline",
+      "role": "bone-context",
+      "tree": "isa",
+      "held": false,
+      "sources": [
+        {
+          "file": "FJ3394",
+          "sha256": "127f537eb70e6ad4b036a535550ab7a681ce06dbdc1efda85956d910c54d6285"
+        }
+      ],
+      "vertices": 4957,
+      "triangles": 8154,
+      "degenerateTriangles": 0,
+      "bounds": {
+        "min": [
+          -56.3198,
+          -145.019,
+          1478.91
+        ],
+        "max": [
+          55.0329,
+          -90.4127,
+          1548.46
+        ]
+      },
+      "geometrySha256": "187ac7b4e5fb3a8e68509ff407f47f3df514979025e78433089c434a32f52c24"
+    }
+  ],
+  "pairs": [
+    {
+      "side": "right",
+      "id": "FMA50875",
+      "name": "right optic nerve",
+      "files": [
+        "FJ1364",
+        "FJ1819"
+      ],
+      "metrics": {
+        "exactSharedTriangles": 0,
+        "triangleCounts": [
+          1858,
+          2378
+        ],
+        "exactUniqueTriangleCounts": [
+          1858,
+          2378
+        ],
+        "aToB": {
+          "vertices": {
+            "samples": 931,
+            "minMm": 0.001121579332099501,
+            "medianMm": 0.2561274530427303,
+            "maxMm": 2.6079749964062904,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 277,
+                "weightedFraction": 0.2975295381310419
+              },
+              {
+                "mm": 0.25,
+                "count": 460,
+                "weightedFraction": 0.4940923737916219
+              },
+              {
+                "mm": 1,
+                "count": 719,
+                "weightedFraction": 0.7722878625134264
+              },
+              {
+                "mm": 2,
+                "count": 851,
+                "weightedFraction": 0.9140708915145005
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 1858,
+            "minMm": 0.0000036069092392644482,
+            "medianMm": 0.2590719973882572,
+            "maxMm": 2.59945585283315,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 553,
+                "weightedFraction": 0.1770903839093447
+              },
+              {
+                "mm": 0.25,
+                "count": 916,
+                "weightedFraction": 0.3492230822475039
+              },
+              {
+                "mm": 1,
+                "count": 1423,
+                "weightedFraction": 0.7407855295750069
+              },
+              {
+                "mm": 2,
+                "count": 1710,
+                "weightedFraction": 0.9511844504762109
+              }
+            ]
+          }
+        },
+        "bToA": {
+          "vertices": {
+            "samples": 1191,
+            "minMm": 0.0005509696637005405,
+            "medianMm": 0.7501483261892031,
+            "maxMm": 9.492461052856617,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 203,
+                "weightedFraction": 0.1704450041981528
+              },
+              {
+                "mm": 0.25,
+                "count": 374,
+                "weightedFraction": 0.3140218303946264
+              },
+              {
+                "mm": 1,
+                "count": 681,
+                "weightedFraction": 0.5717884130982368
+              },
+              {
+                "mm": 2,
+                "count": 874,
+                "weightedFraction": 0.7338371116708649
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 2378,
+            "minMm": 0.00004290669077331608,
+            "medianMm": 0.7550783968108346,
+            "maxMm": 9.4834473722493,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 402,
+                "weightedFraction": 0.14418052380750382
+              },
+              {
+                "mm": 0.25,
+                "count": 744,
+                "weightedFraction": 0.30325600729235064
+              },
+              {
+                "mm": 1,
+                "count": 1379,
+                "weightedFraction": 0.6674507357843364
+              },
+              {
+                "mm": 2,
+                "count": 1751,
+                "weightedFraction": 0.8359917593887095
+              }
+            ]
+          }
+        },
+        "componentEndBands": {
+          "a": [
+            {
+              "index": 0,
+              "uniqueVertices": 931,
+              "bounds": {
+                "min": [
+                  -31.3523,
+                  -142.503,
+                  1518.29
+                ],
+                "max": [
+                  -1.31636,
+                  -102.147,
+                  1542.24
+                ]
+              },
+              "axis": 1,
+              "widthMm": 1,
+              "low": {
+                "samples": 83,
+                "minMm": 0.01051485263309639,
+                "medianMm": 1.7735289752990955,
+                "maxMm": 2.6079749964062904,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 3,
+                    "weightedFraction": 0.03614457831325301
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 4,
+                    "weightedFraction": 0.04819277108433735
+                  },
+                  {
+                    "mm": 1,
+                    "count": 28,
+                    "weightedFraction": 0.3373493975903614
+                  },
+                  {
+                    "mm": 2,
+                    "count": 45,
+                    "weightedFraction": 0.5421686746987951
+                  }
+                ]
+              },
+              "high": {
+                "samples": 63,
+                "minMm": 0.001121579332099501,
+                "medianMm": 0.032405618974181975,
+                "maxMm": 0.07596460307644014,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 63,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 63,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 1,
+                    "count": 63,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 2,
+                    "count": 63,
+                    "weightedFraction": 1
+                  }
+                ]
+              }
+            }
+          ],
+          "b": [
+            {
+              "index": 0,
+              "uniqueVertices": 1191,
+              "bounds": {
+                "min": [
+                  -33.3074,
+                  -151.746,
+                  1520.22
+                ],
+                "max": [
+                  -1.28971,
+                  -102.175,
+                  1542.31
+                ]
+              },
+              "axis": 1,
+              "widthMm": 1,
+              "low": {
+                "samples": 133,
+                "minMm": 8.304467887227936,
+                "medianMm": 9.046214346343978,
+                "maxMm": 9.492461052856617,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 0,
+                    "weightedFraction": 0
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 0,
+                    "weightedFraction": 0
+                  },
+                  {
+                    "mm": 1,
+                    "count": 0,
+                    "weightedFraction": 0
+                  },
+                  {
+                    "mm": 2,
+                    "count": 0,
+                    "weightedFraction": 0
+                  }
+                ]
+              },
+              "high": {
+                "samples": 28,
+                "minMm": 0.0005509696637005405,
+                "medianMm": 0.013265963831004101,
+                "maxMm": 0.057093061956841,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 28,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 28,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 1,
+                    "count": 28,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 2,
+                    "count": 28,
+                    "weightedFraction": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "held": true,
+      "admissionApproved": false
+    },
+    {
+      "side": "left",
+      "id": "FMA50878",
+      "name": "left optic nerve",
+      "files": [
+        "FJ1313",
+        "FJ1772"
+      ],
+      "metrics": {
+        "exactSharedTriangles": 0,
+        "triangleCounts": [
+          1860,
+          2376
+        ],
+        "exactUniqueTriangleCounts": [
+          1860,
+          2376
+        ],
+        "aToB": {
+          "vertices": {
+            "samples": 932,
+            "minMm": 0.0002971862949462655,
+            "medianMm": 0.27386632283878287,
+            "maxMm": 2.6094989778128337,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 272,
+                "weightedFraction": 0.2918454935622318
+              },
+              {
+                "mm": 0.25,
+                "count": 450,
+                "weightedFraction": 0.48283261802575106
+              },
+              {
+                "mm": 1,
+                "count": 707,
+                "weightedFraction": 0.7585836909871244
+              },
+              {
+                "mm": 2,
+                "count": 861,
+                "weightedFraction": 0.9238197424892703
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 1860,
+            "minMm": 0.00007862265680875519,
+            "medianMm": 0.2829063065020182,
+            "maxMm": 2.5482045244294382,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 541,
+                "weightedFraction": 0.1726810736925176
+              },
+              {
+                "mm": 0.25,
+                "count": 891,
+                "weightedFraction": 0.35209945551960414
+              },
+              {
+                "mm": 1,
+                "count": 1418,
+                "weightedFraction": 0.7477440139199554
+              },
+              {
+                "mm": 2,
+                "count": 1720,
+                "weightedFraction": 0.9485355637398304
+              }
+            ]
+          }
+        },
+        "bToA": {
+          "vertices": {
+            "samples": 1190,
+            "minMm": 0.000044861149723632977,
+            "medianMm": 0.7080394864287551,
+            "maxMm": 9.488746178500074,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 242,
+                "weightedFraction": 0.20336134453781513
+              },
+              {
+                "mm": 0.25,
+                "count": 408,
+                "weightedFraction": 0.34285714285714286
+              },
+              {
+                "mm": 1,
+                "count": 697,
+                "weightedFraction": 0.5857142857142857
+              },
+              {
+                "mm": 2,
+                "count": 888,
+                "weightedFraction": 0.746218487394958
+              }
+            ]
+          },
+          "areaWeightedTriangleCentroids": {
+            "samples": 2376,
+            "minMm": 0.00010322999436533409,
+            "medianMm": 0.7060742663710728,
+            "maxMm": 9.485712428840369,
+            "thresholds": [
+              {
+                "mm": 0.1,
+                "count": 484,
+                "weightedFraction": 0.1444587082703746
+              },
+              {
+                "mm": 0.25,
+                "count": 819,
+                "weightedFraction": 0.30889224251138686
+              },
+              {
+                "mm": 1,
+                "count": 1403,
+                "weightedFraction": 0.6596980011239244
+              },
+              {
+                "mm": 2,
+                "count": 1776,
+                "weightedFraction": 0.8321264408086331
+              }
+            ]
+          }
+        },
+        "componentEndBands": {
+          "a": [
+            {
+              "index": 0,
+              "uniqueVertices": 932,
+              "bounds": {
+                "min": [
+                  0.0202998,
+                  -142.537,
+                  1518.28
+                ],
+                "max": [
+                  30.0673,
+                  -102.154,
+                  1542.23
+                ]
+              },
+              "axis": 1,
+              "widthMm": 1,
+              "low": {
+                "samples": 95,
+                "minMm": 0.026376186990901586,
+                "medianMm": 1.426945340744012,
+                "maxMm": 2.6094989778128337,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 2,
+                    "weightedFraction": 0.021052631578947368
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 6,
+                    "weightedFraction": 0.06315789473684211
+                  },
+                  {
+                    "mm": 1,
+                    "count": 29,
+                    "weightedFraction": 0.30526315789473685
+                  },
+                  {
+                    "mm": 2,
+                    "count": 66,
+                    "weightedFraction": 0.6947368421052632
+                  }
+                ]
+              },
+              "high": {
+                "samples": 53,
+                "minMm": 0.0002971862949462655,
+                "medianMm": 0.02557812011463282,
+                "maxMm": 0.09055070557766379,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 53,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 53,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 1,
+                    "count": 53,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 2,
+                    "count": 53,
+                    "weightedFraction": 1
+                  }
+                ]
+              }
+            }
+          ],
+          "b": [
+            {
+              "index": 0,
+              "uniqueVertices": 1190,
+              "bounds": {
+                "min": [
+                  -0.00264154,
+                  -151.743,
+                  1520.2
+                ],
+                "max": [
+                  31.9976,
+                  -102.141,
+                  1542.31
+                ]
+              },
+              "axis": 1,
+              "widthMm": 1,
+              "low": {
+                "samples": 119,
+                "minMm": 8.301676306023978,
+                "medianMm": 9.04135444471413,
+                "maxMm": 9.488746178500074,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 0,
+                    "weightedFraction": 0
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 0,
+                    "weightedFraction": 0
+                  },
+                  {
+                    "mm": 1,
+                    "count": 0,
+                    "weightedFraction": 0
+                  },
+                  {
+                    "mm": 2,
+                    "count": 0,
+                    "weightedFraction": 0
+                  }
+                ]
+              },
+              "high": {
+                "samples": 47,
+                "minMm": 0.0001451661283294553,
+                "medianMm": 0.012608035915920659,
+                "maxMm": 0.06028656836778953,
+                "thresholds": [
+                  {
+                    "mm": 0.1,
+                    "count": 47,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 0.25,
+                    "count": 47,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 1,
+                    "count": 47,
+                    "weightedFraction": 1
+                  },
+                  {
+                    "mm": 2,
+                    "count": 47,
+                    "weightedFraction": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "held": true,
+      "admissionApproved": false
+    }
+  ],
+  "coverage": {
+    "opticAlternatives": "Two held files on each side, compared within side only",
+    "context": "Exact catalogue eyeball owners, existing visual-pathway audit groups, and whole sphenoid bone",
+    "opticCanal": "No independently segmented optic canal source is asserted"
+  },
+  "admissions": 0,
+  "sourceGeometryChanged": false,
+  "admissionApproved": false,
+  "clinicalValidation": false,
+  "patientRegistration": false,
+  "limitations": [
+    "Original BodyParts3D millimetre coordinates and triangles are retained. No alignment, welding, repair or source relabelling.",
+    "Every exact unique source vertex and every source triangle centroid is queried against the other full triangle surface in both directions. Centroids are area weighted; zero-area faces retain a sample with zero weight.",
+    "Distances are unsigned sampled diagnostics, not continuous surface distance, fibre continuity, identity, clinical anatomy or surgical clearance.",
+    "componentEndBands are longest-axis geometric extrema on exact-coordinate connected components, NOT anatomical terminals.",
+    "Whole sphenoid bone is spatial context, NOT a segmented optic canal. Globe and visual context are source-labelled and do not validate the optic alternatives.",
+    "Both optic source definitions remain held. Radiologist review bound to this exact report and source revision is required before any admission."
+  ],
+  "reportRevision": "6c741eed3e0ff7b4a286501a35e210a053507db92c24da8fa750af24e5e51115"
+}

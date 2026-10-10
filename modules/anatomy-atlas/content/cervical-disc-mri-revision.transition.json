@@ -1,0 +1,631 @@
+{
+  "schemaVersion": 1,
+  "baselineCommit": "6601e0dbb3a0e5a1f3c88781f4e1a73568e760c0",
+  "scope": "Existing six source-bound cervical-disc MRI drafts only; not clinical approval or geometry change",
+  "originalPinsJsonSha256": "a455b8ec9be49820f02c728c49cabbcebc6eb4504c64d1ce2d7766cfc844e7a6",
+  "originalBeforeJsonSha256": "4efe17d830f8442d48bba78cfe9cb690f4f3fa08a4ebc9adfabd0a8bd134803f",
+  "oldTopic": {
+    "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+    "bullets": [
+      "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+      "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration."
+    ],
+    "references": [
+      "mrAnatomy",
+      "mri"
+    ]
+  },
+  "newTopic": {
+    "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+    "bullets": [
+      "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+      "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+      "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied."
+    ],
+    "references": [
+      "mrAnatomy",
+      "mri",
+      "cervicalMriCoverage"
+    ]
+  },
+  "oldTopicsSha256": "6341ae3712b01914b1e4bc8f3799978e70bb2a67ff8e321e206704ba1f8bf562",
+  "newTopicsSha256": "83c8727367bad63dd5dc20c04d8246205dffeb873a04e4a5c6c515ae151e5bee",
+  "oldReferencesSha256": "9bc53ae7756476fc50bef278698a4d21b333e35b284b1fa7fd2e3ae0bcd36c16",
+  "newReferencesSha256": "2653608653809f7c6792e321838899f2de06c0a77b7ff04f12df4b2c21e3534b",
+  "addedReference": {
+    "key": "cervicalMriCoverage",
+    "url": "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+  },
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-axis",
+        "fmaId": "FMA25058",
+        "name": "Intervertebral disk of axis",
+        "sourceName": "intervertebral disk of axis",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA25058",
+        "bounds": {
+          "min": [
+            -0.1344040036201477,
+            6.414499282836914,
+            0.19221298396587372
+          ],
+          "max": [
+            0.11683999747037888,
+            6.5093994140625,
+            0.37253403663635254
+          ]
+        },
+        "center": [
+          -0.008782003074884415,
+          6.461949348449707,
+          0.28237351030111313
+        ],
+        "anchor": [
+          -0.02172050066292286,
+          6.480300426483154,
+          0.29006898403167725
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3202",
+            "sha256": "10b24dc45678b68734e84e2d10c749c5b53b4ed3c39c04d2052bdebc02301840"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of axis · MRI orientation · draft",
+        "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+        "bullets": [
+          "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+          "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.",
+          "This source-labelled axis disc lies below C2; there is no C1–C2 intervertebral disc.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of axis · MRI orientation · draft",
+        "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+        "bullets": [
+          "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+          "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+          "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "This source-labelled axis disc lies below C2; there is no C1–C2 intervertebral disc.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "c7b895b4a4881485c8d7fe1c0fa0173c4d8e70c680172fc9fbfe9d5cf93ccbeb",
+      "newSha256": "a569f454e6f863994a7ef3cc6d08bfba56de2944a3c78ae0e21e54cb871375d7"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-third-cervical-vertebra",
+        "fmaId": "FMA13896",
+        "name": "Intervertebral disk of third cervical vertebra",
+        "sourceName": "intervertebral disk of third cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13896",
+        "bounds": {
+          "min": [
+            -0.1197109967470169,
+            6.268899917602539,
+            0.22661903500556946
+          ],
+          "max": [
+            0.10661400109529495,
+            6.330699443817139,
+            0.38691002130508423
+          ]
+        },
+        "center": [
+          -0.006548497825860977,
+          6.299799680709839,
+          0.30676452815532684
+        ],
+        "anchor": [
+          0.0048338198103010654,
+          6.315899848937988,
+          0.3078949749469757
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3213",
+            "sha256": "1792fb233867a50a88c0b087391886dfb63f62eede857920736367c0d0c9e91d"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of third cervical vertebra · MRI orientation · draft",
+        "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+        "bullets": [
+          "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+          "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of third cervical vertebra · MRI orientation · draft",
+        "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+        "bullets": [
+          "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+          "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+          "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "78d32d01d6b7f4686cb3aea081fabe7943039f76d3d17ddfbf7fb9cac0217133",
+      "newSha256": "85952b1540f00baed5603a9cc91c75edbee521190c9c19cbd30b309b5b454d2b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fourth-cervical-vertebra",
+        "fmaId": "FMA13897",
+        "name": "Intervertebral disk of fourth cervical vertebra",
+        "sourceName": "intervertebral disk of fourth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13897",
+        "bounds": {
+          "min": [
+            -0.13390199840068817,
+            6.087099552154541,
+            0.24215202033519745
+          ],
+          "max": [
+            0.12067300081253052,
+            6.193299770355225,
+            0.4128350019454956
+          ]
+        },
+        "center": [
+          -0.006614498794078827,
+          6.140199661254883,
+          0.3274935111403465
+        ],
+        "anchor": [
+          -0.004538619890809059,
+          6.158599853515625,
+          0.33474501967430115
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3218",
+            "sha256": "a1820438c3e0dd6361807a4a7380861df4134f48df2d869630e678ff71ec226d"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fourth cervical vertebra · MRI orientation · draft",
+        "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+        "bullets": [
+          "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+          "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fourth cervical vertebra · MRI orientation · draft",
+        "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+        "bullets": [
+          "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+          "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+          "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "cb13ffc07439b205692a5d60b11c64f4a61f659ac88833eaa292c63abfa9a5db",
+      "newSha256": "c4f6c850cdf31e15fa0f445d05eca4cb34af8d57591b4a28b6931a6981f820c6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-fifth-cervical-vertebra",
+        "fmaId": "FMA13898",
+        "name": "Intervertebral disk of fifth cervical vertebra",
+        "sourceName": "intervertebral disk of fifth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13898",
+        "bounds": {
+          "min": [
+            -0.1480959951877594,
+            5.925699234008789,
+            0.25521400570869446
+          ],
+          "max": [
+            0.13479000329971313,
+            6.033299446105957,
+            0.41979798674583435
+          ]
+        },
+        "center": [
+          -0.006652995944023132,
+          5.979499340057373,
+          0.3375059962272644
+        ],
+        "anchor": [
+          -0.0017197600100189447,
+          5.95989990234375,
+          0.31486502289772034
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3219",
+            "sha256": "9614a560acb98669f69bf67a15321e73495e7decf71fa4e4e3941fc494b443d4"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fifth cervical vertebra · MRI orientation · draft",
+        "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+        "bullets": [
+          "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+          "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of fifth cervical vertebra · MRI orientation · draft",
+        "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+        "bullets": [
+          "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+          "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+          "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "5466f913e5cf9618fad4193eed5aa4a21fc560796f66c086a1fabbeeb7c5e4b9",
+      "newSha256": "a0cea5b2d3f15069d6ea58667f600c75c98d863cc740501ba25e98255f3924ea"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-sixth-cervical-vertebra",
+        "fmaId": "FMA13899",
+        "name": "Intervertebral disk of sixth cervical vertebra",
+        "sourceName": "intervertebral disk of sixth cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13899",
+        "bounds": {
+          "min": [
+            -0.1482599973678589,
+            5.771800518035889,
+            0.235229030251503
+          ],
+          "max": [
+            0.1335499882698059,
+            5.867499828338623,
+            0.4030120074748993
+          ]
+        },
+        "center": [
+          -0.007355004549026489,
+          5.819650173187256,
+          0.31912051886320114
+        ],
+        "anchor": [
+          -0.030222799628973007,
+          5.799399375915527,
+          0.3185559809207916
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3220",
+            "sha256": "6aa2490d85cc76e1f9c29a4d187e36c54d3faa1091b42d1ebc54d45ae1d96194"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of sixth cervical vertebra · MRI orientation · draft",
+        "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+        "bullets": [
+          "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+          "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of sixth cervical vertebra · MRI orientation · draft",
+        "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+        "bullets": [
+          "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+          "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+          "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "8a0781521e6fb7cec306683d8709cba35eed5514f7f998d6479efef195f949af",
+      "newSha256": "f66fa2442cd813a0d1d01fc101472a68dbe76c994a5e088ecaae9b612e0c2372"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:midline:cartilage:intervertebral-disk-of-seventh-cervical-vertebra",
+        "fmaId": "FMA13900",
+        "name": "Intervertebral disk of seventh cervical vertebra",
+        "sourceName": "intervertebral disk of seventh cervical vertebra",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "head-neck"
+        ],
+        "bundle": "spine-connective-gaps",
+        "nodeName": "FMA13900",
+        "bounds": {
+          "min": [
+            -0.16331200301647186,
+            5.599999904632568,
+            0.19775299727916718
+          ],
+          "max": [
+            0.14938999712467194,
+            5.716700553894043,
+            0.37612298130989075
+          ]
+        },
+        "center": [
+          -0.006961002945899963,
+          5.658350229263306,
+          0.28693798929452896
+        ],
+        "anchor": [
+          0.003953089937567711,
+          5.680699348449707,
+          0.2878810167312622
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3221",
+            "sha256": "d76e5f07cea767b03ee7138fde4781a546f5bbb490de023b1992a5fa206d1322"
+          }
+        ],
+        "coverageNote": "Whole-disc source surface. Annulus, nucleus and endplates are not independently segmented. Source vertebral naming is retained; this is not a validated radiological level annotation. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "oldLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of seventh cervical vertebra · MRI orientation · draft",
+        "body": "On real MRI, follow the cervical disc across sagittal and axial sections and relate its posterior margin to the canal and foramina.",
+        "bullets": [
+          "Disc signal and contour require sequence-specific assessment; this surface cannot establish degeneration, extrusion or cord involvement.",
+          "Use the retained source name and independently confirm the patient level; a nearby landmark is not a registration.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr"
+        ]
+      },
+      "newLesson": {
+        "readiness": "draft",
+        "title": "Intervertebral disk of seventh cervical vertebra · MRI orientation · draft",
+        "body": "Use the cervical disc surface as a locator between its source-labelled neighbouring bones, not as a patient MR slice. On actual cervical MRI, confirm the vertebral level on sagittal images before comparing the corresponding axial images. Follow the selected disc toward its posterior margin and examine the canal, spinal cord and surrounding fluid space on the acquired sequences.",
+        "bullets": [
+          "At the same level, inspect both neural foramina where the examination shows them adequately; a single midline image does not describe their full extent. Check coverage, sequence contrast and image quality before interpreting what is or is not visible.",
+          "A source name does not number a patient’s vertebrae, and a model colour does not reproduce MR signal. This selection is one exterior disc surface: it does not map internal disc layers, a cervical root course, cord signal or a patient-specific disc contour.",
+          "Neither a possible extrusion nor neural compression can be established from mesh proximity or an exploded view. Interpret the actual examination; no scan-to-model registration is supplied.",
+          "Return separation to zero for source relationships. Explode and cutaway do not generate scan slices, tissue signal or measurements."
+        ],
+        "note": "Independent anatomy/radiology review pending. No patient images, measured pathology, scan registration or paid-lecture access. Confirm the actual patient, side, level and series orientation before comparison. Imaging choice depends on clinical assessment; this is not trauma clearance or treatment advice.",
+        "citations": [
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7571515/",
+          "https://www.radiologyinfo.org/en/info/spinemr",
+          "https://accreditationsupport.acr.org/support/solutions/articles/11000061020-mri-exam-specific-parameters-spine-module-revised-5-10-2022-"
+        ]
+      },
+      "pendingLesson": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "oldSha256": "a0ccdec70b98d6136c3f9af97c778a19cf299809142fa1c01b8dc787f9f844df",
+      "newSha256": "76fe755a7669dd731f0e916ceddda61d8fa05c179f3ffbc6ecb6b0df6b572a02"
+    }
+  ]
+}

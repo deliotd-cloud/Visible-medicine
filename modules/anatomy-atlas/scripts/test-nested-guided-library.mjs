@@ -1,8 +1,7 @@
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
-import {build} from './workspace-component-test-build.mjs';
+import {build,readFileSync} from './nested-guided-library-history.mjs';
 const require=createRequire(import.meta.url),React=require('react');
 const compiled=await build({stdin:{contents:`export {WholeBodyGuidedLearning} from './app/whole-body-guided-learning';
  export {nestedGuidedStudyOptions} from './lib/nested-guided-learning';export {bodyDisplayCatalog} from './lib/body-display-catalog';
@@ -48,7 +47,7 @@ let tree;const props={catalog,assetBase:'/atlas-runtime/head-neck',onExit:()=>ex
 const nodes=t=>!t||typeof t!=='object'?[]:Array.isArray(t)?t.flatMap(nodes):[t,...nodes(t.props?.children)];
 const render=()=>{tree=api.WholeBodyGuidedLearning(props);};
 const one=type=>{const list=nodes(tree).filter(n=>n.type===type);check(list.length===1,'One '+type);return list[0];};
-render();check(nodes(tree).filter(n=>n.type==='SelectItem').length===26,'24 regional and2 nested options in one picker');
+render();check(nodes(tree).filter(n=>n.type==='SelectItem').length===27,'25 regional and2 nested options in one picker');
 check(one('RegionalGuidedLearning').props.tour.id==='right-lower-limb-bone-orientation','Whole-body first default retained');
 const keys=new Set();
 for(const o of api.nestedGuidedStudyOptions(catalog)){
@@ -67,7 +66,7 @@ check(exits===2,'Exit callback shared');
 props.region='thorax';render();check(nodes(tree).filter(n=>n.type==='EyeLayerView').length===0,'Region switch unmounts previous eye');
 check(one('RegionalGuidedLearning').props.tour.region==='thorax','Valid region default');
 for(const o of options){one('Select').props.onValueChange(o.id);render();check(nodes(tree).filter(n=>n.type==='EyeLayerView').length===0,'Out-of-region eye choice denied');}
-props.region='head-neck';selected=undefined;render();check(nodes(tree).filter(n=>n.type==='SelectItem').length===6,'Head-neck exposes its4 regional and2 nested guides');
+props.region='head-neck';selected=undefined;render();check(nodes(tree).filter(n=>n.type==='SelectItem').length===7,'Head-neck exposes its5 regional and2 nested guides');
 check(one('RegionalGuidedLearning').props.tour.id==='laryngeal-framework-orientation','Head-neck default retained');
 one('Select').props.onValueChange(options[0].id);render();check(one('EyeLayerView').props.parent.id===options[0].parent.id,'Head-neck exact eye');
 props.catalog=structuredClone(catalog);props.catalog.bundles.find(b=>b.id===options[0].parent.bundle).sha256='0'.repeat(64);render();
@@ -77,4 +76,4 @@ const source=readFileSync('app/whole-body-guided-learning.tsx','utf8');
 check(!/import\s*\{EyeLayerView\}\s*from/.test(source),'No static eye workbench import');
 check(source.includes("dynamic(()=>import('./eye-layers').then(module=>module.EyeLayerView),{ssr:false"),'Explicit deferred named eye boundary');
 check(source.includes('Loading eye layers…'),'Accessible loading status while deferred viewer loads');
-console.log(JSON.stringify({checks,nestedGuides:2,stops:8,existingChildren:15,regionalToursRetained:24,singleInlineViewer:true,sourceGuards:true,browserAcceptance:false}));
+console.log(JSON.stringify({checks,nestedGuides:2,stops:8,existingChildren:15,regionalToursRetained:25,singleInlineViewer:true,sourceGuards:true,browserAcceptance:false}));

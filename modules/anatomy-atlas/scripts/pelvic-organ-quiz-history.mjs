@@ -1,5 +1,6 @@
 // Test-only exact editorial replay; never grants source or clinical approval.
 import assert from 'node:assert/strict';
+import {beforeRenalUltrasound} from './renal-ultrasound-history.mjs';
 import {beforeBrainConnectionsQuiz} from './brain-connections-quiz-history.mjs';
 import {createHash} from 'node:crypto';
 import {isDeepStrictEqual} from 'node:util';
@@ -8,6 +9,7 @@ import pins from '../content/pelvic-organ-quiz-pins.json' with {type:'json'};
 import transition from '../content/pelvic-organ-quiz-transition.json' with {type:'json'};
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export function beforePelvicOrganQuiz(api){
+ api=beforeRenalUltrasound(api);
  api=beforeBrainConnectionsQuiz(api);
  if (api.structures) {
   const previousShoulder=shoulderBeforeSoftTissueXray(api.structures);

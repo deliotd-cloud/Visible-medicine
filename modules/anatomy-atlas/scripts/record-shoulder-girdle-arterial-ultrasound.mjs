@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {build} from './workspace-test-build.mjs';
+const pins=JSON.parse(readFileSync('content/shoulder-girdle-arterial-ultrasound-pins.json'));
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+assert.equal(hash(pins),'2edc421ca9a85878625dc607e990d1136fbb4be63609c62ba565161ffa09e56d');
+const built=await build({stdin:{contents:"export {shoulderGirdleArterialUltrasoundLesson} from './lib/shoulder-girdle-arterial-ultrasound';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(built.outputFiles[0].text).toString('base64'));
+const record={baseline:pins.baseline,sourcePinsHash:hash(pins),reason:'Ten exact-source shoulder-girdle arterial ultrasound orientation drafts; pending lessons reconstruct test-only teaching history.',entries:pins.entries.map(({identity})=>{const lesson=api.shoulderGirdleArterialUltrasoundLesson(identity,'ultrasound');assert.equal(lesson?.readiness,'draft');return {id:identity.id,fmaId:identity.fmaId,draftHash:hash(lesson)};})};
+const path='content/shoulder-girdle-arterial-ultrasound.transition.json',text=JSON.stringify(record,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),text);
+else writeFileSync(path,text,{flag:'wx'});
+console.log(JSON.stringify({entries:record.entries.length,transitionHash:hash(record)}));

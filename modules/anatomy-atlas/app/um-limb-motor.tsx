@@ -6,8 +6,9 @@ import { specimenMotorGroups } from '@/lib/um-limb-motor';
 import { motorReference, motorVariationReference } from '@/content/um-limb-motor';
 import type { SpecimenDefinition } from '@/lib/independent-specimen';
 
-export function SpecimenMotorExplorer({ definition, selectedId, onSelect, onExplore }: {
-  definition: SpecimenDefinition; selectedId: string | null; onSelect: (id: string) => void; onExplore: (nerve: string) => void;
+export function SpecimenMotorExplorer({ definition, selectedId, disabled = false, onSelect, onExplore }: {
+  definition: SpecimenDefinition; selectedId: string | null; disabled?: boolean;
+  onSelect: (id: string) => void; onExplore: (nerve: string) => void;
 }) {
   const groups = useMemo(() => specimenMotorGroups(definition), [definition]);
   const [choice, setChoice] = useState('');
@@ -16,16 +17,16 @@ export function SpecimenMotorExplorer({ definition, selectedId, onSelect, onExpl
   return <details className="um-knee-details um-limb-motor">
     <summary>Muscles by nerve</summary>
     <p>Explore typical motor supply. Nerves themselves are not modelled.</p>
-    <Select value={group?.key ?? ''} onValueChange={v => { if (groups.some(g => g.key === v)) setChoice(v!); }}>
+    <Select value={group?.key ?? ''} disabled={disabled} onValueChange={v => { if (!disabled && groups.some(g => g.key === v)) setChoice(v!); }}>
       <SelectTrigger aria-label="Motor nerve group"><SelectValue placeholder="Choose a nerve…" /></SelectTrigger>
       <SelectContent>{groups.map(g => <SelectItem key={g.key} value={g.key}>{g.label} · {g.targets.length}</SelectItem>)}</SelectContent>
     </Select>
     {group && <>
       <p>{group.note}</p>
       <p>{group.targets.length} source muscle selection{group.targets.length === 1 ? '' : 's'} available in this region. Not a complete nerve territory.</p>
-      <Button size="sm" variant="outline" onClick={() => onExplore(group.key)}>Show these muscles & bones</Button>
+      <Button size="sm" variant="outline" disabled={disabled} onClick={() => { if (!disabled) onExplore(group.key); }}>Show these muscles & bones</Button>
       <ul className="eye-layer-list um-knee-list">{group.targets.map(({ surface, supply }) => <li key={surface.id}>
-        <div><Button size="sm" variant={selectedId === surface.id ? 'secondary' : 'ghost'} aria-pressed={selectedId === surface.id} onClick={() => onSelect(surface.id)}>{surface.name}</Button>
+        <div><Button size="sm" variant={selectedId === surface.id ? 'secondary' : 'ghost'} aria-pressed={selectedId === surface.id} disabled={disabled} onClick={() => { if (!disabled) onSelect(surface.id); }}>{surface.name}</Button>
           {supply.part && <p className="um-source-caution">{supply.part} only · whole source surface shown; territory is not segmented.</p>}
           {supply.caveat && <p>{supply.caveat}</p>}
         </div>

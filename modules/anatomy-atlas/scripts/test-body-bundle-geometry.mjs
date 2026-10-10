@@ -6,6 +6,7 @@ import React from 'react';
 import * as THREE from 'three';
 import ts from 'typescript';
 import { bodyBundleGeometries } from '../lib/body-bundle-geometry.ts';
+import { modelLoadFailure } from '../lib/model-load-failure.ts';
 
 const structures = [{ bundle: 'one', nodeName: 'visible' }, { bundle: 'one', nodeName: 'hidden' },
   { bundle: 'other', nodeName: 'elsewhere' }];
@@ -60,7 +61,7 @@ const componentCode = ts.transpileModule(`${declaration('Bundle')}\n${declaratio
 test('actual Bundle validates before commit/onLoaded; boundary failure and rebuilt-scene retry', () => {
   let loadedScene = scene(mesh('visible'));
   const pending = [], ready = [], failed = [];
-  const scope = { React, Component: React.Component, THREE, bodyBundleGeometries,
+  const scope = { React, Component: React.Component, THREE, bodyBundleGeometries, modelLoadFailure,
     useGLTF: () => ({scene: loadedScene}), modelDeliveryUrl: x => x,
     useMemo: fn => fn(), useEffect: fn => pending.push(fn), useLayoutEffect: () => {},
     useBodyBatch: () => null, sceneLabelAnchors: () => new Map() };
@@ -83,4 +84,16 @@ test('actual Bundle validates before commit/onLoaded; boundary failure and rebui
   render(); assert.deepEqual(ready, []);
   pending.forEach(fn => fn()); assert.deepEqual(ready, ['one']);
   assert.equal(retryBoundary.render(), 'content');
+});
+
+test('actual boundary passes only verified model access failures to consumers', () => {
+  const scope = { React, Component: React.Component, modelLoadFailure, URL,
+    window: {location: {href: 'http://localhost:3000/atlas/3d'}} };
+  runInNewContext(componentCode, scope);
+  const results = [];
+  const boundary = new scope.api.AssetBoundary({id:'one',url:'/one.glb?v=1',
+    onFailure:(...args)=>results.push(args),children:null});
+  for (const status of [401,403,404]) boundary.componentDidCatch({response:{status,url:'http://localhost:3000/one.glb?v=1'}});
+  boundary.componentDidCatch({response:{status:401,url:'http://localhost:3000/one.glb?v=2'}});
+  assert.deepEqual(results,[['one','sign-in'],['one','access-denied'],['one','unavailable'],['one','unavailable']]);
 });

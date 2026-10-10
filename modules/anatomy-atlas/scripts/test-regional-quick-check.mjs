@@ -9,11 +9,12 @@ const require = createRequire(import.meta.url);
 const React = require('react');
 const { renderToStaticMarkup } = require('react-dom/server');
 const baseline = process.argv.includes('--baseline');
-let exam = false, fixture;
-const shim = { ...React, useContext: () => ({ exam }) };
+let exam = false, fixture, openingQuiz = false;
+const shim = { ...React, useContext: context => typeof context._currentValue === 'boolean' ? true : ({ exam }),
+  useState(initial) { return openingQuiz ? [true, () => {}] : React.useState(initial); } };
 async function load(fixtures = false) {
   const built = await build({
-    stdin: { contents: "export {QuizNotes} from './app/atlas-workspace'; export {bodyContent} from './app/body-content'; export {bodyDisplayCatalog} from './lib/body-display-catalog';", loader: 'tsx', resolveDir: process.cwd() },
+    stdin: { contents: "export {QuizNotes} from './app/atlas-workspace'; export {bodyContent} from './app/body-content'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyTeachingLoader} from './lib/body-teaching-loader';", loader: 'tsx', resolveDir: process.cwd() },
     bundle: true, platform: 'node', format: 'cjs', write: false,
     plugins: [{ name: 'quiz-test-inputs', setup(api) {
       if (baseline) api.onLoad({ filter: /[\\/]app[\\/]atlas-workspace\.tsx$/ }, () => ({
@@ -31,6 +32,7 @@ async function load(fixtures = false) {
     require: id => id === 'react' ? shim : id === 'next/link'
       ? () => { throw Error('Unrelated Next Link must not render in this focused harness'); }
       : require(id), console, testLesson: () => fixture });
+  await scope.exports.bodyTeachingLoader.load();
   return scope.exports;
 }
 const api = await load();
@@ -43,7 +45,10 @@ for (const structure of catalog.structures) {
 }
 assert(keyed.length > 0, 'discover actual explicitly keyed body lessons');
 assert(legacy.length > 0, 'discover actual legacy lessons');
-const htmlFor = (component, structure) => renderToStaticMarkup(React.createElement(component, { structure }));
+// Model opening the notes after the real module has loaded. Do not replace the
+// lazy loader/check UI; nested components still render with actual React hooks.
+const opened = (component, structure) => { openingQuiz = true; try { return component({ structure }); } finally { openingQuiz = false; } };
+const htmlFor = (component, structure) => renderToStaticMarkup(opened(component, structure));
 const escaped = value => renderToStaticMarkup(React.createElement('span', null, value)).slice(6, -7);
 for (const { structure, lesson } of keyed) {
   const html = htmlFor(api.QuizNotes, structure);
@@ -58,10 +63,11 @@ for (const { structure, lesson } of keyed) {
 function legacyMarkup(structure, lesson) {
   return renderToStaticMarkup(React.createElement('details', { className: 'atlas-quiz-notes' },
     React.createElement('summary', null, 'Quiz notes · ', structure.name),
+    React.createElement('div', {className: 'atlas-lazy-body-teaching', tabIndex: -1},
     React.createElement('p', null, lesson.body),
     lesson.bullets && React.createElement('ul', null, lesson.bullets.map(bullet => React.createElement('li', { key: bullet }, bullet))),
     lesson.note && React.createElement('p', { className: 'body-content-note' }, lesson.note),
-    lesson.citations?.map((url, i) => React.createElement('a', { key: url, href: url, target: '_blank', rel: 'noreferrer' }, `Reference ${i + 1} ↗`))));
+    lesson.citations?.map((url, i) => React.createElement('a', { key: url, href: url, target: '_blank', rel: 'noreferrer' }, `Reference ${i + 1} ↗`)))));
 }
 for (const { structure, lesson } of legacy) {
   assert.equal(htmlFor(api.QuizNotes, structure), legacyMarkup(structure, lesson), structure.id + ': legacy notes unchanged');
@@ -88,7 +94,11 @@ function findQuickCheck(node) {
     if (found) return found;
   }
 }
-const attempt = structure => findQuickCheck(fixtureApi.QuizNotes({ structure }));
+const attempt = structure => {
+  const tree = opened(fixtureApi.QuizNotes, structure);
+  const lazy = React.Children.toArray(tree.props.children).find(node => React.isValidElement(node) && node.type.name === 'LazyBodyTeaching');
+  return findQuickCheck(lazy.props.children({bodyContent: fixtureApi.bodyContent}));
+};
 const first = attempt(original.structure);
 assert(first && first.key !== null, 'selection-bound quick check must have an explicit key');
 assert.equal(first.props.question, original.lesson.body);

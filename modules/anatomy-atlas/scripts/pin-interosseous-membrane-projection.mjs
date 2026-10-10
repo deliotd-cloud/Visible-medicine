@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import {build} from './workspace-component-test-build.mjs';
+const parentCommit='6c156e8b4cead4a24cc19ea2cc5a53e77ba8e06e',root=process.cwd();
+assert.equal(execFileSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).trim(),parentCommit);
+assert.equal(await readFile('app/body-content.ts','utf8'),execFileSync('git',['show',parentCommit+':app/body-content.ts'],{encoding:'utf8'}),'Pin before dispatch integration');
+const result=await build({stdin:{contents:"export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLesson} from './app/body-content'; export {contentTabs} from './lib/content-types';",resolveDir:root,loader:'ts'},bundle:true,write:false,format:'cjs',platform:'node',packages:'external'});
+const module={exports:{}},require=createRequire(root+'/package.json');
+runInNewContext(result.outputFiles[0].text,{module,exports:module.exports,require,crypto,TextEncoder,structuredClone,URL,URLSearchParams});
+const api=module.exports,catalog=api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json')));
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const selections=catalog.structures.filter(s=>/^Interosseous membrane of (right|left) (forearm|leg)$/.test(s.name));
+assert.equal(selections.length,4);assert(selections.every(s=>s.system==='connective'));
+const entries=selections.map(identity=>{
+ const group=identity.regions.includes('forearm')?'forearm':'leg';
+ assert(identity.regions.includes(group));assert(['right','left'].includes(identity.laterality));
+ const previous=Object.fromEntries(['ct','xray'].map(tab=>[tab,api.bodyLesson(identity,tab)]));
+ assert(Object.values(previous).every(lesson=>lesson.readiness==='pending'));
+ return{identity,group,topics:['ct','xray'],previous};
+});
+const ids=new Set(entries.map(e=>e.identity.bundle));
+const bundles=catalog.bundles.filter(b=>ids.has(b.id));
+for(const b of bundles){const bytes=await readFile('public'+b.url.split('?')[0]);assert.equal(bytes.length,b.bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),b.sha256);}
+const allTopics=catalog.structures.map(s=>({id:s.id,topics:api.contentTabs.map(tab=>({tab,...api.bodyLesson(s,tab)}))}));
+const pins={schemaVersion:1,parentCommit,sourceVersion:catalog.sourceVersion,coordinateSystem:catalog.coordinateSystem,bundles,entries,previousCatalogHash:hash(catalog),previousAllTopicsHash:hash(allTopics)};
+await writeFile('content/interosseous-membrane-projection-pins.json',JSON.stringify(pins,null,2)+'\n',{flag:'wx'});
+console.log(JSON.stringify({roots:entries.length,placements:8,groups:entries.map(e=>[e.identity.name,e.identity.fmaId,e.identity.sources.length]),bundles:bundles.length}));

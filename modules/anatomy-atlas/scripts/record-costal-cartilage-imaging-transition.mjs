@@ -3,7 +3,9 @@ import {readFile,writeFile} from 'node:fs/promises';
 import {context,hash,snapshot} from './pin-costal-cartilage-imaging.mjs';
 import pins from '../content/costal-cartilage-imaging-pins.json' with {type:'json'};
 import {authoringBeforeCorpusImaging} from './corpus-imaging-history.mjs';
-const raw=await context(),display=raw.display,api=authoringBeforeCorpusImaging(raw);
+import {exactCranialEpochContext} from './exact-cranial-epoch-context.mjs';
+// Verification replays the recorded epoch. New authoring still uses live context.
+const raw=process.argv.includes('--check')?await exactCranialEpochContext('costal-after'):await context(),display=raw.display,api=authoringBeforeCorpusImaging(raw);
 const result={parentCommit:pins.sourceCommit,previousAllLessonsAndRecipesHash:pins.previousAllLessonsAndRecipesHash,currentAllLessonsAndRecipesHash:hash(snapshot(api,display)),entries:pins.entries.map(e=>({id:e.identity.id,sections:Object.fromEntries(e.topics.map(t=>{const lesson=api.bodyLesson(e.identity,t);assert.equal(lesson.readiness,'draft');assert.notDeepEqual(lesson,e.previous[t]);return[t,hash(lesson)];}))}))};
 const file='content/costal-cartilage-imaging.transition.json',text=JSON.stringify(result,null,2)+'\n';
 if(process.argv.includes('--check'))assert.equal((await readFile(file,'utf8')).replace(/\r\n/g,'\n'),text);else await writeFile(file,text,{flag:'wx'});

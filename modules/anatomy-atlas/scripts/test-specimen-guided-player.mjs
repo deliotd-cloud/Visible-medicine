@@ -11,7 +11,7 @@ const React = require('react');
 const actualLink = await import('vinext/shims/link');
 const built = await build({
   stdin: {
-    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study'; export { hraRenalSupplementFor } from './app/hra-renal-study';",
+    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition, limbDefinitions } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { specimenMotorGroups } from './lib/um-limb-motor'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study'; export { hraRenalSupplementFor } from './app/hra-renal-study';",
     resolveDir: process.cwd(), loader: 'tsx',
   },
   bundle: true, write: false, format: 'cjs', platform: 'node',
@@ -101,6 +101,15 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
   const scene = () => find(node => node.type?.name === 'BodyScene', 'one source scene');
   const button = label => find(node => node.props?.onClick && text(node) === label, `button ${label}`);
   const child = name => find(node => node.type?.name === name, `child ${name}`);
+  function renderChild(name) {
+    const component = nodes(tree).find(node => node.type?.name === name);
+    assert(component, `Child ${name} exists`);
+    const previousCursor = cursor;
+    cursor = 1000;
+    const result = component.type(component.props);
+    cursor = previousCursor;
+    return result;
+  }
   function click(label) { const control = button(label); assert(!control.disabled, `${label} enabled`); control.onClick(); render(); }
   function ready() {
     scene().onRendererHealth('ready');
@@ -108,9 +117,111 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
     render();
   }
   render();
-  return { api, props, slots, scene, button, child, click, ready, render, preference,
+  return { api, props, slots, scene, button, child, renderChild, click, ready, render, preference,
     document, listeners, tree: () => tree, unchanged: () => assert.equal(JSON.stringify(specimen), sourceBefore) };
 }
+
+const guidedControlState = h => {
+  const s = h.scene();
+  return snapshot({ selectedId: s.selectedId, hiddenIds: s.hiddenIds, view: s.view,
+    layout: s.layout, explode: s.explode, labels: s.labels, zoomStep: s.zoomStep,
+    illustrated: s.illustrated, showOrigins: s.showOrigins, cameraBounds: s.cameraBounds,
+    query: h.child('SpecimenStructureSearch').query });
+};
+function guidedSwitch(h, label) {
+  const wrapper = nodes(h.tree()).find(node => node.type === 'label' && text(node).startsWith(label));
+  return wrapper && nodes(wrapper).find(node => node.props?.onCheckedChange)?.props;
+}
+function assertGuidedControls(h) {
+  const before = guidedControlState(h);
+  const fields = nodes(h.tree()).filter(node => node.type === 'fieldset' && node.props?.className === 'um-specimen-manual-controls');
+  assert.equal(fields.length, 2);
+  for (const field of fields) assert(field.props.disabled && field.props.inert, 'Guided manual fieldset disabled and inert');
+  for (const label of ['Zoom out', 'Zoom in']) {
+    const control = nodes(h.tree()).find(node => node.props?.['aria-label'] === label)?.props;
+    assert(control?.disabled, `${label} explicitly disabled during guidance`);
+    control.onClick();
+  }
+  assert(h.button('Labels').disabled, 'Labels explicitly disabled during guidance');
+  h.button('Labels').onClick();
+  for (const label of ['Regional close-up', 'Illustrated surfaces', 'Selected origin guide']) {
+    const control = guidedSwitch(h, label);
+    if (!control) { assert.equal(label, 'Regional close-up', 'Only close-up may be absent'); continue; }
+    assert(control.disabled, `${label} explicitly disabled`);
+    control.onCheckedChange(!control.checked);
+  }
+  const search = h.child('SpecimenStructureSearch');
+  search.onQueryChange('forced-guided-query');
+  search.onVisibility(h.scene().selectedId, false);
+  const motor = nodes(h.tree()).find(node => node.type?.name === 'SpecimenMotorExplorer')?.props;
+  if (motor) {
+    assert(motor.disabled, 'Custom motor explorer explicitly disabled');
+    const group = h.api.specimenMotorGroups(h.props.specimen)[0];
+    if (group) motor.onExplore(group.key);
+  }
+  h.render();
+  assert.deepEqual(guidedControlState(h), before, 'Forced manual callbacks preserve guided source and display');
+}
+function assertControlsRestored(h) {
+  const fields = nodes(h.tree()).filter(node => node.type === 'fieldset' && node.props?.className === 'um-specimen-manual-controls');
+  assert.equal(fields.length, 2);
+  for (const field of fields) assert(!field.props.disabled && !field.props.inert, 'Manual fieldsets re-enable after exit');
+  for (const label of ['Zoom out', 'Zoom in']) assert(!nodes(h.tree()).find(node => node.props?.['aria-label'] === label)?.props.disabled);
+  assert(!h.button('Labels').disabled);
+  for (const label of ['Regional close-up', 'Illustrated surfaces', 'Selected origin guide']) {
+    const control = guidedSwitch(h, label);
+    if (control) assert.equal(control.disabled, label === 'Selected origin guide' && h.scene().layout === 'tray', `${label} re-enabled after exit`);
+  }
+  const motor = nodes(h.tree()).find(node => node.type?.name === 'SpecimenMotorExplorer')?.props;
+  if (motor) assert.equal(motor.disabled, false, 'Motor explorer re-enabled after exit');
+}
+
+test('Actual motor selector and action handlers stay locked during native guided dissection', () => {
+  const inventory = harness().api;
+  let checked = 0;
+  for (const definition of Object.values(inventory.limbDefinitions)) {
+    const groups = inventory.specimenMotorGroups(definition);
+    if (!groups.length) continue;
+    const h = harness({ definition, nativeGuide: true });
+    let childTree = h.renderChild('SpecimenMotorExplorer');
+    const selector = tree => nodes(tree).find(node => node.props?.onValueChange)?.props;
+    assert.equal(selector(childTree).disabled, false);
+    selector(childTree).onValueChange(groups[0].key); h.render();
+    childTree = h.renderChild('SpecimenMotorExplorer');
+    assert.equal(selector(childTree).value, groups[0].key);
+    const original = guidedControlState(h);
+    h.ready(); h.click('Start guided dissection');
+    for (;;) {
+      childTree = h.renderChild('SpecimenMotorExplorer');
+      const before = guidedControlState(h), choice = selector(childTree).value;
+      assert.equal(selector(childTree).disabled, true);
+      selector(childTree).onValueChange(groups.at(-1).key);
+      const actions = nodes(childTree).filter(node => typeof node.props?.onClick === 'function');
+      assert(actions.length > 1, 'Explore and individual muscle actions are exercised');
+      for (const action of actions) { assert.equal(action.props.disabled, true); action.props.onClick(); }
+      h.render();
+      assert.equal(selector(h.renderChild('SpecimenMotorExplorer')).value, choice);
+      assert.deepEqual(guidedControlState(h), before, 'Actual disabled child handlers cannot change the guided view');
+      checked++;
+      const next = nodes(h.tree()).find(node => node.props?.onClick && text(node) === 'Next');
+      if (!next) break;
+      h.click('Next');
+    }
+    h.click('Finish');
+    assert.deepEqual(guidedControlState(h), original);
+    childTree = h.renderChild('SpecimenMotorExplorer');
+    assert.equal(selector(childTree).disabled, false);
+    const actions = nodes(childTree).filter(node => typeof node.props?.onClick === 'function');
+    for (const action of actions) assert.equal(action.props.disabled, false);
+    actions.find(node => text(node) === 'Show these muscles & bones').props.onClick(); h.render();
+    const targets = new Set(groups[0].targets.map(target => target.surface.id));
+    assert.deepEqual(plain(h.scene().hiddenIds), plain(definition.surfaces
+      .filter(surface => !targets.has(surface.id) && surface.tissue !== 'skeleton')
+      .map(surface => surface.id)));
+    h.unchanged();
+  }
+  assert(checked > 0, 'At least one admitted motor-bearing guide is tested');
+});
 
 test('Female pelvis guide launches only after exact current bundles and renderer are ready', () => {
   const h = harness(), guide = h.api.hraPelvicGuidedDissection(h.props.specimen);
@@ -139,6 +250,7 @@ test('Female pelvis guide launches only after exact current bundles and renderer
     assert.equal(scene.explode, 0);
     assert.equal(scene.isolated, false);
     assert.equal(scene.transitionMs, 1800);
+    assertGuidedControls(h);
     const newlyRequired = [...new Set(h.props.specimen.catalog.structures
       .filter(surface => step.ids.includes(surface.id)).map(surface => surface.bundle))]
       .filter(id => !loaded.has(id));
@@ -154,6 +266,7 @@ test('Female pelvis guide launches only after exact current bundles and renderer
   assert.equal(h.scene().selectedId, guide.steps.at(-2).selectedId);
   h.click('Next');
   h.click('Finish');
+  assertControlsRestored(h);
   h.unchanged();
 });
 
@@ -244,10 +357,12 @@ test('Wall/back/renal supplements deliver exact steps with readiness, reduced mo
       assert.deepEqual(plain(h.scene().hiddenIds), plain(definition.surfaces.filter(surface => !step.ids.includes(surface.id)).map(surface => surface.id)));
       assert.equal(h.scene().transitionMs, reducedMotion ? 0 : 1800);
       assert(text(h.tree()).includes(step.caption));
+      assertGuidedControls(h);
       if (index < guide.steps.length - 1) h.click('Next');
     }
     h.click('Finish');
     assert.deepEqual(plain(h.slots[0]), before);
+    assertControlsRestored(h);
     h.ready(); h.click('Start guided dissection');
     h.scene().onRendererHealth('lost'); h.render();
     assert.equal(h.button('Next').disabled, true);
@@ -277,10 +392,12 @@ void test('Native UM guides deliver every exact step, reduced motion and Finish/
       assert.equal(h.scene().transitionMs, reducedMotion ? 0 : 1800);
       assert.deepEqual(snapshot(h.scene().cameraBounds), snapshot(step.cameraBounds ?? definition.closeUp));
       assert(text(h.tree()).includes(step.caption)); frames++;
+      assertGuidedControls(h);
       if (index < guide.steps.length - 1) h.click('Next');
     }
     h.click('Previous'); h.click('Next'); h.click('Finish');
     assert.deepEqual(plain(h.slots[0]), before);
+    assertControlsRestored(h);
     assert.deepEqual(snapshot(h.scene().cameraBounds), cameraBefore);
     h.ready(); h.click('Start guided dissection');
     h.scene().onRendererHealth('lost'); h.render();
@@ -288,7 +405,7 @@ void test('Native UM guides deliver every exact step, reduced motion and Finish/
     h.click('Exit guided dissection'); assert.deepEqual(plain(h.slots[0]), before);
     h.unchanged();
   }
-  assert.equal(frames, 92);
+  assert.equal(frames, 94);
 });
 
 test('Rendering loss and hidden document pause navigation while Exit remains available', () => {

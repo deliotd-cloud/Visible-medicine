@@ -1,0 +1,295 @@
+{
+  "baseline": "90191b8b236bfed00db7c424dbacde915920460d",
+  "sourcePinsHash": "15dfbad1c4484cfb90962ee158c2f12fd113f73edbd2ddb6999f79708668f343",
+  "reason": "Separate capitate and hamate CT/MRI/X-ray orientation and correct the common wrist relationship bullet. All source identities and models remain unchanged; no acquired imaging, registration or clinical approval.",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "tab": "ct",
+      "draftHash": "a13881eba93880092ff5fa053d4354525cd446b4901d729c8cf77fe8717c3d65"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "tab": "mri",
+      "draftHash": "21b4a64bc63fc4e05525afbba07bdc1a5214e8702adbf7e547bae1df5eaed242"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "tab": "xray",
+      "draftHash": "c90d1c3a5bf53cabd93c88b069db4a308dd3ced5bc869121e27cf9ca29ea999d"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "tab": "ct",
+      "draftHash": "0affc1370c33e796db60a989e8a3b708f03d92914a004b6afb777aae7e0a225a"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "tab": "mri",
+      "draftHash": "ec9880c7f7985ea102797f6e0bca8f6cb28b85ec87140676dced404df7bcc55b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "tab": "xray",
+      "draftHash": "1ee3683a550f8776d62a7b636e71f605c13a43ea0322955c2ec46e79d5162d99"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "tab": "ct",
+      "draftHash": "359705b2c024679cd3dc8077271582fbfdd91ca5a14559b20e8caa79396a00f6"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "tab": "mri",
+      "draftHash": "94a26a63b52d636663d04237413906e284fbf2368526ed397c64ffc57f590831"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "tab": "xray",
+      "draftHash": "f71f4a672269e8de0c22e4a93fc85c7a6b98240ec08b97e1c4deceea48ce658e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "tab": "ct",
+      "draftHash": "af5f5c04f1089fbb7b628bbdeb5c88e651c058c502fe3b5cb5eda3bdab1300fd"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "tab": "mri",
+      "draftHash": "e456c71a8406b352cfd7085e2508b14e2f8110ef8c548c1df322140ea2daa52e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "tab": "xray",
+      "draftHash": "e53ec277c2104fb493047768f3affd3596a56b9ce06ab54258a76be0f7253f8a"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "tab": "ct",
+      "draftHash": "1986fe7bc8ef13e5e47361d37b2428e82f231b88e7ef8bfcccbcb6905c719891"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "tab": "mri",
+      "draftHash": "ef826ea7071209a116b5d112fb3f60cc1f32d9ebcb29f7d0462747480d7a2d13"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "tab": "xray",
+      "draftHash": "f654f15807c969affbf8ccb18e13204c5e7060247026720bb026b234de4bea08"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "tab": "ct",
+      "draftHash": "7ec9e103eb7c129b51768b178e6ebfe353d595e4248a2a94c7708fdf764470c3"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "tab": "mri",
+      "draftHash": "f663493968f9bf0c7d8cbfcba7570eb60afad076c78723dfd34c153003a9f5da"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "tab": "xray",
+      "draftHash": "80adb20922bf1b5bfff36226d58484d4fb09942b912e734e99ff409b82815626"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "tab": "ct",
+      "draftHash": "a85f2a9281666e041ca9c48e89d60cbf665c9f6897c91d2c387967f6430a0f7b"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "tab": "mri",
+      "draftHash": "3aa3f3ada8694b8e7fb47d04ac38494e32f562a91d9f9c523de33641aedebef4"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "tab": "xray",
+      "draftHash": "b03cf9d066362141c47e43e74519c0d5bf5be4b791117d6168ea27cbaab67d5d"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "tab": "ct",
+      "draftHash": "3df21d05cbbcc6372e7aa89d51e4b16f649c73a83b616a2155ac59e777ae10a5"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "tab": "mri",
+      "draftHash": "dce83d7eafb7878cea656caeb28ffd4231c2e97b3fc2d7d10e88f1f740cb44fa"
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "tab": "xray",
+      "draftHash": "7f36b2cdab5f5499622daba931f546260e8ebb3dc0a0c0ebaebdc79cb7a569f1"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "tab": "ct",
+      "draftHash": "b2467c0300c1b554f91ea5ab1794f1c2209b958e49e6a29652b98d8c194fde3c"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "tab": "mri",
+      "draftHash": "d8b872eeb1d04fb0a0ae16b063a25879944276891b6243938a6489605d799073"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "tab": "xray",
+      "draftHash": "24b099c78d8ad6485c062369c575e34304005f6dfe147081dd76d6aea91ad99c"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "tab": "ct",
+      "draftHash": "6208a6b978068527cca14a9aaede72e120935aa4df23a07ad23569189e645b54"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "tab": "mri",
+      "draftHash": "67a3edd05e62cf798b8848841918d469704a869454704fbfe07685bafe679889"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "tab": "xray",
+      "draftHash": "b2e6d44039738a03f0f21ede18745149f76a0b8b01689820b25495d6f51e89e7"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "tab": "ct",
+      "draftHash": "8c292a5330e90391b66851d787eca2114d47051958268ee4899ec8149c2d332a"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "tab": "mri",
+      "draftHash": "66861276929cbdd3dda76dd0ec8e1fe0a1d169007d33015a3a858282c72e6c1e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "tab": "xray",
+      "draftHash": "ded63849989b70d12c9635b1e5aaf53fbe498f091c28bd6cc91706797b8cf267"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "tab": "ct",
+      "draftHash": "81c2c243ea2ec1d7f99193c17858deb978ded5e7b90b6563f733cd66e637d195"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "tab": "mri",
+      "draftHash": "d3cde13e815367f5d5d66c8af76d3fbd2794bb2b4afd707724ba2f9455c7c415"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "tab": "xray",
+      "draftHash": "0a85052e15a1a7001721b0c1b271075f0a07541f6538bc8042dbd8e207f39c94"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "tab": "ct",
+      "draftHash": "35898d1fd954ad32e3eb97a42dc2717ef3196132638a224420737c4461d1586f"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "tab": "mri",
+      "draftHash": "29e786a77775c384bfd77a7218b7a77c4b4044d4ffaaa97cea180c2c6819bd34"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "tab": "xray",
+      "draftHash": "228fbb97032da3b2da769bad5834fb606d6011655ba55a836ccff9661010b69e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "tab": "ct",
+      "draftHash": "b7c5bbeefc1f69a9de8b00cc35b5d8f446cac41124fcd809a787c27cf2d9dab0"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "tab": "mri",
+      "draftHash": "c5229b5d0cb116ec0f2b6201757d90e8f4c57b3429fe33516584a23d2aa5da3e"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "tab": "xray",
+      "draftHash": "03640c37029458a3a2fc470f385b65d0d13fd7b8d573cde07f78b8492d447ba9"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "tab": "ct",
+      "draftHash": "f9c1e3bbc40439d8dd2084a32c9a7e61cdd825e13fe799be5615b70d8f9e6c7a"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "tab": "mri",
+      "draftHash": "f37b0a061bd627ae167810ab8682b1709c5aae248c9aa87d5e503a1703f43f48"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "tab": "xray",
+      "draftHash": "d42c3da06f8c8ee9de646c89dc71830159da4a9de29757ca6b2970c1cabd0c33"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "tab": "ct",
+      "draftHash": "f4c7b4a52d6ffac35f3349f65e639efb17a26719526e4604bee37e4c2ee70360"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "tab": "mri",
+      "draftHash": "5e29c68a8a165ded28191dc05018ae3b2d53917df8ad1cff2803dcc441c380b5"
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "tab": "xray",
+      "draftHash": "1646116b613c21ba60d5cf3e6eb1d2c231143d5af33bca829c313e4ff1c66a85"
+    }
+  ]
+}

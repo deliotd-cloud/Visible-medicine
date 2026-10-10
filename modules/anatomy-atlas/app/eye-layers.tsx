@@ -3,6 +3,7 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, u
 import { NestedTeaching } from './nested-teaching';
 import { ImagingLink } from './imaging-link';
 import { useNestedEducationLink } from './nested-education-link';
+import {useHeadNestedSelection} from './head-selection-channel';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
 import { ArrowLeft, RotateCcw, Eye, Focus, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -49,6 +50,7 @@ import {
 import type { DissectionView } from './dissection-data';
 import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
+import { modelLoadAccessNotice, type ModelLoadFailure } from '@/lib/model-load-failure';
 import type { StudyCamera } from '@/lib/study-views';
 import { eyeLayerGuide } from '@/lib/eye-layer-guide';
 import './eye-layers.css';
@@ -102,6 +104,8 @@ export function EyeLayerView({
   const [loaded, setLoaded] = useState(false),
     [failed, setFailed] = useState(false),
     [retry, setRetry] = useState(0);
+  const [failureReason, setFailureReason] = useState<ModelLoadFailure>('unavailable');
+  const accessNotice = failed ? modelLoadAccessNotice([failureReason]) : null;
   const guide = useMemo(() => eyeLayerGuide(parent), [parent]);
   const cameraCapture = useRef<StudyCamera | null>(null), cameraRestore = useRef<StudyCamera | null>(null);
   const guideLauncher = useRef<HTMLButtonElement | null>(null), restoreGuideFocus = useRef(false);
@@ -136,9 +140,16 @@ export function EyeLayerView({
   const onLoaded = useCallback(() => {
     setLoaded(true);
     setFailed(false);
+    setFailureReason('unavailable');
   }, []);
-  const onFailure = useCallback(() => setFailed(true), []);
+  const onFailure = useCallback((_id: string, reason: ModelLoadFailure = 'unavailable') => {
+    setFailed(true);
+    setLoaded(false);
+    setFailureReason(reason);
+  }, []);
   const selected = layers.find((s) => s.id === selectedId);
+  useHeadNestedSelection({catalog:educationCatalog,parent,study:'eye',selected,
+    blocked:step?{status:'blocked',reason:'guided'}:!ready|| (!!initialSelectedId&&!initialSelection)?{status:'blocked',reason:'unavailable'}:null});
   const cutSelection = selected
     ? selectionVisibility({
         system: selected.system,
@@ -265,17 +276,18 @@ export function EyeLayerView({
         )}
         {failed && (
           <div className="eye-layer-status" role="alert">
-            Eye layers could not load.{' '}
+            {accessNotice?.message ?? 'Eye layers could not load.'}{' '}
             <Button
               size="sm"
               onClick={() => {
                 retryBodyAssets(eyeCatalog.bundles.map((b) => b.url), assetBase);
                 setFailed(false);
+                setFailureReason('unavailable');
                 setLoaded(false);
                 setRetry((r) => r + 1);
               }}
             >
-              Retry
+              {accessNotice?.retryLabel ?? 'Retry'}
             </Button>
           </div>
         )}
@@ -292,6 +304,7 @@ export function EyeLayerView({
             disabled={!!step}
             value={view}
             onValueChange={(v) => {
+              if (step) return;
               if (
                 v &&
                 [
@@ -331,7 +344,7 @@ export function EyeLayerView({
             variant={labels ? 'default' : 'outline'}
             disabled={!!step}
             aria-pressed={labels}
-            onClick={() => setLabels((v) => !v)}
+            onClick={() => { if (!step) setLabels((v) => !v); }}
           >
             <Tags /> Labels
           </Button>
@@ -340,6 +353,7 @@ export function EyeLayerView({
             variant="outline"
             disabled={!!step}
             onClick={() => {
+              if (step) return;
               setReset((r) => r + 1);
               setFocus(false);
             }}
@@ -360,7 +374,8 @@ export function EyeLayerView({
               <Button
                 size="sm"
                 variant="outline"
-                onClick={() => setInspection(initialInspection)}
+                disabled={!!step}
+                onClick={() => { if (!step) setInspection(initialInspection); }}
               >
                 Restore whole view
               </Button>
@@ -373,7 +388,10 @@ export function EyeLayerView({
         aria-label="Eye dissection controls"
       >
         {guide && <details className="eye-layer-guided-learning" open={guideExpanded}
-          onToggle={event => { if (!step) setGuideExpanded(event.currentTarget.open); }}>
+          onToggle={event => {
+            if (event.target !== event.currentTarget) return;
+            if (!step) setGuideExpanded(event.currentTarget.open);
+          }}>
           <summary>Guided learning</summary>
           {step ? <section aria-label="Eye-layer walkthrough" aria-live="polite">
             <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
@@ -391,15 +409,20 @@ export function EyeLayerView({
             <Button ref={guideLauncher} size="sm" variant="outline"
               disabled={!ready || pageHidden || (!!initialSelectedId && !initialSelection)}
               onClick={() => guideStep(0)}>Start eye walkthrough</Button></>}
-          <p>{guide.limitation}</p>
+          <p data-testid="eye-tour-source-scope">Draft source-component teaching · not clinical approval or scan registration.</p>
+          <details data-testid="eye-tour-limitations">
+            <summary>Tour scope &amp; limitations</summary>
+            <p>{guide.limitation}</p>
+          </details>
         </details>}
-        <fieldset className="eye-layer-manual-controls" disabled={!!step}>
+        <fieldset className="eye-layer-manual-controls" disabled={!!step} inert={!!step} hidden={!!step}>
         <legend className="sr-only">Manual eye dissection controls</legend>
         {educationLink.adapter && <ImagingLink link={educationLink} />}
         <div className="eye-layer-presets">
           <label htmlFor="eye-layer-preset">Study view</label>
           <Select
             value={currentPreset}
+            disabled={!!step}
             onValueChange={(v) => {
               if (v && v !== 'custom') preset(v as EyePreset);
             }}
@@ -440,13 +463,16 @@ export function EyeLayerView({
                 size="sm"
                 variant={selectedId === s.id ? 'secondary' : 'ghost'}
                 aria-pressed={selectedId === s.id}
+                disabled={!!step}
                 onClick={() => select(s.id)}
               >
                 {eyeNotes[s.kind].label}
               </Button>
               <Switch
                 checked={!hidden.includes(s.id)}
+                disabled={!!step}
                 onCheckedChange={(visible) => {
+                  if (step) return;
                   dispatch({ type: 'visibility', id: s.id, visible });
                   setFocus(false);
                   if (!visible && selectedId === s.id) setIsolated(false);
@@ -460,8 +486,9 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
-            disabled={!history.length}
+            disabled={!!step || !history.length}
             onClick={() => {
+              if (step) return;
               dispatch({ type: 'undo' });
               setFocus(false);
               setIsolated(false);
@@ -472,9 +499,10 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
-            disabled={!future.length}
+            disabled={!!step || !future.length}
             title="Reapply the last undone layer or selection change"
             onClick={() => {
+              if (step) return;
               dispatch({ type: 'redo' });
               setFocus(false);
               setIsolated(false);
@@ -485,7 +513,9 @@ export function EyeLayerView({
           <Button
             size="sm"
             variant="outline"
+            disabled={!!step}
             onClick={() => {
+              if (step) return;
               preset('all');
               setReset((r) => r + 1);
             }}
@@ -496,6 +526,7 @@ export function EyeLayerView({
         <EyeCutawayControls
           value={inspection}
           onChange={(next) => {
+            if (step) return;
             setInspection(next);
             setFocus(false);
           }}
@@ -504,7 +535,9 @@ export function EyeLayerView({
           <summary>Separate components</summary>
           <Select
             value={layout}
+            disabled={!!step}
             onValueChange={(v) => {
+              if (step) return;
               if (v === 'extract' || v === 'tray') {
                 setLayout(v);
                 setExplode(0);
@@ -528,8 +561,8 @@ export function EyeLayerView({
             max={100}
             step={1}
             value={[explode]}
-            disabled={layout === 'extract' && !selected}
-            onValueChange={(v) => setExplode(Array.isArray(v) ? v[0] : v)}
+            disabled={!!step || (layout === 'extract' && !selected)}
+            onValueChange={(v) => { if (!step) setExplode(Array.isArray(v) ? v[0] : v); }}
           />
           <p>
             Drag to rotate in lift mode; spread mode uses a flat teaching
@@ -540,7 +573,8 @@ export function EyeLayerView({
             <Switch
               id="eye-origin-guide"
               checked={showOrigins}
-              onCheckedChange={setShowOrigins}
+              disabled={!!step}
+              onCheckedChange={(visible) => { if (!step) setShowOrigins(visible); }}
               aria-label="Show original position"
               aria-describedby="eye-origin-guide-note"
             />
@@ -551,6 +585,7 @@ export function EyeLayerView({
             cutaway views, or when the part is hidden or not moving.
           </p>
         </details>
+        </fieldset>
         {selected && (
           <section className="eye-layer-teaching" aria-live="polite">
             <h3>{selected.name}</h3>
@@ -569,17 +604,18 @@ export function EyeLayerView({
             <div className="eye-layer-actions">
               <Button
                 size="sm"
-                variant={isolated ? 'default' : 'outline'}
-                aria-pressed={isolated}
-                onClick={() => setIsolated((v) => !v)}
+                 variant={isolated ? 'default' : 'outline'}
+                 aria-pressed={isolated}
+                 disabled={!!step}
+                 onClick={() => { if (!step) setIsolated((v) => !v); }}
               >
                 <Eye /> Fade others
               </Button>
               <Button
-                size="sm"
-                variant="outline"
-                disabled={health !== 'ready' || !loaded}
-                onClick={() => setFocus((v) => !v)}
+                 size="sm"
+                 variant="outline"
+                 disabled={!!step || health !== 'ready' || !loaded}
+                 onClick={() => { if (!step) setFocus((v) => !v); }}
               >
                 <Focus /> Frame
               </Button>
@@ -648,7 +684,6 @@ export function EyeLayerView({
             </a>
           ))}
         </details>
-        </fieldset>
       </aside>
     </div>
   );

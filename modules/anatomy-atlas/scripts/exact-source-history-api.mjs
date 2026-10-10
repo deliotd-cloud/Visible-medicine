@@ -6,10 +6,22 @@ import {fileURLToPath} from 'node:url';
 import {build} from './workspace-test-build.mjs';
 import {createGitObjectReader} from './git-object-reader.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
-export async function exactSourceHistoryApi(commit, profile='display'){
+export async function exactSourceHistoryApi(commit, profile='display', sourceOverrides={}){
  const exportsByProfile={
+  'hepatobiliary-quiz':"export {hepatobiliaryQuizLesson} from './lib/hepatobiliary-quiz';export {bodyLesson,bodyContent} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export * from './lib/body-review-material';export * from './lib/body-review-response';",
+  'regional-tour-security':"export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-decisions';export * from './lib/body-review-api';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);",
+  'nested-teaching':"export {nestedConcepts,nestedTeachingReferences} from './content/nested-teaching';",
+  'nested-review-security':"export * from './content/nested-teaching';export * from './lib/nested-teaching';export * from './lib/nested-anatomy';export * from './lib/nested-review-material';export * from './lib/nested-review-client';export * from './lib/nested-review-api';export * from './lib/nested-review';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {bodyLesson,bodyContent} from './app/body-content';export {bodyReviewMaterial} from './lib/body-review-material';export {contentTabs} from './lib/content-types';export {regionalTours} from './lib/regional-tours';",
+  'eye-layer-guide-review':"export * from './lib/nested-review-material';export * from './lib/nested-review';export * from './lib/nested-review-api';export * from './lib/nested-review-client';export {eyeLayerGuide} from './lib/eye-layer-guide';",
+  'toe-bone-ultrasound':"export * from './lib/toe-bone-ultrasound';export * from './content/toe-bone-ultrasound';export {bodyLesson,bodyContent} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {regionalTours} from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-api';export * from './lib/body-review-decisions';",
+  'wrist-correction':"export * from './lib/wrist-imaging';export * from './content/wrist-imaging-concepts';export {bodyLesson,bodyContent} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {regionalTours} from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-api';export * from './lib/body-review-decisions';",
+  'wrist-initial':"export * from './lib/wrist-imaging';export {bodyLesson,bodyContent} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {bodyContentRecords} from './lib/content-export';",
+  'hand-bone-ultrasound':"export * from './lib/hand-bone-ultrasound';export * from './content/hand-bone-ultrasound';export {bodyLesson,bodyContent} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {regionalTours} from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-api';export * from './lib/body-review-decisions';",
+  'suprascapular-ultrasound':"export * from './lib/suprascapular-vessel-ultrasound';export {bodyLesson,bodyContent} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {regionalTours} from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-api';export * from './lib/body-review-decisions';",
   display:"export {bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';",
   'display-content':"export {bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {bodyContentRecords} from './lib/content-export';",
+  'display-review':"export {bodyLesson,bodyContent} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {bodyContentRecords} from './lib/content-export';export {bodyReviewMaterial} from './lib/body-review-material';export {regionalTours} from './lib/regional-tours';",
+  'review-security':"export {bodyLesson,bodyContent} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {bodyContentRecords} from './lib/content-export';export {regionalTours} from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export * from './lib/body-review-api';export * from './lib/body-review-decisions';",
   curriculum:"export {bodyContent,bodyLesson} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {contentTabs} from './lib/content-types';",
   copy:"export {bodyContent} from './app/body-content';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';",
  };
@@ -22,6 +34,11 @@ export async function exactSourceHistoryApi(commit, profile='display'){
   if(!entry)continue;
   const match=/^(100644|100755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(entry);
   if(match)sourcePaths.set(match[3],match[2]); // Never follow historical symlinks/submodules.
+ }
+ assert(sourceOverrides&&typeof sourceOverrides==='object'&&!Array.isArray(sourceOverrides));
+ for(const [path,contents] of Object.entries(sourceOverrides)){
+  assert(sourcePaths.has(path),'Override must name a historical application file');
+  assert(typeof contents==='string'||Buffer.isBuffer(contents),'Override must contain Git-backed bytes');
  }
  const reader=createGitObjectReader({cwd:root});
  let compiled;
@@ -42,7 +59,9 @@ export async function exactSourceHistoryApi(commit, profile='display'){
  });
  b.onLoad({filter:/.*/,namespace:'workspace-test'},async args=>{
   const path=relative(root,args.path).replaceAll('\\','/');if(path.startsWith('node_modules/'))return;
-  assert(!path.startsWith('../'));return {contents:(await reader.readBlob(sourcePaths.get(path))).toString('utf8'),loader:({'.ts':'ts','.tsx':'tsx','.json':'json'})[extname(path)]||'js',resolveDir:dirname(args.path)};
+  assert(!path.startsWith('../'));
+  const contents=Object.hasOwn(sourceOverrides,path)?sourceOverrides[path]:await reader.readBlob(sourcePaths.get(path));
+  return {contents:contents.toString('utf8'),loader:({'.ts':'ts','.tsx':'tsx','.json':'json'})[extname(path)]||'js',resolveDir:dirname(args.path)};
  });}}]});
  } finally { await reader.close(); }
  return import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));

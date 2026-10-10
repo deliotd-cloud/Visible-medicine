@@ -1,0 +1,1886 @@
+{
+  "parentCommit": "d9cd141f1fefae6842754e134a1ef18d5661c727",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-skeleton",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "bytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "structures": 24
+    },
+    {
+      "id": "thorax-skeleton-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "bytes": 149456,
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "structures": 3
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "910d8480dbd1a7109daaee77c4e5b0c8408722430cf0c44460da4ac4a251f5b4",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-first-rib",
+        "fmaId": "FMA7857",
+        "name": "Right first rib",
+        "sourceName": "right first rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA7857",
+        "bounds": {
+          "min": [
+            -0.6976410150527954,
+            5.100699424743652,
+            0.14414596557617188
+          ],
+          "max": [
+            -0.1511089950799942,
+            5.704799652099609,
+            0.8042399883270264
+          ]
+        },
+        "center": [
+          -0.4243750050663948,
+          5.402749538421631,
+          0.4741929769515991
+        ],
+        "anchor": [
+          -0.49256500601768494,
+          5.389200210571289,
+          0.48053300380706787
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3334",
+            "sha256": "3831c5c578d45fc491e7e72417cc436e04a1a3a1916138e51528ad0b0b212a54"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "first",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right first rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-first-rib",
+        "fmaId": "FMA7987",
+        "name": "Left first rib",
+        "sourceName": "left first rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA7987",
+        "bounds": {
+          "min": [
+            0.13800400495529175,
+            5.100699424743652,
+            0.14417000114917755
+          ],
+          "max": [
+            0.6845459938049316,
+            5.704799652099609,
+            0.8041999936103821
+          ]
+        },
+        "center": [
+          0.4112749993801117,
+          5.402749538421631,
+          0.4741849973797798
+        ],
+        "anchor": [
+          0.4796390235424042,
+          5.390899658203125,
+          0.4744270443916321
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3228",
+            "sha256": "803a7134c1e69f640b87f9c6c4a846c869379446e771a1a7c9d18914c331a603"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "first",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left first rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-second-rib",
+        "fmaId": "FMA7882",
+        "name": "Right second rib",
+        "sourceName": "right second rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA7882",
+        "bounds": {
+          "min": [
+            -0.9697210192680359,
+            4.735500335693359,
+            0.0065290071070194244
+          ],
+          "max": [
+            -0.16049499809741974,
+            5.5903000831604,
+            1.1715699434280396
+          ]
+        },
+        "center": [
+          -0.5651080086827278,
+          5.16290020942688,
+          0.5890494752675295
+        ],
+        "anchor": [
+          -0.7887769937515259,
+          5.147800445556641,
+          0.5823799967765808
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3336",
+            "sha256": "57084a626a91aa88782f2e836c75450cd90bf19717dfd3f31602b4c674b70c0c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "second",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right second rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-second-rib",
+        "fmaId": "FMA8012",
+        "name": "Left second rib",
+        "sourceName": "left second rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8012",
+        "bounds": {
+          "min": [
+            0.14734899997711182,
+            4.735100269317627,
+            0.006468010134994984
+          ],
+          "max": [
+            0.9566100239753723,
+            5.5903000831604,
+            1.1712700128555298
+          ]
+        },
+        "center": [
+          0.5519795119762421,
+          5.162700176239014,
+          0.5888690114952624
+        ],
+        "anchor": [
+          0.776419997215271,
+          5.156099796295166,
+          0.5740500092506409
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3229",
+            "sha256": "631b4f63625fa6cc89ad83961b2156abe5878d1baf4a8cb2b2acbaa06bc97f58"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "second",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left second rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-third-rib",
+        "fmaId": "FMA7909",
+        "name": "Right third rib",
+        "sourceName": "right third rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA7909",
+        "bounds": {
+          "min": [
+            -1.0894700288772583,
+            4.438199520111084,
+            -0.1317100077867508
+          ],
+          "max": [
+            -0.14023999869823456,
+            5.359699726104736,
+            1.292680025100708
+          ]
+        },
+        "center": [
+          -0.6148550137877464,
+          4.89894962310791,
+          0.5804850086569786
+        ],
+        "anchor": [
+          -0.9394830465316772,
+          4.844699859619141,
+          0.661549985408783
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3338",
+            "sha256": "b239419743f7320b8b1d4f4d96ab41c1ff7fccdc921fa3a99c700a9d6dbd2a6c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right third rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-third-rib",
+        "fmaId": "FMA8039",
+        "name": "Left third rib",
+        "sourceName": "left third rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8039",
+        "bounds": {
+          "min": [
+            0.12724299728870392,
+            4.438399791717529,
+            -0.1314210146665573
+          ],
+          "max": [
+            1.0763300657272339,
+            5.359799861907959,
+            1.2925699949264526
+          ]
+        },
+        "center": [
+          0.6017865315079689,
+          4.899099826812744,
+          0.5805744901299477
+        ],
+        "anchor": [
+          0.9256739616394043,
+          4.843699932098389,
+          0.6640499830245972
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3230",
+            "sha256": "8c097e93d79c610bed49d6c027d25c8439447c20bfb94fa64009b9c4db4d8f5b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left third rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+        "fmaId": "FMA7957",
+        "name": "Right fourth rib",
+        "sourceName": "right fourth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA7957",
+        "bounds": {
+          "min": [
+            -1.1759300231933594,
+            4.110999584197998,
+            -0.2680549919605255
+          ],
+          "max": [
+            -0.15011900663375854,
+            5.153499603271484,
+            1.4219200611114502
+          ]
+        },
+        "center": [
+          -0.663024514913559,
+          4.632249593734741,
+          0.5769325345754623
+        ],
+        "anchor": [
+          -1.0595799684524536,
+          4.567399978637695,
+          0.6371999979019165
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3340",
+            "sha256": "ffca17251de4f457c4952e9d913070eb7a6f767493925ac3d8c3c744941b5dbd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right fourth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+        "fmaId": "FMA8148",
+        "name": "Left fourth rib",
+        "sourceName": "left fourth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8148",
+        "bounds": {
+          "min": [
+            0.12905699014663696,
+            4.110999584197998,
+            -0.26808100938796997
+          ],
+          "max": [
+            1.16280996799469,
+            5.153499603271484,
+            1.421950101852417
+          ]
+        },
+        "center": [
+          0.6459334790706635,
+          4.632249593734741,
+          0.5769345462322235
+        ],
+        "anchor": [
+          1.0450299978256226,
+          4.562399864196777,
+          0.6417400240898132
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3231",
+            "sha256": "c1259fcdaf463bdecfc0868a3acc964edd4901ab03eb539b28e40462671be1fb"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left fourth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+        "fmaId": "FMA8066",
+        "name": "Right fifth rib",
+        "sourceName": "right fifth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8066",
+        "bounds": {
+          "min": [
+            -1.2707899808883667,
+            3.721600294113159,
+            -0.3727239966392517
+          ],
+          "max": [
+            -0.15314200520515442,
+            4.913199424743652,
+            1.4765100479125977
+          ]
+        },
+        "center": [
+          -0.7119659930467606,
+          4.317399859428406,
+          0.551893025636673
+        ],
+        "anchor": [
+          -1.1888200044631958,
+          4.262700080871582,
+          0.510640025138855
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3342",
+            "sha256": "b2d1f3bc9478c51524628f4e79524290add55800ae85b06ff657f17f4c0c6f1f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right fifth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+        "fmaId": "FMA8093",
+        "name": "Left fifth rib",
+        "sourceName": "left fifth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8093",
+        "bounds": {
+          "min": [
+            0.14004500210285187,
+            3.721700429916382,
+            -0.3727729916572571
+          ],
+          "max": [
+            1.2576799392700195,
+            4.913199424743652,
+            1.4768800735473633
+          ]
+        },
+        "center": [
+          0.6988624706864357,
+          4.317449927330017,
+          0.5520535409450531
+        ],
+        "anchor": [
+          1.1751699447631836,
+          4.269399642944336,
+          0.497590035200119
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3232",
+            "sha256": "c40bbcd5c2b98bb94161819a2cf824296289ce68eb62b37f3b175af4aadfd351"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left fifth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+        "fmaId": "FMA8175",
+        "name": "Right sixth rib",
+        "sourceName": "right sixth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8175",
+        "bounds": {
+          "min": [
+            -1.3434900045394897,
+            3.3791003227233887,
+            -0.46358591318130493
+          ],
+          "max": [
+            -0.14837300777435303,
+            4.656999588012695,
+            1.4350500106811523
+          ]
+        },
+        "center": [
+          -0.7459315061569214,
+          4.018049955368042,
+          0.4857320487499237
+        ],
+        "anchor": [
+          -1.2488600015640259,
+          3.9631006717681885,
+          0.39496901631355286
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3344",
+            "sha256": "5e45ea5a527d3b7df56c508213020265ed1c8a0d9a99f31454b92059f4f1a95f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right sixth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+        "fmaId": "FMA8202",
+        "name": "Left sixth rib",
+        "sourceName": "left sixth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8202",
+        "bounds": {
+          "min": [
+            0.12775400280952454,
+            3.379000186920166,
+            -0.4635559916496277
+          ],
+          "max": [
+            1.3305400609970093,
+            4.668299674987793,
+            1.4349499940872192
+          ]
+        },
+        "center": [
+          0.7291470319032669,
+          4.0236499309539795,
+          0.4856970012187958
+        ],
+        "anchor": [
+          1.2345200777053833,
+          3.9756994247436523,
+          0.38294196128845215
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3233",
+            "sha256": "8160b28fd649aadd705a05cc3e6e9cfd7035c44d8258b5a50977ec89fe8e7414"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left sixth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+        "fmaId": "FMA8229",
+        "name": "Right seventh rib",
+        "sourceName": "right seventh rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8229",
+        "bounds": {
+          "min": [
+            -1.3708500862121582,
+            3.0518994331359863,
+            -0.4551309049129486
+          ],
+          "max": [
+            -0.1368969976902008,
+            4.402700424194336,
+            1.302030086517334
+          ]
+        },
+        "center": [
+          -0.7538735419511795,
+          3.727299928665161,
+          0.4234495908021927
+        ],
+        "anchor": [
+          -1.2324399948120117,
+          3.667099714279175,
+          0.24362801015377045
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3346",
+            "sha256": "86cc62c1a0a754f2e01a30b5d7179c745f3c2404ef4031ae43568667c4041996"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right seventh rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+        "fmaId": "FMA8256",
+        "name": "Left seventh rib",
+        "sourceName": "left seventh rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8256",
+        "bounds": {
+          "min": [
+            0.12382499873638153,
+            3.0518994331359863,
+            -0.4550204873085022
+          ],
+          "max": [
+            1.3577799797058105,
+            4.402500152587891,
+            1.3020799160003662
+          ]
+        },
+        "center": [
+          0.740802489221096,
+          3.7271997928619385,
+          0.423529714345932
+        ],
+        "anchor": [
+          1.2197099924087524,
+          3.663900136947632,
+          0.24580703675746918
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3234",
+            "sha256": "372c650b2b7bc3f6767aa50a0f5b7e5dac6a15a17aeea5f5017166ba5d328757"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trueRibs3To7",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left seventh rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+        "fmaId": "FMA8283",
+        "name": "Right eighth rib",
+        "sourceName": "right eighth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8283",
+        "bounds": {
+          "min": [
+            -1.3296799659729004,
+            2.746600389480591,
+            -0.4543550908565521
+          ],
+          "max": [
+            -0.1367650032043457,
+            4.113299369812012,
+            1.1267799139022827
+          ]
+        },
+        "center": [
+          -0.733222484588623,
+          3.4299498796463013,
+          0.3362124115228653
+        ],
+        "anchor": [
+          -1.1531400680541992,
+          3.3648998737335205,
+          0.16366302967071533
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3347",
+            "sha256": "388e8f3dd5c308fe1454daed2aa3a2fced280d4ec60f97b547b476ca6b0da930"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "falseRibs8To9",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right eighth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+        "fmaId": "FMA8310",
+        "name": "Left eighth rib",
+        "sourceName": "left eighth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8310",
+        "bounds": {
+          "min": [
+            0.12370400130748749,
+            2.746500253677368,
+            -0.4543043076992035
+          ],
+          "max": [
+            1.3163800239562988,
+            4.113199234008789,
+            1.1267499923706055
+          ]
+        },
+        "center": [
+          0.7200420126318932,
+          3.4298497438430786,
+          0.336222842335701
+        ],
+        "anchor": [
+          1.1274700164794922,
+          3.384899854660034,
+          0.1280360072851181
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3235",
+            "sha256": "7d9525200958a9545391a2e135649580282108d77f7ae88a34003a56f48f4c8b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "falseRibs8To9",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left eighth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+        "fmaId": "FMA8364",
+        "name": "Right ninth rib",
+        "sourceName": "right ninth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8364",
+        "bounds": {
+          "min": [
+            -1.2909801006317139,
+            2.50089955329895,
+            -0.424709290266037
+          ],
+          "max": [
+            -0.15864600241184235,
+            3.8536999225616455,
+            0.8563200235366821
+          ]
+        },
+        "center": [
+          -0.7248130515217781,
+          3.177299737930298,
+          0.21580536663532257
+        ],
+        "anchor": [
+          -1.0619399547576904,
+          3.1351001262664795,
+          -0.03648899123072624
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3348",
+            "sha256": "4ef4af4eb8a7ea76479b2d4a1b2973c7d950f6e3aa5593eca4377258222bdaf6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "falseRibs8To9",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right ninth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+        "fmaId": "FMA8391",
+        "name": "Left ninth rib",
+        "sourceName": "left ninth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8391",
+        "bounds": {
+          "min": [
+            0.14558200538158417,
+            2.50089955329895,
+            -0.42472338676452637
+          ],
+          "max": [
+            1.2778300046920776,
+            3.853599786758423,
+            0.8560200333595276
+          ]
+        },
+        "center": [
+          0.7117060050368309,
+          3.1772496700286865,
+          0.2156483232975006
+        ],
+        "anchor": [
+          1.0497000217437744,
+          3.137399911880493,
+          -0.035365983843803406
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3236",
+            "sha256": "ec09e201beaaa70c24a41eedcef4671118b453361f827be02fb73fc361208db8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "falseRibs8To9",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left ninth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+        "fmaId": "FMA8445",
+        "name": "Right tenth rib",
+        "sourceName": "right tenth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8445",
+        "bounds": {
+          "min": [
+            -1.2364799976348877,
+            2.229799747467041,
+            -0.3864070177078247
+          ],
+          "max": [
+            -0.1687290072441101,
+            3.5897998809814453,
+            0.6768699884414673
+          ]
+        },
+        "center": [
+          -0.7026045024394989,
+          2.909799814224243,
+          0.1452314853668213
+        ],
+        "anchor": [
+          -0.9602710008621216,
+          2.840200185775757,
+          -0.11326000094413757
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3330",
+            "sha256": "9e62a17a2ea9dc16797beec97bd0925c9692c2a4764391cbc1e289b0120e7aa4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "tenth",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right tenth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+        "fmaId": "FMA8472",
+        "name": "Left tenth rib",
+        "sourceName": "left tenth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8472",
+        "bounds": {
+          "min": [
+            0.15562300384044647,
+            2.229600191116333,
+            -0.3864549994468689
+          ],
+          "max": [
+            1.2234899997711182,
+            3.589900016784668,
+            0.6771499514579773
+          ]
+        },
+        "center": [
+          0.6895565018057823,
+          2.9097501039505005,
+          0.1453474760055542
+        ],
+        "anchor": [
+          0.9518749713897705,
+          2.8363001346588135,
+          -0.10752800107002258
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3225",
+            "sha256": "40680b5a3556b5984a5006e01649ff20cb4c88d9d3a7fef79cbad0648a972d54"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "tenth",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left tenth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+        "fmaId": "FMA8531",
+        "name": "Right eleventh rib",
+        "sourceName": "right eleventh rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8531",
+        "bounds": {
+          "min": [
+            -1.113529920578003,
+            2.0808000564575195,
+            -0.32038000226020813
+          ],
+          "max": [
+            -0.17596299946308136,
+            3.217299699783325,
+            0.4601830244064331
+          ]
+        },
+        "center": [
+          -0.6447464600205421,
+          2.6490498781204224,
+          0.06990151107311249
+        ],
+        "anchor": [
+          -0.7979129552841187,
+          2.6135997772216797,
+          -0.12724898755550385
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3331",
+            "sha256": "1fdce776ea65919bf9aa418ec91c872b3eb835daca57dc69a7caa40bb02707d7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "floating11To12",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right eleventh rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+        "fmaId": "FMA8532",
+        "name": "Left eleventh rib",
+        "sourceName": "left eleventh rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8532",
+        "bounds": {
+          "min": [
+            0.16279000043869019,
+            2.0806000232696533,
+            -0.32038602232933044
+          ],
+          "max": [
+            1.100540041923523,
+            3.217399835586548,
+            0.46011704206466675
+          ]
+        },
+        "center": [
+          0.6316650211811066,
+          2.6489999294281006,
+          0.06986550986766815
+        ],
+        "anchor": [
+          0.7776450514793396,
+          2.625699520111084,
+          -0.13514301180839539
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3226",
+            "sha256": "24a27d42732af55ad1e7142179f2dd4f906de78b701fbe5c459d8884a026f250"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "floating11To12",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left eleventh rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+        "fmaId": "FMA8533",
+        "name": "Right twelfth rib",
+        "sourceName": "right twelfth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8533",
+        "bounds": {
+          "min": [
+            -0.8653320074081421,
+            2.1134002208709717,
+            -0.2200779914855957
+          ],
+          "max": [
+            -0.1821250021457672,
+            2.891700506210327,
+            0.1609729826450348
+          ]
+        },
+        "center": [
+          -0.5237285047769547,
+          2.5025503635406494,
+          -0.029552504420280457
+        ],
+        "anchor": [
+          -0.5283739566802979,
+          2.5560998916625977,
+          -0.14640399813652039
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3332",
+            "sha256": "50dd4dac4ebb45fa245d700f7ceac89edd7503cb4caab154b644b0a808da2ecc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "floating11To12",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right twelfth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+        "fmaId": "FMA8534",
+        "name": "Left twelfth rib",
+        "sourceName": "left twelfth rib",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton",
+        "nodeName": "FMA8534",
+        "bounds": {
+          "min": [
+            0.16890300810337067,
+            2.113300085067749,
+            -0.21985100209712982
+          ],
+          "max": [
+            0.8522109985351562,
+            2.8916003704071045,
+            0.16069801151752472
+          ]
+        },
+        "center": [
+          0.5105570033192635,
+          2.5024502277374268,
+          -0.02957649528980255
+        ],
+        "anchor": [
+          0.52183997631073,
+          2.5350000858306885,
+          -0.15521599352359772
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3227",
+            "sha256": "3b7e5d6673a1be5bc14d72a4ea659d361b143f3fda5bca3ec758c176daba16c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "floating11To12",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left twelfth rib on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:bone:manubrium",
+        "fmaId": "FMA7486",
+        "name": "Manubrium",
+        "sourceName": "manubrium",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton-recovery",
+        "nodeName": "FMA7486",
+        "bounds": {
+          "min": [
+            -0.27449700236320496,
+            4.802700042724609,
+            0.808009922504425
+          ],
+          "max": [
+            0.27449700236320496,
+            5.252500057220459,
+            1.2858799695968628
+          ]
+        },
+        "center": [
+          0,
+          5.027600049972534,
+          1.046944946050644
+        ],
+        "anchor": [
+          -0.01620749942958355,
+          5.076099872589111,
+          1.1336098909378052
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3290",
+            "sha256": "e94f731d044131260947146ab79fa7c4712865e1aac36a1410003358b96e0692"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "manubrium",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find manubrium on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+        "fmaId": "FMA7487",
+        "name": "Body of sternum",
+        "sourceName": "body of sternum",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton-recovery",
+        "nodeName": "FMA7487",
+        "bounds": {
+          "min": [
+            -0.23614901304244995,
+            3.7965002059936523,
+            1.1516599655151367
+          ],
+          "max": [
+            0.23955601453781128,
+            4.896399974822998,
+            1.638319969177246
+          ]
+        },
+        "center": [
+          0.001703500747680664,
+          4.346450090408325,
+          1.3949899673461914
+        ],
+        "anchor": [
+          0.004245510324835777,
+          4.299100399017334,
+          1.3257200717926025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3178",
+            "sha256": "ec90f03f2ce1edebc8793a9e9973229b198d6367eb5eab1dff6e238110e94d9d"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "body",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find body of sternum on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+        "fmaId": "FMA7488",
+        "name": "Xiphoid process",
+        "sourceName": "xiphoid process",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-skeleton-recovery",
+        "nodeName": "FMA7488",
+        "bounds": {
+          "min": [
+            -0.10337799787521362,
+            3.640200138092041,
+            1.4850900173187256
+          ],
+          "max": [
+            0.10603900253772736,
+            3.8450000286102295,
+            1.6335300207138062
+          ]
+        },
+        "center": [
+          0.0013305023312568665,
+          3.7426000833511353,
+          1.5593100190162659
+        ],
+        "anchor": [
+          0.002186910016462207,
+          3.741800546646118,
+          1.590959906578064
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3153",
+            "sha256": "371573a43e28506d674bf4999ee4c50c0497014aa8d69865f450a078d493a495"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "xiphoid",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find xiphoid process on the model."
+        }
+      }
+    }
+  ]
+}

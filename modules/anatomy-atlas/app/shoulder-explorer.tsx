@@ -27,6 +27,7 @@ import {
   Trophy,
   Plus,
   Minus,
+  XIcon,
 } from 'lucide-react';
 import {
   quizQuestions,
@@ -39,13 +40,20 @@ import type { CameraView, AnatomyLayer } from './anatomy-scene';
 import { shoulderLinkEntries } from '@/lib/anatomy-link-registry';
 import { ImagingLink, useImagingLink } from './imaging-link';
 import { Button } from '@/components/ui/button';
+import { Combobox as ComboboxPrimitive } from '@base-ui/react';
+import {
+  InputGroup, InputGroupAddon, InputGroupButton, InputGroupInput,
+} from '@/components/ui/input-group';
+import {
+  shoulderSearchOptions, matchesShoulderSearch, type ShoulderSearchOption,
+} from '@/lib/shoulder-search';
 import {
   Combobox,
   ComboboxContent,
   ComboboxEmpty,
-  ComboboxInput,
   ComboboxItem,
   ComboboxList,
+  ComboboxTrigger,
 } from '@/components/ui/combobox';
 import { Slider } from '@/components/ui/slider';
 import { ExplodeStyleSelect } from './explode-style-select';
@@ -103,7 +111,7 @@ import { ShoulderTourPlayer } from './shoulder-tour-player';
 
 type Mode = 'study' | 'exam';
 import { rendererReady, type RendererHealth } from '@/lib/renderer-health';
-type SearchOption = { value: string; label: string };
+type SearchOption = ShoulderSearchOption;
 type ModelContextLike = {
   registerTool: (
     tool: {
@@ -154,6 +162,9 @@ export default function ShoulderExplorer({
   const [rendererHealth, setRendererHealth] =
     useState<RendererHealth>('starting');
   const [modelReady, setModelReady] = useState(false);
+  const rendererHealthRef = useRef<RendererHealth>('starting');
+  const modelReadyRef = useRef(false);
+  const examReadyRef = useRef(false);
   const displayReady = rendererReady(rendererHealth) && modelReady;
   const [view, setView] = useState<CameraView>('posterior');
   const [layer, setLayer] = useState<AnatomyLayer>('surface');
@@ -183,6 +194,7 @@ export default function ShoulderExplorer({
   const [reducedMotion, setReducedMotion] = useState(false);
   const beforeTour = useRef<{ view: StudyView; zoomStep: number } | null>(null);
   const tourActiveRef = useRef(false);
+  const tourPlaybackEpoch = useRef(0);
   const tourControls = useRef<HTMLDivElement>(null);
   const tourHadFocus = useRef(false);
   const tourActive = tourIndex !== null;
@@ -219,7 +231,7 @@ export default function ShoulderExplorer({
       index: 0,
       questions: quizQuestions.map((q) => ({
         target: q.answer,
-        choices: [],
+        choices: q.options,
       })),
       renderedIds: structures.map((s) => s.id),
       responses: [],
@@ -296,6 +308,29 @@ export default function ShoulderExplorer({
     setZoomStep(0);
     applyStudyView(state);
   }, [applyStudyView]);
+  const pauseTourPlayback = useCallback(() => {
+    tourPlaybackEpoch.current++;
+    setTourPlaying(false);
+    setTourMotionPaused(true);
+  }, []);
+  const reportRendererHealth = useCallback((health: RendererHealth) => {
+    rendererHealthRef.current = health;
+    examReadyRef.current = rendererReady(health) && modelReadyRef.current;
+    if (!examReadyRef.current && tourActiveRef.current) pauseTourPlayback();
+    setRendererHealth(health);
+  }, [pauseTourPlayback]);
+  const reportModelReady = useCallback((ready: boolean) => {
+    modelReadyRef.current = ready;
+    examReadyRef.current = rendererReady(rendererHealthRef.current) && ready;
+    if (!examReadyRef.current && tourActiveRef.current) pauseTourPlayback();
+    setModelReady(ready);
+  }, [pauseTourPlayback]);
+  const manualTourStep = useCallback((index: number) => {
+    if (!tourActiveRef.current || tourIndex === null || !Number.isInteger(index) ||
+        index < 0 || index >= shoulderTour.steps.length || index === tourIndex) return;
+    tourPlaybackEpoch.current++;
+    applyTourStep(index);
+  }, [applyTourStep, tourIndex]);
   function startTour() {
     if (!guidedLearning || tourActiveRef.current || !displayReady || mode !== 'study' || workspace.mode === 'practice') return;
     beforeTour.current = { view: structuredClone(captureView()), zoomStep };
@@ -322,7 +357,14 @@ export default function ShoulderExplorer({
   }, [tourActive]);
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setReducedMotion(preference.matches);
+    const update = () => {
+      if (preference.matches) {
+        tourPlaybackEpoch.current++;
+        setTourPlaying(false);
+        setTourMotionPaused(true);
+      }
+      setReducedMotion(preference.matches);
+    };
     update();
     preference.addEventListener('change', update);
     return () => preference.removeEventListener('change', update);
@@ -337,20 +379,18 @@ export default function ShoulderExplorer({
   }, [tourActive, displayReady]);
   useEffect(() => {
     if (!tourPlaying || tourIndex === null || !displayReady || document.hidden) return;
+    let active = true;
+    const epoch = tourPlaybackEpoch.current;
     const timer = window.setTimeout(() => {
-      if (!tourActiveRef.current || document.hidden) return;
+      if (!active || epoch !== tourPlaybackEpoch.current || !tourActiveRef.current || document.hidden) return;
       if (tourIndex + 1 < shoulderTour.steps.length) applyTourStep(tourIndex + 1);
       else setTourPlaying(false);
     }, shoulderTour.steps[tourIndex].durationMs);
-    return () => window.clearTimeout(timer);
+    return () => { active = false; window.clearTimeout(timer); };
   }, [tourPlaying, tourIndex, displayReady, applyTourStep]);
 
   const searchOptions = useMemo<SearchOption[]>(
-    () =>
-      structures.map((structure) => ({
-        value: structure.id,
-        label: structure.name,
-      })),
+    () => shoulderSearchOptions(structures),
     [],
   );
   const selectedSearchOption =
@@ -410,6 +450,12 @@ export default function ShoulderExplorer({
         index: questionIndex,
         chosen: id,
       });
+  };
+
+  const answerExamOption = (id: string, sessionId: number, index: number) => {
+    if (!examReadyRef.current || tourActiveRef.current || mode !== 'exam' ||
+        !quizQuestions[index]?.options.includes(id)) return;
+    practiceDispatch({ type: 'answer', sessionId, index, chosen: id });
   };
 
   const nextQuestion = () => {
@@ -670,25 +716,44 @@ export default function ShoulderExplorer({
                       else if (details.reason === 'escape-key') details.allowPropagation();
                     }}
                     items={searchOptions}
+                    filter={matchesShoulderSearch}
                     itemToStringLabel={(option) => option.label}
                     itemToStringValue={(option) => option.value}
                     isItemEqualToValue={(item, value) =>
                       item.value === value.value
                     }
                   >
-                    <ComboboxInput
-                      className="anatomy-search"
-                      placeholder="Search name or landmark…"
-                      showClear
-                    />
+                    <InputGroup className="anatomy-search">
+                      <ComboboxPrimitive.Input
+                        render={<InputGroupInput />}
+                        aria-label="Find a shoulder structure"
+                        placeholder="Search name or landmark…"
+                      />
+                      <InputGroupAddon align="inline-end">
+                        <InputGroupButton
+                          size="icon-xs"
+                          variant="ghost"
+                          render={<ComboboxTrigger aria-label="Show structure suggestions" />}
+                          data-slot="input-group-button"
+                          className="group-has-data-[slot=combobox-clear]/input-group:hidden data-pressed:bg-transparent"
+                        />
+                        <ComboboxPrimitive.Clear
+                          aria-label="Clear structure search"
+                          data-slot="combobox-clear"
+                          render={<InputGroupButton variant="ghost" size="icon-xs" />}
+                        >
+                          <XIcon className="pointer-events-none" />
+                        </ComboboxPrimitive.Clear>
+                      </InputGroupAddon>
+                    </InputGroup>
                     <ComboboxContent className="anatomy-search-menu">
                       <ComboboxEmpty>No structures found.</ComboboxEmpty>
                       <ComboboxList>
-                        {searchOptions.map((option) => (
+                        {(option: SearchOption) => (
                           <ComboboxItem key={option.value} value={option}>
                             {option.label}
                           </ComboboxItem>
-                        ))}
+                        )}
                       </ComboboxList>
                     </ComboboxContent>
                   </Combobox>
@@ -950,13 +1015,13 @@ export default function ShoulderExplorer({
                 playing={tourPlaying}
                 ready={displayReady}
                 onStart={startTour}
-                onReadImaging={() => { setTourPlaying(false); setTourMotionPaused(true); }}
+                onReadImaging={pauseTourPlayback}
                 onPlayPause={() => {
                   if (!displayReady) return;
-                  setTourPlaying(!tourPlaying);
-                  setTourMotionPaused(tourPlaying);
+                  if (tourPlaying) pauseTourPlayback();
+                  else { setTourPlaying(true); setTourMotionPaused(false); }
                 }}
-                onStep={index => { if (displayReady) applyTourStep(index); }}
+                onStep={index => { if (displayReady) manualTourStep(index); }}
                 onExit={exitTour}
               />
               {tourActive && <a className="shoulder-tour-credits" href={`${assetBase}/models/bodyparts3d/credits.html`} target="_blank" rel="noreferrer">BodyParts3D · CC BY 4.0 · Adapted</a>}
@@ -1093,8 +1158,8 @@ export default function ShoulderExplorer({
                 tourLocked={tourActive}
                 transitionMs={tourActive && !reducedMotion ? 1800 : 0}
                 transitionPaused={tourMotionPaused}
-                onRendererHealth={setRendererHealth}
-                onModelReady={setModelReady}
+                onRendererHealth={reportRendererHealth}
+                onModelReady={reportModelReady}
               />
             </section>
             <div className="shoulder-view-footer illustration-mode" inert={tourActive}>
@@ -1253,11 +1318,22 @@ export default function ShoulderExplorer({
                     </output>
                   )}
                   {!answerId ? (
-                    <div className="waiting-card">
-                      <ScanLine />
-                      <strong>Choose on the model</strong>
-                      <span>Rotate to inspect, then select a structure.</span>
-                    </div>
+                    <>
+                      <div className="waiting-card">
+                        <ScanLine />
+                        <strong>Choose on the model or by name</strong>
+                        <span>Rotate to inspect and select a structure, or use an answer button below.</span>
+                      </div>
+                      <div role="group" aria-label="Answer by structure name"
+                        style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                        {currentQuestion.options.map((id) => (
+                          <Button key={id} variant="outline" disabled={!displayReady}
+                            onClick={() => answerExamOption(id, shoulderPractice.id, questionIndex)}>
+                            {structureById.get(id)?.name}
+                          </Button>
+                        ))}
+                      </div>
+                    </>
                   ) : (
                     <div
                       className={`answer-card ${answerCorrect ? 'correct' : 'incorrect'}`}

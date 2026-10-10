@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {build} from './workspace-test-build.mjs';
+const pins=JSON.parse(readFileSync('content/foot-ultrasound-followup-pins.json'));
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+assert.equal(pins.baseline,'ae787ef86b6cf7e662ddff5af8a1e8ff19ae97bb');
+const compiled=await build({stdin:{contents:"export {footUltrasoundFollowupLesson} from './lib/foot-ultrasound-followup';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const record={baseline:pins.baseline,sourcePinsHash:hash(pins),reason:'Eight exact-source cuboid/cuneiform ultrasound surface-orientation drafts and four note-only hallux corrections. Ultrasound windows remain local; CT-derived orientation reading is not sonographic-performance evidence. No images, geometry, registration or clinical approval added.',entries:pins.entries.flatMap(({identity,previous})=>Object.keys(previous).map(tab=>({id:identity.id,fmaId:identity.fmaId,tab,draftHash:hash(api.footUltrasoundFollowupLesson(identity,tab))})))};
+assert.equal(record.entries.length,12);
+const file='content/foot-ultrasound-followup.transition.json',output=JSON.stringify(record,null,2)+'\n';
+if(process.argv.includes('--check'))assert.equal(readFileSync(file,'utf8').replaceAll('\r\n','\n'),output);else writeFileSync(file,output,{flag:'wx'});
+console.log(JSON.stringify({entries:record.entries.length,transitionHash:hash(record)}));

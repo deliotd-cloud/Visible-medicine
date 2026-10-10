@@ -4,7 +4,7 @@ import { runInNewContext } from 'node:vm';
 import { build } from './workspace-component-test-build.mjs';
 const require = createRequire(import.meta.url);
 const { Vector3, Box3, PerspectiveCamera } = require('three');
-const compiled = await build({stdin:{contents:"export { FittedCamera } from './app/fitted-camera'; export { interpolateTourCamera } from './lib/tour-camera';",resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'cjs',write:false});
+const compiled = await build({stdin:{contents:"export { FittedCamera } from './app/fitted-camera'; export { interpolateTourCamera } from './lib/tour-camera'; export { SceneRecovery } from './app/scene-recovery';",resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'cjs',write:false});
 const camera = new PerspectiveCamera(39, 1.5, .01, 150);
 const controls = {target:new Vector3(),update(){camera.updateMatrixWorld();}};
 const size = {width:900,height:600}, refs=[], memos=[], effectDeps=[];
@@ -14,6 +14,7 @@ const mod={exports:{}};
 const same=(a,b)=>a&&b&&a.length===b.length&&a.every((value,i)=>Object.is(value,b[i]));
 runInNewContext(compiled.outputFiles[0].text,{module:mod,exports:mod.exports,require(name){
   if(name==='react')return {
+    Component:require('react').Component,createRef:require('react').createRef,
     useRef(value){return refs[index++]??(refs[index-1]={current:value});},
     useCallback(fn,deps){const i=memoIndex++;if(!same(memos[i]?.deps,deps))memos[i]={fn,deps};return memos[i].fn;},
     useEffect(fn,deps){const i=effectIndex++;if(!same(effectDeps[i],deps)){effects.push(fn);effectDeps[i]=deps;}},
@@ -103,4 +104,116 @@ render({transitionPaused:true});frame(null,.5);
 near(camera.position.distanceTo(polarPaused),0);near(camera.up.distanceTo(polarUp),0);
 render({transitionPaused:false});for(let i=0;i<20;i++)frame(null,.05);
 assert(camera.position.y<controls.target.y);near(camera.up.distanceTo(new Vector3(0,0,1)),0);
+// Demand-frame delta can exceed the display interval after a pause, while slow
+// active frames still count toward the stated sweep duration.
+render({viewKey:'timing-10hz',direction:[0,0,1],up:[0,1,0],transitionMs:1800});
+for(let i=0;i<19;i++)frame(null,.1);
+let settled=invalidations;frame(null,.1);
+assert.equal(invalidations,settled,'A 1.8-second tour finishes in 1.8 seconds at 10 Hz');
+render({viewKey:'timing-5hz',direction:[0,0,-1],transitionMs:1800});
+const fiveHzStart=camera.position.clone();frame(null,10);
+near(camera.position.distanceTo(fiveHzStart),0);
+for(let i=0;i<9;i++)frame(null,.2);
+settled=invalidations;frame(null,.2);
+assert.equal(invalidations,settled,'A 1.8-second tour finishes in 1.8 seconds at 5 Hz');
+render({viewKey:'timing-60hz',direction:[0,0,1],transitionMs:1800});
+frame(null,10);
+for(let i=0;i<109;i++)frame(null,1/60);
+settled=invalidations;frame(null,1/60);
+assert.equal(invalidations,settled,'A 1.8-second tour finishes near 1.8 seconds at 60 Hz');
+render({viewKey:'timing-pause',direction:[0,0,-1],transitionMs:1800});
+frame(null,.016);for(let i=0;i<4;i++)frame(null,.1);
+const beforePause=camera.position.clone();render({transitionPaused:true});frame(null,30);
+near(camera.position.distanceTo(beforePause),0);
+render({transitionPaused:false});frame(null,30);
+near(camera.position.distanceTo(beforePause),0);
+for(let i=0;i<7;i++)frame(null,.2);
+settled=invalidations;frame(null,.2);
+assert.equal(invalidations,settled,'Hidden and resume time do not consume active sweep time');
+render({viewKey:'timing-invalid',direction:[0,0,1],transitionMs:1800});
+const beforeInvalid=camera.position.clone();
+for(const badDelta of [NaN,Infinity,-1])frame(null,badDelta);
+near(camera.position.distanceTo(beforeInvalid),0);
+assert(camera.position.toArray().every(Number.isFinite),'Invalid frame times cannot poison camera pose');
+for(let i=0;i<9;i++)frame(null,.2);
+settled=invalidations;frame(null,.2);
+assert.equal(invalidations,settled,'Tour finishes after invalid frame times');
+// A renderer restart creates a fresh FittedCamera while SceneRecovery queues
+// the captured intermediate pose. Only that exact auto-copy resumes the guide.
+const recoveryBoundary=mountedRecovery('recovery-guided');
+render({viewKey:'recovery-guided',direction:[0,0,-1],transitionMs:1800,
+  autoRecoveryCamera:recoveryBoundary.autoRecoveryCamera,
+  cameraTransitionActive:recoveryBoundary.cameraTransitionActive});
+frame(null,.016);for(let i=0;i<4;i++)frame(null,.1);
+const midSweep=camera.position.clone();
+assert.equal(recoveryBoundary.cameraTransitionActive.current,true,'Captured guide is moving');
+recoveryBoundary.report('lost');recoveryBoundary.retry();
+const recoveryOrigin=recoveryBoundary.autoRecoveryCamera;
+assert.equal(recoveryOrigin.current,restore.current,'Retry marks the active captured sweep');
+refs.length=0;memos.length=0;effectDeps.length=0;
+render({cameraRestore:restore,autoRecoveryCamera:recoveryOrigin,guidedRecovery:true,transitionPaused:true});
+near(camera.position.distanceTo(midSweep),0);
+frame(null,30);near(camera.position.distanceTo(midSweep),0);
+render({transitionPaused:false});frame(null,10);
+near(camera.position.distanceTo(midSweep),0);
+frame(null,.2);const recoveredInFlight=camera.position.clone();
+assert(recoveredInFlight.distanceTo(midSweep)>0,'Recovered guide resumes smoothly from captured pose');
+for(let i=0;i<8;i++)frame(null,.2);
+assert(camera.position.z<0,'Fresh guided camera reaches the selected preset after recovery');
+assert(recoveredInFlight.distanceTo(camera.position)>0,'Recovered guide does not jump to endpoint');
+assert.equal(recoveryOrigin.current,null,'Auto-copy identity is consumed on restore');
+render({viewKey:'recovery-reduced',direction:[0,0,1],transitionMs:1800});
+frame(null,.016);for(let i=0;i<4;i++)frame(null,.1);
+const reducedCopy=structuredClone(capture.current);
+recoveryOrigin.current=reducedCopy;restore.current=reducedCopy;
+refs.length=0;memos.length=0;effectDeps.length=0;
+render({transitionMs:0});
+assert(camera.position.z>0,'Reduced-motion guided recovery immediately reaches selected preset');
+assert.equal(recoveryOrigin.current,null);
+const explicitSaved=structuredClone(saved),staleAuto=structuredClone(capture.current);
+recoveryOrigin.current=staleAuto;restore.current=explicitSaved;
+refs.length=0;memos.length=0;effectDeps.length=0;
+render({viewKey:'recovery-explicit',direction:[0,0,-1],transitionMs:1800});
+near(camera.position.distanceTo(start),0);
+for(let i=0;i<20;i++)frame(null,.2);
+near(camera.position.distanceTo(start),0);
+assert.equal(recoveryOrigin.current,null,'Explicit saved view clears an unrelated auto-copy mark');
+const ordinaryCopy=structuredClone(saved);
+recoveryOrigin.current=ordinaryCopy;restore.current=ordinaryCopy;
+refs.length=0;memos.length=0;effectDeps.length=0;
+render({viewKey:'recovery-ordinary',guidedRecovery:false});
+near(camera.position.distanceTo(start),0);
+for(let i=0;i<20;i++)frame(null,.2);
+near(camera.position.distanceTo(start),0);
+assert.equal(recoveryOrigin.current,null,'Ordinary auto-recovery remains an exact restore');
+recoveryBoundary.componentWillUnmount();
+// An unlocked specimen guide can be cancelled by an orbit gesture while the
+// guide remains selected. Retry must preserve that manual inspection pose.
+function mountedRecovery(cameraKey) {
+  const boundary=new mod.exports.SceneRecovery({
+    className:'body-scene',cameraKey,cameraCapture:capture,cameraRestore:restore,
+    onHealth:()=>{},children:()=>null,
+  });
+  boundary.setState=update=>{boundary.state={...boundary.state,...update};};
+  boundary.componentDidMount();boundary.report('ready');
+  return boundary;
+}
+const manualBoundary=mountedRecovery('manual-recovery');
+const manualControls=render({
+  viewKey:'manual-recovery',direction:[0,0,-1],transitionMs:1800,locked:false,
+  guidedRecovery:true,autoRecoveryCamera:manualBoundary.autoRecoveryCamera,
+  cameraTransitionActive:manualBoundary.cameraTransitionActive,
+});
+frame(null,.016);for(let i=0;i<4;i++)frame(null,.1);
+manualControls.props.onStart();
+camera.position.x+=2;camera.lookAt(controls.target);manualControls.props.onChange();
+const manualPose=camera.position.clone();
+manualBoundary.report('lost');manualBoundary.retry();
+assert(restore.current,'Retry copies the manually inspected camera');
+refs.length=0;memos.length=0;effectDeps.length=0;
+render();
+near(camera.position.distanceTo(manualPose),0);
+for(let i=0;i<12;i++)frame(null,.2);
+near(camera.position.distanceTo(manualPose),0);
+manualBoundary.componentWillUnmount();
 console.log(JSON.stringify({passed:true,antipodalOrbitSamples:101,polarFrameSamples:202,actualCameraPauseResume:true,actualPolarPauseResume:true,manualInterruption:true,exactRestore:true,reducedMotionImmediate:true}));

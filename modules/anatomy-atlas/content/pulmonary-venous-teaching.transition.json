@@ -1,0 +1,920 @@
+{
+  "schemaVersion": 1,
+  "parentCommit": "b3fa10a344a82c597377ec9a76c6cda8cd53a5be",
+  "pinsHash": "3f35fb9b9be6cfc7379946607fe9232377cdbd3c7f67cd0e2ffcb143bc4be176",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousSnapshotHash": "09f2150830c306223af5139d07defb71b05c73252a7c26a0cb45835a291ca40b",
+  "currentSnapshotHash": "50a37fe616b3cd3a6b106e44fe92fa7d6db8e12d5a91e0c41c21b531ac540d8b",
+  "conceptsHash": "5be45df6e5671739fc6b4d9f5a1e67852e95704c3aacad948a592e4bcbf27a04",
+  "referencesHash": "6b435a82a9817560f4b15314e77ccab6201b9dd02630b2e8cf033f1fb4377ae4",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+        "fmaId": "FMA49914",
+        "name": "Right superior pulmonary vein",
+        "sourceName": "right superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49914",
+        "bounds": {
+          "min": [
+            -0.37140801548957825,
+            4.349300384521484,
+            0.38331300020217896
+          ],
+          "max": [
+            -0.14016400277614594,
+            4.617700099945068,
+            0.5653600096702576
+          ]
+        },
+        "center": [
+          -0.2557860091328621,
+          4.483500242233276,
+          0.47433650493621826
+        ],
+        "anchor": [
+          -0.25931400060653687,
+          4.48520040512085,
+          0.47599801421165466
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3020",
+            "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightSuperior",
+      "tab": "ct",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right superior pulmonary vein · CT orientation · draft",
+        "body": "Trace right upper and usual middle-lobe venous drainage towards the superior right-sided ostium of the left atrium.",
+        "bullets": [
+          "The right superior pulmonary vein usually collects upper- and middle-lobe venous return and enters the left atrium.",
+          "Middle-lobe drainage and accessory ostia vary; do not equate source pieces with vein count.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7715996/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "0589380a2f44b948ecc445d7da8da4b0cd3cc9c5207b68ebf2266695346941d3",
+      "currentHash": "358cdabc1d957bffecdf89190f7cdd6eb692eccdb655a2e33e2dbb383310f137"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+        "fmaId": "FMA49914",
+        "name": "Right superior pulmonary vein",
+        "sourceName": "right superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49914",
+        "bounds": {
+          "min": [
+            -0.37140801548957825,
+            4.349300384521484,
+            0.38331300020217896
+          ],
+          "max": [
+            -0.14016400277614594,
+            4.617700099945068,
+            0.5653600096702576
+          ]
+        },
+        "center": [
+          -0.2557860091328621,
+          4.483500242233276,
+          0.47433650493621826
+        ],
+        "anchor": [
+          -0.25931400060653687,
+          4.48520040512085,
+          0.47599801421165466
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3020",
+            "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightSuperior",
+      "tab": "mri",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right superior pulmonary vein · MRI orientation · draft",
+        "body": "Trace the vein to its atrial connection on source images; timing and motion affect depiction.",
+        "bullets": [
+          "The right superior pulmonary vein usually collects upper- and middle-lobe venous return and enters the left atrium.",
+          "A projection alone cannot establish ostial number or exclude anomalous drainage.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6269336/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "278a5f62398d41ea5d2c59710a6fcfa106997a308c134becb7141404d0b198a3",
+      "currentHash": "00ef685a0b85de549e1652f1de963ba9a963d54804a21818ca20b305f35f3064"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+        "fmaId": "FMA49914",
+        "name": "Right superior pulmonary vein",
+        "sourceName": "right superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49914",
+        "bounds": {
+          "min": [
+            -0.37140801548957825,
+            4.349300384521484,
+            0.38331300020217896
+          ],
+          "max": [
+            -0.14016400277614594,
+            4.617700099945068,
+            0.5653600096702576
+          ]
+        },
+        "center": [
+          -0.2557860091328621,
+          4.483500242233276,
+          0.47433650493621826
+        ],
+        "anchor": [
+          -0.25931400060653687,
+          4.48520040512085,
+          0.47599801421165466
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3020",
+            "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightSuperior",
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right superior pulmonary vein on the model."
+      },
+      "previousHash": "aadaf52ca423438492e88b07fbae398976430418b70d940376e6226028158fc8",
+      "currentHash": "a93124ed8f5938bf7e27ab1404511648f2c26f2975ec10726c564034a23d86b2"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+        "fmaId": "FMA49916",
+        "name": "Left superior pulmonary vein",
+        "sourceName": "left superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49916",
+        "bounds": {
+          "min": [
+            0.33699798583984375,
+            4.188799858093262,
+            0.31547796726226807
+          ],
+          "max": [
+            0.8181610107421875,
+            4.732199668884277,
+            0.6084799766540527
+          ]
+        },
+        "center": [
+          0.5775794982910156,
+          4.4604997634887695,
+          0.4619789719581604
+        ],
+        "anchor": [
+          0.5861729979515076,
+          4.45359992980957,
+          0.4640119969844818
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2925",
+            "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+          },
+          {
+            "file": "FJ2933",
+            "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftSuperior",
+      "tab": "ct",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left superior pulmonary vein · CT orientation · draft",
+        "body": "Follow upper-lobe and lingular venous drainage towards the upper left atrial connection.",
+        "bullets": [
+          "The left superior pulmonary vein usually collects upper-lobe return, including the lingula, and enters the left atrium.",
+          "A shared left-sided ostium is a possible variant; inspect actual connections.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7715996/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "9b3886cb0e50098fbcc765181f7dc8633c1de146e3f641cde9f3d1fa429ed193",
+      "currentHash": "6acbb071a872973700dbbd9ddd9a3d91ee35a3a58a46b29f9551fe1e45cec2fd"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+        "fmaId": "FMA49916",
+        "name": "Left superior pulmonary vein",
+        "sourceName": "left superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49916",
+        "bounds": {
+          "min": [
+            0.33699798583984375,
+            4.188799858093262,
+            0.31547796726226807
+          ],
+          "max": [
+            0.8181610107421875,
+            4.732199668884277,
+            0.6084799766540527
+          ]
+        },
+        "center": [
+          0.5775794982910156,
+          4.4604997634887695,
+          0.4619789719581604
+        ],
+        "anchor": [
+          0.5861729979515076,
+          4.45359992980957,
+          0.4640119969844818
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2925",
+            "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+          },
+          {
+            "file": "FJ2933",
+            "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftSuperior",
+      "tab": "mri",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left superior pulmonary vein · MRI orientation · draft",
+        "body": "Trace the vein to its atrial connection on source images; timing and motion affect depiction.",
+        "bullets": [
+          "The left superior pulmonary vein usually collects upper-lobe return, including the lingula, and enters the left atrium.",
+          "A projection alone cannot establish ostial number or exclude anomalous drainage.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6269336/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "bc723f7262cab97374a1374b61480faf40af317f15b118512ff50c33abba6983",
+      "currentHash": "162b863994ba61cc5e2688e3e33ea158a9b64a85e0f1e07efe1c9aa79c167e00"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+        "fmaId": "FMA49916",
+        "name": "Left superior pulmonary vein",
+        "sourceName": "left superior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49916",
+        "bounds": {
+          "min": [
+            0.33699798583984375,
+            4.188799858093262,
+            0.31547796726226807
+          ],
+          "max": [
+            0.8181610107421875,
+            4.732199668884277,
+            0.6084799766540527
+          ]
+        },
+        "center": [
+          0.5775794982910156,
+          4.4604997634887695,
+          0.4619789719581604
+        ],
+        "anchor": [
+          0.5861729979515076,
+          4.45359992980957,
+          0.4640119969844818
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2925",
+            "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+          },
+          {
+            "file": "FJ2933",
+            "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftSuperior",
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left superior pulmonary vein on the model."
+      },
+      "previousHash": "4284dcbfb08340188624f540cb83373dc59e05c02ab473f76f216216e64562db",
+      "currentHash": "f937d990890f556638182d19d5feb8c76bac87de20091decb1868003f17161c9"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+        "fmaId": "FMA49911",
+        "name": "Right inferior pulmonary vein",
+        "sourceName": "right inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49911",
+        "bounds": {
+          "min": [
+            -0.33806800842285156,
+            4.112800121307373,
+            0.2604289948940277
+          ],
+          "max": [
+            -0.06283020228147507,
+            4.288900375366211,
+            0.3902049958705902
+          ]
+        },
+        "center": [
+          -0.20044910535216331,
+          4.200850248336792,
+          0.32531699538230896
+        ],
+        "anchor": [
+          -0.17592698335647583,
+          4.173699855804443,
+          0.2966970205307007
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3040",
+            "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightInferior",
+      "tab": "ct",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right inferior pulmonary vein · CT orientation · draft",
+        "body": "Trace right lower-lobe drainage medially to its posterior-inferior left atrial connection.",
+        "bullets": [
+          "The right inferior pulmonary vein usually collects lower-lobe return and lies inferiorly at the right hilum before reaching the left atrium.",
+          "Location alone cannot distinguish a vein from the neighbouring artery without continuity.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7715996/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "d907bea34ef0e6aefddeb066c1de3809cd9bc93897c91660a6548e3921318d72",
+      "currentHash": "99a55c7a955faa93158295534530a908a5cfd28e8d2be7581cf0dca7fd4e8ac0"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+        "fmaId": "FMA49911",
+        "name": "Right inferior pulmonary vein",
+        "sourceName": "right inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49911",
+        "bounds": {
+          "min": [
+            -0.33806800842285156,
+            4.112800121307373,
+            0.2604289948940277
+          ],
+          "max": [
+            -0.06283020228147507,
+            4.288900375366211,
+            0.3902049958705902
+          ]
+        },
+        "center": [
+          -0.20044910535216331,
+          4.200850248336792,
+          0.32531699538230896
+        ],
+        "anchor": [
+          -0.17592698335647583,
+          4.173699855804443,
+          0.2966970205307007
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3040",
+            "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightInferior",
+      "tab": "mri",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right inferior pulmonary vein · MRI orientation · draft",
+        "body": "Trace the vein to its atrial connection on source images; timing and motion affect depiction.",
+        "bullets": [
+          "The right inferior pulmonary vein usually collects lower-lobe return and lies inferiorly at the right hilum before reaching the left atrium.",
+          "A projection alone cannot establish ostial number or exclude anomalous drainage.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6269336/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "7e2182b81cfd219b3261d021bc78d1a7655625221a4badf4b5d65e0e83e701b7",
+      "currentHash": "47b4179880de85720885460425fbd04911332882e4b322636cc931aef55fa0df"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+        "fmaId": "FMA49911",
+        "name": "Right inferior pulmonary vein",
+        "sourceName": "right inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49911",
+        "bounds": {
+          "min": [
+            -0.33806800842285156,
+            4.112800121307373,
+            0.2604289948940277
+          ],
+          "max": [
+            -0.06283020228147507,
+            4.288900375366211,
+            0.3902049958705902
+          ]
+        },
+        "center": [
+          -0.20044910535216331,
+          4.200850248336792,
+          0.32531699538230896
+        ],
+        "anchor": [
+          -0.17592698335647583,
+          4.173699855804443,
+          0.2966970205307007
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3040",
+            "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightInferior",
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right inferior pulmonary vein on the model."
+      },
+      "previousHash": "22d5d2c69a8fa4d7c94a2c21ec499316e4b567d3e041f4c93549a8cdc1d10951",
+      "currentHash": "51a7420f284e5b131d69d7f5ec2504428e27759c8abfa9319fe1d1b63a555b77"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+        "fmaId": "FMA49913",
+        "name": "Left inferior pulmonary vein",
+        "sourceName": "left inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49913",
+        "bounds": {
+          "min": [
+            0.3284890055656433,
+            4.015400409698486,
+            0.03518100827932358
+          ],
+          "max": [
+            0.7297419905662537,
+            4.36359977722168,
+            0.4131690263748169
+          ]
+        },
+        "center": [
+          0.5291154980659485,
+          4.189500093460083,
+          0.22417501732707024
+        ],
+        "anchor": [
+          0.5075929760932922,
+          4.20829963684082,
+          0.2092829942703247
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2944",
+            "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+          },
+          {
+            "file": "FJ2950",
+            "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+          },
+          {
+            "file": "FJ2955",
+            "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftInferior",
+      "tab": "ct",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left inferior pulmonary vein · CT orientation · draft",
+        "body": "Follow left lower-lobe venous return towards the lower left atrial connection.",
+        "bullets": [
+          "The left inferior pulmonary vein usually collects lower-lobe return and lies inferiorly at the left hilum before reaching the left atrium.",
+          "Do not assume four separate ostia simply because four named selections exist.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC7715996/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "5ffece070534083006fa62f9eb20db2ec39eb9617caa4b74d4b619b90291dac7",
+      "currentHash": "1dbc9a6323b314eadf0e988d667642721a619ecb4e57fb06521a6e347cd21eaf"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+        "fmaId": "FMA49913",
+        "name": "Left inferior pulmonary vein",
+        "sourceName": "left inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49913",
+        "bounds": {
+          "min": [
+            0.3284890055656433,
+            4.015400409698486,
+            0.03518100827932358
+          ],
+          "max": [
+            0.7297419905662537,
+            4.36359977722168,
+            0.4131690263748169
+          ]
+        },
+        "center": [
+          0.5291154980659485,
+          4.189500093460083,
+          0.22417501732707024
+        ],
+        "anchor": [
+          0.5075929760932922,
+          4.20829963684082,
+          0.2092829942703247
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2944",
+            "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+          },
+          {
+            "file": "FJ2950",
+            "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+          },
+          {
+            "file": "FJ2955",
+            "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftInferior",
+      "tab": "mri",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left inferior pulmonary vein · MRI orientation · draft",
+        "body": "Trace the vein to its atrial connection on source images; timing and motion affect depiction.",
+        "bullets": [
+          "The left inferior pulmonary vein usually collects lower-lobe return and lies inferiorly at the left hilum before reaching the left atrium.",
+          "A projection alone cannot establish ostial number or exclude anomalous drainage.",
+          "The named vessel is not a validated lobar or segmental tree. Compound source components are not independently assigned to lung segments or atrial ostia; branching and ostial variants need review."
+        ],
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK545205/",
+          "https://pmc.ncbi.nlm.nih.gov/articles/PMC6269336/"
+        ],
+        "note": "Anatomy/radiology review pending. Return separation to zero before comparing relationships. No scan or spatial registration is connected. Confirm patient, vessel, side, orientation and series in the separate Education viewer. These notes are not a diagnosis, acquisition protocol, management guideline or procedural route. Paid-lecture access remains independent."
+      },
+      "previousHash": "f3cd428ae66852532361c2ff3da4c23df9175231f644c096347dd7b197753fe6",
+      "currentHash": "96f3b87d5c4754927bdc248999755ee7d915d09df7a21baaf0e43d4e69ce8de0"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+        "fmaId": "FMA49913",
+        "name": "Left inferior pulmonary vein",
+        "sourceName": "left inferior pulmonary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA49913",
+        "bounds": {
+          "min": [
+            0.3284890055656433,
+            4.015400409698486,
+            0.03518100827932358
+          ],
+          "max": [
+            0.7297419905662537,
+            4.36359977722168,
+            0.4131690263748169
+          ]
+        },
+        "center": [
+          0.5291154980659485,
+          4.189500093460083,
+          0.22417501732707024
+        ],
+        "anchor": [
+          0.5075929760932922,
+          4.20829963684082,
+          0.2092829942703247
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2944",
+            "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+          },
+          {
+            "file": "FJ2950",
+            "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+          },
+          {
+            "file": "FJ2955",
+            "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftInferior",
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left inferior pulmonary vein on the model."
+      },
+      "previousHash": "0981ee5a1643e23ba4abe15df253eecbb03aec3563a35752462669dfcfd7a30d",
+      "currentHash": "452a09e5774993b1452557b89ec0a8c853daccf111a5e762b4bf19bcf3bc9eb3"
+    }
+  ]
+}

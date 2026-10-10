@@ -70,6 +70,32 @@ test('Production session starts manually, steps, pauses, autoplays and stops on 
   h.player().onExit(); h.render(); assert.equal(h.player().index, null); assert.equal(h.scene().tourLocked, false);
 });
 
+test('Reduced-motion activation pauses autoplay, rejects queued callback and never auto-resumes', () => {
+  const h = harness(); h.ready(); h.enter(); h.player().onStart(); h.render();
+  h.player().onPlayPause(); h.render();
+  assert.equal(h.player().playing, true); assert.equal(h.timers.size, 1);
+  const staleTimer = [...h.timers.values()][0].fn;
+  const index = h.player().index;
+  h.preference.matches = true; h.events.get('motion')();
+  staleTimer(); h.render();
+  assert.equal(h.player().index, index, 'Preference event revokes a queued callback before effect cleanup');
+  assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+  assert.equal(h.scene().transitionPaused, true); assert.equal(h.scene().transitionMs, 0);
+  staleTimer(); h.render();
+  assert.equal(h.player().index, index, 'Already queued callback cannot advance after reduced-motion pause');
+  assert.equal(h.timers.size, 0);
+  h.player().onStep(index + 1); h.render();
+  assert.equal(h.player().index, index + 1, 'Manual step still works');
+  assert.equal(h.scene().transitionMs, 0, 'Manual camera step is instant while preference is active');
+  h.preference.matches = false; h.events.get('motion')(); h.render();
+  assert.equal(h.player().playing, false, 'Clearing preference never resumes autoplay');
+  assert.equal(h.timers.size, 0);
+  h.player().onPlayPause(); h.render();
+  assert.equal(h.player().playing, true, 'Explicit Play remains available after preference clears');
+  assert.equal(h.timers.size, 1);
+  h.player().onExit(); h.render(); assert.equal(h.timers.size, 0);
+});
+
 test('Exit restores every captured display field, live camera and relative zoom step as detached state', () => {
   const h = harness(); h.ready();
   const saved = h.api.shoulderTourStepView(4);
@@ -99,6 +125,57 @@ test('Reading imaging notes pauses actual shoulder tour playback and camera',()=
   h.player().onPlayPause();h.render();assert.equal(h.player().playing,true);assert.equal(h.scene().transitionPaused,false);
 });
 
+test('Shoulder Pause and reading revoke captured autoplay before render', () => {
+  const start = () => { const h = harness(); h.ready(); h.enter(); h.player().onStart(); h.render(); h.player().onPlayPause(); h.render(); return h; };
+  for (const action of ['Pause', 'Read imaging']) {
+    const h = start(), index = h.player().index, queued = [...h.timers.values()][0].fn;
+    if (action === 'Pause') h.player().onPlayPause(); else h.player().onReadImaging();
+    queued(); h.render();
+    assert.equal(h.player().index, index, `${action} holds the selected stop`);
+    assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+    assert.equal(h.scene().transitionPaused, true);
+    h.player().onPlayPause(); h.render();
+    assert.equal(h.player().playing, true, 'Explicit Play still resumes');
+    h.player().onPlayPause(); h.render(); h.player().onExit(); h.render();
+    assert.equal(h.player().index, null);
+  }
+});
+
+test('Shoulder picker and manual steps keep the requested stop against captured autoplay', () => {
+  const start = () => { const h = harness(); h.ready(); h.enter(); h.player().onStart(); h.render(); h.player().onPlayPause(); h.render(); return h; };
+  {
+    const h = start(), queued = [...h.timers.values()][0].fn;
+    h.player().onReadImaging(); h.player().onStep(3); queued(); h.render();
+    assert.equal(h.player().index, 3, 'Picker pause and selection hold the requested stop');
+    assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+  }
+  {
+    const h = start(), queued = [...h.timers.values()][0].fn;
+    h.player().onStep(1); queued(); h.render();
+    assert.equal(h.player().index, 1, 'Manual Next holds');
+    assert.equal(h.player().playing, true, 'Next retains Play'); assert.equal(h.timers.size, 1);
+    const old = [...h.timers.values()][0].fn;
+    h.player().onStep(0); old(); h.render();
+    assert.equal(h.player().index, 0, 'Manual Back cannot be overwritten');
+    assert.equal(h.player().playing, true, 'Back retains Play'); assert.equal(h.timers.size, 1);
+    h.player().onPlayPause(); h.render();
+  }
+  {
+    const h = start(), queued = [...h.timers.values()][0].fn;
+    for (const invalid of [-1, 0, NaN]) h.player().onStep(invalid);
+    queued(); h.render();
+    assert.equal(h.player().index, 1, 'Invalid and same-stop calls cannot orphan the live timer');
+    assert.equal(h.player().playing, true); assert.equal(h.timers.size, 1);
+    h.player().onPlayPause(); h.render();
+  }
+  {
+    const h = start(), queued = [...h.timers.values()][0].fn;
+    h.player().onExit(); queued(); h.render();
+    assert.equal(h.player().index, null, 'Exit remains protected by active-session guard');
+    assert.equal(h.scene().tourLocked, false); assert.equal(h.timers.size, 0);
+  }
+});
+
 test('Context failure and hidden tab pause without automatic resumption; exit remains callable', () => {
   for (const cause of ['lost', 'failed', 'model', 'hidden']) {
     const h = harness(); h.ready(); h.enter(); h.player().onStart(); h.render(); h.player().onPlayPause(); h.render();
@@ -110,6 +187,43 @@ test('Context failure and hidden tab pause without automatic resumption; exit re
     assert.equal(h.player().playing, false, `${cause}: recovery needs explicit play`); assert.equal(h.timers.size, 0);
     h.player().onExit(); h.render(); assert.equal(h.player().index, null);
   }
+});
+
+test('Actual renderer and model loss revoke queued shoulder tour steps before render', () => {
+  for (const cause of ['lost', 'failed', 'model']) {
+    const h = harness(); h.ready(); h.enter(); h.player().onStart(); h.render();
+    h.player().onPlayPause(); h.render();
+    const index = h.player().index, frame = plain(h.views().capture());
+    const selected = h.scene().selectedId, reset = h.scene().resetNonce;
+    const queued = [...h.timers.values()][0].fn;
+    const oldModelReady = h.scene().onModelReady;
+    if (cause === 'model') h.scene().onModelReady(false);
+    else h.scene().onRendererHealth(cause);
+    queued(); // Actual loss reporter ran, but React has not rerendered or cleaned up the timeout.
+    h.render();
+    assert.equal(h.player().index, index, `${cause}: current stop held`);
+    assert.equal(h.scene().selectedId, selected); assert.equal(h.scene().resetNonce, reset);
+    assert.deepEqual(plain(h.views().capture()), frame, `${cause}: frame and display held`);
+    assert.equal(h.player().ready, false, `${cause}: navigation disabled until recovery`);
+    assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+    assert.equal(h.scene().transitionPaused, true);
+    oldModelReady(true); h.render();
+    assert.equal(h.player().playing, false, 'A captured ready-model callback cannot resume Play');
+    h.scene().onRendererHealth('ready'); h.scene().onModelReady(true); h.render();
+    assert.equal(h.player().ready, true); assert.equal(h.player().index, index);
+    assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+    h.player().onPlayPause(); h.render();
+    assert.equal(h.player().playing, true, 'Recovery requires explicit Play');
+    assert.equal(h.timers.size, 1);
+    h.player().onPlayPause(); h.render(); h.player().onExit(); h.render();
+    assert.equal(h.player().index, null); assert.equal(h.scene().tourLocked, false);
+  }
+  const exit = harness(); exit.ready(); exit.enter(); exit.player().onStart(); exit.render();
+  exit.scene().onRendererHealth('lost'); exit.render();
+  assert.equal(exit.player().ready, false);
+  exit.player().onExit(); exit.render();
+  assert.equal(exit.player().index, null, 'Exit remains available while the renderer is lost');
+  assert.equal(exit.scene().tourLocked, false);
 });
 
 test('Readiness/start/selection guards and reduced-motion camera option use actual session callbacks', async () => {

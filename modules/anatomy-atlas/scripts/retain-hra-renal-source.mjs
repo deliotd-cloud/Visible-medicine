@@ -5,7 +5,7 @@ import { hraSource, hraDigest, hraSubset, hraWriteGlb, hraAccessor } from './hra
 
 const target = 'content/sources/hra-renal';
 const directory = process.argv.find(a=>a.startsWith('--source='))?.slice(9)
-  ?? 'D:/VisibleMedicine-Atlas-Recovery/source-candidates/hra-united-female-v1.10';
+  ?? 'F:/VisibleMedicine/recovery/atlas/source-candidates/hra-united-female-v1.10';
 const audit = JSON.parse(await readFile('docs/hra-renal-source-audit.json'));
 assert.equal(audit.sourceSha256, hraSource.sha256);
 assert.equal(audit.sourceBytes, hraSource.bytes);

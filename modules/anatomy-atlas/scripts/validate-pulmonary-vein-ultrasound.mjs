@@ -7,18 +7,45 @@ import ts from 'typescript';
 import {contentContext} from './content-contract-tools.mjs';
 import {build} from './workspace-component-test-build.mjs';
 import {wholeBodyTeachingSnapshot} from './exact-clinical-reference-history.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {beforePulmonaryVeinUltrasound} from './pulmonary-vein-ultrasound-history.mjs';
 import {beforeOrbitalUltrasound} from './orbital-ultrasound-history.mjs';
 import pins from '../content/pulmonary-vein-ultrasound.before.json' with {type:'json'};
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const context=await contentContext(),api=beforeOrbitalUltrasound(context.api),catalog=context.catalog,display=api.bodyDisplayCatalog(catalog),before=beforePulmonaryVeinUltrasound(api);
 assert.equal(hash(display),pins.catalogHash);
-assert.equal(hash(wholeBodyTeachingSnapshot(before,catalog)),pins.previousAllLessonsAndRecipesHash);
+// The current normalized aggregate already differed at immutable3eb; retain the
+// original hash against its actual author epoch, and independently bind today's
+// normalization to that proven pre-extension footprint. Never rewrite the pins.
+const historicalBefore=await exactSourceHistoryApi(pins.parentCommit);
+const historicalAfter=await exactSourceHistoryApi('bfa805930c11c4258c8d0d0993d2c5750294615a');
+assert.equal(hash(wholeBodyTeachingSnapshot(historicalBefore,catalog)),pins.previousAllLessonsAndRecipesHash);
+assert.equal(hash(wholeBodyTeachingSnapshot(before,catalog)),'38a1caf479e2a79695336a8066356d9bb9b76c62650c0285644f9a5d4d73f183','Current projection preserves immutable3eb footprint');
+assert.deepEqual(historicalBefore.bodyDisplayCatalog(catalog),display);
+assert.deepEqual(historicalAfter.bodyDisplayCatalog(catalog),display);
+assert.deepEqual(historicalAfter.structures,historicalBefore.structures);
+assert.deepEqual(historicalAfter.dissectionProfiles,historicalBefore.dissectionProfiles);
+let originalChanged=0,originalPreserved=0;
+for(const s of display.structures)for(const topic of historicalBefore.contentTabs){
+  const prior=historicalBefore.bodyLesson(s,topic),next=historicalAfter.bodyLesson(s,topic);
+  const entry=pins.entries.find(e=>e.identity.id===s.id);
+  if(entry&&topic==='ultrasound'){
+    assert.deepEqual(prior,entry.previous);assert.deepEqual(next,api.bodyLesson(s,topic));originalChanged++;
+  }else{assert.deepEqual(next,prior,'Original unrelated pulmonary transition material');originalPreserved++;}
+}
+assert.equal(originalChanged,4);assert.equal(originalPreserved,9932);
 assert.equal(beforePulmonaryVeinUltrasound(before),before);
 assert.deepEqual(pins.entries.map(e=>e.identity.fmaId),['FMA49914','FMA49916','FMA49911','FMA49913']);
 const source=await readFile('app/body-explorer.tsx','utf8'),ast=ts.createSourceFile('body.tsx',source,99,true,ts.ScriptKind.TSX);
 let callback;
-function visit(n){if(ts.isArrowFunction(n)&&n.body.getText(ast).includes('const content = bodyContent(selected, value);')){assert(!callback);callback=n.getText(ast);}ts.forEachChild(n,visit);}
+function visit(n){
+  // Select the direct note callback, not its newer lazy-loader parent arrow.
+  const note=ts.isArrowFunction(n)&&ts.isBlock(n.body)&&n.body.statements.some(statement=>
+    ts.isVariableStatement(statement)&&statement.declarationList.declarations.some(declaration=>
+      declaration.name.getText(ast)==='content'&&declaration.initializer?.getText(ast)==='bodyContent(selected, value)'));
+  if(note){assert(!callback,'Exactly one direct learner note callback');callback=n.getText(ast);}
+  ts.forEachChild(n,visit);
+}
 visit(ast);assert(callback);
 const js=ts.transpileModule('const renderNote='+callback,{compilerOptions:{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React}}).outputText;
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;

@@ -1,25 +1,21 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {dirname} from 'node:path';
 import {DatabaseSync} from 'node:sqlite';
-import {build} from './workspace-test-build.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
+const after='03da432b035d1dca7cc9f3344ee2722af627d859';
 const baseline='551f7dc0902be9c26c57a74cac4f101925767809';
-const old=path=>execFileSync('git',['show',baseline+':'+path],{maxBuffer:32e6});
-const contents=`export * from './lib/nested-review-material';export * from './lib/nested-review';
- export * from './lib/nested-review-api';export * from './lib/nested-review-client';
- export {eyeLayerGuide} from './lib/eye-layer-guide';`;
-async function load(previous=false){
- const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
-  plugins:previous?[{name:'exact-previous-eye-guide-review',setup(api){
-   api.onLoad({filter:/[\\/]lib[\\/]nested-review-material\.ts$/},args=>({contents:old('lib/nested-review-material.ts').toString('utf8'),loader:'ts',resolveDir:dirname(args.path)}));
-   api.onLoad({filter:/body-renderer-revision\.json$/},()=>({contents:old('content/body-renderer-revision.json').toString('utf8'),loader:'json'}));
-  }}]:[]});
- return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
-}
-const now=await load(),before=await load(true),storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
-const sqlite=new DatabaseSync(':memory:');sqlite.exec(await readFile('drizzle/0003_nested_review_events.sql','utf8'));
+const gitBytes=(commit,path)=>execFileSync('git',['show',commit+':'+path],{maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+const old=path=>gitBytes(baseline,path);
+const post=path=>gitBytes(after,path);
+const profile='eye-layer-guide-review';
+const now=await exactSourceHistoryApi(after,profile);
+const before=await exactSourceHistoryApi(after,profile,{
+ 'lib/nested-review-material.ts':old('lib/nested-review-material.ts'),
+ 'content/body-renderer-revision.json':old('content/body-renderer-revision.json'),
+});
+const storage=new Proxy({},{get(){throw Error('Stale request reached storage');}});
+const sqlite=new DatabaseSync(':memory:');sqlite.exec(post('drizzle/0003_nested_review_events.sql').toString('utf8'));
 const db={prepare(sql){return{bind(...values){return{
  async all(){return{results:sqlite.prepare(sql).all(...values)};},
  async run(){return{meta:{changes:Number(sqlite.prepare(sql).run(...values).changes)}};},
@@ -84,9 +80,10 @@ assert.deepEqual({contexts,changed,unchanged,staleTeaching,staleGeometry,savedAn
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 for(const path of ['public/models/bodyparts3d/eye-layers/catalog.json','public/models/bodyparts3d/eye-layers/eye-layers.glb',
  'content/nested-teaching-bindings.v1.json','content/nested-review-bindings.json','content/nested-teaching.ts','LICENSES/THIRD_PARTY_NOTICES.md','package-lock.json'])
- assert.equal(sha(await readFile(path)),sha(old(path)),path+' exact');
+ assert.equal(sha(post(path)),sha(old(path)),path+' exact');
 const report={baseline,contexts,changedGuidedTeachingContexts:changed,unchangedTeachingContexts:unchanged,unchangedSourceContexts:contexts,
  staleTeachingRejectedBeforeStorage:staleTeaching,staleGeometryRejectedBeforeStorage:staleGeometry,syntheticDraftSaveReadbacks:savedAndReadBack,
  modelsAndNoticesUnchanged:true,clinicalApproval:false,browserAcceptance:false};
 sqlite.close();
-await writeFile('docs/eye-layer-guide-review-validation.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
+assert.deepEqual(report,JSON.parse(post('docs/eye-layer-guide-review-validation.json').toString('utf8')));
+console.log(JSON.stringify(report));

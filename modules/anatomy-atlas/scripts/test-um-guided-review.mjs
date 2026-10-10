@@ -3,13 +3,14 @@ import {execFileSync} from 'node:child_process';
 import {dirname} from 'node:path';
 import {build} from './workspace-test-build.mjs';
 const baseline = 'f636891cdcee10aeca20ae684cb04c183fa7600e';
-const oldFile = path => execFileSync('git', ['show', baseline + ':' + path], {encoding: 'utf8', maxBuffer: 32e6});
+const milestone = '4b0c1958e67d99a8d0a0b5da3ef98f23ac1d43b5';
+const oldFile = (path,revision=baseline) => execFileSync('git', ['show', revision + ':' + path], {encoding: 'utf8', maxBuffer: 32e6});
 async function load(previous = false) {
   const built = await build({stdin: {contents: "export * from './lib/specimen-review-material'; export * from './lib/specimen-review'; export * from './lib/specimen-review-api'; export {limbDefinitions} from './lib/um-limb-studies'; export {umLimbGuidedDissection} from './lib/um-limb-guided-dissection';", resolveDir: process.cwd(), loader: 'ts'},
-    bundle: true, write: false, platform: 'node', format: 'esm', plugins: previous ? [{name: 'before-um-guides', setup(api) {
-      for (const path of ['lib/specimen-review-material.ts', 'content/body-renderer-revision.json'])
-        api.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({contents: oldFile(path), loader: path.endsWith('.json') ? 'json' : 'ts', resolveDir: dirname(args.path)}));
-    }}] : []});
+    bundle: true, write: false, platform: 'node', format: 'esm', plugins: [{name: 'exact-historical-um-guides', setup(api) {
+      for (const path of ['lib/specimen-review-material.ts', 'content/body-renderer-revision.json', 'content/um-limb-teaching-bindings.v1.json'])
+        api.onLoad({filter: new RegExp(path.replaceAll('/', '[\\\\/]') + '$')}, args => ({contents: oldFile(path,previous?baseline:milestone), loader: path.endsWith('.json') ? 'json' : 'ts', resolveDir: dirname(args.path)}));
+    }}]});
   return import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
 }
 const current = await load(), previous = await load(true);

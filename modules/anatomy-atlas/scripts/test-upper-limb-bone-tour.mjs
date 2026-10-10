@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {build} from './workspace-test-build.mjs';
+import {build} from './hepatobiliary-tour-history.mjs';
 
 const baseline='8cfd73cda5077ea608720c3c4d88d8e51371e2ef';
 const compile=async contents=>{
@@ -36,10 +36,10 @@ assert.deepEqual(tour.scopeRegions,['shoulder-arm','forearm','hand']);
 assert.deepEqual(tour.contextIds,contextIds);
 assert.deepEqual(tour.steps.map(step=>step.selectedId),ids);
 assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries([...source,...context].map(([id,,,bundle])=>[id,bundle])));
-assert.deepEqual(api.regionalTours.filter(item=>item.id!==tour.id&&item.id!==api.pelvicRingTour.id),prior.regionalTours,'All 22 historical tours remain exact');
-assert.equal(api.regionalTours.filter(t=>t.id!==api.pelvicRingTour.id).length,prior.regionalTours.length+1);
+assert.deepEqual(api.regionalTours.filter(item=>item.id!==tour.id&&item.id!==api.pelvicRingTour.id&&item.id!==api.circleWillisTour.id),prior.regionalTours,'All 22 historical tours remain exact');
+assert.equal(api.regionalTours.filter(t=>t.id!==api.pelvicRingTour.id&&t.id!==api.circleWillisTour.id).length,prior.regionalTours.length+1);
 for(const structure of api.catalog.structures){
-  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(item=>item.tour.id!==tour.id&&item.tour.id!==api.pelvicRingTour.id),
+  assert.deepEqual(api.regionalTourEvidence(api.catalog,structure.id).filter(item=>item.tour.id!==tour.id&&item.tour.id!==api.pelvicRingTour.id&&item.tour.id!==api.circleWillisTour.id),
     prior.regionalTourEvidence(api.catalog,structure.id),`Historical evidence remains exact for ${structure.id}`);
 }
 const selected=api.regionalTourStructures(api.catalog,tour);

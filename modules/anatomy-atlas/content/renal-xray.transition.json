@@ -1,0 +1,247 @@
+{
+  "parentCommit": "ce9dcce39fb088975bee2ec890730d1ee153d70f",
+  "originalPinsHash": "4eaecd43646f4f7f2df08ee3dfb0846e3f372341009b4034b26695b38a5bfc69",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousSnapshotHash": "50a37fe616b3cd3a6b106e44fe92fa7d6db8e12d5a91e0c41c21b531ac540d8b",
+  "currentSnapshotHash": "c9e53d9df5f227e2d02b26d9502bbd023f044a70ab6dc44f3b75570fd16aaec7",
+  "previousMetadataHash": "c7bfc2b38383b4776d1e96bc5d39461ca3e52730b499d4b2c5cddb03df8fd2dc",
+  "currentMetadataHash": "b675f198ca8b0694567b1b709d12e799ba1da698cf8bb373bc0316ec97b5c992",
+  "newReferences": [
+    "renalPlainFilm",
+    "renalIvp",
+    "renalStoneRadiopacity"
+  ],
+  "focus": {
+    "previous": {
+      "topic": {
+        "body": "A plain abdominal radiograph and excretory urography are different examinations. Urography uses contrast to depict the urinary tract; a plain film does not provide that opacification.",
+        "bullets": [
+          "Distinguish the renal outline from the collecting system and ureter.",
+          "No excretion, obstruction or renal function can be inferred from this intact reference surface."
+        ],
+        "references": [
+          "urography"
+        ]
+      },
+      "groups": [
+        "FMA7204",
+        "FMA7205"
+      ],
+      "landmark": "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+      "scope": "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan.",
+      "references": {
+        "landmarks": "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "liver": "https://www.ncbi.nlm.nih.gov/books/NBK543812/",
+        "ultrasound": "https://www.radiologyinfo.org/en/info/abdominus",
+        "ct": "https://www.radiologyinfo.org/en/info/bodyct",
+        "mrcp": "https://www.radiologyinfo.org/en/info/mrcp",
+        "gallstones": "https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/diagnosis",
+        "spleen": "https://pubmed.ncbi.nlm.nih.gov/25820845/",
+        "renal": "https://www.ncbi.nlm.nih.gov/books/NBK543811/",
+        "renalUltrasound": "https://onlinelibrary.wiley.com/doi/10.1002/jum.70430",
+        "renalDuplex": "https://onlinelibrary.wiley.com/doi/10.1002/jum.16353",
+        "renalGrayscale": "https://pubmed.ncbi.nlm.nih.gov/674648/",
+        "urography": "https://www.radiologyinfo.org/en/info/urography",
+        "adrenal": "https://www.ncbi.nlm.nih.gov/books/NBK543796/",
+        "adrenalUltrasound": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4710689/",
+        "xray": "https://www.radiologyinfo.org/en/info/abdominrad"
+      }
+    },
+    "current": {
+      "topic": {
+        "body": "On a plain abdominal radiograph, orient the renal regions beside the lumbar spine and any visible psoas margins. Renal soft-tissue outlines may be only partly discernible; their visibility depends on surrounding fat contrast and overlapping abdominal contents. A visible outer shadow is not a view of the internal collecting system.",
+        "bullets": [
+          "Confirm the recorded patient side, projection and image coverage before comparing the two renal regions. A poorly seen outline does not establish an absent or abnormal kidney.",
+          "A projected opacity is not automatically a urinary calculus. Stone radiopacity varies with composition; some stones are radiolucent, so a negative plain film cannot exclude them.",
+          "Intravenous pyelography uses injected iodinated contrast and timed radiographs to outline the urinary tract. It is a different examination from a non-contrast plain film or CT/MR urography.",
+          "Reassemble the atlas before studying spatial relationships. This outer surface supplies no radiographic attenuation, collecting-system opacification, stone diagnosis, excretion, obstruction assessment or renal function."
+        ],
+        "references": [
+          "renalPlainFilm",
+          "renalIvp",
+          "renalStoneRadiopacity"
+        ]
+      },
+      "groups": [
+        "FMA7204",
+        "FMA7205"
+      ],
+      "landmark": "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+      "scope": "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan.",
+      "references": {
+        "landmarks": "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+        "liver": "https://www.ncbi.nlm.nih.gov/books/NBK543812/",
+        "ultrasound": "https://www.radiologyinfo.org/en/info/abdominus",
+        "ct": "https://www.radiologyinfo.org/en/info/bodyct",
+        "mrcp": "https://www.radiologyinfo.org/en/info/mrcp",
+        "gallstones": "https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/diagnosis",
+        "spleen": "https://pubmed.ncbi.nlm.nih.gov/25820845/",
+        "renal": "https://www.ncbi.nlm.nih.gov/books/NBK543811/",
+        "renalUltrasound": "https://onlinelibrary.wiley.com/doi/10.1002/jum.70430",
+        "renalDuplex": "https://onlinelibrary.wiley.com/doi/10.1002/jum.16353",
+        "renalGrayscale": "https://pubmed.ncbi.nlm.nih.gov/674648/",
+        "urography": "https://www.radiologyinfo.org/en/info/urography",
+        "renalPlainFilm": "https://www.bmj.com/content/345/sbmj.e5375",
+        "renalIvp": "https://www.radiologyinfo.org/en/info/ivp",
+        "renalStoneRadiopacity": "https://uroweb.org/guidelines/urolithiasis/chapter/guidelines",
+        "adrenal": "https://www.ncbi.nlm.nih.gov/books/NBK543796/",
+        "adrenalUltrasound": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4710689/",
+        "xray": "https://www.radiologyinfo.org/en/info/abdominrad"
+      }
+    }
+  },
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:organ:right-kidney",
+        "fmaId": "FMA7204",
+        "name": "Right kidney",
+        "sourceName": "right kidney",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7204",
+        "bounds": {
+          "min": [
+            -0.8757539987564087,
+            1.6681201457977295,
+            0.14700104296207428
+          ],
+          "max": [
+            -0.3042760193347931,
+            2.712399959564209,
+            0.6185500621795654
+          ]
+        },
+        "center": [
+          -0.5900150090456009,
+          2.1902600526809692,
+          0.38277555257081985
+        ],
+        "anchor": [
+          -0.5424100160598755,
+          2.2017998695373535,
+          0.428384006023407
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3147",
+            "sha256": "e21e2ebd5224b1cbf8caabbf4fa788d894819a328a006dcdb2eb8aa6eee5875a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "draft",
+        "title": "Right kidney · X-ray orientation · draft",
+        "body": "A plain abdominal radiograph and excretory urography are different examinations. Urography uses contrast to depict the urinary tract; a plain film does not provide that opacification.",
+        "bullets": [
+          "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+          "Distinguish the renal outline from the collecting system and ureter.",
+          "No excretion, obstruction or renal function can be inferred from this intact reference surface.",
+          "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+          "https://www.radiologyinfo.org/en/info/urography"
+        ],
+        "note": "Independent anatomy/radiology review pending. Compare spatial relationships with separation at zero. No patient images, scan registration or paid-lecture access. Confirm patient, organ, side, sequence and contrast phase before future image comparison. Not a diagnosis, acquisition protocol or management guideline."
+      },
+      "previousHash": "4a649533d3163b219fec5c00b5cc5f5f31c008cb4318aa59db0354660f374cc9",
+      "currentHash": "35435f5c27ff42ecc815d61c4b5c9d2ccffa3f52708c366fac4972197e9c3311"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:organ:left-kidney",
+        "fmaId": "FMA7205",
+        "name": "Left kidney",
+        "sourceName": "left kidney",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-organs",
+        "nodeName": "FMA7205",
+        "bounds": {
+          "min": [
+            0.32839900255203247,
+            1.844940185546875,
+            0.09591399878263474
+          ],
+          "max": [
+            0.9038300514221191,
+            2.9043993949890137,
+            0.5018499493598938
+          ]
+        },
+        "center": [
+          0.6161145269870758,
+          2.3746697902679443,
+          0.29888197407126427
+        ],
+        "anchor": [
+          0.6226660013198853,
+          2.373699903488159,
+          0.3074040114879608
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3145",
+            "sha256": "b52066a987f767ad9e5c3092958bf5dd760d9f05f1497d1fc7f7ff11539bdfd2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "draft",
+        "title": "Left kidney · X-ray orientation · draft",
+        "body": "A plain abdominal radiograph and excretory urography are different examinations. Urography uses contrast to depict the urinary tract; a plain film does not provide that opacification.",
+        "bullets": [
+          "The kidneys lie retroperitoneally on the posterior abdominal wall. The right is generally lower than the left; confirm the selected side.",
+          "Distinguish the renal outline from the collecting system and ureter.",
+          "No excretion, obstruction or renal function can be inferred from this intact reference surface.",
+          "The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan."
+        ],
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/viscera_abdomen.html",
+          "https://www.radiologyinfo.org/en/info/urography"
+        ],
+        "note": "Independent anatomy/radiology review pending. Compare spatial relationships with separation at zero. No patient images, scan registration or paid-lecture access. Confirm patient, organ, side, sequence and contrast phase before future image comparison. Not a diagnosis, acquisition protocol or management guideline."
+      },
+      "previousHash": "de27c698e473b8979c1f5428e63ca0c0343038cfce1cd504bcfe00226d08820d",
+      "currentHash": "32c5f2ae2fd4be86c01385bbda2e155f3adda06cf4f9bd6ebc9eb1e0db4cc6dd"
+    }
+  ]
+}

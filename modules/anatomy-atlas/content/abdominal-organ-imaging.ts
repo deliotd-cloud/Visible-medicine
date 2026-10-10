@@ -14,7 +14,13 @@ export const abdominalOrganImagingReferences = {
   gallstones: 'https://www.niddk.nih.gov/health-information/digestive-diseases/gallstones/diagnosis',
   spleen: 'https://pubmed.ncbi.nlm.nih.gov/25820845/',
   renal: 'https://www.ncbi.nlm.nih.gov/books/NBK543811/',
+  renalUltrasound: 'https://onlinelibrary.wiley.com/doi/10.1002/jum.70430',
+  renalDuplex: 'https://onlinelibrary.wiley.com/doi/10.1002/jum.16353',
+  renalGrayscale: 'https://pubmed.ncbi.nlm.nih.gov/674648/',
   urography: 'https://www.radiologyinfo.org/en/info/urography',
+  renalPlainFilm: 'https://www.bmj.com/content/345/sbmj.e5375',
+  renalIvp: 'https://www.radiologyinfo.org/en/info/ivp',
+  renalStoneRadiopacity: 'https://uroweb.org/guidelines/urolithiasis/chapter/guidelines',
   adrenal: 'https://www.ncbi.nlm.nih.gov/books/NBK543796/',
   adrenalUltrasound: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4710689/',
   xray: 'https://www.radiologyinfo.org/en/info/abdominrad',
@@ -35,7 +41,7 @@ export const abdominalOrganImagingScope: Record<AbdominalOrganImagingGroup, stri
   kidney: 'The root kidney is an outer reference surface. The separate HRA kidney specimen is not registered to this donor or to a patient scan.',
   adrenal: 'This is a whole-gland surface, not separately validated cortex and medulla or an adrenal lesion model.',
 };
-type Topic = {body:string; bullets:[string,string]; references:(keyof typeof abdominalOrganImagingReferences)[]};
+type Topic = {body:string; bullets:[string,string,...string[]]; references:(keyof typeof abdominalOrganImagingReferences)[]};
 const plainFilm:Topic = {
   body:'Abdominal radiographs provide less internal soft-tissue detail than CT or MRI. Use the selected organ to learn regional position, not to assume that its full border or internal architecture is visible on X-ray.',
   bullets:['An absent radiographic finding does not establish a normal organ.','Atlas transparency is not X-ray attenuation; no calibrated projection is generated.'],
@@ -97,12 +103,18 @@ export const abdominalOrganImagingTopics:Record<AbdominalOrganImagingGroup,Recor
     mri:{body:'Renal MRI uses complementary tissue sequences and, when acquired, contrast-enhanced images. A renal mass assessment is different from following urine-containing collecting-system anatomy.',bullets:[
       'Localise parenchyma separately from the renal pelvis and ureter.','A generic outer contour cannot distinguish a cyst from a solid lesion or quantify enhancement.',
     ],references:['renal']},
-    ultrasound:{body:'Ultrasound can evaluate renal structure; Doppler adds information about blood flow. The root atlas selection supplies neither tissue echoes nor a Doppler waveform.',bullets:[
-      'Inspect the actual kidney in the acquired planes rather than judging it from its silhouette.','The separately available kidney specimen does not establish the anatomy or findings of this examination.',
-    ],references:['ultrasound']},
-    xray:{body:'A plain abdominal radiograph and excretory urography are different examinations. Urography uses contrast to depict the urinary tract; a plain film does not provide that opacification.',bullets:[
-      'Distinguish the renal outline from the collecting system and ureter.','No excretion, obstruction or renal function can be inferred from this intact reference surface.',
-    ],references:['urography']},
+    ultrasound:{body:'Renal ultrasound provides acquired slices, not the complete volume suggested by an atlas surface. Establish the recorded side and image plane before following the visible parenchyma and central collecting region across views. Grayscale appearance and Doppler flow information are distinct; neither is encoded by this outer reference mesh.',bullets:[
+      'When a complete kidney examination is acquired, compare long-axis and transverse views and check which upper- and lower-pole regions were actually shown on each side.',
+      'Where discernible, distinguish cortical tissue and medullary pyramids from the central sinus and renal pelvis; the sinus is not simply a fluid-filled collecting space.',
+      'Use acquired grayscale images for tissue echoes and contour. Flow assessment requires separately acquired Doppler data; mesh colour is not a Doppler result.',
+      'Recognise a poorly seen pole or other coverage limit. A clear model silhouette cannot establish sonographic visibility, a complete examination or normality.',
+    ],references:['renalUltrasound','renalDuplex','renalGrayscale']},
+    xray:{body:'On a plain abdominal radiograph, orient the renal regions beside the lumbar spine and any visible psoas margins. Renal soft-tissue outlines may be only partly discernible; their visibility depends on surrounding fat contrast and overlapping abdominal contents. A visible outer shadow is not a view of the internal collecting system.',bullets:[
+      'Confirm the recorded patient side, projection and image coverage before comparing the two renal regions. A poorly seen outline does not establish an absent or abnormal kidney.',
+      'A projected opacity is not automatically a urinary calculus. Stone radiopacity varies with composition; some stones are radiolucent, so a negative plain film cannot exclude them.',
+      'Intravenous pyelography uses injected iodinated contrast and timed radiographs to outline the urinary tract. It is a different examination from a non-contrast plain film or CT/MR urography.',
+      'Reassemble the atlas before studying spatial relationships. This outer surface supplies no radiographic attenuation, collecting-system opacification, stone diagnosis, excretion, obstruction assessment or renal function.',
+    ],references:['renalPlainFilm','renalIvp','renalStoneRadiopacity']},
   },
   adrenal: {
     ct:{body:'Unenhanced CT attenuation and contrast-enhancement behaviour provide different information about an adrenal finding. Do not apply an unenhanced attenuation interpretation to a contrast-enhanced image.',bullets:[

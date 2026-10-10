@@ -1,0 +1,24 @@
+{
+  "baseline": "1517521a5ee3eed985fff01bcd8608965b693fae",
+  "teachingEpoch": "2c6d1f3eedc067c48203bed0639f67a9fc7fd3c5",
+  "currentTeachingCheckedBy": "scripts/test-genicular-mri.mjs",
+  "tours": 30,
+  "stops": 177,
+  "newTours": [
+    "right-hand-venous-orientation",
+    "left-hand-venous-orientation"
+  ],
+  "newStops": 14,
+  "sourceTargets": 14,
+  "topicsPreserved": 9936,
+  "changedTeachingWorksheets": 14,
+  "preservedTeachingWorksheets": 1090,
+  "mutatedSourceRefusals": 626,
+  "malformedTourPackets": 154,
+  "staleTeachingRefusedBeforeStorage": 14,
+  "invalidFramesRejected": 56,
+  "sourceModelsAndFramesUnchanged": true,
+  "cameraEngineUnchanged": true,
+  "clinicalApproval": false,
+  "browserAcceptance": false
+}

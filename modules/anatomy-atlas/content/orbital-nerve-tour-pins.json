@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "baseline": "0bb3cf88d6862a605f7cb54bd315b90cd38843e5",
+  "tourRevision": "right-orbital-nerve-orientation-v1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-ophthalmic-nerve",
+      "fmaId": "FMA52622",
+      "name": "Right ophthalmic nerve",
+      "sourceName": "right ophthalmic nerve",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA52622",
+      "bounds": {
+        "min": [
+          -0.2237129956483841,
+          7.214200496673584,
+          0.4448999762535095
+        ],
+        "max": [
+          -0.1774270087480545,
+          7.299799919128418,
+          0.718239963054657
+        ]
+      },
+      "center": [
+        -0.2005700021982193,
+        7.257000207901001,
+        0.5815699696540833
+      ],
+      "anchor": [
+        -0.19382400810718536,
+        7.253100395202637,
+        0.5810399651527405
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1363",
+          "sha256": "05f71831dc54303ffc740a4e38f35475f60c72e4e7348b797acfeac4a1d6d29d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+      "fmaId": "FMA52639",
+      "name": "Right frontal nerve",
+      "sourceName": "right frontal nerve",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA52639",
+      "bounds": {
+        "min": [
+          -0.25887301564216614,
+          7.284599781036377,
+          0.70305997133255
+        ],
+        "max": [
+          -0.20503000915050507,
+          7.402900218963623,
+          0.9195599555969238
+        ]
+      },
+      "center": [
+        -0.2319515123963356,
+        7.34375,
+        0.8113099634647369
+      ],
+      "anchor": [
+        -0.23017099499702454,
+        7.347499847412109,
+        0.8128500580787659
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1341",
+          "sha256": "1d9f4f0ed3196ceb32439608452ef9849f631e1adce9920a6e31bc517bf2f714"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+      "fmaId": "FMA52629",
+      "name": "Right lacrimal nerve",
+      "sourceName": "right lacrimal nerve",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA52629",
+      "bounds": {
+        "min": [
+          -0.4413040280342102,
+          7.269699573516846,
+          0.7050700187683105
+        ],
+        "max": [
+          -0.20790299773216248,
+          7.348100662231445,
+          1.0597599744796753
+        ]
+      },
+      "center": [
+        -0.32460351288318634,
+        7.3089001178741455,
+        0.8824149966239929
+      ],
+      "anchor": [
+        -0.3197619915008545,
+        7.308000564575195,
+        0.8774999976158142
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1351",
+          "sha256": "0e563e908e3c1e6ea08e3233e8e90c37b6fd029b165a0e6c41d37f985b538f22"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+      "fmaId": "FMA52669",
+      "name": "Right nasociliary nerve",
+      "sourceName": "right nasociliary nerve",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA52669",
+      "bounds": {
+        "min": [
+          -0.2074659913778305,
+          7.150200366973877,
+          0.6070099472999573
+        ],
+        "max": [
+          -0.029293999075889587,
+          7.305200099945068,
+          1.354759931564331
+        ]
+      },
+      "center": [
+        -0.11837999522686005,
+        7.227700233459473,
+        0.9808849394321442
+      ],
+      "anchor": [
+        -0.16468599438667297,
+        7.279799938201904,
+        0.9792900085449219
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1361",
+          "sha256": "f399ec1e5dd080357ba1bdde33393932e400f76567cf9c9c2392430600f99059"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:nerve:right-long-ciliary-nerve",
+      "fmaId": "FMA82734",
+      "name": "Right long ciliary nerve",
+      "sourceName": "right long ciliary nerve",
+      "system": "nerves",
+      "category": "nerve",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves",
+      "nodeName": "FMA82734",
+      "bounds": {
+        "min": [
+          -0.28853100538253784,
+          7.212900161743164,
+          0.8176600933074951
+        ],
+        "max": [
+          -0.16875499486923218,
+          7.276700496673584,
+          0.9753100872039795
+        ]
+      },
+      "center": [
+        -0.228643000125885,
+        7.244800329208374,
+        0.8964850902557373
+      ],
+      "anchor": [
+        -0.2439109981060028,
+        7.226999282836914,
+        0.8875599503517151
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1369",
+          "sha256": "a3e9a8f15fcd4b9ed6bb12ca2fa984b971ecb9e090b832effc8e108537871917"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+      "fmaId": "FMA53549",
+      "name": "Right ciliary ganglion",
+      "sourceName": "right ciliary ganglion",
+      "system": "nerves",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-nerves-inventory",
+      "nodeName": "FMA53549",
+      "bounds": {
+        "min": [
+          -0.2703910171985626,
+          7.239599704742432,
+          0.8079899549484253
+        ],
+        "max": [
+          -0.23795200884342194,
+          7.265300273895264,
+          0.8405799865722656
+        ]
+      },
+      "center": [
+        -0.2541715130209923,
+        7.252449989318848,
+        0.8242849707603455
+      ],
+      "anchor": [
+        -0.24665099382400513,
+        7.257500171661377,
+        0.8309299945831299
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1339",
+          "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+        }
+      ],
+      "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+      "fmaId": "FMA12514",
+      "name": "Right eyeball",
+      "sourceName": "right eyeball",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "eye-corrected-parent",
+      "nodeName": "FMA12514",
+      "bounds": {
+        "min": [
+          -0.436180979013443,
+          7.049599647521973,
+          0.8882899284362793
+        ],
+        "max": [
+          -0.17298001050949097,
+          7.311899185180664,
+          1.1605099439620972
+        ]
+      },
+      "center": [
+        -0.304580494761467,
+        7.180749416351318,
+        1.0243999361991882
+      ],
+      "anchor": [
+        -0.310016006231308,
+        7.178900241851807,
+        1.0682499408721924
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1336",
+          "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+        },
+        {
+          "file": "FJ1337",
+          "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+        },
+        {
+          "file": "FJ1340",
+          "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+        },
+        {
+          "file": "FJ1348",
+          "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+        },
+        {
+          "file": "FJ1356",
+          "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+        },
+        {
+          "file": "FJ1368",
+          "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+        },
+        {
+          "file": "FJ1371",
+          "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+        },
+        {
+          "file": "FJ1382",
+          "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+        }
+      ],
+      "coverageNote": "Source-derived right eyeball with 36 exact disconnected opposite-side triangles suppressed. All retained source surfaces are unchanged in position; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "head-neck-nerves",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "bytes": 8286776,
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structures": 27
+    },
+    {
+      "id": "head-neck-nerves-inventory",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "bytes": 10012,
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "structures": 2
+    },
+    {
+      "id": "eye-corrected-parent",
+      "url": "/models/bodyparts3d/eye-layers/right-eyeball.glb?v=f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "bytes": 1756184,
+      "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "structures": 1
+    }
+  ]
+}

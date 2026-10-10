@@ -196,11 +196,11 @@ const expected = [
 const keys = expected.map(([key]) => key);
 same(baseline.reasoningConcepts.length, 158);
 same(api.reasoningConcepts.slice(0, 158), baseline.reasoningConcepts, 'Exact ordered old158 concepts preserved');
-same(api.reasoningConcepts.length, 166);
-same(api.reasoningConcepts.slice(158), api.lowerLimbBoneReasoningConcepts);
+same(api.reasoningConcepts.length, 170);
+same(api.reasoningConcepts.slice(158,166), api.lowerLimbBoneReasoningConcepts);
 same(api.lowerLimbBoneReasoningConcepts.map(c => c.key), keys);
-same(new Set(api.reasoningConcepts.map(c => c.key)).size, 166);
-same(catalog.structures.filter(api.reasoningConceptFor).length, 308);
+same(new Set(api.reasoningConcepts.map(c => c.key)).size, 170);
+same(catalog.structures.filter(api.reasoningConceptFor).length, 313);
 same(api.lowerLimbBoneReasoningSourceMatches(display.structures[0], 'unknown'), false);
 const targets = [];
 const referenceWords = {};

@@ -11,6 +11,7 @@ import {
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
 import type { ContentTab } from '../app/anatomy-data';
 import type { ContentLesson } from './content-types';
+import { longusColliQuizQuestions } from '../content/longus-colli-quiz';
 const source = data as unknown as BodySourceAddition;
 export function addLongusColli(catalog: BodyCatalog) {
   return applyBodySourceAddition(catalog, source);
@@ -51,6 +52,7 @@ export function longusColliLesson(
   s: BodyStructure,
   tab: ContentTab,
 ): ContentLesson | undefined {
+  if (tab === 'quiz') return longusColliQuizLesson(s, tab);
   if (
     !['anatomy', 'function'].includes(tab) ||
     !source.structures.some((p) => sourceCanonical(p) === sourceCanonical(s))
@@ -76,5 +78,28 @@ export function longusColliLesson(
     ],
     note: 'Independent anatomical and radiological review pending. No fascial plane, right-side geometry, tendon calcification, fluid collection, patient scan or registration is inferred.',
     citations: longusColliReferences,
+  };
+}
+
+/** Only exact supplied identities receive these questions; no right-side inference. */
+export function longusColliQuizLesson(
+  s: BodyStructure,
+  tab: ContentTab,
+): ContentLesson | undefined {
+  if (
+    tab !== 'quiz' ||
+    !source.structures.some((p) => sourceCanonical(p) === sourceCanonical(s))
+  ) return undefined;
+  const question = longusColliQuizQuestions[s.fmaId];
+  if (!question) return undefined;
+  return {
+    readiness: 'draft',
+    title: `${s.name} · attachment check · draft`,
+    body: question.body,
+    bullets: [...question.choices],
+    correctAnswer: question.correctAnswer,
+    explanation: question.explanation,
+    citations: [...question.references],
+    note: 'Anatomical review pending. These questions describe typical attachments, not validated footprints on this donor mesh. Only the supplied left parts are represented; no mirrored anatomy or patient registration is inferred.',
   };
 }

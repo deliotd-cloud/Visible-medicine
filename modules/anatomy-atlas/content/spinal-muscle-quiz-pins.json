@@ -1,0 +1,423 @@
+{
+  "parentCommit": "027f29d54045256c7b4d359eaed45a3dee2c5b25",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "spine-muscles",
+      "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+      "bytes": 5127960,
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "structures": 52
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:right:muscle:right-psoas-major",
+        "fmaId": "FMA22342",
+        "name": "Right psoas major",
+        "sourceName": "right psoas major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thigh"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA22342",
+        "bounds": {
+          "min": [
+            -1.1375800371170044,
+            -0.6478497385978699,
+            0.03134899213910103
+          ],
+          "max": [
+            -0.07475189864635468,
+            2.9873998165130615,
+            0.6956599950790405
+          ]
+        },
+        "center": [
+          -0.6061659678816795,
+          1.1697750389575958,
+          0.3635044936090708
+        ],
+        "anchor": [
+          -0.7198110222816467,
+          1.2371399402618408,
+          0.46725699305534363
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1431",
+            "sha256": "b66009da13d6241d66de3c0242288abfe0c90ce1c76b38000f9a92b02e2f1e0f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightPsoasMajor",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right psoas major on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:left:muscle:left-psoas-major",
+        "fmaId": "FMA22343",
+        "name": "Left psoas major",
+        "sourceName": "left psoas major",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "spine",
+        "regions": [
+          "spine",
+          "thigh"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA22343",
+        "bounds": {
+          "min": [
+            0.07475189864635468,
+            -0.6478497385978699,
+            0.03134899213910103
+          ],
+          "max": [
+            1.1375700235366821,
+            2.9873998165130615,
+            0.6956599950790405
+          ]
+        },
+        "center": [
+          0.6061609610915184,
+          1.1697750389575958,
+          0.3635044936090708
+        ],
+        "anchor": [
+          0.7198100090026855,
+          1.2371399402618408,
+          0.46725699305534363
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1431M",
+            "sha256": "6ab42a645723e66a32b2c64e72be87e0a13fb497cbbf2ff29d26bc827fbaa0ce"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftPsoasMajor",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left psoas major on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-inferior",
+        "fmaId": "FMA13405",
+        "name": "Right serratus posterior inferior",
+        "sourceName": "right serratus posterior inferior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA13405",
+        "bounds": {
+          "min": [
+            -1.0624200105667114,
+            1.6951501369476318,
+            -0.487190306186676
+          ],
+          "max": [
+            0.0245107002556324,
+            3.320200204849243,
+            -0.07684299349784851
+          ]
+        },
+        "center": [
+          -0.5189546551555395,
+          2.5076751708984375,
+          -0.28201664984226227
+        ],
+        "anchor": [
+          -0.5245220065116882,
+          2.4755005836486816,
+          -0.3330410122871399
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1541",
+            "sha256": "cc8b7d9461278c3d3a1270277fc656159ee47bd9eed290a0d5aa1c15d5c2c006"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightSerratusPosteriorInferior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right serratus posterior inferior on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-inferior",
+        "fmaId": "FMA13406",
+        "name": "Left serratus posterior inferior",
+        "sourceName": "left serratus posterior inferior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA13406",
+        "bounds": {
+          "min": [
+            -0.0245107002556324,
+            1.6951501369476318,
+            -0.4871901869773865
+          ],
+          "max": [
+            1.0624299049377441,
+            3.320200204849243,
+            -0.07684299349784851
+          ]
+        },
+        "center": [
+          0.5189596023410559,
+          2.5076751708984375,
+          -0.2820165902376175
+        ],
+        "anchor": [
+          0.5245220065116882,
+          2.4755005836486816,
+          -0.3330410122871399
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1541M",
+            "sha256": "819635eb6027fc8434ef0966a06efbb1d34bbe4798127729081c0eeefcaf87e0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftSerratusPosteriorInferior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left serratus posterior inferior on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
+        "fmaId": "FMA13403",
+        "name": "Right serratus posterior superior",
+        "sourceName": "right serratus posterior superior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA13403",
+        "bounds": {
+          "min": [
+            -1.0314099788665771,
+            4.543699741363525,
+            -0.41010600328445435
+          ],
+          "max": [
+            0.0070372698828577995,
+            5.854899883270264,
+            0.23691299557685852
+          ]
+        },
+        "center": [
+          -0.5121863544918597,
+          5.1992998123168945,
+          -0.08659650385379791
+        ],
+        "anchor": [
+          -0.557548999786377,
+          5.285799503326416,
+          -0.18935199081897736
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1542",
+            "sha256": "5731a87fd7b629112dc376ce82570c8662618a1f6256f7b7d54384c363f6f6fd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rightSerratusPosteriorSuperior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right serratus posterior superior on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
+        "fmaId": "FMA13404",
+        "name": "Left serratus posterior superior",
+        "sourceName": "left serratus posterior superior",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "spine",
+        "regions": [
+          "spine"
+        ],
+        "bundle": "spine-muscles",
+        "nodeName": "FMA13404",
+        "bounds": {
+          "min": [
+            -0.0070372698828577995,
+            4.543699741363525,
+            -0.41010600328445435
+          ],
+          "max": [
+            1.0314099788665771,
+            5.854899883270264,
+            0.23691299557685852
+          ]
+        },
+        "center": [
+          0.5121863544918597,
+          5.1992998123168945,
+          -0.08659650385379791
+        ],
+        "anchor": [
+          0.557548999786377,
+          5.285799503326416,
+          -0.18935100734233856
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1542M",
+            "sha256": "61070b6f1cb48d0e08434711f12d5a535867520ca16adb20e5cf70f7bd2f29a1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leftSerratusPosteriorSuperior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left serratus posterior superior on the model."
+      }
+    }
+  ]
+}

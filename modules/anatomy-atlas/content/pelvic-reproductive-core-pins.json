@@ -1,0 +1,733 @@
+{
+  "baseline": "3d1d0f862d2e7567d298bc89690b11bf38ca3326",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "pelvis-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "bytes": 16892,
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "structures": 3
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "f9a164b563a883ddd2f1d798cdc79f52241a9d3f6359a7b51d82df8f98e4166a",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+        "fmaId": "FMA9600",
+        "name": "Prostate",
+        "sourceName": "prostate",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA9600",
+        "bounds": {
+          "min": [
+            -0.17826201021671295,
+            -0.2791699171066284,
+            0.14504897594451904
+          ],
+          "max": [
+            0.16457800567150116,
+            -0.07560974359512329,
+            0.46460801362991333
+          ]
+        },
+        "center": [
+          -0.006842002272605896,
+          -0.17738983035087585,
+          0.3048284947872162
+        ],
+        "anchor": [
+          -0.008279549889266491,
+          -0.09260009974241257,
+          0.31331297755241394
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ3139",
+            "sha256": "f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "prostate",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Prostate · Structure & relationships · draft",
+          "body": "A gland below the bladder surrounding the proximal male urethra. Its ducts discharge into the prostatic urethra.",
+          "bullets": [
+            "Adult-male reference surface. Prostatic zones, capsule, ducts and neurovascular bundles are not separate validated layers here.",
+            "Source identity: FMA9600 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Prostate · Role & limits · draft",
+          "body": "Adds glandular fluid to semen; it does not produce sperm.",
+          "bullets": [
+            "Adult-male reference surface. Prostatic zones, capsule, ducts and neurovascular bundles are not separate validated layers here."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-testis",
+        "fmaId": "FMA7211",
+        "name": "Right testis",
+        "sourceName": "right testis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA7211",
+        "bounds": {
+          "min": [
+            -0.308459997177124,
+            -1.0944000482559204,
+            0.9119000434875488
+          ],
+          "max": [
+            -0.10459699481725693,
+            -0.8101202249526978,
+            1.1335499286651611
+          ]
+        },
+        "center": [
+          -0.20652849599719048,
+          -0.9522601366043091,
+          1.022724986076355
+        ],
+        "anchor": [
+          -0.11235500127077103,
+          -0.9619299173355103,
+          1.0534300804138184
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3142",
+            "sha256": "1dc84c4d16139902662f08c97bc2581cb698cf8411855bcca5474e154f4ad86e"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "testis",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Right testis · Structure & relationships · draft",
+          "body": "A paired gonad in the scrotum. Seminiferous tubules lie within lobules enclosed by the tunica albuginea; interstitial cells lie between the tubules.",
+          "bullets": [
+            "The pelvis navigation group includes this scrotal organ; it does not mean the testis lies inside the pelvic cavity. No microscopic tubules or cell populations are segmented.",
+            "Source identity: FMA7211 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/testes.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Right testis · Role & limits · draft",
+          "body": "Seminiferous tubules support sperm production; interstitial Leydig cells produce androgens. These are distinct from epididymal maturation and storage.",
+          "bullets": [
+            "The pelvis navigation group includes this scrotal organ; it does not mean the testis lies inside the pelvic cavity. No microscopic tubules or cell populations are segmented."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/testes.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-testis",
+        "fmaId": "FMA7212",
+        "name": "Left testis",
+        "sourceName": "left testis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA7212",
+        "bounds": {
+          "min": [
+            0.0749754011631012,
+            -1.10247004032135,
+            0.9135499596595764
+          ],
+          "max": [
+            0.2755810022354126,
+            -0.8131701946258545,
+            1.135140061378479
+          ]
+        },
+        "center": [
+          0.1752782016992569,
+          -0.9578201174736023,
+          1.0243450105190277
+        ],
+        "anchor": [
+          0.11665699630975723,
+          -0.9606097340583801,
+          1.1039799451828003
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3138",
+            "sha256": "bb9e548f7059fb21370b8c9612ce10fe70aa9b96945c1faea33d7cc9ed113639"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "testis",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Left testis · Structure & relationships · draft",
+          "body": "A paired gonad in the scrotum. Seminiferous tubules lie within lobules enclosed by the tunica albuginea; interstitial cells lie between the tubules.",
+          "bullets": [
+            "The pelvis navigation group includes this scrotal organ; it does not mean the testis lies inside the pelvic cavity. No microscopic tubules or cell populations are segmented.",
+            "Source identity: FMA7212 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/testes.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Left testis · Role & limits · draft",
+          "body": "Seminiferous tubules support sperm production; interstitial Leydig cells produce androgens. These are distinct from epididymal maturation and storage.",
+          "bullets": [
+            "The pelvis navigation group includes this scrotal organ; it does not mean the testis lies inside the pelvic cavity. No microscopic tubules or cell populations are segmented."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/testes.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-seminal-vesicle",
+        "fmaId": "FMA19387",
+        "name": "Right seminal vesicle",
+        "sourceName": "right seminal vesicle",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA19387",
+        "bounds": {
+          "min": [
+            -0.35323798656463623,
+            -0.11119018495082855,
+            0.048706017434597015
+          ],
+          "max": [
+            -0.036314599215984344,
+            0.18283995985984802,
+            0.2505210041999817
+          ]
+        },
+        "center": [
+          -0.1947762928903103,
+          0.035824887454509735,
+          0.14961351081728935
+        ],
+        "anchor": [
+          -0.21167200803756714,
+          0.008300171233713627,
+          0.13769298791885376
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3143",
+            "sha256": "183e4a11e0a75a76dcdaf33f46afb7f5f30430c5e0b1ff19237be1ebef7e72ba"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "seminalVesicle",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Right seminal vesicle · Structure & relationships · draft",
+          "body": "A paired accessory gland behind the bladder. Its duct joins the ductus deferens to form an ejaculatory duct.",
+          "bullets": [
+            "A gland surface does not establish a patent ejaculatory duct, internal folds or complete connections to the remaining reproductive tract.",
+            "Source identity: FMA19387 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Right seminal vesicle · Role & limits · draft",
+          "body": "Contributes fructose-containing secretions to semen. The seminal vesicle is a secretory gland, not the site of sperm production.",
+          "bullets": [
+            "A gland surface does not establish a patent ejaculatory duct, internal folds or complete connections to the remaining reproductive tract."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-seminal-vesicle",
+        "fmaId": "FMA19388",
+        "name": "Left seminal vesicle",
+        "sourceName": "left seminal vesicle",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA19388",
+        "bounds": {
+          "min": [
+            0.023584799841046333,
+            -0.11156982183456421,
+            0.052228011190891266
+          ],
+          "max": [
+            0.3401399850845337,
+            0.1831701695919037,
+            0.24958297610282898
+          ]
+        },
+        "center": [
+          0.18186239246279,
+          0.03580017387866974,
+          0.15090549364686012
+        ],
+        "anchor": [
+          0.19750098884105682,
+          0.009420165792107582,
+          0.13775798678398132
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3137",
+            "sha256": "e14aff1615aec623f98d769cb60894fb0e859ae0a0e0967a7b5757909afc50eb"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "seminalVesicle",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Left seminal vesicle · Structure & relationships · draft",
+          "body": "A paired accessory gland behind the bladder. Its duct joins the ductus deferens to form an ejaculatory duct.",
+          "bullets": [
+            "A gland surface does not establish a patent ejaculatory duct, internal folds or complete connections to the remaining reproductive tract.",
+            "Source identity: FMA19388 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Left seminal vesicle · Role & limits · draft",
+          "body": "Contributes fructose-containing secretions to semen. The seminal vesicle is a secretory gland, not the site of sperm production.",
+          "bullets": [
+            "A gland surface does not establish a patent ejaculatory duct, internal folds or complete connections to the remaining reproductive tract."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/glands.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-epididymis",
+        "fmaId": "FMA18256",
+        "name": "Right epididymis",
+        "sourceName": "right epididymis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-gaps",
+        "nodeName": "FMA18256",
+        "bounds": {
+          "min": [
+            -0.2608340084552765,
+            -0.9931597709655762,
+            0.901759922504425
+          ],
+          "max": [
+            -0.1671620011329651,
+            -0.7512201070785522,
+            1.093869924545288
+          ]
+        },
+        "center": [
+          -0.2139980047941208,
+          -0.8721899390220642,
+          0.9978149235248566
+        ],
+        "anchor": [
+          -0.1671620011329651,
+          -0.8716400265693665,
+          0.9927900433540344
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3141",
+            "sha256": "23469ccd7ac340ef3f4184fb850c7658420e9f7f294d91331f10cb3187824bf5"
+          }
+        ],
+        "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "epididymis",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Right epididymis · Structure & relationships · draft",
+          "body": "A coiled duct along the upper and posterior testis, connecting efferent ducts with the ductus deferens.",
+          "bullets": [
+            "Selected adult-male organ surface, not an uncoiled duct or independently segmented head, body, tail and lumen. No fertility assessment is possible from it.",
+            "Source identity: FMA18256 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Right epididymis · Role & limits · draft",
+          "body": "Supports sperm maturation during transit and storage chiefly in its tail before onward transport.",
+          "bullets": [
+            "Selected adult-male organ surface, not an uncoiled duct or independently segmented head, body, tail and lumen. No fertility assessment is possible from it."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-epididymis",
+        "fmaId": "FMA18257",
+        "name": "Left epididymis",
+        "sourceName": "left epididymis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-gaps",
+        "nodeName": "FMA18257",
+        "bounds": {
+          "min": [
+            0.1299619972705841,
+            -1.0073199272155762,
+            0.8932999968528748
+          ],
+          "max": [
+            0.23883099853992462,
+            -0.7502801418304443,
+            1.0958000421524048
+          ]
+        },
+        "center": [
+          0.18439649790525436,
+          -0.8788000345230103,
+          0.9945500195026398
+        ],
+        "anchor": [
+          0.16039200127124786,
+          -0.8989599347114563,
+          0.9548599123954773
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3136",
+            "sha256": "b593e1536bdf93f9c9115207e979d94df238d088e08509b2e2751d8d4ebcd52a"
+          }
+        ],
+        "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "epididymis",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Left epididymis · Structure & relationships · draft",
+          "body": "A coiled duct along the upper and posterior testis, connecting efferent ducts with the ductus deferens.",
+          "bullets": [
+            "Selected adult-male organ surface, not an uncoiled duct or independently segmented head, body, tail and lumen. No fertility assessment is possible from it.",
+            "Source identity: FMA18257 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Left epididymis · Role & limits · draft",
+          "body": "Supports sperm maturation during transit and storage chiefly in its tail before onward transport.",
+          "bullets": [
+            "Selected adult-male organ surface, not an uncoiled duct or independently segmented head, body, tail and lumen. No fertility assessment is possible from it."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+        "fmaId": "FMA19667",
+        "name": "Urethra",
+        "sourceName": "urethra",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-gaps",
+        "nodeName": "FMA19667",
+        "bounds": {
+          "min": [
+            -0.0160824004560709,
+            -0.9143102765083313,
+            0.29952698945999146
+          ],
+          "max": [
+            0.0031363300513476133,
+            -0.07487975805997849,
+            1.3417400121688843
+          ]
+        },
+        "center": [
+          -0.006473035202361643,
+          -0.4945950172841549,
+          0.8206335008144379
+        ],
+        "anchor": [
+          -0.009616579860448837,
+          -0.29971984028816223,
+          0.7556800246238708
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3148",
+            "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+          }
+        ],
+        "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "urethra",
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Urethra · Structure & relationships · draft",
+          "body": "The represented male urethra leads from the bladder through the prostate and pelvic floor into the penis. This entry does not represent female urethral anatomy.",
+          "bullets": [
+            "Adult-male source only. No patent lumen, separate urethral segments, continence mechanism or catheter route is established by this surface.",
+            "Source identity: FMA19667 · 1 source component. Boundaries and relationships require independent review."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+            "https://training.seer.cancer.gov/anatomy/urinary/components/"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Urethra · Role & limits · draft",
+          "body": "Provides the outward route for urine and, during ejaculation, semen. It is distinct from the ureter linking kidney and bladder.",
+          "bullets": [
+            "Adult-male source only. No patent lumen, separate urethral segments, continence mechanism or catheter route is established by this surface."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "citations": [
+            "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html",
+            "https://training.seer.cancer.gov/anatomy/urinary/components/"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 'use client';
-import {useState} from 'react';
+import {useState,type ReactNode} from 'react';
 import {Button} from '@/components/ui/button';
 import type {ContentSection} from './anatomy-data';
 import './tour-imaging-notes.css';
@@ -11,8 +11,9 @@ export const tourImagingModalities = [
 export type TourImagingLesson = {id:typeof tourImagingModalities[number]['id'];label:string;content:ContentSection};
 
 /** Existing source-bound teaching only. No case lookup, pixels or access grant. */
-export function TourImagingNotes({structureName,lessons,onOpen}:{
+export function TourImagingNotes({structureName,lessons,onOpen,linkControl}:{
   structureName:string;lessons:readonly TourImagingLesson[];onOpen:()=>void;
+  linkControl?:ReactNode;
 }) {
   const [selected,setSelected]=useState<TourImagingLesson['id']>('ct');
   const lesson=lessons.find(item=>item.id===selected);
@@ -22,6 +23,7 @@ export function TourImagingNotes({structureName,lessons,onOpen}:{
     <div className="tour-imaging-reader" role="region" aria-label={`${structureName} imaging notes`} tabIndex={0}>
     <p><strong>{structureName}</strong> · Teaching notes only</p>
     <p className="tour-imaging-boundary">No scan loaded or spatial alignment. Opening these notes pauses the tour; Play resumes it. Imaging cases and paid lectures require their own access.</p>
+    {linkControl}
     <div className="tour-imaging-options" role="group" aria-label="Imaging modality">
       {tourImagingModalities.map(({id,label})=><Button key={id} type="button" variant="outline" aria-pressed={selected===id} onClick={()=>setSelected(id)}>{label}</Button>)}
     </div>

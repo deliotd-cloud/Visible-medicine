@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {readFileSync as currentRead} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {build,readFileSync,historicalEpoch,historicalTree,historicalReadEvidence} from './nested-guided-library-history.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const old=path=>execFileSync('git',['--no-replace-objects','show',historicalEpoch+':'+path],{cwd:root,windowsHide:true,maxBuffer:32e6});
+const normalize=value=>value.toString('utf8').replaceAll('\r\n','\n').trimEnd();
+const original=normalize(old('scripts/test-nested-guided-library.mjs'));
+const expected=original.replace("import {readFileSync} from 'node:fs';\n",'').replace("import {build} from './workspace-component-test-build.mjs';","import {build,readFileSync} from './nested-guided-library-history.mjs';");
+assert.equal(normalize(currentRead(new URL('test-nested-guided-library.mjs',import.meta.url))),expected,'Every original assertion and child double remains byte-exact; only two imports change');
+const originalReview=normalize(old('scripts/test-nested-guided-library-review.mjs'));
+const oldLoad=originalReview.slice(originalReview.indexOf('async function load(previous=false){'),originalReview.indexOf('const now='));
+assert(oldLoad.startsWith('async function load(')&&oldLoad.endsWith('}\n'));
+const expectedReview=originalReview.replace("import {readFile,writeFile} from 'node:fs/promises';\nimport {build} from './workspace-test-build.mjs';","import {readFile,writeFile,historicalReviewApi} from './nested-guided-library-review-history.mjs';").replace(oldLoad,()=> 'async function load(previous=false){\n return historicalReviewApi(previous);\n}\n');
+assert.equal(normalize(currentRead(new URL('test-nested-guided-library-review.mjs',import.meta.url))),expectedReview,'Every original Review assertion remains exact; only historical IO and loader change');
+for(const path of ['app/whole-body-guided-learning.tsx','app/whole-body-guided-learning.css'])assert.deepEqual(readFileSync(path),old(path));
+const raw=readFileSync('app/whole-body-guided-learning.tsx');raw.fill(0);assert.deepEqual(readFileSync('app/whole-body-guided-learning.tsx'),old('app/whole-body-guided-learning.tsx'),'Returned bytes cannot poison later historical reads');
+for(const path of ['../package.json','app/../package.json','scripts/test-nested-guided-library-current.mjs','C:/private/file','app\\whole-body-guided-learning.tsx'])assert.throws(()=>readFileSync(path),/Unlisted historical direct read/);
+const options={stdin:{contents:"export * from './lib/nested-guided-learning'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {default as raw} from './public/models/bodyparts3d/full-body/catalog.json';",resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'cjs'};
+const compiled=await build(options);assert(compiled.outputFiles[0].text.includes('nestedGuidedStudyOptions'));
+const reads=historicalReadEvidence();for(const row of reads){const bytes=old(row.path);assert.equal(row.bytes,bytes.length);assert.equal(row.sha256,createHash('sha256').update(bytes).digest('hex'));}
+assert(reads.some(row=>row.path==='lib/nested-guided-learning.ts'));assert(reads.some(row=>row.path==='content/nested-guided-learning-bindings.v1.json'));assert(reads.some(row=>row.path==='public/models/bodyparts3d/full-body/catalog.json'));
+await assert.rejects(build({...options,stdin:{...options.stdin,contents:"export * from './scripts/test-nested-guided-library-current.mjs';"}}),/Missing exact historical import/,'A current-only module must not fall back to the working tree');
+await assert.rejects(build({...options,stdin:{...options.stdin,contents:"export * from '../outside-checkout.ts';"}}),/Historical module outside checkout/);
+await assert.rejects(build({...options,write:true}),/requires in-memory Node CJS/);
+console.log(JSON.stringify({epoch:historicalEpoch,tree:historicalTree,originalAssertionsExact:true,historicalBlobsVerified:reads.length,noWorkingTreeFallback:true,noProductChange:true,browserAcceptance:false}));
