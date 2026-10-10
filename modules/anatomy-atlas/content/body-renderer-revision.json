@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "0fbf9e0dbc9047d2c13cae2b6701228539c6157653eb6f77fb88f400357a0c2d"
+      "sha256": "bc5bafdd1e7c781d14e42555b62a47f8927c1548e888527d7ecc64e06ba36fd5"
     },
     {
       "path": "app/body-education-link.ts",
@@ -523,6 +523,10 @@
     {
       "path": "content/abdominal-connective-quiz.ts",
       "sha256": "3c3971fadfa50c52b606f26b3702731f14f79debcf83afdc8e8b74d5c154cabc"
+    },
+    {
+      "path": "content/abdominal-eus-orientation.ts",
+      "sha256": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37"
     },
     {
       "path": "content/abdominal-fold-ultrasound-pins.json",
@@ -2709,6 +2713,10 @@
       "sha256": "227303bc7fda4e52074fbbb5ac0fe1a4e68481d9d4bcbad646cb601f6970d655"
     },
     {
+      "path": "lib/abdominal-eus-orientation.ts",
+      "sha256": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13"
+    },
+    {
       "path": "lib/abdominal-fold-ultrasound.ts",
       "sha256": "c34ab10048031c2ee6b90f4fde2506d8a7a0d6b2fb309567dbc1e8f792a747f4"
     },
@@ -4882,7 +4890,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "723a07120edfc3331ba9c521d4ed5ffc29ae34526ddc9af72c19cb9501c2814e"
+      "sha256": "9de069fd9d83425850eefbf5c7d52aa1b7fee99325dc3512a569d12421c7aee5"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5105,5 +5113,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "31d8118bea32e38f126d6c7fb9d7b31a0bf3bc4d1eb4dd8f0f8e434873fa4ff7"
+  "sha256": "2b454772d47abc58dbff524211672a60e4e9d5ea24b797bf0b1d0d5af9848b52"
 }

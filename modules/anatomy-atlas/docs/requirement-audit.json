@@ -2,6 +2,10 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "content/abdominal-eus-orientation.ts": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37",
+    "lib/abdominal-eus-orientation.ts": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13",
+    "scripts/test-abdominal-eus-orientation.mjs": "e7c023f4568157cc8a38d648541057fa75ac45a47aaac8c0940b349b54ec4ee3",
+    "docs/ABDOMINAL_EUS_ORIENTATION.md": "241d07fa6a53cb715e8659b85f10f86f304ec0f90b67384184349a3d6ce70283",
     "content/foot-variant-quiz.ts": "303b622326b00a1de4fd95350d1d751c18a082de89557b208fb028f71683ca1a",
     "lib/foot-variant-quiz.ts": "4d071bb249f719eada4ad4df4da016246d026c0346561ac91627d71c100fc89a",
     "scripts/test-foot-variant-quiz.mjs": "47db259e49fd833dcb30949faac63d9511520c90ce1743d5a7b31a85866f82ef",
@@ -720,8 +724,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "b19d8b6ef11229b36501c20d832a66f8de8a5ceb90ddda0be04378cbe4afe042",
-    "explicitTopicReadiness": "56747119144d424e9a2a19aa87ed365a0e59a39c8b4d8e5da972df040e0eb54e",
+    "resolvedContentAndRecipeData": "2d3edbedad616bbd77903aea925df8ca7af01eb4a88a76cbb8f36b40f9489a25",
+    "explicitTopicReadiness": "8dc071bf24a40df707321058a882433fde2ace4edf7efe7028035e41fcbf0385",
     "reasoningQuestionData": "2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62",
     "guidedLearningData": "99c0d622f6e194412ae6a92d4f60e70aee212fe8ef1a39d02167331cb2d51572",
     "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
@@ -2760,9 +2764,9 @@
         "generatedIdentification": 0
       },
       "ultrasound": {
-        "specificDraft": 842,
+        "specificDraft": 845,
         "identityOnly": 0,
-        "pending": 262,
+        "pending": 259,
         "generatedIdentification": 0
       },
       "pathology": {
@@ -3048,9 +3052,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 74,
+          "specificDraft": 77,
           "identityOnly": 0,
-          "pending": 32,
+          "pending": 29,
           "generatedIdentification": 0
         },
         "pathology": {

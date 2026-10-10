@@ -346,6 +346,10 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'content/abdominal-eus-orientation.ts',
+  'lib/abdominal-eus-orientation.ts',
+  'scripts/test-abdominal-eus-orientation.mjs',
+  'docs/ABDOMINAL_EUS_ORIENTATION.md',
   'content/foot-variant-quiz.ts',
   'lib/foot-variant-quiz.ts',
   'scripts/test-foot-variant-quiz.mjs',

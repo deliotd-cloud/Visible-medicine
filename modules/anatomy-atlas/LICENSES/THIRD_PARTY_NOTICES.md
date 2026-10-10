@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Abdominal vascular EUS orientation (10 October 2026)
+
+Three original Ultrasound drafts use factual reading references described in
+`docs/ABDOMINAL_EUS_ORIENTATION.md`. No publisher wording, figures, tables,
+scans or adapted assets are included. Reading access, including to articles with
+noncommercial terms, is not treated as commercial redistribution permission.
+Original prose/code retain MIT terms; retained BodyParts3D geometry and derived
+identities retain CC BY 4.0 attribution. No new dependency, fee or patient data.
+
 ## Foot variant quick check (10 October 2026)
 
 One original question across two retained selections cites the lateral-group
