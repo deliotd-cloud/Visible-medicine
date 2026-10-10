@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "bf3cdd04d5f7162276069fd00b1bf2b985a160cd60627a8379f500e3db06844c"
+      "sha256": "ef7f872a16a3502b94a5cf7de4383461c67f4e2169f30b37c503cdcc5fd97d01"
     },
     {
       "path": "app/body-education-link.ts",
@@ -775,6 +775,14 @@
     {
       "path": "content/collicular-brachia-teaching.ts",
       "sha256": "21f9b9db8750b17b0b445e65e756edbec29a52b8ed2922268e1f0c3eb572dab2"
+    },
+    {
+      "path": "content/commissural-landmark-quiz-pins.json",
+      "sha256": "b8cbf4c4b6222903af5f7792c71ed25d176c5dac38863f5348e901c943493f8c"
+    },
+    {
+      "path": "content/commissural-landmark-quiz.ts",
+      "sha256": "46d762713110bf60bac6d5d39e67b787ed003d2219cce040fe730aa8dd242cd5"
     },
     {
       "path": "content/common-interosseous-us-pins.json",
@@ -1739,6 +1747,14 @@
     {
       "path": "content/metatarsal-surface-imaging.ts",
       "sha256": "79229d3004f83592a077527209bccd403ef9e61e9e127881110b4a909e247267"
+    },
+    {
+      "path": "content/nasal-cartilage-quiz-pins.json",
+      "sha256": "c42f02da2a65fcdc4faaad275c049b77aa48754cfae4df7e0f263b8cbea716ae"
+    },
+    {
+      "path": "content/nasal-cartilage-quiz.ts",
+      "sha256": "b299fd6af4af6dbc93f4e4000d1870ca4cafd8a22f1e5d4e61df6f92865fc53c"
     },
     {
       "path": "content/neck-attachment-pins.json",
@@ -3053,6 +3069,10 @@
       "sha256": "35c257927186644ffacd0621e9bb089061057dea89ffe6f812486d898d931a20"
     },
     {
+      "path": "lib/commissural-landmark-quiz.ts",
+      "sha256": "9402263c5cab269f1fa536800224cf0b1d648c361dd1bb343fa7b54a0fb25b86"
+    },
+    {
       "path": "lib/common-interosseous-us.ts",
       "sha256": "ba89e797a74515b21ea71925011c6fc9b6b9866ad6bb87da4d972f9f27e5e617"
     },
@@ -3961,6 +3981,10 @@
       "sha256": "c9f7e0dbc6ebeaf8bfd758373c04ecd3bcccdf2394e77861e1a263fc1b7c9814"
     },
     {
+      "path": "lib/nasal-cartilage-quiz.ts",
+      "sha256": "cc8f5ef81e4d86ba897a180ab9ff7839bb80ced605de247e8bbf82da20eb5373"
+    },
+    {
       "path": "lib/neck-attachments.ts",
       "sha256": "2271d7856889efa4c9f42ff25df9754167f10303250e0f9330588e3412e115ff"
     },
@@ -4850,7 +4874,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "a56f6b61dfec5b9e48c97c3c0861798dc396263b341bec93338ce2b966d0e656"
+      "sha256": "19eba2dddf3bbf99258341a653571cc288ac1685f078e6a93cf7a90de2adae5b"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5073,5 +5097,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9faf880a0daff2e2d93d6f6879d8dac5433db0e3cf4f3b889f0f768826734e25"
+  "sha256": "78b93ceb4c71d5fa725a7407f227fad15593093b94925709aeae171abf37c198"
 }

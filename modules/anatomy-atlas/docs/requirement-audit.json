@@ -4,6 +4,14 @@
   "sourceHashes": {
     "lib/dorsal-hand-ultrasound.ts": "45784812cc4fc4343960fb9c3c494d5694caed41c3cfbf38cfc2df6a796c875a",
     "lib/laryngeal-inlet-imaging.ts": "b4fe39b81cda6e7770101a9575b03b7e20c2081be544dd87795812eae741a442",
+    "lib/nasal-cartilage-quiz.ts": "cc8f5ef81e4d86ba897a180ab9ff7839bb80ced605de247e8bbf82da20eb5373",
+    "content/nasal-cartilage-quiz.ts": "b299fd6af4af6dbc93f4e4000d1870ca4cafd8a22f1e5d4e61df6f92865fc53c",
+    "content/nasal-cartilage-quiz-pins.json": "c42f02da2a65fcdc4faaad275c049b77aa48754cfae4df7e0f263b8cbea716ae",
+    "lib/commissural-landmark-quiz.ts": "9402263c5cab269f1fa536800224cf0b1d648c361dd1bb343fa7b54a0fb25b86",
+    "content/commissural-landmark-quiz.ts": "46d762713110bf60bac6d5d39e67b787ed003d2219cce040fe730aa8dd242cd5",
+    "content/commissural-landmark-quiz-pins.json": "b8cbf4c4b6222903af5f7792c71ed25d176c5dac38863f5348e901c943493f8c",
+    "scripts/test-cranial-landmark-quiz.mjs": "8041e333f61e03b86910355bca69bcb63af2210d2bc193ebb86128dec62aecb9",
+    "docs/CRANIAL_LANDMARK_QUIZ.md": "f57c10a72ca12773218277822d2884ba780120181909efa59ede345068665449",
     "content/laryngeal-inlet-imaging.ts": "1f47ff04d07534f4924b276e667c2a8547aa5d5e7537fb82a80baa17df8b5b87",
     "scripts/test-laryngeal-inlet-imaging.mjs": "f6b0fa86585c9a0bd3b450fc82130c43802ec14581a4afc9d7f2c1c104c242e8",
     "docs/LARYNGEAL_INLET_IMAGING.md": "31b6556d13725ef58aefb08cfa8913838a6829035e47d0580ece82135e9f946c",
@@ -708,8 +716,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "f68151b592e3aab2a3b313ae12c301006fb5527a8534a9607e3180686949b0bb",
-    "explicitTopicReadiness": "07be915087447642037c20ec25dd5937baedb500a2bf762714d8b32da7da11b5",
+    "resolvedContentAndRecipeData": "08d6c966d036780c7f24bc51600a5ecb735542eff6524ddfc55a6389f29592c6",
+    "explicitTopicReadiness": "2a5e0c762af5274bf4a8c24b32b732d3806237a870928f298a1331ccf815631c",
     "reasoningQuestionData": "2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62",
     "guidedLearningData": "99c0d622f6e194412ae6a92d4f60e70aee212fe8ef1a39d02167331cb2d51572",
     "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
@@ -2766,10 +2774,10 @@
         "generatedIdentification": 0
       },
       "quiz": {
-        "specificDraft": 1041,
+        "specificDraft": 1048,
         "identityOnly": 0,
         "pending": 1,
-        "generatedIdentification": 62
+        "generatedIdentification": 55
       }
     },
     "nested": {
@@ -2942,10 +2950,10 @@
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 231,
+          "specificDraft": 238,
           "identityOnly": 0,
           "pending": 1,
-          "generatedIdentification": 59
+          "generatedIdentification": 52
         }
       },
       "thorax": {

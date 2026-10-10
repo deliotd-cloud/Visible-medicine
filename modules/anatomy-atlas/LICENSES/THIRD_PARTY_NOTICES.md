@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Nasal and commissural landmark quick checks (10 October 2026)
+
+Five original questions across seven retained selections use factual reading
+links to WSU/Touro university anatomy teaching and Akeret et al. (2022) and
+Aydin et al. (2026) original commissural anatomy studies. Exact URLs and claim
+limits are recorded in `docs/CRANIAL_LANDMARK_QUIZ.md`. No diagrams, scans,
+tables, question-bank items, study data or publisher wording are imported.
+References do not grant asset redistribution rights. Original text/code retain
+MIT terms; source-derived identity pins and existing BodyParts3D geometry keep
+their CC BY 4.0 attribution. No new dependency, fee or geometry. These are
+review drafts, not validated anatomy, tractography or patient registration.
+
 ## Ocular-support quick checks (10 October 2026)
 
 Two original questions reference anatomical facts from Texas Tech's eye

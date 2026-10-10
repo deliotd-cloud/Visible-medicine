@@ -3,6 +3,8 @@ import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
 import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
 import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
 import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
+import { nasalCartilageQuizLesson } from '../lib/nasal-cartilage-quiz';
+import { commissuralLandmarkQuizLesson } from '../lib/commissural-landmark-quiz';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
@@ -355,6 +357,10 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const nasalQuiz = nasalCartilageQuizLesson(s, tab);
+  if (nasalQuiz) return nasalQuiz;
+  const commissuralQuiz = commissuralLandmarkQuizLesson(s, tab);
+  if (commissuralQuiz) return commissuralQuiz;
   const pectoralUltrasound = pectoralBranchUltrasoundLesson(s, tab);
   if (pectoralUltrasound) return pectoralUltrasound;
   const orbitalSupportQuiz = orbitalSupportQuizLesson(s, tab);
