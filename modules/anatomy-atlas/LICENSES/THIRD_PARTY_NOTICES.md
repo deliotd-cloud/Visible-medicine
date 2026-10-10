@@ -3237,3 +3237,14 @@ assets are imported. Original application wording/code follow project MIT
 terms; existing model licences and attribution remain unchanged. Fourteen
 exact-source placements remain drafts requiring radiologist sign-off. No new
 asset, dependency, font, service or fee. See `docs/HAND_VENOUS_QUIZ.md`.
+
+## Facial-bone X-ray orientation — 10 October 2026
+
+Four exact-source draft placements use original short factual wording with
+reading links to the UAMS head-and-neck bone table, Dartmouth's historical 2021
+DX protocol and RadiologyInfo's projection explanation. No publisher prose,
+figures, radiographs or tables are imported or relicensed. Source sites retain
+their rights; free access does not permit asset reuse. Original application
+wording/code retain project MIT terms, and existing BodyParts3D attribution
+remains intact. No new asset, dependency, font, service or fee. Clinical review
+is pending. See `docs/FACIAL_BONE_XRAY.md`.

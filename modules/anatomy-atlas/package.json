@@ -106,6 +106,7 @@
     "suprascapular-vessel-ultrasound:test": "node scripts/pin-suprascapular-vessel-ultrasound.mjs --check && node scripts/record-suprascapular-vessel-ultrasound.mjs --check && node scripts/test-suprascapular-vessel-ultrasound-lesson.mjs && node scripts/test-suprascapular-vessel-ultrasound.mjs && node scripts/test-suprascapular-vessel-ultrasound-history.mjs",
     "hyoid-epiglottis-ultrasound:test": "node scripts/pin-hyoid-epiglottis-ultrasound.mjs --check && node scripts/record-hyoid-epiglottis-ultrasound.mjs --check && node scripts/test-hyoid-epiglottis-ultrasound.mjs && node scripts/test-hyoid-epiglottis-ultrasound-history.mjs",
     "cranial-bone-xray:test": "node scripts/pin-cranial-bone-xray.mjs --check && node scripts/record-cranial-bone-xray.mjs --check && node scripts/test-cranial-bone-xray.mjs && node scripts/test-cranial-bone-xray-history.mjs",
+    "facial-bone-xray:test": "node scripts/test-facial-bone-xray.mjs",
     "camera-orientation-status:test": "node --test scripts/test-camera-orientation-status.mjs && node --experimental-strip-types --test scripts/test-camera-keyboard.mjs && node scripts/validate-camera-orientation.mjs",
     "spinal-bone-ultrasound:test": "node scripts/pin-spinal-bone-ultrasound.mjs --check && node scripts/test-spinal-bone-ultrasound.mjs && node scripts/test-spinal-bone-ultrasound-history.mjs",
     "lower-venous-tour:test": "node scripts/test-lower-venous-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-tour-camera.mjs",

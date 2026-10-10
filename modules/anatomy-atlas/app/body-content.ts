@@ -47,6 +47,7 @@ import { plantarArterialMriLesson } from '../lib/plantar-arterial-mri';
 import { spinalBoneUltrasoundLesson } from '../lib/spinal-bone-ultrasound';
 import { hyoidEpiglottisUltrasoundLesson } from '../lib/hyoid-epiglottis-ultrasound';
 import { cranialBoneXrayLesson } from '../lib/cranial-bone-xray';
+import { facialBoneXrayLesson } from '../lib/facial-bone-xray';
 import { suprascapularVesselUltrasoundLesson } from '../lib/suprascapular-vessel-ultrasound';
 import { deepBrainCoreLesson } from '../lib/deep-brain-core-teaching';
 import { footSurfaceImagingLesson } from '../lib/foot-surface-imaging';
@@ -561,6 +562,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (hyoidEpiglottisUltrasound) return hyoidEpiglottisUltrasound;
   const cranialBoneXray = cranialBoneXrayLesson(s, tab);
   if (cranialBoneXray) return cranialBoneXray;
+  const facialBoneXray = facialBoneXrayLesson(s, tab);
+  if (facialBoneXray) return facialBoneXray;
   const suprascapularVesselUltrasound = suprascapularVesselUltrasoundLesson(s, tab);
   if (suprascapularVesselUltrasound) return suprascapularVesselUltrasound;
   const deepBrainCore = deepBrainCoreLesson(s, tab);

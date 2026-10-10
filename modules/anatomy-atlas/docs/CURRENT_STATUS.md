@@ -46,7 +46,7 @@ Each cell shows draft / pending placements within that specimen's own source fra
 | Function | 1103 | 0 | 1 | 0 |
 | CT | 1004 | 0 | 100 | 0 |
 | MRI | 1045 | 0 | 59 | 0 |
-| X-ray | 478 | 0 | 626 | 0 |
+| X-ray | 482 | 0 | 622 | 0 |
 | Ultrasound | 840 | 0 | 264 | 0 |
 | Pathology | 1103 | 0 | 1 | 0 |
 | Clinical | 1103 | 0 | 1 | 0 |

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "17a3527f757a1dc6440c67fc88bd183054cab4e5962a99ccaaf2a61c64f4c3eb"
+      "sha256": "2fe891ac441ec2c60abe5fa9928121c9791b28ae2c13827e268e4510d22c4bde"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1011,6 +1011,10 @@
     {
       "path": "content/eye-imaging-teaching.ts",
       "sha256": "ff7d6582465ee18d20f915ee8686a1cf9840f40e936ec4db31f3b9a2a02a2065"
+    },
+    {
+      "path": "content/facial-bone-xray.ts",
+      "sha256": "36c85e89fd2ea01a3960eb0fdd8b082809141d586e465e42568bc51e751dae85"
     },
     {
       "path": "content/femoral-component-teaching-bindings.v1.json",
@@ -3277,6 +3281,10 @@
       "sha256": "34f668314fa95d7fd1a8bf8c2e8e26d2cfb5d8db7fe16bcc4a06f3e33dc6c0fe"
     },
     {
+      "path": "lib/facial-bone-xray.ts",
+      "sha256": "d821653ad38d73b56eb09e36a6ad42ed25959f656b8eee8c7e4a4dc871fd423f"
+    },
+    {
       "path": "lib/femoral-components.ts",
       "sha256": "11ceea18314fafee0872c1cdf383f6d132d27b4c9f0c17ba3a5093170c5a8cf5"
     },
@@ -4818,7 +4826,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "d244ed18a2e96b52a1a13bef8deac2f471a1236644378a8c9ca6bbbd906add72"
+      "sha256": "93951e4c2875c3becee5afed8993d96a685a98336180e3347a5e0a3bda1f2c65"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5041,5 +5049,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8407fd2dc598d9cab0dbfce8ef54e0f3d00afb511c541314e02ec1ba179f9f32"
+  "sha256": "f67bae705560450f7cb6e84f68a22b9991f54c9e946e8c443fcfe6ec6327fd64"
 }
