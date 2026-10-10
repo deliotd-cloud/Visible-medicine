@@ -346,6 +346,14 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'lib/dorsal-hand-ultrasound.ts',
+  'lib/laryngeal-inlet-imaging.ts',
+  'content/laryngeal-inlet-imaging.ts',
+  'scripts/test-laryngeal-inlet-imaging.mjs',
+  'docs/LARYNGEAL_INLET_IMAGING.md',
+  'content/dorsal-hand-ultrasound.ts',
+  'scripts/test-dorsal-hand-ultrasound.mjs',
+  'docs/DORSAL_HAND_ULTRASOUND.md',
   'lib/spinal-disc-ultrasound.ts',
   'lib/orbital-sensory-mri.ts',
   'content/orbital-sensory-mri.ts',

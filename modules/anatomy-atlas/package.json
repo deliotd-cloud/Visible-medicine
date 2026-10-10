@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "dorsal-hand-ultrasound:test": "node scripts/test-dorsal-hand-ultrasound.mjs",
+    "laryngeal-inlet-imaging:test": "node scripts/test-laryngeal-inlet-imaging.mjs",
     "ocular-support-quiz:test": "node scripts/test-ocular-support-quiz.mjs",
     "brain-connections-reasoning:test": "node scripts/pin-brain-connections-reasoning.mjs --check && node scripts/test-brain-connections-reasoning.mjs",
     "abdominal-vessel-reasoning:test": "node scripts/pin-abdominal-vessel-reasoning.mjs --check && node scripts/test-abdominal-vessel-reasoning.mjs",

@@ -1,4 +1,6 @@
 import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
+import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
+import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
 import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
 import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
@@ -587,6 +589,10 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalSupportMri) return orbitalSupportMri;
   const thoracoacromialUltrasound = thoracoacromialUltrasoundLesson(s, tab);
   if (thoracoacromialUltrasound) return thoracoacromialUltrasound;
+  const dorsalHandUltrasound = dorsalHandUltrasoundLesson(s, tab);
+  if (dorsalHandUltrasound) return dorsalHandUltrasound;
+  const laryngealInletImaging = laryngealInletImagingLesson(s, tab);
+  if (laryngealInletImaging) return laryngealInletImaging;
   const laryngealImaging = laryngealImagingLesson(s, tab);
   if (laryngealImaging) return laryngealImaging;
   const anteriorCardiacPathology = anteriorCardiacPathologyLesson(s, tab);

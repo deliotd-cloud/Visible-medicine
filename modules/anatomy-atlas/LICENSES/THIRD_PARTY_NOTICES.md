@@ -3248,6 +3248,16 @@ terms; existing model licences and attribution remain unchanged. Fourteen
 exact-source placements remain drafts requiring radiologist sign-off. No new
 asset, dependency, font, service or fee. See `docs/HAND_VENOUS_QUIZ.md`.
 
+## Dorsal hand venous ultrasound — 10 October 2026
+
+Two exact-source placements use original short factual summaries with reading
+links to Bidic et al. (2010, institutional abstract) and Elmegarhi et al. (2018,
+PubMed). No publisher prose, figures, sonograms, tables or other assets are
+imported or relicensed. Their publisher rights remain intact; free-to-read
+status is not an asset reuse grant. Original application wording/code retain
+project MIT terms, with existing BodyParts3D CC BY 4.0 credits unchanged. No
+new asset, dependency, font, service or fee. See `docs/DORSAL_HAND_ULTRASOUND.md`.
+
 ## Facial-bone X-ray orientation — 10 October 2026
 
 Four exact-source draft placements use original short factual wording with
@@ -3258,3 +3268,14 @@ their rights; free access does not permit asset reuse. Original application
 wording/code retain project MIT terms, and existing BodyParts3D attribution
 remains intact. No new asset, dependency, font, service or fee. Clinical review
 is pending. See `docs/FACIAL_BONE_XRAY.md`.
+
+## Laryngeal inlet CT/MRI orientation — 10 October 2026
+
+Eight draft placements use original short factual teaching and reading links
+to TTUHSC anatomy teaching, Al Qahtani et al. (2017), Sakai et al. (1990) and
+Rubin et al. (1998). No published text, figures, CT/MRI images, contours, tables
+or models are copied or relicensed. Article and institutional rights remain
+with their owners; a citation or free-to-read page is not an asset reuse grant.
+Original application wording/code retain project MIT terms, with BodyParts3D
+CC BY 4.0 credits unchanged. No new asset, dependency, font, service or fee.
+Clinical review remains pending. See `docs/LARYNGEAL_INLET_IMAGING.md`.

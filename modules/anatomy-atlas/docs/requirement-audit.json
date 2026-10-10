@@ -2,6 +2,14 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "lib/dorsal-hand-ultrasound.ts": "45784812cc4fc4343960fb9c3c494d5694caed41c3cfbf38cfc2df6a796c875a",
+    "lib/laryngeal-inlet-imaging.ts": "b4fe39b81cda6e7770101a9575b03b7e20c2081be544dd87795812eae741a442",
+    "content/laryngeal-inlet-imaging.ts": "1f47ff04d07534f4924b276e667c2a8547aa5d5e7537fb82a80baa17df8b5b87",
+    "scripts/test-laryngeal-inlet-imaging.mjs": "f6b0fa86585c9a0bd3b450fc82130c43802ec14581a4afc9d7f2c1c104c242e8",
+    "docs/LARYNGEAL_INLET_IMAGING.md": "31b6556d13725ef58aefb08cfa8913838a6829035e47d0580ece82135e9f946c",
+    "content/dorsal-hand-ultrasound.ts": "44e9e88ed5d6c97898287102e6f1c4154db77fa734812ade516b34927f95ca8a",
+    "scripts/test-dorsal-hand-ultrasound.mjs": "d840aafac4fbdd5e1d2a455173c717b6e0b4db7ce1ca4e77b0d11799d4f5431a",
+    "docs/DORSAL_HAND_ULTRASOUND.md": "1fa0a99608e7b34ec51b0d1964968d3c877a7b563fc41a633ab293138388695b",
     "lib/spinal-disc-ultrasound.ts": "bd916458cfcbf09b2b62dbd916c62fc22e1000f50a8ded8922368d2a7dcfeda3",
     "lib/orbital-sensory-mri.ts": "7c9ce4eb10cc6c907e15342a1ddb01ac7719e022b6434886cfbe8d4398c63697",
     "content/orbital-sensory-mri.ts": "4940181686b480bfa11356943aeaa9306585174ce6ff47e5df8932bd352019d7",
@@ -700,8 +708,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "70f9d9efddfbb9c0223f06dff31c842d3befb991b99c4b781bb3f96932e2f7e4",
-    "explicitTopicReadiness": "7ef7dfe9c114c351cc96d39970bec7b99e1a92ffd0d340ceb869447809973468",
+    "resolvedContentAndRecipeData": "f68151b592e3aab2a3b313ae12c301006fb5527a8534a9607e3180686949b0bb",
+    "explicitTopicReadiness": "07be915087447642037c20ec25dd5937baedb500a2bf762714d8b32da7da11b5",
     "reasoningQuestionData": "2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62",
     "guidedLearningData": "99c0d622f6e194412ae6a92d4f60e70aee212fe8ef1a39d02167331cb2d51572",
     "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
@@ -2722,15 +2730,15 @@
         "generatedIdentification": 0
       },
       "ct": {
-        "specificDraft": 1004,
+        "specificDraft": 1008,
         "identityOnly": 0,
-        "pending": 100,
+        "pending": 96,
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 1045,
+        "specificDraft": 1049,
         "identityOnly": 0,
-        "pending": 59,
+        "pending": 55,
         "generatedIdentification": 0
       },
       "xray": {
@@ -2740,9 +2748,9 @@
         "generatedIdentification": 0
       },
       "ultrasound": {
-        "specificDraft": 840,
+        "specificDraft": 842,
         "identityOnly": 0,
-        "pending": 264,
+        "pending": 262,
         "generatedIdentification": 0
       },
       "pathology": {
@@ -2898,15 +2906,15 @@
           "generatedIdentification": 0
         },
         "ct": {
-          "specificDraft": 193,
+          "specificDraft": 197,
           "identityOnly": 0,
-          "pending": 98,
+          "pending": 94,
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 233,
+          "specificDraft": 237,
           "identityOnly": 0,
-          "pending": 58,
+          "pending": 54,
           "generatedIdentification": 0
         },
         "xray": {
@@ -3252,9 +3260,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 110,
+          "specificDraft": 112,
           "identityOnly": 0,
-          "pending": 14,
+          "pending": 12,
           "generatedIdentification": 0
         },
         "pathology": {
