@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ef7f872a16a3502b94a5cf7de4383461c67f4e2169f30b37c503cdcc5fd97d01"
+      "sha256": "0fbf9e0dbc9047d2c13cae2b6701228539c6157653eb6f77fb88f400357a0c2d"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1083,6 +1083,10 @@
     {
       "path": "content/foot-ultrasound-followup.ts",
       "sha256": "78295dfbcd898c38764d4ceb14c921353140f90a1c5175916871dadcbe0bcd00"
+    },
+    {
+      "path": "content/foot-variant-quiz.ts",
+      "sha256": "303b622326b00a1de4fd95350d1d751c18a082de89557b208fb028f71683ca1a"
     },
     {
       "path": "content/foot-vascular-quiz-pins.json",
@@ -3361,6 +3365,10 @@
       "sha256": "da1eafd696222701e71ced7e4ddeda29264dea577b9587f5c3a9611df5a2021a"
     },
     {
+      "path": "lib/foot-variant-quiz.ts",
+      "sha256": "4d071bb249f719eada4ad4df4da016246d026c0346561ac91627d71c100fc89a"
+    },
+    {
       "path": "lib/foot-vascular-anatomy.ts",
       "sha256": "4678ddd09311b67e646004b61cf3b52f207b68678010d39dbe04bb37076ccdd4"
     },
@@ -4874,7 +4882,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "19eba2dddf3bbf99258341a653571cc288ac1685f078e6a93cf7a90de2adae5b"
+      "sha256": "723a07120edfc3331ba9c521d4ed5ffc29ae34526ddc9af72c19cb9501c2814e"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5097,5 +5105,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "78b93ceb4c71d5fa725a7407f227fad15593093b94925709aeae171abf37c198"
+  "sha256": "31d8118bea32e38f126d6c7fb9d7b31a0bf3bc4d1eb4dd8f0f8e434873fa4ff7"
 }

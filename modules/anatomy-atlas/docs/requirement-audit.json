@@ -2,6 +2,10 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "content/foot-variant-quiz.ts": "303b622326b00a1de4fd95350d1d751c18a082de89557b208fb028f71683ca1a",
+    "lib/foot-variant-quiz.ts": "4d071bb249f719eada4ad4df4da016246d026c0346561ac91627d71c100fc89a",
+    "scripts/test-foot-variant-quiz.mjs": "47db259e49fd833dcb30949faac63d9511520c90ce1743d5a7b31a85866f82ef",
+    "docs/FOOT_VARIANT_QUIZ.md": "ddb5f4624eb24c1b182db20fdb20290543b64c7ae3847d9b5fc55dbc2e66632d",
     "lib/dorsal-hand-ultrasound.ts": "45784812cc4fc4343960fb9c3c494d5694caed41c3cfbf38cfc2df6a796c875a",
     "lib/laryngeal-inlet-imaging.ts": "b4fe39b81cda6e7770101a9575b03b7e20c2081be544dd87795812eae741a442",
     "lib/nasal-cartilage-quiz.ts": "cc8f5ef81e4d86ba897a180ab9ff7839bb80ced605de247e8bbf82da20eb5373",
@@ -716,8 +720,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "08d6c966d036780c7f24bc51600a5ecb735542eff6524ddfc55a6389f29592c6",
-    "explicitTopicReadiness": "2a5e0c762af5274bf4a8c24b32b732d3806237a870928f298a1331ccf815631c",
+    "resolvedContentAndRecipeData": "b19d8b6ef11229b36501c20d832a66f8de8a5ceb90ddda0be04378cbe4afe042",
+    "explicitTopicReadiness": "56747119144d424e9a2a19aa87ed365a0e59a39c8b4d8e5da972df040e0eb54e",
     "reasoningQuestionData": "2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62",
     "guidedLearningData": "99c0d622f6e194412ae6a92d4f60e70aee212fe8ef1a39d02167331cb2d51572",
     "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
@@ -2774,10 +2778,10 @@
         "generatedIdentification": 0
       },
       "quiz": {
-        "specificDraft": 1048,
+        "specificDraft": 1050,
         "identityOnly": 0,
         "pending": 1,
-        "generatedIdentification": 55
+        "generatedIdentification": 53
       }
     },
     "nested": {
@@ -3454,10 +3458,10 @@
           "generatedIdentification": 0
         },
         "quiz": {
-          "specificDraft": 120,
+          "specificDraft": 122,
           "identityOnly": 0,
           "pending": 0,
-          "generatedIdentification": 2
+          "generatedIdentification": 0
         }
       },
       "spine": {

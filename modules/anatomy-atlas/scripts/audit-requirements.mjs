@@ -346,6 +346,10 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'content/foot-variant-quiz.ts',
+  'lib/foot-variant-quiz.ts',
+  'scripts/test-foot-variant-quiz.mjs',
+  'docs/FOOT_VARIANT_QUIZ.md',
   'lib/dorsal-hand-ultrasound.ts',
   'lib/laryngeal-inlet-imaging.ts',
   'lib/nasal-cartilage-quiz.ts',

@@ -131,6 +131,11 @@ hold, or treat source tests as browser/GPU or clinical evidence.
 
 ## Focused checks
 
+For a bounded regional authoring batch, use the read-only
+[teaching gap report](TEACHING_GAP_REPORT.md) to query the current resolver by
+region/topic before opening repeated manual audits. Pending is not permission
+to invent modality visibility; establish source-specific evidence first.
+
 From the Atlas checkout:
 
 ```sh

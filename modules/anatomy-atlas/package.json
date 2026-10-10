@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "foot-variant-quiz:test": "node scripts/test-foot-variant-quiz.mjs",
     "dorsal-hand-ultrasound:test": "node scripts/test-dorsal-hand-ultrasound.mjs",
     "laryngeal-inlet-imaging:test": "node scripts/test-laryngeal-inlet-imaging.mjs",
     "cranial-landmark-quiz:test": "node scripts/test-cranial-landmark-quiz.mjs",

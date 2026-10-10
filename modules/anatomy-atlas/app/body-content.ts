@@ -5,6 +5,7 @@ import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
 import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
 import { nasalCartilageQuizLesson } from '../lib/nasal-cartilage-quiz';
 import { commissuralLandmarkQuizLesson } from '../lib/commissural-landmark-quiz';
+import { footVariantQuizLesson } from '../lib/foot-variant-quiz';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
@@ -475,6 +476,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const laryngealFrameworkQuiz = laryngealFrameworkQuizLesson(s, tab);
   if (laryngealFrameworkQuiz) return laryngealFrameworkQuiz;
   const plantarMuscleQuiz = plantarMuscleQuizLesson(s, tab);
+  const footVariantQuiz = footVariantQuizLesson(s, tab);
+  if (footVariantQuiz) return footVariantQuiz;
   if (plantarMuscleQuiz) return plantarMuscleQuiz;
   const suprascapularArterialCt = suprascapularArterialCtLesson(s, tab);
   if (suprascapularArterialCt) return suprascapularArterialCt;

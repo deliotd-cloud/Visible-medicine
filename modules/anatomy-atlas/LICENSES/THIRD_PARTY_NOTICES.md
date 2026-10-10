@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Foot variant quick check (10 October 2026)
+
+One original question across two retained selections cites the lateral-group
+anatomical account in Zaottini et al. (2023), DOI10.15557/jou.2023.0024.
+The CC BY-NC-ND article is a factual reading reference only: no publisher text,
+images, tables, scans or adapted assets are included. New question/code retain
+project MIT terms; existing BodyParts3D identities/geometry retain CC BY 4.0.
+No new dependency or fee. Scope and limitations: `docs/FOOT_VARIANT_QUIZ.md`.
+
 ## Nasal and commissural landmark quick checks (10 October 2026)
 
 Five original questions across seven retained selections use factual reading
