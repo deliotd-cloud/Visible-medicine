@@ -10,8 +10,11 @@
     "lib/thoracic-eus-orientation.ts": "7ccab068671c7eea2eb05ce1bc62ed88e686d7d6336017b94a0c3048841b425e",
     "scripts/test-thoracic-eus-orientation.mjs": "db57e6ebd37af298522551f67fa06fbb63da323da40b9490bada4ebc859b94dc",
     "content/coronary-arterial-xray.ts": "e85cae9bfeb23f0b5b4dd619eb13c38d73743ef9a7a1c43f91bba84b5bcc2ef8",
+    "content/iliac-arterial-xray.ts": "dfbc8796c47cd4f796911e385892594f0579917b028a3ecb7e1369b58f1e3420",
+    "lib/iliac-arterial-xray.ts": "af3da9dd5e960844b3dc1b52231aa472944887b83e8dc98df360e0a5b1c162d6",
+    "scripts/test-iliac-arterial-xray.mjs": "d2c9a623d01f0867e023b0780fb76563f3fdcb056876a6561cf9d00ad9a197b2",
     "lib/coronary-arterial-xray.ts": "399c041f58d26fbd9af7628dc7e18daea97f8a2e234961a08a4f699148274c16",
-    "scripts/test-coronary-arterial-xray.mjs": "8eca6770b3994dd50021356e0864e86fae2074d5b7d67284b1dca98e511fb296",
+    "scripts/test-coronary-arterial-xray.mjs": "c6020a04a9a49689c471b1f9d92f83a80bd36b76983196e52be1bc78f499e4b4",
     "docs/THORACIC_EUS_ORIENTATION.md": "92aba0f48f5199cd81769c45a53bb43ed2e3839e705caa84e08fe9c8c05e88e6",
     "content/foot-variant-quiz.ts": "303b622326b00a1de4fd95350d1d751c18a082de89557b208fb028f71683ca1a",
     "lib/foot-variant-quiz.ts": "4d071bb249f719eada4ad4df4da016246d026c0346561ac91627d71c100fc89a",
@@ -735,8 +738,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "65356b6f1744d3f97fdecf412f91e08d4a101e69007fe332125c898552074fa4",
-    "explicitTopicReadiness": "46473327517ed11db6235522e12ea31542a54810f427e2e5a818b8950df43873",
+    "resolvedContentAndRecipeData": "0624987cba410363f444a7fd1b725632469b660bd525ead65523a7caf6f250d4",
+    "explicitTopicReadiness": "0c3b6cf5587a1219bf29233fa86d27209cb23e9f0eceaa88dc408a882822bc72",
     "reasoningQuestionData": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa",
     "guidedLearningData": "99c0d622f6e194412ae6a92d4f60e70aee212fe8ef1a39d02167331cb2d51572",
     "lib/eye-layer-guide.ts": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb",
@@ -2769,9 +2772,9 @@
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 486,
+        "specificDraft": 492,
         "identityOnly": 0,
-        "pending": 618,
+        "pending": 612,
         "generatedIdentification": 0
       },
       "ultrasound": {
@@ -3057,9 +3060,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 29,
+          "specificDraft": 35,
           "identityOnly": 0,
-          "pending": 77,
+          "pending": 71,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -3113,9 +3116,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 36,
+          "specificDraft": 42,
           "identityOnly": 0,
-          "pending": 46,
+          "pending": 40,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -3337,9 +3340,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 37,
+          "specificDraft": 43,
           "identityOnly": 0,
-          "pending": 58,
+          "pending": 52,
           "generatedIdentification": 0
         },
         "ultrasound": {

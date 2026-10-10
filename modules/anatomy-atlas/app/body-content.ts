@@ -9,6 +9,7 @@ import { footVariantQuizLesson } from '../lib/foot-variant-quiz';
 import { abdominalEusOrientationLesson } from '../lib/abdominal-eus-orientation';
 import { thoracicEusOrientationLesson } from '../lib/thoracic-eus-orientation';
 import { coronaryArterialXrayLesson } from '../lib/coronary-arterial-xray';
+import { iliacArterialXrayLesson } from '../lib/iliac-arterial-xray';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
@@ -557,6 +558,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (thoracicEusOrientation) return thoracicEusOrientation;
   const coronaryArterialXray = coronaryArterialXrayLesson(s, tab);
   if (coronaryArterialXray) return coronaryArterialXray;
+  const iliacArterialXray = iliacArterialXrayLesson(s, tab);
+  if (iliacArterialXray) return iliacArterialXray;
   const abdominalFoldUltrasound = abdominalFoldUltrasoundLesson(s, tab);
   if (abdominalFoldUltrasound) return abdominalFoldUltrasound;
   const spinalDiscUltrasound = spinalDiscUltrasoundLesson(s, tab);

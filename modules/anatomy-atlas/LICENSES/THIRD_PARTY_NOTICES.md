@@ -1,5 +1,14 @@
 # Third-party notices
 
+## Iliac arterial X-ray orientation (10 October 2026)
+
+Six exact existing iliac selections receive original angiographic teaching drafts.
+University anatomy text, ACR/RSNA patient education and primary research abstracts
+are factual reading references, not asset licences; see `docs/ILIAC_ARTERIAL_XRAY.md`.
+No publisher wording, figures, scans, tables or geometry are reproduced/adapted.
+New prose/code use project MIT terms; retained BodyParts3D material keeps its
+existing CC BY 4.0 attribution. No dependency, paid service or image is added.
+
 ## Coronary arterial X-ray orientation (10 October 2026)
 
 Four original short drafts cite University of Minnesota coronary anatomy,
