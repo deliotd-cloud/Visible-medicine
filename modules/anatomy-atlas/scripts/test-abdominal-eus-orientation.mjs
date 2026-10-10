@@ -7,6 +7,8 @@ import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = '4233534fadb842b4d3c074b6881b28e29a6fdd06';
+const completedCommit = 'b03ba458907946c1b1c152149ee5867f8d6a62df';
+const laterAzygosId = 'vm:anatomy:body:thorax:unspecified:vessel:azygos-vein';
 const fmaIds = ['FMA76574', 'FMA15391', 'FMA14768'];
 const branchPins = JSON.parse(readFileSync('content/abdominal-branch-imaging-pins.json', 'utf8'));
 const centralPins = JSON.parse(readFileSync('content/central-vessel-imaging-pins.json', 'utf8'));
@@ -29,6 +31,7 @@ const fromBaseline = path => execFileSync('git', ['show', `${baseline}:${path}`]
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 
 const previous = await exactSourceHistoryApi(baseline, 'review-security');
+const completed = await exactSourceHistoryApi(completedCommit, 'review-security');
 const compiled = await build({
   stdin: {
     contents: "export {abdominalEusOrientationLesson} from './lib/abdominal-eus-orientation';" +
@@ -66,6 +69,7 @@ const raw = JSON.parse(readFileSync(catalogPath, 'utf8'));
 assert.deepEqual(raw, JSON.parse(fromBaseline(catalogPath)));
 const catalog = now.bodyDisplayCatalog(raw);
 assert.deepEqual(catalog, previous.bodyDisplayCatalog(JSON.parse(fromBaseline(catalogPath))));
+assert.deepEqual(catalog, completed.bodyDisplayCatalog(raw));
 assert.deepEqual(now.structures, previous.structures);
 assert.deepEqual(now.dissectionProfiles, previous.dissectionProfiles);
 assert.deepEqual(now.regionalTours, previous.regionalTours);
@@ -81,9 +85,11 @@ for (const structure of catalog.structures) {
   for (const tab of now.contentTabs) {
     const oldLesson = previous.bodyLesson(structure, tab);
     const lesson = now.bodyLesson(structure, tab);
+    const completedLesson = completed.bodyLesson(structure, tab);
     const orientation = now.abdominalEusOrientationLesson(structure, tab);
     if (byId.has(structure.id) && tab === 'ultrasound') {
       assert.equal(oldLesson.readiness, 'pending', structure.id);
+      assert.deepEqual(completedLesson, lesson, `${structure.id}: completed abdominal EUS epoch`);
       assert.deepEqual(lesson, orientation);
       assert.equal(lesson.readiness, 'draft');
       assert.equal(lesson.body, now.abdominalEusTopics[structure.fmaId].body);
@@ -99,15 +105,21 @@ for (const structure of catalog.structures) {
       assert.deepEqual(now.bodyContent(structure, tab), shown);
       changed++;
     } else {
-      assert.deepEqual(lesson, oldLesson, `${structure.id}:${tab}`);
+      assert.deepEqual(completedLesson, oldLesson, `${structure.id}:${tab}: original abdominal EUS transition`);
+      if (structure.id === laterAzygosId && tab === 'ultrasound') {
+        assert.equal(completedLesson.readiness, 'pending');
+        assert.equal(lesson.readiness, 'draft');
+      } else assert.deepEqual(lesson, completedLesson, `${structure.id}:${tab}: current continuity`);
       assert.equal(orientation, undefined, `${structure.id}:${tab}`);
       preserved++;
     }
   }
   const oldPacket = await previous.bodyReviewMaterial(structure.id);
   const packet = await now.bodyReviewMaterial(structure.id);
+  const completedPacket = await completed.bodyReviewMaterial(structure.id);
   assert.equal(packet.approval, false);
   if (byId.has(structure.id)) {
+    assert.deepEqual(packet, completedPacket, `${structure.id}: completed abdominal EUS Review`);
     for (const key of ['source', 'reasoning', 'guidedTours', 'checklist', 'atlasLink', 'limits'])
       assert.deepEqual(packet[key], oldPacket[key], `${structure.id}:${key}`);
     assert.equal(packet.fingerprints.source, oldPacket.fingerprints.source);
@@ -154,7 +166,12 @@ for (const structure of catalog.structures) {
     }
     changedWorksheets++;
   } else {
-    assert.deepEqual(packet, oldPacket, `${structure.id}: review packet`);
+    assert.deepEqual(completedPacket, oldPacket, `${structure.id}: original abdominal EUS Review`);
+    if (structure.id === laterAzygosId) {
+      assert.equal(packet.fingerprints.source, completedPacket.fingerprints.source);
+      assert.notEqual(packet.fingerprints.teaching, completedPacket.fingerprints.teaching);
+      assert.notEqual(packet.materialHash, completedPacket.materialHash);
+    } else assert.deepEqual(packet, completedPacket, `${structure.id}: current Review continuity`);
     preservedWorksheets++;
   }
 }

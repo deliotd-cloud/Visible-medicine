@@ -8,7 +8,7 @@
     "mri": 29,
     "ultrasound": 21
   },
-  "unchangedTopics": 9839,
+  "unchangedTopics": 9830,
   "ultrasoundPending": [
     "FMA87217",
     "FMA4838",
@@ -19,7 +19,7 @@
     "FMA49913",
     "FMA14768"
   ],
-  "bodySchemaRecords": 1102,
+  "bodySchemaRecords": 1104,
   "actualNoteRenders": 79,
   "rejectedSourceTopicCombinations": 1501,
   "uniqueReferenceFacts": 72,
@@ -67,8 +67,15 @@
   },
   "currentLearner": {
     "renderedOriginalPlacements": 79,
-    "laterExactTopicRevisions": 1,
+    "laterExactTopicRevisions": 9,
+    "laterEusDrafts": [
+      "FMA14768",
+      "FMA4838"
+    ],
+    "ultrasoundPending": [
+      "FMA4944"
+    ],
     "geometryOrApprovalChanged": false,
-    "scope": "Actual current learner/export/source guards; original79-placement epoch is separately normalized without repinning."
+    "scope": "Actual current learner/export/source guards; original 79-placement epoch is replayed from immutable Git trees without repinning."
   }
 }

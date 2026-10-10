@@ -3299,6 +3299,16 @@ wording/code retain project MIT terms, and existing BodyParts3D attribution
 remains intact. No new asset, dependency, font, service or fee. Clinical review
 is pending. See `docs/FACIAL_BONE_XRAY.md`.
 
+## Thoracic EUS orientation — 10 October 2026
+
+One exact-source azygos Ultrasound draft uses original short factual teaching
+with reading links to Salama et al. (1997) and Sharma et al. (2013). No publisher
+prose, sonograms, figures, video or other assets are copied or relicensed. Their
+rights remain with their owners; free-to-read access is not a reuse grant.
+Original application wording/code retain MIT terms; existing BodyParts3D
+CC BY 4.0 attribution remains unchanged. No new dependency, asset, service or
+fee. Clinical review pending. See `docs/THORACIC_EUS_ORIENTATION.md`.
+
 ## Laryngeal inlet CT/MRI orientation — 10 October 2026
 
 Eight draft placements use original short factual teaching and reading links

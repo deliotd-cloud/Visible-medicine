@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "bc5bafdd1e7c781d14e42555b62a47f8927c1548e888527d7ecc64e06ba36fd5"
+      "sha256": "030789fcde835f9c562c3888274fcdd80b3fd78960c30ace83b8cab2cbe7c5fe"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2397,6 +2397,10 @@
       "sha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
     },
     {
+      "path": "content/thoracic-eus-orientation.ts",
+      "sha256": "d45a5ff866014539224a80ab3183f4737f72ca098f6c003fe0ef0ded92678b92"
+    },
+    {
       "path": "content/thoracic-hilar-study.ts",
       "sha256": "29337537b45c066543ef0ee4010c4d6dfe2ca985b09726f3fc894535c34c4ac8"
     },
@@ -4645,6 +4649,10 @@
       "sha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077"
     },
     {
+      "path": "lib/thoracic-eus-orientation.ts",
+      "sha256": "7ccab068671c7eea2eb05ce1bc62ed88e686d7d6336017b94a0c3048841b425e"
+    },
+    {
       "path": "lib/thoracic-inlet-xray.ts",
       "sha256": "21b996d128b0c6846e7a3a0d8bffda936f3bc7f7ee8b52911d03d178f54bea83"
     },
@@ -4890,7 +4898,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "9de069fd9d83425850eefbf5c7d52aa1b7fee99325dc3512a569d12421c7aee5"
+      "sha256": "46d44a4001d7fb8838d4d651a4764e239db9634da9e5d3a6206799b07c595318"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5113,5 +5121,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2b454772d47abc58dbff524211672a60e4e9d5ea24b797bf0b1d0d5af9848b52"
+  "sha256": "6f0ce83ebf278b270ce4c054928020514fa7f777cbe314e0734a5050478d7c07"
 }
