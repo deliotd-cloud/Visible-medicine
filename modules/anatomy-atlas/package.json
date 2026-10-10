@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "ocular-support-quiz:test": "node scripts/test-ocular-support-quiz.mjs",
     "brain-connections-reasoning:test": "node scripts/pin-brain-connections-reasoning.mjs --check && node scripts/test-brain-connections-reasoning.mjs",
     "abdominal-vessel-reasoning:test": "node scripts/pin-abdominal-vessel-reasoning.mjs --check && node scripts/test-abdominal-vessel-reasoning.mjs",
     "thoracoacromial-ultrasound:test": "node scripts/pin-thoracoacromial-ultrasound.mjs --check && node scripts/validate-thoracoacromial-ultrasound.mjs",

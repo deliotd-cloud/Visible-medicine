@@ -1,5 +1,6 @@
 import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
 import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
+import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
@@ -356,6 +357,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (pectoralUltrasound) return pectoralUltrasound;
   const orbitalSupportQuiz = orbitalSupportQuizLesson(s, tab);
   if (orbitalSupportQuiz) return orbitalSupportQuiz;
+  const ocularSupportQuiz = ocularSupportQuizLesson(s, tab);
+  if (ocularSupportQuiz) return ocularSupportQuiz;
   const elbowArterialUltrasound = elbowArterialUltrasoundLesson(s, tab);
   if (elbowArterialUltrasound) return elbowArterialUltrasound;
   const pharyngealImaging = pharyngealConstrictorImagingLesson(s, tab);

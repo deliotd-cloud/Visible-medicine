@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Ocular-support quick checks (10 October 2026)
+
+Two original questions reference anatomical facts from Texas Tech's eye
+dissection teaching: https://anatomy.ttuhscep.edu/schemes/eye_ans.html.
+This link is not permission to redistribute publisher content. No source prose,
+figures, tables or question-bank material is copied. Project text/code retain
+MIT terms; existing BodyParts3D surfaces retain their CC BY 4.0 attribution.
+No new model, image, dependency or paid service. Questions remain review drafts;
+see `docs/OCULAR_SUPPORT_QUIZ.md` for exact scope and registration limitations.
+
 ## Brain-connections reasoning (10 October 2026)
 
 Four original application questions reference UTHealth Neuroanatomy Online,

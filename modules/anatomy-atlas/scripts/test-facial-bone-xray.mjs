@@ -30,6 +30,9 @@ const built = await build({
 });
 const now = await import('data:text/javascript;base64,' + Buffer.from(built.outputFiles[0].text).toString('base64'));
 const before = await exactSourceHistoryApi(baseline, 'review-security');
+// Freeze the completed transition; later unrelated teaching must not rewrite it.
+// Live target routing and identity/Review security remain exercised below.
+const completed = await exactSourceHistoryApi('245ccffe3a3161a83ee0fd7be643184519b2887a', 'review-security');
 assert.equal(typeof now.facialBoneXrayLesson, 'function');
 
 const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
@@ -46,7 +49,7 @@ let changed = 0, preserved = 0, refusedIdentities = 0;
 for (const structure of catalog.structures) {
   for (const tab of now.contentTabs) {
     const prior = before.bodyLesson(structure, tab);
-    const current = now.bodyLesson(structure, tab);
+    const current = completed.bodyLesson(structure, tab);
     if (byId.has(structure.id) && tab === 'xray') {
       assert.equal(prior.readiness, 'pending', structure.id);
       assert.equal(current.readiness, 'draft', structure.id);
@@ -175,7 +178,7 @@ for (const { identity } of selected) {
 let changedWorksheets = 0;
 for (const structure of catalog.structures) {
   const oldMaterial = await before.bodyReviewMaterial(structure.id);
-  const material = await now.bodyReviewMaterial(structure.id);
+  const material = await completed.bodyReviewMaterial(structure.id);
   assert.deepEqual(material.source, oldMaterial.source);
   assert.deepEqual(material.reasoning, oldMaterial.reasoning);
   assert.deepEqual(material.guidedTours, oldMaterial.guidedTours);
