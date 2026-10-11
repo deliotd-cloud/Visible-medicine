@@ -69,6 +69,7 @@
     "lower-neck-tour:test": "node scripts/pin-lower-neck-tour.mjs --check && node scripts/test-lower-neck-tour.mjs",
     "orbital-muscle-quiz:test": "node scripts/pin-orbital-muscle-quiz.mjs --check && node scripts/test-orbital-muscle-quiz.mjs",
     "neck-muscle-quiz:test": "node scripts/pin-neck-muscle-quiz.mjs --check && node scripts/test-neck-muscle-quiz.mjs",
+    "suprahyoid-muscle-quiz:test": "node scripts/pin-suprahyoid-muscle-quiz.mjs --check && node scripts/test-suprahyoid-muscle-quiz.mjs",
     "suprascapular-arterial-ct:test": "node scripts/pin-suprascapular-arterial-ct.mjs --check && node scripts/test-suprascapular-arterial-ct.mjs",
     "thigh-deep-muscle-quiz:test": "node scripts/pin-thigh-deep-muscle-quiz.mjs --check && node scripts/test-thigh-deep-muscle-quiz.mjs",
     "mesenteric-tour:test": "node scripts/pin-mesenteric-tour.mjs --check && node scripts/test-mesenteric-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-tour-camera.mjs",

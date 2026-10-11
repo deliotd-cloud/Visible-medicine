@@ -200,6 +200,7 @@ import { abdominalVesselQuizLesson } from '../lib/abdominal-vessel-quiz';
 import { thighDeepMuscleQuizLesson } from '../lib/thigh-deep-muscle-quiz';
 import { orbitalMuscleQuizLesson } from '../lib/orbital-muscle-quiz';
 import { neckMuscleQuizLesson } from '../lib/neck-muscle-quiz';
+import { suprahyoidMuscleQuizLesson } from '../lib/suprahyoid-muscle-quiz';
 import { thoracoacromialQuizLesson } from '../lib/thoracoacromial-quiz';
 import { shoulderGirdleArteryQuizLesson } from '../lib/shoulder-girdle-artery-quiz';
 import { neuroOrganQuizLesson } from '../lib/neuro-organ-quiz';
@@ -461,6 +462,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalMuscleQuiz) return orbitalMuscleQuiz;
   const neckMuscleQuiz = neckMuscleQuizLesson(s, tab);
   if (neckMuscleQuiz) return neckMuscleQuiz;
+  const suprahyoidMuscleQuiz = suprahyoidMuscleQuizLesson(s, tab);
+  if (suprahyoidMuscleQuiz) return suprahyoidMuscleQuiz;
   const thoracoacromialQuiz = thoracoacromialQuizLesson(s, tab);
   if (thoracoacromialQuiz) return thoracoacromialQuiz;
   const shoulderGirdleArteryQuiz = shoulderGirdleArteryQuizLesson(s, tab);

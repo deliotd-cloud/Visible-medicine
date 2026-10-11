@@ -50,7 +50,7 @@ Each cell shows draft / pending placements within that specimen's own source fra
 | Ultrasound | 846 | 0 | 258 | 0 |
 | Pathology | 1103 | 0 | 1 | 0 |
 | Clinical | 1103 | 0 | 1 | 0 |
-| Quiz notes | 1050 | 0 | 1 | 53 |
+| Quiz notes | 1058 | 0 | 1 | 45 |
 
 ## Nested teaching readiness
 

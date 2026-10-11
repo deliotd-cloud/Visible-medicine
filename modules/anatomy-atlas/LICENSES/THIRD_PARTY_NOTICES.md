@@ -1,5 +1,13 @@
 # Third-party notices
 
+## Suprahyoid muscle quick checks (11 October 2026)
+
+Four original questions cover eight existing muscle selections. The university
+anatomy table linked in `docs/SUPRAHYOID_MUSCLE_QUIZ.md` is a factual reference,
+not an asset licence. No source illustration, table or scan is copied. New prose
+and code use project MIT terms; retained geometry keeps its existing attribution
+and licence. No new dependency, model, paid service or mandatory fee is added.
+
 ## Iliac arterial X-ray orientation (10 October 2026)
 
 Six exact existing iliac selections receive original angiographic teaching drafts.
