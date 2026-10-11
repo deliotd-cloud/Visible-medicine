@@ -410,6 +410,7 @@
     "inspection:test": "node scripts/validate-inspection.mjs",
     "study:test": "node scripts/validate-study-views.mjs",
     "imaging:test": "node scripts/validate-imaging-link.mjs",
+    "imaging-status:test": "node scripts/test-imaging-link-status.mjs",
     "didanix-adapter:test": "node scripts/validate-didanix-adapter.mjs",
     "body-education:test": "node scripts/validate-body-education.mjs",
     "imaging-comparison:test": "node scripts/validate-imaging-comparison.mjs",

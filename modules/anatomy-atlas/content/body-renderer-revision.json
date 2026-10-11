@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c24ec94ebc15501a6b7933497be0c9f4ffee4a6e466487bc7959560d6f440407"
+      "sha256": "fb1eb1eea27e0e13c9766e111b8c400500ef80abe4f9f25eec5b3024be306b01"
     },
     {
       "path": "app/body-education-link.ts",
@@ -190,7 +190,7 @@
     },
     {
       "path": "app/imaging-comparison.tsx",
-      "sha256": "a890887d00f1a0593de8d1fb6872047adbcc82b1c5715fd3b365f535b5c391ae"
+      "sha256": "07cd5aa59d2eef7794ab64e636a1ffdb6ccd49d7888861d40cec991914f41927"
     },
     {
       "path": "app/imaging-link.css",
@@ -198,7 +198,7 @@
     },
     {
       "path": "app/imaging-link.tsx",
-      "sha256": "5e106ad4a26e4c4a6a91ee2d76079da5486f66acbcfbbf364f4683e7b55210e8"
+      "sha256": "34fdad522b0b2d4a7facf925c6c7a67ee77dbad1fcba57878c52bed34892eb84"
     },
     {
       "path": "app/independent-study-navigation.tsx",
@@ -2295,6 +2295,14 @@
     {
       "path": "content/superior-temporal-mri.ts",
       "sha256": "6a9b9f8668ac513d3115083de2954f62eb304947b25e19a1646d7a4b1fadc42f"
+    },
+    {
+      "path": "content/suprahyoid-muscle-quiz-pins.json",
+      "sha256": "2f3d0cd02dd72def15fb45e97f334c5e43a9d8bbc8ff6cb54cb4ed6f3f9dfa07"
+    },
+    {
+      "path": "content/suprahyoid-muscle-quiz.ts",
+      "sha256": "099537132486ae95c33e8c17ca92236782ae9f742db902a9d0362e60f146a07b"
     },
     {
       "path": "content/suprascapular-arterial-ct-pins.json",
@@ -4581,6 +4589,10 @@
       "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
+      "path": "lib/suprahyoid-muscle-quiz.ts",
+      "sha256": "e21f1629d80f329181721739a76f8ca50b3bffff7b85df5bb07b255978058f55"
+    },
+    {
       "path": "lib/suprascapular-arterial-ct.ts",
       "sha256": "e5c7336b79d8a003456c2da1d5092226ddffbdc8367bc5e88bcb91ba5e9eeb37"
     },
@@ -4922,7 +4934,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e915c2d08cff14ef6de035335f6ac862f0e3d480371b801f38a8c2c3c0c532d4"
+      "sha256": "95fa82773c35d131e7bc5002a2b358601a9ab3d2cb2eb64998e6db7f24d1ff0d"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5145,5 +5157,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "dbf66a9e6fa70b6ed28607ee2c2e8d56a235e11100ff3001c3663fdcb8ba7f62"
+  "sha256": "8a5b1cae1814d9dac2c4e71ff3d6f8c488f19fbe78595f7da0531033a8266d3e"
 }

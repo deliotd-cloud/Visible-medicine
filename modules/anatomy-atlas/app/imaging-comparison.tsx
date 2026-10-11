@@ -31,7 +31,7 @@ import './imaging-comparison.css';
 const serverSnapshot = () => null;
 export const comparisonMessages = {
   disconnected: 'The comparison viewer is disconnected.',
-  paused: 'Linked selection is paused. Enable it in Imaging link to compare.',
+  paused: 'Live viewer selection is paused. Enable it in Didanix live link to compare.',
   'select-structure': 'Select a structure in the anatomy viewer.',
   'source-mismatch':
     'The mapped anatomy revision has changed. This image is withheld until the mapping is reviewed.',

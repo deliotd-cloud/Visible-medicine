@@ -688,7 +688,7 @@ for (const mode of ['explore', 'dissect', 'practice'])
         'Quick anatomy views',
         'Model arrangement',
         'Saved study views',
-        'Imaging link',
+        'Didanix live link',
       ])
         check(rail.includes(feature), feature + ' stays in the control rail');
       for (const feature of [

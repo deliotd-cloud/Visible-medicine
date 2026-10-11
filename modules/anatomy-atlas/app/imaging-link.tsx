@@ -132,16 +132,20 @@ export function ImagingLink({
   return (
     <details className="vm-imaging-link">
       <summary>
-        Imaging link{' '}
+        Didanix live link{' '}
         <span>
           {!link.adapter
-            ? 'Not connected'
+            ? 'No live viewer'
             : active
               ? 'Selection linked'
               : 'Selection paused'}
         </span>
       </summary>
       <div className="vm-imaging-content">
+        <p>
+          Website CT/MRI anatomy comparisons use separate links. This status
+          applies only to the live Didanix viewer connection.
+        </p>
         <p>
           Link Didanix Education to select corresponding CT, MRI, X-ray or
           ultrasound anatomy in either direction.
@@ -154,8 +158,8 @@ export function ImagingLink({
           </p>
         ) : (
           <p>
-            No imaging viewer is connected. Reference anatomy remains available
-            on its own.
+            No live Didanix viewer is connected. This does not disable the
+            website’s CT/MRI anatomy comparison links or the 3D Atlas.
           </p>
         )}
         <label>
