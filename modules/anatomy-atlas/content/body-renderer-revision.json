@@ -893,6 +893,10 @@
       "sha256": "a8e3ba710d2d1e33777bc2413bb6747ed379351dd781ca526a6a881d4214a35e"
     },
     {
+      "path": "content/cranial-vault-tour-pins.json",
+      "sha256": "89f7ecedc9310afe755422365475b9001484ce3d1370a6bb785d11386974b944"
+    },
+    {
       "path": "content/craniofacial-bone-quiz-pins.json",
       "sha256": "4878c416be963934b36a39b0320405d262641b6cef9287304ef6d62eea91d84e"
     },
@@ -3237,6 +3241,10 @@
       "sha256": "b753047c94c9ad6e63c58e9a7cfad519dd3cb2d1e6bbae3d10bc358fbf88c963"
     },
     {
+      "path": "lib/cranial-vault-tour.ts",
+      "sha256": "78b9b2ff22932c5cdc57799a50e5124b5a4d304d4d3bd1c8df5f03fc8b53e7d3"
+    },
+    {
       "path": "lib/craniofacial-bone-quiz.ts",
       "sha256": "f39ecbceecfae4239b69289e4a408fbd51e3c1f770fc2eda640b6c6658d5b18f"
     },
@@ -4378,7 +4386,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "d63cb895a8448e23b168e9b85e8fa6ec916215f382c04dab94f4e5d5e3121cd9"
+      "sha256": "a06de85beb8bff46c95490b5c123cc1b5a9ec82ad95b62e7caba119ab4c2a875"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -4970,7 +4978,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2796249b15c63ad072f78cf6f94b471e21275d943d275cf36216583d1cefc3b0"
+      "sha256": "de446e8b40be5f6a85eebf48e1f045a577e3b16259d925fe4f58ddb231d46f4c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5193,5 +5201,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c23f003399d21d691d90c8962be0159bb0b7031469b151b107021052ce48e853"
+  "sha256": "5391fb3551e79bc77c2c247630f5440543ae850e8fdb923af77db0cae3be56c1"
 }

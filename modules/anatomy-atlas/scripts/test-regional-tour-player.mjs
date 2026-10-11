@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -62,6 +62,30 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   render();
   return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, mountReady(){autoReady=true;render();}, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
 }
+
+test('Cranial vault tour keeps a stable assembled frame through six smooth stops',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'cranialVaultTour',compact),tour=h.props.tour;
+  const ids=plain(tour.steps.map(s=>s.selectedId));
+  assert.equal(tour.steps.length,6);assert.equal(tour.contextIds.length,0);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles(),['head-neck-skeleton']);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  const frame=plain(h.scene().presetBounds);
+  for(const [i,step]of tour.steps.entries()){
+   assert.equal(h.scene().selectedId,step.selectedId);assert.equal(h.scene().view,step.view);
+   assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);assert.equal(h.scene().isolated,true);
+   assert.deepEqual(plain(h.scene().presetBounds),frame);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+   assert(text(h.tree()).includes(step.caption));if(i<5)h.click('Next');
+  }
+  h.click('Back');h.click('Play');const late=[...h.timers.values()][0].fn;
+  h.click('Pause');late();h.render();assert.equal(h.scene().reset,4);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){const missing=harness(catalog,'cranialVaultTour',compact,id);assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);missing.unmount();}
+ }
+});
 
 test('Diaphragm tour retains six exact surfaces and safe five-stop transitions',()=>{
  for(const compact of [false,true]){

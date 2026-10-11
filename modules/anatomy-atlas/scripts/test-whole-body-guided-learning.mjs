@@ -47,8 +47,8 @@ const player=()=>find('RegionalGuidedLearning');
 
 render();
 const tours=api.wholeBodyTourOptions;
-assert.equal(tours.length,43);assert.equal(new Set(tours.map(t=>t.id)).size,43);
-assert.deepEqual(plain(tours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
+assert.equal(tours.length,44);assert.equal(new Set(tours.map(t=>t.id)).size,44);
+assert.deepEqual(plain(tours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
 assert.equal(tours.filter(t=>t.id==='cardiac-venous-surface-orientation').length,1);
 assert.deepEqual(plain(tours.slice(0,4).map(t=>t.id)),['right-lower-limb-bone-orientation','right-upper-limb-bone-orientation','right-lower-limb-venous-orientation','right-lower-limb-arterial-orientation']);
 assert.deepEqual([...tours.map(t=>t.id)].sort(),[...api.regionalTours.map(t=>t.id)].sort());
@@ -71,6 +71,12 @@ assert.equal(player().key,originalKey,'Searching does not move the active camera
 search('Right lateral sacral');
 assert(choices().includes('pelvic-venous-tributaries-orientation'),'Pelvic venous tour is discoverable from its specific source stop');
 assert.equal(player().key,originalKey,'Pelvic discovery does not move the active camera');
+search('Cranial vault');
+assert(choices().includes('cranial-vault-orientation'),'Cranial guide is discoverable without starting it');
+assert.equal(player().key,originalKey,'Cranial discovery does not move the active camera');
+filter('head-neck');
+assert(choices().includes('cranial-vault-orientation'),'Cranial guide remains in Head and neck');
+filter('all');
 search('Diaphragm');
 assert(choices().includes('diaphragm-boundary-orientation'),'Boundary tour is discoverable without starting it');
 assert.equal(player().key,originalKey,'Diaphragm discovery does not move the active camera');
@@ -85,7 +91,7 @@ assert.match(currentOption().props.children.join(''),/Current tour: .*outside fi
 select('thoracic-airways-vessels');
 assert.equal(player().key,originalKey,'Hidden result cannot be selected');assert.equal(suspends,0);
 find('button',node=>node.props.children==='Clear filters').props.onClick();render();
-assert.equal(choices().length,43);assert.equal(current(),tours[0].id);
+assert.equal(choices().length,44);assert.equal(current(),tours[0].id);
 assert.equal(currentOption().props.disabled,undefined,'Clear filters restores the normal option');
 assert.equal(player().key,originalKey);assert.equal(suspends,0);
 filter('thorax');
@@ -150,7 +156,7 @@ select(tours.find(t=>t.region==='head-neck').id);
 assert.equal(player().props.tour,coronary,'Coronary library keeps regional scope');
 
 props.region='head-neck';reset();
-const orbital=tours.filter(t=>t.region==='head-neck');assert.equal(orbital.length,7);
+const orbital=tours.filter(t=>t.region==='head-neck');assert.equal(orbital.length,8);
 assert.equal(player().props.tour.id,'laryngeal-framework-orientation','Existing head-neck default retained');
 select(orbital[1].id);assert.equal(player().props.tour,orbital[1]);
 select(thoracic[0].id);assert.equal(player().props.tour,orbital[1]);
@@ -256,7 +262,7 @@ for(const choice of [nested.find(item=>item.kind==='eye'),nested.find(item=>item
 assert.equal(suspends,nestedSuspends+2,'Each explicit nested selection suspends imaging once');
 assert.equal(exits,4,'Exit remains available for both nested viewer failures');
 props.region='whole-body';reset();
-assert.equal(choices().length,47,'Whole-body scope admits 43 regional and four exact-bound nested tours');
+assert.equal(choices().length,48,'Whole-body scope admits 44 regional and four exact-bound nested tours');
 const eye=nested.find(item=>item.kind==='eye');assert(eye);
 search(eye.guide.steps[0].title);
 assert(choices().includes(eye.id),'Nested guide step titles are searchable');
