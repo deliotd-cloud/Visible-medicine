@@ -18,10 +18,22 @@ const built = await build({
   bundle: true, platform: 'node', format: 'cjs', write: false,
 });
 let slots = [], cursor = 0, refs = [], refCursor = 0;
+const contextDefaults = new WeakMap();
 // The sixth root useState is the catalog loaded by the normal fetch effect.
 // Supply the same display catalog and keep effects inactive in this CPU harness.
 const shim = {
   ...React,
+  createContext(value) {
+    const context = React.createContext(value);
+    contextDefaults.set(context, value);
+    return context;
+  },
+  useContext(context) {
+    // This isolated root has no HeadSelectionChannel provider. Preserve its
+    // real default (null), without invoking React's absent render dispatcher.
+    assert(contextDefaults.has(context), 'Context must be created by this harness');
+    return contextDefaults.get(context);
+  },
   useState(initial) {
     const i = cursor++;
     if (!(i in slots)) slots[i] = typeof initial === 'function' ? initial() : initial;

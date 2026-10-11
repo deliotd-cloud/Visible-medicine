@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checks": 3853,
+  "checks": 3862,
   "markupCases": 105,
   "supplementalSelectionCases": 33,
   "displayStructures": 1104,
@@ -45,6 +45,10 @@
   "explicitSelectionRecoveryHandler": 1,
   "explicitSelectionRecoveryCallbacks": 3,
   "explicitRemovalFocusCallbackMigration": 1,
+  "exactHistoricalHandlerDeltaCommits": [
+    "3acb1235e6ba58c5f6828e143a58edb90d76d82e",
+    "8b809ca6d8c70afc824acd41dbbf4d10df138fcd"
+  ],
   "regions": 11,
   "wholeBody": true,
   "sourceGeometryChanged": false,

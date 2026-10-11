@@ -3,9 +3,10 @@
 // provenance/evidence fields make each pin auditable; they do not relax checks.
 export const modelFirstHandlerMigrations = Object.freeze({
   changeGuidedLearning: Object.freeze({
-    sha256: 'ca26c667325ac9a0649002025a519f14b27b310cd4abeff081f1c497dc7d5ffb',
-    commits: Object.freeze(['dbbf3613f0d20ac26999ae604facfa60bb06128e', '77244671eaf419095f681bb284737c01ecfbf6bb']),
-    reason: 'Source-bound regional and whole-body tours capture and restore camera/focus without changing dissection state; active exams block entry.',
+    sha256: 'f4dfbf2e1392e1da6df352e3c3f4ed2be8c3d80d40207055ab9d4010eef80fc4',
+    previousSha256: 'ca26c667325ac9a0649002025a519f14b27b310cd4abeff081f1c497dc7d5ffb',
+    commits: Object.freeze(['dbbf3613f0d20ac26999ae604facfa60bb06128e', '77244671eaf419095f681bb284737c01ecfbf6bb', '8b809ca6d8c70afc824acd41dbbf4d10df138fcd']),
+    reason: 'Source-bound tours restore camera/focus; active exams block entry. Explicit mode-switch exit preserves radio focus instead of returning to the launcher.',
     evidence: Object.freeze(['node scripts/test-regional-tour-host.mjs', 'node scripts/test-whole-body-guided-learning.mjs']),
   }),
   captureView: Object.freeze({
@@ -109,6 +110,29 @@ export const modelFirstHandlerMigrations = Object.freeze({
     ]),
   }),
 });
+
+// Complete named-handler deltas replayed from immutable parent/commit sources.
+// These are not permissions to accept arbitrary changes to today's handlers.
+export const modelFirstVerifiedHandlerDeltas = Object.freeze([
+  Object.freeze({
+    commit: '3acb1235e6ba58c5f6828e143a58edb90d76d82e',
+    before: Object.freeze({
+      changeFocus: 'cc74e559b61179458fbfbf2cca4990cad52478afb2c42bbbc6d32368cb579ef1',
+      onSceneSelect: '8c46bc0dafa78adb611e6377e9e1615b11f03d526a1037c254f1738a808598f0',
+    }),
+    after: Object.freeze({
+      changeFocus: '67c27fdb7dae43b197fdb0cf8f16844f615dab35ba6f536c832d366f6578ec94',
+      onSceneSelect: '435862a308fec6cd6a872d03a44af729490150d6bb42805ca2d05439ebbde48f',
+    }),
+    evidence: Object.freeze(['node scripts/test-coronary-arterial-study-ui.mjs', 'node scripts/validate-scene-recovery.mjs']),
+  }),
+  Object.freeze({
+    commit: '8b809ca6d8c70afc824acd41dbbf4d10df138fcd',
+    before: Object.freeze({changeGuidedLearning: 'ca26c667325ac9a0649002025a519f14b27b310cd4abeff081f1c497dc7d5ffb'}),
+    after: Object.freeze({changeGuidedLearning: modelFirstHandlerMigrations.changeGuidedLearning.sha256}),
+    evidence: modelFirstHandlerMigrations.changeGuidedLearning.evidence,
+  }),
+]);
 
 // Applied after the pre-compact and contextual-dissection snapshots are checked.
 export const modelFirstPracticeCallbackMigration = Object.freeze({

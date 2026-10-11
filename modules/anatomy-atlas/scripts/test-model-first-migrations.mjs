@@ -11,6 +11,7 @@ import {
   modelFirstCallbackMigrations,
   modelFirstPracticeCallbackMigration,
   modelFirstLateCallbackMigrations,
+  modelFirstVerifiedHandlerDeltas,
 } from './model-first-migrations.mjs';
 
 const validator = await fs.readFile('scripts/validate-model-first.mjs', 'utf8');
@@ -25,7 +26,7 @@ for (const node of [...ast.statements].reverse()) {
 }
 const runChecks = new Function('fs', 'assert', 'execFileSync', 'createHash', 'ts',
   'modelFirstHandlerMigrations', 'modelFirstCallbackMigrations',
-  'modelFirstPracticeCallbackMigration', 'modelFirstLateCallbackMigrations', 'runInNewContext', 'process',
+  'modelFirstPracticeCallbackMigration', 'modelFirstLateCallbackMigrations', 'modelFirstVerifiedHandlerDeltas', 'runInNewContext', 'process',
   `return (async () => { ${executable} })();`);
 const source = await fs.readFile('app/body-explorer.tsx', 'utf8');
 async function validate(candidate) {
@@ -37,7 +38,7 @@ async function validate(candidate) {
   };
   return runChecks(fixtureFs, assert, execFileSync, createHash, ts,
     modelFirstHandlerMigrations, modelFirstCallbackMigrations,
-    modelFirstPracticeCallbackMigration, modelFirstLateCallbackMigrations, runInNewContext, { argv: [] });
+    modelFirstPracticeCallbackMigration, modelFirstLateCallbackMigrations, modelFirstVerifiedHandlerDeltas, runInNewContext, { argv: [] });
 }
 await validate(source);
 const mutations = [
@@ -47,15 +48,21 @@ const mutations = [
   ['Pinned callback drift', source.replace('exam ? exitPractice() : startExam()',
     'exam ? exitPractice(false) : startExam()')],
   ['Callback multiplicity drift', source + '\nconst unexpectedCallback = <Button onClick={() => exitPractice()} />;\n'],
+  ['Coronary source guard weakened', source.replace('!coronaryArterialStudyFor(catalog, regionStructures)', 'false')],
+  ['Coronary context becomes selectable', source.replace('if (coronaryScene.contextIds.includes(id)) return;', '')],
+  ['Guided mode-switch steals focus', source.replace("if (reason !== 'mode-switch')", 'if (true)')],
+  ['Preparation runs before source guards', source.replace(
+    'function changeFocus(id: string, beforeApply?: () => void) {',
+    'function changeFocus(id: string, beforeApply?: () => void) { beforeApply?.();')],
 ];
 for (const [name, candidate] of mutations) {
   assert.notEqual(candidate, source, `${name} fixture changes source`);
   await assert.rejects(validate(candidate), error => {
     assert.equal(error.code, 'ERR_ASSERTION');
     assert.match(error.message,
-      /Named handlers preserved|Retained callbacks and explicit navigation/);
+      /Named handlers preserved|Retained callbacks and explicit navigation|Exact coronary source\/region guard/);
     return true;
   }, name);
 }
-console.log({ passed: true, exactHistoricalReplays: 4, unchangedSourceAccepted: true,
+console.log({ passed: true, additionalHistoricalHandlerReplays: modelFirstVerifiedHandlerDeltas.length, unchangedSourceAccepted: true,
   rejectedDriftCases: mutations.length, writes: 0 });

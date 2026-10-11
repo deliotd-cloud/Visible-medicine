@@ -14,6 +14,7 @@ import {
   modelFirstHandlerMigrations,
   modelFirstPracticeCallbackMigration,
   modelFirstLateCallbackMigrations,
+  modelFirstVerifiedHandlerDeltas,
 } from './model-first-migrations.mjs';
 
 const hash = (b) => createHash('sha256').update(b).digest('hex');
@@ -140,6 +141,20 @@ for (const [commit, names, callbackMigration] of [
     callbacks: callbacks.sort(compare),
   }, `${commit} changes only the explicitly pinned historical bindings`);
 }
+// Verify omitted historical migrations as exact complete handler/callback deltas.
+// The original baseline and old handler hashes remain unchanged.
+for (const migration of modelFirstVerifiedHandlerDeltas) {
+  const before = bindings(execFileSync('git',
+    ['show', `${migration.commit}^:app/body-explorer.tsx`], {maxBuffer: 2e6}).toString());
+  const after = bindings(execFileSync('git',
+    ['show', `${migration.commit}:app/body-explorer.tsx`], {maxBuffer: 2e6}).toString());
+  same(Object.keys(migration.before), Object.keys(migration.after));
+  for (const [name, fingerprint] of Object.entries(migration.before))
+    same(before.functions[name], fingerprint, `${name} exact historical parent`);
+  same(after, {
+    functions: {...before.functions, ...migration.after}, callbacks: before.callbacks,
+  }, `${migration.commit} changes only its documented handlers, no callbacks`);
+}
 // Search confirmation gained an explicit accepted/rejected result in e36cd877.
 // Replay both exact Git revisions; retain the former hash as evidence instead
 // of rebasing the portable baseline onto today's implementation.
@@ -165,9 +180,8 @@ const findStage = node => {
 };
 findStage(stageAst);
 check(stageNode, 'Current stage handler exists');
-// Only the guarded pre-apply callback is new in these two handlers. Project it
-// away and require the complete former function body and signature to retain
-// their historical exact fingerprints; the baseline itself is never rewritten.
+// Project only the pre-apply callback and exact historically verified coronary
+// guard away. Require every other statement/signature to retain the former hash.
 for (const [name, oldHash] of [
   ['changeStage', stageAfter.functions.changeStage],
   ['changeFocus', 'b39d4aac46b371a7092cd176d85be01ad20151eb56f2dfc4fa5d8e0dce73b8ff'],
@@ -183,6 +197,22 @@ for (const [name, oldHash] of [
   same(printer.printNode(ts.EmitHint.Unspecified, node.parameters[1], stageAst),
     'beforeApply?: () => void', `${name} prepare signature`);
   const statements = [...node.body.statements];
+  if (name === 'changeFocus') {
+    const coronaryAst = ts.createSourceFile('body.tsx', execFileSync('git',
+      ['show', `${modelFirstVerifiedHandlerDeltas[0].commit}:app/body-explorer.tsx`],
+      {maxBuffer: 2e6}).toString(), ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
+    let historical;
+    const findHistorical = current => {
+      if (ts.isFunctionDeclaration(current) && current.name?.text === name) historical = current;
+      ts.forEachChild(current, findHistorical);
+    };
+    findHistorical(coronaryAst);
+    check(historical, 'Coronary historical focus handler exists');
+    same(printer.printNode(ts.EmitHint.Unspecified, statements[1], stageAst),
+      printer.printNode(ts.EmitHint.Unspecified, historical.body.statements[1], coronaryAst),
+      'Exact coronary source/region guard precedes all preparation');
+    statements.splice(1, 1);
+  }
   const prepareAt = name === 'changeStage' ? 1 : 3;
   check(statements.slice(0, prepareAt).every(ts.isIfStatement),
     `${name} all guards precede preparation`);
@@ -274,6 +304,7 @@ same(
     ...Object.fromEntries(Object.entries(preCompactHandlerMigrations).map(
       ([name, migration]) => [name, migration.sha256],
     )),
+    ...Object.assign({}, ...modelFirstVerifiedHandlerDeltas.map(migration => migration.after)),
   },
   'Named handlers preserved except explicit documented functional migrations',
 );
@@ -618,6 +649,7 @@ const context = {
   exports: vmModule.exports,
   console,
   URLSearchParams,
+  structuredClone,
   __atlasCatalog: catalog,
   __atlasSelected: null,
   __atlasMode: 'explore',
@@ -834,6 +866,7 @@ runInNewContext(panelBuild.outputFiles[0].text, {
   module: panelModule,
   exports: panelModule.exports,
   console,
+  structuredClone,
   process: { env: { NODE_ENV: 'test' } },
   window: {
     matchMedia: (query) => {
@@ -1111,6 +1144,7 @@ const result = {
   explicitSelectionRecoveryHandler: 1,
   explicitSelectionRecoveryCallbacks: 3,
   explicitRemovalFocusCallbackMigration: 1,
+  exactHistoricalHandlerDeltaCommits: modelFirstVerifiedHandlerDeltas.map(migration => migration.commit),
   regions: 11,
   wholeBody: true,
   sourceGeometryChanged: false,
