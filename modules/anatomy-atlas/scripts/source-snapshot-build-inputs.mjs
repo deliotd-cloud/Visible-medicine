@@ -11,6 +11,7 @@ import {SnapshotValidationError, validateSnapshotPathWithReview, validateReviewe
   validateReviewedSnapshotIdentity} from './source-snapshot-manifest.mjs';
 import {reviewedPathRecord} from './source-snapshot-reviewed-paths.mjs';
 import {analyzeLiteralUrls} from './source-snapshot-literal-urls.mjs';
+import {auditRendererInputs} from './source-snapshot-renderer-inputs.mjs';
 
 const COMMIT = /^[0-9a-f]{40}$/;
 const CODE = /\.(?:[cm]?[jt]sx?|css|scss|json|html|txt|toml|ya?ml)$/i;
@@ -292,7 +293,8 @@ export async function auditDefaultBuildInputs(options={}) {
     'Installed dependency contents and build-tool plugin resolution are outside this Git-tree audit.',
     'Build-time environment variables and dynamic file discovery are not statically proven.',
     'Literal URL classifications are static references under standard URL/import.meta semantics, not proof against imported-code or dependency side effects or actual build-time reads.',
-    'Generated data-import classifications describe exact source expressions only; emitted bytes, output cardinality, runtime imports, resolved transitive inputs and installed build-tool identities remain unverified.'
+    'Generated data-import classifications describe exact source expressions only; emitted bytes, output cardinality, runtime imports, resolved transitive inputs and installed build-tool identities remain unverified.',
+    'Renderer dependency tracing reproduces the exact pinned source program over the immutable Git tree only. Installed TypeScript identity, filesystem resolution, source execution and isolated-build equivalence remain unverified.'
   ];
   const required=new Map(),queue=[];
   let codeFileCount=0, countLimitReported=false;
@@ -332,7 +334,7 @@ export async function auditDefaultBuildInputs(options={}) {
   const reader=createGitObjectReader({cwd:root,maxBytes:MAX_BLOB,
     spawnProcess:(command,args,options)=>spawn(command,['--no-lazy-fetch',...args],options)});
   const sha=new Map(),visited=new Set();
-  let modelEnumeration=null;
+  let modelEnumeration=null,rendererInputs=null;
   let totalReadBytes=0;
   const readCode=async(path,row)=>{
     if(totalReadBytes+row.bytes>MAX_TOTAL_CODE_BYTES){unresolved.push(issue('CODE_TOTAL_BYTES_LIMIT',path));return;}
@@ -386,6 +388,8 @@ export async function auditDefaultBuildInputs(options={}) {
       } else {
         let knownImport=null;
         const invocations=buildInvocations.get(path)??[];
+        const renderer=await auditRendererInputs({path,sha256:codeSha256,invocations,rows,readCode,add});
+        if(renderer)rendererInputs=renderer;
         if(path===NESTED_GENERATOR&&codeSha256===NESTED_GENERATOR_SHA256&&
            invocations.length===1&&invocations[0]===NESTED_GENERATOR_COMMAND&&
            add(WORKSPACE_BUILDER,`exact nested bundle builder from ${path}`)){
@@ -469,7 +473,7 @@ export async function auditDefaultBuildInputs(options={}) {
   const distinct=values=>[...new Map(values.map(row=>[JSON.stringify(row),row])).values()];
   return {sourceCommit,sourceTree,inputs,
     classifiedReads:distinct(classifiedReads).sort((a,b)=>cmp(a.path,b.path)||(a.line-b.line)),
-    modelEnumeration,
+    modelEnumeration,rendererInputs,
     classifiedUrls:distinct(classifiedUrls).sort((a,b)=>cmp(a.path,b.path)||(a.line-b.line)),
     classifiedImports:distinct(classifiedImports).sort((a,b)=>cmp(a.path,b.path)||(a.line-b.line)),
     unresolved:distinct(unresolved).sort((a,b)=>cmp(a.path??'',b.path??'')||cmp(a.code,b.code)||((a.line??0)-(b.line??0))),

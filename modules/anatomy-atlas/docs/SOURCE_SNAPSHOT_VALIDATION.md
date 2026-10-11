@@ -1,5 +1,36 @@
 # Source-snapshot validation and build-input audit
 
+## Latest checkpoint — 11 October 2026
+
+Follow-up integration coverage now runs the complete auditor against a synthetic
+Git repository containing the exact pinned generator and eight entrypoints.
+Default scene-recovery holds, exact reviewed-policy opt-in and transitive imports,
+stale revision and content-identity refusal are verified. A complete synthetic
+renderer graph still leaves every global admission/build/rights flag false.
+No real review declaration or held-asset exception was created. Ten snapshot test
+files: 169 passes, two platform skips, zero failures. Evidence:
+`F:/VisibleMedicine/staging/20261011-renderer-policy-integration`.
+
+The additive `rendererInputs` audit traces the exact pinned renderer revision
+generator's eight entrypoints and local TypeScript/CSS imports from immutable Git
+blobs. It records raw and normalized hashes, applies the existing policy before
+every read, and refuses missing, held, nonregular, computed or circular inputs.
+It neither executes repository source nor uses generated revision metadata as
+proof. Installed compiler identity and filesystem/build equivalence are unverified.
+
+Against source `29d0738781d1acff7e2feb097d7ff9a10f35376e`, the existing 1,533
+candidate identities, 47 unresolved sites and 25 policy conflicts are unchanged.
+The renderer trace remains incomplete at held `app/scene-recovery.tsx`; no policy
+exception or asset admission was made. Full build closure and isolated restore
+remain outstanding. Nine source-snapshot test files: 167 passes, two skips, zero
+failures. Local evidence: `F:/VisibleMedicine/staging/20261011-build-input-closure`.
+
+The older source-backup boundary below describes its historical source pin, not
+the current default build or current remote-backup state. In particular, the
+current default post-build path no longer requires the authoring ZIP, although
+that archive remains held. Current source-only backup receipts do not establish
+a complete isolated website restore or private-data backup.
+
 The import-only manifest library checks caller-supplied exact-path/hash/byte
 records before a separately reviewed sanitized-source backup can be considered.
 A separate filesystem collector now supplies independently observed staged-file
