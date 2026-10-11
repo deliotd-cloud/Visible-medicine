@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Thoracic mediastinal arterial teaching (12 October 2026)
+
+Five existing arterial selections gain original X-ray orientation notes under
+project MIT terms. UAMS anatomy, ACR/RSNA education and three primary studies are
+factual reading references, not imported anatomy datasets or media licences.
+The bronchial and oesophageal studies have non-commercial reuse terms; no
+publisher text, figure, table, scan, model or other protected media is copied or
+adapted. Only independently written factual summaries and reading links are
+included. Those links do not grant commercial reuse of the publications.
+Existing model attribution/licences remain unchanged. No asset, dependency,
+font, texture, external runtime service or mandatory fee is added. See
+`docs/THORACIC_MEDIASTINAL_ARTERIAL_XRAY.md` for exact references and scope.
+
 ## Pulmonary venous guided learning (11 October 2026)
 
 The four-stop hilar relationship tour adds original captions and code under

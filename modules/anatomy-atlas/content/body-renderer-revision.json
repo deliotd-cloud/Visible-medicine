@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f71d46cfcaa2c81d1d4053d2572d3a0026aadbebdbf941579a2a789538e54ed8"
+      "sha256": "337e677bed5b1657348bcd3cb736108bfaaa368c892ef3549fcd97b6a1031f6e"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2449,6 +2449,10 @@
       "sha256": "4c5ab647f20be853b81b626c99e81318acd3f9884593d08b225c906d93cea5de"
     },
     {
+      "path": "content/thoracic-mediastinal-arterial-xray.ts",
+      "sha256": "150a9ba0cb2bec2adc86cd0f93ef6f26ab704d60975fe58737b5cbd0a8551835"
+    },
+    {
       "path": "content/thoracic-quiz-pins.json",
       "sha256": "92aa67280c42b6966e06a6c2c05b6e9db5e4d90bd21912cda3eaadf67395b714"
     },
@@ -4741,6 +4745,10 @@
       "sha256": "21b996d128b0c6846e7a3a0d8bffda936f3bc7f7ee8b52911d03d178f54bea83"
     },
     {
+      "path": "lib/thoracic-mediastinal-arterial-xray.ts",
+      "sha256": "1e126d2678475d3bb8b88e7cbd4b4a696f2368e792920dbc081f7144a61069b7"
+    },
+    {
       "path": "lib/thoracic-organ-clinical-curriculum.ts",
       "sha256": "6996aea073a7c5e20dbf33a1d607d261eba35051ef8d983d177c6d0704c3d6dc"
     },
@@ -4986,7 +4994,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "803003de32a749e278aba7ea9b51ebb88239664b539055513a5d795c6aee8a7e"
+      "sha256": "34257aefa63dd8b5b82ae8194a97388bfa6e9e24371992aad5267e8bd53ec571"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5209,5 +5217,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "15f9a70446b59fc38cb01fc8612e176c652bea4efb5b3d1f000d0b7972d645a1"
+  "sha256": "bf7ab311a37bc5f5e1ea2f5359a240f87e7368204defdb8dc185bdb06f22a181"
 }

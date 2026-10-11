@@ -12,6 +12,7 @@ import { coronaryArterialXrayLesson } from '../lib/coronary-arterial-xray';
 import { iliacArterialXrayLesson } from '../lib/iliac-arterial-xray';
 import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
 import { thoracicWallArterialXrayLesson } from '../lib/thoracic-wall-arterial-xray';
+import { thoracicMediastinalArterialXrayLesson } from '../lib/thoracic-mediastinal-arterial-xray';
 import { iliacVenousXrayLesson } from '../lib/iliac-venous-xray';
 import { intracranialArterialXrayLesson } from '../lib/intracranial-arterial-xray';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
@@ -571,6 +572,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (abdominalArterialXray) return abdominalArterialXray;
   const thoracicWallArterialXray = thoracicWallArterialXrayLesson(s, tab);
   if (thoracicWallArterialXray) return thoracicWallArterialXray;
+  const thoracicMediastinalArterialXray = thoracicMediastinalArterialXrayLesson(s, tab);
+  if (thoracicMediastinalArterialXray) return thoracicMediastinalArterialXray;
   const iliacVenousXray = iliacVenousXrayLesson(s, tab);
   if (iliacVenousXray) return iliacVenousXray;
   const intracranialArterialXray = intracranialArterialXrayLesson(s, tab);
