@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "intracranial-arterial-xray:test": "node scripts/test-intracranial-arterial-xray.mjs",
     "iliac-venous-xray:test": "node scripts/test-iliac-venous-xray.mjs",
     "iliac-arterial-xray:test": "node scripts/test-iliac-arterial-xray.mjs",
     "abdominal-arterial-xray:test": "node scripts/test-abdominal-arterial-xray.mjs",

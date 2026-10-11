@@ -13,6 +13,7 @@ import { iliacArterialXrayLesson } from '../lib/iliac-arterial-xray';
 import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
 import { thoracicWallArterialXrayLesson } from '../lib/thoracic-wall-arterial-xray';
 import { iliacVenousXrayLesson } from '../lib/iliac-venous-xray';
+import { intracranialArterialXrayLesson } from '../lib/intracranial-arterial-xray';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
@@ -572,6 +573,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (thoracicWallArterialXray) return thoracicWallArterialXray;
   const iliacVenousXray = iliacVenousXrayLesson(s, tab);
   if (iliacVenousXray) return iliacVenousXray;
+  const intracranialArterialXray = intracranialArterialXrayLesson(s, tab);
+  if (intracranialArterialXray) return intracranialArterialXray;
   const abdominalFoldUltrasound = abdominalFoldUltrasoundLesson(s, tab);
   if (abdominalFoldUltrasound) return abdominalFoldUltrasound;
   const spinalDiscUltrasound = spinalDiscUltrasoundLesson(s, tab);

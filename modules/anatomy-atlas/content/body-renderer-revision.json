@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b29fa86d366b3436086b9ea0c6c6c12a57ff0d00b4beab4cbcadc3fd29dda8e7"
+      "sha256": "f71d46cfcaa2c81d1d4053d2572d3a0026aadbebdbf941579a2a789538e54ed8"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1483,6 +1483,10 @@
     {
       "path": "content/interosseous-membrane-projection.ts",
       "sha256": "49197fb8f8f5bd7a09e1160911fc14f2e6897d2e2347b3fad77b2b75571da593"
+    },
+    {
+      "path": "content/intracranial-arterial-xray.ts",
+      "sha256": "bd91c25b55d7e69b1a8c28bd7895f996dd0c6385433703906daba5817bfb4b2c"
     },
     {
       "path": "content/lacrimal-drainage-imaging-pins.json",
@@ -3789,6 +3793,10 @@
       "sha256": "df13b2bdd0ebdea8b0afece440d9171158afade01ec0e1577b012f83b55637ff"
     },
     {
+      "path": "lib/intracranial-arterial-xray.ts",
+      "sha256": "0b7850134fc092039debc3a6a077edfeb7235483e9e2bfbbf9541ff1c82c18b7"
+    },
+    {
       "path": "lib/intrinsic-larynx-tour.ts",
       "sha256": "05e8dc9544e40cd49c2cf5fb086958b401f2b5bd6d3e294309ef54cf6c31ea3a"
     },
@@ -4962,7 +4970,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "017372202918bd698d0ab51ddfa3c5771e86c7145b2ab6266f25ab517451c46a"
+      "sha256": "2796249b15c63ad072f78cf6f94b471e21275d943d275cf36216583d1cefc3b0"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5185,5 +5193,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1cbcaebefb841da026eefefe3b80b1f3a74208d731042ea7f1e03c08ab4b51d5"
+  "sha256": "c23f003399d21d691d90c8962be0159bb0b7031469b151b107021052ce48e853"
 }

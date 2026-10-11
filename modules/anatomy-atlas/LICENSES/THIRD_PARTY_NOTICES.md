@@ -3363,3 +3363,14 @@ teaching pages (linked in `docs/CARDIAC_CAVITY_GUIDED_LEARNING.md`). No source m
 or text extracts are redistributed. Existing admitted BodyParts3D v4 geometry
 and its attribution/license are unchanged. No new dependency, font, model,
 texture, dataset or paid service is introduced; this is not clinical approval.
+
+## Intracranial catheter angiography teaching — 11 October 2026
+
+Twelve exact existing arterial selections use original factual teaching with
+reading links to UTHealth Neuroanatomy Online, ACR/RSNA RadiologyInfo and Eaton
+et al. (2020, PubMed abstract). No source text, images, angiograms, figures,
+tables or datasets are copied or relicensed. Publisher and institutional rights
+remain intact; linking or free access does not grant asset reuse rights.
+Original code and wording retain project MIT terms, with existing BodyParts3D
+CC BY 4.0 attribution unchanged. No new model, texture, dependency, font,
+service or fee is introduced. See `docs/INTRACRANIAL_ARTERIAL_XRAY.md`.
