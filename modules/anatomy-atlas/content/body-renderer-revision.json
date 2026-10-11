@@ -422,7 +422,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "b4fb26d12ed5d2d7883fcf99433bd6d41dfdc5f6f4349fc3c023924f1637e633"
+      "sha256": "bdada66c9e2059805e4ded0e7b1ea3d483ad31e2e333a4fe1bbf43c2ee4a3795"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -442,7 +442,7 @@
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
-      "sha256": "5ca0693e3fa27bf937d3ad324dd5cabff5f6236ca6197205d37bb28950ca678c"
+      "sha256": "332f139a97e90dd5f74de2bfffbeacbc513e96dc46e5aa8123e0baf738bbbdb4"
     },
     {
       "path": "app/workspace-session.ts",
@@ -1810,7 +1810,7 @@
     },
     {
       "path": "content/nested-guided-learning-bindings.v1.json",
-      "sha256": "cbeab92610bf444684099c9459cd11e6ad44e32ec8f0c5549849fc03d1f841fd"
+      "sha256": "8b03a532838a621f7f3b1cddc2492d476c5c3ded269c65166b8973040adc5acc"
     },
     {
       "path": "content/nested-review-bindings.json",
@@ -2118,7 +2118,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "d23b8cad999715bc0498ccdb39dfc1afacc0ed9eb1ac64b0ece6173d07a735f0"
+      "sha256": "ade1bf9dbf3544c36e35a5980192c16ec37cdd10c381d61cef6f085c8a11ac50"
     },
     {
       "path": "content/root-cuff-xray-pins.json",
@@ -3019,6 +3019,10 @@
     {
       "path": "lib/camera-zoom.ts",
       "sha256": "06263f767e08d8b374005f198c72227c3550767628d6096c24fd698331ea432d"
+    },
+    {
+      "path": "lib/cardiac-cavity-guide.ts",
+      "sha256": "063659106338cb0365fdea4f4f87fdf2bcf12a50d4db44670d64160aa3054878"
     },
     {
       "path": "lib/cardiac-circulation.ts",
@@ -4074,7 +4078,7 @@
     },
     {
       "path": "lib/nested-guided-learning.ts",
-      "sha256": "058aeef642549a79d036f601013cc4f7c5cdf08acde3db4c9ea3819b5d680b49"
+      "sha256": "4332abd151e1958b726e22f5f86c58eed2fa12e88a128ecea7717674307380e9"
     },
     {
       "path": "lib/nested-learning-anatomy.ts",
@@ -4942,7 +4946,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "004d6d7241cd272ea9482234a95e457ac549a7a1b6fbbcad6cfc43adfc7523f0"
+      "sha256": "3034804bd07c8b2b9fb7540624067731729ae16bcbe54114fc0910be56172c25"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5165,5 +5169,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2a6f57fe98bc00275839f9fd8406e253c01e0c4498f2c3555415190ad2d32057"
+  "sha256": "c53f350cf46160dd4db668ad014a5dc2e91671a7727c0e53e5c4f5f6e9bb5b07"
 }

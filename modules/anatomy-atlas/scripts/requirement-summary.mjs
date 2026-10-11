@@ -56,6 +56,7 @@ export function renderRequirementSummary(report) {
   const distinctGuidedChildren=new Set(nestedGuides.flatMap(guide=>guide.children.map(child=>child.id))).size;
   const eyeGuides=nestedGuides.filter(guide=>guide.study==='eye');
   const ventricularGuides=nestedGuides.filter(guide=>guide.study==='ventricles');
+  const cardiacGuides=nestedGuides.filter(guide=>guide.study==='cardiac');
   const eyeChildren=new Set(eyeGuides.flatMap(guide=>guide.children.map(child=>child.id))).size;
   const independent = [
     ['Lower limb', anatomy.independentSpecimens[0].representations, 'UM_LIMB_DISSECTION.md'],
@@ -77,6 +78,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 - Guided learning: ${study.guidedLearning.regionalTours} regional tours / ${study.guidedLearning.regionalStops} stops; dedicated shoulder ${study.guidedLearning.shoulderTours} tour / ${study.guidedLearning.shoulderStops} stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 ${eyeGuides.length ? `- Nested eye guided learning: ${eyeGuides.length} source-bound draft guides / ${eyeGuides.reduce((n, guide) => n + guide.steps, 0)} stops across ${eyeChildren} existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.\n` : ''}\
 ${ventricularGuides.length ? `- Nested ventricular guided learning: ${ventricularGuides.length} draft guide / ${ventricularGuides.reduce((n, guide) => n + guide.steps, 0)} stops over four existing source spaces, with optional [schematic CSF movement](CSF_MOTION.md). No new geometry, resolved fluid pathway, measured physiology or clinical approval. Combined nested guidance covers ${distinctGuidedChildren} existing children.\n` : ''}\
+${cardiacGuides.length ? `- Nested cardiac guided learning: ${cardiacGuides.length} draft guide / ${cardiacGuides.reduce((n, guide) => n + guide.steps, 0)} stops over four existing heart cavities. [Heart-cavity guidance](CARDIAC_CAVITY_GUIDED_LEARNING.md) adds no geometry, resolved valves, wall thickness, blood flow or scan registration.\n` : ''}\
 ${study.guidedLearning.independentSpecimens?.length ? `- Independent source-guided dissection: ${study.guidedLearning.independentSpecimens.length} draft sequences / ${study.guidedLearning.independentSpecimens.reduce((n, guide) => n + guide.steps, 0)} steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.\n` : ''}\
 - Find/name identification; ${practice.reasoning.concepts} draft reasoning concepts bound to ${practice.reasoning.exactRepresentations} root-body representations in ${practice.reasoning.regions.join(', ')}. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 

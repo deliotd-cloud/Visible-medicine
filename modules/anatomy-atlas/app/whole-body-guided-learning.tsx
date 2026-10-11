@@ -19,7 +19,7 @@ class NestedTourLoadBoundary extends Component<{children:ReactNode},{failed:bool
 const EyeLayerView=dynamic(()=>import('./eye-layers').then(module=>module.EyeLayerView),{ssr:false,
   loading:({error})=>error?<p role="alert">{nestedLoadFailure}</p>:<p role="status">Loading eye layers…</p>});
 const VentricularView=dynamic(()=>import('./ventricles').then(module=>module.VentricularView),{ssr:false,
-  loading:({error})=>error?<p role="alert">{nestedLoadFailure}</p>:<p role="status">Loading ventricular spaces…</p>});
+  loading:({error})=>error?<p role="alert">{nestedLoadFailure}</p>:<p role="status">Loading anatomy spaces…</p>});
 
 // Whole-body tours explicitly declare their same-catalog regional union.
 // Regional membership is never rewritten, nor independent specimens combined.
@@ -85,7 +85,7 @@ export function WholeBodyGuidedLearning({catalog,assetBase,onExit,region='whole-
         <header><h2>{tour.title}</h2><button type="button" onClick={onExit}>Exit tour</button></header>
         <NestedTourLoadBoundary>
           {tour.eye.kind==='eye'?<EyeLayerView parent={tour.eye.parent} educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>
-            :<VentricularView parent={tour.eye.parent} study="ventricles" educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>}
+            :<VentricularView parent={tour.eye.parent} study={tour.eye.kind} educationCatalog={catalog} assetBase={assetBase} initialGuidedLearningExpanded/>}
         </NestedTourLoadBoundary>
       </div> : null}
   </section>;

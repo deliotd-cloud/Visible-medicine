@@ -3355,3 +3355,11 @@ with their owners; a citation or free-to-read page is not an asset reuse grant.
 Original application wording/code retain project MIT terms, with BodyParts3D
 CC BY 4.0 credits unchanged. No new asset, dependency, font, service or fee.
 Clinical review remains pending. See `docs/LARYNGEAL_INLET_IMAGING.md`.
+
+## Heart-cavity guided learning — 11 October 2026
+
+Six original educational captions cite NHLBI and University of Minnesota primary
+teaching pages (linked in `docs/CARDIAC_CAVITY_GUIDED_LEARNING.md`). No source media
+or text extracts are redistributed. Existing admitted BodyParts3D v4 geometry
+and its attribution/license are unchanged. No new dependency, font, model,
+texture, dataset or paid service is introduced; this is not clinical approval.

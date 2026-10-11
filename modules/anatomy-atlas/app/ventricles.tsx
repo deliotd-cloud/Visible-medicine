@@ -183,6 +183,7 @@ import type { BodyLayout } from '@/lib/body-arrangement';
 import type { RendererHealth } from '@/lib/renderer-health';
 import type { StudyCamera } from '@/lib/study-views';
 import { ventricularGuide, ventricularGuideReferences } from '@/lib/ventricular-guide';
+import { cardiacCavityGuide, cardiacCavityGuideReferences } from '@/lib/cardiac-cavity-guide';
 import { csfMotionAllowed, csfMotionFor } from '@/lib/csf-motion';
 import './eye-layers.css';
 import './ventricular-relationships.css';
@@ -566,7 +567,8 @@ export function VentricularView({
   const [manualRelationshipId, setRelationshipId] = useState<string | null>(null);
   const [manualCirculationIndex, setCirculationIndex] = useState<number | null>(null);
   const [manualInspection, setInspection] = useState(initialInspection);
-  const guide = useMemo(() => study === 'ventricles' ? ventricularGuide(parent) : null, [parent, study]);
+  const guide = useMemo(() => study === 'ventricles' ? ventricularGuide(parent) :
+    study === 'cardiac' ? cardiacCavityGuide(parent) : null, [parent, study]);
   const motion = useMemo(() => study === 'ventricles' ? csfMotionFor(parent) : null, [parent, study]);
   const cameraCapture = useRef<StudyCamera | null>(null);
   const cameraRestore = useRef<StudyCamera | null>(null);
@@ -576,6 +578,8 @@ export function VentricularView({
   const [reducedMotion, setReducedMotion] = useState(true);
   const [pageHidden, setPageHidden] = useState(false);
   const [guidance, setGuidance] = useState<{ id: string; index: number; camera: StudyCamera | null } | null>(null);
+  const guidanceRef = useRef(guidance);
+  guidanceRef.current = guidance;
   const [motionRequested, setMotionRequested] = useState(false);
   const step = guidance?.id === guide?.id ? guide?.steps[guidance!.index] : undefined;
   // Walkthrough visibility and camera are presentation-only; reducer state and history stay manual.
@@ -888,11 +892,11 @@ export function VentricularView({
     setInspection(initialInspection);
   }
   function circulationStep(index: number) {
-    const step = circulationSteps[index];
-    if (!step) return;
-    preset(step.preset, step.selectedIds[0]);
-    setContext(step.context);
-    setView(step.view);
+    const entry = circulationSteps[index];
+    if (guidanceRef.current || !entry) return;
+    preset(entry.preset, entry.selectedIds[0]);
+    setContext(entry.context);
+    setView(entry.view);
     setReset((v) => v + 1);
     setCirculationIndex(index);
   }
@@ -1118,7 +1122,7 @@ export function VentricularView({
             else if (!step) setGuideExpanded(event.currentTarget.open);
           }}>
           <summary>Guided learning</summary>
-          {step ? <section aria-label="Ventricular walkthrough" aria-live="polite">
+          {step ? <section aria-label={study === 'cardiac' ? 'Cardiac cavity walkthrough' : 'Ventricular walkthrough'} aria-live="polite">
             <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
             <h3>{step.title}</h3>
             <p>{step.caption}</p>
@@ -1131,16 +1135,21 @@ export function VentricularView({
               <Button size="sm" variant="outline" onClick={exitGuide}>End walkthrough</Button>
             </div>
             {step.references.map((url) => <a key={url} href={url} target="_blank" rel="noreferrer">
-              {ventricularGuideReferences.find((reference) => reference.url === url)?.title ?? 'Anatomy reference'}
+              {(study === 'cardiac' ? cardiacCavityGuideReferences : ventricularGuideReferences)
+                .find((reference) => reference.url === url)?.title ?? 'Anatomy reference'}
             </a>)}
           </section> : <>
-            <p>{guide.title} · Five source-bound stops · Draft</p>
+            <p>{guide.title} · {guide.steps.length} source-bound stops · Draft</p>
             <Button ref={guideLauncher} size="sm" variant="outline"
               disabled={!ready || pageHidden || !!practiceSnapshot || (initialSelectedId !== undefined && !initialSelection)}
-              onClick={() => guideStep(0)}>Start ventricular walkthrough</Button>
+              onClick={() => guideStep(0)}>{study === 'cardiac' ? 'Start cardiac cavity walkthrough' : 'Start ventricular walkthrough'}</Button>
           </>}
-          <p data-testid="ventricular-tour-source-scope">Draft source-space teaching · CSF markers are schematic, not measured physiology or connected circulation.</p>
-          <details data-testid="ventricular-tour-limitations">
+          <p data-testid={study === 'cardiac' ? 'cardiac-cavity-tour-source-scope' : 'ventricular-tour-source-scope'}>
+            {study === 'cardiac'
+              ? 'Draft source-space teaching · Cavity orientation only; no wall, valve, flow, cardiac phase or patient registration.'
+              : 'Draft source-space teaching · CSF markers are schematic, not measured physiology or connected circulation.'}
+          </p>
+          <details data-testid={study === 'cardiac' ? 'cardiac-cavity-tour-limitations' : 'ventricular-tour-limitations'}>
             <summary>Tour scope &amp; limitations</summary>
             <p>{guide.limitation}</p>
           </details>
@@ -1374,7 +1383,7 @@ export function VentricularView({
             )}
           </div>
         )}
-        {circulationSteps.length > 0 &&
+        {!step && circulationSteps.length > 0 &&
           (circulation ? (
             <section
               className="ventricular-relationship cardiac-circulation"
@@ -1413,7 +1422,7 @@ export function VentricularView({
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={() => setCirculationIndex(null)}
+                  onClick={() => { if (!guidanceRef.current) setCirculationIndex(null); }}
                 >
                   Exit walkthrough
                 </Button>

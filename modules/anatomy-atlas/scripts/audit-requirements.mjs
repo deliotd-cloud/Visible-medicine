@@ -1152,6 +1152,19 @@ const nestedVentricularGuides=[{parentId:ventricularOption.parent.id,study:'vent
   steps:5,representations:4,readiness:'draft',geometryChanged:false}];
 for(const path of ['lib/ventricular-guide.ts','lib/csf-motion.ts','app/csf-motion.tsx','content/csf-motion.v1.json'])sourceHashes[path]=hash(await read(path));
 sourceHashes.nestedVentricularGuidedLearningData=hash(JSON.stringify({inventory:nestedVentricularGuides,guide:ventricularOption.guide}));
+const cardiacOptions=discoverableGuides.filter(option=>option.kind==='cardiac');
+assert.equal(cardiacOptions.length,1,'Exactly one source-bound cardiac cavity guide');
+const cardiacOption=cardiacOptions[0];
+assert.equal(cardiacOption.guide.steps.length,6);
+const cardiacTargets=nestedTargets.filter(t=>t.study==='cardiac'&&t.parentId===cardiacOption.parent.id);
+assert.equal(cardiacTargets.length,4);
+assert.deepEqual([...new Set(cardiacOption.guide.steps.flatMap(s=>s.ids))].sort(),cardiacTargets.map(t=>t.structureId).sort());
+const nestedCardiacGuides=[{parentId:cardiacOption.parent.id,study:'cardiac',guideId:cardiacOption.id,
+  parentSourceHash:cardiacOption.parentHash,parentSourceFiles:cardiacOption.parent.sources,
+  children:cardiacTargets.map(t=>({id:t.structureId,sourceHash:t.sourceHash,sourceFiles:t.structure.sources})),
+  steps:6,representations:4,readiness:'draft',geometryChanged:false}];
+sourceHashes['lib/cardiac-cavity-guide.ts']=hash(await read('lib/cardiac-cavity-guide.ts'));
+sourceHashes.nestedCardiacGuidedLearningData=hash(JSON.stringify({inventory:nestedCardiacGuides,guide:cardiacOption.guide}));
 const pelvicGuidedDissection = hraPelvicGuidedDissection(hraPelvisDefinition);
 assert(pelvicGuidedDissection, 'Admitted pelvic source guide must resolve exactly');
 const abdominalGuide = abdominalGuidedDissection(abdominalWallDefinition);
@@ -1611,7 +1624,7 @@ const report = {
       independentSpecimens: independentGuides.map(guide => ({ specimenKey: guide.specimenKey, guideId: guide.id,
         sourceFrame: guide.sourceFrame, steps: guide.steps.length,
         representations: new Set(guide.steps.flatMap(step => step.ids)).size, geometryChanged: false })),
-      nestedStudies: [...nestedEyeGuides,...nestedVentricularGuides],
+      nestedStudies: [...nestedEyeGuides,...nestedVentricularGuides,...nestedCardiacGuides],
       csfMotion: {readiness:'draft',mode:'schematic-in-space-oscillation',spaces:4,markers:160,
         fluidSimulation:false,measuredPhysiology:false,connectionsResolved:false},
       readiness: 'draft',

@@ -10,7 +10,8 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 - 159 dissection stages / 209 focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: 43 regional tours / 255 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Nested eye guided learning: 2 source-bound draft guides / 8 stops across 15 existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.
-- Nested ventricular guided learning: 1 draft guide / 5 stops over four existing source spaces, with optional [schematic CSF movement](CSF_MOTION.md). No new geometry, resolved fluid pathway, measured physiology or clinical approval. Combined nested guidance covers 19 existing children.
+- Nested ventricular guided learning: 1 draft guide / 5 stops over four existing source spaces, with optional [schematic CSF movement](CSF_MOTION.md). No new geometry, resolved fluid pathway, measured physiology or clinical approval. Combined nested guidance covers 23 existing children.
+- Nested cardiac guided learning: 1 draft guide / 6 stops over four existing heart cavities. [Heart-cavity guidance](CARDIAC_CAVITY_GUIDED_LEARNING.md) adds no geometry, resolved valves, wall thickness, blood flow or scan registration.
 - Independent source-guided dissection: 9 draft sequences / 73 steps. [Female pelvis](HRA_PELVIC_GUIDED_DISSECTION.md), [abdominal wall and back](WALL_BACK_GUIDED_DISSECTION.md), [kidneys](RENAL_GUIDED_ABDOMINAL_BONES.md) and [lower-limb regions](UM_LIMB_GUIDED_DISSECTION.md) reuse admitted surfaces in separate source frames; no new anatomy or validated surgical planes.
 - Find/name identification; 190 draft reasoning concepts bound to 343 root-body representations in shoulder-arm, foot, thigh, pelvis, leg, forearm, head-neck, spine, thorax, abdomen, hand. [Reasoning practice](REASONING_PRACTICE.md) is separate from Quiz-tab notes.
 
@@ -46,7 +47,7 @@ Each cell shows draft / pending placements within that specimen's own source fra
 | Function | 1103 | 0 | 1 | 0 |
 | CT | 1008 | 0 | 96 | 0 |
 | MRI | 1049 | 0 | 55 | 0 |
-| X-ray | 492 | 0 | 612 | 0 |
+| X-ray | 496 | 0 | 608 | 0 |
 | Ultrasound | 846 | 0 | 258 | 0 |
 | Pathology | 1103 | 0 | 1 | 0 |
 | Clinical | 1103 | 0 | 1 | 0 |

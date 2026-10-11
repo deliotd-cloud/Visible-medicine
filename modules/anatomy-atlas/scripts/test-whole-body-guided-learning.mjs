@@ -20,7 +20,7 @@ const mod={exports:{}};
 runInNewContext(built.outputFiles[0].text,{module:mod,exports:mod.exports,require(id){return id==='next/dynamic'?(_loader,options)=>{deferred.push(options);return deferred.length===1?'EyeLayerView':'VentricularView';}:id==='react'?{...React,useId:()=>':tour-picker:',useState:initial=>{const index=hookIndex++;if(!(index in hooks))hooks[index]=initial;return[hooks[index],next=>{hooks[index]=next;}];}}:require(id);}});
 const api=mod.exports,plain=value=>JSON.parse(JSON.stringify(value));
 assert.equal(deferred.length,2,'Nested viewers stay deferred');
-for(const [options,pendingText] of [[deferred[0],'Loading eye layers…'],[deferred[1],'Loading ventricular spaces…']]){
+for(const [options,pendingText] of [[deferred[0],'Loading eye layers…'],[deferred[1],'Loading anatomy spaces…']]){
  const pending=options.loading({error:null,isLoading:true});
  assert.equal(pending.props.role,'status');assert.equal(pending.props.children,pendingText);
  const failed=options.loading({error:new Error('private-loader-detail')});
@@ -256,9 +256,20 @@ for(const choice of [nested.find(item=>item.kind==='eye'),nested.find(item=>item
 assert.equal(suspends,nestedSuspends+2,'Each explicit nested selection suspends imaging once');
 assert.equal(exits,4,'Exit remains available for both nested viewer failures');
 props.region='whole-body';reset();
-assert.equal(choices().length,46,'Whole-body scope admits 43 regional and three exact-bound nested tours');
+assert.equal(choices().length,47,'Whole-body scope admits 43 regional and four exact-bound nested tours');
 const eye=nested.find(item=>item.kind==='eye');assert(eye);
 search(eye.guide.steps[0].title);
 assert(choices().includes(eye.id),'Nested guide step titles are searchable');
 filter('thorax');assert(!choices().includes(eye.id),'Nested tours respect regional filtering');
+search('');
+const cardiac=api.nestedGuidedStudyOptions(props.catalog,'thorax')[0];
+assert.equal(cardiac.kind,'cardiac');assert(choices().includes(cardiac.id));
+select(cardiac.id);
+assert.equal(find('VentricularView').props.study,'cardiac','Shared nested viewer receives cardiac rather than ventricular study');
+assert.equal(find('VentricularView').props.parent.id,cardiac.parent.id);
+assert(find('VentricularView').props.initialGuidedLearningExpanded);
+assert.equal(find('VentricularView').props.autoplay,undefined,'Cardiac guidance waits for explicit Start');
+props.region='thorax';reset();
+assert(choices().includes(cardiac.id));assert(!choices().includes(eye.id));
+select(cardiac.id);assert.equal(find('VentricularView').props.study,'cardiac');
 console.log(JSON.stringify({regionalTours:tours.length,nestedTours:nested.length,filters:true,regionalAssertions:true,lazyFailurePrivacy:true,sharedExit:true}));
