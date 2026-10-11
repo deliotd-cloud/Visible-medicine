@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "bf564ecd151b117641ff8c403d0158fcd6bd5530a8c3cae6d0109c5155dd4767"
+      "sha256": "c58049a560bf5db00a38bb9b24255db88ad1e31b710d8c5c85b6744d797f9fa9"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2469,6 +2469,10 @@
       "sha256": "5dacb5c3a4681c893cc5bd63da239227e454dc7769f546b632e596476050fd16"
     },
     {
+      "path": "content/thoracic-wall-arterial-xray.ts",
+      "sha256": "854403910fda778deacf288dcb18612bce82e66e30235028fc478ef947d58757"
+    },
+    {
       "path": "content/thoracoabdominal-organ-imaging-pins.json",
       "sha256": "e8c92ef7101f083c10c75c0b109c5bcd58197fe5a307ffd8203fcfee8d66a129"
     },
@@ -4745,6 +4749,10 @@
       "sha256": "aa4b5716c43b620e7765ba8534aac7ed56fdd6b8029573a19e7c9c19a4dfc179"
     },
     {
+      "path": "lib/thoracic-wall-arterial-xray.ts",
+      "sha256": "254d380f9af9a48ada81294fea5c0dafc2d6b522379d45993298bafdab2fd432"
+    },
+    {
       "path": "lib/thoracoabdominal-organ-imaging.ts",
       "sha256": "c503474a75696b55f6bf6bd13bb01b85a60b79c1bc63e0740eb522d81966f720"
     },
@@ -4946,7 +4954,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3034804bd07c8b2b9fb7540624067731729ae16bcbe54114fc0910be56172c25"
+      "sha256": "8e5f751fbd003d27e7d3401c3dc3a89e9d4191f8b8c5e67658d4f878b48ef6f4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5169,5 +5177,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c53f350cf46160dd4db668ad014a5dc2e91671a7727c0e53e5c4f5f6e9bb5b07"
+  "sha256": "5e28476266bdff83e4da11ad77a7934f2893568ff847318bf47e69253085e9d0"
 }
