@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "fb1eb1eea27e0e13c9766e111b8c400500ef80abe4f9f25eec5b3024be306b01"
+      "sha256": "bf564ecd151b117641ff8c403d0158fcd6bd5530a8c3cae6d0109c5155dd4767"
     },
     {
       "path": "app/body-education-link.ts",
@@ -491,6 +491,10 @@
     {
       "path": "content/abdominal-arterial-pins.json",
       "sha256": "173b19ad9e1ee70e9af87eea6dc4f9c026d5adbdce3d10975e27b35daa8c1573"
+    },
+    {
+      "path": "content/abdominal-arterial-xray.ts",
+      "sha256": "a8d5a81d892219631d8124fc1022cc8648e7ff5c94378c8fb226306b3c91631c"
     },
     {
       "path": "content/abdominal-arterial.ts",
@@ -2721,6 +2725,10 @@
       "sha256": "d0cd7fcf59177aa82a7dbbd26a64cda991e4674948d51f3d1043a51302950064"
     },
     {
+      "path": "lib/abdominal-arterial-xray.ts",
+      "sha256": "6724b88019a672f0b449bfd89b0d187cdf354d96052f1fb88dc4da167aa5dfc8"
+    },
+    {
       "path": "lib/abdominal-arterial.ts",
       "sha256": "23f20b2c03f6b4e2fbe13d47de0af0ba0ad25e36dc8baae4439b43448531fe03"
     },
@@ -4934,7 +4942,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "95fa82773c35d131e7bc5002a2b358601a9ab3d2cb2eb64998e6db7f24d1ff0d"
+      "sha256": "004d6d7241cd272ea9482234a95e457ac549a7a1b6fbbcad6cfc43adfc7523f0"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5157,5 +5165,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9d94682b1837a21e6fdf4a0e2b3ed3e68207d55e751eb1eca4fc86bf3ddb8c96"
+  "sha256": "2a6f57fe98bc00275839f9fd8406e253c01e0c4498f2c3555415190ad2d32057"
 }
