@@ -7,8 +7,10 @@ when embedded, in the head-neck region and not opening an independent specimen.
 Duplicate, unknown, missing or top-level requests retain regular presentation.
 Existing study/source parsers and selection-channel identity checks still apply.
 
-At widths up to 700px, the shared header is bounded and scrollable in DOM order;
-root and nested drawing tracks retain useful height. Controls, source disclosures,
+The shared header uses a native closed "3D tools & modes" disclosure. At widths
+up to 700px, its opened contents are bounded and scrollable in DOM order, nested
+study headings are compact, and root/nested drawing tracks retain useful height.
+Controls, source disclosures,
 teaching and licence links remain reachable through scrolling. No metadata,
 source, assessment, registration or entitlement decision is changed by this flag.
 The containing website must keep native scan and comparison controls available.

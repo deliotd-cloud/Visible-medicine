@@ -1,9 +1,9 @@
 html,body,#root { height:100%; min-height:0; overflow:hidden; }
 .module-recovery { padding:24px; }
 
-/* Explicit website comparison at a narrow iframe width. The shared header
-   keeps DOM/focus order but scrolls within one short row. The model follows
-   within the first viewport; every existing control remains reachable. */
+/* Explicit website comparison at a narrow iframe width. Native disclosure
+   leaves the complete shared toolbar in DOM/focus order and makes the model
+   visible before the learner opens the tools. */
 @media (max-width:700px) {
   html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] {
     overflow-x:hidden;
@@ -12,11 +12,32 @@ html,body,#root { height:100%; min-height:0; overflow:hidden; }
     overscroll-behavior:contain;
   }
   html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > .body-topbar {
+    display:block;
     flex:none;
     min-height:0;
-    max-height:72px;
-    overflow-y:auto;
+    padding:2px 8px;
+    max-height:min(190px,65dvh);
+    overflow:auto;
     scrollbar-gutter:stable;
+  }
+  html[data-comparison-presentation='compare'] .atlas-comparison-tools { width:100%; min-width:0; }
+  html[data-comparison-presentation='compare'] .atlas-comparison-tools > summary {
+    cursor:pointer;
+    min-height:36px;
+    padding:6px 4px;
+    color:var(--vm-ivory);
+    font-weight:600;
+  }
+  html[data-comparison-presentation='compare'] .atlas-comparison-tools > summary:focus-visible {
+    outline:3px solid var(--vm-teal);
+    outline-offset:-3px;
+  }
+  html[data-comparison-presentation='compare'] .atlas-comparison-tools-content {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:4px 8px;
+    padding-bottom:6px;
   }
   html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > :is(.body-layout,.atlas-inline-study) {
     flex:none;
@@ -34,11 +55,43 @@ html,body,#root { height:100%; min-height:0; overflow:hidden; }
     min-height:0;
     grid-template-rows:auto minmax(240px,40dvh) auto auto auto;
   }
-  /* Nested Brainstem/Pons/Midbrain studies use the same compact header.
-     Source status and full controls continue below the viewport on scroll. */
+  /* Nested Brainstem/Pons/Midbrain studies retain the source status and study
+     switcher while their heading and camera row leave room for the model. */
   html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > .atlas-inline-study.eye-layers-dialog {
     grid-template-rows:auto auto;
+    gap:2px;
+    padding:4px;
     overflow:visible;
+  }
+  html[data-comparison-presentation='compare'] .atlas-inline-study .brain-study-heading {
+    gap:2px 6px;
+    align-items:center;
+  }
+  html[data-comparison-presentation='compare'] .atlas-inline-study .brain-study-heading [data-slot='dialog-title'] {
+    font-size:.875rem;
+    line-height:1.15;
+  }
+  html[data-comparison-presentation='compare'] .atlas-inline-study .brain-study-heading [data-slot='dialog-description'] {
+    margin:0;
+    font-size:.75rem;
+    line-height:1.15;
+  }
+  html[data-comparison-presentation='compare'] .atlas-inline-study .brain-study-heading :is([data-slot='select-trigger'],button) {
+    min-height:32px;
+    height:auto;
+    padding:3px 8px;
+    font-size:.8125rem;
+    line-height:1.2;
+  }
+  html[data-comparison-presentation='compare'] .atlas-inline-study .eye-layer-scene-tools {
+    margin:2px 4px 0;
+    gap:2px 4px;
+  }
+  html[data-comparison-presentation='compare'] .atlas-inline-study .eye-layer-scene-tools :is(button,[data-slot='select-trigger']) {
+    min-height:32px;
+    padding:3px 8px;
+    font-size:.8125rem;
+    line-height:1.2;
   }
   html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] .atlas-inline-study .eye-layer-viewport {
     grid-template-rows:auto minmax(250px,42dvh) auto;

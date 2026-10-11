@@ -28,7 +28,8 @@ const params:StudySearchParams=Object.fromEntries([...new Set(query.keys())].map
 }));
 const specimen=parseContainedSpecimen(params,region);
 const embedded=window.self !== window.top;
-document.documentElement.dataset.comparisonPresentation = comparisonPresentationEnabled(query,region,embedded,specimen.status) ? 'compare' : '';
+const comparisonMode=comparisonPresentationEnabled(query,region,embedded,specimen.status);
+document.documentElement.dataset.comparisonPresentation = comparisonMode ? 'compare' : '';
 const backToRegion=()=>window.location.assign('/atlas-runtime/head-neck/index.html?region='+region);
 createRoot(document.getElementById('root')!).render(
   <ModuleBoundary>{region && specimen.status!=='invalid'
@@ -44,7 +45,7 @@ createRoot(document.getElementById('root')!).render(
             ? <Kidneys assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
             : <AbdominalWall assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>}
         </Suspense></InlineStudy></main>
-      : <HeadSelectionChannel revision={region==='head-neck'?__VM_HEAD_SOURCE_REVISION__:''}><BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" embedded={embedded} assetBase="/atlas-runtime/head-neck"/></HeadSelectionChannel>
+      : <HeadSelectionChannel revision={region==='head-neck'?__VM_HEAD_SOURCE_REVISION__:''}><BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" embedded={embedded} comparisonMode={comparisonMode} assetBase="/atlas-runtime/head-neck"/></HeadSelectionChannel>
     : <section className="module-recovery" role="alert"><h2>This region link cannot be opened</h2><p>No alternative region or structure has been selected.</p><a href="/atlas" target="_top">Return to the Atlas</a></section>}
   </ModuleBoundary>
 );

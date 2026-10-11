@@ -261,6 +261,7 @@ export default function BodyExplorer({
   assetBase = '',
   presentation = 'standalone',
   embedded = false,
+  comparisonMode = false,
 }: {
   initialRegion: string;
   studyLink?: ParsedStudyLink;
@@ -268,8 +269,11 @@ export default function BodyExplorer({
   presentation?: 'standalone' | 'panel';
   /** Presentation only: the containing website supplies its own brand/header. */
   embedded?: boolean;
+  /** Embedded head/neck comparison keeps the full header behind a native disclosure. */
+  comparisonMode?: boolean;
 }) {
   const sharedHeader = presentation === 'panel' && embedded;
+  const compactComparison = sharedHeader && comparisonMode;
   const profile = Object.hasOwn(dissectionProfiles, initialRegion)
     ? dissectionProfiles[initialRegion]
     : dissectionProfiles['whole-body'];
@@ -1830,6 +1834,37 @@ export default function BodyExplorer({
     </>
   );
 
+  const headerContent = <>
+    {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
+      compact description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/> : <Brand />}
+    <WorkspaceModes guidedLearning={regionalTour || whole ? {active:guidedLearning,onChange:changeGuidedLearning} : undefined} />
+    {!guidedLearning && <>
+      <AtlasSearch
+        catalog={catalog}
+        localRegionOnly={presentation === 'panel'}
+        region={initialRegion}
+        side={side as StudySide}
+        onSelect={select}
+        onWindow={changeStage}
+        onFocus={changeFocus}
+        onDissect={openNested}
+      />
+      <WorkspaceFocus />
+      <WorkspaceOnly modes={['practice']} className="vm-practice-start">
+        <Button
+          variant="outline"
+          onClick={() =>
+            exam ? exitPractice() : startExam()
+          }
+          disabled={!exam && practiceBlocked}
+        >
+          <GraduationCap />
+          {exam ? 'Exit practice' : 'Start practice'}
+        </Button>
+      </WorkspaceOnly>
+    </>}
+  </>;
+
   return (
     <AtlasWorkspace exam={exam} presentation={presentation} session={workspace}
       onKeyDown={event => handleDissectionHistoryKey(event, {
@@ -1839,34 +1874,10 @@ export default function BodyExplorer({
       }, undoDissection, redoDissection)}>
       <PracticeAttention answered={answered} exam={exam} />
       <header className="body-topbar" data-shared-header={sharedHeader} data-guided-learning={guidedLearning}>
-        {sharedHeader ? <RegionHeading title={title} count={regionStructures.length}
-          compact description={whole ? 'Explore the body by region or anatomical system.' : region!.description}/> : <Brand />}
-        <WorkspaceModes guidedLearning={regionalTour || whole ? {active:guidedLearning,onChange:changeGuidedLearning} : undefined} />
-        {!guidedLearning && <>
-        <AtlasSearch
-          catalog={catalog}
-          localRegionOnly={presentation === 'panel'}
-          region={initialRegion}
-          side={side as StudySide}
-          onSelect={select}
-          onWindow={changeStage}
-          onFocus={changeFocus}
-          onDissect={openNested}
-        />
-        <WorkspaceFocus />
-        <WorkspaceOnly modes={['practice']} className="vm-practice-start">
-          <Button
-            variant="outline"
-            onClick={() =>
-              exam ? exitPractice() : startExam()
-            }
-            disabled={!exam && practiceBlocked}
-          >
-            <GraduationCap />
-            {exam ? 'Exit practice' : 'Start practice'}
-          </Button>
-        </WorkspaceOnly>
-        </>}
+        {compactComparison ? <details className="atlas-comparison-tools">
+          <summary>3D tools &amp; modes</summary>
+          <div className="atlas-comparison-tools-content">{headerContent}</div>
+        </details> : headerContent}
       </header>
       {guidedLearning && (whole || regionalToursFor(initialRegion).length>1) ? <WholeBodyGuidedLearning key={initialRegion} region={initialRegion} catalog={catalog} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : guidedLearning && regionalTour ? <RegionalGuidedLearning catalog={catalog} tour={regionalTour} assetBase={assetBase} pausedImaging={presentation === 'panel' && !exam && !inlineStudy ? pausedTourImaging : undefined} onExit={()=>changeGuidedLearning(false)} /> : <>
       <div className="body-layout" hidden={inlineStudy}>
