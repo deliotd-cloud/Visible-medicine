@@ -1,2 +1,49 @@
 html,body,#root { height:100%; min-height:0; overflow:hidden; }
 .module-recovery { padding:24px; }
+
+/* Explicit website comparison at a narrow iframe width. The shared header
+   keeps DOM/focus order but scrolls within one short row. The model follows
+   within the first viewport; every existing control remains reachable. */
+@media (max-width:700px) {
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] {
+    overflow-x:hidden;
+    overflow-y:auto;
+    height:100dvh;
+    overscroll-behavior:contain;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > .body-topbar {
+    flex:none;
+    min-height:0;
+    max-height:72px;
+    overflow-y:auto;
+    scrollbar-gutter:stable;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > :is(.body-layout,.atlas-inline-study) {
+    flex:none;
+    min-height:0;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > .body-layout {
+    overflow:visible;
+    grid-template-rows:auto auto;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] .body-workspace {
+    overflow:visible;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] .body-canvas {
+    flex:none;
+    min-height:0;
+    grid-template-rows:auto minmax(240px,40dvh) auto auto auto;
+  }
+  /* Nested Brainstem/Pons/Midbrain studies use the same compact header.
+     Source status and full controls continue below the viewport on scroll. */
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] > .atlas-inline-study.eye-layers-dialog {
+    grid-template-rows:auto auto;
+    overflow:visible;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] .atlas-inline-study .eye-layer-viewport {
+    grid-template-rows:auto minmax(250px,42dvh) auto;
+  }
+  html[data-comparison-presentation='compare'] .body-app[data-presentation='panel'] .atlas-inline-study .eye-layer-controls {
+    overflow:visible;
+  }
+}
