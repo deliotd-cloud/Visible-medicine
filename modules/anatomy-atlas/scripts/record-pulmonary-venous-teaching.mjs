@@ -2,7 +2,6 @@
 import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {contentContext} from './renal-xray-predecessor-test-build.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import pins from '../content/pulmonary-venous-teaching-pins.json' with {type:'json'};
 
@@ -14,7 +13,10 @@ assert.equal(hash(pins),pinsHash,'Immutable pulmonary venous pins changed');
 assert.equal(pins.parentCommit,parentCommit);
 assert.deepEqual(pins.tabs,['ct','mri','quiz']);
 assert.equal(pins.entries.length,4);
-const {api,catalog:raw}=await contentContext();
+// This immutable transition describes its completed milestone, not later drafts.
+const completedCommit='0b38b93e5626f34bf1a79a45734171371d52fb3d';
+const api=await exactSourceHistoryApi(completedCommit,'pulmonary-venous-teaching');
+const raw=JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json','utf8'));
 const parent=await exactSourceHistoryApi(parentCommit,'review-security');
 const display=api.bodyDisplayCatalog(raw),oldDisplay=parent.bodyDisplayCatalog(raw);
 assert.deepEqual(display,oldDisplay,'Source catalog changed');

@@ -3,10 +3,10 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
+import {execFileSync} from 'node:child_process';
 import ts from 'typescript';
-import {contentContext} from './renal-xray-predecessor-test-build.mjs';
+import {contentContext} from './content-contract-tools.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
-import {build} from './renal-xray-predecessor-test-build.mjs';
 import {build as componentBuild} from './workspace-component-test-build.mjs';
 import {bodyNoteRenderCallback} from './body-note-render-callback.mjs';
 import {beforePulmonaryVenousTeaching,hashPulmonaryVenousTeaching as hash} from './pulmonary-venous-teaching-history.mjs';
@@ -16,9 +16,15 @@ import centralPins from '../content/central-vessel-imaging-pins.json' with {type
 
 const shown=lesson=>{const {readiness:_readiness,...content}=lesson;return content;};
 const snapshot=(api,display)=>({body:display.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(t=>[t,api.bodyLesson(s,t)]))})),shoulder:api.structures,recipes:api.dissectionProfiles});
-const {api:current,catalog:raw,body:records}=await contentContext();
+const completedCommit='0b38b93e5626f34bf1a79a45734171371d52fb3d';
+const {api:live,catalog:raw}=await contentContext();
+// Every historical application import comes from the exact completed milestone.
+// Live resolver and learner controls remain independently exercised below.
+const current=await exactSourceHistoryApi(completedCommit,'pulmonary-venous-teaching');
+const records=current.bodyContentRecords(raw);
 const display=current.bodyDisplayCatalog(raw);
-const old=await exactSourceHistoryApi(transition.parentCommit,'review-security',{'content/body-renderer-revision.json':await readFile('content/body-renderer-revision.json','utf8')});
+const completedRenderer=execFileSync('git',['--no-replace-objects','show',completedCommit+':content/body-renderer-revision.json'],{encoding:'utf8',windowsHide:true,maxBuffer:16e6});
+const old=await exactSourceHistoryApi(transition.parentCommit,'review-security',{'content/body-renderer-revision.json':completedRenderer});
 const genuineOld=await exactSourceHistoryApi(transition.parentCommit,'review-security');
 assert.deepEqual(display,old.bodyDisplayCatalog(raw));assert.equal(hash(display),pins.catalogHash);
 assert.deepEqual(current.structures,old.structures);assert.deepEqual(current.dissectionProfiles,old.dissectionProfiles);
@@ -26,6 +32,18 @@ assert.equal(hash(snapshot(old,display)),pins.previousSnapshotHash);
 assert.equal(hash(snapshot(current,display)),transition.currentSnapshotHash);
 assert.equal(hash(current.pulmonaryVenousTeachingConcepts),transition.conceptsHash);
 assert.equal(hash(current.pulmonaryVenousTeachingReferences),transition.referencesHash);
+assert.deepEqual(live.bodyDisplayCatalog(raw),display);
+assert.equal(hash(live.pulmonaryVenousTeachingConcepts),transition.conceptsHash);
+assert.equal(hash(live.pulmonaryVenousTeachingReferences),transition.referencesHash);
+let liveSlots=0,liveSourceRefusals=0;
+for(const entry of transition.entries){
+  const lesson=live.bodyLesson(entry.identity,entry.tab);
+  assert.equal(hash(lesson),entry.currentHash,'Current pulmonary teaching changed without a recorded revision');
+  assert.deepEqual(live.pulmonaryVenousTeachingLesson(entry.identity,entry.tab),lesson);
+  assert.deepEqual(live.bodyContent(entry.identity,entry.tab),shown(lesson));
+  liveSlots++;
+}
+assert.equal(liveSlots,12);
 const targetIds=new Set(pins.entries.map(e=>e.identity.id));assert.equal(targetIds.size,4);
 const entries=new Map(transition.entries.map(e=>[e.identity.id+'|'+e.tab,e]));assert.equal(entries.size,12);
 let changed=0,other=0,sourceRefusals=0;
@@ -61,19 +79,22 @@ for(const {identity}of pins.entries){
   for(const path of leaves(identity)){
     const bad=structuredClone(identity);let node=bad;for(const key of path.slice(0,-1))node=node[key];
     const key=path.at(-1),prior=node[key];node[key]=typeof prior==='number'?prior+.01:typeof prior==='boolean'?!prior:String(prior)+'-foreign';
-    for(const tab of pins.tabs){assert.equal(current.pulmonaryVenousTeachingLesson(bad,tab),undefined);sourceRefusals++;}
+    for(const tab of pins.tabs){assert.equal(current.pulmonaryVenousTeachingLesson(bad,tab),undefined);sourceRefusals++;assert.equal(live.pulmonaryVenousTeachingLesson(bad,tab),undefined);liveSourceRefusals++;}
   }
   for(const bad of [{...identity,unexpected:true},(()=>{const s=structuredClone(identity);delete s.coverageNote;return s;})(),(()=>{const s=structuredClone(identity);s.sources.push(structuredClone(s.sources[0]));return s;})()]){
-    for(const tab of pins.tabs){assert.equal(current.pulmonaryVenousTeachingLesson(bad,tab),undefined);sourceRefusals++;}
+    for(const tab of pins.tabs){assert.equal(current.pulmonaryVenousTeachingLesson(bad,tab),undefined);sourceRefusals++;assert.equal(live.pulmonaryVenousTeachingLesson(bad,tab),undefined);liveSourceRefusals++;}
   }
   for(const bad of [{...identity,id:identity.id+'-foreign'},{...identity,fmaId:identity.fmaId+'-foreign'}]){
-    for(const tab of pins.tabs){assert.equal(current.pulmonaryVenousTeachingLesson(bad,tab),undefined);sourceRefusals++;}
+    for(const tab of pins.tabs){assert.equal(current.pulmonaryVenousTeachingLesson(bad,tab),undefined);sourceRefusals++;assert.equal(live.pulmonaryVenousTeachingLesson(bad,tab),undefined);liveSourceRefusals++;}
   }
   const pristine=current.pulmonaryVenousTeachingLesson(identity,'quiz');
   const altered=current.pulmonaryVenousTeachingLesson(identity,'quiz');altered.bullets[0]+=' foreign';altered.citations.push('https://foreign.example/');
   assert.deepEqual(current.pulmonaryVenousTeachingLesson(identity,'quiz'),pristine,'Quiz helper must return detached arrays');
+  const livePristine=live.pulmonaryVenousTeachingLesson(identity,'quiz');
+  const liveAltered=live.pulmonaryVenousTeachingLesson(identity,'quiz');liveAltered.bullets[0]+=' foreign';liveAltered.citations.push('https://foreign.example/');
+  assert.deepEqual(live.pulmonaryVenousTeachingLesson(identity,'quiz'),livePristine,'Current quiz helper must return detached arrays');
 }
-const review=await import('data:text/javascript;base64,'+Buffer.from((await build({stdin:{contents:"export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';export {bodyReviewDisplayMatches} from './lib/body-review-display-integrity';export {bodyLesson,bodyContent} from './app/body-content';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'})).outputFiles[0].text).toString('base64'));
+const review=current;
 let currentPackets=0,unrelatedPackets=0,oldRefusals=0,forgedRefusals=0;
 for(const s of display.structures){
   const before=await old.bodyReviewMaterial(s.id),now=await review.bodyReviewMaterial(s.id);
@@ -143,7 +164,7 @@ const detached=restored.bodyLesson(first.identity,'ct');detached.body='foreign';
 
 // Exercise actual lazy learner components, answers, retry, focus and exam hiding.
 const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
-const component=await componentBuild({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';export {StructureQuickCheck} from './app/structure-quick-check';export {QuizNotes,AtlasWorkspace} from './app/atlas-workspace';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const component=await componentBuild({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';export {StructureQuickCheck} from './app/structure-quick-check';export {QuizNotes,AtlasWorkspace} from './app/atlas-workspace';export {teachingHeading} from './lib/teaching-heading';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
 const load=react=>{const scope={exports:{}};runInNewContext(component.outputFiles[0].text,{module:scope,exports:scope.exports,require:id=>id==='react'?react:id==='next/link'?()=>{throw Error('Unrelated navigation');}:require(id),console,structuredClone});return scope.exports;};
 const actual=load(React),walk=(node,found=[])=>{if(React.isValidElement(node)){found.push(node);React.Children.forEach(node.props.children,child=>walk(child,found));}return found;};
 const text=node=>typeof node==='string'?node:!node?'':Array.isArray(node)?node.map(text).join(''):text(node.props?.children);
@@ -153,13 +174,13 @@ const shim={...React,useContext:()=>({exam:false}),useId:()=>active?'pulmonary-v
   useRef(initial){if(!active)return React.useRef(initial);const i=refCursor++;return refs[i]??(refs[i]={current:initial});}};
 const events=load(shim);let quizRenders=0,interactions=0;
 for(const {identity}of pins.entries){
-  const lesson=current.bodyLesson(identity,'quiz'),props={question:lesson.body,choices:lesson.bullets,correctAnswer:lesson.correctAnswer,explanation:lesson.explanation};
+  const lesson=live.bodyLesson(identity,'quiz'),props={question:lesson.body,choices:lesson.bullets,correctAnswer:lesson.correctAnswer,explanation:lesson.explanation};
   const attempt=events.StructureQuickCheck(props);assert.equal(attempt.key,JSON.stringify(props));
   states=[];refs=[];cursor=0;refCursor=0;active=true;let note=events.QuizNotes({structure:identity});active=false;
   assert.equal(walk(note).find(n=>typeof n.type==='function'&&n.type.name==='LazyBodyTeaching').props.enabled,false);
   note.props.onToggle({currentTarget:{open:true}});cursor=0;active=true;note=events.QuizNotes({structure:identity});active=false;
   const lazy=walk(note).find(n=>typeof n.type==='function'&&n.type.name==='LazyBodyTeaching');assert(lazy.props.enabled);
-  const loaded=lazy.props.children({bodyContent:current.bodyContent}),check=walk(loaded).find(n=>typeof n.type==='function'&&n.type.name==='StructureQuickCheck');
+  const loaded=lazy.props.children({bodyContent:live.bodyContent}),check=walk(loaded).find(n=>typeof n.type==='function'&&n.type.name==='StructureQuickCheck');
   assert.equal(check.key,identity.id);assert.deepEqual(JSON.parse(JSON.stringify(check.props)),props);
   assert.deepEqual(walk(loaded).filter(n=>n.type==='a').map(n=>n.props.href),lesson.citations);
   const html=render(React.createElement(actual.StructureQuickCheck,props));assert.equal((html.match(/type="radio"/g)||[]).length,4);assert(html.includes('<fieldset'));
@@ -179,8 +200,8 @@ let noteRenders=0;
 for(const tab of ['ct','mri']){
   const code=ts.transpile(`(${callback})('${tab}')`,{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React});
   for(const {identity}of pins.entries){
-    const lesson=current.bodyLesson(identity,tab);
-    const html=render(runInNewContext(code,{React,SourceDisplayNotes:actual.SourceDisplayNotes,selected:identity,bodyContent:current.bodyContent,catalog:display,side:'both',exam:false,ScanLine:()=>null,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,openNested(){throw Error('Unexpected nested specimen');}}));
+    const lesson=live.bodyLesson(identity,tab);
+    const html=render(runInNewContext(code,{React,teachingHeading:actual.teachingHeading,SourceDisplayNotes:actual.SourceDisplayNotes,selected:identity,bodyContent:live.bodyContent,catalog:display,side:'both',exam:false,ScanLine:()=>null,WorkspaceModeButton:({children})=>React.createElement('button',null,children),ComponentImagingNotes:()=>null,openNested(){throw Error('Unexpected nested specimen');}}));
     assert(html.includes(render(React.createElement('p',null,lesson.body))));
     for(const bullet of lesson.bullets)assert(html.includes(render(React.createElement('li',null,bullet))));
     for(const [index,url]of lesson.citations.entries()){assert(html.includes(`href="${url}"`));assert(html.includes(`Reference ${index+1}`));}
@@ -188,4 +209,4 @@ for(const tab of ['ct','mri']){
   }
 }
 assert.equal(quizRenders,4);assert.equal(interactions,4);assert.equal(noteRenders,8);
-console.log(JSON.stringify({changed,other,unrelatedPackets,currentPackets,genuineOldPacketsRefused:oldRefusals,forgedRefusals,sourceRefusals,predecessorRefusals,quizRenders,interactions,noteRenders,clinicalApproval:false}));
+console.log(JSON.stringify({historicalCommit:completedCommit,changed,other,unrelatedPackets,currentPackets,genuineOldPacketsRefused:oldRefusals,forgedRefusals,sourceRefusals,predecessorRefusals,liveSlots,liveSourceRefusals,quizRenders,interactions,noteRenders,clinicalApproval:false}));

@@ -16,9 +16,12 @@ assert.equal(sha(JSON.stringify(pins)),'2aa5a042cc29d1125e5419ac1eac4c9d43eda493
 const sourceOnly=process.argv.includes('--source-only');
 
 async function load(mode='current'){
-  const plugins=mode==='previous'?[{name:'baseline-tour-registry',setup(b){
+  // Freeze this admission transition; later tours verify their own complete
+  // before/current evidence instead of silently changing the historical scope.
+  const registry=mode==='previous'?baseline:'74a9c14258969ae33324d3f680be0f364e270463';
+  const plugins=mode!=='source'?[{name:'baseline-tour-registry',setup(b){
     b.onLoad({filter:/[\\/]lib[\\/]regional-tours\.ts$/,namespace:'workspace-test'},args=>({
-      contents:execFileSync('git',['show',baseline+':lib/regional-tours.ts'],{encoding:'utf8',maxBuffer:32e6}),
+      contents:execFileSync('git',['show',registry+':lib/regional-tours.ts'],{encoding:'utf8',maxBuffer:32e6}),
       loader:'ts',resolveDir:dirname(args.path),
     }));
   }}]:[];

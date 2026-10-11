@@ -1,0 +1,507 @@
+{
+  "schemaVersion": 1,
+  "baseline": "74a9c14258969ae33324d3f680be0f364e270463",
+  "tourRevision": "pulmonary-venous-hilar-relationships-20261011-r1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-pulmonary-vein",
+      "fmaId": "FMA49914",
+      "name": "Right superior pulmonary vein",
+      "sourceName": "right superior pulmonary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA49914",
+      "bounds": {
+        "min": [
+          -0.37140801548957825,
+          4.349300384521484,
+          0.38331300020217896
+        ],
+        "max": [
+          -0.14016400277614594,
+          4.617700099945068,
+          0.5653600096702576
+        ]
+      },
+      "center": [
+        -0.2557860091328621,
+        4.483500242233276,
+        0.47433650493621826
+      ],
+      "anchor": [
+        -0.25931400060653687,
+        4.48520040512085,
+        0.47599801421165466
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3020",
+          "sha256": "074ba67bb3db8f93d6ac7d4e9d2bd1ddcca6e54a2bcb765ec146a9fd30bb3aa8"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-inferior-pulmonary-vein",
+      "fmaId": "FMA49911",
+      "name": "Right inferior pulmonary vein",
+      "sourceName": "right inferior pulmonary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA49911",
+      "bounds": {
+        "min": [
+          -0.33806800842285156,
+          4.112800121307373,
+          0.2604289948940277
+        ],
+        "max": [
+          -0.06283020228147507,
+          4.288900375366211,
+          0.3902049958705902
+        ]
+      },
+      "center": [
+        -0.20044910535216331,
+        4.200850248336792,
+        0.32531699538230896
+      ],
+      "anchor": [
+        -0.17592698335647583,
+        4.173699855804443,
+        0.2966970205307007
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3040",
+          "sha256": "2e15b98f227f16c3dcacab1a93a26d42e07cd2c2d72ba34b1ef438396f598a12"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-pulmonary-vein",
+      "fmaId": "FMA49916",
+      "name": "Left superior pulmonary vein",
+      "sourceName": "left superior pulmonary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA49916",
+      "bounds": {
+        "min": [
+          0.33699798583984375,
+          4.188799858093262,
+          0.31547796726226807
+        ],
+        "max": [
+          0.8181610107421875,
+          4.732199668884277,
+          0.6084799766540527
+        ]
+      },
+      "center": [
+        0.5775794982910156,
+        4.4604997634887695,
+        0.4619789719581604
+      ],
+      "anchor": [
+        0.5861729979515076,
+        4.45359992980957,
+        0.4640119969844818
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2925",
+          "sha256": "e87124704e4ca94bfe3206a571e464fe8ccc41afe0f36ee5ccf46cf00aaf4918"
+        },
+        {
+          "file": "FJ2933",
+          "sha256": "64e0d2deec1d847be95f41a25c616935c9b400f233a2c07a8c453a3441f80a35"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-inferior-pulmonary-vein",
+      "fmaId": "FMA49913",
+      "name": "Left inferior pulmonary vein",
+      "sourceName": "left inferior pulmonary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA49913",
+      "bounds": {
+        "min": [
+          0.3284890055656433,
+          4.015400409698486,
+          0.03518100827932358
+        ],
+        "max": [
+          0.7297419905662537,
+          4.36359977722168,
+          0.4131690263748169
+        ]
+      },
+      "center": [
+        0.5291154980659485,
+        4.189500093460083,
+        0.22417501732707024
+      ],
+      "anchor": [
+        0.5075929760932922,
+        4.20829963684082,
+        0.2092829942703247
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2944",
+          "sha256": "a531b898f54ae008b1ad0c0f0993158e1a15cfbebee79098033ea8c2d2f84372"
+        },
+        {
+          "file": "FJ2950",
+          "sha256": "f32bbffccdb0528ed085041ad4243b5b4817a26aa82a73669f9132d6c54f17de"
+        },
+        {
+          "file": "FJ2955",
+          "sha256": "bfbb5067eb2da9857069139f12d019bb0f599babc89730aeb4accb1a77916991"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:thorax:right:organ:right-main-bronchus",
+      "fmaId": "FMA7395",
+      "name": "Right main bronchus",
+      "sourceName": "right main bronchus",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-organs-inventory",
+      "nodeName": "FMA7395",
+      "bounds": {
+        "min": [
+          -0.5041910409927368,
+          4.040300369262695,
+          0.11328700929880142
+        ],
+        "max": [
+          -0.0037724198773503304,
+          4.980000019073486,
+          0.4849279820919037
+        ]
+      },
+      "center": [
+        -0.2539817304350436,
+        4.510150194168091,
+        0.29910749569535255
+      ],
+      "anchor": [
+        -0.24193701148033142,
+        4.500400543212891,
+        0.30463501811027527
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2539",
+          "sha256": "0e1e4dc8c326263c21819c3c48a3e2e41e72fa92425983876d4902fa5dcc3074"
+        }
+      ],
+      "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-pulmonary-artery",
+      "fmaId": "FMA50872",
+      "name": "Right pulmonary artery",
+      "sourceName": "right pulmonary artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA50872",
+      "bounds": {
+        "min": [
+          -0.5894550085067749,
+          4.244000434875488,
+          0.12964801490306854
+        ],
+        "max": [
+          0.36937999725341797,
+          4.940100193023682,
+          0.8119999766349792
+        ]
+      },
+      "center": [
+        -0.11003750562667847,
+        4.592050313949585,
+        0.4708239957690239
+      ],
+      "anchor": [
+        -0.09992719441652298,
+        4.619300365447998,
+        0.4936710298061371
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3019",
+          "sha256": "c773fc2d3d3f79544699c16f38f56619730a6d5a1a2c8bb4d8f0dc2ab6889d97"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:organ:left-main-bronchus",
+      "fmaId": "FMA7396",
+      "name": "Left main bronchus",
+      "sourceName": "left main bronchus",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-organs-inventory",
+      "nodeName": "FMA7396",
+      "bounds": {
+        "min": [
+          0.004211960360407829,
+          4.208199501037598,
+          0.11001399904489517
+        ],
+        "max": [
+          0.7234739661216736,
+          4.967099666595459,
+          0.4338349997997284
+        ]
+      },
+      "center": [
+        0.3638429632410407,
+        4.587649583816528,
+        0.2719244994223118
+      ],
+      "anchor": [
+        0.375588983297348,
+        4.597700119018555,
+        0.2967270016670227
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2450",
+          "sha256": "7c4ac571448fb3d0c3c1095874bf17a60853bf12457d842a11dd2c62c0994946"
+        }
+      ],
+      "coverageNote": "Proximal airway source segment only; no complete bronchial-tree or wall-layer segmentation is implied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-pulmonary-artery",
+      "fmaId": "FMA50873",
+      "name": "Left pulmonary artery",
+      "sourceName": "left pulmonary artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA50873",
+      "bounds": {
+        "min": [
+          0.14751499891281128,
+          4.262099742889404,
+          0.08049900084733963
+        ],
+        "max": [
+          0.7908399701118469,
+          4.940500259399414,
+          0.8659499883651733
+        ]
+      },
+      "center": [
+        0.4691774845123291,
+        4.601300001144409,
+        0.4732244946062565
+      ],
+      "anchor": [
+        0.44685599207878113,
+        4.713100433349609,
+        0.39950796961784363
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2924",
+          "sha256": "0cb5312cf816387fdad0d3809a5b5cae1445806ce85546adea39240bc72d2580"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "thorax-organs-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "bytes": 157388,
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "structures": 2
+    }
+  ]
+}

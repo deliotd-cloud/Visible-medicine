@@ -1,4 +1,6 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import {pulmonaryVenousTour,pulmonaryVenousTourMatches} from './pulmonary-venous-tour';
+export {pulmonaryVenousTour} from './pulmonary-venous-tour';
 import {cranialVaultTour,cranialVaultTourMatches} from './cranial-vault-tour';
 export {cranialVaultTour} from './cranial-vault-tour';
 import type { DissectionView } from '../app/dissection-data';
@@ -274,13 +276,15 @@ export const malePelvisTour: RegionalTour = {
     surfaceStep('rectum','Rectum · Posterior relationship',pelvicOrgan('unpaired','rectum'),'left','Finish from the left with the rectum behind the bladder and prostate. The sacrum provides posterior context. Fading adjacent organs improves visibility but does not reveal a validated rectal wall or mesorectal plane.',pelvisReference),
   ],
 };
-export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour,thoracicSpineTour,lowerArterialTour,cardiacVenousTour,upperVenousTour,mesentericTour,lowerNeckTour,forearmArterialTour,orbitalNerveTour,urinaryTractTour,digestiveTractTour,pelvicVenousTour,diaphragmTour,cranialVaultTour];
+export const regionalTours=[thoraxTour,chestWallTour,cervicalSpineTour,celiacTour,forearmTour,thighTour,legTour,handTour,footTour,upperArmTour,larynxTour,orbitalTour,intrinsicLarynxTour,malePelvisTour,maleDuctTour,deepBrainTour,subscapularTour,lumbarTour,carpalTour,renalTour,tarsalTour,lowerLimbBoneTour,upperLimbBoneTour,pelvicRingTour,circleWillisTour,hepatobiliaryTour,handArterialTour,lowerVenousTour,...handVenousTours,coronaryArterialTour,thoracicSpineTour,lowerArterialTour,cardiacVenousTour,upperVenousTour,mesentericTour,lowerNeckTour,forearmArterialTour,orbitalNerveTour,urinaryTractTour,digestiveTractTour,pelvicVenousTour,diaphragmTour,cranialVaultTour,pulmonaryVenousTour];
 export const regionalTourFor=(region:string)=>regionalTours.find(t=>t.region===region)??null;
 export const regionalToursFor=(region:string)=>regionalTours.filter(t=>t.region===region);
 export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Selected exterior source surfaces only; no complete lumen, bronchial tree, surgical plane, acquired imaging or spatial registration. Draft pending radiologist review.';
 
 /** Resolve exact identities; never substitute a similarly named surface. */
 export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
+  if(tour.id===pulmonaryVenousTour.id&&!pulmonaryVenousTourMatches(catalog,tour))
+    throw Error('The pulmonary venous guided tour does not match the available anatomy source.');
   if(tour.id===cranialVaultTour.id&&!cranialVaultTourMatches(catalog,tour))
     throw Error('The cranial vault guided tour does not match the available anatomy source.');
   if(tour.id===diaphragmTour.id&&!diaphragmTourMatches(catalog,tour))

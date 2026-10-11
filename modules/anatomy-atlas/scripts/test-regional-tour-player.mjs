@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -232,6 +232,62 @@ test('Forearm arterial tour retains six sources, exact frames, pause and reduced
  h.click('Exit tour');assert.equal(h.exits(),1);h.unchanged();h.unmount();
  const missing=harness(catalog,'forearmArterialTour',false,h.props.tour.steps[0].selectedId);
  assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unmount();
+});
+
+test('Pulmonary venous tour keeps exact bilateral frames, assembled stops and safe playback in both layouts',()=>{
+ const id=(side,kind,name)=>`vm:anatomy:body:thorax:${side}:${kind}:${name}`;
+ const targets=['right','left'].flatMap(side=>['superior','inferior'].map(level=>id(side,'vessel',`${side}-${level}-pulmonary-vein`)));
+ const context=['right','left'].flatMap(side=>[id(side,'organ',`${side}-main-bronchus`),id(side,'vessel',`${side}-pulmonary-artery`)]);
+ for(const compact of [false,true]){
+  const h=harness(catalog,'pulmonaryVenousTour',compact),tour=h.props.tour;
+  assert.equal(tour.id,'pulmonary-venous-hilar-relationships');
+  assert.equal(tour.revision,'pulmonary-venous-hilar-relationships-20261011-r1');
+  assert.equal(tour.region,'thorax');assert.deepEqual(plain(tour.contextIds),context);
+  assert.deepEqual(plain(tour.steps.map(step=>step.selectedId)),targets);
+  assert.deepEqual(plain(tour.steps.map(step=>step.view)),['anterior','right','anterior','left']);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),[...context,...targets]);
+  assert.equal(h.scene().explode,0);assert.equal(h.scene().layout,'spatial');
+  assert.equal(h.scene().transitionMs,0);assert.equal(h.timers.size,0);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  assert.equal(h.button('Back').disabled,true);assert.equal(h.button('Play')['aria-pressed'],false);
+  for(const [i,step]of tour.steps.entries()){
+   const side=Math.floor(i/2)*2,scene=h.scene();
+   assert.deepEqual(plain(step.frameIds),[...targets.slice(side,side+2),...context.slice(side,side+2)]);
+   assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);
+   assert.equal(scene.reset,i);assert.equal(scene.selectedId,targets[i]);assert.equal(scene.view,step.view);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.layout,'spatial');
+   assert.equal(scene.isolated,true);assert.equal(scene.tourLocked,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),[...context,...targets]);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const framed=[...targets.slice(side,side+2),...context.slice(side,side+2)].map(id=>h.props.catalog.structures.find(s=>s.id===id).bounds);
+   assert.deepEqual(plain(scene.presetBounds),{
+    min:[0,1,2].map(axis=>Math.min(...framed.map(bounds=>bounds.min[axis]))),
+    max:[0,1,2].map(axis=>Math.max(...framed.map(bounds=>bounds.max[axis]))),
+   },'Camera bounds are the exact ipsilateral source union');
+   assert(text(h.tree()).includes(step.caption));if(i<3)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,2);h.click('Play');
+  const stale=[...h.timers.values()][0].fn;
+  h.button('Pause').onClick();stale();h.render();
+  assert.equal(h.scene().reset,2);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.click('Play');const reducedStale=[...h.timers.values()][0].fn;
+  h.preference.matches=true;h.listeners.get('motion')();h.render();reducedStale();h.render();
+  assert.equal(h.scene().reset,2);assert.equal(h.scene().transitionMs,0);assert.equal(h.timers.size,0);
+  h.click('Next');assert.equal(h.scene().selectedId,targets[3]);assert.equal(h.scene().transitionMs,0);
+  h.click('Play');h.tick();assert.equal(h.scene().reset,3);assert.equal(h.timers.size,0);
+  assert.equal(h.exits(),0,'Final stop holds until explicit exit');
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  const exiting=harness(catalog,'pulmonaryVenousTour',compact);exiting.ready();exiting.click('Start guided tour');exiting.click('Play');
+  const exitStale=[...exiting.timers.values()][0].fn;
+  exiting.button('Exit tour').onClick();exitStale();exiting.render();
+  assert.equal(exiting.exits(),1);assert.equal(exiting.scene().reset,0);assert.equal(exiting.timers.size,0);
+  exiting.unchanged();exiting.unmount();
+  for(const missingId of [...targets,...context]){
+   const missing=harness(catalog,'pulmonaryVenousTour',compact,missingId);
+   assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unchanged();missing.unmount();
+  }
+ }
 });
 
 test('Cardiac venous tour retains heart context and four smooth source-bound stops',()=>{

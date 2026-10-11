@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Pulmonary venous guided learning (11 October 2026)
+
+The four-stop hilar relationship tour adds original captions and code under
+project MIT terms. Its factual reading link is the existing TTUHSC El Paso
+lungs and mediastina teaching page; no source prose, table, image, scan or model
+is copied from that page. The eight retained BodyParts3D structure records and
+two existing bundles keep their existing CC BY 4.0 attribution and source
+licences. No new mesh, font, texture, dependency, paid service or mandatory fee
+is added. See `docs/PULMONARY_VENOUS_TOUR.md` for source and review scope.
+
 ## Suprahyoid muscle quick checks (11 October 2026)
 
 Four original questions cover eight existing muscle selections. The university

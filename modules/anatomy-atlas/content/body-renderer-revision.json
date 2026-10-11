@@ -2085,6 +2085,10 @@
       "sha256": "91bca45d5e8a055d9dc865874f064501c22c3d4c2ee2e86ae019abd42c2a934c"
     },
     {
+      "path": "content/pulmonary-venous-tour-pins.json",
+      "sha256": "c6962b19a535993050509adaea7bbfe6f95e8243444d14ea2ab44c2d74099808"
+    },
+    {
       "path": "content/rectal-deferent-imaging-pins.json",
       "sha256": "61b579bca6028f5812619b9ee8bf5308a9ef5b74213522e48f1ce7158144ddd6"
     },
@@ -4345,6 +4349,10 @@
       "sha256": "9832343ae42621bf5619a73ae1dfe3f4f3d4ec8f5ab011c1a2cb4f35f26f1431"
     },
     {
+      "path": "lib/pulmonary-venous-tour.ts",
+      "sha256": "352586db44027907a5aac9c92e3edf40a23046291ec112a649032046f91a740a"
+    },
+    {
       "path": "lib/pulmonary.ts",
       "sha256": "82d22b0bf752b53044efb1333a35331a0e371637bd2a1be9cae915d70ce69670"
     },
@@ -4386,7 +4394,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "a06de85beb8bff46c95490b5c123cc1b5a9ec82ad95b62e7caba119ab4c2a875"
+      "sha256": "4c7a2940d5e586c533a410a937d11fc4f9a8a85bedf6e7200de6ad0efac2b8eb"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -4978,7 +4986,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "de446e8b40be5f6a85eebf48e1f045a577e3b16259d925fe4f58ddb231d46f4c"
+      "sha256": "803003de32a749e278aba7ea9b51ebb88239664b539055513a5d795c6aee8a7e"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5201,5 +5209,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "5391fb3551e79bc77c2c247630f5440543ae850e8fdb923af77db0cae3be56c1"
+  "sha256": "15f9a70446b59fc38cb01fc8612e176c652bea4efb5b3d1f000d0b7972d645a1"
 }

@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "pulmonary-venous-tour:test": "node scripts/pin-pulmonary-venous-tour.mjs --check && node scripts/test-pulmonary-venous-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "cranial-vault-tour:test": "node scripts/pin-cranial-vault-tour.mjs --check && node scripts/test-cranial-vault-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "intracranial-arterial-xray:test": "node scripts/test-intracranial-arterial-xray.mjs",
     "iliac-venous-xray:test": "node scripts/test-iliac-venous-xray.mjs",
