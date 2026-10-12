@@ -1021,6 +1021,10 @@
       "sha256": "7ee67d44f5eee727019844c0e9f32c2eb50efecda3f67b3a439806636110eae4"
     },
     {
+      "path": "content/elbow-arterial-tour-pins.json",
+      "sha256": "58bf7f4d248fb2caeb361d6a6b22aac3be7801e820a5e498770ca89681142ab2"
+    },
+    {
       "path": "content/elbow-arterial-ultrasound-pins.json",
       "sha256": "2fefaad96bfca4a5dbcf404fc4e13f85e5f910e7f5935df245acec36883308b7"
     },
@@ -3485,6 +3489,10 @@
       "sha256": "6cc612609d5c2373d36ae6e7017b01f938a490b039116844add90fec8ce61cb3"
     },
     {
+      "path": "lib/elbow-arterial-tour.ts",
+      "sha256": "b2b232bec61ea9f1b8ecc0266fea2c58f113868079f22928703ba4d80872e466"
+    },
+    {
       "path": "lib/elbow-arterial-ultrasound.ts",
       "sha256": "82db0a79f1c66be75795935bdc04606ac2f64806c43cd9abd86214067fad02e9"
     },
@@ -4554,7 +4562,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "05bbb95ed165b47b1d39ec8c2791131acc7552affbdef69b88ff749d27b5e731"
+      "sha256": "03a6cbadf95cfc7e6b18410d692df2b587dd5fe95a1758f26b741e42b7ea64af"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5385,5 +5393,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "85daa958dc447a3895388905c0c1a0d3a83c30e470cabb1c0383734dd800cfee"
+  "sha256": "13536c6e223b66abb4200ccaa9988b730f190e51992736d7ddd2f56ee9042b11"
 }

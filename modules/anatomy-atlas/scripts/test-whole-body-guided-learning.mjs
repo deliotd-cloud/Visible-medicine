@@ -47,8 +47,9 @@ const player=()=>find('RegionalGuidedLearning');
 
 render();
 const tours=api.wholeBodyTourOptions;
-assert.equal(tours.length,46);assert.equal(new Set(tours.map(t=>t.id)).size,46);
-assert.deepEqual(plain(tours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
+assert.equal(tours.length,47);assert.equal(new Set(tours.map(t=>t.id)).size,47);
+assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),282);
+assert.deepEqual(plain(tours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
 assert.equal(tours.filter(t=>t.id==='cardiac-venous-surface-orientation').length,1);
 const pulmonary=tours.find(t=>t.id==='pulmonary-venous-hilar-relationships');assert(pulmonary);
 assert.equal(tours.filter(t=>t.id===pulmonary.id).length,1);assert.equal(pulmonary.region,'thorax');
@@ -56,6 +57,10 @@ assert.equal(pulmonary.revision,'pulmonary-venous-hilar-relationships-20261011-r
 const pancreatic=tours.find(t=>t.id==='pancreatic-arterial-relationships');assert(pancreatic);
 assert.equal(tours.filter(t=>t.id===pancreatic.id).length,1);assert.equal(pancreatic.region,'abdomen');
 assert.equal(pancreatic.revision,'pancreatic-arterial-relationships-20261012-r1');assert.equal(pancreatic.steps.length,9);
+const elbow=tours.find(t=>t.id==='right-elbow-arterial-pairs');assert(elbow);
+assert.equal(tours.filter(t=>t.id===elbow.id).length,1);assert.equal(elbow.region,'forearm');
+assert.equal(elbow.title,'Right elbow: collateral & recurrent arteries');
+assert.equal(elbow.revision,'right-elbow-arterial-pairs-20261012-r1');assert.equal(elbow.steps.length,8);
 assert.deepEqual(plain(tours.slice(0,4).map(t=>t.id)),['right-lower-limb-bone-orientation','right-upper-limb-bone-orientation','right-lower-limb-venous-orientation','right-lower-limb-arterial-orientation']);
 assert.deepEqual([...tours.map(t=>t.id)].sort(),[...api.regionalTours.map(t=>t.id)].sort());
 assert.deepEqual(plain(choices()),plain(tours.map(t=>t.id)),'Default order stays unchanged');
@@ -84,6 +89,16 @@ for(const name of ['Anterior superior pancreaticoduodenal artery','Anterior infe
  assert.equal(player().key,originalKey,'Searching does not start the pancreatic tour');assert.equal(suspends,0);
 }
 filter('thorax');assert(!choices().includes(pancreatic.id),'Thorax excludes the pancreatic tour');
+filter('forearm');
+search('Right elbow: collateral & recurrent arteries');assert(choices().includes(elbow.id),'Elbow title is searchable in Forearm');
+for(const name of ['Right inferior ulnar collateral artery','Right anterior ulnar recurrent artery',
+ 'Right superior ulnar collateral artery','Right posterior ulnar recurrent artery',
+ 'Radial collateral branch of right deep brachial artery','Right radial recurrent artery',
+ 'Middle collateral branch of right deep brachial artery','Right recurrent interosseous artery']){
+ search(name);assert(choices().includes(elbow.id),`${name} is searchable within Forearm`);
+ assert.equal(player().key,originalKey,'Searching does not start the elbow tour');assert.equal(suspends,0);
+}
+filter('abdomen');assert(!choices().includes(elbow.id),'Abdomen excludes the elbow tour');
 search('Right superior pulmonary vein');
 for(const region of new Set(tours.map(t=>t.region).filter(region=>region!=='thorax'))){
  filter(region);assert(!choices().includes(pulmonary.id),'Other region filters exclude the pulmonary tour');
@@ -115,7 +130,7 @@ assert.match(currentOption().props.children.join(''),/Current tour: .*outside fi
 select('thoracic-airways-vessels');
 assert.equal(player().key,originalKey,'Hidden result cannot be selected');assert.equal(suspends,0);
 find('button',node=>node.props.children==='Clear filters').props.onClick();render();
-assert.equal(choices().length,46);assert.equal(current(),tours[0].id);
+assert.equal(choices().length,47);assert.equal(current(),tours[0].id);
 assert.equal(currentOption().props.disabled,undefined,'Clear filters restores the normal option');
 assert.equal(player().key,originalKey);assert.equal(suspends,0);
 filter('thorax');
@@ -261,8 +276,12 @@ assert.deepEqual(choices(),plain(tours.filter(t=>t.region==='forearm').map(t=>t.
 select('right-forearm-arterial-orientation');
 assert.equal(player().props.tour.id,'right-forearm-arterial-orientation');
 assert.equal(player().key,'right-forearm-arterial-orientation:right-forearm-arterial-orientation-v1');
+select(elbow.id);assert.equal(player().props.tour,elbow);
+assert.equal(currentOption().props.children,elbow.title);
+assert.equal(player().key,`${elbow.id}:${elbow.revision}`);
+assert.equal(player().props.initialStep,undefined);assert.equal(player().props.autoplay,undefined);
 select('mesenteric-arterial-branch-orientation');
-assert.equal(player().props.tour.id,'right-forearm-arterial-orientation','Reject foreign regional tour');
+assert.equal(player().props.tour,elbow,'Reject foreign regional tour');
 props.catalog=api.bodyDisplayCatalog(api.raw);props.region='head-neck';reset();
 assert.equal(player().props.tour.id,'laryngeal-framework-orientation','Head/neck default remains unchanged');
 select('right-lower-neck-vessel-scalene-orientation');
@@ -295,7 +314,7 @@ for(const choice of [nested.find(item=>item.kind==='eye'),nested.find(item=>item
 assert.equal(suspends,nestedSuspends+2,'Each explicit nested selection suspends imaging once');
 assert.equal(exits,4,'Exit remains available for both nested viewer failures');
 props.region='whole-body';reset();
-assert.equal(choices().length,50,'Whole-body scope admits 46 regional and four exact-bound nested tours');
+assert.equal(choices().length,51,'Whole-body scope admits 47 regional and four exact-bound nested tours');
 const eye=nested.find(item=>item.kind==='eye');assert(eye);
 search(eye.guide.steps[0].title);
 assert(choices().includes(eye.id),'Nested guide step titles are searchable');

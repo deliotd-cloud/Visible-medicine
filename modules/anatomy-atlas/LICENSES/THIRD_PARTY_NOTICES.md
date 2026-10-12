@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Elbow arterial guided learning 12 October 2026
+
+Eight right-sided stops use original project-MIT captions/code and existing
+BodyParts3D surfaces with their CC BY 4.0 credits preserved. The TTUHSC upper-limb
+artery table and the author-institution abstract of Yamaguchi et al. (1997,
+DOI 10.2106/00004623-199711000-00007) are factual reading references only.
+No publication text, illustration, table, image, model, scan, dataset, font or
+texture is imported or adapted. Institutional/publisher rights and clinical
+holds remain intact. No dependency, paid resource, external runtime service or
+mandatory fee is added. See `docs/ELBOW_ARTERIAL_TOUR.md`.
+
 ## Orbital-apex CT orientation 12 October 2026
 
 Twelve retained orbital nerve selections gain independently written factual
