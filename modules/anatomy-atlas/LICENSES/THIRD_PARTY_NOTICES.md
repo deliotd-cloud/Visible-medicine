@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Orbital-apex CT orientation 12 October 2026
+
+Twelve retained orbital nerve selections gain independently written factual
+orientation under project MIT terms. Daniels et al. (1985, PMID 3877415) and
+Martins et al. (2011, DOI 10.1155/2011/468727) are reading references only.
+No publication prose, figure, table, scan, model, font, texture or dataset is
+imported or adapted. Publisher rights remain intact; original BodyParts3D
+CC BY 4.0 notices and clinical holds are unchanged. No dependency, paid asset,
+external runtime service or mandatory fee is added. See `docs/ORBITAL_APEX_CT.md`.
+
 ## Thoracic ultrasound teaching 12 October 2026
 
 Ten retained vascular selections gain original factual orientation prose under

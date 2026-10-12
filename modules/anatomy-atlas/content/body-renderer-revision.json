@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "dfb5296d48c0282bb106dcfa91dbb54f5fc5e0d701b861bb7b00288831a486b6"
+      "sha256": "665f93d6e934708f01fa1c9bb4fd0773e739fd1d201210164d21dfb81a534ab1"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1885,6 +1885,10 @@
       "sha256": "4dad953a18972048d20d756a4358a52fb3742f4fefe6502e747df7900822581a"
     },
     {
+      "path": "content/orbital-apex-ct.ts",
+      "sha256": "3224f7b2a251ea78c998019cb4472da9d24609b25267b6c2a04a2dc586a766e1"
+    },
+    {
       "path": "content/orbital-muscle-quiz-pins.json",
       "sha256": "f39a8d23a7ece2f02ba2d41e288f955298cc8db14bb9be98d3ec06e6301315e8"
     },
@@ -2174,7 +2178,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "9234533a669d8e661891345ac880512fc0265efb7ed64d19376827a9b8091dd1"
+      "sha256": "ddce871b79ae6f2f33216f2200548b63d2c0e33db8423d1793576756d5049b14"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -4281,6 +4285,10 @@
       "sha256": "63988d589594f50e1cdb358af25444e1b9a6e538d294349264cdad43db6d4999"
     },
     {
+      "path": "lib/orbital-apex-ct.ts",
+      "sha256": "dfd87d0bb3f3dff7acceba38af62e81c63e84e69ff50a5b5fd84a81353d1311f"
+    },
+    {
       "path": "lib/orbital-curriculum.ts",
       "sha256": "bac8510a1c1ee1f0f1923f600a810df5727e000f9c86d34fb59696e655b884a2"
     },
@@ -5377,5 +5385,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "7918770dd812a3354dd063f683890441441da30f5d1188b4edd61787019c3b13"
+  "sha256": "85daa958dc447a3895388905c0c1a0d3a83c30e470cabb1c0383734dd800cfee"
 }

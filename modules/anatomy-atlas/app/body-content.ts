@@ -44,6 +44,7 @@ import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
 import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
 import { cerebellarMcaImagingLesson } from '../lib/cerebellar-mca-imaging';
 import { orbitalNerveMriLesson } from '../lib/orbital-nerve-mri';
+import { orbitalApexCtLesson } from '../lib/orbital-apex-ct';
 import { orbitalSensoryMriLesson } from '../lib/orbital-sensory-mri';
 import { mediastinalXrayLesson } from '../lib/mediastinal-xray';
 import { hilarVesselXrayLesson } from '../lib/hilar-vessel-xray';
@@ -615,6 +616,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (abdominalFoldUltrasound) return abdominalFoldUltrasound;
   const spinalDiscUltrasound = spinalDiscUltrasoundLesson(s, tab);
   if (spinalDiscUltrasound) return spinalDiscUltrasound;
+  const orbitalCt = orbitalApexCtLesson(s, tab);
+  if (orbitalCt) return orbitalCt;
   const orbitalMri = orbitalNerveMriLesson(s, tab);
   if (orbitalMri) return orbitalMri;
   const orbitalSensoryMri = orbitalSensoryMriLesson(s, tab);
