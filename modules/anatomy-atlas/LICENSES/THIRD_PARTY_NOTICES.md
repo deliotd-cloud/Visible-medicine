@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Hepatic arterial angiographic orientation 12 October 2026
+
+Three existing selections gain independently written factual X-ray drafts under
+the project MIT licence. Covey et al. (2002), DOI 10.1148/radiol.2242011283,
+Coşkun et al. (2005), DOI 10.1016/j.transproceed.2005.01.019, the UAMS abdominal
+artery table and ACR/RSNA catheter-angiography education are reading references
+only. Publisher and university rights remain with their owners; access does not
+grant commercial-media reuse. No article, caption, figure, table, scan, model,
+texture, font or dataset is copied or adapted. Existing source geometry, credits
+and clinical holds are unchanged. No dependency, paid service or mandatory fee
+is introduced. See `docs/HEPATIC_ARTERIAL_XRAY.md` for evidence and review scope.
+
 ## Cardiac venous Ultrasound orientation (12 October 2026)
 
 Two existing selections gain original factual prose under the project licence.

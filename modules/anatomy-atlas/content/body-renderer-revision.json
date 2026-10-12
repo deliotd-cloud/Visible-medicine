@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "eab785dce758a27c01ed334b9f24c01ad282b60d5b1d6206746203ab4c33441a"
+      "sha256": "9d1c14a2734b87a949062e4e29927160059049113d51cad840d371fdc4238ae3"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1375,6 +1375,10 @@
     {
       "path": "content/head-neck-vessel-quiz.ts",
       "sha256": "1ea0f35baf203bcb3e1d33b26f6dc8abe173f1a3f6299fdf543abd5db01ba614"
+    },
+    {
+      "path": "content/hepatic-arterial-xray.ts",
+      "sha256": "1451616ba71c9a6896a4d6a8445ff089184612de6c1052ab9e69ea8ee8f31ce7"
     },
     {
       "path": "content/hepatic-teaching.ts",
@@ -3693,6 +3697,10 @@
       "sha256": "b401c5058d9bd09d5b1de1ee4b753dea232d908ad017350233f102a93b897e5d"
     },
     {
+      "path": "lib/hepatic-arterial-xray.ts",
+      "sha256": "797efb2ac614b66b42ba539f83c2ba91804368770cfbaa3e5580f67e42fbacf5"
+    },
+    {
       "path": "lib/hepatic-biliary-context.ts",
       "sha256": "62585b9e742a4f62d96afffb045d19df225ddac07ceffcc7a07a6d34b4646a92"
     },
@@ -5014,7 +5022,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "02e8e000f962f70c81f00a7ce6ff759eefb2b0fd34aebb0a347d4aa2f99317ba"
+      "sha256": "4e63421eab55754a550825d1b90c5730f4c92fcdf7e301c2e372685967e56793"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5237,5 +5245,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1beaa8d4da31de10e13e099c4da0a423bd9f55637f542e30b1e744b49eb693ee"
+  "sha256": "6ee5b958396df55810b11f698cd2bead607245b0d6b24d035991af344eec227c"
 }
