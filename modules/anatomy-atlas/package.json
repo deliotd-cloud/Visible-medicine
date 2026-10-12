@@ -17,6 +17,7 @@
     "hepatic-arterial-xray:test": "node scripts/test-hepatic-arterial-xray.mjs",
     "visceral-arterial-xray:test": "node scripts/test-visceral-arterial-xray.mjs",
     "portal-venous-xray:test": "node scripts/test-portal-venous-xray.mjs",
+    "hepatic-venous-xray:test": "node scripts/test-hepatic-venous-xray.mjs",
     "thoracic-wall-arterial-xray:test": "node scripts/test-thoracic-wall-arterial-xray.mjs",
     "thoracic-mediastinal-arterial-xray:test": "node scripts/test-thoracic-mediastinal-arterial-xray.mjs",
     "thoracic-venous-xray:test": "node scripts/test-thoracic-venous-xray.mjs",

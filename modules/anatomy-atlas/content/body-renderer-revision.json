@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b3358c6b69b8c2e2446221a7c11e06b784bce1c81ab415b9dd907a3104fa9c47"
+      "sha256": "6cd0f1c25353b3e1fb72dc039e55b027b53fdda3f3350c66821250c95905f007"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1385,6 +1385,10 @@
       "sha256": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654"
     },
     {
+      "path": "content/hepatic-venous-xray.ts",
+      "sha256": "8d8e74ab220e10e15c17c7fb91e343cc1479946da4303f0c35c0515bc80835ef"
+    },
+    {
       "path": "content/hepatobiliary-quiz-pins.json",
       "sha256": "a7638ad46ac4f20e3c72fd87447d6eab19ae7ad60c43b0d51dfa55c8bed6278e"
     },
@@ -2130,7 +2134,7 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sha256": "995ccb871d58d404383dc16318019e8f915f0348a8516c268a61fde84507f9d7"
+      "sha256": "8eb661bc3bf2cbd8707eb570b3f4de881535707337abaee0e25cdcfc6c542518"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -3761,6 +3765,10 @@
       "sha256": "c0540137e37b35f37d85b9ffa07aa756ad76bea24b95264f155aea8bfe56523d"
     },
     {
+      "path": "lib/hepatic-venous-xray.ts",
+      "sha256": "24ecd4853dd474d3817ac83c4dfc1c30e85eb2ff1de196964d81ebd6a3125eaf"
+    },
+    {
       "path": "lib/hepatic.ts",
       "sha256": "86a6ac1226f1ab496c3dc7aee6279da3ef662a0c3316fee10862cb8ba30fae80"
     },
@@ -5313,5 +5321,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "66cc1c9fbc6f0ccd7ab61072362a6a9ab0774cc1d3a0ad30338fc91712a8c509"
+  "sha256": "1862211a0b5cb452475a4ea9c3a68135be5cd272f1d0fcea47d88d86b509ca3c"
 }

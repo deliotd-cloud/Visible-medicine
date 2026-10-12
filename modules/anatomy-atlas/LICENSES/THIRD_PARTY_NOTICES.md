@@ -3468,3 +3468,16 @@ commercial media licence. Reading access does not grant asset reuse rights.
 Original code/prose retain project MIT terms; existing BodyParts3D CC BY 4.0
 credits remain unchanged. No new asset, dependency, font, service or fee.
 Revision-bound clinical review remains pending. See `docs/PORTAL_VENOUS_XRAY.md`.
+
+## Hepatic venous X-ray orientation — 12 October 2026
+
+Four exact retained selections use original factual teaching and reading links
+to ACR/RSNA, Joshi et al. (PMID 20177869), Wang et al. (2022,
+DOI 10.12998/wjcc.v10.i14.4460) and Hicks et al. (PMID 8541675).
+Wang is CC BY-NC 4.0; no publication prose, figures, angiograms, tables,
+scans or other assets are copied, imported, adapted or relicensed. Other
+publisher rights likewise remain intact. Reading access is not a commercial
+asset reuse grant. Original code/prose retain project MIT terms; existing
+BodyParts3D CC BY 4.0 credits remain unchanged. No new model, texture,
+dependency, font, service or fee. Revision-bound radiologist review is pending.
+See `docs/HEPATIC_VENOUS_XRAY.md`.
