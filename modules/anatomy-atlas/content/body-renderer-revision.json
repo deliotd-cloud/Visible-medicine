@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "04029ede8afedec9e223a45c63345bccfb3aaa8c8206d85c7eacea5b6531ab16"
+      "sha256": "dfb5296d48c0282bb106dcfa91dbb54f5fc5e0d701b861bb7b00288831a486b6"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2198,7 +2198,7 @@
     },
     {
       "path": "content/regional-teaching/thorax.json",
-      "sha256": "f4b40c99c868b85bfd9b3c1290d59487ead31d8d8642775fcf589d89789817e1"
+      "sha256": "2a0acc5f2c8e2576f394a4d94236ad1b8a46efc9e3b6d8e85fda8b895363de7a"
     },
     {
       "path": "content/regional-vascular-clinical-pins.json",
@@ -2521,6 +2521,10 @@
       "sha256": "519d12bdaa31fe1e062616a96c35b238c1fe313c882339ee893c92d8b828450c"
     },
     {
+      "path": "content/thoracic-cardiac-chestwall-ultrasound.ts",
+      "sha256": "cea3219cac79b7d19f9e6100536239da931688eb863e7ad83be49db1beb6cac1"
+    },
+    {
       "path": "content/thoracic-core-reasoning-pins.json",
       "sha256": "b520374e44447ea37830c6a1c13fc20708cf407cd1a31a3b5203c024b589de4f"
     },
@@ -2539,6 +2543,10 @@
     {
       "path": "content/thoracic-mediastinal-arterial-xray.ts",
       "sha256": "150a9ba0cb2bec2adc86cd0f93ef6f26ab704d60975fe58737b5cbd0a8551835"
+    },
+    {
+      "path": "content/thoracic-mediastinal-ultrasound.ts",
+      "sha256": "a4ab196d8416de5bafeb09cbe9128e920f3ca78ca0002b8e3d7084fef4f5feb2"
     },
     {
       "path": "content/thoracic-quiz-pins.json",
@@ -4877,6 +4885,10 @@
       "sha256": "cdb353b7e59a4f6224e5b45ac28cdf3317763e38da3042ef918f5955002c1077"
     },
     {
+      "path": "lib/thoracic-detail-ultrasound.ts",
+      "sha256": "7aa9204a000cc92463610b01c09f2b3a8e6a7b862476fbe491cf5259d3e1faca"
+    },
+    {
       "path": "lib/thoracic-eus-orientation.ts",
       "sha256": "7ccab068671c7eea2eb05ce1bc62ed88e686d7d6336017b94a0c3048841b425e"
     },
@@ -5142,7 +5154,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "15d57c992a05639503b00783eb1093460a67beebaa16c8df30c605fc30f5ba0e"
+      "sha256": "b3f918cecbfe232de7d068cadf0e27eb212efee26e1ac976a0c70656309d18af"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5365,5 +5377,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "21510163d4f13971241f018e8c799b426dc83719397ed76485d4bc1c890bac9f"
+  "sha256": "7918770dd812a3354dd063f683890441441da30f5d1188b4edd61787019c3b13"
 }

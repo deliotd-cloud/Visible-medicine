@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Thoracic ultrasound teaching 12 October 2026
+
+Ten retained vascular selections gain original factual orientation prose under
+project MIT terms. UAMS/TTUHSC anatomy tables, IFAA nomenclature and the EUS and
+internal-thoracic ultrasound publications are reading references only. Institutional
+and publisher rights remain intact: no publication prose, figure, table, video,
+scan, model, font, texture or dataset is copied or adapted. The Blanco–Volpicelli
+report states CC BY 4.0, but no media are reused. Existing BodyParts3D CC BY 4.0
+credits, source identities and clinical holds are unchanged. No asset, dependency,
+external runtime service, paid resource or mandatory fee is added. See
+`docs/THORACIC_DETAIL_ULTRASOUND.md` for evidence scope and review requirements.
+
 ## Pancreatic arterial guided learning 12 October 2026
 
 Nine guided stops use original project-MIT captions and existing commercially

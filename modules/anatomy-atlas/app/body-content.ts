@@ -23,6 +23,7 @@ import { thoracicWallArterialXrayLesson } from '../lib/thoracic-wall-arterial-xr
 import { thoracicMediastinalArterialXrayLesson } from '../lib/thoracic-mediastinal-arterial-xray';
 import { thoracicVenousXrayLesson } from '../lib/thoracic-venous-xray';
 import { cardiacVenousUltrasoundLesson } from '../lib/cardiac-venous-ultrasound';
+import { thoracicDetailUltrasoundLesson } from '../lib/thoracic-detail-ultrasound';
 import { iliacVenousXrayLesson } from '../lib/iliac-venous-xray';
 import { intracranialArterialXrayLesson } from '../lib/intracranial-arterial-xray';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
@@ -604,6 +605,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (thoracicVenousXray) return thoracicVenousXray;
   const cardiacVenousUltrasound = cardiacVenousUltrasoundLesson(s, tab);
   if (cardiacVenousUltrasound) return cardiacVenousUltrasound;
+  const thoracicDetailUltrasound = thoracicDetailUltrasoundLesson(s, tab);
+  if (thoracicDetailUltrasound) return thoracicDetailUltrasound;
   const iliacVenousXray = iliacVenousXrayLesson(s, tab);
   if (iliacVenousXray) return iliacVenousXray;
   const intracranialArterialXray = intracranialArterialXrayLesson(s, tab);
