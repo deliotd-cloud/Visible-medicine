@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { readFile, readdir } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { createHash } from 'node:crypto';
+import {execFileSync} from 'node:child_process';
 const root = fileURLToPath(new URL('../../', import.meta.url));
 export default defineConfig({
   root: fileURLToPath(new URL('./', import.meta.url)),
@@ -22,6 +23,10 @@ export default defineConfig({
     },
   }, {
     name: 'bundled-commercial-notices',
+    buildStart() {
+      execFileSync(process.execPath,['scripts/regional-teaching-snapshots.mjs','--check'],
+        {cwd:root,windowsHide:true,maxBuffer:2_000_000});
+    },
     async generateBundle(_options,bundle) {
       const packages=new Map();
       for(const chunk of Object.values(bundle)) {
@@ -45,7 +50,7 @@ export default defineConfig({
         }
       }
       const records=[...packages.values()].sort((a,b)=>a.name.localeCompare(b.name));
-      const inputs=new Set(['package-lock.json','integration/shoulder/vite.config.mjs','integration/shoulder/index.html','scripts/export-shoulder-module.mjs','scripts/export-space-preflight.mjs']);
+      const inputs=new Set(['package-lock.json','integration/shoulder/vite.config.mjs','integration/shoulder/index.html','scripts/export-shoulder-module.mjs','scripts/export-space-preflight.mjs','scripts/regional-teaching-snapshots.mjs']);
       for(const id of this.getModuleIds()) {
         if(id.includes('node_modules') || id.startsWith('\0')) continue;
         const path=relative(root,id.split('?')[0]).replaceAll('\\','/');
