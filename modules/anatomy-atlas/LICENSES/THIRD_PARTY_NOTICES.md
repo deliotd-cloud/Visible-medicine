@@ -3446,3 +3446,15 @@ remain intact; linking or free access does not grant asset reuse rights.
 Original code and wording retain project MIT terms, with existing BodyParts3D
 CC BY 4.0 attribution unchanged. No new model, texture, dependency, font,
 service or fee is introduced. See `docs/INTRACRANIAL_ARTERIAL_XRAY.md`.
+
+## Portal venous X-ray orientation — 12 October 2026
+
+Four exact retained veins use original factual teaching and reading links to
+UAMS, ACR/RSNA, Sturm et al. (2021, DOI 10.1371/journal.pone.0261499) and Entezari
+et al. (PMID 33230650). No article text, figures, tables, angiograms, ultrasound,
+patient data or datasets are copied or relicensed. PLOS identifies CC BY terms;
+the Entezari article's temporary pandemic research permission is not a blanket
+commercial media licence. Reading access does not grant asset reuse rights.
+Original code/prose retain project MIT terms; existing BodyParts3D CC BY 4.0
+credits remain unchanged. No new asset, dependency, font, service or fee.
+Revision-bound clinical review remains pending. See `docs/PORTAL_VENOUS_XRAY.md`.

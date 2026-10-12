@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "82e3f5e51f3d188f32c7d44fc00adcaff9bcab573c5c997d279470fb3fd10099"
+      "sha256": "b3358c6b69b8c2e2446221a7c11e06b784bce1c81ab415b9dd907a3104fa9c47"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2075,6 +2075,10 @@
     {
       "path": "content/portal-hepatic-study.ts",
       "sha256": "be65b83468eb1d9f15a91ebcf2c3426ceafc5ebd6560c9e285aac91dffa88b54"
+    },
+    {
+      "path": "content/portal-venous-xray.ts",
+      "sha256": "69ddc8b2250167fbd84eb974877ab1eb82ad4de613f4607b9dadfeb0ae3afaf6"
     },
     {
       "path": "content/posterior-mediastinal-study.ts",
@@ -4365,6 +4369,10 @@
       "sha256": "ea4d982449805f6546b8c8bd856ee8b30cead28f6bd144134170de9f96ae8853"
     },
     {
+      "path": "lib/portal-venous-xray.ts",
+      "sha256": "964e438feb25e0b268551584e9be008166b0bd6549121b3c49cb4640de5739c0"
+    },
+    {
       "path": "lib/proper-digital-teaching.ts",
       "sha256": "9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71"
     },
@@ -5030,7 +5038,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "19f7e8dd13ef074cad6e9335932d693c94cc81b9ca9045f8d9db328e4e30181c"
+      "sha256": "ea0aab11f1a48b3815c85deaad6bf89b01fc1da3e68f2e08739c4fa4bb88a770"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5253,5 +5261,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d663f009f477b159c9e32685f8b3ba4930b7ce96b5821d4f935382b4dbf612a4"
+  "sha256": "f6261e8793caecfdca0b30aafa6993f035ac41ce8b37c32384b49156cdf81d49"
 }
