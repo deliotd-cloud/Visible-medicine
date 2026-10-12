@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Cardiac venous Ultrasound orientation (12 October 2026)
+
+Two existing selections gain original factual prose under the project licence.
+Watanabe et al. (2002), DOI 10.1067/mje.2002.119788, and Labriola et al. (2015),
+DOI 10.1053/j.jvca.2015.01.035, are reading references only, alongside the existing
+Texas Tech thoracic vein anatomy table. Publisher rights remain with their owners.
+No article, figure, table, waveform, video, texture, model or scan is imported.
+Adult targeted transthoracic Doppler observations and selective intraoperative
+TEE landmarks retain their separate cohorts and limitations. These references
+do not grant commercial-media rights or confer clinical approval. Existing model
+licences/credits and source holds remain unchanged. See
+`docs/CARDIAC_VENOUS_ULTRASOUND.md` for the exact evidence and review scope.
+
 ## Thoracic venous teaching (12 October 2026)
 
 Five existing selections gain original factual X-ray teaching under project

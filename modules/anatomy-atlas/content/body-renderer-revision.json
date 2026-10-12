@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "3ab5309695c47b86fba2bf65ea831725bcca0655bbd551ed78b3eadd75b14e46"
+      "sha256": "eab785dce758a27c01ed334b9f24c01ad282b60d5b1d6206746203ab4c33441a"
     },
     {
       "path": "app/body-education-link.ts",
@@ -675,6 +675,10 @@
     {
       "path": "content/cardiac-venous-tour-pins.json",
       "sha256": "7e81d948932e733da6f1c79f6fc8e9bc105036fe6d2a50a7e24344a4da2f20b5"
+    },
+    {
+      "path": "content/cardiac-venous-ultrasound.ts",
+      "sha256": "f0410b3d27b09c01eb61275dc9a1205fecb1502561fae87f6f44421d1af84237"
     },
     {
       "path": "content/cardiac-xray-teaching.ts",
@@ -3069,6 +3073,10 @@
       "sha256": "69d6fa6494e2657cf1d802ff6445f8e5caf36e36a46780b5242fe673e26712f0"
     },
     {
+      "path": "lib/cardiac-venous-ultrasound.ts",
+      "sha256": "c870cb0fc6e88b729afb6420d9fafac178b5d66741a451a9741a9c04477168fc"
+    },
+    {
       "path": "lib/cardiac.ts",
       "sha256": "482facae9feb332a9899d008cca33aa6bb950046ae7ea96ea2ee67a89001c6ea"
     },
@@ -5006,7 +5014,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "1caaeb8d5b5da8055e20638f84e04cb0091c74db781ba5b2bd664a8b03560bb9"
+      "sha256": "02e8e000f962f70c81f00a7ce6ff759eefb2b0fd34aebb0a347d4aa2f99317ba"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5229,5 +5237,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "36b4486e95c29f41e74bc8aba82d987ec2c8c3fe785cafdff758ca2f3ee5356a"
+  "sha256": "1beaa8d4da31de10e13e099c4da0a423bd9f55637f542e30b1e744b49eb693ee"
 }

@@ -6,6 +6,7 @@ import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = 'c6fd5a1789ce8c6f06c48693aa9d5479a00d610a';
+const completedEpoch = '7f220ed46578d33731a21e77c3133895c21f1e7a';
 const expected = new Map([
   ['anterior-cardiac-vein', 'FMA76767'],
   ['great-cardiac-vein', 'FMA4707'],
@@ -66,8 +67,13 @@ const compiled = await build({
     resolveDir: process.cwd(), loader: 'ts'},
   bundle: true, write: false, platform: 'node', format: 'esm',
 });
-const current = await import('data:text/javascript;base64,' +
+const live = await import('data:text/javascript;base64,' +
   Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// Freeze the full original transition, not all future independent modalities.
+// Keep helper/identity checks and the five affected X-ray placements live.
+const completed = await exactSourceHistoryApi(completedEpoch, 'review-security');
+const current = {...completed, thoracicVenousXrayLesson: live.thoracicVenousXrayLesson,
+  thoracicVenousXrayTopics: live.thoracicVenousXrayTopics};
 const old = await exactSourceHistoryApi(baseline, 'review-security');
 assert.deepEqual(Object.keys(current.thoracicVenousXrayTopics).sort(),
   [...expected.keys()].sort());
@@ -84,6 +90,19 @@ const catalog = current.bodyDisplayCatalog(JSON.parse(readFileSync(catalogPath, 
 assert.deepEqual(readFileSync(catalogPath), gitBytes(catalogPath), 'Source catalog must be unchanged');
 assert.deepEqual(catalog, old.bodyDisplayCatalog(JSON.parse(gitBytes(catalogPath))));
 assert.deepEqual(current.regionalTours, old.regionalTours, 'Tours must be unchanged');
+assert.deepEqual(live.bodyDisplayCatalog(JSON.parse(readFileSync(catalogPath, 'utf8'))), catalog);
+assert.deepEqual(live.contentTabs, current.contentTabs);
+assert.deepEqual(live.regionalTours, current.regionalTours);
+for (const identity of identities.values()) {
+  assert.deepEqual(live.bodyLesson(identity, 'xray'), completed.bodyLesson(identity, 'xray'),
+    `${identity.id}: live X-ray lesson differs from completed epoch`);
+  const packet = await live.bodyReviewMaterial(identity.id);
+  const previousPacket = await completed.bodyReviewMaterial(identity.id);
+  assert.deepEqual(packet.source, previousPacket.source);
+  assert.deepEqual(packet.topics.find(row => row.tab === 'xray'),
+    previousPacket.topics.find(row => row.tab === 'xray'));
+  assert.deepEqual(await live.parseBodyReviewResponse(packet, identity.id), packet);
+}
 assert.equal(catalog.structures.length * current.contentTabs.length, 9936);
 assert.deepEqual(catalog.structures.filter(s => identities.has(s.id)).sort((a, b) => a.id.localeCompare(b.id)),
   entries.map(e => e.identity).sort((a, b) => a.id.localeCompare(b.id)));
@@ -239,6 +258,7 @@ for (const structure of catalog.structures) {
 }
 assert.deepEqual([changed, preserved, changedPackets, preservedPackets], [5, 9931, 5, 1099]);
 assert.equal(storageCalls, 0);
-console.log(JSON.stringify({baseline, changed, preserved, changedPackets, preservedPackets,
+console.log(JSON.stringify({baseline, completedEpoch, matrixScope: 'exact completed venous X-ray transition',
+  liveXrayLessonsMatched: 5, liveReviewTopicsMatched: 5, changed, preserved, changedPackets, preservedPackets,
   refusedIdentities, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale,
   forgedApprovalRefusalsBeforeStorage: forgedDecisions, storageCalls, clinicalApproval: false}));
