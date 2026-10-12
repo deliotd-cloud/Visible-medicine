@@ -3516,3 +3516,13 @@ asset reuse grant. Original code/prose retain project MIT terms; existing
 BodyParts3D CC BY 4.0 credits remain unchanged. No new model, texture,
 dependency, font, service or fee. Revision-bound radiologist review is pending.
 See `docs/HEPATIC_VENOUS_XRAY.md`.
+
+## Gastric venous X-ray orientation — 12 October 2026
+
+Four exact retained gastric/gastroepiploic veins use original factual teaching
+with UAMS and ACR/RSNA reading links. No publication text, diagrams, tables,
+venograms, scans or datasets are copied, imported or relicensed. Reading access
+is not a media reuse licence. Original code/prose retain project MIT terms;
+existing BodyParts3D CC BY 4.0 attribution is unchanged. No new asset,
+dependency, font, service or fee. Radiologist review remains pending.
+See `docs/GASTRIC_VENOUS_XRAY.md`.

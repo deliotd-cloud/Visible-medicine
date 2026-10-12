@@ -14,6 +14,7 @@ import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
 import { hepaticArterialXrayLesson } from '../lib/hepatic-arterial-xray';
 import { visceralArterialXrayLesson } from '../lib/visceral-arterial-xray';
 import { portalVenousXrayLesson } from '../lib/portal-venous-xray';
+import { gastricVenousXrayLesson } from '../lib/gastric-venous-xray';
 import { hepaticVenousXrayLesson } from '../lib/hepatic-venous-xray';
 import { colicArterialXrayLesson } from '../lib/colic-arterial-xray';
 import { pancreaticArterialXrayLesson } from '../lib/pancreatic-arterial-xray';
@@ -584,6 +585,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (visceralArterialXray) return visceralArterialXray;
   const portalVenousXray = portalVenousXrayLesson(s, tab);
   if (portalVenousXray) return portalVenousXray;
+  const gastricVenousXray = gastricVenousXrayLesson(s, tab);
+  if (gastricVenousXray) return gastricVenousXray;
   const hepaticVenousXray = hepaticVenousXrayLesson(s, tab);
   if (hepaticVenousXray) return hepaticVenousXray;
   const colicArterialXray = colicArterialXrayLesson(s, tab);

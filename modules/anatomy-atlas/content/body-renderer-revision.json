@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "7cbdff104e1213510d37754f9bcccd61a3d90844db50dad764f68ca3d0d9fcd6"
+      "sha256": "e993036d20b68f48ebb00134ea7e1ad3fd89ff85e59e083d86961a269fdf3e56"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1221,6 +1221,10 @@
       "sha256": "6887f59afd77aff780f96b1b7f9e7cf0b090e46e717aabcee79334ead438b2c4"
     },
     {
+      "path": "content/gastric-venous-xray.ts",
+      "sha256": "1b160f2c3a471f870141e02a3f8cc816537046bc1e1be348dfebd4477d5d47ce"
+    },
+    {
       "path": "content/genicular-clinical-pins.json",
       "sha256": "f2a6a81d0079672bc863d7080c2848ffa049db7cb465c9309adce5548f4e22ff"
     },
@@ -2146,7 +2150,7 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sha256": "b38a956cdfebd39bbab44f44e4c4b3d6a177413cb2abad77e798f5b38bca02ad"
+      "sha256": "32d59dadd62a98d397749cac58625a6005a01b2a0eeab4bf2d0dc2d8d5a3d13c"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -3615,6 +3619,10 @@
     {
       "path": "lib/foregut-vessel-quiz.ts",
       "sha256": "447f979aead66f64c5a12ed0e69163a1d8c5df12ad2886b9b20a0f38c3430980"
+    },
+    {
+      "path": "lib/gastric-venous-xray.ts",
+      "sha256": "1a39ec40f163188050e785b6641c9e1849c6fdb71dc3fb56d641b9fcbd14f6d6"
     },
     {
       "path": "lib/genicular-arteries.ts",
@@ -5122,7 +5130,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "63ee06915ddf9960bb6281667e6d2795e50497b2d7d9fbecf47aedb9b6cc42ad"
+      "sha256": "4aecb49d59e1149dc7e67f03b1e2a17707e7643e210fdd23df0037191c42338f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5345,5 +5353,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f868ec06d03419c940aed1704c0e29edec62c4465a7346845577378da0a3c85f"
+  "sha256": "5e2e08c74dbb0f23a50f176d5b7e8c0b8f98391c22b8ee25cbbc4041c133aa5e"
 }
