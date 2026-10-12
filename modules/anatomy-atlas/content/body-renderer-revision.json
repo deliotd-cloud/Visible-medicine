@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "e993036d20b68f48ebb00134ea7e1ad3fd89ff85e59e083d86961a269fdf3e56"
+      "sha256": "04029ede8afedec9e223a45c63345bccfb3aaa8c8206d85c7eacea5b6531ab16"
     },
     {
       "path": "app/body-education-link.ts",
@@ -527,6 +527,14 @@
     {
       "path": "content/abdominal-connective-quiz.ts",
       "sha256": "3c3971fadfa50c52b606f26b3702731f14f79debcf83afdc8e8b74d5c154cabc"
+    },
+    {
+      "path": "content/abdominal-detail-connective-xray.ts",
+      "sha256": "dad3309865a10e0e759ce0931cb1f25b03c3b89787c9c41140576ed01e0d5355"
+    },
+    {
+      "path": "content/abdominal-detail-vascular-xray.ts",
+      "sha256": "4d39510b7a61a4ec4d6c9c05d0ff64097d496bfae9df1935b4b70c3668b1def4"
     },
     {
       "path": "content/abdominal-eus-orientation.ts",
@@ -2150,7 +2158,7 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sha256": "32d59dadd62a98d397749cac58625a6005a01b2a0eeab4bf2d0dc2d8d5a3d13c"
+      "sha256": "1a247baa5ccefbb5c0c9772888d0fd486fdf28f05a080a4dbb59027752ba6b9f"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -2855,6 +2863,10 @@
     {
       "path": "lib/abdominal-connective-quiz.ts",
       "sha256": "227303bc7fda4e52074fbbb5ac0fe1a4e68481d9d4bcbad646cb601f6970d655"
+    },
+    {
+      "path": "lib/abdominal-detail-xray.ts",
+      "sha256": "dbb42428e78fa65f668f3fd49231be42a01938d476a60ae69d1d93509bd691c7"
     },
     {
       "path": "lib/abdominal-eus-orientation.ts",
@@ -5130,7 +5142,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "4aecb49d59e1149dc7e67f03b1e2a17707e7643e210fdd23df0037191c42338f"
+      "sha256": "15d57c992a05639503b00783eb1093460a67beebaa16c8df30c605fc30f5ba0e"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5353,5 +5365,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "5e2e08c74dbb0f23a50f176d5b7e8c0b8f98391c22b8ee25cbbc4041c133aa5e"
+  "sha256": "21510163d4f13971241f018e8c799b426dc83719397ed76485d4bc1c890bac9f"
 }

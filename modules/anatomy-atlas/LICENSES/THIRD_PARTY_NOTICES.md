@@ -3526,3 +3526,13 @@ is not a media reuse licence. Original code/prose retain project MIT terms;
 existing BodyParts3D CC BY 4.0 attribution is unchanged. No new asset,
 dependency, font, service or fee. Radiologist review remains pending.
 See `docs/GASTRIC_VENOUS_XRAY.md`.
+
+## Abdominal vessel and connective X-ray drafts — 12 October 2026
+
+Sixteen source-bound lessons use original factual prose with UAMS, TTUHSC,
+ACR/RSNA and primary study reading links. No publisher text, figures, tables,
+angiograms, scans or datasets are copied, imported, adapted or relicensed.
+Reading access is not a commercial asset-reuse grant; publisher rights remain
+intact. Original code/prose retain project MIT terms and existing BodyParts3D
+CC BY 4.0 attribution is unchanged. No new model, texture, font, dependency,
+service or fee. Clinical review remains pending. See `docs/ABDOMINAL_DETAIL_XRAY.md`.
