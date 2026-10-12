@@ -238,7 +238,12 @@ for (const packet of [
   );
   assert(html.includes('Download review worksheet'));
   assert(html.includes('not clinical approval'));
-  assert.equal((html.match(/<details/g) || []).length, 12 + (packet.reasoning ? 1 + packet.reasoning.choices.length : 0));
+  assert.equal((html.match(/<details/g) || []).length, 12 +
+    (packet.reasoning ? 1 + packet.reasoning.choices.length : 0) +
+    packet.guidedTours.length * 2 + (packet.source.structure.presentationParts ? 1 : 0));
+  for (const evidence of packet.guidedTours)
+    assert(html.includes('Guided learning · ' + evidence.tour.title.replaceAll('&', '&amp;') + ' · Draft'));
+  assert.equal((html.match(/<summary>Exact source surfaces &amp; bundles<\/summary>/g) || []).length, packet.guidedTours.length);
   assert(!html.includes('<textarea'));
   assert(!html.includes('>Approve<'));
   renders++;

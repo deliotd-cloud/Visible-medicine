@@ -1937,6 +1937,10 @@
       "sha256": "07fb960a774eca06b0fa0bf0891782acb848793d4a23ba52ecb2c089a25c6d65"
     },
     {
+      "path": "content/pancreatic-arterial-tour-pins.json",
+      "sha256": "6e322c1775856e5df551800f850703582bd9063c2e75bb78438a44987f2b461d"
+    },
+    {
       "path": "content/pancreatic-arterial-xray.ts",
       "sha256": "937f1ab639695464c38fc17af38c5801e40344f8a931c40940f8c61eb5d87eae"
     },
@@ -4321,6 +4325,10 @@
       "sha256": "8517037505ebb927ba2e6aab55cb7e23fe406327b3a27ba21d6906260241ba91"
     },
     {
+      "path": "lib/pancreatic-arterial-tour.ts",
+      "sha256": "6aeb79683fd24ab532159d9d126e2b17383f4c6e377b6f1d4fc94dc3ede27df2"
+    },
+    {
       "path": "lib/pancreatic-arterial-xray.ts",
       "sha256": "f27384327df49c02f14e3095b657c07f371261a1f62b0440927f14f066cf8222"
     },
@@ -4510,7 +4518,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "4c7a2940d5e586c533a410a937d11fc4f9a8a85bedf6e7200de6ad0efac2b8eb"
+      "sha256": "05bbb95ed165b47b1d39ec8c2791131acc7552affbdef69b88ff749d27b5e731"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5114,7 +5122,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b983b14366e27698c072789bbcd3261b6534c6f6f0fdb1b68ad3444b28952421"
+      "sha256": "63ee06915ddf9960bb6281667e6d2795e50497b2d7d9fbecf47aedb9b6cc42ad"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5337,5 +5345,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c7abe9b024bdfc8919024a40ed2b9cc5c2d6f6e6a9862e4ec094497c8a866f2c"
+  "sha256": "f868ec06d03419c940aed1704c0e29edec62c4465a7346845577378da0a3c85f"
 }

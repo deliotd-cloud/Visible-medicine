@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -287,6 +287,37 @@ test('Pulmonary venous tour keeps exact bilateral frames, assembled stops and sa
    assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
    missing.click('Exit tour');assert.equal(missing.exits(),1);missing.unchanged();missing.unmount();
   }
+ }
+});
+
+test('Pancreatic arterial guide plays nine exact stops with guarded context and stale timers',()=>{
+ const expected=['FMA14782','FMA70479','FMA14784','FMA70480','FMA14805','FMA14787','FMA14790','FMA14792','FMA14793'];
+ for(const compact of [false,true]){
+  const h=harness(catalog,'pancreaticArterialTour',compact),tour=h.props.tour;
+  assert.equal(tour.id,'pancreatic-arterial-relationships');assert.equal(tour.revision,'pancreatic-arterial-relationships-20261012-r1');
+  assert.equal(tour.region,'abdomen');assert.equal(tour.steps.length,9);assert.equal(tour.contextIds.length,5);
+  const ids=[...tour.contextIds,...tour.steps.map(step=>step.selectedId)];
+  assert.equal(new Set(ids).size,14);
+  assert.deepEqual(plain(tour.steps.map(step=>h.props.catalog.structures.find(s=>s.id===step.selectedId)?.fmaId)),expected);
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.equal(h.scene().explode,0);assert.equal(h.scene().layout,'spatial');assert.equal(h.timers.size,0);
+  assert(h.button('Start guided tour').disabled);h.ready();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,step.selectedId);assert.equal(scene.view,step.view);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);assert.equal(scene.tourLocked,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),ids);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const framed=step.frameIds.map(id=>h.props.catalog.structures.find(s=>s.id===id).bounds);
+   assert.deepEqual(plain(scene.presetBounds),{min:[0,1,2].map(a=>Math.min(...framed.map(b=>b.min[a]))),max:[0,1,2].map(a=>Math.max(...framed.map(b=>b.max[a])))});
+   assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);assert(text(h.tree()).includes(step.caption));
+   if(i<8)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,7);h.click('Play');
+  const stale=[...h.timers.values()][0].fn;h.button('Pause').onClick();stale();h.render();
+  assert.equal(h.scene().reset,7);assert.equal(h.timers.size,0);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const missingId of ids){const missing=harness(catalog,'pancreaticArterialTour',compact,missingId);assert(missing.button('Start guided tour').disabled);assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);missing.click('Exit tour');missing.unchanged();missing.unmount();}
  }
 });
 

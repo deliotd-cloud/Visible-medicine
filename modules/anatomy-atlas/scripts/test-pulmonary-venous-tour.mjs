@@ -14,9 +14,9 @@ assert.equal(pins.baseline,baseline);assert.equal(pins.tourRevision,revision);
 assert.equal(sha(JSON.stringify(pins)),'82a8ffd83173093067aa32cb289536f111c9ef8e9948a2bfbcbc999357f40132');
 const sourceOnly=process.argv.includes('--source-only');
 async function load(mode='current'){
-  const plugins=mode==='previous'?[{name:'baseline-tour-registry',setup(b){
+  const plugins=mode!=='source'?[{name:'exact-epoch-tour-registry',setup(b){
     b.onLoad({filter:/[\\/]lib[\\/]regional-tours\.ts$/,namespace:'workspace-test'},args=>({
-      contents:execFileSync('git',['show',baseline+':lib/regional-tours.ts'],{encoding:'utf8',maxBuffer:32e6,windowsHide:true}),
+      contents:execFileSync('git',['show',(mode==='previous'?baseline:'1604303bb9377dd2390e840c079652eb59c47fb0')+':lib/regional-tours.ts'],{encoding:'utf8',maxBuffer:32e6,windowsHide:true}),
       loader:'ts',resolveDir:dirname(args.path),
     }));
   }}]:[];

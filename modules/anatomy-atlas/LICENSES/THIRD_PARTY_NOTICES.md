@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Pancreatic arterial guided learning 12 October 2026
+
+Nine guided stops use original project-MIT captions and existing commercially
+compatible BodyParts3D surfaces, retaining all CC BY 4.0 notices. The UAMS
+abdomen arterial anatomy table and Liang et al. (2022, DOI
+10.1186/s13244-022-01157-z, CC BY 4.0) are factual reading references only; no prose,
+diagram, image, table, scan, model or texture is imported. Existing source and
+clinical holds remain. No dependency, font, external runtime service, payment
+or mandatory fee is added. See `docs/PANCREATIC_ARTERIAL_TOUR.md`.
+
 ## Pancreatic arterial X-ray teaching 12 October 2026
 
 Nine existing selections gain independently written factual teaching under project
