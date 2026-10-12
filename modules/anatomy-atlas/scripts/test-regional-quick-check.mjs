@@ -31,7 +31,7 @@ async function load(fixtures = false) {
   runInNewContext(built.outputFiles[0].text, { module: scope, exports: scope.exports,
     require: id => id === 'react' ? shim : id === 'next/link'
       ? () => { throw Error('Unrelated Next Link must not render in this focused harness'); }
-      : require(id), console, testLesson: () => fixture });
+      : require(id), console, structuredClone, testLesson: () => fixture });
   await scope.exports.bodyTeachingLoader.load();
   return scope.exports;
 }
@@ -66,8 +66,10 @@ function legacyMarkup(structure, lesson) {
     React.createElement('div', {className: 'atlas-lazy-body-teaching', tabIndex: -1},
     React.createElement('p', null, lesson.body),
     lesson.bullets && React.createElement('ul', null, lesson.bullets.map(bullet => React.createElement('li', { key: bullet }, bullet))),
-    lesson.note && React.createElement('p', { className: 'body-content-note' }, lesson.note),
-    lesson.citations?.map((url, i) => React.createElement('a', { key: url, href: url, target: '_blank', rel: 'noreferrer' }, `Reference ${i + 1} ↗`)))));
+    (lesson.note || lesson.citations?.length) ? React.createElement('details', {className: 'atlas-quiz-sources'},
+      React.createElement('summary', null, 'Sources & limitations'),
+      lesson.note && React.createElement('p', { className: 'body-content-note' }, lesson.note),
+      lesson.citations?.map((url, i) => React.createElement('a', { key: url, href: url, target: '_blank', rel: 'noreferrer' }, `Reference ${i + 1} ↗`))) : null)));
 }
 for (const { structure, lesson } of legacy) {
   assert.equal(htmlFor(api.QuizNotes, structure), legacyMarkup(structure, lesson), structure.id + ': legacy notes unchanged');

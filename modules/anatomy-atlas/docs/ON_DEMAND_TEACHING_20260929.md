@@ -1,5 +1,9 @@
 # On-demand teaching loading — 29 September 2026
 
+The current regional delivery is documented in
+[Regional teaching downloads](REGIONAL_TEACHING_LOADING.md). The measurements
+below remain the historical first-use deferral checkpoint, not current timings.
+
 Regional and whole-body initial JavaScript falls from **7,631,095 to 3,897,572
 bytes (48.9% less)**. The complete synchronous `body-content` API, teaching,
 citations, identities and models remain unchanged. The 3,652,345-byte teaching

@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "regional-teaching:generate": "node scripts/regional-teaching-snapshots.mjs",
+    "regional-teaching:test": "node scripts/regional-teaching-snapshots.mjs --check && node --import tsx --test scripts/test-body-teaching-loader.mjs scripts/test-regional-teaching.mjs scripts/test-regional-teaching-freshness.mjs",
     "pulmonary-venous-tour:test": "node scripts/pin-pulmonary-venous-tour.mjs --check && node scripts/test-pulmonary-venous-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "cranial-vault-tour:test": "node scripts/pin-cranial-vault-tour.mjs --check && node scripts/test-cranial-vault-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "intracranial-arterial-xray:test": "node scripts/test-intracranial-arterial-xray.mjs",
@@ -416,7 +418,7 @@
     "eye-layers:export": "node scripts/export-eye-layers.mjs",
     "eye-layers:test": "node scripts/validate-eye-layers.mjs",
     "dev": "vinext dev",
-    "build": "npm run reviews:revisions && npm run body-reviews:revisions && node scripts/generate-nested-review-bindings.mjs --check && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
+    "build": "node scripts/regional-teaching-snapshots.mjs --check && npm run reviews:revisions && npm run body-reviews:revisions && node scripts/generate-nested-review-bindings.mjs --check && vinext build && node scripts/compress-model-delivery.mjs && node scripts/exclude-source-recovery.mjs",
     "models:delivery-check": "node scripts/compress-model-delivery.mjs --check",
     "reviews:revisions": "node scripts/review-revisions.mjs",
     "reviews:test": "node scripts/validate-review.mjs",

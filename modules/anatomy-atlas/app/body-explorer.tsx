@@ -2728,7 +2728,7 @@ export default function BodyExplorer({
                         </Button>
                       </details>
                     </div>
-                    <LazyBodyTeaching enabled={!exam}>
+                    <LazyBodyTeaching structure={selected} enabled={!exam}>
                     {({bodyContent}) => <GroupedAnatomyNotes>
                       {(value) => {
                         const content = bodyContent(selected, value);

@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Regional teaching delivery 12 October 2026
+
+Regional snapshots reproduce existing project teaching and exact public source
+identity metadata without new media or datasets. Existing catalogue/source
+licences, credits and clinical holds remain applicable and are included through
+the normal module delivery. Delivery code adds no dependency, model, texture,
+font, image, external service or mandatory fee. The original complete teaching
+resolver and Review worksheets are retained; no approval is inferred. See
+`docs/REGIONAL_TEACHING_LOADING.md` for regeneration and verification.
+
 ## Renal splenic and gastroduodenal angiographic orientation 12 October 2026
 
 Four existing selections gain original factual X-ray drafts under project MIT

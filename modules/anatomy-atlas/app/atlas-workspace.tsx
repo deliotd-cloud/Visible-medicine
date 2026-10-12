@@ -440,7 +440,7 @@ export function QuizNotes({ structure }: { structure: BodyStructure }) {
   return (
     <details className="atlas-quiz-notes" onToggle={event => setOpen(event.currentTarget.open)}>
       <summary>Quiz notes · {structure.name}</summary>
-      <LazyBodyTeaching enabled={open && teachingVisible}>{({bodyContent}) => {
+      <LazyBodyTeaching structure={structure} enabled={open && teachingVisible}>{({bodyContent}) => {
         const content = bodyContent(structure, 'quiz');
         return <>
       {content.correctAnswer !== undefined ? (

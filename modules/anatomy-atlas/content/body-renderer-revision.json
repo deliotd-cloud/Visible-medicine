@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "ef2ba91bf30ec8be40cd3018f57a64d5b2b798322e8588fa9a07b89febe5a9cd"
+      "sha256": "5a67b01382802bc01ff65951772cf403b3cfe1d45aa6e10db0e4382577062807"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -78,7 +78,7 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "7a120c472adac2fac20c7d16f63a37a9acf6cb945c8a0cf2d6b03f54f31b4af8"
+      "sha256": "856e8ef194b00ad8bd77e41961eb338202bd6ced86c7a4380116fc8f64e71731"
     },
     {
       "path": "app/body-scene.tsx",
@@ -218,7 +218,7 @@
     },
     {
       "path": "app/lazy-body-teaching.tsx",
-      "sha256": "e8fb67f5f028e3333c93b2075007d7f41da794129cc07608adba09a0c5307bb8"
+      "sha256": "8b0d12009185ace352d5cd2babe1f116d2174c9d6848dc8c7523d021d656be1b"
     },
     {
       "path": "app/nested-education-link.ts",
@@ -266,7 +266,7 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sha256": "f9759090691408ad52453c51c9cbfad2ea6f24ff895f6ac76b6446620efcf35c"
+      "sha256": "12b6f8bf0e441a9b07d0bfea971fc0fa927ae62cbecb28f360e5faa64bb78482"
     },
     {
       "path": "app/related-study.tsx",
@@ -2129,6 +2129,50 @@
       "sha256": "7092925fd952b6665df83b5c9cd50697e05c0a565d33c58db045397e3fb7b3ad"
     },
     {
+      "path": "content/regional-teaching/abdomen.json",
+      "sha256": "995ccb871d58d404383dc16318019e8f915f0348a8516c268a61fde84507f9d7"
+    },
+    {
+      "path": "content/regional-teaching/foot.json",
+      "sha256": "a6ff7fc7debc74138b48954516c03809370a2a329a48fb5b3081e3097583d882"
+    },
+    {
+      "path": "content/regional-teaching/forearm.json",
+      "sha256": "f156389c63b924269a8da1c222f92f12d929572d323addefd4be2b00dc966930"
+    },
+    {
+      "path": "content/regional-teaching/hand.json",
+      "sha256": "9d7dbff8f50ff6553f6f40fde8993c3188aa004588c03eeed8f164988d625c7b"
+    },
+    {
+      "path": "content/regional-teaching/head-neck.json",
+      "sha256": "9234533a669d8e661891345ac880512fc0265efb7ed64d19376827a9b8091dd1"
+    },
+    {
+      "path": "content/regional-teaching/leg.json",
+      "sha256": "abfe629b0df38aef252b7568741b2b63d086d137143f546a9f25d4cb0775e4bd"
+    },
+    {
+      "path": "content/regional-teaching/pelvis.json",
+      "sha256": "c15c5d8dbc7a328525702b5c6d04b3c3018aea272be7fca8db878c06abb1668f"
+    },
+    {
+      "path": "content/regional-teaching/shoulder-arm.json",
+      "sha256": "aa58c8917386972b370c95e9bb29a9055319ffe2a0290c4399b1bead7a4bbe8f"
+    },
+    {
+      "path": "content/regional-teaching/spine.json",
+      "sha256": "ce61f63c48828f97c8f27bb9f589aea4e75724ee19db09be077fc3690146e754"
+    },
+    {
+      "path": "content/regional-teaching/thigh.json",
+      "sha256": "cbf950dc41f9ce1681312b1f6443605e42a9985fa2d01b36d27474fcd64cad74"
+    },
+    {
+      "path": "content/regional-teaching/thorax.json",
+      "sha256": "f4b40c99c868b85bfd9b3c1290d59487ead31d8d8642775fcf589d89789817e1"
+    },
+    {
       "path": "content/regional-vascular-clinical-pins.json",
       "sha256": "40b986e14425839098bfd2dae24f9c5d7a604205b32c8814908a63f6c85c8a07"
     },
@@ -2150,7 +2194,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "ade1bf9dbf3544c36e35a5980192c16ec37cdd10c381d61cef6f085c8a11ac50"
+      "sha256": "fffee06be180ac4d072d6ff5c62341ac29f8f4a46caec8950dc402ceb1eca0ef"
     },
     {
       "path": "content/root-cuff-xray-pins.json",
@@ -3030,7 +3074,7 @@
     },
     {
       "path": "lib/body-teaching-loader.ts",
-      "sha256": "1d1b1c5d43eab766a6d73e0b568c4700213157f301221e4fe0ad8a0aff8d372b"
+      "sha256": "9c97ebd77f31963447d202973882e9410f520b4d8613e62e261ceabaebacced9"
     },
     {
       "path": "lib/bone-joints.ts",
@@ -4433,6 +4477,14 @@
       "sha256": "d2e10b0d4cadf4744109739aaf89648663327b7ca7ec2f52d82fe3084d55c8dc"
     },
     {
+      "path": "lib/regional-teaching-imports.ts",
+      "sha256": "c7056eba357d145689abaa774f5951645a4fb428518dd015fd0a279b21d132e8"
+    },
+    {
+      "path": "lib/regional-teaching-snapshot.ts",
+      "sha256": "df82b474d07429aaf6ae7a01439a8eb76f302d90bd742ed119c167048eabfd69"
+    },
+    {
       "path": "lib/regional-tours.ts",
       "sha256": "4c7a2940d5e586c533a410a937d11fc4f9a8a85bedf6e7200de6ad0efac2b8eb"
     },
@@ -5038,7 +5090,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "ea0aab11f1a48b3815c85deaad6bf89b01fc1da3e68f2e08739c4fa4bb88a770"
+      "sha256": "5361a25848adbe72ca60e5a54ef766b6e795eb62c5816bd801bed3afc4c4ba4f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5261,5 +5313,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f6261e8793caecfdca0b30aafa6993f035ac41ce8b37c32384b49156cdf81d49"
+  "sha256": "66cc1c9fbc6f0ccd7ab61072362a6a9ab0774cc1d3a0ad30338fc91712a8c509"
 }

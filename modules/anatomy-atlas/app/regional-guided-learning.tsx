@@ -152,7 +152,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
         <p>{tour.limitations??'Selected exterior source surfaces in a common frame. Not a continuous airway lumen, complete bronchial tree or patient scan.'} Exit restores your previous workspace.</p>
         {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
       </details>
-      {active&&selected&&<LazyBodyTeaching key={`teaching:${step.id}:${selected.id}`} enabled={explanationOpen}>
+      {active&&selected&&<LazyBodyTeaching structure={selected} key={`teaching:${step.id}:${selected.id}`} enabled={explanationOpen}>
         {({bodyLesson}) => <>
       <TourImagingNotes key={`imaging:${step.id}`} structureName={selected.name}
         linkControl={<PausedTourImagingLink link={pausedImaging}/>}
