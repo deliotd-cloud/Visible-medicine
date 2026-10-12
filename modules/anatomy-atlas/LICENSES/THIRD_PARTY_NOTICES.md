@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Pancreatic arterial X-ray teaching 12 October 2026
+
+Nine existing selections gain independently written factual teaching under project
+MIT terms. UAMS, ACR/RSNA, Kulenović and Sarač-Hadžihalilović (2010,
+DOI 10.17305/bjbms.2010.2727), Okahara et al. (2010,
+DOI 10.1007/s00261-009-9581-0) and the dual-energy CT study at PMC8816990
+are reading references only. The latter states CC BY 4.0; other publisher and
+institutional rights remain intact. No reading access or citation is treated as
+permission to reuse media. No publication prose, caption, figure, table, scan,
+model, texture, font or dataset is imported or adapted. Existing BodyParts3D
+credits and clinical holds remain unchanged. No dependency, external runtime
+service, paid asset or mandatory fee is added. See `docs/PANCREATIC_ARTERIAL_XRAY.md`.
+
 ## Colic arterial X-ray teaching 12 October 2026
 
 Seven retained arterial selections gain original factual teaching under project

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "10f1342b8543f47b069943f3988b476ed6f6a31005dec8608e440c1cfada46a4"
+      "sha256": "7cbdff104e1213510d37754f9bcccd61a3d90844db50dad764f68ca3d0d9fcd6"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1937,6 +1937,10 @@
       "sha256": "07fb960a774eca06b0fa0bf0891782acb848793d4a23ba52ecb2c089a25c6d65"
     },
     {
+      "path": "content/pancreatic-arterial-xray.ts",
+      "sha256": "937f1ab639695464c38fc17af38c5801e40344f8a931c40940f8c61eb5d87eae"
+    },
+    {
       "path": "content/pancreatic-teaching.ts",
       "sha256": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817"
     },
@@ -2138,7 +2142,7 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sha256": "549b1a31c209fc2897d22edcf12f30aab9f25fc066fdd85a6e826612632f9a79"
+      "sha256": "b38a956cdfebd39bbab44f44e4c4b3d6a177413cb2abad77e798f5b38bca02ad"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -4317,6 +4321,10 @@
       "sha256": "8517037505ebb927ba2e6aab55cb7e23fe406327b3a27ba21d6906260241ba91"
     },
     {
+      "path": "lib/pancreatic-arterial-xray.ts",
+      "sha256": "f27384327df49c02f14e3095b657c07f371261a1f62b0440927f14f066cf8222"
+    },
+    {
       "path": "lib/pancreatic-vessel-teaching.ts",
       "sha256": "2b036521f7d7d1f77387a6b78c6d9c7fbd9a49f4e846752939d480e9bf01718d"
     },
@@ -5106,7 +5114,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "260bd83de8e561b7936f9e682ae56183ae4f5abcc6d05694341af2e7f28d457c"
+      "sha256": "b983b14366e27698c072789bbcd3261b6534c6f6f0fdb1b68ad3444b28952421"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5329,5 +5337,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "b3c5de175c2d48ca7ad562571e81927d39e9c135756a12775ff0c50b6d9acd45"
+  "sha256": "c7abe9b024bdfc8919024a40ed2b9cc5c2d6f6e6a9862e4ec094497c8a866f2c"
 }
