@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Limb-nerve relationship checks — 12 October 2026
+
+Eight independently written formative questions add factual usual innervation
+relationships to 18 retained bilateral muscle selections. New code and question
+prose are original project work under the repository MIT licence. Reading links
+point to the Texas Tech anatomical tables; those tables and images retain their
+owners' copyright and are not redistributed, traced, translated or imported.
+Their online availability is not treated as a media reuse licence. No new models,
+textures, fonts, datasets, dependencies or paid services are included. Existing
+BodyParts3D commercial-compatible CC BY 4.0 attribution remains unchanged.
+Questions remain exact-revision clinical drafts, not approved patient anatomy.
+
 ## Elbow arterial guided learning 12 October 2026
 
 Eight right-sided stops use original project-MIT captions/code and existing

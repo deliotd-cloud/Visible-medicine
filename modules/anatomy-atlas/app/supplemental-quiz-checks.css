@@ -1,0 +1,11 @@
+.supplemental-quiz-checks { margin-top: .75rem; color: #174e4b; }
+.supplemental-quiz-checks > summary { cursor: pointer; padding: .5rem 0; font-weight: 600; }
+.supplemental-quiz-checks :focus-visible { outline: 3px solid #14675e; outline-offset: 3px; }
+.supplemental-quiz-checks-nav { display: flex; align-items: center; gap: .75rem; justify-content: space-between; margin: .25rem 0 .75rem; font-size: .875rem; }
+.supplemental-quiz-checks-nav button { min-height: 44px; padding: .4rem .65rem; border: 1px solid #83b5af; border-radius: 8px; background: #f3fbf9; color: #174e4b; cursor: pointer; }
+.supplemental-quiz-checks-nav button:disabled { opacity: .55; cursor: default; }
+.supplemental-quiz-checks-sources { margin-top: .75rem; font-size: .875rem; }
+.supplemental-quiz-checks-sources > summary { cursor: pointer; padding: .4rem 0; }
+.supplemental-quiz-checks-sources p { margin: .35rem 0; }
+.supplemental-quiz-checks-sources a { display: block; padding: .35rem 0; overflow-wrap: anywhere; }
+.supplemental-quiz-checks-unavailable { margin: .5rem 0; font-size: .875rem; }

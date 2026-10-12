@@ -30,7 +30,7 @@
     },
     {
       "path": "app/anatomy-data.ts",
-      "sha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13"
+      "sha256": "75a91a07a3bf268088f7b6e011e71ffd27bbc0366d2d01a3dbbd7f28da64a4cb"
     },
     {
       "path": "app/anatomy-tissue.tsx",
@@ -54,7 +54,7 @@
     },
     {
       "path": "app/atlas-workspace.tsx",
-      "sha256": "5a67b01382802bc01ff65951772cf403b3cfe1d45aa6e10db0e4382577062807"
+      "sha256": "19ee43080923cec7a552fc365babcd1988bec15bffd7245bcad2c9b78da37818"
     },
     {
       "path": "app/back-layers-study.tsx",
@@ -365,6 +365,14 @@
       "sha256": "6d1e76308517cc89bfa007344b68fa7b575729cc2a2733276627843eee1bdfcf"
     },
     {
+      "path": "app/supplemental-quiz-checks.css",
+      "sha256": "1c3c46204a3e3cba8f4080df70e6d6d9b36cdda25322e8f20ce1d00def830e04"
+    },
+    {
+      "path": "app/supplemental-quiz-checks.tsx",
+      "sha256": "88dcb688cfded9f1c8a0394f862b246276014dde1168be8fef9ea76a4ec39cf3"
+    },
+    {
       "path": "app/tour-imaging-notes.css",
       "sha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c"
     },
@@ -374,7 +382,7 @@
     },
     {
       "path": "app/tour-quick-check.tsx",
-      "sha256": "d2386e228d454fac76800ba045e0a3337c90ce30e008c6cff2c88f29062f99f2"
+      "sha256": "beb374c41883fd4b4c25cbf0727518119efd07f11a653b5b2a060ea4448b8349"
     },
     {
       "path": "app/tour-step-picker.css",
@@ -1661,6 +1669,14 @@
       "sha256": "bea7ceb17df355ece5050713475252f5f18435531d8649f8081e3071a52d3880"
     },
     {
+      "path": "content/limb-nerve-quiz-pins.json",
+      "sha256": "8a3b985007fcb0e5a00fed527d624648d10527ae063297182e747c0109f3cb62"
+    },
+    {
+      "path": "content/limb-nerve-quiz.ts",
+      "sha256": "5175ec0f8e75b84e69dcfc053010530ced945ab62b08d5b4aba31ccee9ff4dea"
+    },
+    {
       "path": "content/limb-vascular-studies.ts",
       "sha256": "825f08810f16ae4d409e89a6579f78f739843d192cdb2f9946314c1c30227908"
     },
@@ -2174,7 +2190,7 @@
     },
     {
       "path": "content/regional-teaching/forearm.json",
-      "sha256": "f156389c63b924269a8da1c222f92f12d929572d323addefd4be2b00dc966930"
+      "sha256": "d12ed5ebd05ae708864fcdffd10801a864e78d38057564558a3ec2a4945a6f3c"
     },
     {
       "path": "content/regional-teaching/hand.json",
@@ -2186,7 +2202,7 @@
     },
     {
       "path": "content/regional-teaching/leg.json",
-      "sha256": "abfe629b0df38aef252b7568741b2b63d086d137143f546a9f25d4cb0775e4bd"
+      "sha256": "79eb1a773fda2db486d992047244d9ec7f4fc484fb6f87f912477a46be169640"
     },
     {
       "path": "content/regional-teaching/pelvis.json",
@@ -2202,7 +2218,7 @@
     },
     {
       "path": "content/regional-teaching/thigh.json",
-      "sha256": "cbf950dc41f9ce1681312b1f6443605e42a9985fa2d01b36d27474fcd64cad74"
+      "sha256": "ec5457a152c8d2037d229be7e9771540c1f8913794f24718782ed8c3e4e0d13c"
     },
     {
       "path": "content/regional-teaching/thorax.json",
@@ -2230,7 +2246,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "fffee06be180ac4d072d6ff5c62341ac29f8f4a46caec8950dc402ceb1eca0ef"
+      "sha256": "65814e460d4587e9e7e11e0ff2ff2c02c5a8f4f0efbf51023e43ba39ca539f06"
     },
     {
       "path": "content/root-cuff-xray-pins.json",
@@ -3614,7 +3630,7 @@
     },
     {
       "path": "lib/forearm-muscle-quiz.ts",
-      "sha256": "cd9247061a55e9bd04928a043821ccaecdb8afee36ba086940fbc167c1a9d7fc"
+      "sha256": "543f069e536a759b8254c6272071e88518e949814f725f0642d88e9b6fc805a4"
     },
     {
       "path": "lib/forearm-reasoning.ts",
@@ -4050,7 +4066,7 @@
     },
     {
       "path": "lib/leg-muscle-quiz.ts",
-      "sha256": "2c6c78d49ddd75189aed3caec93bcc7b84564913a6134364a59f5e7c2a07714d"
+      "sha256": "b5dd7e82ba161c88760715d6541f997708331f191938155070aa455824c268d2"
     },
     {
       "path": "lib/leg-reasoning.ts",
@@ -4087,6 +4103,10 @@
     {
       "path": "lib/limb-motor.ts",
       "sha256": "c8a648d04913eed4addbd9c7bc0cd01ddd6e76625459cc0bbd6a956bc39423f6"
+    },
+    {
+      "path": "lib/limb-nerve-quiz.ts",
+      "sha256": "7898bfb57b9e37c271c492c6e886194388321f6abea02d9eeac7a92f9004e5c0"
     },
     {
       "path": "lib/limb-relationships-reasoning.ts",
@@ -4862,7 +4882,7 @@
     },
     {
       "path": "lib/thigh-deep-muscle-quiz.ts",
-      "sha256": "fbee590019e916871c5eb8ade3f59b8f0bb7718420151b75783c7e40ae695202"
+      "sha256": "35934fcb69e215aa3863a84125eace8dead00ce317d795c9c66fc6ed96747a36"
     },
     {
       "path": "lib/thigh-muscle-imaging.ts",
@@ -5170,7 +5190,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b3f918cecbfe232de7d068cadf0e27eb212efee26e1ac976a0c70656309d18af"
+      "sha256": "e088bd9e925f61ce6e22735329a090a53555daad5b17bc1434e06d86daf7e8fe"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5393,5 +5413,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "13536c6e223b66abb4200ccaa9988b730f190e51992736d7ddd2f56ee9042b11"
+  "sha256": "c64aef9ee9a7fcff2f19bf800cbc694daaadabf6fe06424a88c8525cc47f9224"
 }

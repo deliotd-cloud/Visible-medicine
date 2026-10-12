@@ -278,6 +278,20 @@ export async function contentValidator(registry) {
       );
     }
     const quiz = record.content.quiz;
+    if (quiz.additionalChecks) {
+      if (new Set(quiz.additionalChecks.map(check=>check.key)).size !== quiz.additionalChecks.length)
+        throw Error('Supplemental Quiz keys must be unique');
+      for (const check of quiz.additionalChecks) {
+        if (check.bullets.filter(choice=>choice===check.correctAnswer).length!==1
+          || new Set(check.bullets.map(choice=>choice.trim())).size!==check.bullets.length)
+          throw Error('Supplemental Quiz answer must match exactly one unambiguous choice');
+        for (const reference of check.citations) {
+          let url; try { url=new URL(reference); } catch { throw Error('Invalid supplemental source'); }
+          if(url.protocol!=='https:' || !url.hostname || url.username || url.password || /[\s\\]/.test(reference))
+            throw Error('Invalid supplemental source');
+        }
+      }
+    }
     if (Object.hasOwn(quiz, 'correctAnswer')) {
       if (quiz.bullets.filter(choice => choice === quiz.correctAnswer).length !== 1
         || new Set(quiz.bullets.map(choice => choice.trim())).size !== quiz.bullets.length)

@@ -1,6 +1,7 @@
 'use client';
 import type {ContentLesson} from '@/lib/content-types';
 import {StructureQuickCheck} from './structure-quick-check';
+import {SupplementalQuizChecks} from './supplemental-quiz-checks';
 import './tour-imaging-notes.css';
 
 /** Only existing explicitly keyed source-bound lessons; never infer an answer. */
@@ -16,6 +17,7 @@ export function TourQuickCheck({lesson,onOpen,onChange}:{lesson:ContentLesson;on
       {onChange&&<p>Imaging linking stays paused while this check is open.</p>}
       <StructureQuickCheck question={lesson.body} choices={choices}
         correctAnswer={lesson.correctAnswer} explanation={lesson.explanation}/>
+      {lesson.additionalChecks&&<SupplementalQuizChecks checks={lesson.additionalChecks}/>}
       <details><summary>References & limits</summary>
         {lesson.note&&<p>{lesson.note}</p>}
         {lesson.citations?.filter(url=>/^https?:\/\//i.test(url)).map((url,index)=><a key={url} href={url} target="_blank" rel="noreferrer">Reference {index+1} ↗</a>)}

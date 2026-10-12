@@ -74,6 +74,18 @@ function safeReference(v: unknown): v is string {
     return false;
   }
 }
+function validAdditionalChecks(value: unknown): boolean {
+  if (!Array.isArray(value) || value.length < 1 || value.length > 8) return false;
+  const keys = ['key','body','bullets','correctAnswer','explanation','citations','note'];
+  return value.every(check => object(check)
+    && Object.keys(check).length === keys.length && keys.every(key => Object.hasOwn(check,key))
+    && token(check.key) && text(check.body) && text(check.explanation) && text(check.note)
+    && strings(check.bullets) && check.bullets.length >= 2 && check.bullets.length <= 8
+    && check.bullets.every(text) && new Set(check.bullets.map(choice=>choice.trim())).size === check.bullets.length
+    && text(check.correctAnswer) && check.bullets.filter(choice=>choice===check.correctAnswer).length===1
+    && strings(check.citations) && check.citations.length>0 && check.citations.every(safeReference))
+    && new Set(value.map(check=>check.key)).size===value.length;
+}
 function validReasoning(
   value: unknown,
   source: Record<string, unknown>,
@@ -380,6 +392,7 @@ export async function parseBodyReviewResponse(
           (t.correctAnswer === undefined ||
             typeof t.correctAnswer === 'string') &&
           (t.explanation === undefined || typeof t.explanation === 'string') &&
+          (!Object.hasOwn(t,'additionalChecks') || (t.tab==='quiz' && validAdditionalChecks(t.additionalChecks))) &&
           (t.note === undefined || typeof t.note === 'string'),
       )
     )

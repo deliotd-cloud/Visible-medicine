@@ -13,6 +13,17 @@ export type ContentTab =
   | 'clinical'
   | 'quiz';
 
+/** Optional source-bound formative question; no score or approval is implied. */
+export type ContentQuizCheck = {
+  key: string;
+  body: string;
+  bullets: string[];
+  correctAnswer: string;
+  explanation: string;
+  citations: string[];
+  note: string;
+};
+
 export type ContentSection = {
   readiness?:
     'draft' | 'pending' | 'identity-only' | 'generated-identification';
@@ -24,6 +35,7 @@ export type ContentSection = {
   /** Explicit draft key; never infer correctness from the option position. */
   correctAnswer?: string;
   explanation?: string;
+  additionalChecks?: ContentQuizCheck[];
 };
 
 export type AnatomyStructure = {

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync,readdirSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 import {build} from './workspace-test-build.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 import {createRegionalTeachingLoader} from '../lib/body-teaching-loader.ts';
 
 const compiled=await build({stdin:{contents:[
@@ -23,17 +24,67 @@ const deferred=()=>{let resolve,reject;const promise=new Promise((yes,no)=>{reso
 const tick=async()=>{for(let i=0;i<12;i++)await Promise.resolve();};
 const ownUndefined=(value,path=[])=>value&&typeof value==='object'
   ?Object.keys(value).flatMap(key=>value[key]===undefined?[[...path,key]]:ownUndefined(value[key],[...path,key])):[];
+const introducingCommit='d2b41697231b40b1bcf10e49bf188f2373e71c27';
+const precedingResolverCommit='4dee2178b4a3015e81fbdcf16a2f133193fac6af';
+const gitBytes=(commit,path)=>execFileSync('git',['show',`${commit}:${path}`],
+  {encoding:null,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+const gitJson=(commit,path)=>JSON.parse(gitBytes(commit,path).toString('utf8'));
+
+test('introducing commit retains its original resolver and exact 9,936 recorded lessons',async()=>{
+  assert.deepEqual(gitBytes(introducingCommit,'app/body-content.ts'),
+    gitBytes(precedingResolverCommit,'app/body-content.ts'),
+    'Original synchronous resolver source unchanged at the regional-loader milestone');
+  // The current reader and source canonicalizer match the introducing commit
+  // modulo checkout line endings, so recorded Git snapshots replay that epoch.
+  for(const path of ['lib/regional-teaching-snapshot.ts','lib/body-source-additions.ts'])
+    assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),
+      gitBytes(introducingCommit,path).toString('utf8').replaceAll('\r\n','\n'),
+      `${path}: historical decoder unchanged`);
+  const historical=await exactSourceHistoryApi(introducingCommit,'display-review');
+  const recordedCatalog=historical.bodyDisplayCatalog(gitJson(introducingCommit,
+    'public/models/bodyparts3d/full-body/catalog.json'));
+  const recordedRegions=[...new Set(recordedCatalog.structures.map(s=>s.region))].sort();
+  const recordedSnapshots=Object.fromEntries(recordedRegions.map(region=>
+    [region,gitJson(introducingCommit,`${directory}/${region}.json`)]));
+  const recordedModules=Object.fromEntries(recordedRegions.map(region=>
+    [region,api.decodeRegionalTeachingSnapshot(recordedSnapshots[region],region)]));
+  assert.equal(recordedCatalog.structures.length,1104);
+  assert.equal(historical.contentTabs.length,9);
+  assert.deepEqual(recordedRegions,regions);
+  for(const region of recordedRegions)
+    assert.deepEqual(recordedSnapshots[region].entries.map(entry=>entry.identity).sort(),
+      recordedCatalog.structures.filter(s=>s.region===region).map(api.sourceCanonical).sort(),
+      region+': recorded exact source closure');
+  let placements=0,undefinedProperties=0;
+  for(const structure of recordedCatalog.structures){
+    const module=recordedModules[structure.region];
+    assert.equal(module.accepts(structure),true,structure.id);
+    for(const tab of historical.contentTabs){
+      const expected=historical.bodyLesson(structure,tab),actual=module.bodyLesson(structure,tab);
+      assert.deepEqual(actual,expected,structure.id+':'+tab+': recorded lesson');
+      assert.deepEqual(module.bodyContent(structure,tab),historical.bodyContent(structure,tab),
+        structure.id+':'+tab+': recorded display');
+      assert.deepEqual(ownUndefined(actual),ownUndefined(expected),
+        structure.id+':'+tab+': recorded own undefined fields');
+      undefinedProperties+=ownUndefined(expected).length;placements++;
+      const clean=structuredClone(actual);
+      actual.bullets?.push('foreign');actual.citations?.push('https://foreign.example');actual.body='foreign';
+      assert.deepEqual(module.bodyLesson(structure,tab),clean,
+        structure.id+':'+tab+': recorded detached data');
+    }
+  }
+  assert.equal(placements,9936);assert.equal(undefinedProperties,20);
+  assert.equal(Object.values(recordedSnapshots).reduce((count,snapshot)=>count+snapshot.undefinedPaths.length,0),20);
+});
 
 test('all display-corrected selections and nine lessons preserve exact synchronous semantics',()=>{
-  const baseline=execFileSync('git',['show','4dee2178:app/body-content.ts'],{encoding:'utf8',windowsHide:true,maxBuffer:4e6});
-  assert.equal(readFileSync('app/body-content.ts','utf8').replaceAll('\r\n','\n'),baseline.replaceAll('\r\n','\n'),'Original synchronous resolver source unchanged');
   assert.equal(catalog.structures.length,1104);assert.equal(api.contentTabs.length,9);
   assert.deepEqual(readdirSync(directory).filter(name=>name.endsWith('.json')).sort(),regions.map(region=>region+'.json'));
   for(const region of regions){
     assert.deepEqual(snapshots[region].entries.map(entry=>entry.identity).sort(),
       catalog.structures.filter(s=>s.region===region).map(api.sourceCanonical).sort(),region+': exact source closure');
   }
-  let placements=0,undefinedProperties=0;
+  let placements=0,undefinedProperties=0,supplemental=0;
   for(const structure of catalog.structures){
     const module=modules[structure.region];
     assert.equal(module.accepts(structure),true,structure.id);
@@ -46,11 +97,20 @@ test('all display-corrected selections and nine lessons preserve exact synchrono
       const clean=structuredClone(actual);
       actual.bullets?.push('foreign');
       actual.citations?.push('https://foreign.example');
+      if(actual.additionalChecks){
+        supplemental++;
+        actual.additionalChecks[0].body='foreign';
+        actual.additionalChecks[0].bullets.push('foreign');
+        actual.additionalChecks[0].citations.push('https://foreign.example');
+        actual.additionalChecks[0].note='foreign';
+        actual.additionalChecks.push(structuredClone(actual.additionalChecks[0]));
+      }
       actual.body='foreign';
       assert.deepEqual(module.bodyLesson(structure,tab),clean,structure.id+':'+tab+':detached data');
     }
   }
   assert.equal(placements,9936);assert.equal(undefinedProperties,20);
+  assert.equal(supplemental,18,'Exactly 18 live Quiz placements carry detached supplemental questions');
   assert.equal(Object.values(snapshots).reduce((count,snapshot)=>count+snapshot.undefinedPaths.length,0),20);
 });
 

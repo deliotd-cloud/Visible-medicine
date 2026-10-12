@@ -45,6 +45,7 @@ import {
 import type { BodyCatalog, BodyStructure } from './body-types';
 import { BodyTeachingVisibility, LazyBodyTeaching } from './lazy-body-teaching';
 import { StructureQuickCheck } from './structure-quick-check';
+import { SupplementalQuizChecks } from './supplemental-quiz-checks';
 import type { StudySide } from '@/lib/study-links';
 import type { ContentTab } from './anatomy-data';
 import { atlasPanelLayout } from '@/lib/atlas-panel-layout';
@@ -463,6 +464,7 @@ export function QuizNotes({ structure }: { structure: BodyStructure }) {
           )}
         </>
       )}
+      {content.additionalChecks && <SupplementalQuizChecks key={structure.id} checks={content.additionalChecks}/>}
       {(content.note || content.citations?.length) ? (
         <details
           className="atlas-quiz-sources"

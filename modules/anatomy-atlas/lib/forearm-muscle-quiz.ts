@@ -4,6 +4,7 @@ import { sourceCanonical } from './body-source-additions';
 import type { BodyStructure } from '../app/body-types';
 import type { ContentTab } from '../app/anatomy-data';
 import type { ContentLesson } from './content-types';
+import { limbNerveQuizChecks } from './limb-nerve-quiz';
 
 const bindings = new Map(pins.entries.map(entry => [entry.identity.id, {
   signature: sourceCanonical(entry.identity), group: entry.group as ForearmMuscleQuizGroup,
@@ -15,10 +16,12 @@ export function forearmMuscleQuizLesson(s: BodyStructure, tab: ContentTab): Cont
   const bound = bindings.get(s.id);
   if (!bound || sourceCanonical(s) !== bound.signature) return undefined;
   const question = forearmMuscleQuizQuestions[bound.group];
+  const additionalChecks = limbNerveQuizChecks(s);
   return {
     readiness: 'draft', title: `${s.name} · Forearm muscle quick check · draft`,
     body: question.body, bullets: [...question.choices], correctAnswer: question.correctAnswer,
     explanation: question.explanation, citations: [...question.references],
     note: 'Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent.',
+    ...(additionalChecks ? {additionalChecks} : {}),
   };
 }

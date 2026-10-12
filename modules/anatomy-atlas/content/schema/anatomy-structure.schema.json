@@ -293,9 +293,25 @@
           "items": { "type": "string", "pattern": "\\S" }
         },
         "correctAnswer": { "type": "string", "pattern": "\\S" },
-        "explanation": { "type": "string", "pattern": "\\S" }
+        "explanation": { "type": "string", "pattern": "\\S" },
+        "additionalChecks": { "type": "array", "minItems": 1, "maxItems": 8,
+          "items": { "$ref": "#/$defs/contentQuizCheck" } }
       },
       "description": "Optional formative answer key; validate exact unique choice membership after schema validation. Not a score or clinical approval."
+    },
+    "contentQuizCheck": {
+      "type": "object", "additionalProperties": false,
+      "required": ["key", "body", "bullets", "correctAnswer", "explanation", "citations", "note"],
+      "properties": {
+        "key": {"type":"string", "pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+        "body": {"type":"string", "pattern":"\\S"},
+        "bullets": {"type":"array", "minItems":2, "maxItems":8, "uniqueItems":true,
+          "items":{"type":"string", "pattern":"\\S"}},
+        "correctAnswer": {"type":"string", "pattern":"\\S"},
+        "explanation": {"type":"string", "pattern":"\\S"},
+        "citations": {"type":"array", "minItems":1, "items":{"type":"string", "pattern":"^https://"}},
+        "note": {"type":"string", "pattern":"\\S"}
+      }
     },
     "section": {
       "type": "object",

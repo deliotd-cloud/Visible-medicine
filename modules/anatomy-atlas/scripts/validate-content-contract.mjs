@@ -460,6 +460,34 @@ for (const mutate of quizNegatives) {
   rejects(() => validate(malformed), 'Reject malformed formative answer keys');
 }
 const unkeyed = clone(keyedBody);
+const supplementalBody = body.find(record=>record.content.quiz.additionalChecks?.length);
+check(supplementalBody,'Source-bound supplemental Quiz checks are exported');
+same(supplementalBody.validation.materialRevisions.teaching,null);
+check(validate(supplementalBody),'Valid supplemental Quiz contract');
+const supplementalNegatives = [
+  r=>{r.content.quiz.additionalChecks=[];},
+  r=>{r.content.quiz.additionalChecks=Array.from({length:9},()=>clone(r.content.quiz.additionalChecks[0]));},
+  r=>{r.content.quiz.additionalChecks.push(clone(r.content.quiz.additionalChecks[0]));},
+  r=>{r.content.quiz.additionalChecks[0].key=' ';},
+  r=>{r.content.quiz.additionalChecks[0].body=' ';},
+  r=>{r.content.quiz.additionalChecks[0].bullets=['one'];},
+  r=>{r.content.quiz.additionalChecks[0].bullets.push(r.content.quiz.additionalChecks[0].correctAnswer);},
+  r=>{r.content.quiz.additionalChecks[0].bullets.push(' '+r.content.quiz.additionalChecks[0].bullets[0]+' ');},
+  r=>{r.content.quiz.additionalChecks[0].correctAnswer='foreign';},
+  r=>{delete r.content.quiz.additionalChecks[0].explanation;},
+  r=>{r.content.quiz.additionalChecks[0].note=' ';},
+  r=>{r.content.quiz.additionalChecks[0].citations=[];},
+  r=>{r.content.quiz.additionalChecks[0].citations=['javascript:alert(1)'];},
+  r=>{r.content.quiz.additionalChecks[0].citations=['https://user:secret@example.org'];},
+  r=>{r.content.quiz.additionalChecks[0].citations=['https://'];},
+  r=>{r.content.quiz.additionalChecks[0].citations=['https://example.org/ whitespace'];},
+  r=>{r.content.quiz.additionalChecks[0].approved=true;},
+  r=>{r.content.anatomy.additionalChecks=clone(r.content.quiz.additionalChecks);},
+];
+for(const mutate of supplementalNegatives){
+  const malformed=clone(supplementalBody);mutate(malformed);
+  rejects(()=>validate(malformed),'Reject malformed supplemental Quiz contract');
+}
 delete unkeyed.content.quiz.correctAnswer; delete unkeyed.content.quiz.explanation;
 check(validate(unkeyed), 'Existing informational quizzes remain valid v2 records');
 same(
@@ -480,7 +508,7 @@ const report = {
   shoulderRecords: shoulder.length,
   boundNodes: nodes.size,
   glbAssetsVerified: assets.size,
-  rejectionCases: negative.length + quizNegatives.length + 3,
+  rejectionCases: negative.length + quizNegatives.length + supplementalNegatives.length + 3,
   originalCopyAndRecipesVerifiedFromRecordedGitTree: true,
   completedCurriculumEpochTransitionsChecked: completedCurriculum,
   explicitlyUpdatedBodySections: 3634,

@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "limb-nerve-quiz:test": "node scripts/pin-limb-nerve-quiz.mjs --check && node scripts/test-limb-nerve-quiz.mjs && node scripts/test-supplemental-quiz-checks.mjs && node scripts/test-limb-nerve-review-ui.mjs",
     "thoracic-detail-ultrasound:test": "node scripts/test-thoracic-detail-ultrasound.mjs",
     "abdominal-detail-xray:test": "node scripts/test-abdominal-detail-xray.mjs",
     "gastric-venous-xray:test": "node scripts/test-gastric-venous-xray.mjs",

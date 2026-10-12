@@ -442,6 +442,18 @@ export function BodyReviewDetails({
           )}
           {topic.correctAnswer && <p><strong>Draft answer key:</strong> {topic.correctAnswer}</p>}
           {topic.explanation && <p><strong>Draft explanation:</strong> {topic.explanation}</p>}
+          {topic.additionalChecks && <section aria-label="Supplemental draft questions">
+            <h4>Additional checks · Nerve relationships</h4>
+            {topic.additionalChecks.map(check=><section key={check.key}>
+              <h5>{check.key}</h5><p>{check.body}</p>
+              <ul>{check.bullets.map(choice=><li key={choice}>{choice}</li>)}</ul>
+              <p><strong>Draft answer key:</strong> {check.correctAnswer}</p>
+              <p><strong>Draft explanation:</strong> {check.explanation}</p>
+              <p>{check.note}</p>
+              {check.citations.map((url,i)=><a className="body-review-reference" href={url}
+                target="_blank" rel="noopener noreferrer" key={`${check.key}:${i}`}>Reference {i+1} ↗</a>)}
+            </section>)}
+          </section>}
           {topic.note && <p>{topic.note}</p>}
           {topic.citations?.map((url, i) =>
             /^https?:\/\//i.test(url) ? (
