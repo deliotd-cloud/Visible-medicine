@@ -6,6 +6,7 @@ import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = '792d6623eeb2bd7ae7ee2bea37c8bd1c9afa6351';
+const completedEpoch = 'c6fd5a1789ce8c6f06c48693aa9d5479a00d610a';
 const expected = new Map([
   ['brachiocephalic-artery', 'FMA3932'],
   ['bronchial-artery', 'FMA68109'],
@@ -54,8 +55,16 @@ const compiled = await build({
     resolveDir: process.cwd(), loader: 'ts'},
   bundle: true, write: false, platform: 'node', format: 'esm',
 });
-const current = await import('data:text/javascript;base64,' +
+const live = await import('data:text/javascript;base64,' +
   Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// The complete before/after matrix belongs to the finished arterial batch.
+// Later independent teaching must not be mistaken for an arterial regression.
+// Keep the helper/identity checks live and separately verify all five current
+// lessons and Review packets against this exact completed epoch below.
+const completed = await exactSourceHistoryApi(completedEpoch, 'review-security');
+const current = {...completed,
+  thoracicMediastinalArterialXrayLesson: live.thoracicMediastinalArterialXrayLesson,
+  thoracicMediastinalArterialXrayTopics: live.thoracicMediastinalArterialXrayTopics};
 const old = await exactSourceHistoryApi(baseline, 'review-security');
 assert.deepEqual(Object.keys(current.thoracicMediastinalArterialXrayTopics).sort(),
   [...expected.keys()].sort());
@@ -72,9 +81,20 @@ const catalog = current.bodyDisplayCatalog(JSON.parse(readFileSync(catalogPath, 
 assert.deepEqual(readFileSync(catalogPath), gitBytes(catalogPath), 'Source catalog must be unchanged');
 assert.deepEqual(catalog, old.bodyDisplayCatalog(JSON.parse(gitBytes(catalogPath))));
 assert.deepEqual(current.regionalTours, old.regionalTours, 'Tours must be unchanged');
+assert.deepEqual(live.bodyDisplayCatalog(JSON.parse(readFileSync(catalogPath, 'utf8'))), catalog);
+assert.deepEqual(live.contentTabs, current.contentTabs);
+assert.deepEqual(live.regionalTours, current.regionalTours, 'Live tours must be unchanged');
 assert.equal(catalog.structures.length * current.contentTabs.length, 9936);
 assert.deepEqual(catalog.structures.filter(s => identities.has(s.id)),
   entries.map(e => e.identity));
+for (const identity of identities.values()) {
+  for (const tab of current.contentTabs)
+    assert.deepEqual(live.bodyLesson(identity, tab), completed.bodyLesson(identity, tab),
+      `${identity.id}:${tab}: live arterial lesson differs from completed epoch`);
+  assert.deepEqual(await live.bodyReviewMaterial(identity.id),
+    await completed.bodyReviewMaterial(identity.id),
+    `${identity.id}: live arterial Review packet differs from completed epoch`);
+}
 
 const pathsWhere = (value, predicate, path = []) => [
   ...(predicate(value) ? [path] : []),
@@ -209,6 +229,8 @@ for (const structure of catalog.structures) {
 }
 assert.deepEqual([changed, preserved, changedPackets, preservedPackets], [5, 9931, 5, 1099]);
 assert.equal(storageCalls, 0);
-console.log(JSON.stringify({baseline, changed, preserved, changedPackets, preservedPackets,
+console.log(JSON.stringify({baseline, completedEpoch, matrixScope: 'exact completed arterial transition',
+  liveArterialLessonsMatched: identities.size * current.contentTabs.length,
+  liveArterialReviewPacketsMatched: identities.size, changed, preserved, changedPackets, preservedPackets,
   refusedIdentities, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale,
   forgedApprovalRefusalsBeforeStorage: forgedDecisions, storageCalls, clinicalApproval: false}));
