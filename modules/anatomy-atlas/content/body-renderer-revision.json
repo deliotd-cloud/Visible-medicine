@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6cd0f1c25353b3e1fb72dc039e55b027b53fdda3f3350c66821250c95905f007"
+      "sha256": "10f1342b8543f47b069943f3988b476ed6f6a31005dec8608e440c1cfada46a4"
     },
     {
       "path": "app/body-education-link.ts",
@@ -787,6 +787,10 @@
     {
       "path": "content/colic-arterial-mri.ts",
       "sha256": "85f790407bbb49fc0d9a0e3b515808b2ae4fe0d9ec29dcbc548cd866f4fa2842"
+    },
+    {
+      "path": "content/colic-arterial-xray.ts",
+      "sha256": "ccd96389f26eca1e41415f4dcf3aa3a00df13419bbf77a66f9ab615abfbb46d7"
     },
     {
       "path": "content/collicular-brachia-teaching.ts",
@@ -2134,7 +2138,7 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sha256": "8eb661bc3bf2cbd8707eb570b3f4de881535707337abaee0e25cdcfc6c542518"
+      "sha256": "549b1a31c209fc2897d22edcf12f30aab9f25fc066fdd85a6e826612632f9a79"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -3219,6 +3223,10 @@
     {
       "path": "lib/colic-arterial-mri.ts",
       "sha256": "35c257927186644ffacd0621e9bb089061057dea89ffe6f812486d898d931a20"
+    },
+    {
+      "path": "lib/colic-arterial-xray.ts",
+      "sha256": "aeebb748942bf80d8c926226b6a2a0d7318c85fd576887311ad875dd333b5fbe"
     },
     {
       "path": "lib/commissural-landmark-quiz.ts",
@@ -5098,7 +5106,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5361a25848adbe72ca60e5a54ef766b6e795eb62c5816bd801bed3afc4c4ba4f"
+      "sha256": "260bd83de8e561b7936f9e682ae56183ae4f5abcc6d05694341af2e7f28d457c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5321,5 +5329,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1862211a0b5cb452475a4ea9c3a68135be5cd272f1d0fcea47d88d86b509ca3c"
+  "sha256": "b3c5de175c2d48ca7ad562571e81927d39e9c135756a12775ff0c50b6d9acd45"
 }

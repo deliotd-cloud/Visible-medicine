@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Colic arterial X-ray teaching 12 October 2026
+
+Seven retained arterial selections gain original factual teaching under project
+MIT terms. The UAMS abdominal artery table, ACR/RSNA catheter angiography,
+Zhang et al. (2020), DOI 10.3748/wjg.v26.i24.3484, and Tachikawa et al. (2021),
+DOI 10.1007/s00261-021-02969-1, are reading references only. Zhang has CC BY-NC
+4.0 reuse terms; these are not commercial asset permissions. No article text,
+caption, figure, table, scan, model, texture, font or dataset is copied or adapted.
+Existing BodyParts3D attribution, geometry and clinical holds remain unchanged.
+No dependency, external runtime service, paid asset or mandatory fee is added.
+See `docs/COLIC_ARTERIAL_XRAY.md` for identities and review scope.
+
 ## Regional teaching delivery 12 October 2026
 
 Regional snapshots reproduce existing project teaching and exact public source
