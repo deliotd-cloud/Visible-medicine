@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "337e677bed5b1657348bcd3cb736108bfaaa368c892ef3549fcd97b6a1031f6e"
+      "sha256": "3ab5309695c47b86fba2bf65ea831725bcca0655bbd551ed78b3eadd75b14e46"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1481,6 +1481,10 @@
       "sha256": "f5d7c5ca8fe2439501494cf9de890d915b61d8096c7ce8e4cad7aee4dfc7411f"
     },
     {
+      "path": "content/internal-thoracic-imaging-pins.json",
+      "sha256": "c3d507b07f071aab5f47a4bef99b89357ee3409a9e360dff3ff0176e000fb959"
+    },
+    {
       "path": "content/interosseous-membrane-projection-pins.json",
       "sha256": "5fdd0c113bde7bbdc8790dd273ea98b0732f730750a370cd2c4cefca15a61ff2"
     },
@@ -2479,6 +2483,10 @@
     {
       "path": "content/thoracic-systemic-teaching.ts",
       "sha256": "633a088b11564a24bb207e079d4d4dadc96bb6bed1cf77f5488a7c7f5a289ce3"
+    },
+    {
+      "path": "content/thoracic-venous-xray.ts",
+      "sha256": "977006f14b1468668e8b904e4322e89a51a7ebd9f5ce6d8c5b8603e8046aab37"
     },
     {
       "path": "content/thoracic-vessel-quiz-pins.json",
@@ -4773,6 +4781,10 @@
       "sha256": "c7090e98a5d503c9adb820275e616b5846e0de3f311cd36b006fbf582e56752c"
     },
     {
+      "path": "lib/thoracic-venous-xray.ts",
+      "sha256": "6da1d11a8a3e9c85adc184a16b08f4b22c655e8015a7bdc4a35fb52954ca407a"
+    },
+    {
       "path": "lib/thoracic-vessel-clinical-curriculum.ts",
       "sha256": "9b0497b72c601d7ff89689d13c6efbf8804113d49790e901e3d5d02ed394a1d2"
     },
@@ -4994,7 +5006,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "34257aefa63dd8b5b82ae8194a97388bfa6e9e24371992aad5267e8bd53ec571"
+      "sha256": "1caaeb8d5b5da8055e20638f84e04cb0091c74db781ba5b2bd664a8b03560bb9"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5217,5 +5229,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bf7ab311a37bc5f5e1ea2f5359a240f87e7368204defdb8dc185bdb06f22a181"
+  "sha256": "36b4486e95c29f41e74bc8aba82d987ec2c8c3fe785cafdff758ca2f3ee5356a"
 }

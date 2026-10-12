@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Thoracic venous teaching (12 October 2026)
+
+Five existing selections gain original factual X-ray teaching under project
+MIT terms. The TTUHSC anatomy table, ACR/RSNA education, Pina (1975), Gilard et al.
+(1998), Catalano (1983) and Yao and Jiang (2023) are reading references only.
+The table and publisher articles retain their rights; the catheter case has
+CC BY-NC-ND 4.0 reuse restrictions. No publication text, table, figure, scan,
+contour, model or dataset is copied or adapted, and those restrictions are not
+relabelled as commercial asset permissions. Existing BodyParts3D attribution
+is unchanged. No asset, dependency, font, texture, paid runtime service or
+mandatory fee is introduced. See `docs/THORACIC_VENOUS_XRAY.md`.
+
 ## Thoracic mediastinal arterial teaching (12 October 2026)
 
 Five existing arterial selections gain original X-ray orientation notes under

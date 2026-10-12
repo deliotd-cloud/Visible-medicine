@@ -14,6 +14,7 @@
     "abdominal-arterial-xray:test": "node scripts/test-abdominal-arterial-xray.mjs",
     "thoracic-wall-arterial-xray:test": "node scripts/test-thoracic-wall-arterial-xray.mjs",
     "thoracic-mediastinal-arterial-xray:test": "node scripts/test-thoracic-mediastinal-arterial-xray.mjs",
+    "thoracic-venous-xray:test": "node scripts/test-thoracic-venous-xray.mjs",
     "abdominal-spatial-reasoning:test": "node scripts/pin-abdominal-spatial-reasoning.mjs --check && node scripts/test-abdominal-spatial-reasoning.mjs",
     "foot-variant-quiz:test": "node scripts/test-foot-variant-quiz.mjs",
     "abdominal-eus-orientation:test": "node scripts/test-abdominal-eus-orientation.mjs",
