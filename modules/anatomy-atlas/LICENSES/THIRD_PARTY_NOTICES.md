@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Renal splenic and gastroduodenal angiographic orientation 12 October 2026
+
+Four existing selections gain original factual X-ray drafts under project MIT
+terms. Lionel et al. (1999), DOI 10.1046/j.1440-1622.1999.01526.x, Covey et al.
+(2002), DOI 10.1148/radiol.2242011283, the UAMS abdominal artery table and ACR/RSNA
+catheter angiography education are reading references only. Publisher/university
+media rights remain reserved; access does not permit commercial redistribution.
+No publication text, caption, figure, table, scan, model, texture, font or dataset
+is copied or adapted. Existing source geometry, credits and clinical holds remain.
+No dependency, paid service or mandatory fee is added. See
+`docs/VISCERAL_ARTERIAL_XRAY.md` for evidence, source identity and review scope.
+
 ## Hepatic arterial angiographic orientation 12 October 2026
 
 Three existing selections gain independently written factual X-ray drafts under

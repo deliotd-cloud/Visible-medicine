@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "9d1c14a2734b87a949062e4e29927160059049113d51cad840d371fdc4238ae3"
+      "sha256": "82e3f5e51f3d188f32c7d44fc00adcaff9bcab573c5c997d279470fb3fd10099"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2737,6 +2737,10 @@
       "sha256": "65642bef8a2f76b0e6383c6fa731fa83d1ceb5ca1dddf56537a962c6d5dee012"
     },
     {
+      "path": "content/visceral-arterial-xray.ts",
+      "sha256": "84fa056595e49e737aabcdac206566bb89d7549cb61d8c5ff139e8d0b7bcfff0"
+    },
+    {
       "path": "content/visual-pathway-teaching.ts",
       "sha256": "7e5fd834fb125b12047a5ea3471baa7eef12d90a4c223332fa32e8a36f6bcfdd"
     },
@@ -4993,6 +4997,10 @@
       "sha256": "672b08f4d060497d4c83341d8ecdf03b4e7f3a997ee61cc2c4dfff82c20d3f70"
     },
     {
+      "path": "lib/visceral-arterial-xray.ts",
+      "sha256": "b6722337c2607b9ca1e222766d42caab0f19946f44300180ca113864babcb4f5"
+    },
+    {
       "path": "lib/visual-pathway-context.ts",
       "sha256": "829236c6c200805decaa212289779c36c0f4ec47cf056ba01274efd70065cfbd"
     },
@@ -5022,7 +5030,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "4e63421eab55754a550825d1b90c5730f4c92fcdf7e301c2e372685967e56793"
+      "sha256": "19f7e8dd13ef074cad6e9335932d693c94cc81b9ca9045f8d9db328e4e30181c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5245,5 +5253,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6ee5b958396df55810b11f698cd2bead607245b0d6b24d035991af344eec227c"
+  "sha256": "d663f009f477b159c9e32685f8b3ba4930b7ce96b5821d4f935382b4dbf612a4"
 }
