@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "62f898f866b3a35c5d0e51a45d94bc52c99cee186dd5449ccb6598efb4319f3b"
+      "sha256": "aeadc23fd910abc817b76944625f9d65f24be7d06edbd42317f00dee0b038948"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1893,6 +1893,14 @@
       "sha256": "587364471b352822e6fb1debb036890906655d8cec61ac2ee70975b7eeb0c561"
     },
     {
+      "path": "content/neonatal-cranial-ultrasound-pins.json",
+      "sha256": "c7a2194c332b5c8437d9301ab2529547f9473cc63503fd0c801548091bffc40f"
+    },
+    {
+      "path": "content/neonatal-cranial-ultrasound.ts",
+      "sha256": "b0941fe430ecb93e0c097fc7cf9dfcc8d4857495bf4aa63b0b8f84d035624414"
+    },
+    {
       "path": "content/nested-ct-orientation.ts",
       "sha256": "a258b94e94c0124df1761dbaf738cc90b0977a793463991b22bcd37b0323d31a"
     },
@@ -2222,7 +2230,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "ddce871b79ae6f2f33216f2200548b63d2c0e33db8423d1793576756d5049b14"
+      "sha256": "1f085f30db2dc577dd9f1e8fe3ce70a396dbeeb95781c9abbee56f549968fd7a"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -4301,6 +4309,10 @@
       "sha256": "2e279a80cea07a6803924260f0347aa988ff61fe1f8b34f845234bab6bdafc22"
     },
     {
+      "path": "lib/neonatal-cranial-ultrasound.ts",
+      "sha256": "56652f18dfe15d4374b391a08cdf151d0c259a1c589d3d87ca8b9368ebf41e2e"
+    },
+    {
       "path": "lib/nested-anatomy.ts",
       "sha256": "b9368085e520b5228f43391825729ee39b98995522b5db39ef2e8627cfcf28d1"
     },
@@ -5226,7 +5238,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "b579bd71107632c7edf546522705d53d35ccdd75d9af39df648dc204c2e1c929"
+      "sha256": "4875d056be3586141ddd3b9de7ecf2c59290661ef1b744e7d5fc40ce5be3522a"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5449,5 +5461,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ae2357aecaaf8aa82a631774866cb9b3a1659544bc1219d9b884bab3ebdb00bc"
+  "sha256": "c874424cbf1e078108cc37572e30bd80250e6e573b0c0f04c25764141cc10ed2"
 }

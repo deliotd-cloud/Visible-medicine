@@ -57,8 +57,11 @@ const compiled = await build({stdin: {contents:
   "export * from './lib/body-review-decisions';",
   resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false,
   platform: 'node', format: 'esm'});
-const now = await import('data:text/javascript;base64,' +
+const live = await import('data:text/javascript;base64,' +
   Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// Replay the exact completed two-topic transition, retaining every original
+// preservation/refusal assertion rather than making later authored topics pending.
+const now = await exactSourceHistoryApi('c57449c1107a912442c6b0af23e270df41032522', 'median-cubital-xray-epoch');
 const before = await exactSourceHistoryApi(parentCommit, 'review-security');
 const raw = JSON.parse(readFileSync(catalogPath, 'utf8'));
 assert.deepEqual(readFileSync(catalogPath), gitBytes(catalogPath), 'Catalog bytes unchanged');
@@ -297,6 +300,11 @@ const middle = catalog.structures.filter(s => s.id.includes('middle-collateral-b
   s.id.includes('-deep-brachial-artery'));
 assert.equal(middle.length, 2);
 for (const s of middle) assert.equal(now.bodyLesson(s, 'ultrasound').readiness, 'pending');
+for (const {identity} of pins.entries) {
+  assert.deepEqual(live.medianCubitalXrayLesson(identity, 'xray'), now.medianCubitalXrayLesson(identity, 'xray'), 'Current exact median-vein adapter retained');
+  assert.deepEqual(live.bodyLesson(identity, 'xray'), now.bodyLesson(identity, 'xray'), 'Current complete resolver retains median-vein teaching');
+  assert.deepEqual(await live.bodyReviewMaterial(identity.id), await now.bodyReviewMaterial(identity.id), 'Current median-vein review packet retained');
+}
 console.log(JSON.stringify({parentCommit, requiredPinsHash, changed, preserved,
   changedPackets, preservedPackets, identityRefusals, malformed, stale,
   forgedSaves, forgedApprovals, storageCalls, toursPreserved: 47, tourStopsPreserved: 282,

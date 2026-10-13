@@ -3613,3 +3613,14 @@ Reading access is not a commercial asset-reuse grant; publisher rights remain
 intact. Original code/prose retain project MIT terms and existing BodyParts3D
 CC BY 4.0 attribution is unchanged. No new model, texture, font, dependency,
 service or fee. Clinical review remains pending. See `docs/ABDOMINAL_DETAIL_XRAY.md`.
+
+## Infant cranial ultrasound orientation drafts — 13 October 2026
+
+Ten source-bound teaching selections use original factual paraphrases with
+AIUM/ACR/SPR/SRU and original Shuman, Pigadas and Babcock study references.
+No publisher text, figures, tables, scans, datasets or reference-range assets
+are copied or relicensed; free reading is not a commercial asset licence.
+Existing project MIT and BodyParts3D CC BY4.0 credits remain unchanged. No new
+model, texture, font, dependency, service or fee. These are infant-window
+orientation drafts, not validated neonatal geometry, adult ultrasound visibility
+or clinical sign-off. See `docs/NEONATAL_CRANIAL_ULTRASOUND.md`.
