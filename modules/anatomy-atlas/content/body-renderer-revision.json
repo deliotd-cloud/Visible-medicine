@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b0c53022623fa16cec54002e20b6728aec67a1f77ac2f010cce528e4868b9d7c"
+      "sha256": "f123db7aae9ff240e9da816628787fdb3ab56851bb3c8f55a45869956d023b91"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1209,6 +1209,14 @@
       "sha256": "6ad60f58f4131df71d35580d086729b27c39cd4d2f0819a5464df43293960053"
     },
     {
+      "path": "content/forearm-vascular-xray-pins.json",
+      "sha256": "0591e069fd112b58f7494c2ed940da5ae8d5bb57b467d0569d2710faf53d423e"
+    },
+    {
+      "path": "content/forearm-vascular-xray.ts",
+      "sha256": "2ab07c989461e6c0a4edba71014e3217a521c98abcd79e08368cdc3ff32a3e22"
+    },
+    {
       "path": "content/forearm-venous-cross-sectional-pins.json",
       "sha256": "8767508e769d0074a07d1ecbc82f841a1e4f26f53ca92aad4e756c8e775116ab"
     },
@@ -2198,7 +2206,7 @@
     },
     {
       "path": "content/regional-teaching/forearm.json",
-      "sha256": "3eae024f9d26e8fbb6ed525b2b9774c8295b0a3fa5709d90b97ceead9b3b4e2e"
+      "sha256": "3e789c0344306f067793573157b5515885ced011120ae1c14f7e34f9336e3dda"
     },
     {
       "path": "content/regional-teaching/hand.json",
@@ -3655,6 +3663,10 @@
     {
       "path": "lib/forearm-vascular-anatomy.ts",
       "sha256": "2313c21bd2efed6048baad038739009cbd0fcad1eb2b2aed55fb009563bf6f99"
+    },
+    {
+      "path": "lib/forearm-vascular-xray.ts",
+      "sha256": "92c1fc6681bafb0df4668f29b2dc72f2e269c1759e0b22d7c830264dcbcf266c"
     },
     {
       "path": "lib/forearm-venous-cross-sectional.ts",
@@ -5202,7 +5214,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "dff4bdaac8700f0c8836e08afbbc4103748db48528e0bc7522333ca73a9ca814"
+      "sha256": "be2276f493ef87df74a9850a491dc6a808266fb8be6d246952afd6c4f0645bbb"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5425,5 +5437,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "464a24a12bcc526fe6b92c30a3cd20abb2dd0ccd8f8135fdc8427379ed122278"
+  "sha256": "fbd74b91a1fbe4c1d1df579dd4dbef83325bf5045b59eace536339d151a965fe"
 }

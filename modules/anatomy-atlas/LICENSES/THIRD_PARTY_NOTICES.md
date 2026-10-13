@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Forearm vascular X-ray evidence — 13 October 2026
+
+Eight selections use independently written project-MIT factual teaching/code.
+Yang et al. (PeerJ2023, DOI10.7717/peerj.15855) and Heye et al. (EJVES2010,
+DOI10.1016/j.ejvs.2009.11.036) are reading references only. The latter publisher's
+user licence is not treated as a commercially reusable asset licence. No
+publication prose, figure, table, scan, model, dataset or image is imported or
+adapted. Existing BodyParts3D CC BY4.0 attribution remains unchanged. No font,
+texture, dependency, paid resource, external runtime service or mandatory fee
+is added. See `docs/FOREARM_VASCULAR_XRAY.md`; all eight lessons remain drafts.
+
 ## Elbow arterial ultrasound follow-up — 13 October 2026
 
 Six selections use original project-MIT factual teaching and code. Cheng et al.

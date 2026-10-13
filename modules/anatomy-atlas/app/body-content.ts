@@ -41,6 +41,7 @@ import { thoracicSystemicTeachingLesson } from '../lib/thoracic-systemic-teachin
 import { shoulderGirdleArterialUltrasoundLesson } from '../lib/shoulder-girdle-arterial-ultrasound';
 import { elbowArterialUltrasoundLesson } from '../lib/elbow-arterial-ultrasound';
 import { elbowArterialUsFollowupLesson } from '../lib/elbow-arterial-us-followup';
+import { forearmVascularXrayLesson } from '../lib/forearm-vascular-xray';
 import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
 import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
 import { cerebellarMcaImagingLesson } from '../lib/cerebellar-mca-imaging';
@@ -391,6 +392,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (orbitalSupportQuiz) return orbitalSupportQuiz;
   const ocularSupportQuiz = ocularSupportQuizLesson(s, tab);
   if (ocularSupportQuiz) return ocularSupportQuiz;
+  const forearmVascularXray = forearmVascularXrayLesson(s, tab);
+  if (forearmVascularXray) return forearmVascularXray;
   const elbowArterialUsFollowup = elbowArterialUsFollowupLesson(s, tab);
   if (elbowArterialUsFollowup) return elbowArterialUsFollowup;
   const elbowArterialUltrasound = elbowArterialUltrasoundLesson(s, tab);
