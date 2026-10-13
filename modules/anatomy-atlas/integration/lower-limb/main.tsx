@@ -9,6 +9,7 @@ import { limbDefinitions, type LimbScope } from '@/lib/um-limb-studies';
 import { resolveSpecimenLink } from '@/lib/um-limb-navigation';
 import { parseSpecimenLink } from '@/lib/specimen-links';
 import './panel-host.css';
+declare const __VM_SPECIMEN_SOURCE_REVISION__: string;
 
 const assetBase = '/atlas-runtime/lower-limb';
 // Preserve duplicate query fields so the existing strict parser rejects them.
@@ -43,6 +44,7 @@ function LowerLimbModule() {
       <p>The source, revision, structure or topic could not be verified. No substitute study has been opened.</p>
       <Button onClick={() => changeScope('knee')}>Open current knee source view</Button>
     </section> : <KneeSpecimenView key={scope} specimen={limbDefinitions[scope]} assetBase={assetBase}
+      selectionChannelRevision={__VM_SPECIMEN_SOURCE_REVISION__}
       initialNavigation={!ignoreLink && navigation.status === 'ready' ? navigation : undefined}
       studyLink={(definition, selectedId, studyId, view) => <SpecimenStudyLink key={`${selectedId}:${studyId}:${view}`}
         definition={definition} selectedId={selectedId} studyId={studyId} view={view}

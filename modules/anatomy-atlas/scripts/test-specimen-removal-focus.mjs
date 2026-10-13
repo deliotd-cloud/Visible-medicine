@@ -180,7 +180,7 @@ test('the actual reassembly button transfers focus before its removal', () => {
   find(parsed); assert.equal(handlers.length, 1);
   const trigger = {}, order = [];
   runInNewContext(`(${handlers[0]})({currentTarget:trigger})`, {
-    trigger, focusSpecimenSeparation: target => { assert.equal(target, trigger); order.push('focus'); },
+    trigger, guidance: null, focusSpecimenSeparation: target => { assert.equal(target, trigger); order.push('focus'); },
     setExplode: value => { assert.equal(value, 0); order.push('reassemble'); },
   });
   assert.deepEqual(order, ['focus', 'reassemble']);
@@ -307,4 +307,21 @@ test('active guidance rejects extracted Set aside and Undo handlers without stea
     dispatch: () => assert.fail('No guided history mutation'), assembledDisplay: () => assert.fail('No display change'),
   });
   assert.equal(removalFocusOrigin.current, null); assert.equal(historyFocusOrigin.current, null);
+});
+
+test('active guidance also refuses the actual reassembly handler', () => {
+  const handlers = [];
+  function find(node) {
+    if (ts.isJsxAttribute(node) && node.name.text === 'onClick' &&
+        ts.isJsxExpression(node.initializer) &&
+        node.initializer.expression?.getText(parsed).includes('focusSpecimenSeparation'))
+      handlers.push(node.initializer.expression.getText(parsed));
+    ts.forEachChild(node, find);
+  }
+  find(parsed); assert.equal(handlers.length, 1);
+  runInNewContext(`(${handlers[0]})({currentTarget:{}})`, {
+    guidance: { index: 0 },
+    focusSpecimenSeparation: () => assert.fail('Guided reassembly cannot steal focus'),
+    setExplode: () => assert.fail('Guided reassembly cannot alter separation'),
+  });
 });

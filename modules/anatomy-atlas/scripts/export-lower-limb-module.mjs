@@ -12,6 +12,8 @@ if (execFileSync('git',['status','--porcelain'],{cwd:root,encoding:'utf8'}).trim
 const sourceCommit = execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim();
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const build = join(root,'.sites-runtime/lower-limb-module');
+const channel = JSON.parse(await readFile(join(build,'specimen-channel.json'),'utf8'));
+if(channel.version!==1||channel.sourceCommit!==sourceCommit)throw Error('Stale specimen channel: rebuild from the committed Atlas revision');
 const inputs = JSON.parse(await readFile(join(build,'source-inputs.json'),'utf8'));
 for(const path of ['scripts/export-lower-limb-module.mjs','scripts/export-space-preflight.mjs'])
   if(!inputs.some(i=>i.path===path))throw Error('Missing export source binding: '+path);
@@ -19,8 +21,8 @@ for (const input of inputs) {
   if (input.path.includes('..') || input.path.startsWith('/') || input.path.includes(':') || input.path.includes('\\')) throw Error('Unsafe input');
   if (hash(await readFile(join(root,input.path))) !== input.sha256) throw Error('Stale build: '+input.path);
 }
-const generated = ['index.html','BUNDLED_NOTICES.txt','bundled-dependencies.json','source-inputs.json',...(await readdir(join(build,'assets'))).map(n=>'assets/'+n)];
-if (generated.some(n=> !/^(?:index\.html|BUNDLED_NOTICES\.txt|(?:bundled-dependencies|source-inputs)\.json|assets\/[a-zA-Z0-9_.-]+\.(?:js|css))$/.test(n))) throw Error('Unexpected generated file');
+const generated = ['index.html','BUNDLED_NOTICES.txt','bundled-dependencies.json','source-inputs.json','specimen-channel.json',...(await readdir(join(build,'assets'))).map(n=>'assets/'+n)];
+if (generated.some(n=> !/^(?:index\.html|BUNDLED_NOTICES\.txt|(?:bundled-dependencies|source-inputs|specimen-channel)\.json|assets\/[a-zA-Z0-9_.-]+\.(?:js|css))$/.test(n))) throw Error('Unexpected generated file');
 const copies = generated.map(n=>[join(build,n),n]);
 const kneeBytes = await readFile(join(root,'public/models/um-knee/catalog.json'));
 const knee = JSON.parse(kneeBytes), limb = JSON.parse(await readFile(join(root,'public/models/um-limb/catalog.json'),'utf8'));

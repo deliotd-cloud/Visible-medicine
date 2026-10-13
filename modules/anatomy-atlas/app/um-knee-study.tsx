@@ -26,6 +26,8 @@ import { SpecimenStudyLink } from './specimen-study-link';
 import { SpecimenMotorExplorer } from './um-limb-motor';
 import { motorStudyAction, specimenMotorGroups } from '@/lib/um-limb-motor';
 import type { ResolvedSpecimenNavigation } from '@/lib/um-limb-navigation';
+import { specimenTarget, specimenChannelState, specimenFocusAllowed, createSpecimenLoadAttempt, type SpecimenTarget } from '@/lib/specimen-selection-channel';
+import { useSpecimenSelectionChannel } from './specimen-selection-channel';
 import type { SpecimenPracticeAdapter } from '@/lib/specimen-identification';
 import { guidedDissectionAction, type SpecimenGuidedDissection } from '@/lib/specimen-guided-dissection';
 import { umLimbGuidedDissection } from '@/lib/um-limb-guided-dissection';
@@ -51,7 +53,7 @@ export type SpecimenSupplement = {
   studySupplement?: (definition: SpecimenDefinition, studyId: string | null) => ReactNode;
   guidedDissection?: (definition: SpecimenDefinition) => SpecimenGuidedDissection | null;
 };
-export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement, assetBase, studyLink }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement; assetBase?: string; studyLink?: SpecimenSupplement['studyLink'] } = {}) {
+export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation, supplement, assetBase, studyLink, selectionChannelRevision }: { specimen?: SpecimenDefinition; initialNavigation?: Pick<ResolvedSpecimenNavigation, 'selectedId' | 'state' | 'structureOnly' | 'view' | 'topic'> & { focusSelection?: boolean }; supplement?: SpecimenSupplement; assetBase?: string; studyLink?: SpecimenSupplement['studyLink']; selectionChannelRevision?: string } = {}) {
   const kneeSpecimen = { structures: specimen.surfaces, source: specimen.source };
   const kneeCatalog = specimen.catalog, kneeStructures = kneeCatalog.structures, kneeSpecimenStudies = specimen.studies;
   const [state, dispatch] = useReducer((state: VentricularState, action: SpecimenAction) => reduceSpecimen(specimen, state, action), specimen, value => initialNavigation?.state ?? initialSpecimen(value));
@@ -60,10 +62,12 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const [explode, setExplode] = useState(0), [layout, setLayout] = useState<BodyLayout>('extract');
   const [view, setView] = useState<DissectionView>(initialNavigation?.view ?? specimen.studies.find((s) => s.id === specimen.initialStudy)?.view ?? 'anterior'), [labels, setLabels] = useState(true);
   const [focus, setFocus] = useState(!!initialNavigation?.focusSelection || !!initialNavigation?.structureOnly), [jointCloseUp, setJointCloseUp] = useState(!!specimen.closeUp && !initialNavigation?.focusSelection);
+  const [liveFocus, setLiveFocus] = useState(false);
   const [showOrigins, setShowOrigins] = useState(false), [illustrated, setIllustrated] = useState(true);
   const [reset, setReset] = useState(0), [zoom, setZoom] = useState(1);
   const [zoomStep, setZoomStep] = useState(0);
   const [health, setHealth] = useState<RendererHealth>('starting');
+  const healthNow = useRef<RendererHealth>('starting');
   const [practice, setPractice] = useState<IdentificationState | null>(null);
   const guide = useMemo(() => supplement === undefined
     ? umLimbGuidedDissection(specimen) : supplement?.guidedDissection?.(specimen) ?? null, [supplement, specimen]);
@@ -71,6 +75,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const guideLauncher = useRef<HTMLButtonElement | null>(null), restoreGuideFocus = useRef(false);
   const [guideExpanded, setGuideExpanded] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(true), [pageHidden, setPageHidden] = useState(false);
+  const pageHiddenNow = useRef(false);
   const [guidance, setGuidance] = useState<{
     id: string; index: number;
     before: { state: VentricularState; query: string; isolated: boolean; explode: number; layout: BodyLayout;
@@ -79,14 +84,17 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   } | null>(null);
   useEffect(() => {
     // Conservative SSR default; no sweep until the actual device preference is known.
-    if (!guide) return;
+    if (!guide && !selectionChannelRevision) return;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const motion = () => setReducedMotion(preference.matches);
-    const visibility = () => setPageHidden(document.hidden);
+    const visibility = () => { pageHiddenNow.current = document.hidden; setPageHidden(document.hidden); };
+    const leaving = () => { pageHiddenNow.current = true; setPageHidden(true); };
     motion(); visibility();
     preference.addEventListener('change', motion); document.addEventListener('visibilitychange', visibility);
-    return () => { preference.removeEventListener('change', motion); document.removeEventListener('visibilitychange', visibility); };
-  }, [guide]);
+    if (selectionChannelRevision) { window.addEventListener('pagehide', leaving); window.addEventListener('pageshow', visibility); }
+    return () => { preference.removeEventListener('change', motion); document.removeEventListener('visibilitychange', visibility);
+      if (selectionChannelRevision) { window.removeEventListener('pagehide', leaving); window.removeEventListener('pageshow', visibility); } };
+  }, [guide, selectionChannelRevision]);
   useLayoutEffect(() => {
     if (!guidance && restoreGuideFocus.current) {
       guideLauncher.current?.focus(); restoreGuideFocus.current = false;
@@ -108,15 +116,21 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       historyTrigger === undoButton.current ? redoButton.current : undoButton.current);
   }, [state]);
   const [loaded, setLoaded] = useState<string[]>([]), [failed, setFailed] = useState<string[]>([]), [retry, setRetry] = useState(0);
+  const loadAttempt = useMemo(()=>createSpecimenLoadAttempt(),[]);
+  const loadFailureNow = useRef(false);
+  useLayoutEffect(() => { loadAttempt.commit(retry); }, [loadAttempt,retry]);
   const [failureReasons, setFailureReasons] = useState<Record<string, ModelLoadFailure>>({});
   const onLoaded = useCallback((id: string) => {
+    if (!loadAttempt.accepts(retry)) return;
     setLoaded((p) => p.includes(id) ? p : [...p, id]); setFailed((p) => p.filter((v) => v !== id));
     setFailureReasons(p => { const next = {...p}; delete next[id]; return next; });
-  }, []);
+  }, [loadAttempt,retry]);
   const onFailure = useCallback((id: string, reason: ModelLoadFailure = 'unavailable') => {
+    if (!loadAttempt.accepts(retry)) return;
+    loadFailureNow.current = true;
     setFailed((p) => p.includes(id) ? p : [...p, id]);
     setFailureReasons(p => ({...p, [id]: reason}));
-  }, []);
+  }, [loadAttempt,retry]);
   const selected = kneeSpecimen.structures.find((s) => s.id === selectedId);
   const active = activeSpecimenStudy(specimen, hidden);
   const closeUpBounds = (guidance ? guide?.steps[guidance.index]?.cameraBounds : null)
@@ -127,12 +141,24 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const errors = required.filter((b) => failed.includes(b.id));
   const accessNotice = modelLoadAccessNotice(errors.map(b => failureReasons[b.id] ?? 'unavailable'));
   const ready = required.length > 0 && !pending.length && !errors.length && rendererReady(health);
+  const currentTarget = selectionChannelRevision && selectedId && !hidden.includes(selectedId)
+    ? specimenTarget(specimen, selectedId, view) : null;
+  const channelState = specimenChannelState({practice:!!practice,guided:!!guidance,ready,
+    hidden:pageHidden || (typeof document !== 'undefined' && document.hidden),target:currentTarget});
+  useSpecimenSelectionChannel(selectionChannelRevision, channelState, (target:SpecimenTarget) => {
+    if (loadAttempt.pending() || loadFailureNow.current || !rendererReady(healthNow.current) || !specimenFocusAllowed(specimen,{current:currentTarget,requested:target,view,hiddenIds:hidden,
+      loadedBundles:loaded,failedBundles:failed,practice:!!practice,guided:!!guidance,ready,
+      pageHidden:pageHidden||pageHiddenNow.current||document.hidden}))return false;
+    dispatch({type:'select',id:target.id}); setFocus(true); setJointCloseUp(false); setLiveFocus(true);
+    return true;
+  },()=>!loadAttempt.pending()&&!loadFailureNow.current&&rendererReady(healthNow.current)&&
+    !pageHiddenNow.current&&!document.hidden);
   const practiceAdapter = supplement?.identification;
   const practiceCount = practiceAdapter ? practiceAdapter.eligibleIds(specimen, visible.map(s => s.id)).length : supplement ? 0 : visible.length;
   useEffect(() => { if (ready && !practice && restorePracticeFocus.current) { practiceLauncher.current?.focus(); restorePracticeFocus.current = false; } }, [ready, practice]);
   const appearance = useMemo(() => Object.fromEntries(specimen.surfaces.map((s) => [s.id, { color: supplement?.colors[s.id] ?? kneeTissueColours[s.tissue], opacity: 1 }])), [specimen, supplement]);
   function assembledDisplay() {
-    setExplode(0); setIsolated(false); setFocus(false); setZoom(1); setReset((n) => n + 1);
+    setExplode(0); setIsolated(false); setFocus(false); setLiveFocus(false); setZoom(1); setReset((n) => n + 1);
   }
   function preset(value: string) {
     if (guidance) return;
@@ -141,7 +167,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     dispatch(action); assembledDisplay();
     setView(kneeSpecimenStudies.find((s) => s.id === value)!.view);
   }
-  function select(id: string) { if (guidance) return; dispatch({ type: 'select', id }); setFocus(false); }
+  function select(id: string) { if (guidance) return; dispatch({ type: 'select', id }); setFocus(false); setLiveFocus(false); }
   function historyStep(type: 'undo' | 'redo', trigger?: HTMLButtonElement) {
     if (guidance) return;
     if (trigger && trigger.ownerDocument.activeElement === trigger) historyFocusOrigin.current = trigger;
@@ -207,12 +233,13 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
           inspection={initialInspection} cameraBounds={closeUpBounds}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
-          guidedRecovery={!!guidance} transitionMs={guidance && !reducedMotion ? 1800 : 0} transitionPaused={!!guidance && (!ready || pageHidden)}
+          guidedRecovery={!!guidance} transitionMs={(guidance || (selectionChannelRevision && liveFocus)) && !reducedMotion ? 1800 : 0} transitionPaused={!!(guidance || liveFocus) && (!ready || pageHidden)}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
-          onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={setHealth} />
+          onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={value=>{healthNow.current=value;setHealth(value);}} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}
         {!!errors.length && <div className="eye-layer-status" role="alert">{accessNotice?.message ?? 'Some specimen tissues could not load.'} <Button size="sm" onClick={() => {
-          retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); setLoaded([]); setFailed([]); setFailureReasons({}); setRetry((n) => n + 1);
+          loadAttempt.retire();
+          retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); loadFailureNow.current=false; setLoaded([]); setFailed([]); setFailureReasons({}); setRetry((n) => n + 1);
         }}>{accessNotice?.retryLabel ?? 'Retry'}</Button></div>}
         {!visible.length && <div className="eye-layer-status">All tissues are hidden. <Button size="sm" onClick={showAll}>Show all</Button></div>}
       </div>
