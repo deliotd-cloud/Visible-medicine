@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Elbow arterial ultrasound follow-up — 13 October 2026
+
+Six selections use original project-MIT factual teaching and code. Cheng et al.
+(PMID 9509653), Wei et al. (DOI 10.1097/GOX.0000000000000113) and Sun et al.
+(DOI 10.7863/ultra.15.01032) are reading references only. Wei's CC BY-NC-ND 3.0
+article is not admitted as a commercially reusable asset. No publication prose,
+figure, table, image, model or dataset is imported or adapted. Existing
+BodyParts3D CC BY 4.0 attribution remains unchanged. No font, texture, model,
+dependency, paid resource, external runtime service or mandatory fee is added.
+See `docs/ELBOW_ARTERIAL_US_FOLLOWUP.md`; all six lessons remain clinical drafts.
+
 ## Limb-nerve relationship checks — 12 October 2026
 
 Eight independently written formative questions add factual usual innervation

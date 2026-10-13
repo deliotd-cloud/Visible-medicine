@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "665f93d6e934708f01fa1c9bb4fd0773e739fd1d201210164d21dfb81a534ab1"
+      "sha256": "b0c53022623fa16cec54002e20b6728aec67a1f77ac2f010cce528e4868b9d7c"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1039,6 +1039,14 @@
     {
       "path": "content/elbow-arterial-ultrasound.ts",
       "sha256": "0976d99d390b8b66cbe85f707a490b614bb097f2831520c5c131597bcedecf40"
+    },
+    {
+      "path": "content/elbow-arterial-us-followup-pins.json",
+      "sha256": "600b41f1450cff784357c6bea48d2a42e41956daed6b9175b3e4b082609812f4"
+    },
+    {
+      "path": "content/elbow-arterial-us-followup.ts",
+      "sha256": "e3bb97895a657b6fa84e2d5ef6f5a95daf25f8b981ca9e9d0c0b1c760e51ce87"
     },
     {
       "path": "content/elbow-arterial.ts",
@@ -2190,7 +2198,7 @@
     },
     {
       "path": "content/regional-teaching/forearm.json",
-      "sha256": "d12ed5ebd05ae708864fcdffd10801a864e78d38057564558a3ec2a4945a6f3c"
+      "sha256": "3eae024f9d26e8fbb6ed525b2b9774c8295b0a3fa5709d90b97ceead9b3b4e2e"
     },
     {
       "path": "content/regional-teaching/hand.json",
@@ -2210,7 +2218,7 @@
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
-      "sha256": "aa58c8917386972b370c95e9bb29a9055319ffe2a0290c4399b1bead7a4bbe8f"
+      "sha256": "54cfd345f88bbf96b9220a6d24c47fd0f26d4088e7d3917c2ce23eecfef75a19"
     },
     {
       "path": "content/regional-teaching/spine.json",
@@ -3511,6 +3519,10 @@
     {
       "path": "lib/elbow-arterial-ultrasound.ts",
       "sha256": "82db0a79f1c66be75795935bdc04606ac2f64806c43cd9abd86214067fad02e9"
+    },
+    {
+      "path": "lib/elbow-arterial-us-followup.ts",
+      "sha256": "6fe4b9a9d3bbc2adde6cf2e2f2f4a9c8afdc36a0613b422faf80da2568d15437"
     },
     {
       "path": "lib/elbow-arteries.ts",
@@ -5190,7 +5202,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e088bd9e925f61ce6e22735329a090a53555daad5b17bc1434e06d86daf7e8fe"
+      "sha256": "dff4bdaac8700f0c8836e08afbbc4103748db48528e0bc7522333ca73a9ca814"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5413,5 +5425,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c64aef9ee9a7fcff2f19bf800cbc694daaadabf6fe06424a88c8525cc47f9224"
+  "sha256": "464a24a12bcc526fe6b92c30a3cd20abb2dd0ccd8f8135fdc8427379ed122278"
 }
