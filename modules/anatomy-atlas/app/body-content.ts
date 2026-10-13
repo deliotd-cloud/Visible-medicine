@@ -42,6 +42,7 @@ import { shoulderGirdleArterialUltrasoundLesson } from '../lib/shoulder-girdle-a
 import { elbowArterialUltrasoundLesson } from '../lib/elbow-arterial-ultrasound';
 import { elbowArterialUsFollowupLesson } from '../lib/elbow-arterial-us-followup';
 import { forearmVascularXrayLesson } from '../lib/forearm-vascular-xray';
+import { medianCubitalXrayLesson } from '../lib/median-cubital-xray';
 import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
 import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
 import { cerebellarMcaImagingLesson } from '../lib/cerebellar-mca-imaging';
@@ -394,6 +395,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (ocularSupportQuiz) return ocularSupportQuiz;
   const forearmVascularXray = forearmVascularXrayLesson(s, tab);
   if (forearmVascularXray) return forearmVascularXray;
+  const medianCubitalXray = medianCubitalXrayLesson(s, tab);
+  if (medianCubitalXray) return medianCubitalXray;
   const elbowArterialUsFollowup = elbowArterialUsFollowupLesson(s, tab);
   if (elbowArterialUsFollowup) return elbowArterialUsFollowup;
   const elbowArterialUltrasound = elbowArterialUltrasoundLesson(s, tab);

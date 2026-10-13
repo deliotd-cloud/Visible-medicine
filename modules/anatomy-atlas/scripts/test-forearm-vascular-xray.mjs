@@ -2,7 +2,6 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {build} from './workspace-test-build.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
@@ -43,24 +42,10 @@ assert.equal(pins.entries.length, 8);
 assert.deepEqual(new Set(pins.entries.map(row => row.identity.id)), new Set(expected.keys()));
 assert.deepEqual(new Set(pins.entries.map(row => row.family)), new Set(Object.keys(families)));
 
-const compiled = await build({stdin: {contents:
-  "export {forearmVascularXrayLesson} from './lib/forearm-vascular-xray';" +
-  "export {forearmVascularXrayTeaching,forearmVascularXrayReferences,forearmVascularXrayNote} from './content/forearm-vascular-xray';" +
-  "export {bodyLesson,bodyContent} from './app/body-content';" +
-  "export {bodyDisplayCatalog} from './lib/body-display-catalog';" +
-  "export {contentTabs} from './lib/content-types';" +
-  "export {structures} from './app/anatomy-data';" +
-  "export {dissectionProfiles} from './app/dissection-data';" +
-  "export {regionalTours} from './lib/regional-tours';" +
-  "export * from './lib/body-review-material';" +
-  "export * from './lib/body-review-context';" +
-  "export * from './lib/body-review-response';" +
-  "export * from './lib/body-review-api';" +
-  "export * from './lib/body-review-decisions';",
-  resolveDir: process.cwd(), loader: 'ts'}, bundle: true, write: false,
-  platform: 'node', format: 'esm'});
-const now = await import('data:text/javascript;base64,' +
-  Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// Replay the completed eight-selection transition exactly. The separate live
+// median-cubital test proves subsequent additions preserve these eight drafts.
+const now = await exactSourceHistoryApi('d81bbe14def4249d9d081de6a9f9f823e4fad69a',
+  'forearm-vascular-xray-epoch');
 const before = await exactSourceHistoryApi(parentCommit, 'review-security');
 const raw = JSON.parse(readFileSync(catalogPath, 'utf8'));
 assert.deepEqual(readFileSync(catalogPath), gitBytes(catalogPath), 'Catalog bytes unchanged');

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f123db7aae9ff240e9da816628787fdb3ab56851bb3c8f55a45869956d023b91"
+      "sha256": "62f898f866b3a35c5d0e51a45d94bc52c99cee186dd5449ccb6598efb4319f3b"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1829,6 +1829,14 @@
       "sha256": "0ad19551a5fe8b559e8d424518755a6ac545e2c0c589eefb48555914a01a5006"
     },
     {
+      "path": "content/median-cubital-xray-pins.json",
+      "sha256": "871ccc16240d75017e82ba0ec30eec315fbf625d0740a85467e79f10e7f7356e"
+    },
+    {
+      "path": "content/median-cubital-xray.ts",
+      "sha256": "87448056e63416c5d03a283d1cf4da3886f41e0b2d990a4dc3d23094e4835581"
+    },
+    {
       "path": "content/mediastinal-organ-study.ts",
       "sha256": "4307af9d54321db061a743e24faab1838487c220b3cc110528bf860002200767"
     },
@@ -2206,7 +2214,7 @@
     },
     {
       "path": "content/regional-teaching/forearm.json",
-      "sha256": "3e789c0344306f067793573157b5515885ced011120ae1c14f7e34f9336e3dda"
+      "sha256": "f932958be7c24584ffc0b4a60f57f82558cb8ac6b5fa8c7815a89b32520e6284"
     },
     {
       "path": "content/regional-teaching/hand.json",
@@ -4237,6 +4245,10 @@
       "sha256": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11"
     },
     {
+      "path": "lib/median-cubital-xray.ts",
+      "sha256": "db98b177b462bf9ac3736f23bc6bf360fea4f7ca781481bdf716ac4e5f38d2eb"
+    },
+    {
       "path": "lib/mediastinal-xray.ts",
       "sha256": "975fc201ee76040704827e669e2a438dcd5517823c02b673459b4ed29241e615"
     },
@@ -5214,7 +5226,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "be2276f493ef87df74a9850a491dc6a808266fb8be6d246952afd6c4f0645bbb"
+      "sha256": "b579bd71107632c7edf546522705d53d35ccdd75d9af39df648dc204c2e1c929"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5437,5 +5449,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fbd74b91a1fbe4c1d1df579dd4dbef83325bf5045b59eace536339d151a965fe"
+  "sha256": "ae2357aecaaf8aa82a631774866cb9b3a1659544bc1219d9b884bab3ebdb00bc"
 }

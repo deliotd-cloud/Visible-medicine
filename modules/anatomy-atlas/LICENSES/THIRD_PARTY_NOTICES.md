@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Median cubital vein X-ray context — 13 October 2026
+
+Two exact selections use original project-MIT factual teaching and code, with
+Jo et al. 2025 (DOI 10.1097/MD.0000000000043727) and Ukoha et al. 2013
+(PMID 23377482) as reading references. Jo's article states CC BY 4.0; no
+publication text, figures, tables, scans, models or datasets are imported or
+adapted. Existing BodyParts3D attribution remains unchanged. No dependency,
+font, texture, paid resource, runtime service or mandatory fee is added.
+See `docs/MEDIAN_CUBITAL_XRAY.md`; both lessons remain clinical drafts.
+
 ## Forearm vascular X-ray evidence — 13 October 2026
 
 Eight selections use independently written project-MIT factual teaching/code.

@@ -7,6 +7,7 @@
   },
   "scripts": {
     "forearm-vascular-xray:test": "node scripts/pin-forearm-vascular-xray.mjs --check && node scripts/test-forearm-vascular-xray.mjs",
+    "median-cubital-xray:test": "node scripts/pin-median-cubital-xray.mjs --check && node scripts/test-median-cubital-xray.mjs",
     "elbow-arterial-us-followup:test": "node scripts/pin-elbow-arterial-us-followup.mjs --check && node scripts/test-elbow-arterial-us-followup.mjs",
     "limb-nerve-quiz:test": "node scripts/pin-limb-nerve-quiz.mjs --check && node scripts/test-limb-nerve-quiz.mjs && node scripts/test-supplemental-quiz-checks.mjs && node scripts/test-limb-nerve-review-ui.mjs",
     "thoracic-detail-ultrasound:test": "node scripts/test-thoracic-detail-ultrasound.mjs",
