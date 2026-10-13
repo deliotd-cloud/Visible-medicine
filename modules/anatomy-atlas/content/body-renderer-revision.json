@@ -321,6 +321,10 @@
       "sha256": "eb7b9f29bbab0e9524a5162e0254d6c0561a773ad8bf9c7ca89cc59fefe3f362"
     },
     {
+      "path": "app/specimen-selection-channel.tsx",
+      "sha256": "d180d16e7450fc642e28fce9fc128d55b83611d92fa0bc90491a92839e00ccf2"
+    },
+    {
       "path": "app/specimen-structure-search.tsx",
       "sha256": "a345fa00ba55fd17800dc7bbcd15c3d74e812078716c6f236c27b3db747f6fcc"
     },
@@ -402,7 +406,7 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "926fce94d55d01abbf93e84c1ad71bb14399507aaa87179bff79aa5d28dc26ae"
+      "sha256": "74b0ee0ffe29fca303463ba6fdf8e3f69b4d1332229caa66e482a8a9e77791f3"
     },
     {
       "path": "app/um-limb-learning.tsx",
@@ -4797,6 +4801,10 @@
       "sha256": "a185fc2f0c8f439c423660acfe1ada45605245e1131b6e317d130a7339944d76"
     },
     {
+      "path": "lib/specimen-selection-channel.ts",
+      "sha256": "91e6fbcd07e85df64c52d366dbe8de82c1349001141ea33b24b1f7e5e6b4b7f8"
+    },
+    {
       "path": "lib/spinal-bone-curriculum.ts",
       "sha256": "cd17bce6dedd162d374e0cf9e96a12d435294fb1ce81341c8a7c13af0d2c0f53"
     },
@@ -5461,5 +5469,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "c874424cbf1e078108cc37572e30bd80250e6e573b0c0f04c25764141cc10ed2"
+  "sha256": "92b7bc694c9719ad4255d8b86ffd03328b8c40a1ca955dc01c1ea7e1d05e4714"
 }
