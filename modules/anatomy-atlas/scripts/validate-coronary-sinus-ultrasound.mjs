@@ -9,13 +9,26 @@ const clone=v=>JSON.parse(JSON.stringify(v));
 async function load(contents){const b=await build({stdin:{contents,resolveDir:process.cwd(),loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs'});const m={exports:{}};runInNewContext(b.outputFiles[0].text,{module:m,exports:m.exports,require,crypto,TextEncoder,URLSearchParams,structuredClone});return m.exports;}
 const api=await load(`export * from './content/coronary-venous-teaching';export * from './lib/nested-teaching';export * from './lib/nested-review-material';export {coronaryVenousCatalog as catalog} from './lib/coronary-venous';export {NestedTeaching} from './app/nested-teaching';`);
 const old=await load(execFileSync('git',['show',base+':content/coronary-venous-teaching.ts'],{encoding:'utf8'}));
-const restored=clone(api.coronaryVenousConcepts),concept=restored.find(c=>c.id==='coronary-sinus');
-const lesson=concept.imaging.ultrasound;assert.equal(lesson.readiness,'draft');
+const completedEpoch='d4016ff9988064552e464980aaea1913b25d5114';
+const completed=await load(execFileSync('git',['show',completedEpoch+':content/coronary-venous-teaching.ts'],{encoding:'utf8'}));
+const restored=clone(completed.coronaryVenousConcepts),concept=restored.find(c=>c.id==='coronary-sinus');
+const currentConcepts=clone(api.coronaryVenousConcepts),currentSinus=currentConcepts.find(c=>c.id==='coronary-sinus');
+assert.equal(currentSinus.imaging.xray.readiness,'draft');
+assert.deepEqual(currentSinus.imaging.xray.references,['coronarySinusVenography']);
+delete currentSinus.imaging.xray;
+assert.deepEqual(currentConcepts,clone(completed.coronaryVenousConcepts),'Only the separately tested sinus X-ray extension follows the completed ultrasound epoch');
+const currentRefs=clone(api.coronaryVenousTeachingReferences);
+assert.equal(currentRefs.coronarySinusVenography.url,'https://pubmed.ncbi.nlm.nih.gov/17765613/');
+assert.equal(currentRefs.coronarySinusVenography.scopedToConcept,true);
+delete currentRefs.coronarySinusVenography;
+assert.deepEqual(currentRefs,clone(completed.coronaryVenousTeachingReferences));
+const lesson=clone(api.coronaryVenousConcepts.find(c=>c.id==='coronary-sinus').imaging.ultrasound);assert.equal(lesson.readiness,'draft');
+assert.deepEqual(clone(lesson),clone(concept.imaging.ultrasound));
 assert.match(lesson.body,/parasternal long-axis/);assert.match(lesson.body,/appearance alone does not establish the cause/);assert.match(lesson.body,/no echo window, Doppler flow, contrast transit or validated diameter/);
 assert.deepEqual(lesson.references,['coronarySinusEchoView','coronarySinusEchoDilation']);
 delete concept.imaging.ultrasound;
 assert.deepEqual(restored,clone(old.coronaryVenousConcepts),'Only the coronary sinus ultrasound note may change');
-const refs=clone(api.coronaryVenousTeachingReferences);delete refs.coronarySinusEchoView;delete refs.coronarySinusEchoDilation;
+const refs=clone(completed.coronaryVenousTeachingReferences);delete refs.coronarySinusEchoView;delete refs.coronarySinusEchoDilation;
 assert.deepEqual(refs,clone(old.coronaryVenousTeachingReferences));
 const selected=api.catalog.structures.find(s=>s.fmaId==='FMA4706'),parent=api.catalog.parent;
 const resolved=api.nestedTeachingFor(parent,'coronary-venous',selected);assert.equal(resolved.id,'coronary-sinus');
@@ -31,4 +44,4 @@ assert.equal(await api.nestedReviewSelection(group.key,selected.id,'0'.repeat(64
 for(const mutate of [s=>s.fmaId='FMA0',s=>s.laterality='unknown',s=>s.sources[0].sha256='0'.repeat(64)]){const stale=clone(selected);mutate(stale);assert.equal(api.nestedTeachingFor(parent,'coronary-venous',stale),null);}
 const small=api.catalog.structures.find(s=>s.fmaId==='FMA4714');
 assert.equal(api.nestedTopicLesson(api.nestedTeachingFor(parent,'coronary-venous',small),'ultrasound').readiness,'pending');
-console.log(JSON.stringify({passed:true,newDrafts:1,smallCardiacVeinUnchanged:true,priorContentPreserved:true,clinicalApproval:false}));
+console.log(JSON.stringify({passed:true,newDrafts:1,completedEpoch,currentUltrasoundVerified:true,smallCardiacVeinUnchanged:true,priorContentPreserved:true,clinicalApproval:false}));

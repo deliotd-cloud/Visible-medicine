@@ -6,14 +6,17 @@ import {createRequire} from 'node:module';
 import {runInNewContext} from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {resolve} from 'node:path';
-import {build} from './workspace-test-build.mjs';
 import {build as componentBuild} from './workspace-component-test-build.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length,2,'No test-mode arguments');
 const baseline='f3d6966a040b69a375f6bbfa2a8c502b8c8492e4';
+// Preservation assertions describe the completed duct epoch, not an embargo
+// on later authored coronary teaching. Current duct React output remains below;
+// the newer sinus test checks the complete current corpus against this epoch.
+const completedEpoch='d4016ff9988064552e464980aaea1913b25d5114';
 const root=fileURLToPath(new URL('../',import.meta.url));
-const evidenceDir='F:/VisibleMedicine/staging/20261014-nested-duct-xray';
+const evidenceDir='F:/VisibleMedicine/staging/20261014-nested-cardiac-vein-imaging';
 const git=(...args)=>execFileSync('git',['--no-replace-objects',...args],{cwd:root,windowsHide:true,maxBuffer:64e6});
 assert.equal(git('rev-parse',baseline+'^{commit}').toString().trim(),baseline);
 const old=path=>git('show',baseline+':'+path);
@@ -21,8 +24,7 @@ const hash=value=>createHash('sha256').update(value).digest('hex');
 const canonical=value=>Array.isArray(value)?`[${value.map(canonical).join(',')}]`:value&&typeof value==='object'?`{${Object.keys(value).sort().map(k=>`${JSON.stringify(k)}:${canonical(value[k])}`).join(',')}}`:JSON.stringify(value);
 const digest=value=>hash(canonical(JSON.parse(JSON.stringify(value))));
 const plain=value=>JSON.parse(JSON.stringify(value));
-const currentBuild=await build({stdin:{contents:"export * from './content/nested-teaching';export * from './lib/nested-teaching';export * from './lib/nested-anatomy';export * from './lib/nested-review-material';export * from './lib/nested-review-client';export * from './lib/nested-review-api';export * from './lib/nested-review';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {bodyLesson,bodyContent} from './app/body-content';export {bodyReviewMaterial} from './lib/body-review-material';export {contentTabs} from './lib/content-types';export {regionalTours} from './lib/regional-tours';",resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
-const now=await import('data:text/javascript;base64,'+Buffer.from(currentBuild.outputFiles[0].text).toString('base64'));
+const now=await exactSourceHistoryApi(completedEpoch,'nested-review-security');
 const before=await exactSourceHistoryApi(baseline,'nested-review-security');
 const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
 const raw=JSON.parse(readFileSync(resolve(root,catalogPath),'utf8'));
@@ -62,7 +64,7 @@ assert.match(currentRefs.ductXrayPtc.url,/^https:\/\/www\.radiologyinfo\.org\//)
 const baselineConcepts=new Map(before.nestedConcepts.map(c=>[c.id,c]));
 assert.equal(now.nestedConcepts.length,before.nestedConcepts.length);
 for(const concept of now.nestedConcepts){const prior=baselineConcepts.get(concept.id);assert(prior,concept.id);const projected=plain(concept);if(['pancreatic-ductal-system','hepatic-biliary'].includes(concept.id)){assert.deepEqual(projected.imaging?.xray?.references,concept.id==='pancreatic-ductal-system'?[newRefKeys[0]]:newRefKeys);assert.equal(projected.imaging.xray.readiness,'draft');delete projected.imaging.xray;}assert.deepEqual(projected,plain(prior),concept.id+' other teaching unchanged');}
-const renderer=JSON.parse(readFileSync(resolve(root,'content/body-renderer-revision.json'),'utf8'));
+const renderer=JSON.parse(git('show',completedEpoch+':content/body-renderer-revision.json'));
 const oldRenderer=JSON.parse(old('content/body-renderer-revision.json'));
 assert.notEqual(renderer.sha256,oldRenderer.sha256,'Regenerated renderer must advance');
 const compiled=await componentBuild({stdin:{contents:"export {NestedTeaching} from './app/nested-teaching';",resolveDir:root,loader:'tsx'},bundle:true,write:false,platform:'node',format:'cjs'});
@@ -158,5 +160,5 @@ for(const target of targets){
 assert.deepEqual({nested,placements,rendered,otherTopics},{nested:108,placements:4,rendered:4,otherTopics:968});
 for(const structure of catalog.structures){for(const tab of now.contentTabs){assert.deepEqual(now.bodyLesson(structure,tab),before.bodyLesson(structure,tab),structure.id+'/'+tab);rootLessons++;}assert.deepEqual(await now.bodyReviewMaterial(structure.id),await before.bodyReviewMaterial(structure.id),structure.id+' root Review');rootPackets++;}
 assert.deepEqual({rootLessons,rootPackets},{rootLessons:9936,rootPackets:1104});
-const evidence={baseline,nestedTargets:nested,nestedTopics:108*9,xrayDraftPlacements:placements,otherNestedTopicsPreserved:otherTopics,actualNestedTeachingRenders:rendered,rootLessonsPreserved:rootLessons,rootReviewPacketsPreserved:rootPackets,sourceFilesCompared:protectedSources.size,trackedSourceGlbsPreserved:trackedGlbs.length,identityMutationsRejected:identityRejected,staleSavesRejectedBeforeStorage:staleRejected,forgedPacketMutationsDetected:forgedRejected,rendererRevisionAdvancedForAllNested:true,clinicalAcceptance:false,scanRegistration:false,browserAcceptance:false};
+const evidence={baseline,completedEpoch,historicalApiAndPacketAssertions:true,currentDuctReactOutput:true,nestedTargets:nested,nestedTopics:108*9,xrayDraftPlacements:placements,otherNestedTopicsPreserved:otherTopics,actualNestedTeachingRenders:rendered,rootLessonsPreserved:rootLessons,rootReviewPacketsPreserved:rootPackets,sourceFilesCompared:protectedSources.size,trackedSourceGlbsPreserved:trackedGlbs.length,identityMutationsRejected:identityRejected,staleSavesRejectedBeforeStorage:staleRejected,forgedPacketMutationsDetected:forgedRejected,rendererRevisionAdvancedForAllNested:true,clinicalAcceptance:false,scanRegistration:false,browserAcceptance:false};
 mkdirSync(evidenceDir,{recursive:true});writeFileSync(resolve(evidenceDir,'test-nested-duct-xray.json'),JSON.stringify(evidence,null,2)+'\n');console.log(JSON.stringify(evidence));

@@ -63,6 +63,9 @@ delete api.nestedTeachingReferences.mcaSourceAngiography;
 // legacy historical corpus and its digest remain unchanged.
 delete api.nestedTeachingReferences.picaSourceParentAnatomy;
 delete api.nestedTeachingReferences.picaSourceAngiography;
+// Coronary concepts are outside this legacy corpus. Their exact source-bound
+// venography extension is checked in test-nested-coronary-sinus-xray.mjs.
+delete api.nestedTeachingReferences.coronarySinusVenography;
 // Exact two-field extension; verify new bytes before restoring older snapshots.
 const eyeUsHashes = {
   'eye-lens': 'c71308116b8adbda8d67d4b9dec4bd53db697052e60c88ce73d96682921a3e14',

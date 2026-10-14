@@ -3669,3 +3669,15 @@ Reading access is not a media-reuse licence. Existing project MIT terms and
 BodyParts3D CC BY4.0 attribution remain unchanged. No new asset, model, texture,
 font, dependency, service or fee. Revision-bound clinical review remains pending.
 See `docs/NESTED_DUCT_XRAY.md`.
+
+## Nested coronary sinus X-ray orientation — 14 October 2026
+
+One original factual note cites the Blendea et al. rotational-venography study
+(2007, PMID 17765613) as a reading reference. No publisher prose, figure,
+angiogram, table, scan or dataset is copied, imported, adapted or relicensed.
+Reading access is not a commercial media-reuse licence; publisher rights remain
+intact. Existing project MIT terms and BodyParts3D CC BY4.0 attribution are
+unchanged. No new asset, model, texture, font, dependency, service or fee.
+Revision-bound radiologist review remains pending. Small cardiac vein X-ray and
+ultrasound remain pending rather than inheriting evidence for a different vein.
+See `docs/NESTED_CORONARY_SINUS_XRAY.md`.

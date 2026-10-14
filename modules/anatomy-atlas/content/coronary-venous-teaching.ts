@@ -1,6 +1,11 @@
 import type { NestedConcept } from './nested-teaching';
 
 export const coronaryVenousTeachingReferences = {
+  coronarySinusVenography: {
+    title: 'Blendea et al. · Coronary venous anatomy by rotational venography (2007)',
+    url: 'https://pubmed.ncbi.nlm.nih.gov/17765613/',
+    scopedToConcept: true,
+  },
   coronarySinusEchoView: {
     title: 'Mai et al. · Coronary sinus appearance on echocardiography (2006)',
     url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC1860876/',
@@ -38,6 +43,7 @@ export const coronaryVenousConcepts: NestedConcept[] = [
       pathology: draft('A widened coronary sinus can accompany raised right-heart pressure or an anomalous venous connection. Congenital wall or ostial abnormalities are also described. Shape in this source model cannot identify enlargement, a shunt or disease in any person.', 'coronarySinusImaging'),
     },
     imaging: {
+      xray: draft('Contrast coronary venography can depict the coronary sinus and its tributaries as X-ray projections. A rotational venography study in patients undergoing cardiac resynchronization therapy assessed sinus size and variable tributary presence, calibre and angulation. Use this surface for orientation to an opacified sinus, not as a plain chest-radiograph vessel map. Restore assembled anatomy before comparison; explosion is not a projection. No contrast filling, ostium, patent lumen, connected tributaries, measured calibre, instrument route or patient-space registration is supplied.', 'coronarySinusVenography'),
       ultrasound: draft('On transthoracic echocardiography, a dilated coronary sinus may appear as an echo-free structure in the atrioventricular groove on a parasternal long-axis view. Distinguish it from the descending aorta or a localized pericardial fluid collection. Enlargement can accompany right atrial pressure overload or a persistent left superior vena cava; appearance alone does not establish the cause. This static surface provides no echo window, Doppler flow, contrast transit or validated diameter.', 'coronarySinusEchoView', 'coronarySinusEchoDilation'),
       ct: draft('Cardiac CT can show the coronary sinus in relation to nearby chambers and vessels on acquired multiplanar images. The review illustrates variants including enlargement and abnormal connections; none is represented as a finding in this unregistered surface.', 'coronarySinusImaging'),
       mri: draft('Cardiovascular MRI can depict the coronary sinus and surrounding anatomy; selected sequences can also assess flow or shunt physiology. This static model supplies neither MR signal nor flow information and has no registered scan correspondence.', 'coronarySinusImaging'),
