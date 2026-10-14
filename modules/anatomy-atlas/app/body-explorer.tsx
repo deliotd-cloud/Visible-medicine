@@ -2083,11 +2083,6 @@ export default function BodyExplorer({
                 </Button>
                 <WorkspaceOnly modes={['explore', 'dissect']} className="atlas-inline-mode">
                 <div className="body-explode">
-                  <ExplodeStyleSelect
-                    value={exam ? 'spatial' : layout}
-                    disabled={exam || !available.length}
-                    onChange={changeLayout}
-                  />
                   <Slider
                     value={[explode]}
                     aria-valuetext={`${explode}%`}
@@ -2109,6 +2104,17 @@ export default function BodyExplorer({
                   />
                   <output>{explode}%</output>
                 </div>
+                <details className="body-advanced-view">
+                  <summary>Advanced view</summary>
+                  <div className="body-advanced-view-content">
+                    <span>Separation layout</span>
+                    <ExplodeStyleSelect
+                      value={exam ? 'spatial' : layout}
+                      disabled={exam || !available.length}
+                      onChange={changeLayout}
+                    />
+                  </div>
+                </details>
                 {layout === 'tray' && selectedId && enabledIds.has(selectedId) && (
                   <Button
                     size="icon"

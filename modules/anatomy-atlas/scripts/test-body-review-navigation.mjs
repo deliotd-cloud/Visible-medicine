@@ -243,3 +243,25 @@ test('navigation styles provide wrapping, visible focus and 44px targets without
   assert(rules.includes('white-space: normal')); assert(rules.includes(':focus-visible'));
   assert(!rules.includes('position: fixed'));
 });
+
+test('combined model follows only the parsed worksheet and retires with selection', async () => {
+  const h = setup({ rows: realRows });
+  const previews = () => walk(h.render(), n => typeof n.props.revision === 'string' && Object.hasOwn(n.props, 'href'));
+  assert.equal(previews().length, 0, 'No model is guessed while material loads');
+  const first = worksheet(realRows[0].id);
+  requests.at(-1).resolve({ok:true,json:async()=>first}); await settle();
+  const preview = previews()[0]; assert(preview);
+  assert.equal(preview.props.href, first.atlasLink);
+  assert.equal(preview.props.revision, first.materialHash);
+  assert.equal(preview.key, first.materialHash);
+  await h.dirty(); confirmResult = false; h.move('Next');
+  assert.equal(previews()[0].key, first.materialHash, 'Cancelled dirty navigation retains the same model and worksheet');
+  confirmResult = true; h.move('Next');
+  assert.equal(previews().length, 0, 'Old preview unmounts before the new request completes');
+  const second = worksheet(realRows[1].id);
+  requests.at(-1).resolve({ok:true,json:async()=>second}); await settle();
+  assert.equal(previews()[0].props.href, second.atlasLink);
+  assert.equal(previews()[0].key, second.materialHash);
+  assert(requests.every(request=>!request.options.method),'Inspecting and navigating never writes a decision');
+  h.cleanup();
+});

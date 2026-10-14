@@ -10,7 +10,7 @@ const result = await build({
   bundle:true, write:false, platform:'node', format:'cjs',
 });
 const module = { exports:{} };
-runInNewContext(result.outputFiles[0].text, { module, exports:module.exports,
+runInNewContext(result.outputFiles[0].text, { module, exports:module.exports, structuredClone,
   require: id => id === 'next/link' ? () => null : require(id), console, process });
 const api = module.exports, h = React.createElement;
 const markup = renderToStaticMarkup(h(api.InlineStudy, null,

@@ -936,12 +936,12 @@ export default function ShoulderExplorer({
                       </div>
                     </details>
                   </WorkspaceOnly>
-                  <Link
+                  {presentation === 'standalone' && <Link
                     className="shoulder-review-link"
                     href={`/review?structure=${encodeURIComponent(selectedId)}`}
                   >
                     Review workspace
-                  </Link>
+                  </Link>}
                 </>
               ) : (
                 <div className="exam-rail">

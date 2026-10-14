@@ -37,6 +37,9 @@
 .review-gap summary {font-weight:650;cursor:pointer;}
 .review-gap ol {padding-left:1.2rem;list-style:decimal;}
 .review-model-link {display:flex;align-items:center;gap:.4rem;text-decoration:underline;font-size:.875rem;}
+.review-structure-navigation { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; margin-bottom:1rem; padding-bottom:.75rem; border-bottom:1px solid var(--border); }
+.review-structure-navigation span { flex:1 1 12rem; font-size:.875rem; }
+.review-structure-navigation button { min-height:44px; white-space:normal; }
 .review-track-meta {display:flex;gap:1rem;flex-wrap:wrap;align-items:center;font-size:.875rem;color:var(--vm-muted);margin:1rem 0;}
 .review-state {padding:.2rem .55rem;border-radius:.3rem;background:#edf1ef;color:var(--vm-ink);font-weight:650;}
 .review-state.signed {background:var(--vm-lime);}

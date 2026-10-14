@@ -4,6 +4,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { ReviewSignInLink } from '@/components/review-sign-in-link';
+import { ReviewModelPreview } from './review-model-preview';
 import {
   ArrowUpRight,
   ClipboardCheck,
@@ -452,6 +453,18 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
             className="review-paper"
             aria-label={`${selected.name} review`}
           >
+            <nav className="review-structure-navigation" aria-label="Structures in the filtered review queue">
+              <Button variant="outline" disabled={busy || queue.findIndex(s => s.id === selectedId) <= 0}
+                onClick={() => { const index = queue.findIndex(s => s.id === selectedId); if (index > 0) { setSelectedId(queue[index - 1].id); setMessage(''); setError(''); } }}>Previous structure</Button>
+              <span>Save edits using the worksheet controls. Moving between structures retains unsaved drafts.</span>
+              <Button variant="outline" disabled={busy || queue.findIndex(s => s.id === selectedId) < 0 || queue.findIndex(s => s.id === selectedId) >= queue.length - 1}
+                onClick={() => { const index = queue.findIndex(s => s.id === selectedId); if (index >= 0 && index + 1 < queue.length) { setSelectedId(queue[index + 1].id); setMessage(''); setError(''); } }}>Next structure</Button>
+            </nav>
+            <div className="review-selected">
+            <ReviewModelPreview key={selectedId}
+              href={`/shoulder?structure=${encodeURIComponent(selectedId)}`}
+              name={selected.name} revision={currentRevision(selectedId, 'geometry') ?? 'unavailable'} />
+            <div className="review-worksheet">
             <div className="review-title">
               <div>
                 <p className="review-eyebrow">{selected.shortId}</p>
@@ -1013,6 +1026,8 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
                 </section>
               </TabsContent>
             </Tabs>
+            </div>
+            </div>
           </section>
         </div>
       </main>

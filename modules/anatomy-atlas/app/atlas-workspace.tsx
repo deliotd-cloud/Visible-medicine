@@ -183,6 +183,11 @@ export function WorkspaceModes({ guidedLearning }: {
 } = {}) {
   const { mode, exam, chooseMode, setPanelOpen } = useAtlasWorkspace(),
     id = useId();
+  const visibleModes = [
+    ...workspaceModes.filter(value => value !== 'practice'),
+    ...(guidedLearning ? ['guided-learning' as const] : []),
+    ...workspaceModes.filter(value => value === 'practice'),
+  ];
   return (
     <RadioGroup
       className="atlas-workspace-modes"
@@ -199,11 +204,11 @@ export function WorkspaceModes({ guidedLearning }: {
         }
       }}
     >
-      {workspaceModes.map((value) => (
+      {visibleModes.map((value) => (
         <label
           key={value}
           htmlFor={`${id}-${value}`}
-          data-active={!guidedLearning?.active && mode === value}
+          data-active={value === 'guided-learning' ? guidedLearning?.active : !guidedLearning?.active && mode === value}
         >
           <RadioGroupItem
             id={`${id}-${value}`}
@@ -214,13 +219,11 @@ export function WorkspaceModes({ guidedLearning }: {
             ? 'Explore'
             : value === 'dissect'
               ? 'Dissect'
-              : 'Practice'}
+              : value === 'guided-learning'
+                ? 'Guided learning'
+                : 'Quiz'}
         </label>
       ))}
-      {guidedLearning && <label htmlFor={`${id}-guided-learning`} data-active={guidedLearning.active}>
-        <RadioGroupItem id={`${id}-guided-learning`} value="guided-learning" disabled={exam} />
-        Guided learning
-      </label>}
     </RadioGroup>
   );
 }

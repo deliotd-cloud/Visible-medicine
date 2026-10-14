@@ -20,6 +20,7 @@ import {
 import type { BodyReviewMaterial } from '@/lib/body-review-material';
 import { parseBodyReviewResponse } from '@/lib/body-review-response';
 import { BodyDecisionEditor } from './body-decision-editor';
+import { ReviewModelPreview } from '../review-model-preview';
 
 const labels = {
   anatomy: 'Anatomy',
@@ -342,7 +343,14 @@ export function BodyReviewDashboard({
               <p>Choose a structure to inspect its source and teaching.</p>
             )}
             {material?.structureId === selected && (
-              <>
+              <div className="body-review-selected">
+                <ReviewModelPreview
+                  key={material.materialHash}
+                  href={material.atlasLink}
+                  name={material.source.structure.name}
+                  revision={material.materialHash}
+                />
+                <div className="body-review-worksheet">
                 <BodyReviewDetails material={material} />
                 <BodyDecisionEditor
                   key={`${material.structureId}-${material.materialHash}`}
@@ -350,7 +358,8 @@ export function BodyReviewDashboard({
                   materialHash={material.materialHash}
                   onDirty={setDirty}
                 />
-              </>
+                </div>
+              </div>
             )}
           </section>
         </div>

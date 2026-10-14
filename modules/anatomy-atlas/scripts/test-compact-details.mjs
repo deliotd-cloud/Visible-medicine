@@ -8,7 +8,7 @@ const require=createRequire(import.meta.url),React=require('react');
 let context;
 const built=await build({stdin:{contents:"export {StructureDetailsButton} from './app/atlas-workspace';",resolveDir:process.cwd(),loader:'ts'},bundle:true,platform:'node',format:'cjs',write:false,loader:{'.css':'empty'}});
 const module={exports:{}};
-runInNewContext(built.outputFiles[0].text,{module,exports:module.exports,process:{env:{NODE_ENV:'test'}},require:id=>id==='react'?{...React,useContext:()=>context}:id==='next/link'?()=>null:require(id)});
+runInNewContext(built.outputFiles[0].text,{module,exports:module.exports,structuredClone,process:{env:{NODE_ENV:'test'}},require:id=>id==='react'?{...React,useContext:()=>context}:id==='next/link'?()=>null:require(id)});
 for(const mode of ['explore','dissect','practice']){
   const calls=[];context={mode,chooseMode:value=>calls.push(value),showInfo:()=>calls.push('info')};
   const element=module.exports.StructureDetailsButton();

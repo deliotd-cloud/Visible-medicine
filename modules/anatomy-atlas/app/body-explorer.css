@@ -439,6 +439,14 @@
   font-size: 0.625rem;
   color: #b1c5a5;
 }
+.body-advanced-view { position:relative; flex:none; font-size:.75rem; }
+.body-advanced-view[open] { z-index:6; }
+.body-advanced-view summary { display:flex; align-items:center; min-height:32px; padding:4px 8px; border-radius:5px; color:#e7f0df; cursor:pointer; white-space:nowrap; }
+.body-advanced-view summary:hover,.body-advanced-view[open] summary { background:#5b7851; }
+.body-advanced-view summary:focus-visible,.body-advanced-view-content :is(button,[data-slot='select-trigger']):focus-visible { outline:2px solid #b9efdd; outline-offset:2px; }
+.body-advanced-view-content { position:absolute; right:0; bottom:calc(100% + 8px); display:grid; gap:8px; width:min(230px,calc(100vw - 44px)); padding:12px; border:1px solid #6b9985; border-radius:7px; background:#203c30; box-shadow:0 8px 22px #102a22aa; }
+.body-advanced-view-content > span { color:#e7f0df; }
+.body-advanced-view-content .vm-explode-style { min-width:0; width:100%; }
 .body-canvas-caption {
   position: absolute;
   bottom: 23px;
