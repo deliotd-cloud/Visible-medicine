@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "aeadc23fd910abc817b76944625f9d65f24be7d06edbd42317f00dee0b038948"
+      "sha256": "1d033c24432b7842ad4e7ea27e40f47418ff0ec3118d22979a983290d69de523"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2177,6 +2177,10 @@
       "sha256": "e3d3bfd651987ba881c3b7a11dc6a0a07ef9135c73554d43de2a74b839952012"
     },
     {
+      "path": "content/psoas-xray.ts",
+      "sha256": "ddca507f5aedde4dc13c5844493d40a939720d4db3f98f76e0464c61c5bf878d"
+    },
+    {
       "path": "content/pulmonary-teaching.ts",
       "sha256": "0abe50a77f1a4e64eabd51bc2be39a0798ea2aa567625acb5201b58872934b0a"
     },
@@ -2250,7 +2254,7 @@
     },
     {
       "path": "content/regional-teaching/spine.json",
-      "sha256": "ce61f63c48828f97c8f27bb9f589aea4e75724ee19db09be077fc3690146e754"
+      "sha256": "076c6582eb64006196b5669aa917752d2caadb81c24684df05144eecabfed273"
     },
     {
       "path": "content/regional-teaching/thigh.json",
@@ -4569,6 +4573,10 @@
       "sha256": "9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71"
     },
     {
+      "path": "lib/psoas-xray.ts",
+      "sha256": "161e4eb6d3d67157c370545c7461b08b82e9c773a2b99c0e79695ee177f35200"
+    },
+    {
       "path": "lib/pulmonary-context.ts",
       "sha256": "3b6a9d180dd304d3f578385bc60dfe681bee07eeec3166124179c3d5131d103c"
     },
@@ -5469,5 +5477,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "92b7bc694c9719ad4255d8b86ffd03328b8c40a1ca955dc01c1ea7e1d05e4714"
+  "sha256": "e810d5f0b9b6aa42a30e476721ce0ad4b664cdf48072e2a48c6dfb84e1d2d969"
 }

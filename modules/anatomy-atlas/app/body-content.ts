@@ -62,6 +62,7 @@ import { rootCuffXrayLesson } from '../lib/root-cuff-xray';
 import { orbitalSupportMriLesson } from '../lib/orbital-support-mri';
 import { thoracoacromialUltrasoundLesson } from '../lib/thoracoacromial-ultrasound';
 import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
+import { psoasXrayLesson } from '../lib/psoas-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
 import { interosseousMembraneProjectionLesson } from '../lib/interosseous-membrane-projection';
 import { halluxXrayLesson } from '../lib/hallux-xray';
@@ -886,6 +887,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (hipImaging) return hipImaging;
   const hipAbductorXray = hipAbductorXrayLesson(s, tab);
   if (hipAbductorXray) return hipAbductorXray;
+  const psoasXray = psoasXrayLesson(s, tab);
+  if (psoasXray) return psoasXray;
   const spineImaging = spineImagingLesson(s, tab);
   if (spineImaging) return spineImaging;
   const xray = bodyXrayLesson(s, tab);

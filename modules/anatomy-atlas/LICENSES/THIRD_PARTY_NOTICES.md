@@ -3624,3 +3624,13 @@ Existing project MIT and BodyParts3D CC BY4.0 credits remain unchanged. No new
 model, texture, font, dependency, service or fee. These are infant-window
 orientation drafts, not validated neonatal geometry, adult ultrasound visibility
 or clinical sign-off. See `docs/NEONATAL_CRANIAL_ULTRASOUND.md`.
+
+## Psoas X-ray margin orientation drafts — 14 October 2026
+
+Original paired-source factual prose cites primary Kye and Moskowitz studies
+as reading references. No publisher text, table, figure, scan, dataset or image
+is copied, imported, adapted or relicensed. Reading access is not a commercial
+asset-reuse licence; publisher rights remain intact. Existing project MIT and
+BodyParts3D CC BY4.0 credits are unchanged. No new model, texture, font,
+dependency, service or fee. Exact-revision radiologist review remains required.
+See `docs/PSOAS_XRAY.md`.
