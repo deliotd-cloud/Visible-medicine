@@ -3659,3 +3659,13 @@ asset-reuse licence; publisher rights remain intact. Existing project MIT and
 BodyParts3D CC BY4.0 credits are unchanged. No new model, texture, font,
 dependency, service or fee. Exact-revision radiologist review remains required.
 See `docs/PSOAS_XRAY.md`.
+
+## Named nested duct X-ray orientation — 14 October 2026
+
+Two original short notes cite NIDDK and ACR/RSNA reading references across four
+exact existing pancreatic/hepatic source selections. No publisher prose, figure,
+photograph, cholangiogram, scan or dataset is copied, imported or relicensed.
+Reading access is not a media-reuse licence. Existing project MIT terms and
+BodyParts3D CC BY4.0 attribution remain unchanged. No new asset, model, texture,
+font, dependency, service or fee. Revision-bound clinical review remains pending.
+See `docs/NESTED_DUCT_XRAY.md`.

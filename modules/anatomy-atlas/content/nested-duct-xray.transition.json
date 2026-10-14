@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "f3d6966a040b69a375f6bbfa2a8c502b8c8492e4",
+  "beforeConcepts": [
+    {
+      "id": "pancreatic-ductal-system",
+      "study": "pancreatic",
+      "fmaIds": [
+        "FMA10419",
+        "FMA63103"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "The pancreatic duct opens into the duodenum. The pancreas is closely related to the stomach, duodenum, spleen and major abdominal vessels.",
+          "references": [
+            "pancreaticDuctAnatomy"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Pancreatic juices support digestion: this is the exocrine function. Hormone production, including insulin, is a separate endocrine function.",
+          "references": [
+            "pancreaticDuctAnatomy"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "Pancreatitis can be complicated by pancreatic duct narrowing, blockage or leakage. A surface model cannot establish duct patency or diagnose these complications.",
+          "references": [
+            "pancreaticDuctInflammation"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "Pancreatitis means inflammation of the pancreas. These are source anatomy surfaces, not examples of inflammation, obstruction or a patient-specific abnormality.",
+          "references": [
+            "pancreaticDuctInflammation"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "ct": {
+          "body": "CT examines the pancreas alongside the gallbladder and bile ducts and can reveal pancreatitis or pancreatic cancer. When studying an approved CT examination, relate the duct course to the surrounding organ rather than treating an isolated tube as the whole assessment. These source surfaces contain no CT attenuation, enhancement, calcification or patient-specific disease findings.",
+          "references": [
+            "pancreaticImagingDiagnosis"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "MRCP is an MRI technique that examines the pancreatic and biliary ducts without X-rays and can investigate causes of pancreatitis. Distinguish it from ERCP, which combines endoscopy, injected iodinated contrast and X-ray imaging. Use the selected duct sources for orientation only: neither source colour nor apparent surface contact demonstrates an MR signal, duct communication or an individual branching variant.",
+          "references": [
+            "pancreaticMRCP"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "Abdominal ultrasound can identify gallstones when investigating pancreatitis. Overlying bowel gas can obscure deeper organs and limit the available acoustic window. An unobstructed 3D view therefore does not mean the same duct is visible on an ultrasound examination. These static surfaces contain no sonographic texture, measured duct calibre or probe position, and are not an endoscopic ultrasound study.",
+          "references": [
+            "pancreaticImagingDiagnosis",
+            "pancreaticUltrasoundWindow"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Two source selections illustrate a ductal system, not two complete independent duct trees. The duct-tree selection uses the singleton IS-A source; the PART-OF group includes that component and the pancreatic duct. No accessory duct, patent lumen, junction, papillary opening or image correspondence is validated. One optional envelope is orientation only; the near-coincident parenchymal alternative is not displayed.",
+      "quiz": {
+        "question": "Which pancreatic function produces digestive juices: exocrine or endocrine?",
+        "answer": "Exocrine. Endocrine function produces hormones, including insulin.",
+        "references": [
+          "pancreaticDuctAnatomy"
+        ],
+        "basis": "primary-reference"
+      }
+    },
+    {
+      "id": "hepatic-biliary",
+      "study": "hepatic",
+      "fmaIds": [
+        "FMA71857",
+        "FMA71858"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "Bile ducts transport bile made by the liver. Right and left source groups are shown separately.",
+          "references": [
+            "hepaticDigestion"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Bile contributes to fat digestion; this model does not simulate bile movement or duct patency.",
+          "references": [
+            "hepaticDigestion"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "Bile-duct narrowing can obstruct drainage and allow bile to accumulate within the liver. Primary sclerosing cholangitis is one clinical example involving ducts both inside and outside the liver. The separate right and left groups help explain drainage anatomy, but do not establish an obstruction level.",
+          "references": [
+            "hepaticPSC"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "In primary sclerosing cholangitis, inflammation and scarring can narrow or block bile ducts and progressively damage the liver. Bile-duct infection and cancer are recognised complications. A visible source duct is not evidence for or against this disease; no strictures, infection or tumour are modelled.",
+          "references": [
+            "hepaticPSC"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "ct": {
+          "body": "CT can assess the gallbladder and bile ducts for signs of inflammation or obstructed bile flow. These right and left intrahepatic source groups provide orientation, not a complete examination of that drainage route. They contain no stone, tumour, measured duct dilatation or validated connection to the extrahepatic ducts; apparent gaps are not CT evidence of obstruction.",
+          "references": [
+            "hepaticBiliaryCT"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "MRCP uses MRI to depict bile ducts and is commonly used when investigating primary sclerosing cholangitis. Compare right and left ductal branching as an orientation exercise. MRCP is distinct from ERCP, which combines endoscopy and X-rays and can also treat a narrowed duct. No cholangiogram is supplied here.",
+          "references": [
+            "hepaticMRCP"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "Views containing the portal branches help orient assessment of intrahepatic ducts. Doppler helps distinguish blood vessels from ducts; the examination also assesses duct dilatation, walls and intraluminal findings. The coloured source branches do not supply those ultrasound appearances or a measured duct calibre.",
+          "references": [
+            "hepaticDoppler"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.",
+      "quiz": {
+        "question": "Does a coloured duct surface establish patency?",
+        "answer": "No. A static source surface cannot establish whether a duct is open or obstructed.",
+        "references": [],
+        "basis": "model-scope"
+      }
+    }
+  ],
+  "afterConcepts": [
+    {
+      "id": "pancreatic-ductal-system",
+      "study": "pancreatic",
+      "fmaIds": [
+        "FMA10419",
+        "FMA63103"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "The pancreatic duct opens into the duodenum. The pancreas is closely related to the stomach, duodenum, spleen and major abdominal vessels.",
+          "references": [
+            "pancreaticDuctAnatomy"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Pancreatic juices support digestion: this is the exocrine function. Hormone production, including insulin, is a separate endocrine function.",
+          "references": [
+            "pancreaticDuctAnatomy"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "Pancreatitis can be complicated by pancreatic duct narrowing, blockage or leakage. A surface model cannot establish duct patency or diagnose these complications.",
+          "references": [
+            "pancreaticDuctInflammation"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "Pancreatitis means inflammation of the pancreas. These are source anatomy surfaces, not examples of inflammation, obstruction or a patient-specific abnormality.",
+          "references": [
+            "pancreaticDuctInflammation"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "xray": {
+          "body": "ERCP combines endoscopy with fluoroscopic X-ray imaging after contrast injection into the ducts. Use these source components for orientation to a contrast-outlined pancreatic duct, not as a plain-radiograph duct map. The two selections do not establish two complete independent trees or an accessory duct. A model gap or contact is not evidence of leakage, obstruction or communication. No patent lumen, papilla, measured calibre, acquired image or patient correspondence is supplied. Restore assembled anatomy before comparing relationships; explosion is not an X-ray projection.",
+          "references": [
+            "ductXrayErcp"
+          ],
+          "readiness": "draft"
+        },
+        "ct": {
+          "body": "CT examines the pancreas alongside the gallbladder and bile ducts and can reveal pancreatitis or pancreatic cancer. When studying an approved CT examination, relate the duct course to the surrounding organ rather than treating an isolated tube as the whole assessment. These source surfaces contain no CT attenuation, enhancement, calcification or patient-specific disease findings.",
+          "references": [
+            "pancreaticImagingDiagnosis"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "MRCP is an MRI technique that examines the pancreatic and biliary ducts without X-rays and can investigate causes of pancreatitis. Distinguish it from ERCP, which combines endoscopy, injected iodinated contrast and X-ray imaging. Use the selected duct sources for orientation only: neither source colour nor apparent surface contact demonstrates an MR signal, duct communication or an individual branching variant.",
+          "references": [
+            "pancreaticMRCP"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "Abdominal ultrasound can identify gallstones when investigating pancreatitis. Overlying bowel gas can obscure deeper organs and limit the available acoustic window. An unobstructed 3D view therefore does not mean the same duct is visible on an ultrasound examination. These static surfaces contain no sonographic texture, measured duct calibre or probe position, and are not an endoscopic ultrasound study.",
+          "references": [
+            "pancreaticImagingDiagnosis",
+            "pancreaticUltrasoundWindow"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Two source selections illustrate a ductal system, not two complete independent duct trees. The duct-tree selection uses the singleton IS-A source; the PART-OF group includes that component and the pancreatic duct. No accessory duct, patent lumen, junction, papillary opening or image correspondence is validated. One optional envelope is orientation only; the near-coincident parenchymal alternative is not displayed.",
+      "quiz": {
+        "question": "Which pancreatic function produces digestive juices: exocrine or endocrine?",
+        "answer": "Exocrine. Endocrine function produces hormones, including insulin.",
+        "references": [
+          "pancreaticDuctAnatomy"
+        ],
+        "basis": "primary-reference"
+      }
+    },
+    {
+      "id": "hepatic-biliary",
+      "study": "hepatic",
+      "fmaIds": [
+        "FMA71857",
+        "FMA71858"
+      ],
+      "sections": {
+        "anatomy": {
+          "body": "Bile ducts transport bile made by the liver. Right and left source groups are shown separately.",
+          "references": [
+            "hepaticDigestion"
+          ],
+          "readiness": "draft"
+        },
+        "function": {
+          "body": "Bile contributes to fat digestion; this model does not simulate bile movement or duct patency.",
+          "references": [
+            "hepaticDigestion"
+          ],
+          "readiness": "draft"
+        },
+        "clinical": {
+          "body": "Bile-duct narrowing can obstruct drainage and allow bile to accumulate within the liver. Primary sclerosing cholangitis is one clinical example involving ducts both inside and outside the liver. The separate right and left groups help explain drainage anatomy, but do not establish an obstruction level.",
+          "references": [
+            "hepaticPSC"
+          ],
+          "readiness": "draft"
+        },
+        "pathology": {
+          "body": "In primary sclerosing cholangitis, inflammation and scarring can narrow or block bile ducts and progressively damage the liver. Bile-duct infection and cancer are recognised complications. A visible source duct is not evidence for or against this disease; no strictures, infection or tumour are modelled.",
+          "references": [
+            "hepaticPSC"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "imaging": {
+        "xray": {
+          "body": "Contrast X-ray cholangiography outlines opacified bile ducts. ERCP uses endoscopic access, whereas percutaneous transhepatic cholangiography (PTC) uses a different access route for contrast images. The right and left hepatic source groups provide intrahepatic orientation, not a procedural plan. Compare only the parts actually outlined on an authorised image. Apparent surface contacts cannot validate a confluence, open lumen or complete extrahepatic course; gaps are not a diagnosis of obstruction. No acquired cholangiogram, contrast dynamics, measured calibre or patient registration is supplied. Use assembled anatomy, not explosion, for spatial comparison.",
+          "references": [
+            "ductXrayErcp",
+            "ductXrayPtc"
+          ],
+          "readiness": "draft"
+        },
+        "ct": {
+          "body": "CT can assess the gallbladder and bile ducts for signs of inflammation or obstructed bile flow. These right and left intrahepatic source groups provide orientation, not a complete examination of that drainage route. They contain no stone, tumour, measured duct dilatation or validated connection to the extrahepatic ducts; apparent gaps are not CT evidence of obstruction.",
+          "references": [
+            "hepaticBiliaryCT"
+          ],
+          "readiness": "draft"
+        },
+        "mri": {
+          "body": "MRCP uses MRI to depict bile ducts and is commonly used when investigating primary sclerosing cholangitis. Compare right and left ductal branching as an orientation exercise. MRCP is distinct from ERCP, which combines endoscopy and X-rays and can also treat a narrowed duct. No cholangiogram is supplied here.",
+          "references": [
+            "hepaticMRCP"
+          ],
+          "readiness": "draft"
+        },
+        "ultrasound": {
+          "body": "Views containing the portal branches help orient assessment of intrahepatic ducts. Doppler helps distinguish blood vessels from ducts; the examination also assesses duct dilatation, walls and intraluminal findings. The coloured source branches do not supply those ultrasound appearances or a measured duct calibre.",
+          "references": [
+            "hepaticDoppler"
+          ],
+          "readiness": "draft"
+        }
+      },
+      "modelLimit": "Original source branch groups only; no proven lumen continuity, complete drainage tree, Couinaud segment boundaries, surgical planes or scan registration. Liver tissue context retains unresolved source segment conflicts.",
+      "quiz": {
+        "question": "Does a coloured duct surface establish patency?",
+        "answer": "No. A static source surface cannot establish whether a duct is open or obstructed.",
+        "references": [],
+        "basis": "model-scope"
+      }
+    }
+  ],
+  "references": {
+    "ductXrayErcp": {
+      "title": "NIDDK · ERCP: contrast X-ray duct imaging",
+      "url": "https://www.niddk.nih.gov/health-information/diagnostic-tests/endoscopic-retrograde-cholangiopancreatography",
+      "scopedToConcept": true
+    },
+    "ductXrayPtc": {
+      "title": "ACR / RSNA · Biliary interventions: contrast cholangiography",
+      "url": "https://www.radiologyinfo.org/en/info/biliary",
+      "scopedToConcept": true
+    }
+  }
+}

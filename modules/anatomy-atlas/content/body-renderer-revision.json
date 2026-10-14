@@ -1438,7 +1438,7 @@
     },
     {
       "path": "content/hepatic-teaching.ts",
-      "sha256": "0c93b76eba32feb4e5c1d0f139fccd416645dad6419b1e59bb97b043c534a654"
+      "sha256": "0905449c61f5b85c25b28cc7af80ff38ca90bd742303d138d7f676cb66add375"
     },
     {
       "path": "content/hepatic-venous-xray.ts",
@@ -1925,6 +1925,10 @@
       "sha256": "a258b94e94c0124df1761dbaf738cc90b0977a793463991b22bcd37b0323d31a"
     },
     {
+      "path": "content/nested-duct-xray.ts",
+      "sha256": "eb41993f26f8de0c6ab56f1dd6ff256790027f8197ff285aaa26ae8656805c3d"
+    },
+    {
       "path": "content/nested-guided-learning-bindings.v1.json",
       "sha256": "8b03a532838a621f7f3b1cddc2492d476c5c3ded269c65166b8973040adc5acc"
     },
@@ -1938,7 +1942,7 @@
     },
     {
       "path": "content/nested-teaching.ts",
-      "sha256": "d1c89dc4a2153fcc277edcd04b8d147b08f8bb670bebad82d865aa39e08c79da"
+      "sha256": "f2a7ecde336041cefeafe33611969f3e49f8f92db58891ee3a121d1e9526f568"
     },
     {
       "path": "content/neuro-organ-quiz-pins.json",
@@ -2038,7 +2042,7 @@
     },
     {
       "path": "content/pancreatic-teaching.ts",
-      "sha256": "9e8a890f18d9dc9fb5105e854340db4623e762a0785dd4c08b8e5f4d80773817"
+      "sha256": "874d87fa4449b79e902774fa3cf36101876097d5548da585787ccf74d6cf79ab"
     },
     {
       "path": "content/pancreatic-vessel-teaching.ts",
@@ -5302,7 +5306,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c5bcb8597bd4fca92b87b22b5e6dca92b3e1f57649f236a0b60af061d765f3e8"
+      "sha256": "5a9b9b15dc6c2c60c5a2e99b99f414f709b6a1dfcd7d248d65eee4db02851d42"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5525,5 +5529,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "7c8b4715c39a82db01ac83d57a5e4421993a884022a8e2df8ac73263bab7a4a8"
+  "sha256": "f45932383d298e4150f62a414cdd76407a87621dbe3a0fc5fb0b429aae6af15a"
 }

@@ -1,4 +1,5 @@
 import type { NestedConcept, NestedSection } from './nested-teaching';
+import { pancreaticDuctXrayTeaching } from './nested-duct-xray';
 
 export const pancreaticTeachingReferences = {
   pancreaticDuctAnatomy: {
@@ -51,6 +52,7 @@ export const pancreaticConcepts: NestedConcept[] = [
       ),
     },
     imaging: {
+      xray: pancreaticDuctXrayTeaching,
       ct: draft(
         'CT examines the pancreas alongside the gallbladder and bile ducts and can reveal pancreatitis or pancreatic cancer. When studying an approved CT examination, relate the duct course to the surrounding organ rather than treating an isolated tube as the whole assessment. These source surfaces contain no CT attenuation, enhancement, calcification or patient-specific disease findings.',
         'pancreaticImagingDiagnosis',

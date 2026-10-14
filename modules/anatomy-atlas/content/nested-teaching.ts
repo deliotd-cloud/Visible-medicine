@@ -1,4 +1,5 @@
 import type { NestedStudy } from '../lib/nested-anatomy';
+import { nestedDuctXrayReferences } from './nested-duct-xray';
 import { nestedCTOrientation, nestedCTOrientationReferences } from './nested-ct-orientation.ts';
 import { eyeCrossSectionalTeaching, eyeCrossSectionalReferences } from './eye-cross-sectional-teaching.ts';
 import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-temporal-mri.ts';
@@ -69,6 +70,7 @@ export const nestedTeachingReferences: Record<
   string,
   { title: string; url: string }
 > = {
+  ...nestedDuctXrayReferences,
   ...nestedCTOrientationReferences,
   ...superiorTemporalMRIReferences,
   ...cardiacXrayReferences,

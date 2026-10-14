@@ -1,4 +1,5 @@
 import type { NestedImagingTopic, NestedSection } from './nested-teaching';
+import { hepaticDuctXrayTeaching } from './nested-duct-xray';
 
 export const hepaticTeachingReferences = {
   hepaticLIRADSPhases: {
@@ -111,6 +112,7 @@ export const hepaticTeaching = {
       'hepaticPSC',
     ),
     imaging: {
+      xray: hepaticDuctXrayTeaching,
       ct: draft(
         'CT can assess the gallbladder and bile ducts for signs of inflammation or obstructed bile flow. These right and left intrahepatic source groups provide orientation, not a complete examination of that drainage route. They contain no stone, tumour, measured duct dilatation or validated connection to the extrahepatic ducts; apparent gaps are not CT evidence of obstruction.',
         'hepaticBiliaryCT',
