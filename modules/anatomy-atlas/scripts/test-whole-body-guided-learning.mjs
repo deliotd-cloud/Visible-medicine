@@ -47,12 +47,15 @@ const player=()=>find('RegionalGuidedLearning');
 
 render();
 const tours=api.wholeBodyTourOptions;
-const legacyTours=tours.filter(t=>!['portal-hepatic-venous-relationships','cervical-whole-discs-orientation'].includes(t.id));
+const legacyTours=tours.filter(t=>!['portal-hepatic-venous-relationships','cervical-whole-discs-orientation','right-medial-thigh-orientation'].includes(t.id));
 assert.equal(legacyTours.length,47);assert.equal(new Set(legacyTours.map(t=>t.id)).size,47);
 assert.equal(legacyTours.reduce((count,tour)=>count+tour.steps.length,0),282);
 assert.deepEqual(plain(legacyTours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
-assert.equal(tours.length,49);assert.equal(new Set(tours.map(t=>t.id)).size,49);
-assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),296);
+assert.equal(tours.length,50);assert.equal(new Set(tours.map(t=>t.id)).size,50);
+assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),301);
+const medialThigh=tours.find(t=>t.id==='right-medial-thigh-orientation');assert(medialThigh);
+assert.equal(medialThigh.region,'thigh');assert.equal(medialThigh.revision,'right-medial-thigh-20261015-r1');
+assert.equal(medialThigh.steps.length,5);
 const cervicalDiscs=tours.find(t=>t.id==='cervical-whole-discs-orientation');assert(cervicalDiscs);
 assert.equal(cervicalDiscs.title,'Cervical spine: whole discs');assert.equal(cervicalDiscs.region,'spine');
 assert.equal(cervicalDiscs.revision,'cervical-whole-discs-20261014-r1');
@@ -144,6 +147,15 @@ for(const step of cervicalDiscs.steps){
  assert.equal(player().key,originalKey);assert.equal(suspends,0);
 }
 filter('thorax');assert(!choices().includes(cervicalDiscs.id));
+filter('all');search(medialThigh.title);
+assert(choices().includes(medialThigh.id),'Medial thigh guide is discoverable by title');
+assert.equal(player().key,originalKey);assert.equal(suspends,0);
+filter('thigh');assert(choices().includes(medialThigh.id));
+for(const step of medialThigh.steps){
+ search(step.title);assert(choices().includes(medialThigh.id),`${step.title} is searchable in Thigh`);
+ assert.equal(player().key,originalKey);assert.equal(suspends,0);
+}
+filter('thorax');assert(!choices().includes(medialThigh.id));
 search('Trachea');
 filter('head-neck');
 assert.deepEqual(choices(),[],'Combined filters can produce no results');
@@ -155,8 +167,8 @@ assert.match(currentOption().props.children.join(''),/Current tour: .*outside fi
 select('thoracic-airways-vessels');
 assert.equal(player().key,originalKey,'Hidden result cannot be selected');assert.equal(suspends,0);
 find('button',node=>node.props.children==='Clear filters').props.onClick();render();
-assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id).length,47,'All legacy choices remain');
-assert.equal(choices().length,49);assert.equal(current(),tours[0].id);
+assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id&&id!==medialThigh.id).length,47,'All legacy choices remain');
+assert.equal(choices().length,50);assert.equal(current(),tours[0].id);
 assert.equal(currentOption().props.disabled,undefined,'Clear filters restores the normal option');
 assert.equal(player().key,originalKey);assert.equal(suspends,0);
 filter('thorax');
@@ -251,6 +263,15 @@ const thoracicSpine=spine.find(t=>t.id==='thoracic-spine-discs-orientation');ass
 select(thoracicSpine.id);assert.equal(player().props.tour,thoracicSpine);
 assert.equal(player().key,'thoracic-spine-discs-orientation:thoracic-spine-discs-orientation-v1');
 select(coronary.id);assert.equal(player().props.tour,thoracicSpine,'Spine library keeps regional scope');
+
+props.region='thigh';reset();
+const thigh=tours.filter(t=>t.region==='thigh');assert.equal(thigh.length,2);
+assert.equal(player().props.tour.id,'right-thigh-muscle-orientation','Existing thigh default retained');
+assert.deepEqual(choices(),plain(thigh.map(t=>t.id)));
+select(medialThigh.id);assert.equal(player().props.tour,medialThigh);
+assert.equal(player().key,'right-medial-thigh-orientation:right-medial-thigh-20261015-r1');
+assert.equal(player().props.initialStep,undefined);assert.equal(player().props.autoplay,undefined);
+select(coronary.id);assert.equal(player().props.tour,medialThigh,'Thigh library keeps regional scope');
 
 props.region='pelvis';reset();
 const pelvic=tours.filter(t=>t.region==='pelvis');assert.equal(pelvic.length,4);
@@ -348,8 +369,8 @@ for(const choice of [nested.find(item=>item.kind==='eye'),nested.find(item=>item
 assert.equal(suspends,nestedSuspends+2,'Each explicit nested selection suspends imaging once');
 assert.equal(exits,4,'Exit remains available for both nested viewer failures');
 props.region='whole-body';reset();
-assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id).length,51,'Legacy whole-body scope admits 47 regional and four exact-bound nested tours');
-assert.equal(choices().length,53,'Whole-body scope admits 49 regional and four exact-bound nested tours');
+assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id&&id!==medialThigh.id).length,51,'Legacy whole-body scope admits 47 regional and four exact-bound nested tours');
+assert.equal(choices().length,54,'Whole-body scope admits 50 regional and four exact-bound nested tours');
 const beforePortalSelection=suspends,priorTour=player().props.tour;
 search('Hepatic portal vein');assert(choices().includes(portal.id));
 assert.equal(player().props.tour,priorTour,'Search alone cannot start the tour');

@@ -1,5 +1,13 @@
 # Agent-authored guided learning
 
+15 October: [Right thigh: medial muscles](MEDIAL_THIGH_TOUR.md) adds five
+source-pinned stops for pectineus, longus, brevis, magnus and gracilis. The femur
+stays faded; local frames fit each muscle without fitting the entire bone into
+every close-up. Thigh's existing default stays unchanged. The regional library
+has 50 tours/301 stops, pending normal website/Review delivery. Whole surfaces
+do not establish mapped attachment footprints, nerve branches, magnus portions,
+acquired-image correspondence, registration or clinical approval.
+
 14 October: [Cervical spine: whole discs](CERVICAL_DISC_TOUR.md) adds six
 source-pinned stops beside the existing cervical bone sequence, retaining that
 default. Thirteen existing disc/bone surfaces, local adjacent-vertebra frames

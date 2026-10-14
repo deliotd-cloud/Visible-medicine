@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Medial-thigh Guided learning — 15 October 2026
+
+Five original project-MIT captions/code reuse existing whole-muscle surfaces and
+femur context. TTUHSC's lower-limb anatomy table and Kim et al. (2021,
+PMID34156649) are factual reading references, not imported assets. No article or
+table prose, image, diagram, scan, mesh or dataset is reproduced. Public access
+to a reference is not commercial asset clearance. Existing BodyParts3D meshes,
+credits and CC BY4.0 obligations are unchanged. No new dependency, font, texture,
+service, mandatory fee or asset licence is introduced. See MEDIAL_THIGH_TOUR.md
+in docs; all new teaching remains draft and requires revision-bound review.
+
 ## Portal and hepatic venous guided learning — 14 October 2026
 
 Original project-MIT captions/code compare eight existing vessel surfaces and

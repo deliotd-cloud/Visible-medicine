@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, cervicalDiscTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, cervicalDiscTour, medialThighTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -508,6 +508,55 @@ test('Cervical whole-disc player requires both bundles and walks six exact adjac
   assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
   assert(unavailable.button('Start guided tour').disabled);assert.equal(unavailable.timers.size,0);
   unavailable.click('Exit tour');assert.equal(unavailable.exits(),1);unavailable.unchanged();unavailable.unmount();
+ }
+});
+
+test('Medial thigh player requires both bundles and walks five selected-surface frames',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'medialThighTour',compact),tour=h.props.tour;
+  const raw=JSON.parse(catalogBefore);
+  const byFma=fma=>{const matches=raw.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);return matches[0].id;};
+  const muscles=['FMA22450','FMA22456','FMA22452','FMA22459','FMA43883'].map(byFma);
+  const femur=byFma('FMA24474'),ids=[femur,...muscles];
+  assert.equal(tour.id,'right-medial-thigh-orientation');
+  assert.deepEqual(plain(tour.steps.map(s=>s.selectedId)),muscles);
+  assert.deepEqual(plain(tour.contextIds),[femur]);
+  assert.deepEqual(plain(tour.steps.map(s=>s.frameIds)),muscles.map(id=>[id]));
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['thigh-muscles','thigh-skeleton']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.scene().onLoaded('thigh-skeleton');h.scene().onRendererHealth('ready');h.render();
+  assert(h.button('Start guided tour').disabled,'Femoral context alone cannot start medial thigh guidance');
+  h.scene().onLoaded('thigh-muscles');h.render();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,muscles[i]);
+   assert.equal(scene.view,['anterior','anterior','left','posterior','left'][i]);
+   assert.equal(scene.transitionMs,1800);assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+   assert.deepEqual(plain(scene.structures.map(s=>s.id)),ids);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   const surface=h.props.catalog.structures.find(s=>s.id===muscles[i]);
+   assert(surface.bounds.min.every((v,a)=>v>=scene.presetBounds.min[a]&&surface.bounds.max[a]<=scene.presetBounds.max[a]));
+   assert(text(h.tree()).includes(step.caption));if(i<4)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,3);
+  h.click('Play');assert.equal(h.timers.size,1);const stale=[...h.timers.values()][0].fn;
+  h.click('Pause');assert.equal(h.timers.size,0);stale();h.render();assert.equal(h.scene().reset,3);
+  h.preference.matches=true;h.listeners.get('motion')();h.render();h.click('Next');
+  assert.equal(h.scene().reset,4);assert.equal(h.scene().transitionMs,0);
+  h.click('Finish');assert.equal(h.exits(),1);h.unchanged();h.unmount();
+  for(const id of ids){
+   const missing=harness(catalog,'medialThighTour',compact,id);
+   assert(missing.button('Start guided tour').disabled);
+   assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
+   missing.click('Exit tour');missing.unchanged();missing.unmount();
+  }
+  const failed=harness(catalog,'medialThighTour',compact);
+  failed.ready();failed.click('Start guided tour');failed.click('Play');
+  const late=[...failed.timers.values()][0].fn;
+  failed.scene().onRendererHealth('failed');late();failed.render();
+  assert.equal(failed.scene().reset,0);assert.equal(failed.timers.size,0);
+  assert.match(text(failed.tree()),/renderer could not start/i);
+  failed.click('Exit tour');assert.equal(failed.exits(),1);failed.unchanged();failed.unmount();
  }
 });
 

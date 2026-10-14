@@ -1853,6 +1853,10 @@
       "sha256": "0ad19551a5fe8b559e8d424518755a6ac545e2c0c589eefb48555914a01a5006"
     },
     {
+      "path": "content/medial-thigh-tour-pins.json",
+      "sha256": "57bcdc6024d4217fb1b01379f3fac0f868b0fc25ed3ce79a2ad5926b79b8767d"
+    },
+    {
       "path": "content/median-cubital-xray-pins.json",
       "sha256": "871ccc16240d75017e82ba0ec30eec315fbf625d0740a85467e79f10e7f7356e"
     },
@@ -4313,6 +4317,10 @@
       "sha256": "0ecd223bcd86e19c06ac24b70685543b9881cc1754bfb0d08cff85a837edff11"
     },
     {
+      "path": "lib/medial-thigh-tour.ts",
+      "sha256": "49270097000cfb5319855441109686b8189538114b13c29eaf9a7d51bd39f247"
+    },
+    {
       "path": "lib/median-cubital-xray.ts",
       "sha256": "db98b177b462bf9ac3736f23bc6bf360fea4f7ca781481bdf716ac4e5f38d2eb"
     },
@@ -4702,7 +4710,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "b53d64aafb0ed1a43b1cb7a4802af53bdfe49fd8f0e5e5e96eed361240dad523"
+      "sha256": "6634d59862af751cbc231bdf41aee1a26217cde9b98d6863145f4d8c232b984c"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5314,7 +5322,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "e4ba6edd56e67200f296f1b13ce4fe14605f6c6f22eb850b0defb79836fa7840"
+      "sha256": "5f5281fb488d0caff0aaa2432e8f2accdec013560bf35bdd4a3b9abb1bc11843"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5537,5 +5545,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "6a82db4a1cb142ac669bc5b1ad5cc79d4d3f49ed2867ef4fed95a0ff5f0ff62a"
+  "sha256": "72024db9cc35b397b42e8e836d6b01a24935d682c2832ebc4050e79be5b2a64f"
 }
