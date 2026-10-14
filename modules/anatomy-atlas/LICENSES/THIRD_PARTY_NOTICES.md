@@ -3681,3 +3681,15 @@ unchanged. No new asset, model, texture, font, dependency, service or fee.
 Revision-bound radiologist review remains pending. Small cardiac vein X-ray and
 ultrasound remain pending rather than inheriting evidence for a different vein.
 See `docs/NESTED_CORONARY_SINUS_XRAY.md`.
+
+## Cervical whole-disc guided learning — 14 October 2026
+
+Six original orientation captions cite TTUHSC anatomy and the ACR cervical
+spine MRI module as factual reading references. No publisher text, table,
+figure, scan, dataset or media is copied, imported, adapted or relicensed.
+Reading access is not a commercial asset-reuse licence. Existing project MIT
+terms and BodyParts3D CC BY 4.0 attribution remain unchanged. The tour reuses
+six exact disc and seven vertebral source surfaces in two existing bundles;
+no new model, texture, font, dependency, service or fee. Source and clinical
+holds remain effective. Revision-bound radiologist review is pending.
+See `docs/CERVICAL_DISC_TOUR.md`.

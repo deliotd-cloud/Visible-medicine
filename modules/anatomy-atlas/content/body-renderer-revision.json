@@ -773,6 +773,10 @@
       "sha256": "ba741cc7373be4ffad1dd7a04af2605d5a033bbe6d40723196241d89d905b1a0"
     },
     {
+      "path": "content/cervical-disc-tour-pins.json",
+      "sha256": "6d4afc7a9b6358551a95ed0e615c6b0765f0e38a8a2be95747fefa95549ed774"
+    },
+    {
       "path": "content/cervical-quiz-pins.json",
       "sha256": "8d2295fe2cc4edb40f6f11cbced5b6a95a118f7174e7a996afb13a7b1f1860e5"
     },
@@ -3321,6 +3325,10 @@
       "sha256": "c929ff426870c46ae187ca8f012b77b89a7296667888807633a18fbb4b4ef08e"
     },
     {
+      "path": "lib/cervical-disc-tour.ts",
+      "sha256": "03a6900898954a12f7e1e13a94d6b0cabf19241fb48656fa0cc42bb7798200a4"
+    },
+    {
       "path": "lib/cervical-quiz.ts",
       "sha256": "1e2df51d2d9507b6df0f75990ca18790c4fa0a7f1d6f238157a7760c61ad5428"
     },
@@ -4694,7 +4702,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "6c34c4f6e7427c9fa2563dbd6610f491735721ccecaef9c3ff2ac253c69debfd"
+      "sha256": "b53d64aafb0ed1a43b1cb7a4802af53bdfe49fd8f0e5e5e96eed361240dad523"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5306,7 +5314,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5a9b9b15dc6c2c60c5a2e99b99f414f709b6a1dfcd7d248d65eee4db02851d42"
+      "sha256": "e4ba6edd56e67200f296f1b13ce4fe14605f6c6f22eb850b0defb79836fa7840"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5529,5 +5537,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d29fd27ebf786ebd156ba4e8881b88acb2a476d54918357d77fa19f571066ad6"
+  "sha256": "6a82db4a1cb142ac669bc5b1ad5cc79d4d3f49ed2867ef4fed95a0ff5f0ff62a"
 }

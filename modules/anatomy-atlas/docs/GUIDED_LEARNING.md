@@ -1,5 +1,12 @@
 # Agent-authored guided learning
 
+14 October: [Cervical spine: whole discs](CERVICAL_DISC_TOUR.md) adds six
+source-pinned stops beside the existing cervical bone sequence, retaining that
+default. Thirteen existing disc/bone surfaces, local adjacent-vertebra frames
+and the same smooth player are used. The regional library has 49 tours and 296
+stops; source-only until normal website/Review delivery. Clinical sign-off,
+acquired images and patient-space registration are not implied.
+
 2 October: [keyboard camera interruption](GUIDED_CAMERA_KEYBOARD.md) makes
 accepted arrow-key inspection interrupt a running guided sweep, just as pointer
 orbit already does. Paused keyboard input survives resume; rejected keys do not

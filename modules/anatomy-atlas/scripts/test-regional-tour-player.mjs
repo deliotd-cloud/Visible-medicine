@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, cervicalDiscTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -469,6 +469,46 @@ test('Thoracic spine player uses six exact local frames, both bundles, pause and
  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
  assert(unavailable.button('Start guided tour').disabled);assert.equal(unavailable.timers.size,0);
  unavailable.click('Exit tour');assert.equal(unavailable.exits(),1);unavailable.unchanged();
+});
+
+test('Cervical whole-disc player requires both bundles and walks six exact adjacent-bone frames',()=>{
+ for(const compact of [false,true]){
+  const h=harness(catalog,'cervicalDiscTour',compact),tour=h.props.tour;
+  const raw=JSON.parse(catalogBefore);
+  const fmaIds=['FMA25058','FMA13896','FMA13897','FMA13898','FMA13899','FMA13900'];
+  const boneFmas=['FMA12520','FMA12521','FMA12522','FMA12523','FMA12524','FMA12525','FMA9165'];
+  const byFma=fma=>{const matches=raw.structures.filter(s=>s.fmaId===fma);assert.equal(matches.length,1);return matches[0].id;};
+  const discs=fmaIds.map(byFma),bones=boneFmas.map(byFma),ids=[...bones,...discs];
+  assert.equal(tour.id,'cervical-whole-discs-orientation');
+  assert.deepEqual(plain(tour.steps.map(s=>s.selectedId)),discs);
+  assert.deepEqual(plain(tour.contextIds),bones);
+  assert.deepEqual(plain(tour.steps.map(s=>s.frameIds)),discs.map((id,i)=>[id,bones[i],bones[i+1]]));
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids);
+  assert.deepEqual(h.bundles().sort(),['spine-connective-gaps','spine-skeleton']);
+  assert(h.button('Start guided tour').disabled);assert.equal(h.timers.size,0);
+  h.scene().onLoaded('spine-skeleton');h.scene().onRendererHealth('ready');h.render();
+  assert(h.button('Start guided tour').disabled,'Skeletal context alone cannot start disc guidance');
+  h.scene().onLoaded('spine-connective-gaps');h.render();h.click('Start guided tour');
+  for(const [i,step] of tour.steps.entries()){
+   const scene=h.scene();assert.equal(scene.reset,i);assert.equal(scene.selectedId,discs[i]);
+   assert.equal(scene.view,'left');assert.equal(scene.transitionMs,1800);
+   assert.equal(scene.explode,0);assert.equal(scene.isolated,true);
+   assert.deepEqual(plain(scene.presetBounds),plain(h.api.regionalTourFrame(h.props.catalog,tour,i)));
+   assert(text(h.tree()).includes(step.caption));if(i<5)h.click('Next');
+  }
+  h.click('Back');assert.equal(h.scene().reset,4);
+  h.click('Play');assert.equal(h.timers.size,1);const stale=[...h.timers.values()][0].fn;
+  h.click('Pause');assert.equal(h.timers.size,0);stale();h.render();assert.equal(h.scene().reset,4);
+  h.click('Next');assert.equal(h.scene().reset,5);h.click('Finish');assert.equal(h.exits(),1);
+  h.unchanged();h.unmount();
+  const unavailable=harness(catalog,'cervicalDiscTour',compact);
+  const drift=structuredClone(unavailable.props.catalog);
+  drift.structures.find(s=>s.id===discs[2]).sources[0].sha256='0'.repeat(64);
+  unavailable.props.catalog=drift;unavailable.render();
+  assert.equal(nodes(unavailable.tree()).filter(n=>n.type==='BodyScene').length,0);
+  assert(unavailable.button('Start guided tour').disabled);assert.equal(unavailable.timers.size,0);
+  unavailable.click('Exit tour');assert.equal(unavailable.exits(),1);unavailable.unchanged();unavailable.unmount();
+ }
 });
 
 test('Reduced-motion activation interrupts regional autoplay without losing the selected stop',()=>{
