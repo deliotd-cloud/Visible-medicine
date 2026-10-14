@@ -2,6 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ReviewSignInLink } from '@/components/review-sign-in-link';
+import { nestedReviewChanges } from '@/lib/review-change-summary';
+import { ReviewChangeNotice } from '../review-change-notice';
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -497,6 +499,7 @@ export function NestedDecisionEditor({
           ? nestedDecisionLabel(page.history[0], c)
           : "Private history not loaded"}
       </p>
+      {page && <ReviewChangeNotice change={nestedReviewChanges(page.history[0], c, track)} />}
       {error && <p role="alert">{error}</p>}
       {!page && error && <p><ReviewSignInLink target={{ scope: 'nested',
         parent: packet.source.parent.id, study: packet.source.study,

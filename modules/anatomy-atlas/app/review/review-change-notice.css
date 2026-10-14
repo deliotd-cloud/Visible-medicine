@@ -1,0 +1,10 @@
+.review-change-notice { margin:.65rem 0; padding:.65rem .8rem; border:1px solid var(--border); border-left:3px solid var(--vm-teal); border-radius:.4rem; background:var(--vm-ivory); color:var(--vm-ink); font-size:.875rem; overflow-wrap:anywhere; }
+.review-change-notice > p { margin:0; font-weight:600; }
+.review-change-notice details { margin-top:.25rem; }
+.review-change-notice summary { cursor:pointer; min-height:1.75rem; padding:.15rem 0; }
+.review-change-notice summary:focus-visible { outline:2px solid var(--vm-teal); outline-offset:3px; border-radius:.15rem; }
+.review-change-notice table { width:100%; border-collapse:collapse; margin:.5rem 0; font-size:.8125rem; text-align:left; }
+.review-change-notice caption { text-align:left; margin-bottom:.25rem; color:var(--vm-muted); }
+.review-change-notice th,.review-change-notice td { padding:.3rem .4rem; border-bottom:1px solid var(--border); vertical-align:top; }
+.review-change-notice th { font-weight:600; }
+.review-change-notice details > p { margin:.5rem 0 0; }

@@ -3,6 +3,8 @@ import { SpecimenDepthNotes } from '../../specimen-depth-notes';
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ReviewSignInLink } from '@/components/review-sign-in-link';
+import { specimenReviewChanges } from '@/lib/review-change-summary';
+import { ReviewChangeNotice } from '../review-change-notice';
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -463,6 +465,7 @@ export function SpecimenDecisionEditor({
           ? specimenDecisionLabel(page.history[0], c)
           : "Private history not loaded"}
       </p>
+      {page && <ReviewChangeNotice change={specimenReviewChanges(page.history[0], c, track)} />}
       {error && <p role="alert">{error}</p>}
       {!page && error && <p><ReviewSignInLink target={{ scope: 'specimens',
         specimen: c.specimenKey, structure: c.structureId }} /></p>}

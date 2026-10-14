@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ReviewSignInLink } from '@/components/review-sign-in-link';
+import { bodyReviewChanges } from '@/lib/review-change-summary';
+import { ReviewChangeNotice } from '../review-change-notice';
 import {
   bodyApprovalProblems,
   bodyDecisionLabel,
@@ -260,6 +262,7 @@ export function BodyDecisionEditor({
               </Button>
             ))}
           </div>
+          <ReviewChangeNotice change={bodyReviewChanges(page.reviews.find(record => record.track === track), page.context, track)} />
           <div className="body-review-actions">
             <Button
               variant="outline"
