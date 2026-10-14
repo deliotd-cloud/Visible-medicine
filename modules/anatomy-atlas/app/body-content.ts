@@ -11,6 +11,7 @@ import { abdominalEusOrientationLesson } from '../lib/abdominal-eus-orientation'
 import { thoracicEusOrientationLesson } from '../lib/thoracic-eus-orientation';
 import { coronaryArterialXrayLesson } from '../lib/coronary-arterial-xray';
 import { iliacArterialXrayLesson } from '../lib/iliac-arterial-xray';
+import { femoralArterialXrayLesson } from '../lib/femoral-arterial-xray';
 import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
 import { hepaticArterialXrayLesson } from '../lib/hepatic-arterial-xray';
 import { visceralArterialXrayLesson } from '../lib/visceral-arterial-xray';
@@ -598,6 +599,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (coronaryArterialXray) return coronaryArterialXray;
   const iliacArterialXray = iliacArterialXrayLesson(s, tab);
   if (iliacArterialXray) return iliacArterialXray;
+  const femoralArterialXray = femoralArterialXrayLesson(s, tab);
+  if (femoralArterialXray) return femoralArterialXray;
   const abdominalArterialXray = abdominalArterialXrayLesson(s, tab);
   if (abdominalArterialXray) return abdominalArterialXray;
   const hepaticArterialXray = hepaticArterialXrayLesson(s, tab);

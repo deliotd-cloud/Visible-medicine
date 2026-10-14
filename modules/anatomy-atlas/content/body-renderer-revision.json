@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "a421bfe4705ecedaedba14fe93d62cc09cb5127e47cbcf8b5943013aaa134f23"
+      "sha256": "06f8f1e316acf6a9fc343eca77bc90af87f0ee2bf2ac802704661b2de40a9d5a"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1095,6 +1095,10 @@
     {
       "path": "content/facial-bone-xray.ts",
       "sha256": "36c85e89fd2ea01a3960eb0fdd8b082809141d586e465e42568bc51e751dae85"
+    },
+    {
+      "path": "content/femoral-arterial-xray.ts",
+      "sha256": "0208899666dea1ab317cc8c950954a17e55210917e694b5fdcc48b28edc7e712"
     },
     {
       "path": "content/femoral-component-teaching-bindings.v1.json",
@@ -2294,7 +2298,7 @@
     },
     {
       "path": "content/regional-teaching/thigh.json",
-      "sha256": "cdd0e419febb881426cd24a6ca38a71cc2f9fe1e8c89e64ef6d6c29fe44011e4"
+      "sha256": "97839021cfab9f308dccfef6a1f5916e77235c36e64120ef7269df0ed35bfc43"
     },
     {
       "path": "content/regional-teaching/thorax.json",
@@ -3639,6 +3643,10 @@
     {
       "path": "lib/facial-bone-xray.ts",
       "sha256": "d821653ad38d73b56eb09e36a6ad42ed25959f656b8eee8c7e4a4dc871fd423f"
+    },
+    {
+      "path": "lib/femoral-arterial-xray.ts",
+      "sha256": "900e2b67036b7242bb83b74683a4a163ab2f1b05d529a349d1fd83a4b9355f72"
     },
     {
       "path": "lib/femoral-components.ts",
@@ -5322,7 +5330,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5f5281fb488d0caff0aaa2432e8f2accdec013560bf35bdd4a3b9abb1bc11843"
+      "sha256": "7a4e9e9b6e4f708807b052d07089f1d0415582fd6c8bcb0aaeadd046a9a32f68"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5545,5 +5553,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "72024db9cc35b397b42e8e836d6b01a24935d682c2832ebc4050e79be5b2a64f"
+  "sha256": "9478325b88416c22cb6fa2ba64d0a324bfaf6a080c0810bf30502af563f83085"
 }

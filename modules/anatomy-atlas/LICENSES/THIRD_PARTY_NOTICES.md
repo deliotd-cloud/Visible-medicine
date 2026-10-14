@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Femoral arterial X-ray orientation — 15 October 2026
+
+Six retained bilateral vessel selections use original project-MIT factual
+teaching/code. UAMS, ACR/RSNA and original studies by Nasr (PMID24590524), Seto
+(PMID27566991), Uzel (PMID19085859) and Halvorson (PMID18176215) are reading
+references only. No publication prose, figure, table, diagram, image, scan,
+model or dataset is copied, imported or adapted. Public reference access is not
+commercial media clearance. Existing BodyParts3D CC BY4.0 credits and obligations
+remain unchanged. No dependency, font, texture, service or mandatory fee is added.
+See docs/FEMORAL_ARTERIAL_XRAY.md; all six lessons remain revision-bound drafts.
+
 ## Medial-thigh Guided learning — 15 October 2026
 
 Five original project-MIT captions/code reuse existing whole-muscle surfaces and
