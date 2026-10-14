@@ -78,11 +78,15 @@
     },
     {
       "path": "app/body-explorer.tsx",
-      "sha256": "856e8ef194b00ad8bd77e41961eb338202bd6ced86c7a4380116fc8f64e71731"
+      "sha256": "ef9495af9a73fdb21cb7d5fe5102209fb51dbdf506e02c31fdf2c88e5102a50b"
     },
     {
       "path": "app/body-scene.tsx",
       "sha256": "44733fcefea4a8be36b3806f74b1e4ace7fb640d904e6e7ff6f262ddccb39c34"
+    },
+    {
+      "path": "app/body-selection-channel.tsx",
+      "sha256": "75e621a812de1c82ac303c71f715f03e470f3375d91537f0df1bbdd3790cfc72"
     },
     {
       "path": "app/body-selection-notice.tsx",
@@ -3165,8 +3169,16 @@
       "sha256": "b5dc9cf1cf661bda6a232cfaeccf8473c6eba19da2975107d91e29ac21bcdef8"
     },
     {
+      "path": "lib/body-focus-command.ts",
+      "sha256": "f22998b68324e1b734a17d050a75a7af59fcaeb983fb0b9be68eb664215b5b1a"
+    },
+    {
       "path": "lib/body-presentation-parts.ts",
       "sha256": "bb62c2e2a36300d1ba8e214e58b92a40300b958d426ba59ad5d8c1a3a4fa20e0"
+    },
+    {
+      "path": "lib/body-selection-channel.ts",
+      "sha256": "4557074e463354b9d2ba3c82bac5b58f980e986d53fa0afd61ada0d0b11fd460"
     },
     {
       "path": "lib/body-source-additions.ts",
@@ -5493,5 +5505,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a1ff351f2cf06dd08d774f64160f19eab997a8c50342c5e5635a66d212eb8604"
+  "sha256": "fd562a62dc2725540d6d118a014649a15784826376193bcc457a8cea8072e507"
 }

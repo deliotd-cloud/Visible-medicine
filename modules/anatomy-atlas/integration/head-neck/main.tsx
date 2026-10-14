@@ -3,6 +3,7 @@ import {createRoot} from 'react-dom/client';
 import '../../app/globals.css';
 import BodyExplorer from '../../app/body-explorer';
 import {HeadSelectionChannel} from '../../app/head-selection-channel';
+import {BodySelectionChannel} from '../../app/body-selection-channel';
 declare const __VM_HEAD_SOURCE_REVISION__: string;
 import { InlineStudy } from '../../app/study-surface';
 import {parseStudyLink,type StudySearchParams} from '../../lib/study-links';
@@ -45,7 +46,7 @@ createRoot(document.getElementById('root')!).render(
             ? <Kidneys assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>
             : <AbdominalWall assetBase="/atlas-runtime/head-neck" initialLink={specimen.link} onClose={backToRegion}/>}
         </Suspense></InlineStudy></main>
-      : <HeadSelectionChannel revision={region==='head-neck'?__VM_HEAD_SOURCE_REVISION__:''}><BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" embedded={embedded} comparisonMode={comparisonMode} assetBase="/atlas-runtime/head-neck"/></HeadSelectionChannel>
+      : <HeadSelectionChannel revision={region==='head-neck'?__VM_HEAD_SOURCE_REVISION__:''}><BodySelectionChannel revision={__VM_HEAD_SOURCE_REVISION__} region={region}><BodyExplorer initialRegion={region} studyLink={parseStudyLink(params)} presentation="panel" embedded={embedded} comparisonMode={comparisonMode} assetBase="/atlas-runtime/head-neck"/></BodySelectionChannel></HeadSelectionChannel>
     : <section className="module-recovery" role="alert"><h2>This region link cannot be opened</h2><p>No alternative region or structure has been selected.</p><a href="/atlas" target="_top">Return to the Atlas</a></section>}
   </ModuleBoundary>
 );

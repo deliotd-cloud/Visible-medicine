@@ -6,6 +6,7 @@ import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import './um-knee-entry.css';
 import { useWorkspaceSession } from './workspace-session';
 import {useHeadRootSelection,headRootSelection} from './head-selection-channel';
+import {useBodyRootSelection,bodyRootSelection} from './body-selection-channel';
 import { PracticePanelNavigation } from './practice-panel-navigation';
 import { SourceDisplayNotes } from './source-display-notes';
 import { teachingHeading } from '@/lib/teaching-heading';
@@ -585,6 +586,23 @@ export default function BodyExplorer({
     const candidate=regionStructures.find(s=>s.id===target.id);
     const bundle=candidate&&catalog.bundles.find(b=>b.id===candidate.bundle);
     if(!candidate||candidate.laterality!==target.laterality||bundle?.sha256!==target.source||
+      !loaded.includes(candidate.bundle)||failed.includes(candidate.bundle)||!resolved.visible.some(s=>s.id===candidate.id)||!systems[candidate.system])return false;
+    applySelection(candidate.id,false);
+    return true;
+  });
+  useBodyRootSelection(
+    exam || workspace.mode === 'practice' ? {status:'blocked',reason:'practice'} :
+    guidedLearning ? {status:'blocked',reason:'guided'} :
+    inlineStudy || !catalog || !displayReady || (selected &&
+      (!regionStructures.some(s=>s.id===selected.id) || !loaded.includes(selected.bundle) || failed.includes(selected.bundle) ||
+       !resolved.visible.some(s=>s.id===selected.id) || !systems[selected.system]))
+      ? {status:'blocked',reason:'unavailable'} : bodyRootSelection(catalog,selected,initialRegion),target=>{
+    if(document.hidden||!['leg','thigh'].includes(initialRegion)||target.kind!=='root'||exam||workspace.mode==='practice'||guidedLearning||inlineStudy||!displayReady||!catalog)return false;
+    const candidates=regionStructures.filter(s=>s.id===target.id);
+    const canonical=catalog.structures?.filter(s=>s.id===target.id)??[];
+    if(candidates.length!==1||canonical.length!==1||candidates[0]!==canonical[0])return false;
+    const candidate=candidates[0],bundles=catalog.bundles.filter(b=>b.id===candidate.bundle);
+    if(candidate.laterality!==target.laterality||bundles.length!==1||bundles[0].sha256!==target.source||
       !loaded.includes(candidate.bundle)||failed.includes(candidate.bundle)||!resolved.visible.some(s=>s.id===candidate.id)||!systems[candidate.system])return false;
     applySelection(candidate.id,false);
     return true;
