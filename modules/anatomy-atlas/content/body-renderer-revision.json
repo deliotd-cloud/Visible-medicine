@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "1d033c24432b7842ad4e7ea27e40f47418ff0ec3118d22979a983290d69de523"
+      "sha256": "cbf138c2d6cf78ad7a7d86901d43fedab95e1cbf487e5273ab2f6f3bf1c36c36"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1341,6 +1341,10 @@
       "sha256": "ad0270c2ec43f08124abb3f5a0b46c092b62d54219b305bb7a01589944e9bb6b"
     },
     {
+      "path": "content/hand-arterial-xray.ts",
+      "sha256": "2a501df714c5442b9b6e02033b23aefd64f8605284262ae7db707028aaadd4ce"
+    },
+    {
       "path": "content/hand-bone-quiz-pins.json",
       "sha256": "6fdc3cb4e5c2b6194339505c05f22316dccfcd544acf0558a4fbfdfe24bac66c"
     },
@@ -2234,7 +2238,7 @@
     },
     {
       "path": "content/regional-teaching/hand.json",
-      "sha256": "9d7dbff8f50ff6553f6f40fde8993c3188aa004588c03eeed8f164988d625c7b"
+      "sha256": "98bf0af268862f937158fe14099f261cc474568bfcd52f1487f40a53952541d3"
     },
     {
       "path": "content/regional-teaching/head-neck.json",
@@ -3767,6 +3771,10 @@
     {
       "path": "lib/hand-arterial-ultrasound.ts",
       "sha256": "208de77dc3246d582e6fc7379eb125caa1a4faf5238822f69d0f277e69e93cd6"
+    },
+    {
+      "path": "lib/hand-arterial-xray.ts",
+      "sha256": "58426cb8afec673add4d06c61af36415db1c05a931de78269e1209a5008c4f70"
     },
     {
       "path": "lib/hand-bone-quiz.ts",
@@ -5477,5 +5485,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e810d5f0b9b6aa42a30e476721ce0ad4b664cdf48072e2a48c6dfb84e1d2d969"
+  "sha256": "541440d2558652ef43aa8980979d5f037ff7c13162889468e361acddb9bb4c75"
 }

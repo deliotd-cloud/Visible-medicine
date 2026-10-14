@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Hand arterial X-ray orientation — 14 October 2026
+
+Six exact superficial/deep palmar arch and princeps pollicis selections use
+original project-MIT factual teaching/code. Braun et al. (PMID614070), van
+Leeuwen et al. (PMID29127118), Rauch et al. (PMID10520330) and Ikeda et al.
+(PMID3418051) are reading references only. No publication prose, figure, table,
+scan, model, image or dataset is imported or adapted; article availability is
+not treated as an asset licence. Existing BodyParts3D attribution remains intact.
+No dependency, font, texture, paid service or mandatory fee is added. Other
+small-branch X-ray gaps remain pending. See docs/HAND_ARTERIAL_XRAY.md; drafts
+require exact revision-bound radiologist review.
+
 ## Median cubital vein X-ray context — 13 October 2026
 
 Two exact selections use original project-MIT factual teaching and code, with
