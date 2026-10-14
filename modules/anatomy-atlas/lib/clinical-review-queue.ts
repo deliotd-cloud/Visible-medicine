@@ -12,6 +12,8 @@ import { bodyReviewStale, bodyApprovalProblems } from './body-review-decisions';
 import { nestedReviewStale, nestedApprovalProblems } from './nested-review';
 import { specimenReviewStale, specimenApprovalProblems } from './specimen-review';
 import type { ClinicalStatus, ClinicalStatusItem } from './clinical-review-status';
+import type { ClinicalPriorityItem, ClinicalChangeReason } from './clinical-review-priority';
+import { reviewChangeReason } from './review-change-reason';
 
 function status(saved: { status: string } | undefined, stale: boolean, validApproval = true): ClinicalStatus {
   if (!saved) return 'not-started';
@@ -25,6 +27,15 @@ const tracks = ['geometry', 'teaching'] as const;
 /** Bounded read-only personal snapshot. This does not authorize publication or
  * institution access. The existing trusted Sites identity boundary still applies. */
 export async function getClinicalReviewQueue(request: Request, db: D1Database | undefined) {
+  return clinicalReviewQueue(request, db, false);
+}
+
+/** Trusted caller opt-in; no public route or query parameter selects this shape. */
+export async function getClinicalReviewQueueWithReasons(request: Request, db: D1Database | undefined) {
+  return clinicalReviewQueue(request, db, true);
+}
+
+async function clinicalReviewQueue(request: Request, db: D1Database | undefined, withReasons: boolean) {
   try {
     const user = authenticatedReviewer(request.headers);
     const params = new URL(request.url).searchParams;
@@ -37,9 +48,10 @@ export async function getClinicalReviewQueue(request: Request, db: D1Database | 
     // Shoulder is a fixed nine-structure catalogue. Its existing reader returns
     // at most one latest record per track; load it once, never once per row.
     let shoulder: Promise<SavedReview[]> | undefined;
-    const read = async (entry: ClinicalReviewEntry): Promise<ClinicalStatusItem> => {
+    const read = async (entry: ClinicalReviewEntry): Promise<ClinicalStatusItem | ClinicalPriorityItem> => {
       try {
         const values: ClinicalStatus[] = [];
+        const reasons: (ClinicalChangeReason | null)[] = [null, null];
         if (entry.scope === 'shoulder') {
           shoulder ??= latestReviews(db, user);
           const rows = (await shoulder).filter(r => r.structureId === entry.id);
@@ -58,12 +70,15 @@ export async function getClinicalReviewQueue(request: Request, db: D1Database | 
         } else if (entry.scope === 'body') {
           const [context, rows] = await Promise.all([bodyReviewContext(entry.id), latestBodyReviews(db, user, entry.id)]);
           if (!context) throw Error('Missing body context');
-          for (const track of tracks) {
+          for (const [index, track] of tracks.entries()) {
             const matches = rows.filter(r => r.track === track);
             if (matches.length > 1) throw Error('Duplicate saved track');
             const saved = matches[0];
-            values.push(status(saved, !!saved && bodyReviewStale(saved, context),
-              !saved || saved.status !== 'approved' || bodyApprovalProblems(saved, context, track).length === 0));
+            const state = status(saved, !!saved && bodyReviewStale(saved, context),
+              !saved || saved.status !== 'approved' || bodyApprovalProblems(saved, context, track).length === 0);
+            values.push(state);
+            if (withReasons && saved && state === 're-review')
+              reasons[index] = await reviewChangeReason('body', saved, context, track);
           }
         } else {
           // Keys originate in the server's canonical index, never in a client's
@@ -73,29 +88,40 @@ export async function getClinicalReviewQueue(request: Request, db: D1Database | 
           if (entry.scope === 'nested') {
             const material = await nestedReviewMaterial(sourceKey, id);
             if (!material) throw Error('Missing nested context');
-            for (const track of tracks) {
+            for (const [index, track] of tracks.entries()) {
               const saved = (await nestedReviewHistory(db, user, sourceKey, id, track))[0];
-              values.push(status(saved, !!saved && nestedReviewStale(saved, material.context),
-                !saved || saved.status !== 'approved' || nestedApprovalProblems(saved, material.context, track).length === 0));
+              const state = status(saved, !!saved && nestedReviewStale(saved, material.context),
+                !saved || saved.status !== 'approved' || nestedApprovalProblems(saved, material.context, track).length === 0);
+              values.push(state);
+              if (withReasons && saved && state === 're-review')
+                reasons[index] = await reviewChangeReason('nested', saved, material.context, track);
             }
           } else {
             const material = await specimenReviewMaterial(sourceKey, id);
             if (!material) throw Error('Missing specimen context');
-            for (const track of tracks) {
+            for (const [index, track] of tracks.entries()) {
               const saved = (await specimenReviewHistory(db, user, sourceKey, id, track))[0];
-              values.push(status(saved, !!saved && specimenReviewStale(saved, material.context),
-                !saved || saved.status !== 'approved' || specimenApprovalProblems(saved, material.context, track).length === 0));
+              const state = status(saved, !!saved && specimenReviewStale(saved, material.context),
+                !saved || saved.status !== 'approved' || specimenApprovalProblems(saved, material.context, track).length === 0);
+              values.push(state);
+              if (withReasons && saved && state === 're-review')
+                reasons[index] = await reviewChangeReason('specimen', saved, material.context, track);
             }
           }
         }
-        return { key: entry.key, geometry: values[0], teaching: values[1] };
+        const item = { key: entry.key, geometry: values[0], teaching: values[1] };
+        return withReasons ? { ...item, geometryReason: reasons[0], teachingReason: reasons[1] } : item;
       } catch {
         // Failure/corruption is not evidence that no review exists. Do not leak
         // database errors or fall back to an older, superseded approval.
-        return { key: entry.key, geometry: 'unavailable', teaching: 'unavailable' };
+        const item = { key: entry.key, geometry: 'unavailable' as const, teaching: 'unavailable' as const };
+        return withReasons ? { ...item, geometryReason: null, teachingReason: null } : item;
       }
     };
-    return reviewJson({ scope: 'private-to-signed-in-user', items: await Promise.all(entries.map(read)) });
+    const items = await Promise.all(entries.map(read));
+    return reviewJson(withReasons
+      ? { schema: 'vm-clinical-priority-1', scope: 'private-to-signed-in-user', items }
+      : { scope: 'private-to-signed-in-user', items });
   } catch (error) {
     return reviewJson({ error: error instanceof ReviewHttpError ? error.message : 'Saved review status is unavailable.' },
       error instanceof ReviewHttpError ? error.status : 503);
