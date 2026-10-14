@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Portal and hepatic venous guided learning — 14 October 2026
+
+Original project-MIT captions/code compare eight existing vessel surfaces and
+three organ landmarks. TTUHSC gross-anatomy tables, Krumm et al. (2011,
+PMID21986867) and Fang et al. (2012, PMID21976007) are reading references only.
+No article/table prose, figures, datasets, scans, textures, models or other
+publisher assets are imported or adapted. Their availability is not commercial
+asset clearance. Original BodyParts3D4.0 mesh payloads, credits and CC BY4.0
+terms remain unchanged. The corrected liver/pancreas and separately added
+venous surfaces retain their existing provenance and clinical holds. No new
+dependency, font, service, mandatory fee or asset licence is introduced.
+
+
 ## Hand arterial X-ray orientation — 14 October 2026
 
 Six exact superficial/deep palmar arch and princeps pollicis selections use
