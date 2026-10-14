@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "orbital-ring-ct:test": "node scripts/test-orbital-ring-ct.mjs",
     "forearm-vascular-xray:test": "node scripts/pin-forearm-vascular-xray.mjs --check && node scripts/test-forearm-vascular-xray.mjs",
     "median-cubital-xray:test": "node scripts/pin-median-cubital-xray.mjs --check && node scripts/test-median-cubital-xray.mjs",
     "neonatal-cranial-us:test": "node scripts/pin-neonatal-cranial-ultrasound.mjs --check && node scripts/test-neonatal-cranial-ultrasound.mjs",

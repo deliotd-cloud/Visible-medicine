@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "528733aebb5c6e920e4277870a7a112faf7589c8582194ab3a5329b59fc5b489"
+      "sha256": "a421bfe4705ecedaedba14fe93d62cc09cb5127e47cbcf8b5943013aaa134f23"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1997,6 +1997,10 @@
       "sha256": "22cf4fac85a0c27a0667a5ad9945729594a6fda13a2865177804eafb5e81b19f"
     },
     {
+      "path": "content/orbital-ring-ct.ts",
+      "sha256": "fc6da3e0a410eee00253311c1e89d5d0469fe51a01a69d4ae6120d31de818ef8"
+    },
+    {
       "path": "content/orbital-sensory-mri.ts",
       "sha256": "4940181686b480bfa11356943aeaa9306585174ce6ff47e5df8932bd352019d7"
     },
@@ -2258,7 +2262,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "1f085f30db2dc577dd9f1e8fe3ce70a396dbeeb95781c9abbee56f549968fd7a"
+      "sha256": "5d5a4a268ecfdeb97dc60af64fa6238f572a7f83a9fef5ea671b366d98f5ca93"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -4445,6 +4449,10 @@
       "sha256": "e18f17a10f8f00a9f1ae2766e8d5531cb5cb22b1906ec7267c0899a9c02828a6"
     },
     {
+      "path": "lib/orbital-ring-ct.ts",
+      "sha256": "a206da780eba01b93afb2dd9345c2c7ac238a4edb63d150e83483294fe7b9454"
+    },
+    {
       "path": "lib/orbital-sensory-mri.ts",
       "sha256": "7c9ce4eb10cc6c907e15342a1ddb01ac7719e022b6434886cfbe8d4398c63697"
     },
@@ -5294,7 +5302,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "9353525181fb6427ea7ba3685b28ee63b45488ea4bb4abdc56eaa1c10a5950d9"
+      "sha256": "c5bcb8597bd4fca92b87b22b5e6dca92b3e1f57649f236a0b60af061d765f3e8"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5517,5 +5525,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fd7f3e13473a414901ae9b0807d0176073385d24ee8eca30903faa67d1b56e7e"
+  "sha256": "7c8b4715c39a82db01ac83d57a5e4421993a884022a8e2df8ac73263bab7a4a8"
 }

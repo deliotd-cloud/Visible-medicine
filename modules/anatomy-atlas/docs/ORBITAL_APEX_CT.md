@@ -48,3 +48,41 @@ branch/division wording, landmark relationships and modality limitations.
 Accepted CT-head masks and boundaries remain with the specialist task. Any later
 acquired-image teaching needs its own privacy/rights, visibility and correspondence
 review; this batch supplies neither scan annotations nor spatial synchronization.
+
+## Common tendinous-ring CT follow-up — 14 October 2026
+
+Two further drafts cover the existing source-labelled left FMA49073/FJ1291 and
+right FMA49072/FJ1342 selections, without adding meshes or acquired-image
+annotations. `lib/orbital-ring-ct.ts` reuses only the complete immutable identities
+of `family: ring` from `content/orbital-support-mri-pins.json`; that file's MRI
+lessons, previous content and review state give no CT authority. Dispatch requires
+the complete identity and CT topic, with no name, FMA or laterality fallback.
+
+Martins supports the apical canal/fissure/strut relationships. Relating those
+relationships to CT is explicitly an educational inference, not a measured
+contour. The inspected Daniels abstract does describe annular anatomy in selected
+CT studies; the draft therefore promises neither routine fibre-level visibility
+nor categorical invisibility. No protocol or diagnostic performance is inferred.
+
+The detailed boundary remains disputed: [Naito 2019](https://pubmed.ncbi.nlm.nih.gov/31675425/)
+reports a three-rectus C-shaped origin with independent superior rectus, whereas
+[Lacey 2022](https://pubmed.ncbi.nlm.nih.gov/35058545/) supports a common tendinous
+origin, and [Ma 2022](https://pubmed.ncbi.nlm.nih.gov/36355368/) describes posterior
+origins joining into a more anterior complete ring. These are specimen-based
+anatomical studies, not validation of this source mesh or its appearance on a
+patient scan. Measurements, variant frequencies and surgical instructions are
+not transferred into the draft. Main-agent review inspected the indexed Martins
+dissection text and the four primary abstracts on 14 October 2026; some PMC and
+publisher pages were unavailable, so no additional inaccessible findings are
+implied.
+
+Only original factual summaries and source links are used. No publication prose,
+figures, restricted derivatives, scans, models, textures, fonts or dependencies
+are imported. Existing BodyParts3D credits, unvalidated-geometry holds,
+independent access and revision-bound radiologist sign-off remain unchanged.
+
+After the normal teaching/display generators, `npm run orbital-ring-ct:test`
+compares with immutable source `a6797b2b0c850edc5f50918c9352c887209eac94`.
+It must prove exactly two changed CT placements and two changed full Review
+packets, preserving every other lesson/packet and refusing stale or forged
+submissions before storage. Automated tests do not establish clinical acceptance.
