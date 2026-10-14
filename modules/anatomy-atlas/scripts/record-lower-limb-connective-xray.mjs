@@ -1,0 +1,21 @@
+// One-time editorial transition evidence, not geometry admission or clinical approval.
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {build} from './workspace-test-build.mjs';
+const hash=v=>createHash('sha256').update(JSON.stringify(v)).digest('hex');
+const before=JSON.parse(await readFile('content/lower-limb-connective-xray.before.json','utf8'));
+assert.equal(hash(before),'33d97db4dafd3d936b2ed517a3db93c4cd3d2772fa209cc7d4d9eedd4930b66d');
+assert.equal(before.parentCommit,'c57599c400e5145f16c819b7cb6d9720df989ecf');
+const bundle=await build({stdin:{contents:"export {bodyLesson} from './app/body-content';export {bodyDisplayCatalog} from './lib/body-display-catalog';export {contentTabs} from './lib/content-types';export {structures} from './app/anatomy-data';export {dissectionProfiles} from './app/dissection-data';export {lowerLimbConnectiveXrayLesson} from './lib/lower-limb-connective-xray';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(bundle.outputFiles[0].text).toString('base64'));
+const catalog=api.bodyDisplayCatalog(JSON.parse(await readFile('public/models/bodyparts3d/full-body/catalog.json','utf8')));
+assert.equal(hash(catalog),before.catalogHash);assert.equal(hash(api.structures),before.shoulderHash);assert.equal(hash(api.dissectionProfiles),before.dissectionHash);
+const selected=new Map(before.entries.map(e=>[e.identity.id,e]));assert.equal(selected.size,4);
+const other=catalog.structures.flatMap(s=>api.contentTabs.filter(t=>!(t==='xray'&&selected.has(s.id))).map(t=>{assert.equal(api.lowerLimbConnectiveXrayLesson(s,t),undefined);return [s.id,t,api.bodyLesson(s,t)];}));
+assert.equal(other.length,before.otherPlacements);assert.equal(hash(other),before.otherTeachingHash,'Unrelated teaching changed');
+const entries=before.entries.map(e=>{assert.deepEqual(catalog.structures.find(s=>s.id===e.identity.id),e.identity);assert.equal(e.previous.readiness,'pending');const lesson=api.bodyLesson(e.identity,'xray');assert.equal(lesson.readiness,'draft');assert.deepEqual(lesson,api.lowerLimbConnectiveXrayLesson(e.identity,'xray'));return {id:e.identity.id,group:e.group,lessonHash:hash(lesson)};});
+const record={schemaVersion:1,parentCommit:before.parentCommit,beforeHash:hash(before),catalogHash:before.catalogHash,otherPlacements:other.length,otherTeachingHash:hash(other),entries,clinicalApproval:false,imagesImported:false,patientRegistration:false};
+const text=JSON.stringify(record,null,2)+'\n',path='content/lower-limb-connective-xray.transition.json';
+if(process.argv.includes('--check'))assert.equal((await readFile(path,'utf8')).replace(/\r\n/g,'\n'),text);else await writeFile(path,text,{flag:'wx'});
+console.log(JSON.stringify({draftPlacements:entries.length,unchangedPlacements:other.length,transitionHash:hash(record),mode:process.argv.includes('--check')?'checked':'recorded'}));

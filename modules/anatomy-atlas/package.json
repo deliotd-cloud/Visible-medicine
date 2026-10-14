@@ -186,6 +186,7 @@
     "deep-brain-tour:test": "node scripts/test-deep-brain-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-tour-camera.mjs",
     "shoulder-website-review-link:test": "node --import tsx --test scripts/test-shoulder-website-review-link.mjs",
     "shoulder-soft-tissue-xray:test": "node --import tsx --test scripts/test-shoulder-soft-tissue-xray.mjs",
+    "lower-limb-connective-xray:test": "node scripts/record-lower-limb-connective-xray.mjs --check && node scripts/test-lower-limb-connective-xray.mjs",
     "clinical-review:test": "node scripts/test-clinical-review-index.mjs && node scripts/test-clinical-review-page.mjs && node scripts/test-clinical-review-queue.mjs && node scripts/test-clinical-review-results.mjs && node scripts/test-review-sign-in.mjs && node scripts/test-review-history-races.mjs",
     "lateral-cricoarytenoid-us:test": "node scripts/validate-lateral-cricoarytenoid-us.mjs",
     "plantar-arterial-us:test": "node scripts/validate-plantar-arterial-us.mjs",

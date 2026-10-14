@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "cbf138c2d6cf78ad7a7d86901d43fedab95e1cbf487e5273ab2f6f3bf1c36c36"
+      "sha256": "528733aebb5c6e920e4277870a7a112faf7589c8582194ab3a5329b59fc5b489"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1757,6 +1757,14 @@
       "sha256": "a61a6399286a2d7abdac9a8deb8f4d7ff0a890d3fb352432a7cd8a8c0df7a024"
     },
     {
+      "path": "content/lower-limb-connective-xray.before.json",
+      "sha256": "a03071a30e327d57c9e3690f58b6c95f78c307407145e7dbf1c45c9d22428a11"
+    },
+    {
+      "path": "content/lower-limb-connective-xray.ts",
+      "sha256": "3c632618b433c84933e12ce0d8a00b21f22978c79248b1d2dfff9f3e6f2ec9a8"
+    },
+    {
       "path": "content/lower-limb-motor-pins.json",
       "sha256": "d397cac59e5a0428e803278a16f9acafa0836f9e1aaa1d2fe7f6e14cbf289928"
     },
@@ -2254,7 +2262,7 @@
     },
     {
       "path": "content/regional-teaching/leg.json",
-      "sha256": "79eb1a773fda2db486d992047244d9ec7f4fc484fb6f87f912477a46be169640"
+      "sha256": "4226d5d5514e91cbcc5dd3642fad72638ea58f788935e5ab780a83cf8aa4b286"
     },
     {
       "path": "content/regional-teaching/pelvis.json",
@@ -2270,7 +2278,7 @@
     },
     {
       "path": "content/regional-teaching/thigh.json",
-      "sha256": "ec5457a152c8d2037d229be7e9771540c1f8913794f24718782ed8c3e4e0d13c"
+      "sha256": "cdd0e419febb881426cd24a6ca38a71cc2f9fe1e8c89e64ef6d6c29fe44011e4"
     },
     {
       "path": "content/regional-teaching/thorax.json",
@@ -4225,6 +4233,10 @@
       "sha256": "6d219ac438d4138212d10ecb0908cef57606e58e17d7cf2487669f4d89aaf30e"
     },
     {
+      "path": "lib/lower-limb-connective-xray.ts",
+      "sha256": "dc632743df13e910b3321e47b59621717f726e9452c8b9ea4010ce153a8c74d5"
+    },
+    {
       "path": "lib/lower-limb-motor.ts",
       "sha256": "e769da189fa98ef8997b2fd275638f9996517a7ed2dd5a1818a5283bb5653c56"
     },
@@ -5282,7 +5294,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "4ced65c1fd57dea0e81e928e2cfd591a815a8873cb48eb4e97814dee26abf951"
+      "sha256": "9353525181fb6427ea7ba3685b28ee63b45488ea4bb4abdc56eaa1c10a5950d9"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5505,5 +5517,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fd562a62dc2725540d6d118a014649a15784826376193bcc457a8cea8072e507"
+  "sha256": "d09d8a1e49ee4e408595a19c6566f2ef49674a87ea9bc07b220b1c80267c9500"
 }
