@@ -13,6 +13,7 @@ import { coronaryArterialXrayLesson } from '../lib/coronary-arterial-xray';
 import { iliacArterialXrayLesson } from '../lib/iliac-arterial-xray';
 import { femoralArterialXrayLesson } from '../lib/femoral-arterial-xray';
 import { femoralVenousXrayLesson } from '../lib/femoral-venous-xray';
+import { legVenousXrayLesson } from '../lib/leg-venous-xray';
 import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
 import { hepaticArterialXrayLesson } from '../lib/hepatic-arterial-xray';
 import { visceralArterialXrayLesson } from '../lib/visceral-arterial-xray';
@@ -604,6 +605,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (femoralArterialXray) return femoralArterialXray;
   const femoralVenousXray = femoralVenousXrayLesson(s, tab);
   if (femoralVenousXray) return femoralVenousXray;
+  const legVenousXray = legVenousXrayLesson(s, tab);
+  if (legVenousXray) return legVenousXray;
   const abdominalArterialXray = abdominalArterialXrayLesson(s, tab);
   if (abdominalArterialXray) return abdominalArterialXray;
   const hepaticArterialXray = hepaticArterialXrayLesson(s, tab);

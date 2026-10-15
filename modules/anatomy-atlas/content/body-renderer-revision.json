@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d8830b1f405eaef5118987dfa28eb9e2f1bd141cda2d8f45061e02980f53f422"
+      "sha256": "1b4a69b64b8a5cab721ad576580914c08c68e7c7489233f091c919e2238ce68e"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1685,6 +1685,10 @@
       "sha256": "ac914f92e63cd1d3a64a514cd6779f8f251422bb5d66b8418eaf3d3983059b02"
     },
     {
+      "path": "content/leg-venous-xray.ts",
+      "sha256": "9830909b5fbbf2aa0404fad4a722dc8f2841a42c7043a05ef91b5f9d3cf205fa"
+    },
+    {
       "path": "content/lesser-toe-xray-pins.json",
       "sha256": "9c599bbcd87dc82b8e52e72c9141d23f2c9ffa1fb6d43bbdd2a32b120d6a9221"
     },
@@ -2286,7 +2290,7 @@
     },
     {
       "path": "content/regional-teaching/leg.json",
-      "sha256": "4226d5d5514e91cbcc5dd3642fad72638ea58f788935e5ab780a83cf8aa4b286"
+      "sha256": "b67155a44ca2866027e54b073ab5911ebfebe11b04da620562026bb8510430ee"
     },
     {
       "path": "content/regional-teaching/pelvis.json",
@@ -4189,6 +4193,10 @@
       "sha256": "d94d6ea36a8962684935ed07bc235852095b624abc189dd7611d5551cd30022b"
     },
     {
+      "path": "lib/leg-venous-xray.ts",
+      "sha256": "8308c6495e576984b5fc04345628e990595a46d4446bce9cebe4bfe3ac4be454"
+    },
+    {
       "path": "lib/lesser-toe-xray.ts",
       "sha256": "11b54c8bbea1f5cc664b709d9e1714fad8cf67e948bbd2cc649f701ea912e62a"
     },
@@ -5338,7 +5346,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "32df0ed08fcff81f735cf22564bc1ccd62dcbe6f24d1458b50e89baf565026f0"
+      "sha256": "c56c772e842f0f0ba65c03e11a27acc72f470480e84ef6e9f9374ebad9677123"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5561,5 +5569,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e5e41f015e35469a9b3ac1a38e1e3690ba49c853e86bafed7e2cc7939bd8e5de"
+  "sha256": "9036b82fd0f44f7f5079e4f0d3d05ec078496d8e29389ce00e44bc1e6669594f"
 }

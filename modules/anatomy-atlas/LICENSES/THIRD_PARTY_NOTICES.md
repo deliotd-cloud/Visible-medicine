@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Leg venous contrast-X-ray teaching — 15 October 2026
+
+Original factual teaching cites primary Quinlan, Cross, Sauerbrei, Corcos and
+Schweighofer studies and ACR/RSNA and UAMS educational reading references.
+No publisher prose, figures, tables, scans, images or datasets are imported or
+relicensed. Reading access does not confer media-reuse rights. Existing project
+MIT terms and BodyParts3D CC BY 4.0 credits remain unchanged. No new model,
+texture, font, dependency, service or fee. Teaching is an exact-source draft,
+not acquired venography, validated flow or clinical approval.
+See `docs/LEG_VENOUS_XRAY.md`.
+
 ## Femoral venous X-ray orientation — 15 October 2026
 
 Six existing bilateral vein selections use original project-MIT factual
