@@ -74,6 +74,7 @@ import { psoasXrayLesson } from '../lib/psoas-xray';
 import { thighAvulsionXrayLesson } from '../lib/thigh-avulsion-xray';
 import { hipMuscleXrayLesson } from '../lib/hip-muscle-xray';
 import { adductorLongusXrayLesson } from '../lib/adductor-longus-xray';
+import { pelvicTributaryXrayLesson } from '../lib/pelvic-tributary-xray';
 import { handArterialXrayLesson } from '../lib/hand-arterial-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
 import { interosseousMembraneProjectionLesson } from '../lib/interosseous-membrane-projection';
@@ -848,6 +849,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (centralNeuralImaging) return centralNeuralImaging;
   const limbic = limbicLandmarkLesson(s, tab);
   if (limbic) return limbic;
+  const pelvicTributaryXray = pelvicTributaryXrayLesson(s, tab);
+  if (pelvicTributaryXray) return pelvicTributaryXray;
   const pelvicVein = pelvicVeinLesson(s, tab);
   if (pelvicVein) return pelvicVein;
   const epigastric = inferiorEpigastricLesson(s, tab);

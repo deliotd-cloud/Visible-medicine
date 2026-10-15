@@ -3827,3 +3827,15 @@ attribution, model geometry and source holds remain unchanged. No new model,
 texture, font, dependency, paid service or mandatory fee is introduced.
 Exact-revision radiologist review remains pending; no acquired image or patient
 registration is supplied. See `docs/HIP_MUSCLE_XRAY.md` for scope and evidence.
+
+## Pelvic tributary contrast-venography teaching — 15 October 2026
+
+Ten exact existing source selections reuse six original factual teaching drafts.
+Linked university anatomy documentation and primary studies are reading references
+only: no source tables, article prose, figures, scans, masks or media are imported.
+Free reading access does not grant commercial redistribution rights to those
+references. Existing project MIT terms, BodyParts3D CC BY 4.0 attribution and all
+source holds remain unchanged. No new mesh, texture, font, dependency, service
+or fee is introduced. These lessons do not validate acquired venographic visibility,
+source connectivity, patient registration or clinical use. Exact-revision radiologist
+review remains pending. See docs/PELVIC_TRIBUTARY_XRAY.md for scope and evidence.

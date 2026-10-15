@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6f0b129501d5f2b27ea6ee8ca8489a54abebe9ee2441a7d1a2bc7a2847de149a"
+      "sha256": "49dd23974633a16a21340878af543b8d496a86a1d148ff38fc258e23e5d1fcb1"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2121,6 +2121,10 @@
       "sha256": "4f41357b407713f265b80d747b25aacb95ec206cdd6a0221747cadd08b270c80"
     },
     {
+      "path": "content/pelvic-tributary-xray.ts",
+      "sha256": "9a232029f131b1fb75cdb75d0ffe72117bfed8daf1868f2515e16b4d3440303d"
+    },
+    {
       "path": "content/pelvic-urethral-study.ts",
       "sha256": "bda972aa5764d853abf80b2a23596efa27d06141f789a116080d3d0bc4559afe"
     },
@@ -2310,7 +2314,7 @@
     },
     {
       "path": "content/regional-teaching/pelvis.json",
-      "sha256": "c15c5d8dbc7a328525702b5c6d04b3c3018aea272be7fca8db878c06abb1668f"
+      "sha256": "62fe107bfd342dc86ced3fb5da96320baeca3bbef66325cc1400eb6e73d77ce1"
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
@@ -4633,6 +4637,10 @@
       "sha256": "6e73d09d97c75f9334146e28690205063f51f165b5a8071bec85e7e27cb835ea"
     },
     {
+      "path": "lib/pelvic-tributary-xray.ts",
+      "sha256": "77ccd9f8dc30aaa5017b72ff506b750094b2b21efb035e422cb20e97c89c3e9a"
+    },
+    {
       "path": "lib/pelvic-veins.ts",
       "sha256": "c7bfabbe5d9f05f61c1dd729c3378bdf32b3055452342da33b2a54d9b480fa33"
     },
@@ -5398,7 +5406,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "59c281912076df7cd248e6c5453feb7ce6d9070c18c75515d30532937bb4fc56"
+      "sha256": "f868f43ed3ef9a60643bf8ee482076339da26abe1fb310c6bba2ba90a1d4ebf4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5621,5 +5629,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "fb2605cc02c9fe8d9db4c4cb183dd1c7edcbfd83bbff51a5836ca00f69a2ba15"
+  "sha256": "be42e65d0c6bbdd47446a083eca73a9f67c2bb5e7e1063101cc98d76e2e79370"
 }
