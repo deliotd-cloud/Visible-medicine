@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 1,
+  "baseline": "38f225ff2d4b6cd0f2e4434c0a2d3a759f1af875",
+  "tourRevision": "right-posterior-calf-20261015-r1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "scopeRegions": [
+    "leg",
+    "foot"
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:medial-head-of-right-gastrocnemius",
+      "fmaId": "FMA45957",
+      "name": "Medial head of right gastrocnemius",
+      "sourceName": "medial head of right gastrocnemius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles-dissection",
+      "nodeName": "FMA45957",
+      "bounds": {
+        "min": [
+          -0.7423570156097412,
+          -6.771669864654541,
+          -0.36338600516319275
+        ],
+        "max": [
+          -0.21759700775146484,
+          -3.6789801120758057,
+          0.42693397402763367
+        ]
+      },
+      "center": [
+        -0.479977011680603,
+        -5.225324988365173,
+        0.03177398443222046
+      ],
+      "anchor": [
+        -0.5903189778327942,
+        -5.225019931793213,
+        0.10754600167274475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1397",
+          "sha256": "d7f3aa44801171baade1a59c40a8f8bda72097bec07047f93f24ebaac4546cb4"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:lateral-head-of-right-gastrocnemius",
+      "fmaId": "FMA45960",
+      "name": "Lateral head of right gastrocnemius",
+      "sourceName": "lateral head of right gastrocnemius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles-dissection",
+      "nodeName": "FMA45960",
+      "bounds": {
+        "min": [
+          -1.1699199676513672,
+          -6.671989917755127,
+          -0.44190889596939087
+        ],
+        "max": [
+          -0.6116700172424316,
+          -3.767390251159668,
+          0.3065059781074524
+        ]
+      },
+      "center": [
+        -0.8907949924468994,
+        -5.2196900844573975,
+        -0.06770145893096924
+      ],
+      "anchor": [
+        -0.8542540073394775,
+        -5.247869968414307,
+        -0.13491199910640717
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1394",
+          "sha256": "621dc10e974bcc1c53a8843bf1db3a1c322c8327d279010c58533bd28952bf08"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-soleus",
+      "fmaId": "FMA22558",
+      "name": "Right soleus",
+      "sourceName": "right soleus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles",
+      "nodeName": "FMA22558",
+      "bounds": {
+        "min": [
+          -1.1578500270843506,
+          -7.675360202789307,
+          -0.17801399528980255
+        ],
+        "max": [
+          -0.35600101947784424,
+          -4.413829803466797,
+          0.4111889600753784
+        ]
+      },
+      "center": [
+        -0.7569255232810974,
+        -6.044595003128052,
+        0.11658748239278793
+      ],
+      "anchor": [
+        -0.762794017791748,
+        -6.0432000160217285,
+        0.08173999935388565
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1437",
+          "sha256": "c9c62b720ffe375a8eddf390608684a796f1ea54880a5c34fa440404addc399e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+      "fmaId": "FMA258847",
+      "name": "Right calcaneal tendon",
+      "sourceName": "right calcaneal tendon",
+      "system": "connective",
+      "category": "tendon",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-connective-gaps",
+      "nodeName": "FMA258847",
+      "bounds": {
+        "min": [
+          -0.9771320223808289,
+          -8.561546325683594,
+          -0.2533789873123169
+        ],
+        "max": [
+          -0.4082280099391937,
+          -6.421770095825195,
+          0.0528239831328392
+        ]
+      },
+      "center": [
+        -0.6926800161600113,
+        -7.4916582107543945,
+        -0.10027750208973885
+      ],
+      "anchor": [
+        -0.7006680369377136,
+        -7.488257884979248,
+        -0.10228099673986435
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1405",
+          "sha256": "64696f68cd961e4dfb7809ab9899a6777e994ea3bf696213da7a0ac1a507bed9"
+        }
+      ],
+      "coverageNote": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "fmaId": "FMA24497",
+      "name": "Right calcaneus",
+      "sourceName": "right calcaneus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24497",
+      "bounds": {
+        "min": [
+          -1.0078099966049194,
+          -8.684906959533691,
+          -0.2599489986896515
+        ],
+        "max": [
+          -0.44875800609588623,
+          -8.191547393798828,
+          0.4414849877357483
+        ]
+      },
+      "center": [
+        -0.7282840013504028,
+        -8.43822717666626,
+        0.0907679945230484
+      ],
+      "anchor": [
+        -0.6279199719429016,
+        -8.424676895141602,
+        0.14383003115653992
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3360",
+          "sha256": "b53e7970e822e997e1b05f94f42514d07a3f98edcc63ec7dd7219354ce1d8176"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "name": "Right tibia",
+      "sourceName": "right tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24477",
+      "bounds": {
+        "min": [
+          -1.0935299396514893,
+          -8.060371398925781,
+          0.02072898857295513
+        ],
+        "max": [
+          -0.3521600067615509,
+          -4.260799884796143,
+          0.6483500003814697
+        ]
+      },
+      "center": [
+        -0.7228449732065201,
+        -6.160585641860962,
+        0.33453949447721243
+      ],
+      "anchor": [
+        -0.6983820199966431,
+        -6.1077399253845215,
+        0.3267289698123932
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3387",
+          "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+      "fmaId": "FMA24480",
+      "name": "Right fibula",
+      "sourceName": "right fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24480",
+      "bounds": {
+        "min": [
+          -1.2016500234603882,
+          -8.252799034118652,
+          -0.015125999227166176
+        ],
+        "max": [
+          -0.8434450030326843,
+          -4.4085001945495605,
+          0.28168800473213196
+        ]
+      },
+      "center": [
+        -1.0225475132465363,
+        -6.3306496143341064,
+        0.1332810027524829
+      ],
+      "anchor": [
+        -1.0324500799179077,
+        -6.344590187072754,
+        0.16410896182060242
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3366",
+          "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "leg-muscles",
+      "url": "/models/bodyparts3d/full-body/leg-muscles.glb",
+      "bytes": 1304804,
+      "sha256": "c535a021142b325daebfd0a8bca2b0406f05fae820870d524dc0a6993d3eb72d",
+      "structures": 24
+    },
+    {
+      "id": "leg-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/leg-muscles-dissection.glb",
+      "bytes": 252980,
+      "sha256": "3f6f533850ecd3017a742f140e7779a901dda238eaaac42b6bf6eb9b3d2347b1",
+      "structures": 4
+    },
+    {
+      "id": "leg-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "bytes": 346900,
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "structures": 4
+    }
+  ]
+}

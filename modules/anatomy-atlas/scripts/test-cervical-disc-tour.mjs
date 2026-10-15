@@ -2,13 +2,19 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {dirname} from 'node:path';
 import {build} from './workspace-test-build.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 const baseline='6b6d9bba99985dfc5ca8deb52ca9e2632b837d25';
+const introduced='c26ef4bf570f05e4b0e078a620db49ca67922ed9';
 const sourceOnly=process.argv.includes('--source-only');
 const old=path=>execFileSync('git',['show',`${baseline}:${path}`],{maxBuffer:64e6,windowsHide:true});
+const introducedBytes=path=>execFileSync('git',['show',`${introduced}:${path}`],{maxBuffer:64e6,windowsHide:true});
+const git=args=>execFileSync('git',args,{encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).trim();
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+assert.deepEqual(git(['log','--all','--diff-filter=A','--format=%H','--','lib/cervical-disc-tour.ts']).split(/\r?\n/),[introduced]);
+assert.equal(git(['rev-list','--parents','-n','1',introduced]),`${introduced} ${baseline}`);
+git(['merge-base','--is-ancestor',introduced,'HEAD']);
 const pins=JSON.parse(readFileSync('content/cervical-disc-tour-pins.json','utf8'));
 const discFmas=['FMA25058','FMA13896','FMA13897','FMA13898','FMA13899','FMA13900'];
 const boneFmas=['FMA12520','FMA12521','FMA12522','FMA12523','FMA12524','FMA12525','FMA9165'];
@@ -17,21 +23,20 @@ assert.equal(pins.tourRevision,'cervical-whole-discs-20261014-r1');
 assert.deepEqual(pins.entries.map(s=>s.fmaId),discFmas);
 assert.deepEqual(pins.contextEntries.map(s=>s.fmaId),boneFmas);
 assert.deepEqual(pins.bundles.map(b=>b.id).sort(),['spine-connective-gaps','spine-skeleton']);
+assert.deepEqual(readFileSync('content/cervical-disc-tour-pins.json'),introducedBytes('content/cervical-disc-tour-pins.json'));
+assert.deepEqual(readFileSync('lib/cervical-disc-tour.ts'),introducedBytes('lib/cervical-disc-tour.ts'));
 
 async function load(mode='current'){
   const contents=mode==='source'
     ? "export * from './lib/cervical-disc-tour';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);"
     : "export * from './lib/regional-tours';export {cervicalDiscTourMatches} from './lib/cervical-disc-tour';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);";
-  const plugins=mode==='previous'?[{name:'baseline-registry',setup(builder){
-    builder.onLoad({filter:/[\\/]lib[\\/]regional-tours\.ts$/,namespace:'workspace-test'},args=>({
-      contents:old('lib/regional-tours.ts').toString('utf8'),loader:'ts',resolveDir:dirname(args.path),
-    }));
-  }}]:[];
-  const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins});
+  const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
   return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
-const api=await load(sourceOnly?'source':'current'),tour=api.cervicalDiscTour;
+const sourceApi=await load('source');
+const api=sourceOnly?sourceApi:await exactSourceHistoryApi(introduced,'regional-tour-review');
+const tour=api.cervicalDiscTour;
 assert(tour,'The cervical disc tour must be exported');
 const discs=pins.entries,bones=pins.contextEntries,records=[...bones,...discs];
 const ids=records.map(s=>s.id);
@@ -53,7 +58,7 @@ for(const step of tour.steps){
 }
 for(const term of [/whole.disc/i,/annulus/i,/nucleus/i,/registration/i,/radiologist sign.off/i])
   assert.match(tour.limitations,term);
-assert.equal(api.cervicalDiscTourMatches(api.catalog,tour),true);
+assert.equal(sourceApi.cervicalDiscTourMatches(api.catalog,tour),true);
 
 const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
 assert.deepEqual(readFileSync(catalogPath),old(catalogPath));
@@ -64,7 +69,7 @@ for(const pin of pins.bundles){
 }
 let sourceRefusals=0;
 const refuse=(catalog=api.catalog,candidate=tour)=>{
-  assert.equal(api.cervicalDiscTourMatches(catalog,candidate),false);sourceRefusals++;
+  assert.equal(sourceApi.cervicalDiscTourMatches(catalog,candidate),false);sourceRefusals++;
 };
 for(const s of records){
   refuse({...api.catalog,structures:api.catalog.structures.filter(x=>x.id!==s.id)});
@@ -95,7 +100,7 @@ if(sourceOnly){
   process.exit(0);
 }
 
-const before=await load('previous');
+const before=await exactSourceHistoryApi(baseline,'regional-tour-review');
 assert.equal(before.regionalTours.length,48);
 assert.equal(before.regionalTours.reduce((n,t)=>n+t.steps.length,0),290);
 assert.equal(api.regionalTours.length,49);
@@ -156,5 +161,19 @@ for(const s of api.catalog.structures){
   }
 }
 assert.deepEqual({changed,unchanged,topics},{changed:13,unchanged:1091,topics:9936});
+const live=await load('current');
+assert.deepEqual(live.cervicalDiscTour,tour);
+assert.equal(live.cervicalDiscTourMatches(live.catalog,live.cervicalDiscTour),true);
+assert.deepEqual(live.regionalTours.filter(t=>t.id===tour.id),[tour]);
+assert.deepEqual(live.regionalTourStructures(live.catalog,tour),records);
+assert.deepEqual(live.regionalTourStepFrames(live.catalog,tour),frames);
+for(const id of ids){
+  const fragment=api.regionalTourEvidence(api.catalog,id).find(g=>g.tour.id===tour.id);
+  const currentFragment=live.regionalTourEvidence(live.catalog,id).find(g=>g.tour.id===tour.id);
+  assert.deepEqual(currentFragment,fragment);
+  const packet=await live.bodyReviewMaterial(id);
+  assert.deepEqual(packet.guidedTours.find(g=>g.tour.id===tour.id),fragment);
+  assert(await live.parseBodyReviewResponse(packet,id));
+}
 console.log(JSON.stringify({tours:49,stops:296,preservedTours:48,sourceRefusals,packetRefusals,
-  changed,unchanged,unchangedTopics:topics,clinicalApproval:false}));
+  changed,unchanged,unchangedTopics:topics,currentSelectedTour:true,clinicalApproval:false}));

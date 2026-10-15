@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Posterior calf Guided learning — 15 October 2026
+
+Original project-MIT factual captions reference Texas Tech lower-limb muscle
+and bone teaching only. No source prose, table, image, figure, quiz, scan, mesh,
+measurement dataset or media is imported, adapted or relicensed. Reading access
+is not commercial image permission. Five existing BodyParts3D4.0 bundles retain
+their CCBY4.0 attribution/obligations; no new asset/dependency/font/service or
+mandatory fee. This unsigned seven-participant draft establishes no tendon
+continuity, attachment footprint, motion/force, procedure route, acquired-image
+match, registration or clinical approval. Scope: docs/POSTERIOR_CALF_TOUR.md.
+
 ## Salivary-gland and stylohyoid quiz drafts — 15 October 2026
 
 Original project-MIT formative questions cite Texas Tech oral-cavity and

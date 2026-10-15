@@ -2,13 +2,19 @@ import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
-import {dirname} from 'node:path';
 import {build} from './workspace-test-build.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 const baseline='c26ef4bf570f05e4b0e078a620db49ca67922ed9';
+const introduced='469b2f6874cc3f8209c2f7b36fd830cae18dce9e';
 const sourceOnly=process.argv.includes('--source-only');
 const old=path=>execFileSync('git',['show',`${baseline}:${path}`],{maxBuffer:64e6,windowsHide:true});
+const introducedBytes=path=>execFileSync('git',['show',`${introduced}:${path}`],{maxBuffer:64e6,windowsHide:true});
+const git=args=>execFileSync('git',args,{encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).trim();
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+assert.deepEqual(git(['log','--all','--diff-filter=A','--format=%H','--','lib/medial-thigh-tour.ts']).split(/\r?\n/),[introduced]);
+assert.equal(git(['rev-list','--parents','-n','1',introduced]),`${introduced} ${baseline}`);
+git(['merge-base','--is-ancestor',introduced,'HEAD']);
 const pins=JSON.parse(readFileSync('content/medial-thigh-tour-pins.json','utf8'));
 const muscleFmas=['FMA22450','FMA22456','FMA22452','FMA22459','FMA43883'];
 assert.equal(pins.schemaVersion,1);assert.equal(pins.baseline,baseline);
@@ -16,21 +22,20 @@ assert.equal(pins.tourRevision,'right-medial-thigh-20261015-r1');
 assert.deepEqual(pins.entries.map(s=>s.fmaId),muscleFmas);
 assert.deepEqual(pins.contextEntries.map(s=>s.fmaId),['FMA24474']);
 assert.deepEqual(pins.bundles.map(b=>b.id).sort(),['thigh-muscles','thigh-skeleton']);
+assert.deepEqual(readFileSync('content/medial-thigh-tour-pins.json'),introducedBytes('content/medial-thigh-tour-pins.json'));
+assert.deepEqual(readFileSync('lib/medial-thigh-tour.ts'),introducedBytes('lib/medial-thigh-tour.ts'));
 
 async function load(mode='current'){
   const contents=mode==='source'
     ? "export * from './lib/medial-thigh-tour';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);"
     : "export * from './lib/regional-tours';export {medialThighTourMatches} from './lib/medial-thigh-tour';export * from './lib/body-review-material';export * from './lib/body-review-context';export * from './lib/body-review-response';import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);";
-  const plugins=mode==='previous'?[{name:'baseline-registry',setup(builder){
-    builder.onLoad({filter:/[\\/]lib[\\/]regional-tours\.ts$/,namespace:'workspace-test'},args=>({
-      contents:old('lib/regional-tours.ts').toString('utf8'),loader:'ts',resolveDir:dirname(args.path),
-    }));
-  }}]:[];
-  const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',plugins});
+  const result=await build({stdin:{contents,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
   return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
 }
 
-const api=await load(sourceOnly?'source':'current'),tour=api.medialThighTour;
+const sourceApi=await load('source');
+const api=sourceOnly?sourceApi:await exactSourceHistoryApi(introduced,'regional-tour-review');
+const tour=api.medialThighTour;
 assert(tour,'The medial thigh tour must be exported');
 const muscles=pins.entries,bones=pins.contextEntries,records=[...bones,...muscles];
 const ids=records.map(s=>s.id),femur=bones[0];
@@ -46,7 +51,7 @@ assert.equal(new Set(tour.steps.map(s=>s.id)).size,5);
 assert.deepEqual(tour.requiredDisplayBundles,Object.fromEntries(records.map(s=>[s.id,s.bundle])));
 for(const s of records){assert(s.regions.includes('thigh'));assert.equal(s.validation.anatomicalReview,false);}
 for(const step of tour.steps){assert.equal(step.durationMs,14000);assert.equal(step.fadeOthers,true);assert(step.caption.trim());assert(step.references.length>0);}
-assert.equal(api.medialThighTourMatches(api.catalog,tour),true);
+assert.equal(sourceApi.medialThighTourMatches(api.catalog,tour),true);
 
 const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
 assert.deepEqual(readFileSync(catalogPath),old(catalogPath));
@@ -55,7 +60,7 @@ for(const pin of pins.bundles){
   assert.equal(bytes.length,pin.bytes);assert.equal(sha(bytes),pin.sha256);assert.deepEqual(bytes,old(path));
 }
 let sourceRefusals=0;
-const refuse=(catalog=api.catalog,candidate=tour)=>{assert.equal(api.medialThighTourMatches(catalog,candidate),false);sourceRefusals++;};
+const refuse=(catalog=api.catalog,candidate=tour)=>{assert.equal(sourceApi.medialThighTourMatches(catalog,candidate),false);sourceRefusals++;};
 for(const s of records){
   refuse({...api.catalog,structures:api.catalog.structures.filter(x=>x.id!==s.id)});
   refuse({...api.catalog,structures:[...api.catalog.structures,s]});
@@ -82,7 +87,7 @@ for(const mutate of [t=>t.steps.reverse(),t=>{t.title+=' forged';},
 }
 if(sourceOnly){console.log(JSON.stringify({mode:'source-only',muscles:5,bones:1,bundles:2,sourceRefusals}));process.exit(0);}
 
-const before=await load('previous');
+const before=await exactSourceHistoryApi(baseline,'regional-tour-review');
 assert.equal(before.regionalTours.length,49);
 assert.equal(before.regionalTours.reduce((n,t)=>n+t.steps.length,0),296);
 assert.equal(api.regionalTours.length,50);
@@ -138,5 +143,19 @@ for(const s of api.catalog.structures){
   }
 }
 assert.deepEqual({changed,unchanged,topics},{changed:6,unchanged:1098,topics:9936});
+const live=await load('current');
+assert.deepEqual(live.medialThighTour,tour);
+assert.equal(live.medialThighTourMatches(live.catalog,live.medialThighTour),true);
+assert.deepEqual(live.regionalTours.filter(t=>t.id===tour.id),[tour]);
+assert.deepEqual(live.regionalTourStructures(live.catalog,tour),records);
+assert.deepEqual(live.regionalTourStepFrames(live.catalog,tour),frames);
+for(const id of ids){
+  const fragment=api.regionalTourEvidence(api.catalog,id).find(g=>g.tour.id===tour.id);
+  const currentFragment=live.regionalTourEvidence(live.catalog,id).find(g=>g.tour.id===tour.id);
+  assert.deepEqual(currentFragment,fragment);
+  const packet=await live.bodyReviewMaterial(id);
+  assert.deepEqual(packet.guidedTours.find(g=>g.tour.id===tour.id),fragment);
+  assert(await live.parseBodyReviewResponse(packet,id));
+}
 console.log(JSON.stringify({tours:50,stops:301,preservedTours:49,sourceRefusals,packetRefusals,
-  changed,unchanged,unchangedTopics:topics,clinicalApproval:false}));
+  changed,unchanged,unchangedTopics:topics,currentSelectedTour:true,clinicalApproval:false}));

@@ -2245,6 +2245,10 @@
       "sha256": "69ddc8b2250167fbd84eb974877ab1eb82ad4de613f4607b9dadfeb0ae3afaf6"
     },
     {
+      "path": "content/posterior-calf-tour-pins.json",
+      "sha256": "f1a9a06fa3f226c07bd7051cfa6f5ae4a7457483d5f6ef8cff56cf048ee0d61a"
+    },
+    {
       "path": "content/posterior-mediastinal-study.ts",
       "sha256": "d07a11bda4ab63ad6ba2098efa80d5afa676aece071352599385b37549516924"
     },
@@ -4737,6 +4741,10 @@
       "sha256": "964e438feb25e0b268551584e9be008166b0bd6549121b3c49cb4640de5739c0"
     },
     {
+      "path": "lib/posterior-calf-tour.ts",
+      "sha256": "cca87d9753e12a53827fe56059db437933f13d3073fc1d2d3d1abd29580febc4"
+    },
+    {
       "path": "lib/proper-digital-teaching.ts",
       "sha256": "9e072b27456a485d71364eb35fcca7939b64d7af7049b07933d15ec548c63c71"
     },
@@ -4810,7 +4818,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "5f58eda50d89f4c109457eb3423b91792e30ec6c3300045a283ec64d46da40ea"
+      "sha256": "68760a6d59980a0645d8e0c10c69660c81a9c6b8fd134d4f9aa25b663b1db2d0"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5434,7 +5442,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "93019344cf506eeca36dabaaff760012856a4a1e776d74007ca3683635249f94"
+      "sha256": "3e2ee5a6fefdc0edec4ce13b09668a551691ab5632db26d60e1be976296cd575"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5657,5 +5665,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "aa22daacb3a5d5fbbe28504bb3ea78f194dc284493a158aa8ef536144ef85d65"
+  "sha256": "e5c72dbf8df9577ca94e6d3a7da3d47db2e3f41a564739845b05794263ee2bb6"
 }

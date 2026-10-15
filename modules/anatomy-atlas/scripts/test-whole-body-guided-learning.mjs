@@ -47,14 +47,17 @@ const player=()=>find('RegionalGuidedLearning');
 
 render();
 const tours=api.wholeBodyTourOptions;
-const legacyTours=tours.filter(t=>!['portal-hepatic-venous-relationships','cervical-whole-discs-orientation','right-medial-thigh-orientation'].includes(t.id));
+const legacyTours=tours.filter(t=>!['portal-hepatic-venous-relationships','cervical-whole-discs-orientation','right-medial-thigh-orientation','right-posterior-calf-achilles-orientation'].includes(t.id));
 assert.equal(legacyTours.length,47);assert.equal(new Set(legacyTours.map(t=>t.id)).size,47);
 // Same47tour IDs; the expanded lower-venous sequence adds exactly three stops.
 assert.equal(legacyTours.reduce((count,tour)=>count+tour.steps.length,0),285);
 assert.equal(legacyTours.find(t=>t.id==='right-lower-limb-venous-orientation').steps.length,9);
 assert.deepEqual(plain(legacyTours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
-assert.equal(tours.length,50);assert.equal(new Set(tours.map(t=>t.id)).size,50);
-assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),304);
+assert.equal(tours.length,51);assert.equal(new Set(tours.map(t=>t.id)).size,51);
+assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),309);
+const posteriorCalf=tours.find(t=>t.id==='right-posterior-calf-achilles-orientation');assert(posteriorCalf);
+assert.equal(posteriorCalf.region,'whole-body');assert.equal(posteriorCalf.revision,'right-posterior-calf-20261015-r1');
+assert.deepEqual(plain(posteriorCalf.scopeRegions),['leg','foot']);assert.equal(posteriorCalf.steps.length,5);
 const medialThigh=tours.find(t=>t.id==='right-medial-thigh-orientation');assert(medialThigh);
 assert.equal(medialThigh.region,'thigh');assert.equal(medialThigh.revision,'right-medial-thigh-20261015-r1');
 assert.equal(medialThigh.steps.length,5);
@@ -88,6 +91,12 @@ const disclosure=find('details');
 assert.equal(disclosure.props.open,undefined,'Discovery is closed by default');
 assert.match(find('summary').props.children[0],/Find a tour/);
 const originalKey=player().key;
+for(const term of ['Achilles','Calcaneal tendon','Soleus','Gastrocnemius']){
+ search(term);assert(choices().includes(posteriorCalf.id),`${term}: calf-to-heel tour discoverable`);
+ assert.equal(player().key,originalKey);assert.equal(suspends,0,'Search does not start or move the camera');
+}
+filter('leg');assert(!choices().includes(posteriorCalf.id),'Cross-region tour keeps its Whole body scope');
+filter('whole-body');assert(choices().includes(posteriorCalf.id));filter('all');
 search('Trachea');
 assert(choices().includes('thoracic-airways-vessels'),'Step titles are searchable');
 assert.equal(player().key,originalKey);assert.equal(suspends,0);
@@ -169,8 +178,8 @@ assert.match(currentOption().props.children.join(''),/Current tour: .*outside fi
 select('thoracic-airways-vessels');
 assert.equal(player().key,originalKey,'Hidden result cannot be selected');assert.equal(suspends,0);
 find('button',node=>node.props.children==='Clear filters').props.onClick();render();
-assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id&&id!==medialThigh.id).length,47,'All legacy choices remain');
-assert.equal(choices().length,50);assert.equal(current(),tours[0].id);
+assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id&&id!==medialThigh.id&&id!==posteriorCalf.id).length,47,'All legacy choices remain');
+assert.equal(choices().length,51);assert.equal(current(),tours[0].id);
 assert.equal(currentOption().props.disabled,undefined,'Clear filters restores the normal option');
 assert.equal(player().key,originalKey);assert.equal(suspends,0);
 filter('thorax');
@@ -371,8 +380,8 @@ for(const choice of [nested.find(item=>item.kind==='eye'),nested.find(item=>item
 assert.equal(suspends,nestedSuspends+2,'Each explicit nested selection suspends imaging once');
 assert.equal(exits,4,'Exit remains available for both nested viewer failures');
 props.region='whole-body';reset();
-assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id&&id!==medialThigh.id).length,51,'Legacy whole-body scope admits 47 regional and four exact-bound nested tours');
-assert.equal(choices().length,54,'Whole-body scope admits 50 regional and four exact-bound nested tours');
+assert.equal(choices().filter(id=>id!==portal.id&&id!==cervicalDiscs.id&&id!==medialThigh.id&&id!==posteriorCalf.id).length,51,'Legacy whole-body scope admits 47 regional and four exact-bound nested tours');
+assert.equal(choices().length,55,'Whole-body scope admits 51 regional and four exact-bound nested tours');
 const beforePortalSelection=suspends,priorTour=player().props.tour;
 search('Hepatic portal vein');assert(choices().includes(portal.id));
 assert.equal(player().props.tour,priorTour,'Search alone cannot start the tour');
