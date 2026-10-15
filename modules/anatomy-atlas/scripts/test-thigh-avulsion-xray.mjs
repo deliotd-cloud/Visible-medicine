@@ -1,14 +1,24 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {build} from './workspace-test-build.mjs';
 import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = '280c701c9cc21c540b7b496f58e2d1c4214e7865';
+const featureCommit = '363dc85cf12b07b380ba5da3b91031dbddc6bd02';
+const git = args => execFileSync('git', args, {
+  windowsHide: true, maxBuffer: 32e6, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'},
+});
 const gitBytes = path => execFileSync('git', ['show', `${baseline}:${path}`], {
   windowsHide: true, maxBuffer: 32e6, env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'},
 });
+assert.equal(git(['rev-parse', `${featureCommit}^{commit}`]).toString().trim(), featureCommit);
+assert.equal(git(['merge-base', featureCommit, 'HEAD']).toString().trim(), featureCommit);
+for (const path of ['content/thigh-avulsion-xray.ts', 'lib/thigh-avulsion-xray.ts'])
+  assert.deepEqual(readFileSync(path), git(['show', `${featureCommit}:${path}`]),
+    `${path}: current implementation matches its exact feature epoch`);
 const pinsPath = 'content/hip-imaging-pins.json';
 const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
 assert.deepEqual(readFileSync(pinsPath), gitBytes(pinsPath), 'Reuse exact original hip source pins');
@@ -78,9 +88,12 @@ const compiled = await build({
 const live = await import('data:text/javascript;base64,' +
   Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 const old = await exactSourceHistoryApi(baseline, 'review-security');
+const feature = await exactSourceHistoryApi(featureCommit, 'review-security');
 const rawCatalog = JSON.parse(readFileSync(catalogPath, 'utf8'));
 const catalog = live.bodyDisplayCatalog(rawCatalog);
 assert.deepEqual(catalog, old.bodyDisplayCatalog(JSON.parse(gitBytes(catalogPath))));
+assert.deepEqual(catalog, feature.bodyDisplayCatalog(rawCatalog));
+assert.deepEqual(live.contentTabs, feature.contentTabs);
 assert.deepEqual(live.contentTabs, old.contentTabs);
 assert.deepEqual(live.regionalTours, old.regionalTours);
 assert.deepEqual(live.structures, old.structures);
@@ -139,7 +152,10 @@ let changed = 0, preserved = 0, changedPackets = 0, preservedPackets = 0;
 let stale = 0, forgedDecisions = 0, malformed = 0, storageCalls = 0;
 for (const structure of catalog.structures) {
   for (const tab of live.contentTabs) {
-    const previous = old.bodyLesson(structure, tab), lesson = live.bodyLesson(structure, tab);
+    const previous = old.bodyLesson(structure, tab), lesson = feature.bodyLesson(structure, tab);
+    if (identities.has(structure.id))
+      assert.deepEqual(live.bodyLesson(structure, tab), lesson,
+        `${structure.id}:${tab}: current avulsion target retained`);
     if (identities.has(structure.id) && tab === 'xray') {
       assert.equal(previous.readiness, 'pending');
       assert.equal(lesson.readiness, 'draft');
@@ -198,9 +214,25 @@ for (const structure of catalog.structures) {
     }
   }
   const previousPacket = await old.bodyReviewMaterial(structure.id);
-  const packet = await live.bodyReviewMaterial(structure.id);
+  const packet = await feature.bodyReviewMaterial(structure.id);
   assert.equal(packet.approval, false);
   if (identities.has(structure.id)) {
+    assert.deepEqual(await live.bodyReviewMaterial(structure.id), packet,
+      `${structure.id}: current Review material matches feature epoch`);
+    const liveContext = await live.bodyReviewContext(structure.id);
+    const featureContext = await feature.bodyReviewContext(structure.id);
+    const stableContext = ({rendererHash, revisions: {geometry, ...revisions}, ...rest}) =>
+      ({...rest, revisions});
+    assert.deepEqual(stableContext(liveContext), stableContext(featureContext),
+      `${structure.id}: current source/teaching context retained`);
+    assert.equal(liveContext.rendererHash,
+      JSON.parse(readFileSync('content/body-renderer-revision.json', 'utf8')).sha256);
+    const geometryInput = {catalogScope: liveContext.catalogScope,
+      structureId: structure.id, checklistVersion: liveContext.checklistVersion,
+      source: liveContext.sourceHash, renderer: liveContext.rendererHash,
+      checks: liveContext.checklists.geometry};
+    assert.equal(liveContext.revisions.geometry,
+      createHash('sha256').update(JSON.stringify(geometryInput)).digest('hex'));
     assert.deepEqual(packet.topics.filter(row => row.tab !== 'xray'),
       previousPacket.topics.filter(row => row.tab !== 'xray'));
     for (const key of ['source', 'reasoning', 'guidedTours', 'checklist', 'atlasLink', 'limits'])
@@ -253,7 +285,9 @@ for (const structure of catalog.structures) {
 assert.deepEqual([changed, preserved, changedPackets, preservedPackets], [10, 9926, 10, 1094]);
 assert.equal(malformed, 40);
 assert.equal(storageCalls, 0);
-console.log(JSON.stringify({baseline, changed, preserved, changedPackets, preservedPackets,
+console.log(JSON.stringify({baseline, featureCommit, originalTransitionEpochPinned: true,
+  currentTargetsRetained: 10, currentTargetTopicPlacementsRetained: 90,
+  currentReviewPacketsRetained: 10, changed, preserved, changedPackets, preservedPackets,
   refusedIdentities, malformedPacketsRefused: malformed,
   staleRefusalsBeforeStorage: stale, forgedApprovalRefusalsBeforeStorage: forgedDecisions,
   storageCalls, clinicalApproval: false}));
