@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "bf1c3738b54c9bd0455313f93a9f12e0e7bb873c6531e0a6dd361ff8d650bbc8"
+      "sha256": "6e8b81c0e234b46d65e196d32361fb167dd42bf37dad8126526b81da9fa6b6b3"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1313,6 +1313,10 @@
       "sha256": "e3990bacdac2466a03bfec56e5fc8eecc0767b1f474d5b161e16cb84d5a1cfaa"
     },
     {
+      "path": "content/genicular-ultrasound.ts",
+      "sha256": "3a4d9e4da862b4de40aeef26408874ad7679e5ae3e13603f923d0313d70ae298"
+    },
+    {
       "path": "content/girdle-bone-ultrasound-pins.json",
       "sha256": "70e96b85e050508f6d7d919a7055eef3a3cea3f813094cdcb961593e807a6850"
     },
@@ -2298,7 +2302,7 @@
     },
     {
       "path": "content/regional-teaching/leg.json",
-      "sha256": "0d8b77863caa79a569464cbecb7e75918f73b08f319952493d2f79611bfcd291"
+      "sha256": "f9f09327503665d498d8548b0d939ac8207da518c5f89bb81670f184d7277e29"
     },
     {
       "path": "content/regional-teaching/pelvis.json",
@@ -3815,6 +3819,10 @@
     {
       "path": "lib/genicular-study.ts",
       "sha256": "b1654af910c5ac0581a48a76946d71398634bd2d513de778e4e9b92e7bf425cf"
+    },
+    {
+      "path": "lib/genicular-ultrasound.ts",
+      "sha256": "27ecab9cc163d92fb6d2adce507484b62e74dc42b6468ec00860a84f84124a13"
     },
     {
       "path": "lib/girdle-bone-ultrasound.ts",
@@ -5358,7 +5366,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0fc0b3eaea65573219e1de2d565cd0f6409db4ece9e174062c7d2403ae6d5099"
+      "sha256": "3bb13e0083e486c1b80e0709693108ecfeb93ba326042412452f4021981c76df"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5581,5 +5589,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a4eb7640d215f7a3be0c713d75e0f61f1d03a55e6e0d06357737cd59f67cd81b"
+  "sha256": "8886b1ad73d8557431f1e5f9bd17d252c82c9f7e35aa2f886b8501ff196cebf1"
 }

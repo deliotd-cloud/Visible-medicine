@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "genicular-ultrasound:test": "node scripts/test-genicular-ultrasound.mjs",
     "leg-arterial-xray:test": "node scripts/test-leg-arterial-xray.mjs",
     "leg-venous-xray:test": "node scripts/test-leg-venous-xray.mjs",
     "femoral-venous-xray:test": "node scripts/test-femoral-venous-xray.mjs",

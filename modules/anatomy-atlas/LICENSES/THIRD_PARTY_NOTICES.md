@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Study-limited genicular ultrasound teaching — 15 October 2026
+
+Original project-MIT factual summaries cite Watanabe et al. (2013,
+DOI10.7600/jpfsm.2.243) and Karimov/Madrakhimov (online2023, issue2024,
+DOI10.1007/s00264-023-05977-6) as reading references only. No publication prose,
+figure, table, image, scan, dataset or model is imported or adapted. Reading
+access is not commercial media clearance. Existing BodyParts3D CC BY4.0 credits
+and obligations remain unchanged. No new dependency, font, texture, service or
+mandatory fee. Four exact-source placements are clinical drafts, not a normal
+bilateral detection claim, acquired ultrasound, measured flow or registration.
+See `docs/GENICULAR_ULTRASOUND.md`.
+
 ## Lower-limb venous guided learning v2 — 15 October 2026
 
 Original orientation captions cite UAMS and primary Quinlan, Cross, Bundens and

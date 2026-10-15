@@ -15,6 +15,7 @@ import { femoralArterialXrayLesson } from '../lib/femoral-arterial-xray';
 import { femoralVenousXrayLesson } from '../lib/femoral-venous-xray';
 import { legVenousXrayLesson } from '../lib/leg-venous-xray';
 import { legArterialXrayLesson } from '../lib/leg-arterial-xray';
+import { genicularUltrasoundLesson } from '../lib/genicular-ultrasound';
 import { abdominalArterialXrayLesson } from '../lib/abdominal-arterial-xray';
 import { hepaticArterialXrayLesson } from '../lib/hepatic-arterial-xray';
 import { visceralArterialXrayLesson } from '../lib/visceral-arterial-xray';
@@ -610,6 +611,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (legVenousXray) return legVenousXray;
   const legArterialXray = legArterialXrayLesson(s, tab);
   if (legArterialXray) return legArterialXray;
+  const genicularUltrasound = genicularUltrasoundLesson(s, tab);
+  if (genicularUltrasound) return genicularUltrasound;
   const abdominalArterialXray = abdominalArterialXrayLesson(s, tab);
   if (abdominalArterialXray) return abdominalArterialXray;
   const hepaticArterialXray = hepaticArterialXrayLesson(s, tab);
