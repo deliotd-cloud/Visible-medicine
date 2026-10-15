@@ -1340,9 +1340,47 @@ test('Manual step bounds, autoplay pause/resume and final hold use actual callba
   while (h.scene().reset < h.props.tour.steps.length - 1) h.tick();
   const final = h.scene().selectedId; h.tick();
   assert.equal(h.button('Play')['aria-pressed'], false); assert.equal(h.timers.size, 0); assert.equal(h.scene().selectedId, final, 'Final source holds instead of looping');
+  assert.equal(h.scene().transitionPaused, true, 'Natural completion holds camera motion like an explicit Pause');
   assert.equal(h.scene().reset, 5); assert.equal(h.exits(), 0, 'Autoplay never exits automatically');
   h.click('Finish'); assert.equal(h.exits(), 1); assert.equal(h.scene().selectedId, final, 'Finish does not advance beyond sequence');
   h.unchanged();
+});
+
+test('Natural completion offers only an opt-in, exact paused imaging stop and revokes retired timers',()=>{
+ for(const reduced of [false,true]){
+  const h=harness(),sent=[],entries=h.api.bodyLinkEntries(h.props.catalog);
+  const link=h.api.createPausedTourImaging({entries,allowedIds:entries.map(e=>e.id)});
+  const adapter=h.api.imagingBridge.registerAdapter({id:'completion-fixture',label:'Synthetic CT fixture',modality:'CT',onAtlasSelection:p=>sent.push(p)});
+  h.props.pausedImaging=link;h.render();h.ready();
+  if(reduced){h.preference.matches=true;h.listeners.get('motion')();h.render();}
+  h.click('Start guided tour');h.click('Play');
+  while(h.scene().reset<h.props.tour.steps.length-1){
+   assert.equal(link.snapshot().eligible,false);assert.equal(h.scene().transitionPaused,false);
+   h.tick();assert.equal(h.button('Pause')['aria-pressed'],true,'Intermediate stops keep playing');
+  }
+  const final=h.scene().selectedId,retired=[...h.timers.values()][0].fn;
+  h.tick();
+  assert.equal(h.scene().selectedId,final);assert.equal(h.scene().transitionPaused,true);
+  assert.equal(h.timers.size,0);assert.equal(h.exits(),0);assert.equal(link.snapshot().eligible,true);
+  assert.equal(link.snapshot().enabled,false);assert.equal(link.send(),false);assert.equal(sent.length,0,'Completion never launches imaging');
+  link.setEnabled(true);assert.equal(link.send(),true);assert.equal(sent.at(-1).structureId,final);
+  const exact=entries.find(e=>e.id===final);
+  assert(link.canAccessAnatomy({scope:'body',structureId:final,sources:exact.sources}));
+  assert.equal(link.canAccessAnatomy({scope:'body',structureId:final,sources:exact.sources.map(s=>({...s,sha256:'0'.repeat(64)}))}),false);
+  const check=nodes(h.tree()).find(n=>n.type?.name==='TourQuickCheck');assert(check);
+  check.props.onOpen();check.props.onChange(true);h.render();assert.equal(link.snapshot().eligible,false);
+  check.props.onChange(false);h.render();assert.equal(link.snapshot().eligible,true);assert.equal(link.snapshot().enabled,false);
+  h.click('Play');retired();h.render();
+  assert.equal(h.button('Pause')['aria-pressed'],true,'Retired completion cannot pause explicit replay');
+  assert.equal(h.timers.size,1);assert.equal(link.snapshot().eligible,false);assert.equal(sent.length,1);
+  const hiddenTimer=[...h.timers.values()][0].fn;
+  h.doc.hidden=true;h.listeners.get('visibilitychange')();hiddenTimer();h.render();
+  assert.equal(link.snapshot().eligible,false);assert.equal(link.snapshot().enabled,false);assert.equal(h.timers.size,0);
+  h.doc.hidden=false;h.listeners.get('visibilitychange')();h.render();
+  assert.equal(link.snapshot().enabled,false,'Visibility never restores consent');
+  h.scene().onRendererHealth('lost');h.render();assert.equal(link.snapshot().eligible,false);
+  h.unmount();assert.equal(link.canNavigate(),false);adapter.dispose();link.dispose();h.unchanged();
+ }
 });
 
 test('Chest-wall tour uses six exact sources, smooth per-step frames and final hold',()=>{

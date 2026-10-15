@@ -107,9 +107,9 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;
     let active=true;const epoch=playbackEpoch.current;
     const timer=window.setTimeout(()=>{if(!active||epoch!==playbackEpoch.current||document.hidden)return;
-      if(index+1<tour.steps.length)changeStep(index+1);else setPlaying(false);},step.durationMs);
+      if(index+1<tour.steps.length)changeStep(index+1);else revokePlayback();},step.durationMs);
     return()=>{active=false;window.clearTimeout(timer);};
-  },[playing,index,ready,step.durationMs,tour,changeStep]);
+  },[playing,index,ready,step.durationMs,tour,changeStep,revokePlayback]);
   const active=!scopeChanged&&index!==null;
   const selected=resolved.structures.find(s=>s.id===step.selectedId);
   useLayoutEffect(()=>{
