@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ea6570f2ffb151af9824b9e84f79a878e096230e8db82874f4d59b0ede4649a6"
+      "sha256": "d0356851a7ee9fc3c9370c3640309c522f6500887e659fb9e2f3224379b24db3"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2330,7 +2330,7 @@
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
-      "sha256": "b30c4e40aa02f12fa93f9bcea56af229ee42ad6b885ed791979b65467f6dd2d7"
+      "sha256": "b9f1176b552d5ae946b682e4e59428f29fa784b520cfe51e6ab5680531c0bdaa"
     },
     {
       "path": "content/regional-teaching/spine.json",
@@ -2483,6 +2483,10 @@
     {
       "path": "content/shoulder-girdle-imaging.ts",
       "sha256": "7ad6111ae5d08727faecb83eb25bdd2c5f0c8d8429a72918cb890f4e5e2c23e7"
+    },
+    {
+      "path": "content/shoulder-muscle-xray.ts",
+      "sha256": "a2516306ba4f6395411d67332c96fb484326282d50c2d3b199600562ba71bcb1"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -4969,6 +4973,10 @@
       "sha256": "5694c05ae47ba199038ca9bbb0a3c134f240798f26ad0cdd29f3553050dbfff6"
     },
     {
+      "path": "lib/shoulder-muscle-xray.ts",
+      "sha256": "bcd96a9c8b9ca3fde98418da26f5bff2f9e51602962bb0e96050ebc0af542f53"
+    },
+    {
       "path": "lib/shoulder-soft-tissue-xray.ts",
       "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
     },
@@ -5446,7 +5454,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "aa507d20d564ccd859bf3c7e8953929e1d1081bf16b60e678f0623f490271998"
+      "sha256": "f3d09e4468a16eac00540fbafca2d71ae9964433cbdee6c91e80446b9942743c"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5669,5 +5677,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "cf9de8677e5d9aaa9347c09943fd2ef299ff32d7f530f4fab36fa40f4d97f312"
+  "sha256": "f5e94eb7f5b575e8c9d7e0bb9790a3600909e409f0302e7a96d31f614dee9353"
 }

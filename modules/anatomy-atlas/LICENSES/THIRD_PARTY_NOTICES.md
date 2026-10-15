@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Shoulder and upper-arm muscle X-ray teaching — 15 October 2026
+
+Original project-MIT orientation notes cite university anatomy facts, a five-patient
+deltoid insertion-variant report, separate triceps case/cohort research and an ACR
+shoulder guideline as reading references only. No third-party prose, table, figure,
+radiograph, scan, mesh, measurement dataset or media is imported, adapted or
+relicensed. Reading access does not grant commercial figure rights. Existing
+BodyParts3D CC BY 4.0 notices and source restrictions are retained. No new asset,
+dependency, font, service or mandatory fee. Sixteen existing source selections
+gain unsigned draft notes, not diagnosis, visibility guarantees, validated tendon
+continuity, patient-space registration, clinical approval or a procedure protocol.
+See docs/SHOULDER_MUSCLE_XRAY.md for scope and direct references.
+
 ## Posterior calf Guided learning — 15 October 2026
 
 Original project-MIT factual captions reference Texas Tech lower-limb muscle
