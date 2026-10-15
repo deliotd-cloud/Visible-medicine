@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {build} from './workspace-test-build.mjs';
+const compiled=await build({stdin:{contents:"export * from './lib/guided-playback';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+assert.equal(api.GUIDED_SWEEP_MS,8000);assert.equal(api.GUIDED_MIN_STEP_MS,24000);assert.equal(api.GUIDED_CAPTION_WORDS_PER_MINUTE,180);
+for(const authored of [undefined,0,-1,NaN,Infinity,14000])assert.equal(api.guidedPlaybackDuration('Short original caption.',authored),24000);
+assert.equal(api.guidedPlaybackDuration('',60000),60000);
+const long=Array(120).fill('anatomy').join(' ');assert.equal(api.guidedPlaybackDuration(long,14000),48000);
+assert.equal(api.guidedPlaybackDuration('one\t two\nthree',0),24000);
+const steps=[{caption:'One short stop.',durationMs:14000},{caption:long},{caption:'Third',durationMs:90000}],before=structuredClone(steps);
+assert.deepEqual(api.guidedPlaybackEvidence(steps),{version:1,start:'explicit-play-full-tour',transition:'quintic-orbit',transitionMs:8000,minimumStepMs:24000,captionWordsPerMinute:180,stepDurationsMs:[24000,48000,90000],final:'hold',reducedMotion:'no-camera-sweep'});
+assert.deepEqual(steps,before);
+const first=api.guidedPlaybackEvidence(steps);first.stepDurationsMs[0]=1;
+assert.equal(api.guidedPlaybackEvidence(steps).stepDurationsMs[0],24000);
+console.log(JSON.stringify({verdict:'pass',slowSweepMs:8000,minimumStepMs:24000,longCaptionMs:48000,originalStepsPreserved:true,newTourDefaults:true}));

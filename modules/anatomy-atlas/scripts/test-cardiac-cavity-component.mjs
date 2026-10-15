@@ -63,11 +63,18 @@ const document = { hidden: false,
   addEventListener: (name, callback) => events.set(name, callback),
   removeEventListener: name => events.delete(name),
 };
+const timers = new Map(); let timerSerial = 0;
+const window = { matchMedia: () => preference,
+  setTimeout(fn, delay) { const id = ++timerSerial; timers.set(id, { fn, delay }); return id; },
+  clearTimeout(id) { timers.delete(id); },
+  addEventListener: (name, callback) => events.set(`window:${name}`, callback),
+  removeEventListener: name => events.delete(`window:${name}`),
+};
 const scope = { exports: {} };
 runInNewContext(built.outputFiles[0].text, {
   module: scope, exports: scope.exports,
   require: id => id === 'react' ? shim : id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
-  education, structuredClone, window: { matchMedia: () => preference }, document,
+  education, structuredClone, window, document,
 });
 const api = scope.exports;
 const nodes = node => !node || typeof node !== 'object' ? [] :
@@ -198,6 +205,38 @@ same(snapshot(), circulationState, 'Existing circulation view restored on End');
 check(!!button('Exit walkthrough') && text(tree).includes('Step 1 of'),
   'Existing circulation step restored on End');
 same(scene().cameraRestore.current, camera, 'Camera restored after circulation session');
+
+// Full-tour playback is opt-in and does not alter the manual circulation session.
+slots = []; events.clear(); timers.clear(); preference.matches = false; document.hidden = false;
+render(); loadReady();
+check(!button('Play full tour').disabled && !button('End walkthrough'),
+  'Ready cardiac guide offers an explicit continuous launcher');
+button('Play full tour').onClick(); render();
+same(scene().transitionMs, 8000, 'Full cardiac tour uses slow camera sweep');
+check(!!button('Pause full tour') && timers.size === 1, 'Full cardiac tour begins automatically after launch');
+const firstTimer = [...timers.values()][0];
+same(firstTimer.delay, guide.continuousPlayback.stepDurationsMs[0], 'First caption has authored reading hold');
+check(firstTimer.delay >= 24000, 'Caption remains through minimum reading hold');
+button('Pause full tour').onClick(); render();
+check(scene().transitionPaused && timers.size === 0, 'Pause stops camera and timer');
+firstTimer.fn(); render();
+same(scene().selectedId, guide.steps[0].selectedId, 'Queued callback cannot advance a paused cavity');
+button('Next step').onClick(); render();
+same(scene().selectedId, guide.steps[1].selectedId, 'Manual Next selects named cavity while paused');
+check(!scene().transitionPaused && timers.size === 0, 'Manual Next moves camera without restarting playback');
+button('Resume full tour').onClick(); render();
+for (let index = 1; index < guide.steps.length; index++) {
+  const stop = guide.steps[index];
+  same(scene().selectedId, stop.selectedId, `${stop.id}: full tour keeps exact source cavity`);
+  check(text(tree).includes(stop.caption), `${stop.id}: caption updates with the camera`);
+  const [id, timer] = [...timers][0];
+  same(timer.delay, guide.continuousPlayback.stepDurationsMs[index], `${stop.id}: shared reading hold`);
+  timers.delete(id); timer.fn(); render();
+}
+check(timers.size === 0 && !!button('Resume full tour') && !!button('End walkthrough'),
+  'Final cardiac stop holds without loop or automatic exit');
+same(scene().selectedId, guide.steps.at(-1).selectedId, 'Final cavity remains selected');
+button('End walkthrough').onClick(); render();
 
 console.log(JSON.stringify({ componentChecks: checks, guideStops: guide.steps.length,
   manualStatePreserved: true, circulationRestored: true,

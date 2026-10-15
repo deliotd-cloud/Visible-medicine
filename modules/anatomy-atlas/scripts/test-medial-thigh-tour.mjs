@@ -152,9 +152,10 @@ assert.deepEqual(live.regionalTourStepFrames(live.catalog,tour),frames);
 for(const id of ids){
   const fragment=api.regionalTourEvidence(api.catalog,id).find(g=>g.tour.id===tour.id);
   const currentFragment=live.regionalTourEvidence(live.catalog,id).find(g=>g.tour.id===tour.id);
-  assert.deepEqual(currentFragment,fragment);
+  const expectedCurrent={...fragment,continuousPlayback:{version:1,start:'explicit-play-full-tour',transition:'quintic-orbit',transitionMs:8000,minimumStepMs:24000,captionWordsPerMinute:180,stepDurationsMs:tour.steps.map(s=>Math.max(24000,s.durationMs,8000+Math.ceil(s.caption.trim().split(/\s+/u).filter(Boolean).length*60000/180))),final:'hold',reducedMotion:'no-camera-sweep'}};
+  assert.deepEqual(currentFragment,expectedCurrent);
   const packet=await live.bodyReviewMaterial(id);
-  assert.deepEqual(packet.guidedTours.find(g=>g.tour.id===tour.id),fragment);
+  assert.deepEqual(packet.guidedTours.find(g=>g.tour.id===tour.id),expectedCurrent);
   assert(await live.parseBodyReviewResponse(packet,id));
 }
 console.log(JSON.stringify({tours:50,stops:301,preservedTours:49,sourceRefusals,packetRefusals,

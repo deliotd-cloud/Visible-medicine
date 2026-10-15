@@ -33,6 +33,10 @@ test('Tour draft pins exact source IDs and canonical source-space views; cuff ta
   assert.equal(typeof shoulderTour.revision, 'string');
   assert(shoulderTour.revision.length);
   assert.equal(shoulderTour.steps.length, 5);
+  assert.equal(shoulderTour.continuousPlayback.transitionMs, 8000);
+  assert.equal(shoulderTour.continuousPlayback.final, 'hold');
+  assert.equal(shoulderTour.continuousPlayback.stepDurationsMs.length, shoulderTour.steps.length);
+  assert(shoulderTour.continuousPlayback.stepDurationsMs.every(ms => ms >= 24000));
   assert.deepEqual(plain(shoulderTour.steps.map(s => s.selectedId.split(':').at(-1))), ['deltoid', 'infraspinatus', 'teres-minor', 'supraspinatus', 'subscapularis']);
   for (const [index, step] of shoulderTour.steps.entries()) {
     const selected = structures.find(s => s.id === step.selectedId);
@@ -76,7 +80,7 @@ test('Tour views detach nested state and reject invalid indices', () => {
 });
 
 const calls = [];
-const props = { index: null, playing: false, ready: true, onStart: () => calls.push('start'), onPlayPause: () => calls.push('toggle'), onStep: index => calls.push(index), onExit: () => calls.push('exit') };
+const props = { index: null, playing: false, ready: true, onStart: () => calls.push('start'), onPlayFullTour: () => calls.push('full'), onPlayPause: () => calls.push('toggle'), onStep: index => calls.push(index), onExit: () => calls.push('exit'), onReadImaging: () => calls.push('read') };
 const render = overrides => require('react-dom/server').renderToStaticMarkup(React.createElement(ShoulderTourPlayer, { ...props, ...overrides }));
 function buttons(tree, result = []) {
   if (!tree || typeof tree !== 'object') return result;
@@ -84,12 +88,25 @@ function buttons(tree, result = []) {
   React.Children.forEach(tree.props?.children, child => buttons(child, result));
   return result;
 }
+function findElement(tree, predicate) {
+  if (!tree || typeof tree !== 'object') return null;
+  if (predicate(tree)) return tree;
+  for (const child of React.Children.toArray(tree.props?.children)) {
+    const found = findElement(child, predicate);
+    if (found) return found;
+  }
+  return null;
+}
 test('Real player renders compact manual start, reference disclosure, step controls and usable exit while loading', () => {
   assert.match(render({}), /Start guided tour/);
+  assert.match(render({}), /Play full tour/);
   assert.doesNotMatch(render({}), /Pause|Next|Step 1/);
   const inactive = buttons(ShoulderTourPlayer({ ...props, ready: false }));
   assert.equal(inactive[0].disabled, true);
+  assert.equal(inactive[1].disabled, true);
   buttons(ShoulderTourPlayer(props))[0].onClick();
+  assert.deepEqual(calls.splice(0), ['full'], 'Primary launcher requests continuous playback');
+  buttons(ShoulderTourPlayer(props))[1].onClick();
   assert.deepEqual(calls.splice(0), ['start'], 'Start does not trigger autoplay');
   const first = render({ index: 0 });
   assert.match(first, /Step 1 of 5/); assert.match(first, /draft, review pending/); assert.match(first, /<details/); assert.match(first, /<summary/); assert.match(first, /href="https:\/\/anatomy/);
@@ -108,4 +125,12 @@ test('Real player renders compact manual start, reference disclosure, step contr
   assert.equal(last[2].children, 'Finish'); last[2].onClick();
   assert.deepEqual(calls.splice(0), ['exit']);
   assert.match(render({ index: 4 }), /Finish/);
+});
+
+test('Caption and reference reading request an immediate playback pause', () => {
+  const player = ShoulderTourPlayer({ ...props, index: 1, playing: true });
+  findElement(player, node => node.props?.['aria-label'] === 'Current step explanation').props.onFocus();
+  findElement(player, node => node.props?.className === 'shoulder-tour-secondary').props.onFocusCapture();
+  findElement(player, node => node.type === 'details').props.onToggle({ currentTarget: { open: true } });
+  assert.deepEqual(calls.splice(0), ['read', 'read', 'read']);
 });

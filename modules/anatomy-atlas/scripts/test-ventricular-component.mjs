@@ -11,6 +11,8 @@ const built = await build({
     export { bodyDisplayCatalog } from './lib/body-display-catalog';
     export { ventriclesFor, ventricleCatalog } from './lib/ventricles';
     export { ventricularGuide } from './lib/ventricular-guide';
+    export { cardiacFor } from './lib/cardiac';
+    export { cardiacCavityGuide } from './lib/cardiac-cavity-guide';
     export { default as raw } from './public/models/bodyparts3d/full-body/catalog.json';`,
     resolveDir: process.cwd(), loader: 'tsx' },
   bundle: true, platform: 'node', format: 'cjs', write: false,
@@ -63,11 +65,18 @@ const document = { hidden: false,
   addEventListener: (name, callback) => events.set(name, callback),
   removeEventListener: name => events.delete(name),
 };
+const timers = new Map(); let timerSerial = 0;
+const window = { matchMedia: () => preference,
+  setTimeout(fn, delay) { const id = ++timerSerial; timers.set(id, { fn, delay }); return id; },
+  clearTimeout(id) { timers.delete(id); },
+  addEventListener: (name, callback) => events.set(`window:${name}`, callback),
+  removeEventListener: name => events.delete(`window:${name}`),
+};
 const scope = { exports: {} };
 runInNewContext(built.outputFiles[0].text, {
   module: scope, exports: scope.exports,
   require: id => id === 'react' ? shim : id === 'next/link' ? { __esModule: true, ...actualLink } : require(id),
-  education, structuredClone, window: { matchMedia: () => preference }, document,
+  education, structuredClone, window, document,
 });
 const api = scope.exports;
 const nodes = node => !node || typeof node !== 'object' ? [] :
@@ -228,6 +237,63 @@ button('Start ventricular walkthrough').onClick(); render();
 button('End walkthrough').onClick(); render();
 check(focused, 'Focus returns to guide launcher');
 
+// The full-tour path is distinct from the existing manual walkthrough.
+timers.clear(); preference.matches = false; events.get('motion:change')(); render();
+button('Play full tour').onClick(); render();
+same(scene().transitionMs, 8000, 'Continuous ventricular camera is slow');
+check(!!button('Pause full tour') && timers.size === 1, 'Continuous ventricular playback starts with one timer');
+const stale = [...timers.values()][0];
+button('Pause full tour').onClick(); render();
+check(scene().transitionPaused && timers.size === 0, 'Pause freezes ventricular camera');
+stale.fn(); render(); same(scene().selectedId, guide.steps[0].selectedId, 'Paused stale timer cannot advance');
+button('Next step').onClick(); render();
+same(scene().selectedId, guide.steps[1].selectedId, 'Paused ventricular Next changes exact stop');
+check(!scene().transitionPaused && timers.size === 0, 'Paused ventricular Next animates without playback timer');
+button('Resume full tour').onClick(); render();
+for (const [index, stop] of guide.steps.entries()) {
+  if (index === 0) continue;
+  same(scene().selectedId, stop.selectedId, 'Continuous ventricular source remains exact');
+  const [id, timer] = [...timers][0];
+  same(timer.delay, guide.continuousPlayback.stepDurationsMs[index], 'Ventricular caption gets shared reading time');
+  timers.delete(id); timer.fn(); render();
+}
+check(timers.size === 0 && !!button('Resume full tour'), 'Last ventricular caption holds');
+button('End walkthrough').onClick(); render();
+button('Play full tour').onClick(); render();
+const replaced = [...timers.values()][0];
+button('Next step').onClick(); render();
+same(scene().selectedId, guide.steps[1].selectedId, 'Manual ventricular Next keeps continuous playback');
+replaced.fn(); render();
+same(scene().selectedId, guide.steps[1].selectedId, 'Old ventricular timer cannot skip manual stop');
+check(!!button('Pause full tour') && timers.size === 1, 'Manual stop gets fresh reading interval');
+document.hidden = true; events.get('visibilitychange')(); render();
+check(timers.size === 0 && scene().transitionPaused, 'Hidden ventricular page revokes playback');
+document.hidden = false; events.get('visibilitychange')(); render();
+check(timers.size === 0, 'Visible ventricular page does not auto resume');
+button('End walkthrough').onClick(); render();
+button('Play full tour').onClick(); render();
+preference.matches = true; events.get('motion:change')(); render();
+check(timers.size === 0 && scene().transitionPaused, 'Reduced-motion change revokes ventricular playback');
+button('End walkthrough').onClick(); render();
+button('Play full tour').onClick(); render();
+check(timers.size === 0 && !!button('Resume full tour') && scene().transitionMs === 0,
+  'Initial reduced motion waits for explicit resume without a sweep');
+button('Resume full tour').onClick(); render();
+const failureTimer = [...timers.values()][0];
+scene().onFailure(scene().catalog.bundles[0].id); render();
+check(timers.size === 0 && scene().transitionPaused, 'Ventricular asset failure revokes playback');
+failureTimer.fn(); render();
+same(scene().selectedId, guide.steps[0].selectedId, 'Queued callback after ventricular failure cannot advance');
+button('End walkthrough').onClick(); render();
+scene().onLoaded(scene().catalog.bundles[0].id); scene().onRendererHealth('ready'); render();
+preference.matches = false; events.get('motion:change')(); render();
+button('Play full tour').onClick(); render();
+const healthTimer = [...timers.values()][0];
+scene().onRendererHealth('lost'); render();
+healthTimer.fn(); render();
+check(timers.size === 0 && !!button('Resume full tour'), 'Renderer loss revokes queued full-tour callback');
+button('End walkthrough').onClick(); render();
+
 slots = []; events.clear(); preference.matches = true; document.hidden = false;
 render({ initialSelectedId: 'foreign-child' }); loadReady({ initialSelectedId: 'foreign-child' });
 check(button('Start ventricular walkthrough').disabled, 'Foreign incoming child denied');
@@ -247,5 +313,25 @@ check(!button('Start ventricular walkthrough') && !disclosure('csf-motion-contro
   'Other brain study has neither ventricular guide nor CSF motion');
 check(!scene().csfMotion, 'Other study passes no CSF motion flag');
 same(education.published, publishedBeforeGuide, 'Guide and motion published no additional scan selection');
+// Cardiac cavity tour shares the same player and must receive the same full path.
+const cardiacParent = catalog.structures.find(structure => api.cardiacFor(structure).length === 4);
+check(!!cardiacParent, 'Exact cardiac cavity parent exists');
+const cardiacGuide = api.cardiacCavityGuide(cardiacParent);
+check(cardiacGuide?.steps.length === 6, 'Source-bound cardiac cavity stops exist');
+slots = []; events.clear(); timers.clear(); preference.matches = false; document.hidden = false;
+const cardiac = { parent: cardiacParent, study: 'cardiac' };
+render(cardiac);
+for (const bundle of scene().catalog.bundles) scene().onLoaded(bundle.id);
+scene().onRendererHealth('ready'); render(cardiac);
+button('Play full tour').onClick(); render(cardiac);
+same(scene().transitionMs, 8000, 'Cardiac full tour uses shared sweep');
+for (const [index, stop] of cardiacGuide.steps.entries()) {
+  same(scene().selectedId, stop.selectedId, 'Cardiac full tour keeps named cavity');
+  const [id, timer] = [...timers][0];
+  same(timer.delay, cardiacGuide.continuousPlayback.stepDurationsMs[index], 'Cardiac caption receives reading hold');
+  timers.delete(id); timer.fn(); render(cardiac);
+}
+check(timers.size === 0 && !!button('Resume full tour'), 'Cardiac final stop holds');
+button('End walkthrough').onClick(); render(cardiac);
 console.log(JSON.stringify({ componentChecks: checks, guideStops: guide.steps.length,
   motionOptIn: true, manualStatePreserved: true, browserAcceptance: false, clinicalApproval: false }));

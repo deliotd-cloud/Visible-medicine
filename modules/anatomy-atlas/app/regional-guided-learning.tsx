@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import {Button} from '@/components/ui/button';
 import {allBodySystems,type BodyCatalog} from './body-types';
 import {regionalTourStructures,regionalTourFrame,type RegionalTour} from '@/lib/regional-tours';
+import {GUIDED_SWEEP_MS,guidedPlaybackDuration} from '@/lib/guided-playback';
 import {initialInspection} from '@/lib/inspection-state';
 import {rendererReady,type RendererHealth} from '@/lib/renderer-health';
 import {modelDeliveryUrl} from '@/lib/model-delivery';
@@ -23,6 +24,7 @@ const noSelection=()=>{};
 export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImaging,pauseRequest=0}:{catalog:BodyCatalog;tour:RegionalTour;assetBase?:string;onExit:()=>void;pausedImaging?:PausedTourImaging;pauseRequest?:number}) {
   const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frames:tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)),error:''};}catch{return {structures:[],frames:[],error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
   const [index,setIndex]=useState<number|null>(null),[playing,setPlaying]=useState(false);
+  const [continuous,setContinuous]=useState(false);
   const [motionPaused,setMotionPaused]=useState(false),[reduced,setReduced]=useState(false);
   const [explanationOpen,setExplanationOpen]=useState(true);
   const [quickCheckOpen,setQuickCheckOpen]=useState(false);
@@ -54,7 +56,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   // A passive reset could discard the new scene's mount/load callbacks.
   if(scopeChanged){
     previousScope.current=scope;
-    setLoaded([]);setFailed([]);setFailureReasons({});setRetries({});setRetrying(false);setRetryError('');setHealth('starting');setIndex(null);setPlaying(false);setMotionPaused(true);setQuickCheckOpen(false);
+    setLoaded([]);setFailed([]);setFailureReasons({});setRetries({});setRetrying(false);setRetryError('');setHealth('starting');setIndex(null);setPlaying(false);setContinuous(false);setMotionPaused(true);setQuickCheckOpen(false);
   }
   useEffect(()=>{scope.active=true;return()=>{scope.active=false;};},[scope]);
   const onLoaded=useCallback((id:string)=>{if(scope.active&&currentScope.current===scope&&required.includes(id))setLoaded(current=>current.includes(id)?current:[...current,id]);},[required,scope]);
@@ -90,6 +92,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
     if(document.activeElement===document.body)controls.current?.querySelector<HTMLButtonElement>('[data-tour-resume]')?.focus({preventScroll:true});
   },[ready]);
   const step=tour.steps[(scopeChanged?null:index)??0];
+  const stepDuration=continuous?guidedPlaybackDuration(step.caption,step.durationMs):step.durationMs;
   const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;pausedImaging?.suspend();setIndex(next);setMotionPaused(false);setQuickCheckOpen(false);},[tour,pausedImaging]);
   // Manual navigation invalidates the old timer without changing whether Play
   // was active; the next committed stop gets its own full-duration timeout.
@@ -106,10 +109,10 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   useEffect(()=>{const pause=()=>{pausedImaging?.suspend();revokePlayback();};const visibility=()=>{if(document.hidden)pause();};if(!ready)pause();document.addEventListener('visibilitychange',visibility);window.addEventListener('pagehide',pause);return()=>{document.removeEventListener('visibilitychange',visibility);window.removeEventListener('pagehide',pause);};},[ready,pausedImaging,revokePlayback]);
   useEffect(()=>{if(!playing||index===null||!ready||document.hidden)return;
     let active=true;const epoch=playbackEpoch.current;
-    const timer=window.setTimeout(()=>{if(!active||epoch!==playbackEpoch.current||document.hidden)return;
-      if(index+1<tour.steps.length)changeStep(index+1);else revokePlayback();},step.durationMs);
+    const timer=window.setTimeout(()=>{if(!active||!scope.active||currentScope.current!==scope||epoch!==playbackEpoch.current||document.hidden)return;
+      if(index+1<tour.steps.length)changeStep(index+1);else revokePlayback();},stepDuration);
     return()=>{active=false;window.clearTimeout(timer);};
-  },[playing,index,ready,step.durationMs,tour,changeStep,revokePlayback]);
+  },[playing,index,ready,stepDuration,tour,scope,changeStep,revokePlayback]);
   const active=!scopeChanged&&index!==null;
   const selected=resolved.structures.find(s=>s.id===step.selectedId);
   useLayoutEffect(()=>{
@@ -134,7 +137,10 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
       {!ready&&<output aria-live="polite" aria-atomic="true">{resolved.error||retryError||accessNotice?.message|| (failed.length?'Some anatomy failed to load. Retry the missing anatomy to continue.':health==='failed'?'The 3D renderer could not start. Use the scene recovery controls below or Exit tour.':health==='lost'||health==='restoring'?'The 3D view is recovering. Playback remains paused until it is ready.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}
       <div className="regional-tour-controls" ref={controls}>
         {retryPlan.length>0&&<Button variant="outline" disabled={retrying} onClick={retryAnatomy}>{retrying?'Retrying…':accessNotice?.retryLabel??'Retry missing anatomy'}</Button>}
-        {!active?<Button data-tour-resume disabled={!ready} onClick={()=>{setPlaying(false);changeStep(0);}}>Start guided tour</Button>:<>
+        {!active?<>
+          <Button data-tour-resume disabled={!ready} onClick={()=>{playbackEpoch.current++;setContinuous(true);setPlaying(!document.hidden&&!reduced);changeStep(0);if(document.hidden||reduced)setMotionPaused(true);}}>Play full tour</Button>
+          <Button variant="outline" disabled={!ready} title="Manual step-by-step viewing" onClick={()=>{playbackEpoch.current++;setContinuous(false);setPlaying(false);changeStep(0);}}>Start guided tour</Button>
+        </>:<>
           <Button variant="outline" disabled={!ready||index===0} onClick={()=>manualStep(index-1)}>Back</Button>
           <Button data-tour-resume variant="outline" disabled={!ready} aria-pressed={playing} onClick={()=>{pausedImaging?.suspend();if(playing)revokePlayback();else{setPlaying(true);setMotionPaused(false);}}}>{playing?'Pause':'Play'}</Button>
           <Button variant="outline" disabled={!ready} onClick={()=>index===tour.steps.length-1?exit():manualStep(index+1)}>{index===tour.steps.length-1?'Finish':'Next'}</Button>
@@ -172,7 +178,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
         ghostRemoved={false} illustrated landmarks={empty} explode={0} layout="spatial" anchorSkeleton={false}
         showOrigins={false} labels view={step.view} zoom={1} reset={index??0} focus={false} exam={false}
         inspection={initialInspection} presetBounds={resolved.frames[(scopeChanged?null:index)??0]} presetKey={tour.id} plate={false}
-        tourLocked transitionMs={active&&!reduced?1800:0} transitionPaused={motionPaused||!ready}
+        tourLocked transitionMs={active&&!reduced?(continuous?GUIDED_SWEEP_MS:1800):0} transitionPaused={motionPaused||!ready}
         onSelect={noSelection} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={onHealth}/>}
     </div>
     <a className="regional-tour-credit" href={modelDeliveryUrl('/models/bodyparts3d/credits.html',assetBase)} target="_blank" rel="noreferrer">BodyParts3D · CC BY 4.0 · Adapted</a>

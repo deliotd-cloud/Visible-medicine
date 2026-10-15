@@ -1,6 +1,7 @@
 import pins from '../content/nested-teaching-bindings.v1.json' with { type: 'json' };
 import type { BodyStructure } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
+import { guidedPlaybackEvidence } from './guided-playback';
 import { cardiacCatalog, cardiacFor } from './cardiac';
 
 export const cardiacCavityGuideReferences = [
@@ -10,7 +11,7 @@ export const cardiacCavityGuideReferences = [
 
 export type CardiacCavityGuide = {
   id: string; title: string; status: 'draft'; parentId: string; study: 'cardiac';
-  transitionMs: 1800; fadeOthers: true; limitation: string;
+  transitionMs: 1800; continuousPlayback: ReturnType<typeof guidedPlaybackEvidence>; fadeOthers: true; limitation: string;
   steps: Array<{
     id: string; title: string; caption: string; preset: 'all' | 'right' | 'left';
     selectedId: string; view: DissectionView; ids: string[]; references: string[];
@@ -72,13 +73,15 @@ export function cardiacCavityGuide(parent: BodyStructure): CardiacCavityGuide | 
       canonical(s) === canonical(b.structure);
   })) return null;
   const all = expected.map(e => e.id);
-  return {
-    id: `cardiac-cavity-guide:${parent.id}`, title: 'Explore the heart chamber spaces',
-    status: 'draft', parentId: parent.id, study: 'cardiac', transitionMs: 1800, fadeOthers: true,
-    limitation: 'Draft cavity-space teaching pending revision-bound radiologist review. Myocardium, septa, valves, vessel openings and conduction tissue are not separately resolved here. Static shapes do not establish a cardiac phase, chamber volume, pressure, ejection fraction or blood flow. No acquired-image registration or clinical diagnosis is shown.',
-    steps: stops.map(s => ({ id: s.id, title: s.title, caption: s.caption, preset: s.preset,
+  const steps: CardiacCavityGuide['steps'] = stops.map(s => ({ id: s.id, title: s.title, caption: s.caption, preset: s.preset,
       selectedId: all[s.selected], view: s.view,
       ids: expected.filter(e => s.preset === 'all' || e.laterality === s.preset).map(e => e.id),
-      references: cardiacCavityGuideReferences.map(r => r.url) })),
+      references: cardiacCavityGuideReferences.map(r => r.url) }));
+  return {
+    id: `cardiac-cavity-guide:${parent.id}`, title: 'Explore the heart chamber spaces',
+    status: 'draft', parentId: parent.id, study: 'cardiac', transitionMs: 1800,
+    continuousPlayback: guidedPlaybackEvidence(steps), fadeOthers: true,
+    limitation: 'Draft cavity-space teaching pending revision-bound radiologist review. Myocardium, septa, valves, vessel openings and conduction tissue are not separately resolved here. Static shapes do not establish a cardiac phase, chamber volume, pressure, ejection fraction or blood flow. No acquired-image registration or clinical diagnosis is shown.',
+    steps,
   };
 }

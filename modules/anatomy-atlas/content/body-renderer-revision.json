@@ -158,7 +158,7 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sha256": "b638338dab9e3ee90f32ed2fe919133495f431a9340ddddb4864006a58e49198"
+      "sha256": "e2066cdf675d9c873ac86dcd81c8dfc4c3dedb9d59dcd7327c597b959286fa00"
     },
     {
       "path": "app/femoral-components.tsx",
@@ -270,7 +270,7 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sha256": "33b99c035d0f0a82590c41ba73d68dbd0c2277cbfefeb8348aed91f2929deb0d"
+      "sha256": "4a5938ea97ad47315b75475539965820d6048c51c691cbc674057e0688747d6c"
     },
     {
       "path": "app/related-study.tsx",
@@ -438,7 +438,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "bdada66c9e2059805e4ded0e7b1ea3d483ad31e2e333a4fe1bbf43c2ee4a3795"
+      "sha256": "5f920b27d0e8a58b628888c4829d8725b79cd4d89296e82f0003f5002b7f7b2e"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -2366,7 +2366,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "3bd69488fc052030b257db808fdd2bd53026de74caa6b9d973c49182d680ebe7"
+      "sha256": "d817dedb14706a4a634d641c9d51d37578b3847cedcc7d6927a458fe2d48d148"
     },
     {
       "path": "content/root-cuff-xray-pins.json",
@@ -3330,7 +3330,7 @@
     },
     {
       "path": "lib/cardiac-cavity-guide.ts",
-      "sha256": "063659106338cb0365fdea4f4f87fdf2bcf12a50d4db44670d64160aa3054878"
+      "sha256": "1934c1a611a0032d7d0c5e64ebf763ed2ffb0f42004e3f9c77fd07c8c4a2bb47"
     },
     {
       "path": "lib/cardiac-circulation.ts",
@@ -3698,7 +3698,7 @@
     },
     {
       "path": "lib/eye-layer-guide.ts",
-      "sha256": "83e038694f0a874bbbb57c2e4e52a20fb29cef5dad2162eeef0cc281ef36d0fb"
+      "sha256": "c2c0a99f9931450e0e910a705fbded2b31ae074f251558468e013dbf19af95b3"
     },
     {
       "path": "lib/eye-layer-state.ts",
@@ -3883,6 +3883,10 @@
     {
       "path": "lib/glottic-muscle-imaging.ts",
       "sha256": "6a96c243bec49a5cfe910e86f96569de1160271b70c86d60fc1e31782ce3f513"
+    },
+    {
+      "path": "lib/guided-playback.ts",
+      "sha256": "e0016cb081de35ca17b63ca54eaa4111eae2a06bc17e9267fe381a4165eaf7d1"
     },
     {
       "path": "lib/hallux-xray.ts",
@@ -4818,7 +4822,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "68760a6d59980a0645d8e0c10c69660c81a9c6b8fd134d4f9aa25b663b1db2d0"
+      "sha256": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5398,7 +5402,7 @@
     },
     {
       "path": "lib/ventricular-guide.ts",
-      "sha256": "9d65840d18391920d5299914fb6075db7f6c05c4d0e84b7e18e0b53a5b0bfd64"
+      "sha256": "ef9bf8e066d413e00667f108abe0a2c0650812435e894bba919e195bbca377c5"
     },
     {
       "path": "lib/ventricular-relationships.ts",
@@ -5442,7 +5446,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3e2ee5a6fefdc0edec4ce13b09668a551691ab5632db26d60e1be976296cd575"
+      "sha256": "aa507d20d564ccd859bf3c7e8953929e1d1081bf16b60e678f0623f490271998"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5665,5 +5669,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "e5c72dbf8df9577ca94e6d3a7da3d47db2e3f41a564739845b05794263ee2bb6"
+  "sha256": "cf9de8677e5d9aaa9347c09943fd2ef299ff32d7f530f4fab36fa40f4d97f312"
 }

@@ -2,6 +2,7 @@ import { structures } from '../app/anatomy-data';
 import manifest from '../public/models/bodyparts3d/manifest.json';
 import { initialInspection } from './inspection-state';
 import type { StudyView } from './study-views';
+import { guidedPlaybackEvidence } from './guided-playback';
 
 type TourStep = {
   id: string;
@@ -24,19 +25,21 @@ function step(id: string, title: string, caption: string, slug: string, layer: T
 
 /** Original orientation teaching about supplied surfaces. This draft is not
  * a scan, lesion simulation or radiologist approval. Source geometry is retained. */
+const shoulderTourSteps = [
+    step('deltoid-cover', 'Deltoid cover', 'Start with the deltoid covering the shoulder. The surface layer keeps the supplied bones and muscles together; the next step sets the deltoid aside to reveal the cuff.', 'deltoid', 'surface', 'posterior'),
+    step('posterior-cuff', 'Infraspinatus', 'With the deltoid set aside, compare infraspinatus with the posterior scapula. It arises from the infraspinous fossa and belongs to the rotator cuff.', 'infraspinatus', 'cuff', 'posterior'),
+    step('inferior-cuff', 'Teres minor', 'Find teres minor along the lateral scapula, below infraspinatus. This smaller muscle is another member of the posterior cuff.', 'teres-minor', 'cuff', 'posterior'),
+    step('superior-cuff', 'Supraspinatus', 'From the lateral view, find supraspinatus occupying the supraspinous fossa and passing beneath the acromion. Other structures are faded to reveal this relationship.', 'supraspinatus', 'cuff', 'lateral', true),
+    step('anterior-cuff', 'Subscapularis', 'Turn anteriorly to find subscapularis on the subscapular fossa. It inserts on the lesser tuberosity and forms the anterior cuff context.', 'subscapularis', 'cuff', 'anterior'),
+];
 export const shoulderTour = {
   id: 'shoulder-source-orientation',
   title: 'Shoulder surface tour',
   revision: 'shoulder-source-orientation-v1',
   sourceRevision: manifest.sha256,
   status: 'draft' as const,
-  steps: [
-    step('deltoid-cover', 'Deltoid cover', 'Start with the deltoid covering the shoulder. The surface layer keeps the supplied bones and muscles together; the next step sets the deltoid aside to reveal the cuff.', 'deltoid', 'surface', 'posterior'),
-    step('posterior-cuff', 'Infraspinatus', 'With the deltoid set aside, compare infraspinatus with the posterior scapula. It arises from the infraspinous fossa and belongs to the rotator cuff.', 'infraspinatus', 'cuff', 'posterior'),
-    step('inferior-cuff', 'Teres minor', 'Find teres minor along the lateral scapula, below infraspinatus. This smaller muscle is another member of the posterior cuff.', 'teres-minor', 'cuff', 'posterior'),
-    step('superior-cuff', 'Supraspinatus', 'From the lateral view, find supraspinatus occupying the supraspinous fossa and passing beneath the acromion. Other structures are faded to reveal this relationship.', 'supraspinatus', 'cuff', 'lateral', true),
-    step('anterior-cuff', 'Subscapularis', 'Turn anteriorly to find subscapularis on the subscapular fossa. It inserts on the lesser tuberosity and forms the anterior cuff context.', 'subscapularis', 'cuff', 'anterior'),
-  ],
+  steps: shoulderTourSteps,
+  continuousPlayback: guidedPlaybackEvidence(shoulderTourSteps),
 };
 
 /** A fresh canonical display state; no captured camera or caller state leaks

@@ -251,7 +251,8 @@ export function NestedReviewWorkspace({
               </section>}
               {packet.teaching.guidedLearning && <section aria-label="Nested guided-learning evidence">
                 <h3>{packet.teaching.guidedLearning.title} · Draft</h3>
-                <p>{packet.teaching.guidedLearning.transitionMs / 1000}s camera sweep · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>
+                <p>Manual sweep {packet.teaching.guidedLearning.transitionMs / 1000}s · Full tour sweep {packet.teaching.guidedLearning.continuousPlayback.transitionMs / 1000}s · other visible components faded · no separation · reduced-motion and hidden-page pause supported</p>
+                <p>Full tour advances automatically with caption reading time and holds at the final stop. Step durations: {packet.teaching.guidedLearning.continuousPlayback.stepDurationsMs.map(ms=>`${ms/1000}s`).join(', ')}.</p>
                 <p>{packet.teaching.guidedLearning.limitation}</p>
                 <ol>{packet.teaching.guidedLearning.steps.map(step => <li key={step.id}>
                   <h4>{step.title}</h4><p>{step.caption}</p>

@@ -28,6 +28,7 @@ export const reviewDisplayPaths = [
   'app/shoulder-explorer.tsx',
   'lib/shoulder-search.ts',
   'lib/shoulder-tours.ts',
+  'lib/guided-playback.ts',
   'lib/tour-camera.ts',
   'app/shoulder-tour-player.tsx',
   'app/shoulder-tour-player.css',
@@ -104,6 +105,14 @@ export function reviewDocumentForDisplay(
   };
 }
 
+/** Source and shared timing policy jointly identify current shoulder teaching. */
+export function shoulderTourTeachingFingerprint(tourSource, playbackPolicy) {
+  return hash(JSON.stringify({
+    tour: tourSource.replace(/\r\n/g, '\n'),
+    playbackPolicy: playbackPolicy.replace(/\r\n/g, '\n'),
+  }));
+}
+
 export async function currentReviewDocument(
   manifest,
   structures,
@@ -127,6 +136,9 @@ export async function currentReviewDocument(
   );
   // Current tour text, IDs, layer/camera choices and timings are material teaching.
   // Historical reconstruction deliberately omits this new field by default.
-  const tourHash = hash((await readFile(new URL('lib/shoulder-tours.ts', root), 'utf8')).replace(/\r\n/g, '\n'));
+  const tourHash = shoulderTourTeachingFingerprint(
+    await readFile(new URL('lib/shoulder-tours.ts', root), 'utf8'),
+    await readFile(new URL('lib/guided-playback.ts', root), 'utf8'),
+  );
   return reviewDocumentForDisplay(manifest, structures, quizQuestions, display, tourHash);
 }

@@ -1,6 +1,7 @@
 import pins from '../content/nested-teaching-bindings.v1.json' with { type: 'json' };
 import type { BodyStructure } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
+import { guidedPlaybackEvidence } from './guided-playback';
 import {
   eyeCatalog,
   eyeLayersFor,
@@ -18,6 +19,7 @@ export type EyeLayerGuide = {
   study: 'eye';
   limitation: string;
   transitionMs: 1800;
+  continuousPlayback: ReturnType<typeof guidedPlaybackEvidence>;
   fadeOthers: true;
   steps: Array<{
     id: string;
@@ -91,6 +93,16 @@ export function eyeLayerGuide(parent: BodyStructure): EyeLayerGuide | null {
   })) return null;
   if (!stops.every((stop) => stop.required.every((kind) => byKind.has(kind)))) return null;
 
+  const steps: EyeLayerGuide['steps'] = stops.map((stop) => {
+      const hidden = new Set(eyePresetHidden(layers, stop.preset));
+      const ids = layers.filter((layer) => !hidden.has(layer.id)).map((layer) => layer.id);
+      const selectedId = byKind.get(stop.selected)!.id;
+      return {
+        id: stop.id, title: stop.title, caption: stop.caption, preset: stop.preset,
+        selectedId, view: stop.view, ids,
+        references: eyeReferences.map((reference) => reference.url),
+      };
+    });
   return {
     id: `eye-layer-guide:${parent.id}`,
     title: 'Explore eye layers',
@@ -99,21 +111,8 @@ export function eyeLayerGuide(parent: BodyStructure): EyeLayerGuide | null {
     study: 'eye',
     limitation: 'Draft source-component teaching only; not clinical approval or scan registration. Retina and finer layers are not segmented. The cleaned right eye retains only available source components, with no right anterior-chamber substitute. Visibility is not surgical planes or an optical simulation.',
     transitionMs: 1800,
+    continuousPlayback: guidedPlaybackEvidence(steps),
     fadeOthers: true,
-    steps: stops.map((stop) => {
-      const hidden = new Set(eyePresetHidden(layers, stop.preset));
-      const ids = layers.filter((layer) => !hidden.has(layer.id)).map((layer) => layer.id);
-      const selectedId = byKind.get(stop.selected)!.id;
-      return {
-        id: stop.id,
-        title: stop.title,
-        caption: stop.caption,
-        preset: stop.preset,
-        selectedId,
-        view: stop.view,
-        ids,
-        references: eyeReferences.map((reference) => reference.url),
-      };
-    }),
+    steps,
   };
 }

@@ -484,10 +484,12 @@ export function BodyReviewDetails({
       {material.guidedTours.map(evidence=><details key={evidence.tour.id}>
         <summary>Guided learning · {evidence.tour.title} · Draft</summary>
         <p>{evidence.limitations}</p>
-        <p>Revision {evidence.tour.revision} · {evidence.transitionMs/1000}s camera sweep · {evidence.transition} · no separation</p>
-        <ol>{evidence.tour.steps.map(step=><li key={step.id}>
+        <p>Revision {evidence.tour.revision} · Manual sweep {evidence.transitionMs/1000}s · Full tour sweep {evidence.continuousPlayback.transitionMs/1000}s · {evidence.transition} · no separation</p>
+        <p>Full tour advances automatically with caption reading time, pauses for interactive learning and holds at the final stop. Reduced motion disables camera sweeps.</p>
+        <ol>{evidence.tour.steps.map((step,index)=><li key={step.id}>
           <h4>{step.title}</h4><p>{step.caption}</p>
           <p>{step.view} · {step.durationMs/1000}s · {step.fadeOthers?'Others faded':'Full context'} · <code>{step.selectedId}</code></p>
+          <p>Full tour: {evidence.continuousPlayback.stepDurationsMs[index]/1000}s including arrival and caption reading.</p>
           {step.frameIds&&<p>Camera close-up: {step.frameIds.map(id=>evidence.structures.find(s=>s.id===id)?.name??id).join(', ')}. Other context can extend outside the view.</p>}
           {step.references.map(url=><a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference ↗</a>)}
         </li>)}</ol>

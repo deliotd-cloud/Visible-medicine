@@ -5,6 +5,7 @@ import { ImagingLink } from './imaging-link';
 import { useNestedEducationLink } from './nested-education-link';
 import {useHeadNestedSelection} from './head-selection-channel';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
+import { GUIDED_SWEEP_MS, guidedPlaybackDuration } from '@/lib/guided-playback';
 import { ArrowLeft, RotateCcw, Eye, Focus, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -112,6 +113,11 @@ export function EyeLayerView({
   const [guideExpanded, setGuideExpanded] = useState(initialGuidedLearningExpanded);
   const [reducedMotion, setReducedMotion] = useState(true), [pageHidden, setPageHidden] = useState(false);
   const [guidance, setGuidance] = useState<{id: string; index: number; camera: StudyCamera | null} | null>(null);
+  const [fullTour, setFullTour] = useState(false), [tourPlaying, setTourPlaying] = useState(false);
+  const [motionPaused, setMotionPaused] = useState(false);
+  const playbackEpoch = useRef(0);
+  const playbackOwner = useRef<{guide: typeof guide; guidance: typeof guidance; parent: typeof parent;
+    ready: boolean; hidden: boolean; fullTour: boolean; playing: boolean} | null>(null);
   const step = guidance?.id === guide?.id ? guide?.steps[guidance!.index] : undefined;
   // Guidance is a reversible presentation overlay: manual state/history never changes.
   const selectedId = step?.selectedId ?? manualSelectedId;
@@ -123,15 +129,39 @@ export function EyeLayerView({
   const labels = step ? true : manualLabels, isolated = step ? guide!.fadeOthers : manualIsolated;
   const focus = step ? false : manualFocus;
   const ready = health === 'ready' && loaded && !failed;
+  const pauseTour = useCallback(() => { playbackEpoch.current++; setTourPlaying(false); setMotionPaused(true); }, []);
+  useLayoutEffect(() => { playbackOwner.current = {guide, guidance, parent, ready, hidden: pageHidden,
+    fullTour, playing: tourPlaying}; });
+  useEffect(() => {
+    if (!fullTour || !tourPlaying || !guidance || guidance.id !== guide?.id || !ready || pageHidden) return;
+    let active = true;
+    const epoch = playbackEpoch.current, index = guidance.index;
+    const timer = window.setTimeout(() => {
+      const owner = playbackOwner.current;
+      if (!active || epoch !== playbackEpoch.current || document.hidden || !owner ||
+        owner.guide !== guide || owner.guidance !== guidance || owner.parent !== parent ||
+        !owner.ready || owner.hidden || !owner.fullTour || !owner.playing) return;
+      if (index + 1 < guide.steps.length) guideStep(index + 1);
+      else pauseTour();
+    }, guidedPlaybackDuration(guide.steps[index].caption));
+    return () => { active = false; window.clearTimeout(timer); };
+  }, [fullTour, tourPlaying, guidance, guide, parent, ready, pageHidden, pauseTour]);
+  useEffect(() => { if (fullTour && (!ready || pageHidden || guidance?.id !== guide?.id)) pauseTour(); },
+    [fullTour, ready, pageHidden, guidance?.id, guide?.id, pauseTour]);
+  useEffect(() => {
+    const leave = () => pauseTour();
+    window.addEventListener('pagehide', leave);
+    return () => { window.removeEventListener('pagehide', leave); playbackOwner.current = null; playbackEpoch.current++; };
+  }, [pauseTour]);
   useEffect(() => {
     if (!guide) return;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const motion = () => setReducedMotion(preference.matches);
-    const visibility = () => setPageHidden(document.hidden);
+    const motion = () => { setReducedMotion(preference.matches); pauseTour(); };
+    const visibility = () => { setPageHidden(document.hidden); if (document.hidden) pauseTour(); };
     motion(); visibility();
     preference.addEventListener('change', motion); document.addEventListener('visibilitychange', visibility);
     return () => { preference.removeEventListener('change', motion); document.removeEventListener('visibilitychange', visibility); };
-  }, [guide]);
+  }, [guide, pauseTour]);
   useLayoutEffect(() => {
     if (!guidance && restoreGuideFocus.current) {
       guideLauncher.current?.focus(); restoreGuideFocus.current = false;
@@ -143,10 +173,11 @@ export function EyeLayerView({
     setFailureReason('unavailable');
   }, []);
   const onFailure = useCallback((_id: string, reason: ModelLoadFailure = 'unavailable') => {
+    pauseTour();
     setFailed(true);
     setLoaded(false);
     setFailureReason(reason);
-  }, []);
+  }, [pauseTour]);
   const selected = layers.find((s) => s.id === selectedId);
   useHeadNestedSelection({catalog:educationCatalog,parent,study:'eye',selected,
     blocked:step?{status:'blocked',reason:'guided'}:!ready|| (!!initialSelectedId&&!initialSelection)?{status:'blocked',reason:'unavailable'}:null});
@@ -213,12 +244,15 @@ export function EyeLayerView({
   function guideStep(index: number) {
     if (!guide || !ready || pageHidden || !Number.isInteger(index) || !guide.steps[index] ||
       (!!initialSelectedId && !initialSelection)) return;
+    playbackEpoch.current++;
+    setMotionPaused(false);
     setGuidance(previous => ({id: guide.id, index,
       camera: previous?.id === guide.id ? previous.camera : structuredClone(cameraCapture.current)}));
     setReset(n => n + 1); setGuideExpanded(true);
   }
   function exitGuide() {
     if (!guidance) return;
+    pauseTour(); setFullTour(false);
     cameraRestore.current = structuredClone(guidance.camera);
     restoreGuideFocus.current = true; setGuidance(null); setReset(n => n + 1);
   }
@@ -264,12 +298,12 @@ export function EyeLayerView({
           cameraBounds={step ? selectionBounds(layers.filter(s => step.ids.includes(s.id))) : undefined}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
           tourLocked={!!step}
-          transitionMs={step && !reducedMotion ? guide!.transitionMs : 0}
-          transitionPaused={!!step && (!ready || pageHidden)}
+          transitionMs={step && !reducedMotion ? fullTour ? GUIDED_SWEEP_MS : guide!.transitionMs : 0}
+          transitionPaused={!!step && (!ready || pageHidden || (fullTour && motionPaused))}
           onSelect={select}
           onLoaded={onLoaded}
           onFailure={onFailure}
-          onRendererHealth={setHealth}
+          onRendererHealth={next => { if (next !== 'ready') pauseTour(); setHealth(next); }}
         />
         {!loaded && !failed && (
           <output className="eye-layer-status">Loading eye layers…</output>
@@ -390,12 +424,17 @@ export function EyeLayerView({
         {guide && <details className="eye-layer-guided-learning" open={guideExpanded}
           onToggle={event => {
             if (event.target !== event.currentTarget) return;
-            if (!step) setGuideExpanded(event.currentTarget.open);
+             if (step && !event.currentTarget.open) pauseTour();
+             if (!step) setGuideExpanded(event.currentTarget.open);
           }}>
           <summary>Guided learning</summary>
           {step ? <section aria-label="Eye-layer walkthrough" aria-live="polite">
             <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
-            <h3>{step.title}</h3><p>{step.caption}</p>
+            <h3>{step.title}</h3><p tabIndex={0} onFocus={pauseTour}>{step.caption}</p>
+            {fullTour && <Button size="sm" variant="outline" disabled={!ready || pageHidden}
+              aria-pressed={tourPlaying} onClick={() => { if (!ready || pageHidden) return;
+                if (tourPlaying) pauseTour(); else { setMotionPaused(false); setTourPlaying(true); } }}>
+              {tourPlaying ? 'Pause full tour' : 'Resume full tour'}</Button>}
             {!ready || pageHidden ? <p role="status">Walkthrough paused until the model is ready and this page is visible.</p> : null}
             <div className="eye-layer-actions">
               <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance!.index === 0}
@@ -404,13 +443,20 @@ export function EyeLayerView({
                 onClick={() => guideStep(guidance!.index + 1)}>Next step</Button>
               <Button size="sm" variant="outline" onClick={exitGuide}>End walkthrough</Button>
             </div>
-            {step.references.map(url => <a key={url} href={url} target="_blank" rel="noreferrer">{eyeReferences.find(r => r.url === url)?.label ?? 'Source reference'}</a>)}
+            <div onFocusCapture={pauseTour} onPointerDownCapture={pauseTour}>
+              {step.references.map(url => <a key={url} href={url} target="_blank" rel="noreferrer">{eyeReferences.find(r => r.url === url)?.label ?? 'Source reference'}</a>)}
+            </div>
           </section> : <><p>{guide.title} · Four source-bound steps · Draft</p>
+            <Button size="sm" disabled={!ready || pageHidden || (!!initialSelectedId && !initialSelection)}
+              onClick={() => { if (!ready || pageHidden || (!!initialSelectedId && !initialSelection)) return;
+                setFullTour(true); setTourPlaying(!reducedMotion); guideStep(0);
+                if (reducedMotion) setMotionPaused(true); }}>Play full tour</Button>
+            <p>Step by step</p>
             <Button ref={guideLauncher} size="sm" variant="outline"
               disabled={!ready || pageHidden || (!!initialSelectedId && !initialSelection)}
               onClick={() => guideStep(0)}>Start eye walkthrough</Button></>}
           <p data-testid="eye-tour-source-scope">Draft source-component teaching · not clinical approval or scan registration.</p>
-          <details data-testid="eye-tour-limitations">
+           <details data-testid="eye-tour-limitations" onToggle={event => { if (event.currentTarget.open) pauseTour(); }}>
             <summary>Tour scope &amp; limitations</summary>
             <p>{guide.limitation}</p>
           </details>

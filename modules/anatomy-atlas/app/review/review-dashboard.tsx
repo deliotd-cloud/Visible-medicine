@@ -912,9 +912,9 @@ export function ReviewDashboard({ initialId }: { initialId: string }) {
                     <>
                       <section>
                         <h3>Guided tour · {shoulderTour.title}</h3>
-                        <p>Draft {shoulderTour.revision}. Review the complete sequence in the shoulder learner, including camera framing and visible layers. This teaching fingerprint includes the entire tour; it does not approve acquired images.</p>
-                        <ol>{shoulderTour.steps.map(step => <li key={step.id}>
-                          <strong>{step.title}</strong> · {step.view} · {step.layer} · {step.durationMs / 1000} seconds · {step.fadeOthers ? 'Others faded' : 'Full context'}
+                        <p>Draft {shoulderTour.revision}. Review the complete sequence in the shoulder learner, including camera framing, visible layers and the shared continuous playback policy. Manual camera transitions take 1.8 seconds; Play full tour uses an {shoulderTour.continuousPlayback.transitionMs / 1000}-second camera sweep and holds the final stop. This teaching fingerprint includes both the tour and playback policy; it does not approve acquired images.</p>
+                        <ol>{shoulderTour.steps.map((step, index) => <li key={step.id}>
+                          <strong>{step.title}</strong> · {step.view} · {step.layer} · manual {step.durationMs / 1000} seconds · continuous {shoulderTour.continuousPlayback.stepDurationsMs[index] / 1000} seconds (at least {shoulderTour.continuousPlayback.minimumStepMs / 1000}) · {step.fadeOthers ? 'Others faded' : 'Full context'}
                           <p>{step.caption}</p>
                           <p>Structure: <code>{step.selectedId}</code></p>
                           {step.references.map(url => <a key={url} href={url} target="_blank" rel="noreferrer">Anatomy reference</a>)}

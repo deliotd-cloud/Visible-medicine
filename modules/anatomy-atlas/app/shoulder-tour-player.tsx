@@ -10,18 +10,22 @@ export type ShoulderTourPlayerProps = {
   playing: boolean;
   ready: boolean;
   onStart: () => void;
+  onPlayFullTour: () => void;
   onPlayPause: () => void;
   onStep: (index: number) => void;
   onExit: () => void;
   onReadImaging: () => void;
 };
 
-export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayPause, onStep, onExit, onReadImaging }: ShoulderTourPlayerProps) {
+export function ShoulderTourPlayer({ index, playing, ready, onStart, onPlayFullTour, onPlayPause, onStep, onExit, onReadImaging }: ShoulderTourPlayerProps) {
   const step = index !== null && Number.isInteger(index) ? shoulderTour.steps[index] : undefined;
   if (!step) return (
     <section className="shoulder-tour-start" aria-label="Guided learning tours">
       <div><h3>{shoulderTour.title}</h3><p>Five guided stops from the deltoid to the rotator cuff. Camera, layers and captions change together.</p><small>Agent-authored · Clinical review pending</small></div>
-      <Button type="button" variant="outline" disabled={!ready} onClick={onStart}>Start guided tour</Button>
+      <div className="shoulder-tour-controls">
+        <Button type="button" disabled={!ready} onClick={onPlayFullTour}>Play full tour</Button>
+        <Button type="button" variant="outline" disabled={!ready} onClick={onStart}>Start guided tour</Button>
+      </div>
     </section>
   );
   const activeIndex = index!;

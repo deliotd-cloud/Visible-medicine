@@ -1,4 +1,5 @@
 import type { BodyCatalog, BodyStructure } from '../app/body-types';
+import {guidedPlaybackEvidence} from './guided-playback';
 import {posteriorCalfTour,posteriorCalfTourMatches} from './posterior-calf-tour';
 export {posteriorCalfTour} from './posterior-calf-tour';
 import {medialThighTour,medialThighTourMatches} from './medial-thigh-tour';
@@ -386,6 +387,7 @@ export function regionalTourEvidence(catalog:BodyCatalog,structureId:string) {
     return structuredClone({tour,structures,bundles:catalog.bundles.filter(b=>structures.some(s=>s.bundle===b.id)),
       coordinateSystem:catalog.coordinateSystem,sourceVersion:catalog.sourceVersion,frame:regionalTourFrame(catalog,tour),
       transitionMs:1800,transition:'quintic-orbit',separation:0,
+      continuousPlayback:guidedPlaybackEvidence(tour.steps),
       limitations:regionalTourLimitations(tour),
       ...(tour.steps.some(s=>s.frameIds)?{stepFrames:regionalTourStepFrames(catalog,tour)}:{})});
   });

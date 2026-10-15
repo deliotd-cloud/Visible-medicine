@@ -22,17 +22,22 @@ const shim={...React,useContext:()=>null,useState:state,useMemo:memo,useCallback
 const education={options:null,published:[],use(options){this.options=options;return{adapter:null,publish:id=>this.published.push(id)};}};
 const events=new Map(),preference={matches:true,addEventListener:(name,fn)=>events.set('motion:'+name,fn),removeEventListener:name=>events.delete('motion:'+name)};
 const document={hidden:false,addEventListener:(name,fn)=>events.set(name,fn),removeEventListener:name=>events.delete(name)};
+const timers=new Map();let timerSerial=0;
+const window={matchMedia:()=>preference,
+ setTimeout(fn,delay){const id=++timerSerial;timers.set(id,{fn,delay});return id;},
+ clearTimeout(id){timers.delete(id);},
+ addEventListener:(name,fn)=>events.set('window:'+name,fn),removeEventListener:name=>events.delete('window:'+name)};
 const scope={exports:{}};
 runInNewContext(built.outputFiles[0].text,{module:scope,exports:scope.exports,
  require:id=>id==='react'?shim:id==='next/link'?{__esModule:true,...actualLink}:require(id),
- education,structuredClone,window:{matchMedia:()=>preference},document});
+ education,structuredClone,window,document});
 const api=scope.exports,nodes=n=>!n||typeof n!=='object'?[]:Array.isArray(n)?n.flatMap(nodes):[n,...nodes(n.props?.children)];
 const text=n=>typeof n==='string'||typeof n==='number'?String(n):!n?'':Array.isArray(n)?n.map(text).join(''):text(n.props?.children);
 const check=(value,message)=>{checks++;assert(value,message);};
 const same=(a,b,message)=>{checks++;assert.deepEqual(JSON.parse(JSON.stringify(a)),JSON.parse(JSON.stringify(b)),message);};
 const catalog=api.bodyDisplayCatalog(api.raw),parents=catalog.structures.filter(s=>api.eyeLayersFor(s).length);
 for(const parent of parents){
- slots=[];events.clear();preference.matches=true;document.hidden=false;education.published=[];let tree;
+ slots=[];events.clear();timers.clear();preference.matches=true;document.hidden=false;education.published=[];let tree;
  const render=(extra={})=>{cursor=0;after=[];tree=api.EyeLayerView({parent,educationCatalog:catalog,...extra});after.forEach(fn=>fn());};
  const scene=()=>nodes(tree).find(n=>n.props?.onRendererHealth)?.props;
  const button=label=>nodes(tree).find(n=>n.props?.onClick&&text(n).trim()===label)?.props;
@@ -143,6 +148,64 @@ for(const parent of parents){
  same(scene().transitionMs,0,'Ordinary camera unchanged');check(!button('End walkthrough'),'Guide ended');
  const launch=button('Start eye walkthrough');let focused=false;launch.ref.current={focus(){focused=true;}};
  button('Start eye walkthrough').onClick();render();button('End walkthrough').onClick();render();check(focused,'Focus returns to launcher');
+ // The separate full-tour launcher runs every source-bound stop with a reading hold.
+ preference.matches=false;events.get('motion:change')();render();
+ button('Play full tour').onClick();render();
+ same(scene().transitionMs,8000,'Full tour uses slow shared camera sweep');
+ check(!!button('Pause full tour')&&timers.size===1,'Full tour starts playback with one timer');
+ const firstTimer=[...timers.values()][0];
+ same(firstTimer.delay,guide.continuousPlayback.stepDurationsMs[0],'First caption receives shared reading duration');
+ button('Pause full tour').onClick();render();
+ check(scene().transitionPaused&&timers.size===0,'Pause freezes camera and clears timer');
+ firstTimer.fn();render();same(scene().selectedId,guide.steps[0].selectedId,'Stale timer cannot advance');
+ button('Next step').onClick();render();
+ same(scene().selectedId,guide.steps[1].selectedId,'Paused manual Next changes exact stop');
+ check(!scene().transitionPaused&&timers.size===0,'Paused manual Next animates camera without restarting timer');
+ button('Resume full tour').onClick();render();
+ for(let index=1;index<guide.steps.length;index++){
+  same(scene().selectedId,guide.steps[index].selectedId,'Continuous stop keeps exact source child');
+  const [id,timer]=[...timers][0];same(timer.delay,guide.continuousPlayback.stepDurationsMs[index],'Caption duration stays source-bound');
+  timers.delete(id);timer.fn();render();
+ }
+ check(!button('Pause full tour')&&!!button('Resume full tour')&&timers.size===0,'Final stop holds without loop or exit');
+ same(scene().selectedId,guide.steps.at(-1).selectedId,'Final caption remains visible');
+ button('End walkthrough').onClick();render();
+ button('Play full tour').onClick();render();
+ const replaced=[...timers.values()][0];
+ button('Next step').onClick();render();
+ same(scene().selectedId,guide.steps[1].selectedId,'Manual Next keeps continuous sequence');
+ replaced.fn();render();same(scene().selectedId,guide.steps[1].selectedId,'Old stop timer cannot skip manual choice');
+ check(!!button('Pause full tour')&&timers.size===1,'Manual Next gets a fresh caption interval');
+ document.hidden=true;events.get('visibilitychange')();render();
+ check(timers.size===0&&scene().transitionPaused,'Hidden page revokes playback');
+ document.hidden=false;events.get('visibilitychange')();render();
+ check(timers.size===0,'Visibility return does not autoplay');
+ button('Resume full tour').onClick();render();
+ preference.matches=true;events.get('motion:change')();render();
+ check(timers.size===0&&scene().transitionPaused,'Reduced-motion change revokes playback');
+ button('End walkthrough').onClick();render();
+ button('Play full tour').onClick();render();
+ check(timers.size===0&&!!button('Resume full tour')&&scene().transitionMs===0,
+  'Starting with reduced motion waits for explicit resume and has no sweep');
+ button('Resume full tour').onClick();render();
+ const failedTimer=[...timers.values()][0];
+ scene().onFailure('eye-layers');render();
+ check(timers.size===0&&scene().transitionPaused,'Model failure revokes continuous playback');
+ failedTimer.fn();render();same(scene().selectedId,guide.steps[0].selectedId,'Queued callback after failure cannot advance');
+ button('End walkthrough').onClick();render();
+ scene().onLoaded();scene().onRendererHealth('ready');render();
+ preference.matches=false;events.get('motion:change')();render();
+ button('Play full tour').onClick();render();
+ const sourceTimer=[...timers.values()][0];
+ render({parent:{...parent,name:'altered parent'}});
+ sourceTimer.fn();render({parent:{...parent,name:'altered parent'}});
+ check(timers.size===0&&!button('End walkthrough'),'Changed source retires queued callback');
+ slots=[];render();scene().onLoaded();scene().onRendererHealth('ready');render();
+ button('Play full tour').onClick();render();
+ const unmountedTimer=[...timers.values()][0];
+ for(const slot of slots)slot?.cleanup?.();
+ check(timers.size===0,'Unmount clears full-tour timer');
+ unmountedTimer.fn();check(timers.size===0,'Queued callback after unmount is inert');
  // Parent or incoming selection mismatch must not start a guide.
  slots=[];render({initialSelectedId:'foreign-child'});scene().onLoaded();scene().onRendererHealth('ready');render({initialSelectedId:'foreign-child'});
  check(button('Start eye walkthrough').disabled,'Foreign incoming selection fails closed');button('Start eye walkthrough').onClick();render({initialSelectedId:'foreign-child'});check(!button('End walkthrough'));

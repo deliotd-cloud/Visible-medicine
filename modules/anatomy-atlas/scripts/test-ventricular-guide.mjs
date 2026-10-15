@@ -37,7 +37,8 @@ const expected = [
 const guide = api.ventricularGuide(parent);
 assert.ok(guide, 'exact source-bound brain parent admits a complete guide');
 assert.deepEqual(Object.keys(guide).sort(), ['id', 'title', 'status', 'parentId', 'study',
-  'transitionMs', 'fadeOthers', 'limitation', 'steps'].sort());
+  'transitionMs', 'continuousPlayback', 'fadeOthers', 'limitation', 'steps'].sort());
+assert.deepEqual(guide.continuousPlayback,{version:1,start:'explicit-play-full-tour',transition:'quintic-orbit',transitionMs:8000,minimumStepMs:24000,captionWordsPerMinute:180,stepDurationsMs:guide.steps.map(s=>Math.max(24000,8000+Math.ceil(s.caption.trim().split(/\s+/u).filter(Boolean).length*60000/180))),final:'hold',reducedMotion:'no-camera-sweep'});
 assert.deepEqual([guide.id, guide.status, guide.parentId, guide.study, guide.transitionMs, guide.fadeOthers],
   [`ventricular-guide:${parent.id}`, 'draft', parent.id, 'ventricles', 1800, true]);
 assert.equal(guide.steps.length, 5);

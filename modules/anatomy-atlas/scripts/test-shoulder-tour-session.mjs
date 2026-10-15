@@ -30,6 +30,7 @@ function harness() {
   const preference = { matches: false, addEventListener(_name, fn) { events.set('motion', fn); }, removeEventListener() { events.delete('motion'); } };
   const doc = { hidden: false, modelContext: { registerTool(tool) { tools.set(tool.name, tool); } }, addEventListener(name, fn) { events.set(name, fn); }, removeEventListener(name) { events.delete(name); } };
   const win = { __workspace: { mode: 'explore', chooseMode(mode) { this.mode = mode; } }, matchMedia: () => preference,
+    addEventListener(name, fn) { events.set(name, fn); }, removeEventListener(name) { events.delete(name); },
     setTimeout(fn, delay) { const id = ++serial; timers.set(id, { fn, delay }); return id; }, clearTimeout(id) { timers.delete(id); } };
   const mod = { exports: {} };
   runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, structuredClone, AbortController, window: win, document: doc, console,
@@ -50,9 +51,10 @@ function harness() {
   function choose(value) { modeRadio().props.onValueChange(value); render(); }
   const enter = () => choose('guided-learning');
   function ready() { scene().onRendererHealth('ready'); scene().onModelReady(true); render(); }
-  function tick() { assert.equal(timers.size, 1, 'Exactly one autoplay timer'); const [id, timer] = [...timers][0]; timers.delete(id); assert.equal(timer.delay, mod.exports.shoulderTour.steps[player().index].durationMs); timer.fn(); render(); }
+  function tick(expectedDuration) { assert.equal(timers.size, 1, 'Exactly one autoplay timer'); const [id, timer] = [...timers][0]; timers.delete(id); assert.equal(timer.delay, expectedDuration ?? mod.exports.shoulderTour.steps[player().index].durationMs); timer.fn(); render(); }
   render();
-  return { render, find, player, hasPlayer, scene, views, modes, modeRadio, panelCalls, choose, enter, ready, tick, timers, tools, doc, win, preference, events, api: mod.exports };
+  const unmount = () => { for (const slot of slots) slot?.cleanup?.(); };
+  return { render, find, player, hasPlayer, scene, views, modes, modeRadio, panelCalls, choose, enter, ready, tick, unmount, timers, tools, doc, win, preference, events, api: mod.exports };
 }
 
 test('Production session starts manually, steps, pauses, autoplays and stops on final step', () => {
@@ -68,6 +70,51 @@ test('Production session starts manually, steps, pauses, autoplays and stops on 
   while (h.player().index < 4) h.tick();
   h.tick(); assert.equal(h.player().index, 4); assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
   h.player().onExit(); h.render(); assert.equal(h.player().index, null); assert.equal(h.scene().tourLocked, false);
+});
+
+test('Play full tour starts at the first stop with long readable timing and holds the last stop', () => {
+  const h = harness(); h.ready(); h.enter(); h.player().onPlayFullTour(); h.render();
+  assert.equal(h.player().index, 0); assert.equal(h.player().playing, true);
+  assert.equal(h.scene().transitionMs, 8000);
+  for (let index = 0; index < h.api.shoulderTour.steps.length; index++) {
+    const duration = h.api.shoulderTour.continuousPlayback.stepDurationsMs[index];
+    assert(duration >= 24000);
+    h.tick(duration);
+    assert.equal(h.player().index, Math.min(index + 1, 4));
+  }
+  assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+  assert.equal(h.scene().tourLocked, true, 'Final stop remains available to read');
+  h.player().onExit(); h.render(); assert.equal(h.player().index, null);
+});
+
+test('Continuous playback pauses for reading, pagehide, source loss and preference changes without stale advancement', () => {
+  for (const cause of ['reading', 'pagehide', 'hidden', 'model', 'renderer', 'motion', 'exit']) {
+    const h = harness(); h.ready(); h.enter(); h.player().onPlayFullTour(); h.render();
+    const queued = [...h.timers.values()][0].fn;
+    if (cause === 'reading') h.player().onReadImaging();
+    if (cause === 'pagehide') h.events.get('pagehide')();
+    if (cause === 'hidden') { h.doc.hidden = true; h.events.get('visibilitychange')(); }
+    if (cause === 'model') h.scene().onModelReady(false);
+    if (cause === 'renderer') h.scene().onRendererHealth('failed');
+    if (cause === 'motion') { h.preference.matches = true; h.events.get('motion')(); }
+    if (cause === 'exit') h.player().onExit();
+    queued(); h.render();
+    assert.equal(h.player().index, cause === 'exit' ? null : 0, `${cause}: queued advancement revoked`);
+    assert.equal(h.player().playing, false); assert.equal(h.timers.size, 0);
+    if (cause !== 'exit') assert.equal(h.scene().transitionPaused, true, `${cause}: camera frozen`);
+    h.doc.hidden = false; h.preference.matches = false;
+    h.scene().onRendererHealth('ready'); h.scene().onModelReady(true); h.render();
+    assert.equal(h.player().playing, false, `${cause}: recovery does not resume`);
+  }
+});
+
+test('Unmount revokes a captured continuous callback', () => {
+  const h = harness(); h.ready(); h.enter(); h.player().onPlayFullTour(); h.render();
+  const queued = [...h.timers.values()][0].fn;
+  const selected = h.scene().selectedId;
+  h.unmount(); queued();
+  assert.equal(h.timers.size, 0);
+  assert.equal(h.scene().selectedId, selected);
 });
 
 test('Reduced-motion activation pauses autoplay, rejects queued callback and never auto-resumes', () => {

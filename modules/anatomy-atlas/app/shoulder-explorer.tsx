@@ -107,6 +107,7 @@ import { StudyViews } from './study-views';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import manifest from '@/public/models/bodyparts3d/manifest.json';
 import { shoulderTour, shoulderTourStepView } from '@/lib/shoulder-tours';
+import { GUIDED_SWEEP_MS } from '@/lib/guided-playback';
 import { ShoulderTourPlayer } from './shoulder-tour-player';
 
 type Mode = 'study' | 'exam';
@@ -190,6 +191,7 @@ export default function ShoulderExplorer({
   const [tourIndex, setTourIndex] = useState<number | null>(null);
   const [guidedLearning, setGuidedLearning] = useState(false);
   const [tourPlaying, setTourPlaying] = useState(false);
+  const [tourContinuous, setTourContinuous] = useState(false);
   const [tourMotionPaused, setTourMotionPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const beforeTour = useRef<{ view: StudyView; zoomStep: number } | null>(null);
@@ -331,19 +333,24 @@ export default function ShoulderExplorer({
     tourPlaybackEpoch.current++;
     applyTourStep(index);
   }, [applyTourStep, tourIndex]);
-  function startTour() {
+  function startTour(continuous = false) {
     if (!guidedLearning || tourActiveRef.current || !displayReady || mode !== 'study' || workspace.mode === 'practice') return;
     beforeTour.current = { view: structuredClone(captureView()), zoomStep };
     tourActiveRef.current = true;
-    setTourPlaying(false);
+    tourPlaybackEpoch.current++;
+    setTourContinuous(continuous);
+    setTourPlaying(continuous && !document.hidden && !reducedMotion);
     applyTourStep(0);
+    if (document.hidden || reducedMotion) setTourMotionPaused(true);
   }
   function exitTour() {
+    tourPlaybackEpoch.current++;
     const saved = beforeTour.current;
     beforeTour.current = null;
     tourActiveRef.current = false;
     setTourIndex(null);
     setTourPlaying(false);
+    setTourContinuous(false);
     setTourMotionPaused(false);
     if (saved) {
       applyStudyView(saved.view);
@@ -358,25 +365,22 @@ export default function ShoulderExplorer({
   useEffect(() => {
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
     const update = () => {
-      if (preference.matches) {
-        tourPlaybackEpoch.current++;
-        setTourPlaying(false);
-        setTourMotionPaused(true);
-      }
+      if (preference.matches && tourActiveRef.current) pauseTourPlayback();
       setReducedMotion(preference.matches);
     };
     update();
     preference.addEventListener('change', update);
     return () => preference.removeEventListener('change', update);
-  }, []);
+  }, [pauseTourPlayback]);
   useEffect(() => {
     if (!tourActive) return;
-    const pause = () => { setTourPlaying(false); setTourMotionPaused(true); };
-    const visibility = () => { if (document.hidden) pause(); };
-    if (!displayReady) pause();
+    const visibility = () => { if (document.hidden) pauseTourPlayback(); };
+    if (!displayReady) pauseTourPlayback();
     document.addEventListener('visibilitychange', visibility);
-    return () => document.removeEventListener('visibilitychange', visibility);
-  }, [tourActive, displayReady]);
+    window.addEventListener('pagehide', pauseTourPlayback);
+    return () => { document.removeEventListener('visibilitychange', visibility); window.removeEventListener('pagehide', pauseTourPlayback); };
+  }, [tourActive, displayReady, pauseTourPlayback]);
+  useEffect(() => () => { tourPlaybackEpoch.current++; tourActiveRef.current = false; }, []);
   useEffect(() => {
     if (!tourPlaying || tourIndex === null || !displayReady || document.hidden) return;
     let active = true;
@@ -385,9 +389,9 @@ export default function ShoulderExplorer({
       if (!active || epoch !== tourPlaybackEpoch.current || !tourActiveRef.current || document.hidden) return;
       if (tourIndex + 1 < shoulderTour.steps.length) applyTourStep(tourIndex + 1);
       else setTourPlaying(false);
-    }, shoulderTour.steps[tourIndex].durationMs);
+    }, tourContinuous ? shoulderTour.continuousPlayback.stepDurationsMs[tourIndex] : shoulderTour.steps[tourIndex].durationMs);
     return () => { active = false; window.clearTimeout(timer); };
-  }, [tourPlaying, tourIndex, displayReady, applyTourStep]);
+  }, [tourPlaying, tourIndex, tourContinuous, displayReady, applyTourStep]);
 
   const searchOptions = useMemo<SearchOption[]>(
     () => shoulderSearchOptions(structures),
@@ -1014,7 +1018,8 @@ export default function ShoulderExplorer({
                 index={tourIndex}
                 playing={tourPlaying}
                 ready={displayReady}
-                onStart={startTour}
+                onStart={() => startTour(false)}
+                onPlayFullTour={() => startTour(true)}
                 onReadImaging={pauseTourPlayback}
                 onPlayPause={() => {
                   if (!displayReady) return;
@@ -1156,7 +1161,7 @@ export default function ShoulderExplorer({
                 cameraCapture={cameraCapture}
                 cameraRestore={cameraRestore}
                 tourLocked={tourActive}
-                transitionMs={tourActive && !reducedMotion ? 1800 : 0}
+                transitionMs={tourActive && !reducedMotion ? (tourContinuous ? GUIDED_SWEEP_MS : 1800) : 0}
                 transitionPaused={tourMotionPaused}
                 onRendererHealth={reportRendererHealth}
                 onModelReady={reportModelReady}

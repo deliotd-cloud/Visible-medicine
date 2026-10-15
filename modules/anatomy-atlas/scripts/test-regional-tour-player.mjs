@@ -10,7 +10,7 @@ const require = createRequire(import.meta.url), React = require('react');
 const catalog = JSON.parse(await readFile(new URL('../public/models/bodyparts3d/full-body/catalog.json', import.meta.url), 'utf8'));
 const catalogBefore = JSON.stringify(catalog);
 const built = await build({ stdin: {
-contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, cervicalDiscTour, medialThighTour, posteriorCalfTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
+contents: "import {handVenousTours} from './lib/regional-tours'; export const rightHandVenousTour=handVenousTours[0],leftHandVenousTour=handVenousTours[1]; export { RegionalGuidedLearning } from './app/regional-guided-learning'; export { regionalTours, elbowArterialTour, pancreaticArterialTour, pulmonaryVenousTour, cranialVaultTour, diaphragmTour, pelvicVenousTour, digestiveTractTour, urinaryTractTour, orbitalNerveTour, forearmArterialTour, cardiacVenousTour, lowerArterialTour, thoraxTour, chestWallTour, orbitalTour, intrinsicLarynxTour, cervicalSpineTour, cervicalDiscTour, medialThighTour, posteriorCalfTour, celiacTour, forearmTour, subscapularTour, lumbarTour, carpalTour, renalTour, hepatobiliaryTour, handArterialTour, coronaryArterialTour, thoracicSpineTour, lowerVenousTour, tarsalTour, lowerLimbBoneTour, upperLimbBoneTour, pelvicRingTour, thighTour, legTour, handTour, footTour, upperArmTour, larynxTour, malePelvisTour, maleDuctTour, regionalTourStructures, regionalTourFrame, regionalTourEvidence } from './lib/regional-tours'; export {bodyDisplayCatalog} from './lib/body-display-catalog'; export {bodyLinkEntries} from './lib/anatomy-link-registry'; export {createPausedTourImaging} from './lib/paused-tour-imaging'; export {imagingBridge,createAtlasReceiver} from './lib/imaging-sync'; export { allBodySystems } from './app/body-types'; export { initialInspection } from './lib/inspection-state';",
   loader: 'tsx', resolveDir: process.cwd(),
 }, bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' }, plugins: [{ name: 'gpu-boundary', setup(api) {
   api.onLoad({ filter: /[\\/]app[\\/]body-scene\.tsx$/ }, () => ({ loader: 'tsx', contents: 'if(globalThis.retryControl.importError)throw new Error("import failed"); export function BodyScene(){return null;} export function retryBodyAssets(urls,base){globalThis.retryControl.clear(urls,base);}' }));
@@ -41,7 +41,8 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   const mod = { exports: {} };
   runInNewContext(built.outputFiles[0].text, { module: mod, exports: mod.exports, window: win, document: doc, structuredClone, crypto, retryControl,
     require(id) { if (id === 'react') return shim; if (id === 'next/dynamic') return () => 'BodyScene'; return require(id); } });
-  const api = mod.exports, props = { catalog: api.bodyDisplayCatalog(source), tour: api[tourName], assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
+  const api = mod.exports, props = { catalog: api.bodyDisplayCatalog(source), tour: api[tourName]??api.regionalTours.find(t=>t.id===tourName), assetBase: '/atlas-runtime/head-neck', onExit() { exits++; } };
+  assert(props.tour, `Available tour: ${tourName}`);
   if(missingDisplayId)props.catalog={...props.catalog,structures:props.catalog.structures.filter(s=>s.id!==missingDisplayId)};
   const tourBefore = JSON.stringify(props.tour);
   function render() { let count = 0; do { dirty = false; cursor = 0; pending = []; tree = api.RegionalGuidedLearning(props); assert(++count < 15); if(dirty)continue;
@@ -55,13 +56,90 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   const bundles = () => [...new Set(scene().structures.map(s => s.bundle))];
   function ready() { for (const id of bundles()) scene().onLoaded(id); scene().onRendererHealth('ready'); render(); }
   function click(label) { const control = button(label); assert(!control.disabled, `${label} enabled`); control.onClick(); render(); }
-  function tick() { assert.equal(timers.size, 1); const [id, timer] = [...timers][0]; timers.delete(id); assert.equal(timer.delay, props.tour.steps[scene().reset].durationMs); timer.fn(); render(); }
+  function tick(expectedDuration) { assert.equal(timers.size, 1); const [id, timer] = [...timers][0]; timers.delete(id); assert.equal(timer.delay, expectedDuration??props.tour.steps[scene().reset].durationMs); timer.fn(); render(); }
   function unchanged() { assert.equal(JSON.stringify(catalog), catalogBefore, 'Source catalogue unchanged'); assert.equal(JSON.stringify(props.tour), tourBefore, 'Tour definition unchanged'); }
   function unmount(){for(const slot of slots)slot?.cleanup?.();mounted=false;}
   async function settle(){await new Promise(resolve=>setImmediate(resolve));if(mounted)render();}
   render();
   return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, mountReady(){autoReady=true;render();}, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
 }
+
+test('Play full tour traverses every source-bound regional tour with readable timing and a final hold',()=>{
+ const inventory=harness(),tours=inventory.api.regionalTours.map(t=>({id:t.id,steps:t.steps.length}));
+ assert(tours.length>=50,'Exercise the complete current regional registry');inventory.unmount();
+ for(const {id,steps} of tours){
+  const h=harness(catalog,id),tour=h.props.tour;
+  assert.equal(tour.steps.length,steps,id);
+  const ids=[...new Set([...tour.contextIds,...tour.steps.map(step=>step.selectedId)])];
+  assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids,`${id}: exact selected and context sources`);
+  const required=[...new Set(ids.map(sourceId=>h.props.catalog.structures.find(s=>s.id===sourceId)?.bundle))];
+  assert(!required.includes(undefined),`${id}: every source exists`);
+  assert.deepEqual(plain(h.bundles().sort()),plain(required.sort()),`${id}: all source bundles retained`);
+  assert(h.button('Play full tour').disabled,`${id}: waits for all bundles and renderer`);
+  assert.equal(h.timers.size,0);h.ready();h.click('Play full tour');
+  const evidence=h.api.regionalTourEvidence(h.props.catalog,tour.steps[0].selectedId).find(item=>item.tour.id===id)?.continuousPlayback;
+  assert(evidence,`${id}: continuous review evidence exists`);
+  assert.equal(evidence.transitionMs,8000);assert.equal(evidence.final,'hold');
+  assert.equal(evidence.stepDurationsMs.length,steps);
+  for(const [index,step] of tour.steps.entries()){
+   assert.equal(h.scene().reset,index,`${id}: stop ${index} index`);
+   assert.equal(h.scene().selectedId,step.selectedId,`${id}: stop ${index} selected source`);
+   assert.equal(h.scene().view,step.view,`${id}: stop ${index} view`);
+   assert.equal(h.scene().explode,0,`${id}: source separation remains zero`);
+   assert.equal(h.scene().transitionMs,8000,`${id}: slow camera sweep`);
+   assert.deepEqual(plain(h.scene().structures.map(s=>s.id)),ids,`${id}: displayed source set stays assembled`);
+   assert(text(h.tree()).includes(step.caption),`${id}: full authored caption at stop ${index}`);
+   assert(evidence.stepDurationsMs[index]>=24000,`${id}: readable stop duration`);
+   h.tick(evidence.stepDurationsMs[index]);
+  }
+  assert.equal(h.scene().reset,steps-1,`${id}: final stop held`);
+  assert.equal(h.scene().selectedId,tour.steps.at(-1).selectedId);
+  assert.equal(h.timers.size,0);assert.equal(h.button('Play')['aria-pressed'],false);
+  assert.equal(h.scene().transitionPaused,true);assert.equal(h.exits(),0,`${id}: never auto-exits`);
+  h.unchanged();h.unmount();
+ }
+});
+
+test('Continuous regional playback revokes captured timers for user reading, interruption and source change',()=>{
+ const start=()=>{const h=harness(catalog,'thoraxTour');h.ready();h.click('Play full tour');return h;};
+ {
+  const h=start(),queued=[...h.timers.values()][0].fn;
+  h.button('Pause').onClick();queued();h.render();
+  assert.equal(h.scene().reset,0);assert.equal(h.timers.size,0);assert.equal(h.scene().transitionPaused,true);
+  h.click('Play');assert.equal(h.timers.size,1);
+  const old=[...h.timers.values()][0].fn;
+  h.button('Next').onClick();old();h.render();
+  assert.equal(h.scene().reset,1,'Manual Next wins over captured continuous timer');
+  assert.equal(h.timers.size,1,'Next starts a fresh full-duration timer');
+  assert.equal([...h.timers.values()][0].delay,h.api.regionalTourEvidence(h.props.catalog,h.props.tour.steps[1].selectedId).find(item=>item.tour.id===h.props.tour.id).continuousPlayback.stepDurationsMs[1]);
+  h.click('Pause');h.unmount();
+ }
+ for(const cause of ['caption-focus','references','picker','hidden','pagehide','bundle-failed','renderer-failed','reduced-motion','source-change','exit','unmount']){
+  const h=start(),queued=[...h.timers.values()][0].fn;
+  if(cause==='caption-focus')nodes(h.tree()).find(n=>n.props?.['aria-label']==='Current step explanation').props.onFocus();
+  if(cause==='references')nodes(h.tree()).find(n=>n.props?.className==='regional-tour-resources').props.onFocusCapture();
+  if(cause==='picker')nodes(h.tree()).find(n=>n.type?.name==='TourStepPicker').props.onPause();
+  if(cause==='hidden'){h.doc.hidden=true;h.listeners.get('visibilitychange')();}
+  if(cause==='pagehide')h.listeners.get('window:pagehide')();
+  if(cause==='bundle-failed')h.scene().onFailure(h.bundles()[0]);
+  if(cause==='renderer-failed')h.scene().onRendererHealth('failed');
+  if(cause==='reduced-motion'){h.preference.matches=true;h.listeners.get('motion')();}
+  if(cause==='source-change'){h.props.catalog={...h.props.catalog};h.render();}
+  if(cause==='exit')h.button('Exit tour').onClick();
+  if(cause==='unmount')h.unmount();
+  queued();if(cause!=='unmount')h.render();
+  assert.equal(h.timers.size,0,`${cause}: no old timer remains`);
+  if(cause!=='source-change'&&cause!=='unmount')assert.equal(h.scene().reset,0,`${cause}: stale callback cannot advance`);
+  if(!['source-change','exit','unmount'].includes(cause)){
+   assert.equal(h.button('Play')['aria-pressed'],false,`${cause}: no automatic resume`);
+   assert.equal(h.scene().transitionPaused,true,`${cause}: camera frozen`);
+   h.doc.hidden=false;h.preference.matches=false;
+   h.scene().onRendererHealth('ready');h.render();
+   assert.equal(h.timers.size,0,`${cause}: recovery stays paused`);
+  }
+  if(cause!=='unmount')h.unmount();
+ }
+});
 
 test('Cranial vault tour keeps a stable assembled frame through six smooth stops',()=>{
  for(const compact of [false,true]){

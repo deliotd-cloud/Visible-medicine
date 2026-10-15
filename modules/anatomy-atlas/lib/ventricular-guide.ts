@@ -1,6 +1,7 @@
 import pins from '../content/nested-teaching-bindings.v1.json' with { type: 'json' };
 import type { BodyStructure } from '../app/body-types';
 import type { DissectionView } from '../app/dissection-data';
+import { guidedPlaybackEvidence } from './guided-playback';
 import { ventricleCatalog, ventriclesFor } from './ventricles';
 
 export const ventricularGuideReferences = [
@@ -15,6 +16,7 @@ export type VentricularGuide = {
   parentId: string;
   study: 'ventricles';
   transitionMs: 1800;
+  continuousPlayback: ReturnType<typeof guidedPlaybackEvidence>;
   fadeOthers: true;
   limitation: string;
   steps: Array<{
@@ -104,6 +106,12 @@ export function ventricularGuide(parent: BodyStructure): VentricularGuide | null
   const all = expected.map((entry) => entry.id);
   const lateral = all.slice(0, 2);
   const midline = all.slice(2);
+  const steps: VentricularGuide['steps'] = stops.map((stop) => ({
+      id: stop.id, title: stop.title, caption: stop.caption, preset: stop.preset,
+      selectedId: all[stop.selected], view: stop.view,
+      ids: [...(stop.preset === 'all' ? all : stop.preset === 'lateral' ? lateral : midline)],
+      references: ventricularGuideReferences.map((reference) => reference.url),
+    }));
   return {
     id: `ventricular-guide:${parent.id}`,
     title: 'Explore the ventricles',
@@ -111,17 +119,9 @@ export function ventricularGuide(parent: BodyStructure): VentricularGuide | null
     parentId: parent.id,
     study: 'ventricles',
     transitionMs: 1800,
+    continuousPlayback: guidedPlaybackEvidence(steps),
     fadeOthers: true,
     limitation: 'Draft source-space teaching only, pending revision-bound radiologist review. Interventricular foramina, cerebral aqueduct, fourth-ventricle outlets, choroid plexus and fluid flow are not segmented or simulated. No acquired-image registration, obstruction, pressure measurement or clinical diagnosis is shown.',
-    steps: stops.map((stop) => ({
-      id: stop.id,
-      title: stop.title,
-      caption: stop.caption,
-      preset: stop.preset,
-      selectedId: all[stop.selected],
-      view: stop.view,
-      ids: [...(stop.preset === 'all' ? all : stop.preset === 'lateral' ? lateral : midline)],
-      references: ventricularGuideReferences.map((reference) => reference.url),
-    })),
+    steps,
   };
 }
