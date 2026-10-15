@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Arm arterial X-ray teaching — 15 October 2026
+
+Original project-MIT factual summaries cite university anatomy documentation and
+primary historical upper-limb DSA, separate dissection/CTA variation, single-cadaver
+axillary-variant, injected adult-elbow and ulnar-nerve-supply research as reading
+references only. No publisher prose, table, image, scan, mesh, measurement dataset
+or media is copied, adapted, imported or relicensed. Reading access does not grant
+commercial image rights. Existing BodyParts3D CC BY4.0 notices/attribution and
+source restrictions remain unchanged. No new asset, dependency, font, paid service
+or mandatory fee. Fourteen exact-source draft placements require radiologist
+review; no acquired-image detection, connected lumen, patency, flow, perfusion,
+procedure route, patient registration or approval is established. See
+docs/ARM_ARTERIAL_XRAY.md for direct references and study-specific limitations.
+
 ## Forearm arterial branch X-ray teaching — 15 October 2026
 
 Original project-MIT factual summaries cite university anatomy documentation and

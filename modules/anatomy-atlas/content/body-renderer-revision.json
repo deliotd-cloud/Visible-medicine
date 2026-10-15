@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "09cbf006846073d7e100e5e452cf7b2689b3a61ae51c664efc4c4b8b9f43a53b"
+      "sha256": "322dad6fc1625709fb61762de9607600f2d55b601e4317a86bd1693986476ab5"
     },
     {
       "path": "app/body-education-link.ts",
@@ -635,6 +635,10 @@
     {
       "path": "content/anterior-cardiac-pathology.ts",
       "sha256": "a384a719203900d846f22f02dfafc5fe37549d8e3fb19bbecae1e5a7bb9e18bb"
+    },
+    {
+      "path": "content/arm-arterial-xray.ts",
+      "sha256": "3e2a5f1e18326ca2400f9cfc068c2f5a7bf9148cc19930dda42dd7b717b21d7f"
     },
     {
       "path": "content/arm-attachment-pins.json",
@@ -2322,7 +2326,7 @@
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
-      "sha256": "54cfd345f88bbf96b9220a6d24c47fd0f26d4088e7d3917c2ce23eecfef75a19"
+      "sha256": "b30c4e40aa02f12fa93f9bcea56af229ee42ad6b885ed791979b65467f6dd2d7"
     },
     {
       "path": "content/regional-teaching/spine.json",
@@ -3159,6 +3163,10 @@
     {
       "path": "lib/anterior-cardiac-vein.ts",
       "sha256": "65e542313743aa1b81e0bd6b131dd3bd9492830043631504ee59e4ff7cd5ff49"
+    },
+    {
+      "path": "lib/arm-arterial-xray.ts",
+      "sha256": "bca60649ebb12de16265be2ad5b7ba409bc9b3487d04384b46135e897fe366fc"
     },
     {
       "path": "lib/arm-attachments.ts",
@@ -5414,7 +5422,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "200013e2f07afbfe5882698b0541a6ecae5f7efd3dd452585ccccb6b1476ed0d"
+      "sha256": "06eb2467942f8c8fa398243da9a437ab9dbb40e6c419af2129e48508aee88454"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5637,5 +5645,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "ab5041f3387b8916d50355320d38d85b3e27bc13b744a012ffaeee3132eb5eb5"
+  "sha256": "13600e21393c308d2911ccd99cb6f3df7dc094f15488fbb4ca37bdb7f781875a"
 }
