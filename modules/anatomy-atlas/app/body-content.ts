@@ -72,6 +72,7 @@ import { thoracoacromialUltrasoundLesson } from '../lib/thoracoacromial-ultrasou
 import { hipAbductorXrayLesson } from '../lib/hip-abductor-xray';
 import { psoasXrayLesson } from '../lib/psoas-xray';
 import { thighAvulsionXrayLesson } from '../lib/thigh-avulsion-xray';
+import { hipMuscleXrayLesson } from '../lib/hip-muscle-xray';
 import { handArterialXrayLesson } from '../lib/hand-arterial-xray';
 import { handBoneXrayLesson } from '../lib/hand-bone-xray';
 import { interosseousMembraneProjectionLesson } from '../lib/interosseous-membrane-projection';
@@ -920,6 +921,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (psoasXray) return psoasXray;
   const thighAvulsionXray = thighAvulsionXrayLesson(s, tab);
   if (thighAvulsionXray) return thighAvulsionXray;
+  const hipMuscleXray = hipMuscleXrayLesson(s, tab);
+  if (hipMuscleXray) return hipMuscleXray;
   const handArterialXray = handArterialXrayLesson(s, tab);
   if (handArterialXray) return handArterialXray;
   const spineImaging = spineImagingLesson(s, tab);

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "1c96c563b177233b466d97b303e356c273e942d6bd909219433d17367864823a"
+      "sha256": "a7105468fc7fe00f1461e9db4500477f944f55f63a1d727c0b8e4e0af94e6b9e"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2322,7 +2322,7 @@
     },
     {
       "path": "content/regional-teaching/thigh.json",
-      "sha256": "dcea6dc4eb709710a17ade7f3c22746d197522187be7420e3f3f706aa90dc857"
+      "sha256": "45d635109d111322b477add3db9a54016835a92b80ae65033c28460684e7be2b"
     },
     {
       "path": "content/regional-teaching/thorax.json",
@@ -4021,6 +4021,10 @@
       "sha256": "033f69852bf6b66e3a36b4f6399bc7b0e5e03b0ff1382e9f6017ecd308ef88b5"
     },
     {
+      "path": "lib/hip-muscle-xray.ts",
+      "sha256": "1ea4c351224c39ec8885125133e1646d3af7bd04852a10133e1be9f83054b041"
+    },
+    {
       "path": "lib/hippocampi.ts",
       "sha256": "ae33235e59efb4a3303786cc2acbadb0b0feafe5900700cc77a849fb3192db31"
     },
@@ -5390,7 +5394,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2d6a004a2e59ecd3d6b8e091170e63c96c2ae52b9e48a65d930dee5a3da5f57e"
+      "sha256": "1309da085a310ee9dd9b06cf1f824cf9af12a8c69ea97737e0d8480abcee2530"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5613,5 +5617,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bdc533940e05691ebfc38104cb214514a4aa85cd5bc77cdd12c7404ec623d2d8"
+  "sha256": "3dbc12a3f5fbcbb549448107a99e9afa5c9b77cfd7e3e2af481077ac10e63dd9"
 }

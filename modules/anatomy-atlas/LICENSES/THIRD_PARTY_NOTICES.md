@@ -3804,3 +3804,15 @@ does not confer commercial media-reuse rights. Existing exact source selections,
 project MIT terms, BodyParts3D CC BY 4.0 attribution and source holds are unchanged.
 No new model, texture, font, dependency, service or fee. Exact-revision radiologist
 review remains pending. See `docs/THIGH_AVULSION_XRAY.md` for evidence and limits.
+
+## Hip muscle X-ray orientation — 15 October 2026
+
+Eight exact bilateral source selections now reuse four existing independently
+authored X-ray limitation notes. Anatomy references, primary studies and ACR
+guidance are factual reading links, not copied article text, figures, tables,
+scans, masks, annotations or other media. Reading access is not a commercial
+media-reuse licence. Existing project MIT terms, BodyParts3D CC BY 4.0
+attribution, model geometry and source holds remain unchanged. No new model,
+texture, font, dependency, paid service or mandatory fee is introduced.
+Exact-revision radiologist review remains pending; no acquired image or patient
+registration is supplied. See `docs/HIP_MUSCLE_XRAY.md` for scope and evidence.
