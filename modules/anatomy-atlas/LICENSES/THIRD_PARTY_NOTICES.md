@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Forearm arterial branch X-ray teaching — 15 October 2026
+
+Original project-MIT factual summaries cite university anatomy documentation and
+primary Goelz, Hayashi/Maruyama, adult-elbow and radial-recurrent variation studies
+as reading references only. No publication prose, table, figure, scan, mesh,
+measurement dataset or media is imported, adapted or relicensed. Reading access
+does not grant commercial image rights. Existing BodyParts3D CC BY4.0 notices
+and obligations remain unchanged. No new asset, font, dependency, service or
+mandatory fee. Twelve exact-source draft placements require radiologist review;
+no acquired-image visibility, lumen connectivity, patency, perfusion, procedure,
+patient-space registration or approval is established. See
+docs/FOREARM_BRANCH_XRAY.md for source links and study-specific limits.
+
 ## Adductor longus X-ray limitation teaching — 15 October 2026
 
 Original project-MIT factual prose cites the 2015 primary case report

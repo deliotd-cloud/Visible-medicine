@@ -49,6 +49,7 @@ import { shoulderGirdleArterialUltrasoundLesson } from '../lib/shoulder-girdle-a
 import { elbowArterialUltrasoundLesson } from '../lib/elbow-arterial-ultrasound';
 import { elbowArterialUsFollowupLesson } from '../lib/elbow-arterial-us-followup';
 import { forearmVascularXrayLesson } from '../lib/forearm-vascular-xray';
+import { forearmBranchXrayLesson } from '../lib/forearm-branch-xray';
 import { medianCubitalXrayLesson } from '../lib/median-cubital-xray';
 import { neonatalCranialUltrasoundLesson } from '../lib/neonatal-cranial-ultrasound';
 import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
@@ -413,6 +414,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (ocularSupportQuiz) return ocularSupportQuiz;
   const forearmVascularXray = forearmVascularXrayLesson(s, tab);
   if (forearmVascularXray) return forearmVascularXray;
+  const forearmBranchXray = forearmBranchXrayLesson(s, tab);
+  if (forearmBranchXray) return forearmBranchXray;
   const medianCubitalXray = medianCubitalXrayLesson(s, tab);
   if (medianCubitalXray) return medianCubitalXray;
   const neonatalCranialUltrasound = neonatalCranialUltrasoundLesson(s, tab);
