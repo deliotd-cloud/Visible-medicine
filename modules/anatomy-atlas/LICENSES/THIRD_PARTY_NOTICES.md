@@ -3772,3 +3772,14 @@ commercial media-reuse rights. Project MIT terms and the existing BodyParts3D
 CC BY 4.0 attribution remain unchanged. No new model, texture, font, dependency,
 service or fee is introduced. Source/clinical holds and independent entitlements
 remain; revision-bound radiologist review is pending. See `docs/LEG_ARTERIAL_XRAY.md`.
+
+## Central-canal X-ray limitation teaching — 15 October 2026
+
+One independently written factual summary cites RadiologyInfo myelography and
+spine MRI as reading references. No publisher text, image, table, scan, mask,
+annotation or other media is imported. Reading access is not a media-reuse
+licence. Existing project MIT terms, BodyParts3D CC BY 4.0 attribution and source
+holds remain unchanged. The lesson reuses one exact existing central-canal source
+surface; no model, texture, font, dependency, service or fee is added. It does
+not claim plain-film visibility, measured CSF flow, patient registration or
+clinical approval. See `docs/CENTRAL_CANAL_XRAY.md`; radiologist review is pending.

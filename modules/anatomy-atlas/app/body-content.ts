@@ -33,6 +33,7 @@ import { thoracicDetailUltrasoundLesson } from '../lib/thoracic-detail-ultrasoun
 import { iliacVenousXrayLesson } from '../lib/iliac-venous-xray';
 import { intracranialArterialXrayLesson } from '../lib/intracranial-arterial-xray';
 import { centralCanalImagingLesson } from '../lib/central-canal-imaging';
+import { centralCanalXrayLesson } from '../lib/central-canal-xray';
 import { footVenousArchImagingLesson } from '../lib/foot-venous-arch-imaging';
 import { abdominalFoldUltrasoundLesson } from '../lib/abdominal-fold-ultrasound';
 import { spinalDiscUltrasoundLesson } from '../lib/spinal-disc-ultrasound';
@@ -593,6 +594,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (lateralCricoarytenoidUs) return lateralCricoarytenoidUs;
   const centralCanalImaging = centralCanalImagingLesson(s, tab);
   if (centralCanalImaging) return centralCanalImaging;
+  const centralCanalXray = centralCanalXrayLesson(s, tab);
+  if (centralCanalXray) return centralCanalXray;
   const footVenousArchImaging = footVenousArchImagingLesson(s, tab);
   if (footVenousArchImaging) return footVenousArchImaging;
   const abdominalEusOrientation = abdominalEusOrientationLesson(s, tab);

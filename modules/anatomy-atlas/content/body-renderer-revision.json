@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6e8b81c0e234b46d65e196d32361fb167dd42bf37dad8126526b81da9fa6b6b3"
+      "sha256": "ceeed0acf31ce59db21b7ce2be2f2a08c7681114006a423099e5cf62d09a22df"
     },
     {
       "path": "app/body-education-link.ts",
@@ -723,6 +723,10 @@
     {
       "path": "content/central-canal-imaging.ts",
       "sha256": "8ab8ab2d152962c4d18b8da4717f66ac81a24df437d0b5a9c90fdebb8a77992c"
+    },
+    {
+      "path": "content/central-canal-xray.ts",
+      "sha256": "c3dcc924bdf4e5946f3dd0864d45e54a2fc5089f2f1b029564e762d641a8cbbd"
     },
     {
       "path": "content/central-neural-imaging-pins.json",
@@ -2314,7 +2318,7 @@
     },
     {
       "path": "content/regional-teaching/spine.json",
-      "sha256": "076c6582eb64006196b5669aa917752d2caadb81c24684df05144eecabfed273"
+      "sha256": "0091d7899fe85aeaefcb9818ee2d2812462fbe338a4d847d29e8e85afc00772d"
     },
     {
       "path": "content/regional-teaching/thigh.json",
@@ -3319,6 +3323,10 @@
     {
       "path": "lib/central-canal-imaging.ts",
       "sha256": "27674250c49916a39e4a5762eac5828e0640f4a68ce1905c07bfe9f521eb34c3"
+    },
+    {
+      "path": "lib/central-canal-xray.ts",
+      "sha256": "779fb60a1f1ab85b3423f0cb93dcf6bfa02da83640bab15b04101d81513104a4"
     },
     {
       "path": "lib/central-neural-clinical-curriculum.ts",
@@ -5366,7 +5374,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "3bb13e0083e486c1b80e0709693108ecfeb93ba326042412452f4021981c76df"
+      "sha256": "1c0eb3c5a3b6bbad08172be4da1aa58bb9f723580a207a6a97ed8a1b3c7a246f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5589,5 +5597,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8886b1ad73d8557431f1e5f9bd17d252c82c9f7e35aa2f886b8501ff196cebf1"
+  "sha256": "611628429e441166cc6a93d233e2a88fcb07b5dad23314be9a70e2ae52f91b2f"
 }
