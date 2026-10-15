@@ -4,7 +4,8 @@ import { ImagingLink } from './imaging-link';
 import { modelLoadAccessNotice, type ModelLoadFailure } from '@/lib/model-load-failure';
 import { useNestedEducationLink } from './nested-education-link';
 import {useHeadNestedSelection} from './head-selection-channel';
-import { GUIDED_SWEEP_MS, guidedPlaybackDuration } from '@/lib/guided-playback';
+import { guidedPlaybackDuration, guidedSweepDuration, isGuidedPlaybackRate, type GuidedPlaybackRate } from '@/lib/guided-playback';
+import { TourSpeedControl } from './tour-speed-control';
 import { femoralComponentsFor } from '@/lib/femoral-components';
 import { cranialArteryComponentsFor } from '@/lib/cranial-artery-components';
 import {
@@ -580,6 +581,7 @@ export function VentricularView({
   const [pageHidden, setPageHidden] = useState(false);
   const [guidance, setGuidance] = useState<{ id: string; index: number; camera: StudyCamera | null } | null>(null);
   const [fullTour, setFullTour] = useState(false), [tourPlaying, setTourPlaying] = useState(false);
+  const [tourRate, setTourRate] = useState<GuidedPlaybackRate>(1);
   const [tourMotionPaused, setTourMotionPaused] = useState(false);
   const playbackEpoch = useRef(0);
   const playbackOwner = useRef<{guide: typeof guide; guidance: typeof guidance; parent: typeof parent;
@@ -759,11 +761,16 @@ export function VentricularView({
         !owner.ready || owner.hidden || !owner.fullTour || !owner.playing) return;
       if (index + 1 < guide.steps.length) guideStep(index + 1);
       else pauseTour();
-    }, guidedPlaybackDuration(guide.steps[index].caption));
+    }, guidedPlaybackDuration(guide.steps[index].caption, 0, tourRate));
     return () => { active = false; window.clearTimeout(timer); };
-  }, [fullTour, tourPlaying, guidance, guide, parent, ready, pageHidden, pauseTour]);
+  }, [fullTour, tourPlaying, guidance, guide, parent, ready, pageHidden, tourRate, pauseTour]);
   useEffect(() => { if (fullTour && (!ready || pageHidden || guidance?.id !== guide?.id)) pauseTour(); },
     [fullTour, ready, pageHidden, guidance?.id, guide?.id, pauseTour]);
+  const changeTourRate = (rate: GuidedPlaybackRate) => {
+    if (!isGuidedPlaybackRate(rate) || rate === tourRate) return;
+    playbackEpoch.current++;
+    setTourRate(rate);
+  };
   useEffect(() => {
     const leave = () => pauseTour();
     window.addEventListener('pagehide', leave);
@@ -1035,7 +1042,7 @@ export function VentricularView({
           cameraCapture={cameraCapture}
           cameraRestore={cameraRestore}
           tourLocked={!!step}
-          transitionMs={step && !reducedMotion ? fullTour ? GUIDED_SWEEP_MS : guide!.transitionMs : 0}
+          transitionMs={step && !reducedMotion ? fullTour ? guidedSweepDuration(tourRate) : guide!.transitionMs : 0}
           transitionPaused={!!step && (!ready || pageHidden || (fullTour && tourMotionPaused))}
           onSelect={select}
           onLoaded={onLoaded}
@@ -1156,6 +1163,7 @@ export function VentricularView({
             else if (!step) setGuideExpanded(event.currentTarget.open);
           }}>
           <summary>Guided learning</summary>
+          <TourSpeedControl rate={tourRate} onRateChange={changeTourRate} />
           {step ? <section aria-label={study === 'cardiac' ? 'Cardiac cavity walkthrough' : 'Ventricular walkthrough'} aria-live="polite">
             <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
             <h3>{step.title}</h3>

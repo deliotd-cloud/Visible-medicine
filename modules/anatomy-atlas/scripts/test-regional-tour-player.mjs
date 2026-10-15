@@ -61,8 +61,34 @@ function harness(source = catalog, tourName = 'thoraxTour', compact = false, mis
   function unmount(){for(const slot of slots)slot?.cleanup?.();mounted=false;}
   async function settle(){await new Promise(resolve=>setImmediate(resolve));if(mounted)render();}
   render();
-  return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, mountReady(){autoReady=true;render();}, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
+  return { render, scene, button, bundles, ready, click, tick, timers, preference, listeners, doc, api, props, unchanged, unmount, settle, retryControl, speed:()=>find(n=>n.type?.name==='TourSpeedControl'), mountReady(){autoReady=true;render();}, lateUpdates:()=>lateUpdates, tree: () => tree, exits: () => exits };
 }
+
+test('live tour speed rescales camera and current stop, retires old callbacks and preserves exact anatomy',()=>{
+ const h=harness();h.ready();assert.equal(h.speed().rate,1);
+ h.speed().onRateChange(2);h.render();assert.equal(h.timers.size,0,'speed selection does not start playback');
+ h.click('Play full tour');assert.equal(h.scene().transitionMs,4000);assert.equal(h.scene().reset,0);
+ const before=h.scene().structures,old=[...h.timers.values()][0];assert.equal(old.delay,12000);
+ h.speed().onRateChange(3);old.fn();h.render();
+ assert.equal(h.scene().reset,0,'queued old-speed stop cannot advance before cleanup');
+ assert.equal(h.scene().transitionMs,2667);assert.equal([...h.timers.values()][0].delay,8000);
+ assert.deepEqual(h.scene().structures,before);assert.equal(h.button('Pause')['aria-pressed'],true);
+ for(const invalid of [0,NaN,Infinity,4,'2']){h.speed().onRateChange(invalid);h.render();assert.equal(h.speed().rate,3);}
+ h.tick(8000);assert.equal(h.scene().reset,1);h.unchanged();h.unmount();
+});
+
+test('speed choices never resume paused, hidden or reduced-motion tours; manual navigation keeps its camera timing',()=>{
+ const h=harness();h.ready();h.click('Play full tour');h.click('Pause');
+ h.speed().onRateChange(.5);h.render();assert.equal(h.timers.size,0);assert.equal(h.scene().reset,0);assert.equal(h.scene().transitionPaused,true);
+ h.click('Play');assert.equal(h.scene().transitionMs,16000);assert.equal([...h.timers.values()][0].delay,48000);
+ h.doc.hidden=true;h.listeners.get('visibilitychange')();h.render();h.speed().onRateChange(2);h.render();assert.equal(h.timers.size,0);
+ h.doc.hidden=false;h.listeners.get('visibilitychange')();h.render();assert.equal(h.timers.size,0,'visibility does not resume');
+ h.preference.matches=true;h.listeners.get('motion')();h.render();h.speed().onRateChange(3);h.render();
+ assert.equal(h.timers.size,0);assert.equal(h.scene().transitionMs,0,'speed never overrides reduced motion');h.unmount();
+ const manual=harness();manual.ready();manual.click('Start guided tour');manual.click('Play');
+ const duration=manual.props.tour.steps[0].durationMs;manual.speed().onRateChange(2);manual.render();
+ assert.equal(manual.scene().transitionMs,1800);assert.equal([...manual.timers.values()][0].delay,Math.ceil(duration/2));manual.tick(Math.ceil(duration/2));manual.unchanged();manual.unmount();
+});
 
 test('Play full tour traverses every source-bound regional tour with readable timing and a final hold',()=>{
  const inventory=harness(),tours=inventory.api.regionalTours.map(t=>({id:t.id,steps:t.steps.length}));

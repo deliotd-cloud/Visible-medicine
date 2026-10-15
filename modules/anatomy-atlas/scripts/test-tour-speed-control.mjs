@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import {build} from './workspace-component-test-build.mjs';
+const require=createRequire(import.meta.url);
+const built=await build({stdin:{contents:"export {TourSpeedControl} from './app/tour-speed-control';",loader:'tsx',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'cjs',loader:{'.css':'empty'}});
+const mod={exports:{}};runInNewContext(built.outputFiles[0].text,{module:mod,exports:mod.exports,require});
+const called=[];
+const select=(rate,disabled=false)=>mod.exports.TourSpeedControl({rate,disabled,onRateChange:next=>called.push(next)}).props.children[1];
+const control=select(1);assert.equal(control.props['aria-label'],'Tour speed');assert.equal(control.props.value,1);
+assert.deepEqual(Array.from(control.props.children,option=>option.props.value),[.5,1,1.5,2,3]);
+for(const raw of ['.5','1.5','2','3'])control.props.onChange({currentTarget:{value:raw}});
+assert.deepEqual(called,[.5,1.5,2,3]);
+for(const raw of ['1','','0','4','-1','NaN','Infinity','injected'])control.props.onChange({currentTarget:{value:raw}});
+assert.deepEqual(called,[.5,1.5,2,3]);select(1,true).props.onChange({currentTarget:{value:'2'}});assert.deepEqual(called,[.5,1.5,2,3]);
+console.log(JSON.stringify({verdict:'pass',nativeAccessibleSelect:true,presets:5,invalidAndDisabledRefused:true,defaultUnchanged:true}));

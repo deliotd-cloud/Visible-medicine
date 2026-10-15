@@ -7,6 +7,19 @@ for(const authored of [undefined,0,-1,NaN,Infinity,14000])assert.equal(api.guide
 assert.equal(api.guidedPlaybackDuration('',60000),60000);
 const long=Array(120).fill('anatomy').join(' ');assert.equal(api.guidedPlaybackDuration(long,14000),48000);
 assert.equal(api.guidedPlaybackDuration('one\t two\nthree',0),24000);
+assert.deepEqual(api.GUIDED_PLAYBACK_RATES,[0.5,1,1.5,2,3]);
+for(const rate of api.GUIDED_PLAYBACK_RATES){
+ assert.equal(api.isGuidedPlaybackRate(rate),true);
+ assert.equal(api.guidedSweepDuration(rate),Math.ceil(8000/rate));
+ assert.equal(api.guidedPlaybackDuration('Short original caption.',14000,rate),Math.ceil(24000/rate));
+ assert.equal(api.guidedPlaybackDuration(long,14000,rate),Math.ceil(48000/rate));
+ assert(api.guidedPlaybackDuration('Short',0,rate)>api.guidedSweepDuration(rate));
+}
+for(const invalid of [null,undefined,NaN,Infinity,-1,0,0.1,4,'2',{},[]]){
+ assert.equal(api.isGuidedPlaybackRate(invalid),false);
+ assert.equal(api.guidedSweepDuration(invalid),8000);
+ assert.equal(api.guidedPlaybackDuration('Short',0,invalid),24000);
+}
 const steps=[{caption:'One short stop.',durationMs:14000},{caption:long},{caption:'Third',durationMs:90000}],before=structuredClone(steps);
 assert.deepEqual(api.guidedPlaybackEvidence(steps),{version:1,start:'explicit-play-full-tour',transition:'quintic-orbit',transitionMs:8000,minimumStepMs:24000,captionWordsPerMinute:180,stepDurationsMs:[24000,48000,90000],final:'hold',reducedMotion:'no-camera-sweep'});
 assert.deepEqual(steps,before);

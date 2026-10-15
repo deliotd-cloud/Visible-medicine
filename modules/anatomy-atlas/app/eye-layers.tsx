@@ -5,7 +5,8 @@ import { ImagingLink } from './imaging-link';
 import { useNestedEducationLink } from './nested-education-link';
 import {useHeadNestedSelection} from './head-selection-channel';
 import type { NestedImagingTopic } from '@/content/nested-teaching';
-import { GUIDED_SWEEP_MS, guidedPlaybackDuration } from '@/lib/guided-playback';
+import { guidedPlaybackDuration, guidedSweepDuration, isGuidedPlaybackRate, type GuidedPlaybackRate } from '@/lib/guided-playback';
+import { TourSpeedControl } from './tour-speed-control';
 import { ArrowLeft, RotateCcw, Eye, Focus, Tags } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
@@ -114,6 +115,7 @@ export function EyeLayerView({
   const [reducedMotion, setReducedMotion] = useState(true), [pageHidden, setPageHidden] = useState(false);
   const [guidance, setGuidance] = useState<{id: string; index: number; camera: StudyCamera | null} | null>(null);
   const [fullTour, setFullTour] = useState(false), [tourPlaying, setTourPlaying] = useState(false);
+  const [tourRate, setTourRate] = useState<GuidedPlaybackRate>(1);
   const [motionPaused, setMotionPaused] = useState(false);
   const playbackEpoch = useRef(0);
   const playbackOwner = useRef<{guide: typeof guide; guidance: typeof guidance; parent: typeof parent;
@@ -143,11 +145,16 @@ export function EyeLayerView({
         !owner.ready || owner.hidden || !owner.fullTour || !owner.playing) return;
       if (index + 1 < guide.steps.length) guideStep(index + 1);
       else pauseTour();
-    }, guidedPlaybackDuration(guide.steps[index].caption));
+    }, guidedPlaybackDuration(guide.steps[index].caption, 0, tourRate));
     return () => { active = false; window.clearTimeout(timer); };
-  }, [fullTour, tourPlaying, guidance, guide, parent, ready, pageHidden, pauseTour]);
+  }, [fullTour, tourPlaying, guidance, guide, parent, ready, pageHidden, tourRate, pauseTour]);
   useEffect(() => { if (fullTour && (!ready || pageHidden || guidance?.id !== guide?.id)) pauseTour(); },
     [fullTour, ready, pageHidden, guidance?.id, guide?.id, pauseTour]);
+  const changeTourRate = (rate: GuidedPlaybackRate) => {
+    if (!isGuidedPlaybackRate(rate) || rate === tourRate) return;
+    playbackEpoch.current++;
+    setTourRate(rate);
+  };
   useEffect(() => {
     const leave = () => pauseTour();
     window.addEventListener('pagehide', leave);
@@ -298,7 +305,7 @@ export function EyeLayerView({
           cameraBounds={step ? selectionBounds(layers.filter(s => step.ids.includes(s.id))) : undefined}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
           tourLocked={!!step}
-          transitionMs={step && !reducedMotion ? fullTour ? GUIDED_SWEEP_MS : guide!.transitionMs : 0}
+          transitionMs={step && !reducedMotion ? fullTour ? guidedSweepDuration(tourRate) : guide!.transitionMs : 0}
           transitionPaused={!!step && (!ready || pageHidden || (fullTour && motionPaused))}
           onSelect={select}
           onLoaded={onLoaded}
@@ -428,6 +435,7 @@ export function EyeLayerView({
              if (!step) setGuideExpanded(event.currentTarget.open);
           }}>
           <summary>Guided learning</summary>
+          <TourSpeedControl rate={tourRate} onRateChange={changeTourRate} />
           {step ? <section aria-label="Eye-layer walkthrough" aria-live="polite">
             <p>Step {guidance!.index + 1} of {guide.steps.length} · Draft</p>
             <h3>{step.title}</h3><p tabIndex={0} onFocus={pauseTour}>{step.caption}</p>

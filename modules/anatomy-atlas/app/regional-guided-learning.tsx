@@ -4,7 +4,8 @@ import dynamic from 'next/dynamic';
 import {Button} from '@/components/ui/button';
 import {allBodySystems,type BodyCatalog} from './body-types';
 import {regionalTourStructures,regionalTourFrame,type RegionalTour} from '@/lib/regional-tours';
-import {GUIDED_SWEEP_MS,guidedPlaybackDuration} from '@/lib/guided-playback';
+import {guidedSweepDuration,guidedPlaybackDuration,isGuidedPlaybackRate,type GuidedPlaybackRate} from '@/lib/guided-playback';
+import {TourSpeedControl} from './tour-speed-control';
 import {initialInspection} from '@/lib/inspection-state';
 import {rendererReady,type RendererHealth} from '@/lib/renderer-health';
 import {modelDeliveryUrl} from '@/lib/model-delivery';
@@ -25,6 +26,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
   const resolved=useMemo(()=>{try{return {structures:regionalTourStructures(catalog,tour),frames:tour.steps.map((_,i)=>regionalTourFrame(catalog,tour,i)),error:''};}catch{return {structures:[],frames:[],error:'This tour is unavailable for the current anatomy source.'};}},[catalog,tour]);
   const [index,setIndex]=useState<number|null>(null),[playing,setPlaying]=useState(false);
   const [continuous,setContinuous]=useState(false);
+  const [playbackRate,setPlaybackRate]=useState<GuidedPlaybackRate>(1);
   const [motionPaused,setMotionPaused]=useState(false),[reduced,setReduced]=useState(false);
   const [explanationOpen,setExplanationOpen]=useState(true);
   const [quickCheckOpen,setQuickCheckOpen]=useState(false);
@@ -92,7 +94,12 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
     if(document.activeElement===document.body)controls.current?.querySelector<HTMLButtonElement>('[data-tour-resume]')?.focus({preventScroll:true});
   },[ready]);
   const step=tour.steps[(scopeChanged?null:index)??0];
-  const stepDuration=continuous?guidedPlaybackDuration(step.caption,step.durationMs):step.durationMs;
+  const stepDuration=continuous?guidedPlaybackDuration(step.caption,step.durationMs,playbackRate):Math.ceil(step.durationMs/playbackRate);
+  const changePlaybackRate=(next:GuidedPlaybackRate)=>{
+    if(!isGuidedPlaybackRate(next)||next===playbackRate)return;
+    // Retire a queued old-speed callback immediately, before effect cleanup.
+    playbackEpoch.current++;pausedImaging?.suspend();setPlaybackRate(next);
+  };
   const changeStep=useCallback((next:number)=>{if(!Number.isInteger(next)||next<0||next>=tour.steps.length)return;pausedImaging?.suspend();setIndex(next);setMotionPaused(false);setQuickCheckOpen(false);},[tour,pausedImaging]);
   // Manual navigation invalidates the old timer without changing whether Play
   // was active; the next committed stop gets its own full-duration timeout.
@@ -112,7 +119,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
     const timer=window.setTimeout(()=>{if(!active||!scope.active||currentScope.current!==scope||epoch!==playbackEpoch.current||document.hidden)return;
       if(index+1<tour.steps.length)changeStep(index+1);else revokePlayback();},stepDuration);
     return()=>{active=false;window.clearTimeout(timer);};
-  },[playing,index,ready,stepDuration,tour,scope,changeStep,revokePlayback]);
+  },[playing,index,ready,stepDuration,playbackRate,tour,scope,changeStep,revokePlayback]);
   const active=!scopeChanged&&index!==null;
   const selected=resolved.structures.find(s=>s.id===step.selectedId);
   useLayoutEffect(()=>{
@@ -136,6 +143,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
       <p className="regional-tour-caption" role="region" aria-label="Current step explanation" tabIndex={0} onFocus={revokePlayback} aria-live="polite" aria-atomic="true">{active?step.caption:tour.description}</p>
       {!ready&&<output aria-live="polite" aria-atomic="true">{resolved.error||retryError||accessNotice?.message|| (failed.length?'Some anatomy failed to load. Retry the missing anatomy to continue.':health==='failed'?'The 3D renderer could not start. Use the scene recovery controls below or Exit tour.':health==='lost'||health==='restoring'?'The 3D view is recovering. Playback remains paused until it is ready.':'Preparing the model. Playback is paused until all tour anatomy is ready.')}</output>}
       <div className="regional-tour-controls" ref={controls}>
+        <TourSpeedControl rate={playbackRate} onRateChange={changePlaybackRate}/>
         {retryPlan.length>0&&<Button variant="outline" disabled={retrying} onClick={retryAnatomy}>{retrying?'Retrying…':accessNotice?.retryLabel??'Retry missing anatomy'}</Button>}
         {!active?<>
           <Button data-tour-resume disabled={!ready} onClick={()=>{playbackEpoch.current++;setContinuous(true);setPlaying(!document.hidden&&!reduced);changeStep(0);if(document.hidden||reduced)setMotionPaused(true);}}>Play full tour</Button>
@@ -178,7 +186,7 @@ export function RegionalGuidedLearning({catalog,tour,assetBase,onExit,pausedImag
         ghostRemoved={false} illustrated landmarks={empty} explode={0} layout="spatial" anchorSkeleton={false}
         showOrigins={false} labels view={step.view} zoom={1} reset={index??0} focus={false} exam={false}
         inspection={initialInspection} presetBounds={resolved.frames[(scopeChanged?null:index)??0]} presetKey={tour.id} plate={false}
-        tourLocked transitionMs={active&&!reduced?(continuous?GUIDED_SWEEP_MS:1800):0} transitionPaused={motionPaused||!ready}
+        tourLocked transitionMs={active&&!reduced?(continuous?guidedSweepDuration(playbackRate):1800):0} transitionPaused={motionPaused||!ready}
         onSelect={noSelection} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={onHealth}/>}
     </div>
     <a className="regional-tour-credit" href={modelDeliveryUrl('/models/bodyparts3d/credits.html',assetBase)} target="_blank" rel="noreferrer">BodyParts3D · CC BY 4.0 · Adapted</a>

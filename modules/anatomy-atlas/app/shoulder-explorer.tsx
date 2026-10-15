@@ -107,7 +107,7 @@ import { StudyViews } from './study-views';
 import type { StudyCamera, StudyView } from '@/lib/study-views';
 import manifest from '@/public/models/bodyparts3d/manifest.json';
 import { shoulderTour, shoulderTourStepView } from '@/lib/shoulder-tours';
-import { GUIDED_SWEEP_MS } from '@/lib/guided-playback';
+import { guidedPlaybackDuration, guidedSweepDuration, isGuidedPlaybackRate, type GuidedPlaybackRate } from '@/lib/guided-playback';
 import { ShoulderTourPlayer } from './shoulder-tour-player';
 
 type Mode = 'study' | 'exam';
@@ -192,6 +192,7 @@ export default function ShoulderExplorer({
   const [guidedLearning, setGuidedLearning] = useState(false);
   const [tourPlaying, setTourPlaying] = useState(false);
   const [tourContinuous, setTourContinuous] = useState(false);
+  const [tourRate, setTourRate] = useState<GuidedPlaybackRate>(1);
   const [tourMotionPaused, setTourMotionPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const beforeTour = useRef<{ view: StudyView; zoomStep: number } | null>(null);
@@ -315,6 +316,11 @@ export default function ShoulderExplorer({
     setTourPlaying(false);
     setTourMotionPaused(true);
   }, []);
+  const changeTourRate = useCallback((rate: GuidedPlaybackRate) => {
+    if (!isGuidedPlaybackRate(rate) || rate === tourRate) return;
+    tourPlaybackEpoch.current++;
+    setTourRate(rate);
+  }, [tourRate]);
   const reportRendererHealth = useCallback((health: RendererHealth) => {
     rendererHealthRef.current = health;
     examReadyRef.current = rendererReady(health) && modelReadyRef.current;
@@ -389,9 +395,9 @@ export default function ShoulderExplorer({
       if (!active || epoch !== tourPlaybackEpoch.current || !tourActiveRef.current || document.hidden) return;
       if (tourIndex + 1 < shoulderTour.steps.length) applyTourStep(tourIndex + 1);
       else setTourPlaying(false);
-    }, tourContinuous ? shoulderTour.continuousPlayback.stepDurationsMs[tourIndex] : shoulderTour.steps[tourIndex].durationMs);
+    }, tourContinuous ? guidedPlaybackDuration(shoulderTour.steps[tourIndex].caption, shoulderTour.steps[tourIndex].durationMs, tourRate) : Math.ceil(shoulderTour.steps[tourIndex].durationMs / tourRate));
     return () => { active = false; window.clearTimeout(timer); };
-  }, [tourPlaying, tourIndex, tourContinuous, displayReady, applyTourStep]);
+  }, [tourPlaying, tourIndex, tourContinuous, tourRate, displayReady, applyTourStep]);
 
   const searchOptions = useMemo<SearchOption[]>(
     () => shoulderSearchOptions(structures),
@@ -1017,6 +1023,8 @@ export default function ShoulderExplorer({
               <ShoulderTourPlayer
                 index={tourIndex}
                 playing={tourPlaying}
+                rate={tourRate}
+                onRateChange={changeTourRate}
                 ready={displayReady}
                 onStart={() => startTour(false)}
                 onPlayFullTour={() => startTour(true)}
@@ -1161,7 +1169,7 @@ export default function ShoulderExplorer({
                 cameraCapture={cameraCapture}
                 cameraRestore={cameraRestore}
                 tourLocked={tourActive}
-                transitionMs={tourActive && !reducedMotion ? (tourContinuous ? GUIDED_SWEEP_MS : 1800) : 0}
+                transitionMs={tourActive && !reducedMotion ? (tourContinuous ? guidedSweepDuration(tourRate) : 1800) : 0}
                 transitionPaused={tourMotionPaused}
                 onRendererHealth={reportRendererHealth}
                 onModelReady={reportModelReady}

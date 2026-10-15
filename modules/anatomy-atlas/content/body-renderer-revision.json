@@ -158,7 +158,7 @@
     },
     {
       "path": "app/eye-layers.tsx",
-      "sha256": "e2066cdf675d9c873ac86dcd81c8dfc4c3dedb9d59dcd7327c597b959286fa00"
+      "sha256": "9abf25778d49814d8ffa637bae3586473bc456424e825b55fe453289657de060"
     },
     {
       "path": "app/femoral-components.tsx",
@@ -270,7 +270,7 @@
     },
     {
       "path": "app/regional-guided-learning.tsx",
-      "sha256": "4a5938ea97ad47315b75475539965820d6048c51c691cbc674057e0688747d6c"
+      "sha256": "bcc7a99b91d355c9a9ccbcd9ae7781742bd68f5222c2b4705bfffccff83c1899"
     },
     {
       "path": "app/related-study.tsx",
@@ -393,6 +393,14 @@
       "sha256": "beb374c41883fd4b4c25cbf0727518119efd07f11a653b5b2a060ea4448b8349"
     },
     {
+      "path": "app/tour-speed-control.css",
+      "sha256": "e811d20d6e2c03fb5685f685eeb8d7f813bcf4fc227466e7ca044cbf52a18608"
+    },
+    {
+      "path": "app/tour-speed-control.tsx",
+      "sha256": "b886d5e5b1404bc8b37bd83f4ebc666a95fc22190e65a1b3bb2391d7ad79454c"
+    },
+    {
       "path": "app/tour-step-picker.css",
       "sha256": "ee5c28f8fa34888c0ee37241b17410f5bfaa4c3a3bec6e9e792255f5988f5160"
     },
@@ -410,7 +418,7 @@
     },
     {
       "path": "app/um-knee-study.tsx",
-      "sha256": "397a5c891a40e7a496516df9147e5ef14217feb547fc0a99836d2b682b2b6f4f"
+      "sha256": "958e48062c92a627d05656746dd11902867671c6e335e6c0ec1803bd41650d78"
     },
     {
       "path": "app/um-limb-learning.tsx",
@@ -438,7 +446,7 @@
     },
     {
       "path": "app/ventricles.tsx",
-      "sha256": "5f920b27d0e8a58b628888c4829d8725b79cd4d89296e82f0003f5002b7f7b2e"
+      "sha256": "b779a5b33c2095cc554d49c912a158e43d32ab32763c439bb4ef4d59c0a823a3"
     },
     {
       "path": "app/ventricular-relationships.css",
@@ -2374,7 +2382,7 @@
     },
     {
       "path": "content/review-revisions.json",
-      "sha256": "d817dedb14706a4a634d641c9d51d37578b3847cedcc7d6927a458fe2d48d148"
+      "sha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba"
     },
     {
       "path": "content/root-cuff-xray-pins.json",
@@ -3914,7 +3922,7 @@
     },
     {
       "path": "lib/guided-playback.ts",
-      "sha256": "e0016cb081de35ca17b63ca54eaa4111eae2a06bc17e9267fe381a4165eaf7d1"
+      "sha256": "1b1ae6ec85e81bf058465085c5ab29a738919c18d0e697b0f774347e83d5fd3c"
     },
     {
       "path": "lib/hallux-xray.ts",
@@ -5705,5 +5713,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "a600c26355bfdb979fbf4f86add35c6704fd55da32473a55b7486bb4fe658663"
+  "sha256": "111252f62d44d6f713d259d4f6dea25bc68275d8554a9a2f1230fb92ff7c435d"
 }

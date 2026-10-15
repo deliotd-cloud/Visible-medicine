@@ -30,7 +30,8 @@ import { specimenTarget, specimenChannelState, specimenFocusAllowed, createSpeci
 import { useSpecimenSelectionChannel } from './specimen-selection-channel';
 import type { SpecimenPracticeAdapter } from '@/lib/specimen-identification';
 import { guidedDissectionAction, type SpecimenGuidedDissection } from '@/lib/specimen-guided-dissection';
-import { GUIDED_SWEEP_MS } from '@/lib/guided-playback';
+import { guidedPlaybackDuration, guidedSweepDuration, isGuidedPlaybackRate, type GuidedPlaybackRate } from '@/lib/guided-playback';
+import { TourSpeedControl } from './tour-speed-control';
 import { umLimbGuidedDissection } from '@/lib/um-limb-guided-dissection';
 import type { StudyCamera } from '@/lib/study-views';
 import './eye-layers.css';
@@ -85,6 +86,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       illustrated: boolean; zoom: number; zoomStep: number; camera: StudyCamera | null };
   } | null>(null);
   const [fullTour, setFullTour] = useState(false), [tourPlaying, setTourPlaying] = useState(false);
+  const [tourRate, setTourRate] = useState<GuidedPlaybackRate>(1);
   const [tourMotionPaused, setTourMotionPaused] = useState(false);
   const playbackEpoch = useRef(0);
   const playbackOwner = useRef<{ guide: typeof guide; specimen: typeof specimen; guidance: typeof guidance;
@@ -94,6 +96,11 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     setTourPlaying(false);
     setTourMotionPaused(true);
   }, []);
+  const changeTourRate = (rate: GuidedPlaybackRate) => {
+    if (!isGuidedPlaybackRate(rate) || rate === tourRate) return;
+    playbackEpoch.current++;
+    setTourRate(rate);
+  };
   useEffect(() => {
     // Conservative SSR default; no sweep until the actual device preference is known.
     if (!guide && !selectionChannelRevision) return;
@@ -174,9 +181,9 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         !owner.ready || owner.hidden || !owner.playing || !owner.fullTour) return;
       if (index + 1 < guide.steps.length) guideStep(index + 1);
       else pauseTour();
-    }, guide.continuousPlayback.stepDurationsMs[index]);
+    }, guidedPlaybackDuration(guide.steps[index].caption, 0, tourRate));
     return () => { active = false; window.clearTimeout(timer); };
-  }, [fullTour, tourPlaying, guidance, guide, specimen, fullReady, pageHidden, pauseTour]);
+  }, [fullTour, tourPlaying, guidance, guide, specimen, fullReady, pageHidden, tourRate, pauseTour]);
   useEffect(() => { if (fullTour && (!fullReady || pageHidden || guidance?.id !== guide?.id)) pauseTour(); },
     [fullTour, fullReady, pageHidden, guidance?.id, guide?.id, pauseTour]);
   useEffect(() => () => { playbackEpoch.current++; playbackOwner.current = null; }, []);
@@ -277,7 +284,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
           labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
           inspection={initialInspection} cameraBounds={closeUpBounds}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
-          guidedRecovery={!!guidance} transitionMs={(guidance || (selectionChannelRevision && liveFocus)) && !reducedMotion ? guidance && fullTour ? GUIDED_SWEEP_MS : 1800 : 0} transitionPaused={(!!guidance && tourMotionPaused) || (!!(guidance || liveFocus) && (!ready || pageHidden))}
+          guidedRecovery={!!guidance} transitionMs={(guidance || (selectionChannelRevision && liveFocus)) && !reducedMotion ? guidance && fullTour ? guidedSweepDuration(tourRate) : 1800 : 0} transitionPaused={(!!guidance && tourMotionPaused) || (!!(guidance || liveFocus) && (!ready || pageHidden))}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
           onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={value=>{if(value!=='ready')pauseTour();healthNow.current=value;setHealth(value);}} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}
@@ -294,6 +301,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       {guide && <details className="um-knee-details um-specimen-guided-learning" open={guideExpanded}
         onToggle={event => { if (!event.currentTarget.open) pauseTour(); if (!guidance) setGuideExpanded(event.currentTarget.open); }}>
         <summary>Guided learning</summary>
+        <TourSpeedControl rate={tourRate} onRateChange={changeTourRate} />
         {guidance ? <section aria-label="Guided dissection" aria-live="polite">
           <p className="um-knee-label">Step {guidance.index + 1} of {guide.steps.length} · Draft</p>
           <h3>{guide.steps[guidance.index].title}</h3>
