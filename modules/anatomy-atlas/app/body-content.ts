@@ -234,6 +234,7 @@ import { lowerLimbVesselQuizLesson } from '../lib/lower-limb-vessel-quiz';
 import { forearmVesselQuizLesson } from '../lib/forearm-vessel-quiz';
 import { spinalBoneQuizLesson } from '../lib/spinal-bone-quiz';
 import { abdominalVesselQuizLesson } from '../lib/abdominal-vessel-quiz';
+import { salivaryStylohyoidQuizLesson } from '../lib/salivary-stylohyoid-quiz';
 import { thighDeepMuscleQuizLesson } from '../lib/thigh-deep-muscle-quiz';
 import { orbitalMuscleQuizLesson } from '../lib/orbital-muscle-quiz';
 import { neckMuscleQuizLesson } from '../lib/neck-muscle-quiz';
@@ -508,6 +509,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (spinalBoneQuiz) return spinalBoneQuiz;
   const abdominalVesselQuiz = abdominalVesselQuizLesson(s, tab);
   if (abdominalVesselQuiz) return abdominalVesselQuiz;
+  const salivaryStylohyoidQuiz = salivaryStylohyoidQuizLesson(s, tab);
+  if (salivaryStylohyoidQuiz) return salivaryStylohyoidQuiz;
   const thighDeepMuscleQuiz = thighDeepMuscleQuizLesson(s, tab);
   if (thighDeepMuscleQuiz) return thighDeepMuscleQuiz;
   const orbitalMuscleQuiz = orbitalMuscleQuizLesson(s, tab);

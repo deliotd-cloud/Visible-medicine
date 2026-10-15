@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Salivary-gland and stylohyoid quiz drafts — 15 October 2026
+
+Original project-MIT formative questions cite Texas Tech oral-cavity and
+joint/ligament anatomy teaching as factual reading references only. No third-party
+prose, quiz, table, figure, scan, mesh, measurement dataset or media is imported,
+adapted or relicensed. Reading access does not grant commercial image rights.
+Existing BodyParts3D attribution/licence obligations are unchanged; no new asset,
+dependency, font, paid service or mandatory fee. Six exact-source draft placements
+require radiologist review and do not validate model ducts/attachments, flow,
+operative planes, patient anatomy or registration. See
+docs/SALIVARY_STYLOHYOID_QUIZ.md for scope and direct references.
+
 ## Arm arterial X-ray teaching — 15 October 2026
 
 Original project-MIT factual summaries cite university anatomy documentation and

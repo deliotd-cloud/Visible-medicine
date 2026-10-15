@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "322dad6fc1625709fb61762de9607600f2d55b601e4317a86bd1693986476ab5"
+      "sha256": "ea6570f2ffb151af9824b9e84f79a878e096230e8db82874f4d59b0ede4649a6"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2314,7 +2314,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "46dfabdf3478c8bee60d0569db58a7965cf8434fa62dbb1f651bb25b6a73dac7"
+      "sha256": "c3287ed86330a9c4d41a5823ec27532bf66a9dfb41175979fa890a502acecc76"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -2371,6 +2371,14 @@
     {
       "path": "content/root-cuff-xray.ts",
       "sha256": "bb3d95f201b980175704cfcafa051b2aa585b48cec3bb74e6f5c0d9ac0242aeb"
+    },
+    {
+      "path": "content/salivary-stylohyoid-quiz-pins.json",
+      "sha256": "054aaa4790cdc7cf80d05b56ab556f5a01c530a3fe7cf4d4de7a44141b710f01"
+    },
+    {
+      "path": "content/salivary-stylohyoid-quiz.ts",
+      "sha256": "c6c74fb2033f99acf0b2640cceaf5d10b7a8bbd0155a3323bff1f91476a534be"
     },
     {
       "path": "content/sca-mca-clinical-pins.json",
@@ -4853,6 +4861,10 @@
       "sha256": "a4b99210c33d5cbfe21ee5d0f850150ccf688f6b2b81c38ae180e1f2c2eaad3c"
     },
     {
+      "path": "lib/salivary-stylohyoid-quiz.ts",
+      "sha256": "e6f5a52943e1bfa3bccbf2037787e7a91a7ffe9372b08df0455e1052be61eeb7"
+    },
+    {
       "path": "lib/sca-mca-clinical.ts",
       "sha256": "e54c3ebdaa8619e712bbca4f9099e48a77e4a9cfaba4387859dda741421c868b"
     },
@@ -5422,7 +5434,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "06eb2467942f8c8fa398243da9a437ab9dbb40e6c419af2129e48508aee88454"
+      "sha256": "93019344cf506eeca36dabaaff760012856a4a1e776d74007ca3683635249f94"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5645,5 +5657,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "13600e21393c308d2911ccd99cb6f3df7dc094f15488fbb4ca37bdb7f781875a"
+  "sha256": "aa22daacb3a5d5fbbe28504bb3ea78f194dc284493a158aa8ef536144ef85d65"
 }

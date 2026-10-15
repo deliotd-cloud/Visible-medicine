@@ -1,0 +1,428 @@
+{
+  "parentCommit": "325fc6aa50c4221691a1ee87de0d0ca91264ff04",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "bytes": 98216,
+      "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+      "structures": 7
+    },
+    {
+      "id": "head-neck-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "bytes": 692376,
+      "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+      "structures": 18
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-submandibular-gland",
+        "fmaId": "FMA59802",
+        "name": "Right submandibular gland",
+        "sourceName": "right submandibular gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59802",
+        "bounds": {
+          "min": [
+            -0.31553900241851807,
+            6.3843994140625,
+            0.6861199736595154
+          ],
+          "max": [
+            -0.15683099627494812,
+            6.608299732208252,
+            0.9135000705718994
+          ]
+        },
+        "center": [
+          -0.2361849993467331,
+          6.496349573135376,
+          0.7998100221157074
+        ],
+        "anchor": [
+          -0.2042040079832077,
+          6.460799694061279,
+          0.7824200391769409
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2768",
+            "sha256": "763960d4774199706b8ca344aab369a33a969a105f2c3063b8784c77e3a12d50"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "submandibular",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right submandibular gland on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-submandibular-gland",
+        "fmaId": "FMA59803",
+        "name": "Left submandibular gland",
+        "sourceName": "left submandibular gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59803",
+        "bounds": {
+          "min": [
+            0.1439719945192337,
+            6.3843994140625,
+            0.6859100461006165
+          ],
+          "max": [
+            0.3026610016822815,
+            6.6080002784729,
+            0.9151899814605713
+          ]
+        },
+        "center": [
+          0.2233164981007576,
+          6.4961998462677,
+          0.8005500137805939
+        ],
+        "anchor": [
+          0.26462098956108093,
+          6.472700119018555,
+          0.8044500946998596
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2766",
+            "sha256": "dfb4a6b9789fa55feb8e18cea09a638ec09041cc6b9e9df1e8f5a40ad1ab61be"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "submandibular",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left submandibular gland on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-sublingual-gland",
+        "fmaId": "FMA59804",
+        "name": "Right sublingual gland",
+        "sourceName": "right sublingual gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59804",
+        "bounds": {
+          "min": [
+            -0.21194900572299957,
+            6.408199310302734,
+            0.9094600081443787
+          ],
+          "max": [
+            -0.08598899841308594,
+            6.540400505065918,
+            1.1361799240112305
+          ]
+        },
+        "center": [
+          -0.14896900206804276,
+          6.474299907684326,
+          1.0228199660778046
+        ],
+        "anchor": [
+          -0.1448809951543808,
+          6.4653000831604,
+          1.0181798934936523
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2767",
+            "sha256": "b9165fee0bcb7f88aee932317cbbed3486d4e2c7a3850c1cd109e54c142295b3"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sublingual",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right sublingual gland on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-sublingual-gland",
+        "fmaId": "FMA59805",
+        "name": "Left sublingual gland",
+        "sourceName": "left sublingual gland",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-gaps",
+        "nodeName": "FMA59805",
+        "bounds": {
+          "min": [
+            0.07302229851484299,
+            6.408499717712402,
+            0.9096899628639221
+          ],
+          "max": [
+            0.19881001114845276,
+            6.539799690246582,
+            1.1357200145721436
+          ]
+        },
+        "center": [
+          0.13591615483164787,
+          6.474149703979492,
+          1.0227049887180328
+        ],
+        "anchor": [
+          0.12993599474430084,
+          6.481899261474609,
+          1.03548002243042
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2765",
+            "sha256": "371b46154a6ff5e08d1cda980778ea434b394620830579088af6456f7fdf9884"
+          }
+        ],
+        "coverageNote": "Whole source organ representation; internal layers, ducts and subdivisions have not been independently authored. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sublingual",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left sublingual gland on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+        "fmaId": "FMA72309",
+        "name": "Right stylohyoid ligament",
+        "sourceName": "right stylohyoid ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA72309",
+        "bounds": {
+          "min": [
+            -0.4217029809951782,
+            6.33329963684082,
+            0.3683519661426544
+          ],
+          "max": [
+            -0.1296759992837906,
+            6.781999588012695,
+            0.7338600158691406
+          ]
+        },
+        "center": [
+          -0.2756894901394844,
+          6.557649612426758,
+          0.5511059910058975
+        ],
+        "anchor": [
+          -0.2800480127334595,
+          6.561700344085693,
+          0.5576799511909485
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2764",
+            "sha256": "1747f307890df8c872f69b9467e54301cf1d0646b18c74ebe8a5723fd071e8f9"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stylohyoid",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right stylohyoid ligament on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "fmaId": "FMA72311",
+        "name": "Left stylohyoid ligament",
+        "sourceName": "left stylohyoid ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA72311",
+        "bounds": {
+          "min": [
+            0.11662400513887405,
+            6.333499908447266,
+            0.36847198009490967
+          ],
+          "max": [
+            0.4087250232696533,
+            6.782099723815918,
+            0.7339299917221069
+          ]
+        },
+        "center": [
+          0.2626745142042637,
+          6.557799816131592,
+          0.5512009859085083
+        ],
+        "anchor": [
+          0.2679249942302704,
+          6.562299728393555,
+          0.5552400350570679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2763",
+            "sha256": "4fead7cee38782fc067d18397b0891b6afbf7bb99d331b43264c678ddccb3e6a"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stylohyoid",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left stylohyoid ligament on the model."
+      }
+    }
+  ]
+}

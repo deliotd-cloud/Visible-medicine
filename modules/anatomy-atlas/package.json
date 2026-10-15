@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "salivary-stylohyoid-quiz:test": "node scripts/pin-salivary-stylohyoid-quiz.mjs --check && node scripts/test-salivary-stylohyoid-quiz.mjs",
     "forearm-branch-xray:test": "node scripts/test-forearm-branch-xray.mjs",
     "arm-arterial-xray:test": "node scripts/test-arm-arterial-xray.mjs",
     "pelvic-tributary-xray:test": "node scripts/test-pelvic-tributary-xray.mjs",
