@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ff29dd463b2507e1fc770c140c240da9ec96fceed9da2f9331eb2eb2f11388f0"
+      "sha256": "c022ab99a7a5f50895bbdc7bc787e65784b4fd8337849623ca1f0709e1ca5a96"
     },
     {
       "path": "app/body-education-link.ts",
@@ -655,6 +655,10 @@
     {
       "path": "content/arm-vascular-study-pins.json",
       "sha256": "534d166d46212fedb3316c8113162f7e18ab70fe0adea43501af475796b92374"
+    },
+    {
+      "path": "content/axillary-branch-xray.ts",
+      "sha256": "e157cc961a407f09f97bcd3598c73811b5a4a73c8cfadadde3c6768da0f64ffb"
     },
     {
       "path": "content/back-bone-teaching.ts",
@@ -2334,7 +2338,7 @@
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
-      "sha256": "c4804639c292ffc7842f01e87246a39d23bed7235d9ea7e058160c343c03c937"
+      "sha256": "e528a6f99d0a9bc2335234262a8d662049769f76d7c1ff27db82e112e5e11b9e"
     },
     {
       "path": "content/regional-teaching/spine.json",
@@ -3231,6 +3235,10 @@
     {
       "path": "lib/axial-connective-clinical-curriculum.ts",
       "sha256": "a5b83ef274fbdf6c6828b9e2871148b92d17b78c74064ddb0f205bccd694139e"
+    },
+    {
+      "path": "lib/axillary-branch-xray.ts",
+      "sha256": "e0260f3b96a6dd43bba454759c33c4069c050eacf8fed4d27965685185bd61d4"
     },
     {
       "path": "lib/back-guided-dissection.ts",
@@ -5462,7 +5470,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "179a369bc4f84c15c1b68a463e79d809a2d60b817c62b0ea70101c7cf8864fe4"
+      "sha256": "d351e5285d558d6f7669eb058dde95859ba73486e0eed3a3b3c6dea37e24724a"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5685,5 +5693,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "78da7bc748cbd6ac019bca28f8a1ef239c9de314a30eb1741f0d1f26cb69bc9f"
+  "sha256": "99bcc8966d88bb57d16f2424db7d1c5751cd9e509d70cc449def5187b132912f"
 }

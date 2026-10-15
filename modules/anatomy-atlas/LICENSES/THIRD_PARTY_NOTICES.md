@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Axillary-branch X-ray and angiographic orientation — 15 October 2026
+
+Original project-MIT teaching cites university anatomical facts, primary injected
+cadaver/radiographic studies, separate adult CTA cohorts and a selected six-case
+DCE-MRA/procedural-DSA report as factual reading only. No publisher prose, figure,
+table, image, scan, mesh, measurement dataset or media is copied, adapted, imported
+or relicensed; accessible reading does not grant commercial figure rights.
+Eighteen retained source selections receive unsigned drafts, not new patient
+anatomy, a flow/lumen model, normal branch-visibility rates or clinical approval.
+Existing BodyParts3D CC BY 4.0 attribution and source restrictions remain.
+No new asset, dependency, font, service or mandatory fee. Scope/references:
+docs/AXILLARY_BRANCH_XRAY.md.
+
 ## Shoulder-girdle muscle X-ray teaching — 15 October 2026
 
 Original project-MIT notes cite university anatomical facts, selected primary
