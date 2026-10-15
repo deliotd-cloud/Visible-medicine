@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "adductor-longus-xray:test": "node scripts/test-adductor-longus-xray.mjs",
     "central-canal-xray:test": "node scripts/test-central-canal-xray.mjs",
     "genicular-ultrasound:test": "node scripts/test-genicular-ultrasound.mjs",
     "leg-arterial-xray:test": "node scripts/test-leg-arterial-xray.mjs",

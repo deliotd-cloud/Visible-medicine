@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Adductor longus X-ray limitation teaching — 15 October 2026
+
+Original project-MIT factual prose cites the 2015 primary case report
+https://pmc.ncbi.nlm.nih.gov/articles/PMC4397006/ as a reading reference only.
+No publisher prose, figure, table, photograph, scan, measurement dataset, mesh
+or other media is imported, adapted or relicensed. The separate Perrone NC-ND
+study/figures/data are not used. Existing BodyParts3D CC BY4.0 attribution and
+obligations are unchanged. No new dependency, font, texture, runtime service or
+mandatory fee. Both exact-source placements are unsigned clinical drafts, not
+patient correspondence or registered imaging. See docs/ADDUCTOR_LONGUS_XRAY.md.
+
 ## Study-limited genicular ultrasound teaching — 15 October 2026
 
 Original project-MIT factual summaries cite Watanabe et al. (2013,
