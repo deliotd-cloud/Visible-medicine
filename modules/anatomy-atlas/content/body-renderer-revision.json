@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c022ab99a7a5f50895bbdc7bc787e65784b4fd8337849623ca1f0709e1ca5a96"
+      "sha256": "92add5e49675680abd55f687c08e7d4bbcfcb0ab34e1e0f611cc3da74c3fef9f"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2338,7 +2338,7 @@
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
-      "sha256": "e528a6f99d0a9bc2335234262a8d662049769f76d7c1ff27db82e112e5e11b9e"
+      "sha256": "a54849e39708ce938e75e0db996b85e6c74b0ab7dace1868053db6e46b08177a"
     },
     {
       "path": "content/regional-teaching/spine.json",
@@ -2493,8 +2493,16 @@
       "sha256": "7ad6111ae5d08727faecb83eb25bdd2c5f0c8d8429a72918cb890f4e5e2c23e7"
     },
     {
+      "path": "content/shoulder-girdle-xray.ts",
+      "sha256": "e0f47b1521a258e44a515e742b58827b9c3fba61e69406c467d501ae6ef2444c"
+    },
+    {
       "path": "content/shoulder-muscle-xray.ts",
       "sha256": "a2516306ba4f6395411d67332c96fb484326282d50c2d3b199600562ba71bcb1"
+    },
+    {
+      "path": "content/shoulder-venous-xray.ts",
+      "sha256": "451cdbcdd1bee38a3247837fb3eba94412289a9fc734d2ed0b9dd53d955d9dd3"
     },
     {
       "path": "content/shoulder-xray-bindings.json",
@@ -4997,6 +5005,10 @@
       "sha256": "49f6c4d1a1a97f4532d382260f9bc4a8ea158a83184b05df8a2ae1bbd67070fd"
     },
     {
+      "path": "lib/shoulder-vessel-xray.ts",
+      "sha256": "5bcf4c812b693e85842bd85e08a3118654afed8dd3607883bf33840829275361"
+    },
+    {
       "path": "lib/small-intestinal-mesentery-mri.ts",
       "sha256": "07aafdc9b3042a11c78f70f09736bd0a613603ccd0ad0f6226603f2ec506019b"
     },
@@ -5470,7 +5482,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5f506cdc820cbb7b9e88238478af9c34e180a89c1fff33b5a1e130cb4f7ff61a"
+      "sha256": "7cb6c0e4bde3ee3797fa27b5762da8a91b6faf1ead1807266f20014b32936c97"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5693,5 +5705,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "d13caa8a460dfe11946f9bcbd28cec0cf6d191e1380bf03cbfa903388365efcd"
+  "sha256": "a600c26355bfdb979fbf4f86add35c6704fd55da32473a55b7486bb4fe658663"
 }

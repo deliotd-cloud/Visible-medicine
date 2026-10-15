@@ -3929,3 +3929,16 @@ source holds remain unchanged. No new mesh, texture, font, dependency, service
 or fee is introduced. These lessons do not validate acquired venographic visibility,
 source connectivity, patient registration or clinical use. Exact-revision radiologist
 review remains pending. See docs/PELVIC_TRIBUTARY_XRAY.md for scope and evidence.
+
+## Shoulder-vessel X-ray limitation teaching — 15 October 2026
+
+Fourteen existing exact source selections reuse seven independently written
+factual topics. Linked university anatomy and primary studies are reading
+references only. No publisher prose, table, figure, scan, mask, measurement
+dataset or media is copied, imported, adapted or relicensed. Reading access is
+not a commercial media-reuse licence; publisher rights remain intact. Existing
+project MIT terms, BodyParts3D CC BY 4.0 attribution and source holds remain.
+No new model, texture, font, dependency, service or fee. These notes do not
+validate angiographic visibility, source connectivity or patient registration.
+Exact-revision radiologist sign-off remains pending. See
+`docs/SHOULDER_VESSEL_XRAY.md` for scope and study-specific limitations.
