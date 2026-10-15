@@ -1,25 +1,15 @@
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
-import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {dirname,relative} from 'node:path';
-import {build} from './workspace-test-build.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 const baseline='2063af41c4207ea841a123bf942ef03962644a26';
+// Immutable v1 admission, not a lock on later tours/teaching. The v2 suite
+// independently checks current source, all13 participants and unchanged49 tours.
+const admission='182a60bd8942998f808fff87f8a6aa4d8c49f39a';
 const old=p=>execFileSync('git',['show',baseline+':'+p],{maxBuffer:32e6,windowsHide:true});
+const readFileSync=p=>execFileSync('git',['show',admission+':'+p],{maxBuffer:32e6,windowsHide:true});
 const sha=b=>createHash('sha256').update(b).digest('hex');
-const entry=`export * from './lib/regional-tours';export * from './lib/body-review-material';export * from './lib/body-review-context';
-export * from './lib/body-review-response';export * from './lib/body-review-decisions';export * from './lib/body-review-api';
-import raw from './public/models/bodyparts3d/full-body/catalog.json';import {bodyDisplayCatalog} from './lib/body-display-catalog';export const catalog=bodyDisplayCatalog(raw as any);`;
-async function load(previous=false){
- const frozen=new Set(['lib/regional-tours.ts','content/body-renderer-revision.json','content/body-review-display-pins.json']);
- const r=await build({stdin:{contents:entry,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',
- plugins:previous?[{name:'exact-pre-lower-venous-tour',setup(b){b.onLoad({filter:/.*/,namespace:'workspace-test'},args=>{
-  const path=relative(process.cwd(),args.path).replaceAll('\\','/');if(!frozen.has(path))return;
-  return {contents:old(path).toString(),loader:path.endsWith('.json')?'json':'ts',resolveDir:dirname(args.path)};
- });}}]:[]});
- return import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
-}
-const api=await load(),before=await load(true),tour=api.lowerVenousTour;
+const api=await exactSourceHistoryApi(admission,'regional-tour-review'),before=await exactSourceHistoryApi(baseline,'regional-tour-review'),tour=api.lowerVenousTour;
 const ids=['vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein','vm:anatomy:body:leg:right:vessel:right-popliteal-vein','vm:anatomy:body:thigh:right:vessel:right-femoral-vein','vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein','vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein','vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein'];
 assert.equal(tour.id,'right-lower-limb-venous-orientation');assert.equal(tour.revision,tour.id+'-v1');assert.equal(tour.status,'draft');assert.equal(tour.region,'whole-body');assert.deepEqual(tour.scopeRegions,['pelvis','abdomen','thigh','leg','foot']);
 assert.deepEqual(tour.contextIds,[]);assert.deepEqual(tour.steps.map(s=>s.selectedId),ids);
@@ -78,6 +68,6 @@ for(const [i,step]of tour.steps.entries()){
  for(const bad of [[],['missing'],[step.selectedId,step.selectedId],[ids.find(id=>id!==step.selectedId)]]){const t=structuredClone(tour);t.steps[i].frameIds=bad;assert.throws(()=>api.regionalTourFrame(api.catalog,t,i));}
 }
 for(const p of ['app/regional-guided-learning.tsx','app/whole-body-guided-learning.tsx','lib/tour-camera.ts','app/fitted-camera.tsx','app/body-content.ts','app/anatomy-data.ts','app/dissection-data.ts','lib/body-display-catalog.ts','content/learning-resources.v1.json','package-lock.json','LICENSES/THIRD_PARTY_NOTICES.md'])assert.deepEqual(readFileSync(p),old(p),p);
-assert.equal(execFileSync('git',['diff','--name-only',baseline,'--','public/models'],{encoding:'utf8'}).trim(),'');
+assert.equal(execFileSync('git',['diff','--name-only',baseline,admission,'--','public/models'],{encoding:'utf8'}).trim(),'');
 for(const term of ['continuous lumen','common-femoral junction','termination varies','compressibility','acquired images','radiologist sign-off'])assert(tour.limitations.includes(term));
 console.log(JSON.stringify({tour:tour.id,tours:28,stops:163,unchangedTopics:topics,changedWorksheets:changed,unchangedWorksheets:unchanged,sourceRefusals,packetRefusals,staleTeachingRefusedBeforeStorage:stale,clinicalApproval:false}));

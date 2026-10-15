@@ -1,5 +1,16 @@
 # Third-party notices
 
+## Lower-limb venous guided learning v2 — 15 October 2026
+
+Original orientation captions cite UAMS and primary Quinlan, Cross, Bundens and
+profunda phlebography studies as reading references only. No article prose,
+table, figure, scan, reference media or new model is imported or relicensed.
+Existing BodyParts3D CC BY 4.0 credits and project MIT terms remain unchanged.
+Nine existing venous selections and four existing bones provide orientation;
+no new asset, dependency, font, service or fee. This is a revision-bound clinical
+draft, not reconstructed flow or patient registration. See
+`docs/LOWER_VENOUS_TOUR_V2.md`.
+
 ## Leg venous contrast-X-ray teaching — 15 October 2026
 
 Original factual teaching cites primary Quinlan, Cross, Sauerbrei, Corcos and

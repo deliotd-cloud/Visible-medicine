@@ -49,10 +49,12 @@ render();
 const tours=api.wholeBodyTourOptions;
 const legacyTours=tours.filter(t=>!['portal-hepatic-venous-relationships','cervical-whole-discs-orientation','right-medial-thigh-orientation'].includes(t.id));
 assert.equal(legacyTours.length,47);assert.equal(new Set(legacyTours.map(t=>t.id)).size,47);
-assert.equal(legacyTours.reduce((count,tour)=>count+tour.steps.length,0),282);
+// Same47tour IDs; the expanded lower-venous sequence adds exactly three stops.
+assert.equal(legacyTours.reduce((count,tour)=>count+tour.steps.length,0),285);
+assert.equal(legacyTours.find(t=>t.id==='right-lower-limb-venous-orientation').steps.length,9);
 assert.deepEqual(plain(legacyTours.map(t=>t.region)),['whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','whole-body','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','head-neck','spine','spine','spine','thorax','thorax','thorax','thorax','thorax','abdomen','abdomen','abdomen','abdomen','abdomen','pelvis','pelvis','pelvis','pelvis','shoulder-arm','shoulder-arm','forearm','forearm','forearm','hand','hand','hand','hand','hand','thigh','leg','foot','foot']);
 assert.equal(tours.length,50);assert.equal(new Set(tours.map(t=>t.id)).size,50);
-assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),301);
+assert.equal(tours.reduce((count,tour)=>count+tour.steps.length,0),304);
 const medialThigh=tours.find(t=>t.id==='right-medial-thigh-orientation');assert(medialThigh);
 assert.equal(medialThigh.region,'thigh');assert.equal(medialThigh.revision,'right-medial-thigh-20261015-r1');
 assert.equal(medialThigh.steps.length,5);

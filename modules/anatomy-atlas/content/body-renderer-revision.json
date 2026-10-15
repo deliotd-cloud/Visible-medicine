@@ -1821,6 +1821,10 @@
       "sha256": "58d093f2f9030b02a05272eacf9ea5168acf9c7acd6c4d5fa0cffe40b6e0f472"
     },
     {
+      "path": "content/lower-venous-tour-v2-pins.json",
+      "sha256": "31c83558994a1a8485f15c978dddd7f29998c4f5de334ef3428a26bbc94c7814"
+    },
+    {
       "path": "content/lumbar-sacral-quiz-pins.json",
       "sha256": "32b5975b8b2a0445cb20191611eb99c441b86000fc13df54fdcc2b10814715d2"
     },
@@ -4310,7 +4314,7 @@
     },
     {
       "path": "lib/lower-venous-tour.ts",
-      "sha256": "74a74ed5a036b478766d965632f3ae501860b1aacb1b4bd9040116ba735efe06"
+      "sha256": "e5a98bd9016c0d162c23f3856de3833b0c54c0d0a4f9aa72a8ff54783bba9e3b"
     },
     {
       "path": "lib/lumbar-sacral-quiz.ts",
@@ -4734,7 +4738,7 @@
     },
     {
       "path": "lib/regional-tours.ts",
-      "sha256": "6634d59862af751cbc231bdf41aee1a26217cde9b98d6863145f4d8c232b984c"
+      "sha256": "5f58eda50d89f4c109457eb3423b91792e30ec6c3300045a283ec64d46da40ea"
     },
     {
       "path": "lib/regional-vascular-clinical.ts",
@@ -5346,7 +5350,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c56c772e842f0f0ba65c03e11a27acc72f470480e84ef6e9f9374ebad9677123"
+      "sha256": "ddfee826bdf8fbc6ec5c20af8edca9919b701156b245f763ac7d575a27b5136f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5569,5 +5573,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9036b82fd0f44f7f5079e4f0d3d05ec078496d8e29389ce00e44bc1e6669594f"
+  "sha256": "f1ef1523d088dea109dd7cadfa7d805503734833bd310d0c564b6c9e0d4baa79"
 }

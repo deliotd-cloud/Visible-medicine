@@ -47,7 +47,7 @@ import { hepatobiliaryTour } from './hepatobiliary-tour';
 export { hepatobiliaryTour } from './hepatobiliary-tour';
 import { handArterialTour } from './hand-arterial-tour';
 export { handArterialTour } from './hand-arterial-tour';
-import { lowerVenousTour } from './lower-venous-tour';
+import { lowerVenousTour, lowerVenousTourMatches } from './lower-venous-tour';
 export { lowerVenousTour } from './lower-venous-tour';
 import { handVenousTours,handVenousTourSourceMatches } from './hand-venous-tours';
 export { handVenousTours } from './hand-venous-tours';
@@ -293,6 +293,8 @@ export const regionalTourLimitations=(tour:RegionalTour)=>tour.limitations??'Sel
 
 /** Resolve exact identities; never substitute a similarly named surface. */
 export function regionalTourStructures(catalog:BodyCatalog,tour:RegionalTour):BodyStructure[] {
+  if(tour.id===lowerVenousTour.id&&!lowerVenousTourMatches(catalog,tour))
+    throw Error('The lower venous guided tour does not match the available anatomy source.');
   if(tour.id===medialThighTour.id&&!medialThighTourMatches(catalog,tour))
     throw Error('The medial-thigh guided tour does not match the available anatomy source.');
   if(tour.id===cervicalDiscTour.id&&!cervicalDiscTourMatches(catalog,tour))

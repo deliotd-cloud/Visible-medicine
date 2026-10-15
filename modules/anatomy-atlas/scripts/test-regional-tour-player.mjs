@@ -1420,21 +1420,23 @@ test('Male duct landmarks retain eight exact surfaces, local frames and reversib
   assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);
  }
 });
-test('Whole-body venous orientation keeps six right-sided source frames assembled and exits reversibly',()=>{
+test('Whole-body venous orientation keeps nine right-sided source frames and four bone contexts assembled and exits reversibly',()=>{
  for(const compact of [false,true]){
-  const h=harness(catalog,'lowerVenousTour',compact);assert.equal(h.props.tour.steps.length,6);
-  assert.equal(h.scene().structures.length,6);assert.equal(h.props.tour.region,'whole-body');
+  const h=harness(catalog,'lowerVenousTour',compact);assert.equal(h.props.tour.steps.length,9);
+  assert.equal(h.scene().structures.length,13);assert.equal(h.props.tour.contextIds.length,4);assert.equal(h.props.tour.region,'whole-body');
   h.ready();h.click('Start guided tour');
-  for(let i=0;i<6;i++){
+  for(let i=0;i<9;i++){
    assert.equal(h.scene().selectedId,h.props.tour.steps[i].selectedId);
    assert.deepEqual(h.scene().presetBounds,h.api.regionalTourFrame(h.props.catalog,h.props.tour,i));
    assert.equal(h.scene().transitionMs,1800);assert.equal(h.scene().explode,0);
-   assert(h.scene().structures.every(s=>s.laterality==='right'&&s.system==='vessels'));
+   assert(h.scene().structures.every(s=>s.laterality==='right'&&['vessels','skeleton'].includes(s.system)));
+   assert.equal(h.scene().structures.filter(s=>s.system==='vessels').length,9);
+   assert.equal(h.scene().structures.filter(s=>s.system==='skeleton').length,4);
    assert(text(h.tree()).includes(h.props.tour.steps[i].caption));
-   if(i<5)h.click('Next');
+   if(i<8)h.click('Next');
   }
-  h.click('Back');assert.equal(h.scene().reset,4);h.click('Next');h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
-  for(const id of h.props.tour.steps.map(s=>s.selectedId)){
+  h.click('Back');assert.equal(h.scene().reset,7);h.click('Next');h.click('Finish');assert.equal(h.exits(),1);h.unchanged();
+  for(const id of [...h.props.tour.contextIds,...h.props.tour.steps.map(s=>s.selectedId)]){
    const missing=harness(catalog,'lowerVenousTour',compact,id);
    assert.equal(nodes(missing.tree()).filter(n=>n.type==='BodyScene').length,0);
    assert(missing.button('Start guided tour').disabled);missing.click('Exit tour');assert.equal(missing.exits(),1);

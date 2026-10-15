@@ -153,7 +153,7 @@
     "facial-bone-xray:test": "node scripts/test-facial-bone-xray.mjs",
     "camera-orientation-status:test": "node --test scripts/test-camera-orientation-status.mjs && node --experimental-strip-types --test scripts/test-camera-keyboard.mjs && node scripts/validate-camera-orientation.mjs",
     "spinal-bone-ultrasound:test": "node scripts/pin-spinal-bone-ultrasound.mjs --check && node scripts/test-spinal-bone-ultrasound.mjs && node scripts/test-spinal-bone-ultrasound-history.mjs",
-    "lower-venous-tour:test": "node scripts/test-lower-venous-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-tour-camera.mjs",
+    "lower-venous-tour:test": "node scripts/pin-lower-venous-tour-v2.mjs --check && node scripts/test-lower-venous-tour.mjs && node scripts/test-lower-venous-tour-v2.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-tour-camera.mjs",
     "hand-arterial-ultrasound:test": "node scripts/pin-hand-arterial-ultrasound.mjs --check && node scripts/test-hand-arterial-ultrasound.mjs",
     "hand-arterial-tour:test": "node scripts/test-hand-arterial-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-tour-camera.mjs",
     "hand-arterial-ct:test": "node scripts/pin-hand-arterial-ct.mjs --check && node scripts/test-hand-arterial-ct.mjs",
