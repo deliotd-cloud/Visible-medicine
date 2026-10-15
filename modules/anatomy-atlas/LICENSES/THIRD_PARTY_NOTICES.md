@@ -3783,3 +3783,14 @@ holds remain unchanged. The lesson reuses one exact existing central-canal sourc
 surface; no model, texture, font, dependency, service or fee is added. It does
 not claim plain-film visibility, measured CSF flow, patient registration or
 clinical approval. See `docs/CENTRAL_CANAL_XRAY.md`; radiologist review is pending.
+
+## Short ciliary pathway reasoning — 15 October 2026
+
+Four original questions cite Hamel et al. (2012), Zhou et al. (2017) and Texas
+Tech anatomy teaching as factual references, not copied question banks or
+publisher content. No article prose, figures, cadaver photographs, scans or
+other media are imported; free reading access is not a media-reuse licence.
+The existing source-defined FMA7041 group is unchanged. Project MIT terms,
+BodyParts3D CC BY 4.0 attribution and source holds remain in force. No new
+model, texture, font, dependency, service or fee. Exact-revision radiologist
+review remains pending. See `docs/SHORT_CILIARY_QUIZ.md` for evidence and limits.

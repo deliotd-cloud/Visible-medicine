@@ -283,6 +283,7 @@
     "cubital-venous-ultrasound:test": "node scripts/test-cubital-venous-ultrasound.mjs",
     "short-ciliary:test": "node scripts/export-short-ciliary.mjs --check && node scripts/record-short-ciliary-transition.mjs --check && node scripts/validate-short-ciliary.mjs",
     "short-ciliary-teaching:test": "node scripts/record-short-ciliary-teaching.mjs --check && node scripts/validate-short-ciliary-teaching.mjs",
+    "short-ciliary-quiz:test": "node scripts/test-short-ciliary-quiz.mjs",
     "costal-cartilage-imaging:test": "node scripts/pin-costal-cartilage-imaging.mjs --check && node scripts/record-costal-cartilage-imaging-transition.mjs --check && node scripts/validate-costal-cartilage-imaging.mjs",
     "cranial-history:test": "node --test scripts/test-exact-cranial-epoch-context.mjs && node scripts/test-cranial-history-context.mjs",
     "cranial-boundary-clinical:test": "node scripts/pin-cranial-boundary-clinical.mjs --check && node scripts/record-cranial-boundary-clinical-transition.mjs --check && node scripts/validate-cranial-boundary-clinical.mjs",

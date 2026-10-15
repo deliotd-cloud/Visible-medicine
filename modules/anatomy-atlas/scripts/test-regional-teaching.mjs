@@ -85,6 +85,7 @@ test('all display-corrected selections and nine lessons preserve exact synchrono
       catalog.structures.filter(s=>s.region===region).map(api.sourceCanonical).sort(),region+': exact source closure');
   }
   let placements=0,undefinedProperties=0,supplemental=0;
+  const supplementalIds=[];
   for(const structure of catalog.structures){
     const module=modules[structure.region];
     assert.equal(module.accepts(structure),true,structure.id);
@@ -99,10 +100,13 @@ test('all display-corrected selections and nine lessons preserve exact synchrono
       actual.citations?.push('https://foreign.example');
       if(actual.additionalChecks){
         supplemental++;
-        actual.additionalChecks[0].body='foreign';
-        actual.additionalChecks[0].bullets.push('foreign');
-        actual.additionalChecks[0].citations.push('https://foreign.example');
-        actual.additionalChecks[0].note='foreign';
+        supplementalIds.push(structure.id);
+        for(const check of actual.additionalChecks){
+          check.body='foreign';
+          check.bullets.push('foreign');
+          check.citations.push('https://foreign.example');
+          check.note='foreign';
+        }
         actual.additionalChecks.push(structuredClone(actual.additionalChecks[0]));
       }
       actual.body='foreign';
@@ -110,7 +114,12 @@ test('all display-corrected selections and nine lessons preserve exact synchrono
     }
   }
   assert.equal(placements,9936);assert.equal(undefinedProperties,20);
-  assert.equal(supplemental,18,'Exactly 18 live Quiz placements carry detached supplemental questions');
+  const limbPins=json('content/limb-nerve-quiz-pins.json');
+  assert.equal(limbPins.entries.length,18);
+  const shortCiliary='vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve';
+  assert.equal(supplemental,19,'18 retained limb checks plus one exact short-ciliary placement');
+  assert.deepEqual(supplementalIds.sort(),[...limbPins.entries.map(entry=>entry.identity.id),shortCiliary].sort());
+  assert.equal(api.bodyLesson(catalog.structures.find(s=>s.id===shortCiliary),'quiz').additionalChecks.length,3);
   assert.equal(Object.values(snapshots).reduce((count,snapshot)=>count+snapshot.undefinedPaths.length,0),20);
 });
 

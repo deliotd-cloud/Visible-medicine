@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ceeed0acf31ce59db21b7ce2be2f2a08c7681114006a423099e5cf62d09a22df"
+      "sha256": "f33ab827bff562e2e96b822a6fabc535e442e9c22358e4fed562336edd7434a3"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2302,7 +2302,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "5d5a4a268ecfdeb97dc60af64fa6238f572a7f83a9fef5ea671b366d98f5ca93"
+      "sha256": "46dfabdf3478c8bee60d0569db58a7965cf8434fa62dbb1f651bb25b6a73dac7"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -2379,6 +2379,10 @@
     {
       "path": "content/short-ciliary-pathology.ts",
       "sha256": "6cc88d0a6b9620920c2a3a8326a6784610087ae1fa00dcc30cd8a0e542629f91"
+    },
+    {
+      "path": "content/short-ciliary-quiz.ts",
+      "sha256": "96b65ea714089d282dd7eb58ff312d54578041ac1996bc9136a142903241511c"
     },
     {
       "path": "content/short-ciliary-teaching.ts",
@@ -4849,6 +4853,10 @@
       "sha256": "bf74dbc970a46d4a93745acb2771e9420ed4a3fbadb9b28298589ba3fdef215f"
     },
     {
+      "path": "lib/short-ciliary-quiz.ts",
+      "sha256": "9e7cc093456ead913a3d1686b74f0be473ad84190433a1d2db9137261a894450"
+    },
+    {
       "path": "lib/short-ciliary.ts",
       "sha256": "66d24af31dbc035fd4df5ac322ca881f2182aaae2aa7865ae992a71960f99f88"
     },
@@ -5374,7 +5382,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "1c0eb3c5a3b6bbad08172be4da1aa58bb9f723580a207a6a97ed8a1b3c7a246f"
+      "sha256": "2e2c6ed193c9c0d144cf8afb38c095fd68e0ad3c0f4d7a65298fbb3d1fa1eea7"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5597,5 +5605,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "cc2da60d86432543e4a37d38c4a562c54fba68a033fedf1c4181f2dc5b796fff"
+  "sha256": "2fa8fb188fa9fa478164314b5b99a6c76377fa74995d2d872d547573db609148"
 }

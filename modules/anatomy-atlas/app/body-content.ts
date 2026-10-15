@@ -292,6 +292,7 @@ import { majorBoneImagingLesson } from '../lib/major-bone-imaging';
 import { connectiveImagingLesson } from '../lib/connective-imaging';
 import { inferiorThyroidLesson } from '../lib/inferior-thyroid-arteries';
 import { shortCiliaryLesson } from '../lib/short-ciliary';
+import { shortCiliaryQuizLesson } from '../lib/short-ciliary-quiz';
 import { shortCiliaryPathologyLesson } from '../lib/short-ciliary-pathology';
 import { anteriorCardiacVeinLesson } from '../lib/anterior-cardiac-vein';
 import { anteriorCardiacPathologyLesson } from '../lib/anterior-cardiac-pathology';
@@ -716,6 +717,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (anteriorCardiacVein) return anteriorCardiacVein;
   const shortCiliaryPathology = shortCiliaryPathologyLesson(s, tab);
   if (shortCiliaryPathology) return shortCiliaryPathology;
+  const shortCiliaryQuiz = shortCiliaryQuizLesson(s, tab);
+  if (shortCiliaryQuiz) return shortCiliaryQuiz;
   const shortCiliary = shortCiliaryLesson(s, tab);
   if (shortCiliary) return shortCiliary;
   const neckTeaching = neckTeachingLesson(s, tab);
