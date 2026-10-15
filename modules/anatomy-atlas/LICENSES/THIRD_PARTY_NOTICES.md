@@ -3794,3 +3794,13 @@ The existing source-defined FMA7041 group is unchanged. Project MIT terms,
 BodyParts3D CC BY 4.0 attribution and source holds remain in force. No new
 model, texture, font, dependency, service or fee. Exact-revision radiologist
 review remains pending. See `docs/SHORT_CILIARY_QUIZ.md` for evidence and limits.
+
+## Thigh X-ray attachment-landmark teaching — 15 October 2026
+
+Ten original bilateral teaching drafts cite primary radiographic, MRI and
+cadaveric studies as factual reading references only. No publisher text, figures,
+tables, scans, masks, annotations or other media are imported. Reading access
+does not confer commercial media-reuse rights. Existing exact source selections,
+project MIT terms, BodyParts3D CC BY 4.0 attribution and source holds are unchanged.
+No new model, texture, font, dependency, service or fee. Exact-revision radiologist
+review remains pending. See `docs/THIGH_AVULSION_XRAY.md` for evidence and limits.

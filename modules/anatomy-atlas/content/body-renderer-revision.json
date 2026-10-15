@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "f33ab827bff562e2e96b822a6fabc535e442e9c22358e4fed562336edd7434a3"
+      "sha256": "1c96c563b177233b466d97b303e356c273e942d6bd909219433d17367864823a"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2322,7 +2322,7 @@
     },
     {
       "path": "content/regional-teaching/thigh.json",
-      "sha256": "e3c5a97eb8910ba7158350b88fdb4bd2db70897e87f4a6b36087cff6f2c1e257"
+      "sha256": "dcea6dc4eb709710a17ade7f3c22746d197522187be7420e3f3f706aa90dc857"
     },
     {
       "path": "content/regional-teaching/thorax.json",
@@ -2603,6 +2603,10 @@
     {
       "path": "content/thigh-attachments.ts",
       "sha256": "006046193ee41279ceb1be406b3cc182ed05aabef5bb49db101b25dc053ad202"
+    },
+    {
+      "path": "content/thigh-avulsion-xray.ts",
+      "sha256": "30c54d4c8903fd5370fa72781e741593f17e79467b47bd8629630ebfc9928b57"
     },
     {
       "path": "content/thigh-deep-muscle-quiz-pins.json",
@@ -5065,6 +5069,10 @@
       "sha256": "98068ce90901c4d5496f15c6449836d47a7689660bdd3097e2833036fb3ffee7"
     },
     {
+      "path": "lib/thigh-avulsion-xray.ts",
+      "sha256": "73d556fe4cb4cc6ad3da5fb297a8a26319527025895dbb28894e03d0fb65f237"
+    },
+    {
       "path": "lib/thigh-clinical-curriculum.ts",
       "sha256": "68570f667509ba89549288c8e8b0ec39c64e1ed964dc7280d1d43ae237542c9a"
     },
@@ -5382,7 +5390,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "2e2c6ed193c9c0d144cf8afb38c095fd68e0ad3c0f4d7a65298fbb3d1fa1eea7"
+      "sha256": "2d6a004a2e59ecd3d6b8e091170e63c96c2ae52b9e48a65d930dee5a3da5f57e"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5605,5 +5613,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "2fa8fb188fa9fa478164314b5b99a6c76377fa74995d2d872d547573db609148"
+  "sha256": "bdc533940e05691ebfc38104cb214514a4aa85cd5bc77cdd12c7404ec623d2d8"
 }
