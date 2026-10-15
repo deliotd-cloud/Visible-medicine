@@ -7,6 +7,7 @@ import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 
 assert.equal(process.argv.length, 2, 'No test-mode arguments are accepted');
 const baseline = '20988a1ba542b7a39d2135cfa5c2e426ab81d593';
+const featureCommit = 'fc894122f24b80ad30846b9ffdefc342567bedc2';
 const pinPath = 'content/genicular-imaging-pins.json';
 const catalogPath = 'public/models/bodyparts3d/full-body/catalog.json';
 const expected = new Map([
@@ -16,7 +17,8 @@ const expected = new Map([
   ['left-inferior-lateral-genicular-artery', ['left', 'FMA43893', 'FJ2076', 'inferior-lateral']],
 ].map(([name, fields]) => [`vm:anatomy:body:leg:${fields[0]}:vessel:${name}`, fields]));
 const git = (args, options = {}) => execFileSync('git', args, {
-  encoding: 'utf8', windowsHide: true, maxBuffer: 32e6, ...options,
+  encoding: 'utf8', windowsHide: true, maxBuffer: 32e6,
+  env: {...process.env, GIT_NO_REPLACE_OBJECTS: '1'}, ...options,
 });
 const gitBytes = path => git(['show', `${baseline}:${path}`], {encoding: null});
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -28,6 +30,10 @@ const unchangedJson = path => {
 };
 
 assert.equal(git(['rev-parse', `${baseline}^{commit}`]).trim(), baseline);
+assert.equal(git(['rev-parse', `${featureCommit}^{commit}`]).trim(), featureCommit);
+assert.equal(git(['merge-base', featureCommit, 'HEAD']).trim(), featureCommit);
+for(const path of ['content/genicular-ultrasound.ts','lib/genicular-ultrasound.ts'])
+  assert.equal(normalized(readFileSync(path)),normalized(git(['show',`${featureCommit}:${path}`],{encoding:null})),`${path}: current implementation matches its exact feature epoch`);
 const pins = unchangedJson(pinPath);
 const raw = unchangedJson(catalogPath);
 assert.equal(pins.entries.length, 10);
@@ -56,6 +62,7 @@ for (const identity of identities) {
 }
 
 const old = await exactSourceHistoryApi(baseline, 'review-security');
+const feature = await exactSourceHistoryApi(featureCommit, 'review-security');
 const compiled = await build({
   stdin: {contents: [
     "export {genicularUltrasoundLesson} from './lib/genicular-ultrasound';",
@@ -88,6 +95,8 @@ assert.deepEqual(catalog, old.bodyDisplayCatalog(JSON.parse(gitBytes(catalogPath
 assert.equal(catalog.structures.length, 1104);
 assert.equal(current.contentTabs.length, 9);
 assert.equal(catalog.structures.length * current.contentTabs.length, 9936);
+assert.deepEqual(feature.bodyDisplayCatalog(raw),catalog);
+assert.deepEqual(feature.contentTabs,current.contentTabs);
 
 const cleanLessons = new Map();
 for (const identity of identities) {
@@ -181,7 +190,11 @@ let changed = 0, preserved = 0, changedPackets = 0, preservedPackets = 0;
 let malformed = 0, stale = 0, forgedSaves = 0, forgedApprovals = 0, storageCalls = 0;
 for (const structure of catalog.structures) {
   for (const tab of current.contentTabs) {
-    const previous = old.bodyLesson(structure, tab), lesson = current.bodyLesson(structure, tab);
+    // Prove the complete original transition against its immutable feature epoch.
+    // Later, unrelated lessons must not masquerade as genicular regressions.
+    const previous = old.bodyLesson(structure, tab), lesson = feature.bodyLesson(structure, tab);
+    if(expected.has(structure.id))
+      assert.deepEqual(current.bodyLesson(structure,tab),lesson,`${structure.id}:${tab}: current genicular target retained`);
     if (expected.has(structure.id) && tab === 'ultrasound') {
       assert.equal(previous.readiness, 'pending');
       assert.deepEqual(lesson, cleanLessons.get(structure.id));
@@ -192,10 +205,21 @@ for (const structure of catalog.structures) {
     }
   }
   const previousPacket = await old.bodyReviewMaterial(structure.id);
-  const packet = await current.bodyReviewMaterial(structure.id);
+  const packet = await feature.bodyReviewMaterial(structure.id);
   assert.equal(packet.approval, false);
   if (expected.has(structure.id)) {
     const id = structure.id;
+    assert.deepEqual(await current.bodyReviewMaterial(id),packet,`${id}: current Review material matches feature epoch`);
+    const liveContext=await current.bodyReviewContext(id),featureContext=await feature.bodyReviewContext(id);
+    // Renderer/geometry decisions bind current code, not an old feature's renderer.
+    // All source/material/teaching/checklist fields must still match exactly.
+    const stableContext=({rendererHash,revisions:{geometry,...revisions},...rest})=>({...rest,revisions});
+    assert.deepEqual(stableContext(liveContext),stableContext(featureContext),`${id}: current source/teaching context retained`);
+    assert.equal(liveContext.rendererHash,JSON.parse(readFileSync('content/body-renderer-revision.json','utf8')).sha256);
+    const geometryInput={catalogScope:liveContext.catalogScope,structureId:id,
+      checklistVersion:liveContext.checklistVersion,source:liveContext.sourceHash,
+      renderer:liveContext.rendererHash,checks:liveContext.checklists.geometry};
+    assert.equal(liveContext.revisions.geometry,sha256(JSON.stringify(geometryInput)),`${id}: current geometry decision stays renderer-bound`);
     assert.deepEqual(packet.topics.filter(row => row.tab !== 'ultrasound'),
       previousPacket.topics.filter(row => row.tab !== 'ultrasound'));
     for (const key of ['source', 'reasoning', 'guidedTours', 'checklist', 'atlasLink', 'limits'])
@@ -264,7 +288,9 @@ for (const bundle of catalog.bundles) {
   assert.equal(sha256(bytes), bundle.sha256, path);
   assert.deepEqual(bytes, gitBytes(path), `${path}: source geometry unchanged`);
 }
-console.log(JSON.stringify({baseline, changed, preserved, changedPackets, preservedPackets,
+console.log(JSON.stringify({baseline, featureCommit, originalTransitionEpochPinned:true,
+  currentTargetsRetained:4,currentTargetTopicPlacementsRetained:36,currentReviewPacketsRetained:4,
+  changed, preserved, changedPackets, preservedPackets,
   refusedIdentities, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale,
   forgedSavesRefusedBeforeStorage: forgedSaves,
   forgedApprovalsRefusedBeforeStorage: forgedApprovals, storageCalls,

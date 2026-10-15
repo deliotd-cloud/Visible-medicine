@@ -6,3 +6,21 @@ The scoped selections are right and left middle genicular arteries (FMA22562, FM
 - [Karimov and Madrakhimov (online 2023; issue 2024)](https://doi.org/10.1007/s00264-023-05977-6) assessed 12 selected total-knee-arthroplasty patients who required lateral release (seven right, five left). Day-one postoperative Doppler found an inferior lateral genicular artery in eight knees. Their ten-of-twelve intraoperative *transillumination* result identified at least one lateral artery and is a different observation.
 
 Neither cohort establishes routine bilateral visibility in unoperated knees, a side-specific rate, patient-specific vessel boundaries, or correspondence between flow and the static source surface. Independent ultrasound acquisition, image-to-model registration, revision-bound radiologist approval, and appropriate case/Atlas/lecture access remain separate gates. This material supplies no procedural route, safe zone, diagnosis, or treatment advice.
+
+## Verification epochs
+
+`npm run genicular-ultrasound:test` proves the complete original transition from
+`20988a1b` to the immutable feature revision `fc894122`: four authored ultrasound
+placements and four Review packets change; the other9,932 placements and1,100
+packets remain unchanged in that transition. Later unrelated teaching additions
+are not represented as genicular regressions.
+
+The same command bundles the actual current helper and resolver, requires their
+genicular implementation to match that feature revision, checks all36 topic
+placements and four Review packets for the target structures, and retains its
+identity-mutation, forged-packet and stale/forged-decision refusals. Source and
+teaching context remain fixed; renderer and geometry decision hashes must bind
+the current audited renderer instead of an obsolete historical renderer.
+
+These are source/security regression checks, not clinical approval, measured
+ultrasound visibility or a promise that every unrelated current test passes.
