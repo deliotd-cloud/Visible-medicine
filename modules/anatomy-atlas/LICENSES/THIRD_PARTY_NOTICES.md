@@ -1,5 +1,17 @@
 # Third-party notices
 
+## Femoral venous X-ray orientation — 15 October 2026
+
+Six existing bilateral vein selections use original project-MIT factual
+teaching/code. ACR/RSNA, UAMS and original research by Quinlan (PMID12821771),
+Bundens (PMID7563535), Almgren (PMID2313828), Tang (PMC11764913), Leopold
+(PMID3526935) and Tepelenis (PMID37160721, original cadaveric component) are
+reading references only. No publication prose, figure, image, diagram, table,
+scan, model or dataset is copied, imported or adapted. Online availability is
+not commercial asset clearance. Existing BodyParts3D CC BY4.0 attribution and
+obligations remain unchanged. No dependency, font, texture, runtime service or
+mandatory fee is added. See docs/FEMORAL_VENOUS_XRAY.md; all new teaching is draft.
+
 ## Femoral arterial X-ray orientation — 15 October 2026
 
 Six retained bilateral vessel selections use original project-MIT factual
