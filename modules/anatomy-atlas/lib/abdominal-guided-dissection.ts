@@ -3,7 +3,7 @@
 import type { SpecimenDefinition } from './independent-specimen';
 import { abdominalSourceMatches } from './abdominal-wall-binding';
 import { independentStudyRoutes } from './independent-study-links';
-import type { SpecimenGuidedDissection } from './specimen-guided-dissection';
+import { withSpecimenGuidedPlayback, type SpecimenGuidedPlan, type SpecimenGuidedDissection } from './specimen-guided-dissection';
 
 // These steps reuse admitted source visibility studies; they do not define planes.
 const studyOrder = ['all', 'internal', 'transverse', 'rectus', 'right', 'left'] as const;
@@ -28,7 +28,7 @@ export function abdominalGuidedDissection(
   if (steps.some(step => !step || !step.ids.length || !step.ids.includes(step.selectedId)
     || new Set(step.ids).size !== step.ids.length
     || step.ids.some(id => !definition.surfaces.some(surface => surface.id === id)))) return null;
-  return structuredClone({
+  return withSpecimenGuidedPlayback({
     id: 'bp3d3-abdominal-wall-source-guide',
     title: 'Abdominal wall source-guided dissection',
     status: 'draft',
@@ -36,5 +36,5 @@ export function abdominalGuidedDissection(
     sourceFrame: route.frame,
     limitation: `${definition.limitations} These source-visibility steps do not validate sheath, inguinal or neurovascular planes. Source boundaries and interpretation require revision-bound radiologist review.`,
     steps,
-  } as SpecimenGuidedDissection);
+  } as SpecimenGuidedPlan);
 }

@@ -30,6 +30,7 @@ import { specimenTarget, specimenChannelState, specimenFocusAllowed, createSpeci
 import { useSpecimenSelectionChannel } from './specimen-selection-channel';
 import type { SpecimenPracticeAdapter } from '@/lib/specimen-identification';
 import { guidedDissectionAction, type SpecimenGuidedDissection } from '@/lib/specimen-guided-dissection';
+import { GUIDED_SWEEP_MS } from '@/lib/guided-playback';
 import { umLimbGuidedDissection } from '@/lib/um-limb-guided-dissection';
 import type { StudyCamera } from '@/lib/study-views';
 import './eye-layers.css';
@@ -72,7 +73,8 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const guide = useMemo(() => supplement === undefined
     ? umLimbGuidedDissection(specimen) : supplement?.guidedDissection?.(specimen) ?? null, [supplement, specimen]);
   const cameraCapture = useRef<StudyCamera | null>(null), cameraRestore = useRef<StudyCamera | null>(null);
-  const guideLauncher = useRef<HTMLButtonElement | null>(null), restoreGuideFocus = useRef(false);
+  const guideLauncher = useRef<HTMLButtonElement | null>(null), manualGuideLauncher = useRef<HTMLButtonElement | null>(null);
+  const lastGuideLauncher = useRef<'full' | 'manual'>('manual'), restoreGuideFocus = useRef(false);
   const [guideExpanded, setGuideExpanded] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(true), [pageHidden, setPageHidden] = useState(false);
   const pageHiddenNow = useRef(false);
@@ -82,22 +84,35 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
       view: DissectionView; labels: boolean; focus: boolean; jointCloseUp: boolean; showOrigins: boolean;
       illustrated: boolean; zoom: number; zoomStep: number; camera: StudyCamera | null };
   } | null>(null);
+  const [fullTour, setFullTour] = useState(false), [tourPlaying, setTourPlaying] = useState(false);
+  const [tourMotionPaused, setTourMotionPaused] = useState(false);
+  const playbackEpoch = useRef(0);
+  const playbackOwner = useRef<{ guide: typeof guide; specimen: typeof specimen; guidance: typeof guidance;
+    ready: boolean; hidden: boolean; playing: boolean; fullTour: boolean } | null>(null);
+  const pauseTour = useCallback(() => {
+    playbackEpoch.current++;
+    setTourPlaying(false);
+    setTourMotionPaused(true);
+  }, []);
   useEffect(() => {
     // Conservative SSR default; no sweep until the actual device preference is known.
     if (!guide && !selectionChannelRevision) return;
     const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const motion = () => setReducedMotion(preference.matches);
-    const visibility = () => { pageHiddenNow.current = document.hidden; setPageHidden(document.hidden); };
-    const leaving = () => { pageHiddenNow.current = true; setPageHidden(true); };
+    const motion = () => { setReducedMotion(preference.matches); if (preference.matches) pauseTour(); };
+    const visibility = () => { pageHiddenNow.current = document.hidden; setPageHidden(document.hidden); if (document.hidden) pauseTour(); };
+    const leaving = () => { pageHiddenNow.current = true; setPageHidden(true); pauseTour(); };
     motion(); visibility();
     preference.addEventListener('change', motion); document.addEventListener('visibilitychange', visibility);
-    if (selectionChannelRevision) { window.addEventListener('pagehide', leaving); window.addEventListener('pageshow', visibility); }
+    window.addEventListener('pagehide', leaving);
+    window.addEventListener('pageshow', visibility);
     return () => { preference.removeEventListener('change', motion); document.removeEventListener('visibilitychange', visibility);
-      if (selectionChannelRevision) { window.removeEventListener('pagehide', leaving); window.removeEventListener('pageshow', visibility); } };
-  }, [guide, selectionChannelRevision]);
+      window.removeEventListener('pagehide', leaving);
+      window.removeEventListener('pageshow', visibility); };
+  }, [guide, selectionChannelRevision, pauseTour]);
   useLayoutEffect(() => {
     if (!guidance && restoreGuideFocus.current) {
-      guideLauncher.current?.focus(); restoreGuideFocus.current = false;
+      (lastGuideLauncher.current === 'full' ? guideLauncher : manualGuideLauncher).current?.focus();
+      restoreGuideFocus.current = false;
     }
   }, [guidance]);
   const practiceLauncher = useRef<HTMLButtonElement | null>(null);
@@ -127,10 +142,11 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   }, [loadAttempt,retry]);
   const onFailure = useCallback((id: string, reason: ModelLoadFailure = 'unavailable') => {
     if (!loadAttempt.accepts(retry)) return;
+    pauseTour();
     loadFailureNow.current = true;
     setFailed((p) => p.includes(id) ? p : [...p, id]);
     setFailureReasons(p => ({...p, [id]: reason}));
-  }, [loadAttempt,retry]);
+  }, [loadAttempt,retry,pauseTour]);
   const selected = kneeSpecimen.structures.find((s) => s.id === selectedId);
   const active = activeSpecimenStudy(specimen, hidden);
   const closeUpBounds = (guidance ? guide?.steps[guidance.index]?.cameraBounds : null)
@@ -141,6 +157,29 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
   const errors = required.filter((b) => failed.includes(b.id));
   const accessNotice = modelLoadAccessNotice(errors.map(b => failureReasons[b.id] ?? 'unavailable'));
   const ready = required.length > 0 && !pending.length && !errors.length && rendererReady(health);
+  const guideBundles = useMemo(() => [...new Set(guide?.steps.flatMap(step => step.ids.map(id =>
+    kneeStructures.find(surface => surface.id === id)?.bundle).filter((id): id is string => !!id)) ?? [])],
+    [guide, kneeStructures]);
+  const fullReady = ready && guideBundles.every(id => loaded.includes(id) && !failed.includes(id));
+  useLayoutEffect(() => { playbackOwner.current = {guide, specimen, guidance, ready,
+    hidden: pageHidden, playing: tourPlaying, fullTour}; });
+  useEffect(() => {
+    if (!fullTour || !tourPlaying || !guidance || guidance.id !== guide?.id || !fullReady || pageHidden || document.hidden) return;
+    let active = true;
+    const epoch = playbackEpoch.current, index = guidance.index;
+    const timer = window.setTimeout(() => {
+      const owner = playbackOwner.current;
+      if (!active || epoch !== playbackEpoch.current || document.hidden || !owner ||
+        owner.guide !== guide || owner.specimen !== specimen || owner.guidance !== guidance ||
+        !owner.ready || owner.hidden || !owner.playing || !owner.fullTour) return;
+      if (index + 1 < guide.steps.length) guideStep(index + 1);
+      else pauseTour();
+    }, guide.continuousPlayback.stepDurationsMs[index]);
+    return () => { active = false; window.clearTimeout(timer); };
+  }, [fullTour, tourPlaying, guidance, guide, specimen, fullReady, pageHidden, pauseTour]);
+  useEffect(() => { if (fullTour && (!fullReady || pageHidden || guidance?.id !== guide?.id)) pauseTour(); },
+    [fullTour, fullReady, pageHidden, guidance?.id, guide?.id, pauseTour]);
+  useEffect(() => () => { playbackEpoch.current++; playbackOwner.current = null; }, []);
   const currentTarget = selectionChannelRevision && selectedId && !hidden.includes(selectedId)
     ? specimenTarget(specimen, selectedId, view) : null;
   const channelState = specimenChannelState({practice:!!practice,guided:!!guidance,ready,
@@ -186,7 +225,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     setLabels(true); setShowOrigins(false); setIllustrated(true);
   }
   function guideStep(index: number) {
-    if (!guide || !ready || pageHidden) return;
+    if (!guide || !ready || pageHidden || document.hidden) return;
     const action = guidedDissectionAction(specimen, guide, index);
     if (!action) return;
     if (!guidance) {
@@ -200,8 +239,13 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     setJointCloseUp(!!specimen.closeUp); setLayout('spatial'); setLabels(true);
     setQuery(''); setShowOrigins(false); setIllustrated(true); setZoomStep(0); setGuideExpanded(true);
   }
+  function manualGuideStep(index: number) {
+    pauseTour(); setFullTour(false); setTourMotionPaused(false);
+    guideStep(index);
+  }
   function exitGuide() {
     if (!guidance) return;
+    pauseTour(); setFullTour(false);
     const before = guidance.before;
     cameraRestore.current = structuredClone(before.camera);
     dispatch({ type: 'restore-state', state: before.state });
@@ -226,18 +270,19 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         {(!supplement || practiceAdapter) && <Button ref={practiceLauncher} variant="outline" size="sm" disabled={!!guidance || !ready || practiceCount < 2} onClick={() => { if (!guidance) setPractice((practiceAdapter?.createRound ?? createIdentification)(specimen, visible.map(s => s.id))); }}>Practise identification</Button>}
       </div>
       <div className="eye-layer-viewport">
-        <BodyScene assetBase={assetBase} catalog={kneeCatalog} structures={kneeStructures} selectedId={selectedId}
+        <BodyScene assetBase={assetBase} catalog={kneeCatalog} structures={kneeStructures} loadBundleIds={guideBundles} selectedId={selectedId}
           systems={allBodySystems} isolated={isolated && !!selected} hiddenIds={hidden} ghostRemoved={false}
           illustrated={illustrated} landmarks={visible.filter((s) => s.system !== 'skeleton').map((s) => s.id)}
           explode={explode} layout={layout} anchorSkeleton={false} showOrigins={showOrigins} originStyle="selected-guide"
           labels={labels} view={view} zoom={zoom} zoomStep={zoomStep} reset={reset} focus={focus} exam={false}
           inspection={initialInspection} cameraBounds={closeUpBounds}
           cameraCapture={cameraCapture} cameraRestore={cameraRestore}
-          guidedRecovery={!!guidance} transitionMs={(guidance || (selectionChannelRevision && liveFocus)) && !reducedMotion ? 1800 : 0} transitionPaused={!!(guidance || liveFocus) && (!ready || pageHidden)}
+          guidedRecovery={!!guidance} transitionMs={(guidance || (selectionChannelRevision && liveFocus)) && !reducedMotion ? guidance && fullTour ? GUIDED_SWEEP_MS : 1800 : 0} transitionPaused={(!!guidance && tourMotionPaused) || (!!(guidance || liveFocus) && (!ready || pageHidden))}
           plate={false} appearance={appearance} retries={Object.fromEntries(kneeCatalog.bundles.map((b) => [b.id, retry]))}
-          onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={value=>{healthNow.current=value;setHealth(value);}} />
+          onSelect={select} onLoaded={onLoaded} onFailure={onFailure} onRendererHealth={value=>{if(value!=='ready')pauseTour();healthNow.current=value;setHealth(value);}} />
         {!!pending.length && !errors.length && <output className="eye-layer-status">Loading {specimen.label.toLowerCase()} specimen… ({required.length - pending.length}/{required.length} groups)</output>}
-        {!!errors.length && <div className="eye-layer-status" role="alert">{accessNotice?.message ?? 'Some specimen tissues could not load.'} <Button size="sm" onClick={() => {
+        {(!!errors.length || !!guide && guideBundles.some(id => failed.includes(id))) && <div className="eye-layer-status" role="alert">{accessNotice?.message ?? 'Some guided specimen tissues could not load.'} <Button size="sm" onClick={() => {
+          pauseTour();
           loadAttempt.retire();
           retryBodyAssets(kneeCatalog.bundles.map((b) => b.url), assetBase); loadFailureNow.current=false; setLoaded([]); setFailed([]); setFailureReasons({}); setRetry((n) => n + 1);
         }}>{accessNotice?.retryLabel ?? 'Retry'}</Button></div>}
@@ -247,25 +292,34 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
     </section>
     <aside className="eye-layer-controls um-knee-controls" aria-label={`${specimen.label} specimen controls`}>
       {guide && <details className="um-knee-details um-specimen-guided-learning" open={guideExpanded}
-        onToggle={event => { if (!guidance) setGuideExpanded(event.currentTarget.open); }}>
+        onToggle={event => { if (!event.currentTarget.open) pauseTour(); if (!guidance) setGuideExpanded(event.currentTarget.open); }}>
         <summary>Guided learning</summary>
         {guidance ? <section aria-label="Guided dissection" aria-live="polite">
           <p className="um-knee-label">Step {guidance.index + 1} of {guide.steps.length} · Draft</p>
           <h3>{guide.steps[guidance.index].title}</h3>
-          <p>{guide.steps[guidance.index].caption}</p>
+          <p tabIndex={0} onFocus={pauseTour}>{guide.steps[guidance.index].caption}</p>
           <div className="eye-layer-actions">
-            <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance.index === 0} onClick={() => guideStep(guidance.index - 1)}>Previous</Button>
+            {fullTour && <Button size="sm" variant="outline" disabled={!fullReady || pageHidden}
+              aria-pressed={tourPlaying} onClick={() => { if (tourPlaying) pauseTour(); else { setTourMotionPaused(false); setTourPlaying(true); } }}>
+              {tourPlaying ? 'Pause full tour' : 'Resume full tour'}</Button>}
+            <Button size="sm" variant="outline" disabled={!ready || pageHidden || guidance.index === 0} onClick={() => manualGuideStep(guidance.index - 1)}>Previous</Button>
             {guidance.index < guide.steps.length - 1
-              ? <Button size="sm" disabled={!ready || pageHidden} onClick={() => guideStep(guidance.index + 1)}>Next</Button>
+              ? <Button size="sm" disabled={!ready || pageHidden} onClick={() => manualGuideStep(guidance.index + 1)}>Next</Button>
               : <Button size="sm" onClick={exitGuide}>Finish</Button>}
             <Button size="sm" variant="ghost" onClick={exitGuide}>Exit guided dissection</Button>
           </div>
           <p>{!ready ? 'Rendering unavailable — progression paused. You can still exit.' : 'Drag to rotate and inspect. Exit restores your previous view and dissection history.'}</p>
         </section> : <>
           <p>{guide.title} · {guide.steps.length} source-visibility steps · Draft</p>
-          <Button ref={guideLauncher} size="sm" disabled={!ready || pageHidden} onClick={() => guideStep(0)}>Start guided dissection</Button>
+          <Button ref={guideLauncher} size="sm" disabled={!fullReady || pageHidden} onClick={() => {
+            lastGuideLauncher.current = 'full'; playbackEpoch.current++; setFullTour(true); setTourPlaying(!reducedMotion); guideStep(0);
+            if (reducedMotion) setTourMotionPaused(true); else setTourMotionPaused(false);
+          }}>Play full tour</Button>
+          <Button ref={manualGuideLauncher} size="sm" variant="outline" disabled={!ready || pageHidden} onClick={() => {
+            lastGuideLauncher.current = 'manual'; playbackEpoch.current++; setFullTour(false); setTourPlaying(false); setTourMotionPaused(false); guideStep(0);
+          }}>Start guided dissection</Button>
         </>}
-        <details><summary>Source limits</summary><p>{guide.limitation}</p></details>
+        <details onToggle={event => { if (event.currentTarget.open) pauseTour(); }}><summary>Source limits</summary><p>{guide.limitation}</p></details>
       </details>}
       <fieldset className="um-specimen-manual-controls" disabled={!!guidance} inert={!!guidance}>
       <legend className="sr-only">Manual dissection controls{guidance ? ' — exit guided learning to change tissues' : ''}</legend>
@@ -292,7 +346,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         dispatch(action); assembledDisplay(); setQuery(''); setJointCloseUp(false); setView(group.view);
       }} />}
       </fieldset>
-      <section className="um-knee-selection" aria-label="Selected specimen structure">
+      <section className="um-knee-selection" aria-label="Selected specimen structure" onFocusCapture={pauseTour}>
         <h3>{selected?.name ?? 'Select a structure'}</h3>
         {selected && <>
           <p>{selected.coverageNote ?? (selected.tissue === 'skeleton' ? 'Whole source bone; close-up does not divide the bone.' : selected.slug === 'meniscus-group' || selected.slug === 'tibial-cartilage' ? 'Grouped source surface. Medial and lateral components are not separately selectable.' : 'Source-segmented surface from this independent right-limb specimen.')}</p>
@@ -346,7 +400,7 @@ export function KneeSpecimenView({ specimen = kneeDefinition, initialNavigation,
         <label className="um-knee-toggle">Selected origin guide<Switch checked={showOrigins} onCheckedChange={v => { if (!guidance) setShowOrigins(v); }} disabled={!!guidance || layout === 'tray'} /></label>
       </details>
       </fieldset>
-      <details className="um-knee-details"><summary>Source & limitations</summary>
+      <details className="um-knee-details" onToggle={event => { if (event.currentTarget.open) pauseTour(); }} onFocusCapture={pauseTour}><summary>Source & limitations</summary>
         {supplement ? supplement.sourceDetails : <>
         <p>{kneeSpecimen.source.credit}</p>
         <a href="https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7" target="_blank" rel="noreferrer">Source dataset · CC0 1.0</a>

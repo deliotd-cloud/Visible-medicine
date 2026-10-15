@@ -64,6 +64,8 @@ type Props = {
   assetBase?: string;
   catalog: BodyCatalog;
   structures: BodyStructure[];
+  /** Validate and preload these catalogue bundles without adding hidden surfaces to the scene. */
+  loadBundleIds?: readonly string[];
   selectedId: string | null;
   systems: Record<BodySystem, boolean>;
   isolated: boolean;
@@ -342,6 +344,15 @@ function Bundle({
     </group>
   );
 }
+/** Fetch and validate a hidden tour source without creating any scene geometry. */
+function BundlePreload({ bundle, props }: { bundle: BodyCatalog['bundles'][number]; props: Props }) {
+  const { scene } = useGLTF(modelDeliveryUrl(bundle.url, props.assetBase), false, true);
+  const geometries = useMemo(() => bodyBundleGeometries(scene, props.catalog.structures, bundle.id),
+    [scene, props.catalog.structures, bundle.id]);
+  const onLoaded = props.onLoaded;
+  useEffect(() => onLoaded(bundle.id), [bundle.id, onLoaded, geometries]);
+  return null;
+}
 class AssetBoundary extends Component<
   { id: string; url: string; onFailure: (id: string, reason?: ModelLoadFailure) => void; children: ReactNode },
   { failed: boolean }
@@ -360,6 +371,15 @@ class AssetBoundary extends Component<
   render() {
     return this.state.failed ? null : this.props.children;
   }
+}
+/** Explicit preload requests can only name bundles owned by this scene's source catalogue. */
+export function requestedBodySceneBundles(catalog: BodyCatalog, rendered: BodyStructure[],
+  structures: BodyStructure[], loadBundleIds: readonly string[] = []) {
+  const visible = new Set(rendered.map(s => s.bundle));
+  const available = new Set(structures.map(s => s.bundle));
+  const requested = new Set(loadBundleIds);
+  return catalog.bundles.filter(bundle => visible.has(bundle.id) ||
+    (requested.has(bundle.id) && available.has(bundle.id)));
 }
 export function BodyScene(props: Props) {
   const rendered = useMemo(
@@ -510,9 +530,7 @@ export function BodyScene(props: Props) {
     props.cameraBounds,
     props.exam,
   ]);
-  const bundles = props.catalog.bundles.filter((b) =>
-    rendered.some((s) => s.bundle === b.id),
-  );
+  const bundles = requestedBodySceneBundles(props.catalog, rendered, props.structures, props.loadBundleIds);
   const cameraPreset = useMemo(() => props.presetBounds
     ? new THREE.Box3(
       new THREE.Vector3().fromArray(props.presetBounds.min),
@@ -597,7 +615,7 @@ export function BodyScene(props: Props) {
                 onFailure={props.onFailure}
               >
                 <Suspense fallback={null}>
-                  <Bundle
+                  {rendered.some(s => s.bundle === bundle.id) ? <Bundle
                     bundle={bundle}
                     items={rendered.filter((s) => s.bundle === bundle.id)}
                     props={props}
@@ -606,7 +624,7 @@ export function BodyScene(props: Props) {
                     labelIds={labelIds}
                     renderedCount={rendered.length}
                     originGuide={originGuide}
-                  />
+                  /> : <BundlePreload bundle={bundle} props={props} />}
                 </Suspense>
               </AssetBoundary>
             ))}

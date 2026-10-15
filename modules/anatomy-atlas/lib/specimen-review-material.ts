@@ -141,7 +141,7 @@ export async function specimenReviewMaterial(
     teachingHash = await digest(teaching);
   const checklists = structuredClone(specimenChecklists);
   if (guidedDissection) checklists.teaching.push({ id: 'guided-dissection',
-    label: 'Inspect every guided step in the actual source viewer: caption, side, visible neighbours, selection and camera frame. These steps do not validate surgical planes or scan registration.' });
+    label: 'Inspect every guided step in the actual source viewer: caption, side, visible neighbours, selection, camera frame and continuous playback timing. Check smooth arrival, reading time, pause/resume and the final hold. These steps do not validate surgical planes or scan registration.' });
   const depthScope = specimenDepthReviewScope(lesson?.depth);
   if (depthScope) checklists.teaching.push({ id: depthScope,
     label: 'Review the additional compartment relationships, typical blood supply and clinical pitfall against the exact source surfaces and references. Vessels, nerves, fascial planes, perfusion and pathology are not thereby modelled or approved.' });

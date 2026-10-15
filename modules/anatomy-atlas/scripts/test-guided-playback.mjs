@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {build} from './workspace-test-build.mjs';
-const compiled=await build({stdin:{contents:"export * from './lib/guided-playback';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
+const compiled=await build({stdin:{contents:"export * from './lib/guided-playback';export {withSpecimenGuidedPlayback} from './lib/specimen-guided-dissection';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,platform:'node',format:'esm'});
 const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
 assert.equal(api.GUIDED_SWEEP_MS,8000);assert.equal(api.GUIDED_MIN_STEP_MS,24000);assert.equal(api.GUIDED_CAPTION_WORDS_PER_MINUTE,180);
 for(const authored of [undefined,0,-1,NaN,Infinity,14000])assert.equal(api.guidedPlaybackDuration('Short original caption.',authored),24000);
@@ -12,4 +12,9 @@ assert.deepEqual(api.guidedPlaybackEvidence(steps),{version:1,start:'explicit-pl
 assert.deepEqual(steps,before);
 const first=api.guidedPlaybackEvidence(steps);first.stepDurationsMs[0]=1;
 assert.equal(api.guidedPlaybackEvidence(steps).stepDurationsMs[0],24000);
+const plan={id:'synthetic-future-guide',title:'Synthetic future guide',status:'draft',specimenKey:'test',sourceFrame:'test',limitation:'Synthetic only.',steps:[{id:'first',title:'First',caption:long,ids:['test-id'],selectedId:'test-id',view:'anterior'}]};
+const planBefore=structuredClone(plan),future=api.withSpecimenGuidedPlayback(plan);
+assert.deepEqual(future.continuousPlayback,api.guidedPlaybackEvidence(plan.steps));
+assert.deepEqual(plan,planBefore);future.steps[0].caption='Mutated copy';
+assert.deepEqual(plan,planBefore);assert.equal(api.withSpecimenGuidedPlayback(plan).continuousPlayback.stepDurationsMs[0],48000);
 console.log(JSON.stringify({verdict:'pass',slowSweepMs:8000,minimumStepMs:24000,longCaptionMs:48000,originalStepsPreserved:true,newTourDefaults:true}));

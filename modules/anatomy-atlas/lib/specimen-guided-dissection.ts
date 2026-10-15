@@ -1,5 +1,6 @@
 import type { DissectionView } from '../app/dissection-data';
 import type { SpecimenDefinition, SpecimenAction } from './independent-specimen';
+import { guidedPlaybackEvidence } from './guided-playback';
 
 /** Declarative source-slug plan; the owning adapter must resolve and validate it. */
 export type SpecimenGuidedStepSource = {
@@ -19,6 +20,8 @@ export type SpecimenGuidedDissection = {
   specimenKey: string;
   sourceFrame: string;
   limitation: string;
+  /** Shared one-Play timing is teaching evidence, not an unversioned UI option. */
+  continuousPlayback: ReturnType<typeof guidedPlaybackEvidence>;
   steps: Array<{
     id: string;
     title: string;
@@ -30,6 +33,12 @@ export type SpecimenGuidedDissection = {
     cameraBounds?: NonNullable<SpecimenDefinition['closeUp']>;
   }>;
 };
+
+/** All current and future independent specimen guides inherit the same policy. */
+export type SpecimenGuidedPlan = Omit<SpecimenGuidedDissection, 'continuousPlayback'>;
+export function withSpecimenGuidedPlayback(plan: SpecimenGuidedPlan): SpecimenGuidedDissection {
+  return structuredClone({ ...plan, continuousPlayback: guidedPlaybackEvidence(plan.steps) });
+}
 
 export function guidedDissectionAction(
   definition: SpecimenDefinition,

@@ -1,6 +1,6 @@
 import raw from '../public/models/hra-renal/catalog.json' with { type: 'json' };
 import type { SpecimenDefinition } from './independent-specimen';
-import type { SpecimenGuidedDissection } from './specimen-guided-dissection';
+import { withSpecimenGuidedPlayback, type SpecimenGuidedPlan, type SpecimenGuidedDissection } from './specimen-guided-dissection';
 import { hraRenalMatches } from './hra-renal';
 
 // Every visibility set and selection is an existing, source-bound renal study.
@@ -70,7 +70,7 @@ export function hraRenalGuidedDissection(
   });
   if (resolved.some(step => !step) || new Set(resolved.map(step => step?.id)).size !== resolved.length)
     return null;
-  return structuredClone({
+  return withSpecimenGuidedPlayback({
     id: 'hra-renal-source-guide',
     title: 'Kidney source-guided dissection',
     status: 'draft',
@@ -78,5 +78,5 @@ export function hraRenalGuidedDissection(
     sourceFrame: raw.sourceFrame,
     limitation: 'Partial independent HRA female reference. Left outer cortex, right renal columns and left renal vein remain held; renal fascia, fat, nephron detail and complete vessels are not supplied. Visibility does not establish drainage connections, surgical planes, inter-donor registration or clinical interpretation. Revision-bound radiologist review remains required.',
     steps: resolved,
-  } as SpecimenGuidedDissection);
+  } as SpecimenGuidedPlan);
 }

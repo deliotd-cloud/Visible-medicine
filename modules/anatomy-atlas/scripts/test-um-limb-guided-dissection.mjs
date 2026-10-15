@@ -6,6 +6,7 @@ import { limbDefinitions } from '../lib/um-limb-studies.ts';
 import { umLimbGuidedDissection } from '../lib/um-limb-guided-dissection.ts';
 import { guidedDissectionAction } from '../lib/specimen-guided-dissection.ts';
 import { initialSpecimen, reduceSpecimen } from '../lib/independent-specimen.ts';
+import { exactSourceHistoryApi } from './exact-source-history-api.mjs';
 
 const counts = { knee: 7, 'hip-thigh': 9, calf: 7, foot: 8, whole: 16 };
 const wholeOrder = ['whole-source-skeleton', 'whole-gluteal', 'whole-hip-cartilage', 'whole-short-rotators',
@@ -13,13 +14,20 @@ const wholeOrder = ['whole-source-skeleton', 'whole-gluteal', 'whole-hip-cartila
   'whole-articular-knee', 'whole-knee', 'whole-calf', 'whole-deep-calf', 'whole-fibularis',
   'whole-foot-bones', 'whole-plantar', 'whole-dorsal'];
 
-void test('whole and distal guide source files remain byte-exact to the saved milestone', () => {
+void test('whole and distal guide content remains exact to the saved milestone with shared playback added', async () => {
   const milestone = '05596d396d104a65cdd7a1fdf770505c3dfb3139';
-  for (const path of ['lib/um-limb-guided-dissection.ts', 'lib/um-distal-guided-dissection.ts']) {
+  for (const path of ['lib/um-distal-guided-dissection.ts']) {
     const old = execFileSync('git', ['show', `${milestone}:${path}`],
       { maxBuffer: 8e6, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' } });
     assert.equal(readFileSync(path, 'utf8').replaceAll('\r\n', '\n'), old.toString('utf8'),
       `${path}: unchanged whole/distal plan (checkout line endings normalized)`);
+  }
+  const previous = await exactSourceHistoryApi(milestone, 'um-guide-only');
+  for (const scope of ['whole', 'calf', 'foot']) {
+    const { continuousPlayback, ...current } = umLimbGuidedDissection(limbDefinitions[scope]);
+    assert(continuousPlayback, 'Shared playback is explicit teaching evidence');
+    assert.deepEqual(current, previous.umLimbGuidedDissection(previous.limbDefinitions[scope]),
+      `${scope}: complete original captions, source IDs, order, views and camera bounds`);
   }
 });
 

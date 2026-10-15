@@ -2,7 +2,7 @@ import raw from '../public/models/hra-pelvis/catalog.json' with { type: 'json' }
 import type { DissectionView } from '../app/dissection-data';
 import type { SpecimenDefinition } from './independent-specimen';
 import { hraPelvisMatches } from './hra-pelvis';
-import type { SpecimenGuidedDissection } from './specimen-guided-dissection';
+import { withSpecimenGuidedPlayback, type SpecimenGuidedPlan, type SpecimenGuidedDissection } from './specimen-guided-dissection';
 
 type StepSource = {
   id: string;
@@ -87,7 +87,7 @@ export function hraPelvicGuidedDissection(
   });
   if (resolved.some(step => !step) || new Set(resolved.map(step => step?.id)).size !== resolved.length)
     return null;
-  return structuredClone({
+  return withSpecimenGuidedPlayback({
     id: 'hra-female-pelvis-source-guide',
     title: 'Female pelvis source-guided dissection',
     status: 'draft',
@@ -95,5 +95,5 @@ export function hraPelvicGuidedDissection(
     sourceFrame: raw.sourceFrame,
     limitation: 'Partial source surfaces only. Visibility steps do not validate a surgical plane, ureteric crossing, urinary continuity, source orientation or clinical interpretation. Revision-bound radiologist review remains required.',
     steps: resolved,
-  } as SpecimenGuidedDissection);
+  } as SpecimenGuidedPlan);
 }

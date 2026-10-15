@@ -226,6 +226,7 @@ export function SpecimenReviewWorkspace({
                 <h3>{packet.teaching.guidedDissection.title} · Draft</h3>
                 <p>{packet.teaching.guidedDissection.limitation}</p>
                 <p>Source frame: {packet.teaching.guidedDissection.sourceFrame}. This sequence is part of this teaching fingerprint; earlier approval does not cover it.</p>
+                <p>Play full tour uses {packet.teaching.guidedDissection.continuousPlayback.transitionMs / 1000}-second camera sweeps with at least {packet.teaching.guidedDissection.continuousPlayback.minimumStepMs / 1000} seconds per stop; longer captions receive more reading time. Check pause/resume, reduced motion and the final hold in the linked viewer.</p>
                 <ol>{packet.teaching.guidedDissection.steps.map(step => <li key={step.id}>
                   <h4>{step.title} · {step.view} view</h4><p>{step.caption}</p>
                   <p>Selected: <code>{step.selectedId}</code></p>

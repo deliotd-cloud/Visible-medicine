@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 import { runInNewContext } from 'node:vm';
 import { test } from 'node:test';
+import { readFile } from 'node:fs/promises';
 import { build } from './workspace-component-test-build.mjs';
 import { build as buildData } from './workspace-test-build.mjs';
 
@@ -11,7 +12,7 @@ const React = require('react');
 const actualLink = await import('vinext/shims/link');
 const built = await build({
   stdin: {
-    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition, limbDefinitions } from './lib/um-limb-studies'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { specimenMotorGroups } from './lib/um-limb-motor'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study'; export { hraRenalSupplementFor } from './app/hra-renal-study';",
+    contents: "export { KneeSpecimenView } from './app/um-knee-study'; export { createHraPelvisSupplement } from './app/hra-pelvis-supplement'; export { hraPelvisDefinition } from './lib/hra-pelvis'; export { hraPelvicGuidedDissection } from './lib/hra-pelvic-guided-dissection'; export { kneeDefinition, limbDefinitions } from './lib/um-limb-studies'; export { umLimbGuidedDissection } from './lib/um-limb-guided-dissection'; export { guidedPlaybackEvidence, guidedPlaybackDuration } from './lib/guided-playback'; export { hraRenalDefinition } from './lib/hra-renal'; export { initialSpecimen, reduceSpecimen } from './lib/independent-specimen'; export { validStudyCamera } from './lib/study-views'; export { specimenMotorGroups } from './lib/um-limb-motor'; export { abdominalWallDefinition } from './lib/abdominal-wall'; export { backLayersDefinition } from './lib/back-layers'; export { abdominalWallSupplementFor } from './app/abdominal-wall-study'; export { backLayersSupplementFor } from './app/back-layers-study'; export { hraRenalSupplementFor } from './app/hra-renal-study';",
     resolveDir: process.cwd(), loader: 'tsx',
   },
   bundle: true, write: false, format: 'cjs', platform: 'node',
@@ -22,6 +23,15 @@ const built = await build({
     }));
   } }],
 });
+const bundleRequestBuilt = await build({
+  stdin: { contents: "export { requestedBodySceneBundles } from './app/body-scene';", resolveDir: process.cwd(), loader: 'tsx' },
+  bundle: true, write: false, format: 'cjs', platform: 'node', loader: { '.css': 'empty' },
+});
+const bundleRequestModule = {exports:{}};
+runInNewContext(bundleRequestBuilt.outputFiles[0].text, {
+  module:bundleRequestModule, exports:bundleRequestModule.exports, require,
+});
+const {requestedBodySceneBundles} = bundleRequestModule.exports;
 const plain = value => JSON.parse(JSON.stringify(value));
 const snapshot = value => value === undefined ? undefined : plain(value);
 const nodes = tree => !tree || typeof tree !== 'object' ? [] : Array.isArray(tree)
@@ -30,8 +40,8 @@ const text = tree => tree == null ? '' : typeof tree === 'string' || typeof tree
   ? String(tree) : Array.isArray(tree) ? tree.map(text).join('') : text(tree.props?.children);
 
 function harness({ definition, supplement, initialNavigation, reducedMotion = false, nativeGuide = false } = {}) {
-  const slots = [], effects = [], listeners = new Map();
-  let cursor = 0, tree, dirty = false;
+  const slots = [], effects = [], listeners = new Map(), timers = new Map();
+  let cursor = 0, tree, dirty = false, serial = 0, mounted = true, lateUpdates = 0;
   const changed = (old, next) => !old || !next || old.length !== next.length
     || old.some((item, i) => !Object.is(item, next[i]));
   const shim = { ...React,
@@ -39,6 +49,7 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
       const i = cursor++;
       if (!(i in slots)) slots[i] = typeof initial === 'function' ? initial() : initial;
       return [slots[i], value => {
+        if (!mounted) { lateUpdates++; return; }
         const next = typeof value === 'function' ? value(slots[i]) : value;
         if (!Object.is(slots[i], next)) { slots[i] = next; dirty = true; }
       }];
@@ -72,7 +83,12 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
     addEventListener(name, fn) { listeners.set(name, fn); },
     removeEventListener(name) { listeners.delete(name); },
   };
-  const window = { matchMedia: () => preference };
+  const window = { matchMedia: () => preference,
+    setTimeout(fn, delay) { const id = ++serial; timers.set(id, {fn, delay}); return id; },
+    clearTimeout(id) { timers.delete(id); },
+    addEventListener(name, fn) { listeners.set(`window:${name}`, fn); },
+    removeEventListener(name) { listeners.delete(`window:${name}`); },
+  };
   const module = { exports: {} };
   runInNewContext(built.outputFiles[0].text, {
     module, exports: module.exports, structuredClone, window, document,
@@ -113,12 +129,22 @@ function harness({ definition, supplement, initialNavigation, reducedMotion = fa
   function click(label) { const control = button(label); assert(!control.disabled, `${label} enabled`); control.onClick(); render(); }
   function ready() {
     scene().onRendererHealth('ready');
-    for (const id of new Set(specimen.catalog.bundles.map(bundle => bundle.id))) scene().onLoaded(id);
+    const rendered = scene().structures.filter(surface => !scene().hiddenIds.includes(surface.id));
+    const requested = requestedBodySceneBundles(specimen.catalog, rendered, scene().structures, scene().loadBundleIds);
+    for (const bundle of requested) scene().onLoaded(bundle.id);
     render();
   }
+  function tick(expected) {
+    assert.equal(timers.size, 1, 'Exactly one playback timer');
+    const [id, timer] = [...timers][0]; timers.delete(id);
+    assert.equal(timer.delay, expected, 'Exact reviewed caption duration');
+    timer.fn(); render();
+  }
+  function unmount() { for (const slot of slots) slot?.cleanup?.(); mounted = false; }
   render();
   return { api, props, slots, scene, button, child, renderChild, click, ready, render, preference,
-    document, listeners, tree: () => tree, unchanged: () => assert.equal(JSON.stringify(specimen), sourceBefore) };
+    document, listeners, timers, tick, unmount, lateUpdates: () => lateUpdates,
+    tree: () => tree, unchanged: () => assert.equal(JSON.stringify(specimen), sourceBefore) };
 }
 
 const guidedControlState = h => {
@@ -442,4 +468,180 @@ test('Reduced motion removes camera tween; a specimen without its supplement has
   assert.equal(nodes(exam.tree()).filter(node => node.type?.name === 'SpecimenIdentification').length, 1);
   assert.equal(nodes(exam.tree()).filter(node => text(node) === 'Start guided dissection').length, 0);
   h.unchanged();
+});
+
+test('One Play traverses every native and supplement specimen stop with reviewed caption timing and final hold', () => {
+  const inventory = harness().api;
+  const cases = [
+    ...Object.values(inventory.limbDefinitions).map(definition => ({definition, nativeGuide:true,
+      guide: inventory.umLimbGuidedDissection(definition)})),
+    ...[
+      [inventory.hraPelvisDefinition, inventory.createHraPelvisSupplement()],
+      [inventory.abdominalWallDefinition, inventory.abdominalWallSupplementFor()],
+      [inventory.backLayersDefinition, inventory.backLayersSupplementFor()],
+      [inventory.hraRenalDefinition, inventory.hraRenalSupplementFor()],
+    ].map(([definition, supplement]) => ({definition, supplement,
+      guide:supplement.guidedDissection(definition)})),
+  ];
+  let stops = 0;
+  for (const {definition, supplement, nativeGuide, guide} of cases) {
+    assert(guide?.steps.length > 1, `${definition.key}: captioned guide exists`);
+    const h = harness({definition, supplement, nativeGuide});
+    assert(h.button('Play full tour').disabled, `${definition.key}: no autoplay before readiness`);
+    assert.equal(h.timers.size, 0);
+    h.ready(); h.click('Play full tour');
+    assert.equal(h.scene().transitionMs, 8000);
+    assert.deepEqual(plain(guide.continuousPlayback), plain(h.api.guidedPlaybackEvidence(guide.steps)));
+    for (const [index, step] of guide.steps.entries()) {
+      assert.equal(h.scene().selectedId, step.selectedId, `${definition.key}: selected stop ${index}`);
+      assert.equal(h.scene().view, step.view);
+      assert(text(h.tree()).includes(step.caption), `${definition.key}: full caption ${index}`);
+      assert.equal(h.scene().transitionMs, 8000);
+      assertGuidedControls(h);
+      h.tick(guide.continuousPlayback.stepDurationsMs[index]); stops++;
+    }
+    assert.equal(h.scene().selectedId, guide.steps.at(-1).selectedId);
+    assert.equal(h.button('Resume full tour')['aria-pressed'], false);
+    assert.equal(h.scene().transitionPaused, true);
+    assert.equal(h.timers.size, 0, 'Final stop holds without looping or leaving');
+    h.click('Exit guided dissection'); h.unchanged(); h.unmount();
+  }
+  assert(stops > 50, 'All current native and supplement stops exercised');
+});
+
+test('Long caption extends the actual host timer; reduced motion requires explicit Resume without a sweep', () => {
+  const api = harness().api, definition = api.hraPelvisDefinition;
+  const original = api.createHraPelvisSupplement();
+  const longCaption = Array(120).fill('anatomy').join(' ');
+  const supplement = {...original, guidedDissection(specimen) {
+    const source = original.guidedDissection(specimen);
+    const steps = source.steps.map((step, index) => index === 0 ? {...step, caption:longCaption} : step);
+    return {...source, steps, continuousPlayback:api.guidedPlaybackEvidence(steps)};
+  }};
+  const h = harness({definition, supplement, reducedMotion:true}); h.ready(); h.click('Play full tour');
+  assert.equal(h.scene().transitionMs, 0); assert.equal(h.timers.size, 0);
+  assert.equal(h.button('Resume full tour')['aria-pressed'], false);
+  h.click('Resume full tour');
+  assert.equal(h.scene().transitionMs, 0);
+  h.tick(api.guidedPlaybackDuration(longCaption));
+  assert.equal(h.scene().selectedId, supplement.guidedDissection(definition).steps[1].selectedId);
+  h.click('Pause full tour'); assert.equal(h.timers.size, 0); h.unmount();
+});
+
+test('Pause, manual navigation and interruption retire captured callbacks before a rerender', () => {
+  const start = () => { const h = harness(); h.ready(); h.click('Play full tour'); return h; };
+  for (const cause of ['pause', 'manual-next', 'caption', 'teaching', 'source', 'guide-close',
+    'hidden', 'pagehide', 'motion', 'renderer', 'bundle', 'retry', 'exit', 'unmount']) {
+    const h = start(), initial = h.scene().selectedId;
+    const queued = [...h.timers.values()][0].fn;
+    if (cause === 'pause') h.button('Pause full tour').onClick();
+    if (cause === 'manual-next') h.button('Next').onClick();
+    if (cause === 'caption') nodes(h.tree()).find(node => node.type === 'p' && node.props?.tabIndex === 0 && text(node).includes(' ')).props.onFocus();
+    if (cause === 'teaching') nodes(h.tree()).find(node => node.props?.className === 'um-knee-selection').props.onFocusCapture();
+    if (cause === 'source') nodes(h.tree()).find(node => node.type === 'details'
+      && nodes(node).some(child => child.type === 'summary' && text(child) === 'Source & limitations')).props.onToggle({currentTarget:{open:true}});
+    if (cause === 'guide-close') nodes(h.tree()).find(node => node.props?.className?.includes('um-specimen-guided-learning')).props.onToggle({currentTarget:{open:false}});
+    if (cause === 'hidden') { h.document.hidden = true; h.listeners.get('visibilitychange')(); }
+    if (cause === 'pagehide') h.listeners.get('window:pagehide')();
+    if (cause === 'motion') { h.preference.matches = true; h.listeners.get('motion')(); }
+    if (cause === 'renderer') h.scene().onRendererHealth('lost');
+    if (cause === 'bundle' || cause === 'retry') h.scene().onFailure(h.props.specimen.catalog.bundles[0].id);
+    if (cause === 'exit') h.button('Exit guided dissection').onClick();
+    if (cause === 'unmount') h.unmount();
+    queued(); if (cause !== 'unmount') h.render();
+    assert.equal(h.timers.size, 0, `${cause}: no surviving timer`);
+    assert.equal(h.lateUpdates(), 0, `${cause}: no writes after unmount`);
+    if (cause === 'manual-next') {
+      assert.equal(h.scene().transitionMs, 1800, 'Manual Next keeps original sweep');
+      assert.equal(nodes(h.tree()).some(node => text(node) === 'Resume full tour'), false,
+        'Manual navigation returns to step-by-step inspection');
+    } else if (cause !== 'exit' && cause !== 'unmount') {
+      assert.equal(h.scene().selectedId, initial, `${cause}: no stale advancement`);
+      assert.equal(h.scene().transitionPaused, true, `${cause}: camera frozen`);
+    }
+    if (cause === 'retry') {
+      const alert = nodes(h.tree()).find(node => node.props?.role === 'alert');
+      const retry = nodes(alert).find(node => node.props?.onClick);
+      assert(retry, 'Failed model offers retry'); retry.props.onClick(); h.render();
+      assert.equal(h.timers.size, 0);
+    }
+    if (cause !== 'exit' && cause !== 'unmount') {
+      h.document.hidden = false; h.preference.matches = false;
+      h.listeners.get('visibilitychange')?.(); h.scene().onRendererHealth('ready');
+      for (const bundle of h.props.specimen.catalog.bundles) h.scene().onLoaded(bundle.id);
+      h.render(); assert.equal(h.timers.size, 0, `${cause}: readiness never autorestores playback`);
+      h.unmount();
+    }
+  }
+});
+
+test('The nine source guides request hidden bundles without displaying them or accepting foreign preload IDs', async t => {
+  const api = harness().api;
+  const cases = [
+    ...Object.values(api.limbDefinitions).map(definition => ({definition, nativeGuide:true,
+      guide:api.umLimbGuidedDissection(definition)})),
+    ...[
+      [api.hraPelvisDefinition, api.createHraPelvisSupplement()],
+      [api.abdominalWallDefinition, api.abdominalWallSupplementFor()],
+      [api.backLayersDefinition, api.backLayersSupplementFor()],
+      [api.hraRenalDefinition, api.hraRenalSupplementFor()],
+    ].map(([definition, supplement]) => ({definition, supplement,
+      guide:supplement.guidedDissection(definition)})),
+  ];
+  assert.equal(cases.length, 9);
+  let missingAtInitial = 0;
+  for (const {definition, supplement, nativeGuide, guide} of cases) {
+    const initial = api.initialSpecimen(definition);
+    const initialBundles = [...new Set(definition.catalog.structures
+      .filter(s => !initial.hidden.includes(s.id)).map(s => s.bundle))];
+    const union = [...new Set(guide.steps.flatMap(step => step.ids.map(id =>
+      definition.catalog.structures.find(s => s.id === id)?.bundle).filter(Boolean)))];
+    const missing = union.filter(id => !initialBundles.includes(id));
+    missingAtInitial += missing.length;
+    t.diagnostic(`${definition.key}: initial ${initialBundles.length}, guided union ${union.length}, hidden required ${missing.length}`);
+    const h = harness({definition, supplement, nativeGuide});
+    assert.deepEqual(plain(h.scene().loadBundleIds), union, 'Host requests exactly guide source bundles');
+    const before = plain(h.scene().hiddenIds);
+    const rendered = h.scene().structures.filter(s => !before.includes(s.id));
+    const requested = requestedBodySceneBundles(definition.catalog, rendered, h.scene().structures,
+      [...union, 'not-in-source-catalogue']);
+    assert.deepEqual(plain(requested.map(b => b.id)), plain(definition.catalog.bundles
+      .filter(b => initialBundles.includes(b.id) || union.includes(b.id)).map(b => b.id)));
+    assert.deepEqual(plain(h.scene().hiddenIds), before, 'Preload cannot expose hidden anatomy');
+    h.ready(); assert.equal(h.button('Play full tour').disabled, false, 'All guide bundles can load before Play');
+    h.unmount();
+  }
+  assert(missingAtInitial > 0, 'At least one actual initial study would deadlock without preloading');
+  const bodySource = await readFile(new URL('../app/body-scene.tsx', import.meta.url), 'utf8');
+  assert.match(bodySource, /items=\{rendered\.filter\(\(s\) => s\.bundle === bundle\.id\)\}/,
+    'Preloaded bundle receives only the unchanged rendered anatomy');
+  assert.match(bodySource, /rendered\.some\(s => s\.bundle === bundle\.id\) \? <Bundle/);
+  assert.match(bodySource, /: <BundlePreload bundle=\{bundle\} props=\{props\} \/>/,
+    'A fully hidden source validates and reports readiness without mounting geometry');
+  const pelvis = api.hraPelvisDefinition, one = pelvis.catalog.structures[0];
+  const state = api.reduceSpecimen(pelvis, api.initialSpecimen(pelvis),
+    {type:'show-only', ids:[one.id], selectedId:one.id});
+  const custom = harness({definition:pelvis, initialNavigation:{state, selectedId:one.id, view:'anterior'}});
+  const customHidden = plain(custom.scene().hiddenIds);
+  custom.ready(); assert.equal(custom.button('Play full tour').disabled, false);
+  assert.deepEqual(plain(custom.scene().hiddenIds), customHidden, 'Preload respects prior custom dissection');
+  custom.unmount();
+});
+
+test('Hidden bundle failure blocks Play and Resume until retry loads the exact source bundle', () => {
+  const h = harness(), guideIds = h.scene().loadBundleIds;
+  h.ready(); h.click('Play full tour');
+  const missing = guideIds.find(id => !h.props.specimen.catalog.structures
+    .filter(s => !h.scene().hiddenIds.includes(s.id)).some(s => s.bundle === id)) ?? guideIds[0];
+  h.scene().onFailure(missing); h.render();
+  assert.equal(h.button('Resume full tour').disabled, true);
+  assert.equal(h.timers.size, 0);
+  const alert = nodes(h.tree()).find(node => node.props?.role === 'alert');
+  const retry = nodes(alert).find(node => node.props?.onClick);
+  assert(retry, 'A hidden guided bundle failure is recoverable');
+  retry.props.onClick(); h.render();
+  assert.equal(h.timers.size, 0, 'Retry does not auto resume');
+  h.ready(); assert.equal(h.button('Resume full tour').disabled, false);
+  h.click('Resume full tour'); assert.equal(h.timers.size, 1);
+  h.unmount();
 });

@@ -3,7 +3,7 @@ import { canonicalSpecimenValue } from './specimen-links';
 import { umProximalGuideSteps } from './um-proximal-guided-dissection';
 import { umDistalGuideSteps } from './um-distal-guided-dissection';
 import type { SpecimenDefinition } from './independent-specimen';
-import type { SpecimenGuidedDissection, SpecimenGuidedStepSource } from './specimen-guided-dissection';
+import { withSpecimenGuidedPlayback, type SpecimenGuidedPlan, type SpecimenGuidedDissection, type SpecimenGuidedStepSource } from './specimen-guided-dissection';
 
 // Capture the complete admitted definitions, including bundle hashes, coordinate
 // transforms, studies, geometry identities and omissions. Do not match by name.
@@ -93,10 +93,10 @@ export function umLimbGuidedDissection(definition: SpecimenDefinition): Specimen
       ...(cameraBounds ? { cameraBounds: structuredClone(cameraBounds) } : {}) };
   });
   if (steps.some(step => !step) || new Set(steps.map(step => step?.id)).size !== steps.length) return null;
-  return structuredClone({
+  return withSpecimenGuidedPlayback({
     id: `um-${scope}-source-guide`, title: `${definition.label} · source-guided dissection`, status: 'draft',
     specimenKey: definition.key, sourceFrame: 'um-5t6tz7-v1-2:source-lps',
     limitation: 'Incomplete right-limb source surfaces. Guided visibility and camera changes do not validate anatomical boundaries, surgical planes, source orientation, tendon continuity or scan registration. No absent nerve, vessel or tissue is reconstructed. Radiologist review remains required.',
     steps,
-  } as SpecimenGuidedDissection);
+  } as SpecimenGuidedPlan);
 }

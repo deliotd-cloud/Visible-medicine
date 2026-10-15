@@ -2,7 +2,7 @@
 // Copyright© The Database Center for Life Science licensed by
 // CC Attribution-Share Alike 2.1 Japan.
 import type { SpecimenDefinition } from './independent-specimen';
-import type { SpecimenGuidedDissection } from './specimen-guided-dissection';
+import { withSpecimenGuidedPlayback, type SpecimenGuidedPlan, type SpecimenGuidedDissection } from './specimen-guided-dissection';
 import { backLayersSourceMatches } from './back-layers';
 import { independentStudyRoutes } from './independent-study-links';
 
@@ -65,7 +65,7 @@ export function backGuidedDissection(
   });
   if (resolved.some(step => !step) || new Set(resolved.map(step => step?.id)).size !== resolved.length)
     return null;
-  return structuredClone({
+  return withSpecimenGuidedPlayback({
     id: 'back-layers-source-guide',
     title: 'Back layers source-guided dissection',
     status: 'draft',
@@ -73,5 +73,5 @@ export function backGuidedDissection(
     sourceFrame: route.frame,
     limitation: 'Independent BodyParts3D version-3 source comparison only. Missing intermediate and deep muscle stack, fascia, spinal cord, discs and nerve routes are not reconstructed. Disconnected source components are not identified fascicles. Visibility does not certify a surgical plane, patient registration, attachment footprint or clinical interpretation. Revision-bound radiologist review remains required.',
     steps: resolved,
-  } as SpecimenGuidedDissection);
+  } as SpecimenGuidedPlan);
 }
