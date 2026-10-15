@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "d0356851a7ee9fc3c9370c3640309c522f6500887e659fb9e2f3224379b24db3"
+      "sha256": "ff29dd463b2507e1fc770c140c240da9ec96fceed9da2f9331eb2eb2f11388f0"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1337,6 +1337,10 @@
       "sha256": "055033a3486b6ce11643f9f8101337e9bc529aed6581ea31a2094a5f7139b855"
     },
     {
+      "path": "content/girdle-muscle-xray.ts",
+      "sha256": "3e7c645bb7fb25e2db84682e00b91954c5d56fb134772096242342f73646a3f5"
+    },
+    {
       "path": "content/glottic-muscle-imaging-pins.json",
       "sha256": "d3aa44c74e940fe6d46bf44a045375b69aa8f06d6390599a58ca6351e3cecaef"
     },
@@ -2330,7 +2334,7 @@
     },
     {
       "path": "content/regional-teaching/shoulder-arm.json",
-      "sha256": "b9f1176b552d5ae946b682e4e59428f29fa784b520cfe51e6ab5680531c0bdaa"
+      "sha256": "c4804639c292ffc7842f01e87246a39d23bed7235d9ea7e058160c343c03c937"
     },
     {
       "path": "content/regional-teaching/spine.json",
@@ -3883,6 +3887,10 @@
     {
       "path": "lib/girdle-bone-ultrasound.ts",
       "sha256": "b42f6ccf57f032b983da3d6237371a08d1ce5c6c2118331fa884f4653967cf66"
+    },
+    {
+      "path": "lib/girdle-muscle-xray.ts",
+      "sha256": "42c41458f86dd02ee180de1d448f19c2e5dd4bb2d2ff0668ea7b07e9ea249bd6"
     },
     {
       "path": "lib/glottic-muscle-imaging.ts",
@@ -5454,7 +5462,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f3d09e4468a16eac00540fbafca2d71ae9964433cbdee6c91e80446b9942743c"
+      "sha256": "179a369bc4f84c15c1b68a463e79d809a2d60b817c62b0ea70101c7cf8864fe4"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5677,5 +5685,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f5e94eb7f5b575e8c9d7e0bb9790a3600909e409f0302e7a96d31f614dee9353"
+  "sha256": "78da7bc748cbd6ac019bca28f8a1ef239c9de314a30eb1741f0d1f26cb69bc9f"
 }

@@ -12,6 +12,7 @@
     "forearm-branch-xray:test": "node scripts/test-forearm-branch-xray.mjs",
     "arm-arterial-xray:test": "node scripts/test-arm-arterial-xray.mjs",
     "shoulder-muscle-xray:test": "node scripts/test-shoulder-muscle-xray.mjs",
+    "girdle-muscle-xray:test": "node scripts/test-girdle-muscle-xray.mjs",
     "pelvic-tributary-xray:test": "node scripts/test-pelvic-tributary-xray.mjs",
     "adductor-longus-xray:test": "node scripts/test-adductor-longus-xray.mjs",
     "central-canal-xray:test": "node scripts/test-central-canal-xray.mjs",

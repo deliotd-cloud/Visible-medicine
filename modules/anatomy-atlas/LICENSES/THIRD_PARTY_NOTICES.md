@@ -1,5 +1,19 @@
 # Third-party notices
 
+## Shoulder-girdle muscle X-ray teaching — 15 October 2026
+
+Original project-MIT notes cite university anatomical facts, selected primary
+scapulothoracic research, individual brachialis/teres-major injury cases and
+official ACR guidelines as factual reading only. The brachialis article has
+CC BY-NC-ND restrictions: no article prose, figure, table, image or other asset
+is copied, adapted, imported or relicensed. The same no-media/no-prose-reuse rule
+applies to all references; accessible reading is not commercial figure permission.
+Existing BodyParts3D CC BY 4.0 attribution/obligations remain. No new model,
+texture, font, dependency, service, scan, measurement dataset or mandatory fee.
+Sixteen exact-source drafts do not establish plain-film muscle visibility,
+denervation, dynamic winging, tendon integrity, registration or clinical approval.
+See docs/GIRDLE_MUSCLE_XRAY.md for scope and direct references.
+
 ## Shoulder and upper-arm muscle X-ray teaching — 15 October 2026
 
 Original project-MIT orientation notes cite university anatomy facts, a five-patient
