@@ -3749,3 +3749,14 @@ six exact disc and seven vertebral source surfaces in two existing bundles;
 no new model, texture, font, dependency, service or fee. Source and clinical
 holds remain effective. Revision-bound radiologist review is pending.
 See `docs/CERVICAL_DISC_TOUR.md`.
+
+## Leg arterial X-ray teaching — 15 October 2026
+
+Eight independently written orientation topics reuse sixteen existing exact
+bilateral source selections. UAMS and RadiologyInfo are factual reading links;
+primary angiographic/cadaveric studies are cited without importing article text,
+tables, figures, scans, annotations or other media. Reading access does not grant
+commercial media-reuse rights. Project MIT terms and the existing BodyParts3D
+CC BY 4.0 attribution remain unchanged. No new model, texture, font, dependency,
+service or fee is introduced. Source/clinical holds and independent entitlements
+remain; revision-bound radiologist review is pending. See `docs/LEG_ARTERIAL_XRAY.md`.

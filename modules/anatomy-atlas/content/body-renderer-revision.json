@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "1b4a69b64b8a5cab721ad576580914c08c68e7c7489233f091c919e2238ce68e"
+      "sha256": "bf1c3738b54c9bd0455313f93a9f12e0e7bb873c6531e0a6dd361ff8d650bbc8"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1661,6 +1661,10 @@
       "sha256": "0863a4767dc1dc0966419bcc82f06054dee3827c8404f583599ea19df91db86f"
     },
     {
+      "path": "content/leg-arterial-xray.ts",
+      "sha256": "821762f8d527ada5e42a1cd99e704d4b89cdcae274b050831192f85a00cebd75"
+    },
+    {
       "path": "content/leg-attachment-pins.json",
       "sha256": "42a6e0bfaef06211828d82a7b368c3ea3f3709e4876221ccae66f315f79dc7d4"
     },
@@ -2294,7 +2298,7 @@
     },
     {
       "path": "content/regional-teaching/leg.json",
-      "sha256": "b67155a44ca2866027e54b073ab5911ebfebe11b04da620562026bb8510430ee"
+      "sha256": "0d8b77863caa79a569464cbecb7e75918f73b08f319952493d2f79611bfcd291"
     },
     {
       "path": "content/regional-teaching/pelvis.json",
@@ -4173,6 +4177,10 @@
       "sha256": "e2e191c19df1f7bfebd31d429c6320430845d145ac1f9c604a011827eb482da4"
     },
     {
+      "path": "lib/leg-arterial-xray.ts",
+      "sha256": "f122570fd02ce4fa01e3036cb31caac1571d144c16ebde568971a310ab7c7bb3"
+    },
+    {
       "path": "lib/leg-attachments.ts",
       "sha256": "6196950ca893ac2afbeb3fa40ec9482fa947c0b457ec9a0040170fcdc46b0448"
     },
@@ -5350,7 +5358,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "ddfee826bdf8fbc6ec5c20af8edca9919b701156b245f763ac7d575a27b5136f"
+      "sha256": "0fc0b3eaea65573219e1de2d565cd0f6409db4ece9e174062c7d2403ae6d5099"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5573,5 +5581,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "f1ef1523d088dea109dd7cadfa7d805503734833bd310d0c564b6c9e0d4baa79"
+  "sha256": "a4eb7640d215f7a3be0c713d75e0f61f1d03a55e6e0d06357737cd59f67cd81b"
 }
