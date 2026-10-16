@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "5b8a76096c6b287ed2ca0782e88319d0a59bfce5e8462996e5afbecfd41cc429"
+      "sha256": "7e0cec7f3c3be09bbc9ddbfb87a0a43199c9f1475084de467650ae46674cd572"
     },
     {
       "path": "app/body-education-link.ts",
@@ -867,6 +867,10 @@
     {
       "path": "content/connective-imaging.ts",
       "sha256": "92070b2ee9dc0c0a4ced431486f5cdc2f1964955fecb15f37ceb578470be095c"
+    },
+    {
+      "path": "content/connective-projection-xray.ts",
+      "sha256": "470d5aab0a5006954288d783c1e9a27ab826854ab835c08df3d47c3e8cae5977"
     },
     {
       "path": "content/core-organ-function-pins.json",
@@ -2326,7 +2330,7 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sha256": "a6ff7fc7debc74138b48954516c03809370a2a329a48fb5b3081e3097583d882"
+      "sha256": "643fefdc9c6c6b7ed123766729662c73226b1e3339c84ad93850bb113d48d165"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -2334,7 +2338,7 @@
     },
     {
       "path": "content/regional-teaching/hand.json",
-      "sha256": "98bf0af268862f937158fe14099f261cc474568bfcd52f1487f40a53952541d3"
+      "sha256": "e1d5be1e7efde0383bb5ef4b7026ead55dbf32335892aed55fe68d12a13bb005"
     },
     {
       "path": "content/regional-teaching/head-neck.json",
@@ -3503,6 +3507,10 @@
     {
       "path": "lib/connective-imaging.ts",
       "sha256": "ea8a9e4ebf5707022a4d84d2391b18daedb2bbd5a0bd87abc74fee61d1218ad3"
+    },
+    {
+      "path": "lib/connective-projection-xray.ts",
+      "sha256": "70c93bd70ababaade5fe79780a0986cbc8457562feb523cdcfb9123376ca9012"
     },
     {
       "path": "lib/content-types.ts",
@@ -5498,7 +5506,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "f9ecfa0cc08b557f42fed952868ec30c807822988167de954a2960c28ca4219f"
+      "sha256": "25c8f2e4d5cea2762605025eb4b72bed390a5a24234af9e4a39a71219ab648dd"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5721,5 +5729,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "77def7ed0a58089505c34ef89d5010479d3086010dee391938d92b259fd47abc"
+  "sha256": "bf2571ecab385644d76d05e74222fd695a6bc856353f270fb96264bde055f03c"
 }

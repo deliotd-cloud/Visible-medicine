@@ -1,3 +1,4 @@
+import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
 import { lowerLimbConnectiveXrayLesson } from '../lib/lower-limb-connective-xray';
 import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
 import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
@@ -407,6 +408,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const connectiveProjectionXray = connectiveProjectionXrayLesson(s, tab);
+  if (connectiveProjectionXray) return connectiveProjectionXray;
   const nasalMri = nasalCartilageMriLesson(s, tab);
   if (nasalMri) return nasalMri;
   const lowerLimbConnectiveXray = lowerLimbConnectiveXrayLesson(s, tab);

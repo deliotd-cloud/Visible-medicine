@@ -1,5 +1,23 @@
 # Third-party notices
 
+## Wrist and long plantar X-ray orientation — 16 October 2026
+
+Original project-MIT teaching for four unchanged source selections. Factual
+references: Stecco et al. (2010), DOI10.1016/j.jhsa.2010.01.031,
+https://pubmed.ncbi.nlm.nih.gov/20346594/; Aggarwal et al. (2019),
+DOI10.11622/smedj.2019116, https://pmc.ncbi.nlm.nih.gov/articles/PMC7911075/;
+Ebraheim et al. (1999), DOI10.1177/107110079902000307,
+https://journals.sagepub.com/doi/10.1177/107110079902000307;
+Edama et al. (2021), DOI10.1186/s13047-020-00443-7,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC7792160/.
+Edama's article is CC BY4.0 (https://creativecommons.org/licenses/by/4.0/).
+The other citations do not provide a permissive media/data grant here.
+Only short original factual synthesis and links are included; no article prose,
+figures, scans, tables, measurement datasets or patient examples are copied,
+adapted or re-licensed. No endorsement is implied. Existing BodyParts3D CC BY4.0
+credit, change notices and unvalidated-boundary limits remain. No new asset,
+dependency, font, service or mandatory fee. Scope: docs/CONNECTIVE_PROJECTION_XRAY.md.
+
 ## Nasal cartilage MRI orientation — 16 October 2026
 
 Five existing source selections receive original project-MIT educational notes,
