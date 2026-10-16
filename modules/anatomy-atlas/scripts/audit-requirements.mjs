@@ -346,6 +346,11 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'content/intracranial-arterial-us.ts',
+  'content/intracranial-arterial-us-pins.json',
+  'lib/intracranial-arterial-us.ts',
+  'scripts/test-intracranial-arterial-us.mjs',
+  'docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md',
   'content/abdominal-eus-orientation.ts',
   'lib/abdominal-eus-orientation.ts',
   'scripts/test-abdominal-eus-orientation.mjs',

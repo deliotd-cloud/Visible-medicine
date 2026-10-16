@@ -1,5 +1,10 @@
 # Visible Medicine — Whole-Body & Regional 3D Anatomy
 
+**Head/neck → Ultrasound:** [Intracranial arterial drafts](docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md)
+add eight exact-source notes covering Doppler orientation, acoustic-window limits
+and communicating-artery interpretation. Geometry is unchanged; source candidate
+integration and revision-bound radiologist review remain separate.
+
 **Pelvis → Guided learning:** [Pelvic ring & hips](docs/PELVIC_RING_GUIDED_TOUR.md)
 adds six smooth assembled-view stops using the existing region/whole-body tour
 selector. Five exact whole-bone surfaces stay unchanged; draft orientation only,

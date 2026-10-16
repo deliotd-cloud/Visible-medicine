@@ -1,3 +1,4 @@
+import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
 import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
 import { cervicalProjectionXrayLesson } from '../lib/cervical-projection-xray';
 import { spinalMuscleXrayLesson } from '../lib/spinal-muscle-xray';
@@ -411,6 +412,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const intracranialArterialUs = intracranialArterialUsLesson(s, tab);
+  if (intracranialArterialUs) return intracranialArterialUs;
   const cervicalProjectionXray = cervicalProjectionXrayLesson(s, tab);
   if (cervicalProjectionXray) return cervicalProjectionXray;
   const spinalMuscleXray = spinalMuscleXrayLesson(s, tab);

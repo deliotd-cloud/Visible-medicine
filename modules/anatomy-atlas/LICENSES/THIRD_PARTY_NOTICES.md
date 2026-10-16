@@ -1,5 +1,18 @@
 # Third-party notices
 
+## Intracranial arterial ultrasound — 16 October 2026
+
+Eight unchanged source selections receive original project-MIT educational copy.
+Factual reading: AIUM (2023), DOI10.1002/jum.16234;
+Alexandrov et al. (2007), PMID17238867; Baumgartner et al. (1997), PMID9010531;
+Klotzsch et al. (1996), PMID8610318; Marinoni et al. (1997), PMID9372576.
+These links are not a commercial media/data licence. No publisher prose,
+figures, tables, waveforms, scans, patient cases or protocols are copied,
+adapted or re-licensed. Existing BodyParts3D CC-BY-4.0 attribution, original
+frames and unvalidated source-boundary limitations remain. No new dependency,
+font, model, texture, image, service or mandatory fee is introduced. See
+docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md for exact evidence and draft limits.
+
 ## Wrist and long plantar X-ray orientation — 16 October 2026
 
 Original project-MIT teaching for four unchanged source selections. Factual

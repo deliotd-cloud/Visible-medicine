@@ -123,8 +123,19 @@ export * from './lib/body-review-api';
 export * from './lib/body-review-decisions';
 `, resolveDir: root, loader: 'ts'}, bundle: true, write: false,
   platform: 'node', format: 'esm'});
-const current = await import('data:text/javascript;base64,' +
+const live = await import('data:text/javascript;base64,' +
   Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// The exact hand authoring epoch is now historical. Keep its entire 36-cell
+// transition/evidence proof, not allowances for unrelated later teaching edits.
+// The new intracranial-US test separately verifies all 9,936 current placements.
+const handEpoch='f1dc0ccc54ec82aa774720db3c822d3e0ea9c418';
+assert.equal(sha256(readFileSync('content/fixtures/hand-vessel-xray-before-intracranial-us.txt')),
+  'a58d3b6d793ec995fa78d3e02747098cae93691f35163de1089de5fd65333b24');
+same(readFileSync('content/fixtures/hand-vessel-xray-before-intracranial-us.txt'),
+  git(['show',`${handEpoch}:scripts/test-hand-vessel-xray.mjs`]),'Complete original hand proof retained');
+for(const path of ['content/hand-vessel-xray.ts','content/hand-vessel-xray-pins.json','lib/hand-vessel-xray.ts'])
+  same(readFileSync(path),git(['show',`${handEpoch}:${path}`]),'Hand provider still exact: '+path);
+const current={...live,...await exactSourceHistoryApi(handEpoch,'review-security')};
 const before = await exactSourceHistoryApi(baseline, 'review-security');
 const catalog = current.bodyDisplayCatalog(raw);
 same(catalog, before.bodyDisplayCatalog(JSON.parse(original(rawPath))), 'Display catalog');
@@ -273,7 +284,7 @@ for (const structure of catalog.structures) {
   const priorContext = await before.bodyReviewContext(structure.id);
   const context = await current.bodyReviewContext(structure.id);
   assert.equal(context.sourceHash, priorContext.sourceHash);
-  const renderer = JSON.parse(readFileSync('content/body-renderer-revision.json', 'utf8'));
+  const renderer = JSON.parse(git(['show',`${handEpoch}:content/body-renderer-revision.json`]));
   assert.equal(context.rendererHash, renderer.sha256);
   const geometryRevision = value => sha256(JSON.stringify({
     catalogScope: value.catalogScope, structureId: value.structureId,
@@ -350,7 +361,7 @@ for (const outside of catalog.structures.filter(row =>
   row.region === 'hand' && row.system === 'vessels' && !entries.has(row.id)))
   assert.equal(current.handVesselXrayLesson(outside, 'xray'), undefined);
 assert.equal(storageCalls, 0);
-console.log(JSON.stringify({baseline, changed, preserved, bundles,
+console.log(JSON.stringify({baseline, historicalAuthoringEpoch:handEpoch, changed, preserved, bundles,
   changedWorksheets, unaffectedWorksheets, readiness: Object.fromEntries(readiness),
   refusedIdentities: refused, malformedPacketsRefused: malformed,
   stalePacketsAndDecisionsRefused: stale, storageCalls, clinicalApproval: false}));

@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6d3998b160ceddfd34e5da842277bf5b28edafbc137f3317d545b75c88930a22"
+      "sha256": "75861205232c0b7433cfd499bb65bc37c118c4b11c33f022b4a501dbbd0c3399"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1625,6 +1625,14 @@
       "sha256": "49197fb8f8f5bd7a09e1160911fc14f2e6897d2e2347b3fad77b2b75571da593"
     },
     {
+      "path": "content/intracranial-arterial-us-pins.json",
+      "sha256": "5dc80d91f6d804c18d817aae646b406e8d44f4ed988d216587364e595f506f8d"
+    },
+    {
+      "path": "content/intracranial-arterial-us.ts",
+      "sha256": "524df9e5916f53b855936e73604f1f512e9cb4dbd85f6e2188cc5979e6453610"
+    },
+    {
       "path": "content/intracranial-arterial-xray.ts",
       "sha256": "bd91c25b55d7e69b1a8c28bd7895f996dd0c6385433703906daba5817bfb4b2c"
     },
@@ -2358,7 +2366,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "61971466d0b1c6efd88206e7dbfe5fbf8625f8d1718fd89aaf77c3dc3799e707"
+      "sha256": "195ce0a5aea12a9d9f463a1824d819a39fa7576a6d1e235ec7e594b3a99fbd3e"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -4241,6 +4249,10 @@
       "sha256": "df13b2bdd0ebdea8b0afece440d9171158afade01ec0e1577b012f83b55637ff"
     },
     {
+      "path": "lib/intracranial-arterial-us.ts",
+      "sha256": "1a57bcc331d706cf25c8808825809808e6c6cdc206fdf14c95e8abf2124a36d3"
+    },
+    {
       "path": "lib/intracranial-arterial-xray.ts",
       "sha256": "0b7850134fc092039debc3a6a077edfeb7235483e9e2bfbbf9541ff1c82c18b7"
     },
@@ -5542,7 +5554,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "c9c047b61e2d8252bb3aa6fe52150412ec7d590f3461551766206e98598f6868"
+      "sha256": "fd90fee78ca19522ffc4604c7351fcea0e88a464385f8a84d806f5364637a5a8"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5765,5 +5777,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8c7a2163be05838f8ee5ca9ad83d688b06fc4db888d052c06a3adad4a5ec22f7"
+  "sha256": "db69417e1a1227b8ec61851a4f1fb04287ac4cf56b7dae2a9f52469861b8151a"
 }

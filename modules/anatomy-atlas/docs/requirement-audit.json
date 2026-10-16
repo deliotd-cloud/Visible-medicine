@@ -2,6 +2,11 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "content/intracranial-arterial-us.ts": "524df9e5916f53b855936e73604f1f512e9cb4dbd85f6e2188cc5979e6453610",
+    "content/intracranial-arterial-us-pins.json": "5dc80d91f6d804c18d817aae646b406e8d44f4ed988d216587364e595f506f8d",
+    "lib/intracranial-arterial-us.ts": "1a57bcc331d706cf25c8808825809808e6c6cdc206fdf14c95e8abf2124a36d3",
+    "scripts/test-intracranial-arterial-us.mjs": "ed4c5112fdea18474828a902d221e1412014119c13d079c166bcb6db6bf3240f",
+    "docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md": "754f11df4a4fa5d26c84f2050b3dfb674778d9d1fbbbbf0c7ca43d05e7813276",
     "content/abdominal-eus-orientation.ts": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37",
     "lib/abdominal-eus-orientation.ts": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13",
     "scripts/test-abdominal-eus-orientation.mjs": "b7c0de24da001350c5e488f55e79dd1c9742d6b3026df1c8d9d5cc7904ba3fd1",
@@ -738,8 +743,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "7819e57c0485b855cc66fe3f1e0b5947f878e7c36ea555cdade60b04820084cf",
-    "explicitTopicReadiness": "94daedd510da624aedb24c02aa1861fdf39225b8b38dc4158765f59112746960",
+    "resolvedContentAndRecipeData": "f31a65c3a3f946ccb03cbfcafac040a9889fe947d6e3bb27fb9c7fba0899f936",
+    "explicitTopicReadiness": "dab1aad24c7a12d8d79b5992d9dfaa4adb75a386cc9f769c7848a4b05183ca71",
     "reasoningQuestionData": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa",
     "guidedLearningData": "3e3d76f0b7b84e20182a725904e807c5adf2204c4a627e2cf9331629248e5c36",
     "lib/eye-layer-guide.ts": "c2c0a99f9931450e0e910a705fbded2b31ae074f251558468e013dbf19af95b3",
@@ -3052,15 +3057,15 @@
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 764,
+        "specificDraft": 862,
         "identityOnly": 0,
-        "pending": 340,
+        "pending": 242,
         "generatedIdentification": 0
       },
       "ultrasound": {
-        "specificDraft": 878,
+        "specificDraft": 886,
         "identityOnly": 0,
-        "pending": 226,
+        "pending": 218,
         "generatedIdentification": 0
       },
       "pathology": {
@@ -3228,15 +3233,15 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 66,
+          "specificDraft": 71,
           "identityOnly": 0,
-          "pending": 225,
+          "pending": 220,
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 109,
+          "specificDraft": 117,
           "identityOnly": 0,
-          "pending": 182,
+          "pending": 174,
           "generatedIdentification": 0
         },
         "pathology": {
@@ -3284,9 +3289,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 151,
+          "specificDraft": 154,
           "identityOnly": 0,
-          "pending": 7,
+          "pending": 4,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -3340,9 +3345,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 100,
+          "specificDraft": 104,
           "identityOnly": 0,
-          "pending": 6,
+          "pending": 2,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -3564,9 +3569,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 88,
+          "specificDraft": 124,
           "identityOnly": 0,
-          "pending": 36,
+          "pending": 0,
           "generatedIdentification": 0
         },
         "ultrasound": {
@@ -3788,9 +3793,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 50,
+          "specificDraft": 112,
           "identityOnly": 0,
-          "pending": 65,
+          "pending": 3,
           "generatedIdentification": 0
         },
         "ultrasound": {
