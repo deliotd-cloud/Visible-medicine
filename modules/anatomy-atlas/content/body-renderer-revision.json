@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "92add5e49675680abd55f687c08e7d4bbcfcb0ab34e1e0f611cc3da74c3fef9f"
+      "sha256": "5b8a76096c6b287ed2ca0782e88319d0a59bfce5e8462996e5afbecfd41cc429"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1941,6 +1941,10 @@
       "sha256": "79229d3004f83592a077527209bccd403ef9e61e9e127881110b4a909e247267"
     },
     {
+      "path": "content/nasal-cartilage-mri.ts",
+      "sha256": "b68c27f4edec041a1a9c73973616d9509c8abbc06910203cf1ec59ba8141b46f"
+    },
+    {
       "path": "content/nasal-cartilage-quiz-pins.json",
       "sha256": "c42f02da2a65fcdc4faaad275c049b77aa48754cfae4df7e0f263b8cbea716ae"
     },
@@ -2334,7 +2338,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "c3287ed86330a9c4d41a5823ec27532bf66a9dfb41175979fa890a502acecc76"
+      "sha256": "61971466d0b1c6efd88206e7dbfe5fbf8625f8d1718fd89aaf77c3dc3799e707"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -4493,6 +4497,10 @@
       "sha256": "c9f7e0dbc6ebeaf8bfd758373c04ecd3bcccdf2394e77861e1a263fc1b7c9814"
     },
     {
+      "path": "lib/nasal-cartilage-mri.ts",
+      "sha256": "23e03af5ebbb2847ebf33ac73dea9dd7b0719edd672465018be98030c4574f35"
+    },
+    {
       "path": "lib/nasal-cartilage-quiz.ts",
       "sha256": "cc8f5ef81e4d86ba897a180ab9ff7839bb80ced605de247e8bbf82da20eb5373"
     },
@@ -5490,7 +5498,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "7cb6c0e4bde3ee3797fa27b5762da8a91b6faf1ead1807266f20014b32936c97"
+      "sha256": "f9ecfa0cc08b557f42fed952868ec30c807822988167de954a2960c28ca4219f"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5713,5 +5721,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "111252f62d44d6f713d259d4f6dea25bc68275d8554a9a2f1230fb92ff7c435d"
+  "sha256": "77def7ed0a58089505c34ef89d5010479d3086010dee391938d92b259fd47abc"
 }

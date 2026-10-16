@@ -1,5 +1,22 @@
 # Third-party notices
 
+## Nasal cartilage MRI orientation — 16 October 2026
+
+Five existing source selections receive original project-MIT educational notes,
+not new geometry, scans or image correspondence. Factual reading includes
+Visscher et al., *MRI and Additive Manufacturing of Nasal Alar Constructs for
+Patient-specific Reconstruction* (2017), DOI10.1038/s41598-017-10602-9,
+https://pmc.ncbi.nlm.nih.gov/articles/PMC5577227/ (article CC BY4.0,
+https://creativecommons.org/licenses/by/4.0/), and Varoquier et al. (2021),
+DOI10.1016/j.anorl.2020.06.017, https://pubmed.ncbi.nlm.nih.gov/33144032/ .
+The latter publisher's Elsevier user licence is not a permissive media/data
+grant. Research citations do not import or relicense article text, tables,
+figures, scans, meshes, measurement datasets or patient examples; none are
+copied or adapted here. No endorsement is implied. Existing BodyParts3D CC BY4.0
+attribution and unvalidated-boundary restrictions remain. No new dependency,
+font, asset, service or mandatory fee. Scope: docs/NASAL_CARTILAGE_MRI.md.
+
+
 ## Axillary-branch X-ray and angiographic orientation — 15 October 2026
 
 Original project-MIT teaching cites university anatomical facts, primary injected

@@ -5,6 +5,7 @@ import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
 import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
 import { ocularSupportQuizLesson } from '../lib/ocular-support-quiz';
 import { nasalCartilageQuizLesson } from '../lib/nasal-cartilage-quiz';
+import { nasalCartilageMriLesson } from '../lib/nasal-cartilage-mri';
 import { commissuralLandmarkQuizLesson } from '../lib/commissural-landmark-quiz';
 import { footVariantQuizLesson } from '../lib/foot-variant-quiz';
 import { abdominalEusOrientationLesson } from '../lib/abdominal-eus-orientation';
@@ -406,6 +407,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const nasalMri = nasalCartilageMriLesson(s, tab);
+  if (nasalMri) return nasalMri;
   const lowerLimbConnectiveXray = lowerLimbConnectiveXrayLesson(s, tab);
   if (lowerLimbConnectiveXray) return lowerLimbConnectiveXray;
   const nasalQuiz = nasalCartilageQuizLesson(s, tab);

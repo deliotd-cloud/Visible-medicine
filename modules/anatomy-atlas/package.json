@@ -75,6 +75,7 @@
     "pectoral-branch-ultrasound:test": "node scripts/validate-pectoral-branch-ultrasound.mjs",
     "orbital-support-quiz:test": "node scripts/pin-orbital-support-quiz.mjs --check && node scripts/test-orbital-support-quiz.mjs",
     "orbital-sensory-mri:test": "node scripts/validate-orbital-sensory-mri.mjs",
+    "nasal-cartilage-mri:test": "node scripts/validate-nasal-cartilage-mri.mjs",
     "spinal-disc-ultrasound:test": "node scripts/validate-spinal-disc-ultrasound.mjs",
     "abdominal-fold-ultrasound:test": "node scripts/validate-abdominal-fold-ultrasound.mjs",
     "laryngeal-framework-quiz:test": "node scripts/pin-laryngeal-framework-quiz.mjs --check && node scripts/test-laryngeal-framework-quiz.mjs",
