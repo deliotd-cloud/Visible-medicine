@@ -3977,3 +3977,16 @@ No new model, texture, font, dependency, service or fee. These notes do not
 validate angiographic visibility, source connectivity or patient registration.
 Exact-revision radiologist sign-off remains pending. See
 `docs/SHOULDER_VESSEL_XRAY.md` for scope and study-specific limitations.
+
+## Spinal-muscle X-ray orientation — 16 October 2026
+
+Fifty-six exact existing source selections use 32 original factual orientation
+drafts. University anatomy tables, publisher anatomy references and AAOS imaging
+education are reading links only; their copyrighted prose, figures, tables and
+models are not imported, traced or relicensed. Reading access is not permission
+to reuse media. Existing project MIT terms, BodyParts3D CC BY 4.0 attribution,
+geometry and source holds remain unchanged. No new model, image, texture, font,
+dependency, service or fee. These lessons supply bony context, not acquired
+images, separate muscle outlines, validated attachment maps or registration.
+Revision-bound radiologist sign-off is still required. See
+`docs/SPINAL_MUSCLE_XRAY.md` for source scope and limitations.

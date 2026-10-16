@@ -1,5 +1,6 @@
 import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
 import { cervicalProjectionXrayLesson } from '../lib/cervical-projection-xray';
+import { spinalMuscleXrayLesson } from '../lib/spinal-muscle-xray';
 import { lowerLimbConnectiveXrayLesson } from '../lib/lower-limb-connective-xray';
 import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
 import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
@@ -411,6 +412,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   const cervicalProjectionXray = cervicalProjectionXrayLesson(s, tab);
   if (cervicalProjectionXray) return cervicalProjectionXray;
+  const spinalMuscleXray = spinalMuscleXrayLesson(s, tab);
+  if (spinalMuscleXray) return spinalMuscleXray;
   const connectiveProjectionXray = connectiveProjectionXrayLesson(s, tab);
   if (connectiveProjectionXray) return connectiveProjectionXray;
   const nasalMri = nasalCartilageMriLesson(s, tab);

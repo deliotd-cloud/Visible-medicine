@@ -36,6 +36,7 @@
     "gastric-venous-xray:test": "node scripts/test-gastric-venous-xray.mjs",
     "pancreatic-arterial-tour:test": "node scripts/pin-pancreatic-arterial-tour.mjs --check && node scripts/test-pancreatic-arterial-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
     "portal-hepatic-tour:test": "node scripts/pin-portal-hepatic-tour.mjs --check && node scripts/test-portal-hepatic-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",
+    "spinal-muscle-xray:test": "node scripts/pin-spinal-muscle-xray.mjs --check && node scripts/test-spinal-muscle-xray.mjs",
     "regional-teaching:generate": "node scripts/regional-teaching-snapshots.mjs",
     "regional-teaching:test": "node scripts/regional-teaching-snapshots.mjs --check && node --import tsx --test scripts/test-body-teaching-loader.mjs scripts/test-regional-teaching.mjs scripts/test-regional-teaching-freshness.mjs",
     "pulmonary-venous-tour:test": "node scripts/pin-pulmonary-venous-tour.mjs --check && node scripts/test-pulmonary-venous-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",

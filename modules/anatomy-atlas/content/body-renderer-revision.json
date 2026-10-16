@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "8bb2c43e800a510f17b25001436764cc6892dce48c0d190bc2652f1c19464efc"
+      "sha256": "5bb06fad54415e8bf71481812ef05560ede43e28d60a048568d6ce8f7a37fa96"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2366,7 +2366,7 @@
     },
     {
       "path": "content/regional-teaching/spine.json",
-      "sha256": "e2fd797a928f602011a7e4e5bad0e778c59e1b5df193e2540dc6ecca4cc7a5c5"
+      "sha256": "e1d12d492df291ddeec484bc4425bcd02d8deb8735b4169218bde51abe8a5cca"
     },
     {
       "path": "content/regional-teaching/thigh.json",
@@ -2575,6 +2575,14 @@
     {
       "path": "content/spinal-muscle-quiz.ts",
       "sha256": "b73ecd3fa7177e944b75ca8c63f97de5acad1e9e8ee5dcc567e0dedf3ecb4943"
+    },
+    {
+      "path": "content/spinal-muscle-xray-pins.json",
+      "sha256": "a0e888b3035e018074e350d364fc3c8506a3dafb3b3f954c5b08b56a3e62b062"
+    },
+    {
+      "path": "content/spinal-muscle-xray.ts",
+      "sha256": "496b05ab26773534b96e0110f5b14a6398dcb769e06afcf2a08f12d5fd4cd50b"
     },
     {
       "path": "content/spine-imaging-concepts.ts",
@@ -5105,6 +5113,10 @@
       "sha256": "c79f894154258df53416a3b519c86e8cbd2d435e6017dd54573be00eb10e5f48"
     },
     {
+      "path": "lib/spinal-muscle-xray.ts",
+      "sha256": "4112c45d67b17ad253cc2ae79ed28375cf6254470a4e3fbf7c6d950d975f9e8a"
+    },
+    {
       "path": "lib/spine-imaging.ts",
       "sha256": "669cb11ce1edd966b056ee975bdc61c647232410c84ba3a180fbd89920957a39"
     },
@@ -5518,7 +5530,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "64471434a898583536d7a0d6abbf641613123ac77a91208b7420cb3018416399"
+      "sha256": "520c2bca09743e299a8a4e5522cd060df9fe7697a501dc644271e63f874eb9e6"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5741,5 +5753,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "0df8533b8a35c99619635ff256a9b6c1b9f0c6fa67d3a41e838906ff69c3f037"
+  "sha256": "1031b28e4cfa0d442fd5df1780c3b9654c66bf595868bf2cf926064c360dd7b5"
 }
