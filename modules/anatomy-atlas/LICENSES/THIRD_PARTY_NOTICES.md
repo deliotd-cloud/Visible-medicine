@@ -3990,3 +3990,15 @@ dependency, service or fee. These lessons supply bony context, not acquired
 images, separate muscle outlines, validated attachment maps or registration.
 Revision-bound radiologist sign-off is still required. See
 `docs/SPINAL_MUSCLE_XRAY.md` for source scope and limitations.
+
+## Hand-vessel X-ray and contrast context — 16 October 2026
+
+Thirty-six existing selections use 19 original teaching families. Primary
+arterial radioanatomy, angiography, cadaver venography and dissection studies
+are factual reading references only, not licences to reuse publisher material.
+No publisher prose, figure, scan, mesh, table or dataset is imported or traced.
+Existing MIT code terms and BodyParts3D CC BY 4.0 attribution remain unchanged.
+No new asset, dependency, font, service or mandatory fee. Routine hand films
+are not presented as maps of normal vessels. Component identities, incomplete
+inventories and all clinical/source holds remain; revision-bound radiologist
+review is required. See `docs/HAND_VESSEL_XRAY.md` for method-specific limits.

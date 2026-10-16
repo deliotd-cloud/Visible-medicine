@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "hand-vessel-xray:test": "node scripts/pin-hand-vessel-xray.mjs --check && node scripts/test-hand-vessel-xray.mjs",
     "shoulder-vessel-xray:test": "node scripts/test-shoulder-vessel-xray.mjs",
     "continuous-guided-playback:test": "node scripts/test-guided-playback.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-shoulder-tour-session.mjs && node scripts/test-eye-layer-guide-component.mjs && node scripts/test-ventricular-component.mjs && node scripts/test-guided-camera-interruption.mjs && node scripts/test-specimen-guided-player.mjs",
     "posterior-calf-tour:test": "node scripts/pin-posterior-calf-tour.mjs --check && node scripts/test-posterior-calf-tour.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-camera.mjs",

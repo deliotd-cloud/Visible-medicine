@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "5bb06fad54415e8bf71481812ef05560ede43e28d60a048568d6ce8f7a37fa96"
+      "sha256": "6d3998b160ceddfd34e5da842277bf5b28edafbc137f3317d545b75c88930a22"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1473,6 +1473,14 @@
       "sha256": "f3026e9c57a040bcf5751ab533681d423e279b1faa9e601dab8f4c826371bb31"
     },
     {
+      "path": "content/hand-vessel-xray-pins.json",
+      "sha256": "178513798717a99c6b5f039792b427efa283d2a620e7e63d2b716e11bb148e3c"
+    },
+    {
+      "path": "content/hand-vessel-xray.ts",
+      "sha256": "10b492068c300999ae1d00853298913b16c848d3970dbd8bc3e2fecc52c51582"
+    },
+    {
       "path": "content/head-neck-vessel-imaging-pins.json",
       "sha256": "c1fb20037d691a8b507272ca857317ef9d4bf70b6203cc1565833b10c9bf94e4"
     },
@@ -2346,7 +2354,7 @@
     },
     {
       "path": "content/regional-teaching/hand.json",
-      "sha256": "e1d5be1e7efde0383bb5ef4b7026ead55dbf32335892aed55fe68d12a13bb005"
+      "sha256": "9f414e1f3a1a431f3d243e886bdae5f58d093dacf77507bbdd557115e82e5b5d"
     },
     {
       "path": "content/regional-teaching/head-neck.json",
@@ -4049,6 +4057,10 @@
       "sha256": "4c6f29b5f9fde2ab8507d334c2764dba246592ab2fb4aaf9b8ddac08bab4cd14"
     },
     {
+      "path": "lib/hand-vessel-xray.ts",
+      "sha256": "e509ef8cf32de43df3cdb8ea475d03b49e56ad7afd971d098aca07997d228dc8"
+    },
+    {
       "path": "lib/head-clinical-curriculum.ts",
       "sha256": "e60a813172148b58b8f843037f2dc7eff6678585feeb5ccb38ee9bed264260b2"
     },
@@ -5530,7 +5542,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "520c2bca09743e299a8a4e5522cd060df9fe7697a501dc644271e63f874eb9e6"
+      "sha256": "c9c047b61e2d8252bb3aa6fe52150412ec7d590f3461551766206e98598f6868"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5753,5 +5765,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "1031b28e4cfa0d442fd5df1780c3b9654c66bf595868bf2cf926064c360dd7b5"
+  "sha256": "8c7a2163be05838f8ee5ca9ad83d688b06fc4db888d052c06a3adad4a5ec22f7"
 }
