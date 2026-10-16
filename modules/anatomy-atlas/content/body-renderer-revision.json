@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "7e0cec7f3c3be09bbc9ddbfb87a0a43199c9f1475084de467650ae46674cd572"
+      "sha256": "8bb2c43e800a510f17b25001436764cc6892dce48c0d190bc2652f1c19464efc"
     },
     {
       "path": "app/body-education-link.ts",
@@ -795,6 +795,14 @@
     {
       "path": "content/cervical-disc-tour-pins.json",
       "sha256": "6d4afc7a9b6358551a95ed0e615c6b0765f0e38a8a2be95747fefa95549ed774"
+    },
+    {
+      "path": "content/cervical-projection-xray-pins.json",
+      "sha256": "a24fa70671378ab2ef58036c097917d63718ec0237a3bc568d3e2b8f09ddf894"
+    },
+    {
+      "path": "content/cervical-projection-xray.ts",
+      "sha256": "b22b4f2a9d5208dd9d60d9496ec622173f2246e45afa76f4067d310fc4739084"
     },
     {
       "path": "content/cervical-quiz-pins.json",
@@ -2358,7 +2366,7 @@
     },
     {
       "path": "content/regional-teaching/spine.json",
-      "sha256": "0091d7899fe85aeaefcb9818ee2d2812462fbe338a4d847d29e8e85afc00772d"
+      "sha256": "e2fd797a928f602011a7e4e5bad0e778c59e1b5df193e2540dc6ecca4cc7a5c5"
     },
     {
       "path": "content/regional-teaching/thigh.json",
@@ -3443,6 +3451,10 @@
     {
       "path": "lib/cervical-disc-tour.ts",
       "sha256": "03a6900898954a12f7e1e13a94d6b0cabf19241fb48656fa0cc42bb7798200a4"
+    },
+    {
+      "path": "lib/cervical-projection-xray.ts",
+      "sha256": "ae7822a6f740549d595d1c38afab0a8d7808ee9334912dce001c3e44b298b8d2"
     },
     {
       "path": "lib/cervical-quiz.ts",
@@ -5506,7 +5518,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "25c8f2e4d5cea2762605025eb4b72bed390a5a24234af9e4a39a71219ab648dd"
+      "sha256": "64471434a898583536d7a0d6abbf641613123ac77a91208b7420cb3018416399"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5729,5 +5741,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "bf2571ecab385644d76d05e74222fd695a6bc856353f270fb96264bde055f03c"
+  "sha256": "0df8533b8a35c99619635ff256a9b6c1b9f0c6fa67d3a41e838906ff69c3f037"
 }

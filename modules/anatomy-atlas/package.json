@@ -70,6 +70,7 @@
     "biliary-duct-xray:test": "node scripts/validate-biliary-duct-xray.mjs",
     "internal-iliac-ultrasound:test": "node scripts/validate-internal-iliac-ultrasound.mjs",
     "root-cuff-xray:test": "node scripts/pin-root-cuff-xray.mjs --check && node scripts/validate-root-cuff-xray.mjs",
+    "cervical-projection-xray:test": "node scripts/pin-cervical-projection-xray.mjs --check && node --test scripts/test-cervical-projection-xray.mjs",
     "orbital-support-mri:test": "node scripts/pin-orbital-support-mri.mjs --check && node scripts/validate-orbital-support-mri.mjs",
     "pelvic-venous-tour:test": "node scripts/pin-pelvic-venous-tour.mjs --check && node scripts/test-pelvic-venous-tour.mjs",
     "pectoral-branch-ultrasound:test": "node scripts/validate-pectoral-branch-ultrasound.mjs",
