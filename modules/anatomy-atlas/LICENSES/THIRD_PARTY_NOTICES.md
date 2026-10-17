@@ -4015,3 +4015,15 @@ No new asset, dependency, font, service or mandatory fee. Routine hand films
 are not presented as maps of normal vessels. Component identities, incomplete
 inventories and all clinical/source holds remain; revision-bound radiologist
 review is required. See `docs/HAND_VESSEL_XRAY.md` for method-specific limits.
+
+## Foot arterial X-ray orientation — 17 October 2026
+
+Twelve existing bilateral selections use six original teaching topics. University
+anatomy tables and primary calcification, angiography and cadaveric studies are
+factual reading references only, not licences to reuse publisher material. No
+publisher prose, figure, scan, mask, table, mesh or dataset is imported or traced.
+Existing MIT code terms and BodyParts3D 4.0 CC BY 4.0 attribution remain unchanged.
+No new asset, font, dependency, service or mandatory fee. Plain radiography is
+not presented as a normal arterial-lumen map. Clinical and source holds remain;
+exact-revision radiologist review is required. See
+`docs/FOOT_ARTERIAL_PROJECTION_XRAY.md` for scope and study-specific limitations.

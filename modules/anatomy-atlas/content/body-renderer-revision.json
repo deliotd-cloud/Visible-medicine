@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "75861205232c0b7433cfd499bb65bc37c118c4b11c33f022b4a501dbbd0c3399"
+      "sha256": "b15aab0bcbca2551cd782827e946d9a249773af6b7526680b185fd000155ab48"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1143,6 +1143,14 @@
     {
       "path": "content/femoral-venous-xray.ts",
       "sha256": "ba474b45990290820ac8157dcc6d73c16f754e1ebfb4769cf94ad84280ef3ea0"
+    },
+    {
+      "path": "content/foot-arterial-projection-xray-pins.json",
+      "sha256": "c1105e46305bbdeacdcb5dda00d9e6a347dad20e5183cb150c34a0696557cecc"
+    },
+    {
+      "path": "content/foot-arterial-projection-xray.ts",
+      "sha256": "e80debbdb434fe5d99ed6508ae20ca4514636b28dfa6e873cfafc59a3789e836"
     },
     {
       "path": "content/foot-bone-quiz-pins.json",
@@ -2354,7 +2362,7 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sha256": "643fefdc9c6c6b7ed123766729662c73226b1e3339c84ad93850bb113d48d165"
+      "sha256": "aabf3d9e42fa1110f7343cb3a1eea177e3b5735632ceceb5c465e8f1ac91310a"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -3803,6 +3811,10 @@
     {
       "path": "lib/femoral-venous-xray.ts",
       "sha256": "98f295afa0e696e2077e4f9ade5f83d1eae9b58e796855c65d2e336f356e51a4"
+    },
+    {
+      "path": "lib/foot-arterial-projection-xray.ts",
+      "sha256": "d547aaca2a9633bf937d5cacaf0ca439e5c7b2c90c57ae74f337993aef3c11df"
     },
     {
       "path": "lib/foot-bone-quiz.ts",
@@ -5554,7 +5566,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "fd90fee78ca19522ffc4604c7351fcea0e88a464385f8a84d806f5364637a5a8"
+      "sha256": "bdbf99af2e2288c648174f4c70f8ae6e7e9ba8d8562603882dd36c407c803cdb"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5777,5 +5789,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "db69417e1a1227b8ec61851a4f1fb04287ac4cf56b7dae2a9f52469861b8151a"
+  "sha256": "945425e5032b901800690ce5fac13715d224463b677c673ec3f0c8e317cd9bcb"
 }

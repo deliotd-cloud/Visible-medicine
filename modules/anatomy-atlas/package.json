@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "foot-arterial-projection-xray:test": "node scripts/test-foot-arterial-projection-xray-current.mjs",
     "intracranial-arterial-us:test": "node scripts/pin-intracranial-arterial-us.mjs --check && node scripts/test-intracranial-arterial-us.mjs",
     "hand-vessel-xray:test": "node scripts/pin-hand-vessel-xray.mjs --check && node scripts/test-hand-vessel-xray.mjs",
     "shoulder-vessel-xray:test": "node scripts/test-shoulder-vessel-xray.mjs",

@@ -346,6 +346,11 @@ const countsBySystem = Object.fromEntries(
 const profiles = Object.values(dissectionProfiles);
 const sourceHashes = {};
 for (const path of [
+  'content/foot-arterial-projection-xray.ts',
+  'content/foot-arterial-projection-xray-pins.json',
+  'lib/foot-arterial-projection-xray.ts',
+  'scripts/test-foot-arterial-projection-xray-current.mjs',
+  'docs/FOOT_ARTERIAL_PROJECTION_XRAY.md',
   'content/intracranial-arterial-us.ts',
   'content/intracranial-arterial-us-pins.json',
   'lib/intracranial-arterial-us.ts',

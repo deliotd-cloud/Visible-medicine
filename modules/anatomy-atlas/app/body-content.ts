@@ -1,3 +1,4 @@
+import {footArterialProjectionXrayLesson} from '../lib/foot-arterial-projection-xray';
 import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
 import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
 import { cervicalProjectionXrayLesson } from '../lib/cervical-projection-xray';
@@ -412,6 +413,9 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
+  if(footArterialProjectionXray)return footArterialProjectionXray;
+
   const intracranialArterialUs = intracranialArterialUsLesson(s, tab);
   if (intracranialArterialUs) return intracranialArterialUs;
   const cervicalProjectionXray = cervicalProjectionXrayLesson(s, tab);

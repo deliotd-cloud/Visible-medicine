@@ -2,6 +2,11 @@
   "schemaVersion": 1,
   "method": "Offline source and displayed-copy inventory; no clinical or browser certification.",
   "sourceHashes": {
+    "content/foot-arterial-projection-xray.ts": "e80debbdb434fe5d99ed6508ae20ca4514636b28dfa6e873cfafc59a3789e836",
+    "content/foot-arterial-projection-xray-pins.json": "c1105e46305bbdeacdcb5dda00d9e6a347dad20e5183cb150c34a0696557cecc",
+    "lib/foot-arterial-projection-xray.ts": "d547aaca2a9633bf937d5cacaf0ca439e5c7b2c90c57ae74f337993aef3c11df",
+    "scripts/test-foot-arterial-projection-xray-current.mjs": "814ad2231c4b50a380a9e95fea7c5cd5d3f373dfd4ff53b3915e87d1f40c7e15",
+    "docs/FOOT_ARTERIAL_PROJECTION_XRAY.md": "e0944bda286097f053c4f0de6fcdf6022af41619f65664f6330a71cced0f01b9",
     "content/intracranial-arterial-us.ts": "524df9e5916f53b855936e73604f1f512e9cb4dbd85f6e2188cc5979e6453610",
     "content/intracranial-arterial-us-pins.json": "5dc80d91f6d804c18d817aae646b406e8d44f4ed988d216587364e595f506f8d",
     "lib/intracranial-arterial-us.ts": "1a57bcc331d706cf25c8808825809808e6c6cdc206fdf14c95e8abf2124a36d3",
@@ -743,8 +748,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "f31a65c3a3f946ccb03cbfcafac040a9889fe947d6e3bb27fb9c7fba0899f936",
-    "explicitTopicReadiness": "dab1aad24c7a12d8d79b5992d9dfaa4adb75a386cc9f769c7848a4b05183ca71",
+    "resolvedContentAndRecipeData": "2329ad20922abda74c05cffb1548f171c7f150f22409916c35e959f44f87ea39",
+    "explicitTopicReadiness": "dd786f1f80ae1b0c03d16be37c0163832e46c8cbb447a450deaa7fd7150d905e",
     "reasoningQuestionData": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa",
     "guidedLearningData": "3e3d76f0b7b84e20182a725904e807c5adf2204c4a627e2cf9331629248e5c36",
     "lib/eye-layer-guide.ts": "c2c0a99f9931450e0e910a705fbded2b31ae074f251558468e013dbf19af95b3",
@@ -3057,9 +3062,9 @@
         "generatedIdentification": 0
       },
       "xray": {
-        "specificDraft": 862,
+        "specificDraft": 874,
         "identityOnly": 0,
-        "pending": 242,
+        "pending": 230,
         "generatedIdentification": 0
       },
       "ultrasound": {
@@ -3737,9 +3742,9 @@
           "generatedIdentification": 0
         },
         "xray": {
-          "specificDraft": 108,
+          "specificDraft": 120,
           "identityOnly": 0,
-          "pending": 14,
+          "pending": 2,
           "generatedIdentification": 0
         },
         "ultrasound": {
