@@ -1,0 +1,12 @@
+.workbook-correction { margin-block: .75rem; padding: .6rem .8rem; border: 1px solid var(--border, #cbd5e1); border-radius: .5rem; }
+.workbook-correction summary { cursor: pointer; font-weight: 600; }
+.workbook-correction > p, .workbook-correction small { color: var(--muted-foreground, #475569); font-size: .875rem; }
+.workbook-correction fieldset { display: grid; gap: .5rem; margin: .5rem 0 0; padding: 0; border: 0; }
+.workbook-correction legend { margin-bottom: .5rem; font-weight: 600; }
+.workbook-correction textarea { width: 100%; max-width: 36rem; }
+.workbook-correction-confirm { display: flex; align-items: start; gap: .5rem; max-width: 42rem; }
+.workbook-correction-confirm input { margin-top: .2rem; }
+.workbook-correction button { justify-self: start; }
+.workbook-correction :is(button, a, input, textarea, summary):focus-visible { outline: 2px solid #002e38; outline-offset: 3px; }
+.workbook-correction-error { color: #a11d1d; }
+.workbook-correction-success { color: #176342; }

@@ -1,0 +1,29 @@
+{
+  "schema": "vm-lineage-legacy-frozen-1",
+  "records": [
+    {
+      "path": "tests/lecture-editor.test.ts",
+      "frozenPath": "tests/fixtures/lineage-legacy-before-20261016/lecture-editor.test.ts.txt",
+      "sha256": "3ed709075e7e0cbf05c9931040e9d719e55b9e42ae96eebc00a4f91f263958ce",
+      "testCases": 18
+    },
+    {
+      "path": "tests/lecture-request-lifecycle.test.ts",
+      "frozenPath": "tests/fixtures/lineage-legacy-before-20261016/lecture-request-lifecycle.test.ts.txt",
+      "sha256": "2c4d0681baebf8f14fc10661e5e9192f82eeab1561a38c5fb404ede903af8f24",
+      "testCases": 7
+    },
+    {
+      "path": "tests/lecture-anatomy-matches-ui.test.ts",
+      "frozenPath": "tests/fixtures/lineage-legacy-before-20261016/lecture-anatomy-matches-ui.test.ts.txt",
+      "sha256": "57dba01b80a8dc7c41deff872de87490a381938d946a04fcbe5611b6bd049dce",
+      "testCases": 7
+    },
+    {
+      "path": "tests/lecture-multi-anatomy-ui.test.ts",
+      "frozenPath": "tests/fixtures/lineage-legacy-before-20261016/lecture-multi-anatomy-ui.test.ts.txt",
+      "sha256": "a2217db887333d21d5f138231e6ba62bdfed045c3997c66e0ab4d6899f1f0a07",
+      "testCases": 8
+    }
+  ]
+}

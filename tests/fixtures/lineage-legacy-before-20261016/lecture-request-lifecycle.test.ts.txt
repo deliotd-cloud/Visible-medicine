@@ -1,0 +1,71 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import React from 'react';
+import ts from 'typescript';
+
+const require=createRequire(import.meta.url);
+const slide={id:'slide-one',title:'Synthetic slide',body:'Synthetic educational content.',referenceUrl:''};
+const initial={id:'lecture:one',courseId:'course:one',courseTitle:'Synthetic course',title:'Original lecture',version:4,status:'draft',slides:[slide],reviews:[],published:null,canEdit:true,canReview:false,canPublish:false};
+const tick=()=>new Promise(resolve=>setImmediate(resolve));
+function deferred<T>() {let resolve!:(value:T)=>void,reject!:(reason:unknown)=>void;const promise=new Promise<T>((yes,no)=>{resolve=yes;reject=no;});return{promise,resolve,reject};}
+function response(value:unknown) {return new Response(JSON.stringify(value),{status:200,headers:{'content-type':'application/json'}});}
+function nodes(node:any):any[] {return Array.isArray(node)?node.flatMap(nodes):React.isValidElement(node)?[node,...nodes((node as any).props.children)]:[];}
+function text(node:any):string {return Array.isArray(node)?node.map(text).join(''):React.isValidElement(node)?text((node as any).props.children):typeof node==='string'||typeof node==='number'?String(node):'';}
+function harness(view=initial) {
+  const originals=new Map(['window','document'].map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]));
+  const values:any[]=[],effects=new Map<number,{deps:unknown[];create:()=>unknown;cleanup?:()=>void}>();
+  let cursor=0,changed=false,tree:any,mounted=true,writes=0,postUnmountWrites=0,confirmResult=true,confirmCalls=0;
+  let pending:Array<()=>void>=[];
+  const windowStub={confirm(){confirmCalls++;return confirmResult;},addEventListener(){},removeEventListener(){}};
+  Object.defineProperty(globalThis,'window',{configurable:true,value:windowStub});Object.defineProperty(globalThis,'document',{configurable:true,value:{addEventListener(){},removeEventListener(){}}});
+  const react={...React,useMemo:(make:()=>unknown)=>make(),useRef:(value:unknown)=>{const i=cursor++;if(!(i in values))values[i]={current:value};return values[i];},
+    useState:(value:unknown)=>{const i=cursor++;if(!(i in values))values[i]=typeof value==='function'?(value as ()=>unknown)():value;return[values[i],(next:any)=>{writes++;if(!mounted)postUnmountWrites++;values[i]=typeof next==='function'?next(values[i]):next;changed=true;}];},
+    useEffect:(create:()=>unknown,deps:unknown[])=>{const i=cursor++,old=effects.get(i);if(!old||deps.length!==old.deps.length||deps.some((d,j)=>d!==old.deps[j]))pending.push(()=>{old?.cleanup?.();const cleanup=create();effects.set(i,{deps,create,cleanup:typeof cleanup==='function'?cleanup as ()=>void:undefined});});},
+  };
+  const code=ts.transpileModule(readFileSync(new URL('../components/LectureEditor.tsx',import.meta.url),'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
+  new Function('require','module','exports',code)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name.endsWith('.css')?{}:require(name),mod,mod.exports);
+  const props={initial:view,courseOutline:[{id:view.id,title:view.title}]};
+  function flush(){assert(mounted);let passes=0;do{assert(++passes<15);cursor=0;changed=false;pending=[];tree=mod.exports.LectureEditor(props);for(const run of pending)run();}while(changed);return tree;}
+  function find(predicate:(node:any)=>boolean){const node=nodes(tree).find(predicate);assert(node,'Expected component node');return node;}
+  function button(label:string){return find(node=>node.type==='button'&&text(node)===label);}
+  function editTitle(title='Local unsaved lecture'){find(node=>node.type==='input'&&node.props.value===view.title).props.onChange({target:{value:title}});flush();}
+  function unmount(){if(!mounted)return;for(const effect of effects.values())effect.cleanup?.();mounted=false;}
+  function dispose(){unmount();for(const [name,descriptor]of originals){if(descriptor)Object.defineProperty(globalThis,name,descriptor);else delete(globalThis as any)[name];}}
+  flush();
+  return{flush,button,find,editTitle,unmount,dispose,text:()=>text(tree),get writes(){return writes;},get postUnmountWrites(){return postUnmountWrites;},get confirmCalls(){return confirmCalls;},set confirmResult(value:boolean){confirmResult=value;},busy:()=>find(node=>node.type==='fieldset').props.disabled,
+    replayEffects(){for(const effect of effects.values())effect.cleanup?.();for(const effect of effects.values()){const cleanup=effect.create();effect.cleanup=typeof cleanup==='function'?cleanup as ()=>void:undefined;}},refreshInitial(next:typeof initial){props.initial=next;flush();},
+  };
+}
+
+test('one synchronous lock covers duplicate saves and reload while preserving submitted revision',async()=>{
+  const saved=globalThis.fetch,gate=deferred<Response>(),requests:RequestInit[]=[];globalThis.fetch=(async(_url:any,init:RequestInit)=>{requests.push(init);return gate.promise;}) as typeof fetch;
+  const h=harness();try{h.editTitle();const save=h.button('Save').props.onClick,reload=h.button('Reload saved version').props.onClick;save();save();reload();assert.equal(requests.length,1);assert.equal(h.confirmCalls,0);assert.equal(JSON.parse(String(requests[0].body)).expectedVersion,4);h.flush();assert.equal(h.busy(),true);gate.resolve(response({...initial,title:'Local unsaved lecture',version:5}));await tick();h.flush();assert.match(h.text(),/Saved version 5/);assert.equal(h.busy(),false);}finally{h.dispose();globalThis.fetch=saved;}
+});
+test('wrong lecture or course response never installs foreign content or clears the local dirty draft',async()=>{
+  for(const field of ['id','courseId']as const)for(const action of ['save','reload']){
+    const saved=globalThis.fetch;globalThis.fetch=(async()=>response({...initial,[field]:'foreign',title:'Foreign response',slides:[{...slide,body:'Foreign content'}],version:99})) as typeof fetch;
+    const h=harness();try{h.editTitle();h.button(action==='save'?'Save':'Reload saved version').props.onClick();await tick();h.flush();assert.match(h.text(),/different lecture or course.*local changes have been kept/);assert.match(h.text(),/Unsaved changes/);assert.doesNotMatch(h.text(),/Foreign response|Foreign content|Saved version 99/);assert(h.find(n=>n.type==='input'&&n.props.value==='Local unsaved lecture'));assert.equal(h.busy(),false);}finally{h.dispose();globalThis.fetch=saved;}
+  }
+});
+test('duplicate review submission is refused and foreign success preserves the review comment',async()=>{
+  const saved=globalThis.fetch,gate=deferred<Response>();let calls=0;globalThis.fetch=(async()=>{calls++;return gate.promise;}) as typeof fetch;
+  const h=harness({...initial,status:'in-review',canEdit:false,canReview:true});try{h.button('Review').props.onClick();h.flush();h.find(n=>n.type==='textarea').props.onChange({target:{value:'Synthetic evidence-based review comment.'}});h.flush();const form=h.find(n=>n.type==='form');const event={preventDefault(){}};form.props.onSubmit(event);form.props.onSubmit(event);assert.equal(calls,1);gate.resolve(response({...initial,id:'foreign',status:'approved',canEdit:false,canReview:true}));await tick();h.flush();assert.equal(h.find(n=>n.type==='textarea').props.value,'Synthetic evidence-based review comment.');assert.match(h.text(),/different lecture or course/);}finally{h.dispose();globalThis.fetch=saved;}
+});
+test('unmounted editor ignores late fetch success, failure and deferred JSON without any state writes',async()=>{
+  for(const kind of ['success','failure','json']as const){const saved=globalThis.fetch,gate=deferred<Response>(),json=deferred<unknown>();globalThis.fetch=(async()=>gate.promise) as typeof fetch;const h=harness();try{h.editTitle();h.button('Save').props.onClick();if(kind==='json'){gate.resolve({ok:true,json:()=>json.promise} as Response);await tick();}h.unmount();const before=h.writes;if(kind==='failure')gate.reject(Error('Late failure'));else if(kind==='success')gate.resolve(response({...initial,version:5}));else json.resolve({...initial,version:5});await tick();assert.equal(h.writes,before);assert.equal(h.postUnmountWrites,0);}finally{h.dispose();globalThis.fetch=saved;}}
+});
+test('StrictMode effect replay invalidates old JSON and its finally cannot unlock the new operation',async()=>{
+  const saved=globalThis.fetch,oldJson=deferred<unknown>(),newGate=deferred<Response>();let calls=0;
+  globalThis.fetch=(async()=>++calls===1?{ok:true,json:()=>oldJson.promise}:newGate.promise) as typeof fetch;
+  const h=harness();try{h.editTitle();const save=h.button('Save').props.onClick;save();await tick();h.replayEffects();save();h.flush();assert.equal(calls,2);oldJson.resolve({...initial,title:'Old abandoned reply',version:5});await tick();h.flush();assert.equal(h.busy(),true);assert.doesNotMatch(h.text(),/Old abandoned reply/);save();assert.equal(calls,2);newGate.resolve(response({...initial,title:'Local unsaved lecture',version:6}));await tick();h.flush();assert.match(h.text(),/Saved version 6/);assert.equal(h.busy(),false);}finally{h.dispose();globalThis.fetch=saved;}
+});
+test('declined reload leaves no pending lock and server error unlocks retry without clearing edits',async()=>{
+  const saved=globalThis.fetch;let calls=0;globalThis.fetch=(async()=>{calls++;return calls===1?new Response(JSON.stringify({error:'Version conflict; reload deliberately.'}),{status:409}):response({...initial,title:'Local unsaved lecture',version:5});}) as typeof fetch;
+  const h=harness();try{h.editTitle();h.confirmResult=false;h.button('Reload saved version').props.onClick();assert.equal(calls,0);h.button('Save').props.onClick();await tick();h.flush();assert.match(h.text(),/Version conflict/);assert.match(h.text(),/Unsaved changes/);assert.equal(h.busy(),false);h.button('Save').props.onClick();await tick();h.flush();assert.equal(calls,2);assert.match(h.text(),/Saved version 5/);}finally{h.dispose();globalThis.fetch=saved;}
+});
+test('same-identity server refresh preserves unsaved input until an explicit save or reload',()=>{
+  const h=harness();try{h.editTitle();h.refreshInitial({...initial,title:'New server title',version:8});assert(h.find(n=>n.type==='input'&&n.props.value==='Local unsaved lecture'));assert.match(h.text(),/Unsaved changes/);}finally{h.dispose();}
+});

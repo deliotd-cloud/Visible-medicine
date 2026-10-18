@@ -1,0 +1,602 @@
+{
+  "parentCommit": "59b35d8f3b176fb542b6ff561472206477f9bbda",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "bytes": 107772,
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "structures": 6
+    },
+    {
+      "id": "foot-vessels-foot-vascular",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "bytes": 192916,
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "structures": 8
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "f60666e249327870e40dded5cd1a0e0a8069476bcad4af827ac7038a934ffbe1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+        "fmaId": "FMA43929",
+        "name": "Right medial plantar artery",
+        "sourceName": "right medial plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-recovery",
+        "nodeName": "FMA43929",
+        "bounds": {
+          "min": [
+            -0.7541840076446533,
+            -8.439090728759766,
+            0.36373597383499146
+          ],
+          "max": [
+            -0.6681510210037231,
+            -8.370476722717285,
+            0.7624500393867493
+          ]
+        },
+        "center": [
+          -0.7111675143241882,
+          -8.404783725738525,
+          0.5630930066108704
+        ],
+        "anchor": [
+          -0.7366960048675537,
+          -8.385828018188477,
+          0.5554400086402893
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2164",
+            "sha256": "85916deabe0b545bfccc268b5455dccb89c5d243e769cd91d55a2cd912d0bedc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medialPlantar",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right medial plantar artery on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:left-medial-plantar-artery",
+        "fmaId": "FMA43930",
+        "name": "Left medial plantar artery",
+        "sourceName": "left medial plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-recovery",
+        "nodeName": "FMA43930",
+        "bounds": {
+          "min": [
+            0.6681520342826843,
+            -8.439295768737793,
+            0.36393997073173523
+          ],
+          "max": [
+            0.754256010055542,
+            -8.370553016662598,
+            0.7623299956321716
+          ]
+        },
+        "center": [
+          0.7112040221691132,
+          -8.404924392700195,
+          0.5631349831819534
+        ],
+        "anchor": [
+          0.7362899780273438,
+          -8.385186195373535,
+          0.5559700131416321
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2082",
+            "sha256": "80addbc38b030d34a4002270067ff6488c956ebb5929c355c029bfec4de9ef55"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medialPlantar",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left medial plantar artery on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:right-plantar-arch",
+        "fmaId": "FMA43943",
+        "name": "Right plantar arch",
+        "sourceName": "right plantar arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA43943",
+        "bounds": {
+          "min": [
+            -1.135949969291687,
+            -8.598542213439941,
+            0.5150599479675293
+          ],
+          "max": [
+            -0.6874539852142334,
+            -8.367997169494629,
+            0.8091800212860107
+          ]
+        },
+        "center": [
+          -0.9117019772529602,
+          -8.483269691467285,
+          0.66211998462677
+        ],
+        "anchor": [
+          -0.8901000022888184,
+          -8.440812110900879,
+          0.7681900262832642
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2169",
+            "sha256": "9e02a211ef6b9c06c911892145c75ace55ed48bf8d4ed19eab11f19c3d1301a8"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "plantarArch",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right plantar arch on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:left-plantar-arch",
+        "fmaId": "FMA43944",
+        "name": "Left plantar arch",
+        "sourceName": "left plantar arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA43944",
+        "bounds": {
+          "min": [
+            0.6874600052833557,
+            -8.598566055297852,
+            0.5149800181388855
+          ],
+          "max": [
+            1.135830044746399,
+            -8.367867469787598,
+            0.809019923210144
+          ]
+        },
+        "center": [
+          0.9116450250148773,
+          -8.483216762542725,
+          0.6619999706745148
+        ],
+        "anchor": [
+          0.8874579668045044,
+          -8.441765785217285,
+          0.7678399682044983
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2085",
+            "sha256": "0c21b7855d4e5fad25948af62db6c701e0d9552dedf2a8b6a1952b527aa82ea2"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "plantarArch",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left plantar arch on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+        "fmaId": "FMA69514",
+        "name": "Right deep plantar artery",
+        "sourceName": "right deep plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA69514",
+        "bounds": {
+          "min": [
+            -0.9863829612731934,
+            -8.398268699645996,
+            0.7904300093650818
+          ],
+          "max": [
+            -0.9010819792747498,
+            -8.230071067810059,
+            1.0000500679016113
+          ]
+        },
+        "center": [
+          -0.9437324702739716,
+          -8.314169883728027,
+          0.8952400386333466
+        ],
+        "anchor": [
+          -0.9452620148658752,
+          -8.325501441955566,
+          0.906719982624054
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2136",
+            "sha256": "fe4fc6b629bff4228554964bbca5b8aacc81c721e8a5177a010f8365b9d2b3da"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deepPlantar",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find right deep plantar artery on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+        "fmaId": "FMA69515",
+        "name": "Left deep plantar artery",
+        "sourceName": "left deep plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA69515",
+        "bounds": {
+          "min": [
+            0.901017963886261,
+            -8.397970199584961,
+            0.7905499339103699
+          ],
+          "max": [
+            0.9864949584007263,
+            -8.230093002319336,
+            1.0001400709152222
+          ]
+        },
+        "center": [
+          0.9437564611434937,
+          -8.314031600952148,
+          0.895345002412796
+        ],
+        "anchor": [
+          0.9472869634628296,
+          -8.321274757385254,
+          0.9092300534248352
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2068",
+            "sha256": "d4c5c4fda6fed56de66b8991b23aa7f08f39924bb2970ebb6129abfac191d945"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deepPlantar",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find left deep plantar artery on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "fmaId": "FMA44881",
+        "name": "Dorsal venous arch of right foot",
+        "sourceName": "dorsal venous arch of right foot",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA44881",
+        "bounds": {
+          "min": [
+            -1.2090400457382202,
+            -8.437078475952148,
+            0.3318380117416382
+          ],
+          "max": [
+            -0.9220989942550659,
+            -8.212249755859375,
+            1.0988099575042725
+          ]
+        },
+        "center": [
+          -1.065569519996643,
+          -8.324664115905762,
+          0.7153239846229553
+        ],
+        "anchor": [
+          -1.0060399770736694,
+          -8.40544319152832,
+          0.8029499650001526
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2061",
+            "sha256": "2b349be398677b9dab660a07b4e038b35cb458883e350340ff53a2754aebcc41"
+          },
+          {
+            "file": "FJ2062",
+            "sha256": "4c16febe531c5d2afacf9bb47a899602239f2424ebd6e6d97860691bc9a2669b"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsalVenousArch",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find dorsal venous arch of right foot on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "fmaId": "FMA44882",
+        "name": "Dorsal venous arch of left foot",
+        "sourceName": "dorsal venous arch of left foot",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA44882",
+        "bounds": {
+          "min": [
+            0.922182023525238,
+            -8.436917304992676,
+            0.3318749964237213
+          ],
+          "max": [
+            1.2090699672698975,
+            -8.212420463562012,
+            1.0989500284194946
+          ]
+        },
+        "center": [
+          1.0656259953975677,
+          -8.324668884277344,
+          0.715412512421608
+        ],
+        "anchor": [
+          1.0024900436401367,
+          -8.404391288757324,
+          0.8019400238990784
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2059",
+            "sha256": "9421947a4511ed928078ee25870fefc51632c373fd3c8918bd9d53c3fc8dd5fb"
+          },
+          {
+            "file": "FJ2060",
+            "sha256": "f882652c192b3c2e05405273755193989d5b1866dcba53b9c0653e7a1ee2b2f9"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "dorsalVenousArch",
+      "topics": [
+        "quiz"
+      ],
+      "previous": {
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find dorsal venous arch of left foot on the model."
+        }
+      }
+    }
+  ]
+}

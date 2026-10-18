@@ -1,0 +1,49 @@
+import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {build} from 'esbuild';
+const sha=(value:Uint8Array|string)=>createHash('sha256').update(value).digest('hex');
+const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
+
+test('14 spinal bone selections share exact learner and protected Review question revisions',async()=>{
+ const base='public/atlas-runtime/head-neck/';
+ const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+ const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ assert.equal(learner.sourceCommit,CURRENT_ATLAS_REVISION);
+ assert.equal(review.revision,learner.sourceCommit);
+ const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
+ for(const path of ['content/spinal-bone-quiz.ts','content/spinal-bone-quiz-pins.json','lib/spinal-bone-quiz.ts']){
+  const source=inputs.find((f:{path:string})=>f.path===path),imported=review.files.find((f:{path:string})=>f.path===path);
+  assert(source&&imported,path);assert.equal(imported.sourceSha256,source.sha256);
+  assert.equal(sha(readFileSync('atlas-review/'+path)),source.sha256);
+ }
+ const pins=JSON.parse(readFileSync('atlas-review/content/spinal-bone-quiz-pins.json','utf8'));
+ assert.equal(sha(JSON.stringify(pins)),'4493e6ef8869b8b4d86e0d1e2aee8c0c76dcdf2e401c51c4ad6f8db2e6ba2d3b');
+ const compiled=await build({stdin:{contents:"export {bodyLesson} from './atlas-review/app/body-content';export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';export {parseBodyReviewResponse} from './atlas-review/lib/body-review-response';export {spinalBoneQuizLesson} from './atlas-review/lib/spinal-bone-quiz';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+ const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+ const learnerJs=learner.files.filter((f:{path:string})=>f.path.endsWith('.js')).map((f:{path:string;sha256:string})=>{const b=readFileSync(base+f.path);assert.equal(sha(b),f.sha256);return new TextDecoder().decode(b);}).join('\n');
+ assert.equal(pins.entries.length,14);
+ const counts={cervical:3,upperThoracic:4,middleThoracic:4,lowerThoracic:3};
+ assert.equal(new Set(pins.entries.map((entry:{group:string})=>entry.group)).size,4);
+ for(const [group,count]of Object.entries(counts))assert.equal(pins.entries.filter((entry:{group:string})=>entry.group===group).length,count);
+ for(const entry of pins.entries){
+  const id=entry.identity.id,lesson=api.bodyLesson(entry.identity,'quiz'),packet=await api.bodyReviewMaterial(id);
+  assert.equal(lesson.readiness,'draft');assert.equal(lesson.bullets.length,4);
+  assert.equal(lesson.bullets.filter((answer:string)=>answer===lesson.correctAnswer).length,1);
+  assert.deepEqual(lesson,api.spinalBoneQuizLesson(entry.identity,'quiz'));
+  assert(learnerJs.includes(lesson.body));assert(learnerJs.includes(lesson.explanation));
+  assert.deepEqual(packet.source.structure,entry.identity);assert.equal(packet.approval,false);
+  assert.equal(packet.status,'worksheet-not-submitted');
+  assert.deepEqual(packet.topics.find((t:{tab:string})=>t.tab==='quiz'),{tab:'quiz',...lesson});
+  assert.deepEqual(await api.parseBodyReviewResponse(wire(packet),id),wire(packet));
+  for(const change of ['prior','answer','source']){
+   const altered=wire(packet),index=altered.topics.findIndex((t:{tab:string})=>t.tab==='quiz');
+   if(change==='prior')altered.topics[index]={tab:'quiz',...entry.previous};
+   if(change==='answer')altered.topics[index].correctAnswer='Foreign answer';
+   if(change==='source')altered.source.structure.sources[0].sha256='0'.repeat(64);
+   assert.equal(await api.parseBodyReviewResponse(altered,id),null,change);
+  }
+ }
+});

@@ -1,0 +1,363 @@
+{
+  "baseline": "398edc60a43f8d0235d9e6963c1ad56954b3fa98",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-nerves-deep-brain",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "bytes": 1866940,
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "structures": 22
+    },
+    {
+      "id": "limbic-landmarks",
+      "url": "/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb?v=9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "structures": 4
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "ae3dc6a9819d1ebf099b32ae9872651c8d848c7dc69f5c33f7ad7aa7b28b2ddc",
+  "entries": [
+    {
+      "family": "fornicealCommissure",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "fmaId": "FMA61970",
+        "name": "Commissure of fornix of forebrain",
+        "sourceName": "commissure of fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61970",
+        "bounds": {
+          "min": [
+            -0.25186100602149963,
+            7.465699672698975,
+            0.07049598544836044
+          ],
+          "max": [
+            0.2386689931154251,
+            7.668799877166748,
+            0.3799839913845062
+          ]
+        },
+        "center": [
+          -0.006596006453037262,
+          7.567249774932861,
+          0.22523998841643333
+        ],
+        "anchor": [
+          -0.007657529786229134,
+          7.6080002784729,
+          0.2032710313796997
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1741",
+            "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "function": {
+          "readiness": "pending",
+          "title": "Commissure of fornix of forebrain · Function unresolved · pending",
+          "body": "A settled structure-specific functional lesson remains pending. Human forniceal commissural connectivity and its precise functional contribution remain disputed; this surface does not establish a simple hippocampus-to-hippocampus pathway or a defined memory function.",
+          "bullets": [
+            "Do not transfer nonhuman-primate tracer findings, a proposed memory association or a tractography reconstruction directly onto this source mesh. Its identity and extent need specialist adjudication."
+          ],
+          "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, neural activity or acquired imaging. Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "citations": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC9314404/"
+          ]
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "family": "septalSource",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:septum-of-telencephalon",
+        "fmaId": "FMA61842",
+        "name": "Septum of telencephalon",
+        "sourceName": "septum of telencephalon",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA61842",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1832",
+            "sha256": "38cc30c1c449b1e171ba945320a087c95473da3ffe2a9c0965f4c4d1d28b2d25"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.11118800193071365,
+            7.518499851226807,
+            0.0930040031671524
+          ],
+          "max": [
+            0.09908740222454071,
+            7.748199939727783,
+            0.7187399864196777
+          ]
+        },
+        "center": [
+          -0.0060502998530864716,
+          7.633349895477295,
+          0.40587199479341507
+        ],
+        "anchor": [
+          -0.004321000073105097,
+          7.673699855804443,
+          0.40213799476623535
+        ],
+        "coverageNote": "The original septum-of-telencephalon definition has two components. It does not independently identify septal nuclei, septum verum or a validated septum-pellucidum subdivision. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "function": {
+          "readiness": "pending",
+          "title": "Septum of telencephalon · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Septum of telencephalon · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Septum of telencephalon · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "family": "striaMedullaris",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-stria-medullaris-of-thalamus",
+        "fmaId": "FMA73414",
+        "name": "Left stria medullaris of thalamus",
+        "sourceName": "left stria medullaris of thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA73414",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1777",
+            "sha256": "c3fb623bd7dd4e6f99ea6b71f7ab59b211f5bd86eba1a9451a2f4b6838f07ef7"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.006647559814155102,
+            7.452300071716309,
+            0.16842100024223328
+          ],
+          "max": [
+            0.03178279846906662,
+            7.609000205993652,
+            0.5359399914741516
+          ]
+        },
+        "center": [
+          0.012567619327455759,
+          7.5306501388549805,
+          0.35218049585819244
+        ],
+        "anchor": [
+          0.0025474000722169876,
+          7.59119987487793,
+          0.36391401290893555
+        ],
+        "coverageNote": "Coarse source-labelled stria medullaris envelope, not individual fibres or tractography. The source origin is not a validated midsagittal plane; slight zero-X crossing of the left source is retained, not repaired. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Left stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "family": "striaMedullaris",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-stria-medullaris-of-thalamus",
+        "fmaId": "FMA73413",
+        "name": "Right stria medullaris of thalamus",
+        "sourceName": "right stria medullaris of thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "limbic-landmarks",
+        "nodeName": "FMA73413",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1824",
+            "sha256": "252737907ed1ef0c3317fff6cce455ebe56975e1ab9d87e66cb19549239000d2"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.04467859864234924,
+            7.452600002288818,
+            0.16792699694633484
+          ],
+          "max": [
+            -0.006693330127745867,
+            7.608500003814697,
+            0.535830020904541
+          ]
+        },
+        "center": [
+          -0.025685964385047555,
+          7.530550003051758,
+          0.3518785089254379
+        ],
+        "anchor": [
+          -0.016119299456477165,
+          7.59060001373291,
+          0.36721599102020264
+        ],
+        "coverageNote": "Coarse source-labelled stria medullaris envelope, not individual fibres or tractography. The source origin is not a validated midsagittal plane; slight zero-X crossing of the left source is retained, not repaired. Every ordered source triangle and position is retained. Stria terminalis is withheld for source defects. Anatomical relationships, laterality and clinical accuracy require review; no patient registration or complete limbic circuit is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right stria medullaris of thalamus · Review pending",
+          "body": "Detailed structure-specific clinical and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No acquired CT, MRI, X-ray, ultrasound, diffusion tractography or patient registration is supplied."
+        }
+      }
+    }
+  ]
+}

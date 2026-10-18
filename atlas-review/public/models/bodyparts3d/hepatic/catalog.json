@@ -1,0 +1,1031 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "dea39ac53b5bffeebed7ecd52c46a4186631fe2c5ecdf75e91a943356e1a26a3",
+  "parent": {
+    "id": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+    "fmaId": "FMA7197",
+    "name": "Liver",
+    "sourceName": "liver",
+    "system": "organs",
+    "category": "organ",
+    "laterality": "unpaired",
+    "region": "abdomen",
+    "regions": [
+      "abdomen"
+    ],
+    "bundle": "abdomen-organs",
+    "nodeName": "FMA7197",
+    "bounds": {
+      "min": [
+        -1.1506400108337402,
+        2.2793993949890137,
+        -0.06671299040317535
+      ],
+      "max": [
+        0.943668007850647,
+        3.831400156021118,
+        1.5241299867630005
+      ]
+    },
+    "center": [
+      -0.10348600149154663,
+      3.055399775505066,
+      0.7287084981799126
+    ],
+    "anchor": [
+      -0.10570300370454788,
+      3.0470995903015137,
+      0.7280399799346924
+    ],
+    "sourceTree": "partof",
+    "sources": [
+      {
+        "file": "FJ1883",
+        "sha256": "305fb8169521520bd373a91e8825597d4dc8200e522e2239b520ca4d1bc67d6e"
+      },
+      {
+        "file": "FJ1893",
+        "sha256": "c92536c5059b17366769bfb48700bc3aa3d1500f9c0e21d94f9cd98e3e9372a6"
+      },
+      {
+        "file": "FJ1913",
+        "sha256": "a305c27d3f093693dcd36b79d17494eec4b854623abd5ef1bf9b8cfcc1924fef"
+      },
+      {
+        "file": "FJ1914",
+        "sha256": "48313d7172ce57ada4fecbaedf82ab5420193bf958b3d74e2397d03c129fa992"
+      },
+      {
+        "file": "FJ1916",
+        "sha256": "5d19f212509f20499e3a7c1f8c7e80d4bb84c0a0d4a0afcb42d4a0f6146c0b64"
+      },
+      {
+        "file": "FJ2386",
+        "sha256": "4669f05fe9d27ef45b2a183b8a21676314d3b11d9491cb497bd93487bf55133b"
+      },
+      {
+        "file": "FJ2404",
+        "sha256": "316a7b553981cafff7ac1279140251cff0c6a88d4cf91f5d729cdb02702405b8"
+      },
+      {
+        "file": "FJ2405",
+        "sha256": "dbeafcb261e23112037b6616d8ffd130f9c96d9e30e70d61855e2f7ef71fccc1"
+      },
+      {
+        "file": "FJ2409",
+        "sha256": "4662aac785711a9b0ca91b860720d018f4e61e8457e919722b68ce814bc27e84"
+      },
+      {
+        "file": "FJ2816",
+        "sha256": "81c86ccdd356c27a960f957f49b4ea883d22d7e75fef29aa794e154d4f5da51e"
+      },
+      {
+        "file": "FJ2818",
+        "sha256": "773b11b267fd680f399e0dbc71217aef981c6f8ee2a2273723481edc5864ee8a"
+      },
+      {
+        "file": "FJ2819",
+        "sha256": "ba7174ecd641887a57116848661d56c2c377659cc3aca4235132e8f548bbd8b9"
+      },
+      {
+        "file": "FJ2820",
+        "sha256": "af49d0747496fb3008b7b33be23ea1c169bb4667ccfad0fa0208d42390737c22"
+      },
+      {
+        "file": "FJ2821",
+        "sha256": "13886d9c2d473e121e27083fa03218fe22e4a75aab3402dcf53754a1375948f9"
+      },
+      {
+        "file": "FJ2822",
+        "sha256": "8f64d0c177586089610214a5a32a189a6a659ca2770b15d193c9255667c8afd2"
+      },
+      {
+        "file": "FJ2823",
+        "sha256": "a89dd2a52ffee337e9777376d1235330463577331fc7f18a40ccf8bc6c99a8d0"
+      },
+      {
+        "file": "FJ2824",
+        "sha256": "2f5e34fceea6c8b718bd3f50a125bf24c434ae7eb3d925b9795b0585272c1349"
+      },
+      {
+        "file": "FJ3071",
+        "sha256": "818576ec6fe49301bb43a34df894f22b6e2af846c59ed5a41ba826e2e66dd0df"
+      },
+      {
+        "file": "FJ3072",
+        "sha256": "0e5ec3bfde87ac0924359c11e59f62a1559fc8692ac4c40c54049c3eb5f1c712"
+      },
+      {
+        "file": "FJ3073",
+        "sha256": "d5a6c22e5680ecf272e36b26bc387279e76d99ea7e6cd0637b69570b6da1159a"
+      },
+      {
+        "file": "FJ3074",
+        "sha256": "8de7ebf4db8679e5db99cdedceb59df6a43c4e33e4cf707e1e4666cd6e50679b"
+      },
+      {
+        "file": "FJ3075",
+        "sha256": "d0aa3b26c1866580abbfa1f9bf44b4d2bc9302ddda0838605b738a3eea912597"
+      },
+      {
+        "file": "FJ3076",
+        "sha256": "45223049350ffe29c9b4842c832efa9248fb60bc16955db35fbfd3b7953ba8da"
+      },
+      {
+        "file": "FJ3077",
+        "sha256": "67bd46a0f91ca9d635f6d7750e96452a72586dc7df2b592be7198ac3d28fe72b"
+      },
+      {
+        "file": "FJ3083",
+        "sha256": "2d5997d5b9ac3ef4bc8461779eed5fe77feadcd0c3ef21bea43f9ee2cb73e90c"
+      },
+      {
+        "file": "FJ3086",
+        "sha256": "974e8d71edc4a0de74480bc4f4a3431082daf60922109f3a0f644d9f953b4af5"
+      },
+      {
+        "file": "FJ3088",
+        "sha256": "b4d46c97bc201e818a86f794a3d3342c99252770eb828465d3a39129adeec44c"
+      },
+      {
+        "file": "FJ3089",
+        "sha256": "8fcc701eabba3de0ed5c7796dc668d78286150901081abd44a69f1a0757de02f"
+      },
+      {
+        "file": "FJ3090",
+        "sha256": "08269713ea808adcc06cddeedfc5a6560e402518a7ea8feab456d2a6618656b4"
+      },
+      {
+        "file": "FJ3091",
+        "sha256": "e9d8c27658e99f33f81f8babae551404b526b5eec7814befd73157966dedd8e6"
+      },
+      {
+        "file": "FJ3092",
+        "sha256": "4e0facfaf6fcf60d1709143982ed5c40dc45fadbb39cc61262908bf12d2a2ac6"
+      },
+      {
+        "file": "FJ3093",
+        "sha256": "5eee760c2aec02f46a9976870c184f1ec61079155bf92f67b59cf962c3803a7f"
+      },
+      {
+        "file": "FJ3095",
+        "sha256": "e53e52448e647cb04154eb2f1f1ae1823c9672aa495d369a0dacf36408675f21"
+      },
+      {
+        "file": "FJ3096",
+        "sha256": "c4f34b49d7a1b657ac99631a0614b283ff3cff231bfcb4d41a5ed48b4c8ab15b"
+      },
+      {
+        "file": "FJ3102",
+        "sha256": "34942cd65cf922f32fdacf165ceab2f35a90f074a2bf3e342abe5d4b8b90ce80"
+      },
+      {
+        "file": "FJ3103",
+        "sha256": "651f3eea6af28fc2fc9ae0431260661bc9709b1bfda5d3cd56475fbb330bf3cd"
+      },
+      {
+        "file": "FJ3104",
+        "sha256": "8a78e25b0446fe08a18ae2c55c021951640274f8a5194205ee5d7d6ba691f7cf"
+      },
+      {
+        "file": "FJ3105",
+        "sha256": "ca3519645aec712c6f25749609888241124ca9047063a352b77279d19b61a47e"
+      },
+      {
+        "file": "FJ3106",
+        "sha256": "6a915804cff8434c4cddc3cb21ae643480fbee3eb6b0838037d51c4d1c1148e4"
+      },
+      {
+        "file": "FJ3107",
+        "sha256": "0cb461fc8492d383e8acfb946d9fbf568b011644b9855b1c65059253d66398b3"
+      },
+      {
+        "file": "FJ3108",
+        "sha256": "751c75af681299c75f8424a589e0aade0d1c15e31056ad2ed48d3ccd70a24c83"
+      },
+      {
+        "file": "FJ3109",
+        "sha256": "37a65eb6bdb90b815de604952b35649a4b7433c34dc2cb1b099889a83a4f4bc4"
+      },
+      {
+        "file": "FJ3110",
+        "sha256": "b562dd3f3bcf6a520d382ce41aa95536b37568949aec3c3ed23226a682f0743b"
+      },
+      {
+        "file": "FJ3111",
+        "sha256": "be81ba12835c12dcfc80ec9bff9afac3bfb0508b3cad4063de981caa60dfee0c"
+      },
+      {
+        "file": "FJ3112",
+        "sha256": "86d033cb87c87b08a0a387c9b40b94ae3507af62aa969ec9b3f81b2a827a513f"
+      },
+      {
+        "file": "FJ3113",
+        "sha256": "cf50d8358b5612e561d32099f85e46826a1e2eec087d6326adbbebc477bb1d19"
+      },
+      {
+        "file": "FJ3114",
+        "sha256": "a234049c9964ccf5042b9b20030c08824ac58ec80b758a2546f3027533c86706"
+      },
+      {
+        "file": "FJ3115",
+        "sha256": "0b91de2f1433e506092600fbc25ddca37b9c5254858196de31b3c9b69f9ba4e6"
+      },
+      {
+        "file": "FJ3116",
+        "sha256": "3fa2c973eb6a00e00972035a8926794f03e7b04cccf0ec4fa80ee30e85170f29"
+      },
+      {
+        "file": "FJ3117",
+        "sha256": "ba48e5808de07cdaf52ef051062651be5db56862f305f6648d0537938dd41b23"
+      },
+      {
+        "file": "FJ3122",
+        "sha256": "ff00a9830cf1ab18c4de3186ddce1920d62daffe57ec51d6adc6bd64cd13beab"
+      },
+      {
+        "file": "FJ3123",
+        "sha256": "67c97c70cce9aed074743d4b3ceba046d34e1d3b05bc5ca35e39a37499e7a66d"
+      },
+      {
+        "file": "FJ3124",
+        "sha256": "a5427ce74353d9c3a2eb535961c78e5aae25a6d57a1e35100c304b000b906403"
+      },
+      {
+        "file": "FJ3125",
+        "sha256": "adf3f9e59b7f0823541a33214fd1b0c127c7cb9d917b48a7fd3075522a74cd9d"
+      },
+      {
+        "file": "FJ3126",
+        "sha256": "c21b4c470358525f91162c4a0bff632f6bd25e09d2ad1b6df10ef2df09cb54b8"
+      },
+      {
+        "file": "FJ3127",
+        "sha256": "8e265e380cefb97c042957abc9c65180dcc59669dcd91888008483a2b601353f"
+      },
+      {
+        "file": "FJ3128",
+        "sha256": "c5586090113b7e556268612565d98737aca9eeceddd11c8d070110f883e00932"
+      }
+    ],
+    "coverageNote": "Display aggregate excludes the separately selectable hepatic artery proper surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable right hepatic vein surface. Source coordinates are unchanged. Display aggregate excludes the separately selectable left hepatic vein surface. Source coordinates are unchanged.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": false
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "structures": [
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-arterial-branches",
+      "fmaId": "FMA14778",
+      "name": "Right hepatic arterial branches",
+      "sourceName": "right hepatic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA14778",
+      "bounds": {
+        "min": [
+          -1.0145800113677979,
+          2.6907994747161865,
+          0.05283401533961296
+        ],
+        "max": [
+          -0.16512399911880493,
+          3.5246996879577637,
+          1.2497000694274902
+        ]
+      },
+      "center": [
+        -0.5898520052433014,
+        3.107749581336975,
+        0.6512670423835516
+      ],
+      "anchor": [
+        -0.588329017162323,
+        3.0934996604919434,
+        0.6617500185966492
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1916",
+          "sha256": "5d19f212509f20499e3a7c1f8c7e80d4bb84c0a0d4a0afcb42d4a0f6146c0b64"
+        },
+        {
+          "file": "FJ2386",
+          "sha256": "4669f05fe9d27ef45b2a183b8a21676314d3b11d9491cb497bd93487bf55133b"
+        },
+        {
+          "file": "FJ3075",
+          "sha256": "d0aa3b26c1866580abbfa1f9bf44b4d2bc9302ddda0838605b738a3eea912597"
+        },
+        {
+          "file": "FJ3076",
+          "sha256": "45223049350ffe29c9b4842c832efa9248fb60bc16955db35fbfd3b7953ba8da"
+        },
+        {
+          "file": "FJ3114",
+          "sha256": "a234049c9964ccf5042b9b20030c08824ac58ec80b758a2546f3027533c86706"
+        },
+        {
+          "file": "FJ3115",
+          "sha256": "0b91de2f1433e506092600fbc25ddca37b9c5254858196de31b3c9b69f9ba4e6"
+        },
+        {
+          "file": "FJ3116",
+          "sha256": "3fa2c973eb6a00e00972035a8926794f03e7b04cccf0ec4fa80ee30e85170f29"
+        },
+        {
+          "file": "FJ3117",
+          "sha256": "ba48e5808de07cdaf52ef051062651be5db56862f305f6648d0537938dd41b23"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "artery",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-arterial-branches",
+      "fmaId": "FMA14779",
+      "name": "Left hepatic arterial branches",
+      "sourceName": "left hepatic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA14779",
+      "bounds": {
+        "min": [
+          -0.3111039996147156,
+          3.0225000381469727,
+          0.6695700287818909
+        ],
+        "max": [
+          0.5744929909706116,
+          3.635899543762207,
+          1.4852099418640137
+        ]
+      },
+      "center": [
+        0.131694495677948,
+        3.32919979095459,
+        1.0773899853229523
+      ],
+      "anchor": [
+        0.13124999403953552,
+        3.360600471496582,
+        1.070520043373108
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3077",
+          "sha256": "67bd46a0f91ca9d635f6d7750e96452a72586dc7df2b592be7198ac3d28fe72b"
+        },
+        {
+          "file": "FJ3091",
+          "sha256": "e9d8c27658e99f33f81f8babae551404b526b5eec7814befd73157966dedd8e6"
+        },
+        {
+          "file": "FJ3092",
+          "sha256": "4e0facfaf6fcf60d1709143982ed5c40dc45fadbb39cc61262908bf12d2a2ac6"
+        },
+        {
+          "file": "FJ3093",
+          "sha256": "5eee760c2aec02f46a9976870c184f1ec61079155bf92f67b59cf962c3803a7f"
+        },
+        {
+          "file": "FJ3095",
+          "sha256": "e53e52448e647cb04154eb2f1f1ae1823c9672aa495d369a0dacf36408675f21"
+        },
+        {
+          "file": "FJ3106",
+          "sha256": "6a915804cff8434c4cddc3cb21ae643480fbee3eb6b0838037d51c4d1c1148e4"
+        },
+        {
+          "file": "FJ3107",
+          "sha256": "0cb461fc8492d383e8acfb946d9fbf568b011644b9855b1c65059253d66398b3"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "artery",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-portal-vein-branches",
+      "fmaId": "FMA15414",
+      "name": "Right portal vein branches",
+      "sourceName": "right portal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA15414",
+      "bounds": {
+        "min": [
+          -1.0145800113677979,
+          2.686300039291382,
+          -0.004146003630012274
+        ],
+        "max": [
+          -0.1490970104932785,
+          3.5226001739501953,
+          1.243630051612854
+        ]
+      },
+      "center": [
+        -0.5818385109305382,
+        3.1044501066207886,
+        0.6197420239914209
+      ],
+      "anchor": [
+        -0.5891429781913757,
+        3.0999999046325684,
+        0.6339600086212158
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1913",
+          "sha256": "a305c27d3f093693dcd36b79d17494eec4b854623abd5ef1bf9b8cfcc1924fef"
+        },
+        {
+          "file": "FJ1914",
+          "sha256": "48313d7172ce57ada4fecbaedf82ab5420193bf958b3d74e2397d03c129fa992"
+        },
+        {
+          "file": "FJ2405",
+          "sha256": "dbeafcb261e23112037b6616d8ffd130f9c96d9e30e70d61855e2f7ef71fccc1"
+        },
+        {
+          "file": "FJ3073",
+          "sha256": "d5a6c22e5680ecf272e36b26bc387279e76d99ea7e6cd0637b69570b6da1159a"
+        },
+        {
+          "file": "FJ3074",
+          "sha256": "8de7ebf4db8679e5db99cdedceb59df6a43c4e33e4cf707e1e4666cd6e50679b"
+        },
+        {
+          "file": "FJ3111",
+          "sha256": "be81ba12835c12dcfc80ec9bff9afac3bfb0508b3cad4063de981caa60dfee0c"
+        },
+        {
+          "file": "FJ3112",
+          "sha256": "86d033cb87c87b08a0a387c9b40b94ae3507af62aa969ec9b3f81b2a827a513f"
+        },
+        {
+          "file": "FJ3113",
+          "sha256": "cf50d8358b5612e561d32099f85e46826a1e2eec087d6326adbbebc477bb1d19"
+        },
+        {
+          "file": "FJ3122",
+          "sha256": "ff00a9830cf1ab18c4de3186ddce1920d62daffe57ec51d6adc6bd64cd13beab"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "portal",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-portal-vein-branches",
+      "fmaId": "FMA15415",
+      "name": "Left portal vein branches",
+      "sourceName": "left portal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA15415",
+      "bounds": {
+        "min": [
+          -0.8704720139503479,
+          2.7429003715515137,
+          0.664400041103363
+        ],
+        "max": [
+          0.5732749700546265,
+          3.634699821472168,
+          1.495069980621338
+        ]
+      },
+      "center": [
+        -0.14859852194786072,
+        3.188800096511841,
+        1.0797350108623505
+      ],
+      "anchor": [
+        -0.13687600195407867,
+        3.178499698638916,
+        1.057550072669983
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1893",
+          "sha256": "c92536c5059b17366769bfb48700bc3aa3d1500f9c0e21d94f9cd98e3e9372a6"
+        },
+        {
+          "file": "FJ2404",
+          "sha256": "316a7b553981cafff7ac1279140251cff0c6a88d4cf91f5d729cdb02702405b8"
+        },
+        {
+          "file": "FJ3102",
+          "sha256": "34942cd65cf922f32fdacf165ceab2f35a90f074a2bf3e342abe5d4b8b90ce80"
+        },
+        {
+          "file": "FJ3124",
+          "sha256": "a5427ce74353d9c3a2eb535961c78e5aae25a6d57a1e35100c304b000b906403"
+        },
+        {
+          "file": "FJ3125",
+          "sha256": "adf3f9e59b7f0823541a33214fd1b0c127c7cb9d917b48a7fd3075522a74cd9d"
+        },
+        {
+          "file": "FJ3126",
+          "sha256": "c21b4c470358525f91162c4a0bff632f6bd25e09d2ad1b6df10ef2df09cb54b8"
+        },
+        {
+          "file": "FJ3127",
+          "sha256": "8e265e380cefb97c042957abc9c65180dcc59669dcd91888008483a2b601353f"
+        },
+        {
+          "file": "FJ3128",
+          "sha256": "c5586090113b7e556268612565d98737aca9eeceddd11c8d070110f883e00932"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "portal",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:organ:right-hepatic-bile-ducts",
+      "fmaId": "FMA71857",
+      "name": "Right hepatic bile ducts",
+      "sourceName": "right hepatic biliary tree",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA71857",
+      "bounds": {
+        "min": [
+          -0.9184459447860718,
+          2.6870996952056885,
+          0.05416000261902809
+        ],
+        "max": [
+          -0.21766600012779236,
+          3.5234997272491455,
+          1.2463200092315674
+        ]
+      },
+      "center": [
+        -0.5680559724569321,
+        3.105299711227417,
+        0.6502400059252977
+      ],
+      "anchor": [
+        -0.5769100189208984,
+        3.085500478744507,
+        0.6494500041007996
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3071",
+          "sha256": "818576ec6fe49301bb43a34df894f22b6e2af846c59ed5a41ba826e2e66dd0df"
+        },
+        {
+          "file": "FJ3072",
+          "sha256": "0e5ec3bfde87ac0924359c11e59f62a1559fc8692ac4c40c54049c3eb5f1c712"
+        },
+        {
+          "file": "FJ3108",
+          "sha256": "751c75af681299c75f8424a589e0aade0d1c15e31056ad2ed48d3ccd70a24c83"
+        },
+        {
+          "file": "FJ3109",
+          "sha256": "37a65eb6bdb90b815de604952b35649a4b7433c34dc2cb1b099889a83a4f4bc4"
+        },
+        {
+          "file": "FJ3110",
+          "sha256": "b562dd3f3bcf6a520d382ce41aa95536b37568949aec3c3ed23226a682f0743b"
+        },
+        {
+          "file": "FJ3123",
+          "sha256": "67c97c70cce9aed074743d4b3ceba046d34e1d3b05bc5ca35e39a37499e7a66d"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "biliary",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:organ:left-hepatic-bile-ducts",
+      "fmaId": "FMA71858",
+      "name": "Left hepatic bile ducts",
+      "sourceName": "left hepatic biliary tree",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA71858",
+      "bounds": {
+        "min": [
+          -0.3182920217514038,
+          2.9929003715515137,
+          0.6692099571228027
+        ],
+        "max": [
+          0.5768719911575317,
+          3.6247997283935547,
+          1.4824299812316895
+        ]
+      },
+      "center": [
+        0.12928998470306396,
+        3.308850049972534,
+        1.075819969177246
+      ],
+      "anchor": [
+        0.1095619946718216,
+        3.3430004119873047,
+        1.0748199224472046
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1883",
+          "sha256": "305fb8169521520bd373a91e8825597d4dc8200e522e2239b520ca4d1bc67d6e"
+        },
+        {
+          "file": "FJ3088",
+          "sha256": "b4d46c97bc201e818a86f794a3d3342c99252770eb828465d3a39129adeec44c"
+        },
+        {
+          "file": "FJ3089",
+          "sha256": "8fcc701eabba3de0ed5c7796dc668d78286150901081abd44a69f1a0757de02f"
+        },
+        {
+          "file": "FJ3090",
+          "sha256": "08269713ea808adcc06cddeedfc5a6560e402518a7ea8feab456d2a6618656b4"
+        },
+        {
+          "file": "FJ3096",
+          "sha256": "c4f34b49d7a1b657ac99631a0614b283ff3cff231bfcb4d41a5ed48b4c8ab15b"
+        },
+        {
+          "file": "FJ3103",
+          "sha256": "651f3eea6af28fc2fc9ae0431260661bc9709b1bfda5d3cd56475fbb330bf3cd"
+        },
+        {
+          "file": "FJ3104",
+          "sha256": "8a78e25b0446fe08a18ae2c55c021951640274f8a5194205ee5d7d6ba691f7cf"
+        },
+        {
+          "file": "FJ3105",
+          "sha256": "ca3519645aec712c6f25749609888241124ca9047063a352b77279d19b61a47e"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "biliary",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-tributary-of-middle-hepatic-vein",
+      "fmaId": "FMA15800",
+      "name": "Anterior inferior tributary of middle hepatic vein",
+      "sourceName": "anterior inferior segmental tributary of middle hepatic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-branches",
+      "nodeName": "FMA15800",
+      "bounds": {
+        "min": [
+          -0.7561250329017639,
+          2.737600088119507,
+          0.689240038394928
+        ],
+        "max": [
+          -0.1348700076341629,
+          3.722399950027466,
+          1.2828500270843506
+        ]
+      },
+      "center": [
+        -0.4454975202679634,
+        3.2300000190734863,
+        0.9860450327396393
+      ],
+      "anchor": [
+        -0.5668849945068359,
+        3.38420033454895,
+        1.118839979171753
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3083",
+          "sha256": "2d5997d5b9ac3ef4bc8461779eed5fe77feadcd0c3ef21bea43f9ee2cb73e90c"
+        },
+        {
+          "file": "FJ3086",
+          "sha256": "974e8d71edc4a0de74480bc4f4a3431082daf60922109f3a0f644d9f953b4af5"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "venous",
+      "coverageNote": "Partial source-labelled group. Branch continuity, lumen and territory are not validated; not a complete vascular or biliary tree.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unpaired:organ:liver-tissue-context",
+      "fmaId": "FMA7197",
+      "name": "Liver tissue context",
+      "sourceName": "liver tissue context",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "hepatic-tissue-context",
+      "nodeName": "FMA7197",
+      "bounds": {
+        "min": [
+          -1.1506400108337402,
+          2.2793993949890137,
+          -0.06671299040317535
+        ],
+        "max": [
+          0.943668007850647,
+          3.831400156021118,
+          1.5241299867630005
+        ]
+      },
+      "center": [
+        -0.10348600149154663,
+        3.055399775505066,
+        0.7287084981799126
+      ],
+      "anchor": [
+        -0.10570300370454788,
+        3.0470995903015137,
+        0.7280399799346924
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2409",
+          "sha256": "4662aac785711a9b0ca91b860720d018f4e61e8457e919722b68ce814bc27e84"
+        },
+        {
+          "file": "FJ2816",
+          "sha256": "81c86ccdd356c27a960f957f49b4ea883d22d7e75fef29aa794e154d4f5da51e"
+        },
+        {
+          "file": "FJ2818",
+          "sha256": "773b11b267fd680f399e0dbc71217aef981c6f8ee2a2273723481edc5864ee8a"
+        },
+        {
+          "file": "FJ2819",
+          "sha256": "ba7174ecd641887a57116848661d56c2c377659cc3aca4235132e8f548bbd8b9"
+        },
+        {
+          "file": "FJ2820",
+          "sha256": "af49d0747496fb3008b7b33be23ea1c169bb4667ccfad0fa0208d42390737c22"
+        },
+        {
+          "file": "FJ2821",
+          "sha256": "13886d9c2d473e121e27083fa03218fe22e4a75aab3402dcf53754a1375948f9"
+        },
+        {
+          "file": "FJ2822",
+          "sha256": "8f64d0c177586089610214a5a32a189a6a659ca2770b15d193c9255667c8afd2"
+        },
+        {
+          "file": "FJ2823",
+          "sha256": "a89dd2a52ffee337e9777376d1235330463577331fc7f18a40ccf8bc6c99a8d0"
+        },
+        {
+          "file": "FJ2824",
+          "sha256": "2f5e34fceea6c8b718bd3f50a125bf24c434ae7eb3d925b9795b0585272c1349"
+        }
+      ],
+      "parentId": "vm:anatomy:body:abdomen:unpaired:organ:liver",
+      "kind": "context",
+      "coverageNote": "Nine original tissue files retained as nonselectable context. Source segment conflicts and topology defects prevent validated segment labels, clean-envelope or volume claims.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "selectableIds": [
+    "vm:anatomy:body:abdomen:right:vessel:right-hepatic-arterial-branches",
+    "vm:anatomy:body:abdomen:left:vessel:left-hepatic-arterial-branches",
+    "vm:anatomy:body:abdomen:right:vessel:right-portal-vein-branches",
+    "vm:anatomy:body:abdomen:left:vessel:left-portal-vein-branches",
+    "vm:anatomy:body:abdomen:right:organ:right-hepatic-bile-ducts",
+    "vm:anatomy:body:abdomen:left:organ:left-hepatic-bile-ducts",
+    "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-tributary-of-middle-hepatic-vein"
+  ],
+  "contextIds": [
+    "vm:anatomy:body:abdomen:unpaired:organ:liver-tissue-context"
+  ],
+  "bundles": [
+    {
+      "id": "hepatic-branches",
+      "url": "/models/bodyparts3d/hepatic/hepatic-branches.glb?v=4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+      "sha256": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+      "bytes": 1065752,
+      "structures": 7
+    },
+    {
+      "id": "hepatic-tissue-context",
+      "url": "/models/bodyparts3d/hepatic/hepatic-tissue-context.glb?v=bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+      "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+      "bytes": 2302328,
+      "structures": 1
+    }
+  ],
+  "regions": [
+    {
+      "id": "abdomen",
+      "name": "Liver internal branches",
+      "description": "Partial source vessel and biliary groups."
+    }
+  ],
+  "coverage": {
+    "organs": "Seven branch groups and optional unlabelled tissue context, not a validated segment map."
+  },
+  "excluded": []
+}

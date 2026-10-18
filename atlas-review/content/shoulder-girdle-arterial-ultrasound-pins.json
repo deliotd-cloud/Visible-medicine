@@ -1,0 +1,710 @@
+{
+  "baseline": "bbe33ea6ffff3503ae9cdabc0dd41350cece28cd",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "f17a4121f7c9f0dad8e0715a308c39ec1ccfd36263d3f220d1367226ea16aaaf",
+  "entries": [
+    {
+      "family": "posteriorCircumflexHumeral",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+        "fmaId": "FMA22685",
+        "name": "Right posterior circumflex humeral artery",
+        "sourceName": "right posterior circumflex humeral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22685",
+        "bounds": {
+          "min": [
+            -1.9295200109481812,
+            4.858699798583984,
+            0.12414398044347763
+          ],
+          "max": [
+            -1.401319980621338,
+            4.984599590301514,
+            0.4818840026855469
+          ]
+        },
+        "center": [
+          -1.6654199957847595,
+          4.921649694442749,
+          0.30301399156451225
+        ],
+        "anchor": [
+          -1.5748900175094604,
+          4.877199649810791,
+          0.24333198368549347
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2291",
+            "sha256": "72f4c8d4e8465447611464bfa74df78924ffeaa9fc9829af32a4082518b6c02b"
+          },
+          {
+            "file": "FJ2292",
+            "sha256": "19ad27ed37b4fdc61653588976e81e138f28b063c52b270e5cdfb93364eac58b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "posteriorCircumflexHumeral",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+        "fmaId": "FMA22687",
+        "name": "Left posterior circumflex humeral artery",
+        "sourceName": "left posterior circumflex humeral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22687",
+        "bounds": {
+          "min": [
+            1.401360034942627,
+            4.859000205993652,
+            0.12425899505615234
+          ],
+          "max": [
+            1.9289900064468384,
+            4.984499454498291,
+            0.4817900061607361
+          ]
+        },
+        "center": [
+          1.6651750206947327,
+          4.921749830245972,
+          0.3030245006084442
+        ],
+        "anchor": [
+          1.5877599716186523,
+          4.874300479888916,
+          0.2290930151939392
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2239",
+            "sha256": "1e88872df7cffa6ccc3c325b2fbd0543279dc9ffc0a75b7e1e1ae14a0dc30d6f"
+          },
+          {
+            "file": "FJ2240",
+            "sha256": "8d07c946f22777f447e46597283d37a9ad993f8f1f8d194af6ed58dd2475d62c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "circumflexScapular",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+        "fmaId": "FMA23180",
+        "name": "Right circumflex scapular artery",
+        "sourceName": "right circumflex scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA23180",
+        "bounds": {
+          "min": [
+            -1.4422999620437622,
+            4.805600643157959,
+            0.011157989501953125
+          ],
+          "max": [
+            -1.3413499593734741,
+            4.939200401306152,
+            0.367127001285553
+          ]
+        },
+        "center": [
+          -1.3918249607086182,
+          4.872400522232056,
+          0.18914249539375305
+        ],
+        "anchor": [
+          -1.4265999794006348,
+          4.859799861907959,
+          0.1953199803829193
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2273",
+            "sha256": "37154eff6530ba3cb17412723850f45c3ee5be9d0d9b78e737c7a1f356c87b3c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "circumflexScapular",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+        "fmaId": "FMA23181",
+        "name": "Left circumflex scapular artery",
+        "sourceName": "left circumflex scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA23181",
+        "bounds": {
+          "min": [
+            1.3415700197219849,
+            4.805500507354736,
+            0.011130981147289276
+          ],
+          "max": [
+            1.4423099756240845,
+            4.939200401306152,
+            0.36712896823883057
+          ]
+        },
+        "center": [
+          1.3919399976730347,
+          4.872350454330444,
+          0.18912997469305992
+        ],
+        "anchor": [
+          1.425610065460205,
+          4.857800483703613,
+          0.19487297534942627
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2221",
+            "sha256": "3387830f0c01f2f98710951a900442fdf6ad7b123ad1202aad4e0390cb0551f4"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "thyrocervical",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+        "fmaId": "FMA3992",
+        "name": "Right thyrocervical trunk",
+        "sourceName": "right thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA3992",
+        "bounds": {
+          "min": [
+            -0.4277290105819702,
+            5.521999359130859,
+            0.4754229784011841
+          ],
+          "max": [
+            -0.40075698494911194,
+            5.5794997215271,
+            0.49482595920562744
+          ]
+        },
+        "center": [
+          -0.4142429977655411,
+          5.5507495403289795,
+          0.48512446880340576
+        ],
+        "anchor": [
+          -0.41858500242233276,
+          5.532700061798096,
+          0.48956596851348877
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2307",
+            "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "thyrocervical",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+        "fmaId": "FMA4084",
+        "name": "Left thyrocervical trunk",
+        "sourceName": "left thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4084",
+        "bounds": {
+          "min": [
+            0.4013550281524658,
+            5.521899223327637,
+            0.4747239649295807
+          ],
+          "max": [
+            0.4276890158653259,
+            5.579100131988525,
+            0.49424201250076294
+          ]
+        },
+        "center": [
+          0.4145220220088959,
+          5.550499677658081,
+          0.4844829887151718
+        ],
+        "anchor": [
+          0.4182009994983673,
+          5.533499717712402,
+          0.4902590215206146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2255",
+            "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "costocervical",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+        "fmaId": "FMA5039",
+        "name": "Right costocervical trunk",
+        "sourceName": "right costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA5039",
+        "bounds": {
+          "min": [
+            -0.5218989849090576,
+            5.472499847412109,
+            0.41986504197120667
+          ],
+          "max": [
+            -0.4543980062007904,
+            5.555600643157959,
+            0.49830496311187744
+          ]
+        },
+        "center": [
+          -0.488148495554924,
+          5.514050245285034,
+          0.45908500254154205
+        ],
+        "anchor": [
+          -0.4895249903202057,
+          5.522500038146973,
+          0.4635910093784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2276",
+            "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "costocervical",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+        "fmaId": "FMA4086",
+        "name": "Left costocervical trunk",
+        "sourceName": "left costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4086",
+        "bounds": {
+          "min": [
+            0.4547460079193115,
+            5.472900390625,
+            0.4201899766921997
+          ],
+          "max": [
+            0.5215910077095032,
+            5.5548996925354,
+            0.4979889690876007
+          ]
+        },
+        "center": [
+          0.48816850781440735,
+          5.5139000415802,
+          0.4590894728899002
+        ],
+        "anchor": [
+          0.48764801025390625,
+          5.507900238037109,
+          0.451477974653244
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2224",
+            "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "dorsalScapular",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+        "fmaId": "FMA4057",
+        "name": "Right dorsal scapular artery",
+        "sourceName": "right dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4057",
+        "bounds": {
+          "min": [
+            -1.0666000843048096,
+            3.8316004276275635,
+            -0.5321046113967896
+          ],
+          "max": [
+            -0.5545200109481812,
+            5.613199234008789,
+            0.479032963514328
+          ]
+        },
+        "center": [
+          -0.8105600476264954,
+          4.722399830818176,
+          -0.026535823941230774
+        ],
+        "anchor": [
+          -0.5809879899024963,
+          4.696700572967529,
+          -0.4426394999027252
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2284",
+            "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "family": "dorsalScapular",
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+        "fmaId": "FMA10552",
+        "name": "Left dorsal scapular artery",
+        "sourceName": "left dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10552",
+        "bounds": {
+          "min": [
+            0.5547209978103638,
+            3.831899404525757,
+            -0.5322532057762146
+          ],
+          "max": [
+            1.0665899515151978,
+            5.613199234008789,
+            0.47892096638679504
+          ]
+        },
+        "center": [
+          0.8106554746627808,
+          4.722549319267273,
+          -0.026666119694709778
+        ],
+        "anchor": [
+          0.5759209990501404,
+          4.744699478149414,
+          -0.44102680683135986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2232",
+            "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

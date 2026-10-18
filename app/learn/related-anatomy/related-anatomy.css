@@ -1,0 +1,11 @@
+.related-lectures-page .learning-heading h1 { font-size: clamp(32px, 4vw, 56px); line-height: 1.08; overflow-wrap: anywhere; }
+.related-lecture-card { min-width: 0; padding: 24px; border: 1px solid var(--line); background: rgba(255,255,255,.66); }
+.related-lecture-card .course-card-copy > span { color: var(--teal); font: 700 10px/1.4 var(--font-geist-mono),monospace; text-transform: uppercase; }
+.related-lecture-card h3 { margin: 10px 0; font-size: 24px; line-height: 1.2; letter-spacing: -.025em; overflow-wrap: anywhere; }
+.related-lecture-card ol { display: grid; gap: 8px; margin: 16px 0 0; padding-left: 22px; list-style: decimal; }
+.related-lecture-card li { padding-left: 4px; }
+.related-lecture-card li a { display: inline-flex; align-items: center; min-height: 40px; color: var(--teal); font-size: 14px; line-height: 1.5; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.related-lecture-card li a:hover { color: var(--ink); }
+.related-lectures-page a:focus-visible, .related-lectures-page summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+.related-lectures-page .learning-aside details { margin-top: 20px; }
+.related-lectures-page .learning-aside summary { cursor: pointer; }

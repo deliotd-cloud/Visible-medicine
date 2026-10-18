@@ -1,0 +1,12 @@
+.panel { max-width: 960px; padding: 1.25rem; border: 1px solid var(--line); border-radius: 12px; }
+.panel p { font-size: 1rem; line-height: 1.6; }
+.controls { display: flex; flex-wrap: wrap; align-items: end; gap: .75rem; }
+.controls label { display: grid; gap: .5rem; width: min(100%, 25rem); font-size: 1rem; }
+.controls input { max-width: 100%; font: inherit; }
+.controls button, .panel summary { font: inherit; min-height: 44px; cursor: pointer; }
+.controls button { padding: .6rem .85rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface, white); color: var(--ink); }
+.controls button:disabled { cursor: default; opacity: .55; }
+.controls :focus-visible, .panel summary:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.models { padding: 0; list-style: none; }
+.models li { display: grid; gap: .35rem; padding: .75rem 0; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.models small { font-size: .875rem; }

@@ -1,0 +1,654 @@
+{
+  "schemaVersion": 1,
+  "baseline": "74ed7e65a65c919c787d0086ce50a11c21bf779b",
+  "tourRevision": "right-upper-limb-venous-orientation-v1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+      "fmaId": "FMA62506",
+      "name": "Dorsal venous network of right hand",
+      "sourceName": "dorsal venous network of right hand",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-venous",
+      "nodeName": "FMA62506",
+      "bounds": {
+        "min": [
+          -2.8991599082946777,
+          -0.783140242099762,
+          0.6212100386619568
+        ],
+        "max": [
+          -2.2986299991607666,
+          -0.08481018245220184,
+          0.8272700309753418
+        ]
+      },
+      "center": [
+        -2.598894953727722,
+        -0.4339752122759819,
+        0.7242400348186493
+      ],
+      "anchor": [
+        -2.779679775238037,
+        -0.4008801281452179,
+        0.7057299613952637
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2280",
+          "sha256": "58c25d369779e6a50757cd89d1deefb7da82d5790e1242cea4b9b7e3d5e77759"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "fmaId": "FMA13325",
+      "name": "Right cephalic vein",
+      "sourceName": "right cephalic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA13325",
+      "bounds": {
+        "min": [
+          -2.790409803390503,
+          -0.255349725484848,
+          0.27655401825904846
+        ],
+        "max": [
+          -1.0683599710464478,
+          5.268199443817139,
+          0.8173100352287292
+        ]
+      },
+      "center": [
+        -1.9293848872184753,
+        2.5064248591661453,
+        0.5469320267438889
+      ],
+      "anchor": [
+        -2.297680139541626,
+        2.514399528503418,
+        0.43531501293182373
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2272",
+          "sha256": "b57bd07b9e940b76500243e88b2d0f32fac59fff6ddea84419b254c82a6256f8"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "fmaId": "FMA22909",
+      "name": "Right basilic vein",
+      "sourceName": "right basilic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22909",
+      "bounds": {
+        "min": [
+          -2.3548500537872314,
+          -0.11169006675481796,
+          0.1282849907875061
+        ],
+        "max": [
+          -1.5100599527359009,
+          4.372399806976318,
+          0.6480799913406372
+        ]
+      },
+      "center": [
+        -1.9324550032615662,
+        2.13035487011075,
+        0.38818249106407166
+      ],
+      "anchor": [
+        -1.792330026626587,
+        2.1141998767852783,
+        0.260142982006073
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2270",
+          "sha256": "9340492869064c52e522a426c4c2bdb73f0ccfc8392dee56f01a8186f6187ba5"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+      "fmaId": "FMA22935",
+      "name": "Right medial brachial vein",
+      "sourceName": "right medial brachial vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "brachial-veins",
+      "nodeName": "FMA22935",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2341",
+          "sha256": "0468a157795c7346d964d1884627464d5cfe9c4c8bcc84661aefdb2bc2d18259"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.1819400787353516,
+          2.184000015258789,
+          0.3270150125026703
+        ],
+        "max": [
+          -1.500249981880188,
+          4.349800109863281,
+          0.4724330008029938
+        ]
+      },
+      "center": [
+        -1.8410950303077698,
+        3.266900062561035,
+        0.39972400665283203
+      ],
+      "anchor": [
+        -1.8253899812698364,
+        3.2527999877929688,
+        0.38743001222610474
+      ],
+      "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+      "fmaId": "FMA13330",
+      "name": "Right axillary vein",
+      "sourceName": "right axillary vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA13330",
+      "bounds": {
+        "min": [
+          -1.5716700553894043,
+          4.328499794006348,
+          0.41394203901290894
+        ],
+        "max": [
+          -0.7491909861564636,
+          5.351400375366211,
+          0.6516900062561035
+        ]
+      },
+      "center": [
+        -1.160430520772934,
+        4.839950084686279,
+        0.5328160226345062
+      ],
+      "anchor": [
+        -1.3682899475097656,
+        4.929800033569336,
+        0.5104399919509888
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2269",
+          "sha256": "24438422321aa6665de6394aa39e79fdeabdf2bc56427a3419da4dc630546464"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+      "fmaId": "FMA4755",
+      "name": "Right subclavian vein",
+      "sourceName": "right subclavian vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA4755",
+      "bounds": {
+        "min": [
+          -0.8682869672775269,
+          5.277299880981445,
+          0.5849699974060059
+        ],
+        "max": [
+          -0.22342300415039062,
+          5.515500545501709,
+          0.717930018901825
+        ]
+      },
+      "center": [
+        -0.5458549857139587,
+        5.396400213241577,
+        0.6514500081539154
+      ],
+      "anchor": [
+        -0.5808529853820801,
+        5.366500377655029,
+        0.6452600359916687
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3587",
+          "sha256": "3ed476e466dbc681e284005f910b546a97ac24999236cae1ec7487149da7bb53"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "sourceName": "right third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24468",
+      "bounds": {
+        "min": [
+          -2.7234601974487305,
+          -0.7915997505187988,
+          0.623259961605072
+        ],
+        "max": [
+          -2.52485990524292,
+          -0.14737975597381592,
+          0.9273300170898438
+        ]
+      },
+      "center": [
+        -2.624160051345825,
+        -0.4694897532463074,
+        0.7752949893474579
+      ],
+      "anchor": [
+        -2.628920078277588,
+        -0.4772900342941284,
+        0.7948399186134338
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3354",
+          "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+      "fmaId": "FMA13322",
+      "name": "Right clavicle",
+      "sourceName": "right clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13322",
+      "bounds": {
+        "min": [
+          -1.4527698755264282,
+          5.086199760437012,
+          0.04412498325109482
+        ],
+        "max": [
+          -0.09661649912595749,
+          5.554399490356445,
+          0.9694799780845642
+        ]
+      },
+      "center": [
+        -0.7746931873261929,
+        5.3202996253967285,
+        0.5068024806678295
+      ],
+      "anchor": [
+        -0.7849389910697937,
+        5.359100341796875,
+        0.5070599913597107
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3362",
+          "sha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-first-rib",
+      "fmaId": "FMA7857",
+      "name": "Right first rib",
+      "sourceName": "right first rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA7857",
+      "bounds": {
+        "min": [
+          -0.6976410150527954,
+          5.100699424743652,
+          0.14414596557617188
+        ],
+        "max": [
+          -0.1511089950799942,
+          5.704799652099609,
+          0.8042399883270264
+        ]
+      },
+      "center": [
+        -0.4243750050663948,
+        5.402749538421631,
+        0.4741929769515991
+      ],
+      "anchor": [
+        -0.49256500601768494,
+        5.389200210571289,
+        0.48053300380706787
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3334",
+          "sha256": "3831c5c578d45fc491e7e72417cc436e04a1a3a1916138e51528ad0b0b212a54"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "thorax-skeleton",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "bytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "structures": 24
+    },
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    },
+    {
+      "id": "hand-vessels-hand-venous",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "bytes": 577748,
+      "sha256": "3fd81ec284853b9e7eae84b3a4282ba0e5713160f07b1b5d6d8a70f8bb7d502e",
+      "structures": 14
+    },
+    {
+      "id": "brachial-veins",
+      "url": "/models/bodyparts3d/brachial-veins/brachial-veins.glb?v=e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "bytes": 100360,
+      "sha256": "e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "structures": 2
+    }
+  ]
+}

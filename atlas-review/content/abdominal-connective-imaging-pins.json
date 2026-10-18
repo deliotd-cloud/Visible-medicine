@@ -1,0 +1,266 @@
+{
+  "sourceCommit": "23746f4c4a8648048ce28123520b9ef09059a1c2",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "abdomen-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "bytes": 37124,
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-connective-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "bytes": 727116,
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "structures": 3
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "f7e94edb1cfb82e507732c2f7231bca0fe47a506e29cb093bc99ab9fa56a8e48",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "fmaId": "FMA11336",
+        "name": "Linea alba",
+        "sourceName": "linea alba",
+        "system": "connective",
+        "category": "fascia",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-connective-axial-detail",
+        "nodeName": "FMA11336",
+        "bounds": {
+          "min": [
+            -0.09308779984712601,
+            -0.11929992586374283,
+            0.622409999370575
+          ],
+          "max": [
+            0.08187010139226913,
+            3.778299570083618,
+            1.6214699745178223
+          ]
+        },
+        "center": [
+          -0.005608849227428436,
+          1.8294998221099377,
+          1.1219399869441986
+        ],
+        "anchor": [
+          -0.02190920151770115,
+          1.7455902099609375,
+          1.3322199583053589
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1448",
+            "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "linea-alba",
+      "topics": [
+        "ct",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "fmaId": "FMA14643",
+        "name": "Mesentery of small intestine",
+        "sourceName": "mesentery of small intestine",
+        "system": "connective",
+        "category": "membrane",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-connective-mesenteric",
+        "nodeName": "FMA14643",
+        "bounds": {
+          "min": [
+            -0.7990720272064209,
+            0.1984698474407196,
+            0.7022599577903748
+          ],
+          "max": [
+            0.9267299771308899,
+            2.303499698638916,
+            1.188999891281128
+          ]
+        },
+        "center": [
+          0.0638289749622345,
+          1.2509847730398178,
+          0.9456299245357513
+        ],
+        "anchor": [
+          0.050999999046325684,
+          1.2314099073410034,
+          0.9430000185966492
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3396",
+            "sha256": "6481d1f71c8ae51af02df08bb64a70f9d821e843e64a42d10a3bdb5c13dab7d7"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "small-bowel-mesentery",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "fmaId": "FMA14647",
+        "name": "Transverse mesocolon",
+        "sourceName": "transverse mesocolon",
+        "system": "connective",
+        "category": "membrane",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-connective-mesenteric",
+        "nodeName": "FMA14647",
+        "bounds": {
+          "min": [
+            -0.8190000057220459,
+            0.608720064163208,
+            0.005898017901927233
+          ],
+          "max": [
+            0.9114610552787781,
+            2.636199951171875,
+            1.3182100057601929
+          ]
+        },
+        "center": [
+          0.04623052477836609,
+          1.6224600076675415,
+          0.66205401183106
+        ],
+        "anchor": [
+          -0.042700499296188354,
+          1.7324901819229126,
+          0.9104300141334534
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3398",
+            "sha256": "580c65869c905aa33afa3a19e2b3f685e90b24d9dfa3e67bde775304c1c6a810"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transverse-mesocolon",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,506 @@
+const revision30Bytes=readFileSync(new URL('./fixtures/completion-checklist-30.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision30Bytes).digest('hex'),'4b4831c80fa2c19b71c963d26e7fb48313f920e758ca1306437e7af2f6c369d6');
+const revision30Data=JSON.parse(revision30Bytes);
+const revision29Bytes=readFileSync(new URL('./fixtures/completion-checklist-29.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision29Bytes).digest('hex'),'5fc23191f225a5b9de555a2f1b49d8d5a28bf220ec106536135a128e4db09660');
+const revision29Data=JSON.parse(revision29Bytes);
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {validateChecklist,renderChecklist,evidencePath} from '../scripts/refresh-completion-checklist.mjs';
+const data=JSON.parse(readFileSync(new URL('../docs/completion-checklist.json',import.meta.url)));
+const revision38Bytes=readFileSync(new URL('./fixtures/completion-checklist-38.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision38Bytes).digest('hex'),'1660a152ab261f760a36e87b439b4d3c8e7090c4c32fc400edd9fa9fb16a6dd2');
+const revision38Data=JSON.parse(revision38Bytes);
+const historicalBytes=readFileSync(new URL('./fixtures/completion-checklist-19.json',import.meta.url));
+assert.equal(createHash('sha256').update(historicalBytes).digest('hex'),'51d016a07f1bfe9692bbcddea3afe40168441f86f9cebdfd44e17b123abe05fd');
+const historicalData=JSON.parse(historicalBytes);
+const integratedBytes=readFileSync(new URL('./fixtures/completion-checklist-21.json',import.meta.url));
+assert.equal(createHash('sha256').update(integratedBytes).digest('hex'),'2a7ebfbf4a19a31aac0b6a2a9c802f01cda2a32dbf9f0cee85f4080c24eb5411');
+const integratedData=JSON.parse(integratedBytes);
+const pendingBytes=readFileSync(new URL('./fixtures/completion-checklist-22.json',import.meta.url));
+assert.equal(createHash('sha256').update(pendingBytes).digest('hex'),'4bf54f198e730bc52b1131911c9bbe2c583229d324b3c280ca22500ed690a3c8');
+const pendingData=JSON.parse(pendingBytes);
+const revision23Bytes=readFileSync(new URL('./fixtures/completion-checklist-23.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision23Bytes).digest('hex'),'1aa646efc3089556251e00b48e127794d389ca94f608e3f15632a455540412c9');
+const revision23Data=JSON.parse(revision23Bytes);
+const revision24Bytes=readFileSync(new URL('./fixtures/completion-checklist-24.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision24Bytes).digest('hex'),'1dbef9bd06e160ee317ad5cdbfd4a03722e53d2358c2f92818988a34e1098e5d');
+const revision24Data=JSON.parse(revision24Bytes);
+const revision25Bytes=readFileSync(new URL('./fixtures/completion-checklist-25.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision25Bytes).digest('hex'),'03a9c89adb9a08ff0577012bfd5d14152b1f268b50ab7de587b5eb898f22bb9f');
+const revision25Data=JSON.parse(revision25Bytes);
+const revision26Bytes=readFileSync(new URL('./fixtures/completion-checklist-26.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision26Bytes).digest('hex'),'911af05fd597e1e8bc152de2fa89d1d6bf3c98c2ab197628f1f3fc26ccc1352b');
+const revision26Data=JSON.parse(revision26Bytes);
+const revision27Bytes=readFileSync(new URL('./fixtures/completion-checklist-27.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision27Bytes).digest('hex'),'3803f973c0bfadc81c50f3604aa2f0e337805b15a21c6b2311b7d324b9f5cfd2');
+const revision27Data=JSON.parse(revision27Bytes);
+const revision28Bytes=readFileSync(new URL('./fixtures/completion-checklist-28.json',import.meta.url));
+assert.equal(createHash('sha256').update(revision28Bytes).digest('hex'),'ddb6471d779a51685a7c147cc364e2511e4d73394fe265a4b11f8c1b10cf055c');
+const revision28Data=JSON.parse(revision28Bytes);
+test('completion register preserves 71 stable bounded items and eight separate optional ideas',()=>{
+ assert.equal(validateChecklist(data),data);assert.equal(data.items.length,71);assert.equal(new Set(data.items.map(i=>i.id)).size,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ const rendered=renderChecklist(data);for(const item of data.items)assert(rendered.includes('**'+item.id+' '));assert(rendered.includes('not unique lessons'));assert(rendered.includes('clinical sign-off'));assert(rendered.includes('## Your next inputs'));
+});
+for(const [label,mutate]of [
+ ['duplicate IDs',d=>{d.items[1].id=d.items[0].id;}],
+ ['unknown status',d=>{d.items[0].status='approved';}],
+ ['proposal as mandatory requirement',d=>{const i=d.items.find(i=>i.status==='proposed');i.scope='release-essential';}],
+ ['done without a completion record',d=>{d.items[0].status='done';}],
+ ['missing evidence',d=>{d.items[0].evidence=[];}],
+ ['unsafe private locator',d=>{d.items[0].evidence=['website:.local/patient.json'];}],
+ ['missing current change log',d=>{d.revision=data.revision+1;}],
+ ])test('completion register rejects '+label,()=>{const changed=structuredClone(data);mutate(changed);assert.throws(()=>validateChecklist(changed));});
+test('evidence references cannot escape source roots',()=>{for(const ref of ['website:../secret','website:/secret','unknown:docs/file.md','website:.env.local'])assert.throws(()=>evidencePath(data,ref));});
+
+test('pending source is displayed separately from the unchanged website baseline',()=>{
+ const data=historicalData;
+ const rendered=renderChecklist(data);assert(rendered.includes('Pending Atlas source:'));assert(rendered.includes(data.pendingAtlasSource.commit));assert(rendered.includes(data.baseline.atlasCommit));assert(rendered.includes('Not imported into the website baseline above.'));assert(rendered.includes('Canonical Atlas summaries were refreshed'));assert(!rendered.includes('Some older canonical Atlas summaries are stale'));
+});
+test('pending source cannot imply an import, expanded scope or approval',()=>{
+ const data=historicalData;
+ for(const edit of [p=>{p.websiteImported=true;},p=>{p.commit=data.baseline.atlasCommit;},p=>{p.tree='HEAD';},p=>{p.rootDraftPlacements++;},p=>{p.rootPendingPlacements=-1;},p=>{p.clinicalApproval=true;}]){const changed=structuredClone(data);edit(changed.pendingAtlasSource);assert.throws(()=>validateChecklist(changed));}
+});
+
+test('revision21 imported source agrees exactly with baseline and retains every roadmap item status',()=>{
+ const data=integratedData;
+ assert.equal(data.pendingAtlasSource.websiteImported,true);assert.equal(data.pendingAtlasSource.commit,data.baseline.atlasCommit);
+ const html=renderChecklist(data);assert(html.includes('Integrated Atlas source:'));assert(html.includes('**Imported into the website baseline above.**'));assert(!html.includes('Not imported into the website baseline above.'));
+ assert.deepEqual(data.items.map(i=>[i.id,i.status]),historicalData.items.map(i=>[i.id,i.status]));
+ for(const edit of [p=>{p.commit='0'.repeat(40);},p=>{p.tree='0'.repeat(40);},p=>{p.rootDraftPlacements++;p.rootPendingPlacements--;},p=>{p.websiteImported=false;},p=>{p.clinicalApproval=true;}]){
+  const changed=structuredClone(data);edit(changed.pendingAtlasSource);assert.throws(()=>validateChecklist(changed));
+ }
+});
+
+test('revision22 four-draft source candidate stays distinct from unchanged integrated baseline',()=>{
+ const data=pendingData;
+ assert.equal(data.revision,22);assert.equal(data.pendingAtlasSource.websiteImported,false);
+ assert.deepEqual(data.baseline,integratedData.baseline);
+ assert.deepEqual(data.items,integratedData.items,'All roadmap items, statuses and evidence remain');
+ const p=data.pendingAtlasSource,b=data.baseline;
+ assert.equal(p.commit,'408759d57644b05402e98a937e7cf6338b5509cf');
+ assert.equal(p.tree,'8386a10eb2bf80393233a7afe04447b2778877cd');
+ assert.equal(p.rootDraftPlacements-b.rootDraftPlacements,4);
+ assert.equal(b.rootPendingPlacements-p.rootPendingPlacements,4);
+ assert.equal(p.rootGeneratedIdentificationPlacements,b.rootGeneratedIdentificationPlacements);
+ const rendered=renderChecklist(data);assert(rendered.includes('Pending Atlas source:'));
+ assert(rendered.includes('Not imported into the website baseline above.'));
+ for(const mutate of [p=>{p.websiteImported=true;},p=>{p.commit=b.atlasCommit;},
+   p=>{p.rootDraftPlacements++;},p=>{p.clinicalApproval=true;}]) {
+   const bad=structuredClone(data);mutate(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));
+ }
+});
+
+test('historical revision23 integrated four-draft source conserves scope and every roadmap item',()=>{
+ const data=revision23Data;
+ assert.equal(data.revision,23);assert.equal(data.pendingAtlasSource.websiteImported,true);
+ assert.deepEqual(data.items,pendingData.items);
+ const b=data.baseline,p=data.pendingAtlasSource;
+ assert.equal(b.atlasCommit,p.commit);assert.equal(b.atlasTree,p.tree);
+ assert.equal(b.atlasCommit,pendingData.pendingAtlasSource.commit);
+ assert.equal(b.reviewIntegration,'8dd5e6e581621da7cfef475456d8cab8e458caefe91b990e31b898dbffd5117a');
+ assert.equal(b.reviewSourceFiles,1499);
+ assert.equal(b.rootDraftPlacements,9196);assert.equal(b.rootPendingPlacements,701);assert.equal(b.rootGeneratedIdentificationPlacements,39);
+ assert.equal(b.rootTopicPlacements,pendingData.baseline.rootTopicPlacements);
+ assert.equal(b.rootDraftPlacements-pendingData.baseline.rootDraftPlacements,4);
+ assert.equal(pendingData.baseline.rootPendingPlacements-b.rootPendingPlacements,4);
+ for(const key of ['rootRepresentations','nestedRepresentations','nestedConcepts','regionalTours','regionalTourStops','independentGuides','independentGuideStops'])
+  assert.equal(b[key],pendingData.baseline[key],key+' scope unchanged');
+ const rendered=renderChecklist(data);assert(rendered.includes('Integrated Atlas source:'));
+ assert(rendered.includes('**Imported into the website baseline above.**'));
+ for(const mutate of [p=>{p.websiteImported=false;},p=>{p.tree='0'.repeat(40);},
+  p=>{p.rootDraftPlacements++;p.rootPendingPlacements--;},p=>{p.clinicalApproval=true;}]){
+  const bad=structuredClone(data);mutate(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));
+ }
+});
+
+test('historical revision24 lecture intake records partial progress without shrinking any roadmap acceptance',()=>{
+ const data=revision24Data;
+ assert.equal(data.revision,24);assert.equal(data.items.length,revision23Data.items.length);
+ const changedIds=['TEACH-11','IMG-04','STUDIO-02'];
+ for(const prior of revision23Data.items){
+  const current=data.items.find(item=>item.id===prior.id);assert(current);
+  if(changedIds.includes(prior.id)){
+   assert.equal(prior.status,'open');assert.equal(current.status,'partial');
+   const {status:oldStatus,evidence:oldEvidence,...oldScope}=prior;
+   const {status:newStatus,evidence:newEvidence,...newScope}=current;
+   assert.deepEqual(newScope,oldScope);assert(oldEvidence.every(ref=>newEvidence.includes(ref)));
+  }else assert.deepEqual(current,prior);
+ }
+ const {reviewIntegration:oldReview,...oldBaseline}=revision23Data.baseline;
+ const {reviewIntegration:newReview,...newBaseline}=data.baseline;
+ assert.equal(oldReview,'8dd5e6e581621da7cfef475456d8cab8e458caefe91b990e31b898dbffd5117a');
+ assert.equal(newReview,'8b17f3fdc1761867e0acea6fe6df171c8213f3fc6043b8c223fc17d9bd0ae259');
+ assert.deepEqual(newBaseline,oldBaseline);assert.deepEqual(data.pendingAtlasSource,revision23Data.pendingAtlasSource);
+ assert.equal(data.items.find(item=>item.id==='TEACH-10').status,'needs-owner');
+ assert.equal(data.items.filter(item=>item.scope==='optional').length,8);
+});
+test('historical revision25 imports the exact cervical source and adds only retirement evidence',()=>{
+ const data=revision25Data;
+ assert.equal(data.revision,25);assert.equal(data.updatedAt,'2026-10-16');
+ const old=revision24Data.baseline,current=data.baseline;
+ assert.equal(current.atlasCommit,'4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad');
+ assert.equal(current.atlasTree,'4a4994524f37561afa0ac6d66cff99ad48fbde92');
+ assert.equal(current.reviewIntegration,'fbd42e2390faa0a77a5e70393660cbdd56a494f290e6153558356c5252844cb8');
+ assert.equal(current.reviewSourceFiles,1502);
+ assert.equal(current.rootDraftPlacements,9202);assert.equal(current.rootPendingPlacements,695);
+ assert.equal(current.rootGeneratedIdentificationPlacements,39);
+ assert.equal(current.rootDraftPlacements-old.rootDraftPlacements,6);
+ assert.equal(old.rootPendingPlacements-current.rootPendingPlacements,6);
+ const changedBaselineKeys=['atlasCommit','atlasTree','reviewIntegration','reviewSourceFiles','rootDraftPlacements','rootPendingPlacements'];
+ for(const key of Object.keys(old))if(!changedBaselineKeys.includes(key))assert.deepEqual(current[key],old[key],key+' unchanged');
+ const source=data.pendingAtlasSource;
+ assert.equal(source.commit,current.atlasCommit);assert.equal(source.tree,current.atlasTree);
+ assert.equal(source.rootDraftPlacements,current.rootDraftPlacements);
+ assert.equal(source.rootPendingPlacements,current.rootPendingPlacements);
+ assert.equal(source.rootGeneratedIdentificationPlacements,current.rootGeneratedIdentificationPlacements);
+ assert.equal(source.websiteImported,true);
+ assert.equal(source.evidence,'F:/VisibleMedicine/staging/20261016-cervical-xray/canonical-installed.json');
+ assert.equal(current.rootDraftPlacements+current.rootPendingPlacements+current.rootGeneratedIdentificationPlacements,current.rootTopicPlacements);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ for(const prior of revision24Data.items){
+  const item=data.items.find(i=>i.id===prior.id);assert(item);
+  if(item.id==='STUDIO-04'){
+   const {evidence:before,...priorRest}=prior,{evidence:after,...itemRest}=item;
+   assert.deepEqual(itemRest,priorRest);
+   assert.deepEqual(after,[...before,'website:docs/STUDIO_WORKBOOK_RETIREMENT.md']);
+  }else assert.deepEqual(item,prior,item.id+' unchanged');
+ }
+ assert.equal(data.items.find(i=>i.id==='STUDIO-04').status,'partial');
+ assert.deepEqual(data.changeLog.slice(1),revision24Data.changeLog);
+ assert.equal(data.changeLog[0].revision,25);
+ assert.match(data.changeLog[0].change,/correction\/supersession.*remain open/i);
+ const rendered=renderChecklist(data);
+ assert(rendered.includes('Integrated Atlas source:'));
+ assert(rendered.includes('**Imported into the website baseline above.**'));
+ assert(rendered.includes('9202 editorial drafts, 695 pending and 39 generated'));
+});
+test('current revision26 adds only exact Review identity and bounded guided lecture evidence',()=>{
+ const data=revision26Data;
+ assert.equal(data.revision,26);assert.equal(data.updatedAt,'2026-10-16');
+ const {reviewIntegration:priorReview,...priorBaseline}=revision25Data.baseline;
+ const {reviewIntegration:currentReview,...currentBaseline}=data.baseline;
+ assert.equal(priorReview,'fbd42e2390faa0a77a5e70393660cbdd56a494f290e6153558356c5252844cb8');
+ assert.equal(currentReview,'582710a1e67c3f1c10e632a6c402335d191b39e13f97f9e5c55d1662d20f20d9');
+ assert.deepEqual(currentBaseline,priorBaseline);
+ assert.deepEqual(data.pendingAtlasSource,revision25Data.pendingAtlasSource);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(item=>item.scope==='optional').length,8);
+ for(const prior of revision25Data.items){
+  const current=data.items.find(item=>item.id===prior.id);assert(current);
+  if(prior.id==='IMG-04'){
+   const {evidence:before,...priorScope}=prior,{evidence:after,...currentScope}=current;
+   assert.deepEqual(currentScope,priorScope,'IMG-04 status and acceptance stay partial and unchanged');
+   assert.deepEqual(after,[...before,'website:docs/GUIDED_LECTURE_HANDOFF.md']);
+  }else assert.deepEqual(current,prior,prior.id+' unchanged');
+ }
+ assert.deepEqual(data.changeLog.slice(1),revision25Data.changeLog);
+ assert.equal(data.changeLog[0].revision,26);
+ assert.match(data.changeLog[0].change,/Lecture access remains independent from Atlas access/);
+ assert.match(data.changeLog[0].change,/do not establish signed-in browser acceptance, clinical approval, patient registration or public release/);
+ const rendered=renderChecklist(data);
+ assert(rendered.includes('Revision 26'));
+ assert(rendered.includes(currentReview));
+ assert(rendered.includes('GUIDED_LECTURE_HANDOFF.md'));
+});
+test('immutable revision27 imports only 56 exact-source spinal X-ray drafts and preserves the roadmap',()=>{
+ const data=revision27Data;
+ assert.equal(createHash('sha256').update(readFileSync(new URL('./fixtures/clinical-review-manifest-8d32653e.json',import.meta.url))).digest('hex'),'2066b4d9abd2e0a90f546c42025eca2284ab9623f67340d51ee31e19a4082e23');
+ assert.equal(createHash('sha256').update(readFileSync(new URL('./fixtures/clinical-review-viewer-8d32653e.json',import.meta.url))).digest('hex'),'f5295d676c647aa2574171854d5559362261f7cb578c0bb5deeea02d69f02431');
+ assert.equal(data.revision,27);assert.equal(data.updatedAt,'2026-10-16');
+ const old=revision26Data.baseline,current=data.baseline;
+ assert.equal(current.atlasCommit,'8d32653eaac8b86521618c824214dd6af8e35e29');
+ assert.equal(current.atlasTree,'876d7c8b59a9507479b65e1800c2bea455b242ef');
+ assert.match(current.reviewIntegration,/^[a-f0-9]{64}$/);
+ assert.equal(current.reviewSourceFiles,1505);
+ assert.equal(current.rootDraftPlacements,9258);
+ assert.equal(current.rootPendingPlacements,639);
+ assert.equal(current.rootGeneratedIdentificationPlacements,39);
+ assert.equal(current.rootDraftPlacements-old.rootDraftPlacements,56);
+ assert.equal(old.rootPendingPlacements-current.rootPendingPlacements,56);
+ assert.equal(current.rootDraftPlacements+current.rootPendingPlacements+
+  current.rootGeneratedIdentificationPlacements,current.rootTopicPlacements);
+ const changed=['atlasCommit','atlasTree','reviewIntegration','reviewSourceFiles',
+  'rootDraftPlacements','rootPendingPlacements'];
+ for(const key of Object.keys(old))if(!changed.includes(key))
+  assert.deepEqual(current[key],old[key],key+' unchanged');
+ const review=JSON.parse(readFileSync(new URL('./fixtures/clinical-review-manifest-8d32653e.json',import.meta.url)));
+ const viewer=JSON.parse(readFileSync(new URL('./fixtures/clinical-review-viewer-8d32653e.json',import.meta.url)));
+ assert.equal(review.revision,current.atlasCommit);
+ assert.equal(review.files.length,current.reviewSourceFiles);
+ assert.equal(review.packages.length,14);
+ for(const path of ['lib/spinal-muscle-xray.ts','content/spinal-muscle-xray.ts',
+  'content/spinal-muscle-xray-pins.json']){
+  const entry=review.files.filter(file=>file.path===path);
+  assert.equal(entry.length,1,path+' exact Review source');
+  assert.match(entry[0].sourceSha256,/^[a-f0-9]{64}$/);
+  assert.match(entry[0].importedSha256,/^[a-f0-9]{64}$/);
+ }
+ assert.equal(viewer.sourceCommit,current.atlasCommit);
+ assert.equal(viewer.websiteIntegrationSha256,current.reviewIntegration);
+ assert.equal(viewer.mode,'production');
+ assert.equal(viewer.files.length,46);assert.equal(viewer.packages.length,22);
+ assert.equal(viewer.personalRecordsIncluded,false);
+ const source=data.pendingAtlasSource;
+ assert.equal(source.commit,current.atlasCommit);
+ assert.equal(source.tree,current.atlasTree);
+ assert.equal(source.rootDraftPlacements,current.rootDraftPlacements);
+ assert.equal(source.rootPendingPlacements,current.rootPendingPlacements);
+ assert.equal(source.rootGeneratedIdentificationPlacements,current.rootGeneratedIdentificationPlacements);
+ assert.equal(source.websiteImported,true);
+ assert.equal(source.evidence,'F:/VisibleMedicine/staging/20261016-spinal-muscle-xray/canonical-installed.json');
+ assert.match(source.note,/56/);assert.match(source.note,/radiologist/i);
+ assert.match(source.note,/draft/i);
+ assert.deepEqual(data.items,revision26Data.items,'All 71 statuses, acceptance and evidence remain exact');
+ assert.equal(data.items.length,71);
+ assert.equal(data.items.filter(item=>item.scope==='optional').length,8);
+ assert.deepEqual(data.changeLog.slice(1),revision26Data.changeLog);
+ assert.equal(data.changeLog[0].revision,27);
+ assert.equal(data.changeLog[0].date,'2026-10-16');
+ assert.match(data.changeLog[0].change,/56/);
+ assert.match(data.changeLog[0].change,/clinical approval/i);
+ for(const mutate of [p=>{p.websiteImported=false;},p=>{p.commit='0'.repeat(40);},
+  p=>{p.rootDraftPlacements++;p.rootPendingPlacements--;},p=>{p.clinicalApproval=true;}]){
+  const bad=structuredClone(data);mutate(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));
+ }
+ const rendered=renderChecklist(data);
+ assert(rendered.includes('Revision 27'));
+ assert(rendered.includes(current.reviewIntegration));
+ assert(rendered.includes('9258 editorial drafts, 639 pending and 39 generated'));
+ assert(rendered.includes('**Imported into the website baseline above.**'));
+});
+test('immutable revision28 records only bounded REL-01 delivery evidence and retains all release gates',()=>{
+ const data=revision28Data;
+ assert.equal(data.revision,28);assert.equal(data.updatedAt,'2026-10-16');
+ assert.deepEqual(data.baseline,revision27Data.baseline,'Atlas, Review and runtime baseline stay exact');
+ assert.deepEqual(data.pendingAtlasSource,revision27Data.pendingAtlasSource,'pending source stays exact');
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(item=>item.scope==='optional').length,8);
+ for(const prior of revision27Data.items){
+  const current=data.items.find(item=>item.id===prior.id);assert(current,prior.id);
+  if(prior.id==='REL-01'){
+   const {evidence:before,...priorScope}=prior,{evidence:after,...currentScope}=current;
+   assert.deepEqual(currentScope,priorScope,'REL-01 scope, partial status and acceptance stay exact');
+   assert.equal(current.status,'partial');
+   assert.deepEqual(after,[...before,'website:docs/CURRENT_ATLAS_TEST_DELIVERY.md']);
+  }else assert.deepEqual(current,prior,prior.id+' unchanged');
+ }
+ assert.deepEqual(data.changeLog.slice(1),revision27Data.changeLog,'all earlier change log entries stay exact');
+ assert.equal(data.changeLog[0].revision,28);assert.equal(data.changeLog[0].date,'2026-10-16');
+ assert.match(data.changeLog[0].change,/exact current.*delivery.*fixture/i);
+ assert.match(data.changeLog[0].change,/immutable historical.*proof/i);
+ assert.match(data.changeLog[0].change,/full.*suite.*incomplete/i);
+ assert.equal(data.baseline.publicReleaseApproval,null);
+ assert.notEqual(data.pendingAtlasSource.clinicalApproval,true);
+ const rendered=renderChecklist(data);
+ assert(rendered.includes('Revision 28'));
+ assert(rendered.includes('CURRENT_ATLAS_TEST_DELIVERY.md'));
+ assert(rendered.includes('9258 editorial drafts, 639 pending and 39 generated'));
+});
+test('immutable revision29 records correction preparation without claiming replacement or release',()=>{
+ const data=revision29Data;
+ assert.equal(data.revision,29);assert.equal(data.updatedAt,'2026-10-16');
+ assert.deepEqual(data.baseline,revision28Data.baseline);
+ assert.deepEqual(data.pendingAtlasSource,revision28Data.pendingAtlasSource);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(item=>item.scope==='optional').length,8);
+ for(const prior of revision28Data.items){
+  const current=data.items.find(item=>item.id===prior.id);assert(current);
+  if(prior.id==='STUDIO-04'){
+   const {evidence:before,...oldScope}=prior,{evidence:after,...scope}=current;
+   assert.deepEqual(scope,oldScope);assert.equal(current.status,'partial');
+   assert.deepEqual(after,[...before,'website:docs/STUDIO_WORKBOOK_CORRECTIONS.md']);
+  }else assert.deepEqual(current,prior,prior.id+' remains exact');
+ }
+ assert.deepEqual(data.changeLog.slice(1),revision28Data.changeLog);
+ assert.equal(data.changeLog[0].revision,29);
+ assert.match(data.changeLog[0].change,/correction drafts.*teaching, assessment and lecture/i);
+ assert.match(data.changeLog[0].change,/replacement.*separate/i);
+ assert.match(data.changeLog[0].change,/STUDIO-04 stays partial/i);
+ assert.equal(data.baseline.publicReleaseApproval,null);
+ assert.notEqual(data.pendingAtlasSource.clinicalApproval,true);
+ const rendered=renderChecklist(data);assert(rendered.includes('Revision 29'));
+ assert(rendered.includes('STUDIO_WORKBOOK_CORRECTIONS.md'));
+});
+
+test('historical checklist without a pending source remains renderable',()=>{
+ const historical=structuredClone(data);delete historical.pendingAtlasSource;const rendered=renderChecklist(historical);assert(!rendered.includes('Pending Atlas source:'));assert(rendered.includes(historical.baseline.atlasCommit));assert.equal(historical.items.length,71);
+});
+
+test('immutable revision30 imports only36 hand X-ray drafts and preserves the complete roadmap',()=>{
+ const data=revision30Data;
+ assert.equal(data.revision,30);assert.equal(data.updatedAt,'2026-10-16');
+ assert.deepEqual(data.items,revision29Data.items);assert.deepEqual(data.changeLog.slice(1),revision29Data.changeLog);
+ assert.equal(data.baseline.atlasCommit,'f1dc0ccc54ec82aa774720db3c822d3e0ea9c418');assert.equal(data.baseline.atlasTree,'d3c165a126e773f004c9a620b5271bc15d0f384a');
+ assert.equal(data.baseline.reviewIntegration,'bbca7076adc53030a83772c457d2dec50aac6622defb45ce2c5510464f926297');assert.equal(data.baseline.reviewSourceFiles,1508);
+ const excluded=['atlasCommit','atlasTree','reviewIntegration','reviewSourceFiles','rootDraftPlacements','rootPendingPlacements'];
+ const omit=o=>Object.fromEntries(Object.entries(o).filter(([k])=>!excluded.includes(k)));
+ assert.deepEqual(omit(data.baseline),omit(revision29Data.baseline));
+ assert.equal(data.baseline.rootDraftPlacements-revision29Data.baseline.rootDraftPlacements,36);assert.equal(revision29Data.baseline.rootPendingPlacements-data.baseline.rootPendingPlacements,36);
+ assert.equal(data.baseline.rootGeneratedIdentificationPlacements,39);assert.equal(data.baseline.publicReleaseApproval,null);
+ assert.equal(data.pendingAtlasSource.commit,data.baseline.atlasCommit);assert.equal(data.pendingAtlasSource.tree,data.baseline.atlasTree);
+ assert.equal(data.pendingAtlasSource.websiteImported,true);assert.match(data.pendingAtlasSource.note,/radiologist/);
+ for(const path of ['atlas-cervical-source-transition','current-atlas-delivery']){
+ const frozen=readFileSync('tests/fixtures/'+path+'-8d32653e.txt');
+ const pins={"atlas-cervical-source-transition":"e61db2a3c1aba559a28e78302e89bb8ddb534104fe368d7392562d3707b53deb","current-atlas-delivery":"3ee1af7669fe7b97050e11397867e233b7e91e02fe1ae50fe46ff08a8e31da8b"};
+ assert.equal(createHash('sha256').update(frozen).digest('hex'),pins[path]);}
+ for(const edit of [p=>{p.websiteImported=false;},p=>{p.commit='0'.repeat(40);},p=>{p.rootDraftPlacements++;},p=>{p.clinicalApproval=true;}]){const bad=structuredClone(data);edit(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));}
+ assert(renderChecklist(data).includes('9294 editorial drafts, 603 pending and 39 generated'));
+});
+
+test('immutable revision31 adds only bounded release-epoch repair evidence',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-31.json',import.meta.url));
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),'17870b881cf01a3e214dfcfb55390837e752c54171353e18851cbddce4e08c32');
+ const data=JSON.parse(bytes);
+ assert.equal(data.revision,31);assert.equal(data.updatedAt,'2026-10-16');assert.deepEqual(data.baseline,revision30Data.baseline);assert.deepEqual(data.pendingAtlasSource,revision30Data.pendingAtlasSource);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ for(const old of revision30Data.items){const now=data.items.find(i=>i.id===old.id);assert(now);if(old.id==='REL-01'){const {evidence:a,...previous}=old,{evidence:b,...current}=now;assert.deepEqual(current,previous);assert.equal(now.status,'partial');assert.deepEqual(b,[...a,'website:docs/DELIVERY_EPOCH_REPAIR.md']);}else assert.deepEqual(now,old);}
+ assert.deepEqual(data.changeLog.slice(1),revision30Data.changeLog);assert.equal(data.changeLog[0].revision,31);assert.match(data.changeLog[0].change,/incomplete whole-suite/);assert.equal(data.baseline.publicReleaseApproval,null);assert(renderChecklist(data).includes('Revision 31'));
+});
+
+test('immutable revision32 preserves complete scope and adds only correction recovery evidence',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-32.json',import.meta.url));
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),'13c3e726381a54618a7b98de8420cd3d5b09c714adc0e4a1dc16206383d446ae');
+ const data=JSON.parse(bytes);
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-31.json',import.meta.url)));
+ assert.equal(data.revision,32);assert.deepEqual(data.baseline,before.baseline);assert.deepEqual(data.pendingAtlasSource,before.pendingAtlasSource);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ for(const old of before.items){const now=data.items.find(i=>i.id===old.id);assert(now);
+  if(old.id==='STUDIO-04'){const {evidence:a,...previous}=old,{evidence:b,...current}=now;assert.deepEqual(current,previous);assert.equal(now.status,'partial');assert.deepEqual(b,[...a,'website:tests/workbook-correction-lookup-api.test.mjs']);}
+  else assert.deepEqual(now,old);
+ }
+ assert.deepEqual(data.changeLog.slice(1),before.changeLog);assert.equal(data.changeLog[0].revision,32);
+ assert.match(data.changeLog[0].change,/manual exact-request correction creation status recovery/i);
+ assert.match(data.changeLog[0].change,/incomplete whole-suite/);assert.equal(data.baseline.publicReleaseApproval,null);
+ assert(renderChecklist(data).includes('Revision 32'));
+});
+
+test('immutable revision33 keeps pending intracranial-US source separate from the running website',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-33.json',import.meta.url));
+ assert.equal(createHash('sha256').update(bytes).digest('hex'),'cdf86caa6c2032eb37cc08ccda30ea2b6694ee3940356862674da9086e706331');
+ const data=JSON.parse(bytes);
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-32.json',import.meta.url)));
+ assert.equal(data.revision,33);assert.deepEqual(data.baseline,before.baseline);
+ const p=data.pendingAtlasSource,b=data.baseline;assert.equal(p.websiteImported,false);
+ assert.equal(p.commit,'589263554141ba94548f9073327d4e51674bc33b');assert.equal(p.tree,'ba724f0a46448132a6e5fc4c24f63730b53540f9');
+ assert.equal(b.atlasCommit,'f1dc0ccc54ec82aa774720db3c822d3e0ea9c418');
+ assert.equal(p.rootDraftPlacements-b.rootDraftPlacements,8);assert.equal(b.rootPendingPlacements-p.rootPendingPlacements,8);
+ assert.equal(p.rootGeneratedIdentificationPlacements,b.rootGeneratedIdentificationPlacements);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ for(const old of before.items){const now=data.items.find(i=>i.id===old.id);assert(now);
+  if(old.id==='TEACH-01'){const {status:a,evidence:c,...oldScope}=old,{status:z,evidence:d,...scope}=now;
+   assert.deepEqual(scope,oldScope);assert.equal(a,'open');assert.equal(z,'partial');assert.deepEqual(d,[...c,'atlas:docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md']);
+  }else assert.deepEqual(now,old);
+ }
+ assert.deepEqual(data.changeLog.slice(1),before.changeLog);assert.equal(data.baseline.publicReleaseApproval,null);
+ const view=renderChecklist(data);assert(view.includes('Pending Atlas source:'));assert(view.includes('Not imported into the website baseline above.'));
+ for(const edit of [p=>{p.websiteImported=true;},p=>{p.commit=b.atlasCommit;},p=>{p.rootDraftPlacements++;},p=>{p.clinicalApproval=true;}]){
+  const bad=structuredClone(data);edit(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));
+ }
+});
+
+test('immutable revision34 imports only eight intracranial Ultrasound drafts and preserves full scope',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-34.json',import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),'836a2867c459146a8255aec4f7686327e3e4d22e85c5d7af7c86289bbc4b39d0');
+ const data=JSON.parse(bytes);
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-33.json',import.meta.url)));
+ assert.equal(data.revision,34);assert.equal(data.updatedAt,'2026-10-16');assert.deepEqual(data.items,before.items);assert.deepEqual(data.changeLog.slice(1),before.changeLog);
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ assert.equal(data.baseline.atlasCommit,'589263554141ba94548f9073327d4e51674bc33b');assert.equal(data.baseline.atlasTree,'ba724f0a46448132a6e5fc4c24f63730b53540f9');assert.equal(data.baseline.reviewIntegration,'464ccf522d725e5636fb3c14429e371402f1f0832d0feaeed3c025d6906e7990');assert.equal(data.baseline.reviewSourceFiles,1511);
+ const excluded=['atlasCommit','atlasTree','reviewIntegration','reviewSourceFiles','rootDraftPlacements','rootPendingPlacements'];const omit=o=>Object.fromEntries(Object.entries(o).filter(([k])=>!excluded.includes(k)));
+ assert.deepEqual(omit(data.baseline),omit(before.baseline));assert.equal(data.baseline.rootDraftPlacements-before.baseline.rootDraftPlacements,8);assert.equal(before.baseline.rootPendingPlacements-data.baseline.rootPendingPlacements,8);
+ assert.equal(data.baseline.rootDraftPlacements,9302);assert.equal(data.baseline.rootPendingPlacements,595);assert.equal(data.baseline.rootGeneratedIdentificationPlacements,39);assert.equal(data.baseline.publicReleaseApproval,null);
+ const p=data.pendingAtlasSource;assert.equal(p.websiteImported,true);assert.equal(p.commit,data.baseline.atlasCommit);assert.equal(p.tree,data.baseline.atlasTree);assert.equal(p.rootDraftPlacements,data.baseline.rootDraftPlacements);assert.equal(p.rootPendingPlacements,data.baseline.rootPendingPlacements);assert.match(p.note,/radiologist review/);
+ for(const edit of [p=>{p.websiteImported=false;},p=>{p.commit='0'.repeat(40);},p=>{p.rootDraftPlacements++;},p=>{p.clinicalApproval=true;}]){const bad=structuredClone(data);edit(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));}
+ const view=renderChecklist(data);assert(view.includes('Integrated Atlas source:'));assert(view.includes('9302 editorial drafts, 595 pending and 39 generated'));assert(!view.includes('Not imported into the website baseline above.'));
+});
+
+test('immutable revision35 adds only bounded UI evidence and normal renderer binding',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-35.json',import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),'b76c18e316371497b3b5343f53a5c22d08b5a53a74b5431b2333453a1e76e49e');const data=JSON.parse(bytes);
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-34.json',import.meta.url)));assert.equal(data.revision,35);assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);assert.deepEqual(data.changeLog.slice(1),before.changeLog);
+ assert.equal(data.baseline.reviewIntegration,'56b9e31355b4e8a1671738e7f7d106edfbfcdb6af5e3e1f6e2699b225baf1ce2');assert.deepEqual({...data.baseline,reviewIntegration:before.baseline.reviewIntegration},before.baseline);assert.deepEqual(data.pendingAtlasSource,before.pendingAtlasSource);
+ for(const old of before.items){const now=data.items.find(i=>i.id===old.id);assert(now);const {evidence:a,...prior}=old,{evidence:b,...current}=now;assert.deepEqual(current,prior);assert.deepEqual(b,['UX-01','UX-02'].includes(old.id)?[...a,'website:docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md']:a);}
+ assert.equal(data.items.find(i=>i.id==='UX-01').status,'open');assert.equal(data.items.find(i=>i.id==='UX-02').status,'open');assert.equal(data.baseline.publicReleaseApproval,null);assert(renderChecklist(data).includes('Revision 35'));
+});
+
+test('immutable revision36 adds only draft-lineage evidence while preserving full roadmap and delivery',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-36.json',import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),'86affb873cba2d31a145449e185aa8c367e3156715e2a182a6445c3e6116be85');const data=JSON.parse(bytes);
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-35.json',import.meta.url)));assert.equal(data.revision,36);assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);assert.deepEqual(data.baseline,before.baseline);assert.deepEqual(data.pendingAtlasSource,before.pendingAtlasSource);assert.deepEqual(data.changeLog.slice(1),before.changeLog);
+ for(const old of before.items){const now=data.items.find(i=>i.id===old.id);assert(now);const{evidence:a,...prior}=old,{evidence:b,...current}=now;assert.deepEqual(current,prior);assert.deepEqual(b,old.id==='STUDIO-04'?[...a,'website:docs/STUDIO_CORRECTION_LINEAGE.md']:a);}
+ assert.equal(data.items.find(i=>i.id==='STUDIO-04').status,'partial');assert.equal(data.baseline.publicReleaseApproval,null);assert(renderChecklist(data).includes('Revision 36'));
+});
+
+test('immutable revision37 adds twelve foot draft placements without changing roadmap statuses or scope',()=>{
+ const bytes=readFileSync(new URL('./fixtures/completion-checklist-37.json',import.meta.url));assert.equal(createHash('sha256').update(bytes).digest('hex'),'c4ad41cf0f0a17e4c6d98d0407e2f4d1dd50130560fd292021712b9bde290a8a');const data=JSON.parse(bytes);
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-36.json',import.meta.url)));
+ assert.equal(data.revision,37);assert.equal(data.updatedAt,'2026-10-17');assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ assert.deepEqual(data.changeLog.slice(1),before.changeLog);assert.equal(data.changeLog[0].revision,37);
+ for(const old of before.items){const now=data.items.find(i=>i.id===old.id);assert(now);const{evidence:a,...prior}=old,{evidence:b,...current}=now;assert.deepEqual(current,prior);assert.deepEqual(b,old.id==='TEACH-04'?[...a,'atlas:docs/FOOT_ARTERIAL_PROJECTION_XRAY.md','website:docs/FOOT_ARTERIAL_XRAY_INTEGRATION.md']:a);}
+ const excluded=['atlasCommit','atlasTree','reviewIntegration','reviewSourceFiles','rootDraftPlacements','rootPendingPlacements'];const omit=o=>Object.fromEntries(Object.entries(o).filter(([k])=>!excluded.includes(k)));
+ assert.deepEqual(omit(data.baseline),omit(before.baseline));assert.equal(data.baseline.atlasCommit,'bc925194ce3b388d4b6d9f73b4b3362ed4f2ad5f');assert.equal(data.baseline.atlasTree,'a26d0f391021c207f34d3d1449b4ed85f42239f7');assert.equal(data.baseline.reviewIntegration,'44b7f4a53c8e3fd96fba49438158143ef7967a0abfc6094f33310425d54efcec');assert.equal(data.baseline.reviewSourceFiles,1514);
+ assert.equal(data.baseline.rootDraftPlacements-before.baseline.rootDraftPlacements,12);assert.equal(before.baseline.rootPendingPlacements-data.baseline.rootPendingPlacements,12);assert.equal(data.baseline.rootGeneratedIdentificationPlacements,39);
+ assert.equal(data.baseline.publicReleaseApproval,null);assert.equal(data.pendingAtlasSource.websiteImported,true);assert.equal(data.pendingAtlasSource.commit,data.baseline.atlasCommit);assert.equal(data.pendingAtlasSource.tree,data.baseline.atlasTree);
+ assert(renderChecklist(data).includes('9314 editorial drafts, 583 pending and 39 generated'));
+ for(const edit of [p=>{p.websiteImported=false;},p=>{p.commit='0'.repeat(40);},p=>{p.rootDraftPlacements++;},p=>{p.clinicalApproval=true;}]){const bad=structuredClone(data);edit(bad.pendingAtlasSource);assert.throws(()=>validateChecklist(bad));}
+});
+
+test('immutable revision38 records installed safety evidence without advancing a broader requirement',()=>{
+ const data=revision38Data;
+ const before=JSON.parse(readFileSync(new URL('./fixtures/completion-checklist-37.json',import.meta.url)));
+ assert.equal(data.revision,38);assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ assert.deepEqual(data.changeLog.slice(1),before.changeLog);assert.equal(data.changeLog[0].revision,38);
+ assert.deepEqual({...data.baseline,reviewIntegration:before.baseline.reviewIntegration},before.baseline);
+ assert.equal(data.baseline.reviewIntegration,'4fb502a3edb0a95e73fb154ccb5e7c720dab862d71c2b4230a6092ba530424b9');
+ const expected={
+  'CORE-03':['website:docs/HEAD_LOADING_RELIABILITY.md'],
+  'IMG-01':['website:docs/HEAD_LOADING_RELIABILITY.md'],
+  'UX-01':['delivery:checkpoint.json'],
+  'STUDIO-01':['website:lib/studio-mutation-context.ts','delivery:checkpoint.json'],
+  'STUDIO-03':['website:lib/studio-mutation-context-server.ts'],
+  'REL-01':['delivery:checkpoint.json'],
+  'REL-05':['website:lib/studio-mutation-context.ts','website:lib/studio-mutation-context-server.ts','delivery:checkpoint.json'],
+  'REL-07':['delivery:final-source-manifest.json','delivery:checkpoint.json'],
+ };
+ for(const prior of before.items){const now=data.items.find(i=>i.id===prior.id);assert(now);const{evidence:a,...old}=prior,{evidence:b,...current}=now;assert.deepEqual(current,old,'Requirement/acceptance/status changed: '+prior.id);assert.deepEqual(b,[...a,...expected[prior.id]??[]]);}
+ const{delivery,...roots}=data.roots;assert.deepEqual(roots,before.roots);assert.equal(delivery,'F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed');
+ const{evidence,note,...source}=data.pendingAtlasSource,{evidence:oldEvidence,note:oldNote,...oldSource}=before.pendingAtlasSource;assert.deepEqual(source,oldSource);assert.equal(evidence,delivery+'/checkpoint.json');
+ assert.equal(data.baseline.publicReleaseApproval,null);assert.equal(data.baseline.privateClinicalDecisionCounts,null);
+ const rendered=renderChecklist(data);assert(rendered.includes('Revision 38'));for(const text of ['419selected cases','not a whole-suite pass','No new GitHub/off-device backup'])assert(note.includes(text),text);
+});
+
+test('revision39 imports only exact arterial evidence limits and preserves the full roadmap',()=>{
+ assert.equal(data.revision,39);assert.equal(data.updatedAt,'2026-10-17');
+ const old=revision38Data,b=data.baseline,p=data.pendingAtlasSource;
+ assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ assert.deepEqual(data.changeLog.slice(1),old.changeLog);
+ assert.equal(data.changeLog[0].revision,39);
+ assert.match(data.changeLog[0].change,/four existing pending placements/i);
+ assert.match(data.changeLog[0].change,/radiologist/i);
+ assert.match(data.changeLog[0].change,/no clinical or public-release approval/i);
+ for(const previous of old.items){
+  const current=data.items.find(i=>i.id===previous.id);assert(current,previous.id);
+  const {evidence:before,...original}=previous,{evidence:after,...now}=current;
+  assert.deepEqual(now,original,'Status, owner, scope and acceptance must stay exact: '+previous.id);
+  assert.deepEqual(after,previous.id==='TEACH-04'?[...before,'atlas:docs/ARTERIAL_EVIDENCE_LIMITS.md']:before);
+ }
+ const changed=['atlasCommit','atlasTree','reviewIntegration','reviewSourceFiles'];
+ for(const key of Object.keys(old.baseline))if(!changed.includes(key))assert.deepEqual(b[key],old.baseline[key],key);
+ assert.equal(b.atlasCommit,'0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2');
+ assert.equal(b.atlasTree,'0418fa402e7a6586c7d3add78aa92ffe849d343e');
+ assert.equal(b.rootTopicPlacements,9936);assert.equal(b.rootDraftPlacements,9314);
+ assert.equal(b.rootPendingPlacements,583);assert.equal(b.rootGeneratedIdentificationPlacements,39);
+ assert.equal(p.commit,b.atlasCommit);assert.equal(p.tree,b.atlasTree);
+ assert.equal(p.websiteImported,true);assert.equal(p.rootDraftPlacements,9314);
+ assert.equal(p.rootPendingPlacements,583);assert.equal(p.rootGeneratedIdentificationPlacements,39);
+ assert.equal(b.publicReleaseApproval,null);assert.equal(b.privateClinicalDecisionCounts,null);
+ const pin=JSON.parse(readFileSync(new URL('./fixtures/current-atlas-delivery.json',import.meta.url)));
+ assert.equal(pin.source,b.atlasCommit);assert.equal(pin.sourceTree,b.atlasTree);
+ assert.equal(pin.reviewIntegration,b.reviewIntegration);assert.equal(pin.reviewSourceFiles,b.reviewSourceFiles);
+ const source=JSON.parse(readFileSync(new URL('../atlas-review/manifest.json',import.meta.url)));
+ const viewer=JSON.parse(readFileSync(new URL('../public/atlas-review-viewer/manifest.json',import.meta.url)));
+ assert.equal(source.revision,b.atlasCommit);assert.equal(source.files.length,b.reviewSourceFiles);
+ assert.equal(source.websiteIntegrationSha256,b.reviewIntegration);
+ assert.equal(viewer.sourceCommit,b.atlasCommit);assert.equal(viewer.websiteIntegrationSha256,b.reviewIntegration);
+ assert.equal(viewer.mode,'production');assert.equal(viewer.personalRecordsIncluded,false);
+ assert.equal(viewer.files.length,pin.viewerFiles);assert.equal(viewer.packages.length,pin.viewerPackages);
+ const rendered=renderChecklist(data);assert(rendered.includes('Revision 39'));
+ assert(rendered.includes('9314 editorial drafts, 583 pending and 39 generated'));
+});

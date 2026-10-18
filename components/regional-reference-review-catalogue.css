@@ -1,0 +1,29 @@
+.regional-reference-review-catalogue { color:#173039; line-height:1.45; }
+.regional-reference-review-catalogue h2 { margin:.2rem 0 .5rem; font-size:1.3rem; }
+.regional-reference-review-catalogue-intro,.regional-reference-review-catalogue-scope { max-width:105ch; margin:.45rem 0; font-size:.9rem; }
+.regional-reference-review-catalogue-scope { color:#405960; }
+.regional-reference-review-catalogue-filters { display:grid; grid-template-columns:minmax(230px,2fr) repeat(3,minmax(125px,1fr)) auto; align-items:end; gap:.55rem; margin:.9rem 0 .55rem; }
+.regional-reference-review-catalogue-filters label { display:flex; flex-direction:column; gap:.25rem; min-width:0; font-size:.82rem; font-weight:650; }
+.regional-reference-review-catalogue :is(input,select) { width:100%; min-height:40px; padding:.45rem .55rem; border:1px solid #849f9c; border-radius:6px; background:#fff; color:#173039; }
+.regional-reference-review-catalogue button { min-height:40px; padding:.4rem .65rem; border:1px solid #147766; border-radius:6px; background:#fff; color:#075e53; font-weight:650; cursor:pointer; }
+.regional-reference-review-catalogue button:disabled { border-color:#bccbc9; color:#65777a; cursor:default; }
+.regional-reference-review-catalogue :is(a,button,input,select,summary):focus-visible { outline:3px solid #087b6c; outline-offset:3px; }
+.regional-reference-review-catalogue-results { margin:.5rem 0; font-size:.87rem; font-weight:650; }
+.regional-reference-review-catalogue-list { margin:.55rem 0; padding:0; list-style:none; border:1px solid #d0dfdc; border-radius:8px; overflow:hidden; background:#fff; }
+.regional-reference-review-catalogue-list > li { display:grid; grid-template-columns:minmax(170px,2fr) minmax(100px,.8fr) minmax(125px,1fr) minmax(95px,.8fr) auto; align-items:center; gap:.4rem .8rem; min-width:0; padding:.55rem .75rem; border-top:1px solid #dce8e5; font-size:.85rem; }
+.regional-reference-review-catalogue-list > li:first-child { border-top:0; }
+.regional-reference-review-catalogue-name { display:flex; flex-direction:column; min-width:0; gap:.1rem; }
+.regional-reference-review-catalogue-name strong { font-size:.92rem; }
+.regional-reference-review-catalogue-name code { color:#52686c; font-size:.74rem; overflow-wrap:anywhere; }
+.regional-reference-review-catalogue-origin { text-transform:capitalize; color:#405960; }
+.regional-reference-review-catalogue-relation { width:fit-content; padding:.15rem .45rem; border-radius:99px; background:#e8f2ee; color:#24544b; font-size:.78rem; font-weight:650; }
+.regional-reference-review-catalogue-pending { color:#75501b; font-size:.8rem; }
+.regional-reference-review-catalogue-list a { grid-column:5; justify-self:end; color:#07695b; font-weight:700; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+.regional-reference-review-catalogue-empty { padding:.7rem .85rem; border:1px solid #d0dfdc; border-radius:7px; background:#fff; }
+.regional-reference-review-catalogue-pages { display:flex; justify-content:center; align-items:center; gap:.8rem; margin:.75rem 0; font-size:.85rem; }
+.regional-reference-review-catalogue-revisions { margin-top:.6rem; font-size:.82rem; }
+.regional-reference-review-catalogue-revisions summary { width:fit-content; color:#416169; cursor:pointer; }
+.regional-reference-review-catalogue-revisions p { margin:.35rem 0; max-width:100ch; }
+.regional-reference-review-catalogue-revisions code { overflow-wrap:anywhere; }
+@media(max-width:1050px) { .regional-reference-review-catalogue-filters { grid-template-columns:repeat(2,minmax(0,1fr)); } .regional-reference-review-catalogue-filters label:first-child { grid-column:1/-1; } }
+@media(max-width:650px) { .regional-reference-review-catalogue-filters { grid-template-columns:1fr; } .regional-reference-review-catalogue-filters label:first-child { grid-column:auto; } .regional-reference-review-catalogue-list > li { grid-template-columns:minmax(0,1fr) auto; } .regional-reference-review-catalogue-name { grid-column:1/-1; } .regional-reference-review-catalogue-pending { grid-column:auto; } .regional-reference-review-catalogue-list a { grid-column:2; } }

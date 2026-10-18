@@ -1,0 +1,6474 @@
+{
+  "sourceCommit": "e581676c3cef073412c5d783fb25698d8679fa88",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "foot-muscles",
+      "url": "/models/bodyparts3d/full-body/foot-muscles.glb",
+      "bytes": 444740,
+      "sha256": "44557187f3ffba580548a455d95340b66b57bebbaad286e8a1484dcceffbd42e",
+      "structures": 28
+    },
+    {
+      "id": "hand-muscles",
+      "url": "/models/bodyparts3d/full-body/hand-muscles.glb",
+      "bytes": 120784,
+      "sha256": "d0fad445fa6a804c237706038b126e6cb9e3829ec171c9929ab435d4ee74870e",
+      "structures": 10
+    },
+    {
+      "id": "hand-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "bytes": 56028,
+      "sha256": "3f7cae06bed1f4b93bb1ec2715ac4d739e5e38c7f0c495ea22447d57065f29ff",
+      "structures": 4
+    },
+    {
+      "id": "foot-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "bytes": 178072,
+      "sha256": "3a85853e4f552b5d2f4a9a63bc5efec306d13205a08633125cc0ff78939c2a63",
+      "structures": 8
+    },
+    {
+      "id": "hand-muscles-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "bytes": 100344,
+      "sha256": "754fba175b857079656672c0ab11dd37ad0235cd87c3ccfffa08a2df1c54e129",
+      "structures": 2
+    },
+    {
+      "id": "hand-muscles-gaps",
+      "url": "/models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "bytes": 146948,
+      "sha256": "68885665a6924684c3c7b1f078eecb702efd444d78eea1a5941bed6ad0a089dc",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "name": "Left first metacarpal bone",
+      "sourceName": "left first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24465",
+      "bounds": {
+        "min": [
+          2.7235300540924072,
+          -0.3970501720905304,
+          0.7340599894523621
+        ],
+        "max": [
+          3.096250057220459,
+          -0.025930175557732582,
+          1.0378199815750122
+        ]
+      },
+      "center": [
+        2.909890055656433,
+        -0.2114901738241315,
+        0.8859399855136871
+      ],
+      "anchor": [
+        2.888230085372925,
+        -0.1816699206829071,
+        0.8883599638938904
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3240",
+          "sha256": "f512f1433a67003297c3ca0fca775c94372313cf3c3de28774a1cd7556e08362"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "name": "Left second metacarpal bone",
+      "sourceName": "left second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24467",
+      "bounds": {
+        "min": [
+          2.618410110473633,
+          -0.8095800876617432,
+          0.6711699962615967
+        ],
+        "max": [
+          2.9261300563812256,
+          -0.13130980730056763,
+          0.9243299961090088
+        ]
+      },
+      "center": [
+        2.772270083427429,
+        -0.4704449474811554,
+        0.7977499961853027
+      ],
+      "anchor": [
+        2.8213000297546387,
+        -0.48330017924308777,
+        0.7823800444602966
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3243",
+          "sha256": "728fb5278b0e3d2ac9fb0af78ade721c5cb8764144e318a85f07ff9cdb9d7f7d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+      "fmaId": "FMA24510",
+      "name": "Left second metatarsal bone",
+      "sourceName": "left second metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24510",
+      "bounds": {
+        "min": [
+          0.9058940410614014,
+          -8.661637306213379,
+          0.7248899936676025
+        ],
+        "max": [
+          1.213479995727539,
+          -8.183069229125977,
+          1.373710036277771
+        ]
+      },
+      "center": [
+        1.0596870183944702,
+        -8.422353267669678,
+        1.0493000149726868
+      ],
+      "anchor": [
+        1.0705000162124634,
+        -8.424696922302246,
+        1.0501400232315063
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3244",
+          "sha256": "4992101f55b96d8fe47abca6e441c902ba1e60429ee41576a1d3a9fc17e4f22a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "name": "Left third metacarpal bone",
+      "sourceName": "left third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24469",
+      "bounds": {
+        "min": [
+          2.5236001014709473,
+          -0.7935101389884949,
+          0.6241000294685364
+        ],
+        "max": [
+          2.722520112991333,
+          -0.149749755859375,
+          0.928130030632019
+        ]
+      },
+      "center": [
+        2.62306010723114,
+        -0.47162994742393494,
+        0.7761150300502777
+      ],
+      "anchor": [
+        2.6117498874664307,
+        -0.4807202219963074,
+        0.7944599986076355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3246",
+          "sha256": "fa86f28ff85a3a1e3ac6872a05912deece4d3f8489e08ea4d21b432db304938b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+      "fmaId": "FMA24512",
+      "name": "Left third metatarsal bone",
+      "sourceName": "left third metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24512",
+      "bounds": {
+        "min": [
+          0.9831990003585815,
+          -8.665047645568848,
+          0.681410014629364
+        ],
+        "max": [
+          1.3360999822616577,
+          -8.23668098449707,
+          1.3079500198364258
+        ]
+      },
+      "center": [
+        1.1596494913101196,
+        -8.450864315032959,
+        0.9946800172328949
+      ],
+      "anchor": [
+        1.146009922027588,
+        -8.43350601196289,
+        1.0128998756408691
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3247",
+          "sha256": "84d0c310fd1448e753ac7ed2bda2d62d9dfb8fbe78f749111aaae3a7281ac5cc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "fmaId": "FMA24471",
+      "name": "Left fourth metacarpal bone",
+      "sourceName": "left fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24471",
+      "bounds": {
+        "min": [
+          2.413559913635254,
+          -0.7474700808525085,
+          0.6589800119400024
+        ],
+        "max": [
+          2.5377399921417236,
+          -0.14781981706619263,
+          0.9191099405288696
+        ]
+      },
+      "center": [
+        2.4756499528884888,
+        -0.4476449489593506,
+        0.789044976234436
+      ],
+      "anchor": [
+        2.48826003074646,
+        -0.46893006563186646,
+        0.7905600070953369
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3249",
+          "sha256": "c5f7a10a04542437ff52fde75f81c5b0b2cba6a4a68c56b829c9e0de2fe1b72f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+      "fmaId": "FMA24514",
+      "name": "Left fourth metatarsal bone",
+      "sourceName": "left fourth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24514",
+      "bounds": {
+        "min": [
+          1.0177299976348877,
+          -8.673905372619629,
+          0.5696600079536438
+        ],
+        "max": [
+          1.4263800382614136,
+          -8.320211410522461,
+          1.1942499876022339
+        ]
+      },
+      "center": [
+        1.2220550179481506,
+        -8.497058391571045,
+        0.8819549977779388
+      ],
+      "anchor": [
+        1.207509994506836,
+        -8.499809265136719,
+        0.8479499816894531
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3250",
+          "sha256": "e1656035430f9bf5c5b5bb3de96fabfd18e3d78c6e47c39a403a47bd80dfa61b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "name": "Left fifth metacarpal bone",
+      "sourceName": "left fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24473",
+      "bounds": {
+        "min": [
+          2.252700090408325,
+          -0.6796899437904358,
+          0.702239990234375
+        ],
+        "max": [
+          2.453939914703369,
+          -0.13241027295589447,
+          0.9441999793052673
+        ]
+      },
+      "center": [
+        2.353320002555847,
+        -0.40605010837316513,
+        0.8232199847698212
+      ],
+      "anchor": [
+        2.373500108718872,
+        -0.41370972990989685,
+        0.8138800263404846
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3252",
+          "sha256": "ca8db2999ff2d7a14a61e9cbeb83a01011a3557df844ff1c47bb7ac3eaeccdb8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+      "fmaId": "FMA24516",
+      "name": "Left fifth metatarsal bone",
+      "sourceName": "left fifth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24516",
+      "bounds": {
+        "min": [
+          1.0643699169158936,
+          -8.698140144348145,
+          0.3929239511489868
+        ],
+        "max": [
+          1.5237499475479126,
+          -8.397727012634277,
+          1.0508599281311035
+        ]
+      },
+      "center": [
+        1.294059932231903,
+        -8.547933578491211,
+        0.7218919396400452
+      ],
+      "anchor": [
+        1.3113698959350586,
+        -8.51496696472168,
+        0.7386799454689026
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3253",
+          "sha256": "29642383bc5c2d96f7025b2da0b8139f5b71d5d0e1470622745fd9b606575010"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+      "fmaId": "FMA24498",
+      "name": "Left calcaneus",
+      "sourceName": "left calcaneus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24498",
+      "bounds": {
+        "min": [
+          0.45009997487068176,
+          -8.684171676635742,
+          -0.25793200731277466
+        ],
+        "max": [
+          1.0076799392700195,
+          -8.190711975097656,
+          0.44141799211502075
+        ]
+      },
+      "center": [
+        0.7288899570703506,
+        -8.4374418258667,
+        0.09174299240112305
+      ],
+      "anchor": [
+        0.6494590044021606,
+        -8.498003005981445,
+        0.14666900038719177
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3256",
+          "sha256": "5424e3e394e233213071fbf46f178ed9123da4763d6b64125f32e7b8af1803d8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "name": "Left capitate",
+      "sourceName": "left capitate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24447",
+      "bounds": {
+        "min": [
+          2.4860999584198,
+          -0.1783599853515625,
+          0.6057299971580505
+        ],
+        "max": [
+          2.6428799629211426,
+          0.04588012769818306,
+          0.7735099792480469
+        ]
+      },
+      "center": [
+        2.564489960670471,
+        -0.06623992882668972,
+        0.6896199882030487
+      ],
+      "anchor": [
+        2.558990001678467,
+        -0.05231994763016701,
+        0.6493800282478333
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3257",
+          "sha256": "d229f9418122099af72721ebeee60b15b68604f3da3532c0625909dc2ac9520c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-cuboid-bone",
+      "fmaId": "FMA24529",
+      "name": "Left cuboid bone",
+      "sourceName": "left cuboid bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24529",
+      "bounds": {
+        "min": [
+          0.8196499347686768,
+          -8.515222549438477,
+          0.33163002133369446
+        ],
+        "max": [
+          1.1513400077819824,
+          -8.21852970123291,
+          0.6668499708175659
+        ]
+      },
+      "center": [
+        0.9854949712753296,
+        -8.366876125335693,
+        0.4992399960756302
+      ],
+      "anchor": [
+        0.9507219791412354,
+        -8.351799964904785,
+        0.5837299823760986
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3258",
+          "sha256": "1d9269949005e15c6a39fc30cbe5499468e99c074d5ccf48e1032c8689e12664"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "name": "Left hamate",
+      "sourceName": "left hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24449",
+      "bounds": {
+        "min": [
+          2.3659698963165283,
+          -0.1874401867389679,
+          0.6132199764251709
+        ],
+        "max": [
+          2.515700101852417,
+          0.006309814285486937,
+          0.8398199677467346
+        ]
+      },
+      "center": [
+        2.4408349990844727,
+        -0.09056518622674048,
+        0.7265199720859528
+      ],
+      "anchor": [
+        2.4443600177764893,
+        -0.05999999865889549,
+        0.7370400428771973
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3261",
+          "sha256": "665e0be6779b9bc398e0947eaf190cc4d942e030a05d1a4cfe3ce4270bf8ddbf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:left-lateral-cuneiform-bone",
+      "fmaId": "FMA24526",
+      "name": "Left lateral cuneiform bone",
+      "sourceName": "left lateral cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24526",
+      "bounds": {
+        "min": [
+          0.8722599744796753,
+          -8.406270980834961,
+          0.5089800357818604
+        ],
+        "max": [
+          1.128849983215332,
+          -8.148154258728027,
+          0.7514600157737732
+        ]
+      },
+      "center": [
+        1.0005549788475037,
+        -8.277212619781494,
+        0.6302200257778168
+      ],
+      "anchor": [
+        0.9642269611358643,
+        -8.255325317382812,
+        0.660830020904541
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3267",
+          "sha256": "60757ac856520feaac072a47e77d7fffb98571d099838a9c628ccad8fba28bbc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "name": "Left pisiform",
+      "sourceName": "left pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24442",
+      "bounds": {
+        "min": [
+          2.3183798789978027,
+          -0.10275024175643921,
+          0.7703099846839905
+        ],
+        "max": [
+          2.4003000259399414,
+          0.012769775465130806,
+          0.8758900165557861
+        ]
+      },
+      "center": [
+        2.359339952468872,
+        -0.0449902331456542,
+        0.8231000006198883
+      ],
+      "anchor": [
+        2.328850030899048,
+        -0.05520019680261612,
+        0.8421000838279724
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3276",
+          "sha256": "6162726ac4bcb29a9ba8489570650ba8a323576b03423fb16b27bcd1e55c0658"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "name": "Left scaphoid",
+      "sourceName": "left scaphoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24436",
+      "bounds": {
+        "min": [
+          2.4945199489593506,
+          -0.037800293415784836,
+          0.6152700185775757
+        ],
+        "max": [
+          2.7297699451446533,
+          0.1168200671672821,
+          0.7644400000572205
+        ]
+      },
+      "center": [
+        2.612144947052002,
+        0.039509886875748634,
+        0.6898550093173981
+      ],
+      "anchor": [
+        2.606029987335205,
+        0.032169800251722336,
+        0.7195900082588196
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3278",
+          "sha256": "5389b07855a3273ac4646092eaf667466eb3f00cf5f78ed90993e82200f550ab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "name": "Left trapezium",
+      "sourceName": "left trapezium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24444",
+      "bounds": {
+        "min": [
+          2.6478099822998047,
+          -0.1425299048423767,
+          0.6771000027656555
+        ],
+        "max": [
+          2.8179502487182617,
+          0.057930298149585724,
+          0.8455399870872498
+        ]
+      },
+      "center": [
+        2.732880115509033,
+        -0.04229980334639549,
+        0.7613199949264526
+      ],
+      "anchor": [
+        2.75150990486145,
+        -0.0782000720500946,
+        0.7886000275611877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3283",
+          "sha256": "50006736c04d10ad0af5c94054c9cf64eac6e55fb0cdde25eefcad1170492f93"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+      "fmaId": "FMA32643",
+      "name": "Middle phalanx of left second toe",
+      "sourceName": "middle phalanx of left second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32643",
+      "bounds": {
+        "min": [
+          1.2512699365615845,
+          -8.679535865783691,
+          1.5752900838851929
+        ],
+        "max": [
+          1.3921200037002563,
+          -8.593413352966309,
+          1.7462899684906006
+        ]
+      },
+      "center": [
+        1.3216949701309204,
+        -8.636474609375,
+        1.6607900261878967
+      ],
+      "anchor": [
+        1.3186700344085693,
+        -8.627381324768066,
+        1.6844900846481323
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3293",
+          "sha256": "72afe21185eed25dbab98a1bb7cb28e64012f672bfb3a76d81fdbf5b531f4958"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+      "fmaId": "FMA32645",
+      "name": "Middle phalanx of left third toe",
+      "sourceName": "middle phalanx of left third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32645",
+      "bounds": {
+        "min": [
+          1.3891499042510986,
+          -8.689835548400879,
+          1.489109992980957
+        ],
+        "max": [
+          1.5181100368499756,
+          -8.611088752746582,
+          1.6585201025009155
+        ]
+      },
+      "center": [
+        1.453629970550537,
+        -8.65046215057373,
+        1.5738150477409363
+      ],
+      "anchor": [
+        1.4457899332046509,
+        -8.633589744567871,
+        1.580509901046753
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3294",
+          "sha256": "036f7e9bca027b8b7e6075976249ba90178a9639591878a1b5954d0f7d237c17"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32647",
+      "name": "Middle phalanx of left fourth toe",
+      "sourceName": "middle phalanx of left fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32647",
+      "bounds": {
+        "min": [
+          1.490440011024475,
+          -8.697918891906738,
+          1.3543299436569214
+        ],
+        "max": [
+          1.6138999462127686,
+          -8.619694709777832,
+          1.4877901077270508
+        ]
+      },
+      "center": [
+        1.5521699786186218,
+        -8.658806800842285,
+        1.421060025691986
+      ],
+      "anchor": [
+        1.5460400581359863,
+        -8.674824714660645,
+        1.4180400371551514
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3295",
+          "sha256": "cffbba99a2d64e833cac9545d91dc21092b2d7ecef35dd276a80ff7d35157239"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+      "fmaId": "FMA230988",
+      "name": "Middle phalanx of left little toe",
+      "sourceName": "middle phalanx of left little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA230988",
+      "bounds": {
+        "min": [
+          1.5810000896453857,
+          -8.700543403625488,
+          1.2155200242996216
+        ],
+        "max": [
+          1.6667399406433105,
+          -8.637796401977539,
+          1.2895399332046509
+        ]
+      },
+      "center": [
+        1.6238700151443481,
+        -8.669169902801514,
+        1.2525299787521362
+      ],
+      "anchor": [
+        1.618149995803833,
+        -8.691596984863281,
+        1.2495100498199463
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3298",
+          "sha256": "140d41e53c49bbbaea54972b738b215d3c3ef6bb9c5284f9f7e0516a25e2f68c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+      "fmaId": "FMA32642",
+      "name": "Middle phalanx of right second toe",
+      "sourceName": "middle phalanx of right second toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32642",
+      "bounds": {
+        "min": [
+          -1.393549919128418,
+          -8.680103302001953,
+          1.5764799118041992
+        ],
+        "max": [
+          -1.252369999885559,
+          -8.594038963317871,
+          1.746880054473877
+        ]
+      },
+      "center": [
+        -1.3229599595069885,
+        -8.637071132659912,
+        1.661679983139038
+      ],
+      "anchor": [
+        -1.2956500053405762,
+        -8.636598587036133,
+        1.663540005683899
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3300",
+          "sha256": "505ff6d5185c0cec018be5a18206a2ccbcc8822f09b9282b9ad2586716d3a3d9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+      "fmaId": "FMA32644",
+      "name": "Middle phalanx of right third toe",
+      "sourceName": "middle phalanx of right third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32644",
+      "bounds": {
+        "min": [
+          -1.517259955406189,
+          -8.688310623168945,
+          1.488669991493225
+        ],
+        "max": [
+          -1.388890027999878,
+          -8.60914421081543,
+          1.6574499607086182
+        ]
+      },
+      "center": [
+        -1.4530749917030334,
+        -8.648727416992188,
+        1.5730599761009216
+      ],
+      "anchor": [
+        -1.4524099826812744,
+        -8.636129379272461,
+        1.5889300107955933
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3301",
+          "sha256": "1da31f6465a4767ab9dc18df433e5e0df0da4e9578d2864b02e5a71e785b5d8c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32646",
+      "name": "Middle phalanx of right fourth toe",
+      "sourceName": "middle phalanx of right fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32646",
+      "bounds": {
+        "min": [
+          -1.613420009613037,
+          -8.698887825012207,
+          1.354349970817566
+        ],
+        "max": [
+          -1.4907100200653076,
+          -8.619355201721191,
+          1.4880599975585938
+        ]
+      },
+      "center": [
+        -1.5520650148391724,
+        -8.6591215133667,
+        1.4212049841880798
+      ],
+      "anchor": [
+        -1.5481399297714233,
+        -8.670809745788574,
+        1.430090069770813
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3302",
+          "sha256": "dd69a8df55e8ff34f55fe2b906507aac2659be0d2784833b6a0c2046258929e3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+      "fmaId": "FMA230986",
+      "name": "Middle phalanx of right little toe",
+      "sourceName": "middle phalanx of right little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA230986",
+      "bounds": {
+        "min": [
+          -1.6669000387191772,
+          -8.70090389251709,
+          1.2144999504089355
+        ],
+        "max": [
+          -1.5808000564575195,
+          -8.637391090393066,
+          1.288179874420166
+        ]
+      },
+      "center": [
+        -1.6238500475883484,
+        -8.669147491455078,
+        1.2513399124145508
+      ],
+      "anchor": [
+        -1.6055299043655396,
+        -8.690170288085938,
+        1.2569500207901
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3305",
+          "sha256": "e1a4698c0de159b1851711084ddb96ccaf85022d941f305d670789444d6395bf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-big-toe",
+      "fmaId": "FMA43253",
+      "name": "Proximal phalanx of right big toe",
+      "sourceName": "proximal phalanx of right big toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA43253",
+      "bounds": {
+        "min": [
+          -1.1719599962234497,
+          -8.68639087677002,
+          1.3607001304626465
+        ],
+        "max": [
+          -0.866595983505249,
+          -8.514086723327637,
+          1.6928900480270386
+        ]
+      },
+      "center": [
+        -1.0192779898643494,
+        -8.600238800048828,
+        1.5267950892448425
+      ],
+      "anchor": [
+        -1.0429099798202515,
+        -8.565116882324219,
+        1.5583900213241577
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3310",
+          "sha256": "bb72eb8ed4cedf8ad2ab9a0ee2de9c80232ab6bd0e8840259beb59b8bac3bd07"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+      "fmaId": "FMA32637",
+      "name": "Proximal phalanx of left third toe",
+      "sourceName": "proximal phalanx of left third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32637",
+      "bounds": {
+        "min": [
+          1.2513200044631958,
+          -8.676982879638672,
+          1.2461700439453125
+        ],
+        "max": [
+          1.4580799341201782,
+          -8.559133529663086,
+          1.5283399820327759
+        ]
+      },
+      "center": [
+        1.354699969291687,
+        -8.618058204650879,
+        1.3872550129890442
+      ],
+      "anchor": [
+        1.3760099411010742,
+        -8.629802703857422,
+        1.3880099058151245
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3311",
+          "sha256": "4787599e0e9fefaa45c40736f38ccacc8ec7e7e867cde692c5ea4f775e97364b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+      "fmaId": "FMA32639",
+      "name": "Proximal phalanx of left fourth toe",
+      "sourceName": "proximal phalanx of left fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32639",
+      "bounds": {
+        "min": [
+          1.3430900573730469,
+          -8.697052955627441,
+          1.144279956817627
+        ],
+        "max": [
+          1.5589998960494995,
+          -8.565251350402832,
+          1.3842500448226929
+        ]
+      },
+      "center": [
+        1.4510449767112732,
+        -8.631152153015137,
+        1.26426500082016
+      ],
+      "anchor": [
+        1.4594999551773071,
+        -8.6431245803833,
+        1.2571600675582886
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3312",
+          "sha256": "32b171c096dfe9993503b4f14e58d5b2996dadf73352efc506c04d1098370a5b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+      "fmaId": "FMA71915",
+      "name": "Proximal phalanx of left index finger",
+      "sourceName": "proximal phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71915",
+      "bounds": {
+        "min": [
+          2.8081400394439697,
+          -1.1427899599075317,
+          0.8408900499343872
+        ],
+        "max": [
+          3.02810001373291,
+          -0.7664397954940796,
+          1.0705701112747192
+        ]
+      },
+      "center": [
+        2.91812002658844,
+        -0.9546148777008057,
+        0.9557300806045532
+      ],
+      "anchor": [
+        2.91441011428833,
+        -0.9245398044586182,
+        0.9560099840164185
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3313",
+          "sha256": "3eb71ace606cc3271523e30a405c061290d9da661b59310a682c9d50d9c0ddf1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+      "fmaId": "FMA66791",
+      "name": "Proximal phalanx of left little finger",
+      "sourceName": "proximal phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA66791",
+      "bounds": {
+        "min": [
+          2.2222700119018555,
+          -0.9661499261856079,
+          0.886680006980896
+        ],
+        "max": [
+          2.3629400730133057,
+          -0.6421002149581909,
+          1.0946099758148193
+        ]
+      },
+      "center": [
+        2.2926050424575806,
+        -0.8041250705718994,
+        0.9906449913978577
+      ],
+      "anchor": [
+        2.31427001953125,
+        -0.7887499928474426,
+        0.9864500164985657
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3314",
+          "sha256": "8b824d96eed3bc1325665fa99592d58ebd43346b436154fefae6a3c2a98753af"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+      "fmaId": "FMA32641",
+      "name": "Proximal phalanx of left little toe",
+      "sourceName": "proximal phalanx of left little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32641",
+      "bounds": {
+        "min": [
+          1.4293800592422485,
+          -8.698091506958008,
+          0.9877499341964722
+        ],
+        "max": [
+          1.6478999853134155,
+          -8.599870681762695,
+          1.240190029144287
+        ]
+      },
+      "center": [
+        1.538640022277832,
+        -8.648981094360352,
+        1.1139699816703796
+      ],
+      "anchor": [
+        1.5457299947738647,
+        -8.661887168884277,
+        1.0898399353027344
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3315",
+          "sha256": "4488ac24e66f25118feb375fbdf19e6e123595cbd26c726c3df1604bec59c7f8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA71908",
+      "name": "Proximal phalanx of left middle finger",
+      "sourceName": "proximal phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71908",
+      "bounds": {
+        "min": [
+          2.5920097827911377,
+          -1.1570098400115967,
+          0.8519200086593628
+        ],
+        "max": [
+          2.7738001346588135,
+          -0.7503399848937988,
+          1.1409599781036377
+        ]
+      },
+      "center": [
+        2.6829049587249756,
+        -0.9536749124526978,
+        0.9964399933815002
+      ],
+      "anchor": [
+        2.6530802249908447,
+        -0.9588897824287415,
+        1.0060200691223145
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3316",
+          "sha256": "5dccce5f8ff2f9152fb6b758b8cdd0bcf9fd73cc01a78464a965f69e90994bb6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA71916",
+      "name": "Proximal phalanx of left ring finger",
+      "sourceName": "proximal phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71916",
+      "bounds": {
+        "min": [
+          2.4049201011657715,
+          -1.0994800329208374,
+          0.8570899963378906
+        ],
+        "max": [
+          2.5388600826263428,
+          -0.7104198932647705,
+          1.1192998886108398
+        ]
+      },
+      "center": [
+        2.471890091896057,
+        -0.904949963092804,
+        0.9881949424743652
+      ],
+      "anchor": [
+        2.466089963912964,
+        -0.8757598996162415,
+        0.9792799353599548
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3317",
+          "sha256": "099ccb27cdafeb169ffeb8bc73804910f30a6cefccf830d4dbfa6855bfebf46c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "fmaId": "FMA65470",
+      "name": "Proximal phalanx of left thumb",
+      "sourceName": "proximal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA65470",
+      "bounds": {
+        "min": [
+          2.9869399070739746,
+          -0.6447100639343262,
+          0.926289975643158
+        ],
+        "max": [
+          3.186189889907837,
+          -0.3283196985721588,
+          1.1475300788879395
+        ]
+      },
+      "center": [
+        3.0865648984909058,
+        -0.4865148812532425,
+        1.0369100272655487
+      ],
+      "anchor": [
+        3.0822501182556152,
+        -0.45986998081207275,
+        1.0437699556350708
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3318",
+          "sha256": "3b327f7169609c03540967f7f8ceba810afda27a427cb5f16ea6641ef429837a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+      "fmaId": "FMA32636",
+      "name": "Proximal phalanx of right third toe",
+      "sourceName": "proximal phalanx of right third toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32636",
+      "bounds": {
+        "min": [
+          -1.4590198993682861,
+          -8.6764497756958,
+          1.244360089302063
+        ],
+        "max": [
+          -1.2507599592208862,
+          -8.562044143676758,
+          1.5284100770950317
+        ]
+      },
+      "center": [
+        -1.3548899292945862,
+        -8.61924695968628,
+        1.3863850831985474
+      ],
+      "anchor": [
+        -1.3747600317001343,
+        -8.615997314453125,
+        1.3690699338912964
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3320",
+          "sha256": "49b6fc5fe03ba23422e852d1fcd419b94bafbdf69fd20552eca0620e1ed62e6e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+      "fmaId": "FMA32638",
+      "name": "Proximal phalanx of right fourth toe",
+      "sourceName": "proximal phalanx of right fourth toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32638",
+      "bounds": {
+        "min": [
+          -1.5592999458312988,
+          -8.697409629821777,
+          1.1437900066375732
+        ],
+        "max": [
+          -1.3433899879455566,
+          -8.564986228942871,
+          1.3842799663543701
+        ]
+      },
+      "center": [
+        -1.4513449668884277,
+        -8.631197929382324,
+        1.2640349864959717
+      ],
+      "anchor": [
+        -1.4282898902893066,
+        -8.63337516784668,
+        1.2634899616241455
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3321",
+          "sha256": "87949e88d498df13a376db05c0b094bae55ade09d5dec4ebd1557a5022d4f8ea"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24451",
+      "name": "Proximal phalanx of right index finger",
+      "sourceName": "proximal phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24451",
+      "bounds": {
+        "min": [
+          -3.0276501178741455,
+          -1.1418102979660034,
+          0.8409300446510315
+        ],
+        "max": [
+          -2.8095200061798096,
+          -0.7680298089981079,
+          1.067579984664917
+        ]
+      },
+      "center": [
+        -2.9185850620269775,
+        -0.9549200534820557,
+        0.9542550146579742
+      ],
+      "anchor": [
+        -2.9455599784851074,
+        -0.9092297554016113,
+        0.950950026512146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3322",
+          "sha256": "03cb38d378f7eb94046e45a6fcc214c48b1081b6a35c37a491bde356cb948764"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24454",
+      "name": "Proximal phalanx of right little finger",
+      "sourceName": "proximal phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24454",
+      "bounds": {
+        "min": [
+          -2.3632898330688477,
+          -0.9664398431777954,
+          0.887209951877594
+        ],
+        "max": [
+          -2.221519947052002,
+          -0.640440046787262,
+          1.095229983329773
+        ]
+      },
+      "center": [
+        -2.292404890060425,
+        -0.8034399449825287,
+        0.9912199676036835
+      ],
+      "anchor": [
+        -2.2627201080322266,
+        -0.8029101490974426,
+        0.9962600469589233
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3323",
+          "sha256": "c3aaebcb7e86e3610f6d7a6896b33a60d7f544f924bdf0c4b639f8dae8c62e55"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+      "fmaId": "FMA32640",
+      "name": "Proximal phalanx of right little toe",
+      "sourceName": "proximal phalanx of right little toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA32640",
+      "bounds": {
+        "min": [
+          -1.6483700275421143,
+          -8.698931694030762,
+          0.9871099591255188
+        ],
+        "max": [
+          -1.4288499355316162,
+          -8.600473403930664,
+          1.240839958190918
+        ]
+      },
+      "center": [
+        -1.5386099815368652,
+        -8.649702548980713,
+        1.1139749586582184
+      ],
+      "anchor": [
+        -1.557539939880371,
+        -8.653310775756836,
+        1.0894900560379028
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3324",
+          "sha256": "deeabcf2bf83d7b9f77acf1c1634650805d467188f05505a6898aa3cbbdcea2b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24452",
+      "name": "Proximal phalanx of right middle finger",
+      "sourceName": "proximal phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24452",
+      "bounds": {
+        "min": [
+          -2.7741401195526123,
+          -1.157189965248108,
+          0.8511199951171875
+        ],
+        "max": [
+          -2.5920801162719727,
+          -0.751389741897583,
+          1.1420100927352905
+        ]
+      },
+      "center": [
+        -2.6831101179122925,
+        -0.9542898535728455,
+        0.996565043926239
+      ],
+      "anchor": [
+        -2.671720027923584,
+        -0.958250105381012,
+        1.0065100193023682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3325",
+          "sha256": "ea76430375e036eea61a11c3edcbece711496563e5f2d35e6bee7f1a1cb49569"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24453",
+      "name": "Proximal phalanx of right ring finger",
+      "sourceName": "proximal phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24453",
+      "bounds": {
+        "min": [
+          -2.5382399559020996,
+          -1.1003198623657227,
+          0.8565800189971924
+        ],
+        "max": [
+          -2.405910015106201,
+          -0.7106799483299255,
+          1.1197700500488281
+        ]
+      },
+      "center": [
+        -2.4720749855041504,
+        -0.9054999053478241,
+        0.9881750345230103
+      ],
+      "anchor": [
+        -2.481029987335205,
+        -0.9124798774719238,
+        0.9977299571037292
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3326",
+          "sha256": "5bb35c193650c9e390ad18d2e9ca834c19ab32d478a12446380d8cd50b9b0ca2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "fmaId": "FMA24450",
+      "name": "Proximal phalanx of right thumb",
+      "sourceName": "proximal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24450",
+      "bounds": {
+        "min": [
+          -3.1880898475646973,
+          -0.6439300775527954,
+          0.9265300035476685
+        ],
+        "max": [
+          -2.986489772796631,
+          -0.32802000641822815,
+          1.1488299369812012
+        ]
+      },
+      "center": [
+        -3.087289810180664,
+        -0.4859750419855118,
+        1.0376799702644348
+      ],
+      "anchor": [
+        -3.0790300369262695,
+        -0.5008697509765625,
+        1.0447500944137573
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3327",
+          "sha256": "84d3df498603c91935ae8edfc341c17ad3e46b910249a98e1e3edd4ccf309e71"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-big-toe",
+      "fmaId": "FMA43254",
+      "name": "Proximal phalanx of left big toe",
+      "sourceName": "proximal phalanx of left big toe",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA43254",
+      "bounds": {
+        "min": [
+          0.8670330047607422,
+          -8.684151649475098,
+          1.3603599071502686
+        ],
+        "max": [
+          1.1708199977874756,
+          -8.515522003173828,
+          1.6927099227905273
+        ]
+      },
+      "center": [
+        1.0189265012741089,
+        -8.599836826324463,
+        1.526534914970398
+      ],
+      "anchor": [
+        0.9830190539360046,
+        -8.58358383178711,
+        1.5520700216293335
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3329",
+          "sha256": "3b6770f4dd2bfc54fea30468a90eafd63c21aea8381688ce0912f85502f86f25"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "name": "Right first metacarpal bone",
+      "sourceName": "right first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24464",
+      "bounds": {
+        "min": [
+          -3.0957698822021484,
+          -0.3971899449825287,
+          0.736270010471344
+        ],
+        "max": [
+          -2.7223598957061768,
+          -0.027620239183306694,
+          1.0386099815368652
+        ]
+      },
+      "center": [
+        -2.9090648889541626,
+        -0.2124050920829177,
+        0.8874399960041046
+      ],
+      "anchor": [
+        -2.914479970932007,
+        -0.24702025949954987,
+        0.8846299648284912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3350",
+          "sha256": "92ef27746cf2c5b317b88558b42e171128f980ea16414ca6e3647d19d1594382"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "name": "Right second metacarpal bone",
+      "sourceName": "right second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24466",
+      "bounds": {
+        "min": [
+          -2.926870107650757,
+          -0.8112902641296387,
+          0.6705700159072876
+        ],
+        "max": [
+          -2.6182000637054443,
+          -0.13130980730056763,
+          0.9278700351715088
+        ]
+      },
+      "center": [
+        -2.7725350856781006,
+        -0.47130003571510315,
+        0.7992200255393982
+      ],
+      "anchor": [
+        -2.7511701583862305,
+        -0.46614015102386475,
+        0.7921000719070435
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3352",
+          "sha256": "6d4e9874925f542124ced9e041f340de5b9c8f872d6ad7e2d483e9d0ab159980"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+      "fmaId": "FMA24509",
+      "name": "Right second metatarsal bone",
+      "sourceName": "right second metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24509",
+      "bounds": {
+        "min": [
+          -1.212730050086975,
+          -8.663178443908691,
+          0.7244799733161926
+        ],
+        "max": [
+          -0.9065660238265991,
+          -8.183246612548828,
+          1.374060034751892
+        ]
+      },
+      "center": [
+        -1.059648036956787,
+        -8.42321252822876,
+        1.0492700040340424
+      ],
+      "anchor": [
+        -1.0672000646591187,
+        -8.418490409851074,
+        1.0409300327301025
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3353",
+          "sha256": "f6c034b6b18aee623f510ee40e4171346c084e8bdd092354d634c87fc9af6acf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "sourceName": "right third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24468",
+      "bounds": {
+        "min": [
+          -2.7234601974487305,
+          -0.7915997505187988,
+          0.623259961605072
+        ],
+        "max": [
+          -2.52485990524292,
+          -0.14737975597381592,
+          0.9273300170898438
+        ]
+      },
+      "center": [
+        -2.624160051345825,
+        -0.4694897532463074,
+        0.7752949893474579
+      ],
+      "anchor": [
+        -2.628920078277588,
+        -0.4772900342941284,
+        0.7948399186134338
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3354",
+          "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+      "fmaId": "FMA24511",
+      "name": "Right third metatarsal bone",
+      "sourceName": "right third metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24511",
+      "bounds": {
+        "min": [
+          -1.3359599113464355,
+          -8.663774490356445,
+          0.6836100220680237
+        ],
+        "max": [
+          -0.9832219481468201,
+          -8.236724853515625,
+          1.3085699081420898
+        ]
+      },
+      "center": [
+        -1.1595909297466278,
+        -8.450249671936035,
+        0.9960899651050568
+      ],
+      "anchor": [
+        -1.1883200407028198,
+        -8.480106353759766,
+        1.0029200315475464
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3355",
+          "sha256": "90b28dbcd11e3d3a6f253adb1ddaa33f30040a08c71bb3a86242372ea9b6170e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "fmaId": "FMA24470",
+      "name": "Right fourth metacarpal bone",
+      "sourceName": "right fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24470",
+      "bounds": {
+        "min": [
+          -2.537410020828247,
+          -0.7472100853919983,
+          0.6591699719429016
+        ],
+        "max": [
+          -2.414259910583496,
+          -0.1484197974205017,
+          0.9197099208831787
+        ]
+      },
+      "center": [
+        -2.4758349657058716,
+        -0.44781494140625,
+        0.7894399464130402
+      ],
+      "anchor": [
+        -2.476410150527954,
+        -0.44835999608039856,
+        0.7853500247001648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3356",
+          "sha256": "3bb88e2a98ce1cb0ab8af411397e5edc5777546c394b25d4d4ee585493ee3718"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+      "fmaId": "FMA24513",
+      "name": "Right fourth metatarsal bone",
+      "sourceName": "right fourth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24513",
+      "bounds": {
+        "min": [
+          -1.4266999959945679,
+          -8.673439025878906,
+          0.5697599649429321
+        ],
+        "max": [
+          -1.0186699628829956,
+          -8.319584846496582,
+          1.1968400478363037
+        ]
+      },
+      "center": [
+        -1.2226849794387817,
+        -8.496511936187744,
+        0.8833000063896179
+      ],
+      "anchor": [
+        -1.2274199724197388,
+        -8.512786865234375,
+        0.8551600575447083
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3357",
+          "sha256": "a5fd57a36b7525de383809bbbb37ff6a56a08ed0fb25af1684085418cc6e8202"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "name": "Right fifth metacarpal bone",
+      "sourceName": "right fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24472",
+      "bounds": {
+        "min": [
+          -2.4531400203704834,
+          -0.679840087890625,
+          0.7007599472999573
+        ],
+        "max": [
+          -2.2520198822021484,
+          -0.1308099329471588,
+          0.9452000260353088
+        ]
+      },
+      "center": [
+        -2.352579951286316,
+        -0.4053250104188919,
+        0.8229799866676331
+      ],
+      "anchor": [
+        -2.342400074005127,
+        -0.4185498058795929,
+        0.8263299465179443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3358",
+          "sha256": "23d26888c325fd6a2de2688e948de72057afaf383db13875445fe597bd2a8bfd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+      "fmaId": "FMA24515",
+      "name": "Right fifth metatarsal bone",
+      "sourceName": "right fifth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24515",
+      "bounds": {
+        "min": [
+          -1.5233099460601807,
+          -8.698196411132812,
+          0.39382103085517883
+        ],
+        "max": [
+          -1.064579963684082,
+          -8.398794174194336,
+          1.0507800579071045
+        ]
+      },
+      "center": [
+        -1.2939449548721313,
+        -8.548495292663574,
+        0.7223005443811417
+      ],
+      "anchor": [
+        -1.3091399669647217,
+        -8.51633071899414,
+        0.725640058517456
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3359",
+          "sha256": "cc75b866a2d5ac0317eb3a1d64cef41a65231fab975613d108a4fcdcbc2c58b1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "fmaId": "FMA24497",
+      "name": "Right calcaneus",
+      "sourceName": "right calcaneus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24497",
+      "bounds": {
+        "min": [
+          -1.0078099966049194,
+          -8.684906959533691,
+          -0.2599489986896515
+        ],
+        "max": [
+          -0.44875800609588623,
+          -8.191547393798828,
+          0.4414849877357483
+        ]
+      },
+      "center": [
+        -0.7282840013504028,
+        -8.43822717666626,
+        0.0907679945230484
+      ],
+      "anchor": [
+        -0.6279199719429016,
+        -8.424676895141602,
+        0.14383003115653992
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3360",
+          "sha256": "b53e7970e822e997e1b05f94f42514d07a3f98edcc63ec7dd7219354ce1d8176"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "name": "Right capitate",
+      "sourceName": "right capitate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24446",
+      "bounds": {
+        "min": [
+          -2.644819974899292,
+          -0.17809021472930908,
+          0.6053399443626404
+        ],
+        "max": [
+          -2.4840099811553955,
+          0.045969847589731216,
+          0.7749199867248535
+        ]
+      },
+      "center": [
+        -2.5644149780273438,
+        -0.06606018356978893,
+        0.690129965543747
+      ],
+      "anchor": [
+        -2.571499824523926,
+        -0.05504028499126434,
+        0.6550499796867371
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3361",
+          "sha256": "982098ff86ccc18075bd4ecf422c4bca732f4d691d249c8f381bac574287c59b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-cuboid-bone",
+      "fmaId": "FMA24528",
+      "name": "Right cuboid bone",
+      "sourceName": "right cuboid bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24528",
+      "bounds": {
+        "min": [
+          -1.1508499383926392,
+          -8.511216163635254,
+          0.3373269736766815
+        ],
+        "max": [
+          -0.8236650228500366,
+          -8.2208833694458,
+          0.6676799654960632
+        ]
+      },
+      "center": [
+        -0.9872574806213379,
+        -8.366049766540527,
+        0.5025034695863724
+      ],
+      "anchor": [
+        -0.9330989718437195,
+        -8.329702377319336,
+        0.5668100118637085
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3364",
+          "sha256": "d5ac55e9aa466b0e14d8d7760f7ef2a6edb0d95cfea56205557f647c451a8079"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "name": "Right hamate",
+      "sourceName": "right hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24448",
+      "bounds": {
+        "min": [
+          -2.519279956817627,
+          -0.18706969916820526,
+          0.6140599846839905
+        ],
+        "max": [
+          -2.366000175476074,
+          0.0065301512368023396,
+          0.8393099904060364
+        ]
+      },
+      "center": [
+        -2.4426400661468506,
+        -0.09026977396570146,
+        0.7266849875450134
+      ],
+      "anchor": [
+        -2.4433600902557373,
+        -0.06616027653217316,
+        0.7440400123596191
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3367",
+          "sha256": "9c27cf5b75dd149f2469403af7ad68263e1eff29307864ae10481ac647262eba"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-lateral-cuneiform-bone",
+      "fmaId": "FMA24525",
+      "name": "Right lateral cuneiform bone",
+      "sourceName": "right lateral cuneiform bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24525",
+      "bounds": {
+        "min": [
+          -1.128749966621399,
+          -8.405644416809082,
+          0.5083799958229065
+        ],
+        "max": [
+          -0.8719830513000488,
+          -8.14856243133545,
+          0.7523200511932373
+        ]
+      },
+      "center": [
+        -1.0003665089607239,
+        -8.277103424072266,
+        0.6303500235080719
+      ],
+      "anchor": [
+        -0.9971530437469482,
+        -8.328696250915527,
+        0.609470009803772
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3373",
+          "sha256": "628c8da7294f477a1c8c50d6445159bbff0ecda91d35dde48f780eec9eb9657c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "name": "Right pisiform",
+      "sourceName": "right pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24441",
+      "bounds": {
+        "min": [
+          -2.4021999835968018,
+          -0.10325012356042862,
+          0.7724900245666504
+        ],
+        "max": [
+          -2.3195600509643555,
+          0.013250121846795082,
+          0.8765800595283508
+        ]
+      },
+      "center": [
+        -2.3608800172805786,
+        -0.04500000085681677,
+        0.8245350420475006
+      ],
+      "anchor": [
+        -2.3296401500701904,
+        -0.02854003943502903,
+        0.839139997959137
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3382",
+          "sha256": "c5b1ce6020acc6e1feff8f44a3f0b5ec717e3cb3218701fbe86644975d981684"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "name": "Right scaphoid",
+      "sourceName": "right scaphoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24435",
+      "bounds": {
+        "min": [
+          -2.730599880218506,
+          -0.03645996004343033,
+          0.6157400012016296
+        ],
+        "max": [
+          -2.4933199882507324,
+          0.11789978295564651,
+          0.7666299939155579
+        ]
+      },
+      "center": [
+        -2.611959934234619,
+        0.04071991145610809,
+        0.6911849975585938
+      ],
+      "anchor": [
+        -2.6074700355529785,
+        0.03192993253469467,
+        0.7223300337791443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3383",
+          "sha256": "e96e60d6c03b0581caa5733e3ab65aca6dc3671a476d78f123dcd48ecbee0050"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "name": "Right trapezium",
+      "sourceName": "right trapezium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24443",
+      "bounds": {
+        "min": [
+          -2.8172197341918945,
+          -0.1419500708580017,
+          0.6773000359535217
+        ],
+        "max": [
+          -2.6493799686431885,
+          0.05732971057295799,
+          0.8457600474357605
+        ]
+      },
+      "center": [
+        -2.7332998514175415,
+        -0.04231018014252186,
+        0.7615300416946411
+      ],
+      "anchor": [
+        -2.7505600452423096,
+        -0.07653991878032684,
+        0.7888699173927307
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3388",
+          "sha256": "3b2475587f9ca59d43cb48c7275999f795f97f8b0ed6c68d5b37ff582382d81f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:first-lumbrical-of-right-foot",
+      "fmaId": "FMA37717",
+      "name": "First lumbrical of right foot",
+      "sourceName": "first lumbrical of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37717",
+      "bounds": {
+        "min": [
+          -1.1310800313949585,
+          -8.670652389526367,
+          0.5613500475883484
+        ],
+        "max": [
+          -0.7768679857254028,
+          -8.474342346191406,
+          1.4152299165725708
+        ]
+      },
+      "center": [
+        -0.9539740085601807,
+        -8.572497367858887,
+        0.9882899820804596
+      ],
+      "anchor": [
+        -0.945252001285553,
+        -8.561978340148926,
+        1.0083799362182617
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1383",
+          "sha256": "d7bce4728ada3797b2ada290797ee98aeaf1d43d0279d83401c9d54ff72add3f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:first-lumbrical-of-left-foot",
+      "fmaId": "FMA37718",
+      "name": "First lumbrical of left foot",
+      "sourceName": "first lumbrical of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37718",
+      "bounds": {
+        "min": [
+          0.7768679857254028,
+          -8.670653343200684,
+          0.5613500475883484
+        ],
+        "max": [
+          1.1310800313949585,
+          -8.474342346191406,
+          1.4152299165725708
+        ]
+      },
+      "center": [
+        0.9539740085601807,
+        -8.572497844696045,
+        0.9882899820804596
+      ],
+      "anchor": [
+        0.945252001285553,
+        -8.561978340148926,
+        1.0083799362182617
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1383M",
+          "sha256": "9da478797a43866ef3b3e4750b76d37de5d35b3fd3fe659935200cb2426dd139"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:first-plantar-interosseous-of-right-foot",
+      "fmaId": "FMA37745",
+      "name": "First plantar interosseous of right foot",
+      "sourceName": "first plantar interosseous of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37745",
+      "bounds": {
+        "min": [
+          -1.3174999952316284,
+          -8.626962661743164,
+          0.8359900116920471
+        ],
+        "max": [
+          -1.0479099750518799,
+          -8.391441345214844,
+          1.3314300775527954
+        ]
+      },
+      "center": [
+        -1.1827049851417542,
+        -8.509202003479004,
+        1.0837100446224213
+      ],
+      "anchor": [
+        -1.1793400049209595,
+        -8.511947631835938,
+        1.0952200889587402
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1384",
+          "sha256": "76db533b5ef8f3d4a85d142e0e5f7297c8996d0a75efcc4c5124d7643857e3a5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:first-plantar-interosseous-of-left-foot",
+      "fmaId": "FMA37746",
+      "name": "First plantar interosseous of left foot",
+      "sourceName": "first plantar interosseous of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37746",
+      "bounds": {
+        "min": [
+          1.0479099750518799,
+          -8.626962661743164,
+          0.8359900116920471
+        ],
+        "max": [
+          1.3174999952316284,
+          -8.391441345214844,
+          1.3314300775527954
+        ]
+      },
+      "center": [
+        1.1827049851417542,
+        -8.509202003479004,
+        1.0837100446224213
+      ],
+      "anchor": [
+        1.1793400049209595,
+        -8.511947631835938,
+        1.0952200889587402
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1384M",
+          "sha256": "66543fc74c686eb86051f82c9b7ed3931c0a5b72ebb14ff2e90ccbf65a70b522"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:second-lumbrical-of-right-foot",
+      "fmaId": "FMA37719",
+      "name": "Second lumbrical of right foot",
+      "sourceName": "second lumbrical of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37719",
+      "bounds": {
+        "min": [
+          -1.2918899059295654,
+          -8.675909996032715,
+          0.717799961566925
+        ],
+        "max": [
+          -0.8852739930152893,
+          -8.534259796142578,
+          1.344019889831543
+        ]
+      },
+      "center": [
+        -1.0885819494724274,
+        -8.605084896087646,
+        1.030909925699234
+      ],
+      "anchor": [
+        -1.0707000494003296,
+        -8.598753929138184,
+        1.0353699922561646
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1385",
+          "sha256": "76ad80b70d292c181e8947d623ddee8f373a20813e4d0fc8842c9b29800234a6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:second-lumbrical-of-left-foot",
+      "fmaId": "FMA37720",
+      "name": "Second lumbrical of left foot",
+      "sourceName": "second lumbrical of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37720",
+      "bounds": {
+        "min": [
+          0.8852739930152893,
+          -8.675909996032715,
+          0.717799961566925
+        ],
+        "max": [
+          1.2918899059295654,
+          -8.534259796142578,
+          1.344019889831543
+        ]
+      },
+      "center": [
+        1.0885819494724274,
+        -8.605084896087646,
+        1.030909925699234
+      ],
+      "anchor": [
+        1.0707000494003296,
+        -8.598753929138184,
+        1.0353699922561646
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1385M",
+          "sha256": "7b8bad4fbf9ab385a923da194a35a1fb06c42d7301d4977e736f8da0f6f7db0a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:second-plantar-interosseous-of-right-foot",
+      "fmaId": "FMA37743",
+      "name": "Second plantar interosseous of right foot",
+      "sourceName": "second plantar interosseous of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37743",
+      "bounds": {
+        "min": [
+          -1.3842799663543701,
+          -8.623082160949707,
+          0.7655999660491943
+        ],
+        "max": [
+          -1.1108499765396118,
+          -8.420093536376953,
+          1.2339199781417847
+        ]
+      },
+      "center": [
+        -1.247564971446991,
+        -8.52158784866333,
+        0.9997599720954895
+      ],
+      "anchor": [
+        -1.2493599653244019,
+        -8.514833450317383,
+        1.0058599710464478
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1386",
+          "sha256": "aa653c971e6d50e27f0b0aa90e5a6bdf453038bc4c63c51395425d4e0f4bfa26"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:second-plantar-interosseous-of-left-foot",
+      "fmaId": "FMA37744",
+      "name": "Second plantar interosseous of left foot",
+      "sourceName": "second plantar interosseous of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37744",
+      "bounds": {
+        "min": [
+          1.1108499765396118,
+          -8.623082160949707,
+          0.7655999660491943
+        ],
+        "max": [
+          1.3842799663543701,
+          -8.420093536376953,
+          1.2339199781417847
+        ]
+      },
+      "center": [
+        1.247564971446991,
+        -8.52158784866333,
+        0.9997599720954895
+      ],
+      "anchor": [
+        1.2493599653244019,
+        -8.51483154296875,
+        1.0058599710464478
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1386M",
+          "sha256": "f426c6d272285a14f588a479e91093b56f39862b90b7c614ca37c6d2b68a9f8f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
+      "fmaId": "FMA37485",
+      "name": "Third lumbrical of right foot",
+      "sourceName": "third lumbrical of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37485",
+      "bounds": {
+        "min": [
+          -1.3781399726867676,
+          -8.680427551269531,
+          0.6886900067329407
+        ],
+        "max": [
+          -0.9402259588241577,
+          -8.538249015808105,
+          1.2332699298858643
+        ]
+      },
+      "center": [
+        -1.1591829657554626,
+        -8.609338283538818,
+        0.9609799683094025
+      ],
+      "anchor": [
+        -1.130020022392273,
+        -8.617944717407227,
+        0.9735099673271179
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1387",
+          "sha256": "11b4051e92be3f915e1ca7be08be43f1d8fc360d391903e6b0a83cda69b0a00f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
+      "fmaId": "FMA37486",
+      "name": "Third lumbrical of left foot",
+      "sourceName": "third lumbrical of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37486",
+      "bounds": {
+        "min": [
+          0.9402259588241577,
+          -8.680427551269531,
+          0.6886900067329407
+        ],
+        "max": [
+          1.3781399726867676,
+          -8.538249015808105,
+          1.2332699298858643
+        ]
+      },
+      "center": [
+        1.1591829657554626,
+        -8.609338283538818,
+        0.9609799683094025
+      ],
+      "anchor": [
+        1.130020022392273,
+        -8.617944717407227,
+        0.9735099673271179
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1387M",
+          "sha256": "31a1eeffb990dc0f73817c3d53459bf3ef41b764a4c77eb04734f9d7e341c065"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
+      "fmaId": "FMA37741",
+      "name": "Third plantar interosseous of right foot",
+      "sourceName": "third plantar interosseous of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37741",
+      "bounds": {
+        "min": [
+          -1.5381699800491333,
+          -8.644573211669922,
+          0.6548300385475159
+        ],
+        "max": [
+          -1.135469913482666,
+          -8.503181457519531,
+          1.0948699712753296
+        ]
+      },
+      "center": [
+        -1.3368199467658997,
+        -8.573877334594727,
+        0.8748500049114227
+      ],
+      "anchor": [
+        -1.3213499784469604,
+        -8.581954002380371,
+        0.8831300139427185
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1388",
+          "sha256": "9b38a442bc6c67ecf339aa16a98f0c1aa3b83ec0f664cd6a443eed3ce381b464"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
+      "fmaId": "FMA37742",
+      "name": "Third plantar interosseous of left foot",
+      "sourceName": "third plantar interosseous of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37742",
+      "bounds": {
+        "min": [
+          1.135469913482666,
+          -8.644573211669922,
+          0.6548300385475159
+        ],
+        "max": [
+          1.5381699800491333,
+          -8.503181457519531,
+          1.0948699712753296
+        ]
+      },
+      "center": [
+        1.3368199467658997,
+        -8.573877334594727,
+        0.8748500049114227
+      ],
+      "anchor": [
+        1.3213499784469604,
+        -8.581954002380371,
+        0.8831300139427185
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1388M",
+          "sha256": "ab3cd072c60f5f08f8b02866569b99e4050d52b3da1e0c3585630278863b6e6a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:fourth-lumbrical-of-right-foot",
+      "fmaId": "FMA37483",
+      "name": "Fourth lumbrical of right foot",
+      "sourceName": "fourth lumbrical of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37483",
+      "bounds": {
+        "min": [
+          -1.4576900005340576,
+          -8.678147315979004,
+          0.6754100322723389
+        ],
+        "max": [
+          -0.9974899888038635,
+          -8.537311553955078,
+          1.0824499130249023
+        ]
+      },
+      "center": [
+        -1.2275899946689606,
+        -8.607729434967041,
+        0.8789299726486206
+      ],
+      "anchor": [
+        -1.2329299449920654,
+        -8.626457214355469,
+        0.8939599394798279
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1389",
+          "sha256": "86b7a17497e4efde3030ec8e542178caba1c875a7af62d491ef8c89e42528444"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:fourth-lumbrical-of-left-foot",
+      "fmaId": "FMA37484",
+      "name": "Fourth lumbrical of left foot",
+      "sourceName": "fourth lumbrical of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37484",
+      "bounds": {
+        "min": [
+          0.9974899888038635,
+          -8.678147315979004,
+          0.6754100322723389
+        ],
+        "max": [
+          1.4576900005340576,
+          -8.537311553955078,
+          1.0824499130249023
+        ]
+      },
+      "center": [
+        1.2275899946689606,
+        -8.607729434967041,
+        0.8789299726486206
+      ],
+      "anchor": [
+        1.2329299449920654,
+        -8.626457214355469,
+        0.8939599394798279
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1389M",
+          "sha256": "56b4b576426370d783dbf71f4e37922411644b3146fea22c6cde7c7800e061e9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:abductor-digiti-minimi-of-right-foot",
+      "fmaId": "FMA37463",
+      "name": "Abductor digiti minimi of right foot",
+      "sourceName": "abductor digiti minimi of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37463",
+      "bounds": {
+        "min": [
+          -1.5460400581359863,
+          -8.6971435546875,
+          -0.06266998499631882
+        ],
+        "max": [
+          -0.613968014717102,
+          -8.537564277648926,
+          1.0282299518585205
+        ]
+      },
+      "center": [
+        -1.0800040364265442,
+        -8.617353916168213,
+        0.48277998343110085
+      ],
+      "anchor": [
+        -1.1026099920272827,
+        -8.605365753173828,
+        0.45603400468826294
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1390",
+          "sha256": "3053f68fa151832744775c9aa012e13ef575657ffc2638fcd466e49defcc86ad"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:abductor-digiti-minimi-of-left-foot",
+      "fmaId": "FMA37464",
+      "name": "Abductor digiti minimi of left foot",
+      "sourceName": "abductor digiti minimi of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37464",
+      "bounds": {
+        "min": [
+          0.613968014717102,
+          -8.6971435546875,
+          -0.06266998499631882
+        ],
+        "max": [
+          1.5460400581359863,
+          -8.537564277648926,
+          1.0282299518585205
+        ]
+      },
+      "center": [
+        1.0800040364265442,
+        -8.617353916168213,
+        0.48277998343110085
+      ],
+      "anchor": [
+        1.1026099920272827,
+        -8.605365753173828,
+        0.45603400468826294
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1390M",
+          "sha256": "c10d0f8d9c56f95701d695be297c228e679d5929076a577cef82073d1be5e773"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:flexor-digiti-minimi-brevis-of-right-foot",
+      "fmaId": "FMA37471",
+      "name": "Flexor digiti minimi brevis of right foot",
+      "sourceName": "flexor digiti minimi brevis of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37471",
+      "bounds": {
+        "min": [
+          -1.557610034942627,
+          -8.71054744720459,
+          0.48194199800491333
+        ],
+        "max": [
+          -1.0922499895095825,
+          -8.532490730285645,
+          1.0994700193405151
+        ]
+      },
+      "center": [
+        -1.3249300122261047,
+        -8.621519088745117,
+        0.7907060086727142
+      ],
+      "anchor": [
+        -1.318269968032837,
+        -8.621258735656738,
+        0.7882400751113892
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1391",
+          "sha256": "82b364ba67142432c00427d87596e82fafa4524929273e20a75aa6062f553d52"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:flexor-digiti-minimi-brevis-of-left-foot",
+      "fmaId": "FMA37472",
+      "name": "Flexor digiti minimi brevis of left foot",
+      "sourceName": "flexor digiti minimi brevis of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37472",
+      "bounds": {
+        "min": [
+          1.0922499895095825,
+          -8.71054744720459,
+          0.48194199800491333
+        ],
+        "max": [
+          1.557610034942627,
+          -8.532490730285645,
+          1.0994700193405151
+        ]
+      },
+      "center": [
+        1.3249300122261047,
+        -8.621519088745117,
+        0.7907060086727142
+      ],
+      "anchor": [
+        1.318269968032837,
+        -8.621258735656738,
+        0.7882400751113892
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1391M",
+          "sha256": "bca42e734f25c397d2be5bee832c1abb263ba2c0263f8fb9c1fc3b961d31d183"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:opponens-digiti-minimi-of-right-foot",
+      "fmaId": "FMA86034",
+      "name": "Opponens digiti minimi of right foot",
+      "sourceName": "opponens digiti minimi of right foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA86034",
+      "bounds": {
+        "min": [
+          -1.3911499977111816,
+          -8.644131660461426,
+          0.49133598804473877
+        ],
+        "max": [
+          -1.0967199802398682,
+          -8.533462524414062,
+          0.8574400544166565
+        ]
+      },
+      "center": [
+        -1.243934988975525,
+        -8.588797092437744,
+        0.6743880212306976
+      ],
+      "anchor": [
+        -1.2535099983215332,
+        -8.589516639709473,
+        0.6709200143814087
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1399",
+          "sha256": "fbe4139cda56df2fe947b59c6e09e20d6b0384760d3425056f48ff5f7aa6a84d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:opponens-digiti-minimi-of-left-foot",
+      "fmaId": "FMA86035",
+      "name": "Opponens digiti minimi of left foot",
+      "sourceName": "opponens digiti minimi of left foot",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA86035",
+      "bounds": {
+        "min": [
+          1.0967199802398682,
+          -8.644131660461426,
+          0.49133598804473877
+        ],
+        "max": [
+          1.3911499977111816,
+          -8.533462524414062,
+          0.8574400544166565
+        ]
+      },
+      "center": [
+        1.243934988975525,
+        -8.588797092437744,
+        0.6743880212306976
+      ],
+      "anchor": [
+        1.2535099983215332,
+        -8.589516639709473,
+        0.6709200143814087
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1399M",
+          "sha256": "c563ffeca1d282cf206accf4bc8f6052ede6e50089b04e8018704bf20e012c60"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-abductor-hallucis",
+      "fmaId": "FMA37459",
+      "name": "Right abductor hallucis",
+      "sourceName": "right abductor hallucis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37459",
+      "bounds": {
+        "min": [
+          -0.8903470039367676,
+          -8.656835556030273,
+          0.07195400446653366
+        ],
+        "max": [
+          -0.5387179851531982,
+          -8.396504402160645,
+          1.4343299865722656
+        ]
+      },
+      "center": [
+        -0.7145324945449829,
+        -8.526669979095459,
+        0.7531419955193996
+      ],
+      "anchor": [
+        -0.721390962600708,
+        -8.509918212890625,
+        0.7786300182342529
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1400",
+          "sha256": "e09959b4180b40e4272430e9cd7bd1fbfce954cd9c39236a3acca1a4fc495553"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-abductor-hallucis",
+      "fmaId": "FMA37460",
+      "name": "Left abductor hallucis",
+      "sourceName": "left abductor hallucis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37460",
+      "bounds": {
+        "min": [
+          0.5387189984321594,
+          -8.656835556030273,
+          0.07195400446653366
+        ],
+        "max": [
+          0.8903470039367676,
+          -8.396504402160645,
+          1.4343299865722656
+        ]
+      },
+      "center": [
+        0.7145330011844635,
+        -8.526669979095459,
+        0.7531419955193996
+      ],
+      "anchor": [
+        0.7213900089263916,
+        -8.509918212890625,
+        0.7786300182342529
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1400M",
+          "sha256": "d598846d1738e708a810a4a1b621fddce3f0b170ccb8e9905cf1720108018567"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-extensor-hallucis-brevis",
+      "fmaId": "FMA51144",
+      "name": "Right extensor hallucis brevis",
+      "sourceName": "right extensor hallucis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA51144",
+      "bounds": {
+        "min": [
+          -1.0433999300003052,
+          -8.533596992492676,
+          0.2813449800014496
+        ],
+        "max": [
+          -0.903251051902771,
+          -8.074344635009766,
+          1.480370044708252
+        ]
+      },
+      "center": [
+        -0.9733254909515381,
+        -8.30397081375122,
+        0.8808575123548508
+      ],
+      "anchor": [
+        -0.964942991733551,
+        -8.226442337036133,
+        0.8870799541473389
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1407",
+          "sha256": "cbef129a1fd217b80efe9688ec6b4e0dbf7471d81b5f15a20e12ef7f04f42d17"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-extensor-hallucis-brevis",
+      "fmaId": "FMA51145",
+      "name": "Left extensor hallucis brevis",
+      "sourceName": "left extensor hallucis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA51145",
+      "bounds": {
+        "min": [
+          0.903251051902771,
+          -8.533596992492676,
+          0.2813449800014496
+        ],
+        "max": [
+          1.0433999300003052,
+          -8.074344635009766,
+          1.480370044708252
+        ]
+      },
+      "center": [
+        0.9733254909515381,
+        -8.30397081375122,
+        0.8808575123548508
+      ],
+      "anchor": [
+        0.964942991733551,
+        -8.226442337036133,
+        0.8870799541473389
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1407M",
+          "sha256": "d2a516bfd3720c481ca3e8410729117d527c0d9af08d031d643d51554284e031"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-flexor-accessorius",
+      "fmaId": "FMA37465",
+      "name": "Right flexor accessorius",
+      "sourceName": "right flexor accessorius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37465",
+      "bounds": {
+        "min": [
+          -1.091610074043274,
+          -8.62443733215332,
+          0.002608985872939229
+        ],
+        "max": [
+          -0.6006180047988892,
+          -8.464406967163086,
+          0.6894400119781494
+        ]
+      },
+      "center": [
+        -0.8461140394210815,
+        -8.544422149658203,
+        0.3460244989255443
+      ],
+      "anchor": [
+        -0.8511900305747986,
+        -8.54867172241211,
+        0.3627159893512726
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1412",
+          "sha256": "861d6da24530c840934d94591e7f769d1b3298adb32ba7bb0ecbb78963cf6657"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-flexor-accessorius",
+      "fmaId": "FMA37466",
+      "name": "Left flexor accessorius",
+      "sourceName": "left flexor accessorius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37466",
+      "bounds": {
+        "min": [
+          0.6006180047988892,
+          -8.62443733215332,
+          0.002608985872939229
+        ],
+        "max": [
+          1.091610074043274,
+          -8.464406967163086,
+          0.6894400119781494
+        ]
+      },
+      "center": [
+        0.8461140394210815,
+        -8.544422149658203,
+        0.3460244989255443
+      ],
+      "anchor": [
+        0.8511900305747986,
+        -8.54867172241211,
+        0.3627159893512726
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1412M",
+          "sha256": "376adf52d61b1f0e96e54d83084a4300d1f204c3d8e4484c5edceae146a1fa05"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:right-flexor-digitorum-brevis",
+      "fmaId": "FMA37461",
+      "name": "Right flexor digitorum brevis",
+      "sourceName": "right flexor digitorum brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37461",
+      "bounds": {
+        "min": [
+          -1.6432600021362305,
+          -8.728100776672363,
+          -0.04374198988080025
+        ],
+        "max": [
+          -0.5860260128974915,
+          -8.539255142211914,
+          1.681939959526062
+        ]
+      },
+      "center": [
+        -1.114643007516861,
+        -8.633677959442139,
+        0.8190989848226309
+      ],
+      "anchor": [
+        -1.0816999673843384,
+        -8.636741638183594,
+        0.8019599914550781
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1413",
+          "sha256": "4910cc83a0e1558971c95ce4b73a4845e3ab63a19cd3e92769aaf46f0bd41333"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:left-flexor-digitorum-brevis",
+      "fmaId": "FMA37462",
+      "name": "Left flexor digitorum brevis",
+      "sourceName": "left flexor digitorum brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles",
+      "nodeName": "FMA37462",
+      "bounds": {
+        "min": [
+          0.5860260128974915,
+          -8.728100776672363,
+          -0.04374198988080025
+        ],
+        "max": [
+          1.6432600021362305,
+          -8.539255142211914,
+          1.681939959526062
+        ]
+      },
+      "center": [
+        1.114643007516861,
+        -8.633677959442139,
+        0.8190989848226309
+      ],
+      "anchor": [
+        1.0816999673843384,
+        -8.636741638183594,
+        0.8019599914550781
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1413M",
+          "sha256": "77dc59309567b31f6842f30c45f24fccb2a3e9b17fbde558d1ce036c640bfcca"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
+      "fmaId": "FMA37396",
+      "name": "Abductor digiti minimi of right hand",
+      "sourceName": "abductor digiti minimi of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37396",
+      "bounds": {
+        "min": [
+          -2.381809949874878,
+          -0.7036401629447937,
+          0.806239902973175
+        ],
+        "max": [
+          -2.208169937133789,
+          -0.05317993089556694,
+          0.9890600442886353
+        ]
+      },
+      "center": [
+        -2.2949899435043335,
+        -0.3784100469201803,
+        0.8976499736309052
+      ],
+      "anchor": [
+        -2.3311798572540283,
+        -0.37289002537727356,
+        0.9348899722099304
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1466",
+          "sha256": "f43244169de921a1209484246543bec594bc3b282c647eaf6249f2320f10bfc0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
+      "fmaId": "FMA37397",
+      "name": "Abductor digiti minimi of left hand",
+      "sourceName": "abductor digiti minimi of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37397",
+      "bounds": {
+        "min": [
+          2.208169937133789,
+          -0.7036401629447937,
+          0.806239902973175
+        ],
+        "max": [
+          2.381809949874878,
+          -0.05317993089556694,
+          0.9890600442886353
+        ]
+      },
+      "center": [
+        2.2949899435043335,
+        -0.3784100469201803,
+        0.8976499736309052
+      ],
+      "anchor": [
+        2.3311798572540283,
+        -0.3728802502155304,
+        0.9348899722099304
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1466M",
+          "sha256": "c863e99b725f694e708b560b9bf848ce4249bc512dd4d0284a79de20402f0c5f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
+      "fmaId": "FMA37398",
+      "name": "Flexor digiti minimi brevis of right hand",
+      "sourceName": "flexor digiti minimi brevis of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37398",
+      "bounds": {
+        "min": [
+          -2.440079927444458,
+          -0.6821100115776062,
+          0.8071100115776062
+        ],
+        "max": [
+          -2.2606301307678223,
+          -0.08015991002321243,
+          0.9801700115203857
+        ]
+      },
+      "center": [
+        -2.35035502910614,
+        -0.3811349608004093,
+        0.893640011548996
+      ],
+      "anchor": [
+        -2.3257200717926025,
+        -0.3777301013469696,
+        0.889259934425354
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1470",
+          "sha256": "a0320cbafea76dae73ef8b8e44bd716507e496fd07adacdb9c3f7530e3e10f0f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
+      "fmaId": "FMA37399",
+      "name": "Flexor digiti minimi brevis of left hand",
+      "sourceName": "flexor digiti minimi brevis of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37399",
+      "bounds": {
+        "min": [
+          2.2606301307678223,
+          -0.6821100115776062,
+          0.8071100115776062
+        ],
+        "max": [
+          2.440079927444458,
+          -0.08015991002321243,
+          0.9801700115203857
+        ]
+      },
+      "center": [
+        2.35035502910614,
+        -0.3811349608004093,
+        0.893640011548996
+      ],
+      "anchor": [
+        2.3257200717926025,
+        -0.3777301013469696,
+        0.889259934425354
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1470M",
+          "sha256": "8ff63d0bd489a325491ec40b4bff2bf591d04746c8122d7d707c899723e24856"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:opponens-digiti-minimi-of-right-hand",
+      "fmaId": "FMA37400",
+      "name": "Opponens digiti minimi of right hand",
+      "sourceName": "opponens digiti minimi of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37400",
+      "bounds": {
+        "min": [
+          -2.4541900157928467,
+          -0.5636999607086182,
+          0.7763500213623047
+        ],
+        "max": [
+          -2.2746400833129883,
+          -0.0955798327922821,
+          0.9257299900054932
+        ]
+      },
+      "center": [
+        -2.3644150495529175,
+        -0.32963989675045013,
+        0.8510400056838989
+      ],
+      "anchor": [
+        -2.345479965209961,
+        -0.3370300233364105,
+        0.8361599445343018
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1482",
+          "sha256": "ac36154c8b29c5037e853509c15ecdb0ce778f83b8956b615a57a15b6897eff5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:opponens-digiti-minimi-of-left-hand",
+      "fmaId": "FMA37401",
+      "name": "Opponens digiti minimi of left hand",
+      "sourceName": "opponens digiti minimi of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37401",
+      "bounds": {
+        "min": [
+          2.2746400833129883,
+          -0.5636999607086182,
+          0.7763500213623047
+        ],
+        "max": [
+          2.4541900157928467,
+          -0.0955798327922821,
+          0.9257299900054932
+        ]
+      },
+      "center": [
+        2.3644150495529175,
+        -0.32963989675045013,
+        0.8510400056838989
+      ],
+      "anchor": [
+        2.345489978790283,
+        -0.3370300233364105,
+        0.8361599445343018
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1482M",
+          "sha256": "73e7e15ed5f07af78166d6090cd0d2d60e953e1b46e668fb947e46cc19783b30"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
+      "fmaId": "FMA37386",
+      "name": "Right abductor pollicis brevis",
+      "sourceName": "right abductor pollicis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37386",
+      "bounds": {
+        "min": [
+          -3.0253899097442627,
+          -0.30088987946510315,
+          0.7302300333976746
+        ],
+        "max": [
+          -2.6335198879241943,
+          0.08086974918842316,
+          1.0274299383163452
+        ]
+      },
+      "center": [
+        -2.8294548988342285,
+        -0.11001006513834,
+        0.8788299858570099
+      ],
+      "anchor": [
+        -2.8177199363708496,
+        -0.12192992866039276,
+        0.9369299411773682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1483",
+          "sha256": "e8fae19efda4874793724ff541efd7d9ead31b50fbb343254e3f8effd8aa734d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
+      "fmaId": "FMA37387",
+      "name": "Left abductor pollicis brevis",
+      "sourceName": "left abductor pollicis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37387",
+      "bounds": {
+        "min": [
+          2.6335198879241943,
+          -0.30088987946510315,
+          0.7302300333976746
+        ],
+        "max": [
+          3.0253899097442627,
+          0.08086974918842316,
+          1.0274299383163452
+        ]
+      },
+      "center": [
+        2.8294548988342285,
+        -0.11001006513834,
+        0.8788299858570099
+      ],
+      "anchor": [
+        2.817730188369751,
+        -0.12192992866039276,
+        0.9369299411773682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1483M",
+          "sha256": "89f420938e9140ba1b2a97c6d386897131f5f2423b4a24c42ea37a92bf75b493"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
+      "fmaId": "FMA37390",
+      "name": "Right opponens pollicis",
+      "sourceName": "right opponens pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37390",
+      "bounds": {
+        "min": [
+          -3.0585999488830566,
+          -0.2616998255252838,
+          0.8037899732589722
+        ],
+        "max": [
+          -2.5804097652435303,
+          0.06002990901470184,
+          0.9896899461746216
+        ]
+      },
+      "center": [
+        -2.8195048570632935,
+        -0.10083495825529099,
+        0.8967399597167969
+      ],
+      "anchor": [
+        -2.816890001296997,
+        -0.08052978664636612,
+        0.9134700298309326
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1501",
+          "sha256": "abbd7e3223c7aae817ecd4e613e24c7dcd2aff20d56ea35a1517c73f6bae7a9e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:left-opponens-pollicis",
+      "fmaId": "FMA37391",
+      "name": "Left opponens pollicis",
+      "sourceName": "left opponens pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles",
+      "nodeName": "FMA37391",
+      "bounds": {
+        "min": [
+          2.5804097652435303,
+          -0.2616998255252838,
+          0.8037899732589722
+        ],
+        "max": [
+          3.0585999488830566,
+          0.06002990901470184,
+          0.9896899461746216
+        ]
+      },
+      "center": [
+        2.8195048570632935,
+        -0.10083495825529099,
+        0.8967399597167969
+      ],
+      "anchor": [
+        2.816890001296997,
+        -0.08052978664636612,
+        0.9134700298309326
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1501M",
+          "sha256": "11f813334eaaed8e9502bfa9afaea44aec5c7cdd01e8acf038aeadac2bb13e25"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
+      "fmaId": "FMA46121",
+      "name": "Oblique head of right adductor pollicis",
+      "sourceName": "oblique head of right adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46121",
+      "bounds": {
+        "min": [
+          -2.9933600425720215,
+          -0.40250977873802185,
+          0.7316200137138367
+        ],
+        "max": [
+          -2.565340042114258,
+          -0.10216003656387329,
+          0.9707000851631165
+        ]
+      },
+      "center": [
+        -2.7793500423431396,
+        -0.25233490765094757,
+        0.8511600494384766
+      ],
+      "anchor": [
+        -2.7823901176452637,
+        -0.24340027570724487,
+        0.8806399703025818
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1481",
+          "sha256": "7f95a0d24a061eefc13bbef6c842b7e685798dfd16e767b955015dafde1f858d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
+      "fmaId": "FMA46122",
+      "name": "Oblique head of left adductor pollicis",
+      "sourceName": "oblique head of left adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46122",
+      "bounds": {
+        "min": [
+          2.565340042114258,
+          -0.40250977873802185,
+          0.7316200137138367
+        ],
+        "max": [
+          2.9933600425720215,
+          -0.10216003656387329,
+          0.9707000851631165
+        ]
+      },
+      "center": [
+        2.7793500423431396,
+        -0.25233490765094757,
+        0.8511600494384766
+      ],
+      "anchor": [
+        2.7823901176452637,
+        -0.24340027570724487,
+        0.8806300163269043
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1481M",
+          "sha256": "6aae43f5745e133cfb7a1659dcc6d8e42e94d8772b984f1ad33d79c6a0f8397c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+      "fmaId": "FMA46123",
+      "name": "Transverse head of right adductor pollicis",
+      "sourceName": "transverse head of right adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46123",
+      "bounds": {
+        "min": [
+          -2.997650146484375,
+          -0.6136602759361267,
+          0.7420799732208252
+        ],
+        "max": [
+          -2.5863900184631348,
+          -0.23294006288051605,
+          0.9672099351882935
+        ]
+      },
+      "center": [
+        -2.792020082473755,
+        -0.4233001694083214,
+        0.8546449542045593
+      ],
+      "anchor": [
+        -2.8035500049591064,
+        -0.3566400110721588,
+        0.834369957447052
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1515",
+          "sha256": "75f0a7b8130a70da1efb175638927868a2eb8d1f79916916666d100ec92190f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+      "fmaId": "FMA46124",
+      "name": "Transverse head of left adductor pollicis",
+      "sourceName": "transverse head of left adductor pollicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-dissection",
+      "nodeName": "FMA46124",
+      "bounds": {
+        "min": [
+          2.5863900184631348,
+          -0.6136602759361267,
+          0.7420799732208252
+        ],
+        "max": [
+          2.997650146484375,
+          -0.23294006288051605,
+          0.9672099351882935
+        ]
+      },
+      "center": [
+        2.792020082473755,
+        -0.4233001694083214,
+        0.8546449542045593
+      ],
+      "anchor": [
+        2.8035500049591064,
+        -0.3566400110721588,
+        0.834369957447052
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1515M",
+          "sha256": "b280fa41da96bb2db519cb055f6ecaea6fe0786586db3f5d695da07a77395924"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:medial-head-of-right-flexor-hallucis-brevis",
+      "fmaId": "FMA45971",
+      "name": "Medial head of right flexor hallucis brevis",
+      "sourceName": "medial head of right flexor hallucis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA45971",
+      "bounds": {
+        "min": [
+          -0.952413022518158,
+          -8.690187454223633,
+          0.6807599663734436
+        ],
+        "max": [
+          -0.6814559698104858,
+          -8.312599182128906,
+          1.4500600099563599
+        ]
+      },
+      "center": [
+        -0.8169344961643219,
+        -8.50139331817627,
+        1.0654099881649017
+      ],
+      "anchor": [
+        -0.8259750604629517,
+        -8.502474784851074,
+        1.054610013961792
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1396",
+          "sha256": "778a43d6a1540626e4e13f29c75a4ec75d335abd37ee9c7fdee4eea8188116e1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
+      "fmaId": "FMA45972",
+      "name": "Medial head of left flexor hallucis brevis",
+      "sourceName": "medial head of left flexor hallucis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA45972",
+      "bounds": {
+        "min": [
+          0.6814559698104858,
+          -8.690187454223633,
+          0.6807599663734436
+        ],
+        "max": [
+          0.952413022518158,
+          -8.312599182128906,
+          1.4500600099563599
+        ]
+      },
+      "center": [
+        0.8169344961643219,
+        -8.50139331817627,
+        1.0654099881649017
+      ],
+      "anchor": [
+        0.8259750604629517,
+        -8.502474784851074,
+        1.054610013961792
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1396M",
+          "sha256": "9c20236d9fc8b34638f313248ec940dfa08c67718324d9cd21fed6beda989411"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:lateral-head-of-right-flexor-hallucis-brevis",
+      "fmaId": "FMA45973",
+      "name": "Lateral head of right flexor hallucis brevis",
+      "sourceName": "lateral head of right flexor hallucis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA45973",
+      "bounds": {
+        "min": [
+          -1.050950050354004,
+          -8.710494041442871,
+          0.6824400424957275
+        ],
+        "max": [
+          -0.6848959922790527,
+          -8.337525367736816,
+          1.4523100852966309
+        ]
+      },
+      "center": [
+        -0.8679230213165283,
+        -8.524009704589844,
+        1.0673750638961792
+      ],
+      "anchor": [
+        -0.8629340529441833,
+        -8.557160377502441,
+        1.0499399900436401
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1393",
+          "sha256": "4403ddd8a9fffab7fdf1cbb28fd9b90f461913bd9c28cfea23fc512844668985"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:lateral-head-of-left-flexor-hallucis-brevis",
+      "fmaId": "FMA45974",
+      "name": "Lateral head of left flexor hallucis brevis",
+      "sourceName": "lateral head of left flexor hallucis brevis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA45974",
+      "bounds": {
+        "min": [
+          0.6848959922790527,
+          -8.710494041442871,
+          0.6824400424957275
+        ],
+        "max": [
+          1.050950050354004,
+          -8.337525367736816,
+          1.4523100852966309
+        ]
+      },
+      "center": [
+        0.8679230213165283,
+        -8.524009704589844,
+        1.0673750638961792
+      ],
+      "anchor": [
+        0.8629340529441833,
+        -8.557160377502441,
+        1.0499399900436401
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1393M",
+          "sha256": "70464799f8eb4602132a0c94d955779e5a817d96dce207c7777a7e3a969eb858"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:oblique-head-of-right-adductor-hallucis",
+      "fmaId": "FMA46018",
+      "name": "Oblique head of right adductor hallucis",
+      "sourceName": "oblique head of right adductor hallucis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA46018",
+      "bounds": {
+        "min": [
+          -1.1313400268554688,
+          -8.656678199768066,
+          0.5724199414253235
+        ],
+        "max": [
+          -0.9530239701271057,
+          -8.36751937866211,
+          1.2364000082015991
+        ]
+      },
+      "center": [
+        -1.0421819984912872,
+        -8.512098789215088,
+        0.9044099748134613
+      ],
+      "anchor": [
+        -1.0516899824142456,
+        -8.541279792785645,
+        0.917389988899231
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1398",
+          "sha256": "346020de3eb54e85a76fed52b2742fb86c596db4a413a717ce93d55a6d589b34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
+      "fmaId": "FMA46019",
+      "name": "Oblique head of left adductor hallucis",
+      "sourceName": "oblique head of left adductor hallucis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA46019",
+      "bounds": {
+        "min": [
+          0.9530239701271057,
+          -8.656678199768066,
+          0.5724199414253235
+        ],
+        "max": [
+          1.1313400268554688,
+          -8.36751937866211,
+          1.2364000082015991
+        ]
+      },
+      "center": [
+        1.0421819984912872,
+        -8.512098789215088,
+        0.9044099748134613
+      ],
+      "anchor": [
+        1.0516899824142456,
+        -8.541280746459961,
+        0.917389988899231
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1398M",
+          "sha256": "b5ac05430038cb79e795e8f957219f2cb1c4a7f5c30139745a8d44f7cd562bd9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+      "fmaId": "FMA46020",
+      "name": "Transverse head of right adductor hallucis",
+      "sourceName": "transverse head of right adductor hallucis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA46020",
+      "bounds": {
+        "min": [
+          -1.4013299942016602,
+          -8.655768394470215,
+          0.9792900085449219
+        ],
+        "max": [
+          -0.9830909967422485,
+          -8.583616256713867,
+          1.2895199060440063
+        ]
+      },
+      "center": [
+        -1.1922104954719543,
+        -8.619692325592041,
+        1.1344049572944641
+      ],
+      "anchor": [
+        -1.1960399150848389,
+        -8.611153602600098,
+        1.1220300197601318
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1445",
+          "sha256": "b62f353790db0c2b504f502e6fadd1be4f951290dc76bd39a8019fe202ef36c9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+      "fmaId": "FMA46021",
+      "name": "Transverse head of left adductor hallucis",
+      "sourceName": "transverse head of left adductor hallucis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-muscles-dissection",
+      "nodeName": "FMA46021",
+      "bounds": {
+        "min": [
+          0.9830909967422485,
+          -8.655768394470215,
+          0.9792900085449219
+        ],
+        "max": [
+          1.4013299942016602,
+          -8.583616256713867,
+          1.2895199060440063
+        ]
+      },
+      "center": [
+        1.1922104954719543,
+        -8.619692325592041,
+        1.1344049572944641
+      ],
+      "anchor": [
+        1.1960399150848389,
+        -8.611153602600098,
+        1.1220399141311646
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1445M",
+          "sha256": "35d51d3af78f7bbb4bf1bf10292f66a3c82485d66c0cdab1a38d3b0bb329b8c2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+      "fmaId": "FMA42398",
+      "name": "Set of lumbricals of right hand",
+      "sourceName": "set of lumbricals of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-recovery",
+      "nodeName": "FMA42398",
+      "bounds": {
+        "min": [
+          -3.000380039215088,
+          -1.1511797904968262,
+          0.7689399719238281
+        ],
+        "max": [
+          -2.2416999340057373,
+          -0.25091978907585144,
+          1.0827800035476685
+        ]
+      },
+      "center": [
+        -2.6210399866104126,
+        -0.7010497897863388,
+        0.9258599877357483
+      ],
+      "anchor": [
+        -2.5528900623321533,
+        -0.7075097560882568,
+        0.9341000318527222
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1510",
+          "sha256": "d3ce59c7785168a78c152a202480c2ed05b2c0b2798d70d89e3b9bd42fc2f9de"
+        }
+      ],
+      "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+      "fmaId": "FMA42399",
+      "name": "Set of lumbricals of left hand",
+      "sourceName": "set of lumbricals of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-recovery",
+      "nodeName": "FMA42399",
+      "bounds": {
+        "min": [
+          2.2416999340057373,
+          -1.1511797904968262,
+          0.7689399719238281
+        ],
+        "max": [
+          3.000380039215088,
+          -0.25091978907585144,
+          1.0827800035476685
+        ]
+      },
+      "center": [
+        2.6210399866104126,
+        -0.7010497897863388,
+        0.9258599877357483
+      ],
+      "anchor": [
+        2.552880048751831,
+        -0.7075097560882568,
+        0.9341000318527222
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1510M",
+          "sha256": "00bab05fd9225e6c06a1dc7f572a01ec1771b23f5cde34bd6378960457c9c8e0"
+        }
+      ],
+      "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+      "fmaId": "FMA42402",
+      "name": "Set of palmar interossei of right hand",
+      "sourceName": "set of palmar interossei of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42402",
+      "bounds": {
+        "min": [
+          -2.814689874649048,
+          -0.8439398407936096,
+          0.7432199716567993
+        ],
+        "max": [
+          -2.342050075531006,
+          -0.3292401134967804,
+          0.9647300839424133
+        ]
+      },
+      "center": [
+        -2.578369975090027,
+        -0.586589977145195,
+        0.8539750277996063
+      ],
+      "anchor": [
+        -2.5293898582458496,
+        -0.5964099168777466,
+        0.8450599908828735
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1511",
+          "sha256": "85929597b60bd904b7dcc17c56f72dc3d607534bbf11149589f88b9158060bc8"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+      "fmaId": "FMA42403",
+      "name": "Set of palmar interossei of left hand",
+      "sourceName": "set of palmar interossei of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42403",
+      "bounds": {
+        "min": [
+          2.342050075531006,
+          -0.8439398407936096,
+          0.7432199716567993
+        ],
+        "max": [
+          2.814689874649048,
+          -0.3292401134967804,
+          0.9647300839424133
+        ]
+      },
+      "center": [
+        2.578369975090027,
+        -0.586589977145195,
+        0.8539750277996063
+      ],
+      "anchor": [
+        2.5293800830841064,
+        -0.5964099168777466,
+        0.845050036907196
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1511M",
+          "sha256": "1bcfb4935ff3bfe248e8ed537346ca4172ecb3a9ba1fff4e0865d1770a1792e7"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+      "fmaId": "FMA42404",
+      "name": "Set of dorsal interossei of right hand",
+      "sourceName": "set of dorsal interossei of right hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42404",
+      "bounds": {
+        "min": [
+          -2.9695098400115967,
+          -0.8331897258758545,
+          0.6912400126457214
+        ],
+        "max": [
+          -2.3525099754333496,
+          -0.14445006847381592,
+          0.9486200213432312
+        ]
+      },
+      "center": [
+        -2.661009907722473,
+        -0.4888198971748352,
+        0.8199300169944763
+      ],
+      "anchor": [
+        -2.678340196609497,
+        -0.5198101997375488,
+        0.7394799590110779
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1509",
+          "sha256": "9317e87149b2346714b59513c07d9d7bf36585f9866d3facc16f958e5411fcbd"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+      "fmaId": "FMA42405",
+      "name": "Set of dorsal interossei of left hand",
+      "sourceName": "set of dorsal interossei of left hand",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-muscles-gaps",
+      "nodeName": "FMA42405",
+      "bounds": {
+        "min": [
+          2.3525099754333496,
+          -0.8331897258758545,
+          0.6912400126457214
+        ],
+        "max": [
+          2.9695098400115967,
+          -0.14445006847381592,
+          0.9486200213432312
+        ]
+      },
+      "center": [
+        2.661009907722473,
+        -0.4888198971748352,
+        0.8199300169944763
+      ],
+      "anchor": [
+        2.678340196609497,
+        -0.5198101997375488,
+        0.7394799590110779
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1509M",
+          "sha256": "c9aead8e2cc5fd957fcc11fafc42a0d235bffd00bbea09eaf50c473a41a9a3bd"
+        }
+      ],
+      "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+import type { AtlasDeliveryPolicy } from './atlas-delivery-access.ts';
+
+// Registered source bytes are locally verified; new bundles must be staged and
+// checked before this candidate is deployed. No clinical release is granted.
+// Keep the private draft available only to review staff.
+export const ATLAS_DELIVERY_POLICY = {
+  audience: 'administrator-review',
+  manifestRevision: '2a17e324feeecc83408e04bd89a245b3d347715678ab3d09afdb5f498923acca',
+} as const satisfies AtlasDeliveryPolicy;

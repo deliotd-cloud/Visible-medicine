@@ -1,0 +1,338 @@
+{
+  "sourceCommit": "a1b9c5719d5059e75cf2e93e84e45b208764fffb",
+  "scope": "Shoulder-region X-ray orientation; source identity is not scan registration or approval.",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+      "fmaId": "FMA13323",
+      "name": "Left clavicle",
+      "sourceName": "left clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13323",
+      "bounds": {
+        "min": [
+          0.08378729969263077,
+          5.085300445556641,
+          0.04387500882148743
+        ],
+        "max": [
+          1.4394199848175049,
+          5.551800727844238,
+          0.9707800149917603
+        ]
+      },
+      "center": [
+        0.7616036422550678,
+        5.3185505867004395,
+        0.5073275119066238
+      ],
+      "anchor": [
+        0.7759079933166504,
+        5.351099967956543,
+        0.5148699879646301
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3237",
+          "sha256": "2491009d53eaed99ccb2a802b29402eec715eb8d207fb819fad67b0720195cf2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.400730013847351,
+          2.292099714279175,
+          0.010559005662798882
+        ],
+        "max": [
+          2.407599925994873,
+          5.365200042724609,
+          0.5022899508476257
+        ]
+      },
+      "center": [
+        1.904164969921112,
+        3.828649878501892,
+        0.2564244782552123
+      ],
+      "anchor": [
+        1.8882200717926025,
+        3.8617005348205566,
+        0.25274598598480225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3262",
+          "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "sourceName": "left scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13396",
+      "bounds": {
+        "min": [
+          0.5706140398979187,
+          3.8394994735717773,
+          -0.5507640242576599
+        ],
+        "max": [
+          1.6646400690078735,
+          5.498600006103516,
+          0.5284500122070312
+        ]
+      },
+      "center": [
+        1.1176270544528961,
+        4.6690497398376465,
+        -0.011157006025314331
+      ],
+      "anchor": [
+        1.2024999856948853,
+        4.69379997253418,
+        -0.04868198558688164
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3279",
+          "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+      "fmaId": "FMA13322",
+      "name": "Right clavicle",
+      "sourceName": "right clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13322",
+      "bounds": {
+        "min": [
+          -1.4527698755264282,
+          5.086199760437012,
+          0.04412498325109482
+        ],
+        "max": [
+          -0.09661649912595749,
+          5.554399490356445,
+          0.9694799780845642
+        ]
+      },
+      "center": [
+        -0.7746931873261929,
+        5.3202996253967285,
+        0.5068024806678295
+      ],
+      "anchor": [
+        -0.7849389910697937,
+        5.359100341796875,
+        0.5070599913597107
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3362",
+          "sha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "sourceName": "right scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13395",
+      "bounds": {
+        "min": [
+          -1.6646400690078735,
+          3.839599609375,
+          -0.5508275032043457
+        ],
+        "max": [
+          -0.5705379843711853,
+          5.498600006103516,
+          0.5285600423812866
+        ]
+      },
+      "center": [
+        -1.1175890266895294,
+        4.669099807739258,
+        -0.011133730411529541
+      ],
+      "anchor": [
+        -1.1983000040054321,
+        4.698699951171875,
+        -0.054347991943359375
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3384",
+          "sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

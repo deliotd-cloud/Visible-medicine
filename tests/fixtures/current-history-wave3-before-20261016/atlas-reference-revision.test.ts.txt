@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {atlasReferenceRevisionCurrent} from '../lib/atlas-reference-revision.ts';
+
+const current='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+test('optional revision preserves old navigation and accepts only exact current source',()=>{
+  assert.equal(atlasReferenceRevisionCurrent({},current),true);
+  assert.equal(atlasReferenceRevisionCurrent({region:'leg'},current),true);
+  assert.equal(atlasReferenceRevisionCurrent({atlasRevision:current},current),true);
+  assert.equal(atlasReferenceRevisionCurrent({atlasRevision:current,token:'private'},current),true);
+});
+test('array, malformed, nonprimitive and stale source revisions fail closed',()=>{
+  for(const requested of [[current,current],[],current.toUpperCase(),current.slice(0,39),'f'.repeat(40),undefined,null,0,new String(current)])
+    assert.equal(atlasReferenceRevisionCurrent({atlasRevision:requested as string},current),false);
+  assert.equal(atlasReferenceRevisionCurrent(null as any,current),false);
+  assert.equal(atlasReferenceRevisionCurrent([] as any,current),false);
+  assert.equal(atlasReferenceRevisionCurrent({},'not-a-current-pin'),false);
+});

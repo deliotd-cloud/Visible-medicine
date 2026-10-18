@@ -1,0 +1,6543 @@
+{
+  "sourceCommit": "d723e7051319e17db4992bb941755ebc85a25c1d",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-skeleton",
+      "url": "/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "bytes": 416816,
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "structures": 54
+    },
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "thorax-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "bytes": 1131748,
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "structures": 25
+    },
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "hand-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "bytes": 65364,
+      "sha256": "81851762c0aca58931fa8b0cd1c31853558b70578a518896cb97fb8eeae357a0",
+      "structures": 2
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    },
+    {
+      "id": "hand-vessels-hand-vascular",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "bytes": 534016,
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "structures": 26
+    },
+    {
+      "id": "forearm-vessels-forearm-vascular",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "bytes": 66352,
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-index-finger",
+      "fmaId": "FMA23953",
+      "name": "Distal phalanx of left index finger",
+      "sourceName": "distal phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23953",
+      "bounds": {
+        "min": [
+          3.0126099586486816,
+          -1.381489872932434,
+          1.196139931678772
+        ],
+        "max": [
+          3.1125400066375732,
+          -1.244329810142517,
+          1.367110013961792
+        ]
+      },
+      "center": [
+        3.0625749826431274,
+        -1.3129098415374756,
+        1.281624972820282
+      ],
+      "anchor": [
+        3.050759792327881,
+        -1.3065801858901978,
+        1.2914299964904785
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3183",
+          "sha256": "53cd2e02023923e93f7651aed2b7b198fdaa9e0c8c8e83167b7ba371a2467396"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-little-finger",
+      "fmaId": "FMA23959",
+      "name": "Distal phalanx of left little finger",
+      "sourceName": "distal phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23959",
+      "bounds": {
+        "min": [
+          2.1889400482177734,
+          -1.233720064163208,
+          1.1841999292373657
+        ],
+        "max": [
+          2.271549940109253,
+          -1.1069097518920898,
+          1.3228399753570557
+        ]
+      },
+      "center": [
+        2.230244994163513,
+        -1.170314908027649,
+        1.2535199522972107
+      ],
+      "anchor": [
+        2.2397000789642334,
+        -1.1856402158737183,
+        1.2676199674606323
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3184",
+          "sha256": "56799202f865a5f250cf43da0619baebccde1dae3ee6cd3295e8e8171b4b6158"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23955",
+      "name": "Distal phalanx of left middle finger",
+      "sourceName": "distal phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23955",
+      "bounds": {
+        "min": [
+          2.7136099338531494,
+          -1.4663299322128296,
+          1.2808400392532349
+        ],
+        "max": [
+          2.808540105819702,
+          -1.3362902402877808,
+          1.450890064239502
+        ]
+      },
+      "center": [
+        2.761075019836426,
+        -1.4013100862503052,
+        1.3658650517463684
+      ],
+      "anchor": [
+        2.759739875793457,
+        -1.393499732017517,
+        1.382390022277832
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3186",
+          "sha256": "52a6da87eb85141fbfc47457b45704fbb360a64d30a9fe13b44edbfcdfcc7a8a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23957",
+      "name": "Distal phalanx of left ring finger",
+      "sourceName": "distal phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23957",
+      "bounds": {
+        "min": [
+          2.453000068664551,
+          -1.3518798351287842,
+          1.287559986114502
+        ],
+        "max": [
+          2.5364599227905273,
+          -1.2610101699829102,
+          1.443600058555603
+        ]
+      },
+      "center": [
+        2.494729995727539,
+        -1.3064450025558472,
+        1.3655800223350525
+      ],
+      "anchor": [
+        2.5017800331115723,
+        -1.2966901063919067,
+        1.375749945640564
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3187",
+          "sha256": "30fde420c59b5e151de258f9c358c4cc1463de8b85c60e7c4b0a4d7ff573b9ad"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:distal-phalanx-of-left-thumb",
+      "fmaId": "FMA23951",
+      "name": "Distal phalanx of left thumb",
+      "sourceName": "distal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23951",
+      "bounds": {
+        "min": [
+          3.108380079269409,
+          -0.807570219039917,
+          1.072409987449646
+        ],
+        "max": [
+          3.2393500804901123,
+          -0.5776898264884949,
+          1.2327299118041992
+        ]
+      },
+      "center": [
+        3.1738650798797607,
+        -0.6926300227642059,
+        1.1525699496269226
+      ],
+      "anchor": [
+        3.1494698524475098,
+        -0.7068102955818176,
+        1.1598199605941772
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3188",
+          "sha256": "cafb49c4af872d990b2cd7a3ea279e088ea596cea25ee2fdce16b8ebbb04d37c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24460",
+      "name": "Distal phalanx of right index finger",
+      "sourceName": "distal phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24460",
+      "bounds": {
+        "min": [
+          -3.113680124282837,
+          -1.3815399408340454,
+          1.196470022201538
+        ],
+        "max": [
+          -3.014249801635742,
+          -1.2431097030639648,
+          1.3672999143600464
+        ]
+      },
+      "center": [
+        -3.0639649629592896,
+        -1.3123248219490051,
+        1.2818849682807922
+      ],
+      "anchor": [
+        -3.047600030899048,
+        -1.3177300691604614,
+        1.280269980430603
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3193",
+          "sha256": "00d90373136e996def72c45bb2de42630f7533014b622d36bbf56c4121355e4b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24463",
+      "name": "Distal phalanx of right little finger",
+      "sourceName": "distal phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24463",
+      "bounds": {
+        "min": [
+          -2.2720301151275635,
+          -1.232509732246399,
+          1.1817100048065186
+        ],
+        "max": [
+          -2.1889500617980957,
+          -1.1072301864624023,
+          1.3187299966812134
+        ]
+      },
+      "center": [
+        -2.2304900884628296,
+        -1.1698699593544006,
+        1.250220000743866
+      ],
+      "anchor": [
+        -2.2409698963165283,
+        -1.1692700386047363,
+        1.2391499280929565
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3194",
+          "sha256": "0edc751d14c5260c93fcde78f868ce49521eec95085a613417a96ddfd6a8965d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24461",
+      "name": "Distal phalanx of right middle finger",
+      "sourceName": "distal phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24461",
+      "bounds": {
+        "min": [
+          -2.809119939804077,
+          -1.469329833984375,
+          1.2820500135421753
+        ],
+        "max": [
+          -2.7136499881744385,
+          -1.334689974784851,
+          1.454279899597168
+        ]
+      },
+      "center": [
+        -2.761384963989258,
+        -1.402009904384613,
+        1.3681649565696716
+      ],
+      "anchor": [
+        -2.742770195007324,
+        -1.395640254020691,
+        1.3711199760437012
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3196",
+          "sha256": "901e109df6e4a98b88dae7cdddda416c4cdd91e58093f1dc51d80ccc7c4e9b34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24462",
+      "name": "Distal phalanx of right ring finger",
+      "sourceName": "distal phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24462",
+      "bounds": {
+        "min": [
+          -2.536139965057373,
+          -1.3513097763061523,
+          1.2871699333190918
+        ],
+        "max": [
+          -2.452810049057007,
+          -1.2599200010299683,
+          1.4438000917434692
+        ]
+      },
+      "center": [
+        -2.49447500705719,
+        -1.3056148886680603,
+        1.3654850125312805
+      ],
+      "anchor": [
+        -2.478450059890747,
+        -1.3010797500610352,
+        1.3658699989318848
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3197",
+          "sha256": "4fece0e70293449e99a1b27a0d40c9d4fedd548ff0471fa7c783e5d973cbfba3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:distal-phalanx-of-right-thumb",
+      "fmaId": "FMA24459",
+      "name": "Distal phalanx of right thumb",
+      "sourceName": "distal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24459",
+      "bounds": {
+        "min": [
+          -3.239140033721924,
+          -0.808610200881958,
+          1.0713499784469604
+        ],
+        "max": [
+          -3.1026298999786377,
+          -0.5783398151397705,
+          1.2335799932479858
+        ]
+      },
+      "center": [
+        -3.1708849668502808,
+        -0.6934750080108643,
+        1.1524649858474731
+      ],
+      "anchor": [
+        -3.146090030670166,
+        -0.6867401003837585,
+        1.1562199592590332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3198",
+          "sha256": "bfae0f42c3cffa63b93403bf6fe1b446dcf0f8fc3e1f8994544ac256830a7b3e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+      "fmaId": "FMA13323",
+      "name": "Left clavicle",
+      "sourceName": "left clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13323",
+      "bounds": {
+        "min": [
+          0.08378729969263077,
+          5.085300445556641,
+          0.04387500882148743
+        ],
+        "max": [
+          1.4394199848175049,
+          5.551800727844238,
+          0.9707800149917603
+        ]
+      },
+      "center": [
+        0.7616036422550678,
+        5.3185505867004395,
+        0.5073275119066238
+      ],
+      "anchor": [
+        0.7759079933166504,
+        5.351099967956543,
+        0.5148699879646301
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3237",
+          "sha256": "2491009d53eaed99ccb2a802b29402eec715eb8d207fb819fad67b0720195cf2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-first-metacarpal-bone",
+      "fmaId": "FMA24465",
+      "name": "Left first metacarpal bone",
+      "sourceName": "left first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24465",
+      "bounds": {
+        "min": [
+          2.7235300540924072,
+          -0.3970501720905304,
+          0.7340599894523621
+        ],
+        "max": [
+          3.096250057220459,
+          -0.025930175557732582,
+          1.0378199815750122
+        ]
+      },
+      "center": [
+        2.909890055656433,
+        -0.2114901738241315,
+        0.8859399855136871
+      ],
+      "anchor": [
+        2.888230085372925,
+        -0.1816699206829071,
+        0.8883599638938904
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3240",
+          "sha256": "f512f1433a67003297c3ca0fca775c94372313cf3c3de28774a1cd7556e08362"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-second-metacarpal-bone",
+      "fmaId": "FMA24467",
+      "name": "Left second metacarpal bone",
+      "sourceName": "left second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24467",
+      "bounds": {
+        "min": [
+          2.618410110473633,
+          -0.8095800876617432,
+          0.6711699962615967
+        ],
+        "max": [
+          2.9261300563812256,
+          -0.13130980730056763,
+          0.9243299961090088
+        ]
+      },
+      "center": [
+        2.772270083427429,
+        -0.4704449474811554,
+        0.7977499961853027
+      ],
+      "anchor": [
+        2.8213000297546387,
+        -0.48330017924308777,
+        0.7823800444602966
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3243",
+          "sha256": "728fb5278b0e3d2ac9fb0af78ade721c5cb8764144e318a85f07ff9cdb9d7f7d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-third-metacarpal-bone",
+      "fmaId": "FMA24469",
+      "name": "Left third metacarpal bone",
+      "sourceName": "left third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24469",
+      "bounds": {
+        "min": [
+          2.5236001014709473,
+          -0.7935101389884949,
+          0.6241000294685364
+        ],
+        "max": [
+          2.722520112991333,
+          -0.149749755859375,
+          0.928130030632019
+        ]
+      },
+      "center": [
+        2.62306010723114,
+        -0.47162994742393494,
+        0.7761150300502777
+      ],
+      "anchor": [
+        2.6117498874664307,
+        -0.4807202219963074,
+        0.7944599986076355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3246",
+          "sha256": "fa86f28ff85a3a1e3ac6872a05912deece4d3f8489e08ea4d21b432db304938b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fourth-metacarpal-bone",
+      "fmaId": "FMA24471",
+      "name": "Left fourth metacarpal bone",
+      "sourceName": "left fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24471",
+      "bounds": {
+        "min": [
+          2.413559913635254,
+          -0.7474700808525085,
+          0.6589800119400024
+        ],
+        "max": [
+          2.5377399921417236,
+          -0.14781981706619263,
+          0.9191099405288696
+        ]
+      },
+      "center": [
+        2.4756499528884888,
+        -0.4476449489593506,
+        0.789044976234436
+      ],
+      "anchor": [
+        2.48826003074646,
+        -0.46893006563186646,
+        0.7905600070953369
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3249",
+          "sha256": "c5f7a10a04542437ff52fde75f81c5b0b2cba6a4a68c56b829c9e0de2fe1b72f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-fifth-metacarpal-bone",
+      "fmaId": "FMA24473",
+      "name": "Left fifth metacarpal bone",
+      "sourceName": "left fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24473",
+      "bounds": {
+        "min": [
+          2.252700090408325,
+          -0.6796899437904358,
+          0.702239990234375
+        ],
+        "max": [
+          2.453939914703369,
+          -0.13241027295589447,
+          0.9441999793052673
+        ]
+      },
+      "center": [
+        2.353320002555847,
+        -0.40605010837316513,
+        0.8232199847698212
+      ],
+      "anchor": [
+        2.373500108718872,
+        -0.41370972990989685,
+        0.8138800263404846
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3252",
+          "sha256": "ca8db2999ff2d7a14a61e9cbeb83a01011a3557df844ff1c47bb7ac3eaeccdb8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-capitate",
+      "fmaId": "FMA24447",
+      "name": "Left capitate",
+      "sourceName": "left capitate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24447",
+      "bounds": {
+        "min": [
+          2.4860999584198,
+          -0.1783599853515625,
+          0.6057299971580505
+        ],
+        "max": [
+          2.6428799629211426,
+          0.04588012769818306,
+          0.7735099792480469
+        ]
+      },
+      "center": [
+        2.564489960670471,
+        -0.06623992882668972,
+        0.6896199882030487
+      ],
+      "anchor": [
+        2.558990001678467,
+        -0.05231994763016701,
+        0.6493800282478333
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3257",
+          "sha256": "d229f9418122099af72721ebeee60b15b68604f3da3532c0625909dc2ac9520c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-hamate",
+      "fmaId": "FMA24449",
+      "name": "Left hamate",
+      "sourceName": "left hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24449",
+      "bounds": {
+        "min": [
+          2.3659698963165283,
+          -0.1874401867389679,
+          0.6132199764251709
+        ],
+        "max": [
+          2.515700101852417,
+          0.006309814285486937,
+          0.8398199677467346
+        ]
+      },
+      "center": [
+        2.4408349990844727,
+        -0.09056518622674048,
+        0.7265199720859528
+      ],
+      "anchor": [
+        2.4443600177764893,
+        -0.05999999865889549,
+        0.7370400428771973
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3261",
+          "sha256": "665e0be6779b9bc398e0947eaf190cc4d942e030a05d1a4cfe3ce4270bf8ddbf"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.400730013847351,
+          2.292099714279175,
+          0.010559005662798882
+        ],
+        "max": [
+          2.407599925994873,
+          5.365200042724609,
+          0.5022899508476257
+        ]
+      },
+      "center": [
+        1.904164969921112,
+        3.828649878501892,
+        0.2564244782552123
+      ],
+      "anchor": [
+        1.8882200717926025,
+        3.8617005348205566,
+        0.25274598598480225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3262",
+          "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-lunate",
+      "fmaId": "FMA24438",
+      "name": "Left lunate",
+      "sourceName": "left lunate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24438",
+      "bounds": {
+        "min": [
+          2.3633899688720703,
+          -0.02778015099465847,
+          0.6062799692153931
+        ],
+        "max": [
+          2.528830051422119,
+          0.09888000786304474,
+          0.7713099718093872
+        ]
+      },
+      "center": [
+        2.4461100101470947,
+        0.035549928434193134,
+        0.6887949705123901
+      ],
+      "anchor": [
+        2.450549840927124,
+        0.0064398194663226604,
+        0.6798700094223022
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3268",
+          "sha256": "3d4a712f4ee30883f8967d15e8ac70e707d524213814bc7e2fbd51a123619b83"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-pisiform",
+      "fmaId": "FMA24442",
+      "name": "Left pisiform",
+      "sourceName": "left pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24442",
+      "bounds": {
+        "min": [
+          2.3183798789978027,
+          -0.10275024175643921,
+          0.7703099846839905
+        ],
+        "max": [
+          2.4003000259399414,
+          0.012769775465130806,
+          0.8758900165557861
+        ]
+      },
+      "center": [
+        2.359339952468872,
+        -0.0449902331456542,
+        0.8231000006198883
+      ],
+      "anchor": [
+        2.328850030899048,
+        -0.05520019680261612,
+        0.8421000838279724
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3276",
+          "sha256": "6162726ac4bcb29a9ba8489570650ba8a323576b03423fb16b27bcd1e55c0658"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+      "fmaId": "FMA23465",
+      "name": "Left radius",
+      "sourceName": "left radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23465",
+      "bounds": {
+        "min": [
+          2.198359966278076,
+          0.0616302490234375,
+          0.11469299346208572
+        ],
+        "max": [
+          2.7914299964904785,
+          2.350100040435791,
+          0.7725200057029724
+        ]
+      },
+      "center": [
+        2.4948949813842773,
+        1.2058651447296143,
+        0.44360649958252907
+      ],
+      "anchor": [
+        2.561270236968994,
+        1.1699999570846558,
+        0.4131059944629669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3277",
+          "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-scaphoid",
+      "fmaId": "FMA24436",
+      "name": "Left scaphoid",
+      "sourceName": "left scaphoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24436",
+      "bounds": {
+        "min": [
+          2.4945199489593506,
+          -0.037800293415784836,
+          0.6152700185775757
+        ],
+        "max": [
+          2.7297699451446533,
+          0.1168200671672821,
+          0.7644400000572205
+        ]
+      },
+      "center": [
+        2.612144947052002,
+        0.039509886875748634,
+        0.6898550093173981
+      ],
+      "anchor": [
+        2.606029987335205,
+        0.032169800251722336,
+        0.7195900082588196
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3278",
+          "sha256": "5389b07855a3273ac4646092eaf667466eb3f00cf5f78ed90993e82200f550ab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "sourceName": "left scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13396",
+      "bounds": {
+        "min": [
+          0.5706140398979187,
+          3.8394994735717773,
+          -0.5507640242576599
+        ],
+        "max": [
+          1.6646400690078735,
+          5.498600006103516,
+          0.5284500122070312
+        ]
+      },
+      "center": [
+        1.1176270544528961,
+        4.6690497398376465,
+        -0.011157006025314331
+      ],
+      "anchor": [
+        1.2024999856948853,
+        4.69379997253418,
+        -0.04868198558688164
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3279",
+          "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezium",
+      "fmaId": "FMA24444",
+      "name": "Left trapezium",
+      "sourceName": "left trapezium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24444",
+      "bounds": {
+        "min": [
+          2.6478099822998047,
+          -0.1425299048423767,
+          0.6771000027656555
+        ],
+        "max": [
+          2.8179502487182617,
+          0.057930298149585724,
+          0.8455399870872498
+        ]
+      },
+      "center": [
+        2.732880115509033,
+        -0.04229980334639549,
+        0.7613199949264526
+      ],
+      "anchor": [
+        2.75150990486145,
+        -0.0782000720500946,
+        0.7886000275611877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3283",
+          "sha256": "50006736c04d10ad0af5c94054c9cf64eac6e55fb0cdde25eefcad1170492f93"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-trapezoid",
+      "fmaId": "FMA24445",
+      "name": "Left trapezoid",
+      "sourceName": "left trapezoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24445",
+      "bounds": {
+        "min": [
+          2.622529983520508,
+          -0.17278015613555908,
+          0.6364499926567078
+        ],
+        "max": [
+          2.7328901290893555,
+          -0.04729980602860451,
+          0.7844999432563782
+        ]
+      },
+      "center": [
+        2.6777100563049316,
+        -0.1100399810820818,
+        0.710474967956543
+      ],
+      "anchor": [
+        2.6738698482513428,
+        -0.13955993950366974,
+        0.7267099618911743
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3284",
+          "sha256": "e4378dd24f9206c580457f09b75cc05a36f0a1b4049fc2c2ce57da51a2ebd7c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:left-triquetral",
+      "fmaId": "FMA24440",
+      "name": "Left triquetral",
+      "sourceName": "left triquetral",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24440",
+      "bounds": {
+        "min": [
+          2.3182098865509033,
+          -0.11051025241613388,
+          0.6442500352859497
+        ],
+        "max": [
+          2.427309989929199,
+          0.025200195610523224,
+          0.7980700731277466
+        ]
+      },
+      "center": [
+        2.3727599382400513,
+        -0.04265502840280533,
+        0.7211600542068481
+      ],
+      "anchor": [
+        2.377570152282715,
+        -0.0758502185344696,
+        0.7176399827003479
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3285",
+          "sha256": "3561c1648197f5c2f44c577e2b54c1fbf76b36bbcab207f8b67286ba134cea2c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+      "fmaId": "FMA23468",
+      "name": "Left ulna",
+      "sourceName": "left ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23468",
+      "bounds": {
+        "min": [
+          1.9689199924468994,
+          0.050159912556409836,
+          -0.05447700619697571
+        ],
+        "max": [
+          2.4711999893188477,
+          2.5246996879577637,
+          0.7327899932861328
+        ]
+      },
+      "center": [
+        2.2200599908828735,
+        1.2874298002570868,
+        0.33915649354457855
+      ],
+      "anchor": [
+        2.191890001296997,
+        1.2612799406051636,
+        0.3485729992389679
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3286",
+          "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-ring-finger",
+      "fmaId": "FMA23942",
+      "name": "Middle phalanx of left ring finger",
+      "sourceName": "middle phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23942",
+      "bounds": {
+        "min": [
+          2.4278199672698975,
+          -1.3017901182174683,
+          1.06794011592865
+        ],
+        "max": [
+          2.5453200340270996,
+          -1.0631598234176636,
+          1.3054699897766113
+        ]
+      },
+      "center": [
+        2.4865700006484985,
+        -1.182474970817566,
+        1.1867050528526306
+      ],
+      "anchor": [
+        2.4808900356292725,
+        -1.1811999082565308,
+        1.1913200616836548
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3291",
+          "sha256": "5c352c5c4329997419f731995176a2e293c749bc4896de37e6feb9d8b122cfac"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24457",
+      "name": "Middle phalanx of right ring finger",
+      "sourceName": "middle phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24457",
+      "bounds": {
+        "min": [
+          -2.5429298877716064,
+          -1.3029601573944092,
+          1.0653599500656128
+        ],
+        "max": [
+          -2.4276299476623535,
+          -1.0639599561691284,
+          1.3056700229644775
+        ]
+      },
+      "center": [
+        -2.48527991771698,
+        -1.1834600567817688,
+        1.1855149865150452
+      ],
+      "anchor": [
+        -2.4890999794006348,
+        -1.178220272064209,
+        1.1903899908065796
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3292",
+          "sha256": "11af3f3453af291b20b0f4a9002c3e0906535acdc0004bd175876ddeecb9a094"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-index-finger",
+      "fmaId": "FMA23938",
+      "name": "Middle phalanx of left index finger",
+      "sourceName": "middle phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23938",
+      "bounds": {
+        "min": [
+          2.94389009475708,
+          -1.290250301361084,
+          1.0125600099563599
+        ],
+        "max": [
+          3.090010166168213,
+          -1.0854699611663818,
+          1.2205700874328613
+        ]
+      },
+      "center": [
+        3.0169501304626465,
+        -1.187860131263733,
+        1.1165650486946106
+      ],
+      "anchor": [
+        3.010430097579956,
+        -1.1797497272491455,
+        1.1273499727249146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3296",
+          "sha256": "a2f1986d020da3ec013aeefb14b11223b18ab4181f0e7f2e56d54faee672e34f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-little-finger",
+      "fmaId": "FMA23944",
+      "name": "Middle phalanx of left little finger",
+      "sourceName": "middle phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23944",
+      "bounds": {
+        "min": [
+          2.1892099380493164,
+          -1.1253399848937988,
+          1.0491200685501099
+        ],
+        "max": [
+          2.302989959716797,
+          -0.9293902516365051,
+          1.2147899866104126
+        ]
+      },
+      "center": [
+        2.2460999488830566,
+        -1.027365118265152,
+        1.1319550275802612
+      ],
+      "anchor": [
+        2.267199993133545,
+        -1.0419098138809204,
+        1.1407699584960938
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3297",
+          "sha256": "536be862531dc82ab85bc0f7a49f1492574a39d613db552a1dc98b535e2c83f5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:middle-phalanx-of-left-middle-finger",
+      "fmaId": "FMA23940",
+      "name": "Middle phalanx of left middle finger",
+      "sourceName": "middle phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23940",
+      "bounds": {
+        "min": [
+          2.6651699542999268,
+          -1.3759100437164307,
+          1.0785800218582153
+        ],
+        "max": [
+          2.8020498752593994,
+          -1.1223297119140625,
+          1.3087600469589233
+        ]
+      },
+      "center": [
+        2.733609914779663,
+        -1.2491198778152466,
+        1.1936700344085693
+      ],
+      "anchor": [
+        2.7057502269744873,
+        -1.2561999559402466,
+        1.199679970741272
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3299",
+          "sha256": "f0404230992ffcf77f1d3834c6015305abe10c2c40a84e2e920a21d9cc0743f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-index-finger",
+      "fmaId": "FMA24455",
+      "name": "Middle phalanx of right index finger",
+      "sourceName": "middle phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24455",
+      "bounds": {
+        "min": [
+          -3.0899999141693115,
+          -1.2899402379989624,
+          1.0130900144577026
+        ],
+        "max": [
+          -2.944000005722046,
+          -1.0852398872375488,
+          1.220829963684082
+        ]
+      },
+      "center": [
+        -3.0169999599456787,
+        -1.1875900626182556,
+        1.1169599890708923
+      ],
+      "anchor": [
+        -2.999540090560913,
+        -1.2109496593475342,
+        1.1353100538253784
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3303",
+          "sha256": "af5955d21314bf58ed06fc28f28467e56ce366b658372b37a5e21936ed9f2c8b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-little-finger",
+      "fmaId": "FMA24458",
+      "name": "Middle phalanx of right little finger",
+      "sourceName": "middle phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24458",
+      "bounds": {
+        "min": [
+          -2.305449962615967,
+          -1.1242998838424683,
+          1.0482299327850342
+        ],
+        "max": [
+          -2.189349889755249,
+          -0.9284496903419495,
+          1.2143899202346802
+        ]
+      },
+      "center": [
+        -2.247399926185608,
+        -1.0263747870922089,
+        1.1313099265098572
+      ],
+      "anchor": [
+        -2.2532401084899902,
+        -1.0122802257537842,
+        1.1373399496078491
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3304",
+          "sha256": "4cd1972167a669afb93f288cf994101bb32083b95efbfc1696b1781560586ca0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:middle-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24456",
+      "name": "Middle phalanx of right middle finger",
+      "sourceName": "middle phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24456",
+      "bounds": {
+        "min": [
+          -2.8020200729370117,
+          -1.3754303455352783,
+          1.077989935874939
+        ],
+        "max": [
+          -2.6658802032470703,
+          -1.1219298839569092,
+          1.309340000152588
+        ]
+      },
+      "center": [
+        -2.733950138092041,
+        -1.2486801147460938,
+        1.1936649680137634
+      ],
+      "anchor": [
+        -2.7432501316070557,
+        -1.230080008506775,
+        1.1914900541305542
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3306",
+          "sha256": "60a6197d8d7dedcb1039f82613c3c9e968109a9588b89a767ba6a44202f7c830"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-index-finger",
+      "fmaId": "FMA71915",
+      "name": "Proximal phalanx of left index finger",
+      "sourceName": "proximal phalanx of left index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71915",
+      "bounds": {
+        "min": [
+          2.8081400394439697,
+          -1.1427899599075317,
+          0.8408900499343872
+        ],
+        "max": [
+          3.02810001373291,
+          -0.7664397954940796,
+          1.0705701112747192
+        ]
+      },
+      "center": [
+        2.91812002658844,
+        -0.9546148777008057,
+        0.9557300806045532
+      ],
+      "anchor": [
+        2.91441011428833,
+        -0.9245398044586182,
+        0.9560099840164185
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3313",
+          "sha256": "3eb71ace606cc3271523e30a405c061290d9da661b59310a682c9d50d9c0ddf1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-little-finger",
+      "fmaId": "FMA66791",
+      "name": "Proximal phalanx of left little finger",
+      "sourceName": "proximal phalanx of left little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA66791",
+      "bounds": {
+        "min": [
+          2.2222700119018555,
+          -0.9661499261856079,
+          0.886680006980896
+        ],
+        "max": [
+          2.3629400730133057,
+          -0.6421002149581909,
+          1.0946099758148193
+        ]
+      },
+      "center": [
+        2.2926050424575806,
+        -0.8041250705718994,
+        0.9906449913978577
+      ],
+      "anchor": [
+        2.31427001953125,
+        -0.7887499928474426,
+        0.9864500164985657
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3314",
+          "sha256": "8b824d96eed3bc1325665fa99592d58ebd43346b436154fefae6a3c2a98753af"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-middle-finger",
+      "fmaId": "FMA71908",
+      "name": "Proximal phalanx of left middle finger",
+      "sourceName": "proximal phalanx of left middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71908",
+      "bounds": {
+        "min": [
+          2.5920097827911377,
+          -1.1570098400115967,
+          0.8519200086593628
+        ],
+        "max": [
+          2.7738001346588135,
+          -0.7503399848937988,
+          1.1409599781036377
+        ]
+      },
+      "center": [
+        2.6829049587249756,
+        -0.9536749124526978,
+        0.9964399933815002
+      ],
+      "anchor": [
+        2.6530802249908447,
+        -0.9588897824287415,
+        1.0060200691223145
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3316",
+          "sha256": "5dccce5f8ff2f9152fb6b758b8cdd0bcf9fd73cc01a78464a965f69e90994bb6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-ring-finger",
+      "fmaId": "FMA71916",
+      "name": "Proximal phalanx of left ring finger",
+      "sourceName": "proximal phalanx of left ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA71916",
+      "bounds": {
+        "min": [
+          2.4049201011657715,
+          -1.0994800329208374,
+          0.8570899963378906
+        ],
+        "max": [
+          2.5388600826263428,
+          -0.7104198932647705,
+          1.1192998886108398
+        ]
+      },
+      "center": [
+        2.471890091896057,
+        -0.904949963092804,
+        0.9881949424743652
+      ],
+      "anchor": [
+        2.466089963912964,
+        -0.8757598996162415,
+        0.9792799353599548
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3317",
+          "sha256": "099ccb27cdafeb169ffeb8bc73804910f30a6cefccf830d4dbfa6855bfebf46c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:bone:proximal-phalanx-of-left-thumb",
+      "fmaId": "FMA65470",
+      "name": "Proximal phalanx of left thumb",
+      "sourceName": "proximal phalanx of left thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA65470",
+      "bounds": {
+        "min": [
+          2.9869399070739746,
+          -0.6447100639343262,
+          0.926289975643158
+        ],
+        "max": [
+          3.186189889907837,
+          -0.3283196985721588,
+          1.1475300788879395
+        ]
+      },
+      "center": [
+        3.0865648984909058,
+        -0.4865148812532425,
+        1.0369100272655487
+      ],
+      "anchor": [
+        3.0822501182556152,
+        -0.45986998081207275,
+        1.0437699556350708
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3318",
+          "sha256": "3b327f7169609c03540967f7f8ceba810afda27a427cb5f16ea6641ef429837a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-index-finger",
+      "fmaId": "FMA24451",
+      "name": "Proximal phalanx of right index finger",
+      "sourceName": "proximal phalanx of right index finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24451",
+      "bounds": {
+        "min": [
+          -3.0276501178741455,
+          -1.1418102979660034,
+          0.8409300446510315
+        ],
+        "max": [
+          -2.8095200061798096,
+          -0.7680298089981079,
+          1.067579984664917
+        ]
+      },
+      "center": [
+        -2.9185850620269775,
+        -0.9549200534820557,
+        0.9542550146579742
+      ],
+      "anchor": [
+        -2.9455599784851074,
+        -0.9092297554016113,
+        0.950950026512146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3322",
+          "sha256": "03cb38d378f7eb94046e45a6fcc214c48b1081b6a35c37a491bde356cb948764"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-little-finger",
+      "fmaId": "FMA24454",
+      "name": "Proximal phalanx of right little finger",
+      "sourceName": "proximal phalanx of right little finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24454",
+      "bounds": {
+        "min": [
+          -2.3632898330688477,
+          -0.9664398431777954,
+          0.887209951877594
+        ],
+        "max": [
+          -2.221519947052002,
+          -0.640440046787262,
+          1.095229983329773
+        ]
+      },
+      "center": [
+        -2.292404890060425,
+        -0.8034399449825287,
+        0.9912199676036835
+      ],
+      "anchor": [
+        -2.2627201080322266,
+        -0.8029101490974426,
+        0.9962600469589233
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3323",
+          "sha256": "c3aaebcb7e86e3610f6d7a6896b33a60d7f544f924bdf0c4b639f8dae8c62e55"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-middle-finger",
+      "fmaId": "FMA24452",
+      "name": "Proximal phalanx of right middle finger",
+      "sourceName": "proximal phalanx of right middle finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24452",
+      "bounds": {
+        "min": [
+          -2.7741401195526123,
+          -1.157189965248108,
+          0.8511199951171875
+        ],
+        "max": [
+          -2.5920801162719727,
+          -0.751389741897583,
+          1.1420100927352905
+        ]
+      },
+      "center": [
+        -2.6831101179122925,
+        -0.9542898535728455,
+        0.996565043926239
+      ],
+      "anchor": [
+        -2.671720027923584,
+        -0.958250105381012,
+        1.0065100193023682
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3325",
+          "sha256": "ea76430375e036eea61a11c3edcbece711496563e5f2d35e6bee7f1a1cb49569"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-ring-finger",
+      "fmaId": "FMA24453",
+      "name": "Proximal phalanx of right ring finger",
+      "sourceName": "proximal phalanx of right ring finger",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24453",
+      "bounds": {
+        "min": [
+          -2.5382399559020996,
+          -1.1003198623657227,
+          0.8565800189971924
+        ],
+        "max": [
+          -2.405910015106201,
+          -0.7106799483299255,
+          1.1197700500488281
+        ]
+      },
+      "center": [
+        -2.4720749855041504,
+        -0.9054999053478241,
+        0.9881750345230103
+      ],
+      "anchor": [
+        -2.481029987335205,
+        -0.9124798774719238,
+        0.9977299571037292
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3326",
+          "sha256": "5bb35c193650c9e390ad18d2e9ca834c19ab32d478a12446380d8cd50b9b0ca2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:proximal-phalanx-of-right-thumb",
+      "fmaId": "FMA24450",
+      "name": "Proximal phalanx of right thumb",
+      "sourceName": "proximal phalanx of right thumb",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24450",
+      "bounds": {
+        "min": [
+          -3.1880898475646973,
+          -0.6439300775527954,
+          0.9265300035476685
+        ],
+        "max": [
+          -2.986489772796631,
+          -0.32802000641822815,
+          1.1488299369812012
+        ]
+      },
+      "center": [
+        -3.087289810180664,
+        -0.4859750419855118,
+        1.0376799702644348
+      ],
+      "anchor": [
+        -3.0790300369262695,
+        -0.5008697509765625,
+        1.0447500944137573
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3327",
+          "sha256": "84d3df498603c91935ae8edfc341c17ad3e46b910249a98e1e3edd4ccf309e71"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-first-metacarpal-bone",
+      "fmaId": "FMA24464",
+      "name": "Right first metacarpal bone",
+      "sourceName": "right first metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24464",
+      "bounds": {
+        "min": [
+          -3.0957698822021484,
+          -0.3971899449825287,
+          0.736270010471344
+        ],
+        "max": [
+          -2.7223598957061768,
+          -0.027620239183306694,
+          1.0386099815368652
+        ]
+      },
+      "center": [
+        -2.9090648889541626,
+        -0.2124050920829177,
+        0.8874399960041046
+      ],
+      "anchor": [
+        -2.914479970932007,
+        -0.24702025949954987,
+        0.8846299648284912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3350",
+          "sha256": "92ef27746cf2c5b317b88558b42e171128f980ea16414ca6e3647d19d1594382"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-second-metacarpal-bone",
+      "fmaId": "FMA24466",
+      "name": "Right second metacarpal bone",
+      "sourceName": "right second metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24466",
+      "bounds": {
+        "min": [
+          -2.926870107650757,
+          -0.8112902641296387,
+          0.6705700159072876
+        ],
+        "max": [
+          -2.6182000637054443,
+          -0.13130980730056763,
+          0.9278700351715088
+        ]
+      },
+      "center": [
+        -2.7725350856781006,
+        -0.47130003571510315,
+        0.7992200255393982
+      ],
+      "anchor": [
+        -2.7511701583862305,
+        -0.46614015102386475,
+        0.7921000719070435
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3352",
+          "sha256": "6d4e9874925f542124ced9e041f340de5b9c8f872d6ad7e2d483e9d0ab159980"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-third-metacarpal-bone",
+      "fmaId": "FMA24468",
+      "name": "Right third metacarpal bone",
+      "sourceName": "right third metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24468",
+      "bounds": {
+        "min": [
+          -2.7234601974487305,
+          -0.7915997505187988,
+          0.623259961605072
+        ],
+        "max": [
+          -2.52485990524292,
+          -0.14737975597381592,
+          0.9273300170898438
+        ]
+      },
+      "center": [
+        -2.624160051345825,
+        -0.4694897532463074,
+        0.7752949893474579
+      ],
+      "anchor": [
+        -2.628920078277588,
+        -0.4772900342941284,
+        0.7948399186134338
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3354",
+          "sha256": "98a26b8f08e6cd3578706a65d83c2e1e432d7a206202294cd525aa287b75072b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fourth-metacarpal-bone",
+      "fmaId": "FMA24470",
+      "name": "Right fourth metacarpal bone",
+      "sourceName": "right fourth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24470",
+      "bounds": {
+        "min": [
+          -2.537410020828247,
+          -0.7472100853919983,
+          0.6591699719429016
+        ],
+        "max": [
+          -2.414259910583496,
+          -0.1484197974205017,
+          0.9197099208831787
+        ]
+      },
+      "center": [
+        -2.4758349657058716,
+        -0.44781494140625,
+        0.7894399464130402
+      ],
+      "anchor": [
+        -2.476410150527954,
+        -0.44835999608039856,
+        0.7853500247001648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3356",
+          "sha256": "3bb88e2a98ce1cb0ab8af411397e5edc5777546c394b25d4d4ee585493ee3718"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-fifth-metacarpal-bone",
+      "fmaId": "FMA24472",
+      "name": "Right fifth metacarpal bone",
+      "sourceName": "right fifth metacarpal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24472",
+      "bounds": {
+        "min": [
+          -2.4531400203704834,
+          -0.679840087890625,
+          0.7007599472999573
+        ],
+        "max": [
+          -2.2520198822021484,
+          -0.1308099329471588,
+          0.9452000260353088
+        ]
+      },
+      "center": [
+        -2.352579951286316,
+        -0.4053250104188919,
+        0.8229799866676331
+      ],
+      "anchor": [
+        -2.342400074005127,
+        -0.4185498058795929,
+        0.8263299465179443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3358",
+          "sha256": "23d26888c325fd6a2de2688e948de72057afaf383db13875445fe597bd2a8bfd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-capitate",
+      "fmaId": "FMA24446",
+      "name": "Right capitate",
+      "sourceName": "right capitate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24446",
+      "bounds": {
+        "min": [
+          -2.644819974899292,
+          -0.17809021472930908,
+          0.6053399443626404
+        ],
+        "max": [
+          -2.4840099811553955,
+          0.045969847589731216,
+          0.7749199867248535
+        ]
+      },
+      "center": [
+        -2.5644149780273438,
+        -0.06606018356978893,
+        0.690129965543747
+      ],
+      "anchor": [
+        -2.571499824523926,
+        -0.05504028499126434,
+        0.6550499796867371
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3361",
+          "sha256": "982098ff86ccc18075bd4ecf422c4bca732f4d691d249c8f381bac574287c59b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+      "fmaId": "FMA13322",
+      "name": "Right clavicle",
+      "sourceName": "right clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13322",
+      "bounds": {
+        "min": [
+          -1.4527698755264282,
+          5.086199760437012,
+          0.04412498325109482
+        ],
+        "max": [
+          -0.09661649912595749,
+          5.554399490356445,
+          0.9694799780845642
+        ]
+      },
+      "center": [
+        -0.7746931873261929,
+        5.3202996253967285,
+        0.5068024806678295
+      ],
+      "anchor": [
+        -0.7849389910697937,
+        5.359100341796875,
+        0.5070599913597107
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3362",
+          "sha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-hamate",
+      "fmaId": "FMA24448",
+      "name": "Right hamate",
+      "sourceName": "right hamate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24448",
+      "bounds": {
+        "min": [
+          -2.519279956817627,
+          -0.18706969916820526,
+          0.6140599846839905
+        ],
+        "max": [
+          -2.366000175476074,
+          0.0065301512368023396,
+          0.8393099904060364
+        ]
+      },
+      "center": [
+        -2.4426400661468506,
+        -0.09026977396570146,
+        0.7266849875450134
+      ],
+      "anchor": [
+        -2.4433600902557373,
+        -0.06616027653217316,
+        0.7440400123596191
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3367",
+          "sha256": "9c27cf5b75dd149f2469403af7ad68263e1eff29307864ae10481ac647262eba"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-lunate",
+      "fmaId": "FMA24437",
+      "name": "Right lunate",
+      "sourceName": "right lunate",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24437",
+      "bounds": {
+        "min": [
+          -2.527240037918091,
+          -0.025390014052391052,
+          0.6063500046730042
+        ],
+        "max": [
+          -2.3620200157165527,
+          0.09820007532835007,
+          0.7692400217056274
+        ]
+      },
+      "center": [
+        -2.4446300268173218,
+        0.03640503063797951,
+        0.6877950131893158
+      ],
+      "anchor": [
+        -2.471640110015869,
+        0.022319946438074112,
+        0.6949800252914429
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3374",
+          "sha256": "82da5ab98cc4f4e311eba2ee20b811bfa392a05d65d9f8c4ed0b9c7fd62880a1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-pisiform",
+      "fmaId": "FMA24441",
+      "name": "Right pisiform",
+      "sourceName": "right pisiform",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24441",
+      "bounds": {
+        "min": [
+          -2.4021999835968018,
+          -0.10325012356042862,
+          0.7724900245666504
+        ],
+        "max": [
+          -2.3195600509643555,
+          0.013250121846795082,
+          0.8765800595283508
+        ]
+      },
+      "center": [
+        -2.3608800172805786,
+        -0.04500000085681677,
+        0.8245350420475006
+      ],
+      "anchor": [
+        -2.3296401500701904,
+        -0.02854003943502903,
+        0.839139997959137
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3382",
+          "sha256": "c5b1ce6020acc6e1feff8f44a3f0b5ec717e3cb3218701fbe86644975d981684"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-scaphoid",
+      "fmaId": "FMA24435",
+      "name": "Right scaphoid",
+      "sourceName": "right scaphoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24435",
+      "bounds": {
+        "min": [
+          -2.730599880218506,
+          -0.03645996004343033,
+          0.6157400012016296
+        ],
+        "max": [
+          -2.4933199882507324,
+          0.11789978295564651,
+          0.7666299939155579
+        ]
+      },
+      "center": [
+        -2.611959934234619,
+        0.04071991145610809,
+        0.6911849975585938
+      ],
+      "anchor": [
+        -2.6074700355529785,
+        0.03192993253469467,
+        0.7223300337791443
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3383",
+          "sha256": "e96e60d6c03b0581caa5733e3ab65aca6dc3671a476d78f123dcd48ecbee0050"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "sourceName": "right scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13395",
+      "bounds": {
+        "min": [
+          -1.6646400690078735,
+          3.839599609375,
+          -0.5508275032043457
+        ],
+        "max": [
+          -0.5705379843711853,
+          5.498600006103516,
+          0.5285600423812866
+        ]
+      },
+      "center": [
+        -1.1175890266895294,
+        4.669099807739258,
+        -0.011133730411529541
+      ],
+      "anchor": [
+        -1.1983000040054321,
+        4.698699951171875,
+        -0.054347991943359375
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3384",
+          "sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezium",
+      "fmaId": "FMA24443",
+      "name": "Right trapezium",
+      "sourceName": "right trapezium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24443",
+      "bounds": {
+        "min": [
+          -2.8172197341918945,
+          -0.1419500708580017,
+          0.6773000359535217
+        ],
+        "max": [
+          -2.6493799686431885,
+          0.05732971057295799,
+          0.8457600474357605
+        ]
+      },
+      "center": [
+        -2.7332998514175415,
+        -0.04231018014252186,
+        0.7615300416946411
+      ],
+      "anchor": [
+        -2.7505600452423096,
+        -0.07653991878032684,
+        0.7888699173927307
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3388",
+          "sha256": "3b2475587f9ca59d43cb48c7275999f795f97f8b0ed6c68d5b37ff582382d81f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-trapezoid",
+      "fmaId": "FMA23725",
+      "name": "Right trapezoid",
+      "sourceName": "right trapezoid",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA23725",
+      "bounds": {
+        "min": [
+          -2.732609748840332,
+          -0.17135009169578552,
+          0.6352699995040894
+        ],
+        "max": [
+          -2.6214001178741455,
+          -0.0468902587890625,
+          0.7838799953460693
+        ]
+      },
+      "center": [
+        -2.6770049333572388,
+        -0.10912017524242401,
+        0.7095749974250793
+      ],
+      "anchor": [
+        -2.674639940261841,
+        -0.14263977110385895,
+        0.7184200286865234
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3389",
+          "sha256": "6823c47b6593463e65b85861e51026b06b76e0196dde1e8fae8b902a32f2a0e8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:bone:right-triquetral",
+      "fmaId": "FMA24439",
+      "name": "Right triquetral",
+      "sourceName": "right triquetral",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-skeleton",
+      "nodeName": "FMA24439",
+      "bounds": {
+        "min": [
+          -2.4276599884033203,
+          -0.11231017857789993,
+          0.6463099718093872
+        ],
+        "max": [
+          -2.3215699195861816,
+          0.02590026892721653,
+          0.7973599433898926
+        ]
+      },
+      "center": [
+        -2.374614953994751,
+        -0.0432049548253417,
+        0.7218349575996399
+      ],
+      "anchor": [
+        -2.3802099227905273,
+        -0.0769500732421875,
+        0.7228700518608093
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3390",
+          "sha256": "aa1d02ab7a2b7e2d87125a43fc92f497d9d35323de3d1a8b25185dbb7dd5cc09"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+      "fmaId": "FMA3953",
+      "name": "Right subclavian artery",
+      "sourceName": "right subclavian artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA3953",
+      "bounds": {
+        "min": [
+          -0.8217599987983704,
+          5.309399604797363,
+          0.44354599714279175
+        ],
+        "max": [
+          -0.0974728986620903,
+          5.530300140380859,
+          0.6222100257873535
+        ]
+      },
+      "center": [
+        -0.45961644873023033,
+        5.419849872589111,
+        0.5328780114650726
+      ],
+      "anchor": [
+        -0.458391010761261,
+        5.453499794006348,
+        0.5169299840927124
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3579",
+          "sha256": "1fb9231343dce90a8d62061c63e0102eb72d117f131eda7876abfeb0060b6ad3"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+      "fmaId": "FMA4694",
+      "name": "Left subclavian artery",
+      "sourceName": "left subclavian artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "shoulder-arm",
+        "head-neck"
+      ],
+      "bundle": "thorax-vessels-recovery",
+      "nodeName": "FMA4694",
+      "bounds": {
+        "min": [
+          0.17685699462890625,
+          5.073100566864014,
+          0.368478000164032
+        ],
+        "max": [
+          0.865464985370636,
+          5.564599514007568,
+          0.5563400387763977
+        ]
+      },
+      "center": [
+        0.5211609899997711,
+        5.318850040435791,
+        0.46240901947021484
+      ],
+      "anchor": [
+        0.6160910129547119,
+        5.413900375366211,
+        0.5066100358963013
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3479",
+          "sha256": "f6af4efb94e1ce94519c94684b1d0a0736272e5a0ed2677a63627e0ebfc228b1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+      "fmaId": "FMA22655",
+      "name": "Right axillary artery",
+      "sourceName": "right axillary artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22655",
+      "bounds": {
+        "min": [
+          -1.5144000053405762,
+          4.581200122833252,
+          0.3005619943141937
+        ],
+        "max": [
+          -0.7694149613380432,
+          5.398399829864502,
+          0.5642500519752502
+        ]
+      },
+      "center": [
+        -1.1419074833393097,
+        4.989799976348877,
+        0.432406023144722
+      ],
+      "anchor": [
+        -1.2723599672317505,
+        5.101700305938721,
+        0.4388520121574402
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2268",
+          "sha256": "192c0b2607e669dc89a6eadd2c11f2fff904f010e4dca81822209865df7e5752"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+      "fmaId": "FMA22656",
+      "name": "Left axillary artery",
+      "sourceName": "left axillary artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22656",
+      "bounds": {
+        "min": [
+          0.7693470120429993,
+          4.581300258636475,
+          0.3007800281047821
+        ],
+        "max": [
+          1.5145699977874756,
+          5.398399829864502,
+          0.5641500353813171
+        ]
+      },
+      "center": [
+        1.1419585049152374,
+        4.989850044250488,
+        0.4324650317430496
+      ],
+      "anchor": [
+        1.2681599855422974,
+        5.105999946594238,
+        0.43566298484802246
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2216",
+          "sha256": "fe9295ce260df56c46f29e56e410937c9fa2f3e104411fb7e91b5f9681509ccb"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+      "fmaId": "FMA22691",
+      "name": "Right brachial artery",
+      "sourceName": "right brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22691",
+      "bounds": {
+        "min": [
+          -2.174690008163452,
+          2.205900192260742,
+          0.22346900403499603
+        ],
+        "max": [
+          -1.4303799867630005,
+          4.743499755859375,
+          0.3897160291671753
+        ]
+      },
+      "center": [
+        -1.8025349974632263,
+        3.4746999740600586,
+        0.30659251660108566
+      ],
+      "anchor": [
+        -1.8113499879837036,
+        3.456199884414673,
+        0.3016369640827179
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2271",
+          "sha256": "ce5b122fcc19c637684c1de1661697b03d487f3b013e8b4313fb095f81118813"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+      "fmaId": "FMA22692",
+      "name": "Left brachial artery",
+      "sourceName": "left brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22692",
+      "bounds": {
+        "min": [
+          1.4304299354553223,
+          2.2059998512268066,
+          0.22347503900527954
+        ],
+        "max": [
+          2.1745100021362305,
+          4.743499755859375,
+          0.3896779716014862
+        ]
+      },
+      "center": [
+        1.8024699687957764,
+        3.474749803543091,
+        0.3065765053033829
+      ],
+      "anchor": [
+        1.805799961090088,
+        3.476099967956543,
+        0.289294958114624
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2219",
+          "sha256": "e3c8e2be45d0f25f4e2efa9a046bc13b66c4e43e724a2c2b0424d230719cc6db"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+      "fmaId": "FMA22696",
+      "name": "Right deep brachial artery",
+      "sourceName": "right deep brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22696",
+      "bounds": {
+        "min": [
+          -2.0604500770568848,
+          3.1497998237609863,
+          0.02115200087428093
+        ],
+        "max": [
+          -1.7434699535369873,
+          3.8430004119873047,
+          0.26665398478507996
+        ]
+      },
+      "center": [
+        -1.901960015296936,
+        3.4964001178741455,
+        0.14390299282968044
+      ],
+      "anchor": [
+        -1.8949899673461914,
+        3.4970996379852295,
+        0.10191798955202103
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2277",
+          "sha256": "dd048b36f91cc5b0f16bc5a7bae5bca66aaaf0e3a95c1e2b5e55c397062c1647"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+      "fmaId": "FMA22697",
+      "name": "Left deep brachial artery",
+      "sourceName": "left deep brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22697",
+      "bounds": {
+        "min": [
+          1.7435400485992432,
+          3.1497998237609863,
+          0.021077996119856834
+        ],
+        "max": [
+          2.0603699684143066,
+          3.8430004119873047,
+          0.266633003950119
+        ]
+      },
+      "center": [
+        1.901955008506775,
+        3.4964001178741455,
+        0.14385550003498793
+      ],
+      "anchor": [
+        1.8897600173950195,
+        3.503399610519409,
+        0.1038840115070343
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2225",
+          "sha256": "c24f0def19fb45bf84251678b8d63c09fa7d5f51fa71fdd5515adddb8ff7db6c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22682",
+      "name": "Right anterior circumflex humeral artery",
+      "sourceName": "right anterior circumflex humeral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22682",
+      "bounds": {
+        "min": [
+          -1.9123198986053467,
+          4.655500411987305,
+          0.20995399355888367
+        ],
+        "max": [
+          -1.432569980621338,
+          5.329399585723877,
+          0.5645800232887268
+        ]
+      },
+      "center": [
+        -1.6724449396133423,
+        4.992449998855591,
+        0.38726700842380524
+      ],
+      "anchor": [
+        -1.7245100736618042,
+        4.948000431060791,
+        0.46442702412605286
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2264",
+          "sha256": "a7aaef0dc149e6b481057266ee1b9a41720e0400a70697fbb5c15e7f8dd06187"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+      "fmaId": "FMA22683",
+      "name": "Left anterior circumflex humeral artery",
+      "sourceName": "left anterior circumflex humeral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22683",
+      "bounds": {
+        "min": [
+          1.4325900077819824,
+          4.655500411987305,
+          0.20999497175216675
+        ],
+        "max": [
+          1.912310004234314,
+          5.329399585723877,
+          0.5646399855613708
+        ]
+      },
+      "center": [
+        1.6724500060081482,
+        4.992449998855591,
+        0.3873174786567688
+      ],
+      "anchor": [
+        1.7258399724960327,
+        4.945199966430664,
+        0.4618060290813446
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2212",
+          "sha256": "87ac4531b5551470294420965e60888cae7a4943f767386ab3f40713144850f2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22685",
+      "name": "Right posterior circumflex humeral artery",
+      "sourceName": "right posterior circumflex humeral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22685",
+      "bounds": {
+        "min": [
+          -1.9295200109481812,
+          4.858699798583984,
+          0.12414398044347763
+        ],
+        "max": [
+          -1.401319980621338,
+          4.984599590301514,
+          0.4818840026855469
+        ]
+      },
+      "center": [
+        -1.6654199957847595,
+        4.921649694442749,
+        0.30301399156451225
+      ],
+      "anchor": [
+        -1.5748900175094604,
+        4.877199649810791,
+        0.24333198368549347
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2291",
+          "sha256": "72f4c8d4e8465447611464bfa74df78924ffeaa9fc9829af32a4082518b6c02b"
+        },
+        {
+          "file": "FJ2292",
+          "sha256": "19ad27ed37b4fdc61653588976e81e138f28b063c52b270e5cdfb93364eac58b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+      "fmaId": "FMA22687",
+      "name": "Left posterior circumflex humeral artery",
+      "sourceName": "left posterior circumflex humeral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22687",
+      "bounds": {
+        "min": [
+          1.401360034942627,
+          4.859000205993652,
+          0.12425899505615234
+        ],
+        "max": [
+          1.9289900064468384,
+          4.984499454498291,
+          0.4817900061607361
+        ]
+      },
+      "center": [
+        1.6651750206947327,
+        4.921749830245972,
+        0.3030245006084442
+      ],
+      "anchor": [
+        1.5877599716186523,
+        4.874300479888916,
+        0.2290930151939392
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2239",
+          "sha256": "1e88872df7cffa6ccc3c325b2fbd0543279dc9ffc0a75b7e1e1ae14a0dc30d6f"
+        },
+        {
+          "file": "FJ2240",
+          "sha256": "8d07c946f22777f447e46597283d37a9ad993f8f1f8d194af6ed58dd2475d62c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+      "fmaId": "FMA23180",
+      "name": "Right circumflex scapular artery",
+      "sourceName": "right circumflex scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA23180",
+      "bounds": {
+        "min": [
+          -1.4422999620437622,
+          4.805600643157959,
+          0.011157989501953125
+        ],
+        "max": [
+          -1.3413499593734741,
+          4.939200401306152,
+          0.367127001285553
+        ]
+      },
+      "center": [
+        -1.3918249607086182,
+        4.872400522232056,
+        0.18914249539375305
+      ],
+      "anchor": [
+        -1.4265999794006348,
+        4.859799861907959,
+        0.1953199803829193
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2273",
+          "sha256": "37154eff6530ba3cb17412723850f45c3ee5be9d0d9b78e737c7a1f356c87b3c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+      "fmaId": "FMA23181",
+      "name": "Left circumflex scapular artery",
+      "sourceName": "left circumflex scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA23181",
+      "bounds": {
+        "min": [
+          1.3415700197219849,
+          4.805500507354736,
+          0.011130981147289276
+        ],
+        "max": [
+          1.4423099756240845,
+          4.939200401306152,
+          0.36712896823883057
+        ]
+      },
+      "center": [
+        1.3919399976730347,
+        4.872350454330444,
+        0.18912997469305992
+      ],
+      "anchor": [
+        1.425610065460205,
+        4.857800483703613,
+        0.19487297534942627
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2221",
+          "sha256": "3387830f0c01f2f98710951a900442fdf6ad7b123ad1202aad4e0390cb0551f4"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+      "fmaId": "FMA66321",
+      "name": "Right thoracodorsal artery",
+      "sourceName": "right thoracodorsal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA66321",
+      "bounds": {
+        "min": [
+          -1.3892899751663208,
+          4.006500244140625,
+          0.13707801699638367
+        ],
+        "max": [
+          -1.2835699319839478,
+          4.805500507354736,
+          0.41492798924446106
+        ]
+      },
+      "center": [
+        -1.3364299535751343,
+        4.406000375747681,
+        0.27600300312042236
+      ],
+      "anchor": [
+        -1.3184499740600586,
+        4.4180006980896,
+        0.22675301134586334
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2305",
+          "sha256": "b7d085f37da4801db31307961a176357a1d3a11e226c290e9883455376e9e254"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+      "fmaId": "FMA66322",
+      "name": "Left thoracodorsal artery",
+      "sourceName": "left thoracodorsal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA66322",
+      "bounds": {
+        "min": [
+          1.283560037612915,
+          4.006500244140625,
+          0.13711699843406677
+        ],
+        "max": [
+          1.3893699645996094,
+          4.805099964141846,
+          0.4148709774017334
+        ]
+      },
+      "center": [
+        1.3364650011062622,
+        4.405800104141235,
+        0.2759939879179001
+      ],
+      "anchor": [
+        1.3176400661468506,
+        4.427900314331055,
+        0.22957603633403778
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2253",
+          "sha256": "b6f9ae7678bb79b0245d03ea27ceee0a9e3f0cf6b6b0c7613c0830ac40e8989f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "name": "Right radial artery",
+      "sourceName": "right radial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22733",
+      "bounds": {
+        "min": [
+          -2.7951300144195557,
+          -0.08817993104457855,
+          0.33151495456695557
+        ],
+        "max": [
+          -2.1361098289489746,
+          2.244499444961548,
+          0.7712299823760986
+        ]
+      },
+      "center": [
+        -2.465619921684265,
+        1.0781597569584846,
+        0.5513724684715271
+      ],
+      "anchor": [
+        -2.5781900882720947,
+        1.0522302389144897,
+        0.3984220027923584
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2294",
+          "sha256": "cca326b54b9f4e6ed4c4a8ccf258959a3a3c54aff996b894eacca20af05217d2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "fmaId": "FMA22734",
+      "name": "Left radial artery",
+      "sourceName": "left radial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22734",
+      "bounds": {
+        "min": [
+          2.1361098289489746,
+          -0.08814025670289993,
+          0.3315100073814392
+        ],
+        "max": [
+          2.795069932937622,
+          2.244499444961548,
+          0.7712699770927429
+        ]
+      },
+      "center": [
+        2.4655898809432983,
+        1.078179594129324,
+        0.5513899922370911
+      ],
+      "anchor": [
+        2.578469753265381,
+        1.0441497564315796,
+        0.40048301219940186
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2242",
+          "sha256": "d97e01814668d5a32f18a5cc07a3e6e77bf1a734008f21d8f7dc62fedd0175a6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "name": "Right ulnar artery",
+      "sourceName": "right ulnar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22797",
+      "bounds": {
+        "min": [
+          -2.4372599124908447,
+          -0.05320983752608299,
+          0.2698560357093811
+        ],
+        "max": [
+          -2.110489845275879,
+          2.244499444961548,
+          0.810740053653717
+        ]
+      },
+      "center": [
+        -2.273874878883362,
+        1.0956448037177324,
+        0.5402980446815491
+      ],
+      "anchor": [
+        -2.194159984588623,
+        1.0684802532196045,
+        0.5297799706459045
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2310",
+          "sha256": "6bef22a74e2e6ae2d3033c4982fdb75abbadc9b255e76770211d61b3dd4796c1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "fmaId": "FMA22798",
+      "name": "Left ulnar artery",
+      "sourceName": "left ulnar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22798",
+      "bounds": {
+        "min": [
+          2.1105098724365234,
+          -0.05315978825092316,
+          0.26983702182769775
+        ],
+        "max": [
+          2.4372000694274902,
+          2.244499444961548,
+          0.81072998046875
+        ]
+      },
+      "center": [
+        2.273854970932007,
+        1.0956698283553123,
+        0.5402835011482239
+      ],
+      "anchor": [
+        2.1925101280212402,
+        1.073830008506775,
+        0.5356700420379639
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2258",
+          "sha256": "4ddf684432c015ef59cd0bc8cb72b8890632ebde5f2d92e3c1002209ac482b8a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "fmaId": "FMA22812",
+      "name": "Right anterior interosseous artery",
+      "sourceName": "right anterior interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22812",
+      "bounds": {
+        "min": [
+          -2.4415199756622314,
+          0.5062597393989563,
+          0.24150802195072174
+        ],
+        "max": [
+          -2.2034800052642822,
+          1.9400402307510376,
+          0.5864299535751343
+        ]
+      },
+      "center": [
+        -2.322499990463257,
+        1.223149985074997,
+        0.413968987762928
+      ],
+      "anchor": [
+        -2.360069990158081,
+        1.2440502643585205,
+        0.42872002720832825
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2266",
+          "sha256": "a8b244ec1ae503c6cd71562a8b80427a49459c111dfbd5e4837d1279c7fe07bd"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-anterior-interosseous-artery",
+      "fmaId": "FMA22813",
+      "name": "Left anterior interosseous artery",
+      "sourceName": "left anterior interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22813",
+      "bounds": {
+        "min": [
+          2.203510046005249,
+          0.5063201785087585,
+          0.24156402051448822
+        ],
+        "max": [
+          2.4414398670196533,
+          1.940100073814392,
+          0.5863600373268127
+        ]
+      },
+      "center": [
+        2.322474956512451,
+        1.2232101261615753,
+        0.4139620289206505
+      ],
+      "anchor": [
+        2.3553500175476074,
+        1.228920340538025,
+        0.43877801299095154
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2214",
+          "sha256": "231a0b9834bdf814dca37d8fd9bfa3511de943915caece50f93538426bf4922d"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+      "fmaId": "FMA22839",
+      "name": "Right deep palmar arch",
+      "sourceName": "right deep palmar arch",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-recovery",
+      "nodeName": "FMA22839",
+      "bounds": {
+        "min": [
+          -2.8119800090789795,
+          -0.23947997391223907,
+          0.6771299839019775
+        ],
+        "max": [
+          -2.3648598194122314,
+          -0.03317016735672951,
+          0.8471699357032776
+        ]
+      },
+      "center": [
+        -2.5884199142456055,
+        -0.1363250706344843,
+        0.7621499598026276
+      ],
+      "anchor": [
+        -2.592439889907837,
+        -0.19291014969348907,
+        0.7931700348854065
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2279",
+          "sha256": "1e60556bd0efd0e863d04cfdda4ec66383f011bdf0cc9c78681cedd3770f0d71"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+      "fmaId": "FMA22840",
+      "name": "Left deep palmar arch",
+      "sourceName": "left deep palmar arch",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-recovery",
+      "nodeName": "FMA22840",
+      "bounds": {
+        "min": [
+          2.3648900985717773,
+          -0.23942016065120697,
+          0.6770600080490112
+        ],
+        "max": [
+          2.812030076980591,
+          -0.032960206270217896,
+          0.8471899628639221
+        ]
+      },
+      "center": [
+        2.588460087776184,
+        -0.13619018346071243,
+        0.7621249854564667
+      ],
+      "anchor": [
+        2.586400032043457,
+        -0.19383972883224487,
+        0.7918400764465332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2227",
+          "sha256": "54a1df2e831cd1716af1fce40767ae33b03f6e0d047f61a6c1597e19670bec4f"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+      "fmaId": "FMA3992",
+      "name": "Right thyrocervical trunk",
+      "sourceName": "right thyrocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA3992",
+      "bounds": {
+        "min": [
+          -0.4277290105819702,
+          5.521999359130859,
+          0.4754229784011841
+        ],
+        "max": [
+          -0.40075698494911194,
+          5.5794997215271,
+          0.49482595920562744
+        ]
+      },
+      "center": [
+        -0.4142429977655411,
+        5.5507495403289795,
+        0.48512446880340576
+      ],
+      "anchor": [
+        -0.41858500242233276,
+        5.532700061798096,
+        0.48956596851348877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2307",
+          "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+      "fmaId": "FMA4084",
+      "name": "Left thyrocervical trunk",
+      "sourceName": "left thyrocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4084",
+      "bounds": {
+        "min": [
+          0.4013550281524658,
+          5.521899223327637,
+          0.4747239649295807
+        ],
+        "max": [
+          0.4276890158653259,
+          5.579100131988525,
+          0.49424201250076294
+        ]
+      },
+      "center": [
+        0.4145220220088959,
+        5.550499677658081,
+        0.4844829887151718
+      ],
+      "anchor": [
+        0.4182009994983673,
+        5.533499717712402,
+        0.4902590215206146
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2255",
+          "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+      "fmaId": "FMA5039",
+      "name": "Right costocervical trunk",
+      "sourceName": "right costocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA5039",
+      "bounds": {
+        "min": [
+          -0.5218989849090576,
+          5.472499847412109,
+          0.41986504197120667
+        ],
+        "max": [
+          -0.4543980062007904,
+          5.555600643157959,
+          0.49830496311187744
+        ]
+      },
+      "center": [
+        -0.488148495554924,
+        5.514050245285034,
+        0.45908500254154205
+      ],
+      "anchor": [
+        -0.4895249903202057,
+        5.522500038146973,
+        0.4635910093784332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2276",
+          "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+      "fmaId": "FMA4086",
+      "name": "Left costocervical trunk",
+      "sourceName": "left costocervical trunk",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "head-neck",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4086",
+      "bounds": {
+        "min": [
+          0.4547460079193115,
+          5.472900390625,
+          0.4201899766921997
+        ],
+        "max": [
+          0.5215910077095032,
+          5.5548996925354,
+          0.4979889690876007
+        ]
+      },
+      "center": [
+        0.48816850781440735,
+        5.5139000415802,
+        0.4590894728899002
+      ],
+      "anchor": [
+        0.48764801025390625,
+        5.507900238037109,
+        0.451477974653244
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2224",
+          "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+      "fmaId": "FMA4057",
+      "name": "Right dorsal scapular artery",
+      "sourceName": "right dorsal scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA4057",
+      "bounds": {
+        "min": [
+          -1.0666000843048096,
+          3.8316004276275635,
+          -0.5321046113967896
+        ],
+        "max": [
+          -0.5545200109481812,
+          5.613199234008789,
+          0.479032963514328
+        ]
+      },
+      "center": [
+        -0.8105600476264954,
+        4.722399830818176,
+        -0.026535823941230774
+      ],
+      "anchor": [
+        -0.5809879899024963,
+        4.696700572967529,
+        -0.4426394999027252
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2284",
+          "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+      "fmaId": "FMA10552",
+      "name": "Left dorsal scapular artery",
+      "sourceName": "left dorsal scapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA10552",
+      "bounds": {
+        "min": [
+          0.5547209978103638,
+          3.831899404525757,
+          -0.5322532057762146
+        ],
+        "max": [
+          1.0665899515151978,
+          5.613199234008789,
+          0.47892096638679504
+        ]
+      },
+      "center": [
+        0.8106554746627808,
+        4.722549319267273,
+        -0.026666119694709778
+      ],
+      "anchor": [
+        0.5759209990501404,
+        4.744699478149414,
+        -0.44102680683135986
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2232",
+          "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+      "fmaId": "FMA10698",
+      "name": "Right suprascapular artery",
+      "sourceName": "right suprascapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA10698",
+      "bounds": {
+        "min": [
+          -1.381119966506958,
+          4.914899826049805,
+          -0.13162700831890106
+        ],
+        "max": [
+          -0.4103670120239258,
+          5.548199653625488,
+          0.5230500102043152
+        ]
+      },
+      "center": [
+        -0.8957434892654419,
+        5.2315497398376465,
+        0.19571150094270706
+      ],
+      "anchor": [
+        -1.0132700204849243,
+        5.3201003074646,
+        0.17565597593784332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2303",
+          "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+      "fmaId": "FMA10681",
+      "name": "Left suprascapular artery",
+      "sourceName": "left suprascapular artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA10681",
+      "bounds": {
+        "min": [
+          0.4103490114212036,
+          4.914899826049805,
+          -0.13112300634384155
+        ],
+        "max": [
+          1.3812099695205688,
+          5.548199653625488,
+          0.5229499936103821
+        ]
+      },
+      "center": [
+        0.8957794904708862,
+        5.2315497398376465,
+        0.19591349363327026
+      ],
+      "anchor": [
+        1.0131900310516357,
+        5.319499492645264,
+        0.17460602521896362
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2251",
+          "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA66563",
+      "name": "Trunk of right thoraco-acromial artery",
+      "sourceName": "trunk of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA66563",
+      "bounds": {
+        "min": [
+          -0.9646859765052795,
+          5.183399677276611,
+          0.4785099923610687
+        ],
+        "max": [
+          -0.9166169762611389,
+          5.309200286865234,
+          0.5283600091934204
+        ]
+      },
+      "center": [
+        -0.9406514763832092,
+        5.246299982070923,
+        0.5034350007772446
+      ],
+      "anchor": [
+        -0.9337560534477234,
+        5.278399467468262,
+        0.4792209565639496
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2304",
+          "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA66564",
+      "name": "Trunk of left thoraco-acromial artery",
+      "sourceName": "trunk of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA66564",
+      "bounds": {
+        "min": [
+          0.9166539907455444,
+          5.183299541473389,
+          0.4786139726638794
+        ],
+        "max": [
+          0.9652439951896667,
+          5.309000015258789,
+          0.528659999370575
+        ]
+      },
+      "center": [
+        0.9409489929676056,
+        5.246149778366089,
+        0.5036369860172272
+      ],
+      "anchor": [
+        0.9215799570083618,
+        5.276999473571777,
+        0.48698097467422485
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2252",
+          "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23063",
+      "name": "Pectoral branch of right thoraco-acromial artery",
+      "sourceName": "pectoral branch of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23063",
+      "bounds": {
+        "min": [
+          -1.2689299583435059,
+          4.00629997253418,
+          0.48791801929473877
+        ],
+        "max": [
+          -0.9245250225067139,
+          5.224100112915039,
+          0.9948499798774719
+        ]
+      },
+      "center": [
+        -1.0967274904251099,
+        4.615200042724609,
+        0.7413839995861053
+      ],
+      "anchor": [
+        -1.1094200611114502,
+        4.625999927520752,
+        0.7812199592590332
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2361",
+          "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23064",
+      "name": "Pectoral branch of left thoraco-acromial artery",
+      "sourceName": "pectoral branch of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23064",
+      "bounds": {
+        "min": [
+          0.9245760440826416,
+          4.00629997253418,
+          0.4878929853439331
+        ],
+        "max": [
+          1.268880009651184,
+          5.224100112915039,
+          0.9948499798774719
+        ]
+      },
+      "center": [
+        1.0967280268669128,
+        4.615200042724609,
+        0.7413714826107025
+      ],
+      "anchor": [
+        1.1071399450302124,
+        4.64069938659668,
+        0.7724999785423279
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2330",
+          "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23068",
+      "name": "Acromial branch of right thoraco-acromial artery",
+      "sourceName": "acromial branch of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23068",
+      "bounds": {
+        "min": [
+          -1.3827999830245972,
+          5.175000190734863,
+          0.46362799406051636
+        ],
+        "max": [
+          -0.9414899945259094,
+          5.349799633026123,
+          0.5357099771499634
+        ]
+      },
+      "center": [
+        -1.1621449887752533,
+        5.262399911880493,
+        0.49966898560523987
+      ],
+      "anchor": [
+        -1.1718900203704834,
+        5.241800308227539,
+        0.4815899729728699
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2263",
+          "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23069",
+      "name": "Acromial branch of left thoraco-acromial artery",
+      "sourceName": "acromial branch of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23069",
+      "bounds": {
+        "min": [
+          0.9414849877357483,
+          5.174900054931641,
+          0.4637850224971771
+        ],
+        "max": [
+          1.3825300931930542,
+          5.349799633026123,
+          0.5355899930000305
+        ]
+      },
+      "center": [
+        1.1620075404644012,
+        5.262349843978882,
+        0.4996875077486038
+      ],
+      "anchor": [
+        1.169390082359314,
+        5.241700649261475,
+        0.47968003153800964
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2211",
+          "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+      "fmaId": "FMA23072",
+      "name": "Deltoid branch of right thoraco-acromial artery",
+      "sourceName": "deltoid branch of right thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23072",
+      "bounds": {
+        "min": [
+          -1.6184399127960205,
+          5.1080002784729,
+          0.4776820242404938
+        ],
+        "max": [
+          -1.1191400289535522,
+          5.21150016784668,
+          0.5387200117111206
+        ]
+      },
+      "center": [
+        -1.3687899708747864,
+        5.15975022315979,
+        0.5082010179758072
+      ],
+      "anchor": [
+        -1.3607699871063232,
+        5.134900093078613,
+        0.5233399868011475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2282",
+          "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+      "fmaId": "FMA23073",
+      "name": "Deltoid branch of left thoraco-acromial artery",
+      "sourceName": "deltoid branch of left thoraco-acromial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "thorax"
+      ],
+      "bundle": "shoulder-arm-vessels-inventory",
+      "nodeName": "FMA23073",
+      "bounds": {
+        "min": [
+          1.1192200183868408,
+          5.108100414276123,
+          0.47790297865867615
+        ],
+        "max": [
+          1.6182299852371216,
+          5.211400032043457,
+          0.5388400554656982
+        ]
+      },
+      "center": [
+        1.3687250018119812,
+        5.15975022315979,
+        0.5083715170621872
+      ],
+      "anchor": [
+        1.3586399555206299,
+        5.135500431060791,
+        0.5237900018692017
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2230",
+          "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22835",
+      "name": "Right superficial palmar arterial arch",
+      "sourceName": "right superficial palmar arterial arch",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22835",
+      "bounds": {
+        "min": [
+          -2.7173399925231934,
+          -0.45161011815071106,
+          0.7161499857902527
+        ],
+        "max": [
+          -2.347709894180298,
+          0.28822997212409973,
+          0.9041000604629517
+        ]
+      },
+      "center": [
+        -2.5325249433517456,
+        -0.08169007301330566,
+        0.8101250231266022
+      ],
+      "anchor": [
+        -2.434540033340454,
+        -0.06109985336661339,
+        0.7951099872589111
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2300",
+          "sha256": "396907b82c2f9b422643e3a72c941dcb10e3676ac26a4d1aae0a6ed28add7304"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+      "fmaId": "FMA22837",
+      "name": "Left superficial palmar arterial arch",
+      "sourceName": "left superficial palmar arterial arch",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22837",
+      "bounds": {
+        "min": [
+          2.3478500843048096,
+          -0.45169007778167725,
+          0.7160800099372864
+        ],
+        "max": [
+          2.7172799110412598,
+          0.2881701588630676,
+          0.9040400981903076
+        ]
+      },
+      "center": [
+        2.5325649976730347,
+        -0.08175995945930481,
+        0.810060054063797
+      ],
+      "anchor": [
+        2.434340000152588,
+        -0.06239013746380806,
+        0.7962100505828857
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2248",
+          "sha256": "2675c02ed6954ee29e47ded172dc055efe7ae3c8be6e0e58dd679bebf9b277a9"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+      "fmaId": "FMA22864",
+      "name": "Right palmar metacarpal artery",
+      "sourceName": "right palmar metacarpal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22864",
+      "bounds": {
+        "min": [
+          -2.828930139541626,
+          -0.5640100240707397,
+          0.6928399801254272
+        ],
+        "max": [
+          -2.404289960861206,
+          -0.1852099597454071,
+          0.9146899580955505
+        ]
+      },
+      "center": [
+        -2.616610050201416,
+        -0.3746099919080734,
+        0.8037649691104889
+      ],
+      "anchor": [
+        -2.683150053024292,
+        -0.3753002882003784,
+        0.839620053768158
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2289",
+          "sha256": "a14542bb1aaa1caaa3e0c37bd66fdeb33f88d89f4760c0cb0c591cce8c76ed92"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+      "fmaId": "FMA22865",
+      "name": "Left palmar metacarpal artery",
+      "sourceName": "left palmar metacarpal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22865",
+      "bounds": {
+        "min": [
+          2.404589891433716,
+          -0.5640997290611267,
+          0.692829966545105
+        ],
+        "max": [
+          2.8287298679351807,
+          -0.18533019721508026,
+          0.914609968662262
+        ]
+      },
+      "center": [
+        2.6166598796844482,
+        -0.3747149631381035,
+        0.8037199676036835
+      ],
+      "anchor": [
+        2.6790499687194824,
+        -0.3524700999259949,
+        0.8341701030731201
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2237",
+          "sha256": "003e898bce96e168bc39b856dea13e6b85089f04ca50bc1b812cbbfa21776bf2"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+      "fmaId": "FMA22905",
+      "name": "Right arteria princeps pollicis",
+      "sourceName": "right arteria princeps pollicis",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22905",
+      "bounds": {
+        "min": [
+          -3.244259834289551,
+          -0.8046002388000488,
+          0.745169997215271
+        ],
+        "max": [
+          -2.7337799072265625,
+          0.16978026926517487,
+          1.2536900043487549
+        ]
+      },
+      "center": [
+        -2.9890198707580566,
+        -0.317409984767437,
+        0.9994300007820129
+      ],
+      "anchor": [
+        -3.0648999214172363,
+        -0.2543499767780304,
+        1.019029974937439
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2371",
+          "sha256": "aa6b302f739011b74473ee503692661ef5f068396c3e45c76f83888f90d9ac62"
+        },
+        {
+          "file": "FJ2372",
+          "sha256": "410486a2460ca05fb882503a5fe0c8ecd087d11282a7eca064a3b9da203b4aeb"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+      "fmaId": "FMA22907",
+      "name": "Left arteria princeps pollicis",
+      "sourceName": "left arteria princeps pollicis",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22907",
+      "bounds": {
+        "min": [
+          2.7338900566101074,
+          -0.8042401075363159,
+          0.7451499700546265
+        ],
+        "max": [
+          3.244259834289551,
+          0.16982971131801605,
+          1.2536799907684326
+        ]
+      },
+      "center": [
+        2.989074945449829,
+        -0.31720519810914993,
+        0.9994149804115295
+      ],
+      "anchor": [
+        3.066229820251465,
+        -0.2554699778556824,
+        1.0175100564956665
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2338",
+          "sha256": "c4c706654f976142c288374563c3256bd22e748c9b06b4ba7faae6b4617cc051"
+        },
+        {
+          "file": "FJ2339",
+          "sha256": "c147fd6d4ade806956392706119eff828487da87d4a9dcaaa8c4f4ee2e696c9d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+      "fmaId": "FMA22777",
+      "name": "Right arteria radialis indicis",
+      "sourceName": "right arteria radialis indicis",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22777",
+      "bounds": {
+        "min": [
+          -3.138120174407959,
+          -1.3513598442077637,
+          0.8625500202178955
+        ],
+        "max": [
+          -2.7070300579071045,
+          -0.296060174703598,
+          1.3425599336624146
+        ]
+      },
+      "center": [
+        -2.9225751161575317,
+        -0.8237100094556808,
+        1.102554976940155
+      ],
+      "anchor": [
+        -2.979640007019043,
+        -0.8477697968482971,
+        0.9278500080108643
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2342",
+          "sha256": "044c4a4cfe047ce12134d1184f1a683291b09dff453db794d80d86a6bff3b034"
+        },
+        {
+          "file": "FJ2363",
+          "sha256": "fa61f393b2aa0934a6c0fbdaa883bc17754a837bdb96d88aa3bb3f1bc06ac56d"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+      "fmaId": "FMA22778",
+      "name": "Left arteria radialis indicis",
+      "sourceName": "left arteria radialis indicis",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "hand",
+      "regions": [
+        "hand"
+      ],
+      "bundle": "hand-vessels-hand-vascular",
+      "nodeName": "FMA22778",
+      "bounds": {
+        "min": [
+          2.706969976425171,
+          -1.351199984550476,
+          0.8625300526618958
+        ],
+        "max": [
+          3.1379799842834473,
+          -0.2959698438644409,
+          1.3424699306488037
+        ]
+      },
+      "center": [
+        2.922474980354309,
+        -0.8235849142074585,
+        1.1024999916553497
+      ],
+      "anchor": [
+        2.987600088119507,
+        -0.867230236530304,
+        0.9342599511146545
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2314",
+          "sha256": "20f4253cb295a3fbaf9951dff5a092690950a78565142b4e7b6e629e10fcd68d"
+        },
+        {
+          "file": "FJ2332",
+          "sha256": "a6ebd74f68d24d6eab266b275dc17e5c93c727114f06a9d3385b124d90e61a3e"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+      "fmaId": "FMA22808",
+      "name": "Left common interosseous artery",
+      "sourceName": "left common interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA22808",
+      "bounds": {
+        "min": [
+          2.117069959640503,
+          1.9161297082901,
+          0.21119102835655212
+        ],
+        "max": [
+          2.2274298667907715,
+          1.9969298839569092,
+          0.30138298869132996
+        ]
+      },
+      "center": [
+        2.172249913215637,
+        1.9565297961235046,
+        0.25628700852394104
+      ],
+      "anchor": [
+        2.164489984512329,
+        1.96711003780365,
+        0.24159401655197144
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2223",
+          "sha256": "11fccc2e5aec84ef7ed0d0c34ae3e9928c0aac91faaf48ce6801c09942985f28"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+      "fmaId": "FMA22807",
+      "name": "Right common interosseous artery",
+      "sourceName": "right common interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA22807",
+      "bounds": {
+        "min": [
+          -2.227400064468384,
+          1.9160699844360352,
+          0.2111620306968689
+        ],
+        "max": [
+          -2.117069959640503,
+          1.9968903064727783,
+          0.3013259768486023
+        ]
+      },
+      "center": [
+        -2.1722350120544434,
+        1.9564801454544067,
+        0.2562440037727356
+      ],
+      "anchor": [
+        -2.1642398834228516,
+        1.971350073814392,
+        0.2469400018453598
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2275",
+          "sha256": "96afb03f4aa0d1a62ccb95c8b1a7094da8104f9a9cb193e02ea2706707f473ce"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-recurrent-interosseous-artery",
+      "fmaId": "FMA268669",
+      "name": "Left recurrent interosseous artery",
+      "sourceName": "left recurrent interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA268669",
+      "bounds": {
+        "min": [
+          2.20317006111145,
+          1.9198297262191772,
+          0.028247985988855362
+        ],
+        "max": [
+          2.279670000076294,
+          2.485400438308716,
+          0.26178398728370667
+        ]
+      },
+      "center": [
+        2.241420030593872,
+        2.2026150822639465,
+        0.145015986636281
+      ],
+      "anchor": [
+        2.259459972381592,
+        2.2033002376556396,
+        0.11255798488855362
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2245",
+          "sha256": "3dc9427ea23fcea776ebee481af423ea6ac82f4efe22250bb22afcbb0359a0e0"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+      "fmaId": "FMA268667",
+      "name": "Right recurrent interosseous artery",
+      "sourceName": "right recurrent interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA268667",
+      "bounds": {
+        "min": [
+          -2.2795701026916504,
+          1.919810175895691,
+          0.028291014954447746
+        ],
+        "max": [
+          -2.2031099796295166,
+          2.485400438308716,
+          0.26178300380706787
+        ]
+      },
+      "center": [
+        -2.2413400411605835,
+        2.2026053071022034,
+        0.1450370093807578
+      ],
+      "anchor": [
+        -2.261690139770508,
+        2.1937999725341797,
+        0.11706298589706421
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2297",
+          "sha256": "0b37892b1dfc542627ebd1c0ef4644772f405da643ff51f18cb2eda374c07d9a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

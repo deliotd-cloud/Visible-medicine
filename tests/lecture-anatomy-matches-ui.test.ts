@@ -1,0 +1,95 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import React from 'react';
+import ts from 'typescript';
+import {createLectureAnatomyReference,lectureAnatomyOptions} from '../lib/lecture-anatomy-reference.ts';
+
+const lineageBoundary={WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol('synthetic-lineage'),finish(){},invalidate(){}})};
+const require=createRequire(import.meta.url),tick=()=>new Promise(resolve=>setImmediate(resolve));
+const initial={id:'synthetic-lecture',courseId:'synthetic-course',courseTitle:'Synthetic course',title:'Brainstem teaching',version:4,status:'draft',slides:[{id:'one',title:'Pons on CT',body:'Compare the Pons in a separate MRI example.',referenceUrl:''}],reviews:[],published:null,canEdit:true,canReview:false,canPublish:false};
+const label=(id:string)=>lectureAnatomyOptions().find(option=>option.conceptId===id)!.label;
+const nodes=(node:any):any[]=>Array.isArray(node)?node.flatMap(nodes):React.isValidElement(node)?[node,...nodes((node as any).props.children)]:[];
+const text=(node:any):string=>Array.isArray(node)?node.map(text).join(''):React.isValidElement(node)?text((node as any).props.children):typeof node==='string'||typeof node==='number'?String(node):'';
+function harness(view:any=initial){
+ const globals=new Map(['window','document'].map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]));
+ Object.defineProperty(globalThis,'window',{configurable:true,value:{confirm:()=>true,addEventListener(){},removeEventListener(){}}});
+ Object.defineProperty(globalThis,'document',{configurable:true,value:{addEventListener(){},removeEventListener(){}}});
+ const values:any[]=[],effects=new Map<number,{deps:unknown[];cleanup?:()=>void}>();let index=0,tree:any,changed=false,pending:Array<()=>void>=[];
+ const react={...React,useMemo:(create:()=>unknown)=>create(),useRef:(value:unknown)=>{const i=index++;return values[i]??(values[i]={current:value});},
+  useState:(seed:unknown)=>{const i=index++;if(!(i in values))values[i]=typeof seed==='function'?(seed as ()=>unknown)():seed;return[values[i],(next:any)=>{values[i]=typeof next==='function'?next(values[i]):next;changed=true;}];},
+  useEffect:(create:()=>void|(()=>void),deps:unknown[])=>{const i=index++,old=effects.get(i);if(!old||deps.length!==old.deps.length||deps.some((d,j)=>d!==old.deps[j]))pending.push(()=>{old?.cleanup?.();const cleanup=create();effects.set(i,{deps,cleanup:typeof cleanup==='function'?cleanup:undefined});});},
+ };
+ Object.assign(react,{useLayoutEffect:react.useEffect});
+ const compiled=ts.transpileModule(readFileSync('components/LectureEditor.tsx','utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
+ new Function('require','module','exports',compiled)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
+ const props={initial:view,courseOutline:[{id:view.id,title:view.title}]};
+ const flush=()=>{let n=0;do{assert(++n<12);index=0;changed=false;pending=[];tree=mod.exports.LectureEditor(props);for(const run of pending)run();}while(changed);return tree;};
+ const find=(predicate:(node:any)=>boolean)=>{const found=nodes(tree).find(predicate);assert(found,'Expected real editor node');return found;};
+ const button=(title:string)=>find(node=>node.type==='button'&&text(node)===title);
+ const picker=()=>find(node=>node.type==='select'&&node.props['aria-label']==='Head Atlas structure');
+ flush();return {flush,find,button,picker,text:()=>text(tree),all:()=>nodes(tree),dispose(){for(const effect of effects.values())effect.cleanup?.();for(const[name,descriptor]of globals){if(descriptor)Object.defineProperty(globalThis,name,descriptor);else delete(globalThis as any)[name];}}};
+}
+
+test('text matches live inside the existing collapsed anatomy detail and never assign a link on render',()=>{
+ const h=harness();try{
+  const detail=h.find(node=>node.type==='details'&&node.props.className==='lecture-anatomy-editor');assert.equal(detail.props.open,undefined);
+  assert(h.button('Link '+label('brainstem-pons')));assert.equal(h.picker().props.value,'');assert.match(h.text(),/Saved version 4/);assert.doesNotMatch(h.text(),/Unsaved changes/);
+  assert.match(h.text(),/Text matches are not anatomical verification/);assert.match(h.text(),/Nothing is linked automatically/);
+ }finally{h.dispose();}
+});
+
+test('explicit match selection saves the exact existing source pin and retains independent review',async()=>{
+ const saved=globalThis.fetch,requests:any[]=[];globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{const body=JSON.parse(String(request.body));requests.push(body);return new Response(JSON.stringify({...initial,title:body.title,slides:body.slides,version:5}),{status:200});}) as typeof fetch;
+ const h=harness();try{
+  h.button('Link '+label('brainstem-pons')).props.onClick();h.flush();assert.equal(h.picker().props.value,'brainstem-pons');assert.match(h.text(),/Unsaved changes/);
+  assert.equal(h.button('Linked: '+label('brainstem-pons')).props.disabled,true);assert.equal(requests.length,0);
+  h.button('Save').props.onClick();await tick();h.flush();assert.equal(requests.length,1);assert.equal(requests[0].action,'save');assert.equal(requests[0].expectedVersion,4);
+  assert.deepEqual(requests[0].slides[0].anatomyReference,createLectureAnatomyReference('brainstem-pons'));
+  assert.equal(requests[0].slides[0].title,initial.slides[0].title);assert.equal(requests[0].slides[0].body,initial.slides[0].body);assert.match(h.text(),/Saved version 5/);
+  h.button('Review').props.onClick();h.flush();assert(h.button('Request review'));assert.equal(requests.length,1,'No review or publication is automatic');
+ }finally{h.dispose();globalThis.fetch=saved;}
+});
+
+test('matches recompute for the selected slide and never guess a side or edit another slide',()=>{
+ const h=harness({...initial,slides:[initial.slides[0],{id:'two',title:'Thalamus',body:'An unsided mention only.',referenceUrl:''}]});try{
+  h.button('Link '+label('brainstem-pons')).props.onClick();h.flush();
+  h.button('2Thalamus').props.onClick();h.flush();assert.equal(h.picker().props.value,'');
+  assert.equal(h.all().filter(node=>node.type==='ul'&&node.props['aria-label']==='Anatomy text matches').length,0);
+  h.find(node=>node.type==='textarea').props.onChange({target:{value:'Inspect the Right thalamus in the native image.'}});h.flush();
+  h.button('Link '+label('deep-right-thalamus')).props.onClick();h.flush();assert.equal(h.picker().props.value,'deep-right-thalamus');
+  h.button('1Pons on CT').props.onClick();h.flush();assert.equal(h.picker().props.value,'brainstem-pons');
+ }finally{h.dispose();}
+});
+
+test('an existing different link is retained until an explicit replacement and removal keeps legacy slide shape',()=>{
+ const h=harness({...initial,slides:[{...initial.slides[0],anatomyReference:createLectureAnatomyReference('brainstem-midbrain')}]});try{
+  assert.equal(h.picker().props.value,'brainstem-midbrain');assert.match(h.text(),/Saved version 4/);
+  h.button('Link '+label('brainstem-pons')).props.onClick();h.flush();assert.equal(h.picker().props.value,'brainstem-pons');
+  h.picker().props.onChange({target:{value:''}});h.flush();assert.equal(h.picker().props.value,'');
+ }finally{h.dispose();}
+});
+
+test('published and non-editable lectures expose no text-match assignment controls',()=>{
+ for(const change of [{status:'published'},{canEdit:false}]){const h=harness({...initial,...change});try{
+  assert.equal(h.all().filter(node=>node.type==='ul'&&node.props['aria-label']==='Anatomy text matches').length,0);assert.equal(h.picker().props.disabled,true);
+ }finally{h.dispose();}}
+});
+
+test('a retained match callback cannot change the draft while its save is pending',async()=>{
+ const saved=globalThis.fetch;let resolve!:(r:Response)=>void,payload:any;globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{payload=JSON.parse(String(request.body));return new Promise<Response>(yes=>{resolve=yes;});}) as typeof fetch;
+ const h=harness();try{
+  const match=h.button('Link '+label('brainstem-pons')).props.onClick;
+  h.find(node=>node.type==='input'&&node.props.value===initial.title).props.onChange({target:{value:'Changed lecture title'}});h.flush();
+  h.button('Save').props.onClick();match();h.flush();assert.equal(h.picker().props.value,'');assert.equal(Object.hasOwn(payload.slides[0],'anatomyReference'),false);
+  resolve(new Response(JSON.stringify({...initial,title:payload.title,slides:payload.slides,version:5}),{status:200}));await tick();h.flush();assert.equal(h.picker().props.value,'');assert.match(h.text(),/Saved version 5/);
+ }finally{h.dispose();globalThis.fetch=saved;}
+});
+
+test('native-image-only matches preserve their real modality limits',()=>{
+ const h=harness({...initial,slides:[{id:'vermis',title:'Cerebellar vermis',body:'Inspect the Cerebellar vermis.',referenceUrl:''}]});try{
+  h.button('Link '+label('cerebellum-vermis')).props.onClick();h.flush();assert.equal(h.picker().props.value,'cerebellum-vermis');
+  assert.match(h.text(),/CT · MRI/);assert.match(h.text(),/No exact 3D part is mapped/);
+ }finally{h.dispose();}
+});

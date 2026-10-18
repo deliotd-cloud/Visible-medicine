@@ -1,0 +1,419 @@
+{
+  "version": 1,
+  "original": {
+    "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+    "fmaId": "FMA12514",
+    "name": "Right eyeball",
+    "sourceName": "right eyeball",
+    "system": "organs",
+    "category": "organ",
+    "laterality": "right",
+    "region": "head-neck",
+    "regions": [
+      "head-neck"
+    ],
+    "bundle": "head-neck-organs-recovery",
+    "nodeName": "FMA12514",
+    "bounds": {
+      "min": [
+        -0.436180979013443,
+        7.049599647521973,
+        0.8882899284362793
+      ],
+      "max": [
+        0.3739219903945923,
+        7.311899185180664,
+        1.1605099439620972
+      ]
+    },
+    "center": [
+      -0.031129494309425354,
+      7.180749416351318,
+      1.0243999361991882
+    ],
+    "anchor": [
+      -0.1730310022830963,
+      7.180899620056152,
+      1.0229201316833496
+    ],
+    "sourceTree": "partof",
+    "sources": [
+      {
+        "file": "FJ1336",
+        "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+      },
+      {
+        "file": "FJ1337",
+        "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+      },
+      {
+        "file": "FJ1340",
+        "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+      },
+      {
+        "file": "FJ1348",
+        "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+      },
+      {
+        "file": "FJ1356",
+        "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+      },
+      {
+        "file": "FJ1368",
+        "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+      },
+      {
+        "file": "FJ1371",
+        "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+      },
+      {
+        "file": "FJ1382",
+        "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+      }
+    ],
+    "coverageNote": "Compound eyeball surface. Internal components are grouped, not an independently reviewed ocular-layer dissection.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "replacement": {
+    "id": "vm:anatomy:body:head-neck:right:organ:right-eyeball",
+    "fmaId": "FMA12514",
+    "name": "Right eyeball",
+    "sourceName": "right eyeball",
+    "system": "organs",
+    "category": "organ",
+    "laterality": "right",
+    "region": "head-neck",
+    "regions": [
+      "head-neck"
+    ],
+    "bundle": "eye-corrected-parent",
+    "nodeName": "FMA12514",
+    "bounds": {
+      "min": [
+        -0.436180979013443,
+        7.049599647521973,
+        0.8882899284362793
+      ],
+      "max": [
+        -0.17298001050949097,
+        7.311899185180664,
+        1.1605099439620972
+      ]
+    },
+    "center": [
+      -0.304580494761467,
+      7.180749416351318,
+      1.0243999361991882
+    ],
+    "anchor": [
+      -0.310016006231308,
+      7.178900241851807,
+      1.0682499408721924
+    ],
+    "sourceTree": "partof",
+    "sources": [
+      {
+        "file": "FJ1336",
+        "sha256": "518f78b01de0273ea1cdd6152f2215f9432f2ce00ac2164cea8aa3a420cd897c"
+      },
+      {
+        "file": "FJ1337",
+        "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22"
+      },
+      {
+        "file": "FJ1340",
+        "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3"
+      },
+      {
+        "file": "FJ1348",
+        "sha256": "1120c896903582ef7349b5be68a03bfb215def235851a82b1f1f44cfe212ad9e"
+      },
+      {
+        "file": "FJ1356",
+        "sha256": "767e9107cf299b87729c9eb921a2ede22d3bfd03ae7027b6fb88631c1a0ec150"
+      },
+      {
+        "file": "FJ1368",
+        "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49"
+      },
+      {
+        "file": "FJ1371",
+        "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738"
+      },
+      {
+        "file": "FJ1382",
+        "sha256": "de22335a9c3ad8036e0651eb09aa975e15151bb5ac6e3d142cf8260204fa633f"
+      }
+    ],
+    "coverageNote": "Source-derived right eyeball with 36 exact disconnected opposite-side triangles suppressed. All retained source surfaces are unchanged in position; anatomical and clinical review pending.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "bundle": {
+    "id": "eye-corrected-parent",
+    "url": "/models/bodyparts3d/eye-layers/right-eyeball.glb?v=f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+    "bytes": 1756184,
+    "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+    "structures": 1
+  },
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "cleanup": [
+    {
+      "file": "FJ1340",
+      "sha256": "20cc1b1156cd9fdebd96d8a7710ff3d6d6fc9fef79b7173ef41491e2b6e650a3",
+      "faces": 4606,
+      "start": 4588,
+      "count": 18,
+      "fragments": [
+        {
+          "firstFace": 4590,
+          "triangles": 8,
+          "vertices": 5,
+          "bounds": {
+            "min": [
+              27.6991,
+              -161.951,
+              1524.47
+            ],
+            "max": [
+              27.7,
+              -161.951,
+              1524.48
+            ]
+          },
+          "areaMm2": 0.000008999999999970839,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 4598,
+          "triangles": 8,
+          "vertices": 5,
+          "bounds": {
+            "min": [
+              30.8533,
+              -161.788,
+              1524.7
+            ],
+            "max": [
+              30.8543,
+              -161.786,
+              1524.7
+            ]
+          },
+          "areaMm2": 0.0000020000000000048886,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 4588,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              22.7888,
+              -162.06,
+              1517.01
+            ],
+            "max": [
+              22.7904,
+              -162.059,
+              1517.01
+            ]
+          },
+          "areaMm2": 0.0000014000000000069746,
+          "algebraicVolumeMm3": 0
+        }
+      ],
+      "retainedFaces": 4588
+    },
+    {
+      "file": "FJ1371",
+      "sha256": "8dc5ab248fc952170f9057aaf4bbd2339d9ee4c30b40b32ce793e54b22706738",
+      "faces": 7376,
+      "start": 7372,
+      "count": 4,
+      "fragments": [
+        {
+          "firstFace": 7372,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              37.3912,
+              -158.891,
+              1520.12
+            ],
+            "max": [
+              37.3922,
+              -158.89,
+              1520.12
+            ]
+          },
+          "areaMm2": 0.0000010000000000095496,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 7374,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              37.2811,
+              -158.971,
+              1520.44
+            ],
+            "max": [
+              37.2901,
+              -158.961,
+              1520.46
+            ]
+          },
+          "areaMm2": 0.00023720033726758074,
+          "algebraicVolumeMm3": -3.308722450212111e-24
+        }
+      ],
+      "retainedFaces": 7372
+    },
+    {
+      "file": "FJ1337",
+      "sha256": "db3077437828f311b6afa07dc9dc7a27ab0e005ddce62570420c61af31643f22",
+      "faces": 28872,
+      "start": 28862,
+      "count": 10,
+      "fragments": [
+        {
+          "firstFace": 28862,
+          "triangles": 8,
+          "vertices": 6,
+          "bounds": {
+            "min": [
+              30.9922,
+              -158.543,
+              1509.58
+            ],
+            "max": [
+              31.0618,
+              -158.516,
+              1509.6
+            ]
+          },
+          "areaMm2": 0.0026841642890057067,
+          "algebraicVolumeMm3": 0.000006944000000000306
+        },
+        {
+          "firstFace": 28870,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              34.5872,
+              -158.367,
+              1511.14
+            ],
+            "max": [
+              34.5885,
+              -158.366,
+              1511.14
+            ]
+          },
+          "areaMm2": 0.0000012999999999697821,
+          "algebraicVolumeMm3": 0
+        }
+      ],
+      "retainedFaces": 28862
+    },
+    {
+      "file": "FJ1368",
+      "sha256": "6fce2e1842730573a8d1360a88a9512b2ee5fe0ebe55e669cd265601da663b49",
+      "faces": 39524,
+      "start": 39520,
+      "count": 4,
+      "fragments": [
+        {
+          "firstFace": 39520,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              30.2353,
+              -163.148,
+              1524.76
+            ],
+            "max": [
+              30.2882,
+              -163.142,
+              1524.76
+            ]
+          },
+          "areaMm2": 0.000053900000000250406,
+          "algebraicVolumeMm3": 0
+        },
+        {
+          "firstFace": 39522,
+          "triangles": 2,
+          "vertices": 3,
+          "bounds": {
+            "min": [
+              31.259,
+              -163.072,
+              1524.63
+            ],
+            "max": [
+              31.2616,
+              -163.069,
+              1524.63
+            ]
+          },
+          "areaMm2": 0.00000540000000002741,
+          "algebraicVolumeMm3": 0
+        }
+      ],
+      "retainedFaces": 39520
+    }
+  ],
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
+}

@@ -1,0 +1,3848 @@
+{
+  "sourceCommit": "13bc0b7b2b890a4ca45990b527159cf864d2097a",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "forearm-muscles",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "bytes": 1854940,
+      "sha256": "a99abc2a2bfe0845e80b90d18f6473e2614695c8f7acb7a26a9febb4d46a509b",
+      "structures": 34
+    },
+    {
+      "id": "forearm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "bytes": 261864,
+      "sha256": "650758b91e7a4dd4b0a743d067fe79cbf527a51e95669e9e61aa2bc3c45c57b4",
+      "structures": 8
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-ulnaris",
+        "fmaId": "FMA38507",
+        "name": "Right extensor carpi ulnaris",
+        "sourceName": "right extensor carpi ulnaris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38507",
+        "bounds": {
+          "min": [
+            -2.374300003051758,
+            -0.28833985328674316,
+            -0.003152008168399334
+          ],
+          "max": [
+            -2.1947600841522217,
+            2.58870005607605,
+            0.7679799795150757
+          ]
+        },
+        "center": [
+          -2.2845300436019897,
+          1.1501801013946533,
+          0.3824139856733382
+        ],
+        "anchor": [
+          -2.2146401405334473,
+          1.1400799751281738,
+          0.3309970200061798
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1472",
+            "sha256": "f6aadd5b1df9440ec0c4fabf21641f72447d5190bcaf58f357e8b5a76b3f5889"
+          },
+          {
+            "file": "FJ1517",
+            "sha256": "e6a4cec704d3601a33704b40ee1f3f7bce484017dd563d1f4d2da43331b3ffce"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorCarpiUlnaris",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-ulnaris",
+        "fmaId": "FMA38508",
+        "name": "Left extensor carpi ulnaris",
+        "sourceName": "left extensor carpi ulnaris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38508",
+        "bounds": {
+          "min": [
+            2.1947600841522217,
+            -0.28833985328674316,
+            -0.003152008168399334
+          ],
+          "max": [
+            2.374300003051758,
+            2.58870005607605,
+            0.7679900527000427
+          ]
+        },
+        "center": [
+          2.2845300436019897,
+          1.1501801013946533,
+          0.3824190222658217
+        ],
+        "anchor": [
+          2.2146401405334473,
+          1.1400799751281738,
+          0.3309970200061798
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1472M",
+            "sha256": "6c47a0290d3c5952e858227ed655b6ef1caac88661a13d15618a8364d0af765f"
+          },
+          {
+            "file": "FJ1517M",
+            "sha256": "dad2acf99146ad290d327a6d3e9e0c8fa214c26880d9f85292d4c4eb4554500f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorCarpiUlnaris",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+        "fmaId": "FMA38470",
+        "name": "Right flexor digitorum superficialis",
+        "sourceName": "right flexor digitorum superficialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38470",
+        "bounds": {
+          "min": [
+            -3.058689832687378,
+            -1.241859793663025,
+            0.17579002678394318
+          ],
+          "max": [
+            -1.781130075454712,
+            2.530799627304077,
+            1.1784800291061401
+          ]
+        },
+        "center": [
+          -2.419909954071045,
+          0.6444699168205261,
+          0.6771350279450417
+        ],
+        "anchor": [
+          -2.424910068511963,
+          0.6462500095367432,
+          0.6656500101089478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1475",
+            "sha256": "9b3877dcb9838ac4e37f2a1fbf0542fca888a32650285bb07278d6ba9fa968e1"
+          },
+          {
+            "file": "FJ1499",
+            "sha256": "7f148f7db90d9723dcfe6742c55afc2100b712c00992d83356373ca27a2b0dc0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitorumSuperficialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+        "fmaId": "FMA38471",
+        "name": "Left flexor digitorum superficialis",
+        "sourceName": "left flexor digitorum superficialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38471",
+        "bounds": {
+          "min": [
+            1.781130075454712,
+            -1.241859793663025,
+            0.17579002678394318
+          ],
+          "max": [
+            3.058689832687378,
+            2.530799627304077,
+            1.1784800291061401
+          ]
+        },
+        "center": [
+          2.419909954071045,
+          0.6444699168205261,
+          0.6771350279450417
+        ],
+        "anchor": [
+          2.4249000549316406,
+          0.6462597846984863,
+          0.6656400561332703
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1475M",
+            "sha256": "9174a210f8b7ce149355545208551a4d001f6c78570256a8596d3410023fb1ec"
+          },
+          {
+            "file": "FJ1499M",
+            "sha256": "471bfecbbe7dc3b66fc843daddcac42cd12e76e4df9f982d6b779a516433c083"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitorumSuperficialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-abductor-pollicis-longus",
+        "fmaId": "FMA38516",
+        "name": "Right abductor pollicis longus",
+        "sourceName": "right abductor pollicis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38516",
+        "bounds": {
+          "min": [
+            -2.894289970397949,
+            -0.11250976473093033,
+            0.20049400627613068
+          ],
+          "max": [
+            -2.2754499912261963,
+            1.7077502012252808,
+            0.8177699446678162
+          ]
+        },
+        "center": [
+          -2.5848699808120728,
+          0.7976202182471752,
+          0.5091319754719734
+        ],
+        "anchor": [
+          -2.580820083618164,
+          0.7810699343681335,
+          0.4083319902420044
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1484",
+            "sha256": "35a1077de93e2bdcaaa68e688f4f31a371c3c61e35d629314507e549e5241d14"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abductorPollicisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-abductor-pollicis-longus",
+        "fmaId": "FMA38517",
+        "name": "Left abductor pollicis longus",
+        "sourceName": "left abductor pollicis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38517",
+        "bounds": {
+          "min": [
+            2.2754499912261963,
+            -0.11250976473093033,
+            0.20049400627613068
+          ],
+          "max": [
+            2.894289970397949,
+            1.7077502012252808,
+            0.8177699446678162
+          ]
+        },
+        "center": [
+          2.5848699808120728,
+          0.7976202182471752,
+          0.5091319754719734
+        ],
+        "anchor": [
+          2.580820083618164,
+          0.7810699343681335,
+          0.4083319902420044
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1484M",
+            "sha256": "330a078635dd13630811d8725ab5919c0fae5b001071a6cb3b7282bcf955fc4e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abductorPollicisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+        "fmaId": "FMA38486",
+        "name": "Right brachioradialis",
+        "sourceName": "right brachioradialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38486",
+        "bounds": {
+          "min": [
+            -2.8058600425720215,
+            0.09711974859237671,
+            0.058244019746780396
+          ],
+          "max": [
+            -2.081589937210083,
+            3.476099967956543,
+            0.7287799715995789
+          ]
+        },
+        "center": [
+          -2.4437249898910522,
+          1.7866098582744598,
+          0.3935119956731796
+        ],
+        "anchor": [
+          -2.5111701488494873,
+          1.7561700344085693,
+          0.4491649568080902
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1487",
+            "sha256": "0ff651a5417f240c6a5205bef5218336a61fe3474752cca1b483d02aae0b92ad"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "brachioradialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+        "fmaId": "FMA38487",
+        "name": "Left brachioradialis",
+        "sourceName": "left brachioradialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38487",
+        "bounds": {
+          "min": [
+            2.081589937210083,
+            0.09711974859237671,
+            0.058244019746780396
+          ],
+          "max": [
+            2.8058600425720215,
+            3.476099967956543,
+            0.7287799715995789
+          ]
+        },
+        "center": [
+          2.4437249898910522,
+          1.7866098582744598,
+          0.3935119956731796
+        ],
+        "anchor": [
+          2.5111701488494873,
+          1.7561602592468262,
+          0.4491649568080902
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1487M",
+            "sha256": "04555d88efe99e68a2b07441c4deffa4d1e7ebafb8d3f60995dd28c0ff42f147"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "brachioradialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-brevis",
+        "fmaId": "FMA38498",
+        "name": "Right extensor carpi radialis brevis",
+        "sourceName": "right extensor carpi radialis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38498",
+        "bounds": {
+          "min": [
+            -2.7263801097869873,
+            -0.23945006728172302,
+            0.002608985872939229
+          ],
+          "max": [
+            -2.283639907836914,
+            2.787099599838257,
+            0.6574299335479736
+          ]
+        },
+        "center": [
+          -2.5050100088119507,
+          1.273824766278267,
+          0.33001945971045643
+        ],
+        "anchor": [
+          -2.534719944000244,
+          1.264149785041809,
+          0.3110640048980713
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1489",
+            "sha256": "31ccd9ec738252ec2eae88cf68068679d0663425c98b8d90dcbca18b3cbd1988"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorCarpiRadialisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-brevis",
+        "fmaId": "FMA38499",
+        "name": "Left extensor carpi radialis brevis",
+        "sourceName": "left extensor carpi radialis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38499",
+        "bounds": {
+          "min": [
+            2.283639907836914,
+            -0.23945006728172302,
+            0.002608985872939229
+          ],
+          "max": [
+            2.7263801097869873,
+            2.787099599838257,
+            0.6574299335479736
+          ]
+        },
+        "center": [
+          2.5050100088119507,
+          1.273824766278267,
+          0.33001945971045643
+        ],
+        "anchor": [
+          2.534709930419922,
+          1.264140009880066,
+          0.3110640048980713
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1489M",
+            "sha256": "8c6a0274a546389ad6a4f615379ff0e9a020a7fb054cfd5e1e20401d4ecb06f7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorCarpiRadialisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-carpi-radialis-longus",
+        "fmaId": "FMA38495",
+        "name": "Right extensor carpi radialis longus",
+        "sourceName": "right extensor carpi radialis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38495",
+        "bounds": {
+          "min": [
+            -2.778630018234253,
+            -0.20856018364429474,
+            0.03205898404121399
+          ],
+          "max": [
+            -2.200860023498535,
+            3.0160999298095703,
+            0.7097899913787842
+          ]
+        },
+        "center": [
+          -2.489745020866394,
+          1.4037698730826378,
+          0.3709244877099991
+        ],
+        "anchor": [
+          -2.5908401012420654,
+          1.4127001762390137,
+          0.3451540470123291
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1490",
+            "sha256": "8b6ec821491a2eafaee8c813cfad4532beae94c354595cc3e922d8cdbb36fb32"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorCarpiRadialisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-carpi-radialis-longus",
+        "fmaId": "FMA38496",
+        "name": "Left extensor carpi radialis longus",
+        "sourceName": "left extensor carpi radialis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38496",
+        "bounds": {
+          "min": [
+            2.2006800174713135,
+            -0.20856018364429474,
+            0.03205898404121399
+          ],
+          "max": [
+            2.778630018234253,
+            3.0160999298095703,
+            0.7097899913787842
+          ]
+        },
+        "center": [
+          2.489655017852783,
+          1.4037698730826378,
+          0.3709244877099991
+        ],
+        "anchor": [
+          2.5908401012420654,
+          1.4127099514007568,
+          0.3451550304889679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1490M",
+            "sha256": "f0ed6a659b2a1fd0d9138d2b7ca91535f62b70b9bc16f862173fdd85f69372d2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorCarpiRadialisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digiti-minimi",
+        "fmaId": "FMA38504",
+        "name": "Right extensor digiti minimi",
+        "sourceName": "right extensor digiti minimi",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38504",
+        "bounds": {
+          "min": [
+            -2.432219982147217,
+            -0.7533196806907654,
+            0.0392489992082119
+          ],
+          "max": [
+            -2.2698800563812256,
+            2.4961998462677,
+            0.9325399994850159
+          ]
+        },
+        "center": [
+          -2.351050019264221,
+          0.8714400827884674,
+          0.4858944993466139
+        ],
+        "anchor": [
+          -2.3713998794555664,
+          0.8415197730064392,
+          0.3399990200996399
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1491",
+            "sha256": "2717a761854ba7fe50d12f5ec4eca0f0728795777ae9a7ec87e019f01e3b8267"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorDigitiMinimi",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digiti-minimi",
+        "fmaId": "FMA38505",
+        "name": "Left extensor digiti minimi",
+        "sourceName": "left extensor digiti minimi",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38505",
+        "bounds": {
+          "min": [
+            2.2698800563812256,
+            -0.7533196806907654,
+            0.0392489992082119
+          ],
+          "max": [
+            2.432219982147217,
+            2.4961998462677,
+            0.9325500726699829
+          ]
+        },
+        "center": [
+          2.351050019264221,
+          0.8714400827884674,
+          0.4858995359390974
+        ],
+        "anchor": [
+          2.3713998794555664,
+          0.8415301442146301,
+          0.3399990200996399
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1491M",
+            "sha256": "f4126e4115bf25e98e13d5e646304ab526d500f5de28aef9167c72f7360fe702"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorDigitiMinimi",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-digitorum",
+        "fmaId": "FMA38501",
+        "name": "Right extensor digitorum",
+        "sourceName": "right extensor digitorum",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38501",
+        "bounds": {
+          "min": [
+            -3.050539970397949,
+            -1.2201898097991943,
+            -0.04687301814556122
+          ],
+          "max": [
+            -2.224760055541992,
+            2.599599599838257,
+            1.125290036201477
+          ]
+        },
+        "center": [
+          -2.6376500129699707,
+          0.6897048950195312,
+          0.5392085090279579
+        ],
+        "anchor": [
+          -2.5513999462127686,
+          0.6782800555229187,
+          0.3536360263824463
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1492",
+            "sha256": "31f528b3ba6a8fb26177c9f1455692be3acfbb173b4c4cbf9dc3d597acb5c5ff"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorDigitorum",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-digitorum",
+        "fmaId": "FMA38502",
+        "name": "Left extensor digitorum",
+        "sourceName": "left extensor digitorum",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38502",
+        "bounds": {
+          "min": [
+            2.2247700691223145,
+            -1.2201898097991943,
+            -0.04687301814556122
+          ],
+          "max": [
+            3.050539970397949,
+            2.599599599838257,
+            1.125290036201477
+          ]
+        },
+        "center": [
+          2.637655019760132,
+          0.6897048950195312,
+          0.5392085090279579
+        ],
+        "anchor": [
+          2.5513999462127686,
+          0.6782800555229187,
+          0.3536360263824463
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1492M",
+            "sha256": "c2fa9cb48e9d70d9a180553623df0e8be92c507f323074b8b5bed41b266f47f2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorDigitorum",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-indicis",
+        "fmaId": "FMA38525",
+        "name": "Right extensor indicis",
+        "sourceName": "right extensor indicis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38525",
+        "bounds": {
+          "min": [
+            -3.076470136642456,
+            -1.3129199743270874,
+            0.45286300778388977
+          ],
+          "max": [
+            -2.29502010345459,
+            0.682570219039917,
+            1.235949993133545
+          ]
+        },
+        "center": [
+          -2.685745120048523,
+          -0.3151748776435852,
+          0.8444065004587173
+        ],
+        "anchor": [
+          -2.7257399559020996,
+          -0.33783018589019775,
+          0.6898800134658813
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1493",
+            "sha256": "b23d7087dbe581fa03e316dfed18f73ba4ccb54b16091d442ac057f9aa9c7b60"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorIndicis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-indicis",
+        "fmaId": "FMA38526",
+        "name": "Left extensor indicis",
+        "sourceName": "left extensor indicis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38526",
+        "bounds": {
+          "min": [
+            2.29502010345459,
+            -1.3129199743270874,
+            0.45286300778388977
+          ],
+          "max": [
+            3.076470136642456,
+            0.682570219039917,
+            1.235949993133545
+          ]
+        },
+        "center": [
+          2.685745120048523,
+          -0.3151748776435852,
+          0.8444065004587173
+        ],
+        "anchor": [
+          2.7257399559020996,
+          -0.33783018589019775,
+          0.6898800134658813
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1493M",
+            "sha256": "67cc3af9eeaf1eecc32d6816dc86f2b7343fdec0be413a9e32313ca49b846d75"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorIndicis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-brevis",
+        "fmaId": "FMA38519",
+        "name": "Right extensor pollicis brevis",
+        "sourceName": "right extensor pollicis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38519",
+        "bounds": {
+          "min": [
+            -3.1140201091766357,
+            -0.4156201183795929,
+            0.40904700756073
+          ],
+          "max": [
+            -2.3492300510406494,
+            0.9399499297142029,
+            0.9765300154685974
+          ]
+        },
+        "center": [
+          -2.7316250801086426,
+          0.262164905667305,
+          0.6927885115146637
+        ],
+        "anchor": [
+          -2.735219955444336,
+          0.1987902820110321,
+          0.5419700145721436
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1494",
+            "sha256": "61cfb7481e1f7dea291cf59208719b08c27191156e38ffd25e744918836d957b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorPollicisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-brevis",
+        "fmaId": "FMA38520",
+        "name": "Left extensor pollicis brevis",
+        "sourceName": "left extensor pollicis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38520",
+        "bounds": {
+          "min": [
+            2.3492300510406494,
+            -0.4156201183795929,
+            0.40904700756073
+          ],
+          "max": [
+            3.1140201091766357,
+            0.9399499297142029,
+            0.9765300154685974
+          ]
+        },
+        "center": [
+          2.7316250801086426,
+          0.262164905667305,
+          0.6927885115146637
+        ],
+        "anchor": [
+          2.735219955444336,
+          0.1987902820110321,
+          0.5419700145721436
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1494M",
+            "sha256": "13f92c6f30687f4b796bb9f449903d20f46b05a09418005baa8ce730cfd76352"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorPollicisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-extensor-pollicis-longus",
+        "fmaId": "FMA38522",
+        "name": "Right extensor pollicis longus",
+        "sourceName": "right extensor pollicis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38522",
+        "bounds": {
+          "min": [
+            -3.1937899589538574,
+            -0.6696301102638245,
+            0.25689902901649475
+          ],
+          "max": [
+            -2.2462799549102783,
+            1.3508899211883545,
+            1.1337499618530273
+          ]
+        },
+        "center": [
+          -2.720034956932068,
+          0.340629905462265,
+          0.695324495434761
+        ],
+        "anchor": [
+          -2.554680109024048,
+          0.2622601389884949,
+          0.5207099914550781
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1495",
+            "sha256": "99a201417061edb3b2adc54fcd2b41eefa81c0e9e31027b43c41c328d1ade4f5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorPollicisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-extensor-pollicis-longus",
+        "fmaId": "FMA38523",
+        "name": "Left extensor pollicis longus",
+        "sourceName": "left extensor pollicis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38523",
+        "bounds": {
+          "min": [
+            2.2462799549102783,
+            -0.6696301102638245,
+            0.25689902901649475
+          ],
+          "max": [
+            3.1937899589538574,
+            1.3508899211883545,
+            1.1337499618530273
+          ]
+        },
+        "center": [
+          2.720034956932068,
+          0.340629905462265,
+          0.695324495434761
+        ],
+        "anchor": [
+          2.554680109024048,
+          0.2622601389884949,
+          0.5207099914550781
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1495M",
+            "sha256": "b60c5e22a80aaab2f77c88357babc1ae22bdec2d51ee7a4eef8413ffd73b0a8e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorPollicisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-carpi-radialis",
+        "fmaId": "FMA38460",
+        "name": "Right flexor carpi radialis",
+        "sourceName": "right flexor carpi radialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38460",
+        "bounds": {
+          "min": [
+            -2.7211098670959473,
+            -0.19302979111671448,
+            0.2086769938468933
+          ],
+          "max": [
+            -1.8436000347137451,
+            2.5747997760772705,
+            0.8640600442886353
+          ]
+        },
+        "center": [
+          -2.282354950904846,
+          1.190884992480278,
+          0.5363685190677643
+        ],
+        "anchor": [
+          -2.2227001190185547,
+          1.189719796180725,
+          0.6487900018692017
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1496",
+            "sha256": "8e83c638e2353bb8ba65547f4b846d89a1f393c4761806faf8e09970c9b6b6bf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorCarpiRadialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-carpi-radialis",
+        "fmaId": "FMA38461",
+        "name": "Left flexor carpi radialis",
+        "sourceName": "left flexor carpi radialis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38461",
+        "bounds": {
+          "min": [
+            1.8436000347137451,
+            -0.19302979111671448,
+            0.2086769938468933
+          ],
+          "max": [
+            2.7211098670959473,
+            2.5747997760772705,
+            0.8640699982643127
+          ]
+        },
+        "center": [
+          2.282354950904846,
+          1.190884992480278,
+          0.536373496055603
+        ],
+        "anchor": [
+          2.2227001190185547,
+          1.189719796180725,
+          0.6487900018692017
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1496M",
+            "sha256": "3ee91fd59707361cb9fd6c55fa51c677df1744a779965c987e789e2be52758a2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorCarpiRadialis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+        "fmaId": "FMA38479",
+        "name": "Right flexor digitorum profundus",
+        "sourceName": "right flexor digitorum profundus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38479",
+        "bounds": {
+          "min": [
+            -3.0693199634552,
+            -1.3446398973464966,
+            0.18727798759937286
+          ],
+          "max": [
+            -2.0387699604034424,
+            2.1885998249053955,
+            1.3687800168991089
+          ]
+        },
+        "center": [
+          -2.5540449619293213,
+          0.42197996377944946,
+          0.7780290022492409
+        ],
+        "anchor": [
+          -2.501420021057129,
+          0.41374024748802185,
+          0.712090015411377
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1497",
+            "sha256": "e62f8adfa454bee523974952500aa32a16f086b249a434b4bbeabc333878ac39"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitorumProfundus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+        "fmaId": "FMA38480",
+        "name": "Left flexor digitorum profundus",
+        "sourceName": "left flexor digitorum profundus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38480",
+        "bounds": {
+          "min": [
+            2.0387699604034424,
+            -1.3446398973464966,
+            0.18727798759937286
+          ],
+          "max": [
+            3.0693199634552,
+            2.1885998249053955,
+            1.3687800168991089
+          ]
+        },
+        "center": [
+          2.5540449619293213,
+          0.42197996377944946,
+          0.7780290022492409
+        ],
+        "anchor": [
+          2.501420021057129,
+          0.4137499928474426,
+          0.712090015411377
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1497M",
+            "sha256": "c3d1710b4b9465ab35cd53d18a3f00f38b37340d084c57fed2cb011d585a5013"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitorumProfundus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-pollicis-longus",
+        "fmaId": "FMA38482",
+        "name": "Right flexor pollicis longus",
+        "sourceName": "right flexor pollicis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38482",
+        "bounds": {
+          "min": [
+            -3.140509843826294,
+            -0.6478399634361267,
+            0.37631797790527344
+          ],
+          "max": [
+            -2.3849499225616455,
+            1.6590899229049683,
+            1.158829927444458
+          ]
+        },
+        "center": [
+          -2.7627298831939697,
+          0.5056249797344208,
+          0.7675739526748657
+        ],
+        "anchor": [
+          -2.6068100929260254,
+          0.48973023891448975,
+          0.6404500007629395
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1498",
+            "sha256": "e0fc87382350f38acb2a5197e83dabb450ba6d823222388c8e169e30c0bbfb94"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorPollicisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-pollicis-longus",
+        "fmaId": "FMA38484",
+        "name": "Left flexor pollicis longus",
+        "sourceName": "left flexor pollicis longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38484",
+        "bounds": {
+          "min": [
+            2.3849499225616455,
+            -0.6478399634361267,
+            0.37631797790527344
+          ],
+          "max": [
+            3.140509843826294,
+            1.6590899229049683,
+            1.158829927444458
+          ]
+        },
+        "center": [
+          2.7627298831939697,
+          0.5056249797344208,
+          0.7675739526748657
+        ],
+        "anchor": [
+          2.6068100929260254,
+          0.48973023891448975,
+          0.6404500007629395
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1498M",
+            "sha256": "bca0645db90f8718edda9562da5ef5432d6df06dd4fdf7d5f5ef042d31ed8ca9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorPollicisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-palmaris-longus",
+        "fmaId": "FMA38463",
+        "name": "Right palmaris longus",
+        "sourceName": "right palmaris longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38463",
+        "bounds": {
+          "min": [
+            -2.9061999320983887,
+            -0.6699298024177551,
+            0.216093972325325
+          ],
+          "max": [
+            -1.794279932975769,
+            2.5380005836486816,
+            0.9969199895858765
+          ]
+        },
+        "center": [
+          -2.350239932537079,
+          0.9340353906154633,
+          0.6065069809556007
+        ],
+        "anchor": [
+          -2.270009994506836,
+          0.9094500541687012,
+          0.7016000151634216
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1502",
+            "sha256": "2e033c8fbc77aa1922179eeae6d90075df9360d00882beb9b45b148074f91f8a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmarisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-palmaris-longus",
+        "fmaId": "FMA38464",
+        "name": "Left palmaris longus",
+        "sourceName": "left palmaris longus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38464",
+        "bounds": {
+          "min": [
+            1.7942700386047363,
+            -0.6699298024177551,
+            0.216093972325325
+          ],
+          "max": [
+            2.9061999320983887,
+            2.5380005836486816,
+            0.9969199895858765
+          ]
+        },
+        "center": [
+          2.3502349853515625,
+          0.9340353906154633,
+          0.6065069809556007
+        ],
+        "anchor": [
+          2.270009994506836,
+          0.9094500541687012,
+          0.7016000151634216
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1502M",
+            "sha256": "0a10cb9a85663e719c4ae3536e7d514a1d09c66115656427bad5348da7fe13a8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "palmarisLongus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-pronator-quadratus",
+        "fmaId": "FMA38454",
+        "name": "Right pronator quadratus",
+        "sourceName": "right pronator quadratus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38454",
+        "bounds": {
+          "min": [
+            -2.717679977416992,
+            0.20455017685890198,
+            0.5255200266838074
+          ],
+          "max": [
+            -2.2609500885009766,
+            0.7057098150253296,
+            0.7618100047111511
+          ]
+        },
+        "center": [
+          -2.4893150329589844,
+          0.4551299959421158,
+          0.6436650156974792
+        ],
+        "anchor": [
+          -2.4865899085998535,
+          0.46414002776145935,
+          0.6812300086021423
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1503",
+            "sha256": "04adea4b7060a08c9d734ea78156525b3d3983fc1da0601ac151198985e78cfd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pronatorQuadratus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-pronator-quadratus",
+        "fmaId": "FMA38455",
+        "name": "Left pronator quadratus",
+        "sourceName": "left pronator quadratus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38455",
+        "bounds": {
+          "min": [
+            2.2609500885009766,
+            0.20455017685890198,
+            0.5255100131034851
+          ],
+          "max": [
+            2.717679977416992,
+            0.7057098150253296,
+            0.7618100047111511
+          ]
+        },
+        "center": [
+          2.4893150329589844,
+          0.4551299959421158,
+          0.6436600089073181
+        ],
+        "anchor": [
+          2.486599922180176,
+          0.46414002776145935,
+          0.6812300086021423
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1503M",
+            "sha256": "906e88ed35688a080946d565f157c89fcc50dd6fb0c4304c473cfc1800132266"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "pronatorQuadratus",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+        "fmaId": "FMA38513",
+        "name": "Right supinator",
+        "sourceName": "right supinator",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38513",
+        "bounds": {
+          "min": [
+            -2.540940046310425,
+            1.325339913368225,
+            0.06260600686073303
+          ],
+          "max": [
+            -2.2236099243164062,
+            2.563800096511841,
+            0.405487984418869
+          ]
+        },
+        "center": [
+          -2.3822749853134155,
+          1.944570004940033,
+          0.23404699563980103
+        ],
+        "anchor": [
+          -2.380470037460327,
+          1.9462902545928955,
+          0.22518402338027954
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1505",
+            "sha256": "83c5940f2c6516ecf5b0eb69de5dc0a056177b29f7bc046b94cc20c85460ae46"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "supinator",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+        "fmaId": "FMA38514",
+        "name": "Left supinator",
+        "sourceName": "left supinator",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles",
+        "nodeName": "FMA38514",
+        "bounds": {
+          "min": [
+            2.2236099243164062,
+            1.325339913368225,
+            0.06260600686073303
+          ],
+          "max": [
+            2.540950059890747,
+            2.563800096511841,
+            0.405487984418869
+          ]
+        },
+        "center": [
+          2.3822799921035767,
+          1.944570004940033,
+          0.23404699563980103
+        ],
+        "anchor": [
+          2.380470037460327,
+          1.9462902545928955,
+          0.22518402338027954
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1505M",
+            "sha256": "bfc240c7d0db047b5defe13bad862115bfcd7ec3cb426c40630ed1738c3cd3d5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "supinator",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+        "fmaId": "FMA38560",
+        "name": "Humeral head of right pronator teres",
+        "sourceName": "humeral head of right pronator teres",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38560",
+        "bounds": {
+          "min": [
+            -2.5732102394104004,
+            1.1665197610855103,
+            0.17688697576522827
+          ],
+          "max": [
+            -1.8741799592971802,
+            2.6538000106811523,
+            0.5255300402641296
+          ]
+        },
+        "center": [
+          -2.2236950993537903,
+          1.9101598858833313,
+          0.35120850801467896
+        ],
+        "anchor": [
+          -2.2300100326538086,
+          1.9446502923965454,
+          0.4691610038280487
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1474",
+            "sha256": "589e18d8dd9eac471404fae1035b01476ed0021af1cb2822c8c759164a2a45ba"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "humeralPronatorTeres",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+        "fmaId": "FMA38561",
+        "name": "Humeral head of left pronator teres",
+        "sourceName": "humeral head of left pronator teres",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38561",
+        "bounds": {
+          "min": [
+            1.8741799592971802,
+            1.1665197610855103,
+            0.17688697576522827
+          ],
+          "max": [
+            2.5732102394104004,
+            2.6538000106811523,
+            0.5255300402641296
+          ]
+        },
+        "center": [
+          2.2236950993537903,
+          1.9101598858833313,
+          0.35120850801467896
+        ],
+        "anchor": [
+          2.2300100326538086,
+          1.9446399211883545,
+          0.4691610038280487
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1474M",
+            "sha256": "441ab2758c6c7f27fc5835edc070c02b2355e5222bf3a65c728853c38b424aa7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "humeralPronatorTeres",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+        "fmaId": "FMA38562",
+        "name": "Ulnar head of right pronator teres",
+        "sourceName": "ulnar head of right pronator teres",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38562",
+        "bounds": {
+          "min": [
+            -2.5631399154663086,
+            1.2774298191070557,
+            0.24059097468852997
+          ],
+          "max": [
+            -2.042649984359741,
+            2.234299898147583,
+            0.4838230013847351
+          ]
+        },
+        "center": [
+          -2.302894949913025,
+          1.7558648586273193,
+          0.36220698803663254
+        ],
+        "anchor": [
+          -2.326889991760254,
+          1.7991100549697876,
+          0.4253399670124054
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1516",
+            "sha256": "62058afdb37b3637c21f7ad15fe681acced1e36c986190a692f1733cb0a79760"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarPronatorTeres",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+        "fmaId": "FMA38563",
+        "name": "Ulnar head of left pronator teres",
+        "sourceName": "ulnar head of left pronator teres",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38563",
+        "bounds": {
+          "min": [
+            2.042649984359741,
+            1.2774298191070557,
+            0.24059097468852997
+          ],
+          "max": [
+            2.5631399154663086,
+            2.234299898147583,
+            0.4838230013847351
+          ]
+        },
+        "center": [
+          2.302894949913025,
+          1.7558648586273193,
+          0.36220698803663254
+        ],
+        "anchor": [
+          2.326889991760254,
+          1.7991100549697876,
+          0.4253399670124054
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1516M",
+            "sha256": "f4e663154e28ab0ad13e6c4facce145b50460bf5f2bbdb7d0199867a6d735b84"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarPronatorTeres",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+        "fmaId": "FMA38617",
+        "name": "Humeral head of right flexor carpi ulnaris",
+        "sourceName": "humeral head of right flexor carpi ulnaris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38617",
+        "bounds": {
+          "min": [
+            -2.46451997756958,
+            -0.1844598352909088,
+            0.11169300228357315
+          ],
+          "max": [
+            -1.7782899141311646,
+            2.4833996295928955,
+            0.8657400608062744
+          ]
+        },
+        "center": [
+          -2.1214049458503723,
+          1.1494698971509933,
+          0.4887165315449238
+        ],
+        "anchor": [
+          -2.0889999866485596,
+          1.1641802787780762,
+          0.47693800926208496
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1473",
+            "sha256": "ccab7efb32e7b3cfc21039a138811f2972df5f2d91d23bbdbe63f13354774795"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "humeralFlexorCarpiUlnaris",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+        "fmaId": "FMA38618",
+        "name": "Humeral head of left flexor carpi ulnaris",
+        "sourceName": "humeral head of left flexor carpi ulnaris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38618",
+        "bounds": {
+          "min": [
+            1.7782899141311646,
+            -0.1844598352909088,
+            0.11169300228357315
+          ],
+          "max": [
+            2.46451997756958,
+            2.4833996295928955,
+            0.8657400608062744
+          ]
+        },
+        "center": [
+          2.1214049458503723,
+          1.1494698971509933,
+          0.4887165315449238
+        ],
+        "anchor": [
+          2.0889999866485596,
+          1.1641802787780762,
+          0.47693800926208496
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1473M",
+            "sha256": "d5f425f4b708deeed63146f31f6e399d7acb180c685df4bee45204154c8fb00f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "humeralFlexorCarpiUlnaris",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+        "fmaId": "FMA38619",
+        "name": "Ulnar head of right flexor carpi ulnaris",
+        "sourceName": "ulnar head of right flexor carpi ulnaris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38619",
+        "bounds": {
+          "min": [
+            -2.295140027999878,
+            0.3047601282596588,
+            -0.026018982753157616
+          ],
+          "max": [
+            -1.8938000202178955,
+            2.4335999488830566,
+            0.6620200276374817
+          ]
+        },
+        "center": [
+          -2.0944700241088867,
+          1.3691800385713577,
+          0.31800052244216204
+        ],
+        "anchor": [
+          -2.0705599784851074,
+          1.3230602741241455,
+          0.30151602625846863
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1518",
+            "sha256": "22abf242ce9d43dd9c6e02ef297b8e5982227a7ec1c7ead965674b92b476bad2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarFlexorCarpiUlnaris",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+        "fmaId": "FMA38620",
+        "name": "Ulnar head of left flexor carpi ulnaris",
+        "sourceName": "ulnar head of left flexor carpi ulnaris",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-muscles-dissection",
+        "nodeName": "FMA38620",
+        "bounds": {
+          "min": [
+            1.8938000202178955,
+            0.3047601282596588,
+            -0.026018982753157616
+          ],
+          "max": [
+            2.295140027999878,
+            2.4335999488830566,
+            0.6620200276374817
+          ]
+        },
+        "center": [
+          2.0944700241088867,
+          1.3691800385713577,
+          0.31800052244216204
+        ],
+        "anchor": [
+          2.0705599784851074,
+          1.3230499029159546,
+          0.30151602625846863
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1518M",
+            "sha256": "d3e731fc29ac9b42f06eb0a7c49979c7568813587c2b982e6c948163c02dccb8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ulnarFlexorCarpiUlnaris",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "63d20b16babb6a9fc0c1c185e0153457b605f4fbdbfb5493a172a8b8a5831658"
+}

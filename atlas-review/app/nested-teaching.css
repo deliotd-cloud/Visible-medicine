@@ -1,0 +1,63 @@
+.nested-teaching {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--border);
+  overflow-wrap: anywhere;
+}
+.nested-teaching > summary,
+.nested-teaching-answer > summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 0.4rem 0;
+}
+.nested-teaching summary:focus-visible,
+.nested-teaching a:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+.nested-teaching [data-slot='tabs-list'] {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  min-height: 2.25rem;
+}
+.nested-teaching [data-slot='tabs-trigger'] {
+  min-width: 0;
+  flex: 1 1 auto;
+  height: auto;
+  white-space: normal;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.3rem;
+}
+.nested-teaching p,
+.nested-teaching h4 {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0.55rem 0;
+}
+.nested-teaching h4 {
+  font-weight: 600;
+}
+.nested-teaching .nested-teaching-status,
+.nested-teaching-references {
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  line-height: 1.55;
+}
+.nested-teaching-references {
+  margin: 0.65rem 0;
+  padding-left: 1rem;
+}
+.nested-teaching-references a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.nested-teaching-limit,
+.nested-teaching-quiz {
+  border-top: 1px solid var(--border);
+  padding-top: 0.65rem;
+}

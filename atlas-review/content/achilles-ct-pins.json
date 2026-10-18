@@ -1,0 +1,183 @@
+{
+  "parentCommit": "36c53fb9e19fca1c7e579f79d6d4807e4778ac19",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "leg-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "bytes": 346900,
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "structures": 4
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "ffb57cb2b5116d9a9b161d9c7bfe5b3857f4ea19e654fa7ff2daa01b134a63f0",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:tendon:right-calcaneal-tendon",
+        "fmaId": "FMA258847",
+        "name": "Right calcaneal tendon",
+        "sourceName": "right calcaneal tendon",
+        "system": "connective",
+        "category": "tendon",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "leg-connective-gaps",
+        "nodeName": "FMA258847",
+        "bounds": {
+          "min": [
+            -0.9771320223808289,
+            -8.561546325683594,
+            -0.2533789873123169
+          ],
+          "max": [
+            -0.4082280099391937,
+            -6.421770095825195,
+            0.0528239831328392
+          ]
+        },
+        "center": [
+          -0.6926800161600113,
+          -7.4916582107543945,
+          -0.10027750208973885
+        ],
+        "anchor": [
+          -0.7006680369377136,
+          -7.488257884979248,
+          -0.10228099673986435
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1405",
+            "sha256": "64696f68cd961e4dfb7809ab9899a6777e994ea3bf696213da7a0ac1a507bed9"
+          }
+        ],
+        "coverageNote": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "right",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:tendon:left-calcaneal-tendon",
+        "fmaId": "FMA264844",
+        "name": "Left calcaneal tendon",
+        "sourceName": "left calcaneal tendon",
+        "system": "connective",
+        "category": "tendon",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "leg-connective-gaps",
+        "nodeName": "FMA264844",
+        "bounds": {
+          "min": [
+            0.4082280099391937,
+            -8.561546325683594,
+            -0.2533789873123169
+          ],
+          "max": [
+            0.9771320223808289,
+            -6.421770095825195,
+            0.0528239831328392
+          ]
+        },
+        "center": [
+          0.6926800161600113,
+          -7.4916582107543945,
+          -0.10027750208973885
+        ],
+        "anchor": [
+          0.7006680369377136,
+          -7.488257884979248,
+          -0.10228099673986435
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1405M",
+            "sha256": "192692c7351198ed60745072f921cf10b0a3a73fa25bc2fe2df4fb1c45a449f0"
+          }
+        ],
+        "coverageNote": "Calcaneal (Achilles) tendon surface. Subtendons, paratenon and enthesis are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "left",
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

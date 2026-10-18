@@ -1,0 +1,744 @@
+{
+  "parentCommit": "a8500d445240bd025900ff1fafc63287839ad72a",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+        "fmaId": "FMA46581",
+        "name": "Left lateral crico-arytenoid",
+        "sourceName": "left lateral crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46581",
+        "bounds": {
+          "min": [
+            0.05964810028672218,
+            5.94420051574707,
+            0.47257599234580994
+          ],
+          "max": [
+            0.10436300188302994,
+            6.052299976348877,
+            0.573140025138855
+          ]
+        },
+        "center": [
+          0.08200555108487606,
+          5.998250246047974,
+          0.5228580087423325
+        ],
+        "anchor": [
+          0.09090519696474075,
+          6.000500679016113,
+          0.5261699557304382
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2778",
+            "sha256": "15d694d60ddab28b19aa0ca2017c86ac82ccc3fda58d257a240f56c363d4271a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateral",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left lateral crico-arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+        "fmaId": "FMA46585",
+        "name": "Left oblique arytenoid",
+        "sourceName": "left oblique arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46585",
+        "bounds": {
+          "min": [
+            -0.07297239452600479,
+            6.035999774932861,
+            0.4362259805202484
+          ],
+          "max": [
+            0.05655650049448013,
+            6.102199554443359,
+            0.46778297424316406
+          ]
+        },
+        "center": [
+          -0.008207947015762329,
+          6.06909966468811,
+          0.45200447738170624
+        ],
+        "anchor": [
+          -0.005692710168659687,
+          6.066500186920166,
+          0.44715797901153564
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2780",
+            "sha256": "9ad13a6a95301607fa5968e68ae47efc458ebc67f9582f6fc0861672b7b4de17"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "oblique",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left oblique arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+        "fmaId": "FMA46578",
+        "name": "Left posterior crico-arytenoid",
+        "sourceName": "left posterior crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46578",
+        "bounds": {
+          "min": [
+            0.009708330035209656,
+            5.905500411987305,
+            0.42662298679351807
+          ],
+          "max": [
+            0.10085099935531616,
+            6.049200534820557,
+            0.48406097292900085
+          ]
+        },
+        "center": [
+          0.05527966469526291,
+          5.977350473403931,
+          0.45534197986125946
+        ],
+        "anchor": [
+          0.05543079972267151,
+          5.974200248718262,
+          0.45771896839141846
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2782",
+            "sha256": "eb100ad68f9201832f5fa15c7e802c175fb813302c8983f13b6f3d3dfdb3d4ef"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posterior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left posterior crico-arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-thyro-arytenoid",
+        "fmaId": "FMA46590",
+        "name": "Left thyro-arytenoid",
+        "sourceName": "left thyro-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46590",
+        "bounds": {
+          "min": [
+            -0.010459099896252155,
+            6.023199558258057,
+            0.45855697989463806
+          ],
+          "max": [
+            0.07469220459461212,
+            6.299699783325195,
+            0.6751899719238281
+          ]
+        },
+        "center": [
+          0.03211655234917998,
+          6.161449670791626,
+          0.5668734759092331
+        ],
+        "anchor": [
+          0.04407879710197449,
+          6.159899711608887,
+          0.5665500164031982
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2784",
+            "sha256": "6b0698f8b6a6cb877d3610dc959abe0b9c4691bb6e746fd85c8e523fcebc74a9"
+          },
+          {
+            "file": "FJ2785",
+            "sha256": "a785608978d62c2c14f2057cfe2606fe183523dbf92fc587801234bc0be41e2a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyroarytenoid",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left thyro-arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+        "fmaId": "FMA46593",
+        "name": "Left vocalis",
+        "sourceName": "left vocalis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46593",
+        "bounds": {
+          "min": [
+            0.01183099951595068,
+            6.036999702453613,
+            0.5088300108909607
+          ],
+          "max": [
+            0.02770490013062954,
+            6.051300048828125,
+            0.6497899889945984
+          ]
+        },
+        "center": [
+          0.01976794982329011,
+          6.044149875640869,
+          0.5793099999427795
+        ],
+        "anchor": [
+          0.018701201304793358,
+          6.0455002784729,
+          0.579509973526001
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2788",
+            "sha256": "dd26f669e127e5c5fae7ff796da0f516887f8c3834bbde1f2881d3a222cc2375"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "vocalis",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left vocalis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+        "fmaId": "FMA46580",
+        "name": "Right lateral crico-arytenoid",
+        "sourceName": "right lateral crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46580",
+        "bounds": {
+          "min": [
+            -0.11734800040721893,
+            5.94420051574707,
+            0.4725990295410156
+          ],
+          "max": [
+            -0.07283669710159302,
+            6.052299976348877,
+            0.5731199383735657
+          ]
+        },
+        "center": [
+          -0.09509234875440598,
+          5.998250246047974,
+          0.5228594839572906
+        ],
+        "anchor": [
+          -0.1039159968495369,
+          6.000600814819336,
+          0.5278299450874329
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2796",
+            "sha256": "d0a4730aeb6f0bafdf53eced4954a0ccfaf31ba8f3d08aa90e0c18d9c8928cb3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateral",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right lateral crico-arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+        "fmaId": "FMA46584",
+        "name": "Right oblique arytenoid",
+        "sourceName": "right oblique arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46584",
+        "bounds": {
+          "min": [
+            -0.06969249993562698,
+            6.036099910736084,
+            0.43618103861808777
+          ],
+          "max": [
+            0.059726301580667496,
+            6.102299690246582,
+            0.46766602993011475
+          ]
+        },
+        "center": [
+          -0.004983099177479744,
+          6.069199800491333,
+          0.45192353427410126
+        ],
+        "anchor": [
+          -0.00620647007599473,
+          6.066099643707275,
+          0.44711098074913025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2798",
+            "sha256": "706e265f99131c2bde1b61c4bc2cdfab7ae384ed2c84f10c8cbff91a295ca22c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "oblique",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right oblique arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+        "fmaId": "FMA46577",
+        "name": "Right posterior crico-arytenoid",
+        "sourceName": "right posterior crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46577",
+        "bounds": {
+          "min": [
+            -0.11375200003385544,
+            5.905500411987305,
+            0.4265989661216736
+          ],
+          "max": [
+            -0.022757599130272865,
+            6.049200534820557,
+            0.4839160144329071
+          ]
+        },
+        "center": [
+          -0.06825479958206415,
+          5.977350473403931,
+          0.45525749027729034
+        ],
+        "anchor": [
+          -0.06822539865970612,
+          5.976700305938721,
+          0.4580460488796234
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2800",
+            "sha256": "917fb9e8667c4d179c0f86ec06c27dc2d0537e4f81d1319aa21fe5a0e237d891"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "posterior",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right posterior crico-arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-thyro-arytenoid",
+        "fmaId": "FMA46589",
+        "name": "Right thyro-arytenoid",
+        "sourceName": "right thyro-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46589",
+        "bounds": {
+          "min": [
+            -0.08777830004692078,
+            6.023499965667725,
+            0.45842498540878296
+          ],
+          "max": [
+            -0.002617579884827137,
+            6.299699783325195,
+            0.6751999855041504
+          ]
+        },
+        "center": [
+          -0.04519793996587396,
+          6.16159987449646,
+          0.5668124854564667
+        ],
+        "anchor": [
+          -0.05627499893307686,
+          6.156500339508057,
+          0.5651699900627136
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2802",
+            "sha256": "68d5990536538ba707bd1b1b967b7ab14266ed74e5f0d1e33230a5922181c322"
+          },
+          {
+            "file": "FJ2803",
+            "sha256": "fd38f2f5befd554ba19bd4fbab0d0a4ae137a59bb24d3dd0852eb5caa910d3e2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyroarytenoid",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right thyro-arytenoid on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+        "fmaId": "FMA46592",
+        "name": "Right vocalis",
+        "sourceName": "right vocalis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46592",
+        "bounds": {
+          "min": [
+            -0.0408702977001667,
+            6.036899566650391,
+            0.5087999701499939
+          ],
+          "max": [
+            -0.024958301335573196,
+            6.051300048828125,
+            0.6497099995613098
+          ]
+        },
+        "center": [
+          -0.03291429951786995,
+          6.044099807739258,
+          0.5792549848556519
+        ],
+        "anchor": [
+          -0.032070599496364594,
+          6.045300483703613,
+          0.5802200436592102
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2806",
+            "sha256": "f4b83790f1c6364785f6ec6a8428443e7f20cfe48ed9a14234bb8aff1d80f2a9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "vocalis",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right vocalis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+        "fmaId": "FMA46582",
+        "name": "Transverse arytenoid",
+        "sourceName": "transverse arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46582",
+        "bounds": {
+          "min": [
+            -0.0801616981625557,
+            6.034100532531738,
+            0.44700202345848083
+          ],
+          "max": [
+            0.0669441968202591,
+            6.096500396728516,
+            0.4777510166168213
+          ]
+        },
+        "center": [
+          -0.0066087506711483,
+          6.065300464630127,
+          0.46237652003765106
+        ],
+        "anchor": [
+          -0.004699999932199717,
+          6.064899921417236,
+          0.4630560278892517
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2809",
+            "sha256": "1ece0839b43392b090d5e4b5bf96448a10935f1d3637487cd526d0fff8251f32"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transverse",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find transverse arytenoid on the model."
+      }
+    }
+  ]
+}

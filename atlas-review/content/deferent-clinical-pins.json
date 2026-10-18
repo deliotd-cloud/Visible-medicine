@@ -1,0 +1,227 @@
+{
+  "sourceCommit": "62f15bb1c1e20b0cb0bfad1e8484893f577240cb",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "deferent-ducts",
+      "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "2bc35125cb0eafedfefbd1389e1c72eab3b6b30d7f493b2ca0d3b7bdf5788ad1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+        "fmaId": "FMA19236",
+        "name": "Left deferent duct",
+        "sourceName": "left deferent duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "deferent-ducts",
+        "nodeName": "FMA19236",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3135",
+            "sha256": "75091a49ea2b9d0074eab9564d9d484094c82006a2e10bcb7d4f5f1c4e2b5648"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.02551710046827793,
+            -1.054010033607483,
+            0.025624999776482582
+          ],
+          "max": [
+            1.0262500047683716,
+            0.5781099796295166,
+            1.048050045967102
+          ]
+        },
+        "center": [
+          0.5258835526183248,
+          -0.23795002698898315,
+          0.5368375228717923
+        ],
+        "anchor": [
+          0.21995200216770172,
+          -0.23739999532699585,
+          0.9566500186920166
+        ],
+        "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "side": "left",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left deferent duct · Source anatomy · draft",
+        "body": "The deferent duct (ductus or vas deferens) is a muscular duct that continues from the epididymis, passes through the inguinal canal and reaches the posterior bladder region. Its terminal portion joins the seminal-vesicle duct to form the ejaculatory duct.",
+        "bullets": [
+          "Use Study → Male pelvis: deferent ducts to compare the supplied surfaces and nearby organs.",
+          "Epididymides, ejaculatory ducts, cord coverings and nerves are not supplied by this addition; do not infer a complete connection from surface proximity."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. Complete source files do not establish complete anatomical extent, a continuous lumen or patient correspondence.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        ]
+      },
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Left deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+        "fmaId": "FMA19235",
+        "name": "Right deferent duct",
+        "sourceName": "right deferent duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "deferent-ducts",
+        "nodeName": "FMA19235",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3140",
+            "sha256": "f5fa6eca33541ceffdd87a910e4fb2e804f3bcd4418ee06555dcbb0b60aa581d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.8408430218696594,
+            -1.0541000366210938,
+            0.029635999351739883
+          ],
+          "max": [
+            -0.03898070007562637,
+            0.6093999743461609,
+            1.0447900295257568
+          ]
+        },
+        "center": [
+          -0.4399118609726429,
+          -0.22235003113746643,
+          0.5372130144387484
+        ],
+        "anchor": [
+          -0.22347700595855713,
+          -0.2893500030040741,
+          0.9433799982070923
+        ],
+        "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "side": "right",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right deferent duct · Source anatomy · draft",
+        "body": "The deferent duct (ductus or vas deferens) is a muscular duct that continues from the epididymis, passes through the inguinal canal and reaches the posterior bladder region. Its terminal portion joins the seminal-vesicle duct to form the ejaculatory duct.",
+        "bullets": [
+          "Use Study → Male pelvis: deferent ducts to compare the supplied surfaces and nearby organs.",
+          "Epididymides, ejaculatory ducts, cord coverings and nerves are not supplied by this addition; do not infer a complete connection from surface proximity."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. Complete source files do not establish complete anatomical extent, a continuous lumen or patient correspondence.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        ]
+      },
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        }
+      }
+    }
+  ]
+}

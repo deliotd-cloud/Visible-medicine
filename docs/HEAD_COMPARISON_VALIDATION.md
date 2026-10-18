@@ -1,0 +1,9 @@
+## Checkpoint — 9 October 2026: linked comparison selection validation
+
+The generic head 3D comparison form now requires a structure before submission. Previously, clicking Open in model with the empty placeholder silently did nothing. Native validation now focuses the picker and asks for a selection; the existing canonical-ID validation remains unchanged. No CT/MRI correspondence, source revision, practice-answer protection or access control changes.
+
+The new actual-component regression failed before the fix. After the fix, all ten comparison tests pass, TypeScript passes and the isolated E website build completes. The independent audit also passed 117 pre-change linked navigation/practice tests and found no higher-impact new regression. Browser verification confirms empty-selection validation/focus and valid Pons navigation retaining exact structure/source/part hashes. Initial slow model readiness required the existing Retry comparison control; this worked without reloading or bypassing authentication. Loaded anatomy and clinical acceptance were not assessed.
+
+Sites local-only workflow; existing pinned Wrangler preview reused. Preview session 47683 serves port 3000. No publication, new dependencies, fees, scans, masks, clinical approvals or desktop PACS changes. Source-only recovery and verified incremental bundle are in E:/VisibleMedicine-LocalStaging/20261009-linked-navigation-audit/saved-state.json, requiring website parent a5f938688ccecb7dde7886ca59338b3bff4556ac. Recovery is same-machine, not verified GitHub/off-device backup. Unrelated specialist files and shared-plan tail are preserved by hash/content checks.
+
+Next: continue the full roadmap, prioritizing substantive linked-learning usability and source-backed teaching. Retain the whole-to-sided cerebellar mapping limit and separate clinical/release gates; they do not block independent development. The full goal remains active.

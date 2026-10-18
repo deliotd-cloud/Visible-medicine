@@ -1,0 +1,3292 @@
+{
+  "sourceCommit": "441ce856955f71b145420330fff3e37649d7ad4e",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-muscles",
+      "url": "/models/bodyparts3d/full-body/foot-muscles.glb",
+      "bytes": 444740,
+      "sha256": "44557187f3ffba580548a455d95340b66b57bebbaad286e8a1484dcceffbd42e",
+      "structures": 28
+    },
+    {
+      "id": "foot-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "bytes": 178072,
+      "sha256": "3a85853e4f552b5d2f4a9a63bc5efec306d13205a08633125cc0ff78939c2a63",
+      "structures": 8
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:first-lumbrical-of-right-foot",
+        "fmaId": "FMA37717",
+        "name": "First lumbrical of right foot",
+        "sourceName": "first lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37717",
+        "bounds": {
+          "min": [
+            -1.1310800313949585,
+            -8.670652389526367,
+            0.5613500475883484
+          ],
+          "max": [
+            -0.7768679857254028,
+            -8.474342346191406,
+            1.4152299165725708
+          ]
+        },
+        "center": [
+          -0.9539740085601807,
+          -8.572497367858887,
+          0.9882899820804596
+        ],
+        "anchor": [
+          -0.945252001285553,
+          -8.561978340148926,
+          1.0083799362182617
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1383",
+            "sha256": "d7bce4728ada3797b2ada290797ee98aeaf1d43d0279d83401c9d54ff72add3f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "firstLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:first-lumbrical-of-left-foot",
+        "fmaId": "FMA37718",
+        "name": "First lumbrical of left foot",
+        "sourceName": "first lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37718",
+        "bounds": {
+          "min": [
+            0.7768679857254028,
+            -8.670653343200684,
+            0.5613500475883484
+          ],
+          "max": [
+            1.1310800313949585,
+            -8.474342346191406,
+            1.4152299165725708
+          ]
+        },
+        "center": [
+          0.9539740085601807,
+          -8.572497844696045,
+          0.9882899820804596
+        ],
+        "anchor": [
+          0.945252001285553,
+          -8.561978340148926,
+          1.0083799362182617
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1383M",
+            "sha256": "9da478797a43866ef3b3e4750b76d37de5d35b3fd3fe659935200cb2426dd139"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "firstLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:first-plantar-interosseous-of-right-foot",
+        "fmaId": "FMA37745",
+        "name": "First plantar interosseous of right foot",
+        "sourceName": "first plantar interosseous of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37745",
+        "bounds": {
+          "min": [
+            -1.3174999952316284,
+            -8.626962661743164,
+            0.8359900116920471
+          ],
+          "max": [
+            -1.0479099750518799,
+            -8.391441345214844,
+            1.3314300775527954
+          ]
+        },
+        "center": [
+          -1.1827049851417542,
+          -8.509202003479004,
+          1.0837100446224213
+        ],
+        "anchor": [
+          -1.1793400049209595,
+          -8.511947631835938,
+          1.0952200889587402
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1384",
+            "sha256": "76db533b5ef8f3d4a85d142e0e5f7297c8996d0a75efcc4c5124d7643857e3a5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "firstPlantarInterosseous",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:first-plantar-interosseous-of-left-foot",
+        "fmaId": "FMA37746",
+        "name": "First plantar interosseous of left foot",
+        "sourceName": "first plantar interosseous of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37746",
+        "bounds": {
+          "min": [
+            1.0479099750518799,
+            -8.626962661743164,
+            0.8359900116920471
+          ],
+          "max": [
+            1.3174999952316284,
+            -8.391441345214844,
+            1.3314300775527954
+          ]
+        },
+        "center": [
+          1.1827049851417542,
+          -8.509202003479004,
+          1.0837100446224213
+        ],
+        "anchor": [
+          1.1793400049209595,
+          -8.511947631835938,
+          1.0952200889587402
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1384M",
+            "sha256": "66543fc74c686eb86051f82c9b7ed3931c0a5b72ebb14ff2e90ccbf65a70b522"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "firstPlantarInterosseous",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:second-lumbrical-of-right-foot",
+        "fmaId": "FMA37719",
+        "name": "Second lumbrical of right foot",
+        "sourceName": "second lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37719",
+        "bounds": {
+          "min": [
+            -1.2918899059295654,
+            -8.675909996032715,
+            0.717799961566925
+          ],
+          "max": [
+            -0.8852739930152893,
+            -8.534259796142578,
+            1.344019889831543
+          ]
+        },
+        "center": [
+          -1.0885819494724274,
+          -8.605084896087646,
+          1.030909925699234
+        ],
+        "anchor": [
+          -1.0707000494003296,
+          -8.598753929138184,
+          1.0353699922561646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1385",
+            "sha256": "76ad80b70d292c181e8947d623ddee8f373a20813e4d0fc8842c9b29800234a6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "secondLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:second-lumbrical-of-left-foot",
+        "fmaId": "FMA37720",
+        "name": "Second lumbrical of left foot",
+        "sourceName": "second lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37720",
+        "bounds": {
+          "min": [
+            0.8852739930152893,
+            -8.675909996032715,
+            0.717799961566925
+          ],
+          "max": [
+            1.2918899059295654,
+            -8.534259796142578,
+            1.344019889831543
+          ]
+        },
+        "center": [
+          1.0885819494724274,
+          -8.605084896087646,
+          1.030909925699234
+        ],
+        "anchor": [
+          1.0707000494003296,
+          -8.598753929138184,
+          1.0353699922561646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1385M",
+            "sha256": "7b8bad4fbf9ab385a923da194a35a1fb06c42d7301d4977e736f8da0f6f7db0a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "secondLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:second-plantar-interosseous-of-right-foot",
+        "fmaId": "FMA37743",
+        "name": "Second plantar interosseous of right foot",
+        "sourceName": "second plantar interosseous of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37743",
+        "bounds": {
+          "min": [
+            -1.3842799663543701,
+            -8.623082160949707,
+            0.7655999660491943
+          ],
+          "max": [
+            -1.1108499765396118,
+            -8.420093536376953,
+            1.2339199781417847
+          ]
+        },
+        "center": [
+          -1.247564971446991,
+          -8.52158784866333,
+          0.9997599720954895
+        ],
+        "anchor": [
+          -1.2493599653244019,
+          -8.514833450317383,
+          1.0058599710464478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1386",
+            "sha256": "aa653c971e6d50e27f0b0aa90e5a6bdf453038bc4c63c51395425d4e0f4bfa26"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "secondPlantarInterosseous",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:second-plantar-interosseous-of-left-foot",
+        "fmaId": "FMA37744",
+        "name": "Second plantar interosseous of left foot",
+        "sourceName": "second plantar interosseous of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37744",
+        "bounds": {
+          "min": [
+            1.1108499765396118,
+            -8.623082160949707,
+            0.7655999660491943
+          ],
+          "max": [
+            1.3842799663543701,
+            -8.420093536376953,
+            1.2339199781417847
+          ]
+        },
+        "center": [
+          1.247564971446991,
+          -8.52158784866333,
+          0.9997599720954895
+        ],
+        "anchor": [
+          1.2493599653244019,
+          -8.51483154296875,
+          1.0058599710464478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1386M",
+            "sha256": "f426c6d272285a14f588a479e91093b56f39862b90b7c614ca37c6d2b68a9f8f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "secondPlantarInterosseous",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
+        "fmaId": "FMA37485",
+        "name": "Third lumbrical of right foot",
+        "sourceName": "third lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37485",
+        "bounds": {
+          "min": [
+            -1.3781399726867676,
+            -8.680427551269531,
+            0.6886900067329407
+          ],
+          "max": [
+            -0.9402259588241577,
+            -8.538249015808105,
+            1.2332699298858643
+          ]
+        },
+        "center": [
+          -1.1591829657554626,
+          -8.609338283538818,
+          0.9609799683094025
+        ],
+        "anchor": [
+          -1.130020022392273,
+          -8.617944717407227,
+          0.9735099673271179
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1387",
+            "sha256": "11b4051e92be3f915e1ca7be08be43f1d8fc360d391903e6b0a83cda69b0a00f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thirdLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
+        "fmaId": "FMA37486",
+        "name": "Third lumbrical of left foot",
+        "sourceName": "third lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37486",
+        "bounds": {
+          "min": [
+            0.9402259588241577,
+            -8.680427551269531,
+            0.6886900067329407
+          ],
+          "max": [
+            1.3781399726867676,
+            -8.538249015808105,
+            1.2332699298858643
+          ]
+        },
+        "center": [
+          1.1591829657554626,
+          -8.609338283538818,
+          0.9609799683094025
+        ],
+        "anchor": [
+          1.130020022392273,
+          -8.617944717407227,
+          0.9735099673271179
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1387M",
+            "sha256": "31a1eeffb990dc0f73817c3d53459bf3ef41b764a4c77eb04734f9d7e341c065"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thirdLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
+        "fmaId": "FMA37741",
+        "name": "Third plantar interosseous of right foot",
+        "sourceName": "third plantar interosseous of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37741",
+        "bounds": {
+          "min": [
+            -1.5381699800491333,
+            -8.644573211669922,
+            0.6548300385475159
+          ],
+          "max": [
+            -1.135469913482666,
+            -8.503181457519531,
+            1.0948699712753296
+          ]
+        },
+        "center": [
+          -1.3368199467658997,
+          -8.573877334594727,
+          0.8748500049114227
+        ],
+        "anchor": [
+          -1.3213499784469604,
+          -8.581954002380371,
+          0.8831300139427185
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1388",
+            "sha256": "9b38a442bc6c67ecf339aa16a98f0c1aa3b83ec0f664cd6a443eed3ce381b464"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thirdPlantarInterosseous",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
+        "fmaId": "FMA37742",
+        "name": "Third plantar interosseous of left foot",
+        "sourceName": "third plantar interosseous of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37742",
+        "bounds": {
+          "min": [
+            1.135469913482666,
+            -8.644573211669922,
+            0.6548300385475159
+          ],
+          "max": [
+            1.5381699800491333,
+            -8.503181457519531,
+            1.0948699712753296
+          ]
+        },
+        "center": [
+          1.3368199467658997,
+          -8.573877334594727,
+          0.8748500049114227
+        ],
+        "anchor": [
+          1.3213499784469604,
+          -8.581954002380371,
+          0.8831300139427185
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1388M",
+            "sha256": "ab3cd072c60f5f08f8b02866569b99e4050d52b3da1e0c3585630278863b6e6a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thirdPlantarInterosseous",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:fourth-lumbrical-of-right-foot",
+        "fmaId": "FMA37483",
+        "name": "Fourth lumbrical of right foot",
+        "sourceName": "fourth lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37483",
+        "bounds": {
+          "min": [
+            -1.4576900005340576,
+            -8.678147315979004,
+            0.6754100322723389
+          ],
+          "max": [
+            -0.9974899888038635,
+            -8.537311553955078,
+            1.0824499130249023
+          ]
+        },
+        "center": [
+          -1.2275899946689606,
+          -8.607729434967041,
+          0.8789299726486206
+        ],
+        "anchor": [
+          -1.2329299449920654,
+          -8.626457214355469,
+          0.8939599394798279
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1389",
+            "sha256": "86b7a17497e4efde3030ec8e542178caba1c875a7af62d491ef8c89e42528444"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fourthLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:fourth-lumbrical-of-left-foot",
+        "fmaId": "FMA37484",
+        "name": "Fourth lumbrical of left foot",
+        "sourceName": "fourth lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37484",
+        "bounds": {
+          "min": [
+            0.9974899888038635,
+            -8.678147315979004,
+            0.6754100322723389
+          ],
+          "max": [
+            1.4576900005340576,
+            -8.537311553955078,
+            1.0824499130249023
+          ]
+        },
+        "center": [
+          1.2275899946689606,
+          -8.607729434967041,
+          0.8789299726486206
+        ],
+        "anchor": [
+          1.2329299449920654,
+          -8.626457214355469,
+          0.8939599394798279
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1389M",
+            "sha256": "56b4b576426370d783dbf71f4e37922411644b3146fea22c6cde7c7800e061e9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fourthLumbrical",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:abductor-digiti-minimi-of-right-foot",
+        "fmaId": "FMA37463",
+        "name": "Abductor digiti minimi of right foot",
+        "sourceName": "abductor digiti minimi of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37463",
+        "bounds": {
+          "min": [
+            -1.5460400581359863,
+            -8.6971435546875,
+            -0.06266998499631882
+          ],
+          "max": [
+            -0.613968014717102,
+            -8.537564277648926,
+            1.0282299518585205
+          ]
+        },
+        "center": [
+          -1.0800040364265442,
+          -8.617353916168213,
+          0.48277998343110085
+        ],
+        "anchor": [
+          -1.1026099920272827,
+          -8.605365753173828,
+          0.45603400468826294
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1390",
+            "sha256": "3053f68fa151832744775c9aa012e13ef575657ffc2638fcd466e49defcc86ad"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abductorDigitiMinimi",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:abductor-digiti-minimi-of-left-foot",
+        "fmaId": "FMA37464",
+        "name": "Abductor digiti minimi of left foot",
+        "sourceName": "abductor digiti minimi of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37464",
+        "bounds": {
+          "min": [
+            0.613968014717102,
+            -8.6971435546875,
+            -0.06266998499631882
+          ],
+          "max": [
+            1.5460400581359863,
+            -8.537564277648926,
+            1.0282299518585205
+          ]
+        },
+        "center": [
+          1.0800040364265442,
+          -8.617353916168213,
+          0.48277998343110085
+        ],
+        "anchor": [
+          1.1026099920272827,
+          -8.605365753173828,
+          0.45603400468826294
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1390M",
+            "sha256": "c10d0f8d9c56f95701d695be297c228e679d5929076a577cef82073d1be5e773"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abductorDigitiMinimi",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:flexor-digiti-minimi-brevis-of-right-foot",
+        "fmaId": "FMA37471",
+        "name": "Flexor digiti minimi brevis of right foot",
+        "sourceName": "flexor digiti minimi brevis of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37471",
+        "bounds": {
+          "min": [
+            -1.557610034942627,
+            -8.71054744720459,
+            0.48194199800491333
+          ],
+          "max": [
+            -1.0922499895095825,
+            -8.532490730285645,
+            1.0994700193405151
+          ]
+        },
+        "center": [
+          -1.3249300122261047,
+          -8.621519088745117,
+          0.7907060086727142
+        ],
+        "anchor": [
+          -1.318269968032837,
+          -8.621258735656738,
+          0.7882400751113892
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1391",
+            "sha256": "82b364ba67142432c00427d87596e82fafa4524929273e20a75aa6062f553d52"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitiMinimiBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:flexor-digiti-minimi-brevis-of-left-foot",
+        "fmaId": "FMA37472",
+        "name": "Flexor digiti minimi brevis of left foot",
+        "sourceName": "flexor digiti minimi brevis of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37472",
+        "bounds": {
+          "min": [
+            1.0922499895095825,
+            -8.71054744720459,
+            0.48194199800491333
+          ],
+          "max": [
+            1.557610034942627,
+            -8.532490730285645,
+            1.0994700193405151
+          ]
+        },
+        "center": [
+          1.3249300122261047,
+          -8.621519088745117,
+          0.7907060086727142
+        ],
+        "anchor": [
+          1.318269968032837,
+          -8.621258735656738,
+          0.7882400751113892
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1391M",
+            "sha256": "bca42e734f25c397d2be5bee832c1abb263ba2c0263f8fb9c1fc3b961d31d183"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitiMinimiBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:opponens-digiti-minimi-of-right-foot",
+        "fmaId": "FMA86034",
+        "name": "Opponens digiti minimi of right foot",
+        "sourceName": "opponens digiti minimi of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA86034",
+        "bounds": {
+          "min": [
+            -1.3911499977111816,
+            -8.644131660461426,
+            0.49133598804473877
+          ],
+          "max": [
+            -1.0967199802398682,
+            -8.533462524414062,
+            0.8574400544166565
+          ]
+        },
+        "center": [
+          -1.243934988975525,
+          -8.588797092437744,
+          0.6743880212306976
+        ],
+        "anchor": [
+          -1.2535099983215332,
+          -8.589516639709473,
+          0.6709200143814087
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1399",
+            "sha256": "fbe4139cda56df2fe947b59c6e09e20d6b0384760d3425056f48ff5f7aa6a84d"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "opponensDigitiMinimi",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:opponens-digiti-minimi-of-left-foot",
+        "fmaId": "FMA86035",
+        "name": "Opponens digiti minimi of left foot",
+        "sourceName": "opponens digiti minimi of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA86035",
+        "bounds": {
+          "min": [
+            1.0967199802398682,
+            -8.644131660461426,
+            0.49133598804473877
+          ],
+          "max": [
+            1.3911499977111816,
+            -8.533462524414062,
+            0.8574400544166565
+          ]
+        },
+        "center": [
+          1.243934988975525,
+          -8.588797092437744,
+          0.6743880212306976
+        ],
+        "anchor": [
+          1.2535099983215332,
+          -8.589516639709473,
+          0.6709200143814087
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1399M",
+            "sha256": "c563ffeca1d282cf206accf4bc8f6052ede6e50089b04e8018704bf20e012c60"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "opponensDigitiMinimi",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:right-abductor-hallucis",
+        "fmaId": "FMA37459",
+        "name": "Right abductor hallucis",
+        "sourceName": "right abductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37459",
+        "bounds": {
+          "min": [
+            -0.8903470039367676,
+            -8.656835556030273,
+            0.07195400446653366
+          ],
+          "max": [
+            -0.5387179851531982,
+            -8.396504402160645,
+            1.4343299865722656
+          ]
+        },
+        "center": [
+          -0.7145324945449829,
+          -8.526669979095459,
+          0.7531419955193996
+        ],
+        "anchor": [
+          -0.721390962600708,
+          -8.509918212890625,
+          0.7786300182342529
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1400",
+            "sha256": "e09959b4180b40e4272430e9cd7bd1fbfce954cd9c39236a3acca1a4fc495553"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abductorHallucis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:left-abductor-hallucis",
+        "fmaId": "FMA37460",
+        "name": "Left abductor hallucis",
+        "sourceName": "left abductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37460",
+        "bounds": {
+          "min": [
+            0.5387189984321594,
+            -8.656835556030273,
+            0.07195400446653366
+          ],
+          "max": [
+            0.8903470039367676,
+            -8.396504402160645,
+            1.4343299865722656
+          ]
+        },
+        "center": [
+          0.7145330011844635,
+          -8.526669979095459,
+          0.7531419955193996
+        ],
+        "anchor": [
+          0.7213900089263916,
+          -8.509918212890625,
+          0.7786300182342529
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1400M",
+            "sha256": "d598846d1738e708a810a4a1b621fddce3f0b170ccb8e9905cf1720108018567"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "abductorHallucis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:right-extensor-hallucis-brevis",
+        "fmaId": "FMA51144",
+        "name": "Right extensor hallucis brevis",
+        "sourceName": "right extensor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA51144",
+        "bounds": {
+          "min": [
+            -1.0433999300003052,
+            -8.533596992492676,
+            0.2813449800014496
+          ],
+          "max": [
+            -0.903251051902771,
+            -8.074344635009766,
+            1.480370044708252
+          ]
+        },
+        "center": [
+          -0.9733254909515381,
+          -8.30397081375122,
+          0.8808575123548508
+        ],
+        "anchor": [
+          -0.964942991733551,
+          -8.226442337036133,
+          0.8870799541473389
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1407",
+            "sha256": "cbef129a1fd217b80efe9688ec6b4e0dbf7471d81b5f15a20e12ef7f04f42d17"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorHallucisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:left-extensor-hallucis-brevis",
+        "fmaId": "FMA51145",
+        "name": "Left extensor hallucis brevis",
+        "sourceName": "left extensor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA51145",
+        "bounds": {
+          "min": [
+            0.903251051902771,
+            -8.533596992492676,
+            0.2813449800014496
+          ],
+          "max": [
+            1.0433999300003052,
+            -8.074344635009766,
+            1.480370044708252
+          ]
+        },
+        "center": [
+          0.9733254909515381,
+          -8.30397081375122,
+          0.8808575123548508
+        ],
+        "anchor": [
+          0.964942991733551,
+          -8.226442337036133,
+          0.8870799541473389
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1407M",
+            "sha256": "d2a516bfd3720c481ca3e8410729117d527c0d9af08d031d643d51554284e031"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "extensorHallucisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:right-flexor-accessorius",
+        "fmaId": "FMA37465",
+        "name": "Right flexor accessorius",
+        "sourceName": "right flexor accessorius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37465",
+        "bounds": {
+          "min": [
+            -1.091610074043274,
+            -8.62443733215332,
+            0.002608985872939229
+          ],
+          "max": [
+            -0.6006180047988892,
+            -8.464406967163086,
+            0.6894400119781494
+          ]
+        },
+        "center": [
+          -0.8461140394210815,
+          -8.544422149658203,
+          0.3460244989255443
+        ],
+        "anchor": [
+          -0.8511900305747986,
+          -8.54867172241211,
+          0.3627159893512726
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1412",
+            "sha256": "861d6da24530c840934d94591e7f769d1b3298adb32ba7bb0ecbb78963cf6657"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorAccessorius",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:left-flexor-accessorius",
+        "fmaId": "FMA37466",
+        "name": "Left flexor accessorius",
+        "sourceName": "left flexor accessorius",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37466",
+        "bounds": {
+          "min": [
+            0.6006180047988892,
+            -8.62443733215332,
+            0.002608985872939229
+          ],
+          "max": [
+            1.091610074043274,
+            -8.464406967163086,
+            0.6894400119781494
+          ]
+        },
+        "center": [
+          0.8461140394210815,
+          -8.544422149658203,
+          0.3460244989255443
+        ],
+        "anchor": [
+          0.8511900305747986,
+          -8.54867172241211,
+          0.3627159893512726
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1412M",
+            "sha256": "376adf52d61b1f0e96e54d83084a4300d1f204c3d8e4484c5edceae146a1fa05"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorAccessorius",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:right-flexor-digitorum-brevis",
+        "fmaId": "FMA37461",
+        "name": "Right flexor digitorum brevis",
+        "sourceName": "right flexor digitorum brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37461",
+        "bounds": {
+          "min": [
+            -1.6432600021362305,
+            -8.728100776672363,
+            -0.04374198988080025
+          ],
+          "max": [
+            -0.5860260128974915,
+            -8.539255142211914,
+            1.681939959526062
+          ]
+        },
+        "center": [
+          -1.114643007516861,
+          -8.633677959442139,
+          0.8190989848226309
+        ],
+        "anchor": [
+          -1.0816999673843384,
+          -8.636741638183594,
+          0.8019599914550781
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1413",
+            "sha256": "4910cc83a0e1558971c95ce4b73a4845e3ab63a19cd3e92769aaf46f0bd41333"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitorumBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:left-flexor-digitorum-brevis",
+        "fmaId": "FMA37462",
+        "name": "Left flexor digitorum brevis",
+        "sourceName": "left flexor digitorum brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37462",
+        "bounds": {
+          "min": [
+            0.5860260128974915,
+            -8.728100776672363,
+            -0.04374198988080025
+          ],
+          "max": [
+            1.6432600021362305,
+            -8.539255142211914,
+            1.681939959526062
+          ]
+        },
+        "center": [
+          1.114643007516861,
+          -8.633677959442139,
+          0.8190989848226309
+        ],
+        "anchor": [
+          1.0816999673843384,
+          -8.636741638183594,
+          0.8019599914550781
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1413M",
+            "sha256": "77dc59309567b31f6842f30c45f24fccb2a3e9b17fbde558d1ce036c640bfcca"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "flexorDigitorumBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:medial-head-of-right-flexor-hallucis-brevis",
+        "fmaId": "FMA45971",
+        "name": "Medial head of right flexor hallucis brevis",
+        "sourceName": "medial head of right flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45971",
+        "bounds": {
+          "min": [
+            -0.952413022518158,
+            -8.690187454223633,
+            0.6807599663734436
+          ],
+          "max": [
+            -0.6814559698104858,
+            -8.312599182128906,
+            1.4500600099563599
+          ]
+        },
+        "center": [
+          -0.8169344961643219,
+          -8.50139331817627,
+          1.0654099881649017
+        ],
+        "anchor": [
+          -0.8259750604629517,
+          -8.502474784851074,
+          1.054610013961792
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1396",
+            "sha256": "778a43d6a1540626e4e13f29c75a4ec75d335abd37ee9c7fdee4eea8188116e1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medialFlexorHallucisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
+        "fmaId": "FMA45972",
+        "name": "Medial head of left flexor hallucis brevis",
+        "sourceName": "medial head of left flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45972",
+        "bounds": {
+          "min": [
+            0.6814559698104858,
+            -8.690187454223633,
+            0.6807599663734436
+          ],
+          "max": [
+            0.952413022518158,
+            -8.312599182128906,
+            1.4500600099563599
+          ]
+        },
+        "center": [
+          0.8169344961643219,
+          -8.50139331817627,
+          1.0654099881649017
+        ],
+        "anchor": [
+          0.8259750604629517,
+          -8.502474784851074,
+          1.054610013961792
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1396M",
+            "sha256": "9c20236d9fc8b34638f313248ec940dfa08c67718324d9cd21fed6beda989411"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "medialFlexorHallucisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:lateral-head-of-right-flexor-hallucis-brevis",
+        "fmaId": "FMA45973",
+        "name": "Lateral head of right flexor hallucis brevis",
+        "sourceName": "lateral head of right flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45973",
+        "bounds": {
+          "min": [
+            -1.050950050354004,
+            -8.710494041442871,
+            0.6824400424957275
+          ],
+          "max": [
+            -0.6848959922790527,
+            -8.337525367736816,
+            1.4523100852966309
+          ]
+        },
+        "center": [
+          -0.8679230213165283,
+          -8.524009704589844,
+          1.0673750638961792
+        ],
+        "anchor": [
+          -0.8629340529441833,
+          -8.557160377502441,
+          1.0499399900436401
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1393",
+            "sha256": "4403ddd8a9fffab7fdf1cbb28fd9b90f461913bd9c28cfea23fc512844668985"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateralFlexorHallucisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:lateral-head-of-left-flexor-hallucis-brevis",
+        "fmaId": "FMA45974",
+        "name": "Lateral head of left flexor hallucis brevis",
+        "sourceName": "lateral head of left flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45974",
+        "bounds": {
+          "min": [
+            0.6848959922790527,
+            -8.710494041442871,
+            0.6824400424957275
+          ],
+          "max": [
+            1.050950050354004,
+            -8.337525367736816,
+            1.4523100852966309
+          ]
+        },
+        "center": [
+          0.8679230213165283,
+          -8.524009704589844,
+          1.0673750638961792
+        ],
+        "anchor": [
+          0.8629340529441833,
+          -8.557160377502441,
+          1.0499399900436401
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1393M",
+            "sha256": "70464799f8eb4602132a0c94d955779e5a817d96dce207c7777a7e3a969eb858"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lateralFlexorHallucisBrevis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:oblique-head-of-right-adductor-hallucis",
+        "fmaId": "FMA46018",
+        "name": "Oblique head of right adductor hallucis",
+        "sourceName": "oblique head of right adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46018",
+        "bounds": {
+          "min": [
+            -1.1313400268554688,
+            -8.656678199768066,
+            0.5724199414253235
+          ],
+          "max": [
+            -0.9530239701271057,
+            -8.36751937866211,
+            1.2364000082015991
+          ]
+        },
+        "center": [
+          -1.0421819984912872,
+          -8.512098789215088,
+          0.9044099748134613
+        ],
+        "anchor": [
+          -1.0516899824142456,
+          -8.541279792785645,
+          0.917389988899231
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1398",
+            "sha256": "346020de3eb54e85a76fed52b2742fb86c596db4a413a717ce93d55a6d589b34"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "obliqueAdductorHallucis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:oblique-head-of-left-adductor-hallucis",
+        "fmaId": "FMA46019",
+        "name": "Oblique head of left adductor hallucis",
+        "sourceName": "oblique head of left adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46019",
+        "bounds": {
+          "min": [
+            0.9530239701271057,
+            -8.656678199768066,
+            0.5724199414253235
+          ],
+          "max": [
+            1.1313400268554688,
+            -8.36751937866211,
+            1.2364000082015991
+          ]
+        },
+        "center": [
+          1.0421819984912872,
+          -8.512098789215088,
+          0.9044099748134613
+        ],
+        "anchor": [
+          1.0516899824142456,
+          -8.541280746459961,
+          0.917389988899231
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1398M",
+            "sha256": "b5ac05430038cb79e795e8f957219f2cb1c4a7f5c30139745a8d44f7cd562bd9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "obliqueAdductorHallucis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:transverse-head-of-right-adductor-hallucis",
+        "fmaId": "FMA46020",
+        "name": "Transverse head of right adductor hallucis",
+        "sourceName": "transverse head of right adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46020",
+        "bounds": {
+          "min": [
+            -1.4013299942016602,
+            -8.655768394470215,
+            0.9792900085449219
+          ],
+          "max": [
+            -0.9830909967422485,
+            -8.583616256713867,
+            1.2895199060440063
+          ]
+        },
+        "center": [
+          -1.1922104954719543,
+          -8.619692325592041,
+          1.1344049572944641
+        ],
+        "anchor": [
+          -1.1960399150848389,
+          -8.611153602600098,
+          1.1220300197601318
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1445",
+            "sha256": "b62f353790db0c2b504f502e6fadd1be4f951290dc76bd39a8019fe202ef36c9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transverseAdductorHallucis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:transverse-head-of-left-adductor-hallucis",
+        "fmaId": "FMA46021",
+        "name": "Transverse head of left adductor hallucis",
+        "sourceName": "transverse head of left adductor hallucis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA46021",
+        "bounds": {
+          "min": [
+            0.9830909967422485,
+            -8.655768394470215,
+            0.9792900085449219
+          ],
+          "max": [
+            1.4013299942016602,
+            -8.583616256713867,
+            1.2895199060440063
+          ]
+        },
+        "center": [
+          1.1922104954719543,
+          -8.619692325592041,
+          1.1344049572944641
+        ],
+        "anchor": [
+          1.1960399150848389,
+          -8.611153602600098,
+          1.1220399141311646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1445M",
+            "sha256": "35d51d3af78f7bbb4bf1bf10292f66a3c82485d66c0cdab1a38d3b0bb329b8c2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transverseAdductorHallucis",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "46bda7ef1d57e3914b5bf7578e9ca29e06f61562d2f147648038e8e08c40446d"
+}

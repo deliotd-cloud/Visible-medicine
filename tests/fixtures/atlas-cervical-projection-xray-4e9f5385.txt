@@ -1,0 +1,262 @@
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { readFileSync, statSync } from 'node:fs';
+import { createRequire } from 'node:module';
+import { dirname, extname, relative, resolve } from 'node:path';
+import { runInNewContext } from 'node:vm';
+import { build } from 'esbuild';
+import test from 'node:test';
+import { checkedAtlasSourceRepo } from './atlas-source-repo.mjs';
+import { emittedTeaching } from './atlas-emitted-teaching.ts';
+
+const revision = '4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad';
+const baseline = '408759d57644b05402e98a937e7cf6338b5509cf';
+const sourceRepo = checkedAtlasSourceRepo(revision);
+const root = process.cwd();
+const sha = bytes => createHash('sha256').update(bytes).digest('hex');
+const json = path => JSON.parse(readFileSync(path, 'utf8'));
+const same = (actual, expected, label) => assert.deepEqual(structuredClone(actual), structuredClone(expected), label);
+const committed = new Map();
+const git = (commit, path) => {
+  const key = `${commit}:${path}`;
+  if (!committed.has(key)) committed.set(key, execFileSync('git', ['-C', sourceRepo, 'show', key], {
+    windowsHide: true, maxBuffer: 32e6, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
+  }));
+  return committed.get(key);
+};
+// Batch exact immutable Git objects once. Thousands of per-file Windows process
+// launches add no source evidence; each returned object identity/type/length is
+// still checked against the exact commit's regular-file tree before caching.
+const wanted = new Set(json('atlas-review/manifest.json').files.map(row => row.path));
+for (const region of ['head-neck','shoulder','lower-limb','female-pelvis'])
+  for (const row of json(`public/atlas-runtime/${region}/source-inputs.json`)) wanted.add(row.path);
+for (const commit of [baseline,revision]) {
+  const tree = execFileSync('git', ['-C',sourceRepo,'ls-tree','-r','-z',commit], {
+    windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'},
+  }).toString().split('\0').filter(Boolean).flatMap(row=>{
+    const match=/^(?:100644|100755) blob ([a-f0-9]{40})\t([\s\S]+)$/.exec(row);
+    return match&&wanted.has(match[2])?[[match[2],match[1]]]:[];
+  });
+  const ids=[...new Set(tree.map(([,id])=>id))];
+  const batch=execFileSync('git',['-C',sourceRepo,'cat-file','--batch'],{
+    input:ids.join('\n')+'\n',windowsHide:true,maxBuffer:256e6,
+    env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'},
+  });
+  let offset=0;const objects=new Map();
+  for(const id of ids){
+    const end=batch.indexOf(10,offset);assert.ok(end>offset);
+    const header=/^([a-f0-9]{40}) blob ([0-9]+)$/.exec(batch.subarray(offset,end).toString());
+    assert.ok(header);assert.equal(header[1],id);const length=Number(header[2]);
+    assert.ok(Number.isSafeInteger(length)&&length>=0&&length<=32e6);
+    const start=end+1,finish=start+length;assert.ok(finish<batch.length);assert.equal(batch[finish],10);
+    objects.set(id,batch.subarray(start,finish));offset=finish+1;
+  }
+  assert.equal(offset,batch.length);
+  for(const [path,id]of tree)committed.set(`${commit}:${path}`,objects.get(id));
+}
+// The source exporter hashes checked-out bytes. Git may store LF for CRLF text.
+const sourceDigests = new Map();
+function sourceDigest(path) {
+  if (sourceDigests.has(path)) return sourceDigests.get(path);
+  const committed = git(revision, path);
+  const working = readFileSync(resolve(sourceRepo, path));
+  if (!working.equals(committed)) {
+    assert.ok(!working.includes(0) && !committed.includes(0), `${path} differs as binary`);
+    assert.ok(working.includes(Buffer.from('\r\n')), `${path} differs without CRLF`);
+    assert.ok(Buffer.from(working.toString('utf8').replaceAll('\r\n', '\n')).equals(committed),
+      `${path} differs beyond source line endings`);
+  }
+  const digest = sha(working);
+  sourceDigests.set(path, digest);
+  return digest;
+}
+
+const apiEntry = [
+  "export {bodyLesson,bodyContent} from './app/body-content';",
+  "export {bodyDisplayCatalog} from './lib/body-display-catalog';",
+  "export {contentTabs} from './lib/content-types';",
+  "export {decodeRegionalTeachingSnapshot} from './lib/regional-teaching-snapshot';",
+  "export {cervicalProjectionXrayLesson} from './lib/cervical-projection-xray';",
+  "export * from './content/cervical-projection-xray';",
+  "export {bodyReviewMaterial} from './lib/body-review-material';",
+  "export {bodyReviewContext} from './lib/body-review-context';",
+  "export {parseBodyReviewResponse} from './lib/body-review-response';",
+].join('');
+
+async function sourceApi(commit) {
+  const entry = commit === baseline ? apiEntry
+    .replace("export {cervicalProjectionXrayLesson} from './lib/cervical-projection-xray';", '')
+    .replace("export * from './content/cervical-projection-xray';", '') : apiEntry;
+  const files = new Set(execFileSync('git', ['-C', sourceRepo, 'ls-tree', '-r', '--name-only', commit], {
+    encoding: 'utf8', windowsHide: true, env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' },
+  }).split(/\r?\n/));
+  const built = await build({ stdin: { contents: entry, resolveDir: sourceRepo, loader: 'ts' },
+    bundle: true, write: false, format: 'cjs', platform: 'node', packages: 'external',
+    plugins: [{ name: 'exact-atlas-history', setup(plugin) {
+      plugin.onResolve({ filter: /.*/ }, args => {
+        if (!args.path.startsWith('.') && !args.path.startsWith('@/')) return;
+        const target = args.path.startsWith('@/')
+          ? resolve(sourceRepo, args.path.slice(2)) : resolve(args.resolveDir, args.path);
+        const path = relative(sourceRepo, target).replaceAll('\\', '/');
+        assert.ok(!path.startsWith('..'), `historical import outside Atlas: ${path}`);
+        for (const suffix of ['', '.ts', '.tsx', '.json', '/index.ts'])
+          if (files.has(path + suffix))
+            return { path: resolve(sourceRepo, path + suffix), namespace: 'exact-atlas-history' };
+        throw Error(`Missing historical Atlas module: ${path}`);
+      });
+      plugin.onLoad({ filter: /.*/, namespace: 'exact-atlas-history' }, args => {
+        const path = relative(sourceRepo, args.path).replaceAll('\\', '/');
+        return { contents: git(commit, path).toString(),
+          loader: ({ '.ts': 'ts', '.tsx': 'tsx', '.json': 'json' })[extname(path)] || 'js',
+          resolveDir: dirname(args.path) };
+      });
+    } }] });
+  return evaluate(built.outputFiles[0].text, sourceRepo);
+}
+
+function evaluate(code, directory) {
+  const module = { exports: {} };
+  runInNewContext(code, { module, exports: module.exports,
+    require: createRequire(directory + '/package.json'), crypto, TextEncoder, TextDecoder,
+    Request, Response, URL, URLSearchParams, structuredClone });
+  return module.exports;
+}
+
+async function importedApi() {
+  const entry = apiEntry.replaceAll("'./", "'./atlas-review/");
+  const built = await build({ stdin: { contents: entry, resolveDir: root, loader: 'ts' },
+    bundle: true, write: false, format: 'cjs', platform: 'node', packages: 'external' });
+  return evaluate(built.outputFiles[0].text, root);
+}
+
+test('six source-pinned cervical X-ray drafts reach learner, Review and four intact runtimes', async () => {
+  const paths = ['app/body-content.ts', 'lib/cervical-projection-xray.ts',
+    'content/cervical-projection-xray.ts', 'content/cervical-projection-xray-pins.json'];
+  const review = json('atlas-review/manifest.json');
+  assert.equal(review.revision, revision);
+  assert.equal(new Set(review.files.map(row => row.path)).size, review.files.length);
+  for (const row of review.files) {
+    assert.equal(row.sourceSha256, sha(git(revision, row.path)), `Review committed source ${row.path}`);
+    assert.equal(row.importedSha256, sha(readFileSync(`atlas-review/${row.path}`)), `Review import ${row.path}`);
+  }
+  for (const path of paths) assert.ok(review.files.some(row => row.path === path), `Review includes ${path}`);
+
+  const runtimes = ['head-neck', 'shoulder', 'lower-limb', 'female-pelvis'];
+  for (const region of runtimes) {
+    const base = `public/atlas-runtime/${region}/`;
+    const manifest = json(base + 'manifest.json');
+    const inputs = json(base + 'source-inputs.json');
+    assert.equal(manifest.sourceCommit, revision, `${region} source commit`);
+    assert.equal(new Set(manifest.files.map(row => row.path)).size, manifest.files.length, `${region} unique files`);
+    for (const row of manifest.files) {
+      const bytes = readFileSync(base + row.path);
+      assert.equal(bytes.length, row.bytes, `${region}/${row.path} bytes`);
+      assert.equal(sha(bytes), row.sha256, `${region}/${row.path} hash`);
+    }
+    for (const input of inputs) assert.equal(input.sha256, sourceDigest(input.path), `${region} input ${input.path}`);
+    if (region === 'head-neck') for (const path of paths)
+      assert.deepEqual(inputs.filter(row => row.path === path),
+        [{ path, sha256: sourceDigest(path) }], `${region} new input ${path}`);
+    for (const flag of ['clinicalApproved', 'patientDataIncluded', 'standaloneReviewConnection', 'imagingConnection'])
+      assert.ok(manifest[flag] === false || manifest[flag] === undefined, `${region} ${flag}`);
+  }
+
+  const pins = json('atlas-review/content/cervical-projection-xray-pins.json');
+  assert.equal(pins.baseline, baseline);
+  assert.equal(pins.entries.length, 6);
+  same(pins.entries.map(row => row.identity.fmaId).sort(),
+    ['FMA46309', 'FMA46310', 'FMA46313', 'FMA46314', 'FMA46317', 'FMA46318'], 'six exact sources');
+  same(Object.fromEntries(pins.entries.map(row => [row.identity.fmaId, row.family])), {
+    FMA46309: 'longusCapitis', FMA46310: 'longusCapitis',
+    FMA46313: 'rectusAnterior', FMA46314: 'rectusAnterior',
+    FMA46317: 'rectusLateralis', FMA46318: 'rectusLateralis',
+  }, 'three bilateral families');
+  const api = await importedApi();
+  const old = await sourceApi(baseline);
+  const source = await sourceApi(revision);
+  const catalog = api.bodyDisplayCatalog(json('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
+  same(catalog, old.bodyDisplayCatalog(JSON.parse(git(baseline, 'public/models/bodyparts3d/full-body/catalog.json'))),
+    'unchanged complete model catalog');
+  assert.equal(catalog.structures.length, 1104);
+  assert.equal(api.contentTabs.length, 9);
+  const selected = new Set(pins.entries.map(row => row.identity.id));
+  assert.equal(selected.size, 6);
+  const byId = new Map(pins.entries.map(row => [row.identity.id, row]));
+  let changed = 0, preserved = 0;
+  for (const structure of catalog.structures) for (const tab of api.contentTabs) {
+    const before = old.bodyLesson(structure, tab);
+    const after = api.bodyLesson(structure, tab);
+    same(after, source.bodyLesson(structure, tab), `${structure.id}/${tab} imported source parity`);
+    if (selected.has(structure.id) && tab === 'xray') {
+      same(before, byId.get(structure.id).previous, `${structure.id} exact pending baseline`);
+      assert.equal(before.readiness, 'pending');
+      assert.equal(after.readiness, 'draft');
+      same(after, api.cervicalProjectionXrayLesson(structure, tab), 'learner dispatch');
+      const { readiness, ...section } = after;
+      same(api.bodyContent(structure, tab), section, 'learner section');
+      changed++;
+    } else { same(after, before, `${structure.id}/${tab} preserved`); preserved++; }
+  }
+  assert.equal(changed, 6);
+  assert.equal(preserved, 9930);
+
+  const spine = json('atlas-review/content/regional-teaching/spine.json');
+  const decoder = api.decodeRegionalTeachingSnapshot(spine, 'spine');
+  for (const row of pins.entries) {
+    const structure = catalog.structures.find(item => item.id === row.identity.id);
+    same(structure, row.identity, `${row.identity.fmaId} complete source record`);
+    assert.equal(structure.sources.length, 1);
+    assert.equal(structure.bundle, 'spine-muscles');
+    assert.ok(decoder.accepts(structure), `${row.identity.fmaId} regional reader accepts source`);
+    same(decoder.bodyLesson(structure, 'xray'), api.bodyLesson(structure, 'xray'), 'regional snapshot lesson');
+    const lesson = api.bodyLesson(structure, 'xray');
+    assert.match(lesson.note, /revision-bound radiologist review pending/i);
+    assert.match(lesson.note, /No acquired image, clinical approval, diagnosis/i);
+    assert.match(lesson.note, /patient-space registration/i);
+    assert.match(lesson.note, /Atlas, imaging-case and lecture access remain independent/i);
+    const fact = api.cervicalProjectionXrayFacts[row.family];
+    same([lesson.body, ...lesson.bullets], [fact.body, fact.distinction, fact.projection,
+      ...api.cervicalProjectionXrayLimitations], 'source teaching lines');
+    same(lesson.citations, api.cervicalProjectionXrayReferences, 'source citations');
+    const worksheet = await api.bodyReviewMaterial(structure.id);
+    assert.equal(worksheet.approval, false);
+    same(worksheet.topics.find(topic => topic.tab === 'xray'), { tab: 'xray', ...lesson }, 'Review worksheet');
+    assert.ok(await api.parseBodyReviewResponse(worksheet, structure.id));
+    const prior = await old.bodyReviewContext(structure.id);
+    const current = await api.bodyReviewContext(structure.id);
+    assert.equal(current.sourceHash, prior.sourceHash, 'source identity unchanged');
+    assert.notEqual(current.revisions.teaching, prior.revisions.teaching, 'teaching revision changed');
+    assert.equal(current.revisions.imaging, null, 'no acquired-image approval');
+  }
+  const base = 'public/atlas-runtime/head-neck/';
+  const emitted = emittedTeaching(base, json(base + 'manifest.json').files, true);
+  for (const fact of Object.values(api.cervicalProjectionXrayFacts))
+    for (const line of Object.values(fact))
+      assert.ok(emitted.includes(line) || emitted.includes(JSON.stringify(line).slice(1, -1)),
+        `emitted original teaching line: ${line.slice(0, 40)}`);
+  for (const line of api.cervicalProjectionXrayLimitations)
+    assert.ok(emitted.includes(line) || emitted.includes(JSON.stringify(line).slice(1, -1)), 'emitted caution');
+  for (const row of pins.entries) assert.ok(emitted.includes(row.identity.id), `emitted ${row.identity.fmaId}`);
+  assert.match(emitted, /revision-bound radiologist review pending/);
+  assert.match(emitted, /patient-space registration/);
+
+  const sourceBundle = pins.bundles[0];
+  const sourceModel = git(revision, `public/models/bodyparts3d/full-body/${sourceBundle.id}.glb`);
+  assert.equal(sourceModel.length, sourceBundle.bytes);
+  assert.equal(sha(sourceModel), sourceBundle.sha256);
+  let modelCopies = 0;
+  for (const region of runtimes) {
+    const base = `public/atlas-runtime/${region}/`;
+    const model = `${base}models/bodyparts3d/full-body/${sourceBundle.id}.glb`;
+    const manifest = json(base + 'manifest.json');
+    const row = manifest.files.find(file => file.path === `models/bodyparts3d/full-body/${sourceBundle.id}.glb`);
+    if (!row) continue;
+    assert.equal(statSync(model).size, sourceBundle.bytes);
+    assert.equal(row.sha256, sourceBundle.sha256, `${region} source model digest`);
+    modelCopies++;
+  }
+  assert.ok(modelCopies >= 1, 'head-neck runtime ships the exact source muscle bundle');
+  console.log(JSON.stringify({ revision, baseline, changed, preserved, sourcePins: 6,
+    runtimes: runtimes.length, review: true, clinicalApproval: false, patientRegistration: false }));
+});

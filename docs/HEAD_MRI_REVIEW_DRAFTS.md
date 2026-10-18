@@ -1,0 +1,33 @@
+# Independent MRI-only review corrections
+
+Status: contract, independent save/history API and separately labelled form are integrated into the main local source. Nothing is published. Signed-in owner acceptance remains outstanding. This does not record clinical approval, publish material or establish patient registration.
+
+The existing original-25 teaching notes cannot record corrections for the four MRI-only concepts (paired amygdalae, partial corpus callosum, pituitary gland). The new `head-mri-review-draft-contract` keeps these histories separate and binds a draft to the exact imported head manifest plus independent comparison, teaching and guided-sequence packet hashes. Its creator verifies all three current packets. Source text, mask extent, native/generic identities and packet revisions are unchanged.
+
+Only draft notes or detailed correction requests are admitted. Reviewer/qualification are self-reported text, not credential verification. Exact checklist text and version are recorded with each event. Original-25 contexts/events, extra fields, swapped/expanded concept lists, malformed hashes/timestamps/versions and approval/attestation flags are rejected. Well-formed historical revisions remain readable but stale; they cannot silently become current. This parser is not authentication or permission to write a record.
+
+## Private save/history endpoint
+
+`GET/POST /api/atlas-review/head-mri-learning` uses the unchanged `runClinicalReview` authorization and server-derived account/institution identity. POST requires the existing continuity header, same origin, JSON and a maximum 32,000-byte body. Responses are private/no-store. There is no user-selectable account key or credential override.
+
+POST accepts exactly `catalogScope`, `packetId`, `headRevision`, `comparisonRevision`, `teachingRevision`, `learningRevision`, `checklistVersion`, `expectedVersion`, and `draft`. The server independently verifies all current packets and builds the recorded context; it does not store a caller-supplied context. Wrong scope is rejected; any stale submitted source/packet/checklist returns 409. Unavailable server packets/storage or a corrupt stored envelope fail closed, without logging notes or identifiers.
+
+The existing append-only table is reused without a migration. MRI has its own personal-key namespace (`vm-head-mri-personal-drafts-1`), nested key (`["vm-head-mri-drafts-1","mri"]`), structure (`head-mri-only-learning`) and teaching track. Original-25 records, version counters and handlers are unchanged. A single conditional INSERT checks the latest version atomically: concurrent saves cannot overwrite one another. GET returns at most 20 newest-first events with an exclusive `before` cursor. Stored row identity/version/timestamp must match its parsed event. Well-formed old revisions remain historical evidence, not upgraded approvals.
+
+The route uses a request-local `first-primary` D1 session for current reads and sequential consistency, following the [current D1 session reference](https://developers.cloudflare.com/d1/worker-api/d1-database/#withsession). Current type API was checked against `@cloudflare/workers-types` 5.20261008.1 without installing/upgrading dependencies. No remote database operation, new fee or deployment occurred.
+
+## Separate review form
+
+Within authorized Clinical Review → Head learning → MRI-only comparison evidence, open **MRI notes & corrections · separate private history**. This form is withheld unless the source, comparison, teaching and guided-learning packet identities all verify. Original-25 notes and counters remain separate; other independently valid evidence remains readable when the MRI form is unavailable.
+
+The client validates the exact context, history order/cursor and saved draft/version. A lost or mismatched save reply preserves edits and locks further writes. Previously loaded history cannot unlock this state: refresh history, explicitly preserve/discard unsaved edits, then load a saved entry or start fresh. Refreshing never silently rebases the draft. Source or account changes require page reload after preserving text. No automatic POST retries, browser storage of notes or approval controls. Late unmounted responses are ignored.
+
+## Verification and remaining acceptance
+
+Combined integration: 58 focused tests and fresh full canonical nonincremental TypeScript pass. Sanitized E production build `build-mri-review-complete-v1` passes; 14 read-only access/navigation checks pass, including all four MRI-only guided steps and rejection of stale links. The actual form's earlier synthetic browser check covers a committed save with lost reply, edit preservation, fresh history reconciliation, explicit discard/load and keyboard save; 1280px and 360px layouts have no overflow or console errors. This is not a real signed-in save or clinical acceptance.
+
+The full HTTP suite exposed a separate local-preview failure: an unauthenticated POST receives the correct private/no-store 401, but Wrangler's proxy then exits with a request-stream/network error. The same sequence reproduces with the unchanged original-25 endpoint, while all read-only linked routes pass without that POST. Do not attribute the failure to MRI tour routing or assume disk space caused it. No authorization was weakened, body limit removed or dependency upgraded to mask the issue. Investigate the local proxy/early-response failure next, then perform signed-in owner acceptance when supported. The current local preview is suitable for read-only exploration, not a verified save workflow.
+
+Evidence and exact source identities: `E:/VisibleMedicine-LocalStaging/20261008-mri-review-integration`; prior isolated API/client/form checkpoints remain intact. E recovery is same-machine, not GitHub or off-device backup. Formal clinical sign-off remains independent; advance the broader roadmap while drafts await review.
+
+The API tests execute the actual MRI and original-25 routes with local synthetic D1 records, testing authorization/continuity, scope and all stale pins, invalid drafts/body/query parameters, missing storage/stale server source, private account/institution histories, atomic competing saves, pagination, corrupt history and coexistence. The synthetic trusted-identity bridge is not an authentication acceptance test. Bounded Sol workers supplied API/form tests; main reviewed and integrated the combined implementation. Existing source packets, original-25 handlers, auth, schema and generated modules stay unchanged. Nothing deployed or uploaded; no scans, new dependencies, fees, masks or desktop PACS changes.

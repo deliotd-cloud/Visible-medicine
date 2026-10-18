@@ -1,0 +1,94 @@
+.scene-label-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.scene-label-leaders {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.scene-label-leaders path {
+  fill: none;
+  stroke: var(--vm-muted);
+  stroke-width: 1;
+  visibility: hidden;
+}
+.scene-label-leaders circle {
+  fill: var(--vm-muted);
+  visibility: hidden;
+}
+.scene-label-leaders .selected path {
+  stroke: var(--vm-ink);
+  stroke-width: 1.4;
+}
+.scene-label-leaders .selected circle {
+  fill: var(--vm-ink);
+}
+.scene-label-leaders path[data-depth='covered'] {
+  stroke-dasharray: 4 3;
+}
+.scene-label-depth {
+  display: none;
+}
+.scene-label-name {
+  display: block;
+}
+.scene-label-measure-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  pointer-events: none;
+}
+.scene-label-measure {
+  display: block;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.scene-label-overlay button.scene-label.selected[data-compact='true'] .scene-label-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.scene-label.selected[data-depth='covered'] .scene-label-depth {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-top: 0.15rem;
+}
+/* Higher specificity than the regional/illustration variants; keep VM colours. */
+.scene-label-overlay button.scene-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: max-content;
+  min-width: 0;
+  min-height: 28px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  text-align: left;
+  pointer-events: auto;
+  visibility: hidden;
+}
+.scene-label-overlay button.scene-label[data-side='left'] {
+  text-align: right;
+}
+.scene-label-overlay button.scene-label::before {
+  display: none;
+}
+@media (pointer: coarse) {
+  .scene-label-overlay button.scene-label {
+    min-height: 44px;
+  }
+}

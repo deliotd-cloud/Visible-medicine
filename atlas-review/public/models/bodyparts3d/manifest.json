@@ -1,0 +1,260 @@
+{
+  "title": "BodyParts3D right shoulder subset",
+  "version": "4.0",
+  "source": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip",
+  "license": "CC-BY-4.0",
+  "licenseEvidence": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "changes": "Subset selection; rigid common coordinate transform; vertex welding and normal recomputation; OBJ to GLB. Appearance modified at runtime. No per-part registration or reshaping.",
+  "coordinateSystem": {
+    "source": "millimetres, +X left, +Y posterior, +Z superior",
+    "scene": "+X left, +Y superior, +Z anterior",
+    "sourceCenter": [
+      -88.06282711029053,
+      -70.9326241016388,
+      1269.699951171875
+    ],
+    "unitsPerMillimetre": 0.026,
+    "sourceToSceneColumnMajor": [
+      0.026,
+      0,
+      0,
+      0,
+      0,
+      1.5920408388915591e-18,
+      -0.026,
+      0,
+      0,
+      0.026,
+      1.5920408388915591e-18,
+      0,
+      2.289633504867554,
+      -33.01219873046875,
+      -1.8442482266426103,
+      1
+    ]
+  },
+  "sha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+  "parts": [
+    {
+      "sourceFile": "FJ3384.obj",
+      "slug": "scapula",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "nodeName": "scapula__FJ3384_0",
+      "fmaId": "FMA13395",
+      "sourceSha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d",
+      "bounds": {
+        "min": [
+          -2.038430612564087,
+          -2.2292397460937465,
+          -1.9763997225761412
+        ],
+        "max": [
+          0.8062347393035889,
+          2.0841608886718745,
+          0.8300078463554388
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ3368.obj",
+      "slug": "humerus",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "nodeName": "humerus__FJ3368_0",
+      "fmaId": "FMA23130",
+      "sourceSha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237",
+      "bounds": {
+        "min": [
+          -3.972232583999633,
+          -6.252999999999997,
+          -0.5172316098213199
+        ],
+        "max": [
+          -1.352706399917602,
+          1.7378422851562547,
+          0.7614458193778995
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ3362.obj",
+      "slug": "clavicle",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+      "nodeName": "clavicle__FJ3362_0",
+      "fmaId": "FMA13322",
+      "sourceSha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d",
+      "bounds": {
+        "min": [
+          -1.4875683078765864,
+          1.0119211425781245,
+          -0.42952326631546
+        ],
+        "max": [
+          2.038430612564087,
+          2.2292397460937536,
+          1.9763997225761418
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1506.obj",
+      "slug": "supraspinatus",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+      "nodeName": "supraspinatus__FJ1506_0",
+      "fmaId": "FMA32544",
+      "sourceSha256": "793771eceb64385269ddeeb09245e8c53b67499194f6fa98049b5e17aafa8e0c",
+      "bounds": {
+        "min": [
+          -2.609884317398071,
+          0.9786403808593747,
+          -1.5072544293403622
+        ],
+        "max": [
+          0.6288575191497805,
+          1.8891608886718743,
+          0.5451855349540713
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1500.obj",
+      "slug": "infraspinatus",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus",
+      "nodeName": "infraspinatus__FJ1500_0",
+      "fmaId": "FMA32547",
+      "sourceSha256": "28f61376a3a88a28d14c44e1c20e9b7a34129772c130afa003daceac801455b1",
+      "bounds": {
+        "min": [
+          -2.625666574478149,
+          -1.6424179687499993,
+          -1.9395676083564757
+        ],
+        "max": [
+          0.7229151058197023,
+          1.5930205078125041,
+          0.16001372098922761
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1504.obj",
+      "slug": "subscapularis",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis",
+      "nodeName": "subscapularis__FJ1504_0",
+      "fmaId": "FMA13414",
+      "sourceSha256": "fdcbfd01f93e2d24bd73f5cb259a311c9f9e90de08c41573439844eef5f605dd",
+      "bounds": {
+        "min": [
+          -2.029408609390259,
+          -1.9380378417968736,
+          -1.7725446491241452
+        ],
+        "max": [
+          0.6468962688446047,
+          1.4326025390625006,
+          0.7545738863945011
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1508.obj",
+      "slug": "teres-minor",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor",
+      "nodeName": "teres-minor__FJ1508_0",
+      "fmaId": "FMA32553",
+      "sourceSha256": "f56e595b86cea659891664706cd4443acddd8dc69e4e5bb3855445eef302641a",
+      "bounds": {
+        "min": [
+          -2.664770517349243,
+          -1.2776372070312476,
+          -1.5216870160102842
+        ],
+        "max": [
+          -0.4510004062652584,
+          1.2277224121093795,
+          0.24382738065719645
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1468.obj",
+      "slug": "deltoid",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid",
+      "nodeName": "deltoid__FJ1468_0",
+      "fmaId": "FMA34680",
+      "sourceSha256": "09eebb4a8d72c91936b0bfde7f35829a58f56103ac158f559186698458bcc616",
+      "bounds": {
+        "min": [
+          -3.0044605808258056,
+          -1.7120993652343728,
+          0.10900693082809476
+        ],
+        "max": [
+          -0.012796503067016296,
+          2.227941650390626,
+          1.3103578066825872
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1467.obj",
+      "slug": "deltoid",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid",
+      "nodeName": "deltoid__FJ1467_0",
+      "fmaId": "FMA34682",
+      "sourceSha256": "2f69f1a13c836539abca85d9b77f55f96319ad3fdd75c62f498eabe49b266bfe",
+      "bounds": {
+        "min": [
+          -3.6182944126129146,
+          -1.6798596191406219,
+          -0.7824836010932921
+        ],
+        "max": [
+          -1.5216024570465083,
+          2.067520507812503,
+          0.8425397067070013
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1513.obj",
+      "slug": "deltoid",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:deltoid",
+      "nodeName": "deltoid__FJ1513_0",
+      "fmaId": "FMA34684",
+      "sourceSha256": "ef8308c92fd0d01d8c0d7ffd9238305eefc2f28710d7bb58f451512abdc08e99",
+      "bounds": {
+        "min": [
+          -3.4088126316070553,
+          -2.1306987304687475,
+          -1.773395104885101
+        ],
+        "max": [
+          0.13594693565368665,
+          1.8236403808593735,
+          0.21632973051071192
+        ]
+      }
+    },
+    {
+      "sourceFile": "FJ1478.obj",
+      "slug": "biceps-long-head",
+      "structureId": "vm:anatomy:upper-limb:shoulder:right:muscle:biceps-long-head",
+      "nodeName": "biceps-long-head-muscle__FJ1478_0",
+      "fmaId": "FMA37686",
+      "sourceSha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07",
+      "bounds": {
+        "min": [
+          -3.6867265110015865,
+          -7.166326171874999,
+          -0.08121685457229644
+        ],
+        "max": [
+          -1.2273346347808833,
+          1.8127224121093803,
+          0.9973437685966497
+        ]
+      }
+    }
+  ]
+}

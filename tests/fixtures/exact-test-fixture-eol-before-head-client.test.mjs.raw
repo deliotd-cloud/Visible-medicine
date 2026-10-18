@@ -1,0 +1,281 @@
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import test from 'node:test';
+
+const root = fileURLToPath(new URL('..', import.meta.url));
+const policy = path.join(root, '.gitattributes');
+
+const snapshots = [
+  'tests/fixtures/current-atlas-delivery-before-head-stream.test.mjs.raw',
+  'tests/fixtures/completion-checklist-47.json',
+  'tests/fixtures/completion-checklist.test.mjs.raw',
+  'tests/fixtures/current-atlas-delivery-7b3e678a.json',
+  'tests/fixtures/integration-inputs-7b3e678a.json',
+  'tests/fixtures/HeadAtlasLearningLibrary.precompact.tsx.raw',
+  'tests/fixtures/current-atlas-delivery-58926355.json',
+  'tests/fixtures/atlas-arterial-evidence-limits-before-current-admission.txt',
+  'tests/fixtures/atlas-cervical-projection-xray-before-current-admission.txt',
+  'tests/fixtures/atlas-cerebral-lobar-imaging-before-current-admission.txt',
+  'tests/fixtures/atlas-wave4-notices-before-current-admission.txt',
+  'tests/fixtures/atlas-deep-brain-core-checks-before-lock-history.txt',
+  'tests/fixtures/HeadAtlasLearningLibrary.precompact.tsx',
+  'tests/fixtures/atlas-exact-git-api-before-batch.mjs',
+  'tests/fixtures/shoulder-us-589-delivery-archive.json',
+  'tests/fixtures/atlas-hand-vessel-xray.original.mjs',
+  'tests/fixtures/atlas-hand-vessel-xray-f1dc0ccc.txt',
+  'tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json',
+  'tests/fixtures/atlas-intracranial-arterial-ultrasound.original.mjs',
+  'tests/fixtures/intracranial-us-589-delivery-archive.json',
+  'tests/fixtures/atlas-shoulder-girdle-arterial-ultrasound.original.txt',
+  'tests/fixtures/atlas-spinal-muscle-xray.original.txt',
+  'tests/fixtures/authenticated-api-contract.before-context.txt',
+  'tests/fixtures/historical-cardiac-chest-head-neck-manifest.json',
+  'tests/fixtures/clinical-current-pins/clinical-review-cardiac-venous-tour.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-chest-wall-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-brain-connections-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-cardiac-xray.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-cerebral-arterial-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-cervical-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-abdominal-connective-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-abdominal-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-abdominal-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-hand-venous-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-head-neck-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-neck-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-pelvic-organ-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-hepatobiliary-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-collicular-teaching.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-coronary-sinus-ultrasound.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-craniofacial-bone-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-deep-brain-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-femoral-component-imaging.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-foot-bone-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-forearm-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-forearm-venous-cross-sectional.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-forearm-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-foregut-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-guided-library.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-hand-arterial-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-hand-bone-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-iliac-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-laryngeal-support-imaging.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-limb-connective-ct.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-lower-limb-bone-reasoning.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-lower-limb-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-major-limb-bone-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-nested-selection-order.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-orbital-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-orbital-nerve-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-plantar-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-shoulder-arm-artery-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-shoulder-arm-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-spinal-bone-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-spinal-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-spine-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-superior-temporal-mri.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-suprascapular-arterial-ct.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-tentorium-imaging.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-thigh-deep-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-thoracic-small-vessel-mri.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-thoracic-vessel-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-trunk-core-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-trunk-muscle-quiz.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-upper-arm-reasoning.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-upper-limb-bone-reasoning.test.ts.txt',
+  'tests/fixtures/clinical-current-pins/clinical-review-ventricular-ultrasound.test.ts.txt',
+  'tests/fixtures/atlas-hand-vessel-xray.admitted-e49120.mjs.raw',
+  'tests/fixtures/atlas-spinal-muscle-xray.current-admitted.mjs.raw',
+  'tests/fixtures/atlas-spinal-muscle-xray.later-transition.patch.raw',
+  'tests/fixtures/current-proof-corrections/atlas-cerebral-lobar-imaging.test.ts.raw',
+  'tests/fixtures/current-proof-corrections/atlas-intracranial-arterial-ultrasound.test.mjs.raw',
+  'tests/fixtures/mutation-json-contract.before-context.txt',
+  'tests/fixtures/raw-clinical-review-forefoot-muscle-quiz.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-hand-muscle-quiz.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-leg-muscle-quiz.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-lower-arterial-tour.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-lower-connective-quiz.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-pelvic-quiz.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-pharyngeal-imaging.test.ts.raw',
+  'tests/fixtures/raw-clinical-review-thigh-muscle-quiz.test.ts.raw',
+  'tests/fixtures/current-source-checkout-representations.json',
+  'tests/fixtures/head-mask-focus.before-noble-seam.test.ts.raw',
+];
+
+const exactProofs = [
+  'tests/current-atlas-delivery.test.mjs',
+  'tests/head-stream-current-pin-preservation.test.mjs',
+  'tests/completion-checklist.test.mjs',
+  'tests/completion-checklist-current-transition.test.mjs',
+  'tests/head-local-source-cooperative.test.ts',
+  'components/HeadAtlasLearningLibrary.tsx',
+  'tests/atlas-arterial-evidence-limits.test.mjs',
+  'tests/atlas-cervical-projection-xray.test.mjs',
+  'tests/atlas-current-history-wave4-contract.test.mjs',
+  'tests/atlas-deep-brain-core-checks.mjs',
+  'tests/shoulder-us-history-contract.test.mjs',
+  'tests/atlas-hand-vessel-xray.test.mjs',
+  'tests/atlas-intracranial-arterial-ultrasound.test.mjs',
+  'tests/atlas-shoulder-girdle-arterial-ultrasound-checks.mjs',
+  'tests/shoulder-girdle-arterial-current-admission-contract.test.mjs',
+  'tests/atlas-spinal-muscle-xray.test.mjs',
+  'tests/atlas-spinal-muscle-xray-current-admission-contract.test.mjs',
+  'tests/authenticated-api-contract.test.mjs',
+  'tests/authenticated-api-contract-preservation.test.mjs',
+  'tests/clinical-review-cardiac-venous-tour.test.ts',
+  'tests/clinical-review-chest-wall-quiz.test.ts',
+  'tests/clinical-review-cardiac-chest-preservation.test.mjs',
+  'tests/clinical-review-brain-connections-quiz.test.ts',
+  'tests/clinical-review-cardiac-xray.test.ts',
+  'tests/clinical-review-cerebral-arterial-quiz.test.ts',
+  'tests/clinical-review-cervical-quiz.test.ts',
+  'tests/clinical-review-current-pin-preservation.test.mjs',
+  'tests/clinical-review-abdominal-connective-quiz.test.ts',
+  'tests/clinical-review-abdominal-quiz.test.ts',
+  'tests/clinical-review-abdominal-vessel-quiz.test.ts',
+  'tests/clinical-review-hand-venous-quiz.test.ts',
+  'tests/clinical-review-head-neck-vessel-quiz.test.ts',
+  'tests/clinical-review-neck-muscle-quiz.test.ts',
+  'tests/clinical-review-pelvic-organ-quiz.test.ts',
+  'tests/clinical-review-hepatobiliary-quiz.test.ts',
+  'tests/clinical-review-wave2-preservation.test.mjs',
+  'tests/clinical-review-hepatobiliary-preservation.test.mjs',
+  'tests/clinical-literal-batch-a-preservation.test.mjs',
+  'tests/clinical-literal-batch-b-preservation.test.mjs',
+  'tests/clinical-review-collicular-teaching.test.ts',
+  'tests/clinical-review-coronary-sinus-ultrasound.test.ts',
+  'tests/clinical-review-craniofacial-bone-quiz.test.ts',
+  'tests/clinical-review-deep-brain-quiz.test.ts',
+  'tests/clinical-review-femoral-component-imaging.test.ts',
+  'tests/clinical-review-foot-bone-quiz.test.ts',
+  'tests/clinical-review-forearm-muscle-quiz.test.ts',
+  'tests/clinical-review-forearm-venous-cross-sectional.test.ts',
+  'tests/clinical-review-forearm-vessel-quiz.test.ts',
+  'tests/clinical-review-foregut-vessel-quiz.test.ts',
+  'tests/clinical-review-guided-library.test.ts',
+  'tests/clinical-review-hand-arterial-quiz.test.ts',
+  'tests/clinical-review-hand-bone-quiz.test.ts',
+  'tests/clinical-review-iliac-vessel-quiz.test.ts',
+  'tests/clinical-review-laryngeal-support-imaging.test.ts',
+  'tests/clinical-review-limb-connective-ct.test.ts',
+  'tests/clinical-review-lower-limb-bone-reasoning.test.ts',
+  'tests/clinical-review-lower-limb-vessel-quiz.test.ts',
+  'tests/clinical-review-major-limb-bone-quiz.test.ts',
+  'tests/clinical-review-nested-selection-order.test.ts',
+  'tests/clinical-review-orbital-muscle-quiz.test.ts',
+  'tests/clinical-review-orbital-nerve-quiz.test.ts',
+  'tests/clinical-review-plantar-muscle-quiz.test.ts',
+  'tests/clinical-review-shoulder-arm-artery-quiz.test.ts',
+  'tests/clinical-review-shoulder-arm-muscle-quiz.test.ts',
+  'tests/clinical-review-spinal-bone-quiz.test.ts',
+  'tests/clinical-review-spinal-muscle-quiz.test.ts',
+  'tests/clinical-review-spine-muscle-quiz.test.ts',
+  'tests/clinical-review-superior-temporal-mri.test.ts',
+  'tests/clinical-review-suprascapular-arterial-ct.test.ts',
+  'tests/clinical-review-tentorium-imaging.test.ts',
+  'tests/clinical-review-thigh-deep-muscle-quiz.test.ts',
+  'tests/clinical-review-thoracic-small-vessel-mri.test.ts',
+  'tests/clinical-review-thoracic-vessel-quiz.test.ts',
+  'tests/clinical-review-trunk-core-quiz.test.ts',
+  'tests/clinical-review-trunk-muscle-quiz.test.ts',
+  'tests/clinical-review-upper-arm-reasoning.test.ts',
+  'tests/clinical-review-upper-limb-bone-reasoning.test.ts',
+  'tests/clinical-review-ventricular-ultrasound.test.ts',
+  'tests/atlas-hand-vessel-xray-preservation.test.mjs',
+  'tests/atlas-metadata-text-checkout.mjs',
+  'tests/atlas-metadata-text-checkout.test.mjs',
+  'tests/cerebral-history-preservation.test.mjs',
+  'tests/clinical-manifest-split-preservation.test.mjs',
+  'tests/clinical-review-forefoot-muscle-quiz.test.ts',
+  'tests/clinical-review-hand-muscle-quiz.test.ts',
+  'tests/clinical-review-leg-muscle-quiz.test.ts',
+  'tests/clinical-review-lower-arterial-tour.test.ts',
+  'tests/clinical-review-lower-connective-quiz.test.ts',
+  'tests/clinical-review-pelvic-quiz.test.ts',
+  'tests/clinical-review-pharyngeal-imaging.test.ts',
+  'tests/clinical-review-thigh-muscle-quiz.test.ts',
+  'tests/current-proof-corrections-preservation.test.mjs',
+  'tests/intracranial-history-preservation.test.mjs',
+  'tests/mutation-json-contract-preservation.test.mjs',
+  'tests/mutation-json-contract.test.mjs',
+  'tests/head-mask-focus-preservation.test.mjs',
+  'tests/head-mask-focus.test.ts',
+];
+const rawProofs = ['tests/atlas-cerebral-lobar-imaging.test.ts'];
+
+function git(repo, ...args) {
+  return execFileSync('git', args, { cwd: repo, encoding: 'utf8', windowsHide: true });
+}
+
+function digest(bytes) {
+  return createHash('sha256').update(bytes).digest('hex');
+}
+
+test('exact Atlas fixtures and source proofs survive Windows checkout conversion', () => {
+  // Synthetic names test the policy without requiring any staged production fixture.
+  const local = path.join(root, '.local');
+  mkdirSync(local, { recursive: true });
+  const repo = mkdtempSync(path.join(local, 'exact-fixture-eol-'));
+  git(repo, 'init', '-q');
+  git(repo, 'config', 'core.autocrlf', 'true');
+  git(repo, 'config', 'core.eol', 'crlf');
+  copyFileSync(policy, path.join(repo, '.gitattributes'));
+
+  const original = new Map();
+  const control = 'tests/eol-unprotected-control.txt';
+  for (const name of [...snapshots, ...rawProofs, ...exactProofs, control]) {
+    // The actual original and reviewed cerebral source are CRLF and hash-bound.
+    const eol = name.includes('cerebral-lobar') ? '\r\n' : '\n';
+    const bytes = name === 'tests/fixtures/atlas-hand-vessel-xray.original.mjs'
+      ? Buffer.from(`first line for ${name}\nsecond line\r\nthird line\n`)
+      : Buffer.from(`first line for ${name}${eol}second line${eol}`);
+    const target = path.join(repo, ...name.split('/'));
+    mkdirSync(path.dirname(target), { recursive: true });
+    writeFileSync(target, bytes);
+    original.set(name, digest(bytes));
+  }
+
+  for (const name of [...snapshots, ...rawProofs]) {
+    assert.equal(git(repo, 'check-attr', 'text', '--', name).trim(), `${name}: text: unset`);
+    assert.equal(git(repo, 'check-attr', 'eol', '--', name).trim(), `${name}: eol: unspecified`);
+  }
+  for (const name of exactProofs) {
+    assert.equal(git(repo, 'check-attr', 'text', '--', name).trim(), `${name}: text: set`);
+    assert.equal(git(repo, 'check-attr', 'eol', '--', name).trim(), `${name}: eol: lf`);
+  }
+  assert.equal(git(repo, 'check-attr', 'text', '--', control).trim(), `${control}: text: unspecified`);
+
+  git(repo, 'add', '--', '.gitattributes', ...snapshots, ...rawProofs, ...exactProofs, control);
+  for (const name of [...snapshots, ...rawProofs]) {
+    const indexBytes = execFileSync('git', ['show', `:${name}`], { cwd: repo, windowsHide: true });
+    assert.equal(digest(indexBytes), original.get(name), `snapshot index bytes changed: ${name}`);
+  }
+
+  for (const autocrlf of ['true', 'false']) {
+    git(repo, 'config', 'core.autocrlf', autocrlf);
+    const prefix = `checkout-${autocrlf}/`;
+    git(repo, 'checkout-index', '--all', `--prefix=${prefix}`);
+    for (const name of [...snapshots, ...rawProofs]) {
+      const checkedOut = readFileSync(path.join(repo, prefix, ...name.split('/')));
+      assert.equal(digest(checkedOut), original.get(name), `snapshot checkout bytes changed: ${name}`);
+      if (name === 'tests/fixtures/atlas-hand-vessel-xray.original.mjs') {
+        assert(checkedOut.includes(Buffer.from('\r\n')) && checkedOut.includes(Buffer.from('third line\n')),
+          'Mixed line endings remain exact, not rewritten to uniform LF/CRLF');
+      }
+      if (name.includes('cerebral-lobar')) assert(checkedOut.includes(Buffer.from('\r\n')), 'Reviewed cerebral CRLF bytes must remain exact');
+    }
+    for (const name of exactProofs) {
+      const checkedOut = readFileSync(path.join(repo, prefix, ...name.split('/')));
+      assert.equal(digest(checkedOut), original.get(name), `source proof bytes changed: ${name}`);
+      assert.equal(checkedOut.includes(Buffer.from('\r\n')), false, `CRLF in exact proof: ${name}`);
+    }
+    const controlBytes = readFileSync(path.join(repo, prefix, ...control.split('/')));
+    if (autocrlf === 'true') {
+      assert.equal(controlBytes.includes(Buffer.from('\r\n')), true, 'control did not prove CRLF conversion');
+      assert.notEqual(digest(controlBytes), original.get(control));
+    }
+  }
+});

@@ -1,0 +1,311 @@
+{
+  "parentCommit": "9dbdcfa1a8acdded407fc0be56f9369237fd1264",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "0c0d67522b365cca31e28782438fefc419d213188f63239e8016a98e83d6c4a3",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:sesamoid-bone-of-right-foot",
+        "fmaId": "FMA45097",
+        "name": "Sesamoid bone of right foot",
+        "sourceName": "sesamoid bone of right foot",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA45097",
+        "bounds": {
+          "min": [
+            -1.0300800800323486,
+            -8.692641258239746,
+            1.2073800563812256
+          ],
+          "max": [
+            -0.8706109523773193,
+            -8.61588191986084,
+            1.3477901220321655
+          ]
+        },
+        "center": [
+          -0.950345516204834,
+          -8.654261589050293,
+          1.2775850892066956
+        ],
+        "anchor": [
+          -0.9546130299568176,
+          -8.648820877075195,
+          1.2879300117492676
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3372",
+            "sha256": "dc021f600274fc6dc6af862f213d0e8d61abb5822f44e3e4a2fe752781e1f16a"
+          },
+          {
+            "file": "FJ3376",
+            "sha256": "d2d94ed0abef251d0d15ed0cc21814a4ea4810840e17d05488ae14bac68ac5a0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "anatomy",
+        "function",
+        "ct",
+        "mri",
+        "xray",
+        "ultrasound",
+        "pathology",
+        "clinical",
+        "quiz"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Sesamoid bone of right foot is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA45097",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find sesamoid bone of right foot on the model."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:sesamoid-bone-of-left-foot",
+        "fmaId": "FMA45098",
+        "name": "Sesamoid bone of left foot",
+        "sourceName": "sesamoid bone of left foot",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA45098",
+        "bounds": {
+          "min": [
+            0.8749479651451111,
+            -8.692931175231934,
+            1.2064300775527954
+          ],
+          "max": [
+            1.0316599607467651,
+            -8.615728378295898,
+            1.3475199937820435
+          ]
+        },
+        "center": [
+          0.9533039629459381,
+          -8.654329776763916,
+          1.2769750356674194
+        ],
+        "anchor": [
+          0.9544450640678406,
+          -8.663689613342285,
+          1.2900999784469604
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3266",
+            "sha256": "cc2fc94a2ff8b65b6e6849fabadb902eb82cbe616157f978b28f0c3f10fbc083"
+          },
+          {
+            "file": "FJ3270",
+            "sha256": "fb2a430917ad6e0fcaa13124476d12e15c2e99288d697e15e6084b01616a1e97"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "anatomy",
+        "function",
+        "ct",
+        "mri",
+        "xray",
+        "ultrasound",
+        "pathology",
+        "clinical",
+        "quiz"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "identity-only",
+          "title": "Anatomical identity",
+          "body": "Sesamoid bone of left foot is represented by source-registered BodyParts3D geometry. It can be inspected in the regional view or in its full-body context.",
+          "bullets": [
+            "Source anatomical identifier: FMA45098",
+            "2 source components grouped as one structure",
+            "Source-derived mesh, not an AI-invented anatomical surface.",
+            "Independent anatomical review: not yet completed."
+          ],
+          "note": "Detailed boundaries and regional classification still require independent anatomical review.",
+          "citations": [
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/download.html",
+            "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html"
+          ]
+        },
+        "function": {
+          "readiness": "pending",
+          "title": "Function content pending",
+          "body": "A structure-specific description of action, attachments and neural supply has not yet been authored and reviewed for this entry. The geometry and source identity are available now."
+        },
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        },
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "quiz": {
+          "readiness": "generated-identification",
+          "title": "Identification practice",
+          "body": "Find sesamoid bone of left foot on the model."
+        }
+      }
+    }
+  ]
+}

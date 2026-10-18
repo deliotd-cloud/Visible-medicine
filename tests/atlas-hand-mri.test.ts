@@ -1,0 +1,28 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
+import {committedInputs,delivery,modelFilesUnchanged,sha,sourcePins,website} from './atlas-hand-xray-mri-fixture.ts';
+
+const historical={
+ 'content/hand-intrinsic-studies.ts':'52e2b0d6e28648493f16f9fffb2fa56b5d54f2889c76d866f22bb49041979b85',
+ 'lib/hand-intrinsic-studies.ts':'5cc77244b513326f9c219e1f26b9d5401d9128f77cd9f8e6433cca01b04dc76b',
+ 'content/distal-palmar-mri.ts':'174ad897535a6fbf3f56f66ce4781198bb26b19395cb70bbcad47acb209a8885',
+ 'content/shoulder-arterial-mri.ts':'e9ea55d29364250ae5aab7bcc77f6dec9a80de3cc26b2f3ceb085a3fd4e90d16',
+ 'app/body-explorer.tsx':'2dad1c22dfec424db6a4cdf578cb4f9cafe6a0e3295f95ed7d3318976aa62dc0',
+};
+const markers=['hand-intrinsic-thenar-adductor','hand-intrinsic-interosseous-lumbrical','Full extent in View menu'];
+test('saved whole website epoch retains reviewed hand studies and MRI export',()=>{
+ const {inputs,runtime}=delivery('historical');
+ sourcePins(inputs,historical,'historical');
+ const js=runtime();for(const marker of markers)assert(js.includes(marker),marker);
+});
+test('current admitted hand MRI source, runtime and prior model inventory are bound',()=>{
+ const {inputs,runtime}=delivery('current');
+ committedInputs(inputs,Object.keys(historical));
+ const js=runtime();for(const marker of markers)assert(js.includes(marker),marker);
+ modelFilesUnchanged();
+ const inventory=JSON.parse(readFileSync(website+'lib/atlas-model-inventory.json','utf8'));
+ const priorModels=beforeHippocampi(inventory.models).filter((m:{sha256:string})=>m.sha256!=='4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f'&&m.sha256!=='4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12');
+ assert.equal(sha(JSON.stringify(priorModels)),'972cd41676713abf3aa458055783ce95bcfac41596bf5ec411911f9a1717aa10');
+});

@@ -1,0 +1,39 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import test from 'node:test';
+import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {renderChecklist} from '../scripts/refresh-completion-checklist.mjs';
+const root=new URL('../',import.meta.url),base='tests/fixtures/head-comparison-before-compact/';
+const read=p=>fs.readFileSync(new URL(p,root)),json=p=>JSON.parse(read(p)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+test('exact previous delivery and historical checklist contracts remain frozen but refuse current renderer admission',()=>{
+ assert.equal(sha(read(base+'manifest.json')),'f3bd36cf5ae8bc8b7a1f4f59ba09d3daa09ceae975b1f1547a288d6f623bdd3d');
+ const archive=json(base+'manifest.json');assert.equal(archive.records.length,6);
+ for(const record of archive.records)assert.equal(sha(read(record.frozenPath)),record.sha256,record.path);
+ const old=json(base+'tests__fixtures__current-atlas-delivery.json'),pin=validateCurrentAtlasDelivery();
+ assert.equal(old.source,pin.source);assert.equal(old.sourceTree,pin.sourceTree);
+ assert.equal(old.reviewIntegration,'3005a149b529f7734880ab139ac1433bbdffdce2f5b1aab474ba583713fdf6fe');
+ assert.equal(pin.reviewIntegration,'a058b135f294162091ea270d97c81d00bb5c73492b5095cf0cb12e6d316d3808');
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));
+ for(const [path,digest]of Object.entries(old.documents))if(!['atlas-review/manifest.json','atlas-review/integration-inputs.json','public/atlas-review-viewer/manifest.json'].includes(path))assert.equal(sha(read(path)),digest,path);
+});
+test('only the two reviewed UI renderer inputs change in the exact Review binding',()=>{
+ const oldPin=json(base+'tests__fixtures__current-atlas-delivery.json');
+ assert.equal(sha(read(base+'atlas-review__integration-inputs.json')),oldPin.documents['atlas-review/integration-inputs.json']);
+ const before=json(base+'atlas-review__integration-inputs.json'),after=json('atlas-review/integration-inputs.json');
+ assert.equal(before.sourceCommit,after.sourceCommit);assert.equal(before.inputs.length,after.inputs.length);
+ const old=new Map(before.inputs.map(row=>[row.path,row.sha256]));
+ const changed=after.inputs.filter(row=>{assert(old.has(row.path));return old.get(row.path)!==row.sha256;}).map(row=>row.path).sort();
+ assert.deepEqual(changed,['app/atlas/head-neck-3d/head-learning.css','components/HeadAtlasComparisonNavigation.tsx']);
+ for(const row of after.inputs)assert.equal(sha(read(row.path)),row.sha256,row.path);
+});
+test('register40 preserves all71 requirements, eight ideas and clinical scope while adding bounded UI evidence',()=>{
+ const before=json(base+'docs__completion-checklist.json'),data=json('tests/fixtures/clinical-inbox-before-navigation/docs__completion-checklist.json'),pin=validateCurrentAtlasDelivery();
+ assert.equal(data.revision,40);assert.equal(data.items.length,71);assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ assert.deepEqual(data.changeLog.slice(1),before.changeLog);assert.equal(data.changeLog[0].revision,40);
+ assert.deepEqual({...data.baseline,reviewIntegration:before.baseline.reviewIntegration},before.baseline);
+ assert.equal(data.baseline.reviewIntegration,pin.reviewIntegration);assert.equal(data.pendingAtlasSource.websiteImported,true);
+ for(const previous of before.items){const current=data.items.find(i=>i.id===previous.id);const {evidence:a,...x}=previous,{evidence:b,...y}=current;assert.deepEqual(y,x);assert.deepEqual(b,['UX-01','UX-02'].includes(previous.id)?[...a,'website:docs/COMPACT_HEAD_COMPARISON.md']:a);}
+ assert.equal(data.baseline.publicReleaseApproval,null);assert.equal(data.baseline.privateClinicalDecisionCounts,null);
+ assert(renderChecklist(data).includes('Revision 40'));assert.match(data.changeLog[0].change,/without migrating clinical approval/);
+});

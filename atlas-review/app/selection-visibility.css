@@ -1,0 +1,37 @@
+.vm-selection-visibility {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0 12px 8px;
+  padding: 8px 10px;
+  background: #edf6f3;
+  border: 1px solid #aac7bf;
+  border-radius: 6px;
+  color: var(--vm-ink);
+  flex: none;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.vm-selection-visibility > output {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+.vm-selection-visibility strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+.vm-selection-visibility span {
+  display: block;
+}
+.vm-selection-visibility button {
+  min-height: 40px;
+  height: auto;
+  white-space: normal;
+  font-size: 0.875rem;
+}
+@media (pointer: coarse) {
+  .vm-selection-visibility button {
+    min-height: 44px;
+  }
+}

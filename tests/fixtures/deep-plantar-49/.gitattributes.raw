@@ -1,0 +1,254 @@
+# Preserve the exported module's exact, manifest-hashed bytes on every platform.
+public/atlas-runtime/shoulder/** -text
+public/atlas-runtime/female-pelvis/** -text
+public/atlas-runtime/lower-limb/** -text
+public/atlas-runtime/head-neck/** -text
+# Inventory fingerprints must survive Windows checkouts unchanged.
+lib/atlas-model-inventory.json text eol=lf
+lib/atlas-model-staging-candidate.json text eol=lf
+# Clinical Review source and artifact fingerprints are byte-exact across hosts.
+atlas-review/** -text
+public/atlas-review-viewer/** -text
+app/workspace/atlas-review/** text eol=lf
+app/api/atlas-review/** text eol=lf
+lib/clinical-review-* text eol=lf
+components/review-ui-variants.css text eol=lf
+scripts/*clinical-review* text eol=lf
+scripts/clinical-review-viewer/** text eol=lf
+package-lock.json text eol=lf
+
+# Historical source and delivery snapshots are exact byte evidence.
+tests/fixtures/current-atlas-delivery-58926355.json -text
+tests/fixtures/atlas-arterial-evidence-limits-before-current-admission.txt -text
+tests/fixtures/atlas-cervical-projection-xray-before-current-admission.txt -text
+tests/fixtures/atlas-cerebral-lobar-imaging-before-current-admission.txt -text
+tests/fixtures/atlas-wave4-notices-before-current-admission.txt -text
+tests/fixtures/atlas-deep-brain-core-checks-before-lock-history.txt -text
+tests/fixtures/HeadAtlasLearningLibrary.precompact.tsx -text
+tests/fixtures/atlas-exact-git-api-before-batch.mjs -text
+tests/fixtures/shoulder-us-589-delivery-archive.json -text
+
+# Exact source proofs preserve their reviewed LF or CRLF bytes.
+components/HeadAtlasLearningLibrary.tsx text eol=lf
+tests/atlas-arterial-evidence-limits.test.mjs text eol=lf
+tests/atlas-cervical-projection-xray.test.mjs text eol=lf
+tests/atlas-cerebral-lobar-imaging.test.ts -text
+tests/atlas-current-history-wave4-contract.test.mjs text eol=lf
+tests/atlas-deep-brain-core-checks.mjs text eol=lf
+tests/shoulder-us-history-contract.test.mjs text eol=lf
+
+# Additional immutable historical archives and exact reviewed proof sources.
+tests/fixtures/atlas-hand-vessel-xray.original.mjs -text
+tests/fixtures/atlas-hand-vessel-xray-f1dc0ccc.txt -text
+tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json -text
+tests/fixtures/atlas-intracranial-arterial-ultrasound.original.mjs -text
+tests/fixtures/intracranial-us-589-delivery-archive.json -text
+tests/atlas-hand-vessel-xray.test.mjs text eol=lf
+tests/atlas-intracranial-arterial-ultrasound.test.mjs text eol=lf
+
+# Admission repairs retain their original and reviewed exact proof bytes.
+tests/fixtures/atlas-shoulder-girdle-arterial-ultrasound.original.txt -text
+tests/atlas-shoulder-girdle-arterial-ultrasound-checks.mjs text eol=lf
+tests/shoulder-girdle-arterial-current-admission-contract.test.mjs text eol=lf
+tests/fixtures/atlas-spinal-muscle-xray.original.txt -text
+tests/atlas-spinal-muscle-xray.test.mjs text eol=lf
+tests/atlas-spinal-muscle-xray-current-admission-contract.test.mjs text eol=lf
+
+# Authentication harness snapshots retain original bytes; executable proofs use LF.
+tests/fixtures/authenticated-api-contract.before-context.txt -text
+tests/authenticated-api-contract.test.mjs text eol=lf
+tests/authenticated-api-contract-preservation.test.mjs text eol=lf
+
+# Cardiac/chest current admission retains the exact earlier export and assertions.
+tests/fixtures/historical-cardiac-chest-head-neck-manifest.json -text
+tests/fixtures/clinical-current-pins/clinical-review-cardiac-venous-tour.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-chest-wall-quiz.test.ts.txt -text
+tests/clinical-review-cardiac-venous-tour.test.ts text eol=lf
+tests/clinical-review-chest-wall-quiz.test.ts text eol=lf
+tests/clinical-review-cardiac-chest-preservation.test.mjs text eol=lf
+
+# Current-only clinical admission retains original tests and exact reviewed proofs.
+tests/fixtures/clinical-current-pins/clinical-review-brain-connections-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-cardiac-xray.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-cerebral-arterial-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-cervical-quiz.test.ts.txt -text
+tests/clinical-review-brain-connections-quiz.test.ts text eol=lf
+tests/clinical-review-cardiac-xray.test.ts text eol=lf
+tests/clinical-review-cerebral-arterial-quiz.test.ts text eol=lf
+tests/clinical-review-cervical-quiz.test.ts text eol=lf
+tests/clinical-review-current-pin-preservation.test.mjs text eol=lf
+
+# Additional clinical current admission keeps original snapshots and reviewed proofs exact.
+tests/fixtures/clinical-current-pins/clinical-review-abdominal-connective-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-abdominal-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-abdominal-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-hand-venous-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-head-neck-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-neck-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-pelvic-organ-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-hepatobiliary-quiz.test.ts.txt -text
+tests/clinical-review-abdominal-connective-quiz.test.ts text eol=lf
+tests/clinical-review-abdominal-quiz.test.ts text eol=lf
+tests/clinical-review-abdominal-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-hand-venous-quiz.test.ts text eol=lf
+tests/clinical-review-head-neck-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-neck-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-pelvic-organ-quiz.test.ts text eol=lf
+tests/clinical-review-hepatobiliary-quiz.test.ts text eol=lf
+tests/clinical-review-wave2-preservation.test.mjs text eol=lf
+tests/clinical-review-hepatobiliary-preservation.test.mjs text eol=lf
+
+# Exact original/current clinical literal batches; never normalize raw evidence.
+tests/fixtures/clinical-current-pins/clinical-review-collicular-teaching.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-coronary-sinus-ultrasound.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-craniofacial-bone-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-deep-brain-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-femoral-component-imaging.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-foot-bone-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-forearm-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-forearm-venous-cross-sectional.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-forearm-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-foregut-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-guided-library.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-hand-arterial-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-hand-bone-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-iliac-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-laryngeal-support-imaging.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-limb-connective-ct.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-lower-limb-bone-reasoning.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-lower-limb-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-major-limb-bone-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-nested-selection-order.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-orbital-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-orbital-nerve-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-plantar-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-shoulder-arm-artery-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-shoulder-arm-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-spinal-bone-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-spinal-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-spine-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-superior-temporal-mri.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-suprascapular-arterial-ct.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-tentorium-imaging.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-thigh-deep-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-thoracic-small-vessel-mri.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-thoracic-vessel-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-trunk-core-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-trunk-muscle-quiz.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-upper-arm-reasoning.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-upper-limb-bone-reasoning.test.ts.txt -text
+tests/fixtures/clinical-current-pins/clinical-review-ventricular-ultrasound.test.ts.txt -text
+tests/clinical-literal-batch-a-preservation.test.mjs text eol=lf
+tests/clinical-literal-batch-b-preservation.test.mjs text eol=lf
+tests/clinical-review-collicular-teaching.test.ts text eol=lf
+tests/clinical-review-coronary-sinus-ultrasound.test.ts text eol=lf
+tests/clinical-review-craniofacial-bone-quiz.test.ts text eol=lf
+tests/clinical-review-deep-brain-quiz.test.ts text eol=lf
+tests/clinical-review-femoral-component-imaging.test.ts text eol=lf
+tests/clinical-review-foot-bone-quiz.test.ts text eol=lf
+tests/clinical-review-forearm-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-forearm-venous-cross-sectional.test.ts text eol=lf
+tests/clinical-review-forearm-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-foregut-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-guided-library.test.ts text eol=lf
+tests/clinical-review-hand-arterial-quiz.test.ts text eol=lf
+tests/clinical-review-hand-bone-quiz.test.ts text eol=lf
+tests/clinical-review-iliac-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-laryngeal-support-imaging.test.ts text eol=lf
+tests/clinical-review-limb-connective-ct.test.ts text eol=lf
+tests/clinical-review-lower-limb-bone-reasoning.test.ts text eol=lf
+tests/clinical-review-lower-limb-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-major-limb-bone-quiz.test.ts text eol=lf
+tests/clinical-review-nested-selection-order.test.ts text eol=lf
+tests/clinical-review-orbital-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-orbital-nerve-quiz.test.ts text eol=lf
+tests/clinical-review-plantar-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-shoulder-arm-artery-quiz.test.ts text eol=lf
+tests/clinical-review-shoulder-arm-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-spinal-bone-quiz.test.ts text eol=lf
+tests/clinical-review-spinal-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-spine-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-superior-temporal-mri.test.ts text eol=lf
+tests/clinical-review-suprascapular-arterial-ct.test.ts text eol=lf
+tests/clinical-review-tentorium-imaging.test.ts text eol=lf
+tests/clinical-review-thigh-deep-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-thoracic-small-vessel-mri.test.ts text eol=lf
+tests/clinical-review-thoracic-vessel-quiz.test.ts text eol=lf
+tests/clinical-review-trunk-core-quiz.test.ts text eol=lf
+tests/clinical-review-trunk-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-upper-arm-reasoning.test.ts text eol=lf
+tests/clinical-review-upper-limb-bone-reasoning.test.ts text eol=lf
+tests/clinical-review-ventricular-ultrasound.test.ts text eol=lf
+
+# Exact current metadata, renderer and later-teaching proofs; retain prior epochs.
+tests/fixtures/atlas-hand-vessel-xray.admitted-e49120.mjs.raw -text
+tests/fixtures/atlas-spinal-muscle-xray.current-admitted.mjs.raw -text
+tests/fixtures/atlas-spinal-muscle-xray.later-transition.patch.raw -text
+tests/fixtures/current-proof-corrections/atlas-cerebral-lobar-imaging.test.ts.raw -text
+tests/fixtures/current-proof-corrections/atlas-intracranial-arterial-ultrasound.test.mjs.raw -text
+tests/fixtures/mutation-json-contract.before-context.txt -text
+tests/fixtures/raw-clinical-review-forefoot-muscle-quiz.test.ts.raw -text
+tests/fixtures/raw-clinical-review-hand-muscle-quiz.test.ts.raw -text
+tests/fixtures/raw-clinical-review-leg-muscle-quiz.test.ts.raw -text
+tests/fixtures/raw-clinical-review-lower-arterial-tour.test.ts.raw -text
+tests/fixtures/raw-clinical-review-lower-connective-quiz.test.ts.raw -text
+tests/fixtures/raw-clinical-review-pelvic-quiz.test.ts.raw -text
+tests/fixtures/raw-clinical-review-pharyngeal-imaging.test.ts.raw -text
+tests/fixtures/raw-clinical-review-thigh-muscle-quiz.test.ts.raw -text
+tests/atlas-hand-vessel-xray-preservation.test.mjs text eol=lf
+tests/atlas-metadata-text-checkout.mjs text eol=lf
+tests/atlas-metadata-text-checkout.test.mjs text eol=lf
+tests/cerebral-history-preservation.test.mjs text eol=lf
+tests/clinical-manifest-split-preservation.test.mjs text eol=lf
+tests/clinical-review-forefoot-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-hand-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-leg-muscle-quiz.test.ts text eol=lf
+tests/clinical-review-lower-arterial-tour.test.ts text eol=lf
+tests/clinical-review-lower-connective-quiz.test.ts text eol=lf
+tests/clinical-review-pelvic-quiz.test.ts text eol=lf
+tests/clinical-review-pharyngeal-imaging.test.ts text eol=lf
+tests/clinical-review-thigh-muscle-quiz.test.ts text eol=lf
+tests/current-proof-corrections-preservation.test.mjs text eol=lf
+tests/intracranial-history-preservation.test.mjs text eol=lf
+tests/mutation-json-contract-preservation.test.mjs text eol=lf
+tests/mutation-json-contract.test.mjs text eol=lf
+
+# Closed checkout exceptions and verified cancellation/tour test seams.
+tests/fixtures/current-source-checkout-representations.json -text
+tests/fixtures/head-mask-focus.before-noble-seam.test.ts.raw -text
+tests/head-mask-focus-preservation.test.mjs text eol=lf
+tests/head-mask-focus.test.ts text eol=lf
+
+# Non-executable evidence retains the exact original TSX bytes.
+tests/fixtures/HeadAtlasLearningLibrary.precompact.tsx.raw -text
+
+# Exact Register47 evidence and cooperative-reader transition proofs.
+tests/fixtures/completion-checklist-47.json -text
+tests/fixtures/completion-checklist.test.mjs.raw -text
+tests/fixtures/current-atlas-delivery-7b3e678a.json -text
+tests/fixtures/integration-inputs-7b3e678a.json -text
+tests/completion-checklist.test.mjs text eol=lf
+tests/completion-checklist-current-transition.test.mjs text eol=lf
+tests/head-local-source-cooperative.test.ts text eol=lf
+
+# Single current-admission pin changes retain the exact old contract.
+tests/fixtures/current-atlas-delivery-before-head-stream.test.mjs.raw -text
+tests/current-atlas-delivery.test.mjs text eol=lf
+tests/head-stream-current-pin-preservation.test.mjs text eol=lf
+
+# Revision48 to49 client diagnostics: frozen exact inputs and LF contract proofs.
+tests/fixtures/completion-checklist-48-before-head-client.json -text
+tests/fixtures/current-atlas-delivery-48-before-head-client.json -text
+tests/fixtures/integration-inputs-48-before-head-client.json -text
+tests/fixtures/current-atlas-delivery-before-head-client.test.mjs.raw -text
+tests/fixtures/current-atlas-delivery-ff04-before-head-client.test.mjs.raw -text
+tests/fixtures/head-stream-current-pin-preservation-before-head-client.test.mjs.raw -text
+tests/fixtures/completion-checklist-current-transition-before-head-client.test.mjs.raw -text
+tests/fixtures/exact-test-fixture-eol-before-head-client.test.mjs.raw -text
+tests/fixtures/gitattributes-before-head-client.raw -text
+tests/head-client-current-transition.test.mjs text eol=lf
+lib/head-load-progress.ts text eol=lf
+lib/head-atlas-import.ts text eol=lf
+vite.config.ts text eol=lf
+tests/head-client-diagnostics.test.ts text eol=lf
+tests/head-client-loader-trace.test.ts text eol=lf

@@ -1,0 +1,11 @@
+.workbook-retirement { margin-block: .75rem; border: 1px solid var(--border, #cbd5e1); border-radius: .5rem; padding: .6rem .8rem; }
+.workbook-retirement summary { cursor: pointer; font-weight: 600; }
+.workbook-retirement > p, .workbook-retirement-impact, .workbook-retirement small { color: var(--muted-foreground, #475569); font-size: .875rem; }
+.workbook-retirement fieldset { border: 0; margin: .5rem 0 0; padding: 0; display: grid; gap: .45rem; }
+.workbook-retirement legend { font-weight: 600; margin-bottom: .5rem; }
+.workbook-retirement select, .workbook-retirement textarea { width: 100%; max-width: 36rem; }
+.workbook-retirement-confirm { display: flex; align-items: start; gap: .5rem; margin-block: .35rem; }
+.workbook-retirement-confirm input { margin-top: .2rem; }
+.workbook-retirement button { justify-self: start; }
+.workbook-retirement-error { color: #a11d1d; }
+.workbook-retirement-success { color: #176342; }

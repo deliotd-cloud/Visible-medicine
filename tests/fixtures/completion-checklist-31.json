@@ -1,0 +1,1285 @@
+{
+  "schemaVersion": 1,
+  "revision": 31,
+  "title": "Visible Medicine completion checklist",
+  "updatedAt": "2026-10-16",
+  "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
+  "roots": {
+    "atlas": "F:/VisibleMedicine/atlas",
+    "website": "F:/VisibleMedicine/website",
+    "audit": "F:/VisibleMedicine/staging/20261015-completion-audit",
+    "tour": "F:/VisibleMedicine/staging/20261015-tour-speed",
+    "release": "F:/VisibleMedicine/staging/20261015-release-fixtures",
+    "assurance": "F:/VisibleMedicine/staging/20261015-release-fixtures-2",
+    "learning": "F:/VisibleMedicine/staging/20261015-structure-learning",
+    "facial": "F:/VisibleMedicine/staging/20261016-facial-website-integration",
+    "baseline": "F:/VisibleMedicine/staging/20261016-website-release",
+    "facialreview": "F:/VisibleMedicine/staging/20261016-facial-review",
+    "reliability": "F:/VisibleMedicine/staging/20261016-release-assurance"
+  },
+  "baseline": {
+    "atlasCommit": "f1dc0ccc54ec82aa774720db3c822d3e0ea9c418",
+    "atlasTree": "d3c165a126e773f004c9a620b5271bc15d0f384a",
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
+    "reviewIntegration": "bbca7076adc53030a83772c457d2dec50aac6622defb45ce2c5510464f926297",
+    "reviewSourceFiles": 1508,
+    "rootRepresentations": 1104,
+    "rootTopicPlacements": 9936,
+    "rootDraftPlacements": 9294,
+    "rootPendingPlacements": 603,
+    "rootGeneratedIdentificationPlacements": 39,
+    "nestedRepresentations": 108,
+    "nestedConcepts": 76,
+    "regionalTours": 51,
+    "regionalTourStops": 309,
+    "independentGuides": 9,
+    "independentGuideStops": 73,
+    "privateClinicalDecisionCounts": null,
+    "publicReleaseApproval": null,
+    "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
+  },
+  "pendingAtlasSource": {
+    "commit": "f1dc0ccc54ec82aa774720db3c822d3e0ea9c418",
+    "tree": "d3c165a126e773f004c9a620b5271bc15d0f384a",
+    "rootDraftPlacements": 9294,
+    "rootPendingPlacements": 603,
+    "rootGeneratedIdentificationPlacements": 39,
+    "websiteImported": true,
+    "evidence": "F:/VisibleMedicine/staging/20261016-hand-vessel-xray/canonical-installed.json",
+    "note": "36 exact-source hand-vessel X-ray placements have original contrast/projection teaching across19 families, not normal vessel visibility on routine hand films. Source numbering, component identities, incomplete inventories and all holds remain unchanged. No acquired images, patient registration or clinical approval. Revision-bound radiologist review remains required; independent access and the full roadmap are preserved."
+  },
+  "statusDefinitions": {
+    "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
+    "partial": "A working foundation exists but the stated acceptance criterion is incomplete.",
+    "open": "Useful work can proceed; completion is not proven.",
+    "needs-owner": "Owner decision, clinical input, approved data or operational authority is required for this item only.",
+    "held": "Source identity, condition, rights or spatial evidence prevents safe admission; prepare independent work without removing the hold.",
+    "proposed": "Optional idea for assessment; not added to mandatory completion scope.",
+    "done": "Exact acceptance evidence, scope, date and completion record are saved. Clinical approval must be separately recorded by the authorized human."
+  },
+  "rules": [
+    "Stable IDs survive reordering. Split an item into linked child IDs when necessary; do not silently delete scope.",
+    "Update status, exact source/revision, evidence and dated change log after each verified milestone.",
+    "Recheck stale evidence after a relevant source, renderer, case or contract change; never migrate approval automatically.",
+    "Report counts by status, owner and area; optional ideas are separate. Do not calculate an overall completion percentage from unequal items.",
+    "An owner-gated item does not stop independent engineering, teaching drafts or review preparation.",
+    "No patient data, private review notes, images, identifiers, credentials or uncleared derivatives belong in this checklist or GitHub.",
+    "Public deployment, billing, permissions, privacy clearance and clinical sign-off require their own authorization and evidence."
+  ],
+  "items": [
+    {
+      "id": "BASE-01",
+      "area": "Baseline",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Recalculate the current anatomy and teaching baseline",
+      "acceptance": "Current resolver and complete requirements inventory are recomputed at the exact clean Atlas commit; source files remain unchanged and evidence hashes are saved.",
+      "evidence": [
+        "audit:requirements-receipt.json",
+        "audit:requirements-current.json",
+        "audit:root-teaching-gaps.json"
+      ]
+    },
+    {
+      "id": "BASE-02",
+      "area": "Baseline",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Refresh stale canonical Atlas summary reports",
+      "acceptance": "Update docs/CURRENT_STATUS.md and requirement-audit.json through their generator; verify against current source and distinguish archival, root, nested and independent scopes.",
+      "evidence": [
+        "atlas:docs/CURRENT_STATUS.md",
+        "atlas:docs/requirement-audit.json",
+        "atlas:scripts/audit-requirements.mjs",
+        "audit:CURRENT_STATUS-current.md"
+      ],
+      "completionNote": "Generator refresh and --check pass at clean source ac714061; scoped summaries and source counts verified. Website still imports9f; source and import identities remain separate. Not clinical or full-release completion."
+    },
+    {
+      "id": "BASE-03",
+      "area": "Baseline",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "needs-owner",
+      "task": "Define the first release audience and bounded published coverage",
+      "acceptance": "Owner records target learners, private-beta versus public/paid release, included regions/modalities/courses, and explicitly disclosed gaps. Full-roadmap items remain retained for later releases.",
+      "evidence": [
+        "website:docs/production-plan.md",
+        "website:docs/pilot-readiness.md"
+      ]
+    },
+    {
+      "id": "BASE-04",
+      "area": "Baseline",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "open",
+      "task": "Freeze review candidates without freezing development",
+      "acceptance": "Owner reviews immutable source/content/renderer packages while independent next-version work continues. Corrections create a new candidate; no approval transfers to a changed candidate.",
+      "evidence": [
+        "website:lib/head-teaching-review-contract.ts",
+        "atlas:docs/SPECIMEN_REVIEWS.md",
+        "website:docs/master-plan.md"
+      ]
+    },
+    {
+      "id": "CORE-01",
+      "area": "Existing foundations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Retain compact Atlas modes and navigation",
+      "acceptance": "Explore, Dissect, Guided learning and Quiz retain their current source-bound interaction contracts and compact UI tests. Physical desktop acceptance is tracked in UX-01.",
+      "evidence": [
+        "tour:verification.json",
+        "website:tests/atlas-workspace-simplification.test.ts"
+      ]
+    },
+    {
+      "id": "CORE-02",
+      "area": "Existing foundations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Retain continuous smooth tours with adjustable speed",
+      "acceptance": "All 3D player families expose 0.5x/1x/1.5x/2x/3x, preserve the current stop and pause/reduced-motion rules, revoke old timers and retain final hold; source/player/build evidence matches the saved revision.",
+      "evidence": [
+        "atlas:docs/TOUR_SPEED.md",
+        "tour:checkpoint.json"
+      ]
+    },
+    {
+      "id": "CORE-03",
+      "area": "Existing foundations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Retain the integrated native CT/MRI head and semantic 3D links",
+      "acceptance": "Current local routes, structure selection/search/practice and mapped existing-Atlas comparisons retain their tested source/revision boundaries. This does not assert production transport, whole-head image coverage or patient registration.",
+      "evidence": [
+        "website:components/HeadAtlasViewer.tsx",
+        "website:lib/head-atlas-links.ts",
+        "tour:head-link-1.log"
+      ]
+    },
+    {
+      "id": "CORE-04",
+      "area": "Existing foundations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Retain simplified Studio and private Clinical Review destinations",
+      "acceptance": "Existing compact navigation and source-bound review discovery remain implemented and tested; signed-in end-to-end acceptance and actual decisions are tracked separately.",
+      "evidence": [
+        "website:docs/studio-simplification.md",
+        "website:tests/clinical-review-ui-simplification.test.ts",
+        "tour:ui-1.log"
+      ]
+    },
+    {
+      "id": "ANAT-01",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Create the region and system completeness ledger",
+      "acceptance": "For each regional/whole-body view, classify target anatomy as admitted, partial, missing, held or not yet inventoried. Reconcile overlapping memberships; do not count source files as unique structures.",
+      "evidence": [
+        "atlas:docs/SOURCE_INVENTORY.md",
+        "atlas:docs/FULL_BODY_COVERAGE.md",
+        "audit:requirements-current.json",
+        "website:docs/anatomy-coverage/index.json",
+        "website:docs/anatomy-coverage/README.md",
+        "website:app/workspace/atlas-review/anatomy-coverage/page.tsx",
+        "website:lib/anatomy-coverage-view.ts",
+        "website:tests/anatomy-coverage-page.test.ts"
+      ]
+    },
+    {
+      "id": "ANAT-02",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "held",
+      "task": "Resolve upper-limb peripheral nerve and brachial plexus gaps",
+      "acceptance": "Find commercially compatible no-fee geometry with explicit rights, units, side, original frame and branch labels; retain unresolved candidate objects offline until source and clinical admission is recorded.",
+      "evidence": [
+        "atlas:docs/OPEN3DMODEL_PLEXUS_SOURCE_REVIEW.md",
+        "atlas:docs/BRACHIAL_PLEXUS_SOURCE_REVIEW_20260928.md"
+      ]
+    },
+    {
+      "id": "ANAT-03",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Expand source-backed lower-limb peripheral nerves",
+      "acceptance": "Inventory missing named nerve geometry in thigh, leg and foot; acquire admissible originals and review courses/relationships. Motor-innervation text must not be presented as nerve geometry.",
+      "evidence": [
+        "atlas:docs/FULL_BODY_COVERAGE.md",
+        "atlas:lib/lower-limb-motor.ts"
+      ]
+    },
+    {
+      "id": "ANAT-04",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Owner radiologist",
+      "status": "held",
+      "task": "Adjudicate head and neck optic/visual pathway alternatives",
+      "acceptance": "Record source-bound decisions for overlapping optic candidates and partial visual pathway surfaces; engineering admits only approved identity/condition scope with no inferred patient transform.",
+      "evidence": [
+        "atlas:docs/VISUAL_PATHWAY_SOURCE_REVIEW.md",
+        "atlas:docs/GAP_FILLING.md"
+      ]
+    },
+    {
+      "id": "ANAT-05",
+      "area": "3D anatomy",
+      "priority": "P2",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "held",
+      "task": "Resolve ocular and lacrimal detail candidates",
+      "acceptance": "Review lacrimal-lake boundaries and fragmented ciliary candidates before admission; preserve the original sources and avoid plausible invented tissue.",
+      "evidence": [
+        "atlas:docs/OCULAR_DETAIL_SOURCE_REVIEW.md"
+      ]
+    },
+    {
+      "id": "ANAT-06",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "held",
+      "task": "Resolve cardiac valves, papillary muscles and leaflet identities",
+      "acceptance": "Appropriate clinical/anatomical reviewer accepts exact source boundaries and identities; no chordae, patent lumen, wall thickness or measured physiology is inferred from existing cavities.",
+      "evidence": [
+        "atlas:docs/CARDIAC_VALVE_SOURCE_REVIEW.md",
+        "atlas:lib/cardiac-cavity-guide.ts"
+      ]
+    },
+    {
+      "id": "ANAT-07",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Complete the intended pulmonary lobe and branch scope",
+      "acceptance": "Define and supply reviewed lobe/segment/branch surfaces appropriate to the agreed curriculum; current branch groups are not advertised as full lobar tissue or complete bronchial trees.",
+      "evidence": [
+        "atlas:docs/FULL_BODY_COVERAGE.md",
+        "audit:requirements-current.json"
+      ]
+    },
+    {
+      "id": "ANAT-08",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Owner radiologist",
+      "status": "held",
+      "task": "Resolve renal source-condition holds",
+      "acceptance": "Adjudicate held left cortex, right columns and left-vein representations and any incomplete interiors in their independent original frame.",
+      "evidence": [
+        "atlas:docs/HRA_RENAL_SOURCE_REVIEW.md"
+      ]
+    },
+    {
+      "id": "ANAT-09",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Owner radiologist",
+      "status": "partial",
+      "task": "Review pancreatic ducts and internal-organ claims",
+      "acceptance": "Accept exact duct identity and supplied extent; do not present two source surfaces as complete independent patent duct trees or a physiological flow model.",
+      "evidence": [
+        "atlas:docs/PANCREATIC_SOURCE_REVIEW.md"
+      ]
+    },
+    {
+      "id": "ANAT-10",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Owner radiologist",
+      "status": "held",
+      "task": "Resolve pelvic-floor identity and condition holds",
+      "acceptance": "Review the held definitions, near-coincident/midline-crossing alternatives and ambiguous superficial-perineal representation before adding identity-specific teaching or geometry.",
+      "evidence": [
+        "atlas:docs/PELVIC_FLOOR_SOURCE_REVIEW.md",
+        "atlas:docs/GAP_FILLING.md",
+        "audit:root-teaching-gaps.json"
+      ]
+    },
+    {
+      "id": "ANAT-11",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Define a coherent female whole-body scope",
+      "acceptance": "Owner defines intended sex-specific coverage; sources preserve original frames and laterality. The independent female pelvis remains separate until any cross-source registration is actually validated.",
+      "evidence": [
+        "atlas:docs/HRA_FEMALE_PELVIS.md",
+        "atlas:docs/FULL_BODY_COVERAGE.md"
+      ]
+    },
+    {
+      "id": "ANAT-12",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Inventory and fill joint soft-tissue layers",
+      "acceptance": "Assess capsules, labra, bursae, ligaments and cartilage for shoulder/elbow/wrist and hip/knee/ankle; source, review and test attachment/dissection boundaries rather than substituting bone landmarks.",
+      "evidence": [
+        "atlas:docs/UPPER_JOINT_SOURCE_SCREEN_20260918.md",
+        "atlas:docs/FULL_BODY_COVERAGE.md"
+      ]
+    },
+    {
+      "id": "ANAT-13",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Owner radiologist",
+      "status": "held",
+      "task": "Adjudicate tibial recurrent artery extents",
+      "acceptance": "Decide whether both held source surfaces represent their named whole extent or a broader network; preserve holds until the exact source decision exists.",
+      "evidence": [
+        "atlas:docs/TIBIAL_RECURRENT_SOURCE_REVIEW.md"
+      ]
+    },
+    {
+      "id": "ANAT-14",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "held",
+      "task": "Resolve spine disc, cord/canal and back-layer limits",
+      "acceptance": "Adjudicate FJ3211 identity/level, retain generic disc/canal limitations and keep older back-layer surfaces in their original frame unless a reviewed transform is supplied.",
+      "evidence": [
+        "atlas:docs/UNRESOLVED_DISC_SOURCE_REVIEW.md",
+        "atlas:docs/FULL_BODY_COVERAGE.md"
+      ]
+    },
+    {
+      "id": "ANAT-15",
+      "area": "3D anatomy",
+      "priority": "P2",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Triage foot interossei and other cross-version source candidates",
+      "acceptance": "Screen originals, commercial rights, source conditions and frame differences; never mix v3/v4 meshes directly merely because they look plausible together.",
+      "evidence": [
+        "atlas:docs/GAP_FILLING.md"
+      ]
+    },
+    {
+      "id": "ANAT-16",
+      "area": "3D anatomy",
+      "priority": "P2",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Define skin, fascia, lymphatics, organ interiors and vascular connection depth",
+      "acceptance": "Record the requested curricular depth and a missing/partial inventory; add only reviewed source-backed structures. Schematic CSF movement stays labelled schematic, not a validated fluid simulation.",
+      "evidence": [
+        "atlas:docs/FULL_BODY_COVERAGE.md",
+        "atlas:docs/CSF_MOTION.md"
+      ]
+    },
+    {
+      "id": "ANAT-17",
+      "area": "3D anatomy",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Codex",
+      "status": "verified-local",
+      "task": "Reconcile the reference-source review backlog",
+      "acceptance": "Revalidate reference-coverage audit differences against current source; classify nested coverage, holds, reviewed differences and corrections without converting a file-difference count into missing-anatomy count.",
+      "evidence": [
+        "atlas:docs/reference-coverage-audit.json",
+        "atlas:docs/SOURCE_INVENTORY.md",
+        "website:docs/anatomy-coverage/reference.json",
+        "website:docs/anatomy-coverage/index.json",
+        "website:scripts/check-anatomy-coverage.mjs",
+        "website:tests/anatomy-coverage-index.test.mjs",
+        "website:docs/anatomy-coverage/README.md"
+      ]
+    },
+    {
+      "id": "ANAT-18",
+      "area": "3D anatomy",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Owner radiologist",
+      "status": "needs-owner",
+      "task": "Sign off the anatomy included in the release candidate",
+      "acceptance": "Record actual source/renderer/side/boundary decisions in private Clinical Review for each included scope; root, nested, shoulder and specimen decisions remain independent.",
+      "evidence": [
+        "website:app/workspace/clinical-review-inbox/page.tsx",
+        "atlas:docs/SPECIMEN_REVIEWS.md",
+        "atlas:docs/NESTED_REVIEWS.md"
+      ]
+    },
+    {
+      "id": "TEACH-01",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Triage head and neck X-ray and ultrasound teaching gaps",
+      "acceptance": "Address 220 X-ray and 182 US pending root placements using exact source identities and appropriate acquisition evidence; explicitly retain unsupported normal visibility as pending or a documented scope limit.",
+      "evidence": [
+        "audit:root-teaching-gaps.json",
+        "atlas:docs/TEACHING_GAP_REPORT.md"
+      ]
+    },
+    {
+      "id": "TEACH-02",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Triage head and neck CT and MRI teaching gaps",
+      "acceptance": "Address 80 CT and 54 MRI pending root placements with technique, extent and identity limits; never infer acquired-image masks or registration from explanatory text.",
+      "evidence": [
+        "audit:root-teaching-gaps.json",
+        "atlas:lib/nested-teaching.ts"
+      ]
+    },
+    {
+      "id": "TEACH-03",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Triage spine and hand X-ray teaching gaps",
+      "acceptance": "Assess 62 spine and 38 hand pending X-ray placements; distinguish plain film from angiography/venography and avoid invented visibility of small vessels or muscles.",
+      "evidence": [
+        "audit:root-teaching-gaps.json"
+      ]
+    },
+    {
+      "id": "TEACH-04",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Finish the remaining regional root-teaching gap queue",
+      "acceptance": "Use all 710 exact pending rows, including abdomen US, remaining forearm/foot/pelvic/thoracic topics and two shoulder-arm US placements. Each row gets sourced draft content, an explicit held decision or an owner-approved scope disposition.",
+      "evidence": [
+        "audit:root-teaching-gaps.json",
+        "atlas:scripts/report-teaching-gaps.mjs"
+      ]
+    },
+    {
+      "id": "TEACH-05",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "held",
+      "task": "Resolve held identity before remaining Function, Clinical and Pathology copy",
+      "acceptance": "FMA19728 superficial-perineal muscle has one pending placement in each of these three topics; no specific identity or clinical explanation is invented before adjudication.",
+      "evidence": [
+        "audit:root-teaching-gaps.json",
+        "atlas:docs/GAP_FILLING.md"
+      ]
+    },
+    {
+      "id": "TEACH-06",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Audit existing root drafts for quality, references and repetition",
+      "acceptance": "Review all 9,187 editorial draft placements in coherent source-group batches; check specificity, references, normal variants, modality pitfalls and useful clinical scope. Shared text is not counted as thousands of unique authored lessons.",
+      "evidence": [
+        "atlas:app/body-content.ts",
+        "atlas:lib/content-types.ts",
+        "audit:requirements-current.json"
+      ]
+    },
+    {
+      "id": "TEACH-07",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Complete appropriate nested teaching without parent-text inheritance",
+      "acceptance": "Triage current nested pending placements: Function/Clinical/Pathology31 each, CT/MRI2 each, X-ray94 and US64. Distinguish source-file parts from named branches; exact child identity supports each added claim.",
+      "evidence": [
+        "atlas:content/nested-teaching.ts",
+        "atlas:docs/NESTED_ANATOMY_TEACHING.md",
+        "audit:requirements-current.json"
+      ]
+    },
+    {
+      "id": "TEACH-08",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Review independent specimen and dedicated shoulder curricula",
+      "acceptance": "Review separate source-frame teaching and clarify the two lower-limb held placements per Clinical/Pathology/CT/MRI/X-ray/US topic. Fully populated draft tabs in other specimens/shoulder are not treated as reviewed curricula.",
+      "evidence": [
+        "atlas:docs/SPECIMEN_REVIEWS.md",
+        "audit:CURRENT_STATUS-current.md"
+      ]
+    },
+    {
+      "id": "TEACH-09",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Review and extend guided-learning curricula",
+      "acceptance": "Review 51 regional tours/309 stops, nine independent guides/73 stops and the separate shoulder/eye/ventricular/cardiac guides for objectives, sequencing, captions, context and safe limits; add new tours only for meaningful learning objectives.",
+      "evidence": [
+        "atlas:lib/regional-tours.ts",
+        "atlas:lib/specimen-guided-dissection.ts",
+        "audit:requirements-current.json"
+      ]
+    },
+    {
+      "id": "TEACH-10",
+      "area": "Teaching",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Owner radiologist",
+      "status": "needs-owner",
+      "task": "Record revision-bound teaching and imaging sign-off",
+      "acceptance": "Approve/correct the exact included teaching, questions and modality interpretations in private Review; geometry review, source citation and medical-content acceptance are separate decisions.",
+      "evidence": [
+        "website:app/workspace/clinical-review-inbox/page.tsx",
+        "website:lib/head-teaching-review-contract.ts",
+        "facialreview:verification.json",
+        "website:lib/head-ct-facial-decision-contract.ts",
+        "website:components/HeadCtFacialDecisionForm.tsx"
+      ]
+    },
+    {
+      "id": "TEACH-11",
+      "area": "Teaching",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Inventory the lecture and course library across specialist work",
+      "acceptance": "Map actual current source files and revisions for X-ray bone anatomy, fractures, alignment/dislocations, healing/fixation, paediatric MSK and spine material; record missing modules, edits, rights and curriculum ownership without assuming old chat summaries are current.",
+      "evidence": [
+        "website:docs/master-plan.md",
+        "website:docs/studio-simplification.md",
+        "website:docs/LECTURE_PPTX_INTAKE.md"
+      ]
+    },
+    {
+      "id": "IMG-01",
+      "area": "Imaging and links",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Accept the integrated local CT/MRI head journeys end to end",
+      "acceptance": "With the cosmetically accepted exact packages, verify search, picking, label groups, slice scrolling, quiz, saved study, CT/MRI/3D handoff and return in a real desktop session; preserve accepted masks with the specialist.",
+      "evidence": [
+        "website:components/HeadAtlasViewer.tsx",
+        "website:lib/head-atlas-import.ts",
+        "tour:head-link-1.log"
+      ]
+    },
+    {
+      "id": "IMG-02",
+      "area": "Imaging and links",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Complete protected Didanix Education web media delivery",
+      "acceptance": "Bind an immutable Education viewer-core/media contract to cleared resources, real playable-object readback, access decisions and source revisions. Existing local native head images do not establish general production DICOM delivery.",
+      "evidence": [
+        "website:lib/education-media-readiness.ts",
+        "website:lib/production-readiness.ts",
+        "atlas:docs/DIDANIX_EDUCATION_INTEGRATION.md"
+      ]
+    },
+    {
+      "id": "IMG-03",
+      "area": "Imaging and links",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "needs-owner",
+      "task": "Select and clear additional modality and region cases",
+      "acceptance": "Owner supplies intended approved local CT/MRI/X-ray/US source sets; each admitted derivative has exact rights, privacy, de-identification, review and revision evidence. Data stays local until separate release clearance.",
+      "evidence": [
+        "atlas:docs/MULTIMODAL_LEARNING_PLAN.md",
+        "website:docs/production-plan.md"
+      ]
+    },
+    {
+      "id": "IMG-04",
+      "area": "Imaging and links",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Build source-bound cross-modality resource and lecture mappings",
+      "acceptance": "Structure/concept/side/extent and image or lecture-anchor revisions match explicitly; test missing/stale/ambiguous/locked mappings and preserve independent Atlas/case/lecture entitlements.",
+      "evidence": [
+        "atlas:lib/learning-resources.ts",
+        "atlas:docs/LEARNING_RESOURCE_CONTRACT.md",
+        "website:lib/head-atlas-links.ts",
+        "website:lib/lecture-anatomy-collection.ts",
+        "website:tests/lecture-multi-anatomy-repository.test.ts",
+        "website:docs/HEAD_IMAGING_HANDOFF.md",
+        "website:docs/GUIDED_LECTURE_HANDOFF.md"
+      ]
+    },
+    {
+      "id": "IMG-05",
+      "area": "Imaging and links",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Prepare commercially usable relevant ultrasound examples",
+      "acceptance": "Use owner-cleared images or individually rights-verified free commercial examples with required notices and exact teaching context; no scraped illustrations, vague dataset licence or unsupported visibility claim.",
+      "evidence": [
+        "atlas:docs/MULTIMODAL_LEARNING_PLAN.md",
+        "atlas:LICENSES/THIRD_PARTY_NOTICES.md"
+      ]
+    },
+    {
+      "id": "IMG-06",
+      "area": "Imaging and links",
+      "priority": "P2",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "needs-owner",
+      "task": "Validate patient-space synchronization only where intended",
+      "acceptance": "For any true 3D/scan spatial link, supply matched subjects, validated segmentation/registration and immutable frame-of-reference/transforms. Semantic comparison remains useful without this; never label it spatial registration.",
+      "evidence": [
+        "atlas:docs/DIDANIX_EDUCATION_INTEGRATION.md",
+        "atlas:lib/imaging-sync.ts"
+      ]
+    },
+    {
+      "id": "ASSESS-01",
+      "area": "Assessment",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "open",
+      "task": "Replace or deliberately scope generated identification prompts",
+      "acceptance": "Review 39 root generated-identification placements, including 38 head-neck and 1 pelvis; add source-specific prompts/accepted answers/feedback where supported, or explicitly retain them as basic unscored identification.",
+      "evidence": [
+        "audit:root-teaching-gaps.json",
+        "atlas:lib/reasoning-questions.ts"
+      ]
+    },
+    {
+      "id": "ASSESS-02",
+      "area": "Assessment",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Validate question quality and scoring across the website",
+      "acceptance": "Review the 190 draft reasoning concepts and included scan questions for correctness, synonyms, laterality, distractors, feedback and learning outcomes. Regression-check correct answers, first-try marks, Next/Finish, stale callbacks and exam locks in real sessions.",
+      "evidence": [
+        "atlas:lib/reasoning-questions.ts",
+        "website:tests/head-image-history.test.ts",
+        "audit:requirements-current.json"
+      ]
+    },
+    {
+      "id": "ASSESS-03",
+      "area": "Assessment",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Complete the specialist fracture-exam release pipeline",
+      "acceptance": "Specialist task owns case/answer review and exam assembly. Latest generic note records 100 included local cases in Groups 1/2 with release approval false; confirm remaining groups, privacy/rights, linked views, frozen paper/mark scheme and protected Education delivery before release.",
+      "evidence": [
+        "website:docs/fracture-exams/REPLACEMENT-REVIEW-20261014.md",
+        "website:docs/fracture-exams/INTEGRATION.md"
+      ]
+    },
+    {
+      "id": "ASSESS-04",
+      "area": "Assessment",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "open",
+      "task": "Exercise persisted attempts and independent paid access on the target",
+      "acceptance": "Real authorized learner/reviewer accounts verify attempts, timeout/recovery, denied/expired access, release snapshots and cross-tenant isolation against the intended database. Synthetic tests do not establish target readiness.",
+      "evidence": [
+        "website:lib/assessment-manifest.ts",
+        "website:lib/assessment-recovery.ts",
+        "website:docs/pilot-readiness.md"
+      ]
+    },
+    {
+      "id": "UX-01",
+      "area": "Desktop experience",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "open",
+      "task": "Run a signed-in desktop acceptance matrix",
+      "acceptance": "At 1280px and wider, test learning, authoring and review journeys with real roles: little page scrolling, predictable panels, aligned labels, retained context, browser Back/Forward and protected unsaved state.",
+      "evidence": [
+        "website:docs/studio-simplification.md",
+        "website:tests/desktop-workspace-simplification.test.ts",
+        "website:components/HeadAtlasGuidedModel.tsx"
+      ]
+    },
+    {
+      "id": "UX-02",
+      "area": "Desktop experience",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "open",
+      "task": "Complete keyboard and assistive-technology acceptance",
+      "acceptance": "Physical browser checks cover focus after dialogs/disclosures/steps, readable contrast, announcements, reduced motion, 200% text, keyboard-only controls and an accessible route when WebGL is unavailable.",
+      "evidence": [
+        "website:components/HeadAtlasLearningPicker.tsx",
+        "atlas:docs/TOUR_SPEED.md",
+        "website:docs/pilot-readiness.md"
+      ]
+    },
+    {
+      "id": "UX-03",
+      "area": "Desktop experience",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "open",
+      "task": "Measure real viewer performance and reliability",
+      "acceptance": "Measure actual page/GPU load, memory, dense labels, orbit/explode readability, input responsiveness, cancellation/retry and recovery on representative desktop hardware; do not substitute bundle sizes or SSR passes for timings.",
+      "evidence": [
+        "atlas:app/body-scene.tsx",
+        "website:docs/master-plan.md"
+      ]
+    },
+    {
+      "id": "UX-04",
+      "area": "Desktop experience",
+      "priority": "P2",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "open",
+      "task": "Retain essential mobile fallback without displacing desktop priority",
+      "acceptance": "Prevent broken navigation, unreadable controls and inaccessible learning on small screens; desktop remains the spending priority and optional mobile polish is deferred.",
+      "evidence": [
+        "website:tests/atlas-workspace-simplification.test.ts",
+        "atlas:app/regional-guided-learning.tsx"
+      ]
+    },
+    {
+      "id": "STUDIO-01",
+      "area": "Studio and courses",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Verify the simplified course-building workflow with real users",
+      "acceptance": "Create a course, arrange its outline, edit/save/recover a lecture/workbook, preview, request independent review and publish an immutable release without clutter or lost changes; author cannot self-approve.",
+      "evidence": [
+        "website:docs/studio-simplification.md",
+        "website:lib/studio-release-order.ts"
+      ]
+    },
+    {
+      "id": "STUDIO-02",
+      "area": "Studio and courses",
+      "priority": "P1",
+      "scope": "full-roadmap",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Bring existing presentations into the course library safely",
+      "acceptance": "Inventory source PowerPoint/media and implement an appropriate import or conversion lane with fidelity, source rights, media quarantine, caption/alt text and reviewed anchors; do not falsely claim plain-text slide editing is full PPTX import.",
+      "evidence": [
+        "website:docs/studio-simplification.md",
+        "website:docs/production-plan.md",
+        "website:scripts/lecture-pptx-intake.py",
+        "website:tests/lecture-pptx-intake.test.py",
+        "website:docs/LECTURE_PPTX_INTAKE.md"
+      ]
+    },
+    {
+      "id": "STUDIO-03",
+      "area": "Studio and courses",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Verify target migrations, tenant isolation and provisioning",
+      "acceptance": "Use approved deployment-time migrations and controlled fixtures; test all authoring/publication/enrolment/reporting mutations against representative target data and roles. Remove runtime schema/demo dependencies through reviewed changes, not flags alone.",
+      "evidence": [
+        "website:lib/production-readiness.ts",
+        "website:docs/platform-architecture.md",
+        "website:docs/pilot-readiness.md"
+      ]
+    },
+    {
+      "id": "STUDIO-04",
+      "area": "Studio and courses",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "partial",
+      "task": "Complete correction, supersession and withdrawal journeys",
+      "acceptance": "A published lesson/case/lecture can be corrected or withdrawn with exact revision history, affected-link handling, appropriate notices and retained attempt evidence; already-approved content is not edited in place.",
+      "evidence": [
+        "website:docs/production-plan.md",
+        "website:lib/assessment-manifest.ts",
+        "website:docs/STUDIO_WORKBOOK_RETIREMENT.md",
+        "website:docs/STUDIO_WORKBOOK_CORRECTIONS.md"
+      ]
+    },
+    {
+      "id": "REL-01",
+      "area": "Release and operations",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Codex",
+      "status": "partial",
+      "task": "Repair and run the complete applicable regression suite",
+      "acceptance": "Triage genuine bugs, historical source-fixture assertions and resource failures; preserve original epoch proofs while fixing current bindings. Obtain a clean applicable run at the exact final candidate without suppressed tests or broad claims from selected passes.",
+      "evidence": [
+        "tour:verification.json",
+        "release:verification.json",
+        "release:combined-1.log",
+        "assurance:verification.json",
+        "assurance:combined-1.log",
+        "website:tests/atlas-carpal-bone-quiz-history.ts",
+        "website:package.json",
+        "baseline:terminal-audit.json",
+        "facial:verification.json",
+        "reliability:verification.json",
+        "website:docs/test-runner.md",
+        "website:scripts/run-website-tests.mjs",
+        "website:docs/CURRENT_ATLAS_TEST_DELIVERY.md",
+        "website:docs/DELIVERY_EPOCH_REPAIR.md"
+      ]
+    },
+    {
+      "id": "REL-02",
+      "area": "Release and operations",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Finish distributed asset and licence release audit",
+      "acceptance": "Audit exact shipped dependency/font/mesh/texture/image/content bytes and notices, retain attribution, resolve source holds and confirm no mandatory paid dependency. Classification reports are not exhaustive rights clearance or a forever-free hosting guarantee.",
+      "evidence": [
+        "atlas:LICENSES/THIRD_PARTY_NOTICES.md",
+        "audit:requirements-current.json",
+        "website:scripts/build-clinical-review-viewer.mjs"
+      ]
+    },
+    {
+      "id": "REL-03",
+      "area": "Release and operations",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "needs-owner",
+      "task": "Approve image/privacy/publication clearance per release",
+      "acceptance": "Owner/governance records exact case/derivative privacy, rights, facial/de-identification considerations and intended audience; source approval for local use is not silently treated as upload permission.",
+      "evidence": [
+        "website:docs/production-plan.md",
+        "website:docs/fracture-exams/REPLACEMENT-REVIEW-20261014.md"
+      ]
+    },
+    {
+      "id": "REL-04",
+      "area": "Release and operations",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "needs-owner",
+      "task": "Choose and authorize the real private deployment target",
+      "acceptance": "Confirm domain/origin, approved education identity, access policy, storage/transport, operational owners and a cost ceiling; perform private deployment/readback only when authorized. Public and paid activation remain separate decisions.",
+      "evidence": [
+        "website:docs/pilot-readiness.md",
+        "website:lib/production-readiness.ts"
+      ]
+    },
+    {
+      "id": "REL-05",
+      "area": "Release and operations",
+      "priority": "P0",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Complete security and account-lifecycle assurance",
+      "acceptance": "Threat review plus genuine authentication/authorization, tenant boundaries, upload screening, rate limits, secrets, export/deletion and incident exercises pass on the intended environment; do not bypass authentication to test.",
+      "evidence": [
+        "website:docs/pilot-readiness.md",
+        "website:lib/production-readiness.ts"
+      ]
+    },
+    {
+      "id": "REL-06",
+      "area": "Release and operations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Owner",
+      "status": "needs-owner",
+      "task": "Supply approved legal, support and commercial details",
+      "acceptance": "Approve legal entity/contact, terms, privacy, accessibility, retention and support processes. Paid launch additionally needs pricing, contracts, tax, invoice/refund and entitlement decisions before enabling billing.",
+      "evidence": [
+        "website:docs/production-plan.md",
+        "website:docs/pilot-readiness.md"
+      ]
+    },
+    {
+      "id": "REL-07",
+      "area": "Release and operations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Verify complete website and operational backups",
+      "acceptance": "Keep current Atlas-only GitHub source and scoped F recovery verified; establish an authorized sanitized website backup and separate private data/database recovery with an actual restore exercise. Never call the Atlas mirror a full website/private-data/off-device backup.",
+      "evidence": [
+        "tour:github.json",
+        "tour:checkpoint.json",
+        "website:scripts/source-recovery.mjs"
+      ]
+    },
+    {
+      "id": "REL-08",
+      "area": "Release and operations",
+      "priority": "P1",
+      "scope": "release-essential",
+      "owner": "Both",
+      "status": "needs-owner",
+      "task": "Finish transactional email and essential monitoring/support",
+      "acceptance": "Approve provider/domain/credentials and no-new-fee constraints, then test intended notifications, failures, support and incident/correction procedures. Live classrooms and paid integrations remain off unless separately approved.",
+      "evidence": [
+        "website:docs/pilot-readiness.md",
+        "website:lib/pilot-readiness.ts"
+      ]
+    },
+    {
+      "id": "IDEA-01",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "partial",
+      "task": "One concept-centred learning path across modalities and lectures",
+      "acceptance": "Evaluate extending the existing global search and resource links into a single structure page with available reviewed 3D/CT/MRI/X-ray/US/lecture destinations, clear locks and one primary action; no duplicate viewer toolbar.",
+      "evidence": [
+        "website:app/search/page.tsx",
+        "atlas:lib/learning-resources.ts",
+        "learning:verification.json",
+        "website:tests/structure-learning-ui.test.ts",
+        "facial:verification.json",
+        "website:lib/head-ct-facial-teaching.ts",
+        "website:lib/head-ct-facial-clinical.ts"
+      ]
+    },
+    {
+      "id": "IDEA-02",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "partial",
+      "task": "A unified personal learning home",
+      "acceptance": "Evaluate surfacing existing bookmarks, study sets, course progress and weak topics in one uncluttered resume view, with revision-aware progress and minimal agreed learner data.",
+      "evidence": [
+        "website:app/my-learning/page.tsx",
+        "website:lib/head-study-set.ts",
+        "learning:verification.json",
+        "website:tests/structure-learning-ui.test.ts"
+      ]
+    },
+    {
+      "id": "IDEA-03",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "proposed",
+      "task": "Goal-oriented learning pathways and spaced review",
+      "acceptance": "Evaluate short approved pathways for intended learner levels and optional spaced practice, using existing tours/quizzes rather than multiplying navigation tabs; owner defines curriculum/assessment validity.",
+      "evidence": [
+        "atlas:lib/regional-tours.ts",
+        "website:lib/pilot-readiness.ts"
+      ]
+    },
+    {
+      "id": "IDEA-04",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "partial",
+      "task": "Clear reviewed-coverage and version indicators",
+      "acceptance": "Evaluate concise draft/reviewed/partial/unavailable badges and a quiet change history for the actual published version; avoid prominent warning clutter and never imply approval from references alone.",
+      "evidence": [
+        "website:app/atlas/guided-learning/page.tsx",
+        "atlas:docs/FULL_BODY_COVERAGE.md",
+        "learning:verification.json",
+        "website:tests/structure-learning-ui.test.ts",
+        "facialreview:verification.json",
+        "website:lib/head-ct-facial-review-inbox.ts"
+      ]
+    },
+    {
+      "id": "IDEA-05",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Codex",
+      "status": "proposed",
+      "task": "Contextual error reporting and reviewer triage",
+      "acceptance": "Evaluate an issue action that captures non-patient structure/topic/source/version context and reproducible steps, linking to existing corrections/review tools without exposing private scans or answers.",
+      "evidence": [
+        "website:app/workspace/clinical-review-inbox/page.tsx",
+        "website:docs/production-plan.md"
+      ]
+    },
+    {
+      "id": "IDEA-06",
+      "area": "Optional product ideas",
+      "priority": "P3",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "proposed",
+      "task": "A compact body map and discoverable keyboard shortcuts",
+      "acceptance": "Evaluate an optional collapsed body-map/command entry for regions and commands; keep the current simple region picker and primary four modes, and test whether the addition genuinely reduces navigation effort.",
+      "evidence": [
+        "website:tests/atlas-workspace-simplification.test.ts"
+      ]
+    },
+    {
+      "id": "IDEA-07",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "proposed",
+      "task": "Reviewed diagrammatic plates and non-WebGL learning fallback",
+      "acceptance": "Evaluate original source-derived labelled 2D plates with compatible notices and radiologist review, suitable for revision or hardware fallback. Do not pass AI-generated anatomical artwork off as validated anatomy.",
+      "evidence": [
+        "atlas:docs/FULL_BODY_COVERAGE.md",
+        "atlas:LICENSES/THIRD_PARTY_NOTICES.md"
+      ]
+    },
+    {
+      "id": "IDEA-08",
+      "area": "Optional product ideas",
+      "priority": "P2",
+      "scope": "optional",
+      "owner": "Both",
+      "status": "proposed",
+      "task": "Scope-specific release-readiness profiles",
+      "acceptance": "Evaluate explicit private-radiology/Atlas, institutional and full-platform profiles so unrelated WSI/live-classroom work does not silently become an initial Atlas blocker; applicable privacy/security/clinical gates cannot be waived by changing a flag.",
+      "evidence": [
+        "website:lib/production-readiness.ts",
+        "website:docs/production-plan.md"
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "date": "2026-10-16",
+      "revision": 31,
+      "change": "Four shared delivery test fixtures now bind the exact current Atlas delivery while retaining immutable historical source/model/teaching/access assertions.17 pre-repair sources are hash-frozen; interosseous CT scope and independently admitted MRI/US drafts have direct current semantic checks. Only REL-01 evidence advances, still partial. All71 roadmap items/eight optional ideas, statuses and acceptance criteria remain, with the exact unchangedf1dc0ccc source and Review baseline. Original failed receipts and the incomplete whole-suite audit remain; no clinical, physical-browser or public-release approval is claimed."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 30,
+      "change": "36 exact-source hand-vessel X-ray teaching drafts across19 families are locally imported with1508 Review source files and four normal learner exports. Totals become9294 draft/603 pending/39 generated placements. No anatomy, geometry, accepted masks, tours, permissions, clinical approval or independent access changes. All71 items/eight optional ideas, statuses, acceptance criteria and item evidence remain unchanged; immutable revision29 and prior delivery tests are retained. Whole-suite, browser and release acceptance remain open."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 29,
+      "change": "Added protected exact-source correction drafts for published teaching, assessment and lecture workbooks under a separate new draft ID, with immutable manifests, current authority, fresh audit-gated transactional copying and strict source/receipt checks. Published originals, independent access, learner evidence and review/publication gates remain unchanged. Replacement, affected-link/notices policy and release cutover remain separate; STUDIO-04 stays partial. Atlas8d32653e/tree876d7c8b, Review2e620c81, anatomy/teaching/assets/private/mask inputs, all 71 items/eight ideas, statuses and acceptance criteria are preserved; only STUDIO-04 evidence advances. No actual workbook, clinical or learner mutation, public deployment or new service/dependency/fee/permission/schema is claimed."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 28,
+      "change": "Added one exact current Atlas delivery fixture and fail-closed test contract for all four learner runtimes, protected Review and the model registry. Current viewer and clinical-review checks use the verified current binding while immutable historical proofs retain their original commits, hashes and behavior. Original failures and focused reruns are recorded separately; the full suite remains incomplete. Baseline Atlas8d32653e/tree876d7c8b, Review2e620c81, all anatomy/teaching/model/private/accepted-mask inputs, 71 items/eight optional ideas, statuses and acceptance criteria remain unchanged. Only REL-01 evidence advances; no clinical approval, patient registration, browser/GPU acceptance or public release is claimed."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 27,
+      "change": "56 exact-source spinal muscle X-ray drafts add family-specific bony orientation and explicit projection limitations. The locally imported source8d32653e/tree876d7c8b and normal Review binding are recorded with1505 source files; totals become9258 draft/639 pending/39 generated topic placements without changing anatomy, source models, accepted masks, 3D tours or independent access. All71 items/eight optional ideas, statuses, acceptance criteria and item evidence remain unchanged. Revision26 is frozen with its original assertions. Clinical approval, acquired muscle visibility, validated attachment mapping, patient registration, signed-in browser acceptance and public release are not claimed."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 26,
+      "change": "Bounded authored-tour CT/MRI/3D steps now offer explicit related lecture discovery and a validated exact-step return from published or unavailable lectures. Lecture access remains independent from Atlas access; stale or malformed source/context links refuse, and no scan, mask, registration or selection state is transferred. Local focused checks (89 passing cases), normal Review binding and production build are recorded separately; they do not establish signed-in browser acceptance, clinical approval, patient registration or public release. The Atlas4e9f5385/tree4a499452 source,1502 Review source files,9202 draft/695 pending/39 generated placements, all71 items/eight optional ideas, statuses, acceptance criteria and clinical holds remain unchanged. Revision25 is frozen with its original assertions; only Review binding identity and IMG-04 evidence advance."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 25,
+      "change": "Updated the locally imported Atlas baseline to exact source4e9f5385/tree4a499452 and Reviewfbd42e23 with1502 Review source files. Six source-bound cervical X-ray drafts shift9202 draft/695 pending while39 generated placements and the existing anatomical/topic scopes remain unchanged. A protected published-workbook archive/urgent-withdrawal routine adds an exact-version governed request, audit batch and preserved submitted evidence; this is partial STUDIO-04 progress. Correction/supersession, affected-link and notice policy, actual browser acceptance and owner release decisions remain open. All71 items/eight optional ideas, statuses, acceptance criteria, clinical holds and independent access gates remain unchanged. Historical revision24 assertions are frozen separately; no clinical approval or public release is claimed."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 24,
+      "change": "Advanced TEACH-11/STUDIO-02 to partial with a real local source-pinned PowerPoint quarantine lane: six decks/377 slides, all part hashes/order and whitespace-normalized slide/note XML text independently checked. Actual structured sources and four rights ledgers inspected read-only. Fracture70-to61 and spine91-to82 count differences are explained by static explicit producer filters; all143 retained titles/note prefixes align in order, without claiming complete body/visual fidelity or historical build invocation. No automatic title/asset/curriculum substitution, live import, rights/privacy/clinical approval, rendered fidelity or public release. Seventeen synthetic checks run:16pass/one actual Windows symlink creation skip, with separate ZIP-symlink/junction guards executed. IMG-04 is partial for the previous verified multi-pin head lecture links, not wider-body completion. Current unchanged-source Review8b17 binding is recorded; all71 items/8 optional ideas, original acceptance scope, clinical holds and separate access remain. Historical revision23 register and assertions retained independently."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 23,
+      "change": "Installed the source408759 wrist/foot teaching batch through four normal exports, normal protected Review import/bind/build and four actual coverage producers. Review8dd5e6e5 has1499 source files/46 viewer files/22 existing packages. All137 models/144 paths/199072480 canonical bytes, source holds, native scans/masks/private inputs and administrator-review access remain unchanged. Coverage167 inputs still split141 imported/26 source-only; only exact package metadata and provenance stamps advance. Fifty current-delivery,56 integrated teaching/access and373 regional cases pass (479 across three runs), plus TypeScript/Review/inventory/coverage checks. A staging comparison's omitted nested provenance stamps were diagnosed and narrowly checked, retaining the original failure, without weakening any application gate. Current test pins advance while exact historical graphs/hashes and ac714/9f mapping/content projections remain. Revision22 pending-source and21 integrated-source assertions stay hash-frozen. Production-build, preview and recovery results belong to the exact integration checkpoint. All71 items/eight optional ideas/statuses remain; no clinical approval, patient registration, new fees or public deployment."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 22,
+      "change": "Added four source-bound wrist/long-plantar X-ray orientation drafts at clean Atlas408759d5. Exact admission tests preserve9932 other placements and reject320 altered identities,20 stale/forged worksheets and12 stale/forged saves with zero storage calls. Types, content contract, body Review, earlier nasal MRI delivery, snapshots, summaries and production build pass. A staging receipt-name collision is recorded separately from the successful build and corrected without rerunning it or weakening source checks. Models/private inputs/accepted masks remain unchanged. The website baseline staysac714/Review4ef80039; candidate is explicitly not imported. Source-only GitHub backup and14-file restored recovery are verified. Revision21's exact imported-baseline assertions are retained in a hash-frozen fixture; current pending-source assertions are added. All71 roadmap items/eight optional ideas and their statuses remain unchanged."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 21,
+      "change": "My Learning adds a feature-detected native Navigation API guard for trusted, cancellable same-document Back/Forward moves to a different route/query. Dirty forms and in-flight saves can cancel before replacement; accepted, hash-only, clean, external/new-document, non-cancellable and unsupported moves retain normal handling. No sentinel history, router interception, browser storage, autosave or private-data writes. Existing link/unload safeguards and all71 item/eight idea statuses remain. Native-browser acceptance and universal SPA history protection are still unproven."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 20,
+      "change": "Imported verified ac714 runtimes, protected Review and refreshed coverage coherently into the canonical local website after explicit preview-restart authorization. Baseline records five new MRI drafts (9192 draft/705 pending) and1497 Review inputs; models, private packets, accepted masks and all71 item/eight idea statuses are preserved. Source-only recovery and focused checks remain distinct from full-release/browser/clinical approval. Original revision19 pending-source assertions retain a hash-pinned historical fixture."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 19,
+      "change": "Regional MRI/guide suite now passes373cases after source-bound readiness reconciliation. Original276draft/4pending assertions replay against complete immutable2fd70094 imported Atlas text graph and nine frozen original website adapters. Current9f separately proves280draft/0pending and exactly four popliteal artery/vein X-ray readiness transitions; borrowed epochs/revisions are refused. Four minimal binding fixtures are explicitly not original full manifests or a historical website/release proof. Source-only test fixture removes dependence on old staging/recovery paths. No application, teaching, model, mask, private, Review, access or source/import changes. Original failures remain; regional success is not full-release/browser/clinical acceptance. All71 items/eight optional ideas and statuses remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 18,
+      "change": "Added explicit native MRI guide Play/Pause and shared0.5-3x caption reading speeds to all five existing knee paths. Automatic steps require the current exact painted/visible accepted annotation and a unique accepted immediate next target; missing/ambiguous/deferred geometry pauses without substitution. Manual interaction, dirty corrections/source/errors, hidden/blur, speed/motion and unmount stop playback; no focus theft, score, completion, registration or approval is added. Wider regional run372 has371pass/one unchanged baseline readiness-fixture failure. A separate old posterior harness literal is exactly reconciled and its three behavior cases pass; original failures are retained. Tests/types/Review/build are bounded, not browser/full-release evidence. All71 items/eight optional ideas and all statuses remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 17,
+      "change": "Fixed Regional MRI practice terminal-answer races: correct/revealed feedback is synchronously latched before queued clicks or answer-overlay callbacks, with incorrect retries and committed source/activity ownership preserved. Studio assessment duration is now required only while active, retaining native range validation and disabled teaching/lecture inputs. Initial reproduction failures are retained; targeted tests/types/Review verification/build pass, not physical-browser/full-suite/clinical/release acceptance. No scans, masks, real decisions, API/database/access or source/module import changes. All71 items/eight optional ideas and their statuses remain; existing large-chunk warnings and independent release gates stay open."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 16,
+      "change": "Added portable metadata-only producers and replayed all four actual coverage inventories at clean ac714061. Counts, source holds, frames, target groups and reference classifications are exact; all166 existing dependencies remain, with package.json newly recorded for ESM interpretation (167 total,141 imported/26 source-only). Canonical website9f snapshots/view bindings remain unchanged pending coordinated import. Initial legacy working-directory failure is retained and corrected in an isolated restoring wrapper.36 targeted cases, actual r2 replay/reconciliation and unchanged Review verification pass; no full-suite/browser/clinical/publication result inferred. All71 items/eight optional ideas and their statuses are preserved."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 15,
+      "change": "Canonical Atlas summaries were regenerated and verified at clean ac714061: five nasal MRI placements move pending to draft; no geometry, acquired image, clinical approval or registration change. BASE-02 now verified-local. The website baseline remains9f, distinct from the pending source candidate. Four normal runtime exports are staged with unchanged model bytes; import awaits the local preview restart answer. Three immutable Git-only test locators are separated from unchanged current-HEAD gates; six new checks/types/Review verification pass. All71 items/eight optional ideas and all other item statuses remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 14,
+      "change": "Added My Learning guards for unsaved mounted note/revision forms and in-flight saves on ordinary in-app page links and native unload. Same-page anchors/new tabs/downloads remain usable; one confirmed immediate unload avoids a duplicate warning and its permission expires. Clean forms remove the unload listener; input/change and save lifecycle refresh live state without autosave/browser storage. Integrated59 handler/SSR/event tests pass, including actual component/ref/effect wiring. Arbitrary imperative router transitions, SPA Back/Forward and physical-browser acceptance remain open. Separately staged five source-bound nasal-cartilage MRI proposals; their wrapper-only candidate checks are not canonical resolver integration, new acquired imaging or clinical approval. V1 MRI was already draft, so no replacement was authored. All71 items/8 optional ideas and existing statuses remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 13,
+      "change": "Fixed actual My Learning save races: note/revision saves reset only the exact submitted draft, preserve edits made during the request with an explicit unsaved message, and synchronously reject duplicate note/revision/complete-review submissions. Malformed success envelopes or render-invalid records retain drafts and the prior portfolio; deliberate retry is available after failure. Original component fails7 of13 targeted cases; corrected combined53 cases pass, including existing form/navigation contracts. No autosave/browser storage, API/authorization change, live personal record mutation or clinical decision occurs. This bounded fix does not claim full unsaved-navigation protection or physical-browser acceptance; all71 roadmap items/8 optional ideas and their statuses remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 12,
+      "change": "Reconciled current regional discovery against complete saved Atlas tour graphs: original47/282 and portal-era48/290 remain independently exercised; current51/309 includes three added tours/16 stops and a separately revised lower-venous tour/three extra stops. All unaffected authored tours remain exact, current source/pins match9f, and changed-source/metadata/URL refusals remain. The regional reference index has35 rows/280 draft topics; four exact bilateral popliteal X-ray topics changed pending to draft at immutable source identities. The original276/4 website assertion and247-case receipt are archived, not claimed as a fresh historical full-website replay. Fresh25-case current/UI verification passes after a retained citation-format harness diagnostic. All71 roadmap items/8 optional ideas and existing statuses stay; no full-suite, clinical, browser or deployment pass."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 11,
+      "change": "Integrated coherent whole-epoch thoracic quiz/core test repairs and two exact CT sequence-list updates. Five historical cases pass with all transition/refusal assertions;43 current/head/lecture cases pass freshly after correcting a new harness to follow reachable reasoning modules. These48 distinct passes are from separate source-bound receipts, not a fresh48-case combined run. Original47/48 diagnostic and full baseline174 failures/2 skips remain. Current27 thoracic quiz slots and five core selections are checked for exact identity, draft packets, grading and reachable emitted content. No clinical, complete-suite, browser, deployment or acquired-image claim; all71 roadmap items/8 optional ideas and existing statuses remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 10,
+      "change": "Added an authorized read-only Anatomy coverage and gaps page, reachable from secondary Clinical Review workflows. Region filtering applies only to documented targets; root, nested, independent and shoulder counts stay separate/all-region. Exact snapshot and imported-source identities fail closed; source-only metadata and original-mesh verification limits are disclosed. Normal Review rebinding does not read, migrate or invent clinical decisions. All71 items/8 optional ideas, ANAT-01 partial and existing owner/release gates remain. The separately passed5-case thoracic candidate remains staged, not integrated."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 9,
+      "change": "Integrated hand/foot Ultrasound historical/current delivery repairs and the head compact-comparison harness repair. Two focused runs pass29 distinct cases across5 entries, with original immutable admission, geometry, emitted-teaching and refusal assertions retained. The MRI Review page test needs no additional change and passes14 authorization/independent-packet cases. Original full baseline remains174 failures/2 skips; no new full-suite or browser pass is inferred. REL-01 stays partial; all71 roadmap items/8 optional ideas and owner gates remain."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 8,
+      "change": "Integrated four exact-source coverage inventories into repository-owned documentation and a no-overwrite/read-only checker with166 committed-and-working dependency checks. Root/nested/independent/shoulder and reference-file units remain separate. ANAT-01 is partial because the expected curriculum is not exhaustive; ANAT-17 is verified only for current source-metadata reconciliation of all441 differences, not original OBJ, clinical or geometry acceptance. All71 items and8 optional ideas remain; release regression work continues independently."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 7,
+      "change": "The normal test command now inventories and runs both TS and mjs entries with stable-input/process receipts, explicit case counts and separate unskipped-coverage claims. Synthetic fixtures stay ignored; private exclusions are case-insensitive. Twenty-one baseline-failed entry fixtures now preserve historical proofs and verify current9f bindings, covering navigation/tours and selected regional anatomy. The source-bound integrated batch passes71 cases across22 entries; the complete suite is not rerun or claimed green. The two original platform skips are identified as unavailable Windows symlink privileges. REL-01 remains partial; runtime, anatomy, privacy, clinical and release gates are not weakened."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 6,
+      "change": "Added six separate source-bound facial educational review streams and lazy worksheet forms, surfaced as two compact clinical inbox groups. All three newest exact-kind records are required for group acceptance; stale, partial, corrupt and unavailable evidence cannot become approval. Existing account/institution, CSRF, body-size and atomic expected-version guards are retained, with working-copy and uncertain-save protections. No real owner decisions were read or written, no broad clinical/publication/registration approval is claimed, and learner Draft labels remain. TEACH-10 stays needs-owner; IDEA-04 and REL-01 remain partial pending their separate full-scope acceptance criteria."
+    },
+    {
+      "date": "2026-10-16",
+      "revision": 5,
+      "change": "Integrated three source-bound facial CT/generic-3D teaching and question drafts with an independently verified clinical packet and authorized read-only Review evidence. Neutral container headings no longer imply Draft while notes are unavailable; actual resource disclosures remain. Existing39 notes,42 semantic links and six CT-bone packets are preserved. No MRI fallback or spatial/clinical approval is invented. The frozen720-entry baseline is terminal (3036 pass,174 fail,2 skip); original failures and targeted harness repairs remain source-bound, and REL-01 and IDEA-01 stay partial. New native notes do not complete pending root-body modality placements, independent packet decision authoring, browser acceptance or release."
+    },
+    {
+      "date": "2026-10-15",
+      "revision": 4,
+      "change": "Implemented the owner-requested first linked-learning UI milestone: a compact head-structure learning area across existing 3D and CT/MRI, honest draft/unavailable labels and a separate access/review key, plus canonical saved-course/resume links and distinct My Learning notes/revision/completion sections. Missing reference teaching and unversioned scan positions are not substituted. IDEAs01/02/04 remain partial: wider-body/US/X-ray resources, source-bound review-state delivery and unified weak-topic/bookmark aggregation remain. Focused software checks do not imply browser, clinical or release approval."
+    },
+    {
+      "date": "2026-10-15",
+      "revision": 3,
+      "change": "Continued candidate-bound release assurance across airway/hepatic, coronary, cranial, cricothyroid, eye, foot/cerebral, femoral and compact-study fixtures. Historical whole-graph/source/notice proofs remain separate from current delivery; current resolver and Review agree on all 28 tested foot/cerebral placements. No full-suite, browser, clinical or public-release pass is inferred. A concrete learner-navigation follow-up is recorded separately without inventing unversioned CT/MRI slice restoration."
+    },
+    {
+      "date": "2026-10-15",
+      "revision": 2,
+      "change": "Release assurance advanced: repaired historical/live fixture boundaries in fourteen test entry files, retained exact milestone hashes and current import identity checks, and strengthened carpal notice refusal/transition coverage. Focused combined checks and source-only recovery have separate receipts; a full-suite, browser or release pass is not claimed. Eight optional completeness ideas and all owner-review requirements remain unchanged."
+    },
+    {
+      "date": "2026-10-15",
+      "revision": 1,
+      "change": "Created source-recomputed baseline, full-roadmap checklist, owner input queue and optional product ideas. No clinical approval, private decision count or public completion inferred."
+    }
+  ]
+}

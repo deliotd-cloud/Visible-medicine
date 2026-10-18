@@ -1,0 +1,6024 @@
+{
+  "sourceCommit": "4a9a5d5a5b444522b4acd2586f71b17a42d69672",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "structures": 2
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "thorax-skeleton",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "bytes": 3099336,
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "structures": 24
+    },
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "spine-muscles",
+      "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+      "bytes": 5127960,
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "structures": 52
+    },
+    {
+      "id": "thorax-muscles",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "bytes": 14990372,
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "structures": 8
+    },
+    {
+      "id": "abdomen-muscles",
+      "url": "/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "bytes": 4031580,
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+      "structures": 2
+    },
+    {
+      "id": "spine-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "bytes": 804760,
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+      "structures": 6
+    },
+    {
+      "id": "thorax-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "bytes": 314224,
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "structures": 2
+    },
+    {
+      "id": "thorax-skeleton-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "bytes": 149456,
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "structures": 3
+    },
+    {
+      "id": "thorax-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "bytes": 289716,
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "structures": 14
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.4487199783325195,
+          -0.4784698486328125,
+          -0.4888122081756592
+        ],
+        "max": [
+          -0.0279029980301857,
+          1.5786901712417603,
+          0.8901899456977844
+        ]
+      },
+      "center": [
+        -0.7383114881813526,
+        0.5501101613044739,
+        0.20068886876106262
+      ],
+      "anchor": [
+        -0.6408339738845825,
+        0.5218298435211182,
+        0.20818497240543365
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3152",
+          "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+      "fmaId": "FMA10037",
+      "name": "Tenth thoracic vertebra",
+      "sourceName": "tenth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10037",
+      "bounds": {
+        "min": [
+          -0.3365679979324341,
+          2.9977002143859863,
+          -0.4217749834060669
+        ],
+        "max": [
+          0.32245200872421265,
+          3.5713000297546387,
+          0.34057798981666565
+        ]
+      },
+      "center": [
+        -0.007057994604110718,
+        3.2845001220703125,
+        -0.04059849679470062
+      ],
+      "anchor": [
+        0.01980530098080635,
+        3.304799795150757,
+        -0.0009249877766706049
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3154",
+          "sha256": "abf073c0206696c3baa5cb389831b28a6ce2c6770091065e834b8e4ef50676b1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+      "fmaId": "FMA10059",
+      "name": "Eleventh thoracic vertebra",
+      "sourceName": "eleventh thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10059",
+      "bounds": {
+        "min": [
+          -0.26760998368263245,
+          2.757199764251709,
+          -0.3699110150337219
+        ],
+        "max": [
+          0.2555930018424988,
+          3.2927002906799316,
+          0.425324022769928
+        ]
+      },
+      "center": [
+        -0.0060084909200668335,
+        3.0249500274658203,
+        0.027706503868103027
+      ],
+      "anchor": [
+        -0.00616680970415473,
+        2.9952001571655273,
+        0.09152599424123764
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3155",
+          "sha256": "1f9c9f6dfcd5585e09abc2cf9a8f54ba1c33df399c6d4dad1a92301d85cd88b3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+      "fmaId": "FMA10081",
+      "name": "Twelfth thoracic vertebra",
+      "sourceName": "twelfth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10081",
+      "bounds": {
+        "min": [
+          -0.22386400401592255,
+          2.4995996952056885,
+          -0.2743909955024719
+        ],
+        "max": [
+          0.21054799854755402,
+          3.015899658203125,
+          0.5138500332832336
+        ]
+      },
+      "center": [
+        -0.006658002734184265,
+        2.7577496767044067,
+        0.11972951889038086
+      ],
+      "anchor": [
+        0.007555339951068163,
+        2.76680064201355,
+        0.16926902532577515
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3156",
+          "sha256": "ffeebd0dead6ed95395e35c0843888b079acf67543e2820437e99978c69642a0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+      "fmaId": "FMA13072",
+      "name": "First lumbar vertebra",
+      "sourceName": "first lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13072",
+      "bounds": {
+        "min": [
+          -0.3577980101108551,
+          2.1520001888275146,
+          -0.2077759951353073
+        ],
+        "max": [
+          0.3446139991283417,
+          2.719799757003784,
+          0.5948000550270081
+        ]
+      },
+      "center": [
+        -0.006592005491256714,
+        2.4358999729156494,
+        0.19351202994585037
+      ],
+      "anchor": [
+        0.004260269924998283,
+        2.477099657058716,
+        0.2578299641609192
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3157",
+          "sha256": "67940f16382935851ebeb7a86c926dbf922070f390c438fdbbb56f7b7fb76057"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-thoracic-vertebra",
+      "fmaId": "FMA9165",
+      "name": "First thoracic vertebra",
+      "sourceName": "first thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9165",
+      "bounds": {
+        "min": [
+          -0.37382999062538147,
+          5.4721999168396,
+          -0.329133003950119
+        ],
+        "max": [
+          0.35916197299957275,
+          5.769000053405762,
+          0.3687190115451813
+        ]
+      },
+      "center": [
+        -0.007334008812904358,
+        5.620599985122681,
+        0.019793003797531128
+      ],
+      "anchor": [
+        0.021189598366618156,
+        5.618599891662598,
+        0.026789017021656036
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3158",
+          "sha256": "aa69c48def3434d6a3e1c56fc78af45f01545931fde5422af17d5f98ce9ed8a3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+      "fmaId": "FMA13073",
+      "name": "Second lumbar vertebra",
+      "sourceName": "second lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13073",
+      "bounds": {
+        "min": [
+          -0.4035089910030365,
+          1.9231598377227783,
+          -0.15651199221611023
+        ],
+        "max": [
+          0.3906079828739166,
+          2.3976001739501953,
+          0.6471999883651733
+        ]
+      },
+      "center": [
+        -0.0064505040645599365,
+        2.160380005836487,
+        0.24534399807453156
+      ],
+      "anchor": [
+        -0.04304170235991478,
+        2.146899938583374,
+        0.3003379702568054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3159",
+          "sha256": "5e6301d2020ba73167e71c274848ddcbec0f7936d9f26a78f2de8ffa82f095c7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+      "fmaId": "FMA9187",
+      "name": "Second thoracic vertebra",
+      "sourceName": "second thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9187",
+      "bounds": {
+        "min": [
+          -0.3592210114002228,
+          5.265899658203125,
+          -0.37879499793052673
+        ],
+        "max": [
+          0.3457840085029602,
+          5.603600025177002,
+          0.3267579674720764
+        ]
+      },
+      "center": [
+        -0.006718501448631287,
+        5.4347498416900635,
+        -0.02601851522922516
+      ],
+      "anchor": [
+        0.020678000524640083,
+        5.457199573516846,
+        -0.02256900817155838
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3160",
+          "sha256": "20c1322be138314f42bbd1be3e69f3f6b590bbca7a8a3cd3414476f207721300"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+      "fmaId": "FMA13074",
+      "name": "Third lumbar vertebra",
+      "sourceName": "third lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13074",
+      "bounds": {
+        "min": [
+          -0.40202900767326355,
+          1.6769299507141113,
+          -0.20486000180244446
+        ],
+        "max": [
+          0.3884100019931793,
+          2.097299814224243,
+          0.653529942035675
+        ]
+      },
+      "center": [
+        -0.006809502840042114,
+        1.8871148824691772,
+        0.2243349701166153
+      ],
+      "anchor": [
+        -0.006866959854960442,
+        1.9032598733901978,
+        0.2972889840602875
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3162",
+          "sha256": "aa58bbebf75e858d5258926b3f85ef6bc27f765464e87bfc828baf24156bf155"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+      "fmaId": "FMA9209",
+      "name": "Third thoracic vertebra",
+      "sourceName": "third thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9209",
+      "bounds": {
+        "min": [
+          -0.32966098189353943,
+          5.022299766540527,
+          -0.4863989055156708
+        ],
+        "max": [
+          0.3184089958667755,
+          5.418499946594238,
+          0.2673629820346832
+        ]
+      },
+      "center": [
+        -0.005625993013381958,
+        5.220399856567383,
+        -0.10951796174049377
+      ],
+      "anchor": [
+        -0.0007605130085721612,
+        5.221899509429932,
+        -0.1273920089006424
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3163",
+          "sha256": "3080ed603c54120fa5201816d77695354c81ea57275c599e68543bfb6ecb89c1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+      "fmaId": "FMA9248",
+      "name": "Fourth thoracic vertebra",
+      "sourceName": "fourth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9248",
+      "bounds": {
+        "min": [
+          -0.35461699962615967,
+          4.777400016784668,
+          -0.49802103638648987
+        ],
+        "max": [
+          0.34282001852989197,
+          5.214100360870361,
+          0.19604896008968353
+        ]
+      },
+      "center": [
+        -0.00589849054813385,
+        4.995750188827515,
+        -0.15098603814840317
+      ],
+      "anchor": [
+        -0.03037009947001934,
+        5.010699272155762,
+        -0.2006720006465912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3166",
+          "sha256": "cbd60a450a8b2f3ee90ccc655f79a63b090d8a3abf5e6849cf288a7b2d4207f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+      "fmaId": "FMA9922",
+      "name": "Fifth thoracic vertebra",
+      "sourceName": "fifth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9922",
+      "bounds": {
+        "min": [
+          -0.36151501536369324,
+          4.397700309753418,
+          -0.500185489654541
+        ],
+        "max": [
+          0.3488970100879669,
+          4.972700119018555,
+          0.16009002923965454
+        ]
+      },
+      "center": [
+        -0.006309002637863159,
+        4.685200214385986,
+        -0.17004773020744324
+      ],
+      "anchor": [
+        -0.014510600827634335,
+        4.655699253082275,
+        -0.10752899199724197
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3169",
+          "sha256": "20c3b1dfed3a2ac5e631838ae924379672dac2047186711cfaa819b9a1db6e5b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+      "fmaId": "FMA12524",
+      "name": "Sixth cervical vertebra",
+      "sourceName": "sixth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12524",
+      "bounds": {
+        "min": [
+          -0.31265199184417725,
+          5.815899848937988,
+          -0.20820599794387817
+        ],
+        "max": [
+          0.2994770109653473,
+          6.047399997711182,
+          0.4167099893093109
+        ]
+      },
+      "center": [
+        -0.006587490439414978,
+        5.931649923324585,
+        0.10425199568271637
+      ],
+      "anchor": [
+        -0.02192229963839054,
+        5.937199592590332,
+        0.12316200137138367
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3170",
+          "sha256": "ac100888f7e271851c138e8d41a52168070e4fe5c63e8876a4bcfba08f3b59aa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+      "fmaId": "FMA9945",
+      "name": "Sixth thoracic vertebra",
+      "sourceName": "sixth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9945",
+      "bounds": {
+        "min": [
+          -0.3642269968986511,
+          4.093800067901611,
+          -0.48807570338249207
+        ],
+        "max": [
+          0.35033902525901794,
+          4.690799713134766,
+          0.15220901370048523
+        ]
+      },
+      "center": [
+        -0.006943985819816589,
+        4.3922998905181885,
+        -0.16793334484100342
+      ],
+      "anchor": [
+        -0.02785330079495907,
+        4.395999908447266,
+        -0.13166698813438416
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3171",
+          "sha256": "ebee2a07751de0aa0b33974eea0a9228fed9980f740c619776003d5a38c370c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+      "fmaId": "FMA12525",
+      "name": "Seventh cervical vertebra",
+      "sourceName": "seventh cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12525",
+      "bounds": {
+        "min": [
+          -0.33229300379753113,
+          5.647099494934082,
+          -0.28733599185943604
+        ],
+        "max": [
+          0.31931599974632263,
+          5.918399810791016,
+          0.40031898021698
+        ]
+      },
+      "center": [
+        -0.006488502025604248,
+        5.782749652862549,
+        0.05649149417877197
+      ],
+      "anchor": [
+        -0.008737760595977306,
+        5.774100303649902,
+        0.07046298682689667
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3172",
+          "sha256": "43bc0a1f9b3adffd5f45256b61f75affa15b56c85b387fa733b59de310216104"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+      "fmaId": "FMA9968",
+      "name": "Seventh thoracic vertebra",
+      "sourceName": "seventh thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9968",
+      "bounds": {
+        "min": [
+          -0.37226298451423645,
+          3.7930004596710205,
+          -0.49328505992889404
+        ],
+        "max": [
+          0.36320599913597107,
+          4.4180006980896,
+          0.1697920262813568
+        ]
+      },
+      "center": [
+        -0.00452849268913269,
+        4.10550057888031,
+        -0.16174651682376862
+      ],
+      "anchor": [
+        0.011212799698114395,
+        4.104100227355957,
+        -0.1311119794845581
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3173",
+          "sha256": "3b66eb6444bc7b6ced9e32eacf2518861531b1296eff0e24db41a85bfdbaff66"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+      "fmaId": "FMA9991",
+      "name": "Eighth thoracic vertebra",
+      "sourceName": "eighth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9991",
+      "bounds": {
+        "min": [
+          -0.33659401535987854,
+          3.5374999046325684,
+          -0.49068203568458557
+        ],
+        "max": [
+          0.32152697443962097,
+          4.130500316619873,
+          0.22027602791786194
+        ]
+      },
+      "center": [
+        -0.007533520460128784,
+        3.8340001106262207,
+        -0.13520300388336182
+      ],
+      "anchor": [
+        0.01775220036506653,
+        3.8291003704071045,
+        -0.09381000697612762
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3174",
+          "sha256": "531253894a89d60c78a5235bfba826e0c30c21003267258fe1fca244d9090c1a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+      "fmaId": "FMA10014",
+      "name": "Ninth thoracic vertebra",
+      "sourceName": "ninth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA10014",
+      "bounds": {
+        "min": [
+          -0.34394797682762146,
+          3.2662999629974365,
+          -0.43843939900398254
+        ],
+        "max": [
+          0.3299800157546997,
+          3.8483996391296387,
+          0.2765290141105652
+        ]
+      },
+      "center": [
+        -0.0069839805364608765,
+        3.5573498010635376,
+        -0.08095519244670868
+      ],
+      "anchor": [
+        -0.013477400876581669,
+        3.556800603866577,
+        -0.04484100267291069
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3175",
+          "sha256": "34bd592e9f0282eea561a680697beeac655584ca9e4db9232b013535c57e7e61"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-tenth-rib",
+      "fmaId": "FMA8472",
+      "name": "Left tenth rib",
+      "sourceName": "left tenth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8472",
+      "bounds": {
+        "min": [
+          0.15562300384044647,
+          2.229600191116333,
+          -0.3864549994468689
+        ],
+        "max": [
+          1.2234899997711182,
+          3.589900016784668,
+          0.6771499514579773
+        ]
+      },
+      "center": [
+        0.6895565018057823,
+        2.9097501039505005,
+        0.1453474760055542
+      ],
+      "anchor": [
+        0.9518749713897705,
+        2.8363001346588135,
+        -0.10752800107002258
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3225",
+          "sha256": "40680b5a3556b5984a5006e01649ff20cb4c88d9d3a7fef79cbad0648a972d54"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-eleventh-rib",
+      "fmaId": "FMA8532",
+      "name": "Left eleventh rib",
+      "sourceName": "left eleventh rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8532",
+      "bounds": {
+        "min": [
+          0.16279000043869019,
+          2.0806000232696533,
+          -0.32038602232933044
+        ],
+        "max": [
+          1.100540041923523,
+          3.217399835586548,
+          0.46011704206466675
+        ]
+      },
+      "center": [
+        0.6316650211811066,
+        2.6489999294281006,
+        0.06986550986766815
+      ],
+      "anchor": [
+        0.7776450514793396,
+        2.625699520111084,
+        -0.13514301180839539
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3226",
+          "sha256": "24a27d42732af55ad1e7142179f2dd4f906de78b701fbe5c459d8884a026f250"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-twelfth-rib",
+      "fmaId": "FMA8534",
+      "name": "Left twelfth rib",
+      "sourceName": "left twelfth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8534",
+      "bounds": {
+        "min": [
+          0.16890300810337067,
+          2.113300085067749,
+          -0.21985100209712982
+        ],
+        "max": [
+          0.8522109985351562,
+          2.8916003704071045,
+          0.16069801151752472
+        ]
+      },
+      "center": [
+        0.5105570033192635,
+        2.5024502277374268,
+        -0.02957649528980255
+      ],
+      "anchor": [
+        0.52183997631073,
+        2.5350000858306885,
+        -0.15521599352359772
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3227",
+          "sha256": "3b7e5d6673a1be5bc14d72a4ea659d361b143f3fda5bca3ec758c176daba16c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-first-rib",
+      "fmaId": "FMA7987",
+      "name": "Left first rib",
+      "sourceName": "left first rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA7987",
+      "bounds": {
+        "min": [
+          0.13800400495529175,
+          5.100699424743652,
+          0.14417000114917755
+        ],
+        "max": [
+          0.6845459938049316,
+          5.704799652099609,
+          0.8041999936103821
+        ]
+      },
+      "center": [
+        0.4112749993801117,
+        5.402749538421631,
+        0.4741849973797798
+      ],
+      "anchor": [
+        0.4796390235424042,
+        5.390899658203125,
+        0.4744270443916321
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3228",
+          "sha256": "803a7134c1e69f640b87f9c6c4a846c869379446e771a1a7c9d18914c331a603"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-second-rib",
+      "fmaId": "FMA8012",
+      "name": "Left second rib",
+      "sourceName": "left second rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8012",
+      "bounds": {
+        "min": [
+          0.14734899997711182,
+          4.735100269317627,
+          0.006468010134994984
+        ],
+        "max": [
+          0.9566100239753723,
+          5.5903000831604,
+          1.1712700128555298
+        ]
+      },
+      "center": [
+        0.5519795119762421,
+        5.162700176239014,
+        0.5888690114952624
+      ],
+      "anchor": [
+        0.776419997215271,
+        5.156099796295166,
+        0.5740500092506409
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3229",
+          "sha256": "631b4f63625fa6cc89ad83961b2156abe5878d1baf4a8cb2b2acbaa06bc97f58"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-third-rib",
+      "fmaId": "FMA8039",
+      "name": "Left third rib",
+      "sourceName": "left third rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8039",
+      "bounds": {
+        "min": [
+          0.12724299728870392,
+          4.438399791717529,
+          -0.1314210146665573
+        ],
+        "max": [
+          1.0763300657272339,
+          5.359799861907959,
+          1.2925699949264526
+        ]
+      },
+      "center": [
+        0.6017865315079689,
+        4.899099826812744,
+        0.5805744901299477
+      ],
+      "anchor": [
+        0.9256739616394043,
+        4.843699932098389,
+        0.6640499830245972
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3230",
+          "sha256": "8c097e93d79c610bed49d6c027d25c8439447c20bfb94fa64009b9c4db4d8f5b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-fourth-rib",
+      "fmaId": "FMA8148",
+      "name": "Left fourth rib",
+      "sourceName": "left fourth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8148",
+      "bounds": {
+        "min": [
+          0.12905699014663696,
+          4.110999584197998,
+          -0.26808100938796997
+        ],
+        "max": [
+          1.16280996799469,
+          5.153499603271484,
+          1.421950101852417
+        ]
+      },
+      "center": [
+        0.6459334790706635,
+        4.632249593734741,
+        0.5769345462322235
+      ],
+      "anchor": [
+        1.0450299978256226,
+        4.562399864196777,
+        0.6417400240898132
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3231",
+          "sha256": "c1259fcdaf463bdecfc0868a3acc964edd4901ab03eb539b28e40462671be1fb"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-fifth-rib",
+      "fmaId": "FMA8093",
+      "name": "Left fifth rib",
+      "sourceName": "left fifth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8093",
+      "bounds": {
+        "min": [
+          0.14004500210285187,
+          3.721700429916382,
+          -0.3727729916572571
+        ],
+        "max": [
+          1.2576799392700195,
+          4.913199424743652,
+          1.4768800735473633
+        ]
+      },
+      "center": [
+        0.6988624706864357,
+        4.317449927330017,
+        0.5520535409450531
+      ],
+      "anchor": [
+        1.1751699447631836,
+        4.269399642944336,
+        0.497590035200119
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3232",
+          "sha256": "c40bbcd5c2b98bb94161819a2cf824296289ce68eb62b37f3b175af4aadfd351"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-sixth-rib",
+      "fmaId": "FMA8202",
+      "name": "Left sixth rib",
+      "sourceName": "left sixth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8202",
+      "bounds": {
+        "min": [
+          0.12775400280952454,
+          3.379000186920166,
+          -0.4635559916496277
+        ],
+        "max": [
+          1.3305400609970093,
+          4.668299674987793,
+          1.4349499940872192
+        ]
+      },
+      "center": [
+        0.7291470319032669,
+        4.0236499309539795,
+        0.4856970012187958
+      ],
+      "anchor": [
+        1.2345200777053833,
+        3.9756994247436523,
+        0.38294196128845215
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3233",
+          "sha256": "8160b28fd649aadd705a05cc3e6e9cfd7035c44d8258b5a50977ec89fe8e7414"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-seventh-rib",
+      "fmaId": "FMA8256",
+      "name": "Left seventh rib",
+      "sourceName": "left seventh rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8256",
+      "bounds": {
+        "min": [
+          0.12382499873638153,
+          3.0518994331359863,
+          -0.4550204873085022
+        ],
+        "max": [
+          1.3577799797058105,
+          4.402500152587891,
+          1.3020799160003662
+        ]
+      },
+      "center": [
+        0.740802489221096,
+        3.7271997928619385,
+        0.423529714345932
+      ],
+      "anchor": [
+        1.2197099924087524,
+        3.663900136947632,
+        0.24580703675746918
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3234",
+          "sha256": "372c650b2b7bc3f6767aa50a0f5b7e5dac6a15a17aeea5f5017166ba5d328757"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-eighth-rib",
+      "fmaId": "FMA8310",
+      "name": "Left eighth rib",
+      "sourceName": "left eighth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8310",
+      "bounds": {
+        "min": [
+          0.12370400130748749,
+          2.746500253677368,
+          -0.4543043076992035
+        ],
+        "max": [
+          1.3163800239562988,
+          4.113199234008789,
+          1.1267499923706055
+        ]
+      },
+      "center": [
+        0.7200420126318932,
+        3.4298497438430786,
+        0.336222842335701
+      ],
+      "anchor": [
+        1.1274700164794922,
+        3.384899854660034,
+        0.1280360072851181
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3235",
+          "sha256": "7d9525200958a9545391a2e135649580282108d77f7ae88a34003a56f48f4c8b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:bone:left-ninth-rib",
+      "fmaId": "FMA8391",
+      "name": "Left ninth rib",
+      "sourceName": "left ninth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8391",
+      "bounds": {
+        "min": [
+          0.14558200538158417,
+          2.50089955329895,
+          -0.42472338676452637
+        ],
+        "max": [
+          1.2778300046920776,
+          3.853599786758423,
+          0.8560200333595276
+        ]
+      },
+      "center": [
+        0.7117060050368309,
+        3.1772496700286865,
+        0.2156483232975006
+      ],
+      "anchor": [
+        1.0497000217437744,
+        3.137399911880493,
+        -0.035365983843803406
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3236",
+          "sha256": "ec09e201beaaa70c24a41eedcef4671118b453361f827be02fb73fc361208db8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+      "fmaId": "FMA13323",
+      "name": "Left clavicle",
+      "sourceName": "left clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13323",
+      "bounds": {
+        "min": [
+          0.08378729969263077,
+          5.085300445556641,
+          0.04387500882148743
+        ],
+        "max": [
+          1.4394199848175049,
+          5.551800727844238,
+          0.9707800149917603
+        ]
+      },
+      "center": [
+        0.7616036422550678,
+        5.3185505867004395,
+        0.5073275119066238
+      ],
+      "anchor": [
+        0.7759079933166504,
+        5.351099967956543,
+        0.5148699879646301
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3237",
+          "sha256": "2491009d53eaed99ccb2a802b29402eec715eb8d207fb819fad67b0720195cf2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.400730013847351,
+          2.292099714279175,
+          0.010559005662798882
+        ],
+        "max": [
+          2.407599925994873,
+          5.365200042724609,
+          0.5022899508476257
+        ]
+      },
+      "center": [
+        1.904164969921112,
+        3.828649878501892,
+        0.2564244782552123
+      ],
+      "anchor": [
+        1.8882200717926025,
+        3.8617005348205566,
+        0.25274598598480225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3262",
+          "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "sourceName": "left scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13396",
+      "bounds": {
+        "min": [
+          0.5706140398979187,
+          3.8394994735717773,
+          -0.5507640242576599
+        ],
+        "max": [
+          1.6646400690078735,
+          5.498600006103516,
+          0.5284500122070312
+        ]
+      },
+      "center": [
+        1.1176270544528961,
+        4.6690497398376465,
+        -0.011157006025314331
+      ],
+      "anchor": [
+        1.2024999856948853,
+        4.69379997253418,
+        -0.04868198558688164
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3279",
+          "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+      "fmaId": "FMA16587",
+      "name": "Left hip bone",
+      "sourceName": "left hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16587",
+      "bounds": {
+        "min": [
+          0.02750309929251671,
+          -0.480490118265152,
+          -0.4868505895137787
+        ],
+        "max": [
+          1.4475399255752563,
+          1.5809003114700317,
+          0.8909500241279602
+        ]
+      },
+      "center": [
+        0.7375215124338865,
+        0.5502050966024399,
+        0.20204971730709076
+      ],
+      "anchor": [
+        0.6407599449157715,
+        0.5112402439117432,
+        0.24853698909282684
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3288",
+          "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+      "fmaId": "FMA52735",
+      "name": "Occipital bone",
+      "sourceName": "occipital bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA52735",
+      "bounds": {
+        "min": [
+          -0.6196119785308838,
+          6.777700424194336,
+          -0.6800100207328796
+        ],
+        "max": [
+          0.6070529818534851,
+          7.845099925994873,
+          0.5095899701118469
+        ]
+      },
+      "center": [
+        -0.006279498338699341,
+        7.3114001750946045,
+        -0.08521002531051636
+      ],
+      "anchor": [
+        -0.011581499129533768,
+        7.092199802398682,
+        -0.3996880054473877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3309",
+          "sha256": "c0262a08591e48504c8a53302525377e0c4ad1c165456475f3bb80aab6202d44"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-tenth-rib",
+      "fmaId": "FMA8445",
+      "name": "Right tenth rib",
+      "sourceName": "right tenth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8445",
+      "bounds": {
+        "min": [
+          -1.2364799976348877,
+          2.229799747467041,
+          -0.3864070177078247
+        ],
+        "max": [
+          -0.1687290072441101,
+          3.5897998809814453,
+          0.6768699884414673
+        ]
+      },
+      "center": [
+        -0.7026045024394989,
+        2.909799814224243,
+        0.1452314853668213
+      ],
+      "anchor": [
+        -0.9602710008621216,
+        2.840200185775757,
+        -0.11326000094413757
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3330",
+          "sha256": "9e62a17a2ea9dc16797beec97bd0925c9692c2a4764391cbc1e289b0120e7aa4"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-eleventh-rib",
+      "fmaId": "FMA8531",
+      "name": "Right eleventh rib",
+      "sourceName": "right eleventh rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8531",
+      "bounds": {
+        "min": [
+          -1.113529920578003,
+          2.0808000564575195,
+          -0.32038000226020813
+        ],
+        "max": [
+          -0.17596299946308136,
+          3.217299699783325,
+          0.4601830244064331
+        ]
+      },
+      "center": [
+        -0.6447464600205421,
+        2.6490498781204224,
+        0.06990151107311249
+      ],
+      "anchor": [
+        -0.7979129552841187,
+        2.6135997772216797,
+        -0.12724898755550385
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3331",
+          "sha256": "1fdce776ea65919bf9aa418ec91c872b3eb835daca57dc69a7caa40bb02707d7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-twelfth-rib",
+      "fmaId": "FMA8533",
+      "name": "Right twelfth rib",
+      "sourceName": "right twelfth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8533",
+      "bounds": {
+        "min": [
+          -0.8653320074081421,
+          2.1134002208709717,
+          -0.2200779914855957
+        ],
+        "max": [
+          -0.1821250021457672,
+          2.891700506210327,
+          0.1609729826450348
+        ]
+      },
+      "center": [
+        -0.5237285047769547,
+        2.5025503635406494,
+        -0.029552504420280457
+      ],
+      "anchor": [
+        -0.5283739566802979,
+        2.5560998916625977,
+        -0.14640399813652039
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3332",
+          "sha256": "50dd4dac4ebb45fa245d700f7ceac89edd7503cb4caab154b644b0a808da2ecc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-first-rib",
+      "fmaId": "FMA7857",
+      "name": "Right first rib",
+      "sourceName": "right first rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA7857",
+      "bounds": {
+        "min": [
+          -0.6976410150527954,
+          5.100699424743652,
+          0.14414596557617188
+        ],
+        "max": [
+          -0.1511089950799942,
+          5.704799652099609,
+          0.8042399883270264
+        ]
+      },
+      "center": [
+        -0.4243750050663948,
+        5.402749538421631,
+        0.4741929769515991
+      ],
+      "anchor": [
+        -0.49256500601768494,
+        5.389200210571289,
+        0.48053300380706787
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3334",
+          "sha256": "3831c5c578d45fc491e7e72417cc436e04a1a3a1916138e51528ad0b0b212a54"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-second-rib",
+      "fmaId": "FMA7882",
+      "name": "Right second rib",
+      "sourceName": "right second rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA7882",
+      "bounds": {
+        "min": [
+          -0.9697210192680359,
+          4.735500335693359,
+          0.0065290071070194244
+        ],
+        "max": [
+          -0.16049499809741974,
+          5.5903000831604,
+          1.1715699434280396
+        ]
+      },
+      "center": [
+        -0.5651080086827278,
+        5.16290020942688,
+        0.5890494752675295
+      ],
+      "anchor": [
+        -0.7887769937515259,
+        5.147800445556641,
+        0.5823799967765808
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3336",
+          "sha256": "57084a626a91aa88782f2e836c75450cd90bf19717dfd3f31602b4c674b70c0c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-third-rib",
+      "fmaId": "FMA7909",
+      "name": "Right third rib",
+      "sourceName": "right third rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA7909",
+      "bounds": {
+        "min": [
+          -1.0894700288772583,
+          4.438199520111084,
+          -0.1317100077867508
+        ],
+        "max": [
+          -0.14023999869823456,
+          5.359699726104736,
+          1.292680025100708
+        ]
+      },
+      "center": [
+        -0.6148550137877464,
+        4.89894962310791,
+        0.5804850086569786
+      ],
+      "anchor": [
+        -0.9394830465316772,
+        4.844699859619141,
+        0.661549985408783
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3338",
+          "sha256": "b239419743f7320b8b1d4f4d96ab41c1ff7fccdc921fa3a99c700a9d6dbd2a6c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-fourth-rib",
+      "fmaId": "FMA7957",
+      "name": "Right fourth rib",
+      "sourceName": "right fourth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA7957",
+      "bounds": {
+        "min": [
+          -1.1759300231933594,
+          4.110999584197998,
+          -0.2680549919605255
+        ],
+        "max": [
+          -0.15011900663375854,
+          5.153499603271484,
+          1.4219200611114502
+        ]
+      },
+      "center": [
+        -0.663024514913559,
+        4.632249593734741,
+        0.5769325345754623
+      ],
+      "anchor": [
+        -1.0595799684524536,
+        4.567399978637695,
+        0.6371999979019165
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3340",
+          "sha256": "ffca17251de4f457c4952e9d913070eb7a6f767493925ac3d8c3c744941b5dbd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-fifth-rib",
+      "fmaId": "FMA8066",
+      "name": "Right fifth rib",
+      "sourceName": "right fifth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8066",
+      "bounds": {
+        "min": [
+          -1.2707899808883667,
+          3.721600294113159,
+          -0.3727239966392517
+        ],
+        "max": [
+          -0.15314200520515442,
+          4.913199424743652,
+          1.4765100479125977
+        ]
+      },
+      "center": [
+        -0.7119659930467606,
+        4.317399859428406,
+        0.551893025636673
+      ],
+      "anchor": [
+        -1.1888200044631958,
+        4.262700080871582,
+        0.510640025138855
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3342",
+          "sha256": "b2d1f3bc9478c51524628f4e79524290add55800ae85b06ff657f17f4c0c6f1f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-sixth-rib",
+      "fmaId": "FMA8175",
+      "name": "Right sixth rib",
+      "sourceName": "right sixth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8175",
+      "bounds": {
+        "min": [
+          -1.3434900045394897,
+          3.3791003227233887,
+          -0.46358591318130493
+        ],
+        "max": [
+          -0.14837300777435303,
+          4.656999588012695,
+          1.4350500106811523
+        ]
+      },
+      "center": [
+        -0.7459315061569214,
+        4.018049955368042,
+        0.4857320487499237
+      ],
+      "anchor": [
+        -1.2488600015640259,
+        3.9631006717681885,
+        0.39496901631355286
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3344",
+          "sha256": "5e45ea5a527d3b7df56c508213020265ed1c8a0d9a99f31454b92059f4f1a95f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-seventh-rib",
+      "fmaId": "FMA8229",
+      "name": "Right seventh rib",
+      "sourceName": "right seventh rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8229",
+      "bounds": {
+        "min": [
+          -1.3708500862121582,
+          3.0518994331359863,
+          -0.4551309049129486
+        ],
+        "max": [
+          -0.1368969976902008,
+          4.402700424194336,
+          1.302030086517334
+        ]
+      },
+      "center": [
+        -0.7538735419511795,
+        3.727299928665161,
+        0.4234495908021927
+      ],
+      "anchor": [
+        -1.2324399948120117,
+        3.667099714279175,
+        0.24362801015377045
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3346",
+          "sha256": "86cc62c1a0a754f2e01a30b5d7179c745f3c2404ef4031ae43568667c4041996"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-eighth-rib",
+      "fmaId": "FMA8283",
+      "name": "Right eighth rib",
+      "sourceName": "right eighth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8283",
+      "bounds": {
+        "min": [
+          -1.3296799659729004,
+          2.746600389480591,
+          -0.4543550908565521
+        ],
+        "max": [
+          -0.1367650032043457,
+          4.113299369812012,
+          1.1267799139022827
+        ]
+      },
+      "center": [
+        -0.733222484588623,
+        3.4299498796463013,
+        0.3362124115228653
+      ],
+      "anchor": [
+        -1.1531400680541992,
+        3.3648998737335205,
+        0.16366302967071533
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3347",
+          "sha256": "388e8f3dd5c308fe1454daed2aa3a2fced280d4ec60f97b547b476ca6b0da930"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:bone:right-ninth-rib",
+      "fmaId": "FMA8364",
+      "name": "Right ninth rib",
+      "sourceName": "right ninth rib",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton",
+      "nodeName": "FMA8364",
+      "bounds": {
+        "min": [
+          -1.2909801006317139,
+          2.50089955329895,
+          -0.424709290266037
+        ],
+        "max": [
+          -0.15864600241184235,
+          3.8536999225616455,
+          0.8563200235366821
+        ]
+      },
+      "center": [
+        -0.7248130515217781,
+        3.177299737930298,
+        0.21580536663532257
+      ],
+      "anchor": [
+        -1.0619399547576904,
+        3.1351001262664795,
+        -0.03648899123072624
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3348",
+          "sha256": "4ef4af4eb8a7ea76479b2d4a1b2973c7d950f6e3aa5593eca4377258222bdaf6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:clavicle",
+      "fmaId": "FMA13322",
+      "name": "Right clavicle",
+      "sourceName": "right clavicle",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13322",
+      "bounds": {
+        "min": [
+          -1.4527698755264282,
+          5.086199760437012,
+          0.04412498325109482
+        ],
+        "max": [
+          -0.09661649912595749,
+          5.554399490356445,
+          0.9694799780845642
+        ]
+      },
+      "center": [
+        -0.7746931873261929,
+        5.3202996253967285,
+        0.5068024806678295
+      ],
+      "anchor": [
+        -0.7849389910697937,
+        5.359100341796875,
+        0.5070599913597107
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3362",
+          "sha256": "9a111cac8351e79dd1315aea90108fe56f78e4bf0159473e6ad727ba91b60e6d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "sourceName": "right scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13395",
+      "bounds": {
+        "min": [
+          -1.6646400690078735,
+          3.839599609375,
+          -0.5508275032043457
+        ],
+        "max": [
+          -0.5705379843711853,
+          5.498600006103516,
+          0.5285600423812866
+        ]
+      },
+      "center": [
+        -1.1175890266895294,
+        4.669099807739258,
+        -0.011133730411529541
+      ],
+      "anchor": [
+        -1.1983000040054321,
+        4.698699951171875,
+        -0.054347991943359375
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3384",
+          "sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sacrum",
+      "fmaId": "FMA16202",
+      "name": "Sacrum",
+      "sourceName": "sacrum",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA16202",
+      "bounds": {
+        "min": [
+          -0.5959120392799377,
+          -0.17163024842739105,
+          -0.5725374817848206
+        ],
+        "max": [
+          0.5820289850234985,
+          1.2720000743865967,
+          0.31396400928497314
+        ]
+      },
+      "center": [
+        -0.0069415271282196045,
+        0.5501849129796028,
+        -0.1292867362499237
+      ],
+      "anchor": [
+        0.0035980800166726112,
+        0.6635797023773193,
+        -0.22178100049495697
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3393",
+          "sha256": "cd04cc9f78d758ba34e92896914f647d22d257b9e7e51b97764670f694033489"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+      "fmaId": "FMA9756",
+      "name": "External intercostal muscle",
+      "sourceName": "external intercostal muscle",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA9756",
+      "bounds": {
+        "min": [
+          -1.3616600036621094,
+          2.115100145339966,
+          -0.46718260645866394
+        ],
+        "max": [
+          1.3616600036621094,
+          5.65369987487793,
+          1.4164100885391235
+        ]
+      },
+      "center": [
+        0,
+        3.8844000101089478,
+        0.4746137410402298
+      ],
+      "anchor": [
+        -0.294655978679657,
+        3.6945996284484863,
+        -0.21502599120140076
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1451",
+          "sha256": "588de751687a05ae711f9b8d65f78ddac891994158fa4a94ea2ca48d36dc1b61"
+        },
+        {
+          "file": "FJ1451M",
+          "sha256": "d4c021ba00dbe2bd3c7e722cb5982df7659d7d68fe6f4ec980588bfd65d31214"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+      "fmaId": "FMA13336",
+      "name": "Right external oblique",
+      "sourceName": "right external oblique",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-muscles",
+      "nodeName": "FMA13336",
+      "bounds": {
+        "min": [
+          -1.408229947090149,
+          -0.06374023109674454,
+          -0.1297919899225235
+        ],
+        "max": [
+          -0.03448580205440521,
+          4.115799427032471,
+          1.6876600980758667
+        ]
+      },
+      "center": [
+        -0.7213578745722771,
+        2.026029597967863,
+        0.7789340540766716
+      ],
+      "anchor": [
+        -1.0500199794769287,
+        1.9734997749328613,
+        0.9708000421524048
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1452",
+          "sha256": "8fb254f196b1e249b1aea667d195f00c355f901f5fa89e37f586a8316c2fcdcd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+      "fmaId": "FMA13337",
+      "name": "Left external oblique",
+      "sourceName": "left external oblique",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-muscles",
+      "nodeName": "FMA13337",
+      "bounds": {
+        "min": [
+          0.034485701471567154,
+          -0.0637499988079071,
+          -0.1297919899225235
+        ],
+        "max": [
+          1.408229947090149,
+          4.115799427032471,
+          1.6876600980758667
+        ]
+      },
+      "center": [
+        0.721357824280858,
+        2.026024714112282,
+        0.7789340540766716
+      ],
+      "anchor": [
+        1.0500199794769287,
+        1.9734997749328613,
+        0.9708000421524048
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1452M",
+          "sha256": "2f0ba9782cf27bd57446c6f9f44a399bfb98e88a67136c7304e47098838fce1f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+      "fmaId": "FMA9758",
+      "name": "Innermost intercostal muscle",
+      "sourceName": "innermost intercostal muscle",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA9758",
+      "bounds": {
+        "min": [
+          -1.346250057220459,
+          2.1915998458862305,
+          -0.4369722008705139
+        ],
+        "max": [
+          1.346250057220459,
+          5.149899959564209,
+          1.4337300062179565
+        ]
+      },
+      "center": [
+        0,
+        3.6707499027252197,
+        0.4983789026737213
+      ],
+      "anchor": [
+        -0.5804660320281982,
+        3.5676000118255615,
+        -0.3345470130443573
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1454",
+          "sha256": "8e9a5c48482ba61dfe2ed19ced05121093a7bf3f8c6e0ac7d0c0b8ebe8bce45d"
+        },
+        {
+          "file": "FJ1454M",
+          "sha256": "7458ea18bdf836da68b0220da5421cddb1bb653da909d998dea14db3d5ef00c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+      "fmaId": "FMA9757",
+      "name": "Internal intercostal muscle",
+      "sourceName": "internal intercostal muscle",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA9757",
+      "bounds": {
+        "min": [
+          -1.329140067100525,
+          2.1844000816345215,
+          -0.45345309376716614
+        ],
+        "max": [
+          1.329140067100525,
+          5.140200138092041,
+          1.5931100845336914
+        ]
+      },
+      "center": [
+        0,
+        3.6623001098632812,
+        0.5698284953832626
+      ],
+      "anchor": [
+        -0.257999986410141,
+        3.940000057220459,
+        1.5195199251174927
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1455",
+          "sha256": "aa71a14eb5d50c91569fb348ccf3747438bf0e5a4a8cd73784f7ae9ad2f801e3"
+        },
+        {
+          "file": "FJ1455M",
+          "sha256": "d92760297b5c8ceacf1013460e372abcb05f97192ffc514758d74ac0b73af373"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+      "fmaId": "FMA13375",
+      "name": "Right pectoralis minor",
+      "sourceName": "right pectoralis minor",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA13375",
+      "bounds": {
+        "min": [
+          -1.301759958267212,
+          3.8166003227233887,
+          0.3034919798374176
+        ],
+        "max": [
+          -0.697359025478363,
+          5.266700267791748,
+          1.2304699420928955
+        ]
+      },
+      "center": [
+        -0.9995594918727875,
+        4.541650295257568,
+        0.7669809609651566
+      ],
+      "anchor": [
+        -1.0301400423049927,
+        4.582299709320068,
+        0.8125500679016113
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1456",
+          "sha256": "65831afdc2f80bf5fca581f196de727aa30c3adcc682ac4506a4a5d6cc71db05"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+      "fmaId": "FMA13376",
+      "name": "Left pectoralis minor",
+      "sourceName": "left pectoralis minor",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA13376",
+      "bounds": {
+        "min": [
+          0.697359025478363,
+          3.8166003227233887,
+          0.3034919798374176
+        ],
+        "max": [
+          1.301759958267212,
+          5.266700267791748,
+          1.2304699420928955
+        ]
+      },
+      "center": [
+        0.9995594918727875,
+        4.541650295257568,
+        0.7669809609651566
+      ],
+      "anchor": [
+        1.0301400423049927,
+        4.582299709320068,
+        0.8125500679016113
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1456M",
+          "sha256": "3fddf544e2ec4cf4f403cba3efe864a9aa6697ec75db0e12ca7589eb3229055b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+      "fmaId": "FMA9761",
+      "name": "Right transversus thoracis",
+      "sourceName": "right transversus thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA9761",
+      "bounds": {
+        "min": [
+          -0.8957420587539673,
+          3.434499502182007,
+          1.0548300743103027
+        ],
+        "max": [
+          -0.02331010065972805,
+          4.884100437164307,
+          1.5952099561691284
+        ]
+      },
+      "center": [
+        -0.45952607970684767,
+        4.159299969673157,
+        1.3250200152397156
+      ],
+      "anchor": [
+        -0.46754300594329834,
+        4.193199634552002,
+        1.3649799823760986
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1461",
+          "sha256": "bce9619bd5a8afcd77e28139313dd3d4c553127fc8832ecc2412931308bac390"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+      "fmaId": "FMA9762",
+      "name": "Left transversus thoracis",
+      "sourceName": "left transversus thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA9762",
+      "bounds": {
+        "min": [
+          0.02331010065972805,
+          3.434499502182007,
+          1.0548300743103027
+        ],
+        "max": [
+          0.8957420587539673,
+          4.884100437164307,
+          1.5952099561691284
+        ]
+      },
+      "center": [
+        0.45952607970684767,
+        4.159299969673157,
+        1.3250200152397156
+      ],
+      "anchor": [
+        0.46754300594329834,
+        4.193199634552002,
+        1.3649799823760986
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1461M",
+          "sha256": "be04d1b4da0f157e45053496c8581dbc62f0b31ef20c576249d4debb54a75042"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-lumbar-rotator",
+      "fmaId": "FMA23089",
+      "name": "Right lumbar rotator",
+      "sourceName": "right lumbar rotator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA23089",
+      "bounds": {
+        "min": [
+          -0.3889690041542053,
+          1.3572399616241455,
+          -0.17598998546600342
+        ],
+        "max": [
+          0.007452759891748428,
+          3.0054004192352295,
+          0.22848396003246307
+        ]
+      },
+      "center": [
+        -0.19075812213122845,
+        2.1813201904296875,
+        0.026246987283229828
+      ],
+      "anchor": [
+        -0.18340998888015747,
+        2.163900136947632,
+        0.06859401613473892
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1522",
+          "sha256": "b0abdbd9843028107af0e4519e2013dc1c367c8ae70a4ed3aaffa3b18340fc4e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-lumbar-rotator",
+      "fmaId": "FMA23090",
+      "name": "Left lumbar rotator",
+      "sourceName": "left lumbar rotator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA23090",
+      "bounds": {
+        "min": [
+          -0.007452759891748428,
+          1.3572399616241455,
+          -0.17598900198936462
+        ],
+        "max": [
+          0.3889690041542053,
+          3.005500555038452,
+          0.22848396003246307
+        ]
+      },
+      "center": [
+        0.19075812213122845,
+        2.181370258331299,
+        0.026247479021549225
+      ],
+      "anchor": [
+        0.18340998888015747,
+        2.163900136947632,
+        0.06859401613473892
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1522M",
+          "sha256": "6f0ac20f65a34e08cfe0097662326ba1e4521747b0d58a67b5396f5e067b0b49"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:thoracic-rotator",
+      "fmaId": "FMA23083",
+      "name": "Thoracic rotator",
+      "sourceName": "thoracic rotator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA23083",
+      "bounds": {
+        "min": [
+          -0.3006710112094879,
+          2.792900323867798,
+          -0.3761579990386963
+        ],
+        "max": [
+          0.3006710112094879,
+          5.787499904632568,
+          0.09439601749181747
+        ]
+      },
+      "center": [
+        0,
+        4.290200114250183,
+        -0.1408809907734394
+      ],
+      "anchor": [
+        -0.09127409756183624,
+        4.340999603271484,
+        -0.2982340157032013
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1525",
+          "sha256": "b5f46d530a91ebdc474f9ed8072b4af9bdbb15ba0009f38fd8a3b0cb317ccca4"
+        },
+        {
+          "file": "FJ1525M",
+          "sha256": "35fbf235786f21571a30cde8bf3145790bdf623a6c3dfc50e17b5173e6d88e5a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-lumborum",
+      "fmaId": "FMA22740",
+      "name": "Right iliocostalis lumborum",
+      "sourceName": "right iliocostalis lumborum",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22740",
+      "bounds": {
+        "min": [
+          -1.023210048675537,
+          0.3006097376346588,
+          -0.5915194749832153
+        ],
+        "max": [
+          -0.050770603120326996,
+          4.389000415802002,
+          -0.14432300627231598
+        ]
+      },
+      "center": [
+        -0.536990325897932,
+        2.3448050767183304,
+        -0.36792124062776566
+      ],
+      "anchor": [
+        -0.5009899735450745,
+        2.3552002906799316,
+        -0.3422220051288605
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1527",
+          "sha256": "8a15295f08faac150ee5f16fe1035398dcfa60d3cba8b42b504b53764032b718"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-lumborum",
+      "fmaId": "FMA22741",
+      "name": "Left iliocostalis lumborum",
+      "sourceName": "left iliocostalis lumborum",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22741",
+      "bounds": {
+        "min": [
+          0.050770603120326996,
+          0.3006097376346588,
+          -0.5915194749832153
+        ],
+        "max": [
+          1.023210048675537,
+          4.389000415802002,
+          -0.14432300627231598
+        ]
+      },
+      "center": [
+        0.536990325897932,
+        2.3448050767183304,
+        -0.36792124062776566
+      ],
+      "anchor": [
+        0.5009909868240356,
+        2.3552002906799316,
+        -0.3422220051288605
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1527M",
+          "sha256": "1c7f20b34a9639d1996e3ec18873beb6dc114169ae1d310e88e2c3d8b1ff2133"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-iliocostalis-thoracis",
+      "fmaId": "FMA22742",
+      "name": "Right iliocostalis thoracis",
+      "sourceName": "right iliocostalis thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22742",
+      "bounds": {
+        "min": [
+          -0.9201599955558777,
+          2.566200017929077,
+          -0.5069636702537537
+        ],
+        "max": [
+          -0.4185220003128052,
+          5.610100269317627,
+          0.25363296270370483
+        ]
+      },
+      "center": [
+        -0.6693409979343414,
+        4.088150143623352,
+        -0.12666535377502441
+      ],
+      "anchor": [
+        -0.8044559955596924,
+        4.125100135803223,
+        -0.3938869833946228
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1528",
+          "sha256": "0ee5ad819949cd4197dd96b00373547b42f7e1831b2add6baea4baf3661f38fa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-iliocostalis-thoracis",
+      "fmaId": "FMA22743",
+      "name": "Left iliocostalis thoracis",
+      "sourceName": "left iliocostalis thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22743",
+      "bounds": {
+        "min": [
+          0.4185220003128052,
+          2.566200017929077,
+          -0.5069636702537537
+        ],
+        "max": [
+          0.9201599955558777,
+          5.610100269317627,
+          0.25363296270370483
+        ]
+      },
+      "center": [
+        0.6693409979343414,
+        4.088150143623352,
+        -0.12666535377502441
+      ],
+      "anchor": [
+        0.8044559955596924,
+        4.125100135803223,
+        -0.3938869833946228
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1528M",
+          "sha256": "02a7addd5329689094506095570a458982b6dfc2f9509392bf310807183e3df7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longissimus-thoracis",
+      "fmaId": "FMA22751",
+      "name": "Right longissimus thoracis",
+      "sourceName": "right longissimus thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22751",
+      "bounds": {
+        "min": [
+          -0.6874160170555115,
+          0.49039000272750854,
+          -0.5345523953437805
+        ],
+        "max": [
+          0.006630529649555683,
+          5.704100131988525,
+          0.2065640240907669
+        ]
+      },
+      "center": [
+        -0.3403927437029779,
+        3.097245067358017,
+        -0.1639941856265068
+      ],
+      "anchor": [
+        -0.26180499792099,
+        3.070200204849243,
+        -0.19955700635910034
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1535",
+          "sha256": "b555761d298a4bea88a05d2067b0cfff507522546bfc0dcb9b3bad576a3449fa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longissimus-thoracis",
+      "fmaId": "FMA22753",
+      "name": "Left longissimus thoracis",
+      "sourceName": "left longissimus thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22753",
+      "bounds": {
+        "min": [
+          -0.006630529649555683,
+          0.49039000272750854,
+          -0.5345523953437805
+        ],
+        "max": [
+          0.6874160170555115,
+          5.704100131988525,
+          0.2065640240907669
+        ]
+      },
+      "center": [
+        0.3403927437029779,
+        3.097245067358017,
+        -0.1639941856265068
+      ],
+      "anchor": [
+        0.26180499792099,
+        3.0701000690460205,
+        -0.19955700635910034
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1535M",
+          "sha256": "d238f10400abb5754b2ef1e920eacc720b69835cd31a229ef3d68468f4064a57"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-semispinalis-thoracis",
+      "fmaId": "FMA22872",
+      "name": "Right semispinalis thoracis",
+      "sourceName": "right semispinalis thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22872",
+      "bounds": {
+        "min": [
+          -0.32909801602363586,
+          2.820699453353882,
+          -0.47791340947151184
+        ],
+        "max": [
+          0.010013200342655182,
+          5.581899642944336,
+          -0.055942993611097336
+        ]
+      },
+      "center": [
+        -0.15954240784049034,
+        4.201299548149109,
+        -0.2669282015413046
+      ],
+      "anchor": [
+        -0.22739098966121674,
+        4.197800159454346,
+        -0.38666000962257385
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1540",
+          "sha256": "91211e5154f7ee9191e807ec3e33f6d3ec734aefd6db83f6777c5b2d1b2afc44"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-semispinalis-thoracis",
+      "fmaId": "FMA22873",
+      "name": "Left semispinalis thoracis",
+      "sourceName": "left semispinalis thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22873",
+      "bounds": {
+        "min": [
+          -0.010013200342655182,
+          2.820699453353882,
+          -0.47791340947151184
+        ],
+        "max": [
+          0.32909801602363586,
+          5.581899642944336,
+          -0.055942993611097336
+        ]
+      },
+      "center": [
+        0.15954240784049034,
+        4.201299548149109,
+        -0.2669282015413046
+      ],
+      "anchor": [
+        0.22739098966121674,
+        4.197800159454346,
+        -0.38666000962257385
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1540M",
+          "sha256": "b2d28afd1fb9b2d08da28f10a13a042d3aba7defbd2ee27b22816a5cda1e2ca8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-inferior",
+      "fmaId": "FMA13405",
+      "name": "Right serratus posterior inferior",
+      "sourceName": "right serratus posterior inferior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA13405",
+      "bounds": {
+        "min": [
+          -1.0624200105667114,
+          1.6951501369476318,
+          -0.487190306186676
+        ],
+        "max": [
+          0.0245107002556324,
+          3.320200204849243,
+          -0.07684299349784851
+        ]
+      },
+      "center": [
+        -0.5189546551555395,
+        2.5076751708984375,
+        -0.28201664984226227
+      ],
+      "anchor": [
+        -0.5245220065116882,
+        2.4755005836486816,
+        -0.3330410122871399
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1541",
+          "sha256": "cc8b7d9461278c3d3a1270277fc656159ee47bd9eed290a0d5aa1c15d5c2c006"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-inferior",
+      "fmaId": "FMA13406",
+      "name": "Left serratus posterior inferior",
+      "sourceName": "left serratus posterior inferior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA13406",
+      "bounds": {
+        "min": [
+          -0.0245107002556324,
+          1.6951501369476318,
+          -0.4871901869773865
+        ],
+        "max": [
+          1.0624299049377441,
+          3.320200204849243,
+          -0.07684299349784851
+        ]
+      },
+      "center": [
+        0.5189596023410559,
+        2.5076751708984375,
+        -0.2820165902376175
+      ],
+      "anchor": [
+        0.5245220065116882,
+        2.4755005836486816,
+        -0.3330410122871399
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1541M",
+          "sha256": "819635eb6027fc8434ef0966a06efbb1d34bbe4798127729081c0eeefcaf87e0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-serratus-posterior-superior",
+      "fmaId": "FMA13403",
+      "name": "Right serratus posterior superior",
+      "sourceName": "right serratus posterior superior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA13403",
+      "bounds": {
+        "min": [
+          -1.0314099788665771,
+          4.543699741363525,
+          -0.41010600328445435
+        ],
+        "max": [
+          0.0070372698828577995,
+          5.854899883270264,
+          0.23691299557685852
+        ]
+      },
+      "center": [
+        -0.5121863544918597,
+        5.1992998123168945,
+        -0.08659650385379791
+      ],
+      "anchor": [
+        -0.557548999786377,
+        5.285799503326416,
+        -0.18935199081897736
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1542",
+          "sha256": "5731a87fd7b629112dc376ce82570c8662618a1f6256f7b7d54384c363f6f6fd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-serratus-posterior-superior",
+      "fmaId": "FMA13404",
+      "name": "Left serratus posterior superior",
+      "sourceName": "left serratus posterior superior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA13404",
+      "bounds": {
+        "min": [
+          -0.0070372698828577995,
+          4.543699741363525,
+          -0.41010600328445435
+        ],
+        "max": [
+          1.0314099788665771,
+          5.854899883270264,
+          0.23691299557685852
+        ]
+      },
+      "center": [
+        0.5121863544918597,
+        5.1992998123168945,
+        -0.08659650385379791
+      ],
+      "anchor": [
+        0.557548999786377,
+        5.285799503326416,
+        -0.18935100734233856
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1542M",
+          "sha256": "61070b6f1cb48d0e08434711f12d5a535867520ca16adb20e5cf70f7bd2f29a1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:spinalis",
+      "fmaId": "FMA77179",
+      "name": "Spinalis",
+      "sourceName": "spinalis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA77179",
+      "bounds": {
+        "min": [
+          -0.12049899995326996,
+          1.7423901557922363,
+          -0.5280700922012329
+        ],
+        "max": [
+          0.12049899995326996,
+          6.35420036315918,
+          -0.06101199984550476
+        ]
+      },
+      "center": [
+        0,
+        4.048295259475708,
+        -0.29454104602336884
+      ],
+      "anchor": [
+        0.019326400011777878,
+        4.066899299621582,
+        -0.4380533993244171
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1543",
+          "sha256": "3dc2e6367ead09b94da4551212a36692ecf56586be7c27d8b5e834d4c32e1fcb"
+        },
+        {
+          "file": "FJ1543M",
+          "sha256": "44647555062b70a3535586a83fae2cfc38441870a29e6b8f95bd5ffdd1af2af9"
+        },
+        {
+          "file": "FJ1544",
+          "sha256": "d269ffdde57349435a3cfcc3c53c3b2532acf4ddaabfc7fdc8b0e3df66b15232"
+        },
+        {
+          "file": "FJ1544M",
+          "sha256": "b9a3a13c4b797eb8f3115dac3e80b5a83b03b9b34c25f7f2ef721810fa0c52d2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:lateral-lumbar-intertransversarius",
+      "fmaId": "FMA22850",
+      "name": "Lateral lumbar intertransversarius",
+      "sourceName": "lateral lumbar intertransversarius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22850",
+      "bounds": {
+        "min": [
+          -0.4688520133495331,
+          1.4203100204467773,
+          -0.08941700309515
+        ],
+        "max": [
+          0.4688520133495331,
+          2.8856005668640137,
+          0.20884902775287628
+        ]
+      },
+      "center": [
+        0,
+        2.1529552936553955,
+        0.059716012328863144
+      ],
+      "anchor": [
+        -0.27097800374031067,
+        2.1909003257751465,
+        0.12705200910568237
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1547",
+          "sha256": "56bd2f0fe3c36acfd7c72e772c153f3beec50e78a6e336bce0cad5f414c533bf"
+        },
+        {
+          "file": "FJ1547M",
+          "sha256": "2c894820e6b92ede6de83a878398021d98c8556f160a0254f5ee7d7fb28cfc5e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:muscle:medial-lumbar-intertransversarius",
+      "fmaId": "FMA22851",
+      "name": "Medial lumbar intertransversarius",
+      "sourceName": "medial lumbar intertransversarius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22851",
+      "bounds": {
+        "min": [
+          -0.46399298310279846,
+          1.387379765510559,
+          0.07099201530218124
+        ],
+        "max": [
+          0.46399298310279846,
+          2.5128002166748047,
+          0.22880996763706207
+        ]
+      },
+      "center": [
+        0,
+        1.9500899910926819,
+        0.14990099146962166
+      ],
+      "anchor": [
+        -0.2628040015697479,
+        1.9993401765823364,
+        0.20069801807403564
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1548",
+          "sha256": "6ec899cf7d149464fb54c6df704a955151194d91b15a6f163e7024798ccd3d07"
+        },
+        {
+          "file": "FJ1548M",
+          "sha256": "d6c6ae4153a890dc215c73b1cac7f7561fac4a2b70565d40471903699acdc2d1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-interspinalis-thoracis",
+      "fmaId": "FMA22890",
+      "name": "Right interspinalis thoracis",
+      "sourceName": "right interspinalis thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22890",
+      "bounds": {
+        "min": [
+          -0.06395500153303146,
+          5.065600395202637,
+          -0.44320011138916016
+        ],
+        "max": [
+          0.0038532100152224302,
+          5.500999927520752,
+          -0.269430011510849
+        ]
+      },
+      "center": [
+        -0.030050895758904517,
+        5.283300161361694,
+        -0.3563150614500046
+      ],
+      "anchor": [
+        -0.03270220011472702,
+        5.287600040435791,
+        -0.3630560040473938
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1551",
+          "sha256": "9e16b2dd79e3da3c43afae531deb69faf3f0e59d547b72cfcda73e58073feae4"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-interspinalis-thoracis",
+      "fmaId": "FMA22891",
+      "name": "Left interspinalis thoracis",
+      "sourceName": "left interspinalis thoracis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22891",
+      "bounds": {
+        "min": [
+          -0.0038532100152224302,
+          5.065600395202637,
+          -0.44320011138916016
+        ],
+        "max": [
+          0.06395500153303146,
+          5.500999927520752,
+          -0.269430011510849
+        ]
+      },
+      "center": [
+        0.030050895758904517,
+        5.283300161361694,
+        -0.3563150614500046
+      ],
+      "anchor": [
+        0.03270220011472702,
+        5.287600040435791,
+        -0.3630560040473938
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1551M",
+          "sha256": "392e9215469be48fbd56a29ce14e7d649d3eb693b6ce996adc0bac0b88a920dd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+      "fmaId": "FMA13295",
+      "name": "Diaphragm",
+      "sourceName": "diaphragm",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles",
+      "nodeName": "FMA13295",
+      "bounds": {
+        "min": [
+          -1.223289966583252,
+          1.8585199117660522,
+          -0.24084199965000153
+        ],
+        "max": [
+          1.2086299657821655,
+          3.925799608230591,
+          1.5532299280166626
+        ]
+      },
+      "center": [
+        -0.007330000400543213,
+        2.8921597599983215,
+        0.6561939641833305
+      ],
+      "anchor": [
+        -0.022627100348472595,
+        3.0029003620147705,
+        0.5967299938201904
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3131",
+          "sha256": "db97e5f8f8d46928ea54b42fb50789e8f5523ef973cc744b2c2f17930fc33dc8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+      "fmaId": "FMA33581",
+      "name": "Ascending part of right trapezius",
+      "sourceName": "ascending part of right trapezius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-dissection",
+      "nodeName": "FMA33581",
+      "bounds": {
+        "min": [
+          -1.485859990119934,
+          2.54010009765625,
+          -0.7454670071601868
+        ],
+        "max": [
+          0.0325435996055603,
+          5.429699897766113,
+          -0.03036300651729107
+        ]
+      },
+      "center": [
+        -0.7266581952571869,
+        3.9848999977111816,
+        -0.3879150068387389
+      ],
+      "anchor": [
+        -0.6646890044212341,
+        4.031199932098389,
+        -0.6687049865722656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1520",
+          "sha256": "6bb3d13198991bda4d0aae27561976b9ba53b0d21d817f180098307c7b99deb1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+      "fmaId": "FMA33583",
+      "name": "Ascending part of left trapezius",
+      "sourceName": "ascending part of left trapezius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-dissection",
+      "nodeName": "FMA33583",
+      "bounds": {
+        "min": [
+          -0.0325435996055603,
+          2.54010009765625,
+          -0.7454659938812256
+        ],
+        "max": [
+          1.485859990119934,
+          5.429699897766113,
+          -0.03036300651729107
+        ]
+      },
+      "center": [
+        0.7266581952571869,
+        3.9848999977111816,
+        -0.3879145001992583
+      ],
+      "anchor": [
+        0.6646890044212341,
+        4.031199932098389,
+        -0.6687049865722656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1520M",
+          "sha256": "5ca485d5bfe97fd5a9e17d76d2a77077577e13f19584f5634a8eb1bbc6d7da3d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+      "fmaId": "FMA33584",
+      "name": "Transverse part of right trapezius",
+      "sourceName": "transverse part of right trapezius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-dissection",
+      "nodeName": "FMA33584",
+      "bounds": {
+        "min": [
+          -1.6324200630187988,
+          5.036200046539307,
+          -0.6070089936256409
+        ],
+        "max": [
+          0.03872710093855858,
+          5.821099758148193,
+          0.1965389996767044
+        ]
+      },
+      "center": [
+        -0.7968464810401201,
+        5.42864990234375,
+        -0.20523499697446823
+      ],
+      "anchor": [
+        -0.8284200429916382,
+        5.482500076293945,
+        -0.28153499960899353
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1554",
+          "sha256": "f7683d77a5bfe9ac6d07fdc913c46cf41db20298c087e71df73fab18192e90a4"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+      "fmaId": "FMA33585",
+      "name": "Transverse part of left trapezius",
+      "sourceName": "transverse part of left trapezius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-dissection",
+      "nodeName": "FMA33585",
+      "bounds": {
+        "min": [
+          -0.03872710093855858,
+          5.036300182342529,
+          -0.6070089936256409
+        ],
+        "max": [
+          1.6324200630187988,
+          5.821099758148193,
+          0.1965389996767044
+        ]
+      },
+      "center": [
+        0.7968464810401201,
+        5.428699970245361,
+        -0.20523499697446823
+      ],
+      "anchor": [
+        0.8284200429916382,
+        5.482500076293945,
+        -0.28153499960899353
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1554M",
+          "sha256": "a08a23c17d20a120eebe96a9c8db1bb86672529fb8f34868d5f7cd28f5df98d5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+      "fmaId": "FMA33586",
+      "name": "Descending part of right trapezius",
+      "sourceName": "descending part of right trapezius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-dissection",
+      "nodeName": "FMA33586",
+      "bounds": {
+        "min": [
+          -1.3083999156951904,
+          5.405899524688721,
+          -0.4238651990890503
+        ],
+        "max": [
+          0.03488419950008392,
+          7.062399864196777,
+          0.506600022315979
+        ]
+      },
+      "center": [
+        -0.6367578580975533,
+        6.234149694442749,
+        0.041367411613464355
+      ],
+      "anchor": [
+        -0.4161610007286072,
+        6.228700160980225,
+        0.08728298544883728
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1521",
+          "sha256": "19bd9d1cbbb84e10826eb770068f6e271cd79dde960bca62ac71da24120fc354"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+      "fmaId": "FMA33587",
+      "name": "Descending part of left trapezius",
+      "sourceName": "descending part of left trapezius",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles-dissection",
+      "nodeName": "FMA33587",
+      "bounds": {
+        "min": [
+          -0.03488419950008392,
+          5.405899524688721,
+          -0.4238651990890503
+        ],
+        "max": [
+          1.3083999156951904,
+          7.062399864196777,
+          0.506600022315979
+        ]
+      },
+      "center": [
+        0.6367578580975533,
+        6.234149694442749,
+        0.041367411613464355
+      ],
+      "anchor": [
+        0.4161610007286072,
+        6.228700160980225,
+        0.08728298544883728
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1521M",
+          "sha256": "fe756252f820a47e9c757f67de4ca37adf44837dbe0d10c6d2e5df3a5a6a0751"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+      "fmaId": "FMA13373",
+      "name": "Right pectoralis major",
+      "sourceName": "right pectoralis major",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles-dissection",
+      "nodeName": "FMA13373",
+      "bounds": {
+        "min": [
+          -1.878480076789856,
+          3.047800302505493,
+          0.3100000023841858
+        ],
+        "max": [
+          -0.04815569892525673,
+          5.13800048828125,
+          1.6935299634933472
+        ]
+      },
+      "center": [
+        -0.9633178878575563,
+        4.092900395393372,
+        1.0017649829387665
+      ],
+      "anchor": [
+        -1.0912799835205078,
+        4.103799819946289,
+        1.1295199394226074
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1446",
+          "sha256": "964ab8e287e7f44f14b07d8c7694ec70eee63bc9d7b1eeb3c5dc79e80460336d"
+        },
+        {
+          "file": "FJ1464",
+          "sha256": "bbdc0f731053d83a39689dcd5c9c7b559060de298b97bd90caee3791aeedd7bb"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+      "fmaId": "FMA13374",
+      "name": "Left pectoralis major",
+      "sourceName": "left pectoralis major",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-muscles-dissection",
+      "nodeName": "FMA13374",
+      "bounds": {
+        "min": [
+          0.04815569892525673,
+          3.047800302505493,
+          0.3100000023841858
+        ],
+        "max": [
+          1.878480076789856,
+          5.13800048828125,
+          1.6935299634933472
+        ]
+      },
+      "center": [
+        0.9633178878575563,
+        4.092900395393372,
+        1.0017649829387665
+      ],
+      "anchor": [
+        1.0912799835205078,
+        4.103799819946289,
+        1.1295199394226074
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1446M",
+          "sha256": "950d6ab140639cb6633cd81edfeeef726a62b6b53d75a0ce0d0bd040e998a88b"
+        },
+        {
+          "file": "FJ1464M",
+          "sha256": "f3c9dd7ac80492a4f4269a88568a13276f66473796f651ca7c8ec5cc93e6e0f6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:manubrium",
+      "fmaId": "FMA7486",
+      "name": "Manubrium",
+      "sourceName": "manubrium",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton-recovery",
+      "nodeName": "FMA7486",
+      "bounds": {
+        "min": [
+          -0.27449700236320496,
+          4.802700042724609,
+          0.808009922504425
+        ],
+        "max": [
+          0.27449700236320496,
+          5.252500057220459,
+          1.2858799695968628
+        ]
+      },
+      "center": [
+        0,
+        5.027600049972534,
+        1.046944946050644
+      ],
+      "anchor": [
+        -0.01620749942958355,
+        5.076099872589111,
+        1.1336098909378052
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3290",
+          "sha256": "e94f731d044131260947146ab79fa7c4712865e1aac36a1410003358b96e0692"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:body-of-sternum",
+      "fmaId": "FMA7487",
+      "name": "Body of sternum",
+      "sourceName": "body of sternum",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton-recovery",
+      "nodeName": "FMA7487",
+      "bounds": {
+        "min": [
+          -0.23614901304244995,
+          3.7965002059936523,
+          1.1516599655151367
+        ],
+        "max": [
+          0.23955601453781128,
+          4.896399974822998,
+          1.638319969177246
+        ]
+      },
+      "center": [
+        0.001703500747680664,
+        4.346450090408325,
+        1.3949899673461914
+      ],
+      "anchor": [
+        0.004245510324835777,
+        4.299100399017334,
+        1.3257200717926025
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3178",
+          "sha256": "ec90f03f2ce1edebc8793a9e9973229b198d6367eb5eab1dff6e238110e94d9d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:midline:bone:xiphoid-process",
+      "fmaId": "FMA7488",
+      "name": "Xiphoid process",
+      "sourceName": "xiphoid process",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-skeleton-recovery",
+      "nodeName": "FMA7488",
+      "bounds": {
+        "min": [
+          -0.10337799787521362,
+          3.640200138092041,
+          1.4850900173187256
+        ],
+        "max": [
+          0.10603900253772736,
+          3.8450000286102295,
+          1.6335300207138062
+        ]
+      },
+      "center": [
+        0.0013305023312568665,
+        3.7426000833511353,
+        1.5593100190162659
+      ],
+      "anchor": [
+        0.002186910016462207,
+        3.741800546646118,
+        1.590959906578064
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3153",
+          "sha256": "371573a43e28506d674bf4999ee4c50c0497014aa8d69865f450a078d493a495"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-first-costal-cartilage",
+      "fmaId": "FMA7875",
+      "name": "Right first costal cartilage",
+      "sourceName": "right first costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA7875",
+      "bounds": {
+        "min": [
+          -0.5618740320205688,
+          4.969100475311279,
+          0.7217099666595459
+        ],
+        "max": [
+          -0.19512100517749786,
+          5.202199935913086,
+          1.0075700283050537
+        ]
+      },
+      "center": [
+        -0.37849751859903336,
+        5.085650205612183,
+        0.8646399974822998
+      ],
+      "anchor": [
+        -0.4085620045661926,
+        5.111400127410889,
+        0.8742899894714355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3333",
+          "sha256": "3d5d3e082d8125f35f1d13ee18db57260d81b692e7a4ab22c076b17421f6d1ac"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-first-costal-cartilage",
+      "fmaId": "FMA8005",
+      "name": "Left first costal cartilage",
+      "sourceName": "left first costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8005",
+      "bounds": {
+        "min": [
+          0.19495199620723724,
+          4.968699932098389,
+          0.7232399582862854
+        ],
+        "max": [
+          0.5619530081748962,
+          5.202499866485596,
+          1.0081199407577515
+        ]
+      },
+      "center": [
+        0.37845250219106674,
+        5.085599899291992,
+        0.8656799495220184
+      ],
+      "anchor": [
+        0.4037410020828247,
+        5.0531005859375,
+        0.8346000909805298
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3239",
+          "sha256": "dd8bec4169a10d30c45bfb2dc1136bfa67bc4d359457d6b815fdfbe433f5dfb6"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-second-costal-cartilage",
+      "fmaId": "FMA7886",
+      "name": "Right second costal cartilage",
+      "sourceName": "right second costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA7886",
+      "bounds": {
+        "min": [
+          -0.48186999559402466,
+          4.701200008392334,
+          1.077449917793274
+        ],
+        "max": [
+          -0.10244600474834442,
+          4.880200386047363,
+          1.2826100587844849
+        ]
+      },
+      "center": [
+        -0.29215800017118454,
+        4.790700197219849,
+        1.1800299882888794
+      ],
+      "anchor": [
+        -0.2948240041732788,
+        4.777099609375,
+        1.1526899337768555
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3335",
+          "sha256": "75c0c3b0164c789a27f2a72872e5ce5f958b82b732606be820b68f5f8330964d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-second-costal-cartilage",
+      "fmaId": "FMA8031",
+      "name": "Left second costal cartilage",
+      "sourceName": "left second costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8031",
+      "bounds": {
+        "min": [
+          0.10202500224113464,
+          4.701700210571289,
+          1.0774799585342407
+        ],
+        "max": [
+          0.48057299852371216,
+          4.880100250244141,
+          1.2824499607086182
+        ]
+      },
+      "center": [
+        0.2912990003824234,
+        4.790900230407715,
+        1.1799649596214294
+      ],
+      "anchor": [
+        0.2923640012741089,
+        4.78939962387085,
+        1.1502400636672974
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3242",
+          "sha256": "edb9924bb7c01d1b0bfbbb05333f631e30db787e24951aeb86e19ded5678ed8a"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-third-costal-cartilage",
+      "fmaId": "FMA7913",
+      "name": "Right third costal cartilage",
+      "sourceName": "right third costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA7913",
+      "bounds": {
+        "min": [
+          -0.5072420239448547,
+          4.423799991607666,
+          1.214210033416748
+        ],
+        "max": [
+          -0.13051000237464905,
+          4.599799633026123,
+          1.4010800123214722
+        ]
+      },
+      "center": [
+        -0.3188760131597519,
+        4.5117998123168945,
+        1.30764502286911
+      ],
+      "anchor": [
+        -0.3484269976615906,
+        4.5548996925354,
+        1.277980089187622
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3337",
+          "sha256": "0dc64f1b1e8abd86ce8c345dae47ae9f14c9e3d3addee7a9e4fb07755033fff7"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-third-costal-cartilage",
+      "fmaId": "FMA8058",
+      "name": "Left third costal cartilage",
+      "sourceName": "left third costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8058",
+      "bounds": {
+        "min": [
+          0.13094499707221985,
+          4.424000263214111,
+          1.2143800258636475
+        ],
+        "max": [
+          0.5072259902954102,
+          4.599899768829346,
+          1.4007400274276733
+        ]
+      },
+      "center": [
+        0.319085493683815,
+        4.5119500160217285,
+        1.3075600266456604
+      ],
+      "anchor": [
+        0.32991698384284973,
+        4.542800426483154,
+        1.2879201173782349
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3245",
+          "sha256": "50a443a62da274da125475e6fa9b0653eec26880dd0cc22344f2c6ceb2ca0f4e"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fourth-costal-cartilage",
+      "fmaId": "FMA7976",
+      "name": "Right fourth costal cartilage",
+      "sourceName": "right fourth costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA7976",
+      "bounds": {
+        "min": [
+          -0.5990679860115051,
+          4.110999584197998,
+          1.342039942741394
+        ],
+        "max": [
+          -0.14311100542545319,
+          4.355600357055664,
+          1.4858700037002563
+        ]
+      },
+      "center": [
+        -0.37108949571847916,
+        4.233299970626831,
+        1.4139549732208252
+      ],
+      "anchor": [
+        -0.3594669997692108,
+        4.222700119018555,
+        1.4054800271987915
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3339",
+          "sha256": "8b023d2e8ff32ef995b6f4e3db2423787a8255fc994c5260b663b2145290d4c2"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fourth-costal-cartilage",
+      "fmaId": "FMA8167",
+      "name": "Left fourth costal cartilage",
+      "sourceName": "left fourth costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8167",
+      "bounds": {
+        "min": [
+          0.1430169939994812,
+          4.110799789428711,
+          1.3432600498199463
+        ],
+        "max": [
+          0.5977680087089539,
+          4.35569953918457,
+          1.4857699871063232
+        ]
+      },
+      "center": [
+        0.37039250135421753,
+        4.233249664306641,
+        1.4145150184631348
+      ],
+      "anchor": [
+        0.3685929775238037,
+        4.247399806976318,
+        1.4017798900604248
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3248",
+          "sha256": "bb9f9646cabaa97db7beb20f90c02065ece1ea935f4b86e57b5fb2666e33f7fe"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-fifth-costal-cartilage",
+      "fmaId": "FMA8070",
+      "name": "Right fifth costal cartilage",
+      "sourceName": "right fifth costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8070",
+      "bounds": {
+        "min": [
+          -0.8216580152511597,
+          3.716099739074707,
+          1.3931599855422974
+        ],
+        "max": [
+          -0.17699600756168365,
+          4.152500152587891,
+          1.5903599262237549
+        ]
+      },
+      "center": [
+        -0.49932701140642166,
+        3.934299945831299,
+        1.4917599558830261
+      ],
+      "anchor": [
+        -0.49982398748397827,
+        3.9382996559143066,
+        1.500789999961853
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3341",
+          "sha256": "78e34af57195fbade25925e556c858629c67e31213b75778252a4b000cc620d7"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-fifth-costal-cartilage",
+      "fmaId": "FMA8112",
+      "name": "Left fifth costal cartilage",
+      "sourceName": "left fifth costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8112",
+      "bounds": {
+        "min": [
+          0.17715299129486084,
+          3.716099739074707,
+          1.3932499885559082
+        ],
+        "max": [
+          0.8203359842300415,
+          4.152400016784668,
+          1.5903799533843994
+        ]
+      },
+      "center": [
+        0.49874448776245117,
+        3.9342498779296875,
+        1.4918149709701538
+      ],
+      "anchor": [
+        0.49482497572898865,
+        3.939499616622925,
+        1.5006799697875977
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3251",
+          "sha256": "153994f11ea01b550386323452501ef37f698d768c5e7189e224ec429e87fd24"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-sixth-costal-cartilage",
+      "fmaId": "FMA8194",
+      "name": "Right sixth costal cartilage",
+      "sourceName": "right sixth costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8194",
+      "bounds": {
+        "min": [
+          -0.936974048614502,
+          3.375600576400757,
+          1.3474899530410767
+        ],
+        "max": [
+          -0.13865500688552856,
+          3.9725000858306885,
+          1.6218699216842651
+        ]
+      },
+      "center": [
+        -0.5378145277500153,
+        3.6740503311157227,
+        1.484679937362671
+      ],
+      "anchor": [
+        -0.5285469889640808,
+        3.6235997676849365,
+        1.5423500537872314
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3343",
+          "sha256": "22079c9ebfef0aafd27a366416e3e4a1a4c190a25ea5c6beac844eda78cbb42d"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-sixth-costal-cartilage",
+      "fmaId": "FMA8221",
+      "name": "Left sixth costal cartilage",
+      "sourceName": "left sixth costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8221",
+      "bounds": {
+        "min": [
+          0.1386220008134842,
+          3.3757996559143066,
+          1.3517199754714966
+        ],
+        "max": [
+          0.9300140142440796,
+          3.9728002548217773,
+          1.6216099262237549
+        ]
+      },
+      "center": [
+        0.5343180075287819,
+        3.674299955368042,
+        1.4866649508476257
+      ],
+      "anchor": [
+        0.5240020155906677,
+        3.6285998821258545,
+        1.5435000658035278
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3254",
+          "sha256": "117248128a238182e9a2585db775ba336eb8e5172523eff26882d094400d1183"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:cartilage:right-seventh-costal-cartilage",
+      "fmaId": "FMA8248",
+      "name": "Right seventh costal cartilage",
+      "sourceName": "right seventh costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8248",
+      "bounds": {
+        "min": [
+          -1.0990899801254272,
+          3.0256006717681885,
+          1.2077499628067017
+        ],
+        "max": [
+          0.4956530034542084,
+          3.864499568939209,
+          1.6320799589157104
+        ]
+      },
+      "center": [
+        -0.30171848833560944,
+        3.4450501203536987,
+        1.419914960861206
+      ],
+      "anchor": [
+        -0.29624301195144653,
+        3.4568004608154297,
+        1.5327699184417725
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3345",
+          "sha256": "0bce64747fc720452920d6aa9061cba35430e31074ca35c655a310466a3c30a7"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:cartilage:left-seventh-costal-cartilage",
+      "fmaId": "FMA8275",
+      "name": "Left seventh costal cartilage",
+      "sourceName": "left seventh costal cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax"
+      ],
+      "bundle": "thorax-connective-recovery",
+      "nodeName": "FMA8275",
+      "bounds": {
+        "min": [
+          0.033289600163698196,
+          3.025799512863159,
+          1.2090400457382202
+        ],
+        "max": [
+          1.084570050239563,
+          3.864100456237793,
+          1.6321600675582886
+        ]
+      },
+      "center": [
+        0.5589298252016306,
+        3.444949984550476,
+        1.4206000566482544
+      ],
+      "anchor": [
+        0.49131402373313904,
+        3.4056005477905273,
+        1.5368400812149048
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3255",
+          "sha256": "bdf5071c36fa01955489b83366100e0d44cf7594a65319506fd44a8e01e08b9c"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

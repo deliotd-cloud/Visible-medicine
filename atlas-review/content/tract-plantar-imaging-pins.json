@@ -1,0 +1,346 @@
+{
+  "sourceCommit": "db16e7d92fd1a123dac748ba3ee82adb34aa0a27",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "bytes": 102396,
+      "sha256": "d4797b74c353d5364113703c07422d57e032325846975f7c752fe4a3ae36a424",
+      "structures": 2
+    },
+    {
+      "id": "thigh-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "bytes": 620568,
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "f3b067b50eb39cfd1360c79316a671b129ad4b52c6c1b0bb302fa00010c731f7",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+        "fmaId": "FMA58776",
+        "name": "Right iliotibial tract",
+        "sourceName": "right iliotibial tract",
+        "system": "connective",
+        "category": "fascia",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-connective-axial-detail",
+        "nodeName": "FMA58776",
+        "bounds": {
+          "min": [
+            -1.625190019607544,
+            -4.85713005065918,
+            -0.1736309826374054
+          ],
+          "max": [
+            -0.9180240035057068,
+            1.4515197277069092,
+            0.6337000131607056
+          ]
+        },
+        "center": [
+          -1.2716070115566254,
+          -1.7028051614761353,
+          0.23003451526165009
+        ],
+        "anchor": [
+          -1.3336999416351318,
+          -1.7277002334594727,
+          0.05577201768755913
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1423",
+            "sha256": "5be6b36001c18933694ec0871ed262da14c5b6c5f4d1f51b4cf5cd9b074bd76f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "iliotibial",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "fmaId": "FMA58777",
+        "name": "Left iliotibial tract",
+        "sourceName": "left iliotibial tract",
+        "system": "connective",
+        "category": "fascia",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-connective-axial-detail",
+        "nodeName": "FMA58777",
+        "bounds": {
+          "min": [
+            0.9180229902267456,
+            -4.85713005065918,
+            -0.17363201081752777
+          ],
+          "max": [
+            1.625190019607544,
+            1.4515197277069092,
+            0.6337000131607056
+          ]
+        },
+        "center": [
+          1.2716065049171448,
+          -1.7028051614761353,
+          0.2300340011715889
+        ],
+        "anchor": [
+          1.3336999416351318,
+          -1.7277002334594727,
+          0.05577201768755913
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1423M",
+            "sha256": "bfd57c0dcc185bf4fd7396064bc1c27c7e438427605f7826b4cfdbeb5e40f589"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "iliotibial",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+        "fmaId": "FMA44249",
+        "name": "Right long plantar ligament",
+        "sourceName": "right long plantar ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-connective-recovery",
+        "nodeName": "FMA44249",
+        "bounds": {
+          "min": [
+            -1.178279995918274,
+            -8.610419273376465,
+            -0.044085998088121414
+          ],
+          "max": [
+            -0.5938950181007385,
+            -8.363907814025879,
+            0.9254400730133057
+          ]
+        },
+        "center": [
+          -0.8860875070095062,
+          -8.487163543701172,
+          0.4406770374625921
+        ],
+        "anchor": [
+          -0.892598032951355,
+          -8.50725269317627,
+          0.46150803565979004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1424",
+            "sha256": "661b56c07f5a39362806f1c62d10497f42dbe1da37a680da0d4359c0c5079c9c"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "long-plantar",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+        "fmaId": "FMA44250",
+        "name": "Left long plantar ligament",
+        "sourceName": "left long plantar ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-connective-recovery",
+        "nodeName": "FMA44250",
+        "bounds": {
+          "min": [
+            0.5938950181007385,
+            -8.610419273376465,
+            -0.044086989015340805
+          ],
+          "max": [
+            1.178279995918274,
+            -8.363907814025879,
+            0.9254400730133057
+          ]
+        },
+        "center": [
+          0.8860875070095062,
+          -8.487163543701172,
+          0.44067654199898243
+        ],
+        "anchor": [
+          0.8925990462303162,
+          -8.50725269317627,
+          0.46150803565979004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1424M",
+            "sha256": "85a4d2965253a1638342e3295fb342ff0d8e8931c9d9b6373de6e6af7de3e79e"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "long-plantar",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

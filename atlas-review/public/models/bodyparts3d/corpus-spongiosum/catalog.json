@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "ad69d9ed9ad38cdeea4382407e0e3d48d533ffe4116bf62c709cab59178cc802",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+      "fmaId": "FMA19617",
+      "name": "Corpus spongiosum · bulb/shaft source",
+      "sourceName": "corpus spongiosum of penis",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "midline",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "corpus-spongiosum",
+      "nodeName": "FMA19617",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3133",
+          "sha256": "e90e440d57d2e6b0b85c622650c46bafe34c0886a6eed898062b914b5df1f14e"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.11280299723148346,
+          -0.9105299711227417,
+          0.2501530051231384
+        ],
+        "max": [
+          0.09973979741334915,
+          -0.1976899951696396,
+          1.371359944343567
+        ]
+      },
+      "center": [
+        -0.006531599909067154,
+        -0.5541099831461906,
+        0.8107564747333527
+      ],
+      "anchor": [
+        -0.024211199954152107,
+        -0.35267001390457153,
+        0.7853400111198425
+      ],
+      "coverageNote": "Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.4487199783325195,
+          -0.4784698486328125,
+          -0.4888122081756592
+        ],
+        "max": [
+          -0.0279029980301857,
+          1.5786901712417603,
+          0.8901899456977844
+        ]
+      },
+      "center": [
+        -0.7383114881813526,
+        0.5501101613044739,
+        0.20068886876106262
+      ],
+      "anchor": [
+        -0.6408339738845825,
+        0.5218298435211182,
+        0.20818497240543365
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3152",
+          "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+      "fmaId": "FMA16587",
+      "name": "Left hip bone",
+      "sourceName": "left hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16587",
+      "bounds": {
+        "min": [
+          0.02750309929251671,
+          -0.480490118265152,
+          -0.4868505895137787
+        ],
+        "max": [
+          1.4475399255752563,
+          1.5809003114700317,
+          0.8909500241279602
+        ]
+      },
+      "center": [
+        0.7375215124338865,
+        0.5502050966024399,
+        0.20204971730709076
+      ],
+      "anchor": [
+        0.6407599449157715,
+        0.5112402439117432,
+        0.24853698909282684
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3288",
+          "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urinary-bladder",
+      "fmaId": "FMA15900",
+      "name": "Urinary bladder",
+      "sourceName": "urinary bladder",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs",
+      "nodeName": "FMA15900",
+      "bounds": {
+        "min": [
+          -0.3414659798145294,
+          -0.10268005728721619,
+          0.06525298953056335
+        ],
+        "max": [
+          0.3262379765510559,
+          0.2998901307582855,
+          0.7824000716209412
+        ]
+      },
+      "center": [
+        -0.007614001631736755,
+        0.09860503673553467,
+        0.42382653057575226
+      ],
+      "anchor": [
+        0.054224301129579544,
+        0.25124022364616394,
+        0.4553859829902649
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3149",
+          "sha256": "b49f40d01bf28550094a7d17901e33e7066039f3a0fb8cf44d79fff2472f9926"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:prostate",
+      "fmaId": "FMA9600",
+      "name": "Prostate",
+      "sourceName": "prostate",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-recovery",
+      "nodeName": "FMA9600",
+      "bounds": {
+        "min": [
+          -0.17826201021671295,
+          -0.2791699171066284,
+          0.14504897594451904
+        ],
+        "max": [
+          0.16457800567150116,
+          -0.07560974359512329,
+          0.46460801362991333
+        ]
+      },
+      "center": [
+        -0.006842002272605896,
+        -0.17738983035087585,
+        0.3048284947872162
+      ],
+      "anchor": [
+        -0.008279549889266491,
+        -0.09260009974241257,
+        0.31331297755241394
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ3139",
+          "sha256": "f20448e74cf6b6096248361bc4f618c1d7f4c1acac77f785abc43e40835b13cb"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:unpaired:organ:urethra",
+      "fmaId": "FMA19667",
+      "name": "Urethra",
+      "sourceName": "urethra",
+      "system": "organs",
+      "category": "organ",
+      "laterality": "unpaired",
+      "region": "pelvis",
+      "regions": [
+        "pelvis"
+      ],
+      "bundle": "pelvis-organs-gaps",
+      "nodeName": "FMA19667",
+      "bounds": {
+        "min": [
+          -0.0160824004560709,
+          -0.9143102765083313,
+          0.29952698945999146
+        ],
+        "max": [
+          0.0031363300513476133,
+          -0.07487975805997849,
+          1.3417400121688843
+        ]
+      },
+      "center": [
+        -0.006473035202361643,
+        -0.4945950172841549,
+        0.8206335008144379
+      ],
+      "anchor": [
+        -0.009616579860448837,
+        -0.29971984028816223,
+        0.7556800246238708
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3148",
+          "sha256": "987ce1b01511f6ea323ba5a7a7438ba3df72d0cdc853985e08ca2965feb63c93"
+        }
+      ],
+      "coverageNote": "Selected adult-male urinary/reproductive source representation; no complete tract or wall-layer dissection is implied. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-organs",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "bytes": 49544,
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "structures": 2
+    },
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "pelvis-organs-gaps",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "bytes": 16892,
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "structures": 3
+    }
+  ],
+  "bundles": [
+    {
+      "id": "corpus-spongiosum",
+      "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "structures": 1
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.",
+  "clinicalApproval": false
+}

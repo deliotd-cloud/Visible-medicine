@@ -1,0 +1,31 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const expected=new Map([
+ ['app/anatomy-scene.tsx','1d516e2d8d5bedca20f2cd97010e872af929bf2546ab95014bc3426f69ce2a0f'],
+ ['lib/model-load-failure.ts','c9f7e0dbc6ebeaf8bfd758373c04ecd3bcccdf2394e77861e1a263fc1b7c9814'],
+]);
+const read=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
+const sha=(value:Uint8Array)=>createHash('sha256').update(value).digest('hex');
+
+test('shoulder learner and protected Review bind the exact access-feedback implementation',()=>{
+ const root='public/atlas-runtime/shoulder/',learner=read(root+'manifest.json');
+ const review=read('atlas-review/manifest.json'),viewer=read('public/atlas-review-viewer/manifest.json');
+ const inputs=read(root+'source-inputs.json'),pins=read('atlas-review/content/review-revisions.json');
+ assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,revision);assert.equal(viewer.sourceCommit,revision);
+ for(const [path,hash]of expected){
+  assert.equal(inputs.find((f:{path:string})=>f.path===path)?.sha256,hash);
+  const imported=review.files.find((f:{path:string})=>f.path===path);
+  assert.equal(imported?.sourceSha256,hash);assert.equal(sha(readFileSync('atlas-review/'+path)),imported.importedSha256);
+  assert.equal(new Map(pins.display).get(path),hash);
+ }
+ for(const [base,manifest]of [[root,learner],['public/atlas-review-viewer/',viewer]] as const){
+  const text=manifest.files.filter((f:{path:string})=>f.path.endsWith('.js')).map((f:{path:string;sha256:string})=>{
+   const bytes=readFileSync(base+f.path);assert.equal(sha(bytes),f.sha256);return bytes.toString();
+  }).join('\n');
+  for(const copy of ['Some model files require sign-in.','The website refused access to some model files.','Check access again','Retry shoulder anatomy'])assert(text.includes(copy),copy);
+ }
+ assert.equal(learner.clinicalApproved,false);assert.equal(learner.patientDataIncluded,false);
+});

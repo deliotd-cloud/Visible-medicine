@@ -1,0 +1,16 @@
+.atlas-workspace-navigation{display:flex;align-items:center;gap:12px;min-width:0;border:1px solid #304541;border-radius:5px;background:#101b1a;padding:3px 8px;color:#e5f0ed}
+.atlas-workspace-navigation .imaging-workspace-modalities{display:flex;align-items:center;gap:3px;flex-wrap:wrap;min-width:0}
+.atlas-workspace-navigation .imaging-workspace-modalities :is(a,span){display:inline-block;color:#b7cbc5;font-size:13px;text-decoration:none;padding:7px 9px;border-radius:3px;white-space:nowrap}
+.atlas-workspace-navigation .imaging-workspace-modalities a:hover{background:#203b36;color:#fff}
+.atlas-workspace-navigation .imaging-workspace-modalities [aria-current=page]{background:#1b403a;color:#d5fffa;font-weight:650}
+.atlas-workspace-navigation .atlas-region-navigation{display:block;flex:1;min-width:220px;min-height:0;border:0;border-left:1px solid #304541;padding:0 0 0 12px;background:transparent}
+.atlas-workspace-navigation .atlas-region-form{max-width:none;justify-content:flex-end;gap:6px}
+.atlas-workspace-navigation .atlas-region-picker{flex:0 1 270px;gap:7px;color:#b7cbc5;font-size:12px}
+.atlas-workspace-navigation .atlas-region-picker select{width:100%;min-height:32px;max-width:none;font-size:12px;background:#0b1513;color:#e5f0ed;border-color:#304541}
+.atlas-workspace-navigation .atlas-region-open{min-height:32px;min-width:35px;font-size:12px;background:#1b403a;color:#d5fffa;border-color:#407e74;padding:5px 8px}
+.atlas-workspace-navigation :is(a,select,button):focus-visible{outline:2px solid #82d7cf;outline-offset:2px}
+.atlas-workspace-navigation-help{position:relative;flex:0 0 auto;min-width:0;color:#b7cbc5;font-size:12px}
+.atlas-workspace-navigation-help summary{cursor:pointer;padding:7px 4px;white-space:nowrap}
+.atlas-workspace-navigation-help summary:focus-visible{outline:2px solid #82d7cf;outline-offset:2px}
+.atlas-workspace-navigation-help p{position:absolute;z-index:20;top:100%;left:0;width:min(380px,calc(100vw - 32px));margin:6px 0 0;padding:12px;border:1px solid #407e74;border-radius:5px;background:#101b1a;color:#e5f0ed;font-size:13px;line-height:1.5;box-shadow:0 4px 16px #0004}
+@media(max-width:760px){.atlas-workspace-navigation{align-items:stretch;flex-direction:column;gap:3px}.atlas-workspace-navigation .atlas-region-navigation{border-left:0;border-top:1px solid #304541;padding:5px 0 2px;min-width:0}.atlas-workspace-navigation .atlas-region-form{justify-content:flex-start}}

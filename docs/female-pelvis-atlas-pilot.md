@@ -1,0 +1,31 @@
+# Female pelvis Atlas pilot
+
+The catalogue now includes `/atlas/female-pelvis-3d`, beside the shoulder pilot. It is a same-origin, first-party browser module compiled from Atlas commit `cd7d93ca078d2af20efa86a801bdf11fe55e52f5`; `public/atlas-runtime/female-pelvis/manifest.json` binds its exact files to that source. The [responsive-label update](responsive-atlas-labels.md) reduces mobile clutter and documents actual browser checks. The subsequent pelvic-context teaching update retains those controls and geometry.
+
+41 source surfaces, eight studies, tissue toggles/search, selection, fade/frame/set-aside, undo/redo/reset, selectable separation mechanisms, labels and identification practice reuse the actual HRA pelvic workbench. Introductory draft teaching now covers all 41 retained selections (28 distinct concepts); modality coverage remains partial. Ten previously untaught selections add bladder/rectal/vascular/sacral and cervicovaginal context without changing the 31 older lessons or model. All six withheld source groups stay withheld. No pelvic floor, nerve network, complete female anatomy, patient scan, registered image or clinical acceptance is claimed.
+
+The page shares the shoulder's model-first frame and collapsed coverage note, keeping the canvas prominent. The module has independently scrollable controls and a stacked small-screen layout. It does not add a second website navigation system. Study/camera selectors now display readable names rather than internal IDs; long study names wrap. The embedded panel explicitly retains vertical-only scrolling.
+
+On 12 September 2026 a local browser pass reproduced a real loading failure in the initial export: the delivery resolver rejected the catalogue's versioned model URL. Atlas `190f62bbf9706789452b8af1a6ad2a13a812a300` fixes this and tests actual catalogue URLs, while continuing to reject external addresses, traversal and unrelated query parameters. Actual WebGL geometry subsequently loaded. This supersedes the earlier SSR-only loading evidence; stubbing the scene could not establish browser loading.
+
+The same pass preserved a verified orphaned local preview lock as a separate recovery file after checking that its recorded PID did not exist and port 3000 had no listener. No process was killed. The owned preview then served the route successfully.
+
+Real-browser checks covered all eight study views; set-aside, undo, redo and reset; fade/frame; all three separation styles to 100% and return to source positions; filtered search and selection; practice reveal/next/back with selection, visibility and search preserved; and free camera rotation. At 390×844 the document width equals the viewport width, the model remains above the independent controls, and there is no horizontal page/panel scrollbar. Mobile labels can still obscure a small model: the existing Labels control exposes an unobstructed view. This is a single browser/viewport sample, not physical touch-device, assistive-technology, 200% text, cross-browser or anatomical acceptance.
+
+Remaining console findings: the rendered Three.js bundle emits a non-blocking Clock deprecation warning; a MutationObserver error without an attributable application URL also appears during reload. Its origin is unresolved, so a completely clean console is not claimed.
+
+## Delivery and source of truth
+
+Do not hand-edit the generated module. Rebuild from Atlas `integration/female-pelvis` and its documented export script, preserving the old version before a replacement. The manifest records file sizes/hashes and explicitly declares no patient data, clinical approval, review connection or imaging connection. Exactly one canonical 3,796,080-byte HRA display GLB is included, unchanged SHA-256 `f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866`.
+
+The iframe is trusted code with CSS isolation, **not** a security sandbox or paywall. Preserve the owner-private audience. Independent Atlas/case/lecture server-side authorization is still required for launch. No private Atlas review API or patient study is connected; the shoulder selection adapter is not a valid adapter for these different pelvic IDs. Didanix Education linking waits for cleared mappings and actual adapter acceptance.
+
+The module includes original HRA/HuBMAP CC BY 4.0 attribution, modifications, model download and legal text, plus licence text for the dependencies actually bundled. No new dependency, paid service, font, texture or AI-generated anatomy was added. Source/reference rights remain separate from original MIT code/teaching.
+
+## Verification and release
+
+Pelvic-context browser sample, 12 September 2026: all ten new selections opened their own draft and self-check in the actual embedded module. Rectal MRI displayed the ESGAR 2026 reference and the explanation remained concealed until requested. Sacral Ultrasound remained explicitly pending. Source-identification practice started with a ten-question cap, hid labels, revealed feedback and returned to the selected sacrum with the filtered search retained. Opening a different selection correctly collapsed the previous learning panel. This sample does not establish full accessibility/device acceptance or medical correctness.
+
+Prior release evidence: TypeScript/build, source/delivery, real React workbench/practice SSR, delivery-prefix and private review regressions passed. The pelvic-context extension additionally verifies all 41 taught selections across 328 rendered topic panels, preserves the prior 31 lessons exactly and retains the same 41-mesh SHA-256. Extended drafts total 178: Clinical/Pathology/MRI 41 each, CT 12, X-ray 4 and Ultrasound 39. Missing modality topics still display pending; comprehensive clinical coverage is not claimed. Current website tests check both runtime inventories and source hashes. None reads private production review records or grants clinical approval.
+
+Initial GitHub/D recovery and terminal private publication evidence are recorded in the main coordinating task's `work/PELVIC-MODULE-CHECKPOINT-20260912.md`; the newer browser fixes are recorded in `work/PELVIC-BROWSER-CHECKPOINT-20260912.md` after verification. The standalone Atlas's earlier version 171 is a separate release and is not updated by this smaller website delivery.

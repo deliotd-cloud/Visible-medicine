@@ -1,0 +1,200 @@
+{
+  "schema": "vm-deep-plantar-ultrasound-pins-1",
+  "parentCommit": "7b3e678ae4b8059aadb84459048ebd05f7abe7b9",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "bundles": [
+    {
+      "id": "foot-vessels-foot-vascular",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "bytes": 192916,
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "structures": 8
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "e4e8e1a578e59e16c88c043044d7da7a2c4637d4f346ee9953b36fd17f78754b",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+        "fmaId": "FMA69514",
+        "name": "Right deep plantar artery",
+        "sourceName": "right deep plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA69514",
+        "bounds": {
+          "min": [
+            -0.9863829612731934,
+            -8.398268699645996,
+            0.7904300093650818
+          ],
+          "max": [
+            -0.9010819792747498,
+            -8.230071067810059,
+            1.0000500679016113
+          ]
+        },
+        "center": [
+          -0.9437324702739716,
+          -8.314169883728027,
+          0.8952400386333466
+        ],
+        "anchor": [
+          -0.9452620148658752,
+          -8.325501441955566,
+          0.906719982624054
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2136",
+            "sha256": "fe4fc6b629bff4228554964bbca5b8aacc81c721e8a5177a010f8365b9d2b3da"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "reviewFingerprint": {
+        "fingerprints": {
+          "source": "aa70c652659fb3beb4cc6633205c6ffa2fe5c359fe527c421994dd546c35305b",
+          "teaching": "6c92fbac7477a77c375bea7af29377673d80552841db324e828f1922f0df0334",
+          "checklist": "3e4036adc728653d9951ddfb28e8a199f5f4e174f06f6e931f3c572ac7376db7"
+        },
+        "materialHash": "50fc6b649990ce5abda667776498cc7c8a80eb60975a2f515c904c62a5be6fa7"
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+        "fmaId": "FMA69515",
+        "name": "Left deep plantar artery",
+        "sourceName": "left deep plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA69515",
+        "bounds": {
+          "min": [
+            0.901017963886261,
+            -8.397970199584961,
+            0.7905499339103699
+          ],
+          "max": [
+            0.9864949584007263,
+            -8.230093002319336,
+            1.0001400709152222
+          ]
+        },
+        "center": [
+          0.9437564611434937,
+          -8.314031600952148,
+          0.895345002412796
+        ],
+        "anchor": [
+          0.9472869634628296,
+          -8.321274757385254,
+          0.9092300534248352
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2068",
+            "sha256": "d4c5c4fda6fed56de66b8991b23aa7f08f39924bb2970ebb6129abfac191d945"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "reviewFingerprint": {
+        "fingerprints": {
+          "source": "c4022d24f2f778ea7b600d24f1e23ae515322e20ba35461c64029f0906c5424b",
+          "teaching": "a03f21b0ab2dc0e0f0f7a1c87524593e19ba7f2722ce4eea903060c6598405fd",
+          "checklist": "bfca669b7c88b0aefe25286ce22cc1237d083fe132452d9313a9067a18611a46"
+        },
+        "materialHash": "b6f22fb67ec2622db0a8c4d8ab925b768d35c6aefd635d220ed7dbbeca2ebf35"
+      }
+    }
+  ],
+  "sourceAssetsUnchanged": true,
+  "originalObjectBytesVerified": false,
+  "references": [
+    {
+      "doi": "10.1016/S1078-5884(98)80086-5",
+      "url": "https://doi.org/10.1016/S1078-5884(98)80086-5",
+      "rights": "Reference only; no article, text, figures, scans or tables imported. Original factual editorial summary."
+    }
+  ],
+  "clinicalApproval": false,
+  "patientSpaceRegistration": false,
+  "newAssetAdmission": false
+}

@@ -1,0 +1,414 @@
+{
+  "parentCommit": "ff5ff41986f2d87e6b1ecb4d572fb811510461fb",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "celiac-display-corrected",
+      "url": "/models/bodyparts3d/celiac-display/celiac-display.glb?v=4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+      "bytes": 5604,
+      "sha256": "4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+      "structures": 1
+    }
+  ],
+  "entries": [
+    {
+      "key": "abdominal-vessel-celiac-artery",
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+        "fmaId": "FMA50737",
+        "name": "Celiac artery",
+        "sourceName": "celiac artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "celiac-display-corrected",
+        "nodeName": "FMA50737",
+        "bounds": {
+          "min": [
+            0.011040699668228626,
+            2.7765002250671387,
+            0.5759400129318237
+          ],
+          "max": [
+            0.12240300327539444,
+            2.898399591445923,
+            0.8078700304031372
+          ]
+        },
+        "center": [
+          0.06672185147181153,
+          2.8374499082565308,
+          0.6919050216674805
+        ],
+        "anchor": [
+          0.0719733014702797,
+          2.86579966545105,
+          0.7196300029754639
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1846",
+            "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+          },
+          {
+            "file": "FJ2013",
+            "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "abdominal-vessel-superior-mesenteric-artery",
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "fmaId": "FMA14749",
+        "name": "Superior mesenteric artery",
+        "sourceName": "superior mesenteric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14749",
+        "bounds": {
+          "min": [
+            -0.6094620227813721,
+            1.094559907913208,
+            0.6211900115013123
+          ],
+          "max": [
+            0.08399049937725067,
+            2.546600341796875,
+            1.0136399269104004
+          ]
+        },
+        "center": [
+          -0.2627357617020607,
+          1.8205801248550415,
+          0.8174149692058563
+        ],
+        "anchor": [
+          -0.09160909801721573,
+          1.8007702827453613,
+          0.9157600402832031
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1928",
+            "sha256": "14ce4846d476c185a279247162ee118ac9c056593023f66d24f4a4d470e56a7c"
+          },
+          {
+            "file": "FJ2011",
+            "sha256": "db6caec612b1564155c869d452904b1e9e834f2f556a9a0b3e2564ce9757e65a"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "abdominal-vessel-inferior-mesenteric-artery",
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "fmaId": "FMA14750",
+        "name": "Inferior mesenteric artery",
+        "sourceName": "inferior mesenteric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14750",
+        "bounds": {
+          "min": [
+            0.0419296994805336,
+            0.9904998540878296,
+            0.6327300071716309
+          ],
+          "max": [
+            0.18455900251865387,
+            1.8623199462890625,
+            0.8671899437904358
+          ]
+        },
+        "center": [
+          0.11324435099959373,
+          1.426409900188446,
+          0.7499599754810333
+        ],
+        "anchor": [
+          0.14257699251174927,
+          1.4129101037979126,
+          0.7858900427818298
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3442",
+            "sha256": "865cc814e7412113703bfe503424a92e745e6cbf6e788465f06c6be8f1079c6c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "abdominal-vessel-hepatic-portal-vein",
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+        "fmaId": "FMA50735",
+        "name": "Hepatic portal vein",
+        "sourceName": "hepatic portal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA50735",
+        "bounds": {
+          "min": [
+            -0.2144879847764969,
+            2.623199462890625,
+            0.7359400391578674
+          ],
+          "max": [
+            -0.07081809639930725,
+            3.1111998558044434,
+            0.9421499371528625
+          ]
+        },
+        "center": [
+          -0.14265304058790207,
+          2.867199659347534,
+          0.839044988155365
+        ],
+        "anchor": [
+          -0.17304199934005737,
+          2.8711998462677,
+          0.8311700224876404
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1853",
+            "sha256": "a9e359ffc1ab1d6f3134e72ca2a8ebaf1dc91df94827f4226a453fb3608e2d9b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "abdominal-vessel-abdominal-aorta",
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "fmaId": "FMA3789",
+        "name": "Abdominal aorta",
+        "sourceName": "abdominal aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA3789",
+        "bounds": {
+          "min": [
+            -0.009028740227222443,
+            1.4869097471237183,
+            0.32476097345352173
+          ],
+          "max": [
+            0.200547993183136,
+            3.359100341796875,
+            0.8277599811553955
+          ]
+        },
+        "center": [
+          0.09575962647795677,
+          2.4230050444602966,
+          0.5762604773044586
+        ],
+        "anchor": [
+          0.0937374010682106,
+          2.370999813079834,
+          0.619629979133606
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1932",
+            "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "abdominal-vessel-inferior-vena-cava",
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "fmaId": "FMA10951",
+        "name": "Inferior vena cava",
+        "sourceName": "inferior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA10951",
+        "bounds": {
+          "min": [
+            -0.2682560086250305,
+            1.5089203119277954,
+            0.5355200171470642
+          ],
+          "max": [
+            -0.02058500051498413,
+            3.9053003787994385,
+            0.787899911403656
+          ]
+        },
+        "center": [
+          -0.14442050457000732,
+          2.707110345363617,
+          0.6617099642753601
+        ],
+        "anchor": [
+          -0.17249399423599243,
+          2.727900505065918,
+          0.7307199835777283
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3441",
+            "sha256": "7b03ef0464b622d0a839c3c55aedcec2a713b4399112e7ce6efa1ac51861b606"
+          },
+          {
+            "file": "FJ3659",
+            "sha256": "2241af6de027922eb74cb58d882433a5d0ffb7ecce41a1925f05e13dd78d666c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    }
+  ]
+}

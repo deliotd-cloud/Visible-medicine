@@ -1,0 +1,475 @@
+{
+  "sourceCommit": "84e8d083c0bfc7cd41542f5fa0cbb7e172ac2e02",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-vessels-hand-vascular",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "bytes": 534016,
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "structures": 26
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "df39b989580042d68e39ae1e8d5d42c1ba3eb1c9f2a63fe5a96bcba96821908e",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-palmar-metacarpal-artery",
+        "fmaId": "FMA22864",
+        "name": "Right palmar metacarpal artery",
+        "sourceName": "right palmar metacarpal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22864",
+        "bounds": {
+          "min": [
+            -2.828930139541626,
+            -0.5640100240707397,
+            0.6928399801254272
+          ],
+          "max": [
+            -2.404289960861206,
+            -0.1852099597454071,
+            0.9146899580955505
+          ]
+        },
+        "center": [
+          -2.616610050201416,
+          -0.3746099919080734,
+          0.8037649691104889
+        ],
+        "anchor": [
+          -2.683150053024292,
+          -0.3753002882003784,
+          0.839620053768158
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2289",
+            "sha256": "a14542bb1aaa1caaa3e0c37bd66fdeb33f88d89f4760c0cb0c591cce8c76ed92"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "metacarpal",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-palmar-metacarpal-artery",
+        "fmaId": "FMA22865",
+        "name": "Left palmar metacarpal artery",
+        "sourceName": "left palmar metacarpal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22865",
+        "bounds": {
+          "min": [
+            2.404589891433716,
+            -0.5640997290611267,
+            0.692829966545105
+          ],
+          "max": [
+            2.8287298679351807,
+            -0.18533019721508026,
+            0.914609968662262
+          ]
+        },
+        "center": [
+          2.6166598796844482,
+          -0.3747149631381035,
+          0.8037199676036835
+        ],
+        "anchor": [
+          2.6790499687194824,
+          -0.3524700999259949,
+          0.8341701030731201
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2237",
+            "sha256": "003e898bce96e168bc39b856dea13e6b85089f04ca50bc1b812cbbfa21776bf2"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "metacarpal",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-arteria-princeps-pollicis",
+        "fmaId": "FMA22905",
+        "name": "Right arteria princeps pollicis",
+        "sourceName": "right arteria princeps pollicis",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22905",
+        "bounds": {
+          "min": [
+            -3.244259834289551,
+            -0.8046002388000488,
+            0.745169997215271
+          ],
+          "max": [
+            -2.7337799072265625,
+            0.16978026926517487,
+            1.2536900043487549
+          ]
+        },
+        "center": [
+          -2.9890198707580566,
+          -0.317409984767437,
+          0.9994300007820129
+        ],
+        "anchor": [
+          -3.0648999214172363,
+          -0.2543499767780304,
+          1.019029974937439
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2371",
+            "sha256": "aa6b302f739011b74473ee503692661ef5f068396c3e45c76f83888f90d9ac62"
+          },
+          {
+            "file": "FJ2372",
+            "sha256": "410486a2460ca05fb882503a5fe0c8ecd087d11282a7eca064a3b9da203b4aeb"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "princeps",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-arteria-princeps-pollicis",
+        "fmaId": "FMA22907",
+        "name": "Left arteria princeps pollicis",
+        "sourceName": "left arteria princeps pollicis",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22907",
+        "bounds": {
+          "min": [
+            2.7338900566101074,
+            -0.8042401075363159,
+            0.7451499700546265
+          ],
+          "max": [
+            3.244259834289551,
+            0.16982971131801605,
+            1.2536799907684326
+          ]
+        },
+        "center": [
+          2.989074945449829,
+          -0.31720519810914993,
+          0.9994149804115295
+        ],
+        "anchor": [
+          3.066229820251465,
+          -0.2554699778556824,
+          1.0175100564956665
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2338",
+            "sha256": "c4c706654f976142c288374563c3256bd22e748c9b06b4ba7faae6b4617cc051"
+          },
+          {
+            "file": "FJ2339",
+            "sha256": "c147fd6d4ade806956392706119eff828487da87d4a9dcaaa8c4f4ee2e696c9d"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "princeps",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-arteria-radialis-indicis",
+        "fmaId": "FMA22777",
+        "name": "Right arteria radialis indicis",
+        "sourceName": "right arteria radialis indicis",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22777",
+        "bounds": {
+          "min": [
+            -3.138120174407959,
+            -1.3513598442077637,
+            0.8625500202178955
+          ],
+          "max": [
+            -2.7070300579071045,
+            -0.296060174703598,
+            1.3425599336624146
+          ]
+        },
+        "center": [
+          -2.9225751161575317,
+          -0.8237100094556808,
+          1.102554976940155
+        ],
+        "anchor": [
+          -2.979640007019043,
+          -0.8477697968482971,
+          0.9278500080108643
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2342",
+            "sha256": "044c4a4cfe047ce12134d1184f1a683291b09dff453db794d80d86a6bff3b034"
+          },
+          {
+            "file": "FJ2363",
+            "sha256": "fa61f393b2aa0934a6c0fbdaa883bc17754a837bdb96d88aa3bb3f1bc06ac56d"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "indicis",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-arteria-radialis-indicis",
+        "fmaId": "FMA22778",
+        "name": "Left arteria radialis indicis",
+        "sourceName": "left arteria radialis indicis",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22778",
+        "bounds": {
+          "min": [
+            2.706969976425171,
+            -1.351199984550476,
+            0.8625300526618958
+          ],
+          "max": [
+            3.1379799842834473,
+            -0.2959698438644409,
+            1.3424699306488037
+          ]
+        },
+        "center": [
+          2.922474980354309,
+          -0.8235849142074585,
+          1.1024999916553497
+        ],
+        "anchor": [
+          2.987600088119507,
+          -0.867230236530304,
+          0.9342599511146545
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2314",
+            "sha256": "20f4253cb295a3fbaf9951dff5a092690950a78565142b4e7b6e629e10fcd68d"
+          },
+          {
+            "file": "FJ2332",
+            "sha256": "a6ebd74f68d24d6eab266b275dc17e5c93c727114f06a9d3385b124d90e61a3e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "indicis",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

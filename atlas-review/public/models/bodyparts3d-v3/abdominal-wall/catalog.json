@@ -1,0 +1,1434 @@
+{
+  "version": 1,
+  "specimenId": "bp3d3-abdominal-wall",
+  "source": {
+    "version": "3.0, OBJ 99% reduction",
+    "license": "CC BY-SA 2.1 JP",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    "credit": "BodyParts3D, Copyright© The Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan",
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/README_e.html",
+    "archive": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip",
+    "registration": "none"
+  },
+  "displayTransformColumnMajor": [
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -0.01,
+    0,
+    0,
+    0.01,
+    0,
+    0,
+    0,
+    -10.5,
+    -1,
+    1
+  ],
+  "structures": [
+    {
+      "id": "bp3d3-abdominal-wall-FMA13336",
+      "fmaId": "FMA13336",
+      "name": "Right external oblique",
+      "sourceName": "right external oblique",
+      "slug": "right-external-oblique",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13336",
+      "bounds": {
+        "min": [
+          -1.3947700262069702,
+          -2.4022998809814453,
+          -0.6137030124664307
+        ],
+        "max": [
+          -0.031453099101781845,
+          1.7860000133514404,
+          1.1859999895095825
+        ]
+      },
+      "center": [
+        -0.713111562654376,
+        -0.30814993381500244,
+        0.2861484885215759
+      ],
+      "anchor": [
+        -1.0681699514389038,
+        -0.36800000071525574,
+        0.44200000166893005
+      ],
+      "sources": [
+        {
+          "file": "FMA13336",
+          "sha256": "8e48613f6aae18d6e6d3526497e1b41b9a7c9a85a9267827dd90f5cbe4f288c8"
+        }
+      ],
+      "triangles": 120430,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 42,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#b35c50"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13337",
+      "fmaId": "FMA13337",
+      "name": "Left external oblique",
+      "sourceName": "left external oblique",
+      "slug": "left-external-oblique",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13337",
+      "bounds": {
+        "min": [
+          0.01835940033197403,
+          -2.401859998703003,
+          -0.6132969856262207
+        ],
+        "max": [
+          1.3815499544143677,
+          1.782099962234497,
+          1.1859999895095825
+        ]
+      },
+      "center": [
+        0.6999546773731709,
+        -0.30988001823425293,
+        0.2863515019416809
+      ],
+      "anchor": [
+        1.0584800243377686,
+        -0.3619999885559082,
+        0.4359999895095825
+      ],
+      "sources": [
+        {
+          "file": "FMA13337",
+          "sha256": "929021730ded4d40b470c2c07e1ab0e846fda06ebc7ba8b1072defd041447919"
+        }
+      ],
+      "triangles": 119788,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 41,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#b35c50"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13892",
+      "fmaId": "FMA13892",
+      "name": "Right internal oblique",
+      "sourceName": "right internal oblique",
+      "slug": "right-internal-oblique",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13892",
+      "bounds": {
+        "min": [
+          -1.239359974861145,
+          -2.402009963989258,
+          -0.5385739803314209
+        ],
+        "max": [
+          -0.033925801515579224,
+          1.3902000188827515,
+          1.1611499786376953
+        ]
+      },
+      "center": [
+        -0.6366428881883621,
+        -0.5059049725532532,
+        0.3112879991531372
+      ],
+      "anchor": [
+        -0.9594339728355408,
+        -0.4650000035762787,
+        0.5174999833106995
+      ],
+      "sources": [
+        {
+          "file": "FMA13892",
+          "sha256": "b5e1938292a9537226e6daf4bf3c787fe95437cd0be65bed89ac36be919a8213"
+        }
+      ],
+      "triangles": 58408,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 3,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#bf7965"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13893",
+      "fmaId": "FMA13893",
+      "name": "Left internal oblique",
+      "sourceName": "left internal oblique",
+      "slug": "left-internal-oblique",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13893",
+      "bounds": {
+        "min": [
+          0.02083979919552803,
+          -2.4019699096679688,
+          -0.5383009910583496
+        ],
+        "max": [
+          1.2257200479507446,
+          1.3903000354766846,
+          1.1611100435256958
+        ]
+      },
+      "center": [
+        0.6232799235731363,
+        -0.5058349370956421,
+        0.3114045262336731
+      ],
+      "anchor": [
+        0.9482229948043823,
+        -0.4724999964237213,
+        0.5149999856948853
+      ],
+      "sources": [
+        {
+          "file": "FMA13893",
+          "sha256": "c768ff8691c181b9826a8f5f83869ec8e6f29d36f7d7ff780d52b8a3b9f8fc40"
+        }
+      ],
+      "triangles": 57920,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#bf7965"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA22344",
+      "fmaId": "FMA22344",
+      "name": "Right transversus abdominis",
+      "sourceName": "right transversus abdominis",
+      "slug": "right-transversus-abdominis",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA22344",
+      "bounds": {
+        "min": [
+          -1.2940000295639038,
+          -2.4861900806427,
+          -0.6339259743690491
+        ],
+        "max": [
+          -0.0402538999915123,
+          1.5901999473571777,
+          0.9863100051879883
+        ]
+      },
+      "center": [
+        -0.667126964777708,
+        -0.44799506664276123,
+        0.1761920154094696
+      ],
+      "anchor": [
+        -0.9671289920806885,
+        -0.49000000953674316,
+        0.21250000596046448
+      ],
+      "sources": [
+        {
+          "file": "FMA22344",
+          "sha256": "b6241b71a6ac13e6ab190eb8a119bf2084482b4a54836a19a6fefb5e89ea8129"
+        }
+      ],
+      "triangles": 68682,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#98594e"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA22345",
+      "fmaId": "FMA22345",
+      "name": "Left transversus abdominis",
+      "sourceName": "left transversus abdominis",
+      "slug": "left-transversus-abdominis",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA22345",
+      "bounds": {
+        "min": [
+          0.027285199612379074,
+          -2.4863500595092773,
+          -0.6341210007667542
+        ],
+        "max": [
+          1.2807600498199463,
+          1.5901999473571777,
+          0.9860000014305115
+        ]
+      },
+      "center": [
+        0.6540226247161627,
+        -0.4480750560760498,
+        0.17593950033187866
+      ],
+      "anchor": [
+        0.9541599750518799,
+        -0.48750001192092896,
+        0.2150000035762787
+      ],
+      "sources": [
+        {
+          "file": "FMA22345",
+          "sha256": "7ef955fe297a89331924c8835b31dbed8896202af6c414f41b05df7dd33cc6f2"
+        }
+      ],
+      "triangles": 68592,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 20,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#98594e"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13377",
+      "fmaId": "FMA13377",
+      "name": "Right rectus abdominis",
+      "sourceName": "right rectus abdominis",
+      "slug": "right-rectus-abdominis",
+      "tissue": "muscle",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13377",
+      "bounds": {
+        "min": [
+          -0.7972339987754822,
+          -2.4059998989105225,
+          0.41495001316070557
+        ],
+        "max": [
+          -0.035359401255846024,
+          1.5514999628067017,
+          1.1373599767684937
+        ]
+      },
+      "center": [
+        -0.4162967000156641,
+        -0.4272499680519104,
+        0.7761549949645996
+      ],
+      "anchor": [
+        -0.42018699645996094,
+        -0.4259999990463257,
+        0.7940000295639038
+      ],
+      "sources": [
+        {
+          "file": "FMA13377",
+          "sha256": "b00b3d214f6ee3b4fc16ca9dd4e64b4ac3047862a2bfcb6c06b50e371d621772"
+        }
+      ],
+      "triangles": 41920,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 5,
+        "nonManifoldEdges": 4,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c97970"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13378",
+      "fmaId": "FMA13378",
+      "name": "Left rectus abdominis",
+      "sourceName": "left rectus abdominis",
+      "slug": "left-rectus-abdominis",
+      "tissue": "muscle",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13378",
+      "bounds": {
+        "min": [
+          -0.06647539883852005,
+          -2.4019999504089355,
+          0.41488999128341675
+        ],
+        "max": [
+          0.784171998500824,
+          1.5513999462127686,
+          1.1375199556350708
+        ]
+      },
+      "center": [
+        0.35884829983115196,
+        -0.4253000020980835,
+        0.7762049734592438
+      ],
+      "anchor": [
+        0.3580000102519989,
+        -0.4311999976634979,
+        0.8080000281333923
+      ],
+      "sources": [
+        {
+          "file": "FMA13378",
+          "sha256": "b8029d562de3ef08af46414a004bd4d4bd569da72849bcb00c4f4e5b610c8b4f"
+        }
+      ],
+      "triangles": 41406,
+      "omittedSourceFaces": [],
+      "coverageNote": "Whole version-3 source surface. Muscle/aponeurotic boundaries and attachment footprints are not validated.",
+      "sourceQuality": {
+        "components": 5,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c97970"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA16586",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "slug": "right-hip-bone",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.3121700286865234,
+          -2.910830020904541,
+          -0.8614879846572876
+        ],
+        "max": [
+          -0.03475220128893852,
+          -0.8333799839019775,
+          0.521399974822998
+        ]
+      },
+      "center": [
+        -0.673461114987731,
+        -1.8721050024032593,
+        -0.17004400491714478
+      ],
+      "anchor": [
+        -0.5839530229568481,
+        -1.8881200551986694,
+        -0.217398002743721
+      ],
+      "sources": [
+        {
+          "file": "FMA16586",
+          "sha256": "2fc0f001ad13acfb2e77979a3e7d02f2476fe54b64a4ea1c4caafd2632969a14"
+        }
+      ],
+      "triangles": 1942,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA16587",
+      "fmaId": "FMA16587",
+      "name": "Left hip bone",
+      "sourceName": "left hip bone",
+      "slug": "left-hip-bone",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA16587",
+      "bounds": {
+        "min": [
+          0.0427887998521328,
+          -2.904400110244751,
+          -0.8600130081176758
+        ],
+        "max": [
+          1.3188199996948242,
+          -0.82778000831604,
+          0.5209000110626221
+        ]
+      },
+      "center": [
+        0.6808043997734785,
+        -1.8660900592803955,
+        -0.16955649852752686
+      ],
+      "anchor": [
+        0.5916159749031067,
+        -1.8970500230789185,
+        -0.2012529969215393
+      ],
+      "sources": [
+        {
+          "file": "FMA16587",
+          "sha256": "959df200626165d47c38d3135c17c0b22267c3b708d1c0600619d1b251c1f958"
+        }
+      ],
+      "triangles": 1892,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA16202",
+      "fmaId": "FMA16202",
+      "name": "Sacrum",
+      "sourceName": "sacrum",
+      "slug": "sacrum",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA16202",
+      "bounds": {
+        "min": [
+          -0.6005409955978394,
+          -2.5919599533081055,
+          -0.9437364935874939
+        ],
+        "max": [
+          0.6209989786148071,
+          -1.1412299871444702,
+          -0.05431799963116646
+        ]
+      },
+      "center": [
+        0.010228991508483887,
+        -1.8665949702262878,
+        -0.4990272466093302
+      ],
+      "anchor": [
+        0.05954739823937416,
+        -1.7643100023269653,
+        -0.5834959745407104
+      ],
+      "sources": [
+        {
+          "file": "FMA16202",
+          "sha256": "0a715850623c9f7d17cafd004a4e84ac402e2aadb5f1605931e5932f6df1013a"
+        }
+      ],
+      "triangles": 8882,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA7488",
+      "fmaId": "FMA7488",
+      "name": "Xiphoid process",
+      "sourceName": "xiphoid process",
+      "slug": "xiphoid-process",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA7488",
+      "bounds": {
+        "min": [
+          -0.11177200078964233,
+          1.190000057220459,
+          0.9073799848556519
+        ],
+        "max": [
+          0.0985862985253334,
+          1.409600019454956,
+          1.0560699701309204
+        ]
+      },
+      "center": [
+        -0.006592851132154465,
+        1.2998000383377075,
+        0.9817249774932861
+      ],
+      "anchor": [
+        -0.00977547001093626,
+        1.2960000038146973,
+        1.0060100555419922
+      ],
+      "sources": [
+        {
+          "file": "FMA7488",
+          "sha256": "9aa9cba903f1fbf5549e2aab44c444c81e9cced252a17acc81716593a62bed86"
+        }
+      ],
+      "triangles": 914,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13072",
+      "fmaId": "FMA13072",
+      "name": "First lumbar vertebra",
+      "sourceName": "first lumbar vertebra",
+      "slug": "first-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13072",
+      "bounds": {
+        "min": [
+          -0.3662770092487335,
+          -0.2304999977350235,
+          -0.7065250277519226
+        ],
+        "max": [
+          0.3267289996147156,
+          0.34470000863075256,
+          0.09765999764204025
+        ]
+      },
+      "center": [
+        -0.019774004817008972,
+        0.05710000544786453,
+        -0.3044325150549412
+      ],
+      "anchor": [
+        -0.02527100034058094,
+        0.03229999914765358,
+        -0.22410400211811066
+      ],
+      "sources": [
+        {
+          "file": "FMA13072",
+          "sha256": "3fd3f1f1374d50a77440755ab47d6e6423de4109b02b857f1066f10e0cf208e2"
+        }
+      ],
+      "triangles": 2866,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13073",
+      "fmaId": "FMA13073",
+      "name": "Second lumbar vertebra",
+      "sourceName": "second lumbar vertebra",
+      "slug": "second-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13073",
+      "bounds": {
+        "min": [
+          -0.41181299090385437,
+          -0.4661000072956085,
+          -0.6591830253601074
+        ],
+        "max": [
+          0.3747999966144562,
+          0.01720000058412552,
+          0.14800000190734863
+        ]
+      },
+      "center": [
+        -0.018506497144699097,
+        -0.2244500033557415,
+        -0.2555915117263794
+      ],
+      "anchor": [
+        -0.05103759840130806,
+        -0.2596000134944916,
+        -0.20498999953269958
+      ],
+      "sources": [
+        {
+          "file": "FMA13073",
+          "sha256": "23457a53d74d8202447551e145b63dd0624b3fa85a4bdca40ba14d2e1d85d5cf"
+        }
+      ],
+      "triangles": 2388,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13074",
+      "fmaId": "FMA13074",
+      "name": "Third lumbar vertebra",
+      "sourceName": "third lumbar vertebra",
+      "slug": "third-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13074",
+      "bounds": {
+        "min": [
+          -0.4100230038166046,
+          -0.7465199828147888,
+          -0.6605939865112305
+        ],
+        "max": [
+          0.3873080015182495,
+          -0.2919999957084656,
+          0.1654299944639206
+        ]
+      },
+      "center": [
+        -0.011357501149177551,
+        -0.5192599892616272,
+        -0.24758199602365494
+      ],
+      "anchor": [
+        -0.013012000359594822,
+        -0.5654699802398682,
+        -0.1878959983587265
+      ],
+      "sources": [
+        {
+          "file": "FMA13074",
+          "sha256": "cf879fd25baf516f621ae1da1413fa73dd682d26e6f7fd106a806307fdcac2b1"
+        }
+      ],
+      "triangles": 3304,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13075",
+      "fmaId": "FMA13075",
+      "name": "Fourth lumbar vertebra",
+      "sourceName": "fourth lumbar vertebra",
+      "slug": "fourth-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13075",
+      "bounds": {
+        "min": [
+          -0.4356299936771393,
+          -1.0100899934768677,
+          -0.6629570126533508
+        ],
+        "max": [
+          0.4211620092391968,
+          -0.5791900157928467,
+          0.15408000349998474
+        ]
+      },
+      "center": [
+        -0.0072339922189712524,
+        -0.7946400046348572,
+        -0.25443850457668304
+      ],
+      "anchor": [
+        -0.012415600009262562,
+        -0.7950000166893005,
+        -0.21319499611854553
+      ],
+      "sources": [
+        {
+          "file": "FMA13075",
+          "sha256": "596b9d5d3fb1676e086f4262809f69c48230e94b4c40396e8441fe0e0e5d196e"
+        }
+      ],
+      "triangles": 3456,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13076",
+      "fmaId": "FMA13076",
+      "name": "Fifth lumbar vertebra",
+      "sourceName": "fifth lumbar vertebra",
+      "slug": "fifth-lumbar-vertebra",
+      "tissue": "skeleton",
+      "laterality": "midline",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA13076",
+      "bounds": {
+        "min": [
+          -0.5184190273284912,
+          -1.3593599796295166,
+          -0.7056000232696533
+        ],
+        "max": [
+          0.4890669882297516,
+          -0.868399977684021,
+          0.0973299965262413
+        ]
+      },
+      "center": [
+        -0.014676019549369812,
+        -1.1138799786567688,
+        -0.304135013371706
+      ],
+      "anchor": [
+        -0.043664101511240005,
+        -1.095479965209961,
+        -0.29624900221824646
+      ],
+      "sources": [
+        {
+          "file": "FMA13076",
+          "sha256": "347de6db15415924f7534ea48881474ad0b9d73e57060bb9859cce64c8679cad"
+        }
+      ],
+      "triangles": 3872,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8229",
+      "fmaId": "FMA8229",
+      "name": "Right seventh rib",
+      "sourceName": "right seventh rib",
+      "slug": "right-seventh-rib",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8229",
+      "bounds": {
+        "min": [
+          -1.377560019493103,
+          0.7120000123977661,
+          -0.9552149176597595
+        ],
+        "max": [
+          -0.1657000035047531,
+          2.1094000339508057,
+          0.8030099868774414
+        ]
+      },
+      "center": [
+        -0.7716300114989281,
+        1.4107000231742859,
+        -0.07610246539115906
+      ],
+      "anchor": [
+        -1.2461600303649902,
+        1.3401000499725342,
+        -0.21260100603103638
+      ],
+      "sources": [
+        {
+          "file": "FMA8229",
+          "sha256": "d2b8faf9d4abdbdcfb87f401603cf2deaad57dca47c613eda1ca0696b65c1d13"
+        }
+      ],
+      "triangles": 9666,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8256",
+      "fmaId": "FMA8256",
+      "name": "Left seventh rib",
+      "sourceName": "left seventh rib",
+      "slug": "left-seventh-rib",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8256",
+      "bounds": {
+        "min": [
+          0.14271999895572662,
+          0.7124000191688538,
+          -0.955117404460907
+        ],
+        "max": [
+          1.3544000387191772,
+          2.109299898147583,
+          0.8023899793624878
+        ]
+      },
+      "center": [
+        0.7485600188374519,
+        1.4108499586582184,
+        -0.0763637125492096
+      ],
+      "anchor": [
+        1.229259967803955,
+        1.367900013923645,
+        -0.19985200464725494
+      ],
+      "sources": [
+        {
+          "file": "FMA8256",
+          "sha256": "95ab412e816af036c9a028de6c1a2e9968330bf2e4d9d656c3d8423a0f3a2357"
+        }
+      ],
+      "triangles": 9872,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8283",
+      "fmaId": "FMA8283",
+      "name": "Right eighth rib",
+      "sourceName": "right eighth rib",
+      "slug": "right-eighth-rib",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8283",
+      "bounds": {
+        "min": [
+          -1.3160799741744995,
+          0.3619000017642975,
+          -0.9544519186019897
+        ],
+        "max": [
+          -0.17493599653244019,
+          1.8287999629974365,
+          0.627560019493103
+        ]
+      },
+      "center": [
+        -0.7455079853534698,
+        1.095349982380867,
+        -0.16344594955444336
+      ],
+      "anchor": [
+        -1.155329942703247,
+        1.0514999628067017,
+        -0.32776299118995667
+      ],
+      "sources": [
+        {
+          "file": "FMA8283",
+          "sha256": "ae9d037a487f398d01ff3b22f96162e829987ae7a917fdaef5851e10adc4d0b7"
+        }
+      ],
+      "triangles": 8210,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8310",
+      "fmaId": "FMA8310",
+      "name": "Left eighth rib",
+      "sourceName": "left eighth rib",
+      "slug": "left-eighth-rib",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8310",
+      "bounds": {
+        "min": [
+          0.15185600519180298,
+          0.3621000051498413,
+          -0.9544206857681274
+        ],
+        "max": [
+          1.2929199934005737,
+          1.8286000490188599,
+          0.6271200180053711
+        ]
+      },
+      "center": [
+        0.7223879992961884,
+        1.0953500270843506,
+        -0.16365033388137817
+      ],
+      "anchor": [
+        1.1331299543380737,
+        1.0679999589920044,
+        -0.3295620083808899
+      ],
+      "sources": [
+        {
+          "file": "FMA8310",
+          "sha256": "47e67b08cfe9ea5a4bc057a51ff9805a3fb2d6ac0861e4cc7f390caa0dbf23ba"
+        }
+      ],
+      "triangles": 8320,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8364",
+      "fmaId": "FMA8364",
+      "name": "Right ninth rib",
+      "sourceName": "right ninth rib",
+      "slug": "right-ninth-rib",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8364",
+      "bounds": {
+        "min": [
+          -1.2976399660110474,
+          0.05689999833703041,
+          -0.9248055815696716
+        ],
+        "max": [
+          -0.1822959929704666,
+          1.5585999488830566,
+          0.3568600118160248
+        ]
+      },
+      "center": [
+        -0.739967979490757,
+        0.8077499736100435,
+        -0.2839727848768234
+      ],
+      "anchor": [
+        -1.1203999519348145,
+        0.8037999868392944,
+        -0.44683799147605896
+      ],
+      "sources": [
+        {
+          "file": "FMA8364",
+          "sha256": "0273c425168aece1bfc2fe936c092a70fd0227e8e542957481c9b0c4dd692848"
+        }
+      ],
+      "triangles": 7680,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8391",
+      "fmaId": "FMA8391",
+      "name": "Left ninth rib",
+      "sourceName": "left ninth rib",
+      "slug": "left-ninth-rib",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8391",
+      "bounds": {
+        "min": [
+          0.15934500098228455,
+          0.05730000138282776,
+          -0.9248303771018982
+        ],
+        "max": [
+          1.274590015411377,
+          1.55840003490448,
+          0.3564000129699707
+        ]
+      },
+      "center": [
+        0.7169675081968307,
+        0.8078500181436539,
+        -0.28421518206596375
+      ],
+      "anchor": [
+        1.0963499546051025,
+        0.8023999929428101,
+        -0.4487990140914917
+      ],
+      "sources": [
+        {
+          "file": "FMA8391",
+          "sha256": "435b702f799ec6ad826990412105fe167b730651a993b0c04aaf092468ddd240"
+        }
+      ],
+      "triangles": 8070,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8445",
+      "fmaId": "FMA8445",
+      "name": "Right tenth rib",
+      "sourceName": "right tenth rib",
+      "slug": "right-tenth-rib",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8445",
+      "bounds": {
+        "min": [
+          -1.2789499759674072,
+          -0.24629999697208405,
+          -0.8462669849395752
+        ],
+        "max": [
+          -0.18577900528907776,
+          1.2719999551773071,
+          0.21267999708652496
+        ]
+      },
+      "center": [
+        -0.7323644906282425,
+        0.5128499791026115,
+        -0.3167934939265251
+      ],
+      "anchor": [
+        -1.003499984741211,
+        0.49070000648498535,
+        -0.550806999206543
+      ],
+      "sources": [
+        {
+          "file": "FMA8445",
+          "sha256": "fafbadd31519dc722c07846b20852ade278230bb1d2fe8e7dfb63df990ba007c"
+        }
+      ],
+      "triangles": 6948,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8472",
+      "fmaId": "FMA8472",
+      "name": "Left tenth rib",
+      "sourceName": "left tenth rib",
+      "slug": "left-tenth-rib",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8472",
+      "bounds": {
+        "min": [
+          0.1626559942960739,
+          -0.24570000171661377,
+          -0.8462759852409363
+        ],
+        "max": [
+          1.2558200359344482,
+          1.2719000577926636,
+          0.21241000294685364
+        ]
+      },
+      "center": [
+        0.7092380151152611,
+        0.5131000280380249,
+        -0.3169329911470413
+      ],
+      "anchor": [
+        0.97918301820755,
+        0.5098000168800354,
+        -0.5555880069732666
+      ],
+      "sources": [
+        {
+          "file": "FMA8472",
+          "sha256": "3bf9fd4b86e276f8c13b7e57a599ef653fa07aa864211c226919c50683fbe3bc"
+        }
+      ],
+      "triangles": 7116,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8531",
+      "fmaId": "FMA8531",
+      "name": "Right eleventh rib",
+      "sourceName": "right eleventh rib",
+      "slug": "right-eleventh-rib",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8531",
+      "bounds": {
+        "min": [
+          -1.1652599573135376,
+          -0.37689998745918274,
+          -0.7789890170097351
+        ],
+        "max": [
+          -0.1988230049610138,
+          0.901199996471405,
+          0.006949999835342169
+        ]
+      },
+      "center": [
+        -0.6820414811372757,
+        0.26215000450611115,
+        -0.38601950858719647
+      ],
+      "anchor": [
+        -0.8493710160255432,
+        0.23690000176429749,
+        -0.5588099956512451
+      ],
+      "sources": [
+        {
+          "file": "FMA8531",
+          "sha256": "b61bc1bc2623b14cd3ab0a14cade7089fcdbd83b692476ea397737c5977073b0"
+        }
+      ],
+      "triangles": 5024,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8532",
+      "fmaId": "FMA8532",
+      "name": "Left eleventh rib",
+      "sourceName": "left eleventh rib",
+      "slug": "left-eleventh-rib",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8532",
+      "bounds": {
+        "min": [
+          0.17576000094413757,
+          -0.37689998745918274,
+          -0.7789120078086853
+        ],
+        "max": [
+          1.1419199705123901,
+          0.9010000228881836,
+          0.006839999929070473
+        ]
+      },
+      "center": [
+        0.6588399857282639,
+        0.2620500177145004,
+        -0.3860360039398074
+      ],
+      "anchor": [
+        0.8308759927749634,
+        0.25130000710487366,
+        -0.5558459758758545
+      ],
+      "sources": [
+        {
+          "file": "FMA8532",
+          "sha256": "618da3bd847af0ead77803ff652fd29ec1c3782f842bfc68bdd0293ff77bfb8d"
+        }
+      ],
+      "triangles": 5114,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8533",
+      "fmaId": "FMA8533",
+      "name": "Right twelfth rib",
+      "sourceName": "right twelfth rib",
+      "slug": "right-twelfth-rib",
+      "tissue": "skeleton",
+      "laterality": "right",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8533",
+      "bounds": {
+        "min": [
+          -0.8333539962768555,
+          -0.4016000032424927,
+          -0.6808459758758545
+        ],
+        "max": [
+          -0.19435200095176697,
+          0.5460000038146973,
+          -0.25112301111221313
+        ]
+      },
+      "center": [
+        -0.5138529986143112,
+        0.0722000002861023,
+        -0.4659844934940338
+      ],
+      "anchor": [
+        -0.5700269937515259,
+        0.08380000293254852,
+        -0.6111819744110107
+      ],
+      "sources": [
+        {
+          "file": "FMA8533",
+          "sha256": "546e9b51a4d5eeb402121b9673999296e2f6d7d3402b2d8fa745ad7d8e9b619a"
+        }
+      ],
+      "triangles": 2970,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8534",
+      "fmaId": "FMA8534",
+      "name": "Left twelfth rib",
+      "sourceName": "left twelfth rib",
+      "slug": "left-twelfth-rib",
+      "tissue": "skeleton",
+      "laterality": "left",
+      "bundle": "bp3d3-abdominal-wall",
+      "nodeName": "FMA8534",
+      "bounds": {
+        "min": [
+          0.18133200705051422,
+          -0.40119999647140503,
+          -0.6801959872245789
+        ],
+        "max": [
+          0.8200629949569702,
+          0.5449000000953674,
+          -0.25225499272346497
+        ]
+      },
+      "center": [
+        0.5006975010037422,
+        0.0718500018119812,
+        -0.4662254899740219
+      ],
+      "anchor": [
+        0.5921760201454163,
+        0.10760000348091125,
+        -0.5944910049438477
+      ],
+      "sources": [
+        {
+          "file": "FMA8534",
+          "sha256": "024682d9a5cbb576338934dc0db311779defe0e96e1952d863126eb05928b7f6"
+        }
+      ],
+      "triangles": 674,
+      "omittedSourceFaces": [],
+      "coverageNote": "Partial skeletal context from the same version-3 source; not a separately validated attachment map.",
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "color": "#c5aa79"
+    }
+  ],
+  "bundles": [
+    {
+      "id": "bp3d3-abdominal-wall",
+      "url": "/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "bytes": 15335852,
+      "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
+      "structures": 29
+    }
+  ]
+}

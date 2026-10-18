@@ -1,0 +1,24 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import test from 'node:test';
+const original=new URL('./fixtures/atlas-wave4-notices-before-current-admission.txt',import.meta.url);
+const repaired=new URL('./atlas-current-history-wave4-contract.test.mjs',import.meta.url);
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+test('notice admission retains every historical source, runtime and protected dependency assertion',()=>{
+ const beforeBytes=readFileSync(original),afterBytes=readFileSync(repaired);
+ assert.equal(sha(beforeBytes),'ced5f723e9e6193dd4fe13ffc409eb0bf4f723bf843145b329fef5c162cf1d63');
+ assert.equal(sha(afterBytes),'affc724506bc51919344bc6a4cf2885e9bcac8e0742640c5fb863c06c054932b');
+ const before=beforeBytes.toString('utf8'),after=afterBytes.toString('utf8');
+ const obsolete=" assert.equal(sha(source),'359dd59a89232c8530662fb7c81558070abf8c5629b5254f180788818870190b');";
+ const oldPosition=before.indexOf(obsolete);assert(oldPosition>=0);
+ assert.equal(after.slice(0,oldPosition),before.slice(0,oldPosition),'Original first three tests and current-source lookup unchanged');
+ const tail=" assert.deepEqual(readFileSync('atlas-review/'+path),source);";
+ const oldTail=before.indexOf(tail,oldPosition),newTail=after.indexOf(tail,oldPosition);
+ assert(oldTail>=0&&newTail>=0);
+ assert.equal(after.slice(newTail),before.slice(oldTail),'All four runtime copies, historical dependency tail and protected manifest checks unchanged');
+ assert(after.includes("const noticeFeature='589263554141ba94548f9073327d4e51674bc33b';"));
+ assert(after.includes("assert.equal(sha(historicalNotice),'359dd59a89232c8530662fb7c81558070abf8c5629b5254f180788818870190b')"));
+ assert(after.includes("'--no-renames','--numstat',noticeFeature,CURRENT_ATLAS_REVISION,'--',path]"));
+ assert(after.includes("'All historical notice lines are retained'"));
+});

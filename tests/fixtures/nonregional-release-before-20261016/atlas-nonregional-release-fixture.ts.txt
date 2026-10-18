@@ -1,0 +1,8 @@
+// Current privately staged generated modules, verified at Atlas e3e292f.
+// Keep current manifest expectations separate from immutable old Git fixtures.
+// Historical model-preservation assertions remain in the individual tests.
+export const nonregionalAtlasSources = [
+  {module:'shoulder',sourceCommit:'ed74d3e7c96501f21434f76e136c12a11493c020',manifestSha256:'f6986836e8088ad178bc4297997bd5cb91fdef2941c4cb4db496b3cf4ded350b',modelPaths:1},
+  {module:'female-pelvis',sourceCommit:'a10496da94d9d054306bbc48e5ae9c98239d82b5',manifestSha256:'c481ea764e4d9ccb469d29507550cb8f72de966c3c9ef77acfa0b99b925e7815',modelPaths:2},
+  {module:'lower-limb',sourceCommit:'a10496da94d9d054306bbc48e5ae9c98239d82b5',manifestSha256:'dea24b3bc4ddd50d81d89524c600883896383ce9c2a76f8fd39f3e8f0aba909d',modelPaths:5},
+];

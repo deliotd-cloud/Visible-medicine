@@ -1,0 +1,517 @@
+{
+  "sourceCommit": "bcefde5f13ff5a6394d8a3dd557aaa94316d98d5",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "inferior-epigastric-vessels",
+      "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "bytes": 526756,
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "structures": 4
+    },
+    {
+      "id": "subscapular-arteries",
+      "url": "/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb?v=6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "structures": 2
+    },
+    {
+      "id": "circumflex-femoral",
+      "url": "/models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb?v=265bddde64b37086b7f953515b1fd0a24543b0c9b210adc6e3837b22dc9bae69",
+      "bytes": 191180,
+      "sha256": "265bddde64b37086b7f953515b1fd0a24543b0c9b210adc6e3837b22dc9bae69",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "2cb6be5294626284f42a498c94583e86159008b711218cf162da1662b1eaa643",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+        "fmaId": "FMA22678",
+        "name": "Right subscapular artery",
+        "sourceName": "right subscapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "subscapular-arteries",
+        "nodeName": "FMA22678",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2298",
+            "sha256": "41050856a7c2cbb79984a78346a0e3dc13e271758a04012f2283fee2182a2f29"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.419819951057434,
+            4.794000148773193,
+            0.33651599287986755
+          ],
+          "max": [
+            -1.2893999814987183,
+            4.94890022277832,
+            0.4222390055656433
+          ]
+        },
+        "center": [
+          -1.3546099662780762,
+          4.871450185775757,
+          0.37937749922275543
+        ],
+        "anchor": [
+          -1.347350001335144,
+          4.877500057220459,
+          0.39108601212501526
+        ],
+        "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "subscapular",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Right subscapular artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right subscapular artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+        "fmaId": "FMA22679",
+        "name": "Left subscapular artery",
+        "sourceName": "left subscapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "subscapular-arteries",
+        "nodeName": "FMA22679",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2246",
+            "sha256": "4dc93c063b9d87ab85699bfeb9f856cb39faf12d2859b0e4184ba64de6c9ef87"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.2898600101470947,
+            4.7941999435424805,
+            0.3365879952907562
+          ],
+          "max": [
+            1.4196499586105347,
+            4.948699951171875,
+            0.42217200994491577
+          ]
+        },
+        "center": [
+          1.3547549843788147,
+          4.871449947357178,
+          0.379380002617836
+        ],
+        "anchor": [
+          1.3433200120925903,
+          4.870800018310547,
+          0.3914330005645752
+        ],
+        "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "subscapular",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Left subscapular artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left subscapular artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:vessel:descending-branch-of-right-lateral-circumflex-femoral-artery",
+        "fmaId": "FMA21422",
+        "name": "Descending branch of right lateral circumflex femoral artery",
+        "sourceName": "descending branch of right lateral circumflex femoral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "leg"
+        ],
+        "bundle": "circumflex-femoral",
+        "nodeName": "FMA21422",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2057",
+            "sha256": "b9a4618409103711ee922dac578f542734951f4bc65fa1368b12bdec331bc930"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.2125300168991089,
+            -3.88742995262146,
+            0.4131210148334503
+          ],
+          "max": [
+            -0.7521529793739319,
+            -0.2701700031757355,
+            0.7236400246620178
+          ]
+        },
+        "center": [
+          -0.9823414981365204,
+          -2.0787999778985977,
+          0.5683805197477341
+        ],
+        "anchor": [
+          -1.142109990119934,
+          -2.0904700756073,
+          0.4591220021247864
+        ],
+        "coverageNote": "Complete IS-A descending-branch surface. The lateral circumflex parent is contained within the existing deep-femoral aggregate, not separately selectable; it is not a direct deep-femoral branch claim. Original coordinates and faces retained; no junction, continuous lumen or complete collateral supply is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "circumflex",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Descending branch of right lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Descending branch of right lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:vessel:descending-branch-of-left-lateral-circumflex-femoral-artery",
+        "fmaId": "FMA21423",
+        "name": "Descending branch of left lateral circumflex femoral artery",
+        "sourceName": "descending branch of left lateral circumflex femoral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "leg"
+        ],
+        "bundle": "circumflex-femoral",
+        "nodeName": "FMA21423",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2063",
+            "sha256": "095e3e9d4ef41d5b56b165998622bf54ca7998dc123ca09cf1c14a0a48b414fb"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.752161979675293,
+            -3.887389898300171,
+            0.4131599962711334
+          ],
+          "max": [
+            1.2125099897384644,
+            -0.27015000581741333,
+            0.723580002784729
+          ]
+        },
+        "center": [
+          0.9823359847068787,
+          -2.078769952058792,
+          0.5683699995279312
+        ],
+        "anchor": [
+          1.1404199600219727,
+          -2.0895700454711914,
+          0.4561690092086792
+        ],
+        "coverageNote": "Complete IS-A descending-branch surface. The lateral circumflex parent is contained within the existing deep-femoral aggregate, not separately selectable; it is not a direct deep-femoral branch claim. Original coordinates and faces retained; no junction, continuous lumen or complete collateral supply is validated. Radiologist review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "circumflex",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Descending branch of left lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Descending branch of left lateral circumflex femoral artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No acquired scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+        "fmaId": "FMA20689",
+        "name": "Left inferior epigastric artery",
+        "sourceName": "left inferior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA20689",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3511",
+            "sha256": "7fae27fdfcd79f3989488c0bc5f8d0766bbb5e6140269bb8d9fe9effa903a6e0"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.2179819941520691,
+            0.3065600097179413,
+            0.5916200280189514
+          ],
+          "max": [
+            0.4859220087528229,
+            2.3043999671936035,
+            1.353790044784546
+          ]
+        },
+        "center": [
+          0.351952001452446,
+          1.3054799884557724,
+          0.9727050364017487
+        ],
+        "anchor": [
+          0.35682499408721924,
+          1.284209966659546,
+          1.1275500059127808
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "epigastric",
+      "topics": [
+        "pathology"
+      ],
+      "previous": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Left inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+        "fmaId": "FMA20688",
+        "name": "Right inferior epigastric artery",
+        "sourceName": "right inferior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis"
+        ],
+        "bundle": "inferior-epigastric-vessels",
+        "nodeName": "FMA20688",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3604",
+            "sha256": "aa8fa354690bf56ac7bf1de05fdcb6acfd1e0c13fdb4194f38cc5eb11e4a941d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.565276026725769,
+            0.3065600097179413,
+            0.5916399955749512
+          ],
+          "max": [
+            -0.2179650068283081,
+            2.304500102996826,
+            1.3538600206375122
+          ]
+        },
+        "center": [
+          -0.3916205167770386,
+          1.3055300563573837,
+          0.9727500081062317
+        ],
+        "anchor": [
+          -0.3631100058555603,
+          1.276900053024292,
+          1.1284099817276
+        ],
+        "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "epigastric",
+      "topics": [
+        "pathology"
+      ],
+      "previous": {
+        "pathology": {
+          "readiness": "pending",
+          "title": "Right inferior epigastric artery · Review pending",
+          "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+          "bullets": [],
+          "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+        }
+      }
+    }
+  ]
+}

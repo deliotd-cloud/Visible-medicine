@@ -1,0 +1,1584 @@
+{
+  "sourceCommit": "0b310997ff665743f7358df4788f28d1192e94b9",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "hand-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "bytes": 65364,
+      "sha256": "81851762c0aca58931fa8b0cd1c31853558b70578a518896cb97fb8eeae357a0",
+      "structures": 2
+    },
+    {
+      "id": "hand-vessels-hand-vascular",
+      "url": "/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "bytes": 534016,
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "structures": 26
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "e700169247952f6c5be8f8a9922bf9c2c587cd6208b1b4b827004811242105f1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-deep-palmar-arch",
+        "fmaId": "FMA22839",
+        "name": "Right deep palmar arch",
+        "sourceName": "right deep palmar arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-recovery",
+        "nodeName": "FMA22839",
+        "bounds": {
+          "min": [
+            -2.8119800090789795,
+            -0.23947997391223907,
+            0.6771299839019775
+          ],
+          "max": [
+            -2.3648598194122314,
+            -0.03317016735672951,
+            0.8471699357032776
+          ]
+        },
+        "center": [
+          -2.5884199142456055,
+          -0.1363250706344843,
+          0.7621499598026276
+        ],
+        "anchor": [
+          -2.592439889907837,
+          -0.19291014969348907,
+          0.7931700348854065
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2279",
+            "sha256": "1e60556bd0efd0e863d04cfdda4ec66383f011bdf0cc9c78681cedd3770f0d71"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-arch",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-deep-palmar-arch",
+        "fmaId": "FMA22840",
+        "name": "Left deep palmar arch",
+        "sourceName": "left deep palmar arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-recovery",
+        "nodeName": "FMA22840",
+        "bounds": {
+          "min": [
+            2.3648900985717773,
+            -0.23942016065120697,
+            0.6770600080490112
+          ],
+          "max": [
+            2.812030076980591,
+            -0.032960206270217896,
+            0.8471899628639221
+          ]
+        },
+        "center": [
+          2.588460087776184,
+          -0.13619018346071243,
+          0.7621249854564667
+        ],
+        "anchor": [
+          2.586400032043457,
+          -0.19383972883224487,
+          0.7918400764465332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2227",
+            "sha256": "54a1df2e831cd1716af1fce40767ae33b03f6e0d047f61a6c1597e19670bec4f"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-arch",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-superficial-palmar-arterial-arch",
+        "fmaId": "FMA22835",
+        "name": "Right superficial palmar arterial arch",
+        "sourceName": "right superficial palmar arterial arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22835",
+        "bounds": {
+          "min": [
+            -2.7173399925231934,
+            -0.45161011815071106,
+            0.7161499857902527
+          ],
+          "max": [
+            -2.347709894180298,
+            0.28822997212409973,
+            0.9041000604629517
+          ]
+        },
+        "center": [
+          -2.5325249433517456,
+          -0.08169007301330566,
+          0.8101250231266022
+        ],
+        "anchor": [
+          -2.434540033340454,
+          -0.06109985336661339,
+          0.7951099872589111
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2300",
+            "sha256": "396907b82c2f9b422643e3a72c941dcb10e3676ac26a4d1aae0a6ed28add7304"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial-arch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-superficial-palmar-arterial-arch",
+        "fmaId": "FMA22837",
+        "name": "Left superficial palmar arterial arch",
+        "sourceName": "left superficial palmar arterial arch",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22837",
+        "bounds": {
+          "min": [
+            2.3478500843048096,
+            -0.45169007778167725,
+            0.7160800099372864
+          ],
+          "max": [
+            2.7172799110412598,
+            0.2881701588630676,
+            0.9040400981903076
+          ]
+        },
+        "center": [
+          2.5325649976730347,
+          -0.08175995945930481,
+          0.810060054063797
+        ],
+        "anchor": [
+          2.434340000152588,
+          -0.06239013746380806,
+          0.7962100505828857
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2248",
+            "sha256": "2675c02ed6954ee29e47ded172dc055efe7ae3c8be6e0e58dd679bebf9b277a9"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial-arch",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-first-common-palmar-digital-artery",
+        "fmaId": "FMA22856",
+        "name": "Right first common palmar digital artery",
+        "sourceName": "right first common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22856",
+        "bounds": {
+          "min": [
+            -2.7620198726654053,
+            -0.7076898217201233,
+            0.8440899848937988
+          ],
+          "max": [
+            -2.6594901084899902,
+            -0.4065399169921875,
+            0.9367199540138245
+          ]
+        },
+        "center": [
+          -2.7107549905776978,
+          -0.5571148693561554,
+          0.8904049694538116
+        ],
+        "anchor": [
+          -2.713320016860962,
+          -0.5554797649383545,
+          0.8915199041366577
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2343",
+            "sha256": "778c6979a6fbb214fd6ce8b4e215b3483e8af29b582fcc7c846f117ee07cbe74"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-first-common-palmar-digital-artery",
+        "fmaId": "FMA85118",
+        "name": "Left first common palmar digital artery",
+        "sourceName": "left first common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85118",
+        "bounds": {
+          "min": [
+            2.659320116043091,
+            -0.7076001167297363,
+            0.8439199924468994
+          ],
+          "max": [
+            2.762120008468628,
+            -0.40658995509147644,
+            0.9366000294685364
+          ]
+        },
+        "center": [
+          2.7107200622558594,
+          -0.5570950359106064,
+          0.8902600109577179
+        ],
+        "anchor": [
+          2.7123098373413086,
+          -0.5506799221038818,
+          0.8878500461578369
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2315",
+            "sha256": "82db17b85e2548c8d5fa6cb1d8846307f23cbaf8299fe361d19caf8bc8c8ea94"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-second-common-palmar-digital-artery",
+        "fmaId": "FMA85119",
+        "name": "Right second common palmar digital artery",
+        "sourceName": "right second common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85119",
+        "bounds": {
+          "min": [
+            -2.570859909057617,
+            -0.7070696949958801,
+            0.8314500451087952
+          ],
+          "max": [
+            -2.5404200553894043,
+            -0.4312402307987213,
+            0.9479299783706665
+          ]
+        },
+        "center": [
+          -2.5556399822235107,
+          -0.5691549628973007,
+          0.8896900117397308
+        ],
+        "anchor": [
+          -2.5597400665283203,
+          -0.5825402736663818,
+          0.8644999861717224
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2344",
+            "sha256": "c1ff410203d31be3eceb012408fb58fce7421410338c9d4ed6a10709bd50f39d"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-second-common-palmar-digital-artery",
+        "fmaId": "FMA85120",
+        "name": "Left second common palmar digital artery",
+        "sourceName": "left second common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85120",
+        "bounds": {
+          "min": [
+            2.540260076522827,
+            -0.7071197628974915,
+            0.8313900828361511
+          ],
+          "max": [
+            2.5708200931549072,
+            -0.43112000823020935,
+            0.9480900764465332
+          ]
+        },
+        "center": [
+          2.555540084838867,
+          -0.5691198855638504,
+          0.8897400796413422
+        ],
+        "anchor": [
+          2.5641400814056396,
+          -0.5785302519798279,
+          0.8638400435447693
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2316",
+            "sha256": "4b64fd5086b7b38a5df68951f293841b18b218b16fc707aaa97ed3bdbe5e865a"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-third-common-palmar-digital-artery",
+        "fmaId": "FMA85121",
+        "name": "Right third common palmar digital artery",
+        "sourceName": "right third common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85121",
+        "bounds": {
+          "min": [
+            -2.452670097351074,
+            -0.6420202851295471,
+            0.8210299611091614
+          ],
+          "max": [
+            -2.3860599994659424,
+            -0.3994702100753784,
+            0.9844000339508057
+          ]
+        },
+        "center": [
+          -2.4193650484085083,
+          -0.5207452476024628,
+          0.9027149975299835
+        ],
+        "anchor": [
+          -2.4151101112365723,
+          -0.5094598531723022,
+          0.9105000495910645
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2345",
+            "sha256": "1053eeabdf55b020d401a436ed534849bdfabca4e3a59b6406178f6bab571ae1"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-third-common-palmar-digital-artery",
+        "fmaId": "FMA85122",
+        "name": "Left third common palmar digital artery",
+        "sourceName": "left third common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85122",
+        "bounds": {
+          "min": [
+            2.386270046234131,
+            -0.6419598460197449,
+            0.820930004119873
+          ],
+          "max": [
+            2.452739953994751,
+            -0.3993200659751892,
+            0.9843200445175171
+          ]
+        },
+        "center": [
+          2.419505000114441,
+          -0.520639955997467,
+          0.9026250243186951
+        ],
+        "anchor": [
+          2.415879964828491,
+          -0.5185601711273193,
+          0.9185200333595276
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2317",
+            "sha256": "49bcf65b3db93a1cc8528c4f41b6580cef7b0e6a29dc66307b5536b2eb44f79c"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:right-fourth-common-palmar-digital-artery",
+        "fmaId": "FMA85123",
+        "name": "Right fourth common palmar digital artery",
+        "sourceName": "right fourth common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85123",
+        "bounds": {
+          "min": [
+            -2.363179922103882,
+            -1.2074596881866455,
+            0.8544500470161438
+          ],
+          "max": [
+            -2.1732699871063232,
+            -0.31737977266311646,
+            1.3036199808120728
+          ]
+        },
+        "center": [
+          -2.2682249546051025,
+          -0.762419730424881,
+          1.0790350139141083
+        ],
+        "anchor": [
+          -2.228640079498291,
+          -0.777600109577179,
+          0.997469961643219
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2370",
+            "sha256": "828d425e8b0b6ad0381af5f0c576dbb7883bc20590f9e9d7e3d7db8162255daa"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:left-fourth-common-palmar-digital-artery",
+        "fmaId": "FMA85124",
+        "name": "Left fourth common palmar digital artery",
+        "sourceName": "left fourth common palmar digital artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85124",
+        "bounds": {
+          "min": [
+            2.1732800006866455,
+            -1.2074700593948364,
+            0.8543800115585327
+          ],
+          "max": [
+            2.3630900382995605,
+            -0.3173101842403412,
+            1.3036599159240723
+          ]
+        },
+        "center": [
+          2.268185019493103,
+          -0.7623901218175888,
+          1.0790199637413025
+        ],
+        "anchor": [
+          2.2311599254608154,
+          -0.7684900164604187,
+          0.9943899512290955
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2337",
+            "sha256": "4725447a2b4fc05bc3042da07eb1358ff8006edd9bf2daea97e2c69576e3d33b"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-middle-finger",
+        "fmaId": "FMA22858",
+        "name": "Lateral proper palmar digital artery of right middle finger",
+        "sourceName": "lateral proper palmar digital artery of right middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22858",
+        "bounds": {
+          "min": [
+            -2.83381986618042,
+            -1.4439300298690796,
+            0.9220399260520935
+          ],
+          "max": [
+            -2.7455499172210693,
+            -0.693040132522583,
+            1.4452400207519531
+          ]
+        },
+        "center": [
+          -2.7896848917007446,
+          -1.0684850811958313,
+          1.1836399734020233
+        ],
+        "anchor": [
+          -2.7890799045562744,
+          -1.1083800792694092,
+          1.1019700765609741
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2365",
+            "sha256": "6e9286403da0fc1082440c54318f0b87189fac08fdba5c6d27ae0e68738864cb"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-middle-finger",
+        "fmaId": "FMA22860",
+        "name": "Lateral proper palmar digital artery of left middle finger",
+        "sourceName": "lateral proper palmar digital artery of left middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA22860",
+        "bounds": {
+          "min": [
+            2.7455801963806152,
+            -1.4439202547073364,
+            0.922059953212738
+          ],
+          "max": [
+            2.8338699340820312,
+            -0.6930499076843262,
+            1.445039987564087
+          ]
+        },
+        "center": [
+          2.7897250652313232,
+          -1.0684850811958313,
+          1.1835499703884125
+        ],
+        "anchor": [
+          2.792019844055176,
+          -1.117110013961792,
+          1.1070799827575684
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2334",
+            "sha256": "71c5f734e80b8abb196f16533a851caa043a11981f6d1f65b738bb6e2d337a7f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-index-finger",
+        "fmaId": "FMA23050",
+        "name": "Medial proper palmar digital artery of right index finger",
+        "sourceName": "medial proper palmar digital artery of right index finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23050",
+        "bounds": {
+          "min": [
+            -3.0375499725341797,
+            -1.3739800453186035,
+            0.8994799852371216
+          ],
+          "max": [
+            -2.7474799156188965,
+            -0.693040132522583,
+            1.3233000040054321
+          ]
+        },
+        "center": [
+          -2.892514944076538,
+          -1.0335100889205933,
+          1.1113899946212769
+        ],
+        "anchor": [
+          -2.9048900604248047,
+          -1.0935498476028442,
+          1.020379900932312
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2364",
+            "sha256": "14031e155e3e5eba135551165f830141a66510b79d6834ea37e4715356e50f3e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:medial-proper-palmar-digital-artery-of-left-index-finger",
+        "fmaId": "FMA23051",
+        "name": "Medial proper palmar digital artery of left index finger",
+        "sourceName": "medial proper palmar digital artery of left index finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23051",
+        "bounds": {
+          "min": [
+            2.7474398612976074,
+            -1.3738898038864136,
+            0.8994399905204773
+          ],
+          "max": [
+            3.037400007247925,
+            -0.6930902004241943,
+            1.3232200145721436
+          ]
+        },
+        "center": [
+          2.892419934272766,
+          -1.033490002155304,
+          1.1113300025463104
+        ],
+        "anchor": [
+          2.910109758377075,
+          -1.10198974609375,
+          1.0281000137329102
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2333",
+            "sha256": "c2466e29e2cdaa7e0fa35c6daff5faf53e8160455bdf64718ca1bebd1f926449"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-ring-finger",
+        "fmaId": "FMA23052",
+        "name": "Medial proper palmar digital artery of right ring finger",
+        "sourceName": "medial proper palmar digital artery of right ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23052",
+        "bounds": {
+          "min": [
+            -2.480959892272949,
+            -1.3338098526000977,
+            0.9697300791740417
+          ],
+          "max": [
+            -2.386229991912842,
+            -0.6275702118873596,
+            1.428200125694275
+          ]
+        },
+        "center": [
+          -2.4335949420928955,
+          -0.9806900322437286,
+          1.1989651024341583
+        ],
+        "anchor": [
+          -2.4278199672698975,
+          -1.0293700695037842,
+          1.1241199970245361
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2369",
+            "sha256": "ba390a7db51b3e7f842bd5c07be10c61ee7c81693cd145aac59b7256adc8b765"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-little-finger",
+        "fmaId": "FMA23054",
+        "name": "Lateral proper palmar digital artery of right little finger",
+        "sourceName": "lateral proper palmar digital artery of right little finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23054",
+        "bounds": {
+          "min": [
+            -2.400559902191162,
+            -1.2205902338027954,
+            0.9698500037193298
+          ],
+          "max": [
+            -2.2515599727630615,
+            -0.627260148525238,
+            1.3116400241851807
+          ]
+        },
+        "center": [
+          -2.326059937477112,
+          -0.9239251911640167,
+          1.1407450139522552
+        ],
+        "anchor": [
+          -2.3207900524139404,
+          -0.9369800090789795,
+          1.0925101041793823
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2368",
+            "sha256": "13679f85cb1d46e03c053ca94c1d6bfc519b107bb88bf4fb5b7972dff5767168"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-little-finger",
+        "fmaId": "FMA23055",
+        "name": "Lateral proper palmar digital artery of left little finger",
+        "sourceName": "lateral proper palmar digital artery of left little finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA23055",
+        "bounds": {
+          "min": [
+            2.2515599727630615,
+            -1.2205102443695068,
+            0.9698500037193298
+          ],
+          "max": [
+            2.4004499912261963,
+            -0.6272497773170471,
+            1.311479926109314
+          ]
+        },
+        "center": [
+          2.326004981994629,
+          -0.923880010843277,
+          1.140664964914322
+        ],
+        "anchor": [
+          2.3224599361419678,
+          -0.9341302514076233,
+          1.0909899473190308
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2336",
+            "sha256": "7823fa45ffc3aaa59381d011f51e951a5288f316af664a4dc156eae26021cf87"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:medial-proper-palmar-digital-artery-of-right-middle-finger",
+        "fmaId": "FMA85112",
+        "name": "Medial proper palmar digital artery of right middle finger",
+        "sourceName": "medial proper palmar digital artery of right middle finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85112",
+        "bounds": {
+          "min": [
+            -2.745840072631836,
+            -1.4371600151062012,
+            0.9333000183105469
+          ],
+          "max": [
+            -2.549530029296875,
+            -0.6927899122238159,
+            1.4368600845336914
+          ]
+        },
+        "center": [
+          -2.6476850509643555,
+          -1.0649749636650085,
+          1.1850800514221191
+        ],
+        "anchor": [
+          -2.6526999473571777,
+          -1.120059847831726,
+          1.1186200380325317
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2367",
+            "sha256": "6539d2130fed7f64fcea3c85a75bfc8ee195b6bc45d8fa06633fa5f66a17efa3"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:lateral-proper-palmar-digital-artery-of-right-ring-finger",
+        "fmaId": "FMA85115",
+        "name": "Lateral proper palmar digital artery of right ring finger",
+        "sourceName": "lateral proper palmar digital artery of right ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85115",
+        "bounds": {
+          "min": [
+            -2.564070224761963,
+            -1.334089994430542,
+            0.9334399700164795
+          ],
+          "max": [
+            -2.542220115661621,
+            -0.6924102902412415,
+            1.4273300170898438
+          ]
+        },
+        "center": [
+          -2.553145170211792,
+          -1.0132501423358917,
+          1.1803849935531616
+        ],
+        "anchor": [
+          -2.5565099716186523,
+          -1.075100064277649,
+          1.0954300165176392
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2366",
+            "sha256": "08748e77df60eee2f5219230e2944a1e96ffd3ea4f506cf6a9c20dec6c6ca488"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:lateral-proper-palmar-digital-artery-of-left-ring-finger",
+        "fmaId": "FMA85116",
+        "name": "Lateral proper palmar digital artery of left ring finger",
+        "sourceName": "lateral proper palmar digital artery of left ring finger",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-vascular",
+        "nodeName": "FMA85116",
+        "bounds": {
+          "min": [
+            2.5423200130462646,
+            -1.3341400623321533,
+            0.9337600469589233
+          ],
+          "max": [
+            2.5642199516296387,
+            -0.6926098465919495,
+            1.4271899461746216
+          ]
+        },
+        "center": [
+          2.5532699823379517,
+          -1.0133749544620514,
+          1.1804749965667725
+        ],
+        "anchor": [
+          2.5578999519348145,
+          -1.0740399360656738,
+          1.0950900316238403
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2335",
+            "sha256": "bba9cde99bda6f51dd49338bc8a53a155969096519d271938797076d665ebb50"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source labels and numbering do not establish a normal branching pattern, complete arterial arch, patent connection, lumen or perfusion. Multiple components retain their grouped source identity; absent counterparts and nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proper-digital",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

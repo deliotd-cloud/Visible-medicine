@@ -1,0 +1,1104 @@
+{
+  "schemaVersion": 2,
+  "baseline": "a453a3708749d1976a1cc18b69d8ece3f0eeec1e",
+  "previousTourCommit": "aff36c610e3aba541dfdcc97b708c9d6d19a24d2",
+  "tourRevision": "right-lower-limb-arterial-orientation-v2",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "name": "Right external iliac artery",
+      "sourceName": "right external iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18806",
+      "bounds": {
+        "min": [
+          -0.6128699779510498,
+          0.03612976148724556,
+          0.27797096967697144
+        ],
+        "max": [
+          -0.27458298206329346,
+          1.1353998184204102,
+          0.9449800252914429
+        ]
+      },
+      "center": [
+        -0.44372648000717163,
+        0.5857647899538279,
+        0.6114754974842072
+      ],
+      "anchor": [
+        -0.5473840236663818,
+        0.48247987031936646,
+        0.4290419816970825
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3567",
+          "sha256": "6be9a8fa7f67d5ce6638daf7deacd7d4953c258e920b2ba21575be47edde8fe6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+      "fmaId": "FMA70249",
+      "name": "Right femoral artery",
+      "sourceName": "right femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA70249",
+      "bounds": {
+        "min": [
+          -0.6616889834403992,
+          -3.2957799434661865,
+          0.35492202639579773
+        ],
+        "max": [
+          -0.37722501158714294,
+          0.30250975489616394,
+          0.9295399188995361
+        ]
+      },
+      "center": [
+        -0.5194569975137711,
+        -1.4966350942850113,
+        0.6422309726476669
+      ],
+      "anchor": [
+        -0.4802360236644745,
+        -1.4721503257751465,
+        0.7855099439620972
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2143",
+          "sha256": "d9decbcc37ddafa41a0c01e316cff52a9259ed5292ddf2e199cf09414e872bae"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+      "fmaId": "FMA20796",
+      "name": "Right deep femoral artery",
+      "sourceName": "right deep femoral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-vessels-recovery",
+      "nodeName": "FMA20796",
+      "bounds": {
+        "min": [
+          -1.205430030822754,
+          -4.397520065307617,
+          0.11512500792741776
+        ],
+        "max": [
+          -0.3285030126571655,
+          -0.051859740167856216,
+          0.7462400197982788
+        ]
+      },
+      "center": [
+        -0.7669665217399597,
+        -2.2246899027377367,
+        0.4306825138628483
+      ],
+      "anchor": [
+        -0.6024489998817444,
+        -3.174220085144043,
+        0.4228479862213135
+      ],
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ2137",
+          "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+        },
+        {
+          "file": "FJ2158",
+          "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "name": "Right popliteal artery",
+      "sourceName": "right popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77380",
+      "bounds": {
+        "min": [
+          -0.9584179520606995,
+          -5.167250156402588,
+          0.026954002678394318
+        ],
+        "max": [
+          -0.5585640072822571,
+          -3.1922197341918945,
+          0.4578710198402405
+        ]
+      },
+      "center": [
+        -0.7584909796714783,
+        -4.179734945297241,
+        0.2424125112593174
+      ],
+      "anchor": [
+        -0.7508899569511414,
+        -4.185960292816162,
+        0.11681099236011505
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2170",
+          "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+      "fmaId": "FMA43896",
+      "name": "Right anterior tibial artery",
+      "sourceName": "right anterior tibial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA43896",
+      "bounds": {
+        "min": [
+          -1.0555499792099,
+          -7.956809043884277,
+          0.20105797052383423
+        ],
+        "max": [
+          -0.6813820004463196,
+          -4.781789779663086,
+          0.4810659885406494
+        ]
+      },
+      "center": [
+        -0.8684659898281097,
+        -6.369299411773682,
+        0.3410619795322418
+      ],
+      "anchor": [
+        -0.9001410007476807,
+        -6.391190052032471,
+        0.3953839838504791
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2130",
+          "sha256": "56de59319a67eb9a3fbc9815d9dc66f371b3f116b211c2b03abfbb84ae21568c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+      "fmaId": "FMA43898",
+      "name": "Right posterior tibial artery",
+      "sourceName": "right posterior tibial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA43898",
+      "bounds": {
+        "min": [
+          -0.9113270044326782,
+          -8.413312911987305,
+          0.0034749985206872225
+        ],
+        "max": [
+          -0.444784015417099,
+          -5.102340221405029,
+          0.36775198578834534
+        ]
+      },
+      "center": [
+        -0.6780555099248886,
+        -6.757826566696167,
+        0.18561349215451628
+      ],
+      "anchor": [
+        -0.615835964679718,
+        -6.753640174865723,
+        0.14388495683670044
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2172",
+          "sha256": "4e82371d5860733555c3b4c096134586128646ad31fb58cdcb6ee97df0849f08"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+      "fmaId": "FMA43916",
+      "name": "Right dorsalis pedis artery",
+      "sourceName": "right dorsalis pedis artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43916",
+      "bounds": {
+        "min": [
+          -0.9188739657402039,
+          -8.23951244354248,
+          0.3831169903278351
+        ],
+        "max": [
+          -0.6778370141983032,
+          -7.920245170593262,
+          0.9848100543022156
+        ]
+      },
+      "center": [
+        -0.7983554899692535,
+        -8.079878807067871,
+        0.6839635223150253
+      ],
+      "anchor": [
+        -0.8181509971618652,
+        -8.087831497192383,
+        0.666409969329834
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2055",
+          "sha256": "7b48b7cc6862bea77bd497e456b837e6d99dfc39db267281b3b117924093b618"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-medial-plantar-artery",
+      "fmaId": "FMA43929",
+      "name": "Right medial plantar artery",
+      "sourceName": "right medial plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43929",
+      "bounds": {
+        "min": [
+          -0.7541840076446533,
+          -8.439090728759766,
+          0.36373597383499146
+        ],
+        "max": [
+          -0.6681510210037231,
+          -8.370476722717285,
+          0.7624500393867493
+        ]
+      },
+      "center": [
+        -0.7111675143241882,
+        -8.404783725738525,
+        0.5630930066108704
+      ],
+      "anchor": [
+        -0.7366960048675537,
+        -8.385828018188477,
+        0.5554400086402893
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2164",
+          "sha256": "85916deabe0b545bfccc268b5455dccb89c5d243e769cd91d55a2cd912d0bedc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+      "fmaId": "FMA43931",
+      "name": "Right lateral plantar artery",
+      "sourceName": "right lateral plantar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-vessels-recovery",
+      "nodeName": "FMA43931",
+      "bounds": {
+        "min": [
+          -1.135890007019043,
+          -8.598645210266113,
+          0.3558519780635834
+        ],
+        "max": [
+          -0.668641984462738,
+          -8.393439292907715,
+          0.5326600074768066
+        ]
+      },
+      "center": [
+        -0.9022659957408905,
+        -8.496042251586914,
+        0.444255992770195
+      ],
+      "anchor": [
+        -0.8988440036773682,
+        -8.508970260620117,
+        0.42996901273727417
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2159",
+          "sha256": "e9df02eb728daba8672b6974272c3a070b1d148e330b6be22985494465f387e7"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+      "fmaId": "FMA16586",
+      "name": "Right hip bone",
+      "sourceName": "right hip bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "thigh"
+      ],
+      "bundle": "pelvis-skeleton",
+      "nodeName": "FMA16586",
+      "bounds": {
+        "min": [
+          -1.4487199783325195,
+          -0.4784698486328125,
+          -0.4888122081756592
+        ],
+        "max": [
+          -0.0279029980301857,
+          1.5786901712417603,
+          0.8901899456977844
+        ]
+      },
+      "center": [
+        -0.7383114881813526,
+        0.5501101613044739,
+        0.20068886876106262
+      ],
+      "anchor": [
+        -0.6408339738845825,
+        0.5218298435211182,
+        0.20818497240543365
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3152",
+          "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "name": "Right femur",
+      "sourceName": "right femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24474",
+      "bounds": {
+        "min": [
+          -1.5013400316238403,
+          -4.31850004196167,
+          -0.004697990603744984
+        ],
+        "max": [
+          -0.31894299387931824,
+          0.342520147562027,
+          0.6219199895858765
+        ]
+      },
+      "center": [
+        -0.9101415127515793,
+        -1.9879899471998215,
+        0.30861099949106574
+      ],
+      "anchor": [
+        -0.9391549825668335,
+        -2.0242297649383545,
+        0.31437796354293823
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3365",
+          "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "name": "Right tibia",
+      "sourceName": "right tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24477",
+      "bounds": {
+        "min": [
+          -1.0935299396514893,
+          -8.060371398925781,
+          0.02072898857295513
+        ],
+        "max": [
+          -0.3521600067615509,
+          -4.260799884796143,
+          0.6483500003814697
+        ]
+      },
+      "center": [
+        -0.7228449732065201,
+        -6.160585641860962,
+        0.33453949447721243
+      ],
+      "anchor": [
+        -0.6983820199966431,
+        -6.1077399253845215,
+        0.3267289698123932
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3387",
+          "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+      "fmaId": "FMA24480",
+      "name": "Right fibula",
+      "sourceName": "right fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24480",
+      "bounds": {
+        "min": [
+          -1.2016500234603882,
+          -8.252799034118652,
+          -0.015125999227166176
+        ],
+        "max": [
+          -0.8434450030326843,
+          -4.4085001945495605,
+          0.28168800473213196
+        ]
+      },
+      "center": [
+        -1.0225475132465363,
+        -6.3306496143341064,
+        0.1332810027524829
+      ],
+      "anchor": [
+        -1.0324500799179077,
+        -6.344590187072754,
+        0.16410896182060242
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3366",
+          "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-talus",
+      "fmaId": "FMA24482",
+      "name": "Right talus",
+      "sourceName": "right talus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24482",
+      "bounds": {
+        "min": [
+          -0.901136040687561,
+          -8.31156063079834,
+          -0.012459984049201012
+        ],
+        "max": [
+          -0.496273010969162,
+          -7.96889066696167,
+          0.5556899905204773
+        ]
+      },
+      "center": [
+        -0.6987045258283615,
+        -8.140225648880005,
+        0.27161500323563814
+      ],
+      "anchor": [
+        -0.6930500268936157,
+        -8.184046745300293,
+        0.27630698680877686
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3385",
+          "sha256": "8b35f0132c1a05b64f26746fdd0496a2495280cd0c2ac90dbf637fd74f79f54f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+      "fmaId": "FMA24500",
+      "name": "Navicular bone of right foot",
+      "sourceName": "navicular bone of right foot",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24500",
+      "bounds": {
+        "min": [
+          -0.9675399661064148,
+          -8.30776309967041,
+          0.44329002499580383
+        ],
+        "max": [
+          -0.5818960070610046,
+          -8.06155776977539,
+          0.7099299430847168
+        ]
+      },
+      "center": [
+        -0.7747179865837097,
+        -8.1846604347229,
+        0.5766099840402603
+      ],
+      "anchor": [
+        -0.7869519591331482,
+        -8.1781005859375,
+        0.5621800422668457
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3308",
+          "sha256": "0e08f1570755a9675e2556013eda861f00f31fe7ae2139e24584129dfe78d2c2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+      "fmaId": "FMA24497",
+      "name": "Right calcaneus",
+      "sourceName": "right calcaneus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24497",
+      "bounds": {
+        "min": [
+          -1.0078099966049194,
+          -8.684906959533691,
+          -0.2599489986896515
+        ],
+        "max": [
+          -0.44875800609588623,
+          -8.191547393798828,
+          0.4414849877357483
+        ]
+      },
+      "center": [
+        -0.7282840013504028,
+        -8.43822717666626,
+        0.0907679945230484
+      ],
+      "anchor": [
+        -0.6279199719429016,
+        -8.424676895141602,
+        0.14383003115653992
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3360",
+          "sha256": "b53e7970e822e997e1b05f94f42514d07a3f98edcc63ec7dd7219354ce1d8176"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+      "fmaId": "FMA24507",
+      "name": "Right first metatarsal bone",
+      "sourceName": "right first metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24507",
+      "bounds": {
+        "min": [
+          -1.0436500310897827,
+          -8.653291702270508,
+          0.7994400262832642
+        ],
+        "max": [
+          -0.7481369972229004,
+          -8.22120189666748,
+          1.421820044517517
+        ]
+      },
+      "center": [
+        -0.8958935141563416,
+        -8.437246799468994,
+        1.1106300354003906
+      ],
+      "anchor": [
+        -0.8959369659423828,
+        -8.49156665802002,
+        1.0965800285339355
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3351",
+          "sha256": "b70e565ec8ad8c09264ae66159415ca4f0cf639598812aac6fcf7b761c3758d3"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+      "fmaId": "FMA24515",
+      "name": "Right fifth metatarsal bone",
+      "sourceName": "right fifth metatarsal bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "foot",
+      "regions": [
+        "foot"
+      ],
+      "bundle": "foot-skeleton",
+      "nodeName": "FMA24515",
+      "bounds": {
+        "min": [
+          -1.5233099460601807,
+          -8.698196411132812,
+          0.39382103085517883
+        ],
+        "max": [
+          -1.064579963684082,
+          -8.398794174194336,
+          1.0507800579071045
+        ]
+      },
+      "center": [
+        -1.2939449548721313,
+        -8.548495292663574,
+        0.7223005443811417
+      ],
+      "anchor": [
+        -1.3091399669647217,
+        -8.51633071899414,
+        0.725640058517456
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3359",
+          "sha256": "cc75b866a2d5ac0317eb3a1d64cef41a65231fab975613d108a4fcdcbc2c58b1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "pelvis-skeleton",
+      "url": "/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "bytes": 86960,
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "structures": 2
+    },
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    },
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
+    },
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "foot-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "bytes": 107772,
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "structures": 6
+    }
+  ]
+}

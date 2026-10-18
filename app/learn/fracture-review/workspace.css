@@ -1,0 +1,51 @@
+.fracture-workspace { min-height: 100vh; height: auto; display: block; overflow: visible; }
+.fracture-header { gap: 20px; flex-wrap: wrap; }
+.fracture-header > div { display: grid; gap: 3px; }
+.fracture-header nav { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-left: auto; }
+.fracture-workspace button, .fracture-workspace input, .fracture-workspace select { font: inherit; }
+.fracture-workspace button { cursor: pointer; }
+.fracture-workspace button:disabled { cursor: default; opacity: .55; }
+.fracture-workspace :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.fracture-workspace .viewer-workspace { grid-template-columns: 180px minmax(0, 1fr) minmax(300px, 380px); min-height: 620px; height: calc(100vh - 145px); }
+.fracture-workspace .case-browser { min-width: 0; overflow: auto; }
+.fracture-workspace .workbook-switcher { display: grid; padding: 14px; }
+.fracture-workspace .workbook-switcher select { width: 100%; min-width: 0; }
+.fracture-cases { list-style: none; margin: 0; padding: 8px; }
+.fracture-cases button { width: 100%; padding: 14px 10px; display: grid; text-align: left; gap: 6px; border: 1px solid transparent; background: transparent; color: var(--text); }
+.fracture-cases button[aria-current=true] { border-color: var(--accent); background: var(--active); }
+.fracture-cases small { color: var(--muted); }
+.fracture-viewer { min-width: 0; min-height: 0; display: flex; flex-direction: column; background: #02090c; }
+.fracture-series { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; color: #e4f0ee; }
+.fracture-series button, .fracture-viewer-tools button { border: 1px solid #47717a; border-radius: 5px; padding: 8px 12px; color: #e4f0ee; background: #16363e; }
+.fracture-series button[aria-pressed=true], .fracture-viewer-tools button[aria-pressed=true] { border-color: #28c6a8; background: #124d46; }
+.fracture-raster { display: flex; flex: 1; flex-direction: column; min-height: 0; }
+.fracture-image-stage { position: relative; display: flex; align-items: center; justify-content: center; flex: 1; min-height: 300px; overflow: hidden; touch-action: none; color: #e4f0ee; cursor: grab; }
+.fracture-image-stage img { width: 100%; height: 100%; object-fit: contain; position: absolute; user-select: none; }
+.fracture-image-stage:active { cursor: grabbing; }
+.fracture-viewer-tools { display: flex; gap: 8px; padding: 12px; flex-wrap: wrap; align-items: center; color: #e4f0ee; background: #0c2229; }
+.fracture-viewer-tools label { display: flex; gap: 6px; align-items: center; font-size: 12px; }
+.fracture-viewer-tools input { width: 95px; }
+.fracture-import, .fracture-message { padding: 18px 24px; background: var(--panel); color: var(--text); }
+.fracture-import h1 { font-size: 22px; margin: 0 0 10px; }
+.fracture-import > label { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 12px 0; }
+.fracture-import input:not([type=checkbox]) { max-width: 100%; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); padding: 8px; }
+.fracture-import .fracture-confirm { display: grid; grid-template-columns: 20px 1fr; align-items: start; }
+.fracture-import > button { margin: 8px 12px 0 0; }
+.fracture-message[role=alert] { border: 1px solid var(--danger); }
+.fracture-guidance { padding: 12px; margin-bottom: 24px; border: 1px solid var(--border); }
+.fracture-guidance summary { cursor: pointer; }
+.fracture-workspace .panel-head { flex-wrap: wrap; gap: 8px; }
+.fracture-workspace .panel-scroll { overflow-wrap: anywhere; }
+@media (max-width: 1050px) { .fracture-workspace .viewer-workspace { grid-template-columns: 130px minmax(0, 1fr) 300px; } }
+@media (max-width: 800px) {
+ .fracture-workspace .viewer-workspace { display: grid; height: auto; grid-template-columns: 1fr; grid-template-rows: auto auto auto; min-height: 0; }
+ .fracture-workspace .case-browser { display: block; max-height: 190px; }
+ .fracture-cases { display: flex; gap: 8px; overflow-x: auto; }
+ .fracture-cases li { min-width: 120px; }
+ .fracture-workspace .workbook-switcher { display: flex; }
+ .fracture-workspace .browser-heading { display: none; }
+ .fracture-viewer { height: 65vh; min-height: 420px; }
+ .fracture-workspace .answer-panel { min-height: 400px; height: auto; }
+ .fracture-workspace .panel-scroll { overflow: visible; }
+ .fracture-header nav { margin-left: 0; }
+}

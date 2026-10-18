@@ -1,0 +1,94 @@
+{
+  "schema": "vm-delivery-tests-pre-repair-1",
+  "capturedAt": "2026-10-16T17:54:09.109Z",
+  "atlasSource": "f1dc0ccc54ec82aa774720db3c822d3e0ea9c418",
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "scope": "Exact pre-repair test source bytes, not a claim that stale current assertions were accepted runtime behavior.",
+  "files": [
+    {
+      "original": "tests/atlas-forearm-delivery-fixture.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-forearm-delivery-fixture.ts.txt",
+      "sha256": "1213eddc84e5fc756e15bf6f6f46bc09fe015d29e77c06fe540ab57438b8263f"
+    },
+    {
+      "original": "tests/atlas-forearm-interosseous-ct.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-forearm-interosseous-ct.test.ts.txt",
+      "sha256": "d80ba8e1dd9b966f179350612ae1b7ae614d73452d483d167eadd8850321e1b2"
+    },
+    {
+      "original": "tests/atlas-forearm-superficial-veins.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-forearm-superficial-veins.test.ts.txt",
+      "sha256": "56824867821a9fba5a5784ac56ac00e424764dcca0496a069a12f6692dc77bb4"
+    },
+    {
+      "original": "tests/atlas-forearm-venous-imaging.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-forearm-venous-imaging.test.ts.txt",
+      "sha256": "05761afce845eea9d0e162c5bbc0f8e419db410b8d8a388b9c33f8eb39c308b4"
+    },
+    {
+      "original": "tests/atlas-neck-liver-delivery-fixture.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-neck-liver-delivery-fixture.ts.txt",
+      "sha256": "113535fec321d2d125de240cc771e7cc8c6881756d5cee5e7878959cf3b383a9"
+    },
+    {
+      "original": "tests/atlas-lacrimal-drainage-imaging.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-lacrimal-drainage-imaging.test.ts.txt",
+      "sha256": "7920d52da81f9d295abb6adf0e158ac54b7e9361b191dad7178f5ab18f65c785"
+    },
+    {
+      "original": "tests/atlas-laryngeal-imaging.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-laryngeal-imaging.test.ts.txt",
+      "sha256": "f3298acf4f51ac2712e0bf379e0557225cfb9a82284e53e4259141c58b826529"
+    },
+    {
+      "original": "tests/atlas-laryngeal-muscle-imaging.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-laryngeal-muscle-imaging.test.ts.txt",
+      "sha256": "eb7492d3a10228a69f98c1878277596fb0fde0c5bdf844d28acf1a3b3951fbad"
+    },
+    {
+      "original": "tests/atlas-liver-display-note.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-liver-display-note.test.ts.txt",
+      "sha256": "8d596430d7b623adf9b1d4c4152d8baf1fce7060b379d1ec99ae7fe75b7323b1"
+    },
+    {
+      "original": "tests/atlas-hand-xray-mri-fixture.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-hand-xray-mri-fixture.ts.txt",
+      "sha256": "ca02659270aa5b44e4ac4833de59fc1614bf98abcb713088e12eabb91249c771"
+    },
+    {
+      "original": "tests/atlas-hand-bone-xray.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-hand-bone-xray.test.ts.txt",
+      "sha256": "44650b54244f132c038a0b0d47f2f13e88b5f4d8d268606bc9a9a812e06229db"
+    },
+    {
+      "original": "tests/atlas-hand-mri.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-hand-mri.test.ts.txt",
+      "sha256": "82364cbf3cd4e4f4f5f2303d88318c716d8e8196abcc9ad3a5f29ffd5cbc9db3"
+    },
+    {
+      "original": "tests/atlas-spinal-study-specimen-fixture.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-spinal-study-specimen-fixture.ts.txt",
+      "sha256": "2f419a02ac5c77f2291b9c8e48cb801935b6caa3940a55bc49dcc91495be874b"
+    },
+    {
+      "original": "tests/atlas-spinal-disc-function.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-spinal-disc-function.test.ts.txt",
+      "sha256": "22decb67b099fdfc7034f968c1b1e03e7325b57c36bef44c400acb7aec450d64"
+    },
+    {
+      "original": "tests/atlas-study-mode-transition.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-study-mode-transition.test.ts.txt",
+      "sha256": "e424bd445c9fc60a25b990d3c65614be6b559e353a4897f385660d7b68b12962"
+    },
+    {
+      "original": "tests/atlas-specimen-focus.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-specimen-focus.test.ts.txt",
+      "sha256": "b7d5c340a81d628941f3d6e6d210f34b88baeb329aac9a3c3576d9e554a2c63d"
+    },
+    {
+      "original": "tests/atlas-specimen-reassembly.test.ts",
+      "path": "tests/fixtures/delivery-before-20261016/atlas-specimen-reassembly.test.ts.txt",
+      "sha256": "9eeeb653b15b7147508eaea865a27bbdd43f6c11ba26614a21b426fbbcbcd9ff"
+    }
+  ]
+}

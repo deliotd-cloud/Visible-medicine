@@ -1,0 +1,33 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const sha=(value:Uint8Array|string)=>createHash('sha256').update(value).digest('hex');
+
+test('exact-model access notices reach the learner and protected Review together',()=>{
+ const base='public/atlas-runtime/head-neck/';
+ const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+ const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
+ const renderer=JSON.parse(readFileSync('atlas-review/content/body-renderer-revision.json','utf8'));
+ assert.equal(learner.sourceCommit,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
+ assert.equal(review.revision,learner.sourceCommit);
+ for(const path of ['lib/model-load-failure.ts','app/body-scene.tsx','app/body-explorer.tsx','app/ventricles.tsx','app/regional-guided-learning.tsx']){
+  const source=inputs.find((f:{path:string})=>f.path===path),imported=review.files.find((f:{path:string})=>f.path===path);
+  assert(source&&imported);assert.equal(imported.sourceSha256,source.sha256);
+  const code=readFileSync('atlas-review/'+path,'utf8');
+  assert.equal(sha(code),imported.importedSha256);
+  // Review routes/aliases are transformed by the audited importer; the source
+  // and imported digests intentionally describe different byte sequences.
+  assert.equal(renderer.dependencies.find((f:{path:string})=>f.path===path).sha256,source.sha256);
+ }
+ const guided=readFileSync('atlas-review/app/regional-guided-learning.tsx','utf8');
+ assert(guided.includes('modelLoadAccessNotice(failed.map'));
+ assert(guided.includes('setFailureReasons({})'));
+ assert(guided.includes("accessNotice?.retryLabel??'Retry missing anatomy'"));
+ const bundleText=(root:string,manifest:{files:{path:string}[]})=>manifest.files.filter(f=>f.path.endsWith('.js')).map(f=>readFileSync(root+f.path,'utf8')).join('\n');
+ const reviewViewer=JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json','utf8'));
+ for(const text of [bundleText(base,learner),bundleText('public/atlas-review-viewer/',reviewViewer)])
+  for(const copy of ['Some model files require sign-in.','The website refused access to some model files.','Check access again','The 3D view is recovering. Playback remains paused until it is ready.'])assert(text.includes(copy),copy);
+ assert.equal(learner.clinicalApproved,false);assert.equal(learner.patientDataIncluded,false);
+});

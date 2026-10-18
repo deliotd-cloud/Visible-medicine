@@ -1,0 +1,433 @@
+{
+  "parentCommit": "994da77df921985ec83d45dff8da55c7a1332346",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thorax-muscles",
+      "url": "/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "bytes": 14990372,
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "structures": 8
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:external-intercostal-muscle",
+        "fmaId": "FMA9756",
+        "name": "External intercostal muscle",
+        "sourceName": "external intercostal muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9756",
+        "bounds": {
+          "min": [
+            -1.3616600036621094,
+            2.115100145339966,
+            -0.46718260645866394
+          ],
+          "max": [
+            1.3616600036621094,
+            5.65369987487793,
+            1.4164100885391235
+          ]
+        },
+        "center": [
+          0,
+          3.8844000101089478,
+          0.4746137410402298
+        ],
+        "anchor": [
+          -0.294655978679657,
+          3.6945996284484863,
+          -0.21502599120140076
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1451",
+            "sha256": "588de751687a05ae711f9b8d65f78ddac891994158fa4a94ea2ca48d36dc1b61"
+          },
+          {
+            "file": "FJ1451M",
+            "sha256": "d4c021ba00dbe2bd3c7e722cb5982df7659d7d68fe6f4ec980588bfd65d31214"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "external",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find external intercostal muscle on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:internal-intercostal-muscle",
+        "fmaId": "FMA9757",
+        "name": "Internal intercostal muscle",
+        "sourceName": "internal intercostal muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9757",
+        "bounds": {
+          "min": [
+            -1.329140067100525,
+            2.1844000816345215,
+            -0.45345309376716614
+          ],
+          "max": [
+            1.329140067100525,
+            5.140200138092041,
+            1.5931100845336914
+          ]
+        },
+        "center": [
+          0,
+          3.6623001098632812,
+          0.5698284953832626
+        ],
+        "anchor": [
+          -0.257999986410141,
+          3.940000057220459,
+          1.5195199251174927
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1455",
+            "sha256": "aa71a14eb5d50c91569fb348ccf3747438bf0e5a4a8cd73784f7ae9ad2f801e3"
+          },
+          {
+            "file": "FJ1455M",
+            "sha256": "d92760297b5c8ceacf1013460e372abcb05f97192ffc514758d74ac0b73af373"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internal",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find internal intercostal muscle on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:innermost-intercostal-muscle",
+        "fmaId": "FMA9758",
+        "name": "Innermost intercostal muscle",
+        "sourceName": "innermost intercostal muscle",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9758",
+        "bounds": {
+          "min": [
+            -1.346250057220459,
+            2.1915998458862305,
+            -0.4369722008705139
+          ],
+          "max": [
+            1.346250057220459,
+            5.149899959564209,
+            1.4337300062179565
+          ]
+        },
+        "center": [
+          0,
+          3.6707499027252197,
+          0.4983789026737213
+        ],
+        "anchor": [
+          -0.5804660320281982,
+          3.5676000118255615,
+          -0.3345470130443573
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1454",
+            "sha256": "8e9a5c48482ba61dfe2ed19ced05121093a7bf3f8c6e0ac7d0c0b8ebe8bce45d"
+          },
+          {
+            "file": "FJ1454M",
+            "sha256": "7458ea18bdf836da68b0220da5421cddb1bb653da909d998dea14db3d5ef00c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "innermost",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find innermost intercostal muscle on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:muscle:right-transversus-thoracis",
+        "fmaId": "FMA9761",
+        "name": "Right transversus thoracis",
+        "sourceName": "right transversus thoracis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9761",
+        "bounds": {
+          "min": [
+            -0.8957420587539673,
+            3.434499502182007,
+            1.0548300743103027
+          ],
+          "max": [
+            -0.02331010065972805,
+            4.884100437164307,
+            1.5952099561691284
+          ]
+        },
+        "center": [
+          -0.45952607970684767,
+          4.159299969673157,
+          1.3250200152397156
+        ],
+        "anchor": [
+          -0.46754300594329834,
+          4.193199634552002,
+          1.3649799823760986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1461",
+            "sha256": "bce9619bd5a8afcd77e28139313dd3d4c553127fc8832ecc2412931308bac390"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transversus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right transversus thoracis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:muscle:left-transversus-thoracis",
+        "fmaId": "FMA9762",
+        "name": "Left transversus thoracis",
+        "sourceName": "left transversus thoracis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA9762",
+        "bounds": {
+          "min": [
+            0.02331010065972805,
+            3.434499502182007,
+            1.0548300743103027
+          ],
+          "max": [
+            0.8957420587539673,
+            4.884100437164307,
+            1.5952099561691284
+          ]
+        },
+        "center": [
+          0.45952607970684767,
+          4.159299969673157,
+          1.3250200152397156
+        ],
+        "anchor": [
+          0.46754300594329834,
+          4.193199634552002,
+          1.3649799823760986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1461M",
+            "sha256": "be04d1b4da0f157e45053496c8581dbc62f0b31ef20c576249d4debb54a75042"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "transversus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left transversus thoracis on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:muscle:diaphragm",
+        "fmaId": "FMA13295",
+        "name": "Diaphragm",
+        "sourceName": "diaphragm",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-muscles",
+        "nodeName": "FMA13295",
+        "bounds": {
+          "min": [
+            -1.223289966583252,
+            1.8585199117660522,
+            -0.24084199965000153
+          ],
+          "max": [
+            1.2086299657821655,
+            3.925799608230591,
+            1.5532299280166626
+          ]
+        },
+        "center": [
+          -0.007330000400543213,
+          2.8921597599983215,
+          0.6561939641833305
+        ],
+        "anchor": [
+          -0.022627100348472595,
+          3.0029003620147705,
+          0.5967299938201904
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3131",
+            "sha256": "db97e5f8f8d46928ea54b42fb50789e8f5523ef973cc744b2c2f17930fc33dc8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "diaphragm",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find diaphragm on the model."
+      }
+    }
+  ]
+}

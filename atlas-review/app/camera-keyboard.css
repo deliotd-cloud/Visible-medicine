@@ -1,0 +1,28 @@
+.vm-anatomy-canvas canvas:is([data-keyboard-rotation], [data-keyboard-pan]):focus-visible {
+  outline: 3px solid var(--vm-ink, #002631);
+  outline-offset: -4px;
+  box-shadow: inset 0 0 0 6px var(--vm-ivory, #f8f7f2);
+}
+
+.vm-anatomy-canvas:has(canvas:is([data-keyboard-rotation], [data-keyboard-pan]):focus-visible)::after {
+  content: 'Arrow keys rotate · Shift for fine steps';
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 1.5rem);
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.375rem;
+  background: var(--vm-ink, #002631);
+  color: var(--vm-ivory, #f8f7f2);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vm-anatomy-canvas:has(canvas[data-keyboard-pan]:focus-visible)::after {
+  content: 'Arrow keys pan · Shift for fine steps';
+}

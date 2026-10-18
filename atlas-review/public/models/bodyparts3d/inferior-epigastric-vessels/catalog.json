@@ -1,0 +1,666 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "58fab593957c3469125e84258c78c176425235b40838e369bff0d38191930698",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+      "fmaId": "FMA20689",
+      "name": "Left inferior epigastric artery",
+      "sourceName": "left inferior epigastric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "inferior-epigastric-vessels",
+      "nodeName": "FMA20689",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3511",
+          "sha256": "7fae27fdfcd79f3989488c0bc5f8d0766bbb5e6140269bb8d9fe9effa903a6e0"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.2179819941520691,
+          0.3065600097179413,
+          0.5916200280189514
+        ],
+        "max": [
+          0.4859220087528229,
+          2.3043999671936035,
+          1.353790044784546
+        ]
+      },
+      "center": [
+        0.351952001452446,
+        1.3054799884557724,
+        0.9727050364017487
+      ],
+      "anchor": [
+        0.35682499408721924,
+        1.284209966659546,
+        1.1275500059127808
+      ],
+      "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+      "fmaId": "FMA21164",
+      "name": "Left inferior epigastric vein",
+      "sourceName": "left inferior epigastric vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "inferior-epigastric-vessels",
+      "nodeName": "FMA21164",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3512",
+          "sha256": "e8453328cabd80812db377189df8c040b7a1d0870870293512ede8fe0174fbce"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.18112599849700928,
+          0.31365999579429626,
+          0.6147000193595886
+        ],
+        "max": [
+          0.4179069995880127,
+          2.310699939727783,
+          1.3692400455474854
+        ]
+      },
+      "center": [
+        0.299516499042511,
+        1.3121799677610397,
+        0.991970032453537
+      ],
+      "anchor": [
+        0.3196839988231659,
+        1.2683099508285522,
+        1.14028000831604
+      ],
+      "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+      "fmaId": "FMA20688",
+      "name": "Right inferior epigastric artery",
+      "sourceName": "right inferior epigastric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "inferior-epigastric-vessels",
+      "nodeName": "FMA20688",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3604",
+          "sha256": "aa8fa354690bf56ac7bf1de05fdcb6acfd1e0c13fdb4194f38cc5eb11e4a941d"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.565276026725769,
+          0.3065600097179413,
+          0.5916399955749512
+        ],
+        "max": [
+          -0.2179650068283081,
+          2.304500102996826,
+          1.3538600206375122
+        ]
+      },
+      "center": [
+        -0.3916205167770386,
+        1.3055300563573837,
+        0.9727500081062317
+      ],
+      "anchor": [
+        -0.3631100058555603,
+        1.276900053024292,
+        1.1284099817276
+      ],
+      "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+      "fmaId": "FMA21163",
+      "name": "Right inferior epigastric vein",
+      "sourceName": "right inferior epigastric vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis"
+      ],
+      "bundle": "inferior-epigastric-vessels",
+      "nodeName": "FMA21163",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3605",
+          "sha256": "50c661b10157afca410a8b1cba93263449ed1d4e78fa0ef85f1c415ea1541a49"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.42350998520851135,
+          0.2670699954032898,
+          0.585070013999939
+        ],
+        "max": [
+          -0.18111300468444824,
+          2.310699939727783,
+          1.3692699670791626
+        ]
+      },
+      "center": [
+        -0.3023114949464798,
+        1.2888849675655365,
+        0.9771699905395508
+      ],
+      "anchor": [
+        -0.3193050026893616,
+        1.273710012435913,
+        1.141029953956604
+      ],
+      "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+      "fmaId": "FMA18806",
+      "name": "Right external iliac artery",
+      "sourceName": "right external iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18806",
+      "bounds": {
+        "min": [
+          -0.6128699779510498,
+          0.03612976148724556,
+          0.27797096967697144
+        ],
+        "max": [
+          -0.27458298206329346,
+          1.1353998184204102,
+          0.9449800252914429
+        ]
+      },
+      "center": [
+        -0.44372648000717163,
+        0.5857647899538279,
+        0.6114754974842072
+      ],
+      "anchor": [
+        -0.5473840236663818,
+        0.48247987031936646,
+        0.4290419816970825
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3567",
+          "sha256": "6be9a8fa7f67d5ce6638daf7deacd7d4953c258e920b2ba21575be47edde8fe6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+      "fmaId": "FMA18807",
+      "name": "Left external iliac artery",
+      "sourceName": "left external iliac artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18807",
+      "bounds": {
+        "min": [
+          0.25536400079727173,
+          0.09831970185041428,
+          0.28136298060417175
+        ],
+        "max": [
+          0.6544149518013,
+          1.12336003780365,
+          1.0294400453567505
+        ]
+      },
+      "center": [
+        0.4548894762992859,
+        0.6108398698270321,
+        0.6554015129804611
+      ],
+      "anchor": [
+        0.5846379995346069,
+        0.4299200475215912,
+        0.5032299757003784
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3466",
+          "sha256": "bba53b19cab2fb7e5c8f9461a21a2250d59e152585e58a9275207d5f51dc491b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+      "fmaId": "FMA18885",
+      "name": "Right external iliac vein",
+      "sourceName": "right external iliac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18885",
+      "bounds": {
+        "min": [
+          -0.5212200284004211,
+          -0.043699949979782104,
+          0.12443698942661285
+        ],
+        "max": [
+          -0.2480829954147339,
+          1.0554901361465454,
+          1.015910029411316
+        ]
+      },
+      "center": [
+        -0.3846515119075775,
+        0.5058950930833817,
+        0.5701735094189644
+      ],
+      "anchor": [
+        -0.4340520203113556,
+        0.3621801733970642,
+        0.4993080198764801
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3568",
+          "sha256": "503cc199a945ab1c061deacdc32165ac413f7c2d362375f17d576a3b2f235023"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+      "fmaId": "FMA18886",
+      "name": "Left external iliac vein",
+      "sourceName": "left external iliac vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "pelvis",
+      "regions": [
+        "pelvis",
+        "abdomen",
+        "thigh"
+      ],
+      "bundle": "pelvis-vessels-recovery",
+      "nodeName": "FMA18886",
+      "bounds": {
+        "min": [
+          0.07749750465154648,
+          0.04442016780376434,
+          0.0061830137856304646
+        ],
+        "max": [
+          0.5713520050048828,
+          1.1386700868606567,
+          1.0051300525665283
+        ]
+      },
+      "center": [
+        0.32442475482821465,
+        0.5915451273322105,
+        0.5056565331760794
+      ],
+      "anchor": [
+        0.4478049874305725,
+        0.5487096905708313,
+        0.29528504610061646
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3484",
+          "sha256": "bf0ca81768bb8f1d42837f43ccd41bc0f006da1a9703517b298edeb9af525c00"
+        },
+        {
+          "file": "FJ3522",
+          "sha256": "2d1d33f168089521c707408b80f229d6b8f8302fde1f31ddad22e63238c4da7a"
+        },
+        {
+          "file": "FJ3523",
+          "sha256": "a26bb4b9261de25955ac8a6669391cb588a1546267db5c8c9865d10c426bc402"
+        },
+        {
+          "file": "FJ3524",
+          "sha256": "006c8cb0cc53fb2b5f388979adccff45430ba16dfd9d06ffa67a36f5bd946f27"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+      "fmaId": "FMA3988",
+      "name": "Right superior epigastric artery",
+      "sourceName": "right superior epigastric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA3988",
+      "bounds": {
+        "min": [
+          -0.162758007645607,
+          2.0850000381469727,
+          1.3073500394821167
+        ],
+        "max": [
+          -0.058193400502204895,
+          3.747800350189209,
+          1.532420039176941
+        ]
+      },
+      "center": [
+        -0.11047570407390594,
+        2.916400194168091,
+        1.4198850393295288
+      ],
+      "anchor": [
+        -0.10448800027370453,
+        2.9230005741119385,
+        1.4897301197052002
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1936",
+          "sha256": "50f8f2849e884a93f4b223f88f91b4fff6b3fb738b3b59a0437250d355320393"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+      "fmaId": "FMA4083",
+      "name": "Left superior epigastric artery",
+      "sourceName": "left superior epigastric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "thorax",
+      "regions": [
+        "thorax",
+        "abdomen"
+      ],
+      "bundle": "thorax-vessels-inventory",
+      "nodeName": "FMA4083",
+      "bounds": {
+        "min": [
+          0.058121100068092346,
+          2.0850000381469727,
+          1.3073500394821167
+        ],
+        "max": [
+          0.16272801160812378,
+          3.7477002143859863,
+          1.5324499607086182
+        ]
+      },
+      "center": [
+        0.11042455583810806,
+        2.9163501262664795,
+        1.4199000000953674
+      ],
+      "anchor": [
+        0.10056799650192261,
+        2.905799627304077,
+        1.4860299825668335
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1971",
+          "sha256": "90a4c76477ebcf295c5790516ecaedb3c1e1737391ce4b87b11bbe7d5f423b0a"
+        }
+      ],
+      "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    },
+    {
+      "id": "thorax-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "structures": 9
+    }
+  ],
+  "bundles": [
+    {
+      "id": "inferior-epigastric-vessels",
+      "url": "/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb?v=8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "bytes": 526756,
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "structures": 4
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals and Float32 GLB storage. Every triangle retained in order; no fitting, mirroring, smoothing, bridges, invented branches or face removal.",
+  "clinicalApproval": false
+}

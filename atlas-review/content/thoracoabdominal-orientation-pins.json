@@ -1,0 +1,738 @@
+{
+  "schemaVersion": 1,
+  "parentCommit": "f0ee3f2457aad7de214079cb50cbac4d28912688",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "previousCatalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "previousAllTopicsHash": "bbe5679a6ff79308b2263224205aca19701bc4553a0c339aa239cba530372179",
+  "bundles": [
+    {
+      "id": "thorax-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "bytes": 483532,
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "structures": 9
+    },
+    {
+      "id": "abdomen-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "bytes": 37124,
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "structures": 1
+    },
+    {
+      "id": "abdomen-connective-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "bytes": 727116,
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "structures": 3
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+        "fmaId": "FMA3988",
+        "name": "Right superior epigastric artery",
+        "sourceName": "right superior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA3988",
+        "bounds": {
+          "min": [
+            -0.162758007645607,
+            2.0850000381469727,
+            1.3073500394821167
+          ],
+          "max": [
+            -0.058193400502204895,
+            3.747800350189209,
+            1.532420039176941
+          ]
+        },
+        "center": [
+          -0.11047570407390594,
+          2.916400194168091,
+          1.4198850393295288
+        ],
+        "anchor": [
+          -0.10448800027370453,
+          2.9230005741119385,
+          1.4897301197052002
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1936",
+            "sha256": "50f8f2849e884a93f4b223f88f91b4fff6b3fb738b3b59a0437250d355320393"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-epigastric-artery",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right superior epigastric artery · Course & connections · draft",
+        "body": "The superior epigastric artery continues from the internal thoracic into the anterior abdominal wall toward the rectus region.",
+        "bullets": [
+          "Distinct from inferior and superficial epigastric arteries. Thorax/abdomen membership is retained; a patent anastomosis or safe abdominal access route is not established.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA3988 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK537156/"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+        "fmaId": "FMA4083",
+        "name": "Left superior epigastric artery",
+        "sourceName": "left superior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4083",
+        "bounds": {
+          "min": [
+            0.058121100068092346,
+            2.0850000381469727,
+            1.3073500394821167
+          ],
+          "max": [
+            0.16272801160812378,
+            3.7477002143859863,
+            1.5324499607086182
+          ]
+        },
+        "center": [
+          0.11042455583810806,
+          2.9163501262664795,
+          1.4199000000953674
+        ],
+        "anchor": [
+          0.10056799650192261,
+          2.905799627304077,
+          1.4860299825668335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1971",
+            "sha256": "90a4c76477ebcf295c5790516ecaedb3c1e1737391ce4b87b11bbe7d5f423b0a"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-epigastric-artery",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left superior epigastric artery · Course & connections · draft",
+        "body": "The superior epigastric artery continues from the internal thoracic into the anterior abdominal wall toward the rectus region.",
+        "bullets": [
+          "Distinct from inferior and superficial epigastric arteries. Thorax/abdomen membership is retained; a patent anastomosis or safe abdominal access route is not established.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4083 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK537156/"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+        "fmaId": "FMA10692",
+        "name": "Right musculophrenic artery",
+        "sourceName": "right musculophrenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA10692",
+        "bounds": {
+          "min": [
+            -1.1400200128555298,
+            1.962499976158142,
+            0.463979035615921
+          ],
+          "max": [
+            -0.12452099472284317,
+            3.7452001571655273,
+            1.5226600170135498
+          ]
+        },
+        "center": [
+          -0.6322705037891865,
+          2.8538500666618347,
+          0.9933195263147354
+        ],
+        "anchor": [
+          -0.7030269503593445,
+          2.7461998462677,
+          1.3616600036621094
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1969",
+            "sha256": "8b4e68c9e0bf6ef0ca948cb6c511bb894b14156f1609d004c6a8c54303ce271c"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "musculophrenic-artery",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right musculophrenic artery · Course & connections · draft",
+        "body": "The musculophrenic artery branches from the internal thoracic and follows the costal margin toward the diaphragm.",
+        "bullets": [
+          "Typical anatomical relationships vary. Branch origins, joins and neighbouring structures are teaching context, not verified connections in this source surface.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA10692 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK537337/"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+        "fmaId": "FMA4077",
+        "name": "Left musculophrenic artery",
+        "sourceName": "left musculophrenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4077",
+        "bounds": {
+          "min": [
+            0.12459199875593185,
+            1.9625097513198853,
+            0.46400099992752075
+          ],
+          "max": [
+            1.1399199962615967,
+            3.74530029296875,
+            1.5226199626922607
+          ]
+        },
+        "center": [
+          0.6322559975087643,
+          2.8539050221443176,
+          0.9933104813098907
+        ],
+        "anchor": [
+          0.7044619917869568,
+          2.748000383377075,
+          1.3619500398635864
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1979",
+            "sha256": "f2010f732482ad9d6c1291d7c7ab2cdb839c2fc2bae2889fcc9147f0aa9d3ba6"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "musculophrenic-artery",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left musculophrenic artery · Course & connections · draft",
+        "body": "The musculophrenic artery branches from the internal thoracic and follows the costal margin toward the diaphragm.",
+        "bullets": [
+          "Typical anatomical relationships vary. Branch origins, joins and neighbouring structures are teaching context, not verified connections in this source surface.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4077 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://www.ncbi.nlm.nih.gov/books/NBK537337/"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+        "fmaId": "FMA4772",
+        "name": "Right musculophrenic vein",
+        "sourceName": "right musculophrenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4772",
+        "bounds": {
+          "min": [
+            -1.0805100202560425,
+            2.200700044631958,
+            0.965910017490387
+          ],
+          "max": [
+            -0.09123200178146362,
+            3.868800163269043,
+            1.5580499172210693
+          ]
+        },
+        "center": [
+          -0.585871011018753,
+          3.0347501039505005,
+          1.2619799673557281
+        ],
+        "anchor": [
+          -0.599373996257782,
+          2.9973998069763184,
+          1.467579960823059
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1996",
+            "sha256": "a869265038e3f4cfeaaa2a4d3c3df7a2351760eae583caa3970bd2febd6c6f93"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "musculophrenic-vein",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right musculophrenic vein · Course & connections · draft",
+        "body": "The musculophrenic vein is a tributary of the internal thoracic venous pathway near the thoracoabdominal margin.",
+        "bullets": [
+          "Not the accompanying artery. Selected source segments do not establish all tributaries, a complete diaphragmatic drainage territory or a patent central connection.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4772 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/cardiovascular_system/sup_med_tables.html"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+        "fmaId": "FMA4786",
+        "name": "Left musculophrenic vein",
+        "sourceName": "left musculophrenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4786",
+        "bounds": {
+          "min": [
+            0.09116069972515106,
+            2.200700044631958,
+            0.9658399820327759
+          ],
+          "max": [
+            1.080590009689331,
+            3.871500253677368,
+            1.5594298839569092
+          ]
+        },
+        "center": [
+          0.5858753547072411,
+          3.036100149154663,
+          1.2626349329948425
+        ],
+        "anchor": [
+          0.6027230024337769,
+          2.996500253677368,
+          1.4668999910354614
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1988",
+            "sha256": "cce6a4fb93dd3f4cb47112ae09e1045bf9ebf8243557c75f73ec268640c6b105"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "musculophrenic-vein",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left musculophrenic vein · Course & connections · draft",
+        "body": "The musculophrenic vein is a tributary of the internal thoracic venous pathway near the thoracoabdominal margin.",
+        "bullets": [
+          "Not the accompanying artery. Selected source segments do not establish all tributaries, a complete diaphragmatic drainage territory or a patent central connection.",
+          "Red/blue denotes artery/vein, not oxygenation. Source surfaces do not resolve wall layers, lumen patency, flow direction or measured haemodynamics.",
+          "Source identity: FMA4786 · 1 source component. Component counts are not branch counts; gaps are not reconstructed."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not physiological displacement, vascular interiors, angiography or Doppler ultrasound. Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/cardiovascular_system/sup_med_tables.html"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "fmaId": "FMA11336",
+        "name": "Linea alba",
+        "sourceName": "linea alba",
+        "system": "connective",
+        "category": "fascia",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-connective-axial-detail",
+        "nodeName": "FMA11336",
+        "bounds": {
+          "min": [
+            -0.09308779984712601,
+            -0.11929992586374283,
+            0.622409999370575
+          ],
+          "max": [
+            0.08187010139226913,
+            3.778299570083618,
+            1.6214699745178223
+          ]
+        },
+        "center": [
+          -0.005608849227428436,
+          1.8294998221099377,
+          1.1219399869441986
+        ],
+        "anchor": [
+          -0.02190920151770115,
+          1.7455902099609375,
+          1.3322199583053589
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1448",
+            "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "linea-alba",
+      "topics": [
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Linea alba · draft",
+        "body": "The linea alba is the midline aponeurotic junction of the anterior abdominal wall, extending between the xiphoid region and pubis.",
+        "bullets": [
+          "Source identity: FMA11336 · 1 source component",
+          "The rectus sheath, layered abdominal aponeuroses and rectus-abdominis surfaces are not established by this view. Do not infer an intact wall, diastasis or a surgical plane.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/anatomytables/topogr_abdomen.html"
+        ]
+      },
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "fmaId": "FMA16549",
+        "name": "Mesoappendix",
+        "sourceName": "mesoappendix",
+        "system": "connective",
+        "category": "membrane",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-connective-mesenteric",
+        "nodeName": "FMA16549",
+        "bounds": {
+          "min": [
+            -0.8310610055923462,
+            0.7020501494407654,
+            0.36079102754592896
+          ],
+          "max": [
+            -0.1980699896812439,
+            1.1559100151062012,
+            0.7600700259208679
+          ]
+        },
+        "center": [
+          -0.514565497636795,
+          0.9289800822734833,
+          0.5604305267333984
+        ],
+        "anchor": [
+          -0.5647119879722595,
+          0.924910306930542,
+          0.6227800250053406
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3397",
+            "sha256": "bc5583810528a9ef675c3dddb7fa75911aa20531c7eb548e91e34c7c2cf5dfd7"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "mesoappendix",
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Mesoappendix · draft",
+        "body": "The mesoappendix is the mesenteric fold associated with the appendix.",
+        "bullets": [
+          "Source identity: FMA16549 · 1 source component",
+          "Only selected source surfaces are available. Their roots, leaves, attachments and embedded nerves, vessels and lymphatics are not fully segmented or validated. This is not a complete peritoneum or a safe surgical plane.",
+          "Use Study windows & focuses to preview and open its local study view."
+        ],
+        "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+        "citations": [
+          "https://anatomy.ttuhscep.edu/gastrointestinal_system/peritoneum_tables.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

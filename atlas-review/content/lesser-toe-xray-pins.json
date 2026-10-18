@@ -1,0 +1,1725 @@
+{
+  "sourceCommit": "810cd1eb14b61115215a0eab1b574d14568584ec",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "e7f53eee595fa31f705905730427a3951b4bc7cc898f6b04e7c6f7ea30a218c1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-second-toe",
+        "fmaId": "FMA32635",
+        "name": "Proximal phalanx of left second toe",
+        "sourceName": "proximal phalanx of left second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32635",
+        "bounds": {
+          "min": [
+            1.114490032196045,
+            -8.668400764465332,
+            1.3348499536514282
+          ],
+          "max": [
+            1.3349299430847168,
+            -8.544700622558594,
+            1.6162399053573608
+          ]
+        },
+        "center": [
+          1.2247099876403809,
+          -8.606550693511963,
+          1.4755449295043945
+        ],
+        "anchor": [
+          1.2201800346374512,
+          -8.6148099899292,
+          1.4928100109100342
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3328",
+            "sha256": "fd7064f417423cb6224e68867b0f3c5fd46c165a76fba035199e4db235d0616b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32634",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-third-toe",
+        "fmaId": "FMA32637",
+        "name": "Proximal phalanx of left third toe",
+        "sourceName": "proximal phalanx of left third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32637",
+        "bounds": {
+          "min": [
+            1.2513200044631958,
+            -8.676982879638672,
+            1.2461700439453125
+          ],
+          "max": [
+            1.4580799341201782,
+            -8.559133529663086,
+            1.5283399820327759
+          ]
+        },
+        "center": [
+          1.354699969291687,
+          -8.618058204650879,
+          1.3872550129890442
+        ],
+        "anchor": [
+          1.3760099411010742,
+          -8.629802703857422,
+          1.3880099058151245
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3311",
+            "sha256": "4787599e0e9fefaa45c40736f38ccacc8ec7e7e867cde692c5ea4f775e97364b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32636",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-fourth-toe",
+        "fmaId": "FMA32639",
+        "name": "Proximal phalanx of left fourth toe",
+        "sourceName": "proximal phalanx of left fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32639",
+        "bounds": {
+          "min": [
+            1.3430900573730469,
+            -8.697052955627441,
+            1.144279956817627
+          ],
+          "max": [
+            1.5589998960494995,
+            -8.565251350402832,
+            1.3842500448226929
+          ]
+        },
+        "center": [
+          1.4510449767112732,
+          -8.631152153015137,
+          1.26426500082016
+        ],
+        "anchor": [
+          1.4594999551773071,
+          -8.6431245803833,
+          1.2571600675582886
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3312",
+            "sha256": "32b171c096dfe9993503b4f14e58d5b2996dadf73352efc506c04d1098370a5b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32638",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:proximal-phalanx-of-left-little-toe",
+        "fmaId": "FMA32641",
+        "name": "Proximal phalanx of left little toe",
+        "sourceName": "proximal phalanx of left little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32641",
+        "bounds": {
+          "min": [
+            1.4293800592422485,
+            -8.698091506958008,
+            0.9877499341964722
+          ],
+          "max": [
+            1.6478999853134155,
+            -8.599870681762695,
+            1.240190029144287
+          ]
+        },
+        "center": [
+          1.538640022277832,
+          -8.648981094360352,
+          1.1139699816703796
+        ],
+        "anchor": [
+          1.5457299947738647,
+          -8.661887168884277,
+          1.0898399353027344
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3315",
+            "sha256": "4488ac24e66f25118feb375fbdf19e6e123595cbd26c726c3df1604bec59c7f8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32640",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-second-toe",
+        "fmaId": "FMA32634",
+        "name": "Proximal phalanx of right second toe",
+        "sourceName": "proximal phalanx of right second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32634",
+        "bounds": {
+          "min": [
+            -1.3356499671936035,
+            -8.66873550415039,
+            1.3355499505996704
+          ],
+          "max": [
+            -1.1134600639343262,
+            -8.545463562011719,
+            1.6167999505996704
+          ]
+        },
+        "center": [
+          -1.2245550155639648,
+          -8.607099533081055,
+          1.4761749505996704
+        ],
+        "anchor": [
+          -1.219580054283142,
+          -8.615654945373535,
+          1.4902299642562866
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3319",
+            "sha256": "f8f7d8f026953233fd9412b80ba897fdd329a48108cbfd11578b56dcf9edcc1e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32634",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-third-toe",
+        "fmaId": "FMA32636",
+        "name": "Proximal phalanx of right third toe",
+        "sourceName": "proximal phalanx of right third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32636",
+        "bounds": {
+          "min": [
+            -1.4590198993682861,
+            -8.6764497756958,
+            1.244360089302063
+          ],
+          "max": [
+            -1.2507599592208862,
+            -8.562044143676758,
+            1.5284100770950317
+          ]
+        },
+        "center": [
+          -1.3548899292945862,
+          -8.61924695968628,
+          1.3863850831985474
+        ],
+        "anchor": [
+          -1.3747600317001343,
+          -8.615997314453125,
+          1.3690699338912964
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3320",
+            "sha256": "49b6fc5fe03ba23422e852d1fcd419b94bafbdf69fd20552eca0620e1ed62e6e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32636",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-fourth-toe",
+        "fmaId": "FMA32638",
+        "name": "Proximal phalanx of right fourth toe",
+        "sourceName": "proximal phalanx of right fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32638",
+        "bounds": {
+          "min": [
+            -1.5592999458312988,
+            -8.697409629821777,
+            1.1437900066375732
+          ],
+          "max": [
+            -1.3433899879455566,
+            -8.564986228942871,
+            1.3842799663543701
+          ]
+        },
+        "center": [
+          -1.4513449668884277,
+          -8.631197929382324,
+          1.2640349864959717
+        ],
+        "anchor": [
+          -1.4282898902893066,
+          -8.63337516784668,
+          1.2634899616241455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3321",
+            "sha256": "87949e88d498df13a376db05c0b094bae55ade09d5dec4ebd1557a5022d4f8ea"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32638",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:proximal-phalanx-of-right-little-toe",
+        "fmaId": "FMA32640",
+        "name": "Proximal phalanx of right little toe",
+        "sourceName": "proximal phalanx of right little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32640",
+        "bounds": {
+          "min": [
+            -1.6483700275421143,
+            -8.698931694030762,
+            0.9871099591255188
+          ],
+          "max": [
+            -1.4288499355316162,
+            -8.600473403930664,
+            1.240839958190918
+          ]
+        },
+        "center": [
+          -1.5386099815368652,
+          -8.649702548980713,
+          1.1139749586582184
+        ],
+        "anchor": [
+          -1.557539939880371,
+          -8.653310775756836,
+          1.0894900560379028
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3324",
+            "sha256": "deeabcf2bf83d7b9f77acf1c1634650805d467188f05505a6898aa3cbbdcea2b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "proximal",
+      "imagingGroup": "FMA32640",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-second-toe",
+        "fmaId": "FMA32643",
+        "name": "Middle phalanx of left second toe",
+        "sourceName": "middle phalanx of left second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32643",
+        "bounds": {
+          "min": [
+            1.2512699365615845,
+            -8.679535865783691,
+            1.5752900838851929
+          ],
+          "max": [
+            1.3921200037002563,
+            -8.593413352966309,
+            1.7462899684906006
+          ]
+        },
+        "center": [
+          1.3216949701309204,
+          -8.636474609375,
+          1.6607900261878967
+        ],
+        "anchor": [
+          1.3186700344085693,
+          -8.627381324768066,
+          1.6844900846481323
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3293",
+            "sha256": "72afe21185eed25dbab98a1bb7cb28e64012f672bfb3a76d81fdbf5b531f4958"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA32642",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-third-toe",
+        "fmaId": "FMA32645",
+        "name": "Middle phalanx of left third toe",
+        "sourceName": "middle phalanx of left third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32645",
+        "bounds": {
+          "min": [
+            1.3891499042510986,
+            -8.689835548400879,
+            1.489109992980957
+          ],
+          "max": [
+            1.5181100368499756,
+            -8.611088752746582,
+            1.6585201025009155
+          ]
+        },
+        "center": [
+          1.453629970550537,
+          -8.65046215057373,
+          1.5738150477409363
+        ],
+        "anchor": [
+          1.4457899332046509,
+          -8.633589744567871,
+          1.580509901046753
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3294",
+            "sha256": "036f7e9bca027b8b7e6075976249ba90178a9639591878a1b5954d0f7d237c17"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA32644",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-fourth-toe",
+        "fmaId": "FMA32647",
+        "name": "Middle phalanx of left fourth toe",
+        "sourceName": "middle phalanx of left fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32647",
+        "bounds": {
+          "min": [
+            1.490440011024475,
+            -8.697918891906738,
+            1.3543299436569214
+          ],
+          "max": [
+            1.6138999462127686,
+            -8.619694709777832,
+            1.4877901077270508
+          ]
+        },
+        "center": [
+          1.5521699786186218,
+          -8.658806800842285,
+          1.421060025691986
+        ],
+        "anchor": [
+          1.5460400581359863,
+          -8.674824714660645,
+          1.4180400371551514
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3295",
+            "sha256": "cffbba99a2d64e833cac9545d91dc21092b2d7ecef35dd276a80ff7d35157239"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA32646",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:middle-phalanx-of-left-little-toe",
+        "fmaId": "FMA230988",
+        "name": "Middle phalanx of left little toe",
+        "sourceName": "middle phalanx of left little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA230988",
+        "bounds": {
+          "min": [
+            1.5810000896453857,
+            -8.700543403625488,
+            1.2155200242996216
+          ],
+          "max": [
+            1.6667399406433105,
+            -8.637796401977539,
+            1.2895399332046509
+          ]
+        },
+        "center": [
+          1.6238700151443481,
+          -8.669169902801514,
+          1.2525299787521362
+        ],
+        "anchor": [
+          1.618149995803833,
+          -8.691596984863281,
+          1.2495100498199463
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3298",
+            "sha256": "140d41e53c49bbbaea54972b738b215d3c3ef6bb9c5284f9f7e0516a25e2f68c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA230986",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-second-toe",
+        "fmaId": "FMA32642",
+        "name": "Middle phalanx of right second toe",
+        "sourceName": "middle phalanx of right second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32642",
+        "bounds": {
+          "min": [
+            -1.393549919128418,
+            -8.680103302001953,
+            1.5764799118041992
+          ],
+          "max": [
+            -1.252369999885559,
+            -8.594038963317871,
+            1.746880054473877
+          ]
+        },
+        "center": [
+          -1.3229599595069885,
+          -8.637071132659912,
+          1.661679983139038
+        ],
+        "anchor": [
+          -1.2956500053405762,
+          -8.636598587036133,
+          1.663540005683899
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3300",
+            "sha256": "505ff6d5185c0cec018be5a18206a2ccbcc8822f09b9282b9ad2586716d3a3d9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA32642",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-third-toe",
+        "fmaId": "FMA32644",
+        "name": "Middle phalanx of right third toe",
+        "sourceName": "middle phalanx of right third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32644",
+        "bounds": {
+          "min": [
+            -1.517259955406189,
+            -8.688310623168945,
+            1.488669991493225
+          ],
+          "max": [
+            -1.388890027999878,
+            -8.60914421081543,
+            1.6574499607086182
+          ]
+        },
+        "center": [
+          -1.4530749917030334,
+          -8.648727416992188,
+          1.5730599761009216
+        ],
+        "anchor": [
+          -1.4524099826812744,
+          -8.636129379272461,
+          1.5889300107955933
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3301",
+            "sha256": "1da31f6465a4767ab9dc18df433e5e0df0da4e9578d2864b02e5a71e785b5d8c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA32644",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-fourth-toe",
+        "fmaId": "FMA32646",
+        "name": "Middle phalanx of right fourth toe",
+        "sourceName": "middle phalanx of right fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32646",
+        "bounds": {
+          "min": [
+            -1.613420009613037,
+            -8.698887825012207,
+            1.354349970817566
+          ],
+          "max": [
+            -1.4907100200653076,
+            -8.619355201721191,
+            1.4880599975585938
+          ]
+        },
+        "center": [
+          -1.5520650148391724,
+          -8.6591215133667,
+          1.4212049841880798
+        ],
+        "anchor": [
+          -1.5481399297714233,
+          -8.670809745788574,
+          1.430090069770813
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3302",
+            "sha256": "dd69a8df55e8ff34f55fe2b906507aac2659be0d2784833b6a0c2046258929e3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA32646",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:middle-phalanx-of-right-little-toe",
+        "fmaId": "FMA230986",
+        "name": "Middle phalanx of right little toe",
+        "sourceName": "middle phalanx of right little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA230986",
+        "bounds": {
+          "min": [
+            -1.6669000387191772,
+            -8.70090389251709,
+            1.2144999504089355
+          ],
+          "max": [
+            -1.5808000564575195,
+            -8.637391090393066,
+            1.288179874420166
+          ]
+        },
+        "center": [
+          -1.6238500475883484,
+          -8.669147491455078,
+          1.2513399124145508
+        ],
+        "anchor": [
+          -1.6055299043655396,
+          -8.690170288085938,
+          1.2569500207901
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3305",
+            "sha256": "e1a4698c0de159b1851711084ddb96ccaf85022d941f305d670789444d6395bf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "middle",
+      "imagingGroup": "FMA230986",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-second-toe",
+        "fmaId": "FMA32653",
+        "name": "Distal phalanx of left second toe",
+        "sourceName": "distal phalanx of left second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32653",
+        "bounds": {
+          "min": [
+            1.3215299844741821,
+            -8.70226764678955,
+            1.7086399793624878
+          ],
+          "max": [
+            1.4339699745178223,
+            -8.630226135253906,
+            1.8401700258255005
+          ]
+        },
+        "center": [
+          1.3777499794960022,
+          -8.666246891021729,
+          1.7744050025939941
+        ],
+        "anchor": [
+          1.3842599391937256,
+          -8.650444030761719,
+          1.7721400260925293
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3179",
+            "sha256": "99c76669f09d0758cd2baadbba001728458615370705ef255b933f184689941b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32652",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-third-toe",
+        "fmaId": "FMA32655",
+        "name": "Distal phalanx of left third toe",
+        "sourceName": "distal phalanx of left third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32655",
+        "bounds": {
+          "min": [
+            1.458419919013977,
+            -8.70261287689209,
+            1.6231399774551392
+          ],
+          "max": [
+            1.5484100580215454,
+            -8.643680572509766,
+            1.7365100383758545
+          ]
+        },
+        "center": [
+          1.5034149885177612,
+          -8.673146724700928,
+          1.6798250079154968
+        ],
+        "anchor": [
+          1.4990299940109253,
+          -8.657767295837402,
+          1.6822500228881836
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3180",
+            "sha256": "4b3b06a548ec2cf7eec686f9314dc0fb10fd7a72afc216b88d0b2bf857bb7bf1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32654",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-fourth-toe",
+        "fmaId": "FMA32657",
+        "name": "Distal phalanx of left fourth toe",
+        "sourceName": "distal phalanx of left fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32657",
+        "bounds": {
+          "min": [
+            1.5521200895309448,
+            -8.703092575073242,
+            1.4543099403381348
+          ],
+          "max": [
+            1.6407499313354492,
+            -8.634546279907227,
+            1.5655299425125122
+          ]
+        },
+        "center": [
+          1.596435010433197,
+          -8.668819427490234,
+          1.5099199414253235
+        ],
+        "anchor": [
+          1.5892599821090698,
+          -8.662097930908203,
+          1.5229600667953491
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3181",
+            "sha256": "71e7e83288bde730b7f2c04b3150de2d27236f0ed8e9db6a88704f6c1b9c9721"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32656",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:distal-phalanx-of-left-little-toe",
+        "fmaId": "FMA32659",
+        "name": "Distal phalanx of left little toe",
+        "sourceName": "distal phalanx of left little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32659",
+        "bounds": {
+          "min": [
+            1.6126099824905396,
+            -8.704798698425293,
+            1.2616000175476074
+          ],
+          "max": [
+            1.6935800313949585,
+            -8.651289939880371,
+            1.3654500246047974
+          ]
+        },
+        "center": [
+          1.653095006942749,
+          -8.678044319152832,
+          1.3135250210762024
+        ],
+        "anchor": [
+          1.6396600008010864,
+          -8.676704406738281,
+          1.3209500312805176
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3185",
+            "sha256": "5978ed3c7d728bc03a558c5fe2a7db6fd272d02dc6ed67a1fbb21ce1693d659f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32658",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-second-toe",
+        "fmaId": "FMA32652",
+        "name": "Distal phalanx of right second toe",
+        "sourceName": "distal phalanx of right second toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32652",
+        "bounds": {
+          "min": [
+            -1.4334598779678345,
+            -8.702884674072266,
+            1.7101199626922607
+          ],
+          "max": [
+            -1.3234801292419434,
+            -8.630534172058105,
+            1.840959906578064
+          ]
+        },
+        "center": [
+          -1.378470003604889,
+          -8.666709423065186,
+          1.7755399346351624
+        ],
+        "anchor": [
+          -1.3784500360488892,
+          -8.649070739746094,
+          1.7747900485992432
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3189",
+            "sha256": "82657ea63694cff41a774da0ad28110e80ea4951e0ddaafcb2e2646275a22702"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32652",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-third-toe",
+        "fmaId": "FMA32654",
+        "name": "Distal phalanx of right third toe",
+        "sourceName": "distal phalanx of right third toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32654",
+        "bounds": {
+          "min": [
+            -1.5482499599456787,
+            -8.70197582244873,
+            1.6225900650024414
+          ],
+          "max": [
+            -1.4589101076126099,
+            -8.643865585327148,
+            1.7366600036621094
+          ]
+        },
+        "center": [
+          -1.5035800337791443,
+          -8.67292070388794,
+          1.6796250343322754
+        ],
+        "anchor": [
+          -1.5013600587844849,
+          -8.657671928405762,
+          1.679010033607483
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3190",
+            "sha256": "b31499b63bc1798909b2c8cec77b7ebbb422cf2e0f715381601aa7c136b32aa9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32654",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-fourth-toe",
+        "fmaId": "FMA32656",
+        "name": "Distal phalanx of right fourth toe",
+        "sourceName": "distal phalanx of right fourth toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32656",
+        "bounds": {
+          "min": [
+            -1.6412700414657593,
+            -8.703923225402832,
+            1.4536799192428589
+          ],
+          "max": [
+            -1.5533500909805298,
+            -8.633959770202637,
+            1.56535005569458
+          ]
+        },
+        "center": [
+          -1.5973100662231445,
+          -8.668941497802734,
+          1.5095149874687195
+        ],
+        "anchor": [
+          -1.5972800254821777,
+          -8.654884338378906,
+          1.5148299932479858
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3191",
+            "sha256": "24a38431aa67546c25d938f7c5a572fb1206ffcf6bb6a14281c0322fc3d03bac"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32656",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:distal-phalanx-of-right-little-toe",
+        "fmaId": "FMA32658",
+        "name": "Distal phalanx of right little toe",
+        "sourceName": "distal phalanx of right little toe",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA32658",
+        "bounds": {
+          "min": [
+            -1.693269968032837,
+            -8.703537940979004,
+            1.2619999647140503
+          ],
+          "max": [
+            -1.6116900444030762,
+            -8.651418685913086,
+            1.3657898902893066
+          ]
+        },
+        "center": [
+          -1.6524800062179565,
+          -8.677478313446045,
+          1.3138949275016785
+        ],
+        "anchor": [
+          -1.652940034866333,
+          -8.66653823852539,
+          1.3238499164581299
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3195",
+            "sha256": "8053dcba2724d596cd66546934df05d04e5019b3b95ed6ec46795dff1b9abfde"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "distal",
+      "imagingGroup": "FMA32658",
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ]
+}

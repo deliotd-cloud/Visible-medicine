@@ -1,0 +1,18 @@
+.whole-body-guided-learning{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;}
+.whole-body-tour-picker{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:5px 12px;padding:8px 10px 0;font-size:.875rem;flex-shrink:0;min-width:0;}
+.whole-body-tour-choice{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:8px;min-width:0;}
+.whole-body-tour-choice label{white-space:nowrap;}
+.whole-body-tour-discovery{min-width:0;}
+.whole-body-tour-discovery summary{width:max-content;max-width:100%;min-height:32px;display:list-item;cursor:pointer;padding:5px 2px;color:var(--muted-foreground);}
+.whole-body-tour-discovery[open]{grid-column:1/-1;padding-bottom:2px;}
+.whole-body-tour-filters{display:grid;grid-template-columns:auto minmax(0,1fr) auto minmax(0,1fr) auto;align-items:center;gap:6px;}
+.whole-body-tour-picker input,.whole-body-tour-picker select,.whole-body-tour-filters button{min-width:0;min-height:44px;padding:6px 8px;border:1px solid var(--border);border-radius:8px;background:var(--background);color:inherit;font:inherit;}
+.whole-body-tour-filters button{white-space:nowrap;cursor:pointer;}
+.whole-body-tour-choice select{width:100%;}
+.whole-body-tour-results{font-size:.8rem;color:var(--muted-foreground);}
+@media(max-width:700px){.whole-body-tour-picker{grid-template-columns:minmax(0,1fr);}.whole-body-tour-choice{grid-template-columns:minmax(0,1fr);gap:3px;}.whole-body-tour-discovery{grid-column:1;}.whole-body-tour-filters{grid-template-columns:auto minmax(0,1fr);}.whole-body-tour-filters button{grid-column:2;justify-self:start;}}
+.whole-body-nested-guidance{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;padding:8px 10px;gap:8px;}
+.whole-body-nested-guidance>header{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.whole-body-nested-guidance h2{font-size:1rem;line-height:1.4;}
+.whole-body-nested-guidance>header button{min-height:44px;padding:6px 12px;border:1px solid var(--border);border-radius:8px;font-size:.875rem;}
+.whole-body-nested-guidance>.eye-layer-workbench{flex:1;min-height:0;}

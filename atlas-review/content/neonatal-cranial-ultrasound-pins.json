@@ -1,0 +1,687 @@
+{
+  "parentCommit": "c57449c1107a912442c6b0af23e270df41032522",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-nerves-deep-brain",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "bytes": 1866940,
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "structures": 22
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-caudate-nucleus",
+        "fmaId": "FMA72827",
+        "name": "Left caudate nucleus",
+        "sourceName": "left caudate nucleus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72827",
+        "bounds": {
+          "min": [
+            0.019033098593354225,
+            7.402600288391113,
+            0.10356602072715759
+          ],
+          "max": [
+            0.3368489742279053,
+            7.773199558258057,
+            0.7394199967384338
+          ]
+        },
+        "center": [
+          0.17794103641062975,
+          7.587899923324585,
+          0.4214930087327957
+        ],
+        "anchor": [
+          0.0999520942568779,
+          7.671600341796875,
+          0.38684195280075073
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1754",
+            "sha256": "c94a8fe0da8cd1ddb916a4f871b017a82bf1dbe5a60307cbc36baa9bf23324ec"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "caudate",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-caudate-nucleus",
+        "fmaId": "FMA72826",
+        "name": "Right caudate nucleus",
+        "sourceName": "right caudate nucleus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72826",
+        "bounds": {
+          "min": [
+            -0.3500939905643463,
+            7.402700424194336,
+            0.10370998084545135
+          ],
+          "max": [
+            -0.032008200883865356,
+            7.773499965667725,
+            0.7393199801445007
+          ]
+        },
+        "center": [
+          -0.19105109572410583,
+          7.58810019493103,
+          0.42151498049497604
+        ],
+        "anchor": [
+          -0.12303600460290909,
+          7.684699535369873,
+          0.422605961561203
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1802",
+            "sha256": "1139f3e7002704a0efcc1c9161ef2b84e60f28c18728e24664454451ae30bb17"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "caudate",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-thalamus",
+        "fmaId": "FMA258716",
+        "name": "Left thalamus",
+        "sourceName": "left thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA258716",
+        "bounds": {
+          "min": [
+            -0.0009246880072169006,
+            7.420699596405029,
+            0.11806800961494446
+          ],
+          "max": [
+            0.23373599350452423,
+            7.65749979019165,
+            0.4839569926261902
+          ]
+        },
+        "center": [
+          0.11640565274865367,
+          7.53909969329834,
+          0.3010125011205673
+        ],
+        "anchor": [
+          0.19691500067710876,
+          7.52079963684082,
+          0.30950796604156494
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1782",
+            "sha256": "6e6e87e4feda05756e8748a61febdb2fe61d4ba834fd5a57d805512d9fcd82cc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "thalamus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-thalamus",
+        "fmaId": "FMA258714",
+        "name": "Right thalamus",
+        "sourceName": "right thalamus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA258714",
+        "bounds": {
+          "min": [
+            -0.24605399370193481,
+            7.421299934387207,
+            0.11870498955249786
+          ],
+          "max": [
+            -0.01247750036418438,
+            7.657199859619141,
+            0.4836689829826355
+          ]
+        },
+        "center": [
+          -0.1292657470330596,
+          7.539249897003174,
+          0.3011869862675667
+        ],
+        "anchor": [
+          -0.20139099657535553,
+          7.527600288391113,
+          0.3386560082435608
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1827",
+            "sha256": "a4b5be59d7cf6dc3ca1b2ae97a83ffd947e39493cc663c2cb7d65a064af91b1d"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "thalamus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-putamen",
+        "fmaId": "FMA72829",
+        "name": "Left putamen",
+        "sourceName": "left putamen",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72829",
+        "bounds": {
+          "min": [
+            0.16188998520374298,
+            7.454300403594971,
+            0.25526800751686096
+          ],
+          "max": [
+            0.34444499015808105,
+            7.715400218963623,
+            0.6836799383163452
+          ]
+        },
+        "center": [
+          0.253167487680912,
+          7.584850311279297,
+          0.4694739729166031
+        ],
+        "anchor": [
+          0.25755399465560913,
+          7.586700439453125,
+          0.47297996282577515
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1776",
+            "sha256": "20838a2fc79afe34dfd532151c174b9bb6afec6e5eda961e6dff6cd505b36a51"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "putamen",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-putamen",
+        "fmaId": "FMA72828",
+        "name": "Right putamen",
+        "sourceName": "right putamen",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72828",
+        "bounds": {
+          "min": [
+            -0.3575249910354614,
+            7.454300403594971,
+            0.2552749514579773
+          ],
+          "max": [
+            -0.17474500834941864,
+            7.715400218963623,
+            0.6836599707603455
+          ]
+        },
+        "center": [
+          -0.26613499969244003,
+          7.584850311279297,
+          0.4694674611091614
+        ],
+        "anchor": [
+          -0.2731049954891205,
+          7.584000110626221,
+          0.46894896030426025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1823",
+            "sha256": "6461f70dee31e6f17d87e1f9d79bc92b1cdccd41b7d90bb89b6f25589d27cfc8"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "putamen",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-globus-pallidus",
+        "fmaId": "FMA72831",
+        "name": "Left globus pallidus",
+        "sourceName": "left globus pallidus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72831",
+        "bounds": {
+          "min": [
+            0.1228330060839653,
+            7.463100433349609,
+            0.30222800374031067
+          ],
+          "max": [
+            0.29021599888801575,
+            7.636099815368652,
+            0.5950199961662292
+          ]
+        },
+        "center": [
+          0.20652450248599052,
+          7.549600124359131,
+          0.44862399995326996
+        ],
+        "anchor": [
+          0.17874599993228912,
+          7.555300235748291,
+          0.4323529899120331
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1757",
+            "sha256": "f1519d79c632403ab669d8ffa8f6c72ce50dc57bc58b3fa54b155f292db20488"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "pallidum",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-globus-pallidus",
+        "fmaId": "FMA72830",
+        "name": "Right globus pallidus",
+        "sourceName": "right globus pallidus",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72830",
+        "bounds": {
+          "min": [
+            -0.303274005651474,
+            7.463100433349609,
+            0.3022480010986328
+          ],
+          "max": [
+            -0.13594000041484833,
+            7.636099815368652,
+            0.5949600338935852
+          ]
+        },
+        "center": [
+          -0.21960700303316116,
+          7.549600124359131,
+          0.448604017496109
+        ],
+        "anchor": [
+          -0.1881830096244812,
+          7.551400184631348,
+          0.435699999332428
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1805",
+            "sha256": "c89453826d4617211ca58a6ce11bc63904a571d594d3d073cfb3a53c7672a9be"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "pallidum",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "fmaId": "FMA86464",
+        "name": "Corpus callosum",
+        "sourceName": "corpus callosum",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA86464",
+        "bounds": {
+          "min": [
+            -0.2656150162220001,
+            7.444100379943848,
+            -0.10566601157188416
+          ],
+          "max": [
+            0.2524470090866089,
+            7.832600116729736,
+            0.8105599880218506
+          ]
+        },
+        "center": [
+          -0.006584003567695618,
+          7.638350248336792,
+          0.3524469882249832
+        ],
+        "anchor": [
+          -0.016084300354123116,
+          7.723800182342529,
+          0.32573097944259644
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1742",
+            "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "callosum",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:choroid-plexus-of-cerebral-hemisphere",
+        "fmaId": "FMA61934",
+        "name": "Choroid plexus of cerebral hemisphere",
+        "sourceName": "choroid plexus of cerebral hemisphere",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61934",
+        "bounds": {
+          "min": [
+            -0.380094975233078,
+            7.348700046539307,
+            0.06290599703788757
+          ],
+          "max": [
+            0.36727002263069153,
+            7.687900543212891,
+            0.4966200292110443
+          ]
+        },
+        "center": [
+          -0.006412476301193237,
+          7.518300294876099,
+          0.27976301312446594
+        ],
+        "anchor": [
+          -0.007468170020729303,
+          7.565899848937988,
+          0.23644401133060455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1755",
+            "sha256": "221d1889dbb2d850c6da56c0cdd1b1d4581ac845dd55c96e68a594c33a1742dc"
+          },
+          {
+            "file": "FJ1803",
+            "sha256": "a950a761098cf6d80c09c7133ce0c0044598c64682c0a0825f6bbd4b23892dc3"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. The source definition groups left and right components; they are not separately labelled here. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "plexus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ]
+}

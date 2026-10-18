@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "baseline": "f0d4f3622f967bb394a16e178339d6a30c02a5e0",
+  "tourRevision": "right-forearm-arterial-orientation-v1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "name": "Right radial artery",
+      "sourceName": "right radial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22733",
+      "bounds": {
+        "min": [
+          -2.7951300144195557,
+          -0.08817993104457855,
+          0.33151495456695557
+        ],
+        "max": [
+          -2.1361098289489746,
+          2.244499444961548,
+          0.7712299823760986
+        ]
+      },
+      "center": [
+        -2.465619921684265,
+        1.0781597569584846,
+        0.5513724684715271
+      ],
+      "anchor": [
+        -2.5781900882720947,
+        1.0522302389144897,
+        0.3984220027923584
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2294",
+          "sha256": "cca326b54b9f4e6ed4c4a8ccf258959a3a3c54aff996b894eacca20af05217d2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "name": "Right ulnar artery",
+      "sourceName": "right ulnar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22797",
+      "bounds": {
+        "min": [
+          -2.4372599124908447,
+          -0.05320983752608299,
+          0.2698560357093811
+        ],
+        "max": [
+          -2.110489845275879,
+          2.244499444961548,
+          0.810740053653717
+        ]
+      },
+      "center": [
+        -2.273874878883362,
+        1.0956448037177324,
+        0.5402980446815491
+      ],
+      "anchor": [
+        -2.194159984588623,
+        1.0684802532196045,
+        0.5297799706459045
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2310",
+          "sha256": "6bef22a74e2e6ae2d3033c4982fdb75abbadc9b255e76770211d61b3dd4796c1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+      "fmaId": "FMA22807",
+      "name": "Right common interosseous artery",
+      "sourceName": "right common interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA22807",
+      "bounds": {
+        "min": [
+          -2.227400064468384,
+          1.9160699844360352,
+          0.2111620306968689
+        ],
+        "max": [
+          -2.117069959640503,
+          1.9968903064727783,
+          0.3013259768486023
+        ]
+      },
+      "center": [
+        -2.1722350120544434,
+        1.9564801454544067,
+        0.2562440037727356
+      ],
+      "anchor": [
+        -2.1642398834228516,
+        1.971350073814392,
+        0.2469400018453598
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2275",
+          "sha256": "96afb03f4aa0d1a62ccb95c8b1a7094da8104f9a9cb193e02ea2706707f473ce"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-interosseous-artery",
+      "fmaId": "FMA22812",
+      "name": "Right anterior interosseous artery",
+      "sourceName": "right anterior interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22812",
+      "bounds": {
+        "min": [
+          -2.4415199756622314,
+          0.5062597393989563,
+          0.24150802195072174
+        ],
+        "max": [
+          -2.2034800052642822,
+          1.9400402307510376,
+          0.5864299535751343
+        ]
+      },
+      "center": [
+        -2.322499990463257,
+        1.223149985074997,
+        0.413968987762928
+      ],
+      "anchor": [
+        -2.360069990158081,
+        1.2440502643585205,
+        0.42872002720832825
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2266",
+          "sha256": "a8b244ec1ae503c6cd71562a8b80427a49459c111dfbd5e4837d1279c7fe07bd"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "forearm-vessels-forearm-vascular",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "bytes": 66352,
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "structures": 4
+    }
+  ]
+}

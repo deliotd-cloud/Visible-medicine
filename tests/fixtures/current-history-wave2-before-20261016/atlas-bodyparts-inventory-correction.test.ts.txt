@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {bodypartsNoticeBeforeInventoryCorrection} from './atlas-bodyparts-inventory-history.ts';
+
+const sha=(v:Uint8Array)=>createHash('sha256').update(v).digest('hex');
+const source='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
+test('corrected inventory notice reaches all four modules and Review without changing their scoped credits or licence grant',()=>{
+ const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ const notice=readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md');
+ const current=execFileSync('git',['--no-replace-objects','-C',source,'show',review.revision+':LICENSES/THIRD_PARTY_NOTICES.md'],{maxBuffer:32e6});
+ assert.equal(review.revision,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
+ assert.deepEqual(notice,current);
+ const corrected=execFileSync('git',['--no-replace-objects','-C',source,'show','390834952b37ef325e9bf80c6dd994d745000493:LICENSES/THIRD_PARTY_NOTICES.md'],{maxBuffer:32e6});
+ assert.equal(sha(corrected),'68071c14f9d603b0c63efe26140b662e57c6ec7d52a1b736ca7cb7dc6aadfd92');
+ const historical=new TextDecoder('utf-8',{fatal:true}).decode(corrected);
+ const before=bodypartsNoticeBeforeInventoryCorrection(historical);
+ assert.equal(sha(Buffer.from(before)),'dd4be414cbcf07498a7b6552bdcc6541057af662804231aa2f80776842ada2cc');
+ for(const changed of [historical+'foreign',historical.replace('1,022','1,023'),historical.slice(1),before])assert.throws(()=>bodypartsNoticeBeforeInventoryCorrection(changed));
+ const correction=historical.split('\n').find(line=>line.startsWith('The expanded whole-body/regional library is covered by the same grant.'))!;
+ assert(correction);assert.equal(notice.toString().split(correction).length,2,'Original correction and grant remain exactly once');
+ for(const name of ['shoulder','female-pelvis','lower-limb','head-neck']){
+  const base=`public/atlas-runtime/${name}/`,manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+  assert.equal(manifest.sourceCommit,review.revision);assert.equal(manifest.patientDataIncluded,false);assert.equal(manifest.clinicalApproved,false);
+  const delivered=readFileSync(base+'LICENSES/THIRD_PARTY_NOTICES.md');assert.deepEqual(delivered,notice);
+  const record=manifest.files.find((f:any)=>f.path==='LICENSES/THIRD_PARTY_NOTICES.md');assert.equal(record.bytes,notice.length);assert.equal(record.sha256,sha(notice));
+  if(['shoulder','head-neck'].includes(name)){
+   const path='models/bodyparts3d/credits.html',credit=readFileSync(base+path);
+   const old=execFileSync('git',['--no-replace-objects','show','867fd268759710f9858cfe96e95768124116bbe9:'+base+path],{maxBuffer:32e6});
+   assert.deepEqual(credit,old,'Contained module credit is not replaced by unrelated full-body HTML');
+   assert.equal(manifest.files.find((f:any)=>f.path===path).sha256,sha(credit));
+  }
+ }
+ const path='LICENSES/BODYPARTS3D_FULL_BODY.md',delivered=readFileSync('public/atlas-runtime/head-neck/'+path);
+ assert.deepEqual(delivered,execFileSync('git',['--no-replace-objects','-C',source,'show',review.revision+':'+path],{maxBuffer:32e6}));
+ assert.match(delivered.toString(),/1,022 selectable source representations \/ 86 GLB bundles/);
+ const model=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));assert.equal(model.models.length,137);
+ const policy=readFileSync('lib/atlas-delivery-policy.ts','utf8');assert(policy.includes("audience: 'administrator-review'")&&!policy.includes('approvedRevision:'));
+});

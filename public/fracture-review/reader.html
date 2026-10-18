@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-hSTZsWFl0aTGTP6Xpc5+s4r1oE36EhZ1AfElyzy+/Ag=' 'sha256-aXzc8ACyHdLyPirWUbmbNyJAKK4F2CODAdqC3SX2bFc='; style-src 'sha256-f5woUMkiVo3qFBfyP2peQZpSQCW8yJlAZLbRDHl38eo='; img-src blob:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<title>Private fracture review — Didanix Education</title><style>:root{color-scheme:light;--ink:#132c32;--teal:#087b6c;--paper:#f3f7f6;--line:#d4e1df}*{box-sizing:border-box}body{margin:0;font:16px/1.5 'Segoe UI',system-ui,sans-serif;background:var(--paper);color:var(--ink)}header{display:flex;align-items:center;gap:16px;padding:20px 24px;background:white;border-bottom:1px solid var(--line)}header>div{margin-right:auto}.eyebrow{font-size:13px;color:var(--teal);margin:0}h1{font-size:28px;margin:3px 0;letter-spacing:-.03em}h2{font-size:18px;margin:0}h3{font-size:16px}.privacy,#status{padding:10px 24px;margin:0;font-size:14px}.privacy{background:#e4f0ec}#status{min-height:42px}button,.choose{font:inherit;font-size:14px;cursor:pointer;border:1px solid #b8cdca;border-radius:6px;background:white;color:var(--ink);padding:9px 12px;min-height:42px}.choose{position:relative;background:#082a31;color:white;overflow:hidden}.choose input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}.choose:focus-within,button:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #28c6a8;outline-offset:3px}[hidden]{display:none!important}main{display:grid;grid-template-columns:112px minmax(300px,1fr) minmax(290px,360px);gap:1px;background:var(--line);border-top:1px solid var(--line)}nav{padding:14px 10px;background:#e9f1ef;display:flex;flex-direction:column;gap:10px}nav button[aria-current=true]{background:#082a31;color:white}.viewer{background:#091318;color:#e6eeed;min-width:0}.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:14px}.toolbar h2{margin-right:auto}.toolbar button{background:#152e36;color:#e6eeed;border-color:#435a60}.toolbar span{font-size:13px}.images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding:0 12px}figure{margin:0;min-width:0}.image-window{height:clamp(320px,58vh,720px);overflow:auto;background:#03080b;border:1px solid #31434a;display:block}.image-window img{display:block;object-fit:contain;height:100%;max-height:none}figcaption,.viewer-note{font-size:13px;padding:10px 0;color:#b9c9cd}.viewer-note{padding:8px 18px}aside{background:white;min-width:0}.aside-head{padding:18px;border-bottom:1px solid var(--line)}.aside-head p,.muted{font-size:14px;color:#51666b}article{padding:4px 18px 20px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}label{font-size:14px}textarea{width:100%;display:block;resize:vertical;font:inherit;margin:7px 0 12px;border:1px solid #adc5c1;border-radius:6px;padding:10px}summary{cursor:pointer;color:var(--teal);padding:8px 0}details p{font-size:14px}.empty{max-width:720px;margin:50px auto;padding:32px;border:1px solid var(--line);border-radius:12px;background:white}.empty h2{font-size:26px}@media(max-width:950px){main{grid-template-columns:90px minmax(0,1fr)}aside{grid-column:1/-1}.images{gap:8px}.image-window{height:480px}}@media(max-width:540px){header{padding:15px;flex-wrap:wrap}header>div{width:100%}.privacy,#status{padding:10px 15px}main{display:block}nav{flex-direction:row;overflow:auto}.images{grid-template-columns:1fr}.image-window{height:430px}.empty{margin:20px 12px;padding:22px}.toolbar{padding:12px}.toolbar h2{width:100%}button{white-space:nowrap}}
+</style></head>
+<body><header><div><p class="eyebrow">Didanix Education · Visible Medicine</p><h1>Fracture review</h1></div><label class="choose">Open local pilot<input id="package" type="file" accept=".json,application/json"></label><button id="clear" type="button" hidden>Close pilot</button></header>
+<p class="privacy">Private local session · Images and answers stay in this browser. Closing or refreshing clears the session. Clinical, privacy and reuse review remain pending.</p>
+<p id="status" role="status">Choose the prepared fracture-pilot.vm-fracture.json file from your private pilot folder.</p>
+<main id="workspace" hidden><nav id="cases" aria-label="Pilot cases"></nav><section class="viewer" aria-label="Original radiographs"><div class="toolbar"><h2 id="case-title"></h2><button id="smaller" type="button" aria-label="Zoom out">−</button><span id="zoom-label">100%</span><button id="larger" type="button" aria-label="Zoom in">+</button><button id="fit" type="button">Fit</button><button id="invert" type="button" aria-pressed="false">Invert</button></div><div id="images" class="images"></div><p class="viewer-note">Original image pixels · Source view/side labels require confirmation · Scroll to pan when zoomed</p></section><aside aria-label="Draft questions"><div class="aside-head"><h2>Questions &amp; review</h2><p>Unapproved source-based drafts. Responses are temporary; no score or clinical approval is recorded.</p></div><div id="questions"></div></aside></main>
+<section id="empty" class="empty"><h2>Your pilot, in the imaging workspace</h2><p>Open the local package to review complete image pairs alongside their questions and draft explanations. The package is read locally and is never uploaded.</p><p>The website cannot open a Windows file path automatically. Select the package once for this session.</p></section>
+<script>/* Browser-only private package validator. No transport or persistence. */
+(() => {
+  const fail = () => { throw new Error('This is not a supported, intact private fracture review package.'); };
+  const keys = (v, names) => { if (!v || typeof v !== 'object' || Array.isArray(v) || Object.keys(v).length !== names.length || names.some(k => !Object.hasOwn(v,k))) fail(); };
+  const text = (v, nullable=false) => { if (nullable && v === null) return; if(typeof v !== 'string' || !v.trim() || v.length>8000) fail(); };
+  const hex = v => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v);
+  const id = v => typeof v === 'string' && /^[a-z]+_[a-f0-9]{16,64}$/.test(v);
+  const sha = async bytes => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
+  async function parse(raw) {
+    if(typeof raw !== 'string' || raw.length>64*1024*1024) fail();
+    let envelope; try { envelope=JSON.parse(raw); } catch { fail(); }
+    keys(envelope,['payload','sha256']);
+    const p=envelope.payload;
+    if(!hex(envelope.sha256) || await sha(new TextEncoder().encode(JSON.stringify(p)))!==envelope.sha256) fail();
+    keys(p,['schema','contentRevision','clinicalStatus','privacyStatus','reuseStatus','cases']);
+    if(p.schema!=='vm-fracture-local-review-v1' || !hex(p.contentRevision) || [p.clinicalStatus,p.privacyStatus,p.reuseStatus].some(v=>v!=='pending')) fail();
+    if(!Array.isArray(p.cases) || p.cases.length<1 || p.cases.length>12) fail();
+    const ids=new Set(), hashes=new Set(); let bytesTotal=0,pixelsTotal=0,imageTotal=0;
+    const unique=v=>{if(!id(v)||ids.has(v))fail();ids.add(v);};
+    for(const c of p.cases) {
+      keys(c,['id','images','questions']);unique(c.id);
+      if(!Array.isArray(c.images)||c.images.length<1||c.images.length>6||!Array.isArray(c.questions)||c.questions.length<1||c.questions.length>12) fail();
+      for(const im of c.images) {
+        keys(im,['id','mime','sha256','base64','view','laterality']);unique(im.id);
+        if(im.mime!=='image/png'||!hex(im.sha256)||hashes.has(im.sha256)||typeof im.base64!=='string'||im.base64.length>12*1024*1024||im.base64.length%4!==0||!/^[A-Za-z0-9+/]+={0,2}$/.test(im.base64)) fail();
+        text(im.view,true);text(im.laterality,true); hashes.add(im.sha256);
+        let binary;try {binary=atob(im.base64);}catch{fail();}
+        const bytes=Uint8Array.from(binary,c=>c.charCodeAt(0));
+        if(bytes.length<33||bytes.length>8*1024*1024||await sha(bytes)!==im.sha256)fail();
+        if([137,80,78,71,13,10,26,10].some((n,i)=>bytes[i]!==n)||String.fromCharCode(...bytes.slice(12,16))!=='IHDR')fail();
+        const view=new DataView(bytes.buffer),w=view.getUint32(16),h=view.getUint32(20);
+        if(w<1||h<1||w>16384||h>16384||w*h>32000000)fail();
+        bytesTotal+=bytes.length;pixelsTotal+=w*h;imageTotal++;
+        if(bytesTotal>40*1024*1024||pixelsTotal>100000000||imageTotal>32)fail();
+      }
+      for(const q of c.questions) {
+        keys(q,['id','prompt','answer','rationale','maxMarks']);unique(q.id);
+        text(q.prompt);text(q.answer,true);text(q.rationale,true);
+        if(!Number.isSafeInteger(q.maxMarks)||q.maxMarks<1||q.maxMarks>100)fail();
+      }
+    }
+    return p;
+  }
+  globalThis.VMFracturePackage={parse,sha};
+})();
+</script><script>(() => {
+  const $=id=>document.getElementById(id);
+  let pilot=null,active=0,zoom=1,invert=false,generation=0,urls=[];
+  const responses=new Map();
+  const node=(tag,value,className)=>{const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(className)n.className=className;return n;};
+  function release(){urls.forEach(URL.revokeObjectURL);urls=[];}
+  function view(){
+    $('zoom-label').textContent=`${Math.round(zoom*100)}%`;
+    $('images').querySelectorAll('img').forEach(im=>{im.style.width=`${zoom*100}%`;im.style.height=`${zoom*100}%`;im.style.maxWidth='none';im.style.filter=invert?'invert(1)':'none';});
+    $('invert').setAttribute('aria-pressed',String(invert));
+  }
+  function render(){
+    release();$('images').replaceChildren();$('questions').replaceChildren();$('cases').replaceChildren();zoom=1;invert=false;
+    if(!pilot)return;
+    pilot.cases.forEach((c,i)=>{const b=node('button',`Case ${i+1}`);b.type='button';b.setAttribute('aria-current',String(i===active));b.onclick=()=>{active=i;render();};$('cases').append(b);});
+    const c=pilot.cases[active];$('case-title').textContent=`Case ${active+1} / ${pilot.cases.length}`;
+    c.images.forEach((im,i)=>{
+      const bytes=Uint8Array.from(atob(im.base64),c=>c.charCodeAt(0));const url=URL.createObjectURL(new Blob([bytes],{type:'image/png'}));urls.push(url);
+      const f=node('figure'),window=node('div',undefined,'image-window'),img=node('img');img.src=url;img.alt=`Case ${active+1}, image ${i+1}, pending clinical review`;img.draggable=false;
+      img.onerror=()=>{$('status').textContent='An image could not be decoded. Close this pilot and check the original package locally.';};
+      window.append(img);f.append(window,node('figcaption',`Image ${i+1} · ${im.view??'View unresolved'} · ${im.laterality??'Side unresolved'}`));$('images').append(f);
+    });
+    c.questions.forEach((q,i)=>{
+      const a=node('article'),h=node('h3',`${i+1}. ${q.prompt}`),marks=node('p',`${q.maxMarks} proposed mark${q.maxMarks===1?'':'s'}`,'muted');
+      const label=node('label','Your response / review notes'),input=node('textarea');input.id=`answer-${i}`;input.rows=3;input.value=responses.get(q.id)??'';input.placeholder='Temporary notes for this session';input.maxLength=8000;input.oninput=()=>responses.set(q.id,input.value);label.htmlFor=input.id;
+      const details=node('details');details.append(node('summary','Reveal draft key'),node('p',q.answer??'Unresolved — radiologist review required.'),node('p',q.rationale??'Explanation awaiting radiologist review.'));
+      a.append(h,marks,label,input,details);$('questions').append(a);
+    });view();
+  }
+  function clear(){generation++;release();pilot=null;responses.clear();$('images').replaceChildren();$('questions').replaceChildren();$('cases').replaceChildren();$('workspace').hidden=true;$('empty').hidden=false;$('clear').hidden=true;$('package').value='';$('status').textContent='Pilot closed. Local images and responses have been cleared.';}
+  $('package').onchange=async event=>{
+    const file=event.target.files[0];if(!file)return;clear();const current=++generation;$('status').textContent='Checking local package…';
+    try {
+      if(file.size>64*1024*1024)throw Error();
+      const next=await VMFracturePackage.parse(await file.text());if(current!==generation)return;
+      pilot=next;active=0;$('workspace').hidden=false;$('empty').hidden=true;$('clear').hidden=false;$('status').textContent=`${pilot.cases.length} cases loaded locally · All review decisions pending`;render();
+    }catch{if(current===generation)$('status').textContent='Unable to open this package. Select an intact fracture-pilot.vm-fracture.json file. Nothing was uploaded.';}
+  };
+  $('clear').onclick=clear;$('larger').onclick=()=>{zoom=Math.min(4,zoom+.25);view();};$('smaller').onclick=()=>{zoom=Math.max(.5,zoom-.25);view();};$('fit').onclick=()=>{zoom=1;invert=false;view();};$('invert').onclick=()=>{invert=!invert;view();};
+  addEventListener('pagehide',clear);
+})();
+</script></body></html>

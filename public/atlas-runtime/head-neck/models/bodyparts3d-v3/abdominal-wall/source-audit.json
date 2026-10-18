@@ -1,0 +1,3519 @@
+{
+  "source": {
+    "version": "3.0, OBJ 99% reduction",
+    "license": "CC BY-SA 2.1 JP",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.1/jp/",
+    "credit": "BodyParts3D, Copyright© The Database Center for Life Science licensed by CC Attribution-Share Alike 2.1 Japan",
+    "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/README_e.html",
+    "archive": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/BodyParts3D_3.0_obj_99.zip",
+    "registration": "none"
+  },
+  "evidence": {
+    "source-readme.html": {
+      "url": "https://dbarchive.biosciencedbc.jp/data/bodyparts3d/20110915/README_e.html",
+      "sha256": "0c2913b3c51f2c6b248ac054acfd0b2a72940386199ca95fa9aa848bd69746e0"
+    },
+    "license-deed.html": {
+      "url": "https://creativecommons.org/licenses/by-sa/2.1/jp/deed.en",
+      "sha256": "4a02a925c115a4f8e0e5018fbed2fcb9388fde1b0c0ce4a61a506bb44e0307ec"
+    },
+    "license-legalcode.html": {
+      "url": "https://creativecommons.org/licenses/by-sa/2.1/jp/legalcode.ja",
+      "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
+    }
+  },
+  "namesSha256": "824a34ed939a53375037d0d68b88ad2b63b1f0ae15a585632af2a63c2ab2e4af",
+  "structures": [
+    {
+      "id": "bp3d3-abdominal-wall-FMA13336",
+      "source": {
+        "file": "FMA13336",
+        "sha256": "8e48613f6aae18d6e6d3526497e1b41b9a7c9a85a9267827dd90f5cbe4f288c8"
+      },
+      "sourceBytes": 8799833,
+      "topology": {
+        "sourceVertices": 73901,
+        "exactUniqueVertices": 60273,
+        "unusedUniqueVertices": 0,
+        "triangles": 120430,
+        "edges": 180645,
+        "duplicateFaces": 13,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 58,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 119908,
+            "vertices": 59930,
+            "bounds": {
+              "min": [
+                -139.477,
+                -218.6,
+                809.77
+              ],
+              "max": [
+                -3.14531,
+                -38.6297,
+                1228.6
+              ]
+            },
+            "areaMm2": 150743.57124176057,
+            "algebraicVolumeMm3": 257923.34921540998
+          },
+          {
+            "firstFace": 40197,
+            "triangles": 180,
+            "vertices": 92,
+            "bounds": {
+              "min": [
+                -78.2203,
+                -151.436,
+                847.589
+              ],
+              "max": [
+                -77,
+                -150.577,
+                848.639
+              ]
+            },
+            "areaMm2": 2.14133309580331,
+            "algebraicVolumeMm3": -0.05989930478333314
+          },
+          {
+            "firstFace": 44261,
+            "triangles": 76,
+            "vertices": 40,
+            "bounds": {
+              "min": [
+                -73.6,
+                -152.045,
+                844.341
+              ],
+              "max": [
+                -72.2,
+                -151.404,
+                845.193
+              ]
+            },
+            "areaMm2": 1.4925579689356194,
+            "algebraicVolumeMm3": -0.061762972300000066
+          },
+          {
+            "firstFace": 114975,
+            "triangles": 30,
+            "vertices": 17,
+            "bounds": {
+              "min": [
+                -8.47968,
+                -185.792,
+                935.918
+              ],
+              "max": [
+                -7.68868,
+                -184.723,
+                937.078
+              ]
+            },
+            "areaMm2": 2.249518778301934,
+            "algebraicVolumeMm3": 0.2597849605766682
+          },
+          {
+            "firstFace": 44282,
+            "triangles": 16,
+            "vertices": 10,
+            "bounds": {
+              "min": [
+                -73.4,
+                -151.236,
+                843.967
+              ],
+              "max": [
+                -72.9625,
+                -150.8,
+                844.033
+              ]
+            },
+            "areaMm2": 0.06734868157696443,
+            "algebraicVolumeMm3": -0.0005620505000001518
+          },
+          {
+            "firstFace": 114911,
+            "triangles": 14,
+            "vertices": 9,
+            "bounds": {
+              "min": [
+                -7.65918,
+                -186.045,
+                936.4
+              ],
+              "max": [
+                -7.55968,
+                -185.762,
+                937.6
+              ]
+            },
+            "areaMm2": 0.26793002409607514,
+            "algebraicVolumeMm3": 0.003133755333333052
+          },
+          {
+            "firstFace": 116002,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                -7.46394,
+                -208.881,
+                1132.4
+              ],
+              "max": [
+                -7.32778,
+                -208.735,
+                1132.99
+              ]
+            },
+            "areaMm2": 0.13857714510337962,
+            "algebraicVolumeMm3": 0.0021040955333329428
+          },
+          {
+            "firstFace": 45614,
+            "triangles": 10,
+            "vertices": 7,
+            "bounds": {
+              "min": [
+                -73,
+                -151,
+                843.786
+              ],
+              "max": [
+                -72.8,
+                -150.8,
+                843.823
+              ]
+            },
+            "areaMm2": 0.02340028929628474,
+            "algebraicVolumeMm3": -0.00011271693333341531
+          },
+          {
+            "firstFace": 42970,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -76.2078,
+                -151.408,
+                846.992
+              ],
+              "max": [
+                -76.1922,
+                -151.392,
+                847.008
+              ]
+            },
+            "areaMm2": 0.0004360462360818854,
+            "algebraicVolumeMm3": -6.656000000030771e-7
+          },
+          {
+            "firstFace": 49518,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -67.0016,
+                -152.402,
+                841.198
+              ],
+              "max": [
+                -66.9984,
+                -152.398,
+                841.202
+              ]
+            },
+            "areaMm2": 0.000024159470192877265,
+            "algebraicVolumeMm3": -8.533333333334303e-9
+          },
+          {
+            "firstFace": 52269,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -64.8115,
+                -152.611,
+                839.188
+              ],
+              "max": [
+                -64.7887,
+                -152.589,
+                839.211
+              ]
+            },
+            "areaMm2": 0.0008848560180430014,
+            "algebraicVolumeMm3": -0.000001922800000000412
+          },
+          {
+            "firstFace": 111859,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.62699,
+                -208.428,
+                1130.56
+              ],
+              "max": [
+                -7.57343,
+                -208.371,
+                1130.81
+              ]
+            },
+            "areaMm2": 0.019978098007109125,
+            "algebraicVolumeMm3": 0.00012720499999997322
+          },
+          {
+            "firstFace": 111869,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.70577,
+                -208.686,
+                1131.85
+              ],
+              "max": [
+                -7.51129,
+                -208.5,
+                1133
+              ]
+            },
+            "areaMm2": 0.3127751502449649,
+            "algebraicVolumeMm3": 0.006933212000000827
+          },
+          {
+            "firstFace": 112412,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.66492,
+                -207.658,
+                1120.8
+              ],
+              "max": [
+                -7.53272,
+                -207.541,
+                1121.2
+              ]
+            },
+            "areaMm2": 0.07289950402323547,
+            "algebraicVolumeMm3": 0.0010311600000001491
+          },
+          {
+            "firstFace": 114227,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -8.86094,
+                -196.666,
+                998.614
+              ],
+              "max": [
+                -8.73709,
+                -196.526,
+                999.037
+              ]
+            },
+            "areaMm2": 0.08100655961093128,
+            "algebraicVolumeMm3": 0.0012223994999998775
+          },
+          {
+            "firstFace": 114228,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -8.80158,
+                -196.402,
+                998.398
+              ],
+              "max": [
+                -8.79844,
+                -196.398,
+                998.402
+              ]
+            },
+            "areaMm2": 0.00002390633668473692,
+            "algebraicVolumeMm3": 8.373333333354179e-9
+          },
+          {
+            "firstFace": 114243,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -8.6661,
+                -196.861,
+                998.6
+              ],
+              "max": [
+                -8.53036,
+                -196.737,
+                999
+              ]
+            },
+            "areaMm2": 0.0761129604794187,
+            "algebraicVolumeMm3": 0.001122117333333228
+          },
+          {
+            "firstFace": 114982,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.62699,
+                -185.44,
+                934.858
+              ],
+              "max": [
+                -7.57343,
+                -185.365,
+                935.2
+              ]
+            },
+            "areaMm2": 0.031797405362456156,
+            "algebraicVolumeMm3": 0.00022896900000003126
+          },
+          {
+            "firstFace": 115937,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.2228,
+                -208.821,
+                1131.18
+              ],
+              "max": [
+                -7.17759,
+                -208.78,
+                1131.61
+              ]
+            },
+            "areaMm2": 0.026311493791272532,
+            "algebraicVolumeMm3": 0.00013284204999993902
+          },
+          {
+            "firstFace": 117217,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.25,
+                -186.048,
+                934.8
+              ],
+              "max": [
+                -7.15156,
+                -185.948,
+                935.2
+              ]
+            },
+            "areaMm2": 0.05709596561058898,
+            "algebraicVolumeMm3": 0.0006562666666667793
+          },
+          {
+            "firstFace": 117230,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.42699,
+                -186.027,
+                935.8
+              ],
+              "max": [
+                -7.37344,
+                -185.97,
+                936.057
+              ]
+            },
+            "areaMm2": 0.020436721961015317,
+            "algebraicVolumeMm3": 0.0001307423250000027
+          },
+          {
+            "firstFace": 117459,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.20158,
+                -185.602,
+                933.198
+              ],
+              "max": [
+                -7.19843,
+                -185.598,
+                933.202
+              ]
+            },
+            "areaMm2": 0.000023948307421998535,
+            "algebraicVolumeMm3": 8.400000000019903e-9
+          },
+          {
+            "firstFace": 117465,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.42969,
+                -185.631,
+                934.042
+              ],
+              "max": [
+                -7.36936,
+                -185.566,
+                934.4
+              ]
+            },
+            "areaMm2": 0.032097319670381916,
+            "algebraicVolumeMm3": 0.00023397984999995558
+          },
+          {
+            "firstFace": 117481,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -7.45238,
+                -185.856,
+                934.8
+              ],
+              "max": [
+                -7.34843,
+                -185.742,
+                935.427
+              ]
+            },
+            "areaMm2": 0.09752059509400034,
+            "algebraicVolumeMm3": 0.0012383563500001804
+          },
+          {
+            "firstFace": 119780,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -4.44286,
+                -158.043,
+                832.156
+              ],
+              "max": [
+                -4.35781,
+                -157.956,
+                832.406
+              ]
+            },
+            "areaMm2": 0.031842768453954645,
+            "algebraicVolumeMm3": 0.0003083062500000615
+          },
+          {
+            "firstFace": 114981,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -7.62699,
+                -185.631,
+                935.464
+              ],
+              "max": [
+                -7.5758,
+                -185.569,
+                935.8
+              ]
+            },
+            "areaMm2": 0.030107734503600915,
+            "algebraicVolumeMm3": 0.00017773167999998073
+          },
+          {
+            "firstFace": 115926,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -7.43651,
+                -208.627,
+                1130.4
+              ],
+              "max": [
+                -7.35818,
+                -208.563,
+                1130.81
+              ]
+            },
+            "areaMm2": 0.04534225701433034,
+            "algebraicVolumeMm3": 0.0003425631999999939
+          },
+          {
+            "firstFace": 116323,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -7.42241,
+                -208.02,
+                1124
+              ],
+              "max": [
+                -7.37547,
+                -207.979,
+                1124.2
+              ]
+            },
+            "areaMm2": 0.013469806158716555,
+            "algebraicVolumeMm3": 0.00006415133333334322
+          },
+          {
+            "firstFace": 114245,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                -8.47544,
+                -196.934,
+                998.2
+              ],
+              "max": [
+                -8.27353,
+                -196.8,
+                998.4
+              ]
+            },
+            "areaMm2": 0.07021621492218051,
+            "algebraicVolumeMm3": 0.0009018646666662729
+          },
+          {
+            "firstFace": 65210,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -50.4164,
+                -156.6,
+                832.177
+              ],
+              "max": [
+                -50.4,
+                -156.585,
+                832.2
+              ]
+            },
+            "areaMm2": 0.0005672925523928023,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 114246,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -8.6,
+                -196.627,
+                998.2
+              ],
+              "max": [
+                -8.57708,
+                -196.6,
+                998.221
+              ]
+            },
+            "areaMm2": 0.000967533404073754,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 114254,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -8.27778,
+                -196.86,
+                998
+              ],
+              "max": [
+                -8.2,
+                -196.8,
+                998.091
+              ]
+            },
+            "areaMm2": 0.010084067786385584,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 114380,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -8.2,
+                -195.46,
+                994.379
+              ],
+              "max": [
+                -8.18125,
+                -195.4,
+                994.4
+              ]
+            },
+            "areaMm2": 0.0017344347962645096,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 116308,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7.2,
+                -208.037,
+                1122.8
+              ],
+              "max": [
+                -7.12273,
+                -208,
+                1123
+              ]
+            },
+            "areaMm2": 0.017198537092257434,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 116322,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7.6,
+                -207.811,
+                1123.75
+              ],
+              "max": [
+                -7.58906,
+                -207.8,
+                1123.8
+              ]
+            },
+            "areaMm2": 0.0007849781624979391,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 117219,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7,
+                -186.077,
+                934
+              ],
+              "max": [
+                -6.93029,
+                -186,
+                934.2
+              ]
+            },
+            "areaMm2": 0.021304216008581085,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 117246,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7.02787,
+                -186.455,
+                936
+              ],
+              "max": [
+                -7,
+                -186.4,
+                936.068
+              ]
+            },
+            "areaMm2": 0.004464175237162585,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 117247,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7.2,
+                -186.228,
+                935.8
+              ],
+              "max": [
+                -7.17344,
+                -186.2,
+                936
+              ]
+            },
+            "areaMm2": 0.007742734152744252,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 117263,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7,
+                -186.244,
+                935.18
+              ],
+              "max": [
+                -6.98,
+                -186.2,
+                935.2
+              ]
+            },
+            "areaMm2": 0.001307210771073153,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 117461,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7.02699,
+                -185.827,
+                933
+              ],
+              "max": [
+                -7,
+                -185.8,
+                933.094
+              ]
+            },
+            "areaMm2": 0.003661852653576732,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 117470,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -7.23594,
+                -185.8,
+                934
+              ],
+              "max": [
+                -7.2,
+                -185.772,
+                934.2
+              ]
+            },
+            "areaMm2": 0.007969250848509706,
+            "algebraicVolumeMm3": 5.646886315028669e-22
+          },
+          {
+            "firstFace": 120263,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -4.20483,
+                -158.605,
+                833.195
+              ],
+              "max": [
+                -4.2,
+                -158.6,
+                833.2
+              ]
+            },
+            "areaMm2": 0.00004232546514801294,
+            "algebraicVolumeMm3": -3.308722450212111e-24
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 120430
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13337",
+      "source": {
+        "file": "FMA13337",
+        "sha256": "929021730ded4d40b470c2c07e1ab0e846fda06ebc7ba8b1072defd041447919"
+      },
+      "sourceBytes": 8473863,
+      "topology": {
+        "sourceVertices": 69219,
+        "exactUniqueVertices": 59956,
+        "unusedUniqueVertices": 0,
+        "triangles": 119788,
+        "edges": 179682,
+        "duplicateFaces": 15,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 62,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 118858,
+            "vertices": 59411,
+            "bounds": {
+              "min": [
+                1.83594,
+                -218.6,
+                809.814
+              ],
+              "max": [
+                138.155,
+                -38.6703,
+                1228.21
+              ]
+            },
+            "areaMm2": 150187.11179198264,
+            "algebraicVolumeMm3": 258023.98530753172
+          },
+          {
+            "firstFace": 53675,
+            "triangles": 570,
+            "vertices": 287,
+            "bounds": {
+              "min": [
+                47.1397,
+                -157.28,
+                825.305
+              ],
+              "max": [
+                63.4516,
+                -151.02,
+                837.339
+              ]
+            },
+            "areaMm2": 243.51190500269797,
+            "algebraicVolumeMm3": -73.49289046148263
+          },
+          {
+            "firstFace": 5651,
+            "triangles": 56,
+            "vertices": 30,
+            "bounds": {
+              "min": [
+                6.37344,
+                -185.835,
+                936
+              ],
+              "max": [
+                7.16719,
+                -184.833,
+                937.2
+              ]
+            },
+            "areaMm2": 2.3594802291101957,
+            "algebraicVolumeMm3": 0.2551965874366753
+          },
+          {
+            "firstFace": 72891,
+            "triangles": 48,
+            "vertices": 26,
+            "bounds": {
+              "min": [
+                70.8,
+                -152.023,
+                844.4
+              ],
+              "max": [
+                72.2,
+                -151.505,
+                845.049
+              ]
+            },
+            "areaMm2": 1.1233022260823848,
+            "algebraicVolumeMm3": -0.028623069333328182
+          },
+          {
+            "firstFace": 5424,
+            "triangles": 42,
+            "vertices": 23,
+            "bounds": {
+              "min": [
+                5.36094,
+                -187.125,
+                936.093
+              ],
+              "max": [
+                6.26094,
+                -186.2,
+                937.449
+              ]
+            },
+            "areaMm2": 2.5886622518599416,
+            "algebraicVolumeMm3": 0.2625290502933415
+          },
+          {
+            "firstFace": 3369,
+            "triangles": 22,
+            "vertices": 13,
+            "bounds": {
+              "min": [
+                6.14262,
+                -208.633,
+                1131.4
+              ],
+              "max": [
+                6.455,
+                -208.339,
+                1133.04
+              ]
+            },
+            "areaMm2": 0.640082658219021,
+            "algebraicVolumeMm3": 0.01619670883333343
+          },
+          {
+            "firstFace": 3380,
+            "triangles": 16,
+            "vertices": 10,
+            "bounds": {
+              "min": [
+                5.93864,
+                -208.842,
+                1131.8
+              ],
+              "max": [
+                6.04737,
+                -208.758,
+                1132.6
+              ]
+            },
+            "areaMm2": 0.11930570531237047,
+            "algebraicVolumeMm3": 0.0013714806666667296
+          },
+          {
+            "firstFace": 5483,
+            "triangles": 14,
+            "vertices": 9,
+            "bounds": {
+              "min": [
+                6.17344,
+                -186.029,
+                936.359
+              ],
+              "max": [
+                6.22742,
+                -185.969,
+                936.8
+              ]
+            },
+            "areaMm2": 0.043380281740890224,
+            "algebraicVolumeMm3": 0.0003057271333333245
+          },
+          {
+            "firstFace": 5406,
+            "triangles": 12,
+            "vertices": 8,
+            "bounds": {
+              "min": [
+                5.72167,
+                -186.073,
+                934.343
+              ],
+              "max": [
+                5.87461,
+                -185.924,
+                934.8
+              ]
+            },
+            "areaMm2": 0.11824503247991604,
+            "algebraicVolumeMm3": 0.002122076256666568
+          },
+          {
+            "firstFace": 5426,
+            "triangles": 10,
+            "vertices": 7,
+            "bounds": {
+              "min": [
+                5.73051,
+                -186.266,
+                935.4
+              ],
+              "max": [
+                5.86407,
+                -186.136,
+                935.8
+              ]
+            },
+            "areaMm2": 0.08806188601697368,
+            "algebraicVolumeMm3": 0.001367989999999934
+          },
+          {
+            "firstFace": 627,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                2.76482,
+                -158.832,
+                833.166
+              ],
+              "max": [
+                2.82969,
+                -158.765,
+                833.242
+              ]
+            },
+            "areaMm2": 0.008332209299910447,
+            "algebraicVolumeMm3": 0.000055053006666606086
+          },
+          {
+            "firstFace": 715,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                2.95157,
+                -158.254,
+                832.346
+              ],
+              "max": [
+                3.04921,
+                -158.143,
+                832.6
+              ]
+            },
+            "areaMm2": 0.03971607083290985,
+            "algebraicVolumeMm3": 0.00045881035999999393
+          },
+          {
+            "firstFace": 717,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                2.97344,
+                -158.027,
+                831.769
+              ],
+              "max": [
+                3.02699,
+                -157.969,
+                831.835
+              ]
+            },
+            "areaMm2": 0.0060710426595624615,
+            "algebraicVolumeMm3": 0.00003416490000001171
+          },
+          {
+            "firstFace": 3707,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                6.32105,
+                -207.67,
+                1121.8
+              ],
+              "max": [
+                6.47143,
+                -207.525,
+                1122.14
+              ]
+            },
+            "areaMm2": 0.07453260655872998,
+            "algebraicVolumeMm3": 0.0012356223333337085
+          },
+          {
+            "firstFace": 3771,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                6.36793,
+                -207.827,
+                1124.17
+              ],
+              "max": [
+                6.42742,
+                -207.768,
+                1124.4
+              ]
+            },
+            "areaMm2": 0.01998318725699051,
+            "algebraicVolumeMm3": 0.0001345465500000035
+          },
+          {
+            "firstFace": 5440,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                5.96415,
+                -186.036,
+                935.4
+              ],
+              "max": [
+                6.02969,
+                -185.969,
+                935.649
+              ]
+            },
+            "areaMm2": 0.024077789170454576,
+            "algebraicVolumeMm3": 0.00018223397000003815
+          },
+          {
+            "firstFace": 5607,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                5.9426,
+                -185.856,
+                934.4
+              ],
+              "max": [
+                6.04844,
+                -185.746,
+                935
+              ]
+            },
+            "areaMm2": 0.09250789689542405,
+            "algebraicVolumeMm3": 0.0011642399999998944
+          },
+          {
+            "firstFace": 5623,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                6.14844,
+                -185.662,
+                934.746
+              ],
+              "max": [
+                6.25238,
+                -185.534,
+                935.258
+              ]
+            },
+            "areaMm2": 0.08547435681330334,
+            "algebraicVolumeMm3": 0.001135301973333584
+          },
+          {
+            "firstFace": 5636,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                6.17344,
+                -185.831,
+                935.728
+              ],
+              "max": [
+                6.22699,
+                -185.77,
+                936.094
+              ]
+            },
+            "areaMm2": 0.02994269982269423,
+            "algebraicVolumeMm3": 0.00019925954999998243
+          },
+          {
+            "firstFace": 9159,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                7.32373,
+                -196.69,
+                998.4
+              ],
+              "max": [
+                7.47143,
+                -196.53,
+                998.8
+              ]
+            },
+            "areaMm2": 0.09095531183065776,
+            "algebraicVolumeMm3": 0.0015754666666665381
+          },
+          {
+            "firstFace": 9169,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                7.59844,
+                -196.202,
+                998.398
+              ],
+              "max": [
+                7.60159,
+                -196.198,
+                998.402
+              ]
+            },
+            "areaMm2": 0.000023948546004064635,
+            "algebraicVolumeMm3": 8.400000000019904e-9
+          },
+          {
+            "firstFace": 5622,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                6.18572,
+                -185.416,
+                934.2
+              ],
+              "max": [
+                6.21407,
+                -185.385,
+                934.4
+              ]
+            },
+            "areaMm2": 0.008860368454669738,
+            "algebraicVolumeMm3": 0.00002929499999999615
+          },
+          {
+            "firstFace": 3614,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                6.6,
+                -207.212,
+                1106.8
+              ],
+              "max": [
+                6.60527,
+                -207.188,
+                1107.2
+              ]
+            },
+            "areaMm2": 0.01002707610462268,
+            "algebraicVolumeMm3": 0.0000042160000000013815
+          },
+          {
+            "firstFace": 3740,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                6.14445,
+                -207.8,
+                1122
+              ],
+              "max": [
+                6.22787,
+                -207.773,
+                1123.01
+              ]
+            },
+            "areaMm2": 0.0544102957037209,
+            "algebraicVolumeMm3": 0.00017916390000010952
+          },
+          {
+            "firstFace": 5612,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                5.965,
+                -185.636,
+                933.638
+              ],
+              "max": [
+                6.03281,
+                -185.6,
+                933.8
+              ]
+            },
+            "areaMm2": 0.014817997869886534,
+            "algebraicVolumeMm3": 0.00006591131999997002
+          },
+          {
+            "firstFace": 9173,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                7.57937,
+                -196.425,
+                998.8
+              ],
+              "max": [
+                7.62032,
+                -196.4,
+                999
+              ]
+            },
+            "areaMm2": 0.011095677822021345,
+            "algebraicVolumeMm3": 0.00003412500000001593
+          },
+          {
+            "firstFace": 743,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                2.98628,
+                -158.413,
+                832.8
+              ],
+              "max": [
+                3,
+                -158.4,
+                832.864
+              ]
+            },
+            "areaMm2": 0.0012227267789674764,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1038,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                5,
+                -208.85,
+                1130.79
+              ],
+              "max": [
+                5.00566,
+                -208.8,
+                1130.8
+              ]
+            },
+            "areaMm2": 0.0005773149573666941,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 3365,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                5.99167,
+                -208.608,
+                1130.2
+              ],
+              "max": [
+                6,
+                -208.6,
+                1130.21
+              ]
+            },
+            "areaMm2": 0.00013334083995536437,
+            "algebraicVolumeMm3": 6.617444900424222e-24
+          },
+          {
+            "firstFace": 3621,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                6.77759,
+                -207.021,
+                1107.13
+              ],
+              "max": [
+                6.8,
+                -207,
+                1107.2
+              ]
+            },
+            "areaMm2": 0.0022007256671581093,
+            "algebraicVolumeMm3": 4.235164736271502e-22
+          },
+          {
+            "firstFace": 3702,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                6.15128,
+                -207.651,
+                1120.8
+              ],
+              "max": [
+                6.2,
+                -207.6,
+                1121
+              ]
+            },
+            "areaMm2": 0.01410925182221076,
+            "algebraicVolumeMm3": 8.470329472543003e-22
+          },
+          {
+            "firstFace": 3767,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                5.99,
+                -208.008,
+                1123.8
+              ],
+              "max": [
+                6,
+                -208,
+                1123.81
+              ]
+            },
+            "areaMm2": 0.00015099668870541749,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 5604,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                5.75323,
+                -185.846,
+                933.8
+              ],
+              "max": [
+                5.8,
+                -185.8,
+                934
+              ]
+            },
+            "areaMm2": 0.013280519044617578,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9043,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                7.28462,
+                -197.65,
+                1004.2
+              ],
+              "max": [
+                7.4,
+                -197.6,
+                1004.4
+              ]
+            },
+            "areaMm2": 0.025289209398223822,
+            "algebraicVolumeMm3": 6.776263578034403e-21
+          },
+          {
+            "firstFace": 9108,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                7.14583,
+                -195.67,
+                995.2
+              ],
+              "max": [
+                7.2,
+                -195.6,
+                995.4
+              ]
+            },
+            "areaMm2": 0.01567190527057239,
+            "algebraicVolumeMm3": 2.258754526010954e-21
+          },
+          {
+            "firstFace": 9148,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                7.16886,
+                -196.631,
+                998
+              ],
+              "max": [
+                7.2,
+                -196.6,
+                998.054
+              ]
+            },
+            "areaMm2": 0.0025616013251862735,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9163,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                7.38475,
+                -196.416,
+                998
+              ],
+              "max": [
+                7.4,
+                -196.4,
+                998.018
+              ]
+            },
+            "areaMm2": 0.00046672288351906816,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9260,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                6.99583,
+                -194.805,
+                993.397
+              ],
+              "max": [
+                7,
+                -194.8,
+                993.4
+              ]
+            },
+            "areaMm2": 0.000028569609727485295,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 9279,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                7.17069,
+                -195.432,
+                995
+              ],
+              "max": [
+                7.2,
+                -195.4,
+                995.03
+              ]
+            },
+            "areaMm2": 0.0016045131399882613,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 77901,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                76,
+                -151.205,
+                847.995
+              ],
+              "max": [
+                76.0167,
+                -151.2,
+                848
+              ]
+            },
+            "areaMm2": 0.00012070418385482335,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 77905,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                76.4,
+                -151.224,
+                848.373
+              ],
+              "max": [
+                76.4271,
+                -151.2,
+                848.4
+              ]
+            },
+            "areaMm2": 0.001174014075722438,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 119788
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13892",
+      "source": {
+        "file": "FMA13892",
+        "sha256": "b5e1938292a9537226e6daf4bf3c787fe95437cd0be65bed89ac36be919a8213"
+      },
+      "sourceBytes": 4506350,
+      "topology": {
+        "sourceVertices": 40543,
+        "exactUniqueVertices": 29118,
+        "unusedUniqueVertices": 0,
+        "triangles": 58408,
+        "edges": 87612,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -86,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 58386,
+            "vertices": 29103,
+            "bounds": {
+              "min": [
+                -123.936,
+                -216.115,
+                809.799
+              ],
+              "max": [
+                -3.39258,
+                -46.1426,
+                1189.02
+              ]
+            },
+            "areaMm2": 114341.52828392207,
+            "algebraicVolumeMm3": 166152.6146303173
+          },
+          {
+            "firstFace": 54312,
+            "triangles": 20,
+            "vertices": 12,
+            "bounds": {
+              "min": [
+                -9.03711,
+                -199.619,
+                1119.21
+              ],
+              "max": [
+                -8.5,
+                -199.463,
+                1119.75
+              ]
+            },
+            "areaMm2": 0.2018646174272273,
+            "algebraicVolumeMm3": -0.0020966777499996135
+          },
+          {
+            "firstFace": 29141,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -52.5,
+                -187,
+                1067.21
+              ],
+              "max": [
+                -52.4677,
+                -186.866,
+                1067.25
+              ]
+            },
+            "areaMm2": 0.007009435015743711,
+            "algebraicVolumeMm3": 1.6940658945086007e-21
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 58408
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13893",
+      "source": {
+        "file": "FMA13893",
+        "sha256": "c768ff8691c181b9826a8f5f83869ec8e6f29d36f7d7ff780d52b8a3b9f8fc40"
+      },
+      "sourceBytes": 4294518,
+      "topology": {
+        "sourceVertices": 37744,
+        "exactUniqueVertices": 28920,
+        "unusedUniqueVertices": 0,
+        "triangles": 57920,
+        "edges": 86880,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -40,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 57918,
+            "vertices": 28917,
+            "bounds": {
+              "min": [
+                2.08398,
+                -216.111,
+                809.803
+              ],
+              "max": [
+                122.572,
+                -46.1699,
+                1189.03
+              ]
+            },
+            "areaMm2": 114105.33748675966,
+            "algebraicVolumeMm3": 166271.64848861197
+          },
+          {
+            "firstFace": 2171,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                7.25,
+                -199.526,
+                1119.75
+              ],
+              "max": [
+                7.26136,
+                -199.5,
+                1119.76
+              ]
+            },
+            "areaMm2": 0.000409563779648512,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 57920
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA22344",
+      "source": {
+        "file": "FMA22344",
+        "sha256": "b6241b71a6ac13e6ab190eb8a119bf2084482b4a54836a19a6fefb5e89ea8129"
+      },
+      "sourceBytes": 4846347,
+      "topology": {
+        "sourceVertices": 39204,
+        "exactUniqueVertices": 34341,
+        "unusedUniqueVertices": 0,
+        "triangles": 68682,
+        "edges": 103023,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 68680,
+            "vertices": 34338,
+            "bounds": {
+              "min": [
+                -129.4,
+                -198.631,
+                801.381
+              ],
+              "max": [
+                -4.02539,
+                -36.6074,
+                1209.02
+              ]
+            },
+            "areaMm2": 133263.8710620021,
+            "algebraicVolumeMm3": 292999.1094751955
+          },
+          {
+            "firstFace": 45571,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -73.75,
+                -176.5,
+                1095.25
+              ],
+              "max": [
+                -73.7439,
+                -176.493,
+                1095.26
+              ]
+            },
+            "areaMm2": 0.00010219730916222978,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 68682
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA22345",
+      "source": {
+        "file": "FMA22345",
+        "sha256": "7ef955fe297a89331924c8835b31dbed8896202af6c414f41b05df7dd33cc6f2"
+      },
+      "sourceBytes": 4787824,
+      "topology": {
+        "sourceVertices": 38634,
+        "exactUniqueVertices": 34334,
+        "unusedUniqueVertices": 0,
+        "triangles": 68592,
+        "edges": 102888,
+        "duplicateFaces": 7,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 38,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 68462,
+            "vertices": 34231,
+            "bounds": {
+              "min": [
+                2.72852,
+                -198.6,
+                801.365
+              ],
+              "max": [
+                128.076,
+                -36.5879,
+                1209.02
+              ]
+            },
+            "areaMm2": 133212.10019764554,
+            "algebraicVolumeMm3": 292980.72672782285
+          },
+          {
+            "firstFace": 67,
+            "triangles": 42,
+            "vertices": 23,
+            "bounds": {
+              "min": [
+                3.49802,
+                -193.5,
+                1082
+              ],
+              "max": [
+                3.53906,
+                -193.481,
+                1084.5
+              ]
+            },
+            "areaMm2": 0.08089133823498165,
+            "algebraicVolumeMm3": 0.00007724833333324527
+          },
+          {
+            "firstFace": 149,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                3.24802,
+                -177.002,
+                960.248
+              ],
+              "max": [
+                3.25198,
+                -176.998,
+                960.254
+              ]
+            },
+            "areaMm2": 0.00003763115002635108,
+            "algebraicVolumeMm3": 1.584000000000194e-8
+          },
+          {
+            "firstFace": 159,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                3.74802,
+                -176.752,
+                960.248
+              ],
+              "max": [
+                3.75202,
+                -176.748,
+                960.252
+              ]
+            },
+            "areaMm2": 0.000027713120852871788,
+            "algebraicVolumeMm3": 1.0666666666465373e-8
+          },
+          {
+            "firstFace": 168,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                2.99802,
+                -177.752,
+                963.498
+              ],
+              "max": [
+                3.00198,
+                -177.748,
+                963.502
+              ]
+            },
+            "areaMm2": 0.000027528370819591092,
+            "algebraicVolumeMm3": 1.0559999999801207e-8
+          },
+          {
+            "firstFace": 188,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                3.9968,
+                -177.252,
+                963.247
+              ],
+              "max": [
+                4.00202,
+                -177.248,
+                963.252
+              ]
+            },
+            "areaMm2": 0.000039310912212006996,
+            "algebraicVolumeMm3": 1.7400000000067267e-8
+          },
+          {
+            "firstFace": 198,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                3.73491,
+                -175.514,
+                952.987
+              ],
+              "max": [
+                3.7662,
+                -175.486,
+                953.25
+              ]
+            },
+            "areaMm2": 0.01445141132650526,
+            "algebraicVolumeMm3": 0.00005252263333337496
+          },
+          {
+            "firstFace": 135,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                3.18466,
+                -176.296,
+                956.5
+              ],
+              "max": [
+                3.29063,
+                -176.205,
+                956.75
+              ]
+            },
+            "areaMm2": 0.04707825294900969,
+            "algebraicVolumeMm3": 0.00039912916666656257
+          },
+          {
+            "firstFace": 142,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                3.47187,
+                -176.272,
+                957
+              ],
+              "max": [
+                3.52989,
+                -176.229,
+                957.25
+              ]
+            },
+            "areaMm2": 0.027271227185315328,
+            "algebraicVolumeMm3": 0.00013931999999992862
+          },
+          {
+            "firstFace": 174,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                3.22045,
+                -177.525,
+                963
+              ],
+              "max": [
+                3.27851,
+                -177.474,
+                963.148
+              ]
+            },
+            "areaMm2": 0.013014173697342769,
+            "algebraicVolumeMm3": 0.00007303948000003496
+          },
+          {
+            "firstFace": 184,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                3.74784,
+                -177.272,
+                962.75
+              ],
+              "max": [
+                3.77865,
+                -177.229,
+                963.031
+              ]
+            },
+            "areaMm2": 0.01629199031360007,
+            "algebraicVolumeMm3": 0.00005817620499995858
+          },
+          {
+            "firstFace": 194,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                3.5,
+                -175.502,
+                952.248
+              ],
+              "max": [
+                3.50202,
+                -175.5,
+                952.5
+              ]
+            },
+            "areaMm2": 0.001566190524345235,
+            "algebraicVolumeMm3": 3.2997333333492514e-7
+          },
+          {
+            "firstFace": 132,
+            "triangles": 4,
+            "vertices": 4,
+            "bounds": {
+              "min": [
+                2.97098,
+                -176.5,
+                957
+              ],
+              "max": [
+                3.02754,
+                -176.475,
+                957.148
+              ]
+            },
+            "areaMm2": 0.010523877177835147,
+            "algebraicVolumeMm3": 0.000034878666666680485
+          },
+          {
+            "firstFace": 116,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.5,
+                -193.5,
+                1085.5
+              ],
+              "max": [
+                3.55147,
+                -193.482,
+                1085.75
+              ]
+            },
+            "areaMm2": 0.013336601622018187,
+            "algebraicVolumeMm3": -5.646886315008126e-22
+          },
+          {
+            "firstFace": 124,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.75,
+                -193.5,
+                1086.25
+              ],
+              "max": [
+                3.79464,
+                -193.487,
+                1086.5
+              ]
+            },
+            "areaMm2": 0.01163054216696745,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 148,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3,
+                -177.25,
+                961
+              ],
+              "max": [
+                3.01411,
+                -177.236,
+                961.02
+              ]
+            },
+            "areaMm2": 0.00044391315772331134,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 156,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.48884,
+                -177.01,
+                961
+              ],
+              "max": [
+                3.5,
+                -177,
+                961.25
+              ]
+            },
+            "areaMm2": 0.0037473360190925483,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 180,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                3.48903,
+                -177.5,
+                963.5
+              ],
+              "max": [
+                3.5,
+                -177.49,
+                963.518
+              ]
+            },
+            "areaMm2": 0.00028883306874412655,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1092,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                5.5,
+                -184.003,
+                998.746
+              ],
+              "max": [
+                5.51042,
+                -184,
+                998.75
+              ]
+            },
+            "areaMm2": 0.00005346410010471851,
+            "algebraicVolumeMm3": 0
+          },
+          {
+            "firstFace": 1182,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                4,
+                -176.75,
+                960.737
+              ],
+              "max": [
+                4.01136,
+                -176.74,
+                960.75
+              ]
+            },
+            "areaMm2": 0.0002271879010866227,
+            "algebraicVolumeMm3": 0
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 68592
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13377",
+      "source": {
+        "file": "FMA13377",
+        "sha256": "b00b3d214f6ee3b4fc16ca9dd4e64b4ac3047862a2bfcb6c06b50e371d621772"
+      },
+      "sourceBytes": 2999340,
+      "topology": {
+        "sourceVertices": 25972,
+        "exactUniqueVertices": 20969,
+        "unusedUniqueVertices": 0,
+        "triangles": 41920,
+        "edges": 62877,
+        "duplicateFaces": 1,
+        "collapsedFaces": 2,
+        "degenerateFaces": 2,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 4,
+        "nonManifoldVertices": 4,
+        "inconsistentWindingEdges": 1,
+        "eulerCharacteristic": 12,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 41224,
+            "vertices": 20613,
+            "bounds": {
+              "min": [
+                -79.7234,
+                -213.736,
+                809.4
+              ],
+              "max": [
+                -3.53594,
+                -141.495,
+                1205.15
+              ]
+            },
+            "areaMm2": 54123.301825446644,
+            "algebraicVolumeMm3": 231074.48358827218
+          },
+          {
+            "firstFace": 37299,
+            "triangles": 680,
+            "vertices": 342,
+            "bounds": {
+              "min": [
+                -14.0266,
+                -168.289,
+                838.576
+              ],
+              "max": [
+                -10.6891,
+                -155.773,
+                881.648
+              ]
+            },
+            "areaMm2": 218.32586839502028,
+            "algebraicVolumeMm3": -70.38910920736657
+          },
+          {
+            "firstFace": 41531,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -6.64754,
+                -204.045,
+                1175.99
+              ],
+              "max": [
+                -6.55246,
+                -203.953,
+                1176.4
+              ]
+            },
+            "areaMm2": 0.0549488353533945,
+            "algebraicVolumeMm3": 0.0005977362666666873
+          },
+          {
+            "firstFace": 41539,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -6.41719,
+                -202.4,
+                1178.59
+              ],
+              "max": [
+                -6.38254,
+                -202,
+                1178.62
+              ]
+            },
+            "areaMm2": 0.019700724478067422,
+            "algebraicVolumeMm3": 0.0000692999999999381
+          },
+          {
+            "firstFace": 41529,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -6.4,
+                -204.005,
+                1175.4
+              ],
+              "max": [
+                -6.39524,
+                -204,
+                1175.42
+              ]
+            },
+            "areaMm2": 0.00014010524615426254,
+            "algebraicVolumeMm3": 6.617444900424222e-24
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 41920
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13378",
+      "source": {
+        "file": "FMA13378",
+        "sha256": "b8029d562de3ef08af46414a004bd4d4bd569da72849bcb00c4f4e5b610c8b4f"
+      },
+      "sourceBytes": 2831699,
+      "topology": {
+        "sourceVertices": 23639,
+        "exactUniqueVertices": 20713,
+        "unusedUniqueVertices": 0,
+        "triangles": 41406,
+        "edges": 62109,
+        "duplicateFaces": 1,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 10,
+        "closedOrientedManifold": false,
+        "components": [
+          {
+            "firstFace": 16,
+            "triangles": 40608,
+            "vertices": 20306,
+            "bounds": {
+              "min": [
+                2.22656,
+                -213.752,
+                809.8
+              ],
+              "max": [
+                78.4172,
+                -141.489,
+                1205.14
+              ]
+            },
+            "areaMm2": 53902.269673625626,
+            "algebraicVolumeMm3": 231083.834275558
+          },
+          {
+            "firstFace": 3379,
+            "triangles": 782,
+            "vertices": 393,
+            "bounds": {
+              "min": [
+                9.37969,
+                -168.27,
+                838.552
+              ],
+              "max": [
+                12.7672,
+                -155.805,
+                881.633
+              ]
+            },
+            "areaMm2": 217.00777099610994,
+            "algebraicVolumeMm3": -69.28919048156678
+          },
+          {
+            "firstFace": 2,
+            "triangles": 8,
+            "vertices": 6,
+            "bounds": {
+              "min": [
+                -6.64754,
+                -204.045,
+                1175.99
+              ],
+              "max": [
+                -6.55246,
+                -203.953,
+                1176.4
+              ]
+            },
+            "areaMm2": 0.0549488353533945,
+            "algebraicVolumeMm3": 0.0005977362666666873
+          },
+          {
+            "firstFace": 10,
+            "triangles": 6,
+            "vertices": 5,
+            "bounds": {
+              "min": [
+                -6.41719,
+                -202.4,
+                1178.59
+              ],
+              "max": [
+                -6.38254,
+                -202,
+                1178.62
+              ]
+            },
+            "areaMm2": 0.019700724478067422,
+            "algebraicVolumeMm3": 0.0000692999999999381
+          },
+          {
+            "firstFace": 0,
+            "triangles": 2,
+            "vertices": 3,
+            "bounds": {
+              "min": [
+                -6.4,
+                -204.005,
+                1175.4
+              ],
+              "max": [
+                -6.39524,
+                -204,
+                1175.42
+              ]
+            },
+            "areaMm2": 0.00014010524615426254,
+            "algebraicVolumeMm3": 6.617444900424222e-24
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 41406
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA16586",
+      "source": {
+        "file": "FMA16586",
+        "sha256": "2fc0f001ad13acfb2e77979a3e7d02f2476fe54b64a4ea1c4caafd2632969a14"
+      },
+      "sourceBytes": 119454,
+      "topology": {
+        "sourceVertices": 1076,
+        "exactUniqueVertices": 971,
+        "unusedUniqueVertices": 0,
+        "triangles": 1942,
+        "edges": 2913,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1942,
+            "vertices": 971,
+            "bounds": {
+              "min": [
+                -131.217,
+                -152.14,
+                758.917
+              ],
+              "max": [
+                -3.47522,
+                -13.8512,
+                966.662
+              ]
+            },
+            "areaMm2": 53184.17244399683,
+            "algebraicVolumeMm3": 278951.09725547436
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 1942
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA16587",
+      "source": {
+        "file": "FMA16587",
+        "sha256": "959df200626165d47c38d3135c17c0b22267c3b708d1c0600619d1b251c1f958"
+      },
+      "sourceBytes": 118735,
+      "topology": {
+        "sourceVertices": 1106,
+        "exactUniqueVertices": 946,
+        "unusedUniqueVertices": 0,
+        "triangles": 1892,
+        "edges": 2838,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 1892,
+            "vertices": 946,
+            "bounds": {
+              "min": [
+                4.27888,
+                -152.09,
+                759.56
+              ],
+              "max": [
+                131.882,
+                -13.9987,
+                967.222
+              ]
+            },
+            "areaMm2": 53088.66207930037,
+            "algebraicVolumeMm3": 277543.2353064495
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 1892
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA16202",
+      "source": {
+        "file": "FMA16202",
+        "sha256": "0a715850623c9f7d17cafd004a4e84ac402e2aadb5f1605931e5932f6df1013a"
+      },
+      "sourceBytes": 579002,
+      "topology": {
+        "sourceVertices": 4796,
+        "exactUniqueVertices": 4427,
+        "unusedUniqueVertices": 0,
+        "triangles": 8882,
+        "edges": 13323,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": -14,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 8882,
+            "vertices": 4427,
+            "bounds": {
+              "min": [
+                -60.0541,
+                -94.5682,
+                790.804
+              ],
+              "max": [
+                62.0999,
+                -5.62635,
+                935.877
+              ]
+            },
+            "areaMm2": 35526.15353328015,
+            "algebraicVolumeMm3": 193889.05175211196
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 8882
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA7488",
+      "source": {
+        "file": "FMA7488",
+        "sha256": "9aa9cba903f1fbf5549e2aab44c444c81e9cced252a17acc81716593a62bed86"
+      },
+      "sourceBytes": 53834,
+      "topology": {
+        "sourceVertices": 482,
+        "exactUniqueVertices": 459,
+        "unusedUniqueVertices": 0,
+        "triangles": 914,
+        "edges": 1371,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 914,
+            "vertices": 459,
+            "bounds": {
+              "min": [
+                -11.1772,
+                -205.607,
+                1169
+              ],
+              "max": [
+                9.85863,
+                -190.738,
+                1190.96
+              ]
+            },
+            "areaMm2": 1125.8085639724043,
+            "algebraicVolumeMm3": 2500.3913326223765
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 914
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13072",
+      "source": {
+        "file": "FMA13072",
+        "sha256": "3fd3f1f1374d50a77440755ab47d6e6423de4109b02b857f1066f10e0cf208e2"
+      },
+      "sourceBytes": 185593,
+      "topology": {
+        "sourceVertices": 1664,
+        "exactUniqueVertices": 1433,
+        "unusedUniqueVertices": 0,
+        "triangles": 2866,
+        "edges": 4299,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2866,
+            "vertices": 1433,
+            "bounds": {
+              "min": [
+                -36.6277,
+                -109.766,
+                1026.95
+              ],
+              "max": [
+                32.6729,
+                -29.3475,
+                1084.47
+              ]
+            },
+            "areaMm2": 11142.476602571427,
+            "algebraicVolumeMm3": 42289.28590499739
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 2866
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13073",
+      "source": {
+        "file": "FMA13073",
+        "sha256": "23457a53d74d8202447551e145b63dd0624b3fa85a4bdca40ba14d2e1d85d5cf"
+      },
+      "sourceBytes": 162804,
+      "topology": {
+        "sourceVertices": 1549,
+        "exactUniqueVertices": 1194,
+        "unusedUniqueVertices": 0,
+        "triangles": 2388,
+        "edges": 3582,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2388,
+            "vertices": 1194,
+            "bounds": {
+              "min": [
+                -41.1813,
+                -114.8,
+                1003.39
+              ],
+              "max": [
+                37.48,
+                -34.0817,
+                1051.72
+              ]
+            },
+            "areaMm2": 11990.467038108818,
+            "algebraicVolumeMm3": 46282.17820432861
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 2388
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13074",
+      "source": {
+        "file": "FMA13074",
+        "sha256": "cf879fd25baf516f621ae1da1413fa73dd682d26e6f7fd106a806307fdcac2b1"
+      },
+      "sourceBytes": 217626,
+      "topology": {
+        "sourceVertices": 1947,
+        "exactUniqueVertices": 1652,
+        "unusedUniqueVertices": 0,
+        "triangles": 3304,
+        "edges": 4956,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3304,
+            "vertices": 1652,
+            "bounds": {
+              "min": [
+                -41.0023,
+                -116.543,
+                975.348
+              ],
+              "max": [
+                38.7308,
+                -33.9406,
+                1020.8
+              ]
+            },
+            "areaMm2": 12389.253484477349,
+            "algebraicVolumeMm3": 49406.27217373637
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 3304
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13075",
+      "source": {
+        "file": "FMA13075",
+        "sha256": "596b9d5d3fb1676e086f4262809f69c48230e94b4c40396e8441fe0e0e5d196e"
+      },
+      "sourceBytes": 224553,
+      "topology": {
+        "sourceVertices": 1980,
+        "exactUniqueVertices": 1728,
+        "unusedUniqueVertices": 0,
+        "triangles": 3456,
+        "edges": 5184,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3456,
+            "vertices": 1728,
+            "bounds": {
+              "min": [
+                -43.563,
+                -115.408,
+                948.991
+              ],
+              "max": [
+                42.1162,
+                -33.7043,
+                992.081
+              ]
+            },
+            "areaMm2": 12537.193312783103,
+            "algebraicVolumeMm3": 47961.85298175432
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 3456
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA13076",
+      "source": {
+        "file": "FMA13076",
+        "sha256": "347de6db15415924f7534ea48881474ad0b9d73e57060bb9859cce64c8679cad"
+      },
+      "sourceBytes": 248293,
+      "topology": {
+        "sourceVertices": 2141,
+        "exactUniqueVertices": 1936,
+        "unusedUniqueVertices": 0,
+        "triangles": 3872,
+        "edges": 5808,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 0,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 3872,
+            "vertices": 1936,
+            "bounds": {
+              "min": [
+                -51.8419,
+                -109.733,
+                914.064
+              ],
+              "max": [
+                48.9067,
+                -29.44,
+                963.16
+              ]
+            },
+            "areaMm2": 13895.747298092474,
+            "algebraicVolumeMm3": 55195.31716681848
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 3872
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8229",
+      "source": {
+        "file": "FMA8229",
+        "sha256": "d2b8faf9d4abdbdcfb87f401603cf2deaad57dca47c613eda1ca0696b65c1d13"
+      },
+      "sourceBytes": 618440,
+      "topology": {
+        "sourceVertices": 4962,
+        "exactUniqueVertices": 4835,
+        "unusedUniqueVertices": 0,
+        "triangles": 9666,
+        "edges": 14499,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 9666,
+            "vertices": 4835,
+            "bounds": {
+              "min": [
+                -137.756,
+                -180.301,
+                1121.2
+              ],
+              "max": [
+                -16.57,
+                -4.47851,
+                1260.94
+              ]
+            },
+            "areaMm2": 12348.43454314426,
+            "algebraicVolumeMm3": 31989.548098116364
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 9666
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8256",
+      "source": {
+        "file": "FMA8256",
+        "sha256": "95ab412e816af036c9a028de6c1a2e9968330bf2e4d9d656c3d8423a0f3a2357"
+      },
+      "sourceBytes": 622660,
+      "topology": {
+        "sourceVertices": 4986,
+        "exactUniqueVertices": 4938,
+        "unusedUniqueVertices": 0,
+        "triangles": 9872,
+        "edges": 14808,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 9872,
+            "vertices": 4938,
+            "bounds": {
+              "min": [
+                14.272,
+                -180.239,
+                1121.24
+              ],
+              "max": [
+                135.44,
+                -4.48826,
+                1260.93
+              ]
+            },
+            "areaMm2": 12339.171440342761,
+            "algebraicVolumeMm3": 31976.633514411602
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 9872
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8283",
+      "source": {
+        "file": "FMA8283",
+        "sha256": "ae9d037a487f398d01ff3b22f96162e829987ae7a917fdaef5851e10adc4d0b7"
+      },
+      "sourceBytes": 520538,
+      "topology": {
+        "sourceVertices": 4165,
+        "exactUniqueVertices": 4107,
+        "unusedUniqueVertices": 0,
+        "triangles": 8210,
+        "edges": 12315,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 8210,
+            "vertices": 4107,
+            "bounds": {
+              "min": [
+                -131.608,
+                -162.756,
+                1086.19
+              ],
+              "max": [
+                -17.4936,
+                -4.55481,
+                1232.88
+              ]
+            },
+            "areaMm2": 10362.043045763356,
+            "algebraicVolumeMm3": 24408.934005596795
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 8210
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8310",
+      "source": {
+        "file": "FMA8310",
+        "sha256": "47e67b08cfe9ea5a4bc057a51ff9805a3fb2d6ac0861e4cc7f390caa0dbf23ba"
+      },
+      "sourceBytes": 522246,
+      "topology": {
+        "sourceVertices": 4191,
+        "exactUniqueVertices": 4162,
+        "unusedUniqueVertices": 0,
+        "triangles": 8320,
+        "edges": 12480,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 8320,
+            "vertices": 4162,
+            "bounds": {
+              "min": [
+                15.1856,
+                -162.712,
+                1086.21
+              ],
+              "max": [
+                129.292,
+                -4.55793,
+                1232.86
+              ]
+            },
+            "areaMm2": 10354.447213113743,
+            "algebraicVolumeMm3": 24400.211051645376
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 8320
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8364",
+      "source": {
+        "file": "FMA8364",
+        "sha256": "0273c425168aece1bfc2fe936c092a70fd0227e8e542957481c9b0c4dd692848"
+      },
+      "sourceBytes": 484665,
+      "topology": {
+        "sourceVertices": 3872,
+        "exactUniqueVertices": 3842,
+        "unusedUniqueVertices": 0,
+        "triangles": 7680,
+        "edges": 11520,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 7680,
+            "vertices": 3842,
+            "bounds": {
+              "min": [
+                -129.764,
+                -135.686,
+                1055.69
+              ],
+              "max": [
+                -18.2296,
+                -7.51944,
+                1205.86
+              ]
+            },
+            "areaMm2": 9658.676504122193,
+            "algebraicVolumeMm3": 21854.352837850744
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 7680
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8391",
+      "source": {
+        "file": "FMA8391",
+        "sha256": "435b702f799ec6ad826990412105fe167b730651a993b0c04aaf092468ddd240"
+      },
+      "sourceBytes": 504938,
+      "topology": {
+        "sourceVertices": 4044,
+        "exactUniqueVertices": 4037,
+        "unusedUniqueVertices": 0,
+        "triangles": 8070,
+        "edges": 12105,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 8070,
+            "vertices": 4037,
+            "bounds": {
+              "min": [
+                15.9345,
+                -135.64,
+                1055.73
+              ],
+              "max": [
+                127.459,
+                -7.51696,
+                1205.84
+              ]
+            },
+            "areaMm2": 9651.648588316139,
+            "algebraicVolumeMm3": 21851.193815017403
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 8070
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8445",
+      "source": {
+        "file": "FMA8445",
+        "sha256": "fafbadd31519dc722c07846b20852ade278230bb1d2fe8e7dfb63df990ba007c"
+      },
+      "sourceBytes": 437538,
+      "topology": {
+        "sourceVertices": 3502,
+        "exactUniqueVertices": 3476,
+        "unusedUniqueVertices": 0,
+        "triangles": 6948,
+        "edges": 10422,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 6948,
+            "vertices": 3476,
+            "bounds": {
+              "min": [
+                -127.895,
+                -121.268,
+                1025.37
+              ],
+              "max": [
+                -18.5779,
+                -15.3733,
+                1177.2
+              ]
+            },
+            "areaMm2": 8454.560748922459,
+            "algebraicVolumeMm3": 17693.39931458683
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 6948
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8472",
+      "source": {
+        "file": "FMA8472",
+        "sha256": "3bf9fd4b86e276f8c13b7e57a599ef653fa07aa864211c226919c50683fbe3bc"
+      },
+      "sourceBytes": 443973,
+      "topology": {
+        "sourceVertices": 3574,
+        "exactUniqueVertices": 3560,
+        "unusedUniqueVertices": 0,
+        "triangles": 7116,
+        "edges": 10674,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 7116,
+            "vertices": 3560,
+            "bounds": {
+              "min": [
+                16.2656,
+                -121.241,
+                1025.43
+              ],
+              "max": [
+                125.582,
+                -15.3724,
+                1177.19
+              ]
+            },
+            "areaMm2": 8449.926264886584,
+            "algebraicVolumeMm3": 17694.6553347518
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 7116
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8531",
+      "source": {
+        "file": "FMA8531",
+        "sha256": "b61bc1bc2623b14cd3ab0a14cade7089fcdbd83b692476ea397737c5977073b0"
+      },
+      "sourceBytes": 311384,
+      "topology": {
+        "sourceVertices": 2514,
+        "exactUniqueVertices": 2514,
+        "unusedUniqueVertices": 0,
+        "triangles": 5024,
+        "edges": 7536,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 5024,
+            "vertices": 2514,
+            "bounds": {
+              "min": [
+                -116.526,
+                -100.695,
+                1012.31
+              ],
+              "max": [
+                -19.8823,
+                -22.1011,
+                1140.12
+              ]
+            },
+            "areaMm2": 6211.583486744351,
+            "algebraicVolumeMm3": 11952.80965074839
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 5024
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8532",
+      "source": {
+        "file": "FMA8532",
+        "sha256": "618da3bd847af0ead77803ff652fd29ec1c3782f842bfc68bdd0293ff77bfb8d"
+      },
+      "sourceBytes": 314842,
+      "topology": {
+        "sourceVertices": 2559,
+        "exactUniqueVertices": 2559,
+        "unusedUniqueVertices": 0,
+        "triangles": 5114,
+        "edges": 7671,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 5114,
+            "vertices": 2559,
+            "bounds": {
+              "min": [
+                17.576,
+                -100.684,
+                1012.31
+              ],
+              "max": [
+                114.192,
+                -22.1088,
+                1140.1
+              ]
+            },
+            "areaMm2": 6204.153158110805,
+            "algebraicVolumeMm3": 11941.479375085099
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 5114
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8533",
+      "source": {
+        "file": "FMA8533",
+        "sha256": "546e9b51a4d5eeb402121b9673999296e2f6d7d3402b2d8fa745ad7d8e9b619a"
+      },
+      "sourceBytes": 178894,
+      "topology": {
+        "sourceVertices": 1489,
+        "exactUniqueVertices": 1487,
+        "unusedUniqueVertices": 0,
+        "triangles": 2970,
+        "edges": 4455,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 2970,
+            "vertices": 1487,
+            "bounds": {
+              "min": [
+                -83.3354,
+                -74.8877,
+                1009.84
+              ],
+              "max": [
+                -19.4352,
+                -31.9154,
+                1104.6
+              ]
+            },
+            "areaMm2": 3765.5074607659703,
+            "algebraicVolumeMm3": 7163.054812069325
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 2970
+    },
+    {
+      "id": "bp3d3-abdominal-wall-FMA8534",
+      "source": {
+        "file": "FMA8534",
+        "sha256": "024682d9a5cbb576338934dc0db311779defe0e96e1952d863126eb05928b7f6"
+      },
+      "sourceBytes": 39091,
+      "topology": {
+        "sourceVertices": 354,
+        "exactUniqueVertices": 339,
+        "unusedUniqueVertices": 0,
+        "triangles": 674,
+        "edges": 1011,
+        "duplicateFaces": 0,
+        "collapsedFaces": 0,
+        "degenerateFaces": 0,
+        "boundaryEdges": 0,
+        "nonManifoldEdges": 0,
+        "nonManifoldVertices": 0,
+        "inconsistentWindingEdges": 0,
+        "eulerCharacteristic": 2,
+        "closedOrientedManifold": true,
+        "components": [
+          {
+            "firstFace": 0,
+            "triangles": 674,
+            "vertices": 339,
+            "bounds": {
+              "min": [
+                18.1332,
+                -74.7745,
+                1009.88
+              ],
+              "max": [
+                82.0063,
+                -31.9804,
+                1104.49
+              ]
+            },
+            "areaMm2": 3724.6351039598344,
+            "algebraicVolumeMm3": 6859.647150375789
+          }
+        ],
+        "limitation": "Exact-coordinate combinatorial diagnostics only. No tolerance welding, repair, self-intersection proof, anatomical validity or clinical volume. Component algebraic volume is not enclosed volume for open, intersecting or inconsistently oriented surfaces."
+      },
+      "triangles": 674
+    }
+  ]
+}

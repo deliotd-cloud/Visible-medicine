@@ -1,0 +1,18 @@
+.nested-practice-controls > h3 {
+  margin: 0;
+}
+
+.nested-practice-choices {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.nested-practice-choices button {
+  justify-content: flex-start;
+  white-space: normal;
+}
+
+.nested-practice-results ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}

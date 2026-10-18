@@ -1,0 +1,1356 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/deliotd-cloud/Visible-medicine.git",
+  "models": [
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "bytes": 2623088,
+      "gitBlob": "bbf1a3073b2b8f6855fd5bbe1ac308ad7e84e807",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "sha256": "0317376bdb64b43c8eba26598419cb980f3a7090b68656375136df617d817b8c",
+      "bytes": 4031580,
+      "gitBlob": "4920e88587d15279da5d45218d4d88137590f026",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "sha256": "05090ad649d93cea83e30d8156afdd18c0e21dd29c1dca7f96749d6ace611841",
+      "bytes": 804760,
+      "gitBlob": "87beff99f0364158ff3106582f15dfa526baa053",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/spine-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+      "sha256": "08b23d00975e6cd10eeca344d556fe75ec8cd6f45fc7087ac7da28754754108b",
+      "bytes": 94876,
+      "gitBlob": "5014cbfe47824c53d9562f006613d80a2766b463",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-connective-ocular-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "sha256": "0c82e1cb2960c6f2474f2b4759974adab5871d8074a2f4e3712e1c3a37a48ca7",
+      "bytes": 1131748,
+      "gitBlob": "c6df18ee5df45f93c075e2eee6187014cafba408",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "sha256": "0ff2ab3d8b16b2c3af0b3320bc85b72512c54af5bfedc3f2159dd2316fa5de60",
+      "bytes": 149456,
+      "gitBlob": "4edf65289f95f895992126c1f00e0f117733c964",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-skeleton-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/hippocampi/hippocampi.glb",
+      "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+      "bytes": 38548,
+      "gitBlob": "5689a68358f74bd79be06c7bab06f58ed7acbf40",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/hippocampi/hippocampi.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/hippocampi/hippocampi.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "sha256": "12ff12c3ea0e745193b90842a3c62fd980dabd24e737ece8dee399925ab2e9a0",
+      "bytes": 314224,
+      "gitBlob": "aa5ad9bfb5043b4814a7376d55728431c580b0eb",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "bytes": 612448,
+      "gitBlob": "a4670841c19245c08d642683c3b382d76815c58b",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/hepatic-veins/hepatic-veins.glb",
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "bytes": 256984,
+      "gitBlob": "4ac02415f894c8a6d661b23c33e94eb26b153457",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/hepatic-veins/hepatic-veins.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/hepatic-veins/hepatic-veins.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "bytes": 175092,
+      "gitBlob": "cf7b7c6efcc00faa2c55aed295b5afd62efb6ae7",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "sha256": "233de27cdb6d272b62e99917813aba52abfbab4978374b6fb2b322573abbd672",
+      "bytes": 6484,
+      "gitBlob": "76a71a9f700993fa713e8717d60931991014c223",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-organs-junction.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "bytes": 575076,
+      "gitBlob": "5307a1bd0612e97b8f89c28cd5f6aabcc206f9cc",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb",
+      "sha256": "265bddde64b37086b7f953515b1fd0a24543b0c9b210adc6e3837b22dc9bae69",
+      "bytes": 191180,
+      "gitBlob": "9222735885ba2fabbbc120acad0c3f8d1a20c7bf",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/circumflex-femoral/circumflex-femoral.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "bytes": 115852,
+      "gitBlob": "28c8a0e93a68acd6561f30429cd762ba58f1d191",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "sha256": "2874e8680da861973d2eac549f62cf4d0b5f4c26472a532b7661c74b2ce96900",
+      "bytes": 289716,
+      "gitBlob": "6747b928549454eacbf9e4a01a2cda42b2740c30",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-connective-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "sha256": "28a4c4665dacfa483546cc8166dd31698c7a0fdb1e678cf9f22e5a2c63f88abc",
+      "bytes": 16892,
+      "gitBlob": "9369076f0bb737829089f76063c9a3c01e8c060a",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/pelvis-organs-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "sha256": "2b80e2e9505593d10f807475ff3e3226ee917b7f0cb8abf5e59f9421d1d50748",
+      "bytes": 15335852,
+      "gitBlob": "462bcbcfe2427affdbc9ef25748258f7e2f8e4b8",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d-v3/abdominal-wall/abdominal-wall.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+      "bytes": 57312,
+      "gitBlob": "b0604db1842a34740840acbab64447c8028b6126",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+      "sha256": "3375bde94900a77d8ab7c6c37ec934b30e2a745495006630b1645053522c040a",
+      "bytes": 745932,
+      "gitBlob": "585cc08f4c30816a2e9a2b0c3980c8b23a6ce99e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-organs-head-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "sha256": "3a85853e4f552b5d2f4a9a63bc5efec306d13205a08633125cc0ff78939c2a63",
+      "bytes": 178072,
+      "gitBlob": "0082b55d494a33d54195ba5f0c1ce99ace281a85",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/foot-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "sha256": "3b2f158e1c345f4abc5c66cfcf7fb916bd4117de80b767919a1c594baf028391",
+      "bytes": 534016,
+      "gitBlob": "06a792644b69a12c527e23ef4618a8906af88639",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-vessels-hand-vascular.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "sha256": "3bbf7759e54e34272175de042ef4e26c24412b9f073a2f8eea3ce4fe79ebb682",
+      "bytes": 14990372,
+      "gitBlob": "deb17be4a29677800c5ab725f49a187eaea2cc26",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/models/um-limb/thigh.glb",
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+      "bytes": 19648284,
+      "gitBlob": "f2d57e14d5c163402f834b050937dd7d52e0f6f8",
+      "alreadyBackedAtlasPath": "public/models/um-limb/thigh.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/thigh.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/um-limb/thigh.glb",
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+      "bytes": 19648284,
+      "gitBlob": "f2d57e14d5c163402f834b050937dd7d52e0f6f8",
+      "alreadyBackedAtlasPath": "public/models/um-limb/thigh.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/thigh.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "sha256": "3edf719c336df784236543a43f75d98442f8b680d32f9ed00365822c7d783564",
+      "bytes": 60244,
+      "gitBlob": "1eddebf541f0b28a9543e75b30fb4c6a589aa914",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/cranial-arteries/cranial-arteries.glb",
+      "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "bytes": 212796,
+      "gitBlob": "0c22e0fdd1fdcdf4ade8fce9e18d57b4bf89ea93",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/cranial-arteries/cranial-arteries.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/cranial-arteries/cranial-arteries.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-muscles-dissection.glb",
+      "sha256": "3f6f533850ecd3017a742f140e7779a901dda238eaaac42b6bf6eb9b3d2347b1",
+      "bytes": 252980,
+      "gitBlob": "8ae85d678456ea78494fd82e8a39453ad28b7e84",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/leg-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/leg-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "sha256": "3f7cae06bed1f4b93bb1ec2715ac4d739e5e38c7f0c495ea22447d57065f29ff",
+      "bytes": 56028,
+      "gitBlob": "671b4361406622868c2304b33b2c34f360807e91",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "sha256": "3fd81ec284853b9e7eae84b3a4282ba0e5713160f07b1b5d6d8a70f8bb7d502e",
+      "bytes": 577748,
+      "gitBlob": "e7a0bc8e1a4877ead7b7b19a862108168f1cceab",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-vessels-hand-venous.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/collicular-brachia/collicular-brachia.glb",
+      "sha256": "40dd8f7f7b9a6bc79be1fdc6282ed50965c7f07d853a4db981dd7203477185c8",
+      "bytes": 13044,
+      "gitBlob": "07dc6be3640b11ad9803880877adec87e9f04762",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/collicular-brachia/collicular-brachia.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/collicular-brachia/collicular-brachia.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/renal/renal-vascular.glb",
+      "sha256": "410fb0c4179785c91d018e549cd0ffbdd48c8e9919620dc0f32cdac3559c6a3e",
+      "bytes": 266784,
+      "gitBlob": "cbca161ac3a41ebc1676c9f342ad011c46c56281",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/renal/renal-vascular.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/renal/renal-vascular.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-muscles.glb",
+      "sha256": "44557187f3ffba580548a455d95340b66b57bebbaad286e8a1484dcceffbd42e",
+      "bytes": 444740,
+      "gitBlob": "b2914ebb2ff681684122eead6c07a466670d502c",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/foot-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/foot-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "sha256": "45d592f6eaef66743c7fe88ec944d68a6e6ddf2496d59331e353b15f99b91845",
+      "bytes": 727116,
+      "gitBlob": "fe85d9dfc71a79f21be9745c4ae19f72a59e59b2",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-connective-mesenteric.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+      "sha256": "4aba05d53fa7bf578be5ef6f945c4a498a007e62529dd0e7c5db32f57d0c1461",
+      "bytes": 100964,
+      "gitBlob": "b3adb93e4084c4802ddf8f946a89e9d942cf7380",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/eye-layers/eye-layers.glb",
+      "sha256": "4bf32947ee7b783000a9559cad1c1cf7ecb894e367c6b6bb7780cfcf98a6be78",
+      "bytes": 3578388,
+      "gitBlob": "892398f00cf2039aca471d190ea0acc3091a9355",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/eye-layers/eye-layers.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/eye-layers/eye-layers.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/hepatic/hepatic-branches.glb",
+      "sha256": "4cf393e8b9bce6637f139b6e85d47be0098aac52103bbacfba3cc399747d9857",
+      "bytes": 1065752,
+      "gitBlob": "a07a09dc4ce9cbbf9e75d66d80d0393e4eb41b1b",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/hepatic/hepatic-branches.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/hepatic/hepatic-branches.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "sha256": "4d05d792dd062b49d22f8740e4f0a0c4785249cbcac61a47ac7a48d06b5a6ab1",
+      "bytes": 98216,
+      "gitBlob": "6d9633f0d11a6fe51a043202686b3cc925b13b73",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-organs-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/coronary-venous/coronary-venous.glb",
+      "sha256": "4dbd938c5cde865a0f7f66957ec3304965530a5b7744d93a85e95531ce827b12",
+      "bytes": 40996,
+      "gitBlob": "28a4f8ec2b1f31fb18f4973d8716b789cb043f54",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/coronary-venous/coronary-venous.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/coronary-venous/coronary-venous.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "bytes": 10012,
+      "gitBlob": "b52056fa96df168bcd3fc3dba6ccf683ad547918",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/celiac-display/celiac-display.glb",
+      "sha256": "4f431242839c255ae2320b4004c537a4c2defb7d0cd7b51fdea60f7ba3c09e8f",
+      "bytes": 5604,
+      "gitBlob": "4e0ad257f72f5a0b67574239dbcb5997efc8e710",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/celiac-display/celiac-display.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/celiac-display/celiac-display.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "bytes": 1415760,
+      "gitBlob": "73ce42cfd5b4dba0cc8809e242b32bbc0ef1eee0",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/deferent-ducts/deferent-ducts.glb",
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "gitBlob": "78dbcd20100990a6c23327b46786316e65520c82",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/deferent-ducts/deferent-ducts.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/deferent-ducts/deferent-ducts.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/models/bodyparts3d/shoulder-right.glb",
+      "sha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263",
+      "bytes": 771836,
+      "gitBlob": "9e95705182549ef2981d7fdf8447ede6f3d3a9fb",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/shoulder-right.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/shoulder-right.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/portal-veins/portal-veins.glb",
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "gitBlob": "2d1a5865d424df8fc0abe8cd7078ff6250576154",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/portal-veins/portal-veins.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/portal-veins/portal-veins.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "sha256": "58e1008b8064e8a61ce659e0246615960826772abe7070f66496eadcd86f4746",
+      "bytes": 86960,
+      "gitBlob": "97b9ec3b3e3ed871010e2ecf06efdd057f40a720",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/pelvis-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "bytes": 346900,
+      "gitBlob": "1cd2f9c04668bbf25e4c10a0485bc950fa3fda8a",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "sha256": "5e224f77acade0a27068f45faf3b24839ec13a4d3cb8de283952263ecc1e3124",
+      "bytes": 6383736,
+      "gitBlob": "bdd44e6a3dcc01020567eab6706a751f2bd43398",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-organs.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "sha256": "5f61ad363b757aa0cfcf0d7be4bcedcf63cbfec9ff5728cace9d62aa0447eac1",
+      "bytes": 416816,
+      "gitBlob": "76d6472370844a83f79be137e43a08ced88316b5",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "bytes": 1866940,
+      "gitBlob": "482749acfd0f40b19aac0cfcbc3754de364d8a8b",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-organs.glb",
+      "sha256": "612b6d095c42e78b0aca151bb295b0d5fd48488c5aace250ca707eff96788316",
+      "bytes": 3711452,
+      "gitBlob": "48a05eeda3f3ba6a627475812fb8970c7d5411db",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-organs.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-organs.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/pulmonary/pulmonary-right.glb",
+      "sha256": "62bb25db79270dbd6fe96598e9438d7bfca3592c5f7559cd1ea320e18bb16eca",
+      "bytes": 1330588,
+      "gitBlob": "07765226aa66bb1d5c93e4bcbd3b2c35bd6ef710",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/pulmonary/pulmonary-right.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/pulmonary/pulmonary-right.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "sha256": "648366ffe116673e7428067e8d7f14739161a220fb94e24d832ba9b9312a94b9",
+      "bytes": 107772,
+      "gitBlob": "a307a74c7dfb442189673bdf3fb124ae62b9fdf6",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/foot-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/cardiac/cardiac.glb",
+      "sha256": "64d93898db3b6cb4dbea452508799c98cbe65b361eba2f17658ecae532a01f67",
+      "bytes": 587588,
+      "gitBlob": "b050c5d5329fb27f307d48285dadf1e1936994fa",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/cardiac/cardiac.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/cardiac/cardiac.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "sha256": "650758b91e7a4dd4b0a743d067fe79cbf527a51e95669e9e61aa2bc3c45c57b4",
+      "bytes": 261864,
+      "gitBlob": "ac21ff10be4041813e264721739fb0d8291dd223",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "sha256": "68885665a6924684c3c7b1f078eecb702efd444d78eea1a5941bed6ad0a089dc",
+      "bytes": 146948,
+      "gitBlob": "4d81bebc4384cff25f7cbf2966a5c1cf04125c68",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-muscles-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-muscles.glb",
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "bytes": 5127960,
+      "gitBlob": "7862b68cc7b25e59eb9cb2c685c6537c270fac21",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/spine-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/spine-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
+      "sha256": "6e7ccebe78f6a8c89b556e5e1256d755801725590c4625bebd3fecd6d93f04b3",
+      "bytes": 31116,
+      "gitBlob": "bf126406b899804833655a326fddbb26053a0763",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/subscapular-arteries/subscapular-arteries.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/pancreas/pancreas.glb",
+      "sha256": "716e391810aa6dcc7a415b9d97c20b9cc70cc7e0f4561495a9a700ea73a774bf",
+      "bytes": 229880,
+      "gitBlob": "129b835c8bbf33b80ccbec5d02f04abfe95b2a4d",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/pancreas/pancreas.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/pancreas/pancreas.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/models/um-limb/hip-thigh.glb",
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+      "bytes": 11143104,
+      "gitBlob": "c7feaa40b47d62445905debd863a1f8691dd9eaf",
+      "alreadyBackedAtlasPath": "public/models/um-limb/hip-thigh.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/hip-thigh.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/um-limb/hip-thigh.glb",
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+      "bytes": 11143104,
+      "gitBlob": "c7feaa40b47d62445905debd863a1f8691dd9eaf",
+      "alreadyBackedAtlasPath": "public/models/um-limb/hip-thigh.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/hip-thigh.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "sha256": "754fba175b857079656672c0ab11dd37ad0235cd87c3ccfffa08a2df1c54e129",
+      "bytes": 100344,
+      "gitBlob": "67280e1bbf4a8a9d65e47001ee17c90e44a4c8f6",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-muscles-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/models/um-limb/leg.glb",
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+      "bytes": 9251564,
+      "gitBlob": "9f2d7a8b41d4731c106abf0bed65c7ec3a4feff7",
+      "alreadyBackedAtlasPath": "public/models/um-limb/leg.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/leg.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/um-limb/leg.glb",
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+      "bytes": 9251564,
+      "gitBlob": "9f2d7a8b41d4731c106abf0bed65c7ec3a4feff7",
+      "alreadyBackedAtlasPath": "public/models/um-limb/leg.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/leg.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/cerebral/cerebral.glb",
+      "sha256": "7a62de7b68d7fe823b299ad5dfc9eb628db7a105d120f571789eacf7b3314410",
+      "bytes": 1856608,
+      "gitBlob": "94d51dab8ac9c47c41104aa9b754a5e72468d0ed",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/cerebral/cerebral.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/cerebral/cerebral.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/cricothyroid/cricothyroid.glb",
+      "sha256": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+      "bytes": 323604,
+      "gitBlob": "a7dca2c5e2700c8d200822840b335c407dd84797",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/cricothyroid/cricothyroid.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/cricothyroid/cricothyroid.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "bytes": 57728,
+      "gitBlob": "a9aaa862e1f6f88c14f12674c0b9400695d59061",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+      "sha256": "7f6c0355e8db6b561ea3b8d7bf10584422dccf873c842cb010f0987056f1a2f5",
+      "bytes": 45764,
+      "gitBlob": "1fcbee783e9867e4af0d0662b8c8019e2c9acbee",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+      "sha256": "7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915",
+      "bytes": 3587376,
+      "gitBlob": "88229ff2119d4e3b670027808972c242e7eb6230",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-organs-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "bytes": 608992,
+      "gitBlob": "60c9eab1cc991f973d2ff30622e6aed91fa9db68",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb",
+      "sha256": "8049ac70b0130cfe597cde159d1716f79f1b686583ea71dc91a5955f6c95925c",
+      "bytes": 526756,
+      "gitBlob": "99c42ff61cdf3be0768ae37b370b54a0aea13188",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/inferior-epigastric-vessels/inferior-epigastric-vessels.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "sha256": "8071f97ac5b843ab55e8bf019918947ab9c363b1e1901faebefa619e5345fe6f",
+      "bytes": 483532,
+      "gitBlob": "c0c97db87b29e9fd4b3e4e89eb8d923e4b2ebee2",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-vessels-inventory.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "sha256": "80a96ba7c54a11468857a98acda39b39aab8620d4baebe4184a698ecf4c28f1d",
+      "bytes": 71364,
+      "gitBlob": "23c5efa358a52bbb2fadbfdbe89e6bfc60ac925b",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "sha256": "81851762c0aca58931fa8b0cd1c31853558b70578a518896cb97fb8eeae357a0",
+      "bytes": 65364,
+      "gitBlob": "edc60feba7904b8d4f35684d22fb495cd5efe43e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "bytes": 65180,
+      "gitBlob": "874e4bb24c9bff7e1a57497b1a4feda3a07dfb12",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "bytes": 118776,
+      "gitBlob": "1103ed68037643c040771cc65711f2d21d6dd112",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "sha256": "896e726212e5823542796bf7b12e3b6588a30ff519de4425959d8991c890228d",
+      "bytes": 37124,
+      "gitBlob": "99d5aa623470ec9868616d00bd0e1733fd3a6a23",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-connective-axial-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "bytes": 2083932,
+      "gitBlob": "7c4d42a1d4ed58d2af1d4e873777b008738eaca9",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb",
+      "sha256": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "bytes": 227840,
+      "gitBlob": "52284655e67ea4baf90c572ead130b5897dfe632",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/cubital-veins/cubital-veins.glb",
+      "sha256": "8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "bytes": 287992,
+      "gitBlob": "db0ae1816292254ee183d17019d15eb48873a88e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/cubital-veins/cubital-veins.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/cubital-veins/cubital-veins.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "sha256": "90baaeb1c521a6b2546e99576bce4b231c6e068b4fa3d48dbd4cb7eb355f93c3",
+      "bytes": 49544,
+      "gitBlob": "a57d06cbbd7c60f9af5c07b044151b2dd2099510",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/pelvis-organs.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb",
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "bytes": 65264,
+      "gitBlob": "6c0cbb8f81aaf9220ba1bd9857697752bd8b8269",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/short-ciliary/short-ciliary.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/short-ciliary/short-ciliary.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb",
+      "sha256": "9b17997e1211d794777fb1b6fbb6e84252445ae15f1b2cc811c80efad8a8e514",
+      "bytes": 150304,
+      "gitBlob": "cf59d59c47090845e633c429bc949dc9e23d84cf",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/limbic-landmarks/limbic-landmarks.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "sha256": "9c45f3aef04a0507414a6280b4866d31eda2a9df50ef61acc3071d5d909d12cd",
+      "bytes": 3099336,
+      "gitBlob": "c5160b28edbe5b1917ba3d74d40de94cd116785c",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "bytes": 192916,
+      "gitBlob": "f1fd8742458b99f1a4665fc746c6252e7a91fc9b",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "sha256": "9ed6f0864a2b37edc4c36ffbb84fdab9cacf34c6069d93455f1ffcb6eee711ab",
+      "bytes": 74092,
+      "gitBlob": "037572c4bcae1ba0d2607768662e0a0f28a0791e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-organs-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/femoral-components/femoral-components.glb",
+      "sha256": "a35dfffc15ed011570781c6c194ecbfeda08bc70926a39b8cbf0cffa8b88dca0",
+      "bytes": 283964,
+      "gitBlob": "1ca080e4efedff8343beff84d36aedd99e24b8d4",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/femoral-components/femoral-components.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/femoral-components/femoral-components.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb",
+      "sha256": "a4788313cc86677900a528208e8ac7045f07bee300ea17073386bf0c12c83de4",
+      "bytes": 178112,
+      "gitBlob": "911e54cb35c0b10b3a65fb7735fb8b35ff54229c",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-connective-laryngeal-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "sha256": "a4df87c97da679dd55fa2640f502c6d9a75ad83afc6c8beb9de334f0aa0b0b17",
+      "bytes": 620568,
+      "gitBlob": "8b64a73e3afbae05227c6da69c5d7cd0fd93a50a",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thigh-connective-axial-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/genicular-arteries/genicular-arteries.glb",
+      "sha256": "a62ea69e56014790059ecd85cf9281bebb93280220b5a5677954c85b01ef5e9a",
+      "bytes": 403484,
+      "gitBlob": "f80a5514e137c01edc90b5e0ebc5fd538604a5ed",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/genicular-arteries/genicular-arteries.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/genicular-arteries/genicular-arteries.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "sha256": "a99abc2a2bfe0845e80b90d18f6473e2614695c8f7acb7a26a9febb4d46a509b",
+      "bytes": 1854940,
+      "gitBlob": "b260f89d3a03d145c3509511f7c71d4dc573d2c1",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "sha256": "aae6dc0589fa3dc9ce5ea51ff28520a077290adb5b92fa4570c3cf20b2090e02",
+      "bytes": 934264,
+      "gitBlob": "24fd264e449543b260e895d2ae1163486209c790",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/spine-connective-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb",
+      "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "bytes": 20064,
+      "gitBlob": "89d59dc203e0012662dd11ade34b472a1de1414a",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "bytes": 8566352,
+      "gitBlob": "859acc7a377ad5f08fa0c217188c0a85fc4d8fd2",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "bytes": 66352,
+      "gitBlob": "2bde4db61bab374864d11ce147dab83e7264e82c",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb",
+      "sha256": "b10cd33cb0a8be2602c7d41b8ec88d4a50cd678df936b2a78dfedb6191910096",
+      "bytes": 1295728,
+      "gitBlob": "878f7725024ea33e78c789787971172c33272265",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/longus-colli/longus-colli.glb",
+      "sha256": "b43cedda733267f51027a892b1ac08a35874853ce65802deca5304e039f6d08f",
+      "bytes": 133088,
+      "gitBlob": "602e0ce208b273bbd82ae8f322946d8dbe3a844c",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/longus-colli/longus-colli.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/longus-colli/longus-colli.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-muscles.glb",
+      "sha256": "b67c1e601bb0926ab1a488873ea35b213b4757894ed86918f1eb1b12dc69fbd1",
+      "bytes": 1802128,
+      "gitBlob": "c5831d5fd330c6fae25ced1e3370eb534d179880",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thigh-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thigh-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "sha256": "b79225df1153cff7b18c0da4db7cd3257db94f16222376c4d6623a5e542bddc3",
+      "bytes": 157388,
+      "gitBlob": "8768dc4b274a9121e45fe62c4fc0f2b26e4b076d",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-organs-inventory.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/tentorium/tentorium.glb",
+      "sha256": "b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "bytes": 396152,
+      "gitBlob": "530fa7b060ba40e7c3075fcafaa1f86f3d12e481",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/tentorium/tentorium.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/tentorium/tentorium.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "bytes": 1286192,
+      "gitBlob": "fd49492a9c28a40db22778f8f401b29326ecb7e8",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/models/hra-renal/kidneys.glb",
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+      "bytes": 3557552,
+      "gitBlob": "c5f5b5fc7793a955f69ba2304393b43b0a254d1e",
+      "alreadyBackedAtlasPath": "public/models/hra-renal/kidneys.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/hra-renal/kidneys.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/hra-renal/kidneys.glb",
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc",
+      "bytes": 3557552,
+      "gitBlob": "c5f5b5fc7793a955f69ba2304393b43b0a254d1e",
+      "alreadyBackedAtlasPath": "public/models/hra-renal/kidneys.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/hra-renal/kidneys.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "sha256": "bd86da53fb00401a01db7e321ca14b0bfec784b53a496a22dc5e6338db3d0044",
+      "bytes": 91700,
+      "gitBlob": "1215e827e635329a66887cf14a2d842079018f4e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-vessels-thoracic-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/hepatic/hepatic-tissue-context.glb",
+      "sha256": "bdec533f350ee74b15e14f073f600599841b060a8275d3c60795646c8bd7523c",
+      "bytes": 2302328,
+      "gitBlob": "12aba266dae6b002623a64c087f7c403a3275615",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/hepatic/hepatic-tissue-context.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/hepatic/hepatic-tissue-context.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "sha256": "be90ec41dc6046b820b337d986b6a67792a33ba33216db8aecb068fed4b85173",
+      "bytes": 133144,
+      "gitBlob": "830a96843b0bf0867a53690eb162abd4da5a1742",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-vessels-visceral-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "sha256": "beb3ff34d8e0d64041f6639fea2a4aefff6e11f04f5ed0a9f9d62cec85257a42",
+      "bytes": 40896,
+      "gitBlob": "a522a6d09ea3f183212d301641323c6a0901176e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-organs-inventory.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "bytes": 2355384,
+      "gitBlob": "047881a080cbd2294b0a2e6f3bad7d7eaf172aaf",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+      "bytes": 692376,
+      "gitBlob": "a5b4ed89ecde6961cc258e43ca795c6061fcb6a8",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-muscles.glb",
+      "sha256": "c535a021142b325daebfd0a8bca2b0406f05fae820870d524dc0a6993d3eb72d",
+      "bytes": 1304804,
+      "gitBlob": "fe8380c5b0168f995c8a00d61cc38a2628ed565f",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/leg-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/leg-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/visual-pathway/visual-pathway.glb",
+      "sha256": "c9698e52e4678c06a5ed5df8212e3ecb1ce89d9a25d4e1859f0ec5be7d4864bc",
+      "bytes": 120068,
+      "gitBlob": "07ae433035f7ec5ae4f71601a9f8071b3a9ef4e5",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/visual-pathway/visual-pathway.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/visual-pathway/visual-pathway.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/models/um-knee/knee.glb",
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+      "bytes": 5298360,
+      "gitBlob": "ee03a5e578528680395c33f6723ff5af1baaa972",
+      "alreadyBackedAtlasPath": "public/models/um-knee/knee.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-knee/knee.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/um-knee/knee.glb",
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b",
+      "bytes": 5298360,
+      "gitBlob": "ee03a5e578528680395c33f6723ff5af1baaa972",
+      "alreadyBackedAtlasPath": "public/models/um-knee/knee.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-knee/knee.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/hand-muscles.glb",
+      "sha256": "d0fad445fa6a804c237706038b126e6cb9e3829ec171c9929ab435d4ee74870e",
+      "bytes": 120784,
+      "gitBlob": "4dd16382e3577a69d7040a522c96c0d5eb75837e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/hand-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/hand-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "bytes": 616356,
+      "gitBlob": "dab5f3c68cd0fd1b628da3b145fade25f4d08033",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "bytes": 226020,
+      "gitBlob": "dda0df2560a2056f9fdeef37daf394d9b59330b2",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "bytes": 73348,
+      "gitBlob": "364395881e899714f5d9a789a9b2c849a2593f24",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/pulmonary/pulmonary-left.glb",
+      "sha256": "d4670d3c15580e2a1ef53debab32f08c8199fe6ddaf90af3f3aedb197d93e68d",
+      "bytes": 754268,
+      "gitBlob": "e7787c3cd0bd9c06cfbc2f503d596532e76df3c5",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/pulmonary/pulmonary-left.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/pulmonary/pulmonary-left.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "sha256": "d4797b74c353d5364113703c07422d57e032325846975f7c752fe4a3ae36a424",
+      "bytes": 102396,
+      "gitBlob": "0530a921df50f6e0c59346bec50b46b9deaa3dcc",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/pelvic-veins/pelvic-veins.glb",
+      "sha256": "d503c707236e8b344ee0c582e8ef935cdb11a5dd6bdbcec2b9f758df4b6f60fa",
+      "bytes": 1183456,
+      "gitBlob": "c320b50fddef49d8b75568c549827ae99b00f876",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/pelvic-veins/pelvic-veins.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/pelvic-veins/pelvic-veins.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "sha256": "d62d13a0a9a999495f771ecaee2e9cafe27c8d4fbdac4019fa699a711d6dc355",
+      "bytes": 38832,
+      "gitBlob": "d5d020da1e69ef2b2a7ed231f5c282f426992d04",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thorax-organs-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+      "sha256": "d7e3b995e0c18e3ebe7e7b97a11fbcd1e228218e0010462614e4938acf7f87ee",
+      "bytes": 381316,
+      "gitBlob": "fd19cc6552817e12944df6a873379cd6dc984594",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/spine-muscles-axial-detail.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/models/um-limb/foot.glb",
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+      "bytes": 2676564,
+      "gitBlob": "1b61e8f7edfb1263c7f80b509a57e9e767274932",
+      "alreadyBackedAtlasPath": "public/models/um-limb/foot.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/foot.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/um-limb/foot.glb",
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+      "bytes": 2676564,
+      "gitBlob": "1b61e8f7edfb1263c7f80b509a57e9e767274932",
+      "alreadyBackedAtlasPath": "public/models/um-limb/foot.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/um-limb/foot.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "bytes": 122592,
+      "gitBlob": "360bfa712f80e75d85a5c0b0cf008b9e800d8fd2",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "bytes": 2900368,
+      "gitBlob": "2882ffdf7a5ab05ae151a6f77295b9693b3f25ce",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "bytes": 477592,
+      "gitBlob": "b16aba2ec6c4f6bfb1114a87e544e438e80ec300",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/brachial-veins/brachial-veins.glb",
+      "sha256": "e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "bytes": 100360,
+      "gitBlob": "215655c5b308145d99cb4526f933c4f587bb3573",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/brachial-veins/brachial-veins.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/brachial-veins/brachial-veins.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/spine-nerves.glb",
+      "sha256": "e88d03a126729c550c2aa9524eb3c466dc222cf874a327ec2d97432e97c8814d",
+      "bytes": 14420,
+      "gitBlob": "f6aca14b4c0625c1b4d4e4d51840c86300a551b2",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/spine-nerves.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/spine-nerves.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/pancreatic/pancreatic.glb",
+      "sha256": "e96b496cb36205d2338204d6d0c6f94cb6e3722f7ff9a7a4e176d435d6de0b1c",
+      "bytes": 232172,
+      "gitBlob": "31aaa9fa94c648889e7cbe55b9cad56772938b75",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/pancreatic/pancreatic.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/pancreatic/pancreatic.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/ventricles/ventricles.glb",
+      "sha256": "e99326a0fd0b0bdc0a64d2a1adbb7a63c758af6f765199b8febe851e62b9eab1",
+      "bytes": 846988,
+      "gitBlob": "1174b859d7f435ba18318ea9185e7ced16752432",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/ventricles/ventricles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/ventricles/ventricles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/models/hra-pelvis/pelvis.glb",
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+      "bytes": 3796080,
+      "gitBlob": "d9a24df09d9de52e12acac235f8d9618051a340f",
+      "alreadyBackedAtlasPath": "public/models/hra-pelvis/pelvis.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/hra-pelvis/pelvis.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/hra-pelvis/pelvis.glb",
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866",
+      "bytes": 3796080,
+      "gitBlob": "d9a24df09d9de52e12acac235f8d9618051a340f",
+      "alreadyBackedAtlasPath": "public/models/hra-pelvis/pelvis.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/hra-pelvis/pelvis.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/thigh-muscles-dissection.glb",
+      "sha256": "f39c954742853c7e583570779b70a9f3ef844d9061055b083adb9912732c235c",
+      "bytes": 1022092,
+      "gitBlob": "893c92df78f77a72c98c3dc674b2fb1bdebfeaea",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/thigh-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/thigh-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/eye-layers/right-eyeball.glb",
+      "sha256": "f5759ee53e5d8bd893830e767783cbc49f50e18e84d1eb216229fe5acdae9ac7",
+      "bytes": 1756184,
+      "gitBlob": "a9221eb6b60caaf7c51bbc06d5f606ef9cfa18be",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/eye-layers/right-eyeball.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/eye-layers/right-eyeball.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "bytes": 8286776,
+      "gitBlob": "404c5f68fe1d91a9c10b217c9e8ebec056affb2f",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb",
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "gitBlob": "730644c463d6f0339b2978ab1c88b8779e7ce039",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "bytes": 1162668,
+      "gitBlob": "17ac6e1f0b39a0eb90a4cb614caa81dc0ebed9bd",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/elbow-arteries/elbow-arteries.glb",
+      "sha256": "f8c7361dd6d9f089937df2d879c9851cc2346353bafe2600da871a04f8a0060d",
+      "bytes": 353176,
+      "gitBlob": "687771376c9a34652f5ec4cf7abc0839594ef4de",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/elbow-arteries/elbow-arteries.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/elbow-arteries/elbow-arteries.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "sha256": "f8fa3e2a955ae43d74b359dfc9ad14487381ed496fecfeca9d47aa6a0024a7c4",
+      "bytes": 7625848,
+      "gitBlob": "4d6900c2c30fa9513246646f6ab156db5ed625f5",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d-v3/back-layers/back-layers.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "sha256": "fa709d07df413d2228065f153b6f8f7d951ffa03365052c56e920914d0376b4d",
+      "bytes": 510384,
+      "gitBlob": "aeb8b40902446b6e062978f21bfa0b0022155c14",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/brainstem/brainstem.glb",
+      "sha256": "fd1d8d04656a300fe0e8271a418ec0807b227baa96d6afa822d0df6ad0bf72ba",
+      "bytes": 1707728,
+      "gitBlob": "17bf5c20df20942e8f28bd8677854820144f2f61",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/brainstem/brainstem.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/brainstem/brainstem.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb",
+      "sha256": "ff72014e957d661a16892581db9e371482541302e4a3203ba3e84cac9f5f1928",
+      "bytes": 17252,
+      "gitBlob": "319c9d589c3f383ad8a7ec8a5484862fe95f1f2e",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/anterior-cardiac-vein/anterior-cardiac-vein.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "sha256": "ffaed94ac4c0f18df42d7cc21903e8e2b32d4c163929713913935a3eecf95ba2",
+      "bytes": 115108,
+      "gitBlob": "9ec21bafef5d021421ff514b9839bd9e5b0fd91d",
+      "alreadyBackedAtlasPath": "public/models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "repositoryPath": "modules/anatomy-atlas/public/models/bodyparts3d/full-body/pelvis-muscles.glb",
+      "commit": "fb18ce4133444b9f55a28d1b7e3f7739bd319687"
+    }
+  ],
+  "staticAssets": [
+    {
+      "path": "public/brand/approved/visible-medicine-lockup-light.png",
+      "sha256": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/brand/approved/visible-medicine-lockup-dark.png",
+      "sha256": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/brand/approved/visible-medicine-mark-light-theme.png",
+      "sha256": "19d5f6a5a5ddffe5580265d1e15519fe2a8a81f3d92a5efa4c1087dff5fc1651",
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/brand/approved/visible-medicine-mark-dark-theme.png",
+      "sha256": "fc97836b267d4fb792fac53e0406a42fb5c997920cd5fdcff3ffe3e829249e62",
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/media/atlas/3d-detail-preview.jpg",
+      "sha256": "67c354decc43afced6cf0aa61bf6cc4172031c5eda79d963807e7f98a067d94b",
+      "bytes": 73545,
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/media/atlas/ct-preview.png",
+      "sha256": "e771bf1c5e614020c45342f3e5c6843f1d9d0032e5939d2459b139099a1f3ff2",
+      "bytes": 137738,
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/media/atlas/mri-preview.png",
+      "sha256": "35580ccf620795682545c3d328ed06085d4f2560902181f6f67f7999a2e2f2a0",
+      "bytes": 546242,
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/media/atlas/ultrasound-preview.jpg",
+      "sha256": "f177e3bc56a35bd16b48b48ee1cd8d4f41a90b9610217f4175f0a61b205b6239",
+      "bytes": 128929,
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    },
+    {
+      "path": "public/media/atlas/xray-preview.png",
+      "sha256": "a43431b089a6dfab031c10eceef6c821e4f326913bf9015f73f4a1f0446d2be1",
+      "bytes": 4198015,
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+    }
+  ],
+  "newAssetsUploaded": false,
+  "clinicalScanBackup": false
+}

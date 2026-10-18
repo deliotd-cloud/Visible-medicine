@@ -1,0 +1,391 @@
+{
+  "parentCommit": "456e6d7358e0648b8d7bc8f0f706a4c74f14c5bd",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-nerves-deep-brain",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-deep-brain.glb",
+      "bytes": 1866940,
+      "sha256": "6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c",
+      "structures": 22
+    }
+  ],
+  "entries": [
+    {
+      "key": "brain-connections-amygdala",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-amygdala",
+        "fmaId": "FMA72832",
+        "name": "Right amygdala",
+        "sourceName": "right amygdala",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72832",
+        "bounds": {
+          "min": [
+            -0.34627601504325867,
+            7.319300651550293,
+            0.39133599400520325
+          ],
+          "max": [
+            -0.1758200079202652,
+            7.4468994140625,
+            0.5751200318336487
+          ]
+        },
+        "center": [
+          -0.26104801148176193,
+          7.3831000328063965,
+          0.48322801291942596
+        ],
+        "anchor": [
+          -0.25601398944854736,
+          7.372900485992432,
+          0.4786669909954071
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1829",
+            "sha256": "f53fab3de8ac6b90a2c956e8ccac9b949d9adc32b843070712f12c9ad1b18e92"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "brain-connections-amygdala",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-amygdala",
+        "fmaId": "FMA72833",
+        "name": "Left amygdala",
+        "sourceName": "left amygdala",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72833",
+        "bounds": {
+          "min": [
+            0.1624789983034134,
+            7.319900035858154,
+            0.39249497652053833
+          ],
+          "max": [
+            0.3338579833507538,
+            7.447900295257568,
+            0.5759100317955017
+          ]
+        },
+        "center": [
+          0.2481684908270836,
+          7.383900165557861,
+          0.48420250415802
+        ],
+        "anchor": [
+          0.24589000642299652,
+          7.373800277709961,
+          0.4772799611091614
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1753",
+            "sha256": "1a557cc879fa71c1e5a5681caf4e7506418c479c29171b48a959a1d5a69e1425"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "brain-connections-fornix",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-fornix-of-forebrain",
+        "fmaId": "FMA72924",
+        "name": "Right fornix of forebrain",
+        "sourceName": "right fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72924",
+        "bounds": {
+          "min": [
+            -0.3212239742279053,
+            7.352900505065918,
+            0.08262798190116882
+          ],
+          "max": [
+            -0.006592429708689451,
+            7.674000263214111,
+            0.5274800062179565
+          ]
+        },
+        "center": [
+          -0.16390820196829736,
+          7.513450384140015,
+          0.3050539940595627
+        ],
+        "anchor": [
+          -0.27547499537467957,
+          7.425699234008789,
+          0.26569801568984985
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1804",
+            "sha256": "d18c04db4ad5e495310fc7f0fde79c9e2bfbcccb78e4169f7bdbe74b193b77a6"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "brain-connections-fornix",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-fornix-of-forebrain",
+        "fmaId": "FMA72925",
+        "name": "Left fornix of forebrain",
+        "sourceName": "left fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA72925",
+        "bounds": {
+          "min": [
+            -0.006572210229933262,
+            7.353000640869141,
+            0.08259700983762741
+          ],
+          "max": [
+            0.30813100934028625,
+            7.674000263214111,
+            0.5274999737739563
+          ]
+        },
+        "center": [
+          0.1507793995551765,
+          7.513500452041626,
+          0.30504849180579185
+        ],
+        "anchor": [
+          0.26246899366378784,
+          7.425999641418457,
+          0.26817595958709717
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1756",
+            "sha256": "ecfe3a87d95ee1a7ad39bd742935dd3eeb4ab94ecdc7895d55e8b308b37e6fa4"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "brain-connections-anterior-commissure",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:anterior-commissure",
+        "fmaId": "FMA61961",
+        "name": "Anterior commissure",
+        "sourceName": "anterior commissure",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61961",
+        "bounds": {
+          "min": [
+            -0.1291770040988922,
+            7.516300201416016,
+            0.5095800161361694
+          ],
+          "max": [
+            0.11619799584150314,
+            7.542099475860596,
+            0.5561699867248535
+          ]
+        },
+        "center": [
+          -0.006489504128694534,
+          7.529199838638306,
+          0.5328750014305115
+        ],
+        "anchor": [
+          -0.0013009299291297793,
+          7.53000020980835,
+          0.5336099863052368
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1734",
+            "sha256": "a0fc9182e8598fe9640223af8f323aa95c607bedc4f5d085f03df821d8792832"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "key": "brain-connections-corpus-callosum",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:corpus-callosum",
+        "fmaId": "FMA86464",
+        "name": "Corpus callosum",
+        "sourceName": "corpus callosum",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA86464",
+        "bounds": {
+          "min": [
+            -0.2656150162220001,
+            7.444100379943848,
+            -0.10566601157188416
+          ],
+          "max": [
+            0.2524470090866089,
+            7.832600116729736,
+            0.8105599880218506
+          ]
+        },
+        "center": [
+          -0.006584003567695618,
+          7.638350248336792,
+          0.3524469882249832
+        ],
+        "anchor": [
+          -0.016084300354123116,
+          7.723800182342529,
+          0.32573097944259644
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1742",
+            "sha256": "3f46359c2a23499ac130bd27646309f7974d216f9d55320b503e3b0844da9a70"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    }
+  ]
+}

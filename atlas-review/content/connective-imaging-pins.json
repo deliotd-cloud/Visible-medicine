@@ -1,0 +1,517 @@
+{
+  "sourceCommit": "2ec31cf91f1e3c094fcdc9344d907c7524315054",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "forearm-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/forearm-connective-gaps.glb",
+      "bytes": 60244,
+      "sha256": "3edf719c336df784236543a43f75d98442f8b680d32f9ed00365822c7d783564",
+      "structures": 2
+    },
+    {
+      "id": "leg-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/leg-connective-gaps.glb",
+      "bytes": 346900,
+      "sha256": "5b28b2d13a891e88c177fb2db80c81a2dcf1c0201644ee68c8ce69870b98d70a",
+      "structures": 4
+    },
+    {
+      "id": "hand-connective-axial-detail",
+      "url": "/models/bodyparts3d/full-body/hand-connective-axial-detail.glb",
+      "bytes": 71364,
+      "sha256": "80a96ba7c54a11468857a98acda39b39aab8620d4baebe4184a698ecf4c28f1d",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "fbb0d6e0af48b312e34cdd9f1a9f8df7792be388dfd1126384a42ec7eb0aee5c",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+        "fmaId": "FMA23707",
+        "name": "Interosseous membrane of right forearm",
+        "sourceName": "interosseous membrane of right forearm",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-connective-gaps",
+        "nodeName": "FMA23707",
+        "bounds": {
+          "min": [
+            -2.5067598819732666,
+            0.21471984684467316,
+            0.20117104053497314
+          ],
+          "max": [
+            -2.289450168609619,
+            1.7778997421264648,
+            0.6823599934577942
+          ]
+        },
+        "center": [
+          -2.398105025291443,
+          0.996309794485569,
+          0.44176551699638367
+        ],
+        "anchor": [
+          -2.4015800952911377,
+          0.9821801781654358,
+          0.4531240165233612
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1476",
+            "sha256": "e70c96c4534da21f082cc494a7804f42db96195bed75641334348845cb1ddb97"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "forearm",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+        "fmaId": "FMA23708",
+        "name": "Interosseous membrane of left forearm",
+        "sourceName": "interosseous membrane of left forearm",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-connective-gaps",
+        "nodeName": "FMA23708",
+        "bounds": {
+          "min": [
+            2.289450168609619,
+            0.21471984684467316,
+            0.20117104053497314
+          ],
+          "max": [
+            2.5067598819732666,
+            1.7778997421264648,
+            0.6823599934577942
+          ]
+        },
+        "center": [
+          2.398105025291443,
+          0.996309794485569,
+          0.44176551699638367
+        ],
+        "anchor": [
+          2.4015800952911377,
+          0.9821801781654358,
+          0.4531240165233612
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1476M",
+            "sha256": "2855876f02fbf5186e8cb19d640828808063a859d297042494477cc40c212d22"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "forearm",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:ligament:interosseous-membrane-of-right-leg",
+        "fmaId": "FMA35192",
+        "name": "Interosseous membrane of right leg",
+        "sourceName": "interosseous membrane of right leg",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-connective-gaps",
+        "nodeName": "FMA35192",
+        "bounds": {
+          "min": [
+            -1.0368499755859375,
+            -7.821455955505371,
+            0.1289139986038208
+          ],
+          "max": [
+            -0.8502410054206848,
+            -4.635980129241943,
+            0.3688880205154419
+          ]
+        },
+        "center": [
+          -0.9435454905033112,
+          -6.228718042373657,
+          0.24890100955963135
+        ],
+        "anchor": [
+          -0.9445939660072327,
+          -6.233829975128174,
+          0.24552398920059204
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1392",
+            "sha256": "5e096412b0b74f19d32080170b9cd6598d62bf9ba5add6bd2adf41b487f17d8f"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leg",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:ligament:interosseous-membrane-of-left-leg",
+        "fmaId": "FMA35193",
+        "name": "Interosseous membrane of left leg",
+        "sourceName": "interosseous membrane of left leg",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg"
+        ],
+        "bundle": "leg-connective-gaps",
+        "nodeName": "FMA35193",
+        "bounds": {
+          "min": [
+            0.8502410054206848,
+            -7.821455955505371,
+            0.1289139986038208
+          ],
+          "max": [
+            1.0368499755859375,
+            -4.635980129241943,
+            0.3688880205154419
+          ]
+        },
+        "center": [
+          0.9435454905033112,
+          -6.228718042373657,
+          0.24890100955963135
+        ],
+        "anchor": [
+          0.9445939660072327,
+          -6.233829975128174,
+          0.24552398920059204
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1392M",
+            "sha256": "60f79a84a6c31041436e09928e1d07070d4b2350ec44ac5badec46bd0e61b786"
+          }
+        ],
+        "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "leg",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+        "fmaId": "FMA40120",
+        "name": "Flexor retinaculum of right wrist",
+        "sourceName": "flexor retinaculum of right wrist",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand",
+          "forearm"
+        ],
+        "bundle": "hand-connective-axial-detail",
+        "nodeName": "FMA40120",
+        "bounds": {
+          "min": [
+            -2.7091901302337646,
+            -0.20520995557308197,
+            0.7686499953269958
+          ],
+          "max": [
+            -2.3403100967407227,
+            0.06431030482053757,
+            0.9080600142478943
+          ]
+        },
+        "center": [
+          -2.5247501134872437,
+          -0.0704498253762722,
+          0.8383550047874451
+        ],
+        "anchor": [
+          -2.522700071334839,
+          -0.07679992914199829,
+          0.8895500302314758
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1471",
+            "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "wrist",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "fmaId": "FMA40121",
+        "name": "Flexor retinaculum of left wrist",
+        "sourceName": "flexor retinaculum of left wrist",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand",
+          "forearm"
+        ],
+        "bundle": "hand-connective-axial-detail",
+        "nodeName": "FMA40121",
+        "bounds": {
+          "min": [
+            2.3403100967407227,
+            -0.20520995557308197,
+            0.7686499953269958
+          ],
+          "max": [
+            2.7091901302337646,
+            0.06431030482053757,
+            0.9080600142478943
+          ]
+        },
+        "center": [
+          2.5247501134872437,
+          -0.0704498253762722,
+          0.8383550047874451
+        ],
+        "anchor": [
+          2.522700071334839,
+          -0.07679992914199829,
+          0.8895500302314758
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1471M",
+            "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "wrist",
+      "topics": [
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

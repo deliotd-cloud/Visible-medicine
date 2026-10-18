@@ -1,0 +1,151 @@
+{
+  "baseline": "dc8212978d4929c26c514bb08f9ed8e5f6df8cef",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "group": "forniceal",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "fmaId": "FMA61970",
+        "name": "Commissure of fornix of forebrain",
+        "sourceName": "commissure of fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61970",
+        "bounds": {
+          "min": [
+            -0.25186100602149963,
+            7.465699672698975,
+            0.07049598544836044
+          ],
+          "max": [
+            0.2386689931154251,
+            7.668799877166748,
+            0.3799839913845062
+          ]
+        },
+        "center": [
+          -0.006596006453037262,
+          7.567249774932861,
+          0.22523998841643333
+        ],
+        "anchor": [
+          -0.007657529786229134,
+          7.6080002784729,
+          0.2032710313796997
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1741",
+            "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    },
+    {
+      "group": "posterior",
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "fmaId": "FMA62072",
+        "name": "Posterior commissure",
+        "sourceName": "posterior commissure",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA62072",
+        "bounds": {
+          "min": [
+            -0.08425849676132202,
+            7.434699535369873,
+            0.21017998456954956
+          ],
+          "max": [
+            0.06989699602127075,
+            7.461999416351318,
+            0.26102203130722046
+          ]
+        },
+        "center": [
+          -0.007180750370025635,
+          7.448349475860596,
+          0.235601007938385
+        ],
+        "anchor": [
+          -0.010294300504028797,
+          7.4569993019104,
+          0.23569197952747345
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1799",
+            "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1932 @@
+{
+  "sourceCommit": "c442b24d83b7dae377f937a0a3e4411a4cffef3a",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.400730013847351,
+          2.292099714279175,
+          0.010559005662798882
+        ],
+        "max": [
+          2.407599925994873,
+          5.365200042724609,
+          0.5022899508476257
+        ]
+      },
+      "center": [
+        1.904164969921112,
+        3.828649878501892,
+        0.2564244782552123
+      ],
+      "anchor": [
+        1.8882200717926025,
+        3.8617005348205566,
+        0.25274598598480225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3262",
+          "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+      "fmaId": "FMA23465",
+      "name": "Left radius",
+      "sourceName": "left radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23465",
+      "bounds": {
+        "min": [
+          2.198359966278076,
+          0.0616302490234375,
+          0.11469299346208572
+        ],
+        "max": [
+          2.7914299964904785,
+          2.350100040435791,
+          0.7725200057029724
+        ]
+      },
+      "center": [
+        2.4948949813842773,
+        1.2058651447296143,
+        0.44360649958252907
+      ],
+      "anchor": [
+        2.561270236968994,
+        1.1699999570846558,
+        0.4131059944629669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3277",
+          "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+      "fmaId": "FMA23468",
+      "name": "Left ulna",
+      "sourceName": "left ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23468",
+      "bounds": {
+        "min": [
+          1.9689199924468994,
+          0.050159912556409836,
+          -0.05447700619697571
+        ],
+        "max": [
+          2.4711999893188477,
+          2.5246996879577637,
+          0.7327899932861328
+        ]
+      },
+      "center": [
+        2.2200599908828735,
+        1.2874298002570868,
+        0.33915649354457855
+      ],
+      "anchor": [
+        2.191890001296997,
+        1.2612799406051636,
+        0.3485729992389679
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3286",
+          "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+      "fmaId": "FMA37668",
+      "name": "Right brachialis",
+      "sourceName": "right brachialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA37668",
+      "bounds": {
+        "min": [
+          -2.351210117340088,
+          1.9536101818084717,
+          0.10569698363542557
+        ],
+        "max": [
+          -1.7638499736785889,
+          4.201999664306641,
+          0.36396002769470215
+        ]
+      },
+      "center": [
+        -2.0575300455093384,
+        3.077804923057556,
+        0.23482850566506386
+      ],
+      "anchor": [
+        -2.0775399208068848,
+        3.066899299621582,
+        0.2378140240907669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1486",
+          "sha256": "be5f40b153fd6ce0c8c274eb4c26be8d1a29b4bbe75dd0e4a0dfe5c4d251fa03"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+      "fmaId": "FMA37669",
+      "name": "Left brachialis",
+      "sourceName": "left brachialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA37669",
+      "bounds": {
+        "min": [
+          1.7638499736785889,
+          1.9536101818084717,
+          0.10569698363542557
+        ],
+        "max": [
+          2.351210117340088,
+          4.201999664306641,
+          0.3639589548110962
+        ]
+      },
+      "center": [
+        2.0575300455093384,
+        3.077804923057556,
+        0.23482796922326088
+      ],
+      "anchor": [
+        2.0775301456451416,
+        3.066899299621582,
+        0.2378140240907669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1486M",
+          "sha256": "cedf106a4917deab99f86f077dde7d34d0672dbbb74f30652a4f81f75d7ef180"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-brachioradialis",
+      "fmaId": "FMA38486",
+      "name": "Right brachioradialis",
+      "sourceName": "right brachioradialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38486",
+      "bounds": {
+        "min": [
+          -2.8058600425720215,
+          0.09711974859237671,
+          0.058244019746780396
+        ],
+        "max": [
+          -2.081589937210083,
+          3.476099967956543,
+          0.7287799715995789
+        ]
+      },
+      "center": [
+        -2.4437249898910522,
+        1.7866098582744598,
+        0.3935119956731796
+      ],
+      "anchor": [
+        -2.5111701488494873,
+        1.7561700344085693,
+        0.4491649568080902
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1487",
+          "sha256": "0ff651a5417f240c6a5205bef5218336a61fe3474752cca1b483d02aae0b92ad"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-brachioradialis",
+      "fmaId": "FMA38487",
+      "name": "Left brachioradialis",
+      "sourceName": "left brachioradialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38487",
+      "bounds": {
+        "min": [
+          2.081589937210083,
+          0.09711974859237671,
+          0.058244019746780396
+        ],
+        "max": [
+          2.8058600425720215,
+          3.476099967956543,
+          0.7287799715995789
+        ]
+      },
+      "center": [
+        2.4437249898910522,
+        1.7866098582744598,
+        0.3935119956731796
+      ],
+      "anchor": [
+        2.5111701488494873,
+        1.7561602592468262,
+        0.4491649568080902
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1487M",
+          "sha256": "04555d88efe99e68a2b07441c4deffa4d1e7ebafb8d3f60995dd28c0ff42f147"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+      "fmaId": "FMA38513",
+      "name": "Right supinator",
+      "sourceName": "right supinator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38513",
+      "bounds": {
+        "min": [
+          -2.540940046310425,
+          1.325339913368225,
+          0.06260600686073303
+        ],
+        "max": [
+          -2.2236099243164062,
+          2.563800096511841,
+          0.405487984418869
+        ]
+      },
+      "center": [
+        -2.3822749853134155,
+        1.944570004940033,
+        0.23404699563980103
+      ],
+      "anchor": [
+        -2.380470037460327,
+        1.9462902545928955,
+        0.22518402338027954
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1505",
+          "sha256": "83c5940f2c6516ecf5b0eb69de5dc0a056177b29f7bc046b94cc20c85460ae46"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+      "fmaId": "FMA38514",
+      "name": "Left supinator",
+      "sourceName": "left supinator",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles",
+      "nodeName": "FMA38514",
+      "bounds": {
+        "min": [
+          2.2236099243164062,
+          1.325339913368225,
+          0.06260600686073303
+        ],
+        "max": [
+          2.540950059890747,
+          2.563800096511841,
+          0.405487984418869
+        ]
+      },
+      "center": [
+        2.3822799921035767,
+        1.944570004940033,
+        0.23404699563980103
+      ],
+      "anchor": [
+        2.380470037460327,
+        1.9462902545928955,
+        0.22518402338027954
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1505M",
+          "sha256": "bfc240c7d0db047b5defe13bad862115bfcd7ec3cb426c40630ed1738c3cd3d5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+      "fmaId": "FMA37684",
+      "name": "Short head of right biceps brachii",
+      "sourceName": "short head of right biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37684",
+      "bounds": {
+        "min": [
+          -2.1238999366760254,
+          2.6521997451782227,
+          0.2595809996128082
+        ],
+        "max": [
+          -1.352370023727417,
+          5.277600288391113,
+          0.5910099744796753
+        ]
+      },
+      "center": [
+        -1.7381349802017212,
+        3.964900016784668,
+        0.42529548704624176
+      ],
+      "anchor": [
+        -1.8180700540542603,
+        3.974900007247925,
+        0.46761101484298706
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1512",
+          "sha256": "2173b7cce29f11036907b80e068e9bd6c16f22359d6e7994af9684454b99b4d5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+      "fmaId": "FMA37685",
+      "name": "Short head of left biceps brachii",
+      "sourceName": "short head of left biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37685",
+      "bounds": {
+        "min": [
+          1.352370023727417,
+          2.6521997451782227,
+          0.2595809996128082
+        ],
+        "max": [
+          2.1238999366760254,
+          5.277600288391113,
+          0.5910199880599976
+        ]
+      },
+      "center": [
+        1.7381349802017212,
+        3.964900016784668,
+        0.4253004938364029
+      ],
+      "anchor": [
+        1.8180700540542603,
+        3.974900007247925,
+        0.46761101484298706
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1512M",
+          "sha256": "6b0ed7b70973b3a2e08de4ea5ce59c05a4ddce2b90212ff734326be2726d1293"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+      "fmaId": "FMA37686",
+      "name": "Long head of right biceps brachii",
+      "sourceName": "long head of right biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37686",
+      "bounds": {
+        "min": [
+          -2.2985999584198,
+          1.9407202005386353,
+          0.1780889928340912
+        ],
+        "max": [
+          -1.3526800870895386,
+          5.394200325012207,
+          0.5929200053215027
+        ]
+      },
+      "center": [
+        -1.8256400227546692,
+        3.667460262775421,
+        0.38550449907779694
+      ],
+      "anchor": [
+        -1.8757001161575317,
+        3.694000244140625,
+        0.42243897914886475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1478",
+          "sha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+      "fmaId": "FMA37687",
+      "name": "Long head of left biceps brachii",
+      "sourceName": "long head of left biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37687",
+      "bounds": {
+        "min": [
+          1.3526800870895386,
+          1.9407202005386353,
+          0.1780889928340912
+        ],
+        "max": [
+          2.2985999584198,
+          5.394200325012207,
+          0.592930018901825
+        ]
+      },
+      "center": [
+        1.8256400227546692,
+        3.667460262775421,
+        0.38550950586795807
+      ],
+      "anchor": [
+        1.8757100105285645,
+        3.694000244140625,
+        0.42243897914886475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1478M",
+          "sha256": "10189f1d7b5220df3baef2b259ae9855ed301c1afaadfc2de25af3222c5a08fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres",
+      "fmaId": "FMA38560",
+      "name": "Humeral head of right pronator teres",
+      "sourceName": "humeral head of right pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38560",
+      "bounds": {
+        "min": [
+          -2.5732102394104004,
+          1.1665197610855103,
+          0.17688697576522827
+        ],
+        "max": [
+          -1.8741799592971802,
+          2.6538000106811523,
+          0.5255300402641296
+        ]
+      },
+      "center": [
+        -2.2236950993537903,
+        1.9101598858833313,
+        0.35120850801467896
+      ],
+      "anchor": [
+        -2.2300100326538086,
+        1.9446502923965454,
+        0.4691610038280487
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1474",
+          "sha256": "589e18d8dd9eac471404fae1035b01476ed0021af1cb2822c8c759164a2a45ba"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres",
+      "fmaId": "FMA38561",
+      "name": "Humeral head of left pronator teres",
+      "sourceName": "humeral head of left pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38561",
+      "bounds": {
+        "min": [
+          1.8741799592971802,
+          1.1665197610855103,
+          0.17688697576522827
+        ],
+        "max": [
+          2.5732102394104004,
+          2.6538000106811523,
+          0.5255300402641296
+        ]
+      },
+      "center": [
+        2.2236950993537903,
+        1.9101598858833313,
+        0.35120850801467896
+      ],
+      "anchor": [
+        2.2300100326538086,
+        1.9446399211883545,
+        0.4691610038280487
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1474M",
+          "sha256": "441ab2758c6c7f27fc5835edc070c02b2355e5222bf3a65c728853c38b424aa7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres",
+      "fmaId": "FMA38562",
+      "name": "Ulnar head of right pronator teres",
+      "sourceName": "ulnar head of right pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38562",
+      "bounds": {
+        "min": [
+          -2.5631399154663086,
+          1.2774298191070557,
+          0.24059097468852997
+        ],
+        "max": [
+          -2.042649984359741,
+          2.234299898147583,
+          0.4838230013847351
+        ]
+      },
+      "center": [
+        -2.302894949913025,
+        1.7558648586273193,
+        0.36220698803663254
+      ],
+      "anchor": [
+        -2.326889991760254,
+        1.7991100549697876,
+        0.4253399670124054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1516",
+          "sha256": "62058afdb37b3637c21f7ad15fe681acced1e36c986190a692f1733cb0a79760"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres",
+      "fmaId": "FMA38563",
+      "name": "Ulnar head of left pronator teres",
+      "sourceName": "ulnar head of left pronator teres",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-muscles-dissection",
+      "nodeName": "FMA38563",
+      "bounds": {
+        "min": [
+          2.042649984359741,
+          1.2774298191070557,
+          0.24059097468852997
+        ],
+        "max": [
+          2.5631399154663086,
+          2.234299898147583,
+          0.4838230013847351
+        ]
+      },
+      "center": [
+        2.302894949913025,
+        1.7558648586273193,
+        0.36220698803663254
+      ],
+      "anchor": [
+        2.326889991760254,
+        1.7991100549697876,
+        0.4253399670124054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1516M",
+          "sha256": "f4e663154e28ab0ad13e6c4facce145b50460bf5f2bbdb7d0199867a6d735b84"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+      "fmaId": "FMA22691",
+      "name": "Right brachial artery",
+      "sourceName": "right brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22691",
+      "bounds": {
+        "min": [
+          -2.174690008163452,
+          2.205900192260742,
+          0.22346900403499603
+        ],
+        "max": [
+          -1.4303799867630005,
+          4.743499755859375,
+          0.3897160291671753
+        ]
+      },
+      "center": [
+        -1.8025349974632263,
+        3.4746999740600586,
+        0.30659251660108566
+      ],
+      "anchor": [
+        -1.8113499879837036,
+        3.456199884414673,
+        0.3016369640827179
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2271",
+          "sha256": "ce5b122fcc19c637684c1de1661697b03d487f3b013e8b4313fb095f81118813"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+      "fmaId": "FMA22692",
+      "name": "Left brachial artery",
+      "sourceName": "left brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-vessels-recovery",
+      "nodeName": "FMA22692",
+      "bounds": {
+        "min": [
+          1.4304299354553223,
+          2.2059998512268066,
+          0.22347503900527954
+        ],
+        "max": [
+          2.1745100021362305,
+          4.743499755859375,
+          0.3896779716014862
+        ]
+      },
+      "center": [
+        1.8024699687957764,
+        3.474749803543091,
+        0.3065765053033829
+      ],
+      "anchor": [
+        1.805799961090088,
+        3.476099967956543,
+        0.289294958114624
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2219",
+          "sha256": "e3c8e2be45d0f25f4e2efa9a046bc13b66c4e43e724a2c2b0424d230719cc6db"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+      "fmaId": "FMA22733",
+      "name": "Right radial artery",
+      "sourceName": "right radial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22733",
+      "bounds": {
+        "min": [
+          -2.7951300144195557,
+          -0.08817993104457855,
+          0.33151495456695557
+        ],
+        "max": [
+          -2.1361098289489746,
+          2.244499444961548,
+          0.7712299823760986
+        ]
+      },
+      "center": [
+        -2.465619921684265,
+        1.0781597569584846,
+        0.5513724684715271
+      ],
+      "anchor": [
+        -2.5781900882720947,
+        1.0522302389144897,
+        0.3984220027923584
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2294",
+          "sha256": "cca326b54b9f4e6ed4c4a8ccf258959a3a3c54aff996b894eacca20af05217d2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+      "fmaId": "FMA22734",
+      "name": "Left radial artery",
+      "sourceName": "left radial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22734",
+      "bounds": {
+        "min": [
+          2.1361098289489746,
+          -0.08814025670289993,
+          0.3315100073814392
+        ],
+        "max": [
+          2.795069932937622,
+          2.244499444961548,
+          0.7712699770927429
+        ]
+      },
+      "center": [
+        2.4655898809432983,
+        1.078179594129324,
+        0.5513899922370911
+      ],
+      "anchor": [
+        2.578469753265381,
+        1.0441497564315796,
+        0.40048301219940186
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2242",
+          "sha256": "d97e01814668d5a32f18a5cc07a3e6e77bf1a734008f21d8f7dc62fedd0175a6"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+      "fmaId": "FMA22797",
+      "name": "Right ulnar artery",
+      "sourceName": "right ulnar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22797",
+      "bounds": {
+        "min": [
+          -2.4372599124908447,
+          -0.05320983752608299,
+          0.2698560357093811
+        ],
+        "max": [
+          -2.110489845275879,
+          2.244499444961548,
+          0.810740053653717
+        ]
+      },
+      "center": [
+        -2.273874878883362,
+        1.0956448037177324,
+        0.5402980446815491
+      ],
+      "anchor": [
+        -2.194159984588623,
+        1.0684802532196045,
+        0.5297799706459045
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2310",
+          "sha256": "6bef22a74e2e6ae2d3033c4982fdb75abbadc9b255e76770211d61b3dd4796c1"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+      "fmaId": "FMA22798",
+      "name": "Left ulnar artery",
+      "sourceName": "left ulnar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "hand"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22798",
+      "bounds": {
+        "min": [
+          2.1105098724365234,
+          -0.05315978825092316,
+          0.26983702182769775
+        ],
+        "max": [
+          2.4372000694274902,
+          2.244499444961548,
+          0.81072998046875
+        ]
+      },
+      "center": [
+        2.273854970932007,
+        1.0956698283553123,
+        0.5402835011482239
+      ],
+      "anchor": [
+        2.1925101280212402,
+        1.073830008506775,
+        0.5356700420379639
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2258",
+          "sha256": "4ddf684432c015ef59cd0bc8cb72b8890632ebde5f2d92e3c1002209ac482b8a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+      "fmaId": "FMA13325",
+      "name": "Right cephalic vein",
+      "sourceName": "right cephalic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA13325",
+      "bounds": {
+        "min": [
+          -2.790409803390503,
+          -0.255349725484848,
+          0.27655401825904846
+        ],
+        "max": [
+          -1.0683599710464478,
+          5.268199443817139,
+          0.8173100352287292
+        ]
+      },
+      "center": [
+        -1.9293848872184753,
+        2.5064248591661453,
+        0.5469320267438889
+      ],
+      "anchor": [
+        -2.297680139541626,
+        2.514399528503418,
+        0.43531501293182373
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2272",
+          "sha256": "b57bd07b9e940b76500243e88b2d0f32fac59fff6ddea84419b254c82a6256f8"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+      "fmaId": "FMA13326",
+      "name": "Left cephalic vein",
+      "sourceName": "left cephalic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA13326",
+      "bounds": {
+        "min": [
+          1.068310022354126,
+          -0.25531005859375,
+          0.276559978723526
+        ],
+        "max": [
+          2.7903499603271484,
+          5.268199443817139,
+          0.8172900676727295
+        ]
+      },
+      "center": [
+        1.9293299913406372,
+        2.5064446926116943,
+        0.5469250231981277
+      ],
+      "anchor": [
+        2.300539970397949,
+        2.4906005859375,
+        0.4444809854030609
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2220",
+          "sha256": "1a3062828e09478913a2d9df9ef4e092c7b7bf8a5f4bd68b1603eb79e79273e2"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+      "fmaId": "FMA22909",
+      "name": "Right basilic vein",
+      "sourceName": "right basilic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22909",
+      "bounds": {
+        "min": [
+          -2.3548500537872314,
+          -0.11169006675481796,
+          0.1282849907875061
+        ],
+        "max": [
+          -1.5100599527359009,
+          4.372399806976318,
+          0.6480799913406372
+        ]
+      },
+      "center": [
+        -1.9324550032615662,
+        2.13035487011075,
+        0.38818249106407166
+      ],
+      "anchor": [
+        -1.792330026626587,
+        2.1141998767852783,
+        0.260142982006073
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2270",
+          "sha256": "9340492869064c52e522a426c4c2bdb73f0ccfc8392dee56f01a8186f6187ba5"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+      "fmaId": "FMA22910",
+      "name": "Left basilic vein",
+      "sourceName": "left basilic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm",
+        "shoulder-arm"
+      ],
+      "bundle": "forearm-vessels-recovery",
+      "nodeName": "FMA22910",
+      "bounds": {
+        "min": [
+          1.5100399255752563,
+          -0.11166992038488388,
+          0.12831199169158936
+        ],
+        "max": [
+          2.3548200130462646,
+          4.372399806976318,
+          0.6481099724769592
+        ]
+      },
+      "center": [
+        1.9324299693107605,
+        2.1303649432957172,
+        0.3882109820842743
+      ],
+      "anchor": [
+        1.7949899435043335,
+        2.1276001930236816,
+        0.25609397888183594
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2218",
+          "sha256": "09bb227be0f517e81168edb3fa4eb7cdcdf2157355ca86be7366277b3859f9ca"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+      "fmaId": "FMA22964",
+      "name": "Right median cubital vein",
+      "sourceName": "right median cubital vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "cubital-veins",
+      "nodeName": "FMA22964",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2287",
+          "sha256": "82a121207952ed3f38b387186dbccef17f76fd6f2e90b080dc045796430a30f4"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.339289903640747,
+          2.2446999549865723,
+          0.1677989959716797
+        ],
+        "max": [
+          -1.83502995967865,
+          2.6394999027252197,
+          0.5134699940681458
+        ]
+      },
+      "center": [
+        -2.0871599316596985,
+        2.442099928855896,
+        0.3406344950199127
+      ],
+      "anchor": [
+        -2.0185399055480957,
+        2.4019999504089355,
+        0.398142009973526
+      ],
+      "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+      "fmaId": "FMA22965",
+      "name": "Left median cubital vein",
+      "sourceName": "left median cubital vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "cubital-veins",
+      "nodeName": "FMA22965",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2235",
+          "sha256": "8ce3f9edc945531083041cf949011ebd8810c48b0e213399d90946267783cb87"
+        }
+      ],
+      "bounds": {
+        "min": [
+          1.8350499868392944,
+          2.2446999549865723,
+          0.16787099838256836
+        ],
+        "max": [
+          2.339289903640747,
+          2.6394999027252197,
+          0.5134599804878235
+        ]
+      },
+      "center": [
+        2.0871699452400208,
+        2.442099928855896,
+        0.3406654894351959
+      ],
+      "anchor": [
+        2.0208699703216553,
+        2.400399923324585,
+        0.39926499128341675
+      ],
+      "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "shoulder-arm-muscles",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "bytes": 2623088,
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "structures": 24
+    },
+    {
+      "id": "forearm-muscles",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles.glb",
+      "bytes": 1854940,
+      "sha256": "a99abc2a2bfe0845e80b90d18f6473e2614695c8f7acb7a26a9febb4d46a509b",
+      "structures": 34
+    },
+    {
+      "id": "shoulder-arm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "bytes": 510384,
+      "sha256": "fa709d07df413d2228065f153b6f8f7d951ffa03365052c56e920914d0376b4d",
+      "structures": 16
+    },
+    {
+      "id": "forearm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/forearm-muscles-dissection.glb",
+      "bytes": 261864,
+      "sha256": "650758b91e7a4dd4b0a743d067fe79cbf527a51e95669e9e61aa2bc3c45c57b4",
+      "structures": 8
+    },
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "cubital-veins",
+      "url": "/models/bodyparts3d/cubital-veins/cubital-veins.glb?v=8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "bytes": 287992,
+      "sha256": "8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "structures": 4
+    }
+  ],
+  "cameraBounds": {
+    "left": {
+      "min": [
+        1.635239963531494,
+        1.1753399133682252,
+        -0.1744770061969757
+      ],
+      "max": [
+        2.814149971008301,
+        2.813800096511841,
+        0.72944002866745
+      ]
+    },
+    "right": {
+      "min": [
+        -2.814149971008301,
+        1.1753399133682252,
+        -0.1720080178976059
+      ],
+      "max": [
+        -1.635220055580139,
+        2.813800096511841,
+        0.7294599962234497
+      ]
+    }
+  },
+  "inBand": {
+    "vm:anatomy:body:shoulder-arm:left:bone:left-humerus": 815,
+    "vm:anatomy:body:forearm:left:bone:left-radius": 154,
+    "vm:anatomy:body:forearm:left:bone:left-ulna": 285,
+    "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis": 377,
+    "vm:anatomy:body:forearm:left:muscle:left-brachioradialis": 1597,
+    "vm:anatomy:body:forearm:left:muscle:left-supinator": 1565,
+    "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii": 113,
+    "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii": 206,
+    "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-pronator-teres": 904,
+    "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-pronator-teres": 532,
+    "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery": 414,
+    "vm:anatomy:body:forearm:left:vessel:left-radial-artery": 1680,
+    "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery": 2035,
+    "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein": 2048,
+    "vm:anatomy:body:forearm:left:vessel:left-basilic-vein": 3065,
+    "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein": 1253,
+    "vm:anatomy:body:forearm:right:bone:right-radius": 138,
+    "vm:anatomy:upper-limb:shoulder:right:bone:humerus": 809,
+    "vm:anatomy:body:forearm:right:bone:right-ulna": 306,
+    "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis": 377,
+    "vm:anatomy:body:forearm:right:muscle:right-brachioradialis": 1597,
+    "vm:anatomy:body:forearm:right:muscle:right-supinator": 1565,
+    "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii": 113,
+    "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii": 206,
+    "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-pronator-teres": 904,
+    "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-pronator-teres": 532,
+    "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery": 366,
+    "vm:anatomy:body:forearm:right:vessel:right-radial-artery": 1604,
+    "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery": 1899,
+    "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein": 2035,
+    "vm:anatomy:body:forearm:right:vessel:right-basilic-vein": 3070,
+    "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein": 1253
+  }
+}

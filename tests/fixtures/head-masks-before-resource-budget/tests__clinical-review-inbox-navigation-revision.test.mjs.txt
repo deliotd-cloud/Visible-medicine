@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+import test from 'node:test';
+import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {renderChecklist} from '../scripts/refresh-completion-checklist.mjs';
+const root=new URL('../',import.meta.url),base='tests/fixtures/clinical-inbox-before-navigation/';
+const read=p=>fs.readFileSync(new URL(p,root)),json=p=>JSON.parse(read(p)),sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+test('exact register40 and its original renderer contract remain frozen',()=>{
+ assert.equal(sha(read(base+'manifest.json')),'e2a8eb3fe780c772789de34bdfad11f67be114b5c9b252800c251b7d1a105b4a');
+ const archive=json(base+'manifest.json');assert.equal(archive.records.length,3);
+ for(const record of archive.records)assert.equal(sha(read(record.frozenPath)),record.sha256,record.path);
+ const original=read(base+'tests__head-comparison-renderer-revision.test.mjs.txt').toString();
+ const from="data=json('docs/completion-checklist.json')",to="data=json('"+base+"docs__completion-checklist.json')";
+ assert.equal(original.split(from).length-1,1);
+ assert.equal(read('tests/head-comparison-renderer-revision.test.mjs').toString(),original.replace(from,to));
+ assert.equal(sha(read('tests/fixtures/current-atlas-delivery.json')),archive.records.find(r=>r.path==='tests/fixtures/current-atlas-delivery.json').sha256);
+});
+test('register41 preserves all71 requirements, eight ideas, authority and acceptance scope',()=>{
+ const before=json(base+'docs__completion-checklist.json'),data=json('docs/completion-checklist.json');
+ assert.equal(before.revision,40);assert.equal(data.revision,41);assert.equal(data.items.length,71);
+ assert.equal(data.items.filter(i=>i.scope==='optional').length,8);
+ assert.deepEqual(data.changeLog.slice(1),before.changeLog);assert.equal(data.changeLog[0].revision,41);
+ assert.deepEqual(data.baseline,before.baseline);assert.deepEqual(data.pendingAtlasSource,before.pendingAtlasSource);
+ for(const previous of before.items){const current=data.items.find(i=>i.id===previous.id);const {evidence:a,...x}=previous,{evidence:b,...y}=current;assert.deepEqual(y,x);assert.deepEqual(b,['UX-01','UX-02'].includes(previous.id)?[...a,'website:docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md']:a);}
+ assert.equal(read('docs/completion-checklist.md').toString(),renderChecklist(data));
+ assert.equal(data.baseline.publicReleaseApproval,null);assert.equal(data.baseline.privateClinicalDecisionCounts,null);
+});
+test('discovery-only queue changes do not rebind clinical renderer or current Atlas admission',()=>{
+ const frozen=json(base+'tests__fixtures__current-atlas-delivery.json'),pin=validateCurrentAtlasDelivery();
+ assert.deepEqual(pin,frozen);assert.equal(pin.reviewIntegration,'a058b135f294162091ea270d97c81d00bb5c73492b5095cf0cb12e6d316d3808');
+ const inputs=json('atlas-review/integration-inputs.json');
+ assert.equal(inputs.sha256,pin.reviewIntegration);assert.equal(inputs.sourceCommit,pin.source);
+ assert(!inputs.inputs.some(row=>['components/ClinicalReviewInbox.tsx','components/clinical-review-inbox.css'].includes(row.path)));
+ for(const row of inputs.inputs)assert.equal(sha(read(row.path)),row.sha256,row.path);
+});

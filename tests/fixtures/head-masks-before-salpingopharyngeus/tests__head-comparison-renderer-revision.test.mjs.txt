@@ -1,0 +1,2 @@
+import {runFrozenHeadMaskEpoch} from './historical-head-mask-epoch.mjs';
+runFrozenHeadMaskEpoch("tests/head-comparison-renderer-revision.test.mjs",import.meta.url);

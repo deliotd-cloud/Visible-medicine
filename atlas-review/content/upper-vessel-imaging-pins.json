@@ -1,0 +1,1179 @@
+{
+  "sourceCommit": "50ac6f326f14e292c6382e518adaeea20169163c",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-recovery.glb",
+      "bytes": 575076,
+      "sha256": "2630e1f06ada20094814ee1a5245e9d420627a15869c3b6a3c51763be21da84c",
+      "structures": 14
+    },
+    {
+      "id": "forearm-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-recovery.glb",
+      "bytes": 2083932,
+      "sha256": "8a9c9b62561c8b952147b91fcf0a9c2a01d6f7fe38737259e4eb8d76ece0904f",
+      "structures": 10
+    },
+    {
+      "id": "shoulder-arm-vessels-inventory",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-vessels-inventory.glb",
+      "bytes": 616356,
+      "sha256": "d12d81529a1408f934b5055462bb39f0f79c84e25c878a25225652b9baac3e84",
+      "structures": 20
+    },
+    {
+      "id": "brachial-veins",
+      "url": "/models/bodyparts3d/brachial-veins/brachial-veins.glb?v=e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "bytes": 100360,
+      "sha256": "e603953fca42e17c45f3daa91d3c53bedc0ccf83b70b18b864f9dc72d6bbe265",
+      "structures": 2
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+        "fmaId": "FMA22655",
+        "name": "Right axillary artery",
+        "sourceName": "right axillary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22655",
+        "bounds": {
+          "min": [
+            -1.5144000053405762,
+            4.581200122833252,
+            0.3005619943141937
+          ],
+          "max": [
+            -0.7694149613380432,
+            5.398399829864502,
+            0.5642500519752502
+          ]
+        },
+        "center": [
+          -1.1419074833393097,
+          4.989799976348877,
+          0.432406023144722
+        ],
+        "anchor": [
+          -1.2723599672317505,
+          5.101700305938721,
+          0.4388520121574402
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2268",
+            "sha256": "192c0b2607e669dc89a6eadd2c11f2fff904f010e4dca81822209865df7e5752"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "arterial-trunks",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+        "fmaId": "FMA22656",
+        "name": "Left axillary artery",
+        "sourceName": "left axillary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22656",
+        "bounds": {
+          "min": [
+            0.7693470120429993,
+            4.581300258636475,
+            0.3007800281047821
+          ],
+          "max": [
+            1.5145699977874756,
+            5.398399829864502,
+            0.5641500353813171
+          ]
+        },
+        "center": [
+          1.1419585049152374,
+          4.989850044250488,
+          0.4324650317430496
+        ],
+        "anchor": [
+          1.2681599855422974,
+          5.105999946594238,
+          0.43566298484802246
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2216",
+            "sha256": "fe9295ce260df56c46f29e56e410937c9fa2f3e104411fb7e91b5f9681509ccb"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "arterial-trunks",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+        "fmaId": "FMA22691",
+        "name": "Right brachial artery",
+        "sourceName": "right brachial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22691",
+        "bounds": {
+          "min": [
+            -2.174690008163452,
+            2.205900192260742,
+            0.22346900403499603
+          ],
+          "max": [
+            -1.4303799867630005,
+            4.743499755859375,
+            0.3897160291671753
+          ]
+        },
+        "center": [
+          -1.8025349974632263,
+          3.4746999740600586,
+          0.30659251660108566
+        ],
+        "anchor": [
+          -1.8113499879837036,
+          3.456199884414673,
+          0.3016369640827179
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2271",
+            "sha256": "ce5b122fcc19c637684c1de1661697b03d487f3b013e8b4313fb095f81118813"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "arterial-trunks",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+        "fmaId": "FMA22692",
+        "name": "Left brachial artery",
+        "sourceName": "left brachial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22692",
+        "bounds": {
+          "min": [
+            1.4304299354553223,
+            2.2059998512268066,
+            0.22347503900527954
+          ],
+          "max": [
+            2.1745100021362305,
+            4.743499755859375,
+            0.3896779716014862
+          ]
+        },
+        "center": [
+          1.8024699687957764,
+          3.474749803543091,
+          0.3065765053033829
+        ],
+        "anchor": [
+          1.805799961090088,
+          3.476099967956543,
+          0.289294958114624
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2219",
+            "sha256": "e3c8e2be45d0f25f4e2efa9a046bc13b66c4e43e724a2c2b0424d230719cc6db"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "arterial-trunks",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+        "fmaId": "FMA22696",
+        "name": "Right deep brachial artery",
+        "sourceName": "right deep brachial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22696",
+        "bounds": {
+          "min": [
+            -2.0604500770568848,
+            3.1497998237609863,
+            0.02115200087428093
+          ],
+          "max": [
+            -1.7434699535369873,
+            3.8430004119873047,
+            0.26665398478507996
+          ]
+        },
+        "center": [
+          -1.901960015296936,
+          3.4964001178741455,
+          0.14390299282968044
+        ],
+        "anchor": [
+          -1.8949899673461914,
+          3.4970996379852295,
+          0.10191798955202103
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2277",
+            "sha256": "dd048b36f91cc5b0f16bc5a7bae5bca66aaaf0e3a95c1e2b5e55c397062c1647"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-branch",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+        "fmaId": "FMA22697",
+        "name": "Left deep brachial artery",
+        "sourceName": "left deep brachial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-vessels-recovery",
+        "nodeName": "FMA22697",
+        "bounds": {
+          "min": [
+            1.7435400485992432,
+            3.1497998237609863,
+            0.021077996119856834
+          ],
+          "max": [
+            2.0603699684143066,
+            3.8430004119873047,
+            0.266633003950119
+          ]
+        },
+        "center": [
+          1.901955008506775,
+          3.4964001178741455,
+          0.14385550003498793
+        ],
+        "anchor": [
+          1.8897600173950195,
+          3.503399610519409,
+          0.1038840115070343
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2225",
+            "sha256": "c24f0def19fb45bf84251678b8d63c09fa7d5f51fa71fdd5515adddb8ff7db6c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-branch",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "fmaId": "FMA13325",
+        "name": "Right cephalic vein",
+        "sourceName": "right cephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA13325",
+        "bounds": {
+          "min": [
+            -2.790409803390503,
+            -0.255349725484848,
+            0.27655401825904846
+          ],
+          "max": [
+            -1.0683599710464478,
+            5.268199443817139,
+            0.8173100352287292
+          ]
+        },
+        "center": [
+          -1.9293848872184753,
+          2.5064248591661453,
+          0.5469320267438889
+        ],
+        "anchor": [
+          -2.297680139541626,
+          2.514399528503418,
+          0.43531501293182373
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2272",
+            "sha256": "b57bd07b9e940b76500243e88b2d0f32fac59fff6ddea84419b254c82a6256f8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial-veins",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "fmaId": "FMA13326",
+        "name": "Left cephalic vein",
+        "sourceName": "left cephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA13326",
+        "bounds": {
+          "min": [
+            1.068310022354126,
+            -0.25531005859375,
+            0.276559978723526
+          ],
+          "max": [
+            2.7903499603271484,
+            5.268199443817139,
+            0.8172900676727295
+          ]
+        },
+        "center": [
+          1.9293299913406372,
+          2.5064446926116943,
+          0.5469250231981277
+        ],
+        "anchor": [
+          2.300539970397949,
+          2.4906005859375,
+          0.4444809854030609
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2220",
+            "sha256": "1a3062828e09478913a2d9df9ef4e092c7b7bf8a5f4bd68b1603eb79e79273e2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial-veins",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+        "fmaId": "FMA22909",
+        "name": "Right basilic vein",
+        "sourceName": "right basilic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22909",
+        "bounds": {
+          "min": [
+            -2.3548500537872314,
+            -0.11169006675481796,
+            0.1282849907875061
+          ],
+          "max": [
+            -1.5100599527359009,
+            4.372399806976318,
+            0.6480799913406372
+          ]
+        },
+        "center": [
+          -1.9324550032615662,
+          2.13035487011075,
+          0.38818249106407166
+        ],
+        "anchor": [
+          -1.792330026626587,
+          2.1141998767852783,
+          0.260142982006073
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2270",
+            "sha256": "9340492869064c52e522a426c4c2bdb73f0ccfc8392dee56f01a8186f6187ba5"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial-veins",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+        "fmaId": "FMA22910",
+        "name": "Left basilic vein",
+        "sourceName": "left basilic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22910",
+        "bounds": {
+          "min": [
+            1.5100399255752563,
+            -0.11166992038488388,
+            0.12831199169158936
+          ],
+          "max": [
+            2.3548200130462646,
+            4.372399806976318,
+            0.6481099724769592
+          ]
+        },
+        "center": [
+          1.9324299693107605,
+          2.1303649432957172,
+          0.3882109820842743
+        ],
+        "anchor": [
+          1.7949899435043335,
+          2.1276001930236816,
+          0.25609397888183594
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2218",
+            "sha256": "09bb227be0f517e81168edb3fa4eb7cdcdf2157355ca86be7366277b3859f9ca"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial-veins",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+        "fmaId": "FMA13330",
+        "name": "Right axillary vein",
+        "sourceName": "right axillary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA13330",
+        "bounds": {
+          "min": [
+            -1.5716700553894043,
+            4.328499794006348,
+            0.41394203901290894
+          ],
+          "max": [
+            -0.7491909861564636,
+            5.351400375366211,
+            0.6516900062561035
+          ]
+        },
+        "center": [
+          -1.160430520772934,
+          4.839950084686279,
+          0.5328160226345062
+        ],
+        "anchor": [
+          -1.3682899475097656,
+          4.929800033569336,
+          0.5104399919509888
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2269",
+            "sha256": "24438422321aa6665de6394aa39e79fdeabdf2bc56427a3419da4dc630546464"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-veins",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+        "fmaId": "FMA13331",
+        "name": "Left axillary vein",
+        "sourceName": "left axillary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA13331",
+        "bounds": {
+          "min": [
+            0.7492620348930359,
+            4.328399658203125,
+            0.4140329658985138
+          ],
+          "max": [
+            1.571410059928894,
+            5.351400375366211,
+            0.6516600251197815
+          ]
+        },
+        "center": [
+          1.160336047410965,
+          4.839900016784668,
+          0.5328464955091476
+        ],
+        "anchor": [
+          1.3708299398422241,
+          4.921700477600098,
+          0.5061599612236023
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2217",
+            "sha256": "7b448d1f2a071e88d1a2ebe54e7e5d417719663a5b01d1226f492b71ebdc19cd"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-veins",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+        "fmaId": "FMA22935",
+        "name": "Right medial brachial vein",
+        "sourceName": "right medial brachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "brachial-veins",
+        "nodeName": "FMA22935",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2341",
+            "sha256": "0468a157795c7346d964d1884627464d5cfe9c4c8bcc84661aefdb2bc2d18259"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.1819400787353516,
+            2.184000015258789,
+            0.3270150125026703
+          ],
+          "max": [
+            -1.500249981880188,
+            4.349800109863281,
+            0.4724330008029938
+          ]
+        },
+        "center": [
+          -1.8410950303077698,
+          3.266900062561035,
+          0.39972400665283203
+        ],
+        "anchor": [
+          -1.8253899812698364,
+          3.2527999877929688,
+          0.38743001222610474
+        ],
+        "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-veins",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+        "fmaId": "FMA22936",
+        "name": "Left medial brachial vein",
+        "sourceName": "left medial brachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "brachial-veins",
+        "nodeName": "FMA22936",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2313",
+            "sha256": "3707bf67b5959e140fea0eca643bc31db00e97620e63afbe48ed10357af44ec8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.4999699592590332,
+            2.184000015258789,
+            0.32708799839019775
+          ],
+          "max": [
+            2.182039976119995,
+            4.349800109863281,
+            0.4722819924354553
+          ]
+        },
+        "center": [
+          1.8410049676895142,
+          3.266900062561035,
+          0.39968499541282654
+        ],
+        "anchor": [
+          1.8217400312423706,
+          3.272900104522705,
+          0.38906198740005493
+        ],
+        "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deep-veins",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "ff12af39a1a8fbed6716321fba0549d93bec2be438dfd475be60bad5bd36a0be"
+}

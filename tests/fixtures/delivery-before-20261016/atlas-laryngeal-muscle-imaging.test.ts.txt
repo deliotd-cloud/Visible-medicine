@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {execFileSync} from 'node:child_process';
+import {readFileSync} from 'node:fs';
+import {currentInputs,delivery,pins,unchangedModels,website} from './atlas-neck-liver-delivery-fixture.ts';
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
+
+const source={
+ 'app/body-content.ts':'4df58aeec6728cefb67332fd9578f9c4e66ec204ec92d10690b9bd9b75b019d8',
+ 'content/laryngeal-muscle-imaging.ts':'0a9c09e86550b6253c4796ef1f91cfc743d3029d098f2ebdd66bb34c40b9b7cb',
+ 'lib/laryngeal-muscle-imaging.ts':'2a00cc7372638c9cbf096f62327fb4e387e75db6cca4897cdb21f37bb18bcade',
+};
+const phrases=['The posterior cricoarytenoid can be visible behind the cricoid;','On MRI, locate the expected lateral cricoarytenoid region','On MRI, orient to the expected transverse bridge behind both arytenoids;','On MRI, consider the expected oblique route between opposite arytenoids;','High-resolution cadaveric MRI supports anatomical research, not routine in-vivo visibility of each muscle.','No imaging study loaded. This source surface is not registered to a CT or MRI acquisition.','Atlas, case and paid-lecture access remain independent.','https://anatomy.ttuhscep.edu/schemes/larynx_tables.html','https://pmc.ncbi.nlm.nih.gov/articles/PMC7056085/','https://pmc.ncbi.nlm.nih.gov/articles/PMC8349453/'];
+function check(epoch:'historical'|'current'){
+ const item=delivery(epoch);
+ const expected=epoch==='historical'?source:Object.fromEntries(Object.entries(source).filter(([path])=>path!=='app/body-content.ts'));
+ pins(item.inputs,expected,epoch);
+ assert.ok(!item.inputs.some(input=>/native-mr|local-mr-study|\.vmmr|patient[-_/]?data/i.test(input.path)));
+ const runtime=item.runtime();for(const phrase of phrases)assert.ok(runtime.includes(phrase),phrase);
+}
+test('historical laryngeal muscle draft retains exact source, wording and access boundary',()=>{
+ check('historical');
+ const previous=JSON.parse(execFileSync('git',['show','c9d149f603b5254a9b20744b6633cd4980133dbb:lib/atlas-model-inventory.json'],{cwd:website,encoding:'utf8',windowsHide:true}));
+ const historical=delivery('historical').inventory;
+ assert.deepEqual(beforeHippocampi(historical.models),previous.models);
+ assert.deepEqual(historical.sources.filter((s:{module:string})=>s.module!=='head-neck'),[
+  {module:'shoulder',sourceCommit:'88cea927d48729769b96ad8fe680b0872b7e6687',manifestSha256:'9fb7329d3d49e6f940005a006ef7088a6a20d5b31ec2e7f2b25fa422c4e18c5a',modelPaths:1},
+  {module:'female-pelvis',sourceCommit:'88cea927d48729769b96ad8fe680b0872b7e6687',manifestSha256:'40d33e513a16cd1c9c82999cf7db2af2bea7139de7b77e181efb7508eb6a2445',modelPaths:2},
+  {module:'lower-limb',sourceCommit:'88cea927d48729769b96ad8fe680b0872b7e6687',manifestSha256:'3487a5bb390776144aee8681128ec89bb2920b2034ec901a8c697497df077ff7',modelPaths:5},
+ ]);
+});
+test('current laryngeal muscle source/import, wording and model delivery remain bound',()=>{
+ const now=delivery('current');currentInputs(now.inputs,Object.keys(source));check('current');unchangedModels();
+ const inventory=JSON.parse(readFileSync(website+'lib/atlas-model-inventory.json','utf8'));
+ assert.equal(inventory.models.length,137);assert.equal(inventory.models.flatMap((m:{paths:string[]})=>m.paths).length,144);
+});
