@@ -11,6 +11,14 @@ const site=fileURLToPath(new URL('../',import.meta.url));
 const source=readFileSync(resolve(site,'lib/education-platform.ts'),'utf8');
 const ts=createRequire(resolve(site,'package.json'))('typescript');
 const hash=value=>createHash('sha256').update(value).digest('hex');
+function compileActual(relative,imports={}){
+  const code=ts.transpileModule(readFileSync(resolve(site,relative),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const target={exports:{}};
+  new Function('module','exports','require',code)(target,target.exports,id=>imports[id]??{});
+  return target.exports;
+}
+const accessPolicy=compileActual('lib/workbook-access-policy.ts');
+const eligibility=compileActual('lib/workbook-eligibility.ts',{'@/lib/workbook-access-policy':accessPolicy});
 console.log(JSON.stringify({source:'actual lib/education-platform.ts',sha256:hash(source),mode:'actual read resolvers, synthetic SQLite withdrawal post-state'}));
 
 let db;
@@ -24,6 +32,7 @@ new Function('module','exports','require',compiled)(module,module.exports,id=>{
   if(id==='@/db/bootstrap')return{ensureDatabase:async()=>{},ensureEducationUser:async()=>({roles:['learner'],status:'active'})};
   if(id==='@/db/platform')return{ensurePlatformSchema:async()=>{}};
   if(id==='@/lib/domain')return{sha256:async value=>hash(value)};
+  if(id==='@/lib/workbook-eligibility')return eligibility;
   return{};
 });
 const {getLearnerEnrolments,getInvitationCourse}=module.exports;
@@ -34,7 +43,8 @@ const accessCompiled=ts.transpileModule(accessSource,{compilerOptions:{module:ts
 const accessModule={exports:{}};
 new Function('module','exports','require',accessCompiled)(accessModule,accessModule.exports,id=>{
   if(id==='cloudflare:workers')return{env};
-  if(id==='@/lib/workbook-access-policy')return{hasWorkbookStaffAccess:roles=>roles.some(role=>['administrator','instructor','examiner'].includes(role))};
+  if(id==='@/lib/workbook-access-policy')return accessPolicy;
+  if(id==='@/lib/workbook-eligibility')return eligibility;
   throw Error(`Unexpected access dependency: ${id}`);
 });
 const {canAccessPublishedWorkbook}=accessModule.exports;
@@ -171,7 +181,7 @@ test('published cohort-only progress remains a resume candidate without a direct
     local.prepare('INSERT INTO cohort_workbook_assignments VALUES (?,?,?,?,?,?,?,?)').run('cohort-allocation:next','cohort:one','workbook:next','active',null,null,null,0);
     assert.equal(await canAccessPublishedWorkbook(learner.userId,['learner'],'workbook:next'),true);
     assert.equal((await entry()).resumeWorkbookId,'workbook:next');
-    assert.equal((await entry()).firstWorkbookId,null,'direct-assignment first-item semantics remain unchanged');
+    assert.equal((await entry()).firstWorkbookId,'workbook:next','a valid cohort-only grant is a first launch item');
   }finally{local.close();}
 });
 

@@ -13,6 +13,7 @@ import {
   learnerOnboardingStatus,
 } from "@/lib/account-policy";
 import { courseEnrolmentEmail, getEmailProviderConfig, sendTransactionalEmail } from "@/lib/transactional-email";
+import { publishedWorkbookEligibilityForRoles } from "@/lib/workbook-eligibility";
 
 type Row = Record<string, unknown>;
 
@@ -578,14 +579,17 @@ export async function enrolInCourse(auth: AuthContext, releaseIdValue: unknown, 
 }
 
 export async function getLearnerEnrolments(auth: AuthContext) {
-  await ensureEducationUser(auth);
+  const account = await ensureEducationUser(auth);
   await ensurePlatformSchema();
+  const now = new Date().toISOString();
+  const eligibility = publishedWorkbookEligibilityForRoles(auth.userId, account.roles, now);
   const rows = await env.DB.prepare(
-    `SELECT cr.id, cr.slug, cr.title, cr.summary, cr.level, cr.duration_label, cr.publisher_name,
-            (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbook_assignments wa2 ON wa2.workbook_id=crw2.workbook_id AND wa2.learner_id=e.user_id AND wa2.status='active' WHERE crw2.release_id=cr.id ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
-            (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN workbooks w3 ON w3.id=crw3.workbook_id AND w3.status='published' JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
-            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
-            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
+    `WITH eligible_workbooks AS (${eligibility.sql})
+     SELECT cr.id, cr.slug, cr.title, cr.summary, cr.level, cr.duration_label, cr.publisher_name,
+            (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN eligible_workbooks ew2 ON ew2.workbook_id=crw2.workbook_id WHERE crw2.release_id=cr.id ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
+            (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN eligible_workbooks ew3 ON ew3.workbook_id=crw3.workbook_id JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN eligible_workbooks live_ew ON live_ew.workbook_id=live_crw.workbook_id JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN eligible_workbooks live_ew ON live_ew.workbook_id=live_crw.workbook_id JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             COUNT(DISTINCT CASE WHEN wa.status='active' THEN crw.workbook_id END) AS workbook_count,
             COALESCE(ROUND(AVG(CASE WHEN wa.status='active' THEN COALESCE(wp.percent_complete,0) END)),0) AS progress
        FROM enrolments e
@@ -595,7 +599,7 @@ export async function getLearnerEnrolments(auth: AuthContext) {
        LEFT JOIN workbook_progress wp ON wp.workbook_id=crw.workbook_id AND wp.learner_id=e.user_id
       WHERE e.user_id=? AND e.status='active'
       GROUP BY cr.id ORDER BY cr.title`,
-  ).bind(auth.userId).all<Row>();
+  ).bind(...eligibility.bindings, auth.userId).all<Row>();
   return rows.results.map((row) => ({
     id: String(row.id), slug: String(row.slug), title: String(row.title), summary: String(row.summary),
     level: String(row.level), duration: String(row.duration_label), publisher: String(row.publisher_name),

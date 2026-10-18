@@ -137,8 +137,9 @@ function verifiedRepository(h:ReturnType<typeof fixture>,studioAccess=true){
     organization:{id:auth.userId===foreign.userId?'org-foreign':'org-1'},
     entitlement:{studioAccess,atlasAccess:false},
   })}};
+  const eligibility=compile('../lib/workbook-eligibility.ts',{'@/lib/workbook-access-policy':workbookAccessPolicy});
   const workbookAccess=compile('../lib/workbook-access.ts',{
-    ...workers,'@/lib/workbook-access-policy':workbookAccessPolicy,
+    ...workers,'@/lib/workbook-access-policy':workbookAccessPolicy,'@/lib/workbook-eligibility':eligibility,
   });
   const publishedRepository=compile('../lib/lecture-repository.ts',{
     ...workers,...bootstrap,...platform,

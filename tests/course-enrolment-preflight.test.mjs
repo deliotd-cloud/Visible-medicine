@@ -22,7 +22,7 @@ const stubs={
 };
 async function compile(text){
  const result=await build({stdin:{contents:text,resolveDir:site,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',tsconfigRaw:{},plugins:[{name:'explicit-bootstrap-seams',setup(b){
-  b.onResolve({filter:/.*/},a=>{if(Object.hasOwn(stubs,a.path))return{path:a.path,namespace:'stub'};if(['@/lib/account-policy','@/lib/course-enrolment-policy'].includes(a.path))return{path:resolve(site,a.path.slice(2)+'.ts')};});
+  b.onResolve({filter:/.*/},a=>{if(Object.hasOwn(stubs,a.path))return{path:a.path,namespace:'stub'};if(['@/lib/account-policy','@/lib/course-enrolment-policy','@/lib/workbook-eligibility','@/lib/workbook-access-policy'].includes(a.path))return{path:resolve(site,a.path.slice(2)+'.ts')};});
   b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:stubs[a.path],loader:'js'}));
  }}]});
  return import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));

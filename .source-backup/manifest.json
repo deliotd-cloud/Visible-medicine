@@ -3,7 +3,7 @@
   "scope": "application-source-only",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
   "fullLocalSourceManifestSha256": "ea67c2c23aa605b3b2ead5e53b85f34c0b6ccb1c1108aa132758fc4ffef2b332",
-  "screenedSnapshotParent": "46d1a21bc5cb0d2ba7a9d065d102a61fc78d4104",
+  "screenedSnapshotParent": "1bca8d9aef78b42d6f77cd1d0bd8347d8b5cd392",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -17122,10 +17122,10 @@
     },
     {
       "path": "lib/education-platform.ts",
-      "bytes": 96227,
-      "sha256": "cf830daca1d2671368d1cf07770964fae493c9625d1ad36f546d0230de21e1ef",
+      "bytes": 96622,
+      "sha256": "d4f8b902b7bbcbdae879fbc519efff63c61c538b747f1c37383f0c9295f30795",
       "mode": "100644",
-      "gitBlob": "d353d0548f1ffde73c9f0037dda0346b137b821c"
+      "gitBlob": "fc70d5a312a9cd56931ce5eaa461b6d0c99cb766"
     },
     {
       "path": "lib/education-presentation-repository.ts",
@@ -18655,10 +18655,10 @@
     },
     {
       "path": "lib/workbook-access.ts",
-      "bytes": 5230,
-      "sha256": "c00dabb4f7abce38ad68bc9934d092eb2f76594000abc0f2b92d020776906162",
+      "bytes": 3570,
+      "sha256": "6ff16c3571031647d403d721ff709b18dded22c5b1de750313168d4565f7ac11",
       "mode": "100644",
-      "gitBlob": "ff93faeccd7c7c9a0865537151e6ed5206279630"
+      "gitBlob": "4ba6043019d933143f85ed2284d8ace801f5ebd0"
     },
     {
       "path": "lib/workbook-authoring-policy.ts",
@@ -18694,6 +18694,13 @@
       "sha256": "b2d194ebb58f27f7db2cfaa0ad295a2c754e15389f56ca98305c733ba89aa308",
       "mode": "100644",
       "gitBlob": "f8c8f8841d66dea73f2fb3d68efa28c7663dc0a2"
+    },
+    {
+      "path": "lib/workbook-eligibility.ts",
+      "bytes": 2578,
+      "sha256": "8a0d85327e1f4e0333b4280b808dee1b8c71dae8d1d60d267ca2d8867367f0d9",
+      "mode": "100644",
+      "gitBlob": "f73b425d44d30afd3ce577f363cea17674238d5e"
     },
     {
       "path": "lib/workbook-retirement-contract.ts",
@@ -24535,24 +24542,24 @@
     },
     {
       "path": "tests/course-enrolment-preflight.test.mjs",
-      "bytes": 7734,
-      "sha256": "7af6d37edc64b4d0b4d7a06536187ea7c98612cc1eb9148cda97302eebaf2b97",
+      "bytes": 7794,
+      "sha256": "fd7a3ed765a39444065d62d92bada2167e3de154f310db6a7eff0522af53df7c",
       "mode": "100644",
-      "gitBlob": "6f8821df8778aa785405ee120802881bdae8de84"
+      "gitBlob": "04eaf7bcd25898febc30bfff3857ed6cae49d1d2"
     },
     {
       "path": "tests/course-entry-retirement.test.mjs",
-      "bytes": 13937,
-      "sha256": "b865dbcc311f8f59102f59f89b67e174fe3108a70eaac03618f827bb8a4bc203",
+      "bytes": 14507,
+      "sha256": "12e90d3affb08279a440e962b5f8d4ea8483b23e2ca5abbf7513bc05c8c4f5b5",
       "mode": "100644",
-      "gitBlob": "cdcc23dd6d4e8b66aa3a9048c35805d72215bc1f"
+      "gitBlob": "062e06fcd1f9af1adb63cce23898047c5246296e"
     },
     {
       "path": "tests/course-invitation-hold.test.mjs",
-      "bytes": 17299,
-      "sha256": "d2ea50c5436fff5b6c8a16f52024ba45777435bf36eaa6e56c4efc56a46f8d4d",
+      "bytes": 17328,
+      "sha256": "3684da3e33579ed9982faa23b0eb54322fcbaf2d565416f8341e02ac78207acb",
       "mode": "100644",
-      "gitBlob": "5f3147ca89187ff7aaa75f1f892fbce54eccedb2"
+      "gitBlob": "9108f2865d6678339d0c313a5df6d55b7cd2add7"
     },
     {
       "path": "tests/course-invitation-page-hold.test.mjs",
@@ -24567,6 +24574,13 @@
       "sha256": "f8bc6d5014ea7c570be1ea9aeb51316bdce74f9eefa5c91df855ea4795cb5e4e",
       "mode": "100644",
       "gitBlob": "2259c3d834ddc1ea470c9e3971ba8e9e28ff2b40"
+    },
+    {
+      "path": "tests/course-resume-authority.test.mjs",
+      "bytes": 22299,
+      "sha256": "cf56eede0ca240b8bc813be719c1cc7344542e2aecdfb577b5ca94ae65b4fc6e",
+      "mode": "100644",
+      "gitBlob": "ae5802a7f3930a81d63a7af9a24822236c2e3285"
     },
     {
       "path": "tests/current-atlas-delivery.mjs",
@@ -25575,6 +25589,20 @@
       "sha256": "a6c088c5f19c1df50dabb65c3107c7b1e39392aaa4cc5b67a08de9931e5a322d",
       "mode": "100644",
       "gitBlob": "4b33e9fec3a714c0b4e0daa0aeb39fb00bd1014b"
+    },
+    {
+      "path": "tests/fixtures/course-resume-before-20261018/education-platform.ts.raw",
+      "bytes": 96227,
+      "sha256": "cf830daca1d2671368d1cf07770964fae493c9625d1ad36f546d0230de21e1ef",
+      "mode": "100644",
+      "gitBlob": "d353d0548f1ffde73c9f0037dda0346b137b821c"
+    },
+    {
+      "path": "tests/fixtures/course-resume-before-20261018/workbook-access.ts.raw",
+      "bytes": 5230,
+      "sha256": "c00dabb4f7abce38ad68bc9934d092eb2f76594000abc0f2b92d020776906162",
+      "mode": "100644",
+      "gitBlob": "ff93faeccd7c7c9a0865537151e6ed5206279630"
     },
     {
       "path": "tests/fixtures/current-atlas-delivery-48-before-head-client.json",
@@ -27964,6 +27992,13 @@
       "gitBlob": "23a47a18e1d1686c637b7ad60d9fa8da1d4328ea"
     },
     {
+      "path": "tests/fixtures/vite-cache-original.ts.raw",
+      "bytes": 3515,
+      "sha256": "ae714a7cbd5c873dfba3119210f6b0659ebb9061464d84cb22e32351147c5f1a",
+      "mode": "100644",
+      "gitBlob": "d5f96c1cab76246b739ebd78712a58d40e11dc11"
+    },
+    {
       "path": "tests/fixtures/workspace-page-original.json",
       "bytes": 6446,
       "sha256": "ec0f0b5fad5afa11b56115025cd126ce670cd78a4e1d94ab18d59af4b65cc9c4",
@@ -29897,10 +29932,10 @@
     },
     {
       "path": "tests/lecture-multi-anatomy-repository.test.ts",
-      "bytes": 16796,
-      "sha256": "2ab05db245ce537bab427d31c14abfa9d7ba829d8d2bd81d8af9249b661f9faf",
+      "bytes": 16946,
+      "sha256": "ce16f6b5a647e8d8578ca9e738b0cf096d64b449ab7ed19b2d4d413b086d2052",
       "mode": "100644",
-      "gitBlob": "07484e869a39447112ea6549044fb44824eeaff2"
+      "gitBlob": "540379752c97fb2101923266328271479f737b5a"
     },
     {
       "path": "tests/lecture-multi-anatomy-ui.test.ts",
@@ -29932,10 +29967,10 @@
     },
     {
       "path": "tests/lecture-repository.test.ts",
-      "bytes": 24036,
-      "sha256": "4b390c1c0ffe2af3b358e36973ddc032a33a31375c5b86200c0450222573c24f",
+      "bytes": 24122,
+      "sha256": "d57df851e97afb4c292f2b80e400b5df9c4f72fc5ecb6aa715b8b2c86aa55c0e",
       "mode": "100644",
-      "gitBlob": "430497ab55fa9fe3e7410c7ec7f49ab23f988d4e"
+      "gitBlob": "07202f2c4da3cb8d02fb0cadf3d78f1f77b46e8d"
     },
     {
       "path": "tests/lecture-request-lifecycle.test.ts",
@@ -30716,10 +30751,10 @@
     },
     {
       "path": "tests/related-lectures.test.ts",
-      "bytes": 24321,
-      "sha256": "0852ee69f5c171e98371e541e16b78612a48f334181f67e020139ce4a8305636",
+      "bytes": 24479,
+      "sha256": "3ba8e3043718b36bfa9b3c32ea249ef3be11a65f85a4c92f219447b28801ccfd",
       "mode": "100644",
-      "gitBlob": "eb7fe84aeb460c67ba94bdbff8264f5255c2bbb9"
+      "gitBlob": "c3aca1e226f5b4af0179528eda4748dc7ff68d2c"
     },
     {
       "path": "tests/release-content-outline.test.ts",
@@ -31191,6 +31226,13 @@
       "gitBlob": "1356fde5c05c451d3ab285d984ee4954031ccd31"
     },
     {
+      "path": "tests/vite-cache-isolation.test.mjs",
+      "bytes": 4677,
+      "sha256": "ec9b3dbab13266943fefef93b74f9c44861b5f4cef623836c14ed293e9fa78e5",
+      "mode": "100644",
+      "gitBlob": "017e952a45d52184041acbdf446e64ce36480879"
+    },
+    {
       "path": "tests/workbook-authoring-policy.test.ts",
       "bytes": 1473,
       "sha256": "077ff9e753714f2c7c53b882ac2d72ccec4211a263cf04ec3b77ff510005ece2",
@@ -31339,10 +31381,10 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 3515,
-      "sha256": "ae714a7cbd5c873dfba3119210f6b0659ebb9061464d84cb22e32351147c5f1a",
+      "bytes": 3495,
+      "sha256": "44007a6002a31fc997de5d8a57ca50e81eb88ebef5c1c78e002188d96c7345e1",
       "mode": "100644",
-      "gitBlob": "d5f96c1cab76246b739ebd78712a58d40e11dc11"
+      "gitBlob": "93dc507077a5e32bb557f9ec360b77394b1b6693"
     },
     {
       "path": "worker/index.ts",
@@ -32700,7 +32742,7 @@
       "bytes": 3982
     }
   ],
-  "at": "2026-10-18T17:24:19.975Z",
+  "at": "2026-10-18T17:58:32.421Z",
   "sourceOnlyRetiredCourseAndFooterDelta": [
     {
       "path": "components/SiteFooter.tsx",
@@ -32738,6 +32780,83 @@
       "path": "tests/course-entry-retirement.test.mjs",
       "bytes": 13937,
       "sha256": "b865dbcc311f8f59102f59f89b67e174fe3108a70eaac03618f827bb8a4bc203"
+    }
+  ],
+  "sourceOnlyCourseLaunchAuthorityDelta": [
+    {
+      "path": "lib/education-platform.ts",
+      "bytes": 96622,
+      "sha256": "d4f8b902b7bbcbdae879fbc519efff63c61c538b747f1c37383f0c9295f30795"
+    },
+    {
+      "path": "lib/workbook-access.ts",
+      "bytes": 3570,
+      "sha256": "6ff16c3571031647d403d721ff709b18dded22c5b1de750313168d4565f7ac11"
+    },
+    {
+      "path": "lib/workbook-eligibility.ts",
+      "bytes": 2578,
+      "sha256": "8a0d85327e1f4e0333b4280b808dee1b8c71dae8d1d60d267ca2d8867367f0d9"
+    },
+    {
+      "path": "tests/course-enrolment-preflight.test.mjs",
+      "bytes": 7794,
+      "sha256": "fd7a3ed765a39444065d62d92bada2167e3de154f310db6a7eff0522af53df7c"
+    },
+    {
+      "path": "tests/course-entry-retirement.test.mjs",
+      "bytes": 14507,
+      "sha256": "12e90d3affb08279a440e962b5f8d4ea8483b23e2ca5abbf7513bc05c8c4f5b5"
+    },
+    {
+      "path": "tests/course-invitation-hold.test.mjs",
+      "bytes": 17328,
+      "sha256": "3684da3e33579ed9982faa23b0eb54322fcbaf2d565416f8341e02ac78207acb"
+    },
+    {
+      "path": "tests/course-resume-authority.test.mjs",
+      "bytes": 22299,
+      "sha256": "cf56eede0ca240b8bc813be719c1cc7344542e2aecdfb577b5ca94ae65b4fc6e"
+    },
+    {
+      "path": "tests/fixtures/course-resume-before-20261018/education-platform.ts.raw",
+      "bytes": 96227,
+      "sha256": "cf830daca1d2671368d1cf07770964fae493c9625d1ad36f546d0230de21e1ef"
+    },
+    {
+      "path": "tests/fixtures/course-resume-before-20261018/workbook-access.ts.raw",
+      "bytes": 5230,
+      "sha256": "c00dabb4f7abce38ad68bc9934d092eb2f76594000abc0f2b92d020776906162"
+    },
+    {
+      "path": "tests/fixtures/vite-cache-original.ts.raw",
+      "bytes": 3515,
+      "sha256": "ae714a7cbd5c873dfba3119210f6b0659ebb9061464d84cb22e32351147c5f1a"
+    },
+    {
+      "path": "tests/lecture-multi-anatomy-repository.test.ts",
+      "bytes": 16946,
+      "sha256": "ce16f6b5a647e8d8578ca9e738b0cf096d64b449ab7ed19b2d4d413b086d2052"
+    },
+    {
+      "path": "tests/lecture-repository.test.ts",
+      "bytes": 24122,
+      "sha256": "d57df851e97afb4c292f2b80e400b5df9c4f72fc5ecb6aa715b8b2c86aa55c0e"
+    },
+    {
+      "path": "tests/related-lectures.test.ts",
+      "bytes": 24479,
+      "sha256": "3ba8e3043718b36bfa9b3c32ea249ef3be11a65f85a4c92f219447b28801ccfd"
+    },
+    {
+      "path": "tests/vite-cache-isolation.test.mjs",
+      "bytes": 4677,
+      "sha256": "ec9b3dbab13266943fefef93b74f9c44861b5f4cef623836c14ed293e9fa78e5"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 3495,
+      "sha256": "44007a6002a31fc997de5d8a57ca50e81eb88ebef5c1c78e002188d96c7345e1"
     }
   ]
 }

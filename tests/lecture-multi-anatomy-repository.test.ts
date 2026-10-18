@@ -102,7 +102,8 @@ function harness(){
     organization:{id:auth.userId===foreign.userId?'org-foreign':'org-1'},
     entitlement:{studioAccess:true,atlasAccess:false},
   })}};
-  const workbookAccess=compile('../lib/workbook-access.ts',{...worker,'@/lib/workbook-access-policy':accessPolicy});
+  const eligibility=compile('../lib/workbook-eligibility.ts',{'@/lib/workbook-access-policy':accessPolicy});
+  const workbookAccess=compile('../lib/workbook-access.ts',{...worker,'@/lib/workbook-access-policy':accessPolicy,'@/lib/workbook-eligibility':eligibility});
   const repository=compile('../lib/lecture-repository.ts',{
     ...worker,...bootstrap,...platform,'@/lib/workbook-access':workbookAccess,
     '@/lib/lecture-content':content,'@/lib/lecture-manifest':manifest,

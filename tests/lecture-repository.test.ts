@@ -146,10 +146,14 @@ function harness() {
   schema(sqlite);
   const DB = new D1Adapter(sqlite);
   const envModule = { env: { DB } };
-  const accessPolicy = { hasWorkbookStaffAccess: (userRoles: readonly string[]) => userRoles.some((role) => ["instructor", "examiner", "administrator"].includes(role)) };
+  const accessPolicy = compileCommonJs("../lib/workbook-access-policy.ts", {});
+  const eligibility = compileCommonJs("../lib/workbook-eligibility.ts", {
+    "@/lib/workbook-access-policy": accessPolicy,
+  });
   const workbookAccess = compileCommonJs("../lib/workbook-access.ts", {
     "cloudflare:workers": envModule,
     "@/lib/workbook-access-policy": accessPolicy,
+    "@/lib/workbook-eligibility": eligibility,
   });
   const audits: string[] = [];
   const repository = compileCommonJs("../lib/lecture-repository.ts", {

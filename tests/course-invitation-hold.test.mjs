@@ -22,7 +22,7 @@ const stubs={
  '@/lib/transactional-email':`export function getEmailProviderConfig(){return {publicSiteUrl:null};} export function courseEnrolmentEmail(){return {subject:'synthetic',text:'synthetic'};} export async function sendTransactionalEmail(){return {status:'held',reason:'TEST_NO_SEND',sentAt:null};}`,
 };
 const compiled=await build({stdin:{contents:"export {enrolInCourse} from './lib/education-platform.ts';export {canAccessPublishedWorkbook,canAccessPublishedCase} from './lib/workbook-access.ts';export * from './lib/course-enrolment-policy.ts';",resolveDir:root,loader:'ts'},bundle:true,write:false,platform:'node',format:'esm',tsconfigRaw:{},plugins:[{name:'synthetic-service-boundaries',setup(b){
- b.onResolve({filter:/.*/},a=>{if(Object.hasOwn(stubs,a.path))return {path:a.path,namespace:'stub'};if(['@/lib/account-policy','@/lib/workbook-access-policy','@/lib/course-enrolment-policy'].includes(a.path))return {path:resolve(root,a.path.slice(2)+'.ts')};});
+ b.onResolve({filter:/.*/},a=>{if(Object.hasOwn(stubs,a.path))return {path:a.path,namespace:'stub'};if(['@/lib/account-policy','@/lib/workbook-access-policy','@/lib/workbook-eligibility','@/lib/course-enrolment-policy'].includes(a.path))return {path:resolve(root,a.path.slice(2)+'.ts')};});
  b.onLoad({filter:/.*/,namespace:'stub'},a=>({contents:stubs[a.path],loader:'js'}));
 }}]});
 const {enrolInCourse,canAccessPublishedWorkbook,canAccessPublishedCase,INVITATION_SELF_ENROLMENT_ENABLED,INVITATION_SELF_ENROLMENT_HOLD_MESSAGE}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));

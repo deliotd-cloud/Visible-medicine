@@ -59,6 +59,7 @@ export default defineConfig(async ({mode, command}) => {
   const { cloudflare } = await import('@cloudflare/vite-plugin');
 
   return {
+    cacheDir: resolve(process.cwd(), '.local/vite-cache'),
     // Process-only, loopback/query-gated diagnostics; production builds are off.
     define: {__VM_LOCAL_HEAD_DIAGNOSTICS__: JSON.stringify(headTransferDiagnosticsEnabled(command, process.env.VM_LOCAL_HEAD_DIAGNOSTICS))},
     css: { postcss: { plugins: [tailwindcss()] } },
@@ -78,3 +79,4 @@ export default defineConfig(async ({mode, command}) => {
     ],
   };
 });
+
