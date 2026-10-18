@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 52,
+  "revision": 53,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -23,7 +23,7 @@
     "atlasTree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79",
+    "reviewIntegration": "533ddf192b09b191aef129223f0d10d87c9c18ba669d963b43d09f76ff6a2fc4",
     "reviewSourceFiles": 1528,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -1167,6 +1167,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-18",
+      "revision": 53,
+      "change": "Exact-source native head ordinary browser Back/Forward positions, native layouts and windows; opaque per-entry keys, coordinates only in bounded RAM. Fresh links retain canonical focus and no CT/MRI coordinate transfer. Shared normal Review now includes the helper; no anatomy, teaching, masks, private saved objects or approvals changed. Source6ba, all71/eight statuses/owners/acceptance remain. Closed52 preserves exact prior delivery and assertions; old51/50 and source epochs retain their original scope. Local engineering progress, not clinical/spatial/public-release acceptance."
+    },
     {
       "date": "2026-10-18",
       "revision": 52,

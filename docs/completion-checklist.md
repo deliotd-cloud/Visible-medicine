@@ -1,6 +1,6 @@
 # Visible Medicine completion checklist
 
-Revision 52 · Updated 2026-10-18
+Revision 53 · Updated 2026-10-18
 
 Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
 
@@ -8,7 +8,7 @@ This is the persistent project checklist, not a claim that the whole website is 
 
 ## Current baseline
 
-Atlas source: `6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79`.
+Atlas source: `6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `533ddf192b09b191aef129223f0d10d87c9c18ba669d963b43d09f76ff6a2fc4`.
 
 1104 root-body representations have 9936 topic placements: 9326 editorial drafts, 571 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
 
@@ -441,6 +441,7 @@ I can inventory sources and gaps, research acceptable references/assets, write r
 
 ## Change log
 
+- 2026-10-18 · revision 53: Exact-source native head ordinary browser Back/Forward positions, native layouts and windows; opaque per-entry keys, coordinates only in bounded RAM. Fresh links retain canonical focus and no CT/MRI coordinate transfer. Shared normal Review now includes the helper; no anatomy, teaching, masks, private saved objects or approvals changed. Source6ba, all71/eight statuses/owners/acceptance remain. Closed52 preserves exact prior delivery and assertions; old51/50 and source epochs retain their original scope. Local engineering progress, not clinical/spatial/public-release acceptance.
 - 2026-10-18 · revision 52: Prepared coherent clean Atlas6ba0dd43 import through all four generated learner modules, normal protected Review and freshly replayed coverage producers. Four source-bound abdominal radial-EUS drafts; root9326draft/571pending/39generated. Original closed51/50 and older historical evidence remains separate from current admission; stale prior teaching cannot approve current material. All71requirements/eightoptional ideas/statuses/owners/acceptance remain unchanged. Frozen candidates/private state unchanged. Local engineering checks do not confer clinical, browser, spatial or release acceptance.
 - 2026-10-18 · revision 51: Prepared coherent clean sourcec5a09df import through all four generated learner modules, normal protected Review and freshly replayed coverage producers. Four source-bound lacrimal Ultrasound drafts;9,932 other root topics preserved; source/checklist evidence unchanged and12stale teaching requests refused before storage. Root readiness9322draft/575pending/39generated. Closed50 proof bodies/bytes retained, separate current admission and actual imported resolver checks added. All71requirements/eightoptional ideas/statuses/owners/acceptance remain unchanged. Frozen review candidates and private state are not changed or approved. Local build/tests do not confer clinical, spatial registration, browser or release acceptance.
 - 2026-10-18 · revision 50: Prepared coherent source70260f13 import across four learner modules, normal protected Review and freshly produced coverage provenance. Added two source-bound deep-plantar Ultrasound drafts without new media/dependencies/geometry or approval migration;9,934 other root placements remain exact. Root readiness is9318draft/579pending/39generated. Closed49 evidence retains every prior head-client and current-proof assertion, while separate current tests bind the new source. All71 requirements/eight optional ideas and statuses/owners/acceptance remain unchanged. Local candidate verification is distinct from browser, clinical and release acceptance.

@@ -19,7 +19,7 @@ assert.equal(records.size,revision50.files.length);
 export function readRevision50(path){
  assert(typeof path==='string'&&/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(p=>!p||p==='.'||p==='..'));
  const row=records.get(path);
- if(!row&&path==='atlas-review/content/regional-teaching/abdomen.json')return readRevision51(path);
+ if(!row&&['atlas-review/content/regional-teaching/abdomen.json','components/HeadAtlasViewer.tsx','scripts/bind-clinical-review.mjs'].includes(path))return readRevision51(path);
  if(!row)return readFileSync(new URL(path,site));
  assert.equal(row.storagePath,path+'.raw');
  const bytes=readFileSync(new URL(row.storagePath,archive));

@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';import test from 'node:test';import {readFileSync} from 'node:fs';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';import {pathToFileURL} from 'node:url';import {build} from 'esbuild';
 import {validateChecklist} from '../scripts/refresh-completion-checklist.mjs';
-import {currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+import {readRevision52,validateRevision52Delivery} from './historical-native-head-history-delivery-52.mjs';
+const validateCurrentAtlasDelivery=validateRevision52Delivery;
 import {revision51,readRevision51,validateRevision51Delivery} from './historical-radial-eus-delivery-51.mjs';
-const sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>readFileSync(new URL('../'+p,import.meta.url)),json=p=>JSON.parse(read(p)),source='6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb',sourceTree='4ce7882a2748d2f190e4b4f8783af6416c7cf44b',review='d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79';
+const sha=b=>createHash('sha256').update(b).digest('hex'),read=p=>readRevision52(p),json=p=>JSON.parse(read(p)),source='6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb',sourceTree='4ce7882a2748d2f190e4b4f8783af6416c7cf44b',review='d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79';
 function replace(text,a,b){assert.equal(text.split(a).length,2,a.slice(0,100));return text.replace(a,b);}
 
 test('closed51 retains exact bytes and only declared current-test/history seams change',()=>{

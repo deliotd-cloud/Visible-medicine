@@ -43,6 +43,7 @@ import {headMaskHits} from '../lib/head-mask-picking';
 import {headSliceKey,headSliceNumber} from '../lib/head-atlas-slice-controls';
 import {headSliceViewport,zoomHeadSliceViewport,fitHeadMaskViewport,nearestHeadMaskSlice} from '../lib/head-slice-viewport';
 import {bindHeadWindowDrag} from '../lib/head-window-drag';
+import {headViewHistory,type HeadHistoryScope,type HeadHistoryView} from '../lib/head-view-history.ts';
 import HeadSlicePlayback from './HeadSlicePlayback';
 import './head-atlas.css';
 import './head-structure-learning.css';
@@ -328,6 +329,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   const configuredRequestRef=useRef<AbortController|null>(null);
   const [localSourceState,setLocalSourceState]=useState<HeadLocalSourceState>('unknown');
   const viewMemoryReadyRef=useRef(false);
+  const pendingHistoryRestoreRef=useRef<{pkg:LocalHeadPackage;study:LoadedStudy;href:string;view:HeadHistoryView}|null>(null);
   function cancelPackageReads(){
     // Close/replacement runs before passive effect cleanup. Abort synchronously
     // so a native read settling in that interval cannot restore retired data.
@@ -338,6 +340,29 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   const groups=useMemo(()=>groupHeadOverlays(study?.definition.entries??[]),[study]);
   const practice=useHeadAtlasPractice(pkg,study),quizActive=practice.active,hideAnswer=quizActive&&!practice.outcome;
   if(quizActive)viewMemoryReadyRef.current=false;
+  const historyLiveRef=useRef({pkg,study,modality,cursor,windowing,expanded,rightPanel,quizActive});
+  historyLiveRef.current={pkg,study,modality,cursor,windowing,expanded,rightPanel,quizActive};
+  const historyHref=()=>window.location.pathname+window.location.search+window.location.hash;
+  function currentHistoryScope(value=historyLiveRef.current):HeadHistoryScope|null{
+    return value.pkg&&value.study&&window.location.pathname===`/atlas/${value.modality.toLowerCase()}-head`
+      ?{pkg:value.pkg,study:value.study,modality:value.modality,revision:HEAD_MANIFEST_SHA256}:null;
+  }
+  function rememberHistoryView(point?:Vec3){
+    const live=historyLiveRef.current,scope=currentHistoryScope(live);
+    if(!scope||!viewMemoryReadyRef.current||live.quizActive||live.rightPanel!=='info'||live.expanded==='3d'||
+      typeof window.history.replaceState!=='function')return;
+    const navigation=parseHeadImageNavigation(new URLSearchParams(window.location.search),HEAD_MANIFEST_SHA256,live.modality);
+    if(navigation.invalid||navigation.position)return;
+    const href=historyHref(),entry=headViewHistory.ensure(window.history.state,href);
+    if(!entry)return;
+    if(entry.changed)window.history.replaceState(entry.state,'');
+    headViewHistory.save(entry.state,href,scope,{cursor:point??live.cursor,layout:live.expanded??'multiplanar',windowing:live.windowing});
+  }
+  useEffect(()=>()=>{
+    const last=historyLiveRef.current.pkg;
+    const nextIsImaging=window.location.pathname==='/atlas/ct-head'||window.location.pathname==='/atlas/mri-head';
+    if(last&&folderSession?.read(HEAD_MANIFEST_SHA256)!==last&&!(last.source==='configured-local'&&nextIsImaging))headViewHistory.clearPackage(last);
+  },[folderSession]);
   const displayLayerOpacity=useMemo(()=>quizActive?{}:layerOpacity,[quizActive,layerOpacity]);
   const sliceSelection=quizActive?(practice.mode==='label'||practice.mode==='recall'||practice.outcome?practice.target:null):selected;
   const visibleLayers=useMemo(()=>quizActive?(sliceSelection?[sliceSelection]:[]):visibleHeadOverlays(groupLayers,hiddenLayers,selected),[quizActive,sliceSelection,groupLayers,hiddenLayers,selected]);
@@ -452,20 +477,28 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   const reviewContextRef=useRef(reviewContext);reviewContextRef.current=reviewContext;
   // Stable for the wheel listener; read the current question without stale closures.
   // A canvas click then places its fresh answer in the same event after navigation.
-  const navigateCursor=useMemo(()=>(point:Vec3)=>{practiceRef.current.clearPendingPick(point);if(!practiceRef.current.active)viewMemoryReadyRef.current=true;setCursor(point);},[]);
+  const navigateCursor=useMemo(()=>(point:Vec3)=>{practiceRef.current.clearPendingPick(point);if(!practiceRef.current.active){viewMemoryReadyRef.current=true;pendingHistoryRestoreRef.current=null;rememberHistoryView(point);}setCursor(point);},[]);
   useEffect(()=>{setPracticeOrigin(null);},[study]);
   useEffect(()=>{if(!practice.active&&!practice.finished)setPracticeOrigin(null);},[practice.active,practice.finished]);
   useEffect(()=>{
-    function restore(){
+    function restore(fromHistory=false){
       const navigation=parseHeadImageNavigation(new URLSearchParams(window.location.search),HEAD_MANIFEST_SHA256,modality);
+      if(fromHistory){
+        const live=historyLiveRef.current,scope=currentHistoryScope(live),href=historyHref();
+        const view=scope&&!navigation.invalid&&!navigation.position?headViewHistory.read(window.history.state,href,scope):null;
+        pendingHistoryRestoreRef.current=view&&live.pkg&&live.study?{pkg:live.pkg,study:live.study,href,view}:null;
+        viewMemoryReadyRef.current=!!view;
+        setActiveId('');setSelected(null);
+        if(view){setCursor(view.cursor);setExpanded(view.layout==='multiplanar'?null:view.layout);setWindowing(view.windowing);}
+      }
       practiceRef.current.end();setPracticeOrigin(null);setUrlNavigation(navigation);
       setLinkedOnly(false);
       setLearningPosition(navigation.position??{sequenceId:'brainstem',conceptId:null});setRightPanel(navigation.position?'guided':'info');
       setNavigationNotice(navigation.invalid?'This anatomy link is invalid or belongs to another source revision. No structure has been substituted.':'');
       setNavigationEpoch(value=>value+1);
     }
-    restore();window.addEventListener('popstate',restore);
-    return()=>window.removeEventListener('popstate',restore);
+    restore();const onPopState=()=>restore(true);window.addEventListener('popstate',onPopState);
+    return()=>window.removeEventListener('popstate',onPopState);
   },[modality]);
   useEffect(()=>{setOverlayGroup('selected');setGroupLayers([]);setHiddenLayers(new Set());setOverlayStatus('');setGroupLabels(false);setLayerOpacity({});},[study]);
   useEffect(()=>{
@@ -491,7 +524,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
     if(navigation.invalid||!navigation.conceptId){setActiveId('');setSelected(null);setQuery('');setFamily('All systems');return;}
     const match=resolveHeadConcept(study.definition.entries,navigation.conceptId,modality);
     const entry=study.definition.entries.find(candidate=>candidate===match);
-    if(entry){setActiveId(entry.id);setQuery('');setFamily(entry.family);setExpanded('axial');setOverlay(true);setOverlayGroup('selected');}
+    if(entry){setActiveId(entry.id);setQuery('');setFamily(entry.family);const pending=pendingHistoryRestoreRef.current;setExpanded(pending?.pkg===pkg&&pending.study===study&&pending.href===historyHref()?(pending.view.layout==='multiplanar'?null:pending.view.layout):'axial');setOverlay(true);setOverlayGroup('selected');}
     else{setActiveId('');setSelected(null);setNavigationNotice('This exact linked structure is unavailable in the loaded study. No structure has been substituted.');}
   },[study,modality,navigationEpoch]);
   useEffect(()=>{
@@ -511,15 +544,19 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
       if(!controller.signal.aborted&&studyRequestRef.current===controller)setStatus(headStudyLoadingMessage(modality,progress));
     }).then(value=>{
       if(controller.signal.aborted)return;
-      // Resume only ordinary browsing of this exact source. A concept/tour URL
-      // (including an invalid one) must never inherit an unrelated saved view.
+      // Generic folder memory never sets a linked focus. Only an exact prior
+      // ordinary history entry may restore its own native view on Back/Forward.
       const navigation=parseHeadImageNavigation(new URLSearchParams(window.location.search),HEAD_MANIFEST_SHA256,modality);
-      const savedView=!navigation.invalid&&!navigation.conceptId&&!navigation.position
+      const scope:HeadHistoryScope={pkg,study:value,modality,revision:HEAD_MANIFEST_SHA256};
+      const href=historyHref();
+      const restored=!navigation.invalid&&!navigation.position?headViewHistory.read(window.history.state,href,scope):null;
+      pendingHistoryRestoreRef.current=restored?{pkg,study:value,href,view:restored}:null;
+      const savedView=!restored&&!navigation.invalid&&!navigation.conceptId&&!navigation.position
         ?folderSession?.readView(pkg,modality,value.definition,HEAD_MANIFEST_SHA256):null;
-      viewMemoryReadyRef.current=!navigation.invalid&&!navigation.conceptId&&!navigation.position;
-      setStudy(value);setCursor(savedView?.cursor??[value.geometry.shapeKJI[2],value.geometry.shapeKJI[1],value.geometry.shapeKJI[0]].map(n=>Math.floor(n/2)) as Vec3);
-      setExpanded(savedView?.layout==='multiplanar'?null:savedView?.layout??'axial');
-      setWindowing(folderSession?.readWindow(pkg,modality,value.definition,HEAD_MANIFEST_SHA256)??initialWindow(modality,value.range));setStatus('');
+      viewMemoryReadyRef.current=!!restored||!navigation.invalid&&!navigation.conceptId&&!navigation.position;
+      setStudy(value);setCursor(restored?.cursor??savedView?.cursor??[value.geometry.shapeKJI[2],value.geometry.shapeKJI[1],value.geometry.shapeKJI[0]].map(n=>Math.floor(n/2)) as Vec3);
+      const layout=restored?.layout??savedView?.layout;setExpanded(layout==='multiplanar'?null:layout??'axial');
+      setWindowing(restored?.windowing??folderSession?.readWindow(pkg,modality,value.definition,HEAD_MANIFEST_SHA256)??initialWindow(modality,value.range));setStatus('');
     }).catch(reason=>{if(!controller.signal.aborted){failedStudyRef.current={pkg,modality};setStudyLoadFailed(true);setStatus('');setError(reason instanceof Error?reason.message:'The study could not be opened.');}});
     return()=>{controller.abort();if(studyRequestRef.current===controller)studyRequestRef.current=null;failedStudyRef.current=null;};
   },[pkg,modality,studyLoadAttempt,folderSession]);
@@ -533,6 +570,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
       folderSession?.keepView(pkg,modality,study.definition,HEAD_MANIFEST_SHA256,{cursor,layout:expanded??'multiplanar'});
     }
   },[folderSession,retainFolder,pkg,study,modality,cursor,expanded,quizActive,rightPanel]);
+  useEffect(()=>{rememberHistoryView();},[pkg,study,modality,cursor,expanded,windowing,quizActive,rightPanel]);
   function retryStudy(){
     const failed=failedStudyRef.current;
     if(!failed||failed.pkg!==pkg||failed.modality!==modality||study||packageOpening||quizActive)return;
@@ -553,16 +591,18 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
     const entry=study.definition.entries.find(item=>item.id===activeId);if(!entry)return;
     const controller=new AbortController();entryRequestRef.current=controller;setStatus(`Opening ${headLabel(entry)}…`);setError('');
     const reuseMask=groupLayers.find(layer=>canReuseHeadMask(pkg,study,entry,layer));
-    loadHeadEntry(pkg,study,entry,controller.signal,reuseMask?{reuseMask}:undefined).then(value=>{if(controller.signal.aborted)return;setSelected(value);if(value.focus){viewMemoryReadyRef.current=true;setCursor(focusIJK(study,value.focus));}setStatus('');}).catch(reason=>{if(!controller.signal.aborted){setStatus('');setFailedEntryId(entry.id);setError(reason instanceof Error?reason.message:'The structure could not be opened.');}});
+    loadHeadEntry(pkg,study,entry,controller.signal,reuseMask?{reuseMask}:undefined).then(value=>{if(controller.signal.aborted||entryRequestRef.current!==controller)return;setSelected(value);const pending=pendingHistoryRestoreRef.current;if(pending?.pkg===pkg&&pending.study===study&&pending.href===historyHref()&&!practiceRef.current.active){viewMemoryReadyRef.current=true;setCursor(pending.view.cursor);}else if(value.focus){viewMemoryReadyRef.current=true;setCursor(focusIJK(study,value.focus));}setStatus('');}).catch(reason=>{if(!controller.signal.aborted){setStatus('');setFailedEntryId(entry.id);setError(reason instanceof Error?reason.message:'The structure could not be opened.');}});
     return()=>{controller.abort();if(entryRequestRef.current===controller)entryRequestRef.current=null;};
   },[pkg,study,activeId,quizActive,entryLoadAttempt]);
   function retryStructure(){
     if(!pkg||!study||quizActive||selected||!activeId||failedEntryId!==activeId)return;
     setError('');setFailedEntryId(null);setEntryLoadAttempt(value=>value+1);
   }
-  async function openConfiguredAtlas(){
+  async function openConfiguredAtlas(automatic=false){
     const generation=++importGeneration.current;
     cancelPackageReads();
+    if(!automatic)headViewHistory.clear();else if(pkg)headViewHistory.clearPackage(pkg);
+    pendingHistoryRestoreRef.current=null;
     // Retire the old package before async verification. A failed reopen must
     // not leave a cancelled package masquerading as an opening/usable study.
     failedStudyRef.current=null;setStudyLoadFailed(false);
@@ -581,7 +621,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   }
   useEffect(()=>{
     if(!pkg){
-      if(['localhost','127.0.0.1','[::1]'].includes(window.location.hostname))void openConfiguredAtlas();
+      if(['localhost','127.0.0.1','[::1]'].includes(window.location.hostname))void openConfiguredAtlas(true);
       else setLocalSourceState('unavailable');
     }
     return ()=>{importGeneration.current++;configuredRequestRef.current?.abort();};
@@ -591,6 +631,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   async function chooseFiles(event:ChangeEvent<HTMLInputElement>){
     const files=event.target.files?Array.from(event.target.files):[];if(!files.length)return;const generation=++importGeneration.current;
     cancelPackageReads();
+    headViewHistory.clear();pendingHistoryRestoreRef.current=null;
     setLocalSourceState(previous=>headSourceAfterCancel(previous,window.location.hostname));
     folderSession?.clear();
     failedStudyRef.current=null;setStudyLoadFailed(false);
@@ -604,6 +645,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
     // Closing never deletes source files or claims immediate browser heap erasure.
     importGeneration.current++;
     cancelPackageReads();
+    headViewHistory.clear();pendingHistoryRestoreRef.current=null;
     setLocalSourceState(previous=>headSourceAfterCancel(previous,window.location.hostname));
     folderSession?.clear();setRetainFolder(false);
     failedStudyRef.current=null;setStudyLoadFailed(false);
@@ -624,7 +666,9 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   }
   function writeNavigation(conceptId:string|null,position:HeadLearningPosition|null){
     const href=headImageHref(modality,conceptId,position,HEAD_MANIFEST_SHA256);if(!href)return;
-    if(window.location.pathname+window.location.search+window.location.hash!==href)window.history.pushState(window.history.state,'',href);
+    rememberHistoryView();pendingHistoryRestoreRef.current=null;
+    viewMemoryReadyRef.current=!conceptId&&!position;
+    if(window.location.pathname+window.location.search+window.location.hash!==href)window.history.pushState(headViewHistory.freshExternalState(window.history.state),'',href);
     setUrlNavigation(parseHeadImageNavigation(new URL(href,window.location.origin).searchParams,HEAD_MANIFEST_SHA256,modality));setNavigationNotice('');
   }
   function browseCurrentAtlas(){
@@ -906,7 +950,7 @@ const info=<><div className="head-right-tabs" role="group" aria-label="Right pan
     <div className="head-window-controls">{!quizActive&&<label><input type="checkbox" checked={overlay} onChange={event=>setOverlay(event.target.checked)}/> Labels &amp; overlay</label>}<label><input type="checkbox" checked={showCrosshair} onChange={event=>setShowCrosshair(event.target.checked)}/> Crosshair localizer</label>{!quizActive&&!!selected?.entry.supplementary_geometries?.length&&<label><input type="checkbox" checked={regionalCourse} onChange={event=>setRegionalCourse(event.target.checked)}/> Regional centreline</label>}{modality==='CT'&&<><button type="button" onClick={()=>setWindowing([40,80])}>Brain window</button><button type="button" onClick={()=>setWindowing([500,2500])}>Bone window</button></>}<details className="head-display-settings"><summary>Display settings</summary><div><label>Level<input aria-label={modality==='CT'?'CT native window level':'MRI display level (not HU)'} type="number" step={1} value={Math.round(windowing[0])} onChange={event=>{const v=event.target.valueAsNumber;if(Number.isFinite(v))setWindowing([v,windowing[1]]);}}/></label><label>Width<input aria-label={modality==='CT'?'CT native window width':'MRI display width (not HU)'} type="number" min={1} step={1} value={Math.round(windowing[1])} onChange={event=>{const v=event.target.valueAsNumber;if(Number.isFinite(v))setWindowing([windowing[0],Math.max(1,v)]);}}/></label><button type="button" disabled={!study} onClick={()=>{if(study)setWindowing(initialWindow(modality,study.range));}}>Reset window</button><p>Restores this study’s opening contrast without changing your slice or selection.</p></div></details>{!quizActive&&<button type="button" disabled={!activeId} onClick={()=>{setActiveId('');setSelected(null);setLearningPosition(previous=>({...previous,conceptId:null}));writeNavigation(null,null);}}>Clear selection</button>}</div>
   </>:undefined;
 return <ImagingAtlasShell canFocusImages={!!study&&!quizActive&&rightPanel==='info'&&!comparisonOpen} imageFocusContext={imageFocusIdentity} comparison={comparisonOpen?(activeConcept?.atlasHref?<HeadAtlasInlineComparisonLoader scope={inlineComparison!} conceptId={activeConcept.conceptId} selectionReady={!!concept} revision={HEAD_MANIFEST_SHA256} modality={modality} onSelectConcept={selectComparisonConcept} onClose={closeComparison} onPlaybackStatus={reportPlaybackModel}/>:<section className="head-inline-comparison"><h2>3D Atlas comparison</h2><p>Select a loaded structure marked “3D Atlas link”. No model is substituted for an unmapped annotation.</p><button type="button" onClick={closeComparison}>Close comparison</button></section>):undefined}
-  title={modality==='CT'?'CT head anatomy':'MRI head anatomy'} modality={modality==='CT'?'ct':'mri'} regionId="head-neck" headNavigation={{conceptId:comparisonConcept,position:comparisonPosition,revision:HEAD_MANIFEST_SHA256}} subtitle="Native images · source-bound anatomical annotations" notice={pkg?.source==='configured-local'?'Private local test · Read-only SSD source; no upload. CT and MRI are different subjects.':'Private local test · CT and MRI are different subjects. Files stay in this browser session; nothing is uploaded.'} actions={<><Link prefetch={false} href={comparisonHref??(otherModality==='CT'?'/atlas/ct-head':'/atlas/mri-head')} title={unlinkedComparison?'No verified comparison for this context. Opens the general atlas without carrying the current focus.':undefined}>{comparisonLabel}</Link><button ref={openButtonRef} onClick={()=>inputRef.current?.click()} type="button">{pkg?'Change package':'Open approved atlas'}</button>{!pkg&&!packageOpening&&(localSourceState==='available'||localSourceState==='failed'||localSourceState==='paused')&&<button type="button" onClick={()=>void openConfiguredAtlas()}>{localSourceState==='failed'?'Retry local atlas':localSourceState==='paused'?'Resume local atlas':'Reopen local atlas'}</button>}{(pkg||packageOpening)&&<button type="button" onClick={closeAtlas} title="End this local session, including practice results. Original files are unchanged.">Close atlas</button>}{pkg&&pkg.source!=='configured-local'&&folderSession&&<HeadFolderSharing enabled={retainFolder} onChange={enabled=>{setRetainFolder(enabled);if(enabled)folderSession.keep(pkg,HEAD_MANIFEST_SHA256);else folderSession.clear();}}/>}</>} sidebar={sidebar} info={info} infoLabel="Anatomy learning panel" toolbar={toolbar}>
+  title={modality==='CT'?'CT head anatomy':'MRI head anatomy'} modality={modality==='CT'?'ct':'mri'} regionId="head-neck" headNavigation={{conceptId:comparisonConcept,position:comparisonPosition,revision:HEAD_MANIFEST_SHA256}} subtitle="Native images · source-bound anatomical annotations" notice={pkg?.source==='configured-local'?'Private local test · Read-only SSD source; no upload. CT and MRI are different subjects.':'Private local test · CT and MRI are different subjects. Files stay in this browser session; nothing is uploaded.'} actions={<><Link prefetch={false} href={comparisonHref??(otherModality==='CT'?'/atlas/ct-head':'/atlas/mri-head')} onClick={()=>rememberHistoryView()} title={unlinkedComparison?'No verified comparison for this context. Opens the general atlas without carrying the current focus.':undefined}>{comparisonLabel}</Link><button ref={openButtonRef} onClick={()=>inputRef.current?.click()} type="button">{pkg?'Change package':'Open approved atlas'}</button>{!pkg&&!packageOpening&&(localSourceState==='available'||localSourceState==='failed'||localSourceState==='paused')&&<button type="button" onClick={()=>void openConfiguredAtlas()}>{localSourceState==='failed'?'Retry local atlas':localSourceState==='paused'?'Resume local atlas':'Reopen local atlas'}</button>}{(pkg||packageOpening)&&<button type="button" onClick={closeAtlas} title="End this local session, including practice results. Original files are unchanged.">Close atlas</button>}{pkg&&pkg.source!=='configured-local'&&folderSession&&<HeadFolderSharing enabled={retainFolder} onChange={enabled=>{setRetainFolder(enabled);if(enabled)folderSession.keep(pkg,HEAD_MANIFEST_SHA256);else{headViewHistory.clearPackage(pkg);folderSession.clear();}}}/>}</>} sidebar={sidebar} info={info} infoLabel="Anatomy learning panel" toolbar={toolbar}>
     <input ref={inputRef} type="file" multiple {...{'webkitdirectory':''}} onChange={chooseFiles} className="head-folder-input" aria-label="Choose the prepared approved head atlas folder"/>
     {navigationNotice&&!quizActive&&<div className="head-atlas-error" role="status">{navigationNotice}{urlNavigation.invalid&&<><p>The embedded {modality} viewer is still available. Browse the current atlas to choose a structure or restart a tour, then use “Compare beside 3D Atlas”. This does not restore the outdated target.</p><button type="button" onClick={browseCurrentAtlas}>Browse current {modality} atlas</button></>}</div>}
     {(error||pkg&&!study&&!packageOpening&&!quizActive&&studyLoadFailed)&&<div className="head-atlas-error" role="alert">{error||'The native scan could not be opened.'}{pkg&&!study&&!packageOpening&&!quizActive&&studyLoadFailed&&<button type="button" onClick={retryStudy}>Retry opening scan</button>}{pkg&&study&&!quizActive&&!selected&&activeId&&failedEntryId===activeId&&<button type="button" onClick={retryStructure}>Retry opening structure</button>}</div>}
