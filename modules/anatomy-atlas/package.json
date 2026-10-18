@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "lacrimal-drainage-ultrasound:test": "node scripts/test-lacrimal-drainage-ultrasound.mjs",
     "salpingopharyngeus-mri:test": "node scripts/test-salpingopharyngeus-mri-unit.mjs && node scripts/test-salpingopharyngeus-mri.mjs",
     "arterial-evidence-limits:test": "node scripts/pin-arterial-evidence-limits.mjs --check && node scripts/test-arterial-evidence-limits.mjs",
     "foot-arterial-projection-xray:test": "node scripts/test-foot-arterial-projection-xray-current.mjs",

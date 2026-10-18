@@ -1,0 +1,43 @@
+{
+  "schema": "vm-lacrimal-drainage-ultrasound-transition-1",
+  "parentCommit": "70260f13b1878272c6b0797dd72395ed10bc4f29",
+  "pinsHash": "d561de407f41bb9ee71be2f8e906c516b685afefae70f5f4162abc8c5d31f790",
+  "previousAllLessonsAndRecipesHash": "b725950599773816adde8b3bd3923c39c32948a3ccf6965a0323b4df107f397d",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+      "fmaId": "FMA59582",
+      "tab": "ultrasound",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "64cd0e7df1daf1d62aa19b490ac0dc250042ee9c32f1454b6571a19ff294c801"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+      "fmaId": "FMA59583",
+      "tab": "ultrasound",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "59a54316dc47308008848aa9235cc2fff5a43895d49465cb05f60e1a4dc7b538"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+      "fmaId": "FMA59545",
+      "tab": "ultrasound",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "a2bf80dbd8dfe6651dd95d0040284ce86da57e29dd571eab81a973678d3b86fc"
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+      "fmaId": "FMA59546",
+      "tab": "ultrasound",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "5858dde70f9667d884d04070c4ec895cabab3f89908c07bbe235fdd239b81499"
+    }
+  ],
+  "changed": 4,
+  "preserved": 9932,
+  "worksheets": 4,
+  "staleRefused": 12,
+  "clinicalApproval": false,
+  "patientSpaceRegistration": false,
+  "sourceAssetsUnchanged": true
+}

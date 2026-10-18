@@ -1,6 +1,8 @@
 # Lacrimal drainage CT/MRI orientation drafts
 
-Six existing Head & neck selections receive CT and MRI notes: right/left canaliculi (FMA59582/FJ1349, FMA59583/FJ1298), sacs (FMA59545/FJ1360, FMA59546/FJ1309) and nasolacrimal ducts (FMA59555/FJ1353, FMA59556/FJ1302). Each of the 12 placements remains a draft requiring source- and revision-bound radiologist review. Ultrasound and X-ray remain pending.
+Six existing Head & neck selections receive CT and MRI notes: right/left canaliculi (FMA59582/FJ1349, FMA59583/FJ1298), sacs (FMA59545/FJ1360, FMA59546/FJ1309) and nasolacrimal ducts (FMA59555/FJ1353, FMA59556/FJ1302). Each of the 12 placements remains a draft requiring source- and revision-bound radiologist review. At this original CT/MRI milestone, Ultrasound and X-ray remained pending.
+
+Update, 18 October 2026: four narrowly scoped canalicular/sac Ultrasound drafts are now described in [LACRIMAL_DRAINAGE_ULTRASOUND.md](LACRIMAL_DRAINAGE_ULTRASOUND.md). Both deeper nasolacrimal-duct Ultrasound slots and the six X-ray slots remain pending. No new image, anatomy mesh, registration or clinical approval is implied.
 
 The notes distinguish the medial drainage apparatus from the superolateral lacrimal gland. CT provides a bony orientation for the sac fossa and nasolacrimal canal; MRI gives surrounding soft-tissue orientation. Neither routine modality guarantees depiction of the tiny canaliculi or the duct's membranous part. Specialised CT/MR dacryocystography is identified as a separate examination, never inferred from the atlas surface.
 
