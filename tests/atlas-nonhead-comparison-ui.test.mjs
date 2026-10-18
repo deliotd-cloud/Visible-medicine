@@ -33,11 +33,19 @@ function HeadAtlasLinkedModel(props){
     React.createElement('div',{'data-head-comparison-banner':true},'Comparison unavailable until model ready'),
     React.createElement('div',{'data-facial-teaching-hook':true}),props.coverage);
 }
+const {createAtlasDocumentAttempt}=compiled('components/atlas-runtime-state.ts');
+const {AtlasRuntimeFrame}=compiled('components/AtlasRuntimeFrame.tsx',{
+  'react':React,
+  './atlas-runtime-state':{createAtlasDocumentAttempt},
+  './atlas-runtime-frame.css':{},
+  'react/jsx-runtime':require('react/jsx-runtime'),
+});
 const page=compiled('app/atlas/3d/page.tsx',{
   'next/link':{default:({href,children,...rest})=>React.createElement('a',{href,...rest},children)},
   'next/navigation':{notFound,redirect},
   '../../../components/AtlasWorkspaceNavigation':{AtlasWorkspaceNavigation:({regionId})=>React.createElement('nav',{'data-region':regionId})},
   '../../../components/HeadAtlasLinkedModel':{HeadAtlasLinkedModel},
+  '../../../components/AtlasRuntimeFrame':{AtlasRuntimeFrame},
   '../../../lib/atlas-navigation':{selectedBodyRegion},
   '../../../lib/atlas-study-transport':{atlasStudySuffix},
   '../../../lib/atlas-reference-revision':{atlasReferenceRevisionCurrent},

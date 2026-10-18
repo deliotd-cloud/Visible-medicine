@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 53,
+  "revision": 54,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -16,14 +16,16 @@
     "baseline": "F:/VisibleMedicine/staging/20261016-website-release",
     "facialreview": "F:/VisibleMedicine/staging/20261016-facial-review",
     "reliability": "F:/VisibleMedicine/staging/20261016-release-assurance",
-    "delivery": "F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed"
+    "delivery": "F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed",
+    "headrecovery": "F:/VisibleMedicine/staging/20261018-head-recovery-slide-integration",
+    "uiqa": "F:/VisibleMedicine/staging/20261018-head-spa-lifecycle"
   },
   "baseline": {
     "atlasCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
     "atlasTree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "533ddf192b09b191aef129223f0d10d87c9c18ba669d963b43d09f76ff6a2fc4",
+    "reviewIntegration": "af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373",
     "reviewSourceFiles": 1528,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -629,7 +631,9 @@
         "website:lib/head-atlas-import.ts",
         "tour:head-link-1.log",
         "website:docs/HEAD_LOADING_RELIABILITY.md",
-        "website:docs/HEAD_MASK_RESOURCE_BUDGET.md"
+        "website:docs/HEAD_MASK_RESOURCE_BUDGET.md",
+        "uiqa:manual-pons-recovery-browser.json",
+        "uiqa:installed-iab-auto-navigation.json"
       ]
     },
     {
@@ -788,7 +792,10 @@
         "website:docs/HEAD_OPENING_STATES.md",
         "website:tests/head-open-state.test.ts",
         "website:docs/INLINE_MODEL_RECOVERY.md",
-        "website:tests/head-inline-frame.test.ts"
+        "website:tests/head-inline-frame.test.ts",
+        "headrecovery:combined-light-checks.json",
+        "uiqa:manual-recovery-browser.json",
+        "uiqa:slide-find-iab-browser.json"
       ]
     },
     {
@@ -850,7 +857,8 @@
         "website:docs/studio-simplification.md",
         "website:lib/studio-release-order.ts",
         "website:lib/studio-mutation-context.ts",
-        "delivery:checkpoint.json"
+        "delivery:checkpoint.json",
+        "uiqa:slide-find-iab-browser.json"
       ]
     },
     {
@@ -867,7 +875,9 @@
         "website:docs/production-plan.md",
         "website:scripts/lecture-pptx-intake.py",
         "website:tests/lecture-pptx-intake.test.py",
-        "website:docs/LECTURE_PPTX_INTAKE.md"
+        "website:docs/LECTURE_PPTX_INTAKE.md",
+        "headrecovery:combined-light-checks.json",
+        "uiqa:slide-find-iab-browser.json"
       ]
     },
     {
@@ -1167,6 +1177,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 54,
+      "date": "2026-10-18",
+      "change": "Local candidate: explicit current empty-document model recovery, committed bridge lifecycle and local-only source-slide title search/numeric navigation. Exact Review af91/1658 binds only two changed head components. Original53/52/51/50 assertions and all71 requirements/eight optional ideas, statuses, owners and acceptance retained. Main51 focused cases and actual synthetic component/3D browser observations are bounded evidence, not full-suite, owner-role Studio, clinical/privacy or release approval. Positive installed in-app automatic navigation does not erase prior Chrome blank failures; no automatic SPA fix or patient-space registration claimed."
+    },
     {
       "date": "2026-10-18",
       "revision": 53,

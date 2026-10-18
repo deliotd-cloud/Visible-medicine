@@ -17,7 +17,7 @@ function linkedModel(require:ReturnType<typeof createRequire>){
     {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
   const exports:Record<string,Function>={};
   const imports:Record<string,unknown>={
-    react:{useEffect:()=>{},useRef:(value:unknown)=>({current:value}),useState:(value:unknown)=>[value,()=>{throw Error('Unexpected render state update');}]},
+    react:{useEffect:()=>{},useLayoutEffect:()=>{},useRef:(value:unknown)=>({current:value}),useState:(value:unknown)=>[value,()=>{throw Error('Unexpected render state update');}]},
     'react/jsx-runtime':require('react/jsx-runtime'),
     '../lib/head-live-selection':{HEAD_SELECTION_PROTOCOL:'not-exercised-in-server-transport',parseHeadSelection:()=>{throw Error('Message parsing is outside this check');}},
     '../lib/head-atlas-import':{HEAD_MANIFEST_SHA256:HEAD_LINK_REVISION},
@@ -58,6 +58,21 @@ test('whole-body continuation relays exact study identity without external routi
 test('actual host page keeps source-bound links for all twelve regions and keeps plain redirects',async()=>{
   const require=createRequire(new URL('package.json',websiteUrl));
   const HeadAtlasLinkedModel=linkedModel(require);
+  const stateSource=ts.transpileModule(readFileSync(new URL('components/atlas-runtime-state.ts',websiteUrl),'utf8'),
+    {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const stateExports:Record<string,Function>={};
+  new Function('exports',stateSource)(stateExports);
+  const frameSource=ts.transpileModule(readFileSync(new URL('components/AtlasRuntimeFrame.tsx',websiteUrl),'utf8'),
+    {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
+  const frameExports:Record<string,Function>={};
+  const frameImports:Record<string,unknown>={
+    react:{useEffect:()=>{},useRef:(value:unknown)=>({current:value}),useState:(value:unknown)=>[value,()=>{throw Error('Unexpected render state update');}]},
+    './atlas-runtime-state':{createAtlasDocumentAttempt:stateExports.createAtlasDocumentAttempt},
+    './atlas-runtime-frame.css':{},
+    'react/jsx-runtime':require('react/jsx-runtime'),
+  };
+  new Function('require','exports',frameSource)((name:string)=>{assert(Object.hasOwn(frameImports,name),name);return frameImports[name];},frameExports);
+  const AtlasRuntimeFrame=frameExports.AtlasRuntimeFrame;
   const source=ts.transpileModule(readFileSync(new URL('app/atlas/3d/page.tsx',websiteUrl),'utf8'),
     {compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText;
   const exports:Record<string, (props:unknown)=>Promise<unknown>>={};
@@ -67,6 +82,7 @@ test('actual host page keeps source-bound links for all twelve regions and keeps
     '../../../components/AtlasRegionNavigation':{AtlasRegionNavigation:()=>null},
     '../../../components/AtlasWorkspaceNavigation':{AtlasWorkspaceNavigation:()=>null},
     '../../../components/HeadAtlasLinkedModel':{HeadAtlasLinkedModel},
+    '../../../components/AtlasRuntimeFrame':{AtlasRuntimeFrame},
     '../../../lib/atlas-navigation':{selectedBodyRegion},
     '../../../lib/atlas-study-transport':{atlasStudySuffix},
     '../../../lib/atlas-reference-revision':{atlasReferenceRevisionCurrent},
@@ -81,7 +97,7 @@ test('actual host page keeps source-bound links for all twelve regions and keeps
     if(Array.isArray(node))return node.flatMap(elements);
     if(!node||typeof node!=='object'||!('props' in node))return [];
     const element=node as {type:unknown;props:Record<string,unknown>};
-    return [element,...(element.type===HeadAtlasLinkedModel?elements(HeadAtlasLinkedModel(element.props)):elements(element.props.children))];
+    return [element,...(typeof element.type==='function'?elements(element.type(element.props)):elements(element.props.children))];
   }
   for(const region of atlasBodyRegions){
     const tree=await exports.default({searchParams:Promise.resolve({...params,region:region.id})});

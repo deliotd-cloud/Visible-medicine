@@ -29,7 +29,7 @@ function comparisonDraftOwner(element:HTMLSelectElement){
 }
 
 /** Host-validated semantic focus only; no cross-subject spatial alignment. */
-export function HeadAtlasComparisonNavigation({conceptId,liveState,onRetry,teaching}:{conceptId:string|null;liveState?:'connecting'|'ready'|'practice'|'guided'|'unavailable';onRetry?:()=>void;teaching?:ReactNode}){
+export function HeadAtlasComparisonNavigation({conceptId,liveState,onRetry,onRetryOpeningModel,teaching}:{conceptId:string|null;liveState?:'connecting'|'ready'|'practice'|'guided'|'unavailable';onRetry?:()=>void;onRetryOpeningModel?:()=>void;teaching?:ReactNode}){
   const router=useRouter();
   if(!headLinksCurrent())return <section className="head-atlas-tour head-atlas-comparison" aria-label="Linked anatomy comparison" ref={element=>{if(element)delete element.dataset.headComparisonDraftValue;}}><p role="status">{HEAD_LINK_REVISION_NOTICE}</p></section>;
   const blocked=!!liveState&&liveState!=='ready';
@@ -51,6 +51,7 @@ export function HeadAtlasComparisonNavigation({conceptId,liveState,onRetry,teach
       {!mriHref&&<span>No exact MRI comparison mapped <LearningResourceStatus status="unavailable"/></span>}
     </nav>}
     {liveState==='unavailable'&&onRetry&&<div className="head-atlas-comparison-recovery"><button type="button" onClick={event=>{event.currentTarget.closest('section')?.focus();onRetry();}}>Retry comparison</button><p className="head-atlas-tour-scope">Reconnect without reloading the model. If the model requests sign-in, sign in first.</p></div>}
+    {liveState==='unavailable'&&onRetryOpeningModel&&<div className="head-atlas-comparison-recovery"><button type="button" onClick={event=>{event.currentTarget.closest('section')?.focus();onRetryOpeningModel();}}>Retry opening model</button><p className="head-atlas-tour-scope">Reopen this exact model after a blank frame. The current model view will reset.</p></div>}
     {!blocked&&<div className="head-comparison-actions">
       <details className="head-comparison-disclosure" onKeyDown={closeComparisonPanel} onBlur={closeComparisonPanelOnFocusExit}>
         <summary>{concept?'Change structure':'Choose linked anatomy'}</summary>

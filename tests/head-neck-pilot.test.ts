@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFile,readdir} from 'node:fs/promises';
+import {readHeadPilotFile as readFile,listHeadPilotDirectory as readdir,historicalHeadPilotRuntime} from './historical-head-pilot-read.mjs';
 import {createHash} from 'node:crypto';
 import {atlasModules} from '../lib/catalog.ts';
-const runtime=new URL('../public/atlas-runtime/head-neck/',import.meta.url);
+const runtime=historicalHeadPilotRuntime;
 const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
 test('head and neck delivery preserves the complete audited regional and nested scope',async()=>{
   // Exact-source shoulder-vessel X-ray import; existing models/scopes unchanged.

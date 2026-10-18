@@ -8,6 +8,7 @@ import {pathToFileURL} from 'node:url';
 import {gunzipSync} from 'node:zlib';
 import test from 'node:test';
 import {handHistoryApi,handImportedArchiveApi} from './atlas-hand-vessel-xray-history-api.mjs';
+import {deriveBoundRenderer} from './hand-renderer-binding.mjs';
 import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
 
@@ -433,15 +434,18 @@ test('current 7b delivery binds the complete imported graph and retains protecte
   const rendererPath='content/body-renderer-revision.json';
   const rendererRecord=json('atlas-review/manifest.json').files.find(item=>item.path===rendererPath);
   assert(rendererRecord,'Imported renderer manifest record');
-  assert.equal(rendererRecord.sourceSha256,'4ecf2aceca0aabe20989601e708c71169a551b5e82e17bb60540d080cb157439');
-  assert.equal(rendererRecord.importedSha256,'254599253be26df67574c82d09b423ca5b057307fc5f6653185ee2c934835e2d');
   const sourceRendererBytes=gitBlob(pin.source,rendererPath);
   const importedRendererBytes=readFileSync(resolve(root,'atlas-review',rendererPath));
+  const expectedRendererBytes=deriveBoundRenderer(sourceRendererBytes,pin.reviewIntegration);
+  assert.equal(rendererRecord.sourceSha256,sha(sourceRendererBytes));
+  assert.equal(rendererRecord.importedSha256,sha(expectedRendererBytes));
+  assert.deepEqual(importedRendererBytes,expectedRendererBytes);
   assert.equal(sha(sourceRendererBytes),rendererRecord.sourceSha256);
   assert.equal(sha(importedRendererBytes),rendererRecord.importedSha256);
   const sourceRenderer=JSON.parse(sourceRendererBytes),importedRenderer=JSON.parse(importedRendererBytes);
-  assert.equal(sourceRenderer.sha256,'8119179fa735404207218a71df812a5b25e53763065b361c09be4943e194e0e7');
-  assert.equal(importedRenderer.sha256,'18b87b4b19f5d89b9716f02c7d5fe25a88f0b55ed8a4884d92968291811f245e');
+  assert.equal(importedRenderer.sourceRendererSha256,sourceRenderer.sourceRendererSha256??sourceRenderer.sha256);
+  assert.equal(importedRenderer.websiteIntegrationSha256,pin.reviewIntegration);
+  assert.equal(importedRenderer.sha256,JSON.parse(expectedRendererBytes).sha256);
   assert.notEqual(importedRenderer.sha256,sourceRenderer.sha256);
   const geometryRevision=(context,rendererHash)=>sha(JSON.stringify({
     catalogScope:context.catalogScope,structureId:context.structureId,checklistVersion:context.checklistVersion,

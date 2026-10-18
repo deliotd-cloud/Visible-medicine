@@ -11,7 +11,7 @@ const require=createRequire(import.meta.url);
 const source=readFileSync(new URL('../components/HeadAtlasLinkedModel.tsx',import.meta.url),'utf8');
 const code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
 type Node={type:unknown;props:Record<string,any>};
-type Effect={deps:unknown[];cleanup?:()=>void};
+type Effect={deps:unknown[]|undefined;cleanup?:()=>void};
 
 test('live model accepts only current frame, origin, revision, session and increasing sequence; clears unavailable contexts',()=>{
   const revision='f'.repeat(40),origin='https://atlas.example.test',messages:unknown[]=[],listeners=new Set<(event:any)=>void>();
@@ -21,12 +21,13 @@ test('live model accepts only current frame, origin, revision, session and incre
   Object.defineProperty(globalThis,'window',{configurable:true,value:window});
   let uuid=0;Object.defineProperty(globalThis,'crypto',{configurable:true,value:{randomUUID:()=>`session-${++uuid}`}});
   const contentWindow={postMessage:(packet:unknown,target:string)=>{assert.equal(target,origin);messages.push(packet);}};
-  const slots:unknown[]=[],effects=new Map<number,Effect>();let cursor=0,tree:Node,frame!:Node,dirty=true,disposed=false;
-  const same=(a:unknown[]|undefined,b:unknown[])=>!!a&&a.length===b.length&&a.every((item,index)=>Object.is(item,b[index]));
+  const slots:unknown[]=[],effects=new Map<number,Effect>(),layouts=new Map<number,Effect>();let cursor=0,tree:Node,frame!:Node,dirty=true,disposed=false;
+  const same=(a:unknown[]|undefined,b:unknown[]|undefined)=>!!a&&!!b&&a.length===b.length&&a.every((item,index)=>Object.is(item,b[index]));
   const hooks={
     useState(initial:unknown){const index=cursor++;if(!(index in slots))slots[index]=initial;return [slots[index],(next:unknown)=>{assert(!disposed);if(!Object.is(slots[index],next)){slots[index]=next;dirty=true;}}];},
     useRef(initial:unknown){const index=cursor++;if(!(index in slots))slots[index]={current:initial};return slots[index];},
     useEffect(create:()=>void|(()=>void),deps:unknown[]){const index=cursor++,old=effects.get(index);if(!same(old?.deps,deps))pending.push(()=>{old?.cleanup?.();const cleanup=create();effects.set(index,{deps,cleanup:typeof cleanup==='function'?cleanup:undefined});});},
+    useLayoutEffect(create:()=>void|(()=>void),deps?:unknown[]){const index=cursor++,old=layouts.get(index);if(!same(old?.deps,deps))pendingLayouts.push(()=>{old?.cleanup?.();const cleanup=create();layouts.set(index,{deps,cleanup:typeof cleanup==='function'?cleanup:undefined});});},
   };
   let linksCurrent=true;
   const comparison=function HeadAtlasComparisonNavigation(){return null;};
@@ -35,13 +36,13 @@ test('live model accepts only current frame, origin, revision, session and incre
   const mod={exports:{} as {HeadAtlasLinkedModel:(props:{src:string;sourceRevision:string;coverage:unknown;title?:string})=>Node}};
   const facialHook=headFacialHookModule(hooks);
   new Function('require','module','exports',code)((id:string)=>{if(id==='./useVerifiedFacialTeaching')return facialHook;assert(Object.hasOwn(imports,id),id);return imports[id];},mod,mod.exports);
-  let src='/atlas-runtime/head-neck/index.html?region=head-neck';const pending:Array<()=>void>=[];
+  let src='/atlas-runtime/head-neck/index.html?region=head-neck';const pending:Array<()=>void>=[],pendingLayouts:Array<()=>void>=[];
   function walk(value:unknown,predicate:(node:Node)=>boolean):Node|undefined{
     if(Array.isArray(value)){for(const part of value){const found=walk(part,predicate);if(found)return found;}return;}
     if(!value||typeof value!=='object'||!('props'in value))return;
     const node=value as Node;return predicate(node)?node:walk(node.props.children,predicate);
   }
-  function flush(){let count=0;do{assert(++count<20);dirty=false;cursor=0;pending.length=0;tree=mod.exports.HeadAtlasLinkedModel({src,sourceRevision:revision,coverage:'Synthetic coverage',title:'Whole body 3D anatomy'});frame=walk(tree,node=>node.type==='iframe')!;assert(frame);assert.equal(frame.props.title,'Whole body 3D anatomy');frame.props.ref.current={contentWindow};for(const effect of pending)effect();}while(dirty);return tree;}
+  function flush(){let count=0;do{assert(++count<20);dirty=false;cursor=0;pending.length=0;pendingLayouts.length=0;tree=mod.exports.HeadAtlasLinkedModel({src,sourceRevision:revision,coverage:'Synthetic coverage',title:'Whole body 3D anatomy'});frame=walk(tree,node=>node.type==='iframe')!;assert(frame);assert.equal(frame.props.title,'Whole body 3D anatomy');frame.props.ref.current={contentWindow};for(const effect of pendingLayouts)effect();for(const effect of pending)effect();}while(dirty);return tree;}
   const nav=()=>{const node=walk(tree,node=>node.type===comparison);assert(node);return node.props;};
   const notes=()=>walk(tree,node=>node.type==='details')!;
   const teachingNode=()=>walk(nav().teaching,node=>node.type===teaching);
@@ -105,11 +106,11 @@ test('live model accepts only current frame, origin, revision, session and incre
     deliver(selected('session-7',2,selection));assert.equal(nav().conceptId,null);
     nav().onRetry();flush();assert.equal(session(),'session-8','reported failure has the same safe recovery');
     const afterUnmount=callbacks.at(-1)!;
-    for(const effect of effects.values())effect.cleanup?.();disposed=true;assert.equal(listeners.size,0);
+    for(const effect of layouts.values())effect.cleanup?.();for(const effect of effects.values())effect.cleanup?.();disposed=true;assert.equal(listeners.size,0);
     assert.equal(timers.size,0,'unmount clears the handshake timer');afterUnmount();
     for(const listener of [...listeners])listener({data:selected('session-4',1,selection),source:contentWindow,origin});
   }finally{
-    if(!disposed)for(const effect of effects.values())effect.cleanup?.();
+    if(!disposed){for(const effect of layouts.values())effect.cleanup?.();for(const effect of effects.values())effect.cleanup?.();}
     if(priorWindow===undefined)delete (globalThis as any).window;else Object.defineProperty(globalThis,'window',{configurable:true,value:priorWindow});
     if(priorCrypto)Object.defineProperty(globalThis,'crypto',priorCrypto);else delete (globalThis as any).crypto;
   }

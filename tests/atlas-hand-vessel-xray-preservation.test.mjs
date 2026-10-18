@@ -7,11 +7,19 @@ import test from 'node:test';
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const original=readFileSync(new URL('./fixtures/atlas-hand-vessel-xray.original.mjs',import.meta.url));
 const proposal=readFileSync(new URL('./fixtures/atlas-hand-vessel-xray.admitted-e49120.mjs.raw',import.meta.url));
+const rendererPostimage=readFileSync(new URL('./fixtures/atlas-hand-vessel-xray.renderer-7b.mjs.raw',import.meta.url));
 const current=readFileSync(new URL('./atlas-hand-vessel-xray.test.mjs',import.meta.url));
+const bindingHelper=readFileSync(new URL('./hand-renderer-binding.mjs',import.meta.url));
+const historicalProof=readFileSync(new URL('./atlas-hand-renderer-7b-historical.test.mjs',import.meta.url));
+const old7bPin=readFileSync(new URL('./fixtures/current-atlas-delivery-7b3e678a.json',import.meta.url));
+const old7bInputs=readFileSync(new URL('./fixtures/integration-inputs-7b3e678a.json',import.meta.url));
+const old7bManifest=readFileSync(new URL('./fixtures/atlas-review-7b-manifest.json',import.meta.url));
 const archiveBytes=readFileSync(new URL('./fixtures/hand-vessel-xray-589-delivery-archive-v3.json',import.meta.url));
 const originalSha='1d575db1efe1e23fdfd891eabe122cc9950e8624caed480e69908b9e24bbc6b4';
 const reviewedPostimageSha='e49120c67a1ca2f8f9cc424c63ca10073e2079b005fc21bdf582774212b19f8e';
 const rendererPostimageSha='ed22f7d0c5ce9668e7af669b965206f9acdba54c79c48997b91e43bbaeed5f13';
+const epochMigrationSha='a91e7a1ab980fed3cf96ebe6b1de090502ee1f22c0a5496b83a71fbd457726a8';
+const epochMigrationBlockSha='ef690eb0f908e6c62a4ff2522983c9d46778536be36424b61fb1839d65b4e473';
 const archiveSha='422e4ccfeb1f440a31fb6a1cf218c9171b0cc0471d66911d2cafdb51e7934904';
 
 test('exact original and reviewed postimage retain the executable historical and current proofs',()=>{
@@ -73,16 +81,63 @@ function verifyRendererTransform(bytes){
   assert.match(stale,/assert\.equal\(staleResponse.status,409/);
 }
 
-test('current renderer frame is exactly reviewed and tampering is rejected',()=>{
+test('closed 7b renderer frame is exactly reviewed and tampering is rejected',()=>{
   assert.equal(sha(proposal),reviewedPostimageSha);
-  verifyRendererTransform(current);
+  verifyRendererTransform(rendererPostimage);
   for(const [label,old,value] of [
     ['renderer','18b87b4b19f5d89b9716f02c7d5fe25a88f0b55ed8a4884d92968291811f245e','0'.repeat(64)],
     ['source','4ecf2aceca0aabe20989601e708c71169a551b5e82e17bb60540d080cb157439','1'.repeat(64)],
     ['assertion','assert.equal(importedGeometry,geometryRevision(context,importedHash));','assert.notEqual(importedGeometry,geometryRevision(context,importedHash));'],
   ]){
-    const text=current.toString();assert(text.includes(old),label);
+    const text=rendererPostimage.toString();assert(text.includes(old),label);
     assert.throws(()=>verifyRendererTransform(Buffer.from(text.replace(old,value))),label);
+  }
+});
+
+function verifyEpochMigration(bytes){
+  const candidate=bytes.toString(),before=rendererPostimage.toString();
+  assert.equal(sha(rendererPostimage),rendererPostimageSha);
+  assert.equal(sha(bytes),epochMigrationSha);
+  const anchor="import {handHistoryApi,handImportedArchiveApi} from './atlas-hand-vessel-xray-history-api.mjs';\n";
+  const added="import {deriveBoundRenderer} from './hand-renderer-binding.mjs';\n";
+  const begin="  const rendererPath='content/body-renderer-revision.json';\n";
+  const end='  for(const row of pins.entries){\n';
+  const section=(text)=>{const start=text.indexOf(begin),finish=text.indexOf(end,start+begin.length);assert(start>=0&&finish>start);assert.equal(text.indexOf(begin,start+1),-1);return text.slice(start,finish);};
+  const oldBlock=section(before),newBlock=section(candidate);
+  assert.equal(sha(newBlock),epochMigrationBlockSha);
+  const replaceOne=(text,old,value)=>{assert.equal(text.split(old).length,2,old);return text.replace(old,value);};
+  let expected=replaceOne(before,anchor,anchor+added);
+  expected=replaceOne(expected,oldBlock,newBlock);
+  assert.equal(candidate,expected,'Only the source-bound renderer block and its pure helper import may migrate');
+  assert.match(newBlock,/deriveBoundRenderer\(sourceRendererBytes,pin\.reviewIntegration\)/);
+  assert.match(newBlock,/assert\.deepEqual\(importedRendererBytes,expectedRendererBytes\)/);
+  assert.match(newBlock,/assert\.equal\(importedRenderer\.websiteIntegrationSha256,pin\.reviewIntegration\)/);
+}
+
+test('current renderer migration is byte-exact and rejects current and closed-epoch tampering',()=>{
+  verifyEpochMigration(current);
+  for(const [label,old,value] of [
+    ['admitted Review','deriveBoundRenderer(sourceRendererBytes,pin.reviewIntegration)','deriveBoundRenderer(sourceRendererBytes,\'0\'.repeat(64))'],
+    ['import comparison','assert.deepEqual(importedRendererBytes,expectedRendererBytes);','assert.notDeepEqual(importedRendererBytes,expectedRendererBytes);'],
+  ]){
+    const text=current.toString();assert(text.includes(old),label);
+    assert.throws(()=>verifyEpochMigration(Buffer.from(text.replace(old,value))),label);
+  }
+});
+
+test('closed 7b proof, binder derivation and fixed evidence reject source tampering',()=>{
+  const files=[
+    [bindingHelper,'174c7306bcc5fc153f84cb10fe04347b0d57ee5a6255d336b8e16ea98887d701'],
+    [historicalProof,'33a2512551c8a27f0866a6877ee3c9be0d3d2040f62ede1f49ccca01bf1e3f10'],
+    [old7bPin,'1a9a62e5ec6998ccc0f68c083dcd50ef03c6f89bc8cc46a7036e6c3ba39466cf'],
+    [old7bInputs,'37ee961401e8d18bf6e595a7edf58acd49faeec8a47201fdc91747697b637104'],
+    [old7bManifest,'2cdccade40ccd436bd5c3af931291813bf5857ec78bb7c18b7df4fcf1ab99ec4'],
+  ];
+  const verify=rows=>{for(const [bytes,expected] of rows)assert.equal(sha(bytes),expected);};
+  verify(files);
+  for(let i=0;i<files.length;i++){
+    const altered=files.map(([bytes,hash],index)=>[index===i?Buffer.concat([bytes,Buffer.from(' tampered')]):bytes,hash]);
+    assert.throws(()=>verify(altered),`closed proof input ${i}`);
   }
 });
 

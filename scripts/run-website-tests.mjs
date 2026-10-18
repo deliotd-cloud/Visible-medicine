@@ -13,6 +13,11 @@ const sourceDirs = ['app', 'atlas-review', 'components', 'db', 'docs', 'drizzle'
 const sourceFiles = ['.gitattributes', 'package.json', 'package-lock.json', 'tsconfig.json', 'drizzle.config.ts', 'eslint.config.mjs', 'next.config.js', 'next.config.mjs', 'next.config.ts', 'vite.config.js', 'vite.config.mjs', 'vite.config.ts', '.codex/config.toml', '.openai/hosting.json', 'AGENTS.md', 'README.md', 'env.d.ts', 'public/favicon.svg'];
 const sourceExtension = /\.(?:css|csv|html|js|jsx|json|jsonl|md|mjs|mts|sql|svg|toml|ts|tsx|txt|xml|yaml|yml)$/i;
 const testArgs = Object.freeze(['--test', '--experimental-strip-types', '--test-concurrency=1', 'tests/*.test.ts', 'tests/*.test.mjs']);
+// One byte-proven import-only wrapper. A changed wrapper returns to ordinary discovery.
+const mirror = Object.freeze({ wrapper: 'tests/atlas-glottic-muscle-imaging.test.ts',
+  target: 'tests/atlas-glottic-muscle-imaging.test.mjs',
+  wrapperSha256: 'a3d30dd530ad31ccc4e55b60c16cd68bddf421ad77a661340d1bbc414e880e0b',
+  mjsGlob: 'tests/!(atlas-glottic-muscle-imaging).test.mjs' });
 const excludedDirectoryNames = new Set(['.git', '.local', '.next', '.vinext', '.wrangler', 'dist', 'node_modules', 'private', 'secrets', 'credentials', 'patient-data', 'scan-data', 'mask-data']);
 const excludedFileNames = new Set(['id_rsa', 'id_ed25519', 'credentials.json', 'secrets.json']);
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -96,9 +101,47 @@ function testCounts(path) {
   }
   return counts;
 }
-export async function launch(root, output, { executable = process.execPath, onSpawn } = {}) {
+async function probeMirrorGlob(output, executable = process.execPath) {
+  const root = join(output, 'glob-probe');
+  mkdirSync(join(root, 'tests'), { recursive: true });
+  writeFileSync(join(root, 'package.json'), '{"type":"module"}\n');
+  writeFileSync(join(root, mirror.target), "import test from 'node:test'; test('probe-drop',()=>{});\n");
+  writeFileSync(join(root, 'tests', 'keep.test.mjs'), "import test from 'node:test'; test('probe-keep',()=>{});\n");
+  const args = ['--test', mirror.mjsGlob];
+  const env = { ...process.env };
+  delete env.NODE_TEST_CONTEXT;
+  const outcome = await new Promise(resolve => {
+    const child = spawn(executable, args, { cwd: root, env, windowsHide: true, shell: false, stdio: ['ignore', 'pipe', 'pipe'] });
+    let log = '', settled = false;
+    const finish = value => { if (!settled) { settled = true; resolve(value); } };
+    child.stdout.on('data', chunk => { log += chunk; });
+    child.stderr.on('data', chunk => { log += chunk; });
+    child.once('error', error => finish({ exitCode: 1, log: log + String(error) }));
+    child.once('close', code => finish({ exitCode: code ?? 1, log }));
+  });
+  writeFileSync(join(output, 'glob-probe.log'), outcome.log, { flag: 'wx' });
+  return { supported: outcome.exitCode === 0 && /probe-keep/.test(outcome.log) &&
+    !/probe-drop/.test(outcome.log) && /(?:^|\n)[#ℹ] tests 1\r?$/m.test(outcome.log) &&
+    /(?:^|\n)[#ℹ] pass 1\r?$/m.test(outcome.log),
+    exitCode: outcome.exitCode, args, log: 'glob-probe.log' };
+}
+export async function executionPlan(before, output, { probe = probeMirrorGlob } = {}) {
+  const defaultPlan = { args: [...testArgs], executedRoots: [...before.entries], coveredByImport: [],
+    mirror: { eligible: false, active: false, reason: 'no exact known wrapper and target' } };
+  const wrapper = before.files.find(file => file.path === mirror.wrapper);
+  if (wrapper?.sha256 !== mirror.wrapperSha256 || !before.entries.includes(mirror.wrapper) || !before.entries.includes(mirror.target)) return defaultPlan;
+  let capability;
+  try { capability = await probe(output); }
+  catch (error) { capability = { supported: false, error: String(error) }; }
+  if (!capability.supported) return { ...defaultPlan, mirror: { eligible: true, active: false, reason: 'CLI exclusion probe failed; original globs retained', capability } };
+  return { args: [...testArgs.slice(0, -1), mirror.mjsGlob],
+    executedRoots: before.entries.filter(path => path !== mirror.target),
+    coveredByImport: [{ path: mirror.target, via: mirror.wrapper, wrapperSha256: mirror.wrapperSha256 }],
+    mirror: { eligible: true, active: true, capability } };
+}
+export async function launch(root, output, { executable = process.execPath, onSpawn, args = testArgs } = {}) {
   const log = createWriteStream(join(output, 'child.log'), { flags: 'wx' });
-  const args = [...testArgs];
+  args = [...args];
   let child;
   const env = { ...process.env };
   delete env.NODE_TEST_CONTEXT; // A parent Node test may call this runner; the child is a fresh top-level test process.
@@ -123,17 +166,20 @@ export async function main(argv = process.argv.slice(2)) {
   const { run, root } = parse(argv);
   const before = inventory(root);
   const output = outputDir(root);
+  const execution = run ? await executionPlan(before, output) : {
+    args: [...testArgs], executedRoots: [...before.entries], coveredByImport: [],
+    mirror: { eligible: false, active: false, reason: 'list mode does not execute tests' } };
   const manifest = { schema: 'vm-complete-test-manifest-1', root, mode: run ? 'run' : 'list', createdAt: new Date().toISOString(), ...before,
-    entryCount: before.entries.length, entrySha256: sha(JSON.stringify(before.entries)), sourceSha256: sha(JSON.stringify(before.files)) };
+    entryCount: before.entries.length, entrySha256: sha(JSON.stringify(before.entries)), sourceSha256: sha(JSON.stringify(before.files)), execution };
   save(join(output, 'manifest.json'), manifest);
   const result = run ? await launch(root, output, {onSpawn(child) {
     child.once('spawn',()=>save(join(output,'started.json'),{
       schema:'vm-complete-test-start-1',runnerPid:process.pid,testPid:child.pid,
-      executable:process.execPath,args:[...testArgs],cwd:root,entrySha256:manifest.entrySha256,
+      executable:process.execPath,args:[...execution.args],cwd:root,entrySha256:manifest.entrySha256,
       sourceSha256:manifest.sourceSha256,spawnedAt:new Date().toISOString(),
       limitation:'Spawn evidence only. Revalidate the actual process or terminal receipt before classifying a wait.',
     }));
-  }}) : { exitCode: 0, launched: false };
+  }, args: execution.args }) : { exitCode: 0, launched: false };
   let drift = null;
   if (run) {
     try {

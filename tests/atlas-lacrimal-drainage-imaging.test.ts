@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {currentInputs,delivery,git,historicalWebsite,pins,sha,unchangedModels,website} from './atlas-neck-liver-delivery-fixture.ts';
 import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
+import {assertLacrimalEmittedPin} from './lacrimal-emitted-records.mjs';
 
 const source={
  'content/lacrimal-drainage-imaging-pins.json':'0274e9775d804df06979cd9984a9f27083e22b2eb4aeee8ba1f3de1a46f54826',
@@ -24,11 +25,7 @@ function teaching(epoch:'historical'|'current'){
  for(const [name,fma,file,sourceHash,group] of selections){
   const side=name.startsWith('right-')?'right':'left';const id=`vm:anatomy:body:head-neck:${side}:organ:${name}`;
   assert.ok(regionalIds.has(id),`${name} regional scope`);
-  const start=runtime.indexOf(`id:\`${id}\`,fmaId:\`${fma}\``);assert.ok(start>=0,`${name} identity`);
-  const bound=runtime.slice(start,start+1300);
-  assert.ok(bound.includes(`file:\`${file}\`,sha256:\`${sourceHash}\``),`${name} source`);
-  assert.ok(bound.includes(`group:\`${group}\``),`${name} group`);
-  assert.ok(bound.includes('anatomicalReview:!1'),`${name} unvalidated`);
+  assertLacrimalEmittedPin(runtime,{id,fma,file,sourceHash,group});
  }
  for(const [fmas,group] of [['[`FMA59582`,`FMA59583`]','canaliculus'],['[`FMA59545`,`FMA59546`]','sac'],['[`FMA59555`,`FMA59556`]','duct']])assert.ok(runtime.includes(`${group}:{fmas:${fmas},limit:`),`${group} bilateral group`);
  const start=runtime.indexOf('canaliculus:{fmas:[`FMA59582`');const end=runtime.indexOf('=new Map(',start);
