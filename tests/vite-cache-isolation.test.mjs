@@ -16,7 +16,11 @@ const priorBytes=readFileSync(new URL('./fixtures/vite-cache-original.ts.raw',im
 assert.equal(createHash('sha256').update(priorBytes).digest('hex'),
   'ae714a7cbd5c873dfba3119210f6b0659ebb9061464d84cb22e32351147c5f1a');
 const prior=priorBytes.toString('utf8');
-const staged=readFileSync(new URL('../vite.config.ts',import.meta.url),'utf8');
+// Closed prior configuration epoch: not a claim about the current runtime.
+const stagedBytes=readFileSync(new URL('./fixtures/vite-cache-isolated-epoch.ts.raw',import.meta.url));
+assert.equal(createHash('sha256').update(stagedBytes).digest('hex'),
+  '44007a6002a31fc997de5d8a57ca50e81eb88ebef5c1c78e002188d96c7345e1');
+const staged=stagedBytes.toString('utf8');
 const syntheticParent=resolve(dirname(fileURLToPath(packageSource)),'..');
 const checkouts=[resolve(syntheticParent,'__vite_cache_checkout_a__'),
   resolve(syntheticParent,'__vite_cache_checkout_b__')];

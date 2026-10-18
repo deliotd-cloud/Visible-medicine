@@ -590,6 +590,8 @@ export async function getLearnerEnrolments(auth: AuthContext) {
             (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN eligible_workbooks ew3 ON ew3.workbook_id=crw3.workbook_id JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
             (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN eligible_workbooks live_ew ON live_ew.workbook_id=live_crw.workbook_id JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
             (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN eligible_workbooks live_ew ON live_ew.workbook_id=live_crw.workbook_id JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
+            (SELECT COUNT(DISTINCT available_crw.workbook_id) FROM course_release_workbooks available_crw JOIN eligible_workbooks available_ew ON available_ew.workbook_id=available_crw.workbook_id WHERE available_crw.release_id=cr.id) AS available_workbook_count,
+            (SELECT COALESCE(ROUND(AVG(COALESCE(available_wp.percent_complete,0))),0) FROM course_release_workbooks progress_crw JOIN eligible_workbooks progress_ew ON progress_ew.workbook_id=progress_crw.workbook_id LEFT JOIN workbook_progress available_wp ON available_wp.workbook_id=progress_crw.workbook_id AND available_wp.learner_id=e.user_id WHERE progress_crw.release_id=cr.id) AS available_progress,
             COUNT(DISTINCT CASE WHEN wa.status='active' THEN crw.workbook_id END) AS workbook_count,
             COALESCE(ROUND(AVG(CASE WHEN wa.status='active' THEN COALESCE(wp.percent_complete,0) END)),0) AS progress
        FROM enrolments e
@@ -607,6 +609,7 @@ export async function getLearnerEnrolments(auth: AuthContext) {
     resumeWorkbookId: row.resume_workbook_id ? String(row.resume_workbook_id) : null,
     liveWorkbookId: row.live_workbook_id ? String(row.live_workbook_id) : null,
     liveStartedAt: row.live_started_at ? String(row.live_started_at) : null,
+    availableWorkbookCount: Number(row.available_workbook_count), availableProgress: Number(row.available_progress),
     workbookCount: Number(row.workbook_count), progress: Number(row.progress),
   }));
 }

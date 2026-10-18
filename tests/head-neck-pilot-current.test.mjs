@@ -80,15 +80,15 @@ test('the historical pilot retains every original assertion',()=>{
 
 test('current head-neck delivery keeps exact source, regional/model scope and licence boundaries',async()=>{
   const manifestBytes=await readFile(new URL('manifest.json',runtime));
-  assert.equal(sha(manifestBytes),'9db24686c007ba7306c692713c955be3d6e5fe4f61e0105c9674539dce62c421');
+  assert.equal(sha(manifestBytes),'718741d72d13df55ea0ee584718c6156aadc0fc5a4b250c196bf01c94d87d534');
   const manifest=JSON.parse(manifestBytes);
-  assert.equal(manifest.sourceCommit,'6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb');
+  assert.equal(manifest.sourceCommit,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
   assert.equal(manifest.schemaVersion,2);
   const inputBytes=await readFile(new URL('source-inputs.json',runtime));
-  assert.equal(sha(inputBytes),'a61a0c09535a732161498ca7b8098e771b5d393fa5e81d752648d4fcb0672df2');
+  assert.equal(sha(inputBytes),'01cce8a39fdf3b221a1a62064a54d65a2ad437ff8b17b1282cd34b52994cb34f');
   const inputs=JSON.parse(inputBytes);
-  assert.equal(inputs.length,1490);
-  assert.equal(new Set(inputs.map(input=>input.path)).size,1490);
+  assert.equal(inputs.length,1493);
+  assert.equal(new Set(inputs.map(input=>input.path)).size,1493);
   assert.equal(manifest.files.length,216);
   assert.equal(new Set(manifest.files.map(file=>file.path)).size,216);
   assert.equal(manifest.modelBundles.length,136);

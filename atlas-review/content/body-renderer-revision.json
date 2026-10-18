@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
+      "sha256": "2f0632827570e5e21bcdc28346e0972cff6cecdb82616d9869960c94b84ec8e2"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2394,7 +2394,7 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sha256": "18805d45f8c1c2a8b485f4759a91ff151f60abf552cd7b03faf154d5d464e30f"
+      "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -2667,6 +2667,14 @@
     {
       "path": "content/spine-pelvic-muscle-imaging.ts",
       "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
+    },
+    {
+      "path": "content/superficial-medial-plantar-ultrasound-pins.json",
+      "sha256": "8f3987affe58b593d19e2fd91cf51a26bec129e19bfa1104c0310abb10889059"
+    },
+    {
+      "path": "content/superficial-medial-plantar-ultrasound.ts",
+      "sha256": "39f901e9d35b4915117787ee322e2639ce8e1d4ea437ced04ba301dcc1fff701"
     },
     {
       "path": "content/superior-temporal-mri.ts",
@@ -5253,6 +5261,10 @@
       "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
+      "path": "lib/superficial-medial-plantar-ultrasound.ts",
+      "sha256": "e9ff06a3e819969c62ee51cf6969c52e6a9660164ca1f9a4f63395cbe73a18be"
+    },
+    {
       "path": "lib/suprahyoid-muscle-quiz.ts",
       "sha256": "e21f1629d80f329181721739a76f8ca50b3bffff7b85df5bb07b255978058f55"
     },
@@ -5845,7 +5857,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "282adb31545cccc6f26a0ed9f5233e0af0e469efcb4c69e5cff5522536a38851",
-  "sourceRendererSha256": "8f9c43f2eff00a3e467b622d0a5e96eb785ae7e6d0f666dc28de091d3def5f61",
-  "websiteIntegrationSha256": "af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373"
+  "sha256": "2f4ac53f93494ef5de07d72591b17256ba6b6bf5ab2d4853174c80f9a9c4d1f4",
+  "sourceRendererSha256": "09cdd0ada39ca863c22257f50abf5f8f6281a433ade3f83b6f4ce08bfa5c0712",
+  "websiteIntegrationSha256": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d"
 }

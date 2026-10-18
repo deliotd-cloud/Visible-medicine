@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 54,
+  "revision": 55,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -21,16 +21,16 @@
     "uiqa": "F:/VisibleMedicine/staging/20261018-head-spa-lifecycle"
   },
   "baseline": {
-    "atlasCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
-    "atlasTree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
+    "atlasCommit": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+    "atlasTree": "83720d136f899876bd947323e6552c4d3e171210",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373",
-    "reviewSourceFiles": 1528,
+    "reviewIntegration": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d",
+    "reviewSourceFiles": 1531,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
-    "rootDraftPlacements": 9326,
-    "rootPendingPlacements": 571,
+    "rootDraftPlacements": 9328,
+    "rootPendingPlacements": 569,
     "rootGeneratedIdentificationPlacements": 39,
     "nestedRepresentations": 108,
     "nestedConcepts": 76,
@@ -43,14 +43,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
-    "tree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
-    "rootDraftPlacements": 9326,
-    "rootPendingPlacements": 571,
+    "commit": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+    "tree": "83720d136f899876bd947323e6552c4d3e171210",
+    "rootDraftPlacements": 9328,
+    "rootPendingPlacements": 569,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:\\VisibleMedicine\\staging\\20261018-radial-eus-web-integration\\candidate-prepared.json",
-    "note": "Four exact-source abdominal venous radial-EUS Ultrasound drafts imported coherently. Acquisition-specific operator observations, not routine transabdominal visibility, a cohort detection rate, patency, full-course anatomy or patient registration. Other9,932 displayed topics/1104 identities/109 model bundles remain exact; only two targets belong to the1022-record archival export. No new media/dependencies/geometry, approval transfer, acquired scans or public release."
+    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261018-plantar-us-atlas-source/commit.json",
+    "note": "One original source-specific superficial medial plantar ultrasound orientation draft at two exact right/left source identities. Existing1104 identities/other9934 topic placements/models remain unchanged. Review display pins changed only for two worksheets; the global renderer and combined website Review epochs changed explicitly, without migrating decisions or approvals. Four learners and protected Review are generated from the same clean commit. Citation-only references; no new media, acquired images, assets, dependencies, registration or public deployment."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -509,7 +509,9 @@
         "atlas:scripts/report-teaching-gaps.mjs",
         "atlas:docs/FOOT_ARTERIAL_PROJECTION_XRAY.md",
         "website:docs/FOOT_ARTERIAL_XRAY_INTEGRATION.md",
-        "atlas:docs/ARTERIAL_EVIDENCE_LIMITS.md"
+        "atlas:docs/ARTERIAL_EVIDENCE_LIMITS.md",
+        "atlas:content/superficial-medial-plantar-ultrasound.ts",
+        "atlas:scripts/test-superficial-medial-plantar-ultrasound-current.mjs"
       ]
     },
     {
@@ -911,7 +913,11 @@
         "website:docs/STUDIO_WORKBOOK_RETIREMENT.md",
         "website:docs/STUDIO_WORKBOOK_CORRECTIONS.md",
         "website:tests/workbook-correction-lookup-api.test.mjs",
-        "website:docs/STUDIO_CORRECTION_LINEAGE.md"
+        "website:docs/STUDIO_CORRECTION_LINEAGE.md",
+        "website:tests/course-entry-retirement.test.mjs",
+        "website:tests/course-resume-authority.test.mjs",
+        "website:tests/course-study-now-metrics.test.mjs",
+        "website:tests/my-learning-study-now-ui.test.mjs"
       ]
     },
     {
@@ -1177,6 +1183,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 55,
+      "date": "2026-10-18",
+      "change": "Two exact-source unsigned plantar-US teaching placements imported from clean Atlas46c with four matching learner exports, generated Review4f08 and recomputed168-input coverage. Inventories/models/holds/independent entitlements are unchanged. My Learning now labels availability and progress on currently available workbooks while preserving old metrics, launch authority, progress and attempts. All71/eight requirements, statuses, owners and acceptance remain; clinical/private-decision/public-release fields stay unasserted. Prior54 source and assertions remain historical evidence, not new approval."
+    },
     {
       "revision": 54,
       "date": "2026-10-18",

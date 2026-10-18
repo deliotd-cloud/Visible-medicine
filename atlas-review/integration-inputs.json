@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
-  "sha256": "af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373",
+  "sourceCommit": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "sha256": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
+      "sha256": "2f0632827570e5e21bcdc28346e0972cff6cecdb82616d9869960c94b84ec8e2"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -948,7 +948,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "624784f4e0231753d5b1897ee50728e47b28ad76dbb1f70694e33cff8fa90aad"
+      "sha256": "b58cc25840046a4ab3e88b28aec44ec5dbe279ba1e10f1c6442dd86e25971f6c"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2648,7 +2648,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/foot.json",
-      "sha256": "18805d45f8c1c2a8b485f4759a91ff151f60abf552cd7b03faf154d5d464e30f"
+      "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
     },
     {
       "path": "atlas-review/content/regional-teaching/forearm.json",
@@ -2917,6 +2917,14 @@
     {
       "path": "atlas-review/content/spine-pelvic-muscle-imaging.ts",
       "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
+    },
+    {
+      "path": "atlas-review/content/superficial-medial-plantar-ultrasound-pins.json",
+      "sha256": "8f3987affe58b593d19e2fd91cf51a26bec129e19bfa1104c0310abb10889059"
+    },
+    {
+      "path": "atlas-review/content/superficial-medial-plantar-ultrasound.ts",
+      "sha256": "39f901e9d35b4915117787ee322e2639ce8e1d4ea437ced04ba301dcc1fff701"
     },
     {
       "path": "atlas-review/content/superior-temporal-mri.ts",
@@ -5651,6 +5659,10 @@
       "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
+      "path": "atlas-review/lib/superficial-medial-plantar-ultrasound.ts",
+      "sha256": "e9ff06a3e819969c62ee51cf6969c52e6a9660164ca1f9a4f63395cbe73a18be"
+    },
+    {
       "path": "atlas-review/lib/suprahyoid-muscle-quiz.ts",
       "sha256": "e21f1629d80f329181721739a76f8ca50b3bffff7b85df5bb07b255978058f55"
     },
@@ -6384,11 +6396,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "b4cfb38d1c5aff59e0286604ea6cee268d5909dcf01a3e6ce04c49353884f83c"
+      "sha256": "5a7d458d8010c66c76a2be7817bd72cdcfbfa932ff5b1dcc2d0b835be6102f8a"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "4b8368ffb2817af87c6b5996eb6e779ae5a8692360257119a455491d3229759a"
+      "sha256": "4918e25d38bff5e11480b3a0ec857bd6c615aebdc2c5c0fc37500f92ba61b8f5"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6628,7 +6640,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "18bb3433f1c73b676944227708f92398bbf9497cb5cbad1897bff30e83eeac4a"
+      "sha256": "9ab934dcc6f349000ff20f10311416f32c21bf07a29b98daad53abdc10602a7a"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

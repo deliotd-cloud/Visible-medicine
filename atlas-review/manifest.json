@@ -1,5 +1,5 @@
 {
-  "revision": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+  "revision": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -553,8 +553,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a",
-      "importedSha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
+      "sourceSha256": "2f0632827570e5e21bcdc28346e0972cff6cecdb82616d9869960c94b84ec8e2",
+      "importedSha256": "2f0632827570e5e21bcdc28346e0972cff6cecdb82616d9869960c94b84ec8e2"
     },
     {
       "path": "lib/foot-arterial-projection-xray.ts",
@@ -2250,6 +2250,21 @@
       "path": "content/deep-plantar-ultrasound.ts",
       "sourceSha256": "8a3c265a5710b7212950ad9d495dca11eab8ebe105e906455b445107ccd9e62f",
       "importedSha256": "8a3c265a5710b7212950ad9d495dca11eab8ebe105e906455b445107ccd9e62f"
+    },
+    {
+      "path": "lib/superficial-medial-plantar-ultrasound.ts",
+      "sourceSha256": "e9ff06a3e819969c62ee51cf6969c52e6a9660164ca1f9a4f63395cbe73a18be",
+      "importedSha256": "e9ff06a3e819969c62ee51cf6969c52e6a9660164ca1f9a4f63395cbe73a18be"
+    },
+    {
+      "path": "content/superficial-medial-plantar-ultrasound-pins.json",
+      "sourceSha256": "8f3987affe58b593d19e2fd91cf51a26bec129e19bfa1104c0310abb10889059",
+      "importedSha256": "8f3987affe58b593d19e2fd91cf51a26bec129e19bfa1104c0310abb10889059"
+    },
+    {
+      "path": "content/superficial-medial-plantar-ultrasound.ts",
+      "sourceSha256": "39f901e9d35b4915117787ee322e2639ce8e1d4ea437ced04ba301dcc1fff701",
+      "importedSha256": "39f901e9d35b4915117787ee322e2639ce8e1d4ea437ced04ba301dcc1fff701"
     },
     {
       "path": "lib/lacrimal-drainage-ultrasound.ts",
@@ -5613,8 +5628,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "3e986a2f47070c5a056d8d60bd71ffc2f216f35d6c63017e16decc32c4e2b278",
-      "importedSha256": "04ea77d927f18042dee41638ee96cfdd82eb793afb882326b9411041cca684b6"
+      "sourceSha256": "2a7a4624ab0da38f6379def4eceea9932d2657761df6df24870d63cbc4f6ce9c",
+      "importedSha256": "4df78c8e8950dcb73e336230f141920516d52f379fd23a547e1e0cb39bc27dfa"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -5999,7 +6014,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "85bb7ab544827fbceea9d0899b3c3ca1e759a6cb0985557cf29dafc21975963e"
+      "importedSha256": "5f7f383f6d93e67d542094bfdb7bd26e6118fe77a6ff1fec059cfc1cb032b54b"
     },
     {
       "path": "app/review/review.css",
@@ -6033,8 +6048,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "624784f4e0231753d5b1897ee50728e47b28ad76dbb1f70694e33cff8fa90aad",
-      "importedSha256": "624784f4e0231753d5b1897ee50728e47b28ad76dbb1f70694e33cff8fa90aad"
+      "sourceSha256": "b58cc25840046a4ab3e88b28aec44ec5dbe279ba1e10f1c6442dd86e25971f6c",
+      "importedSha256": "b58cc25840046a4ab3e88b28aec44ec5dbe279ba1e10f1c6442dd86e25971f6c"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -6268,8 +6283,8 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sourceSha256": "18805d45f8c1c2a8b485f4759a91ff151f60abf552cd7b03faf154d5d464e30f",
-      "importedSha256": "18805d45f8c1c2a8b485f4759a91ff151f60abf552cd7b03faf154d5d464e30f"
+      "sourceSha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b",
+      "importedSha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -7658,5 +7673,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373"
+  "websiteIntegrationSha256": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d"
 }

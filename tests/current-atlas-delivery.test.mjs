@@ -10,6 +10,18 @@ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const read=path=>readFileSync(root+'/'+path);
 const safe=path=>assert(/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(p=>!p||p==='.'||p==='..'));
 
+test('closed 6ba delivery pin remains immutable historical evidence',()=>{
+ const bytes=read('tests/fixtures/current-atlas-delivery-6ba0dd43.json');
+ assert.equal(sha(bytes),'dc317ee27d8e297255d77b3ad418da6066d73fd5b066074c52b88ed5473bc92b');
+ const old=JSON.parse(bytes);
+ assert.equal(old.source,'6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb');
+ assert.equal(old.sourceTree,'4ce7882a2748d2f190e4b4f8783af6416c7cf44b');
+ assert.equal(old.reviewIntegration,'af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373');
+ assert.equal(old.reviewSourceFiles,1528);
+ assert.equal(Object.keys(old.documents).length,12);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));
+});
+
 test('previous complete bc925 delivery and its contract stay exact but cannot admit the new source',()=>{
  const bytes=read('tests/fixtures/current-atlas-delivery-bc925194.json');
  assert.equal(sha(bytes),'f50171ac10bcf767cc29eb34cae7e873ff526a3940b03a0a59fe6d932cf01eab');
@@ -23,9 +35,9 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 });
 
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
- assert.equal(CURRENT_ATLAS_REVISION,'6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb');
- assert.equal(pin.sourceTree,'4ce7882a2748d2f190e4b4f8783af6416c7cf44b');
- assert.equal(pin.reviewIntegration,'af91db5ca835c33841628a71b52e6aa0f18ef258260e4866529731ed86a68373');
+ assert.equal(CURRENT_ATLAS_REVISION,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
+ assert.equal(pin.sourceTree,'83720d136f899876bd947323e6552c4d3e171210');
+ assert.equal(pin.reviewIntegration,'4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d');
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
  const detached=validateCurrentAtlasDelivery();detached.documents.foreign='0'.repeat(64);
@@ -45,7 +57,7 @@ test('current fixture agrees with actual emitted bytes, notices, imported Review
  for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
  const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
  for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
- assert.equal(sourceFiles,1528);assert(artifacts>100&&inputs>1500);
+ assert.equal(sourceFiles,1531);assert(artifacts>100&&inputs>1500);
 });
 
 for(const [label,edit]of [

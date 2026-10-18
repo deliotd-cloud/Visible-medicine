@@ -115,6 +115,7 @@ import { handBoneUltrasoundLesson } from '../lib/hand-bone-ultrasound';
 import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
 import { footUltrasoundFollowupLesson } from '../lib/foot-ultrasound-followup';
 import { deepPlantarUltrasoundLesson } from '../lib/deep-plantar-ultrasound';
+import { superficialMedialPlantarUltrasoundLesson } from '../lib/superficial-medial-plantar-ultrasound';
 import { lacrimalDrainageUltrasoundLesson } from '../lib/lacrimal-drainage-ultrasound';
 import { abdominalRadialEusLesson } from '../lib/abdominal-radial-eus';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
@@ -489,6 +490,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderGirdleArterialUltrasound) return shoulderGirdleArterialUltrasound;
   const deepPlantarUltrasound = deepPlantarUltrasoundLesson(s, tab);
   if (deepPlantarUltrasound) return deepPlantarUltrasound;
+  const superficialMedialPlantarUltrasound = superficialMedialPlantarUltrasoundLesson(s, tab);
+  if (superficialMedialPlantarUltrasound) return superficialMedialPlantarUltrasound;
   const lacrimalDrainageUltrasound = lacrimalDrainageUltrasoundLesson(s, tab);
   if (lacrimalDrainageUltrasound) return lacrimalDrainageUltrasound;
   const abdominalRadialEus = abdominalRadialEusLesson(s, tab);
