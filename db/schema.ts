@@ -2,6 +2,22 @@ import { sql } from "drizzle-orm";
 export * from '../atlas-review/db/schema';
 import { check, index, integer, primaryKey, sqliteTable, text, uniqueIndex } from "drizzle-orm/sqlite-core";
 
+// Separate append-only namespace: no current-body approval or other candidate's
+// history can be inherited by matching only a familiar structure ID.
+export const atlasCandidateReviewEvents = sqliteTable('atlas_candidate_review_events', {
+  userKey:text('user_key').notNull(), candidateId:text('candidate_id').notNull(),
+  structureId:text('structure_id').notNull(), track:text('track').notNull(),
+  version:integer('version').notNull(), payload:text('payload').notNull(), savedAt:text('saved_at').notNull(),
+},table=>[
+  primaryKey({columns:[table.userKey,table.candidateId,table.structureId,table.track,table.version]}),
+  check('candidate_review_user_key',sql`length(${table.userKey}) BETWEEN 1 AND 4096`),
+  check('candidate_review_id',sql`length(${table.candidateId}) = 64`),
+  check('candidate_review_structure',sql`length(${table.structureId}) BETWEEN 1 AND 256`),
+  check('candidate_review_track',sql`${table.track} IN ('geometry','teaching','imaging')`),
+  check('candidate_review_version',sql`${table.version} BETWEEN 1 AND 2147483647`),
+  check('candidate_review_payload',sql`length(${table.payload}) <= 131072`),
+]);
+
 export const fractureReviewWorkbooks = sqliteTable('fracture_review_workbooks', {
   id: text('id').primaryKey(), ownerId: text('owner_id').notNull(), organizationId: text('organization_id').notNull(),
   title: text('title').notNull(), contentRevision: text('content_revision').notNull(), packageSha256: text('package_sha256').notNull(),

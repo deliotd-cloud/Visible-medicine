@@ -1,0 +1,17 @@
+.frozen-decision{border-top:2px solid #8eaa9e;margin-top:24px;padding-top:12px}
+.frozen-decision .decision-actions{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.frozen-decision button{font:inherit;color:inherit;background:#f5f8f7;border:1px solid #8da99f;border-radius:6px;padding:7px 11px;cursor:pointer}
+.frozen-decision button[aria-pressed=true],.frozen-decision .save-review{background:#123d44;color:white}
+.frozen-decision button:disabled{opacity:.55;cursor:not-allowed}
+.frozen-decision button:focus-visible,.frozen-decision input:focus-visible,.frozen-decision textarea:focus-visible{outline:3px solid #b18f52;outline-offset:3px}
+.frozen-decision fieldset{border:1px solid #d6e1dc;border-radius:7px;padding:12px;margin:12px 0;min-width:0}
+.frozen-decision legend{font-weight:600;padding:0 5px}
+.frozen-decision label{display:flex;flex-direction:column;align-items:stretch;gap:4px;margin:10px 0;font-weight:500}
+.frozen-decision input,.frozen-decision textarea{width:100%;font:inherit;color:inherit;background:white;border:1px solid #93aca1;border-radius:5px;padding:7px}
+.frozen-decision textarea{min-height:80px;resize:vertical}
+.frozen-decision .check{display:flex;flex-direction:row;align-items:flex-start;gap:8px;font-size:.93rem}
+.frozen-decision .check input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:#176b72}
+.frozen-decision .decision-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.frozen-decision .decision-evidence{border-left:2px solid #c4d5ca;padding-left:12px;margin:12px 0}
+.frozen-decision .attestation{background:#f2f5f3;padding:10px}
+@media(max-width:1100px){.frozen-decision .decision-fields{grid-template-columns:1fr;gap:0}}

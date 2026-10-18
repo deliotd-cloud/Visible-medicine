@@ -2,7 +2,8 @@
   "schemaVersion": 1,
   "scope": "application-source-only",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-  "fullLocalSourceManifestSha256": "bae52aa6adbf09b860e6ce2c72a16975acb058d36c72e6f64571a241d6efe6f5",
+  "fullLocalSourceManifestSha256": "6e4739399c32f1bd4435e1d5cc3c91b6e17e803ff4fd5770ea53b8abad43376f",
+  "screenedSnapshotParent": "5d1d0e1e1910ae8f8d6513ecee8b0bd8c37d9a0b",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -136,6 +137,20 @@
       "bytes": 255,
       "mode": "100644",
       "gitBlob": "c3e3cae955d5b29a93876c6cd72784f649f2f239"
+    },
+    {
+      "path": "app/api/atlas-review/candidates/[candidateId]/assets/[...asset]/route.ts",
+      "sha256": "0df02caa7befcfd1be8ceab5333e494d6d51fc087e9ae453238836c34548176a",
+      "bytes": 1207,
+      "mode": "100644",
+      "gitBlob": "fff902575e8660d7a283aaec0627e9919ffc3869"
+    },
+    {
+      "path": "app/api/atlas-review/candidates/[candidateId]/decisions/route.ts",
+      "sha256": "df48cf29095a68124d0300137d28706eeb8448cff8a284fb32c918ecef1cad51",
+      "bytes": 1255,
+      "mode": "100644",
+      "gitBlob": "bf77953238340452e288c2b8ca722f3fe4677bf7"
     },
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -1319,6 +1334,27 @@
       "bytes": 1160,
       "mode": "100644",
       "gitBlob": "6a982de2743cc56d6749c5bdb3a41fae6b3ef3ea"
+    },
+    {
+      "path": "app/workspace/review-candidates/[candidateId]/page.tsx",
+      "sha256": "58a232bc79e4ed52810fbaab82cd9aa1f4fc952147141249ddbff22b2c2057be",
+      "bytes": 1759,
+      "mode": "100644",
+      "gitBlob": "c56b391167d0a67607a5d4c8ecbd3566f48e8d75"
+    },
+    {
+      "path": "app/workspace/review-candidates/layout.tsx",
+      "sha256": "d2e24419274a23f9b3e4ed3134b3916833176e45f1b38f5bba4578c105c3f30c",
+      "bytes": 206,
+      "mode": "100644",
+      "gitBlob": "d61e92805f8523d6f06dd99ce18d7b1f602a0759"
+    },
+    {
+      "path": "app/workspace/review-candidates/page.tsx",
+      "sha256": "17dd98219a50612eb73fb3ab91b34139cb99402f2499aaf5ac0663033f4e7d15",
+      "bytes": 1751,
+      "mode": "100644",
+      "gitBlob": "816baafbaff964f41842108571d8bd7e7fc54afe"
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
@@ -12081,10 +12117,10 @@
     },
     {
       "path": "components/ClinicalReviewInbox.tsx",
-      "sha256": "1f1ddd9e097300cf051e17203d1a354a680036fba57a392f942b485620ffbdee",
-      "bytes": 22796,
+      "sha256": "59bbb696c8d1c69efb877ff4710dde7781cb51f3ff868b6e7f950c25cb4adaf7",
+      "bytes": 23016,
       "mode": "100644",
-      "gitBlob": "e1aa843ef6dbb2deb51ae7faa4d8abb96f53ea6e"
+      "gitBlob": "8282eb448ab160a249fc718df4e8defed0b7cfb3"
     },
     {
       "path": "components/CourseCatalogue.tsx",
@@ -13138,10 +13174,10 @@
     },
     {
       "path": "db/schema.ts",
-      "sha256": "07e27b36bc95a5ce6535d19c7bec90fc214bf2d3ee3e27f1bd6ba0ba3370b982",
-      "bytes": 55510,
+      "sha256": "a1555877b2a89b3ca2b662ddba7369069add4305b50f7f4fce675047c5248dad",
+      "bytes": 56657,
       "mode": "100644",
-      "gitBlob": "8f57b057a2c307824f8e07d604e3b0b81e0ca315"
+      "gitBlob": "b4b388e2543695a56ed654b8f326d93772285407"
     },
     {
       "path": "docs/ABDOMINAL_CONNECTIVE_QUIZ_IMPORT.md",
@@ -13450,6 +13486,20 @@
       "bytes": 3611,
       "mode": "100644",
       "gitBlob": "d74df0c5c6934598966191bc8f070c8a5b0de423"
+    },
+    {
+      "path": "docs/FROZEN_CANDIDATE_DECISIONS.md",
+      "sha256": "ffdeacc9bf44f63e6eae173fa6f7235220280455ee66d47cf20e8c735e7a1993",
+      "bytes": 4419,
+      "mode": "100644",
+      "gitBlob": "092cbb8037e3136f861f88e8bb968a81da0bd880"
+    },
+    {
+      "path": "docs/FROZEN_CLINICAL_INSPECTIONS.md",
+      "sha256": "a531eb06b1f705ab5e73a67f27e2d061a59382593c2d19c38f426b61e9779935",
+      "bytes": 4486,
+      "mode": "100644",
+      "gitBlob": "9f1b1dcb342a9e7dac31b23a8c55767f9562bf1e"
     },
     {
       "path": "docs/GUIDED_LECTURE_HANDOFF.md",
@@ -16581,6 +16631,13 @@
       "gitBlob": "fe972ffbbc32e74da7d51cc734017d958f5b8229"
     },
     {
+      "path": "drizzle/0010_keen_ultron.sql",
+      "sha256": "cd4be83309318e46142eea200af8f7b09a46f019791468fabd503af2a89bca7b",
+      "bytes": 1007,
+      "mode": "100644",
+      "gitBlob": "6b7195f904c131527bf07a731ab5e1eb6d98f8c0"
+    },
+    {
       "path": "drizzle/meta/0000_snapshot.json",
       "sha256": "57a15239236c23eb52ec2356b458664c969c4cf31c3a969e9d2cb9b11b0a5038",
       "bytes": 2065,
@@ -16651,11 +16708,18 @@
       "gitBlob": "93e43fea9716d0519daefdd6defb043f58af8134"
     },
     {
-      "path": "drizzle/meta/_journal.json",
-      "sha256": "47db9fd30399626b292cdce27a2cf1f3f0b07686b86dd66acba52b7e82a0c49f",
-      "bytes": 1504,
+      "path": "drizzle/meta/0010_snapshot.json",
+      "sha256": "7beb389def2a849032d3005f767fa54e287585e6ae42602701bf363d2643fb86",
+      "bytes": 265951,
       "mode": "100644",
-      "gitBlob": "7cc003034535e9a7952d72e38bd550b293e6ea95"
+      "gitBlob": "359b7064cb9f86d9aed9aa59107341328d62faff"
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "sha256": "2f4ec05393fa43a905679c488624560a916403852a172f50e89d5b4685582cb2",
+      "bytes": 1644,
+      "mode": "100644",
+      "gitBlob": "978a321b2c1f73a8622f93d662d06a4c22f99d29"
     },
     {
       "path": "env.d.ts",
@@ -16889,6 +16953,27 @@
       "gitBlob": "8f35477f17de8392ee962624367da135a0285e29"
     },
     {
+      "path": "lib/clinical-review-candidate-delivery.ts",
+      "sha256": "75960d6ad38db8734571e0c84ebdfa339952d2587c3c681263d16eccac7809a6",
+      "bytes": 4860,
+      "mode": "100644",
+      "gitBlob": "c56542f89b5c1be704fd367e7d3717b4dd08ff9d"
+    },
+    {
+      "path": "lib/clinical-review-candidate-registry.json",
+      "sha256": "6768daf581a32748e498ebc6309b96232b62d1dc9e07ae04157842d9366aebd1",
+      "bytes": 129251,
+      "mode": "100644",
+      "gitBlob": "92588d4fc73e4bb3845fe42e28a865991386ecac"
+    },
+    {
+      "path": "lib/clinical-review-candidate.ts",
+      "sha256": "969b163495ddc6bdfec9a27219ffaa310d76ff45e97c7a2b76bd367194e15bc5",
+      "bytes": 9695,
+      "mode": "100644",
+      "gitBlob": "7eaaac26631d94f63bf0216bcdad0981c4b5f444"
+    },
+    {
       "path": "lib/clinical-review-extra-inbox.ts",
       "sha256": "c47af416e3e8f8cd9591693ad27704f6f3fe739399a49874883fe69a48aa16eb",
       "bytes": 21230,
@@ -17097,6 +17182,27 @@
       "bytes": 12842,
       "mode": "100644",
       "gitBlob": "77cb91bbe2f5568d51342e4ca9866e92dc1bbcf3"
+    },
+    {
+      "path": "lib/frozen-review-api.ts",
+      "sha256": "0ca0f078c041b961e81ca73e09a395af36114ae5ec40fb610bb3bd58cb2c9ec8",
+      "bytes": 6156,
+      "mode": "100644",
+      "gitBlob": "5c1afb6e62b0c11caad1464dc06c3c30dd8e5558"
+    },
+    {
+      "path": "lib/frozen-review-contract.ts",
+      "sha256": "1eb5079aa62cbbe10722dcfa3ecc1b471df3e50be7f73da26d918f16713d3a3e",
+      "bytes": 9816,
+      "mode": "100644",
+      "gitBlob": "8c4db9237afd3e478bf8d4f6df49bd784aa527ef"
+    },
+    {
+      "path": "lib/frozen-review-store.ts",
+      "sha256": "59e7765891b5dc3402a8c1dd34cf909e1279123f3d9867a763d1a53533959e44",
+      "bytes": 5552,
+      "mode": "100644",
+      "gitBlob": "a3b1f00b7375038b4b1702fc0c82f4e12587066e"
     },
     {
       "path": "lib/head-anatomy-checks.ts",
@@ -20046,6 +20152,13 @@
       "gitBlob": "72e3a6932ce78572314ea34e749e974a21a66379"
     },
     {
+      "path": "scripts/build-clinical-review-candidate.mjs",
+      "sha256": "5f4f8e719ee06e30a528d6ddea3e37c0dd0492415059caa539d2ccb6f5bd7cf5",
+      "bytes": 10959,
+      "mode": "100644",
+      "gitBlob": "0b1acccfdf8183f047236af270f188288a3a2046"
+    },
+    {
       "path": "scripts/build-clinical-review-viewer.mjs",
       "sha256": "ff794e14a3c95e0404f114d364db370a9ef6059cf0dc90c34f004bf9d856cfc4",
       "bytes": 3919,
@@ -20072,6 +20185,55 @@
       "bytes": 1294,
       "mode": "100644",
       "gitBlob": "251203cb0e773827c6203d415bf48c6834f8b44f"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/decisions.css",
+      "sha256": "9183a1331594f47133fa146b78b18d2ed7ee47b1a758158ddb3d066fd1cd7135",
+      "bytes": 1690,
+      "mode": "100644",
+      "gitBlob": "60e6d77c00309ea63f060b2d46bf1f2afa251de8"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/decisions.tsx",
+      "sha256": "eac1b7dc83268a8d82504624ff8f7d6c88133d6b2d0fd6fa6977f9193305948b",
+      "bytes": 16275,
+      "mode": "100644",
+      "gitBlob": "5411c75e6290217ea8234c756f1fdc260f9f537e"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/index.html",
+      "sha256": "5b2169ac027b27ab4568346e2d1a5ea86f2c4c74c1bf5b714dd89c37d3bae807",
+      "bytes": 383,
+      "mode": "100644",
+      "gitBlob": "9551a6a599a21f830c912efd750d9b42cb64e99a"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/viewer/index.html",
+      "sha256": "2a4da0732d8ed8ad28bb893629cc784cc61055729306fef9c698ac9d59e261cf",
+      "bytes": 380,
+      "mode": "100644",
+      "gitBlob": "7ed12bd031216d03df64302fbb2d30c91a46cdd1"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/viewer/main.tsx",
+      "sha256": "115f4069b7b035a0db0a2b1b641389453f5089f6d117c4ddc0dc5669a36382a0",
+      "bytes": 1625,
+      "mode": "100644",
+      "gitBlob": "78796c9572ff662aa59d70c85bc18f516e9b52c1"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/worksheet.css",
+      "sha256": "7717fbebc1b60beecf238ff628eb9d17f062483c133505aa4e239e48974a49e2",
+      "bytes": 1632,
+      "mode": "100644",
+      "gitBlob": "0bceba1eb8d1005a898409d4567467f0612e89b2"
+    },
+    {
+      "path": "scripts/clinical-review-candidate/worksheet.tsx",
+      "sha256": "b054f5b0accaaf24d38f679318ff8b052322c4f1825aedddf3b2cad2e9136e28",
+      "bytes": 7966,
+      "mode": "100644",
+      "gitBlob": "07d7945bf9a5c29bca0741b05d3035142d8df178"
     },
     {
       "path": "scripts/clinical-review-viewer/framework.tsx",
@@ -20401,6 +20563,13 @@
       "bytes": 9838,
       "mode": "100644",
       "gitBlob": "123916df262d9aa1cd9a00f0e61c9fec043bfdc7"
+    },
+    {
+      "path": "scripts/stage-clinical-review-candidate-local.mjs",
+      "sha256": "95a49ed55e773e157a2951422005e67171f9457709dc5f8bb283f25d4b79d5b5",
+      "bytes": 4096,
+      "mode": "100644",
+      "gitBlob": "266c11d77b1e9b48d6a8f9cc39232b18b2590dfe"
     },
     {
       "path": "scripts/start-stable-preview.mjs",
@@ -22720,6 +22889,20 @@
       "gitBlob": "092ee6f6bf0f904e786105acd4b3b481882547d9"
     },
     {
+      "path": "tests/clinical-review-candidate-workerd.test.mjs",
+      "sha256": "db38bf4addedb895c03c17f1ef9373abb202a57ad519cc35eee97ec9f38f589f",
+      "bytes": 3912,
+      "mode": "100644",
+      "gitBlob": "4ec3ad5c49bb2549b999cab415323fba9c8697f7"
+    },
+    {
+      "path": "tests/clinical-review-candidate.test.ts",
+      "sha256": "ba743f5346dc4ed3744522383d8adb83cc07eb078ef94a036f48ad3ceb3ae998",
+      "bytes": 8835,
+      "mode": "100644",
+      "gitBlob": "ca06c21424660224ebd9d9244e40121853c4f60f"
+    },
+    {
       "path": "tests/clinical-review-cardiac-cavity-depth.test.ts",
       "sha256": "48d37626d2bf2e24ea7b4dc6f4fa623956b3d3275d8f09ed02e389043901bfdc",
       "bytes": 12203,
@@ -23309,10 +23492,10 @@
     },
     {
       "path": "tests/clinical-review-inbox-ui.test.mjs",
-      "sha256": "bf37a0ff7530477ab0caf5b01486baab6c7d05894bdf022bbfda8ccd6621e041",
-      "bytes": 14898,
+      "sha256": "8627f79ce06572ede33f082e2379c5f7e3009fe9d1269126c3875f6f1d173200",
+      "bytes": 15008,
       "mode": "100644",
-      "gitBlob": "c7076ad21a5d0ba70103c0875bb6a66f0909a95c"
+      "gitBlob": "0e986467afcf837f3987a05a60edd64bd40396bb"
     },
     {
       "path": "tests/clinical-review-inbox.test.ts",
@@ -27165,6 +27348,41 @@
       "gitBlob": "02c8b6ce8317e03d6553e91417a699ee733d5654"
     },
     {
+      "path": "tests/frozen-review-api-workerd.test.mjs",
+      "sha256": "157e52ad881288f4156933a63133ce7ea5306e8dd9d03083dbd2c7c9f4957969",
+      "bytes": 10990,
+      "mode": "100644",
+      "gitBlob": "912cd208848cee00a13b522d3864f4599ebdd4bd"
+    },
+    {
+      "path": "tests/frozen-review-contract.test.ts",
+      "sha256": "23ea8293cb315b165281c604442906d15cc675fd45a46549e8820d1684bfb008",
+      "bytes": 6281,
+      "mode": "100644",
+      "gitBlob": "3d478747640f237d0661f9fcb9b25d664471ce2f"
+    },
+    {
+      "path": "tests/frozen-review-decision-ui.test.mjs",
+      "sha256": "329069aa7163b648285cc7d76beb666de037e2541ce3bd42730321c41b88117c",
+      "bytes": 10472,
+      "mode": "100644",
+      "gitBlob": "858cfb8a2bbfa7335892be89a14a1e3c2274256e"
+    },
+    {
+      "path": "tests/frozen-review-inspection-ui.test.mjs",
+      "sha256": "04d65df24733cf42ce1bc249146967fb3cc98cd9d388385a1efc4ef1319d0383",
+      "bytes": 5110,
+      "mode": "100644",
+      "gitBlob": "70cd5c5561208c2f1a0002662eae0c42204d6839"
+    },
+    {
+      "path": "tests/frozen-review-store-workerd.test.mjs",
+      "sha256": "9c88c701b28e9a4d23fe2caee727dfae519478c01890a2dd3fb7dfc67541c898",
+      "bytes": 6733,
+      "mode": "100644",
+      "gitBlob": "4e64b1bad4531f3aa77112979ea4049f6ae1cd64"
+    },
+    {
       "path": "tests/git-object-reader.mjs",
       "sha256": "e26e0ff609bf06a85d29a758654eac6a9a05c0587509af07a807f07c286891ce",
       "bytes": 4403,
@@ -29097,6 +29315,13 @@
       "gitBlob": "848a5d2cca0c858e1fbef6a5f4409f56386bbc4f"
     },
     {
+      "path": "tests/personal-review-candidate.test.ts",
+      "sha256": "5f665ee05d4fb38b43a3a42467683bebf80ecb599e47347ff9d8ffacc466ea00",
+      "bytes": 5722,
+      "mode": "100644",
+      "gitBlob": "4ae4504e4b58f4fccc11fa4f57140b08693502f9"
+    },
+    {
       "path": "tests/pilot-mutation-envelope.test.mjs",
       "sha256": "b214a57bf84068aade46d0d3571a7703d54e1b3fa2822d7be2ba177477655da6",
       "bytes": 13489,
@@ -30249,9 +30474,10 @@
     }
   ],
   "modelsAndMedia": "Referenced by exact hashes in existing-assets.json; not duplicated",
-  "rawGitAncestryIncluded": false,
+  "rawWebsiteGitAncestryIncluded": false,
   "privateRuntimePackagesIncluded": false,
   "clinicalDatasetsIncluded": false,
+  "reviewDecisionsIncluded": false,
   "clinicalApproval": false,
   "publicDeployment": false
 }

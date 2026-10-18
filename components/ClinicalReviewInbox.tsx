@@ -178,6 +178,7 @@ export function ClinicalReviewInbox() {
       <a href="/workspace/atlas-review/head-learning" target="_blank" rel="noopener noreferrer" aria-label="CT and MRI head learning worksheets (opens in a new tab)">CT/MRI head learning<span aria-hidden="true"> ↗</span></a>
       <a href="/workspace/atlas-review/regional-guides" target="_blank" rel="noopener noreferrer" aria-label="Native MRI guide teaching worksheets (opens in a new tab)">Native MRI guide teaching<span aria-hidden="true"> ↗</span></a>
       <a href="/workspace/atlas-review/source-comparisons" target="_blank" rel="noopener noreferrer" aria-label="Held source comparisons (opens in a new tab)">Held source comparisons<span aria-hidden="true"> ↗</span></a>
+      <a href="/workspace/review-candidates" target="_blank" rel="noopener noreferrer" aria-label="Saved read-only inspections (opens in a new tab)">Saved inspections · read-only<span aria-hidden="true"> ↗</span></a>
     </nav>
     </details>
     <div className="clinical-review-inbox-controls">

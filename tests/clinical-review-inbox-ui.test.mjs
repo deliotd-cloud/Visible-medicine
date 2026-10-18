@@ -147,11 +147,11 @@ test('inbox area links remain available during automatic loading and preserve an
   const areaLinks = () => walk(render(), n => n.type === 'nav' && n.props['aria-label'] === 'Browse clinical review worksheets')
     .flatMap(nav => walk(nav, n => n.type === 'a'));
   const previous = ['/workspace/atlas-review', '/workspace/atlas-review/head-learning', '/workspace/atlas-review/source-comparisons'];
-  const expected = ['/workspace/atlas-review', '/workspace/atlas-review/head-learning', '/workspace/atlas-review/regional-guides', '/workspace/atlas-review/source-comparisons'];
-  assert.deepEqual(areaLinks().filter(link => link.props.href !== '/workspace/atlas-review/regional-guides').map(link => link.props.href), previous);
+  const expected = ['/workspace/atlas-review', '/workspace/atlas-review/head-learning', '/workspace/atlas-review/regional-guides', '/workspace/atlas-review/source-comparisons', '/workspace/review-candidates'];
+  assert.deepEqual(areaLinks().filter(link => !['/workspace/atlas-review/regional-guides','/workspace/review-candidates'].includes(link.props.href)).map(link => link.props.href), previous);
   assert.deepEqual(areaLinks().map(link => link.props.href), expected);
   assert.deepEqual(areaLinks().map(link => words(link)),
-    ['3D anatomy & teaching ↗', 'CT/MRI head learning ↗', 'Native MRI guide teaching ↗', 'Held source comparisons ↗']);
+    ['3D anatomy & teaching ↗', 'CT/MRI head learning ↗', 'Native MRI guide teaching ↗', 'Held source comparisons ↗', 'Saved inspections · read-only ↗']);
   assert(areaLinks().every(link => link.props.target === '_blank' && link.props.rel === 'noopener noreferrer' &&
     link.props['aria-label'].includes('opens in a new tab') && link.props.onClick === undefined));
   assert.equal(calls.length, 1, 'area discovery must not restart the automatic scan');

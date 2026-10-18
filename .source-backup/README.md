@@ -1,27 +1,21 @@
-# Visible Medicine application-source snapshot
+# Visible Medicine application-source recovery
 
-This is a screened source-file snapshot, not a public website deployment or a
-copy of patient datasets. `.source-backup/manifest.json` identifies each original
-file by SHA-256, byte count and Git blob. No raw website or Atlas Git ancestry is
-included. Historical source assertions still belong to their declared original
-Git context; this snapshot's new commit does not invent a replacement approval.
+This branch contains4,350 screened application-source paths plus this folder's
+three recovery metadata files. Its only parent is the previously screened,
+parentless source snapshot 5d1d0e1e1910ae8f8d6513ecee8b0bd8c37d9a0b. Raw website/Atlas ancestry, private
+review decisions, local D1 state, candidate object packages, scans and new media
+are excluded. This is NOT a full website, patient-data or executable clinical
+release backup. Three historical operational documents remain local only.
 
-The application files retain their original contents and licences. Three
-historical coordination documents are deliberately kept only in the owner's
-verified F-drive recovery because they require a separate privacy review. The
-manifest names those omissions; it does not contain their text.
+Use manifest.json for exact source hashes and existing-assets.json for references
+to already-backed model/static objects; preserve their original licences/notices.
+A source clone does not recover private model-delivery grants, sign-in roles,
+approvals, candidate R2 objects, cleared imaging cases or secrets. Do not seed
+approvals or disable missing-input/access gates to make it run.
 
-The model/media files are not duplicated here. `existing-assets.json` gives exact
-hashes and already-verified GitHub commits/paths for the 144 model paths and nine
-static assets. These are source/reference assets, not the owner's CT/MRI scans.
-
-For exact restoration, extract recorded Git blobs without text conversion, verify
-their SHA-256 values, and recover the listed assets from their recorded commits.
-Install the recorded dependencies using the retained package lock. Restore any
-private configuration, review-support bindings and datasets separately from the
-owner's local recovery; do not put them in GitHub or loosen a missing-input gate.
-Without those local inputs, protected clinical workflows must remain unavailable.
-
-See the retained application README and licensing notices for setup. Source,
-unit tests and build receipts never establish clinical accuracy, patient-space
-registration, privacy clearance or permission to publish scans or private cases.
+The new schema migration0010_keen_ultron.sql is schema-only; apply through the
+approved migration workflow, never replay all historical migrations blindly.
+The migration was applied only locally during this checkpoint, not to hosting.
+No new model/dependency/font or cloud resource was introduced by this source
+checkpoint. Existing asset references do not establish clinical/privacy approval
+or a guarantee of future free hosting. Nothing was publicly deployed.
