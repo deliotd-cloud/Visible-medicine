@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 57,
+  "revision": 58,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -25,7 +25,7 @@
     "atlasTree": "83720d136f899876bd947323e6552c4d3e171210",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "024b9d3104ee4a93bc50b6430851ea9184c3a2f95da8c133d6e302006993a902",
+    "reviewIntegration": "11ddecf2aa1978f5979338085f1b2e08ad9fa84a331b7c92a367a876357543c5",
     "reviewSourceFiles": 1531,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 58,
+      "date": "2026-10-18",
+      "change": "Native CT/MRI structure retry synchronously hands focus to the existing visible package action with preventScroll, including Guided learning and Focus images. Accepted failures are consumed once; retired callbacks and non-current async failures cannot retry or move focus. No mode, URL, window, cursor, source mask, annotation mapping or entitlement changes. Only HeadAtlasViewer.tsx changes among1661 combined Review inputs; normal Review rebind11ddecf2 changes only the two generated revision records. CleanAtlas46c/tree837,1531 imports/four learners/models/teaching/notices unchanged. Two appended actual-component harness tests preserve every original assertion, pass against the candidate and fail against the authentic original; browser/physical AT acceptance remains separate. Portal-venous original packet/security test also passed in full before its minimal current-admission seam was installed, with all historical assertions preserved. All71/eight requirement scopes, statuses, owners and acceptance retained; no clinical approval migration, registration or public deployment."
+    },
     {
       "revision": 57,
       "date": "2026-10-18",

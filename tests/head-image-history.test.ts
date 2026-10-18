@@ -1906,6 +1906,72 @@ test('failed guided structure retries its exact source while preserving URL, win
   }finally{h.dispose();}
 });
 
+test('accepted CT/MRI structure retry hands focused button to visible package action in Structure, Guided and image focus',async()=>{
+ for(const modality of ['CT','MRI'] as const)for(const mode of ['structure','guided','focus'] as const){
+  const tour=`?concept=brainstem-pons&headTour=brainstem&headStep=1&headRevision=${HEAD_LINK_REVISION}`;
+  const target=modality==='MRI'?{...pons,id:'mrb.bst.pons'}:pons;
+  const h=harness(`/atlas/${modality.toLowerCase()}-head${mode==='guided'?tour:''}`,{modality,deferEntry:true,entries:[target,midbrain,medulla]});
+  const priorDocument=(globalThis as any).document;
+  try{
+   h.flush();await h.choosePackage('synthetic-focus-retry');await h.settle();await h.settle();
+   if(mode!=='guided')h.act('Pons — regional mask');
+   h.entryRequests[0].reject(Error('Synthetic temporary read failure'));await h.settle();
+   const retry=h.find('button','Retry opening structure')!;assert(retry);
+   const opener=h.find('button','Change package')!;assert(opener);
+   assert.equal(h.tree.props.canFocusImages,mode!=='guided');
+   assert(h.walk(h.tree.props.actions,node=>node===opener),'package action survives outside the side panels');
+   const retryElement={isConnected:true},focus:unknown[]=[];
+   const openerElement={focus(options:unknown){focus.push(options);(globalThis as any).document.activeElement=this;}};
+   opener.props.ref.current=openerElement;
+   (globalThis as any).document={activeElement:retryElement};
+   const history=[...h.browser.stack],navigation=h.tree.props.headNavigation;
+   const native=()=>h.walk(h.tree,node=>typeof node.type==='function'&&node.type.name==='NativeSlice');
+   const windowing=native()?.props.windowing,cursor=native()?.props.cursor;
+   const guided=()=>h.walk(h.tree,node=>typeof node.type==='function'&&node.type.name==='HeadAtlasGuidedLearning');
+   const position=guided()?.props.position;
+   retry.props.onClick();retry.props.onClick();h.flush();
+   assert.deepEqual(focus,[{preventScroll:true}],`${modality}/${mode}: one synchronous focus handoff`);
+   assert.equal((globalThis as any).document.activeElement,openerElement);
+   assert.equal(h.find('button','Retry opening structure'),undefined);
+   assert.equal(h.entryRequests.length,2,'duplicate activation cannot start another request');
+   assert.equal(h.entryRequests[0].signal.aborted,true);
+   assert.deepEqual(h.browser.stack,history);assert.deepEqual(h.tree.props.headNavigation,navigation);
+   assert.deepEqual(native()?.props.windowing,windowing);assert.deepEqual(native()?.props.cursor,cursor);
+   assert.deepEqual(guided()?.props.position,position);assert.equal(h.practice.active,false);
+   h.entryRequests[1].resolve({entry:target,mask:new Uint8Array(8),focus:null});await h.settle();
+   assert.equal(focus.length,1,'async completion does not steal focus');
+   retry.props.onClick();h.flush();assert.equal(focus.length,1,'retired button cannot refocus');
+  }finally{(globalThis as any).document=priorDocument;h.dispose();}
+ }
+});
+
+test('invalid, cancelled and older same-entry retry callbacks never move focus',async()=>{
+ for(const action of ['Clear selection','Close atlas','Midbrain — regional mask','practice'] as const){
+  const h=harness('/atlas/ct-head',{deferEntry:true});try{
+   h.flush();await h.choosePackage('synthetic-retired-retry');await h.settle();await h.settle();
+   h.act('Pons — regional mask');h.entryRequests[0].reject(Error('Synthetic failure'));await h.settle();
+   const retry=h.find('button','Retry opening structure')!;assert(retry);
+   let focusCount=0;h.find('button','Change package')!.props.ref.current={focus(){focusCount++;}};
+   if(action==='practice'){h.setPractice(true);h.flush();}else h.act(action);
+   const requests=h.entryRequests.length,focusBefore=focusCount;
+   retry.props.onClick();h.flush();
+   assert.equal(focusCount,focusBefore,`${action}: retired callback cannot focus`);
+   assert.equal(h.entryRequests.length,requests,`${action}: retired callback cannot retry`);
+  }finally{h.dispose();}
+ }
+ const h=harness('/atlas/ct-head',{deferEntry:true});try{
+  h.flush();await h.choosePackage('synthetic-second-failure');await h.settle();await h.settle();
+  h.act('Pons — regional mask');h.entryRequests[0].reject(Error('First failure'));await h.settle();
+  const old=h.find('button','Retry opening structure')!;let focusCount=0;
+  h.find('button','Change package')!.props.ref.current={focus(){focusCount++;}};
+  old.props.onClick();h.flush();assert.equal(focusCount,1);
+  h.entryRequests[1].reject(Error('Second failure'));await h.settle();
+  const current=h.find('button','Retry opening structure')!;assert(current);
+  old.props.onClick();assert.equal(focusCount,1);assert.equal(h.entryRequests.length,2);
+  current.props.onClick();h.flush();assert.equal(focusCount,2);assert.equal(h.entryRequests.length,3);
+ }finally{h.dispose();}
+});
+
 test('native retry cancels on clear, package close, other selection or practice without stale anatomy',async()=>{
   for(const action of ['Clear selection','Close atlas','Midbrain — regional mask','practice']){
     const h=harness('/atlas/ct-head',{deferEntry:true});try{

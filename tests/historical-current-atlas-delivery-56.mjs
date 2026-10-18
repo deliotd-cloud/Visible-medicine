@@ -69,6 +69,11 @@ export function readRevision56(path,{readLive=p=>readFileSync(join(liveRoot,p))}
  assert(typeof path==='string'&&/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(part=>!part||part==='.'||part==='..'));
  if(documents.has(path))return fixed('closed56-documents/'+path,revision56.documents[path]);
  if(overrides.has(path))return fixed('closed56-overrides/'+path,overrides.get(path));
+ if(path==='components/HeadAtlasViewer.tsx'){
+  const bytes=fixed('closed56-inputs/components/HeadAtlasViewer.raw','06b4c293f5931f5cd0e36471de46718c6bbf26ea3500ec24c57c4de15e476841');
+  assert.equal(sha(bytes),oldInputs.get(path),path+' closed56 binding');
+  return bytes;
+ }
  if(path.startsWith('public/atlas-review-viewer/')&&emitted.has(path))return fixed('closed56-viewer/'+path,emitted.get(path));
  const expected=oldInputs.get(path)??imported.get(path)??emitted.get(path)??historicalReads.get(path);
  assert(expected,'Closed56 path not bound: '+path);

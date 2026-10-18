@@ -367,6 +367,12 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   const sliceSelection=quizActive?(practice.mode==='label'||practice.mode==='recall'||practice.outcome?practice.target:null):selected;
   const visibleLayers=useMemo(()=>quizActive?(sliceSelection?[sliceSelection]:[]):visibleHeadOverlays(groupLayers,hiddenLayers,selected),[quizActive,sliceSelection,groupLayers,hiddenLayers,selected]);
   const activeEntry=study?.definition.entries.find(entry=>entry.id===activeId);
+  // A retry belongs to the currently rendered failure, not a retained button
+  // callback from a prior selection, panel, package, or practice state.
+  const structureRetryContext={pkg,study,activeId,failedEntryId,selected,quizActive};
+  const structureRetryContextRef=useRef(structureRetryContext);
+  structureRetryContextRef.current=structureRetryContext;
+  const structureRetryConsumedRef=useRef(false);
   // Manual File handles deliberately clear when leaving imaging routes.
   // Keep that privacy boundary and leave their scan alive in its original tab.
   const preserveScanTab=!!pkg&&pkg.source!=='configured-local';
@@ -591,12 +597,16 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
     const entry=study.definition.entries.find(item=>item.id===activeId);if(!entry)return;
     const controller=new AbortController();entryRequestRef.current=controller;setStatus(`Opening ${headLabel(entry)}…`);setError('');
     const reuseMask=groupLayers.find(layer=>canReuseHeadMask(pkg,study,entry,layer));
-    loadHeadEntry(pkg,study,entry,controller.signal,reuseMask?{reuseMask}:undefined).then(value=>{if(controller.signal.aborted||entryRequestRef.current!==controller)return;setSelected(value);const pending=pendingHistoryRestoreRef.current;if(pending?.pkg===pkg&&pending.study===study&&pending.href===historyHref()&&!practiceRef.current.active){viewMemoryReadyRef.current=true;setCursor(pending.view.cursor);}else if(value.focus){viewMemoryReadyRef.current=true;setCursor(focusIJK(study,value.focus));}setStatus('');}).catch(reason=>{if(!controller.signal.aborted){setStatus('');setFailedEntryId(entry.id);setError(reason instanceof Error?reason.message:'The structure could not be opened.');}});
+    loadHeadEntry(pkg,study,entry,controller.signal,reuseMask?{reuseMask}:undefined).then(value=>{if(controller.signal.aborted||entryRequestRef.current!==controller)return;setSelected(value);const pending=pendingHistoryRestoreRef.current;if(pending?.pkg===pkg&&pending.study===study&&pending.href===historyHref()&&!practiceRef.current.active){viewMemoryReadyRef.current=true;setCursor(pending.view.cursor);}else if(value.focus){viewMemoryReadyRef.current=true;setCursor(focusIJK(study,value.focus));}setStatus('');}).catch(reason=>{if(!controller.signal.aborted&&entryRequestRef.current===controller){structureRetryConsumedRef.current=false;setStatus('');setFailedEntryId(entry.id);setError(reason instanceof Error?reason.message:'The structure could not be opened.');}});
     return()=>{controller.abort();if(entryRequestRef.current===controller)entryRequestRef.current=null;};
   },[pkg,study,activeId,quizActive,entryLoadAttempt]);
   function retryStructure(){
-    if(!pkg||!study||quizActive||selected||!activeId||failedEntryId!==activeId)return;
+    if(structureRetryContextRef.current!==structureRetryContext||structureRetryConsumedRef.current||!pkg||!study||quizActive||selected||!activeId||failedEntryId!==activeId)return;
+    structureRetryConsumedRef.current=true;
     setError('');setFailedEntryId(null);setEntryLoadAttempt(value=>value+1);
+    // Both side panels can be hidden in Focus images. The package action stays
+    // visible in Structure, Guided learning, and image focus while retry loads.
+    openButtonRef.current?.focus({preventScroll:true});
   }
   async function openConfiguredAtlas(automatic=false){
     const generation=++importGeneration.current;

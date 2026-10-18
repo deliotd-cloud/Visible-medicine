@@ -71,6 +71,11 @@ export function readRevision55(path,{readLive=p=>readFileSync(new URL(p,site))}=
   assert.equal(sha(bytes),oldInputs.get(path),path+' unchanged across closed55/56');
   return bytes;
  }
+ if(path==='components/HeadAtlasViewer.tsx'){
+  const bytes=fixed('closed56-inputs/components/HeadAtlasViewer.raw','06b4c293f5931f5cd0e36471de46718c6bbf26ea3500ec24c57c4de15e476841');
+  assert.equal(sha(bytes),oldInputs.get(path),path+' closed55 binding');
+  return bytes;
+ }
  if(frozenSpecial.has(path))return fixed(...frozenSpecial.get(path));
  if(frozen.has(path))return Buffer.from(frozen.get(path));
  const expected=oldInputs.get(path)??imported.get(path)??fixedLive.get(path);

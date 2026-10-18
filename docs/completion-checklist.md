@@ -1,6 +1,6 @@
 # Visible Medicine completion checklist
 
-Revision 57 · Updated 2026-10-18
+Revision 58 · Updated 2026-10-18
 
 Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
 
@@ -8,7 +8,7 @@ This is the persistent project checklist, not a claim that the whole website is 
 
 ## Current baseline
 
-Atlas source: `46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `024b9d3104ee4a93bc50b6430851ea9184c3a2f95da8c133d6e302006993a902`.
+Atlas source: `46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `11ddecf2aa1978f5979338085f1b2e08ad9fa84a331b7c92a367a876357543c5`.
 
 1104 root-body representations have 9936 topic placements: 9328 editorial drafts, 569 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
 
@@ -441,6 +441,7 @@ I can inventory sources and gaps, research acceptable references/assets, write r
 
 ## Change log
 
+- 2026-10-18 · revision 58: Native CT/MRI structure retry synchronously hands focus to the existing visible package action with preventScroll, including Guided learning and Focus images. Accepted failures are consumed once; retired callbacks and non-current async failures cannot retry or move focus. No mode, URL, window, cursor, source mask, annotation mapping or entitlement changes. Only HeadAtlasViewer.tsx changes among1661 combined Review inputs; normal Review rebind11ddecf2 changes only the two generated revision records. CleanAtlas46c/tree837,1531 imports/four learners/models/teaching/notices unchanged. Two appended actual-component harness tests preserve every original assertion, pass against the candidate and fail against the authentic original; browser/physical AT acceptance remains separate. Portal-venous original packet/security test also passed in full before its minimal current-admission seam was installed, with all historical assertions preserved. All71/eight requirement scopes, statuses, owners and acceptance retained; no clinical approval migration, registration or public deployment.
 - 2026-10-18 · revision 57: Native CT/MRI desktop toolbar groups the enabled comparison launcher and image-layout controls into one wrapping row, with existing window/label/settings controls below. One wide-desktop CSS block only; no hidden controls, callback, source mapping or study changes. Actual prior CT/Pons selection, typed correct feedback, CT-to-MRI and Back/Forward journeys recorded; post-change dimensions remain a separate browser gate. Only components/head-atlas.css changes in1661 combined Review inputs; two generated revision records/Review viewer rebound normally to 024b9d31. CleanAtlas46c/tree837, all1531 imported identities/four learner modules/models/teaching/notices/source holds remain; all71/eight statuses, owners and acceptance retained. No review-decision migration, clinical or spatial-registration approval/public deployment. The first unpublished selector was rejected after actual Clear selection testing: its secondary Find linked button incorrectly activated the grid. The corrected five selectors target only the first comparison button, preserving unselected flow; previous candidate and failure evidence retained locally. Revision56 historical oracles and all clinical holds remain unchanged.
 - 2026-10-18 · revision 56: Private model routes now import their existing embedded stylesheet at the route boundary, addressing missing layout CSS observed in the real browser. Only two website input files change in the combined Review epoch; Atlas46c, all1531 imported source identities, four learner modules/models/teaching/holds and all71/eight requirement statuses and acceptance remain. Existing inner CSS, auth/query/decision code and held schematic presentation are unchanged. Rebuilt protected Reviewb4db; earlier common-host CSS attempt was correctly refused by the held-schematic verifier and reverted without changing that source. No decision migration, clinical or spatial-registration approval/public deployment.
 - 2026-10-18 · revision 55: Two exact-source unsigned plantar-US teaching placements imported from clean Atlas46c with four matching learner exports, generated Review4f08 and recomputed168-input coverage. Inventories/models/holds/independent entitlements are unchanged. My Learning now labels availability and progress on currently available workbooks while preserving old metrics, launch authority, progress and attempts. All71/eight requirements, statuses, owners and acceptance remain; clinical/private-decision/public-release fields stay unasserted. Prior54 source and assertions remain historical evidence, not new approval.

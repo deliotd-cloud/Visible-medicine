@@ -51,7 +51,7 @@ test('closed56 shape is independent of live/default documents and rejects change
   const tests=join(root,'tests'),fixtures=join(tests,'fixtures');
   mkdirSync(fixtures,{recursive:true});
   cpSync(new URL('./historical-current-atlas-delivery-56.mjs',import.meta.url),join(tests,'historical-current-atlas-delivery-56.mjs'));
-  for(const name of ['current-atlas-delivery-56.json','closed56-documents','closed56-validator'])cpSync(new URL(name,fixture),join(fixtures,name),{recursive:true});
+  for(const name of ['current-atlas-delivery-56.json','closed56-documents','closed56-validator','closed56-inputs'])cpSync(new URL(name,fixture),join(fixtures,name),{recursive:true});
   writeFileSync(join(tests,'current-atlas-delivery.mjs'),"throw Error('live validator must not load');\n");
   writeFileSync(join(fixtures,'current-atlas-delivery.json'),'{"corrupt":true}\n');
   mkdirSync(join(root,'atlas-review'),{recursive:true});
@@ -61,6 +61,7 @@ test('closed56 shape is independent of live/default documents and rejects change
  const independent=isolated();
  const closed=await import(independent.entry);
  assert.deepEqual(closed.validateCurrentAtlasDelivery(),revision56);
+ assert.equal(sha(closed.readRevision56('components/HeadAtlasViewer.tsx',{readLive:()=>{throw Error('isolated reader reached live viewer');}})),'06b4c293f5931f5cd0e36471de46718c6bbf26ea3500ec24c57c4de15e476841');
  const tampered=isolated();
  const frozen=join(tampered.root,'tests','fixtures','closed56-validator','tests','current-atlas-delivery.mjs');
  writeFileSync(frozen,readFileSync(frozen,'utf8')+'\n// tampered\n');
