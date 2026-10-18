@@ -10,6 +10,17 @@ const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const read=path=>readFileSync(root+'/'+path);
 const safe=path=>assert(/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(p=>!p||p==='.'||p==='..'));
 
+test('closed55 current pin remains immutable historical evidence',()=>{
+ const bytes=read('tests/fixtures/current-atlas-delivery-55.json');
+ assert.equal(sha(bytes),'f15fdf3f9959504ae83e08b777def63b8157dbf954d3721dae54cc9301186e23');
+ const old=JSON.parse(bytes);
+ assert.equal(old.source,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
+ assert.equal(old.reviewIntegration,'4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d');
+ assert.equal(old.reviewSourceFiles,1531);
+ assert.equal(Object.keys(old.documents).length,12);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));
+});
+
 test('closed 6ba delivery pin remains immutable historical evidence',()=>{
  const bytes=read('tests/fixtures/current-atlas-delivery-6ba0dd43.json');
  assert.equal(sha(bytes),'dc317ee27d8e297255d77b3ad418da6066d73fd5b066074c52b88ed5473bc92b');
@@ -37,7 +48,7 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
  assert.equal(CURRENT_ATLAS_REVISION,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
  assert.equal(pin.sourceTree,'83720d136f899876bd947323e6552c4d3e171210');
- assert.equal(pin.reviewIntegration,'4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d');
+ assert.equal(pin.reviewIntegration,'b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916');
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
  const detached=validateCurrentAtlasDelivery();detached.documents.foreign='0'.repeat(64);

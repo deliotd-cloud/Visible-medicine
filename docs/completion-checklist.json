@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 55,
+  "revision": 56,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -25,7 +25,7 @@
     "atlasTree": "83720d136f899876bd947323e6552c4d3e171210",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d",
+    "reviewIntegration": "b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916",
     "reviewSourceFiles": 1531,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -797,7 +797,8 @@
         "website:tests/head-inline-frame.test.ts",
         "headrecovery:combined-light-checks.json",
         "uiqa:manual-recovery-browser.json",
-        "uiqa:slide-find-iab-browser.json"
+        "uiqa:slide-find-iab-browser.json",
+        "website:tests/clinical-review-embedded-css.test.mjs"
       ]
     },
     {
@@ -1183,6 +1184,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 56,
+      "date": "2026-10-18",
+      "change": "Private model routes now import their existing embedded stylesheet at the route boundary, addressing missing layout CSS observed in the real browser. Only two website input files change in the combined Review epoch; Atlas46c, all1531 imported source identities, four learner modules/models/teaching/holds and all71/eight requirement statuses and acceptance remain. Existing inner CSS, auth/query/decision code and held schematic presentation are unchanged. Rebuilt protected Reviewb4db; earlier common-host CSS attempt was correctly refused by the held-schematic verifier and reverted without changing that source. No decision migration, clinical or spatial-registration approval/public deployment."
+    },
     {
       "revision": 55,
       "date": "2026-10-18",

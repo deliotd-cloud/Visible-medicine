@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {readRevision55} from './historical-current-atlas-delivery-55.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const fixture=new URL('./fixtures/',import.meta.url);
@@ -57,6 +58,11 @@ export function readRevision54(path,{readLive=p=>readFileSync(new URL(p,site))}=
   return bytes;
  }
  if(frozen.has(path))return Buffer.from(frozen.get(path));
+ if(['app/workspace/atlas-review/model/page.tsx','app/workspace/atlas-review/model/embedded/page.tsx'].includes(path)){
+  const bytes=readRevision55(path);
+  assert.equal(sha(bytes),oldInputs.get(path),path+' unchanged across closed54/55');
+  return bytes;
+ }
  assert(oldInputs.has(path),'Closed54 input scope: '+path);
  const bytes=readLive(path);
  assert(Buffer.isBuffer(bytes),'Closed54 live reader must return raw bytes');

@@ -480,7 +480,7 @@ for (const entry of pins.entries) {
 }
 const currentPin = validateCurrentAtlasDelivery();
 assert.equal(currentPin.source, CURRENT_ATLAS_REVISION);
-assert.equal(currentPin.reviewIntegration, '245ca2015821a0715539428dbcf4e499d9807ab83a906e0ee3f03c042571bf37');
+assert.equal(currentPin.reviewIntegration, hash(JSON.parse(readFileSync('atlas-review/integration-inputs.json')).inputs));
 const currentAtlas = currentAtlasDeliveryRoot();
 const currentReview = JSON.parse(readFileSync('atlas-review/manifest.json'));
 for (const path of addedPaths) {

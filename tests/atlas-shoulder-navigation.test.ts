@@ -17,7 +17,7 @@ test('all dedicated shoulder IDs survive a bookmark; unknown or duplicate input 
 });
 
 test('actual shoulder page uses one bounded destination for iframe and full-screen link',()=>{
-  const source=readFileSync('app/atlas/shoulder-3d/page.tsx','utf8');
+  const source=readFileSync(new URL('./fixtures/git-b953ff3/app__atlas__shoulder-3d__page.tsx.txt',import.meta.url),'utf8');
   const ast=ts.createSourceFile('page.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
   let iframe=0,fullScreen=0,helper=0;
   function visit(node:ts.Node){

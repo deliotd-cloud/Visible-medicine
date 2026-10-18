@@ -18,6 +18,7 @@ scripts/clinical-review-viewer/** text eol=lf
 package-lock.json text eol=lf
 
 # Historical source and delivery snapshots are exact byte evidence.
+tests/fixtures/** -text
 tests/fixtures/current-atlas-delivery-58926355.json -text
 tests/fixtures/atlas-arterial-evidence-limits-before-current-admission.txt -text
 tests/fixtures/atlas-cervical-projection-xray-before-current-admission.txt -text

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "scope": "application-source-only",
-  "at": "2026-10-18T19:21:28.403Z",
+  "at": "2026-10-18T19:51:08.277Z",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
   "atlasSource": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
   "atlasTree": "83720d136f899876bd947323e6552c4d3e171210",
-  "reviewIntegration": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d",
-  "registerRevision": 55,
-  "fullLocalSourceManifestSha256": "e80da7eb88eb3c955854daa08665800a833aedc4ed9607e206f050f4ca99c803",
-  "screenedSnapshotParent": "28edf5e8f05de21bf6a68008a7fa2e230dd3bb04",
+  "reviewIntegration": "b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916",
+  "registerRevision": 56,
+  "fullLocalSourceManifestSha256": "924051ef494279c115b1b7b93e9d781e2e97fbfc47e9f74782aeb6be74a831c6",
+  "screenedSnapshotParent": "148cf5647eed565cce74173f6caeccaa339d076f",
   "heldDocuments": [
     {
       "path": "docs/master-plan.md",
@@ -36,10 +36,10 @@
     },
     {
       "path": ".gitattributes",
-      "bytes": 17228,
-      "sha256": "845dd13acf54b7e3b765b6ca1699273282c00ee376a1ce4a7f44a2569da8d95c",
+      "bytes": 17253,
+      "sha256": "3bfb14bd68ee3f424d4f3b0bf9fc6c68d132e8c0c38b1bcd267a0a0103f0e80c",
       "mode": "100644",
-      "gitBlob": "41ea8ce3d9ba77bb7188d2168fd85868540f39d4"
+      "gitBlob": "a6441c3d03d7de8af84401c4f18de18e1be38b45"
     },
     {
       "path": ".openai/hosting.json",
@@ -1163,10 +1163,10 @@
     },
     {
       "path": "app/workspace/atlas-review/model/embedded/page.tsx",
-      "bytes": 291,
-      "sha256": "ca478ce89f0ee20154376dcb3ed33105fa62b2e1ebe22827423fac8f71ef68fb",
+      "bytes": 330,
+      "sha256": "cbc2ce257784cc4b7364aec814ca48a7e34b53ac7aabf4af05c3a6c2a58e498c",
       "mode": "100644",
-      "gitBlob": "ab6bb4591b0409d7f5d07c9f01173b1f5c8ba30c"
+      "gitBlob": "280ec08fc938b88b9c78afe0a1e54fc5b3531194"
     },
     {
       "path": "app/workspace/atlas-review/model/model-view.tsx",
@@ -1177,10 +1177,10 @@
     },
     {
       "path": "app/workspace/atlas-review/model/page.tsx",
-      "bytes": 276,
-      "sha256": "593cbca7fb47e09ed73ef7d307028417f33473b6f7ab7e9581343e4e4ada2069",
+      "bytes": 314,
+      "sha256": "3f82a2f024fa3949c88f345f9fae91085caa1eb5f4b71a6d92da7988f14cd8ed",
       "mode": "100644",
-      "gitBlob": "3df95b0a7b52dc340a228175e32d475d56d536ac"
+      "gitBlob": "50d7a705b64015b6547aeb9dd6cb14ce3054c710"
     },
     {
       "path": "app/workspace/atlas-review/model/review-model-embedded.css",
@@ -2774,9 +2774,9 @@
     {
       "path": "atlas-review/content/body-renderer-revision.json",
       "bytes": 212343,
-      "sha256": "4df78c8e8950dcb73e336230f141920516d52f379fd23a547e1e0cb39bc27dfa",
+      "sha256": "5b63f10e735a6b67df99cf3aeab732709c36d99c0026a2f792364e42f3e67d8a",
       "mode": "100644",
-      "gitBlob": "fcb469a5af287ce022bd2b8cdd8c5b93fe2a0a98"
+      "gitBlob": "520dad9a78ebf3ce3a3c5865526688e350a9f523"
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
@@ -5861,9 +5861,9 @@
     {
       "path": "atlas-review/content/review-revisions.json",
       "bytes": 12713,
-      "sha256": "5f7f383f6d93e67d542094bfdb7bd26e6118fe77a6ff1fec059cfc1cb032b54b",
+      "sha256": "411a96d7f5513c5011068ad2c514ce323441b6ab0c1942474dcee2535c3fa760",
       "mode": "100644",
-      "gitBlob": "fd963ba1baecf4cd53ee92e93f0e6d443fb05606"
+      "gitBlob": "4d2450918f9531da6111ca342f1cbef6467ca17e"
     },
     {
       "path": "atlas-review/content/root-cuff-xray-pins.json",
@@ -7058,9 +7058,9 @@
     {
       "path": "atlas-review/integration-inputs.json",
       "bytes": 261504,
-      "sha256": "17297b3808e52c371549a8131008c44a29386274197a4d08035cfebcdd74efec",
+      "sha256": "d6ce4aaad89205bb8a8b9193b619233c1bf586d3eb837979528ac94fb16a1a31",
       "mode": "100644",
-      "gitBlob": "c96fc1841222d7ffb4f83f554ca103d87bd31813"
+      "gitBlob": "9419d6cd2ce52206416c5b54e8ef40b89ff5d8b0"
     },
     {
       "path": "atlas-review/lib/abdominal-arterial-xray.ts",
@@ -11692,9 +11692,9 @@
     {
       "path": "atlas-review/manifest.json",
       "bytes": 372286,
-      "sha256": "7f7bf6d643a9b7405dd7fda10473d4c8557a24984ace495c28127e0b7383b027",
+      "sha256": "8b5ef0eaa3739adbafd0b345b17156995338e187f4ae82fcf08baf24cc6b6f8b",
       "mode": "100644",
-      "gitBlob": "0e098c00f1d95eed4808a10cf90dd930f8cd68f4"
+      "gitBlob": "0ea963151688ee7b35d8fc37df2e9f2ebf2312c0"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -14295,17 +14295,17 @@
     },
     {
       "path": "docs/completion-checklist.json",
-      "bytes": 96824,
-      "sha256": "9f4d614ed6920bff3395b53fed444ce5074aaafc13a0f565b4d4947c68f39bf2",
+      "bytes": 97667,
+      "sha256": "bea990316afd84427c500d32c01f3cb89e6ba3c5626ce19be803e5e9c014d920",
       "mode": "100644",
-      "gitBlob": "be685f6fc549f2cee347134f4d795baf4ebe4cc4"
+      "gitBlob": "2a5351fa16b179a752a42fb7fe2fd1f10fb882ee"
     },
     {
       "path": "docs/completion-checklist.md",
-      "bytes": 98186,
-      "sha256": "6d0f0871c954acaa49b9ed49e2fb499193d69aecdb9810283610d8035e17e889",
+      "bytes": 99043,
+      "sha256": "fab919418d8821aa5367b4b26694c200c2aec61c3d4b7ee544f09a61776f5124",
       "mode": "100644",
-      "gitBlob": "871252692798ee5385eec384007b43a78bb661a0"
+      "gitBlob": "0a539e0a4218497b5c37459bef1cf0fdacad580a"
     },
     {
       "path": "docs/coronary-sinus-ultrasound-delivery-20260929.md",
@@ -18837,11 +18837,11 @@
       "gitBlob": "b253b4e6f720b3546db6395a19093fa3f5fad29c"
     },
     {
-      "path": "public/atlas-review-viewer/assets/abdominal-wall-study-D9iwboCG.js",
+      "path": "public/atlas-review-viewer/assets/abdominal-wall-study-3VEc1b7W.js",
       "bytes": 61397,
-      "sha256": "e1722146f38bddb9996564c62f45b16762174c2fadca2bad7ea2495765e7bfa6",
+      "sha256": "0ada95809cb091c4b3158a87149ba0bae514cd289ce513c241a7ae3e3a03f0c0",
       "mode": "100644",
-      "gitBlob": "1a27d9dcc2122c0be14e247d558f71c0ead78845"
+      "gitBlob": "55d696ce6c9ed9702e01711daf174a5c191fbc9a"
     },
     {
       "path": "public/atlas-review-viewer/assets/anatomy-coordinates-C8_MAECW.js",
@@ -18851,25 +18851,32 @@
       "gitBlob": "9f9ce3c1a15d74418a2dc926c24c2d591d3b737c"
     },
     {
-      "path": "public/atlas-review-viewer/assets/anatomy-scene-C1Cu7x9P.js",
+      "path": "public/atlas-review-viewer/assets/anatomy-scene-CnnCg2xZ.js",
       "bytes": 9655,
-      "sha256": "e89c864e00d0574495657b140e8d08f8517dfaaad3b26d82157684d090797ade",
+      "sha256": "77ffc964d4619f4b74795dc711bc724b8ee33cc88d0ca03491c025e345f49318",
       "mode": "100644",
-      "gitBlob": "d359a93f4fe0ef2f2d4647ee8dd1ca751b27446e"
+      "gitBlob": "4e36204f24e380f6e82732ddf32d45b8d8c688db"
     },
     {
-      "path": "public/atlas-review-viewer/assets/back-layers-study-DLhUPv3W.js",
+      "path": "public/atlas-review-viewer/assets/back-layers-study-BPQggISW.js",
       "bytes": 90387,
-      "sha256": "91aa733b845ff592c8cea9e6f264acacee296ab0a6592e5d207cd81c08d3d1d0",
+      "sha256": "c1b0393e2befa5dfacc9f32884ce82f23995031f22034ff371e14ac9b859cc7d",
       "mode": "100644",
-      "gitBlob": "b5a4a4c7d81d6651d3fb09816e06c79dcfefd49e"
+      "gitBlob": "81fea576572f5f040833913464563c49a00d8345"
     },
     {
-      "path": "public/atlas-review-viewer/assets/body-content-uRIfU5hU.js",
+      "path": "public/atlas-review-viewer/assets/body-content-Boxe0aD6.js",
       "bytes": 6503307,
-      "sha256": "28c2ee51aa55b2c9e8c73912d5973e01c3c69434bd29f0a2926bebbc7cdc0d20",
+      "sha256": "f815c1b8e03e1cd3105cf1dbbd63098429c973db4ae96f5ec18feb406ca999d2",
       "mode": "100644",
-      "gitBlob": "e096cae917b04dcbdb6b120d83e8aedc0678f437"
+      "gitBlob": "e41307b7c396af5fa698f492956f16e806746fe6"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/body-scene-CGlZQo4k.js",
+      "bytes": 53122,
+      "sha256": "5798a19461777088d9a03268bf0401627ccc4bb326fda6bdd5efe6acfa360f3d",
+      "mode": "100644",
+      "gitBlob": "b90df6e58caeb19e046d64121eacd17d825bc6e8"
     },
     {
       "path": "public/atlas-review-viewer/assets/body-scene-IREBYFc0.css",
@@ -18877,13 +18884,6 @@
       "sha256": "fc34cca6f4fd0caf6b92ccc677c58f67b7b2f958c539a76665bf9f256c307a53",
       "mode": "100644",
       "gitBlob": "0ac83049c67cf90e440401ea196a626a677e80ac"
-    },
-    {
-      "path": "public/atlas-review-viewer/assets/body-scene-kVMe1usv.js",
-      "bytes": 53122,
-      "sha256": "fd926b868a94254e8c36b0b51e9150d7ec7468c958d904cd7faa98fedc4b2211",
-      "mode": "100644",
-      "gitBlob": "64ab863666e11d2d7e46e013e49abce77ec6b0df"
     },
     {
       "path": "public/atlas-review-viewer/assets/content-types-dy1iU5rk.js",
@@ -18900,11 +18900,11 @@
       "gitBlob": "bafc5f2d9b1fa5b5ad265268521c0aca0b893696"
     },
     {
-      "path": "public/atlas-review-viewer/assets/cutaway-controls-CbCtc1It.js",
+      "path": "public/atlas-review-viewer/assets/cutaway-controls-CrDFofPQ.js",
       "bytes": 122109,
-      "sha256": "328735c3a306926ebe2b7fa67891e83c101e4ce4ffcfd760da6be3a56ea6fb49",
+      "sha256": "5ba7a8c11afc841bfb9d4d5a5cd133241b92cd4429d0209c93215f9c72c27d67",
       "mode": "100644",
-      "gitBlob": "bda6bcd00965ef0ea8f4729a436ca2e999c1f493"
+      "gitBlob": "d97c343c0421dc2c7bc954ce5bf3ff97c7dd02c4"
     },
     {
       "path": "public/atlas-review-viewer/assets/eye-layers-B_8TgiYY.css",
@@ -18914,11 +18914,11 @@
       "gitBlob": "f2a0b5be876f5c0b1011a3b0e0cdc848aa971377"
     },
     {
-      "path": "public/atlas-review-viewer/assets/eye-layers-Dm1uRXx2.js",
+      "path": "public/atlas-review-viewer/assets/eye-layers-Cpnqy7JS.js",
       "bytes": 17453,
-      "sha256": "b46d6f2189b451fbada7a62c972091b90e68834d9ce7500738f53a9d066edfb2",
+      "sha256": "6b47fccb677bc71038b5132216e72e105b383ea37e6e2fd618fdbec8393c4c20",
       "mode": "100644",
-      "gitBlob": "69557a0b083d69665dc86fe08d9a706ab8e1c3a3"
+      "gitBlob": "496ec3a0d7050f407aac070c0f29d6da0c36f723"
     },
     {
       "path": "public/atlas-review-viewer/assets/foot-dEJOQ0Fz.js",
@@ -18949,32 +18949,39 @@
       "gitBlob": "c847452724f03561fb522028d51be0a8b9b9d5b5"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-pelvis-study-BuPBi7t1.js",
+      "path": "public/atlas-review-viewer/assets/hra-pelvis-study-BR9cp-8y.js",
       "bytes": 105632,
-      "sha256": "ee46ae36a411cb436dfcc4de304ce73d2212836feefffc32800ab5b1e3acf861",
+      "sha256": "a62ffc99495b42f020e5c6d0e304ad64eed818abd26e91d6b16affe4eddc029d",
       "mode": "100644",
-      "gitBlob": "60d69f8534ec6d1c4bb7f340964f6db773e7bbc8"
+      "gitBlob": "3a08fc4b0d63ba0c694f79537939793f4db0e40b"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-renal-study-DhU5e9zf.js",
+      "path": "public/atlas-review-viewer/assets/hra-renal-study-DCq12zOM.js",
       "bytes": 7522,
-      "sha256": "0f2d13fb9672e9af44bd6c7ef656ecb1e43b50e115cfc6d644f3ca0c7b555708",
+      "sha256": "6822b409527be9e0083f5155c28dd43da65f6448565451a9e7cb826ff1c5e25a",
       "mode": "100644",
-      "gitBlob": "9769c330651d9a36de56d57b0866eb6aed6a04f6"
+      "gitBlob": "03e1440bbef56b1dde7ae3b41d5a2d7205c5b71d"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-renal-teaching-DtU-f1iW.js",
+      "path": "public/atlas-review-viewer/assets/hra-renal-teaching-BKop3W65.js",
       "bytes": 118009,
-      "sha256": "35a8c5ed290cbbef2fb559fa309529b82efecaafde0619fef6a3c9a5d1a463e6",
+      "sha256": "4b6676620bd7c4963218fdef2a2676f9c8ee1795d2e24c2aa994d6e1ef0bef12",
       "mode": "100644",
-      "gitBlob": "ed5216441c7c078180aceb0784dc0ede2652a3ca"
+      "gitBlob": "a56fc6bb5b6214dcd2e22ef88712eedb478bdf71"
     },
     {
-      "path": "public/atlas-review-viewer/assets/independent-study-navigation-CM_mKuMU.js",
+      "path": "public/atlas-review-viewer/assets/independent-study-navigation-Clfe_2EC.js",
       "bytes": 2638,
-      "sha256": "359ddd55a033103f0d5a84a909500fa72d18ed327f7ab0e85e5bd3c4a2c57740",
+      "sha256": "32b8325029e992ab61f0d945a5fe6040db045715e30e82a34a75f5fb55f59ab0",
       "mode": "100644",
-      "gitBlob": "ea10339aa544168203c60e667748909a62e45b31"
+      "gitBlob": "154845d3f0561045b70837e1e06ea6ed440db42c"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/index-B8McUBHb.js",
+      "bytes": 3066327,
+      "sha256": "9a0ebce60c76056b35e02092887b74011eb0d6fa25b86be2a251e306afbc6af3",
+      "mode": "100644",
+      "gitBlob": "abc09550ca91e11f0c06a967799662d6aa2e7ff2"
     },
     {
       "path": "public/atlas-review-viewer/assets/index-BZ9hfTOV.css",
@@ -18982,13 +18989,6 @@
       "sha256": "b33447d870bb78ec276a1352a00585496b52ec0c47d850cb2fdd6aaf440705e1",
       "mode": "100644",
       "gitBlob": "d20b6210ad7bc45a1308b1abab1cc8fa7c5484ee"
-    },
-    {
-      "path": "public/atlas-review-viewer/assets/index-C8Q4YFJh.js",
-      "bytes": 3066327,
-      "sha256": "4efb83e8dbffcff405095d1fb30e369cb35f46951694861edbfadac1b3a29dbd",
-      "mode": "100644",
-      "gitBlob": "26fa73fd6c8760b4da80849cd3bb7189bb933abf"
     },
     {
       "path": "public/atlas-review-viewer/assets/leg-C23bX7kx.js",
@@ -19026,11 +19026,11 @@
       "gitBlob": "cb2fc665f6fb4799ab0e5baf4764eb01876f1988"
     },
     {
-      "path": "public/atlas-review-viewer/assets/scene-recovery-DDKPN_qe.js",
+      "path": "public/atlas-review-viewer/assets/scene-recovery-CCUTYEZo.js",
       "bytes": 1065422,
-      "sha256": "9744590ec69709d60c73e95896954fe97024d0df6eea9355b88dde8140516649",
+      "sha256": "140c5b162bd153326b88c5108625029574e5d6494edd182e20bfe4ab2a684bb7",
       "mode": "100644",
-      "gitBlob": "6874a2da09ea3ac45b904b76743f243fa1fcc20f"
+      "gitBlob": "fb74b122774377482bc902c5de808ccc9a0b1fbc"
     },
     {
       "path": "public/atlas-review-viewer/assets/shoulder-arm-8UqNlnEr.js",
@@ -19040,18 +19040,18 @@
       "gitBlob": "5e37a97f71783abca0f6c929497f0260b25bfefa"
     },
     {
-      "path": "public/atlas-review-viewer/assets/shoulder-explorer-BFW-cNiT.js",
-      "bytes": 104199,
-      "sha256": "c554459ea6ec80a57bfafdb566b26953f9447e6774ad2ca46b32bfb6336d7575",
-      "mode": "100644",
-      "gitBlob": "fe9d67fe42b13cda75d8258edeffc2014cfcd872"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/shoulder-explorer-CrFyYdQD.css",
       "bytes": 10027,
       "sha256": "dbdabe13e4b87259cf4dbe1464bafc2979535510ec4f0cd3bdcd0668591d5764",
       "mode": "100644",
       "gitBlob": "279b1c09048c730d5c89493c524e33d46c0beca5"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/shoulder-explorer-DGcPw_Tu.js",
+      "bytes": 104199,
+      "sha256": "8082100956cef40ff4f71aab2f24a53207ebc9feffa307e1dc6a7348a755ec8f",
+      "mode": "100644",
+      "gitBlob": "3881b1636620f86d09a71b50367c85a81fc7b4be"
     },
     {
       "path": "public/atlas-review-viewer/assets/slider-C5fwuhub.css",
@@ -19061,11 +19061,11 @@
       "gitBlob": "5c7547301e581d9470ce8c12036a049594820e3d"
     },
     {
-      "path": "public/atlas-review-viewer/assets/slider-D29Vf1SH.js",
+      "path": "public/atlas-review-viewer/assets/slider-Ck6FmfkF.js",
       "bytes": 878791,
-      "sha256": "14d68b431442e99047608ded8903bcd44c85371902671103aaec7a3784b78f00",
+      "sha256": "b1c8983798363f8339809315f79fd0f20b237edc372b2ec9c6cb317b008d7501",
       "mode": "100644",
-      "gitBlob": "5297eada0f3a6a934ce1063538b0291b0715b4c5"
+      "gitBlob": "e984219aec1d904d5409612b3e0e78a3557d0aaf"
     },
     {
       "path": "public/atlas-review-viewer/assets/spine-e2QBQfxg.js",
@@ -19096,13 +19096,6 @@
       "gitBlob": "d65f100127b2c02a99af4a210302d5e1d081a198"
     },
     {
-      "path": "public/atlas-review-viewer/assets/um-knee-study-BbeKzE_A.js",
-      "bytes": 682911,
-      "sha256": "b5f1dffd459896bac3c3f556c63de523510d653ca5eeea49db04f61b1d4c5ea7",
-      "mode": "100644",
-      "gitBlob": "5977f463a225f56913841ee421bf7f1469d543c1"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/um-knee-study-D8QdNnSJ.css",
       "bytes": 4461,
       "sha256": "4ac2474920228edd0025fb319edfe9a83e8b52507ab2f910278af28ff3437f20",
@@ -19110,11 +19103,18 @@
       "gitBlob": "6ecbaa381bbc3b925a57f3693b7469f65d5aa8bb"
     },
     {
-      "path": "public/atlas-review-viewer/assets/um-limb-study-bKOwmHgK.js",
-      "bytes": 2596,
-      "sha256": "fee6620ce72cca4ccbbcf84bafee3e0b7f813da185fc02a41c9518c5a3333091",
+      "path": "public/atlas-review-viewer/assets/um-knee-study-skfl1uwR.js",
+      "bytes": 682911,
+      "sha256": "f5069c02b18d7be3ee4c1585e4f8b5288ebd6fbd1394f06233546f6c2e79e6d8",
       "mode": "100644",
-      "gitBlob": "cc3985e0354c39887b93c17384f2d6da9079720e"
+      "gitBlob": "c343496d3be7df706244d794d8aedade19635d69"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/um-limb-study-CBlJh8Rm.js",
+      "bytes": 2596,
+      "sha256": "117aa149ce640202152983af4a7e959674e35163c4de418c388d95a312fe7e8d",
+      "mode": "100644",
+      "gitBlob": "7e10ef14c300bc61981be8e5026de711ac3b9f46"
     },
     {
       "path": "public/atlas-review-viewer/assets/um-proximal-topic-completion-g3GvGRe9.js",
@@ -19124,13 +19124,6 @@
       "gitBlob": "860fb9cf5e0831347cc98d95affc1bfea6cdb78e"
     },
     {
-      "path": "public/atlas-review-viewer/assets/ventricles-C4GQsG_C.js",
-      "bytes": 1315803,
-      "sha256": "1e912b680a039e8117e30848ed57f83e2477abd3e3db402c10e1ed6aefe7dabc",
-      "mode": "100644",
-      "gitBlob": "55a78ed044782ba316ab3cbd635a20ddd1fa11ad"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/ventricles-CfdrTivY.css",
       "bytes": 1203,
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385",
@@ -19138,18 +19131,25 @@
       "gitBlob": "3fae50de5ba24fd5a970c252a646083abcede34f"
     },
     {
+      "path": "public/atlas-review-viewer/assets/ventricles-DyNC8Sog.js",
+      "bytes": 1315803,
+      "sha256": "5d0d2ad7cf17b481e21e0240dbfca985d23e3acb893b81c789372d5494b39370",
+      "mode": "100644",
+      "gitBlob": "93d27bdcb29fed7bc5459bdc396a21286451a1e0"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
-      "sha256": "907a2f62eda89943a3e779cf4552c05ac29328f88ee470612ca076bbb9d5f9db",
+      "sha256": "a45216b569596ce2e51281db8dcbb1d6d722c1816294e7e7e178804792ae76c5",
       "mode": "100644",
-      "gitBlob": "77a9ee5ee3f1f5e089b925719c55dc928914b47b"
+      "gitBlob": "1ff3661fd6abcb9d8de2a52c388ab9f8c547375b"
     },
     {
       "path": "public/atlas-review-viewer/manifest.json",
       "bytes": 9033,
-      "sha256": "a3288dd76d1adf8d4b651c0d2dd2930bb2060b995c5f823089a35c112fc79875",
+      "sha256": "96a4e91fea2a85b1615dd6fae3d7f8877a86c12d4db7f7c794175701301c9008",
       "mode": "100644",
-      "gitBlob": "cb9fdaaf5bf33b35d36499d092040d4a2f3bc5a4"
+      "gitBlob": "72ac63d48379a89a68ad48c082d597aa508cb267"
     },
     {
       "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
@@ -22415,10 +22415,10 @@
     },
     {
       "path": "tests/atlas-shoulder-girdle-arterial-ultrasound-checks.mjs",
-      "bytes": 37495,
-      "sha256": "7d616a07cbf787a6569924d45c2518129c18d888c2579ec83379b917a37d5e04",
+      "bytes": 37506,
+      "sha256": "3b0d208653dfea66c2e7ad0d045d5916b9b45e8028a947d58b93eee5e4855725",
       "mode": "100644",
-      "gitBlob": "be65d0305b92b2e07b18f1d6f22121e9a6823267"
+      "gitBlob": "9eb23a5e32a6942159462621d719411fff77ac01"
     },
     {
       "path": "tests/atlas-shoulder-girdle-arterial-ultrasound.test.ts",
@@ -22449,11 +22449,18 @@
       "gitBlob": "463c8142cc5518520f39a6a659406eab0a0db5bb"
     },
     {
-      "path": "tests/atlas-shoulder-navigation.test.ts",
-      "bytes": 2278,
-      "sha256": "62cfa71a5833aaf57d9c86b9c10cda5307b8dca867ff86aac80d451e5fd93467",
+      "path": "tests/atlas-shoulder-navigation-current.test.mjs",
+      "bytes": 6869,
+      "sha256": "1b0d2c84440379db35adcbbc73ee01cac7ea347322d6be4bbf4f59f8f03041cb",
       "mode": "100644",
-      "gitBlob": "8c0f864e28f3f1b333b5618b461aa9350fd4e57a"
+      "gitBlob": "252f3235ff9c332a4dc68e47cfdf29855a7ca8f1"
+    },
+    {
+      "path": "tests/atlas-shoulder-navigation.test.ts",
+      "bytes": 2333,
+      "sha256": "5c3cae9ffd1d4186497765bcac276bdce5c9a65526421c4954d8861ef0538945",
+      "mode": "100644",
+      "gitBlob": "c5c0f858472efeea661d78ec2028eaf962f9b19d"
     },
     {
       "path": "tests/atlas-shoulder-soft-xray-delivery.test.ts",
@@ -23322,6 +23329,13 @@
       "sha256": "aad244f03fc81cec834dbed52eed7681f8a680f6d6d52cc82a9c17cde84fab0c",
       "mode": "100644",
       "gitBlob": "af6b724ad8b0c876a0f8fea301d2b92b8b931d48"
+    },
+    {
+      "path": "tests/clinical-review-embedded-css.test.mjs",
+      "bytes": 3395,
+      "sha256": "fde1f0e8bb78f03354ba93d220f85ded7dfe5cc704919f6f92ebf6d3191720ae",
+      "mode": "100644",
+      "gitBlob": "b411854e1f9305c480718b886a1814af6415ef25"
     },
     {
       "path": "tests/clinical-review-extra-inbox.test.ts",
@@ -24641,10 +24655,10 @@
     },
     {
       "path": "tests/current-atlas-delivery.test.mjs",
-      "bytes": 10325,
-      "sha256": "8eee814461c64c903514be3717a8ba88858b1fe63c1448d037d5d1ce879a511f",
+      "bytes": 10926,
+      "sha256": "b27deaa67d4ea9aa6908abb5a3324efb43bcc2f8344e01c9a4d3ed9424ef0d41",
       "mode": "100644",
-      "gitBlob": "33d02de635e4a887132ba468f8af3eba08fb10af"
+      "gitBlob": "fa73a49ef438881a1da1cd0a8f3995a8bc154ff6"
     },
     {
       "path": "tests/current-proof-corrections-preservation.test.mjs",
@@ -25557,6 +25571,97 @@
       "gitBlob": "34b1d683436cf4db3a09ca9426c21b48c9aa949a"
     },
     {
+      "path": "tests/fixtures/closed55-documents/atlas-review/integration-inputs.json",
+      "bytes": 261504,
+      "sha256": "17297b3808e52c371549a8131008c44a29386274197a4d08035cfebcdd74efec",
+      "mode": "100644",
+      "gitBlob": "c96fc1841222d7ffb4f83f554ca103d87bd31813"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/atlas-review/manifest.json",
+      "bytes": 372286,
+      "sha256": "7f7bf6d643a9b7405dd7fda10473d4c8557a24984ace495c28127e0b7383b027",
+      "mode": "100644",
+      "gitBlob": "0e098c00f1d95eed4808a10cf90dd930f8cd68f4"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "0a5da79ea1b8b5622b5bc0704ec5ee4f0995f941bd68aaa6d32cdc7e148d9270",
+      "mode": "100644",
+      "gitBlob": "17b2c2a04f247e318c8cb9ed0c0abb096c39317f"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-review-viewer/manifest.json",
+      "bytes": 9033,
+      "sha256": "a3288dd76d1adf8d4b651c0d2dd2930bb2060b995c5f823089a35c112fc79875",
+      "mode": "100644",
+      "gitBlob": "cb9fdaaf5bf33b35d36499d092040d4a2f3bc5a4"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/female-pelvis/manifest.json",
+      "bytes": 6208,
+      "sha256": "9ebaab7e34ea3edd78943b91e9f8a874d0f6835b731e774d1be71cb2e72e232b",
+      "mode": "100644",
+      "gitBlob": "f097e601a21bb38c397dbbb638202dccc5ebd6ac"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/female-pelvis/source-inputs.json",
+      "bytes": 16681,
+      "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021",
+      "mode": "100644",
+      "gitBlob": "40077ab4f01f167e7abcc5805298c9d24e7534e3"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/head-neck/manifest.json",
+      "bytes": 627564,
+      "sha256": "718741d72d13df55ea0ee584718c6156aadc0fc5a4b250c196bf01c94d87d534",
+      "mode": "100644",
+      "gitBlob": "fed82c1c28f9a5c2bf13242820002794c54c35f5"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/head-neck/source-inputs.json",
+      "bytes": 204970,
+      "sha256": "01cce8a39fdf3b221a1a62064a54d65a2ad437ff8b17b1282cd34b52994cb34f",
+      "mode": "100644",
+      "gitBlob": "f74a321b94a44ef415195e991fc59124ff8e7577"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/lower-limb/manifest.json",
+      "bytes": 3436,
+      "sha256": "d24925c198c6b227c8433b9c6b84b5705ca7447c2dfcaded64ec775edabe5cf3",
+      "mode": "100644",
+      "gitBlob": "4631a8f02779e54b54957852fccc123aafcdddf3"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/lower-limb/source-inputs.json",
+      "bytes": 15191,
+      "sha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091",
+      "mode": "100644",
+      "gitBlob": "7d0470d5aec48e8b94a2a8ac738496ba95ee59f0"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/shoulder/manifest.json",
+      "bytes": 4795,
+      "sha256": "27bd5e3e9c5d3016e1eb10e212901c976370214ede2e3d9369cc25da79fa8f53",
+      "mode": "100644",
+      "gitBlob": "ea2e597eef9743d852fb9e2036573bd7e2b22369"
+    },
+    {
+      "path": "tests/fixtures/closed55-documents/public/atlas-runtime/shoulder/source-inputs.json",
+      "bytes": 151900,
+      "sha256": "1c32c33c2747ff53819aff53d2141ba0918b75e57d71eb9aa8eaaff905579fc2",
+      "mode": "100644",
+      "gitBlob": "7948d156fe22acff23a0b07cab037a89ab234a75"
+    },
+    {
+      "path": "tests/fixtures/closed55-frozen-changed-text.json",
+      "bytes": 245041,
+      "sha256": "02c0eed3b39c0b8c56f5deca1bc1d5d2bdb8d874ce06a138d6fd30495f45b7aa",
+      "mode": "100644",
+      "gitBlob": "079f810525ec60cf78b680f11b8a90518c5e9fa7"
+    },
+    {
       "path": "tests/fixtures/completion-checklist-19.json",
       "bytes": 55309,
       "sha256": "51d016a07f1bfe9692bbcddea3afe40168441f86f9cebdfd44e17b123abe05fd",
@@ -25725,6 +25830,13 @@
       "gitBlob": "564cdb2d7996b5e49d0732af38c3b7e1f0b19cb1"
     },
     {
+      "path": "tests/fixtures/completion-checklist-55.json",
+      "bytes": 96824,
+      "sha256": "9f4d614ed6920bff3395b53fed444ce5074aaafc13a0f565b4d4947c68f39bf2",
+      "mode": "100644",
+      "gitBlob": "be685f6fc549f2cee347134f4d795baf4ebe4cc4"
+    },
+    {
       "path": "tests/fixtures/completion-checklist-current-transition-before-head-client.test.mjs.raw",
       "bytes": 5669,
       "sha256": "949e02d86188ec669c4829e621f8765ce420e495ec6735135be7e9d8b595ce5c",
@@ -25765,6 +25877,13 @@
       "sha256": "68c4008ad83a0bbb5be53db16d715453ee9b71a9ed6e4f5a27c3fd32bd99a539",
       "mode": "100644",
       "gitBlob": "75aeaf834ec2d8384d2318c97f551c798d436f67"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-55.json",
+      "bytes": 1777,
+      "sha256": "f15fdf3f9959504ae83e08b777def63b8157dbf954d3721dae54cc9301186e23",
+      "mode": "100644",
+      "gitBlob": "d4dcdea1f0f577d78902e6a66b45dd00d3a2f77a"
     },
     {
       "path": "tests/fixtures/current-atlas-delivery-58926355.json",
@@ -25893,11 +26012,18 @@
       "gitBlob": "64d638b8937f76545cb06bac16be65aa7dd91bce"
     },
     {
+      "path": "tests/fixtures/current-atlas-delivery-test-55.txt",
+      "bytes": 10325,
+      "sha256": "8eee814461c64c903514be3717a8ba88858b1fe63c1448d037d5d1ce879a511f",
+      "mode": "100644",
+      "gitBlob": "33d02de635e4a887132ba468f8af3eba08fb10af"
+    },
+    {
       "path": "tests/fixtures/current-atlas-delivery.json",
       "bytes": 1777,
-      "sha256": "f15fdf3f9959504ae83e08b777def63b8157dbf954d3721dae54cc9301186e23",
+      "sha256": "3aedc6660613d5913d7e033dbe8f1395c147a58dda633089cc3f650652343e15",
       "mode": "100644",
-      "gitBlob": "d4dcdea1f0f577d78902e6a66b45dd00d3a2f77a"
+      "gitBlob": "72d50f3a58754b726d3ac6f54f5a9c1cdd297db5"
     },
     {
       "path": "tests/fixtures/current-history-wave2-before-20261016/anatomy-coverage-view.test.ts.txt",
@@ -26411,6 +26537,34 @@
       "gitBlob": "cbc4f0d2b45b411ceff7cafb8a45b1a27ea61c11"
     },
     {
+      "path": "tests/fixtures/git-b953ff3/app__atlas__shoulder-3d__page.tsx.txt",
+      "bytes": 2235,
+      "sha256": "8b5399b9cad8f31844a34bb4c0e29d94647beccc259d1d306943501274724cb7",
+      "mode": "100644",
+      "gitBlob": "5f8e23faf2c2f8cfeec0121e01b8e78391323b50"
+    },
+    {
+      "path": "tests/fixtures/git-b953ff3/atlas-review__app__anatomy-data.ts.txt",
+      "bytes": 25139,
+      "sha256": "9746f3bc65cef35b5b3054dc58fd9611168807ce4a1aa28de3cf35ff4c79ee13",
+      "mode": "100644",
+      "gitBlob": "be425af0b3a00dfe53403b1266408647754c7962"
+    },
+    {
+      "path": "tests/fixtures/git-b953ff3/lib__shoulder-navigation.ts.txt",
+      "bytes": 709,
+      "sha256": "88faa8d5702a1874d721001e3282de27378067329690f94716fb6aab25cbd5ed",
+      "mode": "100644",
+      "gitBlob": "fe3641cf12fa82013a57cde5fb2a789783075c6b"
+    },
+    {
+      "path": "tests/fixtures/git-b953ff3/tests__atlas-shoulder-navigation.test.ts.txt",
+      "bytes": 2278,
+      "sha256": "62cfa71a5833aaf57d9c86b9c10cda5307b8dca867ff86aac80d451e5fd93467",
+      "mode": "100644",
+      "gitBlob": "8c0f864e28f3f1b333b5618b461aa9350fd4e57a"
+    },
+    {
       "path": "tests/fixtures/gitattributes-before-head-client.raw",
       "bytes": 15583,
       "sha256": "4eb22ce584239a0bb289d8cbae5cb587c3720a3e4e9133450233a3c0234a6e27",
@@ -26500,6 +26654,13 @@
       "sha256": "9f534e855322486783da10fd70ed33a6726ad87646a907364b0cc4a7e193fbb9",
       "mode": "100644",
       "gitBlob": "87b874250f0f87ee94897f75ef50743a30819099"
+    },
+    {
+      "path": "tests/fixtures/head-manual-recovery-transition-54-to-55.txt",
+      "bytes": 7728,
+      "sha256": "686f68964936c62483e483b013c6ed0bdf105a29908e821989174e8395a841fe",
+      "mode": "100644",
+      "gitBlob": "45f2823edc84d3a862db845212bee28c08cac3b4"
     },
     {
       "path": "tests/fixtures/head-mask-checksum-binding-original.txt",
@@ -28147,6 +28308,13 @@
       "gitBlob": "f81d5fbdf0bf6bb43a40fe71427fe13a8ddf7434"
     },
     {
+      "path": "tests/fixtures/shoulder-us-renderer-original.json",
+      "bytes": 38163,
+      "sha256": "c6e5c602d035fd6501242947c7dbaac79632d7885d09fa56a0516b9677dfb1b2",
+      "mode": "100644",
+      "gitBlob": "667dd1edffb9e15e390343929a240b934b40d6fc"
+    },
+    {
       "path": "tests/fixtures/SiteFooter-original.tsx.raw",
       "bytes": 1904,
       "sha256": "43eb886b38c20a64b7a8e100282b1a45db0bc92e585c78b1241107b73364a571",
@@ -29141,11 +29309,18 @@
       "gitBlob": "eb2617f08267c76aae22a11f0fec93b6c9b9799e"
     },
     {
-      "path": "tests/head-manual-recovery-current-transition.test.mjs",
-      "bytes": 7728,
-      "sha256": "686f68964936c62483e483b013c6ed0bdf105a29908e821989174e8395a841fe",
+      "path": "tests/head-manual-recovery-54-to-55-closed.test.mjs",
+      "bytes": 7758,
+      "sha256": "980b9e962fae18655eeeaab9fdebbcb4113895468d750ea9de4bdb4b8554ea1c",
       "mode": "100644",
-      "gitBlob": "45f2823edc84d3a862db845212bee28c08cac3b4"
+      "gitBlob": "e8d5a29ce60d5c5c81623b6b75d21aca26d5c36f"
+    },
+    {
+      "path": "tests/head-manual-recovery-current-transition.test.mjs",
+      "bytes": 6234,
+      "sha256": "d7af3829a0cd884858dbe8188e9409679828e31ad58e8643180bce74f97b7920",
+      "mode": "100644",
+      "gitBlob": "62743b353c38231defc7e3318319e4028df005ff"
     },
     {
       "path": "tests/head-manual-recovery-migration.test.mjs",
@@ -29828,10 +30003,10 @@
     },
     {
       "path": "tests/historical-current-atlas-delivery-54.mjs",
-      "bytes": 3896,
-      "sha256": "24cc51ccba80380e3559d4bf4dc7897d2522edb63cc11d77f175951b30a22c91",
+      "bytes": 4231,
+      "sha256": "d40df7c070568f870d6a7c3a1bcabd63811362eeae713173523e4799e7102d6d",
       "mode": "100644",
-      "gitBlob": "dd818f1a30bf4cd6af59ec6132340e3d7ae3d182"
+      "gitBlob": "24cdcee95997c0b9175106106b0e1e742e110010"
     },
     {
       "path": "tests/historical-current-atlas-delivery-54.test.mjs",
@@ -29839,6 +30014,20 @@
       "sha256": "4e815652a991a827e268caa8ad498f366b777b66d4f877a64924132fef002661",
       "mode": "100644",
       "gitBlob": "07bc73b34d3d4e3c4f6bb8cd03d410645fae280b"
+    },
+    {
+      "path": "tests/historical-current-atlas-delivery-55.mjs",
+      "bytes": 4932,
+      "sha256": "9c6a4d8208046b43180256fa009bc1b73538793b4fc3e85ea8d657bf0bee1a78",
+      "mode": "100644",
+      "gitBlob": "cdc214724d1e506917abe193d9c5d71303223d78"
+    },
+    {
+      "path": "tests/historical-current-atlas-delivery-55.test.mjs",
+      "bytes": 1262,
+      "sha256": "07fdf8c60e61640698ca7b21df72e192a146f596d148845a2e266ca4eb7ce201",
+      "mode": "100644",
+      "gitBlob": "28e6dabbe41431ff36d45c96494e56a3be8b9f49"
     },
     {
       "path": "tests/historical-deep-plantar-delivery-49.mjs",
@@ -31057,6 +31246,13 @@
       "sha256": "e47cb8ccdde8a51e3955c1c9eb520bafb2db95d504163d7e469d829cc46dd771",
       "mode": "100644",
       "gitBlob": "5f0b838a3848537b725b3dd711da4ed8a57ac25a"
+    },
+    {
+      "path": "tests/shoulder-us-renderer-migration.test.mjs",
+      "bytes": 5878,
+      "sha256": "b4700123c95cdf38f85cb5b48236428642e10fb94782c866ef6c28101f209171",
+      "mode": "100644",
+      "gitBlob": "bd1e4a80608102cf6c894950b753e65edf530233"
     },
     {
       "path": "tests/slice-wheel.test.mjs",
