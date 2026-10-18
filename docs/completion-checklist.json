@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 51,
+  "revision": 52,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -19,16 +19,16 @@
     "delivery": "F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed"
   },
   "baseline": {
-    "atlasCommit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
-    "atlasTree": "dbc2f38825775991ea4d9428a33ce9375699280a",
+    "atlasCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+    "atlasTree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa",
-    "reviewSourceFiles": 1526,
+    "reviewIntegration": "d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79",
+    "reviewSourceFiles": 1528,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
-    "rootDraftPlacements": 9322,
-    "rootPendingPlacements": 575,
+    "rootDraftPlacements": 9326,
+    "rootPendingPlacements": 571,
     "rootGeneratedIdentificationPlacements": 39,
     "nestedRepresentations": 108,
     "nestedConcepts": 76,
@@ -41,14 +41,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
-    "tree": "dbc2f38825775991ea4d9428a33ce9375699280a",
-    "rootDraftPlacements": 9322,
-    "rootPendingPlacements": 575,
+    "commit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+    "tree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
+    "rootDraftPlacements": 9326,
+    "rootPendingPlacements": 571,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:\\VisibleMedicine\\staging\\20261018-lacrimal-web-integration\\candidate-prepared.json",
-    "note": "Four exact-source lacrimal canaliculus/sac Ultrasound drafts imported coherently. Specialized acquisition and visibility limits, not routine/full-duct visibility, patency/flow, diagnostic performance or mesh/lumen correspondence. Both deeper nasolacrimal-duct Ultrasound slots stay pending. Other9,932 root topics,1104 identities and109 model bundles remain exact. No acquired scans, new media/dependencies/geometry, approval transfer, registration or public release."
+    "evidence": "F:\\VisibleMedicine\\staging\\20261018-radial-eus-web-integration\\candidate-prepared.json",
+    "note": "Four exact-source abdominal venous radial-EUS Ultrasound drafts imported coherently. Acquisition-specific operator observations, not routine transabdominal visibility, a cohort detection rate, patency, full-course anatomy or patient registration. Other9,932 displayed topics/1104 identities/109 model bundles remain exact; only two targets belong to the1022-record archival export. No new media/dependencies/geometry, approval transfer, acquired scans or public release."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -1167,6 +1167,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-18",
+      "revision": 52,
+      "change": "Prepared coherent clean Atlas6ba0dd43 import through all four generated learner modules, normal protected Review and freshly replayed coverage producers. Four source-bound abdominal radial-EUS drafts; root9326draft/571pending/39generated. Original closed51/50 and older historical evidence remains separate from current admission; stale prior teaching cannot approve current material. All71requirements/eightoptional ideas/statuses/owners/acceptance remain unchanged. Frozen candidates/private state unchanged. Local engineering checks do not confer clinical, browser, spatial or release acceptance."
+    },
     {
       "date": "2026-10-18",
       "revision": 51,

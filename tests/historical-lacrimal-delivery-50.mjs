@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {readRevision51} from './historical-radial-eus-delivery-51.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const site=new URL('../',import.meta.url),archive=new URL('./fixtures/lacrimal-50/',import.meta.url);
@@ -18,6 +19,7 @@ assert.equal(records.size,revision50.files.length);
 export function readRevision50(path){
  assert(typeof path==='string'&&/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(p=>!p||p==='.'||p==='..'));
  const row=records.get(path);
+ if(!row&&path==='atlas-review/content/regional-teaching/abdomen.json')return readRevision51(path);
  if(!row)return readFileSync(new URL(path,site));
  assert.equal(row.storagePath,path+'.raw');
  const bytes=readFileSync(new URL(row.storagePath,archive));

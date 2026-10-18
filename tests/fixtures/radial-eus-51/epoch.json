@@ -1,0 +1,166 @@
+{
+  "schema": "vm-closed-delivery-epoch-1",
+  "source": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+  "sourceTree": "dbc2f38825775991ea4d9428a33ce9375699280a",
+  "review": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa",
+  "changedPriorInputs": [
+    "atlas-review/app/body-content.ts",
+    "atlas-review/content/body-review-display-pins.json",
+    "atlas-review/content/regional-teaching/abdomen.json",
+    "docs/anatomy-coverage/index.json",
+    "lib/anatomy-coverage-view.ts",
+    "scripts/import-clinical-review.mjs"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "storagePath": ".gitattributes.raw",
+      "sha256": "c18b2add70929ac7d318ef0a87fc33cad817b8a4e4545297fe7ecb4f28149c39",
+      "bytes": 17037
+    },
+    {
+      "path": "atlas-review/app/body-content.ts",
+      "storagePath": "atlas-review/app/body-content.ts.raw",
+      "sha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572",
+      "bytes": 80784
+    },
+    {
+      "path": "atlas-review/content/body-review-display-pins.json",
+      "storagePath": "atlas-review/content/body-review-display-pins.json.raw",
+      "sha256": "bb5f67997374c4546ec769c580bb0f3f255b0eeb617b108a476b23caee493989",
+      "bytes": 203217
+    },
+    {
+      "path": "atlas-review/content/regional-teaching/abdomen.json",
+      "storagePath": "atlas-review/content/regional-teaching/abdomen.json.raw",
+      "sha256": "1a247baa5ccefbb5c0c9772888d0fd486fdf28f05a080a4dbb59027752ba6b9f",
+      "bytes": 912503
+    },
+    {
+      "path": "atlas-review/integration-inputs.json",
+      "storagePath": "atlas-review/integration-inputs.json.raw",
+      "sha256": "3b185c7b09bc6fb50d0b06e2ff23f13a9bbf086475511a0c7ef8cfed8de6ee5a",
+      "bytes": 260526
+    },
+    {
+      "path": "atlas-review/manifest.json",
+      "storagePath": "atlas-review/manifest.json.raw",
+      "sha256": "563b81b4f544a5d393e3c86873eed57863fcb49f9723d3c33088e67e3eeefdc1",
+      "bytes": 371021
+    },
+    {
+      "path": "docs/anatomy-coverage/index.json",
+      "storagePath": "docs/anatomy-coverage/index.json.raw",
+      "sha256": "44a1506ac2eabb837590ce0d0e49d2c46b0abb3a8db818b6b7d71e2592448f48",
+      "bytes": 154911
+    },
+    {
+      "path": "docs/completion-checklist.json",
+      "storagePath": "docs/completion-checklist.json.raw",
+      "sha256": "761e463f3cc0ea68f4f12e40b167d5cb0e9d1c47486a07ac7d35ef42e930d0db",
+      "bytes": 93043
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "storagePath": "lib/anatomy-coverage-view.ts.raw",
+      "sha256": "5d80dcafb94b566a3e783f1559418efee8c8355ff1ca68ce3d7d22b7ddbcfcdb",
+      "bytes": 5290
+    },
+    {
+      "path": "lib/atlas-model-inventory.json",
+      "storagePath": "lib/atlas-model-inventory.json.raw",
+      "sha256": "bb40b7015481f06e80ec67f58aad89db3484e6c54b5b15bdb17ca3d357e8aca7",
+      "bytes": 33492
+    },
+    {
+      "path": "public/atlas-review-viewer/manifest.json",
+      "storagePath": "public/atlas-review-viewer/manifest.json.raw",
+      "sha256": "854a71c81c9b5a837835ebdb10c69ad22c8989598aecb5b55548429c51dad32a",
+      "bytes": 9033
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/manifest.json",
+      "storagePath": "public/atlas-runtime/female-pelvis/manifest.json.raw",
+      "sha256": "a5485efe9cdf8d8b8703bc6f1c372fe03aa2d25cd724157757ee6ada3968ebea",
+      "bytes": 6208
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/source-inputs.json",
+      "storagePath": "public/atlas-runtime/female-pelvis/source-inputs.json.raw",
+      "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021",
+      "bytes": 16681
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/manifest.json",
+      "storagePath": "public/atlas-runtime/head-neck/manifest.json.raw",
+      "sha256": "8c455037d41481e06e12566629682eaa11bce0cedfddf29d45bb536944115c83",
+      "bytes": 627564
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/source-inputs.json",
+      "storagePath": "public/atlas-runtime/head-neck/source-inputs.json.raw",
+      "sha256": "20ecca0fbc25c94fd4fa52a48d4714bc176025fd9ab19916f083bdb8e96ceb99",
+      "bytes": 204235
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/manifest.json",
+      "storagePath": "public/atlas-runtime/lower-limb/manifest.json.raw",
+      "sha256": "275c02cb8a78aa93952cc3723a4510b92c1cba6c3c484a88de5b04961fa905bd",
+      "bytes": 3436
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/source-inputs.json",
+      "storagePath": "public/atlas-runtime/lower-limb/source-inputs.json.raw",
+      "sha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091",
+      "bytes": 15191
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/manifest.json",
+      "storagePath": "public/atlas-runtime/shoulder/manifest.json.raw",
+      "sha256": "b78f8ac400ba390b22016310f71c7447f5d4c75af3f0fb2d9a883da26a478079",
+      "bytes": 4795
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/source-inputs.json",
+      "storagePath": "public/atlas-runtime/shoulder/source-inputs.json.raw",
+      "sha256": "8d4805449e0e520164b7131e150d071b92d08cf497d68d2aa68790507c9f5224",
+      "bytes": 151165
+    },
+    {
+      "path": "scripts/import-clinical-review.mjs",
+      "storagePath": "scripts/import-clinical-review.mjs.raw",
+      "sha256": "574970744f1274c44b6f1750f4356a0fca24101d524ef6c08cf4b13709220d33",
+      "bytes": 6684
+    },
+    {
+      "path": "tests/atlas-cerebral-lobar-imaging.test.ts",
+      "storagePath": "tests/atlas-cerebral-lobar-imaging.test.ts.raw",
+      "sha256": "37786cd8cf3f326214a05cc7d1e70dc93001b3875595c608ca31ae8bb782dc87",
+      "bytes": 9507
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "storagePath": "tests/current-atlas-delivery.test.mjs.raw",
+      "sha256": "a6b98d5ba4f51c089f39a068eb99470afe8cfadf86e007b41c7a4364b36a3eeb",
+      "bytes": 9641
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "storagePath": "tests/fixtures/current-atlas-delivery.json.raw",
+      "sha256": "89c2dc57d628acbbb6b7d72e3662a6bcb3fcdffffaeb09f3f0adcc0ea568af5f",
+      "bytes": 1777
+    },
+    {
+      "path": "tests/fixtures/current-source-checkout-representations-lacrimal.json",
+      "storagePath": "tests/fixtures/current-source-checkout-representations-lacrimal.json.raw",
+      "sha256": "89246aed66c49d55226320e25afb106255db219c5e0afcc85423d5e81392f510",
+      "bytes": 3185
+    },
+    {
+      "path": "tests/lacrimal-current-transition.test.mjs",
+      "storagePath": "tests/lacrimal-current-transition.test.mjs.raw",
+      "sha256": "c0292b7e36d67498a12387b646825ffb427057c21f748925ec1e6e8a10a35d4c",
+      "bytes": 12191
+    }
+  ]
+}

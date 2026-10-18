@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
+    "sha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
   },
   {
     "path": "app/body-explorer.css",
@@ -298,6 +298,10 @@
   {
     "path": "content/abdominal-organ-quiz.ts",
     "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
+  },
+  {
+    "path": "content/abdominal-radial-eus.ts",
+    "sha256": "ee0deb43c6ffaa23a6ad8ec705634937419d85e2a0277612058217d5f2a0eca2"
   },
   {
     "path": "content/abdominal-vascular-mri-pins.json",
@@ -1773,7 +1777,7 @@
   },
   {
     "path": "content/regional-teaching/abdomen.json",
-    "sha256": "1a247baa5ccefbb5c0c9772888d0fd486fdf28f05a080a4dbb59027752ba6b9f"
+    "sha256": "d71c2f0a0895190b7661e632062a64487c14cb3ba1a8ecaf2614e51d4655f6a1"
   },
   {
     "path": "content/regional-teaching/foot.json",
@@ -2446,6 +2450,10 @@
   {
     "path": "lib/abdominal-organ-quiz.ts",
     "sha256": "77477913b63cedccd4952a3ab151533905a985a83436da2770849fc0f408d2a0"
+  },
+  {
+    "path": "lib/abdominal-radial-eus.ts",
+    "sha256": "2d0c7e47ab835aa8a5ed810cd55a05b3fb81226ae49416e05cf990b357c113b3"
   },
   {
     "path": "lib/abdominal-vascular-mri.ts",

@@ -4,13 +4,14 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
-import {build} from 'esbuild';
+import {readRevision51,validateRevision51Delivery} from './historical-radial-eus-delivery-51.mjs';
 import {validateChecklist} from '../scripts/refresh-completion-checklist.mjs';
-import {currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 import {readRevision50,revision50,validateRevision50Delivery} from './historical-lacrimal-delivery-50.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
-const read=path=>readFileSync(new URL('../'+path,import.meta.url)),json=path=>JSON.parse(read(path));
+const read=path=>readRevision51(path),json=path=>JSON.parse(read(path));
+const validateCurrentAtlasDelivery=validateRevision51Delivery;
 const source='c5a09df8939dfaeaf76119ba5507c552721c3a30';
 
 test('closed50 keeps every original proof byte and only declared test seams change',()=>{
@@ -76,10 +77,7 @@ test('actual Review resolver changes exactly four lacrimal US lessons and refuse
  const atlas=currentAtlasDeliveryRoot();
  const{exactSourceHistoryApi}=await import(pathToFileURL(atlas+'/scripts/exact-source-history-api.mjs'));
  const before=await exactSourceHistoryApi(revision50.source,'review-security');
- const compiled=await build({stdin:{contents:`export {bodyLesson} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';
-export {contentTabs} from './atlas-review/lib/content-types';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-response';
-export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-decisions';export * from './atlas-review/lib/body-review-api';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
- const now=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+ const now=await exactSourceHistoryApi(source,'review-security');
  const catalog=json('atlas-review/public/models/bodyparts3d/full-body/catalog.json');
  const display=now.bodyDisplayCatalog(catalog),oldDisplay=before.bodyDisplayCatalog(catalog);
  assert.deepEqual(display,oldDisplay);assert.equal(display.structures.length,1104);

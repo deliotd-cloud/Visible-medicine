@@ -1,6 +1,6 @@
 # Visible Medicine completion checklist
 
-Revision 51 · Updated 2026-10-18
+Revision 52 · Updated 2026-10-18
 
 Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
 
@@ -8,13 +8,13 @@ This is the persistent project checklist, not a claim that the whole website is 
 
 ## Current baseline
 
-Atlas source: `c5a09df8939dfaeaf76119ba5507c552721c3a30`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa`.
+Atlas source: `6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79`.
 
-1104 root-body representations have 9936 topic placements: 9322 editorial drafts, 575 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
+1104 root-body representations have 9936 topic placements: 9326 editorial drafts, 571 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
 
 Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration.
 
-Integrated Atlas source: `c5a09df8939dfaeaf76119ba5507c552721c3a30` (9322 draft / 575 pending / 39 generated topic placements). **Imported into the website baseline above.** Four exact-source lacrimal canaliculus/sac Ultrasound drafts imported coherently. Specialized acquisition and visibility limits, not routine/full-duct visibility, patency/flow, diagnostic performance or mesh/lumen correspondence. Both deeper nasolacrimal-duct Ultrasound slots stay pending. Other9,932 root topics,1104 identities and109 model bundles remain exact. No acquired scans, new media/dependencies/geometry, approval transfer, registration or public release.
+Integrated Atlas source: `6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb` (9326 draft / 571 pending / 39 generated topic placements). **Imported into the website baseline above.** Four exact-source abdominal venous radial-EUS Ultrasound drafts imported coherently. Acquisition-specific operator observations, not routine transabdominal visibility, a cohort detection rate, patency, full-course anatomy or patient registration. Other9,932 displayed topics/1104 identities/109 model bundles remain exact; only two targets belong to the1022-record archival export. No new media/dependencies/geometry, approval transfer, acquired scans or public release.
 
 Canonical Atlas summaries were refreshed and verified through their generator (BASE-02). Source-candidate evidence remains separate from the website baseline and from clinical, browser and release approval.
 
@@ -441,6 +441,7 @@ I can inventory sources and gaps, research acceptable references/assets, write r
 
 ## Change log
 
+- 2026-10-18 · revision 52: Prepared coherent clean Atlas6ba0dd43 import through all four generated learner modules, normal protected Review and freshly replayed coverage producers. Four source-bound abdominal radial-EUS drafts; root9326draft/571pending/39generated. Original closed51/50 and older historical evidence remains separate from current admission; stale prior teaching cannot approve current material. All71requirements/eightoptional ideas/statuses/owners/acceptance remain unchanged. Frozen candidates/private state unchanged. Local engineering checks do not confer clinical, browser, spatial or release acceptance.
 - 2026-10-18 · revision 51: Prepared coherent clean sourcec5a09df import through all four generated learner modules, normal protected Review and freshly replayed coverage producers. Four source-bound lacrimal Ultrasound drafts;9,932 other root topics preserved; source/checklist evidence unchanged and12stale teaching requests refused before storage. Root readiness9322draft/575pending/39generated. Closed50 proof bodies/bytes retained, separate current admission and actual imported resolver checks added. All71requirements/eightoptional ideas/statuses/owners/acceptance remain unchanged. Frozen review candidates and private state are not changed or approved. Local build/tests do not confer clinical, spatial registration, browser or release acceptance.
 - 2026-10-18 · revision 50: Prepared coherent source70260f13 import across four learner modules, normal protected Review and freshly produced coverage provenance. Added two source-bound deep-plantar Ultrasound drafts without new media/dependencies/geometry or approval migration;9,934 other root placements remain exact. Root readiness is9318draft/579pending/39generated. Closed49 evidence retains every prior head-client and current-proof assertion, while separate current tests bind the new source. All71 requirements/eight optional ideas and statuses/owners/acceptance remain unchanged. Local candidate verification is distinct from browser, clinical and release acceptance.
 - 2026-10-18 · revision 49: Opt-in local head study phase diagnostics bind exact read/checksum/data-ready boundaries with no identifiers or scan payloads. Two existing Review inputs rebound; all71 requirements/eight optional ideas and clinical/release states preserved. Browser render/registration not claimed. Fragment-only diagnostics preserve the strict anatomy-link query without alteration. Interim query trace/Review retained as evidence, not linked-tour acceptance. The unfinished post-load CT correction keeps the exact verified scalar buffer non-enumerable; direct voxel access and source admission are unchanged. Synthetic real-loader guidance works; actual CT/MRI browser verification remains separate.

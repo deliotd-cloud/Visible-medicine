@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
+      "sha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
     },
     {
       "path": "app/body-education-link.ts",
@@ -587,6 +587,10 @@
     {
       "path": "content/abdominal-organ-quiz.ts",
       "sha256": "336cba1c47587e71916a07f863339b814aa6c7f2606e3464f2d7627599adddeb"
+    },
+    {
+      "path": "content/abdominal-radial-eus.ts",
+      "sha256": "ee0deb43c6ffaa23a6ad8ec705634937419d85e2a0277612058217d5f2a0eca2"
     },
     {
       "path": "content/abdominal-spatial-reasoning-pins.json",
@@ -2386,7 +2390,7 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sha256": "1a247baa5ccefbb5c0c9772888d0fd486fdf28f05a080a4dbb59027752ba6b9f"
+      "sha256": "d71c2f0a0895190b7661e632062a64487c14cb3ba1a8ecaf2614e51d4655f6a1"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -3171,6 +3175,10 @@
     {
       "path": "lib/abdominal-organ-reasoning.ts",
       "sha256": "b8912daea3a16c92ae8e8bda65c2d2877e7002d390ac6130dfc45a53e6a312b8"
+    },
+    {
+      "path": "lib/abdominal-radial-eus.ts",
+      "sha256": "2d0c7e47ab835aa8a5ed810cd55a05b3fb81226ae49416e05cf990b357c113b3"
     },
     {
       "path": "lib/abdominal-spatial-reasoning.ts",
@@ -5614,7 +5622,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "bbd504cfc5920081ceb216aacf22babbbb81571138bfe2f75b2c0d2a4209b33e"
+      "sha256": "ff6030be25daad5256737d8404a0b4c0612420bc94dbce30c052f4e3ceee6916"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5837,7 +5845,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "03baa73fc94ca565e918d2df7e0c709674666a61a0c069c432d1fb21a217729c",
-  "sourceRendererSha256": "ad71a1fd6036f8584735e8491b62f200174d85f14bfbcbd5b39577d6c84d7d78",
-  "websiteIntegrationSha256": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa"
+  "sha256": "fcfaa9b5240c51ccbd4355ca13b260572ce04f2bd6e15d808897bdb03f400d0f",
+  "sourceRendererSha256": "8f9c43f2eff00a3e467b622d0a5e96eb785ae7e6d0f666dc28de091d3def5f61",
+  "websiteIntegrationSha256": "d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79"
 }

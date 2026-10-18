@@ -1,5 +1,5 @@
 {
-  "revision": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+  "revision": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -553,8 +553,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572",
-      "importedSha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
+      "sourceSha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a",
+      "importedSha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
     },
     {
       "path": "lib/foot-arterial-projection-xray.ts",
@@ -2265,6 +2265,16 @@
       "path": "content/lacrimal-drainage-ultrasound.ts",
       "sourceSha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5",
       "importedSha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5"
+    },
+    {
+      "path": "lib/abdominal-radial-eus.ts",
+      "sourceSha256": "2d0c7e47ab835aa8a5ed810cd55a05b3fb81226ae49416e05cf990b357c113b3",
+      "importedSha256": "2d0c7e47ab835aa8a5ed810cd55a05b3fb81226ae49416e05cf990b357c113b3"
+    },
+    {
+      "path": "content/abdominal-radial-eus.ts",
+      "sourceSha256": "ee0deb43c6ffaa23a6ad8ec705634937419d85e2a0277612058217d5f2a0eca2",
+      "importedSha256": "ee0deb43c6ffaa23a6ad8ec705634937419d85e2a0277612058217d5f2a0eca2"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -5603,8 +5613,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "e154eb0978b82d9082dfc929004963ce38cc41d27f5df870540b324c865067ec",
-      "importedSha256": "9d718eec9f2c4d56c23da895306047357589902fff7900da17a173eb36f12c77"
+      "sourceSha256": "3e986a2f47070c5a056d8d60bd71ffc2f216f35d6c63017e16decc32c4e2b278",
+      "importedSha256": "cf1686b67da33d5566f6d92dd93f431cb64abc6af6a28442a07b65835cdb8f32"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -5989,7 +5999,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "11c5074d38f05c361bbea0f8bf71fb4ae2865eca10cf0a7b65fd75f1a29f549b"
+      "importedSha256": "1e4220a066e335430b3ee2086c8658f3603f615668bd7d6f53f17f545aa74e94"
     },
     {
       "path": "app/review/review.css",
@@ -6023,8 +6033,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "bb5f67997374c4546ec769c580bb0f3f255b0eeb617b108a476b23caee493989",
-      "importedSha256": "bb5f67997374c4546ec769c580bb0f3f255b0eeb617b108a476b23caee493989"
+      "sourceSha256": "624784f4e0231753d5b1897ee50728e47b28ad76dbb1f70694e33cff8fa90aad",
+      "importedSha256": "624784f4e0231753d5b1897ee50728e47b28ad76dbb1f70694e33cff8fa90aad"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -6253,8 +6263,8 @@
     },
     {
       "path": "content/regional-teaching/abdomen.json",
-      "sourceSha256": "1a247baa5ccefbb5c0c9772888d0fd486fdf28f05a080a4dbb59027752ba6b9f",
-      "importedSha256": "1a247baa5ccefbb5c0c9772888d0fd486fdf28f05a080a4dbb59027752ba6b9f"
+      "sourceSha256": "d71c2f0a0895190b7661e632062a64487c14cb3ba1a8ecaf2614e51d4655f6a1",
+      "importedSha256": "d71c2f0a0895190b7661e632062a64487c14cb3ba1a8ecaf2614e51d4655f6a1"
     },
     {
       "path": "content/regional-teaching/foot.json",
@@ -7648,5 +7658,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa"
+  "websiteIntegrationSha256": "d2ef89f23e700eebea3dce1d7507926ad7c5fdbccdfbf9941f06cd4739644d79"
 }
