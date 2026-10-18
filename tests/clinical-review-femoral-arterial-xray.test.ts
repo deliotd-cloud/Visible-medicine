@@ -7,10 +7,11 @@ import {pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
 
 const atlasBaseline='469b2f6874cc3f8209c2f7b36fd830cae18dce9e';
 // Pin to the exact integrated Atlas source revision after its commit.
-const liveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const liveCommit=CURRENT_ATLAS_REVISION;
 const atlas='F:/VisibleMedicine/atlas';
 const pinsPath='content/lower-limb-arterial-pins.json';
 const branchPath='public/models/bodyparts3d/circumflex-femoral/catalog.json';

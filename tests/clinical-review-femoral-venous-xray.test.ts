@@ -7,10 +7,11 @@ import {pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
 
 const atlasBaseline='aba5a0025e7d001d8b5b7c8876122f0ad2eead62';
 // Pin to the exact integrated Atlas source revision after its commit.
-const liveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const liveCommit=CURRENT_ATLAS_REVISION;
 const atlas='F:/VisibleMedicine/atlas';
 const pinsPath='content/lower-venous-imaging-pins.json';
 const catalogPath='public/models/bodyparts3d/full-body/catalog.json';

@@ -1,14 +1,14 @@
 {
   "schemaVersion": 2,
   "scope": "application-source-only",
-  "at": "2026-10-18T19:51:08.277Z",
+  "at": "2026-10-18T20:09:26.273Z",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
   "atlasSource": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
   "atlasTree": "83720d136f899876bd947323e6552c4d3e171210",
   "reviewIntegration": "b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916",
   "registerRevision": 56,
-  "fullLocalSourceManifestSha256": "924051ef494279c115b1b7b93e9d781e2e97fbfc47e9f74782aeb6be74a831c6",
-  "screenedSnapshotParent": "148cf5647eed565cce74173f6caeccaa339d076f",
+  "fullLocalSourceManifestSha256": "0045d16f680e47364f80fa9f3f8c9a0b37852247068feabb66aaacfd182320ec",
+  "screenedSnapshotParent": "50dfd1d312df219d97331324de3e315f432ee4e3",
   "heldDocuments": [
     {
       "path": "docs/master-plan.md",
@@ -13119,10 +13119,10 @@
     },
     {
       "path": "components/StudioWorkbookTable.tsx",
-      "bytes": 3488,
-      "sha256": "158815a465763519b42232052f47f5008ce32f8ef63242e46b5c594dd85e7af8",
+      "bytes": 3734,
+      "sha256": "bacdc55d05000d2f489f15c9a6f96f6d980eadbd9cc00be60eac1e558bd29f28",
       "mode": "100644",
-      "gitBlob": "66c6ebfce6634cf080b0717113d5641e75aad2d0"
+      "gitBlob": "084563afbc0f2293a3827babd4a27bd29c0ec9ff"
     },
     {
       "path": "components/useVerifiedFacialTeaching.ts",
@@ -23352,11 +23352,18 @@
       "gitBlob": "a7017f8ea2ed041e8c72554d8993b3175ed9e519"
     },
     {
-      "path": "tests/clinical-review-femoral-arterial-xray.test.ts",
-      "bytes": 22248,
-      "sha256": "261ba960773937f608e6e0f02bb69bd0e5d612760a1dff923891950a7fd08acd",
+      "path": "tests/clinical-review-femoral-arterial-current-admission.test.mjs",
+      "bytes": 2782,
+      "sha256": "17dd42ff6588d9d5b5535076ccef162ef9f66e84f6ae559c2d050609d0388b36",
       "mode": "100644",
-      "gitBlob": "43d1617be799a96317cdde418542f6cfe949b393"
+      "gitBlob": "2b893c185a8b17595077d17aa22997d4d737fc35"
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-xray.test.ts",
+      "bytes": 22297,
+      "sha256": "3ebc19d3097544f487171e329dc1ea104f8b34c47191cff2cbca004c31ecb2ee",
+      "mode": "100644",
+      "gitBlob": "cf5a281cab8cb23c1e661e10a2e0eda1a16a80b6"
     },
     {
       "path": "tests/clinical-review-femoral-component-imaging.test.ts",
@@ -23366,11 +23373,18 @@
       "gitBlob": "d656b9705bf4bf7e22abf732ef46e9747237a23a"
     },
     {
-      "path": "tests/clinical-review-femoral-venous-xray.test.ts",
-      "bytes": 21958,
-      "sha256": "9674e14c29f262f0f3ca622ec2f2d78e324f9731a2ccf93ec43c5a4a4c9fe071",
+      "path": "tests/clinical-review-femoral-venous-current-admission.test.mjs",
+      "bytes": 2773,
+      "sha256": "4aeaa847abaaa8031678034e24b2efe28a6b17dffe14ca84d0e6064c3fa32180",
       "mode": "100644",
-      "gitBlob": "2f5394caa0b53a35b11a2e05fbcabe68c775c992"
+      "gitBlob": "c227abb359381c1b52d81fc79eb75cf7a2a25c20"
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-xray.test.ts",
+      "bytes": 22007,
+      "sha256": "a97bfa57eb9eaca66f0b5b19133d32988a08b931712fc105066b931921a316ef",
+      "mode": "100644",
+      "gitBlob": "a67b61e2b5774d12c1d43bb1e1bae7e09efc8d0f"
     },
     {
       "path": "tests/clinical-review-foot-bone-quiz.test.ts",
@@ -25450,6 +25464,20 @@
       "sha256": "c43cbdee429d6a933f04b520797f163d7bf7ee44c67074b4fa9cd2d2ea11c1b2",
       "mode": "100644",
       "gitBlob": "84d0221736140e4921fa28cd83d7fadba82d6caf"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-femoral-arterial-original.ts.txt",
+      "bytes": 22248,
+      "sha256": "261ba960773937f608e6e0f02bb69bd0e5d612760a1dff923891950a7fd08acd",
+      "mode": "100644",
+      "gitBlob": "43d1617be799a96317cdde418542f6cfe949b393"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-femoral-venous-original.ts.txt",
+      "bytes": 21958,
+      "sha256": "9674e14c29f262f0f3ca622ec2f2d78e324f9731a2ccf93ec43c5a4a4c9fe071",
+      "mode": "100644",
+      "gitBlob": "2f5394caa0b53a35b11a2e05fbcabe68c775c992"
     },
     {
       "path": "tests/fixtures/clinical-review-integration-before-desktop-focus.txt",
@@ -31589,6 +31617,13 @@
       "sha256": "78b25a405bdcee406bc5c64181d71b5e6b0114cc77b27b46c59ebae1648f163b",
       "mode": "100644",
       "gitBlob": "a122d7b9117cf7883ddeb714b54b0f6c26c1ec1e"
+    },
+    {
+      "path": "tests/studio-workbook-empty-state.test.mjs",
+      "bytes": 5046,
+      "sha256": "7a8232adcee3f13b36df179b56b674ac92d3334a502fe017de9fab5b786a115a",
+      "mode": "100644",
+      "gitBlob": "5ef4f59efb635abbfc3870ecc89848de83aa2fff"
     },
     {
       "path": "tests/studio-workspace.test.ts",
