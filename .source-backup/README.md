@@ -1,19 +1,5 @@
-# Visible Medicine application-source recovery
+# Visible Medicine source recovery
 
-This branch contains 4,388 screened application paths plus three recovery metadata
-files. It includes two unchanged brand lockups from its screened parent, no new
-media, scans, masks, private review packages, D1/R2 runtime state or decisions.
-Its only parent is screened snapshot e85e3a8ba5ecb23c05be96fa4a96b81bcdb5fd3f; all three commits
-are safe source snapshots, not the canonical website/Atlas Git ancestry.
+This branch contains 4,397 screened application-source paths plus three recovery metadata files. Its only parent is the previously screened ba0ec945 source snapshot; canonical website/Atlas Git ancestry is not imported. Ten bounded UTF-8 text changes add read-only saved-material comparison. Three operational documents remain local only. Existing asset references and notices are retained, with no new model, acquired image, font or dependency.
 
-The source binds Atlas c5a09df / normal Review a579079a / Completion Register51.
-The 39 retired generated JS/CSS paths remain recoverable in the screened parent.
-Three historical operational documents remain local only. Exact model/static
-asset references and notices are retained in existing-assets.json and source.
-
-This is NOT a complete website, private-data, clinical or executable deployment
-backup. A source clone does not restore private candidate objects, approvals,
-model-delivery grants, sign-in roles, imaging datasets or secrets. Missing-input
-and access gates must remain intact. No migration was applied or application
-private data written by this backup. No public deployment, new fee/resource or
-clinical/spatial-registration approval is conferred.
+This is not a complete website, private-data or deployment backup. Private frozen packages, clinical images/masks, D1/R2 runtime state, decisions, identities, grants and secrets are excluded. No approval is transferred, no permission changed and no publication or patient-space registration conferred.
