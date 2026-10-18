@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 56,
+  "revision": 57,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -25,7 +25,7 @@
     "atlasTree": "83720d136f899876bd947323e6552c4d3e171210",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916",
+    "reviewIntegration": "024b9d3104ee4a93bc50b6430851ea9184c3a2f95da8c133d6e302006993a902",
     "reviewSourceFiles": 1531,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -798,7 +798,8 @@
         "headrecovery:combined-light-checks.json",
         "uiqa:manual-recovery-browser.json",
         "uiqa:slide-find-iab-browser.json",
-        "website:tests/clinical-review-embedded-css.test.mjs"
+        "website:tests/clinical-review-embedded-css.test.mjs",
+        "website:tests/native-head-toolbar-compact.test.mjs"
       ]
     },
     {
@@ -1184,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 57,
+      "date": "2026-10-18",
+      "change": "Native CT/MRI desktop toolbar groups the enabled comparison launcher and image-layout controls into one wrapping row, with existing window/label/settings controls below. One wide-desktop CSS block only; no hidden controls, callback, source mapping or study changes. Actual prior CT/Pons selection, typed correct feedback, CT-to-MRI and Back/Forward journeys recorded; post-change dimensions remain a separate browser gate. Only components/head-atlas.css changes in1661 combined Review inputs; two generated revision records/Review viewer rebound normally to 024b9d31. CleanAtlas46c/tree837, all1531 imported identities/four learner modules/models/teaching/notices/source holds remain; all71/eight statuses, owners and acceptance retained. No review-decision migration, clinical or spatial-registration approval/public deployment. The first unpublished selector was rejected after actual Clear selection testing: its secondary Find linked button incorrectly activated the grid. The corrected five selectors target only the first comparison button, preserving unselected flow; previous candidate and failure evidence retained locally. Revision56 historical oracles and all clinical holds remain unchanged."
+    },
     {
       "revision": 56,
       "date": "2026-10-18",

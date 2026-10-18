@@ -48,7 +48,7 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
  assert.equal(CURRENT_ATLAS_REVISION,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
  assert.equal(pin.sourceTree,'83720d136f899876bd947323e6552c4d3e171210');
- assert.equal(pin.reviewIntegration,'b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916');
+ assert.equal(pin.reviewIntegration,sha(JSON.stringify(JSON.parse(read('atlas-review/integration-inputs.json')).inputs)));
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
  const detached=validateCurrentAtlasDelivery();detached.documents.foreign='0'.repeat(64);

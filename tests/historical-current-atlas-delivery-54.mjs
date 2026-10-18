@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {validateCurrentAtlasDelivery} from './fixtures/closed56-validator/tests/current-atlas-delivery.mjs';
 import {readRevision55} from './historical-current-atlas-delivery-55.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -58,7 +58,7 @@ export function readRevision54(path,{readLive=p=>readFileSync(new URL(p,site))}=
   return bytes;
  }
  if(frozen.has(path))return Buffer.from(frozen.get(path));
- if(['app/workspace/atlas-review/model/page.tsx','app/workspace/atlas-review/model/embedded/page.tsx'].includes(path)){
+ if(['app/workspace/atlas-review/model/page.tsx','app/workspace/atlas-review/model/embedded/page.tsx','components/head-atlas.css'].includes(path)){
   const bytes=readRevision55(path);
   assert.equal(sha(bytes),oldInputs.get(path),path+' unchanged across closed54/55');
   return bytes;

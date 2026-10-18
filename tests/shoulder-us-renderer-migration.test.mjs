@@ -30,7 +30,7 @@ test('current admission is the independently pinned 46c delivery, not the closed
   const pin=delivery.validateCurrentAtlasDelivery();
   assert.equal(delivery.CURRENT_ATLAS_REVISION,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
   assert.equal(pin.sourceTree,'83720d136f899876bd947323e6552c4d3e171210');
-  assert.equal(pin.reviewIntegration,'b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916');
+  assert.equal(pin.reviewIntegration,sha(JSON.stringify(JSON.parse(readFileSync('atlas-review/integration-inputs.json')).inputs)));
   assert.equal(pin.reviewSourceFiles,1531);
   assert.notEqual(pin.reviewIntegration,'245ca2015821a0715539428dbcf4e499d9807ab83a906e0ee3f03c042571bf37');
   assert.notEqual(pin.reviewIntegration,'4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d');

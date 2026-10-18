@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {validateCurrentAtlasDelivery} from './fixtures/closed56-validator/tests/current-atlas-delivery.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const fixture=new URL('./fixtures/',import.meta.url);
@@ -66,6 +66,11 @@ const frozenSpecial=new Map([
 export function readRevision55(path,{readLive=p=>readFileSync(new URL(p,site))}={}){
  assert(typeof path==='string'&&/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(part=>!part||part==='.'||part==='..'));
  if(documents.has(path))return fixed('closed55-documents/'+path,revision55.documents[path]);
+ if(path==='components/head-atlas.css'){
+  const bytes=fixed('closed56-overrides/components/head-atlas.css','214fbad37e04a7ecd371c073ffb13c36cbcb5eccb208201a314bc6f0d0fdfb15');
+  assert.equal(sha(bytes),oldInputs.get(path),path+' unchanged across closed55/56');
+  return bytes;
+ }
  if(frozenSpecial.has(path))return fixed(...frozenSpecial.get(path));
  if(frozen.has(path))return Buffer.from(frozen.get(path));
  const expected=oldInputs.get(path)??imported.get(path)??fixedLive.get(path);
