@@ -244,10 +244,10 @@ export async function listCatalogueCourses(auth?: AuthContext | null): Promise<C
   const userId = auth?.userId ?? "";
   const rows = await env.DB.prepare(
     `SELECT cr.*, c.code,
-            COUNT(crw.workbook_id) AS workbook_count,
+            COUNT(CASE WHEN w.status='published' THEN crw.workbook_id END) AS workbook_count,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbooks w2 ON w2.id=crw2.workbook_id WHERE crw2.release_id=cr.id AND w2.status='published' ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
-            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
-            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN workbooks live_w ON live_w.id=live_crw.workbook_id AND live_w.status='published' JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN workbooks live_w ON live_w.id=live_crw.workbook_id AND live_w.status='published' JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             MAX(CASE WHEN e.status='active' THEN 1 ELSE 0 END) AS enrolled
        FROM course_releases cr
        JOIN courses c ON c.id=cr.course_id
@@ -266,10 +266,10 @@ export async function getCatalogueCourse(slugValue: unknown, auth?: AuthContext 
   const slug = slugify(slugValue);
   const row = await env.DB.prepare(
     `SELECT cr.*, c.code,
-            COUNT(crw.workbook_id) AS workbook_count,
+            COUNT(CASE WHEN w.status='published' THEN crw.workbook_id END) AS workbook_count,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbooks w2 ON w2.id=crw2.workbook_id WHERE crw2.release_id=cr.id AND w2.status='published' ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
-            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
-            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
+            (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN workbooks live_w ON live_w.id=live_crw.workbook_id AND live_w.status='published' JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
+            (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN workbooks live_w ON live_w.id=live_crw.workbook_id AND live_w.status='published' JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             MAX(CASE WHEN e.status='active' THEN 1 ELSE 0 END) AS enrolled
        FROM course_releases cr
        JOIN courses c ON c.id=cr.course_id
@@ -285,7 +285,7 @@ export async function getCatalogueCourse(slugValue: unknown, auth?: AuthContext 
 export async function getCatalogueCourseWorkbooks(releaseIdValue: unknown) {
   await ready();
   const releaseId = boundedText(releaseIdValue, 120);
-  const rows = await env.DB.prepare(`SELECT w.id, w.title, w.mode, w.duration_minutes, w.status, crw.position, crw.required FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id JOIN course_releases cr ON cr.id=crw.release_id WHERE crw.release_id=? AND cr.status='published' ORDER BY crw.position`).bind(releaseId).all<Row>();
+  const rows = await env.DB.prepare(`SELECT w.id, w.title, w.mode, w.duration_minutes, w.status, crw.position, crw.required FROM course_release_workbooks crw JOIN workbooks w ON w.id=crw.workbook_id JOIN course_releases cr ON cr.id=crw.release_id WHERE crw.release_id=? AND cr.status='published' AND w.status='published' ORDER BY crw.position`).bind(releaseId).all<Row>();
   return rows.results.map((row) => ({ id: String(row.id), title: String(row.title), mode: String(row.mode), durationMinutes: Number(row.duration_minutes), required: Boolean(row.required), position: Number(row.position) }));
 }
 

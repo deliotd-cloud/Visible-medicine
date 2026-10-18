@@ -13,7 +13,7 @@ export function SiteFooter() {
       <div className="footer-links">
         <nav aria-label="Explore Visible Medicine"><b>Explore</b><Link href="/atlas">Atlas</Link><Link href="/courses">Courses</Link><Link href="/research">Research</Link><Link href="/search">Search</Link></nav>
         <nav aria-label="Teach with Visible Medicine"><b>Teach</b><Link href="/studio">For educators</Link><Link href="/institutions">Institutions</Link><Link href="/pricing">Plans</Link><Link href="/embed">Embeds</Link></nav>
-        <nav aria-label="Visible Medicine account links"><b>Workspace</b><Link href="/my-learning">My learning</Link><Link href="/studio/workspace">Studio</Link><Link href="/workspace">Institution</Link><Link href="/account">Account &amp; data</Link></nav>
+        <nav aria-label="Visible Medicine account links"><b>Workspace</b><Link href="/my-learning">My learning</Link><Link href="/studio/workspace">Studio</Link><Link href="/workspace">Workspace</Link><Link href="/account">Account &amp; data</Link></nav>
         <nav aria-label="Visible Medicine governance"><b>Governance</b><Link href="/trust">Trust centre</Link><Link href="/intended-use">Intended use</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/acceptable-use">Acceptable use</Link><Link href="/accessibility">Accessibility</Link></nav>
       </div>
       <div className="footer-boundary">
