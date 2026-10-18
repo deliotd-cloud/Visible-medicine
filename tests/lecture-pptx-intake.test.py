@@ -293,6 +293,42 @@ class LecturePptxIntakeTest(unittest.TestCase):
         self.assertNotEqual(second.returncode, 0)
         self.assertEqual(output.read_bytes(), prior)
 
+    def test_cli_write_failure_does_not_publish_partial_manifest(self):
+        private = self.root / "private"
+        private.mkdir()
+        output = private / "held.json"
+
+        def fail_after_prefix(_result, destination, **_kwargs):
+            destination.write('{"schema":')
+            raise OSError("synthetic interrupted write")
+
+        with patch.object(self.intake.json, "dump", side_effect=fail_after_prefix):
+            status = self.intake.main([
+                "--input", str(self.source), "--expected-sha256", self.sha,
+                "--private-root", str(private), "--output", str(output),
+            ])
+        self.assertEqual(status, 1)
+        self.assertFalse(output.exists(), "A failed write must not publish a truncated held package")
+        self.assertEqual(list(private.iterdir()), [], "Temporary files must be cleaned up")
+
+    def test_cli_final_name_race_preserves_other_file(self):
+        private = self.root / "private"
+        private.mkdir()
+        output = private / "held.json"
+
+        def competing_claim(_source, destination):
+            Path(destination).write_bytes(b"other-process")
+            raise FileExistsError("synthetic competing output")
+
+        with patch.object(self.intake.os, "link", side_effect=competing_claim):
+            status = self.intake.main([
+                "--input", str(self.source), "--expected-sha256", self.sha,
+                "--private-root", str(private), "--output", str(output),
+            ])
+        self.assertEqual(status, 1)
+        self.assertEqual(output.read_bytes(), b"other-process")
+        self.assertEqual(list(private.iterdir()), [output], "The unclaimed temporary file must be removed")
+
     def test_cli_rejects_same_path_and_repository_destination(self):
         private = self.root / "private"
         private.mkdir()

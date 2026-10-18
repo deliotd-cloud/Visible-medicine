@@ -45,6 +45,16 @@
 .studio-app .studio-form button { min-height: 42px; font-size: 13px; }
 .studio-quiet-state { min-height: 84px; margin: 0; padding: 24px 4px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
 
+.studio-course-search { margin: 0 0 18px; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 8px 20px; }
+.studio-course-search form { display: grid; gap: 6px; min-width: min(100%, 320px); }
+.studio-course-search label { font-size: 12px; font-weight: 650; }
+.studio-course-search form > div { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.studio-course-search input { min-width: 0; flex: 1 1 210px; min-height: 40px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: white; color: var(--ink); font: inherit; font-size: 13px; }
+.studio-course-search button { min-height: 40px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: white; color: var(--teal); cursor: pointer; font: inherit; font-size: 12px; }
+.studio-course-search a { color: var(--teal); font-size: 12px; }
+.studio-course-search p { margin: 0; color: var(--muted); font-size: 12px; }
+.studio-course-search :is(input, button, a):focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+
 .studio-action-queues { margin: 18px 32px 56px; padding-top: 22px; border-top: 1px solid var(--line); }
 .studio-action-queues > div { margin-top: 14px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; }
 .studio-action-queues a { min-height: 92px; padding: 16px; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; align-content: center; border: 1px solid var(--line); border-radius: 8px; background: rgba(255,255,255,.72); }

@@ -7,7 +7,9 @@ test('abdomen is a compact 3D pilot with separate specimens, not a cleared imagi
   const entries=atlasModules.filter(m=>m.slug==='abdomen-3d');assert.equal(entries.length,1);
   assert.equal(entries[0].structures,106);assert.equal(entries[0].images,0);assert.equal(entries[0].modality,'3D');
   const page=await readFile(new URL('../app/atlas/abdomen-3d/page.tsx',import.meta.url),'utf8');
-  assert.equal((page.match(/<iframe\b/g)||[]).length,1);
+  // The page delegates its single frame to AtlasRuntimeFrame; abdomen-frame-contract.test.mjs
+  // renders the actual component chain and asserts the resulting single iframe.
+  assert.equal((page.match(/<AtlasRuntimeFrame\b/g)||[]).length,1);
   assert(page.includes('src="/atlas-runtime/head-neck/index.html?region=abdomen"'));
   for(const text of ['No scan or spatial registration is connected','lecture access remains separate','CC BY-SA 2.1 Japan','not registered to the main body'])assert(page.includes(text));
   const frame=await readFile(new URL('../components/SiteFrame.tsx',import.meta.url),'utf8');assert(frame.includes("pathname === '/atlas/abdomen-3d'"));

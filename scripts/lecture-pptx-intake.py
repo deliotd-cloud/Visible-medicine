@@ -8,11 +8,13 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path, PurePosixPath
 import posixpath
 import re
 import stat
 import sys
+import tempfile
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 import zipfile
@@ -388,10 +390,22 @@ def main(argv: list[str] | None = None) -> int:
         if not output.parent.is_dir():
             raise IntakeError("The explicit private output parent must already exist")
         result = inspect_pptx(args.input, args.expected_sha256)
-        # Exclusive creation prevents overwrite. No archive entries are extracted.
-        with output.open("x", encoding="utf-8", newline="\n") as destination:
-            json.dump(result, destination, ensure_ascii=False, indent=2)
-            destination.write("\n")
+        # Complete the private sibling before atomically claiming the final name.
+        # A failed write must not leave a truncated package at the output path.
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile("w", encoding="utf-8", newline="\n",
+                                             prefix=".pptx-intake-", suffix=".tmp",
+                                             dir=output.parent, delete=False) as destination:
+                temporary = Path(destination.name)
+                json.dump(result, destination, ensure_ascii=False, indent=2)
+                destination.write("\n")
+                destination.flush()
+                os.fsync(destination.fileno())
+            os.link(temporary, output)  # Fails if another process claimed the name.
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
         print(json.dumps({"schema": SCHEMA, "state": result["state"], "sourceSha256": result["source"]["sha256"],
                           "slides": len(result["slides"]), "quarantinedAssets": len(result["assets"]),
                           "readyForPublication": False, "mediaExtracted": False, "liveImport": False}))

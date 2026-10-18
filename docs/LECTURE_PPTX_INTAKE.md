@@ -24,6 +24,10 @@ existing files, symlink/junction paths, repository/hosted-source destinations an
 paths outside the explicit private root are refused. Treat the output as private:
 it contains teaching text, notes, answer material and unreleased references. Never
 put it, source scans, images or patient identifiers in GitHub or hosted artifacts.
+The JSON is completed in a private sibling file and published under the requested
+name only after the write succeeds. An interrupted write removes that sibling
+without leaving a partial package at the final path; a competing final file is
+never replaced.
 
 ## Preserved source evidence
 

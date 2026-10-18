@@ -3,7 +3,7 @@
   "scope": "application-source-only",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
   "fullLocalSourceManifestSha256": "ea67c2c23aa605b3b2ead5e53b85f34c0b6ccb1c1108aa132758fc4ffef2b332",
-  "screenedSnapshotParent": "fe047152e51c7eca0777b22b7d4c9bf4a051b0cc",
+  "screenedSnapshotParent": "86e64291f07677e9d2e2c4612a5070f2cc98e9ec",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -1057,10 +1057,10 @@
     },
     {
       "path": "app/studio/courses/page.tsx",
-      "sha256": "a2ee92187803d95543058303b89ea80c7e73a1cb46dede3f77bceff50dbbe23a",
-      "bytes": 2325,
+      "sha256": "f2f2c607db4c846c72085416f222147c59b869879023303518e2d2fec6278ac2",
+      "bytes": 3371,
       "mode": "100644",
-      "gitBlob": "01b6e939a6532f732369dbb4afb90d14432fd1e0"
+      "gitBlob": "ce56d95907285195d3311e0b9c853d5cad14bf88"
     },
     {
       "path": "app/studio/error.tsx",
@@ -12229,10 +12229,10 @@
     },
     {
       "path": "components/FrozenCandidateComparison.tsx",
-      "sha256": "c3fc9aea34dbbbed6eb229be273fbe052843404b976e3ba2ec12c2a0507f451d",
-      "bytes": 14703,
+      "sha256": "2eda67c4cc36740d6bd61090c592e529103a4ae23e69f641e164ec7dee6ac349",
+      "bytes": 17294,
       "mode": "100644",
-      "gitBlob": "a6c6cd55d911db9308cfbda1e295c6f458c67e85"
+      "gitBlob": "c462f1555460bce885fb458b647823a0be141bb9"
     },
     {
       "path": "components/HeadAnatomyCheck.tsx",
@@ -12999,10 +12999,10 @@
     },
     {
       "path": "components/frozen-candidate-comparison.css",
-      "sha256": "7cd397dfa7fb1a1033b68b0889ba960b47864c92555bd5198d102deb1d324af0",
-      "bytes": 1713,
+      "sha256": "7d49bf71013887c32ce8e92c6e517cb48ad454ea67d611c1b6621254b704f26d",
+      "bytes": 2606,
       "mode": "100644",
-      "gitBlob": "9da30ada3f0d36a4c8dc433f282df49430c72f77"
+      "gitBlob": "2d31ed4ec6f1576c2e252b15507f568f9cfa722a"
     },
     {
       "path": "components/head-atlas.css",
@@ -13139,10 +13139,10 @@
     },
     {
       "path": "components/studio-workspace.css",
-      "sha256": "5ce55c7ab52acd8ea734cb440a6482f291ddaf4bd35b3e14840cdcfafec974ec",
-      "bytes": 9123,
+      "sha256": "df1a14f0ef382837408a03a99d338749fb472103c2f14eb6326288a559547d30",
+      "bytes": 10204,
       "mode": "100644",
-      "gitBlob": "1630db4d35f97f5a87220f01d9b136715b045fe0"
+      "gitBlob": "5f530ef6bf2b02e6111c29fdf9566ff48541c3af"
     },
     {
       "path": "components/useVerifiedFacialTeaching.ts",
@@ -14308,10 +14308,10 @@
     },
     {
       "path": "docs/LECTURE_PPTX_INTAKE.md",
-      "sha256": "610e4ce6ceeea5241b5aa021c8771b6754b2911cfd642a681e2d8b2595a799c7",
-      "bytes": 11217,
+      "sha256": "03d46e51f5500d9a6a799341840f6b75e2fd9467336927a19b780b20f73be6f1",
+      "bytes": 11472,
       "mode": "100644",
-      "gitBlob": "0dc8afc9ffd75c14e4c56f1c4d44515cf1e65d6c"
+      "gitBlob": "7d6f8a798c157b276421fcac76df2a2cbd2a7496"
     },
     {
       "path": "docs/LECTURE_REQUEST_SAFETY.md",
@@ -20482,10 +20482,10 @@
     },
     {
       "path": "scripts/lecture-pptx-intake.py",
-      "sha256": "e4b34ede2787942bfa192ab910402a4d6dd479653ac5e8fbcbac08a1b6df54e1",
-      "bytes": 23922,
+      "sha256": "ede70d5e99ea54d8a2220c1a057b69ddbffbbb52f7963f73b1be04cb06bcdf5e",
+      "bytes": 24579,
       "mode": "100644",
-      "gitBlob": "f11a0a022d0b1e612356346047171104147ebc06"
+      "gitBlob": "331b85923c0b35fdde42eed01b8c7d5b98823f7c"
     },
     {
       "path": "scripts/lecture-pptx-preview.mjs",
@@ -20684,11 +20684,25 @@
       "gitBlob": "e52bf20f7ff8d2211e1626b8065bfa9f344bc880"
     },
     {
-      "path": "tests/abdomen-pilot.test.ts",
-      "sha256": "83cfcce189f97e637724f2d39ff97fd6ddc778f10d14f0f1b6baa1de40a7d282",
-      "bytes": 2921,
+      "path": "tests/abdomen-frame-contract.test.mjs",
+      "sha256": "b899004c929934c6c9ad17d038d7c833803aaec252ed810061bf35fbedc8c7fb",
+      "bytes": 2774,
       "mode": "100644",
-      "gitBlob": "fda6548ae501fe23414a318a8c57e388b58dfe63"
+      "gitBlob": "79c45137acf795c2d0264a2959a168b48b38ba06"
+    },
+    {
+      "path": "tests/abdomen-frame-migration.test.mjs",
+      "sha256": "77e26e25e88fbd96082f08ef175df4b4d6030636f3b7994591c79f33d6d9636b",
+      "bytes": 1803,
+      "mode": "100644",
+      "gitBlob": "67f67cdd1274b59f8b43728a1c51778e2b66235c"
+    },
+    {
+      "path": "tests/abdomen-pilot.test.ts",
+      "sha256": "e2045051a38341eea303b15a2120b5a38f3fd9d449d2c5dd5985970b1335e84f",
+      "bytes": 3108,
+      "mode": "100644",
+      "gitBlob": "d41dd480e17b5add88a2029b4839addcfbc17f7f"
     },
     {
       "path": "tests/account-data-controls.test.mjs",
@@ -24653,6 +24667,13 @@
       "gitBlob": "10d78c60c041af2223b1e6ff5930411ff4aef95d"
     },
     {
+      "path": "tests/fixtures/abdomen-frame-migration/original.json",
+      "sha256": "ac58544739433358716b631beffda0a918f8d5399e5a00e60fe420811ea79c09",
+      "bytes": 3132,
+      "mode": "100644",
+      "gitBlob": "8659aea42a9be710a2517ea35a5d769979cb9195"
+    },
+    {
       "path": "tests/fixtures/access-feedback-before-20261017/atlas-shoulder-access.test.ts.txt",
       "sha256": "1e28076a13557fb8680047c95c7ecfa326168612ccdf4e8e83d1abcc136dae79",
       "bytes": 2074,
@@ -27901,6 +27922,13 @@
       "gitBlob": "fea14d3d29fe0b895fd873570cf65c030e290bfa"
     },
     {
+      "path": "tests/frozen-candidate-comparison-usability.test.mjs",
+      "sha256": "3dd4f933a69f6701114ee56b23836448ce7ba9e12e2fb60c7767f554c686dc94",
+      "bytes": 10236,
+      "mode": "100644",
+      "gitBlob": "7bb74a7287baf7b540cd33c4b7710b15299f3570"
+    },
+    {
       "path": "tests/frozen-candidate-comparison.test.ts",
       "sha256": "9e1bd0758dcec14b1e0e360a430abd6f3a95eb45f81e2e108a7035ba8afb785b",
       "bytes": 2569,
@@ -29715,10 +29743,10 @@
     },
     {
       "path": "tests/lecture-pptx-intake.test.py",
-      "sha256": "cf2e45f9e1c9c73e725e2885e6525f6c1d8870dcd65ed0f08cdfb36cbce54720",
-      "bytes": 18765,
+      "sha256": "456c246ee6820a42fce64f0b0824803667b6f180008d9897a2c09cfffb59967e",
+      "bytes": 20460,
       "mode": "100644",
-      "gitBlob": "639bd54b71c670bdb64973737e4802df0df5b535"
+      "gitBlob": "6d2c8f4c2d132d93d5d03f35dc3556bf0678ea97"
     },
     {
       "path": "tests/lecture-pptx-preview.test.mjs",
@@ -30713,6 +30741,13 @@
       "bytes": 5770,
       "mode": "100644",
       "gitBlob": "49eb27abc7b96e480bf269b446b0f6a222312b86"
+    },
+    {
+      "path": "tests/studio-course-search.test.mjs",
+      "sha256": "9e89c7541fed2f8c0c33c87ffff9b8784f73a17a009e2728d360074e90eff107",
+      "bytes": 7776,
+      "mode": "100644",
+      "gitBlob": "ef86f0c57049b21878c083d7132942b239742d20"
     },
     {
       "path": "tests/studio-draft-safety.test.ts",
@@ -31995,6 +32030,73 @@
       "path": "tests/radial-eus-current-transition.test.mjs",
       "sha256": "04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847",
       "bytes": 12920
+    }
+  ],
+  "sourceOnlyUiSearchIntakeDelta": [
+    {
+      "path": "app/studio/courses/page.tsx",
+      "sha256": "f2f2c607db4c846c72085416f222147c59b869879023303518e2d2fec6278ac2",
+      "bytes": 3371
+    },
+    {
+      "path": "components/FrozenCandidateComparison.tsx",
+      "sha256": "2eda67c4cc36740d6bd61090c592e529103a4ae23e69f641e164ec7dee6ac349",
+      "bytes": 17294
+    },
+    {
+      "path": "components/frozen-candidate-comparison.css",
+      "sha256": "7d49bf71013887c32ce8e92c6e517cb48ad454ea67d611c1b6621254b704f26d",
+      "bytes": 2606
+    },
+    {
+      "path": "components/studio-workspace.css",
+      "sha256": "df1a14f0ef382837408a03a99d338749fb472103c2f14eb6326288a559547d30",
+      "bytes": 10204
+    },
+    {
+      "path": "docs/LECTURE_PPTX_INTAKE.md",
+      "sha256": "03d46e51f5500d9a6a799341840f6b75e2fd9467336927a19b780b20f73be6f1",
+      "bytes": 11472
+    },
+    {
+      "path": "scripts/lecture-pptx-intake.py",
+      "sha256": "ede70d5e99ea54d8a2220c1a057b69ddbffbbb52f7963f73b1be04cb06bcdf5e",
+      "bytes": 24579
+    },
+    {
+      "path": "tests/abdomen-frame-contract.test.mjs",
+      "sha256": "b899004c929934c6c9ad17d038d7c833803aaec252ed810061bf35fbedc8c7fb",
+      "bytes": 2774
+    },
+    {
+      "path": "tests/abdomen-frame-migration.test.mjs",
+      "sha256": "77e26e25e88fbd96082f08ef175df4b4d6030636f3b7994591c79f33d6d9636b",
+      "bytes": 1803
+    },
+    {
+      "path": "tests/abdomen-pilot.test.ts",
+      "sha256": "e2045051a38341eea303b15a2120b5a38f3fd9d449d2c5dd5985970b1335e84f",
+      "bytes": 3108
+    },
+    {
+      "path": "tests/fixtures/abdomen-frame-migration/original.json",
+      "sha256": "ac58544739433358716b631beffda0a918f8d5399e5a00e60fe420811ea79c09",
+      "bytes": 3132
+    },
+    {
+      "path": "tests/frozen-candidate-comparison-usability.test.mjs",
+      "sha256": "3dd4f933a69f6701114ee56b23836448ce7ba9e12e2fb60c7767f554c686dc94",
+      "bytes": 10236
+    },
+    {
+      "path": "tests/lecture-pptx-intake.test.py",
+      "sha256": "456c246ee6820a42fce64f0b0824803667b6f180008d9897a2c09cfffb59967e",
+      "bytes": 20460
+    },
+    {
+      "path": "tests/studio-course-search.test.mjs",
+      "sha256": "9e89c7541fed2f8c0c33c87ffff9b8784f73a17a009e2728d360074e90eff107",
+      "bytes": 7776
     }
   ]
 }
