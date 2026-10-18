@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "6ed7757d4a5caaaa3a9cee287aaa0d50128a3b6e02842670fb16d2bcf2704459"
+      "sha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1669,6 +1669,14 @@
       "sha256": "f416f0caadde905b7ab573f48589ec20d5f30c128d411c470c44ec70da63bed4"
     },
     {
+      "path": "content/lacrimal-drainage-ultrasound-pins.json",
+      "sha256": "b4e549a535aa5f825ff285b637f29f0fb5b5a260d2c8c01ff408283449fac840"
+    },
+    {
+      "path": "content/lacrimal-drainage-ultrasound.ts",
+      "sha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5"
+    },
+    {
       "path": "content/lacrimal-quiz-pins.json",
       "sha256": "c7bc925a31e43281a0fd1a35658193d920b922ec08f934cece9ab7785fdd5b0e"
     },
@@ -2394,7 +2402,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "103fe5a45ad69dd4c8d32dfceba9f64a43fbbf18b4ef132d402cddc00794b9d7"
+      "sha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -4321,6 +4329,10 @@
       "sha256": "a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce"
     },
     {
+      "path": "lib/lacrimal-drainage-ultrasound.ts",
+      "sha256": "7d7d3ebbab46efd6b0a198cf051d0fa1972a56a4e0cf1b7990dc4d70f1dd348d"
+    },
+    {
       "path": "lib/lacrimal-quiz.ts",
       "sha256": "ada6f5f847a52b1bab6899f5b14c1dc83afc255d2e969ad714616b1fc5f10ab8"
     },
@@ -5602,7 +5614,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "5594ae675dae99abe6fa1ac6f1a74af740d802adccd5afa0fc5da1908b6cb5ba"
+      "sha256": "bbd504cfc5920081ceb216aacf22babbbb81571138bfe2f75b2c0d2a4209b33e"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5825,7 +5837,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "166963ba65465dfbb691f0bce71d2f5f51eaacf085cdb611c292cfd063ba1497",
-  "sourceRendererSha256": "a2450cc1017d4077559fc13c4705ace352e11122a64c119f521961299587382b",
-  "websiteIntegrationSha256": "5c0b739fa617913952bc42dc5a828f5115b4690b5fb118a6e00d8054bd256d39"
+  "sha256": "03baa73fc94ca565e918d2df7e0c709674666a61a0c069c432d1fb21a217729c",
+  "sourceRendererSha256": "ad71a1fd6036f8584735e8491b62f200174d85f14bfbcbd5b39577d6c84d7d78",
+  "websiteIntegrationSha256": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa"
 }

@@ -1303,22 +1303,26 @@
     {
       "path": "public/brand/approved/visible-medicine-lockup-light.png",
       "sha256": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65",
+      "bytes": 121818
     },
     {
       "path": "public/brand/approved/visible-medicine-lockup-dark.png",
       "sha256": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
-      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65",
+      "bytes": 111431
     },
     {
       "path": "public/brand/approved/visible-medicine-mark-light-theme.png",
       "sha256": "19d5f6a5a5ddffe5580265d1e15519fe2a8a81f3d92a5efa4c1087dff5fc1651",
-      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65",
+      "bytes": 73264
     },
     {
       "path": "public/brand/approved/visible-medicine-mark-dark-theme.png",
       "sha256": "fc97836b267d4fb792fac53e0406a42fb5c997920cd5fdcff3ffe3e829249e62",
-      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65"
+      "alreadyBackedWebsiteCommit": "04d490de6bbc6ae0a7cc53389061eaf041121b65",
+      "bytes": 76177
     },
     {
       "path": "public/media/atlas/3d-detail-preview.jpg",
@@ -1352,5 +1356,13 @@
     }
   ],
   "newAssetsUploaded": false,
-  "clinicalScanBackup": false
+  "clinicalScanBackup": false,
+  "currentSourceBinding": {
+    "atlasCommit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+    "atlasSourceBackup": "83a472c34ee959f25d593d13d23e369515a38d5e",
+    "modelInventorySha256": "bb40b7015481f06e80ec67f58aad89db3484e6c54b5b15bdb17ca3d357e8aca7",
+    "review": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa",
+    "modelPayloadsUnchanged": true,
+    "newMediaIncluded": false
+  }
 }

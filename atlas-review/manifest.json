@@ -1,5 +1,5 @@
 {
-  "revision": "70260f13b1878272c6b0797dd72395ed10bc4f29",
+  "revision": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -553,8 +553,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "6ed7757d4a5caaaa3a9cee287aaa0d50128a3b6e02842670fb16d2bcf2704459",
-      "importedSha256": "6ed7757d4a5caaaa3a9cee287aaa0d50128a3b6e02842670fb16d2bcf2704459"
+      "sourceSha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572",
+      "importedSha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
     },
     {
       "path": "lib/foot-arterial-projection-xray.ts",
@@ -2250,6 +2250,21 @@
       "path": "content/deep-plantar-ultrasound.ts",
       "sourceSha256": "8a3c265a5710b7212950ad9d495dca11eab8ebe105e906455b445107ccd9e62f",
       "importedSha256": "8a3c265a5710b7212950ad9d495dca11eab8ebe105e906455b445107ccd9e62f"
+    },
+    {
+      "path": "lib/lacrimal-drainage-ultrasound.ts",
+      "sourceSha256": "7d7d3ebbab46efd6b0a198cf051d0fa1972a56a4e0cf1b7990dc4d70f1dd348d",
+      "importedSha256": "7d7d3ebbab46efd6b0a198cf051d0fa1972a56a4e0cf1b7990dc4d70f1dd348d"
+    },
+    {
+      "path": "content/lacrimal-drainage-ultrasound-pins.json",
+      "sourceSha256": "b4e549a535aa5f825ff285b637f29f0fb5b5a260d2c8c01ff408283449fac840",
+      "importedSha256": "b4e549a535aa5f825ff285b637f29f0fb5b5a260d2c8c01ff408283449fac840"
+    },
+    {
+      "path": "content/lacrimal-drainage-ultrasound.ts",
+      "sourceSha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5",
+      "importedSha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5"
     },
     {
       "path": "lib/lateral-cricoarytenoid-us.ts",
@@ -5588,8 +5603,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "0ff7d525bbf6d2176dd80569cafcf1c148c8c19198bf1b0b7e5c57962048b7b0",
-      "importedSha256": "ef6795d2de99067ded1b8323cbc3b1ff995024a973d416c3480ab5b73df4356f"
+      "sourceSha256": "e154eb0978b82d9082dfc929004963ce38cc41d27f5df870540b324c865067ec",
+      "importedSha256": "9d718eec9f2c4d56c23da895306047357589902fff7900da17a173eb36f12c77"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -5974,7 +5989,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "b54ccebc7fd74f16c3d1347b69d62016c7af7ae7d4f3df7ae28f205d4af41eb4"
+      "importedSha256": "11c5074d38f05c361bbea0f8bf71fb4ae2865eca10cf0a7b65fd75f1a29f549b"
     },
     {
       "path": "app/review/review.css",
@@ -6008,8 +6023,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "50d843273c8a6f5d52aba82cfe2753e24d2b5d34f3b4b0b3a27258f93c4006f3",
-      "importedSha256": "50d843273c8a6f5d52aba82cfe2753e24d2b5d34f3b4b0b3a27258f93c4006f3"
+      "sourceSha256": "bb5f67997374c4546ec769c580bb0f3f255b0eeb617b108a476b23caee493989",
+      "importedSha256": "bb5f67997374c4546ec769c580bb0f3f255b0eeb617b108a476b23caee493989"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -6258,8 +6273,8 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sourceSha256": "103fe5a45ad69dd4c8d32dfceba9f64a43fbbf18b4ef132d402cddc00794b9d7",
-      "importedSha256": "103fe5a45ad69dd4c8d32dfceba9f64a43fbbf18b4ef132d402cddc00794b9d7"
+      "sourceSha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043",
+      "importedSha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -7633,5 +7648,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "5c0b739fa617913952bc42dc5a828f5115b4690b5fb118a6e00d8054bd256d39"
+  "websiteIntegrationSha256": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa"
 }

@@ -4,12 +4,13 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {execFileSync} from 'node:child_process';
-import {build} from 'esbuild';
+import {readRevision50,validateRevision50Delivery} from './historical-lacrimal-delivery-50.mjs';
 import {validateChecklist} from '../scripts/refresh-completion-checklist.mjs';
-import {currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 import {readRevision49,revision49,validateRevision49Delivery} from './historical-deep-plantar-delivery-49.mjs';
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
-const read=path=>readFileSync(new URL('../'+path,import.meta.url)),json=path=>JSON.parse(read(path));
+const read=path=>readRevision50(path),json=path=>JSON.parse(read(path));
+const validateCurrentAtlasDelivery=validateRevision50Delivery;
 const source='70260f13b1878272c6b0797dd72395ed10bc4f29',review='5c0b739fa617913952bc42dc5a828f5115b4690b5fb118a6e00d8054bd256d39';
 
 test('closed49 retains every original proof body; only the named read seams change',()=>{
@@ -70,10 +71,7 @@ test('actual imported resolver changes only two US placements and rejects stale 
  const atlas=currentAtlasDeliveryRoot();
  const{exactSourceHistoryApi}=await import(pathToFileURL(atlas+'/scripts/exact-source-history-api.mjs'));
  const before=await exactSourceHistoryApi(revision49.source,'review-security');
- const compiled=await build({stdin:{contents:`export {bodyLesson} from './atlas-review/app/body-content';export {bodyDisplayCatalog} from './atlas-review/lib/body-display-catalog';
-export {contentTabs} from './atlas-review/lib/content-types';export * from './atlas-review/lib/body-review-material';export * from './atlas-review/lib/body-review-response';
-export * from './atlas-review/lib/body-review-context';export * from './atlas-review/lib/body-review-decisions';export * from './atlas-review/lib/body-review-api';`,resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
- const now=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+ const now=await exactSourceHistoryApi(source,'review-security');
  const display=now.bodyDisplayCatalog(json('atlas-review/public/models/bodyparts3d/full-body/catalog.json'));
  const pins=json('atlas-review/content/deep-plantar-ultrasound-pins.json'),targets=new Set(pins.entries.map(e=>e.identity.id));
  assert.deepEqual(display,before.bodyDisplayCatalog(json('atlas-review/public/models/bodyparts3d/full-body/catalog.json')));

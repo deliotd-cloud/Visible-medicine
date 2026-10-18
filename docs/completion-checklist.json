@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 50,
+  "revision": 51,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-18",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -19,16 +19,16 @@
     "delivery": "F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed"
   },
   "baseline": {
-    "atlasCommit": "70260f13b1878272c6b0797dd72395ed10bc4f29",
-    "atlasTree": "ee3e9bfdf528c40bbd7049145e88cdf08e7c5076",
+    "atlasCommit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+    "atlasTree": "dbc2f38825775991ea4d9428a33ce9375699280a",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "5c0b739fa617913952bc42dc5a828f5115b4690b5fb118a6e00d8054bd256d39",
-    "reviewSourceFiles": 1523,
+    "reviewIntegration": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa",
+    "reviewSourceFiles": 1526,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
-    "rootDraftPlacements": 9318,
-    "rootPendingPlacements": 579,
+    "rootDraftPlacements": 9322,
+    "rootPendingPlacements": 575,
     "rootGeneratedIdentificationPlacements": 39,
     "nestedRepresentations": 108,
     "nestedConcepts": 76,
@@ -41,14 +41,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "70260f13b1878272c6b0797dd72395ed10bc4f29",
-    "tree": "ee3e9bfdf528c40bbd7049145e88cdf08e7c5076",
-    "rootDraftPlacements": 9318,
-    "rootPendingPlacements": 579,
+    "commit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+    "tree": "dbc2f38825775991ea4d9428a33ce9375699280a",
+    "rootDraftPlacements": 9322,
+    "rootPendingPlacements": 575,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:\\VisibleMedicine\\staging\\20261018-deep-plantar-web-integration\\candidate-prepared.json",
-    "note": "Two exact-source deep-plantar artery Ultrasound drafts are imported into this coherent local candidate. Other9,934 root placements and109 model bundles remain exact; source/checklist fingerprints remain unchanged and stale teaching submissions are refused. Unsupported superficial medial plantar branches stay pending. No acquired scan, geometry, clinical approval, patient registration or public-release claim."
+    "evidence": "F:\\VisibleMedicine\\staging\\20261018-lacrimal-web-integration\\candidate-prepared.json",
+    "note": "Four exact-source lacrimal canaliculus/sac Ultrasound drafts imported coherently. Specialized acquisition and visibility limits, not routine/full-duct visibility, patency/flow, diagnostic performance or mesh/lumen correspondence. Both deeper nasolacrimal-duct Ultrasound slots stay pending. Other9,932 root topics,1104 identities and109 model bundles remain exact. No acquired scans, new media/dependencies/geometry, approval transfer, registration or public release."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -1167,6 +1167,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-18",
+      "revision": 51,
+      "change": "Prepared coherent clean sourcec5a09df import through all four generated learner modules, normal protected Review and freshly replayed coverage producers. Four source-bound lacrimal Ultrasound drafts;9,932 other root topics preserved; source/checklist evidence unchanged and12stale teaching requests refused before storage. Root readiness9322draft/575pending/39generated. Closed50 proof bodies/bytes retained, separate current admission and actual imported resolver checks added. All71requirements/eightoptional ideas/statuses/owners/acceptance remain unchanged. Frozen review candidates and private state are not changed or approved. Local build/tests do not confer clinical, spatial registration, browser or release acceptance."
+    },
     {
       "date": "2026-10-18",
       "revision": 50,

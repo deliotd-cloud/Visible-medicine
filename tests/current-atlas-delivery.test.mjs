@@ -23,9 +23,9 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 });
 
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
- assert.equal(CURRENT_ATLAS_REVISION,'70260f13b1878272c6b0797dd72395ed10bc4f29');
- assert.equal(pin.sourceTree,'ee3e9bfdf528c40bbd7049145e88cdf08e7c5076');
- assert.equal(pin.reviewIntegration,'5c0b739fa617913952bc42dc5a828f5115b4690b5fb118a6e00d8054bd256d39');
+ assert.equal(CURRENT_ATLAS_REVISION,'c5a09df8939dfaeaf76119ba5507c552721c3a30');
+ assert.equal(pin.sourceTree,'dbc2f38825775991ea4d9428a33ce9375699280a');
+ assert.equal(pin.reviewIntegration,'a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa');
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
  const detached=validateCurrentAtlasDelivery();detached.documents.foreign='0'.repeat(64);
@@ -45,7 +45,7 @@ test('current fixture agrees with actual emitted bytes, notices, imported Review
  for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
  const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
  for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
- assert.equal(sourceFiles,1523);assert(artifacts>100&&inputs>1500);
+ assert.equal(sourceFiles,1526);assert(artifacts>100&&inputs>1500);
 });
 
 for(const [label,edit]of [

@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "6ed7757d4a5caaaa3a9cee287aaa0d50128a3b6e02842670fb16d2bcf2704459"
+    "sha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1680,6 +1680,14 @@
     "sha256": "f416f0caadde905b7ab573f48589ec20d5f30c128d411c470c44ec70da63bed4"
   },
   {
+    "path": "content/lacrimal-drainage-ultrasound-pins.json",
+    "sha256": "b4e549a535aa5f825ff285b637f29f0fb5b5a260d2c8c01ff408283449fac840"
+  },
+  {
+    "path": "content/lacrimal-drainage-ultrasound.ts",
+    "sha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5"
+  },
+  {
     "path": "content/lacrimal-quiz-pins.json",
     "sha256": "c7bc925a31e43281a0fd1a35658193d920b922ec08f934cece9ab7785fdd5b0e"
   },
@@ -2405,7 +2413,7 @@
   },
   {
     "path": "content/regional-teaching/head-neck.json",
-    "sha256": "103fe5a45ad69dd4c8d32dfceba9f64a43fbbf18b4ef132d402cddc00794b9d7"
+    "sha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
   },
   {
     "path": "content/regional-teaching/leg.json",
@@ -4402,6 +4410,10 @@
   {
     "path": "lib/lacrimal-drainage-imaging.ts",
     "sha256": "a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce"
+  },
+  {
+    "path": "lib/lacrimal-drainage-ultrasound.ts",
+    "sha256": "7d7d3ebbab46efd6b0a198cf051d0fa1972a56a4e0cf1b7990dc4d70f1dd348d"
   },
   {
     "path": "lib/lacrimal-quiz.ts",

@@ -1,21 +1,19 @@
 # Visible Medicine application-source recovery
 
-This branch contains4,350 screened application-source paths plus this folder's
-three recovery metadata files. Its only parent is the previously screened,
-parentless source snapshot 5d1d0e1e1910ae8f8d6513ecee8b0bd8c37d9a0b. Raw website/Atlas ancestry, private
-review decisions, local D1 state, candidate object packages, scans and new media
-are excluded. This is NOT a full website, patient-data or executable clinical
-release backup. Three historical operational documents remain local only.
+This branch contains 4,388 screened application paths plus three recovery metadata
+files. It includes two unchanged brand lockups from its screened parent, no new
+media, scans, masks, private review packages, D1/R2 runtime state or decisions.
+Its only parent is screened snapshot e85e3a8ba5ecb23c05be96fa4a96b81bcdb5fd3f; all three commits
+are safe source snapshots, not the canonical website/Atlas Git ancestry.
 
-Use manifest.json for exact source hashes and existing-assets.json for references
-to already-backed model/static objects; preserve their original licences/notices.
-A source clone does not recover private model-delivery grants, sign-in roles,
-approvals, candidate R2 objects, cleared imaging cases or secrets. Do not seed
-approvals or disable missing-input/access gates to make it run.
+The source binds Atlas c5a09df / normal Review a579079a / Completion Register51.
+The 39 retired generated JS/CSS paths remain recoverable in the screened parent.
+Three historical operational documents remain local only. Exact model/static
+asset references and notices are retained in existing-assets.json and source.
 
-The new schema migration0010_keen_ultron.sql is schema-only; apply through the
-approved migration workflow, never replay all historical migrations blindly.
-The migration was applied only locally during this checkpoint, not to hosting.
-No new model/dependency/font or cloud resource was introduced by this source
-checkpoint. Existing asset references do not establish clinical/privacy approval
-or a guarantee of future free hosting. Nothing was publicly deployed.
+This is NOT a complete website, private-data, clinical or executable deployment
+backup. A source clone does not restore private candidate objects, approvals,
+model-delivery grants, sign-in roles, imaging datasets or secrets. Missing-input
+and access gates must remain intact. No migration was applied or application
+private data written by this backup. No public deployment, new fee/resource or
+clinical/spatial-registration approval is conferred.

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "70260f13b1878272c6b0797dd72395ed10bc4f29",
-  "sha256": "5c0b739fa617913952bc42dc5a828f5115b4690b5fb118a6e00d8054bd256d39",
+  "sourceCommit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+  "sha256": "a579079a911086426577e20d111350dfd054d6b6fcaecdf069458282007dd5aa",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "6ed7757d4a5caaaa3a9cee287aaa0d50128a3b6e02842670fb16d2bcf2704459"
+      "sha256": "ca60647d05c765be0183ab18f5c3f72c747f30dfc2ea139a991989e2b99b4572"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -944,7 +944,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "50d843273c8a6f5d52aba82cfe2753e24d2b5d34f3b4b0b3a27258f93c4006f3"
+      "sha256": "bb5f67997374c4546ec769c580bb0f3f255b0eeb617b108a476b23caee493989"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1923,6 +1923,14 @@
       "sha256": "f416f0caadde905b7ab573f48589ec20d5f30c128d411c470c44ec70da63bed4"
     },
     {
+      "path": "atlas-review/content/lacrimal-drainage-ultrasound-pins.json",
+      "sha256": "b4e549a535aa5f825ff285b637f29f0fb5b5a260d2c8c01ff408283449fac840"
+    },
+    {
+      "path": "atlas-review/content/lacrimal-drainage-ultrasound.ts",
+      "sha256": "6f1318f9ba06b4533818027ecc954c1661220c40a2f1e108f6ab26e34495f1f5"
+    },
+    {
       "path": "atlas-review/content/lacrimal-quiz-pins.json",
       "sha256": "c7bc925a31e43281a0fd1a35658193d920b922ec08f934cece9ab7785fdd5b0e"
     },
@@ -2648,7 +2656,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/head-neck.json",
-      "sha256": "103fe5a45ad69dd4c8d32dfceba9f64a43fbbf18b4ef132d402cddc00794b9d7"
+      "sha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
     },
     {
       "path": "atlas-review/content/regional-teaching/leg.json",
@@ -4643,6 +4651,10 @@
       "sha256": "a5affcd8c2058488514ece3349cbbd36f803b1053b0273e81526c022103d55ce"
     },
     {
+      "path": "atlas-review/lib/lacrimal-drainage-ultrasound.ts",
+      "sha256": "7d7d3ebbab46efd6b0a198cf051d0fa1972a56a4e0cf1b7990dc4d70f1dd348d"
+    },
+    {
       "path": "atlas-review/lib/lacrimal-quiz.ts",
       "sha256": "ada6f5f847a52b1bab6899f5b14c1dc83afc255d2e969ad714616b1fc5f10ab8"
     },
@@ -6364,11 +6376,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "946c982ba50ef36cb2629b9bbd9350eb7674c6e84cd396923fbddf1726972b0e"
+      "sha256": "44a1506ac2eabb837590ce0d0e49d2c46b0abb3a8db818b6b7d71e2592448f48"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "68e4234fe3210edf4ea36169e4d75f19546159de38c30d681304be065e097e77"
+      "sha256": "5d80dcafb94b566a3e783f1559418efee8c8355ff1ca68ce3d7d22b7ddbcfcdb"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6604,7 +6616,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "50ab027a2ea36f8551ae6e0709f2ead79e8b578c4915ec073653c03fd9bd559a"
+      "sha256": "574970744f1274c44b6f1750f4356a0fca24101d524ef6c08cf4b13709220d33"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",
