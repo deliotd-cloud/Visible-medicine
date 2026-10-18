@@ -7,6 +7,7 @@
   },
   "scripts": {
     "lacrimal-drainage-ultrasound:test": "node scripts/test-lacrimal-drainage-ultrasound.mjs",
+    "abdominal-radial-eus:test": "node scripts/pin-abdominal-radial-eus.mjs --check && node scripts/test-abdominal-radial-eus-unit.mjs && node scripts/test-abdominal-radial-eus.mjs",
     "salpingopharyngeus-mri:test": "node scripts/test-salpingopharyngeus-mri-unit.mjs && node scripts/test-salpingopharyngeus-mri.mjs",
     "arterial-evidence-limits:test": "node scripts/pin-arterial-evidence-limits.mjs --check && node scripts/test-arterial-evidence-limits.mjs",
     "foot-arterial-projection-xray:test": "node scripts/test-foot-arterial-projection-xray-current.mjs",

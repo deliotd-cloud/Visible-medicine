@@ -116,6 +116,7 @@ import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
 import { footUltrasoundFollowupLesson } from '../lib/foot-ultrasound-followup';
 import { deepPlantarUltrasoundLesson } from '../lib/deep-plantar-ultrasound';
 import { lacrimalDrainageUltrasoundLesson } from '../lib/lacrimal-drainage-ultrasound';
+import { abdominalRadialEusLesson } from '../lib/abdominal-radial-eus';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -490,6 +491,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (deepPlantarUltrasound) return deepPlantarUltrasound;
   const lacrimalDrainageUltrasound = lacrimalDrainageUltrasoundLesson(s, tab);
   if (lacrimalDrainageUltrasound) return lacrimalDrainageUltrasound;
+  const abdominalRadialEus = abdominalRadialEusLesson(s, tab);
+  if (abdominalRadialEus) return abdominalRadialEus;
   const footUltrasoundFollowup = footUltrasoundFollowupLesson(s, tab);
   if (footUltrasoundFollowup) return footUltrasoundFollowup;
   const toeBoneUltrasound = toeBoneUltrasoundLesson(s, tab);

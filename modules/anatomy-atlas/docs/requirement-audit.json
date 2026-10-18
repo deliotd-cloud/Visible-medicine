@@ -14,7 +14,7 @@
     "docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md": "754f11df4a4fa5d26c84f2050b3dfb674778d9d1fbbbbf0c7ca43d05e7813276",
     "content/abdominal-eus-orientation.ts": "39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37",
     "lib/abdominal-eus-orientation.ts": "ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13",
-    "scripts/test-abdominal-eus-orientation.mjs": "b7c0de24da001350c5e488f55e79dd1c9742d6b3026df1c8d9d5cc7904ba3fd1",
+    "scripts/test-abdominal-eus-orientation.mjs": "667c20186115be9e1b2e3aebdbc705d20a4a0b71a42ce81a5f9171b0afeed00a",
     "docs/ABDOMINAL_EUS_ORIENTATION.md": "241d07fa6a53cb715e8659b85f10f86f304ec0f90b67384184349a3d6ce70283",
     "content/thoracic-eus-orientation.ts": "d45a5ff866014539224a80ab3183f4737f72ca098f6c003fe0ef0ded92678b92",
     "lib/thoracic-eus-orientation.ts": "7ccab068671c7eea2eb05ce1bc62ed88e686d7d6336017b94a0c3048841b425e",
@@ -748,8 +748,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "a817a6ac068502a6be21d5e2db363582648358f1b52124143f131a5e46bfc8e3",
-    "explicitTopicReadiness": "d345f5eaa7510ec905b9a76be9817a6915bdea63acedbc4588ae83c7072f6568",
+    "resolvedContentAndRecipeData": "bb4c38df1ca0e4fcba4c2de28b74ccff074f12838d1c6131154e068e6c31aaf0",
+    "explicitTopicReadiness": "1589bf67f77403a212ae71b60bf568afa0bffc2a4633067299c54158999b907b",
     "reasoningQuestionData": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa",
     "guidedLearningData": "3e3d76f0b7b84e20182a725904e807c5adf2204c4a627e2cf9331629248e5c36",
     "lib/eye-layer-guide.ts": "c2c0a99f9931450e0e910a705fbded2b31ae074f251558468e013dbf19af95b3",
@@ -3068,9 +3068,9 @@
         "generatedIdentification": 0
       },
       "ultrasound": {
-        "specificDraft": 886,
+        "specificDraft": 896,
         "identityOnly": 0,
-        "pending": 218,
+        "pending": 208,
         "generatedIdentification": 0
       },
       "pathology": {
@@ -3244,9 +3244,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 117,
+          "specificDraft": 121,
           "identityOnly": 0,
-          "pending": 174,
+          "pending": 170,
           "generatedIdentification": 0
         },
         "pathology": {
@@ -3356,9 +3356,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 81,
+          "specificDraft": 85,
           "identityOnly": 0,
-          "pending": 25,
+          "pending": 21,
           "generatedIdentification": 0
         },
         "pathology": {
@@ -3748,9 +3748,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 118,
+          "specificDraft": 120,
           "identityOnly": 0,
-          "pending": 4,
+          "pending": 2,
           "generatedIdentification": 0
         },
         "pathology": {

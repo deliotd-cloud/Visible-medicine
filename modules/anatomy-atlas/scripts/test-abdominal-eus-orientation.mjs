@@ -30,7 +30,7 @@ const fromBaseline = path => execFileSync('git', ['show', `${baseline}:${path}`]
 const sha256 = bytes => createHash('sha256').update(bytes).digest('hex');
 
 const previous = await exactSourceHistoryApi(baseline, 'review-security');
-const completed = await exactSourceHistoryApi(completedCommit, 'review-security');
+const completed = await exactSourceHistoryApi(completedCommit, 'abdominal-eus-epoch');
 const compiled = await build({
   stdin: {
     contents: "export {abdominalEusOrientationLesson} from './lib/abdominal-eus-orientation';" +
@@ -50,7 +50,10 @@ const compiled = await build({
   },
   bundle: true, write: false, platform: 'node', format: 'esm',
 });
-const now = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const current = await import('data:text/javascript;base64,' + Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+// The original 9936-cell/1104-packet proof is an exact 423 -> b03 epoch.
+// Subsequent source revisions may legitimately add unrelated teaching or tours.
+const now = completed;
 assert.deepEqual(Object.keys(now.abdominalEusTopics).sort(), [...fmaIds].sort());
 for (const fmaId of fmaIds) {
   const topic = now.abdominalEusTopics[fmaId];
@@ -173,6 +176,61 @@ assert.equal(malformed, 15);
 assert.equal(stale, 9);
 assert.equal(storageCalls, 0);
 
+// Admit the retained three lessons against the current source independently.
+// Current Review packets must be decoded by the current parser; historical
+// packets remain historical evidence and cannot approve a current decision.
+let currentLessons = 0, currentPackets = 0, currentMalformed = 0, currentStale = 0;
+for (const { identity } of selected) {
+  const structure = current.bodyDisplayCatalog(raw).structures.find(row => row.id === identity.id);
+  assert.deepEqual(structure, identity, `${identity.id}: exact current identity`);
+  const lesson = current.bodyLesson(structure, 'ultrasound');
+  assert.deepEqual(lesson, completed.bodyLesson(identity, 'ultrasound'), `${identity.id}: retained EUS lesson`);
+  assert.deepEqual(lesson, current.abdominalEusOrientationLesson(structure, 'ultrasound'));
+  assert.deepEqual(current.bodyContent(structure, 'ultrasound'), (({ readiness, ...shown }) => shown)(lesson));
+  currentLessons++;
+  const packet = await current.bodyReviewMaterial(identity.id);
+  assert.equal(packet.approval, false);
+  assert.deepEqual(packet.topics.find(topic => topic.tab === 'ultrasound'), { tab: 'ultrasound', ...lesson });
+  assert.deepEqual(await current.parseBodyReviewResponse(packet, identity.id), packet);
+  assert.equal(await current.parseBodyReviewResponse(await completed.bodyReviewMaterial(identity.id), identity.id), null);
+  for (const edit of [
+    value => { value.topics.find(topic => topic.tab === 'ultrasound').body += ' foreign'; },
+    value => { value.topics.find(topic => topic.tab === 'ultrasound').citations = ['https://foreign.example']; },
+    value => { value.topics.find(topic => topic.tab === 'ultrasound').readiness = 'approved'; },
+  ]) {
+    const forged = structuredClone(packet); edit(forged);
+    assert.equal(await current.parseBodyReviewResponse(forged, identity.id), null);
+    currentMalformed++;
+  }
+  const context = await current.bodyReviewContext(identity.id);
+  const oldContext = await completed.bodyReviewContext(identity.id);
+  const decision = {
+    catalogScope: context.catalogScope, structureId: identity.id, track: 'teaching',
+    expectedVersion: 0, materialHash: context.materialHash,
+    revisionHash: context.revisions.teaching, checklistVersion: context.checklistVersion,
+    draft: current.blankBodyReview(context, 'teaching'),
+  };
+  for (const staleHashes of [
+    { materialHash: oldContext.materialHash, revisionHash: oldContext.revisions.teaching },
+    { materialHash: oldContext.materialHash },
+    { revisionHash: oldContext.revisions.teaching },
+  ]) {
+    const response = await current.postBodyDecision(new Request('https://atlas.test/api/body-decisions', {
+      method: 'POST', headers: { origin: 'https://atlas.test', 'content-type': 'application/json',
+        'oai-authenticated-user-id': 'SYNTHETIC_ABDOMINAL_EUS' },
+      body: JSON.stringify({ ...decision, ...staleHashes }),
+    }), { prepare() { storageCalls++; throw Error('Stale current decision reached storage'); } });
+    assert.equal(response.status, 409);
+    currentStale++;
+  }
+  currentPackets++;
+}
+assert.equal(currentLessons, 3);
+assert.equal(currentPackets, 3);
+assert.equal(currentMalformed, 9);
+assert.equal(currentStale, 9);
+assert.equal(storageCalls, 0);
+
 const pathsWhere = (value, predicate, path = []) => [
   ...(predicate(value) ? [path] : []),
   ...(value && typeof value === 'object'
@@ -213,5 +271,6 @@ for (const bundle of catalog.bundles) {
   assert.deepEqual(bytes, fromBaseline(path), `${path} remains unchanged`);
 }
 console.log(JSON.stringify({ baseline, completedCommit, fullCountsScope: 'baseline-to-completed', changed, preserved, changedWorksheets, preservedWorksheets,
+  currentScope: 'three retained EUS identities', currentLessons, currentPackets, currentMalformed, currentStale,
   refusedIdentities, malformedPacketsRefused: malformed, staleRefusalsBeforeStorage: stale,
   storageCalls, sourceBundlesUnchanged: catalog.bundles.length, clinicalApproval: false }));

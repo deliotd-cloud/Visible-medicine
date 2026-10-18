@@ -1,0 +1,43 @@
+{
+  "schema": "vm-abdominal-radial-eus-transition-1",
+  "parentCommit": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+  "pinsHash": "51e343f74b3994e8866d20b7ca5b31522193c3f6933648bc859f627bfb2da69d",
+  "previousAllLessonsAndRecipesHash": "d6eac8f9cf0eb57a43bf940c93f5bfd0ec690255c8f056c60c4d7a3fc4089174",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "fmaId": "FMA15406",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "7654c843f2bcf8fb81eb435bd679883c27b0477fe85a9ed45a8514eb9652b704"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaId": "FMA15407",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "3c894571ecdf38062aa0600dac41d70458b41ebccff2c419f1997ff77df2bb39"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+      "fmaId": "FMA15390",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "a713fc45a0f1e1ad24940d5ebbb443a8dea5aa2c57e497301fb136037fc143f7"
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+      "fmaId": "FMA15397",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "d899da62faa3e6ed88ed14bd85ac9531d4dfbe378e1052cbe78089e822520e98"
+    }
+  ],
+  "changed": 4,
+  "preserved": 9932,
+  "worksheets": 4,
+  "staleRefused": 12,
+  "forgedPacketsRefused": 12,
+  "storageCalls": 0,
+  "bundlesUnchanged": 109,
+  "actualNoteRenders": 4,
+  "clinicalApproval": false,
+  "patientSpaceRegistration": false,
+  "websiteIntegrated": false
+}

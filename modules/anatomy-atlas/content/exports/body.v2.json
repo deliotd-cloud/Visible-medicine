@@ -192603,10 +192603,18 @@
         "note": "Original source-bound educational draft; revision-bound radiologist review pending. No acquired examination, publisher media, patient scan, procedure, clinical approval or patient-space registration is supplied. Atlas, Education case and paid-lecture access remain independent."
       },
       "ultrasound": {
-        "readiness": "pending",
-        "title": "Ultrasound content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Middle colic vein · radial endoscopic ultrasound (EUS) orientation · draft",
+        "body": "The cited duodenal radial-EUS views show a middle colic vein entering the gastrocolic trunk in one example and the superior mesenteric vein directly in another.",
+        "bullets": [
+          "The receiving vein varies; one view cannot establish the vessel’s whole course.",
+          "These specific EUS observations do not establish routine transabdominal visibility, a detection rate, vessel patency or a complete patient-specific course.",
+          "Compare the reassembled atlas with the acquired view only after checking orientation and vessel continuity; no patient-space registration is provided."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/24949345/"
+        ],
+        "note": "Original source-bound educational draft; revision-bound radiologist review pending. No publisher image or text, patient scan, diagnostic threshold, procedural route or clinical approval is supplied. Atlas, imaging-case and paid-lecture access remain independent."
       },
       "pathology": {
         "readiness": "draft",
@@ -192806,10 +192814,18 @@
         "note": "Original source-bound educational draft; revision-bound radiologist review pending. No acquired examination, publisher media, patient scan, procedure, clinical approval or patient-space registration is supplied. Atlas, Education case and paid-lecture access remain independent."
       },
       "ultrasound": {
-        "readiness": "pending",
-        "title": "Ultrasound content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Right colic vein · radial endoscopic ultrasound (EUS) orientation · draft",
+        "body": "The cited duodenal radial-EUS view labels a right colic vein joining the gastrocolic trunk beside gastric and pancreatic venous tributaries.",
+        "bullets": [
+          "Keep this identity distinct from superior or accessory right colic veins; confirm any named tributary on the examination.",
+          "These specific EUS observations do not establish routine transabdominal visibility, a detection rate, vessel patency or a complete patient-specific course.",
+          "Compare the reassembled atlas with the acquired view only after checking orientation and vessel continuity; no patient-space registration is provided."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/24949345/"
+        ],
+        "note": "Original source-bound educational draft; revision-bound radiologist review pending. No publisher image or text, patient scan, diagnostic threshold, procedural route or clinical approval is supplied. Atlas, imaging-case and paid-lecture access remain independent."
       },
       "pathology": {
         "readiness": "draft",
