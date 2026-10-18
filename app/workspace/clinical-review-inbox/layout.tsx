@@ -16,8 +16,8 @@ export default async function ClinicalReviewInboxLayout({ children }: { children
       {known && error.status === 401 && <a href={chatGPTSignInPath('/workspace/clinical-review-inbox')} target="_top">Sign in with ChatGPT</a>}
       <p><a href="/workspace">Return to workspace</a></p></main>;
   }
-  return <section className="website-clinical-review">
+  return <main className="website-clinical-review">
     <p className="review-account-scope">Personal reviews within your authorized institution. Saved decisions do not publish content or grant institution sign-off.</p>
     {children}
-  </section>;
+  </main>;
 }

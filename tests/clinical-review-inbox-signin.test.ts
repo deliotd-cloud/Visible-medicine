@@ -66,3 +66,16 @@ test('inbox route uses its dedicated guarded layout while general Review remains
   const html=renderToStaticMarkup(element);assert.match(html,/return_to=%2Fworkspace%2Fatlas-review/);assert.doesNotMatch(html,/data-private-inbox/);
  });
 });
+
+test('every inbox access outcome exposes exactly one main landmark without exposing denied content',async()=>{
+ for(const error of [null,new ClinicalReviewAccessError(401,'Sign in'),new ClinicalReviewAccessError(403,'Review access denied'),new ClinicalReviewAccessError(503,'Review storage unavailable'),new Error('private failure detail')]){
+  const {layout,calls}=guarded(error),element=await layout.default({children});
+  assert.equal(calls(),1);
+  assert.equal(element.type,'main','authorized and denied inbox states need a main landmark');
+  const html=renderToStaticMarkup(element);
+  assert.equal((html.match(/<main(?:\s|>)/g)??[]).length,1);
+  assert.equal((html.match(/<\/main>/g)??[]).length,1);
+  assert.equal(html.includes('data-private-inbox="yes"'),error===null);
+  assert.doesNotMatch(html,/private failure detail/);
+ }
+});
