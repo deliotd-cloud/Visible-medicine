@@ -23,13 +23,13 @@ test('all original portal-venous assertions survive only the current admission s
  assert.equal(execFileSync('git',['rev-parse','9fba9a1e24b6669aafd48e945d55fc0939d50ab2^{commit}'],{cwd:currentAtlasDeliveryRoot(),encoding:'utf8',windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}}).trim(),'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
 });
 
-test('portal-venous admission binds exact clean Atlas46c and its independently hashed Review inputs; stale or forged pins fail',()=>{
+test('portal-venous admission binds exact clean Atlas3dc and its independently hashed Review inputs; stale or forged pins fail',()=>{
  const pin=validateCurrentAtlasDelivery();
- assert.equal(CURRENT_ATLAS_REVISION,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
- assert.equal(pin.sourceTree,'83720d136f899876bd947323e6552c4d3e171210');
+ assert.equal(CURRENT_ATLAS_REVISION,'3dcdf94a46db44202e72641be9fbcf1274ce5364');
+ assert.equal(pin.sourceTree,'b5ab50363b521aed2e8d4f0e34a8f5ed4ecee0d5');
  const inputs=JSON.parse(readFileSync(new URL('../atlas-review/integration-inputs.json',import.meta.url),'utf8'));
  assert.equal(pin.reviewIntegration,sha(JSON.stringify(inputs.inputs)));
- assert.equal(pin.reviewSourceFiles,1531);
+ assert.equal(pin.reviewSourceFiles,1534);
  assert(currentAtlasDeliveryRoot());
  assert.notEqual(pin.source,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
  assert.throws(()=>validateCurrentAtlasDelivery({pin:{...pin,source:'9fba9a1e24b6669aafd48e945d55fc0939d50ab2'}}));

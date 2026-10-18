@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "2f0632827570e5e21bcdc28346e0972cff6cecdb82616d9869960c94b84ec8e2"
+      "sha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d"
     },
     {
       "path": "app/body-education-link.ts",
@@ -983,6 +983,14 @@
     {
       "path": "content/craniofacial-bone-quiz.ts",
       "sha256": "1f6a7467965e326a152213b765231c49740d3cfae40286f3377dcb7e54bf14a3"
+    },
+    {
+      "path": "content/craniofacial-calcification-ct-pins.json",
+      "sha256": "8cc35b9a486a9c4d061862f322ead1424198b81df2fba5af4bb56c35363c615d"
+    },
+    {
+      "path": "content/craniofacial-calcification-ct.ts",
+      "sha256": "be4e21b6ce67f9905dfb41fc275c77c683db5a607b52191e2130a4955384ca59"
     },
     {
       "path": "content/craniofacial-organ-imaging-pins.json",
@@ -2406,7 +2414,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
+      "sha256": "4e666113679148058ff378536762fd2170db4ea83cdfe7d427c48d2a36ccd141"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -3695,6 +3703,10 @@
     {
       "path": "lib/craniofacial-bone-quiz.ts",
       "sha256": "f39ecbceecfae4239b69289e4a408fbd51e3c1f770fc2eda640b6c6658d5b18f"
+    },
+    {
+      "path": "lib/craniofacial-calcification-ct.ts",
+      "sha256": "c3af28f6b12dfafbdac637d15f175bd991b0342a54f84ee337ded1598a042a5f"
     },
     {
       "path": "lib/craniofacial-organ-imaging.ts",
@@ -5857,7 +5869,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "165619dc6c46f87f0f809ee0f0e71b230458945941fe501c309229d2bfe63905",
-  "sourceRendererSha256": "09cdd0ada39ca863c22257f50abf5f8f6281a433ade3f83b6f4ce08bfa5c0712",
-  "websiteIntegrationSha256": "11ddecf2aa1978f5979338085f1b2e08ad9fa84a331b7c92a367a876357543c5"
+  "sha256": "e89c394288574df158f04c4cabbf8e49acd5711fd59bec90b2cf71b06f6b618e",
+  "sourceRendererSha256": "7950dbc89d6df898abad6b470e57de70fdd66c4cc0782a01d975a0065326e509",
+  "websiteIntegrationSha256": "7dcfd57c40219216347e3b89979723cbae3a9d8644f5381eb34e7f42800bd9e5"
 }

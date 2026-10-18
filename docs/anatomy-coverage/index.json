@@ -1,26 +1,26 @@
 {
   "schema": "vm-anatomy-coverage-index-1",
-  "sourceRevision": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "sourceRevision": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
   "sourceArtifacts": [
     {
       "scope": "root",
       "path": "docs/anatomy-coverage/root.json",
-      "sha256": "390c5f9ad1dc5dbb42d8f3dcaf66564d4e5694e36beca262b9bbcf466e09424c"
+      "sha256": "3371f824d1eddc0f897aa8ce6f6d850da4f8790caed88486982ff6d419026d95"
     },
     {
       "scope": "nested",
       "path": "docs/anatomy-coverage/nested.json",
-      "sha256": "b1181a0b4c26f534ccdafe250a167b1f1bc222afb537a1edab05b7ec62046267"
+      "sha256": "e2353134572e781f1d5508ff66876fe44af869b830d122c4eb4d6a35272607d0"
     },
     {
       "scope": "independent",
       "path": "docs/anatomy-coverage/independent.json",
-      "sha256": "ee3c95c85818a1db42b95c54383fa4e36b46e0b7297223f23df0d20b56a73830"
+      "sha256": "3ce1e109577ee5eb5d7fe4cb797094ea91cecea48a19152259afd97fc2899afb"
     },
     {
       "scope": "reference",
       "path": "docs/anatomy-coverage/reference.json",
-      "sha256": "141a69200064d5f183710f9d4b0a7c84134a0cecf5278d9512f05b6537360db4"
+      "sha256": "e9dc95179739ec5d9a640cdc421ef3f74f9079e19e596ba99890c75acef68207"
     }
   ],
   "evidence": {

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
-  "sha256": "11ddecf2aa1978f5979338085f1b2e08ad9fa84a331b7c92a367a876357543c5",
+  "sourceCommit": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+  "sha256": "7dcfd57c40219216347e3b89979723cbae3a9d8644f5381eb34e7f42800bd9e5",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "2f0632827570e5e21bcdc28346e0972cff6cecdb82616d9869960c94b84ec8e2"
+      "sha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -948,7 +948,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "b58cc25840046a4ab3e88b28aec44ec5dbe279ba1e10f1c6442dd86e25971f6c"
+      "sha256": "4de465f696ddc8fdd6d3e5571b5c31b8508e3d8e5a3fbe1735f04da278d7d9f7"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1237,6 +1237,14 @@
     {
       "path": "atlas-review/content/craniofacial-bone-quiz.ts",
       "sha256": "1f6a7467965e326a152213b765231c49740d3cfae40286f3377dcb7e54bf14a3"
+    },
+    {
+      "path": "atlas-review/content/craniofacial-calcification-ct-pins.json",
+      "sha256": "8cc35b9a486a9c4d061862f322ead1424198b81df2fba5af4bb56c35363c615d"
+    },
+    {
+      "path": "atlas-review/content/craniofacial-calcification-ct.ts",
+      "sha256": "be4e21b6ce67f9905dfb41fc275c77c683db5a607b52191e2130a4955384ca59"
     },
     {
       "path": "atlas-review/content/craniofacial-organ-imaging-pins.json",
@@ -2660,7 +2668,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/head-neck.json",
-      "sha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
+      "sha256": "4e666113679148058ff378536762fd2170db4ea83cdfe7d427c48d2a36ccd141"
     },
     {
       "path": "atlas-review/content/regional-teaching/leg.json",
@@ -4017,6 +4025,10 @@
     {
       "path": "atlas-review/lib/craniofacial-bone-quiz.ts",
       "sha256": "f39ecbceecfae4239b69289e4a408fbd51e3c1f770fc2eda640b6c6658d5b18f"
+    },
+    {
+      "path": "atlas-review/lib/craniofacial-calcification-ct.ts",
+      "sha256": "c3af28f6b12dfafbdac637d15f175bd991b0342a54f84ee337ded1598a042a5f"
     },
     {
       "path": "atlas-review/lib/craniofacial-organ-imaging.ts",
@@ -6396,11 +6408,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "5a7d458d8010c66c76a2be7817bd72cdcfbfa932ff5b1dcc2d0b835be6102f8a"
+      "sha256": "40b9e32564579d9b2d93e185eaa24efb5c47581f6ad1343ac8f81adfe2fd4da4"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "4918e25d38bff5e11480b3a0ec857bd6c615aebdc2c5c0fc37500f92ba61b8f5"
+      "sha256": "dacb19948f9109e353746f37fdbde06e9cc105379fdc920ba1cfc0f273e5e684"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6640,7 +6652,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "9ab934dcc6f349000ff20f10311416f32c21bf07a29b98daad53abdc10602a7a"
+      "sha256": "f7d9555f12d8a5f5e600432401a7672273d6067cab0fe24f62d533109ff1cd5e"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

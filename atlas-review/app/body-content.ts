@@ -1,3 +1,4 @@
+import {craniofacialCalcificationCtLesson} from '../lib/craniofacial-calcification-ct';
 import {footArterialProjectionXrayLesson} from '../lib/foot-arterial-projection-xray';
 import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
 import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
@@ -419,6 +420,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const craniofacialCalcificationCt=craniofacialCalcificationCtLesson(s,tab);
+  if(craniofacialCalcificationCt)return craniofacialCalcificationCt;
   const arterialEvidenceLimit=arterialEvidenceLimitLesson(s,tab);
   if(arterialEvidenceLimit)return arterialEvidenceLimit;
   const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
