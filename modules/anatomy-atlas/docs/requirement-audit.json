@@ -565,7 +565,7 @@
     "public/models/bodyparts3d/pulmonary/catalog.json": "b62ccd78dfc2ced8674b94eba67596add4de482f54c3f242814982b4e3dab9ea",
     "docs/pulmonary-source-audit.json": "734fc23b6d4812b81ffb007214c271096562bcb8376766fc9d609bfddabc95db",
     "content/cerebral-supplement-audit.json": "a186519bbf31065f5c4e58472c542a9cbd2a6b64d35423a4f6c92d7bae1d69d7",
-    "content/nested-teaching.ts": "f2a7ecde336041cefeafe33611969f3e49f8f92db58891ee3a121d1e9526f568",
+    "content/nested-teaching.ts": "0769d902cf0973cc84229061440fde4e26ccb29442ed16c28f801fcd35193bad",
     "content/nested-review-bindings.json": "2834bbf05ce4f526cb3bb65ec9e67174937fd5d1fc607499c3b394dc850a5b2a",
     "lib/nested-review.ts": "802a709f60b1a8c1c3dd79d71235d75748fd2ff650034b4fc4a98c517556ed91",
     "lib/nested-review-key.ts": "bf11dbacc334bac13a821a14d754478d6754d3e468344384e263d3b3442430e8",
@@ -748,8 +748,8 @@
     "lib/learning-entitlements.ts": "d10441fc802f196f1bb3c4a3132261c2bb3fa09f81a7e3c934b2fbca83fd103f",
     "public/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
     "public/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-    "resolvedContentAndRecipeData": "2329ad20922abda74c05cffb1548f171c7f150f22409916c35e959f44f87ea39",
-    "explicitTopicReadiness": "dd786f1f80ae1b0c03d16be37c0163832e46c8cbb447a450deaa7fd7150d905e",
+    "resolvedContentAndRecipeData": "a817a6ac068502a6be21d5e2db363582648358f1b52124143f131a5e46bfc8e3",
+    "explicitTopicReadiness": "d345f5eaa7510ec905b9a76be9817a6915bdea63acedbc4588ae83c7072f6568",
     "reasoningQuestionData": "5ea85ce81fe6511435529ea3ce6e8ff8ec901d3689f4a7f6c74a47f60ccd15aa",
     "guidedLearningData": "3e3d76f0b7b84e20182a725904e807c5adf2204c4a627e2cf9331629248e5c36",
     "lib/eye-layer-guide.ts": "c2c0a99f9931450e0e910a705fbded2b31ae074f251558468e013dbf19af95b3",
@@ -779,7 +779,7 @@
     "lib/lumbar-tour.ts": "00ca73890eeb65988461f90b4f333259955f689d0e6dcdcafa7f3a783f004bed",
     "lib/carpal-tour.ts": "bb5ca59e6c6d9ab153800b77c4dc8786d132493165fd6020257971bc1ef20f35",
     "lib/renal-tour.ts": "20dad74e41a7e4ebe3b9699dea0257795aec56f2f7713d6ecb5febd5cec7307f",
-    "nestedTeachingData": "6fca1b0d9233f4f816fd51348dfb52aea0211190739b04e20fbfcaad08a3f813"
+    "nestedTeachingData": "559cfa01157c6497dd02fd6bfbb362c3876405a71543723648995ae7a8ea7082"
   },
   "rendering": {
     "bodyBatching": {
@@ -3056,9 +3056,9 @@
         "generatedIdentification": 0
       },
       "mri": {
-        "specificDraft": 1054,
+        "specificDraft": 1056,
         "identityOnly": 0,
-        "pending": 50,
+        "pending": 48,
         "generatedIdentification": 0
       },
       "xray": {
@@ -3096,7 +3096,7 @@
       "representations": 108,
       "geometryOnlyRepresentations": [],
       "concepts": 76,
-      "references": 140,
+      "references": 143,
       "topics": {
         "anatomy": {
           "specificDraft": 108,
@@ -3129,9 +3129,9 @@
           "generatedIdentification": 0
         },
         "ultrasound": {
-          "specificDraft": 44,
+          "specificDraft": 48,
           "identityOnly": 0,
-          "pending": 64,
+          "pending": 60,
           "generatedIdentification": 0
         },
         "pathology": {
@@ -3232,9 +3232,9 @@
           "generatedIdentification": 0
         },
         "mri": {
-          "specificDraft": 242,
+          "specificDraft": 244,
           "identityOnly": 0,
-          "pending": 49,
+          "pending": 47,
           "generatedIdentification": 0
         },
         "xray": {

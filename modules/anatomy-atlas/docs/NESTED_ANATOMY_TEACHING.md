@@ -1,5 +1,12 @@
 # Nested brain and eye teaching
 
+Current addition: [posterior-fossa ultrasound orientation](POSTERIOR_FOSSA_ULTRASOUND.md)
+adds four introductory neonatal/infant-scoped drafts for the existing midbrain,
+pons, medulla and grouped cerebellum. Other topics, source compounds and held
+identities remain unchanged; no images, adult visibility or scan registration
+are established. See CURRENT_STATUS.md for generated current totals; the
+milestone counts below remain historical.
+
 Current: [right-MCA source explanations](MCA_SOURCE_TEACHING.md) add three explicit
 file-bound Anatomy/CT/MRI drafts and distinct model-scope self-checks. Their
 component-specific Function/Clinical/Pathology and imaging registration remain

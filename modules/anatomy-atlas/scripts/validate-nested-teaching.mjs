@@ -11,6 +11,8 @@ import { nestedBeforeLobarImaging, lobarIds } from './cerebral-lobar-imaging-his
 import { nestedBeforeVentricularUltrasound } from './ventricular-ultrasound-history.mjs';
 import { nestedBeforeEyeCrossSectional, eyeCrossSectionalScope } from './eye-cross-sectional-history.mjs';
 import { nestedBeforeCTOrientation, nestedCTOrientationIds } from './nested-ct-orientation-history.mjs';
+import { nestedBeforePosteriorFossaUltrasound, posteriorFossaUltrasoundIds,
+  posteriorFossaUltrasoundReferenceKeys } from './posterior-fossa-ultrasound-history.mjs';
 import { cardiacBeforeCavityDepth } from './cardiac-cavity-depth-history.mjs';
 import { nestedBeforeDuctXray } from './nested-duct-xray-history.mjs';
 
@@ -71,7 +73,7 @@ const eyeUsHashes = {
   'eye-lens': 'c71308116b8adbda8d67d4b9dec4bd53db697052e60c88ce73d96682921a3e14',
   'eye-sclera': 'a147afbfcbe303730892a7399f793f8d1d90e7ca88765331aff4da34a7b8181d',
 };
-const beforeDuctXray = nestedBeforeDuctXray(api);
+const beforeDuctXray = nestedBeforeDuctXray(nestedBeforePosteriorFossaUltrasound(api));
 const beforeCavityDepth = cardiacBeforeCavityDepth(beforeDuctXray);
 const beforeCrossSectional = nestedBeforeEyeCrossSectional(nestedBeforeCTOrientation(beforeCavityDepth));
 const beforeEyeUs = {
@@ -482,6 +484,7 @@ for (const target of targets) {
     if (!expectedImaging.includes(topic)) expectedImaging.push(topic);
   }
   if (nestedCTOrientationIds.includes(concept.id) && !expectedImaging.includes('ct')) expectedImaging.push('ct');
+  if (posteriorFossaUltrasoundIds.includes(concept.id)) expectedImaging.push('ultrasound');
   same(
     Object.keys(concept.imaging ?? {}).sort(),
     [...expectedImaging].sort((a, b) => a.localeCompare(b)),
@@ -675,18 +678,22 @@ for (const tab of ['anatomy', 'function', 'quiz'])
 same(coverage.ct, { draft: 71, pending: 0 });
 same(coverage.mri, { draft: 71, pending: 0 });
 const priorXrayCoverage = { draft: 0, pending: 0 };
+const priorUltrasoundCoverage = { draft: 0, pending: 0 };
 for (const target of targets) {
   const parent = catalog.structures.find(s => s.id === target.parentId);
   const current = api.nestedTeachingFor(parent, target.study, target.structure);
   const prior = beforeDuctXray.nestedConcepts.find(c => c.id === current.id);
   priorXrayCoverage[api.nestedTopicLesson(prior, 'xray').readiness]++;
+  priorUltrasoundCoverage[api.nestedTopicLesson(prior, 'ultrasound').readiness]++;
 }
 same(priorXrayCoverage, { draft: 9, pending: 62 }, 'Exact pre-duct coverage retained');
 same(coverage.xray, { draft: 13, pending: 58 }, 'Only four named duct placements gain X-ray drafts');
-same(coverage.ultrasound, { draft: 41, pending: 30 });
+same(priorUltrasoundCoverage, { draft: 41, pending: 30 }, 'Exact prior ultrasound coverage retained');
+same(coverage.ultrasound, { draft: 45, pending: 26 }, 'Only four posterior-fossa selections gain ultrasound drafts');
 same(JSON.stringify(catalog), initial, 'Read-only catalog');
 const wordsBySource = {};
 const hosts = new Set([
+  'onlinelibrary.wiley.com',
   'www.frontiersin.org',
   'resource.loni.usc.edu',
   'radiologyassistant.nl',
@@ -763,7 +770,10 @@ const preDuctUsedKeys = new Set(beforeDuctXray.nestedConcepts.flatMap(c => [
   ...Object.values(c.sections), ...Object.values(c.imaging ?? {}), c.quiz,
 ]).flatMap(section => section.references).filter(key => !['renalReuseLicense', 'nestedCTReuseLicense'].includes(key)));
 same(preDuctUsedKeys.size, 115, 'Frozen pre-duct corpus retains its eight separately scoped cavity references');
-same(Object.keys(wordsBySource).length, 117, 'Two new distinct sources, with one shared ERCP word budget');
+same(Object.keys(wordsBySource).filter(key => !posteriorFossaUltrasoundReferenceKeys.includes(key)).length,
+  117, 'Legacy source coverage and shared ERCP word budget retained');
+same(Object.keys(wordsBySource).filter(key => posteriorFossaUltrasoundReferenceKeys.includes(key)).length,
+  3, 'Three new posterior-fossa sources support only the four drafts');
 const previousUsedKeys = new Set(beforeCavityDepth.nestedConcepts.flatMap(c => [
   ...Object.values(c.sections), ...Object.values(c.imaging ?? {}), c.quiz,
 ]).flatMap(section => section.references).filter(key => !['renalReuseLicense','nestedCTReuseLicense'].includes(key)));
@@ -776,8 +786,10 @@ same(
 );
 same(new Set(Object.values(beforeDuctXray.nestedTeachingReferences).map(ref => ref.url)).size, 116,
   'New references have eight distinct URLs, not duplicate keys to evade source budgets');
-same(new Set(Object.values(api.nestedTeachingReferences).map(ref => ref.url)).size, 118,
-  'Duct references add two distinct URLs, not duplicate keys to evade source budgets');
+same(new Set(Object.values(nestedBeforePosteriorFossaUltrasound(api).nestedTeachingReferences).map(ref => ref.url)).size, 118,
+  'Legacy duct references retain two distinct URLs without evading source budgets');
+same(new Set(Object.values(api.nestedTeachingReferences).map(ref => ref.url)).size, 120,
+  'Two new distinct URLs and one URL shared with prior ventricular teaching');
 for (const concept of api.nestedConcepts.filter((c) => c.imaging)) {
   const missing = copy(concept);
   delete missing.imaging;

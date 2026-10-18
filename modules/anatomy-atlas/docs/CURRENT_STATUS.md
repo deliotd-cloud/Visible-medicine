@@ -6,7 +6,7 @@ Generated from the current displayed catalogue, teaching resolver, dissection pr
 
 - 1104 displayed root-body representations, 109 body GLBs (104390180 canonical bytes), 11 regions plus whole body; 1022 retained archival records.
 - Dedicated shoulder: 9 representations / 11 source parts, overlapping the body catalogue.
-- Nested dissections: 108 selectable parts, 76 teaching concepts / 140 references; 0 geometry-only selections retain pending teaching.
+- Nested dissections: 108 selectable parts, 76 teaching concepts / 143 references; 0 geometry-only selections retain pending teaching.
 - 159 dissection stages / 209 focuses. These operate on supplied surfaces, not complete anatomy.
 - Guided learning: 51 regional tours / 309 stops; dedicated shoulder 1 tour / 5 stops. These source-bound drafts reuse existing anatomy, not additional unique structures or clinical approvals.
 - Nested eye guided learning: 2 source-bound draft guides / 8 stops across 15 existing distinct eye children. [Eye-layer guidance](EYE_LAYER_GUIDED_LEARNING.md) overlaps the nested anatomy above; it adds no root-body anatomy, regional tours, geometry or clinical approval.
@@ -46,7 +46,7 @@ Each cell shows draft / pending placements within that specimen's own source fra
 | Anatomy | 1104 | 0 | 0 | 0 |
 | Function | 1103 | 0 | 1 | 0 |
 | CT | 1022 | 0 | 82 | 0 |
-| MRI | 1054 | 0 | 50 | 0 |
+| MRI | 1056 | 0 | 48 | 0 |
 | X-ray | 874 | 0 | 230 | 0 |
 | Ultrasound | 886 | 0 | 218 | 0 |
 | Pathology | 1103 | 0 | 1 | 0 |
@@ -64,7 +64,7 @@ Separate from root-body coverage and overlapping parent anatomy. All 29 cranial 
 | CT | 106 | 0 | 2 | 0 |
 | MRI | 106 | 0 | 2 | 0 |
 | X-ray | 14 | 0 | 94 | 0 |
-| Ultrasound | 44 | 0 | 64 | 0 |
+| Ultrasound | 48 | 0 | 60 | 0 |
 | Pathology | 77 | 0 | 31 | 0 |
 | Clinical | 77 | 0 | 31 | 0 |
 | Quiz notes | 108 | 0 | 0 | 0 |

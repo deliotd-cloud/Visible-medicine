@@ -6,6 +6,8 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "salpingopharyngeus-mri:test": "node scripts/test-salpingopharyngeus-mri-unit.mjs && node scripts/test-salpingopharyngeus-mri.mjs",
+    "arterial-evidence-limits:test": "node scripts/pin-arterial-evidence-limits.mjs --check && node scripts/test-arterial-evidence-limits.mjs",
     "foot-arterial-projection-xray:test": "node scripts/test-foot-arterial-projection-xray-current.mjs",
     "intracranial-arterial-us:test": "node scripts/pin-intracranial-arterial-us.mjs --check && node scripts/test-intracranial-arterial-us.mjs",
     "hand-vessel-xray:test": "node scripts/pin-hand-vessel-xray.mjs --check && node scripts/test-hand-vessel-xray.mjs",
@@ -181,6 +183,7 @@
     "nested-guided-library:test": "node scripts/test-nested-guided-library-history.mjs && node scripts/test-nested-guided-library.mjs && node scripts/test-nested-guided-library-current.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-eye-layer-guide-component.mjs && node scripts/test-nested-guided-library-review.mjs && node scripts/validate-nested-review.mjs && node --test scripts/test-requirement-summary-current.mjs",
     "cardiac-cavity-guide:test": "node scripts/test-cardiac-cavity-guide.mjs && node scripts/test-cardiac-cavity-component.mjs && node scripts/test-cardiac-cavity-review.mjs && node scripts/generate-nested-review-bindings.mjs --check && node scripts/validate-nested-review.mjs",
     "eye-layer-guide:test": "node scripts/test-eye-layer-guide.mjs && node scripts/test-eye-layer-guide-component.mjs && node scripts/test-eye-layer-guide-review.mjs && node scripts/test-eye-education-component.mjs && node scripts/test-tour-camera.mjs",
+    "posterior-fossa-ultrasound:test": "node scripts/test-posterior-fossa-ultrasound.mjs",
     "nested-ct-orientation:test": "node scripts/validate-nested-ct-orientation.mjs && node scripts/validate-nested-teaching.mjs && node scripts/validate-nested-review.mjs",
     "pelvic-ring-tour:test": "node scripts/test-pelvic-ring-tour.mjs && node scripts/test-whole-body-guided-learning.mjs && node scripts/test-regional-tour-player.mjs && node scripts/test-regional-tour-review.mjs && node scripts/test-tour-step-picker.mjs && node scripts/test-tour-camera.mjs",
     "eye-cross-sectional:test": "node scripts/validate-eye-cross-sectional.mjs && node scripts/validate-nested-teaching.mjs && node scripts/generate-nested-review-bindings.mjs --check && node scripts/validate-nested-review.mjs",

@@ -6,6 +6,7 @@ import { superiorTemporalMRI, superiorTemporalMRIReferences } from './superior-t
 import { cardiacXrayTeaching, cardiacXrayReferences } from './cardiac-xray-teaching.ts';
 import { cardiacCavityDepthSections, cardiacCavityDepthReferences } from './cardiac-cavity-depth.ts';
 import { ventricularUltrasoundTeaching, ventricularUltrasoundReferences } from './ventricular-ultrasound-teaching.ts';
+import { posteriorFossaUltrasoundTeaching, posteriorFossaUltrasoundReferences } from './posterior-fossa-ultrasound.ts';
 import { cerebralLobarImaging, cerebralLobarReferences } from './cerebral-lobar-imaging.ts';
 import { hippocampalConcepts, hippocampalTeachingReferences } from './hippocampal-teaching.ts';
 import { femoralComponentConcepts, femoralComponentReferences } from './femoral-component-teaching.ts';
@@ -76,6 +77,7 @@ export const nestedTeachingReferences: Record<
   ...cardiacXrayReferences,
   ...cardiacCavityDepthReferences,
   ...ventricularUltrasoundReferences,
+  ...posteriorFossaUltrasoundReferences,
   ...hippocampalTeachingReferences,
   ...femoralComponentReferences,
   ...mcaSourceTeachingReferences,
@@ -758,7 +760,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-midbrain',
     study: 'brainstem',
-    imaging: brainImagingTeaching.midbrain,
+    imaging: { ...brainImagingTeaching.midbrain, ultrasound: posteriorFossaUltrasoundTeaching.midbrain },
     fmaIds: ['FMA61993'],
     sections: {
       anatomy: section(
@@ -790,7 +792,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-pons',
     study: 'brainstem',
-    imaging: brainImagingTeaching.pons,
+    imaging: { ...brainImagingTeaching.pons, ultrasound: posteriorFossaUltrasoundTeaching.pons },
     fmaIds: ['FMA67943'],
     sections: {
       anatomy: section(
@@ -823,7 +825,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-medulla',
     study: 'brainstem',
-    imaging: brainImagingTeaching.medulla,
+    imaging: { ...brainImagingTeaching.medulla, ultrasound: posteriorFossaUltrasoundTeaching.medulla },
     fmaIds: ['FMA62004'],
     sections: {
       anatomy: section(
@@ -855,7 +857,7 @@ export const nestedConcepts: NestedConcept[] = [
   {
     id: 'brainstem-cerebellum',
     study: 'brainstem',
-    imaging: brainImagingTeaching.cerebellum,
+    imaging: { ...brainImagingTeaching.cerebellum, ultrasound: posteriorFossaUltrasoundTeaching.cerebellum },
     fmaIds: ['FMA67944'],
     sections: {
       anatomy: section(

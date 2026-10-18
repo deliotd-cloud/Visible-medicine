@@ -5,8 +5,10 @@ import {isDeepStrictEqual} from 'node:util';
 import pins from '../content/thoracoabdominal-organ-quiz-pins.json' with {type:'json'};
 import transition from '../content/thoracoabdominal-organ-quiz.transition.json' with {type:'json'};
 import {beforePelvicReproductiveCore} from './pelvic-reproductive-core-history.mjs';
+import {beforeDeepPlantarUltrasound} from './deep-plantar-ultrasound-history.mjs';
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
 export function beforeThoracoabdominalOrganQuiz(api){
+ api=beforeDeepPlantarUltrasound(api);
  if(typeof api.bodyLesson!=='function')return api;
  api=beforePelvicReproductiveCore(api);
  if(typeof api.bodyDisplayCatalog!=='function'&&pins.entries.every(e=>api.bodyLesson(e.identity,'quiz')===undefined))return api;

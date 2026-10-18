@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {createRequire} from 'node:module';
+import {runInNewContext} from 'node:vm';
+import ts from 'typescript';
+import {contentContext} from './content-contract-tools.mjs';
+import {build} from './workspace-test-build.mjs';
+import {build as componentBuild} from './workspace-component-test-build.mjs';
+import {bodyNoteRenderCallback} from './body-note-render-callback.mjs';
+import pins from '../content/pharyngeal-muscle-teaching-pins.json' with {type:'json'};
+
+const {api,catalog}=await contentContext(),display=api.bodyDisplayCatalog(catalog);
+const compiled=await build({stdin:{contents:"export {salpingopharyngeusMriLesson as lesson} from './lib/salpingopharyngeus-mri';export {parseBodyReviewResponse} from './lib/body-review-response';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+const {lesson,parseBodyReviewResponse}=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+const entries=pins.entries.filter(e=>e.family==='salpingo');assert.equal(entries.length,2);
+let packets=0,renders=0;
+const require=createRequire(import.meta.url),React=require('react'),render=require('react-dom/server').renderToStaticMarkup;
+const component=await componentBuild({stdin:{contents:"export {SourceDisplayNotes} from './app/source-display-notes';export {ComponentImagingNotes} from './app/component-imaging-notes';export {teachingHeading} from './lib/teaching-heading';",resolveDir:process.cwd(),loader:'tsx'},bundle:true,platform:'node',format:'cjs',write:false});
+const scope={exports:{}};runInNewContext(component.outputFiles[0].text,{module:scope,exports:scope.exports,require});
+const callback=bodyNoteRenderCallback(await readFile('app/body-explorer.tsx','utf8'));
+for(const {identity} of entries){
+ assert.deepEqual(display.structures.filter(s=>s.id===identity.id),[identity]);
+ const expected=lesson(identity,'mri'),actual=api.bodyLesson(identity,'mri');
+ assert.deepEqual(actual,expected);assert.equal(actual.readiness,'draft');
+ const {readiness,...shown}=actual;assert.deepEqual(api.bodyContent(identity,'mri'),shown);
+ assert.match(actual.body,/high-resolution 3D MRI/);assert.match(actual.bullets.join(' '),/routine MRI/);
+ assert.match(actual.note,/review pending/);assert.match(actual.note,/registration/);
+ const packet=await api.bodyReviewMaterial(identity.id);assert.equal(packet.approval,false);
+ assert.deepEqual(packet.topics.find(t=>t.tab==='mri'),{tab:'mri',...actual});
+ assert.deepEqual(await parseBodyReviewResponse(packet,identity.id),packet);
+ const changed=structuredClone(packet);changed.topics.find(t=>t.tab==='mri').body='Foreign teaching';
+ assert.equal(await parseBodyReviewResponse(changed,identity.id),null);packets++;
+ const code=ts.transpile(`(${callback})('mri')`,{target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.React});
+ const html=render(runInNewContext(code,{React,...scope.exports,ScanLine:require('lucide-react').ScanLine,catalog:display,side:'both',exam:false,openNested:()=>{throw Error('Rendering must not navigate');},selected:identity,bodyContent:api.bodyContent,WorkspaceModeButton:({children})=>React.createElement('button',null,children)}));
+ assert(html.includes(render(React.createElement('p',null,actual.body))));
+ for(const text of actual.bullets)assert(html.includes(render(React.createElement('li',null,text))));
+ for(const url of actual.citations)assert(html.includes(`href="${url}"`));
+ assert(html.includes('review pending'));renders++;
+}
+console.log(JSON.stringify({draftPlacements:entries.length,reviewPackets:packets,actualNoteRenders:renders,clinicalApproval:false,patientRegistration:false}));

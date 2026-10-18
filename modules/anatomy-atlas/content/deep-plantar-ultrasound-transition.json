@@ -1,0 +1,29 @@
+{
+  "schema": "vm-deep-plantar-ultrasound-transition-1",
+  "parentCommit": "7b3e678ae4b8059aadb84459048ebd05f7abe7b9",
+  "pinsHash": "8d0491edb994897c63a32dfb2aeefc380890af3356531ec2623e7848dab5c1a3",
+  "previousAllLessonsAndRecipesHash": "e4e8e1a578e59e16c88c043044d7da7a2c4637d4f346ee9953b36fd17f78754b",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:foot:right:vessel:right-deep-plantar-artery",
+      "fmaId": "FMA69514",
+      "tab": "ultrasound",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "d931cc1c353714bd23d006c24df389e9967f6b1d44d63d491c19afdd736425dc"
+    },
+    {
+      "id": "vm:anatomy:body:foot:left:vessel:left-deep-plantar-artery",
+      "fmaId": "FMA69515",
+      "tab": "ultrasound",
+      "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+      "currentHash": "28d24dd4db2224f3abbcb992cdaf11d37f2f348b27257a7b246feaba4eae1e84"
+    }
+  ],
+  "changed": 2,
+  "preserved": 9934,
+  "worksheets": 2,
+  "staleRefused": 6,
+  "clinicalApproval": false,
+  "patientSpaceRegistration": false,
+  "sourceAssetsUnchanged": true
+}

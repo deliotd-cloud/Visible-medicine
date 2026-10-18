@@ -6,6 +6,7 @@ import { spinalMuscleXrayLesson } from '../lib/spinal-muscle-xray';
 import { handVesselXrayLesson } from '../lib/hand-vessel-xray';
 import { lowerLimbConnectiveXrayLesson } from '../lib/lower-limb-connective-xray';
 import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
+import { arterialEvidenceLimitLesson } from '../lib/arterial-evidence-limits';
 import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
 import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
 import { orbitalSupportQuizLesson } from '../lib/orbital-support-quiz';
@@ -50,6 +51,7 @@ import { mesentericVesselTeachingLesson } from '../lib/mesenteric-vessel-teachin
 import { pancreaticVesselTeachingLesson } from '../lib/pancreatic-vessel-teaching';
 import { pharyngealMuscleTeachingLesson } from '../lib/pharyngeal-muscle-teaching';
 import { pharyngealConstrictorImagingLesson } from '../lib/pharyngeal-constrictor-imaging';
+import { salpingopharyngeusMriLesson } from '../lib/salpingopharyngeus-mri';
 import { vocalTissueTeachingLesson } from '../lib/vocal-tissue-teaching';
 import { thoracicSystemicTeachingLesson } from '../lib/thoracic-systemic-teaching';
 import { shoulderGirdleArterialUltrasoundLesson } from '../lib/shoulder-girdle-arterial-ultrasound';
@@ -112,6 +114,7 @@ import { footSurfaceImagingLesson } from '../lib/foot-surface-imaging';
 import { handBoneUltrasoundLesson } from '../lib/hand-bone-ultrasound';
 import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
 import { footUltrasoundFollowupLesson } from '../lib/foot-ultrasound-followup';
+import { deepPlantarUltrasoundLesson } from '../lib/deep-plantar-ultrasound';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
 import { plantarArterialUsLesson } from '../lib/plantar-arterial-us';
 import { commonInterosseousUsLesson } from '../lib/common-interosseous-us';
@@ -413,6 +416,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const arterialEvidenceLimit=arterialEvidenceLimitLesson(s,tab);
+  if(arterialEvidenceLimit)return arterialEvidenceLimit;
   const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
   if(footArterialProjectionXray)return footArterialProjectionXray;
 
@@ -464,6 +469,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (elbowArterialUltrasound) return elbowArterialUltrasound;
   const pharyngealImaging = pharyngealConstrictorImagingLesson(s, tab);
   if (pharyngealImaging) return pharyngealImaging;
+  const salpingopharyngeusMri = salpingopharyngeusMriLesson(s, tab);
+  if (salpingopharyngeusMri) return salpingopharyngeusMri;
   const thoracicSystemic = thoracicSystemicTeachingLesson(s, tab);
   if (thoracicSystemic) return thoracicSystemic;
   const vocalTissue = vocalTissueTeachingLesson(s, tab);
@@ -478,6 +485,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (girdleBoneUltrasound) return girdleBoneUltrasound;
   const shoulderGirdleArterialUltrasound = shoulderGirdleArterialUltrasoundLesson(s, tab);
   if (shoulderGirdleArterialUltrasound) return shoulderGirdleArterialUltrasound;
+  const deepPlantarUltrasound = deepPlantarUltrasoundLesson(s, tab);
+  if (deepPlantarUltrasound) return deepPlantarUltrasound;
   const footUltrasoundFollowup = footUltrasoundFollowupLesson(s, tab);
   if (footUltrasoundFollowup) return footUltrasoundFollowup;
   const toeBoneUltrasound = toeBoneUltrasoundLesson(s, tab);

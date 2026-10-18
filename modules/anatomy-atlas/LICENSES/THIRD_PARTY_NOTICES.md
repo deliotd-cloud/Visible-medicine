@@ -1,5 +1,15 @@
 # Third-party notices
 
+## Arterial evidence-limit notes — 17 October 2026
+
+Four source-bound pending placements receive short original project-MIT wording.
+Reading references: Casoli et al.2004 (PMID14730394), Sun et al.2016
+(PMID26969598), and Coskun et al.2015 (AJEM S0735-67571500051-0).
+No publisher prose, figures, images, scans, tables, protocols or datasets are
+included or relicensed. Links confer no media rights. Existing BodyParts3D
+CC-BY-4.0 attribution and source limits remain unchanged. No new dependency,
+font, model, texture, service or fee is added. See docs/ARTERIAL_EVIDENCE_LIMITS.md.
+
 ## Intracranial arterial ultrasound — 16 October 2026
 
 Eight unchanged source selections receive original project-MIT educational copy.
