@@ -3,7 +3,7 @@
   "scope": "application-source-only",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
   "fullLocalSourceManifestSha256": "ea67c2c23aa605b3b2ead5e53b85f34c0b6ccb1c1108aa132758fc4ffef2b332",
-  "screenedSnapshotParent": "5663edd7d70769339b25076c73a3271f224f275d",
+  "screenedSnapshotParent": "010ef4605f562261ab1b635d33af4c0a9dbdaa57",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -1274,10 +1274,10 @@
     },
     {
       "path": "app/workspace/page.tsx",
-      "sha256": "3a742c5e0ef484852da0b42a24d21b0c61f796b6ffcf474accf46ccd6f22e4ba",
-      "bytes": 6079,
+      "sha256": "5db80991307ffd7f8d3164e516bb68a08544b2d9a8e040fa5f6df747550d26e5",
+      "bytes": 6053,
       "mode": "100644",
-      "gitBlob": "4ab307f6dbe1bf28ac3e801b551fda09be32f254"
+      "gitBlob": "89546ed73d99c628e7e5ecff20d06166825343ec"
     },
     {
       "path": "app/workspace/people/page.tsx",
@@ -12145,10 +12145,10 @@
     },
     {
       "path": "components/clinical-review-inbox.css",
-      "sha256": "6a758f48d80e34598d7d24c951afcbf74922011d501a5bac8bcfb5fdd1a178c7",
-      "bytes": 6723,
+      "sha256": "8f4521e519198e5b2e27f37f1292dbfebe7f6b5822a05375912cffd66416317d",
+      "bytes": 7701,
       "mode": "100644",
-      "gitBlob": "56685c4a0fcaceda7c0950badbabf6187097d36f"
+      "gitBlob": "5b04bd8b0f0f4504fa53a1b1ed143a658a011f6f"
     },
     {
       "path": "components/ClinicalReviewAreas.tsx",
@@ -12159,10 +12159,10 @@
     },
     {
       "path": "components/ClinicalReviewInbox.tsx",
-      "sha256": "59bbb696c8d1c69efb877ff4710dde7781cb51f3ff868b6e7f950c25cb4adaf7",
-      "bytes": 23016,
+      "sha256": "fb16cc9829716a8a4afdab503ba7c5eb13c7a026616c48089bddeccd6e458775",
+      "bytes": 23408,
       "mode": "100644",
-      "gitBlob": "8282eb448ab160a249fc718df4e8defed0b7cfb3"
+      "gitBlob": "e10a36bb3cddfc96d2846e376463dbfc1bfb8e6b"
     },
     {
       "path": "components/CourseCatalogue.tsx",
@@ -13006,17 +13006,17 @@
     },
     {
       "path": "components/SiteFrame.tsx",
-      "sha256": "63b9f07ba269de5a3f87bbb80479aa8750927073d28fd81ead99113671996ae6",
-      "bytes": 6391,
+      "sha256": "27420fa6469949444c36f0e7808983321e9b2cab10661d9c06742b52ffc82c5a",
+      "bytes": 7013,
       "mode": "100644",
-      "gitBlob": "a4a91927e863ea41185c1bb86d756d4424301a30"
+      "gitBlob": "cbf649003cb5da51a75d9ff75363df583c21ddfa"
     },
     {
       "path": "components/SiteHeader.tsx",
-      "sha256": "bba722fd30a26552e55ae844963ba61184cbe9912086637de9747587dee33f31",
-      "bytes": 14393,
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec",
+      "bytes": 14391,
       "mode": "100644",
-      "gitBlob": "44fa93d37eb0167cb6206a0c89b132e6227e5dda"
+      "gitBlob": "cc0f0c9ecdb4170ff6b481a35c345b10992063f7"
     },
     {
       "path": "components/SplashScreen.tsx",
@@ -23603,6 +23603,13 @@
       "gitBlob": "0e986467afcf837f3987a05a60edd64bd40396bb"
     },
     {
+      "path": "tests/clinical-review-inbox-workbench.test.mjs",
+      "sha256": "f1de9c60ec92e5995b4c97cf8b04e74f01d4b012f36b389b7871c093a1ff2863",
+      "bytes": 7910,
+      "mode": "100644",
+      "gitBlob": "2abb3281ce8ff33849918ba99933587c04cf3103"
+    },
+    {
       "path": "tests/clinical-review-inbox.test.ts",
       "sha256": "657f67123f752d2d131460ff441cf05390c4c917e121548571b6e5ab7057bd32",
       "bytes": 12835,
@@ -27943,6 +27950,13 @@
       "gitBlob": "23a47a18e1d1686c637b7ad60d9fa8da1d4328ea"
     },
     {
+      "path": "tests/fixtures/workspace-page-original.json",
+      "sha256": "ec0f0b5fad5afa11b56115025cd126ce670cd78a4e1d94ab18d59af4b65cc9c4",
+      "bytes": 6446,
+      "mode": "100644",
+      "gitBlob": "28409bd9a7ae662a0e2da1e8ca0e13fd1a74401f"
+    },
+    {
       "path": "tests/fracture-response.test.ts",
       "sha256": "9ad5055a98d5da9018b78f79a70c4f451d2bdcddb898e4399cef7dacc882a0d4",
       "bytes": 2721,
@@ -29565,6 +29579,13 @@
       "bytes": 17573,
       "mode": "100644",
       "gitBlob": "afb1827fc6fc3c8255065dca3f510cb01c94e2aa"
+    },
+    {
+      "path": "tests/header-workspace-destination.test.mjs",
+      "sha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "bytes": 3146,
+      "mode": "100644",
+      "gitBlob": "dfdd08dc622d8e786f2c85dbd19fb1a2287a09db"
     },
     {
       "path": "tests/historical-deep-plantar-delivery-49.mjs",
@@ -31261,6 +31282,20 @@
       "gitBlob": "7caa1f20c733078c366a15f15e4a8215efa45e10"
     },
     {
+      "path": "tests/workspace-embed-disclosure.test.mjs",
+      "sha256": "72f4f6434dd3c318d7e90558c41dccb1a960e172c0b090d0c6acec39ea0f3c22",
+      "bytes": 7111,
+      "mode": "100644",
+      "gitBlob": "fe68b253b1588096e42b6d55ddb2cbc46d90a541"
+    },
+    {
+      "path": "tests/workspace-utilities-dismissal.test.mjs",
+      "sha256": "9a7ebf80a73f903873e6b9227f68aefaf1bf5c710360b3b8793aa4b77a1a6aea",
+      "bytes": 3982,
+      "mode": "100644",
+      "gitBlob": "649d913b884309b97db50f8cd44bb441c3082380"
+    },
+    {
       "path": "tsconfig.json",
       "sha256": "f06f60cc7c9f734837301793cb5a136e09bb8fcaa8920c389fadb20345b5f955",
       "bytes": 794,
@@ -32583,6 +32618,58 @@
       "path": "tests/studio-slide-preview-find.test.mjs",
       "bytes": 16920,
       "sha256": "6e68af5d834e2ce7ce109c5210a6ac53b7ec01e5313544a72847fe088bef10c6"
+    }
+  ],
+  "sourceOnlyDesktopUiDelta": [
+    {
+      "path": "app/workspace/page.tsx",
+      "bytes": 6053,
+      "sha256": "5db80991307ffd7f8d3164e516bb68a08544b2d9a8e040fa5f6df747550d26e5"
+    },
+    {
+      "path": "components/clinical-review-inbox.css",
+      "bytes": 7701,
+      "sha256": "8f4521e519198e5b2e27f37f1292dbfebe7f6b5822a05375912cffd66416317d"
+    },
+    {
+      "path": "components/ClinicalReviewInbox.tsx",
+      "bytes": 23408,
+      "sha256": "fb16cc9829716a8a4afdab503ba7c5eb13c7a026616c48089bddeccd6e458775"
+    },
+    {
+      "path": "components/SiteFrame.tsx",
+      "bytes": 7013,
+      "sha256": "27420fa6469949444c36f0e7808983321e9b2cab10661d9c06742b52ffc82c5a"
+    },
+    {
+      "path": "components/SiteHeader.tsx",
+      "bytes": 14391,
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "tests/clinical-review-inbox-workbench.test.mjs",
+      "sha256": "f1de9c60ec92e5995b4c97cf8b04e74f01d4b012f36b389b7871c093a1ff2863",
+      "bytes": 7910
+    },
+    {
+      "path": "tests/fixtures/workspace-page-original.json",
+      "sha256": "ec0f0b5fad5afa11b56115025cd126ce670cd78a4e1d94ab18d59af4b65cc9c4",
+      "bytes": 6446
+    },
+    {
+      "path": "tests/header-workspace-destination.test.mjs",
+      "sha256": "1f7e3b57a0c5cbd87a29a020e41fd879fd39d3fb3c5e06d06f9e07f0cd2e78d0",
+      "bytes": 3146
+    },
+    {
+      "path": "tests/workspace-embed-disclosure.test.mjs",
+      "sha256": "72f4f6434dd3c318d7e90558c41dccb1a960e172c0b090d0c6acec39ea0f3c22",
+      "bytes": 7111
+    },
+    {
+      "path": "tests/workspace-utilities-dismissal.test.mjs",
+      "sha256": "9a7ebf80a73f903873e6b9227f68aefaf1bf5c710360b3b8793aa4b77a1a6aea",
+      "bytes": 3982
     }
   ]
 }

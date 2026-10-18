@@ -51,7 +51,7 @@ export default async function WorkspacePage() {
           <Link href="/workspace/control#identity">Integrations</Link>
           <Link href="/workspace/control#publishing">Atlas publishing controls</Link>
           <Link href="/workspace/control">Institution setup</Link>
-        </div></details>}
+        </div><EmbedOriginManager initialOrigins={snapshot.embedOrigins} enabled={snapshot.entitlement.embedsAccess && snapshot.educationRoles.includes("administrator")} /></details>}
       </section>
       <details className="workspace-overview"><summary>Institution overview <span>{snapshot.entitlement.plan} · {snapshot.entitlement.status}</span></summary>
         <section className="workspace-metrics" aria-label="Workspace usage">
@@ -63,7 +63,6 @@ export default async function WorkspacePage() {
         <section className="entitlement-panel"><div><p className="section-index">Current entitlement</p><h2>{snapshot.entitlement.plan}</h2><p>{storageGb} GB managed media allowance · {snapshot.entitlement.educatorLimit} educator seats · {snapshot.entitlement.learnerLimit} learner seats</p></div><div className="entitlement-flags"><span className={snapshot.entitlement.atlasAccess ? "enabled" : ""}>Atlas</span><span className={snapshot.entitlement.studioAccess ? "enabled" : ""}>Studio</span><span className={snapshot.entitlement.reportingAccess ? "enabled" : ""}>Reporting</span><span className={snapshot.entitlement.embedsAccess ? "enabled" : ""}>Embeds</span></div></section>
         <section className="publication-register"><div><p className="section-index">Publication register</p><h2>Nothing becomes public by accident.</h2></div><div>{snapshot.publications.map((publication) => <article key={publication.id}><span>{publication.resourceType} · v{publication.version}</span><b>{publication.title}</b><p>{publication.status} · rights {publication.rightsStatus} · de-identification {publication.deidentificationStatus} · specialist review {publication.specialistReviewStatus}</p></article>)}</div></section>
       </details>
-      {administrator && <EmbedOriginManager initialOrigins={snapshot.embedOrigins} enabled={snapshot.entitlement.embedsAccess && snapshot.educationRoles.includes("administrator")} />}
     </main>
   );
 }

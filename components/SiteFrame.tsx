@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import type { ReactNode } from "react";
+import type { MouseEvent, ReactNode } from "react";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
 import "./workspace-navigation.css";
@@ -58,6 +58,9 @@ function workspaceIsActive(pathname: string, href: string) {
 export function WorkspaceContextBar({ pathname, signedIn }: { pathname: string; signedIn: boolean }) {
   const accountHref = signedIn ? "/account" : "/account-entry";
   const review = isReviewRoute(pathname);
+  const closeUtilities = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.currentTarget.closest("details")?.removeAttribute("open");
+  };
   return (
     <header className="workspace-context-header">
       <Link className="workspace-wordmark" href="/" aria-label="Visible Medicine home">Visible Medicine</Link>
@@ -74,12 +77,19 @@ export function WorkspaceContextBar({ pathname, signedIn }: { pathname: string; 
         <Link className="platform-utility-link" href="/">Back to website</Link>
         <Link className="account-entry-link" aria-current={(signedIn ? pathname.startsWith("/account") && pathname !== "/account-entry" : pathname === "/account-entry") ? "page" : undefined} href={accountHref}>{signedIn ? "Profile" : "Sign in"}</Link>
       </div>
-      <details className="workspace-mobile-menu">
+      <details className="workspace-mobile-menu" onKeyDown={event => {
+        if (event.key !== "Escape" || !event.currentTarget.open) return;
+        event.preventDefault(); event.stopPropagation();
+        event.currentTarget.open = false;
+        event.currentTarget.querySelector("summary")?.focus();
+      }} onBlur={event => {
+        if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
+      }}>
         <summary><span className="menu-label">Help &amp; more</span><span className="close-label">Close</span></summary>
         <nav aria-label="Workspace utilities">
-          <Link href="/">Back to website <span aria-hidden="true">→</span></Link>
-          <Link href="/account#notifications">Notification settings <span aria-hidden="true">→</span></Link>
-          <Link href="/trust">Help and trust centre <span aria-hidden="true">→</span></Link>
+          <Link href="/" onClick={closeUtilities}>Back to website <span aria-hidden="true">→</span></Link>
+          <Link href="/account#notifications" onClick={closeUtilities}>Notification settings <span aria-hidden="true">→</span></Link>
+          <Link href="/trust" onClick={closeUtilities}>Help and trust centre <span aria-hidden="true">→</span></Link>
         </nav>
       </details>
     </header>

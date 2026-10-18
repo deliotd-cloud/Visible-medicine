@@ -32,6 +32,7 @@ export function ClinicalReviewInbox() {
   const pendingPaginationFocus = useRef<PaginationFocus | null>(null);
   const pendingResetFocus = useRef<Pick<PaginationContext, 'generation' | 'viewEpoch' | 'context' | 'revision'> | null>(null);
   const searchInput = useRef<HTMLInputElement | null>(null);
+  const resultsList = useRef<HTMLOListElement | null>(null);
   const scanAction = useRef<HTMLButtonElement | null>(null);
   const refreshAction = useRef<HTMLButtonElement | null>(null);
   const publish = (value: Scan) => { current.current = value; setScan(value); };
@@ -162,16 +163,20 @@ export function ClinicalReviewInbox() {
     if (pending.generation !== pageContext.generation || pending.viewEpoch !== pageContext.viewEpoch || pending.context !== pageContext.context || pending.revision !== pageContext.revision) {
       pendingPaginationFocus.current = null; return;
     }
-    // Commit-phase focus scrolls to the new rows only after explicit pagination;
-    // typing, background loading and abandoned renders never move focus.
+    // Only a committed explicit page change resets the inner list and moves focus.
+    // Typing, background loading and abandoned renders leave both in place.
     if (pending.target === visiblePage && pending.from !== visiblePage) {
-      pendingPaginationFocus.current = null; node.focus();
+      pendingPaginationFocus.current = null;
+      if (resultsList.current) resultsList.current.scrollTop = 0;
+      node.focus();
     }
   };
 
   return <section className="clinical-review-inbox" aria-labelledby="clinical-review-inbox-title">
     <header><div><p className="clinical-review-inbox-eyebrow">Private workspace</p><h2 id="clinical-review-inbox-title">Clinical Review</h2>
       <p>Review outstanding anatomy and teaching. Each decision applies only to its exact revision.</p></div></header>
+    <div className="clinical-review-inbox-workbench">
+    <div className="clinical-review-inbox-tools">
     <details className="clinical-review-inbox-browse"><summary>Browse review areas</summary>
     <nav className="clinical-review-inbox-areas" aria-label="Browse clinical review worksheets">
       <a href="/workspace/atlas-review" target="_blank" rel="noopener noreferrer" aria-label="3D anatomy and teaching worksheets (opens in a new tab)">3D anatomy &amp; teaching<span aria-hidden="true"> ↗</span></a>
@@ -180,6 +185,7 @@ export function ClinicalReviewInbox() {
       <a href="/workspace/atlas-review/source-comparisons" target="_blank" rel="noopener noreferrer" aria-label="Held source comparisons (opens in a new tab)">Held source comparisons<span aria-hidden="true"> ↗</span></a>
       <a href="/workspace/review-candidates" target="_blank" rel="noopener noreferrer" aria-label="Saved read-only inspections (opens in a new tab)">Saved inspections · read-only<span aria-hidden="true"> ↗</span></a>
     </nav>
+    <p className="clinical-review-inbox-disclosure">Worksheet links open in a new tab so unsaved work here stays in place. Capabilities depend on each worksheet.</p>
     </details>
     <div className="clinical-review-inbox-controls">
       {scan.phase === 'idle' ? <button type="button" onClick={() => run(true)}>Load all review statuses</button> : null}
@@ -206,17 +212,22 @@ export function ClinicalReviewInbox() {
         {filtersDirty && <button type="button" className="secondary clinical-review-inbox-reset" onClick={resetFilters}>Reset filters</button>}
       </div>
       {(showChangeFilter || rows.some(item => item.changeReason)) && <details className="clinical-review-inbox-change-help"><summary>About change reasons</summary><p>Labels use recorded change metadata. They are not an old text diff, clinical urgency or approval.</p></details>}
-      <p className="clinical-review-inbox-disclosure">Worksheet links open in a new tab so unsaved work here stays in place. Capabilities depend on each worksheet.</p>
+    </>}
+    </div>
+    <div className="clinical-review-inbox-results-pane">
+    {loaded > 0 && <>
       <div className="clinical-review-inbox-result-bar">
         <p id="clinical-review-inbox-results-summary" ref={commitResults} tabIndex={-1} role="status" aria-live="polite" aria-atomic="true" className="clinical-review-inbox-result">Showing {filtered.length ? (visiblePage - 1) * PAGE_SIZE + 1 : 0}–{Math.min(visiblePage * PAGE_SIZE, filtered.length)} of {filtered.length} matching loaded rows.</p>
         {rowPages > 1 && <nav className="clinical-review-inbox-pages" aria-label="Inbox rows"><button type="button" aria-label="Previous page of review results" aria-controls="clinical-review-inbox-results" disabled={visiblePage === 1} onClick={() => changeRowPage(-1)}>Previous</button><span>Page {visiblePage} of {rowPages}</span><button type="button" aria-label="Next page of review results" aria-controls="clinical-review-inbox-results" disabled={visiblePage === rowPages} onClick={() => changeRowPage(1)}>Next</button></nav>}
       </div>
-      {rows.length ? <ol id="clinical-review-inbox-results" aria-labelledby="clinical-review-inbox-results-summary" className="clinical-review-inbox-list" start={(visiblePage - 1) * PAGE_SIZE + 1}>{rows.map(item => <li key={item.key}>
+      {rows.length ? <ol id="clinical-review-inbox-results" ref={resultsList} tabIndex={0} aria-labelledby="clinical-review-inbox-results-summary" className="clinical-review-inbox-list" start={(visiblePage - 1) * PAGE_SIZE + 1}>{rows.map(item => <li key={item.key}>
         <div className="clinical-review-inbox-rowhead"><a href={item.href} target="_blank" rel="noopener noreferrer" aria-label={`${item.title}, ${item.trackLabel} worksheet (opens in a new tab)`}><span>{item.title}<small>{item.scopeLabel} · {item.trackLabel}</small></span><span className="clinical-review-inbox-open" aria-hidden="true">Review ↗</span></a><span className={`clinical-review-inbox-status status-${item.status}`}>{inboxStatusLabels[item.status]}</span></div>
         <div className="clinical-review-inbox-rowdetail"><span className="clinical-review-inbox-capability">{capabilityLabel[item.capability]}</span>{item.changeReason && <span className="clinical-review-inbox-change-reason">{changeReasonLabel[item.changeReason]}</span>}<details><summary>Exact worksheet revision</summary><p>{inboxAreaLabels[item.area]}</p><code>{item.revision ?? 'Unavailable'}</code></details></div>
       </li>)}</ol> : <p className="clinical-review-inbox-empty">{filtersDirty ? 'No loaded rows match these filters. Use Reset filters to return to known items needing review.' : scan.phase === 'complete' ? 'No known review items need attention in this completed scan. This does not record an approval.' : 'No known review items are loaded yet. This scan is incomplete.'}</p>}
     </>}
     {loaded === 0 && scan.phase !== 'idle' && scan.phase !== 'invalid' && <p className="clinical-review-inbox-empty">{scan.phase === 'complete' ? 'No known review items need attention in this completed scan. This does not record an approval.' : 'No status rows are loaded yet. This scan is incomplete.'}</p>}
+    </div>
+    </div>
     <details className="clinical-review-inbox-other"><summary>Other review workflows (not included in these counts)</summary>
       <p>This scan covers 3D anatomy and teaching, CT/MRI head learning, native MRI guide teaching, and held source comparisons. It does not cover every platform approval. Specialist CT-head mask and accepted-boundary sign-off remains separate.</p>
       <ul>

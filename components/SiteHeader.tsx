@@ -244,7 +244,7 @@ export function SiteHeader({ signedIn }: { signedIn: boolean }) {
       </nav>
       <Link className="search-link" href="/search" aria-label="Search Visible Medicine" aria-current={pathname === "/search" ? "page" : undefined}>⌕ <span>Search</span></Link>
       <Link className="account-entry-link" href={accountHref} aria-current={isActive(accountHref) ? "page" : undefined}>{signedIn ? "Profile" : "Sign in"}</Link>
-      {signedIn && <details className="workspace-switcher" open={workspaceOpen} ref={workspaceRef}><summary aria-expanded={workspaceOpen} onClick={(event) => { event.preventDefault(); setOpenMenu(null); setWorkspaceOpen(!workspaceOpen); }} ref={workspaceToggleRef}>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning" onClick={() => closeWorkspace()}><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace" onClick={() => closeWorkspace()}><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace" onClick={() => closeWorkspace()}><b>Institution</b><span>People, controls and readiness</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account" onClick={() => closeWorkspace()}><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>}
+      {signedIn && <details className="workspace-switcher" open={workspaceOpen} ref={workspaceRef}><summary aria-expanded={workspaceOpen} onClick={(event) => { event.preventDefault(); setOpenMenu(null); setWorkspaceOpen(!workspaceOpen); }} ref={workspaceToggleRef}>Open workspace <span aria-hidden="true">⌄</span></summary><nav aria-label="Choose workspace"><Link aria-current={isActive("/my-learning") ? "page" : undefined} href="/my-learning" onClick={() => closeWorkspace()}><b>Learn</b><span>Progress, revision and certificates</span></Link><Link aria-current={pathname.startsWith("/studio/") ? "page" : undefined} href="/studio/workspace" onClick={() => closeWorkspace()}><b>Studio</b><span>Courses, workbooks and publishing</span></Link><Link aria-current={isActive("/workspace") ? "page" : undefined} href="/workspace" onClick={() => closeWorkspace()}><b>Workspace</b><span>Review and administration, when authorized</span></Link><Link aria-current={isActive("/account") ? "page" : undefined} href="/account" onClick={() => closeWorkspace()}><b>Account</b><span>Profile, export and learner rights</span></Link></nav></details>}
       <details className="mobile-nav">
         <summary><span className="menu-label">Menu</span><span className="close-label">Close</span></summary>
         <nav aria-label="Mobile navigation">
@@ -264,7 +264,7 @@ export function SiteHeader({ signedIn }: { signedIn: boolean }) {
           ], [
             "Studio workspace", "/studio/workspace",
           ], [
-            "Institution workspace", "/workspace",
+            "Workspace", "/workspace",
           ], [
             "Account & data", "/account",
           ]] as const).map(([label, href]) => (

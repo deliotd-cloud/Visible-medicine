@@ -1,4 +1,6 @@
 .clinical-review-inbox { max-width:1200px; margin:1.25rem auto 2rem; padding:1.4rem 1.5rem; border:1px solid #c4d4d1; border-radius:12px; background:#f8fbfa; color:#132c32; }
+.clinical-review-inbox-workbench { min-width:0; }
+.clinical-review-inbox-tools,.clinical-review-inbox-results-pane { min-width:0; }
 .clinical-review-inbox h2 { margin:.1rem 0 .45rem; font-size:1.55rem; }
 .clinical-review-inbox header p { max-width:88ch; margin:.35rem 0; line-height:1.5; }
 .clinical-review-inbox .clinical-review-inbox-eyebrow { margin:0; color:#087b6c; font-size:.75rem; font-weight:750; letter-spacing:.08em; text-transform:uppercase; }
@@ -56,3 +58,12 @@
 .clinical-review-inbox-other a { color:#05695e; text-decoration:underline; text-underline-offset:3px; }
 @media(max-width:800px) { .clinical-review-inbox-filters,.clinical-review-inbox-filters.has-change-filter { grid-template-columns:1fr; } .clinical-review-inbox-list { grid-template-columns:1fr; } }
 @media(max-width:600px) { .clinical-review-inbox { padding:1rem; margin:1rem; } .clinical-review-inbox-rowhead { flex-wrap:wrap; } .clinical-review-inbox-status { max-width:none; } }
+@media(min-width:901px) and (min-height:681px) {
+  .clinical-review-inbox-workbench { display:grid; grid-template-columns:minmax(15.5rem, .8fr) minmax(0, 1.9fr); align-items:start; gap:1rem; }
+  .clinical-review-inbox-tools .clinical-review-inbox-filters,.clinical-review-inbox-tools .clinical-review-inbox-filters.has-change-filter { grid-template-columns:minmax(0,1fr); }
+  .clinical-review-inbox-list { max-height:min(48vh,30rem); overflow-x:hidden; overflow-y:auto; overscroll-behavior:contain; scrollbar-gutter:stable; }
+}
+@media(min-width:1100px) and (min-height:681px) {
+  .clinical-review-inbox-tools .clinical-review-inbox-filters,.clinical-review-inbox-tools .clinical-review-inbox-filters.has-change-filter { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .clinical-review-inbox-filters label:first-child { grid-column:1 / -1; }
+}
