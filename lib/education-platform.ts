@@ -295,13 +295,14 @@ export async function getInvitationCourse(codeValue: unknown, auth?: AuthContext
   if (!/^ELV-[A-F0-9]{12}$/.test(code)) return null;
   const row = await env.DB.prepare(
     `SELECT cr.*, c.code,
-            COUNT(crw.workbook_id) AS workbook_count,
+            COUNT(CASE WHEN w.status='published' THEN crw.workbook_id END) AS workbook_count,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbooks w2 ON w2.id=crw2.workbook_id WHERE crw2.release_id=cr.id AND w2.status='published' ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
             (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
             (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             MAX(CASE WHEN e.status='active' THEN 1 ELSE 0 END) AS enrolled
        FROM course_invitations ci JOIN course_releases cr ON cr.id=ci.release_id JOIN courses c ON c.id=cr.course_id
        LEFT JOIN course_release_workbooks crw ON crw.release_id=cr.id
+       LEFT JOIN workbooks w ON w.id=crw.workbook_id
        LEFT JOIN enrolments e ON e.course_id=cr.course_id AND e.user_id=?
       WHERE ci.code_hash=? AND ci.status='active' AND ci.uses < ci.max_uses AND ci.expires_at > ? AND cr.status='published'
       GROUP BY cr.id`,
@@ -582,7 +583,7 @@ export async function getLearnerEnrolments(auth: AuthContext) {
   const rows = await env.DB.prepare(
     `SELECT cr.id, cr.slug, cr.title, cr.summary, cr.level, cr.duration_label, cr.publisher_name,
             (SELECT crw2.workbook_id FROM course_release_workbooks crw2 JOIN workbook_assignments wa2 ON wa2.workbook_id=crw2.workbook_id AND wa2.learner_id=e.user_id AND wa2.status='active' WHERE crw2.release_id=cr.id ORDER BY crw2.position LIMIT 1) AS first_workbook_id,
-            (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
+            (SELECT wp2.workbook_id FROM course_release_workbooks crw3 JOIN workbooks w3 ON w3.id=crw3.workbook_id AND w3.status='published' JOIN workbook_progress wp2 ON wp2.workbook_id=crw3.workbook_id AND wp2.learner_id=e.user_id WHERE crw3.release_id=cr.id ORDER BY wp2.last_activity_at DESC LIMIT 1) AS resume_workbook_id,
             (SELECT ts.workbook_id FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_workbook_id,
             (SELECT ts.started_at FROM course_release_workbooks live_crw JOIN teaching_sessions ts ON ts.workbook_id=live_crw.workbook_id AND ts.state='live' WHERE live_crw.release_id=cr.id ORDER BY ts.started_at DESC LIMIT 1) AS live_started_at,
             COUNT(DISTINCT CASE WHEN wa.status='active' THEN crw.workbook_id END) AS workbook_count,

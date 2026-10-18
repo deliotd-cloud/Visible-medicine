@@ -3,7 +3,7 @@
   "scope": "application-source-only",
   "sourceWebsiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
   "fullLocalSourceManifestSha256": "ea67c2c23aa605b3b2ead5e53b85f34c0b6ccb1c1108aa132758fc4ffef2b332",
-  "screenedSnapshotParent": "079f8b45e00f7416067028e45da62ea522d736b4",
+  "screenedSnapshotParent": "46d1a21bc5cb0d2ba7a9d065d102a61fc78d4104",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -17122,10 +17122,10 @@
     },
     {
       "path": "lib/education-platform.ts",
-      "bytes": 96066,
-      "sha256": "ecdc35db9dcd4635871aee495734ce62ea102cc7b70c552a8c1a3e608dc2476a",
+      "bytes": 96227,
+      "sha256": "cf830daca1d2671368d1cf07770964fae493c9625d1ad36f546d0230de21e1ef",
       "mode": "100644",
-      "gitBlob": "7c33e2535a795b823e237307c7f072d6613e441e"
+      "gitBlob": "d353d0548f1ffde73c9f0037dda0346b137b821c"
     },
     {
       "path": "lib/education-presentation-repository.ts",
@@ -24539,6 +24539,13 @@
       "sha256": "7af6d37edc64b4d0b4d7a06536187ea7c98612cc1eb9148cda97302eebaf2b97",
       "mode": "100644",
       "gitBlob": "6f8821df8778aa785405ee120802881bdae8de84"
+    },
+    {
+      "path": "tests/course-entry-retirement.test.mjs",
+      "bytes": 13937,
+      "sha256": "b865dbcc311f8f59102f59f89b67e174fe3108a70eaac03618f827bb8a4bc203",
+      "mode": "100644",
+      "gitBlob": "cdcc23dd6d4e8b66aa3a9048c35805d72215bc1f"
     },
     {
       "path": "tests/course-invitation-hold.test.mjs",
@@ -32693,7 +32700,7 @@
       "bytes": 3982
     }
   ],
-  "at": "2026-10-18T17:04:20.506Z",
+  "at": "2026-10-18T17:24:19.975Z",
   "sourceOnlyRetiredCourseAndFooterDelta": [
     {
       "path": "components/SiteFooter.tsx",
@@ -32719,6 +32726,18 @@
       "path": "tests/retired-course-links.test.mjs",
       "bytes": 11021,
       "sha256": "c348e8e8b4aa071874d94b6b7c870bd35c40eaa030cbdb35b1ffc78b158bbd78"
+    }
+  ],
+  "sourceOnlyRetiredEntryDelta": [
+    {
+      "path": "lib/education-platform.ts",
+      "bytes": 96227,
+      "sha256": "cf830daca1d2671368d1cf07770964fae493c9625d1ad36f546d0230de21e1ef"
+    },
+    {
+      "path": "tests/course-entry-retirement.test.mjs",
+      "bytes": 13937,
+      "sha256": "b865dbcc311f8f59102f59f89b67e174fe3108a70eaac03618f827bb8a4bc203"
     }
   ]
 }
