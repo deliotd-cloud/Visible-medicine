@@ -8,7 +8,7 @@ const ts = requireSite('typescript');
 const shim = await import(new URL('../node_modules/vinext/dist/server/app-history-state.js', import.meta.url));
 const candidate = readFileSync(new URL('../components/StudioCourseEditor.tsx', import.meta.url), 'utf8');
 // Deliberate exact-source mutant: installed app-owned pushes skip the hook update.
-const v2 = candidate.replace('window.history.pushState(null,', 'window.history.pushState(window.history.state,')
+const v2 = candidate.replace('window.history.pushState({ ...window.history.state, __vinext_externalHistoryState: true },', 'window.history.pushState(window.history.state,')
   .replace('    setSection(next);', '    // Removed local update for the regression probe.');
 assert.notEqual(v2, candidate);
 
@@ -87,7 +87,7 @@ function fixture(source, initialUrl) {
   }
   function button(name) { return find(render(), node => node.type === 'button' && node.props?.['aria-controls'] === 'course-' + name); }
   function pane() {
-    for (const name of ['content', 'preview', 'review']) if (button(name)?.props['aria-pressed']) return name;
+    for (const name of ['content', 'preview', 'review']) if (button(name)?.props['aria-selected']) return name;
     throw Error('No selected pane');
   }
   function click(name) { button(name).props.onClick(); return pane(); }
@@ -118,8 +118,8 @@ test('v4 uses caller-owned history and retains pane behavior, search and hash', 
     assert.equal(app.click('preview'), 'preview'); assert.equal(app.click('review'), 'review');
     assert.equal(app.click('review'), 'review'); assert.equal(app.pushes, 2);
     assert.equal(app.window.location.href, 'https://example.test/studio/courses/course-1?source=workspace&pane=review#detail');
-    assert.deepEqual(app.window.history.state, shim.createExternalHistoryStatePreservingMetadata(null, { host: 'preserved', __vinext_historyIndex: 7 }));
-    assert.equal('host' in app.window.history.state, false);
+    assert.deepEqual(app.window.history.state, shim.createExternalHistoryStatePreservingMetadata({ host: 'preserved', __vinext_historyIndex: 7, __vinext_externalHistoryState: true }, { host: 'preserved', __vinext_historyIndex: 7 }));
+    assert.equal(app.window.history.state.host, 'preserved');
     app.window.history.back(); assert.equal(app.pane(), 'preview');
     app.window.history.back(); assert.equal(app.pane(), 'content');
     app.window.history.forward(); assert.equal(app.pane(), 'preview');

@@ -12,7 +12,8 @@ const { shouldCommitPopstateUrlWithoutNavigation } = await moduleAt('app-browser
 const { createBasePathStrippedPathAndSearch, createSnapshotPathAndSearch } = await moduleAt('app-browser-navigation-controller.js');
 const candidate = readFileSync(join(site, 'components/StudioCourseEditor.tsx'), 'utf8').replaceAll('\r\n', '\n').trimEnd();
 // Explicit copied-state mutant preserves the known v3 failure without an E path.
-const baseline = candidate.replace('window.history.pushState(null,', 'window.history.pushState(window.history.state,');
+const externalState = '{ ...window.history.state, __vinext_externalHistoryState: true }';
+const baseline = candidate.replace(`window.history.pushState(${externalState},`, 'window.history.pushState(window.history.state,');
 assert.notEqual(baseline, candidate);
 const initial = '/studio/courses/course-1?source=workspace#detail';
 const path = '/studio/courses/course-1';
@@ -53,8 +54,8 @@ function popDecision(app, entry, href) {
 }
 
 test('candidate is one public History API argument change and keeps the local pane setter', () => {
-  assert.equal(candidate.replace('window.history.pushState(null,', 'window.history.pushState(window.history.state,'), baseline);
-  assert.match(candidate, /window\.history\.pushState\(null, "",/);
+  assert.equal(candidate.replace(`window.history.pushState(${externalState},`, 'window.history.pushState(window.history.state,'), baseline);
+  assert.match(candidate, /window\.history\.pushState\(\{ \.\.\.window\.history\.state, __vinext_externalHistoryState: true \}, "",/);
   assert.match(candidate, /\n    setSection\(next\);/);
   assert.match(candidate, /url\.searchParams\.set\("pane", next\)/);
   assert.match(candidate, /\$\{url\.pathname\}\$\{url\.search\}\$\{url\.hash\}/);

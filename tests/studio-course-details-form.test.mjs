@@ -120,12 +120,12 @@ test('course options expose a bounded details form and preserve the active pane 
     const panel = walk(tree, node => node.props.id === 'course-details-editor');
     assert.equal(panel.props.hidden, true);
     assert.ok(walk(panel, node => node.type === h.forms.EditCourseDetailsForm));
-    assert.equal(walk(tree, node => node.props['aria-controls'] === 'course-review').props['aria-pressed'], true);
+    assert.equal(walk(tree, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-review').props['aria-selected'], true);
     assert.equal(walk(tree, node => node.props.id === 'course-content').props.hidden, true);
     toggle.props.onClick();
     const opened = h.renderEditor();
     assert.equal(walk(opened, node => node.props.id === 'course-details-editor').props.hidden, false);
-    assert.equal(walk(opened, node => node.props['aria-controls'] === 'course-review').props['aria-pressed'], true);
+    assert.equal(walk(opened, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-review').props['aria-selected'], true);
     walk(opened, node => node.props['aria-controls'] === 'course-details-editor').props.onClick();
     assert.equal(walk(h.renderEditor(), node => node.props.id === 'course-details-editor').props.hidden, true);
   } finally {h.dispose();}

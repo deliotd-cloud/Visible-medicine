@@ -57,12 +57,12 @@ test('course editor opens on Content with Preview and Review hidden', () => {
     './StudioForms': forms,
   });
   const html = renderToStaticMarkup(React.createElement(StudioCourseEditor, { course, workbooks: [workbook], releases: [release] }));
-  assert.match(html, /<div class="course-editor-tabs" role="group" aria-label="Course editor">/);
+  assert.match(html, /<div class="course-editor-tabs"><div class="course-editor-tablist" role="tablist" aria-label="Course editor">/);
   assert.doesNotMatch(html, /<nav class="course-editor-tabs"/);
-  assert.match(html, /<button type="button" aria-pressed="true" aria-controls="course-content">Content<\/button>/);
-  assert.match(html, /<div id="course-content">/);
-  assert.match(html, /<section id="course-preview" class="course-editor-panel" hidden="">/);
-  assert.match(html, /<section id="course-review" class="course-editor-panel" hidden="">/);
+  assert.match(html, /<button type="button" role="tab" id="course-content-tab" data-course-pane="content" aria-selected="true" aria-controls="course-content" tabindex="0">Content<\/button>/);
+  assert.match(html, /<div id="course-content" role="tabpanel" aria-labelledby="course-content-tab" tabindex="0">/);
+  assert.match(html, /<section id="course-preview" role="tabpanel" aria-labelledby="course-preview-tab" tabindex="0" class="course-editor-panel" hidden="">/);
+  assert.match(html, /<section id="course-review" role="tabpanel" aria-labelledby="course-review-tab" tabindex="0" class="course-editor-panel" hidden="">/);
 });
 
 test('outline and release preview links encode exact identifiers', () => {

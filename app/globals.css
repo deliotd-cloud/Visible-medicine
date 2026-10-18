@@ -632,8 +632,10 @@ body.splash-open { overflow: hidden; }
 .course-editor { padding: 0 28px 28px; }
 .course-editor [hidden], .studio-form [hidden] { display: none !important; }
 .course-editor-tabs { display: flex; align-items: center; gap: 8px; padding: 12px 0; border-bottom: 1px solid var(--line); margin-bottom: 24px; flex-wrap: wrap; }
-.course-editor-tabs > button { padding: 10px 15px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; }
-.course-editor-tabs > button[aria-pressed="true"] { color: var(--ink); background: #e1efea; border-color: #b9d5cb; font-weight: 650; }
+.course-editor-tablist { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.course-editor-tablist > button { padding: 10px 15px; border: 1px solid transparent; border-radius: 8px; background: transparent; color: var(--muted); cursor: pointer; }
+.course-editor-tablist > button[aria-selected="true"] { color: var(--ink); background: #e1efea; border-color: #b9d5cb; font-weight: 650; }
+.course-editor-tablist > button:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
 .course-options { position: relative; margin-left: auto; flex: 0 0 auto; font-size: 12px; }
 .course-options summary, .course-release-settings summary { cursor: pointer; padding: 10px 0; }
 .course-options > summary { padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; }
