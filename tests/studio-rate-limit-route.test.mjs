@@ -67,6 +67,7 @@ for(const [name,path]of Object.entries(paths)){
 }
 function reset(){state={auth,calls:[],reads:0,organizationId:expectedStudioContext.organizationId};}
 function request(name,body='{"action":"create-course","userId":"body-forged"}',headers={},withStudioContext=true){
+ if(name==='lecture'&&!baseline&&body==='{"action":"create-course","userId":"body-forged"}')body=JSON.stringify({action:'save',id:'synthetic-workbook',expectedVersion:4,title:'Synthetic lecture',slides:[],userId:'body-forged',expectedStudioContext});
  if(name==='studio'&&!baseline&&withStudioContext){
   try{const input=JSON.parse(body);if(input&&typeof input==='object'&&['create-course','create-course-from-template','update-course','create-workbook','save-release'].includes(input.action))body=JSON.stringify({...input,expectedStudioContext});}catch{}
  }
@@ -89,25 +90,25 @@ if(baseline){
  });
 }else{
  for(const name of Object.keys(routes)){
-  test(`${name}: rate429 before services; lecture before actual parser`,async()=>{
+  test(`${name}: rate429 after lecture parsing and context check, before mutation`,async()=>{
    reset();state.rateError=new InstitutionOperationsError('Please wait.',429);
    const {response}=await invoke(name);assert.equal(response.status,429);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(await response.json(),{error:'Please wait.'});
-   assert.deepEqual(state.calls,name==='studio'?['auth','context-session','context','rate']:['auth','rate']);assert.equal(state.reads,name==='studio'?1:0);
+   assert.deepEqual(state.calls,['auth','context-session','context','rate']);assert.equal(state.reads,1);
   });
   test(`${name}: known rate500 stays private/no-store and blocks services`,async()=>{
    reset();state.rateError=new InstitutionOperationsError('The request limit could not be checked.',500);
-   const {response}=await invoke(name);assert.equal(response.status,500);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(await response.json(),{error:'The request limit could not be checked.'});assert.deepEqual(state.calls,name==='studio'?['auth','context-session','context','rate']:['auth','rate']);
+   const {response}=await invoke(name);assert.equal(response.status,500);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(await response.json(),{error:'The request limit could not be checked.'});assert.deepEqual(state.calls,['auth','context-session','context','rate']);
   });
   test(`${name}: unexpected secret error returns redacted private500`,async()=>{
    reset();state.rateError=new Error('SECRET_SYNTHETIC_TOKEN');
-   const {response,logs}=await invoke(name);assert.equal(response.status,500);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.doesNotMatch(await response.text(),/SECRET_SYNTHETIC_TOKEN/);assert.equal(logs.length,1);assert.deepEqual(logs[0][1],{type:'Error'});assert.deepEqual(state.calls,name==='studio'?['auth','context-session','context','rate']:['auth','rate']);
+   const {response,logs}=await invoke(name);assert.equal(response.status,500);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.doesNotMatch(await response.text(),/SECRET_SYNTHETIC_TOKEN/);assert.equal(logs.length,1);assert.deepEqual(logs[0][1],{type:'Error'});assert.deepEqual(state.calls,['auth','context-session','context','rate']);
   });
   test(`${name}: existing domain error preserved`,async()=>{
    reset();state.mutationError=name==='studio'?new EducationPlatformError('Existing education denial.',403):new LectureError('Existing lecture denial.',409);
    const {response}=await invoke(name);assert.equal(response.status,name==='studio'?403:409);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(await response.json(),{error:state.mutationError.message});assert.ok(!state.calls.includes('snapshot'));
   });
   test(`${name}: authenticated success uses server actor`,async()=>{
-   reset();const {response}=await invoke(name);assert.equal(response.status,200);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(state.rateArgs,[auth.userId,'studio-write',45,60]);assert.ok(state.calls.includes('mutation'));assert.equal(state.input.userId,'body-forged');if(name==='studio')assert.deepEqual(state.input.expectedStudioContext,expectedStudioContext);assert.equal(state.reads,1);
+   reset();const {response}=await invoke(name);assert.equal(response.status,200);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(state.rateArgs,[auth.userId,'studio-write',45,60]);assert.ok(state.calls.includes('mutation'));assert.equal(state.input.userId,'body-forged');if(name==='studio')assert.deepEqual(state.input.expectedStudioContext,expectedStudioContext);else assert.equal(state.input.expectedStudioContext,undefined);assert.equal(state.reads,1);
   });
   test(`${name}: authentication401 refuses rate and mutation`,async()=>{
    reset();state.auth=null;const {response}=await invoke(name);assert.equal(response.status,401);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(state.calls,['auth']);assert.equal(state.reads,name==='studio'?1:0);
@@ -115,7 +116,7 @@ if(baseline){
  }
  test('lecture actual parser/security existing errors retained',async()=>{
   for(const [body,headers,status]of [['{}',{origin:'https://foreign.invalid'},403],['{}',{'content-type':'text/plain'},415],['{',{},422]]){
-   reset();const{response}=await invoke('lecture',request('lecture',body,headers));assert.equal(response.status,status);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(state.calls,['auth','rate']);
+   reset();const{response}=await invoke('lecture',request('lecture',body,headers));assert.equal(response.status,status);assert.equal(response.headers.get('cache-control'),'private, no-store');assert.deepEqual(state.calls,['auth']);
   }
  });
  test('studio update-course dispatches through guarded POST and returns courseId',async()=>{

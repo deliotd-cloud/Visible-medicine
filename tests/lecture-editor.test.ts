@@ -1,3 +1,5 @@
+import {expectedStudioContext,comparisonResponse,isComparison,installComparisonFetch} from './lecture-context-fixture.mjs';
+installComparisonFetch();
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import assert from "node:assert/strict";
 import test from "node:test";
@@ -51,7 +53,7 @@ const initial = {
 const outline = [{ id: "lecture / 1", title: "Thoracic anatomy" }, { id: "case-2", title: "Chest case" }];
 
 test('image-only anatomy can be authored and saved without inventing a 3D target',async()=>{
- const hooks=hookHarness(),{LectureEditor}=components(hooks.react),props={initial,courseOutline:outline};
+ const hooks=hookHarness(),{LectureEditor}=components(hooks.react),props={initial,courseOutline:outline,expectedStudioContext};
  const originalFetch=globalThis.fetch,requests:any[]=[];
  globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{
   const body=JSON.parse(String(request.body));requests.push(body);
@@ -91,7 +93,7 @@ for(const conceptId of ['cerebellum-left-hemisphere','cerebellum-right-hemispher
 });
 
 test('anatomy picker saves the exact optional pin and removal restores a legacy-shaped slide',async()=>{
-  const hooks=hookHarness(),{LectureEditor}=components(hooks.react),props={initial,courseOutline:outline};
+  const hooks=hookHarness(),{LectureEditor}=components(hooks.react),props={initial,courseOutline:outline,expectedStudioContext};
   const originalFetch=globalThis.fetch,requests:any[]=[];
   globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{
     const body=JSON.parse(String(request.body));requests.push(body);
@@ -117,7 +119,7 @@ test('stale lecture anatomy is explicit and blocks review while published player
   const current=createLectureAnatomyReference('brainstem-pons')!;
   const stale={...current,headRevision:'a'.repeat(64)};
   const hooks=hookHarness(),{LectureEditor,LecturePlayer}=components(hooks.react);
-  const props={initial:{...initial,slides:[{...slide,anatomyReference:stale}]},courseOutline:outline};
+  const props={initial:{...initial,slides:[{...slide,anatomyReference:stale}]},courseOutline:outline,expectedStudioContext};
   let tree=hooks.render(LectureEditor,props);
   const picker=descendants(tree).find(node=>node.type==='select')!;
   assert.equal(picker.props.value,'unavailable');
@@ -164,7 +166,7 @@ test('all lecture scan destinations retain the saved reference revision and exac
 test('anatomy correction requires an explicit confirmation and preserves the revision contract',async()=>{
   const stale={...createLectureAnatomyReference('brainstem-pons')!,headRevision:'a'.repeat(64)};
   const submitted={...initial,status:'approved',canEdit:false,canPublish:true,canReopenAnatomy:true,slides:[{...slide,anatomyReference:stale}]};
-  const props={initial:submitted,courseOutline:outline};
+  const props={initial:submitted,courseOutline:outline,expectedStudioContext};
   const hooks=hookHarness(),{LectureEditor}=components(hooks.react);
   const oldFetch=globalThis.fetch,oldWindow=Object.getOwnPropertyDescriptor(globalThis,'window'),requests:any[]=[];
   let consent=false;
@@ -178,13 +180,13 @@ test('anatomy correction requires an explicit confirmation and preserves the rev
     const reopen=()=>descendants(tree).find(node=>node.type==='button'&&textOf(node)==='Reopen to update anatomy');
     assert.ok(reopen());reopen()!.props.onClick();assert.equal(requests.length,0);
     consent=true;reopen()!.props.onClick();await new Promise(resolve=>setImmediate(resolve));
-    assert.deepEqual(requests,[{action:'reopen-anatomy',id:initial.id,expectedVersion:4}]);
+    assert.deepEqual(requests,[{action:'reopen-anatomy',id:initial.id,expectedVersion:4,expectedStudioContext}]);
     tree=hooks.render(LectureEditor,props);assert.equal(reopen(),undefined);
     assert.match(textOf(tree),/request fresh independent review/);
     assert.equal(descendants(tree).find(node=>node.type==='select'&&node.props['aria-label']==='Head Atlas structure')!.props.disabled,false);
     for(const other of [{...submitted,canReopenAnatomy:false},{...submitted,status:'published'}]){
       const otherHooks=hookHarness(),Editor=components(otherHooks.react).LectureEditor;
-      assert(!descendants(otherHooks.render(Editor,{initial:other,courseOutline:outline})).some(node=>node.type==='button'&&textOf(node)==='Reopen to update anatomy'));
+      assert(!descendants(otherHooks.render(Editor,{initial:other,courseOutline:outline,expectedStudioContext})).some(node=>node.type==='button'&&textOf(node)==='Reopen to update anatomy'));
     }
   }finally{
     globalThis.fetch=oldFetch;
@@ -243,7 +245,7 @@ function hookHarness() {
 
 test("lecture editor renders compact course, slide and content columns without a case dependency", () => {
   const { LectureEditor } = components();
-  const html = renderToStaticMarkup(React.createElement(LectureEditor, { initial, courseOutline: outline }));
+  const html = renderToStaticMarkup(React.createElement(LectureEditor, { initial, courseOutline: outline, expectedStudioContext }));
   assert.match(html, /class="lecture-editor-grid"/);
   assert.match(html, /aria-label="Course lesson outline"/);
   assert.match(html, /aria-label="Slide outline"/);
@@ -270,7 +272,7 @@ test("panel changes retain edits and saving sends the expected revision-bound pa
     return new Response(JSON.stringify({ ...initial, title: "Edited lecture", version: 5 }), { status: 200, headers: { "Content-Type": "application/json" } });
   }) as typeof fetch;
   try {
-    const props = { initial, courseOutline: outline };
+    const props = { initial, courseOutline: outline, expectedStudioContext };
     let tree = hooks.render(LectureEditor, props);
     const title = descendants(tree).find((node) => node.type === "input" && node.props.value === initial.title);
     assert.ok(title); title.props.onChange({ target: { value: "Edited lecture" } });
@@ -288,7 +290,7 @@ test("panel changes retain edits and saving sends the expected revision-bound pa
     assert.ok(save); assert.equal(save.props.disabled, false); save.props.onClick();
     await new Promise((resolve) => setImmediate(resolve));
     assert.equal(requests[0].url, "/api/studio/workbooks/lecture%20%2F%201/lecture");
-    assert.deepEqual(JSON.parse(String(requests[0].init?.body)), { action: "save", id: initial.id, expectedVersion: 4, title: "Edited lecture", slides: [slide] });
+    assert.deepEqual(JSON.parse(String(requests[0].init?.body)), { action: "save", id: initial.id, expectedVersion: 4, expectedStudioContext, title: "Edited lecture", slides: [slide] });
     tree = hooks.render(LectureEditor, props);
     assert.ok(descendants(tree).some((node) => node.props.role === "status" && textOf(node) === "Saved version 5"));
   } finally { globalThis.fetch = originalFetch; }
@@ -302,7 +304,7 @@ test("saving preserves the selected second slide", async () => {
   const originalFetch = globalThis.fetch;
   globalThis.fetch = (async () => new Response(JSON.stringify({ ...twoSlideView, title: "Edited lecture", version: 5 }), { status: 200, headers: { "Content-Type": "application/json" } })) as typeof fetch;
   try {
-    const props = { initial: twoSlideView, courseOutline: outline };
+    const props = { initial: twoSlideView, courseOutline: outline, expectedStudioContext };
     let tree = hooks.render(LectureEditor, props);
     const secondOutline = descendants(tree).find((node) => node.type === "button" && textOf(node).includes("Descending aorta"));
     assert.ok(secondOutline); secondOutline.props.onClick();
@@ -324,7 +326,7 @@ test("a conflict preserves dirty content and exposes an explicit reload", async 
   const originalFetch = globalThis.fetch;
   globalThis.fetch = (async () => new Response(JSON.stringify({ error: "Version conflict. Reload the saved lecture." }), { status: 409, headers: { "Content-Type": "application/json" } })) as typeof fetch;
   try {
-    const props = { initial, courseOutline: outline };
+    const props = { initial, courseOutline: outline, expectedStudioContext };
     let tree = hooks.render(LectureEditor, props);
     const body = descendants(tree).find((node) => node.type === "textarea" && node.props.value === slide.body);
     assert.ok(body); body.props.onChange({ target: { value: "Unsaved corrected content" } });
@@ -349,7 +351,7 @@ test("incomplete slides remain draft-saveable and malformed success responses do
     return new Response(JSON.stringify({ ok: true }), { status: 200, headers: { "Content-Type": "application/json" } });
   }) as typeof fetch;
   try {
-    const props = { initial: draft, courseOutline: outline };
+    const props = { initial: draft, courseOutline: outline, expectedStudioContext };
     let tree = hooks.render(LectureEditor, props);
     const title = descendants(tree).find((node) => node.type === "input" && node.props.value === initial.title);
     assert.ok(title); title.props.onChange({ target: { value: "  Edited draft title  " } });
@@ -358,7 +360,7 @@ test("incomplete slides remain draft-saveable and malformed success responses do
     const save = descendants(tree).find((node) => node.type === "button" && textOf(node) === "Save");
     assert.ok(save); assert.equal(save.props.disabled, false); save.props.onClick();
     await new Promise((resolve) => setImmediate(resolve));
-    assert.deepEqual(JSON.parse(String(requests[0].init?.body)), { action: "save", id: initial.id, expectedVersion: 4, title: "Edited draft title", slides: [{ ...slide, body: "" }] });
+    assert.deepEqual(JSON.parse(String(requests[0].init?.body)), { action: "save", id: initial.id, expectedVersion: 4, expectedStudioContext, title: "Edited draft title", slides: [{ ...slide, body: "" }] });
     tree = hooks.render(LectureEditor, props);
     assert.ok(descendants(tree).some((node) => node.props.role === "alert" && textOf(node) === "The lecture service returned an invalid response."));
     assert.ok(descendants(tree).some((node) => node.props.role === "status" && textOf(node) === "Unsaved changes"));
@@ -368,18 +370,18 @@ test("incomplete slides remain draft-saveable and malformed success responses do
 test("review is gated by complete saved slides and reviewer controls follow server permissions", () => {
   const hooks = hookHarness();
   const { LectureEditor } = components(hooks.react);
-  let tree = hooks.render(LectureEditor, { initial: { ...initial, slides: [{ ...slide, body: "" }] }, courseOutline: outline });
+  let tree = hooks.render(LectureEditor, { initial: { ...initial, slides: [{ ...slide, body: "" }] }, courseOutline: outline, expectedStudioContext });
   let reviewTab = descendants(tree).find((node) => node.type === "button" && textOf(node) === "Review");
-  assert.ok(reviewTab); reviewTab.props.onClick(); tree = hooks.render(LectureEditor, { initial: { ...initial, slides: [{ ...slide, body: "" }] }, courseOutline: outline });
+  assert.ok(reviewTab); reviewTab.props.onClick(); tree = hooks.render(LectureEditor, { initial: { ...initial, slides: [{ ...slide, body: "" }] }, courseOutline: outline, expectedStudioContext });
   const request = descendants(tree).find((node) => node.type === "button" && textOf(node) === "Request review");
   assert.ok(request); assert.equal(request.props.disabled, true);
   assert.ok(descendants(tree).some((node) => textOf(node).includes("Every slide must have both a title and content before review")));
 
   const reviewerHooks = hookHarness();
   const reviewer = components(reviewerHooks.react).LectureEditor;
-  tree = reviewerHooks.render(reviewer, { initial: { ...initial, status: "in-review", canEdit: false, canReview: true }, courseOutline: outline });
+  tree = reviewerHooks.render(reviewer, { initial: { ...initial, status: "in-review", canEdit: false, canReview: true }, courseOutline: outline, expectedStudioContext });
   reviewTab = descendants(tree).find((node) => node.type === "button" && textOf(node) === "Review");
-  assert.ok(reviewTab); reviewTab.props.onClick(); tree = reviewerHooks.render(reviewer, { initial: { ...initial, status: "in-review", canEdit: false, canReview: true }, courseOutline: outline });
+  assert.ok(reviewTab); reviewTab.props.onClick(); tree = reviewerHooks.render(reviewer, { initial: { ...initial, status: "in-review", canEdit: false, canReview: true }, courseOutline: outline, expectedStudioContext });
   assert.ok(descendants(tree).some((node) => node.type === "button" && textOf(node) === "Record review"));
   assert.ok(!descendants(tree).some((node) => node.type === "button" && textOf(node) === "Request review"));
   const comment = descendants(tree).find((node) => node.type === "textarea");
@@ -394,7 +396,7 @@ test("published lecture Review offers retirement and a verified receipt leaves h
     reviews: [{reviewerName:'Independent reviewer',decision:'approved',comment:'Evidence reviewed for this exact lecture.',version:4,createdAt:'2026-10-15T10:00:00.000Z'}],
     published: {version:4,integrityHash:'b'.repeat(64),publishedAt:'2026-10-15T11:00:00.000Z'},
   };
-  const props = {initial:published,courseOutline:outline};
+  const props = {initial:published,courseOutline:outline,expectedStudioContext};
   let tree = hooks.render(LectureEditor,props);
   const reviewTab = descendants(tree).find(node=>node.type==='button'&&textOf(node)==='Review');
   assert.ok(reviewTab);reviewTab.props.onClick();tree=hooks.render(LectureEditor,props);
@@ -432,7 +434,7 @@ test("published lecture Review offers retirement and a verified receipt leaves h
 test("saved but unpublished editor preview remains explicitly labelled draft", () => {
   const hooks = hookHarness();
   const { LectureEditor } = components(hooks.react);
-  const props = { initial, courseOutline: outline };
+  const props = { initial, courseOutline: outline, expectedStudioContext };
   let tree = hooks.render(LectureEditor, props);
   const preview = descendants(tree).find((node) => node.type === "button" && textOf(node) === "Preview");
   assert.ok(preview); preview.props.onClick(); tree = hooks.render(LectureEditor, props);

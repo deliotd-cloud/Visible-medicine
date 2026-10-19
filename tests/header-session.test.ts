@@ -244,6 +244,7 @@ test('actual root layout supplies only request-scoped boolean with no identity l
   let calls = 0;
   const { default: Layout, dynamic } = compile('app/layout.tsx', {
     'next/font/google': { Geist_Mono: () => ({ variable: 'font-fixture' }) },
+    'next/font/local': () => ({ variable: 'font-fixture' }),
     '../components/SiteFrame': { SiteFrame },
     '../components/SplashScreen': { SplashScreen: () => null },
     '../components/LocalAtlasDiagnostics': { LocalAtlasDiagnostics: () => null },

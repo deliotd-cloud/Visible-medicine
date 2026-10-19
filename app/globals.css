@@ -15,12 +15,13 @@
   --secondary-text-dark: #a5bbb5;
   --atlas-warm: #f6f1e7;
   --atlas-highlight: #dce9ad;
-  --font-geist-mono: var(--font-atlas-mono);
+  --font-geist-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+body { --font-geist-mono: var(--font-atlas-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace); }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 .site-shell { min-height: 100vh; overflow: hidden; }

@@ -48,9 +48,9 @@ const teaching = {
 
 const Link = ({ href, children, ...props }: any) => React.createElement("a", { href, ...props }, children);
 const WorkspaceContextBar = () => React.createElement("div", { "data-route-component": "workspace-context" });
-const LectureEditor = ({ initial, courseOutline }: any) => React.createElement(
+const LectureEditor = ({ initial, courseOutline, authorityKey, expectedStudioContext }: any) => React.createElement(
   "div",
-  { "data-route-component": "lecture-editor", "data-id": initial.id },
+  { "data-route-component": "lecture-editor", "data-id": initial.id, "data-authority": authorityKey, "data-context": JSON.stringify(expectedStudioContext) },
   courseOutline.map((item: { title: string }) => item.title).join("|"),
 );
 const EducationRuntime = ({ workbookId, accessMode }: any) => React.createElement(
@@ -90,6 +90,8 @@ test("focused builder dispatches lectures to LectureEditor and leaves case autho
   assert.match(lectureHtml, /data-route-component="lecture-editor"/);
   assert.match(lectureHtml, /data-id="workbook:lecture-1"/);
   assert.match(lectureHtml, /Anatomy lecture\|Imaging cases/);
+  assert.match(lectureHtml, /data-authority="\[&quot;user-1&quot;,&quot;organization-1&quot;\]"/);
+  assert.match(lectureHtml, /data-context="\{&quot;actorId&quot;:&quot;edu:user-1&quot;,&quot;organizationId&quot;:&quot;organization-1&quot;\}"/);
   assert.doesNotMatch(lectureHtml, /data-route-component="education-runtime"/);
 
   const teachingPage = builderRoute(snapshot);

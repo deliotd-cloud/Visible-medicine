@@ -32,12 +32,12 @@ function visit(node: ts.Node) {
     const tag = node.tagName.getText(ast);
     if (tag === 'HeadTourPlayback') toolbar = node;
     if (tag === 'HeadAtlasGuidedLearning') guided = node;
-    if (tag === 'HeadAtlasInlineComparison') comparison = node;
+    if (tag === 'HeadAtlasInlineComparisonLoader') comparison = node;
   }
   ts.forEachChild(node, visit);
 }
 visit(viewer);
-assert(toolbar && guided && comparison, 'native viewer must render all three integration components');
+assert(toolbar && guided && comparison, 'native viewer must render playback, guided learning and the guarded inline comparison loader');
 function attribute(node: ts.JsxSelfClosingElement, name: string) {
   const item = node.attributes.properties.find(property => ts.isJsxAttribute(property) && ts.isIdentifier(property.name) && property.name.text === name);
   assert(item && ts.isJsxAttribute(item), `${node.tagName.getText(ast)}.${name}`);

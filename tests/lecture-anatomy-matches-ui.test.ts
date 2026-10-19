@@ -1,3 +1,5 @@
+import {expectedStudioContext,comparisonResponse,isComparison,installComparisonFetch} from './lecture-context-fixture.mjs';
+installComparisonFetch();
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
@@ -24,7 +26,7 @@ function harness(view:any=initial){
  Object.assign(react,{useLayoutEffect:react.useEffect});
  const compiled=ts.transpileModule(readFileSync('components/LectureEditor.tsx','utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
  new Function('require','module','exports',compiled)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
- const props={initial:view,courseOutline:[{id:view.id,title:view.title}]};
+ const props={initial:view,courseOutline:[{id:view.id,title:view.title}],expectedStudioContext};
  const flush=()=>{let n=0;do{assert(++n<12);index=0;changed=false;pending=[];tree=mod.exports.LectureEditor(props);for(const run of pending)run();}while(changed);return tree;};
  const find=(predicate:(node:any)=>boolean)=>{const found=nodes(tree).find(predicate);assert(found,'Expected real editor node');return found;};
  const button=(title:string)=>find(node=>node.type==='button'&&text(node)===title);
@@ -82,7 +84,7 @@ test('a retained match callback cannot change the draft while its save is pendin
  const h=harness();try{
   const match=h.button('Link '+label('brainstem-pons')).props.onClick;
   h.find(node=>node.type==='input'&&node.props.value===initial.title).props.onChange({target:{value:'Changed lecture title'}});h.flush();
-  h.button('Save').props.onClick();match();h.flush();assert.equal(h.picker().props.value,'');assert.equal(Object.hasOwn(payload.slides[0],'anatomyReference'),false);
+  h.button('Save').props.onClick();match();h.flush();assert.equal(h.picker().props.value,'');await tick();assert.equal(Object.hasOwn(payload.slides[0],'anatomyReference'),false);
   resolve(new Response(JSON.stringify({...initial,title:payload.title,slides:payload.slides,version:5}),{status:200}));await tick();h.flush();assert.equal(h.picker().props.value,'');assert.match(h.text(),/Saved version 5/);
  }finally{h.dispose();globalThis.fetch=saved;}
 });

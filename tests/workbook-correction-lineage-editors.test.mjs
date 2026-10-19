@@ -1,3 +1,5 @@
+import {expectedStudioContext,comparisonResponse,isComparison,installComparisonFetch} from './lecture-context-fixture.mjs';
+installComparisonFetch();
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
@@ -24,7 +26,7 @@ function lectureFixture(patch={},commitInitial=true){
  const savedGlobals=new Map(['window','document','fetch'].map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]));
  Object.defineProperty(globalThis,'window',{configurable:true,value:{confirm:()=>true,addEventListener(){},removeEventListener(){}}});
  Object.defineProperty(globalThis,'document',{configurable:true,value:{addEventListener(){},removeEventListener(){}}});
- const values=[],effects=new Map(),calls=[];let index=0,tree,pending=[],reply=null,props={initial:{...structuredClone(initialLecture),...patch},courseOutline:[],authorityKey:'actor:org'};
+ const values=[],effects=new Map(),calls=[];let index=0,tree,pending=[],reply=null,props={initial:{...structuredClone(initialLecture),...patch},courseOutline:[],authorityKey:'actor:org',expectedStudioContext};
  const hooks={...React,useMemo:create=>create(),useRef:value=>{const at=index++;return values[at]??={current:value};},
   useState:seed=>{const at=index++;if(!(at in values))values[at]=typeof seed==='function'?seed():seed;return[values[at],next=>{values[at]=typeof next==='function'?next(values[at]):next;}];},
   useEffect(create,deps){const at=index++,old=effects.get(at);if(!old||deps.length!==old.deps.length||deps.some((value,i)=>value!==old.deps[i]))pending.push(()=>{old?.cleanup?.();effects.set(at,{deps,cleanup:create()});});},
@@ -55,7 +57,7 @@ const lectureModes=[
 for(const[action,patch,start]of lectureModes)for(const outcome of ['success','failure'])test(`lecture ${action} ${outcome}: invalidate before request and after settlement without automatic recheck`,async()=>{
  const h=lectureFixture(patch);try{
   const wait=deferred();h.setReply(wait.promise);const before=h.context.getSnapshot();start(h);
-  assert.notEqual(h.context.getSnapshot(),before);assert.equal(h.context.getSnapshot().pending,true);assert.equal(h.calls.length,1);
+  assert.notEqual(h.context.getSnapshot(),before);assert.equal(h.context.getSnapshot().pending,true);await tick();assert.equal(h.calls.length,1);
   h.render();assert.equal(h.lineage().disabled,true);const during=h.context.getSnapshot();
   const next={...h.props.initial,version:2,status:action==='publish'?'published':action==='request-review'?'in-review':'draft',title:action==='save'?'Unsaved local title':initialLecture.title};
   wait.resolve(outcome==='success'?new Response(JSON.stringify(next)):new Response(JSON.stringify({error:'Synthetic refusal'}),{status:403}));
@@ -70,7 +72,7 @@ for(const[action,patch,start]of lectureModes)for(const outcome of ['success','fa
 test('lecture duplicate and stale handlers cannot create requests after pending or unmount',async()=>{
  const h=lectureFixture();try{
   h.editTitle('Unsaved local title');const oldSave=h.button('Save'),wait=deferred();h.setReply(wait.promise);
-  oldSave.props.onClick();oldSave.props.onClick();assert.equal(h.calls.length,1);
+  oldSave.props.onClick();oldSave.props.onClick();await tick();assert.equal(h.calls.length,1);
   h.unmount();const after=h.context.getSnapshot();assert.equal(after.pending,false);oldSave.props.onClick();assert.equal(h.calls.length,1);
   wait.resolve(new Response(JSON.stringify({...initialLecture,version:99})));await tick();assert.equal(h.context.getSnapshot(),after);
  }finally{h.dispose();}
@@ -84,7 +86,7 @@ test('uncommitted lecture render cannot begin a save or reload',()=>{
 });
 test('lecture abandoned render leaves pending operation and committed lineage context intact',async()=>{
  const h=lectureFixture();try{
-  h.editTitle('Unsaved local title');const wait=deferred();h.setReply(wait.promise);h.button('Save').props.onClick();
+  h.editTitle('Unsaved local title');const wait=deferred();h.setReply(wait.promise);h.button('Save').props.onClick();await tick();
   const before=h.context.getSnapshot();h.abandon({...h.props,authorityKey:'abandoned-actor:org'});assert.equal(h.context.getSnapshot(),before);
   wait.resolve(new Response(JSON.stringify({...initialLecture,title:'Unsaved local title',version:2})));await tick();h.render({...h.props,authorityKey:'actor:org'});
   assert.equal(h.lineage().version,2);assert.equal(h.lineage().authorityKey,'actor:org');assert.equal(h.calls.length,1);
@@ -127,7 +129,7 @@ for(const method of ['save','request-review','publish','reload','workbook-change
  const before=h.context.getSnapshot();
  const promise=method==='reload'?h.functions.refresh():method==='workbook-change'?h.functions.chooseWorkbook('draft:two'):
   h.functions.postAction({action:method==='save'?'update-workbook-draft':method==='publish'?'publish-workbook':'request-workbook-review',id:workbook.id},'Synthetic success');
- await tick();assert.notEqual(h.context.getSnapshot(),before);assert.equal(h.context.getSnapshot().pending,true);assert.equal(h.calls.length,1);
+ await tick();assert.notEqual(h.context.getSnapshot(),before);assert.equal(h.context.getSnapshot().pending,true);await tick();assert.equal(h.calls.length,1);
  const next=snapshot();next.workbooks[0].version=2;next.workbooks[0].status=method==='publish'?'published':method==='request-review'?'in-review':'draft';
  if(method==='workbook-change')next.course.workbookId='draft:two';
  wait.resolve(outcome==='success'?new Response(JSON.stringify(next)):new Response(JSON.stringify({error:'Synthetic refusal'}),{status:403}));

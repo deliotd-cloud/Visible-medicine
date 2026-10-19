@@ -1,3 +1,5 @@
+import {expectedStudioContext,comparisonResponse,isComparison,installComparisonFetch} from './lecture-context-fixture.mjs';
+installComparisonFetch();
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import assert from 'node:assert/strict';
 import test from 'node:test';
@@ -29,7 +31,7 @@ function harness(view:any=initial,playerProps?:any){
   const component=playerProps?'LecturePlayer':'LectureEditor';
   const compiled=ts.transpileModule(readFileSync(`components/${component}.tsx`,'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
   new Function('require','module','exports',compiled)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
-  const props=playerProps??{initial:view,courseOutline:[{id:view.id,title:view.title}]};
+  const props=playerProps??{initial:view,courseOutline:[{id:view.id,title:view.title}],expectedStudioContext};
   const flush=()=>{let n=0;do{assert(++n<12);index=0;changed=false;pending=[];tree=mod.exports[component](props);for(const run of pending)run();}while(changed);return tree;};
   const find=(predicate:(node:any)=>boolean)=>{const found=nodes(tree).find(predicate);assert(found,'Expected real component node');return found;};
   const button=(title:string)=>find(node=>node.type==='button'&&text(node)===title);
@@ -111,7 +113,7 @@ test('retained addition callbacks cannot edit another selected slide, pending dr
     const pending=h.picker(true).props.onChange;
     h.find(node=>node.type==='input'&&node.props.value===view.title).props.onChange({target:{value:'New title'}});h.flush();
     h.button('Save').props.onClick();pending({target:{value:vermis.conceptId}});h.flush();
-    assert.deepEqual(payload.slides,view.slides);
+    await tick();assert.deepEqual(payload.slides,view.slides);
     resolve(new Response(JSON.stringify({...view,title:payload.title,version:5})));await tick();h.flush();
     const unmounted=h.picker(true).props.onChange;h.dispose();unmounted({target:{value:vermis.conceptId}});h.flush();
     assert.doesNotMatch(h.text(),/Unsaved changes/);

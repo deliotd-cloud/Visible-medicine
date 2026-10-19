@@ -148,3 +148,14 @@ models or datasets are redistributed. The source is not represented as having
 a permissive commercial licence. No new dependency, font, service or fee is
 introduced. This limited entry does not clear historical assets or replace
 clinical review of the original teaching draft.
+
+
+## Pinned local Geist Mono font — 19 October 2026
+
+Geist Mono, Copyright 2024 The Geist Project Authors (https://github.com/vercel/geist-font.git), is retained under the SIL Open Font License 1.1. The full unmodified licence is included in `geist-mono-OFL.txt` and served as `/licenses/geist-mono-OFL.txt`.
+
+The local Latin variable-font file is an exact, unchanged copy of the existing cached and built font: Version 1.701, SHA-256 `5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b`, 23,108 bytes. No font was synthesized, subsetted again, renamed internally or re-encoded. Other scripts use operating-system fallback fonts; no operating-system font is redistributed.
+
+Family licence evidence: https://github.com/google/fonts/blob/c5ab61088c14548190abde878e8062f293ba67ac/ofl/geistmono/OFL.txt . The retrieved full text is SHA-256 `1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f`. The original cached Google Fonts download URL was not retained, so this is not an independently restored upstream font-byte provenance claim.
+
+The font is bundled with the website, not sold by itself or relicensed under the project licence. Retain its copyright and full OFL with redistribution; no endorsement is implied. This removes the runtime/build dependency on a Google Fonts download for this face, not a guarantee that every service or future hosting plan is free. Existing model, image, teaching, dependency and release obligations remain unchanged.

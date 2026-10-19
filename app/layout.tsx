@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import { SiteFrame } from "../components/SiteFrame";
 import { SplashScreen } from "../components/SplashScreen";
 import { LocalAtlasDiagnostics } from "../components/LocalAtlasDiagnostics";
@@ -8,7 +8,7 @@ import { getChatGPTUser } from "./chatgpt-auth";
 import "./globals.css";
 import "./atlas-navigation.css";
 
-const geistMono = Geist_Mono({ variable: "--font-atlas-mono", subsets: ["latin"] });
+const geistMono = localFont({ src: "../public/fonts/geist-mono-latin.woff2", variable: "--font-atlas-mono", weight: "100 900", style: "normal", display: "swap" });
 const siteOrigin = process.env.SITE_ORIGIN ?? "https://visiblemedicine.com";
 // Only a request-scoped boolean enters the client frame; no identity or rights.
 export const dynamic = "force-dynamic";

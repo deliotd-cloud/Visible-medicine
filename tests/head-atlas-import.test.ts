@@ -86,7 +86,7 @@ test('UI uses local Files only, preserves source limits and routes to both priva
 
 test('folder guidance stays portable after migration and requests the complete browser package',()=>{
   const ui=readFileSync(new URL('../components/HeadAtlasViewer.tsx',import.meta.url),'utf8');
-  assert.match(ui,/choose the complete <strong>browser-data-verified<\/strong> folder/);
+  assert.match(ui,/choose the complete <strong>browser-data-verified<\/strong> folder/i);
   assert.match(ui,/not individual files or CT\/MRI source subfolders/);
   assert.doesNotMatch(ui,/folder on [CDEFG]:/);
   assert.match(ui,/type="file" multiple/);
