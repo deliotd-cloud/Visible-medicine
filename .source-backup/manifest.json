@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T06:56:11.894Z",
-  "sourceManifestSha256": "096eaf12a15cfed990bd782842d8178c1c363346ab7a91b46af308d79e70d082",
-  "parent": "7c23d47c23b3da99ac58fd31f4299300184d1014",
+  "at": "2026-10-19T07:16:33.796Z",
+  "sourceManifestSha256": "be79988ece8d9a64f96f1246e4b80463fc67b4ac29bb1e4a3874556d49f3946b",
+  "parent": "9b7f7e3c3dfa151f2135fd5b5a67ca4768330b26",
   "atlasSource": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
   "review": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
@@ -12334,6 +12334,11 @@
       "sha256": "5ba326b08f7692ac516165e94ba491ca200d0ab46aa3a5d83050fdd209c8a986"
     },
     {
+      "path": "lib/education-media-server-composition.ts",
+      "bytes": 5953,
+      "sha256": "e325847870d051c9cdb41e79a1f5b152e1cca1bed91b935cb780c431b49eaca6"
+    },
+    {
       "path": "lib/education-platform.ts",
       "bytes": 97412,
       "sha256": "6e539f0a9f6e2307ddc0aebf23fd719165b4b1d833a5dc625bc44a95bcfb506e"
@@ -17852,6 +17857,11 @@
       "path": "tests/education-media-records.test.mjs",
       "bytes": 10245,
       "sha256": "dad0d2b7d4a340b4eeac31b01b585099ac93fdd74571d43898cab67c7900b7c0"
+    },
+    {
+      "path": "tests/education-media-server-composition.test.mjs",
+      "bytes": 15502,
+      "sha256": "4ae17eec0f36c04c6138085617929414bce4490ca3fb913b6ad6b416b57cdb54"
     },
     {
       "path": "tests/education-user-provisioning.test.ts",
@@ -24092,9 +24102,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2319964,
-      "sha256": "5b1e72b7daf29e84ce083b252a78ec233b2e485514b8484fa23ac9d904d60593"
+      "bytes": 2322547,
+      "sha256": "65fb0ca5f3e90f7677355b0c3020955a91fb0782046d90ff317b8986d59075bb"
     }
   ],
-  "scope": "Screened website application source and exact historical test-source texts only. One inert exact Education assessment/workbook/case authorizer with pure and real-SQL synthetic tests; elbow tour/player lifecycle theorem, its previously backed-up original and portable preservation/tamper contract. All other selected source bytes unchanged. No existing D1/R2 binding, route, writer, activation, permission, product-motion or media readiness change; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
+  "scope": "Screened website source-only recovery: two new inert Education server composition/test paths with actual immutable manifest verification and synthetic metadata/access/streaming checks. No real account, source record, object, route, DB or R2 selection, schema migration, writer, permission, readiness, model, scan, mask, private decision or raw canonical ancestry. Earlier selected source and assets are unchanged. Not a whole-project, clinical or release backup."
 }
