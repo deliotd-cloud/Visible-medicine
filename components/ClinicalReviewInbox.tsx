@@ -17,6 +17,24 @@ type ChangeFilter = 'all' | 'source-or-teaching' | 'viewer-only' | 'other-unclas
 type PaginationContext = { generation: number; viewEpoch: number; context: string | null; revision: string | null; page: number; pageCount: number };
 type PaginationFocus = Pick<PaginationContext, 'generation' | 'viewEpoch' | 'context' | 'revision'> & { from: number; target: number };
 
+// Display-label search only: never rewrite anatomical IDs, review revisions,
+// decisions or access scopes. Punctuation and diacritics are not identity aliases.
+function reviewSearchText(value: string): string {
+  return value.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase()
+    .replace(/['\u2019\u02bc]/g, '')
+    .replace(/\bfma\s*(\d+)/g, 'fma $1')
+    .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+}
+function reviewSearchMatches(item: InboxItem, terms: string[]): boolean {
+  const label = reviewSearchText(`${item.title} ${item.scopeLabel} ${item.trackLabel}`);
+  return terms.every(term => label.includes(term));
+}
+
+function reviewSearchTerms(value: string): string[] {
+  const normalized = reviewSearchText(value);
+  return normalized ? normalized.split(/\s+/) : [];
+}
+
 export function ClinicalReviewInbox() {
   const [scan, setScan] = useState<Scan>(empty);
   const current = useRef<Scan>(scan);
@@ -100,13 +118,14 @@ export function ClinicalReviewInbox() {
   const loaded = scan.items.length;
   const needing = scan.items.filter(item => item.status !== 'approval-recorded' && item.status !== 'unavailable').length;
   const unavailable = scan.items.filter(item => item.status === 'unavailable').length;
-  const normalized = search.trim().toLocaleLowerCase();
+  const searchTerms = reviewSearchTerms(search);
+  const hasQuery = search.trim().length > 0;
   const showChangeFilter = status === 're-review' && (area === 'all' || area === 'structures');
   const filtered = scan.items.filter(item => (area === 'all' || item.area === area) &&
     (status === 'all' || status === 'needing-review' && item.status !== 'approval-recorded' && item.status !== 'unavailable' || item.status === status) &&
     (!showChangeFilter || changeFilter === 'all' || item.status === 're-review' &&
       (changeFilter === 'other-unclassified' ? item.changeReason !== 'source-or-teaching' && item.changeReason !== 'viewer-only' : item.changeReason === changeFilter)) &&
-    (!normalized || `${item.title} ${item.scopeLabel} ${item.trackLabel}`.toLocaleLowerCase().includes(normalized)))
+    (!hasQuery || searchTerms.length > 0 && reviewSearchMatches(item, searchTerms)))
     .sort((a, b) => order[a.status] - order[b.status] ||
       (a.status === 're-review' && b.status === 're-review' ?
         (a.changeReason ? changePriority[a.changeReason] : 2) - (b.changeReason ? changePriority[b.changeReason] : 2) : 0) ||
@@ -205,7 +224,7 @@ export function ClinicalReviewInbox() {
         <p>An exact worksheet approval does not grant blanket publication, patient-space registration or institution sign-off. Anatomy, teaching and source comparisons retain their own review scope.</p>
       </details>
       <div className={`clinical-review-inbox-filters${showChangeFilter ? ' has-change-filter' : ''}`}>
-        <label>Search reviews<input ref={searchInput} type="search" value={search} onChange={event => { setSearch(event.target.value); filterChanged(); }} placeholder="Structure, scope or review type" /></label>
+        <label>Search reviews<input ref={searchInput} type="search" value={search} onChange={event => { setSearch(event.target.value); filterChanged(); }} placeholder="Name, region, FMA ID or review type" /></label>
         <label>Area<select value={area} onChange={event => { setArea(event.target.value as InboxArea | 'all'); setChangeFilter('all'); filterChanged(); }}><option value="all">All areas</option>{Object.entries(inboxAreaLabels).map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>
         <label>Status<select value={status} onChange={event => { setStatus(event.target.value as InboxStatus | 'all' | 'needing-review'); setChangeFilter('all'); filterChanged(); }}><option value="needing-review">Known needing review</option><option value="all">All loaded statuses</option>{Object.entries(inboxStatusLabels).map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></label>
         {showChangeFilter && <label>Change<select value={changeFilter} onChange={event => { setChangeFilter(event.target.value as ChangeFilter); filterChanged(); }}><option value="all">All changes</option><option value="source-or-teaching">Source/teaching</option><option value="viewer-only">Viewer update</option><option value="other-unclassified">Other/unclassified</option></select></label>}

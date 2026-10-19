@@ -241,7 +241,7 @@ test('unsent form locations and draft recovery notice survive pane changes', () 
     assert(details);
     details.props.onDraftRecoveryChange('attention');
     assert(app.nodes().some(node => node.props?.id === 'course-details-draft-status'));
-    const create = form(app.panel('content').props.children.props.children[1].props.children.type);
+    const create = form(app.nodes().find(node => node.props?.['aria-label'] === 'Add course content').props.children[1].type);
     const release = form(app.panel('review').props.children.find?.(node => node?.type === 'details')?.props.children?.[1]?.type);
     assert(create && release);
     app.click('preview'); app.click('review'); app.click('content');

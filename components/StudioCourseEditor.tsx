@@ -64,7 +64,17 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
   const draftRelease = releases.find((release) => ["draft", "changes-requested"].includes(release.status));
   const recoveryState=detailsRecovery.courseId===course.id?detailsRecovery.state:'none';
   const detailsOpen=editingDetails.courseId===course.id&&editingDetails.open;
-  const toggleDetails=()=>setEditingDetails(current=>current.courseId===course.id?{courseId:course.id,open:!current.open}:current);
+  const detailsVisible=detailsOpen&&section==='content';
+  const toggleDetails=()=>{
+    const url=new URL(window.location.href);
+    if(!url.pathname.endsWith(`/studio/courses/${encodeURIComponent(course.id)}`))return;
+    if(section!=='content'||paneFromValue(url.searchParams.get('pane'))!=='content'){
+      choosePane('content');
+      setEditingDetails(current=>current.courseId===course.id?{courseId:course.id,open:true}:current);
+      return;
+    }
+    setEditingDetails(current=>current.courseId===course.id?{courseId:course.id,open:!current.open}:current);
+  };
   const recoveryChanged=(state:StudioDraftRecoveryState)=>{
     if(!['none','recovered','attention'].includes(state))return;
     setDetailsRecovery(current=>current.courseId===course.id?{courseId:course.id,state}:current);
@@ -84,15 +94,15 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
       }}>
         <summary aria-controls="course-options-panel">Course options</summary>
         <div id="course-options-panel" className="course-options-panel" role="group" aria-label="Course options">
-          <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsOpen} onClick={toggleDetails}>{detailsOpen ? "Hide course details" : "Edit course details"}</button>
+          <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsVisible} onClick={toggleDetails}>{detailsVisible ? "Hide course details" : "Edit course details"}</button>
           <DuplicateCourseButton courseId={course.id} recoveryScope={recoveryScope} />
           <p>Duplicates contain structure only, never learner attempts or publication history.</p>
         </div>
       </details>
     </div>
-    {recoveryState!=='none'&&<p id="course-details-draft-status" className="studio-form-message" role="status">{recoveryState==='recovered'?'Recovered unsent course edits on this device.':'A device-local course draft needs attention.'} <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsOpen} onClick={toggleDetails}>{detailsOpen?'Hide course details':recoveryState==='recovered'?'Review recovered edits':'Check device draft'}</button></p>}
-    <section id="course-details-editor" className="course-editor-panel course-create-panel" aria-label="Edit course details" hidden={!detailsOpen}><EditCourseDetailsForm key={course.id} course={course} recoveryScope={recoveryScope} onDraftRecoveryChange={recoveryChanged} /></section>
+    {recoveryState!=='none'&&<p id="course-details-draft-status" className="studio-form-message" role="status">{recoveryState==='recovered'?'Recovered unsent course edits on this device.':'A device-local course draft needs attention.'} <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsVisible} onClick={toggleDetails}>{detailsVisible?'Hide course details':recoveryState==='recovered'?'Review recovered edits':'Check device draft'}</button></p>}
     <div id="course-content" role="tabpanel" aria-labelledby="course-content-tab" tabIndex={0} hidden={section !== "content"}>
+      <section id="course-details-editor" className="course-editor-panel course-create-panel" aria-label="Edit course details" hidden={!detailsOpen}><EditCourseDetailsForm key={course.id} course={course} recoveryScope={recoveryScope} onDraftRecoveryChange={recoveryChanged} /></section>
       <div className="course-editor-content">
         <section aria-label="Course outline"><header className="course-section-heading"><div><h2>Course content</h2><p>Open an item to edit its content. Add another when you need it.</p></div><span>{workbooks.length} items</span></header>
           {workbooks.length === 0 && <p className="course-empty">Your course is private. Start by adding your first teaching or assessment item.</p>}

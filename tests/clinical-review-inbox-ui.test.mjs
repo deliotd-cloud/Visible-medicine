@@ -180,3 +180,36 @@ test('mount loads once, rerenders do not reload, and effect replay retires the o
   assert.equal(worksheetLinks().length, 1);
   finish();
 });
+
+
+test('ordinary region spacing, punctuation and word order search only the authorized loaded rows', async () => {
+  begin();
+  calls[0].resolve(response(batch(1, 1, [
+    item('brain', 'not-started', {title:'Anterior commissure',scopeLabel:'Whole body · head-neck · nerves · FMA61961 · midline',trackLabel:'Teaching'}),
+    item('biceps', 'not-started', {title:'Biceps · long head',scopeLabel:'Whole body · shoulder-arm · muscles · FMA37686 · right'}),
+    item('ligament', 'not-started', {title:'Cooper’s ligament',scopeLabel:'Thorax'}),
+    item('coeliac', 'not-started', {title:'Coeliac trunk',scopeLabel:'Abdomen'}),
+    item('hidden', 'unavailable', {title:'Unavailable head-neck',scopeLabel:'head-neck',revision:null,capability:'inspection-only'}),
+    item('approved', 'approval-recorded', {title:'Recorded head-neck',scopeLabel:'head-neck'}),
+  ])));
+  await tick();
+  const search = value => { controls().find(n=>n.type==='input'&&n.props.type==='search').props.onChange({target:{value}}); };
+  const titles = () => worksheetLinks().map(n=>n.props['aria-label'].split(', ')[0]);
+  const requestCount=calls.length;
+  for(const query of ['head neck','head-neck','HEAD—NECK','neck head','head neck teaching','ＦＭＡ ６１９６１','fma61961']){
+    search(query);assert.deepEqual(titles(),['Anterior commissure'],query);
+  }
+  for(const query of ['right biceps','biceps right','shoulder arm biceps']){
+    search(query);assert.deepEqual(titles(),['Biceps · long head'],query);
+  }
+  for(const query of ["cooper's",'Cooper’s','coopers']){
+    search(query);assert.deepEqual(titles(),['Cooper’s ligament'],query);
+  }
+  search('Coélìac');assert.deepEqual(titles(),['Coeliac trunk']);
+  for(const query of ['biceps left','FMA9999999','.*[','<script>']){
+    search(query);assert.deepEqual(titles(),[],query);
+  }
+  search('  ');assert.equal(titles().length,4,'Whitespace query restores only the default eligible statuses');
+  assert.equal(calls.length,requestCount,'Local search neither broadens the scan nor fetches other contexts');
+  finish();
+});

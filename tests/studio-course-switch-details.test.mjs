@@ -19,7 +19,7 @@ function fixture() {
   const slots = [], effects = [];
   const window = {
     get location() {return location;},
-    history: {state: {host: 'retained'}, pushState(_data, _title, path) {location = new URL(path, location); pushes++;}},
+    history: {state: {host: 'retained'}, pushState(data, _title, path) {location = new URL(path, location); this.state = data; pushes++;}},
     addEventListener() {}, removeEventListener() {},
   };
   const react = {
@@ -69,6 +69,8 @@ test('details disclosure is scoped to the course across same-instance navigation
   const oldToggle = app.optionsToggle().props.onClick;
   oldToggle(); app.render();
   assert.equal(app.details().props.hidden, false);
+  assert.equal(app.find(n => n.props.id === 'course-review').props.hidden, true);
+  assert.equal(app.pushes, 1, 'Opening from Review adds one Content pane entry');
   assert.equal(app.details().props.children.props.course.id, 'first');
   const oldRecovery = app.details().props.children.props.onDraftRecoveryChange;
   oldRecovery('recovered'); app.render();
@@ -84,6 +86,6 @@ test('details disclosure is scoped to the course across same-instance navigation
   assert.equal(app.details().props.hidden, true, 'Stale course action must not reveal the new course');
   app.optionsToggle().props.onClick(); app.render();
   assert.equal(app.details().props.hidden, false, 'Current course action still opens details');
-  assert.equal(app.find(n => n.props.id === 'course-review').props.hidden, false);
-  assert.equal(app.pushes, 0, 'Details recovery does not mutate pane history');
+  assert.equal(app.find(n => n.props.id === 'course-review').props.hidden, true);
+  assert.equal(app.pushes, 2, 'Each deliberate Review-to-Content opening adds one pane entry');
 });
