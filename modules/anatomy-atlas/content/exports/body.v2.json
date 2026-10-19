@@ -165185,10 +165185,17 @@
         ]
       },
       "ct": {
-        "readiness": "pending",
-        "title": "CT content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Right stylohyoid ligament · CT orientation · draft",
+        "body": "Distinguish the stylohyoid ligament from the temporal styloid process and stylohyoid muscle. Acquired CT can show mineralised portions of the stylohyoid complex; these do not outline every part of a normal nonossified ligament.",
+        "bullets": [
+          "Elongation or mineralisation can be incidental. Imaging alone does not establish Eagle syndrome or explain symptoms.",
+          "This unvalidated donor reference encodes neither calcification, a patient measurement nor neurovascular compression."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/11498437/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
       },
       "mri": {
         "readiness": "pending",
@@ -165352,10 +165359,17 @@
         ]
       },
       "ct": {
-        "readiness": "pending",
-        "title": "CT content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Left stylohyoid ligament · CT orientation · draft",
+        "body": "Distinguish the stylohyoid ligament from the temporal styloid process and stylohyoid muscle. Acquired CT can show mineralised portions of the stylohyoid complex; these do not outline every part of a normal nonossified ligament.",
+        "bullets": [
+          "Elongation or mineralisation can be incidental. Imaging alone does not establish Eagle syndrome or explain symptoms.",
+          "This unvalidated donor reference encodes neither calcification, a patient measurement nor neurovascular compression."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/11498437/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
       },
       "mri": {
         "readiness": "pending",
@@ -184115,10 +184129,18 @@
         ]
       },
       "ct": {
-        "readiness": "pending",
-        "title": "CT content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Trochlea of right superior oblique · CT orientation · draft",
+        "body": "Locate the side-specific superior-oblique tendon pulley in the superomedial orbit. Acquired CT may show mineralisation at the tendon turn; an incidental focus is not the complete cartilage, tendon or muscle.",
+        "bullets": [
+          "Calcification alone neither diagnoses systemic disease nor excludes injury or a foreign body.",
+          "The donor surface supplies no CT attenuation, calcific deposit, tissue-thickness measurement or validated patient boundary."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23945224/",
+          "https://pubmed.ncbi.nlm.nih.gov/20157406/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
       },
       "mri": {
         "readiness": "draft",
@@ -184297,10 +184319,18 @@
         ]
       },
       "ct": {
-        "readiness": "pending",
-        "title": "CT content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Trochlea of left superior oblique · CT orientation · draft",
+        "body": "Locate the side-specific superior-oblique tendon pulley in the superomedial orbit. Acquired CT may show mineralisation at the tendon turn; an incidental focus is not the complete cartilage, tendon or muscle.",
+        "bullets": [
+          "Calcification alone neither diagnoses systemic disease nor excludes injury or a foreign body.",
+          "The donor surface supplies no CT attenuation, calcific deposit, tissue-thickness measurement or validated patient boundary."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23945224/",
+          "https://pubmed.ncbi.nlm.nih.gov/20157406/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
       },
       "mri": {
         "readiness": "draft",
@@ -205666,10 +205696,19 @@
         "note": "Independent anatomy/radiology review pending. Reading references only: no acquired images, contrast lumen, diagnosis, procedural planning, paid-lecture access or validated scan registration. Ordinary radiography and contrast angiography are distinct examinations."
       },
       "ultrasound": {
-        "readiness": "pending",
-        "title": "Ultrasound content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Right superficial medial plantar artery · Ultrasound orientation and limits · draft",
+        "body": "Use the medial plantar parent artery as regional ultrasound context, not proof that this selected superficial branch has been identified. Takahashi and colleagues describe the posterior tibial division below the medial malleolus and the medial plantar vessel continuing along the medial sole toward the great toe.",
+        "bullets": [
+          "Distinguish this source-labelled superficial medial plantar branch from the parent medial plantar artery, its deep division, and the separate dorsalis-pedis deep plantar artery and plantar arch selections.",
+          "Branching and terminology vary. Compare the labelled sides without assuming mirrored courses, branch continuity or identical ultrasound visibility.",
+          "No acquired ultrasound or validated probe-plane correspondence is attached here. Parent-vessel Doppler signal does not establish this branch’s flow, calibre, patency or perfusion; its routine visibility is not established by these references."
+        ],
+        "citations": [
+          "https://doi.org/10.1590/1677-5449.200068",
+          "https://doi.org/10.20517/2347-9264.2023.19"
+        ],
+        "note": "Draft original orientation based on Takahashi et al. (2020) and Masadeh and Liette (2023); no figures or source media imported. Exact source and teaching revision require radiologist review. Not a scan protocol, diagnostic or operative guide. Atlas, imaging-case and lecture access remain independent."
       },
       "pathology": {
         "readiness": "draft",
@@ -205864,10 +205903,19 @@
         "note": "Independent anatomy/radiology review pending. Reading references only: no acquired images, contrast lumen, diagnosis, procedural planning, paid-lecture access or validated scan registration. Ordinary radiography and contrast angiography are distinct examinations."
       },
       "ultrasound": {
-        "readiness": "pending",
-        "title": "Ultrasound content pending",
-        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
-        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        "readiness": "draft",
+        "title": "Left superficial medial plantar artery · Ultrasound orientation and limits · draft",
+        "body": "Use the medial plantar parent artery as regional ultrasound context, not proof that this selected superficial branch has been identified. Takahashi and colleagues describe the posterior tibial division below the medial malleolus and the medial plantar vessel continuing along the medial sole toward the great toe.",
+        "bullets": [
+          "Distinguish this source-labelled superficial medial plantar branch from the parent medial plantar artery, its deep division, and the separate dorsalis-pedis deep plantar artery and plantar arch selections.",
+          "Branching and terminology vary. Compare the labelled sides without assuming mirrored courses, branch continuity or identical ultrasound visibility.",
+          "No acquired ultrasound or validated probe-plane correspondence is attached here. Parent-vessel Doppler signal does not establish this branch’s flow, calibre, patency or perfusion; its routine visibility is not established by these references."
+        ],
+        "citations": [
+          "https://doi.org/10.1590/1677-5449.200068",
+          "https://doi.org/10.20517/2347-9264.2023.19"
+        ],
+        "note": "Draft original orientation based on Takahashi et al. (2020) and Masadeh and Liette (2023); no figures or source media imported. Exact source and teaching revision require radiologist review. Not a scan protocol, diagnostic or operative guide. Atlas, imaging-case and lecture access remain independent."
       },
       "pathology": {
         "readiness": "draft",

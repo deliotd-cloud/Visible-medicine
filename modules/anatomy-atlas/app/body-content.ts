@@ -1,3 +1,4 @@
+import {craniofacialCalcificationCtLesson} from '../lib/craniofacial-calcification-ct';
 import {footArterialProjectionXrayLesson} from '../lib/foot-arterial-projection-xray';
 import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
 import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
@@ -115,6 +116,7 @@ import { handBoneUltrasoundLesson } from '../lib/hand-bone-ultrasound';
 import { toeBoneUltrasoundLesson } from '../lib/toe-bone-ultrasound';
 import { footUltrasoundFollowupLesson } from '../lib/foot-ultrasound-followup';
 import { deepPlantarUltrasoundLesson } from '../lib/deep-plantar-ultrasound';
+import { superficialMedialPlantarUltrasoundLesson } from '../lib/superficial-medial-plantar-ultrasound';
 import { lacrimalDrainageUltrasoundLesson } from '../lib/lacrimal-drainage-ultrasound';
 import { abdominalRadialEusLesson } from '../lib/abdominal-radial-eus';
 import { lateralCricoarytenoidUsLesson } from '../lib/lateral-cricoarytenoid-us';
@@ -418,6 +420,8 @@ export function bodyContent(s: BodyStructure, tab: ContentTab): ContentSection {
 
 /** Readiness belongs to the authoring branch, never inferred from its title. */
 export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
+  const craniofacialCalcificationCt=craniofacialCalcificationCtLesson(s,tab);
+  if(craniofacialCalcificationCt)return craniofacialCalcificationCt;
   const arterialEvidenceLimit=arterialEvidenceLimitLesson(s,tab);
   if(arterialEvidenceLimit)return arterialEvidenceLimit;
   const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
@@ -489,6 +493,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderGirdleArterialUltrasound) return shoulderGirdleArterialUltrasound;
   const deepPlantarUltrasound = deepPlantarUltrasoundLesson(s, tab);
   if (deepPlantarUltrasound) return deepPlantarUltrasound;
+  const superficialMedialPlantarUltrasound = superficialMedialPlantarUltrasoundLesson(s, tab);
+  if (superficialMedialPlantarUltrasound) return superficialMedialPlantarUltrasound;
   const lacrimalDrainageUltrasound = lacrimalDrainageUltrasoundLesson(s, tab);
   if (lacrimalDrainageUltrasound) return lacrimalDrainageUltrasound;
   const abdominalRadialEus = abdominalRadialEusLesson(s, tab);

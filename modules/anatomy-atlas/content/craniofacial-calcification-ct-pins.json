@@ -1,0 +1,285 @@
+{
+  "sourceCommit": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "catalogPath": "public/models/bodyparts3d/full-body/catalog.json",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-connective-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-gaps.glb",
+      "bytes": 692376,
+      "sha256": "c2073b8bfca9d8aa41c5c4810738138ba54fe6db1f5bfd935a3231414a38c3f8",
+      "structures": 18
+    },
+    {
+      "id": "head-neck-connective-head-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-head-detail.glb",
+      "bytes": 45764,
+      "sha256": "7f6c0355e8db6b561ea3b8d7bf10584422dccf873c842cb010f0987056f1a2f5",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+        "fmaId": "FMA72309",
+        "name": "Right stylohyoid ligament",
+        "sourceName": "right stylohyoid ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA72309",
+        "bounds": {
+          "min": [
+            -0.4217029809951782,
+            6.33329963684082,
+            0.3683519661426544
+          ],
+          "max": [
+            -0.1296759992837906,
+            6.781999588012695,
+            0.7338600158691406
+          ]
+        },
+        "center": [
+          -0.2756894901394844,
+          6.557649612426758,
+          0.5511059910058975
+        ],
+        "anchor": [
+          -0.2800480127334595,
+          6.561700344085693,
+          0.5576799511909485
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2764",
+            "sha256": "1747f307890df8c872f69b9467e54301cf1d0646b18c74ebe8a5723fd071e8f9"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stylohyoid"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+        "fmaId": "FMA72311",
+        "name": "Left stylohyoid ligament",
+        "sourceName": "left stylohyoid ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA72311",
+        "bounds": {
+          "min": [
+            0.11662400513887405,
+            6.333499908447266,
+            0.36847198009490967
+          ],
+          "max": [
+            0.4087250232696533,
+            6.782099723815918,
+            0.7339299917221069
+          ]
+        },
+        "center": [
+          0.2626745142042637,
+          6.557799816131592,
+          0.5512009859085083
+        ],
+        "anchor": [
+          0.2679249942302704,
+          6.562299728393555,
+          0.5552400350570679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2763",
+            "sha256": "4fead7cee38782fc067d18397b0891b6afbf7bb99d331b43264c678ddccb3e6a"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "stylohyoid"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+        "fmaId": "FMA49067",
+        "name": "Trochlea of right superior oblique",
+        "sourceName": "trochlea of right superior oblique",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-head-detail",
+        "nodeName": "FMA49067",
+        "bounds": {
+          "min": [
+            -0.16712599992752075,
+            7.324399471282959,
+            1.1234099864959717
+          ],
+          "max": [
+            -0.1246429979801178,
+            7.360600471496582,
+            1.1531699895858765
+          ]
+        },
+        "center": [
+          -0.14588449895381927,
+          7.3424999713897705,
+          1.138289988040924
+        ],
+        "anchor": [
+          -0.1466899961233139,
+          7.33489990234375,
+          1.1389700174331665
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1380",
+            "sha256": "eb522d2de22050bba2a6359cee767cd34d96e8a0bc135db043f9cf86f70d6d6e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trochlea"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+        "fmaId": "FMA49068",
+        "name": "Trochlea of left superior oblique",
+        "sourceName": "trochlea of left superior oblique",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-head-detail",
+        "nodeName": "FMA49068",
+        "bounds": {
+          "min": [
+            0.11148899793624878,
+            7.324399471282959,
+            1.123170018196106
+          ],
+          "max": [
+            0.1540990024805069,
+            7.360600471496582,
+            1.1531199216842651
+          ]
+        },
+        "center": [
+          0.13279400020837784,
+          7.3424999713897705,
+          1.1381449699401855
+        ],
+        "anchor": [
+          0.13079699873924255,
+          7.335699558258057,
+          1.138390064239502
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1329",
+            "sha256": "bd3bb98b659cc91865a50457124aac9353d98d21a5963404cad21cfb010dce2d"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trochlea"
+    }
+  ]
+}

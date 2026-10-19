@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "c516385179d19b1f941aa59faa6b1bc6b2e0095105435cf7d10ee89e16e07a4a"
+      "sha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d"
     },
     {
       "path": "app/body-education-link.ts",
@@ -983,6 +983,14 @@
     {
       "path": "content/craniofacial-bone-quiz.ts",
       "sha256": "1f6a7467965e326a152213b765231c49740d3cfae40286f3377dcb7e54bf14a3"
+    },
+    {
+      "path": "content/craniofacial-calcification-ct-pins.json",
+      "sha256": "8cc35b9a486a9c4d061862f322ead1424198b81df2fba5af4bb56c35363c615d"
+    },
+    {
+      "path": "content/craniofacial-calcification-ct.ts",
+      "sha256": "be4e21b6ce67f9905dfb41fc275c77c683db5a607b52191e2130a4955384ca59"
     },
     {
       "path": "content/craniofacial-organ-imaging-pins.json",
@@ -2394,7 +2402,7 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sha256": "18805d45f8c1c2a8b485f4759a91ff151f60abf552cd7b03faf154d5d464e30f"
+      "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -2406,7 +2414,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "85cca73576602595eaf064ab35124a1d1b3861153c37191b2424d5eb2b4f5043"
+      "sha256": "4e666113679148058ff378536762fd2170db4ea83cdfe7d427c48d2a36ccd141"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -2667,6 +2675,14 @@
     {
       "path": "content/spine-pelvic-muscle-imaging.ts",
       "sha256": "199970087d2e10d264c3c86c91cbe1151116a32f7b51637d1cf583586ac13416"
+    },
+    {
+      "path": "content/superficial-medial-plantar-ultrasound-pins.json",
+      "sha256": "8f3987affe58b593d19e2fd91cf51a26bec129e19bfa1104c0310abb10889059"
+    },
+    {
+      "path": "content/superficial-medial-plantar-ultrasound.ts",
+      "sha256": "39f901e9d35b4915117787ee322e2639ce8e1d4ea437ced04ba301dcc1fff701"
     },
     {
       "path": "content/superior-temporal-mri.ts",
@@ -3687,6 +3703,10 @@
     {
       "path": "lib/craniofacial-bone-quiz.ts",
       "sha256": "f39ecbceecfae4239b69289e4a408fbd51e3c1f770fc2eda640b6c6658d5b18f"
+    },
+    {
+      "path": "lib/craniofacial-calcification-ct.ts",
+      "sha256": "c3af28f6b12dfafbdac637d15f175bd991b0342a54f84ee337ded1598a042a5f"
     },
     {
       "path": "lib/craniofacial-organ-imaging.ts",
@@ -5253,6 +5273,10 @@
       "sha256": "bb0dedb25c5ff20485e290c0ee91ef2a9668ea291aa11ed7f33209c4b1ce0504"
     },
     {
+      "path": "lib/superficial-medial-plantar-ultrasound.ts",
+      "sha256": "e9ff06a3e819969c62ee51cf6969c52e6a9660164ca1f9a4f63395cbe73a18be"
+    },
+    {
       "path": "lib/suprahyoid-muscle-quiz.ts",
       "sha256": "e21f1629d80f329181721739a76f8ca50b3bffff7b85df5bb07b255978058f55"
     },
@@ -5845,5 +5869,5 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "8f9c43f2eff00a3e467b622d0a5e96eb785ae7e6d0f666dc28de091d3def5f61"
+  "sha256": "7950dbc89d6df898abad6b470e57de70fdd66c4cc0782a01d975a0065326e509"
 }

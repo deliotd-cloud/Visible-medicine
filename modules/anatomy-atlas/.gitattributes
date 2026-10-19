@@ -62,3 +62,6 @@ docs/reviews/pelvic-floor-context/*.json -text
 # Byte-pinned source sections and reviewer-only skin candidate metadata.
 docs/skin-head-sections-20260926.json -text
 content/skin-review-candidate.json -text
+# Exact source pins and immutable CT teaching transition evidence.
+content/craniofacial-calcification-ct-pins.json -text
+content/craniofacial-calcification-ct.transition.json -text

@@ -1,0 +1,41 @@
+{
+  "schema": "vm-regional-module-admitted-scope-1",
+  "sourceCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+  "admittedWebsiteManifest": "public/atlas-runtime/head-neck/manifest.json",
+  "manifestSha256": "9db24686c007ba7306c692713c955be3d6e5fe4f61e0105c9674539dce62c421",
+  "scopesSha256": "6b42694d072364a93835cd98af9484e0ceace62e9658cb5cef4bd123652f6d55",
+  "modelBundlesSha256": "2087180cfa9544d079697195186988f0b09ff095f193a6280008042e1416624b",
+  "planSha256": "572e9fd20818ffacb7aaa0ede7dd8a40fca9a2a54463269eb010d75b1ea5ded3",
+  "historicalValidatorExpectedNested": {
+    "head-neck": 75,
+    "whole-body": 106
+  },
+  "historicalWebsitePredecessor": {
+    "websiteCommit": "f7a09832",
+    "sourceCommit": "bff0cbb95f66c333846497d48b6503df07bd1ad3",
+    "manifestSha256": "e9b3f3c39860b04e3980855058174559cf31a8c773a380923d94de331f9859e2"
+  },
+  "admittedNested": {
+    "head-neck": 77,
+    "whole-body": 108
+  },
+  "admittedAdditionalStudy": {
+    "study": "cerebral",
+    "parentId": "vm:anatomy:body:head-neck:midline:organ:brain",
+    "sourceHash": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+    "structureIds": [
+      "vm:anatomy:body:head-neck:left:organ:left-hippocampus",
+      "vm:anatomy:body:head-neck:right:organ:right-hippocampus"
+    ],
+    "scopes": ["head-neck", "whole-body"]
+  },
+  "admittedAdditionalModel": {
+    "id": "hippocampi",
+    "url": "/models/bodyparts3d/hippocampi/hippocampi.glb?v=11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+    "bytes": 38548,
+    "sha256": "11cf97da7aa459f1181c79278b41c9c4369f8954eb5d4a00d1bc22b5cf28964e",
+    "structures": 2
+  },
+  "clinicalApproval": false,
+  "patientDataIncluded": false
+}

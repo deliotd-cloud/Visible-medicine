@@ -1,0 +1,109 @@
+{
+  "schema": "visible-medicine.craniofacial-calcification-ct-transition/1",
+  "baseline": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "pinsSha256": "8cc35b9a486a9c4d061862f322ead1424198b81df2fba5af4bb56c35363c615d",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "previousCorpusSha256": "82eebb46d6ea50a0290ec13272a2f70854b6af041dfa803d768e5fdafcecfd0b",
+  "currentCorpusSha256": "59d43d8b0895f5fe2caab861ef8e32a033d8d95d142906cfeef365c8ceec3cf6",
+  "previousRecipesAndToursSha256": "5276a4522df8966b1abecbbff06ea000a9bdc41987f85e90599ac45f7cd886c2",
+  "changedPlacements": 4,
+  "preservedPlacements": 9932,
+  "changes": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:ligament:right-stylohyoid-ligament",
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "current": {
+        "readiness": "draft",
+        "title": "Right stylohyoid ligament · CT orientation · draft",
+        "body": "Distinguish the stylohyoid ligament from the temporal styloid process and stylohyoid muscle. Acquired CT can show mineralised portions of the stylohyoid complex; these do not outline every part of a normal nonossified ligament.",
+        "bullets": [
+          "Elongation or mineralisation can be incidental. Imaging alone does not establish Eagle syndrome or explain symptoms.",
+          "This unvalidated donor reference encodes neither calcification, a patient measurement nor neurovascular compression."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/11498437/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:ligament:left-stylohyoid-ligament",
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "current": {
+        "readiness": "draft",
+        "title": "Left stylohyoid ligament · CT orientation · draft",
+        "body": "Distinguish the stylohyoid ligament from the temporal styloid process and stylohyoid muscle. Acquired CT can show mineralised portions of the stylohyoid complex; these do not outline every part of a normal nonossified ligament.",
+        "bullets": [
+          "Elongation or mineralisation can be incidental. Imaging alone does not establish Eagle syndrome or explain symptoms.",
+          "This unvalidated donor reference encodes neither calcification, a patient measurement nor neurovascular compression."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/11498437/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "current": {
+        "readiness": "draft",
+        "title": "Trochlea of right superior oblique · CT orientation · draft",
+        "body": "Locate the side-specific superior-oblique tendon pulley in the superomedial orbit. Acquired CT may show mineralisation at the tendon turn; an incidental focus is not the complete cartilage, tendon or muscle.",
+        "bullets": [
+          "Calcification alone neither diagnoses systemic disease nor excludes injury or a foreign body.",
+          "The donor surface supplies no CT attenuation, calcific deposit, tissue-thickness measurement or validated patient boundary."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23945224/",
+          "https://pubmed.ncbi.nlm.nih.gov/20157406/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "current": {
+        "readiness": "draft",
+        "title": "Trochlea of left superior oblique · CT orientation · draft",
+        "body": "Locate the side-specific superior-oblique tendon pulley in the superomedial orbit. Acquired CT may show mineralisation at the tendon turn; an incidental focus is not the complete cartilage, tendon or muscle.",
+        "bullets": [
+          "Calcification alone neither diagnoses systemic disease nor excludes injury or a foreign body.",
+          "The donor surface supplies no CT attenuation, calcific deposit, tissue-thickness measurement or validated patient boundary."
+        ],
+        "citations": [
+          "https://pubmed.ncbi.nlm.nih.gov/23945224/",
+          "https://pubmed.ncbi.nlm.nih.gov/20157406/"
+        ],
+        "note": "Original educational draft; exact revision-bound radiologist review and sign-off pending. Restore assembled anatomy with separation at zero. These notes provide no acquired image or validated spatial registration. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    }
+  ],
+  "geometryChanged": false,
+  "clinicalApproval": false
+}
