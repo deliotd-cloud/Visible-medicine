@@ -21,6 +21,18 @@ const ultrasoundEpoch='589263554141ba94548f9073327d4e51674bc33b';
 const footEpoch='bc925194ce3b388d4b6d9f73b4b3362ed4f2ad5f';
 const evidenceEpoch='0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2';
 const pharyngealEpoch='3e66d2a7cb1807f792929cbe292a4cfc81e4e79e';
+const ctParent='46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd';
+const ctEpoch='2e67298f33a74ba4f45c868e10605ddd9b567af2';
+const medianParent='3dcdf94a46db44202e72641be9fbcf1274ce5364';
+const medianEpoch='c237fa215f061147975e91b01fa830b3f44458c7';
+const deepPlantarParent='7b3e678ae4b8059aadb84459048ebd05f7abe7b9';
+const deepPlantarEpoch='70260f13b1878272c6b0797dd72395ed10bc4f29';
+const lacrimalParent=deepPlantarEpoch;
+const lacrimalEpoch='c5a09df8939dfaeaf76119ba5507c552721c3a30';
+const abdominalEusParent=lacrimalEpoch;
+const abdominalEusEpoch='6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb';
+const superficialPlantarParent=abdominalEusEpoch;
+const superficialPlantarEpoch='46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd';
 assert.match(source.source, /^[a-f0-9]{40}$/);
 assert.match(source.sourceTree, /^[a-f0-9]{40}$/);
 assert.equal(source.baseline, '4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad');
@@ -56,9 +68,31 @@ function tree(commit) {
 }
 const currentTree = tree(source.source);
 const priorTree = tree(source.baseline);
-for (const epoch of [ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch]) {
+for (const epoch of [ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
+  ctParent,ctEpoch,medianParent,medianEpoch,deepPlantarParent,deepPlantarEpoch,
+  lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch]) {
   assert.equal(git('rev-parse', `${epoch}^{commit}`).toString().trim(),epoch);
 }
+assert.equal(git('rev-parse',`${ctEpoch}^`).toString().trim(),ctParent);
+assert.equal(git('rev-parse',`${ctEpoch}^{tree}`).toString().trim(),
+  '64776e3c967cbca29577b8db2bc01a129d31da3e');
+assert.equal(git('rev-parse',`${medianEpoch}^`).toString().trim(),medianParent);
+assert.equal(git('rev-parse',`${medianEpoch}^{tree}`).toString().trim(),
+  '29fb723e34279d3e586f52f380128b430cd07325');
+for(const [parent,epoch] of [[deepPlantarParent,deepPlantarEpoch],[lacrimalParent,lacrimalEpoch],
+  [abdominalEusParent,abdominalEusEpoch],[superficialPlantarParent,superficialPlantarEpoch]])
+  assert.equal(git('rev-parse',`${epoch}^`).toString().trim(),parent,
+    `${epoch} genuine immediate introduction parent`);
+for(const [epoch,expected] of [
+  [deepPlantarEpoch,'ee3e9bfdf528c40bbd7049145e88cdf08e7c5076'],
+  [lacrimalEpoch,'dbc2f38825775991ea4d9428a33ce9375699280a'],
+  [abdominalEusEpoch,'4ce7882a2748d2f190e4b4f8783af6416c7cf44b'],
+  [superficialPlantarEpoch,'83720d136f899876bd947323e6552c4d3e171210']])
+  assert.equal(git('rev-parse',`${epoch}^{tree}`).toString().trim(),expected,
+    `${epoch} exact introduction tree`);
+for(const epoch of [ctEpoch,medianEpoch,deepPlantarEpoch,lacrimalEpoch,
+  abdominalEusEpoch,superficialPlantarEpoch])
+  assert.equal(git('merge-base',epoch,source.source).toString().trim(),epoch);
 for (const [before,after] of [[priorSource,ultrasoundEpoch],[ultrasoundEpoch,footEpoch],
   [footEpoch,evidenceEpoch],[evidenceEpoch,pharyngealEpoch],[pharyngealEpoch,source.source]])
   assert.equal(git('merge-base',before,after).toString().trim(),before,`${before} precedes ${after}`);
@@ -68,7 +102,9 @@ const wanted = new Set(review.files.map(row => row.path));
 for (const region of regions) for (const row of json(`public/atlas-runtime/${region}/source-inputs.json`)) wanted.add(row.path);
 const objectCache = new Map();
 const treeByCommit = new Map([[source.source, currentTree], [source.baseline, priorTree],
-  ...[ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch].map(epoch=>[epoch,tree(epoch)])]);
+  ...[ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
+    ctParent,ctEpoch,medianParent,medianEpoch,deepPlantarParent,deepPlantarEpoch,
+    lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch].map(epoch=>[epoch,tree(epoch)])]);
 function batch(commit, paths) {
   const ids = [...new Set(paths.map(path => {
     const id = treeByCommit.get(commit).get(path);
@@ -115,6 +151,12 @@ const apiEntry = [
   "export {footArterialProjectionXrayLesson} from './lib/foot-arterial-projection-xray';",
   "export {arterialEvidenceLimitLesson} from './lib/arterial-evidence-limits';",
   "export {salpingopharyngeusMriLesson} from './lib/salpingopharyngeus-mri';",
+  "export {craniofacialCalcificationCtLesson} from './lib/craniofacial-calcification-ct';",
+  "export {medianAntebrachialXrayLesson} from './lib/median-antebrachial-xray';",
+  "export {deepPlantarUltrasoundLesson} from './lib/deep-plantar-ultrasound';",
+  "export {lacrimalDrainageUltrasoundLesson} from './lib/lacrimal-drainage-ultrasound';",
+  "export {abdominalRadialEusLesson} from './lib/abdominal-radial-eus';",
+  "export {superficialMedialPlantarUltrasoundLesson} from './lib/superficial-medial-plantar-ultrasound';",
   "export {bodyReviewMaterial} from './lib/body-review-material';",
   "export {bodyReviewContext} from './lib/body-review-context';",
   "export {parseBodyReviewResponse} from './lib/body-review-response';",
@@ -207,6 +249,25 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
     .then(module=>module.exactSourceHistoryApi(evidenceEpoch,'review-security'));
   const pharyngealAtCommit=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)
     .then(module=>module.exactSourceHistoryApi(pharyngealEpoch,'review-security'));
+  const ctBefore=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)
+    .then(module=>module.exactSourceHistoryApi(ctParent,'review-security'));
+  const ctAtCommit=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)
+    .then(module=>module.exactSourceHistoryApi(ctEpoch,'review-security'));
+  const medianBefore=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)
+    .then(module=>module.exactSourceHistoryApi(medianParent,'review-security'));
+  const medianAtCommit=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)
+    .then(module=>module.exactSourceHistoryApi(medianEpoch,'review-security'));
+  const sourceHistory=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href);
+  const additionalUsEpochs=[
+    {name:'deep-plantar-ultrasound',parent:deepPlantarParent,epoch:deepPlantarEpoch,
+      count:2,resolver:api.deepPlantarUltrasoundLesson},
+    {name:'lacrimal-drainage-ultrasound',parent:lacrimalParent,epoch:lacrimalEpoch,
+      count:4,resolver:api.lacrimalDrainageUltrasoundLesson},
+    {name:'abdominal-radial-eus',parent:abdominalEusParent,epoch:abdominalEusEpoch,
+      count:4,resolver:api.abdominalRadialEusLesson},
+    {name:'superficial-medial-plantar-ultrasound',parent:superficialPlantarParent,
+      epoch:superficialPlantarEpoch,count:2,resolver:api.superficialMedialPlantarUltrasoundLesson},
+  ];
   const exactPins=(path,epoch)=>{
     const imported=json(`atlas-review/${path}`);
     batch(epoch,[path]);batch(source.source,[path]);
@@ -229,13 +290,118 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   assert.equal(mriRows.length,2);
   const mriSelected=new Map(mriRows.map(row=>[row.identity.id,row]));
   assert.equal(mriSelected.size,2);
+  const featureBytes=(epoch,paths)=>{
+    batch(epoch,paths);batch(source.source,paths);
+    for(const path of paths){
+      same(blob(source.source,path),blob(epoch,path),`${path} exact introduced and current Git bytes`);
+      const record=review.files.find(row=>row.path===path);
+      assert.ok(record,`${path} imported into Review`);
+      assert.equal(record.sourceSha256,sha(blob(epoch,path)),`${path} Review source hash`);
+      const importedBytes=readFileSync(resolve(root,'atlas-review',path));
+      same(importedBytes,blob(epoch,path),`${path} exact introduced Review bytes`);
+      assert.equal(record.importedSha256,sha(importedBytes),`${path} Review imported hash`);
+    }
+  };
+  featureBytes(ctEpoch,['content/craniofacial-calcification-ct-pins.json',
+    'content/craniofacial-calcification-ct.ts','lib/craniofacial-calcification-ct.ts']);
+  featureBytes(medianEpoch,['content/median-antebrachial-xray-pins.json',
+    'content/median-antebrachial-xray.ts','lib/median-antebrachial-xray.ts']);
+  const additionalUsSelected=new Map();
+  for(const group of additionalUsEpochs){
+    assert.equal(typeof group.resolver,'function',`${group.name} current resolver exported`);
+    const pinsPath=`content/${group.name}-pins.json`;
+    const paths=[`content/${group.name}.ts`,`lib/${group.name}.ts`,
+      group.name==='abdominal-radial-eus'
+        ?'content/abdominal-branch-imaging-pins.json':pinsPath];
+    featureBytes(group.epoch,paths);
+    let featurePins;
+    if(group.name==='abdominal-radial-eus'){
+      // Its dedicated admission pins are Atlas-only; the resolver imports the separate
+      // abdominal-branch pins, which featureBytes checked against current Review.
+      batch(group.epoch,[pinsPath]);batch(source.source,[pinsPath]);
+      same(blob(source.source,pinsPath),blob(group.epoch,pinsPath),
+        'EUS dedicated introduction pins retained in current Atlas Git');
+      featurePins=JSON.parse(blob(group.epoch,pinsPath));
+      assert.equal(review.files.some(row=>row.path===pinsPath),false,
+        'EUS dedicated admission pins are not a Review import');
+    }else featurePins=exactPins(pinsPath,group.epoch);
+    assert.equal(featurePins.parentCommit,group.parent,`${group.name} true parent pin`);
+    assert.equal(featurePins.entries.length,group.count,`${group.name} exact cardinality`);
+    if(group.name!=='superficial-medial-plantar-ultrasound'){
+      const transitionPath=`content/${group.name}-transition.json`;
+      batch(group.epoch,[transitionPath]);batch(source.source,[transitionPath]);
+      same(blob(source.source,transitionPath),blob(group.epoch,transitionPath),
+        `${group.name} exact transition retained`);
+      const transition=JSON.parse(blob(group.epoch,transitionPath));
+      assert.equal(transition.parentCommit,group.parent);
+      assert.equal(transition.pinsHash,sha(JSON.stringify(featurePins)));
+      assert.equal(transition.changed,group.count);
+      assert.equal(transition.preserved,9936-group.count);
+      same(transition.entries.map(row=>row.id).sort(),
+        featurePins.entries.map(row=>row.identity.id).sort(),
+        `${group.name} transition names every selected cell`);
+    }
+    group.before=await sourceHistory.exactSourceHistoryApi(group.parent,'review-security');
+    group.introduced=await sourceHistory.exactSourceHistoryApi(group.epoch,'review-security');
+    group.rows=new Map(featurePins.entries.map(row=>[row.identity.id,row]));
+    assert.equal(group.rows.size,group.count,`${group.name} unique complete source identities`);
+    for(const row of featurePins.entries){
+      assert.equal(row.previous.readiness,'pending',`${row.identity.id} pinned pending predecessor`);
+      assert.equal(additionalUsSelected.has(row.identity.id),false,
+        `${row.identity.id} belongs to one additional ultrasound introduction`);
+      additionalUsSelected.set(row.identity.id,{group,row});
+    }
+  }
+  assert.equal(additionalUsSelected.size,12,'four genuine epochs introduce twelve exact ultrasound cells');
+  const ctPins=exactPins('content/craniofacial-calcification-ct-pins.json',ctEpoch);
+  assert.equal(ctPins.entries.length,4);
+  const ctSelected=new Map(ctPins.entries.map(row=>[row.identity.id,row]));
+  assert.equal(ctSelected.size,4);
+  const ctTransitionPath='content/craniofacial-calcification-ct.transition.json';
+  batch(ctEpoch,[ctTransitionPath]);batch(source.source,[ctTransitionPath]);
+  same(blob(source.source,ctTransitionPath),blob(ctEpoch,ctTransitionPath),
+    'CT transition retains exact introduction bytes');
+  const ctTransition=JSON.parse(blob(ctEpoch,ctTransitionPath));
+  assert.equal(ctTransition.baseline,ctParent);
+  assert.equal(ctTransition.pinsSha256,sha(blob(ctEpoch,'content/craniofacial-calcification-ct-pins.json')));
+  assert.equal(ctTransition.changedPlacements,4);
+  assert.equal(ctTransition.preservedPlacements,9932);
+  assert.equal(ctTransition.geometryChanged,false);
+  assert.equal(ctTransition.clinicalApproval,false);
+  same(ctTransition.changes.map(row=>row.id),ctPins.entries.map(row=>row.identity.id),
+    'four exact CT transition identities');
+  const ctChangesById=new Map(ctTransition.changes.map(row=>[row.id,row]));
+  const medianPins=exactPins('content/median-antebrachial-xray-pins.json',medianEpoch);
+  assert.equal(medianPins.baselineCommit,medianParent);
+  assert.equal(medianPins.entries.length,2);
+  const medianSelected=new Map(medianPins.entries.map(row=>[row.identity.id,row]));
+  assert.equal(medianSelected.size,2);
+  batch(medianParent,[medianPins.sourcePath]);batch(medianEpoch,[medianPins.sourcePath]);
+  same(blob(medianEpoch,medianPins.sourcePath),blob(medianParent,medianPins.sourcePath),
+    'median source catalog retained at introduction');
+  assert.equal(sha(blob(medianEpoch,medianPins.sourcePath)),medianPins.sourceSha256);
   assert.equal(new Set([...selected.keys(),...handSelected.keys(),...usSelected.keys(),
-    ...footSelected.keys(),...evidenceSelected.keys(),...mriSelected.keys()]).size,118,
-    'protected historical and later pin sets do not overlap');
+    ...footSelected.keys(),...evidenceSelected.keys(),...mriSelected.keys(),
+    ...ctSelected.keys(),...medianSelected.keys(),...additionalUsSelected.keys()]).size,132,
+    'four ultrasound additions reuse protected foot identities without changing their X-ray cells');
+  const introducedCells=[...ctSelected.keys()].map(id=>`${id}/ct`)
+    .concat([...medianSelected.keys()].map(id=>`${id}/xray`),
+      [...additionalUsSelected.keys()].map(id=>`${id}/ultrasound`));
+  const protectedCells=[...selected.keys(),...handSelected.keys(),...footSelected.keys()]
+    .map(id=>`${id}/xray`)
+    .concat([...usSelected.keys()].map(id=>`${id}/ultrasound`),
+      [...mriSelected.keys()].map(id=>`${id}/mri`),
+      [...evidenceSelected.values()].map(row=>`${row.identity.id}/${row.tab}`));
+  assert.equal(new Set(protectedCells).size,118,'all original protected feature cells stay distinct');
+  assert.equal(new Set(introducedCells).size,18,'eighteen distinct introduction cells');
+  assert.equal(new Set([...protectedCells,...introducedCells]).size,
+    new Set(protectedCells).size+18,'introduced modality cells do not overlap protected cells');
   const spine = api.decodeRegionalTeachingSnapshot(json('atlas-review/content/regional-teaching/spine.json'), 'spine');
   let changed = 0, preserved = 0, changedWorksheets = 0, handChanges=0, handWorksheets=0;
   let usChanges=0,usWorksheets=0,currentPreserved=0,currentVsOldPreserved=0;
   let footChanges=0,evidenceChanges=0,mriChanges=0;
+  let ctChanges=0,medianChanges=0,additionalUsChanges=0;
+  const additionalUsCounts=new Map(additionalUsEpochs.map(group=>[group.name,0]));
   for (const structure of catalog.structures) {
     const oldWorksheet = await old.bodyReviewMaterial(structure.id);
     const priorWorksheet = await prior.bodyReviewMaterial(structure.id);
@@ -254,6 +420,9 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
       const footRow=footSelected.get(structure.id);
       const evidenceRow=evidenceSelected.get(structure.id);
       const mriRow=mriSelected.get(structure.id);
+      const ctRow=ctSelected.get(structure.id);
+      const medianRow=medianSelected.get(structure.id);
+      const additionalUs=additionalUsSelected.get(structure.id);
       if (!((selected.has(structure.id)||handSelected.has(structure.id))&&tab==='xray')&&
         !(usSelected.has(structure.id)&&tab==='ultrasound')) {
         same(historicalLesson,before,`${structure.id}/${tab} original 589 lesson preserved`);
@@ -314,6 +483,66 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
           `${structure.id} exact MRI feature worksheet`);
         assert.notDeepEqual(topic,historicalTopic);
         mriChanges++;
+      }else if(ctRow&&tab==='ct'){
+        const transition=ctChangesById.get(structure.id);
+        assert.ok(transition,`${structure.id} genuine CT transition`);
+        same(structure,ctRow.identity,`${structure.id} exact CT source identity`);
+        same(ctBefore.bodyLesson(structure,tab),transition.previous,
+          `${structure.id} exact 46c pending CT predecessor`);
+        same(before,transition.previous,`${structure.id} protected old CT lesson`);
+        assert.equal(transition.previous.readiness,'pending');
+        const feature=ctAtCommit.bodyLesson(structure,tab);
+        same(feature,transition.current,`${structure.id} exact introduced CT lesson`);
+        assert.equal(feature.readiness,'draft');
+        same(after,feature,`${structure.id} current exact CT feature lesson`);
+        same(after,api.craniofacialCalcificationCtLesson(structure,tab),
+          `${structure.id} current CT resolver`);
+        same(topic,{tab,...after},`${structure.id} current CT worksheet`);
+        same(topic,(await ctAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          `${structure.id} exact introduced CT worksheet`);
+        same((await ctBefore.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          {tab,...transition.previous},`${structure.id} exact 46c CT worksheet`);
+        assert.notDeepEqual(topic,historicalTopic);
+        ctChanges++;
+      }else if(medianRow&&tab==='xray'){
+        same(structure,medianRow.identity,`${structure.id} exact median forearm source identity`);
+        const predecessor=medianBefore.bodyLesson(structure,tab);
+        assert.equal(predecessor.readiness,medianRow.previousReadiness);
+        assert.equal(predecessor.readiness,'pending');
+        same(before,predecessor,`${structure.id} protected old X-ray lesson`);
+        const feature=medianAtCommit.bodyLesson(structure,tab);
+        assert.equal(feature.readiness,'draft');
+        same(after,feature,`${structure.id} current exact median X-ray feature lesson`);
+        same(after,api.medianAntebrachialXrayLesson(structure,tab),
+          `${structure.id} current median X-ray resolver`);
+        same(topic,{tab,...after},`${structure.id} current median X-ray worksheet`);
+        same(topic,(await medianAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          `${structure.id} exact introduced median X-ray worksheet`);
+        same((await medianBefore.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          {tab,...predecessor},`${structure.id} exact median predecessor worksheet`);
+        assert.notDeepEqual(topic,historicalTopic);
+        medianChanges++;
+      }else if(additionalUs&&tab==='ultrasound'){
+        const {group,row}=additionalUs;
+        same(structure,row.identity,`${structure.id} complete ${group.name} source identity`);
+        const predecessor=group.before.bodyLesson(structure,tab);
+        same(predecessor,row.previous,`${structure.id} genuine ${group.name} predecessor`);
+        same(priorLesson,predecessor,`${structure.id} f1 pending lesson`);
+        same(before,predecessor,`${structure.id} protected old pending lesson`);
+        assert.equal(predecessor.readiness,'pending');
+        same((await group.before.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          {tab,...predecessor},`${structure.id} genuine predecessor worksheet`);
+        const introduced=group.introduced.bodyLesson(structure,tab);
+        assert.equal(introduced.readiness,'draft');
+        same(after,introduced,`${structure.id} exact introduced and current ${group.name} lesson`);
+        same(after,group.resolver(structure,tab),`${structure.id} current ${group.name} resolver`);
+        same(topic,{tab,...after},`${structure.id} current ${group.name} worksheet`);
+        same(topic,(await group.introduced.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          `${structure.id} exact introduced ${group.name} worksheet`);
+        assert.notDeepEqual(topic,priorCurrentTopic);
+        assert.notDeepEqual(topic,historicalTopic);
+        additionalUsChanges++;
+        additionalUsCounts.set(group.name,additionalUsCounts.get(group.name)+1);
       }else{
         same(after,priorLesson,`${structure.id}/${tab} current lesson unchanged since f1`);
         same(topic,priorCurrentTopic,`${structure.id}/${tab} current worksheet unchanged since f1`);
@@ -354,7 +583,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
         assert.notDeepEqual(topic,priorTopic);
         handChanges++;
       } else if((usSelected.has(structure.id)&&tab==='ultrasound')||
-        (footRow&&tab==='xray')||(evidenceRow&&tab===evidenceRow.tab)||(mriRow&&tab==='mri')) {
+        (footRow&&tab==='xray')||(evidenceRow&&tab===evidenceRow.tab)||(mriRow&&tab==='mri')||
+        (ctRow&&tab==='ct')||(medianRow&&tab==='xray')||(additionalUs&&tab==='ultrasound')) {
         // Each exact feature transition and its worksheet were checked above.
       } else {
         same(after,before,`${structure.id}/${tab} current lesson preserved versus baseline`);
@@ -372,9 +602,18 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   assert.equal(footChanges,12);
   assert.equal(evidenceChanges,4);
   assert.equal(mriChanges,2);
-  assert.equal(currentPreserved,9910);
+  assert.equal(ctChanges,4);
+  assert.equal(medianChanges,2);
+  assert.equal(additionalUsChanges,12);
+  for(const group of additionalUsEpochs)assert.equal(additionalUsCounts.get(group.name),group.count,
+    `${group.name} exact introduced cells visited`);
+  assert.equal(currentPreserved,9892);
+  assert.equal(currentPreserved+ctChanges+medianChanges+additionalUsChanges,9910,
+    'original 9910 current-preservation cells partition into preserved plus eighteen exact introductions');
   assert.equal(preserved, 9836);
-  assert.equal(currentVsOldPreserved,9818);
+  assert.equal(currentVsOldPreserved,9800);
+  assert.equal(currentVsOldPreserved+ctChanges+medianChanges+additionalUsChanges,9818,
+    'original 9818 baseline-preservation cells partition into preserved plus eighteen exact introductions');
   assert.equal(changedWorksheets, 56);
   assert.equal(handWorksheets,36);
   assert.equal(usWorksheets,8);
@@ -398,6 +637,25 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
     assert.notEqual(context.revisions.teaching, prior.revisions.teaching);
     assert.equal(context.revisions.imaging, null);
   }
+  for(const [selectedSet,tab,resolver] of [
+    [ctSelected,'ct',api.craniofacialCalcificationCtLesson],
+    [medianSelected,'xray',api.medianAntebrachialXrayLesson],
+    ...additionalUsEpochs.map(group=>[group.rows,'ultrasound',group.resolver]),
+  ])for(const row of selectedSet.values()){
+    const id=row.identity.id;
+    const packet=await api.bodyReviewMaterial(id);
+    assert.equal(packet.approval,false,`${id} has no carried approval`);
+    assert.equal(packet.status,'worksheet-not-submitted',`${id} is an unsigned worksheet`);
+    assert.ok(await api.parseBodyReviewResponse(packet,id),`${id} exact current worksheet parses`);
+    const altered=structuredClone(packet);
+    altered.topics.find(topic=>topic.tab===tab).body+=' altered';
+    assert.equal(await api.parseBodyReviewResponse(altered,id),null,`${id} tampered teaching refused`);
+    assert.equal(resolver({id,name:row.identity.name,fmaId:row.identity.fmaId},tab),undefined,
+      `${id} partial source identity refused`);
+    const changedIdentity=structuredClone(row.identity);
+    changedIdentity.fmaId+='-foreign';
+    assert.equal(resolver(changedIdentity,tab),undefined,`${id} altered source identity refused`);
+  }
 
   const { emittedTeaching } = await import(pathToFileURL(resolve(root, 'tests/atlas-emitted-teaching.ts')).href);
   const base = 'public/atlas-runtime/head-neck/';
@@ -411,6 +669,18 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   for (const line of api.spinalMuscleXrayLimitations) assert.ok(contains(line), 'emitted limitation');
   for (const row of pins.entries) assert.ok(emitted.includes(row.identity.id), `emitted ${row.identity.fmaId}`);
   assert.match(emitted, /revision-bound radiologist review pending/);
+  const emittedCurrent=[emitted,...['public/atlas-runtime/shoulder/','public/atlas-review-viewer/']
+    .map(base=>emittedTeaching(base,json(base+'manifest.json').files,true,
+      path=>readFileSync(resolve(root,path))))];
+  for(const [selectedSet,tab] of [[ctSelected,'ct'],[medianSelected,'xray'],
+    ...additionalUsEpochs.map(group=>[group.rows,'ultrasound'])])
+    for(const row of selectedSet.values()){
+      const lesson=api.bodyLesson(row.identity,tab);
+      for(const line of [lesson.title,lesson.body,...lesson.bullets,...lesson.citations,lesson.note])
+        for(const chunk of emittedCurrent)
+          assert.ok(chunk.includes(line)||chunk.includes(JSON.stringify(line).slice(1,-1)),
+            `${row.identity.id}/${tab} exact introduced teaching emitted`);
+    }
 
   const modelPaths = [...currentTree.keys()].filter(path => /^public\/models\/bodyparts3d\/full-body\/[^/]+\.glb$/.test(path));
   assert.equal(modelPaths.length, 86);
@@ -429,7 +699,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   }
   console.log(JSON.stringify({ source: source.source, sourceTree: source.sourceTree, changed,
     preserved, changedWorksheets, handChanges, handWorksheets,usChanges,usWorksheets,currentPreserved,
-    footChanges,evidenceChanges,mriChanges,currentVsOldPreserved,
+    footChanges,evidenceChanges,mriChanges,ctChanges,medianChanges,additionalUsChanges,
+    additionalUsCounts:Object.fromEntries(additionalUsCounts),currentVsOldPreserved,
     families: 32, pins: 56, cervicalUnchanged: 6,
     runtimes: regions.length, reviewFiles: review.files.length, modelBundlesUnchanged: 86,
     clinicalApproval: false, patientRegistration: false }));
