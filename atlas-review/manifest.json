@@ -1,5 +1,5 @@
 {
-  "revision": "f5052a1906bf9b87e5235bda57d367b1103729db",
+  "revision": "f5097af8493701d64a8e2a2b5797df380f3b348a",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -553,8 +553,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef",
-      "importedSha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
+      "sourceSha256": "395dbb2e84a7a240f871cf8872887cd685552c74618c2fc99500315bc1ec6953",
+      "importedSha256": "395dbb2e84a7a240f871cf8872887cd685552c74618c2fc99500315bc1ec6953"
     },
     {
       "path": "lib/craniofacial-calcification-ct.ts",
@@ -585,6 +585,21 @@
       "path": "content/foot-arterial-projection-xray.ts",
       "sourceSha256": "e80debbdb434fe5d99ed6508ae20ca4514636b28dfa6e873cfafc59a3789e836",
       "importedSha256": "e80debbdb434fe5d99ed6508ae20ca4514636b28dfa6e873cfafc59a3789e836"
+    },
+    {
+      "path": "lib/foot-venous-arch-xray.ts",
+      "sourceSha256": "0f52f3efd63d0fabd35867a3e9001ff4ff0dec01407611f2a9c01703a2cf839a",
+      "importedSha256": "0f52f3efd63d0fabd35867a3e9001ff4ff0dec01407611f2a9c01703a2cf839a"
+    },
+    {
+      "path": "content/foot-venous-arch-xray-pins.json",
+      "sourceSha256": "77df50fbb2c054fd1ee40c7666b779090f479274e79a87de31c01e6459fa8760",
+      "importedSha256": "77df50fbb2c054fd1ee40c7666b779090f479274e79a87de31c01e6459fa8760"
+    },
+    {
+      "path": "content/foot-venous-arch-xray.ts",
+      "sourceSha256": "4b8b39e577f6c3594882cc80ae1fb7ff99da372fc6043918993d2a655103876b",
+      "importedSha256": "4b8b39e577f6c3594882cc80ae1fb7ff99da372fc6043918993d2a655103876b"
     },
     {
       "path": "lib/intracranial-arterial-us.ts",
@@ -5658,8 +5673,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "bc4516721bc79d616796dc8e20db2c98ae3a4f59a5d12a75c258f766fd1352a8",
-      "importedSha256": "06e5271e15bb5766e50644be26b45b338ab39e7f4b6d90cc2a4e7dd499d40655"
+      "sourceSha256": "717c93535a4a165cc0db381f6d5d5c918bab3d05e5d9b69945774485a2f97a0d",
+      "importedSha256": "722f1eca91dd4e8ce1a87c07d7241d65ec0f5616e5bcfde0a322234e304876e7"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -6044,7 +6059,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "70b07f1fc691c0adbbffd6c81d7343d98e7a2be5c8bffaf4dd547a375befc35e"
+      "importedSha256": "33b75b7a3d068a6b833abb083bfc9713bb5f0a9ec351fafba15ac66bd54d08ce"
     },
     {
       "path": "app/review/review.css",
@@ -6083,8 +6098,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "7dda7af5ba095bf20d4e522c13cfd02e1da8a33f027e7bee5a5ddb37547fcbaa",
-      "importedSha256": "7dda7af5ba095bf20d4e522c13cfd02e1da8a33f027e7bee5a5ddb37547fcbaa"
+      "sourceSha256": "eb9974e67f9a4194ea721b41ee436ace2037e5b1ca4505b4acf5ee80d805bdf2",
+      "importedSha256": "eb9974e67f9a4194ea721b41ee436ace2037e5b1ca4505b4acf5ee80d805bdf2"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -6318,8 +6333,8 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sourceSha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b",
-      "importedSha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
+      "sourceSha256": "7aaf0016540c071ba7258594883ec83ff27912402f890e54bf1e79014e12b6db",
+      "importedSha256": "7aaf0016540c071ba7258594883ec83ff27912402f890e54bf1e79014e12b6db"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -7708,5 +7723,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896"
+  "websiteIntegrationSha256": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8"
 }

@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
+    "sha256": "395dbb2e84a7a240f871cf8872887cd685552c74618c2fc99500315bc1ec6953"
   },
   {
     "path": "app/body-explorer.css",
@@ -814,6 +814,14 @@
   {
     "path": "content/foot-venous-arch-imaging.ts",
     "sha256": "986ae7e33081d36abcd5ad3dd3d846c9076c2d70202513e5b0d0318e6132c38b"
+  },
+  {
+    "path": "content/foot-venous-arch-xray-pins.json",
+    "sha256": "77df50fbb2c054fd1ee40c7666b779090f479274e79a87de31c01e6459fa8760"
+  },
+  {
+    "path": "content/foot-venous-arch-xray.ts",
+    "sha256": "4b8b39e577f6c3594882cc80ae1fb7ff99da372fc6043918993d2a655103876b"
   },
   {
     "path": "content/forearm-arterial-ct-pins.json",
@@ -1797,7 +1805,7 @@
   },
   {
     "path": "content/regional-teaching/foot.json",
-    "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
+    "sha256": "7aaf0016540c071ba7258594883ec83ff27912402f890e54bf1e79014e12b6db"
   },
   {
     "path": "content/regional-teaching/forearm.json",
@@ -2990,6 +2998,10 @@
   {
     "path": "lib/foot-venous-arch-imaging.ts",
     "sha256": "8b5690d3d11095ada0ff1574697f7a2c7fdcc87cbec57497b4f58cfcefb24ce1"
+  },
+  {
+    "path": "lib/foot-venous-arch-xray.ts",
+    "sha256": "0f52f3efd63d0fabd35867a3e9001ff4ff0dec01407611f2a9c01703a2cf839a"
   },
   {
     "path": "lib/forearm-arterial-imaging.ts",

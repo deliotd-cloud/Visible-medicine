@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "f5052a1906bf9b87e5235bda57d367b1103729db",
-  "sha256": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896",
+  "sourceCommit": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+  "sha256": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
+      "sha256": "395dbb2e84a7a240f871cf8872887cd685552c74618c2fc99500315bc1ec6953"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -952,7 +952,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "7dda7af5ba095bf20d4e522c13cfd02e1da8a33f027e7bee5a5ddb37547fcbaa"
+      "sha256": "eb9974e67f9a4194ea721b41ee436ace2037e5b1ca4505b4acf5ee80d805bdf2"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1505,6 +1505,14 @@
     {
       "path": "atlas-review/content/foot-venous-arch-imaging.ts",
       "sha256": "986ae7e33081d36abcd5ad3dd3d846c9076c2d70202513e5b0d0318e6132c38b"
+    },
+    {
+      "path": "atlas-review/content/foot-venous-arch-xray-pins.json",
+      "sha256": "77df50fbb2c054fd1ee40c7666b779090f479274e79a87de31c01e6459fa8760"
+    },
+    {
+      "path": "atlas-review/content/foot-venous-arch-xray.ts",
+      "sha256": "4b8b39e577f6c3594882cc80ae1fb7ff99da372fc6043918993d2a655103876b"
     },
     {
       "path": "atlas-review/content/forearm-arterial-ct-pins.json",
@@ -2668,7 +2676,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/foot.json",
-      "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
+      "sha256": "7aaf0016540c071ba7258594883ec83ff27912402f890e54bf1e79014e12b6db"
     },
     {
       "path": "atlas-review/content/regional-teaching/forearm.json",
@@ -4269,6 +4277,10 @@
     {
       "path": "atlas-review/lib/foot-venous-arch-imaging.ts",
       "sha256": "8b5690d3d11095ada0ff1574697f7a2c7fdcc87cbec57497b4f58cfcefb24ce1"
+    },
+    {
+      "path": "atlas-review/lib/foot-venous-arch-xray.ts",
+      "sha256": "0f52f3efd63d0fabd35867a3e9001ff4ff0dec01407611f2a9c01703a2cf839a"
     },
     {
       "path": "atlas-review/lib/forearm-arterial-imaging.ts",
@@ -6436,11 +6448,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "3f1ea9f1bc27ad878467b591817c468b86bbb4f1ebf3461311082c28d77c7be4"
+      "sha256": "3c9ea67d49d672cde272912ab614ccafcd7139d71193445bf779a248f45d8445"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "39ac8f3a703a36832f5d75014c59812296819c5ac96fd439f0a4f4644d8ea663"
+      "sha256": "7625022188e6045ae6bae462bf8e86a20eb3b5279996b42b0f9baa4c1732da22"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6692,7 +6704,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4919415b5d5fd0705b45825e23644937c6a2de3ebb72a736e598bb942267b2dc"
+      "sha256": "530b3923d52e0887d86fe42c4bd96048880bb0c8ec60811e9531eff84b345f65"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

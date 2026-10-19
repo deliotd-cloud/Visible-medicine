@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
+      "sha256": "395dbb2e84a7a240f871cf8872887cd685552c74618c2fc99500315bc1ec6953"
     },
     {
       "path": "app/body-education-link.ts",
@@ -1249,6 +1249,14 @@
       "sha256": "986ae7e33081d36abcd5ad3dd3d846c9076c2d70202513e5b0d0318e6132c38b"
     },
     {
+      "path": "content/foot-venous-arch-xray-pins.json",
+      "sha256": "77df50fbb2c054fd1ee40c7666b779090f479274e79a87de31c01e6459fa8760"
+    },
+    {
+      "path": "content/foot-venous-arch-xray.ts",
+      "sha256": "4b8b39e577f6c3594882cc80ae1fb7ff99da372fc6043918993d2a655103876b"
+    },
+    {
       "path": "content/forearm-arterial-ct-pins.json",
       "sha256": "2631968bf877c2b0fda7a01bfd5925cf25c16f0fb804de54668051ad274a6e0f"
     },
@@ -2410,7 +2418,7 @@
     },
     {
       "path": "content/regional-teaching/foot.json",
-      "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
+      "sha256": "7aaf0016540c071ba7258594883ec83ff27912402f890e54bf1e79014e12b6db"
     },
     {
       "path": "content/regional-teaching/forearm.json",
@@ -3943,6 +3951,10 @@
     {
       "path": "lib/foot-venous-arch-imaging.ts",
       "sha256": "8b5690d3d11095ada0ff1574697f7a2c7fdcc87cbec57497b4f58cfcefb24ce1"
+    },
+    {
+      "path": "lib/foot-venous-arch-xray.ts",
+      "sha256": "0f52f3efd63d0fabd35867a3e9001ff4ff0dec01407611f2a9c01703a2cf839a"
     },
     {
       "path": "lib/forearm-arterial-imaging.ts",
@@ -5658,7 +5670,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "7ff724fc94698e850265c3e86a787782be245bfaa1fcf3e773e4790f48bafb84"
+      "sha256": "8aa6e8f23bc67a1097ddd3288c0f4d149c94ff701a54d2976d2a9f1d62849acb"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5881,7 +5893,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "9426ebf58c9e98ad891299fb7127c3df0ddebfe135aff2f65e4bc8aaeed14aea",
-  "sourceRendererSha256": "30c93533ba06807e703707306e25db0b157dff7647fad29a7df0d5cbba8dc86d",
-  "websiteIntegrationSha256": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896"
+  "sha256": "49e70c362b4654f2a6fa6d55aa59d31e3d3dce43f9920881ad0b82b5b9349666",
+  "sourceRendererSha256": "e23da875d53938c27c911f6cbb1ce628de660aee38b29c6a0bfec49fc6caf8d1",
+  "websiteIntegrationSha256": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8"
 }

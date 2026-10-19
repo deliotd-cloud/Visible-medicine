@@ -1,12 +1,12 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T11:00:49.238Z",
-  "sourceManifestSha256": "b3f2c6cb09331f01d0c6bd41effeac0f52d18c0e3b17083923d62d07d7d1dff2",
-  "parent": "93f796e93021756c7cffba06d0060b731e40dac3",
-  "atlasSource": "f5052a1906bf9b87e5235bda57d367b1103729db",
-  "atlasTree": "36381d525f7c6886743bcec00fcee96931d65c58",
-  "review": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896",
-  "registerRevision": 66,
+  "at": "2026-10-19T12:01:08.155Z",
+  "sourceManifestSha256": "456d1c4079a33b7c2e3ba6a7eec12439346e49aee899a7da3f7add3e6724f0f8",
+  "parent": "e0410408c89baf8e2b55858818cc49d0a327b3a5",
+  "atlasSource": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+  "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
+  "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
+  "registerRevision": 67,
   "files": [
     {
       "path": ".codex/config.toml",
@@ -1040,8 +1040,8 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "bytes": 81704,
-      "sha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
+      "bytes": 81886,
+      "sha256": "395dbb2e84a7a240f871cf8872887cd685552c74618c2fc99500315bc1ec6953"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -1975,13 +1975,13 @@
     },
     {
       "path": "atlas-review/content/body-renderer-revision.json",
-      "bytes": 213258,
-      "sha256": "06e5271e15bb5766e50644be26b45b338ab39e7f4b6d90cc2a4e7dd499d40655"
+      "bytes": 213699,
+      "sha256": "722f1eca91dd4e8ce1a87c07d7241d65ec0f5616e5bcfde0a322234e304876e7"
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
       "bytes": 203217,
-      "sha256": "7dda7af5ba095bf20d4e522c13cfd02e1da8a33f027e7bee5a5ddb37547fcbaa"
+      "sha256": "eb9974e67f9a4194ea721b41ee436ace2037e5b1ca4505b4acf5ee80d805bdf2"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2672,6 +2672,16 @@
       "path": "atlas-review/content/foot-venous-arch-imaging.ts",
       "bytes": 3200,
       "sha256": "986ae7e33081d36abcd5ad3dd3d846c9076c2d70202513e5b0d0318e6132c38b"
+    },
+    {
+      "path": "atlas-review/content/foot-venous-arch-xray-pins.json",
+      "bytes": 6023,
+      "sha256": "77df50fbb2c054fd1ee40c7666b779090f479274e79a87de31c01e6459fa8760"
+    },
+    {
+      "path": "atlas-review/content/foot-venous-arch-xray.ts",
+      "bytes": 1526,
+      "sha256": "4b8b39e577f6c3594882cc80ae1fb7ff99da372fc6043918993d2a655103876b"
     },
     {
       "path": "atlas-review/content/forearm-arterial-ct-pins.json",
@@ -4125,8 +4135,8 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/foot.json",
-      "bytes": 1080401,
-      "sha256": "3f3f3e1a21f54cd5f3eaf09f130464aabe12735df870c60ec898c5cd4deddc0b"
+      "bytes": 1082430,
+      "sha256": "7aaf0016540c071ba7258594883ec83ff27912402f890e54bf1e79014e12b6db"
     },
     {
       "path": "atlas-review/content/regional-teaching/forearm.json",
@@ -4201,7 +4211,7 @@
     {
       "path": "atlas-review/content/review-revisions.json",
       "bytes": 12713,
-      "sha256": "70b07f1fc691c0adbbffd6c81d7343d98e7a2be5c8bffaf4dd547a375befc35e"
+      "sha256": "33b75b7a3d068a6b833abb083bfc9713bb5f0a9ec351fafba15ac66bd54d08ce"
     },
     {
       "path": "atlas-review/content/root-cuff-xray-pins.json",
@@ -5055,8 +5065,8 @@
     },
     {
       "path": "atlas-review/integration-inputs.json",
-      "bytes": 263511,
-      "sha256": "c04da8bfe13e02b78ec9c1d10d25d76796d2d8e3a92872b57fe06aa75ce670c8"
+      "bytes": 263991,
+      "sha256": "e5d4895bf3b4f41c3c0fe8de05d749bd3d56b011821fa2f6f5ee850ba128db24"
     },
     {
       "path": "atlas-review/lib/abdominal-arterial-xray.ts",
@@ -6137,6 +6147,11 @@
       "path": "atlas-review/lib/foot-venous-arch-imaging.ts",
       "bytes": 1637,
       "sha256": "8b5690d3d11095ada0ff1574697f7a2c7fdcc87cbec57497b4f58cfcefb24ce1"
+    },
+    {
+      "path": "atlas-review/lib/foot-venous-arch-xray.ts",
+      "bytes": 2259,
+      "sha256": "0f52f3efd63d0fabd35867a3e9001ff4ff0dec01407611f2a9c01703a2cf839a"
     },
     {
       "path": "atlas-review/lib/forearm-arterial-imaging.ts",
@@ -8375,8 +8390,8 @@
     },
     {
       "path": "atlas-review/manifest.json",
-      "bytes": 374031,
-      "sha256": "26192bf1b8c02779565839a6df320907cd0463832a417647d0717c30a4be36cc"
+      "bytes": 374766,
+      "sha256": "136369307df387212583816d36ef76fc7fd28ddf49275fd869e032598c0e630c"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -9496,17 +9511,17 @@
     {
       "path": "docs/anatomy-coverage/independent.json",
       "bytes": 772439,
-      "sha256": "c5ba101fb50e35d1d7ecc33e75bc24c90ad9ff7884d8b5f9ee82cafe6d8e69da"
+      "sha256": "15a7413f4ab0a9ab2c2058775d6079f1d79394dc22824d4adc03b2e846700d18"
     },
     {
       "path": "docs/anatomy-coverage/index.json",
       "bytes": 154911,
-      "sha256": "3f1ea9f1bc27ad878467b591817c468b86bbb4f1ebf3461311082c28d77c7be4"
+      "sha256": "3c9ea67d49d672cde272912ab614ccafcd7139d71193445bf779a248f45d8445"
     },
     {
       "path": "docs/anatomy-coverage/nested.json",
       "bytes": 789529,
-      "sha256": "277c44f9b3cf6bb218c77e70b48e72d404c268e25986346b35a1d32337c9ec27"
+      "sha256": "31123d519504c7f157cb04b784e6d52ed86acc4f69f1fe91789efea631da12cd"
     },
     {
       "path": "docs/anatomy-coverage/PRODUCERS.md",
@@ -9521,12 +9536,12 @@
     {
       "path": "docs/anatomy-coverage/reference.json",
       "bytes": 154089,
-      "sha256": "2778fc8b4cc0066eb49c81eccb07f1082fac19737cb1fd2a2b59405a089b8e7e"
+      "sha256": "14ecd2d5a0ab5b170ad6413bda0825bbf8360908dd34f361d3d22696ceca8b29"
     },
     {
       "path": "docs/anatomy-coverage/root.json",
       "bytes": 1067871,
-      "sha256": "99c4e46a6a3e5635812ff76b756bcf5e3ee75147a18b637e3dc5ce3051960323"
+      "sha256": "5fc23431208fd5379fbb552ac54988ac07b9b7d1c6b22958c30be71de3eefeef"
     },
     {
       "path": "docs/anatomy-zoom.md",
@@ -10235,13 +10250,13 @@
     },
     {
       "path": "docs/completion-checklist.json",
-      "bytes": 107259,
-      "sha256": "7f800c3b9efd5cfe604c970ad32145efdc2dfc27bdcd1f6bb85fd5f0361a6c32"
+      "bytes": 108297,
+      "sha256": "50b1aa532e9146706d756b36910a4488b4d4e5aa530f76e831173909b58fc57f"
     },
     {
       "path": "docs/completion-checklist.md",
-      "bytes": 108161,
-      "sha256": "90d5b19db78ac39d71a828728579385473d907ac20080449fced3288d3781bee"
+      "bytes": 109148,
+      "sha256": "bf15ce40f0117119e311879b99ca25183c7282378c38dfdd9e36e3e88891df4a"
     },
     {
       "path": "docs/coronary-sinus-ultrasound-delivery-20260929.md",
@@ -12031,7 +12046,7 @@
     {
       "path": "lib/anatomy-coverage-view.ts",
       "bytes": 5290,
-      "sha256": "39ac8f3a703a36832f5d75014c59812296819c5ac96fd439f0a4f4644d8ea663"
+      "sha256": "7625022188e6045ae6bae462bf8e86a20eb3b5279996b42b0f9baa4c1732da22"
     },
     {
       "path": "lib/assessment-manifest-store.ts",
@@ -12071,7 +12086,7 @@
     {
       "path": "lib/atlas-delivery-policy.ts",
       "bytes": 493,
-      "sha256": "1080b4dffbd57b3ef2857786f4c42d07393fd963237d716f869d7bd30618f058"
+      "sha256": "7029d832f9e6db62463d29f48281fedeaa83de9f4bbc6e4ec6fa531a752757f4"
     },
     {
       "path": "lib/atlas-knowledge.ts",
@@ -12096,7 +12111,7 @@
     {
       "path": "lib/atlas-model-inventory.json",
       "bytes": 33492,
-      "sha256": "3cc4c2d1d0df472c3c6bd2e0690c393fc02fd75c74bba97753f552087d8569f5"
+      "sha256": "c2df2d6c4f48a90cbc79ed9c3d07c95b2d6cb2d44600f99eb6403ed7c9d542a1"
     },
     {
       "path": "lib/atlas-model-staging-candidate.json",
@@ -13509,9 +13524,9 @@
       "sha256": "119c0b18bbe6c8c6d169d4747926b4e4f4216313e772d1c33755e2b031441f77"
     },
     {
-      "path": "public/atlas-review-viewer/assets/abdominal-wall-study-Dnlt52bQ.js",
+      "path": "public/atlas-review-viewer/assets/abdominal-wall-study-CfjGhzxU.js",
       "bytes": 61397,
-      "sha256": "d5b395948f253932490d4b09d6fab77501f6bc3fa410372f2b26fbc098915dfa"
+      "sha256": "69bc84ad0077a2c31245ddd79b199ce7dde1a491ef57cf51ab171efacc2c5126"
     },
     {
       "path": "public/atlas-review-viewer/assets/anatomy-coordinates-C8_MAECW.js",
@@ -13519,24 +13534,24 @@
       "sha256": "b1d0c078e637580a20b7347e5e9e018585129023299f94c591e1b566f8fb81fc"
     },
     {
-      "path": "public/atlas-review-viewer/assets/anatomy-scene-CNBkbA0_.js",
+      "path": "public/atlas-review-viewer/assets/anatomy-scene-kOi8LuNE.js",
       "bytes": 9655,
-      "sha256": "af6d25349a25c12accf49a9bed8dd8632138a1699b348a08eab89c6ffc2eb077"
+      "sha256": "29cd4663ebd8fc10e0f66eba7a910239097f77fd047c09db4243950f2fb7fb81"
     },
     {
-      "path": "public/atlas-review-viewer/assets/back-layers-study-CKvHX9_P.js",
+      "path": "public/atlas-review-viewer/assets/back-layers-study-D6EELUa7.js",
       "bytes": 90387,
-      "sha256": "30948127c19257d03ec74863ee0535c241a42b36147fe9efc32efd10d3eaeb89"
+      "sha256": "999c46b2cee7a711ec4917c2c91ee07d887fbc26a98f3388a00ed42188e362be"
     },
     {
-      "path": "public/atlas-review-viewer/assets/body-content-BW8a0enm.js",
-      "bytes": 6516824,
-      "sha256": "29516200cc15a683524aa94ea02892cbd5492e165afeba903e43d841474d7289"
+      "path": "public/atlas-review-viewer/assets/body-content-DjUmEYr2.js",
+      "bytes": 6523210,
+      "sha256": "add3e50bffa5a093ed2f87c86bdd8989f5e039b57d5c47585d4f3dae443f5c0f"
     },
     {
-      "path": "public/atlas-review-viewer/assets/body-scene-BU6Jv8sG.js",
+      "path": "public/atlas-review-viewer/assets/body-scene-DK1_8Qp7.js",
       "bytes": 53122,
-      "sha256": "563a0ae080b1191d5185d12f092f104517464c09fc1ae22876a67cc39aa7cdc2"
+      "sha256": "6f68003e256915cd448a09a2dfb39688294d421d95d6ce83d67a527a6fc137e0"
     },
     {
       "path": "public/atlas-review-viewer/assets/body-scene-IREBYFc0.css",
@@ -13554,9 +13569,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "public/atlas-review-viewer/assets/cutaway-controls-Czp-YkXR.js",
+      "path": "public/atlas-review-viewer/assets/cutaway-controls-Dki_K7_f.js",
       "bytes": 122109,
-      "sha256": "afeae98cd79ffad048665c2d8a131c6f83596098e819bfec3e9c06b391b32524"
+      "sha256": "714d9643a8c5543304dfb934e4c75e82ebebf5b52ebb61280590bfadbf4469a6"
     },
     {
       "path": "public/atlas-review-viewer/assets/eye-layers-B_8TgiYY.css",
@@ -13564,14 +13579,14 @@
       "sha256": "e09a511156e9ad563605198e8533c5d22c7051d15cf1a5c017dc3b146e1e35d5"
     },
     {
-      "path": "public/atlas-review-viewer/assets/eye-layers-r5zH7mCa.js",
+      "path": "public/atlas-review-viewer/assets/eye-layers-Don7wd65.js",
       "bytes": 17453,
-      "sha256": "9212cf0f7c8b7d6326017df9146024b9ff717740e2c99dddd6d0d2cd09fba1b0"
+      "sha256": "a7b07faf53338d64e43958bf2d16fc7274274013c81fd03d4184f94142549a31"
     },
     {
-      "path": "public/atlas-review-viewer/assets/foot-dEJOQ0Fz.js",
-      "bytes": 1056288,
-      "sha256": "b73981057f1f43ec7daccf4b41d14e1c824a592a7388b50a17371f74f4a32971"
+      "path": "public/atlas-review-viewer/assets/foot-B9LKOcHv.js",
+      "bytes": 1058309,
+      "sha256": "098f24d59e268dcbfe202c3a9a5e95df832f46157a5e766851d5ebf7532a9f75"
     },
     {
       "path": "public/atlas-review-viewer/assets/forearm-B4nqLhdv.js",
@@ -13589,24 +13604,24 @@
       "sha256": "5d33319678baf875c69ed5a878b2ee7f293126b1818803b0805f62797dffefd2"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-pelvis-study-BGcR131o.js",
+      "path": "public/atlas-review-viewer/assets/hra-pelvis-study-DTvOGoj3.js",
       "bytes": 105632,
-      "sha256": "ac2204bfa234d04dfa1f21cf4baa0a69ba94ea7ea1f150e8717005987b0f4b2c"
+      "sha256": "df51c8d3f43e7414985642b46f7ac57276e75ad42a53026dd3433d2de7df13e4"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-renal-study-CsZEeZCc.js",
+      "path": "public/atlas-review-viewer/assets/hra-renal-study-CqhSEVnf.js",
       "bytes": 7522,
-      "sha256": "3b89ff9e6ee0f3dbc3739e5a8003c8fea8df5f4de1019b01a2d3525fb1a1d6f5"
+      "sha256": "ea79c50b112ae30ee603d84737a21c7bcbb1870d055753c11ce9261d2d01427d"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-renal-teaching-lsydFXJN.js",
+      "path": "public/atlas-review-viewer/assets/hra-renal-teaching-DAXsnFai.js",
       "bytes": 118009,
-      "sha256": "de19333a0ba75b9a8887cb45229c48d0c523062d5738064090d9bf498b01b5c8"
+      "sha256": "ad20a27fb845b59d3fbda0f10e142610830802ecbea2124996e0477db510685d"
     },
     {
-      "path": "public/atlas-review-viewer/assets/independent-study-navigation-DFf1mHvJ.js",
+      "path": "public/atlas-review-viewer/assets/independent-study-navigation-EOl3IcoV.js",
       "bytes": 2638,
-      "sha256": "2b30dd87e335a06138798532b7dc76a42e3501f3682dd9ed26cf32c4d7b106c2"
+      "sha256": "cefcf02ce27515166ae7e554974d2a83a8a1848eb6b7277293a338f57d99a6bf"
     },
     {
       "path": "public/atlas-review-viewer/assets/index-BBhTqXD-.css",
@@ -13614,9 +13629,9 @@
       "sha256": "2c3388812c3dd44f879bc4c4d2bee04f144718c403a74a36434257da0c4c7cf2"
     },
     {
-      "path": "public/atlas-review-viewer/assets/index-RHhhew7_.js",
+      "path": "public/atlas-review-viewer/assets/index-BwBU3Paj.js",
       "bytes": 3066327,
-      "sha256": "bd0556cc2c8d5ca4d638e6f8957eedc7daf89ef26a1a042ec1911d3e6473d226"
+      "sha256": "62180df4d67aae92ed9bc8a78021cbd3c503c05f791801713aabd70996f1c623"
     },
     {
       "path": "public/atlas-review-viewer/assets/leg-C23bX7kx.js",
@@ -13639,9 +13654,9 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
-      "path": "public/atlas-review-viewer/assets/scene-recovery-ALBP3gIM.js",
+      "path": "public/atlas-review-viewer/assets/scene-recovery-B629KVqC.js",
       "bytes": 1065422,
-      "sha256": "70e3af324710b16662540e3fc0f3a1ebdbc4acff95d034a5b9d527fe1b6d9940"
+      "sha256": "a41b486dccfe98b38dd059e783624c76ac03a2d8f0954707dddc42ee96117eb8"
     },
     {
       "path": "public/atlas-review-viewer/assets/scene-recovery-BCIS1m0I.css",
@@ -13654,24 +13669,24 @@
       "sha256": "5747a962459501773da533c0ffbc1f25ed19a04504b7cc3feb98d3573f2ae4da"
     },
     {
+      "path": "public/atlas-review-viewer/assets/shoulder-explorer-BIX2l7Re.js",
+      "bytes": 104199,
+      "sha256": "72d207c10790d8bd61a93f6fd09c11659e52373e2e11e775dae6ecde82a12075"
+    },
+    {
       "path": "public/atlas-review-viewer/assets/shoulder-explorer-CrFyYdQD.css",
       "bytes": 10027,
       "sha256": "dbdabe13e4b87259cf4dbe1464bafc2979535510ec4f0cd3bdcd0668591d5764"
     },
     {
-      "path": "public/atlas-review-viewer/assets/shoulder-explorer-YT1vTcTN.js",
-      "bytes": 104199,
-      "sha256": "5cb43e8641f06216ab56edd71554d2c45e9ebba614903f70eb32cb9913bba2cb"
-    },
-    {
-      "path": "public/atlas-review-viewer/assets/slider-BnYcSyWa.js",
-      "bytes": 878791,
-      "sha256": "c1de6025c58e0714a1cee4366bc29ee6ad6a0f6286620f72a20bb2a3348114b8"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/slider-C5fwuhub.css",
       "bytes": 8380,
       "sha256": "aff4d7e55cc7ed3394e5727429807c9321dde09c67dce444bbafa78cb9256a3e"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/slider-fz0PrVc3.js",
+      "bytes": 878791,
+      "sha256": "2c137de232cb22015649c4cb19917d96282311669fb9cd79b2b640da175a50dc"
     },
     {
       "path": "public/atlas-review-viewer/assets/spine-e2QBQfxg.js",
@@ -13694,19 +13709,19 @@
       "sha256": "0e0838fb37d99baef5d175c1afd13ce42ce443e1e617121bcc6389c54e0cd86f"
     },
     {
-      "path": "public/atlas-review-viewer/assets/um-knee-study-CTmYX8sW.js",
-      "bytes": 682911,
-      "sha256": "e55aa87ff77579eebbe40f5de39766f4ab27a7c93cbea61579528ab6cb4f6bed"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/um-knee-study-D8QdNnSJ.css",
       "bytes": 4461,
       "sha256": "4ac2474920228edd0025fb319edfe9a83e8b52507ab2f910278af28ff3437f20"
     },
     {
-      "path": "public/atlas-review-viewer/assets/um-limb-study-CtntJtPk.js",
+      "path": "public/atlas-review-viewer/assets/um-knee-study-x01i6Elm.js",
+      "bytes": 682911,
+      "sha256": "792cb1c3069921033d60792d9431a84c0c076920b79256921cc2c215a91d9363"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/um-limb-study-CuoV4D-1.js",
       "bytes": 2596,
-      "sha256": "1554237b33546736b0fc7ed2013caf3b14fcc0cb7480a5b594897654a96f83aa"
+      "sha256": "16b52a9c2117e4e924e96be46d8840a3b179d2f1d41499985eb4e5d7334204a2"
     },
     {
       "path": "public/atlas-review-viewer/assets/um-proximal-topic-completion-g3GvGRe9.js",
@@ -13714,29 +13729,29 @@
       "sha256": "bd72b50511e7cc374d60e2d6b36b6902db8e24450731b7e28cdb698d4cb6b522"
     },
     {
+      "path": "public/atlas-review-viewer/assets/ventricles-B5-A9qPR.js",
+      "bytes": 1315803,
+      "sha256": "4d28d5c4df52b3f5c570a5389cc94f5b8ff4a70b7713b8d001690207bec10ede"
+    },
+    {
       "path": "public/atlas-review-viewer/assets/ventricles-CfdrTivY.css",
       "bytes": 1203,
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
     },
     {
-      "path": "public/atlas-review-viewer/assets/ventricles-CkfBOZg7.js",
-      "bytes": 1315803,
-      "sha256": "30e3b2c0be7805c977233c918c01dd44103d402ff9f57e0ccdf0b256858100b0"
-    },
-    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
-      "sha256": "12bddb6ff439a04c2d2f0e9ebd862d634c1386138a7b3aad5158f3c29cb340f0"
+      "sha256": "6c8d55d953e107887d283b43601a518f3ea56b351eefc1a643ee4645aa3ffdf8"
     },
     {
       "path": "public/atlas-review-viewer/manifest.json",
       "bytes": 9033,
-      "sha256": "0e8d1dba987f542c0c4d313cca80a9f2becfe78b6e50dc56cffd1ff7e26f36a7"
+      "sha256": "9803fc470e4e2b2954edaf755173d25ec792698521aec205cd0d0cbcbdd76fad"
     },
     {
       "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
       "bytes": 387283,
-      "sha256": "a942f8a33e1f913848fd452ff1f2d1f66f6c22f8089e2550dd573c013355683b"
+      "sha256": "ac44710170787536e8e9c5707cdf2486f510caaf6834eccd6ace9a9228c98d14"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/assets/index-BZ74p3Ah.css",
@@ -13781,7 +13796,7 @@
     {
       "path": "public/atlas-runtime/female-pelvis/manifest.json",
       "bytes": 6208,
-      "sha256": "92e1471a1ead97ea0787edbca7de7cc1b4d91030132054ac4b67a8df6b9c1e56"
+      "sha256": "d074cb541a4d09b65a02fb4c2ab53be49d98a200a73475f045c3e5d36d5238c8"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/models/hra-pelvis/catalog.json",
@@ -13814,9 +13829,9 @@
       "sha256": "119c0b18bbe6c8c6d169d4747926b4e4f4216313e772d1c33755e2b031441f77"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/abdominal-wall-study-CPj1uBwx.js",
+      "path": "public/atlas-runtime/head-neck/assets/abdominal-wall-study-DC0R9FOm.js",
       "bytes": 61423,
-      "sha256": "d024763cdb8a93b93a286a32de0eda3fb9db46a100d3df6fcab02d44c8c87269"
+      "sha256": "442b0cd47197d6ac4054f4b320eed19f577ffed39aa1ca82945fedab4ec63f09"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/anatomy-load-state-DW5P5x4y.js",
@@ -13824,14 +13839,14 @@
       "sha256": "6747c2d7b99b27cc4d5c5c32c9add7f828aee34e861ff633fd9cfb5a9a969a31"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/back-layers-study-D2f8Tnso.js",
+      "path": "public/atlas-runtime/head-neck/assets/back-layers-study-DW-_lrph.js",
       "bytes": 90413,
-      "sha256": "be0ea57ecd3e1043124bc06e469d6881f422df2cf30dfbdd751a7b962c81f7b7"
+      "sha256": "9ad6b15509e7d7624a6365febedf439c8b687cd38824d567c4907ff1fc89bd98"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/body-content-B62BC_Mr.js",
-      "bytes": 6516682,
-      "sha256": "2da2f4d78f6ff02a503b1d20246f4fac64312c5540e5ce8fe1aedd9f6cd0f86f"
+      "path": "public/atlas-runtime/head-neck/assets/body-content-Bi5FOMkn.js",
+      "bytes": 6523068,
+      "sha256": "07892877df9cfb8bd609fd02f140c3e5995ea42ba13223dcd7f240b90c52dc02"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/body-scene-C6mp7Pjw.css",
@@ -13854,9 +13869,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/cutaway-controls-DvJ8WYvk.js",
+      "path": "public/atlas-runtime/head-neck/assets/cutaway-controls-Ea2r6Wdz.js",
       "bytes": 122095,
-      "sha256": "6595687ef0bc586b31a3a7f53929ea0e642ccf891af148a7e11ceb6b33dde687"
+      "sha256": "af208d5d30641bdda6012d66d26769a074adb9c47403c9028fd4028adfc67f27"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/eye-layers-B_8TgiYY.css",
@@ -13864,14 +13879,14 @@
       "sha256": "e09a511156e9ad563605198e8533c5d22c7051d15cf1a5c017dc3b146e1e35d5"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/eye-layers-lem_jq0W.js",
+      "path": "public/atlas-runtime/head-neck/assets/eye-layers-DmD194Lw.js",
       "bytes": 17408,
-      "sha256": "139514d815293a9162ef14ae0051b111c839fbd05e2ee14bcbddf3da021b5564"
+      "sha256": "49c2a5fd9f741942b30e49f6c26a9eb459976b005098eafc1f178be59ff63287"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/foot-dEJOQ0Fz.js",
-      "bytes": 1056288,
-      "sha256": "b73981057f1f43ec7daccf4b41d14e1c824a592a7388b50a17371f74f4a32971"
+      "path": "public/atlas-runtime/head-neck/assets/foot-B9LKOcHv.js",
+      "bytes": 1058309,
+      "sha256": "098f24d59e268dcbfe202c3a9a5e95df832f46157a5e766851d5ebf7532a9f75"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/forearm-B4nqLhdv.js",
@@ -13889,24 +13904,24 @@
       "sha256": "5d33319678baf875c69ed5a878b2ee7f293126b1818803b0805f62797dffefd2"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/hra-pelvis-study-CjqC8O_X.js",
+      "path": "public/atlas-runtime/head-neck/assets/hra-pelvis-study-Kjsp23Ag.js",
       "bytes": 105625,
-      "sha256": "bd20030b8dfbf3bef1f3535a6d79643cca9b46b803591ceda9259e846f5e93fd"
+      "sha256": "c10dab02ec5e5a21ad6e29397b69a81f848f3e311e5a557c44855fb7a7649a58"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/hra-renal-study-BBtZfW4z.js",
+      "path": "public/atlas-runtime/head-neck/assets/hra-renal-study-B2V9NcfW.js",
       "bytes": 7515,
-      "sha256": "ed3a145be4a00025d61583a06166d23256b8e8bbb8fd83c35c1d0f58e6f33d60"
+      "sha256": "f78597f25596892b9ccd203c93ba680cfee27d69c6017d8a8f4f00559da426b4"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/hra-renal-teaching-BEVIrzfM.js",
+      "path": "public/atlas-runtime/head-neck/assets/hra-renal-teaching-C8yJ4f6b.js",
       "bytes": 118009,
-      "sha256": "7a2986a1aaf446537e1906d8ca1cf26336e44ed05c8abfbab81d3b75e2e0b25b"
+      "sha256": "a8331c0df4624dfea5e379e577e6f67fe20cbd86241bb72170b0f676ee92189a"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/independent-study-navigation-DjyHQXqA.js",
+      "path": "public/atlas-runtime/head-neck/assets/independent-study-navigation-BaMCQsXV.js",
       "bytes": 2628,
-      "sha256": "da842d899e66a270201f8760b24d65f2edbdca823ec388525c35662b3b749b07"
+      "sha256": "5a44dda4a6642f0b7fb15b4626f36c98591630e647d6ab5b5f77990aad274ecc"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/index-53bKDQXN.css",
@@ -13914,9 +13929,9 @@
       "sha256": "43495b3204f3514c962a36fdf53799556964d369cd51bc5dcd0443c680beab1e"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/index-BYXz4Cm3.js",
+      "path": "public/atlas-runtime/head-neck/assets/index-Cc_Fizja.js",
       "bytes": 2692453,
-      "sha256": "8d1f0eae389c0623388be912ca7002d3d7b7cc92945ffcb01670926995a18069"
+      "sha256": "ebdacd8c803638abc8813b13d77cd5f41974429608e046235afe8b3a2af3da2d"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/leg-C23bX7kx.js",
@@ -13944,14 +13959,14 @@
       "sha256": "5747a962459501773da533c0ffbc1f25ed19a04504b7cc3feb98d3573f2ae4da"
     },
     {
+      "path": "public/atlas-runtime/head-neck/assets/slider-CqKk-xqY.js",
+      "bytes": 877069,
+      "sha256": "eb603a42d56060ce49f3cd3ae18077cce942d46a3c169d29aef03934d60382d5"
+    },
+    {
       "path": "public/atlas-runtime/head-neck/assets/slider-Db80Scaw.css",
       "bytes": 10494,
       "sha256": "42b0a42ed91025d4c0b04014cb7b4a12fae267059c2ea59bb57ff2ea651842f0"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/assets/slider-yW3Fcl8a.js",
-      "bytes": 877069,
-      "sha256": "df652ae4a56047880d6a96bd028b7d08ece618d563bab8f4e64759d5465634cb"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/spine-e2QBQfxg.js",
@@ -13969,9 +13984,9 @@
       "sha256": "0e0838fb37d99baef5d175c1afd13ce42ce443e1e617121bcc6389c54e0cd86f"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/um-knee-study-CwH3kc6D.js",
+      "path": "public/atlas-runtime/head-neck/assets/um-knee-study-1LzJeVtL.js",
       "bytes": 682861,
-      "sha256": "000e9f31493387aee45f878d7890efdd8e5ad5c927b38c25a71e650f88a0955b"
+      "sha256": "feebb2c9d9a7f4f58e0fe1e0f6b61d5db2d14e30bbbaf8a82b5af0b2015a5aae"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/um-knee-study-D8QdNnSJ.css",
@@ -13979,9 +13994,9 @@
       "sha256": "4ac2474920228edd0025fb319edfe9a83e8b52507ab2f910278af28ff3437f20"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/um-limb-study-CPgz9niX.js",
+      "path": "public/atlas-runtime/head-neck/assets/um-limb-study-Cwe-0vwH.js",
       "bytes": 2603,
-      "sha256": "b5d1ce415b8b5ac285185334ce79ecf8a63e2c93a2fb2c04bd98fef9e09c4d86"
+      "sha256": "6168807260365834dd568fb10aa3fcd6dcfcee671bf2fc965b6bfef6452a7929"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/um-proximal-topic-completion-g3GvGRe9.js",
@@ -13989,14 +14004,14 @@
       "sha256": "bd72b50511e7cc374d60e2d6b36b6902db8e24450731b7e28cdb698d4cb6b522"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/ventricles-CByL2vY8.js",
-      "bytes": 1315771,
-      "sha256": "c7d1a6f681cb11e2f4fb2c92586c4c4ab05fb33b0630524708e73e861cc4eea8"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/assets/ventricles-CfdrTivY.css",
       "bytes": 1203,
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/assets/ventricles-CKX59doN.js",
+      "bytes": 1315771,
+      "sha256": "65c38884e9205fa68137b163f45c88247e8a85d8d787cb91fbbc490c50ac4bbe"
     },
     {
       "path": "public/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
@@ -14021,7 +14036,7 @@
     {
       "path": "public/atlas-runtime/head-neck/index.html",
       "bytes": 1125,
-      "sha256": "541003a8dc9fac9a654bf0e6b52251edbf8327e3bbaf646a6897d3532e376d6e"
+      "sha256": "19f822b67db9f7a33f307303b69956d747bee0033236a41fa95bb7a2a6990f00"
     },
     {
       "path": "public/atlas-runtime/head-neck/LICENSE",
@@ -14066,7 +14081,7 @@
     {
       "path": "public/atlas-runtime/head-neck/manifest.json",
       "bytes": 627564,
-      "sha256": "67e52c3cdea2dadff5169a0f443f39170d9ef94e355dc24a69165829444172e0"
+      "sha256": "53b9a0c8d2bb925d321804e5c0d831016fad430c40bdfc68b7317cc1fea251fa"
     },
     {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -14206,22 +14221,22 @@
     {
       "path": "public/atlas-runtime/head-neck/selection-channel.json",
       "bytes": 72,
-      "sha256": "f4322826fd5d7e6388de4d95d9eb3ef36342b8817a5e17f3f977e014c96b155e"
+      "sha256": "2a131269cfcae5f93e22b95fe9f3f1c970f1f65b159b02435cc4ec260e1e3a99"
     },
     {
       "path": "public/atlas-runtime/head-neck/source-inputs.json",
-      "bytes": 205837,
-      "sha256": "0db09bd0aa35349b749b289a4f8c3960d018cd8f9a44ba3b00395971049f0379"
-    },
-    {
-      "path": "public/atlas-runtime/lower-limb/assets/index-BB5zKAma.js",
-      "bytes": 2525677,
-      "sha256": "8acf822358e7fbc1b4e17eedce53496d96eae3867a2968aebbe4931038d7b546"
+      "bytes": 206254,
+      "sha256": "83d34ca62d296b03565ca9a60f898a0969f430cfdde862f40de0cd1dffb9549c"
     },
     {
       "path": "public/atlas-runtime/lower-limb/assets/index-DvAkAKSA.css",
       "bytes": 237656,
       "sha256": "2cd51d428c078ecfb25cfce64d8fcbb0327e367174ffb33f06a11ed6b2af5ca3"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/assets/index-iBn3w-ix.js",
+      "bytes": 2525677,
+      "sha256": "a5e190e3436bdcd9a86766fe8eeee188dddbed21cb7b6012ecfe08b366cedf7e"
     },
     {
       "path": "public/atlas-runtime/lower-limb/BUNDLED_NOTICES.txt",
@@ -14236,7 +14251,7 @@
     {
       "path": "public/atlas-runtime/lower-limb/index.html",
       "bytes": 477,
-      "sha256": "dcd74fbaf323ff251527fa71158716c1ff776973b7f5cd90e7a0605d5d84942f"
+      "sha256": "2bd1af5db73eadb5fe458d2ef1a8e2adaef3c584b3df36a1d9d63983da385853"
     },
     {
       "path": "public/atlas-runtime/lower-limb/LICENSE",
@@ -14261,7 +14276,7 @@
     {
       "path": "public/atlas-runtime/lower-limb/manifest.json",
       "bytes": 3436,
-      "sha256": "27f27e5291cc3f2c3b1cdd9e190c1f5d62113a55df24067c97937852855c6a19"
+      "sha256": "cec0d368eadf30c536f66404eff92fb1eb3b819e589885645511a64ed21ab81f"
     },
     {
       "path": "public/atlas-runtime/lower-limb/MODEL_NOTICE.md",
@@ -14286,7 +14301,7 @@
     {
       "path": "public/atlas-runtime/lower-limb/specimen-channel.json",
       "bytes": 72,
-      "sha256": "f4322826fd5d7e6388de4d95d9eb3ef36342b8817a5e17f3f977e014c96b155e"
+      "sha256": "2a131269cfcae5f93e22b95fe9f3f1c970f1f65b159b02435cc4ec260e1e3a99"
     },
     {
       "path": "public/atlas-runtime/shoulder/assets/abdomen-BdPYB30z.js",
@@ -14299,19 +14314,19 @@
       "sha256": "802c270adb82b7b34c7ab657d3950f07cc7981b80a4fb46e3c50d3a4f10164e7"
     },
     {
-      "path": "public/atlas-runtime/shoulder/assets/anatomy-scene-DZPZ02Qa.js",
+      "path": "public/atlas-runtime/shoulder/assets/anatomy-scene-gJmcXZhl.js",
       "bytes": 1075111,
-      "sha256": "12184c24d98ca779852051b69e05b90e180d5cf118519df4895b70ca0de1e491"
+      "sha256": "848a02396b35461a039c23bf7957dbaf92a31805ff973cf51b81587793ff827d"
     },
     {
-      "path": "public/atlas-runtime/shoulder/assets/body-content-CgzDRACs.js",
-      "bytes": 7550050,
-      "sha256": "218b84ca6cdf12878322190c41b9ca520152091d0dcba3b6aa316e214818df3a"
+      "path": "public/atlas-runtime/shoulder/assets/body-content-CWLf7xwb.js",
+      "bytes": 7556444,
+      "sha256": "c5d36a4ff269491852f6259ce4055f69070f58a634327b3017582f482e19d3c1"
     },
     {
-      "path": "public/atlas-runtime/shoulder/assets/foot-dEJOQ0Fz.js",
-      "bytes": 1056288,
-      "sha256": "b73981057f1f43ec7daccf4b41d14e1c824a592a7388b50a17371f74f4a32971"
+      "path": "public/atlas-runtime/shoulder/assets/foot-B9LKOcHv.js",
+      "bytes": 1058309,
+      "sha256": "098f24d59e268dcbfe202c3a9a5e95df832f46157a5e766851d5ebf7532a9f75"
     },
     {
       "path": "public/atlas-runtime/shoulder/assets/forearm-B4nqLhdv.js",
@@ -14329,9 +14344,9 @@
       "sha256": "5d33319678baf875c69ed5a878b2ee7f293126b1818803b0805f62797dffefd2"
     },
     {
-      "path": "public/atlas-runtime/shoulder/assets/index-B5W7pYr9.js",
+      "path": "public/atlas-runtime/shoulder/assets/index-BA2hFVej.js",
       "bytes": 1036599,
-      "sha256": "a34af426b5c68429df5c588b94f66678779bb2c26add8ceebc35dc8ec3a9709c"
+      "sha256": "c20570f5c0f77c559cbe5ae35bad72b06866123fcd7be3c5faeeb4d29733c354"
     },
     {
       "path": "public/atlas-runtime/shoulder/assets/index-BL67cPIg.css",
@@ -14381,7 +14396,7 @@
     {
       "path": "public/atlas-runtime/shoulder/index.html",
       "bytes": 504,
-      "sha256": "eee2364f43ab3e5925325db1376751024d8a3770ef8863d8b3ca3192fcf2c91d"
+      "sha256": "d1d5e9df7a54a933ab1d7f23c44d6fedf33079846d1baabd2a499adc3aa6dbc7"
     },
     {
       "path": "public/atlas-runtime/shoulder/LICENSE",
@@ -14411,7 +14426,7 @@
     {
       "path": "public/atlas-runtime/shoulder/manifest.json",
       "bytes": 4795,
-      "sha256": "4390b1c339fe06069159023990e9603aedf369f0e3f4d33efb324981ef1fd794"
+      "sha256": "246310f16e55759f141304c9e54fbb7f23151acdb4e6b99a31778ef61b839ef5"
     },
     {
       "path": "public/atlas-runtime/shoulder/models/bodyparts3d/credits.html",
@@ -14425,8 +14440,8 @@
     },
     {
       "path": "public/atlas-runtime/shoulder/source-inputs.json",
-      "bytes": 152767,
-      "sha256": "8110a228d4492a5de37eb7e63d941d172e06a73ee632773a872974bbc3e7d32e"
+      "bytes": 153184,
+      "sha256": "495de31c24f75544e9998b5f9dfbd45c6a11e796fe22fcc2031516a374713c1a"
     },
     {
       "path": "public/favicon.svg",
@@ -14551,7 +14566,7 @@
     {
       "path": "scripts/check-anatomy-coverage.mjs",
       "bytes": 4552,
-      "sha256": "83d7d6ba71ddb24618fb2bdf0f00955fb25786b43024710542809a2e3173ceec"
+      "sha256": "cf76ab000685a24d7513a4c611a0d2c6695c63274bf4bba5369fed0dd5fbb9be"
     },
     {
       "path": "scripts/check-local-preview-post-stability.mjs",
@@ -14706,7 +14721,7 @@
     {
       "path": "scripts/import-clinical-review.mjs",
       "bytes": 6751,
-      "sha256": "4919415b5d5fd0705b45825e23644937c6a2de3ebb72a736e598bb942267b2dc"
+      "sha256": "530b3923d52e0887d86fe42c4bd96048880bb0c8ec60811e9531eff84b345f65"
     },
     {
       "path": "scripts/import-disc-comparison.mjs",
@@ -15362,6 +15377,11 @@
       "path": "tests/atlas-foot-ultrasound-notice-history.ts",
       "bytes": 1914,
       "sha256": "40275a9b3845448bcd399bd99a8349dab59a94bbd087b563d10d65b0cd31aff1"
+    },
+    {
+      "path": "tests/atlas-foot-venous-xray-current.test.mjs",
+      "bytes": 11904,
+      "sha256": "f6dc0907ab79ea40dd480eef5bf013169a5fce394e0229249ab5e7e7f82ea93d"
     },
     {
       "path": "tests/atlas-forearm-delivery-fixture.ts",
@@ -17210,8 +17230,8 @@
     },
     {
       "path": "tests/clinical-review-orbital-check-evidence.test.mjs",
-      "bytes": 13539,
-      "sha256": "6f1718b9b652cee0e66960728a7885b7c160df00207b9182fc6c93502091d12e"
+      "bytes": 14713,
+      "sha256": "781cbf5f36bfe0eb902703f2f0195f2c0d11feb6b83b5f27a73b36faba2d25eb"
     },
     {
       "path": "tests/clinical-review-orbital-muscle-quiz.test.ts",
@@ -17796,7 +17816,7 @@
     {
       "path": "tests/current-atlas-delivery.test.mjs",
       "bytes": 10944,
-      "sha256": "2860e5c1168bca1fc631d6a720357ed1eb5bbbb74a846b995012aae63321db13"
+      "sha256": "a7ce97681413483667399d7d8388231c842082dd87a2eb8648d13751cf30aafa"
     },
     {
       "path": "tests/current-proof-corrections-preservation.test.mjs",
@@ -18477,6 +18497,11 @@
       "path": "tests/fixtures/clinical-review-navigation-before-dialog.test.ts.raw",
       "bytes": 2582,
       "sha256": "8517d7351b49410bc31327b4038192210847ec04c92014991691f33ea32d0a5a"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-orbital-check-evidence.test.mjs.raw",
+      "bytes": 13539,
+      "sha256": "6f1718b9b652cee0e66960728a7885b7c160df00207b9182fc6c93502091d12e"
     },
     {
       "path": "tests/fixtures/clinical-review-portal-venous-original.ts.txt",
@@ -19529,6 +19554,11 @@
       "sha256": "0e21b34cb08141409e4c6927b4caee719a0f0837063ecfc75261732883061e6c"
     },
     {
+      "path": "tests/fixtures/completion-checklist-before-foot-venous-xray.json.raw",
+      "bytes": 107259,
+      "sha256": "7f800c3b9efd5cfe604c970ad32145efdc2dfc27bdcd1f6bb85fd5f0361a6c32"
+    },
+    {
       "path": "tests/fixtures/completion-checklist-current-transition-before-head-client.test.mjs.raw",
       "bytes": 5669,
       "sha256": "949e02d86188ec669c4829e621f8765ce420e495ec6735135be7e9d8b595ce5c"
@@ -19557,6 +19587,16 @@
       "path": "tests/fixtures/course-study-now-before-20261018/education-platform.ts.raw",
       "bytes": 96622,
       "sha256": "d4f8b902b7bbcbdae879fbc519efff63c61c538b747f1c37383f0c9295f30795"
+    },
+    {
+      "path": "tests/fixtures/coverage-checker-before-foot-venous-xray.raw",
+      "bytes": 4552,
+      "sha256": "83d7d6ba71ddb24618fb2bdf0f00955fb25786b43024710542809a2e3173ceec"
+    },
+    {
+      "path": "tests/fixtures/coverage-view-before-foot-venous-xray.raw",
+      "bytes": 5290,
+      "sha256": "39ac8f3a703a36832f5d75014c59812296819c5ac96fd439f0a4f4644d8ea663"
     },
     {
       "path": "tests/fixtures/current-atlas-delivery-48-before-head-client.json",
@@ -19664,6 +19704,16 @@
       "sha256": "c72d0ca6c8e8d24dc8dd0a479f02317c00db6e7717a1dc55de948daa55a58c0c"
     },
     {
+      "path": "tests/fixtures/current-atlas-delivery-before-foot-venous-xray.json.raw",
+      "bytes": 1777,
+      "sha256": "28b970fbc9e001504d09fef7e85199a5d2027df324ef767e982c309d9cc2a0c3"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery-before-foot-venous-xray.test.mjs.raw",
+      "bytes": 10944,
+      "sha256": "2860e5c1168bca1fc631d6a720357ed1eb5bbbb74a846b995012aae63321db13"
+    },
+    {
       "path": "tests/fixtures/current-atlas-delivery-before-head-client.test.mjs.raw",
       "bytes": 9641,
       "sha256": "acd39bedc55e358dc577418600d781d408a7d1c25038d1bf57b63bfa274e2064"
@@ -19721,7 +19771,7 @@
     {
       "path": "tests/fixtures/current-atlas-delivery.json",
       "bytes": 1777,
-      "sha256": "28b970fbc9e001504d09fef7e85199a5d2027df324ef767e982c309d9cc2a0c3"
+      "sha256": "b683fcb7b38b83c97c49bdc2a2903ced10de2cb69cc16a80959bbe8f21a7409a"
     },
     {
       "path": "tests/fixtures/current-history-wave2-before-20261016/anatomy-coverage-view.test.ts.txt",
@@ -20092,6 +20142,71 @@
       "path": "tests/fixtures/exact-test-fixture-eol-before-head-client.test.mjs.raw",
       "bytes": 17215,
       "sha256": "9a9bc0449b7df52b5174f1cd5724205225096bf3f90b2217c9fc7ac7a77f1022"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/atlas-review/integration-inputs.json",
+      "bytes": 263511,
+      "sha256": "c04da8bfe13e02b78ec9c1d10d25d76796d2d8e3a92872b57fe06aa75ce670c8"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/atlas-review/manifest.json",
+      "bytes": 374031,
+      "sha256": "26192bf1b8c02779565839a6df320907cd0463832a417647d0717c30a4be36cc"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "3cc4c2d1d0df472c3c6bd2e0690c393fc02fd75c74bba97753f552087d8569f5"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-review-viewer/manifest.json",
+      "bytes": 9033,
+      "sha256": "0e8d1dba987f542c0c4d313cca80a9f2becfe78b6e50dc56cffd1ff7e26f36a7"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/female-pelvis/manifest.json",
+      "bytes": 6208,
+      "sha256": "92e1471a1ead97ea0787edbca7de7cc1b4d91030132054ac4b67a8df6b9c1e56"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/female-pelvis/source-inputs.json",
+      "bytes": 16681,
+      "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/head-neck/manifest.json",
+      "bytes": 627564,
+      "sha256": "67e52c3cdea2dadff5169a0f443f39170d9ef94e355dc24a69165829444172e0"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/head-neck/source-inputs.json",
+      "bytes": 205837,
+      "sha256": "0db09bd0aa35349b749b289a4f8c3960d018cd8f9a44ba3b00395971049f0379"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/lower-limb/manifest.json",
+      "bytes": 3436,
+      "sha256": "27f27e5291cc3f2c3b1cdd9e190c1f5d62113a55df24067c97937852855c6a19"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/lower-limb/source-inputs.json",
+      "bytes": 15191,
+      "sha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/shoulder/manifest.json",
+      "bytes": 4795,
+      "sha256": "4390b1c339fe06069159023990e9603aedf369f0e3f4d33efb324981ef1fd794"
+    },
+    {
+      "path": "tests/fixtures/f505-closed/public/atlas-runtime/shoulder/source-inputs.json",
+      "bytes": 152767,
+      "sha256": "8110a228d4492a5de37eb7e63d941d172e06a73ee632773a872974bbc3e7d32e"
+    },
+    {
+      "path": "tests/fixtures/foot-venous-xray-delivery-transition.json",
+      "bytes": 4914,
+      "sha256": "946a547dc183a1bcf394d8a448627ea51907fa5210f73b8ddde75ec9b505f2af"
     },
     {
       "path": "tests/fixtures/git-b953ff3/app__atlas__shoulder-3d__page.tsx.txt",
@@ -20974,6 +21089,11 @@
       "sha256": "53bdc6cd7920c9111ed7ddb77e4a1f2e2ef4969b909736c50b71e19e3251e2a3"
     },
     {
+      "path": "tests/fixtures/orbital-mri-delivery-transition.test.mjs.raw",
+      "bytes": 7677,
+      "sha256": "b5fcec4ac0851adeb414274b775a420023742d77b8955e3b4e2e3c740f9abc7c"
+    },
+    {
       "path": "tests/fixtures/plexus-before-head-checksum-lock.txt",
       "bytes": 443083,
       "sha256": "da6513ef764b1291e1bc87ebd50184971ebe7ffe44be24e9753e8071fe297b68"
@@ -21572,6 +21692,11 @@
       "path": "tests/fixtures/workspace-page-original.json",
       "bytes": 6446,
       "sha256": "ec0f0b5fad5afa11b56115025cd126ce670cd78a4e1d94ab18d59af4b65cc9c4"
+    },
+    {
+      "path": "tests/foot-venous-xray-delivery-transition.test.mjs",
+      "bytes": 7069,
+      "sha256": "8f1527bc152c18fd053fa60bf0115883504806aa41ff9209b6f5ea9a7a63a442"
     },
     {
       "path": "tests/footer-workspace-label.test.mjs",
@@ -23210,8 +23335,8 @@
     },
     {
       "path": "tests/orbital-mri-delivery-transition.test.mjs",
-      "bytes": 7677,
-      "sha256": "b5fcec4ac0851adeb414274b775a420023742d77b8955e3b4e2e3c740f9abc7c"
+      "bytes": 8543,
+      "sha256": "37ec90efd4ae774d7df4513b0cbdf59df795d5140c2543bba7d8c677ef21ae83"
     },
     {
       "path": "tests/pelvis-spine-pilot.test.ts",
@@ -24177,9 +24302,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2346264,
-      "sha256": "68ac3d641026e4d5b0ebce43ac9191724571433da91c1da1722b2455dfd0ac41"
+      "bytes": 2351055,
+      "sha256": "cf60408c5ea569c52235fda2ac50d28d24c48fc680186548052622be9e0d7de5"
     }
   ],
-  "scope": "Screened source-only website recovery: native CT/MRI 3D scan surface keyboard-accessible camera controls, collapsed by default, with current-renderer/selection/context guards, fit and Escape focus return. Accepted scan geometry functions and source IDs/cursors/masks/independent entitlements unchanged. Five actual native renderer inputs added to Review provenance, all previous inputs retained. Final named focused native, types/build and bounded actual local browser checks are separate evidence; no all-browser/full-suite/clinical approval. No new assets or dependencies. Register66 preserves all71requirements/eightoptional statuses. Private data, three held documents and raw canonical ancestry excluded. Source-only, not whole-project/private-data backup or public deployment. Originalseven context test bodies and original geometry functions remain exact. Main-added damping test initially failed a one-frame settling assumption; retained diagnostic and real Z-up/damping frame-settled correction do not suppress prior assertions. Earlier worker/intermediate checks are not added to final counts. Staging dependency junction is excluded and left unchanged after cleanup refusal."
+  "scope": "Screened source-only website recovery: coherent f509 four-runtime and protected Review import for one original shared contrast-venography draft across two dorsal-arch Xray placements. Exactly2topic changes and9934preserved; source models/geometry, scans/masks, independent access, approval and all71/eightstates unchanged. Genuine Coverage producer semantics preserved, reader/checker metadata rebased against exact Git inputs with validation bodies unchanged; initial provisional binding retained separately before finala4db closure. Every1674previous Review input retained, three added. Whole original current contract/register66 and orbital test bytes retained; genuine12document f505 epoch is separated from selected-current source checks rather than losing historic assertions. Final79scoped native cases zero fail/skip/cancel, types/build and actual local bilateral teaching/Coverage checks pass onfrozen4859paths. Source screen is not clinical/privacy/rights certification; two known Atlas historic foot failures remain documented, neither reported passing. No new assets/dependencies, native patient screenshots, raw canonical ancestry or three held operational documents included. Source-only, not whole-project/private-data backup or deployment. Originalseven context test bodies and original geometry functions remain exact. Main-added damping test initially failed a one-frame settling assumption; retained diagnostic and real Z-up/damping frame-settled correction do not suppress prior assertions. Earlier worker/intermediate checks are not added to final counts. Staging dependency junction is excluded and left unchanged after cleanup refusal."
 }

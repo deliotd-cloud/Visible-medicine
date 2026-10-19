@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 66,
+  "revision": 67,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -21,16 +21,16 @@
     "uiqa": "F:/VisibleMedicine/staging/20261018-head-spa-lifecycle"
   },
   "baseline": {
-    "atlasCommit": "f5052a1906bf9b87e5235bda57d367b1103729db",
-    "atlasTree": "36381d525f7c6886743bcec00fcee96931d65c58",
+    "atlasCommit": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+    "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896",
-    "reviewSourceFiles": 1538,
+    "reviewIntegration": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
+    "reviewSourceFiles": 1541,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
-    "rootDraftPlacements": 9334,
-    "rootPendingPlacements": 563,
+    "rootDraftPlacements": 9336,
+    "rootPendingPlacements": 561,
     "rootGeneratedIdentificationPlacements": 39,
     "nestedRepresentations": 108,
     "nestedConcepts": 76,
@@ -43,14 +43,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "f5052a1906bf9b87e5235bda57d367b1103729db",
-    "tree": "36381d525f7c6886743bcec00fcee96931d65c58",
-    "rootDraftPlacements": 9334,
-    "rootPendingPlacements": 563,
+    "commit": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+    "tree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
+    "rootDraftPlacements": 9336,
+    "rootPendingPlacements": 561,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-orbital-mri-website-import/coverage-final-binding.json",
-    "note": "Four existing bilateral medial/lateral check-ligament MRI drafts gain an original primary-study evidence/limits note and citation. Normal four-runtime/Review source import, binding, viewer and byte verification pass; models, independent access and all topic readiness totals remain unchanged. Application/native/browser and clinical/release acceptance require separate evidence; no approval, scan or registration is supplied."
+    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-foot-venous-xray-website-import/writers-state-v2.json",
+    "note": "Two exact bilateral dorsal venous arch X-ray placements gain one original shared contrast-venography teaching draft. The other9934 placements, all geometry and existing CT/MRI/ultrasound text remain unchanged. Normal runtime/Review/coverage binding is imported locally. Draft readiness is not clinical approval, acquired-image visibility or registration; app/browser gates remain separate."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-19",
+      "revision": 67,
+      "change": "Normal coherent import of Atlasf509 and allfour source-bound runtimes with137modelpayloads unchanged. One original shared dorsal-arch X-ray draft fills two pending placements; root totals9336draft/561pending/39generated, not unique lessons or clinical approval. All71requirements/eight optional states, acceptance/evidence/owner gates and private clinical nulls remain exact. Existing six arch CT/MRI/US drafts and all unrelated source material remain unchanged. Coverage ledgers retain every semantic field with genuine Git-backed provenance updates; prior1674Review inputs retained and3exact authoring inputs added. Previous closed delivery pin, whole contract and register66 retained byte-exact. Known pre-existing Atlas historical foot test failures remain documented and untouched. No scans, masks, geometry, new assets/dependencies, access, desktop PACS, spatial approval or public deployment change. Focused app/type/build/browser verification and source-only backup are separate gates."
+    },
     {
       "date": "2026-10-19",
       "revision": 66,

@@ -7,12 +7,12 @@ import {fileURLToPath} from 'node:url';
 import {buildCoverageIndex} from './build-anatomy-coverage-index.mjs';
 
 const site=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-export const coverageRevision='f5052a1906bf9b87e5235bda57d367b1103729db';
+export const coverageRevision='f5097af8493701d64a8e2a2b5797df380f3b348a';
 export const coverageArtifacts=Object.freeze([
- {scope:'root',path:'docs/anatomy-coverage/root.json',sha256:'99c4e46a6a3e5635812ff76b756bcf5e3ee75147a18b637e3dc5ce3051960323'},
- {scope:'nested',path:'docs/anatomy-coverage/nested.json',sha256:'277c44f9b3cf6bb218c77e70b48e72d404c268e25986346b35a1d32337c9ec27'},
- {scope:'independent',path:'docs/anatomy-coverage/independent.json',sha256:'c5ba101fb50e35d1d7ecc33e75bc24c90ad9ff7884d8b5f9ee82cafe6d8e69da'},
- {scope:'reference',path:'docs/anatomy-coverage/reference.json',sha256:'2778fc8b4cc0066eb49c81eccb07f1082fac19737cb1fd2a2b59405a089b8e7e'},
+ {scope:'root',path:'docs/anatomy-coverage/root.json',sha256:'5fc23431208fd5379fbb552ac54988ac07b9b7d1c6b22958c30be71de3eefeef'},
+ {scope:'nested',path:'docs/anatomy-coverage/nested.json',sha256:'31123d519504c7f157cb04b784e6d52ed86acc4f69f1fe91789efea631da12cd'},
+ {scope:'independent',path:'docs/anatomy-coverage/independent.json',sha256:'15a7413f4ab0a9ab2c2058775d6079f1d79394dc22824d4adc03b2e846700d18'},
+ {scope:'reference',path:'docs/anatomy-coverage/reference.json',sha256:'14ecd2d5a0ab5b170ad6413bda0825bbf8360908dd34f361d3d22696ceca8b29'},
 ]);
 const hash=b=>createHash('sha256').update(b).digest('hex');
 export function verifyCoverageSources(index,{readSource,committedSource,head,status,expectedRevision=coverageRevision}){

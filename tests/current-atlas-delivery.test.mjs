@@ -46,8 +46,8 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 });
 
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
- assert.equal(CURRENT_ATLAS_REVISION,'f5052a1906bf9b87e5235bda57d367b1103729db');
- assert.equal(pin.sourceTree,'36381d525f7c6886743bcec00fcee96931d65c58');
+ assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');
+ assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');
  assert.equal(pin.reviewIntegration,sha(JSON.stringify(JSON.parse(read('atlas-review/integration-inputs.json')).inputs)));
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
@@ -68,7 +68,7 @@ test('current fixture agrees with actual emitted bytes, notices, imported Review
  for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
  const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
  for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
- assert.equal(sourceFiles,1538);assert(artifacts>100&&inputs>1500);
+ assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);
 });
 
 for(const [label,edit]of [

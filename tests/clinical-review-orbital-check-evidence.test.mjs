@@ -9,8 +9,11 @@ import {join} from 'node:path';
 import {fileURLToPath,pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {checkedAtlasSourceRepo} from './atlas-source-repo.mjs';
+import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
-const current='f5052a1906bf9b87e5235bda57d367b1103729db';
+const introduction='f5052a1906bf9b87e5235bda57d367b1103729db';
+const currentPin=validateCurrentAtlasDelivery();
+const current=currentPin.source;
 const atlas=checkedAtlasSourceRepo(current);
 const website=fileURLToPath(new URL('../',import.meta.url));
 const prior='509b01da5d72f33bd774e4a59d63e2406af1f2ff';
@@ -28,6 +31,9 @@ const git=(args,encoding)=>execFileSync('git',['--no-replace-objects',...args],{
 });
 const gitBytes=(commit,path)=>git(['show',`${commit}:${path}`]);
 const checkSha=(base,path,expected)=>assert.equal(sha(read(base,path)),expected,path);
+const closedPinBytes=read(website,'tests/fixtures/current-atlas-delivery-before-foot-venous-xray.json.raw');
+const closedPin=JSON.parse(closedPinBytes);
+const readClosed=path=>read(website,'tests/fixtures/f505-closed/'+path);
 
 const expected=[
  ['trochlea','right','FMA49067','FJ1380','eb522d2de22050bba2a6359cee767cd34d96e8a0bc135db043f9cf86f70d6d6e'],
@@ -60,10 +66,17 @@ async function importedApi(){
 }
 
 test('current Atlas check-ligament evidence reaches exact Review and four learner deliveries',async()=>{
+ assert.equal(sha(read(website,'tests/fixtures/clinical-review-orbital-check-evidence.test.mjs.raw')),'6f1718b9b652cee0e66960728a7885b7c160df00207b9182fc6c93502091d12e');
+ assert.equal(sha(closedPinBytes),'28b970fbc9e001504d09fef7e85199a5d2027df324ef767e982c309d9cc2a0c3');
+ assert.equal(validateCurrentAtlasDelivery({pin:closedPin,read:readClosed}).source,introduction);
+ assert.equal(closedPin.reviewSourceFiles,1538);
+ assert.equal(closedPin.sourceTree,'36381d525f7c6886743bcec00fcee96931d65c58');
+ assert.equal(git(['rev-parse',`${introduction}^{tree}`],'utf8').trim(),closedPin.sourceTree);
  assert.equal(git(['rev-parse','HEAD'],'utf8').trim(),current);
- assert.equal(git(['rev-parse',`${current}^{tree}`],'utf8').trim(),'36381d525f7c6886743bcec00fcee96931d65c58');
+ assert.equal(git(['rev-parse',`${current}^{tree}`],'utf8').trim(),currentPin.sourceTree);
  assert.equal(git(['status','--porcelain=v1'],'utf8').trim(),'','Atlas source must be clean');
  const pins=json(atlas,sourcePaths[0]);
+ for(const path of sourcePaths)assert.deepEqual(gitBytes(introduction,path),gitBytes(current,path),`${path}: unchanged since f505 introduction`);
  assert.deepEqual(read(atlas,sourcePaths[0]),gitBytes(current,sourcePaths[0]));
  assert.deepEqual(gitBytes(prior,sourcePaths[0]),gitBytes(current,sourcePaths[0]),'original pins retained');
  for(const path of sourceChangePaths){
@@ -73,6 +86,7 @@ test('current Atlas check-ligament evidence reaches exact Review and four learne
  const sourceHash=Object.fromEntries(sourcePaths.map(path=>[path,sha(gitBytes(current,path))]));
  const review=json(website,'atlas-review/manifest.json');
  assert.equal(review.revision,current);
+ assert.equal(review.files.length,currentPin.reviewSourceFiles);
  for(const [path,digest] of Object.entries(sourceHash)){
   const imported=review.files.find(file=>file.path===path);
   assert(imported,path);
