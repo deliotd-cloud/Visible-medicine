@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T05:34:38.773Z",
-  "sourceManifestSha256": "b6493d16ace995903f03fc99843a4a5d71736a8589253bd47b0d225fb69b56bb",
-  "parent": "54578e47824d1b2ed75050911160e5597bf2661b",
+  "at": "2026-10-19T05:47:02.874Z",
+  "sourceManifestSha256": "6a2aa57d88584a2a67c6787f20202a1767083f5dcc0cedfc63ea5c21b69213c1",
+  "parent": "06c2d122c9bba12fe97cd441d7f77197fa9fe361",
   "atlasSource": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
   "review": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
@@ -23589,6 +23589,11 @@
       "sha256": "0322e4e4dc217f02d3dfafa2567e89510088992337578876f80d387d6e27a067"
     },
     {
+      "path": "tests/spinal-craniofacial-ct-current-compatibility.test.mjs",
+      "bytes": 6176,
+      "sha256": "989dc1e6c1888286c2fcb4ed178cd33373ffe92bc394b45e752b8be49cae20bb"
+    },
+    {
       "path": "tests/splash-intro.test.ts",
       "bytes": 3324,
       "sha256": "c76933c7f117bf774dc1e162a54bf68fe26d045a14229b7d333c4858b7c3000b"
@@ -24012,9 +24017,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2313861,
-      "sha256": "36e70a97f7226a98db7166fcd45a99fa5a5cc796eaa748ab921baba0f8bedd6d"
+      "bytes": 2314277,
+      "sha256": "49e68952009a656b5acd30ae50bca97bb44521b4c2823d875914c51ba5e100c2"
     }
   ],
-  "scope": "Screened website application source and exact historical test-source texts only. Reachable Review worksheet controls, readable system names, Studio Back focus, preserved teaching/refusal checks and immutable historical evidence; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
+  "scope": "Screened website application source and exact historical test-source texts only. One exact-source current CT teaching/Review/learner and worksheet-tampering compatibility test, with prior runtime source unchanged; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
 }
