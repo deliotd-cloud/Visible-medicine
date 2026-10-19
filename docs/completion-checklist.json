@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 64,
+  "revision": 65,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -25,7 +25,7 @@
     "atlasTree": "36381d525f7c6886743bcec00fcee96931d65c58",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "8bfe804162a38faf384cfb3a2722267e156e0ebe60b12870c7a099c11551ff81",
+    "reviewIntegration": "5c559b77c0b50003b0bd1d16464388daff53bbafd0ee9779566374b3163f830c",
     "reviewSourceFiles": 1538,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-19",
+      "revision": 65,
+      "change": "Improve compact desktop context: active exact-route initial-mount and pageshow restoration resets browser-restored pending region choices without navigating or resetting ordinary same-scope choices. Source side and annotation-type labels are human-readable in CT/MRI index, filters and selected metadata, while raw codes, source matching, original masks, grading eligibility and scope limits stay unchanged. Add the actual display helper to Review renderer provenance; normal rebind/viewerverify refresh exact currentdelivery metadata, not clinical decisions. Two existing history harness mocks expose new helpers while retaining all original stubs/assertions. All71requirements/eightoptionalstatuses preserved. Native/types/build and actual browser acceptance require separate evidence; no new scan, asset, dependency, fee, geometry, entitlement, approval or registration. Actualbrowser caught the first pageshow-only candidate retaining a pending value on Back. Guarded initial restoration and a corresponding pre-subscription form-state test were added; intermediate310case/type/build passes do not substitute for final-source browser acceptance. Final timing refinement queues an active exact-route restoration after native history form-state dispatch, cancels queued work on scope change/unmount, and preserves ordinary pending choices. Initial synchronous browser snapshots showed old Head selection after Back; those snapshots alone did not prove a lasting failure. Deferred candidate was observed settled at Wholebody on two journeys, including a checked-option wait. Native timing cases retain all prior assertions. No acceptance is inferred from the earlier intermediate passes."
+    },
     {
       "date": "2026-10-19",
       "revision": 64,

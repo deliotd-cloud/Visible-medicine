@@ -3,6 +3,18 @@ export function headLabel(entry:{label:string}):string {
   return entry.label.replace(/\s*(?:[—–-]\s*)?regional mask\s*$/i,'').trim();
 }
 
+/** Human-readable presentation only; filtering and source matching use raw codes. */
+export function headSideLabel(value:string|undefined):string {
+  const labels:Record<string,string>={left:'Left',right:'Right',midline_or_unpaired:'Midline or unpaired',midline:'Midline',unpaired:'Unpaired',bilateral:'Bilateral'};
+  return value ? Object.hasOwn(labels,value) ? labels[value] : value : 'Not specified';
+}
+
+/** A readable type is not a claim of complete segmentation or clinical acceptance. */
+export function headRepresentationLabel(value:string|undefined):string {
+  const labels:Record<string,string>={mask:'Mask','partial-mask':'Partial mask',point:'Point locator',curve:'Regional course',mesh:'Surface mesh'};
+  return value ? Object.hasOwn(labels,value) ? labels[value] : value : 'Not specified';
+}
+
 /** Keep the mask's hue, lifting dark colours for readable ink over the dark label plate. */
 export function annotationInk(color:number[]):string {
   const base=color.map(value=>Math.max(0,Math.min(1,value)));

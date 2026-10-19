@@ -12,6 +12,55 @@ const require = createRequire(import.meta.url);
 let pathname = '/atlas/3d';
 const destinations: string[] = [];
 const documentDestinations: string[] = [];
+let pageHref = '/atlas/3d';
+const pageShowListeners = new Set<() => void>();
+const pendingRestores = new Map<number, () => void>();
+let restoreSequence = 0;
+function flushRestores() {
+  const callbacks = [...pendingRestores.values()];
+  pendingRestores.clear();
+  for (const callback of callbacks) callback();
+}
+const browserWindow = {
+  setTimeout: (callback: () => void, delay: number) => {
+    assert.equal(delay, 0, 'restoration is deferred beyond native history dispatch');
+    pendingRestores.set(++restoreSequence, callback);
+    return restoreSequence;
+  },
+  clearTimeout: (id: number) => { pendingRestores.delete(id); },
+  location: {
+    get pathname() { return new URL(pageHref, 'https://atlas.invalid').pathname; },
+    get search() { return new URL(pageHref, 'https://atlas.invalid').search; },
+    assign: (destination: string) => documentDestinations.push(destination),
+  },
+  addEventListener: (name: string, listener: () => void) => {
+    if (name === 'pageshow') pageShowListeners.add(listener);
+  },
+  removeEventListener: (name: string, listener: () => void) => {
+    if (name === 'pageshow') pageShowListeners.delete(listener);
+  },
+};
+type SelectNode = { value: string };
+let mountedHooks: {
+  ref: { current: SelectNode | null };
+  dependencies?: readonly unknown[];
+  cleanup?: () => void;
+  pending?: () => (() => void) | undefined;
+} | null = null;
+const reactHooks = {
+  ...React,
+  useRef: () => mountedHooks?.ref ?? { current: null },
+  useEffect: (effect: () => (() => void) | undefined, dependencies: readonly unknown[]) => {
+    const hooks = mountedHooks;
+    if (!hooks) return;
+    if (hooks.dependencies?.length === dependencies.length &&
+        hooks.dependencies.every((value, index) => Object.is(value, dependencies[index]))) return;
+    hooks.cleanup?.();
+    hooks.cleanup = undefined;
+    hooks.dependencies = dependencies;
+    hooks.pending = effect;
+  },
+};
 
 function compile(path: string, mocks: Record<string, unknown>) {
   const source = readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
@@ -22,7 +71,7 @@ function compile(path: string, mocks: Record<string, unknown>) {
   const loaded = { exports: {} as Record<string, unknown> };
   new Function('require', 'module', 'exports', 'window', code)(
     (name: string) => name in mocks ? mocks[name] : require(name), loaded, loaded.exports,
-    { location: { assign: (destination: string) => documentDestinations.push(destination) } },
+    browserWindow,
   );
   return loaded.exports;
 }
@@ -32,13 +81,14 @@ const navigation = {
   useRouter: () => ({ push: (destination: string) => destinations.push(destination) }),
 };
 const { AtlasRegionNavigation } = compile('components/AtlasRegionNavigation.tsx', {
+  react: reactHooks,
   'next/navigation': navigation,
   '../lib/atlas-navigation': require('../lib/atlas-navigation.ts'),
 }) as { AtlasRegionNavigation: (props: { modality: AtlasModalityId; selected: string }) => React.ReactElement<{ children: React.ReactNode }> };
 
 type SubmitEvent = { preventDefault: () => void; currentTarget: { elements: { namedItem: (name: string) => { value: string } | null } } };
 type RegionForm = React.ReactElement<{ children: React.ReactNode; onSubmit: (event: SubmitEvent) => void }>;
-type RegionSelect = React.ReactElement<{ name: string; defaultValue: string; onChange?: unknown; children: React.ReactNode }>;
+type RegionSelect = React.ReactElement<{ ref: { current: SelectNode | null }; name: string; defaultValue: string; onChange?: unknown; children: React.ReactNode }>;
 function picker(tree: ReturnType<typeof AtlasRegionNavigation>) {
   const form = tree.props.children as RegionForm;
   assert.equal(form.type, 'form');
@@ -63,6 +113,94 @@ function submit(form: RegionForm, value: string | null) {
   });
   assert.equal(prevented, true);
 }
+
+function renderMountedPicker(modality: AtlasModalityId, selected: string, existingNode?: SelectNode) {
+  assert(mountedHooks);
+  const tree = AtlasRegionNavigation({ modality, selected });
+  const parts = picker(tree);
+  const node = existingNode ?? { value: selected };
+  parts.select.props.ref.current = node;
+  const pending = mountedHooks.pending;
+  mountedHooks.pending = undefined;
+  if (pending) mountedHooks.cleanup = pending();
+  return { ...parts, node };
+}
+
+test('pageshow restores current route choice without clearing ordinary pending selection', () => {
+  assert.equal(pageShowListeners.size, 0);
+  mountedHooks = { ref: { current: null } };
+  pageHref = '/atlas/3d';
+  try {
+    const wholeBody = renderMountedPicker('3d', 'whole-body', { value: 'head-neck' });
+    assert.equal(pageShowListeners.size, 1);
+    assert.equal(wholeBody.node.value, 'whole-body', 'initial history-restored form value is corrected even if pageshow fired before subscription');
+    wholeBody.node.value = 'head-neck';
+    flushRestores();
+    assert.equal(wholeBody.node.value, 'whole-body', 'native state restored after mount is corrected on the next task');
+    wholeBody.node.value = 'head-neck';
+    renderMountedPicker('3d', 'whole-body', wholeBody.node);
+    assert.equal(wholeBody.node.value, 'head-neck', 'ordinary rerender does not reset user choice');
+    const restoredNode = mountedHooks.ref.current!;
+    restoredNode.value = 'head-neck';
+    const oldListener = [...pageShowListeners][0];
+    pageHref = '/atlas/head-neck-3d';
+    oldListener();
+    flushRestores();
+    assert.equal(restoredNode.value, 'head-neck', 'old route does not overwrite another route');
+    pageHref = '/atlas/3d';
+    oldListener();
+    assert.equal(restoredNode.value, 'whole-body', 'Back restores the current route choice');
+    restoredNode.value = 'head-neck';
+    flushRestores();
+    assert.equal(restoredNode.value, 'whole-body', 'native values restored after pageshow do not overwrite the route reset');
+    oldListener();
+    assert.equal(pendingRestores.size, 1);
+    const staleRestore = [...pendingRestores.values()][0];
+
+    pageHref = '/atlas/head-neck-3d';
+    const head = renderMountedPicker('3d', 'head-neck');
+    assert.equal(pageShowListeners.size, 1, 'scope change removes the old listener');
+    assert.equal(pendingRestores.size, 1, 'scope change cancels the old queued restore before scheduling the new one');
+    flushRestores();
+    head.node.value = 'spine';
+    oldListener();
+    staleRestore();
+    assert.equal(head.node.value, 'spine', 'stale listener cannot change a new scope');
+    [...pageShowListeners][0]();
+    assert.equal(head.node.value, 'head-neck', 'head route is restored after document load');
+    head.node.value = 'spine';
+    pageHref = '/atlas/3d';
+    flushRestores();
+    assert.equal(head.node.value, 'spine', 'queued work rechecks ownership after navigation');
+
+    pageHref = '/atlas/3d?region=shoulder-arm';
+    const shoulder = renderMountedPicker('3d', 'shoulder-arm');
+    shoulder.node.value = 'head-neck';
+    [...pageShowListeners][0]();
+    assert.equal(shoulder.node.value, 'shoulder-arm', 'query-scoped route is matched exactly');
+    flushRestores();
+    shoulder.node.value = 'spine';
+    pageHref = '/atlas/3d?region=forearm';
+    [...pageShowListeners][0]();
+    assert.equal(shoulder.node.value, 'spine', 'another query scope cannot reset the picker');
+  } finally {
+    const stale = [...pageShowListeners][0];
+    const node = mountedHooks.ref.current;
+    const staleRestore = [...pendingRestores.values()][0];
+    mountedHooks.cleanup?.();
+    assert.equal(pageShowListeners.size, 0, 'unmount removes the listener');
+    assert.equal(pendingRestores.size, 0, 'unmount cancels queued work');
+    if (node && stale) {
+      node.value = 'spine';
+      stale();
+      staleRestore?.();
+      assert.equal(node.value, 'spine', 'unmounted listener is inert');
+      assert.equal(pendingRestores.size, 0, 'unmounted callbacks cannot queue new work');
+    }
+    mountedHooks = null;
+    pageHref = '/atlas/3d';
+  }
+});
 
 test('native region picker keeps every ordered 3D destination and navigates only after submit', () => {
   destinations.length = 0;

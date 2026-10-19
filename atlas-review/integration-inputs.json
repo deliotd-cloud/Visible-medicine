@@ -1,6 +1,6 @@
 {
   "sourceCommit": "f5052a1906bf9b87e5235bda57d367b1103729db",
-  "sha256": "8bfe804162a38faf384cfb3a2722267e156e0ebe60b12870c7a099c11551ff81",
+  "sha256": "5c559b77c0b50003b0bd1d16464388daff53bbafd0ee9779566374b3163f830c",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -6348,7 +6348,7 @@
     },
     {
       "path": "components/HeadAtlasViewer.tsx",
-      "sha256": "0197aff71effd03a1d679819f161500c8020f0044ec5bf708759a758a26ec4d1"
+      "sha256": "35963ffd6f07911f44a6934c31490151eba51b4c27ed2412b2cbe5863ffa0a22"
     },
     {
       "path": "components/HeadCerebellarClinicalReview.tsx",
@@ -6453,6 +6453,10 @@
     {
       "path": "lib/head-asset-checksum.ts",
       "sha256": "608ca89d4fd6ce4b145eb2588172d284a2b341e3d088e154844983124f4207b3"
+    },
+    {
+      "path": "lib/head-atlas-display.ts",
+      "sha256": "7adb5c0d87ce3efa5a17c0ff1bddb9c9f6b7192e3789616b3abd6182ca948517"
     },
     {
       "path": "lib/head-atlas-import.ts",
@@ -6644,7 +6648,7 @@
     },
     {
       "path": "scripts/bind-clinical-review.mjs",
-      "sha256": "63cb6f2921a5b6d2e682251742c4c6c8d5149a4811261afe2ee87098decdcd03"
+      "sha256": "4e2f8a07852a0ef08cc75b1bd70bebd1b342c3919e21ed80d3d27754bd715b01"
     },
     {
       "path": "scripts/build-clinical-review-viewer.mjs",

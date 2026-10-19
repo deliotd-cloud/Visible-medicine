@@ -1,7 +1,48 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {annotationInk,headLabel} from '../lib/head-atlas-display.ts';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import ts from 'typescript';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {annotationInk,headLabel,headSideLabel,headRepresentationLabel} from '../lib/head-atlas-display.ts';
+
+test('readable metadata retains source codes and never infers unknown side or representation',()=>{
+  const entry=Object.freeze({laterality:'midline_or_unpaired',representation:'partial-mask'});
+  assert.equal(headSideLabel(entry.laterality),'Midline or unpaired');
+  assert.equal(headRepresentationLabel(entry.representation),'Partial mask');
+  assert.equal(entry.laterality,'midline_or_unpaired');assert.equal(entry.representation,'partial-mask');
+  for(const [code,label]of Object.entries({left:'Left',right:'Right',midline:'Midline',unpaired:'Unpaired',bilateral:'Bilateral'}))assert.equal(headSideLabel(code),label);
+  for(const [code,label]of Object.entries({mask:'Mask',point:'Point locator',curve:'Regional course',mesh:'Surface mesh'}))assert.equal(headRepresentationLabel(code),label);
+  for(const label of [headSideLabel,headRepresentationLabel]){
+    assert.equal(label(undefined),'Not specified');assert.equal(label(''),'Not specified');
+    for(const unknown of ['custom_source_code','__proto__','constructor'])assert.equal(label(unknown),unknown);
+  }
+});
+
+test('display helper bytes are bound to the actual Review renderer provenance',()=>{
+  const inputs=JSON.parse(readFileSync(new URL('../atlas-review/integration-inputs.json',import.meta.url),'utf8'));
+  const row=inputs.inputs.find((r:{path:string})=>r.path==='lib/head-atlas-display.ts');assert(row,'Presentation helper must not escape renderer source binding');
+  assert.equal(row.sha256,createHash('sha256').update(readFileSync(new URL('../lib/head-atlas-display.ts',import.meta.url))).digest('hex'));
+});
+
+test('actual viewer metadata uses readable labels while all source filter values stay exact',()=>{
+  const source=readFileSync(new URL('../components/HeadAtlasViewer.tsx',import.meta.url),'utf8');
+  const tree=ts.createSourceFile('HeadAtlasViewer.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
+  const nodes:ts.JsxElement[]=[];
+  const visit=(node:ts.Node):void=>{if(ts.isJsxElement(node)&&node.openingElement.tagName.getText(tree)==='dl'&&node.getText(tree).includes('selected.entry'))nodes.push(node);ts.forEachChild(node,visit);};visit(tree);
+  assert.equal(nodes.length,1,'Use the actual selected-structure metadata, not a parallel markup fixture');
+  const code=ts.transpileModule(`export const render=(selected,familyNames)=>(${nodes[0].getText(tree)});`,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const module={exports:{} as {render:(selected:unknown,names:Record<string,string>)=>Parameters<typeof renderToStaticMarkup>[0]}};
+  new Function('require','module','exports','headSideLabel','headRepresentationLabel',code)(createRequire(import.meta.url),module,module.exports,headSideLabel,headRepresentationLabel);
+  const entry=Object.freeze({family:'bst',representation:'partial-mask',laterality:'midline_or_unpaired'});
+  const html=renderToStaticMarkup(module.exports.render({entry},{bst:'Brainstem'}));
+  assert.match(html,/<dt>Representation<\/dt><dd>Partial mask<\/dd>/);assert.match(html,/<dt>Side<\/dt><dd>Midline or unpaired<\/dd>/);
+  assert.doesNotMatch(html,/midline_or_unpaired|partial-mask/);assert.equal(entry.laterality,'midline_or_unpaired');assert.equal(entry.representation,'partial-mask');
+  assert.match(source,/value=\{`side:\$\{value\}`\}>\{headSideLabel\(value\)\}/);
+  assert.match(source,/value=\{`type:\$\{value\}`\}>\{headRepresentationLabel\(value\)\}/);
+  assert.match(source,/entry.laterality\?` · \$\{headSideLabel\(entry.laterality\)\}`:''/);
+});
 
 test('display labels omit only the regional-mask suffix and never mutate source identities or scope',()=>{
   const entry={id:'mrb.bst.medulla',label:'Medulla oblongata — regional mask',source:{declared_scope:'Partial regional mask only.'}};

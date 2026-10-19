@@ -81,7 +81,7 @@ function mount(browserState,{modality='CT',session,pkg,deferEntry=false}){
   const load=name=>name==='react'?hooks:name==='next/link'?{default:'a'}:name==='./HeadFolderSessionContext'?{useHeadFolderSession:()=>session}:
     name==='../lib/head-atlas-import'?imports:name==='../lib/head-local-source'?{openConfiguredHeadPackage:async()=>pkg}:
     name==='../lib/head-atlas-links'?links:name==='../lib/head-atlas-navigation'?navigation:
-    name==='../lib/head-atlas-overlays'?overlays:name==='../lib/head-atlas-display'?{headLabel:item=>item.label,annotationInk:()=>''}:
+    name==='../lib/head-atlas-overlays'?overlays:name==='../lib/head-atlas-display'?{...require('../lib/head-atlas-display.ts'),headLabel:item=>item.label,annotationInk:()=>''}:
     name==='../lib/head-atlas-practice'?{...require('../lib/head-atlas-practice.ts'),canvasVoxel:()=>null}:
     name==='../lib/head-mask-picking'?{headMaskHits}:name==='../lib/head-slice-viewport'?viewport:name==='../lib/head-index-keyboard'?{headIndexKey}:
     name==='../lib/head-atlas-index'?require('../lib/head-atlas-index.ts'):name==='../lib/head-atlas-pairs'?require('../lib/head-atlas-pairs.ts'):
