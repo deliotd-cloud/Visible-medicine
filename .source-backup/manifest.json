@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T19:15:52.475Z",
-  "sourceManifestSha256": "2a483c2465e78b4c6a9a8bab6e5ae73b064cb5e6f9d16937339d85d3c5ff4ab0",
-  "parent": "a63ab4928bec6fd22e632ddeeb70081a84ebb2d2",
+  "at": "2026-10-19T19:31:46.744Z",
+  "sourceManifestSha256": "055ec7b902cbf3a07077ee08055a50e6fe1474713861b8e650222dac045c1ff3",
+  "parent": "d13b8c5db8e71655f6505a4dcac78c6c56b50983",
   "atlasSource": "f5097af8493701d64a8e2a2b5797df380f3b348a",
   "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
   "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
@@ -17110,8 +17110,8 @@
     },
     {
       "path": "tests/clinical-review-leg-arterial-xray.test.ts",
-      "bytes": 25315,
-      "sha256": "4f27cdf19e4f59d930db25ee3cc00147582998a56ae8200d7fede807d6739286"
+      "bytes": 25792,
+      "sha256": "0b33848d2f97a5139053eb7b47cb241f42174c42a0ec2e1ec07e7456c4a59b55"
     },
     {
       "path": "tests/clinical-review-leg-muscle-quiz.test.ts",
@@ -17120,8 +17120,8 @@
     },
     {
       "path": "tests/clinical-review-leg-venous-xray.test.ts",
-      "bytes": 22449,
-      "sha256": "cc554fa7ce6e3bd277a35ec2e45dea0ca50be52176589bba055f5c2325b9c5bf"
+      "bytes": 22926,
+      "sha256": "d92eb50850865b6a6f1d6705a60829bec310cdc31ba5274bd57ead8445cea3cc"
     },
     {
       "path": "tests/clinical-review-limb-connective-ct.test.ts",
@@ -17310,8 +17310,8 @@
     },
     {
       "path": "tests/clinical-review-pancreatic-arterial-xray.test.ts",
-      "bytes": 25109,
-      "sha256": "69ee2b967c071aaad1562efed45476ba02e68588c71fd2895f189840eadeeb9b"
+      "bytes": 25586,
+      "sha256": "a3509eec9eea20a5b586a11ab9ef971f19ce9190af0953537c5288ed0ee9a3ad"
     },
     {
       "path": "tests/clinical-review-pancreatic-vessel-teaching.test.ts",
@@ -17710,8 +17710,8 @@
     },
     {
       "path": "tests/clinical-review-visceral-arterial-xray.test.ts",
-      "bytes": 23753,
-      "sha256": "881101a2d4b2df2d95c3f1a5a4b14ba50df821c973ea98717877619fba77a216"
+      "bytes": 24230,
+      "sha256": "4c20690db0b8894ffd1eb583e545c61bccc6cb5894b715964f8ff2ff38fe82ca"
     },
     {
       "path": "tests/clinical-review-vocal-tissue-teaching.test.ts",
@@ -24455,8 +24455,28 @@
     },
     {
       "path": "tests/vascular-live-admission-preservation.test.mjs",
-      "bytes": 3431,
-      "sha256": "6466730fa4b12c3e6e6dd12c67d804389c5670716e69a23cdc5ac34e5881bdda"
+      "bytes": 3781,
+      "sha256": "59699ecd8d8173668aa7bef97132d96905e5d53e80766c95769ee1ab25959132"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-pancreatic-arterial-xray.test.ts.raw",
+      "bytes": 25109,
+      "sha256": "69ee2b967c071aaad1562efed45476ba02e68588c71fd2895f189840eadeeb9b"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-leg-arterial-xray.test.ts.raw",
+      "bytes": 25315,
+      "sha256": "4f27cdf19e4f59d930db25ee3cc00147582998a56ae8200d7fede807d6739286"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-leg-venous-xray.test.ts.raw",
+      "bytes": 22449,
+      "sha256": "cc554fa7ce6e3bd277a35ec2e45dea0ca50be52176589bba055f5c2325b9c5bf"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-visceral-arterial-xray.test.ts.raw",
+      "bytes": 23753,
+      "sha256": "881101a2d4b2df2d95c3f1a5a4b14ba50df821c973ea98717877619fba77a216"
     }
   ],
   "heldDocuments": [
@@ -24472,9 +24492,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2381300,
-      "sha256": "daff95e408fd22c45d7871da45292ec6360b5520eb52ba5450727e03fceaa2d5"
+      "bytes": 2384057,
+      "sha256": "02fda1190faec47c6fac0e3c0185cc9e6af045d8831a94c8cfbcbb269b7b177a"
     }
   ],
-  "scope": "Filtered source-only vascular regression recovery. Two current-admission test roots retain complete immutable author/baseline teaching theorems, 9936-placement/1104-packet populations, exact current source/model/Review/emitted bindings and forged-decision storage refusal. Two whole-original fixtures and four permanent preservation/refusal cases are included. Eight actual canonical cases and semantic types pass at 4893 known inputs. No application, teaching, model, Review, export or dependency change; no new build needed for test-only deltas. Not a full-suite, browser, clinical, spatial or release approval. No scans, patient identifiers, private records, raw canonical ancestry, candidate geometry or three held operational-document contents. Full71/eight/register67/clinical nulls and independent access retained. Post-foot replay and corpus draft remain staged and excluded. Source-only, not whole-project/private-data backup or public deployment."
+  "scope": "Filtered source-only vascular regression batch. Four further current-admission roots (pancreatic arterial, leg arterial, leg venous, visceral arterial), four whole originals and extended six-root preservation suite. Complete immutable author/baseline/count/source/model/Review/emitted/security proofs retained outside five explicit seams.20 actual cases and semantic types pass at4897known inputs; first new harness literal mismatch retained and corrected without changing original assertions. No app/Atlas/Review/model/export/new dependency/media change, scan, private data, raw canonical ancestry, candidate geometry or three held operational-document contents. Public route-focus and history/corpus packages remain staged and excluded. Full71/eight/register67/clinical nulls retained. Not full-suite/browser/clinical/spatial/release approval, whole-project/private-data backup or public deployment."
 }

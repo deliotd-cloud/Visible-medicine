@@ -1,4 +1,5 @@
 import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -9,8 +10,9 @@ import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const atlasBaseline='08be622a4871c75e49d99b233ada87af79a90f26';
-const liveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
-const atlas='F:/VisibleMedicine/atlas';
+const historicalLiveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const liveCommit=CURRENT_ATLAS_REVISION;
+const atlas=currentAtlasDeliveryRoot();
 const pinsPath='content/abdominal-arterial-pins.json';
 const teachingPaths=['content/visceral-arterial-xray.ts','lib/visceral-arterial-xray.ts'];
 const paths=[pinsPath,...teachingPaths];
@@ -57,6 +59,7 @@ test('four exact visceral arterial Xray drafts reach body learner and protected 
   const review=json('atlas-review/manifest.json'),revision=review.revision;
   assert.match(revision,/^[a-f0-9]{40}$/);
   assert.notEqual(revision,atlasBaseline);
+  assert.equal(revision,liveCommit,'Exact pinned current Review source');
   assert.equal(git(['rev-parse','HEAD']).toString().trim(),revision);
   const learners=['head-neck','female-pelvis','lower-limb','shoulder'].map(name=>({name,
     base:`public/atlas-runtime/${name}/`,manifest:json(`public/atlas-runtime/${name}/manifest.json`)}));
@@ -202,6 +205,8 @@ test('exact admission epoch changes only four of 9,936 placements and 1,104 pack
   assert.match(featureCommit,/^[a-f0-9]{40}$/);
   const current=await history(featureCommit);
   assert.equal(git(['rev-parse','HEAD']).toString().trim(),liveCommit,'Exact live source head');
+  git(['merge-base','--is-ancestor',historicalLiveCommit,liveCommit]);
+  for(const path of paths)assert.deepEqual(committed(liveCommit,path),committed(historicalLiveCommit,path),`${path}: historical 9f teaching/source bytes preserved at current admission`);
   const live=await boundLiveAtlasHistory(liveCommit);
   const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
   const catalog=current.bodyDisplayCatalog(JSON.parse(committed(featureCommit,catalogPath).toString()));

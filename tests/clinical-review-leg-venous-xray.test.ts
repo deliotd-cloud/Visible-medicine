@@ -1,4 +1,5 @@
 import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
@@ -10,8 +11,9 @@ import {emittedTeaching} from './atlas-emitted-teaching.ts';
 
 const atlasBaseline='25fcb29cd0ae718ef33691d5bcddcd06bda38dc7';
 // Pin to the exact integrated Atlas source revision after its commit.
-const liveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
-const atlas='F:/VisibleMedicine/atlas';
+const historicalLiveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const liveCommit=CURRENT_ATLAS_REVISION;
+const atlas=currentAtlasDeliveryRoot();
 const pinsPath='content/lower-venous-imaging-pins.json';
 const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
 const teachingPaths=['content/leg-venous-xray.ts','lib/leg-venous-xray.ts'];
@@ -93,6 +95,7 @@ test('eight exact leg venous X-ray drafts reach protected Review and emitted ful
   const review=json('atlas-review/manifest.json'),revision=review.revision;
   assert.equal(revision,liveCommit);
   assert.notEqual(revision,atlasBaseline);
+  assert.equal(revision,liveCommit,'Exact pinned current Review source');
   assert.equal(git(['rev-parse','HEAD']).toString().trim(),revision);
   const learners=['head-neck','female-pelvis','lower-limb','shoulder'].map(name=>({name,
     base:`public/atlas-runtime/${name}/`,manifest:json(`public/atlas-runtime/${name}/manifest.json`)}));
@@ -188,6 +191,8 @@ test('admission changes eight of 9,936 lessons and 1,104 Review packets; forged 
   const featureCommit=git(['log','--diff-filter=A','-1','--format=%H','--',teachingPaths[0]]).toString().trim();
   assert.match(featureCommit,/^[a-f0-9]{40}$/);
   assert.equal(git(['rev-parse','HEAD']).toString().trim(),liveCommit,'Exact live source head');
+  git(['merge-base','--is-ancestor',historicalLiveCommit,liveCommit]);
+  for(const path of paths)assert.deepEqual(committed(liveCommit,path),committed(historicalLiveCommit,path),`${path}: historical 9f teaching/source bytes preserved at current admission`);
   const current=await history(featureCommit),live=await boundLiveAtlasHistory(liveCommit);
   const catalog=current.bodyDisplayCatalog(JSON.parse(committed(featureCommit,catalogPath).toString()));
   assert.deepEqual(catalog,previous.bodyDisplayCatalog(JSON.parse(committed(atlasBaseline,catalogPath).toString())));
