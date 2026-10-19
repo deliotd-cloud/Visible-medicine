@@ -76,11 +76,27 @@ test('native learning is grouped once, keeps the real mask practice and teaching
 test('whole-body page uses the same revision-bound live host and names its actual model, without inventing non-head scan mappings',async()=>{
   const pageSource=readFileSync(new URL('../app/atlas/3d/page.tsx',import.meta.url),'utf8');
   const compiled=ts.transpileModule(pageSource,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
+  const stateSource=readFileSync(new URL('../components/atlas-runtime-state.ts',import.meta.url),'utf8');
+  const stateCode=ts.transpileModule(stateSource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const state={exports:{} as {createAtlasDocumentAttempt:Function}};
+  new Function('module','exports',stateCode)(state,state.exports);
+  const frameSource=readFileSync(new URL('../components/AtlasRuntimeFrame.tsx',import.meta.url),'utf8');
+  const frameCode=ts.transpileModule(frameSource,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const frame={exports:{} as {AtlasRuntimeFrame:React.ComponentType<any>}};
+  new Function('require','module','exports',frameCode)((id:string)=>{
+    if(id==='react')return React;
+    if(id==='react/jsx-runtime')return require('react/jsx-runtime');
+    if(id==='./atlas-runtime-state')return state.exports;
+    if(id==='./atlas-runtime-frame.css')return {};
+    assert.fail(`Unexpected frame dependency: ${id}`);
+  },frame,frame.exports);
+  assert.equal(typeof frame.exports.AtlasRuntimeFrame,'function');
   const linked=function HeadAtlasLinkedModel(props:{src:string;sourceRevision:string;title:string;coverage:React.ReactNode}){return React.createElement('section',{'data-source':props.sourceRevision,'data-src':props.src,'aria-label':props.title},props.coverage);};
   const exports={exports:{} as {default:(props:{searchParams:Promise<Record<string,string>>})=>Promise<React.ReactNode>}};
   new Function('require','module','exports',compiled)((id:string)=>{
     if(id==='next/link')return {__esModule:true,default:({children,...props}:{children:React.ReactNode})=>React.createElement('a',props,children)};
     if(id==='next/navigation')return {notFound:()=>{throw Error('notFound');},redirect:()=>{throw Error('redirect');}};
+    if(id==='../../../components/AtlasRuntimeFrame')return frame.exports;
     if(id==='../../../components/HeadAtlasLinkedModel')return{HeadAtlasLinkedModel:linked};
     if(id==='../../../components/AtlasWorkspaceNavigation')return{AtlasWorkspaceNavigation:()=>null};
     if(id==='../../../lib/atlas-navigation')return require('../lib/atlas-navigation.ts');
@@ -91,11 +107,17 @@ test('whole-body page uses the same revision-bound live host and names its actua
     return require(id);
   },exports,exports.exports);
   const html=renderToStaticMarkup(await exports.exports.default({searchParams:Promise.resolve({})}));
+  const headHtml=renderToStaticMarkup(await exports.exports.default({searchParams:Promise.resolve({region:'head-neck',study:'1'})}));
   const previous=JSON.parse(readFileSync(new URL('./fixtures/atlas-model-inventory-408759d5.json',import.meta.url),'utf8'));
   assert.equal(previous.sources.find((row:{module:string})=>row.module==='head-neck').sourceCommit,'408759d57644b05402e98a937e7cf6338b5509cf');
-  assert(html.includes('data-source="'+CURRENT_ATLAS_REVISION+'"'));
+  assert(headHtml.includes('data-source="'+CURRENT_ATLAS_REVISION+'"'));
   assert.match(html,/Whole body 3D anatomy: explore, dissect and practise/);
-  assert.match(html,/other structures have no exact acquired-image mapping here/);
+  const iframe=html.match(/<iframe\b[^>]*>/)?.[0];assert(iframe,'real AtlasRuntimeFrame renders one viewer');
+  assert.match(iframe,/src="\/atlas-runtime\/head-neck\/index\.html\?region=whole-body"/);
+  assert.match(iframe,/referrerPolicy="same-origin"/);assert.match(iframe,/allowFullScreen=""/);
+  assert.match(html,/Atlas loading and 3D model display are not confirmed|Opening the 3D Atlas/);
+  assert.match(headHtml,/other structures have no exact acquired-image mapping here/);
+  assert.doesNotMatch(html,/data-source=|head-comparison-module-page/);
   assert.doesNotMatch(html,/do not transfer your current 3D selection/);
   await assert.rejects(exports.exports.default({searchParams:Promise.resolve({region:'javascript:alert(1)'})}),/notFound/);
 });

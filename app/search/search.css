@@ -35,3 +35,18 @@
   .search-page .search-group > div { grid-template-columns: 1fr; }
   .search-page .search-group a { min-height: 130px; }
 }
+
+/* Keep the first normal-length result actionable on laptop-height desktops. */
+@media (min-width: 901px) {
+  .search-page .search-hero { padding: 24px 42px 18px; }
+  .search-page .search-hero .eyebrow { margin-bottom: 12px; }
+  .search-page .search-hero form { margin-top: 14px; }
+  .search-page .search-access-note { margin-top: 10px; }
+  .search-page .search-results { padding-top: 20px; }
+  .search-page .search-results > header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; align-items: baseline; }
+  .search-page .search-results > header > h2 { grid-column: 1; grid-row: 1; min-width: 0; overflow-wrap: anywhere; }
+  .search-page .search-results > header > span { grid-column: 2; grid-row: 1; }
+  .search-page .search-results > header > p { grid-column: 1 / -1; }
+  .search-page .search-group { margin-top: 18px; }
+  .search-page .search-group a { min-height: 148px; }
+}
