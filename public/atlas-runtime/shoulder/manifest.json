@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCommit": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+  "sourceCommit": "c237fa215f061147975e91b01fa830b3f44458c7",
   "region": "shoulder-right",
   "structures": 9,
   "patientDataIncluded": false,
@@ -10,7 +10,7 @@
     {
       "path": "index.html",
       "bytes": 504,
-      "sha256": "3872a5edea2540d39255063e91ecb40353546d51698e3723dc420e220371c0e6"
+      "sha256": "9eafb5730ec68660c51c02caa181c64c6f0ecf6bfb792873f32cde1cd242f8a8"
     },
     {
       "path": "BUNDLED_NOTICES.txt",
@@ -24,8 +24,8 @@
     },
     {
       "path": "source-inputs.json",
-      "bytes": 152341,
-      "sha256": "7db889eca18f16d268429b99993d9c17c97e62220c360ae5aee542e153621dd9"
+      "bytes": 152767,
+      "sha256": "4ad659a76a9d7bdd3a7b70fe63425c2eaed14541f64db2f39655a39e3a07b4fb"
     },
     {
       "path": "assets/abdomen-BdPYB30z.js",
@@ -33,19 +33,19 @@
       "sha256": "119c0b18bbe6c8c6d169d4747926b4e4f4216313e772d1c33755e2b031441f77"
     },
     {
-      "path": "assets/anatomy-scene-CL3I-W3S.js",
-      "bytes": 1075111,
-      "sha256": "6ec06d2804eea687d9fd82d63f40c1f3472fd4f5ade0019545ce4c111d873660"
-    },
-    {
       "path": "assets/anatomy-scene-DBXvkxUs.css",
       "bytes": 3191,
       "sha256": "802c270adb82b7b34c7ab657d3950f07cc7981b80a4fb46e3c50d3a4f10164e7"
     },
     {
-      "path": "assets/body-content-Cm0q6WXq.js",
-      "bytes": 7543978,
-      "sha256": "4731c10215c1d19d0c1d1c7db9933b4cb184c0b5f43c3617382cf5eae1eef89f"
+      "path": "assets/anatomy-scene-DFz6yeFD.js",
+      "bytes": 1075111,
+      "sha256": "3fbf73d3f77d89faa8ac623dcaa9f525b86ba1370ebab409b02dc734d7a06d87"
+    },
+    {
+      "path": "assets/body-content-CXBO1Sd9.js",
+      "bytes": 7549610,
+      "sha256": "35c3ced2b927c6f6cb52346c67154abdcbdcacffbaff5358a07d01953e20e4e8"
     },
     {
       "path": "assets/foot-dEJOQ0Fz.js",
@@ -53,9 +53,9 @@
       "sha256": "b73981057f1f43ec7daccf4b41d14e1c824a592a7388b50a17371f74f4a32971"
     },
     {
-      "path": "assets/forearm-B0UjTDla.js",
-      "bytes": 752476,
-      "sha256": "5af95d0ff46d3af7b5091b1767e03ba921b01ebf34e2a0c77cdd6170d0dbeb08"
+      "path": "assets/forearm-B4nqLhdv.js",
+      "bytes": 756368,
+      "sha256": "c3ae7271cf04e3e580db6ee631b954eb29009a7b0855ebd5b86a5741e9fe29dc"
     },
     {
       "path": "assets/hand-C2g4wVfN.js",
@@ -68,14 +68,14 @@
       "sha256": "2c61c9354dba143bf8dbd65389b6e899c24afd9cfe041be2031118cf65fe19a9"
     },
     {
+      "path": "assets/index-C98t49NN.js",
+      "bytes": 1036599,
+      "sha256": "e23ad55f0353c1799eede4a9ec9ac87f3b28e24abe0edbc55240624ac0a61b80"
+    },
+    {
       "path": "assets/index-CIdOEm3e.css",
       "bytes": 308040,
       "sha256": "a894cf5ae7b2913ee49c0dd686f6c72c590803d5e26811972b42895399135f86"
-    },
-    {
-      "path": "assets/index-CTvaN0b9.js",
-      "bytes": 1036599,
-      "sha256": "56257c5ef2f8e71d1a40b62a42b508fbc1d991d674a64e339152545f3a744107"
     },
     {
       "path": "assets/leg-C23bX7kx.js",

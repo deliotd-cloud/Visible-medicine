@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d"
+    "sha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
   },
   {
     "path": "app/body-education-link.ts",
@@ -1992,6 +1992,14 @@
     "sha256": "57bcdc6024d4217fb1b01379f3fac0f868b0fc25ed3ce79a2ad5926b79b8767d"
   },
   {
+    "path": "content/median-antebrachial-xray-pins.json",
+    "sha256": "bd819811fdc0995bd5988427d67a9b038166dba6d56b38d26b9cc0c9127da137"
+  },
+  {
+    "path": "content/median-antebrachial-xray.ts",
+    "sha256": "f32804582aea7044eee869f7688aafed05333e7269251db34afe14b7ba0299a4"
+  },
+  {
     "path": "content/median-cubital-xray-pins.json",
     "sha256": "871ccc16240d75017e82ba0ec30eec315fbf625d0740a85467e79f10e7f7356e"
   },
@@ -2417,7 +2425,7 @@
   },
   {
     "path": "content/regional-teaching/forearm.json",
-    "sha256": "614af169388b688b7da6cf7379eb69ca7abc798dd9cda70bb53757136b59cc7c"
+    "sha256": "3cada384998feeb9d3ed172ffd9b0f2b3272c0726cae1c2e38e3407d276e974a"
   },
   {
     "path": "content/regional-teaching/hand.json",
@@ -4682,6 +4690,10 @@
   {
     "path": "lib/medial-thigh-tour.ts",
     "sha256": "49270097000cfb5319855441109686b8189538114b13c29eaf9a7d51bd39f247"
+  },
+  {
+    "path": "lib/median-antebrachial-xray.ts",
+    "sha256": "2fc73ab55f6834cd5529c30abe076c45ce202edb380210c6a736be9f5b76f05f"
   },
   {
     "path": "lib/median-cubital-xray.ts",

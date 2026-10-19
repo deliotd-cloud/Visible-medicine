@@ -66,6 +66,7 @@ import { girdleMuscleXrayLesson } from '../lib/girdle-muscle-xray';
 import { axillaryBranchXrayLesson } from '../lib/axillary-branch-xray';
 import { shoulderVesselXrayLesson } from '../lib/shoulder-vessel-xray';
 import { medianCubitalXrayLesson } from '../lib/median-cubital-xray';
+import { medianAntebrachialXrayLesson } from '../lib/median-antebrachial-xray';
 import { neonatalCranialUltrasoundLesson } from '../lib/neonatal-cranial-ultrasound';
 import { tentoriumImagingLesson } from '../lib/tentorium-imaging';
 import { footSesamoidLesson } from '../lib/foot-sesamoid-teaching';
@@ -467,6 +468,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (shoulderVesselXray) return shoulderVesselXray;
   const medianCubitalXray = medianCubitalXrayLesson(s, tab);
   if (medianCubitalXray) return medianCubitalXray;
+  const medianAntebrachialXray = medianAntebrachialXrayLesson(s, tab);
+  if (medianAntebrachialXray) return medianAntebrachialXray;
   const neonatalCranialUltrasound = neonatalCranialUltrasoundLesson(s, tab);
   if (neonatalCranialUltrasound) return neonatalCranialUltrasound;
   const elbowArterialUsFollowup = elbowArterialUsFollowupLesson(s, tab);

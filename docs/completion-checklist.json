@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 59,
+  "revision": 60,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -21,16 +21,16 @@
     "uiqa": "F:/VisibleMedicine/staging/20261018-head-spa-lifecycle"
   },
   "baseline": {
-    "atlasCommit": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
-    "atlasTree": "b5ab50363b521aed2e8d4f0e34a8f5ed4ecee0d5",
+    "atlasCommit": "c237fa215f061147975e91b01fa830b3f44458c7",
+    "atlasTree": "29fb723e34279d3e586f52f380128b430cd07325",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "7dcfd57c40219216347e3b89979723cbae3a9d8644f5381eb34e7f42800bd9e5",
+    "reviewIntegration": "cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984",
     "reviewSourceFiles": 1531,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
-    "rootDraftPlacements": 9332,
-    "rootPendingPlacements": 565,
+    "rootDraftPlacements": 9334,
+    "rootPendingPlacements": 563,
     "rootGeneratedIdentificationPlacements": 39,
     "nestedRepresentations": 108,
     "nestedConcepts": 76,
@@ -43,14 +43,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
-    "tree": "b5ab50363b521aed2e8d4f0e34a8f5ed4ecee0d5",
-    "rootDraftPlacements": 9332,
-    "rootPendingPlacements": 565,
+    "commit": "c237fa215f061147975e91b01fa830b3f44458c7",
+    "tree": "29fb723e34279d3e586f52f380128b430cd07325",
+    "rootDraftPlacements": 9334,
+    "rootPendingPlacements": 563,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-craniofacial-ct-website-import/writers-state.json",
-    "note": "Four original source-bound CT orientation drafts for bilateral superior-oblique trochleae and stylohyoid ligaments. Exactly four pending placements become drafts; other9932 live placements and all anatomy/holds/tours remain unchanged. Four learner modules and protected Review share the clean source commit. Original references are citations only; no new image, mesh, package, clinical approval, registration or public deployment. Previous Review58 evidence remains immutable; exact new source revisions require fresh radiologist sign-off."
+    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-ui-teaching-website-import/writers-state.json",
+    "note": "Source-bound body Review leave dialog defaults to keeping edits, rejects stale destinations and preserves modified-link behavior. Two bilateral median antebrachial X-ray method-context drafts replace pending placements;9934 other topics and109 root source bundles remain unchanged. Existing private Review and four learner modules share the exact clean source. No routine plain-film visibility, acquired image, source-to-patient registration, clinical approval, paid access grant, new dependency or public deployment is asserted. Renderer revisions advance and require fresh scope-bound human review; no approvals migrate."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 60,
+      "date": "2026-10-19",
+      "change": "Normal import of clean Atlasc237fa21: nonblocking protected body Review navigation and two exact-source forearm X-ray draft notes. Full source transition and introduced-epoch replay preserve9934 other topics/1102 other packets and reject stale/forged/unattested writes before storage. Four learners and Review rebound; coverage differs only in source/package provenance. All71 items/eight optional ideas, geometry/holds and independent access boundaries remain. Previous59 pin/assertions retained as exact text; no clinical or public release approval."
+    },
     {
       "revision": 59,
       "date": "2026-10-19",

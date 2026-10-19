@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
-  "sha256": "7dcfd57c40219216347e3b89979723cbae3a9d8644f5381eb34e7f42800bd9e5",
+  "sourceCommit": "c237fa215f061147975e91b01fa830b3f44458c7",
+  "sha256": "cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d"
+      "sha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -428,7 +428,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "cb80397efc77619235b8cdc9f2a277121c714209155127fc5defcb3e52763f09"
+      "sha256": "07c25765b8a2f606f1af8dfb63e4dad4e086eec562a83ec20fd3099e8f97adc9"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -707,6 +707,10 @@
       "sha256": "b8b3a028369a0b14c14706ebaca52806e083405c7331c329b5f0911fed888af1"
     },
     {
+      "path": "atlas-review/components/ui/alert-dialog.tsx",
+      "sha256": "3f5d95f6e9cb8d7bec4d9eadfd781bc081a988f151b873cb8dd1d1680dff8b74"
+    },
+    {
       "path": "atlas-review/components/ui/button.tsx",
       "sha256": "3a080025df99004743b156dfe8510675f048799e1f636bfb7b9dbc3c985411d8"
     },
@@ -948,7 +952,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "4de465f696ddc8fdd6d3e5571b5c31b8508e3d8e5a3fbe1735f04da278d7d9f7"
+      "sha256": "d662c53f556d6461952a17755a878e2d0b5887774d81042709b4175501b913e7"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2235,6 +2239,14 @@
       "sha256": "57bcdc6024d4217fb1b01379f3fac0f868b0fc25ed3ce79a2ad5926b79b8767d"
     },
     {
+      "path": "atlas-review/content/median-antebrachial-xray-pins.json",
+      "sha256": "bd819811fdc0995bd5988427d67a9b038166dba6d56b38d26b9cc0c9127da137"
+    },
+    {
+      "path": "atlas-review/content/median-antebrachial-xray.ts",
+      "sha256": "f32804582aea7044eee869f7688aafed05333e7269251db34afe14b7ba0299a4"
+    },
+    {
       "path": "atlas-review/content/median-cubital-xray-pins.json",
       "sha256": "871ccc16240d75017e82ba0ec30eec315fbf625d0740a85467e79f10e7f7356e"
     },
@@ -2660,7 +2672,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/forearm.json",
-      "sha256": "614af169388b688b7da6cf7379eb69ca7abc798dd9cda70bb53757136b59cc7c"
+      "sha256": "3cada384998feeb9d3ed172ffd9b0f2b3272c0726cae1c2e38e3407d276e974a"
     },
     {
       "path": "atlas-review/content/regional-teaching/hand.json",
@@ -4923,6 +4935,10 @@
       "sha256": "49270097000cfb5319855441109686b8189538114b13c29eaf9a7d51bd39f247"
     },
     {
+      "path": "atlas-review/lib/median-antebrachial-xray.ts",
+      "sha256": "2fc73ab55f6834cd5529c30abe076c45ce202edb380210c6a736be9f5b76f05f"
+    },
+    {
       "path": "atlas-review/lib/median-cubital-xray.ts",
       "sha256": "db98b177b462bf9ac3736f23bc6bf360fea4f7ca781481bdf716ac4e5f38d2eb"
     },
@@ -6408,11 +6424,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "40b9e32564579d9b2d93e185eaa24efb5c47581f6ad1343ac8f81adfe2fd4da4"
+      "sha256": "8b2a1ab1afc665257875a4bfd0934206d9a01e7de368d9d9a66ddfd6f4901354"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "dacb19948f9109e353746f37fdbde06e9cc105379fdc920ba1cfc0f273e5e684"
+      "sha256": "feef784e69e758e1d11c84c8c68a9d92c690c6e124bb32cdfd9e83e6cca0d3dc"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6652,7 +6668,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "f7d9555f12d8a5f5e600432401a7672273d6067cab0fe24f62d533109ff1cd5e"
+      "sha256": "af1cb4b999877e9595881cbb8e6c507f0e24f2aaf5ced74302a674a79741fe20"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

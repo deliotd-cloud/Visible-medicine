@@ -1,0 +1,164 @@
+{
+  "baselineCommit": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+  "sourcePath": "public/models/bodyparts3d/cubital-veins/catalog.json",
+  "sourceSha256": "623c140cea4f9273a4b0f0233274e617c2d705138a19cb4d7dc69e48054ff2be",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "cubital-veins",
+      "url": "/models/bodyparts3d/cubital-veins/cubital-veins.glb?v=8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "bytes": 287992,
+      "sha256": "8e31545af2568c7f31a327ccbefa0a85cb054a422e1091fd06676b2b39127321",
+      "structures": 4
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein",
+        "fmaId": "FMA22968",
+        "name": "Right median antebrachial vein",
+        "sourceName": "right median antebrachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22968",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2286",
+            "sha256": "d7f83f57d6c7d22577bf5b5fa8c9f93dab356539dc36c509cff80395ceca75a5"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.6244800090789795,
+            0.14717000722885132,
+            0.22865299880504608
+          ],
+          "max": [
+            -1.7628400325775146,
+            2.1364998817443848,
+            0.845329999923706
+          ]
+        },
+        "center": [
+          -2.193660020828247,
+          1.141834944486618,
+          0.5369914993643761
+        ],
+        "anchor": [
+          -2.3166799545288086,
+          1.1974999904632568,
+          0.7166000008583069
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previousReadiness": "pending"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-median-antebrachial-vein",
+        "fmaId": "FMA22969",
+        "name": "Left median antebrachial vein",
+        "sourceName": "left median antebrachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22969",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2234",
+            "sha256": "572c2360da079d2a3eab28eb92e0a99ca268fe6550ff03d24a772391304f37fa"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.762850046157837,
+            0.1472100019454956,
+            0.22861400246620178
+          ],
+          "max": [
+            2.624569892883301,
+            2.1364998817443848,
+            0.8453400135040283
+          ]
+        },
+        "center": [
+          2.193709969520569,
+          1.1418549418449402,
+          0.536977007985115
+        ],
+        "anchor": [
+          2.3207099437713623,
+          1.1797699928283691,
+          0.7182899713516235
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previousReadiness": "pending"
+    }
+  ]
+}

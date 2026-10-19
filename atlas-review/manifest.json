@@ -1,5 +1,5 @@
 {
-  "revision": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+  "revision": "c237fa215f061147975e91b01fa830b3f44458c7",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -553,8 +553,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "sourceSha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d",
-      "importedSha256": "503e6a958f0270e1271f543d7f1a9313b428c12ffc0afe2761236216a4f1159d"
+      "sourceSha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef",
+      "importedSha256": "fd5acedb6f3bcc00f246c335210a08d4fb9db1f5f3fddfd6dd9cd72edd61b3ef"
     },
     {
       "path": "lib/craniofacial-calcification-ct.ts",
@@ -1545,6 +1545,21 @@
       "path": "content/median-cubital-xray.ts",
       "sourceSha256": "87448056e63416c5d03a283d1cf4da3886f41e0b2d990a4dc3d23094e4835581",
       "importedSha256": "87448056e63416c5d03a283d1cf4da3886f41e0b2d990a4dc3d23094e4835581"
+    },
+    {
+      "path": "lib/median-antebrachial-xray.ts",
+      "sourceSha256": "2fc73ab55f6834cd5529c30abe076c45ce202edb380210c6a736be9f5b76f05f",
+      "importedSha256": "2fc73ab55f6834cd5529c30abe076c45ce202edb380210c6a736be9f5b76f05f"
+    },
+    {
+      "path": "content/median-antebrachial-xray-pins.json",
+      "sourceSha256": "bd819811fdc0995bd5988427d67a9b038166dba6d56b38d26b9cc0c9127da137",
+      "importedSha256": "bd819811fdc0995bd5988427d67a9b038166dba6d56b38d26b9cc0c9127da137"
+    },
+    {
+      "path": "content/median-antebrachial-xray.ts",
+      "sourceSha256": "f32804582aea7044eee869f7688aafed05333e7269251db34afe14b7ba0299a4",
+      "importedSha256": "f32804582aea7044eee869f7688aafed05333e7269251db34afe14b7ba0299a4"
     },
     {
       "path": "lib/neonatal-cranial-ultrasound.ts",
@@ -5643,8 +5658,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "b70e852b2487b483e7d521c467c7e49ebc828725062debdc139683740e029eda",
-      "importedSha256": "75c8f72a81e55d0c8db3547797fa1555463be645d836f7410e5f044f42c83857"
+      "sourceSha256": "635ce4a51bf7faa200e3216c7ac1e7507d184ef4a92817de856677571a63548d",
+      "importedSha256": "61c1c817ca8c5526c073f0bfff95598aa928cf332623ab487f1ffcfaaa697b86"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -6029,7 +6044,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "a7607df08ab874ca2f876fd44ad9e41b48e4f4dff3c7117e176165edadf0d433"
+      "importedSha256": "b9e2425ca5048e7f36c3562239b0e18f907314648567b2da7eac6c0deff023e7"
     },
     {
       "path": "app/review/review.css",
@@ -6043,8 +6058,13 @@
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "6a42cbf63c5be9a9e3d9813a34047b79acfbb0b7067d2fd43493ff2d1e1d621a",
-      "importedSha256": "cb80397efc77619235b8cdc9f2a277121c714209155127fc5defcb3e52763f09"
+      "sourceSha256": "5a6b9cb930e60e832fa24f57e533a1165eea8e0a0ffd2fdc670293c22af15998",
+      "importedSha256": "07c25765b8a2f606f1af8dfb63e4dad4e086eec562a83ec20fd3099e8f97adc9"
+    },
+    {
+      "path": "components/ui/alert-dialog.tsx",
+      "sourceSha256": "ed0f1fc432bca4c72f9dd8741ae2268a00d2d3429ff1149bf463c4271b13d8e9",
+      "importedSha256": "3f5d95f6e9cb8d7bec4d9eadfd781bc081a988f151b873cb8dd1d1680dff8b74"
     },
     {
       "path": "lib/body-review-search.ts",
@@ -6063,8 +6083,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "4de465f696ddc8fdd6d3e5571b5c31b8508e3d8e5a3fbe1735f04da278d7d9f7",
-      "importedSha256": "4de465f696ddc8fdd6d3e5571b5c31b8508e3d8e5a3fbe1735f04da278d7d9f7"
+      "sourceSha256": "d662c53f556d6461952a17755a878e2d0b5887774d81042709b4175501b913e7",
+      "importedSha256": "d662c53f556d6461952a17755a878e2d0b5887774d81042709b4175501b913e7"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -6303,8 +6323,8 @@
     },
     {
       "path": "content/regional-teaching/forearm.json",
-      "sourceSha256": "614af169388b688b7da6cf7379eb69ca7abc798dd9cda70bb53757136b59cc7c",
-      "importedSha256": "614af169388b688b7da6cf7379eb69ca7abc798dd9cda70bb53757136b59cc7c"
+      "sourceSha256": "3cada384998feeb9d3ed172ffd9b0f2b3272c0726cae1c2e38e3407d276e974a",
+      "importedSha256": "3cada384998feeb9d3ed172ffd9b0f2b3272c0726cae1c2e38e3407d276e974a"
     },
     {
       "path": "content/regional-teaching/hand.json",
@@ -7688,5 +7708,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "7dcfd57c40219216347e3b89979723cbae3a9d8644f5381eb34e7f42800bd9e5"
+  "websiteIntegrationSha256": "cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984"
 }
