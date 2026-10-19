@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T06:32:34.510Z",
-  "sourceManifestSha256": "7e896419f201bce4207df7570ea80b3c9aa765d4e9ff87deb292c07e0a3a8efd",
-  "parent": "3a72e7ce14e0bdb88e4f54021eaf6be9e4486724",
+  "at": "2026-10-19T06:56:11.894Z",
+  "sourceManifestSha256": "096eaf12a15cfed990bd782842d8178c1c363346ab7a91b46af308d79e70d082",
+  "parent": "7c23d47c23b3da99ac58fd31f4299300184d1014",
   "atlasSource": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
   "review": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
@@ -12309,6 +12309,11 @@
       "sha256": "9131815d1f2ca2e42924e6683470fd67d946c18da822ecee1d7101a7b1779f1b"
     },
     {
+      "path": "lib/education-media-access.ts",
+      "bytes": 5350,
+      "sha256": "468c05bc16719056703485db5f73a2b263c6a1a69e690179b32e3ed48d9d635b"
+    },
+    {
       "path": "lib/education-media-delivery.ts",
       "bytes": 10227,
       "sha256": "a063c06981ace5f06b4d4b300a229850ead8a557af41ca329b71e7027342d8fa"
@@ -16715,8 +16720,8 @@
     },
     {
       "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
-      "bytes": 15900,
-      "sha256": "5d14824a266020120ba92957008670d04b167beae5aa591ba3b0555aa853450e"
+      "bytes": 24606,
+      "sha256": "15bb108f73a9eb2719edca3708e7b4ea9844c8f555db4495c8045c83ede40f99"
     },
     {
       "path": "tests/clinical-review-elbow-arterial-ultrasound.test.ts",
@@ -17814,6 +17819,16 @@
       "sha256": "0a9d3d444ed5d95c87e38e24fc47c3849f13433bc9800e25dcf68b1e491bf78c"
     },
     {
+      "path": "tests/education-media-access-server.test.mjs",
+      "bytes": 7988,
+      "sha256": "ad8ee69372aede3744aa55573e83355a8f403ab351565e3b2acb08020a271f2f"
+    },
+    {
+      "path": "tests/education-media-access.test.mjs",
+      "bytes": 5661,
+      "sha256": "fe3d8afaf3500c0d3d0810ef983b80876e8b140a340cbef824d00b72d42aee47"
+    },
+    {
       "path": "tests/education-media-delivery.test.mjs",
       "bytes": 10452,
       "sha256": "85d42916d47753652a1c01f45c83dea443019bf529b4c7a17ade3b325204b711"
@@ -17842,6 +17857,11 @@
       "path": "tests/education-user-provisioning.test.ts",
       "bytes": 1725,
       "sha256": "6b37d2904e1e78061d9692017979162053fad0e01aab626f8bebfce29717be11"
+    },
+    {
+      "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
+      "bytes": 4661,
+      "sha256": "b6770af07fef2912b1561ed344cbfae36f69104b613b686d87e85a6f43fed80f"
     },
     {
       "path": "tests/exact-test-fixture-eol.test.mjs",
@@ -18402,6 +18422,11 @@
       "path": "tests/fixtures/clinical-review-coronary-sinus-xray-before-lifecycle.ts.raw",
       "bytes": 17740,
       "sha256": "76ace4b4682bf3ba0f9a3e41e1ce140a03dac19801d9c045a59467b0def9b19b"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-elbow-arterial-tour-before-lifecycle.ts.raw",
+      "bytes": 15900,
+      "sha256": "5d14824a266020120ba92957008670d04b167beae5aa591ba3b0555aa853450e"
     },
     {
       "path": "tests/fixtures/clinical-review-femoral-arterial-original.ts.txt",
@@ -24067,9 +24092,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2317060,
-      "sha256": "75a88a125b74d4e5da7c06b1b7d1a0ca6ab9fe6ce08b58211372970a2de6b746"
+      "bytes": 2319964,
+      "sha256": "5b1e72b7daf29e84ce083b252a78ec233b2e485514b8484fa23ac9d904d60593"
     }
   ],
-  "scope": "Screened website application source and exact historical test-source texts only. One coronary nested-teaching lifecycle theorem extension, its exact previously backed-up original and portable preservation/tamper contract, plus six inert Education read-adapter/proposed-SQL/synthetic-test paths. All other selected source bytes unchanged. No actual D1/R2 binding, route, writer, activation, permission or media readiness change; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
+  "scope": "Screened website application source and exact historical test-source texts only. One inert exact Education assessment/workbook/case authorizer with pure and real-SQL synthetic tests; elbow tour/player lifecycle theorem, its previously backed-up original and portable preservation/tamper contract. All other selected source bytes unchanged. No existing D1/R2 binding, route, writer, activation, permission, product-motion or media readiness change; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
 }
