@@ -63,6 +63,14 @@ function fixture() {
   const React = require('react');
   const requests = [], routes = []; let refreshes = 0;
   const oldFetch = globalThis.fetch;
+  const oldWindow = Object.getOwnPropertyDescriptor(globalThis, 'window');
+  const historyWrites = [];
+  const location = new URL(`http://localhost/studio/courses/${encodeURIComponent(course.id)}?keep=1&pane=review#outline`);
+  Object.defineProperty(globalThis, 'window', {configurable:true, writable:true, value:{
+    location, history:{state:{existing:'retained'}, pushState(state, _title, url) {
+      historyWrites.push({state,url}); location.href = new URL(url, location.href).href;
+    }},
+  }});
   globalThis.fetch = async (url, options) => {
     const request = {url, options, payload: JSON.parse(options.body), ok: true, body: {ok:true, action:'update-course', courseId: course.id}};
     requests.push(request);
@@ -89,7 +97,7 @@ function fixture() {
     'next/navigation': {useSearchParams: () => new URLSearchParams('?pane=review')},
     './StudioForms': forms,
   });
-  return {forms, editor, requests, routes, renderEditor() {editorCursor = 0; return editor.StudioCourseEditor({course, workbooks: [], releases: [], recoveryScope});}, get refreshes() {return refreshes;}, dispose() {globalThis.fetch = oldFetch;}};
+  return {forms, editor, requests, routes, historyWrites, renderEditor() {editorCursor = 0; return editor.StudioCourseEditor({course, workbooks: [], releases: [], recoveryScope});}, get refreshes() {return refreshes;}, dispose() {globalThis.fetch = oldFetch;if(oldWindow)Object.defineProperty(globalThis,'window',oldWindow);else delete globalThis.window;}};
 }
 
 function editForm(h, onDraftRecoveryChange) {
@@ -107,7 +115,7 @@ function editForm(h, onDraftRecoveryChange) {
   return {action, expectedTitle, expectedDescription};
 }
 
-test('course options expose a bounded details form and preserve the active pane and duplicate option', () => {
+test('course options expose a bounded details form in Content and preserve the duplicate option and unrelated URL state', () => {
   const h = fixture();
   try {
     const tree = h.renderEditor();
@@ -125,9 +133,12 @@ test('course options expose a bounded details form and preserve the active pane 
     toggle.props.onClick();
     const opened = h.renderEditor();
     assert.equal(walk(opened, node => node.props.id === 'course-details-editor').props.hidden, false);
-    assert.equal(walk(opened, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-review').props['aria-selected'], true);
+    assert.equal(walk(opened, node => node.props.role === 'tab' && node.props['aria-controls'] === 'course-content').props['aria-selected'], true);
+    assert.equal(walk(opened, node => node.props.id === 'course-review').props.hidden, true);
+    assert.deepEqual(h.historyWrites, [{state:{existing:'retained',__vinext_externalHistoryState:true},url:`/studio/courses/${encodeURIComponent(course.id)}?keep=1&pane=content#outline`}]);
     walk(opened, node => node.props['aria-controls'] === 'course-details-editor').props.onClick();
     assert.equal(walk(h.renderEditor(), node => node.props.id === 'course-details-editor').props.hidden, true);
+    assert.equal(h.historyWrites.length, 1, 'Hiding details does not create another pane entry');
   } finally {h.dispose();}
 });
 

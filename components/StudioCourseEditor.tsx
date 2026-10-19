@@ -102,7 +102,7 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
     </div>
     {recoveryState!=='none'&&<p id="course-details-draft-status" className="studio-form-message" role="status">{recoveryState==='recovered'?'Recovered unsent course edits on this device.':'A device-local course draft needs attention.'} <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsVisible} onClick={toggleDetails}>{detailsVisible?'Hide course details':recoveryState==='recovered'?'Review recovered edits':'Check device draft'}</button></p>}
     <div id="course-content" role="tabpanel" aria-labelledby="course-content-tab" tabIndex={0} hidden={section !== "content"}>
-      <section id="course-details-editor" className="course-editor-panel course-create-panel" aria-label="Edit course details" hidden={!detailsOpen}><EditCourseDetailsForm key={course.id} course={course} recoveryScope={recoveryScope} onDraftRecoveryChange={recoveryChanged} /></section>
+      <section id="course-details-editor" className="course-editor-panel course-create-panel" aria-label="Edit course details" hidden={!detailsOpen}><EditCourseDetailsForm key={JSON.stringify([course.id,recoveryScope?.actorId??null,recoveryScope?.organizationId??null])} course={course} recoveryScope={recoveryScope} onDraftRecoveryChange={recoveryChanged} /></section>
       <div className="course-editor-content">
         <section aria-label="Course outline"><header className="course-section-heading"><div><h2>Course content</h2><p>Open an item to edit its content. Add another when you need it.</p></div><span>{workbooks.length} items</span></header>
           {workbooks.length === 0 && <p className="course-empty">Your course is private. Start by adding your first teaching or assessment item.</p>}
@@ -120,3 +120,4 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
     </section>
   </section>;
 }
+

@@ -58,15 +58,20 @@ function lockStudioDraft<T>(key:string,action:()=>T):Promise<T>{
 }
 
 export type StudioDraftRecoveryState='none'|'recovered'|'attention';
-function ActionForm({ children, onSubmit, submitLabel, draftKey, recoveryScope, reconcileHref="/studio/courses", draftRevision, onValuesChange, onDraftRecoveryChange }: { children: ReactNode; onSubmit: (form: FormData, isCurrent: () => boolean) => Promise<void>; submitLabel: string; draftKey?: string; recoveryScope?: StudioDraftScope; reconcileHref?: string; draftRevision?: string; onValuesChange?: (values: FormData, recovered?: Record<string,string|string[]>) => void; onDraftRecoveryChange?: (state:StudioDraftRecoveryState)=>void }) {
+type StudioDraftReset = {apply:()=>boolean; rollback:()=>void};
+type StudioDraftDiscard = { sourceStamp:string; canReset:(values:FormData)=>boolean; prepare:(form:HTMLFormElement)=>StudioDraftReset|null };
+function ActionForm({ children, onSubmit, submitLabel, draftKey, recoveryScope, reconcileHref="/studio/courses", draftRevision, onValuesChange, onDraftRecoveryChange, discardDraft }: { children: ReactNode; onSubmit: (form: FormData, isCurrent: () => boolean) => Promise<void>; submitLabel: string; draftKey?: string; recoveryScope?: StudioDraftScope; reconcileHref?: string; draftRevision?: string; onValuesChange?: (values: FormData, recovered?: Record<string,string|string[]>) => void; onDraftRecoveryChange?: (state:StudioDraftRecoveryState)=>void; discardDraft?:StudioDraftDiscard }) {
   const scopedDraftKey = draftKey ? studioDraftScopedKey(recoveryScope, draftKey) : null;
   const contextProtected = !!draftKey || recoveryScope !== undefined;
   const formRef = useRef<HTMLFormElement>(null);
   const valuesChanged = useRef(onValuesChange);
   const recoveryChanged = useRef(onDraftRecoveryChange);
+  const discardConfig=useRef(discardDraft);
+  discardConfig.current=discardDraft;
   const recoveryEpoch = useRef(0);
   const revision = useRef(0);
   const submitting = useRef(false);
+  const discarding=useRef(false);
   const active = useRef(true);
   const contextReady=useRef(!contextProtected),contextSequence=useRef(0),contextRetired=useRef(false);
   const pendingRecovery=useRef<(()=>void)|null>(null);
@@ -98,6 +103,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey, recoveryScope, 
   useEffect(() => { valuesChanged.current = onValuesChange; }, [onValuesChange]);
   useEffect(() => { recoveryChanged.current = onDraftRecoveryChange; }, [onDraftRecoveryChange]);
   const [busy, setBusy] = useState(false); const [dirty, setDirty] = useState(false); const [message, setMessage] = useState(""); const [error, setError] = useState("");
+  const [discardBusy,setDiscardBusy]=useState(false);
   const [draftStored, setDraftStored] = useState(false);
   const navigationState = useRef({dirty:false,draftStored:false});
   function markDirty(value:boolean) {navigationState.current.dirty=value;setDirty(value);}
@@ -262,9 +268,84 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey, recoveryScope, 
       setStorageNotice("Device-local draft storage is unavailable. Your current input is still here; save to Studio before leaving this page.");
     });
   }
+  async function discardLocalDraft(){
+    const config=discardConfig.current,form=formRef.current,snapshot=draftStorage.current;
+    if(!config||!form||!scopedDraftKey||!active.current||contextRetired.current||!contextReady.current||
+       pendingRecovery.current||submitting.current||discarding.current||reconciliationRequired.current||
+       !navigationState.current.dirty||!navigationState.current.draftStored)return;
+    if(!window.confirm('Discard only these unsent course edits saved on this device? Saved Studio course details and releases will stay unchanged.'))return;
+    const key=`visible-medicine-studio-draft:${scopedDraftKey}`;
+    const sourceStamp=config.sourceStamp,editingRevision=revision.current,contextToken=contextSequence.current;
+    const expectedContext=parseStudioMutationContext(recoveryScope);
+    const inputStamp=()=>JSON.stringify(Array.from(new FormData(form),([name,value])=>[name,String(value)]));
+    let raw:string,input:string;
+    try{
+      if(!expectedContext||!snapshot.writable||snapshot.key!==scopedDraftKey||
+         snapshot.cleanupKeys.size!==1||!snapshot.cleanupKeys.has(key))throw new Error('not-owned');
+      const current=localStorage.getItem(key);
+      if(current===null)throw new Error('missing');
+      raw=current;
+      input=inputStamp();
+      if(!snapshot.values.has(key)||snapshot.values.get(key)!==raw||
+         !config.canReset(new FormData(form)))throw new Error('changed');
+    }catch{
+      markDraftStored(false);setError('This device draft could not be safely compared. Your input has been kept.');return;
+    }
+    const stillCurrent=()=>active.current&&!contextRetired.current&&contextReady.current&&
+      draftStorage.current===snapshot&&snapshot.key===scopedDraftKey&&
+      contextSequence.current===contextToken&&revision.current===editingRevision&&
+      discardConfig.current?.sourceStamp===sourceStamp&&!submitting.current&&
+      parseStudioMutationContext(recoveryScope)?.actorId===expectedContext.actorId&&
+      parseStudioMutationContext(recoveryScope)?.organizationId===expectedContext.organizationId;
+    discarding.current=true;setDiscardBusy(true);setError('');setMessage('');
+    let completedStorage:typeof snapshot|null=null;
+    try{
+      await verifyStudioMutationContext(expectedContext);
+      if(!stillCurrent()||inputStamp()!==input)throw new Error('changed');
+      await lockStudioDraft(scopedDraftKey,()=>{
+        if(!stillCurrent()||inputStamp()!==input||!discardConfig.current?.canReset(new FormData(form)))throw new Error('changed');
+        const current=localStorage.getItem(key);
+        if(current!==raw||snapshot.values.get(key)!==raw||!snapshot.cleanupKeys.has(key))throw new Error('changed');
+        const reset=discardConfig.current?.prepare(form);
+        if(!reset)throw new Error('reset-unavailable');
+        try{
+          // Apply while owned bytes still exist. A failed DOM reset never
+          // attempts removal; a failed removal rolls the live fields back.
+          if(reset.apply()!==true)throw new Error('reset');
+          localStorage.removeItem(key);
+          if(localStorage.getItem(key)!==null)throw new Error('remove');
+        }catch{
+          try{reset.rollback();}catch{}
+          // Never write captured bytes back over a newer tab's value. If a
+          // provider fails after physical removal, only DOM protection remains.
+          throw new Error('discard-failed');
+        }
+        // Retire queued writes and recovery callbacks before releasing the lock.
+        revision.current++;recoveryEpoch.current++;pendingRecovery.current=null;
+        completedStorage={key:scopedDraftKey,values:new Map<string,string|null>([[key,null]]),writable:true,cleanupKeys:new Set<string>()};
+        draftStorage.current=completedStorage;
+      });
+      if(!active.current||!completedStorage||draftStorage.current!==completedStorage)return;
+      markDirty(false);markDraftStored(false);setStorageNotice('');setError('');
+      setMessage('Unsent device-only course edits discarded. Saved Studio course details were not changed.');
+      recoveryChanged.current?.('none');
+    }catch(caught){
+      if(!active.current||draftStorage.current!==snapshot)return;
+      if(caught instanceof StudioMutationContextError){
+        markDraftStored(false);
+        if(caught.reason==='changed')retireContext();else holdUnavailable(false);
+      }else{
+        markDirty(true);markDraftStored(false);
+        setError('The device draft could not be safely discarded. Your input is still here; keep this page open and check the saved Studio course before retrying.');
+      }
+    }finally{
+      discarding.current=false;
+      if(active.current)setDiscardBusy(false);
+    }
+  }
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (submitting.current||!active.current||contextRetired.current||reconciliationRequired.current||contextProtected&&(!contextReady.current||pendingRecovery.current!==null)) return;
+    if (submitting.current||discarding.current||!active.current||contextRetired.current||reconciliationRequired.current||contextProtected&&(!contextReady.current||pendingRecovery.current!==null)) return;
     const submitted = new FormData(event.currentTarget), submittedRevision = revision.current;
     const submittedContextSequence=contextSequence.current;
     // Keep this session's snapshot object: a queued same-revision draft write
@@ -325,6 +406,7 @@ function ActionForm({ children, onSubmit, submitLabel, draftKey, recoveryScope, 
     {draftKey&&<small className="draft-safety">{dirty?(draftStored?"Unsubmitted changes saved on this device only.":"Unsubmitted changes are not saved on this device. Keep this page open until you save to Studio."):"No unsaved changes."}</small>}
     {storageNotice&&<p className="studio-form-message" role="status">{storageNotice}</p>}
     {(message||error)&&<p className={`studio-form-message ${error?"error":""}`} role={error?"alert":"status"}>{error||message}</p>}
+    {discardDraft&&<button type="button" aria-disabled={discardBusy||busy||contextStatus!=='ready'||!dirty||!draftStored||reconciliationNeeded} onClick={()=>void discardLocalDraft()}>{discardBusy?'Checking device draft…':'Discard unsent course edits on this device'}</button>}
     {contextStatus==='unavailable'&&<button type="button" onClick={()=>contextRetry.current?.()}>Retry context check</button>}
     {reconciliationNeeded&&contextStatus!=='retired'&&<div role="group" aria-label="Reconcile uncertain save">
       <p>The previous save may have completed. Revalidating this page does not confirm its outcome.</p>
@@ -349,8 +431,37 @@ export function EditCourseDetailsForm({ course, recoveryScope, onDraftRecoveryCh
   const [rebaseRevision, setRebaseRevision] = useState(0);
   const expectedTitle = useRef<HTMLInputElement>(null);
   const expectedDescription = useRef<HTMLInputElement>(null);
+  const titleInput = useRef<HTMLInputElement>(null);
+  const descriptionInput = useRef<HTMLTextAreaElement>(null);
   const savedDetailsChanged = course.title !== baseline.title || course.description !== baseline.description;
-  return <ActionForm key={studioDraftBoundaryKey(recoveryScope,`course-details:${course.id}`)} recoveryScope={recoveryScope} draftKey={`course-details:${course.id}`} draftRevision={String(rebaseRevision)} submitLabel="Save course details" onDraftRecoveryChange={onDraftRecoveryChange} onValuesChange={(_form, recovered) => {
+  const sourceStamp=JSON.stringify([course.id,course.code,course.title,course.description,course.status,course.moduleId,course.workbookCount,course.releaseCount,course.enrolledLearners,baseline.title,baseline.description,rebaseRevision]);
+  return <ActionForm key={studioDraftBoundaryKey(recoveryScope,`course-details:${course.id}`)} recoveryScope={recoveryScope} draftKey={`course-details:${course.id}`} draftRevision={String(rebaseRevision)} submitLabel="Save course details" onDraftRecoveryChange={onDraftRecoveryChange} discardDraft={{
+    sourceStamp,
+    canReset:values=>!savedDetailsChanged&&values.get('expectedTitle')===course.title&&values.get('expectedDescription')===course.description,
+    prepare:()=>{
+      const title=titleInput.current,description=descriptionInput.current;
+      const expectedT=expectedTitle.current,expectedD=expectedDescription.current;
+      if(!title||!description||!expectedT||!expectedD||savedDetailsChanged)return null;
+      const before=[title.value,description.value,expectedT.value,expectedD.value];
+      const previousBaseline=baseline,previousDetails=details;
+      const rollback=()=>{
+        title.value=before[0];description.value=before[1];
+        expectedT.value=before[2];expectedD.value=before[3];
+        setBaseline(previousBaseline);setDetails(previousDetails);
+      };
+      return {apply:()=>{
+        try{
+          title.value=course.title;description.value=course.description;
+          expectedT.value=course.title;expectedD.value=course.description;
+          if(title.value!==course.title||description.value!==course.description||
+             expectedT.value!==course.title||expectedD.value!==course.description)return false;
+          setBaseline({title:course.title,description:course.description});
+          setDetails({title:course.title,description:course.description});
+          return true;
+        }catch{return false;}
+      },rollback};
+    },
+  }} onValuesChange={(_form, recovered) => {
     if (typeof recovered?.expectedTitle === "string" && typeof recovered.expectedDescription === "string") {
       setBaseline({ title: recovered.expectedTitle, description: recovered.expectedDescription });
     }
@@ -378,8 +489,8 @@ export function EditCourseDetailsForm({ course, recoveryScope, onDraftRecoveryCh
   }}>
     <input ref={expectedTitle} type="hidden" name="expectedTitle" defaultValue={baseline.title} />
     <input ref={expectedDescription} type="hidden" name="expectedDescription" defaultValue={baseline.description} />
-    <label><span>Course title</span><input name="title" defaultValue={details.title} required minLength={4} maxLength={160} /></label>
-    <label><span>Short description</span><textarea name="description" defaultValue={details.description} required minLength={20} maxLength={1200} /></label>
+    <label><span>Course title</span><input ref={titleInput} name="title" defaultValue={details.title} required minLength={4} maxLength={160} /></label>
+    <label><span>Short description</span><textarea ref={descriptionInput} name="description" defaultValue={details.description} required minLength={20} maxLength={1200} /></label>
     {savedDetailsChanged && <div role="group" aria-label="Compare saved course details"><p>Studio now has different saved course details. Your draft remains in the fields above.</p><p><strong>Saved title:</strong> {course.title}</p><p><strong>Saved description:</strong> {course.description}</p><button type="button" onClick={() => {
       if (!window.confirm("Use these currently saved course details as the comparison for your draft? Your draft text will stay in place. The next save will apply it to this version.")) return;
       if (expectedTitle.current) expectedTitle.current.value = course.title;
@@ -823,3 +934,4 @@ export function AssignCohortWorkbookForm({ cohortId, workbooks, recoveryScope }:
   const router = useRouter();
   return <ActionForm key={studioDraftBoundaryKey(recoveryScope,`assign-cohort:${cohortId}`)} recoveryScope={recoveryScope} reconcileHref="/studio/cohorts" submitLabel="Assign workbook" onSubmit={async (form, isCurrent) => { await postStudio({ action: "assign-cohort-workbook", cohortId, workbookId: form.get("workbookId") }, recoveryScope, isCurrent); if(isCurrent())router.refresh(); }}><label><span>Published workbook</span><select name="workbookId">{workbooks.filter((workbook) => workbook.status === "published").map((workbook) => <option value={workbook.id} key={workbook.id}>{workbook.title}</option>)}</select></label></ActionForm>;
 }
+

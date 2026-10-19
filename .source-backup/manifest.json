@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T07:54:01.065Z",
-  "sourceManifestSha256": "0db24e971fc5e90456071066c53463842719094a77abc4d9d33c1504fe8d3d36",
-  "parent": "2468d0e9bfe25396ea559e1c8954406ef37cd27e",
+  "at": "2026-10-19T08:13:38.219Z",
+  "sourceManifestSha256": "806bc5f422156f42410d7c14b705cff01f8d80a7981aff1c3a553d07a835e2d0",
+  "parent": "4b99c46ebc1f1a3b850df8d627cc0cd200872696",
   "atlasSource": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
   "review": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
@@ -9260,13 +9260,13 @@
     },
     {
       "path": "components/StudioCourseEditor.tsx",
-      "bytes": 10943,
-      "sha256": "144e6d499dff46139f485ee7b9d3b674e08130f4e544be2dbf8389f212531b05"
+      "bytes": 11027,
+      "sha256": "58a8e419bacf356f44d8ed8727c5455ee9689bf4c467d7b5ed8ccc801b17d6f5"
     },
     {
       "path": "components/StudioForms.tsx",
-      "bytes": 72000,
-      "sha256": "7cb4fe40e153c5df6099af9c3ae500fb342265c6d2273824a6db5313f98d5e5b"
+      "bytes": 78598,
+      "sha256": "29c0decebe1987e58c2172c02792af1230c8d9798c494cf4595cdf4297d004cf"
     },
     {
       "path": "components/StudioNavigation.tsx",
@@ -23715,13 +23715,18 @@
     },
     {
       "path": "tests/studio-course-details-form.test.mjs",
-      "bytes": 18763,
-      "sha256": "da50193c624b567200ee0b383f83abd7e4b228a4a12e82efae8cb7d382254245"
+      "bytes": 19779,
+      "sha256": "27d86526e6d43f034b23beca5d9806f50d1043c73a0310de5eeb8a5ed7e384e7"
     },
     {
       "path": "tests/studio-course-details.test.mjs",
       "bytes": 15442,
       "sha256": "f2351c74873a32a0f0756f891152ee25370dbf5beb6899fcdf511f22ae79e6dd"
+    },
+    {
+      "path": "tests/studio-course-draft-discard.test.mjs",
+      "bytes": 15995,
+      "sha256": "82cc2e71926ecdc3c22b776b37fe9fc82d62703dc09950d5f336dad4867ff170"
     },
     {
       "path": "tests/studio-course-editor-keyboard.test.mjs",
@@ -24107,9 +24112,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2324959,
-      "sha256": "4d5e6286e1b518894e3f0f883fdb42ab34502f93136954c11914023c3e1756e2"
+      "bytes": 2328179,
+      "sha256": "10d5150376028a6102932fdf51fa66958755988140720856b03ef475ab21bb64"
     }
   ],
-  "scope": "Screened website source-only recovery: seven reviewed desktop inbox search/course-details presentation and focused regression paths. Six existing paths retain unrelated prior work; one synthetic test added. No anatomy, generated model/viewer, scan, mask, identifier, saved course/release/decision, permission, entitlement, role, schema, licence, media readiness or public change. Own actual QA device-only test draft and all private runtime records are NOT included. Held operational docs and raw canonical ancestry excluded. Not a whole-project, patient-data, clinical or release backup."
+  "scope": "Screened website source-only recovery: four reviewed course-only local draft/UI source paths. Three existing paths retain unrelated prior work; one synthetic test added. Reversible reset before owned-key removal; scope-aware outer form remount; no stored records removed during browser QA. No anatomy, generated model/viewer, scan, mask, identifier, saved course/release/decision, permission, entitlement, role, schema, licence, media readiness or public change. Own actual QA device-only test draft and all private runtime records are NOT included. Held operational docs and raw canonical ancestry excluded. Not a whole-project, patient-data, clinical or release backup."
 }
