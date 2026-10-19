@@ -1,0 +1,189 @@
+{
+  "parentCommit": "f5052a1906bf9b87e5235bda57d367b1103729db",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-vessels-foot-vascular",
+      "url": "/models/bodyparts3d/full-body/foot-vessels-foot-vascular.glb",
+      "bytes": 192916,
+      "sha256": "9e6d01cc92726aa2db728febcf52e0adfa0e6b9db9f58705f49b0653c8311881",
+      "structures": 8
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "1a8af952b283294ae89b6570dbb675650f2efc0fc5e07974f7011c9bc5a61ac1",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "fmaId": "FMA44881",
+        "name": "Dorsal venous arch of right foot",
+        "sourceName": "dorsal venous arch of right foot",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA44881",
+        "bounds": {
+          "min": [
+            -1.2090400457382202,
+            -8.437078475952148,
+            0.3318380117416382
+          ],
+          "max": [
+            -0.9220989942550659,
+            -8.212249755859375,
+            1.0988099575042725
+          ]
+        },
+        "center": [
+          -1.065569519996643,
+          -8.324664115905762,
+          0.7153239846229553
+        ],
+        "anchor": [
+          -1.0060399770736694,
+          -8.40544319152832,
+          0.8029499650001526
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2061",
+            "sha256": "2b349be398677b9dab660a07b4e038b35cb458883e350340ff53a2754aebcc41"
+          },
+          {
+            "file": "FJ2062",
+            "sha256": "4c16febe531c5d2afacf9bb47a899602239f2424ebd6e6d97860691bc9a2669b"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "fmaId": "FMA44882",
+        "name": "Dorsal venous arch of left foot",
+        "sourceName": "dorsal venous arch of left foot",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA44882",
+        "bounds": {
+          "min": [
+            0.922182023525238,
+            -8.436917304992676,
+            0.3318749964237213
+          ],
+          "max": [
+            1.2090699672698975,
+            -8.212420463562012,
+            1.0989500284194946
+          ]
+        },
+        "center": [
+          1.0656259953975677,
+          -8.324668884277344,
+          0.715412512421608
+        ],
+        "anchor": [
+          1.0024900436401367,
+          -8.404391288757324,
+          0.8019400238990784
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2059",
+            "sha256": "9421947a4511ed928078ee25870fefc51632c373fd3c8918bd9d53c3fc8dd5fb"
+          },
+          {
+            "file": "FJ2060",
+            "sha256": "f882652c192b3c2e05405273755193989d5b1866dcba53b9c0653e7a1ee2b2f9"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "xray"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ]
+}

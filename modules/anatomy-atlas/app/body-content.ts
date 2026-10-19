@@ -1,5 +1,6 @@
 import {craniofacialCalcificationCtLesson} from '../lib/craniofacial-calcification-ct';
 import {footArterialProjectionXrayLesson} from '../lib/foot-arterial-projection-xray';
+import {footVenousArchXrayLesson} from '../lib/foot-venous-arch-xray';
 import { intracranialArterialUsLesson } from '../lib/intracranial-arterial-us';
 import { connectiveProjectionXrayLesson } from '../lib/connective-projection-xray';
 import { cervicalProjectionXrayLesson } from '../lib/cervical-projection-xray';
@@ -427,6 +428,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if(arterialEvidenceLimit)return arterialEvidenceLimit;
   const footArterialProjectionXray=footArterialProjectionXrayLesson(s,tab);
   if(footArterialProjectionXray)return footArterialProjectionXray;
+  const footVenousArchXray=footVenousArchXrayLesson(s,tab);
+  if(footVenousArchXray)return footVenousArchXray;
 
   const intracranialArterialUs = intracranialArterialUsLesson(s, tab);
   if (intracranialArterialUs) return intracranialArterialUs;

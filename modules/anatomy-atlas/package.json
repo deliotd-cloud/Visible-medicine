@@ -90,6 +90,7 @@
     "abdominal-fold-ultrasound:test": "node scripts/validate-abdominal-fold-ultrasound.mjs",
     "laryngeal-framework-quiz:test": "node scripts/pin-laryngeal-framework-quiz.mjs --check && node scripts/test-laryngeal-framework-quiz.mjs",
     "foot-venous-arch-imaging:test": "node scripts/validate-foot-venous-arch-imaging.mjs",
+    "foot-venous-arch-xray:test": "node scripts/test-foot-venous-arch-xray-current.mjs",
     "central-canal-imaging:test": "node scripts/validate-central-canal-imaging.mjs",
     "laryngeal-muscle-quiz:test": "node scripts/pin-laryngeal-muscle-quiz.mjs --check && node scripts/test-laryngeal-muscle-quiz.mjs",
     "lacrimal-quiz:test": "node scripts/pin-lacrimal-quiz.mjs --check && node scripts/test-lacrimal-quiz.mjs",
