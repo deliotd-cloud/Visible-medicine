@@ -1,0 +1,751 @@
+{
+  "name": "git-author-ab8f5594",
+  "helper": "thoracicDetailUltrasoundLesson",
+  "pinsHash": "3421ba885b81e763d8e230758e9d5e1693d53ee44bcc2b4abf0239b02f3bbef2",
+  "transitionHash": "79bd752c9e04665f0862fb8b93037a48f22fa3a6667882c149c031f172abb334",
+  "pins": {
+    "baseline": "c3593e6664e8572d882bd19d4525dea0f3d00d17",
+    "authorCommit": "ab8f5594df9ff55132d3d8754e9d229a806dc325",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+          "fmaId": "FMA4944",
+          "name": "Hemiazygos vein",
+          "sourceName": "hemiazygos vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-recovery",
+          "nodeName": "FMA4944",
+          "bounds": {
+            "min": [
+              -0.15802399814128876,
+              2.7026000022888184,
+              0.0510060116648674
+            ],
+            "max": [
+              0.24038200080394745,
+              3.742500066757202,
+              0.25790101289749146
+            ]
+          },
+          "center": [
+            0.041179001331329346,
+            3.2225500345230103,
+            0.15445351228117943
+          ],
+          "anchor": [
+            0.18140000104904175,
+            3.217600107192993,
+            0.1522589921951294
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3434",
+              "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+          "fmaId": "FMA10692",
+          "name": "Right musculophrenic artery",
+          "sourceName": "right musculophrenic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thorax",
+          "regions": [
+            "thorax",
+            "abdomen"
+          ],
+          "bundle": "thorax-vessels-inventory",
+          "nodeName": "FMA10692",
+          "bounds": {
+            "min": [
+              -1.1400200128555298,
+              1.962499976158142,
+              0.463979035615921
+            ],
+            "max": [
+              -0.12452099472284317,
+              3.7452001571655273,
+              1.5226600170135498
+            ]
+          },
+          "center": [
+            -0.6322705037891865,
+            2.8538500666618347,
+            0.9933195263147354
+          ],
+          "anchor": [
+            -0.7030269503593445,
+            2.7461998462677,
+            1.3616600036621094
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1969",
+              "sha256": "8b4e68c9e0bf6ef0ca948cb6c511bb894b14156f1609d004c6a8c54303ce271c"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+          "fmaId": "FMA4077",
+          "name": "Left musculophrenic artery",
+          "sourceName": "left musculophrenic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thorax",
+          "regions": [
+            "thorax",
+            "abdomen"
+          ],
+          "bundle": "thorax-vessels-inventory",
+          "nodeName": "FMA4077",
+          "bounds": {
+            "min": [
+              0.12459199875593185,
+              1.9625097513198853,
+              0.46400099992752075
+            ],
+            "max": [
+              1.1399199962615967,
+              3.74530029296875,
+              1.5226199626922607
+            ]
+          },
+          "center": [
+            0.6322559975087643,
+            2.8539050221443176,
+            0.9933104813098907
+          ],
+          "anchor": [
+            0.7044619917869568,
+            2.748000383377075,
+            1.3619500398635864
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1979",
+              "sha256": "f2010f732482ad9d6c1291d7c7ab2cdb839c2fc2bae2889fcc9147f0aa9d3ba6"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+          "fmaId": "FMA4772",
+          "name": "Right musculophrenic vein",
+          "sourceName": "right musculophrenic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thorax",
+          "regions": [
+            "thorax",
+            "abdomen"
+          ],
+          "bundle": "thorax-vessels-inventory",
+          "nodeName": "FMA4772",
+          "bounds": {
+            "min": [
+              -1.0805100202560425,
+              2.200700044631958,
+              0.965910017490387
+            ],
+            "max": [
+              -0.09123200178146362,
+              3.868800163269043,
+              1.5580499172210693
+            ]
+          },
+          "center": [
+            -0.585871011018753,
+            3.0347501039505005,
+            1.2619799673557281
+          ],
+          "anchor": [
+            -0.599373996257782,
+            2.9973998069763184,
+            1.467579960823059
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1996",
+              "sha256": "a869265038e3f4cfeaaa2a4d3c3df7a2351760eae583caa3970bd2febd6c6f93"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+          "fmaId": "FMA4786",
+          "name": "Left musculophrenic vein",
+          "sourceName": "left musculophrenic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thorax",
+          "regions": [
+            "thorax",
+            "abdomen"
+          ],
+          "bundle": "thorax-vessels-inventory",
+          "nodeName": "FMA4786",
+          "bounds": {
+            "min": [
+              0.09116069972515106,
+              2.200700044631958,
+              0.9658399820327759
+            ],
+            "max": [
+              1.080590009689331,
+              3.871500253677368,
+              1.5594298839569092
+            ]
+          },
+          "center": [
+            0.5858753547072411,
+            3.036100149154663,
+            1.2626349329948425
+          ],
+          "anchor": [
+            0.6027230024337769,
+            2.996500253677368,
+            1.4668999910354614
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1988",
+              "sha256": "cce6a4fb93dd3f4cb47112ae09e1045bf9ebf8243557c75f73ec268640c6b105"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+          "fmaId": "FMA4149",
+          "name": "Esophageal artery",
+          "sourceName": "esophageal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA4149",
+          "bounds": {
+            "min": [
+              -0.2986220121383667,
+              3.956500291824341,
+              0.15571998059749603
+            ],
+            "max": [
+              0.1234080046415329,
+              4.492900371551514,
+              0.3243640065193176
+            ]
+          },
+          "center": [
+            -0.0876070037484169,
+            4.224700331687927,
+            0.24004199355840683
+          ],
+          "anchor": [
+            -0.07550640404224396,
+            4.223900318145752,
+            0.2694360315799713
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1934",
+              "sha256": "c65d1ea50ca8980e2f1dc8aaac2e5260edcb841b7ebc5b7fad9d220088071ae9"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+          "fmaId": "FMA10704",
+          "name": "Variant bronchial artery",
+          "sourceName": "variant bronchial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA10704",
+          "bounds": {
+            "min": [
+              -0.29621800780296326,
+              4.6173996925354,
+              0.2007090002298355
+            ],
+            "max": [
+              0.17332398891448975,
+              5.030899524688721,
+              0.2909580171108246
+            ]
+          },
+          "center": [
+            -0.061447009444236755,
+            4.8241496086120605,
+            0.24583350867033005
+          ],
+          "anchor": [
+            -0.0718580037355423,
+            4.811700344085693,
+            0.25371697545051575
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3418",
+              "sha256": "36f80be07440fd4834878bddc8e73d75f0cba0ed15505fc16e03eb474a563943"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+          "fmaId": "FMA68109",
+          "name": "Bronchial artery",
+          "sourceName": "bronchial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA68109",
+          "bounds": {
+            "min": [
+              -0.493863970041275,
+              4.814200401306152,
+              0.23621803522109985
+            ],
+            "max": [
+              0.12741200625896454,
+              5.19420051574707,
+              0.45102599263191223
+            ]
+          },
+          "center": [
+            -0.18322598189115524,
+            5.004200458526611,
+            0.34362201392650604
+          ],
+          "anchor": [
+            -0.19295400381088257,
+            5.035899639129639,
+            0.4431140124797821
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1933",
+              "sha256": "9dbcdaeb0c6a61fe68c26bb3fb48e40efecf5ada9e396cf11e4c5780c1a92224"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+          "fmaId": "FMA71537",
+          "name": "Set of oesophageal branches of thoracic aorta",
+          "sourceName": "set of oesophageal branches of thoracic aorta",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA71537",
+          "bounds": {
+            "min": [
+              -0.14099200069904327,
+              4.000699520111084,
+              0.044264983385801315
+            ],
+            "max": [
+              0.21891000866889954,
+              4.567600250244141,
+              0.3588919937610626
+            ]
+          },
+          "center": [
+            0.03895900398492813,
+            4.284149885177612,
+            0.20157848857343197
+          ],
+          "anchor": [
+            0.0635548010468483,
+            4.292199611663818,
+            0.23305602371692657
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3431",
+              "sha256": "e2addc11f8e81daf7349975b5871ecf9ea97ace47b00610fb3aca54eea793cfc"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+          "fmaId": "FMA76767",
+          "name": "Anterior cardiac vein · source group",
+          "sourceName": "anterior cardiac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "anterior-cardiac-vein",
+          "nodeName": "FMA76767",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2725",
+              "sha256": "48063a8e366f2ad5c6745d9d20c31afc216a68561d5b4826de256444190f7634"
+            },
+            {
+              "file": "FJ2730",
+              "sha256": "bb15f6552044e7e9dbf7035fc0836b0ee10e1a46a22a0b2cc90c4eb711c11141"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.035955000668764114,
+              4.229499816894531,
+              1.0874899625778198
+            ],
+            "max": [
+              0.29523301124572754,
+              4.429800033569336,
+              1.2661999464035034
+            ]
+          },
+          "center": [
+            0.1296390052884817,
+            4.329649925231934,
+            1.1768449544906616
+          ],
+          "anchor": [
+            0.12833400070667267,
+            4.34119987487793,
+            1.2211400270462036
+          ],
+          "coverageNote": "Two original surfaces retained as one source-defined group. The visible branches are not a normal vein count, a complete venous tree or independently named veins. Apparent contact with the heart, right coronary artery or the other component does not prove lumen continuity, drainage openings or a dissection plane. Reassemble before comparing source relationships.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Anterior cardiac vein · source group · Review pending",
+            "body": "Additional structure-specific teaching remains to be authored and reviewed.",
+            "bullets": [],
+            "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "c3593e6664e8572d882bd19d4525dea0f3d00d17",
+    "authorCommit": "ab8f5594df9ff55132d3d8754e9d229a806dc325",
+    "sourcePinsHash": "3421ba885b81e763d8e230758e9d5e1693d53ee44bcc2b4abf0239b02f3bbef2",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "fmaId": "FMA4944",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "5a8965f259e155168937f6dbc911159b95c60c6f9ad4ed03a1efe5903543af18"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+        "fmaId": "FMA10692",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "1e5af2f568b4693a490526da5a176edc1ccce3c18e216501d80777d1a4cdf932"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+        "fmaId": "FMA4077",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "64112e4a4e29149c819f929a547f57abdb989c598df5a965a88b0a52aee72449"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+        "fmaId": "FMA4772",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "42b0548077860c3c80d7bea3c2a14564dd673d454c49637260e421314c781948"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+        "fmaId": "FMA4786",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "09ad9dab002de8a67bf1665664bc7c401bdfa2049e1fd4804765775e2ebddb48"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+        "fmaId": "FMA4149",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "f3c310c39eba784f5f953861dcbb278ff8490ffc0a32bb0588738e7c7ca4338a"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+        "fmaId": "FMA10704",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "8f5f6450f75380be9158c85920f578a279a46146a86820b76bca71bccd747c5e"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "fmaId": "FMA68109",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "6b713bb6b22c3d71ff9483de41177dc5cb4750e5e8782d7ac574567d1700e9d7"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+        "fmaId": "FMA71537",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "a2bbb0dcb937fcbc8493161ad05738901cb6dab8ccb8ac58101a9f0a2a54abba"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+        "fmaId": "FMA76767",
+        "tab": "ultrasound",
+        "previousHash": "156b99a386331a139b1265e12a6d0bb665827ea0b0c69c8ef265da51a9ef4c82",
+        "currentHash": "1af5797700b038f66866e2cf990740de8855971720d37ae4fb9258a81316daca"
+      }
+    ]
+  },
+  "sourceRecordHash": "66d4c682e83a31b08ab9326fe6047b90d207e811e665a22cae5cf13af34d1446"
+}

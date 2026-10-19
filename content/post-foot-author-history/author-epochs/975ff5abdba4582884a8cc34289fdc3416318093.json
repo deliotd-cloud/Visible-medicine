@@ -1,0 +1,538 @@
+{
+  "author": "975ff5abdba4582884a8cc34289fdc3416318093",
+  "parent": "e9de4bdb92932f615d6582bd5e410dc5b0e002c4",
+  "tree": "b0da9a2e5605cdae74ae9a4e419ae6e4935a38d7",
+  "parentTree": "40969de8e7a5fcb695f36c96867d60e3e80a0e16",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 8,
+  "preserved": 9928,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+        "fmaId": "FMA3992",
+        "name": "Right thyrocervical trunk",
+        "sourceName": "right thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA3992",
+        "bounds": {
+          "min": [
+            -0.4277290105819702,
+            5.521999359130859,
+            0.4754229784011841
+          ],
+          "max": [
+            -0.40075698494911194,
+            5.5794997215271,
+            0.49482595920562744
+          ]
+        },
+        "center": [
+          -0.4142429977655411,
+          5.5507495403289795,
+          0.48512446880340576
+        ],
+        "anchor": [
+          -0.41858500242233276,
+          5.532700061798096,
+          0.48956596851348877
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2307",
+            "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right thyrocervical trunk on the model."
+      },
+      "currentHash": "c6cc8883f327b2eecd7620ff8cc6de3d9ff80a2b15b520ba29eebd724746cafc"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+        "fmaId": "FMA4084",
+        "name": "Left thyrocervical trunk",
+        "sourceName": "left thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4084",
+        "bounds": {
+          "min": [
+            0.4013550281524658,
+            5.521899223327637,
+            0.4747239649295807
+          ],
+          "max": [
+            0.4276890158653259,
+            5.579100131988525,
+            0.49424201250076294
+          ]
+        },
+        "center": [
+          0.4145220220088959,
+          5.550499677658081,
+          0.4844829887151718
+        ],
+        "anchor": [
+          0.4182009994983673,
+          5.533499717712402,
+          0.4902590215206146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2255",
+            "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left thyrocervical trunk on the model."
+      },
+      "currentHash": "e67656e0711ed0f5b3d5e44a4227053601f4a82f869e08b39929e09091ef9f1e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+        "fmaId": "FMA5039",
+        "name": "Right costocervical trunk",
+        "sourceName": "right costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA5039",
+        "bounds": {
+          "min": [
+            -0.5218989849090576,
+            5.472499847412109,
+            0.41986504197120667
+          ],
+          "max": [
+            -0.4543980062007904,
+            5.555600643157959,
+            0.49830496311187744
+          ]
+        },
+        "center": [
+          -0.488148495554924,
+          5.514050245285034,
+          0.45908500254154205
+        ],
+        "anchor": [
+          -0.4895249903202057,
+          5.522500038146973,
+          0.4635910093784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2276",
+            "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right costocervical trunk on the model."
+      },
+      "currentHash": "f73dac9a3f6540de1d9b032f67441f1d30a23a7e7b04b2c72eb28984b2709b3b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+        "fmaId": "FMA4086",
+        "name": "Left costocervical trunk",
+        "sourceName": "left costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4086",
+        "bounds": {
+          "min": [
+            0.4547460079193115,
+            5.472900390625,
+            0.4201899766921997
+          ],
+          "max": [
+            0.5215910077095032,
+            5.5548996925354,
+            0.4979889690876007
+          ]
+        },
+        "center": [
+          0.48816850781440735,
+          5.5139000415802,
+          0.4590894728899002
+        ],
+        "anchor": [
+          0.48764801025390625,
+          5.507900238037109,
+          0.451477974653244
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2224",
+            "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left costocervical trunk on the model."
+      },
+      "currentHash": "a6ea7b2afd24fda6beb3734561039ee46dd8a4e8e89cdc044fdc3ff5b0a2e257"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+        "fmaId": "FMA4057",
+        "name": "Right dorsal scapular artery",
+        "sourceName": "right dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4057",
+        "bounds": {
+          "min": [
+            -1.0666000843048096,
+            3.8316004276275635,
+            -0.5321046113967896
+          ],
+          "max": [
+            -0.5545200109481812,
+            5.613199234008789,
+            0.479032963514328
+          ]
+        },
+        "center": [
+          -0.8105600476264954,
+          4.722399830818176,
+          -0.026535823941230774
+        ],
+        "anchor": [
+          -0.5809879899024963,
+          4.696700572967529,
+          -0.4426394999027252
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2284",
+            "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right dorsal scapular artery on the model."
+      },
+      "currentHash": "3e472601bc0ee62069503d43628ebcc843111e3479fcbb86039d65b8b6f92d48"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+        "fmaId": "FMA10552",
+        "name": "Left dorsal scapular artery",
+        "sourceName": "left dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10552",
+        "bounds": {
+          "min": [
+            0.5547209978103638,
+            3.831899404525757,
+            -0.5322532057762146
+          ],
+          "max": [
+            1.0665899515151978,
+            5.613199234008789,
+            0.47892096638679504
+          ]
+        },
+        "center": [
+          0.8106554746627808,
+          4.722549319267273,
+          -0.026666119694709778
+        ],
+        "anchor": [
+          0.5759209990501404,
+          4.744699478149414,
+          -0.44102680683135986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2232",
+            "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left dorsal scapular artery on the model."
+      },
+      "currentHash": "b703b909eaeee8a9456c869d9c1f9796ca6814d64db5b65798867804e510dc1d"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+        "fmaId": "FMA10698",
+        "name": "Right suprascapular artery",
+        "sourceName": "right suprascapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10698",
+        "bounds": {
+          "min": [
+            -1.381119966506958,
+            4.914899826049805,
+            -0.13162700831890106
+          ],
+          "max": [
+            -0.4103670120239258,
+            5.548199653625488,
+            0.5230500102043152
+          ]
+        },
+        "center": [
+          -0.8957434892654419,
+          5.2315497398376465,
+          0.19571150094270706
+        ],
+        "anchor": [
+          -1.0132700204849243,
+          5.3201003074646,
+          0.17565597593784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2303",
+            "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right suprascapular artery on the model."
+      },
+      "currentHash": "784dab63e1ada828fbceeb643ce2fb31aaaf3a89a3bb1f705b84eb1f982e4504"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+        "fmaId": "FMA10681",
+        "name": "Left suprascapular artery",
+        "sourceName": "left suprascapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10681",
+        "bounds": {
+          "min": [
+            0.4103490114212036,
+            4.914899826049805,
+            -0.13112300634384155
+          ],
+          "max": [
+            1.3812099695205688,
+            5.548199653625488,
+            0.5229499936103821
+          ]
+        },
+        "center": [
+          0.8957794904708862,
+          5.2315497398376465,
+          0.19591349363327026
+        ],
+        "anchor": [
+          1.0131900310516357,
+          5.319499492645264,
+          0.17460602521896362
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2251",
+            "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left suprascapular artery on the model."
+      },
+      "currentHash": "b7f64ba1a536c69fab019432bce745195ee4db8a6a43453d3679a1f2b4552eea"
+    }
+  ]
+}

@@ -1,0 +1,1095 @@
+{
+  "name": "git-pin-ae0a56e5",
+  "helper": "craniofacialBoneQuizLesson",
+  "pinsHash": "5eddac5ea5dbc9c3c79eb5b9149f2a5008b46a537fc228716283b108521020cd",
+  "transitionHash": "00d7bc598e1711eb455c7cc693a9f306abcf846e5cbc0d79454383b5b2f3be35",
+  "pins": {
+    "baseline": "115f02e297f1f35827daf2837792857f36946df8",
+    "authorCommit": "ae0a56e5d074b921f259dc45c6c9167d6aac9125",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+          "fmaId": "FMA52749",
+          "name": "Hyoid bone",
+          "sourceName": "hyoid bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA52749",
+          "bounds": {
+            "min": [
+              -0.1952420026063919,
+              6.223700046539307,
+              0.4441870152950287
+            ],
+            "max": [
+              0.1828249990940094,
+              6.408599853515625,
+              0.7900000214576721
+            ]
+          },
+          "center": [
+            -0.006208501756191254,
+            6.316149950027466,
+            0.6170935183763504
+          ],
+          "anchor": [
+            -0.00045426300494000316,
+            6.312399864196777,
+            0.7346499562263489
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2772",
+              "sha256": "c8c6cfdd66285cdda16fa441829f723d3943823d0ffebf5e394ff8dc49a598b1"
+            },
+            {
+              "file": "FJ3201",
+              "sha256": "c52dd55001d86286d6469190d3673cc8b2b03fb3d9c29d45cec211192950c027"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find hyoid bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+          "fmaId": "FMA54738",
+          "name": "Left inferior nasal concha",
+          "sourceName": "left inferior nasal concha",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA54738",
+          "bounds": {
+            "min": [
+              0.04591209813952446,
+              6.826600551605225,
+              0.8395100235939026
+            ],
+            "max": [
+              0.15939900279045105,
+              6.9805006980896,
+              1.1947999000549316
+            ]
+          },
+          "center": [
+            0.10265555046498775,
+            6.903550624847412,
+            1.0171549618244171
+          ],
+          "anchor": [
+            0.1119450032711029,
+            6.909300327301025,
+            1.000749945640564
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3263",
+              "sha256": "d13c06f022eefdd565eb38908546a4af63ff4cd204b2a2136934746a46c0f047"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left inferior nasal concha on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+          "fmaId": "FMA53646",
+          "name": "Left lacrimal bone",
+          "sourceName": "left lacrimal bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53646",
+          "bounds": {
+            "min": [
+              0.07319439947605133,
+              6.978700160980225,
+              1.0076401233673096
+            ],
+            "max": [
+              0.17931100726127625,
+              7.268800258636475,
+              1.1473199129104614
+            ]
+          },
+          "center": [
+            0.1262527033686638,
+            7.12375020980835,
+            1.0774800181388855
+          ],
+          "anchor": [
+            0.13810299336910248,
+            7.131999492645264,
+            1.0749000310897827
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3265",
+              "sha256": "28320fa6801ecb66f9316b1da0db475d5e3e32468c368946f2af27bd9f5a9528"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left lacrimal bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+          "fmaId": "FMA53650",
+          "name": "Left maxilla",
+          "sourceName": "left maxilla",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53650",
+          "bounds": {
+            "min": [
+              -0.03067930042743683,
+              6.639899730682373,
+              0.7681400179862976
+            ],
+            "max": [
+              0.45795199275016785,
+              7.332900524139404,
+              1.328800082206726
+            ]
+          },
+          "center": [
+            0.2136363461613655,
+            6.986400127410889,
+            1.0484700500965118
+          ],
+          "anchor": [
+            0.20491400361061096,
+            6.958700180053711,
+            1.0374200344085693
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3269",
+              "sha256": "ba97a37d471d6db65bca375a6413fd09e69e102017fb8a104d07255212d1b576"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left maxilla on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+          "fmaId": "FMA53648",
+          "name": "Left nasal bone",
+          "sourceName": "left nasal bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53648",
+          "bounds": {
+            "min": [
+              -0.025224199518561363,
+              7.018499851226807,
+              1.1928999423980713
+            ],
+            "max": [
+              0.07199930399656296,
+              7.33489990234375,
+              1.394670009613037
+            ]
+          },
+          "center": [
+            0.023387552239000797,
+            7.176699876785278,
+            1.2937849760055542
+          ],
+          "anchor": [
+            0.04420590028166771,
+            7.165600776672363,
+            1.2689999341964722
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3272",
+              "sha256": "43a73088376ae4179e8edd2f5d296d5c573cd1078379a0e3e8eeb90920ba9dc5"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left nasal bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+          "fmaId": "FMA53656",
+          "name": "Left palatine bone",
+          "sourceName": "left palatine bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53656",
+          "bounds": {
+            "min": [
+              -0.015432399697601795,
+              6.701600551605225,
+              0.5332199931144714
+            ],
+            "max": [
+              0.27458399534225464,
+              7.134000301361084,
+              0.9996200799942017
+            ]
+          },
+          "center": [
+            0.12957579782232642,
+            6.917800426483154,
+            0.7664200365543365
+          ],
+          "anchor": [
+            0.13544699549674988,
+            6.918799877166748,
+            0.7749099731445312
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3273",
+              "sha256": "0524313ac30c3301754fc3ee37853e3d65bb5a2adeae4aee6ec87ac4b9f801d6"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left palatine bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+          "fmaId": "FMA52893",
+          "name": "Left zygomatic bone",
+          "sourceName": "left zygomatic bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA52893",
+          "bounds": {
+            "min": [
+              0.31893298029899597,
+              6.80620002746582,
+              0.7174299359321594
+            ],
+            "max": [
+              0.6324440240859985,
+              7.3673996925354,
+              1.1143200397491455
+            ]
+          },
+          "center": [
+            0.47568850219249725,
+            7.08679986000061,
+            0.9158749878406525
+          ],
+          "anchor": [
+            0.5002149939537048,
+            7.050500392913818,
+            0.9170100688934326
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3287",
+              "sha256": "eb4176b5641daa0f68da7190b1d3e3c26716cdb3b4337b2c8ecd39dfd47618a1"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left zygomatic bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+          "fmaId": "FMA52748",
+          "name": "Mandible",
+          "sourceName": "mandible",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA52748",
+          "bounds": {
+            "min": [
+              -0.5384590029716492,
+              6.216300010681152,
+              0.3985369801521301
+            ],
+            "max": [
+              0.5255410075187683,
+              7.060999870300293,
+              1.238319993019104
+            ]
+          },
+          "center": [
+            -0.00645899772644043,
+            6.638649940490723,
+            0.8184284865856171
+          ],
+          "anchor": [
+            -0.22634099423885345,
+            6.529200553894043,
+            0.8416999578475952
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3289",
+              "sha256": "c38102c34660e2b767a7b95a341380bf4a52c754c6235fcd322be5c7b8cb1745"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find mandible on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+          "fmaId": "FMA54737",
+          "name": "Right inferior nasal concha",
+          "sourceName": "right inferior nasal concha",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA54737",
+          "bounds": {
+            "min": [
+              -0.1653210073709488,
+              6.785200119018555,
+              0.7996099591255188
+            ],
+            "max": [
+              -0.0668817013502121,
+              6.984799861907959,
+              1.1632699966430664
+            ]
+          },
+          "center": [
+            -0.11610135436058044,
+            6.884999990463257,
+            0.9814399778842926
+          ],
+          "anchor": [
+            -0.12157899886369705,
+            6.88599967956543,
+            0.9628799557685852
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3369",
+              "sha256": "147f3e2f7a195d49568d27415df783168785c251f23c3b1cebb5719570e37f86"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right inferior nasal concha on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+          "fmaId": "FMA53645",
+          "name": "Right lacrimal bone",
+          "sourceName": "right lacrimal bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53645",
+          "bounds": {
+            "min": [
+              -0.18041901290416718,
+              7.018800258636475,
+              1.0094701051712036
+            ],
+            "max": [
+              -0.0748647004365921,
+              7.273499965667725,
+              1.1550999879837036
+            ]
+          },
+          "center": [
+            -0.12764185667037964,
+            7.1461501121521,
+            1.0822850465774536
+          ],
+          "anchor": [
+            -0.11367800086736679,
+            7.158900260925293,
+            1.0796300172805786
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3371",
+              "sha256": "f9f3b356cd8fb0f3adb0966c780f4a40cad5752bd52188f8029be202dc1b1028"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right lacrimal bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+          "fmaId": "FMA53649",
+          "name": "Right maxilla",
+          "sourceName": "right maxilla",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53649",
+          "bounds": {
+            "min": [
+              -0.47610700130462646,
+              6.639899730682373,
+              0.793739914894104
+            ],
+            "max": [
+              -0.0025105399545282125,
+              7.333499908447266,
+              1.3402900695800781
+            ]
+          },
+          "center": [
+            -0.23930877062957734,
+            6.986699819564819,
+            1.067014992237091
+          ],
+          "anchor": [
+            -0.22227899730205536,
+            6.961999416351318,
+            1.0361300706863403
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3375",
+              "sha256": "99fde288184e5d9ccb08ff5547fc1a693b2ef0d6a12a80e47b711f51bd3f7906"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right maxilla on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+          "fmaId": "FMA53647",
+          "name": "Right nasal bone",
+          "sourceName": "right nasal bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53647",
+          "bounds": {
+            "min": [
+              -0.0914871022105217,
+              7.011700630187988,
+              1.1958500146865845
+            ],
+            "max": [
+              -0.007414109539240599,
+              7.331899642944336,
+              1.408329963684082
+            ]
+          },
+          "center": [
+            -0.04945060587488115,
+            7.171800136566162,
+            1.3020899891853333
+          ],
+          "anchor": [
+            -0.03263159841299057,
+            7.18459939956665,
+            1.3242300748825073
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3378",
+              "sha256": "933e8c8de3b4eaa2a4d784862388cac53da48309a29fd3ae04e9ac10da543c5f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right nasal bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+          "fmaId": "FMA53655",
+          "name": "Right palatine bone",
+          "sourceName": "right palatine bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA53655",
+          "bounds": {
+            "min": [
+              -0.28810399770736694,
+              6.7044997215271,
+              0.5331300497055054
+            ],
+            "max": [
+              0.0014722100459039211,
+              7.133399486541748,
+              0.9990699887275696
+            ]
+          },
+          "center": [
+            -0.1433158938307315,
+            6.918949604034424,
+            0.7661000192165375
+          ],
+          "anchor": [
+            -0.14965900778770447,
+            6.92650032043457,
+            0.776960015296936
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3379",
+              "sha256": "8f5817a92b519d8e1abf2e987a3987e64206b3d9071df2a8db520f74318462f3"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right palatine bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+          "fmaId": "FMA52892",
+          "name": "Right zygomatic bone",
+          "sourceName": "right zygomatic bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA52892",
+          "bounds": {
+            "min": [
+              -0.645779013633728,
+              6.806400299072266,
+              0.717739999294281
+            ],
+            "max": [
+              -0.33234599232673645,
+              7.366400241851807,
+              1.114530086517334
+            ]
+          },
+          "center": [
+            -0.48906250298023224,
+            7.086400270462036,
+            0.9161350429058075
+          ],
+          "anchor": [
+            -0.5084459781646729,
+            7.049399375915527,
+            0.9226499795913696
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3392",
+              "sha256": "bda976acce1517ed5349e8a0ad8d71922c148b95bdde18381a5d808f690c3c0f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right zygomatic bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:bone:vomer",
+          "fmaId": "FMA9710",
+          "name": "Vomer",
+          "sourceName": "vomer",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-skeleton",
+          "nodeName": "FMA9710",
+          "bounds": {
+            "min": [
+              -0.06111219897866249,
+              6.745899677276611,
+              0.6074700355529785
+            ],
+            "max": [
+              0.04811039939522743,
+              7.181099891662598,
+              1.1580700874328613
+            ]
+          },
+          "center": [
+            -0.006500899791717529,
+            6.9634997844696045,
+            0.8827700614929199
+          ],
+          "anchor": [
+            -0.0005130179924890399,
+            6.955300331115723,
+            0.8784500360488892
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3395",
+              "sha256": "6eaf47a63ac9ca5f310bf43e136070a684a35c170b4d6e3dbdb8c03c300995e2"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find vomer on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "115f02e297f1f35827daf2837792857f36946df8",
+    "authorCommit": "ae0a56e5d074b921f259dc45c6c9167d6aac9125",
+    "sourcePinsHash": "5eddac5ea5dbc9c3c79eb5b9149f2a5008b46a537fc228716283b108521020cd",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+        "fmaId": "FMA52749",
+        "tab": "quiz",
+        "previousHash": "f96d578d29b44f927318943bce8949fa9f1ccc55bb50957a7bc8326e2c957f3d",
+        "currentHash": "57a8bbfe5bcc084554df6e5c4c98de1b4d547b1e76ecb012c817dea3ce09b7e1"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-inferior-nasal-concha",
+        "fmaId": "FMA54738",
+        "tab": "quiz",
+        "previousHash": "e22311276e4907c28e6a67884674d2ae0906345efc7e9cbd388b4f8149664ca2",
+        "currentHash": "baa6dfdb2804593f0e8778ce83845b352559510a01003fe140b4cf7249185d99"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-lacrimal-bone",
+        "fmaId": "FMA53646",
+        "tab": "quiz",
+        "previousHash": "badf77b65cefd44ac8c66c9b6cf03ea71f86c5f27fdee546cc9458079ece3819",
+        "currentHash": "4b78ca138d6bf8d20321953d35e28b08e63973aa7752bd6dbb657c197b1bb444"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-maxilla",
+        "fmaId": "FMA53650",
+        "tab": "quiz",
+        "previousHash": "5c0ab9debc8a59deb39500fb9f4e29a13e98fd8f7ab44c31631f680c1453ab5f",
+        "currentHash": "08d5eeefcbbe85d2c017f06217c6b0d09786db230e4e767ee824c56d7b8a3a7d"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-nasal-bone",
+        "fmaId": "FMA53648",
+        "tab": "quiz",
+        "previousHash": "140dee3bcdb6b1bb5d582dce7aec27c0349283759b818b6ab9d57f00b05fdcdd",
+        "currentHash": "582979fe3bc5044cf8854ab53ffed647fae3fbb15b2492c7b05d5526c0f54e48"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-palatine-bone",
+        "fmaId": "FMA53656",
+        "tab": "quiz",
+        "previousHash": "2080a74757c6816ca545510a67f1e9f3d4e87465726269a4e51f495212b27574",
+        "currentHash": "622147c66f05e791f80d8b9a7a4e95f4481cd50f5cc3317c66f77617fa0567ef"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:bone:left-zygomatic-bone",
+        "fmaId": "FMA52893",
+        "tab": "quiz",
+        "previousHash": "d0db319e4834aed503783843a5fad03150267c74935c7ca3fc57d4d894a7638c",
+        "currentHash": "909ca61621d683a32a332c0eadaa5361a9114870e1ea9ff4689dd61185fea967"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:bone:mandible",
+        "fmaId": "FMA52748",
+        "tab": "quiz",
+        "previousHash": "02a8b134a0b747d1d397cbcd92054d0b9123333f6253b68f4637c995c7d81dd7",
+        "currentHash": "f18d043ac49bc455b692e9931c15614b45c09cb4307ef62ceb41176f28fd1a75"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-inferior-nasal-concha",
+        "fmaId": "FMA54737",
+        "tab": "quiz",
+        "previousHash": "960649a47d318238bdbb1de53b85127b68c8cf9a2885741a5af2f842cfcf26f3",
+        "currentHash": "a552b42d77220f428fdd130300412afc3dc307e6ddc1afde2ea02fcc916e8cf9"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-lacrimal-bone",
+        "fmaId": "FMA53645",
+        "tab": "quiz",
+        "previousHash": "7a366e73f7478737bb72e76c7f2f81b322bf54dcb7aea4362fe79f92d422282a",
+        "currentHash": "1a2135d4ef15407ad7308c1ae167c4390f7eff86f7f1a5d138dc8f635899a1e5"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-maxilla",
+        "fmaId": "FMA53649",
+        "tab": "quiz",
+        "previousHash": "5308c65bfe2e82f5c31d883b8d9e0b6353abab6087ed8c303ebd84ee7c32993e",
+        "currentHash": "a59b8c80a8e5befb6d69e11277419cfbf465130b32b46722a281aab0c023a72c"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-nasal-bone",
+        "fmaId": "FMA53647",
+        "tab": "quiz",
+        "previousHash": "39ff5e6284f3a589e29d03d81eee7da54f55e4c7222009ad379192f04e3d8f25",
+        "currentHash": "f01e1e8606c9a743c791f96caf8daf96a82b682f51350b704c9181f1d83159e6"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-palatine-bone",
+        "fmaId": "FMA53655",
+        "tab": "quiz",
+        "previousHash": "900d47e09c2185f786abc560d23440766a8e9fa91cf7b08c8af96fdff219b135",
+        "currentHash": "2c13289bd78cd4f750e9f98a3222f7bd2273c258a3a829f93f3b0a45ac1b7211"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:bone:right-zygomatic-bone",
+        "fmaId": "FMA52892",
+        "tab": "quiz",
+        "previousHash": "461c5585e70502901a8b3a4ee1e54a1a188075993049e528eecbecb883ae2cbd",
+        "currentHash": "4130a6a020d96de0dea1531e9b1d13c95ea9df2285e634d4b14f4e83d3ba3e76"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:bone:vomer",
+        "fmaId": "FMA9710",
+        "tab": "quiz",
+        "previousHash": "29b9331a8f898a98ed07b559016e1b3f262aaf67331aca4b315815274c609379",
+        "currentHash": "eb19d7b430b1a9335504f62bbc155c6ac9282e33558c75a0566520327bdaf4e9"
+      }
+    ]
+  },
+  "sourceRecordHash": "fbea38d7df1c2f65ad18f238425071a74b43986b723d5bc6d76c6cbfbad41dae",
+  "originalPinPath": "content/craniofacial-bone-quiz-pins.json",
+  "originalPinHash": "3fba082c9180a367db2fa4738d98c85446a5f3bd3382aefe0b94e9271be11ed9",
+  "originalPinBlob": "198c76c4c9beca6b53139ff9a6401b61bab69376",
+  "originalTransitionPaths": []
+}

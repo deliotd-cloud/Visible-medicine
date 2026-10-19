@@ -1,0 +1,310 @@
+{
+  "name": "git-author-6ba0dd43",
+  "helper": "abdominalRadialEusLesson",
+  "pinsHash": "c0ec4fd8a99b2bc9163a23cb165c9f60763d0c0d9116ca4ab59b1a3e0283d211",
+  "transitionHash": "ba6bd08b842bc7a23c78a2fcb6bc50f2a6040ddab271e547bfdf82553462a344",
+  "pins": {
+    "baseline": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+    "authorCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+          "fmaId": "FMA15406",
+          "name": "Middle colic vein",
+          "sourceName": "middle colic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA15406",
+          "bounds": {
+            "min": [
+              -0.6630609631538391,
+              2.125,
+              0.6669600009918213
+            ],
+            "max": [
+              0.6094229817390442,
+              2.64739990234375,
+              1.2694700956344604
+            ]
+          },
+          "center": [
+            -0.02681899070739746,
+            2.386199951171875,
+            0.9682150483131409
+          ],
+          "anchor": [
+            -0.13017700612545013,
+            2.2277002334594727,
+            0.9595500230789185
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3543",
+              "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+          "fmaId": "FMA15407",
+          "name": "Right colic vein",
+          "sourceName": "right colic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA15407",
+          "bounds": {
+            "min": [
+              -0.7076519727706909,
+              1.8549102544784546,
+              0.6505100131034851
+            ],
+            "max": [
+              -0.07192699611186981,
+              2.390500545501709,
+              0.9406799077987671
+            ]
+          },
+          "center": [
+            -0.38978948444128036,
+            2.122705399990082,
+            0.7955949604511261
+          ],
+          "anchor": [
+            -0.5187649726867676,
+            2.025399684906006,
+            0.7954699993133545
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3591",
+              "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+          "fmaId": "FMA15390",
+          "name": "Left gastroepiploic vein",
+          "sourceName": "left gastroepiploic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "portal-veins",
+          "nodeName": "FMA15390",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3502",
+              "sha256": "8fbff4b304815200c09017d46d9537b0cd3f699ed13d79c0ac35bd122f24decb"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.6009610295295715,
+              2.4670000076293945,
+              0.5152599811553955
+            ],
+            "max": [
+              0.9455670118331909,
+              2.840100049972534,
+              1.218369960784912
+            ]
+          },
+          "center": [
+            0.7732640206813812,
+            2.6535500288009644,
+            0.8668149709701538
+          ],
+          "anchor": [
+            0.9265869855880737,
+            2.7102999687194824,
+            0.9137600064277649
+          ],
+          "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+          "fmaId": "FMA15397",
+          "name": "Right gastroepiploic vein",
+          "sourceName": "right gastroepiploic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "portal-veins",
+          "nodeName": "FMA15397",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3597",
+              "sha256": "c3d9e308cc410cacf95ca9336bc80ba221af8ec6a555b3111881289d326e8523"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.17116700112819672,
+              2.2836999893188477,
+              0.8794500231742859
+            ],
+            "max": [
+              0.6065019965171814,
+              2.5178000926971436,
+              1.3030799627304077
+            ]
+          },
+          "center": [
+            0.21766749769449234,
+            2.4007500410079956,
+            1.0912649929523468
+          ],
+          "anchor": [
+            0.16690999269485474,
+            2.419300079345703,
+            1.2492200136184692
+          ],
+          "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "c5a09df8939dfaeaf76119ba5507c552721c3a30",
+    "authorCommit": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+    "sourcePinsHash": "c0ec4fd8a99b2bc9163a23cb165c9f60763d0c0d9116ca4ab59b1a3e0283d211",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "fmaId": "FMA15406",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "7654c843f2bcf8fb81eb435bd679883c27b0477fe85a9ed45a8514eb9652b704"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+        "fmaId": "FMA15407",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "3c894571ecdf38062aa0600dac41d70458b41ebccff2c419f1997ff77df2bb39"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+        "fmaId": "FMA15390",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "a713fc45a0f1e1ad24940d5ebbb443a8dea5aa2c57e497301fb136037fc143f7"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+        "fmaId": "FMA15397",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "d899da62faa3e6ed88ed14bd85ac9531d4dfbe378e1052cbe78089e822520e98"
+      }
+    ]
+  },
+  "sourceRecordHash": "ac94e25c0c0723cdf13dbc4280bd052677d97ca5f8d92ee7f0df570287efc24d"
+}

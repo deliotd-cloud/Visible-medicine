@@ -1,0 +1,168 @@
+{
+  "name": "git-author-b3a9ff28",
+  "helper": "pectoralBranchUltrasoundLesson",
+  "pinsHash": "b736c327a65ae4592b1d1d4a64acab88e61f455801b74c0e0f21113c473fb9ac",
+  "transitionHash": "3d15f3ec546da96a949c64615bdb189b48d6202c28b9d42c760a3f53b00f7969",
+  "pins": {
+    "baseline": "297707431e0f85a76a9d4b40d13a53669f65c705",
+    "authorCommit": "b3a9ff28f407437a85b9c56278bd31944ba4033e",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23063",
+          "name": "Pectoral branch of right thoraco-acromial artery",
+          "sourceName": "pectoral branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23063",
+          "bounds": {
+            "min": [
+              -1.2689299583435059,
+              4.00629997253418,
+              0.48791801929473877
+            ],
+            "max": [
+              -0.9245250225067139,
+              5.224100112915039,
+              0.9948499798774719
+            ]
+          },
+          "center": [
+            -1.0967274904251099,
+            4.615200042724609,
+            0.7413839995861053
+          ],
+          "anchor": [
+            -1.1094200611114502,
+            4.625999927520752,
+            0.7812199592590332
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2361",
+              "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23064",
+          "name": "Pectoral branch of left thoraco-acromial artery",
+          "sourceName": "pectoral branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23064",
+          "bounds": {
+            "min": [
+              0.9245760440826416,
+              4.00629997253418,
+              0.4878929853439331
+            ],
+            "max": [
+              1.268880009651184,
+              5.224100112915039,
+              0.9948499798774719
+            ]
+          },
+          "center": [
+            1.0967280268669128,
+            4.615200042724609,
+            0.7413714826107025
+          ],
+          "anchor": [
+            1.1071399450302124,
+            4.64069938659668,
+            0.7724999785423279
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2330",
+              "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "297707431e0f85a76a9d4b40d13a53669f65c705",
+    "authorCommit": "b3a9ff28f407437a85b9c56278bd31944ba4033e",
+    "sourcePinsHash": "b736c327a65ae4592b1d1d4a64acab88e61f455801b74c0e0f21113c473fb9ac",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23063",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "6489f1ce03ca4f19a7614a7bd93ba23a9f6f53b2c3105e11e32af9f30df6cf73"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23064",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "40fb208a3b2152341cf6b7be09d296b6e9d1ffecaf8f5d6edba2981381382e22"
+      }
+    ]
+  },
+  "sourceRecordHash": "378ab6b1d4b27916316e8b0f5effab64c99b6d0871e071cdc824381a87430d8c"
+}

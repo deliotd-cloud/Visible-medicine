@@ -1,0 +1,1218 @@
+{
+  "name": "git-author-c3593e66",
+  "helper": "abdominalDetailXrayLesson",
+  "pinsHash": "1b83bb0893925339dd9c9d3ccbf0002ebb28da37100b57908d9ebd798f0e703f",
+  "transitionHash": "3b9f03ad07f1596aee80f42d1b0a3958c279eb58b69d569f4e7e580068c99f27",
+  "pins": {
+    "baseline": "dc173440a953cf699874950fb593e1d4f6d46fa8",
+    "authorCommit": "c3593e6664e8572d882bd19d4525dea0f3d00d17",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+          "fmaId": "FMA11336",
+          "name": "Linea alba",
+          "sourceName": "linea alba",
+          "system": "connective",
+          "category": "fascia",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-connective-axial-detail",
+          "nodeName": "FMA11336",
+          "bounds": {
+            "min": [
+              -0.09308779984712601,
+              -0.11929992586374283,
+              0.622409999370575
+            ],
+            "max": [
+              0.08187010139226913,
+              3.778299570083618,
+              1.6214699745178223
+            ]
+          },
+          "center": [
+            -0.005608849227428436,
+            1.8294998221099377,
+            1.1219399869441986
+          ],
+          "anchor": [
+            -0.02190920151770115,
+            1.7455902099609375,
+            1.3322199583053589
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1448",
+              "sha256": "0d96d74c45a498cc1bf1a5d6ea9b6028d050b234537455b42e6cfd407a669201"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+          "fmaId": "FMA14643",
+          "name": "Mesentery of small intestine",
+          "sourceName": "mesentery of small intestine",
+          "system": "connective",
+          "category": "membrane",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-connective-mesenteric",
+          "nodeName": "FMA14643",
+          "bounds": {
+            "min": [
+              -0.7990720272064209,
+              0.1984698474407196,
+              0.7022599577903748
+            ],
+            "max": [
+              0.9267299771308899,
+              2.303499698638916,
+              1.188999891281128
+            ]
+          },
+          "center": [
+            0.0638289749622345,
+            1.2509847730398178,
+            0.9456299245357513
+          ],
+          "anchor": [
+            0.050999999046325684,
+            1.2314099073410034,
+            0.9430000185966492
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3396",
+              "sha256": "6481d1f71c8ae51af02df08bb64a70f9d821e843e64a42d10a3bdb5c13dab7d7"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+          "fmaId": "FMA14647",
+          "name": "Transverse mesocolon",
+          "sourceName": "transverse mesocolon",
+          "system": "connective",
+          "category": "membrane",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-connective-mesenteric",
+          "nodeName": "FMA14647",
+          "bounds": {
+            "min": [
+              -0.8190000057220459,
+              0.608720064163208,
+              0.005898017901927233
+            ],
+            "max": [
+              0.9114610552787781,
+              2.636199951171875,
+              1.3182100057601929
+            ]
+          },
+          "center": [
+            0.04623052477836609,
+            1.6224600076675415,
+            0.66205401183106
+          ],
+          "anchor": [
+            -0.042700499296188354,
+            1.7324901819229126,
+            0.9104300141334534
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3398",
+              "sha256": "580c65869c905aa33afa3a19e2b3f685e90b24d9dfa3e67bde775304c1c6a810"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+          "fmaId": "FMA16549",
+          "name": "Mesoappendix",
+          "sourceName": "mesoappendix",
+          "system": "connective",
+          "category": "membrane",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-connective-mesenteric",
+          "nodeName": "FMA16549",
+          "bounds": {
+            "min": [
+              -0.8310610055923462,
+              0.7020501494407654,
+              0.36079102754592896
+            ],
+            "max": [
+              -0.1980699896812439,
+              1.1559100151062012,
+              0.7600700259208679
+            ]
+          },
+          "center": [
+            -0.514565497636795,
+            0.9289800822734833,
+            0.5604305267333984
+          ],
+          "anchor": [
+            -0.5647119879722595,
+            0.924910306930542,
+            0.6227800250053406
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3397",
+              "sha256": "bc5583810528a9ef675c3dddb7fa75911aa20531c7eb548e91e34c7c2cf5dfd7"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected mesenteric surface only, not a complete peritoneum, mesenteric root, fascial plane or separately segmented peritoneal leaves. Attachments, folds and embedded structures require specialist review.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+          "fmaId": "FMA14818",
+          "name": "Appendicular artery",
+          "sourceName": "appendicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA14818",
+          "bounds": {
+            "min": [
+              -0.5570880174636841,
+              0.7271197438240051,
+              0.38387396931648254
+            ],
+            "max": [
+              -0.2348489910364151,
+              1.398610234260559,
+              0.7455199956893921
+            ]
+          },
+          "center": [
+            -0.3959685042500496,
+            1.062864989042282,
+            0.5646969825029373
+          ],
+          "anchor": [
+            -0.5143510103225708,
+            1.0382500886917114,
+            0.6276699900627136
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3410",
+              "sha256": "f13009791207502aa815d5c57825048f701f7b82ed563ccd2d0369c7d1c78bdf"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+          "fmaId": "FMA14820",
+          "name": "Ascending branch of inferior branch of ileocolic artery",
+          "sourceName": "ascending branch of inferior branch of ileocolic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA14820",
+          "bounds": {
+            "min": [
+              -0.7209670543670654,
+              1.5661797523498535,
+              0.6525900363922119
+            ],
+            "max": [
+              -0.2584350109100342,
+              1.9032201766967773,
+              0.839259922504425
+            ]
+          },
+          "center": [
+            -0.4897010326385498,
+            1.7346999645233154,
+            0.7459249794483185
+          ],
+          "anchor": [
+            -0.4870989918708801,
+            1.5928802490234375,
+            0.758679986000061
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3414",
+              "sha256": "af7a27732bb6fc2b63ff7024ce36384f25ffae44952c7899a773aa1f7a2df84f"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+          "fmaId": "FMA15405",
+          "name": "Ileal vein",
+          "sourceName": "ileal vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA15405",
+          "bounds": {
+            "min": [
+              -0.5510820150375366,
+              1.3692998886108398,
+              0.6846199631690979
+            ],
+            "max": [
+              -0.3095349967479706,
+              1.5760198831558228,
+              0.7941000461578369
+            ]
+          },
+          "center": [
+            -0.4303085058927536,
+            1.4726598858833313,
+            0.7393600046634674
+          ],
+          "anchor": [
+            -0.43779098987579346,
+            1.4658502340316772,
+            0.7415000200271606
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3438",
+              "sha256": "39a8939f3720a45116fee6ce0210d1279cae4548532a7f749e2485cbd907772c"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+          "fmaId": "FMA15406",
+          "name": "Middle colic vein",
+          "sourceName": "middle colic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA15406",
+          "bounds": {
+            "min": [
+              -0.6630609631538391,
+              2.125,
+              0.6669600009918213
+            ],
+            "max": [
+              0.6094229817390442,
+              2.64739990234375,
+              1.2694700956344604
+            ]
+          },
+          "center": [
+            -0.02681899070739746,
+            2.386199951171875,
+            0.9682150483131409
+          ],
+          "anchor": [
+            -0.13017700612545013,
+            2.2277002334594727,
+            0.9595500230789185
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3543",
+              "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+          "fmaId": "FMA15407",
+          "name": "Right colic vein",
+          "sourceName": "right colic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-mesenteric",
+          "nodeName": "FMA15407",
+          "bounds": {
+            "min": [
+              -0.7076519727706909,
+              1.8549102544784546,
+              0.6505100131034851
+            ],
+            "max": [
+              -0.07192699611186981,
+              2.390500545501709,
+              0.9406799077987671
+            ]
+          },
+          "center": [
+            -0.38978948444128036,
+            2.122705399990082,
+            0.7955949604511261
+          ],
+          "anchor": [
+            -0.5187649726867676,
+            2.025399684906006,
+            0.7954699993133545
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3591",
+              "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+          "fmaId": "FMA15398",
+          "name": "Pancreaticoduodenal vein",
+          "sourceName": "pancreaticoduodenal vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA15398",
+          "bounds": {
+            "min": [
+              -0.4806689918041229,
+              2.05049991607666,
+              0.6042199730873108
+            ],
+            "max": [
+              -0.09474220126867294,
+              2.880000114440918,
+              0.9575300812721252
+            ]
+          },
+          "center": [
+            -0.28770559653639793,
+            2.465250015258789,
+            0.780875027179718
+          ],
+          "anchor": [
+            -0.32889801263809204,
+            2.550300359725952,
+            0.7823800444602966
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3545",
+              "sha256": "87919e391f53ec7e464f7379c422bc6e6bdcf022db8ea7007176e38a00cc1a3c"
+            },
+            {
+              "file": "FJ3646",
+              "sha256": "2c059c7ad26689513bbc41e13b913ed07c5bbd0696e59f85afb2a577b88f240f"
+            },
+            {
+              "file": "FJ3655",
+              "sha256": "c1d02f38a45db4b4504fcc453837fab56fb18a81178a62f5b7da9a4f6758c72f"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+          "fmaId": "FMA15791",
+          "name": "Tributary of right hepatic vein",
+          "sourceName": "tributary of right hepatic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "hepatic-veins",
+          "nodeName": "FMA15791",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3118",
+              "sha256": "ab6f8bd812766331859f8adaa01cef1c202ebd974967ea411b17c54e9da84a5d"
+            },
+            {
+              "file": "FJ3119",
+              "sha256": "ae4707592889653dccb669e53a1356d67696c361cce28fc19c8910f8717fdb28"
+            },
+            {
+              "file": "FJ3120",
+              "sha256": "c5d056d8281c1f0447214e3a310e98da532760293b5ed1e90e934a77bfec0703"
+            },
+            {
+              "file": "FJ3121",
+              "sha256": "51942b37d2a29a6e32c3401710d6605e5958c1462922c3968cdca79b0a7fac1c"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.9984260201454163,
+              2.749500036239624,
+              0.188633993268013
+            ],
+            "max": [
+              -0.16844500601291656,
+              3.6670000553131104,
+              0.9190700054168701
+            ]
+          },
+          "center": [
+            -0.5834355130791664,
+            3.208250045776367,
+            0.5538519993424416
+          ],
+          "anchor": [
+            -0.6109169721603394,
+            3.223400115966797,
+            0.5686500072479248
+          ],
+          "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+          "fmaId": "FMA15794",
+          "name": "Tributary of left hepatic vein",
+          "sourceName": "tributary of left hepatic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "hepatic-veins",
+          "nodeName": "FMA15794",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3097",
+              "sha256": "3173b1bb808b7c5cc3f3de44772b34c2c360ae00c5147d66a12d675d5bbe570b"
+            },
+            {
+              "file": "FJ3098",
+              "sha256": "5331851628f47c02b309eab63ab7361658b84950abb0e2d586c56ef5fc561356"
+            },
+            {
+              "file": "FJ3099",
+              "sha256": "2bd6db4021b2fa8ee4f81e60cfb3dae4a070d921707497bf9cab6b84f98dc495"
+            },
+            {
+              "file": "FJ3100",
+              "sha256": "143c288d1c524c76d1f8198182f11dc4884d78eacd8013a4c0ae5ce209116d5a"
+            },
+            {
+              "file": "FJ3101",
+              "sha256": "c7e03313693b3e232ee3e82093a20daa5ec3dea060926861b6ab2f5467be9636"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.22065800428390503,
+              3.202699899673462,
+              0.6910600066184998
+            ],
+            "max": [
+              0.3859249949455261,
+              3.7074999809265137,
+              1.2792799472808838
+            ]
+          },
+          "center": [
+            0.08263349533081055,
+            3.455099940299988,
+            0.9851699769496918
+          ],
+          "anchor": [
+            0.09680440276861191,
+            3.42330002784729,
+            0.9626200199127197
+          ],
+          "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+          "fmaId": "FMA20689",
+          "name": "Left inferior epigastric artery",
+          "sourceName": "left inferior epigastric artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "abdomen",
+          "regions": [
+            "abdomen",
+            "pelvis"
+          ],
+          "bundle": "inferior-epigastric-vessels",
+          "nodeName": "FMA20689",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3511",
+              "sha256": "7fae27fdfcd79f3989488c0bc5f8d0766bbb5e6140269bb8d9fe9effa903a6e0"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.2179819941520691,
+              0.3065600097179413,
+              0.5916200280189514
+            ],
+            "max": [
+              0.4859220087528229,
+              2.3043999671936035,
+              1.353790044784546
+            ]
+          },
+          "center": [
+            0.351952001452446,
+            1.3054799884557724,
+            0.9727050364017487
+          ],
+          "anchor": [
+            0.35682499408721924,
+            1.284209966659546,
+            1.1275500059127808
+          ],
+          "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left inferior epigastric artery · Review pending",
+            "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+            "bullets": [],
+            "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+          "fmaId": "FMA21164",
+          "name": "Left inferior epigastric vein",
+          "sourceName": "left inferior epigastric vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "abdomen",
+          "regions": [
+            "abdomen",
+            "pelvis"
+          ],
+          "bundle": "inferior-epigastric-vessels",
+          "nodeName": "FMA21164",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3512",
+              "sha256": "e8453328cabd80812db377189df8c040b7a1d0870870293512ede8fe0174fbce"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.18112599849700928,
+              0.31365999579429626,
+              0.6147000193595886
+            ],
+            "max": [
+              0.4179069995880127,
+              2.310699939727783,
+              1.3692400455474854
+            ]
+          },
+          "center": [
+            0.299516499042511,
+            1.3121799677610397,
+            0.991970032453537
+          ],
+          "anchor": [
+            0.3196839988231659,
+            1.2683099508285522,
+            1.14028000831604
+          ],
+          "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left inferior epigastric vein · Review pending",
+            "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+            "bullets": [],
+            "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+          "fmaId": "FMA20688",
+          "name": "Right inferior epigastric artery",
+          "sourceName": "right inferior epigastric artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen",
+            "pelvis"
+          ],
+          "bundle": "inferior-epigastric-vessels",
+          "nodeName": "FMA20688",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3604",
+              "sha256": "aa8fa354690bf56ac7bf1de05fdcb6acfd1e0c13fdb4194f38cc5eb11e4a941d"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.565276026725769,
+              0.3065600097179413,
+              0.5916399955749512
+            ],
+            "max": [
+              -0.2179650068283081,
+              2.304500102996826,
+              1.3538600206375122
+            ]
+          },
+          "center": [
+            -0.3916205167770386,
+            1.3055300563573837,
+            0.9727500081062317
+          ],
+          "anchor": [
+            -0.3631100058555603,
+            1.276900053024292,
+            1.1284099817276
+          ],
+          "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right inferior epigastric artery · Review pending",
+            "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+            "bullets": [],
+            "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+          "fmaId": "FMA21163",
+          "name": "Right inferior epigastric vein",
+          "sourceName": "right inferior epigastric vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen",
+            "pelvis"
+          ],
+          "bundle": "inferior-epigastric-vessels",
+          "nodeName": "FMA21163",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3605",
+              "sha256": "50c661b10157afca410a8b1cba93263449ed1d4e78fa0ef85f1c415ea1541a49"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.42350998520851135,
+              0.2670699954032898,
+              0.585070013999939
+            ],
+            "max": [
+              -0.18111300468444824,
+              2.310699939727783,
+              1.3692699670791626
+            ]
+          },
+          "center": [
+            -0.3023114949464798,
+            1.2888849675655365,
+            0.9771699905395508
+          ],
+          "anchor": [
+            -0.3193050026893616,
+            1.273710012435913,
+            1.141029953956604
+          ],
+          "coverageNote": "Complete original source definition, not a complete abdominal-wall vascular tree. Rectus sheath, inguinal rings, fascia and nerves are not supplied by this addition. Source surfaces do not establish joined lumens, perforator anatomy, blood flow or a safe procedural route. All original triangles and source positions retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right inferior epigastric vein · Review pending",
+            "body": "Detailed pathology and imaging teaching awaits authoring and review.",
+            "bullets": [],
+            "note": "No CT, MRI, X-ray, ultrasound, acquired angiogram or patient registration is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "dc173440a953cf699874950fb593e1d4f6d46fa8",
+    "authorCommit": "c3593e6664e8572d882bd19d4525dea0f3d00d17",
+    "sourcePinsHash": "1b83bb0893925339dd9c9d3ccbf0002ebb28da37100b57908d9ebd798f0e703f",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:midline:fascia:linea-alba",
+        "fmaId": "FMA11336",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "9ae129cba6822e4e2e11343c73c49c286d52c5880d37bfac658579e1f2c8af56"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine",
+        "fmaId": "FMA14643",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "9080780df17f2126a310a8be3f6d330d3a7671b6ba4bb6df82e37e1b230efb84"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:midline:membrane:transverse-mesocolon",
+        "fmaId": "FMA14647",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "cd2842f5d2154c84637fc4c0fb24e13f1df46c345b979ae8a4bcbec5258b887d"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:membrane:mesoappendix",
+        "fmaId": "FMA16549",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "5a0e5f52b253ea6123d395479d98b97e95182c13fe6c7ca103fcb5f29ace2570"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:appendicular-artery",
+        "fmaId": "FMA14818",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "76fa4a567529f40fdf6c424205031c72d614dfb6f7514697839e399bbe2cc38e"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ascending-branch-of-inferior-branch-of-ileocolic-artery",
+        "fmaId": "FMA14820",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "abd074e8fa170e915943415fef0c76ab985accc14e7e8ed38273203a34182202"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+        "fmaId": "FMA15405",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "5ccecfd3a66a5efe1e46089bc4d332f3b10eea1aeb87b8d8982dbe7180c0cf12"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+        "fmaId": "FMA15406",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "34e51c8083fedf657e7f97611688c9353567295d59f4a4de1ceb45b2a804134c"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+        "fmaId": "FMA15407",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "9d6d05f9a2cd726a72e5b6745af86378685d193e8fbe08c20b6351ecb79ffd21"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+        "fmaId": "FMA15398",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "36d37f962f88628256d114040481e345a61242ae036c79b963e2136ea0efcec1"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+        "fmaId": "FMA15791",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "89caa1ed82ecce13658bd6631c3be051756bb27f6bad20bee8a9cd211ffa491b"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+        "fmaId": "FMA15794",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "cd13dd4adb80fb5eac62cdc2281b16abf8abb8686db965df4b90f34fba4abd70"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-artery",
+        "fmaId": "FMA20689",
+        "tab": "xray",
+        "previousHash": "3ba32671418a8d6af5f9dc39835cf99eecc376ce9a1ce20d0d1a5804f05553b2",
+        "currentHash": "95ad388bd6da3b53a1feebeaf63d80f8afa6cd23ebef926b77353a3664fc1f91"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-inferior-epigastric-vein",
+        "fmaId": "FMA21164",
+        "tab": "xray",
+        "previousHash": "8bcd42c557ef8d33967b57ab88045c3c7e258cc44d632b6a4b21942aff4d00d1",
+        "currentHash": "0f8e985d16cb256de56393dfc7b9947faa79e7649f6572951f6897c196ad89e5"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-artery",
+        "fmaId": "FMA20688",
+        "tab": "xray",
+        "previousHash": "dbb35c6700cfc2010c2113df05fbc936727c536432c5cb67dbcddfc00a7653ac",
+        "currentHash": "c6981a854dd1f368999262c3e77392dffd76146d1fa14b77cddaef934adfbed9"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-inferior-epigastric-vein",
+        "fmaId": "FMA21163",
+        "tab": "xray",
+        "previousHash": "982c843445281f78bcc1b4bf709c41cdf0ef63e979c9b3c2601037c64eb85559",
+        "currentHash": "976c4d1def5b51a00ba2de5ae57cb63eba8696212ee023f39a394c58ba844451"
+      }
+    ]
+  },
+  "sourceRecordHash": "9db771f3ed6c1a7a6edefbe900b340396464748851a708275bed69769df90147"
+}

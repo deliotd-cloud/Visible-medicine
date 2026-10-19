@@ -1,0 +1,890 @@
+{
+  "author": "5363ae64e06cb5629a36469c7d15fddbcfff32b4",
+  "parent": "f12348a11c0e8e0b642ec43c9285107259ca7ea5",
+  "tree": "110f5d3fb2ffc6bc5a64918ff58f8c6ed53fae9c",
+  "parentTree": "5f9a9eda80fb5509fdb892675ab832787bd41aea",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 13,
+  "preserved": 9923,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "fmaId": "FMA3789",
+        "name": "Abdominal aorta",
+        "sourceName": "abdominal aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA3789",
+        "bounds": {
+          "min": [
+            -0.009028740227222443,
+            1.4869097471237183,
+            0.32476097345352173
+          ],
+          "max": [
+            0.200547993183136,
+            3.359100341796875,
+            0.8277599811553955
+          ]
+        },
+        "center": [
+          0.09575962647795677,
+          2.4230050444602966,
+          0.5762604773044586
+        ],
+        "anchor": [
+          0.0937374010682106,
+          2.370999813079834,
+          0.619629979133606
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1932",
+            "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find abdominal aorta on the model."
+      },
+      "currentHash": "6f7ed1624c6c96ba6b547c5663f4cf21e941dba939348279eb3d27e5bf2fb8b3"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "fmaId": "FMA10951",
+        "name": "Inferior vena cava",
+        "sourceName": "inferior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA10951",
+        "bounds": {
+          "min": [
+            -0.2682560086250305,
+            1.5089203119277954,
+            0.5355200171470642
+          ],
+          "max": [
+            -0.02058500051498413,
+            3.9053003787994385,
+            0.787899911403656
+          ]
+        },
+        "center": [
+          -0.14442050457000732,
+          2.707110345363617,
+          0.6617099642753601
+        ],
+        "anchor": [
+          -0.17249399423599243,
+          2.727900505065918,
+          0.7307199835777283
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3441",
+            "sha256": "7b03ef0464b622d0a839c3c55aedcec2a713b4399112e7ce6efa1ac51861b606"
+          },
+          {
+            "file": "FJ3659",
+            "sha256": "2241af6de027922eb74cb58d882433a5d0ffb7ecce41a1925f05e13dd78d666c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find inferior vena cava on the model."
+      },
+      "currentHash": "979482f747046c9e85fedec3207a46e3292c449307f5a28da63364ae48dc4d72"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+        "fmaId": "FMA50737",
+        "name": "Celiac artery",
+        "sourceName": "celiac artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "celiac-display-corrected",
+        "nodeName": "FMA50737",
+        "bounds": {
+          "min": [
+            0.011040699668228626,
+            2.7765002250671387,
+            0.5759400129318237
+          ],
+          "max": [
+            0.12240300327539444,
+            2.898399591445923,
+            0.8078700304031372
+          ]
+        },
+        "center": [
+          0.06672185147181153,
+          2.8374499082565308,
+          0.6919050216674805
+        ],
+        "anchor": [
+          0.0719733014702797,
+          2.86579966545105,
+          0.7196300029754639
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1846",
+            "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+          },
+          {
+            "file": "FJ2013",
+            "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find celiac artery on the model."
+      },
+      "currentHash": "f9cb9cffe37f4e9964aef522041a288fc8061c32a83793d85d1349d21eb9ee43"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "fmaId": "FMA14749",
+        "name": "Superior mesenteric artery",
+        "sourceName": "superior mesenteric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14749",
+        "bounds": {
+          "min": [
+            -0.6094620227813721,
+            1.094559907913208,
+            0.6211900115013123
+          ],
+          "max": [
+            0.08399049937725067,
+            2.546600341796875,
+            1.0136399269104004
+          ]
+        },
+        "center": [
+          -0.2627357617020607,
+          1.8205801248550415,
+          0.8174149692058563
+        ],
+        "anchor": [
+          -0.09160909801721573,
+          1.8007702827453613,
+          0.9157600402832031
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1928",
+            "sha256": "14ce4846d476c185a279247162ee118ac9c056593023f66d24f4a4d470e56a7c"
+          },
+          {
+            "file": "FJ2011",
+            "sha256": "db6caec612b1564155c869d452904b1e9e834f2f556a9a0b3e2564ce9757e65a"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find superior mesenteric artery on the model."
+      },
+      "currentHash": "23a73e78bf8733902d89813cd92b36962c692b5caed0eb0462199c6e2ef24b45"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "fmaId": "FMA14750",
+        "name": "Inferior mesenteric artery",
+        "sourceName": "inferior mesenteric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14750",
+        "bounds": {
+          "min": [
+            0.0419296994805336,
+            0.9904998540878296,
+            0.6327300071716309
+          ],
+          "max": [
+            0.18455900251865387,
+            1.8623199462890625,
+            0.8671899437904358
+          ]
+        },
+        "center": [
+          0.11324435099959373,
+          1.426409900188446,
+          0.7499599754810333
+        ],
+        "anchor": [
+          0.14257699251174927,
+          1.4129101037979126,
+          0.7858900427818298
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3442",
+            "sha256": "865cc814e7412113703bfe503424a92e745e6cbf6e788465f06c6be8f1079c6c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find inferior mesenteric artery on the model."
+      },
+      "currentHash": "a5dc27364d1f113e8d5e96f260827afb7a7c6aa9ec81e7581fa2a54e7f2cb480"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+        "fmaId": "FMA14752",
+        "name": "Right renal artery",
+        "sourceName": "right renal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14752",
+        "bounds": {
+          "min": [
+            -0.4234410226345062,
+            2.251800537109375,
+            0.4725840091705322
+          ],
+          "max": [
+            0.1271129995584488,
+            2.4871997833251953,
+            0.695609986782074
+          ]
+        },
+        "center": [
+          -0.14816401153802872,
+          2.369500160217285,
+          0.5840969979763031
+        ],
+        "anchor": [
+          -0.13355699181556702,
+          2.382800340652466,
+          0.5872600078582764
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2038",
+            "sha256": "2bf3da140369524e15335694773718b4e83b254234bc3e8376a4708565276045"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right renal artery on the model."
+      },
+      "currentHash": "fd4e75b1564efd8ffb91cad33c98823531fc1389db0f68c5fd2d7520684a4ba4"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "fmaId": "FMA14753",
+        "name": "Left renal artery",
+        "sourceName": "left renal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14753",
+        "bounds": {
+          "min": [
+            0.03650899976491928,
+            2.3655004501342773,
+            0.46762001514434814
+          ],
+          "max": [
+            0.39461201429367065,
+            2.497499942779541,
+            0.7030699849128723
+          ]
+        },
+        "center": [
+          0.21556050702929497,
+          2.431500196456909,
+          0.5853450000286102
+        ],
+        "anchor": [
+          0.2146729975938797,
+          2.449599504470825,
+          0.5566700100898743
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2046",
+            "sha256": "b1a9ce8a37cd9c89fbf4c90a68a554184bf2919dbad391c552c0f4c8dd788845"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left renal artery on the model."
+      },
+      "currentHash": "87fa56a1dc378ca46f036f825d86acb61e75eb1f391239ae7ff8868a368895c1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+        "fmaId": "FMA14338",
+        "name": "Right hepatic vein",
+        "sourceName": "right hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14338",
+        "bounds": {
+          "min": [
+            -1.0827900171279907,
+            2.959399461746216,
+            0.26052695512771606
+          ],
+          "max": [
+            -0.20694099366664886,
+            3.6603002548217773,
+            1.0732600688934326
+          ]
+        },
+        "center": [
+          -0.6448655053973198,
+          3.3098498582839966,
+          0.6668935120105743
+        ],
+        "anchor": [
+          -0.6585360169410706,
+          3.2908997535705566,
+          0.6377800107002258
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2416",
+            "sha256": "2d3c37d1811a909e5cfd016f9d5c700b433d5f55e4bcb5fb64494dbfcb839181"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right hepatic vein on the model."
+      },
+      "currentHash": "497e0dfcca8e77fb6a909bc6c43829bf7c70b29cf02997179ae2517268add24f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "fmaId": "FMA14339",
+        "name": "Left hepatic vein",
+        "sourceName": "left hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14339",
+        "bounds": {
+          "min": [
+            -0.11933600157499313,
+            3.264200448989868,
+            0.6738200187683105
+          ],
+          "max": [
+            0.5190989971160889,
+            3.6432995796203613,
+            1.2178999185562134
+          ]
+        },
+        "center": [
+          0.19988149777054787,
+          3.4537500143051147,
+          0.945859968662262
+        ],
+        "anchor": [
+          0.2203809916973114,
+          3.4426000118255615,
+          0.9140899777412415
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2415",
+            "sha256": "dced2210d0b4b725e40c2e63791023fdcf7ee8aadd2f6718fd442c0e7654107f"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left hepatic vein on the model."
+      },
+      "currentHash": "eac1d6c199ed3382d5bc956976217325c92bf748cd5ff31fade359d1614ba06d"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+        "fmaId": "FMA14331",
+        "name": "Splenic vein",
+        "sourceName": "splenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA14331",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3641",
+            "sha256": "4dabe1ffb6e36e9f7714ba5f8da7ed48b11d304963372f982446467e584d2e9f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.12030299752950668,
+            2.5125999450683594,
+            0.33072200417518616
+          ],
+          "max": [
+            0.9985010027885437,
+            2.917799949645996,
+            0.7408300042152405
+          ]
+        },
+        "center": [
+          0.4390990026295185,
+          2.7151999473571777,
+          0.5357760041952133
+        ],
+        "anchor": [
+          0.4338200092315674,
+          2.7239999771118164,
+          0.5332099795341492
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find splenic vein on the model."
+      },
+      "currentHash": "d45dae1a72c2d88e447c83df94d89804f12189cc2f06159e7777e98958f4cb58"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+        "fmaId": "FMA14340",
+        "name": "Middle hepatic vein",
+        "sourceName": "middle hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA14340",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2414",
+            "sha256": "bd57b4b26daef763025a4e2ae75102c687926a604db3b19fa44993033dc0f32f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.6027029752731323,
+            3.031899929046631,
+            0.6817799806594849
+          ],
+          "max": [
+            -0.05198270082473755,
+            3.6484999656677246,
+            1.3945300579071045
+          ]
+        },
+        "center": [
+          -0.32734283804893494,
+          3.3401999473571777,
+          1.0381550192832947
+        ],
+        "anchor": [
+          -0.3519819974899292,
+          3.3910999298095703,
+          1.1050599813461304
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find middle hepatic vein on the model."
+      },
+      "currentHash": "b0cb8539d1f5204774569c7960794d92457cbb88fefaed1da91d3a413078ad6b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+        "fmaId": "FMA15791",
+        "name": "Tributary of right hepatic vein",
+        "sourceName": "tributary of right hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA15791",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3118",
+            "sha256": "ab6f8bd812766331859f8adaa01cef1c202ebd974967ea411b17c54e9da84a5d"
+          },
+          {
+            "file": "FJ3119",
+            "sha256": "ae4707592889653dccb669e53a1356d67696c361cce28fc19c8910f8717fdb28"
+          },
+          {
+            "file": "FJ3120",
+            "sha256": "c5d056d8281c1f0447214e3a310e98da532760293b5ed1e90e934a77bfec0703"
+          },
+          {
+            "file": "FJ3121",
+            "sha256": "51942b37d2a29a6e32c3401710d6605e5958c1462922c3968cdca79b0a7fac1c"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.9984260201454163,
+            2.749500036239624,
+            0.188633993268013
+          ],
+          "max": [
+            -0.16844500601291656,
+            3.6670000553131104,
+            0.9190700054168701
+          ]
+        },
+        "center": [
+          -0.5834355130791664,
+          3.208250045776367,
+          0.5538519993424416
+        ],
+        "anchor": [
+          -0.6109169721603394,
+          3.223400115966797,
+          0.5686500072479248
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find tributary of right hepatic vein on the model."
+      },
+      "currentHash": "c51e2141167ce1016caa09134b9b1c63266f2737ba566a2311e9f08bd8abea1e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+        "fmaId": "FMA15794",
+        "name": "Tributary of left hepatic vein",
+        "sourceName": "tributary of left hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA15794",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3097",
+            "sha256": "3173b1bb808b7c5cc3f3de44772b34c2c360ae00c5147d66a12d675d5bbe570b"
+          },
+          {
+            "file": "FJ3098",
+            "sha256": "5331851628f47c02b309eab63ab7361658b84950abb0e2d586c56ef5fc561356"
+          },
+          {
+            "file": "FJ3099",
+            "sha256": "2bd6db4021b2fa8ee4f81e60cfb3dae4a070d921707497bf9cab6b84f98dc495"
+          },
+          {
+            "file": "FJ3100",
+            "sha256": "143c288d1c524c76d1f8198182f11dc4884d78eacd8013a4c0ae5ce209116d5a"
+          },
+          {
+            "file": "FJ3101",
+            "sha256": "c7e03313693b3e232ee3e82093a20daa5ec3dea060926861b6ab2f5467be9636"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.22065800428390503,
+            3.202699899673462,
+            0.6910600066184998
+          ],
+          "max": [
+            0.3859249949455261,
+            3.7074999809265137,
+            1.2792799472808838
+          ]
+        },
+        "center": [
+          0.08263349533081055,
+          3.455099940299988,
+          0.9851699769496918
+        ],
+        "anchor": [
+          0.09680440276861191,
+          3.42330002784729,
+          0.9626200199127197
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find tributary of left hepatic vein on the model."
+      },
+      "currentHash": "6ba56c2627624fc87e560f4c6c093659440e43d43b57714e2b6b27d56180029b"
+    }
+  ]
+}

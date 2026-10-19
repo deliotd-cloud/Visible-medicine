@@ -1,0 +1,744 @@
+{
+  "name": "git-pin-e7608c07",
+  "helper": "upperLimbCompletionQuizLesson",
+  "pinsHash": "f1195a073f659fd76429790d8bbffd5f1aa5632a58e05cec329c6192c4f0713d",
+  "transitionHash": "e1e76951edf156129c89b29c129b958a78cad6503c71fc2d9592a2579dc00750",
+  "pins": {
+    "baseline": "cbda5345d2aaa730b0361e7e374e356478f6222d",
+    "authorCommit": "e7608c0719fbf77b0f1a350d648dd695be23be6b",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+          "fmaId": "FMA23707",
+          "name": "Interosseous membrane of right forearm",
+          "sourceName": "interosseous membrane of right forearm",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-connective-gaps",
+          "nodeName": "FMA23707",
+          "bounds": {
+            "min": [
+              -2.5067598819732666,
+              0.21471984684467316,
+              0.20117104053497314
+            ],
+            "max": [
+              -2.289450168609619,
+              1.7778997421264648,
+              0.6823599934577942
+            ]
+          },
+          "center": [
+            -2.398105025291443,
+            0.996309794485569,
+            0.44176551699638367
+          ],
+          "anchor": [
+            -2.4015800952911377,
+            0.9821801781654358,
+            0.4531240165233612
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1476",
+              "sha256": "e70c96c4534da21f082cc494a7804f42db96195bed75641334348845cb1ddb97"
+            }
+          ],
+          "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find interosseous membrane of right forearm on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+          "fmaId": "FMA23708",
+          "name": "Interosseous membrane of left forearm",
+          "sourceName": "interosseous membrane of left forearm",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-connective-gaps",
+          "nodeName": "FMA23708",
+          "bounds": {
+            "min": [
+              2.289450168609619,
+              0.21471984684467316,
+              0.20117104053497314
+            ],
+            "max": [
+              2.5067598819732666,
+              1.7778997421264648,
+              0.6823599934577942
+            ]
+          },
+          "center": [
+            2.398105025291443,
+            0.996309794485569,
+            0.44176551699638367
+          ],
+          "anchor": [
+            2.4015800952911377,
+            0.9821801781654358,
+            0.4531240165233612
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1476M",
+              "sha256": "2855876f02fbf5186e8cb19d640828808063a859d297042494477cc40c212d22"
+            }
+          ],
+          "coverageNote": "Interosseous membrane surface; individual bundles and insertions are not separately segmented. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find interosseous membrane of left forearm on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+          "fmaId": "FMA13330",
+          "name": "Right axillary vein",
+          "sourceName": "right axillary vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA13330",
+          "bounds": {
+            "min": [
+              -1.5716700553894043,
+              4.328499794006348,
+              0.41394203901290894
+            ],
+            "max": [
+              -0.7491909861564636,
+              5.351400375366211,
+              0.6516900062561035
+            ]
+          },
+          "center": [
+            -1.160430520772934,
+            4.839950084686279,
+            0.5328160226345062
+          ],
+          "anchor": [
+            -1.3682899475097656,
+            4.929800033569336,
+            0.5104399919509888
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2269",
+              "sha256": "24438422321aa6665de6394aa39e79fdeabdf2bc56427a3419da4dc630546464"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right axillary vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+          "fmaId": "FMA13331",
+          "name": "Left axillary vein",
+          "sourceName": "left axillary vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA13331",
+          "bounds": {
+            "min": [
+              0.7492620348930359,
+              4.328399658203125,
+              0.4140329658985138
+            ],
+            "max": [
+              1.571410059928894,
+              5.351400375366211,
+              0.6516600251197815
+            ]
+          },
+          "center": [
+            1.160336047410965,
+            4.839900016784668,
+            0.5328464955091476
+          ],
+          "anchor": [
+            1.3708299398422241,
+            4.921700477600098,
+            0.5061599612236023
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2217",
+              "sha256": "7b448d1f2a071e88d1a2ebe54e7e5d417719663a5b01d1226f492b71ebdc19cd"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left axillary vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+          "fmaId": "FMA50859",
+          "name": "Right suprascapular vein",
+          "sourceName": "right suprascapular vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA50859",
+          "bounds": {
+            "min": [
+              -1.3964999914169312,
+              4.831300258636475,
+              0.01680198684334755
+            ],
+            "max": [
+              -0.6351689696311951,
+              5.439599514007568,
+              0.6387699842453003
+            ]
+          },
+          "center": [
+            -1.015834480524063,
+            5.1354498863220215,
+            0.3277859855443239
+          ],
+          "anchor": [
+            -1.0245000123977661,
+            5.289799690246582,
+            0.23821403086185455
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2302",
+              "sha256": "05a1af2bdafa5d179753ce923971e3300a4451ce71788d9fc3bf115897dc92db"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right suprascapular vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+          "fmaId": "FMA50860",
+          "name": "Left suprascapular vein",
+          "sourceName": "left suprascapular vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA50860",
+          "bounds": {
+            "min": [
+              0.6352019906044006,
+              4.831200122833252,
+              0.016885986551642418
+            ],
+            "max": [
+              1.3961501121520996,
+              5.439599514007568,
+              0.6388300061225891
+            ]
+          },
+          "center": [
+            1.0156760513782501,
+            5.13539981842041,
+            0.32785799633711576
+          ],
+          "anchor": [
+            1.0412299633026123,
+            5.273900032043457,
+            0.21618598699569702
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2250",
+              "sha256": "50bcc347434326f06d5db0054036b90215f78f964c3d00c0c94cd0b981dd558b"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left suprascapular vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+          "fmaId": "FMA40120",
+          "name": "Flexor retinaculum of right wrist",
+          "sourceName": "flexor retinaculum of right wrist",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand",
+            "forearm"
+          ],
+          "bundle": "hand-connective-axial-detail",
+          "nodeName": "FMA40120",
+          "bounds": {
+            "min": [
+              -2.7091901302337646,
+              -0.20520995557308197,
+              0.7686499953269958
+            ],
+            "max": [
+              -2.3403100967407227,
+              0.06431030482053757,
+              0.9080600142478943
+            ]
+          },
+          "center": [
+            -2.5247501134872437,
+            -0.0704498253762722,
+            0.8383550047874451
+          ],
+          "anchor": [
+            -2.522700071334839,
+            -0.07679992914199829,
+            0.8895500302314758
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1471",
+              "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find flexor retinaculum of right wrist on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+          "fmaId": "FMA40121",
+          "name": "Flexor retinaculum of left wrist",
+          "sourceName": "flexor retinaculum of left wrist",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand",
+            "forearm"
+          ],
+          "bundle": "hand-connective-axial-detail",
+          "nodeName": "FMA40121",
+          "bounds": {
+            "min": [
+              2.3403100967407227,
+              -0.20520995557308197,
+              0.7686499953269958
+            ],
+            "max": [
+              2.7091901302337646,
+              0.06431030482053757,
+              0.9080600142478943
+            ]
+          },
+          "center": [
+            2.5247501134872437,
+            -0.0704498253762722,
+            0.8383550047874451
+          ],
+          "anchor": [
+            2.522700071334839,
+            -0.07679992914199829,
+            0.8895500302314758
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1471M",
+              "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find flexor retinaculum of left wrist on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+          "fmaId": "FMA22935",
+          "name": "Right medial brachial vein",
+          "sourceName": "right medial brachial vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "brachial-veins",
+          "nodeName": "FMA22935",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2341",
+              "sha256": "0468a157795c7346d964d1884627464d5cfe9c4c8bcc84661aefdb2bc2d18259"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -2.1819400787353516,
+              2.184000015258789,
+              0.3270150125026703
+            ],
+            "max": [
+              -1.500249981880188,
+              4.349800109863281,
+              0.4724330008029938
+            ]
+          },
+          "center": [
+            -1.8410950303077698,
+            3.266900062561035,
+            0.39972400665283203
+          ],
+          "anchor": [
+            -1.8253899812698364,
+            3.2527999877929688,
+            0.38743001222610474
+          ],
+          "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right medial brachial vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+          "fmaId": "FMA22936",
+          "name": "Left medial brachial vein",
+          "sourceName": "left medial brachial vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "brachial-veins",
+          "nodeName": "FMA22936",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2313",
+              "sha256": "3707bf67b5959e140fea0eca643bc31db00e97620e63afbe48ed10357af44ec8"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.4999699592590332,
+              2.184000015258789,
+              0.32708799839019775
+            ],
+            "max": [
+              2.182039976119995,
+              4.349800109863281,
+              0.4722819924354553
+            ]
+          },
+          "center": [
+            1.8410049676895142,
+            3.266900062561035,
+            0.39968499541282654
+          ],
+          "anchor": [
+            1.8217400312423706,
+            3.272900104522705,
+            0.38906198740005493
+          ],
+          "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left medial brachial vein on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "cbda5345d2aaa730b0361e7e374e356478f6222d",
+    "authorCommit": "e7608c0719fbf77b0f1a350d648dd695be23be6b",
+    "sourcePinsHash": "f1195a073f659fd76429790d8bbffd5f1aa5632a58e05cec329c6192c4f0713d",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:forearm:right:ligament:interosseous-membrane-of-right-forearm",
+        "fmaId": "FMA23707",
+        "tab": "quiz",
+        "previousHash": "698a261fbbeab2ef8348676059599239433b901851c863c5441b174facc5e572",
+        "currentHash": "349249fb552d1f152521c0a0ce3e8398776c435abe776854ab694ebcdd1100ed"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:ligament:interosseous-membrane-of-left-forearm",
+        "fmaId": "FMA23708",
+        "tab": "quiz",
+        "previousHash": "3ebdf868853b78149d0172b05482c9556a37f367341c186fa600d4e09e45cb81",
+        "currentHash": "dc136c9009c0a847ef5d6aad9819c2fc258cc04aed01857ccdd60c4880ec8a76"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+        "fmaId": "FMA13330",
+        "tab": "quiz",
+        "previousHash": "979629fc3b237adf497c5739644d997d9e08b9421d025063d2e1796cf21d2a1c",
+        "currentHash": "1d9a3619de939f7cb65f2b069652ad36313f0346a28e3e19fd810e8bcd725346"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+        "fmaId": "FMA13331",
+        "tab": "quiz",
+        "previousHash": "321a93b850999234fd28ad274d6904fa2089dea69eade7962cb23ea06bf61583",
+        "currentHash": "79e038ab68c0dd7d08a05054eafa16d465a2277b9851f9b6c1f645cbceedad7c"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+        "fmaId": "FMA50859",
+        "tab": "quiz",
+        "previousHash": "e4339bcf4bc19eaeda2a0d062910a2b73518974d1c2367d0d749c9ac4e76756b",
+        "currentHash": "1e2bc1f34a457b397e6c5baf99eb667f5d4005376225c56c4398811ff44ab03d"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+        "fmaId": "FMA50860",
+        "tab": "quiz",
+        "previousHash": "b5bfa1277f13eeba79cd3049f78089e5e92795425522fd0ba6ccef59d083d226",
+        "currentHash": "4a78323b57d98e0e9966c37cfb0080b5579b39f2bf121fdc41bbec75fec34df4"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+        "fmaId": "FMA40120",
+        "tab": "quiz",
+        "previousHash": "cca40db6fbd8ed6e689c49054f24fa557cd56fc972c036128fb44da6146960d6",
+        "currentHash": "d228739d3de459cf76ea66fc9d3b7d5d58582e1c5870f6e35b6967b087b2f48b"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "fmaId": "FMA40121",
+        "tab": "quiz",
+        "previousHash": "8cd4c75237ca96794f0b9b0af30a1a2d71d7a07417b42936b1f599f16d10cd15",
+        "currentHash": "043bcfc91661cf31c16055b99537953d0cbe24fe9896a00ee8059c5ab09beeb7"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+        "fmaId": "FMA22935",
+        "tab": "quiz",
+        "previousHash": "99008cf80850989d752a355ca75c96cf16eedd7a575ba7f9ba7066ba4ed9eb7d",
+        "currentHash": "a3fc4f0dc91e939b8a335ee814d1e93519e8d06b966f09fc351b6ca1bac7eb62"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+        "fmaId": "FMA22936",
+        "tab": "quiz",
+        "previousHash": "2d535a4abaf41a6af20a2d1bed5fff895c8998fde1de3b6dc0456d4531a68346",
+        "currentHash": "c01b77278e7f9047be2ba4b95d378d9b8738d227d3930e22b6252502e0f7354c"
+      }
+    ]
+  },
+  "sourceRecordHash": "646186f17e61c8152669024b2892a354dec4b5fceeca27f52a0764e2dc8be32e",
+  "originalPinPath": "content/upper-limb-completion-quiz-pins.json",
+  "originalPinHash": "ac14b21fdbdd1d5d1671bdd410932e8d87c0ac6bd56226c2e9273ac7f0053e0b",
+  "originalPinBlob": "6ac1039d9ab4c6aca0fd912432b61fb5bebcb740",
+  "originalTransitionPaths": []
+}

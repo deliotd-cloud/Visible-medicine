@@ -1,0 +1,1379 @@
+{
+  "name": "git-pin-057640ca",
+  "helper": "laryngealFrameworkQuizLesson",
+  "pinsHash": "f6ebaa1952b7594e44cfa83c9a602124b9ef325a14daafcf59fe987f77381ee8",
+  "transitionHash": "9432184c8bdccf65610a042f75e5ed43a78e182aeb9f02dfd4f088dea2173ccf",
+  "pins": {
+    "baseline": "662a1e8c45673c15d7ed3acbebebe912cb0db9b8",
+    "authorCommit": "057640ca58032d1e88680ce0d99797e12532836d",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+          "fmaId": "FMA55099",
+          "name": "Thyroid cartilage",
+          "sourceName": "thyroid cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-recovery",
+          "nodeName": "FMA55099",
+          "bounds": {
+            "min": [
+              -0.19980300962924957,
+              5.914100170135498,
+              0.41506102681159973
+            ],
+            "max": [
+              0.1868250072002411,
+              6.309300422668457,
+              0.7244600057601929
+            ]
+          },
+          "center": [
+            -0.006489001214504242,
+            6.1117002964019775,
+            0.5697605162858963
+          ],
+          "anchor": [
+            -0.06516009569168091,
+            6.082199573516846,
+            0.6187000274658203
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2808",
+              "sha256": "48cd41bcd4044c7013ba10c971e212766afc970408f51875f9ef8e8c407c0687"
+            }
+          ],
+          "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find thyroid cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+          "fmaId": "FMA9615",
+          "name": "Cricoid cartilage",
+          "sourceName": "cricoid cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-recovery",
+          "nodeName": "FMA9615",
+          "bounds": {
+            "min": [
+              -0.12166500091552734,
+              5.871999740600586,
+              0.42616501450538635
+            ],
+            "max": [
+              0.10860500484704971,
+              6.047199726104736,
+              0.6146900057792664
+            ]
+          },
+          "center": [
+            -0.006529998034238815,
+            5.959599733352661,
+            0.5204275101423264
+          ],
+          "anchor": [
+            0.0015807299641892314,
+            6.007400035858154,
+            0.46646401286125183
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2440",
+              "sha256": "ae1e2bab875a75035aaebdc79212fd859c2c193881462245de3252853721361d"
+            },
+            {
+              "file": "FJ2769",
+              "sha256": "5f75fb4d2969fd1de51898787bb8810c441d5d2bd6eb0c5482b7cacd3c9bc3be"
+            }
+          ],
+          "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find cricoid cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+          "fmaId": "FMA55113",
+          "name": "Right arytenoid cartilage",
+          "sourceName": "right arytenoid cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-recovery",
+          "nodeName": "FMA55113",
+          "bounds": {
+            "min": [
+              -0.08017900586128235,
+              6.034799575805664,
+              0.45393601059913635
+            ],
+            "max": [
+              -0.025149701163172722,
+              6.116099834442139,
+              0.5267099738121033
+            ]
+          },
+          "center": [
+            -0.052664353512227535,
+            6.075449705123901,
+            0.4903229922056198
+          ],
+          "anchor": [
+            -0.04989840090274811,
+            6.0725998878479,
+            0.48880302906036377
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2792",
+              "sha256": "6766f404ea88ffb33f5430ee4704a416aab95813da19a84998f67fbdcc556eaa"
+            }
+          ],
+          "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right arytenoid cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+          "fmaId": "FMA55114",
+          "name": "Left arytenoid cartilage",
+          "sourceName": "left arytenoid cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-recovery",
+          "nodeName": "FMA55114",
+          "bounds": {
+            "min": [
+              0.01182430051267147,
+              6.034899711608887,
+              0.45375800132751465
+            ],
+            "max": [
+              0.067221499979496,
+              6.116300106048584,
+              0.5268099904060364
+            ]
+          },
+          "center": [
+            0.039522900246083736,
+            6.075599908828735,
+            0.4902839958667755
+          ],
+          "anchor": [
+            0.036466799676418304,
+            6.07550048828125,
+            0.4863249957561493
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2775",
+              "sha256": "1e2c0bf8eab8a3a1814b5d56ba721031f3bd87473ea739e540781117bbfb32c9"
+            }
+          ],
+          "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left arytenoid cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+          "fmaId": "FMA55115",
+          "name": "Right corniculate cartilage",
+          "sourceName": "right corniculate cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55115",
+          "bounds": {
+            "min": [
+              -0.0446850024163723,
+              6.110400199890137,
+              0.4510349929332733
+            ],
+            "max": [
+              -0.029540501534938812,
+              6.125999927520752,
+              0.4668329656124115
+            ]
+          },
+          "center": [
+            -0.037112751975655556,
+            6.118200063705444,
+            0.4589339792728424
+          ],
+          "anchor": [
+            -0.03376749902963638,
+            6.115400314331055,
+            0.45785200595855713
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2793",
+              "sha256": "055590405743b1adb114f2b9480122827e7dac69d964fa43409bd57bfb6ada4d"
+            }
+          ],
+          "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right corniculate cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+          "fmaId": "FMA55116",
+          "name": "Left corniculate cartilage",
+          "sourceName": "left corniculate cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55116",
+          "bounds": {
+            "min": [
+              0.016489800065755844,
+              6.110500335693359,
+              0.45100998878479004
+            ],
+            "max": [
+              0.03127570077776909,
+              6.125500679016113,
+              0.4671669900417328
+            ]
+          },
+          "center": [
+            0.023882750421762466,
+            6.118000507354736,
+            0.4590884894132614
+          ],
+          "anchor": [
+            0.023324700072407722,
+            6.114499568939209,
+            0.45577797293663025
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2776",
+              "sha256": "282ec50dc80214ead94da19cab975e6be2a6cba093c9765b3260c98af2300ca3"
+            }
+          ],
+          "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left corniculate cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+          "fmaId": "FMA55117",
+          "name": "Right cuneiform cartilage",
+          "sourceName": "right cuneiform cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55117",
+          "bounds": {
+            "min": [
+              -0.06377340108156204,
+              6.136500358581543,
+              0.5019899606704712
+            ],
+            "max": [
+              -0.04460879787802696,
+              6.17140007019043,
+              0.5238900184631348
+            ]
+          },
+          "center": [
+            -0.0541910994797945,
+            6.153950214385986,
+            0.512939989566803
+          ],
+          "anchor": [
+            -0.05923289805650711,
+            6.149300575256348,
+            0.5172799825668335
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2795",
+              "sha256": "9745a416c9f85f106aabdedb8645811c8cfbf85025364310e06a04072d766f0b"
+            }
+          ],
+          "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right cuneiform cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+          "fmaId": "FMA55118",
+          "name": "Left cuneiform cartilage",
+          "sourceName": "left cuneiform cartilage",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55118",
+          "bounds": {
+            "min": [
+              0.03319690003991127,
+              6.14069938659668,
+              0.5019299983978271
+            ],
+            "max": [
+              0.05064979940652847,
+              6.173299789428711,
+              0.528700053691864
+            ]
+          },
+          "center": [
+            0.04192334972321987,
+            6.156999588012695,
+            0.5153150260448456
+          ],
+          "anchor": [
+            0.04169850051403046,
+            6.152700424194336,
+            0.5223900079727173
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2773",
+              "sha256": "33f5b140ab7a37e450e130ed8f9bf579ef9f11856dcd3587b5f634bd6a83d0e0"
+            }
+          ],
+          "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left cuneiform cartilage on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+          "fmaId": "FMA55138",
+          "name": "Median thyrohyoid ligament",
+          "sourceName": "median thyrohyoid ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55138",
+          "bounds": {
+            "min": [
+              -0.0917396992444992,
+              6.064799785614014,
+              0.684909999370575
+            ],
+            "max": [
+              0.07900000363588333,
+              6.241099834442139,
+              0.7604799866676331
+            ]
+          },
+          "center": [
+            -0.006369847804307938,
+            6.152949810028076,
+            0.722694993019104
+          ],
+          "anchor": [
+            -0.012164399959146976,
+            6.150799751281738,
+            0.7243800163269043
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2790",
+              "sha256": "b731abaf6b663050b09d3fd2fc98d2260a114fdb2268519c7df5aa85732bdaf6"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find median thyrohyoid ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+          "fmaId": "FMA55140",
+          "name": "Right lateral thyrohyoid ligament",
+          "sourceName": "right lateral thyrohyoid ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55140",
+          "bounds": {
+            "min": [
+              -0.19979900121688843,
+              6.279399394989014,
+              0.4257790446281433
+            ],
+            "max": [
+              -0.1621520072221756,
+              6.389899730682373,
+              0.47544801235198975
+            ]
+          },
+          "center": [
+            -0.180975504219532,
+            6.334649562835693,
+            0.45061352849006653
+          ],
+          "anchor": [
+            -0.18392200767993927,
+            6.334100246429443,
+            0.4603639841079712
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2797",
+              "sha256": "f17658211f590bfff00d5e79a37230526e294847f06bc91ac3267a7abe8888d3"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right lateral thyrohyoid ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+          "fmaId": "FMA55141",
+          "name": "Left lateral thyrohyoid ligament",
+          "sourceName": "left lateral thyrohyoid ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55141",
+          "bounds": {
+            "min": [
+              0.149276003241539,
+              6.279000282287598,
+              0.42564499378204346
+            ],
+            "max": [
+              0.1866459995508194,
+              6.389999866485596,
+              0.475473016500473
+            ]
+          },
+          "center": [
+            0.1679610013961792,
+            6.334500074386597,
+            0.45055900514125824
+          ],
+          "anchor": [
+            0.1692410111427307,
+            6.33329963684082,
+            0.4604569971561432
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2779",
+              "sha256": "b48baf72d1ab117ad320dbe2432e82979ae56e2bdf83632d4f72d03435e8ad2e"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left lateral thyrohyoid ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+          "fmaId": "FMA55227",
+          "name": "Hyo-epiglottic ligament",
+          "sourceName": "hyo-epiglottic ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "unspecified",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55227",
+          "bounds": {
+            "min": [
+              -0.011291899718344212,
+              6.119100570678711,
+              0.606220006942749
+            ],
+            "max": [
+              -0.0019186000572517514,
+              6.350400447845459,
+              0.7512100338935852
+            ]
+          },
+          "center": [
+            -0.0066052498877979815,
+            6.234750509262085,
+            0.6787150204181671
+          ],
+          "anchor": [
+            -0.003843309823423624,
+            6.234100341796875,
+            0.6820800304412842
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2771",
+              "sha256": "f744a2873d81471ee14cf63ebf4380c350e21e7e49872bf11ff3ddd668f7bb34"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find hyo-epiglottic ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+          "fmaId": "FMA55230",
+          "name": "Thyro-epiglottic ligament",
+          "sourceName": "thyro-epiglottic ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55230",
+          "bounds": {
+            "min": [
+              -0.02305229939520359,
+              6.04680061340332,
+              0.6402100324630737
+            ],
+            "max": [
+              0.008680639788508415,
+              6.111899375915527,
+              0.6787700057029724
+            ]
+          },
+          "center": [
+            -0.007185829803347588,
+            6.079349994659424,
+            0.6594900190830231
+          ],
+          "anchor": [
+            -0.008598039858043194,
+            6.082099437713623,
+            0.6631799936294556
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2807",
+              "sha256": "eb7a5318fd5cd6d9a26605d00bd06f6c18004f7c7c7483c09394d5766f443925"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find thyro-epiglottic ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+          "fmaId": "FMA55237",
+          "name": "Median cricothyroid ligament",
+          "sourceName": "median cricothyroid ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55237",
+          "bounds": {
+            "min": [
+              -0.04015230014920235,
+              5.91510009765625,
+              0.5895900130271912
+            ],
+            "max": [
+              0.02707420103251934,
+              6.044499397277832,
+              0.6676599979400635
+            ]
+          },
+          "center": [
+            -0.006539049558341503,
+            5.979799747467041,
+            0.6286250054836273
+          ],
+          "anchor": [
+            -0.0035108299925923347,
+            5.979100227355957,
+            0.6307499408721924
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2789",
+              "sha256": "6b51f7e389da70fe5a128165073932cb98f1bf628a2ff46115c3a9f73e7a91d1"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find median cricothyroid ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+          "fmaId": "FMA55245",
+          "name": "Right vocal ligament",
+          "sourceName": "right vocal ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55245",
+          "bounds": {
+            "min": [
+              -0.036122098565101624,
+              6.037800312042236,
+              0.5178399682044983
+            ],
+            "max": [
+              -0.014276299625635147,
+              6.04770040512085,
+              0.6511099934577942
+            ]
+          },
+          "center": [
+            -0.025199199095368385,
+            6.042750358581543,
+            0.5844749808311462
+          ],
+          "anchor": [
+            -0.026827899739146233,
+            6.044599533081055,
+            0.5849600434303284
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2805",
+              "sha256": "f8d93ea86284dbe0877b6080c642991a6542cf78bb6ad884a78b4d55a7b8e3e8"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right vocal ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+          "fmaId": "FMA55246",
+          "name": "Left vocal ligament",
+          "sourceName": "left vocal ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55246",
+          "bounds": {
+            "min": [
+              0.0011723400093615055,
+              6.037700176239014,
+              0.5177800059318542
+            ],
+            "max": [
+              0.023097200319170952,
+              6.047299861907959,
+              0.6510399580001831
+            ]
+          },
+          "center": [
+            0.012134770164266229,
+            6.042500019073486,
+            0.5844099819660187
+          ],
+          "anchor": [
+            0.014549699611961842,
+            6.041500091552734,
+            0.5844200253486633
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2787",
+              "sha256": "fd2030747641aae5864bb28f2c18a03d8ccfc34702f9a9012af1957ac1bef23b"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left vocal ligament on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+          "fmaId": "FMA55130",
+          "name": "Epiglottis",
+          "sourceName": "epiglottis",
+          "system": "organs",
+          "category": "organ",
+          "laterality": "unpaired",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-organs-visceral-detail",
+          "nodeName": "FMA55130",
+          "bounds": {
+            "min": [
+              -0.08592019975185394,
+              6.087299823760986,
+              0.5818900465965271
+            ],
+            "max": [
+              0.07234429568052292,
+              6.382299900054932,
+              0.659000039100647
+            ]
+          },
+          "center": [
+            -0.006787952035665512,
+            6.234799861907959,
+            0.620445042848587
+          ],
+          "anchor": [
+            -0.0122231999412179,
+            6.230400562286377,
+            0.6208699941635132
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2770",
+              "sha256": "05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find epiglottis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+          "fmaId": "FMA55133",
+          "name": "Right thyrohyoid membrane",
+          "sourceName": "right thyrohyoid membrane",
+          "system": "connective",
+          "category": "membrane",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-laryngeal-detail",
+          "nodeName": "FMA55133",
+          "bounds": {
+            "min": [
+              -0.1955460011959076,
+              6.159200668334961,
+              0.4351480007171631
+            ],
+            "max": [
+              -0.052922703325748444,
+              6.381400108337402,
+              0.7197499871253967
+            ]
+          },
+          "center": [
+            -0.12423435226082802,
+            6.270300388336182,
+            0.5774489939212799
+          ],
+          "anchor": [
+            -0.1584700047969818,
+            6.275400161743164,
+            0.5806099772453308
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2804",
+              "sha256": "4250925cb74084de7f699859f52773f2942689943e89613b5a52768cef42af4e"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right thyrohyoid membrane on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+          "fmaId": "FMA55134",
+          "name": "Left thyrohyoid membrane",
+          "sourceName": "left thyrohyoid membrane",
+          "system": "connective",
+          "category": "membrane",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-laryngeal-detail",
+          "nodeName": "FMA55134",
+          "bounds": {
+            "min": [
+              0.03982729837298393,
+              6.159599781036377,
+              0.4351930320262909
+            ],
+            "max": [
+              0.1826009899377823,
+              6.38129997253418,
+              0.7199400067329407
+            ]
+          },
+          "center": [
+            0.11121414415538311,
+            6.270449876785278,
+            0.5775665193796158
+          ],
+          "anchor": [
+            0.145906001329422,
+            6.270100116729736,
+            0.5791000127792358
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2786",
+              "sha256": "76aca51bbecd3a2804fb4c65f37638d82ee71413f636972db0b224cb2091d15e"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled thyrohyoid membrane in unchanged common coordinates. Full attachments, thickness, perforating vessels/nerves, swallowing and operative planes are not established. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates remain withheld for source review; no missing tissue or patient registration is invented.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left thyrohyoid membrane on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "662a1e8c45673c15d7ed3acbebebe912cb0db9b8",
+    "authorCommit": "057640ca58032d1e88680ce0d99797e12532836d",
+    "sourcePinsHash": "f6ebaa1952b7594e44cfa83c9a602124b9ef325a14daafcf59fe987f77381ee8",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+        "fmaId": "FMA55099",
+        "tab": "quiz",
+        "previousHash": "195eb7bd392afc814f68e4d272ae3d13f3ff5eef7cf41bf40c1157ed9fae5b97",
+        "currentHash": "e2234f265d68d0efecda4545914e2c6f3bc394724d5919e95f754ee56a2d7f6e"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+        "fmaId": "FMA9615",
+        "tab": "quiz",
+        "previousHash": "6a3291494ba8ea61c95d990b844d2217f7b69e7a473476f91c8781fbdb8c5079",
+        "currentHash": "41535493807b11363f4adc2975ec244cc5bb3da7089e2c8f79174045dab710aa"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-arytenoid-cartilage",
+        "fmaId": "FMA55113",
+        "tab": "quiz",
+        "previousHash": "cf150f93dfdbe148ef762e22b8cbc878545d1f1ebf048b19f04a2169c5fead16",
+        "currentHash": "f51bde2d2a61e17990aceb50f4e5dca50eca74734c414bfe3b04267354dbdadd"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-arytenoid-cartilage",
+        "fmaId": "FMA55114",
+        "tab": "quiz",
+        "previousHash": "fffca0cb1902b203ed3e73d935d25916fc0b3ad73bfb9f46897a901de6b8fc45",
+        "currentHash": "84f1e074b20804b133a8ff21e9cc618fca8e2e3135d511828155cfd82c1b6755"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+        "fmaId": "FMA55115",
+        "tab": "quiz",
+        "previousHash": "1bb1d9e14efe9990d581a5a32a20da14161dc4febeed9ec734c60a93439cfd86",
+        "currentHash": "22f783f0d597aee98dcf99b4004029beebff4a9e5ab20e6ca7f47da0b5a5d63d"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+        "fmaId": "FMA55116",
+        "tab": "quiz",
+        "previousHash": "be5823edf86ab04f725f00ecc09802f46703449287b0fae86524650ed3deac72",
+        "currentHash": "fefbf511d69ea9b4235336a5fbe2f87e448053974a510b36941c07e54f1feb9f"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+        "fmaId": "FMA55117",
+        "tab": "quiz",
+        "previousHash": "1dd7416fe5a0ed3d4fa3f86f1d8b503a08152e6ae0b41c070a82d3d9d30fc0d2",
+        "currentHash": "769ce8a7fa37e883445695969975c1cecab8083d568e66044b40e8d17f110cbb"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+        "fmaId": "FMA55118",
+        "tab": "quiz",
+        "previousHash": "18a2575556e59971c9946af2d88d3432e596d8c2b6cf05fbd72fe225b7f043ae",
+        "currentHash": "6582e02a88e1886a99a94400ffde3c2016f416e276c040a7dac35f89430955e2"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:ligament:median-thyrohyoid-ligament",
+        "fmaId": "FMA55138",
+        "tab": "quiz",
+        "previousHash": "397000ae6208a0507d4c747f20a7acc37a7fde28142465e8df3dd3bd76f03c07",
+        "currentHash": "a08b0c7bb59ff8d293739c70ba7c4d3aab2a79225a13e2eb0fa14db476d4f7e9"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:ligament:right-lateral-thyrohyoid-ligament",
+        "fmaId": "FMA55140",
+        "tab": "quiz",
+        "previousHash": "10c7f264fbe41edd17698578879a11f2f76fceb322aa150cbe252409926190c1",
+        "currentHash": "0423da8dca1cbe33a3cb7508728c0ff9c5cb3189f1f6cf0a7d635444d1766f09"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:ligament:left-lateral-thyrohyoid-ligament",
+        "fmaId": "FMA55141",
+        "tab": "quiz",
+        "previousHash": "353997082f022c7c60c9ce3d4c1fda3743cf295fed5784b57ac37ae210e4aa91",
+        "currentHash": "dc1b296a33cbb9d4b8f5daaabb1512e8888aea216f71595409b914f8e6755d4e"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:unspecified:ligament:hyo-epiglottic-ligament",
+        "fmaId": "FMA55227",
+        "tab": "quiz",
+        "previousHash": "8f6b5c5771d7ad6862abbe7970e600a1229ff985847caa41056877cfeeb4052c",
+        "currentHash": "b28a9e7cde7cf436e1eb893758a572bdba5b0ea368722d8baad7735cdc56f765"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:ligament:thyro-epiglottic-ligament",
+        "fmaId": "FMA55230",
+        "tab": "quiz",
+        "previousHash": "6a16c32cae7e4eea9d553702aa92267e39a5f2fc5a719c634d5f23168e341407",
+        "currentHash": "8ce760ec98f2af527078bc5a92bc851250473940cfafe420faca2f00d5bc318b"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:ligament:median-cricothyroid-ligament",
+        "fmaId": "FMA55237",
+        "tab": "quiz",
+        "previousHash": "26530f4ea840fd0c4d4f291c033a71879f05faedb6760cdbb199403cc147513c",
+        "currentHash": "b179c28ae70bb7ff86bb084c0ffae83fd2bb1cbd5e5b63b119b300df54317687"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "fmaId": "FMA55245",
+        "tab": "quiz",
+        "previousHash": "c04dbaa1dce7a6c72543ad67ff0f199709ecd2c43cfd78b18aa43273842c196e",
+        "currentHash": "0396528075e68b390ff440047451d3484bbeb3fb935d3db2265b94432fa3c1e9"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "fmaId": "FMA55246",
+        "tab": "quiz",
+        "previousHash": "63352d6a998d0c0e56142b0d363373e70f0e470aa37d03796ac82505b4dd2efd",
+        "currentHash": "d7dfcfb73aada479b54c7fd5175978827decc94ee92c3405ff08170c0529ab7a"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+        "fmaId": "FMA55130",
+        "tab": "quiz",
+        "previousHash": "6980edf60bf2902f50599cc9c1051581de308de7073e5c6c8d93143e5315b903",
+        "currentHash": "468d61f44418afe6bddfbf6cc19f575e4d392deae157cbe54242d0fa5da6da36"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:membrane:right-thyrohyoid-membrane",
+        "fmaId": "FMA55133",
+        "tab": "quiz",
+        "previousHash": "0763dcd6f92434cdefc71be560cb005fa5eef0a4c993450ddea48a56137a25b5",
+        "currentHash": "d28cba9af52ad35dac72e09ae7a16bb60357801dba4661995c5028a5a86cb95d"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:membrane:left-thyrohyoid-membrane",
+        "fmaId": "FMA55134",
+        "tab": "quiz",
+        "previousHash": "a172b0aa8e7903df2f42503ac059a63221529de72def43ef57b68e06f2f06b91",
+        "currentHash": "1fd16997da14066c98b463ea1b184dbd13e900777a3b2ff2a74e3ef84d274e9a"
+      }
+    ]
+  },
+  "sourceRecordHash": "ca35dc9ce5189ed696e8baa9c341e37cf5933efd4765b92b74ff8d755764edd0",
+  "originalPinPath": "content/laryngeal-framework-quiz-pins.json",
+  "originalPinHash": "847e2f7151145eff34e0b153897b710e11b236fdc70876befa8b2d275ac64b9c",
+  "originalPinBlob": "6f05c031737cb267788a8be005ad5d1e586dd846",
+  "originalTransitionPaths": []
+}

@@ -1,0 +1,534 @@
+{
+  "author": "dc8212978d4929c26c514bb08f9ed8e5f6df8cef",
+  "parent": "2d72005e6cb88b015cce92bf303e0f918b549133",
+  "tree": "f44c8642fbb92a159a8fc5e159287e16e854a9c3",
+  "parentTree": "89760775ce21e84071449059f0410a626e918810",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 8,
+  "preserved": 9928,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+        "fmaId": "FMA55115",
+        "name": "Right corniculate cartilage",
+        "sourceName": "right corniculate cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55115",
+        "bounds": {
+          "min": [
+            -0.0446850024163723,
+            6.110400199890137,
+            0.4510349929332733
+          ],
+          "max": [
+            -0.029540501534938812,
+            6.125999927520752,
+            0.4668329656124115
+          ]
+        },
+        "center": [
+          -0.037112751975655556,
+          6.118200063705444,
+          0.4589339792728424
+        ],
+        "anchor": [
+          -0.03376749902963638,
+          6.115400314331055,
+          0.45785200595855713
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2793",
+            "sha256": "055590405743b1adb114f2b9480122827e7dac69d964fa43409bd57bfb6ada4d"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "af0738dd75e6a375dbb8f31c71b0d802179e17b4e2ad04cf06dab4c730d8f26f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-corniculate-cartilage",
+        "fmaId": "FMA55115",
+        "name": "Right corniculate cartilage",
+        "sourceName": "right corniculate cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55115",
+        "bounds": {
+          "min": [
+            -0.0446850024163723,
+            6.110400199890137,
+            0.4510349929332733
+          ],
+          "max": [
+            -0.029540501534938812,
+            6.125999927520752,
+            0.4668329656124115
+          ]
+        },
+        "center": [
+          -0.037112751975655556,
+          6.118200063705444,
+          0.4589339792728424
+        ],
+        "anchor": [
+          -0.03376749902963638,
+          6.115400314331055,
+          0.45785200595855713
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2793",
+            "sha256": "055590405743b1adb114f2b9480122827e7dac69d964fa43409bd57bfb6ada4d"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "cb355b1c5a020dce71746f139d299321d339a9a8b2a313799f70d2987db4eebd"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+        "fmaId": "FMA55116",
+        "name": "Left corniculate cartilage",
+        "sourceName": "left corniculate cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55116",
+        "bounds": {
+          "min": [
+            0.016489800065755844,
+            6.110500335693359,
+            0.45100998878479004
+          ],
+          "max": [
+            0.03127570077776909,
+            6.125500679016113,
+            0.4671669900417328
+          ]
+        },
+        "center": [
+          0.023882750421762466,
+          6.118000507354736,
+          0.4590884894132614
+        ],
+        "anchor": [
+          0.023324700072407722,
+          6.114499568939209,
+          0.45577797293663025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2776",
+            "sha256": "282ec50dc80214ead94da19cab975e6be2a6cba093c9765b3260c98af2300ca3"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "8372cac46ce15623c553f977cfe05ee844bcfbb51155d3813da0cf7ca775f000"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-corniculate-cartilage",
+        "fmaId": "FMA55116",
+        "name": "Left corniculate cartilage",
+        "sourceName": "left corniculate cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55116",
+        "bounds": {
+          "min": [
+            0.016489800065755844,
+            6.110500335693359,
+            0.45100998878479004
+          ],
+          "max": [
+            0.03127570077776909,
+            6.125500679016113,
+            0.4671669900417328
+          ]
+        },
+        "center": [
+          0.023882750421762466,
+          6.118000507354736,
+          0.4590884894132614
+        ],
+        "anchor": [
+          0.023324700072407722,
+          6.114499568939209,
+          0.45577797293663025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2776",
+            "sha256": "282ec50dc80214ead94da19cab975e6be2a6cba093c9765b3260c98af2300ca3"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "3fa989057033477ce3a96fece71cf0506087d91975ed56a8caf8cd524074ec4f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+        "fmaId": "FMA55117",
+        "name": "Right cuneiform cartilage",
+        "sourceName": "right cuneiform cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55117",
+        "bounds": {
+          "min": [
+            -0.06377340108156204,
+            6.136500358581543,
+            0.5019899606704712
+          ],
+          "max": [
+            -0.04460879787802696,
+            6.17140007019043,
+            0.5238900184631348
+          ]
+        },
+        "center": [
+          -0.0541910994797945,
+          6.153950214385986,
+          0.512939989566803
+        ],
+        "anchor": [
+          -0.05923289805650711,
+          6.149300575256348,
+          0.5172799825668335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2795",
+            "sha256": "9745a416c9f85f106aabdedb8645811c8cfbf85025364310e06a04072d766f0b"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "c8186ae0aea2755f2eaefea28ac06001e5c917e090ba5fe4292e4f11a28884ea"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-cuneiform-cartilage",
+        "fmaId": "FMA55117",
+        "name": "Right cuneiform cartilage",
+        "sourceName": "right cuneiform cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55117",
+        "bounds": {
+          "min": [
+            -0.06377340108156204,
+            6.136500358581543,
+            0.5019899606704712
+          ],
+          "max": [
+            -0.04460879787802696,
+            6.17140007019043,
+            0.5238900184631348
+          ]
+        },
+        "center": [
+          -0.0541910994797945,
+          6.153950214385986,
+          0.512939989566803
+        ],
+        "anchor": [
+          -0.05923289805650711,
+          6.149300575256348,
+          0.5172799825668335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2795",
+            "sha256": "9745a416c9f85f106aabdedb8645811c8cfbf85025364310e06a04072d766f0b"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "0e44f2fdc0eebb9c02f689157e0b6b086411482fc1754b878e4eb204958f3734"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+        "fmaId": "FMA55118",
+        "name": "Left cuneiform cartilage",
+        "sourceName": "left cuneiform cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55118",
+        "bounds": {
+          "min": [
+            0.03319690003991127,
+            6.14069938659668,
+            0.5019299983978271
+          ],
+          "max": [
+            0.05064979940652847,
+            6.173299789428711,
+            0.528700053691864
+          ]
+        },
+        "center": [
+          0.04192334972321987,
+          6.156999588012695,
+          0.5153150260448456
+        ],
+        "anchor": [
+          0.04169850051403046,
+          6.152700424194336,
+          0.5223900079727173
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2773",
+            "sha256": "33f5b140ab7a37e450e130ed8f9bf579ef9f11856dcd3587b5f634bd6a83d0e0"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ct",
+      "previous": {
+        "readiness": "pending",
+        "title": "CT content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "7d25cf17be67eab3c9297090516dfc5d890f2da78ed32059e505f97b2f10d259"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-cuneiform-cartilage",
+        "fmaId": "FMA55118",
+        "name": "Left cuneiform cartilage",
+        "sourceName": "left cuneiform cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA55118",
+        "bounds": {
+          "min": [
+            0.03319690003991127,
+            6.14069938659668,
+            0.5019299983978271
+          ],
+          "max": [
+            0.05064979940652847,
+            6.173299789428711,
+            0.528700053691864
+          ]
+        },
+        "center": [
+          0.04192334972321987,
+          6.156999588012695,
+          0.5153150260448456
+        ],
+        "anchor": [
+          0.04169850051403046,
+          6.152700424194336,
+          0.5223900079727173
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2773",
+            "sha256": "33f5b140ab7a37e450e130ed8f9bf579ef9f11856dcd3587b5f634bd6a83d0e0"
+          }
+        ],
+        "coverageNote": "Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "50faf1b471142df082f62c77980bd119af403a76cc17ea93eef5b06989c0daac"
+    }
+  ]
+}

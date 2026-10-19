@@ -1,0 +1,464 @@
+{
+  "name": "git-pin-8ea22df7",
+  "helper": "limbConnectiveCtLesson",
+  "pinsHash": "7543ef9be9a81bc6811f5b3b50b9015329898c16b3a7b76ad6ede9c200621572",
+  "transitionHash": "12a82f3fe006ace6a781a5973ac34d2d9b7df7aec86c9e7aafe854626a99896e",
+  "pins": {
+    "baseline": "c440ae47d7e9a2451156caa5a9906550a35bcb50",
+    "authorCommit": "8ea22df7a81cf271eb1277342f5f6a97a393bb7b",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+          "fmaId": "FMA44249",
+          "name": "Right long plantar ligament",
+          "sourceName": "right long plantar ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-connective-recovery",
+          "nodeName": "FMA44249",
+          "bounds": {
+            "min": [
+              -1.178279995918274,
+              -8.610419273376465,
+              -0.044085998088121414
+            ],
+            "max": [
+              -0.5938950181007385,
+              -8.363907814025879,
+              0.9254400730133057
+            ]
+          },
+          "center": [
+            -0.8860875070095062,
+            -8.487163543701172,
+            0.4406770374625921
+          ],
+          "anchor": [
+            -0.892598032951355,
+            -8.50725269317627,
+            0.46150803565979004
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1424",
+              "sha256": "661b56c07f5a39362806f1c62d10497f42dbe1da37a680da0d4359c0c5079c9c"
+            }
+          ],
+          "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+          "fmaId": "FMA44250",
+          "name": "Left long plantar ligament",
+          "sourceName": "left long plantar ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-connective-recovery",
+          "nodeName": "FMA44250",
+          "bounds": {
+            "min": [
+              0.5938950181007385,
+              -8.610419273376465,
+              -0.044086989015340805
+            ],
+            "max": [
+              1.178279995918274,
+              -8.363907814025879,
+              0.9254400730133057
+            ]
+          },
+          "center": [
+            0.8860875070095062,
+            -8.487163543701172,
+            0.44067654199898243
+          ],
+          "anchor": [
+            0.8925990462303162,
+            -8.50725269317627,
+            0.46150803565979004
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1424M",
+              "sha256": "85a4d2965253a1638342e3295fb342ff0d8e8931c9d9b6373de6e6af7de3e79e"
+            }
+          ],
+          "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+          "fmaId": "FMA40120",
+          "name": "Flexor retinaculum of right wrist",
+          "sourceName": "flexor retinaculum of right wrist",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand",
+            "forearm"
+          ],
+          "bundle": "hand-connective-axial-detail",
+          "nodeName": "FMA40120",
+          "bounds": {
+            "min": [
+              -2.7091901302337646,
+              -0.20520995557308197,
+              0.7686499953269958
+            ],
+            "max": [
+              -2.3403100967407227,
+              0.06431030482053757,
+              0.9080600142478943
+            ]
+          },
+          "center": [
+            -2.5247501134872437,
+            -0.0704498253762722,
+            0.8383550047874451
+          ],
+          "anchor": [
+            -2.522700071334839,
+            -0.07679992914199829,
+            0.8895500302314758
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1471",
+              "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+          "fmaId": "FMA40121",
+          "name": "Flexor retinaculum of left wrist",
+          "sourceName": "flexor retinaculum of left wrist",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand",
+            "forearm"
+          ],
+          "bundle": "hand-connective-axial-detail",
+          "nodeName": "FMA40121",
+          "bounds": {
+            "min": [
+              2.3403100967407227,
+              -0.20520995557308197,
+              0.7686499953269958
+            ],
+            "max": [
+              2.7091901302337646,
+              0.06431030482053757,
+              0.9080600142478943
+            ]
+          },
+          "center": [
+            2.5247501134872437,
+            -0.0704498253762722,
+            0.8383550047874451
+          ],
+          "anchor": [
+            2.522700071334839,
+            -0.07679992914199829,
+            0.8895500302314758
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1471M",
+              "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+          "fmaId": "FMA58776",
+          "name": "Right iliotibial tract",
+          "sourceName": "right iliotibial tract",
+          "system": "connective",
+          "category": "fascia",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-connective-axial-detail",
+          "nodeName": "FMA58776",
+          "bounds": {
+            "min": [
+              -1.625190019607544,
+              -4.85713005065918,
+              -0.1736309826374054
+            ],
+            "max": [
+              -0.9180240035057068,
+              1.4515197277069092,
+              0.6337000131607056
+            ]
+          },
+          "center": [
+            -1.2716070115566254,
+            -1.7028051614761353,
+            0.23003451526165009
+          ],
+          "anchor": [
+            -1.3336999416351318,
+            -1.7277002334594727,
+            0.05577201768755913
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1423",
+              "sha256": "5be6b36001c18933694ec0871ed262da14c5b6c5f4d1f51b4cf5cd9b074bd76f"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+          "fmaId": "FMA58777",
+          "name": "Left iliotibial tract",
+          "sourceName": "left iliotibial tract",
+          "system": "connective",
+          "category": "fascia",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-connective-axial-detail",
+          "nodeName": "FMA58777",
+          "bounds": {
+            "min": [
+              0.9180229902267456,
+              -4.85713005065918,
+              -0.17363201081752777
+            ],
+            "max": [
+              1.625190019607544,
+              1.4515197277069092,
+              0.6337000131607056
+            ]
+          },
+          "center": [
+            1.2716065049171448,
+            -1.7028051614761353,
+            0.2300340011715889
+          ],
+          "anchor": [
+            1.3336999416351318,
+            -1.7277002334594727,
+            0.05577201768755913
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1423M",
+              "sha256": "bfd57c0dcc185bf4fd7396064bc1c27c7e438427605f7826b4cfdbeb5e40f589"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "c440ae47d7e9a2451156caa5a9906550a35bcb50",
+    "authorCommit": "8ea22df7a81cf271eb1277342f5f6a97a393bb7b",
+    "sourcePinsHash": "7543ef9be9a81bc6811f5b3b50b9015329898c16b3a7b76ad6ede9c200621572",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+        "fmaId": "FMA44249",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "b190bf3fcf6b82c1c3b6a957fad7d6be65d3079c01f8b7f433fe74853eeaab32"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+        "fmaId": "FMA44250",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "fecdf36d3d1c003788a1999cf9c02c5239cf747f8bfd0a5461f1f30ff7e054cd"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+        "fmaId": "FMA40120",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "a41e50da27284d382a9a5cdad768fe1e6e419643a92e1876ffade2f89c477efb"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "fmaId": "FMA40121",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "0cd33c9d92204c59da63d1ad22b8ba48c56d82d2a4fdd08ccde5b1b4a05388e0"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:fascia:right-iliotibial-tract",
+        "fmaId": "FMA58776",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "11c0ef75a468b0b017564bf2656e08d5661cca9c222ef23f6a7636927a02fa46"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:fascia:left-iliotibial-tract",
+        "fmaId": "FMA58777",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "1a3cea8a5e7f6d2dc3d74aa14042199ac921d935c96124d979d7549d1700e85d"
+      }
+    ]
+  },
+  "sourceRecordHash": "167e365e53af0c86decd44a7b1da0d5511f5c6e9f07ed030d44a7569b3026a42",
+  "originalPinPath": "content/limb-connective-ct-pins.json",
+  "originalPinHash": "31d171c3ac7152610d82fc1bba26a5f1d4954e4e8b10b75817a58457ffa1e7a8",
+  "originalPinBlob": "1ac916d47e9fd561f4e47fc69fe53a799be8d376",
+  "originalTransitionPaths": []
+}

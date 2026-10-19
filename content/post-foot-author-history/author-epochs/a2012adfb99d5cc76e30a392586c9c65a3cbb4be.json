@@ -1,0 +1,538 @@
+{
+  "author": "a2012adfb99d5cc76e30a392586c9c65a3cbb4be",
+  "parent": "8ea22df7a81cf271eb1277342f5f6a97a393bb7b",
+  "tree": "4a8e97cd0b9ac617af5a180ebba4c0e12597d4dc",
+  "parentTree": "1622ebc56dc30efcc718ad83e65ddb56bedb403d",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 8,
+  "preserved": 9928,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "fmaId": "FMA14771",
+        "name": "Common hepatic artery",
+        "sourceName": "common hepatic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14771",
+        "bounds": {
+          "min": [
+            -0.15322299301624298,
+            2.7520995140075684,
+            0.7689099907875061
+          ],
+          "max": [
+            0.05790700018405914,
+            2.8542003631591797,
+            0.9266900420188904
+          ]
+        },
+        "center": [
+          -0.04765799641609192,
+          2.803149938583374,
+          0.8478000164031982
+        ],
+        "anchor": [
+          -0.027087800204753876,
+          2.7968993186950684,
+          0.8521899580955505
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3078",
+            "sha256": "f8285f60775b0feb990af2f35591196b2a43253c87df2c8b02b7ec7f492d1409"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find common hepatic artery on the model."
+      },
+      "currentHash": "936515940131ad01c402ab4d3b52b11fc69fb24cdd1e9cd7ac66a130db75fca8"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "fmaId": "FMA14772",
+        "name": "Hepatic artery proper",
+        "sourceName": "hepatic artery proper",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14772",
+        "bounds": {
+          "min": [
+            -0.22417400777339935,
+            2.815300226211548,
+            0.8881500363349915
+          ],
+          "max": [
+            -0.1144069954752922,
+            3.1173999309539795,
+            1.0145798921585083
+          ]
+        },
+        "center": [
+          -0.16929050162434578,
+          2.9663500785827637,
+          0.9513649642467499
+        ],
+        "anchor": [
+          -0.17672199010849,
+          2.9759998321533203,
+          0.9442999362945557
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3081",
+            "sha256": "bd4cff9e5fc6feb0d0f742a91d8a67e1fa4cda96e455e5a21a638b064d195da6"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find hepatic artery proper on the model."
+      },
+      "currentHash": "2c69e76c205ed1d865d695f1008462349e27c25e007c38fc231bd6b73ba2f42c"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "fmaId": "FMA14773",
+        "name": "Splenic artery",
+        "sourceName": "splenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14773",
+        "bounds": {
+          "min": [
+            0.019408300518989563,
+            2.5958995819091797,
+            0.30418097972869873
+          ],
+          "max": [
+            1.0045599937438965,
+            2.945699453353882,
+            0.875809907913208
+          ]
+        },
+        "center": [
+          0.511984147131443,
+          2.7707995176315308,
+          0.5899954438209534
+        ],
+        "anchor": [
+          0.5094789862632751,
+          2.776099920272827,
+          0.5806400179862976
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2562",
+            "sha256": "f0ea297213c33d68e9da6158016cf963dfa3922520f7b533aabda2254e8a64fd"
+          },
+          {
+            "file": "FJ3420",
+            "sha256": "3d20dc80614ce5394ee45caf1d2fcec225912f06eac4ff01734f987513172ad5"
+          },
+          {
+            "file": "FJ3544",
+            "sha256": "d22809e5be114a70c1e380d370c42c91439ed849f1f6fe03f595955cdd6898b3"
+          },
+          {
+            "file": "FJ3640",
+            "sha256": "27b149be4ab4edd36c86799827a10ea40e5b29b596eacc2b830da44f143ed063"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find splenic artery on the model."
+      },
+      "currentHash": "13c9bfd4fc6df7529ca2e344bf0c4f4d0f7f0558f155fbcd4d60c20779fa4bb5"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+        "fmaId": "FMA14768",
+        "name": "Left gastric artery",
+        "sourceName": "left gastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14768",
+        "bounds": {
+          "min": [
+            0.049337901175022125,
+            2.809000253677368,
+            0.7280099987983704
+          ],
+          "max": [
+            0.26731598377227783,
+            3.2628002166748047,
+            1.194849967956543
+          ]
+        },
+        "center": [
+          0.15832694247364998,
+          3.0359002351760864,
+          0.9614299833774567
+        ],
+        "anchor": [
+          0.1788559854030609,
+          3.014200448989868,
+          0.849120020866394
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3499",
+            "sha256": "983a0580d4324a210eeb5671c4caf115c29ce13c0761e718102db8092a849ccf"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left gastric artery on the model."
+      },
+      "currentHash": "381c0c6d502fafb2aa4eef6e612cfd2ad115b843e46cee6f6a5862b0831df89a"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+        "fmaId": "FMA15390",
+        "name": "Left gastroepiploic vein",
+        "sourceName": "left gastroepiploic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15390",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3502",
+            "sha256": "8fbff4b304815200c09017d46d9537b0cd3f699ed13d79c0ac35bd122f24decb"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.6009610295295715,
+            2.4670000076293945,
+            0.5152599811553955
+          ],
+          "max": [
+            0.9455670118331909,
+            2.840100049972534,
+            1.218369960784912
+          ]
+        },
+        "center": [
+          0.7732640206813812,
+          2.6535500288009644,
+          0.8668149709701538
+        ],
+        "anchor": [
+          0.9265869855880737,
+          2.7102999687194824,
+          0.9137600064277649
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left gastroepiploic vein on the model."
+      },
+      "currentHash": "aac6a88325846713a2b8161f508c162fe426289c5652b945770b9d1dd330fad6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+        "fmaId": "FMA15397",
+        "name": "Right gastroepiploic vein",
+        "sourceName": "right gastroepiploic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15397",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3597",
+            "sha256": "c3d9e308cc410cacf95ca9336bc80ba221af8ec6a555b3111881289d326e8523"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.17116700112819672,
+            2.2836999893188477,
+            0.8794500231742859
+          ],
+          "max": [
+            0.6065019965171814,
+            2.5178000926971436,
+            1.3030799627304077
+          ]
+        },
+        "center": [
+          0.21766749769449234,
+          2.4007500410079956,
+          1.0912649929523468
+        ],
+        "anchor": [
+          0.16690999269485474,
+          2.419300079345703,
+          1.2492200136184692
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right gastroepiploic vein on the model."
+      },
+      "currentHash": "a53a666124453e686ccfcb41f4df9507e7e7552eeee16a05a6a16c5f77461d6b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+        "fmaId": "FMA15399",
+        "name": "Left gastric vein",
+        "sourceName": "left gastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15399",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3500",
+            "sha256": "5cf36381284ef10cd55465cd827ed97bba2c7d610a20e34ea9b02dc70d605a4c"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.14354300498962402,
+            2.824199914932251,
+            0.7365000247955322
+          ],
+          "max": [
+            0.25164300203323364,
+            3.3215999603271484,
+            1.196560025215149
+          ]
+        },
+        "center": [
+          0.05404999852180481,
+          3.0728999376296997,
+          0.9665300250053406
+        ],
+        "anchor": [
+          0.147023007273674,
+          3.0327000617980957,
+          0.8527600169181824
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left gastric vein on the model."
+      },
+      "currentHash": "98ba26026b114cdbe49df156e4c366c3c39d828fe5a963499b404c5e39582071"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+        "fmaId": "FMA15400",
+        "name": "Right gastric vein",
+        "sourceName": "right gastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15400",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3595",
+            "sha256": "a2a2bd3aadf7027de43cb57c0a33b17b3ce3a35c9f495f5fc010486c2b39494d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.2311830073595047,
+            2.7734999656677246,
+            0.8745899796485901
+          ],
+          "max": [
+            0.007959119975566864,
+            2.944200038909912,
+            1.1354999542236328
+          ]
+        },
+        "center": [
+          -0.11161194369196892,
+          2.8588500022888184,
+          1.0050449669361115
+        ],
+        "anchor": [
+          -0.1392659991979599,
+          2.8132998943328857,
+          1.0139299631118774
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right gastric vein on the model."
+      },
+      "currentHash": "b8ab7522108236aee584152473a2cc211acec592b37ff63f64987011564a3a2f"
+    }
+  ]
+}

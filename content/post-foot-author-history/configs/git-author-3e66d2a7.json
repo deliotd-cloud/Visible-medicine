@@ -1,0 +1,166 @@
+{
+  "name": "git-author-3e66d2a7",
+  "helper": "salpingopharyngeusMriLesson",
+  "pinsHash": "17075314c71c40da2b2c120cad22ee0c1b2c1b6e43819075c1710a9346589918",
+  "transitionHash": "9e18fdf77c45094f245d55eb9b3d6732d25fe1c9653e7b99c2fe3fa3d423ca21",
+  "pins": {
+    "baseline": "0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2",
+    "authorCommit": "3e66d2a7cb1807f792929cbe292a4cfc81e4e79e",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+          "fmaId": "FMA46670",
+          "name": "Left salpingopharyngeus",
+          "sourceName": "left salpingopharyngeus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-muscles",
+          "nodeName": "FMA46670",
+          "bounds": {
+            "min": [
+              0.07165979593992233,
+              6.576300144195557,
+              0.36528196930885315
+            ],
+            "max": [
+              0.2098430097103119,
+              6.987900257110596,
+              0.5631700158119202
+            ]
+          },
+          "center": [
+            0.1407514028251171,
+            6.782100200653076,
+            0.46422599256038666
+          ],
+          "anchor": [
+            0.1038770005106926,
+            6.768499851226807,
+            0.5349900126457214
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2745",
+              "sha256": "81c70a6f8ab2de5d20a715cdf5339d756ca7171c473adc645231929b2732bf31"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "mri": {
+            "readiness": "pending",
+            "title": "MRI content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+          "fmaId": "FMA46669",
+          "name": "Right salpingopharyngeus",
+          "sourceName": "right salpingopharyngeus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-muscles",
+          "nodeName": "FMA46669",
+          "bounds": {
+            "min": [
+              -0.22287499904632568,
+              6.576300144195557,
+              0.36528098583221436
+            ],
+            "max": [
+              -0.08478999882936478,
+              6.987900257110596,
+              0.5630699992179871
+            ]
+          },
+          "center": [
+            -0.15383249893784523,
+            6.782100200653076,
+            0.4641754925251007
+          ],
+          "anchor": [
+            -0.11703500151634216,
+            6.768199443817139,
+            0.5350000262260437
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2757",
+              "sha256": "b10e40d550d6208c907df65d844403071233d8088a109b2be5f925cd5d9e6c36"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "mri": {
+            "readiness": "pending",
+            "title": "MRI content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2",
+    "authorCommit": "3e66d2a7cb1807f792929cbe292a4cfc81e4e79e",
+    "sourcePinsHash": "17075314c71c40da2b2c120cad22ee0c1b2c1b6e43819075c1710a9346589918",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+        "fmaId": "FMA46670",
+        "tab": "mri",
+        "previousHash": "1000dc4c7328bdbc2e6af944ee9d4a90b0744f6ef4d1e111f88357457d288489",
+        "currentHash": "443af382ba2582a0725a6a8410ce4c90571f0ea18382aecc841e6f0d887ac8e0"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+        "fmaId": "FMA46669",
+        "tab": "mri",
+        "previousHash": "1000dc4c7328bdbc2e6af944ee9d4a90b0744f6ef4d1e111f88357457d288489",
+        "currentHash": "64b29c8bf9e94eb47e05360f15ee3bfa8ce8966bdfec9b22aea3cdaceb0636e9"
+      }
+    ]
+  },
+  "sourceRecordHash": "51acf2918317aa92f7d89aefa46a1aa52db88ca3adb4e536677fb22698841f89"
+}

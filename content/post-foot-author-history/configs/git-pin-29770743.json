@@ -1,0 +1,310 @@
+{
+  "name": "git-pin-29770743",
+  "helper": "orbitalSupportQuizLesson",
+  "pinsHash": "7fd277e25d431f60bf437bdf3b082fafdd82ec3f03309df2e1e81b108024ccf0",
+  "transitionHash": "7e5017424cfe78d641a772acaaa573db519da403bb0bf4c4e94fddd566ca3bfd",
+  "pins": {
+    "baseline": "d944f63c7517498fc571536271b96b111ce8ab05",
+    "authorCommit": "297707431e0f85a76a9d4b40d13a53669f65c705",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+          "fmaId": "FMA49067",
+          "name": "Trochlea of right superior oblique",
+          "sourceName": "trochlea of right superior oblique",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-head-detail",
+          "nodeName": "FMA49067",
+          "bounds": {
+            "min": [
+              -0.16712599992752075,
+              7.324399471282959,
+              1.1234099864959717
+            ],
+            "max": [
+              -0.1246429979801178,
+              7.360600471496582,
+              1.1531699895858765
+            ]
+          },
+          "center": [
+            -0.14588449895381927,
+            7.3424999713897705,
+            1.138289988040924
+          ],
+          "anchor": [
+            -0.1466899961233139,
+            7.33489990234375,
+            1.1389700174331665
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1380",
+              "sha256": "eb522d2de22050bba2a6359cee767cd34d96e8a0bc135db043f9cf86f70d6d6e"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find trochlea of right superior oblique on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+          "fmaId": "FMA49068",
+          "name": "Trochlea of left superior oblique",
+          "sourceName": "trochlea of left superior oblique",
+          "system": "connective",
+          "category": "cartilage",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-head-detail",
+          "nodeName": "FMA49068",
+          "bounds": {
+            "min": [
+              0.11148899793624878,
+              7.324399471282959,
+              1.123170018196106
+            ],
+            "max": [
+              0.1540990024805069,
+              7.360600471496582,
+              1.1531199216842651
+            ]
+          },
+          "center": [
+            0.13279400020837784,
+            7.3424999713897705,
+            1.1381449699401855
+          ],
+          "anchor": [
+            0.13079699873924255,
+            7.335699558258057,
+            1.138390064239502
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1329",
+              "sha256": "bd3bb98b659cc91865a50457124aac9353d98d21a5963404cad21cfb010dce2d"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find trochlea of left superior oblique on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+          "fmaId": "FMA49072",
+          "name": "Right common tendinous ring",
+          "sourceName": "right common tendinous ring",
+          "system": "connective",
+          "category": "tendon",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-head-detail",
+          "nodeName": "FMA49072",
+          "bounds": {
+            "min": [
+              -0.1939380019903183,
+              7.248899936676025,
+              0.6916599869728088
+            ],
+            "max": [
+              -0.1313299983739853,
+              7.315600395202637,
+              0.7506999969482422
+            ]
+          },
+          "center": [
+            -0.1626340001821518,
+            7.282250165939331,
+            0.7211799919605255
+          ],
+          "anchor": [
+            -0.18664498627185822,
+            7.281300067901611,
+            0.7154600024223328
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1342",
+              "sha256": "0e8384372e031d2720cbd2c1f776af44cf4003ccd6ff4cc68025d45c7ad44c59"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right common tendinous ring on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+          "fmaId": "FMA49073",
+          "name": "Left common tendinous ring",
+          "sourceName": "left common tendinous ring",
+          "system": "connective",
+          "category": "tendon",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-head-detail",
+          "nodeName": "FMA49073",
+          "bounds": {
+            "min": [
+              0.11845700442790985,
+              7.249000072479248,
+              0.691789984703064
+            ],
+            "max": [
+              0.1807900071144104,
+              7.315500259399414,
+              0.7508000135421753
+            ]
+          },
+          "center": [
+            0.14962350577116013,
+            7.282250165939331,
+            0.7212949991226196
+          ],
+          "anchor": [
+            0.17205700278282166,
+            7.277900218963623,
+            0.712399959564209
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1291",
+              "sha256": "5c0611ee2d47bb1b50e6832ffb50e82703d188e6b00d1d1d154c25458c178346"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left common tendinous ring on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "d944f63c7517498fc571536271b96b111ce8ab05",
+    "authorCommit": "297707431e0f85a76a9d4b40d13a53669f65c705",
+    "sourcePinsHash": "7fd277e25d431f60bf437bdf3b082fafdd82ec3f03309df2e1e81b108024ccf0",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:trochlea-of-right-superior-oblique",
+        "fmaId": "FMA49067",
+        "tab": "quiz",
+        "previousHash": "30d25b5fd14783425bd0fc271b7c5999d11ff841c186aa77f7cbceef178fcc99",
+        "currentHash": "a52194db23bc496bac61e0d3848366d6523d660b9d96ad252f520f1e27fe2a4f"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:trochlea-of-left-superior-oblique",
+        "fmaId": "FMA49068",
+        "tab": "quiz",
+        "previousHash": "bc27d360271144c84fb3bc71b366cf19a6275479dfaf9233838cb3ae3de57f3d",
+        "currentHash": "a21f524f56b04b4a5b2167a7cc8506cece1fb99e6774e3b98fbc1f26163b9f24"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+        "fmaId": "FMA49072",
+        "tab": "quiz",
+        "previousHash": "c750a1985d655c02ee917685157bc091696a6df4133ca7eebf54ad8a18dbebf2",
+        "currentHash": "5b543cdcc277ac0cc26f77803dcfbe88d10f1d0d994eb0df091fa138a71e3b68"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+        "fmaId": "FMA49073",
+        "tab": "quiz",
+        "previousHash": "d3beef254b32f35f7e1b17974a18acaef2c47487bd9814e4015f51ccbcc81d1d",
+        "currentHash": "8fff15bcc957bdcfbe0cf17eb7c4e7dfb35b2264e63948d16db265b03952eec9"
+      }
+    ]
+  },
+  "sourceRecordHash": "2fd7a3bc7cd3ab37bcdfb5b1a4edc91ea324fbe065e53343812aeecfdb58e74e",
+  "originalPinPath": "content/orbital-support-quiz-pins.json",
+  "originalPinHash": "358bec1058aa5a28d528952ec1e0705387961e25cce08633227713106c7c349e",
+  "originalPinBlob": "0787aaa4873e839a5d62c378a2eac27e8b9ac31f",
+  "originalTransitionPaths": []
+}

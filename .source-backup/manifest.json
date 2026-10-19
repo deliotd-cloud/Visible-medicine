@@ -1,0 +1,1833 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-19T22:39:30.344Z",
+  "sourceIdentity": {
+    "product": "Atlas source delta only",
+    "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+    "head": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "tree": "44ca83bf391164c09f43f4169d25dcacf4b2559d"
+  },
+  "parent": null,
+  "files": [
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 351954,
+      "sha256": "e18835acc953f9d80705e42db7bb907415ea64050f266b2d930eed179e51c3d4"
+    },
+    {
+      "path": "app/body-content.ts",
+      "bytes": 82089,
+      "sha256": "f83c1a6b70109ebf1871cb7314d57c13f6e508dc401075aeb0e5fc3b3d029e07"
+    },
+    {
+      "path": "app/whole-body-guided-learning.tsx",
+      "bytes": 7158,
+      "sha256": "684fffbf6ed7010a8bfc8a266a2c4866519f3c7dc580594c1e0da2dfb6e5d75c"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 213803,
+      "sha256": "9e5c5ee722237cb908f7a181973c54cfa675ec05d7e6ef2ec740aaa1d7fe2362"
+    },
+    {
+      "path": "content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "351494d4a5076191c49cb596bfa6c1a287966e31e6992272e47f291dc7990678"
+    },
+    {
+      "path": "content/corpus-spongiosum-xray-v2.pins.json",
+      "bytes": 4012,
+      "sha256": "650746058ffa1e3b3e0ff0fc99d2507583faffe705a50fa54627c97d264f819c"
+    },
+    {
+      "path": "content/corpus-spongiosum-xray-v2.transition.json",
+      "bytes": 3961,
+      "sha256": "198f341e7a9936e353c8d48b262d33ee914cfcbf963608ac25094e86f9cde1f7"
+    },
+    {
+      "path": "content/corpus-spongiosum-xray-v2.ts",
+      "bytes": 1548,
+      "sha256": "8d16035949d022bbeae553eea648ba0e48fc7360e929f01ce1dc5ec97437c598"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/00a3698417318997c8660db266784eb9d0649cdd.json",
+      "bytes": 26039,
+      "sha256": "de5ddb1217a5090ed85cb3452f8b555ea90056e56fa13a2a62182c44dfb21458"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/0141a7060c9b9dd160ec39c877cbd61bc961a1ac.json",
+      "bytes": 78449,
+      "sha256": "3712202e69547e30ae6474ce0f707137cf88b00b079f2965b53faa67026ab3b2"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/017344c4c08fda81c9e1d64853c5ab05c7320d71.json",
+      "bytes": 33097,
+      "sha256": "7dc873466e7776cd56a8096054c5cfc42807244d613e9234091adf016f832f5a"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/027f29d54045256c7b4d359eaed45a3dee2c5b25.json",
+      "bytes": 11753,
+      "sha256": "710ee15705429c6eb8c02a6f2acf832cb82dc278d35c67f281a6ba5e0677412a"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/057640ca58032d1e88680ce0d99797e12532836d.json",
+      "bytes": 39325,
+      "sha256": "d0ea82b886cf74b875742e6db168b686c7d5bdfdee8a08d7f836d8d8ee74e714"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/0587c30bbc43c000ca617d63b9400d6939e51b47.json",
+      "bytes": 17242,
+      "sha256": "bf1277a6bd0f890eb85e8c5a6b3105ec3db0e3bce391958d87526ae869051e17"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/08be622a4871c75e49d99b233ada87af79a90f26.json",
+      "bytes": 7313,
+      "sha256": "0acd356eb34e2c1d1c9c42ada5507453d12975341a6d4d13e91e47eb1cdfc932"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/0aacebb9c0565e4a0f095ecbd369f3699268a4a6.json",
+      "bytes": 47349,
+      "sha256": "37b09573cf68fad742dd13936435257bbe5e5641986868a8a1ad3bf4facbc1e1"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2.json",
+      "bytes": 10377,
+      "sha256": "7d2b8d80e0941a7d4d62fc76db7e7ec11b8b15e1148b1e3bdc7fb8d379d792c7"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/0bb3cf88d6862a605f7cb54bd315b90cd38843e5.json",
+      "bytes": 56660,
+      "sha256": "228bfeaeedcdc3540481d7edfdcbcfbf9735b814c05de4f4c5a623df41571fcd"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/0f8944603ba440a4d859f95015e328394c089925.json",
+      "bytes": 9912,
+      "sha256": "2ba3796da68c28fc457a3be2fcf2a54f26fdbd69f108d6151e147ea0d7456be8"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/115f02e297f1f35827daf2837792857f36946df8.json",
+      "bytes": 26669,
+      "sha256": "61572df44df1a15aa13e6d9ff97b259c589b57f19a4fadcdefb713e7e8c2c924"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/12ae0c258cdf64fb7449385b0a8cd7918e97edeb.json",
+      "bytes": 11890,
+      "sha256": "f2b33c7c0a63b0fbbb951342cbc5c3884dbe683d12723fec27ec7f35893c4e5f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/1563e6394013938f46da559390531e888703b93d.json",
+      "bytes": 14535,
+      "sha256": "c6adc2c85928ab8f01bf399aa8b502ff98ef0170f6a63a75fc45af18547e64a2"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/1604303bb9377dd2390e840c079652eb59c47fb0.json",
+      "bytes": 21778,
+      "sha256": "b9d5784744efdc89995d182820a3eec83cc4cf2642ec73b2e16c97f5a40bce78"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/169e3aef92e866dd98e97f5394c1d2c908268547.json",
+      "bytes": 71025,
+      "sha256": "cb7d56c8c6b2c9ec823aaf05bdd84756426c07fae2207c0a4e4611a0a8bac5bc"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/1dc4f82f677c3a9ccd04f2d0d875210ac0d1ef98.json",
+      "bytes": 30738,
+      "sha256": "a8acc6f5b60219f351ebfd91c758d959b4289a3e74a50c12c70d12412374ca02"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/1dc7916410479346c5f96ed0d9a42461eaada69b.json",
+      "bytes": 38967,
+      "sha256": "8f71c7632f0d02353f9a7f73dd22985d6209bf3a4fe218f2c65a9d6e1ae81b34"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/20988a1ba542b7a39d2135cfa5c2e426ab81d593.json",
+      "bytes": 38238,
+      "sha256": "5ee62a7416ed17119854929b408ac238a588554360e5dd481edb9f4a0657e767"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/214cec892da967a8057ab1647003200e4f934d92.json",
+      "bytes": 29378,
+      "sha256": "5940c4aa3f5c966825173aab251b80bbab567fe6b8e19cc6a71dbfdf5eeaa747"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/245ccffe3a3161a83ee0fd7be643184519b2887a.json",
+      "bytes": 8714,
+      "sha256": "48d28388925196e3059d6c66f4ac9f378fa7ec96cc8c9e583c75ca9dbff09710"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/25fcb29cd0ae718ef33691d5bcddcd06bda38dc7.json",
+      "bytes": 14208,
+      "sha256": "ee8bca908173b8502b73fc624af71ce8df25b6a6975f4ee2bf0da507d42f750e"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/280c701c9cc21c540b7b496f58e2d1c4214e7865.json",
+      "bytes": 4983,
+      "sha256": "05e73efb0e8dba7f71c8564ef85d2e3cc1c79e98b8833bf27da05715de3d42f9"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/297707431e0f85a76a9d4b40d13a53669f65c705.json",
+      "bytes": 9315,
+      "sha256": "25c65625dafb30dde9d32910faa865a7bc9cb74987efb65598b825a9ec53479c"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/29d0738781d1acff7e2feb097d7ff9a10f35376e.json",
+      "bytes": 14284,
+      "sha256": "0edef6ed30bade5dbcd9b303ae5c8a7889840d922e7163d21ccc4906e91e9d36"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/2d72005e6cb88b015cce92bf303e0f918b549133.json",
+      "bytes": 5549,
+      "sha256": "4c687cdb29a17003750fb64d8259d311d0165345cea9bb8e076148642bed1abd"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/2dba5dc346748e9ce94a5dab7308689deb6dfc95.json",
+      "bytes": 23824,
+      "sha256": "ec91a5d613bc4124259e67bbe34f13113569b9a20c8523ff1a08f0c4cd69450a"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/2e67298f33a74ba4f45c868e10605ddd9b567af2.json",
+      "bytes": 10064,
+      "sha256": "a4fd61f2649204e06224c945679f65a46f0eeff61b73f9d8c6e0ee72b9559ff7"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/325fc6aa50c4221691a1ee87de0d0ca91264ff04.json",
+      "bytes": 33920,
+      "sha256": "ac578e2310328fc4da3eba4c98ce6b8d69843ccdd7798b065b351d1f0f20273e"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/343bbe3d2402502b698659fe5b9e5f9f2c2ff9c3.json",
+      "bytes": 10967,
+      "sha256": "c5db79dcbdffb893aa62841d93386ce95d1d5c03007934cac9cfbde81f4d8a74"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/363dc85cf12b07b380ba5da3b91031dbddc6bd02.json",
+      "bytes": 21020,
+      "sha256": "e49a3cd73775d9cc054f572a8fa95c3698be1989316a31807a18148fb9ac8003"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/38f225ff2d4b6cd0f2e4434c0a2d3a759f1af875.json",
+      "bytes": 12867,
+      "sha256": "a13b8f310fd3a1f38d3eb42761098d0914eb2f7048954194eb3851e443fbbd01"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/390fc0cec7249d49106cd2bebeeb17bee6989a12.json",
+      "bytes": 17004,
+      "sha256": "e3e9fdee10db31ae150c80556f7ea922d63c32db424541bf1736c7d83e424049"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/3e66d2a7cb1807f792929cbe292a4cfc81e4e79e.json",
+      "bytes": 4775,
+      "sha256": "230ca83fcdc8677de5598eaf951d5fc8b850d13e8bd95631bdd6d76fe1f3861c"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/3edd8149384a251c33801408d32472ae6f97ab1c.json",
+      "bytes": 88233,
+      "sha256": "c1f4c2a50c985e4ab488dae879d8fe691dbebce1aad8863b6c2fdb08a0b99f4f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/408759d57644b05402e98a937e7cf6338b5509cf.json",
+      "bytes": 9766,
+      "sha256": "d506385164f3eed7c0882700e03f7f2b6dcfb78c06ad9b8326c7797b3d8e0192"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/408ba96866e3409d096b6153ccda81eaf162b02d.json",
+      "bytes": 7154,
+      "sha256": "e2046da2adf2cc1020b2b30dff4011f49dfb75dd0b5532b2eeae155ecefa2187"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4233534fadb842b4d3c074b6881b28e29a6fdd06.json",
+      "bytes": 4329,
+      "sha256": "9933fdfbbaf44bbd4b5ed3fd3d41505959fd1242af33a97ad7ba6c034375a5bf"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4624f82b6c517767238da9c31daf5d8c7fbe7d8b.json",
+      "bytes": 34230,
+      "sha256": "49ac560af31e03b522729daf9e67b97e6c3d8f547b9151ae0141905b68d4a3f0"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd.json",
+      "bytes": 5549,
+      "sha256": "e9d02bfbc050ab746f615269597e1b4f67d69b91d87776df5d6d0b269a9501a5"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4890de3dc9f0ab70aaad78f0bf281570bfde6afc.json",
+      "bytes": 62875,
+      "sha256": "2c9a08280b6ec518c418d1b7e29eecc3b6ea7a716745e2d37ca14f39fc4d582a"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4b991606fb99a09e968180eb7d86549f454cf8e5.json",
+      "bytes": 70570,
+      "sha256": "a7222550685916c8004f0a1ed14515d385275dc7df12870b8f7644221016f02d"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4bb7a85b962e2cbd20ee9f329ddd0ae38e4f0642.json",
+      "bytes": 40701,
+      "sha256": "7d4e7364feb8e34d9fdf1cdcd9dcca5ebc3a3f3b0bd15d2c30622e67733c85a3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4dee2178b4a3015e81fbdcf16a2f133193fac6af.json",
+      "bytes": 9900,
+      "sha256": "a4b88d6558b54966af1e35df59d3710b624e61dd5329fa388c2dcc0afb0fca45"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad.json",
+      "bytes": 12871,
+      "sha256": "64d64aaf7a7823240b6081e889fdcd2861e4f2a2081f6db16dfd466c04a4a333"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/5004b5b48ca9ee1c61b61d4a42f792882e55e632.json",
+      "bytes": 28042,
+      "sha256": "fa634ad4286087e64c0c52b332bb2a9117d5bd40d9dda8e198d37c09f9582cba"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/51de4546a0b33a1ce93bfec4c9c43f760bf82b4e.json",
+      "bytes": 48180,
+      "sha256": "d343bf71965b4f54d43120c8771c38abab3a734c3ee1b0299c9be07617b97983"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/53238ab38e08bca10d3302ba85d07d5a72ee21d8.json",
+      "bytes": 5097,
+      "sha256": "86ed2f9e48be746a88be535d569b136c7a12a79fbe9ebf14e4acb80b75286dcd"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/5363ae64e06cb5629a36469c7d15fddbcfff32b4.json",
+      "bytes": 28441,
+      "sha256": "ca64ac038d7559cc5e9d5859df2c9150b81153afbfe43417b996b02c81f0ee2b"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/5432e508f974703d817cfd02024e98803a7eaa72.json",
+      "bytes": 12862,
+      "sha256": "ef4ba9aa25c35304f0cef6271d92bf6ceaedd0e0919774bd517dfdd8a5694591"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/589263554141ba94548f9073327d4e51674bc33b.json",
+      "bytes": 21673,
+      "sha256": "63688e51730a5a01b1d77caccdccd9e53641b3aa7ed222b1883aa85707032a9f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/59c40bbb213627c3fc423a0b826f6f3063ea605d.json",
+      "bytes": 62423,
+      "sha256": "79c915ee6c9b4cad2725e01588144c4c9d969097b8eb36484b683c57d6e5541b"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/5d34da55a8cab5a9a0751ac0afa56437bee79cb9.json",
+      "bytes": 4698,
+      "sha256": "eaaf7a2849dd605074c7bbf53ee44ffa29d001bcced328f0ab311eb946266ef2"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/6085187c9a8aa39e8e1e9d247bc49022c2b0e580.json",
+      "bytes": 16896,
+      "sha256": "ce32c93d0f0aa720c083a07983f5c5ed081cbb303f41370c313d0c95f3ef57de"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/613daed2219432ba4c5321105d9552c7c9765e3e.json",
+      "bytes": 26356,
+      "sha256": "fa800985f009ce40ffa36923b65df31b71d9f688c855f6cc81c3f8d81fc018cc"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/63e57a037ec0092dedaaad96846b5e679d84482f.json",
+      "bytes": 7016,
+      "sha256": "86519f58c1610395fe0b3b534a3e5e635b020a9b80b9a33fab3a1da85c7dee6a"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/64171dd32c6e2c1c016c53af8e04619cd417544d.json",
+      "bytes": 2773,
+      "sha256": "2809b3aa3b4a3cd1aa6f140da25bd00fd94934aca1da83f73cd5e54b6395c028"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/65f1a9e3e67de052a6a2faa96b606b5be251e7b7.json",
+      "bytes": 54845,
+      "sha256": "880c5e4ef087052e756067de6906ed199917e924e6e600ec545821e7946a5a2f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/662a1e8c45673c15d7ed3acbebebe912cb0db9b8.json",
+      "bytes": 16067,
+      "sha256": "6e539c1540c2843944fa0f90df62c95a69975d276e13823f4006a6536b10e7fd"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/66f11bf5aab91e056035e8ab9e5df11e4307775b.json",
+      "bytes": 20955,
+      "sha256": "6346a80a34d7cc6e37ddabbb3598d359a46e752ad640d444b0280ad5b050d5ee"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb.json",
+      "bytes": 10069,
+      "sha256": "02ff57356e5e2b13b5c403bfa359d4063dba6596a929d154bf1654c1cf168204"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/6bc103ff4b92d5d504b1f55d6f60f6009e8b5807.json",
+      "bytes": 33225,
+      "sha256": "a2758477558829ce1e1a9443238c8a24dd14cfdd84aaf7376464dca7f01beede"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/707da881415d2d9dd763bc0de7e3cc04ceafdd56.json",
+      "bytes": 5265,
+      "sha256": "af9647fe04e3e2b006a7ae63a1de492867a17081f5d701f68f8630644859cd0e"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/71f9801c2e21889c55b6aacf4bd80aeee5de812f.json",
+      "bytes": 34025,
+      "sha256": "e25b01dfb20f017ab899e1c0a343d027f8ade1ce4de4490cb3088ad5d1d43214"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/74ed7e65a65c919c787d0086ce50a11c21bf779b.json",
+      "bytes": 29654,
+      "sha256": "ad003cbb19c10216bf084962e1773ac1d316593086f99fec79fb72a00c28aa33"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/7736555f3880f804cab02b35719ac3e53bf00222.json",
+      "bytes": 7781,
+      "sha256": "8a1ed33c9339d460d2590c6dd074658e549fcf9d936474c398c3418117a7c824"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/77a9893766bd77cc075bb409d36cebfaaee64df8.json",
+      "bytes": 17024,
+      "sha256": "ee952d701dc6029ab0e7a67aebd76bf3d829baa51a92fdc64b231c5f7428b78e"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/787993e4497fe1de282569e3f4f611baff061206.json",
+      "bytes": 42870,
+      "sha256": "94d424502948b46727f2d61c01a94f459c4a04f75f0d5022a61a538f92db346d"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/793f8a5918b91199adc164475e515406fa3d11b2.json",
+      "bytes": 15491,
+      "sha256": "121c3ae0cd2923681336c2debea2a6959f798ec6fb00d157efb51bc8ce2c2d64"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/7952a8a136a92700c6905908ab97aa0838b21e55.json",
+      "bytes": 51201,
+      "sha256": "8a38fbd5ffc1340e31269232d7d6c8964ff9d3eaa50e1656a2816f642d223fbc"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/7f220ed46578d33731a21e77c3133895c21f1e7a.json",
+      "bytes": 13995,
+      "sha256": "1ec59f71e9a90d50e659190e6f1646abeadfb1ea674eda18db197251dadfce82"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/813506f4edfb2cf8c6e4492dfedb4c1d589b4b9d.json",
+      "bytes": 9794,
+      "sha256": "2818989991ceab188874d18fc985b9256209e175ba725efe8abb225ca1310621"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/84ed21b1ad446039ac4210d6a02e0bb0bfd553dd.json",
+      "bytes": 9053,
+      "sha256": "d9b852bc314be3b42f05fbbda3597d60220cb3cce9b94474b6e58d9585057218"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/894c899f194b143c3ef6260f88e017296917649f.json",
+      "bytes": 33177,
+      "sha256": "fd6a39a002350270423630682d5d5d6a9fd09568a0a5cf0bc65bf0029cfe8d05"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/89a22c1b71e1904dedb4f161398b07cec64d8624.json",
+      "bytes": 29448,
+      "sha256": "d4b52c11a99cbf568945fb7a30d8607b5b7f810c41e7f381713b288071df4adc"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/8b8b1ceb9292c0f27fccd79fa9fe043851d23526.json",
+      "bytes": 5350,
+      "sha256": "51b2a1d566da33080a628f6c3e52f833c26f379387f199dc7623a27ca33668a4"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/8bed1346b996bce5857cd6d36f5d0d7acfecbf13.json",
+      "bytes": 14620,
+      "sha256": "456808c964418802627227b02f8f04584a7c8860d2a65ab9bf89ddd564e6fc22"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/8c644c4ebb59510da8bdb33930f615dcd441447e.json",
+      "bytes": 10034,
+      "sha256": "85213d9add1edde04056cb899f2605326a7b9d6b99e9710689d9b5c64ea4bc88"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/8d32653eaac8b86521618c824214dd6af8e35e29.json",
+      "bytes": 119177,
+      "sha256": "8389cbb9f2fa97b1a8d738e2347797e3a94ef7f00a3f86019ec28702570ab4a4"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/8ea22df7a81cf271eb1277342f5f6a97a393bb7b.json",
+      "bytes": 14654,
+      "sha256": "ce66b280fb8969a10b97e521f5721ebf30ee09afedb983c5bf44a6aa8522a18f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/975ff5abdba4582884a8cc34289fdc3416318093.json",
+      "bytes": 17616,
+      "sha256": "b5ad49e70e6a91c46e8dff6b0970fa69faf2d508f59c68f77801f278d3f9410c"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/9b66b2d0ca4a6f02c14826fbfbd5f973ddcf5605.json",
+      "bytes": 33989,
+      "sha256": "d0b6c4bbda437116bc232b8900e217929fd590328a5108f28d070fcbf8ba1266"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/9d0ca3557f2b9447055d37557dab1bfdf1a30639.json",
+      "bytes": 25176,
+      "sha256": "82c69407df1f6d58505de3b2c4e9aa2bff42a406c295651dd36694a4c0d52119"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/9d40a9fcad09cbe3fc6eb89692cb0e2eaaa3b763.json",
+      "bytes": 29993,
+      "sha256": "6f0c2ccff505c141c21302fd042f4db270e6783484ccd8b5ccb1e54f748e80b9"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/a2012adfb99d5cc76e30a392586c9c65a3cbb4be.json",
+      "bytes": 17268,
+      "sha256": "269b0a7892516c9bc9a9f0367db265e505b429ab30caf6f76a7e2faec9dda9e7"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/a2cd157a328ec69bb29ffa3aa3a7a4c84c53fe9c.json",
+      "bytes": 117046,
+      "sha256": "68bf712fd33562485c798add55cf93397771d1b4e4ddc32007d65b0a10a127fa"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/a453a3708749d1976a1cc18b69d8ece3f0eeec1e.json",
+      "bytes": 11562,
+      "sha256": "3a4e349895a87c8f05e65726ec725754f0381a4714a765e58bf558c258f5f789"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/a70b6f640c5511330f250882f525b63a4a21117b.json",
+      "bytes": 25978,
+      "sha256": "ecd756c2ec1aaca41954f29d96f4e08a57f4283665adb514173b9a0698907301"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/a8500d445240bd025900ff1fafc63287839ad72a.json",
+      "bytes": 22767,
+      "sha256": "ede5d8e0dcbdb4ab35e2c1f7748461bdc28c35b0072410c9a86e32de15c9e00a"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/a8b89d733da4bbd2b984071a01542d5184f35a4b.json",
+      "bytes": 18125,
+      "sha256": "4a19e1f1720efbd54e707a37f38e989d0fc4097e4388aed6641ab876b8a7f22e"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/aa7437abd793a0c2dac7260555097204864cf45c.json",
+      "bytes": 15712,
+      "sha256": "84d33983320ca410237d9ac16cddb97a909329cc25b4480c6fc7aa06a8cc9ecd"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ab8f5594df9ff55132d3d8754e9d229a806dc325.json",
+      "bytes": 24450,
+      "sha256": "cd85305739901619976840319021426f8d05dd8f39617bf50e03182354605068"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/aba5a0025e7d001d8b5b7c8876122f0ad2eead62.json",
+      "bytes": 14906,
+      "sha256": "8efe9ee2fa5008db7a947cf4b2b206bbb65b0bbebf08eb0478033418b7dd56e1"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ac71406105da66f77115117bbab2c38428f7e5c3.json",
+      "bytes": 11740,
+      "sha256": "2c4cb1c7926208727abe9bdcbab4338ac80955d9a057e3ee1744a7f5f7e2303c"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ae0a56e5d074b921f259dc45c6c9167d6aac9125.json",
+      "bytes": 27648,
+      "sha256": "8710993d06c4c1ea343e9e001d455bb28571128e358e85ab1ec665718155f693"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/af90b4afc38d4f18e0ab1d9ac9ef16277761b355.json",
+      "bytes": 4692,
+      "sha256": "125b264ec38bb7614e38d01cc1c019301cbb7a90ba69146a775aa0bfa5f2eaf3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/b03ba458907946c1b1c152149ee5867f8d6a62df.json",
+      "bytes": 7681,
+      "sha256": "90a362d597ba380a5a9dd3aecffd337933ea24f185b6960c8301a8bc09969d43"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/b3a9ff28f407437a85b9c56278bd31944ba4033e.json",
+      "bytes": 5504,
+      "sha256": "0c125cec761efcb6b35847b6dc0a50c8071d33582ec81848008a173656a4f95d"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/b3d936de6992b612c77abaddd7b761b5fb43b446.json",
+      "bytes": 9871,
+      "sha256": "352a6f4ee8c14f882e66e6099ba04b4c0aa948a67f6a408677d9100aec50cdf3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/b9269c83867fbcae73e0de19ae6ca818fefb713a.json",
+      "bytes": 14960,
+      "sha256": "8105b9b431bbd0355172404bf56fc3df879a104ab2d7e3da767e229f06ea4779"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/bc925194ce3b388d4b6d9f73b4b3362ed4f2ad5f.json",
+      "bytes": 28319,
+      "sha256": "132c41136f57f20304be70eed85922f299eb73dde72596b70a87b991f794e918"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c22c42edc7a663be4cce788d882edb0a83b752fd.json",
+      "bytes": 19032,
+      "sha256": "67d4f016c313cb60fdb9c3cfda7f097dbf6770b0b6b9cadffe6afa24ef2fe89f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c237fa215f061147975e91b01fa830b3f44458c7.json",
+      "bytes": 5242,
+      "sha256": "6e8275ba9cc38ad903638f9b778ece60e67ac889286d916338044af274ddb339"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c27907d841039aaeccb96a755760dfa0fbe36730.json",
+      "bytes": 16941,
+      "sha256": "12b054279a5a981ef4b7815724154db59ca9bc84ed2f410694c445ad58205632"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c3593e6664e8572d882bd19d4525dea0f3d00d17.json",
+      "bytes": 39677,
+      "sha256": "a7adb7de794c8d51dd71477eb47dc3c9a1e1a4cf18e4154b7d96c53d0a934b6e"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c4aa4ed6a2d4831e51e8c877fbcfa0d66d265bf6.json",
+      "bytes": 20111,
+      "sha256": "f1b329c11bae786ff1ddeb78adab8cd040d715178128bb8230b37a48696e3ac3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c57449c1107a912442c6b0af23e270df41032522.json",
+      "bytes": 5200,
+      "sha256": "4c93bfece54b5c64c7954e38a974d0725cf094827ae416052d2a7ec694d0532f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c5a09df8939dfaeaf76119ba5507c552721c3a30.json",
+      "bytes": 10164,
+      "sha256": "bc88fa8514c795b2c22444be9cd5a49132771115373cbb1263545b2fca5f1e41"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/c6fd5a1789ce8c6f06c48693aa9d5479a00d610a.json",
+      "bytes": 12368,
+      "sha256": "d9f6f4ac74cf0f8362f5b740fa7902e6b9b9f8b11af74daca5622d0dc3bd4f10"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/cb412b50a1415c5662a346e509b23326799247f9.json",
+      "bytes": 17385,
+      "sha256": "f64e4c7e70ca0a0a2f41b149ff7e934b84d22a20aabb2384508b98e46f21ebea"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/cbda5345d2aaa730b0361e7e374e356478f6222d.json",
+      "bytes": 15345,
+      "sha256": "010c776f576996bde8d0774f34fc7cd19c78ce13b44c43df44485e52696074a4"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/cfdfce7a2b1786a658bbfd1542c45f8f13cabbf8.json",
+      "bytes": 25005,
+      "sha256": "1c16fa6ec30c81a526eb5d2d82d9b8b0b6b63e8ca009a852f30d49cb18005fbf"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/d5c55031e1e032392469288a205bc88d48013eb0.json",
+      "bytes": 59552,
+      "sha256": "8c6ab8641671e1a43d00fd02060b33fc416c498b5e8ffc0aee49f1ef9f8091c7"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
+      "bytes": 47788,
+      "sha256": "875fccde26e01283690030afcdf7d9211d9216db6a564d874b18756563545058"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/d81bbe14def4249d9d081de6a9f9f823e4fad69a.json",
+      "bytes": 18508,
+      "sha256": "ebefd1bef9268d637a180db99410d2d9d7f9580f22dfb5a9b9415c8e0e7f8152"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/d944f63c7517498fc571536271b96b111ce8ab05.json",
+      "bytes": 7230,
+      "sha256": "4f9881a8e87f973cefc7973376bfc5ad96085c0f5b96054034b3f96ff9efa014"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/d9edc899c563eca055bf75ae4e5be8147f10ceb9.json",
+      "bytes": 11625,
+      "sha256": "83761e8f21402abd29e907547c1ece10b4c329c38cc5d90b0c9bf6a743b92cf1"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/dc173440a953cf699874950fb593e1d4f6d46fa8.json",
+      "bytes": 9777,
+      "sha256": "ae786d2fc53e0141444fd532cb7d5cf4045acd1abb2b43b1b21a240b9bf46c76"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/dc8212978d4929c26c514bb08f9ed8e5f6df8cef.json",
+      "bytes": 18274,
+      "sha256": "9f3e3712f6465be8d606482706fe06314c4ff859c920f07569522ea8f5ead066"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/dccb53c6830f5e5aaf3c8454cd4eec5ae6b6222b.json",
+      "bytes": 22696,
+      "sha256": "6a6fc8087b2a4a159636fcc08f8ceaebb59d96a03d6f57238981265592e81e6f"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/e08b30fa53a65be4947fc9a9e9140a388a47cad1.json",
+      "bytes": 63038,
+      "sha256": "9c901b6fab3e0f0198c0c7072867c3f62a4c9efd3b54d80e62dd19794061331b"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/e7608c0719fbf77b0f1a350d648dd695be23be6b.json",
+      "bytes": 21608,
+      "sha256": "a197147de3b5c6886146556e68b9b2f1ebb66ca3081eb54783e7906ea863e3b2"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/e802f0b8b24a6b74caf3e6c40c0454d8cef39914.json",
+      "bytes": 70240,
+      "sha256": "8867511db5e431f7eb55deb862364ca0d7580a896b3b864d4ba80c54d98504c3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/eb34afd7f1adc6a9655d3e4f238c9eb2c5288cf1.json",
+      "bytes": 34202,
+      "sha256": "451c683ddd38cd7c2286a804e0f1d623536481b8b95f018226932061564a3fb4"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/eb764edd3e8596d9a4635e3a634ba0b0be53becf.json",
+      "bytes": 12736,
+      "sha256": "464bc8f4084dba25ebf76f5ac7c258f0e011a94f8d9a9eec5abfac96c4907579"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ec295ed9c1d28e4593a82a608b7d90071d6e43a7.json",
+      "bytes": 15351,
+      "sha256": "a57db8e7b41a499870b9f29b59d0f1dbf106e82303c517d2fb81d161b75beffc"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ec9972a60325de147277941e04089e2d4be0baf9.json",
+      "bytes": 33394,
+      "sha256": "8c8b742b6c5564d09c35f4d700b97ff89e745a29c79fe5a0b081f85d091f75e2"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ecd910eab810df0eb6999a1ae5202536935964d4.json",
+      "bytes": 34114,
+      "sha256": "33202c4d5554023765ea7d22f731e660ad67a9aee8573111e140ed2535ef4dd2"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ee6647564d871ebc86fa81c44c87718feb178567.json",
+      "bytes": 18548,
+      "sha256": "c6ec6f589cc97ab44307ae057ab45ee07ecdfb0f8ee0cf151f558583d158f4d4"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f0d4f3622f967bb394a16e178339d6a30c02a5e0.json",
+      "bytes": 22570,
+      "sha256": "09caa513d8affa5f824226312f9947e376e4acb359aea2c1f8b63acb23892cee"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f1dc0ccc54ec82aa774720db3c822d3e0ea9c418.json",
+      "bytes": 90026,
+      "sha256": "1cfcd45cae0587d18b70f9bbee3b8bc3b9ca3f020cab53856d7ab9b5d15156e5"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f205199ee2501ddee1b2caca4d90ab28e6dc5e87.json",
+      "bytes": 17532,
+      "sha256": "c897e3b6aca04cf1eab08724e9e3690a07b548cae19fda251b50912cbf09f2a1"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f2e1a56027bbe0efe9eef1720ccc699ae7da90fe.json",
+      "bytes": 23059,
+      "sha256": "17b12cfd3b466c68246b1c098d82b003a66b03377b70af491869e2b2103db9b3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f3d6966a040b69a375f6bbfa2a8c502b8c8492e4.json",
+      "bytes": 5429,
+      "sha256": "62266a04237ae186b67352df184b7e2357b3e7c208745bcb8cf39cc453bba7d3"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f4aebd57f65f7c24656538cd72ba9e79223d81cd.json",
+      "bytes": 17790,
+      "sha256": "684b9e85229cf2cec9e3e8e507ee701e4218885d7371c9af7bd252cb84b285f5"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f5052a1906bf9b87e5235bda57d367b1103729db.json",
+      "bytes": 15192,
+      "sha256": "6f71de0d77e9be558a130284958a9eae78c2eb784f63a9c9d6eef3b3ce107be9"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f5097af8493701d64a8e2a2b5797df380f3b348a.json",
+      "bytes": 5715,
+      "sha256": "992efcc0e1e56ea9058c60a0297c7c2199c3d8de55332b82906ad3151b229fb1"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f89b6c01aec40fba4de81e26ec433ef4fe2b5e96.json",
+      "bytes": 2869,
+      "sha256": "c855c7cd30daa3fcd5cd74d35ba4168fe34454d3271e82822594a237cbf274f5"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/f9bc493071ef316b527f2b55ddbf22e1ae2ec843.json",
+      "bytes": 19400,
+      "sha256": "3385e1c59c75faac7a00811bd5debf64e1ebdbf04e1f01ff07c5d71e24d6c2d0"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/fc6177b5be441aa47694c0d032d2aed4245d5c34.json",
+      "bytes": 29547,
+      "sha256": "7fda033fd9e3bcd5090004e80a70c5c6eaeddc7290b617f41e8742078d721410"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/fc894122f24b80ad30846b9ffdefc342567bedc2.json",
+      "bytes": 10270,
+      "sha256": "7808767e6317b9c76b18dba19dc1801f8e6e13d5cb7f2a91c043cc9df6a25119"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ff5ff41986f2d87e6b1ecb4d572fb811510461fb.json",
+      "bytes": 15201,
+      "sha256": "7dc26aef9400826a1dea6966a10cf40f80bbe336a20b13c0020312b19d9cc6a8"
+    },
+    {
+      "path": "content/post-foot-author-history/author-epochs/ff8f76a80ad0b73a93421dac5431759ab96ea187.json",
+      "bytes": 92441,
+      "sha256": "60d89cf268ee4e429e30e03806f77f63cc791f4188c87e8ca927f57956cd1678"
+    },
+    {
+      "path": "content/post-foot-author-history/combined-replay-index.json",
+      "bytes": 103486,
+      "sha256": "6b1b2631f505ea0d97364f6385708c214f93645de39428ece09d110889524bcb"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/check-ligament-mri-revision.json",
+      "bytes": 17335,
+      "sha256": "7fae939b55f55cbca8cfd840bb185093e8335274f5513f7e9d758a9f518d5f42"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/genicular-ultrasound.json",
+      "bytes": 12190,
+      "sha256": "63326cd75105470b40bec45f81f1e74822b480fbc441bf9896484d10c2e63092"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-0587c30b.json",
+      "bytes": 20254,
+      "sha256": "a05ae14e0406743d5c633ff614e1af66961bf4f5373d7d869f9c7a6fccf59d8f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-08be622a.json",
+      "bytes": 8774,
+      "sha256": "e77908b65907bc1d3766a24c9968716ab974fec4ff95e1eb354450f8c31df649"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-0ac11ca2.json",
+      "bytes": 12348,
+      "sha256": "5a70497c4160e98c48aaab1e0c673b9830c181b2c804d0ad61b1a43da6c45843"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-0f894460.json",
+      "bytes": 11757,
+      "sha256": "34c9af1440c05a386e1b96646baf19dae7f45a091de7bfae977fbcb8cb62adf2"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-1563e639.json",
+      "bytes": 17188,
+      "sha256": "ee310e56640917ef049a769442380ecba21434a300e8c8eefbf2f2b29059fb23"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-1604303b.json",
+      "bytes": 25710,
+      "sha256": "997416b91fea47e1d4abe880ba9b001f1038466f9741be133739990f8bbb1294"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-169e3aef.json",
+      "bytes": 49888,
+      "sha256": "0e56d16c0f8e69eef0db10b534c377c4810de0265a8c4353dd588f8d70fafdae"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-20988a1b.json",
+      "bytes": 44848,
+      "sha256": "cc69ce46836b0c8e1a47f58d5737a04bcf117dc7545f5c814a811acd838bd737"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-245ccffe.json",
+      "bytes": 10526,
+      "sha256": "a75fcce2989d4521792686ec4403fef927aec45f0e8aea0fbf391a0723d06c2c"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-25fcb29c.json",
+      "bytes": 16817,
+      "sha256": "092f0436453bd0e946ec3e0cc0f1ba600dad0963fabf57c843858302afa8f2cc"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-280c701c.json",
+      "bytes": 5810,
+      "sha256": "b1b8e6a8a31c0e04b94e646c629ee2a34b305a3c63e2aafb4026a75889ac616f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-29d07387.json",
+      "bytes": 16931,
+      "sha256": "b63929da3aec3820b313eb9d773c12ef8c2cd9e356a4ee2b5088c1548c8849e1"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-2d72005e.json",
+      "bytes": 6655,
+      "sha256": "6ac4c33bec160fb508bd8957bdff1fb077ee974412634ca80197cedd92e9e25c"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-2e67298f.json",
+      "bytes": 11951,
+      "sha256": "f98d4c89f77d8a899ab99e65f993278639d622400116310b647073d2396ed053"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-325fc6aa.json",
+      "bytes": 39898,
+      "sha256": "4742addc5447f8b884a09068b813e7526d6ed7cd84d5dfc7f9d645a022131121"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-363dc85c.json",
+      "bytes": 25132,
+      "sha256": "547d353bb579148e8287682aba023b3b58fff13b4b67918c8d7d1259af6ee5d1"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-3e66d2a7.json",
+      "bytes": 5856,
+      "sha256": "84061c9b3d36059c7997303574d12bae63c27936877bd630029f1de1d0903b18"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-408759d5.json",
+      "bytes": 11642,
+      "sha256": "eabdccd9a32885c73ddaceef194b35136a4467f67b27bea12f3bc178914a15f3"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-4233534f.json",
+      "bytes": 5412,
+      "sha256": "aad5814195fe5ce97437355d3606d05f953ccc4fcd04b257646fed4ed6022c2c"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-4624f82b.json",
+      "bytes": 39656,
+      "sha256": "08bfa9ce1c6f43b869d679979aa20689696cb431c56eb35be8e2c4e412005ea8"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-4dee2178.json",
+      "bytes": 11755,
+      "sha256": "a3361b4fc106bce8a153cc68fe383a63bedc2d64e1bd289798f2c6764f69c866"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-53238ab3.json",
+      "bytes": 6158,
+      "sha256": "ea1827dd7d78684eba94092639fd9af39acf9ba4edce980eb45bfcba5433461e"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-5432e508.json",
+      "bytes": 14939,
+      "sha256": "ec541cc09695575d015f514729345c8920e7701e75dde05754b604499259fb40"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-58926355.json",
+      "bytes": 25338,
+      "sha256": "1db1680f721887a5fbb53fdc5f3ec0c56bd5faf314e45619dc5db413b6cbea22"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-5d34da55.json",
+      "bytes": 5751,
+      "sha256": "c3ba247cb5947eda1975a830301d34e7774d22a013e805c2208cecabf9bffe22"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-6085187c.json",
+      "bytes": 20231,
+      "sha256": "0151351329f1120893a42da6ddaa4109d547f5d0bf7149ed2019c1ca98722435"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-63e57a03.json",
+      "bytes": 8212,
+      "sha256": "894dc454667367b8446605a5ad05e254457eed022abb29be390407c9885e69c5"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-64171dd3.json",
+      "bytes": 3466,
+      "sha256": "f0a22a081f5d4674d81b128a592a0b37d0c73fe43a612cfa931f4275b9557617"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-6ba0dd43.json",
+      "bytes": 11930,
+      "sha256": "da1ae0368cbbe7ae97f24c33f0668694e465bb5dc1eb8c8beec22267634f1125"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-6bc103ff.json",
+      "bytes": 39031,
+      "sha256": "d9f602c12b84e7eb692db14ae977119d6139e1f87b907544d981579d972dfdd3"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-707da881.json",
+      "bytes": 6370,
+      "sha256": "f3ea14510c9ee9ad7ebe5d9059dde9e0800e975be9a4e072857ef676dcc000af"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-71f9801c.json",
+      "bytes": 23293,
+      "sha256": "2a73c92eab1353b3111832680ed83534b0ed03904f1451e2a057368e99ffaea2"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-787993e4.json",
+      "bytes": 50495,
+      "sha256": "a1ba172c1f55aa1021a35deb453928e152be8dea813655fdcbd0d826c9729f52"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-793f8a59.json",
+      "bytes": 18292,
+      "sha256": "8097a523ded181174a8d6bacbb9b50fdf35fb619fc2a16b6d8236ab9b5abda42"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-7f220ed4.json",
+      "bytes": 16339,
+      "sha256": "535d4352b6de10d9a8bfde0b3116f35ae0786ad2a835951f9148223258b2a34f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-813506f4.json",
+      "bytes": 11642,
+      "sha256": "aef89d65cc0fc8fb41eb24f9858e556eba40487728462a722309ecbfc0b53175"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-89a22c1b.json",
+      "bytes": 34536,
+      "sha256": "32e4d9d73c57bc496a28e0217761919d2fa761717c712e0b0ec75c3816612ec0"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-8bed1346-commissuralLandmarkQuizLesson.json",
+      "bytes": 5867,
+      "sha256": "a74a1026bce353a46cd872c5bc0b9e6faf167be293f0e8a054478e7b3335115a"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-8bed1346-nasalCartilageQuizLesson.json",
+      "bytes": 12771,
+      "sha256": "5fa850af5bf9ae9ddb4e8e41642a4e96f040e0eb0338d66a242f5dbee6e50a3c"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-8c644c4e.json",
+      "bytes": 11904,
+      "sha256": "33b390ae974536dfcd4bbb79f73e1f23bde129f5d2644c3e387ada77e551dc75"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-9d0ca355.json",
+      "bytes": 29367,
+      "sha256": "bd78cca47c0fb417d76229fadfc50d24858cdf5db4fced1ceff27c0df76e089b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-a2cd157a.json",
+      "bytes": 78421,
+      "sha256": "0e9f5fb2087ee9d04236b8648e76c34edf06b1db8bbc028f87a050a363e10b0c"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-a70b6f64.json",
+      "bytes": 30928,
+      "sha256": "1f814ea620851a9929b45ee61fd862b6f7c8a9d57701e11b6ed5a8028aa7ec09"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-aa7437ab.json",
+      "bytes": 18425,
+      "sha256": "157ef17d5875feb281efa7d77ec1d9050b848d4f4a812cfa8a2c0313b440b461"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-ab8f5594.json",
+      "bytes": 28700,
+      "sha256": "1894990adc667ea62218804b270baae8ef2ce5260067abe3cb4380deb3c6692d"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-aba5a002.json",
+      "bytes": 17621,
+      "sha256": "cbfb8fbededdac3eea6ddb184aee2a8be4b64c8c9b1942654547a22c6dd012a6"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-ac714061.json",
+      "bytes": 14005,
+      "sha256": "1782f88dfd87fce90f6e35fa584efd21e15fc12503d2a08121e57b72b5f0a906"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-af90b4af.json",
+      "bytes": 5758,
+      "sha256": "48618ee9071cd0b206648d471f7fbf5ef2b97bf74e23ab3ef2e432a2c9a64241"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-b03ba458.json",
+      "bytes": 9180,
+      "sha256": "e53e3e4b886f061c8de380c4ff25ad332b1587f40a83b8834a1991c7ceab256b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-b3a9ff28.json",
+      "bytes": 6660,
+      "sha256": "8bda4f29b6360aec3d36b3add3a612e2f878f3f3ab5725809ed5442154c39aa4"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-b3d936de.json",
+      "bytes": 11743,
+      "sha256": "d6e5cf923d2ac3b052a5ae8587d6ba3a2e82161f02c30170d5c70886f2f4565b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-b9269c83.json",
+      "bytes": 17610,
+      "sha256": "2a11c259cdf5b17e85a19052b518d347cb0bac1e11e977e1c19ce21555bf9d17"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-bc925194.json",
+      "bytes": 33256,
+      "sha256": "bb28c229866c3c0bb39acb7e7368784e0f055343472e33a576bc0d24edc6c0ca"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-c22c42ed.json",
+      "bytes": 22419,
+      "sha256": "8797920f88a8272a9e41fc7a63cb9c687895237cdab7d7b91fbce661539c8804"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-c237fa21.json",
+      "bytes": 6346,
+      "sha256": "19d868bf6de842b67da7e584043283d8c3759cf9de3553b87259292c4e60760e"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-c3593e66.json",
+      "bytes": 46306,
+      "sha256": "9eb6cbf43b59068a01ff2211ef4d3e30641a247d1e5b5078434e30f9b6019a7f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-c6fd5a17.json",
+      "bytes": 14628,
+      "sha256": "b3261efcb72bbecb717d39e3ce96964d822f4fc2481f381f6fc17faaa710dab8"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
+      "bytes": 56061,
+      "sha256": "140d2e663678f9d23c4e41bfd5d588ea5f532838f13b6453becffc453d42ceee"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-d944f63c.json",
+      "bytes": 8743,
+      "sha256": "130ba068a0925193189aa6c1dc180a0d913f4b44b52dac2a9c1ca463692a4162"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-dc173440.json",
+      "bytes": 11612,
+      "sha256": "e40c91db6590d5f45245fe286d5e71d03f5009135f101f1107920330e5da7c36"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-dc821297.json",
+      "bytes": 14475,
+      "sha256": "2da95815495bb6a271097ce688da18205dea8602d581584c7b65f5627f0f7d3b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-dccb53c6.json",
+      "bytes": 19244,
+      "sha256": "13c05071807b351671acdd6ce2a9ee0455a6a739ad66c21cebb5efea38985b80"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-eb34afd7.json",
+      "bytes": 40891,
+      "sha256": "b6e4d4083422dc2e21c9d1dd6ba30392c2f088bc8e7d6f6ec29d04970ebb4ddf"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-ec9972a6.json",
+      "bytes": 39861,
+      "sha256": "dafdba0fe52857e5231da3d9f196bfa9a486d187b32d0ae5482f32389b07cee3"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-ecd910ea.json",
+      "bytes": 40711,
+      "sha256": "e5e78704f3a839587e485be454f19d21e944c2414bc5e6a051b210532496550b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-f205199e.json",
+      "bytes": 14175,
+      "sha256": "1e8c0b0151bba9024bd50aada1d9d79af638ac999ba5656691d8dab291fbd54b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-f3d6966a.json",
+      "bytes": 6506,
+      "sha256": "267347c0caad869885365e39eeb64b57e6de305ea4312a09a09cce54bfadebd4"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-f4aebd57.json",
+      "bytes": 21305,
+      "sha256": "77ee95ce609c698cbd2dde54d22836c545377fb5fb618e7468ee988d7f9613ba"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-f89b6c01.json",
+      "bytes": 3562,
+      "sha256": "20f64f4448ebe0eaa9d1406242272eb76942f1b0cef58520706338f61335bda7"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-author-ff8f76a8.json",
+      "bytes": 62689,
+      "sha256": "e3ed78153329454643f7f1d7447f6f41a2e320f441ae345d7c65b44fb158994f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-00a36984.json",
+      "bytes": 31933,
+      "sha256": "e7ba77c4b8d8bba58c0d16c958ffd4a791e23e46572d60b303e40a83498f8632"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-0141a706.json",
+      "bytes": 95265,
+      "sha256": "a2a934e8bb880bcda21bd4d3bb21300d3fff230d5f5bf66a99c6c268b2253b13"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-017344c4.json",
+      "bytes": 40449,
+      "sha256": "c5cfbfabd7d3e7d5fe02946caeb292f9dc5afa966b205d4346de4fcc599737c1"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-027f29d5.json",
+      "bytes": 14586,
+      "sha256": "1fccbb3d39f18a84296aa7515a05e942bf55c9e0af51b29baa4b9e5d94bfb982"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-057640ca.json",
+      "bytes": 47238,
+      "sha256": "68d2051a9beef76733ec28d25beab59da4ee45bf0dccb6d66270af2b85a2ec03"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-0aacebb9.json",
+      "bytes": 36348,
+      "sha256": "ac074023ab287ab3e96d17dfa674ff6f8033a324305d225a87fabd2ae7b18819"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-0bb3cf88.json",
+      "bytes": 68839,
+      "sha256": "e6d7f2776ded020871354155d413feb8774c779bea21b76c07bfddce5d974c63"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-115f02e2.json",
+      "bytes": 31919,
+      "sha256": "37127459299406ac52350754daa55b42f7833de9cc2c40577511e9387af87816"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-12ae0c25.json",
+      "bytes": 14743,
+      "sha256": "00419806aaa202151c2cc305cc9f33a79d5ebcadfe3b039ea5d3a1f0621e4ff8"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-1dc4f82f.json",
+      "bytes": 37526,
+      "sha256": "3902939a3d3492c05a51ec9fb6cd308bbb8a259bf326059d6301826373a57fd0"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-1dc79164.json",
+      "bytes": 47299,
+      "sha256": "92afff9b2757df145a453b1545c08dbacfc1f84e236dc9c5259d28ee5a203655"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-214cec89.json",
+      "bytes": 34738,
+      "sha256": "b6112278a0e62d2b4ae6a88a361566f7dcad6e6ae970056ffd7cccc6d0b14aea"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-29770743.json",
+      "bytes": 11432,
+      "sha256": "94ecf77c90ec1de24e5e4eccb35aad7173838a04e04dce369418bddfa9492b5d"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-2dba5dc3.json",
+      "bytes": 28276,
+      "sha256": "0d5f2c546afc2dda163c88103d1fc3e3dccb8271e396f549754a0efc13c2c22f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-343bbe3d.json",
+      "bytes": 13489,
+      "sha256": "dd8b1ed983dfcb7fdc1f61bb98f8bfe740f3b900f2024b17304f763a1845a912"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-38f225ff.json",
+      "bytes": 15726,
+      "sha256": "91cd906c4daebeb0b573a012f120b8fa237472efc449b28fbda663f6859b4b39"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-390fc0ce.json",
+      "bytes": 20612,
+      "sha256": "a271a51425d9f3173cf58f5e52c1b73b23bb988f1e7dad18d59120839c7f9bbd"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-3edd8149.json",
+      "bytes": 106523,
+      "sha256": "ef0267728f8951b3cbc18d552bccb2b350a94d47b44178526784a982844bf499"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-408ba968.json",
+      "bytes": 5388,
+      "sha256": "69fdbe85f1b7d5753d1e04fd6b8a0b52dbaf29966210b96f1c2c7b9b3c7904c3"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-46c43ed8.json",
+      "bytes": 6941,
+      "sha256": "8a6258fe5f1da7660287cedfe2d81235778135670a481492eb614a35737607bd"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-4890de3d.json",
+      "bytes": 74446,
+      "sha256": "832a49a78f1cd408c28af7d2758d650a683fceb79ccabd57b3a5b3e390ad093f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-4b991606.json",
+      "bytes": 85766,
+      "sha256": "ff795755e40e33e8bcbe7375c2604305c3460b5a243139b1df94020ab58a2f4b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-4bb7a85b.json",
+      "bytes": 49583,
+      "sha256": "6e199565d011363f2aa2799d9cd5b99bf8662a6089da82996d8f55e2ba16c2a7"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-4e9f5385.json",
+      "bytes": 15744,
+      "sha256": "b0602e23f98d5db259d8377ea9f00ca7ef1f83e1543ffc3c8011856ad6eff7ff"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-5004b5b4.json",
+      "bytes": 25529,
+      "sha256": "8bf09e29670786401f2bf45c93c9e3b9e66915c2f6f1b39bbbdd2a7decddefb7"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-51de4546-forearmMuscleQuizLesson.json",
+      "bytes": 32179,
+      "sha256": "c0792aff53c3e685cc525e0642450b84298ff96de43da0347abf25aebefc4a0f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-51de4546-legMuscleQuizLesson.json",
+      "bytes": 13672,
+      "sha256": "3d55af829d3e540578d3389b7192a0f013c0ba0db17f0b6471a8fded191ddc09"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-51de4546-thighDeepMuscleQuizLesson.json",
+      "bytes": 13067,
+      "sha256": "5af16cb27df83b332b8864485a90daf31a2298c114d924c788b379055c2b9a5c"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-5363ae64.json",
+      "bytes": 34027,
+      "sha256": "bde81a4d6bf97525aa714fd7623e9379ecc8fdf0b9c45ad7eb61775d1ed2e581"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-59c40bbb.json",
+      "bytes": 74454,
+      "sha256": "78814869069174dacb42aab0e4a1e2f6206f9eb3e7fa465ec55112a970e95ed2"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-613daed2.json",
+      "bytes": 32238,
+      "sha256": "9980f5d32e015c2130a53e779de37eea5f4eff255d0fac2f75bed75888f9b66f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-65f1a9e3.json",
+      "bytes": 66680,
+      "sha256": "ff21d06726644bf832c469fd6e544a7761837e6b51abcbe49433986faab555f2"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-662a1e8c.json",
+      "bytes": 10365,
+      "sha256": "d9658c60e1b1c98d412999c81c43db241338f87438291b3b8b06336cd666ab98"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-66f11bf5.json",
+      "bytes": 25731,
+      "sha256": "2fdcbbd8b4a90eec10a8c1fd59fe49be25a6b02056f25078a427e463e384d6a1"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-74ed7e65.json",
+      "bytes": 35574,
+      "sha256": "d0d576acd8da8694d9277b43415ba81b59e30ad8e02cdd23af23a386d7ed6461"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-7736555f.json",
+      "bytes": 9583,
+      "sha256": "c0eda16678739e692cf3db1bac08408b55b1dab70145cf329c636f194fa35f90"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-77a98937.json",
+      "bytes": 20650,
+      "sha256": "0ae9d2c7c1f5668b27147f0257413e33c4c48eafc1d24bfa442a20c6323da885"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-7952a8a1.json",
+      "bytes": 62313,
+      "sha256": "4302c0b1188411903df215bf19948d08cd6464d15f19ccdbfc17262f1a7466e1"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-84ed21b1.json",
+      "bytes": 11136,
+      "sha256": "6bb784956547c3a6b5777a3f10b39b5b121748143c8488544af45266fb06e5bd"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-894c899f.json",
+      "bytes": 39301,
+      "sha256": "f7fc3b6198eafeeb5b87a1d94d716e198dd01c4a41fadeedb9ed169bffe2b7df"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-8b8b1ceb.json",
+      "bytes": 6697,
+      "sha256": "369966c97bd4b6b0701e10375a8929fdc4ea0589c106aafb0d699ba16d8f4cf2"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-8d32653e.json",
+      "bytes": 141577,
+      "sha256": "f8218d60ea6c46c98196de1f59fb904c6706871d754a28557d2e53e5390b2d1d"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-8ea22df7.json",
+      "bytes": 17525,
+      "sha256": "21a3b649b1f0049023f84ff4974d0521ad7b2ba43541c239406081382a435168"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-975ff5ab.json",
+      "bytes": 21305,
+      "sha256": "3b6591a34f098163ae2f3dd04c0c36226be93a562c64fe4f2b04721a8a158480"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-9b66b2d0.json",
+      "bytes": 41565,
+      "sha256": "c6eb4c038417ad6e8ea79debcc947acd4a8777d0ff58188f961075bfdaf5a122"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-9d40a9fc.json",
+      "bytes": 36312,
+      "sha256": "de0c563b44637d2b40ec91e2c3502e8accff1255efa1850adda3a07dd83800d8"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-a2012adf.json",
+      "bytes": 20877,
+      "sha256": "49a4e6ca02a027bf4db04033a3cd60c2d2c040fa7158f7e9a4ced85e9d3da81e"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-a453a370.json",
+      "bytes": 14017,
+      "sha256": "5df6954e1822f4a6f04b58b02f998c2d8b530e8525408465b7a48b15323e89cc"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-a8500d44.json",
+      "bytes": 27956,
+      "sha256": "259ef741643e343558d15c7d961631cd45cda6c248d5c7f80a206377a9555695"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-a8b89d73.json",
+      "bytes": 21953,
+      "sha256": "5d3d0d6951626ed6c82ae848ec7e69814953b6c566d306ae8f0d523202e0d6b5"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-ae0a56e5.json",
+      "bytes": 33826,
+      "sha256": "f6dd9c41239bfc3892a3933b99c2f2bd7aebead543e6f630c7d6f1c693c110e9"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-c27907d8.json",
+      "bytes": 20585,
+      "sha256": "b2add3442042247aa4caa0becd063496ada01106bbd1651a4dd51e25d2da521a"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-c4aa4ed6.json",
+      "bytes": 24023,
+      "sha256": "748962b291d4db36cf6b7b11623510e61d0a49ff0d5fbc117a284474ce25db77"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-c57449c1.json",
+      "bytes": 6535,
+      "sha256": "e14ca15aa55d558c644c2e116d9c2ee90788123daf59bd7e423afdfcfe8cdcb7"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-c5a09df8.json",
+      "bytes": 12355,
+      "sha256": "5d9ea79be7a81084e28d75a4ab94d4e70030798d033ab5c1aa0cbe2079005650"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-cb412b50.json",
+      "bytes": 20963,
+      "sha256": "4d5065d18d24eb33407e48a847188f6f6e56a776e065b296f9ea7f53dbf1af1a"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-cbda5345.json",
+      "bytes": 18980,
+      "sha256": "e1366db0600d32eb16cac2bd463424df260eaf7704e95690b4f88df8c931c20b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-cfdfce7a.json",
+      "bytes": 30097,
+      "sha256": "b3a63c2ea68b9d7b92fb3ce15c6b5b9ba439c975ec0a9ab1dd9f14127f6c2667"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-d5c55031.json",
+      "bytes": 72481,
+      "sha256": "76813ec4ae829a3d7c487404d970434f732fe404cc8ae4e5d196f7154ccd3003"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-d81bbe14.json",
+      "bytes": 22115,
+      "sha256": "ed5106ea5c07aef12e5491dbed4f5591edf856a2626449a6073d9ff0d9e8d409"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-d9edc899.json",
+      "bytes": 14474,
+      "sha256": "a09107d4409af6a83550c666682ed93190c0e3b843c63c33afca26b7676647c9"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-e08b30fa.json",
+      "bytes": 74736,
+      "sha256": "2e0fca07978ad1ccf2f488960233a722f83d5da55e3200a2513459c9a095bb84"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-e7608c07.json",
+      "bytes": 26069,
+      "sha256": "5aa8dcae21930a325bc97d5fde3add71c08b5073442b675bc631d57e4a2b2107"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-e802f0b8.json",
+      "bytes": 85386,
+      "sha256": "fd9e8312539577d91750439bb26e80319eb019e8b88213d54b27e11e06098a9b"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-eb764edd.json",
+      "bytes": 15246,
+      "sha256": "d9af888000a2f87f3032a69615a4228c4fccfc2b587af5a04678f5eb0a9b7b97"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-ec295ed9.json",
+      "bytes": 18928,
+      "sha256": "5e4562b10c6011cbd56a35984c25abe56f26ae97acf64ca5b941708d3fe7a6e4"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-ee664756.json",
+      "bytes": 21412,
+      "sha256": "c84e062e1b996c35a4b4d724b5cb906f980421845e83745ede2010b2c9c0a9c1"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-f0d4f362.json",
+      "bytes": 27734,
+      "sha256": "69324b3652000490ab48f205ea0976ca77a11aef444377d43f6cd1e980791548"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-f1dc0ccc.json",
+      "bytes": 105122,
+      "sha256": "024fc56cf734b4e5a4486acf99edbd39c304078b6a36da9cd24b0b8851eb1bff"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-f2e1a560.json",
+      "bytes": 26458,
+      "sha256": "ea96b0bb2bf28af8872f79cbca1a0814e1ed52c6339c941135cd626b5cc91d52"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-f5097af8.json",
+      "bytes": 7120,
+      "sha256": "1c163cf86bc67984601125236cf460e6ee1894784732f6aefe7f038491d83060"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-f9bc4930.json",
+      "bytes": 23208,
+      "sha256": "9a87c504f413c7cea0cc1d2a9b47628a61d300e1bced328b49a9dc9e2a101ed8"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-fc6177b5.json",
+      "bytes": 35604,
+      "sha256": "fb7a570c7488818d54267d1909ac2c68a57d8ab71786d59b1df22dc7e0de602f"
+    },
+    {
+      "path": "content/post-foot-author-history/configs/git-pin-ff5ff419.json",
+      "bytes": 18277,
+      "sha256": "d146daf0f76dc41eb6e6a2191b1c68e305ebc217a22fac594fee27070914e197"
+    },
+    {
+      "path": "content/post-foot-author-history/helper-manifest.json",
+      "bytes": 8930,
+      "sha256": "75b04825b373da5b839d477d895b6acb0d7fa2df5fcd844efa25cb332f5388a6"
+    },
+    {
+      "path": "content/regional-teaching/pelvis.json",
+      "bytes": 451191,
+      "sha256": "5eef430cbd99143ad46911b8bbbd6ad7d997ba19f66fd92d846f81fc269b517a"
+    },
+    {
+      "path": "docs/CORPUS_SPONGIOSUM_XRAY_V2.md",
+      "bytes": 1786,
+      "sha256": "aa860fb1a540e30e49041922f845ada795d59fe24af62139b8e28ecb2e525654"
+    },
+    {
+      "path": "lib/corpus-spongiosum-xray-v2.ts",
+      "bytes": 1346,
+      "sha256": "0365d2590428e3b57f87d808fa9d252433fcaef56b1ddffb36de6390cc8ed54e"
+    },
+    {
+      "path": "package.json",
+      "bytes": 85920,
+      "sha256": "7d514e10242912ae63e9419fa7b02c23b600a42d30d44e77e09ca28bf76ee36b"
+    },
+    {
+      "path": "scripts/celiac-display-epoch-bridge.mjs",
+      "bytes": 4702,
+      "sha256": "2164518d8ceaf0e1847ac73e6a85abfa4d1c3732d4ef8cdb2d370b090998a741"
+    },
+    {
+      "path": "scripts/content-contract-tools.mjs",
+      "bytes": 15354,
+      "sha256": "4e5321a2d9a3d0801a73560584c81b81e7066bd775faf8625852f21e91cf4886"
+    },
+    {
+      "path": "scripts/corpus-spongiosum-xray-v2-history.mjs",
+      "bytes": 2108,
+      "sha256": "90a6075c00adc809bc38d58634816b7f866c5f11a73102ba5c5b62ea9dbf8608"
+    },
+    {
+      "path": "scripts/cranial-history-context.mjs",
+      "bytes": 5684,
+      "sha256": "8b2ba7a9aada5d72327e5547dacb2498a38c92810b52d3a076873827e8489883"
+    },
+    {
+      "path": "scripts/exact-short-ciliary-epoch-context.mjs",
+      "bytes": 5339,
+      "sha256": "21beaf4fd490954cdafa182b89d8f25bdd840f48b6704eec3cebedd214ea9b59"
+    },
+    {
+      "path": "scripts/load-post-foot-helpers.mjs",
+      "bytes": 1378,
+      "sha256": "17399ca9ebc0b087d2c06434205c9a8cb77ed26bc78cdfa0c4c788ed6e5aa648"
+    },
+    {
+      "path": "scripts/pin-pica-clinical.mjs",
+      "bytes": 3456,
+      "sha256": "0e182ccd0a46a89aaee733f00e5970cd52af65e1fcf384e419d7ee7b721ab38c"
+    },
+    {
+      "path": "scripts/post-foot-author-history.mjs",
+      "bytes": 4872,
+      "sha256": "398961dab86ee2d7387259e71377a0c952fb30e98f1faa504c50938bcc2ff56b"
+    },
+    {
+      "path": "scripts/post-foot-history-context.mjs",
+      "bytes": 1133,
+      "sha256": "51cf26f30fcceb668b6ad2605a1e048d9b9c538c8e2dc375d10861eb9a2a4a20"
+    },
+    {
+      "path": "scripts/record-short-ciliary-teaching.mjs",
+      "bytes": 3988,
+      "sha256": "5b633117d36925901b629555517835f3bf2c3df3ed96aae7d61921898865d1ac"
+    },
+    {
+      "path": "scripts/test-corpus-spongiosum-xray-v2.mjs",
+      "bytes": 9647,
+      "sha256": "69719a791c2eb3e31518c61c5443e1e7418cb7a8db001b581032bfbbc170ec53"
+    },
+    {
+      "path": "scripts/test-cranial-history-boundaries.mjs",
+      "bytes": 5711,
+      "sha256": "2785a7758aebf9db729f44babf78cdf611207e0441d0ec5ec9e7a285800606c2"
+    },
+    {
+      "path": "scripts/test-cranial-history-context.mjs",
+      "bytes": 2835,
+      "sha256": "7beb8b5cdae9476b96cf8dedce853f3a4558142576a1670f71ae40acc75549f0"
+    },
+    {
+      "path": "scripts/test-foot-surface-imaging-history.mjs",
+      "bytes": 2997,
+      "sha256": "b7be176ecf54862faa22391bd68d33782639b65ae34dbe92ba33e2a746dbd163"
+    },
+    {
+      "path": "scripts/test-post-foot-history-context.mjs",
+      "bytes": 1388,
+      "sha256": "41cd28cf759a3766b1e8cec37badb792df238013d5ebb80e6130e2f2e2356854"
+    },
+    {
+      "path": "scripts/test-tour-discovery-escape.mjs",
+      "bytes": 3252,
+      "sha256": "79f57d3071762cf03aaa394fffa76b6135d32eb2a994f75bdcd365edb1b51819"
+    },
+    {
+      "path": "scripts/validate-short-ciliary-teaching.mjs",
+      "bytes": 5464,
+      "sha256": "8055f76769be9defec25febd1591f41aed102acb97ea4007efff2c9fe2cc04ab"
+    },
+    {
+      "path": "tests/exact-short-ciliary-epoch-context.test.mjs",
+      "bytes": 4083,
+      "sha256": "9675da2e4fbc806d0cfc09290f1e138170f47e276d65710a3a263bd317601d73"
+    }
+  ],
+  "removed": [],
+  "scope": "Exact321text-path Atlas delta from f5097af8 to bd5465ee, including source-era history repair, independently authored NCI/CC-BY4 WSES-AAST X-ray draft and tour-finder keyboard recovery. This is NOT a standalone full Atlas checkout; recover with the separately retained exact baseline f5097af8. No raw canonical Git ancestry, meshes, patient scans, identifiers, masks, database, private asset module or held EAU draft is included. Original source/attribution notices retained. Actual focused checks, semantic types, stock four-module/Review builds and35Website cases plus desktop keyboard check are evidence only for their stated scopes; no all-suite, fullAT, clinical, registration, copyright-release or public-deployment claim. Canonical source, owner preview and unsaved lecture remain untouched.",
+  "proof": {
+    "readySha256": "43830ece45f091c7e1facec1b09b7ee3f2cf9a18e40a3abeb74c1a8214190165",
+    "screenSha256": "952587a6d786f4d4dc9963ad55ca43103d77f4a3354d26443a9a7a114ec47b15",
+    "classificationSha256": "a89470f89666271cb22896631396a4ed9c33c88098c46bfe2e82667c8916a437",
+    "mainCompleteIdEquality": true,
+    "mainClassification": [
+      {
+        "path": "content/body-review-display-pins.json",
+        "allStringOccurrences": 21,
+        "distinctCompleteIdentifiers": 21,
+        "everyCompleteValueEqualAdmittedBaseline": true
+      },
+      {
+        "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
+        "allStringOccurrences": 19,
+        "distinctCompleteIdentifiers": 19,
+        "everyCompleteValueEqualAdmittedBaseline": true
+      },
+      {
+        "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
+        "allStringOccurrences": 38,
+        "distinctCompleteIdentifiers": 19,
+        "everyCompleteValueEqualAdmittedBaseline": true
+      }
+    ],
+    "initialPreflightRefusal": "Main counted38 repeated historical string occurrences against the worker19 distinct semantic identifiers. Before any network/write, refused. Corrected metric to unique IDs while still independently checking EVERY full string against admitted baseline; original worker reports retained.",
+    "screen": {
+      "schema": "visible-medicine-source-egress-screen-v1",
+      "scope": "read-only immutable Atlas Git delta; this is not push authority, a whole-product copyright opinion, clinical approval, or release approval",
+      "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+      "head": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+      "headSubject": "Restore keyboard focus when closing the guided tour finder",
+      "summary": {
+        "changedPaths": 321,
+        "changedBytes": 9200556,
+        "reviewedNoEgressBlocker": 318,
+        "hold": 3,
+        "binaryOrMediaBlobs": 0,
+        "patientOrDicomMarkerMatches": 0,
+        "commonCredentialMarkerMatches": 0,
+        "heldEauMarkerMatches": 0,
+        "genericSkPatternMatches": 3
+      },
+      "scan": {
+        "rowHash": "SHA-256 of sorted `path + space + immutable Git blob id` rows for the row's complete path set",
+        "methods": [
+          "immutable Git blob size and object-id inventory",
+          "UTF-8/text inspection and JSON schema/key inventory",
+          "redacted pattern screen for common cloud/API keys, private keys, patient/DICOM identifiers, and the held EAU source"
+        ],
+        "limitations": "Absence of these markers does not establish all-source rights, privacy, or commercial-release clearance. Historical teaching records are project snapshots, not a new licence grant."
+      },
+      "rows": [
+        {
+          "path": "content/post-foot-author-history/author-epochs/*.json except d77054e28f42b4fe99e6ad9519defde7603c7485.json",
+          "files": 142,
+          "bytes": 3510044,
+          "hash": "0509876bb9f9b536db91a5f7d8abcf085ad0754964b5e4d540dff31178e65ee1",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "JSON author-epoch snapshots contain commit/tree/catalog hashes, pin/transition records and changed/preserved teaching entries. No binary, patient/DICOM, common credential or EAU marker matched."
+        },
+        {
+          "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
+          "files": 1,
+          "bytes": 47788,
+          "hash": "069eab4d3263de17ab739b601ec2ba44bb793bd993447a0b6b1bc668069ec85c",
+          "verdict": "HOLD",
+          "reason": "A generic secret-shaped string matched. Value is deliberately redacted; exclude or investigate before any egress."
+        },
+        {
+          "path": "content/post-foot-author-history/configs/*.json except git-author-d77054e2.json",
+          "files": 145,
+          "bytes": 3982871,
+          "hash": "6eca8bb026a56d0cc304f061bf94cf1d65987575a2487e50d3b0360908e7bbe3",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "JSON pin/transition configuration records; the same text and marker screen found no patient/DICOM, common credential, EAU or binary content."
+        },
+        {
+          "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
+          "files": 1,
+          "bytes": 56061,
+          "hash": "ff1c782c1ec8170f87036620475573358eb03d889347a530c36a99fc421ca509",
+          "verdict": "HOLD",
+          "reason": "Paired historical config has the same redacted generic secret-shaped match; exclude or investigate before egress."
+        },
+        {
+          "path": "content/post-foot-author-history/{combined-replay-index.json,helper-manifest.json}",
+          "files": 2,
+          "bytes": 112416,
+          "hash": "d7a22acd3ae49874dafa66d65659d0503d3db6657ac0dc48534a47c8ca89e6a4",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "Replay index/helper metadata only; no prohibited marker or non-text blob found."
+        },
+        {
+          "path": "scripts/* and tests/exact-short-ciliary-epoch-context.test.mjs",
+          "files": 18,
+          "bytes": 83391,
+          "hash": "d65e55988f37de7f3ddc6a08a74844622efe6757bf14c0f0bfea83738eb8f1aa",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "Project history/test tooling and the guided-tour Escape regression; text code only."
+        },
+        {
+          "path": "app/{body-content.ts,whole-body-guided-learning.tsx}, content/{body-renderer-revision.json,regional-teaching/pelvis.json}, package.json",
+          "files": 5,
+          "bytes": 840161,
+          "hash": "26049b54baad2c8bc9a3234d55fdf986446af45c5dead02ad9d032b92fe2d573",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "Project dispatcher/UI/revision metadata and package script changes; no raw geometry, media, private-reference or screened marker found."
+        },
+        {
+          "path": "content/body-review-display-pins.json",
+          "files": 1,
+          "bytes": 203217,
+          "hash": "71f929ff243a4f04340720945e566a1644e8dc32254d50962071d2b0b902e1e0",
+          "verdict": "HOLD",
+          "reason": "A generic secret-shaped string matched. Value is deliberately redacted; exclude or investigate before egress."
+        },
+        {
+          "path": "{content,docs,lib}/corpus-spongiosum-xray-v2*",
+          "files": 5,
+          "bytes": 12653,
+          "hash": "a1ba39672592a9f42b18e082eb56210113a5fafa8fe557dcd5e0559e44b26191",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "Independent original educational wording with NCI and CC-BY 4.0 WSES attribution/change/no-endorsement record; no EAU text, image, table, patient data or scan is present. Clinical review and publication remain separate."
+        },
+        {
+          "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+          "files": 1,
+          "bytes": 351954,
+          "hash": "fa793fb51489d33738fc7282c2269db3f5244d026866735061ff62e9312558bc",
+          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
+          "reason": "Attribution/notice text. This review does not certify every inherited dependency or source right."
+        }
+      ],
+      "redactedHolds": [
+        "content/body-review-display-pins.json",
+        "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
+        "content/post-foot-author-history/configs/git-author-d77054e2.json"
+      ],
+      "recommendation": "Do not push this full head while the three holds remain. A later source-only checkpoint may use the 318 reviewed paths only after its own exact-path manifest/re-hash, or may resolve the holds without exposing their values."
+    },
+    "classification": {
+      "schema": "visible-medicine-generic-pattern-classification-v1",
+      "scope": "read-only classification of the three redacted generic-pattern holds in immutable f509 -> bd5465ee3b94c66c3d5701e7749099d07e8f40d3 blobs; no values are recorded",
+      "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+      "head": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+      "pattern": "sk-[A-Za-z0-9_-]{16,}",
+      "baselineSemanticSchema": {
+        "path": "content/body-review-display-pins.json",
+        "location": "$.pins[*].structureId",
+        "meaning": "already-admitted public anatomical structure identifier"
+      },
+      "rows": [
+        {
+          "path": "content/body-review-display-pins.json",
+          "location": "$.pins[*].structureId",
+          "matchedCount": 21,
+          "matchLengths": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "shape": "lowercase hyphenated substring within an anatomical structure identifier",
+          "baselineEquality": "all 21 complete identifiers exactly equal f509 $.pins[*].structureId values",
+          "classification": "PUBLIC_ANATOMICAL_SLUG_FALSE_POSITIVE",
+          "verdict": "RESOLVED_NO_CREDENTIAL_INDICATOR"
+        },
+        {
+          "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
+          "location": "$.entries[*].identity.id",
+          "matchedCount": 19,
+          "matchLengths": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "shape": "historical snapshot reference to an anatomical structure identifier",
+          "baselineEquality": "all 19 complete identifiers exactly equal f509 $.pins[*].structureId values",
+          "classification": "PUBLIC_ANATOMICAL_SLUG_FALSE_POSITIVE",
+          "verdict": "RESOLVED_NO_CREDENTIAL_INDICATOR"
+        },
+        {
+          "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
+          "location": "$.pins.entries[*].identity.id",
+          "matchedCount": 19,
+          "matchLengths": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "shape": "historical pin configuration reference to an anatomical structure identifier",
+          "baselineEquality": "all 19 complete identifiers exactly equal f509 $.pins[*].structureId values",
+          "classification": "PUBLIC_ANATOMICAL_SLUG_FALSE_POSITIVE",
+          "verdict": "RESOLVED_NO_CREDENTIAL_INDICATOR"
+        }
+      ],
+      "conclusion": "The detector matched a substring of public anatomical IDs rather than a credential. This resolves only the generic-pattern holds in atlas-delta.json; it does not alter that report, clear unrelated source rights, authorize egress, or establish clinical/privacy/release approval."
+    }
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

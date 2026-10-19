@@ -1,0 +1,57 @@
+{
+  "schema": "vm-corpus-xray-v2-transition/1",
+  "parentCommit": "f5097af8493701d64a8e2a2b5797df380f3b348a",
+  "pinsHash": "aae71b14d295558ed8b584a97969729677d37a718b5b497c47aca2846b8d26a2",
+  "allLessonsBeforeHash": "65653043b02d48e6de506bdb573836ec593e513f0ef1c3df45cf2151e6aa731a",
+  "allLessonsAfterHash": "03a4190cf95ef26da8b0939ebb758cc7d9e5a01bb984dabf37c10422a9714bad",
+  "totalPlacements": 9936,
+  "changed": [
+    {
+      "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+      "tab": "xray"
+    }
+  ],
+  "unchangedPlacements": 9935,
+  "reviewBefore": {
+    "source": "18261ef690cc7ddd1cf1b0cdaa413fd38f6d00d19d0a2a291ba91d5144a680e4",
+    "teaching": "808ab286204b900cc7e6d5359924a05930a5f417d91f6fab56059a2ae9632a15",
+    "checklist": "0c1a34aba9bf44c673988dbab79aa6d9d69911055fac1522c7f6000fa1a20554"
+  },
+  "reviewAfter": {
+    "source": "18261ef690cc7ddd1cf1b0cdaa413fd38f6d00d19d0a2a291ba91d5144a680e4",
+    "teaching": "c6458dd139dbdfb8787e1966babbbf0bff424651c6d39f0f2afbb6cb91115e4e",
+    "checklist": "0c1a34aba9bf44c673988dbab79aa6d9d69911055fac1522c7f6000fa1a20554"
+  },
+  "reviewBeforeMaterialHash": "5521ceacc517cd565cbe05a6b2c39653ada456f2906455953ca9d67fb7062468",
+  "reviewAfterMaterialHash": "f64fc6fbd744b3151d1ca2ffc6d586a2545e4d8fe6a89f58f1dc0525eb97a501",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+      "fmaId": "FMA19617",
+      "tab": "xray",
+      "previousHash": "e0b06de982aa5b8284f78cc2d922205a90c53b2115d22369f284478c948f1855",
+      "currentHash": "c589e0c4e28e6a769e96aeb5271db2982deaf57a7008afd27b5bb5bd827dd69b",
+      "current": {
+        "readiness": "draft",
+        "title": "Corpus spongiosum · bulb/shaft source · X-ray: lumen and surrounding tissue · draft",
+        "body": "A urethrogram uses radiographic contrast to show the urethral passage in projection. The corpus spongiosum is erectile tissue around that passage, not the contrast outline. This atlas selection is a source-labelled bulb/shaft surface, not an acquired radiograph.",
+        "bullets": [
+          "In typical anatomy the spongy urethra passes through the single ventral corpus spongiosum; the paired corpora cavernosa are separate columns.",
+          "The mesh does not include the separately supplied glans or cavernous surfaces. Its nearby urethra selection is context, not a verified enclosed lumen.",
+          "No contrast study, patient image, coordinate registration, lumen continuity, calibre, patency or injury finding is represented here.",
+          "Visible source limit: Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+          "Reference and reuse: Original educational synthesis from NCI SEER Training Modules: Penis and Coccolini et al., Kidney and uro-trauma: WSES-AAST guidelines (2019, CC BY 4.0). WSES-AAST material was adapted in wording and limited to imaging context; no figure, table, algorithm or clinical instruction was used. No endorsement is implied."
+        ],
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html",
+          "https://link.springer.com/article/10.1186/s13017-019-0274-x",
+          "https://creativecommons.org/licenses/by/4.0/"
+        ],
+        "note": "Source-bound educational draft for revision-bound radiologist review. Bulb/shaft representation only; no glans or paired cavernous surfaces. No acquired scan, patient image, lumen continuity, calibre, patency, injury finding or coordinate registration is represented. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    }
+  ],
+  "clinicalApproval": false,
+  "geometryChanged": false,
+  "registration": false
+}

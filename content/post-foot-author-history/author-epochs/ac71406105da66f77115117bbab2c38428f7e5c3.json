@@ -1,0 +1,339 @@
+{
+  "author": "ac71406105da66f77115117bbab2c38428f7e5c3",
+  "parent": "9fba9a1e24b6669aafd48e945d55fc0939d50ab2",
+  "tree": "f8c99d8ac38d0780e14b8554edd878b95f366236",
+  "parentTree": "1bd327fb20a52b35bec584675c457173c548e24b",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 5,
+  "preserved": 9931,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+        "fmaId": "FMA59503",
+        "name": "Septal nasal cartilage",
+        "sourceName": "septal nasal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59503",
+        "bounds": {
+          "min": [
+            -0.02946779876947403,
+            6.791200160980225,
+            1.1503000259399414
+          ],
+          "max": [
+            0.017147500067949295,
+            7.128599643707275,
+            1.5836799144744873
+          ]
+        },
+        "center": [
+          -0.006160149350762367,
+          6.95989990234375,
+          1.3669899702072144
+        ],
+        "anchor": [
+          -0.015545500442385674,
+          6.986800670623779,
+          1.3314399719238281
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2557",
+            "sha256": "bfc5f7835227408656650af0e7d15f3dfa6bc7151da0485ae76527b03c6ba5c9"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "6f9cd1695c518aa2dbc0873b90efecfd1a7d1dbf5278430f96aaf9c6d2b01574"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "fmaId": "FMA59505",
+        "name": "Right major alar cartilage",
+        "sourceName": "right major alar cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59505",
+        "bounds": {
+          "min": [
+            -0.15031500160694122,
+            6.758599758148193,
+            1.226560115814209
+          ],
+          "max": [
+            -0.010971100069582462,
+            6.906400203704834,
+            1.5782499313354492
+          ]
+        },
+        "center": [
+          -0.08064305083826184,
+          6.832499980926514,
+          1.402405023574829
+        ],
+        "anchor": [
+          -0.10245800018310547,
+          6.791999340057373,
+          1.4182699918746948
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2554",
+            "sha256": "bcd0bac9cd74145362c18a6ed39215a320aa51c0041738aa81110b1c4d4d83d5"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "1a35c7c11f5ec75f8093c244692449fe57155f2894f113d9b88435e701bd901f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "fmaId": "FMA59506",
+        "name": "Left major alar cartilage",
+        "sourceName": "left major alar cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59506",
+        "bounds": {
+          "min": [
+            0.001238520024344325,
+            6.7593994140625,
+            1.2265499830245972
+          ],
+          "max": [
+            0.14012600481510162,
+            6.90749979019165,
+            1.5782699584960938
+          ]
+        },
+        "center": [
+          0.07068226241972297,
+          6.833449602127075,
+          1.4024099707603455
+        ],
+        "anchor": [
+          0.06970179826021194,
+          6.86829948425293,
+          1.4168299436569214
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2555",
+            "sha256": "f4f2b9ab31791787b92193c4fb212bb9390e7421ff04178da5f1c14b0e8273a2"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "fa96fd287d7795a50f1bee8197ebace9fb32a3a94eb6307f0cd7fa61267eab08"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+        "fmaId": "FMA59512",
+        "name": "Right lateral nasal cartilage",
+        "sourceName": "right lateral nasal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59512",
+        "bounds": {
+          "min": [
+            -0.14600500464439392,
+            6.826300144195557,
+            1.2091000080108643
+          ],
+          "max": [
+            -0.008188620209693909,
+            7.1080002784729,
+            1.5845599174499512
+          ]
+        },
+        "center": [
+          -0.07709681242704391,
+          6.9671502113342285,
+          1.3968299627304077
+        ],
+        "anchor": [
+          -0.07939010113477707,
+          6.93589973449707,
+          1.4368900060653687
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2558",
+            "sha256": "c36179ffa308590bee79554e1fda6c3922b8d86f785781bedfe98368ed6c7dab"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "7f492a64fdb3c076a3ee77dc4e644fc73a3a41369c7cc2c1d971d6530d8cb77b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+        "fmaId": "FMA59513",
+        "name": "Left lateral nasal cartilage",
+        "sourceName": "left lateral nasal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59513",
+        "bounds": {
+          "min": [
+            -0.0034574801102280617,
+            6.823299407958984,
+            1.2081700563430786
+          ],
+          "max": [
+            0.13625100255012512,
+            7.108299732208252,
+            1.584529995918274
+          ]
+        },
+        "center": [
+          0.06639676121994853,
+          6.965799570083618,
+          1.3963500261306763
+        ],
+        "anchor": [
+          0.07387980073690414,
+          6.98900032043457,
+          1.3815100193023682
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2556",
+            "sha256": "ed9397b65596b2d831d0bf796ead025086f0d5fc471421d5fd35f698b3e58e8d"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "mri",
+      "previous": {
+        "readiness": "pending",
+        "title": "MRI content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "1e9fe22dfa390cbcc8c037c78501b086f2a4632b5a5705e0691dd2e133a744f7"
+    }
+  ]
+}

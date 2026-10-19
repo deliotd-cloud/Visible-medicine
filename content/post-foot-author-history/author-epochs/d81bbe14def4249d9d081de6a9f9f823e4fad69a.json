@@ -1,0 +1,542 @@
+{
+  "author": "d81bbe14def4249d9d081de6a9f9f823e4fad69a",
+  "parent": "f74eb2529eccc7c4ad0a0f9bcd3fda95f9958c24",
+  "tree": "59c5d9b75ebec50fb093648e9ec5a6832055f074",
+  "parentTree": "d1ad888b93808c1e7a677b3857b4e990d4ede8b9",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 8,
+  "preserved": 9928,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-radial-artery",
+        "fmaId": "FMA22733",
+        "name": "Right radial artery",
+        "sourceName": "right radial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "hand"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22733",
+        "bounds": {
+          "min": [
+            -2.7951300144195557,
+            -0.08817993104457855,
+            0.33151495456695557
+          ],
+          "max": [
+            -2.1361098289489746,
+            2.244499444961548,
+            0.7712299823760986
+          ]
+        },
+        "center": [
+          -2.465619921684265,
+          1.0781597569584846,
+          0.5513724684715271
+        ],
+        "anchor": [
+          -2.5781900882720947,
+          1.0522302389144897,
+          0.3984220027923584
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2294",
+            "sha256": "cca326b54b9f4e6ed4c4a8ccf258959a3a3c54aff996b894eacca20af05217d2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "95bac0df037ecd74789c1f49a33ca6b29181235b088f3edf9ca18596249d5d07"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-radial-artery",
+        "fmaId": "FMA22734",
+        "name": "Left radial artery",
+        "sourceName": "left radial artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "hand"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22734",
+        "bounds": {
+          "min": [
+            2.1361098289489746,
+            -0.08814025670289993,
+            0.3315100073814392
+          ],
+          "max": [
+            2.795069932937622,
+            2.244499444961548,
+            0.7712699770927429
+          ]
+        },
+        "center": [
+          2.4655898809432983,
+          1.078179594129324,
+          0.5513899922370911
+        ],
+        "anchor": [
+          2.578469753265381,
+          1.0441497564315796,
+          0.40048301219940186
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2242",
+            "sha256": "d97e01814668d5a32f18a5cc07a3e6e77bf1a734008f21d8f7dc62fedd0175a6"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "7f9b4b7ea2b0215326528d4cd7b2447f75a138cb8ce648c0e918f4e99bd0986e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-ulnar-artery",
+        "fmaId": "FMA22797",
+        "name": "Right ulnar artery",
+        "sourceName": "right ulnar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "hand"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22797",
+        "bounds": {
+          "min": [
+            -2.4372599124908447,
+            -0.05320983752608299,
+            0.2698560357093811
+          ],
+          "max": [
+            -2.110489845275879,
+            2.244499444961548,
+            0.810740053653717
+          ]
+        },
+        "center": [
+          -2.273874878883362,
+          1.0956448037177324,
+          0.5402980446815491
+        ],
+        "anchor": [
+          -2.194159984588623,
+          1.0684802532196045,
+          0.5297799706459045
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2310",
+            "sha256": "6bef22a74e2e6ae2d3033c4982fdb75abbadc9b255e76770211d61b3dd4796c1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "c3d917ec628dc0f1e1eadd75f8d487edfa5526eb04709b9bf2c46213eb337487"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-ulnar-artery",
+        "fmaId": "FMA22798",
+        "name": "Left ulnar artery",
+        "sourceName": "left ulnar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "hand"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22798",
+        "bounds": {
+          "min": [
+            2.1105098724365234,
+            -0.05315978825092316,
+            0.26983702182769775
+          ],
+          "max": [
+            2.4372000694274902,
+            2.244499444961548,
+            0.81072998046875
+          ]
+        },
+        "center": [
+          2.273854970932007,
+          1.0956698283553123,
+          0.5402835011482239
+        ],
+        "anchor": [
+          2.1925101280212402,
+          1.073830008506775,
+          0.5356700420379639
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2258",
+            "sha256": "4ddf684432c015ef59cd0bc8cb72b8890632ebde5f2d92e3c1002209ac482b8a"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "5be50851c037e67e4628fdf8b2b5e73cd9d35191ae45bb6dd21b3485ddf27ef6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-cephalic-vein",
+        "fmaId": "FMA13325",
+        "name": "Right cephalic vein",
+        "sourceName": "right cephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA13325",
+        "bounds": {
+          "min": [
+            -2.790409803390503,
+            -0.255349725484848,
+            0.27655401825904846
+          ],
+          "max": [
+            -1.0683599710464478,
+            5.268199443817139,
+            0.8173100352287292
+          ]
+        },
+        "center": [
+          -1.9293848872184753,
+          2.5064248591661453,
+          0.5469320267438889
+        ],
+        "anchor": [
+          -2.297680139541626,
+          2.514399528503418,
+          0.43531501293182373
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2272",
+            "sha256": "b57bd07b9e940b76500243e88b2d0f32fac59fff6ddea84419b254c82a6256f8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "abb0a2f1ed0a893a132fbe92fe213ccf8152618ebc1ea23fc1a4b230eb4a9112"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-cephalic-vein",
+        "fmaId": "FMA13326",
+        "name": "Left cephalic vein",
+        "sourceName": "left cephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA13326",
+        "bounds": {
+          "min": [
+            1.068310022354126,
+            -0.25531005859375,
+            0.276559978723526
+          ],
+          "max": [
+            2.7903499603271484,
+            5.268199443817139,
+            0.8172900676727295
+          ]
+        },
+        "center": [
+          1.9293299913406372,
+          2.5064446926116943,
+          0.5469250231981277
+        ],
+        "anchor": [
+          2.300539970397949,
+          2.4906005859375,
+          0.4444809854030609
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2220",
+            "sha256": "1a3062828e09478913a2d9df9ef4e092c7b7bf8a5f4bd68b1603eb79e79273e2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "d5e758b884c9db5edc4f0089d3840e0bd77cb5bc91debfc716e5127e22d8c52a"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-basilic-vein",
+        "fmaId": "FMA22909",
+        "name": "Right basilic vein",
+        "sourceName": "right basilic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22909",
+        "bounds": {
+          "min": [
+            -2.3548500537872314,
+            -0.11169006675481796,
+            0.1282849907875061
+          ],
+          "max": [
+            -1.5100599527359009,
+            4.372399806976318,
+            0.6480799913406372
+          ]
+        },
+        "center": [
+          -1.9324550032615662,
+          2.13035487011075,
+          0.38818249106407166
+        ],
+        "anchor": [
+          -1.792330026626587,
+          2.1141998767852783,
+          0.260142982006073
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2270",
+            "sha256": "9340492869064c52e522a426c4c2bdb73f0ccfc8392dee56f01a8186f6187ba5"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "c49da29e743a0c70098c292ab6a63a4e269516d35db9ce0984c4a365055e11e6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-basilic-vein",
+        "fmaId": "FMA22910",
+        "name": "Left basilic vein",
+        "sourceName": "left basilic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm",
+          "shoulder-arm"
+        ],
+        "bundle": "forearm-vessels-recovery",
+        "nodeName": "FMA22910",
+        "bounds": {
+          "min": [
+            1.5100399255752563,
+            -0.11166992038488388,
+            0.12831199169158936
+          ],
+          "max": [
+            2.3548200130462646,
+            4.372399806976318,
+            0.6481099724769592
+          ]
+        },
+        "center": [
+          1.9324299693107605,
+          2.1303649432957172,
+          0.3882109820842743
+        ],
+        "anchor": [
+          1.7949899435043335,
+          2.1276001930236816,
+          0.25609397888183594
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2218",
+            "sha256": "09bb227be0f517e81168edb3fa4eb7cdcdf2157355ca86be7366277b3859f9ca"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "cb61e7418be6733d828b3abd7c42b21ceaf37427d6895015470a310b55ce2bc9"
+    }
+  ]
+}

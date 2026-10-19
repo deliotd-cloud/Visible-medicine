@@ -1,0 +1,462 @@
+{
+  "author": "8bed1346b996bce5857cd6d36f5d0d7acfecbf13",
+  "parent": "dc8212978d4929c26c514bb08f9ed8e5f6df8cef",
+  "tree": "e1ff026bca89e1ef4570ae207429ebe010dbc8a0",
+  "parentTree": "f44c8642fbb92a159a8fc5e159287e16e854a9c3",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 7,
+  "preserved": 9929,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:septal-nasal-cartilage",
+        "fmaId": "FMA59503",
+        "name": "Septal nasal cartilage",
+        "sourceName": "septal nasal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59503",
+        "bounds": {
+          "min": [
+            -0.02946779876947403,
+            6.791200160980225,
+            1.1503000259399414
+          ],
+          "max": [
+            0.017147500067949295,
+            7.128599643707275,
+            1.5836799144744873
+          ]
+        },
+        "center": [
+          -0.006160149350762367,
+          6.95989990234375,
+          1.3669899702072144
+        ],
+        "anchor": [
+          -0.015545500442385674,
+          6.986800670623779,
+          1.3314399719238281
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2557",
+            "sha256": "bfc5f7835227408656650af0e7d15f3dfa6bc7151da0485ae76527b03c6ba5c9"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find septal nasal cartilage on the model."
+      },
+      "currentHash": "0d2772a6ada9b7487c46e2bf03d33d7b6cb692fb6bff3d05a21f8d7c32b25efa"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-major-alar-cartilage",
+        "fmaId": "FMA59505",
+        "name": "Right major alar cartilage",
+        "sourceName": "right major alar cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59505",
+        "bounds": {
+          "min": [
+            -0.15031500160694122,
+            6.758599758148193,
+            1.226560115814209
+          ],
+          "max": [
+            -0.010971100069582462,
+            6.906400203704834,
+            1.5782499313354492
+          ]
+        },
+        "center": [
+          -0.08064305083826184,
+          6.832499980926514,
+          1.402405023574829
+        ],
+        "anchor": [
+          -0.10245800018310547,
+          6.791999340057373,
+          1.4182699918746948
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2554",
+            "sha256": "bcd0bac9cd74145362c18a6ed39215a320aa51c0041738aa81110b1c4d4d83d5"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right major alar cartilage on the model."
+      },
+      "currentHash": "d35ccd3156642f3b4ea05a2bbf0710c1f0fc379667439a4650f1a83ce96910ec"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-major-alar-cartilage",
+        "fmaId": "FMA59506",
+        "name": "Left major alar cartilage",
+        "sourceName": "left major alar cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59506",
+        "bounds": {
+          "min": [
+            0.001238520024344325,
+            6.7593994140625,
+            1.2265499830245972
+          ],
+          "max": [
+            0.14012600481510162,
+            6.90749979019165,
+            1.5782699584960938
+          ]
+        },
+        "center": [
+          0.07068226241972297,
+          6.833449602127075,
+          1.4024099707603455
+        ],
+        "anchor": [
+          0.06970179826021194,
+          6.86829948425293,
+          1.4168299436569214
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2555",
+            "sha256": "f4f2b9ab31791787b92193c4fb212bb9390e7421ff04178da5f1c14b0e8273a2"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left major alar cartilage on the model."
+      },
+      "currentHash": "9a52c57ba333fc1013123c717b41d76379a401ba7be9bc4eb6d6ad6616552fc9"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:cartilage:right-lateral-nasal-cartilage",
+        "fmaId": "FMA59512",
+        "name": "Right lateral nasal cartilage",
+        "sourceName": "right lateral nasal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59512",
+        "bounds": {
+          "min": [
+            -0.14600500464439392,
+            6.826300144195557,
+            1.2091000080108643
+          ],
+          "max": [
+            -0.008188620209693909,
+            7.1080002784729,
+            1.5845599174499512
+          ]
+        },
+        "center": [
+          -0.07709681242704391,
+          6.9671502113342285,
+          1.3968299627304077
+        ],
+        "anchor": [
+          -0.07939010113477707,
+          6.93589973449707,
+          1.4368900060653687
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2558",
+            "sha256": "c36179ffa308590bee79554e1fda6c3922b8d86f785781bedfe98368ed6c7dab"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right lateral nasal cartilage on the model."
+      },
+      "currentHash": "0a031c0466aabe9440ffee97251c533a9b6d4d9420c37fee6faf4e0629bd2db4"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:cartilage:left-lateral-nasal-cartilage",
+        "fmaId": "FMA59513",
+        "name": "Left lateral nasal cartilage",
+        "sourceName": "left lateral nasal cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA59513",
+        "bounds": {
+          "min": [
+            -0.0034574801102280617,
+            6.823299407958984,
+            1.2081700563430786
+          ],
+          "max": [
+            0.13625100255012512,
+            7.108299732208252,
+            1.584529995918274
+          ]
+        },
+        "center": [
+          0.06639676121994853,
+          6.965799570083618,
+          1.3963500261306763
+        ],
+        "anchor": [
+          0.07387980073690414,
+          6.98900032043457,
+          1.3815100193023682
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2556",
+            "sha256": "ed9397b65596b2d831d0bf796ead025086f0d5fc471421d5fd35f698b3e58e8d"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left lateral nasal cartilage on the model."
+      },
+      "currentHash": "ee443e1c10ee47838ab21cbfef3f5c73dc3d24d41954eaa51c40d75d9792db5e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "fmaId": "FMA61970",
+        "name": "Commissure of fornix of forebrain",
+        "sourceName": "commissure of fornix of forebrain",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA61970",
+        "bounds": {
+          "min": [
+            -0.25186100602149963,
+            7.465699672698975,
+            0.07049598544836044
+          ],
+          "max": [
+            0.2386689931154251,
+            7.668799877166748,
+            0.3799839913845062
+          ]
+        },
+        "center": [
+          -0.006596006453037262,
+          7.567249774932861,
+          0.22523998841643333
+        ],
+        "anchor": [
+          -0.007657529786229134,
+          7.6080002784729,
+          0.2032710313796997
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1741",
+            "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find commissure of fornix of forebrain on the model."
+      },
+      "currentHash": "ff325dfd1c3cd722d32f6cc5c61bc1c6160f0385a9e8ddfdd204e4ace4bc7896"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "fmaId": "FMA62072",
+        "name": "Posterior commissure",
+        "sourceName": "posterior commissure",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-deep-brain",
+        "nodeName": "FMA62072",
+        "bounds": {
+          "min": [
+            -0.08425849676132202,
+            7.434699535369873,
+            0.21017998456954956
+          ],
+          "max": [
+            0.06989699602127075,
+            7.461999416351318,
+            0.26102203130722046
+          ]
+        },
+        "center": [
+          -0.007180750370025635,
+          7.448349475860596,
+          0.235601007938385
+        ],
+        "anchor": [
+          -0.010294300504028797,
+          7.4569993019104,
+          0.23569197952747345
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1799",
+            "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+          }
+        ],
+        "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find posterior commissure on the model."
+      },
+      "currentHash": "910d48249c5fd1411f13ef1cff370386defa8f061c06bcbd9fa0a079bc5dbd81"
+    }
+  ]
+}

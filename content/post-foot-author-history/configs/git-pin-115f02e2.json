@@ -1,0 +1,942 @@
+{
+  "name": "git-pin-115f02e2",
+  "helper": "iliacVesselQuizLesson",
+  "pinsHash": "a5082ebe3bbab2d785456e5f3db7c726cf8eb71bd0d6282d501bef664263c3f1",
+  "transitionHash": "eae06f27749893569659f69ed27e6c50a6b48ba562c7e9837db844b58ef3f018",
+  "pins": {
+    "baseline": "b7ed1802210cfc12110bcac57b3c6fe7471e0f13",
+    "authorCommit": "115f02e297f1f35827daf2837792857f36946df8",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+          "fmaId": "FMA14765",
+          "name": "Right common iliac artery",
+          "sourceName": "right common iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA14765",
+          "bounds": {
+            "min": [
+              -0.3750289976596832,
+              1.0346198081970215,
+              0.5504400134086609
+            ],
+            "max": [
+              0.10176699608564377,
+              1.6466498374938965,
+              0.8006599545478821
+            ]
+          },
+          "center": [
+            -0.13663100078701973,
+            1.340634822845459,
+            0.6755499839782715
+          ],
+          "anchor": [
+            -0.1888369917869568,
+            1.3142797946929932,
+            0.6530999541282654
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3565",
+              "sha256": "11eb1378295c92af09a47d9e25e2c4ee9e1430a6689ddfc7deebf2e44d145cc7"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right common iliac artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+          "fmaId": "FMA14766",
+          "name": "Left common iliac artery",
+          "sourceName": "left common iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA14766",
+          "bounds": {
+            "min": [
+              0.00908047053962946,
+              1.0173296928405762,
+              0.4063500165939331
+            ],
+            "max": [
+              0.359842985868454,
+              1.6463501453399658,
+              0.7972000241279602
+            ]
+          },
+          "center": [
+            0.18446172820404172,
+            1.331839919090271,
+            0.6017750203609467
+          ],
+          "anchor": [
+            0.13033200800418854,
+            1.297509789466858,
+            0.6209400296211243
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3464",
+              "sha256": "5472501bf8876913b860739b298afa69f5f63e74a6f4dc05540b50dde54b323e"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left common iliac artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+          "fmaId": "FMA18806",
+          "name": "Right external iliac artery",
+          "sourceName": "right external iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18806",
+          "bounds": {
+            "min": [
+              -0.6128699779510498,
+              0.03612976148724556,
+              0.27797096967697144
+            ],
+            "max": [
+              -0.27458298206329346,
+              1.1353998184204102,
+              0.9449800252914429
+            ]
+          },
+          "center": [
+            -0.44372648000717163,
+            0.5857647899538279,
+            0.6114754974842072
+          ],
+          "anchor": [
+            -0.5473840236663818,
+            0.48247987031936646,
+            0.4290419816970825
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3567",
+              "sha256": "6be9a8fa7f67d5ce6638daf7deacd7d4953c258e920b2ba21575be47edde8fe6"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right external iliac artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+          "fmaId": "FMA18807",
+          "name": "Left external iliac artery",
+          "sourceName": "left external iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18807",
+          "bounds": {
+            "min": [
+              0.25536400079727173,
+              0.09831970185041428,
+              0.28136298060417175
+            ],
+            "max": [
+              0.6544149518013,
+              1.12336003780365,
+              1.0294400453567505
+            ]
+          },
+          "center": [
+            0.4548894762992859,
+            0.6108398698270321,
+            0.6554015129804611
+          ],
+          "anchor": [
+            0.5846379995346069,
+            0.4299200475215912,
+            0.5032299757003784
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3466",
+              "sha256": "bba53b19cab2fb7e5c8f9461a21a2250d59e152585e58a9275207d5f51dc491b"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left external iliac artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+          "fmaId": "FMA18809",
+          "name": "Right internal iliac artery",
+          "sourceName": "right internal iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18809",
+          "bounds": {
+            "min": [
+              -0.3603070080280304,
+              0.503649890422821,
+              -0.22547799348831177
+            ],
+            "max": [
+              -0.2723489999771118,
+              1.107659935951233,
+              0.6246700286865234
+            ]
+          },
+          "center": [
+            -0.3163280040025711,
+            0.805654913187027,
+            0.19959601759910583
+          ],
+          "anchor": [
+            -0.3113909959793091,
+            0.7578601241111755,
+            0.21586699783802032
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3569",
+              "sha256": "bc5922d28b6f5d9f67722396283ea7ef10cd3baa8ed0a8271faa8c11ca96d52a"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right internal iliac artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+          "fmaId": "FMA18810",
+          "name": "Left internal iliac artery",
+          "sourceName": "left internal iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18810",
+          "bounds": {
+            "min": [
+              0.22271499037742615,
+              0.45338013768196106,
+              -0.38280200958251953
+            ],
+            "max": [
+              0.3353880047798157,
+              1.0986602306365967,
+              0.5145200490951538
+            ]
+          },
+          "center": [
+            0.2790514975786209,
+            0.7760201841592789,
+            0.06585901975631714
+          ],
+          "anchor": [
+            0.27650898694992065,
+            0.7199298143386841,
+            0.08643299341201782
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3468",
+              "sha256": "2effa517c9d8b549b5a6b9e0ffe0326a99b03cb3d7ca58f4b1d338ce80f1d5e0"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left internal iliac artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+          "fmaId": "FMA21387",
+          "name": "Right common iliac vein",
+          "sourceName": "right common iliac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA21387",
+          "bounds": {
+            "min": [
+              -0.3588069975376129,
+              1.0063202381134033,
+              0.38333603739738464
+            ],
+            "max": [
+              -0.03588550165295601,
+              1.6460700035095215,
+              0.7344799637794495
+            ]
+          },
+          "center": [
+            -0.19734624959528446,
+            1.3261951208114624,
+            0.558908000588417
+          ],
+          "anchor": [
+            -0.20255500078201294,
+            1.346099853515625,
+            0.5292800068855286
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3566",
+              "sha256": "b34098865ad19c8fe0bc28e46ac76e2af6d52f0065d684637fd1886813c62a76"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right common iliac vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+          "fmaId": "FMA21388",
+          "name": "Left common iliac vein",
+          "sourceName": "left common iliac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA21388",
+          "bounds": {
+            "min": [
+              -0.15095700323581696,
+              1.005910038948059,
+              0.26905500888824463
+            ],
+            "max": [
+              0.2624790072441101,
+              1.6517400741577148,
+              0.7313600182533264
+            ]
+          },
+          "center": [
+            0.055761002004146576,
+            1.328825056552887,
+            0.5002075135707855
+          ],
+          "anchor": [
+            0.08100669831037521,
+            1.337499976158142,
+            0.5072500109672546
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3465",
+              "sha256": "4c2e57a9170cfa997bbe48f3b2a5a49e334e03a1067b4e8decc152fb1bb8d913"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left common iliac vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+          "fmaId": "FMA18885",
+          "name": "Right external iliac vein",
+          "sourceName": "right external iliac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18885",
+          "bounds": {
+            "min": [
+              -0.5212200284004211,
+              -0.043699949979782104,
+              0.12443698942661285
+            ],
+            "max": [
+              -0.2480829954147339,
+              1.0554901361465454,
+              1.015910029411316
+            ]
+          },
+          "center": [
+            -0.3846515119075775,
+            0.5058950930833817,
+            0.5701735094189644
+          ],
+          "anchor": [
+            -0.4340520203113556,
+            0.3621801733970642,
+            0.4993080198764801
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3568",
+              "sha256": "503cc199a945ab1c061deacdc32165ac413f7c2d362375f17d576a3b2f235023"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right external iliac vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+          "fmaId": "FMA18886",
+          "name": "Left external iliac vein",
+          "sourceName": "left external iliac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18886",
+          "bounds": {
+            "min": [
+              0.07749750465154648,
+              0.04442016780376434,
+              0.0061830137856304646
+            ],
+            "max": [
+              0.5713520050048828,
+              1.1386700868606567,
+              1.0051300525665283
+            ]
+          },
+          "center": [
+            0.32442475482821465,
+            0.5915451273322105,
+            0.5056565331760794
+          ],
+          "anchor": [
+            0.4478049874305725,
+            0.5487096905708313,
+            0.29528504610061646
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3484",
+              "sha256": "bf0ca81768bb8f1d42837f43ccd41bc0f006da1a9703517b298edeb9af525c00"
+            },
+            {
+              "file": "FJ3522",
+              "sha256": "2d1d33f168089521c707408b80f229d6b8f8302fde1f31ddad22e63238c4da7a"
+            },
+            {
+              "file": "FJ3523",
+              "sha256": "a26bb4b9261de25955ac8a6669391cb588a1546267db5c8c9865d10c426bc402"
+            },
+            {
+              "file": "FJ3524",
+              "sha256": "006c8cb0cc53fb2b5f388979adccff45430ba16dfd9d06ffa67a36f5bd946f27"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left external iliac vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+          "fmaId": "FMA18887",
+          "name": "Right internal iliac vein",
+          "sourceName": "right internal iliac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18887",
+          "bounds": {
+            "min": [
+              -0.38811901211738586,
+              -0.1117999255657196,
+              -0.5062593221664429
+            ],
+            "max": [
+              -0.16811001300811768,
+              1.1472302675247192,
+              0.5515400171279907
+            ]
+          },
+          "center": [
+            -0.27811451256275177,
+            0.5177151709794998,
+            0.022640347480773926
+          ],
+          "anchor": [
+            -0.27434200048446655,
+            0.5961199998855591,
+            -0.0652870163321495
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3570",
+              "sha256": "83a53beb46b092f78bf80cf73cdfc10b91e0b32f7183fc79fde7ab0716069d73"
+            },
+            {
+              "file": "FJ3571",
+              "sha256": "9fed45819fc91bdda871afc018a0e8924fa9a7bee6cb131626509f75344aa018"
+            },
+            {
+              "file": "FJ3572",
+              "sha256": "8a9105869190200b0798c89805b8565ab079a40ac859c1996a4bf3a752d75e6f"
+            },
+            {
+              "file": "FJ3607",
+              "sha256": "cd1c2558c44fff12efdad2da945fb314469f48c4e252aa10b79b94f7ec02f3ce"
+            },
+            {
+              "file": "FJ3608",
+              "sha256": "9166b488722a107f0ea509bc5c9f94ff26b4cab54d6a5dcc9141dc1bd29efe79"
+            },
+            {
+              "file": "FJ3609",
+              "sha256": "5cb3da4efafb5e511f9d0e658e095f9198545d325c7cc7d0960669b5124a2295"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right internal iliac vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+          "fmaId": "FMA18888",
+          "name": "Left internal iliac vein",
+          "sourceName": "left internal iliac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18888",
+          "bounds": {
+            "min": [
+              0.11571799963712692,
+              -0.10549987852573395,
+              -0.6006829738616943
+            ],
+            "max": [
+              0.25818198919296265,
+              1.1439203023910522,
+              0.3990840017795563
+            ]
+          },
+          "center": [
+            0.18694999441504478,
+            0.5192102119326591,
+            -0.10079948604106903
+          ],
+          "anchor": [
+            0.20834499597549438,
+            0.5610302686691284,
+            -0.16415901482105255
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3469",
+              "sha256": "6a853f1cc673163d4e339f608f405c8c7ad74a3a6c8364fa71421976cb42b681"
+            },
+            {
+              "file": "FJ3470",
+              "sha256": "84de7eea903bfea9b940078ecb921fafdcd8db65dd52f8e954d2973a8a7e59e1"
+            },
+            {
+              "file": "FJ3471",
+              "sha256": "90354aa14b7a84cd015bd32a9cfba5bd0ab9800bdf220fffcfb2960d752f2bcf"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left internal iliac vein on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "b7ed1802210cfc12110bcac57b3c6fe7471e0f13",
+    "authorCommit": "115f02e297f1f35827daf2837792857f36946df8",
+    "sourcePinsHash": "a5082ebe3bbab2d785456e5f3db7c726cf8eb71bd0d6282d501bef664263c3f1",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-artery",
+        "fmaId": "FMA14765",
+        "tab": "quiz",
+        "previousHash": "836ac2a988ff2a1a99098484c5656d17bd583cce751d06de1def6076146e89e4",
+        "currentHash": "c3a98bf2ce47437cc15c77dd7e247135b076ddcc7550df276bcab72a6d1635fc"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-artery",
+        "fmaId": "FMA14766",
+        "tab": "quiz",
+        "previousHash": "b54edd5a609ab1ffa6ed050b4bc323639b443e7af66a3585c0d9c42bb7013ec6",
+        "currentHash": "cd3c66228666394e1fed464ab089b36c1b49d6565d103dd9c00b91e692009a1d"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-artery",
+        "fmaId": "FMA18806",
+        "tab": "quiz",
+        "previousHash": "7e806b8b8a4234a95af424c2a2f751a03b5f6896b933365fafd68e0b51b4762f",
+        "currentHash": "f272b4a57d81e9a3b8a189e72b44d030bd8092d5a6ed9b1b7398eb36ef9edead"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-artery",
+        "fmaId": "FMA18807",
+        "tab": "quiz",
+        "previousHash": "faeae3c2782a900f1f131e5cadc66e1764022410a1b7df53ea6d324b72419058",
+        "currentHash": "14cdc2b35c201e44c0dfdae04b4e76c98aecbd226ed4b60ff51550da650387c6"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+        "fmaId": "FMA18809",
+        "tab": "quiz",
+        "previousHash": "956394a6a3842831de7a7a850ad645d9c466a43088c3603821c3446805f61e5e",
+        "currentHash": "12ae96f9f2819576e0b4ace6ab1fdf0bf2fbb5a34c85194a97f1ebaa26f9ce26"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+        "fmaId": "FMA18810",
+        "tab": "quiz",
+        "previousHash": "e583566d4217c0575d9f0cec0e8ca2b072d04f9fd640eab4211ffac665a8cf0f",
+        "currentHash": "a7a52da02f35c0cb668423cf664aef1305176db33b05453fbda4107772b03589"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+        "fmaId": "FMA21387",
+        "tab": "quiz",
+        "previousHash": "251c285e74324175e4d5aa1947b065e35464b4a4b10d4fd9d28de1fb8fa33c92",
+        "currentHash": "95bc233b50471df3b07c3c4e11af1d87b7325dfeb86c7922c5b7e84829ff81fe"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+        "fmaId": "FMA21388",
+        "tab": "quiz",
+        "previousHash": "f26ca78f6509ba3da850a655fb4bf16df001b5eaf3194edc86d2bb41c501c48e",
+        "currentHash": "26a634118cf22ac4b9e93555345b1e2eb0c2892f6ba7e37b82dbba91e8b7f303"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+        "fmaId": "FMA18885",
+        "tab": "quiz",
+        "previousHash": "8da92d00674aa97052aa5d490b016cd92939ebc98000e46ac629d5365ce0a200",
+        "currentHash": "51d65f39f5001c49714d22410acd7228bbb66c964829156e56f7cb55b0f42c54"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+        "fmaId": "FMA18886",
+        "tab": "quiz",
+        "previousHash": "113b1339068b7bfdcf86be7600c115672cdd0728c20acf2692d659f1f04c3022",
+        "currentHash": "88b4bcfce5396626e6dd9089d75c3033463dc5e1f6144e44c2e399e5a6915d4e"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+        "fmaId": "FMA18887",
+        "tab": "quiz",
+        "previousHash": "316ab4048df02d541b295607ad61278dbc2edabd2dcda6e09fdca99ce0f24b52",
+        "currentHash": "a14958c0ed21c0a8e9c61a3f445709757d3fbacc28875c7a181c7e8f74e7a09d"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+        "fmaId": "FMA18888",
+        "tab": "quiz",
+        "previousHash": "a69dbf3ff259d4ef3a799b4d7d806abe6c3553f0e3c27af6cdf526bd3249f05d",
+        "currentHash": "fed84e0b8f7dd18485fa4a61ff67fdc8f860fc1231f4f1b84d0fc37bd7fbe961"
+      }
+    ]
+  },
+  "sourceRecordHash": "bcfe5d743618025efca2bc655e4b2daf3b9e056aff7efd525278422fe047d4a0",
+  "originalPinPath": "content/iliac-vessel-quiz-pins.json",
+  "originalPinHash": "4afbcd1b3171a791ead0a37f143eae1f8ade01a7c7a1c6f448260e520ac9bbe3",
+  "originalPinBlob": "8d47eb29776938b37434f664c0d10dfbf3a66cc1",
+  "originalTransitionPaths": []
+}

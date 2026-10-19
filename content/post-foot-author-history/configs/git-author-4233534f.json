@@ -1,0 +1,164 @@
+{
+  "name": "git-author-4233534f",
+  "helper": "footVariantQuizLesson",
+  "pinsHash": "b88c2472f178157b59687952b13d69a1ec36b1c7cc7590bff8e486992f08e712",
+  "transitionHash": "12ae2f115e7ee0417bfd4b39d23def60a48b2d98fe52323186cc07ac6c91f20a",
+  "pins": {
+    "baseline": "386fdefbf84dd4bcb194c86914ba5d0e2c584daf",
+    "authorCommit": "4233534fadb842b4d3c074b6881b28e29a6fdd06",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:right:muscle:opponens-digiti-minimi-of-right-foot",
+          "fmaId": "FMA86034",
+          "name": "Opponens digiti minimi of right foot",
+          "sourceName": "opponens digiti minimi of right foot",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-muscles",
+          "nodeName": "FMA86034",
+          "bounds": {
+            "min": [
+              -1.3911499977111816,
+              -8.644131660461426,
+              0.49133598804473877
+            ],
+            "max": [
+              -1.0967199802398682,
+              -8.533462524414062,
+              0.8574400544166565
+            ]
+          },
+          "center": [
+            -1.243934988975525,
+            -8.588797092437744,
+            0.6743880212306976
+          ],
+          "anchor": [
+            -1.2535099983215332,
+            -8.589516639709473,
+            0.6709200143814087
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1399",
+              "sha256": "fbe4139cda56df2fe947b59c6e09e20d6b0384760d3425056f48ff5f7aa6a84d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find opponens digiti minimi of right foot on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:left:muscle:opponens-digiti-minimi-of-left-foot",
+          "fmaId": "FMA86035",
+          "name": "Opponens digiti minimi of left foot",
+          "sourceName": "opponens digiti minimi of left foot",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-muscles",
+          "nodeName": "FMA86035",
+          "bounds": {
+            "min": [
+              1.0967199802398682,
+              -8.644131660461426,
+              0.49133598804473877
+            ],
+            "max": [
+              1.3911499977111816,
+              -8.533462524414062,
+              0.8574400544166565
+            ]
+          },
+          "center": [
+            1.243934988975525,
+            -8.588797092437744,
+            0.6743880212306976
+          ],
+          "anchor": [
+            1.2535099983215332,
+            -8.589516639709473,
+            0.6709200143814087
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1399M",
+              "sha256": "c563ffeca1d282cf206accf4bc8f6052ede6e50089b04e8018704bf20e012c60"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find opponens digiti minimi of left foot on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "386fdefbf84dd4bcb194c86914ba5d0e2c584daf",
+    "authorCommit": "4233534fadb842b4d3c074b6881b28e29a6fdd06",
+    "sourcePinsHash": "b88c2472f178157b59687952b13d69a1ec36b1c7cc7590bff8e486992f08e712",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:foot:right:muscle:opponens-digiti-minimi-of-right-foot",
+        "fmaId": "FMA86034",
+        "tab": "quiz",
+        "previousHash": "f83669ff748a4af3c5f6a11256c83dc988bd9dda2d3182da864d031f8077c28d",
+        "currentHash": "f2c82d6505932800844bf3f7f7c815f6792e3da91a966cf87a4ab37b721ac553"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:muscle:opponens-digiti-minimi-of-left-foot",
+        "fmaId": "FMA86035",
+        "tab": "quiz",
+        "previousHash": "3084679920eacd8f28091d4052e09684cfae4af3d5103a8563bd28100b2a6d15",
+        "currentHash": "90f2f8bb3d15b944aaae92df956626f84a1ac1a2c38fa5c90c436b0ac4ce36e5"
+      }
+    ]
+  },
+  "sourceRecordHash": "36a6f8351bbc6f32c5f596daf347e531d99a74fc5cc9f4f6baa3efbc380eddcc"
+}

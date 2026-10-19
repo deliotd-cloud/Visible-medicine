@@ -1,0 +1,276 @@
+{
+  "author": "408759d57644b05402e98a937e7cf6338b5509cf",
+  "parent": "ac71406105da66f77115117bbab2c38428f7e5c3",
+  "tree": "8386a10eb2bf80393233a7afe04447b2778877cd",
+  "parentTree": "f8c99d8ac38d0780e14b8554edd878b95f366236",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 4,
+  "preserved": 9932,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+        "fmaId": "FMA44249",
+        "name": "Right long plantar ligament",
+        "sourceName": "right long plantar ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-connective-recovery",
+        "nodeName": "FMA44249",
+        "bounds": {
+          "min": [
+            -1.178279995918274,
+            -8.610419273376465,
+            -0.044085998088121414
+          ],
+          "max": [
+            -0.5938950181007385,
+            -8.363907814025879,
+            0.9254400730133057
+          ]
+        },
+        "center": [
+          -0.8860875070095062,
+          -8.487163543701172,
+          0.4406770374625921
+        ],
+        "anchor": [
+          -0.892598032951355,
+          -8.50725269317627,
+          0.46150803565979004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1424",
+            "sha256": "661b56c07f5a39362806f1c62d10497f42dbe1da37a680da0d4359c0c5079c9c"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "9c321d7a36796a404a0a2c50fb0d443e769794e324f16a24577ca84085c95cd7"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+        "fmaId": "FMA44250",
+        "name": "Left long plantar ligament",
+        "sourceName": "left long plantar ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-connective-recovery",
+        "nodeName": "FMA44250",
+        "bounds": {
+          "min": [
+            0.5938950181007385,
+            -8.610419273376465,
+            -0.044086989015340805
+          ],
+          "max": [
+            1.178279995918274,
+            -8.363907814025879,
+            0.9254400730133057
+          ]
+        },
+        "center": [
+          0.8860875070095062,
+          -8.487163543701172,
+          0.44067654199898243
+        ],
+        "anchor": [
+          0.8925990462303162,
+          -8.50725269317627,
+          0.46150803565979004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1424M",
+            "sha256": "85a4d2965253a1638342e3295fb342ff0d8e8931c9d9b6373de6e6af7de3e79e"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "a944f6aaa2ce434671012f6988048d0acc9b1f245ff0f1fcb747382945f57450"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:ligament:flexor-retinaculum-of-right-wrist",
+        "fmaId": "FMA40120",
+        "name": "Flexor retinaculum of right wrist",
+        "sourceName": "flexor retinaculum of right wrist",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand",
+          "forearm"
+        ],
+        "bundle": "hand-connective-axial-detail",
+        "nodeName": "FMA40120",
+        "bounds": {
+          "min": [
+            -2.7091901302337646,
+            -0.20520995557308197,
+            0.7686499953269958
+          ],
+          "max": [
+            -2.3403100967407227,
+            0.06431030482053757,
+            0.9080600142478943
+          ]
+        },
+        "center": [
+          -2.5247501134872437,
+          -0.0704498253762722,
+          0.8383550047874451
+        ],
+        "anchor": [
+          -2.522700071334839,
+          -0.07679992914199829,
+          0.8895500302314758
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1471",
+            "sha256": "71b49d4cdeb7da162dc51ac6afd5fcf713daa321c45de0b3f37d2825b4e4ffd0"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "ab959dbaf40e50ec32d70e39a92383db063de55d31aac569532b2fd373e1ee12"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:ligament:flexor-retinaculum-of-left-wrist",
+        "fmaId": "FMA40121",
+        "name": "Flexor retinaculum of left wrist",
+        "sourceName": "flexor retinaculum of left wrist",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand",
+          "forearm"
+        ],
+        "bundle": "hand-connective-axial-detail",
+        "nodeName": "FMA40121",
+        "bounds": {
+          "min": [
+            2.3403100967407227,
+            -0.20520995557308197,
+            0.7686499953269958
+          ],
+          "max": [
+            2.7091901302337646,
+            0.06431030482053757,
+            0.9080600142478943
+          ]
+        },
+        "center": [
+          2.5247501134872437,
+          -0.0704498253762722,
+          0.8383550047874451
+        ],
+        "anchor": [
+          2.522700071334839,
+          -0.07679992914199829,
+          0.8895500302314758
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1471M",
+            "sha256": "dfe8a84cb170a4f9450d345fb6182a98707d663be9c9d67723f75c4897581023"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in its unchanged common coordinate frame. Thickness, attachment footprints and tissue continuity are not certified; broad fascial source aliases do not establish a complete fascia layer. No patient registration or imaging appearance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "a086eaf7e8614b836b18a9c48efd36654880b73033eebf2855511f4de7958f0d"
+    }
+  ]
+}

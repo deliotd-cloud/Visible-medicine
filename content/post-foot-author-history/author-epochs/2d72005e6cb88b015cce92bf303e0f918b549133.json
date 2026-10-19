@@ -1,0 +1,144 @@
+{
+  "author": "2d72005e6cb88b015cce92bf303e0f918b549133",
+  "parent": "f4aebd57f65f7c24656538cd72ba9e79223d81cd",
+  "tree": "89760775ce21e84071449059f0410a626e918810",
+  "parentTree": "cbb911bca8f7bf599ad15a2f784e78de691bc1fe",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 2,
+  "preserved": 9934,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:right:vessel:dorsal-venous-network-of-right-hand",
+        "fmaId": "FMA62506",
+        "name": "Dorsal venous network of right hand",
+        "sourceName": "dorsal venous network of right hand",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA62506",
+        "bounds": {
+          "min": [
+            -2.8991599082946777,
+            -0.783140242099762,
+            0.6212100386619568
+          ],
+          "max": [
+            -2.2986299991607666,
+            -0.08481018245220184,
+            0.8272700309753418
+          ]
+        },
+        "center": [
+          -2.598894953727722,
+          -0.4339752122759819,
+          0.7242400348186493
+        ],
+        "anchor": [
+          -2.779679775238037,
+          -0.4008801281452179,
+          0.7057299613952637
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2280",
+            "sha256": "58c25d369779e6a50757cd89d1deefb7da82d5790e1242cea4b9b7e3d5e77759"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "595190ef74bf0df55c60fc69514746071aebf2651571968feee50c5be2b40cf1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:hand:left:vessel:dorsal-venous-network-of-left-hand",
+        "fmaId": "FMA62507",
+        "name": "Dorsal venous network of left hand",
+        "sourceName": "dorsal venous network of left hand",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "hand",
+        "regions": [
+          "hand"
+        ],
+        "bundle": "hand-vessels-hand-venous",
+        "nodeName": "FMA62507",
+        "bounds": {
+          "min": [
+            2.2985401153564453,
+            -0.7830902338027954,
+            0.6212199926376343
+          ],
+          "max": [
+            2.899129867553711,
+            -0.08487976342439651,
+            0.8272799849510193
+          ]
+        },
+        "center": [
+          2.598834991455078,
+          -0.43398499861359596,
+          0.7242499887943268
+        ],
+        "anchor": [
+          2.779670000076294,
+          -0.402130126953125,
+          0.7050299644470215
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2228",
+            "sha256": "f7ae1f851f00eb4378438f6de6a4bb9e109a9e2086a4475b9779cbe808e71d3e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source venous surface in the unchanged common coordinate frame. Grouped components retain one source identity; they are not independently named tributaries. No complete drainage pathway, valves, lumen, flow, vascular connection or patient registration is established. Missing segments and digital nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "79e9a9580ba22afb32a69220f71e343424d088d81d52e08b3de51c2a55707044"
+    }
+  ]
+}

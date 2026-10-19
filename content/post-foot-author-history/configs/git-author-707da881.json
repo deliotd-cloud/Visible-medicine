@@ -1,0 +1,170 @@
+{
+  "name": "git-author-707da881",
+  "helper": "internalIliacUltrasoundLesson",
+  "pinsHash": "961a36c2affb6d93b0708612f8a1a8eaf3a4c0d65093d807d1044b2da41495d2",
+  "transitionHash": "b7d11c002465244169cd374b128274e944798d754216064a4fc3450a590bfb26",
+  "pins": {
+    "baseline": "53238ab38e08bca10d3302ba85d07d5a72ee21d8",
+    "authorCommit": "707da881415d2d9dd763bc0de7e3cc04ceafdd56",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+          "fmaId": "FMA18809",
+          "name": "Right internal iliac artery",
+          "sourceName": "right internal iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18809",
+          "bounds": {
+            "min": [
+              -0.3603070080280304,
+              0.503649890422821,
+              -0.22547799348831177
+            ],
+            "max": [
+              -0.2723489999771118,
+              1.107659935951233,
+              0.6246700286865234
+            ]
+          },
+          "center": [
+            -0.3163280040025711,
+            0.805654913187027,
+            0.19959601759910583
+          ],
+          "anchor": [
+            -0.3113909959793091,
+            0.7578601241111755,
+            0.21586699783802032
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3569",
+              "sha256": "bc5922d28b6f5d9f67722396283ea7ef10cd3baa8ed0a8271faa8c11ca96d52a"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+          "fmaId": "FMA18810",
+          "name": "Left internal iliac artery",
+          "sourceName": "left internal iliac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "abdomen",
+            "thigh"
+          ],
+          "bundle": "pelvis-vessels-recovery",
+          "nodeName": "FMA18810",
+          "bounds": {
+            "min": [
+              0.22271499037742615,
+              0.45338013768196106,
+              -0.38280200958251953
+            ],
+            "max": [
+              0.3353880047798157,
+              1.0986602306365967,
+              0.5145200490951538
+            ]
+          },
+          "center": [
+            0.2790514975786209,
+            0.7760201841592789,
+            0.06585901975631714
+          ],
+          "anchor": [
+            0.27650898694992065,
+            0.7199298143386841,
+            0.08643299341201782
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3468",
+              "sha256": "2effa517c9d8b549b5a6b9e0ffe0326a99b03cb3d7ca58f4b1d338ce80f1d5e0"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "53238ab38e08bca10d3302ba85d07d5a72ee21d8",
+    "authorCommit": "707da881415d2d9dd763bc0de7e3cc04ceafdd56",
+    "sourcePinsHash": "961a36c2affb6d93b0708612f8a1a8eaf3a4c0d65093d807d1044b2da41495d2",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-artery",
+        "fmaId": "FMA18809",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "18a26d7fb0ca02bf79df141ef21919e68534cd42c3120f4c098f475b701c7cd5"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-artery",
+        "fmaId": "FMA18810",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "5fb797dcbfae566282bd471c82ba02300f46e1df0366f03ab28f3ddb7b97b99d"
+      }
+    ]
+  },
+  "sourceRecordHash": "89b41d563943aa2af844666f7f53acbdf310b4c53e479749c6e7e99e5223c937"
+}

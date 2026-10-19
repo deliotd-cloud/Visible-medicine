@@ -1,0 +1,534 @@
+{
+  "author": "c27907d841039aaeccb96a755760dfa0fbe36730",
+  "parent": "ae0a56e5d074b921f259dc45c6c9167d6aac9125",
+  "tree": "c6a8e7bfadeb9f4376d0bf1f78f0980980f4c84c",
+  "parentTree": "83f1dbb70abe9e64dd156e24e4d9d242c7b8902d",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 8,
+  "preserved": 9928,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+        "fmaId": "FMA3941",
+        "name": "Right common carotid artery",
+        "sourceName": "right common carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA3941",
+        "bounds": {
+          "min": [
+            -0.21257899701595306,
+            5.294200420379639,
+            0.5538300275802612
+          ],
+          "max": [
+            -0.08614440262317657,
+            5.733799934387207,
+            0.6754799485206604
+          ]
+        },
+        "center": [
+          -0.14936169981956482,
+          5.514000177383423,
+          0.6146549880504608
+        ],
+        "anchor": [
+          -0.1452919989824295,
+          5.530099868774414,
+          0.5932700634002686
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3564",
+            "sha256": "423585ec439b07b0f64878f904afca52d4866e1e0dc54c2ace31953d9b6156cf"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right common carotid artery on the model."
+      },
+      "currentHash": "34d86d9c63f3d0d163c3b43506eb1f38be953e9a5d4ed7ef588f9150ecc9afda"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+        "fmaId": "FMA4058",
+        "name": "Left common carotid artery",
+        "sourceName": "left common carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4058",
+        "bounds": {
+          "min": [
+            0.10820800065994263,
+            5.07390022277832,
+            0.46006301045417786
+          ],
+          "max": [
+            0.22933000326156616,
+            5.736800670623779,
+            0.6222400069236755
+          ]
+        },
+        "center": [
+          0.1687690019607544,
+          5.40535044670105,
+          0.5411515086889267
+        ],
+        "anchor": [
+          0.18002599477767944,
+          5.409000396728516,
+          0.5512999892234802
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3483",
+            "sha256": "19f38e57365867279705090994fff228177163c1920ad0f8f9b15f830a42bc1d"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left common carotid artery on the model."
+      },
+      "currentHash": "d91755e1e6be634e54d41c9c102f05caa286b91d69db77cde97990c2017ee4f2"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+        "fmaId": "FMA3949",
+        "name": "Right internal carotid artery",
+        "sourceName": "right internal carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA3949",
+        "bounds": {
+          "min": [
+            -0.3746519982814789,
+            6.345400333404541,
+            0.4403970241546631
+          ],
+          "max": [
+            -0.09842479974031448,
+            7.377199649810791,
+            0.6455600261688232
+          ]
+        },
+        "center": [
+          -0.23653839901089668,
+          6.861299991607666,
+          0.5429785251617432
+        ],
+        "anchor": [
+          -0.24844801425933838,
+          6.865200042724609,
+          0.5546900033950806
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1682",
+            "sha256": "7bb929f419a3b37c8cffe1a1bf59c0374b26e2c1027d061956e5d73b31eb295b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right internal carotid artery on the model."
+      },
+      "currentHash": "b730666750995d38f67e19baa639847bfa938693922ee065a6611df9d647b830"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+        "fmaId": "FMA4062",
+        "name": "Left internal carotid artery",
+        "sourceName": "left internal carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4062",
+        "bounds": {
+          "min": [
+            0.09842490404844284,
+            6.345400333404541,
+            0.44039803743362427
+          ],
+          "max": [
+            0.3746519982814789,
+            7.377199649810791,
+            0.645550012588501
+          ]
+        },
+        "center": [
+          0.23653845116496086,
+          6.861299991607666,
+          0.5429740250110626
+        ],
+        "anchor": [
+          0.24844801425933838,
+          6.865200042724609,
+          0.5547000169754028
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1682M",
+            "sha256": "117074e676e00306d95277cf2c4155a73c3684674bab401be4aec3acdfa11cce"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left internal carotid artery on the model."
+      },
+      "currentHash": "2fba4afe8be97b2b7e9afc333665405b62d51af1be7c1f25b989324cdf26f588"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+        "fmaId": "FMA3958",
+        "name": "Right vertebral artery",
+        "sourceName": "right vertebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA3958",
+        "bounds": {
+          "min": [
+            -0.3366509974002838,
+            5.984100341796875,
+            0.08574901521205902
+          ],
+          "max": [
+            0.003840259974822402,
+            7.060400485992432,
+            0.36871200799942017
+          ]
+        },
+        "center": [
+          -0.1664053687127307,
+          6.522250413894653,
+          0.2272305116057396
+        ],
+        "anchor": [
+          -0.19402100145816803,
+          6.509000301361084,
+          0.23768600821495056
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1725",
+            "sha256": "c7ba10decd013234fafefc0ae366d13c0b5707fff437ce169966cfabc7cc3ca2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right vertebral artery on the model."
+      },
+      "currentHash": "acba4861604a2d4a616a2fe3736621ea129a95c021ecc74f86aff64e53c719eb"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+        "fmaId": "FMA4066",
+        "name": "Left vertebral artery",
+        "sourceName": "left vertebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4066",
+        "bounds": {
+          "min": [
+            -0.003840259974822402,
+            5.984100341796875,
+            0.08574901521205902
+          ],
+          "max": [
+            0.3366519808769226,
+            7.060300350189209,
+            0.36871102452278137
+          ]
+        },
+        "center": [
+          0.1664058604510501,
+          6.522200345993042,
+          0.2272300198674202
+        ],
+        "anchor": [
+          0.19402100145816803,
+          6.509000301361084,
+          0.23768600821495056
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1725M",
+            "sha256": "10d2734ce5ee1a9eadde241f542a87573682f3a4617f3df896bcd9513a1bb2f0"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left vertebral artery on the model."
+      },
+      "currentHash": "be17857c571dff5cd878f72eb4941f33381c9d15068843ee522f70fdc3d75bb6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+        "fmaId": "FMA4754",
+        "name": "Right internal jugular vein",
+        "sourceName": "right internal jugular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4754",
+        "bounds": {
+          "min": [
+            -0.31139999628067017,
+            5.404799938201904,
+            0.6288700103759766
+          ],
+          "max": [
+            -0.21712099015712738,
+            5.817399978637695,
+            0.7207499742507935
+          ]
+        },
+        "center": [
+          -0.2642604932188988,
+          5.6110999584198,
+          0.674809992313385
+        ],
+        "anchor": [
+          -0.27468299865722656,
+          5.610999584197998,
+          0.705590009689331
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3585",
+            "sha256": "528ab41e57d31335c0deb9bb804c4e83b9bc22cf912d8de247a88ad9893325f1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right internal jugular vein on the model."
+      },
+      "currentHash": "70dd9df45cce10a083ab2395cdcfb1cbd0ed11842e46eb7a0794845fa9c1b871"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+        "fmaId": "FMA4762",
+        "name": "Left internal jugular vein",
+        "sourceName": "left internal jugular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4762",
+        "bounds": {
+          "min": [
+            0.18107500672340393,
+            5.374100208282471,
+            0.6170099377632141
+          ],
+          "max": [
+            0.3090539872646332,
+            5.804300308227539,
+            0.7211399674415588
+          ]
+        },
+        "center": [
+          0.24506449699401855,
+          5.589200258255005,
+          0.6690749526023865
+        ],
+        "anchor": [
+          0.21520499885082245,
+          5.592700004577637,
+          0.6498100161552429
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3485",
+            "sha256": "ec17bca2370898fd34c6e518d9ad62998819544058d41a34838580f7e554f0bd"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left internal jugular vein on the model."
+      },
+      "currentHash": "f24e3771c0b033e64a153ea50db8c563989ba1110dad8d31097a9e149edd0acb"
+    }
+  ]
+}

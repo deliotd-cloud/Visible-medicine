@@ -1,0 +1,439 @@
+{
+  "name": "git-author-7f220ed4",
+  "helper": "thoracicVenousXrayLesson",
+  "pinsHash": "18679215f0973f8ce82977d516538fd52d078b1a08b17d61d51da9e3b1df9ffb",
+  "transitionHash": "5f9ae8485b6f678b1d7ae1e92956c9a9b416a9687191ed0ac8437a6f923a4768",
+  "pins": {
+    "baseline": "c6fd5a1789ce8c6f06c48693aa9d5479a00d610a",
+    "authorCommit": "7f220ed46578d33731a21e77c3133895c21f1e7a",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+          "fmaId": "FMA4944",
+          "name": "Hemiazygos vein",
+          "sourceName": "hemiazygos vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-recovery",
+          "nodeName": "FMA4944",
+          "bounds": {
+            "min": [
+              -0.15802399814128876,
+              2.7026000022888184,
+              0.0510060116648674
+            ],
+            "max": [
+              0.24038200080394745,
+              3.742500066757202,
+              0.25790101289749146
+            ]
+          },
+          "center": [
+            0.041179001331329346,
+            3.2225500345230103,
+            0.15445351228117943
+          ],
+          "anchor": [
+            0.18140000104904175,
+            3.217600107192993,
+            0.1522589921951294
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3434",
+              "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+          "fmaId": "FMA4707",
+          "name": "Great cardiac vein",
+          "sourceName": "great cardiac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-recovery",
+          "nodeName": "FMA4707",
+          "bounds": {
+            "min": [
+              0.3990879952907562,
+              4.137800216674805,
+              0.31922799348831177
+            ],
+            "max": [
+              0.48562198877334595,
+              4.534599781036377,
+              0.768779993057251
+            ]
+          },
+          "center": [
+            0.4423549920320511,
+            4.336199998855591,
+            0.5440039932727814
+          ],
+          "anchor": [
+            0.4508630037307739,
+            4.409000396728516,
+            0.46638602018356323
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2656",
+              "sha256": "cb9c6b4e10e43c92c8ea4e2e1a66215d98cf58d72fcc60aeadc8a0f87f6724fc"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+          "fmaId": "FMA4713",
+          "name": "Middle cardiac vein",
+          "sourceName": "middle cardiac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-recovery",
+          "nodeName": "FMA4713",
+          "bounds": {
+            "min": [
+              0.016033099964261055,
+              3.7452001571655273,
+              0.5800299644470215
+            ],
+            "max": [
+              0.7059670090675354,
+              4.07390022277832,
+              1.0652000904083252
+            ]
+          },
+          "center": [
+            0.3610000545158982,
+            3.909550189971924,
+            0.8226150274276733
+          ],
+          "anchor": [
+            0.32552599906921387,
+            3.800999641418457,
+            0.8317700028419495
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2678",
+              "sha256": "20a71237bc8a3b211c244e0695c1a6242abb3f684275c0b01061439c92b72ef7"
+            },
+            {
+              "file": "FJ2679",
+              "sha256": "754d84b147f9a8ba3eb7aa0cb434a74a7c047354bb689e8e89de6e4f0160f737"
+            },
+            {
+              "file": "FJ2680",
+              "sha256": "29c830d98097500bb09a506b05275942574a5ea9b18ad58e51bc5b7313f0ed8b"
+            },
+            {
+              "file": "FJ2681",
+              "sha256": "cfb2b3134737d33591f2518ce6338498d8c3a32cb0dbc93cfcd9c88b8c4996d5"
+            },
+            {
+              "file": "FJ2682",
+              "sha256": "1122684d5da8ea6953d03836244552fd33287185304d74e2a0e395f691e323e6"
+            },
+            {
+              "file": "FJ2683",
+              "sha256": "02757805e2e956e4a4425b2c54db8b54ee69f5f97da5aa63ca0cd12c4b159b1e"
+            },
+            {
+              "file": "FJ2684",
+              "sha256": "25a39f3d42a46af2008f426def111b4af3add424dc327543e51b2c7fa67f3d95"
+            },
+            {
+              "file": "FJ2685",
+              "sha256": "578c2f788d36149f535210004762558a7e533cc42c121d26a8f418cb04142263"
+            },
+            {
+              "file": "FJ2686",
+              "sha256": "172e06e35489ae2657678c6d340eace2daed2fb2329324aa40c48824b0e99666"
+            },
+            {
+              "file": "FJ2687",
+              "sha256": "56fa04e9a81334e4492f94eb51ff810f47c786581f098d69083013f4c9ae2a62"
+            },
+            {
+              "file": "FJ2688",
+              "sha256": "79e05aae03bab74714440fd5d4941f67b969293d57be99c6758c61fa15452e7b"
+            },
+            {
+              "file": "FJ2689",
+              "sha256": "2a5596c4d908ff4c6bbe50d36c18759753e9dc5fa9b10029ec7f91ca8a2b5f04"
+            },
+            {
+              "file": "FJ2690",
+              "sha256": "0914e4188f4952d2325f962dd97336d1b55ed40dd8532db46c9309975157f57f"
+            },
+            {
+              "file": "FJ2691",
+              "sha256": "e50b042a1f7e034839c5180a9fdfbf0165a57ce19d02dc0092166d7e6772cb63"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+          "fmaId": "FMA4758",
+          "name": "Right internal thoracic vein",
+          "sourceName": "right internal thoracic vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-inventory",
+          "nodeName": "FMA4758",
+          "bounds": {
+            "min": [
+              -0.26538199186325073,
+              3.8387999534606934,
+              0.6932700276374817
+            ],
+            "max": [
+              -0.09159509837627411,
+              5.300400257110596,
+              1.4846899509429932
+            ]
+          },
+          "center": [
+            -0.17848854511976242,
+            4.5696001052856445,
+            1.0889799892902374
+          ],
+          "anchor": [
+            -0.1281770020723343,
+            4.6072998046875,
+            1.201200008392334
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1993",
+              "sha256": "e656a00a3ba808072998f0dd4e1b3285f4fd3b853d9a4952e60640c6a03f299b"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+          "fmaId": "FMA76767",
+          "name": "Anterior cardiac vein · source group",
+          "sourceName": "anterior cardiac vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "anterior-cardiac-vein",
+          "nodeName": "FMA76767",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2725",
+              "sha256": "48063a8e366f2ad5c6745d9d20c31afc216a68561d5b4826de256444190f7634"
+            },
+            {
+              "file": "FJ2730",
+              "sha256": "bb15f6552044e7e9dbf7035fc0836b0ee10e1a46a22a0b2cc90c4eb711c11141"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.035955000668764114,
+              4.229499816894531,
+              1.0874899625778198
+            ],
+            "max": [
+              0.29523301124572754,
+              4.429800033569336,
+              1.2661999464035034
+            ]
+          },
+          "center": [
+            0.1296390052884817,
+            4.329649925231934,
+            1.1768449544906616
+          ],
+          "anchor": [
+            0.12833400070667267,
+            4.34119987487793,
+            1.2211400270462036
+          ],
+          "coverageNote": "Two original surfaces retained as one source-defined group. The visible branches are not a normal vein count, a complete venous tree or independently named veins. Apparent contact with the heart, right coronary artery or the other component does not prove lumen continuity, drainage openings or a dissection plane. Reassemble before comparing source relationships.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Anterior cardiac vein · source group · Review pending",
+            "body": "Additional structure-specific teaching remains to be authored and reviewed.",
+            "bullets": [],
+            "note": "No patient scan, validated imaging visibility, diagnosis, intervention or registered correspondence is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "c6fd5a1789ce8c6f06c48693aa9d5479a00d610a",
+    "authorCommit": "7f220ed46578d33731a21e77c3133895c21f1e7a",
+    "sourcePinsHash": "18679215f0973f8ce82977d516538fd52d078b1a08b17d61d51da9e3b1df9ffb",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "fmaId": "FMA4944",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "2a4044a62466d0f60432279ff5bc6f13714a70a0b5c1dec0f78722f279156891"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+        "fmaId": "FMA4707",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "a450c623678c81d2fb29d0cd5fb64937e28618b91ec03f9c4f8833057a18c544"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+        "fmaId": "FMA4713",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "657ff12d8017d61361d74809d5720a6d8918b9b4b2a0a1b9ae5b34ab0ddc7089"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+        "fmaId": "FMA4758",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "1854a8aa11674722372d566faeb613617e1c4e4a23da72a101460df1935ae662"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:anterior-cardiac-vein",
+        "fmaId": "FMA76767",
+        "tab": "xray",
+        "previousHash": "156b99a386331a139b1265e12a6d0bb665827ea0b0c69c8ef265da51a9ef4c82",
+        "currentHash": "ee51f67f54d7a8f19f433a82dba6a61b4dcbbb9efc2eba1ff5f1be120afc6ea6"
+      }
+    ]
+  },
+  "sourceRecordHash": "96e0974ed52dd06758b52a5a83dac0357e86350f68d88d3e0b6c74426845522e"
+}

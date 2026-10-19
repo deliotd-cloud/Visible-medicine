@@ -1,0 +1,1594 @@
+{
+  "name": "git-pin-4bb7a85b",
+  "helper": "thighMuscleQuizLesson",
+  "pinsHash": "3e9bf646174614af4cabd1f46e9d25055028d23f49cc450777f012e48293f708",
+  "transitionHash": "5f16caec284d226621bd5efeed666f01ff226b86ad2a19ba2d6637a4ec488d81",
+  "pins": {
+    "baseline": "b148cb9ed9ac7e397d1005f7e7aca4017c3c2373",
+    "authorCommit": "4bb7a85b962e2cbd20ee9f329ddd0ae38e4f0642",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+          "fmaId": "FMA22328",
+          "name": "Right gluteus maximus",
+          "sourceName": "right gluteus maximus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22328",
+          "bounds": {
+            "min": [
+              -1.454010009765625,
+              -1.3225500583648682,
+              -0.6986629962921143
+            ],
+            "max": [
+              0.01520910020917654,
+              1.3255701065063477,
+              0.2801149785518646
+            ]
+          },
+          "center": [
+            -0.7194004547782242,
+            0.001510024070739746,
+            -0.20927400887012482
+          ],
+          "anchor": [
+            -0.7410730123519897,
+            -0.05473998934030533,
+            -0.31849899888038635
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1418",
+              "sha256": "e576dd907b8bb9b373beda7ba9cb14cce4c958def4b782ad6563b6e2fbe71d46"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right gluteus maximus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+          "fmaId": "FMA22329",
+          "name": "Left gluteus maximus",
+          "sourceName": "left gluteus maximus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22329",
+          "bounds": {
+            "min": [
+              -0.01520910020917654,
+              -1.3225500583648682,
+              -0.6986629962921143
+            ],
+            "max": [
+              1.454010009765625,
+              1.3255701065063477,
+              0.2801149785518646
+            ]
+          },
+          "center": [
+            0.7194004547782242,
+            0.001510024070739746,
+            -0.20927400887012482
+          ],
+          "anchor": [
+            0.7410730123519897,
+            -0.05473998934030533,
+            -0.31849801540374756
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1418M",
+              "sha256": "abde060eaa4c4e1b3da0a865a804a2c8b7790d2994cc1fe8c133dd541c92d90e"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left gluteus maximus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-medius",
+          "fmaId": "FMA22330",
+          "name": "Right gluteus medius",
+          "sourceName": "right gluteus medius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22330",
+          "bounds": {
+            "min": [
+              -1.4973598718643188,
+              -0.11257018893957138,
+              -0.3306579887866974
+            ],
+            "max": [
+              -0.5959630012512207,
+              1.5090301036834717,
+              0.5199800133705139
+            ]
+          },
+          "center": [
+            -1.0466614365577698,
+            0.6982299573719501,
+            0.09466101229190826
+          ],
+          "anchor": [
+            -1.0653600692749023,
+            0.7126098871231079,
+            -0.024039993062615395
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1419",
+              "sha256": "e2e06899b8a61640b32086432ec4b577b2bf2db6f044d469c01bdceb38bd3831"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right gluteus medius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-medius",
+          "fmaId": "FMA22331",
+          "name": "Left gluteus medius",
+          "sourceName": "left gluteus medius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22331",
+          "bounds": {
+            "min": [
+              0.5959630012512207,
+              -0.11257018893957138,
+              -0.3306579887866974
+            ],
+            "max": [
+              1.4973499774932861,
+              1.5090301036834717,
+              0.5199800133705139
+            ]
+          },
+          "center": [
+            1.0466564893722534,
+            0.6982299573719501,
+            0.09466101229190826
+          ],
+          "anchor": [
+            1.0653600692749023,
+            0.7126001119613647,
+            -0.024039993062615395
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1419M",
+              "sha256": "37f92300b952b93099dd8dd417b154b1af7484fd28780d990ff21e0e7684af84"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left gluteus medius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus",
+          "fmaId": "FMA22332",
+          "name": "Right gluteus minimus",
+          "sourceName": "right gluteus minimus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22332",
+          "bounds": {
+            "min": [
+              -1.4513698816299438,
+              -0.16719970107078552,
+              -0.03628101199865341
+            ],
+            "max": [
+              -0.6770839691162109,
+              1.232550024986267,
+              0.5227699875831604
+            ]
+          },
+          "center": [
+            -1.0642269253730774,
+            0.5326751619577408,
+            0.2432444877922535
+          ],
+          "anchor": [
+            -1.0668200254440308,
+            0.5003997683525085,
+            0.25555703043937683
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1420",
+              "sha256": "61ebd1c4cd97adb69324aa74325c05425dbf37f83862a34c6a2f7400c3c017cd"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right gluteus minimus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus",
+          "fmaId": "FMA22333",
+          "name": "Left gluteus minimus",
+          "sourceName": "left gluteus minimus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22333",
+          "bounds": {
+            "min": [
+              0.6770839691162109,
+              -0.16719970107078552,
+              -0.03628101199865341
+            ],
+            "max": [
+              1.4513698816299438,
+              1.232550024986267,
+              0.5227699875831604
+            ]
+          },
+          "center": [
+            1.0642269253730774,
+            0.5326751619577408,
+            0.2432444877922535
+          ],
+          "anchor": [
+            1.0668200254440308,
+            0.5003899931907654,
+            0.25555703043937683
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1420M",
+              "sha256": "d4fd7a31338758607094164c2d8e3a39f8cd1f5baee7624a0391a7ddd8168272"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left gluteus minimus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-semimembranosus",
+          "fmaId": "FMA22448",
+          "name": "Right semimembranosus",
+          "sourceName": "right semimembranosus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22448",
+          "bounds": {
+            "min": [
+              -0.709991991519928,
+              -4.840740203857422,
+              -0.12670299410820007
+            ],
+            "max": [
+              -0.1317490041255951,
+              -0.4556201100349426,
+              0.5349500179290771
+            ]
+          },
+          "center": [
+            -0.42087049782276154,
+            -2.6481801569461823,
+            0.20412351191043854
+          ],
+          "anchor": [
+            -0.4724229872226715,
+            -2.6528496742248535,
+            0.25377097725868225
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1435",
+              "sha256": "1fdce0f7db538e4731207af06a293e41037c2474192f61ca2cb5b0d663b16894"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right semimembranosus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-semimembranosus",
+          "fmaId": "FMA22449",
+          "name": "Left semimembranosus",
+          "sourceName": "left semimembranosus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22449",
+          "bounds": {
+            "min": [
+              0.1317490041255951,
+              -4.840740203857422,
+              -0.12670399248600006
+            ],
+            "max": [
+              0.7099909782409668,
+              -0.4556201100349426,
+              0.5349500179290771
+            ]
+          },
+          "center": [
+            0.42086999118328094,
+            -2.6481801569461823,
+            0.20412301272153854
+          ],
+          "anchor": [
+            0.4724229872226715,
+            -2.6528496742248535,
+            0.25377097725868225
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1435M",
+              "sha256": "27c6f7bdf85a103b4247153f4ca08c846ef0037b92d5032af542496822647cad"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left semimembranosus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-semitendinosus",
+          "fmaId": "FMA22358",
+          "name": "Right semitendinosus",
+          "sourceName": "right semitendinosus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22358",
+          "bounds": {
+            "min": [
+              -0.6829370260238647,
+              -5.168749809265137,
+              -0.2521969974040985
+            ],
+            "max": [
+              -0.2693580090999603,
+              -0.3629699647426605,
+              0.4858650267124176
+            ]
+          },
+          "center": [
+            -0.47614751756191254,
+            -2.7658598870038986,
+            0.11683401465415955
+          ],
+          "anchor": [
+            -0.4177890121936798,
+            -2.6814801692962646,
+            -0.03132801130414009
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1436",
+              "sha256": "a9351992df5093e761784b73ca3f4a7d09d0c997e3cef2f840a45b863eb7097d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right semitendinosus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-semitendinosus",
+          "fmaId": "FMA22359",
+          "name": "Left semitendinosus",
+          "sourceName": "left semitendinosus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22359",
+          "bounds": {
+            "min": [
+              0.26935699582099915,
+              -5.168749809265137,
+              -0.2521969974040985
+            ],
+            "max": [
+              0.6829370260238647,
+              -0.3629699647426605,
+              0.4858650267124176
+            ]
+          },
+          "center": [
+            0.47614701092243195,
+            -2.7658598870038986,
+            0.11683401465415955
+          ],
+          "anchor": [
+            0.4177890121936798,
+            -2.681469678878784,
+            -0.0313270203769207
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1436M",
+              "sha256": "e97560023348e6d7aa6d1586862a9717b6ae6ffb72f8ceee8ecf43f3f63c567f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left semitendinosus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
+          "fmaId": "FMA38928",
+          "name": "Right rectus femoris",
+          "sourceName": "right rectus femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38928",
+          "bounds": {
+            "min": [
+              -1.544490098953247,
+              -4.852920055389404,
+              0.338998019695282
+            ],
+            "max": [
+              -0.6291450262069702,
+              0.7110400199890137,
+              1.0246599912643433
+            ]
+          },
+          "center": [
+            -1.0868175625801086,
+            -2.0709400177001953,
+            0.6818290054798126
+          ],
+          "anchor": [
+            -1.115399956703186,
+            -2.1236798763275146,
+            0.8208400011062622
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1433",
+              "sha256": "a5f75907d784dd2a44d7efa96cb31009aba2afe43465336b105561751b19f8ef"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right rectus femoris on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
+          "fmaId": "FMA38929",
+          "name": "Left rectus femoris",
+          "sourceName": "left rectus femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38929",
+          "bounds": {
+            "min": [
+              0.6291450262069702,
+              -4.852920055389404,
+              0.338998019695282
+            ],
+            "max": [
+              1.544490098953247,
+              0.7110400199890137,
+              1.0246599912643433
+            ]
+          },
+          "center": [
+            1.0868175625801086,
+            -2.0709400177001953,
+            0.6818290054798126
+          ],
+          "anchor": [
+            1.1154099702835083,
+            -2.1236798763275146,
+            0.8208400011062622
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1433M",
+              "sha256": "3871310f1c1f76ca55cfa4fe043d2e3a25488903fe695674a87c7c893cdc99ae"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left rectus femoris on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-lateralis",
+          "fmaId": "FMA38930",
+          "name": "Right vastus lateralis",
+          "sourceName": "right vastus lateralis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38930",
+          "bounds": {
+            "min": [
+              -1.5963200330734253,
+              -4.820680141448975,
+              0.07503200322389603
+            ],
+            "max": [
+              -0.840565025806427,
+              -0.11833007633686066,
+              0.870509922504425
+            ]
+          },
+          "center": [
+            -1.2184425294399261,
+            -2.4695051088929176,
+            0.47277096286416054
+          ],
+          "anchor": [
+            -1.2206599712371826,
+            -2.4920599460601807,
+            0.47119903564453125
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1442",
+              "sha256": "f67be78d7d0ddc6e78c0683ce4bd5be7492e4137f8661bc54039cbf535a88880"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right vastus lateralis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
+          "fmaId": "FMA38931",
+          "name": "Left vastus lateralis",
+          "sourceName": "left vastus lateralis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38931",
+          "bounds": {
+            "min": [
+              0.840565025806427,
+              -4.820680141448975,
+              0.07503200322389603
+            ],
+            "max": [
+              1.596329927444458,
+              -0.11833007633686066,
+              0.870509922504425
+            ]
+          },
+          "center": [
+            1.2184474766254425,
+            -2.4695051088929176,
+            0.47277096286416054
+          ],
+          "anchor": [
+            1.2206599712371826,
+            -2.4920599460601807,
+            0.47120001912117004
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1442M",
+              "sha256": "507caa464730c508c2fd2f6958f9a5660fb6ca188bc38fafb5c9b5556ac6732b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left vastus lateralis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-medialis",
+          "fmaId": "FMA38932",
+          "name": "Right vastus medialis",
+          "sourceName": "right vastus medialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38932",
+          "bounds": {
+            "min": [
+              -1.0560100078582764,
+              -4.594520092010498,
+              0.39132004976272583
+            ],
+            "max": [
+              -0.34939202666282654,
+              -0.6182098388671875,
+              0.9690099954605103
+            ]
+          },
+          "center": [
+            -0.7027010172605515,
+            -2.6063649654388428,
+            0.680165022611618
+          ],
+          "anchor": [
+            -0.6425489783287048,
+            -2.593629837036133,
+            0.5662999749183655
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1443",
+              "sha256": "5bdb79f52849241e20ff2280332f20efd38f1b4bda1fb1337e10a5c3e466002b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right vastus medialis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-medialis",
+          "fmaId": "FMA38933",
+          "name": "Left vastus medialis",
+          "sourceName": "left vastus medialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38933",
+          "bounds": {
+            "min": [
+              0.34939301013946533,
+              -4.594520092010498,
+              0.39132004976272583
+            ],
+            "max": [
+              1.0560100078582764,
+              -0.6182098388671875,
+              0.9690099954605103
+            ]
+          },
+          "center": [
+            0.7027015089988708,
+            -2.6063649654388428,
+            0.680165022611618
+          ],
+          "anchor": [
+            0.6425489783287048,
+            -2.593629837036133,
+            0.5662999749183655
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1443M",
+              "sha256": "8ca4d66734150402401722e8a82f52ada8af9d6973592e127431b742dfe46ad4"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left vastus medialis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
+          "fmaId": "FMA38934",
+          "name": "Right vastus intermedius",
+          "sourceName": "right vastus intermedius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38934",
+          "bounds": {
+            "min": [
+              -1.3309500217437744,
+              -4.575150012969971,
+              0.26260802149772644
+            ],
+            "max": [
+              -0.7620710134506226,
+              -0.30255982279777527,
+              0.8513900637626648
+            ]
+          },
+          "center": [
+            -1.0465105175971985,
+            -2.438854917883873,
+            0.5569990426301956
+          ],
+          "anchor": [
+            -1.0738500356674194,
+            -2.4644298553466797,
+            0.532480001449585
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1441",
+              "sha256": "c609da3e64f0fc6c295b66b575503e61cacc8bfd9a5e5ec9b79e4eb476da5bab"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right vastus intermedius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
+          "fmaId": "FMA38935",
+          "name": "Left vastus intermedius",
+          "sourceName": "left vastus intermedius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA38935",
+          "bounds": {
+            "min": [
+              0.7620710134506226,
+              -4.575150012969971,
+              0.26260802149772644
+            ],
+            "max": [
+              1.3309599161148071,
+              -0.30255982279777527,
+              0.8513900637626648
+            ]
+          },
+          "center": [
+            1.0465154647827148,
+            -2.438854917883873,
+            0.5569990426301956
+          ],
+          "anchor": [
+            1.0738500356674194,
+            -2.464439630508423,
+            0.532480001449585
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1441M",
+              "sha256": "5245d285eb09ba0364a1b4ad8a21a6621183310c544c412bb39542e1517815db"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left vastus intermedius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
+          "fmaId": "FMA45888",
+          "name": "Long head of right biceps femoris",
+          "sourceName": "long head of right biceps femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA45888",
+          "bounds": {
+            "min": [
+              -1.2664200067520142,
+              -4.720950126647949,
+              -0.3169039785861969
+            ],
+            "max": [
+              -0.48692798614501953,
+              -0.3524700999259949,
+              0.22187797725200653
+            ]
+          },
+          "center": [
+            -0.8766739964485168,
+            -2.536710113286972,
+            -0.047513000667095184
+          ],
+          "anchor": [
+            -0.963515043258667,
+            -2.541909694671631,
+            0.12583598494529724
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1395",
+              "sha256": "0c22806bfd2a0f8745023a7d438250411f9d013f3d966c5c75335f5b57f8e142"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find long head of right biceps femoris on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:long-head-of-left-biceps-femoris",
+          "fmaId": "FMA45889",
+          "name": "Long head of left biceps femoris",
+          "sourceName": "long head of left biceps femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA45889",
+          "bounds": {
+            "min": [
+              0.48692700266838074,
+              -4.720950126647949,
+              -0.3169049918651581
+            ],
+            "max": [
+              1.2664200067520142,
+              -0.3524700999259949,
+              0.22187797725200653
+            ]
+          },
+          "center": [
+            0.8766735047101974,
+            -2.536710113286972,
+            -0.047513507306575775
+          ],
+          "anchor": [
+            0.963515043258667,
+            -2.541909694671631,
+            0.12583598494529724
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1395M",
+              "sha256": "f9b7a8bc5db9ff1c7a6dc25fb15cdac175c96d4a52ec9304709dff5468e8a11b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find long head of left biceps femoris on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:short-head-of-right-biceps-femoris",
+          "fmaId": "FMA45891",
+          "name": "Short head of right biceps femoris",
+          "sourceName": "short head of right biceps femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA45891",
+          "bounds": {
+            "min": [
+              -1.1740899085998535,
+              -4.718100070953369,
+              0.00881801638752222
+            ],
+            "max": [
+              -0.8067120313644409,
+              -1.5338000059127808,
+              0.37478697299957275
+            ]
+          },
+          "center": [
+            -0.9904009699821472,
+            -3.125950038433075,
+            0.1918024946935475
+          ],
+          "anchor": [
+            -1.069469928741455,
+            -3.1344900131225586,
+            0.14949698746204376
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1444",
+              "sha256": "c071097501796cee5ff2a011b3d84c7bea4cb153241fce0f8b0a73d070bd990f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find short head of right biceps femoris on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:short-head-of-left-biceps-femoris",
+          "fmaId": "FMA45892",
+          "name": "Short head of left biceps femoris",
+          "sourceName": "short head of left biceps femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles-dissection",
+          "nodeName": "FMA45892",
+          "bounds": {
+            "min": [
+              0.8067120313644409,
+              -4.718100070953369,
+              0.00881801638752222
+            ],
+            "max": [
+              1.1740899085998535,
+              -1.5338000059127808,
+              0.37478697299957275
+            ]
+          },
+          "center": [
+            0.9904009699821472,
+            -3.125950038433075,
+            0.1918024946935475
+          ],
+          "anchor": [
+            1.069469928741455,
+            -3.1344900131225586,
+            0.14949798583984375
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1444M",
+              "sha256": "2794a3899545d9b66f61fb9de3459132b577939c63b527fae101d497e28b154e"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find short head of left biceps femoris on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "b148cb9ed9ac7e397d1005f7e7aca4017c3c2373",
+    "authorCommit": "4bb7a85b962e2cbd20ee9f329ddd0ae38e4f0642",
+    "sourcePinsHash": "3e9bf646174614af4cabd1f46e9d25055028d23f49cc450777f012e48293f708",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-maximus",
+        "fmaId": "FMA22328",
+        "tab": "quiz",
+        "previousHash": "7a6f8298c7c297cdf7960822f93fd0bad87d88ff853a3fa51a3a7b206f301914",
+        "currentHash": "45a7a90fdcbaa356894c35707e80f5a7f6cd3edc9cce86c86207eb4442a5f9b2"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-maximus",
+        "fmaId": "FMA22329",
+        "tab": "quiz",
+        "previousHash": "028f08025f6f53f8cd2c00bd251f3d3dd588572750bdcee166b56d2fd12c38c2",
+        "currentHash": "f51b70ba73cddfef9137b5d1a7f663740ecdb4e1818a2cf64bb3acde3c45c7e6"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-medius",
+        "fmaId": "FMA22330",
+        "tab": "quiz",
+        "previousHash": "969eaf5a4193f1081ab99df09c7745f1e6e0038168410882c49ba542b5396526",
+        "currentHash": "6caaf7ef9e87f9bdf9bb81c07029ee3b3c98bd628356c6b531a8d9f435ecb886"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-medius",
+        "fmaId": "FMA22331",
+        "tab": "quiz",
+        "previousHash": "44f907a87832594df438a68a5995a10e05c578f367821cecde6d2bf05fc71260",
+        "currentHash": "1a434510ad36a826c373f628afd09a655c5e004451a8900502c3b8e6c812c37b"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-gluteus-minimus",
+        "fmaId": "FMA22332",
+        "tab": "quiz",
+        "previousHash": "be96ecbaca3e4f5c6c481a44d5f74cb1225d97742c72bc158f373e01486badb1",
+        "currentHash": "ae71b5237ae071adcd2d0f8c3229e589b9e5d8588b04c53c1c756cbeb1137a32"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-gluteus-minimus",
+        "fmaId": "FMA22333",
+        "tab": "quiz",
+        "previousHash": "0f26ca52ef24402a700e081d663df305f451966fe07f451bcc00a95cd4ea0e8b",
+        "currentHash": "18d703a9d384b592280ce5aa67508e5cf628a4c758da55434e017147ef509811"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-semimembranosus",
+        "fmaId": "FMA22448",
+        "tab": "quiz",
+        "previousHash": "f02416c30a879ef510b786e87fab25281584ea7b748a50a773d810ffe8016dd8",
+        "currentHash": "1847dd06f0fe961d7651224691e0498f8222bdd327d978c4b6b1560f052e1b77"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-semimembranosus",
+        "fmaId": "FMA22449",
+        "tab": "quiz",
+        "previousHash": "f7df9862e74a31c23f398f84f1c3e085584a7b5b94f26a380a7cdda95968c5b5",
+        "currentHash": "a9a3f8386b2326b45f949e0732f27afa5c943aa16bb07138214632cda0df818c"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-semitendinosus",
+        "fmaId": "FMA22358",
+        "tab": "quiz",
+        "previousHash": "2cb50666abfec11d8cb474676dfda3d56d733d5eebf9fb2e456365556bf00793",
+        "currentHash": "7d6d508c2de8359d3f586a576b5ef42fcffba32ae53b7fdee6f8a53c503fcc3e"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-semitendinosus",
+        "fmaId": "FMA22359",
+        "tab": "quiz",
+        "previousHash": "546226cfa6df84fb61f339117aebb06519586534b3fb0166ff3e43445cf0a236",
+        "currentHash": "7cf6ac7d7ab7a2692e2da2ee43b5a77e3350bb6da0ea1cb1185a86c8f78f3a16"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-rectus-femoris",
+        "fmaId": "FMA38928",
+        "tab": "quiz",
+        "previousHash": "823342d7f5428d7d96c2b7f91f332c6da8885a71c4159368a0335b5c306267bc",
+        "currentHash": "935b5fc5aa2ba2b7e305b0b47fea3665604b9f90b9158fd17e348b19aa59212e"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-rectus-femoris",
+        "fmaId": "FMA38929",
+        "tab": "quiz",
+        "previousHash": "82880015db25c4585ae4241b0669114bf5d14a29f6630f2fe22233ff00a568bb",
+        "currentHash": "b85c4e2ebb17e35d72708893458228f6917a86c3e8d85c93e6ef1b7d125fd377"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-lateralis",
+        "fmaId": "FMA38930",
+        "tab": "quiz",
+        "previousHash": "cced81331b9cb681d1dda612bded3e3755fcf73ca7b30d80276cf428eeb5d155",
+        "currentHash": "72632f1d0500e7db00f15f10d563cf23f5918b375e164d65cc2c338b44a4ea3e"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-lateralis",
+        "fmaId": "FMA38931",
+        "tab": "quiz",
+        "previousHash": "3712307a04fe441ea1c3af1366753fccfb860d08f6ca55ac038e2570c93aaf09",
+        "currentHash": "f2779a7f23d7ceb7ac5e6da05b0a85f7c05a3f4bade5025535e6866991275538"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-medialis",
+        "fmaId": "FMA38932",
+        "tab": "quiz",
+        "previousHash": "1ecc086a1c37b555f8559f68b1e951cacc344d15618cb4f093ce00876a0399a5",
+        "currentHash": "e479c8fa645572bb3e17d14e2c7294451eb0493dd82c69aab5d92cd6fae4ad26"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-medialis",
+        "fmaId": "FMA38933",
+        "tab": "quiz",
+        "previousHash": "1cf5ba19ac4a9d0f93ef224e8106796ee37921b0dcc97a6922f618719a1efd67",
+        "currentHash": "7e2b6ca097c6350007d52f475cac26f9fbdd88507f591a8bfc6ab7255d328b65"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-vastus-intermedius",
+        "fmaId": "FMA38934",
+        "tab": "quiz",
+        "previousHash": "01c0e3d12de5bc197e6900816d6f641857fef85aad7ddaf544a54d10c44694b2",
+        "currentHash": "3796c955b85f084620724167f168a0100b6adf35f38bd06e85e63315926b48ec"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-vastus-intermedius",
+        "fmaId": "FMA38935",
+        "tab": "quiz",
+        "previousHash": "18636af74f5a991d6349504ca2c163683f4a2ddc1ee215deb96f7471d2ac2d96",
+        "currentHash": "1a2395929392c847ad719de1f03f078993582c3c2aca6d64c246d722c3666e55"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:long-head-of-right-biceps-femoris",
+        "fmaId": "FMA45888",
+        "tab": "quiz",
+        "previousHash": "a1fcad9a74441522df3cf26ac13c95a62bab2a365ed84e97b13401f080f8cd07",
+        "currentHash": "b2e864bb1532434d5ec0bfcef4b9ea2930cd51e1f42b55b9b1ce38baec8bcc5e"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:long-head-of-left-biceps-femoris",
+        "fmaId": "FMA45889",
+        "tab": "quiz",
+        "previousHash": "2b819e4ca63558735cd4328ceea2ec7c38e2419da98a6136077fd4aa134bf59a",
+        "currentHash": "e143b397e1f423c7c6e73ae6e2c8eb458189e0806a5712722e2766cdd60f4b5d"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:short-head-of-right-biceps-femoris",
+        "fmaId": "FMA45891",
+        "tab": "quiz",
+        "previousHash": "908e897c3e4c1ca015627e24105e32d4d6200895a49710cb617ce71f1625c956",
+        "currentHash": "369758035172afd340fa19b9217937bbc67d357ecb0af0993de3664b52633f02"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:short-head-of-left-biceps-femoris",
+        "fmaId": "FMA45892",
+        "tab": "quiz",
+        "previousHash": "80be8b38ea85252b50feac5f482799bcd24d89203e9b721e04a7b9ce20a871de",
+        "currentHash": "798599f478178366b27a2cc6cfa5b1446333c6a03ce6d6f3465d19b7c81c1041"
+      }
+    ]
+  },
+  "sourceRecordHash": "ebcfa60533b5fdb7b0ece5dfb43b91c77c221d45aedac84961aae13bf7704185",
+  "originalPinPath": "content/thigh-muscle-quiz-pins.json",
+  "originalPinHash": "67b10236ee932d7f5f78bf0344314abfdc5fd72c5881a5a19d15dad8b733ac8a",
+  "originalPinBlob": "330db922db3d4c3aef6ae2c8c288f06f7be31539",
+  "originalTransitionPaths": []
+}

@@ -1,0 +1,166 @@
+{
+  "name": "git-author-f3d6966a",
+  "helper": "orbitalRingCtLesson",
+  "pinsHash": "41847c43dc6b5d0b8b4cdb4b12eccbd47890594c104bdde3471905100b8df776",
+  "transitionHash": "f76d594331ddb83e6bf4af6c5aeca220992968ac64587c67ca5876e62f7f46f6",
+  "pins": {
+    "baseline": "a6797b2b0c850edc5f50918c9352c887209eac94",
+    "authorCommit": "f3d6966a040b69a375f6bbfa2a8c502b8c8492e4",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+          "fmaId": "FMA49072",
+          "name": "Right common tendinous ring",
+          "sourceName": "right common tendinous ring",
+          "system": "connective",
+          "category": "tendon",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-head-detail",
+          "nodeName": "FMA49072",
+          "bounds": {
+            "min": [
+              -0.1939380019903183,
+              7.248899936676025,
+              0.6916599869728088
+            ],
+            "max": [
+              -0.1313299983739853,
+              7.315600395202637,
+              0.7506999969482422
+            ]
+          },
+          "center": [
+            -0.1626340001821518,
+            7.282250165939331,
+            0.7211799919605255
+          ],
+          "anchor": [
+            -0.18664498627185822,
+            7.281300067901611,
+            0.7154600024223328
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1342",
+              "sha256": "0e8384372e031d2720cbd2c1f776af44cf4003ccd6ff4cc68025d45c7ad44c59"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+          "fmaId": "FMA49073",
+          "name": "Left common tendinous ring",
+          "sourceName": "left common tendinous ring",
+          "system": "connective",
+          "category": "tendon",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-head-detail",
+          "nodeName": "FMA49073",
+          "bounds": {
+            "min": [
+              0.11845700442790985,
+              7.249000072479248,
+              0.691789984703064
+            ],
+            "max": [
+              0.1807900071144104,
+              7.315500259399414,
+              0.7508000135421753
+            ]
+          },
+          "center": [
+            0.14962350577116013,
+            7.282250165939331,
+            0.7212949991226196
+          ],
+          "anchor": [
+            0.17205700278282166,
+            7.277900218963623,
+            0.712399959564209
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1291",
+              "sha256": "5c0611ee2d47bb1b50e6832ffb50e82703d188e6b00d1d1d154c25458c178346"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source-labelled orbital connective surface; attachment footprints, tissue thickness, tendon continuity and neighbouring nerve passages require specialist review. No patient registration or imaging appearance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "a6797b2b0c850edc5f50918c9352c887209eac94",
+    "authorCommit": "f3d6966a040b69a375f6bbfa2a8c502b8c8492e4",
+    "sourcePinsHash": "41847c43dc6b5d0b8b4cdb4b12eccbd47890594c104bdde3471905100b8df776",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:right:tendon:right-common-tendinous-ring",
+        "fmaId": "FMA49072",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "d1a94bae56b6610716ceec8b59532319e7a90d2360bb2e67a146ada56dbd6355"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:tendon:left-common-tendinous-ring",
+        "fmaId": "FMA49073",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "a88bbe95817a95f901e7f1d0c421b47f3d1f1471f250da88bbd2f580ec70c32c"
+      }
+    ]
+  },
+  "sourceRecordHash": "4edfda11942b0e0ec06a84d87a0ddec71a0afa22fadc6213a64126611f886587"
+}

@@ -1,0 +1,232 @@
+{
+  "name": "git-pin-662a1e8c",
+  "helper": "footVenousArchImagingLesson",
+  "pinsHash": "d917ef0f530564faa879da0b887d84b22336f57010dd7fffab46b98ea779cf8e",
+  "transitionHash": "6fb0ef821f11a33f670c80dfa6cc4fbd0bb5c49feb1cb552f30d16370af2ba5e",
+  "pins": {
+    "baseline": "408ba96866e3409d096b6153ccda81eaf162b02d",
+    "authorCommit": "662a1e8c45673c15d7ed3acbebebe912cb0db9b8",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+          "fmaId": "FMA44881",
+          "name": "Dorsal venous arch of right foot",
+          "sourceName": "dorsal venous arch of right foot",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-foot-vascular",
+          "nodeName": "FMA44881",
+          "bounds": {
+            "min": [
+              -1.2090400457382202,
+              -8.437078475952148,
+              0.3318380117416382
+            ],
+            "max": [
+              -0.9220989942550659,
+              -8.212249755859375,
+              1.0988099575042725
+            ]
+          },
+          "center": [
+            -1.065569519996643,
+            -8.324664115905762,
+            0.7153239846229553
+          ],
+          "anchor": [
+            -1.0060399770736694,
+            -8.40544319152832,
+            0.8029499650001526
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2061",
+              "sha256": "2b349be398677b9dab660a07b4e038b35cb458883e350340ff53a2754aebcc41"
+            },
+            {
+              "file": "FJ2062",
+              "sha256": "4c16febe531c5d2afacf9bb47a899602239f2424ebd6e6d97860691bc9a2669b"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          },
+          "mri": {
+            "readiness": "pending",
+            "title": "MRI content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          },
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+          "fmaId": "FMA44882",
+          "name": "Dorsal venous arch of left foot",
+          "sourceName": "dorsal venous arch of left foot",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-foot-vascular",
+          "nodeName": "FMA44882",
+          "bounds": {
+            "min": [
+              0.922182023525238,
+              -8.436917304992676,
+              0.3318749964237213
+            ],
+            "max": [
+              1.2090699672698975,
+              -8.212420463562012,
+              1.0989500284194946
+            ]
+          },
+          "center": [
+            1.0656259953975677,
+            -8.324668884277344,
+            0.715412512421608
+          ],
+          "anchor": [
+            1.0024900436401367,
+            -8.404391288757324,
+            0.8019400238990784
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2059",
+              "sha256": "9421947a4511ed928078ee25870fefc51632c373fd3c8918bd9d53c3fc8dd5fb"
+            },
+            {
+              "file": "FJ2060",
+              "sha256": "f882652c192b3c2e05405273755193989d5b1866dcba53b9c0653e7a1ee2b2f9"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          },
+          "mri": {
+            "readiness": "pending",
+            "title": "MRI content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          },
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "408ba96866e3409d096b6153ccda81eaf162b02d",
+    "authorCommit": "662a1e8c45673c15d7ed3acbebebe912cb0db9b8",
+    "sourcePinsHash": "d917ef0f530564faa879da0b887d84b22336f57010dd7fffab46b98ea779cf8e",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "fmaId": "FMA44881",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "637ab279084efeb81348a2304564546a4bfd71e438c6bfacf2e4e507e2764ecb"
+      },
+      {
+        "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "fmaId": "FMA44881",
+        "tab": "mri",
+        "previousHash": "1000dc4c7328bdbc2e6af944ee9d4a90b0744f6ef4d1e111f88357457d288489",
+        "currentHash": "edd7e8e68ce7332592279b01848b1401f2b2a9312a012a98faa284699310328a"
+      },
+      {
+        "id": "vm:anatomy:body:foot:right:vessel:dorsal-venous-arch-of-right-foot",
+        "fmaId": "FMA44881",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "9b36b3299ab3409ae32ebd5c994accf53530438860eda6f9ab605a70bd7829f9"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "fmaId": "FMA44882",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "b061ae1213e67aa027c4c21f05d6ac4c282249549c5ad08fdec0f262377f2e69"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "fmaId": "FMA44882",
+        "tab": "mri",
+        "previousHash": "1000dc4c7328bdbc2e6af944ee9d4a90b0744f6ef4d1e111f88357457d288489",
+        "currentHash": "c5e1c509d77f5926d0a2fa7a6585374b691e8892b3a79f65fca5d5793aeffcb7"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:vessel:dorsal-venous-arch-of-left-foot",
+        "fmaId": "FMA44882",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "7e5ac4ea3601fe047b7ce474d0a604b2b3a4612fded24faff4a7d3e534b510a2"
+      }
+    ]
+  },
+  "sourceRecordHash": "1be7db5dca79efd39ff7d946997e6d009d363b5a8791093b12c7e74629d1cc9c",
+  "originalPinPath": "content/foot-venous-arch-imaging-pins.json",
+  "originalPinHash": "f4cec1a71f0fda0873c98835b45dabe757a2df9fdb539159424e6af4bc9676b4",
+  "originalPinBlob": "2b08963cc4c8cfc74dff900cdbb840a666f5da82",
+  "originalTransitionPaths": [
+    "content/foot-venous-arch-imaging-transition.json"
+  ]
+}

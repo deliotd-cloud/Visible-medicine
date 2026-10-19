@@ -1,0 +1,418 @@
+{
+  "name": "git-author-dccb53c6",
+  "helper": "vocalTissueTeachingLesson",
+  "pinsHash": "1d51367a5281c9cacfed92e8afa5609451be8b1a083f411bf91fb2436c3d01f8",
+  "transitionHash": "9313c517a21975221e846286100f1f356d0d671625a224502770186e35b4f150",
+  "pins": {
+    "baseline": "169e3aef92e866dd98e97f5394c1d2c908268547",
+    "authorCommit": "dccb53c6830f5e5aaf3c8454cd4eec5ae6b6222b",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+          "fmaId": "FMA46593",
+          "name": "Left vocalis",
+          "sourceName": "left vocalis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-muscles",
+          "nodeName": "FMA46593",
+          "bounds": {
+            "min": [
+              0.01183099951595068,
+              6.036999702453613,
+              0.5088300108909607
+            ],
+            "max": [
+              0.02770490013062954,
+              6.051300048828125,
+              0.6497899889945984
+            ]
+          },
+          "center": [
+            0.01976794982329011,
+            6.044149875640869,
+            0.5793099999427795
+          ],
+          "anchor": [
+            0.018701201304793358,
+            6.0455002784729,
+            0.579509973526001
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2788",
+              "sha256": "dd26f669e127e5c5fae7ff796da0f516887f8c3834bbde1f2881d3a222cc2375"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "Vocal ligaments connect the thyroid cartilage to the arytenoid vocal processes. Vocalis lies alongside; the overlying mucosal fold is not a separately validated surface here.",
+            "bullets": [
+              "Source identity: FMA46593 · 1 source component",
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Anatomical and teaching review pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "These tissues contribute to voice production. Compare their supplied positions; no tension, vibration or sound is simulated.",
+            "bullets": [
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+            ],
+            "note": "Anatomical and teaching review pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+          "fmaId": "FMA46592",
+          "name": "Right vocalis",
+          "sourceName": "right vocalis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-muscles",
+          "nodeName": "FMA46592",
+          "bounds": {
+            "min": [
+              -0.0408702977001667,
+              6.036899566650391,
+              0.5087999701499939
+            ],
+            "max": [
+              -0.024958301335573196,
+              6.051300048828125,
+              0.6497099995613098
+            ]
+          },
+          "center": [
+            -0.03291429951786995,
+            6.044099807739258,
+            0.5792549848556519
+          ],
+          "anchor": [
+            -0.032070599496364594,
+            6.045300483703613,
+            0.5802200436592102
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2806",
+              "sha256": "f4b83790f1c6364785f6ec6a8428443e7f20cfe48ed9a14234bb8aff1d80f2a9"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "Vocal ligaments connect the thyroid cartilage to the arytenoid vocal processes. Vocalis lies alongside; the overlying mucosal fold is not a separately validated surface here.",
+            "bullets": [
+              "Source identity: FMA46592 · 1 source component",
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Anatomical and teaching review pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "These tissues contribute to voice production. Compare their supplied positions; no tension, vibration or sound is simulated.",
+            "bullets": [
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+            ],
+            "note": "Anatomical and teaching review pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+          "fmaId": "FMA55245",
+          "name": "Right vocal ligament",
+          "sourceName": "right vocal ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55245",
+          "bounds": {
+            "min": [
+              -0.036122098565101624,
+              6.037800312042236,
+              0.5178399682044983
+            ],
+            "max": [
+              -0.014276299625635147,
+              6.04770040512085,
+              0.6511099934577942
+            ]
+          },
+          "center": [
+            -0.025199199095368385,
+            6.042750358581543,
+            0.5844749808311462
+          ],
+          "anchor": [
+            -0.026827899739146233,
+            6.044599533081055,
+            0.5849600434303284
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2805",
+              "sha256": "f8d93ea86284dbe0877b6080c642991a6542cf78bb6ad884a78b4d55a7b8e3e8"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "Vocal ligaments connect the thyroid cartilage to the arytenoid vocal processes. Vocalis lies alongside; the overlying mucosal fold is not a separately validated surface here.",
+            "bullets": [
+              "Source identity: FMA55245 · 1 source component",
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "These tissues contribute to voice production. Compare their supplied positions; no tension, vibration or sound is simulated.",
+            "bullets": [
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+            ],
+            "note": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+          "fmaId": "FMA55246",
+          "name": "Left vocal ligament",
+          "sourceName": "left vocal ligament",
+          "system": "connective",
+          "category": "ligament",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-connective-gaps",
+          "nodeName": "FMA55246",
+          "bounds": {
+            "min": [
+              0.0011723400093615055,
+              6.037700176239014,
+              0.5177800059318542
+            ],
+            "max": [
+              0.023097200319170952,
+              6.047299861907959,
+              0.6510399580001831
+            ]
+          },
+          "center": [
+            0.012134770164266229,
+            6.042500019073486,
+            0.5844099819660187
+          ],
+          "anchor": [
+            0.014549699611961842,
+            6.041500091552734,
+            0.5844200253486633
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2787",
+              "sha256": "fd2030747641aae5864bb28f2c18a03d8ccfc34702f9a9012af1957ac1bef23b"
+            }
+          ],
+          "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "Vocal ligaments connect the thyroid cartilage to the arytenoid vocal processes. Vocalis lies alongside; the overlying mucosal fold is not a separately validated surface here.",
+            "bullets": [
+              "Source identity: FMA55246 · 1 source component",
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Vocal ligament and vocalis sources · draft",
+            "body": "These tissues contribute to voice production. Compare their supplied positions; no tension, vibration or sound is simulated.",
+            "bullets": [
+              "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+            ],
+            "note": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "169e3aef92e866dd98e97f5394c1d2c908268547",
+    "authorCommit": "dccb53c6830f5e5aaf3c8454cd4eec5ae6b6222b",
+    "sourcePinsHash": "1d51367a5281c9cacfed92e8afa5609451be8b1a083f411bf91fb2436c3d01f8",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+        "fmaId": "FMA46593",
+        "tab": "anatomy",
+        "previousHash": "53acf05f3c19b614b2109621bfdd30eb59e0e812fd30f2f12238d7b223b4c826",
+        "currentHash": "b71bded2c22e6239b6f7808855094ff397521960dbd060ec138aba04a1ca82e3"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-vocalis",
+        "fmaId": "FMA46593",
+        "tab": "function",
+        "previousHash": "770495168353269efbe54211c1f13b10eb84461a1c2e8e6d8278700a7561c274",
+        "currentHash": "847e60d6a3f90b563de8696172b33e2733add4ba8697f383a1789d67f9819973"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+        "fmaId": "FMA46592",
+        "tab": "anatomy",
+        "previousHash": "0761c83af8d45a9de9b45ffc170a309deffedd4b7ac373582fc833b8e27c7a88",
+        "currentHash": "d291f375b62e8d37fe4b94cb355eac4ca430191ae84af3c6021bb1581ea53756"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-vocalis",
+        "fmaId": "FMA46592",
+        "tab": "function",
+        "previousHash": "770495168353269efbe54211c1f13b10eb84461a1c2e8e6d8278700a7561c274",
+        "currentHash": "ff41b3389b0f6c477fa675d172a6048fed0017d6c9d1300120f67494a2e9c278"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "fmaId": "FMA55245",
+        "tab": "anatomy",
+        "previousHash": "35acd28b2ad5c57a69f4f1ae6b2e9f2e4dce39cab77ca0a1bf7ae84f16b372b3",
+        "currentHash": "9b1cf7a5e73a4f165d95f1e8f1b196c6fe5136f10aad9d70c3d0d872e65cf1dc"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:ligament:right-vocal-ligament",
+        "fmaId": "FMA55245",
+        "tab": "function",
+        "previousHash": "e140f89065451122d2e49e458a8d38d0603e19bfe9430c26d90bbc8af63ca4f0",
+        "currentHash": "764eb9590969ca0a023963f63fa7009aabeac10019b18949e8cfd906a11cf273"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "fmaId": "FMA55246",
+        "tab": "anatomy",
+        "previousHash": "be42bc2feceba3b31d6f77b4ef072e732599ee2da4a334ae236e6c9662f292a5",
+        "currentHash": "95b3df05744c36714bb7205a0bee2d7b468dd2d8b5cdf69f3b06f7a94b162349"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:ligament:left-vocal-ligament",
+        "fmaId": "FMA55246",
+        "tab": "function",
+        "previousHash": "e140f89065451122d2e49e458a8d38d0603e19bfe9430c26d90bbc8af63ca4f0",
+        "currentHash": "c0153dff585c756d805aa003641bddd6e5b1c30252fcf0235fa8c7e1acd96dff"
+      }
+    ]
+  },
+  "sourceRecordHash": "3494a0fca9510389dafcf9109b5fc13c9bffab18dcb62bea9db5501442fa1002"
+}

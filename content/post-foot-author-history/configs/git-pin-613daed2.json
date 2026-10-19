@@ -1,0 +1,1034 @@
+{
+  "name": "git-pin-613daed2",
+  "helper": "spinalBoneQuizLesson",
+  "pinsHash": "40cfe1436b5a28947eeea59ebd35fe4cecc3301277ab8038baeb830813179d26",
+  "transitionHash": "57d496a7591bf83c20ae7a9916dda767a94aca6c85362c83b8c79ba96270bb08",
+  "pins": {
+    "baseline": "574ca99c6119c25d0dce88c21dd77cbab74264cc",
+    "authorCommit": "613daed2219432ba4c5321105d9552c7c9765e3e",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+          "fmaId": "FMA10037",
+          "name": "Tenth thoracic vertebra",
+          "sourceName": "tenth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA10037",
+          "bounds": {
+            "min": [
+              -0.3365679979324341,
+              2.9977002143859863,
+              -0.4217749834060669
+            ],
+            "max": [
+              0.32245200872421265,
+              3.5713000297546387,
+              0.34057798981666565
+            ]
+          },
+          "center": [
+            -0.007057994604110718,
+            3.2845001220703125,
+            -0.04059849679470062
+          ],
+          "anchor": [
+            0.01980530098080635,
+            3.304799795150757,
+            -0.0009249877766706049
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3154",
+              "sha256": "abf073c0206696c3baa5cb389831b28a6ce2c6770091065e834b8e4ef50676b1"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find tenth thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+          "fmaId": "FMA10059",
+          "name": "Eleventh thoracic vertebra",
+          "sourceName": "eleventh thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA10059",
+          "bounds": {
+            "min": [
+              -0.26760998368263245,
+              2.757199764251709,
+              -0.3699110150337219
+            ],
+            "max": [
+              0.2555930018424988,
+              3.2927002906799316,
+              0.425324022769928
+            ]
+          },
+          "center": [
+            -0.0060084909200668335,
+            3.0249500274658203,
+            0.027706503868103027
+          ],
+          "anchor": [
+            -0.00616680970415473,
+            2.9952001571655273,
+            0.09152599424123764
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3155",
+              "sha256": "1f9c9f6dfcd5585e09abc2cf9a8f54ba1c33df399c6d4dad1a92301d85cd88b3"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find eleventh thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+          "fmaId": "FMA10081",
+          "name": "Twelfth thoracic vertebra",
+          "sourceName": "twelfth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA10081",
+          "bounds": {
+            "min": [
+              -0.22386400401592255,
+              2.4995996952056885,
+              -0.2743909955024719
+            ],
+            "max": [
+              0.21054799854755402,
+              3.015899658203125,
+              0.5138500332832336
+            ]
+          },
+          "center": [
+            -0.006658002734184265,
+            2.7577496767044067,
+            0.11972951889038086
+          ],
+          "anchor": [
+            0.007555339951068163,
+            2.76680064201355,
+            0.16926902532577515
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3156",
+              "sha256": "ffeebd0dead6ed95395e35c0843888b079acf67543e2820437e99978c69642a0"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find twelfth thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+          "fmaId": "FMA9187",
+          "name": "Second thoracic vertebra",
+          "sourceName": "second thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9187",
+          "bounds": {
+            "min": [
+              -0.3592210114002228,
+              5.265899658203125,
+              -0.37879499793052673
+            ],
+            "max": [
+              0.3457840085029602,
+              5.603600025177002,
+              0.3267579674720764
+            ]
+          },
+          "center": [
+            -0.006718501448631287,
+            5.4347498416900635,
+            -0.02601851522922516
+          ],
+          "anchor": [
+            0.020678000524640083,
+            5.457199573516846,
+            -0.02256900817155838
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3160",
+              "sha256": "20c1322be138314f42bbd1be3e69f3f6b590bbca7a8a3cd3414476f207721300"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find second thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+          "fmaId": "FMA9209",
+          "name": "Third thoracic vertebra",
+          "sourceName": "third thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9209",
+          "bounds": {
+            "min": [
+              -0.32966098189353943,
+              5.022299766540527,
+              -0.4863989055156708
+            ],
+            "max": [
+              0.3184089958667755,
+              5.418499946594238,
+              0.2673629820346832
+            ]
+          },
+          "center": [
+            -0.005625993013381958,
+            5.220399856567383,
+            -0.10951796174049377
+          ],
+          "anchor": [
+            -0.0007605130085721612,
+            5.221899509429932,
+            -0.1273920089006424
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3163",
+              "sha256": "3080ed603c54120fa5201816d77695354c81ea57275c599e68543bfb6ecb89c1"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find third thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+          "fmaId": "FMA12522",
+          "name": "Fourth cervical vertebra",
+          "sourceName": "fourth cervical vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "head-neck"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA12522",
+          "bounds": {
+            "min": [
+              -0.27753400802612305,
+              6.045999526977539,
+              -0.09306400269269943
+            ],
+            "max": [
+              0.2637749910354614,
+              6.321400165557861,
+              0.3910810053348541
+            ]
+          },
+          "center": [
+            -0.0068795084953308105,
+            6.1836998462677,
+            0.14900850132107735
+          ],
+          "anchor": [
+            -0.04486189782619476,
+            6.188299655914307,
+            0.1026729941368103
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3164",
+              "sha256": "a883dd5929817f87eb366a32ca9d82463fd0db40286c49b8adc9e9d1a8cecc34"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find fourth cervical vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+          "fmaId": "FMA9248",
+          "name": "Fourth thoracic vertebra",
+          "sourceName": "fourth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9248",
+          "bounds": {
+            "min": [
+              -0.35461699962615967,
+              4.777400016784668,
+              -0.49802103638648987
+            ],
+            "max": [
+              0.34282001852989197,
+              5.214100360870361,
+              0.19604896008968353
+            ]
+          },
+          "center": [
+            -0.00589849054813385,
+            4.995750188827515,
+            -0.15098603814840317
+          ],
+          "anchor": [
+            -0.03037009947001934,
+            5.010699272155762,
+            -0.2006720006465912
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3166",
+              "sha256": "cbd60a450a8b2f3ee90ccc655f79a63b090d8a3abf5e6849cf288a7b2d4207f2"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find fourth thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+          "fmaId": "FMA12523",
+          "name": "Fifth cervical vertebra",
+          "sourceName": "fifth cervical vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "head-neck"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA12523",
+          "bounds": {
+            "min": [
+              -0.2969779968261719,
+              5.937700271606445,
+              -0.13917499780654907
+            ],
+            "max": [
+              0.2833319902420044,
+              6.1798996925354,
+              0.407725989818573
+            ]
+          },
+          "center": [
+            -0.00682300329208374,
+            6.058799982070923,
+            0.13427549600601196
+          ],
+          "anchor": [
+            -0.006795770023018122,
+            6.063100814819336,
+            0.12540000677108765
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3167",
+              "sha256": "b2485c3707b04f1fd455ee4d3a7b69670ec9c85d4ef9a54463e5c6089f1a69a7"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find fifth cervical vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+          "fmaId": "FMA9922",
+          "name": "Fifth thoracic vertebra",
+          "sourceName": "fifth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9922",
+          "bounds": {
+            "min": [
+              -0.36151501536369324,
+              4.397700309753418,
+              -0.500185489654541
+            ],
+            "max": [
+              0.3488970100879669,
+              4.972700119018555,
+              0.16009002923965454
+            ]
+          },
+          "center": [
+            -0.006309002637863159,
+            4.685200214385986,
+            -0.17004773020744324
+          ],
+          "anchor": [
+            -0.014510600827634335,
+            4.655699253082275,
+            -0.10752899199724197
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3169",
+              "sha256": "20c3b1dfed3a2ac5e631838ae924379672dac2047186711cfaa819b9a1db6e5b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find fifth thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+          "fmaId": "FMA12524",
+          "name": "Sixth cervical vertebra",
+          "sourceName": "sixth cervical vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "head-neck"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA12524",
+          "bounds": {
+            "min": [
+              -0.31265199184417725,
+              5.815899848937988,
+              -0.20820599794387817
+            ],
+            "max": [
+              0.2994770109653473,
+              6.047399997711182,
+              0.4167099893093109
+            ]
+          },
+          "center": [
+            -0.006587490439414978,
+            5.931649923324585,
+            0.10425199568271637
+          ],
+          "anchor": [
+            -0.02192229963839054,
+            5.937199592590332,
+            0.12316200137138367
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3170",
+              "sha256": "ac100888f7e271851c138e8d41a52168070e4fe5c63e8876a4bcfba08f3b59aa"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find sixth cervical vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+          "fmaId": "FMA9945",
+          "name": "Sixth thoracic vertebra",
+          "sourceName": "sixth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9945",
+          "bounds": {
+            "min": [
+              -0.3642269968986511,
+              4.093800067901611,
+              -0.48807570338249207
+            ],
+            "max": [
+              0.35033902525901794,
+              4.690799713134766,
+              0.15220901370048523
+            ]
+          },
+          "center": [
+            -0.006943985819816589,
+            4.3922998905181885,
+            -0.16793334484100342
+          ],
+          "anchor": [
+            -0.02785330079495907,
+            4.395999908447266,
+            -0.13166698813438416
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3171",
+              "sha256": "ebee2a07751de0aa0b33974eea0a9228fed9980f740c619776003d5a38c370c5"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find sixth thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+          "fmaId": "FMA9968",
+          "name": "Seventh thoracic vertebra",
+          "sourceName": "seventh thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9968",
+          "bounds": {
+            "min": [
+              -0.37226298451423645,
+              3.7930004596710205,
+              -0.49328505992889404
+            ],
+            "max": [
+              0.36320599913597107,
+              4.4180006980896,
+              0.1697920262813568
+            ]
+          },
+          "center": [
+            -0.00452849268913269,
+            4.10550057888031,
+            -0.16174651682376862
+          ],
+          "anchor": [
+            0.011212799698114395,
+            4.104100227355957,
+            -0.1311119794845581
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3173",
+              "sha256": "3b66eb6444bc7b6ced9e32eacf2518861531b1296eff0e24db41a85bfdbaff66"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find seventh thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+          "fmaId": "FMA9991",
+          "name": "Eighth thoracic vertebra",
+          "sourceName": "eighth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA9991",
+          "bounds": {
+            "min": [
+              -0.33659401535987854,
+              3.5374999046325684,
+              -0.49068203568458557
+            ],
+            "max": [
+              0.32152697443962097,
+              4.130500316619873,
+              0.22027602791786194
+            ]
+          },
+          "center": [
+            -0.007533520460128784,
+            3.8340001106262207,
+            -0.13520300388336182
+          ],
+          "anchor": [
+            0.01775220036506653,
+            3.8291003704071045,
+            -0.09381000697612762
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3174",
+              "sha256": "531253894a89d60c78a5235bfba826e0c30c21003267258fe1fca244d9090c1a"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find eighth thoracic vertebra on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+          "fmaId": "FMA10014",
+          "name": "Ninth thoracic vertebra",
+          "sourceName": "ninth thoracic vertebra",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "midline",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thorax"
+          ],
+          "bundle": "spine-skeleton",
+          "nodeName": "FMA10014",
+          "bounds": {
+            "min": [
+              -0.34394797682762146,
+              3.2662999629974365,
+              -0.43843939900398254
+            ],
+            "max": [
+              0.3299800157546997,
+              3.8483996391296387,
+              0.2765290141105652
+            ]
+          },
+          "center": [
+            -0.0069839805364608765,
+            3.5573498010635376,
+            -0.08095519244670868
+          ],
+          "anchor": [
+            -0.013477400876581669,
+            3.556800603866577,
+            -0.04484100267291069
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3175",
+              "sha256": "34bd592e9f0282eea561a680697beeac655584ca9e4db9232b013535c57e7e61"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find ninth thoracic vertebra on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "574ca99c6119c25d0dce88c21dd77cbab74264cc",
+    "authorCommit": "613daed2219432ba4c5321105d9552c7c9765e3e",
+    "sourcePinsHash": "40cfe1436b5a28947eeea59ebd35fe4cecc3301277ab8038baeb830813179d26",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:tenth-thoracic-vertebra",
+        "fmaId": "FMA10037",
+        "tab": "quiz",
+        "previousHash": "a2d9290e07340f957e0b2e12fb071df54c18778f027fe7624871227181dc4b8d",
+        "currentHash": "dcd075025c4ab4ffcdb0c2c86dd9f44680f12fb32f15dea3f964d1e1e8879125"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:eleventh-thoracic-vertebra",
+        "fmaId": "FMA10059",
+        "tab": "quiz",
+        "previousHash": "04cf9826e71af5ee52d2f7e99eef872eeda9e78fb3e84f984775a4301e4d09d1",
+        "currentHash": "fdcba5ed49a4d62798ff3094792d766854d047b6a42903ea27dece0470fdb274"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:twelfth-thoracic-vertebra",
+        "fmaId": "FMA10081",
+        "tab": "quiz",
+        "previousHash": "1eb9811fc1fa4aee0ac9048968cff060588d865e4c71482be5286d183a3be4cb",
+        "currentHash": "b152976c198f53a026d40cdf0ef573dbcc517e4c15161d9ec8deab48fca5b311"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:second-thoracic-vertebra",
+        "fmaId": "FMA9187",
+        "tab": "quiz",
+        "previousHash": "c1fea9f9fbd61ac04478c14285a3e0655639d5c0d2f12e76d28105fa82957235",
+        "currentHash": "2e7454c1fb9079ebbdadd477b4dbbcd0148346d7442cb3941ab0cde1122da978"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+        "fmaId": "FMA9209",
+        "tab": "quiz",
+        "previousHash": "7866a12081aaf52ac66ceb6f62ebfaa98cd35d934466f8e5ddf3c8208507c9e3",
+        "currentHash": "badfc4afcba9aef43a4e00705b3277bb6dbf1e8e942787b51e0699581a0aae61"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+        "fmaId": "FMA12522",
+        "tab": "quiz",
+        "previousHash": "ed68270b0de348d91fd62d7883e00396377ee9f4ec2a772a09f7320d233a77fc",
+        "currentHash": "a213e0c121253b02c7ebfba9109b93ba5f6b1b836673d87efcd44a1347ed49c5"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+        "fmaId": "FMA9248",
+        "tab": "quiz",
+        "previousHash": "5207fdaf0176d725e5d4eb597c0eb81d94a8c212827505e8cd3687749d5dd7a9",
+        "currentHash": "eab301669d8fb7b42dba705cee3f4878536681b1fa846c2c52d9f6cf3defbe59"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+        "fmaId": "FMA12523",
+        "tab": "quiz",
+        "previousHash": "e22d0deb81716a58ce86a6bd2577b5be321c986feb21127ef2f83c35dc12e51f",
+        "currentHash": "274c37151137f20e21e2851a377b35db22d3c81f03fbda61f5c69a08d7472af2"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+        "fmaId": "FMA9922",
+        "tab": "quiz",
+        "previousHash": "08fabe2ef51bea22044f6508714282330eff761534d4cc9bf33b0c19b7afc8e1",
+        "currentHash": "c1cb55917f1be2aa04e6d8072efecb96492bfa2816955d0d20a4c760e1369add"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+        "fmaId": "FMA12524",
+        "tab": "quiz",
+        "previousHash": "3565d12aa5002a3140d77ee4aab34cf9a5e3c5be80093fca78d2d31afb406d58",
+        "currentHash": "47f99ff3a0089150c453b13f2a53118b47ebfebf018327aefd62afad50e4d981"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+        "fmaId": "FMA9945",
+        "tab": "quiz",
+        "previousHash": "ca3656d09dda55762621339b66d27fbf8ca362572d2f6ca6b34e4eb2a2f2d7ea",
+        "currentHash": "1dc05c3e53abbf1ee7b6486588e4b34f08247af2de368042ba588c0f149d6e89"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:seventh-thoracic-vertebra",
+        "fmaId": "FMA9968",
+        "tab": "quiz",
+        "previousHash": "a57b02c8c36f100a66eb3a6172581dda2660b1b092fdef205db43ca80fa5003a",
+        "currentHash": "0141e4f73caa67960b1313938753e85a9494f65be50a0dc0552223d268822a87"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:eighth-thoracic-vertebra",
+        "fmaId": "FMA9991",
+        "tab": "quiz",
+        "previousHash": "bae1992f43ff539a9daee8c46ee61e9ac17cb6e6ea5dcb391b53e2add3464330",
+        "currentHash": "6d8abb59f68a2346d49027caf4c369bdde2f0bd77d387b36d1cbe6c1dc49344e"
+      },
+      {
+        "id": "vm:anatomy:body:spine:midline:bone:ninth-thoracic-vertebra",
+        "fmaId": "FMA10014",
+        "tab": "quiz",
+        "previousHash": "1927167afa19759a5b5c88e0fe956a7e09afe333179615a0f1dc5655c6242823",
+        "currentHash": "84eaaa79f9773958cc04fac663ef93edc179f98a1643bb44a8cfd749bf8349f6"
+      }
+    ]
+  },
+  "sourceRecordHash": "7fee6b618daa02945137d31b66ce14330edfed2a93e57f10e16d8368c47bc1ee",
+  "originalPinPath": "content/spinal-bone-quiz-pins.json",
+  "originalPinHash": "4493e6ef8869b8b4d86e0d1e2aee8c0c76dcdf2e401c51c4ad6f8db2e6ba2d3b",
+  "originalPinBlob": "9b37ad819e6b278ddf89209a6644d9ee8ffc9ebe",
+  "originalTransitionPaths": []
+}

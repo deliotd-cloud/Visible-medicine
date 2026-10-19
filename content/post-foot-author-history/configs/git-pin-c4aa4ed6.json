@@ -1,0 +1,620 @@
+{
+  "name": "git-pin-c4aa4ed6",
+  "helper": "elbowArterialUltrasoundLesson",
+  "pinsHash": "d352f60427a2ffcbc27528128ebde7d7be5b0ee432a5b4cef34be310f8a3c321",
+  "transitionHash": "dc9e87d573d8db23ed439081897701f7ad33d9bb2c5739ef1da8b893bcfce9da",
+  "pins": {
+    "baseline": "4897aacb28b4d99d34b893493b8706ede54db970",
+    "authorCommit": "c4aa4ed6a2d4831e51e8c877fbcfa0d66d265bf6",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+          "fmaId": "FMA22713",
+          "name": "Left inferior ulnar collateral artery",
+          "sourceName": "left inferior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22713",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2215",
+              "sha256": "edea5832fdee20ca45746399d2fede1e87bedca786ac6794c0f9d0ad9c7fd5a7"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.860200047492981,
+              2.2014999389648438,
+              0.19603900611400604
+            ],
+            "max": [
+              1.9553899765014648,
+              2.886399984359741,
+              0.3740679919719696
+            ]
+          },
+          "center": [
+            1.907795011997223,
+            2.5439499616622925,
+            0.2850534990429878
+          ],
+          "anchor": [
+            1.8959200382232666,
+            2.537600040435791,
+            0.32099398970603943
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Left inferior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+          "fmaId": "FMA22805",
+          "name": "Left posterior ulnar recurrent artery",
+          "sourceName": "left posterior ulnar recurrent artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22805",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2241",
+              "sha256": "4e62ca6cbae9f45ab3ec543f53fe642057878df2d27db7be70ee79a8eec8c2f1"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.870169997215271,
+              2.200900077819824,
+              0.0433260016143322
+            ],
+            "max": [
+              1.94622004032135,
+              2.414599895477295,
+              0.20554399490356445
+            ]
+          },
+          "center": [
+            1.9081950187683105,
+            2.3077499866485596,
+            0.12443499825894833
+          ],
+          "anchor": [
+            1.9009000062942505,
+            2.2804999351501465,
+            0.10643800348043442
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Left posterior ulnar recurrent artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+          "fmaId": "FMA22766",
+          "name": "Left radial recurrent artery",
+          "sourceName": "left radial recurrent artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22766",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2243",
+              "sha256": "925669ac53724be3c172be11b49df76e6ebf40d8ce8ac454ebf6014f3962a6ca"
+            }
+          ],
+          "bounds": {
+            "min": [
+              2.2802600860595703,
+              2.006700038909912,
+              0.017183000221848488
+            ],
+            "max": [
+              2.42861008644104,
+              2.7527999877929688,
+              0.4333829879760742
+            ]
+          },
+          "center": [
+            2.354435086250305,
+            2.3797500133514404,
+            0.22528299409896135
+          ],
+          "anchor": [
+            2.398750066757202,
+            2.349600076675415,
+            0.2172500044107437
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Left radial recurrent artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+          "fmaId": "FMA22712",
+          "name": "Right inferior ulnar collateral artery",
+          "sourceName": "right inferior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22712",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2267",
+              "sha256": "752bdaa12e7c36bb2f4b51b8736bd317e9079d35678e7a8f27dd7b211bf55590"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.95524001121521,
+              2.2014999389648438,
+              0.19606700539588928
+            ],
+            "max": [
+              -1.860159993171692,
+              2.8863000869750977,
+              0.3742679953575134
+            ]
+          },
+          "center": [
+            -1.907700002193451,
+            2.5439000129699707,
+            0.28516750037670135
+          ],
+          "anchor": [
+            -1.8996000289916992,
+            2.5387001037597656,
+            0.3230760097503662
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Right inferior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+          "fmaId": "FMA22804",
+          "name": "Right posterior ulnar recurrent artery",
+          "sourceName": "right posterior ulnar recurrent artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22804",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2293",
+              "sha256": "33075e1f47328d41642dd8756f9f51cd2c9044a6c4ccf4b05c4e72194ba2cdaa"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.9463399648666382,
+              2.2007999420166016,
+              0.043428000062704086
+            ],
+            "max": [
+              -1.8700799942016602,
+              2.414799928665161,
+              0.20556999742984772
+            ]
+          },
+          "center": [
+            -1.9082099795341492,
+            2.3077999353408813,
+            0.1244989987462759
+          ],
+          "anchor": [
+            -1.9006199836730957,
+            2.2852001190185547,
+            0.10273600369691849
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Right posterior ulnar recurrent artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+          "fmaId": "FMA22764",
+          "name": "Right radial recurrent artery",
+          "sourceName": "right radial recurrent artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22764",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2295",
+              "sha256": "b677bdbe0b58cb3951390b5a384a48bfc121b7e12532b09450482169b52960c1"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -2.4286201000213623,
+              2.0067999362945557,
+              0.01707099936902523
+            ],
+            "max": [
+              -2.2802700996398926,
+              2.752700090408325,
+              0.4336720108985901
+            ]
+          },
+          "center": [
+            -2.3544450998306274,
+            2.3797500133514404,
+            0.22537150513380766
+          ],
+          "anchor": [
+            -2.3991599082946777,
+            2.349900007247925,
+            0.21925799548625946
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Right radial recurrent artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+          "fmaId": "FMA22707",
+          "name": "Right superior ulnar collateral artery",
+          "sourceName": "right superior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22707",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2373",
+              "sha256": "2a493b218515ccdd77c5ef012a35151af65851d24a8e60ec93309493940caeb8"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.8882399797439575,
+              2.405100107192993,
+              0.0442579984664917
+            ],
+            "max": [
+              -1.8117400407791138,
+              3.2297000885009766,
+              0.3423449993133545
+            ]
+          },
+          "center": [
+            -1.8499900102615356,
+            2.817400097846985,
+            0.1933014988899231
+          ],
+          "anchor": [
+            -1.815310001373291,
+            2.8264999389648438,
+            0.15839199721813202
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Right superior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+          "fmaId": "FMA22708",
+          "name": "Left superior ulnar collateral artery",
+          "sourceName": "left superior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22708",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2374",
+              "sha256": "444b782f9184c2c50dd7d854c64b9da8c008d9c3d80e0bbb338110424a04787a"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.8116300106048584,
+              2.4052000045776367,
+              0.044172000139951706
+            ],
+            "max": [
+              1.8881299495697021,
+              3.2297000885009766,
+              0.3423520028591156
+            ]
+          },
+          "center": [
+            1.8498799800872803,
+            2.8174500465393066,
+            0.19326200149953365
+          ],
+          "anchor": [
+            1.8281999826431274,
+            2.8127999305725098,
+            0.15278099477291107
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Left superior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "4897aacb28b4d99d34b893493b8706ede54db970",
+    "authorCommit": "c4aa4ed6a2d4831e51e8c877fbcfa0d66d265bf6",
+    "sourcePinsHash": "d352f60427a2ffcbc27528128ebde7d7be5b0ee432a5b4cef34be310f8a3c321",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+        "fmaId": "FMA22713",
+        "tab": "ultrasound",
+        "previousHash": "6dc6cb2b887a99ae2d9da8910ce1741db2303e22a994563f4baaec45c3313766",
+        "currentHash": "5f0375e96529d4a49e5b7f791c3d8ada56a07dc1913b7f497b860e4200d166dd"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-posterior-ulnar-recurrent-artery",
+        "fmaId": "FMA22805",
+        "tab": "ultrasound",
+        "previousHash": "4c4301d9186d537fe3081bb33d059a9de431f8ee76ef98db0b4c5421e15caaed",
+        "currentHash": "74a48cab4818f18c7e2b97dec6a92b934ad53dcebe83bb103ef6449b3260695a"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-radial-recurrent-artery",
+        "fmaId": "FMA22766",
+        "tab": "ultrasound",
+        "previousHash": "93b81db0331654ec1a8ca07e6ca748bd0bccde7ee882f2027e8309a86b82ddb4",
+        "currentHash": "34ac075fb7d21492dcc8e71587ea225780764725fbbbbd0306e657d88f8d4ecf"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+        "fmaId": "FMA22712",
+        "tab": "ultrasound",
+        "previousHash": "15c41340de97a2efcf6e67b828e43a2d39ffdb474ef979113f81fd9dae81c917",
+        "currentHash": "7cef889ead18ff761ee8a4f89ab1c0404c2aa585bb805099b3ac72c13420341d"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+        "fmaId": "FMA22804",
+        "tab": "ultrasound",
+        "previousHash": "ae9b9a48a1a1eea6ca8eb2695ea72949ef96bed3a4c34c66eeaf95592d9c0e9f",
+        "currentHash": "fc8d7bb67c8eaa01f30455a297328e72473ec7a77742232ea3d2773f5262f6e7"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+        "fmaId": "FMA22764",
+        "tab": "ultrasound",
+        "previousHash": "73cdd7a12cb3b9b8d9bd3fe6a2a06b5c434fb411674c3bc6b650cf69c7abf5b2",
+        "currentHash": "556b3251f5853c41c82164f0e64e5f35f885c5b13b403a46ac33e1e454e9b716"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+        "fmaId": "FMA22707",
+        "tab": "ultrasound",
+        "previousHash": "94286ba3b95533e1dc3b9989f1c4a187723534e37254939b1affa27cbe5dcc74",
+        "currentHash": "b4010087e7f676d2683c7a9e019c182831cb34ad7cdd9dbbec688c4addcb9060"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+        "fmaId": "FMA22708",
+        "tab": "ultrasound",
+        "previousHash": "97259ba6ce2c0e3622422ad13437dd9173483dd1f1286b56394adffd2f495c54",
+        "currentHash": "7b59e9a96ab7ad5a337b27c525f0f8bb83297485a9c441d5b4da9d424f7f2325"
+      }
+    ]
+  },
+  "sourceRecordHash": "d894f555ee99ce3a84765ac76d28da820565d06b2377db10a0af7bb7eb637b67",
+  "originalPinPath": "content/elbow-arterial-ultrasound-pins.json",
+  "originalPinHash": "2fd05a7c5574f9f2b844de936d84142fbb2c92a34da92898732d1e218f0d4ab4",
+  "originalPinBlob": "6e326649636536c6dd8fce4f44d003b50b2093de",
+  "originalTransitionPaths": [
+    "content/elbow-arterial-ultrasound.transition.json"
+  ]
+}

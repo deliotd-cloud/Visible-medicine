@@ -1,0 +1,1240 @@
+{
+  "name": "git-pin-1dc4f82f",
+  "helper": "majorLimbBoneQuizLesson",
+  "pinsHash": "73702faedb56981a5494e9bf6ec0461b363a88d74524953fca241aeac5e6bb81",
+  "transitionHash": "b9b1f27ad0eea1bbb98a8612895fc195591d3365b85df53b7b76cf455f06cf64",
+  "pins": {
+    "baseline": "242a1b5315cd1ed7ed7e9fef3f7d69bb0faf3ffe",
+    "authorCommit": "1dc4f82f677c3a9ccd04f2d0d875210ac0d1ef98",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+          "fmaId": "FMA16586",
+          "name": "Right hip bone",
+          "sourceName": "right hip bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "thigh"
+          ],
+          "bundle": "pelvis-skeleton",
+          "nodeName": "FMA16586",
+          "bounds": {
+            "min": [
+              -1.4487199783325195,
+              -0.4784698486328125,
+              -0.4888122081756592
+            ],
+            "max": [
+              -0.0279029980301857,
+              1.5786901712417603,
+              0.8901899456977844
+            ]
+          },
+          "center": [
+            -0.7383114881813526,
+            0.5501101613044739,
+            0.20068886876106262
+          ],
+          "anchor": [
+            -0.6408339738845825,
+            0.5218298435211182,
+            0.20818497240543365
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3152",
+              "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right hip bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+          "fmaId": "FMA13323",
+          "name": "Left clavicle",
+          "sourceName": "left clavicle",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-skeleton",
+          "nodeName": "FMA13323",
+          "bounds": {
+            "min": [
+              0.08378729969263077,
+              5.085300445556641,
+              0.04387500882148743
+            ],
+            "max": [
+              1.4394199848175049,
+              5.551800727844238,
+              0.9707800149917603
+            ]
+          },
+          "center": [
+            0.7616036422550678,
+            5.3185505867004395,
+            0.5073275119066238
+          ],
+          "anchor": [
+            0.7759079933166504,
+            5.351099967956543,
+            0.5148699879646301
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3237",
+              "sha256": "2491009d53eaed99ccb2a802b29402eec715eb8d207fb819fad67b0720195cf2"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left clavicle on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+          "fmaId": "FMA24475",
+          "name": "Left femur",
+          "sourceName": "left femur",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-skeleton",
+          "nodeName": "FMA24475",
+          "bounds": {
+            "min": [
+              0.3196620047092438,
+              -4.319439888000488,
+              -0.005177993793040514
+            ],
+            "max": [
+              1.502369999885559,
+              0.34239014983177185,
+              0.622759997844696
+            ]
+          },
+          "center": [
+            0.9110160022974014,
+            -1.9885248690843582,
+            0.30879100202582777
+          ],
+          "anchor": [
+            0.9478089809417725,
+            -2.004189968109131,
+            0.308991014957428
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3259",
+              "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left femur on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+          "fmaId": "FMA24481",
+          "name": "Left fibula",
+          "sourceName": "left fibula",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-skeleton",
+          "nodeName": "FMA24481",
+          "bounds": {
+            "min": [
+              0.8452900052070618,
+              -8.251906394958496,
+              -0.014659996144473553
+            ],
+            "max": [
+              1.2010799646377563,
+              -4.408689975738525,
+              0.28119003772735596
+            ]
+          },
+          "center": [
+            1.023184984922409,
+            -6.330298185348511,
+            0.1332650207914412
+          ],
+          "anchor": [
+            1.0649499893188477,
+            -6.316400051116943,
+            0.12487499415874481
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3260",
+              "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left fibula on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+          "fmaId": "FMA23131",
+          "name": "Left humerus",
+          "sourceName": "left humerus",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "shoulder-arm-skeleton",
+          "nodeName": "FMA23131",
+          "bounds": {
+            "min": [
+              1.400730013847351,
+              2.292099714279175,
+              0.010559005662798882
+            ],
+            "max": [
+              2.407599925994873,
+              5.365200042724609,
+              0.5022899508476257
+            ]
+          },
+          "center": [
+            1.904164969921112,
+            3.828649878501892,
+            0.2564244782552123
+          ],
+          "anchor": [
+            1.8882200717926025,
+            3.8617005348205566,
+            0.25274598598480225
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3262",
+              "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left humerus on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:bone:left-patella",
+          "fmaId": "FMA24487",
+          "name": "Left patella",
+          "sourceName": "left patella",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-skeleton",
+          "nodeName": "FMA24487",
+          "bounds": {
+            "min": [
+              0.6059249639511108,
+              -4.3850297927856445,
+              0.5090100169181824
+            ],
+            "max": [
+              1.0222400426864624,
+              -3.9923698902130127,
+              0.7275099754333496
+            ]
+          },
+          "center": [
+            0.8140825033187866,
+            -4.188699841499329,
+            0.618259996175766
+          ],
+          "anchor": [
+            0.8300420641899109,
+            -4.148429870605469,
+            0.5871900320053101
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3275",
+              "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left patella on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+          "fmaId": "FMA23465",
+          "name": "Left radius",
+          "sourceName": "left radius",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-skeleton",
+          "nodeName": "FMA23465",
+          "bounds": {
+            "min": [
+              2.198359966278076,
+              0.0616302490234375,
+              0.11469299346208572
+            ],
+            "max": [
+              2.7914299964904785,
+              2.350100040435791,
+              0.7725200057029724
+            ]
+          },
+          "center": [
+            2.4948949813842773,
+            1.2058651447296143,
+            0.44360649958252907
+          ],
+          "anchor": [
+            2.561270236968994,
+            1.1699999570846558,
+            0.4131059944629669
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3277",
+              "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left radius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+          "fmaId": "FMA13396",
+          "name": "Left scapula",
+          "sourceName": "left scapula",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-skeleton",
+          "nodeName": "FMA13396",
+          "bounds": {
+            "min": [
+              0.5706140398979187,
+              3.8394994735717773,
+              -0.5507640242576599
+            ],
+            "max": [
+              1.6646400690078735,
+              5.498600006103516,
+              0.5284500122070312
+            ]
+          },
+          "center": [
+            1.1176270544528961,
+            4.6690497398376465,
+            -0.011157006025314331
+          ],
+          "anchor": [
+            1.2024999856948853,
+            4.69379997253418,
+            -0.04868198558688164
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3279",
+              "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left scapula on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+          "fmaId": "FMA24478",
+          "name": "Left tibia",
+          "sourceName": "left tibia",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-skeleton",
+          "nodeName": "FMA24478",
+          "bounds": {
+            "min": [
+              0.3503419756889343,
+              -8.060953140258789,
+              0.019821014255285263
+            ],
+            "max": [
+              1.0945500135421753,
+              -4.261380195617676,
+              0.6451500058174133
+            ]
+          },
+          "center": [
+            0.7224459946155548,
+            -6.161166667938232,
+            0.3324855100363493
+          ],
+          "anchor": [
+            0.7442640066146851,
+            -6.160630226135254,
+            0.2990489900112152
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3282",
+              "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left tibia on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+          "fmaId": "FMA23468",
+          "name": "Left ulna",
+          "sourceName": "left ulna",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-skeleton",
+          "nodeName": "FMA23468",
+          "bounds": {
+            "min": [
+              1.9689199924468994,
+              0.050159912556409836,
+              -0.05447700619697571
+            ],
+            "max": [
+              2.4711999893188477,
+              2.5246996879577637,
+              0.7327899932861328
+            ]
+          },
+          "center": [
+            2.2200599908828735,
+            1.2874298002570868,
+            0.33915649354457855
+          ],
+          "anchor": [
+            2.191890001296997,
+            1.2612799406051636,
+            0.3485729992389679
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3286",
+              "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left ulna on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+          "fmaId": "FMA16587",
+          "name": "Left hip bone",
+          "sourceName": "left hip bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "thigh"
+          ],
+          "bundle": "pelvis-skeleton",
+          "nodeName": "FMA16587",
+          "bounds": {
+            "min": [
+              0.02750309929251671,
+              -0.480490118265152,
+              -0.4868505895137787
+            ],
+            "max": [
+              1.4475399255752563,
+              1.5809003114700317,
+              0.8909500241279602
+            ]
+          },
+          "center": [
+            0.7375215124338865,
+            0.5502050966024399,
+            0.20204971730709076
+          ],
+          "anchor": [
+            0.6407599449157715,
+            0.5112402439117432,
+            0.24853698909282684
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3288",
+              "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left hip bone on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+          "fmaId": "FMA23464",
+          "name": "Right radius",
+          "sourceName": "right radius",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-skeleton",
+          "nodeName": "FMA23464",
+          "bounds": {
+            "min": [
+              -2.7953500747680664,
+              0.05835022032260895,
+              0.11102600395679474
+            ],
+            "max": [
+              -2.1983299255371094,
+              2.3505005836486816,
+              0.7690799832344055
+            ]
+          },
+          "center": [
+            -2.496840000152588,
+            1.2044254019856453,
+            0.44005299359560013
+          ],
+          "anchor": [
+            -2.5462300777435303,
+            1.1810302734375,
+            0.42398497462272644
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3349",
+              "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right radius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+          "fmaId": "FMA24474",
+          "name": "Right femur",
+          "sourceName": "right femur",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-skeleton",
+          "nodeName": "FMA24474",
+          "bounds": {
+            "min": [
+              -1.5013400316238403,
+              -4.31850004196167,
+              -0.004697990603744984
+            ],
+            "max": [
+              -0.31894299387931824,
+              0.342520147562027,
+              0.6219199895858765
+            ]
+          },
+          "center": [
+            -0.9101415127515793,
+            -1.9879899471998215,
+            0.30861099949106574
+          ],
+          "anchor": [
+            -0.9391549825668335,
+            -2.0242297649383545,
+            0.31437796354293823
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3365",
+              "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right femur on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+          "fmaId": "FMA24480",
+          "name": "Right fibula",
+          "sourceName": "right fibula",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-skeleton",
+          "nodeName": "FMA24480",
+          "bounds": {
+            "min": [
+              -1.2016500234603882,
+              -8.252799034118652,
+              -0.015125999227166176
+            ],
+            "max": [
+              -0.8434450030326843,
+              -4.4085001945495605,
+              0.28168800473213196
+            ]
+          },
+          "center": [
+            -1.0225475132465363,
+            -6.3306496143341064,
+            0.1332810027524829
+          ],
+          "anchor": [
+            -1.0324500799179077,
+            -6.344590187072754,
+            0.16410896182060242
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3366",
+              "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right fibula on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:bone:right-patella",
+          "fmaId": "FMA24486",
+          "name": "Right patella",
+          "sourceName": "right patella",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-skeleton",
+          "nodeName": "FMA24486",
+          "bounds": {
+            "min": [
+              -1.0228800773620605,
+              -4.3851399421691895,
+              0.5099199414253235
+            ],
+            "max": [
+              -0.6062080264091492,
+              -3.9920401573181152,
+              0.7272699475288391
+            ]
+          },
+          "center": [
+            -0.8145440518856049,
+            -4.188590049743652,
+            0.6185949444770813
+          ],
+          "anchor": [
+            -0.8611350059509277,
+            -4.189239978790283,
+            0.5913699865341187
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3381",
+              "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right patella on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+          "fmaId": "FMA24477",
+          "name": "Right tibia",
+          "sourceName": "right tibia",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-skeleton",
+          "nodeName": "FMA24477",
+          "bounds": {
+            "min": [
+              -1.0935299396514893,
+              -8.060371398925781,
+              0.02072898857295513
+            ],
+            "max": [
+              -0.3521600067615509,
+              -4.260799884796143,
+              0.6483500003814697
+            ]
+          },
+          "center": [
+            -0.7228449732065201,
+            -6.160585641860962,
+            0.33453949447721243
+          ],
+          "anchor": [
+            -0.6983820199966431,
+            -6.1077399253845215,
+            0.3267289698123932
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3387",
+              "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right tibia on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+          "fmaId": "FMA23467",
+          "name": "Right ulna",
+          "sourceName": "right ulna",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-skeleton",
+          "nodeName": "FMA23467",
+          "bounds": {
+            "min": [
+              -2.471790075302124,
+              0.05172973498702049,
+              -0.052008017897605896
+            ],
+            "max": [
+              -1.968809962272644,
+              2.5244994163513184,
+              0.7349400520324707
+            ]
+          },
+          "center": [
+            -2.220300018787384,
+            1.2881145756691694,
+            0.3414660170674324
+          ],
+          "anchor": [
+            -2.2308499813079834,
+            1.2578003406524658,
+            0.39101600646972656
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3391",
+              "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right ulna on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "242a1b5315cd1ed7ed7e9fef3f7d69bb0faf3ffe",
+    "authorCommit": "1dc4f82f677c3a9ccd04f2d0d875210ac0d1ef98",
+    "sourcePinsHash": "73702faedb56981a5494e9bf6ec0461b363a88d74524953fca241aeac5e6bb81",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+        "fmaId": "FMA16586",
+        "tab": "quiz",
+        "previousHash": "99e8a37269376078fa2c4e97d341c87958b130447db631340ce3e3be3f96ab71",
+        "currentHash": "e6ffea8dde55076c317391acf2e1dbd979d3cdf3f7d138b00af36f1ccef332a7"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+        "fmaId": "FMA13323",
+        "tab": "quiz",
+        "previousHash": "d4682302d4da90221dc51b0105175eeabc96a1d5dcd218b0c1c6fa3455af1b18",
+        "currentHash": "3dbde87aded6b152640c66021b5ba5593face447d5b78dae0f188bf5c9079ec7"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+        "fmaId": "FMA24475",
+        "tab": "quiz",
+        "previousHash": "3505e8b244fa2816686fa8cc07bd024fd879169da15171ee0d56cb4d993af941",
+        "currentHash": "8c827c63c95c8aea3033b0fcae1c85957919e490e9f462ec74b9eb5affac44c4"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+        "fmaId": "FMA24481",
+        "tab": "quiz",
+        "previousHash": "a8c99896aef2f33fe3220693a85d72037d1f27e67d8a93df1198de391ce86d63",
+        "currentHash": "5b120e47ebbd4a5d8cf437aa8e4dc708ec84f68ebb1bcc1a36dc28413d3003bb"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+        "fmaId": "FMA23131",
+        "tab": "quiz",
+        "previousHash": "1fb1aadca399753dc19a26c3b002ed7e6ab8a772905d7925f95814fe7a41638a",
+        "currentHash": "1f3d2c689b5b0324dd4bd6d4bf74fda40c90ee702e9822abb02cc7fb3d63ca4c"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:bone:left-patella",
+        "fmaId": "FMA24487",
+        "tab": "quiz",
+        "previousHash": "1a8a7dbb2c6a64c4c038139bee716b07da22ba23faa541bcf3d42744a6098cf2",
+        "currentHash": "d96b11131696cea954733ed78ff313c5677ac302f7777c319131a8f12eb45623"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+        "fmaId": "FMA23465",
+        "tab": "quiz",
+        "previousHash": "80dbebb9f764303e92fc398a90919104b5b20ad0dcec3c8ae4f42d9b231d80f7",
+        "currentHash": "5366f532cb62407428b0fd1df6d7467c1abe9f59d63245dbf1721fac7b8f18ac"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+        "fmaId": "FMA13396",
+        "tab": "quiz",
+        "previousHash": "879b4e9b30080c2bfd01ef868a83c17c248b41354df387432be52b44e13fafc7",
+        "currentHash": "38948808e361b1cc1a1b293fe6d1eb759c5c2be9e83097fcf5e259735cbb986b"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+        "fmaId": "FMA24478",
+        "tab": "quiz",
+        "previousHash": "383c77227e0933be7b147fa36fb5246dc4686617bab6e61aac31e971aa53af6f",
+        "currentHash": "b9acef168f053ac7626f035c146a1f20317978ba5cd7cf1c66d50273c6626502"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+        "fmaId": "FMA23468",
+        "tab": "quiz",
+        "previousHash": "17267641a2b0e8c469109a635e42b331de52e2065a404cac6a7b20cabd5f3d60",
+        "currentHash": "43421257bd5046dfa6ab00476e71076c25a2609b6fe846ed203317ee45b8d87a"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+        "fmaId": "FMA16587",
+        "tab": "quiz",
+        "previousHash": "6b31a5ec93cd492744b5f5ff4f436bc1196700fc54c3a3adb91c8893987068fe",
+        "currentHash": "579733901d0263a856709f0230d3fbece5fe3ebffdbf9bf8fa34475a1b1fc32b"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+        "fmaId": "FMA23464",
+        "tab": "quiz",
+        "previousHash": "9033dbe247b1bf22a94dd829aa46a233b3686c732a60823e5ee64b6963a1a70d",
+        "currentHash": "6ec2bcb333dda83976e1f0d5f171ff442633b9d85ce5dfcf85199f56a53729d4"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+        "fmaId": "FMA24474",
+        "tab": "quiz",
+        "previousHash": "4c798a82085a5c1e9ed1dc4a6859a9266fbfee69f7aec3e62f233a9fc9dcff99",
+        "currentHash": "dc038642f6612977b280cfb1d42a0ee5836ff4aa9c5ebcf28b8e7ab0b2baa12e"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+        "fmaId": "FMA24480",
+        "tab": "quiz",
+        "previousHash": "a55aea0408e04b88de0728ceddbf90a41e2d12789fc2fd10cae155a305c350d4",
+        "currentHash": "3cf0b7c1880f60edc0e13872ac5a067545a41463369e382796bb8b1d21168dcd"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:bone:right-patella",
+        "fmaId": "FMA24486",
+        "tab": "quiz",
+        "previousHash": "fee675e5ad48631ee4a54001fb5ecbc077603129034202ed77c2491e8c1ce98d",
+        "currentHash": "275caba049069d7dff6c0b9ec72711fb8fe7d51813721518421f252ce5841b7a"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+        "fmaId": "FMA24477",
+        "tab": "quiz",
+        "previousHash": "0346a6a4f3728bdd55d6cb237f2e6305bacd7cd8ade7601ae45027581cb68bd3",
+        "currentHash": "68d1817db696e9fef63d325f5bd65693adbb32a6927b52ca4ccb24a1bafd370e"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+        "fmaId": "FMA23467",
+        "tab": "quiz",
+        "previousHash": "e936471ed1ca400e9581f488fd386ed87736e0c845c2146a29f596ba6efe08c6",
+        "currentHash": "8cfc0fb93b431b99cbb772fb8621773ea8c1a8197950178ea778e8bc57c5f44a"
+      }
+    ]
+  },
+  "sourceRecordHash": "00a263d485b65feec217ab288455b5464ff6b3f86778e4c7295bd62d3e4cd4f8",
+  "originalPinPath": "content/major-limb-bone-quiz-pins.json",
+  "originalPinHash": "678157095c541e223528fc54f0cf5b114a6547ce177cb1825f98fb541e615346",
+  "originalPinBlob": "625623a95a945d693e2e040059e0dade4fd25232",
+  "originalTransitionPaths": []
+}

@@ -1,0 +1,594 @@
+{
+  "name": "git-pin-cbda5345",
+  "helper": "scapularMuscleQuizLesson",
+  "pinsHash": "fe3f34af8d85c6c590d59d2427f25637dc94d7e678430f556ab832d53c5cd234",
+  "transitionHash": "f77cb634892177c227c7b1b8ae63a433cd04dab6620ff92bc37066177fd25c68",
+  "pins": {
+    "baseline": "f2e1a56027bbe0efe9eef1720ccc699ae7da90fe",
+    "authorCommit": "cbda5345d2aaa730b0361e7e374e356478f6222d",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+          "fmaId": "FMA13412",
+          "name": "Right subclavius",
+          "sourceName": "right subclavius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-muscles",
+          "nodeName": "FMA13412",
+          "bounds": {
+            "min": [
+              -1.0467699766159058,
+              5.114599704742432,
+              0.2409929633140564
+            ],
+            "max": [
+              -0.342879980802536,
+              5.428599834442139,
+              0.8487399220466614
+            ]
+          },
+          "center": [
+            -0.6948249787092209,
+            5.271599769592285,
+            0.5448664426803589
+          ],
+          "anchor": [
+            -0.7268129587173462,
+            5.275200366973877,
+            0.5781099796295166
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1460",
+              "sha256": "39c2b495c92f2603b5df5cf4ae18e25ef9a34bf583c6e8657b667596d238c28e"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right subclavius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+          "fmaId": "FMA13411",
+          "name": "Left subclavius",
+          "sourceName": "left subclavius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-muscles",
+          "nodeName": "FMA13411",
+          "bounds": {
+            "min": [
+              0.342879980802536,
+              5.11400032043457,
+              0.2409929633140564
+            ],
+            "max": [
+              1.0467699766159058,
+              5.428599834442139,
+              0.8487399220466614
+            ]
+          },
+          "center": [
+            0.6948249787092209,
+            5.2713000774383545,
+            0.5448664426803589
+          ],
+          "anchor": [
+            0.7268129587173462,
+            5.275200366973877,
+            0.5781099796295166
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1460M",
+              "sha256": "c35b0e090826dec2b6ce70de4f1e119e5791b171e2ae9737ce3e15f2af3309ac"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left subclavius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+          "fmaId": "FMA33581",
+          "name": "Ascending part of right trapezius",
+          "sourceName": "ascending part of right trapezius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles-dissection",
+          "nodeName": "FMA33581",
+          "bounds": {
+            "min": [
+              -1.485859990119934,
+              2.54010009765625,
+              -0.7454670071601868
+            ],
+            "max": [
+              0.0325435996055603,
+              5.429699897766113,
+              -0.03036300651729107
+            ]
+          },
+          "center": [
+            -0.7266581952571869,
+            3.9848999977111816,
+            -0.3879150068387389
+          ],
+          "anchor": [
+            -0.6646890044212341,
+            4.031199932098389,
+            -0.6687049865722656
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1520",
+              "sha256": "6bb3d13198991bda4d0aae27561976b9ba53b0d21d817f180098307c7b99deb1"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find ascending part of right trapezius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+          "fmaId": "FMA33583",
+          "name": "Ascending part of left trapezius",
+          "sourceName": "ascending part of left trapezius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles-dissection",
+          "nodeName": "FMA33583",
+          "bounds": {
+            "min": [
+              -0.0325435996055603,
+              2.54010009765625,
+              -0.7454659938812256
+            ],
+            "max": [
+              1.485859990119934,
+              5.429699897766113,
+              -0.03036300651729107
+            ]
+          },
+          "center": [
+            0.7266581952571869,
+            3.9848999977111816,
+            -0.3879145001992583
+          ],
+          "anchor": [
+            0.6646890044212341,
+            4.031199932098389,
+            -0.6687049865722656
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1520M",
+              "sha256": "5ca485d5bfe97fd5a9e17d76d2a77077577e13f19584f5634a8eb1bbc6d7da3d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find ascending part of left trapezius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+          "fmaId": "FMA33584",
+          "name": "Transverse part of right trapezius",
+          "sourceName": "transverse part of right trapezius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles-dissection",
+          "nodeName": "FMA33584",
+          "bounds": {
+            "min": [
+              -1.6324200630187988,
+              5.036200046539307,
+              -0.6070089936256409
+            ],
+            "max": [
+              0.03872710093855858,
+              5.821099758148193,
+              0.1965389996767044
+            ]
+          },
+          "center": [
+            -0.7968464810401201,
+            5.42864990234375,
+            -0.20523499697446823
+          ],
+          "anchor": [
+            -0.8284200429916382,
+            5.482500076293945,
+            -0.28153499960899353
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1554",
+              "sha256": "f7683d77a5bfe9ac6d07fdc913c46cf41db20298c087e71df73fab18192e90a4"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find transverse part of right trapezius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+          "fmaId": "FMA33585",
+          "name": "Transverse part of left trapezius",
+          "sourceName": "transverse part of left trapezius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles-dissection",
+          "nodeName": "FMA33585",
+          "bounds": {
+            "min": [
+              -0.03872710093855858,
+              5.036300182342529,
+              -0.6070089936256409
+            ],
+            "max": [
+              1.6324200630187988,
+              5.821099758148193,
+              0.1965389996767044
+            ]
+          },
+          "center": [
+            0.7968464810401201,
+            5.428699970245361,
+            -0.20523499697446823
+          ],
+          "anchor": [
+            0.8284200429916382,
+            5.482500076293945,
+            -0.28153499960899353
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1554M",
+              "sha256": "a08a23c17d20a120eebe96a9c8db1bb86672529fb8f34868d5f7cd28f5df98d5"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find transverse part of left trapezius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+          "fmaId": "FMA33586",
+          "name": "Descending part of right trapezius",
+          "sourceName": "descending part of right trapezius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles-dissection",
+          "nodeName": "FMA33586",
+          "bounds": {
+            "min": [
+              -1.3083999156951904,
+              5.405899524688721,
+              -0.4238651990890503
+            ],
+            "max": [
+              0.03488419950008392,
+              7.062399864196777,
+              0.506600022315979
+            ]
+          },
+          "center": [
+            -0.6367578580975533,
+            6.234149694442749,
+            0.041367411613464355
+          ],
+          "anchor": [
+            -0.4161610007286072,
+            6.228700160980225,
+            0.08728298544883728
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1521",
+              "sha256": "19bd9d1cbbb84e10826eb770068f6e271cd79dde960bca62ac71da24120fc354"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find descending part of right trapezius on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+          "fmaId": "FMA33587",
+          "name": "Descending part of left trapezius",
+          "sourceName": "descending part of left trapezius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles-dissection",
+          "nodeName": "FMA33587",
+          "bounds": {
+            "min": [
+              -0.03488419950008392,
+              5.405899524688721,
+              -0.4238651990890503
+            ],
+            "max": [
+              1.3083999156951904,
+              7.062399864196777,
+              0.506600022315979
+            ]
+          },
+          "center": [
+            0.6367578580975533,
+            6.234149694442749,
+            0.041367411613464355
+          ],
+          "anchor": [
+            0.4161610007286072,
+            6.228700160980225,
+            0.08728298544883728
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1521M",
+              "sha256": "fe756252f820a47e9c757f67de4ca37adf44837dbe0d10c6d2e5df3a5a6a0751"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find descending part of left trapezius on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "f2e1a56027bbe0efe9eef1720ccc699ae7da90fe",
+    "authorCommit": "cbda5345d2aaa730b0361e7e374e356478f6222d",
+    "sourcePinsHash": "fe3f34af8d85c6c590d59d2427f25637dc94d7e678430f556ab832d53c5cd234",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-subclavius",
+        "fmaId": "FMA13412",
+        "tab": "quiz",
+        "previousHash": "36243d1e4bb71ef04dc2d53af641b031b3591ed5a75795793a0e1f1516d4a3c2",
+        "currentHash": "4c2ac85761d4ca72fa0b202b2f214b8a0b0abc1af1693b07581ef52a5d8912b2"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-subclavius",
+        "fmaId": "FMA13411",
+        "tab": "quiz",
+        "previousHash": "17d78843dba2676a030ac7fdc3ef53f3e56a3c2992376334fc5d6864b1cd74cf",
+        "currentHash": "028b294ec6ccf9e7a4bf92cb95cfd6d7a51634214b9bc657a7dd4f2af3281f97"
+      },
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:ascending-part-of-right-trapezius",
+        "fmaId": "FMA33581",
+        "tab": "quiz",
+        "previousHash": "6a41f71ca4038dfd2698b31e058c97c1f2e8934a8e59afe7d12dfea18c7e8823",
+        "currentHash": "cf952f1ebfd3997b06bdf5e0630220b606e1abc382ae4d5aefc1db83c943f7e0"
+      },
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:ascending-part-of-left-trapezius",
+        "fmaId": "FMA33583",
+        "tab": "quiz",
+        "previousHash": "44e20cf77e93c4667debf632c2fb8eb38e263309ced5f3942bdbc2c5703fab9e",
+        "currentHash": "397d2b8824d5f1d80793660826a329e934170884ecc67a9d0afb0b83c37b2e10"
+      },
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:transverse-part-of-right-trapezius",
+        "fmaId": "FMA33584",
+        "tab": "quiz",
+        "previousHash": "17dbbc9fd64e1eadcc0eca7145fb6caec421096ad2ba588d345a27062eb9c0f4",
+        "currentHash": "75bd7d491092e7d962eaf9bca33fce85e15f986ce7efef25191a6268b382df11"
+      },
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:transverse-part-of-left-trapezius",
+        "fmaId": "FMA33585",
+        "tab": "quiz",
+        "previousHash": "3e7098eb74208d4e4e259ac32ac113760b7070f1c5a239c7932e4c3e9b8831c1",
+        "currentHash": "7ba1b8696aff9e1160c068c62b2635a0f2e5ddc3dda8de130eb610ea89ccde27"
+      },
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:descending-part-of-right-trapezius",
+        "fmaId": "FMA33586",
+        "tab": "quiz",
+        "previousHash": "d807137c87208c02bc424f14b09e199a2a2f72dc8f1706c606ed3569158bbfe2",
+        "currentHash": "5ac0879a139a19fb5d1fee63c65b9ce731f1fc04baaef5055d0d5f7a25e12e49"
+      },
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:descending-part-of-left-trapezius",
+        "fmaId": "FMA33587",
+        "tab": "quiz",
+        "previousHash": "b0b7079c63ff69624d31d7c77bbc2f864d6abd653a0fbee2845f58b0c71420b3",
+        "currentHash": "f5703d0d9c91b8fb4a8c806b12c2d0c9d3c2028cffedc133e769984740837c17"
+      }
+    ]
+  },
+  "sourceRecordHash": "7171a109eff52e0cf22067c4811c654dceee34ff3b2ad4be02abaeadfc361afb",
+  "originalPinPath": "content/scapular-muscle-quiz-pins.json",
+  "originalPinHash": "279a1f624474b997e1329d12f72c99329b45096559b085a6f5f1278221d95ee3",
+  "originalPinBlob": "1b9d15ee4febdd91c8611aeccac9cd2e7e4d8052",
+  "originalTransitionPaths": []
+}

@@ -1,0 +1,458 @@
+{
+  "name": "git-pin-4e9f5385",
+  "helper": "cervicalProjectionXrayLesson",
+  "pinsHash": "bbb6e768ea0eae9109ceae1263a3c3e147fe02d34c14a1b6ee36fdbf5883622a",
+  "transitionHash": "443ebfe3c0f71aaf6839f929aa5ff18d90d94ccbb0ab624be5c21184e8cda070",
+  "pins": {
+    "baseline": "408759d57644b05402e98a937e7cf6338b5509cf",
+    "authorCommit": "4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+          "fmaId": "FMA46310",
+          "name": "Left longus capitis",
+          "sourceName": "left longus capitis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA46310",
+          "bounds": {
+            "min": [
+              0.010373200289905071,
+              5.856999397277832,
+              0.27329200506210327
+            ],
+            "max": [
+              0.2548089921474457,
+              6.966400146484375,
+              0.4504860043525696
+            ]
+          },
+          "center": [
+            0.13259109621867537,
+            6.4116997718811035,
+            0.3618890047073364
+          ],
+          "anchor": [
+            0.17037099599838257,
+            6.4205002784729,
+            0.3883119821548462
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1561",
+              "sha256": "a805c03e24aadb8da137abb8533543f4561db28e050b7bc6bb6f7ba70a0f1ac0"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+          "fmaId": "FMA46314",
+          "name": "Left rectus capitis anterior",
+          "sourceName": "left rectus capitis anterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA46314",
+          "bounds": {
+            "min": [
+              0.020251600071787834,
+              6.71660041809082,
+              0.27399298548698425
+            ],
+            "max": [
+              0.27686500549316406,
+              6.932700157165527,
+              0.37695297598838806
+            ]
+          },
+          "center": [
+            0.14855830278247595,
+            6.824650287628174,
+            0.32547298073768616
+          ],
+          "anchor": [
+            0.1467140018939972,
+            6.833799839019775,
+            0.33051598072052
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1566",
+              "sha256": "f063c76b3d4b1b6ebdd8f7504fa7a0d1d8f3b8d2e1e3bb45da9fb46ff42db15e"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+          "fmaId": "FMA46318",
+          "name": "Left rectus capitis lateralis",
+          "sourceName": "left rectus capitis lateralis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA46318",
+          "bounds": {
+            "min": [
+              0.2597769796848297,
+              6.665400505065918,
+              0.11664600670337677
+            ],
+            "max": [
+              0.4003320038318634,
+              6.896100044250488,
+              0.27531898021698
+            ]
+          },
+          "center": [
+            0.33005449175834656,
+            6.780750274658203,
+            0.19598249346017838
+          ],
+          "anchor": [
+            0.3532640039920807,
+            6.774899959564209,
+            0.20987999439239502
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1569",
+              "sha256": "d5cee1b4060b42602f81ab57e0fe7ae8da4288e8dd215928d2f369715524ee1d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+          "fmaId": "FMA46309",
+          "name": "Right longus capitis",
+          "sourceName": "right longus capitis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA46309",
+          "bounds": {
+            "min": [
+              -0.26782000064849854,
+              5.856800556182861,
+              0.27195602655410767
+            ],
+            "max": [
+              -0.023114299401640892,
+              6.966899394989014,
+              0.45033302903175354
+            ]
+          },
+          "center": [
+            -0.1454671500250697,
+            6.4118499755859375,
+            0.3611445277929306
+          ],
+          "anchor": [
+            -0.17915600538253784,
+            6.406500339508057,
+            0.393636018037796
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1582",
+              "sha256": "2b0def59b27f6f6c654983b04daf3401997517a7c93bfff5bf70d0d0eb875ac9"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+          "fmaId": "FMA46313",
+          "name": "Right rectus capitis anterior",
+          "sourceName": "right rectus capitis anterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA46313",
+          "bounds": {
+            "min": [
+              -0.28919801115989685,
+              6.724300384521484,
+              0.2807389795780182
+            ],
+            "max": [
+              0.20023299753665924,
+              6.933800220489502,
+              0.3768109977245331
+            ]
+          },
+          "center": [
+            -0.044482506811618805,
+            6.829050302505493,
+            0.32877498865127563
+          ],
+          "anchor": [
+            -0.06414730101823807,
+            6.851999282836914,
+            0.3364199697971344
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1588",
+              "sha256": "b7ad7dca09e8946a29dbcabf3cd2a01e724df5b4a2e5da0d67eadd5017eb736b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+          "fmaId": "FMA46317",
+          "name": "Right rectus capitis lateralis",
+          "sourceName": "right rectus capitis lateralis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA46317",
+          "bounds": {
+            "min": [
+              -0.4124950170516968,
+              6.681099891662598,
+              0.11695201694965363
+            ],
+            "max": [
+              -0.2819400131702423,
+              6.896600246429443,
+              0.2793419659137726
+            ]
+          },
+          "center": [
+            -0.34721751511096954,
+            6.7888500690460205,
+            0.1981469914317131
+          ],
+          "anchor": [
+            -0.37005698680877686,
+            6.780600547790527,
+            0.20153602957725525
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1591",
+              "sha256": "7c7266e6c06e8b74784c92b7be97c2bef843252fbb8a493d21db31e6c226b828"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "408759d57644b05402e98a937e7cf6338b5509cf",
+    "authorCommit": "4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad",
+    "sourcePinsHash": "bbb6e768ea0eae9109ceae1263a3c3e147fe02d34c14a1b6ee36fdbf5883622a",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+        "fmaId": "FMA46310",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "92d434c450118f7e41db18b0d39da17a213c81c009a69255b6efbe60682de5ee"
+      },
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+        "fmaId": "FMA46314",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "72101cbadde14c62f80dd5649c232efdda9e7297d35afcf272edf9705900ceb3"
+      },
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+        "fmaId": "FMA46318",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "aaba93983f3aceacee3c3d96b06b258c69a9dc3215ff9e84372b8c0aae839734"
+      },
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+        "fmaId": "FMA46309",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "e8c6ff34ef3b35c83ad55d56bc6819a683b44195aacdd9ea902f120de744d0d6"
+      },
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+        "fmaId": "FMA46313",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "d51032a7349d577857c5066fec5d668e35be9be00ba1e58c7488e1413798dd56"
+      },
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+        "fmaId": "FMA46317",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "336b8b1db9753d1e55625fc9e1aece02488b730f85b3c4e602a31c39a751bd42"
+      }
+    ]
+  },
+  "sourceRecordHash": "5309c841862159dfa86efc608ee062a08cfbbcaab44c3c1e32be80a1d0440e86",
+  "originalPinPath": "content/cervical-projection-xray-pins.json",
+  "originalPinHash": "f267bed9ca126f8ffae31ae31069cc7a2d8ff75797558116e724c729ee524d8b",
+  "originalPinBlob": "76ad94c0a48eba5d460eb512a6b4b8158afd9970",
+  "originalTransitionPaths": []
+}

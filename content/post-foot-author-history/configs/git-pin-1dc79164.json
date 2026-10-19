@@ -1,0 +1,1446 @@
+{
+  "name": "git-pin-1dc79164",
+  "helper": "handMuscleQuizLesson",
+  "pinsHash": "494cf5f3e7d0512fd1a1fcc095357412ccb6cf85f8d31c9f150aa38c0f8d7b30",
+  "transitionHash": "e2fb97bef2cb3b30fc37973b888b77f2c1e8ea4c858070e351924d365f3957f4",
+  "pins": {
+    "baseline": "9b66b2d0ca4a6f02c14826fbfbd5f973ddcf5605",
+    "authorCommit": "1dc7916410479346c5f96ed0d9a42461eaada69b",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
+          "fmaId": "FMA37396",
+          "name": "Abductor digiti minimi of right hand",
+          "sourceName": "abductor digiti minimi of right hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37396",
+          "bounds": {
+            "min": [
+              -2.381809949874878,
+              -0.7036401629447937,
+              0.806239902973175
+            ],
+            "max": [
+              -2.208169937133789,
+              -0.05317993089556694,
+              0.9890600442886353
+            ]
+          },
+          "center": [
+            -2.2949899435043335,
+            -0.3784100469201803,
+            0.8976499736309052
+          ],
+          "anchor": [
+            -2.3311798572540283,
+            -0.37289002537727356,
+            0.9348899722099304
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1466",
+              "sha256": "f43244169de921a1209484246543bec594bc3b282c647eaf6249f2320f10bfc0"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find abductor digiti minimi of right hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
+          "fmaId": "FMA37397",
+          "name": "Abductor digiti minimi of left hand",
+          "sourceName": "abductor digiti minimi of left hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37397",
+          "bounds": {
+            "min": [
+              2.208169937133789,
+              -0.7036401629447937,
+              0.806239902973175
+            ],
+            "max": [
+              2.381809949874878,
+              -0.05317993089556694,
+              0.9890600442886353
+            ]
+          },
+          "center": [
+            2.2949899435043335,
+            -0.3784100469201803,
+            0.8976499736309052
+          ],
+          "anchor": [
+            2.3311798572540283,
+            -0.3728802502155304,
+            0.9348899722099304
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1466M",
+              "sha256": "c863e99b725f694e708b560b9bf848ce4249bc512dd4d0284a79de20402f0c5f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find abductor digiti minimi of left hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
+          "fmaId": "FMA37398",
+          "name": "Flexor digiti minimi brevis of right hand",
+          "sourceName": "flexor digiti minimi brevis of right hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37398",
+          "bounds": {
+            "min": [
+              -2.440079927444458,
+              -0.6821100115776062,
+              0.8071100115776062
+            ],
+            "max": [
+              -2.2606301307678223,
+              -0.08015991002321243,
+              0.9801700115203857
+            ]
+          },
+          "center": [
+            -2.35035502910614,
+            -0.3811349608004093,
+            0.893640011548996
+          ],
+          "anchor": [
+            -2.3257200717926025,
+            -0.3777301013469696,
+            0.889259934425354
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1470",
+              "sha256": "a0320cbafea76dae73ef8b8e44bd716507e496fd07adacdb9c3f7530e3e10f0f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find flexor digiti minimi brevis of right hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
+          "fmaId": "FMA37399",
+          "name": "Flexor digiti minimi brevis of left hand",
+          "sourceName": "flexor digiti minimi brevis of left hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37399",
+          "bounds": {
+            "min": [
+              2.2606301307678223,
+              -0.6821100115776062,
+              0.8071100115776062
+            ],
+            "max": [
+              2.440079927444458,
+              -0.08015991002321243,
+              0.9801700115203857
+            ]
+          },
+          "center": [
+            2.35035502910614,
+            -0.3811349608004093,
+            0.893640011548996
+          ],
+          "anchor": [
+            2.3257200717926025,
+            -0.3777301013469696,
+            0.889259934425354
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1470M",
+              "sha256": "8ff63d0bd489a325491ec40b4bff2bf591d04746c8122d7d707c899723e24856"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find flexor digiti minimi brevis of left hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:opponens-digiti-minimi-of-right-hand",
+          "fmaId": "FMA37400",
+          "name": "Opponens digiti minimi of right hand",
+          "sourceName": "opponens digiti minimi of right hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37400",
+          "bounds": {
+            "min": [
+              -2.4541900157928467,
+              -0.5636999607086182,
+              0.7763500213623047
+            ],
+            "max": [
+              -2.2746400833129883,
+              -0.0955798327922821,
+              0.9257299900054932
+            ]
+          },
+          "center": [
+            -2.3644150495529175,
+            -0.32963989675045013,
+            0.8510400056838989
+          ],
+          "anchor": [
+            -2.345479965209961,
+            -0.3370300233364105,
+            0.8361599445343018
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1482",
+              "sha256": "ac36154c8b29c5037e853509c15ecdb0ce778f83b8956b615a57a15b6897eff5"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find opponens digiti minimi of right hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:opponens-digiti-minimi-of-left-hand",
+          "fmaId": "FMA37401",
+          "name": "Opponens digiti minimi of left hand",
+          "sourceName": "opponens digiti minimi of left hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37401",
+          "bounds": {
+            "min": [
+              2.2746400833129883,
+              -0.5636999607086182,
+              0.7763500213623047
+            ],
+            "max": [
+              2.4541900157928467,
+              -0.0955798327922821,
+              0.9257299900054932
+            ]
+          },
+          "center": [
+            2.3644150495529175,
+            -0.32963989675045013,
+            0.8510400056838989
+          ],
+          "anchor": [
+            2.345489978790283,
+            -0.3370300233364105,
+            0.8361599445343018
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1482M",
+              "sha256": "73e7e15ed5f07af78166d6090cd0d2d60e953e1b46e668fb947e46cc19783b30"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find opponens digiti minimi of left hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
+          "fmaId": "FMA37386",
+          "name": "Right abductor pollicis brevis",
+          "sourceName": "right abductor pollicis brevis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37386",
+          "bounds": {
+            "min": [
+              -3.0253899097442627,
+              -0.30088987946510315,
+              0.7302300333976746
+            ],
+            "max": [
+              -2.6335198879241943,
+              0.08086974918842316,
+              1.0274299383163452
+            ]
+          },
+          "center": [
+            -2.8294548988342285,
+            -0.11001006513834,
+            0.8788299858570099
+          ],
+          "anchor": [
+            -2.8177199363708496,
+            -0.12192992866039276,
+            0.9369299411773682
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1483",
+              "sha256": "e8fae19efda4874793724ff541efd7d9ead31b50fbb343254e3f8effd8aa734d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right abductor pollicis brevis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
+          "fmaId": "FMA37387",
+          "name": "Left abductor pollicis brevis",
+          "sourceName": "left abductor pollicis brevis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37387",
+          "bounds": {
+            "min": [
+              2.6335198879241943,
+              -0.30088987946510315,
+              0.7302300333976746
+            ],
+            "max": [
+              3.0253899097442627,
+              0.08086974918842316,
+              1.0274299383163452
+            ]
+          },
+          "center": [
+            2.8294548988342285,
+            -0.11001006513834,
+            0.8788299858570099
+          ],
+          "anchor": [
+            2.817730188369751,
+            -0.12192992866039276,
+            0.9369299411773682
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1483M",
+              "sha256": "89f420938e9140ba1b2a97c6d386897131f5f2423b4a24c42ea37a92bf75b493"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left abductor pollicis brevis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
+          "fmaId": "FMA37390",
+          "name": "Right opponens pollicis",
+          "sourceName": "right opponens pollicis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37390",
+          "bounds": {
+            "min": [
+              -3.0585999488830566,
+              -0.2616998255252838,
+              0.8037899732589722
+            ],
+            "max": [
+              -2.5804097652435303,
+              0.06002990901470184,
+              0.9896899461746216
+            ]
+          },
+          "center": [
+            -2.8195048570632935,
+            -0.10083495825529099,
+            0.8967399597167969
+          ],
+          "anchor": [
+            -2.816890001296997,
+            -0.08052978664636612,
+            0.9134700298309326
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1501",
+              "sha256": "abbd7e3223c7aae817ecd4e613e24c7dcd2aff20d56ea35a1517c73f6bae7a9e"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right opponens pollicis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:left-opponens-pollicis",
+          "fmaId": "FMA37391",
+          "name": "Left opponens pollicis",
+          "sourceName": "left opponens pollicis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles",
+          "nodeName": "FMA37391",
+          "bounds": {
+            "min": [
+              2.5804097652435303,
+              -0.2616998255252838,
+              0.8037899732589722
+            ],
+            "max": [
+              3.0585999488830566,
+              0.06002990901470184,
+              0.9896899461746216
+            ]
+          },
+          "center": [
+            2.8195048570632935,
+            -0.10083495825529099,
+            0.8967399597167969
+          ],
+          "anchor": [
+            2.816890001296997,
+            -0.08052978664636612,
+            0.9134700298309326
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1501M",
+              "sha256": "11f813334eaaed8e9502bfa9afaea44aec5c7cdd01e8acf038aeadac2bb13e25"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left opponens pollicis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
+          "fmaId": "FMA46121",
+          "name": "Oblique head of right adductor pollicis",
+          "sourceName": "oblique head of right adductor pollicis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-dissection",
+          "nodeName": "FMA46121",
+          "bounds": {
+            "min": [
+              -2.9933600425720215,
+              -0.40250977873802185,
+              0.7316200137138367
+            ],
+            "max": [
+              -2.565340042114258,
+              -0.10216003656387329,
+              0.9707000851631165
+            ]
+          },
+          "center": [
+            -2.7793500423431396,
+            -0.25233490765094757,
+            0.8511600494384766
+          ],
+          "anchor": [
+            -2.7823901176452637,
+            -0.24340027570724487,
+            0.8806399703025818
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1481",
+              "sha256": "7f95a0d24a061eefc13bbef6c842b7e685798dfd16e767b955015dafde1f858d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find oblique head of right adductor pollicis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
+          "fmaId": "FMA46122",
+          "name": "Oblique head of left adductor pollicis",
+          "sourceName": "oblique head of left adductor pollicis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-dissection",
+          "nodeName": "FMA46122",
+          "bounds": {
+            "min": [
+              2.565340042114258,
+              -0.40250977873802185,
+              0.7316200137138367
+            ],
+            "max": [
+              2.9933600425720215,
+              -0.10216003656387329,
+              0.9707000851631165
+            ]
+          },
+          "center": [
+            2.7793500423431396,
+            -0.25233490765094757,
+            0.8511600494384766
+          ],
+          "anchor": [
+            2.7823901176452637,
+            -0.24340027570724487,
+            0.8806300163269043
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1481M",
+              "sha256": "6aae43f5745e133cfb7a1659dcc6d8e42e94d8772b984f1ad33d79c6a0f8397c"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find oblique head of left adductor pollicis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+          "fmaId": "FMA46123",
+          "name": "Transverse head of right adductor pollicis",
+          "sourceName": "transverse head of right adductor pollicis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-dissection",
+          "nodeName": "FMA46123",
+          "bounds": {
+            "min": [
+              -2.997650146484375,
+              -0.6136602759361267,
+              0.7420799732208252
+            ],
+            "max": [
+              -2.5863900184631348,
+              -0.23294006288051605,
+              0.9672099351882935
+            ]
+          },
+          "center": [
+            -2.792020082473755,
+            -0.4233001694083214,
+            0.8546449542045593
+          ],
+          "anchor": [
+            -2.8035500049591064,
+            -0.3566400110721588,
+            0.834369957447052
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1515",
+              "sha256": "75f0a7b8130a70da1efb175638927868a2eb8d1f79916916666d100ec92190f2"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find transverse head of right adductor pollicis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+          "fmaId": "FMA46124",
+          "name": "Transverse head of left adductor pollicis",
+          "sourceName": "transverse head of left adductor pollicis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-dissection",
+          "nodeName": "FMA46124",
+          "bounds": {
+            "min": [
+              2.5863900184631348,
+              -0.6136602759361267,
+              0.7420799732208252
+            ],
+            "max": [
+              2.997650146484375,
+              -0.23294006288051605,
+              0.9672099351882935
+            ]
+          },
+          "center": [
+            2.792020082473755,
+            -0.4233001694083214,
+            0.8546449542045593
+          ],
+          "anchor": [
+            2.8035500049591064,
+            -0.3566400110721588,
+            0.834369957447052
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1515M",
+              "sha256": "b280fa41da96bb2db519cb055f6ecaea6fe0786586db3f5d695da07a77395924"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find transverse head of left adductor pollicis on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+          "fmaId": "FMA42398",
+          "name": "Set of lumbricals of right hand",
+          "sourceName": "set of lumbricals of right hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-recovery",
+          "nodeName": "FMA42398",
+          "bounds": {
+            "min": [
+              -3.000380039215088,
+              -1.1511797904968262,
+              0.7689399719238281
+            ],
+            "max": [
+              -2.2416999340057373,
+              -0.25091978907585144,
+              1.0827800035476685
+            ]
+          },
+          "center": [
+            -2.6210399866104126,
+            -0.7010497897863388,
+            0.9258599877357483
+          ],
+          "anchor": [
+            -2.5528900623321533,
+            -0.7075097560882568,
+            0.9341000318527222
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1510",
+              "sha256": "d3ce59c7785168a78c152a202480c2ed05b2c0b2798d70d89e3b9bd42fc2f9de"
+            }
+          ],
+          "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find set of lumbricals of right hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+          "fmaId": "FMA42399",
+          "name": "Set of lumbricals of left hand",
+          "sourceName": "set of lumbricals of left hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-recovery",
+          "nodeName": "FMA42399",
+          "bounds": {
+            "min": [
+              2.2416999340057373,
+              -1.1511797904968262,
+              0.7689399719238281
+            ],
+            "max": [
+              3.000380039215088,
+              -0.25091978907585144,
+              1.0827800035476685
+            ]
+          },
+          "center": [
+            2.6210399866104126,
+            -0.7010497897863388,
+            0.9258599877357483
+          ],
+          "anchor": [
+            2.552880048751831,
+            -0.7075097560882568,
+            0.9341000318527222
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1510M",
+              "sha256": "00bab05fd9225e6c06a1dc7f572a01ec1771b23f5cde34bd6378960457c9c8e0"
+            }
+          ],
+          "coverageNote": "One source mesh represents the lumbrical group on this side. Individual first–fourth lumbricals are not separately segmented; attachments and numbering require review.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find set of lumbricals of left hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+          "fmaId": "FMA42402",
+          "name": "Set of palmar interossei of right hand",
+          "sourceName": "set of palmar interossei of right hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-gaps",
+          "nodeName": "FMA42402",
+          "bounds": {
+            "min": [
+              -2.814689874649048,
+              -0.8439398407936096,
+              0.7432199716567993
+            ],
+            "max": [
+              -2.342050075531006,
+              -0.3292401134967804,
+              0.9647300839424133
+            ]
+          },
+          "center": [
+            -2.578369975090027,
+            -0.586589977145195,
+            0.8539750277996063
+          ],
+          "anchor": [
+            -2.5293898582458496,
+            -0.5964099168777466,
+            0.8450599908828735
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1511",
+              "sha256": "85929597b60bd904b7dcc17c56f72dc3d607534bbf11149589f88b9158060bc8"
+            }
+          ],
+          "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find set of palmar interossei of right hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+          "fmaId": "FMA42403",
+          "name": "Set of palmar interossei of left hand",
+          "sourceName": "set of palmar interossei of left hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-gaps",
+          "nodeName": "FMA42403",
+          "bounds": {
+            "min": [
+              2.342050075531006,
+              -0.8439398407936096,
+              0.7432199716567993
+            ],
+            "max": [
+              2.814689874649048,
+              -0.3292401134967804,
+              0.9647300839424133
+            ]
+          },
+          "center": [
+            2.578369975090027,
+            -0.586589977145195,
+            0.8539750277996063
+          ],
+          "anchor": [
+            2.5293800830841064,
+            -0.5964099168777466,
+            0.845050036907196
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1511M",
+              "sha256": "1bcfb4935ff3bfe248e8ed537346ca4172ecb3a9ba1fff4e0865d1770a1792e7"
+            }
+          ],
+          "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find set of palmar interossei of left hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+          "fmaId": "FMA42404",
+          "name": "Set of dorsal interossei of right hand",
+          "sourceName": "set of dorsal interossei of right hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-gaps",
+          "nodeName": "FMA42404",
+          "bounds": {
+            "min": [
+              -2.9695098400115967,
+              -0.8331897258758545,
+              0.6912400126457214
+            ],
+            "max": [
+              -2.3525099754333496,
+              -0.14445006847381592,
+              0.9486200213432312
+            ]
+          },
+          "center": [
+            -2.661009907722473,
+            -0.4888198971748352,
+            0.8199300169944763
+          ],
+          "anchor": [
+            -2.678340196609497,
+            -0.5198101997375488,
+            0.7394799590110779
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1509",
+              "sha256": "9317e87149b2346714b59513c07d9d7bf36585f9866d3facc16f958e5411fcbd"
+            }
+          ],
+          "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find set of dorsal interossei of right hand on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+          "fmaId": "FMA42405",
+          "name": "Set of dorsal interossei of left hand",
+          "sourceName": "set of dorsal interossei of left hand",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "hand",
+          "regions": [
+            "hand"
+          ],
+          "bundle": "hand-muscles-gaps",
+          "nodeName": "FMA42405",
+          "bounds": {
+            "min": [
+              2.3525099754333496,
+              -0.8331897258758545,
+              0.6912400126457214
+            ],
+            "max": [
+              2.9695098400115967,
+              -0.14445006847381592,
+              0.9486200213432312
+            ]
+          },
+          "center": [
+            2.661009907722473,
+            -0.4888198971748352,
+            0.8199300169944763
+          ],
+          "anchor": [
+            2.678340196609497,
+            -0.5198101997375488,
+            0.7394799590110779
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1509M",
+              "sha256": "c9aead8e2cc5fd957fcc11fafc42a0d235bffd00bbea09eaf50c473a41a9a3bd"
+            }
+          ],
+          "coverageNote": "One source surface represents a set of interossei on this side, not individually segmented or numbered muscles. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find set of dorsal interossei of left hand on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "9b66b2d0ca4a6f02c14826fbfbd5f973ddcf5605",
+    "authorCommit": "1dc7916410479346c5f96ed0d9a42461eaada69b",
+    "sourcePinsHash": "494cf5f3e7d0512fd1a1fcc095357412ccb6cf85f8d31c9f150aa38c0f8d7b30",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:abductor-digiti-minimi-of-right-hand",
+        "fmaId": "FMA37396",
+        "tab": "quiz",
+        "previousHash": "c1d85e1c1390e1465e36e1098f709b2ec274884288616d92a7e5dc87f41aa49e",
+        "currentHash": "f8ae19fe1a34d364ba6cd5009ecc6239ef535094f26588d6c9ccaf84b03832c7"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:abductor-digiti-minimi-of-left-hand",
+        "fmaId": "FMA37397",
+        "tab": "quiz",
+        "previousHash": "fe628cce1a183f6c8aff3845d377c06a0358c0c010f71bb3e675b10680ce6870",
+        "currentHash": "e597d331ee596bf4c71413db15163d4c3ab43725d6a2b08790e5802b515c7c0b"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:flexor-digiti-minimi-brevis-of-right-hand",
+        "fmaId": "FMA37398",
+        "tab": "quiz",
+        "previousHash": "bf2cc337a6b52cd057ab34a5aae3d286bb49be414e37f71849aa571e245fcd2a",
+        "currentHash": "0007a66253e966d727f59c52e9f07dd7238e5028ed14cd98c47afeab7e97c463"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:flexor-digiti-minimi-brevis-of-left-hand",
+        "fmaId": "FMA37399",
+        "tab": "quiz",
+        "previousHash": "9684305fa692f981415727ea55996f8b82b56d08703dd085eb2adce6d2fb7c08",
+        "currentHash": "5fa0aac3b01cdc1ae81dac50bc31fd72419fcebe61a2985c2ac8f2939e1bbdb6"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:opponens-digiti-minimi-of-right-hand",
+        "fmaId": "FMA37400",
+        "tab": "quiz",
+        "previousHash": "58527608975130dae03b031e5df082999ec7d4496b95fa92b13b89d8ad135a74",
+        "currentHash": "5b9119bd1842747e735589bc91688a74f0740750175cf7fc14db6f7bd8065f3e"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:opponens-digiti-minimi-of-left-hand",
+        "fmaId": "FMA37401",
+        "tab": "quiz",
+        "previousHash": "fe6b428fbffb24d5821d65e124cb721cee4bf07835caca83e822bb14c1ae2872",
+        "currentHash": "08939bb32c44dfe908e2ff8e89731862465dc79d884a2dbb5cce74e5e4cc4a0b"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:right-abductor-pollicis-brevis",
+        "fmaId": "FMA37386",
+        "tab": "quiz",
+        "previousHash": "0c2c804eaae0282190f62a31530268eef49f13b4a634ec4a0da3bb5bd6fb67ea",
+        "currentHash": "13ef0fc4ba6cff7dc5b12a23c2daccc252e1b3fb8395c139afc913fc6dda6680"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:left-abductor-pollicis-brevis",
+        "fmaId": "FMA37387",
+        "tab": "quiz",
+        "previousHash": "9879c5122c8a69285cb5b5bee8eb0a205e4de43138a777633d4d75e3ad2a54be",
+        "currentHash": "e3015508f2a02684bb97d712f2919a76b02347ab104860d01eb29a76bf4441b3"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:right-opponens-pollicis",
+        "fmaId": "FMA37390",
+        "tab": "quiz",
+        "previousHash": "f1f1e1591fd726175408d11e53d7d6fc260c763bd3059b07181813ff450f18b3",
+        "currentHash": "065beda3a31a23957b70c4fd7fe11c85a00dbc2c22914166918d3e842bdd808d"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:left-opponens-pollicis",
+        "fmaId": "FMA37391",
+        "tab": "quiz",
+        "previousHash": "18772fdbf8a77180c19c801540bb42b53f25fcedde8a041d20552e92865ee7d2",
+        "currentHash": "40198cf788bfe4005f8a0f2b3972631b2042cf1d8e387080474d8a9a072eb195"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:oblique-head-of-right-adductor-pollicis",
+        "fmaId": "FMA46121",
+        "tab": "quiz",
+        "previousHash": "33ffdcf6e049afb9740081aab0bdf400e100b87adaab755aaddd8d58519a1c67",
+        "currentHash": "7c30bee97db0321274058e58e9e6c312d8f442404786a6bf1db29614d4eecec5"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:oblique-head-of-left-adductor-pollicis",
+        "fmaId": "FMA46122",
+        "tab": "quiz",
+        "previousHash": "9bdff3b3760121b5f70a3b8323166cb042fbdb76f8c48d8fe793d3970ab68c23",
+        "currentHash": "81986f6462d60cca312e389e64e3859566e49add8ced46fbb481ef35d718a367"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:transverse-head-of-right-adductor-pollicis",
+        "fmaId": "FMA46123",
+        "tab": "quiz",
+        "previousHash": "b51e67b91ab5f9f89bd5a4b90f0e43c47b0cab48e68ca7c2daea5938dbc04368",
+        "currentHash": "14825f7791890c1715af7de239543bf98aadbacf5256766f46c15fef54bc088d"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:transverse-head-of-left-adductor-pollicis",
+        "fmaId": "FMA46124",
+        "tab": "quiz",
+        "previousHash": "5c818230ff82c8add93e9d3dcfbba95cb0f08cee5f13187f85f5dc4cfb0ba14f",
+        "currentHash": "4076d9dbe8082cd43054dc4d4960b69506079e4ff18140ddd6ff56693cdf1f92"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:set-of-lumbricals-of-right-hand",
+        "fmaId": "FMA42398",
+        "tab": "quiz",
+        "previousHash": "495147a35eae7de0388c925e416833224860e059436f4f5b892f51cfdb7fd091",
+        "currentHash": "87538f73e3f810cb18e715a5d2907beeac87b25856459f89d1e1b2d6178b7059"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:set-of-lumbricals-of-left-hand",
+        "fmaId": "FMA42399",
+        "tab": "quiz",
+        "previousHash": "68b0f3b87ccdf73c4daffbfc6bed73572e7422c9706e0fe6d11c814284cf6658",
+        "currentHash": "e0cc05aa4fe861acf86a3b6095cfec78cc53db238dc4de5312621cacf5cc578b"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:set-of-palmar-interossei-of-right-hand",
+        "fmaId": "FMA42402",
+        "tab": "quiz",
+        "previousHash": "b718cb81f5a4a3b45cf3a71d23e0dd09814bc85c114a14ba293983e76d974a60",
+        "currentHash": "5e0714acd7eee8b1aae7e2a16d5a182e9bace9e8bc6b11f78586b7754e92d20d"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:set-of-palmar-interossei-of-left-hand",
+        "fmaId": "FMA42403",
+        "tab": "quiz",
+        "previousHash": "6b6d0888bbdaf9cc408659f7a3c995aa979c8fbb47d848b0f7c37bf3a4d9329d",
+        "currentHash": "7da02d54ea1b2c769f163a034b1126e42ea990edfa8de07430f1264b73893167"
+      },
+      {
+        "id": "vm:anatomy:body:hand:right:muscle:set-of-dorsal-interossei-of-right-hand",
+        "fmaId": "FMA42404",
+        "tab": "quiz",
+        "previousHash": "d62dd6e11f8949b93501f55891787c8ad34f378f78716f28c39f5c16081c669c",
+        "currentHash": "c205b557c17fe437ffe5c7e6f82c4ca7ba9345df270ca0353df2d54511f5cedc"
+      },
+      {
+        "id": "vm:anatomy:body:hand:left:muscle:set-of-dorsal-interossei-of-left-hand",
+        "fmaId": "FMA42405",
+        "tab": "quiz",
+        "previousHash": "aba38408e7528c67d77b944ed21f51a13ba07d39075ab74830f5d7d528c2ae9e",
+        "currentHash": "e9984d5b5ced670ae01f1f0167ddddf43bedeb0eab77661ef8f3224ee08a425c"
+      }
+    ]
+  },
+  "sourceRecordHash": "7f0dc0cef672cb98b7d872c9b80b9be0da09c3bd9af7f2fdf094a1d361c994e4",
+  "originalPinPath": "content/hand-muscle-quiz-pins.json",
+  "originalPinHash": "1f48e6062b1aba74661eed2c043c78ea3c45ebc032a60775f4af1a14d0fe94be",
+  "originalPinBlob": "74d39111d50b9ff80480980502dd1a8eb8bb93d8",
+  "originalTransitionPaths": []
+}

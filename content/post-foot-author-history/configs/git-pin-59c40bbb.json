@@ -1,0 +1,2202 @@
+{
+  "name": "git-pin-59c40bbb",
+  "helper": "lowerLimbVesselQuizLesson",
+  "pinsHash": "6c5cbe8279eb7289e720a13f881da544c71c7e23fb6dacdafc9df4e22713225d",
+  "transitionHash": "a65c2f602b990eeb721351e16ceb38619aac5590cdc60d508790463e531b6a5e",
+  "pins": {
+    "baseline": "ed74d3e7c96501f21434f76e136c12a11493c020",
+    "authorCommit": "59c40bbb213627c3fc423a0b826f6f3063ea605d",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+          "fmaId": "FMA70249",
+          "name": "Right femoral artery",
+          "sourceName": "right femoral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA70249",
+          "bounds": {
+            "min": [
+              -0.6616889834403992,
+              -3.2957799434661865,
+              0.35492202639579773
+            ],
+            "max": [
+              -0.37722501158714294,
+              0.30250975489616394,
+              0.9295399188995361
+            ]
+          },
+          "center": [
+            -0.5194569975137711,
+            -1.4966350942850113,
+            0.6422309726476669
+          ],
+          "anchor": [
+            -0.4802360236644745,
+            -1.4721503257751465,
+            0.7855099439620972
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2143",
+              "sha256": "d9decbcc37ddafa41a0c01e316cff52a9259ed5292ddf2e199cf09414e872bae"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right femoral artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+          "fmaId": "FMA70250",
+          "name": "Left femoral artery",
+          "sourceName": "left femoral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA70250",
+          "bounds": {
+            "min": [
+              0.37866902351379395,
+              -3.2957401275634766,
+              0.3540799617767334
+            ],
+            "max": [
+              0.6591030359268188,
+              0.30408018827438354,
+              0.9302099347114563
+            ]
+          },
+          "center": [
+            0.5188860297203064,
+            -1.4958299696445465,
+            0.6421449482440948
+          ],
+          "anchor": [
+            0.4880099892616272,
+            -1.4989502429962158,
+            0.7933099269866943
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2074",
+              "sha256": "df045596a410cfcc3c15f9aff1d02c5c7bcba234c9ebe6346ec1053d605de4d0"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left femoral artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+          "fmaId": "FMA20796",
+          "name": "Right deep femoral artery",
+          "sourceName": "right deep femoral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA20796",
+          "bounds": {
+            "min": [
+              -1.205430030822754,
+              -4.397520065307617,
+              0.11512500792741776
+            ],
+            "max": [
+              -0.3285030126571655,
+              -0.051859740167856216,
+              0.7462400197982788
+            ]
+          },
+          "center": [
+            -0.7669665217399597,
+            -2.2246899027377367,
+            0.4306825138628483
+          ],
+          "anchor": [
+            -0.6024489998817444,
+            -3.174220085144043,
+            0.4228479862213135
+          ],
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ2137",
+              "sha256": "46872b103c95147c1d9d33cb2b2ad6bd1be001e32e9f646c0dd61cabea8b4a96"
+            },
+            {
+              "file": "FJ2158",
+              "sha256": "604beb2d77d9c6ec24e0f8c82e806f57a7cbb6fe9a4553d7f5fc999a9aae33f6"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right deep femoral artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+          "fmaId": "FMA20797",
+          "name": "Left deep femoral artery",
+          "sourceName": "left deep femoral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA20797",
+          "bounds": {
+            "min": [
+              0.32847899198532104,
+              -4.397439956665039,
+              0.11526001244783401
+            ],
+            "max": [
+              1.2052100896835327,
+              -0.05195983871817589,
+              0.7461499571800232
+            ]
+          },
+          "center": [
+            0.7668445408344269,
+            -2.2246998976916075,
+            0.4307049848139286
+          ],
+          "anchor": [
+            0.6055749654769897,
+            -3.174769878387451,
+            0.42494696378707886
+          ],
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ2069",
+              "sha256": "055eaa7fd2a8683f4d81d824437925f2c1019c2081558fe4ee2d4ab161085b76"
+            },
+            {
+              "file": "FJ2078",
+              "sha256": "fc1867693af0aa210a96a79c3f53c80fedacd4f136b21c6d4f839ce06575b8ac"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left deep femoral artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+          "fmaId": "FMA21188",
+          "name": "Right femoral vein",
+          "sourceName": "right femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21188",
+          "bounds": {
+            "min": [
+              -0.7377950549125671,
+              -3.1643500328063965,
+              0.3406140208244324
+            ],
+            "max": [
+              -0.3196389973163605,
+              0.06828002631664276,
+              1.0473699569702148
+            ]
+          },
+          "center": [
+            -0.5287170261144638,
+            -1.5480350032448769,
+            0.6939919888973236
+          ],
+          "anchor": [
+            -0.47020697593688965,
+            -1.5724499225616455,
+            0.687529981136322
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2144",
+              "sha256": "16f9661f23ad65a5856cf50be867e5ef282ea73fae50b853d44d9ab22676b1ab"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right femoral vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+          "fmaId": "FMA21189",
+          "name": "Left femoral vein",
+          "sourceName": "left femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21189",
+          "bounds": {
+            "min": [
+              0.3187209963798523,
+              -3.164289951324463,
+              0.33950501680374146
+            ],
+            "max": [
+              0.7394799590110779,
+              0.06841979920864105,
+              1.0481399297714233
+            ]
+          },
+          "center": [
+            0.5291004776954651,
+            -1.547935076057911,
+            0.6938224732875824
+          ],
+          "anchor": [
+            0.44828301668167114,
+            -1.629730224609375,
+            0.6385399699211121
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2102",
+              "sha256": "07776c248a8f8ddd3007f652c7bcafc60af3ab23edd678cc2da37615359c4abc"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left femoral vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+          "fmaId": "FMA21379",
+          "name": "Right great saphenous vein",
+          "sourceName": "right great saphenous vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21379",
+          "bounds": {
+            "min": [
+              -0.9488829970359802,
+              -8.263853073120117,
+              -0.019135016947984695
+            ],
+            "max": [
+              -0.13421300053596497,
+              -0.04151000827550888,
+              1.0395100116729736
+            ]
+          },
+          "center": [
+            -0.5415479987859726,
+            -4.152681540697813,
+            0.5101874973624945
+          ],
+          "anchor": [
+            -0.3424859941005707,
+            -4.22812032699585,
+            0.03469299152493477
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2145",
+              "sha256": "dee8dea4b9f286f40abec150d46f04bc1a1bb2f1a78c91c2431c4d225c33f925"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right great saphenous vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+          "fmaId": "FMA21380",
+          "name": "Left great saphenous vein",
+          "sourceName": "left great saphenous vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21380",
+          "bounds": {
+            "min": [
+              0.13420499861240387,
+              -8.263853073120117,
+              -0.01917598769068718
+            ],
+            "max": [
+              0.9488739967346191,
+              -0.04153991863131523,
+              1.0394700765609741
+            ]
+          },
+          "center": [
+            0.5415394976735115,
+            -4.152696495875716,
+            0.5101470444351435
+          ],
+          "anchor": [
+            0.3443230092525482,
+            -4.232450008392334,
+            0.03463199734687805
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2103",
+              "sha256": "5aef9c656f07538f2a7c9dee150b00d93e98e567f083dec2c5e924b0ad9c377b"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left great saphenous vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+          "fmaId": "FMA77380",
+          "name": "Right popliteal artery",
+          "sourceName": "right popliteal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA77380",
+          "bounds": {
+            "min": [
+              -0.9584179520606995,
+              -5.167250156402588,
+              0.026954002678394318
+            ],
+            "max": [
+              -0.5585640072822571,
+              -3.1922197341918945,
+              0.4578710198402405
+            ]
+          },
+          "center": [
+            -0.7584909796714783,
+            -4.179734945297241,
+            0.2424125112593174
+          ],
+          "anchor": [
+            -0.7508899569511414,
+            -4.185960292816162,
+            0.11681099236011505
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2170",
+              "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right popliteal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+          "fmaId": "FMA77381",
+          "name": "Left popliteal artery",
+          "sourceName": "left popliteal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA77381",
+          "bounds": {
+            "min": [
+              0.5585800409317017,
+              -5.167250156402588,
+              0.02696899324655533
+            ],
+            "max": [
+              0.958420991897583,
+              -3.1922500133514404,
+              0.4578530192375183
+            ]
+          },
+          "center": [
+            0.7585005164146423,
+            -4.179750084877014,
+            0.24241100624203682
+          ],
+          "anchor": [
+            0.7594419717788696,
+            -4.18257999420166,
+            0.11660099029541016
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2086",
+              "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left popliteal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+          "fmaId": "FMA43896",
+          "name": "Right anterior tibial artery",
+          "sourceName": "right anterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43896",
+          "bounds": {
+            "min": [
+              -1.0555499792099,
+              -7.956809043884277,
+              0.20105797052383423
+            ],
+            "max": [
+              -0.6813820004463196,
+              -4.781789779663086,
+              0.4810659885406494
+            ]
+          },
+          "center": [
+            -0.8684659898281097,
+            -6.369299411773682,
+            0.3410619795322418
+          ],
+          "anchor": [
+            -0.9001410007476807,
+            -6.391190052032471,
+            0.3953839838504791
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2130",
+              "sha256": "56de59319a67eb9a3fbc9815d9dc66f371b3f116b211c2b03abfbb84ae21568c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right anterior tibial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+          "fmaId": "FMA43897",
+          "name": "Left anterior tibial artery",
+          "sourceName": "left anterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43897",
+          "bounds": {
+            "min": [
+              0.6813340187072754,
+              -7.956785678863525,
+              0.20108497142791748
+            ],
+            "max": [
+              1.0555599927902222,
+              -4.781799793243408,
+              0.48104798793792725
+            ]
+          },
+          "center": [
+            0.8684470057487488,
+            -6.369292736053467,
+            0.34106647968292236
+          ],
+          "anchor": [
+            0.8983809947967529,
+            -6.394360065460205,
+            0.39571404457092285
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2065",
+              "sha256": "c6388ae15cdf1b00cbbbb6007784022a7c03d1e349b780193488f1f804150c1e"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left anterior tibial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+          "fmaId": "FMA43898",
+          "name": "Right posterior tibial artery",
+          "sourceName": "right posterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43898",
+          "bounds": {
+            "min": [
+              -0.9113270044326782,
+              -8.413312911987305,
+              0.0034749985206872225
+            ],
+            "max": [
+              -0.444784015417099,
+              -5.102340221405029,
+              0.36775198578834534
+            ]
+          },
+          "center": [
+            -0.6780555099248886,
+            -6.757826566696167,
+            0.18561349215451628
+          ],
+          "anchor": [
+            -0.615835964679718,
+            -6.753640174865723,
+            0.14388495683670044
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2172",
+              "sha256": "4e82371d5860733555c3b4c096134586128646ad31fb58cdcb6ee97df0849f08"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right posterior tibial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+          "fmaId": "FMA43899",
+          "name": "Left posterior tibial artery",
+          "sourceName": "left posterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43899",
+          "bounds": {
+            "min": [
+              0.44474801421165466,
+              -8.41340160369873,
+              0.003493995638564229
+            ],
+            "max": [
+              0.9113140106201172,
+              -5.102349758148193,
+              0.36769500374794006
+            ]
+          },
+          "center": [
+            0.6780310124158859,
+            -6.757875680923462,
+            0.18559449969325215
+          ],
+          "anchor": [
+            0.615755021572113,
+            -6.743569850921631,
+            0.1459980010986328
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2087",
+              "sha256": "88e45ecb2bbe5b278d052c240649bf1f576ea3808272e60a4990fc5d8066bbb5"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left posterior tibial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+          "fmaId": "FMA44328",
+          "name": "Right popliteal vein",
+          "sourceName": "right popliteal vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA44328",
+          "bounds": {
+            "min": [
+              -1.0176799297332764,
+              -4.805140018463135,
+              0.05056598782539368
+            ],
+            "max": [
+              -0.6416329741477966,
+              -3.038569927215576,
+              0.4426010251045227
+            ]
+          },
+          "center": [
+            -0.8296564519405365,
+            -3.9218549728393555,
+            0.2465835064649582
+          ],
+          "anchor": [
+            -0.8181569576263428,
+            -3.9113399982452393,
+            0.18454498052597046
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2171",
+              "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right popliteal vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+          "fmaId": "FMA44329",
+          "name": "Left popliteal vein",
+          "sourceName": "left popliteal vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA44329",
+          "bounds": {
+            "min": [
+              0.6416260004043579,
+              -4.805140018463135,
+              0.05057201534509659
+            ],
+            "max": [
+              1.0176199674606323,
+              -3.038559913635254,
+              0.4425930082798004
+            ]
+          },
+          "center": [
+            0.8296229839324951,
+            -3.9218499660491943,
+            0.2465825118124485
+          ],
+          "anchor": [
+            0.8178119659423828,
+            -3.894700050354004,
+            0.18814300000667572
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2117",
+              "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left popliteal vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+          "fmaId": "FMA44334",
+          "name": "Right small saphenous vein",
+          "sourceName": "right small saphenous vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA44334",
+          "bounds": {
+            "min": [
+              -1.1243399381637573,
+              -8.442412376403809,
+              -0.3892990052700043
+            ],
+            "max": [
+              -0.6231099963188171,
+              -3.8983099460601807,
+              0.36393797397613525
+            ]
+          },
+          "center": [
+            -0.8737249672412872,
+            -6.170361161231995,
+            -0.01268051564693451
+          ],
+          "anchor": [
+            -0.733597993850708,
+            -6.209539890289307,
+            -0.3414610028266907
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2176",
+              "sha256": "400f2fe7647680e4e4e5ae842686644d9d84e71af30c2bb2e59bc0d81b5f6bb8"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right small saphenous vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+          "fmaId": "FMA44335",
+          "name": "Left small saphenous vein",
+          "sourceName": "left small saphenous vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA44335",
+          "bounds": {
+            "min": [
+              0.623117983341217,
+              -8.442408561706543,
+              -0.38934001326560974
+            ],
+            "max": [
+              1.1243799924850464,
+              -3.8982901573181152,
+              0.3639099895954132
+            ]
+          },
+          "center": [
+            0.8737489879131317,
+            -6.170349359512329,
+            -0.012715011835098267
+          ],
+          "anchor": [
+            0.7344880104064941,
+            -6.214540004730225,
+            -0.34123700857162476
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2121",
+              "sha256": "e95be7db2162c51e3024e4fb8549221f29f1e24ad86aca9f3b6999bfd4cae9ec"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left small saphenous vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+          "fmaId": "FMA43916",
+          "name": "Right dorsalis pedis artery",
+          "sourceName": "right dorsalis pedis artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-recovery",
+          "nodeName": "FMA43916",
+          "bounds": {
+            "min": [
+              -0.9188739657402039,
+              -8.23951244354248,
+              0.3831169903278351
+            ],
+            "max": [
+              -0.6778370141983032,
+              -7.920245170593262,
+              0.9848100543022156
+            ]
+          },
+          "center": [
+            -0.7983554899692535,
+            -8.079878807067871,
+            0.6839635223150253
+          ],
+          "anchor": [
+            -0.8181509971618652,
+            -8.087831497192383,
+            0.666409969329834
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2055",
+              "sha256": "7b48b7cc6862bea77bd497e456b837e6d99dfc39db267281b3b117924093b618"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right dorsalis pedis artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+          "fmaId": "FMA43917",
+          "name": "Left dorsalis pedis artery",
+          "sourceName": "left dorsalis pedis artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-recovery",
+          "nodeName": "FMA43917",
+          "bounds": {
+            "min": [
+              0.6779540181159973,
+              -8.239434242248535,
+              0.3831549882888794
+            ],
+            "max": [
+              0.9185369610786438,
+              -7.920281887054443,
+              0.98471999168396
+            ]
+          },
+          "center": [
+            0.7982454895973206,
+            -8.07985806465149,
+            0.6839374899864197
+          ],
+          "anchor": [
+            0.8186910152435303,
+            -8.083748817443848,
+            0.6707199811935425
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2073",
+              "sha256": "65766eac33e2ae09ba433d078c35aa9f271143405ab06c27fe16066957e19362"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left dorsalis pedis artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+          "fmaId": "FMA43931",
+          "name": "Right lateral plantar artery",
+          "sourceName": "right lateral plantar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-recovery",
+          "nodeName": "FMA43931",
+          "bounds": {
+            "min": [
+              -1.135890007019043,
+              -8.598645210266113,
+              0.3558519780635834
+            ],
+            "max": [
+              -0.668641984462738,
+              -8.393439292907715,
+              0.5326600074768066
+            ]
+          },
+          "center": [
+            -0.9022659957408905,
+            -8.496042251586914,
+            0.444255992770195
+          ],
+          "anchor": [
+            -0.8988440036773682,
+            -8.508970260620117,
+            0.42996901273727417
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2159",
+              "sha256": "e9df02eb728daba8672b6974272c3a070b1d148e330b6be22985494465f387e7"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right lateral plantar artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+          "fmaId": "FMA43932",
+          "name": "Left lateral plantar artery",
+          "sourceName": "left lateral plantar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-recovery",
+          "nodeName": "FMA43932",
+          "bounds": {
+            "min": [
+              0.6685410141944885,
+              -8.59858512878418,
+              0.35583198070526123
+            ],
+            "max": [
+              1.1358599662780762,
+              -8.393632888793945,
+              0.5326600074768066
+            ]
+          },
+          "center": [
+            0.9022004902362823,
+            -8.496109008789062,
+            0.44424599409103394
+          ],
+          "anchor": [
+            0.9107360243797302,
+            -8.508086204528809,
+            0.430215984582901
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2079",
+              "sha256": "716cee68fa9d17389915512e20d44592d49d77502959e2b1ee58a19f307e6795"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left lateral plantar artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+          "fmaId": "FMA43937",
+          "name": "Right superficial medial plantar artery",
+          "sourceName": "right superficial medial plantar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-foot-vascular",
+          "nodeName": "FMA43937",
+          "bounds": {
+            "min": [
+              -0.8302369713783264,
+              -8.628193855285645,
+              0.7448300123214722
+            ],
+            "max": [
+              -0.6874139904975891,
+              -8.421586036682129,
+              1.2987300157546997
+            ]
+          },
+          "center": [
+            -0.7588254809379578,
+            -8.524889945983887,
+            1.021780014038086
+          ],
+          "anchor": [
+            -0.7582150101661682,
+            -8.477795600891113,
+            1.0386199951171875
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2179",
+              "sha256": "77f3a27fd0d079e8334f4145d031b308b00e8660b8ad3a2a562fd0f0f632a5c7"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right superficial medial plantar artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+          "fmaId": "FMA43938",
+          "name": "Left superficial medial plantar artery",
+          "sourceName": "left superficial medial plantar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "foot",
+          "regions": [
+            "foot"
+          ],
+          "bundle": "foot-vessels-foot-vascular",
+          "nodeName": "FMA43938",
+          "bounds": {
+            "min": [
+              0.6872889995574951,
+              -8.62808609008789,
+              0.7447799444198608
+            ],
+            "max": [
+              0.8302209973335266,
+              -8.421615600585938,
+              1.2985299825668335
+            ]
+          },
+          "center": [
+            0.7587549984455109,
+            -8.524850845336914,
+            1.0216549634933472
+          ],
+          "anchor": [
+            0.7591999769210815,
+            -8.476333618164062,
+            1.0334899425506592
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2089",
+              "sha256": "e744f8331409c56adeace058fa04fec14f7ec22dc0053c85845383cc0f6dc455"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left superficial medial plantar artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+          "fmaId": "FMA44336",
+          "name": "Right anterior tibial vein",
+          "sourceName": "right anterior tibial vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA44336",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2132",
+              "sha256": "882bc85f20f37456f27048340d2b431b26e9f1fa4e877b935adf984958384cae"
+            },
+            {
+              "file": "FJ2193",
+              "sha256": "f21e0ec17c0a9366b40494fa34c893386301fba3099df0eb9f3a9476fbaeb770"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.0997899770736694,
+              -7.59695291519165,
+              0.1954289972782135
+            ],
+            "max": [
+              -0.5094850063323975,
+              -3.942189931869507,
+              0.6421700119972229
+            ]
+          },
+          "center": [
+            -0.8046374917030334,
+            -5.769571423530579,
+            0.4187995046377182
+          ],
+          "anchor": [
+            -0.9259089827537537,
+            -5.783679962158203,
+            0.3925420045852661
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right anterior tibial vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+          "fmaId": "FMA44337",
+          "name": "Left anterior tibial vein",
+          "sourceName": "left anterior tibial vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA44337",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2097",
+              "sha256": "baad24d3cc1c5bbc493e95793efa217b3c6d6a6ac87006b15f0bb21a26a0cc1e"
+            },
+            {
+              "file": "FJ2183",
+              "sha256": "64fae2f22228c4da162d61c70e2fe4d59fdcf13e35218df093b58d8eff6dff08"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.5094479918479919,
+              -7.596963882446289,
+              0.19541700184345245
+            ],
+            "max": [
+              1.099869966506958,
+              -3.9422199726104736,
+              0.6419600248336792
+            ]
+          },
+          "center": [
+            0.804658979177475,
+            -5.769591927528381,
+            0.4186885133385658
+          ],
+          "anchor": [
+            0.9276700019836426,
+            -5.768280029296875,
+            0.39618900418281555
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left anterior tibial vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+          "fmaId": "FMA44338",
+          "name": "Right posterior tibial vein",
+          "sourceName": "right posterior tibial vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA44338",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2173",
+              "sha256": "e2b3c5e3b353033d69a81457f4d55e9da6261399713600b5e200ae2e236c8b34"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.0238399505615234,
+              -8.456541061401367,
+              -0.00813200045377016
+            ],
+            "max": [
+              -0.39773398637771606,
+              -5.161489963531494,
+              0.37942200899124146
+            ]
+          },
+          "center": [
+            -0.7107869684696198,
+            -6.809015512466431,
+            0.18564500426873565
+          ],
+          "anchor": [
+            -0.45229700207710266,
+            -6.8045501708984375,
+            0.12772800028324127
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right posterior tibial vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+          "fmaId": "FMA44339",
+          "name": "Left posterior tibial vein",
+          "sourceName": "left posterior tibial vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA44339",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2118",
+              "sha256": "06d0d03da663cc3c83f8efd7dd1cc99ea0cfb912f6ee01c3ed89d51212605db8"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.3977630138397217,
+              -8.456661224365234,
+              -0.008082999847829342
+            ],
+            "max": [
+              1.0238100290298462,
+              -5.161520004272461,
+              0.37894898653030396
+            ]
+          },
+          "center": [
+            0.7107865214347839,
+            -6.809090614318848,
+            0.1854329933412373
+          ],
+          "anchor": [
+            0.45329800248146057,
+            -6.76977014541626,
+            0.13391099870204926
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left posterior tibial vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+          "fmaId": "FMA51042",
+          "name": "Right deep femoral vein",
+          "sourceName": "right deep femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA51042",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2135",
+              "sha256": "4e74f0301c15232ce6cb744bd0439d779a9a77eef51b3cf26bab15a632ad2a95"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.7874590158462524,
+              -2.9165799617767334,
+              0.5504299998283386
+            ],
+            "max": [
+              -0.32875800132751465,
+              0.18490000069141388,
+              0.9344300031661987
+            ]
+          },
+          "center": [
+            -0.5581085085868835,
+            -1.3658399805426598,
+            0.7424300014972687
+          ],
+          "anchor": [
+            -0.7389180064201355,
+            -1.372849941253662,
+            0.6927400231361389
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right deep femoral vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+          "fmaId": "FMA51043",
+          "name": "Left deep femoral vein",
+          "sourceName": "left deep femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA51043",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2099",
+              "sha256": "7ce931eee500efd0c796c2b29ee29000ad55c9b4c31784bec72dd23b5defa3f3"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.3288309872150421,
+              -2.9166200160980225,
+              0.5504099726676941
+            ],
+            "max": [
+              0.7876279950141907,
+              0.18499000370502472,
+              0.9342799782752991
+            ]
+          },
+          "center": [
+            0.5582294911146164,
+            -1.3658150061964989,
+            0.7423449754714966
+          ],
+          "anchor": [
+            0.7383480072021484,
+            -1.3729699850082397,
+            0.6905699968338013
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left deep femoral vein on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "ed74d3e7c96501f21434f76e136c12a11493c020",
+    "authorCommit": "59c40bbb213627c3fc423a0b826f6f3063ea605d",
+    "sourcePinsHash": "6c5cbe8279eb7289e720a13f881da544c71c7e23fb6dacdafc9df4e22713225d",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-artery",
+        "fmaId": "FMA70249",
+        "tab": "quiz",
+        "previousHash": "f5e5cdf62b83f1574d80063a7c1d230addfb2c254d3424ebd29975f94834bc82",
+        "currentHash": "92e1e15901ef36c60e3d367e9be45173f35fb38990e65c29f40e2a319f3636b3"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-artery",
+        "fmaId": "FMA70250",
+        "tab": "quiz",
+        "previousHash": "7d7e5a3dda0aef4750981b27178dc27d15560c916b704f5368a256c6ad0f73a0",
+        "currentHash": "dfef1f139087c52a35e196d857cdf8215cad188e470f15e97bebec9451a3dc59"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-artery",
+        "fmaId": "FMA20796",
+        "tab": "quiz",
+        "previousHash": "84a54f306822806a977707ca6d7cc00deca8a35f94a61e8ed9a2ee1a95e4c8d2",
+        "currentHash": "8ee1520ddd414c313d833ab2ad664a3b1e6999fff1809bcfb3fad83e049c3fa7"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-artery",
+        "fmaId": "FMA20797",
+        "tab": "quiz",
+        "previousHash": "b476a1b2b8644f813a174c66882a936ff83f319f5a78ca8e0e56f543f71fe1a3",
+        "currentHash": "cc0d5c52c19bb3decde4acf6f89064aebc00fd2dd5788d3b2de94abced8eb329"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+        "fmaId": "FMA21188",
+        "tab": "quiz",
+        "previousHash": "73cf3c8db5c224ef27e02c9abe7fffed2346e73dbba5c34ec64b2790af39b9ba",
+        "currentHash": "beb080ef456d0aedc883a33f72ecef74c86963ddd03d48f893b8e8e9041180db"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+        "fmaId": "FMA21189",
+        "tab": "quiz",
+        "previousHash": "55cfa7d9ec6c452182bd7c6f4d8433b7072c3db8e9f703e6223f944715404a36",
+        "currentHash": "6d7ec67eb580a219d8737d42c2283b24ae95543bb9e9ed30c21a9a93590a2ea6"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+        "fmaId": "FMA21379",
+        "tab": "quiz",
+        "previousHash": "e7bf71a9add56242a6e72ad0cc87f5c885152a25e787520b0f9f9eff2b0e6826",
+        "currentHash": "38a7d9c9b980589091806dae58ef6ffeba77592eb96d321a53cc9b648ab17571"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+        "fmaId": "FMA21380",
+        "tab": "quiz",
+        "previousHash": "66eead10367fe641fe49c6088eb3dc247ed82dfebe8470b638e59c74cd258794",
+        "currentHash": "add2943b497891c8d187b3c45fc1cbd784687117309580839817124811cb4917"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+        "fmaId": "FMA77380",
+        "tab": "quiz",
+        "previousHash": "2bbf079ae2b0f307a82f926617578dda6bf961dd8fe038b3dcd323b2c5c69866",
+        "currentHash": "061546a8b1d5689b561ead65cd343c383ca63ebd80b0a4782a580dd82f7454d9"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+        "fmaId": "FMA77381",
+        "tab": "quiz",
+        "previousHash": "28ca9a215c18c22c8b24ab60cdbb2e87ebc1f5260ac08ee6c36fb77aa7ad8f0c",
+        "currentHash": "c9480be320bea9a1f7485c88182f7d3f981a2290b91457837dc7f01ece803f77"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+        "fmaId": "FMA43896",
+        "tab": "quiz",
+        "previousHash": "136b8f3207dfa1aee5dd03331c340d1995426b9653458408974e3e7b05e42f9b",
+        "currentHash": "7d5473ea2e1441f6d589afd61b64299e37a34193baa1c3db2a919d31516b620a"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+        "fmaId": "FMA43897",
+        "tab": "quiz",
+        "previousHash": "be51b3a23788ff2efb0288e19bcba20b1df43021ace4c21534fde122d9ced44b",
+        "currentHash": "e5727728de2ae09291576e108a8c648082d125cb4b549e583f0d45125b581e9f"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+        "fmaId": "FMA43898",
+        "tab": "quiz",
+        "previousHash": "f868848c8931f89ed76b5f881e089f3da4eb712aa648622e7d74839f482b22ed",
+        "currentHash": "70e5b7b7f315844d6407a52405da430efb5e38df15640d980493cf2776dcdfb5"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+        "fmaId": "FMA43899",
+        "tab": "quiz",
+        "previousHash": "93fca69883c31b6ae64c3ade0c0467346c49759f281a0ec7eb4299b1402ed70a",
+        "currentHash": "3864212620fe13c057f0121bed6203b3c05bdb252bd5e14482320346dc35a48b"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+        "fmaId": "FMA44328",
+        "tab": "quiz",
+        "previousHash": "f45e10d9238f5fb579e47fe8581ce32b24b0e14ac2696535169ff2c7bd05fb5b",
+        "currentHash": "c86c6beb1cbbaba218ee45fb0665056d5ff4c637f270eb0447f4ddccbe719d6f"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+        "fmaId": "FMA44329",
+        "tab": "quiz",
+        "previousHash": "c27d5d19be07c8e5dc8a5377b5cdfabaf1c28fddd4c1ea48f75e8788158b46bd",
+        "currentHash": "5735c8c2f15aacfa1c40e3eedea8c3b358af7d1ac0125a9f431301dbc762b658"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+        "fmaId": "FMA44334",
+        "tab": "quiz",
+        "previousHash": "a76046deb2ec9bcab0cddb2f6163208c6eb867a9b4d6d21211c15983a039d3ac",
+        "currentHash": "2741ab7f98b82df0a45dd4a70c2cbcd8b24f0fed27770f857b3847426fa71efa"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+        "fmaId": "FMA44335",
+        "tab": "quiz",
+        "previousHash": "4870264bf1251c179e8b93a6a0bd59a279e242edfa9a790d9b6d47cf0bf2efad",
+        "currentHash": "5c8ed4efde37bc8e451cededa3261328e6f8466e37e9504a41ae1d5c4dc6f359"
+      },
+      {
+        "id": "vm:anatomy:body:foot:right:vessel:right-dorsalis-pedis-artery",
+        "fmaId": "FMA43916",
+        "tab": "quiz",
+        "previousHash": "56230e54a422610279281fc0db42cbd8733dd754a554cd50e85dda678bd68d89",
+        "currentHash": "85c65e523ef63ee9859807f6aa770f39db0fbcee4434b28ef824e81a23c5d94e"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:vessel:left-dorsalis-pedis-artery",
+        "fmaId": "FMA43917",
+        "tab": "quiz",
+        "previousHash": "b069a71fea51b80b387496779a4abbac7d862155820736a8f1fc834b943b2ee5",
+        "currentHash": "b8505c9e63510f9b0f110ccbe48c19ccd2eb4ed58be04274d519e79abf95be38"
+      },
+      {
+        "id": "vm:anatomy:body:foot:right:vessel:right-lateral-plantar-artery",
+        "fmaId": "FMA43931",
+        "tab": "quiz",
+        "previousHash": "1c80d158465807e0578b558d6bf131c1fceb56210d64e34f444b370a55a81708",
+        "currentHash": "bb6c05a6700f59df3025888555c59fb0652137daa05225cc9cd84b002dab5907"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:vessel:left-lateral-plantar-artery",
+        "fmaId": "FMA43932",
+        "tab": "quiz",
+        "previousHash": "42104450ec4d9e65ba41bd3782375c99ec454e7c21ec01afed5d26f3b8538bd6",
+        "currentHash": "825c9d6c35e55e7180e17fe4d3328cbd1f3a037e37c87513f1b7b6b9a7ef7867"
+      },
+      {
+        "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+        "fmaId": "FMA43937",
+        "tab": "quiz",
+        "previousHash": "40d9bb160a1c31178d223d49a0e3a4868b17636f966308dc08ae7308d19a04bb",
+        "currentHash": "7005b437dc957f316fbee57a549077903116a073d300d5f8cb6405a7c2da7649"
+      },
+      {
+        "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "fmaId": "FMA43938",
+        "tab": "quiz",
+        "previousHash": "be444024efc28242bad9ac902fdacef19dd5a9f9b403e736e25ae17f70216847",
+        "currentHash": "da5162ac39177f58bbee3ddd385be1e04229662e6be1353a41e124dd8a8fa44b"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+        "fmaId": "FMA44336",
+        "tab": "quiz",
+        "previousHash": "d1efd052827d4a674d661f94300b8555d74be940e08dc450cbe476ed404f5ed5",
+        "currentHash": "7388401637084795b4bd187cf8b961d664b599fe5930db9c6bfcaa6407c922d9"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+        "fmaId": "FMA44337",
+        "tab": "quiz",
+        "previousHash": "fbb06211a4d43f8244553bc6090f261c29dda8cd05cbdf6a8a9383a202092e57",
+        "currentHash": "e03b1bf2acd6ee3c2007e16626e76dcad9d90e6b57aa782030abdc9fa30d706d"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+        "fmaId": "FMA44338",
+        "tab": "quiz",
+        "previousHash": "9efb652d5d4e5f181dbc8abdf5ae6fd99fd1b863ccd5e8c50f2c15335bd5faea",
+        "currentHash": "c6014b435f8eb8da995bca390acee990915bc3047da082a1b1ecc021cf5b2766"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+        "fmaId": "FMA44339",
+        "tab": "quiz",
+        "previousHash": "640b16a921fddd88864d55ca186ce1d49fac1d22e09aa975719002e8f52f4f9a",
+        "currentHash": "2c0899c9a8c60fbb674a4d5d91de396a29d24f63a04c1acf53693132e7943180"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+        "fmaId": "FMA51042",
+        "tab": "quiz",
+        "previousHash": "d64f869296bf0308b836c0a95d04de6f7f53d60e76cdb1982c9b4f0f2a4517cd",
+        "currentHash": "4103860a4128bd9d7bf41d94e4c9641bb9cf051a80ded237327c2eef0e0bb366"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+        "fmaId": "FMA51043",
+        "tab": "quiz",
+        "previousHash": "c2c19e722503e82288fa9aa1d0938690986341950d6d509326c8e32478c3976b",
+        "currentHash": "1efe99652b14fded51a650c4b11c96a7cec0b592ac382c5d869d9006fdb4420f"
+      }
+    ]
+  },
+  "sourceRecordHash": "c44ad812cfb36e8880446f8e4a5871c8c7794e420787394c858a0c591cdfd700",
+  "originalPinPath": "content/lower-limb-vessel-quiz-pins.json",
+  "originalPinHash": "a233ef4e81b60aa8ae07848487a9e9254f625054f3bfb982d678316247827eb3",
+  "originalPinBlob": "e30de2ac73177eb7df3b2bdf3e78dc7431abef9d",
+  "originalTransitionPaths": []
+}

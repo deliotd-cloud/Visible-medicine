@@ -1,0 +1,1046 @@
+{
+  "name": "git-author-325fc6aa",
+  "helper": "armArterialXrayLesson",
+  "pinsHash": "e3045a8988f44b5eb06584360d49fb0a9bed3824697b2ca817c03dd182a3765f",
+  "transitionHash": "21fb8e1bd2709394494349e0981fdfbe4f385ab8947d312bc738dd2c17359de9",
+  "pins": {
+    "baseline": "89a22c1b71e1904dedb4f161398b07cec64d8624",
+    "authorCommit": "325fc6aa50c4221691a1ee87de0d0ca91264ff04",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+          "fmaId": "FMA22655",
+          "name": "Right axillary artery",
+          "sourceName": "right axillary artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22655",
+          "bounds": {
+            "min": [
+              -1.5144000053405762,
+              4.581200122833252,
+              0.3005619943141937
+            ],
+            "max": [
+              -0.7694149613380432,
+              5.398399829864502,
+              0.5642500519752502
+            ]
+          },
+          "center": [
+            -1.1419074833393097,
+            4.989799976348877,
+            0.432406023144722
+          ],
+          "anchor": [
+            -1.2723599672317505,
+            5.101700305938721,
+            0.4388520121574402
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2268",
+              "sha256": "192c0b2607e669dc89a6eadd2c11f2fff904f010e4dca81822209865df7e5752"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+          "fmaId": "FMA22656",
+          "name": "Left axillary artery",
+          "sourceName": "left axillary artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22656",
+          "bounds": {
+            "min": [
+              0.7693470120429993,
+              4.581300258636475,
+              0.3007800281047821
+            ],
+            "max": [
+              1.5145699977874756,
+              5.398399829864502,
+              0.5641500353813171
+            ]
+          },
+          "center": [
+            1.1419585049152374,
+            4.989850044250488,
+            0.4324650317430496
+          ],
+          "anchor": [
+            1.2681599855422974,
+            5.105999946594238,
+            0.43566298484802246
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2216",
+              "sha256": "fe9295ce260df56c46f29e56e410937c9fa2f3e104411fb7e91b5f9681509ccb"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+          "fmaId": "FMA22691",
+          "name": "Right brachial artery",
+          "sourceName": "right brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22691",
+          "bounds": {
+            "min": [
+              -2.174690008163452,
+              2.205900192260742,
+              0.22346900403499603
+            ],
+            "max": [
+              -1.4303799867630005,
+              4.743499755859375,
+              0.3897160291671753
+            ]
+          },
+          "center": [
+            -1.8025349974632263,
+            3.4746999740600586,
+            0.30659251660108566
+          ],
+          "anchor": [
+            -1.8113499879837036,
+            3.456199884414673,
+            0.3016369640827179
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2271",
+              "sha256": "ce5b122fcc19c637684c1de1661697b03d487f3b013e8b4313fb095f81118813"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+          "fmaId": "FMA22692",
+          "name": "Left brachial artery",
+          "sourceName": "left brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22692",
+          "bounds": {
+            "min": [
+              1.4304299354553223,
+              2.2059998512268066,
+              0.22347503900527954
+            ],
+            "max": [
+              2.1745100021362305,
+              4.743499755859375,
+              0.3896779716014862
+            ]
+          },
+          "center": [
+            1.8024699687957764,
+            3.474749803543091,
+            0.3065765053033829
+          ],
+          "anchor": [
+            1.805799961090088,
+            3.476099967956543,
+            0.289294958114624
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2219",
+              "sha256": "e3c8e2be45d0f25f4e2efa9a046bc13b66c4e43e724a2c2b0424d230719cc6db"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+          "fmaId": "FMA22696",
+          "name": "Right deep brachial artery",
+          "sourceName": "right deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22696",
+          "bounds": {
+            "min": [
+              -2.0604500770568848,
+              3.1497998237609863,
+              0.02115200087428093
+            ],
+            "max": [
+              -1.7434699535369873,
+              3.8430004119873047,
+              0.26665398478507996
+            ]
+          },
+          "center": [
+            -1.901960015296936,
+            3.4964001178741455,
+            0.14390299282968044
+          ],
+          "anchor": [
+            -1.8949899673461914,
+            3.4970996379852295,
+            0.10191798955202103
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2277",
+              "sha256": "dd048b36f91cc5b0f16bc5a7bae5bca66aaaf0e3a95c1e2b5e55c397062c1647"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+          "fmaId": "FMA22697",
+          "name": "Left deep brachial artery",
+          "sourceName": "left deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22697",
+          "bounds": {
+            "min": [
+              1.7435400485992432,
+              3.1497998237609863,
+              0.021077996119856834
+            ],
+            "max": [
+              2.0603699684143066,
+              3.8430004119873047,
+              0.266633003950119
+            ]
+          },
+          "center": [
+            1.901955008506775,
+            3.4964001178741455,
+            0.14385550003498793
+          ],
+          "anchor": [
+            1.8897600173950195,
+            3.503399610519409,
+            0.1038840115070343
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2225",
+              "sha256": "c24f0def19fb45bf84251678b8d63c09fa7d5f51fa71fdd5515adddb8ff7db6c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+          "fmaId": "FMA22713",
+          "name": "Left inferior ulnar collateral artery",
+          "sourceName": "left inferior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22713",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2215",
+              "sha256": "edea5832fdee20ca45746399d2fede1e87bedca786ac6794c0f9d0ad9c7fd5a7"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.860200047492981,
+              2.2014999389648438,
+              0.19603900611400604
+            ],
+            "max": [
+              1.9553899765014648,
+              2.886399984359741,
+              0.3740679919719696
+            ]
+          },
+          "center": [
+            1.907795011997223,
+            2.5439499616622925,
+            0.2850534990429878
+          ],
+          "anchor": [
+            1.8959200382232666,
+            2.537600040435791,
+            0.32099398970603943
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left inferior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+          "fmaId": "FMA23127",
+          "name": "Radial collateral branch of left deep brachial artery",
+          "sourceName": "radial collateral branch of left deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA23127",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2261",
+              "sha256": "e1e72224710c0dea6bc539e2ca017669d6b673a9fc2d1847e912332abb0ab626"
+            }
+          ],
+          "bounds": {
+            "min": [
+              2.030630111694336,
+              2.7242000102996826,
+              0.009093999862670898
+            ],
+            "max": [
+              2.308809995651245,
+              3.1796000003814697,
+              0.05084700137376785
+            ]
+          },
+          "center": [
+            2.1697200536727905,
+            2.951900005340576,
+            0.029970500618219376
+          ],
+          "anchor": [
+            2.178260087966919,
+            2.9614999294281006,
+            0.03488700091838837
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Radial collateral branch of left deep brachial artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+          "fmaId": "FMA23126",
+          "name": "Radial collateral branch of right deep brachial artery",
+          "sourceName": "radial collateral branch of right deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA23126",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2262",
+              "sha256": "8b4fe7fec778437b662ea4387c9dd1469029c6fd221d830263587cd726062f3c"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -2.308840036392212,
+              2.724100112915039,
+              0.009123999625444412
+            ],
+            "max": [
+              -2.0305299758911133,
+              3.1796000003814697,
+              0.05052400007843971
+            ]
+          },
+          "center": [
+            -2.1696850061416626,
+            2.9518500566482544,
+            0.029823999851942062
+          ],
+          "anchor": [
+            -2.1707100868225098,
+            2.95740008354187,
+            0.03782299906015396
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Radial collateral branch of right deep brachial artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+          "fmaId": "FMA22712",
+          "name": "Right inferior ulnar collateral artery",
+          "sourceName": "right inferior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22712",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2267",
+              "sha256": "752bdaa12e7c36bb2f4b51b8736bd317e9079d35678e7a8f27dd7b211bf55590"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.95524001121521,
+              2.2014999389648438,
+              0.19606700539588928
+            ],
+            "max": [
+              -1.860159993171692,
+              2.8863000869750977,
+              0.3742679953575134
+            ]
+          },
+          "center": [
+            -1.907700002193451,
+            2.5439000129699707,
+            0.28516750037670135
+          ],
+          "anchor": [
+            -1.8996000289916992,
+            2.5387001037597656,
+            0.3230760097503662
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right inferior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+          "fmaId": "FMA23125",
+          "name": "Middle collateral branch of left deep brachial artery",
+          "sourceName": "middle collateral branch of left deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA23125",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2331",
+              "sha256": "dba9052edb17c903439ef8817e27618d4d1fbf8d3887bc56d6e9ff13474a4d2e"
+            }
+          ],
+          "bounds": {
+            "min": [
+              2.031599998474121,
+              2.4595999717712402,
+              0.008705999702215195
+            ],
+            "max": [
+              2.2288498878479004,
+              3.1786000728607178,
+              0.059404000639915466
+            ]
+          },
+          "center": [
+            2.1302249431610107,
+            2.819100022315979,
+            0.03405500017106533
+          ],
+          "anchor": [
+            2.1319000720977783,
+            2.814500093460083,
+            0.032868001610040665
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Middle collateral branch of left deep brachial artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+          "fmaId": "FMA23124",
+          "name": "Middle collateral branch of right deep brachial artery",
+          "sourceName": "middle collateral branch of right deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA23124",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2362",
+              "sha256": "53b2658acb8350ceb12d76c0c0ad73a9235e708b55b9543a866846a61e8fbdff"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -2.2288401126861572,
+              2.4595000743865967,
+              0.008693000301718712
+            ],
+            "max": [
+              -2.0315699577331543,
+              3.1786000728607178,
+              0.05946600064635277
+            ]
+          },
+          "center": [
+            -2.1302050352096558,
+            2.8190500736236572,
+            0.03407950047403574
+          ],
+          "anchor": [
+            -2.125770092010498,
+            2.8248000144958496,
+            0.028915999457240105
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Middle collateral branch of right deep brachial artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+          "fmaId": "FMA22707",
+          "name": "Right superior ulnar collateral artery",
+          "sourceName": "right superior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22707",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2373",
+              "sha256": "2a493b218515ccdd77c5ef012a35151af65851d24a8e60ec93309493940caeb8"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.8882399797439575,
+              2.405100107192993,
+              0.0442579984664917
+            ],
+            "max": [
+              -1.8117400407791138,
+              3.2297000885009766,
+              0.3423449993133545
+            ]
+          },
+          "center": [
+            -1.8499900102615356,
+            2.817400097846985,
+            0.1933014988899231
+          ],
+          "anchor": [
+            -1.815310001373291,
+            2.8264999389648438,
+            0.15839199721813202
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right superior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+          "fmaId": "FMA22708",
+          "name": "Left superior ulnar collateral artery",
+          "sourceName": "left superior ulnar collateral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA22708",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2374",
+              "sha256": "444b782f9184c2c50dd7d854c64b9da8c008d9c3d80e0bbb338110424a04787a"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.8116300106048584,
+              2.4052000045776367,
+              0.044172000139951706
+            ],
+            "max": [
+              1.8881299495697021,
+              3.2297000885009766,
+              0.3423520028591156
+            ]
+          },
+          "center": [
+            1.8498799800872803,
+            2.8174500465393066,
+            0.19326200149953365
+          ],
+          "anchor": [
+            1.8281999826431274,
+            2.8127999305725098,
+            0.15278099477291107
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left superior ulnar collateral artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "89a22c1b71e1904dedb4f161398b07cec64d8624",
+    "authorCommit": "325fc6aa50c4221691a1ee87de0d0ca91264ff04",
+    "sourcePinsHash": "e3045a8988f44b5eb06584360d49fb0a9bed3824697b2ca817c03dd182a3765f",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-artery",
+        "fmaId": "FMA22655",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "39365eb1dbdb87ddbfb24d347eda9ac32f461a91b8ac983f94e95350860217b6"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-artery",
+        "fmaId": "FMA22656",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "64025cc92760829db123a6146da4b46135f6a9e99e884339cb439cda990e19f9"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-brachial-artery",
+        "fmaId": "FMA22691",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "852b90c1e91ce15cfffcdbf8214d83299f7582a7c05a3cbd2ed504e5b4d4ae9c"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-brachial-artery",
+        "fmaId": "FMA22692",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "7f9d5724b33462bd6dbe0b4b5b1bba3265c59a315b74c144e127a0e1bfdff4a7"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-deep-brachial-artery",
+        "fmaId": "FMA22696",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "56f8d056064fb41ee8a20f2451979f426a5e2a616ec6329e36eb935a72b6eb59"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-deep-brachial-artery",
+        "fmaId": "FMA22697",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "5fa12b2b3509172710e83ea512035bcb8e3ea94991c3492cd18236297cb21126"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-inferior-ulnar-collateral-artery",
+        "fmaId": "FMA22713",
+        "tab": "xray",
+        "previousHash": "6dc6cb2b887a99ae2d9da8910ce1741db2303e22a994563f4baaec45c3313766",
+        "currentHash": "78120f1cd5497fdfa57d5ee0232a1e37709e0c1997e57ce81fbd451775974139"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:radial-collateral-branch-of-left-deep-brachial-artery",
+        "fmaId": "FMA23127",
+        "tab": "xray",
+        "previousHash": "bfdae6dec63cfc367d1f8f74ac51278dcc3d7621cd2ba3d77c9aed8d9d460521",
+        "currentHash": "89e95303b0254c321ff2c41995d43cd11e4467f735cab85019968750de4465a8"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+        "fmaId": "FMA23126",
+        "tab": "xray",
+        "previousHash": "006c0d3c981797b961c499ceeb59f5de86c47e6e31324de6f1a8084b9db36c9c",
+        "currentHash": "b68efad546e06f04279eac50cda68657de3dd19c7d2bf9b63e2202afc36aa94b"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+        "fmaId": "FMA22712",
+        "tab": "xray",
+        "previousHash": "15c41340de97a2efcf6e67b828e43a2d39ffdb474ef979113f81fd9dae81c917",
+        "currentHash": "cc82c884d4bda4ba8d293abfd62e074eae657399ac9dadfe78a6dfc618da246e"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+        "fmaId": "FMA23125",
+        "tab": "xray",
+        "previousHash": "68de4c9ede781a34383a362d3d1772cc0ba1ad4e71c53e12e6d2b64a60126962",
+        "currentHash": "7f4676094b214ccefbce6a9401229831a1a6afac012456a97b7dfe0ca74d01ee"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+        "fmaId": "FMA23124",
+        "tab": "xray",
+        "previousHash": "28c0f4536556554a39e534c5261cfd79cde85e871811ef7b451ac543078de431",
+        "currentHash": "3bcb53de7b65e93a2331074854fbb5d6156d02c9bb21fcac07d655cbc9bf6aab"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+        "fmaId": "FMA22707",
+        "tab": "xray",
+        "previousHash": "94286ba3b95533e1dc3b9989f1c4a187723534e37254939b1affa27cbe5dcc74",
+        "currentHash": "eeb4ee62daa0d222b1fed51c87466648ba684bf5a781e5ecebaae634a9bd23b9"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-superior-ulnar-collateral-artery",
+        "fmaId": "FMA22708",
+        "tab": "xray",
+        "previousHash": "97259ba6ce2c0e3622422ad13437dd9173483dd1f1286b56394adffd2f495c54",
+        "currentHash": "825e5abbbdaa6f159208b0163a9ac2c2c1491ab27f474e4de0e3742c3c826a27"
+      }
+    ]
+  },
+  "sourceRecordHash": "9377f32efdb17e80b810327de4f0a69a2d058465d8dcb8aee6507670d85b5662"
+}

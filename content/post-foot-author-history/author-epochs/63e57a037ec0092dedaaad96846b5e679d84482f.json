@@ -1,0 +1,196 @@
+{
+  "author": "63e57a037ec0092dedaaad96846b5e679d84482f",
+  "parent": "bad2f98dfb7813f402ddfcf23bf8552d0655dbb2",
+  "tree": "f9ecee58d110331d17a1b739f280e782fa8d2d92",
+  "parentTree": "c42ba6dfde132a28099e77e052b9ba517f94d3a1",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 2,
+  "preserved": 9934,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+        "fmaId": "FMA4707",
+        "name": "Great cardiac vein",
+        "sourceName": "great cardiac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4707",
+        "bounds": {
+          "min": [
+            0.3990879952907562,
+            4.137800216674805,
+            0.31922799348831177
+          ],
+          "max": [
+            0.48562198877334595,
+            4.534599781036377,
+            0.768779993057251
+          ]
+        },
+        "center": [
+          0.4423549920320511,
+          4.336199998855591,
+          0.5440039932727814
+        ],
+        "anchor": [
+          0.4508630037307739,
+          4.409000396728516,
+          0.46638602018356323
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2656",
+            "sha256": "cb9c6b4e10e43c92c8ea4e2e1a66215d98cf58d72fcc60aeadc8a0f87f6724fc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "a4b86259bb8fb9c1a4b73d728936804f165f73db5ec1a96645c97f438a7f4e39"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+        "fmaId": "FMA4713",
+        "name": "Middle cardiac vein",
+        "sourceName": "middle cardiac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4713",
+        "bounds": {
+          "min": [
+            0.016033099964261055,
+            3.7452001571655273,
+            0.5800299644470215
+          ],
+          "max": [
+            0.7059670090675354,
+            4.07390022277832,
+            1.0652000904083252
+          ]
+        },
+        "center": [
+          0.3610000545158982,
+          3.909550189971924,
+          0.8226150274276733
+        ],
+        "anchor": [
+          0.32552599906921387,
+          3.800999641418457,
+          0.8317700028419495
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2678",
+            "sha256": "20a71237bc8a3b211c244e0695c1a6242abb3f684275c0b01061439c92b72ef7"
+          },
+          {
+            "file": "FJ2679",
+            "sha256": "754d84b147f9a8ba3eb7aa0cb434a74a7c047354bb689e8e89de6e4f0160f737"
+          },
+          {
+            "file": "FJ2680",
+            "sha256": "29c830d98097500bb09a506b05275942574a5ea9b18ad58e51bc5b7313f0ed8b"
+          },
+          {
+            "file": "FJ2681",
+            "sha256": "cfb2b3134737d33591f2518ce6338498d8c3a32cb0dbc93cfcd9c88b8c4996d5"
+          },
+          {
+            "file": "FJ2682",
+            "sha256": "1122684d5da8ea6953d03836244552fd33287185304d74e2a0e395f691e323e6"
+          },
+          {
+            "file": "FJ2683",
+            "sha256": "02757805e2e956e4a4425b2c54db8b54ee69f5f97da5aa63ca0cd12c4b159b1e"
+          },
+          {
+            "file": "FJ2684",
+            "sha256": "25a39f3d42a46af2008f426def111b4af3add424dc327543e51b2c7fa67f3d95"
+          },
+          {
+            "file": "FJ2685",
+            "sha256": "578c2f788d36149f535210004762558a7e533cc42c121d26a8f418cb04142263"
+          },
+          {
+            "file": "FJ2686",
+            "sha256": "172e06e35489ae2657678c6d340eace2daed2fb2329324aa40c48824b0e99666"
+          },
+          {
+            "file": "FJ2687",
+            "sha256": "56fa04e9a81334e4492f94eb51ff810f47c786581f098d69083013f4c9ae2a62"
+          },
+          {
+            "file": "FJ2688",
+            "sha256": "79e05aae03bab74714440fd5d4941f67b969293d57be99c6758c61fa15452e7b"
+          },
+          {
+            "file": "FJ2689",
+            "sha256": "2a5596c4d908ff4c6bbe50d36c18759753e9dc5fa9b10029ec7f91ca8a2b5f04"
+          },
+          {
+            "file": "FJ2690",
+            "sha256": "0914e4188f4952d2325f962dd97336d1b55ed40dd8532db46c9309975157f57f"
+          },
+          {
+            "file": "FJ2691",
+            "sha256": "e50b042a1f7e034839c5180a9fdfbf0165a57ce19d02dc0092166d7e6772cb63"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "7100a0ef070ed27f44985b3cb4490b5d954b0185c898de3001a59ea81ae2e9f2"
+    }
+  ]
+}

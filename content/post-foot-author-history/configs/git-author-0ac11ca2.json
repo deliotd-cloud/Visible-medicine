@@ -1,0 +1,320 @@
+{
+  "name": "git-author-0ac11ca2",
+  "helper": "arterialEvidenceLimitLesson",
+  "pinsHash": "7267594d20006f6de7f110828d89d9670820ad17af9d8eb3650263085c68c18c",
+  "transitionHash": "953bc177f7aca70769e9976e31048b9028a44f9db06e5fd87486e6533e3609c1",
+  "pins": {
+    "baseline": "bc925194ce3b388d4b6d9f73b4b3362ed4f2ad5f",
+    "authorCommit": "0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+          "fmaId": "FMA10697",
+          "name": "Right inferior thyroid artery",
+          "sourceName": "right inferior thyroid artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck",
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "inferior-thyroid-arteries",
+          "nodeName": "FMA10697",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2209",
+              "sha256": "229bf9cfcf4a5ba6f8bedf79e17cf395dd6c6c3290cef1ac2519012a0305eed4"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.434112012386322,
+              5.574999809265137,
+              0.4768590033054352
+            ],
+            "max": [
+              -0.28728699684143066,
+              5.90880012512207,
+              0.5582600235939026
+            ]
+          },
+          "center": [
+            -0.36069950461387634,
+            5.7418999671936035,
+            0.5175595134496689
+          ],
+          "anchor": [
+            -0.3927980065345764,
+            5.75629997253418,
+            0.5092099905014038
+          ],
+          "coverageNote": "Complete source-defined inferior thyroid artery surface, not a complete glandular supply tree. Thyroid/parathyroid tissue and recurrent laryngeal nerves are not supplied by this addition. Exact junctions, lumen and supply territories are not validated. Original coordinates and faces retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "mri": {
+            "readiness": "pending",
+            "title": "Right inferior thyroid artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+            "bullets": [],
+            "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+          "fmaId": "FMA10680",
+          "name": "Left inferior thyroid artery",
+          "sourceName": "left inferior thyroid artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck",
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "inferior-thyroid-arteries",
+          "nodeName": "FMA10680",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2210",
+              "sha256": "b2a14e4d5558ba3132f99b12b09721fac476fa8997013e1e463229bd5c15c8e8"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.2875269949436188,
+              5.575099945068359,
+              0.47671398520469666
+            ],
+            "max": [
+              0.43411099910736084,
+              5.90880012512207,
+              0.5581600069999695
+            ]
+          },
+          "center": [
+            0.3608189970254898,
+            5.741950035095215,
+            0.5174369961023331
+          ],
+          "anchor": [
+            0.39309900999069214,
+            5.759099960327148,
+            0.5147200226783752
+          ],
+          "coverageNote": "Complete source-defined inferior thyroid artery surface, not a complete glandular supply tree. Thyroid/parathyroid tissue and recurrent laryngeal nerves are not supplied by this addition. Exact junctions, lumen and supply territories are not validated. Original coordinates and faces retained; clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "mri": {
+            "readiness": "pending",
+            "title": "Left inferior thyroid artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+            "bullets": [],
+            "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+          "fmaId": "FMA23125",
+          "name": "Middle collateral branch of left deep brachial artery",
+          "sourceName": "middle collateral branch of left deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA23125",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2331",
+              "sha256": "dba9052edb17c903439ef8817e27618d4d1fbf8d3887bc56d6e9ff13474a4d2e"
+            }
+          ],
+          "bounds": {
+            "min": [
+              2.031599998474121,
+              2.4595999717712402,
+              0.008705999702215195
+            ],
+            "max": [
+              2.2288498878479004,
+              3.1786000728607178,
+              0.059404000639915466
+            ]
+          },
+          "center": [
+            2.1302249431610107,
+            2.819100022315979,
+            0.03405500017106533
+          ],
+          "anchor": [
+            2.1319000720977783,
+            2.814500093460083,
+            0.032868001610040665
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Middle collateral branch of left deep brachial artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+          "fmaId": "FMA23124",
+          "name": "Middle collateral branch of right deep brachial artery",
+          "sourceName": "middle collateral branch of right deep brachial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "elbow-arteries",
+          "nodeName": "FMA23124",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2362",
+              "sha256": "53b2658acb8350ceb12d76c0c0ad73a9235e708b55b9543a866846a61e8fbdff"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -2.2288401126861572,
+              2.4595000743865967,
+              0.008693000301718712
+            ],
+            "max": [
+              -2.0315699577331543,
+              3.1786000728607178,
+              0.05946600064635277
+            ]
+          },
+          "center": [
+            -2.1302050352096558,
+            2.8190500736236572,
+            0.03407950047403574
+          ],
+          "anchor": [
+            -2.125770092010498,
+            2.8248000144958496,
+            0.028915999457240105
+          ],
+          "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Middle collateral branch of right deep brachial artery · Review pending",
+            "body": "Structure-specific imaging teaching has not yet been authored and reviewed for this source selection. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No scan or diagnostic finding is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "bc925194ce3b388d4b6d9f73b4b3362ed4f2ad5f",
+    "authorCommit": "0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2",
+    "sourcePinsHash": "7267594d20006f6de7f110828d89d9670820ad17af9d8eb3650263085c68c18c",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+        "fmaId": "FMA10697",
+        "tab": "mri",
+        "previousHash": "e010ae47388762234d463e7f1e2cc1e4584ed15114359d071419a90280880c3a",
+        "currentHash": "325c8188ec4d39fc266be78290e04124d43c09219d79f8cadcdf7d17f98d0229"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+        "fmaId": "FMA10680",
+        "tab": "mri",
+        "previousHash": "25bc23df9cab7b21adc127222f93c6822bfae6ebbe2045725aec4a502a9f957d",
+        "currentHash": "9c102fe93f8a4eb1ddc8a8e29f1bc28a4c60046828f9ae20c4482a9109a06219"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:middle-collateral-branch-of-left-deep-brachial-artery",
+        "fmaId": "FMA23125",
+        "tab": "ultrasound",
+        "previousHash": "68de4c9ede781a34383a362d3d1772cc0ba1ad4e71c53e12e6d2b64a60126962",
+        "currentHash": "d7f85612cd9cf0a71903689e2f485747abeae0a7b861d1919ef35f7f05e93c01"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+        "fmaId": "FMA23124",
+        "tab": "ultrasound",
+        "previousHash": "28c0f4536556554a39e534c5261cfd79cde85e871811ef7b451ac543078de431",
+        "currentHash": "96282c49ef5f42fe01664491addc68811a20145a66d770e8a184df2f63219d2b"
+      }
+    ]
+  },
+  "sourceRecordHash": "d8efbd2b7b47b856d331a5690f4cff22ea66f6b110b23c220daea440735ab9fa"
+}

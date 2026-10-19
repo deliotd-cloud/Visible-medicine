@@ -1,0 +1,168 @@
+{
+  "name": "git-author-5d34da55",
+  "helper": "psoasXrayLesson",
+  "pinsHash": "8345761f662052b51d5bf7d52a88faaef7b16d6a5fc85c712078ca1b09f146ad",
+  "transitionHash": "b5f5d50600c7d30e62def21ecf920d008eabc1cf698059b4227501d7dc0090ab",
+  "pins": {
+    "baseline": "2fd700948dfa10ec6b5a03c4ed4c6ff9443c387e",
+    "authorCommit": "5d34da55a8cab5a9a0751ac0afa56437bee79cb9",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:right:muscle:right-psoas-major",
+          "fmaId": "FMA22342",
+          "name": "Right psoas major",
+          "sourceName": "right psoas major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thigh"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA22342",
+          "bounds": {
+            "min": [
+              -1.1375800371170044,
+              -0.6478497385978699,
+              0.03134899213910103
+            ],
+            "max": [
+              -0.07475189864635468,
+              2.9873998165130615,
+              0.6956599950790405
+            ]
+          },
+          "center": [
+            -0.6061659678816795,
+            1.1697750389575958,
+            0.3635044936090708
+          ],
+          "anchor": [
+            -0.7198110222816467,
+            1.2371399402618408,
+            0.46725699305534363
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1431",
+              "sha256": "b66009da13d6241d66de3c0242288abfe0c90ce1c76b38000f9a92b02e2f1e0f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:spine:left:muscle:left-psoas-major",
+          "fmaId": "FMA22343",
+          "name": "Left psoas major",
+          "sourceName": "left psoas major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "spine",
+          "regions": [
+            "spine",
+            "thigh"
+          ],
+          "bundle": "spine-muscles",
+          "nodeName": "FMA22343",
+          "bounds": {
+            "min": [
+              0.07475189864635468,
+              -0.6478497385978699,
+              0.03134899213910103
+            ],
+            "max": [
+              1.1375700235366821,
+              2.9873998165130615,
+              0.6956599950790405
+            ]
+          },
+          "center": [
+            0.6061609610915184,
+            1.1697750389575958,
+            0.3635044936090708
+          ],
+          "anchor": [
+            0.7198100090026855,
+            1.2371399402618408,
+            0.46725699305534363
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1431M",
+              "sha256": "6ab42a645723e66a32b2c64e72be87e0a13fb497cbbf2ff29d26bc827fbaa0ce"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "2fd700948dfa10ec6b5a03c4ed4c6ff9443c387e",
+    "authorCommit": "5d34da55a8cab5a9a0751ac0afa56437bee79cb9",
+    "sourcePinsHash": "8345761f662052b51d5bf7d52a88faaef7b16d6a5fc85c712078ca1b09f146ad",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:spine:right:muscle:right-psoas-major",
+        "fmaId": "FMA22342",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "c2945f9caa58458e99863dab8bbfe98a523dac5ce28705c469eafb8dfa6fab5a"
+      },
+      {
+        "id": "vm:anatomy:body:spine:left:muscle:left-psoas-major",
+        "fmaId": "FMA22343",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "fa85d38058d189b889cb43bb26cacbef173f4f674722b96069ec31880fd5323a"
+      }
+    ]
+  },
+  "sourceRecordHash": "bd34762aa39d2685e3fc31379a73e931690a2c3b020e32723f84ebe283524f36"
+}

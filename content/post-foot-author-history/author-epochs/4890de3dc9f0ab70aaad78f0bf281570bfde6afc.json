@@ -1,0 +1,1966 @@
+{
+  "author": "4890de3dc9f0ab70aaad78f0bf281570bfde6afc",
+  "parent": "3edd8149384a251c33801408d32472ae6f97ab1c",
+  "tree": "73a9b45efb17b49d872ce06211d10fd49b01d3fc",
+  "parentTree": "5eba99e6248caae2be743da8beabe4d8c9d02249",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 28,
+  "preserved": 9908,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:ascending-aorta",
+        "fmaId": "FMA3736",
+        "name": "Ascending aorta",
+        "sourceName": "ascending aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3736",
+        "bounds": {
+          "min": [
+            -0.0682218000292778,
+            4.340600490570068,
+            0.5666200518608093
+          ],
+          "max": [
+            0.28943002223968506,
+            4.819000244140625,
+            0.8743899464607239
+          ]
+        },
+        "center": [
+          0.11060411110520363,
+          4.579800367355347,
+          0.7205049991607666
+        ],
+        "anchor": [
+          0.22574399411678314,
+          4.614399433135986,
+          0.726830005645752
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3413",
+            "sha256": "764f23e432a9308e0780c586f9d1638db1fbcc52a5019ae61817b4b1de323870"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find ascending aorta on the model."
+      },
+      "currentHash": "e1b8672e1134330aa5995d05b701031ab5468f5ab27da30a62fa2a8d08ea225e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:arch-of-aorta",
+        "fmaId": "FMA3768",
+        "name": "Arch of aorta",
+        "sourceName": "arch of aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3768",
+        "bounds": {
+          "min": [
+            -0.06830459833145142,
+            4.819000244140625,
+            -0.0015510177472606301
+          ],
+          "max": [
+            0.3483780026435852,
+            5.170899868011475,
+            0.8716299533843994
+          ]
+        },
+        "center": [
+          0.1400367021560669,
+          4.99495005607605,
+          0.4350394678185694
+        ],
+        "anchor": [
+          0.13091500103473663,
+          4.957399845123291,
+          0.4406839609146118
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3411",
+            "sha256": "9eeb5e5a627e8145f03961c661c9c66d8fdc55ed1234d04b84212b87a21d902c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find arch of aorta on the model."
+      },
+      "currentHash": "615420b6bdaa4b3a959994bfaaa14d7fbdd0ba506f1f7b7caed491bb36c5dab8"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:descending-thoracic-aorta",
+        "fmaId": "FMA87217",
+        "name": "Descending thoracic aorta",
+        "sourceName": "descending thoracic aorta",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA87217",
+        "bounds": {
+          "min": [
+            0.015932898968458176,
+            3.288599967956543,
+            0.04117400944232941
+          ],
+          "max": [
+            0.29951199889183044,
+            4.997399806976318,
+            0.49786102771759033
+          ]
+        },
+        "center": [
+          0.1577224489301443,
+          4.142999887466431,
+          0.26951751857995987
+        ],
+        "anchor": [
+          0.1419690102338791,
+          4.165999889373779,
+          0.25322502851486206
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1931",
+            "sha256": "b213c8178b48f9afae695254f7bcfb3e08d5781878a76724c353e7e6ea6269be"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find descending thoracic aorta on the model."
+      },
+      "currentHash": "55064ce9bd3c519f8e41037e87155829c69621a133c241966f260553e7c6ec2e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:superior-vena-cava",
+        "fmaId": "FMA4720",
+        "name": "Superior vena cava",
+        "sourceName": "superior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4720",
+        "bounds": {
+          "min": [
+            -0.2663489878177643,
+            4.748100757598877,
+            0.5358699560165405
+          ],
+          "max": [
+            -0.04109429940581322,
+            5.098100662231445,
+            0.7727600336074829
+          ]
+        },
+        "center": [
+          -0.15372164361178875,
+          4.923100709915161,
+          0.6543149948120117
+        ],
+        "anchor": [
+          -0.06418830156326294,
+          4.938199520111084,
+          0.6031400561332703
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3645",
+            "sha256": "5cc007c2ea51255df641225630e83ddbf3e5c4545dffe4814b098c9199ceb26c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find superior vena cava on the model."
+      },
+      "currentHash": "91a2d90b54864a3ba95e7eee7501ea52589231dc9c489facb223a12d879736ec"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+        "fmaId": "FMA4838",
+        "name": "Azygos vein",
+        "sourceName": "azygos vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4838",
+        "bounds": {
+          "min": [
+            -0.18150199949741364,
+            2.737499952316284,
+            0.09845699369907379
+          ],
+          "max": [
+            -0.05621640384197235,
+            4.913000583648682,
+            0.6302899718284607
+          ]
+        },
+        "center": [
+          -0.118859201669693,
+          3.825250267982483,
+          0.36437348276376724
+        ],
+        "anchor": [
+          -0.14386799931526184,
+          3.819399356842041,
+          0.22390297055244446
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3416",
+            "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find azygos vein on the model."
+      },
+      "currentHash": "4f9065b687b30adaedae42f264f35b11a12f43c2e10a013fa3fa0b2c527209b2"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:hemiazygos-vein",
+        "fmaId": "FMA4944",
+        "name": "Hemiazygos vein",
+        "sourceName": "hemiazygos vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4944",
+        "bounds": {
+          "min": [
+            -0.15802399814128876,
+            2.7026000022888184,
+            0.0510060116648674
+          ],
+          "max": [
+            0.24038200080394745,
+            3.742500066757202,
+            0.25790101289749146
+          ]
+        },
+        "center": [
+          0.041179001331329346,
+          3.2225500345230103,
+          0.15445351228117943
+        ],
+        "anchor": [
+          0.18140000104904175,
+          3.217600107192993,
+          0.1522589921951294
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3434",
+            "sha256": "dcc2d6adb32cb84ffd91fd9104a3ba13986d6e9801231733086cbd8ab5ca2b26"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find hemiazygos vein on the model."
+      },
+      "currentHash": "6570849f164b7a650187834e4202de0864f7c3526bcf4a5b539f8eafaa12e717"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "fmaId": "FMA3932",
+        "name": "Brachiocephalic artery",
+        "sourceName": "brachiocephalic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3932",
+        "bounds": {
+          "min": [
+            -0.1928279995918274,
+            5.04319953918457,
+            0.5197299718856812
+          ],
+          "max": [
+            0.18245701491832733,
+            5.422800064086914,
+            0.6965699791908264
+          ]
+        },
+        "center": [
+          -0.0051854923367500305,
+          5.232999801635742,
+          0.6081499755382538
+        ],
+        "anchor": [
+          -0.014610400423407555,
+          5.217900276184082,
+          0.6019899845123291
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3417",
+            "sha256": "285df2b5ecb7881756e36645ca21e2cd825863f420c813a673eb6514c93f9156"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find brachiocephalic artery on the model."
+      },
+      "currentHash": "adad5aca108fd3187f57e0ce51ad7eea8f1bb6e733da93dcc39fabb1d1ebd951"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-artery",
+        "fmaId": "FMA3953",
+        "name": "Right subclavian artery",
+        "sourceName": "right subclavian artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3953",
+        "bounds": {
+          "min": [
+            -0.8217599987983704,
+            5.309399604797363,
+            0.44354599714279175
+          ],
+          "max": [
+            -0.0974728986620903,
+            5.530300140380859,
+            0.6222100257873535
+          ]
+        },
+        "center": [
+          -0.45961644873023033,
+          5.419849872589111,
+          0.5328780114650726
+        ],
+        "anchor": [
+          -0.458391010761261,
+          5.453499794006348,
+          0.5169299840927124
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3579",
+            "sha256": "1fb9231343dce90a8d62061c63e0102eb72d117f131eda7876abfeb0060b6ad3"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right subclavian artery on the model."
+      },
+      "currentHash": "51130151eb7875ffd4f5d8310cf09db5730f36ccda1aa4f8bcb76abc25eff0b3"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-artery",
+        "fmaId": "FMA4694",
+        "name": "Left subclavian artery",
+        "sourceName": "left subclavian artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4694",
+        "bounds": {
+          "min": [
+            0.17685699462890625,
+            5.073100566864014,
+            0.368478000164032
+          ],
+          "max": [
+            0.865464985370636,
+            5.564599514007568,
+            0.5563400387763977
+          ]
+        },
+        "center": [
+          0.5211609899997711,
+          5.318850040435791,
+          0.46240901947021484
+        ],
+        "anchor": [
+          0.6160910129547119,
+          5.413900375366211,
+          0.5066100358963013
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3479",
+            "sha256": "f6af4efb94e1ce94519c94684b1d0a0736272e5a0ed2677a63627e0ebfc228b1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left subclavian artery on the model."
+      },
+      "currentHash": "606682a69ce74f678f5901d6e4dc80fc00c042d07ecc750040d910c92261ddc8"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-brachiocephalic-vein",
+        "fmaId": "FMA4751",
+        "name": "Right brachiocephalic vein",
+        "sourceName": "right brachiocephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4751",
+        "bounds": {
+          "min": [
+            -0.31965500116348267,
+            4.980200290679932,
+            0.5937699675559998
+          ],
+          "max": [
+            -0.1029599979519844,
+            5.498600006103516,
+            0.8127099871635437
+          ]
+        },
+        "center": [
+          -0.21130749955773354,
+          5.239400148391724,
+          0.7032399773597717
+        ],
+        "anchor": [
+          -0.24767400324344635,
+          5.23900032043457,
+          0.7016200423240662
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3583",
+            "sha256": "53cca77d47a5c4bb02e2c86cd38180752d37bf257a6e7ec48bc2335c6e95211a"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right brachiocephalic vein on the model."
+      },
+      "currentHash": "da133d5bb9bf236e5cfb0dce76414e3a80ddcc97da5ef36d21c8d276434cfdd7"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-brachiocephalic-vein",
+        "fmaId": "FMA4761",
+        "name": "Left brachiocephalic vein",
+        "sourceName": "left brachiocephalic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4761",
+        "bounds": {
+          "min": [
+            -0.23789699375629425,
+            4.958799839019775,
+            0.605430006980896
+          ],
+          "max": [
+            0.2800680100917816,
+            5.479899883270264,
+            0.8235699534416199
+          ]
+        },
+        "center": [
+          0.021085508167743683,
+          5.2193498611450195,
+          0.7144999802112579
+        ],
+        "anchor": [
+          0.03626110032200813,
+          5.196999549865723,
+          0.691029965877533
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3482",
+            "sha256": "435c32387de475a28722653dfa7a830c136dd7921dac768c4b6858877fafb176"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left brachiocephalic vein on the model."
+      },
+      "currentHash": "273f36b20c692cc6019889bcb4880f8e3b9c888e00b757298f565d389e5aeeba"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-subclavian-vein",
+        "fmaId": "FMA4755",
+        "name": "Right subclavian vein",
+        "sourceName": "right subclavian vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4755",
+        "bounds": {
+          "min": [
+            -0.8682869672775269,
+            5.277299880981445,
+            0.5849699974060059
+          ],
+          "max": [
+            -0.22342300415039062,
+            5.515500545501709,
+            0.717930018901825
+          ]
+        },
+        "center": [
+          -0.5458549857139587,
+          5.396400213241577,
+          0.6514500081539154
+        ],
+        "anchor": [
+          -0.5808529853820801,
+          5.366500377655029,
+          0.6452600359916687
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3587",
+            "sha256": "3ed476e466dbc681e284005f910b546a97ac24999236cae1ec7487149da7bb53"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right subclavian vein on the model."
+      },
+      "currentHash": "64a9d42784ae88f5266ce120cb3c9359fc3b904499b7bda88bc8204a1334a323"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-subclavian-vein",
+        "fmaId": "FMA4763",
+        "name": "Left subclavian vein",
+        "sourceName": "left subclavian vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "shoulder-arm",
+          "head-neck"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4763",
+        "bounds": {
+          "min": [
+            0.19380800426006317,
+            5.251899242401123,
+            0.554419994354248
+          ],
+          "max": [
+            0.9425779581069946,
+            5.5346999168396,
+            0.7107599377632141
+          ]
+        },
+        "center": [
+          0.5681929811835289,
+          5.393299579620361,
+          0.6325899660587311
+        ],
+        "anchor": [
+          0.5884230136871338,
+          5.4121994972229,
+          0.6234800219535828
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3486",
+            "sha256": "22b351bd5e1e76488e150f433bfc59a44c3a27a567f5eb5c9a6be5b2b21be5c6"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left subclavian vein on the model."
+      },
+      "currentHash": "0d0da4d64b4e9944f47a5d3683785157fd0385f4960e3aa8b83ef0a5113b107a"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:trunk-of-right-coronary-artery",
+        "fmaId": "FMA3802",
+        "name": "Trunk of right coronary artery",
+        "sourceName": "trunk of right coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3802",
+        "bounds": {
+          "min": [
+            -0.2174760103225708,
+            3.879399299621582,
+            0.4330419898033142
+          ],
+          "max": [
+            0.20738500356674194,
+            4.610699653625488,
+            1.124940037727356
+          ]
+        },
+        "center": [
+          -0.005045503377914429,
+          4.245049476623535,
+          0.7789910137653351
+        ],
+        "anchor": [
+          0.04474269971251488,
+          4.465899467468262,
+          0.8356500267982483
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2723",
+            "sha256": "cd008769cb9d565a75bf6b91b5ad3bd482932e37c4747837f6c9446cd23b73a2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find trunk of right coronary artery on the model."
+      },
+      "currentHash": "2e7e72dac51a9c6e8c76142add277b0b4ab0e4853f125746635a3e80b2ecda14"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:trunk-of-left-coronary-artery",
+        "fmaId": "FMA3855",
+        "name": "Trunk of left coronary artery",
+        "sourceName": "trunk of left coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3855",
+        "bounds": {
+          "min": [
+            0.2338929921388626,
+            4.539499282836914,
+            0.6730400323867798
+          ],
+          "max": [
+            0.34404999017715454,
+            4.608199596405029,
+            0.734250009059906
+          ]
+        },
+        "center": [
+          0.2889714911580086,
+          4.573849439620972,
+          0.7036450207233429
+        ],
+        "anchor": [
+          0.27512800693511963,
+          4.565500259399414,
+          0.6891800165176392
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2737",
+            "sha256": "22aa075132e33f9a3d3be135515362b03ab84f12a0d641edde35e260fb2cd65b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find trunk of left coronary artery on the model."
+      },
+      "currentHash": "598d353c18d207ec81a9288ad8076b5d73dc55e7ec306279d089a12fea58262f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:anterior-interventricular-branch-of-left-coronary-artery",
+        "fmaId": "FMA3862",
+        "name": "Anterior interventricular branch of left coronary artery",
+        "sourceName": "anterior interventricular branch of left coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3862",
+        "bounds": {
+          "min": [
+            0.288318008184433,
+            3.794499397277832,
+            0.6970599889755249
+          ],
+          "max": [
+            0.793912947177887,
+            4.576200008392334,
+            1.227660059928894
+          ]
+        },
+        "center": [
+          0.54111547768116,
+          4.185349702835083,
+          0.9623600244522095
+        ],
+        "anchor": [
+          0.5348989963531494,
+          4.211999416351318,
+          1.1090400218963623
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ2631",
+            "sha256": "06c78376e08c2eed7416d0e2a841e47952b5d95cafa89fbcb7612c072cd65573"
+          },
+          {
+            "file": "FJ2632",
+            "sha256": "71c8621f9ed5a9dd7814c054f9e6f2ec9a480b39141110615bc7090795040272"
+          },
+          {
+            "file": "FJ2633",
+            "sha256": "3a38d05c39634da75a226de3a4665b02614bf38ab4ea3a39fe8ef1096c0d0296"
+          },
+          {
+            "file": "FJ2634",
+            "sha256": "21dff12c8f9beef5d6022dda5c9d25419a72509e5a9fc2e4a33cafe771237442"
+          },
+          {
+            "file": "FJ2635",
+            "sha256": "51114a0f6f2d95fbc18ddbce0cc19431a0b2cb55db18208029fce64f9128ec2c"
+          },
+          {
+            "file": "FJ2636",
+            "sha256": "aa2166cc5bf12de992dd33eaee5953bc23bb739f62610bbbec345d6aea2c1ecc"
+          },
+          {
+            "file": "FJ2637",
+            "sha256": "6c59d4cf0dbdb902fc83e5596f7a181bb66bcbeda24e10c8ce48d4661dfbe34d"
+          },
+          {
+            "file": "FJ2638",
+            "sha256": "aa3ccf75d2a5a5fefe9665b5acafed8f1797f001a01da365bfdc709a8c84aa4b"
+          },
+          {
+            "file": "FJ2639",
+            "sha256": "dc8bcfe30ddcaff7e1e9022bb1013bb884cd03a0fc9d9fae00a924c8d4eef955"
+          },
+          {
+            "file": "FJ2640",
+            "sha256": "38bc0b0b2c9f8a7424098f9dbaa36ed57b07cb9a1211a86a823c779c419035b1"
+          },
+          {
+            "file": "FJ2641",
+            "sha256": "27e5fff1fdeeff77e3c911ffe2a753279cb391b977f2de3f6ea17e21876b0dac"
+          },
+          {
+            "file": "FJ2642",
+            "sha256": "e906224a535dbf5bfb2201cd6fc81880521aa02f5148ae1bbe67404ace96b3a6"
+          },
+          {
+            "file": "FJ2643",
+            "sha256": "303086bfdcb88e2e9bb4cddcfaff2e9be2bf3f1db2c7943d8ccd4a7a38239fac"
+          },
+          {
+            "file": "FJ2644",
+            "sha256": "203a8bc0e029a76f3b291729ebb4cbfd1155bb84ff5724d2eb51d5fa02d36aa9"
+          },
+          {
+            "file": "FJ2645",
+            "sha256": "760b5d48099edb74a6b14fafe02b56ad076c4e4c27c8edb905f21929d192f8b5"
+          },
+          {
+            "file": "FJ2646",
+            "sha256": "1e2f885bc9aafd4270895deb0000a970ca4e494e909e06a5f13b94858d0b8cc9"
+          },
+          {
+            "file": "FJ2647",
+            "sha256": "cd55e20146fe1f08872c6733a2ed3ef5f2397235e2f7f8c77b883f64b5b67d57"
+          },
+          {
+            "file": "FJ2648",
+            "sha256": "14c937696c6e76239474f760324389f5cc955cfe06570ec7c4f61eb4216e8894"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find anterior interventricular branch of left coronary artery on the model."
+      },
+      "currentHash": "07471a52e72c73d4999b16c287e295e715dc907b37bcc213581b273355531142"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:circumflex-branch-of-left-coronary-artery",
+        "fmaId": "FMA3895",
+        "name": "Circumflex branch of left coronary artery",
+        "sourceName": "circumflex branch of left coronary artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA3895",
+        "bounds": {
+          "min": [
+            0.34355300664901733,
+            3.878199577331543,
+            0.3698049783706665
+          ],
+          "max": [
+            0.7683110237121582,
+            4.563100814819336,
+            0.9284499883651733
+          ]
+        },
+        "center": [
+          0.5559320151805878,
+          4.2206501960754395,
+          0.6491274833679199
+        ],
+        "anchor": [
+          0.6770110130310059,
+          4.167800426483154,
+          0.5232499837875366
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2649",
+            "sha256": "d4833bb0b60ee79f526150ad7ba9124e326aba8cd48000711bf3a6b0997b0ce0"
+          },
+          {
+            "file": "FJ2650",
+            "sha256": "dd2c38fdc784311c955fb8b0420d70dfbdf16f0ce6e236a086dc5f350faae04c"
+          },
+          {
+            "file": "FJ2651",
+            "sha256": "864567c4b15c3add5a8184edb142766538936e2ef17af4efa25acca67f4344d8"
+          },
+          {
+            "file": "FJ2652",
+            "sha256": "fd5ee304558da1d1ffebb01ca7f59b374087667e71d473fe5401f355a2ff161f"
+          },
+          {
+            "file": "FJ2653",
+            "sha256": "74fc42fbc783857619dccb5a753b06cbfce9abc6403f14e38f55bbb9fafdad80"
+          },
+          {
+            "file": "FJ2654",
+            "sha256": "4e8467b12ca3374d25807d5de058cfb8d147ad2decd99f6debe57847a83099a1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find circumflex branch of left coronary artery on the model."
+      },
+      "currentHash": "fff4883b047c85c87b392d1ee5c3497df9ad9caad4a59a0063040565c895f07c"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:great-cardiac-vein",
+        "fmaId": "FMA4707",
+        "name": "Great cardiac vein",
+        "sourceName": "great cardiac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4707",
+        "bounds": {
+          "min": [
+            0.3990879952907562,
+            4.137800216674805,
+            0.31922799348831177
+          ],
+          "max": [
+            0.48562198877334595,
+            4.534599781036377,
+            0.768779993057251
+          ]
+        },
+        "center": [
+          0.4423549920320511,
+          4.336199998855591,
+          0.5440039932727814
+        ],
+        "anchor": [
+          0.4508630037307739,
+          4.409000396728516,
+          0.46638602018356323
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2656",
+            "sha256": "cb9c6b4e10e43c92c8ea4e2e1a66215d98cf58d72fcc60aeadc8a0f87f6724fc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find great cardiac vein on the model."
+      },
+      "currentHash": "13b4d472c68ebb356321de2b4688178296597aa6c96cfe47ac7de7a3755fa5d9"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:middle-cardiac-vein",
+        "fmaId": "FMA4713",
+        "name": "Middle cardiac vein",
+        "sourceName": "middle cardiac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-recovery",
+        "nodeName": "FMA4713",
+        "bounds": {
+          "min": [
+            0.016033099964261055,
+            3.7452001571655273,
+            0.5800299644470215
+          ],
+          "max": [
+            0.7059670090675354,
+            4.07390022277832,
+            1.0652000904083252
+          ]
+        },
+        "center": [
+          0.3610000545158982,
+          3.909550189971924,
+          0.8226150274276733
+        ],
+        "anchor": [
+          0.32552599906921387,
+          3.800999641418457,
+          0.8317700028419495
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2678",
+            "sha256": "20a71237bc8a3b211c244e0695c1a6242abb3f684275c0b01061439c92b72ef7"
+          },
+          {
+            "file": "FJ2679",
+            "sha256": "754d84b147f9a8ba3eb7aa0cb434a74a7c047354bb689e8e89de6e4f0160f737"
+          },
+          {
+            "file": "FJ2680",
+            "sha256": "29c830d98097500bb09a506b05275942574a5ea9b18ad58e51bc5b7313f0ed8b"
+          },
+          {
+            "file": "FJ2681",
+            "sha256": "cfb2b3134737d33591f2518ce6338498d8c3a32cb0dbc93cfcd9c88b8c4996d5"
+          },
+          {
+            "file": "FJ2682",
+            "sha256": "1122684d5da8ea6953d03836244552fd33287185304d74e2a0e395f691e323e6"
+          },
+          {
+            "file": "FJ2683",
+            "sha256": "02757805e2e956e4a4425b2c54db8b54ee69f5f97da5aa63ca0cd12c4b159b1e"
+          },
+          {
+            "file": "FJ2684",
+            "sha256": "25a39f3d42a46af2008f426def111b4af3add424dc327543e51b2c7fa67f3d95"
+          },
+          {
+            "file": "FJ2685",
+            "sha256": "578c2f788d36149f535210004762558a7e533cc42c121d26a8f418cb04142263"
+          },
+          {
+            "file": "FJ2686",
+            "sha256": "172e06e35489ae2657678c6d340eace2daed2fb2329324aa40c48824b0e99666"
+          },
+          {
+            "file": "FJ2687",
+            "sha256": "56fa04e9a81334e4492f94eb51ff810f47c786581f098d69083013f4c9ae2a62"
+          },
+          {
+            "file": "FJ2688",
+            "sha256": "79e05aae03bab74714440fd5d4941f67b969293d57be99c6758c61fa15452e7b"
+          },
+          {
+            "file": "FJ2689",
+            "sha256": "2a5596c4d908ff4c6bbe50d36c18759753e9dc5fa9b10029ec7f91ca8a2b5f04"
+          },
+          {
+            "file": "FJ2690",
+            "sha256": "0914e4188f4952d2325f962dd97336d1b55ed40dd8532db46c9309975157f57f"
+          },
+          {
+            "file": "FJ2691",
+            "sha256": "e50b042a1f7e034839c5180a9fdfbf0165a57ce19d02dc0092166d7e6772cb63"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find middle cardiac vein on the model."
+      },
+      "currentHash": "e781644a89508d881e078be17ddc846a6b543b8228903254197e0d94730173a1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+        "fmaId": "FMA3969",
+        "name": "Right internal thoracic artery",
+        "sourceName": "right internal thoracic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA3969",
+        "bounds": {
+          "min": [
+            -0.4057449996471405,
+            3.7180004119873047,
+            0.5051999688148499
+          ],
+          "max": [
+            -0.12222599983215332,
+            5.493599891662598,
+            1.5079400539398193
+          ]
+        },
+        "center": [
+          -0.2639854997396469,
+          4.605800151824951,
+          1.0065700113773346
+        ],
+        "anchor": [
+          -0.17256499826908112,
+          4.709100246429443,
+          1.1441799402236938
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1937",
+            "sha256": "d8d3716593ee2f1e9001ff77b3e4619e2364062371bb1b5c4c928c0dd0fdd17e"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right internal thoracic artery on the model."
+      },
+      "currentHash": "09162d842999ddaab1bbcb6d95c749b23a07b08c97dd63b87f1ab8ee0d4ba83b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+        "fmaId": "FMA4068",
+        "name": "Left internal thoracic artery",
+        "sourceName": "left internal thoracic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4068",
+        "bounds": {
+          "min": [
+            0.12218199670314789,
+            3.7180004119873047,
+            0.5075500011444092
+          ],
+          "max": [
+            0.4147059917449951,
+            5.522299766540527,
+            1.5078998804092407
+          ]
+        },
+        "center": [
+          0.2684439942240715,
+          4.620150089263916,
+          1.007724940776825
+        ],
+        "anchor": [
+          0.17414499819278717,
+          4.728000640869141,
+          1.1305298805236816
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1972",
+            "sha256": "95cd8361a6efb53ebc3ecb64fcd52f92968f3b915def80142c01fefbaa35bceb"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left internal thoracic artery on the model."
+      },
+      "currentHash": "cd81bc3ed5aa93de0d1b68e16563e599ce780df0e6c7a9938006cb3c085b24fe"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+        "fmaId": "FMA3988",
+        "name": "Right superior epigastric artery",
+        "sourceName": "right superior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA3988",
+        "bounds": {
+          "min": [
+            -0.162758007645607,
+            2.0850000381469727,
+            1.3073500394821167
+          ],
+          "max": [
+            -0.058193400502204895,
+            3.747800350189209,
+            1.532420039176941
+          ]
+        },
+        "center": [
+          -0.11047570407390594,
+          2.916400194168091,
+          1.4198850393295288
+        ],
+        "anchor": [
+          -0.10448800027370453,
+          2.9230005741119385,
+          1.4897301197052002
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1936",
+            "sha256": "50f8f2849e884a93f4b223f88f91b4fff6b3fb738b3b59a0437250d355320393"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right superior epigastric artery on the model."
+      },
+      "currentHash": "c4ffb716c76f03331f3dec40c652a95598fc6da499f93de72b2da544e200937b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+        "fmaId": "FMA4083",
+        "name": "Left superior epigastric artery",
+        "sourceName": "left superior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4083",
+        "bounds": {
+          "min": [
+            0.058121100068092346,
+            2.0850000381469727,
+            1.3073500394821167
+          ],
+          "max": [
+            0.16272801160812378,
+            3.7477002143859863,
+            1.5324499607086182
+          ]
+        },
+        "center": [
+          0.11042455583810806,
+          2.9163501262664795,
+          1.4199000000953674
+        ],
+        "anchor": [
+          0.10056799650192261,
+          2.905799627304077,
+          1.4860299825668335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1971",
+            "sha256": "90a4c76477ebcf295c5790516ecaedb3c1e1737391ce4b87b11bbe7d5f423b0a"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left superior epigastric artery on the model."
+      },
+      "currentHash": "20243380983047a418d548aa54203d4783cfdee911d1835fbb4566e57a7319ac"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+        "fmaId": "FMA10692",
+        "name": "Right musculophrenic artery",
+        "sourceName": "right musculophrenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA10692",
+        "bounds": {
+          "min": [
+            -1.1400200128555298,
+            1.962499976158142,
+            0.463979035615921
+          ],
+          "max": [
+            -0.12452099472284317,
+            3.7452001571655273,
+            1.5226600170135498
+          ]
+        },
+        "center": [
+          -0.6322705037891865,
+          2.8538500666618347,
+          0.9933195263147354
+        ],
+        "anchor": [
+          -0.7030269503593445,
+          2.7461998462677,
+          1.3616600036621094
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1969",
+            "sha256": "8b4e68c9e0bf6ef0ca948cb6c511bb894b14156f1609d004c6a8c54303ce271c"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right musculophrenic artery on the model."
+      },
+      "currentHash": "6e95cac58415fb55b134cb2226bbdf07bf7973da888dfdbe548a746b8fc10bf7"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+        "fmaId": "FMA4077",
+        "name": "Left musculophrenic artery",
+        "sourceName": "left musculophrenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4077",
+        "bounds": {
+          "min": [
+            0.12459199875593185,
+            1.9625097513198853,
+            0.46400099992752075
+          ],
+          "max": [
+            1.1399199962615967,
+            3.74530029296875,
+            1.5226199626922607
+          ]
+        },
+        "center": [
+          0.6322559975087643,
+          2.8539050221443176,
+          0.9933104813098907
+        ],
+        "anchor": [
+          0.7044619917869568,
+          2.748000383377075,
+          1.3619500398635864
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1979",
+            "sha256": "f2010f732482ad9d6c1291d7c7ab2cdb839c2fc2bae2889fcc9147f0aa9d3ba6"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left musculophrenic artery on the model."
+      },
+      "currentHash": "6aff7dec37c110a5e4e5419aeceb6bbf768460c8e81e0a2be7a9f1bc188c7ce5"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-vein",
+        "fmaId": "FMA4758",
+        "name": "Right internal thoracic vein",
+        "sourceName": "right internal thoracic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4758",
+        "bounds": {
+          "min": [
+            -0.26538199186325073,
+            3.8387999534606934,
+            0.6932700276374817
+          ],
+          "max": [
+            -0.09159509837627411,
+            5.300400257110596,
+            1.4846899509429932
+          ]
+        },
+        "center": [
+          -0.17848854511976242,
+          4.5696001052856445,
+          1.0889799892902374
+        ],
+        "anchor": [
+          -0.1281770020723343,
+          4.6072998046875,
+          1.201200008392334
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1993",
+            "sha256": "e656a00a3ba808072998f0dd4e1b3285f4fd3b853d9a4952e60640c6a03f299b"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right internal thoracic vein on the model."
+      },
+      "currentHash": "f7209cef80bbc686ef9de73939fab0d420c12d75f709ce7ee5a1e294a26ab5fc"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-vein",
+        "fmaId": "FMA4772",
+        "name": "Right musculophrenic vein",
+        "sourceName": "right musculophrenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4772",
+        "bounds": {
+          "min": [
+            -1.0805100202560425,
+            2.200700044631958,
+            0.965910017490387
+          ],
+          "max": [
+            -0.09123200178146362,
+            3.868800163269043,
+            1.5580499172210693
+          ]
+        },
+        "center": [
+          -0.585871011018753,
+          3.0347501039505005,
+          1.2619799673557281
+        ],
+        "anchor": [
+          -0.599373996257782,
+          2.9973998069763184,
+          1.467579960823059
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1996",
+            "sha256": "a869265038e3f4cfeaaa2a4d3c3df7a2351760eae583caa3970bd2febd6c6f93"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right musculophrenic vein on the model."
+      },
+      "currentHash": "002c52941ac49e06aa8fd5da7f034e7b76040c8c50e9025091111f7ca09a6e81"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-vein",
+        "fmaId": "FMA4786",
+        "name": "Left musculophrenic vein",
+        "sourceName": "left musculophrenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4786",
+        "bounds": {
+          "min": [
+            0.09116069972515106,
+            2.200700044631958,
+            0.9658399820327759
+          ],
+          "max": [
+            1.080590009689331,
+            3.871500253677368,
+            1.5594298839569092
+          ]
+        },
+        "center": [
+          0.5858753547072411,
+          3.036100149154663,
+          1.2626349329948425
+        ],
+        "anchor": [
+          0.6027230024337769,
+          2.996500253677368,
+          1.4668999910354614
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1988",
+            "sha256": "cce6a4fb93dd3f4cb47112ae09e1045bf9ebf8243557c75f73ec268640c6b105"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left musculophrenic vein on the model."
+      },
+      "currentHash": "5f02114a066bc39e97593a5a2801a94d495340438aaaed334af47f79a12dc443"
+    }
+  ]
+}

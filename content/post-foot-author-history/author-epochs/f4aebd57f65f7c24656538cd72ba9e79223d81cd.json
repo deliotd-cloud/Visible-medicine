@@ -1,0 +1,526 @@
+{
+  "author": "f4aebd57f65f7c24656538cd72ba9e79223d81cd",
+  "parent": "245ccffe3a3161a83ee0fd7be643184519b2887a",
+  "tree": "cbb911bca8f7bf599ad15a2f784e78de691bc1fe",
+  "parentTree": "2e3cf36d10776c14a8e279eae4917ae16e816708",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 8,
+  "preserved": 9928,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-lateral-rectus",
+        "fmaId": "FMA49144",
+        "name": "Check ligament of right lateral rectus",
+        "sourceName": "check ligament of right lateral rectus",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA49144",
+        "bounds": {
+          "min": [
+            -0.4996659755706787,
+            7.163599967956543,
+            0.9336799383163452
+          ],
+          "max": [
+            -0.39750900864601135,
+            7.254399299621582,
+            1.0555000305175781
+          ]
+        },
+        "center": [
+          -0.44858749210834503,
+          7.2089996337890625,
+          0.9945899844169617
+        ],
+        "anchor": [
+          -0.45528000593185425,
+          7.210300445556641,
+          1.0030701160430908
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1334",
+            "sha256": "d9ca3ac16a64fce45856a1bc9efcc1b69e64bd1d13476c8d7a3a761922610f00"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find check ligament of right lateral rectus on the model."
+      },
+      "currentHash": "ab4a030ba21284f1cd38d4bb0f10314df736f64943e6a6ef89cd5c349f6fb98f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-lateral-rectus",
+        "fmaId": "FMA49145",
+        "name": "Check ligament of left lateral rectus",
+        "sourceName": "check ligament of left lateral rectus",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA49145",
+        "bounds": {
+          "min": [
+            0.38451099395751953,
+            7.163599967956543,
+            0.9336400032043457
+          ],
+          "max": [
+            0.4865560233592987,
+            7.254499435424805,
+            1.0554600954055786
+          ]
+        },
+        "center": [
+          0.4355335086584091,
+          7.209049701690674,
+          0.9945500493049622
+        ],
+        "anchor": [
+          0.44019100069999695,
+          7.213599681854248,
+          1.0030701160430908
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1284",
+            "sha256": "2bf9ca79c9454eb0b81d30f20d6b889343a6c3e974e19719233932052cf98708"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find check ligament of left lateral rectus on the model."
+      },
+      "currentHash": "f4f44b27cadbbe7d58804f415cfd9132ae72568eb3b6bf8ce8831c7a0f98411f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:ligament:check-ligament-of-right-medial-rectus",
+        "fmaId": "FMA49147",
+        "name": "Check ligament of right medial rectus",
+        "sourceName": "check ligament of right medial rectus",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA49147",
+        "bounds": {
+          "min": [
+            -0.20582398772239685,
+            7.140799522399902,
+            0.9859399199485779
+          ],
+          "max": [
+            -0.11489700525999069,
+            7.225300312042236,
+            1.1007400751113892
+          ]
+        },
+        "center": [
+          -0.16036049649119377,
+          7.183049917221069,
+          1.0433399975299835
+        ],
+        "anchor": [
+          -0.15227200090885162,
+          7.177700042724609,
+          1.0393600463867188
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1335",
+            "sha256": "d9e9be9082e35951f08cc43a0300f94145b8f99c7aaf049a8b773e2d9ad9a73e"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find check ligament of right medial rectus on the model."
+      },
+      "currentHash": "5bd7a8f424c29ae62d26c49d9c6ece61f5ee88e95b7d4155541b199c4b4579ef"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:ligament:check-ligament-of-left-medial-rectus",
+        "fmaId": "FMA49148",
+        "name": "Check ligament of left medial rectus",
+        "sourceName": "check ligament of left medial rectus",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-gaps",
+        "nodeName": "FMA49148",
+        "bounds": {
+          "min": [
+            0.10177700221538544,
+            7.140899658203125,
+            0.986020028591156
+          ],
+          "max": [
+            0.19280199706554413,
+            7.225200176239014,
+            1.1007100343704224
+          ]
+        },
+        "center": [
+          0.14728949964046478,
+          7.183049917221069,
+          1.0433650314807892
+        ],
+        "anchor": [
+          0.1385120004415512,
+          7.178299427032471,
+          1.0407600402832031
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1292",
+            "sha256": "1f1eae3eee17d09c5ae914f223b842bdd1a8bcf0c051953404ce09dff1693ed9"
+          }
+        ],
+        "coverageNote": "Selected source ligament surface. Attachments and adjoining spaces require specialist review. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find check ligament of left medial rectus on the model."
+      },
+      "currentHash": "6409ba327f1d44c1b61485a7cdc4c788f549cd23c839625b242c054bbde3e400"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-upper-eyelid",
+        "fmaId": "FMA59091",
+        "name": "Tarsal plate of right upper eyelid",
+        "sourceName": "tarsal plate of right upper eyelid",
+        "system": "connective",
+        "category": "connective-tissue",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-ocular-detail",
+        "nodeName": "FMA59091",
+        "bounds": {
+          "min": [
+            -0.44249600172042847,
+            7.166600227355957,
+            1.0664000511169434
+          ],
+          "max": [
+            -0.18660801649093628,
+            7.292099475860596,
+            1.1622999906539917
+          ]
+        },
+        "center": [
+          -0.3145520091056824,
+          7.229349851608276,
+          1.1143500208854675
+        ],
+        "anchor": [
+          -0.31737300753593445,
+          7.228799819946289,
+          1.1493099927902222
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1375",
+            "sha256": "752358970eb428283dadd2db88fbb3de3d08b7b876a9e346a84c21cb90a5e70a"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find tarsal plate of right upper eyelid on the model."
+      },
+      "currentHash": "02409a85730b833e57359bf4da240944ff500912d6a7e874bf7db2f91780b864"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-upper-eyelid",
+        "fmaId": "FMA59092",
+        "name": "Tarsal plate of left upper eyelid",
+        "sourceName": "tarsal plate of left upper eyelid",
+        "system": "connective",
+        "category": "connective-tissue",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-ocular-detail",
+        "nodeName": "FMA59092",
+        "bounds": {
+          "min": [
+            0.17353300750255585,
+            7.166800498962402,
+            1.066499948501587
+          ],
+          "max": [
+            0.42937901616096497,
+            7.292099475860596,
+            1.1623399257659912
+          ]
+        },
+        "center": [
+          0.3014560118317604,
+          7.229449987411499,
+          1.114419937133789
+        ],
+        "anchor": [
+          0.3106110095977783,
+          7.227800369262695,
+          1.1483700275421143
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1324",
+            "sha256": "eeb0db9872f49810b69d7865328602d6419327b2f46fda388cd76f8960f5f188"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find tarsal plate of left upper eyelid on the model."
+      },
+      "currentHash": "6d57d46e23852d942b98d1f2bb9bbe057165c48ee4f3d9ffd5b9b914b5e53723"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:connective-tissue:tarsal-plate-of-right-lower-eyelid",
+        "fmaId": "FMA59089",
+        "name": "Tarsal plate of right lower eyelid",
+        "sourceName": "tarsal plate of right lower eyelid",
+        "system": "connective",
+        "category": "connective-tissue",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-ocular-detail",
+        "nodeName": "FMA59089",
+        "bounds": {
+          "min": [
+            -0.43326500058174133,
+            7.070000171661377,
+            1.061000108718872
+          ],
+          "max": [
+            -0.19424299895763397,
+            7.153800010681152,
+            1.1511300802230835
+          ]
+        },
+        "center": [
+          -0.31375399976968765,
+          7.111900091171265,
+          1.1060650944709778
+        ],
+        "anchor": [
+          -0.31440800428390503,
+          7.112900257110596,
+          1.1345300674438477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1379",
+            "sha256": "fd33c2b682d289f26dc00f99cab43a8a835e15b5722d75850739a540517e4ff2"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find tarsal plate of right lower eyelid on the model."
+      },
+      "currentHash": "40d54e1eb4f4e748511d15e749b07daa0082a983766dfab89d55bb224769d667"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:connective-tissue:tarsal-plate-of-left-lower-eyelid",
+        "fmaId": "FMA59090",
+        "name": "Tarsal plate of left lower eyelid",
+        "sourceName": "tarsal plate of left lower eyelid",
+        "system": "connective",
+        "category": "connective-tissue",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-ocular-detail",
+        "nodeName": "FMA59090",
+        "bounds": {
+          "min": [
+            0.18118299543857574,
+            7.0701003074646,
+            1.0610100030899048
+          ],
+          "max": [
+            0.42014098167419434,
+            7.153800010681152,
+            1.1510800123214722
+          ]
+        },
+        "center": [
+          0.30066198855638504,
+          7.111950159072876,
+          1.1060450077056885
+        ],
+        "anchor": [
+          0.30309900641441345,
+          7.104000091552734,
+          1.1308900117874146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1328",
+            "sha256": "c3ba07f82baf4e55563d9736653ef768cb047bbf277a079aacbcfa780096d322"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find tarsal plate of left lower eyelid on the model."
+      },
+      "currentHash": "f25c6a018e2d2e637a6fed07da5a216bdd94d2c34f451b2ed997efc7ce73b6c7"
+    }
+  ]
+}

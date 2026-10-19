@@ -1,0 +1,460 @@
+{
+  "name": "git-pin-027f29d5",
+  "helper": "trunkMuscleQuizLesson",
+  "pinsHash": "750d8864cf79b6fbfff7d571b20350a5db888ca1e25847ddda617a70f35ac030",
+  "transitionHash": "89470372c54eedb7bdef7d5382276108cfd0aabfab8f71a89f812a590a539e07",
+  "pins": {
+    "baseline": "a2012adfb99d5cc76e30a392586c9c65a3cbb4be",
+    "authorCommit": "027f29d54045256c7b4d359eaed45a3dee2c5b25",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+          "fmaId": "FMA13336",
+          "name": "Right external oblique",
+          "sourceName": "right external oblique",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-muscles",
+          "nodeName": "FMA13336",
+          "bounds": {
+            "min": [
+              -1.408229947090149,
+              -0.06374023109674454,
+              -0.1297919899225235
+            ],
+            "max": [
+              -0.03448580205440521,
+              4.115799427032471,
+              1.6876600980758667
+            ]
+          },
+          "center": [
+            -0.7213578745722771,
+            2.026029597967863,
+            0.7789340540766716
+          ],
+          "anchor": [
+            -1.0500199794769287,
+            1.9734997749328613,
+            0.9708000421524048
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1452",
+              "sha256": "8fb254f196b1e249b1aea667d195f00c355f901f5fa89e37f586a8316c2fcdcd"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right external oblique on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+          "fmaId": "FMA13337",
+          "name": "Left external oblique",
+          "sourceName": "left external oblique",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-muscles",
+          "nodeName": "FMA13337",
+          "bounds": {
+            "min": [
+              0.034485701471567154,
+              -0.0637499988079071,
+              -0.1297919899225235
+            ],
+            "max": [
+              1.408229947090149,
+              4.115799427032471,
+              1.6876600980758667
+            ]
+          },
+          "center": [
+            0.721357824280858,
+            2.026024714112282,
+            0.7789340540766716
+          ],
+          "anchor": [
+            1.0500199794769287,
+            1.9734997749328613,
+            0.9708000421524048
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1452M",
+              "sha256": "2f0ba9782cf27bd57446c6f9f44a399bfb98e88a67136c7304e47098838fce1f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left external oblique on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+          "fmaId": "FMA13375",
+          "name": "Right pectoralis minor",
+          "sourceName": "right pectoralis minor",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-muscles",
+          "nodeName": "FMA13375",
+          "bounds": {
+            "min": [
+              -1.301759958267212,
+              3.8166003227233887,
+              0.3034919798374176
+            ],
+            "max": [
+              -0.697359025478363,
+              5.266700267791748,
+              1.2304699420928955
+            ]
+          },
+          "center": [
+            -0.9995594918727875,
+            4.541650295257568,
+            0.7669809609651566
+          ],
+          "anchor": [
+            -1.0301400423049927,
+            4.582299709320068,
+            0.8125500679016113
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1456",
+              "sha256": "65831afdc2f80bf5fca581f196de727aa30c3adcc682ac4506a4a5d6cc71db05"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right pectoralis minor on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+          "fmaId": "FMA13376",
+          "name": "Left pectoralis minor",
+          "sourceName": "left pectoralis minor",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-muscles",
+          "nodeName": "FMA13376",
+          "bounds": {
+            "min": [
+              0.697359025478363,
+              3.8166003227233887,
+              0.3034919798374176
+            ],
+            "max": [
+              1.301759958267212,
+              5.266700267791748,
+              1.2304699420928955
+            ]
+          },
+          "center": [
+            0.9995594918727875,
+            4.541650295257568,
+            0.7669809609651566
+          ],
+          "anchor": [
+            1.0301400423049927,
+            4.582299709320068,
+            0.8125500679016113
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1456M",
+              "sha256": "3fddf544e2ec4cf4f403cba3efe864a9aa6697ec75db0e12ca7589eb3229055b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left pectoralis minor on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+          "fmaId": "FMA13373",
+          "name": "Right pectoralis major",
+          "sourceName": "right pectoralis major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-muscles-dissection",
+          "nodeName": "FMA13373",
+          "bounds": {
+            "min": [
+              -1.878480076789856,
+              3.047800302505493,
+              0.3100000023841858
+            ],
+            "max": [
+              -0.04815569892525673,
+              5.13800048828125,
+              1.6935299634933472
+            ]
+          },
+          "center": [
+            -0.9633178878575563,
+            4.092900395393372,
+            1.0017649829387665
+          ],
+          "anchor": [
+            -1.0912799835205078,
+            4.103799819946289,
+            1.1295199394226074
+          ],
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ1446",
+              "sha256": "964ab8e287e7f44f14b07d8c7694ec70eee63bc9d7b1eeb3c5dc79e80460336d"
+            },
+            {
+              "file": "FJ1464",
+              "sha256": "bbdc0f731053d83a39689dcd5c9c7b559060de298b97bd90caee3791aeedd7bb"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find right pectoralis major on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+          "fmaId": "FMA13374",
+          "name": "Left pectoralis major",
+          "sourceName": "left pectoralis major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-muscles-dissection",
+          "nodeName": "FMA13374",
+          "bounds": {
+            "min": [
+              0.04815569892525673,
+              3.047800302505493,
+              0.3100000023841858
+            ],
+            "max": [
+              1.878480076789856,
+              5.13800048828125,
+              1.6935299634933472
+            ]
+          },
+          "center": [
+            0.9633178878575563,
+            4.092900395393372,
+            1.0017649829387665
+          ],
+          "anchor": [
+            1.0912799835205078,
+            4.103799819946289,
+            1.1295199394226074
+          ],
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ1446M",
+              "sha256": "950d6ab140639cb6633cd81edfeeef726a62b6b53d75a0ce0d0bd040e998a88b"
+            },
+            {
+              "file": "FJ1464M",
+              "sha256": "f3c9dd7ac80492a4f4269a88568a13276f66473796f651ca7c8ec5cc93e6e0f6"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find left pectoralis major on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "a2012adfb99d5cc76e30a392586c9c65a3cbb4be",
+    "authorCommit": "027f29d54045256c7b4d359eaed45a3dee2c5b25",
+    "sourcePinsHash": "750d8864cf79b6fbfff7d571b20350a5db888ca1e25847ddda617a70f35ac030",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:right:muscle:right-external-oblique",
+        "fmaId": "FMA13336",
+        "tab": "quiz",
+        "previousHash": "e3d2483b4df8d1bbc72acf4793b6244bacddeb18358e22a93d8f38bf8808d905",
+        "currentHash": "663c6560155c314df8ea7985548fe7365a70604e40c78ae7a995a690056ad001"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:left:muscle:left-external-oblique",
+        "fmaId": "FMA13337",
+        "tab": "quiz",
+        "previousHash": "0ad8d9abd4e44eae20e9db2d19710c2f8accfcdfad7ade12e3f821b413522ef1",
+        "currentHash": "22199c49755d7ec7f679ea5e4461e0b7e18247fa4e098e33faa7d376dc182ffa"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-minor",
+        "fmaId": "FMA13375",
+        "tab": "quiz",
+        "previousHash": "156c5d5da0727f05cb01256ab1c9ca28384afce5cc357506434c88dbb9b71e53",
+        "currentHash": "8d1ee3cefc02198ac0792611917ed89a44781b2d01e2e8b869e31084e3524b55"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-minor",
+        "fmaId": "FMA13376",
+        "tab": "quiz",
+        "previousHash": "89bb35c6a58d932d4bc85e2e37304c28421acb2f4fd3fbbf4f838acdd3a5143f",
+        "currentHash": "7e4a554e46e01ca35401d55ae681ddf9783ade8f5bb14ae326baa213438f007e"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:right:muscle:right-pectoralis-major",
+        "fmaId": "FMA13373",
+        "tab": "quiz",
+        "previousHash": "db17a162b4a0c1f0afb282b7a74dcd0b39e14abbac255263270e57fed4331d43",
+        "currentHash": "b736e30a56973c7fdf766a50478cf94ade0df2162b72ccc08e78d4e65fe9654c"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:left:muscle:left-pectoralis-major",
+        "fmaId": "FMA13374",
+        "tab": "quiz",
+        "previousHash": "26e6041cb0829a1db86f5006cd2bdd5b6e4f7bbc98b84ace79feab7073a02207",
+        "currentHash": "c4f6940d3a1728daedabc7d805d4488910b9b3e3b97b76cdf64c45708439e0a2"
+      }
+    ]
+  },
+  "sourceRecordHash": "5477f7ac423f981887ae4a9f7522e79fc01620717fe2db7a70336d1375cef7de",
+  "originalPinPath": "content/trunk-muscle-quiz-pins.json",
+  "originalPinHash": "a7570d74365599f8ef456462a0b3fa77e6b3ab60f83346466be3075a2e453c1c",
+  "originalPinBlob": "6b7efd11691fdda9995ed115a4315d6374c92992",
+  "originalTransitionPaths": []
+}

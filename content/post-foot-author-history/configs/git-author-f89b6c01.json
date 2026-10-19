@@ -1,0 +1,94 @@
+{
+  "name": "git-author-f89b6c01",
+  "helper": "thoracicEusOrientationLesson",
+  "pinsHash": "09591d07eb76ffbf2020c5ddb74327c146a227357a2fdd04190327e6c77eba59",
+  "transitionHash": "6da5915d28c20f4ac3aa3ad203d2e0041b1ff7a5906c6d9de44f1b83fb497bd9",
+  "pins": {
+    "baseline": "b03ba458907946c1b1c152149ee5867f8d6a62df",
+    "authorCommit": "f89b6c01aec40fba4de81e26ec433ef4fe2b5e96",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+          "fmaId": "FMA4838",
+          "name": "Azygos vein",
+          "sourceName": "azygos vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-recovery",
+          "nodeName": "FMA4838",
+          "bounds": {
+            "min": [
+              -0.18150199949741364,
+              2.737499952316284,
+              0.09845699369907379
+            ],
+            "max": [
+              -0.05621640384197235,
+              4.913000583648682,
+              0.6302899718284607
+            ]
+          },
+          "center": [
+            -0.118859201669693,
+            3.825250267982483,
+            0.36437348276376724
+          ],
+          "anchor": [
+            -0.14386799931526184,
+            3.819399356842041,
+            0.22390297055244446
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3416",
+              "sha256": "88b374af13155c62ea5bcaad554a699d1d95e23948eeb810b62edb7467789dde"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "b03ba458907946c1b1c152149ee5867f8d6a62df",
+    "authorCommit": "f89b6c01aec40fba4de81e26ec433ef4fe2b5e96",
+    "sourcePinsHash": "09591d07eb76ffbf2020c5ddb74327c146a227357a2fdd04190327e6c77eba59",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thorax:unspecified:vessel:azygos-vein",
+        "fmaId": "FMA4838",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "76c6caa4923afbfbb8cf07423de47c6fb0311d30b99a88e9d3a797a092e70d56"
+      }
+    ]
+  },
+  "sourceRecordHash": "1325a1b29f14cb20726bab94aad4dd4702a1b0cb113897ec624ba4045140f623"
+}

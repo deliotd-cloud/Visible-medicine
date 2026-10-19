@@ -1,0 +1,164 @@
+{
+  "name": "git-author-8bed1346-commissuralLandmarkQuizLesson",
+  "helper": "commissuralLandmarkQuizLesson",
+  "pinsHash": "ca4febdf0ecc439daa4c7db2166ccd1d9753665c2484ae0c9ce86ca6fab4994d",
+  "transitionHash": "9a25762544cd535788f4e1540cfaf55b5bcd08121e131c81dabe1fa99a953da9",
+  "pins": {
+    "baseline": "dc8212978d4929c26c514bb08f9ed8e5f6df8cef",
+    "authorCommit": "8bed1346b996bce5857cd6d36f5d0d7acfecbf13",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+          "fmaId": "FMA61970",
+          "name": "Commissure of fornix of forebrain",
+          "sourceName": "commissure of fornix of forebrain",
+          "system": "nerves",
+          "category": "organ",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-nerves-deep-brain",
+          "nodeName": "FMA61970",
+          "bounds": {
+            "min": [
+              -0.25186100602149963,
+              7.465699672698975,
+              0.07049598544836044
+            ],
+            "max": [
+              0.2386689931154251,
+              7.668799877166748,
+              0.3799839913845062
+            ]
+          },
+          "center": [
+            -0.006596006453037262,
+            7.567249774932861,
+            0.22523998841643333
+          ],
+          "anchor": [
+            -0.007657529786229134,
+            7.6080002784729,
+            0.2032710313796997
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1741",
+              "sha256": "ad64cdc4effe097467b438b820a50ce2eb76440ac89112705e326d45386625bc"
+            }
+          ],
+          "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find commissure of fornix of forebrain on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+          "fmaId": "FMA62072",
+          "name": "Posterior commissure",
+          "sourceName": "posterior commissure",
+          "system": "nerves",
+          "category": "organ",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-nerves-deep-brain",
+          "nodeName": "FMA62072",
+          "bounds": {
+            "min": [
+              -0.08425849676132202,
+              7.434699535369873,
+              0.21017998456954956
+            ],
+            "max": [
+              0.06989699602127075,
+              7.461999416351318,
+              0.26102203130722046
+            ]
+          },
+          "center": [
+            -0.007180750370025635,
+            7.448349475860596,
+            0.235601007938385
+          ],
+          "anchor": [
+            -0.010294300504028797,
+            7.4569993019104,
+            0.23569197952747345
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1799",
+              "sha256": "1b8e46294f95f1b68d03a2ca1ce73447b210a7c2b0c3cbb8bde1e836268bfddc"
+            }
+          ],
+          "coverageNote": "Unvalidated deep-brain source surface in the unchanged BodyParts3D 4.0 reference frame. No internal nuclear subdivision, axonal connectivity, diffusion tractography, MRI signal or patient registration is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find posterior commissure on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "dc8212978d4929c26c514bb08f9ed8e5f6df8cef",
+    "authorCommit": "8bed1346b996bce5857cd6d36f5d0d7acfecbf13",
+    "sourcePinsHash": "ca4febdf0ecc439daa4c7db2166ccd1d9753665c2484ae0c9ce86ca6fab4994d",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:midline:organ:commissure-of-fornix-of-forebrain",
+        "fmaId": "FMA61970",
+        "tab": "quiz",
+        "previousHash": "8c6e30d7bd030150fbf19beb7af30b614d64ed2599be03de0af5b586ad103763",
+        "currentHash": "ff325dfd1c3cd722d32f6cc5c61bc1c6160f0385a9e8ddfdd204e4ace4bc7896"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:midline:organ:posterior-commissure",
+        "fmaId": "FMA62072",
+        "tab": "quiz",
+        "previousHash": "d89d8a8ec73c34aa99493e6577682095cc7c95e0192cf51f85395efa77fd038b",
+        "currentHash": "910d48249c5fd1411f13ef1cff370386defa8f061c06bcbd9fa0a079bc5dbd81"
+      }
+    ]
+  },
+  "sourceRecordHash": "0bc7cef3d48a6056158840a30d6c542df7289e5fb8519036c5e6fbbe5504c52c"
+}

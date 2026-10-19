@@ -1,0 +1,1054 @@
+{
+  "author": "eb34afd7f1adc6a9655d3e4f238c9eb2c5288cf1",
+  "parent": "c978ecee3bdddfeaf2995ecbf62d5178e719c4fb",
+  "tree": "ee0cc791b247104f0d80b4ac8e82464b1c60aeef",
+  "parentTree": "5b468123c407a2ffc8eeacd88a42b9a56ef7f688",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 16,
+  "preserved": 9920,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:clavicular-part-of-right-deltoid",
+        "fmaId": "FMA34680",
+        "name": "Clavicular part of right deltoid",
+        "sourceName": "clavicular part of right deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34680",
+        "bounds": {
+          "min": [
+            -2.0361900329589844,
+            4.03849983215332,
+            0.2512519955635071
+          ],
+          "max": [
+            -0.8855500221252441,
+            5.553900241851807,
+            0.7133100032806396
+          ]
+        },
+        "center": [
+          -1.4608700275421143,
+          4.7962000370025635,
+          0.48228099942207336
+        ],
+        "anchor": [
+          -1.5803300142288208,
+          4.938100814819336,
+          0.6531999707221985
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1468",
+            "sha256": "09eebb4a8d72c91936b0bfde7f35829a58f56103ac158f559186698458bcc616"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "7f74feb2b789f41c4b624d937e41e679cbd90415008cd7dd1fd929b3d247edb9"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:clavicular-part-of-left-deltoid",
+        "fmaId": "FMA34681",
+        "name": "Clavicular part of left deltoid",
+        "sourceName": "clavicular part of left deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34681",
+        "bounds": {
+          "min": [
+            0.8855500221252441,
+            4.03849983215332,
+            0.2512519955635071
+          ],
+          "max": [
+            2.0361900329589844,
+            5.553900241851807,
+            0.7133100032806396
+          ]
+        },
+        "center": [
+          1.4608700275421143,
+          4.7962000370025635,
+          0.48228099942207336
+        ],
+        "anchor": [
+          1.5803300142288208,
+          4.938100814819336,
+          0.6531999707221985
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1468M",
+            "sha256": "75340ac9157ea6c64baaa74c0bbfd6173114dcff0d30ea814702c288b002f104"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "80feeb1f72ce40d74bbe90d35820dbcefb3711f6ce8ef70b8785e3d08aaf6028"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:acromial-part-of-right-deltoid",
+        "fmaId": "FMA34682",
+        "name": "Acromial part of right deltoid",
+        "sourceName": "acromial part of right deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34682",
+        "bounds": {
+          "min": [
+            -2.272279977798462,
+            4.050899505615234,
+            -0.09162899106740952
+          ],
+          "max": [
+            -1.4658600091934204,
+            5.492199897766113,
+            0.5333799719810486
+          ]
+        },
+        "center": [
+          -1.8690699934959412,
+          4.771549701690674,
+          0.22087549045681953
+        ],
+        "anchor": [
+          -1.9287699460983276,
+          4.7669997215271,
+          0.30686700344085693
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1467",
+            "sha256": "2f69f1a13c836539abca85d9b77f55f96319ad3fdd75c62f498eabe49b266bfe"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "a4222bde35cecf21cf7ccb4a8d5931e36b4537e8deb271cf04c4ab21e203c64b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:acromial-part-of-left-deltoid",
+        "fmaId": "FMA34683",
+        "name": "Acromial part of left deltoid",
+        "sourceName": "acromial part of left deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34683",
+        "bounds": {
+          "min": [
+            1.4658600091934204,
+            4.050899505615234,
+            -0.09162899106740952
+          ],
+          "max": [
+            2.272279977798462,
+            5.492199897766113,
+            0.5333699584007263
+          ]
+        },
+        "center": [
+          1.8690699934959412,
+          4.771549701690674,
+          0.2208704836666584
+        ],
+        "anchor": [
+          1.9287800788879395,
+          4.7669997215271,
+          0.3068679869174957
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1467M",
+            "sha256": "a523b5f2ab862ad6505787f4936098fbcfe3f28a3742b57aac34307fe752f8eb"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "9349081c7eef20171fb0a0c53416fda03235f5fc7deb745709cede3d15b366a0"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:spinal-part-of-right-deltoid",
+        "fmaId": "FMA34684",
+        "name": "Spinal part of right deltoid",
+        "sourceName": "spinal part of right deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34684",
+        "bounds": {
+          "min": [
+            -2.1917099952697754,
+            3.877500057220459,
+            -0.4727487862110138
+          ],
+          "max": [
+            -0.828341007232666,
+            5.398399829864502,
+            0.29252997040748596
+          ]
+        },
+        "center": [
+          -1.5100255012512207,
+          4.6379499435424805,
+          -0.09010940790176392
+        ],
+        "anchor": [
+          -1.6042500734329224,
+          4.669000148773193,
+          -0.24217501282691956
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1513",
+            "sha256": "ef8308c92fd0d01d8c0d7ffd9238305eefc2f28710d7bb58f451512abdc08e99"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "20e046efafd230c0129a2779c6de9cdd17d9d45940a464270f6941608841873f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:spinal-part-of-left-deltoid",
+        "fmaId": "FMA34685",
+        "name": "Spinal part of left deltoid",
+        "sourceName": "spinal part of left deltoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA34685",
+        "bounds": {
+          "min": [
+            0.828341007232666,
+            3.877500057220459,
+            -0.4727487862110138
+          ],
+          "max": [
+            2.1917099952697754,
+            5.398399829864502,
+            0.29252997040748596
+          ]
+        },
+        "center": [
+          1.5100255012512207,
+          4.6379499435424805,
+          -0.09010940790176392
+        ],
+        "anchor": [
+          1.6042500734329224,
+          4.669000148773193,
+          -0.24217501282691956
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1513M",
+            "sha256": "a806a9a20b68009f0071c22411b009f4baef3de118f00a37cc4a3be8cdf7ce2e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "7a920b777d2ae222ffb682ececea7a2a96f8246d08faf884345d9919e66177b3"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+        "fmaId": "FMA37684",
+        "name": "Short head of right biceps brachii",
+        "sourceName": "short head of right biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37684",
+        "bounds": {
+          "min": [
+            -2.1238999366760254,
+            2.6521997451782227,
+            0.2595809996128082
+          ],
+          "max": [
+            -1.352370023727417,
+            5.277600288391113,
+            0.5910099744796753
+          ]
+        },
+        "center": [
+          -1.7381349802017212,
+          3.964900016784668,
+          0.42529548704624176
+        ],
+        "anchor": [
+          -1.8180700540542603,
+          3.974900007247925,
+          0.46761101484298706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1512",
+            "sha256": "2173b7cce29f11036907b80e068e9bd6c16f22359d6e7994af9684454b99b4d5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "6fe8701a12c0ad7bcbb6819441344b135a2cca16fc99be8d5b5180ff810c3a8e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+        "fmaId": "FMA37685",
+        "name": "Short head of left biceps brachii",
+        "sourceName": "short head of left biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37685",
+        "bounds": {
+          "min": [
+            1.352370023727417,
+            2.6521997451782227,
+            0.2595809996128082
+          ],
+          "max": [
+            2.1238999366760254,
+            5.277600288391113,
+            0.5910199880599976
+          ]
+        },
+        "center": [
+          1.7381349802017212,
+          3.964900016784668,
+          0.4253004938364029
+        ],
+        "anchor": [
+          1.8180700540542603,
+          3.974900007247925,
+          0.46761101484298706
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1512M",
+            "sha256": "6b0ed7b70973b3a2e08de4ea5ce59c05a4ddce2b90212ff734326be2726d1293"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "7342aef9a23046a091a7d17f89642a23fa1d144dd3be241f2598fac105456505"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+        "fmaId": "FMA37686",
+        "name": "Long head of right biceps brachii",
+        "sourceName": "long head of right biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37686",
+        "bounds": {
+          "min": [
+            -2.2985999584198,
+            1.9407202005386353,
+            0.1780889928340912
+          ],
+          "max": [
+            -1.3526800870895386,
+            5.394200325012207,
+            0.5929200053215027
+          ]
+        },
+        "center": [
+          -1.8256400227546692,
+          3.667460262775421,
+          0.38550449907779694
+        ],
+        "anchor": [
+          -1.8757001161575317,
+          3.694000244140625,
+          0.42243897914886475
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1478",
+            "sha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "7bae15efa3ecd5db1655a5ae7e92a0283c36c81427422b381a67fcb833552f51"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+        "fmaId": "FMA37687",
+        "name": "Long head of left biceps brachii",
+        "sourceName": "long head of left biceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37687",
+        "bounds": {
+          "min": [
+            1.3526800870895386,
+            1.9407202005386353,
+            0.1780889928340912
+          ],
+          "max": [
+            2.2985999584198,
+            5.394200325012207,
+            0.592930018901825
+          ]
+        },
+        "center": [
+          1.8256400227546692,
+          3.667460262775421,
+          0.38550950586795807
+        ],
+        "anchor": [
+          1.8757100105285645,
+          3.694000244140625,
+          0.42243897914886475
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1478M",
+            "sha256": "10189f1d7b5220df3baef2b259ae9855ed301c1afaadfc2de25af3222c5a08fc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "975ec1a2453f6ee2a812ddb2e1a78612a45eb5a02b22095f289409066c5f51b7"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+        "fmaId": "FMA37695",
+        "name": "Medial head of right triceps brachii",
+        "sourceName": "medial head of right triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37695",
+        "bounds": {
+          "min": [
+            -2.269629955291748,
+            2.293499708175659,
+            -0.03682800382375717
+          ],
+          "max": [
+            -1.6737300157546997,
+            4.560400485992432,
+            0.21879898011684418
+          ]
+        },
+        "center": [
+          -1.9716799855232239,
+          3.4269500970840454,
+          0.0909854881465435
+        ],
+        "anchor": [
+          -2.004539966583252,
+          3.4326000213623047,
+          0.039486005902290344
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1480",
+            "sha256": "1ea653667afa5ff0bf0e01d71ac648819655241c130e8dd1778ed2f9561c34c5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "1de6c576379d55de1cc6366f43da4bcf456514623d29dacf3768c3b295f14a06"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+        "fmaId": "FMA37696",
+        "name": "Medial head of left triceps brachii",
+        "sourceName": "medial head of left triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37696",
+        "bounds": {
+          "min": [
+            1.6737399101257324,
+            2.293499708175659,
+            -0.03682800382375717
+          ],
+          "max": [
+            2.269629955291748,
+            4.560400485992432,
+            0.21879898011684418
+          ]
+        },
+        "center": [
+          1.9716849327087402,
+          3.4269500970840454,
+          0.0909854881465435
+        ],
+        "anchor": [
+          2.004549980163574,
+          3.432499885559082,
+          0.039487000554800034
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1480M",
+            "sha256": "fc35854102a057ca85a201eeff4c18f03722b1ceab52c311ce1b87abf4fa2ff8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "0ce24e542281bd57ef146766036edca0861e7d31bc464a8ff5eecf13d98699c3"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+        "fmaId": "FMA37697",
+        "name": "Lateral head of right triceps brachii",
+        "sourceName": "lateral head of right triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37697",
+        "bounds": {
+          "min": [
+            -2.280050039291382,
+            2.3596997261047363,
+            -0.2991580069065094
+          ],
+          "max": [
+            -1.74455988407135,
+            4.921299934387207,
+            0.18796798586845398
+          ]
+        },
+        "center": [
+          -2.012304961681366,
+          3.6404998302459717,
+          -0.05559501051902771
+        ],
+        "anchor": [
+          -1.9548399448394775,
+          3.627500057220459,
+          -0.12564602494239807
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1477",
+            "sha256": "1d1c3b42eec0dffe696bd25cffa81784c87c15f16c9605050fdf1cb2f47698dd"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "63dc403eb263cc5b8828bbdecd3798cf2c183e26368966bfdec338a1c00ccc3d"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+        "fmaId": "FMA37698",
+        "name": "Lateral head of left triceps brachii",
+        "sourceName": "lateral head of left triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37698",
+        "bounds": {
+          "min": [
+            1.74455988407135,
+            2.3596997261047363,
+            -0.2991580069065094
+          ],
+          "max": [
+            2.280050039291382,
+            4.921299934387207,
+            0.18796798586845398
+          ]
+        },
+        "center": [
+          2.012304961681366,
+          3.6404998302459717,
+          -0.05559501051902771
+        ],
+        "anchor": [
+          1.9548399448394775,
+          3.627500057220459,
+          -0.12564602494239807
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1477M",
+            "sha256": "96d9859e983736f53864e53fa0579b8f6a18006067967df42e4fe7ea2d2b9e6f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "8024b5d0b6620d780c147b9548b93bbef1ccc08cc62228e592f4814e357df55b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+        "fmaId": "FMA37699",
+        "name": "Long head of right triceps brachii",
+        "sourceName": "long head of right triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37699",
+        "bounds": {
+          "min": [
+            -2.1646201610565186,
+            2.3523998260498047,
+            -0.312404990196228
+          ],
+          "max": [
+            -1.346909999847412,
+            5.007500171661377,
+            0.1410209685564041
+          ]
+        },
+        "center": [
+          -1.7557650804519653,
+          3.679949998855591,
+          -0.08569201081991196
+        ],
+        "anchor": [
+          -1.7705299854278564,
+          3.6558997631073,
+          0.012681007385253906
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1479",
+            "sha256": "acc48f746bd07a117357a9c49a1a9850c96b85d7c63cf90a662a45717875a315"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "ee9f114de8eebfb4125eb3f0fe06a81a9c603479057d0fcff30a9351ee823451"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+        "fmaId": "FMA37700",
+        "name": "Long head of left triceps brachii",
+        "sourceName": "long head of left triceps brachii",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm"
+        ],
+        "bundle": "shoulder-arm-muscles-dissection",
+        "nodeName": "FMA37700",
+        "bounds": {
+          "min": [
+            1.346909999847412,
+            2.3523998260498047,
+            -0.31240400671958923
+          ],
+          "max": [
+            2.1646201610565186,
+            5.007500171661377,
+            0.1410209685564041
+          ]
+        },
+        "center": [
+          1.7557650804519653,
+          3.679949998855591,
+          -0.08569151908159256
+        ],
+        "anchor": [
+          1.7705299854278564,
+          3.6558997631073,
+          0.012681007385253906
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1479M",
+            "sha256": "4b8315f9134a213f45c3af830270f4526e705d0a149894516d3f5fba98878f15"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "fd506e57ac7dc87ba1c86fe582b7e196264a33908fa14bc5820c75fff8058c49"
+    }
+  ]
+}

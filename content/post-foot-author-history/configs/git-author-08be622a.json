@@ -1,0 +1,238 @@
+{
+  "name": "git-author-08be622a",
+  "helper": "hepaticArterialXrayLesson",
+  "pinsHash": "d0c20c70c44fc263f8c3447f67d68d55d4224f46a89264365bf45fc22222fcd3",
+  "transitionHash": "4d3d345d1094dc17d8c5d5c7636af34347768341272fb75ff23f4e5dee5fed27",
+  "pins": {
+    "baseline": "63e57a037ec0092dedaaad96846b5e679d84482f",
+    "authorCommit": "08be622a4871c75e49d99b233ada87af79a90f26",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+          "fmaId": "FMA14771",
+          "name": "Common hepatic artery",
+          "sourceName": "common hepatic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-recovery",
+          "nodeName": "FMA14771",
+          "bounds": {
+            "min": [
+              -0.15322299301624298,
+              2.7520995140075684,
+              0.7689099907875061
+            ],
+            "max": [
+              0.05790700018405914,
+              2.8542003631591797,
+              0.9266900420188904
+            ]
+          },
+          "center": [
+            -0.04765799641609192,
+            2.803149938583374,
+            0.8478000164031982
+          ],
+          "anchor": [
+            -0.027087800204753876,
+            2.7968993186950684,
+            0.8521899580955505
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3078",
+              "sha256": "f8285f60775b0feb990af2f35591196b2a43253c87df2c8b02b7ec7f492d1409"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+          "fmaId": "FMA14772",
+          "name": "Hepatic artery proper",
+          "sourceName": "hepatic artery proper",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-recovery",
+          "nodeName": "FMA14772",
+          "bounds": {
+            "min": [
+              -0.22417400777339935,
+              2.815300226211548,
+              0.8881500363349915
+            ],
+            "max": [
+              -0.1144069954752922,
+              3.1173999309539795,
+              1.0145798921585083
+            ]
+          },
+          "center": [
+            -0.16929050162434578,
+            2.9663500785827637,
+            0.9513649642467499
+          ],
+          "anchor": [
+            -0.17672199010849,
+            2.9759998321533203,
+            0.9442999362945557
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3081",
+              "sha256": "bd4cff9e5fc6feb0d0f742a91d8a67e1fa4cda96e455e5a21a638b064d195da6"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+          "fmaId": "FMA14768",
+          "name": "Left gastric artery",
+          "sourceName": "left gastric artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-recovery",
+          "nodeName": "FMA14768",
+          "bounds": {
+            "min": [
+              0.049337901175022125,
+              2.809000253677368,
+              0.7280099987983704
+            ],
+            "max": [
+              0.26731598377227783,
+              3.2628002166748047,
+              1.194849967956543
+            ]
+          },
+          "center": [
+            0.15832694247364998,
+            3.0359002351760864,
+            0.9614299833774567
+          ],
+          "anchor": [
+            0.1788559854030609,
+            3.014200448989868,
+            0.849120020866394
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3499",
+              "sha256": "983a0580d4324a210eeb5671c4caf115c29ce13c0761e718102db8092a849ccf"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "63e57a037ec0092dedaaad96846b5e679d84482f",
+    "authorCommit": "08be622a4871c75e49d99b233ada87af79a90f26",
+    "sourcePinsHash": "d0c20c70c44fc263f8c3447f67d68d55d4224f46a89264365bf45fc22222fcd3",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:common-hepatic-artery",
+        "fmaId": "FMA14771",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "66895193a79767adb903ed039af8a49b52d7b9416b04fe2f6994158aad24c877"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-artery-proper",
+        "fmaId": "FMA14772",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "fe7a21f55e15e9900163103ebcfb529c75f74b8df1f3977953b942fac5a4f517"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+        "fmaId": "FMA14768",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "12c110c2f7f299252d3eb459f869f1bb7d6f94266e60a39050b89be6130a2a80"
+      }
+    ]
+  },
+  "sourceRecordHash": "a1df4da98f74651e106ae99cf3669568e72078296397dc6a35baccc112cdf3b9"
+}

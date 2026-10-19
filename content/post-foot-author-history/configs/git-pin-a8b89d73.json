@@ -1,0 +1,602 @@
+{
+  "name": "git-pin-a8b89d73",
+  "helper": "thoracoacromialQuizLesson",
+  "pinsHash": "cf04612b669f52d58fdc4f27a0f8051e5275cbb8d9999da8ac76c7105cfd76fd",
+  "transitionHash": "a4a1611cea0376f582fea14a6813c8a58ef2e206f21bd6a0d62429e09e18e1e4",
+  "pins": {
+    "baseline": "894c899f194b143c3ef6260f88e017296917649f",
+    "authorCommit": "a8b89d733da4bbd2b984071a01542d5184f35a4b",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA66563",
+          "name": "Trunk of right thoraco-acromial artery",
+          "sourceName": "trunk of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA66563",
+          "bounds": {
+            "min": [
+              -0.9646859765052795,
+              5.183399677276611,
+              0.4785099923610687
+            ],
+            "max": [
+              -0.9166169762611389,
+              5.309200286865234,
+              0.5283600091934204
+            ]
+          },
+          "center": [
+            -0.9406514763832092,
+            5.246299982070923,
+            0.5034350007772446
+          ],
+          "anchor": [
+            -0.9337560534477234,
+            5.278399467468262,
+            0.4792209565639496
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2304",
+              "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find trunk of right thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA66564",
+          "name": "Trunk of left thoraco-acromial artery",
+          "sourceName": "trunk of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA66564",
+          "bounds": {
+            "min": [
+              0.9166539907455444,
+              5.183299541473389,
+              0.4786139726638794
+            ],
+            "max": [
+              0.9652439951896667,
+              5.309000015258789,
+              0.528659999370575
+            ]
+          },
+          "center": [
+            0.9409489929676056,
+            5.246149778366089,
+            0.5036369860172272
+          ],
+          "anchor": [
+            0.9215799570083618,
+            5.276999473571777,
+            0.48698097467422485
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2252",
+              "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find trunk of left thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23063",
+          "name": "Pectoral branch of right thoraco-acromial artery",
+          "sourceName": "pectoral branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23063",
+          "bounds": {
+            "min": [
+              -1.2689299583435059,
+              4.00629997253418,
+              0.48791801929473877
+            ],
+            "max": [
+              -0.9245250225067139,
+              5.224100112915039,
+              0.9948499798774719
+            ]
+          },
+          "center": [
+            -1.0967274904251099,
+            4.615200042724609,
+            0.7413839995861053
+          ],
+          "anchor": [
+            -1.1094200611114502,
+            4.625999927520752,
+            0.7812199592590332
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2361",
+              "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find pectoral branch of right thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23064",
+          "name": "Pectoral branch of left thoraco-acromial artery",
+          "sourceName": "pectoral branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23064",
+          "bounds": {
+            "min": [
+              0.9245760440826416,
+              4.00629997253418,
+              0.4878929853439331
+            ],
+            "max": [
+              1.268880009651184,
+              5.224100112915039,
+              0.9948499798774719
+            ]
+          },
+          "center": [
+            1.0967280268669128,
+            4.615200042724609,
+            0.7413714826107025
+          ],
+          "anchor": [
+            1.1071399450302124,
+            4.64069938659668,
+            0.7724999785423279
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2330",
+              "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find pectoral branch of left thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23068",
+          "name": "Acromial branch of right thoraco-acromial artery",
+          "sourceName": "acromial branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23068",
+          "bounds": {
+            "min": [
+              -1.3827999830245972,
+              5.175000190734863,
+              0.46362799406051636
+            ],
+            "max": [
+              -0.9414899945259094,
+              5.349799633026123,
+              0.5357099771499634
+            ]
+          },
+          "center": [
+            -1.1621449887752533,
+            5.262399911880493,
+            0.49966898560523987
+          ],
+          "anchor": [
+            -1.1718900203704834,
+            5.241800308227539,
+            0.4815899729728699
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2263",
+              "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find acromial branch of right thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23069",
+          "name": "Acromial branch of left thoraco-acromial artery",
+          "sourceName": "acromial branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23069",
+          "bounds": {
+            "min": [
+              0.9414849877357483,
+              5.174900054931641,
+              0.4637850224971771
+            ],
+            "max": [
+              1.3825300931930542,
+              5.349799633026123,
+              0.5355899930000305
+            ]
+          },
+          "center": [
+            1.1620075404644012,
+            5.262349843978882,
+            0.4996875077486038
+          ],
+          "anchor": [
+            1.169390082359314,
+            5.241700649261475,
+            0.47968003153800964
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2211",
+              "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find acromial branch of left thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23072",
+          "name": "Deltoid branch of right thoraco-acromial artery",
+          "sourceName": "deltoid branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23072",
+          "bounds": {
+            "min": [
+              -1.6184399127960205,
+              5.1080002784729,
+              0.4776820242404938
+            ],
+            "max": [
+              -1.1191400289535522,
+              5.21150016784668,
+              0.5387200117111206
+            ]
+          },
+          "center": [
+            -1.3687899708747864,
+            5.15975022315979,
+            0.5082010179758072
+          ],
+          "anchor": [
+            -1.3607699871063232,
+            5.134900093078613,
+            0.5233399868011475
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2282",
+              "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find deltoid branch of right thoraco-acromial artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23073",
+          "name": "Deltoid branch of left thoraco-acromial artery",
+          "sourceName": "deltoid branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23073",
+          "bounds": {
+            "min": [
+              1.1192200183868408,
+              5.108100414276123,
+              0.47790297865867615
+            ],
+            "max": [
+              1.6182299852371216,
+              5.211400032043457,
+              0.5388400554656982
+            ]
+          },
+          "center": [
+            1.3687250018119812,
+            5.15975022315979,
+            0.5083715170621872
+          ],
+          "anchor": [
+            1.3586399555206299,
+            5.135500431060791,
+            0.5237900018692017
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2230",
+              "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find deltoid branch of left thoraco-acromial artery on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "894c899f194b143c3ef6260f88e017296917649f",
+    "authorCommit": "a8b89d733da4bbd2b984071a01542d5184f35a4b",
+    "sourcePinsHash": "cf04612b669f52d58fdc4f27a0f8051e5275cbb8d9999da8ac76c7105cfd76fd",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA66563",
+        "tab": "quiz",
+        "previousHash": "aeb3ed1b9b1b0e75e0bd9a6f7dc5d28224aa5980ab285d64c6953bade944d398",
+        "currentHash": "9af18540eed6d095cd020675e1f74e9a835199a8a35888e415bd83e13922b481"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA66564",
+        "tab": "quiz",
+        "previousHash": "2086128063fbb99f396a305d8e39b0f015d6403f48ca2090943cf5632e3a8636",
+        "currentHash": "70c653e304c2eb07abca8826f9dc10fd9f60dee03724ffc2da081275f4c07813"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23063",
+        "tab": "quiz",
+        "previousHash": "8b63d385a8b2525808d70f6b0587e2db3dbb92603533c6e3e8acb53ba4ab8b50",
+        "currentHash": "d071ae0d99d1938dadeee20adcea4833b41b5e9e7e73c82457964ec9e425a3b1"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23064",
+        "tab": "quiz",
+        "previousHash": "465c905bbd5c9c2c44b98ae0ff27cd51e9ac25bde17763aff243803a03910820",
+        "currentHash": "e245f8811f4b25d786422765759923ee5ced46be3430dbf2c1e1536b0dfc340a"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23068",
+        "tab": "quiz",
+        "previousHash": "4eb94d58a7cd945ea88aaba5ce4bb8be1b61ed0df444c6cde2ee65beca739ee5",
+        "currentHash": "0625b0b351677914632b37b4c821749bf0dbb8e34d02064e9c52f30e4ca2ffaf"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23069",
+        "tab": "quiz",
+        "previousHash": "64fa2aa572df511694c6353e949be8d7010f4dc6c8f88630bdd581b111bb5d94",
+        "currentHash": "62325549b5e0a2e732462133825ba826310175b347e15c516485d894bae6048f"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23072",
+        "tab": "quiz",
+        "previousHash": "d3a1f72a601f3baac24da5fce4b03dd6f80b0fadc5f69679a647d823f75b0db7",
+        "currentHash": "fa6930e4a25be84e9c25468d3588aaec8a39f11eb196fc0ec815243f6c6f44ac"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23073",
+        "tab": "quiz",
+        "previousHash": "a76171e70b659c6b7afae86177eac2971952678a7b5509f339795dc4a551384d",
+        "currentHash": "ca7bdfb58fb46681972f463743f3a2fa3e662b4688c23efb17d435927a0710c7"
+      }
+    ]
+  },
+  "sourceRecordHash": "8474f1eb316fbd72087e8852ca737b9d187dbf15d501dbea8a3d65d8710128a4",
+  "originalPinPath": "content/thoracoacromial-quiz-pins.json",
+  "originalPinHash": "c19b618353c81b3c620f43ea7e527f059e6b30070b2cfb0ffed318c31d9396fd",
+  "originalPinBlob": "100c5f609acc25356d1e31f6712bb4a5c3da29ab",
+  "originalTransitionPaths": []
+}

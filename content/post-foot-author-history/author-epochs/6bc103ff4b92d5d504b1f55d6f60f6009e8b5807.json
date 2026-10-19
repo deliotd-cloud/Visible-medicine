@@ -1,0 +1,942 @@
+{
+  "author": "6bc103ff4b92d5d504b1f55d6f60f6009e8b5807",
+  "parent": "d819cd556d990e4100534aa2ceab3c20cc181d8e",
+  "tree": "96546c0ff75ec98a78001f3111616e8a6307bbf5",
+  "parentTree": "7f895c706276c587a1c0f1e61ee357034dc7c1d6",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 14,
+  "preserved": 9922,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thyrocervical-trunk",
+        "fmaId": "FMA3992",
+        "name": "Right thyrocervical trunk",
+        "sourceName": "right thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA3992",
+        "bounds": {
+          "min": [
+            -0.4277290105819702,
+            5.521999359130859,
+            0.4754229784011841
+          ],
+          "max": [
+            -0.40075698494911194,
+            5.5794997215271,
+            0.49482595920562744
+          ]
+        },
+        "center": [
+          -0.4142429977655411,
+          5.5507495403289795,
+          0.48512446880340576
+        ],
+        "anchor": [
+          -0.41858500242233276,
+          5.532700061798096,
+          0.48956596851348877
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2307",
+            "sha256": "b81b463eeedf5999f8cd9e072d445799e9c3dcd23a618cda3fb867af39cfe123"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "eae29d9e5927d41c67d95038a1e8f5c225a36578b3bcd3b20bd826d9c328fc38"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thyrocervical-trunk",
+        "fmaId": "FMA4084",
+        "name": "Left thyrocervical trunk",
+        "sourceName": "left thyrocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4084",
+        "bounds": {
+          "min": [
+            0.4013550281524658,
+            5.521899223327637,
+            0.4747239649295807
+          ],
+          "max": [
+            0.4276890158653259,
+            5.579100131988525,
+            0.49424201250076294
+          ]
+        },
+        "center": [
+          0.4145220220088959,
+          5.550499677658081,
+          0.4844829887151718
+        ],
+        "anchor": [
+          0.4182009994983673,
+          5.533499717712402,
+          0.4902590215206146
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2255",
+            "sha256": "15a93e07812a3d1aeed4d8be392335496fb024ab0d8bb1d4e30e281c3d93c810"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "61719a5074ee4dfc7b7eb38d9ed5b0dfbf43400f58fd17f89a5d11a263e75471"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-costocervical-trunk",
+        "fmaId": "FMA5039",
+        "name": "Right costocervical trunk",
+        "sourceName": "right costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA5039",
+        "bounds": {
+          "min": [
+            -0.5218989849090576,
+            5.472499847412109,
+            0.41986504197120667
+          ],
+          "max": [
+            -0.4543980062007904,
+            5.555600643157959,
+            0.49830496311187744
+          ]
+        },
+        "center": [
+          -0.488148495554924,
+          5.514050245285034,
+          0.45908500254154205
+        ],
+        "anchor": [
+          -0.4895249903202057,
+          5.522500038146973,
+          0.4635910093784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2276",
+            "sha256": "607905f3c66e08d10c3362c702d0ca13bebd55a71fd83667a61f6738d1a66210"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "b858c291a65db33c16d5742b4e2fec787c7099cd4a6547b53d99ccb1a01a0a80"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-costocervical-trunk",
+        "fmaId": "FMA4086",
+        "name": "Left costocervical trunk",
+        "sourceName": "left costocervical trunk",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4086",
+        "bounds": {
+          "min": [
+            0.4547460079193115,
+            5.472900390625,
+            0.4201899766921997
+          ],
+          "max": [
+            0.5215910077095032,
+            5.5548996925354,
+            0.4979889690876007
+          ]
+        },
+        "center": [
+          0.48816850781440735,
+          5.5139000415802,
+          0.4590894728899002
+        ],
+        "anchor": [
+          0.48764801025390625,
+          5.507900238037109,
+          0.451477974653244
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2224",
+            "sha256": "32df22be6cdf4200ad69dc439e7b6be7cf6e9ebcc44579526819bbcdf75fc106"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "0217f154f0723df387761127736745f2dfc5772acabd1d9125cac0554544210e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-dorsal-scapular-artery",
+        "fmaId": "FMA4057",
+        "name": "Right dorsal scapular artery",
+        "sourceName": "right dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA4057",
+        "bounds": {
+          "min": [
+            -1.0666000843048096,
+            3.8316004276275635,
+            -0.5321046113967896
+          ],
+          "max": [
+            -0.5545200109481812,
+            5.613199234008789,
+            0.479032963514328
+          ]
+        },
+        "center": [
+          -0.8105600476264954,
+          4.722399830818176,
+          -0.026535823941230774
+        ],
+        "anchor": [
+          -0.5809879899024963,
+          4.696700572967529,
+          -0.4426394999027252
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2284",
+            "sha256": "1790c89e2535c2831726f71c88ab9f918e113cf20fef742b56d928c108b337aa"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "40ac73de5b5f583fbe970160230a15a886af6bb1c6ac1e38ae62b1a0c9205330"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-dorsal-scapular-artery",
+        "fmaId": "FMA10552",
+        "name": "Left dorsal scapular artery",
+        "sourceName": "left dorsal scapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10552",
+        "bounds": {
+          "min": [
+            0.5547209978103638,
+            3.831899404525757,
+            -0.5322532057762146
+          ],
+          "max": [
+            1.0665899515151978,
+            5.613199234008789,
+            0.47892096638679504
+          ]
+        },
+        "center": [
+          0.8106554746627808,
+          4.722549319267273,
+          -0.026666119694709778
+        ],
+        "anchor": [
+          0.5759209990501404,
+          4.744699478149414,
+          -0.44102680683135986
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2232",
+            "sha256": "729363384679145bcaf83868d792dd3dff3f42c56a809d3a3d6cc1e09261e5be"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "efe519fff8f70db4212f6d562c7f81f7b3a0b06972c63991735dc0923113bd67"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+        "fmaId": "FMA10698",
+        "name": "Right suprascapular artery",
+        "sourceName": "right suprascapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10698",
+        "bounds": {
+          "min": [
+            -1.381119966506958,
+            4.914899826049805,
+            -0.13162700831890106
+          ],
+          "max": [
+            -0.4103670120239258,
+            5.548199653625488,
+            0.5230500102043152
+          ]
+        },
+        "center": [
+          -0.8957434892654419,
+          5.2315497398376465,
+          0.19571150094270706
+        ],
+        "anchor": [
+          -1.0132700204849243,
+          5.3201003074646,
+          0.17565597593784332
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2303",
+            "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "514f41c330ef5c3e8c615bafa8548525fc5e71ba97e271f51e4c35860c371028"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+        "fmaId": "FMA10681",
+        "name": "Left suprascapular artery",
+        "sourceName": "left suprascapular artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA10681",
+        "bounds": {
+          "min": [
+            0.4103490114212036,
+            4.914899826049805,
+            -0.13112300634384155
+          ],
+          "max": [
+            1.3812099695205688,
+            5.548199653625488,
+            0.5229499936103821
+          ]
+        },
+        "center": [
+          0.8957794904708862,
+          5.2315497398376465,
+          0.19591349363327026
+        ],
+        "anchor": [
+          1.0131900310516357,
+          5.319499492645264,
+          0.17460602521896362
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2251",
+            "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "beb7e957541cf62622ef3ba2c7bb0b916b5abff979b6ceb4e20ce2e64b0ba675"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-axillary-vein",
+        "fmaId": "FMA13330",
+        "name": "Right axillary vein",
+        "sourceName": "right axillary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA13330",
+        "bounds": {
+          "min": [
+            -1.5716700553894043,
+            4.328499794006348,
+            0.41394203901290894
+          ],
+          "max": [
+            -0.7491909861564636,
+            5.351400375366211,
+            0.6516900062561035
+          ]
+        },
+        "center": [
+          -1.160430520772934,
+          4.839950084686279,
+          0.5328160226345062
+        ],
+        "anchor": [
+          -1.3682899475097656,
+          4.929800033569336,
+          0.5104399919509888
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2269",
+            "sha256": "24438422321aa6665de6394aa39e79fdeabdf2bc56427a3419da4dc630546464"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "71056a1c0f7bfcfab505c7bd7c2a6223995350ab4fdf743d278556f1e51d8e76"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-axillary-vein",
+        "fmaId": "FMA13331",
+        "name": "Left axillary vein",
+        "sourceName": "left axillary vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA13331",
+        "bounds": {
+          "min": [
+            0.7492620348930359,
+            4.328399658203125,
+            0.4140329658985138
+          ],
+          "max": [
+            1.571410059928894,
+            5.351400375366211,
+            0.6516600251197815
+          ]
+        },
+        "center": [
+          1.160336047410965,
+          4.839900016784668,
+          0.5328464955091476
+        ],
+        "anchor": [
+          1.3708299398422241,
+          4.921700477600098,
+          0.5061599612236023
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2217",
+            "sha256": "7b448d1f2a071e88d1a2ebe54e7e5d417719663a5b01d1226f492b71ebdc19cd"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "846d2a131a9976e264d10108059b2a798f1221068d8fea137679afb66b920840"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-vein",
+        "fmaId": "FMA50859",
+        "name": "Right suprascapular vein",
+        "sourceName": "right suprascapular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA50859",
+        "bounds": {
+          "min": [
+            -1.3964999914169312,
+            4.831300258636475,
+            0.01680198684334755
+          ],
+          "max": [
+            -0.6351689696311951,
+            5.439599514007568,
+            0.6387699842453003
+          ]
+        },
+        "center": [
+          -1.015834480524063,
+          5.1354498863220215,
+          0.3277859855443239
+        ],
+        "anchor": [
+          -1.0245000123977661,
+          5.289799690246582,
+          0.23821403086185455
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2302",
+            "sha256": "05a1af2bdafa5d179753ce923971e3300a4451ce71788d9fc3bf115897dc92db"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "00d8a6d8831d6d9658ef08ef8afbbb50d1c3b1b19b131ad675fd13b4bf74b6ff"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-vein",
+        "fmaId": "FMA50860",
+        "name": "Left suprascapular vein",
+        "sourceName": "left suprascapular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "shoulder-arm-vessels-inventory",
+        "nodeName": "FMA50860",
+        "bounds": {
+          "min": [
+            0.6352019906044006,
+            4.831200122833252,
+            0.016885986551642418
+          ],
+          "max": [
+            1.3961501121520996,
+            5.439599514007568,
+            0.6388300061225891
+          ]
+        },
+        "center": [
+          1.0156760513782501,
+          5.13539981842041,
+          0.32785799633711576
+        ],
+        "anchor": [
+          1.0412299633026123,
+          5.273900032043457,
+          0.21618598699569702
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2250",
+            "sha256": "50bcc347434326f06d5db0054036b90215f78f964c3d00c0c94cd0b981dd558b"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "3ac4eddedd64321ddc02916bd2f03083db8ffc4a2341cef01c90b022d6682d7c"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-medial-brachial-vein",
+        "fmaId": "FMA22935",
+        "name": "Right medial brachial vein",
+        "sourceName": "right medial brachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "brachial-veins",
+        "nodeName": "FMA22935",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2341",
+            "sha256": "0468a157795c7346d964d1884627464d5cfe9c4c8bcc84661aefdb2bc2d18259"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.1819400787353516,
+            2.184000015258789,
+            0.3270150125026703
+          ],
+          "max": [
+            -1.500249981880188,
+            4.349800109863281,
+            0.4724330008029938
+          ]
+        },
+        "center": [
+          -1.8410950303077698,
+          3.266900062561035,
+          0.39972400665283203
+        ],
+        "anchor": [
+          -1.8253899812698364,
+          3.2527999877929688,
+          0.38743001222610474
+        ],
+        "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "e48e35c00adf43fa7c0969fee41fbe479673b500eaa0dca70b6d74d4802a69e5"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-medial-brachial-vein",
+        "fmaId": "FMA22936",
+        "name": "Left medial brachial vein",
+        "sourceName": "left medial brachial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "shoulder-arm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "brachial-veins",
+        "nodeName": "FMA22936",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2313",
+            "sha256": "3707bf67b5959e140fea0eca643bc31db00e97620e63afbe48ed10357af44ec8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.4999699592590332,
+            2.184000015258789,
+            0.32708799839019775
+          ],
+          "max": [
+            2.182039976119995,
+            4.349800109863281,
+            0.4722819924354553
+          ]
+        },
+        "center": [
+          1.8410049676895142,
+          3.266900062561035,
+          0.39968499541282654
+        ],
+        "anchor": [
+          1.8217400312423706,
+          3.272900104522705,
+          0.38906198740005493
+        ],
+        "coverageNote": "One source-labelled medial brachial vein. Other companion veins, valves, lumen and exact junctions are not supplied. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "29c79453ec3297034e3b18fdeced62dd39b12d11c1ed4d4de22639b932e3391f"
+    }
+  ]
+}

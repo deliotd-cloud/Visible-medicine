@@ -1,0 +1,408 @@
+{
+  "author": "1563e6394013938f46da559390531e888703b93d",
+  "parent": "c0025a9e33cde8e8936c4ba13f8145d5f0bb9364",
+  "tree": "2a110c9b4ea91f74eeb3922e07f351cf1d33096d",
+  "parentTree": "fb132fdcdd6ded97ba8a00f77fe8a1b63e2bb93c",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 6,
+  "preserved": 9930,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-internal-thoracic-artery",
+        "fmaId": "FMA3969",
+        "name": "Right internal thoracic artery",
+        "sourceName": "right internal thoracic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA3969",
+        "bounds": {
+          "min": [
+            -0.4057449996471405,
+            3.7180004119873047,
+            0.5051999688148499
+          ],
+          "max": [
+            -0.12222599983215332,
+            5.493599891662598,
+            1.5079400539398193
+          ]
+        },
+        "center": [
+          -0.2639854997396469,
+          4.605800151824951,
+          1.0065700113773346
+        ],
+        "anchor": [
+          -0.17256499826908112,
+          4.709100246429443,
+          1.1441799402236938
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1937",
+            "sha256": "d8d3716593ee2f1e9001ff77b3e4619e2364062371bb1b5c4c928c0dd0fdd17e"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "0c285482953d37aa460ef4b7c9ab22235c0a5bd141dbff2fff9b1ca27c95cd2e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-internal-thoracic-artery",
+        "fmaId": "FMA4068",
+        "name": "Left internal thoracic artery",
+        "sourceName": "left internal thoracic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4068",
+        "bounds": {
+          "min": [
+            0.12218199670314789,
+            3.7180004119873047,
+            0.5075500011444092
+          ],
+          "max": [
+            0.4147059917449951,
+            5.522299766540527,
+            1.5078998804092407
+          ]
+        },
+        "center": [
+          0.2684439942240715,
+          4.620150089263916,
+          1.007724940776825
+        ],
+        "anchor": [
+          0.17414499819278717,
+          4.728000640869141,
+          1.1305298805236816
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1972",
+            "sha256": "95cd8361a6efb53ebc3ecb64fcd52f92968f3b915def80142c01fefbaa35bceb"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "7bbda90f60c9f572fc3c7596b739b5453abdde76fe55f8c906f54e174a9bf010"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-superior-epigastric-artery",
+        "fmaId": "FMA3988",
+        "name": "Right superior epigastric artery",
+        "sourceName": "right superior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA3988",
+        "bounds": {
+          "min": [
+            -0.162758007645607,
+            2.0850000381469727,
+            1.3073500394821167
+          ],
+          "max": [
+            -0.058193400502204895,
+            3.747800350189209,
+            1.532420039176941
+          ]
+        },
+        "center": [
+          -0.11047570407390594,
+          2.916400194168091,
+          1.4198850393295288
+        ],
+        "anchor": [
+          -0.10448800027370453,
+          2.9230005741119385,
+          1.4897301197052002
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1936",
+            "sha256": "50f8f2849e884a93f4b223f88f91b4fff6b3fb738b3b59a0437250d355320393"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "13b49d5326a19a070c1bcd0e22cb196a67e0c88e87d50ce28ec2181ed6883c0c"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-superior-epigastric-artery",
+        "fmaId": "FMA4083",
+        "name": "Left superior epigastric artery",
+        "sourceName": "left superior epigastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4083",
+        "bounds": {
+          "min": [
+            0.058121100068092346,
+            2.0850000381469727,
+            1.3073500394821167
+          ],
+          "max": [
+            0.16272801160812378,
+            3.7477002143859863,
+            1.5324499607086182
+          ]
+        },
+        "center": [
+          0.11042455583810806,
+          2.9163501262664795,
+          1.4199000000953674
+        ],
+        "anchor": [
+          0.10056799650192261,
+          2.905799627304077,
+          1.4860299825668335
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1971",
+            "sha256": "90a4c76477ebcf295c5790516ecaedb3c1e1737391ce4b87b11bbe7d5f423b0a"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "12ad2a8894d18b8c892167496c83e3b359de3d85d5d162801f3da31577e17ebd"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:right:vessel:right-musculophrenic-artery",
+        "fmaId": "FMA10692",
+        "name": "Right musculophrenic artery",
+        "sourceName": "right musculophrenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA10692",
+        "bounds": {
+          "min": [
+            -1.1400200128555298,
+            1.962499976158142,
+            0.463979035615921
+          ],
+          "max": [
+            -0.12452099472284317,
+            3.7452001571655273,
+            1.5226600170135498
+          ]
+        },
+        "center": [
+          -0.6322705037891865,
+          2.8538500666618347,
+          0.9933195263147354
+        ],
+        "anchor": [
+          -0.7030269503593445,
+          2.7461998462677,
+          1.3616600036621094
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1969",
+            "sha256": "8b4e68c9e0bf6ef0ca948cb6c511bb894b14156f1609d004c6a8c54303ce271c"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "4ff995efa986770baf06ab2f5b35e98fa78f84e80e792777995d893a29421d92"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thorax:left:vessel:left-musculophrenic-artery",
+        "fmaId": "FMA4077",
+        "name": "Left musculophrenic artery",
+        "sourceName": "left musculophrenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thorax",
+        "regions": [
+          "thorax",
+          "abdomen"
+        ],
+        "bundle": "thorax-vessels-inventory",
+        "nodeName": "FMA4077",
+        "bounds": {
+          "min": [
+            0.12459199875593185,
+            1.9625097513198853,
+            0.46400099992752075
+          ],
+          "max": [
+            1.1399199962615967,
+            3.74530029296875,
+            1.5226199626922607
+          ]
+        },
+        "center": [
+          0.6322559975087643,
+          2.8539050221443176,
+          0.9933104813098907
+        ],
+        "anchor": [
+          0.7044619917869568,
+          2.748000383377075,
+          1.3619500398635864
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1979",
+            "sha256": "f2010f732482ad9d6c1291d7c7ab2cdb839c2fc2bae2889fcc9147f0aa9d3ba6"
+          }
+        ],
+        "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "3c22f46a50bdc5d7ac4d9a96a4d464259ed8d20a91a3b267309e1225624bb62a"
+    }
+  ]
+}

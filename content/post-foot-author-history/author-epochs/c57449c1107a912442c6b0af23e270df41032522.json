@@ -1,0 +1,148 @@
+{
+  "author": "c57449c1107a912442c6b0af23e270df41032522",
+  "parent": "d81bbe14def4249d9d081de6a9f9f823e4fad69a",
+  "tree": "f0c9e5abcb6793bcaf073219d7acd61ea220fa42",
+  "parentTree": "59c5d9b75ebec50fb093648e9ec5a6832055f074",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 2,
+  "preserved": 9934,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-median-cubital-vein",
+        "fmaId": "FMA22964",
+        "name": "Right median cubital vein",
+        "sourceName": "right median cubital vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22964",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2287",
+            "sha256": "82a121207952ed3f38b387186dbccef17f76fd6f2e90b080dc045796430a30f4"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -2.339289903640747,
+            2.2446999549865723,
+            0.1677989959716797
+          ],
+          "max": [
+            -1.83502995967865,
+            2.6394999027252197,
+            0.5134699940681458
+          ]
+        },
+        "center": [
+          -2.0871599316596985,
+          2.442099928855896,
+          0.3406344950199127
+        ],
+        "anchor": [
+          -2.0185399055480957,
+          2.4019999504089355,
+          0.398142009973526
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "Right median cubital vein · Review pending",
+        "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+        "bullets": [],
+        "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+      },
+      "currentHash": "e19d3f9bc1b659ed0e4ee32eff5c0880ce3c85e5b7979d86406cc4337b9e8092"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-median-cubital-vein",
+        "fmaId": "FMA22965",
+        "name": "Left median cubital vein",
+        "sourceName": "left median cubital vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "shoulder-arm",
+          "forearm"
+        ],
+        "bundle": "cubital-veins",
+        "nodeName": "FMA22965",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2235",
+            "sha256": "8ce3f9edc945531083041cf949011ebd8810c48b0e213399d90946267783cb87"
+          }
+        ],
+        "bounds": {
+          "min": [
+            1.8350499868392944,
+            2.2446999549865723,
+            0.16787099838256836
+          ],
+          "max": [
+            2.339289903640747,
+            2.6394999027252197,
+            0.5134599804878235
+          ]
+        },
+        "center": [
+          2.0871699452400208,
+          2.442099928855896,
+          0.3406654894351959
+        ],
+        "anchor": [
+          2.0208699703216553,
+          2.400399923324585,
+          0.39926499128341675
+        ],
+        "coverageNote": "Whole source-labelled superficial vein. Cubital patterns vary; surfaces do not establish exact junctions, valves, lumen, patency or a safe procedural route. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "Left median cubital vein · Review pending",
+        "body": "Structure-specific clinical, pathology and imaging teaching has not yet been validated for this source.",
+        "bullets": [],
+        "note": "No acquired scan, ultrasound appearance, needle trajectory or registered CT/MRI correspondence is supplied."
+      },
+      "currentHash": "2c75baef5b4df87433cffaae265c57c848462c7d98effde4850ee9d86a0ef04e"
+    }
+  ]
+}

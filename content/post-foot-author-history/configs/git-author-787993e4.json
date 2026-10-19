@@ -1,0 +1,1338 @@
+{
+  "name": "git-author-787993e4",
+  "helper": "axillaryBranchXrayLesson",
+  "pinsHash": "c6a79fcb0dc8f3b56f9c34bf8b2533a48e7ec8b4905af190b62aef5bdd670ad5",
+  "transitionHash": "bbe38f530694f447459b7426c719018b3836a59529e239197f2d03cf9e13e9eb",
+  "pins": {
+    "baseline": "ec9972a60325de147277941e04089e2d4be0baf9",
+    "authorCommit": "787993e4497fe1de282569e3f4f611baff061206",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+          "fmaId": "FMA22682",
+          "name": "Right anterior circumflex humeral artery",
+          "sourceName": "right anterior circumflex humeral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22682",
+          "bounds": {
+            "min": [
+              -1.9123198986053467,
+              4.655500411987305,
+              0.20995399355888367
+            ],
+            "max": [
+              -1.432569980621338,
+              5.329399585723877,
+              0.5645800232887268
+            ]
+          },
+          "center": [
+            -1.6724449396133423,
+            4.992449998855591,
+            0.38726700842380524
+          ],
+          "anchor": [
+            -1.7245100736618042,
+            4.948000431060791,
+            0.46442702412605286
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2264",
+              "sha256": "a7aaef0dc149e6b481057266ee1b9a41720e0400a70697fbb5c15e7f8dd06187"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+          "fmaId": "FMA22683",
+          "name": "Left anterior circumflex humeral artery",
+          "sourceName": "left anterior circumflex humeral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22683",
+          "bounds": {
+            "min": [
+              1.4325900077819824,
+              4.655500411987305,
+              0.20999497175216675
+            ],
+            "max": [
+              1.912310004234314,
+              5.329399585723877,
+              0.5646399855613708
+            ]
+          },
+          "center": [
+            1.6724500060081482,
+            4.992449998855591,
+            0.3873174786567688
+          ],
+          "anchor": [
+            1.7258399724960327,
+            4.945199966430664,
+            0.4618060290813446
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2212",
+              "sha256": "87ac4531b5551470294420965e60888cae7a4943f767386ab3f40713144850f2"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+          "fmaId": "FMA22685",
+          "name": "Right posterior circumflex humeral artery",
+          "sourceName": "right posterior circumflex humeral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22685",
+          "bounds": {
+            "min": [
+              -1.9295200109481812,
+              4.858699798583984,
+              0.12414398044347763
+            ],
+            "max": [
+              -1.401319980621338,
+              4.984599590301514,
+              0.4818840026855469
+            ]
+          },
+          "center": [
+            -1.6654199957847595,
+            4.921649694442749,
+            0.30301399156451225
+          ],
+          "anchor": [
+            -1.5748900175094604,
+            4.877199649810791,
+            0.24333198368549347
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2291",
+              "sha256": "72f4c8d4e8465447611464bfa74df78924ffeaa9fc9829af32a4082518b6c02b"
+            },
+            {
+              "file": "FJ2292",
+              "sha256": "19ad27ed37b4fdc61653588976e81e138f28b063c52b270e5cdfb93364eac58b"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+          "fmaId": "FMA22687",
+          "name": "Left posterior circumflex humeral artery",
+          "sourceName": "left posterior circumflex humeral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA22687",
+          "bounds": {
+            "min": [
+              1.401360034942627,
+              4.859000205993652,
+              0.12425899505615234
+            ],
+            "max": [
+              1.9289900064468384,
+              4.984499454498291,
+              0.4817900061607361
+            ]
+          },
+          "center": [
+            1.6651750206947327,
+            4.921749830245972,
+            0.3030245006084442
+          ],
+          "anchor": [
+            1.5877599716186523,
+            4.874300479888916,
+            0.2290930151939392
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2239",
+              "sha256": "1e88872df7cffa6ccc3c325b2fbd0543279dc9ffc0a75b7e1e1ae14a0dc30d6f"
+            },
+            {
+              "file": "FJ2240",
+              "sha256": "8d07c946f22777f447e46597283d37a9ad993f8f1f8d194af6ed58dd2475d62c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+          "fmaId": "FMA23180",
+          "name": "Right circumflex scapular artery",
+          "sourceName": "right circumflex scapular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA23180",
+          "bounds": {
+            "min": [
+              -1.4422999620437622,
+              4.805600643157959,
+              0.011157989501953125
+            ],
+            "max": [
+              -1.3413499593734741,
+              4.939200401306152,
+              0.367127001285553
+            ]
+          },
+          "center": [
+            -1.3918249607086182,
+            4.872400522232056,
+            0.18914249539375305
+          ],
+          "anchor": [
+            -1.4265999794006348,
+            4.859799861907959,
+            0.1953199803829193
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2273",
+              "sha256": "37154eff6530ba3cb17412723850f45c3ee5be9d0d9b78e737c7a1f356c87b3c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+          "fmaId": "FMA23181",
+          "name": "Left circumflex scapular artery",
+          "sourceName": "left circumflex scapular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA23181",
+          "bounds": {
+            "min": [
+              1.3415700197219849,
+              4.805500507354736,
+              0.011130981147289276
+            ],
+            "max": [
+              1.4423099756240845,
+              4.939200401306152,
+              0.36712896823883057
+            ]
+          },
+          "center": [
+            1.3919399976730347,
+            4.872350454330444,
+            0.18912997469305992
+          ],
+          "anchor": [
+            1.425610065460205,
+            4.857800483703613,
+            0.19487297534942627
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2221",
+              "sha256": "3387830f0c01f2f98710951a900442fdf6ad7b123ad1202aad4e0390cb0551f4"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+          "fmaId": "FMA66321",
+          "name": "Right thoracodorsal artery",
+          "sourceName": "right thoracodorsal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA66321",
+          "bounds": {
+            "min": [
+              -1.3892899751663208,
+              4.006500244140625,
+              0.13707801699638367
+            ],
+            "max": [
+              -1.2835699319839478,
+              4.805500507354736,
+              0.41492798924446106
+            ]
+          },
+          "center": [
+            -1.3364299535751343,
+            4.406000375747681,
+            0.27600300312042236
+          ],
+          "anchor": [
+            -1.3184499740600586,
+            4.4180006980896,
+            0.22675301134586334
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2305",
+              "sha256": "b7d085f37da4801db31307961a176357a1d3a11e226c290e9883455376e9e254"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+          "fmaId": "FMA66322",
+          "name": "Left thoracodorsal artery",
+          "sourceName": "left thoracodorsal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-vessels-recovery",
+          "nodeName": "FMA66322",
+          "bounds": {
+            "min": [
+              1.283560037612915,
+              4.006500244140625,
+              0.13711699843406677
+            ],
+            "max": [
+              1.3893699645996094,
+              4.805099964141846,
+              0.4148709774017334
+            ]
+          },
+          "center": [
+            1.3364650011062622,
+            4.405800104141235,
+            0.2759939879179001
+          ],
+          "anchor": [
+            1.3176400661468506,
+            4.427900314331055,
+            0.22957603633403778
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2253",
+              "sha256": "b6f9ae7678bb79b0245d03ea27ceee0a9e3f0cf6b6b0c7613c0830ac40e8989f"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA66563",
+          "name": "Trunk of right thoraco-acromial artery",
+          "sourceName": "trunk of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA66563",
+          "bounds": {
+            "min": [
+              -0.9646859765052795,
+              5.183399677276611,
+              0.4785099923610687
+            ],
+            "max": [
+              -0.9166169762611389,
+              5.309200286865234,
+              0.5283600091934204
+            ]
+          },
+          "center": [
+            -0.9406514763832092,
+            5.246299982070923,
+            0.5034350007772446
+          ],
+          "anchor": [
+            -0.9337560534477234,
+            5.278399467468262,
+            0.4792209565639496
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2304",
+              "sha256": "b82a47ccca2bb3affd63d8d1f86ad7c79a5a725bcbeb60a25711f1cd3275494e"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA66564",
+          "name": "Trunk of left thoraco-acromial artery",
+          "sourceName": "trunk of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA66564",
+          "bounds": {
+            "min": [
+              0.9166539907455444,
+              5.183299541473389,
+              0.4786139726638794
+            ],
+            "max": [
+              0.9652439951896667,
+              5.309000015258789,
+              0.528659999370575
+            ]
+          },
+          "center": [
+            0.9409489929676056,
+            5.246149778366089,
+            0.5036369860172272
+          ],
+          "anchor": [
+            0.9215799570083618,
+            5.276999473571777,
+            0.48698097467422485
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2252",
+              "sha256": "2ff1924941e505e62ac394bc8e8087f6903c7dba58826d87dd21cbc254e511c7"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23063",
+          "name": "Pectoral branch of right thoraco-acromial artery",
+          "sourceName": "pectoral branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23063",
+          "bounds": {
+            "min": [
+              -1.2689299583435059,
+              4.00629997253418,
+              0.48791801929473877
+            ],
+            "max": [
+              -0.9245250225067139,
+              5.224100112915039,
+              0.9948499798774719
+            ]
+          },
+          "center": [
+            -1.0967274904251099,
+            4.615200042724609,
+            0.7413839995861053
+          ],
+          "anchor": [
+            -1.1094200611114502,
+            4.625999927520752,
+            0.7812199592590332
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2361",
+              "sha256": "341bf21d162b7d1f60261396f397db0d7d4acb5be2295e30dea7f6b9394651e8"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23064",
+          "name": "Pectoral branch of left thoraco-acromial artery",
+          "sourceName": "pectoral branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23064",
+          "bounds": {
+            "min": [
+              0.9245760440826416,
+              4.00629997253418,
+              0.4878929853439331
+            ],
+            "max": [
+              1.268880009651184,
+              5.224100112915039,
+              0.9948499798774719
+            ]
+          },
+          "center": [
+            1.0967280268669128,
+            4.615200042724609,
+            0.7413714826107025
+          ],
+          "anchor": [
+            1.1071399450302124,
+            4.64069938659668,
+            0.7724999785423279
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2330",
+              "sha256": "3defe0932a0a8948faf7037f0812527864b9ac4e4f8251f45873d7b48ab00977"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23068",
+          "name": "Acromial branch of right thoraco-acromial artery",
+          "sourceName": "acromial branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23068",
+          "bounds": {
+            "min": [
+              -1.3827999830245972,
+              5.175000190734863,
+              0.46362799406051636
+            ],
+            "max": [
+              -0.9414899945259094,
+              5.349799633026123,
+              0.5357099771499634
+            ]
+          },
+          "center": [
+            -1.1621449887752533,
+            5.262399911880493,
+            0.49966898560523987
+          ],
+          "anchor": [
+            -1.1718900203704834,
+            5.241800308227539,
+            0.4815899729728699
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2263",
+              "sha256": "d794a35d47638639cd793d357a99312850d6f7b27531cdc10b4b00817f35e170"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23069",
+          "name": "Acromial branch of left thoraco-acromial artery",
+          "sourceName": "acromial branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23069",
+          "bounds": {
+            "min": [
+              0.9414849877357483,
+              5.174900054931641,
+              0.4637850224971771
+            ],
+            "max": [
+              1.3825300931930542,
+              5.349799633026123,
+              0.5355899930000305
+            ]
+          },
+          "center": [
+            1.1620075404644012,
+            5.262349843978882,
+            0.4996875077486038
+          ],
+          "anchor": [
+            1.169390082359314,
+            5.241700649261475,
+            0.47968003153800964
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2211",
+              "sha256": "bd760839d0c3565e6d2bfe9d40e111116f7965e636053f213b0800b1ccb27537"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+          "fmaId": "FMA23072",
+          "name": "Deltoid branch of right thoraco-acromial artery",
+          "sourceName": "deltoid branch of right thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23072",
+          "bounds": {
+            "min": [
+              -1.6184399127960205,
+              5.1080002784729,
+              0.4776820242404938
+            ],
+            "max": [
+              -1.1191400289535522,
+              5.21150016784668,
+              0.5387200117111206
+            ]
+          },
+          "center": [
+            -1.3687899708747864,
+            5.15975022315979,
+            0.5082010179758072
+          ],
+          "anchor": [
+            -1.3607699871063232,
+            5.134900093078613,
+            0.5233399868011475
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2282",
+              "sha256": "c5d3cd8addb5e3355d853cd416a599e3a90e6c450adbe08c6aad1d28136dc761"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+          "fmaId": "FMA23073",
+          "name": "Deltoid branch of left thoraco-acromial artery",
+          "sourceName": "deltoid branch of left thoraco-acromial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA23073",
+          "bounds": {
+            "min": [
+              1.1192200183868408,
+              5.108100414276123,
+              0.47790297865867615
+            ],
+            "max": [
+              1.6182299852371216,
+              5.211400032043457,
+              0.5388400554656982
+            ]
+          },
+          "center": [
+            1.3687250018119812,
+            5.15975022315979,
+            0.5083715170621872
+          ],
+          "anchor": [
+            1.3586399555206299,
+            5.135500431060791,
+            0.5237900018692017
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2230",
+              "sha256": "cf6ccdb1b2c827dd096a04457aee6f55d2c95a3400f4dc6254c42fbfbd6bfcd1"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+          "fmaId": "FMA22678",
+          "name": "Right subscapular artery",
+          "sourceName": "right subscapular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "subscapular-arteries",
+          "nodeName": "FMA22678",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2298",
+              "sha256": "41050856a7c2cbb79984a78346a0e3dc13e271758a04012f2283fee2182a2f29"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.419819951057434,
+              4.794000148773193,
+              0.33651599287986755
+            ],
+            "max": [
+              -1.2893999814987183,
+              4.94890022277832,
+              0.4222390055656433
+            ]
+          },
+          "center": [
+            -1.3546099662780762,
+            4.871450185775757,
+            0.37937749922275543
+          ],
+          "anchor": [
+            -1.347350001335144,
+            4.877500057220459,
+            0.39108601212501526
+          ],
+          "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right subscapular artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+            "bullets": [],
+            "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+          "fmaId": "FMA22679",
+          "name": "Left subscapular artery",
+          "sourceName": "left subscapular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "subscapular-arteries",
+          "nodeName": "FMA22679",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2246",
+              "sha256": "4dc93c063b9d87ab85699bfeb9f856cb39faf12d2859b0e4184ba64de6c9ef87"
+            }
+          ],
+          "bounds": {
+            "min": [
+              1.2898600101470947,
+              4.7941999435424805,
+              0.3365879952907562
+            ],
+            "max": [
+              1.4196499586105347,
+              4.948699951171875,
+              0.42217200994491577
+            ]
+          },
+          "center": [
+            1.3547549843788147,
+            4.871449947357178,
+            0.379380002617836
+          ],
+          "anchor": [
+            1.3433200120925903,
+            4.870800018310547,
+            0.3914330005645752
+          ],
+          "coverageNote": "Complete IS-A subscapular artery surface, distinct from the broader PART-OF aggregate containing existing branches. Original coordinates and faces retained; no source junction, continuous lumen, complete collateral network or supply territory is validated. Radiologist review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left subscapular artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+            "bullets": [],
+            "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "ec9972a60325de147277941e04089e2d4be0baf9",
+    "authorCommit": "787993e4497fe1de282569e3f4f611baff061206",
+    "sourcePinsHash": "c6a79fcb0dc8f3b56f9c34bf8b2533a48e7ec8b4905af190b62aef5bdd670ad5",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-anterior-circumflex-humeral-artery",
+        "fmaId": "FMA22682",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "bde48612770e607b51f10f1bc10b1d4c334709f5456f53fca8d142b9c3b5761a"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-anterior-circumflex-humeral-artery",
+        "fmaId": "FMA22683",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "a3f4bf67d45a3ff1b5952bb367ec6d1b1a1ebe465f0084ea85078822960cbca9"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-posterior-circumflex-humeral-artery",
+        "fmaId": "FMA22685",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "7441b9bf55d4dc7bc52096cca18cc336bada50d3c870461f4fdd96b49215e026"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-posterior-circumflex-humeral-artery",
+        "fmaId": "FMA22687",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "536721c64fa765078e1cf70e0b088d4282b6a030ee1888a5aad3e63db3ce2353"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-circumflex-scapular-artery",
+        "fmaId": "FMA23180",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "16566d71c041210a9d35cd164a454f9e4b77a1d3b90542b34880f60ab0c41b63"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-circumflex-scapular-artery",
+        "fmaId": "FMA23181",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "fbec888ced14004de60097d3f1977e9326defdddaaf5e2b788f0a21793d793eb"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-thoracodorsal-artery",
+        "fmaId": "FMA66321",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "d9265126f178311e3789e2c82b7c73f9708d8419f180ade7d7024d973818d88d"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-thoracodorsal-artery",
+        "fmaId": "FMA66322",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "826a0290e6659ec9b4a4fa926c6bdedc9066518fb60225a5b0bcba811e5d0406"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:trunk-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA66563",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "f63a645325f96f81552901cb558fd7361bd0901c34b3a03926c9c2fe58fe272a"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:trunk-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA66564",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "7c0463111cb5a5e4e254119ca43f62d3aff471dd8874041b636bff9c3c38869f"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:pectoral-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23063",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "96fd696a89789c46a32f6fdf829709a1eac98f4f3bd5a750cfc0593532df422f"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:pectoral-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23064",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "566aa9c5c2366f58b8e6f57f5554418911800146aec9221389b3c5897412b783"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:acromial-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23068",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "6343684372d114cd7e99abc4c1ca3c7a4f6273b7cf80b670a944dec479c9c6ca"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:acromial-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23069",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "8a8deed40f4b43b7da2aa0c7eed1906d9a2d2319bf594a3fa22545e6ec33ad70"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:deltoid-branch-of-right-thoraco-acromial-artery",
+        "fmaId": "FMA23072",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "2f1b6ef9bdd98ed753b3ac8b464f930f9cc2e93bba28b94cec626b9f00486639"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:deltoid-branch-of-left-thoraco-acromial-artery",
+        "fmaId": "FMA23073",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "e052e9fa1c85abced59221f0eb8057b14091aa31084f71b550e951a7b454eb4a"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-subscapular-artery",
+        "fmaId": "FMA22678",
+        "tab": "xray",
+        "previousHash": "5af20472937fca2968f827074f23881228a428b66dd85ee8d78dfb26dbcf5858",
+        "currentHash": "ab4b9a431cedb3bf46b80c0b865cbf4fda588c6ccb820f81765f534da6d9dcae"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-subscapular-artery",
+        "fmaId": "FMA22679",
+        "tab": "xray",
+        "previousHash": "a2d6aacef61b9e7645b5c1cd44fc012a7b973e984e4b0d0610134d7aa719febb",
+        "currentHash": "4b96a2f33e232703aa6f3b937eac5d2ca3c91216c14ccf20f2d7868ce1845c81"
+      }
+    ]
+  },
+  "sourceRecordHash": "bbb47ef356e79a1a707d51aeae78e9567b00b5a6ca98b5b6d33b9c1d5a245bd1"
+}

@@ -1,0 +1,462 @@
+{
+  "name": "git-author-25fcb29c",
+  "helper": "femoralVenousXrayLesson",
+  "pinsHash": "34fcba7cbae60fdb0ddb73da46fa33c52075e16091731772dac7e00538cc6ece",
+  "transitionHash": "be6ee253ecf0bfac57d5ca19dd60a9ac3c6ac3dd701b00c94a97f9b1b1bf04eb",
+  "pins": {
+    "baseline": "aba5a0025e7d001d8b5b7c8876122f0ad2eead62",
+    "authorCommit": "25fcb29cd0ae718ef33691d5bcddcd06bda38dc7",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+          "fmaId": "FMA21188",
+          "name": "Right femoral vein",
+          "sourceName": "right femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21188",
+          "bounds": {
+            "min": [
+              -0.7377950549125671,
+              -3.1643500328063965,
+              0.3406140208244324
+            ],
+            "max": [
+              -0.3196389973163605,
+              0.06828002631664276,
+              1.0473699569702148
+            ]
+          },
+          "center": [
+            -0.5287170261144638,
+            -1.5480350032448769,
+            0.6939919888973236
+          ],
+          "anchor": [
+            -0.47020697593688965,
+            -1.5724499225616455,
+            0.687529981136322
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2144",
+              "sha256": "16f9661f23ad65a5856cf50be867e5ef282ea73fae50b853d44d9ab22676b1ab"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+          "fmaId": "FMA21189",
+          "name": "Left femoral vein",
+          "sourceName": "left femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21189",
+          "bounds": {
+            "min": [
+              0.3187209963798523,
+              -3.164289951324463,
+              0.33950501680374146
+            ],
+            "max": [
+              0.7394799590110779,
+              0.06841979920864105,
+              1.0481399297714233
+            ]
+          },
+          "center": [
+            0.5291004776954651,
+            -1.547935076057911,
+            0.6938224732875824
+          ],
+          "anchor": [
+            0.44828301668167114,
+            -1.629730224609375,
+            0.6385399699211121
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2102",
+              "sha256": "07776c248a8f8ddd3007f652c7bcafc60af3ab23edd678cc2da37615359c4abc"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+          "fmaId": "FMA21379",
+          "name": "Right great saphenous vein",
+          "sourceName": "right great saphenous vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21379",
+          "bounds": {
+            "min": [
+              -0.9488829970359802,
+              -8.263853073120117,
+              -0.019135016947984695
+            ],
+            "max": [
+              -0.13421300053596497,
+              -0.04151000827550888,
+              1.0395100116729736
+            ]
+          },
+          "center": [
+            -0.5415479987859726,
+            -4.152681540697813,
+            0.5101874973624945
+          ],
+          "anchor": [
+            -0.3424859941005707,
+            -4.22812032699585,
+            0.03469299152493477
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2145",
+              "sha256": "dee8dea4b9f286f40abec150d46f04bc1a1bb2f1a78c91c2431c4d225c33f925"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+          "fmaId": "FMA21380",
+          "name": "Left great saphenous vein",
+          "sourceName": "left great saphenous vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis",
+            "leg"
+          ],
+          "bundle": "thigh-vessels-recovery",
+          "nodeName": "FMA21380",
+          "bounds": {
+            "min": [
+              0.13420499861240387,
+              -8.263853073120117,
+              -0.01917598769068718
+            ],
+            "max": [
+              0.9488739967346191,
+              -0.04153991863131523,
+              1.0394700765609741
+            ]
+          },
+          "center": [
+            0.5415394976735115,
+            -4.152696495875716,
+            0.5101470444351435
+          ],
+          "anchor": [
+            0.3443230092525482,
+            -4.232450008392334,
+            0.03463199734687805
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2103",
+              "sha256": "5aef9c656f07538f2a7c9dee150b00d93e98e567f083dec2c5e924b0ad9c377b"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+          "fmaId": "FMA51042",
+          "name": "Right deep femoral vein",
+          "sourceName": "right deep femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA51042",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2135",
+              "sha256": "4e74f0301c15232ce6cb744bd0439d779a9a77eef51b3cf26bab15a632ad2a95"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.7874590158462524,
+              -2.9165799617767334,
+              0.5504299998283386
+            ],
+            "max": [
+              -0.32875800132751465,
+              0.18490000069141388,
+              0.9344300031661987
+            ]
+          },
+          "center": [
+            -0.5581085085868835,
+            -1.3658399805426598,
+            0.7424300014972687
+          ],
+          "anchor": [
+            -0.7389180064201355,
+            -1.372849941253662,
+            0.6927400231361389
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+          "fmaId": "FMA51043",
+          "name": "Left deep femoral vein",
+          "sourceName": "left deep femoral vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "deep-leg-veins",
+          "nodeName": "FMA51043",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2099",
+              "sha256": "7ce931eee500efd0c796c2b29ee29000ad55c9b4c31784bec72dd23b5defa3f3"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.3288309872150421,
+              -2.9166200160980225,
+              0.5504099726676941
+            ],
+            "max": [
+              0.7876279950141907,
+              0.18499000370502472,
+              0.9342799782752991
+            ]
+          },
+          "center": [
+            0.5582294911146164,
+            -1.3658150061964989,
+            0.7423449754714966
+          ],
+          "anchor": [
+            0.7383480072021484,
+            -1.3729699850082397,
+            0.6905699968338013
+          ],
+          "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "aba5a0025e7d001d8b5b7c8876122f0ad2eead62",
+    "authorCommit": "25fcb29cd0ae718ef33691d5bcddcd06bda38dc7",
+    "sourcePinsHash": "34fcba7cbae60fdb0ddb73da46fa33c52075e16091731772dac7e00538cc6ece",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+        "fmaId": "FMA21188",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "41b60144cd29d6a7a5a0663dc50ffadcd3f95e8906a1e0d0ef8add161094a0d9"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+        "fmaId": "FMA21189",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "b7a3c27f62fab033a20995437454687e2c40b690a41ea9354894ad7e1d0fb80b"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+        "fmaId": "FMA21379",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "73dbab4eedbe431deea3ee716c56d2d5232d5fa09f65c71970c7d534b718380b"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+        "fmaId": "FMA21380",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "eca4824b3afcac768f9fea27b14e24f071759966cae92806ff1414192875c6d6"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+        "fmaId": "FMA51042",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "52bb09fa915570c8a34d020ee1a89b3266b6f48790b00991c5f91c92271f4c4f"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+        "fmaId": "FMA51043",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "f42c207e87016b25ff1f6e6be2b6430685f8ffac776b2f3ff81e46f0ee280005"
+      }
+    ]
+  },
+  "sourceRecordHash": "8a6bee23468fb03880348f9a63a80d23744adc1be2de5d3f31c1a4b34a5ef545"
+}

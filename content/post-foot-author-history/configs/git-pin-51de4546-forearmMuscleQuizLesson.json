@@ -1,0 +1,864 @@
+{
+  "name": "git-pin-51de4546-forearmMuscleQuizLesson",
+  "helper": "forearmMuscleQuizLesson",
+  "pinsHash": "28c3fd21197e19876c5410f2195da06871fd5d283acc7966e541e49b43c94a69",
+  "transitionHash": "07d44a8f5281a475f9d1d162b445fa082ad02d749c1d4010d76ad6f104d2e80b",
+  "pins": {
+    "baseline": "7d77c973aab2a7135635ab2e65a2831f3e7d22c4",
+    "authorCommit": "51de4546a0b33a1ce93bfec4c9c43f760bf82b4e",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+          "fmaId": "FMA38470",
+          "name": "Right flexor digitorum superficialis",
+          "sourceName": "right flexor digitorum superficialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles",
+          "nodeName": "FMA38470",
+          "bounds": {
+            "min": [
+              -3.058689832687378,
+              -1.241859793663025,
+              0.17579002678394318
+            ],
+            "max": [
+              -1.781130075454712,
+              2.530799627304077,
+              1.1784800291061401
+            ]
+          },
+          "center": [
+            -2.419909954071045,
+            0.6444699168205261,
+            0.6771350279450417
+          ],
+          "anchor": [
+            -2.424910068511963,
+            0.6462500095367432,
+            0.6656500101089478
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1475",
+              "sha256": "9b3877dcb9838ac4e37f2a1fbf0542fca888a32650285bb07278d6ba9fa968e1"
+            },
+            {
+              "file": "FJ1499",
+              "sha256": "7f148f7db90d9723dcfe6742c55afc2100b712c00992d83356373ca27a2b0dc0"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right flexor digitorum superficialis · Forearm muscle quick check · draft",
+            "body": "Which forearm layer contains flexor digitorum superficialis?",
+            "bullets": [
+              "Superficial",
+              "Intermediate",
+              "Deep",
+              "Posterior"
+            ],
+            "correctAnswer": "Intermediate",
+            "explanation": "It occupies the intermediate anterior layer.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/topogr_upperlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+          "fmaId": "FMA38471",
+          "name": "Left flexor digitorum superficialis",
+          "sourceName": "left flexor digitorum superficialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles",
+          "nodeName": "FMA38471",
+          "bounds": {
+            "min": [
+              1.781130075454712,
+              -1.241859793663025,
+              0.17579002678394318
+            ],
+            "max": [
+              3.058689832687378,
+              2.530799627304077,
+              1.1784800291061401
+            ]
+          },
+          "center": [
+            2.419909954071045,
+            0.6444699168205261,
+            0.6771350279450417
+          ],
+          "anchor": [
+            2.4249000549316406,
+            0.6462597846984863,
+            0.6656400561332703
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1475M",
+              "sha256": "9174a210f8b7ce149355545208551a4d001f6c78570256a8596d3410023fb1ec"
+            },
+            {
+              "file": "FJ1499M",
+              "sha256": "471bfecbbe7dc3b66fc843daddcac42cd12e76e4df9f982d6b779a516433c083"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left flexor digitorum superficialis · Forearm muscle quick check · draft",
+            "body": "Which forearm layer contains flexor digitorum superficialis?",
+            "bullets": [
+              "Superficial",
+              "Intermediate",
+              "Deep",
+              "Posterior"
+            ],
+            "correctAnswer": "Intermediate",
+            "explanation": "It occupies the intermediate anterior layer.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/topogr_upperlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+          "fmaId": "FMA38479",
+          "name": "Right flexor digitorum profundus",
+          "sourceName": "right flexor digitorum profundus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles",
+          "nodeName": "FMA38479",
+          "bounds": {
+            "min": [
+              -3.0693199634552,
+              -1.3446398973464966,
+              0.18727798759937286
+            ],
+            "max": [
+              -2.0387699604034424,
+              2.1885998249053955,
+              1.3687800168991089
+            ]
+          },
+          "center": [
+            -2.5540449619293213,
+            0.42197996377944946,
+            0.7780290022492409
+          ],
+          "anchor": [
+            -2.501420021057129,
+            0.41374024748802185,
+            0.712090015411377
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1497",
+              "sha256": "e62f8adfa454bee523974952500aa32a16f086b249a434b4bbeabc333878ac39"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right flexor digitorum profundus · Forearm muscle quick check · draft",
+            "body": "Which anterior forearm layer contains flexor digitorum profundus?",
+            "bullets": [
+              "Superficial",
+              "Intermediate",
+              "Deep",
+              "Posterior"
+            ],
+            "correctAnswer": "Deep",
+            "explanation": "It lies in the deep anterior layer.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/topogr_upperlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+          "fmaId": "FMA38480",
+          "name": "Left flexor digitorum profundus",
+          "sourceName": "left flexor digitorum profundus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles",
+          "nodeName": "FMA38480",
+          "bounds": {
+            "min": [
+              2.0387699604034424,
+              -1.3446398973464966,
+              0.18727798759937286
+            ],
+            "max": [
+              3.0693199634552,
+              2.1885998249053955,
+              1.3687800168991089
+            ]
+          },
+          "center": [
+            2.5540449619293213,
+            0.42197996377944946,
+            0.7780290022492409
+          ],
+          "anchor": [
+            2.501420021057129,
+            0.4137499928474426,
+            0.712090015411377
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1497M",
+              "sha256": "c3d1710b4b9465ab35cd53d18a3f00f38b37340d084c57fed2cb011d585a5013"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left flexor digitorum profundus · Forearm muscle quick check · draft",
+            "body": "Which anterior forearm layer contains flexor digitorum profundus?",
+            "bullets": [
+              "Superficial",
+              "Intermediate",
+              "Deep",
+              "Posterior"
+            ],
+            "correctAnswer": "Deep",
+            "explanation": "It lies in the deep anterior layer.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/topogr_upperlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+          "fmaId": "FMA38513",
+          "name": "Right supinator",
+          "sourceName": "right supinator",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles",
+          "nodeName": "FMA38513",
+          "bounds": {
+            "min": [
+              -2.540940046310425,
+              1.325339913368225,
+              0.06260600686073303
+            ],
+            "max": [
+              -2.2236099243164062,
+              2.563800096511841,
+              0.405487984418869
+            ]
+          },
+          "center": [
+            -2.3822749853134155,
+            1.944570004940033,
+            0.23404699563980103
+          ],
+          "anchor": [
+            -2.380470037460327,
+            1.9462902545928955,
+            0.22518402338027954
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1505",
+              "sha256": "83c5940f2c6516ecf5b0eb69de5dc0a056177b29f7bc046b94cc20c85460ae46"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right supinator · Forearm muscle quick check · draft",
+            "body": "What forearm rotation does supinator assist?",
+            "bullets": [
+              "Pronation",
+              "Supination",
+              "Neutral return",
+              "Wrist extension"
+            ],
+            "correctAnswer": "Supination",
+            "explanation": "It helps turn the palm forwards in anatomical position.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/modules/upper_limb_module/upper_limb_11.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+          "fmaId": "FMA38514",
+          "name": "Left supinator",
+          "sourceName": "left supinator",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles",
+          "nodeName": "FMA38514",
+          "bounds": {
+            "min": [
+              2.2236099243164062,
+              1.325339913368225,
+              0.06260600686073303
+            ],
+            "max": [
+              2.540950059890747,
+              2.563800096511841,
+              0.405487984418869
+            ]
+          },
+          "center": [
+            2.3822799921035767,
+            1.944570004940033,
+            0.23404699563980103
+          ],
+          "anchor": [
+            2.380470037460327,
+            1.9462902545928955,
+            0.22518402338027954
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1505M",
+              "sha256": "bfc240c7d0db047b5defe13bad862115bfcd7ec3cb426c40630ed1738c3cd3d5"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left supinator · Forearm muscle quick check · draft",
+            "body": "What forearm rotation does supinator assist?",
+            "bullets": [
+              "Pronation",
+              "Supination",
+              "Neutral return",
+              "Wrist extension"
+            ],
+            "correctAnswer": "Supination",
+            "explanation": "It helps turn the palm forwards in anatomical position.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/modules/upper_limb_module/upper_limb_11.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+          "fmaId": "FMA38617",
+          "name": "Humeral head of right flexor carpi ulnaris",
+          "sourceName": "humeral head of right flexor carpi ulnaris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles-dissection",
+          "nodeName": "FMA38617",
+          "bounds": {
+            "min": [
+              -2.46451997756958,
+              -0.1844598352909088,
+              0.11169300228357315
+            ],
+            "max": [
+              -1.7782899141311646,
+              2.4833996295928955,
+              0.8657400608062744
+            ]
+          },
+          "center": [
+            -2.1214049458503723,
+            1.1494698971509933,
+            0.4887165315449238
+          ],
+          "anchor": [
+            -2.0889999866485596,
+            1.1641802787780762,
+            0.47693800926208496
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1473",
+              "sha256": "ccab7efb32e7b3cfc21039a138811f2972df5f2d91d23bbdbe63f13354774795"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Humeral head of right flexor carpi ulnaris · Forearm muscle quick check · draft",
+            "body": "What shared wrist action belongs to flexor carpi ulnaris?",
+            "bullets": [
+              "Extension and radial deviation",
+              "Flexion and ulnar deviation",
+              "Pronation",
+              "Thumb abduction"
+            ],
+            "correctAnswer": "Flexion and ulnar deviation",
+            "explanation": "Both source heads belong to this wrist flexor and ulnar deviator.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_tables.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+          "fmaId": "FMA38618",
+          "name": "Humeral head of left flexor carpi ulnaris",
+          "sourceName": "humeral head of left flexor carpi ulnaris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles-dissection",
+          "nodeName": "FMA38618",
+          "bounds": {
+            "min": [
+              1.7782899141311646,
+              -0.1844598352909088,
+              0.11169300228357315
+            ],
+            "max": [
+              2.46451997756958,
+              2.4833996295928955,
+              0.8657400608062744
+            ]
+          },
+          "center": [
+            2.1214049458503723,
+            1.1494698971509933,
+            0.4887165315449238
+          ],
+          "anchor": [
+            2.0889999866485596,
+            1.1641802787780762,
+            0.47693800926208496
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1473M",
+              "sha256": "d5f425f4b708deeed63146f31f6e399d7acb180c685df4bee45204154c8fb00f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Humeral head of left flexor carpi ulnaris · Forearm muscle quick check · draft",
+            "body": "What shared wrist action belongs to flexor carpi ulnaris?",
+            "bullets": [
+              "Extension and radial deviation",
+              "Flexion and ulnar deviation",
+              "Pronation",
+              "Thumb abduction"
+            ],
+            "correctAnswer": "Flexion and ulnar deviation",
+            "explanation": "Both source heads belong to this wrist flexor and ulnar deviator.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_tables.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+          "fmaId": "FMA38619",
+          "name": "Ulnar head of right flexor carpi ulnaris",
+          "sourceName": "ulnar head of right flexor carpi ulnaris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles-dissection",
+          "nodeName": "FMA38619",
+          "bounds": {
+            "min": [
+              -2.295140027999878,
+              0.3047601282596588,
+              -0.026018982753157616
+            ],
+            "max": [
+              -1.8938000202178955,
+              2.4335999488830566,
+              0.6620200276374817
+            ]
+          },
+          "center": [
+            -2.0944700241088867,
+            1.3691800385713577,
+            0.31800052244216204
+          ],
+          "anchor": [
+            -2.0705599784851074,
+            1.3230602741241455,
+            0.30151602625846863
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1518",
+              "sha256": "22abf242ce9d43dd9c6e02ef297b8e5982227a7ec1c7ead965674b92b476bad2"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Ulnar head of right flexor carpi ulnaris · Forearm muscle quick check · draft",
+            "body": "What shared wrist action belongs to flexor carpi ulnaris?",
+            "bullets": [
+              "Extension and radial deviation",
+              "Flexion and ulnar deviation",
+              "Pronation",
+              "Thumb abduction"
+            ],
+            "correctAnswer": "Flexion and ulnar deviation",
+            "explanation": "Both source heads belong to this wrist flexor and ulnar deviator.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_tables.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+          "fmaId": "FMA38620",
+          "name": "Ulnar head of left flexor carpi ulnaris",
+          "sourceName": "ulnar head of left flexor carpi ulnaris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "forearm",
+          "regions": [
+            "forearm"
+          ],
+          "bundle": "forearm-muscles-dissection",
+          "nodeName": "FMA38620",
+          "bounds": {
+            "min": [
+              1.8938000202178955,
+              0.3047601282596588,
+              -0.026018982753157616
+            ],
+            "max": [
+              2.295140027999878,
+              2.4335999488830566,
+              0.6620200276374817
+            ]
+          },
+          "center": [
+            2.0944700241088867,
+            1.3691800385713577,
+            0.31800052244216204
+          ],
+          "anchor": [
+            2.0705599784851074,
+            1.3230499029159546,
+            0.30151602625846863
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1518M",
+              "sha256": "d3e731fc29ac9b42f06eb0a7c49979c7568813587c2b982e6c948163c02dccb8"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Ulnar head of left flexor carpi ulnaris · Forearm muscle quick check · draft",
+            "body": "What shared wrist action belongs to flexor carpi ulnaris?",
+            "bullets": [
+              "Extension and radial deviation",
+              "Flexion and ulnar deviation",
+              "Pronation",
+              "Thumb abduction"
+            ],
+            "correctAnswer": "Flexion and ulnar deviation",
+            "explanation": "Both source heads belong to this wrist flexor and ulnar deviator.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/forearm_tables.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate source boundaries, independent head action, movement or function of these static reference surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "7d77c973aab2a7135635ab2e65a2831f3e7d22c4",
+    "authorCommit": "51de4546a0b33a1ce93bfec4c9c43f760bf82b4e",
+    "sourcePinsHash": "28c3fd21197e19876c5410f2195da06871fd5d283acc7966e541e49b43c94a69",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-superficialis",
+        "fmaId": "FMA38470",
+        "tab": "quiz",
+        "previousHash": "25c23ac3a1b95a9d449a7b2e231df8a11b4ec044b95bb31915374125e2e5b553",
+        "currentHash": "34d590d64461d90b5bdbc0fa0a7b5b39277286a7d30faf990d5a5c8c01319d1f"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-superficialis",
+        "fmaId": "FMA38471",
+        "tab": "quiz",
+        "previousHash": "9f648fc9e7d1c2b812b4d5cbd07d657399d3b65814871f257dabb8ea2e09a1ea",
+        "currentHash": "6faa998ac66af286f34b20daba71cc87eca50896531f3ab051805cdb344bca90"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-flexor-digitorum-profundus",
+        "fmaId": "FMA38479",
+        "tab": "quiz",
+        "previousHash": "27cc9736d9c7213c376a7251e2dc2bdd8e321eb1ed5c775ab826b0c6c6a397e4",
+        "currentHash": "6823f36eb22ad2707aff492b7bba7443694f794a0d48eee9c9a3ba3143788a8a"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-flexor-digitorum-profundus",
+        "fmaId": "FMA38480",
+        "tab": "quiz",
+        "previousHash": "b0293a087083e8da66387514866140caeedc72dd91b16037ea08a425b0b86f97",
+        "currentHash": "acf121d75d31b643e83ef7e97b636a7ec681d618e1f7388f992ea49da7851bfa"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:muscle:right-supinator",
+        "fmaId": "FMA38513",
+        "tab": "quiz",
+        "previousHash": "17af85293856671d690f68f28e3ff875ee5178941ccc64e0d1b5794191e59f55",
+        "currentHash": "82520c6252d3ecb58ec18280715c49780e8897e864f94ab7ca461d4b5550963f"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:muscle:left-supinator",
+        "fmaId": "FMA38514",
+        "tab": "quiz",
+        "previousHash": "423b78baed4e50b9f3b53c4b4c310c9148ad00908d60db8c45483037981caee0",
+        "currentHash": "501bc5e0ac80da7a9d25428977926b0ab2c13edb6f655ad91916921916f92e04"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:muscle:humeral-head-of-right-flexor-carpi-ulnaris",
+        "fmaId": "FMA38617",
+        "tab": "quiz",
+        "previousHash": "f6436616eac09a088c7d7250ce291b443553f0f5ea3510dadfff45e2738b0479",
+        "currentHash": "c7508d0fc9f9b6ae7478c0fab3b904147f78087c6789e1b61545b589bd3bf279"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:muscle:humeral-head-of-left-flexor-carpi-ulnaris",
+        "fmaId": "FMA38618",
+        "tab": "quiz",
+        "previousHash": "97a6e36aa696f9271d63e3475c8dfd3c0cd950d6b9548057b0656eb568592aa3",
+        "currentHash": "6281da3ebeb2e33231fdb29a207a1957de982675ed5f112903d5ba80564dde32"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:right:muscle:ulnar-head-of-right-flexor-carpi-ulnaris",
+        "fmaId": "FMA38619",
+        "tab": "quiz",
+        "previousHash": "164449b9bbd4a421f7a601c851682a39a7a17109ee09c1190193bb68c64b30ea",
+        "currentHash": "782114020caf61b529d39367e862765e1b693b9e5fc8678ab63c1a1587cc5099"
+      },
+      {
+        "id": "vm:anatomy:body:forearm:left:muscle:ulnar-head-of-left-flexor-carpi-ulnaris",
+        "fmaId": "FMA38620",
+        "tab": "quiz",
+        "previousHash": "96b084186d02d3c290e880e9674059df3efbe90e935d0836c56bebecbe127d2e",
+        "currentHash": "e847b22776449191b23df021bb7d9138df76830902bb3f51f039dd3ee788cd3a"
+      }
+    ]
+  },
+  "sourceRecordHash": "16b12721d67481f9126ab9f83c20f12327402b40a83ad38d7f7e4397581042d8",
+  "originalPinPath": "content/limb-nerve-quiz-pins.json",
+  "originalPinHash": "e9c4a30ad7c241e3fb0a8cfe577d901e11a9602b9410f4bfa87be78ac8d9c77d",
+  "originalPinBlob": "644033f2ae2fb888f394f36aa1727ef57c921629",
+  "originalTransitionPaths": []
+}

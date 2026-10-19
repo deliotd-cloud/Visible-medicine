@@ -1,0 +1,161 @@
+{
+  "name": "git-author-280c701c",
+  "helper": "shortCiliaryQuizLesson",
+  "pinsHash": "5f38c527e8a9f023ec165a6a0c2653020c0cc82117eefce05b65843b7f1647ce",
+  "transitionHash": "6d818b8c6653408f865fdd981d70eb33c798c5a839241dbba902c43665d9f4ba",
+  "pins": {
+    "baseline": "0a267a65c3855b87d3d01d2ed28279de5415bc93",
+    "authorCommit": "280c701c9cc21c540b7b496f58e2d1c4214e7865",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+          "fmaId": "FMA7041",
+          "name": "Short ciliary nerve · source group",
+          "sourceName": "short ciliary nerve",
+          "system": "nerves",
+          "category": "nerve",
+          "laterality": "unspecified",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "short-ciliary",
+          "nodeName": "FMA7041",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1319",
+              "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+            },
+            {
+              "file": "FJ1370",
+              "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+            }
+          ],
+          "presentationParts": [
+            {
+              "source": {
+                "file": "FJ1319",
+                "sha256": "7f45ad84f0874a8aeb62085affb9e9303057bea8b46068cc0b3e7e341a1258e7"
+              },
+              "displaySide": "left",
+              "nodeName": "FMA7041_FJ1319",
+              "bounds": {
+                "min": [
+                  0.23125700652599335,
+                  7.21589994430542,
+                  0.8174899816513062
+                ],
+                "max": [
+                  0.32208600640296936,
+                  7.257599830627441,
+                  0.9706000089645386
+                ]
+              },
+              "center": [
+                0.27667150646448135,
+                7.236749887466431,
+                0.8940449953079224
+              ],
+              "anchor": [
+                0.2773379981517792,
+                7.2322998046875,
+                0.9024800062179565
+              ]
+            },
+            {
+              "source": {
+                "file": "FJ1370",
+                "sha256": "8e8853c389c874fa12b5db73c008755eb5a98a3fe9ce7457757c809ef0c9ded9"
+              },
+              "displaySide": "right",
+              "nodeName": "FMA7041_FJ1370",
+              "bounds": {
+                "min": [
+                  -0.3350659906864166,
+                  7.21589994430542,
+                  0.8175600171089172
+                ],
+                "max": [
+                  -0.24433700740337372,
+                  7.257800102233887,
+                  0.9706000089645386
+                ]
+              },
+              "center": [
+                -0.28970149904489517,
+                7.236850023269653,
+                0.8940800130367279
+              ],
+              "anchor": [
+                -0.2888390123844147,
+                7.2342000007629395,
+                0.8957200050354004
+              ]
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.3350659906864166,
+              7.21589994430542,
+              0.8174899816513062
+            ],
+            "max": [
+              0.32208600640296936,
+              7.257800102233887,
+              0.9706000089645386
+            ]
+          },
+          "center": [
+            -0.006489992141723633,
+            7.236850023269653,
+            0.8940449953079224
+          ],
+          "anchor": [
+            0.23125700652599335,
+            7.255000114440918,
+            0.8238499760627747
+          ],
+          "coverageNote": "Bilateral source-defined group: one original file on each side, with two topological components per file. Components and visible projections are not a normal nerve count or complete ocular autonomic pathway. Laterality filters show the audited source-file presentation without asserting new sided FMA identities. Fibre continuity, precise globe entry and clinical anatomy require review.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "pending",
+            "title": "Short ciliary nerve · source group · Review pending",
+            "body": "Structure-specific teaching for this topic remains to be authored and reviewed.",
+            "bullets": [],
+            "note": "No scan registration, individual-nerve imaging visibility or procedural guidance is established by this source model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "0a267a65c3855b87d3d01d2ed28279de5415bc93",
+    "authorCommit": "280c701c9cc21c540b7b496f58e2d1c4214e7865",
+    "sourcePinsHash": "5f38c527e8a9f023ec165a6a0c2653020c0cc82117eefce05b65843b7f1647ce",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:unspecified:nerve:short-ciliary-nerve",
+        "fmaId": "FMA7041",
+        "tab": "quiz",
+        "previousHash": "f91ca782249a68d77014f65a89be1bf8c890ad6a646c217be65e98f5df0a2d83",
+        "currentHash": "d6df9a9f63e4111c5d18b590bfa794ceccbf7ed6c126684e0118016140876108"
+      }
+    ]
+  },
+  "sourceRecordHash": "e2bfec8051da7bf7fadb9a1d16517365bdc96b73c114e0efb8268f458a251395"
+}

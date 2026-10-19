@@ -1,0 +1,280 @@
+{
+  "author": "813506f4edfb2cf8c6e4492dfedb4c1d589b4b9d",
+  "parent": "6c4c9d093b57f232f8d5bb597e65a31ab4709845",
+  "tree": "efd2742f9cf6855aae3ef75b0a3ecabe55aae7d1",
+  "parentTree": "eb39d7570761dbf0f630bde2075ddf29f5c10b49",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 4,
+  "preserved": 9932,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-vena-cava",
+        "fmaId": "FMA10951",
+        "name": "Inferior vena cava",
+        "sourceName": "inferior vena cava",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen",
+          "pelvis",
+          "thorax"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA10951",
+        "bounds": {
+          "min": [
+            -0.2682560086250305,
+            1.5089203119277954,
+            0.5355200171470642
+          ],
+          "max": [
+            -0.02058500051498413,
+            3.9053003787994385,
+            0.787899911403656
+          ]
+        },
+        "center": [
+          -0.14442050457000732,
+          2.707110345363617,
+          0.6617099642753601
+        ],
+        "anchor": [
+          -0.17249399423599243,
+          2.727900505065918,
+          0.7307199835777283
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3441",
+            "sha256": "7b03ef0464b622d0a839c3c55aedcec2a713b4399112e7ce6efa1ac51861b606"
+          },
+          {
+            "file": "FJ3659",
+            "sha256": "2241af6de027922eb74cb58d882433a5d0ffb7ecce41a1925f05e13dd78d666c"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "37d3bb2f23d4a0b89679ace1708ace9ed1231185c9224b7b4755741c675c9b0d"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-hepatic-vein",
+        "fmaId": "FMA14338",
+        "name": "Right hepatic vein",
+        "sourceName": "right hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14338",
+        "bounds": {
+          "min": [
+            -1.0827900171279907,
+            2.959399461746216,
+            0.26052695512771606
+          ],
+          "max": [
+            -0.20694099366664886,
+            3.6603002548217773,
+            1.0732600688934326
+          ]
+        },
+        "center": [
+          -0.6448655053973198,
+          3.3098498582839966,
+          0.6668935120105743
+        ],
+        "anchor": [
+          -0.6585360169410706,
+          3.2908997535705566,
+          0.6377800107002258
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2416",
+            "sha256": "2d3c37d1811a909e5cfd016f9d5c700b433d5f55e4bcb5fb64494dbfcb839181"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "195bb3f0dd8c9ba2c896746d055184bf47e8b80f872c360f6fe99d46c089dca6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-hepatic-vein",
+        "fmaId": "FMA14339",
+        "name": "Left hepatic vein",
+        "sourceName": "left hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14339",
+        "bounds": {
+          "min": [
+            -0.11933600157499313,
+            3.264200448989868,
+            0.6738200187683105
+          ],
+          "max": [
+            0.5190989971160889,
+            3.6432995796203613,
+            1.2178999185562134
+          ]
+        },
+        "center": [
+          0.19988149777054787,
+          3.4537500143051147,
+          0.945859968662262
+        ],
+        "anchor": [
+          0.2203809916973114,
+          3.4426000118255615,
+          0.9140899777412415
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2415",
+            "sha256": "dced2210d0b4b725e40c2e63791023fdcf7ee8aadd2f6718fd442c0e7654107f"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "1f3604c3ffe73e7934c95543174602f476c5dd91a3aa007458b661bf19d92b98"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+        "fmaId": "FMA14340",
+        "name": "Middle hepatic vein",
+        "sourceName": "middle hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA14340",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2414",
+            "sha256": "bd57b4b26daef763025a4e2ae75102c687926a604db3b19fa44993033dc0f32f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.6027029752731323,
+            3.031899929046631,
+            0.6817799806594849
+          ],
+          "max": [
+            -0.05198270082473755,
+            3.6484999656677246,
+            1.3945300579071045
+          ]
+        },
+        "center": [
+          -0.32734283804893494,
+          3.3401999473571777,
+          1.0381550192832947
+        ],
+        "anchor": [
+          -0.3519819974899292,
+          3.3910999298095703,
+          1.1050599813461304
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "b148911d406b7b5bc6aea55d1a232a933cf7e9b4ab44ce8a999ea958c15ee47c"
+    }
+  ]
+}

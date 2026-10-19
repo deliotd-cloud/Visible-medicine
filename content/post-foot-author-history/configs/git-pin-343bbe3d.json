@@ -1,0 +1,391 @@
+{
+  "name": "git-pin-343bbe3d",
+  "helper": "girdleBoneUltrasoundLesson",
+  "pinsHash": "884139d4226b9d8ef27f4586906559d44813af6e058f5d9864b951fbf70f7c99",
+  "transitionHash": "4b000f27ca6ecfc04ba63133634602265091cadc914607141af8b9f4857c6da3",
+  "pins": {
+    "baseline": "3db69cc3f712c7af256650dc645499752ca9adcb",
+    "authorCommit": "343bbe3d2402502b698659fe5b9e5f9f2c2ff9c3",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+          "fmaId": "FMA16586",
+          "name": "Right hip bone",
+          "sourceName": "right hip bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "right",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "thigh"
+          ],
+          "bundle": "pelvis-skeleton",
+          "nodeName": "FMA16586",
+          "bounds": {
+            "min": [
+              -1.4487199783325195,
+              -0.4784698486328125,
+              -0.4888122081756592
+            ],
+            "max": [
+              -0.0279029980301857,
+              1.5786901712417603,
+              0.8901899456977844
+            ]
+          },
+          "center": [
+            -0.7383114881813526,
+            0.5501101613044739,
+            0.20068886876106262
+          ],
+          "anchor": [
+            -0.6408339738845825,
+            0.5218298435211182,
+            0.20818497240543365
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3152",
+              "sha256": "99de26e5435a8397b6f39b44ada75319d5e8fa1433e1ea38fdd8de9e079ed9a9"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+          "fmaId": "FMA13323",
+          "name": "Left clavicle",
+          "sourceName": "left clavicle",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-skeleton",
+          "nodeName": "FMA13323",
+          "bounds": {
+            "min": [
+              0.08378729969263077,
+              5.085300445556641,
+              0.04387500882148743
+            ],
+            "max": [
+              1.4394199848175049,
+              5.551800727844238,
+              0.9707800149917603
+            ]
+          },
+          "center": [
+            0.7616036422550678,
+            5.3185505867004395,
+            0.5073275119066238
+          ],
+          "anchor": [
+            0.7759079933166504,
+            5.351099967956543,
+            0.5148699879646301
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3237",
+              "sha256": "2491009d53eaed99ccb2a802b29402eec715eb8d207fb819fad67b0720195cf2"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+          "fmaId": "FMA23131",
+          "name": "Left humerus",
+          "sourceName": "left humerus",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "forearm"
+          ],
+          "bundle": "shoulder-arm-skeleton",
+          "nodeName": "FMA23131",
+          "bounds": {
+            "min": [
+              1.400730013847351,
+              2.292099714279175,
+              0.010559005662798882
+            ],
+            "max": [
+              2.407599925994873,
+              5.365200042724609,
+              0.5022899508476257
+            ]
+          },
+          "center": [
+            1.904164969921112,
+            3.828649878501892,
+            0.2564244782552123
+          ],
+          "anchor": [
+            1.8882200717926025,
+            3.8617005348205566,
+            0.25274598598480225
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3262",
+              "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+          "fmaId": "FMA13396",
+          "name": "Left scapula",
+          "sourceName": "left scapula",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-skeleton",
+          "nodeName": "FMA13396",
+          "bounds": {
+            "min": [
+              0.5706140398979187,
+              3.8394994735717773,
+              -0.5507640242576599
+            ],
+            "max": [
+              1.6646400690078735,
+              5.498600006103516,
+              0.5284500122070312
+            ]
+          },
+          "center": [
+            1.1176270544528961,
+            4.6690497398376465,
+            -0.011157006025314331
+          ],
+          "anchor": [
+            1.2024999856948853,
+            4.69379997253418,
+            -0.04868198558688164
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3279",
+              "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+          "fmaId": "FMA16587",
+          "name": "Left hip bone",
+          "sourceName": "left hip bone",
+          "system": "skeleton",
+          "category": "bone",
+          "laterality": "left",
+          "region": "pelvis",
+          "regions": [
+            "pelvis",
+            "thigh"
+          ],
+          "bundle": "pelvis-skeleton",
+          "nodeName": "FMA16587",
+          "bounds": {
+            "min": [
+              0.02750309929251671,
+              -0.480490118265152,
+              -0.4868505895137787
+            ],
+            "max": [
+              1.4475399255752563,
+              1.5809003114700317,
+              0.8909500241279602
+            ]
+          },
+          "center": [
+            0.7375215124338865,
+            0.5502050966024399,
+            0.20204971730709076
+          ],
+          "anchor": [
+            0.6407599449157715,
+            0.5112402439117432,
+            0.24853698909282684
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3288",
+              "sha256": "bfc8b489fee0945cd1d387cf64bd3691af8e033fa72f9fccae45cfd55ac88694"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ultrasound": {
+            "readiness": "pending",
+            "title": "Ultrasound content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "3db69cc3f712c7af256650dc645499752ca9adcb",
+    "authorCommit": "343bbe3d2402502b698659fe5b9e5f9f2c2ff9c3",
+    "sourcePinsHash": "884139d4226b9d8ef27f4586906559d44813af6e058f5d9864b951fbf70f7c99",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:pelvis:right:bone:right-hip-bone",
+        "fmaId": "FMA16586",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "1e675c63c0cac59d3d9b9f612f73e96e0e048ea74c17d551c0d0c76a84b21b5b"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-clavicle",
+        "fmaId": "FMA13323",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "e243715b1b28fcd42f2bc395f3b846f7a951fa074c47954a79a9c139796d4c48"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+        "fmaId": "FMA23131",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "41193493d9edcca238f6fbe0ee52e7bd3edee7e713b848a40020067cfc5760a6"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+        "fmaId": "FMA13396",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "2b6e04dc412204e9d7e6ec7f08397dacd9b17a3f4bbde75fb11b8f7cedfbd152"
+      },
+      {
+        "id": "vm:anatomy:body:pelvis:left:bone:left-hip-bone",
+        "fmaId": "FMA16587",
+        "tab": "ultrasound",
+        "previousHash": "96ac468df67227fb4b52b40d8162ef4111ec80668ebd6a13d63cfd38f086ec8c",
+        "currentHash": "d658aea16ee6f0dbcf43840db66bd79f73d089dc70ef9ec4b2a3851a07a56610"
+      }
+    ]
+  },
+  "sourceRecordHash": "dfac57c49aca608b7095c73115ebb3022a871ebf209ffca5a089b0a2b7947828",
+  "originalPinPath": "content/girdle-bone-ultrasound-pins.json",
+  "originalPinHash": "b7f114cb431e73eca380b017ebe74ab1657639c3e8f4f25ccbc21f1317b4dc19",
+  "originalPinBlob": "9b3f2c404d529a1545f806c2fc8d975a490f3e92",
+  "originalTransitionPaths": [
+    "content/girdle-bone-ultrasound.transition.json"
+  ]
+}

@@ -1,0 +1,1174 @@
+{
+  "name": "git-author-ec9972a6",
+  "helper": "girdleMuscleXrayLesson",
+  "pinsHash": "ae638f88329449f82d3e31e7c10d5765b24b4ba1011b552186d37e0fd3ea60d5",
+  "transitionHash": "4de32b99e006a9b319f168d762f021387e895b6e2f4da924addb1960e09551bf",
+  "pins": {
+    "baseline": "eb34afd7f1adc6a9655d3e4f238c9eb2c5288cf1",
+    "authorCommit": "ec9972a60325de147277941e04089e2d4be0baf9",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-serratus-anterior",
+          "fmaId": "FMA13398",
+          "name": "Right serratus anterior",
+          "sourceName": "right serratus anterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA13398",
+          "bounds": {
+            "min": [
+              -1.4439200162887573,
+              2.7816002368927,
+              -0.5526406168937683
+            ],
+            "max": [
+              -0.5772969722747803,
+              5.483799934387207,
+              1.0759199857711792
+            ]
+          },
+          "center": [
+            -1.0106084942817688,
+            4.132700085639954,
+            0.26163968443870544
+          ],
+          "anchor": [
+            -1.2965699434280396,
+            4.167700290679932,
+            0.2574089765548706
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1459",
+              "sha256": "33f4ae8c7a84785e2bc5f4f21432d13de0805e485a29f3e6762bac6f85cb61d5"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-serratus-anterior",
+          "fmaId": "FMA13399",
+          "name": "Left serratus anterior",
+          "sourceName": "left serratus anterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA13399",
+          "bounds": {
+            "min": [
+              0.5772979855537415,
+              2.7816002368927,
+              -0.5526406168937683
+            ],
+            "max": [
+              1.4439200162887573,
+              5.483799934387207,
+              1.0759199857711792
+            ]
+          },
+          "center": [
+            1.0106090009212494,
+            4.132700085639954,
+            0.26163968443870544
+          ],
+          "anchor": [
+            1.2965699434280396,
+            4.167700290679932,
+            0.2574089765548706
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1459M",
+              "sha256": "cb0e133829295b809e7dccc072318f335e34ccb3c33c80fbc68b8d6da327b7cb"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
+          "fmaId": "FMA37705",
+          "name": "Right anconeus",
+          "sourceName": "right anconeus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA37705",
+          "bounds": {
+            "min": [
+              -2.2930800914764404,
+              1.5953302383422852,
+              -0.08177898079156876
+            ],
+            "max": [
+              -2.0633599758148193,
+              2.6089000701904297,
+              0.17017997801303864
+            ]
+          },
+          "center": [
+            -2.17822003364563,
+            2.1021151542663574,
+            0.04420049861073494
+          ],
+          "anchor": [
+            -2.1931700706481934,
+            2.0896997451782227,
+            0.025242004543542862
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1485",
+              "sha256": "5c2e838a39547c4cdbb799cd5a54258d4ff76ab54b2859aecbfae2ba4588c5d4"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
+          "fmaId": "FMA37706",
+          "name": "Left anconeus",
+          "sourceName": "left anconeus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA37706",
+          "bounds": {
+            "min": [
+              2.0633599758148193,
+              1.5953302383422852,
+              -0.08177898079156876
+            ],
+            "max": [
+              2.2930800914764404,
+              2.6089000701904297,
+              0.17017997801303864
+            ]
+          },
+          "center": [
+            2.17822003364563,
+            2.1021151542663574,
+            0.04420049861073494
+          ],
+          "anchor": [
+            2.1931700706481934,
+            2.0896997451782227,
+            0.025242004543542862
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1485M",
+              "sha256": "4ca0901654d56656e4da354560abefb85bb958b3d786c148b5bb510fea106abf"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+          "fmaId": "FMA37668",
+          "name": "Right brachialis",
+          "sourceName": "right brachialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA37668",
+          "bounds": {
+            "min": [
+              -2.351210117340088,
+              1.9536101818084717,
+              0.10569698363542557
+            ],
+            "max": [
+              -1.7638499736785889,
+              4.201999664306641,
+              0.36396002769470215
+            ]
+          },
+          "center": [
+            -2.0575300455093384,
+            3.077804923057556,
+            0.23482850566506386
+          ],
+          "anchor": [
+            -2.0775399208068848,
+            3.066899299621582,
+            0.2378140240907669
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1486",
+              "sha256": "be5f40b153fd6ce0c8c274eb4c26be8d1a29b4bbe75dd0e4a0dfe5c4d251fa03"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+          "fmaId": "FMA37669",
+          "name": "Left brachialis",
+          "sourceName": "left brachialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA37669",
+          "bounds": {
+            "min": [
+              1.7638499736785889,
+              1.9536101818084717,
+              0.10569698363542557
+            ],
+            "max": [
+              2.351210117340088,
+              4.201999664306641,
+              0.3639589548110962
+            ]
+          },
+          "center": [
+            2.0575300455093384,
+            3.077804923057556,
+            0.23482796922326088
+          ],
+          "anchor": [
+            2.0775301456451416,
+            3.066899299621582,
+            0.2378140240907669
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1486M",
+              "sha256": "cedf106a4917deab99f86f077dde7d34d0672dbbb74f30652a4f81f75d7ef180"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+          "fmaId": "FMA37665",
+          "name": "Right coracobrachialis",
+          "sourceName": "right coracobrachialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA37665",
+          "bounds": {
+            "min": [
+              -1.8942599296569824,
+              3.7013001441955566,
+              0.16860496997833252
+            ],
+            "max": [
+              -1.301509976387024,
+              5.27869987487793,
+              0.561750054359436
+            ]
+          },
+          "center": [
+            -1.5978849530220032,
+            4.490000009536743,
+            0.3651775121688843
+          ],
+          "anchor": [
+            -1.567870020866394,
+            4.435600757598877,
+            0.4145210385322571
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1488",
+              "sha256": "7eb9835056883a0e35954d39ff930c4c8c32d41db000e9f0d656e3c663401e56"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+          "fmaId": "FMA37666",
+          "name": "Left coracobrachialis",
+          "sourceName": "left coracobrachialis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA37666",
+          "bounds": {
+            "min": [
+              1.301509976387024,
+              3.7013001441955566,
+              0.16860496997833252
+            ],
+            "max": [
+              1.8942599296569824,
+              5.27869987487793,
+              0.561750054359436
+            ]
+          },
+          "center": [
+            1.5978849530220032,
+            4.490000009536743,
+            0.3651775121688843
+          ],
+          "anchor": [
+            1.567870020866394,
+            4.435600757598877,
+            0.4145210385322571
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1488M",
+              "sha256": "4004a378ca0d8be2924ce0b614fa19a4819804977e374e7cebcd5faa1cd7aa6b"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+          "fmaId": "FMA32551",
+          "name": "Right teres major",
+          "sourceName": "right teres major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA32551",
+          "bounds": {
+            "min": [
+              -1.7220900058746338,
+              3.8965003490448,
+              -0.5155565142631531
+            ],
+            "max": [
+              -0.8614250421524048,
+              4.853499889373779,
+              0.2955690026283264
+            ]
+          },
+          "center": [
+            -1.2917575240135193,
+            4.3750001192092896,
+            -0.10999375581741333
+          ],
+          "anchor": [
+            -1.2664999961853027,
+            4.422800064086914,
+            -0.13644100725650787
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1507",
+              "sha256": "217aa2d39fdaa682998c8a1a1ffe9c8b37fed881edbbeb8ed5c633fa1541eaac"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+          "fmaId": "FMA32552",
+          "name": "Left teres major",
+          "sourceName": "left teres major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA32552",
+          "bounds": {
+            "min": [
+              0.8614250421524048,
+              3.8965003490448,
+              -0.5155565142631531
+            ],
+            "max": [
+              1.7220900058746338,
+              4.853499889373779,
+              0.2955690026283264
+            ]
+          },
+          "center": [
+            1.2917575240135193,
+            4.3750001192092896,
+            -0.10999375581741333
+          ],
+          "anchor": [
+            1.2664999961853027,
+            4.42270040512085,
+            -0.13644100725650787
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1507M",
+              "sha256": "967a771f0d2e0950adfe251ac14b4878f9b12a3aacb16cbf472dac94db38519d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+          "fmaId": "FMA32540",
+          "name": "Right levator scapulae",
+          "sourceName": "right levator scapulae",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA32540",
+          "bounds": {
+            "min": [
+              -0.8107860088348389,
+              5.093199253082275,
+              -0.37912699580192566
+            ],
+            "max": [
+              -0.21074800193309784,
+              6.685600757598877,
+              0.32453498244285583
+            ]
+          },
+          "center": [
+            -0.5107670053839684,
+            5.889400005340576,
+            -0.027296006679534912
+          ],
+          "anchor": [
+            -0.4235309958457947,
+            5.836700439453125,
+            0.005924987606704235
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1532",
+              "sha256": "ee7897cbc5cde540e9cc29b03617d90f1b3caaebee4489f6590ee9c4632dcd42"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+          "fmaId": "FMA32541",
+          "name": "Left levator scapulae",
+          "sourceName": "left levator scapulae",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA32541",
+          "bounds": {
+            "min": [
+              0.21074800193309784,
+              5.093199253082275,
+              -0.37912699580192566
+            ],
+            "max": [
+              0.8107860088348389,
+              6.685600757598877,
+              0.32453498244285583
+            ]
+          },
+          "center": [
+            0.5107670053839684,
+            5.889400005340576,
+            -0.027296006679534912
+          ],
+          "anchor": [
+            0.4235309958457947,
+            5.836700439453125,
+            0.00592399574816227
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1532M",
+              "sha256": "cd98c83bc88a183c77b3eb10ce396f805843444d6f31053b1e3fb04f34647372"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-major",
+          "fmaId": "FMA13381",
+          "name": "Right rhomboid major",
+          "sourceName": "right rhomboid major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA13381",
+          "bounds": {
+            "min": [
+              -0.895035982131958,
+              3.881899356842041,
+              -0.5609220862388611
+            ],
+            "max": [
+              0.0077675702050328255,
+              5.616600513458252,
+              -0.27901899814605713
+            ]
+          },
+          "center": [
+            -0.4436342059634626,
+            4.7492499351501465,
+            -0.4199705421924591
+          ],
+          "anchor": [
+            -0.4482319951057434,
+            4.739699840545654,
+            -0.42545831203460693
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1536",
+              "sha256": "81b84d6d2e7c859004ee2d71f8fef2768ec422fbace3967d54e3f3b2965bdb89"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-major",
+          "fmaId": "FMA13382",
+          "name": "Left rhomboid major",
+          "sourceName": "left rhomboid major",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA13382",
+          "bounds": {
+            "min": [
+              -0.0077675702050328255,
+              3.881899356842041,
+              -0.5609220862388611
+            ],
+            "max": [
+              0.895035982131958,
+              5.616600513458252,
+              -0.27901899814605713
+            ]
+          },
+          "center": [
+            0.4436342059634626,
+            4.7492499351501465,
+            -0.4199705421924591
+          ],
+          "anchor": [
+            0.4482319951057434,
+            4.739699840545654,
+            -0.42545831203460693
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1536M",
+              "sha256": "89601e72c95415990585118c08e0fb1b9c388f5bfa2b45ac1de116759f663701"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-minor",
+          "fmaId": "FMA13383",
+          "name": "Right rhomboid minor",
+          "sourceName": "right rhomboid minor",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA13383",
+          "bounds": {
+            "min": [
+              -0.6170539855957031,
+              4.808000564575195,
+              -0.451839804649353
+            ],
+            "max": [
+              0.009160500019788742,
+              5.875100135803223,
+              -0.1392359882593155
+            ]
+          },
+          "center": [
+            -0.3039467427879572,
+            5.341550350189209,
+            -0.29553789645433426
+          ],
+          "anchor": [
+            -0.3133779764175415,
+            5.3555006980896,
+            -0.3166449964046478
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1537",
+              "sha256": "acbd2dcd51879085bb2ec7d12b45c0ba2514ce3a2a1bb680bcf78732a1f688ff"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-minor",
+          "fmaId": "FMA13384",
+          "name": "Left rhomboid minor",
+          "sourceName": "left rhomboid minor",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm"
+          ],
+          "bundle": "shoulder-arm-muscles",
+          "nodeName": "FMA13384",
+          "bounds": {
+            "min": [
+              -0.009160500019788742,
+              4.808000564575195,
+              -0.451839804649353
+            ],
+            "max": [
+              0.6170539855957031,
+              5.875100135803223,
+              -0.1392359882593155
+            ]
+          },
+          "center": [
+            0.3039467427879572,
+            5.341550350189209,
+            -0.29553789645433426
+          ],
+          "anchor": [
+            0.3133779764175415,
+            5.3555006980896,
+            -0.3166449964046478
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1537M",
+              "sha256": "c1708ef88207aef30c32673af54b7c3b8cad2863a29a17f1f7a54859f96232a4"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "eb34afd7f1adc6a9655d3e4f238c9eb2c5288cf1",
+    "authorCommit": "ec9972a60325de147277941e04089e2d4be0baf9",
+    "sourcePinsHash": "ae638f88329449f82d3e31e7c10d5765b24b4ba1011b552186d37e0fd3ea60d5",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-serratus-anterior",
+        "fmaId": "FMA13398",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "6d94e6516d46bc35d6630164fdb13966265d34945c64e3a990ea725d17a7a6b7"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-serratus-anterior",
+        "fmaId": "FMA13399",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "4e8f38b7c7bff569ae4e2a8a18309eaac5ec29426013a0f56fc7800d804b5518"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-anconeus",
+        "fmaId": "FMA37705",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "1344264203f670b2433cbdbb618f618d23e4434c2f72d7c0cc36800f5ff1d129"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-anconeus",
+        "fmaId": "FMA37706",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "b1ea3c5784056cd941ecae22577130ff4c39666e151b713e399aca824142f466"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+        "fmaId": "FMA37668",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "424d2ed7982e585fb00ba3042c7e4cc85600ad1afc5a61cf96a130a26789a29d"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+        "fmaId": "FMA37669",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "70db017b5a9111e0c6f9c2245bc743ec4c50e792766d638cb013b986a2840c92"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+        "fmaId": "FMA37665",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "b867ec0843de74ae8ed3a3eac991f51077be43b8523f60c91bda4e44acba5446"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+        "fmaId": "FMA37666",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "59c2b5ef52709c96c81fc8aeb1429c43742048544346cab85ced195d889485ae"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+        "fmaId": "FMA32551",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "8143fe72dc6645c90241eb22f148bf0923b7827e577281ce1b783909882e6e11"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+        "fmaId": "FMA32552",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "3de89127faa7980990295ba6d715f7bc10180542bebf5c80ac0a537aae1839c7"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+        "fmaId": "FMA32540",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "f239408549e8c6e9cc7aca93c7dc4f73c2d9e29d0ed4cb63807b48031b619c9c"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+        "fmaId": "FMA32541",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "d954caea4112d49764f85762ad32f79e0a6330b90358dd2ff8c6bb7f6637a506"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-major",
+        "fmaId": "FMA13381",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "29d961a6d150c30cd52e8668b8d6c2c53507d3b9fc04767137fe85c140c9a038"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-major",
+        "fmaId": "FMA13382",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "91791a3efb3d49a3849bc131716e952270ab206252807b595cc60cee739e7ce5"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-rhomboid-minor",
+        "fmaId": "FMA13383",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "2e698116b29162ead54f4e4f493c0cf74b6cfd5b56dbf028c0a0f5c0a744faba"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-rhomboid-minor",
+        "fmaId": "FMA13384",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "290d189aadde9edc9e71127223def082ac75d5e33e06aff9b012f1e14a3dcab0"
+      }
+    ]
+  },
+  "sourceRecordHash": "705862898fb11a528fbe835fe06cd28cdb48f03d67d852478fc95b543c4ef1de"
+}

@@ -1,0 +1,166 @@
+{
+  "name": "git-author-53238ab3",
+  "helper": "biliaryDuctXrayLesson",
+  "pinsHash": "a905e651ae72505304d950059f48430008b9d0eea9f9f6166ce79afe1fbc6840",
+  "transitionHash": "36d54b1b533a4dce725dd1a5e9af8d702d5ebf98d073d15d94c6df1e82d99af6",
+  "pins": {
+    "baseline": "6b82cba2129c17500526b927869f825e97aa2215",
+    "authorCommit": "53238ab38e08bca10d3302ba85d07d5a72ee21d8",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+          "fmaId": "FMA14539",
+          "name": "Cystic duct",
+          "sourceName": "cystic duct",
+          "system": "organs",
+          "category": "organ",
+          "laterality": "unpaired",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-organs-inventory",
+          "nodeName": "FMA14539",
+          "bounds": {
+            "min": [
+              -0.29680201411247253,
+              2.791600227355957,
+              0.7844099402427673
+            ],
+            "max": [
+              -0.2089800089597702,
+              2.9134998321533203,
+              0.8778599500656128
+            ]
+          },
+          "center": [
+            -0.25289101153612137,
+            2.8525500297546387,
+            0.8311349451541901
+          ],
+          "anchor": [
+            -0.257409006357193,
+            2.8639001846313477,
+            0.8359300494194031
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3080",
+              "sha256": "8f7a2604f762392129842c1a7251be006b00bfe9211698d48d0e6dd2bd512d28"
+            }
+          ],
+          "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+          "fmaId": "FMA14668",
+          "name": "Common hepatic duct",
+          "sourceName": "common hepatic duct",
+          "system": "organs",
+          "category": "organ",
+          "laterality": "unpaired",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-organs-inventory",
+          "nodeName": "FMA14668",
+          "bounds": {
+            "min": [
+              -0.43682000041007996,
+              2.1958000659942627,
+              0.5703700184822083
+            ],
+            "max": [
+              -0.1786300092935562,
+              3.0386998653411865,
+              0.9450799822807312
+            ]
+          },
+          "center": [
+            -0.3077250048518181,
+            2.6172499656677246,
+            0.7577250003814697
+          ],
+          "anchor": [
+            -0.27831700444221497,
+            2.666300058364868,
+            0.7028900384902954
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3079",
+              "sha256": "31a8cf303123987ddd1a3092b9a7c5ceb092fc10afce61193f40e1fe43af845f"
+            }
+          ],
+          "coverageNote": "Selected biliary duct source surface; no complete biliary-tree or luminal validation is supplied. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "6b82cba2129c17500526b927869f825e97aa2215",
+    "authorCommit": "53238ab38e08bca10d3302ba85d07d5a72ee21d8",
+    "sourcePinsHash": "a905e651ae72505304d950059f48430008b9d0eea9f9f6166ce79afe1fbc6840",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:cystic-duct",
+        "fmaId": "FMA14539",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "534d19c3f90d612047e524c437c64e6a103159f6c3e9af14dadb937fad0deff9"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unpaired:organ:common-hepatic-duct",
+        "fmaId": "FMA14668",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "c4777b531316d55d222895ca7d33697d54afcc5487fecb80bac37d54d55a349f"
+      }
+    ]
+  },
+  "sourceRecordHash": "983587bb844fcca6c7833ff43d3ec77ea4ee8d7c404a9ce860f1535dca9e71f1"
+}

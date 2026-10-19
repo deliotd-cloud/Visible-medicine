@@ -1,0 +1,286 @@
+{
+  "author": "8c644c4ebb59510da8bdb33930f615dcd441447e",
+  "parent": "08be622a4871c75e49d99b233ada87af79a90f26",
+  "tree": "2ec5ceefd9c5df51e091a850d7b19c167d21b0a2",
+  "parentTree": "fb599196e490fdc1258862de5d3ed1d43d5d343b",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 4,
+  "preserved": 9932,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-artery",
+        "fmaId": "FMA14773",
+        "name": "Splenic artery",
+        "sourceName": "splenic artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14773",
+        "bounds": {
+          "min": [
+            0.019408300518989563,
+            2.5958995819091797,
+            0.30418097972869873
+          ],
+          "max": [
+            1.0045599937438965,
+            2.945699453353882,
+            0.875809907913208
+          ]
+        },
+        "center": [
+          0.511984147131443,
+          2.7707995176315308,
+          0.5899954438209534
+        ],
+        "anchor": [
+          0.5094789862632751,
+          2.776099920272827,
+          0.5806400179862976
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2562",
+            "sha256": "f0ea297213c33d68e9da6158016cf963dfa3922520f7b533aabda2254e8a64fd"
+          },
+          {
+            "file": "FJ3420",
+            "sha256": "3d20dc80614ce5394ee45caf1d2fcec225912f06eac4ff01734f987513172ad5"
+          },
+          {
+            "file": "FJ3544",
+            "sha256": "d22809e5be114a70c1e380d370c42c91439ed849f1f6fe03f595955cdd6898b3"
+          },
+          {
+            "file": "FJ3640",
+            "sha256": "27b149be4ab4edd36c86799827a10ea40e5b29b596eacc2b830da44f143ed063"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "c711d281460d827ecea18b3f096e037db019cec562a25e18a0168213f43e6142"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-renal-artery",
+        "fmaId": "FMA14752",
+        "name": "Right renal artery",
+        "sourceName": "right renal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14752",
+        "bounds": {
+          "min": [
+            -0.4234410226345062,
+            2.251800537109375,
+            0.4725840091705322
+          ],
+          "max": [
+            0.1271129995584488,
+            2.4871997833251953,
+            0.695609986782074
+          ]
+        },
+        "center": [
+          -0.14816401153802872,
+          2.369500160217285,
+          0.5840969979763031
+        ],
+        "anchor": [
+          -0.13355699181556702,
+          2.382800340652466,
+          0.5872600078582764
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2038",
+            "sha256": "2bf3da140369524e15335694773718b4e83b254234bc3e8376a4708565276045"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "19acb4c4dffd83a451cfb398fcb2d75a0998f411804ce922c333accbe88581d4"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-renal-artery",
+        "fmaId": "FMA14753",
+        "name": "Left renal artery",
+        "sourceName": "left renal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14753",
+        "bounds": {
+          "min": [
+            0.03650899976491928,
+            2.3655004501342773,
+            0.46762001514434814
+          ],
+          "max": [
+            0.39461201429367065,
+            2.497499942779541,
+            0.7030699849128723
+          ]
+        },
+        "center": [
+          0.21556050702929497,
+          2.431500196456909,
+          0.5853450000286102
+        ],
+        "anchor": [
+          0.2146729975938797,
+          2.449599504470825,
+          0.5566700100898743
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2046",
+            "sha256": "b1a9ce8a37cd9c89fbf4c90a68a554184bf2919dbad391c552c0f4c8dd788845"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "2a9ecc740ed6425f1c39743621efe332e6dec6ddb37825e41fa2c0e760f19bbe"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "fmaId": "FMA76574",
+        "name": "Trunk of gastroduodenal artery",
+        "sourceName": "trunk of gastroduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA76574",
+        "bounds": {
+          "min": [
+            -0.11357899755239487,
+            2.6509997844696045,
+            0.858430027961731
+          ],
+          "max": [
+            -0.05860359966754913,
+            2.7818005084991455,
+            0.9130700826644897
+          ]
+        },
+        "center": [
+          -0.086091298609972,
+          2.716400146484375,
+          0.8857500553131104
+        ],
+        "anchor": [
+          -0.08795890212059021,
+          2.704200506210327,
+          0.8912100195884705
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3432",
+            "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "xray",
+      "previous": {
+        "readiness": "pending",
+        "title": "X-ray teaching pending",
+        "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+        "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+      },
+      "currentHash": "8edf9bfad775b080a7caf4b1e6ad11cdb899209098a9238c98b4ab5fa48ae133"
+    }
+  ]
+}

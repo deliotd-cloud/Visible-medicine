@@ -1,0 +1,384 @@
+{
+  "name": "git-author-c6fd5a17",
+  "helper": "thoracicMediastinalArterialXrayLesson",
+  "pinsHash": "83222934ea12289b18e6646d478093531a05af62d6c2bd16685adc324f35ef78",
+  "transitionHash": "7436ae602bf3fd0245c54e980e5ce4ef1f7c8633c3cb398b6dc76986fc3bb517",
+  "pins": {
+    "baseline": "792d6623eeb2bd7ae7ee2bea37c8bd1c9afa6351",
+    "authorCommit": "c6fd5a1789ce8c6f06c48693aa9d5479a00d610a",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+          "fmaId": "FMA3932",
+          "name": "Brachiocephalic artery",
+          "sourceName": "brachiocephalic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax",
+            "shoulder-arm",
+            "head-neck"
+          ],
+          "bundle": "thorax-vessels-recovery",
+          "nodeName": "FMA3932",
+          "bounds": {
+            "min": [
+              -0.1928279995918274,
+              5.04319953918457,
+              0.5197299718856812
+            ],
+            "max": [
+              0.18245701491832733,
+              5.422800064086914,
+              0.6965699791908264
+            ]
+          },
+          "center": [
+            -0.0051854923367500305,
+            5.232999801635742,
+            0.6081499755382538
+          ],
+          "anchor": [
+            -0.014610400423407555,
+            5.217900276184082,
+            0.6019899845123291
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3417",
+              "sha256": "285df2b5ecb7881756e36645ca21e2cd825863f420c813a673eb6514c93f9156"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+          "fmaId": "FMA4149",
+          "name": "Esophageal artery",
+          "sourceName": "esophageal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA4149",
+          "bounds": {
+            "min": [
+              -0.2986220121383667,
+              3.956500291824341,
+              0.15571998059749603
+            ],
+            "max": [
+              0.1234080046415329,
+              4.492900371551514,
+              0.3243640065193176
+            ]
+          },
+          "center": [
+            -0.0876070037484169,
+            4.224700331687927,
+            0.24004199355840683
+          ],
+          "anchor": [
+            -0.07550640404224396,
+            4.223900318145752,
+            0.2694360315799713
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1934",
+              "sha256": "c65d1ea50ca8980e2f1dc8aaac2e5260edcb841b7ebc5b7fad9d220088071ae9"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+          "fmaId": "FMA10704",
+          "name": "Variant bronchial artery",
+          "sourceName": "variant bronchial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA10704",
+          "bounds": {
+            "min": [
+              -0.29621800780296326,
+              4.6173996925354,
+              0.2007090002298355
+            ],
+            "max": [
+              0.17332398891448975,
+              5.030899524688721,
+              0.2909580171108246
+            ]
+          },
+          "center": [
+            -0.061447009444236755,
+            4.8241496086120605,
+            0.24583350867033005
+          ],
+          "anchor": [
+            -0.0718580037355423,
+            4.811700344085693,
+            0.25371697545051575
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3418",
+              "sha256": "36f80be07440fd4834878bddc8e73d75f0cba0ed15505fc16e03eb474a563943"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+          "fmaId": "FMA68109",
+          "name": "Bronchial artery",
+          "sourceName": "bronchial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA68109",
+          "bounds": {
+            "min": [
+              -0.493863970041275,
+              4.814200401306152,
+              0.23621803522109985
+            ],
+            "max": [
+              0.12741200625896454,
+              5.19420051574707,
+              0.45102599263191223
+            ]
+          },
+          "center": [
+            -0.18322598189115524,
+            5.004200458526611,
+            0.34362201392650604
+          ],
+          "anchor": [
+            -0.19295400381088257,
+            5.035899639129639,
+            0.4431140124797821
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1933",
+              "sha256": "9dbcdaeb0c6a61fe68c26bb3fb48e40efecf5ada9e396cf11e4c5780c1a92224"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+          "fmaId": "FMA71537",
+          "name": "Set of oesophageal branches of thoracic aorta",
+          "sourceName": "set of oesophageal branches of thoracic aorta",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "thorax",
+          "regions": [
+            "thorax"
+          ],
+          "bundle": "thorax-vessels-thoracic-detail",
+          "nodeName": "FMA71537",
+          "bounds": {
+            "min": [
+              -0.14099200069904327,
+              4.000699520111084,
+              0.044264983385801315
+            ],
+            "max": [
+              0.21891000866889954,
+              4.567600250244141,
+              0.3588919937610626
+            ]
+          },
+          "center": [
+            0.03895900398492813,
+            4.284149885177612,
+            0.20157848857343197
+          ],
+          "anchor": [
+            0.0635548010468483,
+            4.292199611663818,
+            0.23305602371692657
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3431",
+              "sha256": "e2addc11f8e81daf7349975b5871ecf9ea97ace47b00610fb3aca54eea793cfc"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source vessel names do not establish normal branching, a complete vascular tree, continuity, lumen or perfusion. Grouped branches retain one source identity; the variant-labelled source is not a normal-anatomy template.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "792d6623eeb2bd7ae7ee2bea37c8bd1c9afa6351",
+    "authorCommit": "c6fd5a1789ce8c6f06c48693aa9d5479a00d610a",
+    "sourcePinsHash": "83222934ea12289b18e6646d478093531a05af62d6c2bd16685adc324f35ef78",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:brachiocephalic-artery",
+        "fmaId": "FMA3932",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "0c0a382a6d110c967e57e0eba8b9da3e0e4b21e46073615a9458818166cd2b8c"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:esophageal-artery",
+        "fmaId": "FMA4149",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "e7f7cb3df1b442b323497128abbfbc0d9abd74367093aea008a20ca8cb6d28b1"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:variant-bronchial-artery",
+        "fmaId": "FMA10704",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "eb48b131f47fc28db516751ef1f0c745768fc131d9e71af361483247f6305a45"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:bronchial-artery",
+        "fmaId": "FMA68109",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "f9e9dface1855cb7266a89faa238f6b2be2df680e1828745701b99b78ce42071"
+      },
+      {
+        "id": "vm:anatomy:body:thorax:midline:vessel:set-of-oesophageal-branches-of-thoracic-aorta",
+        "fmaId": "FMA71537",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "b1326d4ad848d50e64374b982752dd0c47e98c5b041c5e7105abfbf88c7d9d91"
+      }
+    ]
+  },
+  "sourceRecordHash": "0ade68b1502839bc4679c2dd754233b6a3816cbddc75443406b9a10059794c9e"
+}

@@ -1,0 +1,144 @@
+{
+  "author": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "parent": "6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb",
+  "tree": "83720d136f899876bd947323e6552c4d3e171210",
+  "parentTree": "4ce7882a2748d2f190e4b4f8783af6416c7cf44b",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 2,
+  "preserved": 9934,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:vessel:right-superficial-medial-plantar-artery",
+        "fmaId": "FMA43937",
+        "name": "Right superficial medial plantar artery",
+        "sourceName": "right superficial medial plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA43937",
+        "bounds": {
+          "min": [
+            -0.8302369713783264,
+            -8.628193855285645,
+            0.7448300123214722
+          ],
+          "max": [
+            -0.6874139904975891,
+            -8.421586036682129,
+            1.2987300157546997
+          ]
+        },
+        "center": [
+          -0.7588254809379578,
+          -8.524889945983887,
+          1.021780014038086
+        ],
+        "anchor": [
+          -0.7582150101661682,
+          -8.477795600891113,
+          1.0386199951171875
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2179",
+            "sha256": "77f3a27fd0d079e8334f4145d031b308b00e8660b8ad3a2a562fd0f0f632a5c7"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "b01c77d3d89e2c791e45eb25fb4dada3ca1c33dde36c3ff424171afa612cf814"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:vessel:left-superficial-medial-plantar-artery",
+        "fmaId": "FMA43938",
+        "name": "Left superficial medial plantar artery",
+        "sourceName": "left superficial medial plantar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-vessels-foot-vascular",
+        "nodeName": "FMA43938",
+        "bounds": {
+          "min": [
+            0.6872889995574951,
+            -8.62808609008789,
+            0.7447799444198608
+          ],
+          "max": [
+            0.8302209973335266,
+            -8.421615600585938,
+            1.2985299825668335
+          ]
+        },
+        "center": [
+          0.7587549984455109,
+          -8.524850845336914,
+          1.0216549634933472
+        ],
+        "anchor": [
+          0.7591999769210815,
+          -8.476333618164062,
+          1.0334899425506592
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2089",
+            "sha256": "e744f8331409c56adeace058fa04fec14f7ec22dc0053c85845383cc0f6dc455"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source vessel surface in unchanged common coordinates. Grouped components retain one source identity, not newly named branches. No complete vascular tree, lumen, valves, flow, confirmed connection, surgical plane or patient registration is established. Missing foot vessels and plantar nerves are not invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "dfcb9e9763498db1a20e7faa92f987b113653a09f638bcd0cb5d2aaf4f349886"
+    }
+  ]
+}

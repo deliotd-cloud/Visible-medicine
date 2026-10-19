@@ -1,0 +1,1166 @@
+{
+  "author": "9b66b2d0ca4a6f02c14826fbfbd5f973ddcf5605",
+  "parent": "7952a8a136a92700c6905908ab97aa0838b21e55",
+  "tree": "b760e78549fd7fac27d5cf9572f5663034b2b7db",
+  "parentTree": "7a28c1a5bdf128f8c908b67672c8e6ea63c83eba",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 18,
+  "preserved": 9918,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:first-lumbrical-of-right-foot",
+        "fmaId": "FMA37717",
+        "name": "First lumbrical of right foot",
+        "sourceName": "first lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37717",
+        "bounds": {
+          "min": [
+            -1.1310800313949585,
+            -8.670652389526367,
+            0.5613500475883484
+          ],
+          "max": [
+            -0.7768679857254028,
+            -8.474342346191406,
+            1.4152299165725708
+          ]
+        },
+        "center": [
+          -0.9539740085601807,
+          -8.572497367858887,
+          0.9882899820804596
+        ],
+        "anchor": [
+          -0.945252001285553,
+          -8.561978340148926,
+          1.0083799362182617
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1383",
+            "sha256": "d7bce4728ada3797b2ada290797ee98aeaf1d43d0279d83401c9d54ff72add3f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find first lumbrical of right foot on the model."
+      },
+      "currentHash": "086c86c05e509e3d3eee1c9880aa8aec48d06bf1b50cb4cf7220d5ff3c7eb96b"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:first-lumbrical-of-left-foot",
+        "fmaId": "FMA37718",
+        "name": "First lumbrical of left foot",
+        "sourceName": "first lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37718",
+        "bounds": {
+          "min": [
+            0.7768679857254028,
+            -8.670653343200684,
+            0.5613500475883484
+          ],
+          "max": [
+            1.1310800313949585,
+            -8.474342346191406,
+            1.4152299165725708
+          ]
+        },
+        "center": [
+          0.9539740085601807,
+          -8.572497844696045,
+          0.9882899820804596
+        ],
+        "anchor": [
+          0.945252001285553,
+          -8.561978340148926,
+          1.0083799362182617
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1383M",
+            "sha256": "9da478797a43866ef3b3e4750b76d37de5d35b3fd3fe659935200cb2426dd139"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find first lumbrical of left foot on the model."
+      },
+      "currentHash": "bcbb9d666b76e0be53cc2158fbe65ab6d4fd8b4fa27288722adf1f7dbafea5e1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:first-plantar-interosseous-of-right-foot",
+        "fmaId": "FMA37745",
+        "name": "First plantar interosseous of right foot",
+        "sourceName": "first plantar interosseous of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37745",
+        "bounds": {
+          "min": [
+            -1.3174999952316284,
+            -8.626962661743164,
+            0.8359900116920471
+          ],
+          "max": [
+            -1.0479099750518799,
+            -8.391441345214844,
+            1.3314300775527954
+          ]
+        },
+        "center": [
+          -1.1827049851417542,
+          -8.509202003479004,
+          1.0837100446224213
+        ],
+        "anchor": [
+          -1.1793400049209595,
+          -8.511947631835938,
+          1.0952200889587402
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1384",
+            "sha256": "76db533b5ef8f3d4a85d142e0e5f7297c8996d0a75efcc4c5124d7643857e3a5"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find first plantar interosseous of right foot on the model."
+      },
+      "currentHash": "fb9ebcf4bf7c499aea862a3c21ac0e28a3104f541d0866978be9ea5f2c2a2ce6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:first-plantar-interosseous-of-left-foot",
+        "fmaId": "FMA37746",
+        "name": "First plantar interosseous of left foot",
+        "sourceName": "first plantar interosseous of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37746",
+        "bounds": {
+          "min": [
+            1.0479099750518799,
+            -8.626962661743164,
+            0.8359900116920471
+          ],
+          "max": [
+            1.3174999952316284,
+            -8.391441345214844,
+            1.3314300775527954
+          ]
+        },
+        "center": [
+          1.1827049851417542,
+          -8.509202003479004,
+          1.0837100446224213
+        ],
+        "anchor": [
+          1.1793400049209595,
+          -8.511947631835938,
+          1.0952200889587402
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1384M",
+            "sha256": "66543fc74c686eb86051f82c9b7ed3931c0a5b72ebb14ff2e90ccbf65a70b522"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find first plantar interosseous of left foot on the model."
+      },
+      "currentHash": "472e05b8d4b6b507fbbe04791eba43dcb149973f2d24228e61054db62b2431f2"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:second-lumbrical-of-right-foot",
+        "fmaId": "FMA37719",
+        "name": "Second lumbrical of right foot",
+        "sourceName": "second lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37719",
+        "bounds": {
+          "min": [
+            -1.2918899059295654,
+            -8.675909996032715,
+            0.717799961566925
+          ],
+          "max": [
+            -0.8852739930152893,
+            -8.534259796142578,
+            1.344019889831543
+          ]
+        },
+        "center": [
+          -1.0885819494724274,
+          -8.605084896087646,
+          1.030909925699234
+        ],
+        "anchor": [
+          -1.0707000494003296,
+          -8.598753929138184,
+          1.0353699922561646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1385",
+            "sha256": "76ad80b70d292c181e8947d623ddee8f373a20813e4d0fc8842c9b29800234a6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find second lumbrical of right foot on the model."
+      },
+      "currentHash": "d6525312b79b62e78375f4496c3ac1752a2027e8158d192e08d25acbea8bb84e"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:second-lumbrical-of-left-foot",
+        "fmaId": "FMA37720",
+        "name": "Second lumbrical of left foot",
+        "sourceName": "second lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37720",
+        "bounds": {
+          "min": [
+            0.8852739930152893,
+            -8.675909996032715,
+            0.717799961566925
+          ],
+          "max": [
+            1.2918899059295654,
+            -8.534259796142578,
+            1.344019889831543
+          ]
+        },
+        "center": [
+          1.0885819494724274,
+          -8.605084896087646,
+          1.030909925699234
+        ],
+        "anchor": [
+          1.0707000494003296,
+          -8.598753929138184,
+          1.0353699922561646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1385M",
+            "sha256": "7b8bad4fbf9ab385a923da194a35a1fb06c42d7301d4977e736f8da0f6f7db0a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find second lumbrical of left foot on the model."
+      },
+      "currentHash": "af094c3153128612b2cd830f814a516ae20164b9939f825621165b953009b6a1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:second-plantar-interosseous-of-right-foot",
+        "fmaId": "FMA37743",
+        "name": "Second plantar interosseous of right foot",
+        "sourceName": "second plantar interosseous of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37743",
+        "bounds": {
+          "min": [
+            -1.3842799663543701,
+            -8.623082160949707,
+            0.7655999660491943
+          ],
+          "max": [
+            -1.1108499765396118,
+            -8.420093536376953,
+            1.2339199781417847
+          ]
+        },
+        "center": [
+          -1.247564971446991,
+          -8.52158784866333,
+          0.9997599720954895
+        ],
+        "anchor": [
+          -1.2493599653244019,
+          -8.514833450317383,
+          1.0058599710464478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1386",
+            "sha256": "aa653c971e6d50e27f0b0aa90e5a6bdf453038bc4c63c51395425d4e0f4bfa26"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find second plantar interosseous of right foot on the model."
+      },
+      "currentHash": "42c60a76380853a69ba681e604ffb5d38717d871a7169c3628e4362cfab6dfa6"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:second-plantar-interosseous-of-left-foot",
+        "fmaId": "FMA37744",
+        "name": "Second plantar interosseous of left foot",
+        "sourceName": "second plantar interosseous of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37744",
+        "bounds": {
+          "min": [
+            1.1108499765396118,
+            -8.623082160949707,
+            0.7655999660491943
+          ],
+          "max": [
+            1.3842799663543701,
+            -8.420093536376953,
+            1.2339199781417847
+          ]
+        },
+        "center": [
+          1.247564971446991,
+          -8.52158784866333,
+          0.9997599720954895
+        ],
+        "anchor": [
+          1.2493599653244019,
+          -8.51483154296875,
+          1.0058599710464478
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1386M",
+            "sha256": "f426c6d272285a14f588a479e91093b56f39862b90b7c614ca37c6d2b68a9f8f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find second plantar interosseous of left foot on the model."
+      },
+      "currentHash": "30b250866821b30a1f30d9dca4550aca3cf09c956a5eb45bc12fac0a476f7725"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:third-lumbrical-of-right-foot",
+        "fmaId": "FMA37485",
+        "name": "Third lumbrical of right foot",
+        "sourceName": "third lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37485",
+        "bounds": {
+          "min": [
+            -1.3781399726867676,
+            -8.680427551269531,
+            0.6886900067329407
+          ],
+          "max": [
+            -0.9402259588241577,
+            -8.538249015808105,
+            1.2332699298858643
+          ]
+        },
+        "center": [
+          -1.1591829657554626,
+          -8.609338283538818,
+          0.9609799683094025
+        ],
+        "anchor": [
+          -1.130020022392273,
+          -8.617944717407227,
+          0.9735099673271179
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1387",
+            "sha256": "11b4051e92be3f915e1ca7be08be43f1d8fc360d391903e6b0a83cda69b0a00f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find third lumbrical of right foot on the model."
+      },
+      "currentHash": "5120c7fb93beac0bac882bb196a886bab87f190363f1253ce84ca35037ac6c06"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:third-lumbrical-of-left-foot",
+        "fmaId": "FMA37486",
+        "name": "Third lumbrical of left foot",
+        "sourceName": "third lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37486",
+        "bounds": {
+          "min": [
+            0.9402259588241577,
+            -8.680427551269531,
+            0.6886900067329407
+          ],
+          "max": [
+            1.3781399726867676,
+            -8.538249015808105,
+            1.2332699298858643
+          ]
+        },
+        "center": [
+          1.1591829657554626,
+          -8.609338283538818,
+          0.9609799683094025
+        ],
+        "anchor": [
+          1.130020022392273,
+          -8.617944717407227,
+          0.9735099673271179
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1387M",
+            "sha256": "31a1eeffb990dc0f73817c3d53459bf3ef41b764a4c77eb04734f9d7e341c065"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find third lumbrical of left foot on the model."
+      },
+      "currentHash": "bfb47ec0f71f28b3d75d69e904d902dea98dbdf8568d9060953b5fe0ead49866"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:third-plantar-interosseous-of-right-foot",
+        "fmaId": "FMA37741",
+        "name": "Third plantar interosseous of right foot",
+        "sourceName": "third plantar interosseous of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37741",
+        "bounds": {
+          "min": [
+            -1.5381699800491333,
+            -8.644573211669922,
+            0.6548300385475159
+          ],
+          "max": [
+            -1.135469913482666,
+            -8.503181457519531,
+            1.0948699712753296
+          ]
+        },
+        "center": [
+          -1.3368199467658997,
+          -8.573877334594727,
+          0.8748500049114227
+        ],
+        "anchor": [
+          -1.3213499784469604,
+          -8.581954002380371,
+          0.8831300139427185
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1388",
+            "sha256": "9b38a442bc6c67ecf339aa16a98f0c1aa3b83ec0f664cd6a443eed3ce381b464"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find third plantar interosseous of right foot on the model."
+      },
+      "currentHash": "608cbbbb69e1c9dac0d28bc4e0982aadcca779c4f5ff5b7257c9727403095665"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:third-plantar-interosseous-of-left-foot",
+        "fmaId": "FMA37742",
+        "name": "Third plantar interosseous of left foot",
+        "sourceName": "third plantar interosseous of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37742",
+        "bounds": {
+          "min": [
+            1.135469913482666,
+            -8.644573211669922,
+            0.6548300385475159
+          ],
+          "max": [
+            1.5381699800491333,
+            -8.503181457519531,
+            1.0948699712753296
+          ]
+        },
+        "center": [
+          1.3368199467658997,
+          -8.573877334594727,
+          0.8748500049114227
+        ],
+        "anchor": [
+          1.3213499784469604,
+          -8.581954002380371,
+          0.8831300139427185
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1388M",
+            "sha256": "ab3cd072c60f5f08f8b02866569b99e4050d52b3da1e0c3585630278863b6e6a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find third plantar interosseous of left foot on the model."
+      },
+      "currentHash": "d325dd2471f61b0fd7c9b3fec382b32a5ee8b1133d0f57cedf0b3c883370b9e1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:fourth-lumbrical-of-right-foot",
+        "fmaId": "FMA37483",
+        "name": "Fourth lumbrical of right foot",
+        "sourceName": "fourth lumbrical of right foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37483",
+        "bounds": {
+          "min": [
+            -1.4576900005340576,
+            -8.678147315979004,
+            0.6754100322723389
+          ],
+          "max": [
+            -0.9974899888038635,
+            -8.537311553955078,
+            1.0824499130249023
+          ]
+        },
+        "center": [
+          -1.2275899946689606,
+          -8.607729434967041,
+          0.8789299726486206
+        ],
+        "anchor": [
+          -1.2329299449920654,
+          -8.626457214355469,
+          0.8939599394798279
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1389",
+            "sha256": "86b7a17497e4efde3030ec8e542178caba1c875a7af62d491ef8c89e42528444"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find fourth lumbrical of right foot on the model."
+      },
+      "currentHash": "5675bb6e61d320cd11ec55df310f787461ff6ab8869ffd33a98525257f5a84a4"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:fourth-lumbrical-of-left-foot",
+        "fmaId": "FMA37484",
+        "name": "Fourth lumbrical of left foot",
+        "sourceName": "fourth lumbrical of left foot",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles",
+        "nodeName": "FMA37484",
+        "bounds": {
+          "min": [
+            0.9974899888038635,
+            -8.678147315979004,
+            0.6754100322723389
+          ],
+          "max": [
+            1.4576900005340576,
+            -8.537311553955078,
+            1.0824499130249023
+          ]
+        },
+        "center": [
+          1.2275899946689606,
+          -8.607729434967041,
+          0.8789299726486206
+        ],
+        "anchor": [
+          1.2329299449920654,
+          -8.626457214355469,
+          0.8939599394798279
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1389M",
+            "sha256": "56b4b576426370d783dbf71f4e37922411644b3146fea22c6cde7c7800e061e9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find fourth lumbrical of left foot on the model."
+      },
+      "currentHash": "b61039744a959334e6898bb1f0e503a8b28d7cee6df824a3a065c2a57baba61f"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:medial-head-of-right-flexor-hallucis-brevis",
+        "fmaId": "FMA45971",
+        "name": "Medial head of right flexor hallucis brevis",
+        "sourceName": "medial head of right flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45971",
+        "bounds": {
+          "min": [
+            -0.952413022518158,
+            -8.690187454223633,
+            0.6807599663734436
+          ],
+          "max": [
+            -0.6814559698104858,
+            -8.312599182128906,
+            1.4500600099563599
+          ]
+        },
+        "center": [
+          -0.8169344961643219,
+          -8.50139331817627,
+          1.0654099881649017
+        ],
+        "anchor": [
+          -0.8259750604629517,
+          -8.502474784851074,
+          1.054610013961792
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1396",
+            "sha256": "778a43d6a1540626e4e13f29c75a4ec75d335abd37ee9c7fdee4eea8188116e1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find medial head of right flexor hallucis brevis on the model."
+      },
+      "currentHash": "3bcf29910dabf68d773eb0622b6e20da85dc0bb4d2563648f8887e4d173ea4f7"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:medial-head-of-left-flexor-hallucis-brevis",
+        "fmaId": "FMA45972",
+        "name": "Medial head of left flexor hallucis brevis",
+        "sourceName": "medial head of left flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45972",
+        "bounds": {
+          "min": [
+            0.6814559698104858,
+            -8.690187454223633,
+            0.6807599663734436
+          ],
+          "max": [
+            0.952413022518158,
+            -8.312599182128906,
+            1.4500600099563599
+          ]
+        },
+        "center": [
+          0.8169344961643219,
+          -8.50139331817627,
+          1.0654099881649017
+        ],
+        "anchor": [
+          0.8259750604629517,
+          -8.502474784851074,
+          1.054610013961792
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1396M",
+            "sha256": "9c20236d9fc8b34638f313248ec940dfa08c67718324d9cd21fed6beda989411"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find medial head of left flexor hallucis brevis on the model."
+      },
+      "currentHash": "cb1baeae50e3764be7c2dab8b325d3384e2a79fb95c4b460860c5b7181ef05a1"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:muscle:lateral-head-of-right-flexor-hallucis-brevis",
+        "fmaId": "FMA45973",
+        "name": "Lateral head of right flexor hallucis brevis",
+        "sourceName": "lateral head of right flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45973",
+        "bounds": {
+          "min": [
+            -1.050950050354004,
+            -8.710494041442871,
+            0.6824400424957275
+          ],
+          "max": [
+            -0.6848959922790527,
+            -8.337525367736816,
+            1.4523100852966309
+          ]
+        },
+        "center": [
+          -0.8679230213165283,
+          -8.524009704589844,
+          1.0673750638961792
+        ],
+        "anchor": [
+          -0.8629340529441833,
+          -8.557160377502441,
+          1.0499399900436401
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1393",
+            "sha256": "4403ddd8a9fffab7fdf1cbb28fd9b90f461913bd9c28cfea23fc512844668985"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find lateral head of right flexor hallucis brevis on the model."
+      },
+      "currentHash": "94c3a24cc4a5b71301a5df4e905a4764aa6a78568d974d7d5369c0e1c1465de9"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:muscle:lateral-head-of-left-flexor-hallucis-brevis",
+        "fmaId": "FMA45974",
+        "name": "Lateral head of left flexor hallucis brevis",
+        "sourceName": "lateral head of left flexor hallucis brevis",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-muscles-dissection",
+        "nodeName": "FMA45974",
+        "bounds": {
+          "min": [
+            0.6848959922790527,
+            -8.710494041442871,
+            0.6824400424957275
+          ],
+          "max": [
+            1.050950050354004,
+            -8.337525367736816,
+            1.4523100852966309
+          ]
+        },
+        "center": [
+          0.8679230213165283,
+          -8.524009704589844,
+          1.0673750638961792
+        ],
+        "anchor": [
+          0.8629340529441833,
+          -8.557160377502441,
+          1.0499399900436401
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1393M",
+            "sha256": "70464799f8eb4602132a0c94d955779e5a817d96dce207c7777a7e3a969eb858"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "quiz",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find lateral head of left flexor hallucis brevis on the model."
+      },
+      "currentHash": "75c212d38c9856a4f39b471881d52fcf97fe5a8a8d70eeab2fff92b941f40259"
+    }
+  ]
+}

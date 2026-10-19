@@ -1,0 +1,172 @@
+{
+  "name": "git-pin-8b8b1ceb",
+  "helper": "suprascapularArterialCtLesson",
+  "pinsHash": "d052aa9a423a4be3ea817e70f903dcf19ed276ba44a360f388f50b6229f69d66",
+  "transitionHash": "6778bda69247e08f0a37199c97ee1e61b80928be18c6bfdd2102faaa5cc56ea2",
+  "pins": {
+    "baseline": "65f1a9e3e67de052a6a2faa96b606b5be251e7b7",
+    "authorCommit": "8b8b1ceb9292c0f27fccd79fa9fe043851d23526",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+          "fmaId": "FMA10698",
+          "name": "Right suprascapular artery",
+          "sourceName": "right suprascapular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA10698",
+          "bounds": {
+            "min": [
+              -1.381119966506958,
+              4.914899826049805,
+              -0.13162700831890106
+            ],
+            "max": [
+              -0.4103670120239258,
+              5.548199653625488,
+              0.5230500102043152
+            ]
+          },
+          "center": [
+            -0.8957434892654419,
+            5.2315497398376465,
+            0.19571150094270706
+          ],
+          "anchor": [
+            -1.0132700204849243,
+            5.3201003074646,
+            0.17565597593784332
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2303",
+              "sha256": "7f065a02471a2664b8d258786de9eaa0a5923bdb3c346cc818908ba07faf243d"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+          "fmaId": "FMA10681",
+          "name": "Left suprascapular artery",
+          "sourceName": "left suprascapular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "shoulder-arm",
+          "regions": [
+            "shoulder-arm",
+            "thorax"
+          ],
+          "bundle": "shoulder-arm-vessels-inventory",
+          "nodeName": "FMA10681",
+          "bounds": {
+            "min": [
+              0.4103490114212036,
+              4.914899826049805,
+              -0.13112300634384155
+            ],
+            "max": [
+              1.3812099695205688,
+              5.548199653625488,
+              0.5229499936103821
+            ]
+          },
+          "center": [
+            0.8957794904708862,
+            5.2315497398376465,
+            0.19591349363327026
+          ],
+          "anchor": [
+            1.0131900310516357,
+            5.319499492645264,
+            0.17460602521896362
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2251",
+              "sha256": "89f37b85c44d82a11482e56365078b40d8a542c1ad0bcfb4ccd823574645173f"
+            }
+          ],
+          "coverageNote": "Independently selectable source segment, not a complete branching tree. Gaps are not reconstructed and vessel calibre is not certified. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "ct": {
+            "readiness": "pending",
+            "title": "CT content pending",
+            "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+            "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "65f1a9e3e67de052a6a2faa96b606b5be251e7b7",
+    "authorCommit": "8b8b1ceb9292c0f27fccd79fa9fe043851d23526",
+    "sourcePinsHash": "d052aa9a423a4be3ea817e70f903dcf19ed276ba44a360f388f50b6229f69d66",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-suprascapular-artery",
+        "fmaId": "FMA10698",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "3c1ca6289352cedd15810b8e5604a734bab42f2dbc2f33db3d7121fd59d86a1f"
+      },
+      {
+        "id": "vm:anatomy:body:shoulder-arm:left:vessel:left-suprascapular-artery",
+        "fmaId": "FMA10681",
+        "tab": "ct",
+        "previousHash": "07e8a3b87fcda19f872a3251b35881a21537bff3a99da71a643d38e6e26e70a7",
+        "currentHash": "613277e4a31cac15009232ba23b28e1a3a88feb026a3bb4a7b45fd0a55c4e625"
+      }
+    ]
+  },
+  "sourceRecordHash": "7157e4c563f6b2f36bdf92b4b6cc70d23a8c289cb166a869e5821091d018792d",
+  "originalPinPath": "content/suprascapular-arterial-ct-pins.json",
+  "originalPinHash": "5928c242354a63f919510603dc4c4d8502c697b41652d9632016275899dbaef2",
+  "originalPinBlob": "5a6ab3811a5cf2b82a31b695cf6c287ed844118b",
+  "originalTransitionPaths": []
+}

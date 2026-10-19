@@ -1,0 +1,1200 @@
+{
+  "name": "git-author-20988a1b",
+  "helper": "legArterialXrayLesson",
+  "pinsHash": "051db40b5bf4f72d362ab097d85305c1512cbbdeea3eae40e3bb713a46ab2112",
+  "transitionHash": "ce94a7f1807532f469a55a6993696347c4f9b93c56a9258712c9af650baa8c2c",
+  "pins": {
+    "baseline": "628102945520c98aaca1c9fd9e539839caa1f324",
+    "authorCommit": "20988a1ba542b7a39d2135cfa5c2e426ab81d593",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+          "fmaId": "FMA77380",
+          "name": "Right popliteal artery",
+          "sourceName": "right popliteal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA77380",
+          "bounds": {
+            "min": [
+              -0.9584179520606995,
+              -5.167250156402588,
+              0.026954002678394318
+            ],
+            "max": [
+              -0.5585640072822571,
+              -3.1922197341918945,
+              0.4578710198402405
+            ]
+          },
+          "center": [
+            -0.7584909796714783,
+            -4.179734945297241,
+            0.2424125112593174
+          ],
+          "anchor": [
+            -0.7508899569511414,
+            -4.185960292816162,
+            0.11681099236011505
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2170",
+              "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+          "fmaId": "FMA77381",
+          "name": "Left popliteal artery",
+          "sourceName": "left popliteal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA77381",
+          "bounds": {
+            "min": [
+              0.5585800409317017,
+              -5.167250156402588,
+              0.02696899324655533
+            ],
+            "max": [
+              0.958420991897583,
+              -3.1922500133514404,
+              0.4578530192375183
+            ]
+          },
+          "center": [
+            0.7585005164146423,
+            -4.179750084877014,
+            0.24241100624203682
+          ],
+          "anchor": [
+            0.7594419717788696,
+            -4.18257999420166,
+            0.11660099029541016
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2086",
+              "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+          "fmaId": "FMA43896",
+          "name": "Right anterior tibial artery",
+          "sourceName": "right anterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43896",
+          "bounds": {
+            "min": [
+              -1.0555499792099,
+              -7.956809043884277,
+              0.20105797052383423
+            ],
+            "max": [
+              -0.6813820004463196,
+              -4.781789779663086,
+              0.4810659885406494
+            ]
+          },
+          "center": [
+            -0.8684659898281097,
+            -6.369299411773682,
+            0.3410619795322418
+          ],
+          "anchor": [
+            -0.9001410007476807,
+            -6.391190052032471,
+            0.3953839838504791
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2130",
+              "sha256": "56de59319a67eb9a3fbc9815d9dc66f371b3f116b211c2b03abfbb84ae21568c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+          "fmaId": "FMA43897",
+          "name": "Left anterior tibial artery",
+          "sourceName": "left anterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43897",
+          "bounds": {
+            "min": [
+              0.6813340187072754,
+              -7.956785678863525,
+              0.20108497142791748
+            ],
+            "max": [
+              1.0555599927902222,
+              -4.781799793243408,
+              0.48104798793792725
+            ]
+          },
+          "center": [
+            0.8684470057487488,
+            -6.369292736053467,
+            0.34106647968292236
+          ],
+          "anchor": [
+            0.8983809947967529,
+            -6.394360065460205,
+            0.39571404457092285
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2065",
+              "sha256": "c6388ae15cdf1b00cbbbb6007784022a7c03d1e349b780193488f1f804150c1e"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+          "fmaId": "FMA43898",
+          "name": "Right posterior tibial artery",
+          "sourceName": "right posterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43898",
+          "bounds": {
+            "min": [
+              -0.9113270044326782,
+              -8.413312911987305,
+              0.0034749985206872225
+            ],
+            "max": [
+              -0.444784015417099,
+              -5.102340221405029,
+              0.36775198578834534
+            ]
+          },
+          "center": [
+            -0.6780555099248886,
+            -6.757826566696167,
+            0.18561349215451628
+          ],
+          "anchor": [
+            -0.615835964679718,
+            -6.753640174865723,
+            0.14388495683670044
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2172",
+              "sha256": "4e82371d5860733555c3b4c096134586128646ad31fb58cdcb6ee97df0849f08"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+          "fmaId": "FMA43899",
+          "name": "Left posterior tibial artery",
+          "sourceName": "left posterior tibial artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "foot"
+          ],
+          "bundle": "leg-vessels-recovery",
+          "nodeName": "FMA43899",
+          "bounds": {
+            "min": [
+              0.44474801421165466,
+              -8.41340160369873,
+              0.003493995638564229
+            ],
+            "max": [
+              0.9113140106201172,
+              -5.102349758148193,
+              0.36769500374794006
+            ]
+          },
+          "center": [
+            0.6780310124158859,
+            -6.757875680923462,
+            0.18559449969325215
+          ],
+          "anchor": [
+            0.615755021572113,
+            -6.743569850921631,
+            0.1459980010986328
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2087",
+              "sha256": "88e45ecb2bbe5b278d052c240649bf1f576ea3808272e60a4990fc5d8066bbb5"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+          "fmaId": "FMA22562",
+          "name": "Right middle genicular artery",
+          "sourceName": "right middle genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA22562",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2167",
+              "sha256": "8ab69c1b57bc47e6d2f5a06885808fbdae84a0453d037549de7ae99193fcf469"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.0987499952316284,
+              -4.254300117492676,
+              0.015204000286757946
+            ],
+            "max": [
+              -0.42679500579833984,
+              -3.983069896697998,
+              0.15320800244808197
+            ]
+          },
+          "center": [
+            -0.7627725005149841,
+            -4.118685007095337,
+            0.08420600136741996
+          ],
+          "anchor": [
+            -0.7745429873466492,
+            -4.09621000289917,
+            0.07830599695444107
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right middle genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+          "fmaId": "FMA22563",
+          "name": "Left middle genicular artery",
+          "sourceName": "left middle genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA22563",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2084",
+              "sha256": "a2f628de8834efc7051088a5d0d99e2c1489a2512f29dc5680d6fce78ddbef54"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.4268060028553009,
+              -4.254240036010742,
+              0.015018999576568604
+            ],
+            "max": [
+              1.098680019378662,
+              -3.9832301139831543,
+              0.1531040072441101
+            ]
+          },
+          "center": [
+            0.7627430111169815,
+            -4.118735074996948,
+            0.08406150341033936
+          ],
+          "anchor": [
+            0.7742879986763,
+            -4.096010208129883,
+            0.07565999776124954
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left middle genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+          "fmaId": "FMA22586",
+          "name": "Right medial superior genicular artery",
+          "sourceName": "right medial superior genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA22586",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2166",
+              "sha256": "3898b8e1fe2a48c8e1e54a6e538e0a9d8665df30299c53942fb953b9838bca35"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.7418090105056763,
+              -4.17533016204834,
+              0.13216200470924377
+            ],
+            "max": [
+              -0.326557993888855,
+              -3.769670009613037,
+              0.6091700196266174
+            ]
+          },
+          "center": [
+            -0.5341835021972656,
+            -3.9725000858306885,
+            0.3706660121679306
+          ],
+          "anchor": [
+            -0.41990500688552856,
+            -4.0659098625183105,
+            0.4440920054912567
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right medial superior genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+          "fmaId": "FMA22587",
+          "name": "Left medial superior genicular artery",
+          "sourceName": "left medial superior genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA22587",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2083",
+              "sha256": "b07405510eda9a39934d9071638a2a809d2b59252449dfce636ec81f7b281641"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.32660600543022156,
+              -4.175169944763184,
+              0.13214999437332153
+            ],
+            "max": [
+              0.7417749762535095,
+              -3.7697300910949707,
+              0.6092900037765503
+            ]
+          },
+          "center": [
+            0.5341904908418655,
+            -3.972450017929077,
+            0.3707199990749359
+          ],
+          "anchor": [
+            0.41496899724006653,
+            -4.063799858093262,
+            0.43825700879096985
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left medial superior genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+          "fmaId": "FMA22588",
+          "name": "Right lateral superior genicular artery",
+          "sourceName": "right lateral superior genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA22588",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2162",
+              "sha256": "839d8b65347f04461e87767555736e2768cc5c8d8c5b366dd0badf957bae0d10"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.1190400123596191,
+              -4.10152006149292,
+              0.14014500379562378
+            ],
+            "max": [
+              -0.7072539925575256,
+              -3.6958799362182617,
+              0.5342299938201904
+            ]
+          },
+          "center": [
+            -0.9131470024585724,
+            -3.898699998855591,
+            0.3371874988079071
+          ],
+          "anchor": [
+            -0.9450079798698425,
+            -3.840250015258789,
+            0.221342995762825
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right lateral superior genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+          "fmaId": "FMA22589",
+          "name": "Left lateral superior genicular artery",
+          "sourceName": "left lateral superior genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA22589",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2080",
+              "sha256": "ee4b74a8e7423554d279b5a5c8cd90c301f0252dcb6fc8651cad417a85320516"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.7072409987449646,
+              -4.10152006149292,
+              0.1401589959859848
+            ],
+            "max": [
+              1.1189500093460083,
+              -3.6958999633789062,
+              0.5342199802398682
+            ]
+          },
+          "center": [
+            0.9130955040454865,
+            -3.898710012435913,
+            0.3371894881129265
+          ],
+          "anchor": [
+            0.9400039911270142,
+            -3.8385798931121826,
+            0.22063900530338287
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left lateral superior genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+          "fmaId": "FMA43890",
+          "name": "Right inferior medial genicular artery",
+          "sourceName": "right inferior medial genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA43890",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2152",
+              "sha256": "73b7e6d3d0a244e966419c8f8b7a6213efd41bb39866f0f88de25ff8752c37d4"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.8154940009117126,
+              -4.659130096435547,
+              0.0928260013461113
+            ],
+            "max": [
+              -0.44663500785827637,
+              -4.475709915161133,
+              0.5659599900245667
+            ]
+          },
+          "center": [
+            -0.6310645043849945,
+            -4.56742000579834,
+            0.329392995685339
+          ],
+          "anchor": [
+            -0.47438400983810425,
+            -4.64238977432251,
+            0.3543969988822937
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right inferior medial genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+          "fmaId": "FMA43891",
+          "name": "Left inferior medial genicular artery",
+          "sourceName": "left inferior medial genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA43891",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2077",
+              "sha256": "9418a9af9c5a8b67f450f5c66a8e767822e334c049222e9c7bd69b20687ad0fc"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.4465489983558655,
+              -4.659200191497803,
+              0.09295099973678589
+            ],
+            "max": [
+              0.8154569864273071,
+              -4.475840091705322,
+              0.5659000277519226
+            ]
+          },
+          "center": [
+            0.6310029923915863,
+            -4.5675201416015625,
+            0.32942551374435425
+          ],
+          "anchor": [
+            0.47701600193977356,
+            -4.643080234527588,
+            0.366007000207901
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left inferior medial genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+          "fmaId": "FMA43892",
+          "name": "Right inferior lateral genicular artery",
+          "sourceName": "right inferior lateral genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA43892",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2150",
+              "sha256": "7a2e9fc70cca1ac7fe5a94fb48a2e105710e7f89fc63f18d7f492dcba961401e"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -1.1597599983215332,
+              -4.5959601402282715,
+              0.03790700063109398
+            ],
+            "max": [
+              -0.7942619919776917,
+              -4.178800106048584,
+              0.515749990940094
+            ]
+          },
+          "center": [
+            -0.9770109951496124,
+            -4.387380123138428,
+            0.276828495785594
+          ],
+          "anchor": [
+            -1.092079997062683,
+            -4.33696985244751,
+            0.18830999732017517
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right inferior lateral genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+          "fmaId": "FMA43893",
+          "name": "Left inferior lateral genicular artery",
+          "sourceName": "left inferior lateral genicular artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg",
+            "thigh"
+          ],
+          "bundle": "genicular-arteries",
+          "nodeName": "FMA43893",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ2076",
+              "sha256": "e7e540baf3289dcfb29bf857a9d93754b9eb6897c3192110f4e563f7b7cb2c59"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.7943289875984192,
+              -4.595779895782471,
+              0.037755999714136124
+            ],
+            "max": [
+              1.1598000526428223,
+              -4.178800106048584,
+              0.5154500007629395
+            ]
+          },
+          "center": [
+            0.9770645201206207,
+            -4.387290000915527,
+            0.2766030002385378
+          ],
+          "anchor": [
+            1.1015299558639526,
+            -4.329410076141357,
+            0.20728300511837006
+          ],
+          "coverageNote": "Whole source-labelled genicular artery group. Middle genicular groups each retain two disconnected components. Exact junctions, a complete anastomotic network, lumen and supply territories are not supplied. Original coordinates and faces retained; anatomical and clinical review pending.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left inferior lateral genicular artery · Review pending",
+            "body": "Structure-specific imaging teaching is awaiting validation. Clinical and Pathology notes are separate educational drafts, not validated modality lessons.",
+            "bullets": [],
+            "note": "No patient CT/MRI/ultrasound, angiogram, embolisation target or intervention guidance is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "628102945520c98aaca1c9fd9e539839caa1f324",
+    "authorCommit": "20988a1ba542b7a39d2135cfa5c2e426ab81d593",
+    "sourcePinsHash": "051db40b5bf4f72d362ab097d85305c1512cbbdeea3eae40e3bb713a46ab2112",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+        "fmaId": "FMA77380",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "5651b90f8a0da2faaeae6dd01520e1a634f332ce593eed6e33b20c912d84c10d"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+        "fmaId": "FMA77381",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "14de4884b3ba2518766ca3f5ad806ae3a63184f3cdbc897bb85caf9502ada1a4"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-artery",
+        "fmaId": "FMA43896",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "e8b32d4efdaf5b7a44ade5c7a21f078356ac4b5105ae82179d04d4e936af6192"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-artery",
+        "fmaId": "FMA43897",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "2fae3fb03af1aaa55102a311922fb9c9e1cf960a1b43025832e38ec9fc5e4136"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-artery",
+        "fmaId": "FMA43898",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "dfdb6644447f80b27dfcf5012f69a58700285a0e9491661984b373e3fad5f06a"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-artery",
+        "fmaId": "FMA43899",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "c629228d069b9daa9a65a5fe5c0f0995fe67c14a78e9a047bc8b384e0e351c5a"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-middle-genicular-artery",
+        "fmaId": "FMA22562",
+        "tab": "xray",
+        "previousHash": "e8b739470565f7e8f16902b7be37b570d0b0db5bc9bbe810ff5064c060107fb5",
+        "currentHash": "98259df5cfce2d967f639b996b3ad5380142d01aeda31f5e245fa211912e2846"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-middle-genicular-artery",
+        "fmaId": "FMA22563",
+        "tab": "xray",
+        "previousHash": "f2006c1b67f3d373241f90daabac0e6acaa8c41fb9253df9142cbdad85bad302",
+        "currentHash": "3c6e48acf250a589e43c119cdc4b3aa6039f51d7880e8ce8f78546759f7ced6f"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-medial-superior-genicular-artery",
+        "fmaId": "FMA22586",
+        "tab": "xray",
+        "previousHash": "cc676f49d80095b0b526dd2db21b19d4c103d7f66ca0f9dc8bdacdb2514abfe2",
+        "currentHash": "20f63644e2a2f766d8e609b8575b927fbd25b13ddde22dc9bf97d1236ab01135"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-medial-superior-genicular-artery",
+        "fmaId": "FMA22587",
+        "tab": "xray",
+        "previousHash": "b57a09e08bd41349488f132dd642b0a96f85475014805b9ce4a616ca9bff6ad7",
+        "currentHash": "6fe0223264aaea139f33ce06fdd4b1fe42e2f36dbe6b142197424fe0098fa123"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-lateral-superior-genicular-artery",
+        "fmaId": "FMA22588",
+        "tab": "xray",
+        "previousHash": "7a5fb2e837c162b342670210b5bff79552795db13b7243458f5c20674d12b7b9",
+        "currentHash": "e1ded055d6efdd233db148398a6fb6ece2aca6e8877c957097c75ceccda5de33"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-lateral-superior-genicular-artery",
+        "fmaId": "FMA22589",
+        "tab": "xray",
+        "previousHash": "bf9474ae007186a928ebb7a7559c2499d22173afabf6b3e5bcd8ba3e1b3826a1",
+        "currentHash": "c94cd804d5a7f127921fd5c3509aa2fe87a4572f57ee61fe48eb4ee010831ff5"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-inferior-medial-genicular-artery",
+        "fmaId": "FMA43890",
+        "tab": "xray",
+        "previousHash": "20259bc9baf08d70b99fcf8a2b73cfda7542912aa8271e97aa338f54984c32ec",
+        "currentHash": "4a26eac2d14c4167c5190125967e2e2cfdce4d9ca326daee8c0f04f86b492d2f"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-inferior-medial-genicular-artery",
+        "fmaId": "FMA43891",
+        "tab": "xray",
+        "previousHash": "7d5a092eb9d4e4ac8658fe5f3e8129846b11776990c3b2d97c94cbd058d554da",
+        "currentHash": "6d9da537ad1781e53caeaf2c0c50812194c49c022038d01f15aabee932cd1eac"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:vessel:right-inferior-lateral-genicular-artery",
+        "fmaId": "FMA43892",
+        "tab": "xray",
+        "previousHash": "b3d864ba9245431baf577094e225d80437753d91f0fb3ca4ff2ce4af4aab496b",
+        "currentHash": "e8095c2dc8e402edf08991deb60fce2246999ec1e009a2e755ce4190ad1b9019"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:vessel:left-inferior-lateral-genicular-artery",
+        "fmaId": "FMA43893",
+        "tab": "xray",
+        "previousHash": "fe30f05e02f85bf885d90a5aa78d85f6b4e0992e09f3028f41bfe5e75b371461",
+        "currentHash": "cde01c1429154485c87c5e1adef8e6ee217488612e875a926d18a94f3117b805"
+      }
+    ]
+  },
+  "sourceRecordHash": "80e833e4e1fb730fb49d6dc0fa6884324f29e937e3c6af3d3235996b6d979f0a"
+}

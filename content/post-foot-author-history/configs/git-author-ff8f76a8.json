@@ -1,0 +1,1251 @@
+{
+  "name": "git-author-ff8f76a8",
+  "helper": "pancreaticVesselTeachingLesson",
+  "pinsHash": "71467ea6c15bc60d70a7944dea1dc3e672374e8d3d0072aa614d08b75ef0277a",
+  "transitionHash": "658142d8be166e018a0e15d73069e5ceb30d76852a1c110297a1881212c8d1c3",
+  "pins": {
+    "baseline": "a2cd157a328ec69bb29ffa3aa3a7a4c84c53fe9c",
+    "authorCommit": "ff8f76a80ad0b73a93421dac5431759ab96ea187",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+          "fmaId": "FMA14782",
+          "name": "Anterior superior pancreaticoduodenal artery",
+          "sourceName": "anterior superior pancreaticoduodenal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14782",
+          "bounds": {
+            "min": [
+              -0.4665620028972626,
+              2.23140025138855,
+              0.7866600155830383
+            ],
+            "max": [
+              -0.09125980734825134,
+              2.659599542617798,
+              0.8998100161552429
+            ]
+          },
+          "center": [
+            -0.27891090512275696,
+            2.445499897003174,
+            0.8432350158691406
+          ],
+          "anchor": [
+            -0.28327399492263794,
+            2.533599853515625,
+            0.8285600543022156
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3409",
+              "sha256": "b249abf0f7ca8682a8f5116021c4a3ba627b43895f6c2aa80f4640e15a04d766"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+            "bullets": [
+              "Source identity: FMA14782 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "These arteries contribute to the blood supply of the pancreatic head and adjacent duodenum.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find anterior superior pancreaticoduodenal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+          "fmaId": "FMA14784",
+          "name": "Posterior superior pancreaticoduodenal artery",
+          "sourceName": "posterior superior pancreaticoduodenal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14784",
+          "bounds": {
+            "min": [
+              -0.3545759916305542,
+              2.316899299621582,
+              0.5918800234794617
+            ],
+            "max": [
+              -0.1423330008983612,
+              2.6568994522094727,
+              0.8888400197029114
+            ]
+          },
+          "center": [
+            -0.2484544962644577,
+            2.4868993759155273,
+            0.7403600215911865
+          ],
+          "anchor": [
+            -0.2362920045852661,
+            2.573000431060791,
+            0.6652500033378601
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3557",
+              "sha256": "eadce1bc7a5cccc096b050e2738aac098c8194487bb8b20ab49aaa05cbfd3a0c"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+            "bullets": [
+              "Source identity: FMA14784 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "These arteries contribute to the blood supply of the pancreatic head and adjacent duodenum.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find posterior superior pancreaticoduodenal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+          "fmaId": "FMA14787",
+          "name": "Dorsal pancreatic artery",
+          "sourceName": "dorsal pancreatic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14787",
+          "bounds": {
+            "min": [
+              0.033911000937223434,
+              2.4681005477905273,
+              0.7262200117111206
+            ],
+            "max": [
+              0.10063300281763077,
+              2.777900457382202,
+              0.8198699951171875
+            ]
+          },
+          "center": [
+            0.0672720018774271,
+            2.6230005025863647,
+            0.773045003414154
+          ],
+          "anchor": [
+            0.06056250259280205,
+            2.639699697494507,
+            0.7510299682617188
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3430",
+              "sha256": "a9566e012c3698584e51737a0e00c591b1b9ad57aea3f396056d6e4c2ec126e0"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+            "bullets": [
+              "Source identity: FMA14787 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "These segments contribute to pancreatic arterial supply. Their names do not establish individual perfusion territories in this model.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find dorsal pancreatic artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+          "fmaId": "FMA14790",
+          "name": "Inferior pancreatic artery",
+          "sourceName": "inferior pancreatic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14790",
+          "bounds": {
+            "min": [
+              0.09297589957714081,
+              2.4641003608703613,
+              0.5460399389266968
+            ],
+            "max": [
+              0.3005940020084381,
+              2.6117005348205566,
+              0.7552700042724609
+            ]
+          },
+          "center": [
+            0.19678495079278946,
+            2.537900447845459,
+            0.6506549715995789
+          ],
+          "anchor": [
+            0.19760200381278992,
+            2.540799617767334,
+            0.6514900326728821
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3444",
+              "sha256": "21e61cd0e3ccd79434af29edc1ae0bd3dc87f22f12774422d074ff854647197e"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+            "bullets": [
+              "Source identity: FMA14790 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "These segments contribute to pancreatic arterial supply. Their names do not establish individual perfusion territories in this model.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find inferior pancreatic artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+          "fmaId": "FMA14792",
+          "name": "Great pancreatic artery",
+          "sourceName": "great pancreatic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14792",
+          "bounds": {
+            "min": [
+              0.4110329747200012,
+              2.6581006050109863,
+              0.5039299726486206
+            ],
+            "max": [
+              0.44960200786590576,
+              2.7542004585266113,
+              0.5859600305557251
+            ]
+          },
+          "center": [
+            0.4303174912929535,
+            2.706150531768799,
+            0.5449450016021729
+          ],
+          "anchor": [
+            0.4278229773044586,
+            2.7128002643585205,
+            0.5418099761009216
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3433",
+              "sha256": "94c1f1acab1e5edfadb46b7d1a02c50248b4bdaea2663acd46a5f08b8b0cc2d5"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+            "bullets": [
+              "Source identity: FMA14792 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "These segments contribute to pancreatic arterial supply. Their names do not establish individual perfusion territories in this model.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find great pancreatic artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+          "fmaId": "FMA14793",
+          "name": "Caudal pancreatic artery",
+          "sourceName": "caudal pancreatic artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14793",
+          "bounds": {
+            "min": [
+              0.2933589816093445,
+              2.603299617767334,
+              0.4548010230064392
+            ],
+            "max": [
+              0.5827100276947021,
+              2.725600481033325,
+              0.554110050201416
+            ]
+          },
+          "center": [
+            0.4380345046520233,
+            2.6644500494003296,
+            0.5044555366039276
+          ],
+          "anchor": [
+            0.4358459711074829,
+            2.6643993854522705,
+            0.49968498945236206
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3419",
+              "sha256": "e29640c2424778faa8c7540bcbfe53ffbadf962db67c86ed7255d23eff157820"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "The dorsal, inferior, great and caudal pancreatic arterial labels distinguish supplied source segments. Splenic-artery branches contribute to pancreatic supply; origins and branching vary.",
+            "bullets": [
+              "Source identity: FMA14793 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreatic body and tail arterial segments · draft",
+            "body": "These segments contribute to pancreatic arterial supply. Their names do not establish individual perfusion territories in this model.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented. A small near-contact between the great and caudal source segments is retained unchanged, not reconstructed as a proven anastomosis."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find caudal pancreatic artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+          "fmaId": "FMA14805",
+          "name": "Inferior pancreaticoduodenal artery",
+          "sourceName": "inferior pancreaticoduodenal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA14805",
+          "bounds": {
+            "min": [
+              -0.16132400929927826,
+              2.2458996772766113,
+              0.8425700664520264
+            ],
+            "max": [
+              -0.008219650015234947,
+              2.292600154876709,
+              0.9416599869728088
+            ]
+          },
+          "center": [
+            -0.0847718296572566,
+            2.26924991607666,
+            0.8921150267124176
+          ],
+          "anchor": [
+            -0.08655599504709244,
+            2.275099992752075,
+            0.9083000421524048
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3446",
+              "sha256": "619cb0ffc120396dc6ffee3b97d083e8bbcda9d4ab6dcf1ff9a13b0aaf63ac73"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+            "bullets": [
+              "Source identity: FMA14805 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "These arteries contribute to the blood supply of the pancreatic head and adjacent duodenum.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find inferior pancreaticoduodenal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+          "fmaId": "FMA15398",
+          "name": "Pancreaticoduodenal vein",
+          "sourceName": "pancreaticoduodenal vein",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA15398",
+          "bounds": {
+            "min": [
+              -0.4806689918041229,
+              2.05049991607666,
+              0.6042199730873108
+            ],
+            "max": [
+              -0.09474220126867294,
+              2.880000114440918,
+              0.9575300812721252
+            ]
+          },
+          "center": [
+            -0.28770559653639793,
+            2.465250015258789,
+            0.780875027179718
+          ],
+          "anchor": [
+            -0.32889801263809204,
+            2.550300359725952,
+            0.7823800444602966
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3545",
+              "sha256": "87919e391f53ec7e464f7379c422bc6e6bdcf022db8ea7007176e38a00cc1a3c"
+            },
+            {
+              "file": "FJ3646",
+              "sha256": "2c059c7ad26689513bbc41e13b913ed07c5bbd0696e59f85afb2a577b88f240f"
+            },
+            {
+              "file": "FJ3655",
+              "sha256": "c1d02f38a45db4b4504fcc453837fab56fb18a81178a62f5b7da9a4f6758c72f"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal vein source group · draft",
+            "body": "The source groups three separate mesh components under one pancreaticoduodenal-vein identity. Selection retains that grouped identity; the components are not assigned invented branch names.",
+            "bullets": [
+              "Source identity: FMA15398 · 3 source components",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal vein source group · draft",
+            "body": "Use this group to compare the supplied venous surfaces with neighbouring source structures. The model does not establish a complete drainage pathway.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/desc.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find pancreaticoduodenal vein on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+          "fmaId": "FMA70479",
+          "name": "Anterior inferior pancreaticoduodenal artery",
+          "sourceName": "anterior inferior pancreaticoduodenal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA70479",
+          "bounds": {
+            "min": [
+              -0.46177101135253906,
+              2.0715997219085693,
+              0.8191400170326233
+            ],
+            "max": [
+              -0.14678199589252472,
+              2.265899658203125,
+              0.9505200386047363
+            ]
+          },
+          "center": [
+            -0.3042765036225319,
+            2.168749690055847,
+            0.8848300278186798
+          ],
+          "anchor": [
+            -0.3165220022201538,
+            2.0961999893188477,
+            0.9012800455093384
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3401",
+              "sha256": "0c63f2577def9596880aa8d7049e074140747cbb31a1d99b02a3a4f4b7ce016e"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+            "bullets": [
+              "Source identity: FMA70479 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "These arteries contribute to the blood supply of the pancreatic head and adjacent duodenum.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find anterior inferior pancreaticoduodenal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+          "fmaId": "FMA70480",
+          "name": "Posterior inferior pancreaticoduodenal artery",
+          "sourceName": "posterior inferior pancreaticoduodenal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA70480",
+          "bounds": {
+            "min": [
+              -0.35162898898124695,
+              2.1723999977111816,
+              0.6332700252532959
+            ],
+            "max": [
+              -0.11823699623346329,
+              2.320500373840332,
+              0.9140499830245972
+            ]
+          },
+          "center": [
+            -0.23493299260735512,
+            2.246450185775757,
+            0.7736600041389465
+          ],
+          "anchor": [
+            -0.22695499658584595,
+            2.1965997219085693,
+            0.731660008430481
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3546",
+              "sha256": "3b460a67a1fce291779308e01a50fed34beb449eefdd279ae3603d7f82986cc9"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+            "bullets": [
+              "Source identity: FMA70480 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "These arteries contribute to the blood supply of the pancreatic head and adjacent duodenum.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find posterior inferior pancreaticoduodenal artery on the model."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+          "fmaId": "FMA76574",
+          "name": "Trunk of gastroduodenal artery",
+          "sourceName": "trunk of gastroduodenal artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-visceral-detail",
+          "nodeName": "FMA76574",
+          "bounds": {
+            "min": [
+              -0.11357899755239487,
+              2.6509997844696045,
+              0.858430027961731
+            ],
+            "max": [
+              -0.05860359966754913,
+              2.7818005084991455,
+              0.9130700826644897
+            ]
+          },
+          "center": [
+            -0.086091298609972,
+            2.716400146484375,
+            0.8857500553131104
+          ],
+          "anchor": [
+            -0.08795890212059021,
+            2.704200506210327,
+            0.8912100195884705
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3432",
+              "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd"
+            }
+          ],
+          "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "anatomy": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "Superior pancreaticoduodenal branches arise from the gastroduodenal artery; inferior branches connect with the superior mesenteric supply. Anterior and posterior branches participate in arcades around the pancreatic head and duodenum.",
+            "bullets": [
+              "Source identity: FMA76574 · 1 source component",
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented.",
+              "Use Study windows & focuses to preview and open its local study view."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "function": {
+            "readiness": "draft",
+            "title": "Pancreaticoduodenal arterial segments · draft",
+            "body": "These arteries contribute to the blood supply of the pancreatic head and adjacent duodenum.",
+            "bullets": [
+              "Unvalidated source-labelled vessel surfaces, not a verified continuous vascular tree. Branch origins, junctions, calibre, lumen, territories and variants need specialist review. No flow, contrast enhancement or surgical planes are simulated; absent segments are not invented."
+            ],
+            "note": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/arteries_abdomen.html"
+            ]
+          },
+          "quiz": {
+            "readiness": "generated-identification",
+            "title": "Identification practice",
+            "body": "Find trunk of gastroduodenal artery on the model."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "a2cd157a328ec69bb29ffa3aa3a7a4c84c53fe9c",
+    "authorCommit": "ff8f76a80ad0b73a93421dac5431759ab96ea187",
+    "sourcePinsHash": "71467ea6c15bc60d70a7944dea1dc3e672374e8d3d0072aa614d08b75ef0277a",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14782",
+        "tab": "anatomy",
+        "previousHash": "3b384632aa86e5797042538790202005a12ac2ab7992302d771f76eeec7884a1",
+        "currentHash": "c174d7c718178aaa8bb1718ab99a527db52630bff03b67fa8095dbfc259c7e4d"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14782",
+        "tab": "function",
+        "previousHash": "a599b0467f2336ee6ef9d15bdc7ee8132045e85775432d3b64af67095e14eb11",
+        "currentHash": "a5271fbad647b97bdb869979e111b5222618d43e2f7f0fe9234f04f0091a9319"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14782",
+        "tab": "quiz",
+        "previousHash": "01728e4ba44db82122863c2e003374968b185b63eb11ee3608130bdd63e2e64d",
+        "currentHash": "cb96e6a44bc2e6d0c265dd4df6af877bac89382213f3504ccf2e30bd7fdaea22"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14784",
+        "tab": "anatomy",
+        "previousHash": "00cccd762125fd301036c793d2817f4c41a9c61c0acf0fc5392eaa9b8650bd89",
+        "currentHash": "6713389011149512178b76b063d5b6a23100ddb19122a80d12c92f34a0f3aa94"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14784",
+        "tab": "function",
+        "previousHash": "a599b0467f2336ee6ef9d15bdc7ee8132045e85775432d3b64af67095e14eb11",
+        "currentHash": "ab9ae2db41d11bb398923dd952e508b9ad0a7469b2c57d4b663998e85b77b58c"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-superior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14784",
+        "tab": "quiz",
+        "previousHash": "3a31a5d83da341e2c5877d9b9b397c3245620993df5af1740f27c8d57c749427",
+        "currentHash": "151f4e2229c5499cb508090fbf1588a40d462a903ca6e421cc7f72c832830012"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+        "fmaId": "FMA14787",
+        "tab": "anatomy",
+        "previousHash": "cac4b9a5caff7bcf41b64a5f6ebd2fb216cf4f0b6e77ff28ccba1b321ff2b855",
+        "currentHash": "9171c7fa4e5921e01cd9e67fc069cd5d384868e4ac9e166634ce4da9822e92dc"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+        "fmaId": "FMA14787",
+        "tab": "function",
+        "previousHash": "30b4869222516fc1d1ad088a58741bad5be9acde81633ea6e7f3dddeaa782323",
+        "currentHash": "b87a34beeeadf906bf9fd8388ad28df105f4a39ed9f5c1b07dfa91455d0ef625"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:dorsal-pancreatic-artery",
+        "fmaId": "FMA14787",
+        "tab": "quiz",
+        "previousHash": "a3fa523740c646476aa9e35df39cfce329cc7fb7656fd7b3435625008201a925",
+        "currentHash": "892677675fd4994762cb6aee07a92a5554c1e81722c47bc5d7c14aed8cebdfe7"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+        "fmaId": "FMA14790",
+        "tab": "anatomy",
+        "previousHash": "8f2e6bf0e26fe437eb348091df72fa16ea87d398ba8981d61b90353f97cf40d0",
+        "currentHash": "2b51039f07ad6c1c88d52a71eed237ef6b8ff3b4f9fac511d33969d5f3d4e7f9"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+        "fmaId": "FMA14790",
+        "tab": "function",
+        "previousHash": "30b4869222516fc1d1ad088a58741bad5be9acde81633ea6e7f3dddeaa782323",
+        "currentHash": "e17b033544cb64dcc8f7354882a217daa1115f4b015bf118f8c70c18bf92e16f"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreatic-artery",
+        "fmaId": "FMA14790",
+        "tab": "quiz",
+        "previousHash": "e1ab1861d4fcd9e3e498af4e60be64182f7863d5dba523f4ec7ad0955b11693b",
+        "currentHash": "7216caac97bcc8e6203bc32310342a38730bde0fa6ca2ef302457596e7c5de97"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+        "fmaId": "FMA14792",
+        "tab": "anatomy",
+        "previousHash": "f80bdd881be8fae76b5b90e4264a97cd2097e0531f38ce5a42cb7efae2fccac4",
+        "currentHash": "fc59f898e85003cc1f9c88817715ad47dd95c499f9c18a856ea27c13f8cb0a28"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+        "fmaId": "FMA14792",
+        "tab": "function",
+        "previousHash": "30b4869222516fc1d1ad088a58741bad5be9acde81633ea6e7f3dddeaa782323",
+        "currentHash": "6941e45bf8b837e4fb4bc689e425e8647bbb43aa7008176683a68ddf5ba88a1b"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:great-pancreatic-artery",
+        "fmaId": "FMA14792",
+        "tab": "quiz",
+        "previousHash": "d706b914146bed62c66752d57199535fa1c2cfdab7e9b18d0a89dae06acae97b",
+        "currentHash": "2d1809f18bc831ff684665da37107fb6bdfeca7461486a3ab2955deb2489cf42"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+        "fmaId": "FMA14793",
+        "tab": "anatomy",
+        "previousHash": "f28a128d32c27e459747b8e501c0d840784026840721a2bb5e8d64054f3ff99e",
+        "currentHash": "ba3edcb800f849c70e344290d90e3bafe96128eebebeac3614ba1ab4480f9e03"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+        "fmaId": "FMA14793",
+        "tab": "function",
+        "previousHash": "30b4869222516fc1d1ad088a58741bad5be9acde81633ea6e7f3dddeaa782323",
+        "currentHash": "3e2a10d82985083d4c8ce4fb6b73ca2d34904675b824e20ae6266ca191769ee6"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:caudal-pancreatic-artery",
+        "fmaId": "FMA14793",
+        "tab": "quiz",
+        "previousHash": "6af75516a837a82075917b5d0aa4135b14ed6bbc3003a7f7975ba485d2c80b8e",
+        "currentHash": "ddce926eadfb4f6e4534262fcec12240aec85a876dd8c9eadc5c2206977d813e"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14805",
+        "tab": "anatomy",
+        "previousHash": "0b11acb1046fa3199ddc79bc60c9cf1007b44cac1c99121ae6c30db86adb67ca",
+        "currentHash": "04974222b347a7d11d243145b7477ef1e120ebebbbe8dee2d5a902a31e4147b6"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14805",
+        "tab": "function",
+        "previousHash": "a599b0467f2336ee6ef9d15bdc7ee8132045e85775432d3b64af67095e14eb11",
+        "currentHash": "c0da0aacea8db154475b549a0bfadbb22938ab16a177a56f13caef6cbab50afa"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA14805",
+        "tab": "quiz",
+        "previousHash": "f214b80be526cb1d105a262cc9e7e8f8d370f6859668875eb9f02e70c56238eb",
+        "currentHash": "15c3fbaf31fa6f9f69dd6c076f01c8f47055f5c12021270b2b31667656d54b92"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+        "fmaId": "FMA15398",
+        "tab": "anatomy",
+        "previousHash": "348a1507e7386bc65b7268e6e1d9354f16382f6dc36a571b4183b3ee3d552c51",
+        "currentHash": "3ba3722250da4f93c3472fa0d5d318fc98af1cad8a2c1563dd5eb2ae2172a93a"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+        "fmaId": "FMA15398",
+        "tab": "function",
+        "previousHash": "c7d7969b3454e50f7c41ae97812f86694eb2319d9c79b255f570d3977b7bfa38",
+        "currentHash": "e5aeeb33b90bbd3b40ebad8de73929dd30aab561492812cd7a40c3f173623107"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:pancreaticoduodenal-vein",
+        "fmaId": "FMA15398",
+        "tab": "quiz",
+        "previousHash": "4cfdd690981fb835e58946c05de9b2d67105ff9cba18ed03c765037a82bf8ad8",
+        "currentHash": "a4c7d494266a8a70c491cc150c7b54768ab7edc1570445a2d6afa57cf0be6cf6"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70479",
+        "tab": "anatomy",
+        "previousHash": "13d59fbeb8f32adc1a73ffd492d9dc2a9cbc55ac8e328dd435b4cafcba2e9676",
+        "currentHash": "ebbc58422193eb27ae0b9aa4f188129ccf3ff7333af7ef1c38ad6c20d7e7f931"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70479",
+        "tab": "function",
+        "previousHash": "a599b0467f2336ee6ef9d15bdc7ee8132045e85775432d3b64af67095e14eb11",
+        "currentHash": "ebf8468e0b6eaff8ccbeafaf821e07710a376a46534158502b1c13540e349c2d"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:anterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70479",
+        "tab": "quiz",
+        "previousHash": "d53ae0ee9cc4fbe57ee95134c3ac5eec7d80e90c21173bf99f2ffd4172874e5f",
+        "currentHash": "e31f8136d9db1fc48ab6fa9fdc84143f1cb531ff8b90af4d689ae20cf8260329"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70480",
+        "tab": "anatomy",
+        "previousHash": "f09a745517b67be1fc3bfdc6a05a114f346f9a66262ef16ac89823fd5b7b69b0",
+        "currentHash": "4c196c61c8cbe53298faea5be6ac112134e0a33312d728ac0dbf939ed747a414"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70480",
+        "tab": "function",
+        "previousHash": "a599b0467f2336ee6ef9d15bdc7ee8132045e85775432d3b64af67095e14eb11",
+        "currentHash": "9cd8422375388815862b6f0f0d5aa24ca256088cd992169225132ea3d9936f5a"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:posterior-inferior-pancreaticoduodenal-artery",
+        "fmaId": "FMA70480",
+        "tab": "quiz",
+        "previousHash": "b23c492c9fab178797c96d7526a8d724d212eff46baeab1124e6c05552a9bd47",
+        "currentHash": "18f337d798b6ed361467351a5b2059f13f043005106958291de3be717991376d"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "fmaId": "FMA76574",
+        "tab": "anatomy",
+        "previousHash": "1d43f72d67150c3340be0df38049ff7575ab4113215ff85bb8246f7a0fcc8634",
+        "currentHash": "b5db2752ff06b7ba609d7ffcc59ed8eaba2cdb39c7cb47f02492af14cf9ab13d"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "fmaId": "FMA76574",
+        "tab": "function",
+        "previousHash": "a599b0467f2336ee6ef9d15bdc7ee8132045e85775432d3b64af67095e14eb11",
+        "currentHash": "5cbc308e1702e4f27ae9c4965767e42a4127b28e73e0bdf1cce7fdd5e423558e"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "fmaId": "FMA76574",
+        "tab": "quiz",
+        "previousHash": "b0587624b7444154710b58fcd997a9737a6c478522a2a5365dccd4eb29332b19",
+        "currentHash": "40c602f0139347ab2957d7754898c80a7ea072a57709029f95098d217c8022c5"
+      }
+    ]
+  },
+  "sourceRecordHash": "e5a0f028fcbb7af8cf5bc91eb028f4bdbdea6444d4f69c651806b04c5eca7882"
+}

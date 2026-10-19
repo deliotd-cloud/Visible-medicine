@@ -1,0 +1,600 @@
+{
+  "name": "git-author-6085187c",
+  "helper": "hipMuscleXrayLesson",
+  "pinsHash": "b997e389ef2a99d7f71944049fe634740c3fc150cea6b075364fb59c25474751",
+  "transitionHash": "3cee2b111d472cba32901635218b3ad9d000b2d120bc357921754c2a3be03148",
+  "pins": {
+    "baseline": "363dc85cf12b07b380ba5da3b91031dbddc6bd02",
+    "authorCommit": "6085187c9a8aa39e8e1e9d247bc49022c2b0e580",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
+          "fmaId": "FMA22452",
+          "name": "Right adductor brevis",
+          "sourceName": "right adductor brevis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22452",
+          "bounds": {
+            "min": [
+              -0.9846019744873047,
+              -1.9827898740768433,
+              0.29708901047706604
+            ],
+            "max": [
+              -0.23096200823783875,
+              -0.014470214955508709,
+              0.7651999592781067
+            ]
+          },
+          "center": [
+            -0.6077819913625717,
+            -0.998630044516176,
+            0.5311444848775864
+          ],
+          "anchor": [
+            -0.5580220222473145,
+            -0.9527197480201721,
+            0.4856490194797516
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1401",
+              "sha256": "388e7598162d73b22c18d198b9fa4abb5359eb95ffbbfbf0941740df85e0a4f6"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
+          "fmaId": "FMA22454",
+          "name": "Left adductor brevis",
+          "sourceName": "left adductor brevis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22454",
+          "bounds": {
+            "min": [
+              0.23096200823783875,
+              -1.9827898740768433,
+              0.29708901047706604
+            ],
+            "max": [
+              0.9846019744873047,
+              -0.014479980804026127,
+              0.7651999592781067
+            ]
+          },
+          "center": [
+            0.6077819913625717,
+            -0.9986349274404347,
+            0.5311444848775864
+          ],
+          "anchor": [
+            0.5580220222473145,
+            -0.9527197480201721,
+            0.4856490194797516
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1401M",
+              "sha256": "0d4bbe6e641e42b29c32bee8e8e9ad627ff8ed52c1eb6daf805e4661aab3c14f"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-magnus",
+          "fmaId": "FMA22459",
+          "name": "Right adductor magnus",
+          "sourceName": "right adductor magnus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22459",
+          "bounds": {
+            "min": [
+              -1.1221200227737427,
+              -4.200349807739258,
+              0.04441002011299133
+            ],
+            "max": [
+              -0.13699400424957275,
+              -0.22671020030975342,
+              0.6302100419998169
+            ]
+          },
+          "center": [
+            -0.6295570135116577,
+            -2.2135300040245056,
+            0.3373100310564041
+          ],
+          "anchor": [
+            -0.681456983089447,
+            -2.190739631652832,
+            0.19221802055835724
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1403",
+              "sha256": "e9a3ed2907b10d8f4d93c78f04eb0c4b3b96a44230958b90979a0d7142695fdd"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
+          "fmaId": "FMA22460",
+          "name": "Left adductor magnus",
+          "sourceName": "left adductor magnus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22460",
+          "bounds": {
+            "min": [
+              0.13699400424957275,
+              -4.200349807739258,
+              0.04441002011299133
+            ],
+            "max": [
+              1.1221299171447754,
+              -0.22671020030975342,
+              0.6301999688148499
+            ]
+          },
+          "center": [
+            0.6295619606971741,
+            -2.2135300040245056,
+            0.3373049944639206
+          ],
+          "anchor": [
+            0.681456983089447,
+            -2.190739631652832,
+            0.19221802055835724
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1403M",
+              "sha256": "e4c650b3ce2ede4c4a4203a90bd553c1bcc82b0c7931180ec54251d744142759"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-gracilis",
+          "fmaId": "FMA43883",
+          "name": "Right gracilis",
+          "sourceName": "right gracilis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA43883",
+          "bounds": {
+            "min": [
+              -0.70415198802948,
+              -5.169859886169434,
+              0.15350402891635895
+            ],
+            "max": [
+              -0.12066300213336945,
+              -0.024370117112994194,
+              0.8253300189971924
+            ]
+          },
+          "center": [
+            -0.4124074950814247,
+            -2.597115001641214,
+            0.48941702395677567
+          ],
+          "anchor": [
+            -0.3424589931964874,
+            -2.581589937210083,
+            0.5184699892997742
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1421",
+              "sha256": "82d12d8359e66303a7e5a21c2b9b24b26d33b8bbeab55f8f97c87881e25e5fa7"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-gracilis",
+          "fmaId": "FMA43884",
+          "name": "Left gracilis",
+          "sourceName": "left gracilis",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA43884",
+          "bounds": {
+            "min": [
+              0.12066300213336945,
+              -5.169859886169434,
+              0.15350402891635895
+            ],
+            "max": [
+              0.70415198802948,
+              -0.024370117112994194,
+              0.8253300189971924
+            ]
+          },
+          "center": [
+            0.4124074950814247,
+            -2.597115001641214,
+            0.48941702395677567
+          ],
+          "anchor": [
+            0.3424589931964874,
+            -2.581589937210083,
+            0.5184699892997742
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1421M",
+              "sha256": "1c760938cc531c810758cf5f9fb25ff3a6a0cfd7798d102da95b3269f6741b00"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-quadratus-femoris",
+          "fmaId": "FMA22338",
+          "name": "Right quadratus femoris",
+          "sourceName": "right quadratus femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22338",
+          "bounds": {
+            "min": [
+              -1.2718700170516968,
+              -0.563460111618042,
+              -0.07343898713588715
+            ],
+            "max": [
+              -0.5657060146331787,
+              -0.10145995765924454,
+              0.07886398583650589
+            ]
+          },
+          "center": [
+            -0.9187880158424377,
+            -0.33246003463864326,
+            0.002712499350309372
+          ],
+          "anchor": [
+            -0.9268670082092285,
+            -0.2994702160358429,
+            -0.062043000012636185
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1432",
+              "sha256": "3c1121d358ea50cfb88fe829c5128ecc3470309e3de5d7f642bc8cf35555fdb1"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-quadratus-femoris",
+          "fmaId": "FMA22339",
+          "name": "Left quadratus femoris",
+          "sourceName": "left quadratus femoris",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh",
+            "pelvis"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22339",
+          "bounds": {
+            "min": [
+              0.5657060146331787,
+              -0.563460111618042,
+              -0.07343898713588715
+            ],
+            "max": [
+              1.2718700170516968,
+              -0.10145995765924454,
+              0.07886398583650589
+            ]
+          },
+          "center": [
+            0.9187880158424377,
+            -0.33246003463864326,
+            0.002712499350309372
+          ],
+          "anchor": [
+            0.9268659949302673,
+            -0.29947999119758606,
+            -0.062043000012636185
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1432M",
+              "sha256": "50f5a96e1a54247754748700a75f30f65936e639da558845cdb73a4665a5c5cf"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "363dc85cf12b07b380ba5da3b91031dbddc6bd02",
+    "authorCommit": "6085187c9a8aa39e8e1e9d247bc49022c2b0e580",
+    "sourcePinsHash": "b997e389ef2a99d7f71944049fe634740c3fc150cea6b075364fb59c25474751",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-brevis",
+        "fmaId": "FMA22452",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "9f6ec93b9a009645bd1e13aa69f163e3e84a076c504f9b982a64b5ae262266b6"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-brevis",
+        "fmaId": "FMA22454",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "eaea3a03223e8e10168493f441d27a17fbf8d026ded0b660ea499d93f428fe4b"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-magnus",
+        "fmaId": "FMA22459",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "ea2b051f5bb9a3aa74e0150dbebbad596e00745b17f8a2b090f1b94d613b46a3"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-magnus",
+        "fmaId": "FMA22460",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "bb0465cce15f03fb3a4ed5914d0fa87360c349b3aa0423292bd851cbb8e252ee"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-gracilis",
+        "fmaId": "FMA43883",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "6d30a836582cbc809c4319e0b0143942346e52c1083bcf8cf03ea6d80bb967cd"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-gracilis",
+        "fmaId": "FMA43884",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "0f54333fc7760e74ebb9e6b0838890fa43bde26f150751c980fd8723109996d7"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-quadratus-femoris",
+        "fmaId": "FMA22338",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "5eaf52a0b0dd508f5201afc6de8ce8c69c8033804f92f98370eddf8f19503848"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-quadratus-femoris",
+        "fmaId": "FMA22339",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "8049b54d953b0c0675bb9c91ddfa3ff16b03d68d967e337a5bc3bb04cbbced29"
+      }
+    ]
+  },
+  "sourceRecordHash": "c10db0bd771fb649d1a5e1429628e2671775e574d41a56286f502d89f2bae9a0"
+}

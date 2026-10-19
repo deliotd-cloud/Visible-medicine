@@ -1,0 +1,1059 @@
+{
+  "name": "git-author-4624f82b",
+  "helper": "intracranialArterialXrayLesson",
+  "pinsHash": "fa4a05d2c9b88dcc53a41e95958daca7900d61af093fa9e619416be113f55992",
+  "transitionHash": "cf6a8a978f0e038ddb5a17e38d83373e53723bc147f653389ebdf9d203ecd83c",
+  "pins": {
+    "baseline": "aa7437abd793a0c2dac7260555097204864cf45c",
+    "authorCommit": "4624f82b6c517767238da9c31daf5d8c7fbe7d8b",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+          "fmaId": "FMA50169",
+          "name": "Anterior communicating artery",
+          "sourceName": "anterior communicating artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50169",
+          "bounds": {
+            "min": [
+              -0.04155530035495758,
+              7.369999885559082,
+              0.6153199672698975
+            ],
+            "max": [
+              0.027063999325037003,
+              7.383699893951416,
+              0.6334200501441956
+            ]
+          },
+          "center": [
+            -0.007245650514960289,
+            7.376849889755249,
+            0.6243700087070465
+          ],
+          "anchor": [
+            0.002294389996677637,
+            7.383699893951416,
+            0.6257100105285645
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1655",
+              "sha256": "9e93878f7df5385e705674367796c02b86082fb2df1d3e35c9c801658e3f4914"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+          "fmaId": "FMA50029",
+          "name": "Right anterior cerebral artery",
+          "sourceName": "right anterior cerebral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50029",
+          "bounds": {
+            "min": [
+              -0.15399999916553497,
+              7.348700046539307,
+              0.5900399684906006
+            ],
+            "max": [
+              -0.010987299494445324,
+              7.489799976348877,
+              0.7120699882507324
+            ]
+          },
+          "center": [
+            -0.08249364932999015,
+            7.419250011444092,
+            0.6510549783706665
+          ],
+          "anchor": [
+            -0.07492420077323914,
+            7.395999908447266,
+            0.6141999959945679
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1654",
+              "sha256": "7f146e7551bb53d1ad7f5d98a77a16d8c7ea4e8ab86012bfd3c92b782df2a5dd"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+          "fmaId": "FMA50030",
+          "name": "Left anterior cerebral artery",
+          "sourceName": "left anterior cerebral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50030",
+          "bounds": {
+            "min": [
+              0.010987299494445324,
+              7.348700046539307,
+              0.5900499820709229
+            ],
+            "max": [
+              0.15399999916553497,
+              7.489799976348877,
+              0.7120699882507324
+            ]
+          },
+          "center": [
+            0.08249364932999015,
+            7.419250011444092,
+            0.6510599851608276
+          ],
+          "anchor": [
+            0.07492420077323914,
+            7.395999908447266,
+            0.6142099499702454
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1654M",
+              "sha256": "b5bbd053a3b23de2490f00262adc37044f2a1f09f6548468b9595add93806dcc"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+          "fmaId": "FMA50584",
+          "name": "Right posterior cerebral artery",
+          "sourceName": "right posterior cerebral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50584",
+          "bounds": {
+            "min": [
+              -0.572281002998352,
+              7.187600135803223,
+              -0.5968971848487854
+            ],
+            "max": [
+              -0.00562627986073494,
+              7.850500583648682,
+              0.5230200290679932
+            ]
+          },
+          "center": [
+            -0.2889536414295435,
+            7.519050359725952,
+            -0.03693857789039612
+          ],
+          "anchor": [
+            -0.1760450005531311,
+            7.479100227355957,
+            0.10215099155902863
+          ],
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ1661",
+              "sha256": "bb8a7e5734619033a9e29b8a53126a2126d53b210804393e3b32341e1bf1711e"
+            },
+            {
+              "file": "FJ1675",
+              "sha256": "f144e623f16f0667cbf7b04657b0fb8a78cfb1b9ac8ab87af69c8a81ed9d0bd1"
+            },
+            {
+              "file": "FJ1677",
+              "sha256": "4e5046740b2c7e3d60099e80dc759f2d23dd717d2a6a50c167917a971079e8d6"
+            },
+            {
+              "file": "FJ1678",
+              "sha256": "00480c89871f6bf5e72deb5e6133fd964c29233c98c6bd712921dd8e52fc1966"
+            },
+            {
+              "file": "FJ1680",
+              "sha256": "d954435f8d7673bfb605c26ed731d14c6e82484bd01274bd80183d55604659f5"
+            },
+            {
+              "file": "FJ1687",
+              "sha256": "360ed58797181a5b44e15f3539b629738f1474669428511be77a5a8d48d71b95"
+            },
+            {
+              "file": "FJ1691",
+              "sha256": "a59f2dad8a1a62d9b997a97c6b432b2b6b8d36c620c776cbed2852581145deec"
+            },
+            {
+              "file": "FJ1720",
+              "sha256": "bab795f2dc6349c549f3c0399bc492cb8ed80ac67dd9703f82767df32a4e613e"
+            },
+            {
+              "file": "FJ1727",
+              "sha256": "0b604eb708668ee4186665cc1edb1829864acebd1ad8c9f2811b9357b13ef16e"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+          "fmaId": "FMA50585",
+          "name": "Left posterior cerebral artery",
+          "sourceName": "left posterior cerebral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50585",
+          "bounds": {
+            "min": [
+              0.00562627986073494,
+              7.187600135803223,
+              -0.5968971848487854
+            ],
+            "max": [
+              0.572281002998352,
+              7.850500583648682,
+              0.5230200290679932
+            ]
+          },
+          "center": [
+            0.2889536414295435,
+            7.519050359725952,
+            -0.03693857789039612
+          ],
+          "anchor": [
+            0.1760450005531311,
+            7.479100227355957,
+            0.10215099155902863
+          ],
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ1661M",
+              "sha256": "415780e7385454bd8a00b0658939e12709094fcfa57486322fe8f646516a9cb4"
+            },
+            {
+              "file": "FJ1675M",
+              "sha256": "c051aaa79e3f76ff4fee6dd63675e527b2c9bedfa0c1851f72eba85eba3fe048"
+            },
+            {
+              "file": "FJ1677M",
+              "sha256": "d08c3f2b23448f5bc9a4c681a6b816a20d65055de8586d8f728ffe18ddd9223e"
+            },
+            {
+              "file": "FJ1678M",
+              "sha256": "74ef83ec6b3b43515c3ca0b7d2c3e9066ad7c40aa3301cbc2d64978d579fdddf"
+            },
+            {
+              "file": "FJ1680M",
+              "sha256": "418f9530d42659ec4f93c6fa55d4a4ce86bcab3dd2458c1697b3239585b563dd"
+            },
+            {
+              "file": "FJ1687M",
+              "sha256": "a0a649f781806ed0430535487162ca777b2c08bedb8394bfb01ec2934273f459"
+            },
+            {
+              "file": "FJ1691M",
+              "sha256": "2d3b4beb7558c00997887f923c407b6955ff1086170f8b8d2f45983d787433e0"
+            },
+            {
+              "file": "FJ1720M",
+              "sha256": "72b3c8dac6711edf586e4703d1be81fff6a3be4ce8cde9befe2ed130ca2a2041"
+            },
+            {
+              "file": "FJ1727M",
+              "sha256": "76f789b1deae4ca1707a12a6322c29d3de52a5cb8619c12ac5553c4b920d1bf4"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+          "fmaId": "FMA50085",
+          "name": "Right posterior communicating artery",
+          "sourceName": "right posterior communicating artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50085",
+          "bounds": {
+            "min": [
+              -0.12567399442195892,
+              7.3048996925354,
+              0.47142601013183594
+            ],
+            "max": [
+              -0.054554399102926254,
+              7.341700553894043,
+              0.6052200198173523
+            ]
+          },
+          "center": [
+            -0.09011419676244259,
+            7.323300123214722,
+            0.5383230149745941
+          ],
+          "anchor": [
+            -0.08920519798994064,
+            7.327399730682373,
+            0.5310099720954895
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1713",
+              "sha256": "a568f857676b6795c9b58c83c011d4d0f0e12cd746dcda95bd9ab65631cb0d86"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+          "fmaId": "FMA50086",
+          "name": "Left posterior communicating artery",
+          "sourceName": "left posterior communicating artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "head-neck-vessels-recovery",
+          "nodeName": "FMA50086",
+          "bounds": {
+            "min": [
+              0.054554399102926254,
+              7.3048996925354,
+              0.47142601013183594
+            ],
+            "max": [
+              0.1256750077009201,
+              7.341700553894043,
+              0.6052100658416748
+            ]
+          },
+          "center": [
+            0.09011470340192318,
+            7.323300123214722,
+            0.5383180379867554
+          ],
+          "anchor": [
+            0.08920519798994064,
+            7.327399730682373,
+            0.5310099720954895
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1713M",
+              "sha256": "5f3bda878361debaa1e0e2e13c31093259a43ab42b9ac8254c876cfd934a42bc"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+          "fmaId": "FMA50519",
+          "name": "Right posterior inferior cerebellar artery",
+          "sourceName": "right posterior inferior cerebellar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "cranial-arteries",
+          "nodeName": "FMA50519",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1700",
+              "sha256": "5987856de318a38d3b9507914b325ed2b8ee703ef2ea26e11b6e69637e472ae6"
+            },
+            {
+              "file": "FJ1701",
+              "sha256": "5a7c90c4da21a6ba5277c5af6aad8c9215e9de1efacd4c0d57bba27f51c59a7f"
+            },
+            {
+              "file": "FJ1702",
+              "sha256": "f136197e1358777d4f7f09919beeee17d2b1d9f74a883fef3376de39dec01219"
+            },
+            {
+              "file": "FJ1703",
+              "sha256": "fc554f9c62a3f7cd91a390c920eec88716c368f59197c6556ad2d8a1788a40c8"
+            },
+            {
+              "file": "FJ1704",
+              "sha256": "1f20e9f325743ddd9734d462ea2aea36906ac724d158068291336dbf26577a2f"
+            },
+            {
+              "file": "FJ1705",
+              "sha256": "bb98b100b15268a2ecdc42c4dcc78b9382a960d31fd50085608cb0e46eee4881"
+            },
+            {
+              "file": "FJ1706",
+              "sha256": "badb36a94cc4465eed8baa283affe9b8c004ec2c7acfd265ed6804509a548005"
+            },
+            {
+              "file": "FJ1707",
+              "sha256": "db35aca6b5d0270c7161f7ad530f907bb7eaac3dd757d928e7c70114b496a3f9"
+            },
+            {
+              "file": "FJ1708",
+              "sha256": "a80d4d0fe245d8cc6480d8ab7629a3c7d8a6369b0e405d13e884fd7ac4e60363"
+            },
+            {
+              "file": "FJ1709",
+              "sha256": "523b687e09bf19e12a2424864aad6baf3d39b9d2c3f7746efb9160f61022dc4f"
+            },
+            {
+              "file": "FJ1710",
+              "sha256": "b04a1ceb715c72caaa141dba9dc792d9ed4718ec4a2100b5fbf7f2fe1d163af7"
+            },
+            {
+              "file": "FJ1711",
+              "sha256": "7d066e0e4f2974c543d43b7735c9679c67a359d98cd267b635d8dc247c28b881"
+            },
+            {
+              "file": "FJ1715",
+              "sha256": "8ad649224545e4356d6f6d42d7ef466b1c90ca9228bf819e06042823253a033a"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.5357940196990967,
+              6.877699851989746,
+              -0.3810029923915863
+            ],
+            "max": [
+              -0.05455080047249794,
+              7.172999858856201,
+              0.2290010005235672
+            ]
+          },
+          "center": [
+            -0.2951724100857973,
+            7.025349855422974,
+            -0.07600099593400955
+          ],
+          "anchor": [
+            -0.2642489969730377,
+            6.941800117492676,
+            -0.09603100270032883
+          ],
+          "coverageNote": "Thirteen original IS-A files form fourteen components. Disconnected source pieces are retained without inventing a continuous lumen or complete territory. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right posterior inferior cerebellar artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+            "bullets": [],
+            "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+          "fmaId": "FMA50520",
+          "name": "Left posterior inferior cerebellar artery",
+          "sourceName": "left posterior inferior cerebellar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "cranial-arteries",
+          "nodeName": "FMA50520",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1700M",
+              "sha256": "c7ad4faac2f804bec9abcb30f1437d63fada79d98e0424b788364a34f210b97c"
+            },
+            {
+              "file": "FJ1701M",
+              "sha256": "dc6b96d39073c2900440a62f4597757cba04261c800b6e30678ec8c0868cd58f"
+            },
+            {
+              "file": "FJ1702M",
+              "sha256": "001db67be7c0dd4543b1990e162da85d28161fd337801d7deae0dc79a221ad45"
+            },
+            {
+              "file": "FJ1703M",
+              "sha256": "129937b884dfdac2aad686af0d4a60636ee1f51743a58378ed8d9a6b9221405c"
+            },
+            {
+              "file": "FJ1704M",
+              "sha256": "c0ee60d6f6133e3eabc5269c5570b059723c0936b62942bbb52be4d77fc56340"
+            },
+            {
+              "file": "FJ1705M",
+              "sha256": "9b540a65bbe225b8913789ab242568f09f0db81c77b585add270f4e2d1376d6d"
+            },
+            {
+              "file": "FJ1706M",
+              "sha256": "1908978ece7bc3bd21bf022d3082d6740c3b037b213f7a2ab8d9f9c7551e8d04"
+            },
+            {
+              "file": "FJ1707M",
+              "sha256": "f484c75fbbf1a318fea953ffbf8afac5a256bb417fcbb9866c72c1fadcd21899"
+            },
+            {
+              "file": "FJ1708M",
+              "sha256": "11ed732710d8153392d57dc16410bd33f30d6ff68920990748830e75765a7afd"
+            },
+            {
+              "file": "FJ1709M",
+              "sha256": "77b2596d1400994b21c8b1c1ddc7562234aabaf0e0dc8ea02a050991e95bc248"
+            },
+            {
+              "file": "FJ1710M",
+              "sha256": "8ef3f3a359bff05efc0763815eb620cf83d6abf2142749fd884b87fef4770289"
+            },
+            {
+              "file": "FJ1711M",
+              "sha256": "aa90b423934e58dd85d5ccb77c18d348d5dfb27a07c9262c92fcb74a26d4f4b0"
+            },
+            {
+              "file": "FJ1715M",
+              "sha256": "f1b242ae353829ed3f886c4b5f0e8b1874b948cfa86f42165b09534c83f1ffc9"
+            }
+          ],
+          "bounds": {
+            "min": [
+              0.05455080047249794,
+              6.877699851989746,
+              -0.3810029923915863
+            ],
+            "max": [
+              0.5357940196990967,
+              7.172999858856201,
+              0.2290010005235672
+            ]
+          },
+          "center": [
+            0.2951724100857973,
+            7.025349855422974,
+            -0.07600099593400955
+          ],
+          "anchor": [
+            0.2642489969730377,
+            6.941800117492676,
+            -0.09603100270032883
+          ],
+          "coverageNote": "Thirteen original IS-A files form fourteen components. Disconnected source pieces are retained without inventing a continuous lumen or complete territory. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left posterior inferior cerebellar artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+            "bullets": [],
+            "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+          "fmaId": "FMA50574",
+          "name": "Right superior cerebellar artery",
+          "sourceName": "right superior cerebellar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "cranial-arteries",
+          "nodeName": "FMA50574",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1726",
+              "sha256": "b0934c5f62d3bcff6dcbdfec902ec29cf9e9142df8f8bad55e96d436392c3b74"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.21416500210762024,
+              7.208099842071533,
+              0.24385599792003632
+            ],
+            "max": [
+              0.007319760043174028,
+              7.277100086212158,
+              0.47693800926208496
+            ]
+          },
+          "center": [
+            -0.1034226210322231,
+            7.242599964141846,
+            0.36039700359106064
+          ],
+          "anchor": [
+            -0.16997599601745605,
+            7.25,
+            0.37613099813461304
+          ],
+          "coverageNote": "Original IS-A superior cerebellar surface. A small proximal portion crosses the source midline; source laterality is preserved without reflection or fitting. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right superior cerebellar artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+            "bullets": [],
+            "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+          "fmaId": "FMA50575",
+          "name": "Left superior cerebellar artery",
+          "sourceName": "left superior cerebellar artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "left",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "cranial-arteries",
+          "nodeName": "FMA50575",
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1726M",
+              "sha256": "3fb8d802bd4c2cd6fe9115470e12aeb8949f3d1d30a6cdaf508573cfad8066f5"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.007319760043174028,
+              7.208099842071533,
+              0.24385599792003632
+            ],
+            "max": [
+              0.21416500210762024,
+              7.277100086212158,
+              0.47693899273872375
+            ]
+          },
+          "center": [
+            0.1034226210322231,
+            7.242599964141846,
+            0.36039749532938004
+          ],
+          "anchor": [
+            0.16997599601745605,
+            7.249899864196777,
+            0.37613099813461304
+          ],
+          "coverageNote": "Original IS-A superior cerebellar surface. A small proximal portion crosses the source midline; source laterality is preserved without reflection or fitting. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Left superior cerebellar artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+            "bullets": [],
+            "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+          "fmaId": "FMA50082",
+          "name": "Right middle cerebral artery",
+          "sourceName": "right middle cerebral artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "right",
+          "region": "head-neck",
+          "regions": [
+            "head-neck"
+          ],
+          "bundle": "cranial-arteries",
+          "nodeName": "FMA50082",
+          "sourceTree": "partof",
+          "sources": [
+            {
+              "file": "FJ1662",
+              "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+            },
+            {
+              "file": "FJ1663",
+              "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+            },
+            {
+              "file": "FJ1692",
+              "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+            }
+          ],
+          "bounds": {
+            "min": [
+              -0.4430699944496155,
+              7.345099925994873,
+              0.26600000262260437
+            ],
+            "max": [
+              -0.08286440372467041,
+              7.719600200653076,
+              0.6843600273132324
+            ]
+          },
+          "center": [
+            -0.26296719908714294,
+            7.532350063323975,
+            0.4751800149679184
+          ],
+          "anchor": [
+            -0.2890470027923584,
+            7.52400016784668,
+            0.4779999852180481
+          ],
+          "coverageNote": "Three original PART-OF files form six components; no matching left MCA definition is supplied. Not a complete MCA tree or separate M1/M2 segment model. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "Right middle cerebral artery · Review pending",
+            "body": "Structure-specific clinical, pathology and imaging teaching awaits radiologist review.",
+            "bullets": [],
+            "note": "No angiogram, perfusion map, diagnostic interpretation or intervention guidance is supplied."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "aa7437abd793a0c2dac7260555097204864cf45c",
+    "authorCommit": "4624f82b6c517767238da9c31daf5d8c7fbe7d8b",
+    "sourcePinsHash": "fa4a05d2c9b88dcc53a41e95958daca7900d61af093fa9e619416be113f55992",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+        "fmaId": "FMA50169",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "d195775e691cee74ab0988cfd7641a0feae21f2b017f25e9a34e1d7d4277b44a"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+        "fmaId": "FMA50029",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "ee88c7dde539b2641d284883b94bbc1c4e0e38c03675ce1765b952768417315e"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+        "fmaId": "FMA50030",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "ce57f08392d5f03c6e836c12bb7c159482b6b2c6bfd52a3cdae3ef2bb326fcb5"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+        "fmaId": "FMA50584",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "2c32f8d0edbc0955841d621d69090d13758b8aa7fcd72e976aa0633b8d54e3ef"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+        "fmaId": "FMA50585",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "712b451e58e9d9139770f73c993073c8cbdf7c20820dbf15954b213e81edfe83"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+        "fmaId": "FMA50085",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "be23622478f9fb5465370894c4ba9537bad638453811042eddaee1d0dbf2cd6c"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+        "fmaId": "FMA50086",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "849576770867ef8bd47e74d1df03ae5ada162a82d87d880592f9851d6cd69b06"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+        "fmaId": "FMA50519",
+        "tab": "xray",
+        "previousHash": "8f42767bc543bb9cf767b60634eafb310a788ba4542526a44e0acc99ecf5c9f3",
+        "currentHash": "6f00de6fc2d54ba53dbcd8abff1ca4bea577fce347a686f10fad57102a65b370"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+        "fmaId": "FMA50520",
+        "tab": "xray",
+        "previousHash": "af8ca07ec48d570f946b895ff68fb1e1e60b9b829fa2b2c221678b3e90c62267",
+        "currentHash": "39fe8f5f5cfd3ec7aade3079a5980f9f6784f9d1b6addb642fe6cf12f58c5bab"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-superior-cerebellar-artery",
+        "fmaId": "FMA50574",
+        "tab": "xray",
+        "previousHash": "4dc53dc6c1cef10aa61a4cffbd9ac15a98a38962fa88281d89274fdb2c48e488",
+        "currentHash": "bea5c50ce009b00dcefb81f4712eda2bfcb0e3424c1d848fb25d74674f1ebddb"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-superior-cerebellar-artery",
+        "fmaId": "FMA50575",
+        "tab": "xray",
+        "previousHash": "7af9eb318d7e6e941396a6147a0ef8dadee1bf1027d5ce2d69148ae7232835ef",
+        "currentHash": "440a1315336fcb57bff758f745e7f2bbcff19d9a9fbbe8ca16ffb6a4ccdb2d93"
+      },
+      {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+        "fmaId": "FMA50082",
+        "tab": "xray",
+        "previousHash": "0864e3220afac534b82a54e74b8b0058ee83b9881147adce67812a2e0db37c8c",
+        "currentHash": "6bb4dc8ffe634e484762f525fa1e31426bd30c8f0d16843945ffb07bd2a7e68c"
+      }
+    ]
+  },
+  "sourceRecordHash": "1bdf6ddb1338ce80fca84ce3f8172c40cd10a8b67e7e29092abf0da1a0b9e145"
+}

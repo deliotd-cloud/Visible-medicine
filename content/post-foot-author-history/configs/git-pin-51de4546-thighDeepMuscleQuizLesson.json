@@ -1,0 +1,358 @@
+{
+  "name": "git-pin-51de4546-thighDeepMuscleQuizLesson",
+  "helper": "thighDeepMuscleQuizLesson",
+  "pinsHash": "8a5f5afd56c1944e30fd7598bf3d1a21497a2a5f1f442a99404a8fad3f61e471",
+  "transitionHash": "05699efec2c2c1a3fd218c967c4ec84088ffb7c82a34eaa95138194d30aaf676",
+  "pins": {
+    "baseline": "7d77c973aab2a7135635ab2e65a2831f3e7d22c4",
+    "authorCommit": "51de4546a0b33a1ce93bfec4c9c43f760bf82b4e",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
+          "fmaId": "FMA22456",
+          "name": "Right adductor longus",
+          "sourceName": "right adductor longus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22456",
+          "bounds": {
+            "min": [
+              -0.9410220384597778,
+              -2.8979599475860596,
+              0.39375799894332886
+            ],
+            "max": [
+              -0.17040100693702698,
+              -0.003350219689309597,
+              0.8697199821472168
+            ]
+          },
+          "center": [
+            -0.5557115226984024,
+            -1.4506550836376846,
+            0.6317389905452728
+          ],
+          "anchor": [
+            -0.4950200021266937,
+            -1.4129302501678467,
+            0.5566400289535522
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1402",
+              "sha256": "f5165be945dbae2a81a1261b5f5c169c9ba677e80c70af263a08efc2f57f3f53"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right adductor longus · Hip and thigh quick check · draft",
+            "body": "Adductor longus contributes most directly to which hip movement?",
+            "bullets": [
+              "Abduction",
+              "Adduction",
+              "Ankle eversion",
+              "Knee extension"
+            ],
+            "correctAnswer": "Adduction",
+            "explanation": "The thigh moves toward the midline.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/modules/lower_limb_module/lower_limb_03.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate complete attachments, innervation, movement, or patient anatomy of these static source surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
+          "fmaId": "FMA22457",
+          "name": "Left adductor longus",
+          "sourceName": "left adductor longus",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22457",
+          "bounds": {
+            "min": [
+              0.17040199041366577,
+              -2.8979599475860596,
+              0.39375799894332886
+            ],
+            "max": [
+              0.9410220384597778,
+              -0.003350219689309597,
+              0.8697099089622498
+            ]
+          },
+          "center": [
+            0.5557120144367218,
+            -1.4506550836376846,
+            0.6317339539527893
+          ],
+          "anchor": [
+            0.4950200021266937,
+            -1.4129302501678467,
+            0.5566400289535522
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1402M",
+              "sha256": "6b2f97b45dddd3045655cd1495f09db6baa4d3b9c19a84af5e00f0745c193d88"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left adductor longus · Hip and thigh quick check · draft",
+            "body": "Adductor longus contributes most directly to which hip movement?",
+            "bullets": [
+              "Abduction",
+              "Adduction",
+              "Ankle eversion",
+              "Knee extension"
+            ],
+            "correctAnswer": "Adduction",
+            "explanation": "The thigh moves toward the midline.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/modules/lower_limb_module/lower_limb_03.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate complete attachments, innervation, movement, or patient anatomy of these static source surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:right:muscle:right-sartorius",
+          "fmaId": "FMA22354",
+          "name": "Right sartorius",
+          "sourceName": "right sartorius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22354",
+          "bounds": {
+            "min": [
+              -1.3118600845336914,
+              -5.2581000328063965,
+              0.3399069905281067
+            ],
+            "max": [
+              -0.20660500228405,
+              1.017919898033142,
+              0.909559965133667
+            ]
+          },
+          "center": [
+            -0.7592325434088707,
+            -2.120090067386627,
+            0.6247334778308868
+          ],
+          "anchor": [
+            -0.6204569935798645,
+            -2.1055102348327637,
+            0.7840099930763245
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1434",
+              "sha256": "670d0351a8f017d4792ee7c5780557b5468a298e128cf44da9443d2712d24eb7"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right sartorius · Hip and thigh quick check · draft",
+            "body": "Sartorius reaches the medial tibia through which attachment?",
+            "bullets": [
+              "Patellar ligament",
+              "Pes anserinus",
+              "Iliotibial tract",
+              "Achilles tendon"
+            ],
+            "correctAnswer": "Pes anserinus",
+            "explanation": "Follow the long oblique muscle across the anterior thigh.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate complete attachments, innervation, movement, or patient anatomy of these static source surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:thigh:left:muscle:left-sartorius",
+          "fmaId": "FMA22355",
+          "name": "Left sartorius",
+          "sourceName": "left sartorius",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "thigh",
+          "regions": [
+            "thigh"
+          ],
+          "bundle": "thigh-muscles",
+          "nodeName": "FMA22355",
+          "bounds": {
+            "min": [
+              0.20660500228405,
+              -5.2581000328063965,
+              0.3399069905281067
+            ],
+            "max": [
+              1.3118600845336914,
+              1.017919898033142,
+              0.909559965133667
+            ]
+          },
+          "center": [
+            0.7592325434088707,
+            -2.120090067386627,
+            0.6247334778308868
+          ],
+          "anchor": [
+            0.6204569935798645,
+            -2.1055102348327637,
+            0.7839999198913574
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1434M",
+              "sha256": "4c32d96cf9113542f135a32f8a709505fee10796b9b076cc16c7efe665778bc8"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left sartorius · Hip and thigh quick check · draft",
+            "body": "Sartorius reaches the medial tibia through which attachment?",
+            "bullets": [
+              "Patellar ligament",
+              "Pes anserinus",
+              "Iliotibial tract",
+              "Achilles tendon"
+            ],
+            "correctAnswer": "Pes anserinus",
+            "explanation": "Follow the long oblique muscle across the anterior thigh.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/musculoskeletal_system/thigh.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomy does not validate complete attachments, innervation, movement, or patient anatomy of these static source surfaces. No diagnosis or patient-specific interpretation is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "7d77c973aab2a7135635ab2e65a2831f3e7d22c4",
+    "authorCommit": "51de4546a0b33a1ce93bfec4c9c43f760bf82b4e",
+    "sourcePinsHash": "8a5f5afd56c1944e30fd7598bf3d1a21497a2a5f1f442a99404a8fad3f61e471",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-adductor-longus",
+        "fmaId": "FMA22456",
+        "tab": "quiz",
+        "previousHash": "89908661fee8686df484404fa304bb9112a855f8c23d17d00279fd79e3dee3f2",
+        "currentHash": "9802e8bb2a42505dfaeb6b5243772691884d7ce671fd9993877909af54ec27fc"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-adductor-longus",
+        "fmaId": "FMA22457",
+        "tab": "quiz",
+        "previousHash": "4417b694bd136db22b4a1cee4175620b3aa0373165d0e4be3a27f286d8052d43",
+        "currentHash": "989f317af382ef437169f3c71626808a15a4ce8bd38f8860ca8e0ed23c68e6e7"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:right:muscle:right-sartorius",
+        "fmaId": "FMA22354",
+        "tab": "quiz",
+        "previousHash": "abf54f914f22ccc91a9fe01d7f3d81ead71138ddfd18f7d989e35c33094a3c49",
+        "currentHash": "c8cd2679feed6fe71763fe2acda6a55292b7be335a3ba4e919277aa1d86b26c5"
+      },
+      {
+        "id": "vm:anatomy:body:thigh:left:muscle:left-sartorius",
+        "fmaId": "FMA22355",
+        "tab": "quiz",
+        "previousHash": "916ed09e7efc977d3210a767ecfe1d65d18bb2c65091fe0d264ce8edb2d49bbe",
+        "currentHash": "601be1fa0a027011b34b1fbed1125a040090502192f3af80d3cc2ef9da37c1d0"
+      }
+    ]
+  },
+  "sourceRecordHash": "16b12721d67481f9126ab9f83c20f12327402b40a83ad38d7f7e4397581042d8",
+  "originalPinPath": "content/limb-nerve-quiz-pins.json",
+  "originalPinHash": "e9c4a30ad7c241e3fb0a8cfe577d901e11a9602b9410f4bfa87be78ac8d9c77d",
+  "originalPinBlob": "644033f2ae2fb888f394f36aa1727ef57c921629",
+  "originalTransitionPaths": []
+}

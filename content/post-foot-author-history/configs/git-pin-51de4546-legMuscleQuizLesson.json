@@ -1,0 +1,358 @@
+{
+  "name": "git-pin-51de4546-legMuscleQuizLesson",
+  "helper": "legMuscleQuizLesson",
+  "pinsHash": "20b834ceb346ed9f88308c0d6844b5bfc93dfca9c7ea3ee478ab34c9b9355257",
+  "transitionHash": "3f84b64d90de5493ea04c83dfd0301cbc2a714c1bca5ba2c0da81fcbd5476734",
+  "pins": {
+    "baseline": "7d77c973aab2a7135635ab2e65a2831f3e7d22c4",
+    "authorCommit": "51de4546a0b33a1ce93bfec4c9c43f760bf82b4e",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-anterior",
+          "fmaId": "FMA22544",
+          "name": "Right tibialis anterior",
+          "sourceName": "right tibialis anterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-muscles",
+          "nodeName": "FMA22544",
+          "bounds": {
+            "min": [
+              -1.1677899360656738,
+              -8.38806438446045,
+              0.22824600338935852
+            ],
+            "max": [
+              -0.669670045375824,
+              -4.447309970855713,
+              0.9960000514984131
+            ]
+          },
+          "center": [
+            -0.9187299907207489,
+            -6.417687177658081,
+            0.6121230274438858
+          ],
+          "anchor": [
+            -0.9267310500144958,
+            -6.3950300216674805,
+            0.5068800449371338
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1439",
+              "sha256": "b03d2f54644969d153d3dfe4025ee629858e72c1e5ee3b0e7d5f16f54dc505b3"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right tibialis anterior · Leg muscle quick check · draft",
+            "body": "Which movements can tibialis anterior produce at the foot?",
+            "bullets": [
+              "Dorsiflexion and inversion",
+              "Plantar flexion and inversion",
+              "Dorsiflexion and eversion",
+              "Plantar flexion and eversion"
+            ],
+            "correctAnswer": "Dorsiflexion and inversion",
+            "explanation": "Tibialis anterior dorsiflexes and inverts the foot. This static surface does not demonstrate either action.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomical relationships do not validate detailed attachments, tissue boundaries or movement in these reference surfaces. No diagnosis, procedural safety or patient-space registration is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-anterior",
+          "fmaId": "FMA22545",
+          "name": "Left tibialis anterior",
+          "sourceName": "left tibialis anterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-muscles",
+          "nodeName": "FMA22545",
+          "bounds": {
+            "min": [
+              0.669670045375824,
+              -8.38806438446045,
+              0.22824600338935852
+            ],
+            "max": [
+              1.1677899360656738,
+              -4.447309970855713,
+              0.9960000514984131
+            ]
+          },
+          "center": [
+            0.9187299907207489,
+            -6.417687177658081,
+            0.6121230274438858
+          ],
+          "anchor": [
+            0.9267310500144958,
+            -6.3950300216674805,
+            0.5068800449371338
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1439M",
+              "sha256": "948b094bcc119ddbfcfeec4cd27cf21125f27d2d3c25c5344091fbc05833e971"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left tibialis anterior · Leg muscle quick check · draft",
+            "body": "Which movements can tibialis anterior produce at the foot?",
+            "bullets": [
+              "Dorsiflexion and inversion",
+              "Plantar flexion and inversion",
+              "Dorsiflexion and eversion",
+              "Plantar flexion and eversion"
+            ],
+            "correctAnswer": "Dorsiflexion and inversion",
+            "explanation": "Tibialis anterior dorsiflexes and inverts the foot. This static surface does not demonstrate either action.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomical relationships do not validate detailed attachments, tissue boundaries or movement in these reference surfaces. No diagnosis, procedural safety or patient-space registration is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-posterior",
+          "fmaId": "FMA65018",
+          "name": "Right tibialis posterior",
+          "sourceName": "right tibialis posterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "right",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-muscles",
+          "nodeName": "FMA65018",
+          "bounds": {
+            "min": [
+              -1.0492600202560425,
+              -8.425790786743164,
+              0.09418899565935135
+            ],
+            "max": [
+              -0.4268380105495453,
+              -4.642549991607666,
+              0.8286700248718262
+            ]
+          },
+          "center": [
+            -0.7380490154027939,
+            -6.534170389175415,
+            0.46142951026558876
+          ],
+          "anchor": [
+            -0.8278999924659729,
+            -6.5259199142456055,
+            0.27303802967071533
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1440",
+              "sha256": "6fc367885524fc416139372b55c64d8e1e4bc9010bee64020a72ad8e6f34a57d"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Right tibialis posterior · Leg muscle quick check · draft",
+            "body": "Which movements can tibialis posterior produce at the foot?",
+            "bullets": [
+              "Dorsiflexion and eversion",
+              "Plantar flexion and inversion",
+              "Dorsiflexion and inversion",
+              "Plantar flexion and eversion"
+            ],
+            "correctAnswer": "Plantar flexion and inversion",
+            "explanation": "Tibialis posterior plantar flexes and inverts the foot. This static surface does not demonstrate either action.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomical relationships do not validate detailed attachments, tissue boundaries or movement in these reference surfaces. No diagnosis, procedural safety or patient-space registration is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-posterior",
+          "fmaId": "FMA65019",
+          "name": "Left tibialis posterior",
+          "sourceName": "left tibialis posterior",
+          "system": "muscles",
+          "category": "muscle",
+          "laterality": "left",
+          "region": "leg",
+          "regions": [
+            "leg"
+          ],
+          "bundle": "leg-muscles",
+          "nodeName": "FMA65019",
+          "bounds": {
+            "min": [
+              0.4268369972705841,
+              -8.42579174041748,
+              0.09418899565935135
+            ],
+            "max": [
+              1.0492600202560425,
+              -4.642549991607666,
+              0.8286700248718262
+            ]
+          },
+          "center": [
+            0.7380485087633133,
+            -6.534170866012573,
+            0.46142951026558876
+          ],
+          "anchor": [
+            0.8278999924659729,
+            -6.5259199142456055,
+            0.27303704619407654
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1440M",
+              "sha256": "889b43062ffa5bc75a7acd866f8a9cc5a6296413c5d0fcefd2f5cb144c82ac9a"
+            }
+          ],
+          "coverageNote": null,
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": false
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "quiz": {
+            "readiness": "draft",
+            "title": "Left tibialis posterior · Leg muscle quick check · draft",
+            "body": "Which movements can tibialis posterior produce at the foot?",
+            "bullets": [
+              "Dorsiflexion and eversion",
+              "Plantar flexion and inversion",
+              "Dorsiflexion and inversion",
+              "Plantar flexion and eversion"
+            ],
+            "correctAnswer": "Plantar flexion and inversion",
+            "explanation": "Tibialis posterior plantar flexes and inverts the foot. This static surface does not demonstrate either action.",
+            "citations": [
+              "https://anatomy.ttuhscep.edu/anatomytables/muscles_lowerlimb.html"
+            ],
+            "note": "Original source-backed question; revision-bound radiologist review pending. Usual anatomical relationships do not validate detailed attachments, tissue boundaries or movement in these reference surfaces. No diagnosis, procedural safety or patient-space registration is established. Atlas, imaging-case and paid-lecture access remain independent."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "7d77c973aab2a7135635ab2e65a2831f3e7d22c4",
+    "authorCommit": "51de4546a0b33a1ce93bfec4c9c43f760bf82b4e",
+    "sourcePinsHash": "20b834ceb346ed9f88308c0d6844b5bfc93dfca9c7ea3ee478ab34c9b9355257",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-anterior",
+        "fmaId": "FMA22544",
+        "tab": "quiz",
+        "previousHash": "3fca2ed74904ea26ea258c842fbaac570922a2acc5b2955f2e9f976435856dcd",
+        "currentHash": "1586043e47a3c3b76fd424107c3bf88407dd4341699ca50542faf6fbe381e7ce"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-anterior",
+        "fmaId": "FMA22545",
+        "tab": "quiz",
+        "previousHash": "6278cafc024b45e04331e619984505d9e07f69dd46941b0d0155d52f2537e2a3",
+        "currentHash": "3adfbc9a59e0feaf026cf79b8509cd785d766d11f1410998e9be60253d6ffcb5"
+      },
+      {
+        "id": "vm:anatomy:body:leg:right:muscle:right-tibialis-posterior",
+        "fmaId": "FMA65018",
+        "tab": "quiz",
+        "previousHash": "aa1c3e94c85fd0741a0797b9e595ff672a966c85cb633b1b9b581a94f56166ed",
+        "currentHash": "65afad6d1f3e21c68f6e46292d44265d918515a98c3ae0943e37cda2ba33f2ab"
+      },
+      {
+        "id": "vm:anatomy:body:leg:left:muscle:left-tibialis-posterior",
+        "fmaId": "FMA65019",
+        "tab": "quiz",
+        "previousHash": "12acdb1f2d9217da5399d199d55b71ddbbb515d2b8327c4427446fad6b146580",
+        "currentHash": "f8ac554baa9c2dfa0b081a5ad84182a38525f5a495e075d658338811a1e6bf3d"
+      }
+    ]
+  },
+  "sourceRecordHash": "16b12721d67481f9126ab9f83c20f12327402b40a83ad38d7f7e4397581042d8",
+  "originalPinPath": "content/limb-nerve-quiz-pins.json",
+  "originalPinHash": "e9c4a30ad7c241e3fb0a8cfe577d901e11a9602b9410f4bfa87be78ac8d9c77d",
+  "originalPinBlob": "644033f2ae2fb888f394f36aa1727ef57c921629",
+  "originalTransitionPaths": []
+}

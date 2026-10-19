@@ -1,0 +1,209 @@
+{
+  "author": "b03ba458907946c1b1c152149ee5867f8d6a62df",
+  "parent": "4233534fadb842b4d3c074b6881b28e29a6fdd06",
+  "tree": "236fea259b7708c604962d60f6f975368c9f18bb",
+  "parentTree": "674873d14e7c8311d8992859e6ea2f9c29a2ef66",
+  "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipeBefore": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "recipeAfter": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "changed": 3,
+  "preserved": 9933,
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-artery",
+        "fmaId": "FMA14768",
+        "name": "Left gastric artery",
+        "sourceName": "left gastric artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-recovery",
+        "nodeName": "FMA14768",
+        "bounds": {
+          "min": [
+            0.049337901175022125,
+            2.809000253677368,
+            0.7280099987983704
+          ],
+          "max": [
+            0.26731598377227783,
+            3.2628002166748047,
+            1.194849967956543
+          ]
+        },
+        "center": [
+          0.15832694247364998,
+          3.0359002351760864,
+          0.9614299833774567
+        ],
+        "anchor": [
+          0.1788559854030609,
+          3.014200448989868,
+          0.849120020866394
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3499",
+            "sha256": "983a0580d4324a210eeb5671c4caf115c29ce13c0761e718102db8092a849ccf"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "717c43836d65a78238d476f0d77aed3e59e4067c75f0500e84cbb6c2296869cd"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+        "fmaId": "FMA15391",
+        "name": "Inferior mesenteric vein",
+        "sourceName": "inferior mesenteric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-mesenteric",
+        "nodeName": "FMA15391",
+        "bounds": {
+          "min": [
+            0.053906697779893875,
+            1.0042901039123535,
+            0.6119100451469421
+          ],
+          "max": [
+            0.2706019878387451,
+            2.695500373840332,
+            0.8108199834823608
+          ]
+        },
+        "center": [
+          0.1622543428093195,
+          1.8498952388763428,
+          0.7113650143146515
+        ],
+        "anchor": [
+          0.22738000750541687,
+          1.8234198093414307,
+          0.7174199819564819
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3443",
+            "sha256": "59393e5b8a5cd62e7f2be2f8e36a7b0a41b103dd23a5eeae501e61f495c4df95"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "4d2754f12f89966add7ee75da79cce76b2b518bcdb2f5f46c79c5bdc86c585b0"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery",
+        "fmaId": "FMA76574",
+        "name": "Trunk of gastroduodenal artery",
+        "sourceName": "trunk of gastroduodenal artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "abdomen-vessels-visceral-detail",
+        "nodeName": "FMA76574",
+        "bounds": {
+          "min": [
+            -0.11357899755239487,
+            2.6509997844696045,
+            0.858430027961731
+          ],
+          "max": [
+            -0.05860359966754913,
+            2.7818005084991455,
+            0.9130700826644897
+          ]
+        },
+        "center": [
+          -0.086091298609972,
+          2.716400146484375,
+          0.8857500553131104
+        ],
+        "anchor": [
+          -0.08795890212059021,
+          2.704200506210327,
+          0.8912100195884705
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3432",
+            "sha256": "520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "tab": "ultrasound",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "currentHash": "c61c47939384cf380ce36de6b1a48002a9c237c3739f6153759a74bc90bf1968"
+    }
+  ]
+}

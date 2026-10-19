@@ -1,0 +1,320 @@
+{
+  "name": "git-author-b3d936de",
+  "helper": "abdominalArterialXrayLesson",
+  "pinsHash": "fc9d74bb9f2452b4f284dd971d2ec1c3a8b88787e78c0ea90558446b1e859e77",
+  "transitionHash": "6cce9cd9e9ae9d6eba94d65b3d68ad2b9ce10512b4599a41054efba58dceb293",
+  "pins": {
+    "baseline": "ba8008b6d1ac8c49aa551c2bf9995e80cc52997f",
+    "authorCommit": "b3d936de6992b612c77abaddd7b761b5fb43b446",
+    "catalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+    "shoulderHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "entries": [
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+          "fmaId": "FMA3789",
+          "name": "Abdominal aorta",
+          "sourceName": "abdominal aorta",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen",
+            "pelvis",
+            "thorax"
+          ],
+          "bundle": "abdomen-vessels-recovery",
+          "nodeName": "FMA3789",
+          "bounds": {
+            "min": [
+              -0.009028740227222443,
+              1.4869097471237183,
+              0.32476097345352173
+            ],
+            "max": [
+              0.200547993183136,
+              3.359100341796875,
+              0.8277599811553955
+            ]
+          },
+          "center": [
+            0.09575962647795677,
+            2.4230050444602966,
+            0.5762604773044586
+          ],
+          "anchor": [
+            0.0937374010682106,
+            2.370999813079834,
+            0.619629979133606
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1932",
+              "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+          "fmaId": "FMA50737",
+          "name": "Celiac artery",
+          "sourceName": "celiac artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "celiac-display-corrected",
+          "nodeName": "FMA50737",
+          "bounds": {
+            "min": [
+              0.011040699668228626,
+              2.7765002250671387,
+              0.5759400129318237
+            ],
+            "max": [
+              0.12240300327539444,
+              2.898399591445923,
+              0.8078700304031372
+            ]
+          },
+          "center": [
+            0.06672185147181153,
+            2.8374499082565308,
+            0.6919050216674805
+          ],
+          "anchor": [
+            0.0719733014702797,
+            2.86579966545105,
+            0.7196300029754639
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1846",
+              "sha256": "7aae236dac488ac875ae9f62b59d84ce6f0d85cb80098ef12346cac59f5a609f"
+            },
+            {
+              "file": "FJ2013",
+              "sha256": "5ab733ce7f017e7d9c033936f2008b682eb73dacd742e8ea53cb77a8a28d4492"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+          "fmaId": "FMA14749",
+          "name": "Superior mesenteric artery",
+          "sourceName": "superior mesenteric artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "midline",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-recovery",
+          "nodeName": "FMA14749",
+          "bounds": {
+            "min": [
+              -0.6094620227813721,
+              1.094559907913208,
+              0.6211900115013123
+            ],
+            "max": [
+              0.08399049937725067,
+              2.546600341796875,
+              1.0136399269104004
+            ]
+          },
+          "center": [
+            -0.2627357617020607,
+            1.8205801248550415,
+            0.8174149692058563
+          ],
+          "anchor": [
+            -0.09160909801721573,
+            1.8007702827453613,
+            0.9157600402832031
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ1928",
+              "sha256": "14ce4846d476c185a279247162ee118ac9c056593023f66d24f4a4d470e56a7c"
+            },
+            {
+              "file": "FJ2011",
+              "sha256": "db6caec612b1564155c869d452904b1e9e834f2f556a9a0b3e2564ce9757e65a"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      },
+      {
+        "identity": {
+          "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+          "fmaId": "FMA14750",
+          "name": "Inferior mesenteric artery",
+          "sourceName": "inferior mesenteric artery",
+          "system": "vessels",
+          "category": "vessel",
+          "laterality": "unspecified",
+          "region": "abdomen",
+          "regions": [
+            "abdomen"
+          ],
+          "bundle": "abdomen-vessels-recovery",
+          "nodeName": "FMA14750",
+          "bounds": {
+            "min": [
+              0.0419296994805336,
+              0.9904998540878296,
+              0.6327300071716309
+            ],
+            "max": [
+              0.18455900251865387,
+              1.8623199462890625,
+              0.8671899437904358
+            ]
+          },
+          "center": [
+            0.11324435099959373,
+            1.426409900188446,
+            0.7499599754810333
+          ],
+          "anchor": [
+            0.14257699251174927,
+            1.4129101037979126,
+            0.7858900427818298
+          ],
+          "sourceTree": "isa",
+          "sources": [
+            {
+              "file": "FJ3442",
+              "sha256": "865cc814e7412113703bfe503424a92e745e6cbf6e788465f06c6be8f1079c6c"
+            }
+          ],
+          "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+          "provenance": {
+            "method": "licensed-source-mesh",
+            "license": "CC-BY-4.0",
+            "sourceVersion": "4.0",
+            "recovered": true
+          },
+          "validation": {
+            "status": "unvalidated",
+            "anatomicalReview": false
+          }
+        },
+        "previous": {
+          "xray": {
+            "readiness": "pending",
+            "title": "X-ray teaching pending",
+            "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+            "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+          }
+        }
+      }
+    ]
+  },
+  "transition": {
+    "baseline": "ba8008b6d1ac8c49aa551c2bf9995e80cc52997f",
+    "authorCommit": "b3d936de6992b612c77abaddd7b761b5fb43b446",
+    "sourcePinsHash": "fc9d74bb9f2452b4f284dd971d2ec1c3a8b88787e78c0ea90558446b1e859e77",
+    "entries": [
+      {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+        "fmaId": "FMA3789",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "323239efd3779143ce6662165a6ca343b8e92422eb8458751cda101ec7c365ba"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:celiac-artery",
+        "fmaId": "FMA50737",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "a9be37622cd1c9097d74ba3501ecc606a698be7925f427f915f1c3573bbd5125"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+        "fmaId": "FMA14749",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "76974c7c14e8f661ecb1a836a5952ee33bffba8d8732930893de4cd43243552f"
+      },
+      {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+        "fmaId": "FMA14750",
+        "tab": "xray",
+        "previousHash": "e3738ebe7c6c413488544b1d57d439f07dfb78c04a607d0767d715fc0fa5a7ea",
+        "currentHash": "c5b0bc3124c685a3965dde2a6d2c39010fa8ecc98c6f51c220498489b60cd368"
+      }
+    ]
+  },
+  "sourceRecordHash": "43974658e34c5235f422935a2bc13eb5135075c7462163280e5fca3388140f52"
+}
