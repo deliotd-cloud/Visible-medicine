@@ -67,7 +67,7 @@ test('current delivery binds five exact Atlas sources, four runtimes, protected 
   const inputs = json('atlas-review/integration-inputs.json');
   assert.equal(manifest.revision, current);
   assert.equal(manifest.websiteIntegrationSha256, reviewDigest);
-  assert.equal(inputs.inputs.length, 1679);
+  assert.equal(inputs.inputs.length, 1680);
   assert.equal(sha(JSON.stringify(inputs.inputs)), reviewDigest);
   for (const path of sourcePaths.slice(0, 4))
     assert.equal(sha(gitSource(atlas, current, path)), sha(gitSource(atlas, introduced, path)),

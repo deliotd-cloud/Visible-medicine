@@ -11,6 +11,7 @@ import * as imageLinks from '../lib/head-image-only-links.ts';
 import {headLearningSequencesForModality,headLearningLinks} from '../lib/head-atlas-learning.ts';
 import * as viewport from '../lib/head-slice-viewport.ts';
 import {headIndexKey} from '../lib/head-index-keyboard.ts';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 import {headMaskHits} from '../lib/head-mask-picking.ts';
 import {createHeadFolderSession} from '../lib/head-folder-session.ts';
 
@@ -727,6 +728,7 @@ const practice={get active(){return practiceActive;},finished:false,results:[] a
     name==='../lib/head-window-drag'?require('../lib/head-window-drag.ts'):
     name==='../lib/head-load-progress'?require('../lib/head-load-progress.ts'):
     name==='../lib/head-image-only-links'?imageLinks:
+    name==='../lib/head-disclosure-keyboard'?{headDisclosureKeyDown}:
     name.endsWith('.css')?{}:require(name);
   const mod={exports:{} as {HeadAtlasViewer:(props:{modality:'CT'|'MRI'})=>Node}};
   new Function('require','module','exports',compiled)(load,mod,mod.exports);

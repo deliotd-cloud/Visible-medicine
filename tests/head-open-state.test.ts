@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import test from 'node:test';
 import ts from 'typescript';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 
 const source=readFileSync(new URL('../components/HeadAtlasViewer.tsx',import.meta.url),'utf8');
 const ast=ts.createSourceFile('HeadAtlasViewer.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
@@ -21,7 +22,7 @@ function actualFunction(name:string){
     compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX},
   });
   const runtimeRequire=(id:string)=>id==='react/jsx-runtime'?require(id):(()=>{throw Error(`unexpected dependency ${id}`);})();
-  return new Function('require','exports',compiled.outputText)(runtimeRequire,{});
+  return new Function('require','exports','headDisclosureKeyDown',compiled.outputText)(runtimeRequire,{},headDisclosureKeyDown);
 }
 
 const headSourceAfterCancel=actualFunction('headSourceAfterCancel') as (state:string,hostname:string)=>string;

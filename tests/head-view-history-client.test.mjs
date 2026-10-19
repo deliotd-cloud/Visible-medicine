@@ -9,6 +9,7 @@ import * as navigation from '../lib/head-atlas-navigation.ts';
 import * as imageLinks from '../lib/head-image-only-links.ts';
 import * as viewport from '../lib/head-slice-viewport.ts';
 import {headIndexKey} from '../lib/head-index-keyboard.ts';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 import {headMaskHits} from '../lib/head-mask-picking.ts';
 import {createHeadFolderSession} from '../lib/head-folder-session.ts';
 import {headViewHistory,HEAD_VIEW_ENTRY_KEY} from '../lib/head-view-history.ts';
@@ -103,6 +104,7 @@ function mount(browserState,{modality='CT',session,pkg,deferEntry=false}){
     name==='./HeadAtlasPractice'?{HeadAtlasPractice:function HeadAtlasPractice(){},useHeadAtlasPractice:()=>practice}:
     name==='./HeadFolderSharing'?{HeadFolderSharing:function HeadFolderSharing(){}}:
     name.startsWith('./Head')?{[name.slice(2)]:function Stub(){},default:function Stub(){}}:
+    name==='../lib/head-disclosure-keyboard'?{headDisclosureKeyDown}:
     name.endsWith('.css')?{}:require(name);
   const mod={exports:{}};new Function('require','module','exports',compiled)(load,mod,mod.exports);
   function flush(){let passes=0;do{assert(++passes<35,'viewer effects settle');dirty=false;cursor=0;pending=[];pendingLayout=[];tree=mod.exports.HeadAtlasViewer({modality});for(const effect of pendingLayout)effect();for(const effect of pending)effect();}while(dirty);return tree;}

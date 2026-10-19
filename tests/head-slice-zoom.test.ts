@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import ts from 'typescript';
 import {createNativeVolumeGeometry} from '../lib/head-atlas-geometry.mjs';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 import {headSliceViewport,zoomHeadSliceViewport,fitHeadMaskViewport,nearestHeadMaskSlice} from '../lib/head-slice-viewport.ts';
 
 const require=createRequire(import.meta.url);
@@ -39,6 +40,7 @@ test('NativeSlice reuses native raster on zoom/pan and rebuilds for slice, windo
     const loaded={exports:{} as Record<string,any>};
     new Function('require','module','exports',compiled+'\nmodule.exports.NativeSlice=NativeSlice;')((name:string)=>{
       if(name==='react')return hooks;
+      if(name==='../lib/head-disclosure-keyboard')return {headDisclosureKeyDown};
       if(name==='react/jsx-runtime')return require(name);
       if(name==='../lib/head-slice-viewport')return {headSliceViewport,zoomHeadSliceViewport,fitHeadMaskViewport,nearestHeadMaskSlice};
       if(name==='../lib/head-atlas-display')return {headLabel:()=>'',annotationInk:()=>''};

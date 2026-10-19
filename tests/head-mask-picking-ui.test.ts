@@ -7,6 +7,7 @@ import {createNativeVolumeGeometry,type Vec3} from '../lib/head-atlas-geometry.m
 import {canvasVoxel} from '../lib/head-atlas-practice.ts';
 import {headMaskHits} from '../lib/head-mask-picking.ts';
 import {headSliceKey,headSliceNumber} from '../lib/head-atlas-slice-controls.ts';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 import * as viewport from '../lib/head-slice-viewport.ts';
 import type {HeadEntry,LoadedEntry,LoadedStudy} from '../lib/head-atlas-import.ts';
 
@@ -42,6 +43,7 @@ function fixture(plane:Plane='axial'){
     if(name==='../lib/head-mask-picking')return {headMaskHits};
     if(name==='../lib/head-atlas-display')return {headLabel:(item:HeadEntry)=>item.label,annotationInk:()=>''};
     if(name==='../lib/head-atlas-slice-controls')return {headSliceKey,headSliceNumber};
+    if(name==='../lib/head-disclosure-keyboard')return {headDisclosureKeyDown};
     if(name==='../lib/head-slice-viewport')return viewport;
     if(name==='react/jsx-runtime')return require(name);
     return {};

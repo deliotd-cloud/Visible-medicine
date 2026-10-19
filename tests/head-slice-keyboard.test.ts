@@ -7,6 +7,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import ts from 'typescript';
 import {createNativeVolumeGeometry} from '../lib/head-atlas-geometry.mjs';
 import {headSliceKey,headSliceNumber} from '../lib/head-atlas-slice-controls.ts';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 import {headSliceViewport,zoomHeadSliceViewport} from '../lib/head-slice-viewport.ts';
 import {canvasVoxel} from '../lib/head-atlas-practice.ts';
 
@@ -45,6 +46,7 @@ function fixture(plane:Plane,options:{quiz?:boolean;oblique?:boolean;cursor?:Vec
   new Function('require','module','exports',compiled+'\nmodule.exports.NativeSlice=NativeSlice;')((name:string)=>{
     if(name==='react')return hooks;
     if(name==='../lib/head-atlas-slice-controls')return {headSliceKey,headSliceNumber};
+    if(name==='../lib/head-disclosure-keyboard')return {headDisclosureKeyDown};
     if(name==='../lib/head-atlas-display')return {headLabel:(entry:{label:string})=>entry.label,annotationInk:()=>''};
     if(name==='../lib/head-atlas-practice')return {canvasVoxel};
     if(name==='../lib/head-slice-viewport')return {headSliceViewport,zoomHeadSliceViewport};
