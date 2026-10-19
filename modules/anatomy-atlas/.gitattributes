@@ -67,3 +67,7 @@ content/craniofacial-calcification-ct-pins.json -text
 content/craniofacial-calcification-ct.transition.json -text
 # Preserve the exact source-bound bilateral forearm teaching identities.
 content/median-antebrachial-xray-pins.json -text
+# Exact MRI enhancement bytes and immutable original theorem survive checkout.
+content/orbital-support-mri.ts -text
+lib/orbital-support-mri.ts -text
+scripts/fixtures/validate-orbital-support-mri-original.mjs -text
