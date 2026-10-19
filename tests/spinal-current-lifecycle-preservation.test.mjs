@@ -3,7 +3,7 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 const originalUrl=new URL('./fixtures/atlas-spinal-muscle-xray-before-lifecycle.mjs.raw',import.meta.url);
-const currentUrl=new URL('./atlas-spinal-muscle-xray.test.mjs',import.meta.url);
+const currentUrl=new URL('./fixtures/atlas-spinal-muscle-xray-after-first-lifecycle.mjs.raw',import.meta.url);
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const oldSha='8280e9d6e879906ee8e206caa02acdd0718d3fb06e36c1ba77aae1a179b4f7e5';
 const currentSha='3df0513e9d5889434f195915e26d66680e966ee31d5209e6d43d6dbb0596bedf';

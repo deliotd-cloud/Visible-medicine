@@ -1,4 +1,5 @@
 import {boundLiveAtlasHistory} from './atlas-bound-live-history.mjs';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
 import assert from 'node:assert/strict';
 import {execFileSync} from 'node:child_process';
@@ -8,13 +9,13 @@ import {pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {build} from 'esbuild';
 
-const atlas='F:/VisibleMedicine/atlas';
+const atlas=currentAtlasDeliveryRoot();
 const baseline='ec9972a60325de147277941e04089e2d4be0baf9';
 const baselineTree='ec7d1b759a613e84d79a94bcc18370b1bb885e88';
 // Once introduced, these two remain immutable; only liveCommit may advance.
 const completedEpoch='787993e4497fe1de282569e3f4f611baff061206';
 const introductionTree='3a2e16cf348db759cd7a94f6931bdb5c7f3e2366';
-const liveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const liveCommit=CURRENT_ATLAS_REVISION;
 const pins=['content/shoulder-arm-artery-quiz-pins.json','content/shoulder-arterial-imaging-pins.json',
  'content/thoracoacromial-quiz-pins.json'];
 const catalogPaths=['public/models/bodyparts3d/full-body/catalog.json',

@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T17:21:42.648Z",
-  "sourceManifestSha256": "163227aca200f6410598cff8e82a9fe195031c2c6ef4b106d7c28c71df6eaa3a",
-  "parent": "5caa9fb347ddc4cba7eb585357403d9107555c29",
+  "at": "2026-10-19T17:43:37.966Z",
+  "sourceManifestSha256": "2e0ec17d94ccb66d4600a1e7d85343eaaf5496b602f1d9b31934368fb0b06b32",
+  "parent": "b9af9488ef22120b4b29a848bd0faf70988570e7",
   "atlasSource": "f5097af8493701d64a8e2a2b5797df380f3b348a",
   "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
   "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
@@ -15070,8 +15070,8 @@
     },
     {
       "path": "tests/atlas-cerebral-lobar-imaging.test.ts",
-      "bytes": 9514,
-      "sha256": "24ad739f37c3201333f886f87e068fa1b208003887bcfd53493e4fa25c3b4ad4"
+      "bytes": 11062,
+      "sha256": "f092a5544724a890a2d43c8f7056d06be1ae2da7d30b5cbcef54002383f3768a"
     },
     {
       "path": "tests/atlas-cervical-hallux-xray.test.ts",
@@ -16210,13 +16210,13 @@
     },
     {
       "path": "tests/atlas-spinal-muscle-xray-current-admission-contract.test.mjs",
-      "bytes": 6503,
-      "sha256": "495675b3d73fa5bd34f501f8c1f9781c1ec838c667a5c86bf6bc14fce37c254d"
+      "bytes": 6528,
+      "sha256": "cca7a0b77205d0b119e4b57872bd777f6007616e836cbea3832083164c3384ab"
     },
     {
       "path": "tests/atlas-spinal-muscle-xray.test.mjs",
-      "bytes": 45984,
-      "sha256": "3df0513e9d5889434f195915e26d66680e966ee31d5209e6d43d6dbb0596bedf"
+      "bytes": 53311,
+      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865"
     },
     {
       "path": "tests/atlas-spinal-notice-epoch.test.ts",
@@ -16469,6 +16469,11 @@
       "sha256": "20bb3ff261547e22dd8150a2e178d7a856c9e94bba006691258973fade0df51d"
     },
     {
+      "path": "tests/axillary-admission-preservation.test.mjs",
+      "bytes": 2685,
+      "sha256": "1b69f856c6f2bffaa77e61f4f1cf070978292a4591493f444512634b056d8540"
+    },
+    {
       "path": "tests/body-channel-source-epoch.ts",
       "bytes": 3098,
       "sha256": "390e25c710f53103b6423b6066daf97a623e5bea016b1a5cf5f15fd965ded494"
@@ -16570,8 +16575,8 @@
     },
     {
       "path": "tests/clinical-review-axillary-branch-xray.test.ts",
-      "bytes": 24204,
-      "sha256": "debdf9699e0de8611b6e062cb76ccac0ace2588dbd43d18d94a964827425425e"
+      "bytes": 24278,
+      "sha256": "a77b565ba1ad076bfc9d4bc0b8decdb334d48f5f60a9fe716b65b0eed7e6da85"
     },
     {
       "path": "tests/clinical-review-biliary-xray.test.ts",
@@ -18014,6 +18019,11 @@
       "sha256": "2e6587c4bb20edd5cd0251e362d3c9fe678f5b06fa20cf1d0a440abc9ffa401f"
     },
     {
+      "path": "tests/fixtures/atlas-cerebral-lobar-imaging.test.ts.raw",
+      "bytes": 9514,
+      "sha256": "24ad739f37c3201333f886f87e068fa1b208003887bcfd53493e4fa25c3b4ad4"
+    },
+    {
       "path": "tests/fixtures/atlas-cervical-projection-xray-4e9f5385.txt",
       "bytes": 15327,
       "sha256": "84030d8a139e66bb0f31a99928df5fb7ee91c66b85a64c468aca0520a34413ec"
@@ -18127,6 +18137,11 @@
       "path": "tests/fixtures/atlas-spinal-muscle-xray-8d32653e.txt",
       "bytes": 14564,
       "sha256": "1a73706634292dc168aa61a5b15a78032c58f8cbc284ca258c728aa2d025cff0"
+    },
+    {
+      "path": "tests/fixtures/atlas-spinal-muscle-xray-after-first-lifecycle.mjs.raw",
+      "bytes": 45984,
+      "sha256": "3df0513e9d5889434f195915e26d66680e966ee31d5209e6d43d6dbb0596bedf"
     },
     {
       "path": "tests/fixtures/atlas-spinal-muscle-xray-before-lifecycle.mjs.raw",
@@ -18477,6 +18492,11 @@
       "path": "tests/fixtures/clinical-review-abdominal-vessel-reasoning.test.ts.raw",
       "bytes": 10237,
       "sha256": "dd8c31447a358ee34bdaf3f74f4d16ce541cc26a548732bdc09a72921cd6e74a"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-axillary-branch-xray.original.ts.raw",
+      "bytes": 24204,
+      "sha256": "debdf9699e0de8611b6e062cb76ccac0ace2588dbd43d18d94a964827425425e"
     },
     {
       "path": "tests/fixtures/clinical-review-biliary-xray.test.ts.raw",
@@ -19452,6 +19472,66 @@
       "path": "tests/fixtures/closed57-viewer/public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
       "bytes": 387283,
       "sha256": "a4a0b308758f864c533e2795b7dd81b35a99c86fb95bfdbd8194fc8d647235b9"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/atlas-review/integration-inputs.json",
+      "bytes": 262008,
+      "sha256": "3b595d003d31d811816ec3a3a7d0cb3b2ae5751545e754d7212114e2b6457909"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/atlas-review/manifest.json",
+      "bytes": 373045,
+      "sha256": "018e9ca23633d797f3b6b00c845e6ccd264901f3d821eafbc6b19195d3789322"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "687e8979ef10df49824f14041dec8b55d55fb8ebde75afb6305389a3f7f257a2"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-review-viewer/manifest.json",
+      "bytes": 9033,
+      "sha256": "dd6de661d3b79f8b4c38c3582c905eb6c729ddf8d81312ba19f40a9390ca8154"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/female-pelvis/manifest.json",
+      "bytes": 6208,
+      "sha256": "5335ed9045727944564602a8c73d80083b328b3a1f5222ea090dd852cdbec2f6"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/female-pelvis/source-inputs.json",
+      "bytes": 16681,
+      "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/head-neck/manifest.json",
+      "bytes": 627564,
+      "sha256": "9d4f3bc9c6ec0441e2279d7df598b59ff488953535117b5db7060fa70c2c8a7d"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/head-neck/source-inputs.json",
+      "bytes": 205411,
+      "sha256": "e59ee37bfc473a05832a14a7cc9a607c2a8ed7693110c40bdc8c7ba3f26b6656"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/lower-limb/manifest.json",
+      "bytes": 3436,
+      "sha256": "415ad677a356e0905bfb042b2d8aaa20ec04651b7c878b1beefdc766fd2b57ee"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/lower-limb/source-inputs.json",
+      "bytes": 15191,
+      "sha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/shoulder/manifest.json",
+      "bytes": 4795,
+      "sha256": "95abee643009b6bff20645ec7210cce55b79e8d197889a01dd5c84e30e5351ea"
+    },
+    {
+      "path": "tests/fixtures/closed59-documents/public/atlas-runtime/shoulder/source-inputs.json",
+      "bytes": 152341,
+      "sha256": "7db889eca18f16d268429b99993d9c17c97e62220c360ae5aee542e153621dd9"
     },
     {
       "path": "tests/fixtures/completion-checklist-19.json",
@@ -23925,8 +24005,13 @@
     },
     {
       "path": "tests/spinal-current-lifecycle-preservation.test.mjs",
-      "bytes": 3622,
-      "sha256": "acd2388de8054d2c0a16b7ae91838eeb19d08f886adc6a1dd189fd24db842f70"
+      "bytes": 3652,
+      "sha256": "614febb65db90f3400324a71119759007a7a5a369d0bc339c888f9a541514982"
+    },
+    {
+      "path": "tests/spinal-later-six-preservation.test.mjs",
+      "bytes": 4346,
+      "sha256": "bb201058554ff44fd61d6ff3e946767ed25a234b3344653b6e87e0bfc28128d8"
     },
     {
       "path": "tests/splash-intro.test.ts",
@@ -24372,9 +24457,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2367671,
-      "sha256": "fb1d383d669d688d8abe30c47bad6e207e5f7cbd83e748acb7714551d3e3e8e0"
+      "bytes": 2371427,
+      "sha256": "45f4d7ba05a7a02f2e0f6975ef974e1f399669a42b428249e37b71a598f3eccc"
     }
   ],
-  "scope": "Filtered source-only recovery: append-only scoped desktop Search spacing makes the representative Pons result action visible at1280x720. Two test-only fixtures exercise the accepted continuous/rate-aware camera across five rates and all inactive/reduced-motion combinations, and actual whole-body frame/state composition while retaining head-only source-bound comparison and original negative checks.52 canonical focused cases, semantic types and unchanged Review/access prebuild plus normal Vinext build pass. Isolated guest Search keyboard/history/layout QA is not whole-website/GPU/real-role/clinical or spatial-registration approval. Earlier regression reds remain recorded. No new media, scan, mask, mesh, font, dependency, fee, identifier, private record, raw canonical ancestry or three held operational-document contents. Source-only, not private-database/whole-project backup or deployment. All71 requirements/eight optional ideas/register67/clinical nulls and independent access preserved. Staged corpus teaching/history repair is NOT installed or included."
+  "scope": "Filtered source-only historical regression recovery.22 test/frozen-source-metadata deltas retain original whole proofs, historical counts, genuine Git author/parent transitions, exact current Review/learner bindings and negative cases.16 actual canonical body/preservation cases and semantic types pass; earlier production build belongs to unchanged application source, not a new all-suite build. Frozen historical source/metadata fixtures contain no scans or private clinical decisions. No new media/model/font/dependency/fee, patient identifier/private database, raw canonical ancestry or three held operational-document contents. Old native diagnostics including false axillary wrapper retained. Full post-foot replay/corpus X-ray teaching remain staged and are not included. All71 requirements/eight optional ideas/register67/clinical nulls and independent access remain. Not whole-project/private-data backup, clinical/spatial approval or public deployment."
 }

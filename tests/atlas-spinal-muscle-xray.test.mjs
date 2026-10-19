@@ -33,6 +33,10 @@ const abdominalEusParent=lacrimalEpoch;
 const abdominalEusEpoch='6ba0dd43c0512ce8d5b0dae7150ae605f176c2fb';
 const superficialPlantarParent=abdominalEusEpoch;
 const superficialPlantarEpoch='46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd';
+const checkMriParent='509b01da5d72f33bd774e4a59d63e2406af1f2ff';
+const checkMriEpoch='f5052a1906bf9b87e5235bda57d367b1103729db';
+const archXrayParent=checkMriEpoch;
+const archXrayEpoch='f5097af8493701d64a8e2a2b5797df380f3b348a';
 assert.match(source.source, /^[a-f0-9]{40}$/);
 assert.match(source.sourceTree, /^[a-f0-9]{40}$/);
 assert.equal(source.baseline, '4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad');
@@ -70,7 +74,8 @@ const currentTree = tree(source.source);
 const priorTree = tree(source.baseline);
 for (const epoch of [ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
   ctParent,ctEpoch,medianParent,medianEpoch,deepPlantarParent,deepPlantarEpoch,
-  lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch]) {
+  lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch,checkMriParent,
+  checkMriEpoch,archXrayEpoch]) {
   assert.equal(git('rev-parse', `${epoch}^{commit}`).toString().trim(),epoch);
 }
 assert.equal(git('rev-parse',`${ctEpoch}^`).toString().trim(),ctParent);
@@ -93,6 +98,15 @@ for(const [epoch,expected] of [
 for(const epoch of [ctEpoch,medianEpoch,deepPlantarEpoch,lacrimalEpoch,
   abdominalEusEpoch,superficialPlantarEpoch])
   assert.equal(git('merge-base',epoch,source.source).toString().trim(),epoch);
+for(const [parent,epoch,expectedTree] of [
+  [checkMriParent,checkMriEpoch,'36381d525f7c6886743bcec00fcee96931d65c58'],
+  [archXrayParent,archXrayEpoch,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b']]){
+  assert.equal(git('rev-parse',`${epoch}^`).toString().trim(),parent,
+    `${epoch} genuine immediate predecessor`);
+  assert.equal(git('rev-parse',`${epoch}^{tree}`).toString().trim(),expectedTree,
+    `${epoch} exact committed tree`);
+  assert.equal(git('merge-base',epoch,source.source).toString().trim(),epoch);
+}
 for (const [before,after] of [[priorSource,ultrasoundEpoch],[ultrasoundEpoch,footEpoch],
   [footEpoch,evidenceEpoch],[evidenceEpoch,pharyngealEpoch],[pharyngealEpoch,source.source]])
   assert.equal(git('merge-base',before,after).toString().trim(),before,`${before} precedes ${after}`);
@@ -104,7 +118,8 @@ const objectCache = new Map();
 const treeByCommit = new Map([[source.source, currentTree], [source.baseline, priorTree],
   ...[ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
     ctParent,ctEpoch,medianParent,medianEpoch,deepPlantarParent,deepPlantarEpoch,
-    lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch].map(epoch=>[epoch,tree(epoch)])]);
+    lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch,
+    checkMriParent,checkMriEpoch,archXrayEpoch].map(epoch=>[epoch,tree(epoch)])]);
 function batch(commit, paths) {
   const ids = [...new Set(paths.map(path => {
     const id = treeByCommit.get(commit).get(path);
@@ -157,6 +172,8 @@ const apiEntry = [
   "export {lacrimalDrainageUltrasoundLesson} from './lib/lacrimal-drainage-ultrasound';",
   "export {abdominalRadialEusLesson} from './lib/abdominal-radial-eus';",
   "export {superficialMedialPlantarUltrasoundLesson} from './lib/superficial-medial-plantar-ultrasound';",
+  "export {orbitalSupportMriLesson} from './lib/orbital-support-mri';",
+  "export {footVenousArchXrayLesson} from './lib/foot-venous-arch-xray';",
   "export {bodyReviewMaterial} from './lib/body-review-material';",
   "export {bodyReviewContext} from './lib/body-review-context';",
   "export {parseBodyReviewResponse} from './lib/body-review-response';",
@@ -258,6 +275,10 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   const medianAtCommit=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)
     .then(module=>module.exactSourceHistoryApi(medianEpoch,'review-security'));
   const sourceHistory=await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href);
+  const checkMriBefore=await sourceHistory.exactSourceHistoryApi(checkMriParent,'review-security');
+  const checkMriAtCommit=await sourceHistory.exactSourceHistoryApi(checkMriEpoch,'review-security');
+  const archXrayBefore=await sourceHistory.exactSourceHistoryApi(archXrayParent,'review-security');
+  const archXrayAtCommit=await sourceHistory.exactSourceHistoryApi(archXrayEpoch,'review-security');
   const additionalUsEpochs=[
     {name:'deep-plantar-ultrasound',parent:deepPlantarParent,epoch:deepPlantarEpoch,
       count:2,resolver:api.deepPlantarUltrasoundLesson},
@@ -380,6 +401,31 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   same(blob(medianEpoch,medianPins.sourcePath),blob(medianParent,medianPins.sourcePath),
     'median source catalog retained at introduction');
   assert.equal(sha(blob(medianEpoch,medianPins.sourcePath)),medianPins.sourceSha256);
+  const checkMriPins=exactPins('content/orbital-support-mri-pins.json',checkMriEpoch);
+  const checkMriRows=checkMriPins.entries.filter(row=>
+    row.family==='lateralCheck'||row.family==='medialCheck');
+  assert.equal(checkMriRows.length,4,'two check-ligament MRI families, both sides');
+  const checkMriSelected=new Map(checkMriRows.map(row=>[row.identity.id,row]));
+  assert.equal(checkMriSelected.size,4,'four distinct check-ligament source identities');
+  featureBytes(checkMriEpoch,['content/orbital-support-mri.ts','lib/orbital-support-mri.ts']);
+  const archXrayPins=exactPins('content/foot-venous-arch-xray-pins.json',archXrayEpoch);
+  assert.equal(archXrayPins.parentCommit,archXrayParent);
+  assert.equal(archXrayPins.entries.length,2);
+  const archXraySelected=new Map(archXrayPins.entries.map(row=>[row.identity.id,row]));
+  assert.equal(archXraySelected.size,2,'two distinct dorsal-arch source identities');
+  featureBytes(archXrayEpoch,['content/foot-venous-arch-xray.ts','lib/foot-venous-arch-xray.ts']);
+  const archTransitionPath='content/foot-venous-arch-xray-transition.json';
+  batch(archXrayEpoch,[archTransitionPath]);
+  const archTransition=JSON.parse(blob(archXrayEpoch,archTransitionPath));
+  assert.equal(archTransition.parentCommit,archXrayParent);
+  assert.equal(archTransition.pinsHash,sha(JSON.stringify(archXrayPins)));
+  assert.equal(archTransition.changed,2);
+  assert.equal(archTransition.unchanged,9934);
+  assert.equal(archTransition.clinicalApproval,false);
+  assert.equal(archTransition.imagesImported,false);
+  same(archTransition.entries.map(row=>`${row.id}/${row.tab}`).sort(),
+    archXrayPins.entries.map(row=>`${row.identity.id}/xray`).sort(),
+    'exact dorsal-arch transition cells');
   assert.equal(new Set([...selected.keys(),...handSelected.keys(),...usSelected.keys(),
     ...footSelected.keys(),...evidenceSelected.keys(),...mriSelected.keys(),
     ...ctSelected.keys(),...medianSelected.keys(),...additionalUsSelected.keys()]).size,132,
@@ -396,11 +442,21 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   assert.equal(new Set(introducedCells).size,18,'eighteen distinct introduction cells');
   assert.equal(new Set([...protectedCells,...introducedCells]).size,
     new Set(protectedCells).size+18,'introduced modality cells do not overlap protected cells');
+  const laterSixCells=[...checkMriSelected.keys()].map(id=>`${id}/mri`)
+    .concat([...archXraySelected.keys()].map(id=>`${id}/xray`));
+  assert.equal(new Set([...selected.keys(),...handSelected.keys(),...usSelected.keys(),
+    ...footSelected.keys(),...evidenceSelected.keys(),...mriSelected.keys(),
+    ...ctSelected.keys(),...medianSelected.keys(),...additionalUsSelected.keys(),
+    ...checkMriSelected.keys(),...archXraySelected.keys()]).size,138,
+    'six later cells add six complete identities to the original 132 unique identities');
+  assert.equal(new Set(laterSixCells).size,6,'four MRI updates and two X-ray introductions');
+  assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells]).size,
+    118+18+6,'the later six cells are disjoint from all earlier protected cells');
   const spine = api.decodeRegionalTeachingSnapshot(json('atlas-review/content/regional-teaching/spine.json'), 'spine');
   let changed = 0, preserved = 0, changedWorksheets = 0, handChanges=0, handWorksheets=0;
   let usChanges=0,usWorksheets=0,currentPreserved=0,currentVsOldPreserved=0;
   let footChanges=0,evidenceChanges=0,mriChanges=0;
-  let ctChanges=0,medianChanges=0,additionalUsChanges=0;
+  let ctChanges=0,medianChanges=0,additionalUsChanges=0,checkMriChanges=0,archXrayChanges=0;
   const additionalUsCounts=new Map(additionalUsEpochs.map(group=>[group.name,0]));
   for (const structure of catalog.structures) {
     const oldWorksheet = await old.bodyReviewMaterial(structure.id);
@@ -423,6 +479,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
       const ctRow=ctSelected.get(structure.id);
       const medianRow=medianSelected.get(structure.id);
       const additionalUs=additionalUsSelected.get(structure.id);
+      const checkMriRow=checkMriSelected.get(structure.id);
+      const archXrayRow=archXraySelected.get(structure.id);
       if (!((selected.has(structure.id)||handSelected.has(structure.id))&&tab==='xray')&&
         !(usSelected.has(structure.id)&&tab==='ultrasound')) {
         same(historicalLesson,before,`${structure.id}/${tab} original 589 lesson preserved`);
@@ -543,6 +601,43 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
         assert.notDeepEqual(topic,historicalTopic);
         additionalUsChanges++;
         additionalUsCounts.set(group.name,additionalUsCounts.get(group.name)+1);
+      }else if(checkMriRow&&tab==='mri'){
+        same(structure,checkMriRow.identity,`${structure.id} complete check-ligament source identity`);
+        const predecessor=checkMriBefore.bodyLesson(structure,tab);
+        assert.equal(predecessor.readiness,'draft',`${structure.id} MRI was already draft`);
+        same(priorLesson,predecessor,`${structure.id} previously drafted MRI lesson`);
+        same((await checkMriBefore.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          {tab,...predecessor},`${structure.id} exact MRI predecessor worksheet`);
+        const revised=checkMriAtCommit.bodyLesson(structure,tab);
+        assert.equal(revised.readiness,'draft',`${structure.id} MRI remains draft`);
+        assert.notDeepEqual(revised,predecessor,`${structure.id} source-backed MRI revision`);
+        same(after,revised,`${structure.id} exact current MRI revision`);
+        same(after,api.orbitalSupportMriLesson(structure,tab),
+          `${structure.id} current check-ligament resolver`);
+        same(topic,{tab,...after},`${structure.id} current MRI worksheet`);
+        same(topic,(await checkMriAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          `${structure.id} exact MRI revision worksheet`);
+        assert.notDeepEqual(topic,priorCurrentTopic);
+        checkMriChanges++;
+      }else if(archXrayRow&&tab==='xray'){
+        same(structure,archXrayRow.identity,`${structure.id} complete dorsal-arch source identity`);
+        assert.deepEqual(archXrayRow.topics,['xray']);
+        const predecessor=archXrayBefore.bodyLesson(structure,tab);
+        assert.equal(predecessor.readiness,'pending',`${structure.id} X-ray predecessor pending`);
+        same(predecessor,archXrayRow.previous.xray,`${structure.id} pinned X-ray predecessor`);
+        same(priorLesson,predecessor,`${structure.id} earlier X-ray unchanged`);
+        same((await archXrayBefore.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          {tab,...predecessor},`${structure.id} exact X-ray predecessor worksheet`);
+        const introduced=archXrayAtCommit.bodyLesson(structure,tab);
+        assert.equal(introduced.readiness,'draft',`${structure.id} X-ray introduced draft`);
+        same(after,introduced,`${structure.id} exact current dorsal-arch X-ray lesson`);
+        same(after,api.footVenousArchXrayLesson(structure,tab),
+          `${structure.id} current dorsal-arch resolver`);
+        same(topic,{tab,...after},`${structure.id} current X-ray worksheet`);
+        same(topic,(await archXrayAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+          `${structure.id} exact introduced X-ray worksheet`);
+        assert.notDeepEqual(topic,priorCurrentTopic);
+        archXrayChanges++;
       }else{
         same(after,priorLesson,`${structure.id}/${tab} current lesson unchanged since f1`);
         same(topic,priorCurrentTopic,`${structure.id}/${tab} current worksheet unchanged since f1`);
@@ -584,7 +679,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
         handChanges++;
       } else if((usSelected.has(structure.id)&&tab==='ultrasound')||
         (footRow&&tab==='xray')||(evidenceRow&&tab===evidenceRow.tab)||(mriRow&&tab==='mri')||
-        (ctRow&&tab==='ct')||(medianRow&&tab==='xray')||(additionalUs&&tab==='ultrasound')) {
+        (ctRow&&tab==='ct')||(medianRow&&tab==='xray')||(additionalUs&&tab==='ultrasound')||
+        (checkMriRow&&tab==='mri')||(archXrayRow&&tab==='xray')) {
         // Each exact feature transition and its worksheet were checked above.
       } else {
         same(after,before,`${structure.id}/${tab} current lesson preserved versus baseline`);
@@ -605,15 +701,19 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   assert.equal(ctChanges,4);
   assert.equal(medianChanges,2);
   assert.equal(additionalUsChanges,12);
+  assert.equal(checkMriChanges,4);
+  assert.equal(archXrayChanges,2);
   for(const group of additionalUsEpochs)assert.equal(additionalUsCounts.get(group.name),group.count,
     `${group.name} exact introduced cells visited`);
-  assert.equal(currentPreserved,9892);
-  assert.equal(currentPreserved+ctChanges+medianChanges+additionalUsChanges,9910,
-    'original 9910 current-preservation cells partition into preserved plus eighteen exact introductions');
+  assert.equal(currentPreserved,9886);
+  assert.equal(currentPreserved+ctChanges+medianChanges+additionalUsChanges+
+    checkMriChanges+archXrayChanges,9910,
+    'original 9910 current-preservation cells partition into preserved plus eighteen prior and six later exact changes');
   assert.equal(preserved, 9836);
-  assert.equal(currentVsOldPreserved,9800);
-  assert.equal(currentVsOldPreserved+ctChanges+medianChanges+additionalUsChanges,9818,
-    'original 9818 baseline-preservation cells partition into preserved plus eighteen exact introductions');
+  assert.equal(currentVsOldPreserved,9794);
+  assert.equal(currentVsOldPreserved+ctChanges+medianChanges+additionalUsChanges+
+    checkMriChanges+archXrayChanges,9818,
+    'original 9818 baseline-preservation cells partition into preserved plus eighteen prior and six later exact changes');
   assert.equal(changedWorksheets, 56);
   assert.equal(handWorksheets,36);
   assert.equal(usWorksheets,8);
@@ -640,6 +740,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   for(const [selectedSet,tab,resolver] of [
     [ctSelected,'ct',api.craniofacialCalcificationCtLesson],
     [medianSelected,'xray',api.medianAntebrachialXrayLesson],
+    [checkMriSelected,'mri',api.orbitalSupportMriLesson],
+    [archXraySelected,'xray',api.footVenousArchXrayLesson],
     ...additionalUsEpochs.map(group=>[group.rows,'ultrasound',group.resolver]),
   ])for(const row of selectedSet.values()){
     const id=row.identity.id;
@@ -673,6 +775,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
     .map(base=>emittedTeaching(base,json(base+'manifest.json').files,true,
       path=>readFileSync(resolve(root,path))))];
   for(const [selectedSet,tab] of [[ctSelected,'ct'],[medianSelected,'xray'],
+    [checkMriSelected,'mri'],[archXraySelected,'xray'],
     ...additionalUsEpochs.map(group=>[group.rows,'ultrasound'])])
     for(const row of selectedSet.values()){
       const lesson=api.bodyLesson(row.identity,tab);
@@ -700,6 +803,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   console.log(JSON.stringify({ source: source.source, sourceTree: source.sourceTree, changed,
     preserved, changedWorksheets, handChanges, handWorksheets,usChanges,usWorksheets,currentPreserved,
     footChanges,evidenceChanges,mriChanges,ctChanges,medianChanges,additionalUsChanges,
+    checkMriChanges,archXrayChanges,
     additionalUsCounts:Object.fromEntries(additionalUsCounts),currentVsOldPreserved,
     families: 32, pins: 56, cervicalUnchanged: 6,
     runtimes: regions.length, reviewFiles: review.files.length, modelBundlesUnchanged: 86,

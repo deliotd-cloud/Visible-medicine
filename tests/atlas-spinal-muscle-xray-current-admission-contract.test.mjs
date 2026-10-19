@@ -7,7 +7,7 @@ import {CURRENT_ATLAS_REVISION, validateCurrentAtlasDelivery} from './current-at
 const original = readFileSync(new URL('./fixtures/atlas-spinal-muscle-xray.original.txt', import.meta.url));
 const admitted = readFileSync(new URL('./fixtures/atlas-spinal-muscle-xray.current-admitted.mjs.raw', import.meta.url));
 const reviewedPatch = readFileSync(new URL('./fixtures/atlas-spinal-muscle-xray.later-transition.patch.raw', import.meta.url));
-const active = readFileSync(new URL('./atlas-spinal-muscle-xray.test.mjs', import.meta.url));
+const active = readFileSync(new URL('./fixtures/atlas-spinal-muscle-xray-before-lifecycle.mjs.raw', import.meta.url));
 const originalHash = '0ce0e885d7bc80bf2888d03a281a9395761d3657bd860d9ad4f3d1df791e5212';
 const admittedHash = '5834efdacb2a38d559c98c7a5deb2faab93610296ea7c05e42edc574010f0410';
 const activeHash = '8280e9d6e879906ee8e206caa02acdd0718d3fb06e36c1ba77aae1a179b4f7e5';
