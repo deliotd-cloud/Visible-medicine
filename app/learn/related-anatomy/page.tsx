@@ -10,7 +10,7 @@ import {appendLectureTourContext,lectureTourReturn} from '@/lib/lecture-tour-con
 import './related-anatomy.css';
 
 export const dynamic='force-dynamic';
-export const metadata:Metadata={title:'Related anatomy lectures',robots:{index:false,follow:false}};
+export const metadata:Metadata={title:'Structure learning',robots:{index:false,follow:false}};
 
 export default async function RelatedAnatomyPage({searchParams}:{searchParams?:Promise<LectureSearchParams>}){
   const request=parseRelatedLectureRequest((await searchParams)??{});
@@ -21,7 +21,7 @@ export default async function RelatedAnatomyPage({searchParams}:{searchParams?:P
   if(!request||!concept)return <main className="inner-page learning-page related-lectures-page">
     <section className="learning-heading"><div><p className="eyebrow">Related learning</p><h1>Structure link unavailable.</h1>
       <p>This link is invalid or its anatomy source has changed. Return to the Atlas and choose the structure again; no newer source has been substituted.</p>
-      <Link href="/my-learning">My learning</Link></div></section>
+      <div className="structure-learning-recovery"><Link href="/atlas">Choose a structure in the Atlas</Link><Link href="/my-learning">My learning</Link></div></div></section>
   </main>;
 
   let result:RelatedPublishedLectures={items:[],nextOffset:null};
@@ -35,20 +35,31 @@ export default async function RelatedAnatomyPage({searchParams}:{searchParams?:P
   const atlasHref=position?headLearningLinks(position)?.atlasHref:concept.atlasHref;
   const ctHref=headImageHref('CT',concept.conceptId,position,concept.headRevision);
   const mriHref=headImageHref('MRI',concept.conceptId,position,concept.headRevision);
+  const views=[
+    {key:'3d',label:'3D anatomy',description:'Explore the existing anatomical Atlas.',href:atlasHref},
+    {key:'ct',label:'CT anatomy',description:'Open the linked CT reference.',href:ctHref},
+    {key:'mri',label:'MRI anatomy',description:'Open the linked MRI reference.',href:mriHref},
+  ].filter((view):view is {key:string;label:string;description:string;href:string}=>typeof view.href==='string');
   return <main className="inner-page learning-page related-lectures-page">
-    <section className="learning-heading"><div><p className="eyebrow">Related learning</p><h1>{concept.label}</h1>
-      <p>Published lecture slides linked to this exact anatomy source. Only lectures available with your current course access appear.</p>
+    <section className="learning-heading"><div><p className="eyebrow">Structure learning</p><h1>{concept.label}</h1>
+      <p>Choose an anatomy view, then learn more with lectures included in your current access.</p>
     </div></section>
     <nav className="learning-subnav" aria-label="Return to anatomy or learning">
       <Link href="/my-learning">My learning</Link>
-      {tourReturn&&<Link href={tourReturn.href}>Return to {tourReturn.label} · step {tourReturn.step} · {tourReturn.view}</Link>}
-      {ctHref&&<Link href={ctHref}>CT anatomy</Link>}
-      {mriHref&&<Link href={mriHref}>MRI anatomy</Link>}
-      {atlasHref&&<Link href={atlasHref}>3D anatomy</Link>}
+      {tourReturn&&<Link className="structure-guide-return" href={tourReturn.href}>Return to {tourReturn.label} · step {tourReturn.step} · {tourReturn.view}</Link>}
     </nav>
+    <section className="structure-learning-views" aria-labelledby="structure-learning-views-title">
+      <div className="section-heading compact"><div><p className="section-index">Anatomy</p><h2 id="structure-learning-views-title">Start with the structure</h2></div></div>
+      {views.length?<nav className="structure-view-list" aria-label="Anatomy reference views">
+        {views.map((view,index)=><Link className="structure-view-link" data-primary={!tourReturn&&index===0?true:undefined} href={view.href} key={view.key}>
+          <strong>{view.label}<span aria-hidden="true">→</span></strong><span>{view.description}</span>
+        </Link>)}
+      </nav>:<p>No anatomy view is mapped for this exact source. No alternative source has been substituted.</p>}
+      <p className="structure-view-boundary">These are reference views of the same concept, not aligned scans or a transfer of access.</p>
+    </section>
     <section className="learning-grid">
       <div className="learning-main">
-        <div className="section-heading compact"><div><p className="section-index">Lecture slides</p><h2>Learn this in context</h2></div></div>
+        <div className="section-heading compact"><div><p className="section-index">Lecture slides</p><h2>Learn this in context</h2><p>Only published, explicitly linked slides included in your current course access appear.</p></div></div>
         {failed?<div role="status" className="empty-learning"><h3>Related lectures could not be loaded.</h3>
           <p>Access could not be checked. Try again or return to My learning.</p>
           <Link href={relatedLectureHref(request.conceptId,request.headRevision,request.offset,request.tourContext)!}>Try again</Link></div>
@@ -62,11 +73,13 @@ export default async function RelatedAnatomyPage({searchParams}:{searchParams?:P
           {previous&&<Link href={previous}>Previous group</Link>}{next&&<Link href={next}>More allocated lectures</Link>}
         </nav>}
       </div>
-      <aside className="learning-aside"><p className="section-index">Linked learning</p><h2>Separate access. Exact links.</h2>
+    </section>
+    <details className="structure-learning-provenance"><summary>Source &amp; access</summary><div><h2>Separate access. Exact links.</h2>
         <p>When opened from the Atlas, its original tab is preserved. Each slide link names its published edition; playback checks your access again.</p>
         <p>Atlas, case and paid lecture permissions remain independent. No draft slides or unavailable lecture details are listed.</p>
-        <details><summary>Comparison limits</summary><p>These are semantic structure links, not validated patient-space registration. CT and MRI are separate, unregistered subjects.</p></details>
-      </aside>
-    </section>
+        <p>These are semantic structure links, not validated patient-space registration. CT and MRI are separate, unregistered subjects. A working link is not clinical approval.</p>
+        <p>{concept.scopeNote}</p>
+        <p>Anatomy source revision: <code>{concept.headRevision}</code></p>
+    </div></details>
   </main>;
 }

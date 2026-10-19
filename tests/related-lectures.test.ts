@@ -406,3 +406,66 @@ test('related page distinguishes an empty candidate group from a service failure
   assert.match(failedHtml,/CT anatomy|MRI anatomy|3D anatomy/);
   assert.doesNotMatch(failedHtml,/SECRET TITLE|FOREIGN HASH/);
 });
+
+function structurePage(result:unknown={items:[],nextOffset:null}){
+  return compile('../app/learn/related-anatomy/page.tsx',{
+    'next/link':({children,...props}:any)=>React.createElement('a',props,children),
+    '../../chatgpt-auth':{requireChatGPTUser:async()=>learner},
+    '@/lib/lecture-related-links':relatedLinks,
+    '@/lib/lecture-tour-context':tour,
+    '@/lib/head-atlas-navigation':atlasNavigation,
+    '@/lib/head-atlas-learning':learning,
+    '@/lib/lecture-related-repository':{getRelatedPublishedLectures:async()=>result},
+  },true).default;
+}
+
+test('structure learning presents the existing source-bound anatomy views before lectures and collapses provenance',async()=>{
+  const html=renderToStaticMarkup(await structurePage()({searchParams:Promise.resolve({concept:conceptId,headRevision:pin.headRevision})}));
+  assert(html.indexOf('Start with the structure')<html.indexOf('Learn this in context'));
+  assert.match(html,/nav class="structure-view-list" aria-label="Anatomy reference views"/);
+  assert.equal((html.match(/class="structure-view-link"/g)??[]).length,3);
+  assert.equal((html.match(/data-primary="true"/g)??[]).length,1);
+  const c=relatedLinks.relatedLectureConcept(request);assert(c?.atlasHref);
+  for(const href of [c.atlasHref,atlasNavigation.headImageHref('CT',conceptId,null,pin.headRevision),atlasNavigation.headImageHref('MRI',conceptId,null,pin.headRevision)]){
+    assert(href);assert(html.includes(href.replaceAll('&','&amp;')));
+  }
+  assert.match(html,/<details class="structure-learning-provenance"><summary>Source &amp; access/);
+  assert.doesNotMatch(html,/<details[^>]*open|class="learning-aside"|data-state="(?:reviewed|locked)"/);
+  assert.match(html,/A working link is not clinical approval/);
+  assert.match(html,/No accessible linked slides/);
+  assert.match(html,new RegExp(pin.headRevision));
+});
+
+test('an image-only structure gets only its mapped views, with its exact source limits',async()=>{
+  const imagePin=anatomy.createLectureAnatomyReference('cerebellum-vermis');assert(imagePin);
+  const html=renderToStaticMarkup(await structurePage()({searchParams:Promise.resolve({concept:imagePin.conceptId,headRevision:imagePin.headRevision})}));
+  assert.equal((html.match(/class="structure-view-link"/g)??[]).length,2);
+  assert.doesNotMatch(html,/href="\/atlas\/head-neck-3d/);
+  assert.match(html,/partial coverage/);
+  assert.match(html,/No exact matching 3D part/);
+});
+
+test('invalid anatomy links offer a neutral manual Atlas exit without substituting a current structure',async()=>{
+  const html=renderToStaticMarkup(await structurePage()({searchParams:Promise.resolve({concept:conceptId,headRevision:hash})}));
+  assert.match(html,/Structure link unavailable/);
+  assert.match(html,/href="\/atlas">Choose a structure in the Atlas/);
+  assert.doesNotMatch(html,/structure-view-link|headRevision=|lectureSlide=/);
+});
+
+test('public search accepts a single bounded query and skips repository work for empty, short or duplicate parameters',async()=>{
+  const calls:string[]=[];
+  const page=compile('../app/search/page.tsx',{
+    'next/link':({children,...props}:any)=>React.createElement('a',props,children),
+    '@/lib/platform-governance':{searchEducation:async(q:string)=>{calls.push(q);return [{kind:'Anatomy concept',title:'Pons',summary:'Reference anatomy',href:'/learn/related-anatomy?concept=brainstem-pons&headRevision='+pin.headRevision,meta:'Source-bound concept'}];}},
+  },true).default;
+  for(const q of [undefined,'','p',['pons','pons']]){
+    const html=renderToStaticMarkup(await page({searchParams:Promise.resolve({q})}));
+    assert.match(html,/Choose your next learning step/);
+  }
+  assert.equal(calls.length,0);
+  const html=renderToStaticMarkup(await page({searchParams:Promise.resolve({q:'  Ｐｏｎｓ  '})}));
+  assert.deepEqual(calls,['Pons']);assert.match(html,/Explore structure/);assert.match(html,/<span>1 result<\/span>/);
+  assert.match(html,/maxLength="80"/i);assert.doesNotMatch(html,/Searches reviewed Atlas structures/);
+  assert.match(html,/Publication is not clinical approval/);
+  await page({searchParams:Promise.resolve({q:'p'.repeat(100)})});assert.equal(calls.at(-1)?.length,80);
+});

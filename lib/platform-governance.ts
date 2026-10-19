@@ -4,6 +4,7 @@ import { ensurePlatformSchema, getPlatformSnapshot } from "@/db/platform";
 import type { AuthContext } from "@/lib/auth";
 import { atlasModules, findCourse } from "@/lib/catalog";
 import { sha256 } from "@/lib/domain";
+import { searchStructureLearning } from "@/lib/structure-learning-search";
 
 type Row = Record<string, string | number | null>;
 
@@ -365,6 +366,7 @@ export async function searchEducation(queryValue: unknown) {
     env.DB.prepare(`SELECT slug, title, summary, level, duration_label, publisher_name FROM course_releases WHERE status='published' AND visibility='public' AND (LOWER(title) LIKE ? OR LOWER(summary) LIKE ? OR LOWER(level) LIKE ? OR LOWER(publisher_name) LIKE ?) LIMIT 12`).bind(term, term, term, term).all<Row>(),
   ]);
   const staticResults = [
+    ...searchStructureLearning(normalizedQuery),
     ...atlasModules.filter((item) => [item.title, item.region, item.modality, item.description, ...item.systems].join(" ").toLowerCase().includes(query.toLowerCase())).map((item) => ({ kind: "Atlas", title: item.title, summary: item.description, href: `/atlas/${item.slug}`, meta: `${item.modality} · ${item.region}` })),
   ];
   return [...staticResults,
