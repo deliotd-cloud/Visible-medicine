@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T06:21:15.572Z",
-  "sourceManifestSha256": "08bdbd32fce76dac5a08b7c76434cc04eec4d33a571e5c7c8fd8e0754e841f89",
-  "parent": "9f65117ccc330681ea9b69bed3a2133e5ea23484",
+  "at": "2026-10-19T06:32:34.510Z",
+  "sourceManifestSha256": "7e896419f201bce4207df7570ea80b3c9aa765d4e9ff87deb292c07e0a3a8efd",
+  "parent": "3a72e7ce14e0bdb88e4f54021eaf6be9e4486724",
   "atlasSource": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
   "review": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
@@ -12314,9 +12314,19 @@
       "sha256": "a063c06981ace5f06b4d4b300a229850ead8a557af41ca329b71e7027342d8fa"
     },
     {
+      "path": "lib/education-media-object-reader.ts",
+      "bytes": 2737,
+      "sha256": "3caa656e7680310494d3810c6c9b28de50f4106930db89a52777030676922439"
+    },
+    {
       "path": "lib/education-media-readiness.ts",
       "bytes": 1347,
       "sha256": "14f1eec2aac23fa3c8a9813b67d4a24593c277869a986b9559ddc77afef8fe90"
+    },
+    {
+      "path": "lib/education-media-records.ts",
+      "bytes": 6633,
+      "sha256": "5ba326b08f7692ac516165e94ba491ca200d0ab46aa3a5d83050fdd209c8a986"
     },
     {
       "path": "lib/education-platform.ts",
@@ -14614,6 +14624,11 @@
       "sha256": "cf0ffcce0945ca0b93a4d5d10d0abda8a2fb6a58722e41939362368e6878a5b6"
     },
     {
+      "path": "scripts/education-media-records.proposed.sql",
+      "bytes": 5063,
+      "sha256": "6a1534d8cf5770c8493bc9cc061fabf498de48d17128a17a88e706ead2714b09"
+    },
+    {
       "path": "scripts/export-regional-mri.mjs",
       "bytes": 10196,
       "sha256": "72fd0fad9dc616dfcd38f8ad28f9d361aadc1b3521dfa8f74be402deb9ba36a4"
@@ -16615,8 +16630,8 @@
     },
     {
       "path": "tests/clinical-review-coronary-sinus-xray.test.ts",
-      "bytes": 17740,
-      "sha256": "76ace4b4682bf3ba0f9a3e41e1ce140a03dac19801d9c045a59467b0def9b19b"
+      "bytes": 23485,
+      "sha256": "d57fb041284d07658aa0276c82c403c19805130eed09bae2c2d85307a7dcc5c1"
     },
     {
       "path": "tests/clinical-review-coronary-tour.test.ts",
@@ -17679,6 +17694,11 @@
       "sha256": "828c9ac3a37ce830beaa01d830c94f8b4a3a0ae04c31d3cdbbfc15f0764198e6"
     },
     {
+      "path": "tests/coronary-current-lifecycle-preservation.test.mjs",
+      "bytes": 3692,
+      "sha256": "2f66f67cb54657af1368f21fa37982c6b15ed370031f47f40119b464ad209204"
+    },
+    {
       "path": "tests/course-enrolment-control.test.ts",
       "bytes": 15022,
       "sha256": "81d62e8d8af9dd4c21acc9884b34e8014481f6a31030dad22d96d9ae9eab2966"
@@ -17799,9 +17819,24 @@
       "sha256": "85d42916d47753652a1c01f45c83dea443019bf529b4c7a17ade3b325204b711"
     },
     {
+      "path": "tests/education-media-dependencies.test.mjs",
+      "bytes": 7461,
+      "sha256": "17819be9a15a8bd382f3071bb997fc8c381ac7e2a20cceecc82ce8f244e4304a"
+    },
+    {
+      "path": "tests/education-media-object-reader.test.mjs",
+      "bytes": 8789,
+      "sha256": "598083b83c9ed0521d3466b115498792d39daad19aff5d045bdf420c5260419b"
+    },
+    {
       "path": "tests/education-media-readiness.test.mjs",
       "bytes": 12479,
       "sha256": "302405313d0ae27158658dace4e1d3513646acee34844ae0f215cd72db2fa068"
+    },
+    {
+      "path": "tests/education-media-records.test.mjs",
+      "bytes": 10245,
+      "sha256": "dad0d2b7d4a340b4eeac31b01b585099ac93fdd74571d43898cab67c7900b7c0"
     },
     {
       "path": "tests/education-user-provisioning.test.ts",
@@ -18362,6 +18397,11 @@
       "path": "tests/fixtures/clinical-review-brain-connections-reasoning.test.ts.raw",
       "bytes": 11788,
       "sha256": "64a193efb8dac36599f1d416fa5c29615137df7d10c3efe524878049120b5ca8"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-coronary-sinus-xray-before-lifecycle.ts.raw",
+      "bytes": 17740,
+      "sha256": "76ace4b4682bf3ba0f9a3e41e1ce140a03dac19801d9c045a59467b0def9b19b"
     },
     {
       "path": "tests/fixtures/clinical-review-femoral-arterial-original.ts.txt",
@@ -24027,9 +24067,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2314923,
-      "sha256": "f316bf7475766d9afc09f69b6096d92b1b1590a2f8fef4a93abf0cfebe7fd64b"
+      "bytes": 2317060,
+      "sha256": "75a88a125b74d4e5da7c06b1b7d1a0ca6ab9fe6ce08b58211372970a2de6b746"
     }
   ],
-  "scope": "Screened website application source and exact historical test-source texts only. One complete eighteen-cell teaching lifecycle theorem extension, its exact previously backed-up original and a portable preservation/tamper contract; all other selected source bytes unchanged; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
+  "scope": "Screened website application source and exact historical test-source texts only. One coronary nested-teaching lifecycle theorem extension, its exact previously backed-up original and portable preservation/tamper contract, plus six inert Education read-adapter/proposed-SQL/synthetic-test paths. All other selected source bytes unchanged. No actual D1/R2 binding, route, writer, activation, permission or media readiness change; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
 }

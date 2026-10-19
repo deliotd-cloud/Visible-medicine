@@ -7,9 +7,18 @@ import {pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const atlas='F:/VisibleMedicine/atlas';
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const posteriorParent='3e66d2a7cb1807f792929cbe292a4cfc81e4e79e';
+const posteriorEpoch='7b3e678ae4b8059aadb84459048ebd05f7abe7b9';
+const posteriorTree='de883b9d6bccb3b4403256e42fabc7471e0ea8c9';
+const sharedPath='content/nested-teaching.ts';
+const historicalSharedSha='f2a7ecde336041cefeafe33611969f3e49f8f92db58891ee3a121d1e9526f568';
+const currentSharedSha='0769d902cf0973cc84229061440fde4e26ccb29442ed16c28f801fcd35193bad';
+const posteriorConcepts=['brainstem-midbrain','brainstem-pons','brainstem-medulla','brainstem-cerebellum'];
+const posteriorReferences=['posteriorFossaNeonatalUS2024','posteriorFossaBrainstemMorphometry','posteriorFossaUltrasoundMRI'];
 const previous='d4016ff9988064552e464980aaea1913b25d5114';
 const frozen='F:/VisibleMedicine/recovery/checkpoints/20261014-coronary-sinus-website-before/source';
 const previousIntegration='9802c7d95eff99f8732f27f19964362f74d580113952b3a6cf6e3f60c9df2597';
@@ -56,21 +65,35 @@ async function importedFrozen(){
 
 test('one coronary-sinus X-ray draft reaches exact learner and protected Review imports',
  {timeout:240000},async()=>{
- assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:atlas,windowsHide:true}).toString().trim(),revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes:{
+  'content/coronary-venous-teaching.ts':'4b4e26e170b17d6cd6bdbb42dccf1860eaa185517cf312038b0cfec83da349b3',
+  'lib/nested-teaching.ts':'3fe0bbfd7078554e013c00e2e58c70aa96af34074540bf4e959b8269941a356f',
+ },learnerModules:['head-neck']});
+ assert.equal(execFileSync('git',['rev-parse','HEAD'],{cwd:atlas,windowsHide:true}).toString().trim(),currentRevision);
+ assert.equal(execFileSync('git',['rev-parse',`${posteriorEpoch}^`],{cwd:atlas,windowsHide:true}).toString().trim(),posteriorParent);
+ assert.equal(execFileSync('git',['rev-parse',`${posteriorEpoch}^{tree}`],{cwd:atlas,windowsHide:true}).toString().trim(),posteriorTree);
+ assert.equal(execFileSync('git',['merge-base',posteriorEpoch,currentRevision],{cwd:atlas,windowsHide:true}).toString().trim(),posteriorEpoch);
+ assert.equal(sha(git(revision,sharedPath)),historicalSharedSha);
+ assert.deepEqual(git(revision,sharedPath),git(posteriorParent,sharedPath),'historical shared teaching survives to genuine later parent');
+ assert.equal(sha(git(posteriorEpoch,sharedPath)),currentSharedSha);
+ assert.deepEqual(git(posteriorEpoch,sharedPath),git(currentRevision,sharedPath),'genuine later teaching survives to current source');
  const review=json('atlas-review/manifest.json'),viewerBase='public/atlas-review-viewer/',viewer=json(viewerBase+'manifest.json');
  const modules=['head-neck','shoulder','female-pelvis','lower-limb'].map(name=>({name,base:`public/atlas-runtime/${name}/`,manifest:json(`public/atlas-runtime/${name}/manifest.json`)}));
- assert.equal(review.revision,revision);assert.equal(viewer.sourceCommit,revision);
+ assert.equal(review.revision,currentRevision);assert.equal(viewer.sourceCommit,currentRevision);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);assert.notEqual(review.websiteIntegrationSha256,previousIntegration);
  assert.equal(viewer.personalRecordsIncluded,false);
  for(const {name,base,manifest} of modules){
-  assert.equal(manifest.sourceCommit,revision,name);assert.equal(manifest.patientDataIncluded,false,name);assert.equal(manifest.clinicalApproved,false,name);
+  assert.equal(manifest.sourceCommit,currentRevision,name);assert.equal(manifest.patientDataIncluded,false,name);assert.equal(manifest.clinicalApproved,false,name);
   assert.equal(manifest.standaloneReviewConnection,false,name);
   const input=json(base+'source-inputs.json').find((file:any)=>file.path==='content/coronary-venous-teaching.ts');
   if(name==='head-neck')assert.equal(input?.sha256,sha(git(revision,'content/coronary-venous-teaching.ts')));
   else assert.equal(input,undefined,`${name}: unrelated runtime did not import nested coronary source`);
  }
+ const sharedInputs=json(modules[0].base+'source-inputs.json');
+ assert.equal(sharedInputs.find((file:any)=>file.path===sharedPath)?.sha256,currentSharedSha,
+  'head-neck learner includes exact current shared nested teaching');
  for(const path of sourcePaths){
-  const expected=sha(git(revision,path)),record=review.files.find((file:any)=>file.path===path);
+  const expected=sha(git(path===sharedPath?currentRevision:revision,path)),record=review.files.find((file:any)=>file.path===path);
   assert(record,`${path}: Review import missing`);assert.equal(record.sourceSha256,expected);assert.equal(record.importedSha256,expected);
   assert.equal(sha(readFileSync('atlas-review/'+path)),expected);
   // Git object bytes are the source identity; a checkout may materialize CRLF.
@@ -78,11 +101,13 @@ test('one coronary-sinus X-ray draft reaches exact learner and protected Review 
   for(const base of ['public/atlas-review/',viewerBase,...modules.map(item=>item.base)])
    assert.equal(existsSync(base+path),false,`${base+path}: no raw teaching source exposed`);
  }
- const rendererPath='content/body-renderer-revision.json',sourceRenderer=JSON.parse(git(revision,rendererPath).toString());
+ const rendererPath='content/body-renderer-revision.json',sourceRenderer=JSON.parse(git(currentRevision,rendererPath).toString());
+ const featureRenderer=JSON.parse(git(revision,rendererPath).toString());
  const boundRenderer=json('atlas-review/'+rendererPath),oldSourceRenderer=JSON.parse(git(previous,rendererPath).toString());
  assert.notEqual(sourceRenderer.sha256,oldSourceRenderer.sha256);
+ assert.notEqual(sourceRenderer.sha256,featureRenderer.sha256,'later renderer source is separately pinned');
  const rendererRecord=review.files.find((file:any)=>file.path===rendererPath);assert(rendererRecord);
- assert.equal(rendererRecord.sourceSha256,sha(git(revision,rendererPath)));
+ assert.equal(rendererRecord.sourceSha256,sha(git(currentRevision,rendererPath)));
  assert.equal(rendererRecord.importedSha256,sha(readFileSync('atlas-review/'+rendererPath)));
  assert.equal(boundRenderer.sourceRendererSha256,sourceRenderer.sha256);assert.equal(boundRenderer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  assert.equal(boundRenderer.sha256,sha(JSON.stringify({source:sourceRenderer.sha256,website:review.websiteIntegrationSha256})));
@@ -107,11 +132,61 @@ test('one coronary-sinus X-ray draft reaches exact learner and protected Review 
  assert.deepEqual(live.nestedStudyTargets(catalog),before.nestedStudyTargets(catalog));
  assert.deepEqual(before.nestedTeachingReferences,sourceBefore.nestedTeachingReferences);
  assert.deepEqual(before.nestedConcepts,sourceBefore.nestedConcepts);
+ const introduced=await history.exactSourceHistoryApi(revision,'nested-review-security');
+ const posteriorBefore=await history.exactSourceHistoryApi(posteriorParent,'nested-review-security');
+ const posteriorAt=await history.exactSourceHistoryApi(posteriorEpoch,'nested-review-security');
+ const proveOneModality=(earlier:any[],later:any[],expected:Map<string,string>,label:string)=>{
+  assert.equal(earlier.length,76,`${label}: complete original concept population`);
+  assert.deepEqual(later.map(row=>row.id),earlier.map(row=>row.id),`${label}: ordered identity population`);
+  assert.equal(new Set(earlier.map(row=>row.id)).size,76,`${label}: unique concept identities`);
+  const changed:string[]=[];
+  for(let i=0;i<earlier.length;i++){
+   const prior=wire(earlier[i]),next=wire(later[i]);
+   const tab=expected.get(prior.id);
+   if(tab){
+    assert.equal(prior.imaging[tab],undefined,`${label}/${prior.id}: genuine absent predecessor`);
+    assert.equal(next.imaging[tab].readiness,'draft',`${label}/${prior.id}: introduced draft`);
+    delete next.imaging[tab];
+    assert.deepEqual(next,prior,`${label}/${prior.id}: all other concept fields preserved`);
+    changed.push(prior.id);
+   }else assert.deepEqual(next,prior,`${label}/${prior.id}: unchanged concept`);
+  }
+  assert.deepEqual(changed,[...expected.keys()],`${label}: exactly named concept changes`);
+ };
+ const proveReferences=(earlier:any,later:any,added:string[],label:string)=>{
+  assert.deepEqual(Object.keys(later).filter(key=>!Object.hasOwn(earlier,key)).sort(),
+   [...added].sort(),`${label}: exact added references`);
+  assert.deepEqual(Object.fromEntries(Object.entries(later).filter(([key])=>!added.includes(key))),
+   earlier,`${label}: every prior reference preserved`);
+ };
+ proveOneModality(before.nestedConcepts,introduced.nestedConcepts,
+  new Map([['coronary-sinus','xray']]),'genuine coronary introduction');
+ assert.deepEqual(introduced.nestedConcepts,posteriorBefore.nestedConcepts,
+  'all 76 coronary-era concepts survive to the posterior-fossa parent');
+ proveOneModality(posteriorBefore.nestedConcepts,posteriorAt.nestedConcepts,
+  new Map(posteriorConcepts.map(id=>[id,'ultrasound'])),'genuine posterior-fossa introduction');
+ assert.deepEqual(live.nestedConcepts,posteriorAt.nestedConcepts,
+  'all 76 posterior-fossa concepts survive to current Review');
  const oldRefs=before.nestedTeachingReferences,refs=live.nestedTeachingReferences;
- assert.deepEqual(Object.keys(refs).filter(key=>!Object.hasOwn(oldRefs,key)),[referenceKey]);
+ proveReferences(oldRefs,introduced.nestedTeachingReferences,[referenceKey],
+  'genuine coronary reference introduction');
+ assert.deepEqual(introduced.nestedTeachingReferences,posteriorBefore.nestedTeachingReferences,
+  'coronary references survive to the posterior-fossa parent');
+ proveReferences(posteriorBefore.nestedTeachingReferences,posteriorAt.nestedTeachingReferences,
+  posteriorReferences,'genuine posterior-fossa reference introduction');
+ assert.deepEqual(refs,posteriorAt.nestedTeachingReferences,
+  'all posterior-fossa references survive to current Review');
  assert.equal(refs[referenceKey].url,referenceUrl);assert.equal(refs[referenceKey].scopedToConcept,true);
- assert.deepEqual(Object.fromEntries(Object.entries(refs).filter(([key])=>key!==referenceKey)),oldRefs);
+ assert.deepEqual(Object.fromEntries(Object.entries(introduced.nestedTeachingReferences).filter(([key])=>key!==referenceKey)),oldRefs);
  const emitted=[emittedTeaching(modules[0].base,modules[0].manifest.files,true),emittedTeaching(viewerBase,viewer.files,true)];
+ for(const id of posteriorConcepts){
+  const concept=posteriorAt.nestedConcepts.find((row:any)=>row.id===id);assert(concept,id);
+  const section=concept.imaging.ultrasound;assert.equal(section.readiness,'draft',id);
+  for(const code of emitted)for(const value of [section.body,
+   ...section.references.flatMap((key:string)=>[refs[key].title,refs[key].url])])
+   assert(code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1)),
+    `${id}: exact later ultrasound teaching/reference emitted`);
+ }
  const rendered=await build({stdin:{contents:[
   "import {NestedTeaching} from './atlas-review/app/nested-teaching';",
   "import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';",
