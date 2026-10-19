@@ -1,0 +1,180 @@
+import {expectedStudioContext,comparisonResponse,isComparison,installComparisonFetch} from './lecture-context-fixture.mjs';
+installComparisonFetch();
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import React from 'react';
+import ts from 'typescript';
+import {createLectureAnatomyReference,lectureAnatomyOptions} from '../lib/lecture-anatomy-reference.ts';
+import {headImageHref} from '../lib/head-atlas-navigation.ts';
+
+const lineageBoundary={WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol('synthetic-lineage'),finish(){},invalidate(){}})};
+const require=createRequire(import.meta.url),tick=()=>new Promise(resolve=>setImmediate(resolve));
+const pin=(id:string)=>{const value=createLectureAnatomyReference(id);assert(value);return value;};
+const pons=pin('brainstem-pons'),vermis=pin('cerebellum-vermis');
+const label=(id:string)=>lectureAnatomyOptions().find(option=>option.conceptId===id)!.label;
+const initial={id:'synthetic-lecture',courseId:'synthetic-course',courseTitle:'Synthetic course',title:'Anatomy teaching',version:4,status:'draft',slides:[{id:'one',title:'Pons',body:'Inspect the pons.',referenceUrl:''}],reviews:[],published:null,canEdit:true,canReview:false,canPublish:false};
+const nodes=(node:any):any[]=>Array.isArray(node)?node.flatMap(nodes):React.isValidElement(node)?[node,...nodes((node as any).props.children)]:[];
+const text=(node:any):string=>Array.isArray(node)?node.map(text).join(''):React.isValidElement(node)?text((node as any).props.children):typeof node==='string'||typeof node==='number'?String(node):'';
+function harness(view:any=initial,playerProps?:any){
+  const globals=new Map(['window','document'].map(name=>[name,Object.getOwnPropertyDescriptor(globalThis,name)]));
+  Object.defineProperty(globalThis,'window',{configurable:true,value:{confirm:()=>true,addEventListener(){},removeEventListener(){}}});
+  Object.defineProperty(globalThis,'document',{configurable:true,value:{addEventListener(){},removeEventListener(){}}});
+  const values:any[]=[],effects=new Map<number,{deps:unknown[];cleanup?:()=>void}>();let index=0,tree:any,changed=false,pending:Array<()=>void>=[];
+  const react={...React,useMemo:(create:()=>unknown)=>create(),useRef:(value:unknown)=>{const i=index++;return values[i]??(values[i]={current:value});},
+    useState:(seed:unknown)=>{const i=index++;if(!(i in values))values[i]=typeof seed==='function'?(seed as ()=>unknown)():seed;return[values[i],(next:any)=>{values[i]=typeof next==='function'?next(values[i]):next;changed=true;}];},
+    useEffect:(create:()=>void|(()=>void),deps:unknown[])=>{const i=index++,old=effects.get(i);if(!old||deps.length!==old.deps.length||deps.some((d,j)=>d!==old.deps[j]))pending.push(()=>{old?.cleanup?.();const cleanup=create();effects.set(i,{deps,cleanup:typeof cleanup==='function'?cleanup:undefined});});},
+  };
+ Object.assign(react,{useLayoutEffect:react.useEffect});
+  const component=playerProps?'LecturePlayer':'LectureEditor';
+  const compiled=ts.transpileModule(readFileSync(`components/${component}.tsx`,'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
+  new Function('require','module','exports',compiled)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
+  const props=playerProps??{initial:view,courseOutline:[{id:view.id,title:view.title}],expectedStudioContext};
+  const flush=()=>{let n=0;do{assert(++n<12);index=0;changed=false;pending=[];tree=mod.exports[component](props);for(const run of pending)run();}while(changed);return tree;};
+  const find=(predicate:(node:any)=>boolean)=>{const found=nodes(tree).find(predicate);assert(found,'Expected real component node');return found;};
+  const button=(title:string)=>find(node=>node.type==='button'&&text(node)===title);
+  const picker=(additional=false)=>find(node=>node.type==='select'&&node.props['aria-label']===(additional?'Add linked anatomy structure':'Head Atlas structure'));
+  const remove=(id:string)=>find(node=>node.type==='button'&&node.props['aria-label']===`Remove anatomy link: ${label(id)}`);
+  flush();return {flush,find,button,picker,remove,text:()=>text(tree),all:()=>nodes(tree),dispose(){for(const effect of effects.values())effect.cleanup?.();for(const[name,descriptor]of globals){if(descriptor)Object.defineProperty(globalThis,name,descriptor);else delete(globalThis as any)[name];}}};
+}
+
+test('explicit additional selection saves distinct pins without rewriting existing primary or another slide',async()=>{
+  const saved=globalThis.fetch,requests:any[]=[];
+  globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{const body=JSON.parse(String(request.body));requests.push(body);return new Response(JSON.stringify({...initial,title:body.title,slides:body.slides,version:5}));}) as typeof fetch;
+  const view={...initial,slides:[{...initial.slides[0],anatomyReference:pons},{...initial.slides[0],id:'two',title:'Other slide'}]};
+  const h=harness(view);try{
+    assert.equal(h.find(node=>node.type==='details'&&node.props.className==='lecture-anatomy-editor').props.open,undefined);
+    assert.doesNotMatch(h.text(),/Unsaved changes/);
+    h.picker(true).props.onChange({target:{value:vermis.conceptId}});h.flush();
+    assert.equal(h.picker().props.value,pons.conceptId);
+    assert.match(h.text(),/2\/6/);
+    assert.equal(requests.length,0);
+    h.button('Save').props.onClick();await tick();h.flush();
+    assert.deepEqual(requests[0].slides[0].anatomyReferences,[pons,vermis]);
+    assert.equal(Object.hasOwn(requests[0].slides[0],'anatomyReference'),false);
+    assert.deepEqual(requests[0].slides[1],view.slides[1]);
+    assert.equal(requests[0].expectedVersion,4);
+    assert.match(h.text(),/Saved version 5/);
+    assert.equal(requests.length,1,'No automatic review or publication');
+  }finally{h.dispose();globalThis.fetch=saved;}
+});
+
+test('editing text alone preserves a legacy single pin; last removal restores an unlinked slide',async()=>{
+  const saved=globalThis.fetch,requests:any[]=[];
+  globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{const body=JSON.parse(String(request.body));requests.push(body);return new Response(JSON.stringify({...initial,title:body.title,slides:body.slides,version:body.expectedVersion+1}));}) as typeof fetch;
+  const h=harness({...initial,slides:[{...initial.slides[0],anatomyReference:pons}]});try{
+    h.find(node=>node.type==='input'&&node.props.value===initial.title).props.onChange({target:{value:'Updated lecture title'}});h.flush();
+    h.button('Save').props.onClick();await tick();h.flush();
+    assert.deepEqual(requests[0].slides[0].anatomyReference,pons);
+    assert.equal(Object.hasOwn(requests[0].slides[0],'anatomyReferences'),false);
+    h.picker(true).props.onChange({target:{value:vermis.conceptId}});h.flush();
+    h.remove(pons.conceptId).props.onClick();h.flush();
+    assert.equal(h.picker().props.value,vermis.conceptId);
+    h.remove(vermis.conceptId).props.onClick();h.flush();
+    assert.equal(h.picker().props.value,'');
+    h.button('Save').props.onClick();await tick();h.flush();
+    assert.equal(Object.hasOwn(requests[1].slides[0],'anatomyReference'),false);
+    assert.equal(Object.hasOwn(requests[1].slides[0],'anatomyReferences'),false);
+  }finally{h.dispose();globalThis.fetch=saved;}
+});
+
+test('primary replacement retains additional links and duplicate/capacity callbacks cannot add a seventh pin',()=>{
+  const references=['brainstem-pons','brainstem-midbrain','brainstem-medulla','cerebellum-vermis','cerebellum-left-hemisphere','cerebellum-right-hemisphere'].map(pin);
+  const h=harness({...initial,slides:[{...initial.slides[0],anatomyReferences:[pons,vermis]}]});try{
+    h.picker().props.onChange({target:{value:'brainstem-midbrain'}});h.flush();
+    assert.equal(h.picker().props.value,'brainstem-midbrain');
+    assert(h.remove(vermis.conceptId));
+    h.picker().props.onChange({target:{value:vermis.conceptId}});h.flush();
+    assert.equal(h.picker().props.value,'brainstem-midbrain');
+    h.picker(true).props.onChange({target:{value:'brainstem-midbrain'}});h.flush();
+    assert.match(h.text(),/2\/6/);
+    for(const reference of references.filter(value=>!['brainstem-midbrain',vermis.conceptId].includes(value.conceptId))){
+      h.picker(true).props.onChange({target:{value:reference.conceptId}});h.flush();
+    }
+    assert.equal(h.picker(true).props.disabled,true);
+    const seventh=lectureAnatomyOptions().find(option=>!references.some(value=>value.conceptId===option.conceptId));assert(seventh);
+    h.picker(true).props.onChange({target:{value:seventh.conceptId}});h.flush();
+    assert.match(h.text(),/6\/6/);
+    assert.equal(h.all().filter(node=>node.type==='button'&&String(node.props['aria-label']).startsWith('Remove anatomy link:')).length,6);
+  }finally{h.dispose();}
+});
+
+test('retained addition callbacks cannot edit another selected slide, pending draft or unmounted editor',async()=>{
+  const saved=globalThis.fetch;let resolve!:(response:Response)=>void,payload:any;
+  globalThis.fetch=(async(_url:unknown,request:RequestInit)=>{payload=JSON.parse(String(request.body));return new Promise<Response>(yes=>{resolve=yes;});}) as typeof fetch;
+  const view={...initial,slides:[{...initial.slides[0],anatomyReference:pons},{...initial.slides[0],id:'two',title:'Other slide'}]};
+  const h=harness(view);try{
+    const retired=h.picker(true).props.onChange;
+    h.button('2Other slide').props.onClick();h.flush();retired({target:{value:vermis.conceptId}});h.flush();
+    assert.doesNotMatch(h.text(),/Unsaved changes/);
+    h.button('1Pons').props.onClick();h.flush();
+    const pending=h.picker(true).props.onChange;
+    h.find(node=>node.type==='input'&&node.props.value===view.title).props.onChange({target:{value:'New title'}});h.flush();
+    h.button('Save').props.onClick();pending({target:{value:vermis.conceptId}});h.flush();
+    await tick();assert.deepEqual(payload.slides,view.slides);
+    resolve(new Response(JSON.stringify({...view,title:payload.title,version:5})));await tick();h.flush();
+    const unmounted=h.picker(true).props.onChange;h.dispose();unmounted({target:{value:vermis.conceptId}});h.flush();
+    assert.doesNotMatch(h.text(),/Unsaved changes/);
+  }finally{h.dispose();globalThis.fetch=saved;}
+});
+
+test('stale secondary binding blocks review and is removable without changing the other binding',()=>{
+  const h=harness({...initial,slides:[{...initial.slides[0],anatomyReferences:[pons,{...vermis,headRevision:'a'.repeat(64)}]}]});try{
+    assert.match(h.text(),/saved link is outdated or unavailable/);
+    h.button('Review').props.onClick();h.flush();assert.equal(h.button('Request review').props.disabled,true);
+    h.button('Content').props.onClick();h.flush();
+    h.find(node=>node.type==='button'&&node.props['aria-label']===`Remove anatomy link: Unavailable: ${vermis.conceptId}`).props.onClick();h.flush();
+    assert.equal(h.picker().props.value,pons.conceptId);
+    assert.doesNotMatch(h.text(),/saved link is outdated or unavailable/);
+    h.button('Review').props.onClick();h.flush();assert.equal(h.button('Request review').props.disabled,true,'Fresh independent review still requires saving the new draft');
+  }finally{h.dispose();}
+});
+
+test('new collection controls respect published/read-only state and aggregate content limit',()=>{
+  for(const flags of [{status:'published'},{canEdit:false}]){
+    const h=harness({...initial,...flags,slides:[{...initial.slides[0],anatomyReferences:[pons,vermis]}]});try{
+      const add=h.picker(true);assert.equal(add.props.disabled,true);add.props.onChange({target:{value:'brainstem-midbrain'}});h.flush();
+      assert.doesNotMatch(h.text(),/Unsaved changes/);assert.match(h.text(),/2\/6/);
+    }finally{h.dispose();}
+  }
+  const h=harness({...initial,slides:Array.from({length:10},(_,i)=>({...initial.slides[0],id:`slide-${i}`,body:'é'.repeat(4_900),anatomyReferences:[pons,vermis]}))});try{
+    h.find(node=>node.type==='input'&&node.props.value===initial.title).props.onChange({target:{value:'Updated title'}});h.flush();
+    assert.equal(h.button('Save').props.disabled,true);
+    h.button('Review').props.onClick();h.flush();assert.equal(h.button('Request review').props.disabled,true);
+  }finally{h.dispose();}
+});
+
+test('player groups each exact saved concept and never invents a 3D mapping for image-only anatomy',()=>{
+  const h=harness(initial,{title:'Lecture',slides:[{...initial.slides[0],anatomyReferences:[pons,vermis]}],version:2});try{
+    assert.match(h.text(),/Explore linked anatomy · 2 structures/);
+    for(const reference of [pons,vermis]){
+      const group=h.find(node=>node.type==='nav'&&node.props['aria-label']===`Explore ${label(reference.conceptId)} in the Atlas`);
+      const links=nodes(group).filter(node=>node.type==='a');
+      for(const modality of ['CT','MRI'] as const){
+        const link=links.find(node=>text(node)===modality);assert(link);
+        assert.equal(link.props.href,headImageHref(modality,reference.conceptId,null,reference.headRevision));
+        assert.equal(link.props.target,'_blank');assert.equal(link.props.rel,'noopener noreferrer');
+      }
+      assert.equal(links.some(node=>text(node)==='3D Atlas'),reference===pons);
+    }
+    assert.match(h.text(),/does not unlock another product/);
+    assert.match(h.text(),/No exact 3D part is mapped/);
+  }finally{h.dispose();}
+});
+
+test('player keeps readable stale pins but rejects ambiguous or malformed collections without fallback navigation',()=>{
+  const h=harness(initial,{title:'Lecture',slides:[{...initial.slides[0],anatomyReferences:[pons,{...vermis,headRevision:'a'.repeat(64)}]}],version:2});try{
+    assert.match(h.text(),/source binding has changed/);assert.match(h.text(),/cerebellum-vermis/);
+    assert.equal(h.all().filter(node=>node.type==='nav').length,1);
+    assert.match(h.text(),/Inspect the pons/);
+  }finally{h.dispose();}
+  for(const fields of [{anatomyReference:pons,anatomyReferences:[vermis]},{anatomyReferences:[pons,pons]},{anatomyReferences:'invalid'}]){
+    const invalid=harness(initial,{title:'Lecture',slides:[{...initial.slides[0],...fields}],version:2});try{
+      assert.match(invalid.text(),/saved anatomy links cannot be verified/);
+      assert.equal(invalid.all().filter(node=>node.type==='a'&&String(node.props.href).startsWith('/atlas/')).length,0);
+      assert.match(invalid.text(),/Inspect the pons/);
+    }finally{invalid.dispose();}
+  }
+});

@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "baseline": "613daed2219432ba4c5321105d9552c7c9765e3e",
+  "tourRevision": "mesenteric-arterial-branch-orientation-v1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:superior-mesenteric-artery",
+      "fmaId": "FMA14749",
+      "name": "Superior mesenteric artery",
+      "sourceName": "superior mesenteric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-recovery",
+      "nodeName": "FMA14749",
+      "bounds": {
+        "min": [
+          -0.6094620227813721,
+          1.094559907913208,
+          0.6211900115013123
+        ],
+        "max": [
+          0.08399049937725067,
+          2.546600341796875,
+          1.0136399269104004
+        ]
+      },
+      "center": [
+        -0.2627357617020607,
+        1.8205801248550415,
+        0.8174149692058563
+      ],
+      "anchor": [
+        -0.09160909801721573,
+        1.8007702827453613,
+        0.9157600402832031
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1928",
+          "sha256": "14ce4846d476c185a279247162ee118ac9c056593023f66d24f4a4d470e56a7c"
+        },
+        {
+          "file": "FJ2011",
+          "sha256": "db6caec612b1564155c869d452904b1e9e834f2f556a9a0b3e2564ce9757e65a"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-artery",
+      "fmaId": "FMA14810",
+      "name": "Middle colic artery",
+      "sourceName": "middle colic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA14810",
+      "bounds": {
+        "min": [
+          -0.6839800477027893,
+          2.1338000297546387,
+          0.6944400072097778
+        ],
+        "max": [
+          0.6255369782447815,
+          2.6506993770599365,
+          1.2945899963378906
+        ]
+      },
+      "center": [
+        -0.029221534729003906,
+        2.3922497034072876,
+        0.9945150017738342
+      ],
+      "anchor": [
+        -0.14844399690628052,
+        2.249000310897827,
+        0.9807400703430176
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3542",
+          "sha256": "b77b34cda312ffba8034c41a5457a0ad052d28439efd228ef90724ec3c4adce4"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery",
+      "fmaId": "FMA14815",
+      "name": "Ileocolic artery",
+      "sourceName": "ileocolic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA14815",
+      "bounds": {
+        "min": [
+          -0.3138050138950348,
+          1.5446600914001465,
+          0.7963600158691406
+        ],
+        "max": [
+          -0.054398197680711746,
+          1.8339098691940308,
+          0.9436999559402466
+        ]
+      },
+      "center": [
+        -0.18410160578787327,
+        1.6892849802970886,
+        0.8700299859046936
+      ],
+      "anchor": [
+        -0.1850760132074356,
+        1.7021899223327637,
+        0.8727099895477295
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3439",
+          "sha256": "a0e7715dace7a22773b5e976f415b6049fe84eeb8e91f01cb6a4582c31ced81a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-artery",
+      "fmaId": "FMA14750",
+      "name": "Inferior mesenteric artery",
+      "sourceName": "inferior mesenteric artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-recovery",
+      "nodeName": "FMA14750",
+      "bounds": {
+        "min": [
+          0.0419296994805336,
+          0.9904998540878296,
+          0.6327300071716309
+        ],
+        "max": [
+          0.18455900251865387,
+          1.8623199462890625,
+          0.8671899437904358
+        ]
+      },
+      "center": [
+        0.11324435099959373,
+        1.426409900188446,
+        0.7499599754810333
+      ],
+      "anchor": [
+        0.14257699251174927,
+        1.4129101037979126,
+        0.7858900427818298
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3442",
+          "sha256": "865cc814e7412113703bfe503424a92e745e6cbf6e788465f06c6be8f1079c6c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-colic-artery",
+      "fmaId": "FMA14826",
+      "name": "Left colic artery",
+      "sourceName": "left colic artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA14826",
+      "bounds": {
+        "min": [
+          0.129721999168396,
+          1.7187902927398682,
+          0.766539990901947
+        ],
+        "max": [
+          0.3179999887943268,
+          1.790809988975525,
+          0.8679499626159668
+        ]
+      },
+      "center": [
+        0.2238609939813614,
+        1.7548001408576965,
+        0.8172449767589569
+      ],
+      "anchor": [
+        0.23304501175880432,
+        1.7509698867797852,
+        0.8227400183677673
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3494",
+          "sha256": "ee66dc3feb19c5b6c8500420c2e67a04f593045ddcdcfd24ac1faf1412a52bd1"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:abdominal-aorta",
+      "fmaId": "FMA3789",
+      "name": "Abdominal aorta",
+      "sourceName": "abdominal aorta",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen",
+        "pelvis",
+        "thorax"
+      ],
+      "bundle": "abdomen-vessels-recovery",
+      "nodeName": "FMA3789",
+      "bounds": {
+        "min": [
+          -0.009028740227222443,
+          1.4869097471237183,
+          0.32476097345352173
+        ],
+        "max": [
+          0.200547993183136,
+          3.359100341796875,
+          0.8277599811553955
+        ]
+      },
+      "center": [
+        0.09575962647795677,
+        2.4230050444602966,
+        0.5762604773044586
+      ],
+      "anchor": [
+        0.0937374010682106,
+        2.370999813079834,
+        0.619629979133606
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1932",
+          "sha256": "c74d3742308c1f05ce9e85c4508d348e3debf57d4aab5bfbc42041d682d39e02"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    }
+  ]
+}

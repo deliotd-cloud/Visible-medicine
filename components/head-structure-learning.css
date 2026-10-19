@@ -1,0 +1,4 @@
+@import './learning-resource-status.css';
+.head-structure-learning{display:grid;gap:10px;padding:12px;border:1px solid var(--imaging-line);border-radius:8px;background:var(--imaging-panel);margin:10px 0}
+.head-structure-learning>.head-concept-links{border:0;margin-top:0;padding-top:0}
+.head-structure-learning>.head-learning-unavailable{align-items:start}

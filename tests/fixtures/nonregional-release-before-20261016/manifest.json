@@ -1,0 +1,91 @@
+{
+  "schema": "vm-nonregional-frozen-tests-1",
+  "baselineManifestSha256": "c01634ab90f09c3e413c7ddd4d9c384fe90fd09403c286804273eb42e4522912",
+  "files": [
+    {
+      "path": "tests/atlas-nonregional-release-fixture.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-nonregional-release-fixture.ts.txt",
+      "sha256": "2caf5faacdb7dab9f9a9801e55ec41bc484e45d62a8eff38b126d0268dbf5e8f"
+    },
+    {
+      "path": "tests/atlas-celiac-neck.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-celiac-neck.test.ts.txt",
+      "sha256": "bc80d92d79d1ba6911579dc5c2a407ff38f42026919b471ad61d258e76ccf4df"
+    },
+    {
+      "path": "tests/atlas-femoral-clinical.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-femoral-clinical.test.ts.txt",
+      "sha256": "3e63c8aa1ae71026639aaa5e097ab8860fa308d0e136c90e00658bd31a4d16a2"
+    },
+    {
+      "path": "tests/atlas-main-bronchus-xray.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-main-bronchus-xray.test.ts.txt",
+      "sha256": "76c2cf94f59849b0d7be5a247dd247658035e4de205fd7468a9170d05d08607c"
+    },
+    {
+      "path": "tests/atlas-nested-practice.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-nested-practice.test.ts.txt",
+      "sha256": "e8454f889ead6f6eba200bfc9a078ff28f6d6089fb863cf2e7ec1df4f83503df"
+    },
+    {
+      "path": "tests/atlas-orbital-ultrasound.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-orbital-ultrasound.test.ts.txt",
+      "sha256": "c7355aebc6c8ab3305479e47d3d551d0334f7a32c2fae21eabd498ebb013ced8"
+    },
+    {
+      "path": "tests/atlas-pelvic-update.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-pelvic-update.test.ts.txt",
+      "sha256": "d7b887af35f219d833ac62e3213061b43f7fba372baed4adb455db92f415c3b3"
+    },
+    {
+      "path": "tests/atlas-pes-anserine-study.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-pes-anserine-study.test.ts.txt",
+      "sha256": "0f6ae11f4d6c56a7711dff20e61a468370127829617e930f6b101542d672d2c5"
+    },
+    {
+      "path": "tests/atlas-posterior-mediastinal.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-posterior-mediastinal.test.ts.txt",
+      "sha256": "bd6269ff0bb25e1b3cd0f639f3b896a4041a0ac8ec6e9aa6b7576d1b899a03c8"
+    },
+    {
+      "path": "tests/atlas-practice-navigation.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-practice-navigation.test.ts.txt",
+      "sha256": "663559f5d8ff2122df784d82513bb605f1b8ec21be104d11157e81fb345908ff"
+    },
+    {
+      "path": "tests/atlas-projection-ultrasound.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-projection-ultrasound.test.ts.txt",
+      "sha256": "9d40dc6f16acb2be31579fec18894a1081327f79ea79437b07856cb7d58ad245"
+    },
+    {
+      "path": "tests/atlas-proper-digital-teaching.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-proper-digital-teaching.test.ts.txt",
+      "sha256": "77fdfbd18676f79eb553a7589de62f1eedc2d26f0d95fe9cc936c20d34e4a6a4"
+    },
+    {
+      "path": "tests/atlas-pulmonary-hilar.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-pulmonary-hilar.test.ts.txt",
+      "sha256": "790be64dfa18d81e492969000fb085212ed19623b6f3d88661978aee44cddb07"
+    },
+    {
+      "path": "tests/atlas-pulmonary-vein-ultrasound.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-pulmonary-vein-ultrasound.test.ts.txt",
+      "sha256": "9fd6f5e9c34890c6b8b33a7193ed078d3533e6754cd091620ce05b365fab126f"
+    },
+    {
+      "path": "tests/atlas-scene-sizing.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-scene-sizing.test.ts.txt",
+      "sha256": "1579fc90d67e1f18bca017012a3f5685837038930ee3f7c3ee09468d2bc8977c"
+    },
+    {
+      "path": "tests/atlas-search-study-handoff.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-search-study-handoff.test.ts.txt",
+      "sha256": "ff11e36cc688373c7a34add272dc25ba30f61ef38165bbac989b1cf0bb6bc240"
+    },
+    {
+      "path": "tests/atlas-spinal-disc-function.test.ts",
+      "saved": "tests/fixtures/nonregional-release-before-20261016/atlas-spinal-disc-function.test.ts.txt",
+      "sha256": "628a5cc1976553549180bab92b0982aa539fff0a5df3f868155ed514688b2a24"
+    }
+  ]
+}

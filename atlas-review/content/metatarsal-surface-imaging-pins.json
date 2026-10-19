@@ -1,0 +1,815 @@
+{
+  "sourceCommit": "7ef514621befce5e7d63c6eb3e555829b538b2f1",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "797d9553c771ff3572f415eef0c48ffdec1d422243f4ce452a548eafc1dfdc5d",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-first-metatarsal-bone",
+        "fmaId": "FMA24507",
+        "name": "Right first metatarsal bone",
+        "sourceName": "right first metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24507",
+        "bounds": {
+          "min": [
+            -1.0436500310897827,
+            -8.653291702270508,
+            0.7994400262832642
+          ],
+          "max": [
+            -0.7481369972229004,
+            -8.22120189666748,
+            1.421820044517517
+          ]
+        },
+        "center": [
+          -0.8958935141563416,
+          -8.437246799468994,
+          1.1106300354003906
+        ],
+        "anchor": [
+          -0.8959369659423828,
+          -8.49156665802002,
+          1.0965800285339355
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3351",
+            "sha256": "b70e565ec8ad8c09264ae66159415ca4f0cf639598812aac6fcf7b761c3758d3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "first",
+      "imagingGroup": "FMA24507",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-first-metatarsal-bone",
+        "fmaId": "FMA24508",
+        "name": "Left first metatarsal bone",
+        "sourceName": "left first metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24508",
+        "bounds": {
+          "min": [
+            0.7483699917793274,
+            -8.653757095336914,
+            0.7997099161148071
+          ],
+          "max": [
+            1.043779969215393,
+            -8.221405982971191,
+            1.422410011291504
+          ]
+        },
+        "center": [
+          0.8960749804973602,
+          -8.437581539154053,
+          1.1110599637031555
+        ],
+        "anchor": [
+          0.8785949945449829,
+          -8.485761642456055,
+          1.1109199523925781
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3241",
+            "sha256": "1bb41c84fddb65d6394a55c1f534102794942541212702008a6316f93ba08e16"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "first",
+      "imagingGroup": "FMA24507",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-second-metatarsal-bone",
+        "fmaId": "FMA24509",
+        "name": "Right second metatarsal bone",
+        "sourceName": "right second metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24509",
+        "bounds": {
+          "min": [
+            -1.212730050086975,
+            -8.663178443908691,
+            0.7244799733161926
+          ],
+          "max": [
+            -0.9065660238265991,
+            -8.183246612548828,
+            1.374060034751892
+          ]
+        },
+        "center": [
+          -1.059648036956787,
+          -8.42321252822876,
+          1.0492700040340424
+        ],
+        "anchor": [
+          -1.0672000646591187,
+          -8.418490409851074,
+          1.0409300327301025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3353",
+            "sha256": "f6c034b6b18aee623f510ee40e4171346c084e8bdd092354d634c87fc9af6acf"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "central",
+      "imagingGroup": "FMA24509",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-second-metatarsal-bone",
+        "fmaId": "FMA24510",
+        "name": "Left second metatarsal bone",
+        "sourceName": "left second metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24510",
+        "bounds": {
+          "min": [
+            0.9058940410614014,
+            -8.661637306213379,
+            0.7248899936676025
+          ],
+          "max": [
+            1.213479995727539,
+            -8.183069229125977,
+            1.373710036277771
+          ]
+        },
+        "center": [
+          1.0596870183944702,
+          -8.422353267669678,
+          1.0493000149726868
+        ],
+        "anchor": [
+          1.0705000162124634,
+          -8.424696922302246,
+          1.0501400232315063
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3244",
+            "sha256": "4992101f55b96d8fe47abca6e441c902ba1e60429ee41576a1d3a9fc17e4f22a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "central",
+      "imagingGroup": "FMA24509",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-third-metatarsal-bone",
+        "fmaId": "FMA24511",
+        "name": "Right third metatarsal bone",
+        "sourceName": "right third metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24511",
+        "bounds": {
+          "min": [
+            -1.3359599113464355,
+            -8.663774490356445,
+            0.6836100220680237
+          ],
+          "max": [
+            -0.9832219481468201,
+            -8.236724853515625,
+            1.3085699081420898
+          ]
+        },
+        "center": [
+          -1.1595909297466278,
+          -8.450249671936035,
+          0.9960899651050568
+        ],
+        "anchor": [
+          -1.1883200407028198,
+          -8.480106353759766,
+          1.0029200315475464
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3355",
+            "sha256": "90b28dbcd11e3d3a6f253adb1ddaa33f30040a08c71bb3a86242372ea9b6170e"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "central",
+      "imagingGroup": "FMA24511",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-third-metatarsal-bone",
+        "fmaId": "FMA24512",
+        "name": "Left third metatarsal bone",
+        "sourceName": "left third metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24512",
+        "bounds": {
+          "min": [
+            0.9831990003585815,
+            -8.665047645568848,
+            0.681410014629364
+          ],
+          "max": [
+            1.3360999822616577,
+            -8.23668098449707,
+            1.3079500198364258
+          ]
+        },
+        "center": [
+          1.1596494913101196,
+          -8.450864315032959,
+          0.9946800172328949
+        ],
+        "anchor": [
+          1.146009922027588,
+          -8.43350601196289,
+          1.0128998756408691
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3247",
+            "sha256": "84d0c310fd1448e753ac7ed2bda2d62d9dfb8fbe78f749111aaae3a7281ac5cc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "central",
+      "imagingGroup": "FMA24511",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-fourth-metatarsal-bone",
+        "fmaId": "FMA24513",
+        "name": "Right fourth metatarsal bone",
+        "sourceName": "right fourth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24513",
+        "bounds": {
+          "min": [
+            -1.4266999959945679,
+            -8.673439025878906,
+            0.5697599649429321
+          ],
+          "max": [
+            -1.0186699628829956,
+            -8.319584846496582,
+            1.1968400478363037
+          ]
+        },
+        "center": [
+          -1.2226849794387817,
+          -8.496511936187744,
+          0.8833000063896179
+        ],
+        "anchor": [
+          -1.2274199724197388,
+          -8.512786865234375,
+          0.8551600575447083
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3357",
+            "sha256": "a5fd57a36b7525de383809bbbb37ff6a56a08ed0fb25af1684085418cc6e8202"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "central",
+      "imagingGroup": "FMA24513",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-fourth-metatarsal-bone",
+        "fmaId": "FMA24514",
+        "name": "Left fourth metatarsal bone",
+        "sourceName": "left fourth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24514",
+        "bounds": {
+          "min": [
+            1.0177299976348877,
+            -8.673905372619629,
+            0.5696600079536438
+          ],
+          "max": [
+            1.4263800382614136,
+            -8.320211410522461,
+            1.1942499876022339
+          ]
+        },
+        "center": [
+          1.2220550179481506,
+          -8.497058391571045,
+          0.8819549977779388
+        ],
+        "anchor": [
+          1.207509994506836,
+          -8.499809265136719,
+          0.8479499816894531
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3250",
+            "sha256": "e1656035430f9bf5c5b5bb3de96fabfd18e3d78c6e47c39a403a47bd80dfa61b"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "central",
+      "imagingGroup": "FMA24513",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-fifth-metatarsal-bone",
+        "fmaId": "FMA24515",
+        "name": "Right fifth metatarsal bone",
+        "sourceName": "right fifth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24515",
+        "bounds": {
+          "min": [
+            -1.5233099460601807,
+            -8.698196411132812,
+            0.39382103085517883
+          ],
+          "max": [
+            -1.064579963684082,
+            -8.398794174194336,
+            1.0507800579071045
+          ]
+        },
+        "center": [
+          -1.2939449548721313,
+          -8.548495292663574,
+          0.7223005443811417
+        ],
+        "anchor": [
+          -1.3091399669647217,
+          -8.51633071899414,
+          0.725640058517456
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3359",
+            "sha256": "cc75b866a2d5ac0317eb3a1d64cef41a65231fab975613d108a4fcdcbc2c58b1"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fifth",
+      "imagingGroup": "FMA24515",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-fifth-metatarsal-bone",
+        "fmaId": "FMA24516",
+        "name": "Left fifth metatarsal bone",
+        "sourceName": "left fifth metatarsal bone",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24516",
+        "bounds": {
+          "min": [
+            1.0643699169158936,
+            -8.698140144348145,
+            0.3929239511489868
+          ],
+          "max": [
+            1.5237499475479126,
+            -8.397727012634277,
+            1.0508599281311035
+          ]
+        },
+        "center": [
+          1.294059932231903,
+          -8.547933578491211,
+          0.7218919396400452
+        ],
+        "anchor": [
+          1.3113698959350586,
+          -8.51496696472168,
+          0.7386799454689026
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3253",
+            "sha256": "29642383bc5c2d96f7025b2da0b8139f5b71d5d0e1470622745fd9b606575010"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "fifth",
+      "imagingGroup": "FMA24515",
+      "topics": [
+        "xray",
+        "ultrasound"
+      ],
+      "previous": {
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

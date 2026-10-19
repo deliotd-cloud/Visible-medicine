@@ -1,0 +1,58 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {build} from 'esbuild';
+const sha=(value:Uint8Array|string)=>createHash('sha256').update(value).digest('hex');
+const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
+
+test('learner and review share the exact nine-stop arterial tour without approval or registration',async()=>{
+ const base='public/atlas-runtime/head-neck/',bytes=readFileSync(base+'manifest.json');
+ assert.equal(sha(bytes),'09189d13a033c9c251de2a21672b3d34fbc32fc743cdaf439bffa450e47ef34b');
+ const learner=JSON.parse(bytes.toString()),review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ assert.equal(learner.sourceCommit,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');assert.equal(review.revision,learner.sourceCommit);
+ const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
+ for(const path of ['lib/lower-arterial-tour.ts','content/lower-arterial-tour-pins.json','lib/regional-tours.ts']){
+  const input=inputs.find((f:{path:string})=>f.path===path),imported=review.files.find((f:{path:string})=>f.path===path);
+  assert(input&&imported,path);assert.equal(imported.sourceSha256,input.sha256);assert.equal(sha(readFileSync('atlas-review/'+path)),input.sha256);
+ }
+ const pins=JSON.parse(readFileSync('atlas-review/content/lower-arterial-tour-pins.json','utf8'));
+ assert.equal(sha(JSON.stringify(pins)),'1e9a070c81a7c35f4ae5d6cd255bf22bf39fe02183f88d918fb25d4325d22b31');
+ const result=await build({stdin:{contents:"export {lowerArterialTour} from './atlas-review/lib/regional-tours';export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';export {parseBodyReviewResponse} from './atlas-review/lib/body-review-response';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+ const api=await import('data:text/javascript;base64,'+Buffer.from(result.outputFiles[0].text).toString('base64'));
+ const js=learner.files.filter((f:{path:string})=>f.path.endsWith('.js')).map((f:{path:string;sha256:string})=>{const b=readFileSync(base+f.path);assert.equal(sha(b),f.sha256);return new TextDecoder().decode(b);}).join('\n');
+ const tour=api.lowerArterialTour;assert.equal(tour.status,'draft');assert.equal(tour.steps.length,9);assert.equal(tour.region,'whole-body');
+ assert.deepEqual(tour.steps.map((s:{selectedId:string})=>s.selectedId),pins.entries.map((s:{id:string})=>s.id));
+ assert.equal(tour.revision,'right-lower-limb-arterial-orientation-v2');
+ assert.equal(pins.contextEntries.length,9);assert.equal(pins.bundles.length,8);
+ assert.deepEqual(tour.contextIds,pins.contextEntries.map((entry:{id:string})=>entry.id));
+ for(const step of tour.steps)assert(js.includes(step.caption));
+ const admitted=[...pins.entries,...pins.contextEntries];
+ let maxTours=0;
+ for(const entry of admitted){
+  const packet=wire(await api.bodyReviewMaterial(entry.id));
+  maxTours=Math.max(maxTours,packet.guidedTours.length);
+  assert.equal(packet.approval,false);assert.equal(packet.status,'worksheet-not-submitted');
+  const evidence=packet.guidedTours.find((e:{tour:{id:string}})=>e.tour.id===tour.id);assert(evidence);
+  assert.deepEqual(evidence.tour,wire(tour));
+  const byId=(a:{id:string},b:{id:string})=>a.id.localeCompare(b.id);
+  assert.deepEqual([...evidence.structures].sort(byId),[...admitted].sort(byId));
+  assert.equal(evidence.separation,0);assert.equal(evidence.transitionMs,1800);assert.equal(evidence.transition,'quintic-orbit');
+  assert.deepEqual(await api.parseBodyReviewResponse(packet,entry.id),packet);
+  if(entry.id.endsWith(':right-hip-bone')){
+   assert.equal(packet.guidedTours.length,5);
+   assert(packet.guidedTours.some((e:{tour:{id:string}})=>e.tour.id==='pelvic-venous-tributaries-orientation'));
+  }
+  for(const field of ['caption','omitted','registration','context','duplicate','old-revision']){
+   const changed=wire(packet),index=changed.guidedTours.findIndex((e:{tour:{id:string}})=>e.tour.id===tour.id);
+   if(field==='caption')changed.guidedTours[index].tour.steps[0].caption='Altered';
+   if(field==='omitted')changed.guidedTours.splice(index,1);
+   if(field==='registration')changed.guidedTours[index].patientRegistered=true;
+   if(field==='context')changed.guidedTours[index].tour.contextIds.pop();
+   if(field==='duplicate')changed.guidedTours.push(wire(changed.guidedTours[index]));
+   if(field==='old-revision')changed.guidedTours[index].tour.revision='right-lower-limb-arterial-orientation-v1';
+   assert.equal(await api.parseBodyReviewResponse(changed,entry.id),null,field);
+  }
+ }
+ assert.equal(maxTours,5,'right hip context also participates in the pelvic venous tour');
+});

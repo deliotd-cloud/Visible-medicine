@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const expected=new Map([
+ ['app/eye-layers.tsx','9abf25778d49814d8ffa637bae3586473bc456424e825b55fe453289657de060'],
+ ['app/femoral-components.tsx','9e12401f85e5c3465da8260338c39d78833792465f0b6cccafe424d909ce1ef4'],
+ ['app/um-knee-study.tsx','958e48062c92a627d05656746dd11902867671c6e335e6c0ec1803bd41650d78'],
+ ['app/um-limb-learning.tsx','0f4c06d9e205aa991112374edab392fe30adfb98f2972788cbfed760a8a8c158'],
+]);
+const read=(p:string)=>JSON.parse(readFileSync(p,'utf8'));
+const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
+test('regional learner and protected Review bind the same specimen feedback and retry correction',()=>{
+ const base='public/atlas-runtime/head-neck/',learner=read(base+'manifest.json');
+ const review=read('atlas-review/manifest.json'),viewer=read('public/atlas-review-viewer/manifest.json');
+ const inputs=read(base+'source-inputs.json'),renderer=read('atlas-review/content/body-renderer-revision.json');
+ assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,revision);assert.equal(viewer.sourceCommit,revision);
+ for(const [path,hash]of expected){
+  assert.equal(inputs.find((f:{path:string})=>f.path===path)?.sha256,hash);
+  assert.equal(renderer.dependencies.find((f:{path:string})=>f.path===path)?.sha256,hash);
+  const imported=review.files.find((f:{path:string})=>f.path===path);
+  assert.equal(imported?.sourceSha256,hash);assert.equal(sha(readFileSync('atlas-review/'+path)),imported.importedSha256);
+ }
+ for(const [root,manifest]of [[base,learner],['public/atlas-review-viewer/',viewer]] as const){
+  const code=manifest.files.filter((f:{path:string})=>f.path.endsWith('.js')).map((f:{path:string;sha256:string})=>{
+   const bytes=readFileSync(root+f.path);assert.equal(sha(bytes),f.sha256);return bytes.toString();
+  }).join('\n');
+  for(const copy of ['Some model files require sign-in.','The website refused access to some model files.','Check access again','Return to dissection to retry.'])assert(code.includes(copy),copy);
+ }
+ const arterial=readFileSync('atlas-review/app/femoral-components.tsx','utf8');
+ assert(arterial.includes('setFailureReason(reason)'));
+ assert(!arterial.includes("setHealth('starting')"),'Asset retry must not invent a canvas restart');
+ assert.equal(learner.clinicalApproved,false);assert.equal(learner.patientDataIncluded,false);
+});

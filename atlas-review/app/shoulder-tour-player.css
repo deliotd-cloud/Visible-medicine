@@ -1,0 +1,49 @@
+.shoulder-tour-start { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px; margin: 0 10px 10px; border: 1px solid var(--border); border-radius: .75rem; }
+.shoulder-tour-start h3 { margin: 0; font-size: 1rem; }
+.shoulder-tour-start p { margin: .3rem 0; font-size: .875rem; }
+.shoulder-tour-start small { color: var(--muted-foreground); }
+.shoulder-tour-credits { display: block; margin: 0 12px 8px; font-size: .75rem; text-decoration: underline; }
+.shoulder-workspace.guided-learning-open > .body-layout { grid-template-columns: minmax(0, 1fr) !important; grid-template-rows: minmax(0, 1fr) !important; grid-template-areas: 'model' !important; }
+.shoulder-workspace.guided-learning-open .body-layout > :is(.body-rail, .body-info, .body-controls-launcher, .body-info-launcher) { display: none !important; }
+.shoulder-workspace.guided-learning-open .shoulder-view-controls,
+.shoulder-workspace.guided-learning-open .shoulder-heading-actions { display: none; }
+.shoulder-workspace.guided-learning-open .shoulder-model-workspace > .viewer-panel { min-height: 240px; flex: 1 0 240px; }
+.shoulder-tour-player { margin: 0 10px 8px; flex-shrink: 0; }
+.shoulder-model-workspace[data-tour-active='true'] .shoulder-view-controls,
+.shoulder-model-workspace[data-tour-active='true'] .shoulder-view-footer,
+.shoulder-model-workspace[data-tour-active='true'] .shoulder-heading-actions { display: none; }
+.shoulder-tour-player { min-width: 0; padding: .75rem; border: 1px solid var(--border); border-radius: .75rem; background: var(--background); font-size: .875rem; line-height: 1.45; }
+.shoulder-tour-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25rem .75rem; }
+.shoulder-tour-heading span { color: var(--muted-foreground); font-size: .75rem; }
+.shoulder-tour-primary { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .5rem 1rem; align-items: start; margin-top: .35rem; }
+.shoulder-tour-caption { min-width: 0; max-height: min(18dvh, 8rem); overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; margin: 0; padding-right: .4rem; }
+.shoulder-tour-caption:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+.shoulder-tour-primary output { grid-column: 1; }
+.shoulder-tour-secondary { display: flex; flex-wrap: wrap; gap: 0 1rem; align-items: start; max-height: min(28dvh, 16rem); overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.shoulder-tour-secondary > details { flex: 1 1 12rem; min-width: 0; }
+.shoulder-tour-secondary > .tour-imaging-notes { margin: 0; }
+.shoulder-tour-evidence { margin: 0; font-size: .75rem; }
+.shoulder-tour-evidence summary { min-height: 2.75rem; align-content: center; cursor: pointer; }
+.shoulder-tour-evidence ul { margin: .4rem 0; padding-left: 1.25rem; }
+.shoulder-tour-evidence a { text-decoration: underline; overflow-wrap: anywhere; }
+.shoulder-tour-evidence p { margin: .35rem 0; color: var(--muted-foreground); }
+.shoulder-tour-controls { display: flex; flex-wrap: nowrap; gap: .35rem; }
+.shoulder-tour-controls button { min-height: 2.75rem; }
+@media (max-width: 900px) { .shoulder-tour-primary { grid-template-columns: minmax(0, 1fr); } .shoulder-tour-controls { flex-wrap: wrap; } .shoulder-tour-primary output { grid-column: 1; } }
+@media (max-width: 420px) { .shoulder-tour-player { padding: .6rem; } .shoulder-tour-controls button { flex: 1 1 auto; } }
+/* In a wide embedded workspace, reading notes must not push the model below
+   the viewport. The adjacent wrapper owns the player and its required credits. */
+@media (min-width: 1100px) {
+  .shoulder-workspace.guided-learning-open .shoulder-model-workspace[data-tour-active='true'] { display: grid; grid-template-columns: minmax(18rem, 28%) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); gap: 10px; padding: 10px; overflow: hidden; }
+  .shoulder-model-workspace[data-tour-active='true'] > .shoulder-model-heading { display: none; }
+  .shoulder-model-workspace[data-tour-active='true'] > .shoulder-model-heading + div { grid-column: 1; grid-row: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-player { display: flex; flex-direction: column; flex: 1; min-height: 0; margin: 0 0 6px; }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-heading { flex-direction: column; align-items: stretch; }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-primary { display: flex; flex-direction: column; align-items: stretch; }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-caption { max-height: min(25dvh, 12rem); }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-controls { flex-wrap: wrap; }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-secondary { display: block; flex: 1; min-height: 0; max-height: none; margin-top: 6px; }
+  .shoulder-model-workspace[data-tour-active='true'] .tour-imaging-reader { max-height: none; overflow: visible; }
+  .shoulder-model-workspace[data-tour-active='true'] .shoulder-tour-credits { flex-shrink: 0; margin: 0; }
+  .shoulder-workspace.guided-learning-open .shoulder-model-workspace[data-tour-active='true'] > .viewer-panel { grid-column: 2; grid-row: 1; min-height: 0 !important; margin: 0; }
+}

@@ -1,0 +1,835 @@
+{
+  "readySha256": "43830ece45f091c7e1facec1b09b7ee3f2cf9a18e40a3abeb74c1a8214190165",
+  "testedManifestSha256": "3c480b0574b911fa37ea311cb42576ee08a90944ed576500b0c571297203e75d",
+  "selectedListingSha256": "8036b6d4262f907830f2520379da07e2004ad49a6efd8f8d17cf58c949c39247",
+  "serializationDescriptorSha256": "463511be8ed5ec9e8b5faf464777d9c6fafb57f69b239756f708e76454cc5f08",
+  "preflightCorrection": "Before any network/write, JSON-vs-TSV serialization refused(fe846), then PowerShell5 different sort collation refused(ff760). Main observed original PowerShell Core7.6.5 and independently reproduced exact578522byte TSV/8036digest with pwsh; all per-file hashes/counts still mandatory. No product/native assertion changed.",
+  "workerScreen": {
+    "schema": "visible-medicine.website-source-egress-screen/1",
+    "decision": "HOLD",
+    "baseline": {
+      "bareRepository": "F:/VisibleMedicine/history/website-work/github-public-focus-20261019.git",
+      "commit": "55c69319a68dd4b79f022282c11cfa7f313cac33",
+      "tree": "5b7c104b2bb984f41eb0ee0fc31d8a01db4f9f60",
+      "parentScreenedManifest": "F:/VisibleMedicine/recovery/checkpoints/20261019-website-public-focus-backup/remote-source-restored/.source-backup/manifest.json",
+      "parentManifestSha256": "df594202cf8227bb867c65802156d746f3fbd0cc5384f24e9fc197e6dd776fd1"
+    },
+    "currentSource": {
+      "candidateRoot": "F:/VisibleMedicine/staging/20261019-public-focus-environment/website",
+      "testedManifest": "F:/VisibleMedicine/recovery/checkpoints/20261019-tour-discovery-keyboard/website-review/types-build/source-after.json",
+      "testedManifestSha256": "3c480b0574b911fa37ea311cb42576ee08a90944ed576500b0c571297203e75d",
+      "selectedPaths": 4911,
+      "selectedBytes": 268649281,
+      "selectedListingSha256": "8036b6d4262f907830f2520379da07e2004ad49a6efd8f8d17cf58c949c39247",
+      "verification": "4911/4911 selected candidate files matched tested manifest path, bytes, and SHA-256; 0 missing; 0 mismatched."
+    },
+    "deltaFromParent": {
+      "added": [
+        {
+          "path": "atlas-review/content/corpus-spongiosum-xray-v2.ts",
+          "bytes": 1548
+        },
+        {
+          "path": "atlas-review/lib/corpus-spongiosum-xray-v2.ts",
+          "bytes": 1346
+        },
+        {
+          "path": "next-env.d.ts",
+          "bytes": 291
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/abdominal-wall-study-C7TTyMmZ.js",
+          "bytes": 61397
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/anatomy-scene-BB1PPFfR.js",
+          "bytes": 9655
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/back-layers-study-Dw4WUJeE.js",
+          "bytes": 90387
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/body-content-BooVUqFI.js",
+          "bytes": 6525165
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/body-scene-Cuh7WhmC.js",
+          "bytes": 53122
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/cutaway-controls-BscY_vj-.js",
+          "bytes": 122109
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/eye-layers-321eLoJQ.js",
+          "bytes": 17453
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/hra-pelvis-study-OasPlGq7.js",
+          "bytes": 105632
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/hra-renal-study-Doir4Kch.js",
+          "bytes": 7522
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/hra-renal-teaching-CsnHa-ES.js",
+          "bytes": 118009
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/independent-study-navigation-D8-jWLak.js",
+          "bytes": 2638
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/index-DjFidoaQ.js",
+          "bytes": 3066559
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/index-IR4xJSh3.css",
+          "bytes": 194635
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/pelvis-C7bQUeIk.js",
+          "bytes": 442030
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/scene-recovery-Cw70HXgo.js",
+          "bytes": 1065422
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/shoulder-explorer-BundGRFW.js",
+          "bytes": 104199
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/slider-D92wk6Yf.js",
+          "bytes": 878791
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/um-knee-study-CRHkn3bZ.js",
+          "bytes": 682911
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/um-limb-study-Bwfy0Fok.js",
+          "bytes": 2596
+        },
+        {
+          "path": "public/atlas-review-viewer/assets/ventricles-BAf65i14.js",
+          "bytes": 1315803
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/abdominal-wall-study-HkqgyL2k.js",
+          "bytes": 61423
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/back-layers-study-B07L6iO0.js",
+          "bytes": 90413
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/body-content-Bknj5MyM.js",
+          "bytes": 6525023
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/cutaway-controls-CiuCpA0d.js",
+          "bytes": 122095
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/eye-layers-Clfn4T0P.js",
+          "bytes": 17408
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/hra-pelvis-study-B0L48Pzq.js",
+          "bytes": 105625
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/hra-renal-study-D1Zjn5QG.js",
+          "bytes": 7515
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/hra-renal-teaching-ySU_BljZ.js",
+          "bytes": 118009
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/independent-study-navigation-DmXUVEId.js",
+          "bytes": 2628
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/index-Cyl93ktp.js",
+          "bytes": 2692685
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/pelvis-C7bQUeIk.js",
+          "bytes": 442030
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/slider-B3pEJGnB.js",
+          "bytes": 877069
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/um-knee-study-DJnRfUan.js",
+          "bytes": 682861
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/um-limb-study-hneqvr0J.js",
+          "bytes": 2603
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/assets/ventricles-vc5xEg9G.js",
+          "bytes": 1315771
+        },
+        {
+          "path": "public/atlas-runtime/lower-limb/assets/index-D2Av-82j.js",
+          "bytes": 2525677
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/assets/anatomy-scene-BjrigKFR.js",
+          "bytes": 1075111
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/assets/body-content-Du6Qr9Mg.js",
+          "bytes": 7558393
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/assets/index-COS7k1Uw.js",
+          "bytes": 1036599
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/assets/pelvis-C7bQUeIk.js",
+          "bytes": 442030
+        },
+        {
+          "path": "tests/corpus-xray-v2-current-delivery.test.mjs",
+          "bytes": 6670
+        },
+        {
+          "path": "tests/fixtures/corpus-xray-v2-current-delivery-30b3752e.mjs.raw",
+          "bytes": 6670
+        },
+        {
+          "path": "tests/fixtures/current-atlas-delivery-30b3752e.json",
+          "bytes": 1777
+        },
+        {
+          "path": "tests/fixtures/current-atlas-delivery-30b3752e.txt",
+          "bytes": 13011
+        },
+        {
+          "path": "tests/fixtures/current-atlas-delivery-f5097af8.json",
+          "bytes": 1777
+        },
+        {
+          "path": "tests/fixtures/current-atlas-delivery-f5097af8.txt",
+          "bytes": 10944
+        },
+        {
+          "path": "tests/fixtures/ui-teaching-current-delivery-30b3752e.mjs.raw",
+          "bytes": 16195
+        },
+        {
+          "path": "tests/fixtures/ui-teaching-current-delivery-f5097af8.mjs.raw",
+          "bytes": 16195
+        },
+        {
+          "path": "tests/tour-discovery-current-delivery.test.mjs",
+          "bytes": 1998
+        }
+      ],
+      "changed": [
+        {
+          "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
+          "priorBytes": 350786,
+          "currentBytes": 351954
+        },
+        {
+          "path": "atlas-review/app/body-content.ts",
+          "priorBytes": 81886,
+          "currentBytes": 82089
+        },
+        {
+          "path": "atlas-review/app/whole-body-guided-learning.tsx",
+          "priorBytes": 6847,
+          "currentBytes": 7197
+        },
+        {
+          "path": "atlas-review/content/body-renderer-revision.json",
+          "priorBytes": 213699,
+          "currentBytes": 213995
+        },
+        {
+          "path": "atlas-review/content/body-review-display-pins.json",
+          "priorBytes": 203217,
+          "currentBytes": 203217
+        },
+        {
+          "path": "atlas-review/content/regional-teaching/pelvis.json",
+          "priorBytes": 449431,
+          "currentBytes": 451191
+        },
+        {
+          "path": "atlas-review/content/review-revisions.json",
+          "priorBytes": 12713,
+          "currentBytes": 12713
+        },
+        {
+          "path": "atlas-review/integration-inputs.json",
+          "priorBytes": 263991,
+          "currentBytes": 264313
+        },
+        {
+          "path": "atlas-review/manifest.json",
+          "priorBytes": 374766,
+          "currentBytes": 375258
+        },
+        {
+          "path": "lib/atlas-delivery-policy.ts",
+          "priorBytes": 493,
+          "currentBytes": 493
+        },
+        {
+          "path": "lib/atlas-model-inventory.json",
+          "priorBytes": 33492,
+          "currentBytes": 33492
+        },
+        {
+          "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+          "priorBytes": 387283,
+          "currentBytes": 388451
+        },
+        {
+          "path": "public/atlas-review-viewer/index.html",
+          "priorBytes": 1245,
+          "currentBytes": 1245
+        },
+        {
+          "path": "public/atlas-review-viewer/manifest.json",
+          "priorBytes": 9033,
+          "currentBytes": 9033
+        },
+        {
+          "path": "public/atlas-runtime/female-pelvis/LICENSES/THIRD_PARTY_NOTICES.md",
+          "priorBytes": 350786,
+          "currentBytes": 351954
+        },
+        {
+          "path": "public/atlas-runtime/female-pelvis/manifest.json",
+          "priorBytes": 6208,
+          "currentBytes": 6208
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/LICENSES/THIRD_PARTY_NOTICES.md",
+          "priorBytes": 350786,
+          "currentBytes": 351954
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/index.html",
+          "priorBytes": 1125,
+          "currentBytes": 1125
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/manifest.json",
+          "priorBytes": 627564,
+          "currentBytes": 627564
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/selection-channel.json",
+          "priorBytes": 72,
+          "currentBytes": 72
+        },
+        {
+          "path": "public/atlas-runtime/head-neck/source-inputs.json",
+          "priorBytes": 206254,
+          "currentBytes": 206534
+        },
+        {
+          "path": "public/atlas-runtime/lower-limb/LICENSES/THIRD_PARTY_NOTICES.md",
+          "priorBytes": 350786,
+          "currentBytes": 351954
+        },
+        {
+          "path": "public/atlas-runtime/lower-limb/index.html",
+          "priorBytes": 477,
+          "currentBytes": 477
+        },
+        {
+          "path": "public/atlas-runtime/lower-limb/manifest.json",
+          "priorBytes": 3436,
+          "currentBytes": 3436
+        },
+        {
+          "path": "public/atlas-runtime/lower-limb/specimen-channel.json",
+          "priorBytes": 72,
+          "currentBytes": 72
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/LICENSES/THIRD_PARTY_NOTICES.md",
+          "priorBytes": 350786,
+          "currentBytes": 351954
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/index.html",
+          "priorBytes": 504,
+          "currentBytes": 504
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/manifest.json",
+          "priorBytes": 4795,
+          "currentBytes": 4795
+        },
+        {
+          "path": "public/atlas-runtime/shoulder/source-inputs.json",
+          "priorBytes": 153184,
+          "currentBytes": 153464
+        },
+        {
+          "path": "scripts/import-clinical-review.mjs",
+          "priorBytes": 6751,
+          "currentBytes": 6751
+        },
+        {
+          "path": "tests/current-atlas-delivery.test.mjs",
+          "priorBytes": 10944,
+          "currentBytes": 13011
+        },
+        {
+          "path": "tests/fixtures/current-atlas-delivery.json",
+          "priorBytes": 1777,
+          "currentBytes": 1777
+        },
+        {
+          "path": "tests/ui-teaching-current-delivery.test.mjs",
+          "priorBytes": 16195,
+          "currentBytes": 16195
+        }
+      ],
+      "deletedForRestore": [
+        "public/atlas-review-viewer/assets/abdominal-wall-study-CfjGhzxU.js",
+        "public/atlas-review-viewer/assets/anatomy-scene-kOi8LuNE.js",
+        "public/atlas-review-viewer/assets/back-layers-study-D6EELUa7.js",
+        "public/atlas-review-viewer/assets/body-content-DjUmEYr2.js",
+        "public/atlas-review-viewer/assets/body-scene-DK1_8Qp7.js",
+        "public/atlas-review-viewer/assets/cutaway-controls-Dki_K7_f.js",
+        "public/atlas-review-viewer/assets/eye-layers-Don7wd65.js",
+        "public/atlas-review-viewer/assets/hra-pelvis-study-DTvOGoj3.js",
+        "public/atlas-review-viewer/assets/hra-renal-study-CqhSEVnf.js",
+        "public/atlas-review-viewer/assets/hra-renal-teaching-DAXsnFai.js",
+        "public/atlas-review-viewer/assets/independent-study-navigation-EOl3IcoV.js",
+        "public/atlas-review-viewer/assets/index-BBhTqXD-.css",
+        "public/atlas-review-viewer/assets/index-BwBU3Paj.js",
+        "public/atlas-review-viewer/assets/pelvis-D6ZvRxX9.js",
+        "public/atlas-review-viewer/assets/scene-recovery-B629KVqC.js",
+        "public/atlas-review-viewer/assets/shoulder-explorer-BIX2l7Re.js",
+        "public/atlas-review-viewer/assets/slider-fz0PrVc3.js",
+        "public/atlas-review-viewer/assets/um-knee-study-x01i6Elm.js",
+        "public/atlas-review-viewer/assets/um-limb-study-CuoV4D-1.js",
+        "public/atlas-review-viewer/assets/ventricles-B5-A9qPR.js",
+        "public/atlas-runtime/head-neck/assets/abdominal-wall-study-DC0R9FOm.js",
+        "public/atlas-runtime/head-neck/assets/back-layers-study-DW-_lrph.js",
+        "public/atlas-runtime/head-neck/assets/body-content-Bi5FOMkn.js",
+        "public/atlas-runtime/head-neck/assets/cutaway-controls-Ea2r6Wdz.js",
+        "public/atlas-runtime/head-neck/assets/eye-layers-DmD194Lw.js",
+        "public/atlas-runtime/head-neck/assets/hra-pelvis-study-Kjsp23Ag.js",
+        "public/atlas-runtime/head-neck/assets/hra-renal-study-B2V9NcfW.js",
+        "public/atlas-runtime/head-neck/assets/hra-renal-teaching-C8yJ4f6b.js",
+        "public/atlas-runtime/head-neck/assets/independent-study-navigation-BaMCQsXV.js",
+        "public/atlas-runtime/head-neck/assets/index-Cc_Fizja.js",
+        "public/atlas-runtime/head-neck/assets/pelvis-D6ZvRxX9.js",
+        "public/atlas-runtime/head-neck/assets/slider-CqKk-xqY.js",
+        "public/atlas-runtime/head-neck/assets/um-knee-study-1LzJeVtL.js",
+        "public/atlas-runtime/head-neck/assets/um-limb-study-Cwe-0vwH.js",
+        "public/atlas-runtime/head-neck/assets/ventricles-CKX59doN.js",
+        "public/atlas-runtime/lower-limb/assets/index-iBn3w-ix.js",
+        "public/atlas-runtime/shoulder/assets/anatomy-scene-gJmcXZhl.js",
+        "public/atlas-runtime/shoulder/assets/body-content-CWLf7xwb.js",
+        "public/atlas-runtime/shoulder/assets/index-BA2hFVej.js",
+        "public/atlas-runtime/shoulder/assets/pelvis-D6ZvRxX9.js",
+        "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
+        "tests/fixtures/head-pilot-9fba-epoch.json",
+        "tests/fixtures/historical-inline-45-epoch.json",
+        "tests/fixtures/historical-inline-46-epoch.json",
+        "tests/fixtures/intracranial-us-589-delivery-archive.json"
+      ],
+      "unchanged": {
+        "paths": 4826,
+        "bytes": 223159414
+      },
+      "classification": "Forty replacement public runtime assets are source-manifest deltas. Old hashed runtime assets are restoration deletions. Five additional restore deletions are held credential-marker test fixtures and are excluded from egress."
+    },
+    "generatedRuntimeScreen": {
+      "publicRuntimeDeltaPaths": 40,
+      "publicRuntimeDeltaBytes": 40567003,
+      "geometry": "All GLB geometry is excluded (144 paths, 254443988 bytes). No generated public runtime is cleared as a substitute for geometry, clinical, privacy, or licensing review.",
+      "attribution": "Reuse/attribution markers were present in selected public runtime/review text. This evidence does not grant blanket licensing approval."
+    },
+    "holds": [
+      "Five selected-manifest test-fixture files matched conservative credential-shaped markers; values omitted and files excluded.",
+      "No public egress decision is authorized by this screen."
+    ],
+    "exclusions": [
+      {
+        "class": "glb",
+        "paths": 144,
+        "bytes": 254443988
+      },
+      {
+        "class": "local",
+        "paths": 3,
+        "bytes": 14470449
+      },
+      {
+        "class": "vinext",
+        "paths": 1,
+        "bytes": 214
+      },
+      {
+        "class": "heldOperationalDocuments",
+        "paths": 3,
+        "bytes": 2398605
+      },
+      {
+        "class": "credentialMarkerHold",
+        "paths": 5,
+        "bytes": 58485058
+      },
+      {
+        "class": "sqliteOrDb",
+        "paths": 0,
+        "bytes": 0
+      }
+    ],
+    "limits": [
+      "No GLB, .local, .vinext, SQLite/DB, source-backup, node_modules, or the three inherited held operational documents is selected.",
+      "D1-named documentation remains ordinary text source only; no D1 data store or SQLite artifact is selected.",
+      "This is an integrity and egress screen, not clinical, privacy, licensing, release, or publication approval."
+    ]
+  },
+  "workerSelection": {
+    "schema": "visible-medicine.website-selected-source/1",
+    "decision": "HOLD",
+    "candidateRoot": "F:/VisibleMedicine/staging/20261019-public-focus-environment/website",
+    "testedSourceManifest": "F:/VisibleMedicine/recovery/checkpoints/20261019-tour-discovery-keyboard/website-review/types-build/source-after.json",
+    "testedSourceManifestSha256": "3c480b0574b911fa37ea311cb42576ee08a90944ed576500b0c571297203e75d",
+    "selection": {
+      "source": "Exact tested manifest. Each included entry was checked against the candidate by path, byte length, and SHA-256.",
+      "selectedPaths": 4911,
+      "selectedBytes": 268649281,
+      "selectedListingSha256": "8036b6d4262f907830f2520379da07e2004ad49a6efd8f8d17cf58c949c39247",
+      "actualSourceProof": {
+        "matchedPaths": 4911,
+        "missingPaths": 0,
+        "mismatchedPaths": 0,
+        "matchedBytes": 268649281
+      },
+      "exclusions": [
+        {
+          "class": "glb",
+          "paths": 144,
+          "bytes": 254443988
+        },
+        {
+          "class": "local",
+          "paths": 3,
+          "bytes": 14470449
+        },
+        {
+          "class": "vinext",
+          "paths": 1,
+          "bytes": 214
+        },
+        {
+          "class": "heldOperationalDocuments",
+          "paths": 3,
+          "bytes": 2398605
+        },
+        {
+          "class": "credentialMarkerHold",
+          "paths": 5,
+          "bytes": 58485058
+        },
+        {
+          "class": "sqliteOrDb",
+          "paths": 0,
+          "bytes": 0
+        }
+      ],
+      "heldOperationalDocuments": [
+        "docs/fracture-exams/CHECKPOINT-20260928.md",
+        "docs/fracture-exams/README.md",
+        "docs/master-plan.md"
+      ],
+      "credentialMarkerHold": {
+        "paths": 5,
+        "bytes": 58485058,
+        "detail": "Five test-fixture files matched conservative credential-shaped markers. Values are intentionally omitted. They are not selected for egress."
+      }
+    },
+    "limits": [
+      "No GLB, .local, .vinext, SQLite/DB, source-backup, node_modules, or the three inherited held operational documents is selected.",
+      "D1-named documentation remains ordinary text source only; no D1 data store or SQLite artifact is selected.",
+      "This is an integrity and egress screen, not clinical, privacy, licensing, release, or publication approval."
+    ]
+  },
+  "classification": {
+    "schema": "visible-medicine.website-hold-classification/1",
+    "decision": "HOLD",
+    "scope": {
+      "source": "Only the five fixture paths listed in website-screen.json.deltaFromParent.deletedForRestore were inspected.",
+      "unchangedReports": [
+        "F:/VisibleMedicine/staging/20261019-paired-source-egress-screen/website-selected.json",
+        "F:/VisibleMedicine/staging/20261019-paired-source-egress-screen/website-screen.json"
+      ]
+    },
+    "detector": {
+      "mode": "case-insensitive",
+      "patterns": [
+        "AWS-access-key-shaped: AKIA followed by 16 uppercase alphanumeric characters",
+        "Google-API-key-shaped: AIza followed by 35 URL-safe characters"
+      ],
+      "outcome": "The 80 envelope matches are false positives for exposed plaintext credentials: all occurred only in encoded payload fields and the corresponding decoded payloads produced zero detector hits."
+    },
+    "fixtures": [
+      {
+        "path": "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
+        "bytes": 21540930,
+        "sha256": "422e4ccfeb1f440a31fb6a1cf218c9171b0cc0471d66911d2cafdb51e7934904",
+        "schema": "vm-hand-vessel-xray-589-delivery-archive-3",
+        "location": "$.records[index].gzipBase64",
+        "recordCount": 1598,
+        "recordShape": [
+          "path",
+          "sha256",
+          "gzipBase64"
+        ],
+        "occurrences": 28,
+        "families": {
+          "awsAccessKeyShaped": {
+            "count": 17,
+            "length": 20
+          },
+          "googleApiKeyShaped": {
+            "count": 11,
+            "length": 39
+          }
+        },
+        "matchingRecordIndexes": [
+          131,
+          134,
+          170,
+          346,
+          449,
+          547,
+          552,
+          749,
+          1117,
+          1219,
+          1247,
+          1248,
+          1456,
+          1529,
+          1531,
+          1541,
+          1545,
+          1552,
+          1555,
+          1556,
+          1561,
+          1575,
+          1586,
+          1587,
+          1593
+        ],
+        "decodedPayloadBytes": 29316622,
+        "decodedDetectorHits": 0,
+        "decodeFailures": 0
+      },
+      {
+        "path": "tests/fixtures/head-pilot-9fba-epoch.json",
+        "bytes": 5080893,
+        "sha256": "644bae978dcd4e2a167e119788fdf7d8e7ce32052b375e431159405a766b87c0",
+        "schema": "visible-medicine-head-pilot-9fba-utf8-epoch-v2",
+        "codec": "deflate-raw-utf8",
+        "location": "$.files[index].deflateRawBase64",
+        "recordCount": 26,
+        "recordShape": [
+          "path",
+          "bytes",
+          "compressedBytes",
+          "sha256",
+          "deflateRawBase64"
+        ],
+        "occurrences": 9,
+        "families": {
+          "awsAccessKeyShaped": {
+            "count": 3,
+            "length": 20
+          },
+          "googleApiKeyShaped": {
+            "count": 6,
+            "length": 39
+          }
+        },
+        "matchingRecordIndexes": [
+          7,
+          11,
+          17
+        ],
+        "decodedPayloadBytes": 10133472,
+        "decodedDetectorHits": 0,
+        "decodeFailures": 0
+      },
+      {
+        "path": "tests/fixtures/historical-inline-45-epoch.json",
+        "bytes": 792233,
+        "sha256": "6f64fd26f4608c813aeb9c08bb98e3c3293f593fd2675b4c27f39350c2f3ba8e",
+        "schema": "vm-inline-before-handshake-45-1",
+        "location": "$.records[index].gzipBase64",
+        "recordCount": 24,
+        "recordShape": [
+          "path",
+          "sha256",
+          "gzipBase64"
+        ],
+        "occurrences": 1,
+        "families": {
+          "googleApiKeyShaped": {
+            "count": 1,
+            "length": 39
+          }
+        },
+        "matchingRecordIndexes": [
+          0
+        ],
+        "decodedPayloadBytes": 259232,
+        "decodedDetectorHits": 0,
+        "decodeFailures": 0
+      },
+      {
+        "path": "tests/fixtures/historical-inline-46-epoch.json",
+        "bytes": 8772394,
+        "sha256": "75281702b12599ee02c2d15c2996bea149062a4ad509040baf381eb1d190c9c3",
+        "schema": "vm-inline-recovery-46-1",
+        "location": "$.records[index].gzipBase64",
+        "recordCount": 1667,
+        "recordShape": [
+          "path",
+          "sha256",
+          "gzipBase64"
+        ],
+        "occurrences": 14,
+        "families": {
+          "awsAccessKeyShaped": {
+            "count": 10,
+            "length": 20
+          },
+          "googleApiKeyShaped": {
+            "count": 4,
+            "length": 39
+          }
+        },
+        "matchingRecordIndexes": [
+          32,
+          297,
+          401,
+          559,
+          564,
+          589,
+          650,
+          658,
+          814,
+          1326,
+          1497,
+          1522,
+          1550,
+          1589
+        ],
+        "decodedPayloadBytes": 4029330,
+        "decodedDetectorHits": 0,
+        "decodeFailures": 0
+      },
+      {
+        "path": "tests/fixtures/intracranial-us-589-delivery-archive.json",
+        "bytes": 22298608,
+        "sha256": "650ceba861ab61694d07a8bd8c0b7736b70149d7bf565f853e7aed3dc06c543b",
+        "schema": "vm-intracranial-us-589-delivery-archive-2",
+        "location": "$.records[index].gzipBase64",
+        "recordCount": 1656,
+        "recordShape": [
+          "path",
+          "sha256",
+          "gzipBase64"
+        ],
+        "occurrences": 28,
+        "families": {
+          "awsAccessKeyShaped": {
+            "count": 17,
+            "length": 20
+          },
+          "googleApiKeyShaped": {
+            "count": 11,
+            "length": 39
+          }
+        },
+        "matchingRecordIndexes": [
+          23,
+          203,
+          206,
+          222,
+          233,
+          330,
+          621,
+          622,
+          682,
+          739,
+          761,
+          821,
+          977,
+          1522,
+          1545,
+          1547,
+          1557,
+          1562,
+          1568,
+          1571,
+          1572,
+          1577,
+          1635,
+          1646,
+          1647
+        ],
+        "decodedPayloadBytes": 29316622,
+        "decodedDetectorHits": 0,
+        "decodeFailures": 0
+      }
+    ],
+    "classification": {
+      "credentialDetector": "False positive for plaintext credential exposure; the matches are chance substrings in base64 envelopes.",
+      "egress": "HOLD. These are opaque historical/archive test fixtures and have no independent public-data, privacy, clinical, or licensing clearance. They remain omitted from the selected source list."
+    },
+    "absenceRecheck": {
+      "priorClaim": "32 absent expected paths",
+      "result": "Not reproducible against the same candidate and tested manifest. Both the broad 4,919-path predicate and final selected predicate resolved all checked paths.",
+      "currentBroadPredicate": {
+        "checkedPaths": 4919,
+        "missingPaths": 0
+      },
+      "currentFinalPredicate": {
+        "checkedPaths": 4911,
+        "missingPaths": 0
+      },
+      "conclusion": "Do not classify the earlier count as old hash-path deletions; the authoritative current result is zero missing."
+    },
+    "limits": [
+      "No matched values or decoded payload content is recorded.",
+      "The decoded detector result does not constitute approval to export the fixtures or their contents.",
+      "No source, manifest, report, or generated runtime file was changed."
+    ]
+  },
+  "heldArchivePaths": [
+    "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
+    "tests/fixtures/head-pilot-9fba-epoch.json",
+    "tests/fixtures/historical-inline-45-epoch.json",
+    "tests/fixtures/historical-inline-46-epoch.json",
+    "tests/fixtures/intracranial-us-589-delivery-archive.json"
+  ],
+  "sourceIntegrity": "All4911 selected source files exactly equal tested35case/types/prebuild/build state; no source missing.32earlier missing observation was not reproducible, not asserted as a deletion count.",
+  "recoveryLimits": "Five historical compressed test archives deliberately omitted and retained F-local; some historical tests require those originals. Current app source, selected generated bundles and current tests backed up, not complete whole-project/private-data recovery. No old Git ancestry retained in the new backup root commit."
+}

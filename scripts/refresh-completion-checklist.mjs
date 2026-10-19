@@ -1,0 +1,70 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync,existsSync,statSync} from 'node:fs';
+import {resolve,relative} from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const statuses=['verified-local','partial','open','needs-owner','held','proposed','done'];
+const scopes=['release-essential','full-roadmap','optional'];
+export function evidencePath(data,value){
+ const match=/^([a-z]+):(.+)$/.exec(value);assert(match&&Object.hasOwn(data.roots,match[1]),'Unknown evidence root');
+ assert(!match[2].includes('\\')&&!match[2].startsWith('/')&&!match[2].split('/').some(part=>!part||part==='.'||part==='..'||part.startsWith('.env')||['.local','private','scans','datasets'].includes(part)),'Unsafe evidence path');
+ const root=resolve(data.roots[match[1]]),path=resolve(root,match[2]);assert(!relative(root,path).startsWith('..'));return path.replaceAll('\\','/');
+}
+export function validateChecklist(data){
+ assert.equal(data.schemaVersion,1);assert(Number.isSafeInteger(data.revision)&&data.revision>0);assert(/^\d{4}-\d{2}-\d{2}$/.test(data.updatedAt));assert(Array.isArray(data.items)&&data.items.length>0);
+ if(data.pendingAtlasSource!==undefined){
+  const p=data.pendingAtlasSource,keys=['commit','tree','rootDraftPlacements','rootPendingPlacements','rootGeneratedIdentificationPlacements','websiteImported','evidence','note'];
+  assert(p&&typeof p==='object'&&!Array.isArray(p)&&Object.keys(p).length===keys.length&&keys.every(k=>Object.hasOwn(p,k)),'Invalid pending source fields');
+  assert(/^[a-f0-9]{40}$/.test(p.commit)&&/^[a-f0-9]{40}$/.test(p.tree),'Source must have exact Git identities');
+  assert(typeof p.websiteImported==='boolean','Source import state must be explicit');
+  if(p.websiteImported){
+   assert.equal(p.commit,data.baseline.atlasCommit,'Imported source must match website baseline');
+   assert.equal(p.tree,data.baseline.atlasTree,'Imported tree must match website baseline');
+   for(const key of ['rootDraftPlacements','rootPendingPlacements','rootGeneratedIdentificationPlacements'])assert.equal(p[key],data.baseline[key],'Imported counts must match website baseline');
+  }else assert.notEqual(p.commit,data.baseline.atlasCommit,'Pending source must be a distinct exact Git identity');
+  const counts=[p.rootDraftPlacements,p.rootPendingPlacements,p.rootGeneratedIdentificationPlacements];assert(counts.every(n=>Number.isSafeInteger(n)&&n>=0)&&counts.reduce((a,n)=>a+n,0)===data.baseline.rootTopicPlacements,'Pending source topic count must conserve this baseline scope');
+  assert(typeof p.note==='string'&&p.note.trim()&&typeof p.evidence==='string'&&p.evidence.endsWith('.json'),'Missing pending source evidence');
+ }
+ const ids=new Set();for(const item of data.items){
+  assert(/^[A-Z]+-\d{2}(?:\.\d+)?$/.test(item.id)&&!ids.has(item.id),'Invalid or duplicate item ID');ids.add(item.id);
+  assert(statuses.includes(item.status),'Unknown status');assert(scopes.includes(item.scope),'Unknown scope');assert(/^P[0-3]$/.test(item.priority),'Unknown priority');
+  for(const key of ['area','owner','task','acceptance'])assert(typeof item[key]==='string'&&item[key].trim().length>0,'Missing '+key);
+  assert(Array.isArray(item.evidence)&&item.evidence.length>0,'Evidence references required');for(const ref of item.evidence)evidencePath(data,ref);
+  assert(item.status!=='proposed'||item.scope==='optional','Proposals must not silently become requirements');
+  if(item.status==='done')assert(item.completion&&typeof item.completion.date==='string'&&typeof item.completion.source==='string'&&Array.isArray(item.completion.evidence)&&item.completion.evidence.length>0,'Done requires a dated source-bound completion record');
+ }
+ assert(Array.isArray(data.changeLog)&&data.changeLog.some(row=>row.revision===data.revision),'Current revision needs a change-log entry');return data;
+}
+const cell=value=>String(value).replaceAll('|','\\|').replaceAll('\n',' ');
+export function renderChecklist(data){
+ validateChecklist(data);const b=data.baseline,areas=[...new Set(data.items.map(item=>item.area))];
+ const out=[`# ${data.title}`,'',`Revision ${data.revision} · Updated ${data.updatedAt}`,'',data.purpose,'',
+  'This is the persistent project checklist, not a claim that the whole website is finished. The JSON companion is the editable status register; regenerate this view with `node scripts/refresh-completion-checklist.mjs` and verify with `--check --verify-evidence`.','',
+  '## Current baseline','',`Atlas source: \`${b.atlasCommit}\`. Website HEAD: \`${b.websiteHead}\` with preserved unpublished changes. Review binding: \`${b.reviewIntegration}\`.`, '',
+  `${b.rootRepresentations} root-body representations have ${b.rootTopicPlacements} topic placements: ${b.rootDraftPlacements} editorial drafts, ${b.rootPendingPlacements} pending and ${b.rootGeneratedIdentificationPlacements} generated identification prompts. Separate scopes include ${b.nestedRepresentations} nested selections, ${b.regionalTours} regional tours / ${b.regionalTourStops} stops and ${b.independentGuides} independent guides / ${b.independentGuideStops} stops.`, '',b.limitations,'',
+  ...(data.pendingAtlasSource?[`${data.pendingAtlasSource.websiteImported?'Integrated':'Pending'} Atlas source: \`${data.pendingAtlasSource.commit}\` (${data.pendingAtlasSource.rootDraftPlacements} draft / ${data.pendingAtlasSource.rootPendingPlacements} pending / ${data.pendingAtlasSource.rootGeneratedIdentificationPlacements} generated topic placements). **${data.pendingAtlasSource.websiteImported?'Imported into':'Not imported into'} the website baseline above.** ${data.pendingAtlasSource.note}`,'']:[]),
+  ['verified-local','done'].includes(data.items.find(i=>i.id==='BASE-02')?.status)?'Canonical Atlas summaries were refreshed and verified through their generator (BASE-02). Source-candidate evidence remains separate from the website baseline and from clinical, browser and release approval.':'Current evidence was recomputed from the real resolver. Some older canonical Atlas summaries are stale; BASE-02 tracks their refresh. The fresh reports are retained in the audit staging folder without changing anatomy, teaching, masks or private decisions.','',
+  '## How to track progress','',
+  ...data.rules.map(rule=>'- '+rule),'',
+  'A checked item means its **bounded local implementation or inventory criterion** is verified. It does not mean clinical sign-off, physical-device acceptance or public release. Those have their own rows. A held or owner-gated item is not a project-wide stop.','',
+  '## Progress by area','', '| Area | Local verified | Partial | Open | Owner input | Held | Optional ideas | Done |','| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |'];
+ for(const area of areas){const items=data.items.filter(i=>i.area===area);out.push('| '+[area,...statuses.map(status=>items.filter(i=>i.status===status).length)].join(' | ')+' |');}
+ out.push('','## Recommended order','',
+  '1. Confirm the intended first release scope and learners (BASE-03), and freeze a review candidate (BASE-04). Continue independent development in parallel.','2. Repair complete-suite release assurance (REL-01), complete real desktop/accessibility journeys (UX-01–03), and verify native CT/MRI plus protected Education delivery (IMG-01–02).','3. Review the included anatomy and teaching in the private Clinical Review inbox (ANAT-18, TEACH-10); work through source holds and evidence-backed content gaps in coherent regional batches.','4. Finish the selected course/exam and operational release gates. Add optional ideas only when they improve an agreed learner/author task and do not clutter the UI.','',
+  '## Your next inputs','',
+  '- Choose the initial audience, regions/modalities and courses; the full roadmap remains intact even if the first private beta is bounded.','- Use [Clinical Review inbox](http://127.0.0.1:3000/workspace/clinical-review-inbox) to review exact model/teaching/head packages. Record corrections and source-bound decisions, not blanket approval.','- Adjudicate held anatomy only within appropriate expertise; nominate specialist help where needed.','- Identify the intended cleared cases, presentation source files and lecture anchors. Local use approval does not itself authorize upload.','- Later, approve the real deployment target, governance/contact details, operational ownership and any commercial activation.','',
+  '## My continuing work','',
+  'I can inventory sources and gaps, research acceptable references/assets, write review-ready teaching, prepare review packets, implement/test software and maintain this register. I cannot manufacture missing anatomy, clinical approval, registration, rights/privacy clearance, real account authority or permission to publish. Owner-gated items will not prevent independent useful work.','');
+ for(const area of areas){out.push(`## ${area}`,'');for(const item of data.items.filter(i=>i.area===area)){
+  const checked=['verified-local','done'].includes(item.status)?'x':' ';
+  out.push(`- [${checked}] **${item.id} ${item.task}**`, `  ${item.priority} · ${item.scope} · ${item.owner} · ${item.status}`,`  Acceptance: ${item.acceptance}`,`  Evidence: ${item.evidence.map(ref=>`[${cell(ref)}](<${evidencePath(data,ref)}>)`).join(', ')}.`,'');
+ }}
+ out.push('## Change log','',...data.changeLog.map(row=>`- ${row.date} · revision ${row.revision}: ${row.change}`),'');return out.join('\n');
+}
+if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ const flags=process.argv.slice(2);assert(flags.every(flag=>['--check','--verify-evidence'].includes(flag))&&new Set(flags).size===flags.length,'Unknown or repeated option');
+ const base=resolve(fileURLToPath(new URL('..',import.meta.url))),source=resolve(base,'docs/completion-checklist.json'),destination=resolve(base,'docs/completion-checklist.md'),data=validateChecklist(JSON.parse(readFileSync(source,'utf8'))),output=renderChecklist(data);
+ if(flags.includes('--verify-evidence'))for(const item of data.items)for(const ref of item.evidence){const path=evidencePath(data,ref);assert(existsSync(path)&&statSync(path).isFile(),'Missing evidence '+ref);}
+ if(flags.includes('--check'))assert.equal(readFileSync(destination,'utf8').replaceAll('\r\n','\n'),output,'Checklist view is stale');else writeFileSync(destination,output);
+ console.log(JSON.stringify({verdict:'pass',revision:data.revision,items:data.items.length,optional:data.items.filter(i=>i.scope==='optional').length,evidenceChecked:flags.includes('--verify-evidence'),checkOnly:flags.includes('--check')}));
+}

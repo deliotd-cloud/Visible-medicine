@@ -1,0 +1,41 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+
+test('guided library discovery shares exact source provenance across learner and protected Review',()=>{
+ const sha=(b:Uint8Array)=>createHash('sha256').update(b).digest('hex');
+ const base='public/atlas-runtime/head-neck/';
+ const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+ const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ assert.equal(learner.sourceCommit,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
+ assert.equal(review.revision,learner.sourceCommit);
+ const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
+ const rendererPath='content/body-renderer-revision.json';
+ const rendererBytes=readFileSync('atlas-review/'+rendererPath);
+ const rendererFile=review.files.find((f:{path:string})=>f.path===rendererPath);
+ assert(rendererFile);
+ assert.equal(rendererFile.sourceSha256,'5fb911cd62e63452591d7dff7fe474c0dccf80485290c1c7afd60ff0ac08ae33');
+ assert.equal(sha(rendererBytes),rendererFile.importedSha256);
+ const renderer=JSON.parse(rendererBytes.toString());
+ for(const path of ['app/whole-body-guided-learning.tsx','app/whole-body-guided-learning.css']){
+  const source=inputs.find((f:{path:string})=>f.path===path);
+  const imported=review.files.find((f:{path:string})=>f.path===path);
+  assert(source&&imported,path);
+  assert.equal(renderer.dependencies.find((f:{path:string})=>f.path===path)?.sha256,source.sha256);
+  assert.equal(imported.sourceSha256,source.sha256);
+  const bytes=readFileSync('atlas-review/'+path);
+  assert.equal(sha(bytes),imported.importedSha256);
+  const original=path.endsWith('.tsx')?bytes.toString().replaceAll('@/atlas-review/','@/'):bytes.toString();
+  assert.equal(sha(Buffer.from(original)),source.sha256,'Only the established Review import namespace may differ');
+ }
+ const runtime=learner.files.filter((f:{path:string})=>/\.(js|css)$/.test(f.path)).map((f:{path:string;sha256:string})=>{
+  const bytes=readFileSync(base+f.path);assert.equal(sha(bytes),f.sha256);return bytes.toString();
+ }).join('\n');
+ for(const label of ['Find a tour','Search tours','No tours match. Clear filters to see all tours.','whole-body-tour-discovery','whole-body-tour-choice','outside filters'])assert(runtime.includes(label),label);
+ const chooser=readFileSync('atlas-review/app/whole-body-guided-learning.tsx','utf8');
+ assert.match(chooser,/value=\{tour\.id\}/,'Native chooser reflects the active tour');
+ assert.match(chooser,/!currentVisible&&<option value=\{tour\.id\} disabled/,'Hidden active tour remains identifiable, not a selectable result');
+ assert(!chooser.includes('whole-body-current-tour'),'No duplicate current-title row');
+ for(const prop of ['patientDataIncluded','clinicalApproved','standaloneReviewConnection','imagingConnection'])assert.equal(learner[prop],false);
+});

@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 1,
+  "baseline": "a70b6f640c5511330f250882f525b63a4a21117b",
+  "tourRevision": "right-elbow-arterial-pairs-20261012-r1",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-inferior-ulnar-collateral-artery",
+      "fmaId": "FMA22712",
+      "name": "Right inferior ulnar collateral artery",
+      "sourceName": "right inferior ulnar collateral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA22712",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2267",
+          "sha256": "752bdaa12e7c36bb2f4b51b8736bd317e9079d35678e7a8f27dd7b211bf55590"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.95524001121521,
+          2.2014999389648438,
+          0.19606700539588928
+        ],
+        "max": [
+          -1.860159993171692,
+          2.8863000869750977,
+          0.3742679953575134
+        ]
+      },
+      "center": [
+        -1.907700002193451,
+        2.5439000129699707,
+        0.28516750037670135
+      ],
+      "anchor": [
+        -1.8996000289916992,
+        2.5387001037597656,
+        0.3230760097503662
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-anterior-ulnar-recurrent-artery",
+      "fmaId": "FMA22801",
+      "name": "Right anterior ulnar recurrent artery",
+      "sourceName": "right anterior ulnar recurrent artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA22801",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2311",
+          "sha256": "ed64165407c9ea2e2b0b8cbb3d2698dacbc68a461d8d3f97efbf0b4d3edcbd2b"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.1441900730133057,
+          2.0441999435424805,
+          0.19345299899578094
+        ],
+        "max": [
+          -1.934249997138977,
+          2.213599920272827,
+          0.30281299352645874
+        ]
+      },
+      "center": [
+        -2.0392200350761414,
+        2.128899931907654,
+        0.24813299626111984
+      ],
+      "anchor": [
+        -2.1179699897766113,
+        2.069499969482422,
+        0.2946789860725403
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:right-superior-ulnar-collateral-artery",
+      "fmaId": "FMA22707",
+      "name": "Right superior ulnar collateral artery",
+      "sourceName": "right superior ulnar collateral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA22707",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2373",
+          "sha256": "2a493b218515ccdd77c5ef012a35151af65851d24a8e60ec93309493940caeb8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.8882399797439575,
+          2.405100107192993,
+          0.0442579984664917
+        ],
+        "max": [
+          -1.8117400407791138,
+          3.2297000885009766,
+          0.3423449993133545
+        ]
+      },
+      "center": [
+        -1.8499900102615356,
+        2.817400097846985,
+        0.1933014988899231
+      ],
+      "anchor": [
+        -1.815310001373291,
+        2.8264999389648438,
+        0.15839199721813202
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-posterior-ulnar-recurrent-artery",
+      "fmaId": "FMA22804",
+      "name": "Right posterior ulnar recurrent artery",
+      "sourceName": "right posterior ulnar recurrent artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA22804",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2293",
+          "sha256": "33075e1f47328d41642dd8756f9f51cd2c9044a6c4ccf4b05c4e72194ba2cdaa"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.9463399648666382,
+          2.2007999420166016,
+          0.043428000062704086
+        ],
+        "max": [
+          -1.8700799942016602,
+          2.414799928665161,
+          0.20556999742984772
+        ]
+      },
+      "center": [
+        -1.9082099795341492,
+        2.3077999353408813,
+        0.1244989987462759
+      ],
+      "anchor": [
+        -1.9006199836730957,
+        2.2852001190185547,
+        0.10273600369691849
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:radial-collateral-branch-of-right-deep-brachial-artery",
+      "fmaId": "FMA23126",
+      "name": "Radial collateral branch of right deep brachial artery",
+      "sourceName": "radial collateral branch of right deep brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA23126",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2262",
+          "sha256": "8b4fe7fec778437b662ea4387c9dd1469029c6fd221d830263587cd726062f3c"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.308840036392212,
+          2.724100112915039,
+          0.009123999625444412
+        ],
+        "max": [
+          -2.0305299758911133,
+          3.1796000003814697,
+          0.05052400007843971
+        ]
+      },
+      "center": [
+        -2.1696850061416626,
+        2.9518500566482544,
+        0.029823999851942062
+      ],
+      "anchor": [
+        -2.1707100868225098,
+        2.95740008354187,
+        0.03782299906015396
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-radial-recurrent-artery",
+      "fmaId": "FMA22764",
+      "name": "Right radial recurrent artery",
+      "sourceName": "right radial recurrent artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA22764",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2295",
+          "sha256": "b677bdbe0b58cb3951390b5a384a48bfc121b7e12532b09450482169b52960c1"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.4286201000213623,
+          2.0067999362945557,
+          0.01707099936902523
+        ],
+        "max": [
+          -2.2802700996398926,
+          2.752700090408325,
+          0.4336720108985901
+        ]
+      },
+      "center": [
+        -2.3544450998306274,
+        2.3797500133514404,
+        0.22537150513380766
+      ],
+      "anchor": [
+        -2.3991599082946777,
+        2.349900007247925,
+        0.21925799548625946
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:vessel:middle-collateral-branch-of-right-deep-brachial-artery",
+      "fmaId": "FMA23124",
+      "name": "Middle collateral branch of right deep brachial artery",
+      "sourceName": "middle collateral branch of right deep brachial artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "elbow-arteries",
+      "nodeName": "FMA23124",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2362",
+          "sha256": "53b2658acb8350ceb12d76c0c0ad73a9235e708b55b9543a866846a61e8fbdff"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.2288401126861572,
+          2.4595000743865967,
+          0.008693000301718712
+        ],
+        "max": [
+          -2.0315699577331543,
+          3.1786000728607178,
+          0.05946600064635277
+        ]
+      },
+      "center": [
+        -2.1302050352096558,
+        2.8190500736236572,
+        0.03407950047403574
+      ],
+      "anchor": [
+        -2.125770092010498,
+        2.8248000144958496,
+        0.028915999457240105
+      ],
+      "coverageNote": "Complete original IS-A elbow artery surface. All source faces and coordinates retained apart from the established scene transform and Float32 storage. Typical collateral relationships do not validate donor junctions, continuous lumens, perfusion or a complete elbow network. Anatomical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:vessel:right-recurrent-interosseous-artery",
+      "fmaId": "FMA268667",
+      "name": "Right recurrent interosseous artery",
+      "sourceName": "right recurrent interosseous artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-vessels-forearm-vascular",
+      "nodeName": "FMA268667",
+      "bounds": {
+        "min": [
+          -2.2795701026916504,
+          1.919810175895691,
+          0.028291014954447746
+        ],
+        "max": [
+          -2.2031099796295166,
+          2.485400438308716,
+          0.26178300380706787
+        ]
+      },
+      "center": [
+        -2.2413400411605835,
+        2.2026053071022034,
+        0.1450370093807578
+      ],
+      "anchor": [
+        -2.261690139770508,
+        2.1937999725341797,
+        0.11706298589706421
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2297",
+          "sha256": "0b37892b1dfc542627ebd1c0ef4644772f405da643ff51f18cb2eda374c07d9a"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextEntries": [
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "forearm-vessels-forearm-vascular",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "bytes": 66352,
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "structures": 4
+    },
+    {
+      "id": "elbow-arteries",
+      "url": "/models/bodyparts3d/elbow-arteries/elbow-arteries.glb?v=f8c7361dd6d9f089937df2d879c9851cc2346353bafe2600da871a04f8a0060d",
+      "bytes": 353176,
+      "sha256": "f8c7361dd6d9f089937df2d879c9851cc2346353bafe2600da871a04f8a0060d",
+      "structures": 14
+    }
+  ]
+}

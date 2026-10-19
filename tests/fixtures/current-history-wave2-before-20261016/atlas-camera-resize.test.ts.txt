@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import test from 'node:test';
+
+test('regional runtime binds the verified camera-resize and reassembly fixes',()=>{
+  const base='public/atlas-runtime/head-neck/';
+  const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+  const source='C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/outputs';
+  assert.equal(manifest.sourceCommit,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
+  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
+  for(const [path,sha256] of [
+    ['app/body-explorer.tsx','df6403441ad502c6c996a31f930c40c682b591292a6449518a15b20cbe62de79'],
+    ['app/fitted-camera.tsx','9d13fb2b2c498fff6fae7944b4f6ed95d4563dc9d0e1653eed0cb716aa6743a0'],
+  ]) {
+    const milestone=execFileSync('git',['-C',source,'show',`a10496da94d9d054306bbc48e5ae9c98239d82b5:${path}`]);
+    assert.equal(createHash('sha256').update(milestone).digest('hex'),sha256,path+' milestone');
+    const current=execFileSync('git',['-C',source,'show',`${manifest.sourceCommit}:${path}`]);
+    assert.deepEqual(inputs.filter(i=>i.path===path),[{path,sha256:createHash('sha256').update(current).digest('hex')}]);
+  }
+  const runtime=(manifest.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{
+    const bytes=readFileSync(base+f.path);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'),f.sha256);
+    return bytes.toString();
+  }).join('\n');
+  for(const message of ['Assembled anatomy · Increase separation to arrange in the tray','Non-anatomical positions · Overlap possible']) assert(runtime.includes(message));
+  for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection']) assert.equal(manifest[flag],false);
+});

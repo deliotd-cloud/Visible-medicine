@@ -1,0 +1,42 @@
+.workspace-context-header .workspace-primary-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.workspace-primary-nav a, .workspace-admin-link { min-height: 40px; padding: 0 13px; display: inline-flex; align-items: center; border-radius: 7px; color: var(--secondary-text); font-size: 12px; white-space: nowrap; }
+.workspace-primary-nav a:hover, .workspace-admin-link:hover, .workspace-primary-nav a[aria-current="page"], .workspace-admin-link[aria-current="page"] { background: #e6f1ed; color: var(--teal); }
+.workspace-primary-nav a[aria-current="page"], .workspace-admin-link[aria-current="page"] { font-weight: 700; }
+.workspace-context-header :is(a, summary):focus-visible, .workspace-home :is(a, summary):focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.workspace-home .workspace-hero { padding: 46px 42px 34px; border-bottom: 0; }
+.workspace-home .workspace-hero h1 { max-width: none; font-size: clamp(38px, 4vw, 58px); }
+.workspace-destinations { padding: 0 42px 34px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.workspace-destinations > a { min-height: 205px; padding: 25px; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-content: start; gap: 10px; border: 1px solid #c9d8d4; border-radius: 11px; background: #f5f9f8; color: var(--ink); }
+.workspace-destinations > a:hover { border-color: var(--teal); background: white; }
+.workspace-destinations .section-index, .workspace-destinations strong, .workspace-destinations span:not(.section-index) { grid-column: 1; }
+.workspace-destinations strong { font-size: clamp(25px, 2.5vw, 35px); letter-spacing: -.04em; }
+.workspace-destinations span:not(.section-index) { max-width: 28ch; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.workspace-destinations b { grid-column: 2; grid-row: 2; color: var(--teal); font-size: 25px; }
+.workspace-secondary, .workspace-overview { margin: 0 42px 16px; }
+.workspace-secondary { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.workspace-secondary details, .workspace-overview { border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+.workspace-secondary summary, .workspace-overview > summary { min-height: 64px; padding: 16px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; color: var(--teal); font-size: 14px; font-weight: 700; cursor: pointer; }
+.workspace-secondary summary span, .workspace-overview > summary span { color: var(--muted); font-size: 11px; font-weight: 400; }
+.workspace-secondary-links { padding: 0 20px 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px; }
+.workspace-secondary-links a { min-height: 38px; display: flex; align-items: center; color: var(--teal); font-size: 12px; }
+.workspace-secondary-links a:hover { text-decoration: underline; }
+.workspace-overview > :not(summary) { margin-inline: 0; }
+.workspace-overview .workspace-metrics { padding-inline: 0; }
+.workspace-overview .workspace-metrics > div { min-height: 96px; }
+.workspace-overview .entitlement-panel, .workspace-overview .publication-register { padding: 32px; }
+.workspace-overview .publication-register { gap: 28px; }
+@media (max-width: 1000px) {
+  .workspace-context-header .workspace-primary-nav { order: 3; width: 100%; justify-content: space-between; }
+  .workspace-primary-nav a { flex: 1; justify-content: center; }
+  .workspace-destinations { grid-template-columns: 1fr; }
+  .workspace-destinations > a { min-height: 140px; }
+}
+@media (max-width: 680px) {
+  .workspace-home .workspace-hero { padding: 30px 18px 22px; }
+  .workspace-destinations { padding: 0 18px 22px; }
+  .workspace-secondary, .workspace-overview { margin-inline: 18px; }
+  .workspace-secondary { grid-template-columns: 1fr; }
+  .workspace-secondary-links { grid-template-columns: 1fr; }
+  .workspace-context-header .workspace-primary-nav { overflow-x: auto; flex-wrap: nowrap; }
+  .workspace-context-header .workspace-admin-link { padding-inline: 8px; }
+}

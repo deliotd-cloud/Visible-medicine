@@ -1,0 +1,18 @@
+{
+  "schema": "vm-shoulder-us-originals-1",
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "files": [
+    {
+      "path": "tests/atlas-shoulder-girdle-arterial-ultrasound-checks.mjs",
+      "sha256": "b990cf4ff1cd9600a770ac855c9a83f2f6d99ebff14ef25db62c24670e26ec65",
+      "archive": "tests/fixtures/shoulder-us-history-before-20261016/atlas-shoulder-girdle-arterial-ultrasound-checks.mjs.txt"
+    },
+    {
+      "path": "tests/atlas-shoulder-girdle-arterial-ultrasound.test.ts",
+      "sha256": "bd813570385470536681d7eac9ff555197893104bcbcc6e4a111ac6c2b602ba4",
+      "archive": "tests/fixtures/shoulder-us-history-before-20261016/atlas-shoulder-girdle-arterial-ultrasound.test.ts.txt"
+    }
+  ],
+  "originalsRetained": true,
+  "historicalWebsiteExport": "ec85edb86bb34c92c66e2f310da09904f27ea7c4"
+}

@@ -1,0 +1,181 @@
+{
+  "parentCommit": "aca60179199870ddfdb745fb4224775cb7d0c3d8",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "forearm-vessels-forearm-vascular",
+      "url": "/models/bodyparts3d/full-body/forearm-vessels-forearm-vascular.glb",
+      "bytes": 66352,
+      "sha256": "afe5f1b4dc3d79fa05550ef1fc5cc28bc8502a2e2fbe7947ffdf3e61afff9782",
+      "structures": 4
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "2a8e26c1d044957dfd30956304f63b7b7e18c12158020c2330fab0300e5c7530",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:right:vessel:right-common-interosseous-artery",
+        "fmaId": "FMA22807",
+        "name": "Right common interosseous artery",
+        "sourceName": "right common interosseous artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-vessels-forearm-vascular",
+        "nodeName": "FMA22807",
+        "bounds": {
+          "min": [
+            -2.227400064468384,
+            1.9160699844360352,
+            0.2111620306968689
+          ],
+          "max": [
+            -2.117069959640503,
+            1.9968903064727783,
+            0.3013259768486023
+          ]
+        },
+        "center": [
+          -2.1722350120544434,
+          1.9564801454544067,
+          0.2562440037727356
+        ],
+        "anchor": [
+          -2.1642398834228516,
+          1.971350073814392,
+          0.2469400018453598
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2275",
+            "sha256": "96afb03f4aa0d1a62ccb95c8b1a7094da8104f9a9cb193e02ea2706707f473ce"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:forearm:left:vessel:left-common-interosseous-artery",
+        "fmaId": "FMA22808",
+        "name": "Left common interosseous artery",
+        "sourceName": "left common interosseous artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "forearm",
+        "regions": [
+          "forearm"
+        ],
+        "bundle": "forearm-vessels-forearm-vascular",
+        "nodeName": "FMA22808",
+        "bounds": {
+          "min": [
+            2.117069959640503,
+            1.9161297082901,
+            0.21119102835655212
+          ],
+          "max": [
+            2.2274298667907715,
+            1.9969298839569092,
+            0.30138298869132996
+          ]
+        },
+        "center": [
+          2.172249913215637,
+          1.9565297961235046,
+          0.25628700852394104
+        ],
+        "anchor": [
+          2.164489984512329,
+          1.96711003780365,
+          0.24159401655197144
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2223",
+            "sha256": "11fccc2e5aec84ef7ed0d0c34ae3e9928c0aac91faaf48ce6801c09942985f28"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source-labelled interosseous artery in unchanged common coordinates. The exact IS-A component is used, not the larger PART-OF branch aggregate. Branch continuity, posterior interosseous trunk, complete elbow anastomoses, vascular lumen and blood flow are not established. No missing vessel or patient registration is inferred.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common",
+      "topics": [
+        "ultrasound"
+      ],
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

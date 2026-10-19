@@ -1,0 +1,982 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "506b3aca1b61897dcb4f625c189e243a423957c0438f08baa42ae53a742ef5aa",
+  "structures": [
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+      "fmaId": "FMA14331",
+      "name": "Splenic vein",
+      "sourceName": "splenic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "portal-veins",
+      "nodeName": "FMA14331",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3641",
+          "sha256": "4dabe1ffb6e36e9f7714ba5f8da7ed48b11d304963372f982446467e584d2e9f"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.12030299752950668,
+          2.5125999450683594,
+          0.33072200417518616
+        ],
+        "max": [
+          0.9985010027885437,
+          2.917799949645996,
+          0.7408300042152405
+        ]
+      },
+      "center": [
+        0.4390990026295185,
+        2.7151999473571777,
+        0.5357760041952133
+      ],
+      "anchor": [
+        0.4338200092315674,
+        2.7239999771118164,
+        0.5332099795341492
+      ],
+      "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+      "fmaId": "FMA15390",
+      "name": "Left gastroepiploic vein",
+      "sourceName": "left gastroepiploic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "portal-veins",
+      "nodeName": "FMA15390",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3502",
+          "sha256": "8fbff4b304815200c09017d46d9537b0cd3f699ed13d79c0ac35bd122f24decb"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.6009610295295715,
+          2.4670000076293945,
+          0.5152599811553955
+        ],
+        "max": [
+          0.9455670118331909,
+          2.840100049972534,
+          1.218369960784912
+        ]
+      },
+      "center": [
+        0.7732640206813812,
+        2.6535500288009644,
+        0.8668149709701538
+      ],
+      "anchor": [
+        0.9265869855880737,
+        2.7102999687194824,
+        0.9137600064277649
+      ],
+      "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+      "fmaId": "FMA15397",
+      "name": "Right gastroepiploic vein",
+      "sourceName": "right gastroepiploic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "portal-veins",
+      "nodeName": "FMA15397",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3597",
+          "sha256": "c3d9e308cc410cacf95ca9336bc80ba221af8ec6a555b3111881289d326e8523"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.17116700112819672,
+          2.2836999893188477,
+          0.8794500231742859
+        ],
+        "max": [
+          0.6065019965171814,
+          2.5178000926971436,
+          1.3030799627304077
+        ]
+      },
+      "center": [
+        0.21766749769449234,
+        2.4007500410079956,
+        1.0912649929523468
+      ],
+      "anchor": [
+        0.16690999269485474,
+        2.419300079345703,
+        1.2492200136184692
+      ],
+      "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+      "fmaId": "FMA15399",
+      "name": "Left gastric vein",
+      "sourceName": "left gastric vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "portal-veins",
+      "nodeName": "FMA15399",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3500",
+          "sha256": "5cf36381284ef10cd55465cd827ed97bba2c7d610a20e34ea9b02dc70d605a4c"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.14354300498962402,
+          2.824199914932251,
+          0.7365000247955322
+        ],
+        "max": [
+          0.25164300203323364,
+          3.3215999603271484,
+          1.196560025215149
+        ]
+      },
+      "center": [
+        0.05404999852180481,
+        3.0728999376296997,
+        0.9665300250053406
+      ],
+      "anchor": [
+        0.147023007273674,
+        3.0327000617980957,
+        0.8527600169181824
+      ],
+      "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+      "fmaId": "FMA15400",
+      "name": "Right gastric vein",
+      "sourceName": "right gastric vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "portal-veins",
+      "nodeName": "FMA15400",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3595",
+          "sha256": "a2a2bd3aadf7027de43cb57c0a33b17b3ce3a35c9f495f5fc010486c2b39494d"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.2311830073595047,
+          2.7734999656677246,
+          0.8745899796485901
+        ],
+        "max": [
+          0.007959119975566864,
+          2.944200038909912,
+          1.1354999542236328
+        ]
+      },
+      "center": [
+        -0.11161194369196892,
+        2.8588500022888184,
+        1.0050449669361115
+      ],
+      "anchor": [
+        -0.1392659991979599,
+        2.8132998943328857,
+        1.0139299631118774
+      ],
+      "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:first-lumbar-vertebra",
+      "fmaId": "FMA13072",
+      "name": "First lumbar vertebra",
+      "sourceName": "first lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13072",
+      "bounds": {
+        "min": [
+          -0.3577980101108551,
+          2.1520001888275146,
+          -0.2077759951353073
+        ],
+        "max": [
+          0.3446139991283417,
+          2.719799757003784,
+          0.5948000550270081
+        ]
+      },
+      "center": [
+        -0.006592005491256714,
+        2.4358999729156494,
+        0.19351202994585037
+      ],
+      "anchor": [
+        0.004260269924998283,
+        2.477099657058716,
+        0.2578299641609192
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3157",
+          "sha256": "67940f16382935851ebeb7a86c926dbf922070f390c438fdbbb56f7b7fb76057"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:second-lumbar-vertebra",
+      "fmaId": "FMA13073",
+      "name": "Second lumbar vertebra",
+      "sourceName": "second lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13073",
+      "bounds": {
+        "min": [
+          -0.4035089910030365,
+          1.9231598377227783,
+          -0.15651199221611023
+        ],
+        "max": [
+          0.3906079828739166,
+          2.3976001739501953,
+          0.6471999883651733
+        ]
+      },
+      "center": [
+        -0.0064505040645599365,
+        2.160380005836487,
+        0.24534399807453156
+      ],
+      "anchor": [
+        -0.04304170235991478,
+        2.146899938583374,
+        0.3003379702568054
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3159",
+          "sha256": "5e6301d2020ba73167e71c274848ddcbec0f7936d9f26a78f2de8ffa82f095c7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-lumbar-vertebra",
+      "fmaId": "FMA13074",
+      "name": "Third lumbar vertebra",
+      "sourceName": "third lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13074",
+      "bounds": {
+        "min": [
+          -0.40202900767326355,
+          1.6769299507141113,
+          -0.20486000180244446
+        ],
+        "max": [
+          0.3884100019931793,
+          2.097299814224243,
+          0.653529942035675
+        ]
+      },
+      "center": [
+        -0.006809502840042114,
+        1.8871148824691772,
+        0.2243349701166153
+      ],
+      "anchor": [
+        -0.006866959854960442,
+        1.9032598733901978,
+        0.2972889840602875
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3162",
+          "sha256": "aa58bbebf75e858d5258926b3f85ef6bc27f765464e87bfc828baf24156bf155"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-lumbar-vertebra",
+      "fmaId": "FMA13075",
+      "name": "Fourth lumbar vertebra",
+      "sourceName": "fourth lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13075",
+      "bounds": {
+        "min": [
+          -0.4276610314846039,
+          1.3866400718688965,
+          -0.23843799531459808
+        ],
+        "max": [
+          0.4141540229320526,
+          1.8340197801589966,
+          0.6040499806404114
+        ]
+      },
+      "center": [
+        -0.006753504276275635,
+        1.6103299260139465,
+        0.18280599266290665
+      ],
+      "anchor": [
+        0.0035792801063507795,
+        1.6106799840927124,
+        0.22114303708076477
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3165",
+          "sha256": "2b02ea3874d39295b15a7de2a2b2dd1367cf5a00a5ba5f87519f2a7064b2286f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-lumbar-vertebra",
+      "fmaId": "FMA13076",
+      "name": "Fifth lumbar vertebra",
+      "sourceName": "fifth lumbar vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "abdomen"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA13076",
+      "bounds": {
+        "min": [
+          -0.5100070238113403,
+          1.0459496974945068,
+          -0.31755000352859497
+        ],
+        "max": [
+          0.4957360029220581,
+          1.5483300685882568,
+          0.4907650053501129
+        ]
+      },
+      "center": [
+        -0.007135510444641113,
+        1.2971398830413818,
+        0.08660750091075897
+      ],
+      "anchor": [
+        -0.03946299850940704,
+        1.282289981842041,
+        0.07836498320102692
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3168",
+          "sha256": "0b8d0317800abd7c7cb66473cfa23bcecf2b2a8060a4434f32eb9f6ea93c1cc4"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:hepatic-portal-vein",
+      "fmaId": "FMA50735",
+      "name": "Hepatic portal vein",
+      "sourceName": "hepatic portal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-recovery",
+      "nodeName": "FMA50735",
+      "bounds": {
+        "min": [
+          -0.2144879847764969,
+          2.623199462890625,
+          0.7359400391578674
+        ],
+        "max": [
+          -0.07081809639930725,
+          3.1111998558044434,
+          0.9421499371528625
+        ]
+      },
+      "center": [
+        -0.14265304058790207,
+        2.867199659347534,
+        0.839044988155365
+      ],
+      "anchor": [
+        -0.17304199934005737,
+        2.8711998462677,
+        0.8311700224876404
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1853",
+          "sha256": "a9e359ffc1ab1d6f3134e72ca2a8ebaf1dc91df94827f4226a453fb3608e2d9b"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:superior-mesenteric-vein",
+      "fmaId": "FMA14332",
+      "name": "Superior mesenteric vein",
+      "sourceName": "superior mesenteric vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA14332",
+      "bounds": {
+        "min": [
+          -0.6255090236663818,
+          1.101409912109375,
+          0.591439962387085
+        ],
+        "max": [
+          -0.05020520091056824,
+          2.6697998046875,
+          0.9963299632072449
+        ]
+      },
+      "center": [
+        -0.33785711228847504,
+        1.8856048583984375,
+        0.7938849627971649
+      ],
+      "anchor": [
+        -0.14364799857139587,
+        1.8945099115371704,
+        0.8900300860404968
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3647",
+          "sha256": "55ea29d132bf0e79a7af6657a975c9ed5bd64e516f91c4794d96e2db2675e2e8"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:inferior-mesenteric-vein",
+      "fmaId": "FMA15391",
+      "name": "Inferior mesenteric vein",
+      "sourceName": "inferior mesenteric vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA15391",
+      "bounds": {
+        "min": [
+          0.053906697779893875,
+          1.0042901039123535,
+          0.6119100451469421
+        ],
+        "max": [
+          0.2706019878387451,
+          2.695500373840332,
+          0.8108199834823608
+        ]
+      },
+      "center": [
+        0.1622543428093195,
+        1.8498952388763428,
+        0.7113650143146515
+      ],
+      "anchor": [
+        0.22738000750541687,
+        1.8234198093414307,
+        0.7174199819564819
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3443",
+          "sha256": "59393e5b8a5cd62e7f2be2f8e36a7b0a41b103dd23a5eeae501e61f495c4df95"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:unspecified:vessel:ileal-vein",
+      "fmaId": "FMA15405",
+      "name": "Ileal vein",
+      "sourceName": "ileal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "unspecified",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA15405",
+      "bounds": {
+        "min": [
+          -0.5510820150375366,
+          1.3692998886108398,
+          0.6846199631690979
+        ],
+        "max": [
+          -0.3095349967479706,
+          1.5760198831558228,
+          0.7941000461578369
+        ]
+      },
+      "center": [
+        -0.4303085058927536,
+        1.4726598858833313,
+        0.7393600046634674
+      ],
+      "anchor": [
+        -0.43779098987579346,
+        1.4658502340316772,
+        0.7415000200271606
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3438",
+          "sha256": "39a8939f3720a45116fee6ce0210d1279cae4548532a7f749e2485cbd907772c"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:midline:vessel:middle-colic-vein",
+      "fmaId": "FMA15406",
+      "name": "Middle colic vein",
+      "sourceName": "middle colic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "midline",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA15406",
+      "bounds": {
+        "min": [
+          -0.6630609631538391,
+          2.125,
+          0.6669600009918213
+        ],
+        "max": [
+          0.6094229817390442,
+          2.64739990234375,
+          1.2694700956344604
+        ]
+      },
+      "center": [
+        -0.02681899070739746,
+        2.386199951171875,
+        0.9682150483131409
+      ],
+      "anchor": [
+        -0.13017700612545013,
+        2.2277002334594727,
+        0.9595500230789185
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3543",
+          "sha256": "001af4e63182ebd20eb8ae9b15e51d85302d56f4eb9134a78cd44e2a5047a9bf"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:abdomen:right:vessel:right-colic-vein",
+      "fmaId": "FMA15407",
+      "name": "Right colic vein",
+      "sourceName": "right colic vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "abdomen",
+      "regions": [
+        "abdomen"
+      ],
+      "bundle": "abdomen-vessels-mesenteric",
+      "nodeName": "FMA15407",
+      "bounds": {
+        "min": [
+          -0.7076519727706909,
+          1.8549102544784546,
+          0.6505100131034851
+        ],
+        "max": [
+          -0.07192699611186981,
+          2.390500545501709,
+          0.9406799077987671
+        ]
+      },
+      "center": [
+        -0.38978948444128036,
+        2.122705399990082,
+        0.7955949604511261
+      ],
+      "anchor": [
+        -0.5187649726867676,
+        2.025399684906006,
+        0.7954699993133545
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3591",
+          "sha256": "9bae25c069450677e645493c0b2e987c65ccaf984f7a441d126db6335601ec73"
+        }
+      ],
+      "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Selected named vessel surface only, not a complete vascular tree. Branch continuity, calibre, bowel supply territories, variants and vessel relationships require specialist review. No flow, patency or procedural guidance is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "abdomen-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-recovery.glb",
+      "bytes": 477592,
+      "sha256": "e41d66684de08fd9bd7dfca340acb63cbf7714eb09a3ea9594184f497c509abe",
+      "structures": 14
+    },
+    {
+      "id": "abdomen-vessels-mesenteric",
+      "url": "/models/bodyparts3d/full-body/abdomen-vessels-mesenteric.glb",
+      "bytes": 226020,
+      "sha256": "d26bb01909128f5cd8a56fb410967a688801a22652305bb2656e04d3e7df2680",
+      "structures": 14
+    }
+  ],
+  "bundles": [
+    {
+      "id": "portal-veins",
+      "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "structures": 5
+    }
+  ],
+  "modification": "Exact-coordinate welding for indexed normals plus Float32 GLB storage. Every original triangle is retained in order; no smoothing, fitting, mirroring, bridging or face removal.",
+  "clinicalApproval": false
+}

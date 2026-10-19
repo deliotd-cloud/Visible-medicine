@@ -1,0 +1,867 @@
+{
+  "sourceCommit": "b76fe16e01197a475a82e1adb461f86f29e5792c",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb",
+      "bytes": 608992,
+      "sha256": "800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb",
+      "structures": 16
+    }
+  ],
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-common-carotid-artery",
+        "fmaId": "FMA3941",
+        "name": "Right common carotid artery",
+        "sourceName": "right common carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA3941",
+        "bounds": {
+          "min": [
+            -0.21257899701595306,
+            5.294200420379639,
+            0.5538300275802612
+          ],
+          "max": [
+            -0.08614440262317657,
+            5.733799934387207,
+            0.6754799485206604
+          ]
+        },
+        "center": [
+          -0.14936169981956482,
+          5.514000177383423,
+          0.6146549880504608
+        ],
+        "anchor": [
+          -0.1452919989824295,
+          5.530099868774414,
+          0.5932700634002686
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3564",
+            "sha256": "423585ec439b07b0f64878f904afca52d4866e1e0dc54c2ace31953d9b6156cf"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "commonCarotid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-common-carotid-artery",
+        "fmaId": "FMA4058",
+        "name": "Left common carotid artery",
+        "sourceName": "left common carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4058",
+        "bounds": {
+          "min": [
+            0.10820800065994263,
+            5.07390022277832,
+            0.46006301045417786
+          ],
+          "max": [
+            0.22933000326156616,
+            5.736800670623779,
+            0.6222400069236755
+          ]
+        },
+        "center": [
+          0.1687690019607544,
+          5.40535044670105,
+          0.5411515086889267
+        ],
+        "anchor": [
+          0.18002599477767944,
+          5.409000396728516,
+          0.5512999892234802
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3483",
+            "sha256": "19f38e57365867279705090994fff228177163c1920ad0f8f9b15f830a42bc1d"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "commonCarotid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-carotid-artery",
+        "fmaId": "FMA3949",
+        "name": "Right internal carotid artery",
+        "sourceName": "right internal carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA3949",
+        "bounds": {
+          "min": [
+            -0.3746519982814789,
+            6.345400333404541,
+            0.4403970241546631
+          ],
+          "max": [
+            -0.09842479974031448,
+            7.377199649810791,
+            0.6455600261688232
+          ]
+        },
+        "center": [
+          -0.23653839901089668,
+          6.861299991607666,
+          0.5429785251617432
+        ],
+        "anchor": [
+          -0.24844801425933838,
+          6.865200042724609,
+          0.5546900033950806
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1682",
+            "sha256": "7bb929f419a3b37c8cffe1a1bf59c0374b26e2c1027d061956e5d73b31eb295b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internalCarotid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-carotid-artery",
+        "fmaId": "FMA4062",
+        "name": "Left internal carotid artery",
+        "sourceName": "left internal carotid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4062",
+        "bounds": {
+          "min": [
+            0.09842490404844284,
+            6.345400333404541,
+            0.44039803743362427
+          ],
+          "max": [
+            0.3746519982814789,
+            7.377199649810791,
+            0.645550012588501
+          ]
+        },
+        "center": [
+          0.23653845116496086,
+          6.861299991607666,
+          0.5429740250110626
+        ],
+        "anchor": [
+          0.24844801425933838,
+          6.865200042724609,
+          0.5547000169754028
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1682M",
+            "sha256": "117074e676e00306d95277cf2c4155a73c3684674bab401be4aec3acdfa11cce"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internalCarotid",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-vertebral-artery",
+        "fmaId": "FMA3958",
+        "name": "Right vertebral artery",
+        "sourceName": "right vertebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA3958",
+        "bounds": {
+          "min": [
+            -0.3366509974002838,
+            5.984100341796875,
+            0.08574901521205902
+          ],
+          "max": [
+            0.003840259974822402,
+            7.060400485992432,
+            0.36871200799942017
+          ]
+        },
+        "center": [
+          -0.1664053687127307,
+          6.522250413894653,
+          0.2272305116057396
+        ],
+        "anchor": [
+          -0.19402100145816803,
+          6.509000301361084,
+          0.23768600821495056
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1725",
+            "sha256": "c7ba10decd013234fafefc0ae366d13c0b5707fff437ce169966cfabc7cc3ca2"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "vertebral",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-vertebral-artery",
+        "fmaId": "FMA4066",
+        "name": "Left vertebral artery",
+        "sourceName": "left vertebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4066",
+        "bounds": {
+          "min": [
+            -0.003840259974822402,
+            5.984100341796875,
+            0.08574901521205902
+          ],
+          "max": [
+            0.3366519808769226,
+            7.060300350189209,
+            0.36871102452278137
+          ]
+        },
+        "center": [
+          0.1664058604510501,
+          6.522200345993042,
+          0.2272300198674202
+        ],
+        "anchor": [
+          0.19402100145816803,
+          6.509000301361084,
+          0.23768600821495056
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1725M",
+            "sha256": "10d2734ce5ee1a9eadde241f542a87573682f3a4617f3df896bcd9513a1bb2f0"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "vertebral",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-internal-jugular-vein",
+        "fmaId": "FMA4754",
+        "name": "Right internal jugular vein",
+        "sourceName": "right internal jugular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4754",
+        "bounds": {
+          "min": [
+            -0.31139999628067017,
+            5.404799938201904,
+            0.6288700103759766
+          ],
+          "max": [
+            -0.21712099015712738,
+            5.817399978637695,
+            0.7207499742507935
+          ]
+        },
+        "center": [
+          -0.2642604932188988,
+          5.6110999584198,
+          0.674809992313385
+        ],
+        "anchor": [
+          -0.27468299865722656,
+          5.610999584197998,
+          0.705590009689331
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3585",
+            "sha256": "528ab41e57d31335c0deb9bb804c4e83b9bc22cf912d8de247a88ad9893325f1"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internalJugular",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-internal-jugular-vein",
+        "fmaId": "FMA4762",
+        "name": "Left internal jugular vein",
+        "sourceName": "left internal jugular vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "thorax"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA4762",
+        "bounds": {
+          "min": [
+            0.18107500672340393,
+            5.374100208282471,
+            0.6170099377632141
+          ],
+          "max": [
+            0.3090539872646332,
+            5.804300308227539,
+            0.7211399674415588
+          ]
+        },
+        "center": [
+          0.24506449699401855,
+          5.589200258255005,
+          0.6690749526023865
+        ],
+        "anchor": [
+          0.21520499885082245,
+          5.592700004577637,
+          0.6498100161552429
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3485",
+            "sha256": "ec17bca2370898fd34c6e518d9ad62998819544058d41a34838580f7e554f0bd"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internalJugular",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:vessel:basilar-artery",
+        "fmaId": "FMA50542",
+        "name": "Basilar artery",
+        "sourceName": "basilar artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50542",
+        "bounds": {
+          "min": [
+            -0.022814800962805748,
+            7.026299953460693,
+            0.33550599217414856
+          ],
+          "max": [
+            0.012689199298620224,
+            7.322700023651123,
+            0.4816819727420807
+          ]
+        },
+        "center": [
+          -0.005062800832092762,
+          7.174499988555908,
+          0.4085939824581146
+        ],
+        "anchor": [
+          -0.0024026299361139536,
+          7.176800727844238,
+          0.4245069921016693
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1672",
+            "sha256": "f8240a3e61334d6843f3b5c1e28de93be83693d2dd41ba34ec7ebbbec446e7d6"
+          },
+          {
+            "file": "FJ1844",
+            "sha256": "bf688ac836107ec24fbdc49024b7be69300cbe827abfd955b414c0a811ff178f"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "basilar",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "4a16fd814f7259080d4502b3ec6f38755c30ea07b03e14ba021f3d5100ab84cc"
+}

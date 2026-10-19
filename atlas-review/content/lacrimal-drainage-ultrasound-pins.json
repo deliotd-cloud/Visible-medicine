@@ -1,0 +1,466 @@
+{
+  "schema": "vm-lacrimal-drainage-ultrasound-pins-1",
+  "parentCommit": "70260f13b1878272c6b0797dd72395ed10bc4f29",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "license": "CC-BY-4.0",
+  "bundles": [
+    {
+      "id": "head-neck-organs-ocular-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-ocular-detail.glb",
+      "bytes": 57312,
+      "sha256": "2f0b7535025dfd415ef448ae4fef66e351303e1fad2e7da128fa7122bac9929b",
+      "structures": 6
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "b725950599773816adde8b3bd3923c39c32948a3ccf6965a0323b4df107f397d",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-canaliculus",
+        "fmaId": "FMA59583",
+        "name": "Left lacrimal canaliculus",
+        "sourceName": "left lacrimal canaliculus",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-ocular-detail",
+        "nodeName": "FMA59583",
+        "bounds": {
+          "min": [
+            0.13277199864387512,
+            7.132099628448486,
+            1.1338499784469604
+          ],
+          "max": [
+            0.1908929944038391,
+            7.173399448394775,
+            1.1435699462890625
+          ]
+        },
+        "center": [
+          0.16183249652385712,
+          7.152749538421631,
+          1.1387099623680115
+        ],
+        "anchor": [
+          0.15296699106693268,
+          7.157199859619141,
+          1.1404401063919067
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1298",
+            "sha256": "98ec4fcd5a6c260a179480702c2d4690624207aeeb76160c6be4667bd66e11a5"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "canaliculus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "reviewFingerprint": {
+        "fingerprints": {
+          "source": "c8c7b859095cf6094e60eda7810605e545d5c6fb6bdc077307c312a8873cacb2",
+          "teaching": "fc26a003d51401a4f39e7d071e91114c5dc231427e36b4079924780eba155059",
+          "checklist": "ca89551accf752f8c735e17974af3166dcc1fb3cf25a4754461aa2832f979b77"
+        },
+        "materialHash": "21db17ff6473b5329c2d7f6932fcd2498a578831f55921231f2808b76a576ad3"
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-canaliculus",
+        "fmaId": "FMA59582",
+        "name": "Right lacrimal canaliculus",
+        "sourceName": "right lacrimal canaliculus",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-ocular-detail",
+        "nodeName": "FMA59582",
+        "bounds": {
+          "min": [
+            -0.20399999618530273,
+            7.132299900054932,
+            1.1338599920272827
+          ],
+          "max": [
+            -0.14581000804901123,
+            7.173599720001221,
+            1.1435099840164185
+          ]
+        },
+        "center": [
+          -0.17490500211715698,
+          7.152949810028076,
+          1.1386849880218506
+        ],
+        "anchor": [
+          -0.17007499933242798,
+          7.160400390625,
+          1.1397000551223755
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1349",
+            "sha256": "ff8401d7470c86141e144f82eea17a1081f076dbf3d068d48f26832c742ebbf3"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "canaliculus",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "reviewFingerprint": {
+        "fingerprints": {
+          "source": "78532a0c196583b431e6043c4ddb91ba4230c0e2e4f1a6efa0f8e8012b658539",
+          "teaching": "27f181489126f0cc23713d1b697c3a897a3760e9f67f676dc31e3848202d6cfc",
+          "checklist": "0723089243d286f548ef035aecb9b3cab2f67f6b9c35d59d026c24bdb6c35275"
+        },
+        "materialHash": "9199e27fd739558659bd28551a83bd4c3029c626b978d45084361373285b5d80"
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-lacrimal-sac",
+        "fmaId": "FMA59546",
+        "name": "Left lacrimal sac",
+        "sourceName": "left lacrimal sac",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-ocular-detail",
+        "nodeName": "FMA59546",
+        "bounds": {
+          "min": [
+            0.12432499974966049,
+            7.035099983215332,
+            1.0937700271606445
+          ],
+          "max": [
+            0.15764300525188446,
+            7.186500072479248,
+            1.1433299779891968
+          ]
+        },
+        "center": [
+          0.14098400250077248,
+          7.11080002784729,
+          1.1185500025749207
+        ],
+        "anchor": [
+          0.1274610012769699,
+          7.108100414276123,
+          1.1183700561523438
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1309",
+            "sha256": "d62bdc3bfc8e3b2d5c0fea85973e68e4f066c253f6a18be5fe2c72e791a4ff21"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sac",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "reviewFingerprint": {
+        "fingerprints": {
+          "source": "053d8fd5598fec88f02fa49b35bb8639292c09f1aa0ea974062882b211a342db",
+          "teaching": "e537053dac5b7d2b37a5a6286336c971d4531d2ca1d80a4fdbfbea8178644d84",
+          "checklist": "28d4a10d5b044f811e6fe1fd9a2527f7ce7a3cf91e6f9532b6c48ccb78fbd996"
+        },
+        "materialHash": "941eae744c80f9e5e534f9a7e84c897327f6db6a1631327a4a7494bc12ed0fb0"
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-lacrimal-sac",
+        "fmaId": "FMA59545",
+        "name": "Right lacrimal sac",
+        "sourceName": "right lacrimal sac",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-ocular-detail",
+        "nodeName": "FMA59545",
+        "bounds": {
+          "min": [
+            -0.17038500308990479,
+            7.034899711608887,
+            1.0935200452804565
+          ],
+          "max": [
+            -0.13739600777626038,
+            7.186500072479248,
+            1.14382004737854
+          ]
+        },
+        "center": [
+          -0.15389050543308258,
+          7.110699892044067,
+          1.1186700463294983
+        ],
+        "anchor": [
+          -0.14081799983978271,
+          7.105100154876709,
+          1.1188600063323975
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1360",
+            "sha256": "192020e5353d1f78e5867a7a2f09e4f114ab31a7cdc2865056c734a5f1bbc02e"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "sac",
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      },
+      "reviewFingerprint": {
+        "fingerprints": {
+          "source": "207a72484b1e76c5a9b99904fec4b514a1a8afd91524d15431ce9d2f0dcb0101",
+          "teaching": "3b2cd9bbb156c4a0ee950c09e0d1c3229a4ebcb172a184488ba5d5955cf3cd50",
+          "checklist": "245677acb0a099e560d8bab648d9878d91d25ea9cae0ea5049d0f7224a0a76d5"
+        },
+        "materialHash": "f8efb96f6bdb66b108301cade79ad5823bb659eff8d38b11da1aa6560c73f00f"
+      }
+    }
+  ],
+  "excluded": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-nasolacrimal-duct",
+        "fmaId": "FMA59556",
+        "name": "Left nasolacrimal duct",
+        "sourceName": "left nasolacrimal duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-ocular-detail",
+        "nodeName": "FMA59556",
+        "bounds": {
+          "min": [
+            0.10770600289106369,
+            6.877500057220459,
+            1.0195000171661377
+          ],
+          "max": [
+            0.1575310081243515,
+            7.04680061340332,
+            1.1148300170898438
+          ]
+        },
+        "center": [
+          0.1326185055077076,
+          6.96215033531189,
+          1.0671650171279907
+        ],
+        "anchor": [
+          0.14243200421333313,
+          6.95319938659668,
+          1.0891900062561035
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1302",
+            "sha256": "a8a4bcc60e752d4f4b79a60ec6e9539809aa4293be59d6623bb0ac008ad6606f"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-nasolacrimal-duct",
+        "fmaId": "FMA59555",
+        "name": "Right nasolacrimal duct",
+        "sourceName": "right nasolacrimal duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-ocular-detail",
+        "nodeName": "FMA59555",
+        "bounds": {
+          "min": [
+            -0.17041701078414917,
+            6.877199649810791,
+            1.0194400548934937
+          ],
+          "max": [
+            -0.12113599479198456,
+            7.04680061340332,
+            1.1150000095367432
+          ]
+        },
+        "center": [
+          -0.14577650278806686,
+          6.962000131607056,
+          1.0672200322151184
+        ],
+        "anchor": [
+          -0.15660300850868225,
+          6.948100566864014,
+          1.085939884185791
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1353",
+            "sha256": "c54be1e1906335236559e5ca8bf69e95cbbdac0fef62d90efa9e36aa2ac164e8"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 eye-region source surface in unchanged common coordinates. Source names do not establish complete eyelid layers, attachments, puncta, valves, gland ducts, canalicular subdivisions, lumen, tear flow or patient registration. No absent structure or connection is invented.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "readiness": "pending",
+        "title": "Ultrasound content pending",
+        "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+        "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+      }
+    }
+  ],
+  "sourceAssetsUnchanged": true,
+  "newAssetAdmission": false,
+  "clinicalApproval": false,
+  "patientSpaceRegistration": false
+}

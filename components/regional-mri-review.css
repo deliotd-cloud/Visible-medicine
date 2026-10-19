@@ -1,0 +1,88 @@
+.regional-mri-review{color:#e8edf1;background:#111c25;border:1px solid #344955;border-radius:12px;padding:1.15rem;max-width:1500px;margin:1rem auto;font:inherit}
+.regional-mri-review *{box-sizing:border-box}
+.regional-mri-review__header{display:flex;justify-content:space-between;gap:1rem;align-items:start}
+.regional-mri-review__header h2{margin:.1rem 0 .4rem;font-size:1.45rem}
+.regional-mri-review__header p{margin:.25rem 0;overflow-wrap:anywhere}
+.regional-mri-review__eyebrow{color:#9dd9d1;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem;font-weight:700}
+.regional-mri-review__caution,.regional-mri-review__limits{color:#c4d0d7;font-size:.86rem;line-height:1.45}
+.regional-mri-review__controls,.regional-mri-review__window{display:flex;flex-wrap:wrap;gap:.7rem 1rem;align-items:center;margin:.85rem 0}
+.regional-mri-review label{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
+.regional-mri-review input,.regional-mri-review select,.regional-mri-review button{font:inherit}
+.regional-mri-review input[type=number]{width:7rem}
+.regional-mri-review select,.regional-mri-review input:not([type=range]):not([type=checkbox]):not([type=file]),.regional-mri-review button{background:#1c303d;color:#f4f7f7;border:1px solid #5c7886;border-radius:6px;padding:.35rem .55rem}
+.regional-mri-review input[type=file]{max-width:100%;font-size:.86rem}
+.regional-mri-review button{cursor:pointer}
+.regional-mri-review button:disabled{opacity:.48;cursor:not-allowed}
+.regional-mri-review button:focus-visible,.regional-mri-review input:focus-visible,.regional-mri-review select:focus-visible,.regional-mri-review__viewport:focus-visible{outline:2px solid #f8cd68;outline-offset:2px}
+.regional-mri-review__layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(260px,1fr);gap:1.2rem;margin-top:1rem}
+.regional-mri-review__image-panel,.regional-mri-review__inventory{min-width:0;background:#182934;border-radius:8px;padding:.85rem}
+.regional-mri-review__planes{display:flex;gap:.45rem;margin-bottom:.7rem}
+.regional-mri-review__planes button[aria-pressed=true]{background:#255f6b;border-color:#8ed5ca}
+.regional-mri-review__viewport{position:relative;display:flex;justify-content:center;align-items:center;height:min(70vh,700px);min-height:260px;background:#06090d;overflow:hidden;border-radius:6px;padding:1.2rem 1.8rem;touch-action:pan-x}
+.regional-mri-review__viewport canvas{display:block;flex:none;image-rendering:auto}
+.regional-mri-review__viewport canvas[role=button]{cursor:crosshair}
+.regional-mri-review__viewport canvas:focus-visible{outline:2px solid #f8cd68;outline-offset:3px}
+.regional-mri-review__direction{position:absolute;color:#fff;background:#17242bba;font-size:.75rem;padding:.1rem .3rem;pointer-events:none}
+.regional-mri-review__direction.top{top:0;left:50%;transform:translateX(-50%)}
+.regional-mri-review__direction.bottom{bottom:0;left:50%;transform:translateX(-50%)}
+.regional-mri-review__direction.left{left:0;top:50%;transform:translateY(-50%)}
+.regional-mri-review__direction.right{right:0;top:50%;transform:translateY(-50%)}
+.regional-mri-review__slice{display:flex;align-items:center;gap:.6rem;margin:.7rem 0}
+.regional-mri-review__slice label{flex:1;display:flex;align-items:center}
+.regional-mri-review__slice input{flex:1;min-width:90px}
+.regional-mri-review__inventory h3{margin:.1rem 0 .5rem}
+.regional-mri-review__inventory>label{margin:.8rem 0}
+.regional-mri-review__inventory input[type=search]{flex:1;min-width:0}
+.regional-mri-review__inventory ul{list-style:none;margin:.6rem 0;padding:0;max-height:42vh;overflow:auto}
+.regional-mri-review__inventory li{margin:.3rem 0;border-bottom:1px solid #3b505a;padding-bottom:.3rem}
+.regional-mri-review__inventory li button{width:100%;text-align:left;display:flex;flex-direction:column;gap:.1rem}
+.regional-mri-review__inventory small{display:block;color:#c7d5da;font-size:.75rem}
+.regional-mri-review__inventory li button[aria-pressed=true]{border-color:#88d7cd;background:#27565d}
+.regional-mri-review__scope{border-top:1px solid #53707c;margin-top:.8rem;padding-top:.65rem;overflow-wrap:anywhere}
+.regional-mri-review__scope h4{margin:0}
+.regional-mri-review__badge{color:#ffe6a6;background:#5d3c19;border:1px solid #e5a845;border-radius:5px;padding:.45rem;font-weight:700;font-size:.78rem}
+.regional-mri-review code{font-size:.78em;overflow-wrap:anywhere}
+.regional-mri-review__guided{border:1px solid #53707c;border-radius:7px;padding:.6rem;margin:.7rem 0;font-size:.86rem;overflow-wrap:anywhere}
+.regional-mri-review__guided summary{cursor:pointer;font-weight:600}
+.regional-mri-review__guided h4{margin:.7rem 0 .3rem}
+.regional-mri-review__guided p{line-height:1.45}
+.regional-mri-review__guide-actions{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0}
+.regional-mri-review__guide-actions button[aria-pressed=true]{background:#27565d;border-color:#88d7cd}
+.regional-mri-review__layout--comparing{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(230px,.62fr)}
+.regional-mri-review__comparison{min-width:0;background:#182934;border:1px solid #55757c;border-radius:8px;padding:.85rem;overflow-wrap:anywhere}
+.regional-mri-review__comparison header{display:flex;align-items:start;justify-content:space-between;gap:.6rem}
+.regional-mri-review__comparison h3{margin:.1rem 0 .4rem}
+.regional-mri-review__comparison p{font-size:.84rem;line-height:1.45}
+.regional-mri-review__comparison iframe{display:block;width:100%;height:min(70vh,700px);min-height:360px;border:1px solid #54717c;border-radius:6px;background:#fff}
+.regional-mri-review__comparison details{border-top:1px solid #54717c;margin-top:.65rem;padding-top:.65rem}
+.regional-mri-review__comparison summary{cursor:pointer;font-weight:600}
+.regional-mri-review__comparison details label{margin:.7rem 0;align-items:start;font-size:.85rem;line-height:1.4}
+.regional-mri-review__comparison dl{font-size:.8rem;line-height:1.4}
+.regional-mri-review__comparison dt{font-weight:700;margin-top:.65rem;color:#b0e2dc}
+.regional-mri-review__comparison dd{margin:.2rem 0 .45rem}
+.regional-mri-review a{color:#a4e7de}
+.regional-mri-review__learning{margin-top:.8rem;border:1px solid #53707c;border-radius:7px;padding:.65rem;font-size:.86rem;line-height:1.5}
+.regional-mri-review__learning summary{cursor:pointer;font-weight:650}
+.regional-mri-review__learning-content{padding-top:.4rem}
+.regional-mri-review__learning-content p{margin:.6rem 0}
+.regional-mri-review__learning-content label{display:flex;align-items:start;flex-direction:column;margin:.75rem 0;gap:.3rem}
+.regional-mri-review__learning-content select{width:100%;max-width:100%}
+.regional-mri-review__learning-content h3{font-size:1rem;margin:.85rem 0 .35rem}
+.regional-mri-review__learning-content ul{list-style:disc;padding-left:1.2rem;max-height:none;overflow:visible}
+.regional-mri-review__learning-content li{border:0;padding:0;margin:.3rem 0}
+.regional-mri-review__learning-scope,.regional-mri-review__learning-limits{color:#c4d0d7}
+.regional-mri-review__check{font-size:.9rem;line-height:1.5}
+.regional-mri-review__check h3{font-size:1.15rem}
+.regional-mri-review__check fieldset{border:0;padding:0;margin:1rem 0;min-width:0}
+.regional-mri-review__check legend{font-weight:650;margin-bottom:.65rem}
+.regional-mri-review__check-options{display:grid;gap:.55rem}
+.regional-mri-review__check-options button{text-align:left;min-height:44px}
+.regional-mri-review__check-options button[aria-pressed=true]{border-color:#88d7cd;background:#27565d}
+.regional-mri-review__check-feedback{min-height:3em;padding:.65rem;border-left:3px solid #8198a4;background:#14232d}
+.regional-mri-review__check-feedback.is-correct{border-color:#88d7cd;color:#b4f0df}
+.regional-mri-review__check-feedback.is-incorrect{border-color:#f8cd68;color:#ffe6a6}
+.regional-mri-review__check details{margin-top:1rem;border-top:1px solid #3b505a;padding-top:.65rem;font-size:.82rem;color:#c4d0d7}
+.regional-mri-review__learning-reflection,.regional-mri-review__learning-sources{border-top:1px solid #3b505a;margin:.7rem 0 0;padding-top:.6rem}
+.regional-mri-review a:focus-visible,.regional-mri-review summary:focus-visible,.regional-mri-review__comparison:focus-visible{outline:2px solid #f8cd68;outline-offset:2px}
+@media(max-width:1199px) and (min-width:801px){.regional-mri-review__layout--comparing{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.regional-mri-review__layout--comparing>.regional-mri-review__inventory{grid-column:1/-1}}
+@media(max-width:800px){.regional-mri-review__layout{grid-template-columns:1fr}.regional-mri-review__header{flex-direction:column}.regional-mri-review__inventory ul{max-height:28vh}}

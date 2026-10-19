@@ -1,0 +1,9 @@
+# Read-only course enrolment refusals
+
+The enrolment service now checks existing account restrictions, computed current consent/profile status and published/open course state using bound SELECTs before account or schema initialization. Known-ineligible requests, including every invitation-code shape while invitations are disabled, return the existing refusal messages/order without reaching those setup writes. Missing or incompatible read prerequisites return a recoverable 503; preparing the database is a separate deployment responsibility, not an enrolment side effect.
+
+This preflight never grants access, accepts a caller-supplied schema proof or enables invitations. Eligible requests still execute the original fresh account/profile/release checks and the conditional five-statement free/institution admission batch. Existing authentication, independent Atlas/case/lecture entitlements, held email and allocation restrictions are unchanged.
+
+Limits: the route's rate limiter can write before this service. State becoming ineligible after the preflight can enter the original writeful path, whose later refusal and transaction checks remain. This is not zero-write assurance for every interleaving, actual-target schema/ledger/audit/rights admission, genuine hosted identity, exactly-once email or clinical release. Pending fracture migration0009/journal and patient data remain untouched.
+
+Focused tests compile the actual service and use real in-memory SQLite reads with explicitly synthetic account/bootstrap/hosting seams. E-only baseline/proposal evidence, retained harness failures, independent review and final verification are in `E:/VisibleMedicine-LocalStaging/20261006-enrolment-readonly-preflight/`. No new dependency, asset, paid service, migration or public deployment is introduced.

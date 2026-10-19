@@ -1,0 +1,9 @@
+## Checkpoint — 9 October 2026: guided-learning revision mismatch notice
+
+The imaging Guided learning panel now explains an unavailable source mapping when the imaging manifest and comparison revision differ. Previously the loaded-study panel showed an enabled sequence picker with zero available steps and no cause. The existing revision notice replaces those controls; all hooks retain their unconditional order. Matching revisions retain the current sequence experience. This is revision-drift resilience, not a claim that the current matching atlases were broken.
+
+The actual-component regression failed before the fix. Fifty-two focused tests now pass across revision availability, guided steps, handoffs, navigation and practice lifecycle, and TypeScript passes. A bounded Sol Medium worker owned only the component and its test; the coordinator reviewed the diff and ran the combined checks. CT-head specialist was active; no source datasets, masks or specialist work were edited.
+
+Source-only local checkpoint: no preview rebuild or browser acceptance is claimed for this change. The previously verified preview remains on website 7fa5e873eea619de5f27f712c19c16ba1496a847. Recovery evidence is in E:/VisibleMedicine-LocalStaging/20261009-guided-revision-notice/saved-state.json, with scoped source copies and a verified incremental bundle requiring that parent. Sixty unrelated specialist hashes and full pending shared-plan tails are preserved. E recovery is same-machine, not verified GitHub/off-device backup.
+
+Sites local-only; no public deployment, private upload, dependencies, fees, licences, entitlements, desktop PACS or clinical approval changes. Next: include this guard in the next local preview build and continue substantive regional teaching and linked learning. The full goal remains active; clinical sign-off and authenticated-model acceptance remain separate gates rather than blockers to independent work.

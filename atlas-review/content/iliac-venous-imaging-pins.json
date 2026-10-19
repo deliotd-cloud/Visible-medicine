@@ -1,0 +1,595 @@
+{
+  "sourceCommit": "420b004cf6c7501816bcec0034583aeee8a17ab7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "pelvis-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-vessels-recovery.glb",
+      "bytes": 122592,
+      "sha256": "e089b9e9d3eac8ec6c1731ddc2ab0972ae0be041d5175cdedc5cc0bfb8eb09ad",
+      "structures": 12
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "b90760b00b703fd85ddc2bae4f0cbc612612a69bec076ab8b82102847c76f1a9",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-common-iliac-vein",
+        "fmaId": "FMA21387",
+        "name": "Right common iliac vein",
+        "sourceName": "right common iliac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis",
+          "abdomen",
+          "thigh"
+        ],
+        "bundle": "pelvis-vessels-recovery",
+        "nodeName": "FMA21387",
+        "bounds": {
+          "min": [
+            -0.3588069975376129,
+            1.0063202381134033,
+            0.38333603739738464
+          ],
+          "max": [
+            -0.03588550165295601,
+            1.6460700035095215,
+            0.7344799637794495
+          ]
+        },
+        "center": [
+          -0.19734624959528446,
+          1.3261951208114624,
+          0.558908000588417
+        ],
+        "anchor": [
+          -0.20255500078201294,
+          1.346099853515625,
+          0.5292800068855286
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3566",
+            "sha256": "b34098865ad19c8fe0bc28e46ac76e2af6d52f0065d684637fd1886813c62a76"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-common-iliac-vein",
+        "fmaId": "FMA21388",
+        "name": "Left common iliac vein",
+        "sourceName": "left common iliac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis",
+          "abdomen",
+          "thigh"
+        ],
+        "bundle": "pelvis-vessels-recovery",
+        "nodeName": "FMA21388",
+        "bounds": {
+          "min": [
+            -0.15095700323581696,
+            1.005910038948059,
+            0.26905500888824463
+          ],
+          "max": [
+            0.2624790072441101,
+            1.6517400741577148,
+            0.7313600182533264
+          ]
+        },
+        "center": [
+          0.055761002004146576,
+          1.328825056552887,
+          0.5002075135707855
+        ],
+        "anchor": [
+          0.08100669831037521,
+          1.337499976158142,
+          0.5072500109672546
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3465",
+            "sha256": "4c2e57a9170cfa997bbe48f3b2a5a49e334e03a1067b4e8decc152fb1bb8d913"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "common",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-external-iliac-vein",
+        "fmaId": "FMA18885",
+        "name": "Right external iliac vein",
+        "sourceName": "right external iliac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis",
+          "abdomen",
+          "thigh"
+        ],
+        "bundle": "pelvis-vessels-recovery",
+        "nodeName": "FMA18885",
+        "bounds": {
+          "min": [
+            -0.5212200284004211,
+            -0.043699949979782104,
+            0.12443698942661285
+          ],
+          "max": [
+            -0.2480829954147339,
+            1.0554901361465454,
+            1.015910029411316
+          ]
+        },
+        "center": [
+          -0.3846515119075775,
+          0.5058950930833817,
+          0.5701735094189644
+        ],
+        "anchor": [
+          -0.4340520203113556,
+          0.3621801733970642,
+          0.4993080198764801
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3568",
+            "sha256": "503cc199a945ab1c061deacdc32165ac413f7c2d362375f17d576a3b2f235023"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "external",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-external-iliac-vein",
+        "fmaId": "FMA18886",
+        "name": "Left external iliac vein",
+        "sourceName": "left external iliac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis",
+          "abdomen",
+          "thigh"
+        ],
+        "bundle": "pelvis-vessels-recovery",
+        "nodeName": "FMA18886",
+        "bounds": {
+          "min": [
+            0.07749750465154648,
+            0.04442016780376434,
+            0.0061830137856304646
+          ],
+          "max": [
+            0.5713520050048828,
+            1.1386700868606567,
+            1.0051300525665283
+          ]
+        },
+        "center": [
+          0.32442475482821465,
+          0.5915451273322105,
+          0.5056565331760794
+        ],
+        "anchor": [
+          0.4478049874305725,
+          0.5487096905708313,
+          0.29528504610061646
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3484",
+            "sha256": "bf0ca81768bb8f1d42837f43ccd41bc0f006da1a9703517b298edeb9af525c00"
+          },
+          {
+            "file": "FJ3522",
+            "sha256": "2d1d33f168089521c707408b80f229d6b8f8302fde1f31ddad22e63238c4da7a"
+          },
+          {
+            "file": "FJ3523",
+            "sha256": "a26bb4b9261de25955ac8a6669391cb588a1546267db5c8c9865d10c426bc402"
+          },
+          {
+            "file": "FJ3524",
+            "sha256": "006c8cb0cc53fb2b5f388979adccff45430ba16dfd9d06ffa67a36f5bd946f27"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "external",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:vessel:right-internal-iliac-vein",
+        "fmaId": "FMA18887",
+        "name": "Right internal iliac vein",
+        "sourceName": "right internal iliac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis",
+          "abdomen",
+          "thigh"
+        ],
+        "bundle": "pelvis-vessels-recovery",
+        "nodeName": "FMA18887",
+        "bounds": {
+          "min": [
+            -0.38811901211738586,
+            -0.1117999255657196,
+            -0.5062593221664429
+          ],
+          "max": [
+            -0.16811001300811768,
+            1.1472302675247192,
+            0.5515400171279907
+          ]
+        },
+        "center": [
+          -0.27811451256275177,
+          0.5177151709794998,
+          0.022640347480773926
+        ],
+        "anchor": [
+          -0.27434200048446655,
+          0.5961199998855591,
+          -0.0652870163321495
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3570",
+            "sha256": "83a53beb46b092f78bf80cf73cdfc10b91e0b32f7183fc79fde7ab0716069d73"
+          },
+          {
+            "file": "FJ3571",
+            "sha256": "9fed45819fc91bdda871afc018a0e8924fa9a7bee6cb131626509f75344aa018"
+          },
+          {
+            "file": "FJ3572",
+            "sha256": "8a9105869190200b0798c89805b8565ab079a40ac859c1996a4bf3a752d75e6f"
+          },
+          {
+            "file": "FJ3607",
+            "sha256": "cd1c2558c44fff12efdad2da945fb314469f48c4e252aa10b79b94f7ec02f3ce"
+          },
+          {
+            "file": "FJ3608",
+            "sha256": "9166b488722a107f0ea509bc5c9f94ff26b4cab54d6a5dcc9141dc1bd29efe79"
+          },
+          {
+            "file": "FJ3609",
+            "sha256": "5cb3da4efafb5e511f9d0e658e095f9198545d325c7cc7d0960669b5124a2295"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:vessel:left-internal-iliac-vein",
+        "fmaId": "FMA18888",
+        "name": "Left internal iliac vein",
+        "sourceName": "left internal iliac vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis",
+          "abdomen",
+          "thigh"
+        ],
+        "bundle": "pelvis-vessels-recovery",
+        "nodeName": "FMA18888",
+        "bounds": {
+          "min": [
+            0.11571799963712692,
+            -0.10549987852573395,
+            -0.6006829738616943
+          ],
+          "max": [
+            0.25818198919296265,
+            1.1439203023910522,
+            0.3990840017795563
+          ]
+        },
+        "center": [
+          0.18694999441504478,
+          0.5192102119326591,
+          -0.10079948604106903
+        ],
+        "anchor": [
+          0.20834499597549438,
+          0.5610302686691284,
+          -0.16415901482105255
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3469",
+            "sha256": "6a853f1cc673163d4e339f608f405c8c7ad74a3a6c8364fa71421976cb42b681"
+          },
+          {
+            "file": "FJ3470",
+            "sha256": "84de7eea903bfea9b940078ecb921fafdcd8db65dd52f8e954d2973a8a7e59e1"
+          },
+          {
+            "file": "FJ3471",
+            "sha256": "90354aa14b7a84cd015bd32a9cfba5bd0ab9800bdf220fffcfb2960d752f2bcf"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "internal",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

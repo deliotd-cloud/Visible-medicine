@@ -1,0 +1,126 @@
+{
+  "parentCommit": "d5ebe0712d71f4f352ebac679373f00b8d7d94e1",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "tentorium-partial",
+      "url": "/models/bodyparts3d/tentorium/tentorium.glb?v=b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "bytes": 396152,
+      "sha256": "b7b35094243dab53b9681c98d5123aa4b93a881fb0e48de4a8d7f32186007d4c",
+      "structures": 1
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "d544190267ce0418c1e58d7c5c69c40158b2d4e9df1b87fbb90a28a323f00bda",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:connective:tentorium-source-portion",
+        "fmaId": "FMA83966",
+        "name": "Tentorium cerebelli (right-sided source only)",
+        "sourceName": "tentorium cerebelli",
+        "system": "connective",
+        "category": "membrane",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "tentorium-partial",
+        "nodeName": "FMA83966",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1843",
+            "sha256": "bd212fe0b2800bcb8c3ea350099f5bc563d438d8efd5409761fff47e8b150533"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.6332809925079346,
+            7.075300216674805,
+            -0.441795289516449
+          ],
+          "max": [
+            -0.02330159954726696,
+            7.416500091552734,
+            0.43292298913002014
+          ]
+        },
+        "center": [
+          -0.32829129602760077,
+          7.2459001541137695,
+          -0.0044361501932144165
+        ],
+        "anchor": [
+          -0.33515098690986633,
+          7.240300178527832,
+          -0.0015529999509453773
+        ],
+        "representation": {
+          "coverage": "partial",
+          "sourceLaterality": "unspecified",
+          "displayLaterality": "right",
+          "description": "The source names the whole tentorium, but all supplied vertices are right of midline. Right is the displayed portion, not a claim that the tentorium is a paired structure."
+        },
+        "coverageNote": "Incomplete right-sided source surface, not the complete bilateral tentorium. The left fold, complete notch boundary, dural venous sinuses and attachment footprints are not supplied. No mirrored counterpart or patient registration.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

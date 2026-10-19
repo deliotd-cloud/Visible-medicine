@@ -1,0 +1,115 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import test from 'node:test';
+import ts from 'typescript';
+import * as links from '../lib/head-atlas-links.ts';
+import {HEAD_LEARNING_REVISION,headLearningPacket,headLearningLinks,headLearningNavigation,headLearningSequences,headLearningSequencesForModality,headLearningSteps,parseHeadLearningIntent} from '../lib/head-atlas-learning.ts';
+import {HEAD_MRI_ONLY_TEACHING_REVISION} from '../lib/head-mri-only-teaching.ts';
+import {HEAD_MRI_LEARNING_REVISION,headMriLearningPacket,headMriLearningSequences,verifiedHeadMriLearningRevision} from '../lib/head-mri-learning.ts';
+import type {HeadEntry} from '../lib/head-atlas-import.ts';
+
+const ids=[['limbic-left-amygdala','limbic-right-amygdala'],['commissure-corpus-callosum','endocrine-pituitary-gland']];
+const generic:Record<string,{structure:string;side:string;source:string}>={
+  'limbic-left-amygdala':{structure:'vm:anatomy:body:head-neck:left:organ:left-amygdala',side:'left',source:'6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c'},
+  'limbic-right-amygdala':{structure:'vm:anatomy:body:head-neck:right:organ:right-amygdala',side:'right',source:'6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c'},
+  'commissure-corpus-callosum':{structure:'vm:anatomy:body:head-neck:midline:organ:corpus-callosum',side:'both',source:'6046dacb923f5103acb3b86dadf2817b5f0c133af88e0d225170cf331fbd0e3c'},
+  'endocrine-pituitary-gland':{structure:'vm:anatomy:body:head-neck:unpaired:organ:pituitary-gland',side:'both',source:'7fe91d4bfe3a5aa96bc77b83d10ab07775892328acc081dab6fb92b0c0c40915'},
+};
+const require=createRequire(import.meta.url);
+const source=readFileSync(new URL('../lib/head-mri-learning.ts',import.meta.url),'utf8');
+function isolated(headConceptById:typeof links.headConceptById){
+  const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const mod={exports:{} as typeof import('../lib/head-mri-learning.ts')};
+  new Function('require','module','exports',compiled)((name:string)=>name==='./head-atlas-links.ts'?{...links,headConceptById}:name==='./head-mri-only-teaching.ts'?{HEAD_MRI_ONLY_TEACHING_REVISION,verifiedHeadMriOnlyTeachingRevision:async()=>HEAD_MRI_ONLY_TEACHING_REVISION}:require(name),mod,mod.exports);
+  return mod.exports;
+}
+
+test('separate four-slot MRI packet is canonical and leaves original five-tour packet untouched',async()=>{
+  assert.deepEqual(headMriLearningSequences.map(sequence=>sequence.concepts),ids);
+  assert.deepEqual(headMriLearningSequences.map(sequence=>sequence.id),['mri-amygdalae','mri-midline-landmarks']);
+  assert.equal(headLearningSequences.length,5);
+  assert.deepEqual(headLearningSequencesForModality('CT').map(sequence=>sequence.id),[...headLearningSequences.map(sequence=>sequence.id),'insulae','globes','ct-parietal-occipital','ct-nasal-ethmoid','cerebellar-orientation']);
+  assert.deepEqual(headLearningSequencesForModality('MRI').map(sequence=>sequence.id),[...headLearningSequences.map(sequence=>sequence.id),...headMriLearningSequences.map(sequence=>sequence.id),'insulae','globes','cerebellar-orientation']);
+  assert.equal(createHash('sha256').update(JSON.stringify(headLearningPacket())).digest('hex'),HEAD_LEARNING_REVISION);
+  assert.equal(HEAD_LEARNING_REVISION,'47bae289d0e9bf2bf83596cd9bdbdb93e7a968b57507a55e26700af445763052');
+  const packet=headMriLearningPacket();
+  assert.equal(packet.schema,'vm-head-mri-learning-1');
+  assert.equal(packet.headRevision,links.HEAD_LINK_REVISION);
+  assert.equal(packet.teachingRevision,HEAD_MRI_ONLY_TEACHING_REVISION);
+  assert.equal(packet.status,'draft');
+  for(const key of ['patientRegistration','clinicalApproval','publicationApproval'] as const)assert.equal(packet[key],false);
+  assert.match(packet.scope,/No CT targets are mapped/);
+  assert.match(packet.scope,/partial/);
+  assert.equal(packet.sequences.flatMap(sequence=>sequence.bindings).length,4);
+  for(const sequence of packet.sequences)for(const [index,binding] of sequence.bindings.entries()){
+    assert.deepEqual(binding,links.headConceptById(sequence.concepts[index]));
+    assert(binding?.mriHref);
+    assert.equal(Object.hasOwn(binding,'ctHref'),false);
+  }
+  assert.equal(HEAD_MRI_LEARNING_REVISION,'252282ae46e9485bc6fc43d2674c792083d75bb71828750c3e27ee42ad8bff47');
+  assert.equal(createHash('sha256').update(JSON.stringify(packet)).digest('hex'),HEAD_MRI_LEARNING_REVISION);
+  assert.equal(await verifiedHeadMriLearningRevision(links.HEAD_LINK_REVISION),HEAD_MRI_LEARNING_REVISION);
+  assert.equal(await verifiedHeadMriLearningRevision('stale'),null);
+});
+
+test('all four MRI slots round-trip exact MRI and generic 3D destinations without CT fallback',()=>{
+  for(const sequence of headMriLearningSequences)for(const [index,conceptId] of sequence.concepts.entries()){
+    const position={sequenceId:sequence.id,conceptId},binding=links.headConceptById(conceptId);assert(binding);
+    const linksForStep=headLearningLinks(position);assert(linksForStep?.mriHref&&linksForStep.atlasHref);
+    assert.equal(linksForStep.ctHref,undefined);
+    assert.equal(linksForStep.mriHref.startsWith('/atlas/mri-head?'),true);
+    assert.equal(linksForStep.atlasHref.startsWith('/atlas/head-neck-3d?'),true);
+    for(const [href,surface] of [[linksForStep.mriHref,'image'],[linksForStep.atlasHref,'atlas']] as const){
+      const query=new URL(href,'https://example.invalid').searchParams;
+      assert.equal(query.get('headTour'),sequence.id);
+      assert.equal(query.get('headStep'),String(index));
+      assert.equal(query.get('headRevision'),links.HEAD_LINK_REVISION);
+      assert.deepEqual(parseHeadLearningIntent(query,surface),position);
+    }
+    const atlas=new URL(linksForStep.atlasHref,'https://example.invalid').searchParams;
+    assert.equal(links.headConceptFromAtlasQuery(atlas)?.conceptId,conceptId);
+    assert.deepEqual(Object.fromEntries([...atlas].filter(([key])=>!key.startsWith('head'))),{study:'1',...generic[conceptId],concept:conceptId});
+    assert.equal(atlas.get('source'),new URL(binding.atlasHref,'https://example.invalid').searchParams.get('source'));
+    const navigation=headLearningNavigation(position);assert(navigation);
+    assert.equal(navigation.index,index);
+    assert.equal(navigation.previous?.href??null,index?headLearningLinks({sequenceId:sequence.id,conceptId:sequence.concepts[index-1]})?.atlasHref:null);
+    assert.equal(navigation.next?.href??null,index<sequence.concepts.length-1?headLearningLinks({sequenceId:sequence.id,conceptId:sequence.concepts[index+1]})?.atlasHref:null);
+  }
+});
+
+test('MRI intents reject stale, malformed and mismatched source tuples and preserve missing slots',()=>{
+  for(const sequence of headMriLearningSequences)for(const conceptId of sequence.concepts){
+    const href=headLearningLinks({sequenceId:sequence.id,conceptId})?.atlasHref;assert(href);
+    const valid=new URL(href,'https://example.invalid').searchParams;
+    for(const key of ['concept','headTour','headStep','headRevision','study','structure','side','source']){
+      const stale=new URLSearchParams(valid);stale.set(key,'stale');assert.equal(parseHeadLearningIntent(stale,'atlas'),null,key);
+      const duplicate=new URLSearchParams(valid);duplicate.append(key,valid.get(key)!);assert.equal(parseHeadLearningIntent(duplicate,'atlas'),null,key);
+      const missing=new URLSearchParams(valid);missing.delete(key);assert.equal(parseHeadLearningIntent(missing,'atlas'),null,key);
+    }
+  }
+  const entries:HeadEntry[]=[
+    ['mrb.dgm.amygdala.left','Left amygdala — regional mask','dgm','left','mask'],
+    ['mrb.dgm.amygdala.right','Right amygdala — regional mask','dgm','right','mask'],
+    ['mrb.wmt.corpus_callosum','Corpus callosum — regional mask','wmt','midline_or_unpaired','partial-mask'],
+    ['mrb.orb.pituitary_gland','Pituitary gland — regional mask','orb','midline_or_unpaired','mask'],
+  ].map(([id,label,family,laterality,representation])=>({id,label,family,laterality,representation,color:[1,0,0],opacity:{fill:.2,outline:1}}));
+  for(const sequence of headMriLearningSequences)for(const index of [0,1]){
+    const full=headLearningSteps(entries,sequence.id,'MRI',links.HEAD_LINK_REVISION);
+    assert.deepEqual(full.map(step=>step.conceptId),sequence.concepts);
+    const missing=entries.find(entry=>entry===full[index].entry);assert(missing);
+    const slots=headLearningSteps(entries.filter(entry=>entry!==missing),sequence.id,'MRI',links.HEAD_LINK_REVISION);
+    assert.deepEqual(slots.map(step=>step.index),[0,1]);
+    assert.equal(slots[index].entry,null);
+    assert.deepEqual(headLearningSteps(entries,sequence.id,'MRI','stale'),[]);
+    assert.deepEqual(headLearningSteps(entries,sequence.id,'CT',links.HEAD_LINK_REVISION),[]);
+  }
+});
+
+test('verifier refuses digest changes and invented CT bindings',async()=>{
+  const ct=isolated(id=>{const binding=links.headConceptById(id);return binding&&id===ids[0][0]?{...binding,ctHref:'/atlas/ct-head?concept='+id}:binding;});
+  assert.equal(await ct.verifiedHeadMriLearningRevision(links.HEAD_LINK_REVISION),null);
+  const scope=isolated(id=>{const binding=links.headConceptById(id);return binding&&id===ids[0][0]?{...binding,scopeNote:binding.scopeNote+' changed'}:binding;});
+  assert.equal(await scope.verifiedHeadMriLearningRevision(links.HEAD_LINK_REVISION),null);
+});

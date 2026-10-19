@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import {carpalQuizMilestoneBytes,withoutThoracicQuizNotice} from './atlas-thoracic-bone-quiz-history.ts';
+/** Exact saved Circle milestone; never a learner fallback or approval migration. */
+export function circleWillisMilestoneBytes(path:string){
+ assert((/^(?:atlas-review\/|public\/atlas-)/.test(path)||path==='lib/atlas-model-inventory.json')&&!path.includes('..'));
+ return execFileSync('git',['show','992b1d2fd99e5304157005d41d394f1500ec21b1:'+path],{maxBuffer:32e6});
+}
+/** Test-only removal of this complete hash-pinned append; shipped credits stay. */
+export function withoutCarpalQuizNotice(text:string):string{
+ text=withoutThoracicQuizNotice(text);
+ const marker='\n## Carpal-bone structure checks — 2 October 2026\n';
+ const start=text.indexOf(marker);if(start<0)return text;
+ assert.equal(text.indexOf(marker,start+marker.length),-1,'Duplicate carpal notice');
+ // The original append is immutable; later prepended credits must not move the
+ // historical fixture's expected offset. Admit only exact saved/live prefixes.
+ const milestone=carpalQuizMilestoneBytes('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md').toString().replaceAll('\r','');
+ assert.equal(createHash('sha256').update(milestone).digest('hex'),'3584ac26d0587cc170361a56df498a2213b46de854ae0ca3fdbc20f671095ff8');
+ const cut=milestone.indexOf(marker);assert(cut>=0);
+ const addition=milestone.slice(cut);
+ assert.equal(createHash('sha256').update(addition).digest('hex'),'34786ade34eddd161388daabd2fc77ac5c55436c76697a78275172066dc312f5');
+ const canonical=withoutThoracicQuizNotice(readFileSync('atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','utf8').replaceAll('\r',''));
+ const revision=JSON.parse(readFileSync('atlas-review/manifest.json','utf8')).revision;
+ const prefixes=[revision,'49db4337ad84bee7d1823050f5b90ed43cf647c1'].map(value=>'# Clinical Review third-party notices\n\nAtlas source: '+value+'\n\n');
+ const prefix=prefixes.find(value=>text.startsWith(value))??'';
+ const preceding=text.slice(prefix.length,start);
+ assert([milestone,canonical].some(value=>{
+  const at=value.indexOf(marker);return at>=0&&preceding===value.slice(0,at);
+ }),'Altered preceding notice or moved carpal notice');
+ assert.equal(text.slice(start,start+addition.length),addition,'Altered carpal notice');
+ return text.slice(0,start)+text.slice(start+addition.length);
+}

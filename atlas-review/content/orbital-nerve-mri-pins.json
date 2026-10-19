@@ -1,0 +1,1023 @@
+{
+  "parentCommit": "889ed98e63818a9bbc46b2ddd67bb16518289784",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-nerves",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves.glb",
+      "bytes": 8286776,
+      "sha256": "f68b34d46c0c6273b687e3c8c890541a34cb2c66cbb383a5a9783e4a5990d335",
+      "structures": 27
+    },
+    {
+      "id": "head-neck-nerves-gaps",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-gaps.glb",
+      "bytes": 100964,
+      "sha256": "4aba05d53fa7bf578be5ef6f945c4a498a007e62529dd0e7c5db32f57d0c1461",
+      "structures": 2
+    },
+    {
+      "id": "head-neck-nerves-inventory",
+      "url": "/models/bodyparts3d/full-body/head-neck-nerves-inventory.glb",
+      "bytes": 10012,
+      "sha256": "4e7f008f8f6167e351bc02c6b04f538ba74433f893d77e5a5b0bb8396fa3b1b9",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "24cde7a3b970efbd15717aaa8d3f507c0aa1103b294c5b9daeeff143153fde59",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:nerve:superior-branch-of-left-oculomotor-nerve",
+        "fmaId": "FMA52575",
+        "name": "Superior branch of left oculomotor nerve",
+        "sourceName": "superior branch of left oculomotor nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52575",
+        "bounds": {
+          "min": [
+            0.15942800045013428,
+            7.256899356842041,
+            0.7029100060462952
+          ],
+          "max": [
+            0.2835550010204315,
+            7.353399753570557,
+            0.9638000726699829
+          ]
+        },
+        "center": [
+          0.2214915007352829,
+          7.305149555206299,
+          0.833355039358139
+        ],
+        "anchor": [
+          0.2305069863796234,
+          7.288700103759766,
+          0.8517999053001404
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1321",
+            "sha256": "2b1e26a6d616873e2f4ab678fb5061e6861ccccddd2d569628962f5c8aaaf6c7"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-oculomotor",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:nerve:superior-branch-of-right-oculomotor-nerve",
+        "fmaId": "FMA52574",
+        "name": "Superior branch of right oculomotor nerve",
+        "sourceName": "superior branch of right oculomotor nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52574",
+        "bounds": {
+          "min": [
+            -0.2967050075531006,
+            7.256800651550293,
+            0.7028500437736511
+          ],
+          "max": [
+            -0.17222900688648224,
+            7.353499889373779,
+            0.9638699293136597
+          ]
+        },
+        "center": [
+          -0.2344670072197914,
+          7.305150270462036,
+          0.8333599865436554
+        ],
+        "anchor": [
+          -0.2408749908208847,
+          7.2871994972229,
+          0.8502799868583679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1372",
+            "sha256": "15edc47f1f8ffe36ce70f4cace411501ff26b8d0078979a09032520823089631"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superior-oculomotor",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:nerve:inferior-branch-of-left-oculomotor-nerve",
+        "fmaId": "FMA52577",
+        "name": "Inferior branch of left oculomotor nerve",
+        "sourceName": "inferior branch of left oculomotor nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52577",
+        "bounds": {
+          "min": [
+            0.13159999251365662,
+            7.058000564575195,
+            0.6420800089836121
+          ],
+          "max": [
+            0.3774150013923645,
+            7.310100078582764,
+            1.000749945640564
+          ]
+        },
+        "center": [
+          0.25450749695301056,
+          7.1840503215789795,
+          0.821414977312088
+        ],
+        "anchor": [
+          0.2517299950122833,
+          7.194499492645264,
+          0.83024001121521
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1293",
+            "sha256": "cda5f59da351dffe1815dc8ac9757496b30c24e6bf0ec53bdec8feb700550a84"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-oculomotor",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:nerve:inferior-branch-of-right-oculomotor-nerve",
+        "fmaId": "FMA52576",
+        "name": "Inferior branch of right oculomotor nerve",
+        "sourceName": "inferior branch of right oculomotor nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52576",
+        "bounds": {
+          "min": [
+            -0.39056196808815,
+            7.057900428771973,
+            0.6421099901199341
+          ],
+          "max": [
+            -0.14429599046707153,
+            7.310200214385986,
+            1.000789999961853
+          ]
+        },
+        "center": [
+          -0.2674289792776108,
+          7.1840503215789795,
+          0.8214499950408936
+        ],
+        "anchor": [
+          -0.26139602065086365,
+          7.19290018081665,
+          0.8275900483131409
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1344",
+            "sha256": "6d0ba18dfb57f207fcfe8f7d9532070c2856ef10c8ccff8d46384719f872e4b6"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "inferior-oculomotor",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:nerve:left-trochlear-nerve",
+        "fmaId": "FMA50882",
+        "name": "Left trochlear nerve",
+        "sourceName": "left trochlear nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-gaps",
+        "nodeName": "FMA50882",
+        "bounds": {
+          "min": [
+            0.10328200459480286,
+            7.221099853515625,
+            0.2169319987297058
+          ],
+          "max": [
+            0.1945369839668274,
+            7.339300632476807,
+            1.008370041847229
+          ]
+        },
+        "center": [
+          0.14890949428081512,
+          7.280200242996216,
+          0.6126510202884674
+        ],
+        "anchor": [
+          0.17288099229335785,
+          7.275200366973877,
+          0.6000900268554688
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1330",
+            "sha256": "0a849c085582d60aa2baf8a980498617ceb1c8f3c2ae9c8913cc1ee36b8a1d2c"
+          }
+        ],
+        "coverageNote": "Selected source cranial-nerve representation only; this does not add limb nerves or a complete cranial-nerve tree. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trochlear",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:nerve:right-trochlear-nerve",
+        "fmaId": "FMA50881",
+        "name": "Right trochlear nerve",
+        "sourceName": "right trochlear nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-gaps",
+        "nodeName": "FMA50881",
+        "bounds": {
+          "min": [
+            -0.20756900310516357,
+            7.221099853515625,
+            0.216887965798378
+          ],
+          "max": [
+            -0.11631600558757782,
+            7.339399337768555,
+            1.0083600282669067
+          ]
+        },
+        "center": [
+          -0.1619425043463707,
+          7.28024959564209,
+          0.6126239970326424
+        ],
+        "anchor": [
+          -0.18864500522613525,
+          7.275899887084961,
+          0.6104599833488464
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1381",
+            "sha256": "6c1ec7f14af8bc9883e9f37363e299cbab82f4ecdeb68b1898670004ddf36632"
+          }
+        ],
+        "coverageNote": "Selected source cranial-nerve representation only; this does not add limb nerves or a complete cranial-nerve tree. Recovered from the v4 source in its unchanged common coordinate frame. Independent anatomical review is pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "trochlear",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:nerve:left-frontal-nerve",
+        "fmaId": "FMA52640",
+        "name": "Left frontal nerve",
+        "sourceName": "left frontal nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52640",
+        "bounds": {
+          "min": [
+            0.1919099986553192,
+            7.284599781036377,
+            0.7030500173568726
+          ],
+          "max": [
+            0.24577899277210236,
+            7.402900218963623,
+            0.9194900393486023
+          ]
+        },
+        "center": [
+          0.21884449571371078,
+          7.34375,
+          0.8112700283527374
+        ],
+        "anchor": [
+          0.2156749963760376,
+          7.347900390625,
+          0.8111700415611267
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1290",
+            "sha256": "66c53668aa92b73c55ce5fcfe6476e6665eedf923c8ea02290cdf3456296e0e9"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "frontal",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:nerve:right-frontal-nerve",
+        "fmaId": "FMA52639",
+        "name": "Right frontal nerve",
+        "sourceName": "right frontal nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52639",
+        "bounds": {
+          "min": [
+            -0.25887301564216614,
+            7.284599781036377,
+            0.70305997133255
+          ],
+          "max": [
+            -0.20503000915050507,
+            7.402900218963623,
+            0.9195599555969238
+          ]
+        },
+        "center": [
+          -0.2319515123963356,
+          7.34375,
+          0.8113099634647369
+        ],
+        "anchor": [
+          -0.23017099499702454,
+          7.347499847412109,
+          0.8128500580787659
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1341",
+            "sha256": "1d9f4f0ed3196ceb32439608452ef9849f631e1adce9920a6e31bc517bf2f714"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "frontal",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:nerve:left-lacrimal-nerve",
+        "fmaId": "FMA52630",
+        "name": "Left lacrimal nerve",
+        "sourceName": "left lacrimal nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52630",
+        "bounds": {
+          "min": [
+            0.19480100274085999,
+            7.269599437713623,
+            0.7050700187683105
+          ],
+          "max": [
+            0.42823299765586853,
+            7.348000526428223,
+            1.0597000122070312
+          ]
+        },
+        "center": [
+          0.31151700019836426,
+          7.308799982070923,
+          0.8823850154876709
+        ],
+        "anchor": [
+          0.3048259913921356,
+          7.314899921417236,
+          0.8818299770355225
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1300",
+            "sha256": "4922693d563eaa50f8b0b0f7547dce8fd265fc40de5414b83020e5b302cecd0a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lacrimal",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:nerve:right-lacrimal-nerve",
+        "fmaId": "FMA52629",
+        "name": "Right lacrimal nerve",
+        "sourceName": "right lacrimal nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52629",
+        "bounds": {
+          "min": [
+            -0.4413040280342102,
+            7.269699573516846,
+            0.7050700187683105
+          ],
+          "max": [
+            -0.20790299773216248,
+            7.348100662231445,
+            1.0597599744796753
+          ]
+        },
+        "center": [
+          -0.32460351288318634,
+          7.3089001178741455,
+          0.8824149966239929
+        ],
+        "anchor": [
+          -0.3197619915008545,
+          7.308000564575195,
+          0.8774999976158142
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1351",
+            "sha256": "0e563e908e3c1e6ea08e3233e8e90c37b6fd029b165a0e6c41d37f985b538f22"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "lacrimal",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:nerve:left-nasociliary-nerve",
+        "fmaId": "FMA52670",
+        "name": "Left nasociliary nerve",
+        "sourceName": "left nasociliary nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52670",
+        "bounds": {
+          "min": [
+            0.016303999349474907,
+            7.150200366973877,
+            0.6070500016212463
+          ],
+          "max": [
+            0.19426000118255615,
+            7.305099964141846,
+            1.3543299436569214
+          ]
+        },
+        "center": [
+          0.10528200026601553,
+          7.227650165557861,
+          0.9806899726390839
+        ],
+        "anchor": [
+          0.1519329994916916,
+          7.276899337768555,
+          0.9610499739646912
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1310",
+            "sha256": "c6f00f35feecee6f75646ac7a5461f03ee6ca89e55158c9574fbf5663270df77"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "nasociliary",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:nerve:right-nasociliary-nerve",
+        "fmaId": "FMA52669",
+        "name": "Right nasociliary nerve",
+        "sourceName": "right nasociliary nerve",
+        "system": "nerves",
+        "category": "nerve",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves",
+        "nodeName": "FMA52669",
+        "bounds": {
+          "min": [
+            -0.2074659913778305,
+            7.150200366973877,
+            0.6070099472999573
+          ],
+          "max": [
+            -0.029293999075889587,
+            7.305200099945068,
+            1.354759931564331
+          ]
+        },
+        "center": [
+          -0.11837999522686005,
+          7.227700233459473,
+          0.9808849394321442
+        ],
+        "anchor": [
+          -0.16468599438667297,
+          7.279799938201904,
+          0.9792900085449219
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1361",
+            "sha256": "f399ec1e5dd080357ba1bdde33393932e400f76567cf9c9c2392430600f99059"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "nasociliary",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:organ:left-ciliary-ganglion",
+        "fmaId": "FMA53550",
+        "name": "Left ciliary ganglion",
+        "sourceName": "left ciliary ganglion",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-inventory",
+        "nodeName": "FMA53550",
+        "bounds": {
+          "min": [
+            0.22498100996017456,
+            7.239499568939209,
+            0.8080999851226807
+          ],
+          "max": [
+            0.257192999124527,
+            7.265100002288818,
+            0.8402799963951111
+          ]
+        },
+        "center": [
+          0.24108700454235077,
+          7.252299785614014,
+          0.8241899907588959
+        ],
+        "anchor": [
+          0.23325000703334808,
+          7.251800537109375,
+          0.8322200179100037
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1288",
+            "sha256": "c362a3813e882588d31710138ce6e180c2d0dd32e9755a0f53452a82657371e0"
+          }
+        ],
+        "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ciliary-ganglion",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:organ:right-ciliary-ganglion",
+        "fmaId": "FMA53549",
+        "name": "Right ciliary ganglion",
+        "sourceName": "right ciliary ganglion",
+        "system": "nerves",
+        "category": "organ",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-nerves-inventory",
+        "nodeName": "FMA53549",
+        "bounds": {
+          "min": [
+            -0.2703910171985626,
+            7.239599704742432,
+            0.8079899549484253
+          ],
+          "max": [
+            -0.23795200884342194,
+            7.265300273895264,
+            0.8405799865722656
+          ]
+        },
+        "center": [
+          -0.2541715130209923,
+          7.252449989318848,
+          0.8242849707603455
+        ],
+        "anchor": [
+          -0.24665099382400513,
+          7.257500171661377,
+          0.8309299945831299
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1339",
+            "sha256": "de1f5bc0af45dc52a70d8e2d647f509b3ff0072ae504ab95483e9c1662195076"
+          }
+        ],
+        "coverageNote": "Small orbital ganglion source; its roots and connecting nerve branches are not reconstructed. Source version 4.0 surface in its unchanged common frame. Anatomy, boundaries and continuity are unvalidated.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "ciliary-ganglion",
+      "topics": [
+        "mri"
+      ],
+      "previous": {
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

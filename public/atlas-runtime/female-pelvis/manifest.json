@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+  "region": "independent-female-pelvis",
+  "structures": 43,
+  "nativePelvicSelections": 41,
+  "reusedRenalSelections": 2,
+  "studies": 11,
+  "draftTeachingSelections": 43,
+  "patientDataIncluded": false,
+  "clinicalApproved": false,
+  "exposedStructureIds": [
+    "vm:reference:hra-united-female-v1-10:pelvis:vagina",
+    "vm:reference:hra-united-female-v1-10:pelvis:cervicovaginal-junction",
+    "vm:reference:hra-united-female-v1-10:pelvis:ampulla-of-uterine-tube-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:isthmus-of-fallopian-tube-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:fibria-of-uterine-tube-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:uterine-tube-infundibulum-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:uterine-tube-infundibulum-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:fibria-of-uterine-tube-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:isthmus-of-fallopian-tube-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:ampulla-of-uterine-tube-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:uterovesical-pouch",
+    "vm:reference:hra-united-female-v1-10:pelvis:right-uterosacral-ligament",
+    "vm:reference:hra-united-female-v1-10:pelvis:left-uterosacral-ligament",
+    "vm:reference:hra-united-female-v1-10:pelvis:right-cardinal-ligament-of-uterus",
+    "vm:reference:hra-united-female-v1-10:pelvis:left-cardinal-ligament-of-uterus",
+    "vm:reference:hra-united-female-v1-10:pelvis:suspensory-ligament-of-ovary-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:suspensory-ligament-of-ovary-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:ovarian-ligament-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:ovarian-ligament-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:broad-ligament",
+    "vm:reference:hra-united-female-v1-10:pelvis:mesosalpinx-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:mesosalpinx-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:mesovarium-r",
+    "vm:reference:hra-united-female-v1-10:pelvis:mesovarium-l",
+    "vm:reference:hra-united-female-v1-10:pelvis:left-ovary",
+    "vm:reference:hra-united-female-v1-10:pelvis:right-ovary",
+    "vm:reference:hra-united-female-v1-10:pelvis:body-of-uterus",
+    "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-uterus",
+    "vm:reference:hra-united-female-v1-10:pelvis:lower-uterine-segment",
+    "vm:reference:hra-united-female-v1-10:pelvis:cervix",
+    "vm:reference:hra-united-female-v1-10:pelvis:internal-cervical-os",
+    "vm:reference:hra-united-female-v1-10:pelvis:external-cervical-os",
+    "vm:reference:hra-united-female-v1-10:pelvis:rectum",
+    "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-urinary-bladder-dome",
+    "vm:reference:hra-united-female-v1-10:pelvis:urinary-bladder-neck-smooth-muscle",
+    "vm:reference:hra-united-female-v1-10:pelvis:fundus-of-urinary-bladder-base",
+    "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-artery",
+    "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-artery",
+    "vm:reference:hra-united-female-v1-10:pelvis:left-uterine-vein",
+    "vm:reference:hra-united-female-v1-10:pelvis:right-uterine-vein",
+    "vm:reference:hra-united-female-v1-10:pelvis:sacrum",
+    "vm:reference:hra-united-female-v1-10:kidneys:right-ureter",
+    "vm:reference:hra-united-female-v1-10:kidneys:left-ureter"
+  ],
+  "reusedRenalSourceIds": [
+    "vm:reference:hra-united-female-v1-10:kidneys:right-ureter",
+    "vm:reference:hra-united-female-v1-10:kidneys:left-ureter"
+  ],
+  "renalBundleSelections": 82,
+  "otherRenalSelectionsSelectableInPelvicUI": false,
+  "fullRenalBundleAndCatalogIncluded": true,
+  "standaloneReviewConnection": false,
+  "imagingConnection": false,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 486,
+      "sha256": "5a716cc5636bd22fc35f562a9977b57039dab9775ccec659d72bfce98ae5e269"
+    },
+    {
+      "path": "BUNDLED_NOTICES.txt",
+      "bytes": 36869,
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
+    },
+    {
+      "path": "bundled-dependencies.json",
+      "bytes": 1862,
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
+    },
+    {
+      "path": "source-inputs.json",
+      "bytes": 16681,
+      "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021"
+    },
+    {
+      "path": "assets/index-BZ74p3Ah.css",
+      "bytes": 237255,
+      "sha256": "c73be168bf68bcd751d1d8e117b3b25eccef6781196e6a8a95f6c09887a1191e"
+    },
+    {
+      "path": "assets/index-Cpj14cyY.js",
+      "bytes": 2745300,
+      "sha256": "c342817d470337bed8dabffc436f31a495f9757d817e2919d008009c78ff47a8"
+    },
+    {
+      "path": "models/hra-pelvis/pelvis.glb",
+      "bytes": 3796080,
+      "sha256": "f18f1f0e3c6e8c0562b6b66864a8d786ffdb9e6a688da9288550fad6e491b866"
+    },
+    {
+      "path": "models/hra-pelvis/catalog.json",
+      "bytes": 65210,
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
+    },
+    {
+      "path": "models/hra-pelvis/NOTICE.md",
+      "bytes": 3098,
+      "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927"
+    },
+    {
+      "path": "models/hra-renal/kidneys.glb",
+      "bytes": 3557552,
+      "sha256": "bd5d2affb912f135c8c8da7e7892fbc906ebae017ed7042e900646c2b6332cfc"
+    },
+    {
+      "path": "models/hra-renal/catalog.json",
+      "bytes": 135779,
+      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
+    },
+    {
+      "path": "models/hra-renal/NOTICE.md",
+      "bytes": 2374,
+      "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 351954,
+      "sha256": "e18835acc953f9d80705e42db7bb907415ea64050f266b2d930eed179e51c3d4"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    }
+  ]
+}

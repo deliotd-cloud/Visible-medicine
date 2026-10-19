@@ -1,0 +1,203 @@
+{
+  "sourceCommit": "548656bfd321605db7e82fd8f431c19b7489307b",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "inferior-thyroid-arteries",
+      "url": "/models/bodyparts3d/inferior-thyroid-arteries/inferior-thyroid-arteries.glb?v=abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "bytes": 20064,
+      "sha256": "abe5a85b810ba231cf032546e26e35c6c6243b7cfd880853bf7110345da0b155",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "c2fd362887f8ebb241f302ba11cf07a0d05682ab97b8973a835b8825050107d8",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-inferior-thyroid-artery",
+        "fmaId": "FMA10697",
+        "name": "Right inferior thyroid artery",
+        "sourceName": "right inferior thyroid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "inferior-thyroid-arteries",
+        "nodeName": "FMA10697",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2209",
+            "sha256": "229bf9cfcf4a5ba6f8bedf79e17cf395dd6c6c3290cef1ac2519012a0305eed4"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.434112012386322,
+            5.574999809265137,
+            0.4768590033054352
+          ],
+          "max": [
+            -0.28728699684143066,
+            5.90880012512207,
+            0.5582600235939026
+          ]
+        },
+        "center": [
+          -0.36069950461387634,
+          5.7418999671936035,
+          0.5175595134496689
+        ],
+        "anchor": [
+          -0.3927980065345764,
+          5.75629997253418,
+          0.5092099905014038
+        ],
+        "coverageNote": "Complete source-defined inferior thyroid artery surface, not a complete glandular supply tree. Thyroid/parathyroid tissue and recurrent laryngeal nerves are not supplied by this addition. Exact junctions, lumen and supply territories are not validated. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Right inferior thyroid artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Right inferior thyroid artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-inferior-thyroid-artery",
+        "fmaId": "FMA10680",
+        "name": "Left inferior thyroid artery",
+        "sourceName": "left inferior thyroid artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck",
+          "shoulder-arm",
+          "thorax"
+        ],
+        "bundle": "inferior-thyroid-arteries",
+        "nodeName": "FMA10680",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2210",
+            "sha256": "b2a14e4d5558ba3132f99b12b09721fac476fa8997013e1e463229bd5c15c8e8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.2875269949436188,
+            5.575099945068359,
+            0.47671398520469666
+          ],
+          "max": [
+            0.43411099910736084,
+            5.90880012512207,
+            0.5581600069999695
+          ]
+        },
+        "center": [
+          0.3608189970254898,
+          5.741950035095215,
+          0.5174369961023331
+        ],
+        "anchor": [
+          0.39309900999069214,
+          5.759099960327148,
+          0.5147200226783752
+        ],
+        "coverageNote": "Complete source-defined inferior thyroid artery surface, not a complete glandular supply tree. Thyroid/parathyroid tissue and recurrent laryngeal nerves are not supplied by this addition. Exact junctions, lumen and supply territories are not validated. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Left inferior thyroid artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Left inferior thyroid artery · Review pending",
+          "body": "Structure-specific clinical, pathology and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnostic interpretation or intervention guidance is supplied."
+        }
+      }
+    }
+  ]
+}

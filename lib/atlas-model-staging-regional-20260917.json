@@ -1,0 +1,19 @@
+{
+  "purpose": "administrator-staging-only",
+  "atlasSource": "a5baf03bb274e2e6f3dfe078603a0b9988b1f400",
+  "candidateManifestSha256": "bc8b31c36b3533bb996d7c4feccc84991e268f81cf7f7bebb4f7ed59ea06218e",
+  "activeInventorySha256": "9f686f1a2c9909bba2b46b1b76805aa8168287c4aa4d0f420e942b3fb7c90e2c",
+  "proposedInventorySha256": "a74532b7b64b61221f14ddefb02c267296376397c19da5553772996fdcaebba4",
+  "models": [
+    {
+      "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+      "bytes": 11856,
+      "paths": ["/atlas-runtime/head-neck/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb"]
+    },
+    {
+      "sha256": "9272b6137e321e1ed243d0c79b8c3a022eb56f2954af2ec65dd8b06ebfe6e0a5",
+      "bytes": 65264,
+      "paths": ["/atlas-runtime/head-neck/models/bodyparts3d/short-ciliary/short-ciliary.glb"]
+    }
+  ]
+}

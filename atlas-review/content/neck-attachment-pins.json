@@ -1,0 +1,1788 @@
+{
+  "sourceCommit": "e1c615a6a7acb7ce85b5df4697bdd1f4998b685f",
+  "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    },
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "spine-muscles",
+      "url": "/models/bodyparts3d/full-body/spine-muscles.glb",
+      "bytes": 5127960,
+      "sha256": "6cc6a2b15cda5a0defc35fdc2bebda607eac042571fec74bb1d2caba51748404",
+      "structures": 52
+    },
+    {
+      "id": "shoulder-arm-muscles",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "bytes": 2623088,
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "structures": 24
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+      "fmaId": "FMA12521",
+      "name": "Third cervical vertebra",
+      "sourceName": "third cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12521",
+      "bounds": {
+        "min": [
+          -0.2984279990196228,
+          6.170000076293945,
+          -0.11866901069879532
+        ],
+        "max": [
+          0.28539299964904785,
+          6.457399845123291,
+          0.37813201546669006
+        ]
+      },
+      "center": [
+        -0.006517499685287476,
+        6.313699960708618,
+        0.12973150238394737
+      ],
+      "anchor": [
+        0.008280440233647823,
+        6.285400390625,
+        0.06494998931884766
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3161",
+          "sha256": "8f0de55a4feef85c256501a8afff7bb5aa3f77f4681af4c91801da87b54db103"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-thoracic-vertebra",
+      "fmaId": "FMA9209",
+      "name": "Third thoracic vertebra",
+      "sourceName": "third thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9209",
+      "bounds": {
+        "min": [
+          -0.32966098189353943,
+          5.022299766540527,
+          -0.4863989055156708
+        ],
+        "max": [
+          0.3184089958667755,
+          5.418499946594238,
+          0.2673629820346832
+        ]
+      },
+      "center": [
+        -0.005625993013381958,
+        5.220399856567383,
+        -0.10951796174049377
+      ],
+      "anchor": [
+        -0.0007605130085721612,
+        5.221899509429932,
+        -0.1273920089006424
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3163",
+          "sha256": "3080ed603c54120fa5201816d77695354c81ea57275c599e68543bfb6ecb89c1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+      "fmaId": "FMA12522",
+      "name": "Fourth cervical vertebra",
+      "sourceName": "fourth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12522",
+      "bounds": {
+        "min": [
+          -0.27753400802612305,
+          6.045999526977539,
+          -0.09306400269269943
+        ],
+        "max": [
+          0.2637749910354614,
+          6.321400165557861,
+          0.3910810053348541
+        ]
+      },
+      "center": [
+        -0.0068795084953308105,
+        6.1836998462677,
+        0.14900850132107735
+      ],
+      "anchor": [
+        -0.04486189782619476,
+        6.188299655914307,
+        0.1026729941368103
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3164",
+          "sha256": "a883dd5929817f87eb366a32ca9d82463fd0db40286c49b8adc9e9d1a8cecc34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-thoracic-vertebra",
+      "fmaId": "FMA9248",
+      "name": "Fourth thoracic vertebra",
+      "sourceName": "fourth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9248",
+      "bounds": {
+        "min": [
+          -0.35461699962615967,
+          4.777400016784668,
+          -0.49802103638648987
+        ],
+        "max": [
+          0.34282001852989197,
+          5.214100360870361,
+          0.19604896008968353
+        ]
+      },
+      "center": [
+        -0.00589849054813385,
+        4.995750188827515,
+        -0.15098603814840317
+      ],
+      "anchor": [
+        -0.03037009947001934,
+        5.010699272155762,
+        -0.2006720006465912
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3166",
+          "sha256": "cbd60a450a8b2f3ee90ccc655f79a63b090d8a3abf5e6849cf288a7b2d4207f2"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+      "fmaId": "FMA12523",
+      "name": "Fifth cervical vertebra",
+      "sourceName": "fifth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12523",
+      "bounds": {
+        "min": [
+          -0.2969779968261719,
+          5.937700271606445,
+          -0.13917499780654907
+        ],
+        "max": [
+          0.2833319902420044,
+          6.1798996925354,
+          0.407725989818573
+        ]
+      },
+      "center": [
+        -0.00682300329208374,
+        6.058799982070923,
+        0.13427549600601196
+      ],
+      "anchor": [
+        -0.006795770023018122,
+        6.063100814819336,
+        0.12540000677108765
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3167",
+          "sha256": "b2485c3707b04f1fd455ee4d3a7b69670ec9c85d4ef9a54463e5c6089f1a69a7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-thoracic-vertebra",
+      "fmaId": "FMA9922",
+      "name": "Fifth thoracic vertebra",
+      "sourceName": "fifth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9922",
+      "bounds": {
+        "min": [
+          -0.36151501536369324,
+          4.397700309753418,
+          -0.500185489654541
+        ],
+        "max": [
+          0.3488970100879669,
+          4.972700119018555,
+          0.16009002923965454
+        ]
+      },
+      "center": [
+        -0.006309002637863159,
+        4.685200214385986,
+        -0.17004773020744324
+      ],
+      "anchor": [
+        -0.014510600827634335,
+        4.655699253082275,
+        -0.10752899199724197
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3169",
+          "sha256": "20c3b1dfed3a2ac5e631838ae924379672dac2047186711cfaa819b9a1db6e5b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+      "fmaId": "FMA12524",
+      "name": "Sixth cervical vertebra",
+      "sourceName": "sixth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12524",
+      "bounds": {
+        "min": [
+          -0.31265199184417725,
+          5.815899848937988,
+          -0.20820599794387817
+        ],
+        "max": [
+          0.2994770109653473,
+          6.047399997711182,
+          0.4167099893093109
+        ]
+      },
+      "center": [
+        -0.006587490439414978,
+        5.931649923324585,
+        0.10425199568271637
+      ],
+      "anchor": [
+        -0.02192229963839054,
+        5.937199592590332,
+        0.12316200137138367
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3170",
+          "sha256": "ac100888f7e271851c138e8d41a52168070e4fe5c63e8876a4bcfba08f3b59aa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-thoracic-vertebra",
+      "fmaId": "FMA9945",
+      "name": "Sixth thoracic vertebra",
+      "sourceName": "sixth thoracic vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "thorax"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA9945",
+      "bounds": {
+        "min": [
+          -0.3642269968986511,
+          4.093800067901611,
+          -0.48807570338249207
+        ],
+        "max": [
+          0.35033902525901794,
+          4.690799713134766,
+          0.15220901370048523
+        ]
+      },
+      "center": [
+        -0.006943985819816589,
+        4.3922998905181885,
+        -0.16793334484100342
+      ],
+      "anchor": [
+        -0.02785330079495907,
+        4.395999908447266,
+        -0.13166698813438416
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3171",
+          "sha256": "ebee2a07751de0aa0b33974eea0a9228fed9980f740c619776003d5a38c370c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:atlas",
+      "fmaId": "FMA12519",
+      "name": "Atlas",
+      "sourceName": "atlas",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12519",
+      "bounds": {
+        "min": [
+          -0.41364601254463196,
+          6.62209939956665,
+          -0.09404201805591583
+        ],
+        "max": [
+          0.40230700373649597,
+          6.814300537109375,
+          0.3764420449733734
+        ]
+      },
+      "center": [
+        -0.005669504404067993,
+        6.718199968338013,
+        0.1412000134587288
+      ],
+      "anchor": [
+        -0.10565600544214249,
+        6.696400165557861,
+        0.2025810182094574
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3176",
+          "sha256": "8ac9ee6d7631edc066a322af278ed508eab4d9c0919e9a77657ead17c14c8a79"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:axis",
+      "fmaId": "FMA12520",
+      "name": "Axis",
+      "sourceName": "axis",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12520",
+      "bounds": {
+        "min": [
+          -0.2596159875392914,
+          6.331700325012207,
+          -0.13329102098941803
+        ],
+        "max": [
+          0.24574199318885803,
+          6.783499717712402,
+          0.3653910160064697
+        ]
+      },
+      "center": [
+        -0.006936997175216675,
+        6.557600021362305,
+        0.11604999750852585
+      ],
+      "anchor": [
+        0.013543100096285343,
+        6.581600189208984,
+        0.20394302904605865
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3177",
+          "sha256": "ae446bbf47561c5ff2a2c0a03bfb158ba2581477ae5078ac89cc95b92637adab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "sourceName": "left scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13396",
+      "bounds": {
+        "min": [
+          0.5706140398979187,
+          3.8394994735717773,
+          -0.5507640242576599
+        ],
+        "max": [
+          1.6646400690078735,
+          5.498600006103516,
+          0.5284500122070312
+        ]
+      },
+      "center": [
+        1.1176270544528961,
+        4.6690497398376465,
+        -0.011157006025314331
+      ],
+      "anchor": [
+        1.2024999856948853,
+        4.69379997253418,
+        -0.04868198558688164
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3279",
+          "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:occipital-bone",
+      "fmaId": "FMA52735",
+      "name": "Occipital bone",
+      "sourceName": "occipital bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA52735",
+      "bounds": {
+        "min": [
+          -0.6196119785308838,
+          6.777700424194336,
+          -0.6800100207328796
+        ],
+        "max": [
+          0.6070529818534851,
+          7.845099925994873,
+          0.5095899701118469
+        ]
+      },
+      "center": [
+        -0.006279498338699341,
+        7.3114001750946045,
+        -0.08521002531051636
+      ],
+      "anchor": [
+        -0.011581499129533768,
+        7.092199802398682,
+        -0.3996880054473877
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3309",
+          "sha256": "c0262a08591e48504c8a53302525377e0c4ad1c165456475f3bb80aab6202d44"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "sourceName": "right scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13395",
+      "bounds": {
+        "min": [
+          -1.6646400690078735,
+          3.839599609375,
+          -0.5508275032043457
+        ],
+        "max": [
+          -0.5705379843711853,
+          5.498600006103516,
+          0.5285600423812866
+        ]
+      },
+      "center": [
+        -1.1175890266895294,
+        4.669099807739258,
+        -0.011133730411529541
+      ],
+      "anchor": [
+        -1.1983000040054321,
+        4.698699951171875,
+        -0.054347991943359375
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3384",
+          "sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-levator-scapulae",
+      "fmaId": "FMA32540",
+      "name": "Right levator scapulae",
+      "sourceName": "right levator scapulae",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32540",
+      "bounds": {
+        "min": [
+          -0.8107860088348389,
+          5.093199253082275,
+          -0.37912699580192566
+        ],
+        "max": [
+          -0.21074800193309784,
+          6.685600757598877,
+          0.32453498244285583
+        ]
+      },
+      "center": [
+        -0.5107670053839684,
+        5.889400005340576,
+        -0.027296006679534912
+      ],
+      "anchor": [
+        -0.4235309958457947,
+        5.836700439453125,
+        0.005924987606704235
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1532",
+          "sha256": "ee7897cbc5cde540e9cc29b03617d90f1b3caaebee4489f6590ee9c4632dcd42"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-levator-scapulae",
+      "fmaId": "FMA32541",
+      "name": "Left levator scapulae",
+      "sourceName": "left levator scapulae",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32541",
+      "bounds": {
+        "min": [
+          0.21074800193309784,
+          5.093199253082275,
+          -0.37912699580192566
+        ],
+        "max": [
+          0.8107860088348389,
+          6.685600757598877,
+          0.32453498244285583
+        ]
+      },
+      "center": [
+        0.5107670053839684,
+        5.889400005340576,
+        -0.027296006679534912
+      ],
+      "anchor": [
+        0.4235309958457947,
+        5.836700439453125,
+        0.00592399574816227
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1532M",
+          "sha256": "cd98c83bc88a183c77b3eb10ce396f805843444d6f31053b1e3fb04f34647372"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-splenius-cervicis",
+      "fmaId": "FMA22726",
+      "name": "Right splenius cervicis",
+      "sourceName": "right splenius cervicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22726",
+      "bounds": {
+        "min": [
+          -0.41196200251579285,
+          4.171899318695068,
+          -0.5480825901031494
+        ],
+        "max": [
+          0.015863800421357155,
+          6.713900089263916,
+          0.271696001291275
+        ]
+      },
+      "center": [
+        -0.19804910104721785,
+        5.442899703979492,
+        -0.1381932944059372
+      ],
+      "anchor": [
+        -0.23467500507831573,
+        5.461199760437012,
+        -0.17920200526714325
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1546",
+          "sha256": "d1d911084f09a997efd08c69b15885cb20fe2fe849c5f8652bc6f46c1ca62fe5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-splenius-cervicis",
+      "fmaId": "FMA22727",
+      "name": "Left splenius cervicis",
+      "sourceName": "left splenius cervicis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA22727",
+      "bounds": {
+        "min": [
+          -0.015863800421357155,
+          4.171899318695068,
+          -0.5480825901031494
+        ],
+        "max": [
+          0.41196200251579285,
+          6.713900089263916,
+          0.271696001291275
+        ]
+      },
+      "center": [
+        0.19804910104721785,
+        5.442899703979492,
+        -0.1381932944059372
+      ],
+      "anchor": [
+        0.23467500507831573,
+        5.461199760437012,
+        -0.17920100688934326
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1546M",
+          "sha256": "ead6661905f5316bb3865c7127d40eeda72feae4ec2abaa46b3e7679cfc6dc9a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-longus-capitis",
+      "fmaId": "FMA46310",
+      "name": "Left longus capitis",
+      "sourceName": "left longus capitis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46310",
+      "bounds": {
+        "min": [
+          0.010373200289905071,
+          5.856999397277832,
+          0.27329200506210327
+        ],
+        "max": [
+          0.2548089921474457,
+          6.966400146484375,
+          0.4504860043525696
+        ]
+      },
+      "center": [
+        0.13259109621867537,
+        6.4116997718811035,
+        0.3618890047073364
+      ],
+      "anchor": [
+        0.17037099599838257,
+        6.4205002784729,
+        0.3883119821548462
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1561",
+          "sha256": "a805c03e24aadb8da137abb8533543f4561db28e050b7bc6bb6f7ba70a0f1ac0"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-inferior",
+      "fmaId": "FMA32537",
+      "name": "Left obliquus capitis inferior",
+      "sourceName": "left obliquus capitis inferior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32537",
+      "bounds": {
+        "min": [
+          0.006067829672247171,
+          6.359100341796875,
+          -0.12380900979042053
+        ],
+        "max": [
+          0.4257040023803711,
+          6.688600063323975,
+          0.2319909632205963
+        ]
+      },
+      "center": [
+        0.21588591602630913,
+        6.523850202560425,
+        0.05409097671508789
+      ],
+      "anchor": [
+        0.21672898530960083,
+        6.513499736785889,
+        0.07113800197839737
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1563",
+          "sha256": "4845c2796223f82863a14b58a10c080921f49b03286846d0fdc37fa8230ba11a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-obliquus-capitis-superior",
+      "fmaId": "FMA32535",
+      "name": "Left obliquus capitis superior",
+      "sourceName": "left obliquus capitis superior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32535",
+      "bounds": {
+        "min": [
+          0.29069799184799194,
+          6.670000076293945,
+          -0.29513201117515564
+        ],
+        "max": [
+          0.4279100000858307,
+          6.915899753570557,
+          0.2081030309200287
+        ]
+      },
+      "center": [
+        0.3593039959669113,
+        6.792949914932251,
+        -0.04351449012756348
+      ],
+      "anchor": [
+        0.35620200634002686,
+        6.788000583648682,
+        -0.04335601627826691
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1564",
+          "sha256": "21133c79db7dd82d244fdffb4febaad660e54d6825dcbfcc1581e85fcea53cc5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-anterior",
+      "fmaId": "FMA46314",
+      "name": "Left rectus capitis anterior",
+      "sourceName": "left rectus capitis anterior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46314",
+      "bounds": {
+        "min": [
+          0.020251600071787834,
+          6.71660041809082,
+          0.27399298548698425
+        ],
+        "max": [
+          0.27686500549316406,
+          6.932700157165527,
+          0.37695297598838806
+        ]
+      },
+      "center": [
+        0.14855830278247595,
+        6.824650287628174,
+        0.32547298073768616
+      ],
+      "anchor": [
+        0.1467140018939972,
+        6.833799839019775,
+        0.33051598072052
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1566",
+          "sha256": "f063c76b3d4b1b6ebdd8f7504fa7a0d1d8f3b8d2e1e3bb45da9fb46ff42db15e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-major",
+      "fmaId": "FMA32531",
+      "name": "Left rectus capitis posterior major",
+      "sourceName": "left rectus capitis posterior major",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32531",
+      "bounds": {
+        "min": [
+          0.0018306300044059753,
+          6.405999660491943,
+          -0.254269003868103
+        ],
+        "max": [
+          0.36396098136901855,
+          6.885600566864014,
+          0.0045529939234256744
+        ]
+      },
+      "center": [
+        0.18289580568671227,
+        6.6458001136779785,
+        -0.12485800497233868
+      ],
+      "anchor": [
+        0.21111799776554108,
+        6.614599704742432,
+        -0.10850101709365845
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1567",
+          "sha256": "3927c8dbbf3773f46ad344d919b13716692ce2e045a125d3647344975b83eaa7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-posterior-minor",
+      "fmaId": "FMA32533",
+      "name": "Left rectus capitis posterior minor",
+      "sourceName": "left rectus capitis posterior minor",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32533",
+      "bounds": {
+        "min": [
+          -0.00034127000253647566,
+          6.65369987487793,
+          -0.3268849849700928
+        ],
+        "max": [
+          0.2418689876794815,
+          6.922099590301514,
+          -0.0690860003232956
+        ]
+      },
+      "center": [
+        0.12076385883847252,
+        6.787899732589722,
+        -0.19798549264669418
+      ],
+      "anchor": [
+        0.11524800211191177,
+        6.798900127410889,
+        -0.1893869936466217
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1568",
+          "sha256": "9aa18031ab7d1e868b05739a043eea20391f89437919c75f2f7a982868e05b48"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:left:muscle:left-rectus-capitis-lateralis",
+      "fmaId": "FMA46318",
+      "name": "Left rectus capitis lateralis",
+      "sourceName": "left rectus capitis lateralis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46318",
+      "bounds": {
+        "min": [
+          0.2597769796848297,
+          6.665400505065918,
+          0.11664600670337677
+        ],
+        "max": [
+          0.4003320038318634,
+          6.896100044250488,
+          0.27531898021698
+        ]
+      },
+      "center": [
+        0.33005449175834656,
+        6.780750274658203,
+        0.19598249346017838
+      ],
+      "anchor": [
+        0.3532640039920807,
+        6.774899959564209,
+        0.20987999439239502
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1569",
+          "sha256": "d5cee1b4060b42602f81ab57e0fe7ae8da4288e8dd215928d2f369715524ee1d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-longus-capitis",
+      "fmaId": "FMA46309",
+      "name": "Right longus capitis",
+      "sourceName": "right longus capitis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46309",
+      "bounds": {
+        "min": [
+          -0.26782000064849854,
+          5.856800556182861,
+          0.27195602655410767
+        ],
+        "max": [
+          -0.023114299401640892,
+          6.966899394989014,
+          0.45033302903175354
+        ]
+      },
+      "center": [
+        -0.1454671500250697,
+        6.4118499755859375,
+        0.3611445277929306
+      ],
+      "anchor": [
+        -0.17915600538253784,
+        6.406500339508057,
+        0.393636018037796
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1582",
+          "sha256": "2b0def59b27f6f6c654983b04daf3401997517a7c93bfff5bf70d0d0eb875ac9"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-inferior",
+      "fmaId": "FMA32536",
+      "name": "Right obliquus capitis inferior",
+      "sourceName": "right obliquus capitis inferior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32536",
+      "bounds": {
+        "min": [
+          -0.4046590030193329,
+          6.36359977722168,
+          -0.13050998747348785
+        ],
+        "max": [
+          -0.016132399439811707,
+          6.702499866485596,
+          0.24156402051448822
+        ]
+      },
+      "center": [
+        -0.2103957012295723,
+        6.533049821853638,
+        0.05552701652050018
+      ],
+      "anchor": [
+        -0.20861400663852692,
+        6.540799617767334,
+        0.06376998871564865
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1584",
+          "sha256": "76e6b88bd952d938d18c4e23f50083f8b4071071947ccf2f67d4800d25353dfa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-obliquus-capitis-superior",
+      "fmaId": "FMA32534",
+      "name": "Right obliquus capitis superior",
+      "sourceName": "right obliquus capitis superior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32534",
+      "bounds": {
+        "min": [
+          -0.4302310049533844,
+          6.686700344085693,
+          -0.2951819896697998
+        ],
+        "max": [
+          -0.29124200344085693,
+          6.916100025177002,
+          0.21287299692630768
+        ]
+      },
+      "center": [
+        -0.36073650419712067,
+        6.801400184631348,
+        -0.04115449637174606
+      ],
+      "anchor": [
+        -0.3547309935092926,
+        6.791399955749512,
+        -0.04385600984096527
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1585",
+          "sha256": "6b255f0276f6f0ed75afd64ff35d333bc83d29d6825ea868b5e2498d0887a390"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-anterior",
+      "fmaId": "FMA46313",
+      "name": "Right rectus capitis anterior",
+      "sourceName": "right rectus capitis anterior",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46313",
+      "bounds": {
+        "min": [
+          -0.28919801115989685,
+          6.724300384521484,
+          0.2807389795780182
+        ],
+        "max": [
+          0.20023299753665924,
+          6.933800220489502,
+          0.3768109977245331
+        ]
+      },
+      "center": [
+        -0.044482506811618805,
+        6.829050302505493,
+        0.32877498865127563
+      ],
+      "anchor": [
+        -0.06414730101823807,
+        6.851999282836914,
+        0.3364199697971344
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1588",
+          "sha256": "b7ad7dca09e8946a29dbcabf3cd2a01e724df5b4a2e5da0d67eadd5017eb736b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-major",
+      "fmaId": "FMA32530",
+      "name": "Right rectus capitis posterior major",
+      "sourceName": "right rectus capitis posterior major",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32530",
+      "bounds": {
+        "min": [
+          -0.36498796939849854,
+          6.409399509429932,
+          -0.254269003868103
+        ],
+        "max": [
+          0.00512696010991931,
+          6.885799407958984,
+          0.004855995066463947
+        ]
+      },
+      "center": [
+        -0.1799305046442896,
+        6.647599458694458,
+        -0.12470650440081954
+      ],
+      "anchor": [
+        -0.15330800414085388,
+        6.669200420379639,
+        -0.09993801265954971
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1589",
+          "sha256": "bd2e4e6cfb363bfdbe9b1cdc22115e5099de3ac10daa14210caf38fe771346da"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-posterior-minor",
+      "fmaId": "FMA32532",
+      "name": "Right rectus capitis posterior minor",
+      "sourceName": "right rectus capitis posterior minor",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA32532",
+      "bounds": {
+        "min": [
+          -0.24278299510478973,
+          6.653100490570068,
+          -0.326865017414093
+        ],
+        "max": [
+          -0.004010289907455444,
+          6.921999454498291,
+          -0.054396018385887146
+        ]
+      },
+      "center": [
+        -0.12339664250612259,
+        6.78754997253418,
+        -0.19063051789999008
+      ],
+      "anchor": [
+        -0.12240199744701385,
+        6.801400184631348,
+        -0.18971799314022064
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1590",
+          "sha256": "96eb4ad812cc9f9864f811327b30168153a6d681c93bc00ead8204e137010809"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:right:muscle:right-rectus-capitis-lateralis",
+      "fmaId": "FMA46317",
+      "name": "Right rectus capitis lateralis",
+      "sourceName": "right rectus capitis lateralis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "spine",
+      "regions": [
+        "spine"
+      ],
+      "bundle": "spine-muscles",
+      "nodeName": "FMA46317",
+      "bounds": {
+        "min": [
+          -0.4124950170516968,
+          6.681099891662598,
+          0.11695201694965363
+        ],
+        "max": [
+          -0.2819400131702423,
+          6.896600246429443,
+          0.2793419659137726
+        ]
+      },
+      "center": [
+        -0.34721751511096954,
+        6.7888500690460205,
+        0.1981469914317131
+      ],
+      "anchor": [
+        -0.37005698680877686,
+        6.780600547790527,
+        0.20153602957725525
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1591",
+          "sha256": "7c7266e6c06e8b74784c92b7be97c2bef843252fbb8a493d21db31e6c226b828"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

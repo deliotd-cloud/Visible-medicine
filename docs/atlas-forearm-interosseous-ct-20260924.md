@@ -1,0 +1,11 @@
+# Forearm interosseous CT draft integration — 24 September 2026
+
+The generated shared regional and whole-body runtime in `public/atlas-runtime/head-neck` is bound to committed Atlas source `853ffd63d76c635da8975d0d351295f75ba0d1e2` (manifest SHA-256 `529fde04c63dde04c3097e9dc64d43dfca5976f2ea536c16f689756e8f7c9293`). The stable `head-neck` directory serves these existing routes. The dedicated shoulder, female-pelvis and lower-limb runtimes are outside this export.
+
+Four exact source selections now carry CT orientation drafts: right/left common interosseous arteries FMA22807/FMA22808, and right/left recurrent interosseous arteries FMA268667/FMA268669. Their source file pins are respectively FJ2275, FJ2223, FJ2297 and FJ2245 in the licensed BodyParts3D 4.0 source. The common segment is a proximal landmark; its small branch is not guaranteed visible in every CT acquisition. The recurrent note explicitly does not claim reliable depiction of that small branch on CTA. Neither note makes a lumen, continuity, perfusion, absence, injury or occlusion finding from the mesh. MRI, X-ray and ultrasound content for these four selections remains pending.
+
+These are source-bound draft teaching notes, not acquired scans, patient registration, new geometry or clinical approval. The existing source mesh remains unvalidated. The website's four-module inventory retains 135 model objects and 142 protected paths, with the same administrator-review audience and independent Atlas, Education case and paid-lecture entitlements. No patient image, identifier, additional anatomical model or clinical PACS connection is added.
+
+The website regression checks exact Atlas revision, manifest and source-input hashes, four ID/FMA/file/hash bindings, CT-only draft routing, modality pending states, visibility limits, clinical flags and inventory counts. Earlier bronchus, laryngeal, venous and other runtime checks remain in the suite. Tests establish a local export contract only. Browser/device acceptance, protected packaging, hosted readback, full release gates and revision-bound radiologist sign-off remain separate.
+
+At this source-integration checkpoint, private Sites version 106 still served the older website source. Later publication must be verified and recorded separately; this document is not deployment evidence. The full Atlas goal remains active.

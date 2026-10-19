@@ -1,0 +1,624 @@
+{
+  "parentCommit": "0770fd3e49eb02b0430a80769744c88027c591e5",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [{"id":"head-neck-vessels-recovery","url":"/models/bodyparts3d/full-body/head-neck-vessels-recovery.glb","bytes":608992,"sha256":"800d583a96a6df8fdd2b5fff86c6e719a90e897d6c3c89bbb1a3bd71b0e89cbb","structures":16}],
+  "previousAllLessonsAndRecipesHash": "fd841b1b5dd22ed30dd77f39f994ee5267d2c194a5ed6e4c7d0e0aaaf4c4654d",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:vessel:anterior-communicating-artery",
+        "fmaId": "FMA50169",
+        "name": "Anterior communicating artery",
+        "sourceName": "anterior communicating artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50169",
+        "bounds": {
+          "min": [
+            -0.04155530035495758,
+            7.369999885559082,
+            0.6153199672698975
+          ],
+          "max": [
+            0.027063999325037003,
+            7.383699893951416,
+            0.6334200501441956
+          ]
+        },
+        "center": [
+          -0.007245650514960289,
+          7.376849889755249,
+          0.6243700087070465
+        ],
+        "anchor": [
+          0.002294389996677637,
+          7.383699893951416,
+          0.6257100105285645
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1655",
+            "sha256": "9e93878f7df5385e705674367796c02b86082fb2df1d3e35c9c801658e3f4914"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-anterior-cerebral-artery",
+        "fmaId": "FMA50029",
+        "name": "Right anterior cerebral artery",
+        "sourceName": "right anterior cerebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50029",
+        "bounds": {
+          "min": [
+            -0.15399999916553497,
+            7.348700046539307,
+            0.5900399684906006
+          ],
+          "max": [
+            -0.010987299494445324,
+            7.489799976348877,
+            0.7120699882507324
+          ]
+        },
+        "center": [
+          -0.08249364932999015,
+          7.419250011444092,
+          0.6510549783706665
+        ],
+        "anchor": [
+          -0.07492420077323914,
+          7.395999908447266,
+          0.6141999959945679
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1654",
+            "sha256": "7f146e7551bb53d1ad7f5d98a77a16d8c7ea4e8ab86012bfd3c92b782df2a5dd"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-anterior-cerebral-artery",
+        "fmaId": "FMA50030",
+        "name": "Left anterior cerebral artery",
+        "sourceName": "left anterior cerebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50030",
+        "bounds": {
+          "min": [
+            0.010987299494445324,
+            7.348700046539307,
+            0.5900499820709229
+          ],
+          "max": [
+            0.15399999916553497,
+            7.489799976348877,
+            0.7120699882507324
+          ]
+        },
+        "center": [
+          0.08249364932999015,
+          7.419250011444092,
+          0.6510599851608276
+        ],
+        "anchor": [
+          0.07492420077323914,
+          7.395999908447266,
+          0.6142099499702454
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1654M",
+            "sha256": "b5bbd053a3b23de2490f00262adc37044f2a1f09f6548468b9595add93806dcc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-cerebral-artery",
+        "fmaId": "FMA50584",
+        "name": "Right posterior cerebral artery",
+        "sourceName": "right posterior cerebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50584",
+        "bounds": {
+          "min": [
+            -0.572281002998352,
+            7.187600135803223,
+            -0.5968971848487854
+          ],
+          "max": [
+            -0.00562627986073494,
+            7.850500583648682,
+            0.5230200290679932
+          ]
+        },
+        "center": [
+          -0.2889536414295435,
+          7.519050359725952,
+          -0.03693857789039612
+        ],
+        "anchor": [
+          -0.1760450005531311,
+          7.479100227355957,
+          0.10215099155902863
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1661",
+            "sha256": "bb8a7e5734619033a9e29b8a53126a2126d53b210804393e3b32341e1bf1711e"
+          },
+          {
+            "file": "FJ1675",
+            "sha256": "f144e623f16f0667cbf7b04657b0fb8a78cfb1b9ac8ab87af69c8a81ed9d0bd1"
+          },
+          {
+            "file": "FJ1677",
+            "sha256": "4e5046740b2c7e3d60099e80dc759f2d23dd717d2a6a50c167917a971079e8d6"
+          },
+          {
+            "file": "FJ1678",
+            "sha256": "00480c89871f6bf5e72deb5e6133fd964c29233c98c6bd712921dd8e52fc1966"
+          },
+          {
+            "file": "FJ1680",
+            "sha256": "d954435f8d7673bfb605c26ed731d14c6e82484bd01274bd80183d55604659f5"
+          },
+          {
+            "file": "FJ1687",
+            "sha256": "360ed58797181a5b44e15f3539b629738f1474669428511be77a5a8d48d71b95"
+          },
+          {
+            "file": "FJ1691",
+            "sha256": "a59f2dad8a1a62d9b997a97c6b432b2b6b8d36c620c776cbed2852581145deec"
+          },
+          {
+            "file": "FJ1720",
+            "sha256": "bab795f2dc6349c549f3c0399bc492cb8ed80ac67dd9703f82767df32a4e613e"
+          },
+          {
+            "file": "FJ1727",
+            "sha256": "0b604eb708668ee4186665cc1edb1829864acebd1ad8c9f2811b9357b13ef16e"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-cerebral-artery",
+        "fmaId": "FMA50585",
+        "name": "Left posterior cerebral artery",
+        "sourceName": "left posterior cerebral artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50585",
+        "bounds": {
+          "min": [
+            0.00562627986073494,
+            7.187600135803223,
+            -0.5968971848487854
+          ],
+          "max": [
+            0.572281002998352,
+            7.850500583648682,
+            0.5230200290679932
+          ]
+        },
+        "center": [
+          0.2889536414295435,
+          7.519050359725952,
+          -0.03693857789039612
+        ],
+        "anchor": [
+          0.1760450005531311,
+          7.479100227355957,
+          0.10215099155902863
+        ],
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1661M",
+            "sha256": "415780e7385454bd8a00b0658939e12709094fcfa57486322fe8f646516a9cb4"
+          },
+          {
+            "file": "FJ1675M",
+            "sha256": "c051aaa79e3f76ff4fee6dd63675e527b2c9bedfa0c1851f72eba85eba3fe048"
+          },
+          {
+            "file": "FJ1677M",
+            "sha256": "d08c3f2b23448f5bc9a4c681a6b816a20d65055de8586d8f728ffe18ddd9223e"
+          },
+          {
+            "file": "FJ1678M",
+            "sha256": "74ef83ec6b3b43515c3ca0b7d2c3e9066ad7c40aa3301cbc2d64978d579fdddf"
+          },
+          {
+            "file": "FJ1680M",
+            "sha256": "418f9530d42659ec4f93c6fa55d4a4ce86bcab3dd2458c1697b3239585b563dd"
+          },
+          {
+            "file": "FJ1687M",
+            "sha256": "a0a649f781806ed0430535487162ca777b2c08bedb8394bfb01ec2934273f459"
+          },
+          {
+            "file": "FJ1691M",
+            "sha256": "2d3b4beb7558c00997887f923c407b6955ff1086170f8b8d2f45983d787433e0"
+          },
+          {
+            "file": "FJ1720M",
+            "sha256": "72b3c8dac6711edf586e4703d1be81fff6a3be4ce8cde9befe2ed130ca2a2041"
+          },
+          {
+            "file": "FJ1727M",
+            "sha256": "76f789b1deae4ca1707a12a6322c29d3de52a5cb8619c12ac5553c4b920d1bf4"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-communicating-artery",
+        "fmaId": "FMA50085",
+        "name": "Right posterior communicating artery",
+        "sourceName": "right posterior communicating artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50085",
+        "bounds": {
+          "min": [
+            -0.12567399442195892,
+            7.3048996925354,
+            0.47142601013183594
+          ],
+          "max": [
+            -0.054554399102926254,
+            7.341700553894043,
+            0.6052200198173523
+          ]
+        },
+        "center": [
+          -0.09011419676244259,
+          7.323300123214722,
+          0.5383230149745941
+        ],
+        "anchor": [
+          -0.08920519798994064,
+          7.327399730682373,
+          0.5310099720954895
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1713",
+            "sha256": "a568f857676b6795c9b58c83c011d4d0f0e12cd746dcda95bd9ab65631cb0d86"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-communicating-artery",
+        "fmaId": "FMA50086",
+        "name": "Left posterior communicating artery",
+        "sourceName": "left posterior communicating artery",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-vessels-recovery",
+        "nodeName": "FMA50086",
+        "bounds": {
+          "min": [
+            0.054554399102926254,
+            7.3048996925354,
+            0.47142601013183594
+          ],
+          "max": [
+            0.1256750077009201,
+            7.341700553894043,
+            0.6052100658416748
+          ]
+        },
+        "center": [
+          0.09011470340192318,
+          7.323300123214722,
+          0.5383180379867554
+        ],
+        "anchor": [
+          0.08920519798994064,
+          7.327399730682373,
+          0.5310099720954895
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1713M",
+            "sha256": "5f3bda878361debaa1e0e2e13c31093259a43ab42b9ac8254c876cfd934a42bc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct",
+        "mri"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

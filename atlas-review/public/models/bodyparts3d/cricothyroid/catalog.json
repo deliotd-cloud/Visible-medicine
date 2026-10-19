@@ -1,0 +1,543 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "evidence": {
+    "sourceVersion": "4.0",
+    "inventorySha256": "c0f838bf17f5d34fd92c08a4004c6a9205f4e5fa5f6e7cb58b8d94f8a5be0c3f",
+    "catalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+    "holdsSha256": "3d25ca340a19ddf2a4e9349798c03627587c8b7e1feff8a167599f75ba139d41",
+    "tables": [
+      {
+        "name": "isa_parts_list_e.txt",
+        "sha256": "ab7796deedd49205e77f3609a1cb8c53e2bbee14ecb5c9a6ca05227469780513"
+      },
+      {
+        "name": "isa_element_parts.txt",
+        "sha256": "a3de74423f943b0d724ae8f59b3a817f87c423a544f8db98113b1980817cbeaf"
+      },
+      {
+        "name": "partof_parts_list_e.txt",
+        "sha256": "9224080557053e6f1322f1e13ab27f0ecde0db19bb3b505f0631afad230eeebd"
+      },
+      {
+        "name": "partof_element_parts.txt",
+        "sha256": "3f5f6df1028eb122b30de77c711597b6bb8e5541658e5985859fd228adbf88ea"
+      }
+    ]
+  },
+  "auditSha256": "40f002378ede46ffc325a67078c7f71bd3433c32c659cd5c39e003c45850469f",
+  "prototypeSha256": "11eeaf929ec5528dc51bb6d4a21aac787246c0ed1aa836c3aedac2f1c9b21e1f",
+  "parent": {
+    "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+    "fmaId": "FMA55099",
+    "name": "Thyroid cartilage",
+    "sourceName": "thyroid cartilage",
+    "system": "connective",
+    "category": "cartilage",
+    "laterality": "midline",
+    "region": "head-neck",
+    "regions": [
+      "head-neck"
+    ],
+    "bundle": "head-neck-connective-recovery",
+    "nodeName": "FMA55099",
+    "bounds": {
+      "min": [
+        -0.19980300962924957,
+        5.914100170135498,
+        0.41506102681159973
+      ],
+      "max": [
+        0.1868250072002411,
+        6.309300422668457,
+        0.7244600057601929
+      ]
+    },
+    "center": [
+      -0.006489001214504242,
+      6.1117002964019775,
+      0.5697605162858963
+    ],
+    "anchor": [
+      -0.06516009569168091,
+      6.082199573516846,
+      0.6187000274658203
+    ],
+    "sourceTree": "isa",
+    "sources": [
+      {
+        "file": "FJ2808",
+        "sha256": "48cd41bcd4044c7013ba10c971e212766afc970408f51875f9ef8e8c407c0687"
+      }
+    ],
+    "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+    "provenance": {
+      "method": "licensed-source-mesh",
+      "license": "CC-BY-4.0",
+      "sourceVersion": "4.0",
+      "recovered": true
+    },
+    "validation": {
+      "status": "unvalidated",
+      "anatomicalReview": false
+    }
+  },
+  "parentRelationship": "navigation-landmark-not-tissue-parent",
+  "structures": [
+    {
+      "id": "vm:anatomy:component:laryngeal:right:muscle:cricothyroid-straight",
+      "fmaId": "FMA46611",
+      "sourceName": "straight part of right cricothyroid",
+      "name": "Straight part of right cricothyroid",
+      "laterality": "right",
+      "part": "straight",
+      "system": "muscles",
+      "category": "muscle",
+      "region": "head-neck",
+      "nodeName": "FMA46611",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2801",
+          "sha256": "1611203625fd53e498d2b5cf40018ed71694a0d307c8502744f62687512fc19e"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.12019699811935425,
+          5.882599830627441,
+          0.5464699864387512
+        ],
+        "max": [
+          -0.022863000631332397,
+          5.985599994659424,
+          0.6148999929428101
+        ]
+      },
+      "center": [
+        -0.07152999937534332,
+        5.934099912643433,
+        0.5806849896907806
+      ],
+      "anchor": [
+        -0.0792016,
+        5.9323,
+        0.5864200000000003
+      ],
+      "triangles": 3222,
+      "derivative": {
+        "method": "explicit-detached-opposite-face-pair-removal",
+        "removedSourceFaces": [
+          2968,
+          2969,
+          2970,
+          3045,
+          3226,
+          3227,
+          3228,
+          3229,
+          3230,
+          3231
+        ],
+        "orderedSourceTrianglesSha256": "fa2e6723dca812b1c523f7650b98f6c098ff982ff5ceceaf38f4e74760e80b84"
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "coverageNote": "One source-defined muscle part, not a complete cricothyroid muscle or validated attachment map. Original coordinates retained; detached opposite-face islands omitted only as documented in the derivative manifest.",
+      "bundle": "cricothyroid",
+      "regions": [
+        "head-neck"
+      ],
+      "studyParentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "sourceRelationship": "regional-muscle-part-with-cartilage-navigation-landmark",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      }
+    },
+    {
+      "id": "vm:anatomy:component:laryngeal:left:muscle:cricothyroid-straight",
+      "fmaId": "FMA46612",
+      "sourceName": "straight part of left cricothyroid",
+      "name": "Straight part of left cricothyroid",
+      "laterality": "left",
+      "part": "straight",
+      "system": "muscles",
+      "category": "muscle",
+      "region": "head-neck",
+      "nodeName": "FMA46612",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2783",
+          "sha256": "4df0efbaea3fbb676eafc3add4a1cdd772fac352950501389f39e16f0c90e98c"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.009601959958672523,
+          5.882400035858154,
+          0.5461599826812744
+        ],
+        "max": [
+          0.10696999728679657,
+          5.985599994659424,
+          0.6148899793624878
+        ]
+      },
+      "center": [
+        0.05828597862273455,
+        5.934000015258789,
+        0.5805249810218811
+      ],
+      "anchor": [
+        0.0634781,
+        5.934200000000001,
+        0.5891100000000004
+      ],
+      "triangles": 3268,
+      "derivative": {
+        "method": "explicit-detached-opposite-face-pair-removal",
+        "removedSourceFaces": [
+          226,
+          228
+        ],
+        "orderedSourceTrianglesSha256": "8b6bfc8d77f9c473a06664a48f0e8f429853d00e33a79ee22caa571031132e5e"
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "coverageNote": "One source-defined muscle part, not a complete cricothyroid muscle or validated attachment map. Original coordinates retained; detached opposite-face islands omitted only as documented in the derivative manifest.",
+      "bundle": "cricothyroid",
+      "regions": [
+        "head-neck"
+      ],
+      "studyParentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "sourceRelationship": "regional-muscle-part-with-cartilage-navigation-landmark",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      }
+    },
+    {
+      "id": "vm:anatomy:component:laryngeal:right:muscle:cricothyroid-oblique",
+      "fmaId": "FMA46613",
+      "sourceName": "oblique part of right cricothyroid",
+      "name": "Oblique part of right cricothyroid",
+      "laterality": "right",
+      "part": "oblique",
+      "system": "muscles",
+      "category": "muscle",
+      "region": "head-neck",
+      "nodeName": "FMA46613",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2799",
+          "sha256": "cf0213eeea0b73d9ab428e5caf50683475100d65d670d95a716ae1af1a541b03"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.13171599805355072,
+          5.882900238037109,
+          0.43509799242019653
+        ],
+        "max": [
+          -0.0484406016767025,
+          6.013999938964844,
+          0.5968899726867676
+        ]
+      },
+      "center": [
+        -0.09007829986512661,
+        5.948450088500977,
+        0.5159939825534821
+      ],
+      "anchor": [
+        -0.11690400000000001,
+        5.9475,
+        0.5218200000000003
+      ],
+      "triangles": 5566,
+      "derivative": {
+        "method": "explicit-detached-opposite-face-pair-removal",
+        "removedSourceFaces": [],
+        "orderedSourceTrianglesSha256": "2d41463beec982cfbccda105977f5b28ce7cab209c29d037701df13eea34ca7f"
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "coverageNote": "One source-defined muscle part, not a complete cricothyroid muscle or validated attachment map. Original coordinates retained; detached opposite-face islands omitted only as documented in the derivative manifest.",
+      "bundle": "cricothyroid",
+      "regions": [
+        "head-neck"
+      ],
+      "studyParentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "sourceRelationship": "regional-muscle-part-with-cartilage-navigation-landmark",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      }
+    },
+    {
+      "id": "vm:anatomy:component:laryngeal:left:muscle:cricothyroid-oblique",
+      "fmaId": "FMA46614",
+      "sourceName": "oblique part of left cricothyroid",
+      "name": "Oblique part of left cricothyroid",
+      "laterality": "left",
+      "part": "oblique",
+      "system": "muscles",
+      "category": "muscle",
+      "region": "head-neck",
+      "nodeName": "FMA46614",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2781",
+          "sha256": "d7b4c77ccec1ec98530377fdbac423bffda9535e39192b11442566118a63a198"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.03539799898862839,
+          5.882800102233887,
+          0.4349769949913025
+        ],
+        "max": [
+          0.11853700131177902,
+          6.014200210571289,
+          0.5969099998474121
+        ]
+      },
+      "center": [
+        0.0769675001502037,
+        5.948500156402588,
+        0.5159434974193573
+      ],
+      "anchor": [
+        0.104116,
+        5.947900000000001,
+        0.5209800000000003
+      ],
+      "triangles": 5580,
+      "derivative": {
+        "method": "explicit-detached-opposite-face-pair-removal",
+        "removedSourceFaces": [],
+        "orderedSourceTrianglesSha256": "c392b20ff17a2a284e1ada2301bd635fb707190b1af964fd1d9fe804c9001045"
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "coverageNote": "One source-defined muscle part, not a complete cricothyroid muscle or validated attachment map. Original coordinates retained; detached opposite-face islands omitted only as documented in the derivative manifest.",
+      "bundle": "cricothyroid",
+      "regions": [
+        "head-neck"
+      ],
+      "studyParentId": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "sourceRelationship": "regional-muscle-part-with-cartilage-navigation-landmark",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      }
+    }
+  ],
+  "selectableIds": [
+    "vm:anatomy:component:laryngeal:right:muscle:cricothyroid-straight",
+    "vm:anatomy:component:laryngeal:left:muscle:cricothyroid-straight",
+    "vm:anatomy:component:laryngeal:right:muscle:cricothyroid-oblique",
+    "vm:anatomy:component:laryngeal:left:muscle:cricothyroid-oblique"
+  ],
+  "contextIds": [],
+  "contextRecords": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+      "fmaId": "FMA55099",
+      "name": "Thyroid cartilage",
+      "sourceName": "thyroid cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-recovery",
+      "nodeName": "FMA55099",
+      "bounds": {
+        "min": [
+          -0.19980300962924957,
+          5.914100170135498,
+          0.41506102681159973
+        ],
+        "max": [
+          0.1868250072002411,
+          6.309300422668457,
+          0.7244600057601929
+        ]
+      },
+      "center": [
+        -0.006489001214504242,
+        6.1117002964019775,
+        0.5697605162858963
+      ],
+      "anchor": [
+        -0.06516009569168091,
+        6.082199573516846,
+        0.6187000274658203
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2808",
+          "sha256": "48cd41bcd4044c7013ba10c971e212766afc970408f51875f9ef8e8c407c0687"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+      "fmaId": "FMA9615",
+      "name": "Cricoid cartilage",
+      "sourceName": "cricoid cartilage",
+      "system": "connective",
+      "category": "cartilage",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-connective-recovery",
+      "nodeName": "FMA9615",
+      "bounds": {
+        "min": [
+          -0.12166500091552734,
+          5.871999740600586,
+          0.42616501450538635
+        ],
+        "max": [
+          0.10860500484704971,
+          6.047199726104736,
+          0.6146900057792664
+        ]
+      },
+      "center": [
+        -0.006529998034238815,
+        5.959599733352661,
+        0.5204275101423264
+      ],
+      "anchor": [
+        0.0015807299641892314,
+        6.007400035858154,
+        0.46646401286125183
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2440",
+          "sha256": "ae1e2bab875a75035aaebdc79212fd859c2c193881462245de3252853721361d"
+        },
+        {
+          "file": "FJ2769",
+          "sha256": "5f75fb4d2969fd1de51898787bb8810c441d5d2bd6eb0c5482b7cacd3c9bc3be"
+        }
+      ],
+      "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "contextBundles": [
+    {
+      "id": "head-neck-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "bytes": 175092,
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "structures": 9
+    }
+  ],
+  "bundles": [
+    {
+      "id": "cricothyroid",
+      "url": "/models/bodyparts3d/cricothyroid/cricothyroid.glb?v=7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+      "sha256": "7a6695ee3fc8feeba3b187e3d9a800aa205b57486208f84a8ef8e170097452a4",
+      "bytes": 323604,
+      "structures": 4
+    }
+  ],
+  "regions": [
+    {
+      "id": "head-neck",
+      "name": "Cricothyroid muscle parts",
+      "description": "Four supplied straight/oblique parts with optional cartilage landmarks; not complete laryngeal anatomy."
+    }
+  ],
+  "coverage": {
+    "nerves": "Not included",
+    "organs": "No thyroid gland, airway or vocal-fold mucosa included"
+  },
+  "excluded": [],
+  "clinicalApproval": false,
+  "modification": "Runtime geometry matches the retained prototype exactly. The display derivative omits twelve specifically audited detached opposite-face triangles from the raw originals; all other coordinates, faces and winding remain unchanged."
+}

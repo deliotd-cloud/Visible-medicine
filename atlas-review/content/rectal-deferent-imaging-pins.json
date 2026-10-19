@@ -1,0 +1,369 @@
+{
+  "sourceCommit": "130fda71a2af14fbbe5c018beed52e4c1212ed45",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "pelvis-organs-recovery",
+      "url": "/models/bodyparts3d/full-body/pelvis-organs-recovery.glb",
+      "bytes": 73348,
+      "sha256": "d2876cb12fa3f6c71170d18bd6813f96783c47fe12ddf68263bf12e0cae98629",
+      "structures": 6
+    },
+    {
+      "id": "deferent-ducts",
+      "url": "/models/bodyparts3d/deferent-ducts/deferent-ducts.glb?v=53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "bytes": 39612,
+      "sha256": "53d2cdcb86c04d78671705b34f5b82c0130427735c8c7986553b3a042d8c7544",
+      "structures": 2
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "dc9a3c5bc60222e5b92e164a204209843d27cc712c8be59791e0a0ec9dcc80e9",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:unpaired:organ:rectum",
+        "fmaId": "FMA14544",
+        "name": "Rectum",
+        "sourceName": "rectum",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "pelvis-organs-recovery",
+        "nodeName": "FMA14544",
+        "bounds": {
+          "min": [
+            -0.26214799284935,
+            -0.4267297387123108,
+            -0.3871920108795166
+          ],
+          "max": [
+            0.3543170094490051,
+            0.7391698956489563,
+            0.23578795790672302
+          ]
+        },
+        "center": [
+          0.046084508299827576,
+          0.15622007846832275,
+          -0.07570202648639679
+        ],
+        "anchor": [
+          0.04391549900174141,
+          0.15098999440670013,
+          -0.03379001468420029
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2571",
+            "sha256": "aaedd56539179e2091b3217d11fd42c298ed01a971463725f6c32372289c6819"
+          }
+        ],
+        "coverageNote": "Source rectum surface separated from the large-intestine aggregate for selection. No wall-layer, sphincter or mesorectal dissection is supplied.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "rectum",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Rectum · Structure & relationships · draft",
+        "body": "The terminal large-intestinal reservoir between the sigmoid colon and anal canal. It is represented separately from the large-intestine aggregate.",
+        "bullets": [
+          "No independently authored rectal wall layers, mesorectum or complete anorectal continence complex. The displayed surface does not establish luminal continuity.",
+          "Source identity: FMA14544 · 1 source component. Boundaries and relationships require independent review."
+        ],
+        "note": "Independent anatomical and clinical review pending. Explode/cut views are not tissue interiors, physiological simulations or acquired imaging. Source rectum surface separated from the large-intestine aggregate for selection. No wall-layer, sphincter or mesorectal dissection is supplied.",
+        "citations": [
+          "https://www.niddk.nih.gov/health-information/digestive-diseases/digestive-system-how-it-works"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "X-ray teaching pending",
+          "body": "A source-specific X-ray lesson has not yet been authored for this selection. The coloured 3D surface is not a radiograph.",
+          "note": "No X-ray image, detector geometry or registered correspondence is loaded. Separate imaging-atlas and lecture access will be checked independently."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:left:organ:left-deferent-duct",
+        "fmaId": "FMA19236",
+        "name": "Left deferent duct",
+        "sourceName": "left deferent duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "left",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "deferent-ducts",
+        "nodeName": "FMA19236",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3135",
+            "sha256": "75091a49ea2b9d0074eab9564d9d484094c82006a2e10bcb7d4f5f1c4e2b5648"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.02551710046827793,
+            -1.054010033607483,
+            0.025624999776482582
+          ],
+          "max": [
+            1.0262500047683716,
+            0.5781099796295166,
+            1.048050045967102
+          ]
+        },
+        "center": [
+          0.5258835526183248,
+          -0.23795002698898315,
+          0.5368375228717923
+        ],
+        "anchor": [
+          0.21995200216770172,
+          -0.23739999532699585,
+          0.9566500186920166
+        ],
+        "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deferent",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Left deferent duct · Source anatomy · draft",
+        "body": "The deferent duct (ductus or vas deferens) is a muscular duct that continues from the epididymis, passes through the inguinal canal and reaches the posterior bladder region. Its terminal portion joins the seminal-vesicle duct to form the ejaculatory duct.",
+        "bullets": [
+          "Use Study → Male pelvis: deferent ducts to compare the supplied surfaces and nearby organs.",
+          "Epididymides, ejaculatory ducts, cord coverings and nerves are not supplied by this addition; do not infer a complete connection from surface proximity."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. Complete source files do not establish complete anatomical extent, a continuous lumen or patient correspondence.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Left deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Left deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Left deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "Left deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:right:organ:right-deferent-duct",
+        "fmaId": "FMA19235",
+        "name": "Right deferent duct",
+        "sourceName": "right deferent duct",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "right",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "deferent-ducts",
+        "nodeName": "FMA19235",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3140",
+            "sha256": "f5fa6eca33541ceffdd87a910e4fb2e804f3bcd4418ee06555dcbb0b60aa581d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.8408430218696594,
+            -1.0541000366210938,
+            0.029635999351739883
+          ],
+          "max": [
+            -0.03898070007562637,
+            0.6093999743461609,
+            1.0447900295257568
+          ]
+        },
+        "center": [
+          -0.4399118609726429,
+          -0.22235003113746643,
+          0.5372130144387484
+        ],
+        "anchor": [
+          -0.22347700595855713,
+          -0.2893500030040741,
+          0.9433799982070923
+        ],
+        "coverageNote": "Complete source-defined deferent duct surface, not a validated continuous lumen or complete spermatic cord. Epididymis, ejaculatory duct, fascial coverings and neurovascular contents are not supplied by this addition. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "deferent",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound",
+        "xray"
+      ],
+      "anatomy": {
+        "readiness": "draft",
+        "title": "Right deferent duct · Source anatomy · draft",
+        "body": "The deferent duct (ductus or vas deferens) is a muscular duct that continues from the epididymis, passes through the inguinal canal and reaches the posterior bladder region. Its terminal portion joins the seminal-vesicle duct to form the ejaculatory duct.",
+        "bullets": [
+          "Use Study → Male pelvis: deferent ducts to compare the supplied surfaces and nearby organs.",
+          "Epididymides, ejaculatory ducts, cord coverings and nerves are not supplied by this addition; do not infer a complete connection from surface proximity."
+        ],
+        "note": "Source-bound teaching draft for radiologist review. Complete source files do not establish complete anatomical extent, a continuous lumen or patient correspondence.",
+        "citations": [
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/duct.html"
+        ]
+      },
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Right deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "Right deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Right deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        },
+        "xray": {
+          "readiness": "pending",
+          "title": "Right deferent duct · Review pending",
+          "body": "Structure-specific pathology, clinical and imaging teaching awaits review.",
+          "bullets": [],
+          "note": "No scan, diagnosis, intervention guidance or registered imaging correspondence is supplied."
+        }
+      }
+    }
+  ]
+}

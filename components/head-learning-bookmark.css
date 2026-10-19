@@ -1,0 +1,17 @@
+.head-learning-bookmark { position:relative; margin-block:6px; font-size:.875rem; min-width:0; }
+.head-learning-bookmark > summary { width:fit-content; min-height:36px; padding:6px 10px; border:1px solid #6f9990; border-radius:6px; background:#fff; color:var(--green,#174d43); cursor:pointer; }
+.head-learning-bookmark-panel { max-width:360px; padding:12px; margin-top:6px; border:1px solid #6f9990; border-radius:6px; background:#fff; color:#23463d; overflow-wrap:anywhere; }
+.head-learning-bookmark-panel p { margin:0 0 10px; line-height:1.5; font-size:.8125rem; }
+.head-learning-bookmark-panel p:last-child { margin:8px 0 0; }
+.head-learning-bookmark-panel p:last-child:empty { display:none; }
+.head-learning-bookmark-panel nav { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+.head-learning-bookmark-panel :is(button,a) { display:inline-flex; align-items:center; min-height:36px; padding:6px 10px; border:1px solid #6f9990; border-radius:5px; background:#fff; color:#174d43; font:inherit; text-decoration:none; cursor:pointer; }
+.head-learning-bookmark-panel button:disabled { opacity:.65; cursor:default; }
+.head-learning-bookmark :is(summary,a,button):focus-visible { outline:2px solid #16c6b2; outline-offset:3px; }
+.head-practice .head-learning-bookmark > summary,.head-practice .head-learning-bookmark-panel { background:#122824; color:#e5f3ef; }
+.head-practice .head-learning-bookmark-panel :is(p,strong) { color:#d2e4de; }
+.head-practice .head-learning-bookmark-panel :is(button,a) { background:#193c33; color:#e5f3ef; border-color:#79aa9c; }
+.head-practice .head-learning-bookmark-panel button:disabled { opacity:1; color:#b6ccc4; background:#193129; }
+.head-atlas-tour > nav > .head-learning-bookmark { margin:0; }
+.head-atlas-tour > nav > .head-learning-bookmark > .head-learning-bookmark-panel { position:absolute; z-index:45; top:100%; right:0; width:min(340px,calc(100vw - 32px)); max-height:65vh; overflow-y:auto; overscroll-behavior:contain; box-shadow:0 8px 24px #173d3530; }
+@media(max-width:700px){.head-atlas-tour > nav > .head-learning-bookmark[open]{flex:1 1 100%;}.head-atlas-tour > nav > .head-learning-bookmark > .head-learning-bookmark-panel{position:static;width:100%;box-shadow:none;}}

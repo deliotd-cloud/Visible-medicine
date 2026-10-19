@@ -1,0 +1,10 @@
+export const PAPER_CASES: 50;
+export const CASE_MARKS: 2;
+export const PAPER_MARKS: 100;
+export type FractureKey = {status:'pending'|'reviewed'; fracturePresent:boolean|null; acceptedBoneAnswers:string[]};
+export type FractureResponse = {choice:'yes'|'no'|null; bone:string; submitted:boolean};
+export type FractureScore = {status:'unanswered'|'pending-key'|'scored'; marks:number|null};
+export function normalizeBoneAnswer(value:unknown):string;
+export function decodeFractureResponse(raw:string):FractureResponse;
+export function scoreFracture(key:FractureKey, response:FractureResponse):FractureScore;
+export function scorePaper(cases:Array<{id:string; key:FractureKey; response:FractureResponse}>):{maxMarks:100;marks:number|null;results:FractureScore[]};

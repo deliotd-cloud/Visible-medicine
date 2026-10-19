@@ -1,0 +1,672 @@
+{
+  "sourceCommit": "b1240f9c9a47ab641ffe0f5297cf99a59c84f7af",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "portal-veins",
+      "url": "/models/bodyparts3d/portal-veins/portal-veins.glb?v=583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "bytes": 76724,
+      "sha256": "583069160dbd753bb7f64b62667d20134ccbf7554b9bd4cf57b0de0a5a50ee53",
+      "structures": 5
+    },
+    {
+      "id": "hepatic-veins",
+      "url": "/models/bodyparts3d/hepatic-veins/hepatic-veins.glb?v=1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "bytes": 256984,
+      "sha256": "1f8922b93ec4c92bf6d695de9b75a00fb6f1552522125ca25861b1ed04f403cf",
+      "structures": 3
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "6bb9dbc2ea42453a7c90abd5fe257107d28a3d28dbd011153e6446d3ae7ea137",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:splenic-vein",
+        "fmaId": "FMA14331",
+        "name": "Splenic vein",
+        "sourceName": "splenic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA14331",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3641",
+            "sha256": "4dabe1ffb6e36e9f7714ba5f8da7ed48b11d304963372f982446467e584d2e9f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.12030299752950668,
+            2.5125999450683594,
+            0.33072200417518616
+          ],
+          "max": [
+            0.9985010027885437,
+            2.917799949645996,
+            0.7408300042152405
+          ]
+        },
+        "center": [
+          0.4390990026295185,
+          2.7151999473571777,
+          0.5357760041952133
+        ],
+        "anchor": [
+          0.4338200092315674,
+          2.7239999771118164,
+          0.5332099795341492
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "splenic",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastroepiploic-vein",
+        "fmaId": "FMA15390",
+        "name": "Left gastroepiploic vein",
+        "sourceName": "left gastroepiploic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15390",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3502",
+            "sha256": "8fbff4b304815200c09017d46d9537b0cd3f699ed13d79c0ac35bd122f24decb"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.6009610295295715,
+            2.4670000076293945,
+            0.5152599811553955
+          ],
+          "max": [
+            0.9455670118331909,
+            2.840100049972534,
+            1.218369960784912
+          ]
+        },
+        "center": [
+          0.7732640206813812,
+          2.6535500288009644,
+          0.8668149709701538
+        ],
+        "anchor": [
+          0.9265869855880737,
+          2.7102999687194824,
+          0.9137600064277649
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "gastroLeft",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastroepiploic-vein",
+        "fmaId": "FMA15397",
+        "name": "Right gastroepiploic vein",
+        "sourceName": "right gastroepiploic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15397",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3597",
+            "sha256": "c3d9e308cc410cacf95ca9336bc80ba221af8ec6a555b3111881289d326e8523"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.17116700112819672,
+            2.2836999893188477,
+            0.8794500231742859
+          ],
+          "max": [
+            0.6065019965171814,
+            2.5178000926971436,
+            1.3030799627304077
+          ]
+        },
+        "center": [
+          0.21766749769449234,
+          2.4007500410079956,
+          1.0912649929523468
+        ],
+        "anchor": [
+          0.16690999269485474,
+          2.419300079345703,
+          1.2492200136184692
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "gastroRight",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:left-gastric-vein",
+        "fmaId": "FMA15399",
+        "name": "Left gastric vein",
+        "sourceName": "left gastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15399",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3500",
+            "sha256": "5cf36381284ef10cd55465cd827ed97bba2c7d610a20e34ea9b02dc70d605a4c"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.14354300498962402,
+            2.824199914932251,
+            0.7365000247955322
+          ],
+          "max": [
+            0.25164300203323364,
+            3.3215999603271484,
+            1.196560025215149
+          ]
+        },
+        "center": [
+          0.05404999852180481,
+          3.0728999376296997,
+          0.9665300250053406
+        ],
+        "anchor": [
+          0.147023007273674,
+          3.0327000617980957,
+          0.8527600169181824
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "gastricLeft",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:right-gastric-vein",
+        "fmaId": "FMA15400",
+        "name": "Right gastric vein",
+        "sourceName": "right gastric vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "portal-veins",
+        "nodeName": "FMA15400",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3595",
+            "sha256": "a2a2bd3aadf7027de43cb57c0a33b17b3ce3a35c9f495f5fc010486c2b39494d"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.2311830073595047,
+            2.7734999656677246,
+            0.8745899796485901
+          ],
+          "max": [
+            0.007959119975566864,
+            2.944200038909912,
+            1.1354999542236328
+          ]
+        },
+        "center": [
+          -0.11161194369196892,
+          2.8588500022888184,
+          1.0050449669361115
+        ],
+        "anchor": [
+          -0.1392659991979599,
+          2.8132998943328857,
+          1.0139299631118774
+        ],
+        "coverageNote": "Whole source-labelled portal tributary surface; not complete branches, lumen or validated confluences. Original coordinates and every source face retained. Gastric laterality follows the source name, not a midline crop. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "gastricRight",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:unspecified:vessel:middle-hepatic-vein",
+        "fmaId": "FMA14340",
+        "name": "Middle hepatic vein",
+        "sourceName": "middle hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "unspecified",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA14340",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2414",
+            "sha256": "bd57b4b26daef763025a4e2ae75102c687926a604db3b19fa44993033dc0f32f"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.6027029752731323,
+            3.031899929046631,
+            0.6817799806594849
+          ],
+          "max": [
+            -0.05198270082473755,
+            3.6484999656677246,
+            1.3945300579071045
+          ]
+        },
+        "center": [
+          -0.32734283804893494,
+          3.3401999473571777,
+          1.0381550192832947
+        ],
+        "anchor": [
+          -0.3519819974899292,
+          3.3910999298095703,
+          1.1050599813461304
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "hepaticMiddle",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:right:vessel:tributary-of-right-hepatic-vein",
+        "fmaId": "FMA15791",
+        "name": "Tributary of right hepatic vein",
+        "sourceName": "tributary of right hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA15791",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3118",
+            "sha256": "ab6f8bd812766331859f8adaa01cef1c202ebd974967ea411b17c54e9da84a5d"
+          },
+          {
+            "file": "FJ3119",
+            "sha256": "ae4707592889653dccb669e53a1356d67696c361cce28fc19c8910f8717fdb28"
+          },
+          {
+            "file": "FJ3120",
+            "sha256": "c5d056d8281c1f0447214e3a310e98da532760293b5ed1e90e934a77bfec0703"
+          },
+          {
+            "file": "FJ3121",
+            "sha256": "51942b37d2a29a6e32c3401710d6605e5958c1462922c3968cdca79b0a7fac1c"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.9984260201454163,
+            2.749500036239624,
+            0.188633993268013
+          ],
+          "max": [
+            -0.16844500601291656,
+            3.6670000553131104,
+            0.9190700054168701
+          ]
+        },
+        "center": [
+          -0.5834355130791664,
+          3.208250045776367,
+          0.5538519993424416
+        ],
+        "anchor": [
+          -0.6109169721603394,
+          3.223400115966797,
+          0.5686500072479248
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "hepaticRight",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:abdomen:left:vessel:tributary-of-left-hepatic-vein",
+        "fmaId": "FMA15794",
+        "name": "Tributary of left hepatic vein",
+        "sourceName": "tributary of left hepatic vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "abdomen",
+        "regions": [
+          "abdomen"
+        ],
+        "bundle": "hepatic-veins",
+        "nodeName": "FMA15794",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3097",
+            "sha256": "3173b1bb808b7c5cc3f3de44772b34c2c360ae00c5147d66a12d675d5bbe570b"
+          },
+          {
+            "file": "FJ3098",
+            "sha256": "5331851628f47c02b309eab63ab7361658b84950abb0e2d586c56ef5fc561356"
+          },
+          {
+            "file": "FJ3099",
+            "sha256": "2bd6db4021b2fa8ee4f81e60cfb3dae4a070d921707497bf9cab6b84f98dc495"
+          },
+          {
+            "file": "FJ3100",
+            "sha256": "143c288d1c524c76d1f8198182f11dc4884d78eacd8013a4c0ae5ce209116d5a"
+          },
+          {
+            "file": "FJ3101",
+            "sha256": "c7e03313693b3e232ee3e82093a20daa5ec3dea060926861b6ab2f5467be9636"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.22065800428390503,
+            3.202699899673462,
+            0.6910600066184998
+          ],
+          "max": [
+            0.3859249949455261,
+            3.7074999809265137,
+            1.2792799472808838
+          ]
+        },
+        "center": [
+          0.08263349533081055,
+          3.455099940299988,
+          0.9851699769496918
+        ],
+        "anchor": [
+          0.09680440276861191,
+          3.42330002784729,
+          0.9626200199127197
+        ],
+        "coverageNote": "Whole source-labelled hepatic vein or tributary group; disconnected components remain within the original selection. Original coordinates and every source face retained. No complete venous tree, Couinaud territory, lumen or validated confluence. Anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "hepaticLeft",
+      "topics": [
+        "clinical",
+        "pathology"
+      ],
+      "previous": {
+        "clinical": {
+          "readiness": "pending",
+          "title": "Clinical content pending",
+          "body": "Clinical relationships, examination findings and procedural guidance need specialist authorship and review before release. Do not use this draft model to plan patient care."
+        },
+        "pathology": {
+          "readiness": "pending",
+          "title": "Pathology content pending",
+          "body": "This surface represents reference anatomy. No lesion, disease simulation or reviewed pathology lesson has been added for this structure."
+        }
+      }
+    }
+  ]
+}

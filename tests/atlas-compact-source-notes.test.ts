@@ -1,0 +1,47 @@
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {execFileSync} from 'node:child_process';
+import test from 'node:test';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+
+test('compact source disclosure ships the tested implementation without rewriting teaching',()=>{
+  const base='public/atlas-runtime/head-neck/';
+  const sha=(data:Buffer)=>createHash('sha256').update(data).digest('hex');
+  const epoch='f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6';
+  const saved=(path:string)=>execFileSync('git',['--no-replace-objects','show',epoch+':'+path],{maxBuffer:32e6});
+  const manifestBytes=saved(base+'manifest.json');
+  assert.equal(sha(manifestBytes),'eaaf8eb1d53dc3728e07a5f3497a4a7c8018afdf0838f5b90a313282d77a2381');
+  const manifest=JSON.parse(manifestBytes.toString());
+  assert.equal(manifest.sourceCommit,'88cea927d48729769b96ad8fe680b0872b7e6687');
+  const inputs=JSON.parse(saved(base+'source-inputs.json').toString()) as {path:string;sha256:string}[];
+  for(const [path,sha256]of [
+    ['app/source-display-notes.tsx','57b83b84c0c2cc4fe005b57d798e61bc4fc74bbb5e89a11bd014fbdf2f8ba183'],
+    ['lib/source-display-notes.ts','b8c5fee2d8b91950d1951ea733e519b8fe7dec3e92e0fad22dd7a36df54871a2'],
+    ['app/body-explorer.tsx','2dad1c22dfec424db6a4cdf578cb4f9cafe6a0e3295f95ed7d3318976aa62dc0'],
+  ])assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
+  const current=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+  assert.equal(current.sourceCommit,CURRENT_ATLAS_REVISION);
+  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+  assert.equal(review.revision,current.sourceCommit);
+  const liveInputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
+  for(const path of ['app/source-display-notes.tsx','lib/source-display-notes.ts','app/body-explorer.tsx']){
+    const source=execFileSync('git',['--no-replace-objects','-C',currentAtlasDeliveryRoot(),'show',current.sourceCommit+':'+path],{maxBuffer:32e6});
+    const entry=review.files.find((f:any)=>f.path===path);assert(entry,path);
+    assert.equal(entry.sourceSha256,sha(source),path);
+    assert.equal(entry.importedSha256,sha(readFileSync('atlas-review/'+path)),path);
+    assert.deepEqual(liveInputs.filter((f:any)=>f.path===path),[{path,sha256:sha(source)}]);
+  }
+  const required=['body-source-details','Source representation','separated structures',
+    'Independent anatomical and clinical review pending.',
+    'Display aggregate excludes the separately selectable great cardiac vein surface. Source coordinates are unchanged.',
+    'Atlas, case and paid-lecture access remain independent.',
+  ];
+  for(const [delivery,bytes]of [[manifest,saved],[current,readFileSync]] as const){
+    const runtime=(delivery.files as {path:string;sha256:string}[]).filter(f=>f.path.endsWith('.js')).map(f=>{
+      const data=bytes(base+f.path);assert.equal(sha(data),f.sha256);return data.toString();
+    }).join('\n');
+    for(const text of required)assert.ok(runtime.includes(text),text);
+    for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(delivery[flag],false);
+  }
+});

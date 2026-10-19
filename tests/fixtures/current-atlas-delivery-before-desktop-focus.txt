@@ -1,0 +1,81 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync,lstatSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+const root=fileURLToPath(new URL('../',import.meta.url));
+const pin=JSON.parse(readFileSync(new URL('./fixtures/current-atlas-delivery.json',import.meta.url)));
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const read=path=>readFileSync(root+'/'+path);
+const safe=path=>assert(/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(p=>!p||p==='.'||p==='..'));
+
+test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
+ assert.equal(CURRENT_ATLAS_REVISION,'589263554141ba94548f9073327d4e51674bc33b');
+ assert.equal(pin.sourceTree,'ba724f0a46448132a6e5fc4c24f63730b53540f9');
+ assert.equal(pin.reviewIntegration,'464ccf522d725e5636fb3c14429e371402f1f0832d0feaeed3c025d6906e7990');
+ assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
+ assert.deepEqual(validateCurrentAtlasDelivery(),pin);
+ const detached=validateCurrentAtlasDelivery();detached.documents.foreign='0'.repeat(64);
+ assert.deepEqual(validateCurrentAtlasDelivery(),pin,'Consumers cannot mutate the admitted default');
+});
+
+test('current fixture agrees with actual emitted bytes, notices, imported Review and integration inputs',()=>{
+ let artifacts=0,sourceFiles=0,inputs=0;
+ for(const module of ['head-neck','shoulder','lower-limb','female-pelvis']){
+  const base=`public/atlas-runtime/${module}/`,manifest=JSON.parse(read(base+'manifest.json'));
+  assert(manifest.files.some(f=>f.path==='LICENSES/THIRD_PARTY_NOTICES.md'));
+  for(const row of manifest.files){safe(row.path);const path=base+row.path,stat=lstatSync(root+'/'+path);assert(stat.isFile()&&!stat.isSymbolicLink());const bytes=read(path);assert.equal(bytes.length,row.bytes,path);assert.equal(sha(bytes),row.sha256,path);artifacts++;}
+ }
+ const review=JSON.parse(read('atlas-review/manifest.json'));
+ for(const row of review.files){safe(row.path);assert.equal(sha(read('atlas-review/'+row.path)),row.importedSha256,row.path);sourceFiles++;}
+ const binding=JSON.parse(read('atlas-review/integration-inputs.json'));
+ for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
+ const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
+ for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
+ assert.equal(sourceFiles,1511);assert(artifacts>100&&inputs>1500);
+});
+
+for(const [label,edit]of [
+ ['source commit',p=>{p.source='0'.repeat(40);}],
+ ['missing document',p=>{delete p.documents['atlas-review/manifest.json'];}],
+ ['foreign document',p=>{p.documents['.env.local']='0'.repeat(64);}],
+ ['changed document',p=>{p.documents['atlas-review/manifest.json']='0'.repeat(64);}],
+ ['wrong Review count',p=>{p.reviewSourceFiles++;}],
+ ['wrong viewer count',p=>{p.viewerFiles++;}],
+ ['wrong package count',p=>{p.viewerPackages++;}],
+ ['invented clinical approval',p=>{p.clinicalApproval=true;}],
+ ['malformed tree',p=>{p.sourceTree='HEAD';}],
+])test('current fixture refuses '+label,()=>{const bad=structuredClone(pin);edit(bad);assert.throws(()=>validateCurrentAtlasDelivery({pin:bad}));});
+
+for(const [label,path,edit]of [
+ ['one stale learner','public/atlas-runtime/head-neck/manifest.json',d=>{d.sourceCommit='0'.repeat(40);}],
+ ['clinical clearance','public/atlas-runtime/shoulder/manifest.json',d=>{d.clinicalApproved=true;}],
+ ['patient data admission','public/atlas-runtime/shoulder/manifest.json',d=>{d.patientDataIncluded=true;}],
+ ['mixed Review','atlas-review/manifest.json',d=>{d.revision='0'.repeat(40);}],
+ ['personal records','public/atlas-review-viewer/manifest.json',d=>{d.personalRecordsIncluded=true;}],
+ ['debug Review','public/atlas-review-viewer/manifest.json',d=>{d.mode='debug';}],
+ ['model substitution','lib/atlas-model-inventory.json',d=>{d.models.pop();}],
+])test('repinning a hash cannot hide '+label,()=>{
+ const bad=structuredClone(pin),document=JSON.parse(read(path));edit(document);
+ const bytes=Buffer.from(JSON.stringify(document));bad.documents[path]=sha(bytes);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:bad,read:p=>p===path?bytes:read(p)}));
+});
+
+test('previous8d delivery fixture is immutable historical evidence, not current admission',()=>{
+ const bytes=readFileSync(new URL('./fixtures/current-atlas-delivery-8d32653e.json',import.meta.url));
+ assert.equal(sha(bytes),'0e838f33bf76b1c9a39e05253e140e5425a33004c4ced87de755a60a6603337e');
+ const historic=JSON.parse(bytes);
+ assert.equal(historic.source,'8d32653eaac8b86521618c824214dd6af8e35e29');
+ assert.equal(historic.sourceTree,'876d7c8b59a9507479b65e1800c2bea455b242ef');
+ assert.equal(historic.reviewIntegration,'2e620c81c5ad25831b35dc93cc62c2d008829da455c16f65fcf2ddc8f2882f60');
+ assert.equal(historic.reviewSourceFiles,1505);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:historic}));
+});
+
+test('previous f1 complete delivery proof remains immutable and cannot admit current delivery',()=>{
+ const bytes=readFileSync(new URL('./fixtures/current-atlas-delivery-f1dc0ccc.json',import.meta.url));
+ assert.equal(sha(bytes),'97fd4523bb0653b22ed878b027703273fafaafc600be09347cd07dd71c9bb21e');
+ const historic=JSON.parse(bytes);assert.equal(historic.source,'f1dc0ccc54ec82aa774720db3c822d3e0ea9c418');assert.equal(historic.sourceTree,'d3c165a126e773f004c9a620b5271bc15d0f384a');assert.equal(historic.reviewIntegration,'bbca7076adc53030a83772c457d2dec50aac6622defb45ce2c5510464f926297');assert.equal(historic.reviewSourceFiles,1508);assert.throws(()=>validateCurrentAtlasDelivery({pin:historic}));
+ const proof=readFileSync(new URL('./fixtures/current-atlas-delivery-f1dc0ccc.txt',import.meta.url));assert.equal(sha(proof),'12d3a9ed4a7dbadeaf3ebbca3e6f96e665c1a86832c0f1e0f6a012e76e1958c4');
+});

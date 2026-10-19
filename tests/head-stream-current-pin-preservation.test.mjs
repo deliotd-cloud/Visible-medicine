@@ -1,0 +1,20 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const original=readFileSync(new URL('./fixtures/current-atlas-delivery-before-head-stream.test.mjs.raw',import.meta.url));
+const postimage=readFileSync(new URL('./fixtures/current-atlas-delivery-ff04-before-head-client.test.mjs.raw',import.meta.url));
+const before="assert.equal(pin.reviewIntegration,'245ca2015821a0715539428dbcf4e499d9807ab83a906e0ee3f03c042571bf37');";
+const after="assert.equal(pin.reviewIntegration,'ff04c4435115d236dd00d635897f732fd9cd8e5ff0335a959e1d0fa966761871');";
+
+test('current Review admission changes one exact pin without rewriting any history or negative assertion',()=>{
+ assert.equal(sha(original),'6df572c28de8f69a0dd2cb9969e6ffbb493921748613253b9a050e837724d5f2');
+ assert.equal(sha(postimage),'acd39bedc55e358dc577418600d781d408a7d1c25038d1bf57b63bfa274e2064');
+ const oldText=original.toString('utf8'),newText=postimage.toString('utf8');
+ assert.equal(oldText.split(before).length,2);
+ assert.equal(newText.split(after).length,2);
+ assert.deepEqual(Buffer.from(newText.replace(after,before),'utf8'),original);
+ assert.equal(original.length,postimage.length);
+});

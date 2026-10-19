@@ -1,0 +1,106 @@
+{
+  "schema": "vm-head-masks-before-resource-budget-1",
+  "reviewIntegration": "a058b135f294162091ea270d97c81d00bb5c73492b5095cf0cb12e6d316d3808",
+  "records": [
+    {
+      "path": "atlas-review/integration-inputs.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/atlas-review__integration-inputs.json",
+      "sha256": "8156abdae7952534b974d4d6c9d85d4b66661ec532216bed17a10650a6b8c585"
+    },
+    {
+      "path": "atlas-review/manifest.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/atlas-review__manifest.json",
+      "sha256": "ddc136b197a30a22e379a070b8fed8061a706eee8b9cd1918eafe95ceb3e5196"
+    },
+    {
+      "path": "components/HeadAtlasViewer.tsx",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/components__HeadAtlasViewer.tsx.txt",
+      "sha256": "3706ee4d9eb6ad65ea75b261f0f305cfd62a90fa9aa09cdf6024bd86c8bb0482"
+    },
+    {
+      "path": "docs/completion-checklist.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/docs__completion-checklist.json",
+      "sha256": "ff39afc9ab4f5d9de5d313142d1aaf01acf77aecd356dc5f83333ad1ecaf3cb2"
+    },
+    {
+      "path": "docs/completion-checklist.md",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/docs__completion-checklist.md",
+      "sha256": "def6f05f4be3e4e9d18563fde8df86379e0a5db92fca1ad7129f88a72766a574"
+    },
+    {
+      "path": "lib/atlas-model-inventory.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/lib__atlas-model-inventory.json",
+      "sha256": "151721bd3f3653a2cb8467312740b4bdfbd2f803958e397b1f53b015fe1d0ca1"
+    },
+    {
+      "path": "lib/head-atlas-import.ts",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/lib__head-atlas-import.ts.txt",
+      "sha256": "c0f5bb9423e4261c2aa314d50e329d58e03a46ec39099756b0816f7783e7f9ad"
+    },
+    {
+      "path": "public/atlas-review-viewer/manifest.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-review-viewer__manifest.json",
+      "sha256": "7a14be234a04757f257ba93124133995d380a7f144c9e605edbdaae86357c127"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/manifest.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__female-pelvis__manifest.json",
+      "sha256": "dfc2363146249623aa463e707ebeba1026ba94538c0847effa420b55e725b725"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/source-inputs.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__female-pelvis__source-inputs.json",
+      "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/manifest.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__head-neck__manifest.json",
+      "sha256": "9b33b442f32a4c9ac369e14c2740d2c1e99cb1abd5646339499c571b772d2f51"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/source-inputs.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__head-neck__source-inputs.json",
+      "sha256": "a5c80538ca46e16a5b550e4339c65ecbf5433d14be1b5bdf01636d9ae00c0009"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/manifest.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__lower-limb__manifest.json",
+      "sha256": "9071b4b8d2ebb9a95a37ec580e1424de353ddc4b95d8009378392c30d53eed76"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/source-inputs.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__lower-limb__source-inputs.json",
+      "sha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/manifest.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__shoulder__manifest.json",
+      "sha256": "88c3c6ddf105c8de3d40286e87e134da6dca425535009cf16354480e48493437"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/source-inputs.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/public__atlas-runtime__shoulder__source-inputs.json",
+      "sha256": "f5db2aad53de26c2bb2ca53882413aa68ce73ad284478325ae3572a0453d9086"
+    },
+    {
+      "path": "scripts/bind-clinical-review.mjs",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/scripts__bind-clinical-review.mjs.txt",
+      "sha256": "4e3a911f37cb2db750f0cb7d5e075ab0622501ad1e62a8ad6fd8e471e2a4e96a"
+    },
+    {
+      "path": "tests/clinical-review-inbox-navigation-revision.test.mjs",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/tests__clinical-review-inbox-navigation-revision.test.mjs.txt",
+      "sha256": "83f98bf8eacde1b10e75b89fc0dc635af940cd9a26caa99c89ebcfd390a04188"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/tests__fixtures__current-atlas-delivery.json",
+      "sha256": "9318b9afe055e82ab24c390e6984310aa7f737acb933f3af1037d2d1673730db"
+    },
+    {
+      "path": "tests/head-comparison-renderer-revision.test.mjs",
+      "frozenPath": "tests/fixtures/head-masks-before-resource-budget/tests__head-comparison-renderer-revision.test.mjs.txt",
+      "sha256": "a1d3bda3961bf7cb07adeffb80ac40ed6a11a176651a96e548d01ec740af2ddb"
+    }
+  ]
+}

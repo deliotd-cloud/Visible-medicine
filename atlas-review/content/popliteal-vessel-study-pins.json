@@ -1,0 +1,843 @@
+{
+  "sourceCommit": "8bb434cdb42eac4925dc60a4fe9841ad6a62f211",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-artery",
+      "fmaId": "FMA77380",
+      "name": "Right popliteal artery",
+      "sourceName": "right popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77380",
+      "bounds": {
+        "min": [
+          -0.9584179520606995,
+          -5.167250156402588,
+          0.026954002678394318
+        ],
+        "max": [
+          -0.5585640072822571,
+          -3.1922197341918945,
+          0.4578710198402405
+        ]
+      },
+      "center": [
+        -0.7584909796714783,
+        -4.179734945297241,
+        0.2424125112593174
+      ],
+      "anchor": [
+        -0.7508899569511414,
+        -4.185960292816162,
+        0.11681099236011505
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2170",
+          "sha256": "4bc14302e06ca2162a6df730a7d9f8549b5e6e9b919ce34e35bbdbeec1b088b0"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-artery",
+      "fmaId": "FMA77381",
+      "name": "Left popliteal artery",
+      "sourceName": "left popliteal artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA77381",
+      "bounds": {
+        "min": [
+          0.5585800409317017,
+          -5.167250156402588,
+          0.02696899324655533
+        ],
+        "max": [
+          0.958420991897583,
+          -3.1922500133514404,
+          0.4578530192375183
+        ]
+      },
+      "center": [
+        0.7585005164146423,
+        -4.179750084877014,
+        0.24241100624203682
+      ],
+      "anchor": [
+        0.7594419717788696,
+        -4.18257999420166,
+        0.11660099029541016
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2086",
+          "sha256": "20dac622c09e02e45fa95b6f3c2eba7e932fdc3eef507ac19d0d78ed71ef241c"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+      "fmaId": "FMA44328",
+      "name": "Right popliteal vein",
+      "sourceName": "right popliteal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA44328",
+      "bounds": {
+        "min": [
+          -1.0176799297332764,
+          -4.805140018463135,
+          0.05056598782539368
+        ],
+        "max": [
+          -0.6416329741477966,
+          -3.038569927215576,
+          0.4426010251045227
+        ]
+      },
+      "center": [
+        -0.8296564519405365,
+        -3.9218549728393555,
+        0.2465835064649582
+      ],
+      "anchor": [
+        -0.8181569576263428,
+        -3.9113399982452393,
+        0.18454498052597046
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2171",
+          "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+      "fmaId": "FMA44329",
+      "name": "Left popliteal vein",
+      "sourceName": "left popliteal vein",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg",
+        "foot"
+      ],
+      "bundle": "leg-vessels-recovery",
+      "nodeName": "FMA44329",
+      "bounds": {
+        "min": [
+          0.6416260004043579,
+          -4.805140018463135,
+          0.05057201534509659
+        ],
+        "max": [
+          1.0176199674606323,
+          -3.038559913635254,
+          0.4425930082798004
+        ]
+      },
+      "center": [
+        0.8296229839324951,
+        -3.9218499660491943,
+        0.2465825118124485
+      ],
+      "anchor": [
+        0.8178119659423828,
+        -3.894700050354004,
+        0.18814300000667572
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2117",
+          "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+        }
+      ],
+      "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": true
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:right:bone:right-femur",
+      "fmaId": "FMA24474",
+      "name": "Right femur",
+      "sourceName": "right femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24474",
+      "bounds": {
+        "min": [
+          -1.5013400316238403,
+          -4.31850004196167,
+          -0.004697990603744984
+        ],
+        "max": [
+          -0.31894299387931824,
+          0.342520147562027,
+          0.6219199895858765
+        ]
+      },
+      "center": [
+        -0.9101415127515793,
+        -1.9879899471998215,
+        0.30861099949106574
+      ],
+      "anchor": [
+        -0.9391549825668335,
+        -2.0242297649383545,
+        0.31437796354293823
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3365",
+          "sha256": "5eff0f92905dd45bd0e79b1de0144dc15988c73c683468163255ba1452d58037"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:thigh:left:bone:left-femur",
+      "fmaId": "FMA24475",
+      "name": "Left femur",
+      "sourceName": "left femur",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "thigh",
+      "regions": [
+        "thigh",
+        "pelvis",
+        "leg"
+      ],
+      "bundle": "thigh-skeleton",
+      "nodeName": "FMA24475",
+      "bounds": {
+        "min": [
+          0.3196620047092438,
+          -4.319439888000488,
+          -0.005177993793040514
+        ],
+        "max": [
+          1.502369999885559,
+          0.34239014983177185,
+          0.622759997844696
+        ]
+      },
+      "center": [
+        0.9110160022974014,
+        -1.9885248690843582,
+        0.30879100202582777
+      ],
+      "anchor": [
+        0.9478089809417725,
+        -2.004189968109131,
+        0.308991014957428
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3259",
+          "sha256": "d291cc3619c32c68edb9d29e0b755634c2cb85e3db89f0d0b63a316f879ef86d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-tibia",
+      "fmaId": "FMA24477",
+      "name": "Right tibia",
+      "sourceName": "right tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24477",
+      "bounds": {
+        "min": [
+          -1.0935299396514893,
+          -8.060371398925781,
+          0.02072898857295513
+        ],
+        "max": [
+          -0.3521600067615509,
+          -4.260799884796143,
+          0.6483500003814697
+        ]
+      },
+      "center": [
+        -0.7228449732065201,
+        -6.160585641860962,
+        0.33453949447721243
+      ],
+      "anchor": [
+        -0.6983820199966431,
+        -6.1077399253845215,
+        0.3267289698123932
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3387",
+          "sha256": "01879d7310938e82eecc02e1115332497e94085ff5cc1fa8eeee47ad1f5d3578"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-tibia",
+      "fmaId": "FMA24478",
+      "name": "Left tibia",
+      "sourceName": "left tibia",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24478",
+      "bounds": {
+        "min": [
+          0.3503419756889343,
+          -8.060953140258789,
+          0.019821014255285263
+        ],
+        "max": [
+          1.0945500135421753,
+          -4.261380195617676,
+          0.6451500058174133
+        ]
+      },
+      "center": [
+        0.7224459946155548,
+        -6.161166667938232,
+        0.3324855100363493
+      ],
+      "anchor": [
+        0.7442640066146851,
+        -6.160630226135254,
+        0.2990489900112152
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3282",
+          "sha256": "40e55d7d28f060be61815603ee5eb1c0ba4c2e93af6fed6b5db7ca88d4ed82ef"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-fibula",
+      "fmaId": "FMA24480",
+      "name": "Right fibula",
+      "sourceName": "right fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24480",
+      "bounds": {
+        "min": [
+          -1.2016500234603882,
+          -8.252799034118652,
+          -0.015125999227166176
+        ],
+        "max": [
+          -0.8434450030326843,
+          -4.4085001945495605,
+          0.28168800473213196
+        ]
+      },
+      "center": [
+        -1.0225475132465363,
+        -6.3306496143341064,
+        0.1332810027524829
+      ],
+      "anchor": [
+        -1.0324500799179077,
+        -6.344590187072754,
+        0.16410896182060242
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3366",
+          "sha256": "d03fee02cf8eefad1ecfcb9246e3f43ad3c4615c21ce08dc5e2b6901c6395a86"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-fibula",
+      "fmaId": "FMA24481",
+      "name": "Left fibula",
+      "sourceName": "left fibula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24481",
+      "bounds": {
+        "min": [
+          0.8452900052070618,
+          -8.251906394958496,
+          -0.014659996144473553
+        ],
+        "max": [
+          1.2010799646377563,
+          -4.408689975738525,
+          0.28119003772735596
+        ]
+      },
+      "center": [
+        1.023184984922409,
+        -6.330298185348511,
+        0.1332650207914412
+      ],
+      "anchor": [
+        1.0649499893188477,
+        -6.316400051116943,
+        0.12487499415874481
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3260",
+          "sha256": "b5fbb694e1d881033ec8318b97c41e9d9bedc89a8df9845573b1aac528829331"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:bone:right-patella",
+      "fmaId": "FMA24486",
+      "name": "Right patella",
+      "sourceName": "right patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24486",
+      "bounds": {
+        "min": [
+          -1.0228800773620605,
+          -4.3851399421691895,
+          0.5099199414253235
+        ],
+        "max": [
+          -0.6062080264091492,
+          -3.9920401573181152,
+          0.7272699475288391
+        ]
+      },
+      "center": [
+        -0.8145440518856049,
+        -4.188590049743652,
+        0.6185949444770813
+      ],
+      "anchor": [
+        -0.8611350059509277,
+        -4.189239978790283,
+        0.5913699865341187
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3381",
+          "sha256": "b513b8cb6b37e3eb4211fd35a4469efdf79de37887a0af8c582efc836a6f6307"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:bone:left-patella",
+      "fmaId": "FMA24487",
+      "name": "Left patella",
+      "sourceName": "left patella",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-skeleton",
+      "nodeName": "FMA24487",
+      "bounds": {
+        "min": [
+          0.6059249639511108,
+          -4.3850297927856445,
+          0.5090100169181824
+        ],
+        "max": [
+          1.0222400426864624,
+          -3.9923698902130127,
+          0.7275099754333496
+        ]
+      },
+      "center": [
+        0.8140825033187866,
+        -4.188699841499329,
+        0.618259996175766
+      ],
+      "anchor": [
+        0.8300420641899109,
+        -4.148429870605469,
+        0.5871900320053101
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3275",
+          "sha256": "768362d04f0f91cea9a28f4aeae9d9f63f3c82450b68d185fa4afefe75d75cc1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:right:muscle:right-popliteus",
+      "fmaId": "FMA22591",
+      "name": "Right popliteus",
+      "sourceName": "right popliteus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles",
+      "nodeName": "FMA22591",
+      "bounds": {
+        "min": [
+          -1.0948799848556519,
+          -5.380780220031738,
+          -0.02419300004839897
+        ],
+        "max": [
+          -0.5662750005722046,
+          -3.9338901042938232,
+          0.43261200189590454
+        ]
+      },
+      "center": [
+        -0.8305774927139282,
+        -4.657335162162781,
+        0.20420950092375278
+      ],
+      "anchor": [
+        -0.8330259919166565,
+        -4.611370086669922,
+        0.2284419983625412
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1430",
+          "sha256": "78f5d5b80867116a0bbf59575efb8de3ed681030875a577bc00d310012df80fd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:leg:left:muscle:left-popliteus",
+      "fmaId": "FMA22592",
+      "name": "Left popliteus",
+      "sourceName": "left popliteus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "leg",
+      "regions": [
+        "leg"
+      ],
+      "bundle": "leg-muscles",
+      "nodeName": "FMA22592",
+      "bounds": {
+        "min": [
+          0.5662750005722046,
+          -5.380780220031738,
+          -0.02419300004839897
+        ],
+        "max": [
+          1.0948799848556519,
+          -3.9338901042938232,
+          0.43261200189590454
+        ]
+      },
+      "center": [
+        0.8305774927139282,
+        -4.657335162162781,
+        0.20420950092375278
+      ],
+      "anchor": [
+        0.8330259919166565,
+        -4.611370086669922,
+        0.2284419983625412
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1430M",
+          "sha256": "96ece008a2edf30338e1b53611c86de64f2cc329af84fe5d54e9375469c3babd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "thigh-skeleton",
+      "url": "/models/bodyparts3d/full-body/thigh-skeleton.glb",
+      "bytes": 115852,
+      "sha256": "27bd799bd85387beea9fab40cbe2f83a5e780983170db4dfd1d2e0eda8fd2b59",
+      "structures": 2
+    },
+    {
+      "id": "leg-skeleton",
+      "url": "/models/bodyparts3d/full-body/leg-skeleton.glb",
+      "bytes": 118776,
+      "sha256": "8885078bc114d8cf5c2ebd12f393761965b2016bf6f5fc196c83549527e2c0af",
+      "structures": 6
+    },
+    {
+      "id": "leg-muscles",
+      "url": "/models/bodyparts3d/full-body/leg-muscles.glb",
+      "bytes": 1304804,
+      "sha256": "c535a021142b325daebfd0a8bca2b0406f05fae820870d524dc0a6993d3eb72d",
+      "structures": 24
+    }
+  ]
+}

@@ -1,0 +1,675 @@
+{
+  "sourceCommit": "b81918d007e6ebb49350144455597145097507d8",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "ee280e8b68a66d5abef0b5f530b9c9969be3e5c58d747001a577a0f06d93bc86",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-posterior-crico-arytenoid",
+        "fmaId": "FMA46577",
+        "name": "Right posterior crico-arytenoid",
+        "sourceName": "right posterior crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46577",
+        "bounds": {
+          "min": [
+            -0.11375200003385544,
+            5.905500411987305,
+            0.4265989661216736
+          ],
+          "max": [
+            -0.022757599130272865,
+            6.049200534820557,
+            0.4839160144329071
+          ]
+        },
+        "center": [
+          -0.06825479958206415,
+          5.977350473403931,
+          0.45525749027729034
+        ],
+        "anchor": [
+          -0.06822539865970612,
+          5.976700305938721,
+          0.4580460488796234
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2800",
+            "sha256": "917fb9e8667c4d179c0f86ec06c27dc2d0537e4f81d1319aa21fe5a0e237d891"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "posterior",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46577 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-posterior-crico-arytenoid",
+        "fmaId": "FMA46578",
+        "name": "Left posterior crico-arytenoid",
+        "sourceName": "left posterior crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46578",
+        "bounds": {
+          "min": [
+            0.009708330035209656,
+            5.905500411987305,
+            0.42662298679351807
+          ],
+          "max": [
+            0.10085099935531616,
+            6.049200534820557,
+            0.48406097292900085
+          ]
+        },
+        "center": [
+          0.05527966469526291,
+          5.977350473403931,
+          0.45534197986125946
+        ],
+        "anchor": [
+          0.05543079972267151,
+          5.974200248718262,
+          0.45771896839141846
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2782",
+            "sha256": "eb100ad68f9201832f5fa15c7e802c175fb813302c8983f13b6f3d3dfdb3d4ef"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "posterior",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46578 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-lateral-crico-arytenoid",
+        "fmaId": "FMA46580",
+        "name": "Right lateral crico-arytenoid",
+        "sourceName": "right lateral crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46580",
+        "bounds": {
+          "min": [
+            -0.11734800040721893,
+            5.94420051574707,
+            0.4725990295410156
+          ],
+          "max": [
+            -0.07283669710159302,
+            6.052299976348877,
+            0.5731199383735657
+          ]
+        },
+        "center": [
+          -0.09509234875440598,
+          5.998250246047974,
+          0.5228594839572906
+        ],
+        "anchor": [
+          -0.1039159968495369,
+          6.000600814819336,
+          0.5278299450874329
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2796",
+            "sha256": "d0a4730aeb6f0bafdf53eced4954a0ccfaf31ba8f3d08aa90e0c18d9c8928cb3"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "lateral",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46580 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-lateral-crico-arytenoid",
+        "fmaId": "FMA46581",
+        "name": "Left lateral crico-arytenoid",
+        "sourceName": "left lateral crico-arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46581",
+        "bounds": {
+          "min": [
+            0.05964810028672218,
+            5.94420051574707,
+            0.47257599234580994
+          ],
+          "max": [
+            0.10436300188302994,
+            6.052299976348877,
+            0.573140025138855
+          ]
+        },
+        "center": [
+          0.08200555108487606,
+          5.998250246047974,
+          0.5228580087423325
+        ],
+        "anchor": [
+          0.09090519696474075,
+          6.000500679016113,
+          0.5261699557304382
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2778",
+            "sha256": "15d694d60ddab28b19aa0ca2017c86ac82ccc3fda58d257a240f56c363d4271a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "lateral",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46581 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:muscle:transverse-arytenoid",
+        "fmaId": "FMA46582",
+        "name": "Transverse arytenoid",
+        "sourceName": "transverse arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46582",
+        "bounds": {
+          "min": [
+            -0.0801616981625557,
+            6.034100532531738,
+            0.44700202345848083
+          ],
+          "max": [
+            0.0669441968202591,
+            6.096500396728516,
+            0.4777510166168213
+          ]
+        },
+        "center": [
+          -0.0066087506711483,
+          6.065300464630127,
+          0.46237652003765106
+        ],
+        "anchor": [
+          -0.004699999932199717,
+          6.064899921417236,
+          0.4630560278892517
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2809",
+            "sha256": "1ece0839b43392b090d5e4b5bf96448a10935f1d3637487cd526d0fff8251f32"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "transverse",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46582 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-oblique-arytenoid",
+        "fmaId": "FMA46584",
+        "name": "Right oblique arytenoid",
+        "sourceName": "right oblique arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46584",
+        "bounds": {
+          "min": [
+            -0.06969249993562698,
+            6.036099910736084,
+            0.43618103861808777
+          ],
+          "max": [
+            0.059726301580667496,
+            6.102299690246582,
+            0.46766602993011475
+          ]
+        },
+        "center": [
+          -0.004983099177479744,
+          6.069199800491333,
+          0.45192353427410126
+        ],
+        "anchor": [
+          -0.00620647007599473,
+          6.066099643707275,
+          0.44711098074913025
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2798",
+            "sha256": "706e265f99131c2bde1b61c4bc2cdfab7ae384ed2c84f10c8cbff91a295ca22c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "oblique",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46584 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-oblique-arytenoid",
+        "fmaId": "FMA46585",
+        "name": "Left oblique arytenoid",
+        "sourceName": "left oblique arytenoid",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46585",
+        "bounds": {
+          "min": [
+            -0.07297239452600479,
+            6.035999774932861,
+            0.4362259805202484
+          ],
+          "max": [
+            0.05655650049448013,
+            6.102199554443359,
+            0.46778297424316406
+          ]
+        },
+        "center": [
+          -0.008207947015762329,
+          6.06909966468811,
+          0.45200447738170624
+        ],
+        "anchor": [
+          -0.005692710168659687,
+          6.066500186920166,
+          0.44715797901153564
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2780",
+            "sha256": "9ad13a6a95301607fa5968e68ae47efc458ebc67f9582f6fc0861672b7b4de17"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "oblique",
+      "topics": [
+        "anatomy",
+        "function"
+      ],
+      "previous": {
+        "anatomy": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior and lateral cricoarytenoids connect the cricoid and arytenoid cartilages. Oblique and transverse arytenoid sources span the arytenoid region.",
+          "bullets": [
+            "Source identity: FMA46585 · 1 source component",
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated.",
+            "Use Study windows & focuses to preview and open its local study view."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        },
+        "function": {
+          "readiness": "draft",
+          "title": "Selected intrinsic laryngeal muscles · draft",
+          "body": "Posterior cricoarytenoids abduct the vocal folds; lateral cricoarytenoids and arytenoids contribute to adduction. The atlas shows static source shapes, not validated movement.",
+          "bullets": [
+            "Unvalidated source subset. Shape, side, attachment footprints and tissue boundaries require specialist review. Conus elasticus, aryepiglotticus and pterygomandibular raphe candidates are withheld, as are the previous pharyngeal raphe and middle constrictors. No complete mucosal layers, airway lumen, laryngeal nerves, swallowing, phonation or operative planes are simulated."
+          ],
+          "note": "Anatomical and teaching review pending.",
+          "citations": [
+            "https://anatomy.ttuhscep.edu/schemes/larynx_tables.html"
+          ]
+        }
+      }
+    }
+  ]
+}

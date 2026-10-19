@@ -1,0 +1,587 @@
+{
+  "sourceCommit": "ff8f76a80ad0b73a93421dac5431759ab96ea187",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-inferior-pharyngeal-constrictor",
+        "fmaId": "FMA46636",
+        "name": "Left inferior pharyngeal constrictor",
+        "sourceName": "left inferior pharyngeal constrictor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46636",
+        "bounds": {
+          "min": [
+            -0.008485839702188969,
+            5.853000640869141,
+            0.3538079857826233
+          ],
+          "max": [
+            0.1882600039243698,
+            6.503000259399414,
+            0.5274900197982788
+          ]
+        },
+        "center": [
+          0.08988708211109042,
+          6.178000450134277,
+          0.44064900279045105
+        ],
+        "anchor": [
+          0.08284350484609604,
+          6.182299613952637,
+          0.42588096857070923
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2740",
+            "sha256": "345877a821866cb8f0fa6c6ca353f28385b5a4a35e0c9e9bd5601a08211a1097"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "inferior"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-palatopharyngeus",
+        "fmaId": "FMA46672",
+        "name": "Left palatopharyngeus",
+        "sourceName": "left palatopharyngeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46672",
+        "bounds": {
+          "min": [
+            -0.019919099286198616,
+            5.882400035858154,
+            0.3905470371246338
+          ],
+          "max": [
+            0.18502700328826904,
+            6.762800216674805,
+            0.5431700348854065
+          ]
+        },
+        "center": [
+          0.08255395200103521,
+          6.3226001262664795,
+          0.46685853600502014
+        ],
+        "anchor": [
+          0.08513960242271423,
+          6.324200630187988,
+          0.467864990234375
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2743",
+            "sha256": "e2a82119db68aa8db6022c78ce9bb7efef468ac6c776f5493ec8b6a1596ae015"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "palato"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-salpingopharyngeus",
+        "fmaId": "FMA46670",
+        "name": "Left salpingopharyngeus",
+        "sourceName": "left salpingopharyngeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46670",
+        "bounds": {
+          "min": [
+            0.07165979593992233,
+            6.576300144195557,
+            0.36528196930885315
+          ],
+          "max": [
+            0.2098430097103119,
+            6.987900257110596,
+            0.5631700158119202
+          ]
+        },
+        "center": [
+          0.1407514028251171,
+          6.782100200653076,
+          0.46422599256038666
+        ],
+        "anchor": [
+          0.1038770005106926,
+          6.768499851226807,
+          0.5349900126457214
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2745",
+            "sha256": "81c70a6f8ab2de5d20a715cdf5339d756ca7171c473adc645231929b2732bf31"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "salpingo"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-stylopharyngeus",
+        "fmaId": "FMA46668",
+        "name": "Left stylopharyngeus",
+        "sourceName": "left stylopharyngeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46668",
+        "bounds": {
+          "min": [
+            0.11729100346565247,
+            6.285699367523193,
+            0.3404650092124939
+          ],
+          "max": [
+            0.3909299969673157,
+            6.82819938659668,
+            0.579039990901947
+          ]
+        },
+        "center": [
+          0.25411050021648407,
+          6.5569493770599365,
+          0.45975250005722046
+        ],
+        "anchor": [
+          0.2505509853363037,
+          6.580300331115723,
+          0.49607300758361816
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2746",
+            "sha256": "8cea3d6b0e2d0e864be7d11d919ee63d73aee5532db36cd3943a305fedd03751"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "stylo"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-superior-pharyngeal-constrictor",
+        "fmaId": "FMA46632",
+        "name": "Left superior pharyngeal constrictor",
+        "sourceName": "left superior pharyngeal constrictor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46632",
+        "bounds": {
+          "min": [
+            -0.006495269946753979,
+            6.461600303649902,
+            0.45079201459884644
+          ],
+          "max": [
+            0.32293701171875,
+            6.997600078582764,
+            0.7777699828147888
+          ]
+        },
+        "center": [
+          0.158220870885998,
+          6.729600191116333,
+          0.6142809987068176
+        ],
+        "anchor": [
+          0.18822500109672546,
+          6.734599590301514,
+          0.5855900049209595
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2747",
+            "sha256": "3282d0f49da840abfea2e8ac276e4d780c71041cba4fbe4a2853ebc1c8bb1f22"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "superior"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-inferior-pharyngeal-constrictor",
+        "fmaId": "FMA46635",
+        "name": "Right inferior pharyngeal constrictor",
+        "sourceName": "right inferior pharyngeal constrictor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46635",
+        "bounds": {
+          "min": [
+            -0.2014559954404831,
+            5.852900505065918,
+            0.3538079857826233
+          ],
+          "max": [
+            -0.005891900043934584,
+            6.503799915313721,
+            0.5275399684906006
+          ]
+        },
+        "center": [
+          -0.10367394774220884,
+          6.178350210189819,
+          0.44067397713661194
+        ],
+        "anchor": [
+          -0.10633999854326248,
+          6.187099456787109,
+          0.42632797360420227
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2752",
+            "sha256": "3fb68e999835bcbe32995db8a0b8a2a4cd592441583f89c07f8897fdd20e4ec4"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "inferior"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-palatopharyngeus",
+        "fmaId": "FMA46671",
+        "name": "Right palatopharyngeus",
+        "sourceName": "right palatopharyngeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46671",
+        "bounds": {
+          "min": [
+            -0.19813700020313263,
+            5.882500171661377,
+            0.3905409872531891
+          ],
+          "max": [
+            0.0068165999837219715,
+            6.762800216674805,
+            0.5432000160217285
+          ]
+        },
+        "center": [
+          -0.09566020010970533,
+          6.322650194168091,
+          0.4668705016374588
+        ],
+        "anchor": [
+          -0.09831489622592926,
+          6.321400165557861,
+          0.46716299653053284
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2755",
+            "sha256": "c3fbea74a7567588f83c9856be8305cc4b8cffe9f7157a9e41b8c53c5bd989be"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "palato"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-salpingopharyngeus",
+        "fmaId": "FMA46669",
+        "name": "Right salpingopharyngeus",
+        "sourceName": "right salpingopharyngeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46669",
+        "bounds": {
+          "min": [
+            -0.22287499904632568,
+            6.576300144195557,
+            0.36528098583221436
+          ],
+          "max": [
+            -0.08478999882936478,
+            6.987900257110596,
+            0.5630699992179871
+          ]
+        },
+        "center": [
+          -0.15383249893784523,
+          6.782100200653076,
+          0.4641754925251007
+        ],
+        "anchor": [
+          -0.11703500151634216,
+          6.768199443817139,
+          0.5350000262260437
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2757",
+            "sha256": "b10e40d550d6208c907df65d844403071233d8088a109b2be5f925cd5d9e6c36"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "salpingo"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-stylopharyngeus",
+        "fmaId": "FMA46667",
+        "name": "Right stylopharyngeus",
+        "sourceName": "right stylopharyngeus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46667",
+        "bounds": {
+          "min": [
+            -0.40389198064804077,
+            6.159300327301025,
+            0.3405400216579437
+          ],
+          "max": [
+            -0.12635299563407898,
+            6.826899528503418,
+            0.5835800170898438
+          ]
+        },
+        "center": [
+          -0.2651224881410599,
+          6.493099927902222,
+          0.46206001937389374
+        ],
+        "anchor": [
+          -0.24784700572490692,
+          6.56879997253418,
+          0.5155899524688721
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2758",
+            "sha256": "dcea7bd8d13fff1ca83eea7605fbb399b0ab34983ddd8632613690a1be70c377"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "stylo"
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-superior-pharyngeal-constrictor",
+        "fmaId": "FMA46631",
+        "name": "Right superior pharyngeal constrictor",
+        "sourceName": "right superior pharyngeal constrictor",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46631",
+        "bounds": {
+          "min": [
+            -0.33625802397727966,
+            6.461600303649902,
+            0.45079201459884644
+          ],
+          "max": [
+            -0.006603909656405449,
+            6.997600078582764,
+            0.777649998664856
+          ]
+        },
+        "center": [
+          -0.17143096681684256,
+          6.729600191116333,
+          0.6142210066318512
+        ],
+        "anchor": [
+          -0.20013900101184845,
+          6.731899261474609,
+          0.584850013256073
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2759",
+            "sha256": "85d82b26595b6e782fe3bdc9dc2b99bb2127ea84da709e01a6e31672179cdf60"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "family": "superior"
+    }
+  ]
+}

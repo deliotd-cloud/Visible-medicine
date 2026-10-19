@@ -1,0 +1,23 @@
+{
+  "schema": "vm-current-atlas-test-delivery-1",
+  "source": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "sourceTree": "83720d136f899876bd947323e6552c4d3e171210",
+  "reviewIntegration": "4f0846e90efe86c86ddbfb5817cbd8b82baaf1b05c3d6eead91caa85a320013d",
+  "reviewSourceFiles": 1531,
+  "viewerFiles": 46,
+  "viewerPackages": 22,
+  "documents": {
+    "atlas-review/manifest.json": "7f7bf6d643a9b7405dd7fda10473d4c8557a24984ace495c28127e0b7383b027",
+    "atlas-review/integration-inputs.json": "17297b3808e52c371549a8131008c44a29386274197a4d08035cfebcdd74efec",
+    "public/atlas-review-viewer/manifest.json": "a3288dd76d1adf8d4b651c0d2dd2930bb2060b995c5f823089a35c112fc79875",
+    "lib/atlas-model-inventory.json": "0a5da79ea1b8b5622b5bc0704ec5ee4f0995f941bd68aaa6d32cdc7e148d9270",
+    "public/atlas-runtime/head-neck/manifest.json": "718741d72d13df55ea0ee584718c6156aadc0fc5a4b250c196bf01c94d87d534",
+    "public/atlas-runtime/head-neck/source-inputs.json": "01cce8a39fdf3b221a1a62064a54d65a2ad437ff8b17b1282cd34b52994cb34f",
+    "public/atlas-runtime/shoulder/manifest.json": "27bd5e3e9c5d3016e1eb10e212901c976370214ede2e3d9369cc25da79fa8f53",
+    "public/atlas-runtime/shoulder/source-inputs.json": "1c32c33c2747ff53819aff53d2141ba0918b75e57d71eb9aa8eaaff905579fc2",
+    "public/atlas-runtime/lower-limb/manifest.json": "d24925c198c6b227c8433b9c6b84b5705ca7447c2dfcaded64ec775edabe5cf3",
+    "public/atlas-runtime/lower-limb/source-inputs.json": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091",
+    "public/atlas-runtime/female-pelvis/manifest.json": "9ebaab7e34ea3edd78943b91e9f8a874d0f6835b731e774d1be71cb2e72e232b",
+    "public/atlas-runtime/female-pelvis/source-inputs.json": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021"
+  }
+}

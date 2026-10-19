@@ -1,0 +1,1245 @@
+{
+  "sourceCommit": "2abd41c1c79108f20db703aabfa13f23a99a5655",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "thigh-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/thigh-vessels-recovery.glb",
+      "bytes": 1415760,
+      "sha256": "5037db3cd7d8d0bf2ac6ae2c4656b50e73c71f5f530595b80cd68153afb6c9f7",
+      "structures": 8
+    },
+    {
+      "id": "leg-vessels-recovery",
+      "url": "/models/bodyparts3d/full-body/leg-vessels-recovery.glb",
+      "bytes": 2900368,
+      "sha256": "e2751d62cf20f86ec14865a79bad26e70245443965702d98512541378851e466",
+      "structures": 10
+    },
+    {
+      "id": "deep-leg-veins",
+      "url": "/models/bodyparts3d/deep-leg-veins/deep-leg-veins.glb?v=b10cd33cb0a8be2602c7d41b8ec88d4a50cd678df936b2a78dfedb6191910096",
+      "bytes": 1295728,
+      "sha256": "b10cd33cb0a8be2602c7d41b8ec88d4a50cd678df936b2a78dfedb6191910096",
+      "structures": 6
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "ba2a4bf71d498fa86ef302a1814062451e6e4cfa4214f404e740c796e68499a4",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-femoral-vein",
+        "fmaId": "FMA21188",
+        "name": "Right femoral vein",
+        "sourceName": "right femoral vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-vessels-recovery",
+        "nodeName": "FMA21188",
+        "bounds": {
+          "min": [
+            -0.7377950549125671,
+            -3.1643500328063965,
+            0.3406140208244324
+          ],
+          "max": [
+            -0.3196389973163605,
+            0.06828002631664276,
+            1.0473699569702148
+          ]
+        },
+        "center": [
+          -0.5287170261144638,
+          -1.5480350032448769,
+          0.6939919888973236
+        ],
+        "anchor": [
+          -0.47020697593688965,
+          -1.5724499225616455,
+          0.687529981136322
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2144",
+            "sha256": "16f9661f23ad65a5856cf50be867e5ef282ea73fae50b853d44d9ab22676b1ab"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thigh",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-femoral-vein",
+        "fmaId": "FMA21189",
+        "name": "Left femoral vein",
+        "sourceName": "left femoral vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-vessels-recovery",
+        "nodeName": "FMA21189",
+        "bounds": {
+          "min": [
+            0.3187209963798523,
+            -3.164289951324463,
+            0.33950501680374146
+          ],
+          "max": [
+            0.7394799590110779,
+            0.06841979920864105,
+            1.0481399297714233
+          ]
+        },
+        "center": [
+          0.5291004776954651,
+          -1.547935076057911,
+          0.6938224732875824
+        ],
+        "anchor": [
+          0.44828301668167114,
+          -1.629730224609375,
+          0.6385399699211121
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2102",
+            "sha256": "07776c248a8f8ddd3007f652c7bcafc60af3ab23edd678cc2da37615359c4abc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thigh",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-deep-femoral-vein",
+        "fmaId": "FMA51042",
+        "name": "Right deep femoral vein",
+        "sourceName": "right deep femoral vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA51042",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2135",
+            "sha256": "4e74f0301c15232ce6cb744bd0439d779a9a77eef51b3cf26bab15a632ad2a95"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.7874590158462524,
+            -2.9165799617767334,
+            0.5504299998283386
+          ],
+          "max": [
+            -0.32875800132751465,
+            0.18490000069141388,
+            0.9344300031661987
+          ]
+        },
+        "center": [
+          -0.5581085085868835,
+          -1.3658399805426598,
+          0.7424300014972687
+        ],
+        "anchor": [
+          -0.7389180064201355,
+          -1.372849941253662,
+          0.6927400231361389
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thigh",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-deep-femoral-vein",
+        "fmaId": "FMA51043",
+        "name": "Left deep femoral vein",
+        "sourceName": "left deep femoral vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA51043",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2099",
+            "sha256": "7ce931eee500efd0c796c2b29ee29000ad55c9b4c31784bec72dd23b5defa3f3"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.3288309872150421,
+            -2.9166200160980225,
+            0.5504099726676941
+          ],
+          "max": [
+            0.7876279950141907,
+            0.18499000370502472,
+            0.9342799782752991
+          ]
+        },
+        "center": [
+          0.5582294911146164,
+          -1.3658150061964989,
+          0.7423449754714966
+        ],
+        "anchor": [
+          0.7383480072021484,
+          -1.3729699850082397,
+          0.6905699968338013
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thigh",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-popliteal-vein",
+        "fmaId": "FMA44328",
+        "name": "Right popliteal vein",
+        "sourceName": "right popliteal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "leg-vessels-recovery",
+        "nodeName": "FMA44328",
+        "bounds": {
+          "min": [
+            -1.0176799297332764,
+            -4.805140018463135,
+            0.05056598782539368
+          ],
+          "max": [
+            -0.6416329741477966,
+            -3.038569927215576,
+            0.4426010251045227
+          ]
+        },
+        "center": [
+          -0.8296564519405365,
+          -3.9218549728393555,
+          0.2465835064649582
+        ],
+        "anchor": [
+          -0.8181569576263428,
+          -3.9113399982452393,
+          0.18454498052597046
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2171",
+            "sha256": "b54fb1bed98c0159e1c8501d3211d43080a085fb498d5c992015afc49e1e3dbc"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "knee",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-popliteal-vein",
+        "fmaId": "FMA44329",
+        "name": "Left popliteal vein",
+        "sourceName": "left popliteal vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "leg-vessels-recovery",
+        "nodeName": "FMA44329",
+        "bounds": {
+          "min": [
+            0.6416260004043579,
+            -4.805140018463135,
+            0.05057201534509659
+          ],
+          "max": [
+            1.0176199674606323,
+            -3.038559913635254,
+            0.4425930082798004
+          ]
+        },
+        "center": [
+          0.8296229839324951,
+          -3.9218499660491943,
+          0.2465825118124485
+        ],
+        "anchor": [
+          0.8178119659423828,
+          -3.894700050354004,
+          0.18814300000667572
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2117",
+            "sha256": "92082063ece4916d1b8c3a17b6d135c36edf3ab75dd5b7e9604e71a6d58fa2ee"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "knee",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:right:vessel:right-great-saphenous-vein",
+        "fmaId": "FMA21379",
+        "name": "Right great saphenous vein",
+        "sourceName": "right great saphenous vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-vessels-recovery",
+        "nodeName": "FMA21379",
+        "bounds": {
+          "min": [
+            -0.9488829970359802,
+            -8.263853073120117,
+            -0.019135016947984695
+          ],
+          "max": [
+            -0.13421300053596497,
+            -0.04151000827550888,
+            1.0395100116729736
+          ]
+        },
+        "center": [
+          -0.5415479987859726,
+          -4.152681540697813,
+          0.5101874973624945
+        ],
+        "anchor": [
+          -0.3424859941005707,
+          -4.22812032699585,
+          0.03469299152493477
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2145",
+            "sha256": "dee8dea4b9f286f40abec150d46f04bc1a1bb2f1a78c91c2431c4d225c33f925"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:thigh:left:vessel:left-great-saphenous-vein",
+        "fmaId": "FMA21380",
+        "name": "Left great saphenous vein",
+        "sourceName": "left great saphenous vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "thigh",
+        "regions": [
+          "thigh",
+          "pelvis",
+          "leg"
+        ],
+        "bundle": "thigh-vessels-recovery",
+        "nodeName": "FMA21380",
+        "bounds": {
+          "min": [
+            0.13420499861240387,
+            -8.263853073120117,
+            -0.01917598769068718
+          ],
+          "max": [
+            0.9488739967346191,
+            -0.04153991863131523,
+            1.0394700765609741
+          ]
+        },
+        "center": [
+          0.5415394976735115,
+          -4.152696495875716,
+          0.5101470444351435
+        ],
+        "anchor": [
+          0.3443230092525482,
+          -4.232450008392334,
+          0.03463199734687805
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2103",
+            "sha256": "5aef9c656f07538f2a7c9dee150b00d93e98e567f083dec2c5e924b0ad9c377b"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-small-saphenous-vein",
+        "fmaId": "FMA44334",
+        "name": "Right small saphenous vein",
+        "sourceName": "right small saphenous vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "leg-vessels-recovery",
+        "nodeName": "FMA44334",
+        "bounds": {
+          "min": [
+            -1.1243399381637573,
+            -8.442412376403809,
+            -0.3892990052700043
+          ],
+          "max": [
+            -0.6231099963188171,
+            -3.8983099460601807,
+            0.36393797397613525
+          ]
+        },
+        "center": [
+          -0.8737249672412872,
+          -6.170361161231995,
+          -0.01268051564693451
+        ],
+        "anchor": [
+          -0.733597993850708,
+          -6.209539890289307,
+          -0.3414610028266907
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2176",
+            "sha256": "400f2fe7647680e4e4e5ae842686644d9d84e71af30c2bb2e59bc0d81b5f6bb8"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-small-saphenous-vein",
+        "fmaId": "FMA44335",
+        "name": "Left small saphenous vein",
+        "sourceName": "left small saphenous vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "leg-vessels-recovery",
+        "nodeName": "FMA44335",
+        "bounds": {
+          "min": [
+            0.623117983341217,
+            -8.442408561706543,
+            -0.38934001326560974
+          ],
+          "max": [
+            1.1243799924850464,
+            -3.8982901573181152,
+            0.3639099895954132
+          ]
+        },
+        "center": [
+          0.8737489879131317,
+          -6.170349359512329,
+          -0.012715011835098267
+        ],
+        "anchor": [
+          0.7344880104064941,
+          -6.214540004730225,
+          -0.34123700857162476
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2121",
+            "sha256": "e95be7db2162c51e3024e4fb8549221f29f1e24ad86aca9f3b6999bfd4cae9ec"
+          }
+        ],
+        "coverageNote": "Selected source vessel segment, not a complete vascular tree. Branch continuity, calibre and vessel–nerve relationships require review. Red/blue denotes artery/vein, not oxygenation.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "superficial",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-anterior-tibial-vein",
+        "fmaId": "FMA44336",
+        "name": "Right anterior tibial vein",
+        "sourceName": "right anterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44336",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2132",
+            "sha256": "882bc85f20f37456f27048340d2b431b26e9f1fa4e877b935adf984958384cae"
+          },
+          {
+            "file": "FJ2193",
+            "sha256": "f21e0ec17c0a9366b40494fa34c893386301fba3099df0eb9f3a9476fbaeb770"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.0997899770736694,
+            -7.59695291519165,
+            0.1954289972782135
+          ],
+          "max": [
+            -0.5094850063323975,
+            -3.942189931869507,
+            0.6421700119972229
+          ]
+        },
+        "center": [
+          -0.8046374917030334,
+          -5.769571423530579,
+          0.4187995046377182
+        ],
+        "anchor": [
+          -0.9259089827537537,
+          -5.783679962158203,
+          0.3925420045852661
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "calf",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-anterior-tibial-vein",
+        "fmaId": "FMA44337",
+        "name": "Left anterior tibial vein",
+        "sourceName": "left anterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44337",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2097",
+            "sha256": "baad24d3cc1c5bbc493e95793efa217b3c6d6a6ac87006b15f0bb21a26a0cc1e"
+          },
+          {
+            "file": "FJ2183",
+            "sha256": "64fae2f22228c4da162d61c70e2fe4d59fdcf13e35218df093b58d8eff6dff08"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.5094479918479919,
+            -7.596963882446289,
+            0.19541700184345245
+          ],
+          "max": [
+            1.099869966506958,
+            -3.9422199726104736,
+            0.6419600248336792
+          ]
+        },
+        "center": [
+          0.804658979177475,
+          -5.769591927528381,
+          0.4186885133385658
+        ],
+        "anchor": [
+          0.9276700019836426,
+          -5.768280029296875,
+          0.39618900418281555
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "calf",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:right:vessel:right-posterior-tibial-vein",
+        "fmaId": "FMA44338",
+        "name": "Right posterior tibial vein",
+        "sourceName": "right posterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44338",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2173",
+            "sha256": "e2b3c5e3b353033d69a81457f4d55e9da6261399713600b5e200ae2e236c8b34"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -1.0238399505615234,
+            -8.456541061401367,
+            -0.00813200045377016
+          ],
+          "max": [
+            -0.39773398637771606,
+            -5.161489963531494,
+            0.37942200899124146
+          ]
+        },
+        "center": [
+          -0.7107869684696198,
+          -6.809015512466431,
+          0.18564500426873565
+        ],
+        "anchor": [
+          -0.45229700207710266,
+          -6.8045501708984375,
+          0.12772800028324127
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "calf",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:leg:left:vessel:left-posterior-tibial-vein",
+        "fmaId": "FMA44339",
+        "name": "Left posterior tibial vein",
+        "sourceName": "left posterior tibial vein",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "left",
+        "region": "leg",
+        "regions": [
+          "leg",
+          "foot"
+        ],
+        "bundle": "deep-leg-veins",
+        "nodeName": "FMA44339",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2118",
+            "sha256": "06d0d03da663cc3c83f8efd7dd1cc99ea0cfb912f6ee01c3ed89d51212605db8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            0.3977630138397217,
+            -8.456661224365234,
+            -0.008082999847829342
+          ],
+          "max": [
+            1.0238100290298462,
+            -5.161520004272461,
+            0.37894898653030396
+          ]
+        },
+        "center": [
+          0.7107865214347839,
+          -6.809090614318848,
+          0.1854329933412373
+        ],
+        "anchor": [
+          0.45329800248146057,
+          -6.76977014541626,
+          0.13391099870204926
+        ],
+        "coverageNote": "Whole source-labelled vein group, not complete companion veins, valves, lumen or exact junctions. Anterior tibial selections retain two separate source parts. Original coordinates and faces retained; anatomical and clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "calf",
+      "topics": [
+        "ct",
+        "mri",
+        "ultrasound"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

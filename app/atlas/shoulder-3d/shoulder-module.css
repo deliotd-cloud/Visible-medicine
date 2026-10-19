@@ -1,0 +1,35 @@
+.anatomy-site-frame { height:100dvh; display:flex; flex-direction:column; min-height:0; }
+.anatomy-site-frame > :not(#main-content) { flex-shrink:0; }
+.anatomy-site-frame > .topbar.public-platform-header { height:64px; min-height:64px; }
+.anatomy-site-frame > .topbar .platform-brand .brand-lockup-image { width:min(220px,calc(100vw - 112px)); }
+.anatomy-site-frame #main-content { flex:1; min-height:0; }
+.shoulder-module-page { display:flex; flex-direction:column; height:100%; min-height:0; color:var(--green); background:var(--cream,#f8f7f2); }
+.shoulder-module-bar { display:flex; flex-wrap:wrap; align-items:center; gap:8px 18px; padding:10px 20px; }
+.shoulder-module-bar h1 { font-size:18px; line-height:1.25; margin:0; }
+.shoulder-module-bar span { font-size:12px; color:#526965; }
+.shoulder-module-bar a { font-size:13px; white-space:nowrap; }
+.shoulder-module-bar > a:last-child { margin-left:auto; }
+.shoulder-module-frame { width:100%; flex:1; min-height:280px; border:0; background:#f8f7f2; }
+.shoulder-module-notes { flex-shrink:0; padding:8px 20px; font-size:13px; border-top:1px solid #d5dfdc; max-height:35vh; overflow:auto; }
+.shoulder-module-notes summary { cursor:pointer; width:fit-content; }
+.shoulder-module-notes p { margin:10px 0; max-width:1000px; }
+.shoulder-module-page a:focus-visible,.shoulder-module-page summary:focus-visible { outline:2px solid #16c6b2; outline-offset:4px; }
+.atlas-3d-workspace-page .shoulder-module-bar{min-height:43px;background:#071210;color:#e5f0ed;padding:7px 16px}
+.atlas-3d-workspace-page .shoulder-module-bar h1{color:#e5f0ed}
+.atlas-3d-workspace-page .shoulder-module-bar span{color:#d2e4b4;font-weight:600}
+.atlas-3d-workspace-page .shoulder-module-bar a{color:#82d7cf}
+.atlas-3d-workspace-page .atlas-workspace-navigation{flex:none;margin:0 8px 8px}
+.atlas-3d-workspace-page .shoulder-module-notes{padding:7px 16px;max-height:32vh}
+@media(min-width:1200px){.anatomy-site-frame .atlas-3d-workspace-page{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto minmax(0,1fr) auto}.anatomy-site-frame .atlas-3d-workspace-page .shoulder-module-bar{grid-column:1;grid-row:1}.anatomy-site-frame .atlas-3d-workspace-page .atlas-workspace-navigation{grid-column:1;grid-row:2}.anatomy-site-frame .atlas-3d-workspace-page .shoulder-module-frame{grid-column:1;grid-row:3}.anatomy-site-frame .atlas-3d-workspace-page .shoulder-module-notes{grid-column:1;grid-row:4}}
+@media(min-width:1200px){.anatomy-site-frame .shoulder-module-page.atlas-3d-workspace-page:is(.head-guided-module-page,.head-comparison-module-page){grid-template-rows:auto auto auto minmax(0,1fr) auto}.anatomy-site-frame .atlas-3d-workspace-page:is(.head-guided-module-page,.head-comparison-module-page) > :is(.head-atlas-tour,.head-atlas-comparison){grid-column:1;grid-row:3}.anatomy-site-frame .atlas-3d-workspace-page:is(.head-guided-module-page,.head-comparison-module-page) > .shoulder-module-frame{grid-row:4}.anatomy-site-frame .atlas-3d-workspace-page:is(.head-guided-module-page,.head-comparison-module-page) > .shoulder-module-notes{grid-row:5}}
+@media(max-width:700px) {
+  .shoulder-module-bar { gap:6px 12px; padding:8px 12px; }
+  .shoulder-module-bar h1 { font-size:16px; }
+  .shoulder-module-bar span { width:100%; order:3; }
+  .anatomy-site-frame .intended-use-strip { min-height:0; padding:5px 12px; flex-direction:row; }
+  .anatomy-site-frame .intended-use-strip a { margin-left:auto; }
+}
+@media(max-height:650px) {
+  .anatomy-site-frame { height:auto; min-height:100dvh; }
+  .shoulder-module-frame { flex:none; height:70dvh; min-height:380px; }
+}

@@ -1,0 +1,272 @@
+{
+  "sourceCommit": "2879b53ef8f9865c4036b06677dc9bbcf9050e90",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/head-neck-connective-recovery.glb",
+      "bytes": 175092,
+      "sha256": "2243b05c7b505ee666ac4a36becfe5298735558b0e86b4d8e4476115f372ce05",
+      "structures": 9
+    },
+    {
+      "id": "head-neck-organs-visceral-detail",
+      "url": "/models/bodyparts3d/full-body/head-neck-organs-visceral-detail.glb",
+      "bytes": 65180,
+      "sha256": "87b0684fd3a8d120d622f2f96edb49059cd530ba927423d5ac5f28d1069c2f84",
+      "structures": 1
+    }
+  ],
+  "previousAllLessonsAndRecipesHash": "d5e37d48a3d8a864d4437a803867bcb4a92938201c1bbb2ba0c442921e42a2d2",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:unpaired:organ:epiglottis",
+        "fmaId": "FMA55130",
+        "name": "Epiglottis",
+        "sourceName": "epiglottis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "unpaired",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-organs-visceral-detail",
+        "nodeName": "FMA55130",
+        "bounds": {
+          "min": [
+            -0.08592019975185394,
+            6.087299823760986,
+            0.5818900465965271
+          ],
+          "max": [
+            0.07234429568052292,
+            6.382299900054932,
+            0.659000039100647
+          ]
+        },
+        "center": [
+          -0.006787952035665512,
+          6.234799861907959,
+          0.620445042848587
+        ],
+        "anchor": [
+          -0.0122231999412179,
+          6.230400562286377,
+          0.6208699941635132
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2770",
+            "sha256": "05ae56007f7aa017fb458bdef643ea97e51ed3bd275b13da30086fa02b606054"
+          }
+        ],
+        "coverageNote": "Unvalidated BodyParts3D 4.0 source surface in the unchanged common coordinate frame. Source identity is not clinical confirmation of tissue extent, attachment, continuity or variants. No patient-specific imaging or procedural guidance is established.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "epiglottis",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:thyroid-cartilage",
+        "fmaId": "FMA55099",
+        "name": "Thyroid cartilage",
+        "sourceName": "thyroid cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA55099",
+        "bounds": {
+          "min": [
+            -0.19980300962924957,
+            5.914100170135498,
+            0.41506102681159973
+          ],
+          "max": [
+            0.1868250072002411,
+            6.309300422668457,
+            0.7244600057601929
+          ]
+        },
+        "center": [
+          -0.006489001214504242,
+          6.1117002964019775,
+          0.5697605162858963
+        ],
+        "anchor": [
+          -0.06516009569168091,
+          6.082199573516846,
+          0.6187000274658203
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2808",
+            "sha256": "48cd41bcd4044c7013ba10c971e212766afc970408f51875f9ef8e8c407c0687"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "thyroid",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:midline:cartilage:cricoid-cartilage",
+        "fmaId": "FMA9615",
+        "name": "Cricoid cartilage",
+        "sourceName": "cricoid cartilage",
+        "system": "connective",
+        "category": "cartilage",
+        "laterality": "midline",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-connective-recovery",
+        "nodeName": "FMA9615",
+        "bounds": {
+          "min": [
+            -0.12166500091552734,
+            5.871999740600586,
+            0.42616501450538635
+          ],
+          "max": [
+            0.10860500484704971,
+            6.047199726104736,
+            0.6146900057792664
+          ]
+        },
+        "center": [
+          -0.006529998034238815,
+          5.959599733352661,
+          0.5204275101423264
+        ],
+        "anchor": [
+          0.0015807299641892314,
+          6.007400035858154,
+          0.46646401286125183
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2440",
+            "sha256": "ae1e2bab875a75035aaebdc79212fd859c2c193881462245de3252853721361d"
+          },
+          {
+            "file": "FJ2769",
+            "sha256": "5f75fb4d2969fd1de51898787bb8810c441d5d2bd6eb0c5482b7cacd3c9bc3be"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "cricoid",
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "CT content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        },
+        "mri": {
+          "readiness": "pending",
+          "title": "MRI content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

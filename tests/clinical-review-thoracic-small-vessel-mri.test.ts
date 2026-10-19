@@ -1,0 +1,47 @@
+import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {build} from 'esbuild';
+const sha=(value:Uint8Array|string)=>createHash('sha256').update(value).digest('hex');
+const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
+
+test('Five thoracic MRI drafts share exact learner and protected Review material',async()=>{
+ const base='public/atlas-runtime/head-neck/';
+ const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+ const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+ assert.equal(learner.sourceCommit,CURRENT_ATLAS_REVISION);
+ assert.equal(review.revision,learner.sourceCommit);
+ const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
+ for(const path of ['content/thoracic-small-vessel-mri.ts','content/thoracic-small-vessel-mri-pins.json','lib/thoracic-small-vessel-mri.ts']){
+  const source=inputs.find((f:{path:string})=>f.path===path),imported=review.files.find((f:{path:string})=>f.path===path);
+  assert(source&&imported,path);assert.equal(imported.sourceSha256,source.sha256);
+  assert.equal(sha(readFileSync('atlas-review/'+path)),source.sha256);
+ }
+ const pins=JSON.parse(readFileSync('atlas-review/content/thoracic-small-vessel-mri-pins.json','utf8'));
+ assert.equal(sha(JSON.stringify(pins)),'49bb98d93d4841d73564d42855c850f05d4d6a67d44b6dd60abe2847168d20ee');
+ const compiled=await build({stdin:{contents:"export {bodyLesson} from './atlas-review/app/body-content';export {bodyReviewMaterial} from './atlas-review/lib/body-review-material';export {parseBodyReviewResponse} from './atlas-review/lib/body-review-response';export {thoracicSmallVesselMriLesson} from './atlas-review/lib/thoracic-small-vessel-mri';",resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+ const api=await import('data:text/javascript;base64,'+Buffer.from(compiled.outputFiles[0].text).toString('base64'));
+ const learnerJs=learner.files.filter((f:{path:string})=>f.path.endsWith('.js')).map((f:{path:string;sha256:string})=>{const b=readFileSync(base+f.path);assert.equal(sha(b),f.sha256);return new TextDecoder().decode(b);}).join('\n');
+ assert.equal(pins.entries.length,5);
+ assert.deepEqual(pins.entries.map((e:{identity:{fmaId:string}})=>e.identity.fmaId).sort(),['FMA10704','FMA4149','FMA68109','FMA71537','FMA76767']);
+ for(const entry of pins.entries){
+  const id=entry.identity.id,lesson=api.bodyLesson(entry.identity,'mri'),packet=await api.bodyReviewMaterial(id);
+  assert.equal(lesson.readiness,'draft');assert.equal(lesson.correctAnswer,undefined);
+  assert.deepEqual(lesson,api.thoracicSmallVesselMriLesson(entry.identity,'mri'));
+  assert(learnerJs.includes(lesson.body));assert(learnerJs.includes(lesson.bullets[0]));
+  assert.match(lesson.note,/No patient images, spatial registration or approved imaging link/);
+  assert.deepEqual(packet.source.structure,entry.identity);assert.equal(packet.approval,false);
+  assert.equal(packet.status,'worksheet-not-submitted');
+  assert.deepEqual(packet.topics.find((t:{tab:string})=>t.tab==='mri'),{tab:'mri',...lesson});
+  assert.deepEqual(await api.parseBodyReviewResponse(wire(packet),id),wire(packet));
+  for(const change of ['prior','wording','source']){
+   const altered=wire(packet),index=altered.topics.findIndex((t:{tab:string})=>t.tab==='mri');
+   if(change==='prior')altered.topics[index]={tab:'mri',...entry.previous.mri};
+   if(change==='wording')altered.topics[index].body='Foreign detection claim';
+   if(change==='source')altered.source.structure.sources[0].sha256='0'.repeat(64);
+   assert.equal(await api.parseBodyReviewResponse(altered,id),null,change);
+  }
+ }
+});

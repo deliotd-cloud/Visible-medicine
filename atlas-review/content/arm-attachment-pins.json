@@ -1,0 +1,1827 @@
+{
+  "sourceCommit": "8b68cf700afcd78a343ca124151f45185bc2d3b1",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "shoulder-arm-skeleton",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-skeleton.glb",
+      "bytes": 1162668,
+      "sha256": "f75517af8f2d72d1fd890c20fea3375948addab8eaee42f9217dcfd5754d3649",
+      "structures": 6
+    },
+    {
+      "id": "forearm-skeleton",
+      "url": "/models/bodyparts3d/full-body/forearm-skeleton.glb",
+      "bytes": 57728,
+      "sha256": "7af54bdb11a8ae93d9236c6ed35b9a471543bc2a8a32867992a8917d22b1e0d5",
+      "structures": 4
+    },
+    {
+      "id": "shoulder-arm-muscles",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles.glb",
+      "bytes": 2623088,
+      "sha256": "01c2e96da438f1761a3e6d6121f54e04c866073d396111ec6e018b0cc689a3e8",
+      "structures": 24
+    },
+    {
+      "id": "shoulder-arm-muscles-dissection",
+      "url": "/models/bodyparts3d/full-body/shoulder-arm-muscles-dissection.glb",
+      "bytes": 510384,
+      "sha256": "fa709d07df413d2228065f153b6f8f7d951ffa03365052c56e920914d0376b4d",
+      "structures": 16
+    }
+  ],
+  "entries": [
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-humerus",
+      "fmaId": "FMA23131",
+      "name": "Left humerus",
+      "sourceName": "left humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23131",
+      "bounds": {
+        "min": [
+          1.400730013847351,
+          2.292099714279175,
+          0.010559005662798882
+        ],
+        "max": [
+          2.407599925994873,
+          5.365200042724609,
+          0.5022899508476257
+        ]
+      },
+      "center": [
+        1.904164969921112,
+        3.828649878501892,
+        0.2564244782552123
+      ],
+      "anchor": [
+        1.8882200717926025,
+        3.8617005348205566,
+        0.25274598598480225
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3262",
+          "sha256": "4a07066d7c7f17dfeb61797dc31c529d0d6fd3fda8136912ebd8a92ccc1ac6fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-radius",
+      "fmaId": "FMA23465",
+      "name": "Left radius",
+      "sourceName": "left radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23465",
+      "bounds": {
+        "min": [
+          2.198359966278076,
+          0.0616302490234375,
+          0.11469299346208572
+        ],
+        "max": [
+          2.7914299964904785,
+          2.350100040435791,
+          0.7725200057029724
+        ]
+      },
+      "center": [
+        2.4948949813842773,
+        1.2058651447296143,
+        0.44360649958252907
+      ],
+      "anchor": [
+        2.561270236968994,
+        1.1699999570846558,
+        0.4131059944629669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3277",
+          "sha256": "c41a7de7eddf5b91543fb22cf34c7dcad50241ffe1faae6ae22e1be30ca9390a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:bone:left-scapula",
+      "fmaId": "FMA13396",
+      "name": "Left scapula",
+      "sourceName": "left scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13396",
+      "bounds": {
+        "min": [
+          0.5706140398979187,
+          3.8394994735717773,
+          -0.5507640242576599
+        ],
+        "max": [
+          1.6646400690078735,
+          5.498600006103516,
+          0.5284500122070312
+        ]
+      },
+      "center": [
+        1.1176270544528961,
+        4.6690497398376465,
+        -0.011157006025314331
+      ],
+      "anchor": [
+        1.2024999856948853,
+        4.69379997253418,
+        -0.04868198558688164
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3279",
+          "sha256": "e63a5675c6cdbe942322305920241b4a63762d7a65879572400f444fa3d42739"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:left:bone:left-ulna",
+      "fmaId": "FMA23468",
+      "name": "Left ulna",
+      "sourceName": "left ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "left",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23468",
+      "bounds": {
+        "min": [
+          1.9689199924468994,
+          0.050159912556409836,
+          -0.05447700619697571
+        ],
+        "max": [
+          2.4711999893188477,
+          2.5246996879577637,
+          0.7327899932861328
+        ]
+      },
+      "center": [
+        2.2200599908828735,
+        1.2874298002570868,
+        0.33915649354457855
+      ],
+      "anchor": [
+        2.191890001296997,
+        1.2612799406051636,
+        0.3485729992389679
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3286",
+          "sha256": "0e3c48a4b664ffc37ef11eb4754c6c7f4adc8fd1d3e54d1286307432c7d04bfc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-radius",
+      "fmaId": "FMA23464",
+      "name": "Right radius",
+      "sourceName": "right radius",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23464",
+      "bounds": {
+        "min": [
+          -2.7953500747680664,
+          0.05835022032260895,
+          0.11102600395679474
+        ],
+        "max": [
+          -2.1983299255371094,
+          2.3505005836486816,
+          0.7690799832344055
+        ]
+      },
+      "center": [
+        -2.496840000152588,
+        1.2044254019856453,
+        0.44005299359560013
+      ],
+      "anchor": [
+        -2.5462300777435303,
+        1.1810302734375,
+        0.42398497462272644
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3349",
+          "sha256": "0f824e639b13ea02959734a0d9bd8d7ca67d0b51f531a138d769e1d3b22e0c98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:humerus",
+      "fmaId": "FMA23130",
+      "name": "Right humerus",
+      "sourceName": "right humerus",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm",
+        "forearm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA23130",
+      "bounds": {
+        "min": [
+          -2.40841007232666,
+          2.291999578475952,
+          0.010391006246209145
+        ],
+        "max": [
+          -1.4009000062942505,
+          5.365400314331055,
+          0.5021899938583374
+        ]
+      },
+      "center": [
+        -1.9046550393104553,
+        3.8286999464035034,
+        0.2562905000522733
+      ],
+      "anchor": [
+        -1.901360034942627,
+        3.8536999225616455,
+        0.2592269778251648
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3368",
+          "sha256": "85f5445a11ecb029b027db0b9b34933982836d442b19ff531d1ca35a3bc3a237"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:bone:scapula",
+      "fmaId": "FMA13395",
+      "name": "Right scapula",
+      "sourceName": "right scapula",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-skeleton",
+      "nodeName": "FMA13395",
+      "bounds": {
+        "min": [
+          -1.6646400690078735,
+          3.839599609375,
+          -0.5508275032043457
+        ],
+        "max": [
+          -0.5705379843711853,
+          5.498600006103516,
+          0.5285600423812866
+        ]
+      },
+      "center": [
+        -1.1175890266895294,
+        4.669099807739258,
+        -0.011133730411529541
+      ],
+      "anchor": [
+        -1.1983000040054321,
+        4.698699951171875,
+        -0.054347991943359375
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3384",
+          "sha256": "1641b04e55f9d75bdd6f1f4f07ea596e5dea0a8cb6b348bff47281b8a0bc6e5d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:forearm:right:bone:right-ulna",
+      "fmaId": "FMA23467",
+      "name": "Right ulna",
+      "sourceName": "right ulna",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "right",
+      "region": "forearm",
+      "regions": [
+        "forearm"
+      ],
+      "bundle": "forearm-skeleton",
+      "nodeName": "FMA23467",
+      "bounds": {
+        "min": [
+          -2.471790075302124,
+          0.05172973498702049,
+          -0.052008017897605896
+        ],
+        "max": [
+          -1.968809962272644,
+          2.5244994163513184,
+          0.7349400520324707
+        ]
+      },
+      "center": [
+        -2.220300018787384,
+        1.2881145756691694,
+        0.3414660170674324
+      ],
+      "anchor": [
+        -2.2308499813079834,
+        1.2578003406524658,
+        0.39101600646972656
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3391",
+          "sha256": "0aad73148e036c980ab24dfa675fcc1f109e5c60d82c12f3696420cf93cb4a98"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-brachialis",
+      "fmaId": "FMA37668",
+      "name": "Right brachialis",
+      "sourceName": "right brachialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA37668",
+      "bounds": {
+        "min": [
+          -2.351210117340088,
+          1.9536101818084717,
+          0.10569698363542557
+        ],
+        "max": [
+          -1.7638499736785889,
+          4.201999664306641,
+          0.36396002769470215
+        ]
+      },
+      "center": [
+        -2.0575300455093384,
+        3.077804923057556,
+        0.23482850566506386
+      ],
+      "anchor": [
+        -2.0775399208068848,
+        3.066899299621582,
+        0.2378140240907669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1486",
+          "sha256": "be5f40b153fd6ce0c8c274eb4c26be8d1a29b4bbe75dd0e4a0dfe5c4d251fa03"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-brachialis",
+      "fmaId": "FMA37669",
+      "name": "Left brachialis",
+      "sourceName": "left brachialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA37669",
+      "bounds": {
+        "min": [
+          1.7638499736785889,
+          1.9536101818084717,
+          0.10569698363542557
+        ],
+        "max": [
+          2.351210117340088,
+          4.201999664306641,
+          0.3639589548110962
+        ]
+      },
+      "center": [
+        2.0575300455093384,
+        3.077804923057556,
+        0.23482796922326088
+      ],
+      "anchor": [
+        2.0775301456451416,
+        3.066899299621582,
+        0.2378140240907669
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1486M",
+          "sha256": "cedf106a4917deab99f86f077dde7d34d0672dbbb74f30652a4f81f75d7ef180"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-coracobrachialis",
+      "fmaId": "FMA37665",
+      "name": "Right coracobrachialis",
+      "sourceName": "right coracobrachialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA37665",
+      "bounds": {
+        "min": [
+          -1.8942599296569824,
+          3.7013001441955566,
+          0.16860496997833252
+        ],
+        "max": [
+          -1.301509976387024,
+          5.27869987487793,
+          0.561750054359436
+        ]
+      },
+      "center": [
+        -1.5978849530220032,
+        4.490000009536743,
+        0.3651775121688843
+      ],
+      "anchor": [
+        -1.567870020866394,
+        4.435600757598877,
+        0.4145210385322571
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1488",
+          "sha256": "7eb9835056883a0e35954d39ff930c4c8c32d41db000e9f0d656e3c663401e56"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-coracobrachialis",
+      "fmaId": "FMA37666",
+      "name": "Left coracobrachialis",
+      "sourceName": "left coracobrachialis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA37666",
+      "bounds": {
+        "min": [
+          1.301509976387024,
+          3.7013001441955566,
+          0.16860496997833252
+        ],
+        "max": [
+          1.8942599296569824,
+          5.27869987487793,
+          0.561750054359436
+        ]
+      },
+      "center": [
+        1.5978849530220032,
+        4.490000009536743,
+        0.3651775121688843
+      ],
+      "anchor": [
+        1.567870020866394,
+        4.435600757598877,
+        0.4145210385322571
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1488M",
+          "sha256": "4004a378ca0d8be2924ce0b614fa19a4819804977e374e7cebcd5faa1cd7aa6b"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:infraspinatus",
+      "fmaId": "FMA32547",
+      "name": "Right infraspinatus muscle",
+      "sourceName": "right infraspinatus muscle",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32547",
+      "bounds": {
+        "min": [
+          -1.8905000686645508,
+          4.065300464630127,
+          -0.5366613268852234
+        ],
+        "max": [
+          -0.6025840044021606,
+          5.309699535369873,
+          0.2708699703216553
+        ]
+      },
+      "center": [
+        -1.2465420365333557,
+        4.6875,
+        -0.13289567828178406
+      ],
+      "anchor": [
+        -1.261389970779419,
+        4.721199989318848,
+        -0.2147030085325241
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1500",
+          "sha256": "28f61376a3a88a28d14c44e1c20e9b7a34129772c130afa003daceac801455b1"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-infraspinatus-muscle",
+      "fmaId": "FMA32548",
+      "name": "Left infraspinatus muscle",
+      "sourceName": "left infraspinatus muscle",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32548",
+      "bounds": {
+        "min": [
+          0.6025840044021606,
+          4.065300464630127,
+          -0.5366613268852234
+        ],
+        "max": [
+          1.8905000686645508,
+          5.309799671173096,
+          0.2708699703216553
+        ]
+      },
+      "center": [
+        1.2465420365333557,
+        4.687550067901611,
+        -0.13289567828178406
+      ],
+      "anchor": [
+        1.2613999843597412,
+        4.721199989318848,
+        -0.2147030085325241
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1500M",
+          "sha256": "9013158a3c598eb6dbf95dcaf72da439721dec4d3ebc37f660db9c2748f1e42e"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:subscapularis",
+      "fmaId": "FMA13414",
+      "name": "Right subscapularis",
+      "sourceName": "right subscapularis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA13414",
+      "bounds": {
+        "min": [
+          -1.6611700057983398,
+          3.9516003131866455,
+          -0.47242170572280884
+        ],
+        "max": [
+          -0.6318219900131226,
+          5.248000621795654,
+          0.49954697489738464
+        ]
+      },
+      "center": [
+        -1.1464959979057312,
+        4.59980046749115,
+        0.013562634587287903
+      ],
+      "anchor": [
+        -1.1621499061584473,
+        4.628599643707275,
+        -0.03496498242020607
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1504",
+          "sha256": "fdcbfd01f93e2d24bd73f5cb259a311c9f9e90de08c41573439844eef5f605dd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-subscapularis",
+      "fmaId": "FMA13415",
+      "name": "Left subscapularis",
+      "sourceName": "left subscapularis",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA13415",
+      "bounds": {
+        "min": [
+          0.6318219900131226,
+          3.9516003131866455,
+          -0.47242170572280884
+        ],
+        "max": [
+          1.6611700057983398,
+          5.248000621795654,
+          0.4995500147342682
+        ]
+      },
+      "center": [
+        1.1464959979057312,
+        4.59980046749115,
+        0.013564154505729675
+      ],
+      "anchor": [
+        1.1621499061584473,
+        4.628599643707275,
+        -0.03496498242020607
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1504M",
+          "sha256": "926fe07c8cf1056aa3aedda2f3a02a5027f4ef24cc5d41ba1359c53eedce1bc6"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:supraspinatus",
+      "fmaId": "FMA32544",
+      "name": "Right supraspinatus",
+      "sourceName": "right supraspinatus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32544",
+      "bounds": {
+        "min": [
+          -1.884429931640625,
+          5.073399543762207,
+          -0.3703869879245758
+        ],
+        "max": [
+          -0.638759970664978,
+          5.423599720001221,
+          0.41901299357414246
+        ]
+      },
+      "center": [
+        -1.2615949511528015,
+        5.248499631881714,
+        0.024313002824783325
+      ],
+      "anchor": [
+        -1.2605500221252441,
+        5.209000110626221,
+        0.04334400221705437
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1506",
+          "sha256": "793771eceb64385269ddeeb09245e8c53b67499194f6fa98049b5e17aafa8e0c"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-supraspinatus",
+      "fmaId": "FMA32545",
+      "name": "Left supraspinatus",
+      "sourceName": "left supraspinatus",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32545",
+      "bounds": {
+        "min": [
+          0.638759970664978,
+          5.073399543762207,
+          -0.3703869879245758
+        ],
+        "max": [
+          1.884429931640625,
+          5.423699855804443,
+          0.41901299357414246
+        ]
+      },
+      "center": [
+        1.2615949511528015,
+        5.248549699783325,
+        0.024313002824783325
+      ],
+      "anchor": [
+        1.2605500221252441,
+        5.209000110626221,
+        0.04334400221705437
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1506M",
+          "sha256": "6d6741ab840272a59d50c59cd87ccfa676e1f72fa9b600bba06bf9c24d1e01fe"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:right-teres-major",
+      "fmaId": "FMA32551",
+      "name": "Right teres major",
+      "sourceName": "right teres major",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32551",
+      "bounds": {
+        "min": [
+          -1.7220900058746338,
+          3.8965003490448,
+          -0.5155565142631531
+        ],
+        "max": [
+          -0.8614250421524048,
+          4.853499889373779,
+          0.2955690026283264
+        ]
+      },
+      "center": [
+        -1.2917575240135193,
+        4.3750001192092896,
+        -0.10999375581741333
+      ],
+      "anchor": [
+        -1.2664999961853027,
+        4.422800064086914,
+        -0.13644100725650787
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1507",
+          "sha256": "217aa2d39fdaa682998c8a1a1ffe9c8b37fed881edbbeb8ed5c633fa1541eaac"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-major",
+      "fmaId": "FMA32552",
+      "name": "Left teres major",
+      "sourceName": "left teres major",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32552",
+      "bounds": {
+        "min": [
+          0.8614250421524048,
+          3.8965003490448,
+          -0.5155565142631531
+        ],
+        "max": [
+          1.7220900058746338,
+          4.853499889373779,
+          0.2955690026283264
+        ]
+      },
+      "center": [
+        1.2917575240135193,
+        4.3750001192092896,
+        -0.10999375581741333
+      ],
+      "anchor": [
+        1.2664999961853027,
+        4.42270040512085,
+        -0.13644100725650787
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1507M",
+          "sha256": "967a771f0d2e0950adfe251ac14b4878f9b12a3aacb16cbf472dac94db38519d"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:upper-limb:shoulder:right:muscle:teres-minor",
+      "fmaId": "FMA32553",
+      "name": "Right teres minor",
+      "sourceName": "right teres minor",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32553",
+      "bounds": {
+        "min": [
+          -1.9055399894714355,
+          4.205600738525391,
+          -0.3759379982948303
+        ],
+        "max": [
+          -1.0540900230407715,
+          5.169200420379639,
+          0.30310600996017456
+        ]
+      },
+      "center": [
+        -1.4798150062561035,
+        4.687400579452515,
+        -0.03641599416732788
+      ],
+      "anchor": [
+        -1.5616999864578247,
+        4.759100437164307,
+        -0.10894699394702911
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1508",
+          "sha256": "f56e595b86cea659891664706cd4443acddd8dc69e4e5bb3855445eef302641a"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:left-teres-minor",
+      "fmaId": "FMA32554",
+      "name": "Left teres minor",
+      "sourceName": "left teres minor",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles",
+      "nodeName": "FMA32554",
+      "bounds": {
+        "min": [
+          1.0540900230407715,
+          4.205600738525391,
+          -0.3759379982948303
+        ],
+        "max": [
+          1.9055498838424683,
+          5.169200420379639,
+          0.30310600996017456
+        ]
+      },
+      "center": [
+        1.4798199534416199,
+        4.687400579452515,
+        -0.03641599416732788
+      ],
+      "anchor": [
+        1.5616999864578247,
+        4.759100437164307,
+        -0.10894599556922913
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1508M",
+          "sha256": "4b07345bef6658a27bac6b2c7c2c52307bc769a804a80e7e657ce40e03427a17"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:short-head-of-right-biceps-brachii",
+      "fmaId": "FMA37684",
+      "name": "Short head of right biceps brachii",
+      "sourceName": "short head of right biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37684",
+      "bounds": {
+        "min": [
+          -2.1238999366760254,
+          2.6521997451782227,
+          0.2595809996128082
+        ],
+        "max": [
+          -1.352370023727417,
+          5.277600288391113,
+          0.5910099744796753
+        ]
+      },
+      "center": [
+        -1.7381349802017212,
+        3.964900016784668,
+        0.42529548704624176
+      ],
+      "anchor": [
+        -1.8180700540542603,
+        3.974900007247925,
+        0.46761101484298706
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1512",
+          "sha256": "2173b7cce29f11036907b80e068e9bd6c16f22359d6e7994af9684454b99b4d5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:short-head-of-left-biceps-brachii",
+      "fmaId": "FMA37685",
+      "name": "Short head of left biceps brachii",
+      "sourceName": "short head of left biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37685",
+      "bounds": {
+        "min": [
+          1.352370023727417,
+          2.6521997451782227,
+          0.2595809996128082
+        ],
+        "max": [
+          2.1238999366760254,
+          5.277600288391113,
+          0.5910199880599976
+        ]
+      },
+      "center": [
+        1.7381349802017212,
+        3.964900016784668,
+        0.4253004938364029
+      ],
+      "anchor": [
+        1.8180700540542603,
+        3.974900007247925,
+        0.46761101484298706
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1512M",
+          "sha256": "6b0ed7b70973b3a2e08de4ea5ce59c05a4ddce2b90212ff734326be2726d1293"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-biceps-brachii",
+      "fmaId": "FMA37686",
+      "name": "Long head of right biceps brachii",
+      "sourceName": "long head of right biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37686",
+      "bounds": {
+        "min": [
+          -2.2985999584198,
+          1.9407202005386353,
+          0.1780889928340912
+        ],
+        "max": [
+          -1.3526800870895386,
+          5.394200325012207,
+          0.5929200053215027
+        ]
+      },
+      "center": [
+        -1.8256400227546692,
+        3.667460262775421,
+        0.38550449907779694
+      ],
+      "anchor": [
+        -1.8757001161575317,
+        3.694000244140625,
+        0.42243897914886475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1478",
+          "sha256": "2442d2b5ac30c5da42e72eeff83d143df51c7617001cbc6552096a504f29bc07"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-biceps-brachii",
+      "fmaId": "FMA37687",
+      "name": "Long head of left biceps brachii",
+      "sourceName": "long head of left biceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37687",
+      "bounds": {
+        "min": [
+          1.3526800870895386,
+          1.9407202005386353,
+          0.1780889928340912
+        ],
+        "max": [
+          2.2985999584198,
+          5.394200325012207,
+          0.592930018901825
+        ]
+      },
+      "center": [
+        1.8256400227546692,
+        3.667460262775421,
+        0.38550950586795807
+      ],
+      "anchor": [
+        1.8757100105285645,
+        3.694000244140625,
+        0.42243897914886475
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1478M",
+          "sha256": "10189f1d7b5220df3baef2b259ae9855ed301c1afaadfc2de25af3222c5a08fc"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:medial-head-of-right-triceps-brachii",
+      "fmaId": "FMA37695",
+      "name": "Medial head of right triceps brachii",
+      "sourceName": "medial head of right triceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37695",
+      "bounds": {
+        "min": [
+          -2.269629955291748,
+          2.293499708175659,
+          -0.03682800382375717
+        ],
+        "max": [
+          -1.6737300157546997,
+          4.560400485992432,
+          0.21879898011684418
+        ]
+      },
+      "center": [
+        -1.9716799855232239,
+        3.4269500970840454,
+        0.0909854881465435
+      ],
+      "anchor": [
+        -2.004539966583252,
+        3.4326000213623047,
+        0.039486005902290344
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1480",
+          "sha256": "1ea653667afa5ff0bf0e01d71ac648819655241c130e8dd1778ed2f9561c34c5"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:medial-head-of-left-triceps-brachii",
+      "fmaId": "FMA37696",
+      "name": "Medial head of left triceps brachii",
+      "sourceName": "medial head of left triceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37696",
+      "bounds": {
+        "min": [
+          1.6737399101257324,
+          2.293499708175659,
+          -0.03682800382375717
+        ],
+        "max": [
+          2.269629955291748,
+          4.560400485992432,
+          0.21879898011684418
+        ]
+      },
+      "center": [
+        1.9716849327087402,
+        3.4269500970840454,
+        0.0909854881465435
+      ],
+      "anchor": [
+        2.004549980163574,
+        3.432499885559082,
+        0.039487000554800034
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1480M",
+          "sha256": "fc35854102a057ca85a201eeff4c18f03722b1ceab52c311ce1b87abf4fa2ff8"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:lateral-head-of-right-triceps-brachii",
+      "fmaId": "FMA37697",
+      "name": "Lateral head of right triceps brachii",
+      "sourceName": "lateral head of right triceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37697",
+      "bounds": {
+        "min": [
+          -2.280050039291382,
+          2.3596997261047363,
+          -0.2991580069065094
+        ],
+        "max": [
+          -1.74455988407135,
+          4.921299934387207,
+          0.18796798586845398
+        ]
+      },
+      "center": [
+        -2.012304961681366,
+        3.6404998302459717,
+        -0.05559501051902771
+      ],
+      "anchor": [
+        -1.9548399448394775,
+        3.627500057220459,
+        -0.12564602494239807
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1477",
+          "sha256": "1d1c3b42eec0dffe696bd25cffa81784c87c15f16c9605050fdf1cb2f47698dd"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:lateral-head-of-left-triceps-brachii",
+      "fmaId": "FMA37698",
+      "name": "Lateral head of left triceps brachii",
+      "sourceName": "lateral head of left triceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37698",
+      "bounds": {
+        "min": [
+          1.74455988407135,
+          2.3596997261047363,
+          -0.2991580069065094
+        ],
+        "max": [
+          2.280050039291382,
+          4.921299934387207,
+          0.18796798586845398
+        ]
+      },
+      "center": [
+        2.012304961681366,
+        3.6404998302459717,
+        -0.05559501051902771
+      ],
+      "anchor": [
+        1.9548399448394775,
+        3.627500057220459,
+        -0.12564602494239807
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1477M",
+          "sha256": "96d9859e983736f53864e53fa0579b8f6a18006067967df42e4fe7ea2d2b9e6f"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:right:muscle:long-head-of-right-triceps-brachii",
+      "fmaId": "FMA37699",
+      "name": "Long head of right triceps brachii",
+      "sourceName": "long head of right triceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "right",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37699",
+      "bounds": {
+        "min": [
+          -2.1646201610565186,
+          2.3523998260498047,
+          -0.312404990196228
+        ],
+        "max": [
+          -1.346909999847412,
+          5.007500171661377,
+          0.1410209685564041
+        ]
+      },
+      "center": [
+        -1.7557650804519653,
+        3.679949998855591,
+        -0.08569201081991196
+      ],
+      "anchor": [
+        -1.7705299854278564,
+        3.6558997631073,
+        0.012681007385253906
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1479",
+          "sha256": "acc48f746bd07a117357a9c49a1a9850c96b85d7c63cf90a662a45717875a315"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:shoulder-arm:left:muscle:long-head-of-left-triceps-brachii",
+      "fmaId": "FMA37700",
+      "name": "Long head of left triceps brachii",
+      "sourceName": "long head of left triceps brachii",
+      "system": "muscles",
+      "category": "muscle",
+      "laterality": "left",
+      "region": "shoulder-arm",
+      "regions": [
+        "shoulder-arm"
+      ],
+      "bundle": "shoulder-arm-muscles-dissection",
+      "nodeName": "FMA37700",
+      "bounds": {
+        "min": [
+          1.346909999847412,
+          2.3523998260498047,
+          -0.31240400671958923
+        ],
+        "max": [
+          2.1646201610565186,
+          5.007500171661377,
+          0.1410209685564041
+        ]
+      },
+      "center": [
+        1.7557650804519653,
+        3.679949998855591,
+        -0.08569151908159256
+      ],
+      "anchor": [
+        1.7705299854278564,
+        3.6558997631073,
+        0.012681007385253906
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1479M",
+          "sha256": "4b8315f9134a213f45c3af830270f4526e705d0a149894516d3f5fba98878f15"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ]
+}

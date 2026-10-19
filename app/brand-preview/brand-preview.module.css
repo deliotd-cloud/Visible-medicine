@@ -1,0 +1,35 @@
+.page:global(.brand-preview-page) { min-height: 100vh; }
+:global(body:has(.brand-preview-page) .topbar),
+:global(body:has(.brand-preview-page) .intended-use-strip),
+:global(body:has(.brand-preview-page) .site-footer),
+:global(body:has(.brand-preview-page) .splash-screen),
+:global(body:has(.brand-preview-page) .skip-link) { display: none !important; }
+:global(body:has(.brand-preview-page)) { background: #f4f8f6; }
+
+.page { width: min(1380px, calc(100% - 48px)); margin: 0 auto; padding: 84px 0 120px; color: #061b20; }
+.intro { max-width: 960px; margin-bottom: 66px; }
+.intro p { margin: 0 0 18px; color: #128f7d; font: 700 11px/1.2 var(--font-atlas-mono), monospace; letter-spacing: .1em; text-transform: uppercase; }
+.intro h1 { margin: 0; font-size: clamp(42px, 5.4vw, 76px); line-height: 1; letter-spacing: -.05em; }
+.intro span { display: block; margin-top: 24px; color: #5d7477; font-size: 17px; }
+.section { margin-top: 62px; }
+.sectionHeading { display: grid; grid-template-columns: 54px 1fr; gap: 18px; align-items: start; margin-bottom: 22px; }
+.sectionHeading > span { color: #28a88f; font: 700 12px/1 var(--font-atlas-mono), monospace; }
+.sectionHeading h2 { margin: 0 0 7px; font-size: 27px; letter-spacing: -.025em; }
+.sectionHeading p { margin: 0; color: #6a7f82; }
+.artwork { margin: 0; overflow: hidden; border: 1px solid #d5dfdc; border-radius: 12px; background: #fff; box-shadow: 0 18px 50px rgba(6,27,32,.07); }
+.artwork + .artwork { margin-top: 22px; }
+.artwork img { display: block; width: 100%; height: auto; }
+.artwork figcaption { min-height: 62px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-top: 1px solid #d5dfdc; background: #fff; }
+.artwork figcaption b { font-size: 14px; }
+.artwork figcaption span { color: #60777a; font-size: 13px; text-align: right; }
+.decision { margin-top: 78px; padding: 30px 34px; display: grid; gap: 9px; border-left: 4px solid #c7d83f; background: #e9f2ef; }
+.decision span { color: #4c6a6d; font: 700 10px/1.2 var(--font-atlas-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
+.decision strong { font-size: clamp(18px, 2.4vw, 28px); line-height: 1.25; }
+
+@media (max-width: 760px) {
+  .page { width: min(100% - 30px, 1380px); padding-top: 56px; }
+  .sectionHeading { grid-template-columns: 34px 1fr; }
+  .artwork { border-radius: 8px; }
+  .artwork figcaption { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .artwork figcaption span { text-align: left; }
+}

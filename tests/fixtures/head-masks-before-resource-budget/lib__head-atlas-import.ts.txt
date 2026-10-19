@@ -1,0 +1,129 @@
+import {createNativeVolumeGeometry, type NativeGeometry, type Vec3} from './head-atlas-geometry.mjs';
+import {findHeadMaskFocus} from './head-mask-focus.ts';
+import {notifyHeadProgress,type HeadReadProgress,type HeadReadObserver,type HeadStudyObserver} from './head-load-progress.ts';
+import {sha256HeadAsset} from './head-asset-checksum.ts';
+
+export type Modality = 'CT'|'MRI';
+export type Scalars = Uint8Array|Int8Array|Uint16Array|Int16Array|Uint32Array|Int32Array|Float32Array|Float64Array;
+export type RawAsset = {file:string;sha256:string;dtype:string;shape_kji:number[];ijk_to_ras:number[][];offset_kji?:number[];native_shape_kji?:number[]};
+export type HeadEntry = {
+  id:string; label:string; family:string; group?:string; laterality?:string; representation:string;
+  color:number[]; opacity:{fill:number;outline:number}; focus_ras_mm?:number[];
+  mask?:RawAsset; mesh?:{positions_file:string;indices_file:string;positions_dtype:string;indices_dtype:string;point_count:number;triangle_count:number;positions_sha256:string;indices_sha256:string};
+  points_ras_mm?:number[][]; sampled_path_ras_mm?:number[][]; source?:Record<string,unknown>;
+  supplementary_geometries?:{part_id:string;geometry_type:string;accepted_saved_geometry:boolean;declared_scope:string;sampled_path_ras_mm:number[][]}[];
+};
+export type HeadStudy = {image:RawAsset;entries:HeadEntry[]};
+export type HeadManifest = {schema_version:string;version:string;byte_order:string;source_studies_are_distinct:boolean;studies:Record<Modality,HeadStudy>};
+export type HeadPackageAsset = {size:number;arrayBuffer(signal?:AbortSignal,onProgress?:HeadReadObserver):Promise<ArrayBuffer>};
+export type LocalHeadPackage = {manifest:HeadManifest;files:Map<string,File|HeadPackageAsset>;source?:'configured-local'};
+export type LoadedStudy = {definition:HeadStudy;data:Scalars;geometry:NativeGeometry;range:[number,number]};
+export type LoadedEntry = {entry:HeadEntry;mask?:Uint8Array;positions?:Float32Array|Float64Array;indices?:Uint32Array|Uint16Array;focus?:Vec3};
+
+// Pinned after private lossless transport preparation; never follows a mutable latest pointer.
+export const HEAD_MANIFEST_SHA256 = '0f91f6097e378465827c89a4a10c6ca32ae1bdc276dfbb9c6714527e4f3530c5';
+const HASH=/^[a-f0-9]{64}$/;
+const dtypeBytes:Record<string,number>={uint8:1,int8:1,uint16:2,int16:2,uint32:4,int32:4,float32:4,float64:8};
+function fail(message:string):never{throw new Error(message);}
+export function safeHeadPackagePath(path:unknown):string {
+  if(typeof path!=='string'||path.length>240||!path||path.startsWith('/')||path.includes('\\')||path.includes(':')||path.split('/').some(part=>!part||part==='.'||part==='..'))fail('Unsupported package path.');
+  return path as string;
+}
+function abort(signal?:AbortSignal){if(signal?.aborted)throw new DOMException('Import cancelled','AbortError');}
+async function sha(bytes:ArrayBuffer){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),v=>v.toString(16).padStart(2,'0')).join('');}
+export function voxelCount(shape:number[]){
+  if(!Array.isArray(shape)||shape.length!==3||shape.some(v=>!Number.isSafeInteger(v)||v<1||v>4096))fail('Unsupported image dimensions.');
+  const count=shape.reduce((a,b)=>a*b,1);if(count>134217728)fail('Image exceeds the private viewer memory limit.');return count;
+}
+async function checkedBytes(pkg:LocalHeadPackage,path:string,hash:string,limit:number,signal?:AbortSignal,onProgress?:HeadStudyObserver){
+  abort(signal);safeHeadPackagePath(path);if(!HASH.test(hash))fail('Asset checksum is missing.');
+  const file=pkg.files.get(path);if(!file||file.size>limit)fail('A required asset is missing or too large.');
+  let lastRead=-1;
+  const reading=(progress:HeadReadProgress)=>{
+    if(signal?.aborted||progress.totalBytes!==file.size||!Number.isSafeInteger(progress.loadedBytes)||!Number.isSafeInteger(progress.totalBytes)||progress.totalBytes<1||progress.loadedBytes<0||progress.loadedBytes>progress.totalBytes||progress.loadedBytes<=lastRead)return;
+    lastRead=progress.loadedBytes;notifyHeadProgress(onProgress,{phase:'reading',loadedBytes:progress.loadedBytes,totalBytes:progress.totalBytes});
+  };
+  if(onProgress)reading({loadedBytes:0,totalBytes:file.size});abort(signal);
+  const bytes=await (file as HeadPackageAsset).arrayBuffer(signal,onProgress?reading:undefined);abort(signal);if(bytes.byteLength>limit)fail('A required asset is missing or too large.');
+  if(onProgress){reading({loadedBytes:bytes.byteLength,totalBytes:file.size});abort(signal);notifyHeadProgress(onProgress,{phase:'verifying',loadedBytes:bytes.byteLength,totalBytes:bytes.byteLength});abort(signal);}
+  if(await sha256HeadAsset(bytes,signal)!==hash)fail('Asset checksum mismatch. No image was displayed.');abort(signal);return bytes;
+}
+function scalars(bytes:ArrayBuffer,dtype:string):Scalars {
+  if(!dtypeBytes[dtype]||bytes.byteLength%dtypeBytes[dtype])fail('Unsupported scalar data type.');
+  if(new Uint8Array(new Uint16Array([1]).buffer)[0]!==1)fail('This preview requires a little-endian browser.');
+  switch(dtype){case'uint8':return new Uint8Array(bytes);case'int8':return new Int8Array(bytes);case'uint16':return new Uint16Array(bytes);case'int16':return new Int16Array(bytes);case'uint32':return new Uint32Array(bytes);case'int32':return new Int32Array(bytes);case'float32':return new Float32Array(bytes);case'float64':return new Float64Array(bytes);default:return fail('Unsupported scalar data type.');}
+}
+/** Deterministic stratified jitter avoids strides repeatedly sampling a background column. */
+export function sampleIntensityRange(data:Scalars):[number,number]{
+  const samples:number[]=[],count=Math.min(8192,data.length);let state=0x6d2b79f5;
+  for(let n=0;n<count;n++){state=(Math.imul(state,1664525)+1013904223)>>>0;const index=Math.min(data.length-1,Math.floor((n+state/4294967296)*data.length/count));if(Number.isFinite(data[index]))samples.push(data[index]);}
+  if(!samples.length)fail('Image contains no finite samples.');samples.sort((a,b)=>a-b);
+  return [samples[0],samples[Math.floor((samples.length-1)*0.995)]];
+}
+export async function openLocalHeadPackage(fileList:FileList|File[],expectedHash=HEAD_MANIFEST_SHA256):Promise<LocalHeadPackage>{
+  if(!HASH.test(expectedHash))fail('This private test has not been bound to a verified release.');
+  if(fileList.length<2||fileList.length>5000)fail('Choose the complete prepared head-atlas folder.');
+  const files=new Map<string,File>();const seen=new Set<string>();
+  for(const file of Array.from(fileList)){
+    const relative=file.webkitRelativePath;if(typeof relative!=='string')fail('Choose a folder, not individual files.');const split=relative.indexOf('/');
+    if(split<1)fail('Choose a folder, not individual files.');
+    const path=safeHeadPackagePath(relative.slice(split+1));const key=path.toLowerCase();
+    if(seen.has(key))fail('Duplicate package path.');seen.add(key);files.set(path,file);
+  }
+  const manifestFile=files.get('manifest.json');if(!manifestFile||manifestFile.size>16777216)fail('The prepared manifest.json was not found.');
+  const bytes=await manifestFile.arrayBuffer();return openValidatedHeadPackage(bytes,files,expectedHash);
+}
+export async function openValidatedHeadPackage(bytes:ArrayBuffer,files:Map<string,File|HeadPackageAsset>,expectedHash=HEAD_MANIFEST_SHA256):Promise<LocalHeadPackage>{
+  if(!HASH.test(expectedHash))fail('This private test has not been bound to a verified release.');
+  if(bytes.byteLength>16777216)fail('The prepared manifest.json was not found.');
+  if(await sha(bytes)!==expectedHash)fail('This folder is not the selected approved release.');
+  const manifest=JSON.parse(new TextDecoder().decode(bytes)) as HeadManifest;
+  if(manifest.schema_version!=='visible-medicine.head-browser/1'||manifest.version!=='1.0.2'||manifest.byte_order!=='little'||manifest.source_studies_are_distinct!==true||!manifest.studies?.CT||!manifest.studies?.MRI)fail('Unsupported head-atlas release.');
+  for(const key of ['CT','MRI'] as const){
+    const study=manifest.studies[key];createNativeVolumeGeometry(study.image);voxelCount(study.image.shape_kji);
+    if(!Array.isArray(study.entries)||study.entries.length!==(key==='CT'?355:117))fail('Accepted structure inventory does not match.');
+    const ids=new Set<string>();
+    for(const entry of study.entries){
+      if(typeof entry.id!=='string'||typeof entry.label!=='string'||!entry.id||ids.has(entry.id))fail('Invalid structure identity.');ids.add(entry.id);
+      if(!Array.isArray(entry.color)||entry.color.length!==3||entry.color.some(v=>!Number.isFinite(v)||v<0||v>1))fail('Invalid approved appearance.');
+      if(!entry.opacity||[entry.opacity.fill,entry.opacity.outline].some(v=>!Number.isFinite(v)||v<0||v>1))fail('Invalid approved opacity.');
+    }
+  }
+  return {manifest,files};
+}
+export async function loadHeadStudy(pkg:LocalHeadPackage,modality:Modality,signal?:AbortSignal,onProgress?:HeadStudyObserver):Promise<LoadedStudy>{
+  const definition=pkg.manifest.studies[modality],image=definition.image;
+  const count=voxelCount(image.shape_kji);const width=dtypeBytes[image.dtype];if(!width)fail('Unsupported image scalar type.');
+  const bytes=await checkedBytes(pkg,image.file,image.sha256,536870912,signal,onProgress);
+  if(bytes.byteLength!==count*width)fail('Image byte count does not match the native grid.');
+  const data=scalars(bytes,image.dtype);
+  return {definition,data,geometry:createNativeVolumeGeometry(image),range:sampleIntensityRange(data)};
+}
+function boundedPoint(point:unknown):point is Vec3{return Array.isArray(point)&&point.length===3&&point.every(v=>typeof v==='number'&&Number.isFinite(v)&&Math.abs(v)<100000);}
+export async function loadHeadEntry(pkg:LocalHeadPackage,study:LoadedStudy,entry:HeadEntry,signal?:AbortSignal,options?:{maskOnly?:boolean}):Promise<LoadedEntry>{
+  if(!study.definition.entries.includes(entry))fail('Structure is not in the active study.');
+  const result:LoadedEntry={entry};
+  if(entry.mask){
+    const mask=entry.mask;const count=voxelCount(mask.shape_kji);
+    if(mask.dtype!=='uint8'||!mask.offset_kji||mask.offset_kji.length!==3||mask.offset_kji.some((v,i)=>!Number.isSafeInteger(v)||v<0||v+mask.shape_kji[i]>study.definition.image.shape_kji[i]))fail('Mask crop does not belong to this image grid.');
+    if(JSON.stringify(mask.native_shape_kji)!==JSON.stringify(study.definition.image.shape_kji)||JSON.stringify(mask.ijk_to_ras)!==JSON.stringify(study.definition.image.ijk_to_ras))fail('Mask/image geometry binding does not match.');
+    const bytes=await checkedBytes(pkg,mask.file,mask.sha256,134217728,signal);if(bytes.byteLength!==count)fail('Mask crop byte count mismatch.');
+    result.mask=new Uint8Array(bytes);const [,J,I]=mask.shape_kji;
+    // Display focus is an actual nonzero voxel, not a new anatomical boundary/clinical landmark.
+    const best=await findHeadMaskFocus(result.mask,mask.shape_kji,signal);
+    if(best>=0){const ijk=[best%I+mask.offset_kji[2],Math.floor(best/I)%J+mask.offset_kji[1],Math.floor(best/(I*J))+mask.offset_kji[0]];result.focus=study.geometry.ijkToRas(ijk);}
+  }
+  if(entry.mesh&&!options?.maskOnly){
+    const mesh=entry.mesh;if(!Number.isSafeInteger(mesh.point_count)||mesh.point_count<1||mesh.point_count>2000000||!Number.isSafeInteger(mesh.triangle_count)||mesh.triangle_count<1||mesh.triangle_count>4000000)fail('Unsupported surface size.');
+    const positions=scalars(await checkedBytes(pkg,mesh.positions_file,mesh.positions_sha256,50331648,signal),mesh.positions_dtype);
+    const indices=scalars(await checkedBytes(pkg,mesh.indices_file,mesh.indices_sha256,50331648,signal),mesh.indices_dtype);
+    if(!(positions instanceof Float32Array||positions instanceof Float64Array)||!(indices instanceof Uint32Array||indices instanceof Uint16Array)||positions.length!==mesh.point_count*3||indices.length!==mesh.triangle_count*3)fail('Surface buffer layout mismatch.');
+    for(const v of positions)if(!Number.isFinite(v)||Math.abs(v)>100000)fail('Invalid world-space surface point.');
+    for(const i of indices)if(i>=mesh.point_count)fail('Surface index is out of bounds.');
+    result.positions=positions;result.indices=indices;
+  }
+  if(!result.focus){const point=entry.focus_ras_mm??entry.points_ras_mm?.[0]??entry.sampled_path_ras_mm?.[0];if(boundedPoint(point))result.focus=[...point];}
+  for(const points of [entry.points_ras_mm,entry.sampled_path_ras_mm])if(points&&(!Array.isArray(points)||points.length>100000||points.some(p=>!boundedPoint(p))))fail('Invalid native point/curve representation.');
+  for(const part of entry.supplementary_geometries??[])if(part.geometry_type!=='curve'||part.accepted_saved_geometry!==true||!Array.isArray(part.sampled_path_ras_mm)||part.sampled_path_ras_mm.length>100000||part.sampled_path_ras_mm.some(p=>!boundedPoint(p)))fail('Invalid supplementary regional course.');
+  abort(signal);return result;
+}

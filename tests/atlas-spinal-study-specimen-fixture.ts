@@ -1,0 +1,67 @@
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+import {createHash} from 'node:crypto';
+import {execFileSync} from 'node:child_process';
+import {readFileSync} from 'node:fs';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+
+const website=fileURLToPath(new URL('../',import.meta.url));
+const atlas=currentAtlasDeliveryRoot();
+const base='public/atlas-runtime/head-neck/';
+const currentSource=CURRENT_ATLAS_REVISION;
+const epochs={
+  transitionExplorer:{website:'d71bacf180d971cfc98a763414deedd3d8a6b0f0',source:'ed3d7a1ebaa11edc5bea4c918e43b6019b93d521',manifest:'1cdf516970d12ff5ea5a54e0050f26791c6fd8c5bdc507c5fadbf4efa0c37235'},
+  transition:{website:'c285a3871181565c35535ed65eb48d23fc13acd8',source:'a10496da94d9d054306bbc48e5ae9c98239d82b5',manifest:'0be7bbd67e7eba935ab05a66379e07efe0c970cecb247d54482f7187a99a0fae'},
+  specimen:{website:'f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6',source:'88cea927d48729769b96ad8fe680b0872b7e6687',manifest:'eaaf8eb1d53dc3728e07a5f3497a4a7c8018afdf0838f5b90a313282d77a2381'},
+  current:{website:null,source:currentSource,manifest:validateCurrentAtlasDelivery().documents[base+'manifest.json']},
+} as const;
+export type Epoch=keyof typeof epochs;
+export const sha=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
+function git(root:string,ref:string,path:string){return execFileSync('git',['show',`${ref}:${path}`],{cwd:root,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});}
+export function delivery(epoch:Epoch){
+  const identity=epochs[epoch];
+  const read=(path:string)=>identity.website?git(website,identity.website,base+path):readFileSync(website+base+path);
+  const bytes=read('manifest.json');
+  assert.equal(sha(bytes),identity.manifest,`${epoch} manifest`);
+  const manifest=JSON.parse(bytes.toString());
+  assert.equal(manifest.sourceCommit,identity.source);
+  for(const flag of ['clinicalApproved','patientDataIncluded','standaloneReviewConnection','imagingConnection'])assert.equal(manifest[flag],false,flag);
+  const inputs=JSON.parse(read('source-inputs.json').toString()) as {path:string;sha256:string}[];
+  const files=manifest.files as {path:string;sha256:string;bytes:number}[];
+  const inventory=JSON.parse((identity.website?git(website,identity.website,'lib/atlas-model-inventory.json'):readFileSync(website+'lib/atlas-model-inventory.json')).toString());
+  assert.equal(inventory.sources.find((source:{module:string})=>source.module==='head-neck')?.manifestSha256,sha(bytes));
+  const runtime=()=>files.filter(file=>file.path.endsWith('.js')).map(file=>{
+    const content=read(file.path);
+    assert.equal(content.length,file.bytes,file.path);
+    assert.equal(sha(content),file.sha256,file.path);
+    return content.toString();
+  }).join('\n');
+  const chunk=(name:string)=>{
+    const matches=files.filter(file=>new RegExp(`^assets/${name}-[^/]+\\.js$`).test(file.path));
+    assert.equal(matches.length,1,`${name} chunk count`);
+    const content=read(matches[0].path);
+    assert.equal(content.length,matches[0].bytes,matches[0].path);
+    assert.equal(sha(content),matches[0].sha256,matches[0].path);
+    return content.toString();
+  };
+  return {manifest,inputs,files,inventory,runtime,chunk};
+}
+export function pins(inputs:{path:string;sha256:string}[],expected:Record<string,string>,epoch:Epoch){
+  for(const [path,hash] of Object.entries(expected)){
+    assert.deepEqual(inputs.filter(row=>row.path===path),[{path,sha256:hash}],path);
+    assert.equal(sha(git(atlas,epochs[epoch].source,path)),hash,`${path} committed Atlas source`);
+  }
+}
+export function currentBindings(inputs:{path:string;sha256:string}[],paths:string[]){
+  const review=JSON.parse(readFileSync(website+'atlas-review/manifest.json','utf8'));
+  assert.equal(review.revision,currentSource);
+  for(const path of paths){
+    const rows=inputs.filter(row=>row.path===path);
+    assert.equal(rows.length,1,path);
+    assert.equal(rows[0].sha256,sha(git(atlas,currentSource,path)),`${path} committed source`);
+    const imported=review.files.filter((row:{path:string})=>row.path===path);
+    assert.equal(imported.length,1,`${path} Review binding`);
+    assert.equal(imported[0].sourceSha256,rows[0].sha256,path);
+    assert.equal(imported[0].importedSha256,sha(readFileSync(website+'atlas-review/'+path)),`${path} Review bytes`);
+  }
+}

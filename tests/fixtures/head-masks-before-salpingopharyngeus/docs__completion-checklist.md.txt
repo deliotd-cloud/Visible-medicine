@@ -1,0 +1,485 @@
+# Visible Medicine completion checklist
+
+Revision 42 · Updated 2026-10-17
+
+Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
+
+This is the persistent project checklist, not a claim that the whole website is finished. The JSON companion is the editable status register; regenerate this view with `node scripts/refresh-completion-checklist.mjs` and verify with `--check --verify-evidence`.
+
+## Current baseline
+
+Atlas source: `0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `301707213f9c79bc07eb091870c616bf5f1d413511e19a7e1a2457c9db4581a6`.
+
+1104 root-body representations have 9936 topic placements: 9314 editorial drafts, 583 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
+
+Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration.
+
+Integrated Atlas source: `0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2` (9314 draft / 583 pending / 39 generated topic placements). **Imported into the website baseline above.** Atlas source and four learner runtimes remain at the installed0ac11ca2 source, with unchanged anatomy and teaching counts. The compact head comparison toolbar has a new exact website-renderer/Review binding. No source, model, scan, mask, readiness or approval promotion. Clinical, acquired-image, hosted-auth/D1, keyboard/browser and public-release acceptance remain independently scoped.
+
+Canonical Atlas summaries were refreshed and verified through their generator (BASE-02). Source-candidate evidence remains separate from the website baseline and from clinical, browser and release approval.
+
+## How to track progress
+
+- Stable IDs survive reordering. Split an item into linked child IDs when necessary; do not silently delete scope.
+- Update status, exact source/revision, evidence and dated change log after each verified milestone.
+- Recheck stale evidence after a relevant source, renderer, case or contract change; never migrate approval automatically.
+- Report counts by status, owner and area; optional ideas are separate. Do not calculate an overall completion percentage from unequal items.
+- An owner-gated item does not stop independent engineering, teaching drafts or review preparation.
+- No patient data, private review notes, images, identifiers, credentials or uncleared derivatives belong in this checklist or GitHub.
+- Public deployment, billing, permissions, privacy clearance and clinical sign-off require their own authorization and evidence.
+
+A checked item means its **bounded local implementation or inventory criterion** is verified. It does not mean clinical sign-off, physical-device acceptance or public release. Those have their own rows. A held or owner-gated item is not a project-wide stop.
+
+## Progress by area
+
+| Area | Local verified | Partial | Open | Owner input | Held | Optional ideas | Done |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Baseline | 2 | 0 | 1 | 1 | 0 | 0 | 0 |
+| Existing foundations | 4 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 3D anatomy | 1 | 4 | 4 | 1 | 8 | 0 | 0 |
+| Teaching | 0 | 3 | 6 | 1 | 1 | 0 | 0 |
+| Imaging and links | 0 | 3 | 1 | 2 | 0 | 0 | 0 |
+| Assessment | 0 | 2 | 2 | 0 | 0 | 0 | 0 |
+| Desktop experience | 0 | 0 | 4 | 0 | 0 | 0 | 0 |
+| Studio and courses | 0 | 4 | 0 | 0 | 0 | 0 | 0 |
+| Release and operations | 0 | 4 | 0 | 4 | 0 | 0 | 0 |
+| Optional product ideas | 0 | 3 | 0 | 0 | 0 | 5 | 0 |
+
+## Recommended order
+
+1. Confirm the intended first release scope and learners (BASE-03), and freeze a review candidate (BASE-04). Continue independent development in parallel.
+2. Repair complete-suite release assurance (REL-01), complete real desktop/accessibility journeys (UX-01–03), and verify native CT/MRI plus protected Education delivery (IMG-01–02).
+3. Review the included anatomy and teaching in the private Clinical Review inbox (ANAT-18, TEACH-10); work through source holds and evidence-backed content gaps in coherent regional batches.
+4. Finish the selected course/exam and operational release gates. Add optional ideas only when they improve an agreed learner/author task and do not clutter the UI.
+
+## Your next inputs
+
+- Choose the initial audience, regions/modalities and courses; the full roadmap remains intact even if the first private beta is bounded.
+- Use [Clinical Review inbox](http://127.0.0.1:3000/workspace/clinical-review-inbox) to review exact model/teaching/head packages. Record corrections and source-bound decisions, not blanket approval.
+- Adjudicate held anatomy only within appropriate expertise; nominate specialist help where needed.
+- Identify the intended cleared cases, presentation source files and lecture anchors. Local use approval does not itself authorize upload.
+- Later, approve the real deployment target, governance/contact details, operational ownership and any commercial activation.
+
+## My continuing work
+
+I can inventory sources and gaps, research acceptable references/assets, write review-ready teaching, prepare review packets, implement/test software and maintain this register. I cannot manufacture missing anatomy, clinical approval, registration, rights/privacy clearance, real account authority or permission to publish. Owner-gated items will not prevent independent useful work.
+
+## Baseline
+
+- [x] **BASE-01 Recalculate the current anatomy and teaching baseline**
+  P0 · release-essential · Codex · verified-local
+  Acceptance: Current resolver and complete requirements inventory are recomputed at the exact clean Atlas commit; source files remain unchanged and evidence hashes are saved.
+  Evidence: [audit:requirements-receipt.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-receipt.json>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>), [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>).
+
+- [x] **BASE-02 Refresh stale canonical Atlas summary reports**
+  P1 · full-roadmap · Codex · verified-local
+  Acceptance: Update docs/CURRENT_STATUS.md and requirement-audit.json through their generator; verify against current source and distinguish archival, root, nested and independent scopes.
+  Evidence: [atlas:docs/CURRENT_STATUS.md](<F:/VisibleMedicine/atlas/docs/CURRENT_STATUS.md>), [atlas:docs/requirement-audit.json](<F:/VisibleMedicine/atlas/docs/requirement-audit.json>), [atlas:scripts/audit-requirements.mjs](<F:/VisibleMedicine/atlas/scripts/audit-requirements.mjs>), [audit:CURRENT_STATUS-current.md](<F:/VisibleMedicine/staging/20261015-completion-audit/CURRENT_STATUS-current.md>).
+
+- [ ] **BASE-03 Define the first release audience and bounded published coverage**
+  P0 · release-essential · Both · needs-owner
+  Acceptance: Owner records target learners, private-beta versus public/paid release, included regions/modalities/courses, and explicitly disclosed gaps. Full-roadmap items remain retained for later releases.
+  Evidence: [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>), [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>).
+
+- [ ] **BASE-04 Freeze review candidates without freezing development**
+  P1 · release-essential · Both · open
+  Acceptance: Owner reviews immutable source/content/renderer packages while independent next-version work continues. Corrections create a new candidate; no approval transfers to a changed candidate.
+  Evidence: [website:lib/head-teaching-review-contract.ts](<F:/VisibleMedicine/website/lib/head-teaching-review-contract.ts>), [atlas:docs/SPECIMEN_REVIEWS.md](<F:/VisibleMedicine/atlas/docs/SPECIMEN_REVIEWS.md>), [website:docs/master-plan.md](<F:/VisibleMedicine/website/docs/master-plan.md>).
+
+## Existing foundations
+
+- [x] **CORE-01 Retain compact Atlas modes and navigation**
+  P1 · release-essential · Codex · verified-local
+  Acceptance: Explore, Dissect, Guided learning and Quiz retain their current source-bound interaction contracts and compact UI tests. Physical desktop acceptance is tracked in UX-01.
+  Evidence: [tour:verification.json](<F:/VisibleMedicine/staging/20261015-tour-speed/verification.json>), [website:tests/atlas-workspace-simplification.test.ts](<F:/VisibleMedicine/website/tests/atlas-workspace-simplification.test.ts>).
+
+- [x] **CORE-02 Retain continuous smooth tours with adjustable speed**
+  P1 · release-essential · Codex · verified-local
+  Acceptance: All 3D player families expose 0.5x/1x/1.5x/2x/3x, preserve the current stop and pause/reduced-motion rules, revoke old timers and retain final hold; source/player/build evidence matches the saved revision.
+  Evidence: [atlas:docs/TOUR_SPEED.md](<F:/VisibleMedicine/atlas/docs/TOUR_SPEED.md>), [tour:checkpoint.json](<F:/VisibleMedicine/staging/20261015-tour-speed/checkpoint.json>).
+
+- [x] **CORE-03 Retain the integrated native CT/MRI head and semantic 3D links**
+  P1 · release-essential · Codex · verified-local
+  Acceptance: Current local routes, structure selection/search/practice and mapped existing-Atlas comparisons retain their tested source/revision boundaries. This does not assert production transport, whole-head image coverage or patient registration.
+  Evidence: [website:components/HeadAtlasViewer.tsx](<F:/VisibleMedicine/website/components/HeadAtlasViewer.tsx>), [website:lib/head-atlas-links.ts](<F:/VisibleMedicine/website/lib/head-atlas-links.ts>), [tour:head-link-1.log](<F:/VisibleMedicine/staging/20261015-tour-speed/head-link-1.log>), [website:docs/HEAD_LOADING_RELIABILITY.md](<F:/VisibleMedicine/website/docs/HEAD_LOADING_RELIABILITY.md>).
+
+- [x] **CORE-04 Retain simplified Studio and private Clinical Review destinations**
+  P1 · release-essential · Codex · verified-local
+  Acceptance: Existing compact navigation and source-bound review discovery remain implemented and tested; signed-in end-to-end acceptance and actual decisions are tracked separately.
+  Evidence: [website:docs/studio-simplification.md](<F:/VisibleMedicine/website/docs/studio-simplification.md>), [website:tests/clinical-review-ui-simplification.test.ts](<F:/VisibleMedicine/website/tests/clinical-review-ui-simplification.test.ts>), [tour:ui-1.log](<F:/VisibleMedicine/staging/20261015-tour-speed/ui-1.log>).
+
+## 3D anatomy
+
+- [ ] **ANAT-01 Create the region and system completeness ledger**
+  P1 · full-roadmap · Both · partial
+  Acceptance: For each regional/whole-body view, classify target anatomy as admitted, partial, missing, held or not yet inventoried. Reconcile overlapping memberships; do not count source files as unique structures.
+  Evidence: [atlas:docs/SOURCE_INVENTORY.md](<F:/VisibleMedicine/atlas/docs/SOURCE_INVENTORY.md>), [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>), [website:docs/anatomy-coverage/index.json](<F:/VisibleMedicine/website/docs/anatomy-coverage/index.json>), [website:docs/anatomy-coverage/README.md](<F:/VisibleMedicine/website/docs/anatomy-coverage/README.md>), [website:app/workspace/atlas-review/anatomy-coverage/page.tsx](<F:/VisibleMedicine/website/app/workspace/atlas-review/anatomy-coverage/page.tsx>), [website:lib/anatomy-coverage-view.ts](<F:/VisibleMedicine/website/lib/anatomy-coverage-view.ts>), [website:tests/anatomy-coverage-page.test.ts](<F:/VisibleMedicine/website/tests/anatomy-coverage-page.test.ts>).
+
+- [ ] **ANAT-02 Resolve upper-limb peripheral nerve and brachial plexus gaps**
+  P1 · full-roadmap · Both · held
+  Acceptance: Find commercially compatible no-fee geometry with explicit rights, units, side, original frame and branch labels; retain unresolved candidate objects offline until source and clinical admission is recorded.
+  Evidence: [atlas:docs/OPEN3DMODEL_PLEXUS_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/OPEN3DMODEL_PLEXUS_SOURCE_REVIEW.md>), [atlas:docs/BRACHIAL_PLEXUS_SOURCE_REVIEW_20260928.md](<F:/VisibleMedicine/atlas/docs/BRACHIAL_PLEXUS_SOURCE_REVIEW_20260928.md>).
+
+- [ ] **ANAT-03 Expand source-backed lower-limb peripheral nerves**
+  P1 · full-roadmap · Both · open
+  Acceptance: Inventory missing named nerve geometry in thigh, leg and foot; acquire admissible originals and review courses/relationships. Motor-innervation text must not be presented as nerve geometry.
+  Evidence: [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>), [atlas:lib/lower-limb-motor.ts](<F:/VisibleMedicine/atlas/lib/lower-limb-motor.ts>).
+
+- [ ] **ANAT-04 Adjudicate head and neck optic/visual pathway alternatives**
+  P1 · full-roadmap · Owner radiologist · held
+  Acceptance: Record source-bound decisions for overlapping optic candidates and partial visual pathway surfaces; engineering admits only approved identity/condition scope with no inferred patient transform.
+  Evidence: [atlas:docs/VISUAL_PATHWAY_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/VISUAL_PATHWAY_SOURCE_REVIEW.md>), [atlas:docs/GAP_FILLING.md](<F:/VisibleMedicine/atlas/docs/GAP_FILLING.md>).
+
+- [ ] **ANAT-05 Resolve ocular and lacrimal detail candidates**
+  P2 · full-roadmap · Both · held
+  Acceptance: Review lacrimal-lake boundaries and fragmented ciliary candidates before admission; preserve the original sources and avoid plausible invented tissue.
+  Evidence: [atlas:docs/OCULAR_DETAIL_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/OCULAR_DETAIL_SOURCE_REVIEW.md>).
+
+- [ ] **ANAT-06 Resolve cardiac valves, papillary muscles and leaflet identities**
+  P1 · full-roadmap · Both · held
+  Acceptance: Appropriate clinical/anatomical reviewer accepts exact source boundaries and identities; no chordae, patent lumen, wall thickness or measured physiology is inferred from existing cavities.
+  Evidence: [atlas:docs/CARDIAC_VALVE_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/CARDIAC_VALVE_SOURCE_REVIEW.md>), [atlas:lib/cardiac-cavity-guide.ts](<F:/VisibleMedicine/atlas/lib/cardiac-cavity-guide.ts>).
+
+- [ ] **ANAT-07 Complete the intended pulmonary lobe and branch scope**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Define and supply reviewed lobe/segment/branch surfaces appropriate to the agreed curriculum; current branch groups are not advertised as full lobar tissue or complete bronchial trees.
+  Evidence: [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>).
+
+- [ ] **ANAT-08 Resolve renal source-condition holds**
+  P1 · full-roadmap · Owner radiologist · held
+  Acceptance: Adjudicate held left cortex, right columns and left-vein representations and any incomplete interiors in their independent original frame.
+  Evidence: [atlas:docs/HRA_RENAL_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/HRA_RENAL_SOURCE_REVIEW.md>).
+
+- [ ] **ANAT-09 Review pancreatic ducts and internal-organ claims**
+  P1 · full-roadmap · Owner radiologist · partial
+  Acceptance: Accept exact duct identity and supplied extent; do not present two source surfaces as complete independent patent duct trees or a physiological flow model.
+  Evidence: [atlas:docs/PANCREATIC_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/PANCREATIC_SOURCE_REVIEW.md>).
+
+- [ ] **ANAT-10 Resolve pelvic-floor identity and condition holds**
+  P1 · full-roadmap · Owner radiologist · held
+  Acceptance: Review the held definitions, near-coincident/midline-crossing alternatives and ambiguous superficial-perineal representation before adding identity-specific teaching or geometry.
+  Evidence: [atlas:docs/PELVIC_FLOOR_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/PELVIC_FLOOR_SOURCE_REVIEW.md>), [atlas:docs/GAP_FILLING.md](<F:/VisibleMedicine/atlas/docs/GAP_FILLING.md>), [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>).
+
+- [ ] **ANAT-11 Define a coherent female whole-body scope**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Owner defines intended sex-specific coverage; sources preserve original frames and laterality. The independent female pelvis remains separate until any cross-source registration is actually validated.
+  Evidence: [atlas:docs/HRA_FEMALE_PELVIS.md](<F:/VisibleMedicine/atlas/docs/HRA_FEMALE_PELVIS.md>), [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>).
+
+- [ ] **ANAT-12 Inventory and fill joint soft-tissue layers**
+  P1 · full-roadmap · Both · open
+  Acceptance: Assess capsules, labra, bursae, ligaments and cartilage for shoulder/elbow/wrist and hip/knee/ankle; source, review and test attachment/dissection boundaries rather than substituting bone landmarks.
+  Evidence: [atlas:docs/UPPER_JOINT_SOURCE_SCREEN_20260918.md](<F:/VisibleMedicine/atlas/docs/UPPER_JOINT_SOURCE_SCREEN_20260918.md>), [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>).
+
+- [ ] **ANAT-13 Adjudicate tibial recurrent artery extents**
+  P1 · full-roadmap · Owner radiologist · held
+  Acceptance: Decide whether both held source surfaces represent their named whole extent or a broader network; preserve holds until the exact source decision exists.
+  Evidence: [atlas:docs/TIBIAL_RECURRENT_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/TIBIAL_RECURRENT_SOURCE_REVIEW.md>).
+
+- [ ] **ANAT-14 Resolve spine disc, cord/canal and back-layer limits**
+  P1 · full-roadmap · Both · held
+  Acceptance: Adjudicate FJ3211 identity/level, retain generic disc/canal limitations and keep older back-layer surfaces in their original frame unless a reviewed transform is supplied.
+  Evidence: [atlas:docs/UNRESOLVED_DISC_SOURCE_REVIEW.md](<F:/VisibleMedicine/atlas/docs/UNRESOLVED_DISC_SOURCE_REVIEW.md>), [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>).
+
+- [ ] **ANAT-15 Triage foot interossei and other cross-version source candidates**
+  P2 · full-roadmap · Both · open
+  Acceptance: Screen originals, commercial rights, source conditions and frame differences; never mix v3/v4 meshes directly merely because they look plausible together.
+  Evidence: [atlas:docs/GAP_FILLING.md](<F:/VisibleMedicine/atlas/docs/GAP_FILLING.md>).
+
+- [ ] **ANAT-16 Define skin, fascia, lymphatics, organ interiors and vascular connection depth**
+  P2 · full-roadmap · Both · open
+  Acceptance: Record the requested curricular depth and a missing/partial inventory; add only reviewed source-backed structures. Schematic CSF movement stays labelled schematic, not a validated fluid simulation.
+  Evidence: [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>), [atlas:docs/CSF_MOTION.md](<F:/VisibleMedicine/atlas/docs/CSF_MOTION.md>).
+
+- [x] **ANAT-17 Reconcile the reference-source review backlog**
+  P1 · full-roadmap · Codex · verified-local
+  Acceptance: Revalidate reference-coverage audit differences against current source; classify nested coverage, holds, reviewed differences and corrections without converting a file-difference count into missing-anatomy count.
+  Evidence: [atlas:docs/reference-coverage-audit.json](<F:/VisibleMedicine/atlas/docs/reference-coverage-audit.json>), [atlas:docs/SOURCE_INVENTORY.md](<F:/VisibleMedicine/atlas/docs/SOURCE_INVENTORY.md>), [website:docs/anatomy-coverage/reference.json](<F:/VisibleMedicine/website/docs/anatomy-coverage/reference.json>), [website:docs/anatomy-coverage/index.json](<F:/VisibleMedicine/website/docs/anatomy-coverage/index.json>), [website:scripts/check-anatomy-coverage.mjs](<F:/VisibleMedicine/website/scripts/check-anatomy-coverage.mjs>), [website:tests/anatomy-coverage-index.test.mjs](<F:/VisibleMedicine/website/tests/anatomy-coverage-index.test.mjs>), [website:docs/anatomy-coverage/README.md](<F:/VisibleMedicine/website/docs/anatomy-coverage/README.md>).
+
+- [ ] **ANAT-18 Sign off the anatomy included in the release candidate**
+  P0 · release-essential · Owner radiologist · needs-owner
+  Acceptance: Record actual source/renderer/side/boundary decisions in private Clinical Review for each included scope; root, nested, shoulder and specimen decisions remain independent.
+  Evidence: [website:app/workspace/clinical-review-inbox/page.tsx](<F:/VisibleMedicine/website/app/workspace/clinical-review-inbox/page.tsx>), [atlas:docs/SPECIMEN_REVIEWS.md](<F:/VisibleMedicine/atlas/docs/SPECIMEN_REVIEWS.md>), [atlas:docs/NESTED_REVIEWS.md](<F:/VisibleMedicine/atlas/docs/NESTED_REVIEWS.md>).
+
+## Teaching
+
+- [ ] **TEACH-01 Triage head and neck X-ray and ultrasound teaching gaps**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Address 220 X-ray and 182 US pending root placements using exact source identities and appropriate acquisition evidence; explicitly retain unsupported normal visibility as pending or a documented scope limit.
+  Evidence: [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>), [atlas:docs/TEACHING_GAP_REPORT.md](<F:/VisibleMedicine/atlas/docs/TEACHING_GAP_REPORT.md>), [atlas:docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md](<F:/VisibleMedicine/atlas/docs/INTRACRANIAL_ARTERIAL_ULTRASOUND.md>).
+
+- [ ] **TEACH-02 Triage head and neck CT and MRI teaching gaps**
+  P1 · full-roadmap · Both · open
+  Acceptance: Address 80 CT and 54 MRI pending root placements with technique, extent and identity limits; never infer acquired-image masks or registration from explanatory text.
+  Evidence: [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>), [atlas:lib/nested-teaching.ts](<F:/VisibleMedicine/atlas/lib/nested-teaching.ts>).
+
+- [ ] **TEACH-03 Triage spine and hand X-ray teaching gaps**
+  P1 · full-roadmap · Both · open
+  Acceptance: Assess 62 spine and 38 hand pending X-ray placements; distinguish plain film from angiography/venography and avoid invented visibility of small vessels or muscles.
+  Evidence: [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>).
+
+- [ ] **TEACH-04 Finish the remaining regional root-teaching gap queue**
+  P1 · full-roadmap · Both · open
+  Acceptance: Use all 710 exact pending rows, including abdomen US, remaining forearm/foot/pelvic/thoracic topics and two shoulder-arm US placements. Each row gets sourced draft content, an explicit held decision or an owner-approved scope disposition.
+  Evidence: [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>), [atlas:scripts/report-teaching-gaps.mjs](<F:/VisibleMedicine/atlas/scripts/report-teaching-gaps.mjs>), [atlas:docs/FOOT_ARTERIAL_PROJECTION_XRAY.md](<F:/VisibleMedicine/atlas/docs/FOOT_ARTERIAL_PROJECTION_XRAY.md>), [website:docs/FOOT_ARTERIAL_XRAY_INTEGRATION.md](<F:/VisibleMedicine/website/docs/FOOT_ARTERIAL_XRAY_INTEGRATION.md>), [atlas:docs/ARTERIAL_EVIDENCE_LIMITS.md](<F:/VisibleMedicine/atlas/docs/ARTERIAL_EVIDENCE_LIMITS.md>).
+
+- [ ] **TEACH-05 Resolve held identity before remaining Function, Clinical and Pathology copy**
+  P1 · full-roadmap · Both · held
+  Acceptance: FMA19728 superficial-perineal muscle has one pending placement in each of these three topics; no specific identity or clinical explanation is invented before adjudication.
+  Evidence: [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>), [atlas:docs/GAP_FILLING.md](<F:/VisibleMedicine/atlas/docs/GAP_FILLING.md>).
+
+- [ ] **TEACH-06 Audit existing root drafts for quality, references and repetition**
+  P1 · full-roadmap · Both · open
+  Acceptance: Review all 9,187 editorial draft placements in coherent source-group batches; check specificity, references, normal variants, modality pitfalls and useful clinical scope. Shared text is not counted as thousands of unique authored lessons.
+  Evidence: [atlas:app/body-content.ts](<F:/VisibleMedicine/atlas/app/body-content.ts>), [atlas:lib/content-types.ts](<F:/VisibleMedicine/atlas/lib/content-types.ts>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>).
+
+- [ ] **TEACH-07 Complete appropriate nested teaching without parent-text inheritance**
+  P1 · full-roadmap · Both · open
+  Acceptance: Triage current nested pending placements: Function/Clinical/Pathology31 each, CT/MRI2 each, X-ray94 and US64. Distinguish source-file parts from named branches; exact child identity supports each added claim.
+  Evidence: [atlas:content/nested-teaching.ts](<F:/VisibleMedicine/atlas/content/nested-teaching.ts>), [atlas:docs/NESTED_ANATOMY_TEACHING.md](<F:/VisibleMedicine/atlas/docs/NESTED_ANATOMY_TEACHING.md>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>).
+
+- [ ] **TEACH-08 Review independent specimen and dedicated shoulder curricula**
+  P1 · full-roadmap · Both · open
+  Acceptance: Review separate source-frame teaching and clarify the two lower-limb held placements per Clinical/Pathology/CT/MRI/X-ray/US topic. Fully populated draft tabs in other specimens/shoulder are not treated as reviewed curricula.
+  Evidence: [atlas:docs/SPECIMEN_REVIEWS.md](<F:/VisibleMedicine/atlas/docs/SPECIMEN_REVIEWS.md>), [audit:CURRENT_STATUS-current.md](<F:/VisibleMedicine/staging/20261015-completion-audit/CURRENT_STATUS-current.md>).
+
+- [ ] **TEACH-09 Review and extend guided-learning curricula**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Review 51 regional tours/309 stops, nine independent guides/73 stops and the separate shoulder/eye/ventricular/cardiac guides for objectives, sequencing, captions, context and safe limits; add new tours only for meaningful learning objectives.
+  Evidence: [atlas:lib/regional-tours.ts](<F:/VisibleMedicine/atlas/lib/regional-tours.ts>), [atlas:lib/specimen-guided-dissection.ts](<F:/VisibleMedicine/atlas/lib/specimen-guided-dissection.ts>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>).
+
+- [ ] **TEACH-10 Record revision-bound teaching and imaging sign-off**
+  P0 · release-essential · Owner radiologist · needs-owner
+  Acceptance: Approve/correct the exact included teaching, questions and modality interpretations in private Review; geometry review, source citation and medical-content acceptance are separate decisions.
+  Evidence: [website:app/workspace/clinical-review-inbox/page.tsx](<F:/VisibleMedicine/website/app/workspace/clinical-review-inbox/page.tsx>), [website:lib/head-teaching-review-contract.ts](<F:/VisibleMedicine/website/lib/head-teaching-review-contract.ts>), [facialreview:verification.json](<F:/VisibleMedicine/staging/20261016-facial-review/verification.json>), [website:lib/head-ct-facial-decision-contract.ts](<F:/VisibleMedicine/website/lib/head-ct-facial-decision-contract.ts>), [website:components/HeadCtFacialDecisionForm.tsx](<F:/VisibleMedicine/website/components/HeadCtFacialDecisionForm.tsx>).
+
+- [ ] **TEACH-11 Inventory the lecture and course library across specialist work**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Map actual current source files and revisions for X-ray bone anatomy, fractures, alignment/dislocations, healing/fixation, paediatric MSK and spine material; record missing modules, edits, rights and curriculum ownership without assuming old chat summaries are current.
+  Evidence: [website:docs/master-plan.md](<F:/VisibleMedicine/website/docs/master-plan.md>), [website:docs/studio-simplification.md](<F:/VisibleMedicine/website/docs/studio-simplification.md>), [website:docs/LECTURE_PPTX_INTAKE.md](<F:/VisibleMedicine/website/docs/LECTURE_PPTX_INTAKE.md>).
+
+## Imaging and links
+
+- [ ] **IMG-01 Accept the integrated local CT/MRI head journeys end to end**
+  P0 · release-essential · Both · partial
+  Acceptance: With the cosmetically accepted exact packages, verify search, picking, label groups, slice scrolling, quiz, saved study, CT/MRI/3D handoff and return in a real desktop session; preserve accepted masks with the specialist.
+  Evidence: [website:components/HeadAtlasViewer.tsx](<F:/VisibleMedicine/website/components/HeadAtlasViewer.tsx>), [website:lib/head-atlas-import.ts](<F:/VisibleMedicine/website/lib/head-atlas-import.ts>), [tour:head-link-1.log](<F:/VisibleMedicine/staging/20261015-tour-speed/head-link-1.log>), [website:docs/HEAD_LOADING_RELIABILITY.md](<F:/VisibleMedicine/website/docs/HEAD_LOADING_RELIABILITY.md>), [website:docs/HEAD_MASK_RESOURCE_BUDGET.md](<F:/VisibleMedicine/website/docs/HEAD_MASK_RESOURCE_BUDGET.md>).
+
+- [ ] **IMG-02 Complete protected Didanix Education web media delivery**
+  P0 · release-essential · Both · partial
+  Acceptance: Bind an immutable Education viewer-core/media contract to cleared resources, real playable-object readback, access decisions and source revisions. Existing local native head images do not establish general production DICOM delivery.
+  Evidence: [website:lib/education-media-readiness.ts](<F:/VisibleMedicine/website/lib/education-media-readiness.ts>), [website:lib/production-readiness.ts](<F:/VisibleMedicine/website/lib/production-readiness.ts>), [atlas:docs/DIDANIX_EDUCATION_INTEGRATION.md](<F:/VisibleMedicine/atlas/docs/DIDANIX_EDUCATION_INTEGRATION.md>).
+
+- [ ] **IMG-03 Select and clear additional modality and region cases**
+  P1 · full-roadmap · Both · needs-owner
+  Acceptance: Owner supplies intended approved local CT/MRI/X-ray/US source sets; each admitted derivative has exact rights, privacy, de-identification, review and revision evidence. Data stays local until separate release clearance.
+  Evidence: [atlas:docs/MULTIMODAL_LEARNING_PLAN.md](<F:/VisibleMedicine/atlas/docs/MULTIMODAL_LEARNING_PLAN.md>), [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>).
+
+- [ ] **IMG-04 Build source-bound cross-modality resource and lecture mappings**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Structure/concept/side/extent and image or lecture-anchor revisions match explicitly; test missing/stale/ambiguous/locked mappings and preserve independent Atlas/case/lecture entitlements.
+  Evidence: [atlas:lib/learning-resources.ts](<F:/VisibleMedicine/atlas/lib/learning-resources.ts>), [atlas:docs/LEARNING_RESOURCE_CONTRACT.md](<F:/VisibleMedicine/atlas/docs/LEARNING_RESOURCE_CONTRACT.md>), [website:lib/head-atlas-links.ts](<F:/VisibleMedicine/website/lib/head-atlas-links.ts>), [website:lib/lecture-anatomy-collection.ts](<F:/VisibleMedicine/website/lib/lecture-anatomy-collection.ts>), [website:tests/lecture-multi-anatomy-repository.test.ts](<F:/VisibleMedicine/website/tests/lecture-multi-anatomy-repository.test.ts>), [website:docs/HEAD_IMAGING_HANDOFF.md](<F:/VisibleMedicine/website/docs/HEAD_IMAGING_HANDOFF.md>), [website:docs/GUIDED_LECTURE_HANDOFF.md](<F:/VisibleMedicine/website/docs/GUIDED_LECTURE_HANDOFF.md>).
+
+- [ ] **IMG-05 Prepare commercially usable relevant ultrasound examples**
+  P1 · full-roadmap · Both · open
+  Acceptance: Use owner-cleared images or individually rights-verified free commercial examples with required notices and exact teaching context; no scraped illustrations, vague dataset licence or unsupported visibility claim.
+  Evidence: [atlas:docs/MULTIMODAL_LEARNING_PLAN.md](<F:/VisibleMedicine/atlas/docs/MULTIMODAL_LEARNING_PLAN.md>), [atlas:LICENSES/THIRD_PARTY_NOTICES.md](<F:/VisibleMedicine/atlas/LICENSES/THIRD_PARTY_NOTICES.md>).
+
+- [ ] **IMG-06 Validate patient-space synchronization only where intended**
+  P2 · full-roadmap · Both · needs-owner
+  Acceptance: For any true 3D/scan spatial link, supply matched subjects, validated segmentation/registration and immutable frame-of-reference/transforms. Semantic comparison remains useful without this; never label it spatial registration.
+  Evidence: [atlas:docs/DIDANIX_EDUCATION_INTEGRATION.md](<F:/VisibleMedicine/atlas/docs/DIDANIX_EDUCATION_INTEGRATION.md>), [atlas:lib/imaging-sync.ts](<F:/VisibleMedicine/atlas/lib/imaging-sync.ts>).
+
+## Assessment
+
+- [ ] **ASSESS-01 Replace or deliberately scope generated identification prompts**
+  P1 · full-roadmap · Both · open
+  Acceptance: Review 39 root generated-identification placements, including 38 head-neck and 1 pelvis; add source-specific prompts/accepted answers/feedback where supported, or explicitly retain them as basic unscored identification.
+  Evidence: [audit:root-teaching-gaps.json](<F:/VisibleMedicine/staging/20261015-completion-audit/root-teaching-gaps.json>), [atlas:lib/reasoning-questions.ts](<F:/VisibleMedicine/atlas/lib/reasoning-questions.ts>).
+
+- [ ] **ASSESS-02 Validate question quality and scoring across the website**
+  P1 · release-essential · Both · partial
+  Acceptance: Review the 190 draft reasoning concepts and included scan questions for correctness, synonyms, laterality, distractors, feedback and learning outcomes. Regression-check correct answers, first-try marks, Next/Finish, stale callbacks and exam locks in real sessions.
+  Evidence: [atlas:lib/reasoning-questions.ts](<F:/VisibleMedicine/atlas/lib/reasoning-questions.ts>), [website:tests/head-image-history.test.ts](<F:/VisibleMedicine/website/tests/head-image-history.test.ts>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>).
+
+- [ ] **ASSESS-03 Complete the specialist fracture-exam release pipeline**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Specialist task owns case/answer review and exam assembly. Latest generic note records 100 included local cases in Groups 1/2 with release approval false; confirm remaining groups, privacy/rights, linked views, frozen paper/mark scheme and protected Education delivery before release.
+  Evidence: [website:docs/fracture-exams/REPLACEMENT-REVIEW-20261014.md](<F:/VisibleMedicine/website/docs/fracture-exams/REPLACEMENT-REVIEW-20261014.md>), [website:docs/fracture-exams/INTEGRATION.md](<F:/VisibleMedicine/website/docs/fracture-exams/INTEGRATION.md>).
+
+- [ ] **ASSESS-04 Exercise persisted attempts and independent paid access on the target**
+  P1 · release-essential · Codex · open
+  Acceptance: Real authorized learner/reviewer accounts verify attempts, timeout/recovery, denied/expired access, release snapshots and cross-tenant isolation against the intended database. Synthetic tests do not establish target readiness.
+  Evidence: [website:lib/assessment-manifest.ts](<F:/VisibleMedicine/website/lib/assessment-manifest.ts>), [website:lib/assessment-recovery.ts](<F:/VisibleMedicine/website/lib/assessment-recovery.ts>), [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>).
+
+## Desktop experience
+
+- [ ] **UX-01 Run a signed-in desktop acceptance matrix**
+  P0 · release-essential · Both · open
+  Acceptance: At 1280px and wider, test learning, authoring and review journeys with real roles: little page scrolling, predictable panels, aligned labels, retained context, browser Back/Forward and protected unsaved state.
+  Evidence: [website:docs/studio-simplification.md](<F:/VisibleMedicine/website/docs/studio-simplification.md>), [website:tests/desktop-workspace-simplification.test.ts](<F:/VisibleMedicine/website/tests/desktop-workspace-simplification.test.ts>), [website:components/HeadAtlasGuidedModel.tsx](<F:/VisibleMedicine/website/components/HeadAtlasGuidedModel.tsx>), [website:docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md](<F:/VisibleMedicine/website/docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md>), [delivery:checkpoint.json](<F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed/checkpoint.json>), [website:docs/COMPACT_HEAD_COMPARISON.md](<F:/VisibleMedicine/website/docs/COMPACT_HEAD_COMPARISON.md>), [website:docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md](<F:/VisibleMedicine/website/docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md>).
+
+- [ ] **UX-02 Complete keyboard and assistive-technology acceptance**
+  P1 · release-essential · Codex · open
+  Acceptance: Physical browser checks cover focus after dialogs/disclosures/steps, readable contrast, announcements, reduced motion, 200% text, keyboard-only controls and an accessible route when WebGL is unavailable.
+  Evidence: [website:components/HeadAtlasLearningPicker.tsx](<F:/VisibleMedicine/website/components/HeadAtlasLearningPicker.tsx>), [atlas:docs/TOUR_SPEED.md](<F:/VisibleMedicine/atlas/docs/TOUR_SPEED.md>), [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>), [website:docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md](<F:/VisibleMedicine/website/docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md>), [website:docs/COMPACT_HEAD_COMPARISON.md](<F:/VisibleMedicine/website/docs/COMPACT_HEAD_COMPARISON.md>), [website:docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md](<F:/VisibleMedicine/website/docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md>).
+
+- [ ] **UX-03 Measure real viewer performance and reliability**
+  P1 · release-essential · Codex · open
+  Acceptance: Measure actual page/GPU load, memory, dense labels, orbit/explode readability, input responsiveness, cancellation/retry and recovery on representative desktop hardware; do not substitute bundle sizes or SSR passes for timings.
+  Evidence: [atlas:app/body-scene.tsx](<F:/VisibleMedicine/atlas/app/body-scene.tsx>), [website:docs/master-plan.md](<F:/VisibleMedicine/website/docs/master-plan.md>).
+
+- [ ] **UX-04 Retain essential mobile fallback without displacing desktop priority**
+  P2 · release-essential · Codex · open
+  Acceptance: Prevent broken navigation, unreadable controls and inaccessible learning on small screens; desktop remains the spending priority and optional mobile polish is deferred.
+  Evidence: [website:tests/atlas-workspace-simplification.test.ts](<F:/VisibleMedicine/website/tests/atlas-workspace-simplification.test.ts>), [atlas:app/regional-guided-learning.tsx](<F:/VisibleMedicine/atlas/app/regional-guided-learning.tsx>).
+
+## Studio and courses
+
+- [ ] **STUDIO-01 Verify the simplified course-building workflow with real users**
+  P1 · release-essential · Both · partial
+  Acceptance: Create a course, arrange its outline, edit/save/recover a lecture/workbook, preview, request independent review and publish an immutable release without clutter or lost changes; author cannot self-approve.
+  Evidence: [website:docs/studio-simplification.md](<F:/VisibleMedicine/website/docs/studio-simplification.md>), [website:lib/studio-release-order.ts](<F:/VisibleMedicine/website/lib/studio-release-order.ts>), [website:lib/studio-mutation-context.ts](<F:/VisibleMedicine/website/lib/studio-mutation-context.ts>), [delivery:checkpoint.json](<F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed/checkpoint.json>).
+
+- [ ] **STUDIO-02 Bring existing presentations into the course library safely**
+  P1 · full-roadmap · Both · partial
+  Acceptance: Inventory source PowerPoint/media and implement an appropriate import or conversion lane with fidelity, source rights, media quarantine, caption/alt text and reviewed anchors; do not falsely claim plain-text slide editing is full PPTX import.
+  Evidence: [website:docs/studio-simplification.md](<F:/VisibleMedicine/website/docs/studio-simplification.md>), [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>), [website:scripts/lecture-pptx-intake.py](<F:/VisibleMedicine/website/scripts/lecture-pptx-intake.py>), [website:tests/lecture-pptx-intake.test.py](<F:/VisibleMedicine/website/tests/lecture-pptx-intake.test.py>), [website:docs/LECTURE_PPTX_INTAKE.md](<F:/VisibleMedicine/website/docs/LECTURE_PPTX_INTAKE.md>).
+
+- [ ] **STUDIO-03 Verify target migrations, tenant isolation and provisioning**
+  P0 · release-essential · Both · partial
+  Acceptance: Use approved deployment-time migrations and controlled fixtures; test all authoring/publication/enrolment/reporting mutations against representative target data and roles. Remove runtime schema/demo dependencies through reviewed changes, not flags alone.
+  Evidence: [website:lib/production-readiness.ts](<F:/VisibleMedicine/website/lib/production-readiness.ts>), [website:docs/platform-architecture.md](<F:/VisibleMedicine/website/docs/platform-architecture.md>), [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>), [website:lib/studio-mutation-context-server.ts](<F:/VisibleMedicine/website/lib/studio-mutation-context-server.ts>).
+
+- [ ] **STUDIO-04 Complete correction, supersession and withdrawal journeys**
+  P1 · release-essential · Codex · partial
+  Acceptance: A published lesson/case/lecture can be corrected or withdrawn with exact revision history, affected-link handling, appropriate notices and retained attempt evidence; already-approved content is not edited in place.
+  Evidence: [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>), [website:lib/assessment-manifest.ts](<F:/VisibleMedicine/website/lib/assessment-manifest.ts>), [website:docs/STUDIO_WORKBOOK_RETIREMENT.md](<F:/VisibleMedicine/website/docs/STUDIO_WORKBOOK_RETIREMENT.md>), [website:docs/STUDIO_WORKBOOK_CORRECTIONS.md](<F:/VisibleMedicine/website/docs/STUDIO_WORKBOOK_CORRECTIONS.md>), [website:tests/workbook-correction-lookup-api.test.mjs](<F:/VisibleMedicine/website/tests/workbook-correction-lookup-api.test.mjs>), [website:docs/STUDIO_CORRECTION_LINEAGE.md](<F:/VisibleMedicine/website/docs/STUDIO_CORRECTION_LINEAGE.md>).
+
+## Release and operations
+
+- [ ] **REL-01 Repair and run the complete applicable regression suite**
+  P0 · release-essential · Codex · partial
+  Acceptance: Triage genuine bugs, historical source-fixture assertions and resource failures; preserve original epoch proofs while fixing current bindings. Obtain a clean applicable run at the exact final candidate without suppressed tests or broad claims from selected passes.
+  Evidence: [tour:verification.json](<F:/VisibleMedicine/staging/20261015-tour-speed/verification.json>), [release:verification.json](<F:/VisibleMedicine/staging/20261015-release-fixtures/verification.json>), [release:combined-1.log](<F:/VisibleMedicine/staging/20261015-release-fixtures/combined-1.log>), [assurance:verification.json](<F:/VisibleMedicine/staging/20261015-release-fixtures-2/verification.json>), [assurance:combined-1.log](<F:/VisibleMedicine/staging/20261015-release-fixtures-2/combined-1.log>), [website:tests/atlas-carpal-bone-quiz-history.ts](<F:/VisibleMedicine/website/tests/atlas-carpal-bone-quiz-history.ts>), [website:package.json](<F:/VisibleMedicine/website/package.json>), [baseline:terminal-audit.json](<F:/VisibleMedicine/staging/20261016-website-release/terminal-audit.json>), [facial:verification.json](<F:/VisibleMedicine/staging/20261016-facial-website-integration/verification.json>), [reliability:verification.json](<F:/VisibleMedicine/staging/20261016-release-assurance/verification.json>), [website:docs/test-runner.md](<F:/VisibleMedicine/website/docs/test-runner.md>), [website:scripts/run-website-tests.mjs](<F:/VisibleMedicine/website/scripts/run-website-tests.mjs>), [website:docs/CURRENT_ATLAS_TEST_DELIVERY.md](<F:/VisibleMedicine/website/docs/CURRENT_ATLAS_TEST_DELIVERY.md>), [website:docs/DELIVERY_EPOCH_REPAIR.md](<F:/VisibleMedicine/website/docs/DELIVERY_EPOCH_REPAIR.md>), [delivery:checkpoint.json](<F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed/checkpoint.json>), [website:docs/HEAD_MASK_RESOURCE_BUDGET.md](<F:/VisibleMedicine/website/docs/HEAD_MASK_RESOURCE_BUDGET.md>).
+
+- [ ] **REL-02 Finish distributed asset and licence release audit**
+  P0 · release-essential · Both · partial
+  Acceptance: Audit exact shipped dependency/font/mesh/texture/image/content bytes and notices, retain attribution, resolve source holds and confirm no mandatory paid dependency. Classification reports are not exhaustive rights clearance or a forever-free hosting guarantee.
+  Evidence: [atlas:LICENSES/THIRD_PARTY_NOTICES.md](<F:/VisibleMedicine/atlas/LICENSES/THIRD_PARTY_NOTICES.md>), [audit:requirements-current.json](<F:/VisibleMedicine/staging/20261015-completion-audit/requirements-current.json>), [website:scripts/build-clinical-review-viewer.mjs](<F:/VisibleMedicine/website/scripts/build-clinical-review-viewer.mjs>).
+
+- [ ] **REL-03 Approve image/privacy/publication clearance per release**
+  P0 · release-essential · Both · needs-owner
+  Acceptance: Owner/governance records exact case/derivative privacy, rights, facial/de-identification considerations and intended audience; source approval for local use is not silently treated as upload permission.
+  Evidence: [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>), [website:docs/fracture-exams/REPLACEMENT-REVIEW-20261014.md](<F:/VisibleMedicine/website/docs/fracture-exams/REPLACEMENT-REVIEW-20261014.md>).
+
+- [ ] **REL-04 Choose and authorize the real private deployment target**
+  P0 · release-essential · Both · needs-owner
+  Acceptance: Confirm domain/origin, approved education identity, access policy, storage/transport, operational owners and a cost ceiling; perform private deployment/readback only when authorized. Public and paid activation remain separate decisions.
+  Evidence: [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>), [website:lib/production-readiness.ts](<F:/VisibleMedicine/website/lib/production-readiness.ts>).
+
+- [ ] **REL-05 Complete security and account-lifecycle assurance**
+  P0 · release-essential · Both · partial
+  Acceptance: Threat review plus genuine authentication/authorization, tenant boundaries, upload screening, rate limits, secrets, export/deletion and incident exercises pass on the intended environment; do not bypass authentication to test.
+  Evidence: [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>), [website:lib/production-readiness.ts](<F:/VisibleMedicine/website/lib/production-readiness.ts>), [website:lib/studio-mutation-context.ts](<F:/VisibleMedicine/website/lib/studio-mutation-context.ts>), [website:lib/studio-mutation-context-server.ts](<F:/VisibleMedicine/website/lib/studio-mutation-context-server.ts>), [delivery:checkpoint.json](<F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed/checkpoint.json>).
+
+- [ ] **REL-06 Supply approved legal, support and commercial details**
+  P1 · release-essential · Owner · needs-owner
+  Acceptance: Approve legal entity/contact, terms, privacy, accessibility, retention and support processes. Paid launch additionally needs pricing, contracts, tax, invoice/refund and entitlement decisions before enabling billing.
+  Evidence: [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>), [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>).
+
+- [ ] **REL-07 Verify complete website and operational backups**
+  P1 · release-essential · Both · partial
+  Acceptance: Keep current Atlas-only GitHub source and scoped F recovery verified; establish an authorized sanitized website backup and separate private data/database recovery with an actual restore exercise. Never call the Atlas mirror a full website/private-data/off-device backup.
+  Evidence: [tour:github.json](<F:/VisibleMedicine/staging/20261015-tour-speed/github.json>), [tour:checkpoint.json](<F:/VisibleMedicine/staging/20261015-tour-speed/checkpoint.json>), [website:scripts/source-recovery.mjs](<F:/VisibleMedicine/website/scripts/source-recovery.mjs>), [delivery:final-source-manifest.json](<F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed/final-source-manifest.json>), [delivery:checkpoint.json](<F:/VisibleMedicine/recovery/checkpoints/20261017-studio-reliability-installed/checkpoint.json>).
+
+- [ ] **REL-08 Finish transactional email and essential monitoring/support**
+  P1 · release-essential · Both · needs-owner
+  Acceptance: Approve provider/domain/credentials and no-new-fee constraints, then test intended notifications, failures, support and incident/correction procedures. Live classrooms and paid integrations remain off unless separately approved.
+  Evidence: [website:docs/pilot-readiness.md](<F:/VisibleMedicine/website/docs/pilot-readiness.md>), [website:lib/pilot-readiness.ts](<F:/VisibleMedicine/website/lib/pilot-readiness.ts>).
+
+## Optional product ideas
+
+- [ ] **IDEA-01 One concept-centred learning path across modalities and lectures**
+  P2 · optional · Both · partial
+  Acceptance: Evaluate extending the existing global search and resource links into a single structure page with available reviewed 3D/CT/MRI/X-ray/US/lecture destinations, clear locks and one primary action; no duplicate viewer toolbar.
+  Evidence: [website:app/search/page.tsx](<F:/VisibleMedicine/website/app/search/page.tsx>), [atlas:lib/learning-resources.ts](<F:/VisibleMedicine/atlas/lib/learning-resources.ts>), [learning:verification.json](<F:/VisibleMedicine/staging/20261015-structure-learning/verification.json>), [website:tests/structure-learning-ui.test.ts](<F:/VisibleMedicine/website/tests/structure-learning-ui.test.ts>), [facial:verification.json](<F:/VisibleMedicine/staging/20261016-facial-website-integration/verification.json>), [website:lib/head-ct-facial-teaching.ts](<F:/VisibleMedicine/website/lib/head-ct-facial-teaching.ts>), [website:lib/head-ct-facial-clinical.ts](<F:/VisibleMedicine/website/lib/head-ct-facial-clinical.ts>).
+
+- [ ] **IDEA-02 A unified personal learning home**
+  P2 · optional · Both · partial
+  Acceptance: Evaluate surfacing existing bookmarks, study sets, course progress and weak topics in one uncluttered resume view, with revision-aware progress and minimal agreed learner data.
+  Evidence: [website:app/my-learning/page.tsx](<F:/VisibleMedicine/website/app/my-learning/page.tsx>), [website:lib/head-study-set.ts](<F:/VisibleMedicine/website/lib/head-study-set.ts>), [learning:verification.json](<F:/VisibleMedicine/staging/20261015-structure-learning/verification.json>), [website:tests/structure-learning-ui.test.ts](<F:/VisibleMedicine/website/tests/structure-learning-ui.test.ts>).
+
+- [ ] **IDEA-03 Goal-oriented learning pathways and spaced review**
+  P2 · optional · Both · proposed
+  Acceptance: Evaluate short approved pathways for intended learner levels and optional spaced practice, using existing tours/quizzes rather than multiplying navigation tabs; owner defines curriculum/assessment validity.
+  Evidence: [atlas:lib/regional-tours.ts](<F:/VisibleMedicine/atlas/lib/regional-tours.ts>), [website:lib/pilot-readiness.ts](<F:/VisibleMedicine/website/lib/pilot-readiness.ts>).
+
+- [ ] **IDEA-04 Clear reviewed-coverage and version indicators**
+  P2 · optional · Both · partial
+  Acceptance: Evaluate concise draft/reviewed/partial/unavailable badges and a quiet change history for the actual published version; avoid prominent warning clutter and never imply approval from references alone.
+  Evidence: [website:app/atlas/guided-learning/page.tsx](<F:/VisibleMedicine/website/app/atlas/guided-learning/page.tsx>), [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>), [learning:verification.json](<F:/VisibleMedicine/staging/20261015-structure-learning/verification.json>), [website:tests/structure-learning-ui.test.ts](<F:/VisibleMedicine/website/tests/structure-learning-ui.test.ts>), [facialreview:verification.json](<F:/VisibleMedicine/staging/20261016-facial-review/verification.json>), [website:lib/head-ct-facial-review-inbox.ts](<F:/VisibleMedicine/website/lib/head-ct-facial-review-inbox.ts>).
+
+- [ ] **IDEA-05 Contextual error reporting and reviewer triage**
+  P2 · optional · Codex · proposed
+  Acceptance: Evaluate an issue action that captures non-patient structure/topic/source/version context and reproducible steps, linking to existing corrections/review tools without exposing private scans or answers.
+  Evidence: [website:app/workspace/clinical-review-inbox/page.tsx](<F:/VisibleMedicine/website/app/workspace/clinical-review-inbox/page.tsx>), [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>).
+
+- [ ] **IDEA-06 A compact body map and discoverable keyboard shortcuts**
+  P3 · optional · Both · proposed
+  Acceptance: Evaluate an optional collapsed body-map/command entry for regions and commands; keep the current simple region picker and primary four modes, and test whether the addition genuinely reduces navigation effort.
+  Evidence: [website:tests/atlas-workspace-simplification.test.ts](<F:/VisibleMedicine/website/tests/atlas-workspace-simplification.test.ts>).
+
+- [ ] **IDEA-07 Reviewed diagrammatic plates and non-WebGL learning fallback**
+  P2 · optional · Both · proposed
+  Acceptance: Evaluate original source-derived labelled 2D plates with compatible notices and radiologist review, suitable for revision or hardware fallback. Do not pass AI-generated anatomical artwork off as validated anatomy.
+  Evidence: [atlas:docs/FULL_BODY_COVERAGE.md](<F:/VisibleMedicine/atlas/docs/FULL_BODY_COVERAGE.md>), [atlas:LICENSES/THIRD_PARTY_NOTICES.md](<F:/VisibleMedicine/atlas/LICENSES/THIRD_PARTY_NOTICES.md>).
+
+- [ ] **IDEA-08 Scope-specific release-readiness profiles**
+  P2 · optional · Both · proposed
+  Acceptance: Evaluate explicit private-radiology/Atlas, institutional and full-platform profiles so unrelated WSI/live-classroom work does not silently become an initial Atlas blocker; applicable privacy/security/clinical gates cannot be waived by changing a flag.
+  Evidence: [website:lib/production-readiness.ts](<F:/VisibleMedicine/website/lib/production-readiness.ts>), [website:docs/production-plan.md](<F:/VisibleMedicine/website/docs/production-plan.md>).
+
+## Change log
+
+- 2026-10-17 · revision 42: Native head overlay groups include the independently selected mask in their256MiB admission budget and wait for its verified buffer instead of parallel duplicate reads. Exact package/study/entry/grid/asset/buffer/focus provenance permits donor-only mask reuse; surfaces still verify independently, and invalid donors fail before IO. No global cache, accepted image/mask/boundary, anatomical source, entitlement, approval or dependency change. Review renderer rebound without decision migration; exact41/a058 contracts frozen. All71requirements/eightideas statuses/scope/acceptance remain; not a total-process memory, anatomical completeness, registration, clinical or public-release claim.
+- 2026-10-17 · revision 41: Clinical Review queue paging is above the results, with one stable Pause/Resume control and an owned-focus handoff to the persistent Refresh action on completion. Read-only scan admission/cancellation, context/source invalidation, loaded-only counts, source-bound new-tab worksheets and clinical authority remain unchanged. Retained scan/refresh callbacks cannot act across a replaced scan generation or unmount. Atlas0ac11ca2, Reviewa058b135, four learner exports, all model/private/source inputs and all71requirements/eightideas statuses/scope/acceptance remain unchanged. Exact checklist40 and its original test contract are frozen. Local/synthetic engineering evidence is not real account/hosted-D1, assistive-technology, clinical or public-release approval. No new asset/dependency/permission/fee/schema change or public deployment.
+- 2026-10-17 · revision 40: Compact contextual head comparison keeps confirmed structure and revision-bound CT/MRI links visible; secondary selection and learning use bounded disclosures. Source0ac11ca2, all four learner runtimes, models, counts,71requirements/eightideas and their statuses/owners/scope/acceptance remain unchanged. Exact website renderer/Review binding advances without migrating clinical approval. Old39 source/binding/test contracts are frozen. Local engineering checks are not full keyboard/assistive, real hosted-auth/D1, acquired-image, clinical or public-release approval. No new assets/dependencies/permissions/fees, scans/masks/PACS changes or public deployment.
+- 2026-10-17 · revision 39: Four existing pending placements now have source-specific MCA Ultrasound and inferior-thyroid-artery MRI evidence limits. They remain pending; all other 9,932 root topics and 71 requirements/eight optional ideas retain their status, owner, scope and acceptance. Exact Atlas source0ac11ca2/tree0418fa40, four learner runtimes and production Review are bound by the current delivery fixture; only TEACH-04 evidence and engineering source/Review baseline advance. No geometry, model, scan, mask, approval or coverage-count change. Radiologist sign-off and acquired-image, real hosted/browser, clinical and public-release gates remain open; no clinical or public-release approval is claimed.
+- 2026-10-17 · revision 38: Refreshes the installed Review binding to4fb502a3 and adds bounded CT-loading, scoped Studio draft/context, uncertain-save, selected regression and source-only recovery evidence. All71stable items/eightoptionalideas, priorities, scopes, owners, statuses and original acceptance remain unchanged; anatomy/topic counts and Atlasbc925194/treea26d0f39 are unchanged.419selected cases are resolved, including five unchanged passes retained with exact source identity and the corrected shoulder replay;820definitions are an inventory, not a whole-suite pass. Types/build/Review and source readback pass. Actual-React synthetic tests and local-pilot course GET/navigation do not establish real hosted sign-in/D1 mutation, full desktop/assistive acceptance, atomic organisation continuity, registration or clinical/release approval. No course submitted, mask/model/desktop-PACS/permission/dependency/fee/public-deployment change or new GitHub/off-device backup. Remaining independent gates stay open; they do not stall safe development.
+- 2026-10-17 · revision 37: Twelve source-bound foot arterial X-ray draft placements across six bilateral groups are delivered coherently with four learners and protected Review. Only TEACH-04 evidence advances; all71items/eightideas, statuses and original acceptance remain unchanged. Root topic counts are9314draft/583pending/39generated, not unique lessons or completion. Plain radiography is distinct from angiography; no acquired image, geometry, accepted mask, independent access, registration or approval changes. Current sourcebc925194/treea26d0f39/Review44b7f4a5 and1514Review source files; canonical installation and preview are recorded separately. Signed-in/browser/GPU/hosted-D1/clinical and whole-release gates remain open; no public deployment or new fee.
+- 2026-10-16 · revision 36: Current-draft correction lineage and compact next-step guidance reach the Studio summary and live editors with exact authority/source/audit verification and request-start/completion invalidation. Adds bounded STUDIO-04 evidence only; status remains partial, all71items/eightideas/originalacceptance preserved. Source58926355/Review56b9e313, learner modules, geometry/held anatomy/accepted masks and independent Atlas/case/lecture access stay unchanged. No replacement, learner migration, approval transfer, new permissions/schema/dependencies/fees or public deployment. Canonical integration/type/build/synthetic checks do not confer signed-in/browser/hosted-D1/clinical or whole-release acceptance.
+- 2026-10-16 · revision 35: Reversible native CT/MRI image-focus layout and private Review filter recovery add bounded desktop/keyboard UI evidence to UX-01/02 without changing either open status or acceptance. Four learning modes, auto-loading review, combined model/worksheet and separate learner/Studio/review destinations remain. Normal Review rebind/build includes the native shell/shortcut/CSS/helper; source58926355, four learner exports, counts, models, accepted masks and private inputs stay unchanged. All71items/eight optional ideas and original acceptance remain. No approval migration, access/permission/schema/asset/fee change or public deployment. Actual signed-in/browser/GPU, hosted-D1, clinical and whole-release gates remain open.
+- 2026-10-16 · revision 34: Eight exact-source intracranial arterial Ultrasound drafts across five families are coherently imported at58926355 into four normal learner exports and1511 Review source files. Totals9302 draft/595 pending/39 generated placements;9928 other lessons remain unchanged. All71 items/eight optional ideas, statuses, evidence and acceptance criteria remain exact. Immutable revision33 and f1 delivery proofs retained. No clinical approval, acquired images, geometry, accepted mask, entitlement, desktop PACS or public release changes. Whole-suite and browser/clinical/release acceptance remain open.
+- 2026-10-16 · revision 33: Eight source-bound intracranial arterial Ultrasound drafts are committed and source-backed up as pending source58926355/treeba724f0a, not imported into the unchanged f1dc0ccc website/Review baseline. Full current transition coverage preserves9,928 other lessons and1,096 other worksheets; no geometry, accepted masks, private inputs, approvals or independent access change. TEACH-01 advances only to partial with evidence; all71 items/eight optional ideas, original acceptance criteria and other statuses remain. Source totals9302draft/595pending/39generated are distinct from the running website. Coherent normal learner/Review import is next, not a clinical-signoff wait. Whole-suite, signed-in/GPU/hosted-D1 and release gates remain open; no public deployment or website/off-device/private-data backup claim.
+- 2026-10-16 · revision 32: Added manual exact-request correction creation status recovery for teaching, assessment and lecture workbooks. Current institution authority, immutable source and audited target are rechecked before returning a historical receipt; uncertainty never authorizes another creation request. Original publications, attempts and independent access remain unchanged. STUDIO-04 remains partial: replacement publication, affected-link/notices policy and course-release cutover remain separate. All71 items/eight optional ideas, statuses, acceptance criteria and current Atlas/Review baseline are preserved; only STUDIO-04 evidence advances. Original failures and incomplete whole-suite, signed-in browser, hosted-D1 and clinical gates remain. No actual workbook mutation, public deployment, new dependency/asset/fee/permission/schema or backup claim.
+- 2026-10-16 · revision 31: Four shared delivery test fixtures now bind the exact current Atlas delivery while retaining immutable historical source/model/teaching/access assertions.17 pre-repair sources are hash-frozen; interosseous CT scope and independently admitted MRI/US drafts have direct current semantic checks. Only REL-01 evidence advances, still partial. All71 roadmap items/eight optional ideas, statuses and acceptance criteria remain, with the exact unchangedf1dc0ccc source and Review baseline. Original failed receipts and the incomplete whole-suite audit remain; no clinical, physical-browser or public-release approval is claimed.
+- 2026-10-16 · revision 30: 36 exact-source hand-vessel X-ray teaching drafts across19 families are locally imported with1508 Review source files and four normal learner exports. Totals become9294 draft/603 pending/39 generated placements. No anatomy, geometry, accepted masks, tours, permissions, clinical approval or independent access changes. All71 items/eight optional ideas, statuses, acceptance criteria and item evidence remain unchanged; immutable revision29 and prior delivery tests are retained. Whole-suite, browser and release acceptance remain open.
+- 2026-10-16 · revision 29: Added protected exact-source correction drafts for published teaching, assessment and lecture workbooks under a separate new draft ID, with immutable manifests, current authority, fresh audit-gated transactional copying and strict source/receipt checks. Published originals, independent access, learner evidence and review/publication gates remain unchanged. Replacement, affected-link/notices policy and release cutover remain separate; STUDIO-04 stays partial. Atlas8d32653e/tree876d7c8b, Review2e620c81, anatomy/teaching/assets/private/mask inputs, all 71 items/eight ideas, statuses and acceptance criteria are preserved; only STUDIO-04 evidence advances. No actual workbook, clinical or learner mutation, public deployment or new service/dependency/fee/permission/schema is claimed.
+- 2026-10-16 · revision 28: Added one exact current Atlas delivery fixture and fail-closed test contract for all four learner runtimes, protected Review and the model registry. Current viewer and clinical-review checks use the verified current binding while immutable historical proofs retain their original commits, hashes and behavior. Original failures and focused reruns are recorded separately; the full suite remains incomplete. Baseline Atlas8d32653e/tree876d7c8b, Review2e620c81, all anatomy/teaching/model/private/accepted-mask inputs, 71 items/eight optional ideas, statuses and acceptance criteria remain unchanged. Only REL-01 evidence advances; no clinical approval, patient registration, browser/GPU acceptance or public release is claimed.
+- 2026-10-16 · revision 27: 56 exact-source spinal muscle X-ray drafts add family-specific bony orientation and explicit projection limitations. The locally imported source8d32653e/tree876d7c8b and normal Review binding are recorded with1505 source files; totals become9258 draft/639 pending/39 generated topic placements without changing anatomy, source models, accepted masks, 3D tours or independent access. All71 items/eight optional ideas, statuses, acceptance criteria and item evidence remain unchanged. Revision26 is frozen with its original assertions. Clinical approval, acquired muscle visibility, validated attachment mapping, patient registration, signed-in browser acceptance and public release are not claimed.
+- 2026-10-16 · revision 26: Bounded authored-tour CT/MRI/3D steps now offer explicit related lecture discovery and a validated exact-step return from published or unavailable lectures. Lecture access remains independent from Atlas access; stale or malformed source/context links refuse, and no scan, mask, registration or selection state is transferred. Local focused checks (89 passing cases), normal Review binding and production build are recorded separately; they do not establish signed-in browser acceptance, clinical approval, patient registration or public release. The Atlas4e9f5385/tree4a499452 source,1502 Review source files,9202 draft/695 pending/39 generated placements, all71 items/eight optional ideas, statuses, acceptance criteria and clinical holds remain unchanged. Revision25 is frozen with its original assertions; only Review binding identity and IMG-04 evidence advance.
+- 2026-10-16 · revision 25: Updated the locally imported Atlas baseline to exact source4e9f5385/tree4a499452 and Reviewfbd42e23 with1502 Review source files. Six source-bound cervical X-ray drafts shift9202 draft/695 pending while39 generated placements and the existing anatomical/topic scopes remain unchanged. A protected published-workbook archive/urgent-withdrawal routine adds an exact-version governed request, audit batch and preserved submitted evidence; this is partial STUDIO-04 progress. Correction/supersession, affected-link and notice policy, actual browser acceptance and owner release decisions remain open. All71 items/eight optional ideas, statuses, acceptance criteria, clinical holds and independent access gates remain unchanged. Historical revision24 assertions are frozen separately; no clinical approval or public release is claimed.
+- 2026-10-16 · revision 24: Advanced TEACH-11/STUDIO-02 to partial with a real local source-pinned PowerPoint quarantine lane: six decks/377 slides, all part hashes/order and whitespace-normalized slide/note XML text independently checked. Actual structured sources and four rights ledgers inspected read-only. Fracture70-to61 and spine91-to82 count differences are explained by static explicit producer filters; all143 retained titles/note prefixes align in order, without claiming complete body/visual fidelity or historical build invocation. No automatic title/asset/curriculum substitution, live import, rights/privacy/clinical approval, rendered fidelity or public release. Seventeen synthetic checks run:16pass/one actual Windows symlink creation skip, with separate ZIP-symlink/junction guards executed. IMG-04 is partial for the previous verified multi-pin head lecture links, not wider-body completion. Current unchanged-source Review8b17 binding is recorded; all71 items/8 optional ideas, original acceptance scope, clinical holds and separate access remain. Historical revision23 register and assertions retained independently.
+- 2026-10-16 · revision 23: Installed the source408759 wrist/foot teaching batch through four normal exports, normal protected Review import/bind/build and four actual coverage producers. Review8dd5e6e5 has1499 source files/46 viewer files/22 existing packages. All137 models/144 paths/199072480 canonical bytes, source holds, native scans/masks/private inputs and administrator-review access remain unchanged. Coverage167 inputs still split141 imported/26 source-only; only exact package metadata and provenance stamps advance. Fifty current-delivery,56 integrated teaching/access and373 regional cases pass (479 across three runs), plus TypeScript/Review/inventory/coverage checks. A staging comparison's omitted nested provenance stamps were diagnosed and narrowly checked, retaining the original failure, without weakening any application gate. Current test pins advance while exact historical graphs/hashes and ac714/9f mapping/content projections remain. Revision22 pending-source and21 integrated-source assertions stay hash-frozen. Production-build, preview and recovery results belong to the exact integration checkpoint. All71 items/eight optional ideas/statuses remain; no clinical approval, patient registration, new fees or public deployment.
+- 2026-10-16 · revision 22: Added four source-bound wrist/long-plantar X-ray orientation drafts at clean Atlas408759d5. Exact admission tests preserve9932 other placements and reject320 altered identities,20 stale/forged worksheets and12 stale/forged saves with zero storage calls. Types, content contract, body Review, earlier nasal MRI delivery, snapshots, summaries and production build pass. A staging receipt-name collision is recorded separately from the successful build and corrected without rerunning it or weakening source checks. Models/private inputs/accepted masks remain unchanged. The website baseline staysac714/Review4ef80039; candidate is explicitly not imported. Source-only GitHub backup and14-file restored recovery are verified. Revision21's exact imported-baseline assertions are retained in a hash-frozen fixture; current pending-source assertions are added. All71 roadmap items/eight optional ideas and their statuses remain unchanged.
+- 2026-10-16 · revision 21: My Learning adds a feature-detected native Navigation API guard for trusted, cancellable same-document Back/Forward moves to a different route/query. Dirty forms and in-flight saves can cancel before replacement; accepted, hash-only, clean, external/new-document, non-cancellable and unsupported moves retain normal handling. No sentinel history, router interception, browser storage, autosave or private-data writes. Existing link/unload safeguards and all71 item/eight idea statuses remain. Native-browser acceptance and universal SPA history protection are still unproven.
+- 2026-10-16 · revision 20: Imported verified ac714 runtimes, protected Review and refreshed coverage coherently into the canonical local website after explicit preview-restart authorization. Baseline records five new MRI drafts (9192 draft/705 pending) and1497 Review inputs; models, private packets, accepted masks and all71 item/eight idea statuses are preserved. Source-only recovery and focused checks remain distinct from full-release/browser/clinical approval. Original revision19 pending-source assertions retain a hash-pinned historical fixture.
+- 2026-10-16 · revision 19: Regional MRI/guide suite now passes373cases after source-bound readiness reconciliation. Original276draft/4pending assertions replay against complete immutable2fd70094 imported Atlas text graph and nine frozen original website adapters. Current9f separately proves280draft/0pending and exactly four popliteal artery/vein X-ray readiness transitions; borrowed epochs/revisions are refused. Four minimal binding fixtures are explicitly not original full manifests or a historical website/release proof. Source-only test fixture removes dependence on old staging/recovery paths. No application, teaching, model, mask, private, Review, access or source/import changes. Original failures remain; regional success is not full-release/browser/clinical acceptance. All71 items/eight optional ideas and statuses remain.
+- 2026-10-16 · revision 18: Added explicit native MRI guide Play/Pause and shared0.5-3x caption reading speeds to all five existing knee paths. Automatic steps require the current exact painted/visible accepted annotation and a unique accepted immediate next target; missing/ambiguous/deferred geometry pauses without substitution. Manual interaction, dirty corrections/source/errors, hidden/blur, speed/motion and unmount stop playback; no focus theft, score, completion, registration or approval is added. Wider regional run372 has371pass/one unchanged baseline readiness-fixture failure. A separate old posterior harness literal is exactly reconciled and its three behavior cases pass; original failures are retained. Tests/types/Review/build are bounded, not browser/full-release evidence. All71 items/eight optional ideas and all statuses remain.
+- 2026-10-16 · revision 17: Fixed Regional MRI practice terminal-answer races: correct/revealed feedback is synchronously latched before queued clicks or answer-overlay callbacks, with incorrect retries and committed source/activity ownership preserved. Studio assessment duration is now required only while active, retaining native range validation and disabled teaching/lecture inputs. Initial reproduction failures are retained; targeted tests/types/Review verification/build pass, not physical-browser/full-suite/clinical/release acceptance. No scans, masks, real decisions, API/database/access or source/module import changes. All71 items/eight optional ideas and their statuses remain; existing large-chunk warnings and independent release gates stay open.
+- 2026-10-16 · revision 16: Added portable metadata-only producers and replayed all four actual coverage inventories at clean ac714061. Counts, source holds, frames, target groups and reference classifications are exact; all166 existing dependencies remain, with package.json newly recorded for ESM interpretation (167 total,141 imported/26 source-only). Canonical website9f snapshots/view bindings remain unchanged pending coordinated import. Initial legacy working-directory failure is retained and corrected in an isolated restoring wrapper.36 targeted cases, actual r2 replay/reconciliation and unchanged Review verification pass; no full-suite/browser/clinical/publication result inferred. All71 items/eight optional ideas and their statuses are preserved.
+- 2026-10-16 · revision 15: Canonical Atlas summaries were regenerated and verified at clean ac714061: five nasal MRI placements move pending to draft; no geometry, acquired image, clinical approval or registration change. BASE-02 now verified-local. The website baseline remains9f, distinct from the pending source candidate. Four normal runtime exports are staged with unchanged model bytes; import awaits the local preview restart answer. Three immutable Git-only test locators are separated from unchanged current-HEAD gates; six new checks/types/Review verification pass. All71 items/eight optional ideas and all other item statuses remain.
+- 2026-10-16 · revision 14: Added My Learning guards for unsaved mounted note/revision forms and in-flight saves on ordinary in-app page links and native unload. Same-page anchors/new tabs/downloads remain usable; one confirmed immediate unload avoids a duplicate warning and its permission expires. Clean forms remove the unload listener; input/change and save lifecycle refresh live state without autosave/browser storage. Integrated59 handler/SSR/event tests pass, including actual component/ref/effect wiring. Arbitrary imperative router transitions, SPA Back/Forward and physical-browser acceptance remain open. Separately staged five source-bound nasal-cartilage MRI proposals; their wrapper-only candidate checks are not canonical resolver integration, new acquired imaging or clinical approval. V1 MRI was already draft, so no replacement was authored. All71 items/8 optional ideas and existing statuses remain.
+- 2026-10-16 · revision 13: Fixed actual My Learning save races: note/revision saves reset only the exact submitted draft, preserve edits made during the request with an explicit unsaved message, and synchronously reject duplicate note/revision/complete-review submissions. Malformed success envelopes or render-invalid records retain drafts and the prior portfolio; deliberate retry is available after failure. Original component fails7 of13 targeted cases; corrected combined53 cases pass, including existing form/navigation contracts. No autosave/browser storage, API/authorization change, live personal record mutation or clinical decision occurs. This bounded fix does not claim full unsaved-navigation protection or physical-browser acceptance; all71 roadmap items/8 optional ideas and their statuses remain.
+- 2026-10-16 · revision 12: Reconciled current regional discovery against complete saved Atlas tour graphs: original47/282 and portal-era48/290 remain independently exercised; current51/309 includes three added tours/16 stops and a separately revised lower-venous tour/three extra stops. All unaffected authored tours remain exact, current source/pins match9f, and changed-source/metadata/URL refusals remain. The regional reference index has35 rows/280 draft topics; four exact bilateral popliteal X-ray topics changed pending to draft at immutable source identities. The original276/4 website assertion and247-case receipt are archived, not claimed as a fresh historical full-website replay. Fresh25-case current/UI verification passes after a retained citation-format harness diagnostic. All71 roadmap items/8 optional ideas and existing statuses stay; no full-suite, clinical, browser or deployment pass.
+- 2026-10-16 · revision 11: Integrated coherent whole-epoch thoracic quiz/core test repairs and two exact CT sequence-list updates. Five historical cases pass with all transition/refusal assertions;43 current/head/lecture cases pass freshly after correcting a new harness to follow reachable reasoning modules. These48 distinct passes are from separate source-bound receipts, not a fresh48-case combined run. Original47/48 diagnostic and full baseline174 failures/2 skips remain. Current27 thoracic quiz slots and five core selections are checked for exact identity, draft packets, grading and reachable emitted content. No clinical, complete-suite, browser, deployment or acquired-image claim; all71 roadmap items/8 optional ideas and existing statuses remain.
+- 2026-10-16 · revision 10: Added an authorized read-only Anatomy coverage and gaps page, reachable from secondary Clinical Review workflows. Region filtering applies only to documented targets; root, nested, independent and shoulder counts stay separate/all-region. Exact snapshot and imported-source identities fail closed; source-only metadata and original-mesh verification limits are disclosed. Normal Review rebinding does not read, migrate or invent clinical decisions. All71 items/8 optional ideas, ANAT-01 partial and existing owner/release gates remain. The separately passed5-case thoracic candidate remains staged, not integrated.
+- 2026-10-16 · revision 9: Integrated hand/foot Ultrasound historical/current delivery repairs and the head compact-comparison harness repair. Two focused runs pass29 distinct cases across5 entries, with original immutable admission, geometry, emitted-teaching and refusal assertions retained. The MRI Review page test needs no additional change and passes14 authorization/independent-packet cases. Original full baseline remains174 failures/2 skips; no new full-suite or browser pass is inferred. REL-01 stays partial; all71 roadmap items/8 optional ideas and owner gates remain.
+- 2026-10-16 · revision 8: Integrated four exact-source coverage inventories into repository-owned documentation and a no-overwrite/read-only checker with166 committed-and-working dependency checks. Root/nested/independent/shoulder and reference-file units remain separate. ANAT-01 is partial because the expected curriculum is not exhaustive; ANAT-17 is verified only for current source-metadata reconciliation of all441 differences, not original OBJ, clinical or geometry acceptance. All71 items and8 optional ideas remain; release regression work continues independently.
+- 2026-10-16 · revision 7: The normal test command now inventories and runs both TS and mjs entries with stable-input/process receipts, explicit case counts and separate unskipped-coverage claims. Synthetic fixtures stay ignored; private exclusions are case-insensitive. Twenty-one baseline-failed entry fixtures now preserve historical proofs and verify current9f bindings, covering navigation/tours and selected regional anatomy. The source-bound integrated batch passes71 cases across22 entries; the complete suite is not rerun or claimed green. The two original platform skips are identified as unavailable Windows symlink privileges. REL-01 remains partial; runtime, anatomy, privacy, clinical and release gates are not weakened.
+- 2026-10-16 · revision 6: Added six separate source-bound facial educational review streams and lazy worksheet forms, surfaced as two compact clinical inbox groups. All three newest exact-kind records are required for group acceptance; stale, partial, corrupt and unavailable evidence cannot become approval. Existing account/institution, CSRF, body-size and atomic expected-version guards are retained, with working-copy and uncertain-save protections. No real owner decisions were read or written, no broad clinical/publication/registration approval is claimed, and learner Draft labels remain. TEACH-10 stays needs-owner; IDEA-04 and REL-01 remain partial pending their separate full-scope acceptance criteria.
+- 2026-10-16 · revision 5: Integrated three source-bound facial CT/generic-3D teaching and question drafts with an independently verified clinical packet and authorized read-only Review evidence. Neutral container headings no longer imply Draft while notes are unavailable; actual resource disclosures remain. Existing39 notes,42 semantic links and six CT-bone packets are preserved. No MRI fallback or spatial/clinical approval is invented. The frozen720-entry baseline is terminal (3036 pass,174 fail,2 skip); original failures and targeted harness repairs remain source-bound, and REL-01 and IDEA-01 stay partial. New native notes do not complete pending root-body modality placements, independent packet decision authoring, browser acceptance or release.
+- 2026-10-15 · revision 4: Implemented the owner-requested first linked-learning UI milestone: a compact head-structure learning area across existing 3D and CT/MRI, honest draft/unavailable labels and a separate access/review key, plus canonical saved-course/resume links and distinct My Learning notes/revision/completion sections. Missing reference teaching and unversioned scan positions are not substituted. IDEAs01/02/04 remain partial: wider-body/US/X-ray resources, source-bound review-state delivery and unified weak-topic/bookmark aggregation remain. Focused software checks do not imply browser, clinical or release approval.
+- 2026-10-15 · revision 3: Continued candidate-bound release assurance across airway/hepatic, coronary, cranial, cricothyroid, eye, foot/cerebral, femoral and compact-study fixtures. Historical whole-graph/source/notice proofs remain separate from current delivery; current resolver and Review agree on all 28 tested foot/cerebral placements. No full-suite, browser, clinical or public-release pass is inferred. A concrete learner-navigation follow-up is recorded separately without inventing unversioned CT/MRI slice restoration.
+- 2026-10-15 · revision 2: Release assurance advanced: repaired historical/live fixture boundaries in fourteen test entry files, retained exact milestone hashes and current import identity checks, and strengthened carpal notice refusal/transition coverage. Focused combined checks and source-only recovery have separate receipts; a full-suite, browser or release pass is not claimed. Eight optional completeness ideas and all owner-review requirements remain unchanged.
+- 2026-10-15 · revision 1: Created source-recomputed baseline, full-roadmap checklist, owner input queue and optional product ideas. No clinical approval, private decision count or public completion inferred.

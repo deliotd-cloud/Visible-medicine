@@ -1,0 +1,2 @@
+import {runFrozenHeadMaskEpoch} from './historical-head-mask-epoch.mjs';
+runFrozenHeadMaskEpoch("tests/clinical-review-inbox-navigation-revision.test.mjs",import.meta.url);

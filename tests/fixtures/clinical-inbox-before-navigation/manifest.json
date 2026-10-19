@@ -1,0 +1,20 @@
+{
+  "schema": "vm-clinical-inbox-before-navigation-1",
+  "records": [
+    {
+      "path": "docs/completion-checklist.json",
+      "frozenPath": "tests/fixtures/clinical-inbox-before-navigation/docs__completion-checklist.json",
+      "sha256": "e9275aab9ab9cb29a4dedbdde93c529439bdb57fbbf591f70c81d1bb7a7eaaca"
+    },
+    {
+      "path": "tests/head-comparison-renderer-revision.test.mjs",
+      "frozenPath": "tests/fixtures/clinical-inbox-before-navigation/tests__head-comparison-renderer-revision.test.mjs.txt",
+      "sha256": "c43cbdee429d6a933f04b520797f163d7bf7ee44c67074b4fa9cd2d2ea11c1b2"
+    },
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "frozenPath": "tests/fixtures/clinical-inbox-before-navigation/tests__fixtures__current-atlas-delivery.json",
+      "sha256": "9318b9afe055e82ab24c390e6984310aa7f737acb933f3af1037d2d1673730db"
+    }
+  ]
+}

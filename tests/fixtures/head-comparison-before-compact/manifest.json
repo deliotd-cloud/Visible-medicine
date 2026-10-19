@@ -1,0 +1,37 @@
+{
+  "schema": "vm-head-comparison-before-compact-1",
+  "reviewIntegration": "3005a149b529f7734880ab139ac1433bbdffdce2f5b1aab474ba583713fdf6fe",
+  "source": "0ac11ca2eb8effe47f2b6927f7987a9a36c7e3a2",
+  "records": [
+    {
+      "path": "tests/fixtures/current-atlas-delivery.json",
+      "frozenPath": "tests/fixtures/head-comparison-before-compact/tests__fixtures__current-atlas-delivery.json",
+      "sha256": "4e666034f795cad89148477f46105ea81874186278c1b5655bc3398f4e826f87"
+    },
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "frozenPath": "tests/fixtures/head-comparison-before-compact/tests__current-atlas-delivery.test.mjs.txt",
+      "sha256": "63a1b2f2d77b71e417315065d0aa04a82807ec2c1f5b417b50d56eacd949853d"
+    },
+    {
+      "path": "tests/completion-checklist.test.mjs",
+      "frozenPath": "tests/fixtures/head-comparison-before-compact/tests__completion-checklist.test.mjs.txt",
+      "sha256": "49fc904ecd7aba5f9f240c3cf330edd80ba849f152feb8abf289e2614db4a13a"
+    },
+    {
+      "path": "docs/completion-checklist.json",
+      "frozenPath": "tests/fixtures/head-comparison-before-compact/docs__completion-checklist.json",
+      "sha256": "1b6cf0306f654608c7012ae2a9732510c8816e1ccdad8777d2cb95ecadd1fb4e"
+    },
+    {
+      "path": "atlas-review/manifest.json",
+      "frozenPath": "tests/fixtures/head-comparison-before-compact/atlas-review__manifest.json",
+      "sha256": "94545496756b916159d1a32873b2d69c7c0119ff34a7aeb0fab5d20727d8de42"
+    },
+    {
+      "path": "public/atlas-review-viewer/manifest.json",
+      "frozenPath": "tests/fixtures/head-comparison-before-compact/public__atlas-review-viewer__manifest.json",
+      "sha256": "8273ddfa5372c853647b9a114a21f5f43335f73b980b4a2f71e78f700581c7b8"
+    }
+  ]
+}

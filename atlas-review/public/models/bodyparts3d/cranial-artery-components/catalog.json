@@ -1,0 +1,2079 @@
+{
+  "version": 1,
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "parents": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "fmaId": "FMA50519",
+      "name": "Right posterior inferior cerebellar artery",
+      "sourceName": "right posterior inferior cerebellar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-arteries",
+      "nodeName": "FMA50519",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1700",
+          "sha256": "5987856de318a38d3b9507914b325ed2b8ee703ef2ea26e11b6e69637e472ae6"
+        },
+        {
+          "file": "FJ1701",
+          "sha256": "5a7c90c4da21a6ba5277c5af6aad8c9215e9de1efacd4c0d57bba27f51c59a7f"
+        },
+        {
+          "file": "FJ1702",
+          "sha256": "f136197e1358777d4f7f09919beeee17d2b1d9f74a883fef3376de39dec01219"
+        },
+        {
+          "file": "FJ1703",
+          "sha256": "fc554f9c62a3f7cd91a390c920eec88716c368f59197c6556ad2d8a1788a40c8"
+        },
+        {
+          "file": "FJ1704",
+          "sha256": "1f20e9f325743ddd9734d462ea2aea36906ac724d158068291336dbf26577a2f"
+        },
+        {
+          "file": "FJ1705",
+          "sha256": "bb98b100b15268a2ecdc42c4dcc78b9382a960d31fd50085608cb0e46eee4881"
+        },
+        {
+          "file": "FJ1706",
+          "sha256": "badb36a94cc4465eed8baa283affe9b8c004ec2c7acfd265ed6804509a548005"
+        },
+        {
+          "file": "FJ1707",
+          "sha256": "db35aca6b5d0270c7161f7ad530f907bb7eaac3dd757d928e7c70114b496a3f9"
+        },
+        {
+          "file": "FJ1708",
+          "sha256": "a80d4d0fe245d8cc6480d8ab7629a3c7d8a6369b0e405d13e884fd7ac4e60363"
+        },
+        {
+          "file": "FJ1709",
+          "sha256": "523b687e09bf19e12a2424864aad6baf3d39b9d2c3f7746efb9160f61022dc4f"
+        },
+        {
+          "file": "FJ1710",
+          "sha256": "b04a1ceb715c72caaa141dba9dc792d9ed4718ec4a2100b5fbf7f2fe1d163af7"
+        },
+        {
+          "file": "FJ1711",
+          "sha256": "7d066e0e4f2974c543d43b7735c9679c67a359d98cd267b635d8dc247c28b881"
+        },
+        {
+          "file": "FJ1715",
+          "sha256": "8ad649224545e4356d6f6d42d7ef466b1c90ca9228bf819e06042823253a033a"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.5357940196990967,
+          6.877699851989746,
+          -0.3810029923915863
+        ],
+        "max": [
+          -0.05455080047249794,
+          7.172999858856201,
+          0.2290010005235672
+        ]
+      },
+      "center": [
+        -0.2951724100857973,
+        7.025349855422974,
+        -0.07600099593400955
+      ],
+      "anchor": [
+        -0.2642489969730377,
+        6.941800117492676,
+        -0.09603100270032883
+      ],
+      "coverageNote": "Thirteen original IS-A files form fourteen components. Disconnected source pieces are retained without inventing a continuous lumen or complete territory. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "fmaId": "FMA50520",
+      "name": "Left posterior inferior cerebellar artery",
+      "sourceName": "left posterior inferior cerebellar artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-arteries",
+      "nodeName": "FMA50520",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1700M",
+          "sha256": "c7ad4faac2f804bec9abcb30f1437d63fada79d98e0424b788364a34f210b97c"
+        },
+        {
+          "file": "FJ1701M",
+          "sha256": "dc6b96d39073c2900440a62f4597757cba04261c800b6e30678ec8c0868cd58f"
+        },
+        {
+          "file": "FJ1702M",
+          "sha256": "001db67be7c0dd4543b1990e162da85d28161fd337801d7deae0dc79a221ad45"
+        },
+        {
+          "file": "FJ1703M",
+          "sha256": "129937b884dfdac2aad686af0d4a60636ee1f51743a58378ed8d9a6b9221405c"
+        },
+        {
+          "file": "FJ1704M",
+          "sha256": "c0ee60d6f6133e3eabc5269c5570b059723c0936b62942bbb52be4d77fc56340"
+        },
+        {
+          "file": "FJ1705M",
+          "sha256": "9b540a65bbe225b8913789ab242568f09f0db81c77b585add270f4e2d1376d6d"
+        },
+        {
+          "file": "FJ1706M",
+          "sha256": "1908978ece7bc3bd21bf022d3082d6740c3b037b213f7a2ab8d9f9c7551e8d04"
+        },
+        {
+          "file": "FJ1707M",
+          "sha256": "f484c75fbbf1a318fea953ffbf8afac5a256bb417fcbb9866c72c1fadcd21899"
+        },
+        {
+          "file": "FJ1708M",
+          "sha256": "11ed732710d8153392d57dc16410bd33f30d6ff68920990748830e75765a7afd"
+        },
+        {
+          "file": "FJ1709M",
+          "sha256": "77b2596d1400994b21c8b1c1ddc7562234aabaf0e0dc8ea02a050991e95bc248"
+        },
+        {
+          "file": "FJ1710M",
+          "sha256": "8ef3f3a359bff05efc0763815eb620cf83d6abf2142749fd884b87fef4770289"
+        },
+        {
+          "file": "FJ1711M",
+          "sha256": "aa90b423934e58dd85d5ccb77c18d348d5dfb27a07c9262c92fcb74a26d4f4b0"
+        },
+        {
+          "file": "FJ1715M",
+          "sha256": "f1b242ae353829ed3f886c4b5f0e8b1874b948cfa86f42165b09534c83f1ffc9"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.05455080047249794,
+          6.877699851989746,
+          -0.3810029923915863
+        ],
+        "max": [
+          0.5357940196990967,
+          7.172999858856201,
+          0.2290010005235672
+        ]
+      },
+      "center": [
+        0.2951724100857973,
+        7.025349855422974,
+        -0.07600099593400955
+      ],
+      "anchor": [
+        0.2642489969730377,
+        6.941800117492676,
+        -0.09603100270032883
+      ],
+      "coverageNote": "Thirteen original IS-A files form fourteen components. Disconnected source pieces are retained without inventing a continuous lumen or complete territory. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "fmaId": "FMA50082",
+      "name": "Right middle cerebral artery",
+      "sourceName": "right middle cerebral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-arteries",
+      "nodeName": "FMA50082",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1662",
+          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+        },
+        {
+          "file": "FJ1663",
+          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+        },
+        {
+          "file": "FJ1692",
+          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.4430699944496155,
+          7.345099925994873,
+          0.26600000262260437
+        ],
+        "max": [
+          -0.08286440372467041,
+          7.719600200653076,
+          0.6843600273132324
+        ]
+      },
+      "center": [
+        -0.26296719908714294,
+        7.532350063323975,
+        0.4751800149679184
+      ],
+      "anchor": [
+        -0.2890470027923584,
+        7.52400016784668,
+        0.4779999852180481
+      ],
+      "coverageNote": "Three original PART-OF files form six components; no matching left MCA definition is supplied. Not a complete MCA tree or separate M1/M2 segment model. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "parentBundles": [
+    {
+      "id": "cranial-arteries",
+      "url": "/models/bodyparts3d/cranial-arteries/cranial-arteries.glb?v=3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "bytes": 212796,
+      "sha256": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "structures": 5
+    }
+  ],
+  "structures": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1700",
+      "fmaId": "FMA50519",
+      "name": "Source part 01 · FJ1700",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1700 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1700",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1700",
+          "sha256": "5987856de318a38d3b9507914b325ed2b8ee703ef2ea26e11b6e69637e472ae6"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.22612600028514862,
+          6.877699851989746,
+          -0.135685995221138
+        ],
+        "max": [
+          -0.11196199804544449,
+          6.913700103759766,
+          0.03341099992394447
+        ]
+      },
+      "center": [
+        -0.16904399916529655,
+        6.895699977874756,
+        -0.051137497648596764
+      ],
+      "anchor": [
+        -0.17593500018119812,
+        6.890200138092041,
+        -0.05774199962615967
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 1,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1701",
+      "fmaId": "FMA50519",
+      "name": "Source part 02 · FJ1701",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1701 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1701",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1701",
+          "sha256": "5a7c90c4da21a6ba5277c5af6aad8c9215e9de1efacd4c0d57bba27f51c59a7f"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.2989799976348877,
+          6.940800189971924,
+          -0.3228749930858612
+        ],
+        "max": [
+          -0.10173399746417999,
+          7.058000087738037,
+          -0.17682799696922302
+        ]
+      },
+      "center": [
+        -0.20035699754953384,
+        6.9994001388549805,
+        -0.24985149502754211
+      ],
+      "anchor": [
+        -0.20166699588298798,
+        6.947999954223633,
+        -0.21799999475479126
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 2,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1702",
+      "fmaId": "FMA50519",
+      "name": "Source part 03 · FJ1702",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1702 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1702",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1702",
+          "sha256": "f136197e1358777d4f7f09919beeee17d2b1d9f74a883fef3376de39dec01219"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.248758003115654,
+          6.974299907684326,
+          -0.3752340078353882
+        ],
+        "max": [
+          -0.06385940313339233,
+          7.106200218200684,
+          -0.1252100020647049
+        ]
+      },
+      "center": [
+        -0.15630870312452316,
+        7.040250062942505,
+        -0.25022200495004654
+      ],
+      "anchor": [
+        -0.11639700084924698,
+        6.978000164031982,
+        -0.2680000066757202
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 3,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1703",
+      "fmaId": "FMA50519",
+      "name": "Source part 04 · FJ1703",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1703 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1703",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1703",
+          "sha256": "fc554f9c62a3f7cd91a390c920eec88716c368f59197c6556ad2d8a1788a40c8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.13797399401664734,
+          6.9745001792907715,
+          -0.3810029923915863
+        ],
+        "max": [
+          -0.0757170021533966,
+          7.172999858856201,
+          -0.2577660083770752
+        ]
+      },
+      "center": [
+        -0.10684549808502197,
+        7.073750019073486,
+        -0.31938450038433075
+      ],
+      "anchor": [
+        -0.09799999743700027,
+        7.046000003814697,
+        -0.36751601099967957
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 4,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1704",
+      "fmaId": "FMA50519",
+      "name": "Source part 05 · FJ1704",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1704 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1704",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1704",
+          "sha256": "1f20e9f325743ddd9734d462ea2aea36906ac724d158068291336dbf26577a2f"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.3555389940738678,
+          6.907800197601318,
+          -0.00039500001003034413
+        ],
+        "max": [
+          -0.22041000425815582,
+          6.985000133514404,
+          0.08078300207853317
+        ]
+      },
+      "center": [
+        -0.2879744991660118,
+        6.946400165557861,
+        0.040194001034251414
+      ],
+      "anchor": [
+        -0.28192898631095886,
+        6.953499794006348,
+        0.04689599946141243
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 5,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1705",
+      "fmaId": "FMA50519",
+      "name": "Source part 06 · FJ1705",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1705 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1705",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1705",
+          "sha256": "bb98b100b15268a2ecdc42c4dcc78b9382a960d31fd50085608cb0e46eee4881"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.3713560104370117,
+          6.923799991607666,
+          -0.2707799971103668
+        ],
+        "max": [
+          -0.23114700615406036,
+          7.058000087738037,
+          -0.05891700088977814
+        ]
+      },
+      "center": [
+        -0.30125150829553604,
+        6.990900039672852,
+        -0.16484849900007248
+      ],
+      "anchor": [
+        -0.2853829860687256,
+        6.937699794769287,
+        -0.17290900647640228
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 6,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1706",
+      "fmaId": "FMA50519",
+      "name": "Source part 07 · FJ1706",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1706 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1706",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1706",
+          "sha256": "badb36a94cc4465eed8baa283affe9b8c004ec2c7acfd265ed6804509a548005"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.5357940196990967,
+          6.925899982452393,
+          -0.10927099734544754
+        ],
+        "max": [
+          -0.34330400824546814,
+          7.128600120544434,
+          0.011676999740302563
+        ]
+      },
+      "center": [
+        -0.4395490139722824,
+        7.027250051498413,
+        -0.04879699880257249
+      ],
+      "anchor": [
+        -0.44192901253700256,
+        6.991499900817871,
+        -0.010967999696731567
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 7,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1707",
+      "fmaId": "FMA50519",
+      "name": "Source part 08 · FJ1707",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1707 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1707",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1707",
+          "sha256": "db35aca6b5d0270c7161f7ad530f907bb7eaac3dd757d928e7c70114b496a3f9"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.16310100257396698,
+          6.906599998474121,
+          -0.14841699600219727
+        ],
+        "max": [
+          -0.09840279817581177,
+          6.962500095367432,
+          -0.11631099879741669
+        ]
+      },
+      "center": [
+        -0.13075190037488937,
+        6.934550046920776,
+        -0.13236399739980698
+      ],
+      "anchor": [
+        -0.13392899930477142,
+        6.933499813079834,
+        -0.1408109962940216
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 8,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1708",
+      "fmaId": "FMA50519",
+      "name": "Source part 09 · FJ1708",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1708 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1708",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1708",
+          "sha256": "a80d4d0fe245d8cc6480d8ab7629a3c7d8a6369b0e405d13e884fd7ac4e60363"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.3059290051460266,
+          6.959499835968018,
+          0.06556399911642075
+        ],
+        "max": [
+          -0.27535098791122437,
+          6.989200115203857,
+          0.11846999824047089
+        ]
+      },
+      "center": [
+        -0.2906399965286255,
+        6.9743499755859375,
+        0.09201699867844582
+      ],
+      "anchor": [
+        -0.3022260069847107,
+        6.971499919891357,
+        0.09001699835062027
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 9,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1709",
+      "fmaId": "FMA50519",
+      "name": "Source part 10 · FJ1709",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1709 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1709",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1709",
+          "sha256": "523b687e09bf19e12a2424864aad6baf3d39b9d2c3f7746efb9160f61022dc4f"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.513725996017456,
+          7.021100044250488,
+          0.004858000203967094
+        ],
+        "max": [
+          -0.46941301226615906,
+          7.114999771118164,
+          0.06847000122070312
+        ]
+      },
+      "center": [
+        -0.49156950414180756,
+        7.068049907684326,
+        0.03666400071233511
+      ],
+      "anchor": [
+        -0.5029910206794739,
+        7.06820011138916,
+        0.03385299816727638
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 10,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1710",
+      "fmaId": "FMA50519",
+      "name": "Source part 11 · FJ1710",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1710 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1710",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1710",
+          "sha256": "b04a1ceb715c72caaa141dba9dc792d9ed4718ec4a2100b5fbf7f2fe1d163af7"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.5178200006484985,
+          7.041500091552734,
+          -0.17227999866008759
+        ],
+        "max": [
+          -0.4682910144329071,
+          7.151899814605713,
+          -0.13847500085830688
+        ]
+      },
+      "center": [
+        -0.4930555075407028,
+        7.096699953079224,
+        -0.15537749975919724
+      ],
+      "anchor": [
+        -0.4995900094509125,
+        7.0894999504089355,
+        -0.1539829969406128
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 11,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1711",
+      "fmaId": "FMA50519",
+      "name": "Source part 12 · FJ1711",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1711 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1711",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1711",
+          "sha256": "7d066e0e4f2974c543d43b7735c9679c67a359d98cd267b635d8dc247c28b881"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.33092200756073,
+          6.889400005340576,
+          -0.19912099838256836
+        ],
+        "max": [
+          -0.05455080047249794,
+          6.996699810028076,
+          0.13252699375152588
+        ]
+      },
+      "center": [
+        -0.19273640401661396,
+        6.943049907684326,
+        -0.03329700231552124
+      ],
+      "anchor": [
+        -0.20999999344348907,
+        6.947500228881836,
+        -0.14197300374507904
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 12,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50519-fj1715",
+      "fmaId": "FMA50519",
+      "name": "Source part 13 · FJ1715",
+      "sourceName": "right posterior inferior cerebellar artery / FJ1715 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50519_FJ1715",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1715",
+          "sha256": "8ad649224545e4356d6f6d42d7ef466b1c90ca9228bf819e06042823253a033a"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.5338010191917419,
+          6.902500152587891,
+          -0.14817699790000916
+        ],
+        "max": [
+          -0.12838199734687805,
+          7.151100158691406,
+          0.2290010005235672
+        ]
+      },
+      "center": [
+        -0.33109150826931,
+        7.026800155639648,
+        0.04041200131177902
+      ],
+      "anchor": [
+        -0.22592900693416595,
+        6.914299964904785,
+        0.014016999863088131
+      ],
+      "coverageNote": "Original source-file partition of right posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50519",
+      "role": "source-part",
+      "sourceOrder": 13,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1700m",
+      "fmaId": "FMA50520",
+      "name": "Source part 01 · FJ1700M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1700M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1700M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1700M",
+          "sha256": "c7ad4faac2f804bec9abcb30f1437d63fada79d98e0424b788364a34f210b97c"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.11196199804544449,
+          6.877699851989746,
+          -0.135685995221138
+        ],
+        "max": [
+          0.22612500190734863,
+          6.913700103759766,
+          0.03341099992394447
+        ]
+      },
+      "center": [
+        0.16904349997639656,
+        6.895699977874756,
+        -0.051137497648596764
+      ],
+      "anchor": [
+        0.17593500018119812,
+        6.890200138092041,
+        -0.05774199962615967
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 1,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1701m",
+      "fmaId": "FMA50520",
+      "name": "Source part 02 · FJ1701M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1701M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1701M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1701M",
+          "sha256": "dc6b96d39073c2900440a62f4597757cba04261c800b6e30678ec8c0868cd58f"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.10173399746417999,
+          6.940800189971924,
+          -0.3228749930858612
+        ],
+        "max": [
+          0.2989799976348877,
+          7.058000087738037,
+          -0.17682799696922302
+        ]
+      },
+      "center": [
+        0.20035699754953384,
+        6.9994001388549805,
+        -0.24985149502754211
+      ],
+      "anchor": [
+        0.20166699588298798,
+        6.947999954223633,
+        -0.21799999475479126
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 2,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1702m",
+      "fmaId": "FMA50520",
+      "name": "Source part 03 · FJ1702M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1702M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1702M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1702M",
+          "sha256": "001db67be7c0dd4543b1990e162da85d28161fd337801d7deae0dc79a221ad45"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.06385940313339233,
+          6.973999977111816,
+          -0.3752340078353882
+        ],
+        "max": [
+          0.248758003115654,
+          7.106200218200684,
+          -0.1252100020647049
+        ]
+      },
+      "center": [
+        0.15630870312452316,
+        7.04010009765625,
+        -0.25022200495004654
+      ],
+      "anchor": [
+        0.11639700084924698,
+        6.978000164031982,
+        -0.2680000066757202
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 3,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1703m",
+      "fmaId": "FMA50520",
+      "name": "Source part 04 · FJ1703M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1703M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1703M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1703M",
+          "sha256": "129937b884dfdac2aad686af0d4a60636ee1f51743a58378ed8d9a6b9221405c"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.0757170021533966,
+          6.9745001792907715,
+          -0.3810029923915863
+        ],
+        "max": [
+          0.13797399401664734,
+          7.172999858856201,
+          -0.2577660083770752
+        ]
+      },
+      "center": [
+        0.10684549808502197,
+        7.073750019073486,
+        -0.31938450038433075
+      ],
+      "anchor": [
+        0.09799999743700027,
+        7.046000003814697,
+        -0.36751601099967957
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 4,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1704m",
+      "fmaId": "FMA50520",
+      "name": "Source part 05 · FJ1704M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1704M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1704M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1704M",
+          "sha256": "c0ee60d6f6133e3eabc5269c5570b059723c0936b62942bbb52be4d77fc56340"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.22041000425815582,
+          6.907800197601318,
+          -0.00039500001003034413
+        ],
+        "max": [
+          0.3555389940738678,
+          6.985000133514404,
+          0.08078300207853317
+        ]
+      },
+      "center": [
+        0.2879744991660118,
+        6.946400165557861,
+        0.040194001034251414
+      ],
+      "anchor": [
+        0.28192898631095886,
+        6.953499794006348,
+        0.04689599946141243
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 5,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1705m",
+      "fmaId": "FMA50520",
+      "name": "Source part 06 · FJ1705M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1705M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1705M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1705M",
+          "sha256": "9b540a65bbe225b8913789ab242568f09f0db81c77b585add270f4e2d1376d6d"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.23114700615406036,
+          6.923799991607666,
+          -0.2707799971103668
+        ],
+        "max": [
+          0.3713560104370117,
+          7.058000087738037,
+          -0.05891700088977814
+        ]
+      },
+      "center": [
+        0.30125150829553604,
+        6.990900039672852,
+        -0.16484849900007248
+      ],
+      "anchor": [
+        0.2853829860687256,
+        6.937699794769287,
+        -0.17290900647640228
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 6,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1706m",
+      "fmaId": "FMA50520",
+      "name": "Source part 07 · FJ1706M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1706M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1706M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1706M",
+          "sha256": "1908978ece7bc3bd21bf022d3082d6740c3b037b213f7a2ab8d9f9c7551e8d04"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.34330400824546814,
+          6.925899982452393,
+          -0.10927099734544754
+        ],
+        "max": [
+          0.5357940196990967,
+          7.128600120544434,
+          0.0116779999807477
+        ]
+      },
+      "center": [
+        0.4395490139722824,
+        7.027250051498413,
+        -0.04879649868234992
+      ],
+      "anchor": [
+        0.44192901253700256,
+        6.991499900817871,
+        -0.010967999696731567
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 7,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1707m",
+      "fmaId": "FMA50520",
+      "name": "Source part 08 · FJ1707M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1707M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1707M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1707M",
+          "sha256": "f484c75fbbf1a318fea953ffbf8afac5a256bb417fcbb9866c72c1fadcd21899"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.09840279817581177,
+          6.906599998474121,
+          -0.14841699600219727
+        ],
+        "max": [
+          0.16310100257396698,
+          6.962500095367432,
+          -0.11631099879741669
+        ]
+      },
+      "center": [
+        0.13075190037488937,
+        6.934550046920776,
+        -0.13236399739980698
+      ],
+      "anchor": [
+        0.13392899930477142,
+        6.933499813079834,
+        -0.1408109962940216
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 8,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1708m",
+      "fmaId": "FMA50520",
+      "name": "Source part 09 · FJ1708M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1708M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1708M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1708M",
+          "sha256": "11ed732710d8153392d57dc16410bd33f30d6ff68920990748830e75765a7afd"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.27535098791122437,
+          6.959499835968018,
+          0.06556399911642075
+        ],
+        "max": [
+          0.3059290051460266,
+          6.989200115203857,
+          0.11846999824047089
+        ]
+      },
+      "center": [
+        0.2906399965286255,
+        6.9743499755859375,
+        0.09201699867844582
+      ],
+      "anchor": [
+        0.3022260069847107,
+        6.971499919891357,
+        0.09001699835062027
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 9,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1709m",
+      "fmaId": "FMA50520",
+      "name": "Source part 10 · FJ1709M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1709M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1709M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1709M",
+          "sha256": "77b2596d1400994b21c8b1c1ddc7562234aabaf0e0dc8ea02a050991e95bc248"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.46941301226615906,
+          7.021100044250488,
+          0.004858000203967094
+        ],
+        "max": [
+          0.513725996017456,
+          7.114999771118164,
+          0.06847000122070312
+        ]
+      },
+      "center": [
+        0.49156950414180756,
+        7.068049907684326,
+        0.03666400071233511
+      ],
+      "anchor": [
+        0.5029900074005127,
+        7.06820011138916,
+        0.03385299816727638
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 10,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1710m",
+      "fmaId": "FMA50520",
+      "name": "Source part 11 · FJ1710M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1710M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1710M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1710M",
+          "sha256": "8ef3f3a359bff05efc0763815eb620cf83d6abf2142749fd884b87fef4770289"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.4682910144329071,
+          7.041500091552734,
+          -0.17227999866008759
+        ],
+        "max": [
+          0.5178200006484985,
+          7.151899814605713,
+          -0.13847500085830688
+        ]
+      },
+      "center": [
+        0.4930555075407028,
+        7.096699953079224,
+        -0.15537749975919724
+      ],
+      "anchor": [
+        0.4995900094509125,
+        7.0894999504089355,
+        -0.1539829969406128
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 11,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1711m",
+      "fmaId": "FMA50520",
+      "name": "Source part 12 · FJ1711M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1711M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1711M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1711M",
+          "sha256": "aa90b423934e58dd85d5ccb77c18d348d5dfb27a07c9262c92fcb74a26d4f4b0"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.05455080047249794,
+          6.889400005340576,
+          -0.19912099838256836
+        ],
+        "max": [
+          0.33092200756073,
+          6.996699810028076,
+          0.13252699375152588
+        ]
+      },
+      "center": [
+        0.19273640401661396,
+        6.943049907684326,
+        -0.03329700231552124
+      ],
+      "anchor": [
+        0.20999999344348907,
+        6.947500228881836,
+        -0.14197300374507904
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 12,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:left:source-component:fma50520-fj1715m",
+      "fmaId": "FMA50520",
+      "name": "Source part 13 · FJ1715M",
+      "sourceName": "left posterior inferior cerebellar artery / FJ1715M (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "left",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50520_FJ1715M",
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ1715M",
+          "sha256": "f1b242ae353829ed3f886c4b5f0e8b1874b948cfa86f42165b09534c83f1ffc9"
+        }
+      ],
+      "bounds": {
+        "min": [
+          0.12838199734687805,
+          6.902500152587891,
+          -0.14817699790000916
+        ],
+        "max": [
+          0.5338010191917419,
+          7.151100158691406,
+          0.2290010005235672
+        ]
+      },
+      "center": [
+        0.33109150826931,
+        7.026800155639648,
+        0.04041200131177902
+      ],
+      "anchor": [
+        0.22592900693416595,
+        6.914299964904785,
+        0.014016999863088131
+      ],
+      "coverageNote": "Original source-file partition of left posterior inferior cerebellar artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:left:vessel:left-posterior-inferior-cerebellar-artery",
+      "parentFmaId": "FMA50520",
+      "role": "source-part",
+      "sourceOrder": 13,
+      "sourcePartCount": 13
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
+      "fmaId": "FMA50082",
+      "name": "Source part 01 · FJ1662",
+      "sourceName": "right middle cerebral artery / FJ1662 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50082_FJ1662",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1662",
+          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.29902398586273193,
+          7.360899925231934,
+          0.26600000262260437
+        ],
+        "max": [
+          -0.12385900318622589,
+          7.719600200653076,
+          0.6843600273132324
+        ]
+      },
+      "center": [
+        -0.2114414945244789,
+        7.540250062942505,
+        0.4751800149679184
+      ],
+      "anchor": [
+        -0.2759999930858612,
+        7.497799873352051,
+        0.49000000953674316
+      ],
+      "coverageNote": "Original source-file partition of right middle cerebral artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentFmaId": "FMA50082",
+      "role": "source-part",
+      "sourceOrder": 1,
+      "sourcePartCount": 3
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
+      "fmaId": "FMA50082",
+      "name": "Source part 02 · FJ1663",
+      "sourceName": "right middle cerebral artery / FJ1663 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50082_FJ1663",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1663",
+          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.2619999945163727,
+          7.360199928283691,
+          0.3394710123538971
+        ],
+        "max": [
+          -0.08286440372467041,
+          7.539299964904785,
+          0.5882599949836731
+        ]
+      },
+      "center": [
+        -0.17243219912052155,
+        7.449749946594238,
+        0.4638655036687851
+      ],
+      "anchor": [
+        -0.15782299637794495,
+        7.458199977874756,
+        0.46436700224876404
+      ],
+      "coverageNote": "Original source-file partition of right middle cerebral artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentFmaId": "FMA50082",
+      "role": "source-part",
+      "sourceOrder": 2,
+      "sourcePartCount": 3
+    },
+    {
+      "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
+      "fmaId": "FMA50082",
+      "name": "Source part 03 · FJ1692",
+      "sourceName": "right middle cerebral artery / FJ1692 (source part)",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-artery-components",
+      "nodeName": "FMA50082_FJ1692",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1692",
+          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.4430699944496155,
+          7.345099925994873,
+          0.5297300219535828
+        ],
+        "max": [
+          -0.13142700493335724,
+          7.496399879455566,
+          0.652679979801178
+        ]
+      },
+      "center": [
+        -0.28724849969148636,
+        7.42074990272522,
+        0.5912050008773804
+      ],
+      "anchor": [
+        -0.30438798666000366,
+        7.397600173950195,
+        0.604390025138855
+      ],
+      "coverageNote": "Original source-file partition of right middle cerebral artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      },
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentFmaId": "FMA50082",
+      "role": "source-part",
+      "sourceOrder": 3,
+      "sourcePartCount": 3
+    }
+  ],
+  "bundles": [
+    {
+      "id": "cranial-artery-components",
+      "url": "/models/bodyparts3d/cranial-artery-components/cranial-artery-components.glb?v=8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "bytes": 227840,
+      "sha256": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "structures": 29
+    }
+  ],
+  "regions": [
+    {
+      "id": "head-neck",
+      "name": "Head & neck",
+      "description": "Skull, cervical anatomy, brain and selected cranial nerves"
+    }
+  ],
+  "coverage": {
+    "nerves": "Not included",
+    "organs": "Not included",
+    "vessels": "Original grouped artery source-file partitions only; no new anatomical concepts"
+  },
+  "excluded": [],
+  "clinicalApproval": false
+}

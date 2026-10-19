@@ -1,0 +1,39 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {projectCoverageView,COVERAGE_SOURCE_REVISION,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';
+import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
+const json=p=>JSON.parse(readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex');
+const source='f1dc0ccc54ec82aa774720db3c822d3e0ea9c418',oldSource='8d32653eaac8b86521618c824214dd6af8e35e29';
+const before=json('tests/fixtures/anatomy-coverage-8d32653e.json'),after=json('docs/anatomy-coverage/index.json'),review=json('atlas-review/manifest.json');
+test('exact previous coverage inventory and all anatomical holds survive the teaching-only transition',()=>{
+ assert.equal(before.sourceRevision,oldSource);assert.equal(sha(JSON.stringify(before)),'812f2ad805b2ce0b311e098eb33415019694fb55b872e32d8d09c0d7def8d311');
+ assert.equal(after.sourceRevision,source);assert.equal(COVERAGE_SOURCE_REVISION,source);assert.equal(sha(JSON.stringify(after)),COVERAGE_SNAPSHOT_REVISION);
+ for(const key of ['schema','scopedCounts','documentedRootTargetGroups','independentWithheldSourceCatalogs','referenceBacklog','assessment','remainingScope','countingRules'])assert.deepEqual(after[key],before[key],key);
+ const oldInputs=before.evidence.sourceInputs,inputs=after.evidence.sourceInputs;assert.deepEqual(Object.keys(inputs),Object.keys(oldInputs));assert.equal(Object.keys(inputs).length,167);
+ assert.deepEqual(Object.keys(inputs).filter(p=>inputs[p]!==oldInputs[p]),['package.json']);
+ assert.equal(inputs['package.json'],'c9c047b61e2d8252bb3aa6fe52150412ec7d590f3461551766206e98598f6868');
+ assert.equal(oldInputs['package.json'],'520c2bca09743e299a8a4e5522cd060df9fe7697a501dc644271e63f874eb9e6');
+ assert.equal(after.assessment.anatomicalCompletenessProven,false);assert.equal(after.assessment.clinicalApprovalAsserted,false);
+});
+test('current coverage projects only its exact imported source and rejects old, mixed and altered inputs',async()=>{
+ const view=await projectCoverageView(after,review);assert(view);assert.equal(view.sourceRevision,source);
+ assert.deepEqual(view.counts,{root:1104,nested:108,specimenViews:9,specimenMemberships:356,specimenSelections:267,shoulder:9});
+ assert.equal(await projectCoverageView(before,review),null);
+ const mixed=structuredClone(review);mixed.revision=oldSource;assert.equal(await projectCoverageView(after,mixed),null);
+ const changed=structuredClone(after);changed.documentedRootTargetGroups[0].state='complete';assert.equal(await projectCoverageView(changed,review),null);
+ const forged=structuredClone(review),path=Object.keys(after.evidence.sourceInputs).find(p=>forged.files.some(f=>f.path===p));assert(path);forged.files.find(f=>f.path===path).importedSha256='0'.repeat(64);assert.equal(await projectCoverageView(after,forged),null);
+});
+test('private registered model delivery changes metadata only and preserves every model byte identity',()=>{
+ const oldBytes=readFileSync('tests/fixtures/atlas-model-inventory-8d32653e.json'),bytes=readFileSync('lib/atlas-model-inventory.json'),old=JSON.parse(oldBytes),next=JSON.parse(bytes);
+ assert.equal(sha(oldBytes),'56090796195feead0298e3fe2cd092191f0ab4456c2c669ca0c7e311f90ae71b');
+ assert.equal(ATLAS_DELIVERY_POLICY.manifestRevision,sha(bytes));assert.equal(ATLAS_DELIVERY_POLICY.audience,'administrator-review');assert(!Object.hasOwn(ATLAS_DELIVERY_POLICY,'approvedRevision'));
+ assert.deepEqual(next.models,old.models);assert.equal(next.models.length,137);assert.equal(next.models.flatMap(m=>m.paths).length,144);assert.equal(next.models.reduce((n,m)=>n+m.bytes,0),199072480);
+ assert.deepEqual(next.sources.map(s=>s.module),old.sources.map(s=>s.module));for(const row of next.sources)assert.equal(row.sourceCommit,source);for(const row of old.sources)assert.equal(row.sourceCommit,oldSource);
+});
+
+test("previous cervical source assertions remain hash-frozen",()=>{
+ assert.equal(sha(readFileSync('tests/fixtures/atlas-cervical-source-transition-4e9f5385.txt')),'786f67f4a49e020ece4ee4541db8c19e4c875e0cba3445666eac291f298a3c39');
+ assert.equal(sha(readFileSync('tests/fixtures/atlas-cervical-projection-xray-4e9f5385.txt')),'84030d8a139e66bb0f31a99928df5fb7ee91c66b85a64c468aca0520a34413ec');
+});

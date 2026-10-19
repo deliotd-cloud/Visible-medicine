@@ -1,0 +1,40 @@
+{
+  "localOnly": true,
+  "results": [
+    {
+      "crossPage": true
+    },
+    {
+      "filteredNavigation": true,
+      "dirtyCancelPreserves": true,
+      "sameSelectionNoOp": true,
+      "dirtyConfirmNavigates": true,
+      "boundaries": true
+    },
+    {
+      "layout": "desktop",
+      "width": 1280,
+      "height": 44,
+      "font": 16,
+      "overflow": false
+    },
+    {
+      "layout": "phone",
+      "width": 375,
+      "height": 44,
+      "font": 16,
+      "overflow": false
+    },
+    {
+      "layout": "phone-large",
+      "width": 375,
+      "height": 101.1875,
+      "font": 32,
+      "overflow": false
+    }
+  ],
+  "writes": [],
+  "errors": [],
+  "published": false,
+  "approvalSubmitted": false
+}

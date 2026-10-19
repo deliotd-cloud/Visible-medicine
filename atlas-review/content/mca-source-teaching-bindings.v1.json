@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Source-file teaching drafts only; not branch identification, clinical approval or imaging registration",
+  "parents": [
+    {
+      "id": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "fmaId": "FMA50082",
+      "name": "Right middle cerebral artery",
+      "sourceName": "right middle cerebral artery",
+      "system": "vessels",
+      "category": "vessel",
+      "laterality": "right",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "cranial-arteries",
+      "nodeName": "FMA50082",
+      "sourceTree": "partof",
+      "sources": [
+        {
+          "file": "FJ1662",
+          "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+        },
+        {
+          "file": "FJ1663",
+          "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+        },
+        {
+          "file": "FJ1692",
+          "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.4430699944496155,
+          7.345099925994873,
+          0.26600000262260437
+        ],
+        "max": [
+          -0.08286440372467041,
+          7.719600200653076,
+          0.6843600273132324
+        ]
+      },
+      "center": [
+        -0.26296719908714294,
+        7.532350063323975,
+        0.4751800149679184
+      ],
+      "anchor": [
+        -0.2890470027923584,
+        7.52400016784668,
+        0.4779999852180481
+      ],
+      "coverageNote": "Three original PART-OF files form six components; no matching left MCA definition is supplied. Not a complete MCA tree or separate M1/M2 segment model. Source coordinates and faces retained; radiologist review pending. No patent junction, flow or patient correspondence is established.",
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bindings": [
+    {
+      "conceptId": "mca-source-fj1662",
+      "study": "cranial-artery-components",
+      "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1662",
+        "fmaId": "FMA50082",
+        "name": "Source part 01 · FJ1662",
+        "sourceName": "right middle cerebral artery / FJ1662 (source part)",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cranial-artery-components",
+        "nodeName": "FMA50082_FJ1662",
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1662",
+            "sha256": "afdefea26af3c469cd5cedf56b327c252faeef55466af4e4b83a4f31af4c382b"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.29902398586273193,
+            7.360899925231934,
+            0.26600000262260437
+          ],
+          "max": [
+            -0.12385900318622589,
+            7.719600200653076,
+            0.6843600273132324
+          ]
+        },
+        "center": [
+          -0.2114414945244789,
+          7.540250062942505,
+          0.4751800149679184
+        ],
+        "anchor": [
+          -0.2759999930858612,
+          7.497799873352051,
+          0.49000000953674316
+        ],
+        "coverageNote": "Original source-file partition of right middle cerebral artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+        "parentFmaId": "FMA50082",
+        "role": "source-part",
+        "sourceOrder": 1,
+        "sourcePartCount": 3
+      }
+    },
+    {
+      "conceptId": "mca-source-fj1663",
+      "study": "cranial-artery-components",
+      "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1663",
+        "fmaId": "FMA50082",
+        "name": "Source part 02 · FJ1663",
+        "sourceName": "right middle cerebral artery / FJ1663 (source part)",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cranial-artery-components",
+        "nodeName": "FMA50082_FJ1663",
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1663",
+            "sha256": "876f965a5a0e01b73c27571f53778282b8248b2966f79aa7a8e431a07004c6c0"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.2619999945163727,
+            7.360199928283691,
+            0.3394710123538971
+          ],
+          "max": [
+            -0.08286440372467041,
+            7.539299964904785,
+            0.5882599949836731
+          ]
+        },
+        "center": [
+          -0.17243219912052155,
+          7.449749946594238,
+          0.4638655036687851
+        ],
+        "anchor": [
+          -0.15782299637794495,
+          7.458199977874756,
+          0.46436700224876404
+        ],
+        "coverageNote": "Original source-file partition of right middle cerebral artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+        "parentFmaId": "FMA50082",
+        "role": "source-part",
+        "sourceOrder": 2,
+        "sourcePartCount": 3
+      }
+    },
+    {
+      "conceptId": "mca-source-fj1692",
+      "study": "cranial-artery-components",
+      "sourceHash": "8b205a8ed485f95cfcde4ec67f1c48125a5cce37586b3ae765eede7cc82ed086",
+      "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+      "parentHash": "3f01816840abb5b0fffe52c4139215a26d41b602d843cda548358bb6319c127b",
+      "structure": {
+        "id": "vm:anatomy:body:head-neck:right:source-component:fma50082-fj1692",
+        "fmaId": "FMA50082",
+        "name": "Source part 03 · FJ1692",
+        "sourceName": "right middle cerebral artery / FJ1692 (source part)",
+        "system": "vessels",
+        "category": "vessel",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "cranial-artery-components",
+        "nodeName": "FMA50082_FJ1692",
+        "sourceTree": "partof",
+        "sources": [
+          {
+            "file": "FJ1692",
+            "sha256": "5c8d20a994fc1ae2e04e833899757d24cb4eae1d51130e60baae5bd7d50ceee8"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.4430699944496155,
+            7.345099925994873,
+            0.5297300219535828
+          ],
+          "max": [
+            -0.13142700493335724,
+            7.496399879455566,
+            0.652679979801178
+          ]
+        },
+        "center": [
+          -0.28724849969148636,
+          7.42074990272522,
+          0.5912050008773804
+        ],
+        "anchor": [
+          -0.30438798666000366,
+          7.397600173950195,
+          0.604390025138855
+        ],
+        "coverageNote": "Original source-file partition of right middle cerebral artery. Part numbering follows archive membership, not branch order or clinical segments. A source file may contain disconnected pieces. The FMA identifier belongs to the parent artery, not this unnamed part. Junctions, lumen continuity and anatomical extent remain unverified.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        },
+        "parentId": "vm:anatomy:body:head-neck:right:vessel:right-middle-cerebral-artery",
+        "parentFmaId": "FMA50082",
+        "role": "source-part",
+        "sourceOrder": 3,
+        "sourcePartCount": 3
+      }
+    }
+  ]
+}

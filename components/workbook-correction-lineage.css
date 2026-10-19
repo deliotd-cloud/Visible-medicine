@@ -1,0 +1,7 @@
+.workbook-correction-lineage { margin: .75rem auto; padding: .75rem 1rem; max-width: 76rem; border: 1px solid var(--border, #cbd5e1); border-radius: .5rem; }
+.workbook-correction-lineage summary { cursor: pointer; font-weight: 600; }
+.workbook-correction-lineage p, .workbook-correction-lineage li { font-size: .875rem; line-height: 1.55; }
+.workbook-correction-lineage ol { padding-left: 1.5rem; }
+.workbook-correction-lineage-hash { overflow-wrap: anywhere; color: var(--muted-foreground, #475569); }
+.workbook-correction-lineage :is(button, a, summary):focus-visible { outline: 2px solid #002e38; outline-offset: 3px; }
+.runtime-theme .workbook-correction-lineage { color: var(--text); background: var(--panel); }

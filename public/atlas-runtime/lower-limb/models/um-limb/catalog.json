@@ -1,0 +1,3169 @@
+{
+  "version": 1,
+  "specimenId": "um-5t6tz7-v1-2:lower-limb",
+  "status": "unvalidated-independent-reference",
+  "source": {
+    "doi": "https://doi.org/10.22452/RD/5T6TZ7",
+    "version": "1.2",
+    "fileId": 596,
+    "archiveSha256": "0c6c7fa81329dba949e00c7d99de37afef0352368eb5b386eb8034ec0b66ec86",
+    "archiveMd5": "d7f066d2fd3fc21c21f64ad3d5a985fd",
+    "metadataSha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375",
+    "readmeSha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967",
+    "license": "CC0-1.0",
+    "credit": "Jeevaraaj N Vivekanandan and Juliana Binti Usman, Universiti Malaya, 2026. DOI:10.22452/RD/5T6TZ7, version 1.2."
+  },
+  "sourceBasis": "STL headers explicitly declare LPS; original float32 positions and triangle order retained. Source README identifies right-limb acquisition. Display scaling is not scan registration or a calibrated measurement.",
+  "displayTransformColumnMajor": [
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    -0.01,
+    0,
+    0,
+    0.01,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+  ],
+  "registeredToBodyParts3D": false,
+  "imagingRegistration": null,
+  "companionKneeCatalogSha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e",
+  "structures": [
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:calcaneus",
+      "slug": "calcaneus",
+      "name": "Calcaneus",
+      "sourceName": "Bone_Calcaneus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.7966389656066895,
+          -7.559240818023682,
+          -1.0526387691497803
+        ],
+        "max": [
+          -0.2538635730743408,
+          -7.035165786743164,
+          -0.3516358435153961
+        ]
+      },
+      "center": [
+        -0.5252512693405151,
+        -7.297203302383423,
+        -0.7021373063325882
+      ],
+      "anchor": [
+        -0.43114855885505676,
+        -7.298809051513672,
+        -0.6729521751403809
+      ],
+      "nodeName": "calcaneus",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Calcaneus.stl",
+          "sha256": "4a8c20983189e6f95a60555a4929e9077bcc9d9b89ed40c5db681c1a90b45326"
+        }
+      ],
+      "triangles": 18908,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:cuboid",
+      "slug": "cuboid",
+      "name": "Cuboid",
+      "sourceName": "Bone_Cuboid",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.8191978931427002,
+          -7.777750015258789,
+          -0.4868055582046509
+        ],
+        "max": [
+          -0.5537700057029724,
+          -7.4235968589782715,
+          -0.24364908039569855
+        ]
+      },
+      "center": [
+        -0.6864839494228363,
+        -7.60067343711853,
+        -0.3652273193001747
+      ],
+      "anchor": [
+        -0.5895369648933411,
+        -7.603130340576172,
+        -0.364451140165329
+      ],
+      "nodeName": "cuboid",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Cuboid.stl",
+          "sha256": "de719a5aa44ec5990d5dd2a842573cf05640586b8eb3eeee382dbcf3d545d9f4"
+        }
+      ],
+      "triangles": 5364,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:intermediate-cuneiform",
+      "slug": "intermediate-cuneiform",
+      "name": "Intermediate cuneiform",
+      "sourceName": "Bone_Intermediate Cuneiform",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.7364720106124878,
+          -7.609811305999756,
+          -0.16827721893787384
+        ],
+        "max": [
+          -0.5540565252304077,
+          -7.434649467468262,
+          0.023668712005019188
+        ]
+      },
+      "center": [
+        -0.6452642679214478,
+        -7.522230386734009,
+        -0.07230425346642733
+      ],
+      "anchor": [
+        -0.6678638458251953,
+        -7.5353264808654785,
+        -0.11670029908418655
+      ],
+      "nodeName": "intermediate-cuneiform",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Intermediate Cuneiform.stl",
+          "sha256": "31795e0a33e77899e56f34b9627651a163baf8269273470de55255ce57bb8b3c"
+        }
+      ],
+      "triangles": 2236,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:lateral-cuneiform",
+      "slug": "lateral-cuneiform",
+      "name": "Lateral cuneiform",
+      "sourceName": "Bone_Lateral Cuneiform",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.8090923428535461,
+          -7.6861348152160645,
+          -0.2573060989379883
+        ],
+        "max": [
+          -0.5902093648910522,
+          -7.469419002532959,
+          -0.09562186151742935
+        ]
+      },
+      "center": [
+        -0.6996508538722992,
+        -7.577776908874512,
+        -0.17646398022770882
+      ],
+      "anchor": [
+        -0.6919827461242676,
+        -7.568056106567383,
+        -0.12806427478790283
+      ],
+      "nodeName": "lateral-cuneiform",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Lateral Cuneiform.stl",
+          "sha256": "f392e5164ce68d340df3153718d7acb09ad864b4a51ad471fd73157531782106"
+        }
+      ],
+      "triangles": 2784,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:medial-cuneiform",
+      "slug": "medial-cuneiform",
+      "name": "Medial cuneiform",
+      "sourceName": "Bone_Medial Cuneiform",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.6270044445991516,
+          -7.699090957641602,
+          -0.1954476237297058
+        ],
+        "max": [
+          -0.35385674238204956,
+          -7.460711479187012,
+          0.11087744683027267
+        ]
+      },
+      "center": [
+        -0.4904305934906006,
+        -7.579901218414307,
+        -0.04228508844971657
+      ],
+      "anchor": [
+        -0.540252685546875,
+        -7.5872602462768555,
+        -0.0749460831284523
+      ],
+      "nodeName": "medial-cuneiform",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Medial Cuneiform.stl",
+          "sha256": "1a759dc668f3c4d3f612f964b9239d0f03e0e204b720151f1ed70d9b52013419"
+        }
+      ],
+      "triangles": 4560,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:navicular",
+      "slug": "navicular",
+      "name": "Navicular",
+      "sourceName": "Bone_Navicular",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.7480725049972534,
+          -7.487401008605957,
+          -0.27809667587280273
+        ],
+        "max": [
+          -0.3858940601348877,
+          -7.2845659255981445,
+          -0.051378119736909866
+        ]
+      },
+      "center": [
+        -0.5669832825660706,
+        -7.385983467102051,
+        -0.1647373978048563
+      ],
+      "anchor": [
+        -0.5699897408485413,
+        -7.344165802001953,
+        -0.20422786474227905
+      ],
+      "nodeName": "navicular",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Navicular.stl",
+          "sha256": "abd567070ab45d0cf9799e90711cac64467b142e97a8344281fafdd943d83d22"
+        }
+      ],
+      "triangles": 4400,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:pelvis-group",
+      "slug": "pelvis-group",
+      "name": "Pelvic bone surface (source group)",
+      "sourceName": "Bone_Pelvis",
+      "fmaId": null,
+      "laterality": "source-group",
+      "tissue": "skeleton",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.6137725710868835,
+          0.19159595668315887,
+          -0.8518911004066467
+        ],
+        "max": [
+          0.5865830779075623,
+          1.9117234945297241,
+          0.41077038645744324
+        ]
+      },
+      "center": [
+        -0.013594746589660645,
+        1.0516597256064415,
+        -0.22056035697460175
+      ],
+      "anchor": [
+        -0.0451432503759861,
+        0.9922078847885132,
+        -0.19708570837974548
+      ],
+      "nodeName": "pelvis-group",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Pelvis.stl",
+          "sha256": "39652d3dea88c179b5ab6133831f946a2c4901f4ece40f18ab21b8a9629697b7"
+        }
+      ],
+      "triangles": 91588,
+      "omittedSourceFaces": [],
+      "grouped": true,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Original pelvic surface kept as one source group; no separate ilium, ischium, pubis or sacral identities are inferred.",
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:foot-bone-group",
+      "slug": "foot-bone-group",
+      "name": "Foot bone group (source: Phalanges)",
+      "sourceName": "Bone_Phalanges",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.9780308604240417,
+          -8.54472827911377,
+          -0.5062538385391235
+        ],
+        "max": [
+          -0.23289048671722412,
+          -7.610702037811279,
+          0.6513097882270813
+        ]
+      },
+      "center": [
+        -0.6054606735706329,
+        -8.077715158462524,
+        0.07252797484397888
+      ],
+      "anchor": [
+        -0.6749752759933472,
+        -8.067497253417969,
+        0.07214870303869247
+      ],
+      "nodeName": "foot-bone-group",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Phalanges.stl",
+          "sha256": "2d8fa37687d60aa5de4155aa2b10187615e547e63e6d919974831b28840f5aef"
+        }
+      ],
+      "triangles": 38396,
+      "omittedSourceFaces": [],
+      "grouped": true,
+      "sourceQuality": {
+        "components": 14,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": "Original grouped foot-bone surface. Individual digit/bone identities are not adjudicated; no metatarsal, phalanx or digit numbering is inferred.",
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:talus",
+      "slug": "talus",
+      "name": "Talus",
+      "sourceName": "Bone_Talus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "skeleton",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.7951644659042358,
+          -7.355235576629639,
+          -0.6660476922988892
+        ],
+        "max": [
+          -0.38558945059776306,
+          -6.932199478149414,
+          -0.1604750007390976
+        ]
+      },
+      "center": [
+        -0.5903769582509995,
+        -7.143717527389526,
+        -0.4132613465189934
+      ],
+      "anchor": [
+        -0.5906160473823547,
+        -7.173729419708252,
+        -0.42488986253738403
+      ],
+      "nodeName": "talus",
+      "sources": [
+        {
+          "file": "Segmentation_Bone_Talus.stl",
+          "sha256": "fc3bf4777febb156b8fc25838032cbfde5a148cdf7360d2885705873206c8272"
+        }
+      ],
+      "triangles": 12388,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:femoral-head-cartilage",
+      "slug": "femoral-head-cartilage",
+      "name": "Femoral head cartilage",
+      "sourceName": "Cartilage_Femur Head ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "cartilage",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.31300607323646545,
+          0.8581472039222717,
+          -0.33914756774902344
+        ],
+        "max": [
+          0.03409146890044212,
+          1.0692145824432373,
+          0.0877089723944664
+        ]
+      },
+      "center": [
+        -0.13945730216801167,
+        0.9636808931827545,
+        -0.12571929767727852
+      ],
+      "anchor": [
+        -0.12782374024391174,
+        1.0139977931976318,
+        -0.1320866048336029
+      ],
+      "nodeName": "femoral-head-cartilage",
+      "sources": [
+        {
+          "file": "Segmentation_Cartilage_Femur Head .stl",
+          "sha256": "3703e65c9b90533635956747715aa7a50b5a9c6e180b0971f33e2337d22afcae"
+        }
+      ],
+      "triangles": 7824,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-digiti-minimi",
+      "slug": "abductor-digiti-minimi",
+      "name": "Abductor digiti minimi",
+      "sourceName": "Muscle_Abductor Digiti Minimi",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.9132875204086304,
+          -8.243001937866211,
+          -0.9151856899261475
+        ],
+        "max": [
+          -0.384205162525177,
+          -7.451335430145264,
+          -0.19262444972991943
+        ]
+      },
+      "center": [
+        -0.6487463414669037,
+        -7.847168684005737,
+        -0.5539050698280334
+      ],
+      "anchor": [
+        -0.6454513072967529,
+        -7.8610124588012695,
+        -0.5709898471832275
+      ],
+      "nodeName": "abductor-digiti-minimi",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Abductor Digiti Minimi.stl",
+          "sha256": "74c335eda603fcd98d9df64f120fa64f88ea345a30325e3713e95c7972b084e6"
+        }
+      ],
+      "triangles": 13288,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:abductor-hallucis",
+      "slug": "abductor-hallucis",
+      "name": "Abductor hallucis",
+      "sourceName": "Muscle_Abductor Hallucis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.44673392176628113,
+          -8.152172088623047,
+          -0.7813243865966797
+        ],
+        "max": [
+          -0.18613101541996002,
+          -7.239748477935791,
+          0.220585435628891
+        ]
+      },
+      "center": [
+        -0.3164324685931206,
+        -7.695960283279419,
+        -0.28036947548389435
+      ],
+      "anchor": [
+        -0.32007861137390137,
+        -7.682126998901367,
+        -0.27549269795417786
+      ],
+      "nodeName": "abductor-hallucis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Abductor Hallucis.stl",
+          "sha256": "7758936e3ed42b19222f86d90a44d194ef26902983375f6aad448b52592b23c6"
+        }
+      ],
+      "triangles": 16960,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-brevis",
+      "slug": "adductor-brevis",
+      "name": "Adductor brevis",
+      "sourceName": "Muscle_Adductor Brevis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.5210708379745483,
+          -0.8671133518218994,
+          -0.4810720682144165
+        ],
+        "max": [
+          0.4669571816921234,
+          0.4737180769443512,
+          0.37712088227272034
+        ]
+      },
+      "center": [
+        -0.027056828141212463,
+        -0.1966976374387741,
+        -0.051975592970848083
+      ],
+      "anchor": [
+        -0.010318195447325706,
+        -0.171831414103508,
+        -0.12323345988988876
+      ],
+      "nodeName": "adductor-brevis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Adductor Brevis.stl",
+          "sha256": "9775302de36fc57606d3c8e283b808ea14c5c83d131814169f7fce7a1ad4d65c"
+        }
+      ],
+      "triangles": 54004,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-longus",
+      "slug": "adductor-longus",
+      "name": "Adductor longus",
+      "sourceName": "Muscle_Adductor Longus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.3167876601219177,
+          -1.5785505771636963,
+          -0.20972174406051636
+        ],
+        "max": [
+          0.4296534061431885,
+          0.40068885684013367,
+          0.45078402757644653
+        ]
+      },
+      "center": [
+        0.056432873010635376,
+        -0.5889308601617813,
+        0.12053114175796509
+      ],
+      "anchor": [
+        -0.021135928109288216,
+        -0.6431329250335693,
+        0.2623518109321594
+      ],
+      "nodeName": "adductor-longus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Adductor Longus.stl",
+          "sha256": "be22b6a77a4813c0fc8621049d0acd0a7f660db4aade09807278e77ab055a580"
+        }
+      ],
+      "triangles": 55676,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:adductor-magnus",
+      "slug": "adductor-magnus",
+      "name": "Adductor magnus",
+      "sourceName": "Muscle_Adductor Magnus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.5433733463287354,
+          -2.4408156871795654,
+          -0.7044973969459534
+        ],
+        "max": [
+          0.41296374797821045,
+          0.35988327860832214,
+          0.07970637828111649
+        ]
+      },
+      "center": [
+        -0.06520479917526245,
+        -1.0404662042856216,
+        -0.31239550933241844
+      ],
+      "anchor": [
+        -0.06876280158758163,
+        -1.0366411209106445,
+        -0.20918864011764526
+      ],
+      "nodeName": "adductor-magnus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Adductor Magnus.stl",
+          "sha256": "059fbce678c835d32890b7277aec6f3565669493950814bd9197bcda43ed4078"
+        }
+      ],
+      "triangles": 109764,
+      "omittedSourceFaces": [
+        54894,
+        54895,
+        54902,
+        54903,
+        56368,
+        56369,
+        56374,
+        56375
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:biceps-femoris-long-head",
+      "slug": "biceps-femoris-long-head",
+      "name": "Biceps femoris — long head",
+      "sourceName": "Muscle_Bicep Femoris Longhead",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.7360836863517761,
+          -2.7658891677856445,
+          -0.9468812346458435
+        ],
+        "max": [
+          -0.1165958121418953,
+          0.230321004986763,
+          -0.44175758957862854
+        ]
+      },
+      "center": [
+        -0.4263397492468357,
+        -1.2677840813994408,
+        -0.694319412112236
+      ],
+      "anchor": [
+        -0.34874626994132996,
+        -1.2650117874145508,
+        -0.6625981330871582
+      ],
+      "nodeName": "biceps-femoris-long-head",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Bicep Femoris Longhead.stl",
+          "sha256": "00b08d673c83a87af9af6aa6ca8a006feb3cd9418df018348b96b1de84457009"
+        }
+      ],
+      "triangles": 65924,
+      "omittedSourceFaces": [
+        64992,
+        64993,
+        64994,
+        64995
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 1,
+        "zeroNormalVertices": 4
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:biceps-femoris-short-head",
+      "slug": "biceps-femoris-short-head",
+      "name": "Biceps femoris — short head",
+      "sourceName": "Muscle_Bicep Femoris Shorthead",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.9487240314483643,
+          -3.296456813812256,
+          -0.6684727668762207
+        ],
+        "max": [
+          -0.4877055287361145,
+          -0.7414251565933228,
+          -0.22731412947177887
+        ]
+      },
+      "center": [
+        -0.7182147800922394,
+        -2.0189409852027893,
+        -0.4478934481739998
+      ],
+      "anchor": [
+        -0.7826981544494629,
+        -2.008420944213867,
+        -0.44579097628593445
+      ],
+      "nodeName": "biceps-femoris-short-head",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Bicep Femoris Shorthead.stl",
+          "sha256": "0becfe778a029ba18dec2513742de80da2a96208116e7b2faff22ddd9b6c67a1"
+        }
+      ],
+      "triangles": 38332,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-brevis",
+      "slug": "extensor-digitorum-brevis",
+      "name": "Extensor digitorum brevis",
+      "sourceName": "Muscle_Extensor Digitorum Brevis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.8919082880020142,
+          -7.8671875,
+          -0.5945395231246948
+        ],
+        "max": [
+          -0.6973567008972168,
+          -7.290097236633301,
+          -0.019284309819340706
+        ]
+      },
+      "center": [
+        -0.7946324944496155,
+        -7.57864236831665,
+        -0.30691191647201777
+      ],
+      "anchor": [
+        -0.8093332648277283,
+        -7.584620952606201,
+        -0.30918005108833313
+      ],
+      "nodeName": "extensor-digitorum-brevis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Extensor Digitorum Brevis.stl",
+          "sha256": "8ac1530c714cfbeb150b627cbd55b9181472a1281c2e406f3c39ebd7ec729f8a"
+        }
+      ],
+      "triangles": 9728,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-digitorum-longus",
+      "slug": "extensor-digitorum-longus",
+      "name": "Extensor digitorum longus",
+      "sourceName": "Muscle_Extensor Digitorum Longus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -1.091963291168213,
+          -7.049935817718506,
+          -0.6490635871887207
+        ],
+        "max": [
+          -0.7505725026130676,
+          -3.586824417114258,
+          -0.2894474267959595
+        ]
+      },
+      "center": [
+        -0.9212678968906403,
+        -5.318380117416382,
+        -0.4692555069923401
+      ],
+      "anchor": [
+        -0.9330205321311951,
+        -5.3198771476745605,
+        -0.4987066984176636
+      ],
+      "nodeName": "extensor-digitorum-longus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Extensor Digitorum Longus.stl",
+          "sha256": "e21ce0c81994f008f2dda5bf6979892588645deb26b643196cc2a172a7d724a8"
+        }
+      ],
+      "triangles": 33926,
+      "omittedSourceFaces": [
+        14448,
+        14449,
+        14450,
+        14451,
+        16162,
+        16170
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 3
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:extensor-hallucis-longus",
+      "slug": "extensor-hallucis-longus",
+      "name": "Extensor hallucis longus",
+      "sourceName": "Muscle_Extensor Hallucis Longus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -0.9334796071052551,
+          -7.175908088684082,
+          -0.6337829232215881
+        ],
+        "max": [
+          -0.6734539866447449,
+          -4.476007461547852,
+          -0.12194591760635376
+        ]
+      },
+      "center": [
+        -0.803466796875,
+        -5.825957775115967,
+        -0.37786442041397095
+      ],
+      "anchor": [
+        -0.825427234172821,
+        -5.835535049438477,
+        -0.4983038604259491
+      ],
+      "nodeName": "extensor-hallucis-longus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Extensor Hallucis Longus.stl",
+          "sha256": "ec2ee0812d0e05a3c5aacd117a07f1cebe286c82acc0c71f0185bcf2bd8aacf9"
+        }
+      ],
+      "triangles": 21322,
+      "omittedSourceFaces": [
+        112,
+        113,
+        412,
+        413,
+        414,
+        415
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 3
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-brevis",
+      "slug": "flexor-digitorum-brevis",
+      "name": "Flexor digitorum brevis",
+      "sourceName": "Muscle_Flexor Digitorum Brevis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.5885964632034302,
+          -8.125682830810547,
+          -0.8443126678466797
+        ],
+        "max": [
+          -0.28976184129714966,
+          -7.4162797927856445,
+          -0.10551817715167999
+        ]
+      },
+      "center": [
+        -0.4391791522502899,
+        -7.770981311798096,
+        -0.47491542249917984
+      ],
+      "anchor": [
+        -0.4300520420074463,
+        -7.792904853820801,
+        -0.49017295241355896
+      ],
+      "nodeName": "flexor-digitorum-brevis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Flexor Digitorum Brevis.stl",
+          "sha256": "0ad6b7ebab25618d6c3e3fa5067fd62e0f08f73fb23e2dcbd5a52ca40b335fe9"
+        }
+      ],
+      "triangles": 11604,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-digitorum-longus",
+      "slug": "flexor-digitorum-longus",
+      "name": "Flexor digitorum longus",
+      "sourceName": "Muscle_Flexor Digitorum Longus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -0.5513458847999573,
+          -6.743216514587402,
+          -0.6108834743499756
+        ],
+        "max": [
+          -0.3290661573410034,
+          -4.352219104766846,
+          -0.2934785783290863
+        ]
+      },
+      "center": [
+        -0.44020602107048035,
+        -5.547717809677124,
+        -0.45218102633953094
+      ],
+      "anchor": [
+        -0.48493605852127075,
+        -5.544812202453613,
+        -0.5041854381561279
+      ],
+      "nodeName": "flexor-digitorum-longus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Flexor Digitorum Longus.stl",
+          "sha256": "38b287543e6cd1646e6cdd6e33c4437f2f8818778801b837007ede3475b52b03"
+        }
+      ],
+      "triangles": 20538,
+      "omittedSourceFaces": [
+        2782,
+        2783,
+        2784,
+        2785,
+        2786,
+        2787,
+        2788,
+        2789,
+        2790,
+        2791,
+        2792,
+        2793,
+        4392,
+        4393,
+        4394,
+        4395,
+        4396,
+        4397,
+        4398,
+        4399,
+        4400,
+        4401,
+        4402,
+        4403,
+        4404,
+        4405,
+        4406,
+        4409,
+        4410,
+        4412,
+        4413,
+        4414,
+        4415,
+        4416,
+        4417,
+        4418,
+        4419,
+        4420,
+        4421,
+        4422,
+        4423,
+        4424,
+        4425,
+        4426,
+        4427,
+        5870,
+        5871,
+        5872,
+        5873,
+        5874,
+        5876,
+        5877,
+        5879,
+        5880,
+        5882,
+        5897,
+        5899,
+        5900,
+        5901,
+        5902,
+        5903,
+        5904,
+        5905,
+        5906,
+        5907,
+        5908,
+        5909,
+        5910,
+        5911,
+        5912,
+        5915,
+        5916,
+        5917,
+        5918,
+        5920,
+        5921,
+        7186,
+        7190,
+        7191,
+        7192,
+        7195,
+        7197
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 3,
+        "nonManifoldEdges": 23,
+        "zeroNormalVertices": 7
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:flexor-hallucis-longus",
+      "slug": "flexor-hallucis-longus",
+      "name": "Flexor hallucis longus",
+      "sourceName": "Muscle_Flexor Hallucis Longus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -0.7992220520973206,
+          -6.926053524017334,
+          -0.8438196778297424
+        ],
+        "max": [
+          -0.3757343590259552,
+          -4.566327095031738,
+          -0.5604944229125977
+        ]
+      },
+      "center": [
+        -0.5874782055616379,
+        -5.746190309524536,
+        -0.70215705037117
+      ],
+      "anchor": [
+        -0.5839298367500305,
+        -5.745731830596924,
+        -0.6123616695404053
+      ],
+      "nodeName": "flexor-hallucis-longus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Flexor Hallucis Longus.stl",
+          "sha256": "236bfe78de5fdeb41c02c05265b42957fc38515d79b2bd27118681892d946a27"
+        }
+      ],
+      "triangles": 36240,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:gastrocnemius-lateral",
+      "slug": "gastrocnemius-lateral",
+      "name": "Gastrocnemius — lateral head",
+      "sourceName": "Muscle_Gastrocnemius Lateral",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -1.0433130264282227,
+          -5.063931465148926,
+          -1.0520834922790527
+        ],
+        "max": [
+          -0.25845831632614136,
+          -2.9242453575134277,
+          -0.5538725256919861
+        ]
+      },
+      "center": [
+        -0.650885671377182,
+        -3.9940884113311768,
+        -0.8029780089855194
+      ],
+      "anchor": [
+        -0.6442530751228333,
+        -3.9903409481048584,
+        -0.808829128742218
+      ],
+      "nodeName": "gastrocnemius-lateral",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Gastrocnemius Lateral.stl",
+          "sha256": "e27c9683921db997b38490c6a73414eb84215145a7079a2ba8087236f79c00f2"
+        }
+      ],
+      "triangles": 56272,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:gastrocnemius-medial",
+      "slug": "gastrocnemius-medial",
+      "name": "Gastrocnemius — medial head",
+      "sourceName": "Muscle_Gastrocnemius Medial",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -0.507982075214386,
+          -5.3093647956848145,
+          -0.9934985637664795
+        ],
+        "max": [
+          -0.048697784543037415,
+          -2.750053644180298,
+          -0.24610498547554016
+        ]
+      },
+      "center": [
+        -0.2783399298787117,
+        -4.029709219932556,
+        -0.6198017746210098
+      ],
+      "anchor": [
+        -0.32972514629364014,
+        -4.027951240539551,
+        -0.6327924132347107
+      ],
+      "nodeName": "gastrocnemius-medial",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Gastrocnemius Medial.stl",
+          "sha256": "51b3b4b33a857d8daf1eab3995302a250aa19c5e63997bd1028cc33b028afbfb"
+        }
+      ],
+      "triangles": 62076,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-maximus",
+      "slug": "gluteus-maximus",
+      "name": "Gluteus maximus",
+      "sourceName": "Muscle_Gluteus Maximus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.9998599290847778,
+          -0.8317039608955383,
+          -1.052107810974121
+        ],
+        "max": [
+          0.5512169003486633,
+          1.8886501789093018,
+          -0.17764519155025482
+        ]
+      },
+      "center": [
+        -0.22432151436805725,
+        0.5284731090068817,
+        -0.614876501262188
+      ],
+      "anchor": [
+        -0.2257244735956192,
+        0.5305799245834351,
+        -0.6144038438796997
+      ],
+      "nodeName": "gluteus-maximus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Gluteus Maximus.stl",
+          "sha256": "25c44394c34d6baa57382d390c058061b5fc03926d46cfdf777ef14eb6cbfc0d"
+        }
+      ],
+      "triangles": 162800,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-medius",
+      "slug": "gluteus-medius",
+      "name": "Gluteus medius",
+      "sourceName": "Muscle_Gluteus Medius",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.8802074193954468,
+          0.5548726916313171,
+          -0.7265474796295166
+        ],
+        "max": [
+          0.10471167415380478,
+          1.898836374282837,
+          0.3219890594482422
+        ]
+      },
+      "center": [
+        -0.387747872620821,
+        1.226854532957077,
+        -0.2022792100906372
+      ],
+      "anchor": [
+        -0.39059025049209595,
+        1.2312318086624146,
+        -0.20601403713226318
+      ],
+      "nodeName": "gluteus-medius",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Gluteus Medius.stl",
+          "sha256": "b6c58700ffef4bd9aa9303f1d9359ca358d58852f1beec4135cee5f88e2d2082"
+        }
+      ],
+      "triangles": 65336,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:gluteus-minimus",
+      "slug": "gluteus-minimus",
+      "name": "Gluteus minimus",
+      "sourceName": "Muscle_Gluteus Minimus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.877128541469574,
+          0.5754719972610474,
+          -0.516494870185852
+        ],
+        "max": [
+          0.07946857810020447,
+          1.7455695867538452,
+          0.3511788845062256
+        ]
+      },
+      "center": [
+        -0.39882998168468475,
+        1.1605207920074463,
+        -0.08265799283981323
+      ],
+      "anchor": [
+        -0.48466360569000244,
+        1.1775015592575073,
+        -0.12348681688308716
+      ],
+      "nodeName": "gluteus-minimus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Gluteus Minimus.stl",
+          "sha256": "e841fa1780218dc6e25261b7b5bfae445859c0f4e3bab09708b3354a64fe745d"
+        }
+      ],
+      "triangles": 44820,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:gracilis",
+      "slug": "gracilis",
+      "name": "Gracilis",
+      "sourceName": "Muscle_Gracilis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.09124018996953964,
+          -2.87094783782959,
+          -0.6087502837181091
+        ],
+        "max": [
+          0.4797514081001282,
+          0.17408262193202972,
+          0.13614265620708466
+        ]
+      },
+      "center": [
+        0.19425560906529427,
+        -1.34843260794878,
+        -0.23630381375551224
+      ],
+      "anchor": [
+        0.2285916656255722,
+        -1.3598036766052246,
+        -0.22547903656959534
+      ],
+      "nodeName": "gracilis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Gracilis.stl",
+          "sha256": "87c8c25c2421b3b19e755a6c3bb8dc5c41248ea6d99a026cdb2e8c7ff1d3a103"
+        }
+      ],
+      "triangles": 49908,
+      "omittedSourceFaces": [
+        20006,
+        20007,
+        20009,
+        20010
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 3,
+        "zeroNormalVertices": 3
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:iliacus",
+      "slug": "iliacus",
+      "name": "Iliacus",
+      "sourceName": "Muscle_Illiacus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.4708559811115265,
+          -0.009200318716466427,
+          -0.34551310539245605
+        ],
+        "max": [
+          0.14119818806648254,
+          1.886460542678833,
+          0.43901896476745605
+        ]
+      },
+      "center": [
+        -0.16482889652252197,
+        0.9386301119811833,
+        0.0467529296875
+      ],
+      "anchor": [
+        -0.16591022908687592,
+        0.9368348717689514,
+        0.13754235208034515
+      ],
+      "nodeName": "iliacus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Illiacus.stl",
+          "sha256": "adab9faaf90f7e1d1f02b1726b7a77de7feaf0d9a042e931e59094cf8c4eb75e"
+        }
+      ],
+      "triangles": 54716,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:inferior-gemellus",
+      "slug": "inferior-gemellus",
+      "name": "Inferior gemellus",
+      "sourceName": "Muscle_Inferior Gemellus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.3684355914592743,
+          0.6105196475982666,
+          -0.5225231051445007
+        ],
+        "max": [
+          -0.09735673666000366,
+          0.7858226299285889,
+          -0.3463464081287384
+        ]
+      },
+      "center": [
+        -0.23289616405963898,
+        0.6981711387634277,
+        -0.43443475663661957
+      ],
+      "anchor": [
+        -0.25851571559906006,
+        0.7226388454437256,
+        -0.4728015065193176
+      ],
+      "nodeName": "inferior-gemellus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Inferior Gemellus.stl",
+          "sha256": "fe5a7bf45282f58d640ae3184188d6d77a76310631330e8215a78370c5012b81"
+        }
+      ],
+      "triangles": 2676,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:obturator-externus",
+      "slug": "obturator-externus",
+      "name": "Obturator externus",
+      "sourceName": "Muscle_Obturator Externus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.30430638790130615,
+          0.1527378112077713,
+          -0.47585269808769226
+        ],
+        "max": [
+          0.5022407174110413,
+          0.6664945483207703,
+          0.29945334792137146
+        ]
+      },
+      "center": [
+        0.09896716475486755,
+        0.4096161797642708,
+        -0.0881996750831604
+      ],
+      "anchor": [
+        0.08993291854858398,
+        0.35310661792755127,
+        -0.06373545527458191
+      ],
+      "nodeName": "obturator-externus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Obturator Externus.stl",
+          "sha256": "306d37b410f2ce4e46366024e746292a48b4b6b2306f82a281fa07833427427a"
+        }
+      ],
+      "triangles": 24388,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:obturator-internus",
+      "slug": "obturator-internus",
+      "name": "Obturator internus",
+      "sourceName": "Muscle_Obturator Internus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.44201260805130005,
+          0.20827053487300873,
+          -0.6834099292755127
+        ],
+        "max": [
+          0.48923394083976746,
+          1.259729027748108,
+          0.09091208130121231
+        ]
+      },
+      "center": [
+        0.023610666394233704,
+        0.7339997813105583,
+        -0.2962489239871502
+      ],
+      "anchor": [
+        0.1411699801683426,
+        0.7278894782066345,
+        -0.29508551955223083
+      ],
+      "nodeName": "obturator-internus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Obturator Internus.stl",
+          "sha256": "f5a0a72f7f0f77fedb6e5baa4c25342368120e7143fcddd678acde5d8ab13893"
+        }
+      ],
+      "triangles": 32800,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:pectineus",
+      "slug": "pectineus",
+      "name": "Pectineus",
+      "sourceName": "Muscle_Pectineus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.35808345675468445,
+          -0.1521812081336975,
+          -0.2952108681201935
+        ],
+        "max": [
+          0.29884228110313416,
+          0.9049402475357056,
+          0.4158779978752136
+        ]
+      },
+      "center": [
+        -0.029620587825775146,
+        0.37637951970100403,
+        0.06033356487751007
+      ],
+      "anchor": [
+        0.016699427738785744,
+        0.3434828221797943,
+        0.04038800299167633
+      ],
+      "nodeName": "pectineus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Pectineus.stl",
+          "sha256": "7b59c988eaa7700ef5f0f6ec115070c9c05b2d4290088db6879127e130a9f7c5"
+        }
+      ],
+      "triangles": 28180,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:peroneus-longus",
+      "slug": "peroneus-longus",
+      "name": "Fibularis (peroneus) longus",
+      "sourceName": "Muscle_Peroneus Longus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -1.1679699420928955,
+          -7.079342842102051,
+          -0.8911728858947754
+        ],
+        "max": [
+          -0.5748372077941895,
+          -3.6194875240325928,
+          -0.39450594782829285
+        ]
+      },
+      "center": [
+        -0.8714035749435425,
+        -5.349415183067322,
+        -0.6428394168615341
+      ],
+      "anchor": [
+        -0.8625535368919373,
+        -5.35299825668335,
+        -0.6254875063896179
+      ],
+      "nodeName": "peroneus-longus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Peroneus Longus.stl",
+          "sha256": "d56a562bf1a3a558f2870faf43598771f15576773cba5f824339bfc697996910"
+        }
+      ],
+      "triangles": 53420,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:piriformis",
+      "slug": "piriformis",
+      "name": "Piriformis",
+      "sourceName": "Muscle_Piriformis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.20913730561733246,
+          0.866319477558136,
+          -0.8363355994224548
+        ],
+        "max": [
+          0.43112170696258545,
+          1.4356144666671753,
+          -0.4412496089935303
+        ]
+      },
+      "center": [
+        0.1109922006726265,
+        1.1509669721126556,
+        -0.6387926042079926
+      ],
+      "anchor": [
+        0.12559650838375092,
+        1.1423293352127075,
+        -0.6240614056587219
+      ],
+      "nodeName": "piriformis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Piriformis.stl",
+          "sha256": "dc72d3c0c52042d68fd7b2f7e49596b8fce8bcd5395fa30467bd93f55de1141e"
+        }
+      ],
+      "triangles": 10980,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:psoas-major",
+      "slug": "psoas-major",
+      "name": "Psoas major",
+      "sourceName": "Muscle_Psoas Major",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.12971678376197815,
+          0.6927421689033508,
+          -0.2542927861213684
+        ],
+        "max": [
+          0.3281624913215637,
+          1.897934913635254,
+          0.3355043828487396
+        ]
+      },
+      "center": [
+        0.09922285377979279,
+        1.2953385412693024,
+        0.04060579836368561
+      ],
+      "anchor": [
+        0.1538933515548706,
+        1.2816567420959473,
+        0.05198843404650688
+      ],
+      "nodeName": "psoas-major",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Psoas Major.stl",
+          "sha256": "e8730cbef882fc3544c2691fe85ff048dd40be567d2bd8de8ed29493e2bb284d"
+        }
+      ],
+      "triangles": 24616,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:quadratus-femoris",
+      "slug": "quadratus-femoris",
+      "name": "Quadratus femoris",
+      "sourceName": "Muscle_Quadratis Femoris",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.6114071011543274,
+          0.049740977585315704,
+          -0.6003344655036926
+        ],
+        "max": [
+          -0.03295863792300224,
+          0.6728521585464478,
+          -0.33492976427078247
+        ]
+      },
+      "center": [
+        -0.3221828695386648,
+        0.36129656806588173,
+        -0.46763211488723755
+      ],
+      "anchor": [
+        -0.3649350702762604,
+        0.3477829694747925,
+        -0.4087446928024292
+      ],
+      "nodeName": "quadratus-femoris",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Quadratis Femoris.stl",
+          "sha256": "2d2100ee3b997ecd8478dd02221f520dab438ae966cc051fac865bf45180164b"
+        }
+      ],
+      "triangles": 15096,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:quadratus-plantae",
+      "slug": "quadratus-plantae",
+      "name": "Quadratus plantae",
+      "sourceName": "Muscle_Quadratus Plantae ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "foot",
+      "bundle": "um-limb-foot",
+      "bounds": {
+        "min": [
+          -0.5767152905464172,
+          -7.838881015777588,
+          -0.8128998279571533
+        ],
+        "max": [
+          -0.31194278597831726,
+          -7.106090068817139,
+          -0.27856674790382385
+        ]
+      },
+      "center": [
+        -0.44432903826236725,
+        -7.472485542297363,
+        -0.5457332879304886
+      ],
+      "anchor": [
+        -0.4428953230381012,
+        -7.485110282897949,
+        -0.5516277551651001
+      ],
+      "nodeName": "quadratus-plantae",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Quadratus Plantae .stl",
+          "sha256": "1083d408d4fccf558a81304c7dd073fe2619bfb260648b091009c4c36625e4c1"
+        }
+      ],
+      "triangles": 7012,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:rectus-femoris",
+      "slug": "rectus-femoris",
+      "name": "Rectus femoris",
+      "sourceName": "Muscle_Rectus Femoris",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.8319580554962158,
+          -2.0610082149505615,
+          0.12641359865665436
+        ],
+        "max": [
+          -0.16211529076099396,
+          1.0980958938598633,
+          0.5892096757888794
+        ]
+      },
+      "center": [
+        -0.4970366731286049,
+        -0.4814561605453491,
+        0.3578116372227669
+      ],
+      "anchor": [
+        -0.5003092288970947,
+        -0.4836961328983307,
+        0.309906929731369
+      ],
+      "nodeName": "rectus-femoris",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Rectus Femoris.stl",
+          "sha256": "10c3d22724bc265c8dbafd123882a5f935af164f5235fa499b679f4fda8af824"
+        }
+      ],
+      "triangles": 68956,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:sartorius",
+      "slug": "sartorius",
+      "name": "Sartorius",
+      "sourceName": "Muscle_Sartorius",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.5287542939186096,
+          -3.2016537189483643,
+          -0.4613211452960968
+        ],
+        "max": [
+          0.185177743434906,
+          1.2409743070602417,
+          0.5764470100402832
+        ]
+      },
+      "center": [
+        -0.1717882752418518,
+        -0.9803397059440613,
+        0.0575629323720932
+      ],
+      "anchor": [
+        -0.03214464336633682,
+        -1.007720947265625,
+        0.1742115020751953
+      ],
+      "nodeName": "sartorius",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Sartorius.stl",
+          "sha256": "ce73a78d6b3be5421ca07f6592aba27bc0defd0b9fcadbc45d20fc054c22abcb"
+        }
+      ],
+      "triangles": 59276,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:semimembranosus",
+      "slug": "semimembranosus",
+      "name": "Semimembranosus",
+      "sourceName": "Muscle_Semimembranosus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.4836968183517456,
+          -3.177730083465576,
+          -0.908510148525238
+        ],
+        "max": [
+          0.322438508272171,
+          -0.29793721437454224,
+          -0.24545758962631226
+        ]
+      },
+      "center": [
+        -0.08062915503978729,
+        -1.7378336489200592,
+        -0.5769838690757751
+      ],
+      "anchor": [
+        -0.19731126725673676,
+        -1.6933919191360474,
+        -0.6178780794143677
+      ],
+      "nodeName": "semimembranosus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Semimembranosus.stl",
+          "sha256": "5e292248cfbdcfdede6e67d599f2f0efa6f7cc9b280b74a160e2439ea3450eeb"
+        }
+      ],
+      "triangles": 72092,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:semitendinosus",
+      "slug": "semitendinosus",
+      "name": "Semitendinosus",
+      "sourceName": "Muscle_Semitendinosus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.41728833317756653,
+          -2.625568151473999,
+          -0.9196782112121582
+        ],
+        "max": [
+          0.09401236474514008,
+          0.27978360652923584,
+          -0.5185220837593079
+        ]
+      },
+      "center": [
+        -0.16163798421621323,
+        -1.1728922724723816,
+        -0.719100147485733
+      ],
+      "anchor": [
+        -0.06205052509903908,
+        -1.1750727891921997,
+        -0.7100192308425903
+      ],
+      "nodeName": "semitendinosus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Semitendinosus.stl",
+          "sha256": "e54cf88f0480edee324683542b856129d84bb7c5dd5a46a08fec90589e526237"
+        }
+      ],
+      "triangles": 50488,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:soleus",
+      "slug": "soleus",
+      "name": "Soleus",
+      "sourceName": "Muscle_Soleus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -1.1193110942840576,
+          -6.536866664886475,
+          -1.0064877271652222
+        ],
+        "max": [
+          -0.18492664396762848,
+          -3.50508451461792,
+          -0.27740561962127686
+        ]
+      },
+      "center": [
+        -0.652118869125843,
+        -5.020975589752197,
+        -0.6419466733932495
+      ],
+      "anchor": [
+        -0.6095477938652039,
+        -4.993372440338135,
+        -0.7594314813613892
+      ],
+      "nodeName": "soleus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Soleus.stl",
+          "sha256": "3531f5b7acb8e1f67239d2216bb914681f0edcf90cc6800018a431278e1157a5"
+        }
+      ],
+      "triangles": 104692,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:superior-gemellus",
+      "slug": "superior-gemellus",
+      "name": "Superior gemellus",
+      "sourceName": "Muscle_Superior Gemellus",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -0.19134998321533203,
+          0.7571251392364502,
+          -0.6421906352043152
+        ],
+        "max": [
+          0.16566890478134155,
+          0.9305838942527771,
+          -0.4190012812614441
+        ]
+      },
+      "center": [
+        -0.01284053921699524,
+        0.8438545167446136,
+        -0.5305959582328796
+      ],
+      "anchor": [
+        -0.02140994556248188,
+        0.9069916605949402,
+        -0.5243037939071655
+      ],
+      "nodeName": "superior-gemellus",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Superior Gemellus.stl",
+          "sha256": "df94907303a7a272da44cfff6481f49b7090924f2918a06952b2d60caea568f2"
+        }
+      ],
+      "triangles": 3520,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:tensor-fasciae-latae",
+      "slug": "tensor-fasciae-latae",
+      "name": "Tensor fasciae latae",
+      "sourceName": "Muscle_Tensor Fasciae Latae",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-hip-thigh",
+      "bounds": {
+        "min": [
+          -1.072635531425476,
+          -0.010244020260870457,
+          -0.1006537452340126
+        ],
+        "max": [
+          -0.493377685546875,
+          1.2157899141311646,
+          0.3861992359161377
+        ]
+      },
+      "center": [
+        -0.7830066084861755,
+        0.602772946935147,
+        0.14277274534106255
+      ],
+      "anchor": [
+        -0.7640182971954346,
+        0.6410728693008423,
+        0.09784051030874252
+      ],
+      "nodeName": "tensor-fasciae-latae",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Tensor Fasciae Latae.stl",
+          "sha256": "0e81c102b39c1a2def3d9a36f78f2da2561d8c59f710715c64a317181ccfa9e4"
+        }
+      ],
+      "triangles": 22520,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-anterior",
+      "slug": "tibialis-anterior",
+      "name": "Tibialis anterior",
+      "sourceName": "Muscle_Tibialis Anterior",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -1.0797010660171509,
+          -7.498981952667236,
+          -0.5668981671333313
+        ],
+        "max": [
+          -0.4163787364959717,
+          -3.6386072635650635,
+          -0.01809975877404213
+        ]
+      },
+      "center": [
+        -0.7480399012565613,
+        -5.56879460811615,
+        -0.2924989629536867
+      ],
+      "anchor": [
+        -0.7578678727149963,
+        -5.568741321563721,
+        -0.2960077226161957
+      ],
+      "nodeName": "tibialis-anterior",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Tibialis Anterior.stl",
+          "sha256": "9c88a593d7c7bbb457fba14a13c05e193798d83ae77039c00d831099789d6747"
+        }
+      ],
+      "triangles": 49010,
+      "omittedSourceFaces": [
+        0,
+        1,
+        2,
+        3,
+        7,
+        8,
+        10,
+        11,
+        13,
+        15,
+        18,
+        19,
+        21,
+        23,
+        24,
+        27,
+        29,
+        32,
+        35,
+        38,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79,
+        81,
+        83,
+        86,
+        88,
+        89,
+        90,
+        91,
+        94,
+        95,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        113,
+        114,
+        115,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        978,
+        979,
+        980,
+        981,
+        1820,
+        1821,
+        1822,
+        1823
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 9,
+        "nonManifoldEdges": 13,
+        "zeroNormalVertices": 26
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:tibialis-posterior",
+      "slug": "tibialis-posterior",
+      "name": "Tibialis posterior",
+      "sourceName": "Muscle_Tibialis Posterior",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -0.8683556318283081,
+          -7.507410049438477,
+          -0.6453136205673218
+        ],
+        "max": [
+          -0.3502831757068634,
+          -3.651827335357666,
+          -0.2058335691690445
+        ]
+      },
+      "center": [
+        -0.6093194037675858,
+        -5.579618692398071,
+        -0.42557359486818314
+      ],
+      "anchor": [
+        -0.5976987481117249,
+        -5.570504665374756,
+        -0.4713095426559448
+      ],
+      "nodeName": "tibialis-posterior",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Tibialis Posterior.stl",
+          "sha256": "7258187a81dfb810dba27a9ebed9d0f9fbef1cea8d7f5dc7b20405f8e91fc755"
+        }
+      ],
+      "triangles": 41578,
+      "omittedSourceFaces": [
+        80,
+        82,
+        84,
+        87,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        228,
+        229,
+        230,
+        231,
+        234,
+        235,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 4,
+        "nonManifoldEdges": 6,
+        "zeroNormalVertices": 6
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-intermedius",
+      "slug": "vastus-intermedius",
+      "name": "Vastus intermedius",
+      "sourceName": "Muscle_Vastus Intermedius",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.9094491004943848,
+          -2.8878819942474365,
+          -0.5507678389549255
+        ],
+        "max": [
+          -0.20594002306461334,
+          0.44140198826789856,
+          0.3821108639240265
+        ]
+      },
+      "center": [
+        -0.557694561779499,
+        -1.223240002989769,
+        -0.08432848751544952
+      ],
+      "anchor": [
+        -0.5811159014701843,
+        -1.2223403453826904,
+        -0.10145552456378937
+      ],
+      "nodeName": "vastus-intermedius",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Vastus Intermedius.stl",
+          "sha256": "63905be2a88afa8f1268b5aaae5656ae24f6e970cf0097aff53025f0d76ed622"
+        }
+      ],
+      "triangles": 130684,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-lateralis",
+      "slug": "vastus-lateralis",
+      "name": "Vastus lateralis",
+      "sourceName": "Muscle_Vastus Lateralis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -1.1445841789245605,
+          -2.888054847717285,
+          -0.6134620904922485
+        ],
+        "max": [
+          -0.42126551270484924,
+          0.6734417080879211,
+          0.48585736751556396
+        ]
+      },
+      "center": [
+        -0.7829248458147049,
+        -1.107306569814682,
+        -0.06380236148834229
+      ],
+      "anchor": [
+        -0.8544436097145081,
+        -1.1067650318145752,
+        -0.06432825326919556
+      ],
+      "nodeName": "vastus-lateralis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Vastus Lateralis.stl",
+          "sha256": "97c5883d5c61e091c96d4efab5d8ffd7799108597f2aa63119c4d76ae100f439"
+        }
+      ],
+      "triangles": 153432,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:vastus-medialis",
+      "slug": "vastus-medialis",
+      "name": "Vastus medialis",
+      "sourceName": "Muscle_Vastus Medialis",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "muscle",
+      "region": "hip-thigh",
+      "bundle": "um-limb-thigh",
+      "bounds": {
+        "min": [
+          -0.6152312755584717,
+          -3.067574977874756,
+          -0.20996013283729553
+        ],
+        "max": [
+          0.05922379344701767,
+          0.005829470697790384,
+          0.48364830017089844
+        ]
+      },
+      "center": [
+        -0.278003741055727,
+        -1.5308727535884827,
+        0.13684408366680145
+      ],
+      "anchor": [
+        -0.30871692299842834,
+        -1.5251084566116333,
+        0.13952569663524628
+      ],
+      "nodeName": "vastus-medialis",
+      "sources": [
+        {
+          "file": "Segmentation_Muscle_Vastus Medialis.stl",
+          "sha256": "f4a41ed46acdfdee46220f0543de1fb8495d5a3a3a4feb738168885d8d622c04"
+        }
+      ],
+      "triangles": 102584,
+      "omittedSourceFaces": [],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 1,
+        "nonManifoldEdges": 0,
+        "zeroNormalVertices": 0
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    },
+    {
+      "id": "vm:reference:um-5t6tz7-v1-2:lower-limb:achilles-tendon",
+      "slug": "achilles-tendon",
+      "name": "Calcaneal (Achilles) tendon",
+      "sourceName": "Tendon_Archilles ",
+      "fmaId": null,
+      "laterality": "right-source-report",
+      "tissue": "tendon",
+      "region": "leg",
+      "bundle": "um-limb-leg",
+      "bounds": {
+        "min": [
+          -0.7394389510154724,
+          -7.365415573120117,
+          -1.0865482091903687
+        ],
+        "max": [
+          -0.18766233325004578,
+          -4.798904895782471,
+          -0.6075132489204407
+        ]
+      },
+      "center": [
+        -0.4635506421327591,
+        -6.082160234451294,
+        -0.8470307290554047
+      ],
+      "anchor": [
+        -0.4423236846923828,
+        -6.101986885070801,
+        -0.889081597328186
+      ],
+      "nodeName": "achilles-tendon",
+      "sources": [
+        {
+          "file": "Segmentation_Tendon_Archilles .stl",
+          "sha256": "30c8770721c391641d6f0d9a0ce5576991651837bda24d36bb448617f0a78b52"
+        }
+      ],
+      "triangles": 34004,
+      "omittedSourceFaces": [
+        13442,
+        13443,
+        13444,
+        13445,
+        14640,
+        14641,
+        14650,
+        14651,
+        29506,
+        29507,
+        29509,
+        29510,
+        30160,
+        30161,
+        30162,
+        30163,
+        30694,
+        30695,
+        30697,
+        30698,
+        31174,
+        31175,
+        31176,
+        31177,
+        33733,
+        33734,
+        33810,
+        33812,
+        33813,
+        33815,
+        33882,
+        33887,
+        33888,
+        33889,
+        33942,
+        33945
+      ],
+      "grouped": false,
+      "sourceQuality": {
+        "components": 2,
+        "nonManifoldEdges": 5,
+        "zeroNormalVertices": 8
+      },
+      "coverageNote": null,
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false,
+        "registeredToBodyParts3D": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "um-limb-hip-thigh",
+      "url": "/models/um-limb/hip-thigh.glb",
+      "bytes": 11143104,
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262",
+      "structures": 14
+    },
+    {
+      "id": "um-limb-thigh",
+      "url": "/models/um-limb/thigh.glb",
+      "bytes": 19648284,
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2",
+      "structures": 14
+    },
+    {
+      "id": "um-limb-leg",
+      "url": "/models/um-limb/leg.glb",
+      "bytes": 9251564,
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c",
+      "structures": 11
+    },
+    {
+      "id": "um-limb-foot",
+      "url": "/models/um-limb/foot.glb",
+      "bytes": 2676564,
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5",
+      "structures": 13
+    }
+  ]
+}

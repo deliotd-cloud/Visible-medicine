@@ -1,0 +1,85 @@
+.specimen-review-choice {
+  display: block;
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.3rem;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.specimen-review-choice[aria-current="page"] {
+  background: var(--vm-midnight);
+  color: var(--vm-ivory);
+}
+.specimen-review-id,
+.specimen-review code {
+  overflow-wrap: anywhere;
+  white-space: normal;
+  font-size: 0.8rem;
+}
+.specimen-review-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.specimen-decision fieldset {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  min-width: 0;
+}
+.specimen-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin: 0.85rem 0;
+}
+.specimen-check input {
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+  accent-color: var(--vm-teal);
+}
+.specimen-field,
+.specimen-evidence label {
+  display: block;
+  margin: 0.8rem 0;
+}
+.specimen-field textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  background: white;
+  resize: vertical;
+}
+.specimen-evidence {
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 0.3rem;
+  margin: 0.8rem 0;
+}
+.specimen-review [data-slot="select-trigger"] {
+  width: 100%;
+  height: auto;
+  min-height: 2.5rem;
+}
+.specimen-review pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.8rem;
+}
+.specimen-review button {
+  max-width: 100%;
+  height: auto;
+  min-height: 2.4rem;
+  white-space: normal;
+}
+.specimen-review summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.specimen-review textarea:focus-visible,
+.specimen-review a:focus-visible,
+.specimen-review input:focus-visible {
+  outline: 2px solid var(--vm-teal);
+  outline-offset: 3px;
+}

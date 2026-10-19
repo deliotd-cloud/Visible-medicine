@@ -1,0 +1,36 @@
+.component-imaging-notes {
+  margin: 0.75rem 0;
+  border-top: 1px solid var(--border);
+  padding-top: 0.5rem;
+  overflow-wrap: anywhere;
+}
+.component-imaging-notes > summary {
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 0.4rem 0;
+}
+.component-imaging-notes > summary:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+.component-imaging-notes > p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.component-imaging-notes [data-slot='select-trigger'],
+.component-imaging-notes > button {
+  width: 100%;
+  height: auto;
+  min-height: 2.5rem;
+  white-space: normal;
+  text-align: left;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.component-imaging-notes [data-slot='select-value'] {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}

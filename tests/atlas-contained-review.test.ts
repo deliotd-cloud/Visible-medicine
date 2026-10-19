@@ -1,0 +1,42 @@
+import {beforeHippocampi} from './atlas-hippocampi-fixture.ts';
+import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import test from 'node:test';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
+
+test('contained review correction ships exact tested inputs without changing model delivery',()=>{
+  const base='public/atlas-runtime/head-neck/';
+  const saved=(path:string)=>execFileSync('git',['--no-replace-objects','show','f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6:'+path],{maxBuffer:32e6});
+  const sha=(bytes:Uint8Array)=>createHash('sha256').update(bytes).digest('hex');
+  const bytes=saved(base+'manifest.json');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),'eaaf8eb1d53dc3728e07a5f3497a4a7c8018afdf0838f5b90a313282d77a2381');
+  const manifest=JSON.parse(bytes.toString());
+  assert.equal(manifest.sourceCommit,'88cea927d48729769b96ad8fe680b0872b7e6687');
+  assert.equal(manifest.standaloneReviewConnection,false);
+  const inputs=JSON.parse(saved(base+'source-inputs.json').toString()) as {path:string;sha256:string}[];
+  for(const [path,sha256] of Object.entries({
+    'app/eye-layers.tsx':'61138f2e48a41702e3ee0516a6c7e74bf4f8182cc389773740748cc384a06098',
+    'app/femoral-components.tsx':'0bcd8922fb70204b272a1083c67a6bfda8b3af20eb20f870ef19be0700aa05ae',
+    'app/nested-teaching.tsx':'502e0a1d13c65875963bc760ca01260bde329368fe6d3bf4162f98cf3de42744',
+    'app/ventricles.tsx':'08a2c1cd5d64cb9072d8fe80f2d95a40a7eb0611a2071043db45bc4a8f6f7ed0',
+  }))assert.deepEqual(inputs.filter(input=>input.path===path),[{path,sha256}]);
+  const live=JSON.parse(readFileSync(base+'manifest.json','utf8'));
+  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
+  const liveInputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8')) as {path:string;sha256:string}[];
+  assert.equal(live.sourceCommit,CURRENT_ATLAS_REVISION);
+  assert.equal(review.revision,live.sourceCommit);
+  for(const path of ['app/eye-layers.tsx','app/femoral-components.tsx','app/nested-teaching.tsx','app/ventricles.tsx']){
+    const source=execFileSync('git',['--no-replace-objects','-C',currentAtlasDeliveryRoot(),'show',live.sourceCommit+':'+path],{maxBuffer:32e6});
+    const entry=review.files.find((f:any)=>f.path===path);assert(entry,path);
+    assert.equal(entry.sourceSha256,sha(source),path);
+    assert.equal(entry.importedSha256,sha(readFileSync('atlas-review/'+path)),path);
+    assert.deepEqual(liveInputs.filter(input=>input.path===path),[{path,sha256:sha(source)}]);
+  }
+  for(const flag of ['standaloneReviewConnection','clinicalApproved','patientDataIncluded','imagingConnection'])assert.equal(live[flag],false);
+  const before=JSON.parse(execFileSync('git',['show','93ff7b0f798fb3b788684ee38462326b46d44eb3:lib/atlas-model-inventory.json'],{encoding:'utf8'}));
+  const current=JSON.parse(readFileSync('lib/atlas-model-inventory.json','utf8'));
+  assert.deepEqual(beforeHippocampi(current.models),before.models,'all model hashes, byte lengths and protected paths remain identical');
+  assert.ok(Array.isArray(current.models) && current.models.length===137);
+});

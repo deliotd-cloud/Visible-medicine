@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "7b3e678ae4b8059aadb84459048ebd05f7abe7b9",
+  "region": "shoulder-right",
+  "structures": 9,
+  "patientDataIncluded": false,
+  "clinicalApproved": false,
+  "standaloneReviewConnection": false,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 504,
+      "sha256": "39088bc2dc087b72b6110af895108b659f1efc2121a75a43885fddad70345228"
+    },
+    {
+      "path": "BUNDLED_NOTICES.txt",
+      "bytes": 36869,
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
+    },
+    {
+      "path": "bundled-dependencies.json",
+      "bytes": 1862,
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
+    },
+    {
+      "path": "source-inputs.json",
+      "bytes": 150304,
+      "sha256": "9cb722729413d5f1ff7f57d2773caf47e7686cafcf686d3dbdc19e763f738b9f"
+    },
+    {
+      "path": "assets/abdomen-Lh5vGMRT.js",
+      "bytes": 894642,
+      "sha256": "f4ab888cbe58419dd9378c017ea7dc4ba3061f66694ea1a9011f58639457dddb"
+    },
+    {
+      "path": "assets/anatomy-scene-BfzNoUio.js",
+      "bytes": 1075111,
+      "sha256": "931929e83f7f9e2f82f6321616a18b2e30753e6d410c9e3c19e0dd552023a2c0"
+    },
+    {
+      "path": "assets/anatomy-scene-DBXvkxUs.css",
+      "bytes": 3191,
+      "sha256": "802c270adb82b7b34c7ab657d3950f07cc7981b80a4fb46e3c50d3a4f10164e7"
+    },
+    {
+      "path": "assets/body-content-DuMHyTy4.js",
+      "bytes": 7504536,
+      "sha256": "d54f6ee42843cd2c601ad759e84d77a1d5cbe16fa93e7092e927ea46afa97441"
+    },
+    {
+      "path": "assets/foot-Dx0Xm-Lc.js",
+      "bytes": 1052666,
+      "sha256": "2a32682cafb309dc7cdd63e3798e1f3ec58f0dd6c95eb2f2622aa4adb8db423b"
+    },
+    {
+      "path": "assets/forearm-B0UjTDla.js",
+      "bytes": 752476,
+      "sha256": "5af95d0ff46d3af7b5091b1767e03ba921b01ebf34e2a0c77cdd6170d0dbeb08"
+    },
+    {
+      "path": "assets/hand-C2g4wVfN.js",
+      "bytes": 1277412,
+      "sha256": "a6be2350aa39dbf9aa6fe18d14e0c6ac4e2c886ffe096ca8f0f287f2ae8ce1d9"
+    },
+    {
+      "path": "assets/head-neck-C7DdqLWJ.js",
+      "bytes": 2358951,
+      "sha256": "1327c357ecfe5d744eceb8014fbe788bfbac398b791e248cb2f263bf347e6cf3"
+    },
+    {
+      "path": "assets/index-CIdOEm3e.css",
+      "bytes": 308040,
+      "sha256": "a894cf5ae7b2913ee49c0dd686f6c72c590803d5e26811972b42895399135f86"
+    },
+    {
+      "path": "assets/index-O1w6y8Yg.js",
+      "bytes": 1036599,
+      "sha256": "12c889d063e0b1b88ff8a0be2ac63104215847c42abee026af9d6034a73d1106"
+    },
+    {
+      "path": "assets/leg-C23bX7kx.js",
+      "bytes": 669236,
+      "sha256": "ebd7cb86901737d913e8fa53b1eaf72cb460ca7648b2fac40a32cc7eef9f6440"
+    },
+    {
+      "path": "assets/pelvis-D6ZvRxX9.js",
+      "bytes": 440272,
+      "sha256": "a02cea5bb715f83d537d3e80ed5921d9ce740bc8201d97db0a2edc8dd084f5b2"
+    },
+    {
+      "path": "assets/shoulder-arm-8UqNlnEr.js",
+      "bytes": 939023,
+      "sha256": "5747a962459501773da533c0ffbc1f25ed19a04504b7cc3feb98d3573f2ae4da"
+    },
+    {
+      "path": "assets/spine-e2QBQfxg.js",
+      "bytes": 1221389,
+      "sha256": "efd948ed6dbf5563d3700c6665ffb3b7ee2c2310252f5a2289c2975cf788133e"
+    },
+    {
+      "path": "assets/thigh-CNIgZcWe.js",
+      "bytes": 658949,
+      "sha256": "88b7edb45d9d2b96ff330a7ed46623b36fd3fff75da8dfca8658d8b2121fa03a"
+    },
+    {
+      "path": "assets/thorax-BFxTSfQ4.js",
+      "bytes": 1141081,
+      "sha256": "0e0838fb37d99baef5d175c1afd13ce42ce443e1e617121bcc6389c54e0cd86f"
+    },
+    {
+      "path": "models/bodyparts3d/shoulder-right.glb",
+      "bytes": 771836,
+      "sha256": "54d54094b4f071a137a7c2279bcfd031474c91cf3e8e2354a9d4bb1f013b6263"
+    },
+    {
+      "path": "models/bodyparts3d/manifest.json",
+      "bytes": 7571,
+      "sha256": "619e3ab84712487bd032b84a8f8b52f94d10883d8db7798057049bab287de857"
+    },
+    {
+      "path": "models/bodyparts3d/credits.html",
+      "bytes": 1581,
+      "sha256": "256d16a697341a626e823ca778053c039ae21fd0ae5b5b8e0252fe3eaa27f128"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 350786,
+      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
+    },
+    {
+      "path": "LICENSES/dependency-license-audit.json",
+      "bytes": 162634,
+      "sha256": "46202b5f237c1ac0202f3fde0e74647abd84da6f2fc1b430b44723faca88b58e"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "LICENSES/BODYPARTS3D.md",
+      "bytes": 2903,
+      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6"
+    }
+  ]
+}

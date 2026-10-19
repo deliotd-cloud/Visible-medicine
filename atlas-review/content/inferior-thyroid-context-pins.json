@@ -1,0 +1,502 @@
+{
+  "sourceCommit": "4c30ff9f4a29249cdd716e616a55b98006d54a3a",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "entries": [
+    {
+      "id": "vm:anatomy:body:head-neck:midline:bone:hyoid-bone",
+      "fmaId": "FMA52749",
+      "name": "Hyoid bone",
+      "sourceName": "hyoid bone",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "head-neck",
+      "regions": [
+        "head-neck"
+      ],
+      "bundle": "head-neck-skeleton",
+      "nodeName": "FMA52749",
+      "bounds": {
+        "min": [
+          -0.1952420026063919,
+          6.223700046539307,
+          0.4441870152950287
+        ],
+        "max": [
+          0.1828249990940094,
+          6.408599853515625,
+          0.7900000214576721
+        ]
+      },
+      "center": [
+        -0.006208501756191254,
+        6.316149950027466,
+        0.6170935183763504
+      ],
+      "anchor": [
+        -0.00045426300494000316,
+        6.312399864196777,
+        0.7346499562263489
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ2772",
+          "sha256": "c8c6cfdd66285cdda16fa441829f723d3943823d0ffebf5e394ff8dc49a598b1"
+        },
+        {
+          "file": "FJ3201",
+          "sha256": "c52dd55001d86286d6469190d3673cc8b2b03fb3d9c29d45cec211192950c027"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:third-cervical-vertebra",
+      "fmaId": "FMA12521",
+      "name": "Third cervical vertebra",
+      "sourceName": "third cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12521",
+      "bounds": {
+        "min": [
+          -0.2984279990196228,
+          6.170000076293945,
+          -0.11866901069879532
+        ],
+        "max": [
+          0.28539299964904785,
+          6.457399845123291,
+          0.37813201546669006
+        ]
+      },
+      "center": [
+        -0.006517499685287476,
+        6.313699960708618,
+        0.12973150238394737
+      ],
+      "anchor": [
+        0.008280440233647823,
+        6.285400390625,
+        0.06494998931884766
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3161",
+          "sha256": "8f0de55a4feef85c256501a8afff7bb5aa3f77f4681af4c91801da87b54db103"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fourth-cervical-vertebra",
+      "fmaId": "FMA12522",
+      "name": "Fourth cervical vertebra",
+      "sourceName": "fourth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12522",
+      "bounds": {
+        "min": [
+          -0.27753400802612305,
+          6.045999526977539,
+          -0.09306400269269943
+        ],
+        "max": [
+          0.2637749910354614,
+          6.321400165557861,
+          0.3910810053348541
+        ]
+      },
+      "center": [
+        -0.0068795084953308105,
+        6.1836998462677,
+        0.14900850132107735
+      ],
+      "anchor": [
+        -0.04486189782619476,
+        6.188299655914307,
+        0.1026729941368103
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3164",
+          "sha256": "a883dd5929817f87eb366a32ca9d82463fd0db40286c49b8adc9e9d1a8cecc34"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:fifth-cervical-vertebra",
+      "fmaId": "FMA12523",
+      "name": "Fifth cervical vertebra",
+      "sourceName": "fifth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12523",
+      "bounds": {
+        "min": [
+          -0.2969779968261719,
+          5.937700271606445,
+          -0.13917499780654907
+        ],
+        "max": [
+          0.2833319902420044,
+          6.1798996925354,
+          0.407725989818573
+        ]
+      },
+      "center": [
+        -0.00682300329208374,
+        6.058799982070923,
+        0.13427549600601196
+      ],
+      "anchor": [
+        -0.006795770023018122,
+        6.063100814819336,
+        0.12540000677108765
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3167",
+          "sha256": "b2485c3707b04f1fd455ee4d3a7b69670ec9c85d4ef9a54463e5c6089f1a69a7"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:sixth-cervical-vertebra",
+      "fmaId": "FMA12524",
+      "name": "Sixth cervical vertebra",
+      "sourceName": "sixth cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12524",
+      "bounds": {
+        "min": [
+          -0.31265199184417725,
+          5.815899848937988,
+          -0.20820599794387817
+        ],
+        "max": [
+          0.2994770109653473,
+          6.047399997711182,
+          0.4167099893093109
+        ]
+      },
+      "center": [
+        -0.006587490439414978,
+        5.931649923324585,
+        0.10425199568271637
+      ],
+      "anchor": [
+        -0.02192229963839054,
+        5.937199592590332,
+        0.12316200137138367
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3170",
+          "sha256": "ac100888f7e271851c138e8d41a52168070e4fe5c63e8876a4bcfba08f3b59aa"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:seventh-cervical-vertebra",
+      "fmaId": "FMA12525",
+      "name": "Seventh cervical vertebra",
+      "sourceName": "seventh cervical vertebra",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12525",
+      "bounds": {
+        "min": [
+          -0.33229300379753113,
+          5.647099494934082,
+          -0.28733599185943604
+        ],
+        "max": [
+          0.31931599974632263,
+          5.918399810791016,
+          0.40031898021698
+        ]
+      },
+      "center": [
+        -0.006488502025604248,
+        5.782749652862549,
+        0.05649149417877197
+      ],
+      "anchor": [
+        -0.008737760595977306,
+        5.774100303649902,
+        0.07046298682689667
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3172",
+          "sha256": "43bc0a1f9b3adffd5f45256b61f75affa15b56c85b387fa733b59de310216104"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:atlas",
+      "fmaId": "FMA12519",
+      "name": "Atlas",
+      "sourceName": "atlas",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12519",
+      "bounds": {
+        "min": [
+          -0.41364601254463196,
+          6.62209939956665,
+          -0.09404201805591583
+        ],
+        "max": [
+          0.40230700373649597,
+          6.814300537109375,
+          0.3764420449733734
+        ]
+      },
+      "center": [
+        -0.005669504404067993,
+        6.718199968338013,
+        0.1412000134587288
+      ],
+      "anchor": [
+        -0.10565600544214249,
+        6.696400165557861,
+        0.2025810182094574
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3176",
+          "sha256": "8ac9ee6d7631edc066a322af278ed508eab4d9c0919e9a77657ead17c14c8a79"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    },
+    {
+      "id": "vm:anatomy:body:spine:midline:bone:axis",
+      "fmaId": "FMA12520",
+      "name": "Axis",
+      "sourceName": "axis",
+      "system": "skeleton",
+      "category": "bone",
+      "laterality": "midline",
+      "region": "spine",
+      "regions": [
+        "spine",
+        "head-neck"
+      ],
+      "bundle": "spine-skeleton",
+      "nodeName": "FMA12520",
+      "bounds": {
+        "min": [
+          -0.2596159875392914,
+          6.331700325012207,
+          -0.13329102098941803
+        ],
+        "max": [
+          0.24574199318885803,
+          6.783499717712402,
+          0.3653910160064697
+        ]
+      },
+      "center": [
+        -0.006936997175216675,
+        6.557600021362305,
+        0.11604999750852585
+      ],
+      "anchor": [
+        0.013543100096285343,
+        6.581600189208984,
+        0.20394302904605865
+      ],
+      "sourceTree": "isa",
+      "sources": [
+        {
+          "file": "FJ3177",
+          "sha256": "ae446bbf47561c5ff2a2c0a03bfb158ba2581477ae5078ac89cc95b92637adab"
+        }
+      ],
+      "coverageNote": null,
+      "provenance": {
+        "method": "licensed-source-mesh",
+        "license": "CC-BY-4.0",
+        "sourceVersion": "4.0",
+        "recovered": false
+      },
+      "validation": {
+        "status": "unvalidated",
+        "anatomicalReview": false
+      }
+    }
+  ],
+  "bundles": [
+    {
+      "id": "head-neck-skeleton",
+      "url": "/models/bodyparts3d/full-body/head-neck-skeleton.glb",
+      "bytes": 2355384,
+      "sha256": "c1b950c82fd76e69cf153757ca275a6bd27fd25d74d3fd24259b15f9172a39d4",
+      "structures": 23
+    },
+    {
+      "id": "spine-skeleton",
+      "url": "/models/bodyparts3d/full-body/spine-skeleton.glb",
+      "bytes": 1286192,
+      "sha256": "bcb3cfadcd92bdf6e9529727aaba34f54b250887d42a3116808ac55e025e7957",
+      "structures": 25
+    }
+  ]
+}

@@ -1,0 +1,580 @@
+{
+  "baseline": "88cea927d48729769b96ad8fe680b0872b7e6687",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "foot-skeleton",
+      "url": "/models/bodyparts3d/full-body/foot-skeleton.glb",
+      "bytes": 612448,
+      "sha256": "1b363def6136145a2a0faa31ca5edb46db8345631a4343c25919a3abf73d2d40",
+      "structures": 54
+    },
+    {
+      "id": "foot-connective-recovery",
+      "url": "/models/bodyparts3d/full-body/foot-connective-recovery.glb",
+      "bytes": 102396,
+      "sha256": "d4797b74c353d5364113703c07422d57e032325846975f7c752fe4a3ae36a424",
+      "structures": 2
+    }
+  ],
+  "beforeAllTeachingSnapshotHash": "4bfd88bb3af06ea74557cb390581caf001e721b0f8c0eb71b49a6326875dcaee",
+  "entries": [
+    {
+      "family": "calcaneus",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-calcaneus",
+        "fmaId": "FMA24498",
+        "name": "Left calcaneus",
+        "sourceName": "left calcaneus",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24498",
+        "bounds": {
+          "min": [
+            0.45009997487068176,
+            -8.684171676635742,
+            -0.25793200731277466
+          ],
+          "max": [
+            1.0076799392700195,
+            -8.190711975097656,
+            0.44141799211502075
+          ]
+        },
+        "center": [
+          0.7288899570703506,
+          -8.4374418258667,
+          0.09174299240112305
+        ],
+        "anchor": [
+          0.6494590044021606,
+          -8.498003005981445,
+          0.14666900038719177
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3256",
+            "sha256": "5424e3e394e233213071fbf46f178ed9123da4763d6b64125f32e7b8af1803d8"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "calcaneus",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-calcaneus",
+        "fmaId": "FMA24497",
+        "name": "Right calcaneus",
+        "sourceName": "right calcaneus",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24497",
+        "bounds": {
+          "min": [
+            -1.0078099966049194,
+            -8.684906959533691,
+            -0.2599489986896515
+          ],
+          "max": [
+            -0.44875800609588623,
+            -8.191547393798828,
+            0.4414849877357483
+          ]
+        },
+        "center": [
+          -0.7282840013504028,
+          -8.43822717666626,
+          0.0907679945230484
+        ],
+        "anchor": [
+          -0.6279199719429016,
+          -8.424676895141602,
+          0.14383003115653992
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3360",
+            "sha256": "b53e7970e822e997e1b05f94f42514d07a3f98edcc63ec7dd7219354ce1d8176"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "talus",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:left-talus",
+        "fmaId": "FMA24483",
+        "name": "Left talus",
+        "sourceName": "left talus",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24483",
+        "bounds": {
+          "min": [
+            0.49635398387908936,
+            -8.313055992126465,
+            -0.011860008351504803
+          ],
+          "max": [
+            0.9017840027809143,
+            -7.969018936157227,
+            0.5567700266838074
+          ]
+        },
+        "center": [
+          0.6990689933300018,
+          -8.141037464141846,
+          0.2724550091661513
+        ],
+        "anchor": [
+          0.6949610114097595,
+          -8.184955596923828,
+          0.2745629847049713
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3280",
+            "sha256": "56b40cfe8944df25ebed250dbcc80794ee5435e6ab667edddabf4324553bdb3c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "talus",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:right-talus",
+        "fmaId": "FMA24482",
+        "name": "Right talus",
+        "sourceName": "right talus",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24482",
+        "bounds": {
+          "min": [
+            -0.901136040687561,
+            -8.31156063079834,
+            -0.012459984049201012
+          ],
+          "max": [
+            -0.496273010969162,
+            -7.96889066696167,
+            0.5556899905204773
+          ]
+        },
+        "center": [
+          -0.6987045258283615,
+          -8.140225648880005,
+          0.27161500323563814
+        ],
+        "anchor": [
+          -0.6930500268936157,
+          -8.184046745300293,
+          0.27630698680877686
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3385",
+            "sha256": "8b35f0132c1a05b64f26746fdd0496a2495280cd0c2ac90dbf637fd74f79f54f"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "navicular",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:bone:navicular-bone-of-left-foot",
+        "fmaId": "FMA24501",
+        "name": "Navicular bone of left foot",
+        "sourceName": "navicular bone of left foot",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24501",
+        "bounds": {
+          "min": [
+            0.5792959928512573,
+            -8.309741973876953,
+            0.44276002049446106
+          ],
+          "max": [
+            0.9664379954338074,
+            -8.062971115112305,
+            0.7109699845314026
+          ]
+        },
+        "center": [
+          0.7728669941425323,
+          -8.186356544494629,
+          0.5768650025129318
+        ],
+        "anchor": [
+          0.7872009873390198,
+          -8.179460525512695,
+          0.5617199540138245
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3307",
+            "sha256": "a9608a209e96492213275d1592554855a6acbf0d3a5ec8b05fb5fadfceb5df6c"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "navicular",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:bone:navicular-bone-of-right-foot",
+        "fmaId": "FMA24500",
+        "name": "Navicular bone of right foot",
+        "sourceName": "navicular bone of right foot",
+        "system": "skeleton",
+        "category": "bone",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-skeleton",
+        "nodeName": "FMA24500",
+        "bounds": {
+          "min": [
+            -0.9675399661064148,
+            -8.30776309967041,
+            0.44329002499580383
+          ],
+          "max": [
+            -0.5818960070610046,
+            -8.06155776977539,
+            0.7099299430847168
+          ]
+        },
+        "center": [
+          -0.7747179865837097,
+          -8.1846604347229,
+          0.5766099840402603
+        ],
+        "anchor": [
+          -0.7869519591331482,
+          -8.1781005859375,
+          0.5621800422668457
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3308",
+            "sha256": "0e08f1570755a9675e2556013eda861f00f31fe7ae2139e24584129dfe78d2c2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "longPlantar",
+      "identity": {
+        "id": "vm:anatomy:body:foot:left:ligament:left-long-plantar-ligament",
+        "fmaId": "FMA44250",
+        "name": "Left long plantar ligament",
+        "sourceName": "left long plantar ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "left",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-connective-recovery",
+        "nodeName": "FMA44250",
+        "bounds": {
+          "min": [
+            0.5938950181007385,
+            -8.610419273376465,
+            -0.044086989015340805
+          ],
+          "max": [
+            1.178279995918274,
+            -8.363907814025879,
+            0.9254400730133057
+          ]
+        },
+        "center": [
+          0.8860875070095062,
+          -8.487163543701172,
+          0.44067654199898243
+        ],
+        "anchor": [
+          0.8925990462303162,
+          -8.50725269317627,
+          0.46150803565979004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1424M",
+            "sha256": "85a4d2965253a1638342e3295fb342ff0d8e8931c9d9b6373de6e6af7de3e79e"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    },
+    {
+      "family": "longPlantar",
+      "identity": {
+        "id": "vm:anatomy:body:foot:right:ligament:right-long-plantar-ligament",
+        "fmaId": "FMA44249",
+        "name": "Right long plantar ligament",
+        "sourceName": "right long plantar ligament",
+        "system": "connective",
+        "category": "ligament",
+        "laterality": "right",
+        "region": "foot",
+        "regions": [
+          "foot"
+        ],
+        "bundle": "foot-connective-recovery",
+        "nodeName": "FMA44249",
+        "bounds": {
+          "min": [
+            -1.178279995918274,
+            -8.610419273376465,
+            -0.044085998088121414
+          ],
+          "max": [
+            -0.5938950181007385,
+            -8.363907814025879,
+            0.9254400730133057
+          ]
+        },
+        "center": [
+          -0.8860875070095062,
+          -8.487163543701172,
+          0.4406770374625921
+        ],
+        "anchor": [
+          -0.892598032951355,
+          -8.50725269317627,
+          0.46150803565979004
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ1424",
+            "sha256": "661b56c07f5a39362806f1c62d10497f42dbe1da37a680da0d4359c0c5079c9c"
+          }
+        ],
+        "coverageNote": "Recovered source surface. Anatomical boundaries, detail and spatial relationships have not been independently reviewed.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": true
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "previous": {
+        "ultrasound": {
+          "readiness": "pending",
+          "title": "Ultrasound content pending",
+          "body": "No imaging study or validated modality-specific teaching material is loaded for this structure. This is a spatial anatomy model, not a substitute for diagnostic imaging.",
+          "note": "Future imaging registration must use a verified patient coordinate frame; source-model coordinates are not patient coordinates."
+        }
+      }
+    }
+  ]
+}

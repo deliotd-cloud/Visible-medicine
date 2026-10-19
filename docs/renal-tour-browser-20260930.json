@@ -1,0 +1,74 @@
+{
+  "source": "11ba63422686e0f8666bf18769c67485dc518d19",
+  "localOnly": true,
+  "results": [
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "font": 16,
+      "region": "abdomen",
+      "titles": [
+        "Right kidney · Posterior\nStep 1 of 4",
+        "Right renal artery · Anterior\nStep 2 of 4",
+        "Left kidney · Posterior\nStep 3 of 4",
+        "Left renal artery · Anterior\nStep 4 of 4"
+      ],
+      "modelRendered": true,
+      "imagingPause": true,
+      "exitRestoredWorkspace": true
+    },
+    {
+      "name": "large-text",
+      "width": 1280,
+      "height": 900,
+      "font": 32,
+      "region": "abdomen",
+      "titles": [
+        "Right kidney · Posterior\nStep 1 of 4",
+        "Right renal artery · Anterior\nStep 2 of 4",
+        "Left kidney · Posterior\nStep 3 of 4",
+        "Left renal artery · Anterior\nStep 4 of 4"
+      ],
+      "modelRendered": true,
+      "imagingPause": true,
+      "exitRestoredWorkspace": true
+    },
+    {
+      "name": "phone",
+      "width": 375,
+      "height": 812,
+      "font": 16,
+      "region": "abdomen",
+      "titles": [
+        "Right kidney · Posterior\nStep 1 of 4",
+        "Right renal artery · Anterior\nStep 2 of 4",
+        "Left kidney · Posterior\nStep 3 of 4",
+        "Left renal artery · Anterior\nStep 4 of 4"
+      ],
+      "modelRendered": true,
+      "imagingPause": true,
+      "exitRestoredWorkspace": true
+    },
+    {
+      "name": "whole-body",
+      "width": 1280,
+      "height": 900,
+      "font": 16,
+      "region": "whole-body",
+      "titles": [
+        "Right kidney · Posterior\nStep 1 of 4",
+        "Right renal artery · Anterior\nStep 2 of 4",
+        "Left kidney · Posterior\nStep 3 of 4",
+        "Left renal artery · Anterior\nStep 4 of 4"
+      ],
+      "modelRendered": true,
+      "imagingPause": true,
+      "exitRestoredWorkspace": true
+    }
+  ],
+  "reviewTourVisible": true,
+  "approvalSubmitted": false,
+  "published": false,
+  "errors": []
+}

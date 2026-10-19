@@ -1,0 +1,6 @@
+.portfolio-column > h3[id] { scroll-margin-top: 24px; }
+.portfolio-compose { border: 1px solid var(--line); background: white; }
+.portfolio-compose > summary { padding: 14px 18px; color: var(--teal); font-size: 12px; font-weight: 600; cursor: pointer; }
+.portfolio-compose > summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.portfolio-compose[open] > summary { border-bottom: 1px solid var(--line); }
+.portfolio-compose .portfolio-form { border: 0; }

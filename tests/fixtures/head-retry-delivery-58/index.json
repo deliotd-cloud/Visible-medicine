@@ -1,0 +1,125 @@
+{
+  "schema": "visible-medicine.immutable-head-retry-delivery/1",
+  "parent": "446d3d75eca72c36a16efe387440c4a93ca4b480",
+  "atlasSource": "46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd",
+  "beforeReview": "024b9d3104ee4a93bc50b6430851ea9184c3a2f95da8c133d6e302006993a902",
+  "afterReview": "11ddecf2aa1978f5979338085f1b2e08ad9fa84a331b7c92a367a876357543c5",
+  "beforeRegister": 57,
+  "afterRegister": 58,
+  "scope": "Immutable engineering delta, not current source admission or clinical approval. Actual current delivery is verified independently. No models, scan/mask payloads, private decisions or operational documents included.",
+  "files": [
+    {
+      "file": "inputs-before.json",
+      "epoch": "before",
+      "sourcePath": "atlas-review/integration-inputs.json",
+      "bytes": 261504,
+      "sha256": "ec7a5ed9873819b14239034b53abbc4e024c8ac4f38dc1fbebb8f8c069fef5bd",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "inputs-after.json",
+      "epoch": "after",
+      "sourcePath": "atlas-review/integration-inputs.json",
+      "bytes": 261504,
+      "sha256": "a83cfd250bc7cb108ba278dfe100d0658929bc832b14d29cf6c909c97cb914c9"
+    },
+    {
+      "file": "review-before.json",
+      "epoch": "before",
+      "sourcePath": "atlas-review/manifest.json",
+      "bytes": 372286,
+      "sha256": "bf19e740c851c11b656b9e41ee28897b3258e807459ea2cfe28342d18c9d9c76",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "review-after.json",
+      "epoch": "after",
+      "sourcePath": "atlas-review/manifest.json",
+      "bytes": 372286,
+      "sha256": "c8d617ebe9210d9a34d1d167f1236640d090307827f6de21434d2cfa42641878"
+    },
+    {
+      "file": "renderer-before.json",
+      "epoch": "before",
+      "sourcePath": "atlas-review/content/body-renderer-revision.json",
+      "bytes": 212343,
+      "sha256": "8db700ecc6f3c8de6877516bd5e245e7a69a7ec136d54772fd32ccc4acc723c0",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "renderer-after.json",
+      "epoch": "after",
+      "sourcePath": "atlas-review/content/body-renderer-revision.json",
+      "bytes": 212343,
+      "sha256": "bbb1abd977e1b762056d6ce0c21103f5ee875a7d9bd1adf1e905c2778e2a0447"
+    },
+    {
+      "file": "revisions-before.json",
+      "epoch": "before",
+      "sourcePath": "atlas-review/content/review-revisions.json",
+      "bytes": 12713,
+      "sha256": "bada2a6e74703795305079207ce2209fba63ba02aa88628db48fcb4c95bbd1f5",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "revisions-after.json",
+      "epoch": "after",
+      "sourcePath": "atlas-review/content/review-revisions.json",
+      "bytes": 12713,
+      "sha256": "bf5037c9cb45b1f2e835c40eee81033cda5a44eb4c5a7154f6d8a2a7f886a74c"
+    },
+    {
+      "file": "register-before.json",
+      "epoch": "before",
+      "sourcePath": "docs/completion-checklist.json",
+      "bytes": 99014,
+      "sha256": "f66c67382703de8a11114f4bd8fc678bade67c7e67dfffed0166828d812a72d2",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "register-after.json",
+      "epoch": "after",
+      "sourcePath": "docs/completion-checklist.json",
+      "bytes": 100183,
+      "sha256": "37fef3aaae91e6a9d5039d41a5731a20440b06f3045b8abdcb0f10e7a07a7831"
+    },
+    {
+      "file": "viewer-manifest-before.json",
+      "epoch": "before",
+      "sourcePath": "public/atlas-review-viewer/manifest.json",
+      "bytes": 9033,
+      "sha256": "53e89541b093f9e171668a7b9d1c7a2a0a2a3d728f2180e7751c0cd21d9551c6",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "viewer-manifest-after.json",
+      "epoch": "after",
+      "sourcePath": "public/atlas-review-viewer/manifest.json",
+      "bytes": 9033,
+      "sha256": "55ed42ca8097882e68e782588b4476eed15f3dffcedc7a34d9e17090bf206180"
+    },
+    {
+      "file": "head-viewer-before.tsx.txt",
+      "epoch": "before",
+      "sourcePath": "components/HeadAtlasViewer.tsx",
+      "bytes": 107435,
+      "sha256": "06b4c293f5931f5cd0e36471de46718c6bbf26ea3500ec24c57c4de15e476841",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    },
+    {
+      "file": "head-viewer-after.tsx.txt",
+      "epoch": "after",
+      "sourcePath": "components/HeadAtlasViewer.tsx",
+      "bytes": 108275,
+      "sha256": "0197aff71effd03a1d679819f161500c8020f0044ec5bf708759a758a26ec4d1"
+    },
+    {
+      "file": "model-inventory.json",
+      "epoch": "unchanged",
+      "sourcePath": "lib/atlas-model-inventory.json",
+      "bytes": 33492,
+      "sha256": "0a5da79ea1b8b5622b5bc0704ec5ee4f0995f941bd68aaa6d32cdc7e148d9270",
+      "immutableParent": "446d3d75eca72c36a16efe387440c4a93ca4b480"
+    }
+  ]
+}

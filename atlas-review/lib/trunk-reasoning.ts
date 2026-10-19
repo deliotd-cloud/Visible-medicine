@@ -1,0 +1,178 @@
+import type { ReasoningConcept } from './reasoning-questions';
+
+const loyola = (name: string, file: string) => ({ title: `Loyola University: ${name}`, url: `https://www.lumen.luc.edu/lumen/meded/grossanatomy/dissector/mml/${file}.htm` });
+const back = { title: 'UAMS: back muscle relationships', url: 'https://medicine.uams.edu/neuroscience/education/medical-school-courses/human-structure-module/anatomy-tables/muscle-tables/muscles-of-the-back-region/' };
+const chest = { title: 'Texas Tech: thoracic-wall layers', url: 'https://anatomy.ttuhscep.edu/cardiovascular_system/thorax_wall_tables.html' };
+const pair = (right: [string, string], left: [string, string]) => [
+  { fma: right[0], file: right[1], side: 'right' as const },
+  { fma: left[0], file: left[1], side: 'left' as const },
+];
+type Draft = Omit<ReasoningConcept, 'readiness' | 'revision'>;
+
+// Original questions, not publisher questions or new anatomy. "midline" is
+// the catalogue's exact tag; intercostals remain bilateral source groups.
+export const trunkReasoningConcepts: readonly ReasoningConcept[] = ([
+  {
+    key: 'trunk-psoas-major', region: 'spine', sourceRegions: ['spine', 'thigh'],
+    bindings: pair(['FMA22342', 'FJ1431'], ['FMA22343', 'FJ1431M']),
+    prompt: 'Which muscle links the lumbar vertebral region to the lesser trochanter and contributes to hip flexion?',
+    explanation: 'Psoas major crosses the hip to the femur. The other displayed deep-back muscles do not share this femoral attachment; the surface does not show a lumbar plexus.',
+    distractors: ['trunk-lumbar-rotator', 'trunk-iliocostalis-lumborum', 'trunk-longissimus-capitis'],
+    references: [loyola('psoas major', 'psmj')],
+  },
+  {
+    key: 'trunk-lumbar-rotator', region: 'spine', sourceRegions: ['spine', 'abdomen'],
+    bindings: pair(['FMA23089', 'FJ1522'], ['FMA23090', 'FJ1522M']),
+    prompt: 'Which supplied lumbar muscle belongs to the short transverse-to-spinous vertebral muscle system, rather than the abdominal wall or a hip flexor?',
+    explanation: 'The lumbar rotator represents a deep vertebra-to-vertebra relationship. Its source surface does not resolve individual short and long slips or validate movement at a particular spinal level.',
+    distractors: ['trunk-external-oblique', 'trunk-psoas-major', 'trunk-iliocostalis-lumborum'],
+    references: [loyola('rotatores', 'rota')],
+  },
+  {
+    key: 'trunk-iliocostalis-lumborum', region: 'spine',
+    bindings: pair(['FMA22740', 'FJ1527'], ['FMA22741', 'FJ1527M']),
+    prompt: 'Which displayed erector-spinae portion follows a pelvic-to-rib route and contributes to trunk extension and side-bending?',
+    explanation: 'Iliocostalis lumborum links the lower axial attachment region with ribs. The selected portion is not the entire erector-spinae group or a measurement of spinal strength.',
+    distractors: ['trunk-psoas-major', 'trunk-lumbar-rotator', 'trunk-longissimus-capitis'],
+    references: [loyola('iliocostalis', 'ili')],
+  },
+  {
+    key: 'trunk-longissimus-capitis', region: 'spine',
+    bindings: pair(['FMA22754', 'FJ1533'], ['FMA22756', 'FJ1533M']),
+    prompt: 'Which capitis muscle belongs to the intermediate erector-spinae column and reaches the mastoid process?',
+    explanation: 'Longissimus capitis has this combination. A cranial attachment alone does not distinguish every posterior neck muscle.',
+    distractors: ['trunk-splenius-capitis', 'trunk-semispinalis-capitis', 'trunk-splenius-cervicis'],
+    references: [back],
+  },
+  {
+    key: 'trunk-semispinalis-capitis', region: 'spine',
+    bindings: pair(['FMA22876', 'FJ1538'], ['FMA22877', 'FJ1538M']),
+    prompt: 'Which displayed skull-reaching muscle belongs to the transversospinalis system rather than the longissimus or splenius systems?',
+    explanation: 'Semispinalis capitis reaches the occiput and contributes to extension. The selected surface does not include separately named cervical and thoracic semispinalis portions.',
+    distractors: ['trunk-longissimus-capitis', 'trunk-splenius-capitis', 'trunk-splenius-cervicis'],
+    references: [loyola('semispinalis', 'ssps')],
+  },
+  {
+    key: 'trunk-splenius-capitis', region: 'spine',
+    bindings: pair(['FMA22728', 'FJ1545'], ['FMA22729', 'FJ1545M']),
+    prompt: 'Which splenius portion reaches the mastoid and lateral superior nuchal region rather than ending on cervical transverse processes?',
+    explanation: 'Splenius capitis reaches the skull; splenius cervicis ends on upper cervical vertebrae.',
+    distractors: ['trunk-splenius-cervicis', 'trunk-longissimus-capitis', 'trunk-semispinalis-capitis'],
+    references: [back],
+  },
+  {
+    key: 'trunk-splenius-cervicis', region: 'spine',
+    bindings: pair(['FMA22726', 'FJ1546'], ['FMA22727', 'FJ1546M']),
+    prompt: 'Which splenius portion ascends from thoracic spinous attachments to upper cervical transverse processes without a skull insertion?',
+    explanation: 'Splenius cervicis ends on cervical vertebrae. The capitis portion instead reaches the skull; both can contribute to neck movement without being interchangeable selections.',
+    distractors: ['trunk-splenius-capitis', 'trunk-longissimus-capitis', 'trunk-semispinalis-capitis'],
+    references: [loyola('splenius cervicis', 'spce')],
+  },
+  {
+    key: 'trunk-obliquus-capitis-inferior', region: 'spine',
+    bindings: pair(['FMA32536', 'FJ1584'], ['FMA32537', 'FJ1563']),
+    prompt: 'Which small suboccipital muscle connects the axis to the atlas rather than attaching directly to the skull?',
+    explanation: 'Obliquus capitis inferior links C2 and C1 and contributes to atlantoaxial rotation. Its name does not imply a cranial insertion; the static model is not a motion simulation.',
+    distractors: ['trunk-rectus-capitis-posterior-major', 'trunk-splenius-capitis', 'trunk-semispinalis-capitis'],
+    references: [loyola('obliquus capitis inferior', 'obci')],
+  },
+  {
+    key: 'trunk-rectus-capitis-posterior-major', region: 'spine',
+    bindings: pair(['FMA32530', 'FJ1589'], ['FMA32531', 'FJ1567']),
+    prompt: 'Which displayed suboccipital muscle travels from the axis spinous process to the inferior nuchal region of the skull?',
+    explanation: 'Rectus capitis posterior major has a direct C2-to-occiput attachment. Obliquus capitis inferior also starts at C2 but ends on the atlas, not the skull.',
+    distractors: ['trunk-obliquus-capitis-inferior', 'trunk-splenius-cervicis', 'trunk-longissimus-capitis'],
+    references: [loyola('rectus capitis posterior major', 'rpmj'), loyola('obliquus capitis inferior', 'obci')],
+  },
+  {
+    key: 'trunk-trapezius-ascending', region: 'spine',
+    bindings: pair(['FMA33581', 'FJ1520'], ['FMA33583', 'FJ1520M']),
+    prompt: 'Which supplied trapezius portion ascends from the lower thoracic region towards the scapular spine and contributes to scapular depression?',
+    explanation: 'The ascending portion is lower trapezius. Its contribution is not isolated from the other portions during normal coordinated movement.',
+    distractors: ['trunk-trapezius-transverse', 'trunk-trapezius-descending', 'trunk-splenius-cervicis'],
+    references: [back],
+  },
+  {
+    key: 'trunk-trapezius-transverse', region: 'spine',
+    bindings: pair(['FMA33584', 'FJ1554'], ['FMA33585', 'FJ1554M']),
+    prompt: 'Which middle trapezius portion follows a mainly transverse route and contributes particularly to scapular retraction?',
+    explanation: 'The transverse portion is middle trapezius. The atlas keeps it separate from the ascending and descending source portions.',
+    distractors: ['trunk-trapezius-ascending', 'trunk-trapezius-descending', 'trunk-splenius-capitis'],
+    references: [back],
+  },
+  {
+    key: 'trunk-trapezius-descending', region: 'spine',
+    bindings: pair(['FMA33586', 'FJ1521'], ['FMA33587', 'FJ1521M']),
+    prompt: 'Which upper trapezius portion descends towards the lateral clavicle and contributes to scapular elevation?',
+    explanation: 'The descending portion is upper trapezius. A supplied portion is not an independent whole muscle or a validated test of accessory-nerve function.',
+    distractors: ['trunk-trapezius-transverse', 'trunk-trapezius-ascending', 'trunk-semispinalis-capitis'],
+    references: [loyola('trapezius', 'trap')],
+  },
+  {
+    key: 'trunk-external-oblique', region: 'abdomen',
+    bindings: pair(['FMA13336', 'FJ1452'], ['FMA13337', 'FJ1452M']),
+    prompt: 'Which broad abdominal-wall muscle extends from the lower ribs towards the iliac and anterior aponeurotic attachment regions?',
+    explanation: 'External oblique forms part of the abdominal wall. The lumbar rotator is a deep vertebral muscle; neither selection supplies the missing deeper abdominal-wall layers.',
+    distractors: ['trunk-lumbar-rotator', 'trunk-pectoralis-major', 'trunk-transversus-thoracis'],
+    references: [loyola('external abdominal oblique', 'exab')],
+  },
+  {
+    key: 'trunk-pectoralis-major', region: 'thorax', sourceTree: 'partof',
+    bindings: [
+      { fma: 'FMA13373', side: 'right', files: ['FJ1446', 'FJ1464'] },
+      { fma: 'FMA13374', side: 'left', files: ['FJ1446M', 'FJ1464M'] },
+    ],
+    prompt: 'Which pectoral muscle reaches the humerus and contributes to arm adduction, rather than ending on the coracoid?',
+    explanation: 'Pectoralis major acts on the humerus. Pectoralis minor ends on the scapula; the two retained major components remain one source selection, not separately selectable heads.',
+    distractors: ['trunk-pectoralis-minor', 'trunk-transversus-thoracis', 'trunk-external-oblique'],
+    references: [loyola('pectoralis major', 'pcmj'), loyola('pectoralis minor', 'pcmn')],
+  },
+  {
+    key: 'trunk-pectoralis-minor', region: 'thorax',
+    bindings: pair(['FMA13375', 'FJ1456'], ['FMA13376', 'FJ1456M']),
+    prompt: 'Which pectoral muscle links ribs to the coracoid and can protract the scapula without attaching to the humerus?',
+    explanation: 'Pectoralis minor acts through a scapular attachment. Its contribution depends on what is fixed; the mesh does not simulate breathing or scapular motion.',
+    distractors: ['trunk-pectoralis-major', 'trunk-transversus-thoracis', 'trunk-external-oblique'],
+    references: [loyola('pectoralis minor', 'pcmn')],
+  },
+  {
+    key: 'trunk-transversus-thoracis', region: 'thorax',
+    bindings: pair(['FMA9761', 'FJ1461'], ['FMA9762', 'FJ1461M']),
+    prompt: 'Which deep anterior chest-wall muscle runs from the inner sternum to costal cartilages rather than to the scapula or humerus?',
+    explanation: 'Transversus thoracis links the inner sternum to costal cartilages and can assist rib depression. This is not the transversus abdominis muscle.',
+    distractors: ['trunk-pectoralis-major', 'trunk-pectoralis-minor', 'trunk-external-oblique'],
+    references: [loyola('transversus thoracis', 'tth')],
+  },
+  {
+    key: 'trunk-diaphragm', region: 'thorax',
+    bindings: [{ fma: 'FMA13295', side: 'midline', file: 'FJ3131' }],
+    prompt: 'Which respiratory muscle converges on a central tendon and receives its motor supply from the phrenic nerves?',
+    explanation: 'The diaphragm drives inspiration. It remains one supplied reference surface, not independently contracting hemidiaphragms or a diagnostic test of phrenic function.',
+    distractors: ['trunk-external-intercostal', 'trunk-internal-intercostal', 'trunk-innermost-intercostal'],
+    references: [loyola('diaphragm', 'dph')],
+  },
+  {
+    key: 'trunk-external-intercostal', region: 'thorax',
+    bindings: [{ fma: 'FMA9756', side: 'midline', files: ['FJ1451', 'FJ1451M'] }],
+    prompt: 'Which intercostal layer is superficial and continues anteriorly as a membrane near the costochondral junction?',
+    explanation: 'External intercostals have this anterior membranous continuation. The bilateral source group does not identify individual spaces or render that membrane separately.',
+    distractors: ['trunk-internal-intercostal', 'trunk-innermost-intercostal', 'trunk-diaphragm'],
+    references: [chest],
+  },
+  {
+    key: 'trunk-internal-intercostal', region: 'thorax',
+    bindings: [{ fma: 'FMA9757', side: 'midline', files: ['FJ1455', 'FJ1455M'] }],
+    prompt: 'Which middle intercostal layer extends towards the sternum but continues posteriorly as a membrane near the rib angles?',
+    explanation: 'Internal intercostals have this posterior continuation. The grouped surface does not separately map interosseous and interchondral portions or their different respiratory roles.',
+    distractors: ['trunk-external-intercostal', 'trunk-innermost-intercostal', 'trunk-diaphragm'],
+    references: [chest],
+  },
+  {
+    key: 'trunk-innermost-intercostal', region: 'thorax',
+    bindings: [{ fma: 'FMA9758', side: 'midline', files: ['FJ1454', 'FJ1454M'] }],
+    prompt: 'Which intercostal layer lies deep to the principal intercostal neurovascular plane?',
+    explanation: 'Innermost intercostals lie deeper than that plane; internal intercostals lie superficial to it. This relationship does not establish a safe procedural corridor in the model.',
+    distractors: ['trunk-external-intercostal', 'trunk-internal-intercostal', 'trunk-diaphragm'],
+    references: [chest],
+  },
+] satisfies Draft[]).map(concept => ({ ...concept, readiness: 'draft', revision: 1 }));

@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {readFileSync} from 'node:fs';
+import {createHash} from 'node:crypto';
+import {projectCoverageView,COVERAGE_SOURCE_REVISION,COVERAGE_SNAPSHOT_REVISION} from '../lib/anatomy-coverage-view.ts';
+import {ATLAS_DELIVERY_POLICY} from '../lib/atlas-delivery-policy.ts';
+const json=p=>JSON.parse(readFileSync(p)),sha=b=>createHash('sha256').update(b).digest('hex');
+const source='4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad',oldSource='408759d57644b05402e98a937e7cf6338b5509cf';
+const before=json('tests/fixtures/anatomy-coverage-408759d5.json'),after=json('docs/anatomy-coverage/index.json'),review=json('atlas-review/manifest.json');
+test('exact previous coverage inventory and all anatomical holds survive the teaching-only transition',()=>{
+ assert.equal(before.sourceRevision,oldSource);assert.equal(sha(JSON.stringify(before)),'68ead76f6457cf0ccbdcef7c7560de970b186703b5fa7dc8035bc041b280e771');
+ assert.equal(after.sourceRevision,source);assert.equal(COVERAGE_SOURCE_REVISION,source);assert.equal(sha(JSON.stringify(after)),COVERAGE_SNAPSHOT_REVISION);
+ for(const key of ['schema','scopedCounts','documentedRootTargetGroups','independentWithheldSourceCatalogs','referenceBacklog','assessment','remainingScope','countingRules'])assert.deepEqual(after[key],before[key],key);
+ const oldInputs=before.evidence.sourceInputs,inputs=after.evidence.sourceInputs;assert.deepEqual(Object.keys(inputs),Object.keys(oldInputs));assert.equal(Object.keys(inputs).length,167);
+ assert.deepEqual(Object.keys(inputs).filter(p=>inputs[p]!==oldInputs[p]),['package.json']);
+ assert.equal(inputs['package.json'],'64471434a898583536d7a0d6abbf641613123ac77a91208b7420cb3018416399');
+ assert.equal(oldInputs['package.json'],'25c8f2e4d5cea2762605025eb4b72bed390a5a24234af9e4a39a71219ab648dd');
+ assert.equal(after.assessment.anatomicalCompletenessProven,false);assert.equal(after.assessment.clinicalApprovalAsserted,false);
+});
+test('current coverage projects only its exact imported source and rejects old, mixed and altered inputs',async()=>{
+ const view=await projectCoverageView(after,review);assert(view);assert.equal(view.sourceRevision,source);
+ assert.deepEqual(view.counts,{root:1104,nested:108,specimenViews:9,specimenMemberships:356,specimenSelections:267,shoulder:9});
+ assert.equal(await projectCoverageView(before,review),null);
+ const mixed=structuredClone(review);mixed.revision=oldSource;assert.equal(await projectCoverageView(after,mixed),null);
+ const changed=structuredClone(after);changed.documentedRootTargetGroups[0].state='complete';assert.equal(await projectCoverageView(changed,review),null);
+ const forged=structuredClone(review),path=Object.keys(after.evidence.sourceInputs).find(p=>forged.files.some(f=>f.path===p));assert(path);forged.files.find(f=>f.path===path).importedSha256='0'.repeat(64);assert.equal(await projectCoverageView(after,forged),null);
+});
+test('private registered model delivery changes metadata only and preserves every model byte identity',()=>{
+ const oldBytes=readFileSync('tests/fixtures/atlas-model-inventory-408759d5.json'),bytes=readFileSync('lib/atlas-model-inventory.json'),old=JSON.parse(oldBytes),next=JSON.parse(bytes);
+ assert.equal(sha(oldBytes),'09c7a341f5e2d058467aee8292310264e3b54c9903ecf53e6bff0356f77ffc50');
+ assert.equal(ATLAS_DELIVERY_POLICY.manifestRevision,sha(bytes));assert.equal(ATLAS_DELIVERY_POLICY.audience,'administrator-review');assert(!Object.hasOwn(ATLAS_DELIVERY_POLICY,'approvedRevision'));
+ assert.deepEqual(next.models,old.models);assert.equal(next.models.length,137);assert.equal(next.models.flatMap(m=>m.paths).length,144);assert.equal(next.models.reduce((n,m)=>n+m.bytes,0),199072480);
+ assert.deepEqual(next.sources.map(s=>s.module),old.sources.map(s=>s.module));for(const row of next.sources)assert.equal(row.sourceCommit,source);for(const row of old.sources)assert.equal(row.sourceCommit,oldSource);
+});
