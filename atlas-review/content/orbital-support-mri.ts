@@ -10,6 +10,13 @@ export const orbitalSupportMriReferences = [
   'https://pubmed.ncbi.nlm.nih.gov/6695076/', // section-thickness partial-volume limit
 ] as const;
 
+// Ettl et al., Eye (1997): a small, specialized normal-volunteer acquisition.
+// The abstract reports check ligaments collectively, without side-specific validation.
+export const orbitalSupportMriCheckEvidence = {
+  note: 'In four normal volunteers scanned at 1 T with a surface coil, a high-resolution MRI study reported check ligaments among the connective structures seen. Its abstract does not establish separate medial or lateral identification, routine-protocol visibility or diagnostic accuracy.',
+  reference: 'https://pubmed.ncbi.nlm.nih.gov/9537133/',
+} as const;
+
 export const orbitalSupportMriFacts = {
   trochlea: {
     body: 'At the anterior superomedial orbit, the superior oblique tendon changes direction through the trochlea. Microscopy-coil MRI has depicted this course; the example does not establish reliable identification on routine orbital or brain MRI.',

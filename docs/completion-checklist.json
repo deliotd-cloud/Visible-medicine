@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 62,
+  "revision": 63,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -21,12 +21,12 @@
     "uiqa": "F:/VisibleMedicine/staging/20261018-head-spa-lifecycle"
   },
   "baseline": {
-    "atlasCommit": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
-    "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
+    "atlasCommit": "f5052a1906bf9b87e5235bda57d367b1103729db",
+    "atlasTree": "36381d525f7c6886743bcec00fcee96931d65c58",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
-    "reviewSourceFiles": 1531,
+    "reviewIntegration": "9d136a1b582ae10bbf35292ccf661ff049dedbdf78993a1fa2b542f68e6a49b2",
+    "reviewSourceFiles": 1538,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
     "rootDraftPlacements": 9334,
@@ -43,14 +43,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
-    "tree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
+    "commit": "f5052a1906bf9b87e5235bda57d367b1103729db",
+    "tree": "36381d525f7c6886743bcec00fcee96931d65c58",
     "rootDraftPlacements": 9334,
     "rootPendingPlacements": 563,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-body-review-sticky-website-import/writers-state.json",
-    "note": "UI-only Review update: desktop worksheet navigation stays reachable at the observed one-rem queue offset; the closed system selector uses its readable label.28 interaction cases and9 source gates pass; renderer/display pins, model payloads and all teaching remain unchanged. This is not browser, clinical, spatial-registration, entitlement or public-release approval."
+    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-orbital-mri-website-import/coverage-final-binding.json",
+    "note": "Four existing bilateral medial/lateral check-ligament MRI drafts gain an original primary-study evidence/limits note and citation. Normal four-runtime/Review source import, binding, viewer and byte verification pass; models, independent access and all topic readiness totals remain unchanged. Application/native/browser and clinical/release acceptance require separate evidence; no approval, scan or registration is supplied."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-19",
+      "revision": 63,
+      "change": "Coherently import sourcef505/Review9d136a1b across four normal runtime exports and1538 Review source files. Four existing check-ligament MRI drafts gain original specialized-study evidence and limits (PMID9537133);9334draft/563pending/39generated totals and137model payloads remain unchanged. Correct the stale checklist Review file count from1531 to actual1538. All71 requirements/eight optional ideas, their statuses, acceptance, evidence, owner gates and private decision nulls remain exact. Previous509b delivery pin and test retained byte-exact; current pin must verify all12 normal delivery documents and unchanged model scope. Coverage metadata regenerated at the genuine f505 source; exact leaf differences are revision/readback provenance only. Normal Review rebind and viewer verification retain unchanged counts, holds and clinical limits; the initial7414 intermediate binding is retained in local recovery. No acquired images, masks, geometry, access, desktop PACS, clinical/spatial approval or public deployment change. Website native/type/build/browser acceptance and whole-regression work remain separate gates."
+    },
     {
       "revision": 62,
       "date": "2026-10-19",

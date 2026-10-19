@@ -1,6 +1,6 @@
 # Visible Medicine completion checklist
 
-Revision 62 · Updated 2026-10-19
+Revision 63 · Updated 2026-10-19
 
 Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
 
@@ -8,13 +8,13 @@ This is the persistent project checklist, not a claim that the whole website is 
 
 ## Current baseline
 
-Atlas source: `509b01da5d72f33bd774e4a59d63e2406af1f2ff`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b`.
+Atlas source: `f5052a1906bf9b87e5235bda57d367b1103729db`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `9d136a1b582ae10bbf35292ccf661ff049dedbdf78993a1fa2b542f68e6a49b2`.
 
 1104 root-body representations have 9936 topic placements: 9334 editorial drafts, 563 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
 
 Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration.
 
-Integrated Atlas source: `509b01da5d72f33bd774e4a59d63e2406af1f2ff` (9334 draft / 563 pending / 39 generated topic placements). **Imported into the website baseline above.** UI-only Review update: desktop worksheet navigation stays reachable at the observed one-rem queue offset; the closed system selector uses its readable label.28 interaction cases and9 source gates pass; renderer/display pins, model payloads and all teaching remain unchanged. This is not browser, clinical, spatial-registration, entitlement or public-release approval.
+Integrated Atlas source: `f5052a1906bf9b87e5235bda57d367b1103729db` (9334 draft / 563 pending / 39 generated topic placements). **Imported into the website baseline above.** Four existing bilateral medial/lateral check-ligament MRI drafts gain an original primary-study evidence/limits note and citation. Normal four-runtime/Review source import, binding, viewer and byte verification pass; models, independent access and all topic readiness totals remain unchanged. Application/native/browser and clinical/release acceptance require separate evidence; no approval, scan or registration is supplied.
 
 Canonical Atlas summaries were refreshed and verified through their generator (BASE-02). Source-candidate evidence remains separate from the website baseline and from clinical, browser and release approval.
 
@@ -441,6 +441,7 @@ I can inventory sources and gaps, research acceptable references/assets, write r
 
 ## Change log
 
+- 2026-10-19 · revision 63: Coherently import sourcef505/Review9d136a1b across four normal runtime exports and1538 Review source files. Four existing check-ligament MRI drafts gain original specialized-study evidence and limits (PMID9537133);9334draft/563pending/39generated totals and137model payloads remain unchanged. Correct the stale checklist Review file count from1531 to actual1538. All71 requirements/eight optional ideas, their statuses, acceptance, evidence, owner gates and private decision nulls remain exact. Previous509b delivery pin and test retained byte-exact; current pin must verify all12 normal delivery documents and unchanged model scope. Coverage metadata regenerated at the genuine f505 source; exact leaf differences are revision/readback provenance only. Normal Review rebind and viewer verification retain unchanged counts, holds and clinical limits; the initial7414 intermediate binding is retained in local recovery. No acquired images, masks, geometry, access, desktop PACS, clinical/spatial approval or public deployment change. Website native/type/build/browser acceptance and whole-regression work remain separate gates.
 - 2026-10-19 · revision 62: Normal import of clean Atlas509b01da with sticky desktop Review worksheet controls and readable system labels. No model, anatomy or teaching change; all71 requirements/eight optional ideas and statuses remain. Original feature assertions and old source evidence preserved; existing approval records are not migrated or invented.
 - 2026-10-19 · revision 61: Normal import of clean Atlas6a636fba with synchronized Review worksheet URLs and primary-region labels. No model, anatomy or teaching change; all71 requirements/eight optional ideas and statuses remain. Original feature assertions and old source evidence preserved; existing approval records are not migrated or invented.
 - 2026-10-19 · revision 60: Normal import of clean Atlasc237fa21: nonblocking protected body Review navigation and two exact-source forearm X-ray draft notes. Full source transition and introduced-epoch replay preserve9934 other topics/1102 other packets and reject stale/forged/unattested writes before storage. Four learners and Review rebound; coverage differs only in source/package provenance. All71 items/eight optional ideas, geometry/holds and independent access boundaries remain. Previous59 pin/assertions retained as exact text; no clinical or public release approval.
