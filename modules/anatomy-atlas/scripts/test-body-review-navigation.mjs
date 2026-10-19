@@ -60,6 +60,7 @@ const compiled = await build({ stdin: {
   },
 }] });
 const scope = { exports: {} };
+const browserLocation = new URL('https://local.test/review/body');
 runInNewContext(compiled.outputFiles[0].text, {
   module: scope, exports: scope.exports, AbortController, URL, URLSearchParams, Error, structuredClone, TextEncoder,
   HTMLElement: class HTMLElement { focus() {} }, document: { activeElement: null },
@@ -70,6 +71,10 @@ runInNewContext(compiled.outputFiles[0].text, {
     return promise;
   } } },
   window: {
+    location: browserLocation,
+    history: { state: null, replaceState(_state, _title, href) {
+      browserLocation.href = new URL(href, browserLocation).href;
+    } },
     addEventListener() {}, removeEventListener() {},
   },
   fetch(url, options) { return new Promise((resolve, reject) => requests.push({ url, options, resolve, reject })); },
@@ -119,6 +124,7 @@ const settle = async () => {
   await new Promise(resolve => setImmediate(resolve));
 };
 function setup({ rows = syntheticRows, initialId = rows[0]?.id ?? null, initialRegion = 'all' } = {}) {
+  browserLocation.href = 'https://local.test/review/body';
   states = []; refs = []; effectSlots = []; layoutSlots = []; pending = []; requests = []; verificationPromises = [];
   const render = () => {
     cursor = refCursor = effectCursor = layoutCursor = 0;

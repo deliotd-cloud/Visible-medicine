@@ -76,10 +76,15 @@ const mocks = {
   '../review-model-preview': { ReviewModelPreview: component('ReviewModelPreview') },
 };
 const scope = { exports: {} };
+const browserLocation = new URL('https://local.test/review/body');
 runInNewContext(code, {
-  module: scope, exports: scope.exports, AbortController, HTMLElement: Focusable,
+  module: scope, exports: scope.exports, AbortController, URL, HTMLElement: Focusable,
   requestAnimationFrame: callback => animationFrames.push(callback), document: doc,
   window: {
+    location: browserLocation,
+    history: { state: null, replaceState(_state, _title, href) {
+      browserLocation.href = new URL(href, browserLocation).href;
+    } },
     addEventListener(name, fn) { listeners.set(name, fn); },
     removeEventListener(name, fn) { if (listeners.get(name) === fn) listeners.delete(name); },
   },
@@ -107,6 +112,7 @@ const rows = [0, 1, 2].map(i => ({
   laterality: 'left', regions: ['thorax'], system: 'skeleton',
 }));
 function setup() {
+  browserLocation.href = 'https://local.test/review/body';
   slots = []; cursor = 0; effects = []; effectCursor = 0;
   layoutEffects = []; layoutCursor = 0; updates = []; requests.length = 0;
   animationFrames.length = 0;

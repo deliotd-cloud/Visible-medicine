@@ -156,6 +156,15 @@ export function BodyReviewDashboard({
     setMaterial(null);
     setError('');
   }
+  function syncStructureQuery(id: string | null) {
+    const url = new URL(window.location.href);
+    if (id === null) url.searchParams.delete('structure');
+    else url.searchParams.set('structure', id);
+    const next = `${url.pathname}${url.search}${url.hash}`;
+    const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+    // Worksheet changes replace this history entry; Back still leaves the review page.
+    if (next !== current) window.history.replaceState(window.history.state, '', next);
+  }
   function performLeave(intent: LeaveIntent) {
     switch (intent.kind) {
       case 'structure': {
@@ -166,19 +175,23 @@ export function BodyReviewDashboard({
         setError('');
         setPage(Math.floor(index / 20));
         setSelected(intent.id);
+        syncStructureQuery(intent.id);
         return;
       }
       case 'query':
         setQuery(intent.value);
         resetSelection();
+        syncStructureQuery(null);
         return;
       case 'region':
         setRegion(intent.value);
         resetSelection();
+        syncStructureQuery(null);
         return;
       case 'system':
         setSystem(intent.value);
         resetSelection();
+        syncStructureQuery(null);
         return;
       case 'link':
         if (!intent.anchor.isConnected || intent.anchor.href !== intent.href) return;
@@ -353,7 +366,7 @@ export function BodyReviewDashboard({
               }}
             >
               <SelectTrigger aria-labelledby="body-review-region-label">
-                <SelectValue />
+                <SelectValue>{region === 'all' ? 'All regions' : regions.find((r) => r.id === region)?.name ?? region}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All regions</SelectItem>

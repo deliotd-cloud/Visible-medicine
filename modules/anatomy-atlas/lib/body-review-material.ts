@@ -43,6 +43,7 @@ export const bodyReviewSummaries = catalog.structures.map((s) => ({
   fmaId: s.fmaId,
   system: s.system,
   laterality: s.laterality,
+  region: s.region,
   regions: s.regions,
 }));
 
