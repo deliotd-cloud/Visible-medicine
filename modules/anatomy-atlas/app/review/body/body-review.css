@@ -142,6 +142,15 @@
   outline: 2px solid var(--vm-teal);
   outline-offset: 3px;
 }
+@media (min-width: 851px) {
+  .body-review-structure-navigation {
+    position: sticky;
+    top: 1rem;
+    z-index: 2;
+    padding-top: 0.5rem;
+    background: white;
+  }
+}
 .body-review-paper details {
   border-top: 1px solid var(--border);
   padding: 1rem 0;
