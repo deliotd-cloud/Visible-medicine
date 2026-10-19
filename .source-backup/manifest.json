@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T08:13:38.219Z",
-  "sourceManifestSha256": "806bc5f422156f42410d7c14b705cff01f8d80a7981aff1c3a553d07a835e2d0",
-  "parent": "4b99c46ebc1f1a3b850df8d627cc0cd200872696",
+  "at": "2026-10-19T08:45:49.714Z",
+  "sourceManifestSha256": "0cab9187aff9bf4a3f2cf5022e6da271e3cc7f1f7b5107d6686608bba5e2b067",
+  "parent": "3512129cc40541ebcd6cbbba663aff76a508c2e6",
   "atlasSource": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
   "review": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
@@ -16424,6 +16424,11 @@
       "sha256": "cb147704d5c28a8ce33876cc65041df1e5c1d99b07f83c50102f5f9f5eedb344"
     },
     {
+      "path": "tests/cervical-exact-history.mjs",
+      "bytes": 3615,
+      "sha256": "21a744e77587649dfa71fd3f8496f9126d5e1ee8c52df947fa7796c5b9f5b8dd"
+    },
+    {
       "path": "tests/cervical-history-preservation.test.mjs",
       "bytes": 2484,
       "sha256": "a184ea1af69fb04164ea0da8d85a1829331dd7f77598e622b5649b1280eb3ed3"
@@ -16589,9 +16594,14 @@
       "sha256": "88331ce750810bd5d3635cbe5bcfe93082f92bcec1b46ce0b4f5584faeca2efb"
     },
     {
+      "path": "tests/clinical-review-cervical-disc-tour-preservation.test.mjs",
+      "bytes": 3559,
+      "sha256": "e398e896b4e25841e53d9ce06f30f218309432d3366a1397cc6d157e5a59326a"
+    },
+    {
       "path": "tests/clinical-review-cervical-disc-tour.test.ts",
-      "bytes": 15237,
-      "sha256": "49d1df96cd5aeb5b04b78445b4e56df751e62b1d4c3534b4aae3bbd0d0b0b814"
+      "bytes": 33087,
+      "sha256": "e5017957cb319b10e000dd9fb9a56a79e8e14089fd1bd0ffb4b58e445b1dbe12"
     },
     {
       "path": "tests/clinical-review-cervical-mri.test.ts",
@@ -18427,6 +18437,11 @@
       "path": "tests/fixtures/clinical-review-brain-connections-reasoning.test.ts.raw",
       "bytes": 11788,
       "sha256": "64a193efb8dac36599f1d416fa5c29615137df7d10c3efe524878049120b5ca8"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-cervical-disc-tour-before-lifecycle.ts.raw",
+      "bytes": 15237,
+      "sha256": "49d1df96cd5aeb5b04b78445b4e56df751e62b1d4c3534b4aae3bbd0d0b0b814"
     },
     {
       "path": "tests/fixtures/clinical-review-coronary-sinus-xray-before-lifecycle.ts.raw",
@@ -24112,9 +24127,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2328179,
-      "sha256": "10d5150376028a6102932fdf51fa66958755988140720856b03ef475ab21bb64"
+      "bytes": 2331186,
+      "sha256": "07a04fc1ae52ee89de2e679aa0937bfd98627bfda1b2533fd09deb712b0391be"
     }
   ],
-  "scope": "Screened website source-only recovery: four reviewed course-only local draft/UI source paths. Three existing paths retain unrelated prior work; one synthetic test added. Reversible reset before owned-key removal; scope-aware outer form remount; no stored records removed during browser QA. No anatomy, generated model/viewer, scan, mask, identifier, saved course/release/decision, permission, entitlement, role, schema, licence, media readiness or public change. Own actual QA device-only test draft and all private runtime records are NOT included. Held operational docs and raw canonical ancestry excluded. Not a whole-project, patient-data, clinical or release backup."
+  "scope": "Screened website source-only recovery: four cervical test/helper/evidence paths. One legacy theorem is restructured into genuine immutable historical checkpoints and exact actual-HEAD delivery checks; original retained as byte-exact raw fixture with explicit discovered integrity test; no skipped or hidden theorem. No application changes or build/browser acceptance claim. No anatomy, generated model/viewer, scan, mask, identifier, saved course/release/decision, permission, entitlement, role, schema, licence, media readiness or public change. Own actual QA device-only test draft and all private runtime records are NOT included. Held operational docs and raw canonical ancestry excluded. Not a whole-project, patient-data, clinical or release backup."
 }
