@@ -1,10 +1,13 @@
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 const sourceCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const atlas=currentAtlasDeliveryRoot();
 const sourceFiles={
   'content/biliary-duct-xray.ts':'8c1a5eb8a2e562915828658092bd9fb3f8bdd88f83e72c316e602223d8eb8873',
   'lib/biliary-duct-xray.ts':'48a4db0c5b477e1341f628c866fd6edc58b18a733c402a1cb2500973f8798ff9',
@@ -18,15 +21,19 @@ const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
 test('imported biliary X-ray drafts retain exact source, Review and learner bindings',async()=>{
+  const admission=validateCurrentAtlasDelivery();
+  assert.equal(admission.source,CURRENT_ATLAS_REVISION);
   const review=json('atlas-review/manifest.json');
   const learner=json('public/atlas-runtime/head-neck/manifest.json');
   const inputs=json('public/atlas-runtime/head-neck/source-inputs.json');
   const pins=json('atlas-review/content/thoracoabdominal-organ-imaging-pins.json');
-  assert.equal(review.revision,sourceCommit);
-  assert.equal(learner.sourceCommit,sourceCommit);
+  assert.equal(review.revision,CURRENT_ATLAS_REVISION);
+  assert.equal(learner.sourceCommit,CURRENT_ATLAS_REVISION);
   assert.equal(learner.patientDataIncluded,false);
   assert.equal(learner.clinicalApproved,false);
   for(const [path,digest] of Object.entries(sourceFiles)){
+    assert.equal(sha(execFileSync('git',['show',`${sourceCommit}:${path}`],{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}})),
+      digest,`${path}: 9f Git source`);
     const imported=review.files.find((file:{path:string})=>file.path===path);
     const input=inputs.find((file:{path:string})=>file.path===path);
     assert(imported&&input,path);

@@ -19,10 +19,11 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
   const searchKey = searchParams?.toString() ?? "";
   const [section, setSection] = useState<CoursePane>(() => paneFromValue(searchParams?.get("pane") ?? null));
   const [focusedTab, setFocusedTab] = useState<{courseId: string; pane: CoursePane}>(() => ({courseId: course.id, pane: paneFromValue(searchParams?.get("pane") ?? null)}));
-  const [editingDetails, setEditingDetails] = useState(false);
+  const [editingDetails, setEditingDetails] = useState({courseId: course.id, open: false});
   const [detailsRecovery,setDetailsRecovery]=useState<{courseId:string;state:StudioDraftRecoveryState}>({courseId:course.id,state:'none'});
   useEffect(() => {
     setDetailsRecovery(current=>current.courseId===course.id?current:{courseId:course.id,state:'none'});
+    setEditingDetails(current=>current.courseId===course.id?current:{courseId:course.id,open:false});
     const restore = () => {
       const pane = paneFromValue(new URLSearchParams(window.location.search).get("pane"));
       setSection(pane);
@@ -58,6 +59,8 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
   }
   const draftRelease = releases.find((release) => ["draft", "changes-requested"].includes(release.status));
   const recoveryState=detailsRecovery.courseId===course.id?detailsRecovery.state:'none';
+  const detailsOpen=editingDetails.courseId===course.id&&editingDetails.open;
+  const toggleDetails=()=>setEditingDetails(current=>current.courseId===course.id?{courseId:course.id,open:!current.open}:current);
   const recoveryChanged=(state:StudioDraftRecoveryState)=>{
     if(!['none','recovered','attention'].includes(state))return;
     setDetailsRecovery(current=>current.courseId===course.id?{courseId:course.id,state}:current);
@@ -77,14 +80,14 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
       }}>
         <summary aria-controls="course-options-panel">Course options</summary>
         <div id="course-options-panel" className="course-options-panel" role="group" aria-label="Course options">
-          <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={editingDetails} onClick={() => setEditingDetails(value => !value)}>{editingDetails ? "Hide course details" : "Edit course details"}</button>
+          <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsOpen} onClick={toggleDetails}>{detailsOpen ? "Hide course details" : "Edit course details"}</button>
           <DuplicateCourseButton courseId={course.id} recoveryScope={recoveryScope} />
           <p>Duplicates contain structure only, never learner attempts or publication history.</p>
         </div>
       </details>
     </div>
-    {recoveryState!=='none'&&<p id="course-details-draft-status" className="studio-form-message" role="status">{recoveryState==='recovered'?'Recovered unsent course edits on this device.':'A device-local course draft needs attention.'} <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={editingDetails} onClick={()=>setEditingDetails(value=>!value)}>{editingDetails?'Hide course details':recoveryState==='recovered'?'Review recovered edits':'Check device draft'}</button></p>}
-    <section id="course-details-editor" className="course-editor-panel course-create-panel" aria-label="Edit course details" hidden={!editingDetails}><EditCourseDetailsForm key={course.id} course={course} recoveryScope={recoveryScope} onDraftRecoveryChange={recoveryChanged} /></section>
+    {recoveryState!=='none'&&<p id="course-details-draft-status" className="studio-form-message" role="status">{recoveryState==='recovered'?'Recovered unsent course edits on this device.':'A device-local course draft needs attention.'} <button className="outline-button" type="button" aria-controls="course-details-editor" aria-expanded={detailsOpen} onClick={toggleDetails}>{detailsOpen?'Hide course details':recoveryState==='recovered'?'Review recovered edits':'Check device draft'}</button></p>}
+    <section id="course-details-editor" className="course-editor-panel course-create-panel" aria-label="Edit course details" hidden={!detailsOpen}><EditCourseDetailsForm key={course.id} course={course} recoveryScope={recoveryScope} onDraftRecoveryChange={recoveryChanged} /></section>
     <div id="course-content" role="tabpanel" aria-labelledby="course-content-tab" tabIndex={0} hidden={section !== "content"}>
       <div className="course-editor-content">
         <section aria-label="Course outline"><header className="course-section-heading"><div><h2>Course content</h2><p>Open an item to edit its content. Add another when you need it.</p></div><span>{workbooks.length} items</span></header>

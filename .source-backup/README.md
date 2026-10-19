@@ -1,3 +1,5 @@
-# Visible Medicine screened source recovery
+# Visible Medicine source-only recovery checkpoint
 
-4744 screened application-source paths and three metadata paths. Four original source-bound CT orientation drafts use the normal coherent Atlas3dcdf94a/Review7dcfd57c/Register59 import. Other9932 topic placements, geometry, holds, model payloads and all71/eight roadmap items remain. Historical Review58 and exact former admission assertions survive. No new external asset, dependency, scan, mask, private record, fee or deployment. Three operational documents remain local. Independent source-only restoration is verified separately; this is not a complete Atlas/data/model/database backup or clinical approval.
+Screened website application source and exact historical test-source texts only. Studio and regression repairs; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup.
+
+The source manifest identifies exact included bytes and excluded operational documents. A passing engineering check is not clinical approval.

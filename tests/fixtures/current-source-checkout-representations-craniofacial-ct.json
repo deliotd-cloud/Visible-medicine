@@ -1,0 +1,79 @@
+{
+  "schema": "vm-exact-source-input-checkout-representations-1",
+  "source": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
+  "sourceInputManifestSha256": "e59ee37bfc473a05832a14a7cc9a607c2a8ed7693110c40bdc8c7ba3f26b6656",
+  "records": [
+    {
+      "path": "LICENSES/bodyparts3d-license-evidence.html",
+      "exportSha256": "90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746",
+      "committedSha256": "7a873d9c6ed62578a7ee5603d68d6a8fbf6e3ccc0b52db6a3ad8b952f8cf7271",
+      "exportBytes": 14694,
+      "committedBytes": 14682,
+      "crlfPairs": 12
+    },
+    {
+      "path": "content/abdominal-branch-imaging-pins.json",
+      "exportSha256": "735ff50192908a217378920c0f2875b83611ab2d579e41d9a75ea2b6fab370e1",
+      "committedSha256": "5daaecd50fae68d64ef88d39237b6700b9f2bac3fa84f1a4792cbc05b3228d61",
+      "exportBytes": 133615,
+      "committedBytes": 130562,
+      "crlfPairs": 3053
+    },
+    {
+      "path": "content/abdominal-branch-imaging.ts",
+      "exportSha256": "ec3c59407eb763814afa4a9bd749ea801a39931d0dc884fbe294a165fc083d67",
+      "committedSha256": "5976ad5d71b7aceedb81e4bff184ac40486c051cd0d69efb128d81c3124b6bff",
+      "exportBytes": 15266,
+      "committedBytes": 15184,
+      "crlfPairs": 82
+    },
+    {
+      "path": "content/coronary-arterial-us-pins.json",
+      "exportSha256": "8fe899c4cc342ee61afa2b086d2920b4eb46cc62bb52ae3583ce9f9e35e74435",
+      "committedSha256": "9277caac4d2b97c75fced2f393b481f0c84800897a9faa9b28bd9c12e8854a18",
+      "exportBytes": 13749,
+      "committedBytes": 13342,
+      "crlfPairs": 407
+    },
+    {
+      "path": "content/coronary-arterial-us.ts",
+      "exportSha256": "4ba07709b49b9c72f5d9e42f12495bc2a8439cc3505a7a5132018ca0fa290307",
+      "committedSha256": "64598a6dcb26aa59123b20539911faa9e3eabebb2015ad7198e105d341865efb",
+      "exportBytes": 1759,
+      "committedBytes": 1742,
+      "crlfPairs": 17
+    },
+    {
+      "path": "lib/abdominal-branch-imaging.ts",
+      "exportSha256": "c93f1b7ea40b7d2646b51d84632b3388b32b957351370ea78b948808a99631ae",
+      "committedSha256": "3d4c1a7604c3277cdc31b1db77adbcd15b55345848e3345b7f322a1be5eadcf3",
+      "exportBytes": 1958,
+      "committedBytes": 1935,
+      "crlfPairs": 23
+    },
+    {
+      "path": "lib/coronary-arterial-us.ts",
+      "exportSha256": "6ca30f92e3085c431325c681b2bcd17ab867da6e3dd8a935acb38470332bfe59",
+      "committedSha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b",
+      "exportBytes": 1865,
+      "committedBytes": 1843,
+      "crlfPairs": 22
+    },
+    {
+      "path": "lib/didanix-atlas-adapter.ts",
+      "exportSha256": "54d3483448a4cebce88a15eefd9ad43782e9d4cc0fb2d41b971d2278d614c382",
+      "committedSha256": "a3035a986d57d6d261d61f9f2a4c28c1ae5b74869e016a97412bcf0ab6947b11",
+      "exportBytes": 7636,
+      "committedBytes": 7542,
+      "crlfPairs": 94
+    },
+    {
+      "path": "lib/imaging-sync.ts",
+      "exportSha256": "337351363197184239a62ff840bc9f6f1f260ce0d9fc61fa9adddf433f7b3331",
+      "committedSha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147",
+      "exportBytes": 7784,
+      "committedBytes": 7558,
+      "crlfPairs": 226
+    }
+  ]
+}

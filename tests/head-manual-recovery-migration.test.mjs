@@ -35,6 +35,7 @@ test('four historical source files reconstruct byte-identical originals from exa
   let helper52=frozen('tests/historical-native-head-history-delivery-52.mjs').toString();
   helper52=replace(helper52,"import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';","import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';\nimport {readRevision53,revision53} from './historical-head-manual-recovery-delivery-53.mjs';");
   helper52=replace(helper52,'const row=records.get(path);if(!row)',"const row=records.get(path);if(!row&&revision53.changedPriorInputs.includes(path))return readRevision53(path);if(!row)");
+  helper52=replace(helper52,"if(!row)return readFileSync(new URL(path,site));","if(!row&&path==='tests/atlas-cerebral-lobar-imaging.test.ts'){const b=readFileSync(new URL('./fixtures/closed-cerebral-current-52/test.ts.txt',import.meta.url));assert.equal(sha(b),'c474c475f57b487da4492852c14f8cf7462895ec5fabc71e4c528ec2bb1e5562');return b;}if(!row)return readFileSync(new URL(path,site));");
   assert.deepEqual(read('tests/historical-native-head-history-delivery-52.mjs'),Buffer.from(helper52));
 
   const oldList="'components/HeadAtlasViewer.tsx','scripts/bind-clinical-review.mjs'";

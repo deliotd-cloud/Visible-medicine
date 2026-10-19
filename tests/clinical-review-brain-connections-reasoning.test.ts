@@ -1,11 +1,14 @@
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const atlas=currentAtlasDeliveryRoot();
 const parent='456e6d7358e0648b8d7bc8f0f706a4c74f14c5bd';
 const previousConceptsSha256='498088c471b51653f283eaf9dc28e71dbb443e0cb7765b7821e84a3fa1c01586';
 const sourceHashes:Record<string,string>={
@@ -29,9 +32,11 @@ const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
 test('brain connection reasoning drafts retain prior practice and bind exact learner and Review source',async()=>{
+ const admission=validateCurrentAtlasDelivery();
+ assert.equal(admission.source,CURRENT_ATLAS_REVISION);
  const review=json('atlas-review/manifest.json');
  const pins=json('atlas-review/content/brain-connections-reasoning-pins.json');
- assert.equal(review.revision,revision);
+ assert.equal(review.revision,CURRENT_ATLAS_REVISION);
  assert.equal(pins.parentCommit,parent);
  assert.equal(pins.entries.length,6);
  assert.deepEqual(pins.entries.map((entry:any)=>[
@@ -39,6 +44,8 @@ test('brain connection reasoning drafts retain prior practice and bind exact lea
  ]),expected);
  assert.equal(new Set(pins.entries.map((entry:any)=>entry.identity.id)).size,6);
  for(const [path,digest] of Object.entries(sourceHashes)){
+  assert.equal(sha(execFileSync('git',['show',`${revision}:${path}`],{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}})),
+   digest,`${path}: 9f Git source`);
   const file=review.files.find((item:{path:string})=>item.path===path);
   assert(file,path);
   assert.equal(file.sourceSha256,digest,path);
@@ -51,14 +58,14 @@ test('brain connection reasoning drafts retain prior practice and bind exact lea
   assert.equal(learnerInputs.find((file:{path:string})=>file.path===path)?.sha256,digest,`learner ${path}`);
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const manifest=json(`public/atlas-runtime/${module}/manifest.json`);
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,CURRENT_ATLAS_REVISION,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
  }
  const learner=json(learnerBase+'manifest.json');
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(viewer.sourceCommit,CURRENT_ATLAS_REVISION);
  assert.equal(viewer.personalRecordsIncluded,false);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  const emitted=[emittedTeaching(learnerBase,learner.files,true),emittedTeaching(viewerBase,viewer.files,true)];

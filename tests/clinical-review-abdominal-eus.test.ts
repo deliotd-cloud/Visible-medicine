@@ -1,11 +1,14 @@
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {existsSync,readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const atlas=currentAtlasDeliveryRoot();
 // SHA-256 of exact `git show b03ba458:<path>` bytes in the clean Atlas checkout.
 const sourceHashes:Record<string,string>={
  'content/abdominal-branch-imaging-pins.json':'5daaecd50fae68d64ef88d39237b6700b9f2bac3fa84f1a4792cbc05b3228d61',
@@ -35,9 +38,13 @@ const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 const visible=(code:string,value:string)=>code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1));
 
 test('three exact abdominal EUS drafts reach learner and protected Review bindings',async()=>{
+ const admission=validateCurrentAtlasDelivery();
+ assert.equal(admission.source,CURRENT_ATLAS_REVISION);
  const review=json('atlas-review/manifest.json');
- assert.equal(review.revision,revision);
+ assert.equal(review.revision,CURRENT_ATLAS_REVISION);
  for(const [path,digest] of Object.entries(sourceHashes)){
+  assert.equal(sha(execFileSync('git',['show',`${revision}:${path}`],{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}})),
+   digest,`${path}: 9f Git source`);
   const record=review.files.find((file:{path:string})=>file.path===path);
   assert(record,path);
   assert.equal(record.sourceSha256,digest,path);
@@ -49,7 +56,7 @@ test('three exact abdominal EUS drafts reach learner and protected Review bindin
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json'),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,CURRENT_ATLAS_REVISION,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   for(const [path,digest] of Object.entries(learnerSourceHashes)){
@@ -62,7 +69,7 @@ test('three exact abdominal EUS drafts reach learner and protected Review bindin
  const learner=json(learnerBase+'manifest.json');
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(viewer.sourceCommit,CURRENT_ATLAS_REVISION);
  assert.equal(viewer.personalRecordsIncluded,false);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  for(const path of ['public/atlas-review','public/atlas-runtime/head-neck/content/abdominal-eus-orientation.ts',

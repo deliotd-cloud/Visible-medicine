@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
-    "prebuild": "node scripts/verify-clinical-review.mjs",
+    "prebuild": "node scripts/verify-clinical-review.mjs && npm run verify:atlas-delivery-policy",
+    "verify:atlas-delivery-policy": "node --experimental-strip-types scripts/verify-atlas-delivery-policy.mjs",
     "build:clinical-review": "node scripts/bind-clinical-review.mjs && node scripts/build-clinical-review-viewer.mjs",
     "verify:clinical-review": "node scripts/verify-clinical-review.mjs",
     "test:review-model-inspection": "node --test tests/clinical-review-model-inspection.test.mjs",

@@ -12,6 +12,10 @@ const sourceDirs = ['app', 'atlas-review', 'components', 'db', 'docs', 'drizzle'
   'public/atlas-runtime', 'public/atlas-review-viewer', 'public/fracture-review', 'public/media/atlas'];
 const sourceFiles = ['.gitattributes', 'package.json', 'package-lock.json', 'tsconfig.json', 'drizzle.config.ts', 'eslint.config.mjs', 'next.config.js', 'next.config.mjs', 'next.config.ts', 'vite.config.js', 'vite.config.mjs', 'vite.config.ts', '.codex/config.toml', '.openai/hosting.json', 'AGENTS.md', 'README.md', 'env.d.ts', 'public/favicon.svg'];
 const sourceExtension = /\.(?:css|csv|html|js|jsx|json|jsonl|md|mjs|mts|sql|svg|toml|ts|tsx|txt|xml|yaml|yml)$/i;
+// Historical .raw proofs are text evidence, not global raw-image inputs. Fail
+// closed for a non-text/oversized eligible fixture rather than silently omit it.
+const rawTextFixture = /^tests\/fixtures\/.+\.raw$/i;
+const maxRawTextFixtureBytes = 16 * 1024 * 1024;
 const testArgs = Object.freeze(['--test', '--experimental-strip-types', '--test-concurrency=1', 'tests/*.test.ts', 'tests/*.test.mjs']);
 // One byte-proven import-only wrapper. A changed wrapper returns to ordinary discovery.
 const mirror = Object.freeze({ wrapper: 'tests/atlas-glottic-muscle-imaging.test.ts',
@@ -52,6 +56,14 @@ function inventory(root) {
       if (stat.isSymbolicLink()) throw new Error(`Symlink in source inventory: ${path}`);
       if (stat.isDirectory()) walk(path);
       else if (stat.isFile() && sourceExtension.test(name)) all.add(slash(relative(root, path)));
+      else if (stat.isFile() && rawTextFixture.test(slash(relative(root, path)))) {
+        if (stat.size > maxRawTextFixtureBytes) throw new Error(`Oversized raw text fixture: ${path}`);
+        const bytes = readFileSync(path);
+        if (bytes.includes(0)) throw new Error(`NUL in raw text fixture: ${path}`);
+        try { new TextDecoder('utf-8', { fatal: true }).decode(bytes); }
+        catch { throw new Error(`Invalid UTF-8 raw text fixture: ${path}`); }
+        all.add(slash(relative(root, path)));
+      }
       else if (stat.isFile()) continue;
       else throw new Error(`Nonregular source input: ${path}`);
     }
@@ -61,6 +73,7 @@ function inventory(root) {
   const files = [...all].sort().map(path => ({ path, sha256: sha(readFileSync(join(root, path))) }));
   return { entries, files, sourceScope: { directories: sourceDirs, rootFiles: sourceFiles,
     extensionWhitelist: sourceExtension.source,
+    rawTextFixturePolicy: { pathPattern: rawTextFixture.source, maxBytes: maxRawTextFixtureBytes, utf8: 'fatal', nul: 'reject', nonText: 'fail-closed' },
     excludedDirectoryNames: [...excludedDirectoryNames].sort(), excludedFileNames: [...excludedFileNames].sort(), caseInsensitiveExclusions: true,
     limits: 'Text/code/metadata fingerprints in named paths only; excludes binary GLB, scan and mask files, media, credentials, private runtime files, build products and other unlisted paths. Not a complete source/data or clinical certificate.' } };
 }
@@ -169,6 +182,11 @@ export async function main(argv = process.argv.slice(2)) {
   const execution = run ? await executionPlan(before, output) : {
     args: [...testArgs], executedRoots: [...before.entries], coveredByImport: [],
     mirror: { eligible: false, active: false, reason: 'list mode does not execute tests' } };
+  // Native TAP supplies assertion details before terminal spec summaries. Keep
+  // both streams local: they can contain private assertion values and paths.
+  if (run) execution.args.splice(1, 0,
+    '--test-reporter=spec', '--test-reporter-destination=stdout',
+    '--test-reporter=tap', `--test-reporter-destination=${join(output, 'child.tap')}`);
   const manifest = { schema: 'vm-complete-test-manifest-1', root, mode: run ? 'run' : 'list', createdAt: new Date().toISOString(), ...before,
     entryCount: before.entries.length, entrySha256: sha(JSON.stringify(before.entries)), sourceSha256: sha(JSON.stringify(before.files)), execution };
   save(join(output, 'manifest.json'), manifest);

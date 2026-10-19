@@ -5,9 +5,10 @@ import {existsSync,readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
-const atlas='F:/VisibleMedicine/atlas';
+const atlas=currentAtlasDeliveryRoot();
 const sourcePaths=[
  'content/central-vessel-imaging-pins.json',
  'content/abdominal-arterial-xray.ts',
@@ -23,20 +24,22 @@ const sha=(bytes:Uint8Array|string)=>createHash('sha256').update(bytes).digest('
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 const source=(path:string)=>execFileSync('git',['show',`${revision}:${path}`],
- {cwd:atlas,windowsHide:true,maxBuffer:32e6});
+ {cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
 const normalized=(bytes:Uint8Array)=>Buffer.from(bytes).toString('utf8').replace(/\r\n/g,'\n');
 const visible=(code:string,value:string)=>code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1));
 
 test('four exact abdominal arterial X-ray drafts reach regional learner and protected Review',async()=>{
+ const admission=validateCurrentAtlasDelivery();
+ assert.equal(admission.source,CURRENT_ATLAS_REVISION);
  const review=json('atlas-review/manifest.json');
  const learnerBase='public/atlas-runtime/head-neck/';
  const learner=json(learnerBase+'manifest.json');
  const inputs=json(learnerBase+'source-inputs.json');
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(review.revision,revision);
- assert.equal(learner.sourceCommit,revision);
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(review.revision,CURRENT_ATLAS_REVISION);
+ assert.equal(learner.sourceCommit,CURRENT_ATLAS_REVISION);
+ assert.equal(viewer.sourceCommit,CURRENT_ATLAS_REVISION);
  assert.equal(learner.patientDataIncluded,false);
  assert.equal(learner.clinicalApproved,false);
  assert.equal(viewer.personalRecordsIncluded,false);

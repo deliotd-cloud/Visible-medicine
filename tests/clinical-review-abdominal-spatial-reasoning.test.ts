@@ -5,8 +5,10 @@ import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const atlas=currentAtlasDeliveryRoot();
 const parent='f89b6c01aec40fba4de81e26ec433ef4fe2b5e96';
 const priorConceptsSha256='2c3f4292985e5e5e30ec1394eeb4262aeb3565ed9676e1c97589d3048a15db62';
 const sourceHashes:Record<string,string>={
@@ -31,8 +33,10 @@ const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 const visible=(code:string,value:string)=>code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1));
 
 test('six exact abdominal spatial roots reach all learners and protected Review as draft questions',async()=>{
+ const admission=validateCurrentAtlasDelivery();
+ assert.equal(admission.source,CURRENT_ATLAS_REVISION);
  const sourceBytes=execFileSync('git',['show',`${revision}:content/abdominal-spatial-reasoning-pins.json`],
-  {cwd:'F:/VisibleMedicine/atlas',maxBuffer:32e6});
+  {cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
  assert.equal(sha(sourceBytes),sourceHashes['content/abdominal-spatial-reasoning-pins.json']);
  const sourcePin=JSON.parse(sourceBytes.toString());
  const pins=json('atlas-review/content/abdominal-spatial-reasoning-pins.json');
@@ -46,8 +50,10 @@ test('six exact abdominal spatial roots reach all learners and protected Review 
  assert.equal(pins.entries[1].identity.sources.some((source:{file:string})=>source.file==='FJ2629'),false);
 
  const review=json('atlas-review/manifest.json');
- assert.equal(review.revision,revision);
+ assert.equal(review.revision,CURRENT_ATLAS_REVISION);
  for(const [path,digest] of Object.entries(sourceHashes)){
+  assert.equal(sha(execFileSync('git',['show',`${revision}:${path}`],{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}})),
+   digest,`${path}: 9f Git source`);
   const file=review.files.find((item:{path:string})=>item.path===path);
   assert(file,`Review missing ${path}`);
   assert.equal(file.sourceSha256,digest,path);
@@ -57,7 +63,7 @@ test('six exact abdominal spatial roots reach all learners and protected Review 
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,CURRENT_ATLAS_REVISION,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   if(module==='head-neck'){
@@ -71,7 +77,7 @@ test('six exact abdominal spatial roots reach all learners and protected Review 
  const learner=json(learnerBase+'manifest.json');
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(viewer.sourceCommit,CURRENT_ATLAS_REVISION);
  assert.equal(viewer.personalRecordsIncluded,false);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  const emitted=[emittedTeaching(learnerBase,learner.files,true),emittedTeaching(viewerBase,viewer.files,true)];

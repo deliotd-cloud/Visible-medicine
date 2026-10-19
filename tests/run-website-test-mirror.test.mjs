@@ -50,7 +50,11 @@ test('exact wrapper keeps both discovered paths and runs mirrored assertion once
   assert.equal(readFileSync(join(root, '.local', 'mirror-count'), 'utf8'), 'x');
   assert.deepEqual(JSON.parse(readFileSync(join(result.summary.output, 'started.json'))).args,
     execution.args);
-  assert.equal(execution.args.length, 5);
+  assert.equal(execution.args.length, 9);
+  assert.deepEqual(execution.args.slice(1,5),[
+    '--test-reporter=spec','--test-reporter-destination=stdout',
+    '--test-reporter=tap',`--test-reporter-destination=${join(result.summary.output,'child.tap')}`]);
+  assert.match(readFileSync(join(result.summary.output,'child.tap'),'utf8'), /^TAP version 13/);
 });
 
 test('failure in mirrored target propagates from wrapper', async () => {

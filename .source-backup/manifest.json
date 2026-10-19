@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-18T23:25:52.943Z",
-  "sourceManifestSha256": "47e8a9555cca8ad064e7681f78278e12306e8345394f1ffa2cb025f2dfbac479",
-  "parent": "fd7d5762e7d0fc44671f101af1b379b7b7f51901",
+  "at": "2026-10-19T03:10:10.743Z",
+  "sourceManifestSha256": "ccbf80797714510a91c31ae4197eff744c0343a40333459c182714177aaff053",
+  "parent": "95051e5e80633d45b469196af12769da3e05bd01",
   "atlasSource": "3dcdf94a46db44202e72641be9fbcf1274ce5364",
   "atlasTree": "b5ab50363b521aed2e8d4f0e34a8f5ed4ecee0d5",
   "review": "7dcfd57c40219216347e3b89979723cbae3a9d8644f5381eb34e7f42800bd9e5",
@@ -9350,8 +9350,8 @@
     },
     {
       "path": "components/StudioCourseEditor.tsx",
-      "bytes": 9869,
-      "sha256": "afeca5560a835409f7d792e5b37766d609e98db9168199cce7e64ef0031604d5"
+      "bytes": 10145,
+      "sha256": "1d2a0ab8845041a9c2760acb97f4b8b3309e5ee32d70951e7955432fff364e8f"
     },
     {
       "path": "components/StudioForms.tsx",
@@ -12051,7 +12051,7 @@
     {
       "path": "lib/atlas-delivery-policy.ts",
       "bytes": 493,
-      "sha256": "eb8aae18e85b593cbe1d3cf7784d9247ff1cf6eda20b8fadcb3f86f78cf1f1c8"
+      "sha256": "a382e707487a30cd2cd75cae053a60e3b2e77de936cc0d53591fb43652df4616"
     },
     {
       "path": "lib/atlas-knowledge.ts",
@@ -13455,8 +13455,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 2270,
-      "sha256": "6638fc1cbeacf247bd9344affd927b1169f969e5283753e68870d30c03380718"
+      "bytes": 2424,
+      "sha256": "a565ae86769901977a232427dc1669936959bbe04ccf283e0b233f1865886cd0"
     },
     {
       "path": "public/atlas-review-viewer/assets/abdomen-BdPYB30z.js",
@@ -14780,8 +14780,8 @@
     },
     {
       "path": "scripts/run-website-tests.mjs",
-      "bytes": 12846,
-      "sha256": "dfddd39df0134e0c6a3539e5ba3abd806b2ebdaec56ae8e578b2adc37e2bdc50"
+      "bytes": 14134,
+      "sha256": "c1f8ed58f5e577f84cacaa7279e7ad7c59abc38f710bc044d86a3cb545c6c492"
     },
     {
       "path": "scripts/source-recovery.mjs",
@@ -14802,6 +14802,11 @@
       "path": "scripts/test-d1-target-readonly-capture.mjs",
       "bytes": 15250,
       "sha256": "3d45ee57e4bddcc55aae7e631e4b3fa3d248262b54de20cada850081cd59ba9b"
+    },
+    {
+      "path": "scripts/verify-atlas-delivery-policy.mjs",
+      "bytes": 2501,
+      "sha256": "e992bc2eb2feb7e2c75a4361c327c205d2470ac42e280db447acf47b93fbda96"
     },
     {
       "path": "scripts/verify-clinical-review.mjs",
@@ -14970,8 +14975,8 @@
     },
     {
       "path": "tests/atlas-cerebral-lobar-imaging.test.ts",
-      "bytes": 9509,
-      "sha256": "c474c475f57b487da4492852c14f8cf7462895ec5fabc71e4c528ec2bb1e5562"
+      "bytes": 9514,
+      "sha256": "24ad739f37c3201333f886f87e068fa1b208003887bcfd53493e4fa25c3b4ad4"
     },
     {
       "path": "tests/atlas-cervical-hallux-xray.test.ts",
@@ -15172,6 +15177,11 @@
       "path": "tests/atlas-delivery-package.test.ts",
       "bytes": 2853,
       "sha256": "869387384bdbd1a46cb3c922b375a2d516d77e3ec1f577895eda9a71ae836d4a"
+    },
+    {
+      "path": "tests/atlas-delivery-policy-preflight.test.mjs",
+      "bytes": 3355,
+      "sha256": "aaf65417730d1d0a34c426ba91ec67b2bb4abaf85ccd10d4f8cf19e3e70ffd56"
     },
     {
       "path": "tests/atlas-delivery-route.test.mjs",
@@ -16389,9 +16399,14 @@
       "sha256": "74d72178bdbd2f7c978200f4d454e8f6223279a9efa353c27994df903ff6c260"
     },
     {
+      "path": "tests/clinical-review-abdominal-arterial-admission-contract.test.mjs",
+      "bytes": 4049,
+      "sha256": "a6f69463630578fc8a183f64e773a11610653f37307a92efdc15332cc2c9accc"
+    },
+    {
       "path": "tests/clinical-review-abdominal-arterial-xray.test.ts",
-      "bytes": 9614,
-      "sha256": "6ccf9827e20b1f2b2230fae0e8515b0f5e0188cb8fe484c811b64a3de9391dac"
+      "bytes": 9932,
+      "sha256": "49b69cb6b714ebb54c57e9aeaf9cbeceff53659d33309b91929bfb770670dd33"
     },
     {
       "path": "tests/clinical-review-abdominal-connective-quiz.test.ts",
@@ -16405,13 +16420,13 @@
     },
     {
       "path": "tests/clinical-review-abdominal-eus.test.ts",
-      "bytes": 12250,
-      "sha256": "d2cbbaef7ca2fa650f7ab8cd4733c4ad5e9f4d2635b38d5af0a4e393d80a12f8"
+      "bytes": 12810,
+      "sha256": "270b6e9d0e229c52a73077c37a2447ab7099da9ca2fa8a6a760cc914e483190f"
     },
     {
       "path": "tests/clinical-review-abdominal-fold-ultrasound.test.ts",
-      "bytes": 8802,
-      "sha256": "3cac6a0affbac57290b03454e5d051b50527f7aa1365cfa7d1950bcd278c490b"
+      "bytes": 9350,
+      "sha256": "2a85632315546a1bc7deac5c2576180127e3d12ed56f16b9272fedb8ee87a6ba"
     },
     {
       "path": "tests/clinical-review-abdominal-quiz.test.ts",
@@ -16420,8 +16435,8 @@
     },
     {
       "path": "tests/clinical-review-abdominal-spatial-reasoning.test.ts",
-      "bytes": 12009,
-      "sha256": "69e16055623acf1518d3d53f39f2bbc7276994b265b335086d96ec601d373d5f"
+      "bytes": 12564,
+      "sha256": "31cc280bd65f3f7a34dd8d837e89c8c971793e5df047e8611fce539e6254b7de"
     },
     {
       "path": "tests/clinical-review-abdominal-vessel-quiz.test.ts",
@@ -16430,8 +16445,8 @@
     },
     {
       "path": "tests/clinical-review-abdominal-vessel-reasoning.test.ts",
-      "bytes": 10237,
-      "sha256": "dd8c31447a358ee34bdaf3f74f4d16ce541cc26a548732bdc09a72921cd6e74a"
+      "bytes": 10797,
+      "sha256": "acbd5e043d741ac3ab94aea8fbbc44acf75d76ddb61ebf8b4382a0a64a09c75a"
     },
     {
       "path": "tests/clinical-review-adductor-longus-xray.test.ts",
@@ -16455,8 +16470,8 @@
     },
     {
       "path": "tests/clinical-review-biliary-xray.test.ts",
-      "bytes": 6966,
-      "sha256": "9aa5a8508673961457d0a6af633ead06aa66e6283032361a702a20eb86d3aa96"
+      "bytes": 7515,
+      "sha256": "83f4865276c4e45809fa5eccb46bb1297e3d6ef6ace46fae7199194fbef973e4"
     },
     {
       "path": "tests/clinical-review-brain-connections-quiz.test.ts",
@@ -16465,8 +16480,8 @@
     },
     {
       "path": "tests/clinical-review-brain-connections-reasoning.test.ts",
-      "bytes": 11788,
-      "sha256": "64a193efb8dac36599f1d416fa5c29615137df7d10c3efe524878049120b5ca8"
+      "bytes": 12348,
+      "sha256": "f75121a0dccc73ef0e906db2e0dd081ea9633ef38b04308288e38b5e094bb349"
     },
     {
       "path": "tests/clinical-review-calf-depth.test.ts",
@@ -17354,6 +17369,11 @@
       "sha256": "44516bd1dfcbc003c209de635cbbcb6a10c435299fb42e4ea7cdebd94cc2d6b5"
     },
     {
+      "path": "tests/clinical-review-six-admissions-contract.test.mjs",
+      "bytes": 6076,
+      "sha256": "9e44937f0198e5064c6e8c08432841bace90caae9f20c4e5acd11d50b64538fa"
+    },
+    {
       "path": "tests/clinical-review-specimen-continuous-playback.test.ts",
       "bytes": 18304,
       "sha256": "34f0869e7319915cefcd0e4746d0563173e9a83c25e47388ba06098c148ceca3"
@@ -17572,6 +17592,16 @@
       "path": "tests/clinical-review-wave2-preservation.test.mjs",
       "bytes": 3132,
       "sha256": "006adaa0395aa6d46320d09bce708ed2d5de71830603264f628b6ec23cac6d87"
+    },
+    {
+      "path": "tests/closed53-source-supplement.mjs",
+      "bytes": 2723,
+      "sha256": "a92884bebd5e0f399a0861aeea62794d7fa379204c36933ddfb5e9877e683306"
+    },
+    {
+      "path": "tests/closed53-source-supplement.test.mjs",
+      "bytes": 1818,
+      "sha256": "afef19c8892a54c12421e2eecd45d6d654112cf9d309cc51020b87af5f99a8d0"
     },
     {
       "path": "tests/closed56-femoral-epoch.test.mjs",
@@ -18244,6 +18274,41 @@
       "sha256": "c43cbdee429d6a933f04b520797f163d7bf7ee44c67074b4fa9cd2d2ea11c1b2"
     },
     {
+      "path": "tests/fixtures/clinical-review-abdominal-arterial-xray.test.ts.raw",
+      "bytes": 9614,
+      "sha256": "6ccf9827e20b1f2b2230fae0e8515b0f5e0188cb8fe484c811b64a3de9391dac"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-abdominal-eus.test.ts.raw",
+      "bytes": 12250,
+      "sha256": "d2cbbaef7ca2fa650f7ab8cd4733c4ad5e9f4d2635b38d5af0a4e393d80a12f8"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-abdominal-fold-ultrasound.test.ts.raw",
+      "bytes": 8802,
+      "sha256": "3cac6a0affbac57290b03454e5d051b50527f7aa1365cfa7d1950bcd278c490b"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-abdominal-spatial-reasoning.test.ts.raw",
+      "bytes": 12009,
+      "sha256": "69e16055623acf1518d3d53f39f2bbc7276994b265b335086d96ec601d373d5f"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-abdominal-vessel-reasoning.test.ts.raw",
+      "bytes": 10237,
+      "sha256": "dd8c31447a358ee34bdaf3f74f4d16ce541cc26a548732bdc09a72921cd6e74a"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-biliary-xray.test.ts.raw",
+      "bytes": 6966,
+      "sha256": "9aa5a8508673961457d0a6af633ead06aa66e6283032361a702a20eb86d3aa96"
+    },
+    {
+      "path": "tests/fixtures/clinical-review-brain-connections-reasoning.test.ts.raw",
+      "bytes": 11788,
+      "sha256": "64a193efb8dac36599f1d416fa5c29615137df7d10c3efe524878049120b5ca8"
+    },
+    {
       "path": "tests/fixtures/clinical-review-femoral-arterial-original.ts.txt",
       "bytes": 22248,
       "sha256": "261ba960773937f608e6e0f02bb69bd0e5d612760a1dff923891950a7fd08acd"
@@ -18277,6 +18342,11 @@
       "path": "tests/fixtures/clinical-review-viewer-8d32653e.json",
       "bytes": 9033,
       "sha256": "f5295d676c647aa2574171854d5559362261f7cb578c0bb5deeea02d69f02431"
+    },
+    {
+      "path": "tests/fixtures/closed-cerebral-current-52/test.ts.txt",
+      "bytes": 9509,
+      "sha256": "c474c475f57b487da4492852c14f8cf7462895ec5fabc71e4c528ec2bb1e5562"
     },
     {
       "path": "tests/fixtures/closed54-documents/atlas-review/integration-inputs.json",
@@ -19579,6 +19649,11 @@
       "sha256": "40ccdc8f1a234171c5b3c26f66fcd14107dfca843ca906a1f2ae557b91177302"
     },
     {
+      "path": "tests/fixtures/current-source-checkout-representations-craniofacial-ct.json",
+      "bytes": 3185,
+      "sha256": "44ef0a3d8a25ed85a173f82a3ce0d4fc12cb96b770143315b94b065a2c448052"
+    },
+    {
       "path": "tests/fixtures/current-source-checkout-representations-deep-plantar.json",
       "bytes": 3185,
       "sha256": "7e9fdec2a03e766f11cba59c2d86ead8708774a9e894752a2c5a1449a46106e7"
@@ -19902,6 +19977,11 @@
       "path": "tests/fixtures/head-manual-recovery-53/epoch.json",
       "bytes": 2327859,
       "sha256": "963b7b46ee4215f91a47cf133a77a0d597613dea416b124c76f4d530dedfc11f"
+    },
+    {
+      "path": "tests/fixtures/head-manual-recovery-53/supplement.json",
+      "bytes": 4290960,
+      "sha256": "2031cd6e889c11563b5e95800d4e3f1763e6ed9d3f9b7a87dd864e026855ad6e"
     },
     {
       "path": "tests/fixtures/head-manual-recovery-transition-53-to-54.txt",
@@ -21915,8 +21995,8 @@
     },
     {
       "path": "tests/head-manual-recovery-migration.test.mjs",
-      "bytes": 4229,
-      "sha256": "572f3122a4e5cdd0cf51c53982af9bd5e73997c921a7726ed8248dba3749d586"
+      "bytes": 4620,
+      "sha256": "b3ac57101707f35eacb1a7b405641440e909bfacdf05fce71185190125b0e6b3"
     },
     {
       "path": "tests/head-mask-focus-preservation.test.mjs",
@@ -22440,8 +22520,8 @@
     },
     {
       "path": "tests/historical-head-manual-recovery-delivery-53.mjs",
-      "bytes": 1851,
-      "sha256": "88bffe86dd3628ce3f7b99d3f55b4fc794327110a9e603c7ff28e1651fd2f919"
+      "bytes": 2497,
+      "sha256": "108fdd0956aca010f9e46f4ea6f5573e6fae088fa6c4fca1962920c722cffc2b"
     },
     {
       "path": "tests/historical-head-mask-42-epoch.mjs",
@@ -22490,8 +22570,8 @@
     },
     {
       "path": "tests/historical-native-head-history-delivery-52.mjs",
-      "bytes": 2421,
-      "sha256": "0648e2c9e4430aed0492a50a0a91894449900e4476dccc9cfbf5a12de2134c5a"
+      "bytes": 2680,
+      "sha256": "4099a2fcd7fea4051cfed4285c16e6db0249d199f814b54d9e71b149d6d9a531"
     },
     {
       "path": "tests/historical-navigation-43-epoch.mjs",
@@ -23275,8 +23355,13 @@
     },
     {
       "path": "tests/run-website-test-mirror.test.mjs",
-      "bytes": 5125,
-      "sha256": "40bf7c21d9a96b754c28abce775e7bb64bb826caad22a2ec041bcb01184ea2cd"
+      "bytes": 5436,
+      "sha256": "d2434b813f7f7485a4c65e1c9a93c51e103471e055897132b7f1bcb313513c76"
+    },
+    {
+      "path": "tests/run-website-tests-diagnostics.test.mjs",
+      "bytes": 5959,
+      "sha256": "d41970e9fa85c39213fc3deb82125e37bfdc52536cd8b60787842e76a48c2515"
     },
     {
       "path": "tests/run-website-tests-eol-input.test.mjs",
@@ -23284,9 +23369,14 @@
       "sha256": "c8632ae81862b3c8fe8050a2073a9752250cd981d1ef93f0c3865141b5dbb32d"
     },
     {
+      "path": "tests/run-website-tests-raw-input.test.mjs",
+      "bytes": 4687,
+      "sha256": "83e33e1847488e5affdcaf7049f359dabb20f6f6ee7932d79d121b913c75f16d"
+    },
+    {
       "path": "tests/run-website-tests.test.mjs",
-      "bytes": 10431,
-      "sha256": "0ad9624ccf96dfc465debd3b28651e667e4a0a4a2aad113810abd65778a40643"
+      "bytes": 10749,
+      "sha256": "57d48829552a9383594830bc5d9a8a27e3a64c09e8d2d408629dccf2e27977e2"
     },
     {
       "path": "tests/runtime-mutation-envelope.test.mjs",
@@ -23417,6 +23507,11 @@
       "path": "tests/studio-course-search.test.mjs",
       "bytes": 7776,
       "sha256": "9e89c7541fed2f8c0c33c87ffff9b8784f73a17a009e2728d360074e90eff107"
+    },
+    {
+      "path": "tests/studio-course-switch-details.test.mjs",
+      "bytes": 5073,
+      "sha256": "f9185cf8f06c82a0eff6b5b03072441104c78cf1e5dbb2979cc1f0d302708556"
     },
     {
       "path": "tests/studio-draft-safety.test.ts",
@@ -23742,9 +23837,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2303233,
-      "sha256": "a5e2c96c7604130c60a94b08ef923dd64460bf494ea5b7d95fd0a8b0865488a9"
+      "bytes": 2304930,
+      "sha256": "d44e7dcf0d77094f11ba72d67f3a9e40cdac691a4afbbf5744685dc68809ae2e"
     }
   ],
-  "scope": "Only screened website application source and exact generated text. Four original source-bound CT drafts; no new external media, dependencies or model payloads. No scans, masks, private runtime/records, clinical decisions or raw canonical ancestry. Existing cleared static assets and tiny synthetic format probes retained unchanged. No full-project backup or clinical/release claim."
+  "scope": "Screened website application source and exact historical test-source texts only. Studio and regression repairs; no new dependencies, media, models, scans, masks, private runtime records, clinical decisions or raw canonical ancestry. Existing cleared static assets and synthetic probes are unchanged. Not a whole-project, patient-data, clinical or release backup."
 }

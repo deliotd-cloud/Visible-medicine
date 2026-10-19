@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {validateRevision53Supplement} from './closed53-source-supplement.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const site=new URL('../',import.meta.url);
@@ -16,11 +17,20 @@ assert.deepEqual(revision53.changedPriorInputs,['components/HeadAtlasComparisonN
 assert.equal(revision53.files.length,26);
 const records=new Map(revision53.files.map(row=>[row.path,row]));
 assert.equal(records.size,26);
+const supplementBytes=readFileSync(new URL('./fixtures/head-manual-recovery-53/supplement.json',import.meta.url));
+assert.equal(sha(supplementBytes),'2031cd6e889c11563b5e95800d4e3f1763e6ed9d3f9b7a87dd864e026855ad6e');
+const supplement=validateRevision53Supplement(JSON.parse(supplementBytes),bytes);
+for(const [path,row] of supplement.records)records.set(path,row);
+assert.equal(records.size,37);
 
 export function readRevision53(path){
   assert(typeof path==='string'&&/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(part=>!part||part==='.'||part==='..'));
   const row=records.get(path);
-  if(!row)return readFileSync(new URL(path,site));
+  if(!row){
+    const current=readFileSync(new URL(path,site)),declared=supplement.declared.get(path);
+    if(declared)assert.equal(sha(current),declared.sha256,path+' unarchived frozen53 input');
+    return current;
+  }
   const frozen=Buffer.from(row.text,'utf8');
   assert.equal(frozen.length,row.bytes);assert.equal(sha(frozen),row.sha256,path+' frozen53');
   return frozen;

@@ -48,10 +48,15 @@ test('synthetic TypeScript and mjs entries run once each through Node globs', as
   const started=JSON.parse(readFileSync(join(result.output,'started.json')));
   assert(Number.isSafeInteger(started.testPid)&&started.testPid>0);
   assert.equal(started.runnerPid,process.pid);
-  assert.deepEqual(started.args,['--test','--experimental-strip-types','--test-concurrency=1','tests/*.test.ts','tests/*.test.mjs']);
+  assert.deepEqual(started.args,['--test',
+    '--test-reporter=spec','--test-reporter-destination=stdout',
+    '--test-reporter=tap',`--test-reporter-destination=${join(result.output,'child.tap')}`,
+    '--experimental-strip-types','--test-concurrency=1','tests/*.test.ts','tests/*.test.mjs']);
+  assert.deepEqual(started.args,result.manifest.execution.args);
   assert.equal(started.sourceSha256,result.manifest.sourceSha256);
   assert.match(readFileSync(join(result.output, 'child.log'), 'utf8'), /typescript/);
   assert.match(readFileSync(join(result.output, 'child.log'), 'utf8'), /module/);
+  assert.match(readFileSync(join(result.output, 'child.tap'), 'utf8'), /^TAP version 13/);
 });
 test('migration SQL, module declarations and named root configuration are fingerprinted and drift refuses pass',async()=>{
   const root=fixture();

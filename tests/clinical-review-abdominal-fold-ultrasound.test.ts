@@ -1,13 +1,16 @@
 import assert from 'node:assert/strict';
+import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 const sha=(bytes:Uint8Array|string)=>createHash('sha256').update(bytes).digest('hex');
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const atlas=currentAtlasDeliveryRoot();
 const parent='057640ca58032d1e88680ce0d99797e12532836d';
 const ids=[
  'vm:anatomy:body:abdomen:midline:membrane:mesentery-of-small-intestine',
@@ -21,9 +24,11 @@ const sourceHashes:Record<string,string>={
 };
 
 test('three abdominal folds retain exact ultrasound source, learner and protected Review evidence',async()=>{
+ const admission=validateCurrentAtlasDelivery();
+ assert.equal(admission.source,CURRENT_ATLAS_REVISION);
  const review=json('atlas-review/manifest.json');
  const pins=json('atlas-review/content/abdominal-fold-ultrasound-pins.json');
- assert.equal(review.revision,revision);
+ assert.equal(review.revision,CURRENT_ATLAS_REVISION);
  assert.equal(pins.parentCommit,parent);
  assert.equal(pins.sourceVersion,'4.0');
  assert.equal(pins.license,'CC-BY-4.0');
@@ -51,6 +56,8 @@ test('three abdominal folds retain exact ultrasound source, learner and protecte
  }
 
  for(const [path,expected] of Object.entries(sourceHashes)){
+  assert.equal(sha(execFileSync('git',['show',`${revision}:${path}`],{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}})),
+   expected,`${path}: 9f Git source`);
   const record=review.files.find((file:{path:string})=>file.path===path);
   assert(record,`Review missing ${path}`);
   assert.equal(record.sourceSha256,expected,path);
@@ -63,7 +70,7 @@ test('three abdominal folds retain exact ultrasound source, learner and protecte
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json');
   const inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,CURRENT_ATLAS_REVISION,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   for(const [path,expected] of Object.entries(sourceHashes)){

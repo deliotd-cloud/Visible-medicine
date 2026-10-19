@@ -72,8 +72,8 @@ test('paired cerebral CT/MRI drafts reach learner and exact review worksheets wi
   }
   // Learner metadata fingerprints nine exact raw checkout representations.
   // The independent Review source/import loop above remains byte-exact to Git.
-  const checkoutBytes=readFileSync(new URL('./fixtures/current-source-checkout-representations-radial-eus.json',import.meta.url));
-  assert.equal(sha(checkoutBytes),'4bca2cf512ebdecfcc16c2ff287959fdad43cbd75c1b38c7e3900cc8b44c1900');
+  const checkoutBytes=readFileSync(new URL('./fixtures/current-source-checkout-representations-craniofacial-ct.json',import.meta.url));
+  assert.equal(sha(checkoutBytes),'44ef0a3d8a25ed85a173f82a3ce0d4fc12cb96b770143315b94b065a2c448052');
   const checkout=JSON.parse(new TextDecoder().decode(checkoutBytes));
   assert.equal(checkout.schema,'vm-exact-source-input-checkout-representations-1');
   assert.equal(checkout.source,liveSource);
