@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T16:15:30.668Z",
-  "sourceManifestSha256": "0f06159ed329a8f584765b70fa80cabdc9ea42c6b1496e5dca0a378e9257cbf8",
-  "parent": "404a7e676678a47a4719d3d750ad339021e57fe8",
+  "at": "2026-10-19T16:48:21.283Z",
+  "sourceManifestSha256": "ee5163f2137cd3f918462228ecdfa9d74cda91ed99a875b66490dfa371669c10",
+  "parent": "1ae6d177c2a2fa357a71ccd90391b4d5006d092f",
   "atlasSource": "f5097af8493701d64a8e2a2b5797df380f3b348a",
   "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
   "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
@@ -700,8 +700,13 @@
     },
     {
       "path": "app/search/page.tsx",
-      "bytes": 2569,
-      "sha256": "c48eb0bb66cccbf0021119b09384480ec4ee53d68c65cfebafb1edf2033a74b1"
+      "bytes": 3532,
+      "sha256": "c780dbe68d377685f826f87cedb460b49a35eb5e9b55e99a217d5ff0aecdc75a"
+    },
+    {
+      "path": "app/search/search.css",
+      "bytes": 2964,
+      "sha256": "e2ef8865e03963a94f6036ae7bf68839408f9067cbe7ad581a20f3b9d97760fd"
     },
     {
       "path": "app/splash-preview/page.tsx",
@@ -13065,8 +13070,8 @@
     },
     {
       "path": "lib/platform-governance.ts",
-      "bytes": 45080,
-      "sha256": "66c41da6d4faf9cc20d1a659a8ce0872837d87175927bb612ce37be53b8b0770"
+      "bytes": 45226,
+      "sha256": "3c20a5435ace6f59ae9e62ab95d9151eaccb523b06deefc130da8b887f13d361"
     },
     {
       "path": "lib/plexus-review-api.ts",
@@ -13317,6 +13322,11 @@
       "path": "lib/saved-learning-navigation.ts",
       "bytes": 1390,
       "sha256": "95d6b0f995a3fd7b6cd2514172806e960237e0a85f3e7ca106cc8d533562a51d"
+    },
+    {
+      "path": "lib/search-kind.ts",
+      "bytes": 1365,
+      "sha256": "c7796def836ad1a835277758597a3563e897ca6476596a29bc10d763b1b0adaf"
     },
     {
       "path": "lib/shoulder-navigation.ts",
@@ -21745,8 +21755,8 @@
     },
     {
       "path": "tests/free-institution-atomic.test.mjs",
-      "bytes": 16034,
-      "sha256": "54285d2594162ec187dc7361a2e6827630566c5db2d9e0a56e400d4218f8a1d2"
+      "bytes": 16094,
+      "sha256": "9dc88e4aeeb3ebb9a6c89026a80def0a1888bcd849deaaf49fb207eccbab1f03"
     },
     {
       "path": "tests/frozen-candidate-comparison-page.test.mjs",
@@ -21985,8 +21995,8 @@
     },
     {
       "path": "tests/head-comparison-exit.test.ts",
-      "bytes": 13954,
-      "sha256": "0d363f2735cbb276c092ef0f9c57ce4b8ea7149f2e6ffd7bd7caac0eddd9d9db"
+      "bytes": 19773,
+      "sha256": "96cfcfe86e6e6ab65876d2fb2f56d767199324fa2bafade7fb2ba5bead3e9ccd"
     },
     {
       "path": "tests/head-comparison-parent-commit.test.ts",
@@ -23795,8 +23805,8 @@
     },
     {
       "path": "tests/related-lectures.test.ts",
-      "bytes": 28671,
-      "sha256": "edb6985788a6d86704a34f867f0f5b676223994e7fef01f6c91baf0708b8c98f"
+      "bytes": 28760,
+      "sha256": "eae79ef9264b91359dfeb1819f369d21f06c3515b5fff8f365b4f2c7f2b45c75"
     },
     {
       "path": "tests/release-content-outline.test.ts",
@@ -23862,6 +23872,11 @@
       "path": "tests/salpingopharyngeus-mri-delivery.test.mjs",
       "bytes": 8915,
       "sha256": "3d0840fcefe027bf4bb541cdbae45eb80b5b86012aa6f29847fcdd74d560f1bc"
+    },
+    {
+      "path": "tests/search-kind-page.test.ts",
+      "bytes": 3295,
+      "sha256": "717ffa6a9889613d3eade56788daa6625d6756934136e3cd3d36c23e2c0eb05f"
     },
     {
       "path": "tests/shoulder-girdle-arterial-current-admission-contract.test.mjs",
@@ -23960,8 +23975,8 @@
     },
     {
       "path": "tests/studio-course-details.test.mjs",
-      "bytes": 15442,
-      "sha256": "f2351c74873a32a0f0756f891152ee25370dbf5beb6899fcdf511f22ae79e6dd"
+      "bytes": 15584,
+      "sha256": "bed42a60b38a1266fe68100449c98e3d14678d58fc559292d7f8bdd902ef7cbe"
     },
     {
       "path": "tests/studio-course-draft-discard.test.mjs",
@@ -24040,8 +24055,8 @@
     },
     {
       "path": "tests/studio-invitation-domain.test.mjs",
-      "bytes": 13513,
-      "sha256": "8f04c061846a15e499e2fee5854e606fab9c62601d7c0e5a1ca08530442e6cb9"
+      "bytes": 13655,
+      "sha256": "2a7990e564c038ebc7bc93ebec2d02c54dffbecab6ae00f179bda9837e7db347"
     },
     {
       "path": "tests/studio-invitation-response.test.ts",
@@ -24115,8 +24130,8 @@
     },
     {
       "path": "tests/studio-release-atomic.test.mjs",
-      "bytes": 17525,
-      "sha256": "fee4b3099f559a23b30ba38ca1d5e84c161f109ddf6f86d578cfdd39472b302b"
+      "bytes": 17667,
+      "sha256": "985095836fad6e85c5e2d87d6db45279927762e9e02e56c2981c5eabea7b045b"
     },
     {
       "path": "tests/studio-release-draft-binding.test.mjs",
@@ -24130,8 +24145,8 @@
     },
     {
       "path": "tests/studio-release-outcomes.test.mjs",
-      "bytes": 5180,
-      "sha256": "1dc3c332d356ba7a9518f48cb26def637210193c6be9139305e28e370cae68be"
+      "bytes": 5322,
+      "sha256": "4a4b1ed5be76ecbf2e6778d152185ef9353016ed93a8d370d39a22d571042b18"
     },
     {
       "path": "tests/studio-release-picker.test.ts",
@@ -24145,8 +24160,8 @@
     },
     {
       "path": "tests/studio-release-workflow.test.mjs",
-      "bytes": 33166,
-      "sha256": "bda9796f38fb408b9ed6bd449d50daeb7dbfe09ee8b646eb048cb516dbf9c781"
+      "bytes": 33308,
+      "sha256": "6a054ae5e4ab233d31f26af556c935552996c2b080b25d61463368cb20b59967"
     },
     {
       "path": "tests/studio-slide-preview-find.test.mjs",
@@ -24210,8 +24225,8 @@
     },
     {
       "path": "tests/unified-search-concepts.test.ts",
-      "bytes": 5399,
-      "sha256": "9d72a5e6880417efea646c68184eaadadce215baa7b4d391dd98637f1d284033"
+      "bytes": 8103,
+      "sha256": "84b1363004059cc33f88e948edf4f35d1d81af8012feb40de9481ff1fe7c957f"
     },
     {
       "path": "tests/verify-scoped-checkpoint.test.mjs",
@@ -24357,9 +24372,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2360139,
-      "sha256": "aaf17c2bfde81a7b3467a9fc90138cd2a6e81caad77be7ad4925fd721cb0051b"
+      "bytes": 2365025,
+      "sha256": "00f6d885d689ba43a12c2ed8082f7276c210131e3d7bdc96a0348f03e3cec8ff"
     }
   ],
-  "scope": "Filtered website source recovery: local lecture actor/organisation continuity and uncertain-save protection, existing role/author/CAS/review/publication boundaries unchanged; original portable lecture tests retained. Pinned unchanged existing Geist Mono Latin font includes full OFL1.1/copyright source and public notices, with original cached font download URL still unverified. Root/body mono aliases and a local provider eliminate migrated font-cache paths. Two test-only head guidance/playback extractor assumptions match current text and the guarded comparison loader without deleting behavioral or readiness assertions.152 canonical authoring/font cases and types/normal build pass;25 canonical head cases pass. These are not a complete-suite, real-role, browser, assistive, rights, clinical or spatial-registration release. The full baseline remains5043/4885pass/156fail/2skip. No new scan, mask, anatomical mesh, native-imaging screenshot, identifier, private record, raw canonical ancestry, or three held operational-document contents are uploaded. Existing licensed inherited assets and independent case/Atlas/lecture permissions remain unchanged. Full71-item roadmap/eight optional ideas/clinical nulls preserved. This is source-only recovery, not private-database/whole-project backup or website deployment."
+  "scope": "Filtered source-only recovery: compact URL-backed All/Anatomy/Atlas/Courses/Cases/Workbooks search, strict kind parsing before the existing30-result cap, original SQL/publication/public-visibility/access boundaries retained. Original test assertions and source-bound constructor links remain. Prior head/Studio harness repairs use real callbacks/policy modules and a typed synthetic in-memory grid.59 focused/native cases, semantic types and normal Review/access prebuild plus Vinext build pass; first type failure and known older regression/staged-red evidence remain. No new scan, mask, mesh, image, font, dependency, fee, patient identifier, private record, raw canonical ancestry or three held operational-document contents. Inherited assets retain notices and previous admission, not new blanket rights clearance. Full71-item roadmap/eight optional ideas/clinical nulls preserved. Not full-suite/browser/hosted-D1/clinical/spatial acceptance, private-database/whole-project backup or website deployment."
 }

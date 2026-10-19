@@ -3,11 +3,13 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import * as jsxRuntime from 'react/jsx-runtime';
 import ts from 'typescript';
-import {HEAD_MANIFEST_SHA256,type HeadEntry} from '../lib/head-atlas-import.ts';
+import {HEAD_MANIFEST_SHA256,type HeadEntry,type HeadStudy,type LocalHeadPackage,type LoadedStudy} from '../lib/head-atlas-import.ts';
+import {createNativeVolumeGeometry} from '../lib/head-atlas-geometry.mjs';
 import {HEAD_LINK_REVISION} from '../lib/head-atlas-links.ts';
 import {headImageConcept as headAtlasConcept,resolveHeadImageConcept as resolveHeadConcept} from '../lib/head-image-only-links.ts';
 import {headLearningSteps} from '../lib/head-atlas-learning.ts';
 import {headImageHref,parseHeadImageNavigation} from '../lib/head-atlas-navigation.ts';
+import {createHeadViewHistory,HEAD_VIEW_ENTRY_KEY,HEAD_VIEW_EXTERNAL_HISTORY_KEY} from '../lib/head-view-history.ts';
 
 // Execute the parent's actual comparison callbacks, commit scope and native
 // control JSX. This synthetic focus/commit fixture does not load private scans
@@ -16,12 +18,16 @@ const source=readFileSync(process.env.HEAD_COMPARISON_EXIT_SOURCE??new URL('../c
 const ast=ts.createSourceFile('HeadAtlasViewer.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
 const viewer=ast.statements.find((node):node is ts.FunctionDeclaration=>ts.isFunctionDeclaration(node)&&node.name?.text==='HeadAtlasViewer');
 assert(viewer?.body);
-const functions=new Set(['focusComparisonReturn','closeComparison','finishComparisonTour','navigateComparisonTour','selectComparisonConcept','openGuidedComparison','changeLearningPosition','writeNavigation','resetIndexDetails']);
-const names=new Set(['comparisonScope','comparisonScopeRef','comparisonOpen','activeEntry','concept']);
+const functions=new Set(['currentHistoryScope','rememberHistoryView','focusComparisonReturn','closeComparison','finishComparisonTour','navigateComparisonTour','selectComparisonConcept','openGuidedComparison','changeLearningPosition','writeNavigation','resetIndexDetails']);
+const names=new Set(['viewMemoryReadyRef','pendingHistoryRestoreRef','historyLiveRef','historyHref','comparisonScope','comparisonScopeRef','comparisonOpen','activeEntry','concept']);
 const statements=viewer.body.statements.filter(statement=>
   ts.isFunctionDeclaration(statement)&&!!statement.name&&functions.has(statement.name.text)||
   ts.isVariableStatement(statement)&&statement.declarationList.declarations.some(item=>ts.isIdentifier(item.name)&&names.has(item.name.text))||
+  ts.isIfStatement(statement)&&statement.getText(ast).startsWith('if(quizActive)viewMemoryReadyRef.current=false;')||
+  ts.isExpressionStatement(statement)&&statement.getText(ast).startsWith('historyLiveRef.current=')||
   ts.isExpressionStatement(statement)&&statement.getText(ast).startsWith('useLayoutEffect(')&&statement.getText(ast).includes('comparisonScopeRef.current'));
+assert.deepEqual([...functions].filter(name=>!statements.some(item=>ts.isFunctionDeclaration(item)&&item.name?.text===name)),[],'extract every named parent callback');
+assert.deepEqual([...names].filter(name=>!statements.some(item=>ts.isVariableStatement(item)&&item.declarationList.declarations.some(decl=>ts.isIdentifier(decl.name)&&decl.name.text===name))),[],'extract every named parent state declaration');
 let search:ts.JsxSelfClosingElement|undefined,launcher:ts.JsxElement|undefined,tour:ts.JsxExpression|undefined;
 function visit(node:ts.Node){
   if(ts.isJsxSelfClosingElement(node)&&node.tagName.getText(ast)==='input'&&node.getText(ast).includes('ref={indexSearchRef}'))search=node;
@@ -31,15 +37,15 @@ function visit(node:ts.Node){
 }visit(viewer);
 assert(search&&launcher&&tour?.expression,'use actual rendered tour, launcher and search control');
 const program=`return function execute(input,hooks,actions){
-  const {pkg,study,modality,quizActive,activeId,selected,inlineComparison,rightPanel,learningPosition,query}=input;
-  const expanded='axial',setExpanded=()=>{};
+  const {pkg,study,modality,quizActive,activeId,selected,inlineComparison,rightPanel,learningPosition,query,cursor,windowing,expanded}=input;
+  const setExpanded=()=>{};
   const {useMemo,useRef,useLayoutEffect}=hooks;
   const {importGeneration,practiceRef,comparisonButtonRef,indexSearchRef,window,
     setInlineComparison,setRightPanel,setLearningPosition,setUrlNavigation,setNavigationNotice,
     setActiveId,setSelected,setGroupLayers,setOverlayGroup,setQuery,setFamily,setIndexSide,setIndexRepresentation,showLearningEntry,chooseStructure}=actions;
-  const {HEAD_LINK_REVISION,HEAD_MANIFEST_SHA256,headAtlasConcept,resolveHeadConcept,headLearningSteps,headImageHref,parseHeadImageNavigation,HeadComparisonTour,toggleInlineComparison}=actions;
+  const {HEAD_LINK_REVISION,HEAD_MANIFEST_SHA256,headAtlasConcept,resolveHeadConcept,headLearningSteps,headImageHref,parseHeadImageNavigation,headViewHistory,HeadComparisonTour,toggleInlineComparison}=actions;
   ${statements.map(item=>item.getText(ast)).join('\n')}
-  return {tour:(${tour.expression.getText(ast)}),launcher:(${launcher.getText(ast)}),search:(${search.getText(ast)}),closeComparison,selectComparisonConcept,openGuidedComparison,comparisonScopeRef};
+  return {tour:(${tour.expression.getText(ast)}),launcher:(${launcher.getText(ast)}),search:(${search.getText(ast)}),closeComparison,selectComparisonConcept,openGuidedComparison,comparisonScopeRef,rememberHistoryView,writeNavigation,viewMemoryReadyRef,pendingHistoryRestoreRef};
 }`;
 const code=ts.transpileModule(program,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}}).outputText;
 const execute=new Function('exports','require',code)({},(id:string)=>{assert.equal(id,'react/jsx-runtime');return jsxRuntime;});
@@ -51,26 +57,35 @@ function harness(modality:'CT'|'MRI'='CT'){
   const pons=entry(modality,'pons'),medulla=entry(modality,'medulla_oblongata');
   assert.equal(headAtlasConcept(pons,modality)?.conceptId,'brainstem-pons');
   assert.equal(headAtlasConcept(medulla,modality)?.conceptId,'brainstem-medulla');
-  const pkg={},study={definition:{entries:[pons,medulla]}};
+  // Synthetic in-memory grid for callback tests, not an admitted imaging package.
+  const definition:HeadStudy={entries:[pons,medulla],image:{shape_kji:[8,9,10],ijk_to_ras:[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]],sha256:'a'.repeat(64),file:'fixture-image.raw',dtype:'int16'}};
+  const pkg:LocalHeadPackage={source:'configured-local',files:new Map(),manifest:{schema_version:'synthetic',version:'synthetic',byte_order:'little',source_studies_are_distinct:true,studies:{CT:definition,MRI:{...definition}}}};
+  // Preserve the exact active definition identity for both independently tested modalities.
+  pkg.manifest.studies[modality]=definition;
+  const study:LoadedStudy={definition,geometry:createNativeVolumeGeometry(definition.image),data:new Int16Array(8*9*10),range:[0,0]};
   let input={pkg,study,modality,quizActive:false,activeId:pons.id,selected:{entry:pons} as {entry:HeadEntry}|null,
-    inlineComparison:{pkg,study,modality} as {pkg:object;study:typeof study;modality:'CT'|'MRI'}|null,rightPanel:'guided',learningPosition:{sequenceId:'brainstem',conceptId:'brainstem-pons' as string|null},query:''};
+    inlineComparison:{pkg,study,modality} as {pkg:object;study:typeof study;modality:'CT'|'MRI'}|null,rightPanel:'guided',learningPosition:{sequenceId:'brainstem',conceptId:'brainstem-pons' as string|null},query:'',cursor:[2,3,4],windowing:[40,80],expanded:'axial'};
   let pending:Record<string,any>={},cursor=0,tree:any,active='finish',mounted=true;
   const refs:any[]=[],committed=new Map<number,Effect>();let effects=new Map<number,Effect>();
-  const writes:string[]=[],focuses:string[]=[],selections:HeadEntry[]=[];
+  const writes:string[]=[],replaces:unknown[]=[],focuses:string[]=[],selections:HeadEntry[]=[];
+  const headViewHistory=createHeadViewHistory();
   const controls=Object.fromEntries(['search','launcher'].map(id=>[id,{disabled:false,connected:true,focus(options:unknown){
     assert.deepEqual(options,{preventScroll:true});if(!this.connected||this.disabled)return;active=id;focuses.push(id);
   }}]));
   const hooks={useMemo:(fn:()=>unknown)=>fn(),useRef:(initial:unknown)=>{const index=cursor++;return refs[index]??(refs[index]={current:initial});},
     useLayoutEffect:(setup:Effect['setup'],deps?:unknown[])=>effects.set(cursor++,{setup,deps})};
   function set(key:string){return(next:any)=>{pending[key]=typeof next==='function'?next(pending[key]??(input as any)[key]):next;};}
-  const actions:any={HEAD_LINK_REVISION,HEAD_MANIFEST_SHA256,headAtlasConcept,resolveHeadConcept,headLearningSteps,headImageHref,parseHeadImageNavigation,
+  const actions:any={HEAD_LINK_REVISION,HEAD_MANIFEST_SHA256,headAtlasConcept,resolveHeadConcept,headLearningSteps,headImageHref,parseHeadImageNavigation,headViewHistory,
     HeadComparisonTour:()=>null,toggleInlineComparison:()=>{},importGeneration:{current:0},practiceRef:{current:{active:false}},
     comparisonButtonRef:{current:controls.launcher},indexSearchRef:{current:controls.search},
     setInlineComparison:(value:unknown)=>{writes.push('comparison');set('inlineComparison')(value);},setRightPanel:set('rightPanel'),setLearningPosition:set('learningPosition'),
     setUrlNavigation:()=>{},setNavigationNotice:()=>{},setActiveId:set('activeId'),setSelected:set('selected'),setGroupLayers:()=>{},setOverlayGroup:()=>{},
     setQuery:set('query'),setFamily:()=>{},setIndexSide:()=>{},setIndexRepresentation:()=>{},
     showLearningEntry:(item:HeadEntry)=>{selections.push(item);set('activeId')(item.id);set('selected')({entry:item});},chooseStructure:()=>{},
-    window:{location:{origin:'https://example.test',pathname:`/atlas/${modality==='CT'?'ct':'mri'}-head`,search:`?concept=brainstem-pons&headTour=brainstem&headStep=1&headRevision=${HEAD_LINK_REVISION}`,hash:''},history:{state:null,pushState:(_state:unknown,_unused:string,href:string)=>{
+    window:{location:{origin:'https://example.test',pathname:`/atlas/${modality==='CT'?'ct':'mri'}-head`,search:`?concept=brainstem-pons&headTour=brainstem&headStep=1&headRevision=${HEAD_LINK_REVISION}`,hash:''},history:{state:{frameworkIndex:7},replaceState:(state:unknown)=>{
+      replaces.push(state);actions.window.history.state=state;
+    },pushState:(state:unknown,_unused:string,href:string)=>{
+      actions.window.history.state=state;
       writes.push(href);const url=new URL(href,actions.window.location.origin);Object.assign(actions.window.location,{pathname:url.pathname,search:url.search,hash:url.hash});
     }}}};
   function render(patch:Record<string,any>={},commit=true){
@@ -85,7 +100,7 @@ function harness(modality:'CT'|'MRI'='CT'){
   }
   const unmount=()=>{mounted=false;for(const effect of committed.values())effect.cleanup?.();for(const control of Object.values(controls))control.connected=false;active='body';};
   render();
-  return {render,actions,controls,writes,focuses,selections,pons,medulla,pkg,study,unmount,
+  return {render,actions,controls,writes,replaces,focuses,selections,pons,medulla,pkg,study,headViewHistory,unmount,
     get tree(){return tree;},get active(){return active;},get input(){return input;},get mounted(){return mounted;}};
 }
 
@@ -149,4 +164,51 @@ test('an abandoned replacement render cannot finish or retire the visible tour',
   const h=harness(),visible=h.tree,speculative=h.render({selected:null,activeId:''},false);
   speculative.tour.props.onFinish();assert.deepEqual(h.writes,[]);assert.deepEqual(h.focuses,[]);
   visible.tour.props.onFinish();h.render();assert.equal(h.active,'launcher');assert.equal(h.input.rightPanel,'info');h.unmount();
+});
+
+for(const modality of ['CT','MRI'] as const)test(`${modality}: real history callback saves the departing plain view and retires pending restore on navigation`,()=>{
+  const h=harness(modality),browser=h.actions.window;
+  browser.location.search='';h.render({inlineComparison:null,rightPanel:'info',cursor:[2,3,4],windowing:[45,90],expanded:'coronal'});
+  const plainHref=browser.location.pathname,frameworkState=browser.history.state;
+  h.tree.viewMemoryReadyRef.current=true;
+  h.tree.rememberHistoryView();
+  assert.equal(h.replaces.length,1,'a real history entry receives its opaque token');
+  const savedState=browser.history.state;
+  assert.equal(savedState.frameworkIndex,7,'framework state survives replaceState');
+  assert.equal(typeof savedState[HEAD_VIEW_ENTRY_KEY],'string');
+  assert.deepEqual(h.headViewHistory.read(savedState,plainHref,{pkg:h.pkg,study:h.study,modality,revision:HEAD_MANIFEST_SHA256}),
+    {cursor:[2,3,4],layout:'coronal',windowing:[45,90]});
+  assert.equal(h.headViewHistory.read(frameworkState,plainHref,{pkg:h.pkg,study:h.study,modality,revision:HEAD_MANIFEST_SHA256}),null);
+  h.tree.pendingHistoryRestoreRef.current={pkg:h.pkg,study:h.study,href:plainHref,view:{cursor:[1,1,1],layout:'axial',windowing:[40,80]}};
+  h.tree.writeNavigation('brainstem-pons',null);
+  assert.equal(h.tree.pendingHistoryRestoreRef.current,null,'leaving a view clears a pending restore');
+  assert.equal(h.tree.viewMemoryReadyRef.current,false,'concept navigation cannot overwrite the saved plain view');
+  assert.equal(browser.history.state[HEAD_VIEW_ENTRY_KEY],undefined,'new URL does not inherit the prior view token');
+  assert.equal(browser.history.state[HEAD_VIEW_EXTERNAL_HISTORY_KEY],true,'navigation remains an external history entry');
+  assert.equal(h.replaces.length,1,'re-saving the same entry does not replace its token');
+  assert.equal(h.headViewHistory.read(savedState,plainHref,{pkg:h.pkg,study:h.study,modality,revision:HEAD_MANIFEST_SHA256})?.layout,'coronal');
+  assert.equal(h.headViewHistory.read(savedState,h.writes.at(-1)!,{pkg:h.pkg,study:h.study,modality,revision:HEAD_MANIFEST_SHA256}),null,'copied state cannot restore at another URL');
+  assert.equal(h.headViewHistory.read(savedState,plainHref,{pkg:{...h.pkg,source:undefined},study:h.study,modality,revision:HEAD_MANIFEST_SHA256}),null,'another source cannot restore the view');
+  h.unmount();
+});
+
+for(const gate of ['not-ready','guided-panel','practice','3d-layout','position-link','invalid-link','other-route','no-replace-state'] as const)test(`real history callback refuses ${gate} presentation`,()=>{
+  const h=harness(),browser=h.actions.window;
+  browser.location.search='';
+  const patch:Record<string,unknown>={inlineComparison:null,rightPanel:'info'};
+  if(gate==='guided-panel')patch.rightPanel='guided';
+  if(gate==='practice')patch.quizActive=true;
+  if(gate==='3d-layout')patch.expanded='3d';
+  h.render(patch);
+  if(gate==='practice')assert.equal(h.tree.viewMemoryReadyRef.current,false,'practice retires any ready view before the callback');
+  h.tree.viewMemoryReadyRef.current=gate!=='not-ready';
+  if(gate==='position-link')browser.location.search=`?concept=brainstem-pons&headTour=brainstem&headStep=1&headRevision=${HEAD_LINK_REVISION}`;
+  if(gate==='invalid-link')browser.location.search='?headRevision=obsolete';
+  if(gate==='other-route')browser.location.pathname='/atlas/shoulder';
+  if(gate==='no-replace-state')browser.history.replaceState=undefined;
+  h.tree.rememberHistoryView();
+  assert.deepEqual(h.replaces,[]);
+  assert.equal(h.headViewHistory.size(),0);
+  assert.equal(browser.history.state[HEAD_VIEW_ENTRY_KEY],undefined);
+  h.unmount();
 });

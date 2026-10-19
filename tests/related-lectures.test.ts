@@ -18,6 +18,7 @@ import * as workbookAccessPolicy from '../lib/workbook-access-policy.ts';
 import * as relatedLinks from '../lib/lecture-related-links.ts';
 import * as tour from '../lib/lecture-tour-context.ts';
 import * as navigation from '../lib/lecture-slide-navigation.ts';
+import * as searchKind from '../lib/search-kind.ts';
 
 const requireNode=createRequire(import.meta.url);
 const conceptId='brainstem-pons';
@@ -455,6 +456,7 @@ test('invalid anatomy links offer a neutral manual Atlas exit without substituti
 test('public search accepts a single bounded query and skips repository work for empty, short or duplicate parameters',async()=>{
   const calls:string[]=[];
   const page=compile('../app/search/page.tsx',{
+    '@/lib/search-kind':searchKind,
     'next/link':({children,...props}:any)=>React.createElement('a',props,children),
     '@/lib/platform-governance':{searchEducation:async(q:string)=>{calls.push(q);return [{kind:'Anatomy concept',title:'Pons',summary:'Reference anatomy',href:'/learn/related-anatomy?concept=brainstem-pons&headRevision='+pin.headRevision,meta:'Source-bound concept'}];}},
   },true).default;

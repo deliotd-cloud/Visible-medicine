@@ -5,6 +5,7 @@ import type { AuthContext } from "@/lib/auth";
 import { atlasModules, findCourse } from "@/lib/catalog";
 import { sha256 } from "@/lib/domain";
 import { searchStructureLearning } from "@/lib/structure-learning-search";
+import { filterSearchKind, parseSearchKind } from "@/lib/search-kind";
 
 type Row = Record<string, string | number | null>;
 
@@ -352,7 +353,7 @@ export async function validateEmbedLaunch(tokenValue: unknown, parentOriginValue
   return { resourceType: String(payload.resourceType), resourceId: String(payload.resourceId), audience: String(payload.audience), origin: parentOrigin, evaluation: Boolean(payload.evaluation), intendedUse: "education-research-only" };
 }
 
-export async function searchEducation(queryValue: unknown) {
+export async function searchEducation(queryValue: unknown, kindValue: unknown = 'all') {
   await ensurePlatformSchema();
   const query = text(queryValue, 80);
   if (query.length < 2) return [];
@@ -369,12 +370,12 @@ export async function searchEducation(queryValue: unknown) {
     ...searchStructureLearning(normalizedQuery),
     ...atlasModules.filter((item) => [item.title, item.region, item.modality, item.description, ...item.systems].join(" ").toLowerCase().includes(query.toLowerCase())).map((item) => ({ kind: "Atlas", title: item.title, summary: item.description, href: `/atlas/${item.slug}`, meta: `${item.modality} · ${item.region}` })),
   ];
-  return [...staticResults,
+  return filterSearchKind([...staticResults,
     ...courseReleaseRows.results.map((row) => ({ kind: "Course", title: String(row.title), summary: String(row.summary), href: `/courses/${row.slug}`, meta: `${row.level} · ${row.duration_label}` })),
     ...annotationRows.results.map((row) => ({ kind: "Structure", title: String(row.structure_name), summary: String(row.description), href: `/atlas/${row.slug}`, meta: `${row.modality} · ${row.title}` })),
     ...caseRows.results.map((row) => ({ kind: "Case", title: String(row.title), summary: String(row.description), href: `/learn?case=${encodeURIComponent(String(row.id))}`, meta: String(row.classification) })),
     ...workbookRows.results.map((row) => ({ kind: "Workbook", title: String(row.title), summary: `${row.course_title} teaching workbook`, href: `/learn?workbook=${encodeURIComponent(String(row.id))}`, meta: String(row.mode) })),
-  ].slice(0, 30);
+  ], parseSearchKind(kindValue)).slice(0, 30);
 }
 
 function containsPatientIdentifier(value: string) {

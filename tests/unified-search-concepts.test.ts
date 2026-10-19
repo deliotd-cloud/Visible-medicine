@@ -6,6 +6,7 @@ import ts from 'typescript';
 import * as concepts from '../lib/structure-learning-search.ts';
 import {createLectureAnatomyReference} from '../lib/lecture-anatomy-reference.ts';
 import {relatedLectureHref} from '../lib/lecture-related-links.ts';
+import * as searchKind from '../lib/search-kind.ts';
 
 function fixture(){
   const db=new DatabaseSync(':memory:');
@@ -38,8 +39,9 @@ function fixture(){
     '@/lib/catalog':{atlasModules:[]},
     '@/lib/domain':{},
     '@/lib/structure-learning-search':concepts,
+    '@/lib/search-kind':searchKind,
   };
-  const output:{searchEducation?:(q:unknown)=>Promise<Array<{kind:string;title:string;href:string;summary:string;meta:string}>>}={};
+  const output:{searchEducation?:(q:unknown,kind?:unknown)=>Promise<Array<{kind:string;title:string;href:string;summary:string;meta:string}>>}={};
   new Function('exports','require',code)(output,(name:string)=>{assert(Object.hasOwn(mocks,name),name);return mocks[name];});
   assert(output.searchEducation);
   return {db,search:output.searchEducation,statements,schemas:()=>schemas};
@@ -61,6 +63,46 @@ test('unified search adds current exact concept navigation without changing publ
     // Published annotations keep their existing Atlas route; names are never guessed into concept IDs.
     assert.equal(rows.find(r=>r.kind==='Structure')?.href,'/atlas/ct-head');
     assert.equal(f.schemas(),1);
+  }finally{f.db.close();}
+});
+
+test('kind is a strict URL allowlist and filtering precedes the shared cap',async()=>{
+  assert.equal(searchKind.normalizeSearchQuery('  Ｐｏｎｓ  '),'Pons');
+  for(const value of [undefined,null,[],['courses'],{},'Courses','unknown'])assert.equal(searchKind.parseSearchKind(value),'all');
+  assert.equal(searchKind.parseSearchKind('courses'),'courses');
+  assert.equal(searchKind.searchKindHref('Pons & brain', 'courses'),'/search?q=Pons+%26+brain&kind=courses');
+  assert.equal(searchKind.searchKindHref('Pons', 'all'),'/search?q=Pons');
+  const synthetic=[...Array.from({length:31},(_,i)=>({kind:'Atlas',title:`Atlas ${i}`})),{kind:'Course',title:'Later course'}];
+  assert.deepEqual(searchKind.filterSearchKind(synthetic,'courses').slice(0,30),[{kind:'Course',title:'Later course'}]);
+  assert.deepEqual(searchKind.filterSearchKind([{kind:'Anatomy concept'},{kind:'Structure'},{kind:'Atlas'}],'anatomy').map(row=>row.kind),['Anatomy concept','Structure']);
+  const f=fixture();
+  try{
+    const anatomy=await f.search('pons','anatomy');
+    assert.deepEqual(anatomy.map(row=>row.kind),['Anatomy concept','Structure']);
+    assert.equal(anatomy[0].href,concepts.searchStructureLearning('Pons')[0].href);
+    assert.equal(anatomy[1].href,'/atlas/ct-head');
+    assert.deepEqual((await f.search('pons','courses')).map(row=>row.title),['Pons course']);
+    assert.deepEqual((await f.search('pons','cases')).map(row=>row.title),['Pons case']);
+    assert.deepEqual((await f.search('pons','workbooks')).map(row=>row.title),['Pons workbook']);
+    assert.deepEqual(await f.search('pons',['courses']),await f.search('pons'));
+    assert(f.statements.every(s=>/status='published'/.test(s.sql)));
+    assert(f.statements.filter(s=>s.sql.includes('FROM course_releases')).every(s=>/visibility='public'/.test(s.sql)));
+  }finally{f.db.close();}
+});
+
+test('a filtered workbook remains findable after a mixed all-result cap',async()=>{
+  const f=fixture();
+  try{
+    for(let i=0;i<30;i++){
+      f.db.prepare('INSERT INTO cases VALUES(?,?,?,?,?)').run(`case-${i+2}`,`Pons case ${i+2}`,'Reference','Education','published');
+      f.db.prepare('INSERT INTO atlas_annotations VALUES(?,?,?,?,?)').run(`Pons label ${i}`,'Reference','edition-1','[]','published');
+    }
+    const all=await f.search('pons');
+    assert.equal(all.length,30);
+    assert(!all.some(row=>row.kind==='Workbook'));
+    const workbooks=await f.search('pons','workbooks');
+    assert.deepEqual(workbooks.map(row=>row.title),['Pons workbook']);
+    assert.equal(workbooks[0].href,'/learn?workbook=book-1');
   }finally{f.db.close();}
 });
 

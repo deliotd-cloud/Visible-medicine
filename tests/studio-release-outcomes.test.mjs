@@ -34,6 +34,7 @@ const built=await build({stdin:{contents:source,resolveDir:site,sourcefile:'lib/
   b.onResolve({filter:/.*/},args=>{
    if(args.path in names||args.path==='@/lib/auth')return {path:args.path,namespace:'seam'};
    if(args.path==='test-seams')return {path:args.path,external:true};
+   if(['@/lib/workbook-eligibility','@/lib/workbook-access-policy'].includes(args.path))return {path:resolve(site,args.path.slice(2)+'.ts')};
    throw Error(`Unexpected import: ${args.path}`);
   });
   b.onLoad({filter:/.*/,namespace:'seam'},args=>({contents:`import seam from 'test-seams';\n${(names[args.path]??[]).map(name=>`export const ${name}=seam.${name};`).join('\n')}`,loader:'js'}));
