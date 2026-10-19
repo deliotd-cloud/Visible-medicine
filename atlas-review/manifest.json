@@ -1,5 +1,5 @@
 {
-  "revision": "6a636fba955e30819a768372c0434432025b0fce",
+  "revision": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -5659,7 +5659,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "635ce4a51bf7faa200e3216c7ac1e7507d184ef4a92817de856677571a63548d",
-      "importedSha256": "f4200a8d8f47dc078d68730735916f1649b48975f4e7510283f6f4c1ac21e354"
+      "importedSha256": "4f133f4f8111e7fc5942da0b669d673e6fb88bfb0161240b970bbe707ff144b4"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -6044,7 +6044,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "613ed8c7f68113a51462b58f9f1698f3a4572656bef56cd1626a3de99ad2cf07"
+      "importedSha256": "6283a688273cf6f94e9f9f6a7cd3be875d8bd93746b09feea5a523d6950686ff"
     },
     {
       "path": "app/review/review.css",
@@ -6058,8 +6058,8 @@
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "e669364ea093bd18a0ba3b6b71e94b051b4ff7233276546551b7d9145738bab3",
-      "importedSha256": "de1f3a5678ddd7f409ac5610a7d4d5e877fafe17d53194fac46b7e4e5ca33bef"
+      "sourceSha256": "c54a215649c9c50b9ad617e5de4c413f5805880feeb585f9478dd218008312ab",
+      "importedSha256": "9064261d9073f4f42f0847486c21f4188d7579a3ca863fd21efbea6a912d3721"
     },
     {
       "path": "components/ui/alert-dialog.tsx",
@@ -6118,8 +6118,8 @@
     },
     {
       "path": "app/review/body/body-review.css",
-      "sourceSha256": "03fd2ee904232ab0b3da7424feed9e200aecf604ee451b6ab5a4e63da083faad",
-      "importedSha256": "03fd2ee904232ab0b3da7424feed9e200aecf604ee451b6ab5a4e63da083faad"
+      "sourceSha256": "effddadff503532a3fa9daecf6a2767f58afda8132ba4d89501e0d4f168f2294",
+      "importedSha256": "effddadff503532a3fa9daecf6a2767f58afda8132ba4d89501e0d4f168f2294"
     },
     {
       "path": "app/review/nested/page.tsx",
@@ -7708,5 +7708,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "d9cd6b15cfb0969c59a2eb2a1867d7fa1f94bcf5b5367ce3b5f8e4550b83d156"
+  "websiteIntegrationSha256": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b"
 }

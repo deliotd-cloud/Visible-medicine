@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 // SHA-256 of bytes from `git show 8bed1346:<path>` in the Atlas checkout.
@@ -38,7 +39,8 @@ const visible=(code:string,value:string)=>code.includes(value)||code.includes(JS
 
 test('eight laryngeal imaging and seven cranial Quiz drafts reach exact learner and Review bindings',async()=>{
  const review=json('atlas-review/manifest.json');
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes,learnerModules:['head-neck','shoulder']});
+ assert.equal(review.revision,currentRevision);
  for(const [path,digest] of Object.entries(sourceHashes)){
   const record=review.files.find((file:{path:string})=>file.path===path);
   assert(record,path);
@@ -50,7 +52,7 @@ test('eight laryngeal imaging and seven cranial Quiz drafts reach exact learner 
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json'),inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,currentRevision,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   for(const [path,digest] of Object.entries(sourceHashes)){
@@ -61,7 +63,7 @@ test('eight laryngeal imaging and seven cranial Quiz drafts reach exact learner 
  }
  const learner=json(learnerBase+'manifest.json');
  const viewerBase='public/atlas-review-viewer/',viewer=json(viewerBase+'manifest.json');
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(viewer.sourceCommit,currentRevision);
  assert.equal(viewer.personalRecordsIncluded,false);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  const emitted=[emittedTeaching(learnerBase,learner.files,true),emittedTeaching(viewerBase,viewer.files,true)];

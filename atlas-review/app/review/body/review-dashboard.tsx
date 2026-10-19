@@ -387,7 +387,7 @@ export function BodyReviewDashboard({
               }}
             >
               <SelectTrigger aria-labelledby="body-review-system-label">
-                <SelectValue />
+                <SelectValue>{system === 'all' ? 'All systems' : bodySystems[system as keyof typeof bodySystems]?.name ?? system}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All systems</SelectItem>

@@ -26,8 +26,12 @@ export function StudioCourseEditor({ course, workbooks, releases, recoveryScope 
     setEditingDetails(current=>current.courseId===course.id?current:{courseId:course.id,open:false});
     const restore = () => {
       const pane = paneFromValue(new URLSearchParams(window.location.search).get("pane"));
+      const activePanel = typeof document !== 'undefined'
+        ? document.activeElement?.closest?.('.course-editor [role="tabpanel"]') : null;
       setSection(pane);
       setFocusedTab(current => current.courseId === course.id && typeof document !== 'undefined' && document.activeElement?.closest('.course-editor-tablist') ? current : {courseId: course.id, pane});
+      if (activePanel && coursePanes.some(([value]) => activePanel.id === `course-${value}`) && activePanel.id !== `course-${pane}`)
+        document.getElementById(`course-${pane}-tab`)?.focus();
     };
     restore();
     window.addEventListener("popstate", restore);

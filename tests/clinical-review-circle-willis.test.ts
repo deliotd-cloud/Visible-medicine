@@ -3,11 +3,13 @@ import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { build } from './review-component-test-build.ts';
+import {admitCircleWillis} from './next-five-special-admission.mjs';
 
 test('fourteen Circle of Willis imaging drafts reach exact-source review, not approval', async () => {
   const manifest = JSON.parse(readFileSync('atlas-review/manifest.json', 'utf8'));
   const viewer = JSON.parse(readFileSync('public/atlas-review-viewer/manifest.json', 'utf8'));
-  assert.equal(manifest.revision, '9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
+  const currentRevision=admitCircleWillis('9fba9a1e24b6669aafd48e945d55fc0939d50ab2');
+  assert.equal(manifest.revision, currentRevision);
   assert.equal(viewer.sourceCommit, manifest.revision);
   assert.equal(viewer.websiteIntegrationSha256, manifest.websiteIntegrationSha256);
   assert.equal(viewer.personalRecordsIncluded, false);

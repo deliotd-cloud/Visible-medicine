@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 61,
+  "revision": 62,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -21,11 +21,11 @@
     "uiqa": "F:/VisibleMedicine/staging/20261018-head-spa-lifecycle"
   },
   "baseline": {
-    "atlasCommit": "6a636fba955e30819a768372c0434432025b0fce",
-    "atlasTree": "72a09bdab4750b6eeb5dbaeb9c9e242d18e3a6a0",
+    "atlasCommit": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
+    "atlasTree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "d9cd6b15cfb0969c59a2eb2a1867d7fa1f94bcf5b5367ce3b5f8e4550b83d156",
+    "reviewIntegration": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
     "reviewSourceFiles": 1531,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -43,14 +43,14 @@
     "limitations": "Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration."
   },
   "pendingAtlasSource": {
-    "commit": "6a636fba955e30819a768372c0434432025b0fce",
-    "tree": "72a09bdab4750b6eeb5dbaeb9c9e242d18e3a6a0",
+    "commit": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
+    "tree": "a9a1581bd6a3220b7d4b2554644fe0c56b688430",
     "rootDraftPlacements": 9334,
     "rootPendingPlacements": 563,
     "rootGeneratedIdentificationPlacements": 39,
     "websiteImported": true,
-    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-body-review-url-website-import/writers-state.json",
-    "note": "UI-only Review navigation update: accepted worksheet selection replaces only the structure query while keeping other URL state; cancellation and stale intent preserve notes and URL. Primary catalog region and readable region names replace overlapping-region order.26 interaction cases and9 source gates pass; renderer/display pins, model payloads and all teaching remain unchanged. This is not browser, clinical, spatial-registration, entitlement or public-release approval."
+    "evidence": "F:/VisibleMedicine/recovery/checkpoints/20261019-body-review-sticky-website-import/writers-state.json",
+    "note": "UI-only Review update: desktop worksheet navigation stays reachable at the observed one-rem queue offset; the closed system selector uses its readable label.28 interaction cases and9 source gates pass; renderer/display pins, model payloads and all teaching remain unchanged. This is not browser, clinical, spatial-registration, entitlement or public-release approval."
   },
   "statusDefinitions": {
     "verified-local": "Bounded software or inventory criterion has local evidence; separate clinical, browser and release items remain open.",
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "revision": 62,
+      "date": "2026-10-19",
+      "change": "Normal import of clean Atlas509b01da with sticky desktop Review worksheet controls and readable system labels. No model, anatomy or teaching change; all71 requirements/eight optional ideas and statuses remain. Original feature assertions and old source evidence preserved; existing approval records are not migrated or invented."
+    },
     {
       "revision": 61,
       "date": "2026-10-19",

@@ -3,12 +3,19 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
+const sourceHashes={
+ 'lib/forearm-arterial-tour.ts':'5a39f29d9195a4c1f154ea01adbdf0c3824177c363590f5e808009992634ae1d',
+ 'content/forearm-arterial-tour-pins.json':'4f39db9be069d2f91c373b8835fa1b55a7487677d42b783f32b1cb2938b292a5',
+ 'lib/regional-tours.ts':'88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97',
+} as const;
 const sha=(b:Uint8Array|string)=>createHash('sha256').update(b).digest('hex');
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
 test('forearm-arterial learner and Review share four exact draft stops without procedural or registration claims',async()=>{
  const base='public/atlas-runtime/head-neck/',learner=JSON.parse(readFileSync(base+'manifest.json','utf8')),review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(learner.sourceCommit,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');assert.equal(review.revision,learner.sourceCommit);
+ const currentRevision=admitPreservedClinicalReview({revision:'9fba9a1e24b6669aafd48e945d55fc0939d50ab2',sourceHashes,learnerModules:['head-neck']});
+ assert.equal(learner.sourceCommit,currentRevision);assert.equal(review.revision,learner.sourceCommit);
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
  for(const path of ['lib/forearm-arterial-tour.ts','content/forearm-arterial-tour-pins.json','lib/regional-tours.ts']){
   const input=inputs.find((f:{path:string})=>f.path===path),imported=review.files.find((f:{path:string})=>f.path===path);

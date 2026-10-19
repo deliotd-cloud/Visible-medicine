@@ -5,10 +5,12 @@ import {existsSync,readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {admitCoronaryXray} from './next-five-special-admission.mjs';
+import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 const previous='61ff057d5204caaaa4be654bacb371de7de8f038';
-const atlas='F:/VisibleMedicine/atlas';
+const atlas=checkedAtlasHistoryRepo(revision);
 const sourcePaths=[
  'content/coronary-arterial-us-pins.json',
  'content/coronary-arterial-xray.ts',
@@ -24,7 +26,7 @@ const sha=(bytes:Uint8Array|string)=>createHash('sha256').update(bytes).digest('
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 const source=(commit:string,path:string)=>execFileSync('git',['show',`${commit}:${path}`],
- {cwd:atlas,windowsHide:true,maxBuffer:32e6});
+ {cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
 const visible=(code:string,value:string)=>code.includes(value)||code.includes(JSON.stringify(value).slice(1,-1));
 
 test('four exact coronary arterial X-ray drafts reach the learner and protected Review',async()=>{
@@ -34,9 +36,10 @@ test('four exact coronary arterial X-ray drafts reach the learner and protected 
  const inputs=json(learnerBase+'source-inputs.json');
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(review.revision,revision);
- assert.equal(learner.sourceCommit,revision);
- assert.equal(viewer.sourceCommit,revision);
+ const currentRevision=admitCoronaryXray(revision);
+ assert.equal(review.revision,currentRevision);
+ assert.equal(learner.sourceCommit,currentRevision);
+ assert.equal(viewer.sourceCommit,currentRevision);
  assert.equal(learner.patientDataIncluded,false);
  assert.equal(learner.clinicalApproved,false);
  assert.equal(viewer.personalRecordsIncluded,false);

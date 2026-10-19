@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 const baseline='4897aacb28b4d99d34b893493b8706ede54db970';
@@ -27,7 +28,8 @@ const priorBody='Structure-specific imaging teaching has not yet been authored a
 test('eight exact-source elbow arterial US drafts bind learner runtimes and protected Review',async()=>{
  const review=json('atlas-review/manifest.json');
  const pins=json('atlas-review/content/elbow-arterial-ultrasound-pins.json');
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes,learnerModules:['head-neck','shoulder']});
+ assert.equal(review.revision,currentRevision);
  assert.equal(pins.baseline,baseline);
  assert.equal(pins.entries.length,8);
  const entries:Pin[]=Object.entries(families).flatMap(([family,fmas])=>fmas.map(fma=>{
@@ -65,7 +67,7 @@ test('eight exact-source elbow arterial US drafts bind learner runtimes and prot
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json');
   const inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,currentRevision,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   for(const [path,expected] of Object.entries(sourceHashes)){

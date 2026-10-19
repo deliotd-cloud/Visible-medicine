@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6a636fba955e30819a768372c0434432025b0fce",
-  "sha256": "d9cd6b15cfb0969c59a2eb2a1867d7fa1f94bcf5b5367ce3b5f8e4550b83d156",
+  "sourceCommit": "509b01da5d72f33bd774e4a59d63e2406af1f2ff",
+  "sha256": "5a3836a48643bdef042c61dcc0d27bb252b130947238b5a154660f3eab8a2a0b",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -420,7 +420,7 @@
     },
     {
       "path": "atlas-review/app/review/body/body-review.css",
-      "sha256": "03fd2ee904232ab0b3da7424feed9e200aecf604ee451b6ab5a4e63da083faad"
+      "sha256": "effddadff503532a3fa9daecf6a2767f58afda8132ba4d89501e0d4f168f2294"
     },
     {
       "path": "atlas-review/app/review/body/page.tsx",
@@ -428,7 +428,7 @@
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "de1f3a5678ddd7f409ac5610a7d4d5e877fafe17d53194fac46b7e4e5ca33bef"
+      "sha256": "9064261d9073f4f42f0847486c21f4188d7579a3ca863fd21efbea6a912d3721"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -6424,11 +6424,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "82b0edabf0b1003f87c013b05e44f1d53eb5072426459fdcfb950adb91095846"
+      "sha256": "934f0a32eacce71082389cf565b10b968748ce0804c93e7c08b5e593cbf99193"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "b74c0bc042185d4859f4d5297a0fe77ec8f12bd4d5b326a961f7b90ceba2c970"
+      "sha256": "26b61e56479d70b72db4d514163520c2ae8f93d38f633242d233e026ecd265f6"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6668,7 +6668,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "f03fffe0493edb26a1333ed55614dd1cf5cf902f3b451e7d8a5f9842e188c7ff"
+      "sha256": "e7e365ef9c283d404a7a448cea2d8b5c813a6de43d5d8c362f05770e8b20a860"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",
