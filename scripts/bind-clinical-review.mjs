@@ -31,6 +31,7 @@ const adapterPaths = ['scripts/import-clinical-review.mjs','scripts/build-clinic
   'lib/head-ct-facial-decision-contract.ts','lib/head-ct-facial-decision-store.ts','lib/head-ct-facial-decision-api.ts','lib/head-ct-facial-decision-client.ts','lib/head-ct-facial-working-copy.ts','lib/head-ct-facial-review-inbox.ts',
   'components/HeadCtFacialDecisionPanel.tsx','components/HeadCtFacialDecisionForm.tsx','app/api/atlas-review/head-ct-facial-decisions/route.ts','lib/clinical-review-extra-inbox.ts',
   'components/HeadAtlasComparisonNavigation.tsx','components/HeadAtlasViewer.tsx','lib/head-atlas-display.ts','lib/head-view-history.ts',
+  'components/HeadAtlasSurface.tsx','components/HeadAtlasSurfaceLoader.tsx','components/head-surface.css','lib/head-surface-context.ts','lib/head-surface-camera.ts',
   'components/ImagingAtlasShell.tsx','components/ImagingPaneNavigation.tsx','components/imaging-atlas-shell.css','lib/imaging-pane-focus.ts',
   'components/HeadAtlasGuidedLearning.tsx','components/HeadAtlasInlineComparison.tsx','lib/head-inline-comparison.ts','components/HeadAtlasInlineComparisonLoader.tsx','components/HeadTourPlayback.tsx','lib/head-tour-playback.ts',
   'components/HeadAtlasLearningNavigation.tsx','lib/lecture-tour-context.ts','lib/lecture-related-links.ts',

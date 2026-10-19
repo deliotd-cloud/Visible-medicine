@@ -10,6 +10,8 @@ const sourceRoot=process.env.VM_SURFACE_SOURCE_ROOT;
 const sourcePath=(path:string)=>sourceRoot?resolve(sourceRoot,path):new URL('../'+path,import.meta.url);
 const helperPath=sourcePath('lib/head-surface-context.ts');
 const helperAvailable=existsSync(helperPath);
+const cameraPath=sourcePath('lib/head-surface-camera.ts');
+const cameraAvailable=existsSync(cameraPath);
 const compile=(path:string|URL)=>ts.transpileModule(readFileSync(path,'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
 type Bind=(canvas:HTMLCanvasElement,context:Pick<WebGLRenderingContext,'isContextLost'>,onState:(lost:boolean)=>void)=>()=>void;
 function loadHelper():Bind {
@@ -18,6 +20,13 @@ function loadHelper():Bind {
   new Function('require','module','exports',compile(helperPath))(require,mod,mod.exports);
   assert.equal(typeof mod.exports.bindHeadSurfaceContext,'function');
   return mod.exports.bindHeadSurfaceContext;
+}
+function loadCameraHelper(){
+  assert(cameraAvailable,'real staged camera helper is required');
+  const mod={exports:{} as {moveHeadSurfaceCamera:(controls:any,action:string)=>boolean}};
+  new Function('require','module','exports',compile(cameraPath))(require,mod,mod.exports);
+  assert.equal(typeof mod.exports.moveHeadSurfaceCamera,'function');
+  return mod.exports.moveHeadSurfaceCamera;
 }
 
 class CanvasTarget extends EventTarget {
@@ -78,12 +87,23 @@ function harness(initiallyLost=false){
   const document={activeElement:null as any};Object.defineProperty(globalThis,'document',{value:document,configurable:true});
   const root:Instance={slots:[],effects:new Map(),mounted:true};
   let observer:Instance|null=null,current=root,hook=0,dirty=false,disposed=false,writesAfterDispose=0;
-  let pendingLayout:Array<()=>void>=[],pendingPassive:Array<()=>void>=[],tree:Node,props:Props,canvasKey:unknown=Symbol('unmounted');
-  let renderer:{canvas:CanvasTarget;lost:boolean;invalidations:number;state:any};
+  let pendingLayout:Array<()=>void>=[],pendingPassive:Array<()=>void>=[],tree:Node,props:Props,canvasKey:unknown=Symbol('unmounted'),openingTree:Node|undefined;
+  let renderer:{canvas:CanvasTarget;lost:boolean;invalidations:number;state:any;bounds:any;fitCalls:string[];cameraCalls:string[];controls:any};
   const renderers:Array<typeof renderer>=[];
   const Canvas=()=>null,Bounds=()=>null,OrbitControls=()=>null;
   function newRenderer(){
-    const next={canvas:new CanvasTarget(),lost:initiallyLost,invalidations:0,state:null as any};
+    const fitCalls:string[]=[],cameraCalls:string[]=[];
+    let distance=100,polar=Math.PI/2,azimuth=0;
+    const controls={enabled:true,enableRotate:true,enableZoom:true,object:{position:{x:0,y:100,z:0},zoom:1},target:{x:0,y:0,z:0},
+      minDistance:1,maxDistance:1000,minPolarAngle:0,maxPolarAngle:Math.PI,minAzimuthAngle:-Math.PI,maxAzimuthAngle:Math.PI,
+      dispatchEvent:(event:{type:string})=>{cameraCalls.push(event.type);},
+      getDistance:()=>distance,getPolarAngle:()=>polar,getAzimuthalAngle:()=>azimuth,
+      setPolarAngle:(value:number)=>{polar=value;cameraCalls.push('polar');},
+      setAzimuthalAngle:(value:number)=>{azimuth=value;cameraCalls.push('azimuth');},
+      dollyIn:(factor:number)=>{distance*=factor;cameraCalls.push('zoom-in');},
+      dollyOut:(factor:number)=>{distance/=factor;cameraCalls.push('zoom-out');}};
+    const bounds={refresh(){fitCalls.push('refresh');return this;},clip(){fitCalls.push('clip');return this;},fit(){fitCalls.push('fit');return this;}};
+    const next={canvas:new CanvasTarget(),lost:initiallyLost,invalidations:0,state:null as any,bounds,fitCalls,cameraCalls,controls};
     const context={isContextLost:()=>next.lost};
     next.state={gl:{domElement:next.canvas,getContext:()=>context},invalidate:()=>next.invalidations++};
     renderers.push(next);return next;
@@ -104,9 +124,10 @@ function harness(initiallyLost=false){
   const mod={exports:{} as {HeadAtlasSurface:(props:Props)=>Node}};
   new Function('require','module','exports',compile(sourcePath('components/HeadAtlasSurface.tsx')))((name:string)=>{
     if(name==='react')return hooks;if(name==='react/jsx-runtime')return require(name);
-    if(name==='@react-three/fiber')return fiber;if(name==='@react-three/drei')return {Bounds,OrbitControls};
+    if(name==='@react-three/fiber')return fiber;if(name==='@react-three/drei')return {Bounds,OrbitControls,useBounds:()=>renderer.bounds};
     if(name==='three')return {};
     if(name.includes('head-surface-context'))return {bindHeadSurfaceContext:loadHelper()};
+    if(name.includes('head-surface-camera'))return {moveHeadSurfaceCamera:loadCameraHelper()};
     if(name.includes('head-atlas-display'))return {headLabel:(entry:any)=>entry.label};
     return {};
   },mod,mod.exports);
@@ -118,7 +139,7 @@ function harness(initiallyLost=false){
     const node=value as Node;
     let dom=parent;
     if(typeof node.type==='string'){
-      dom={parent,focus(){document.activeElement=this;},contains(other:any){for(let at=other;at;at=at.parent)if(at===this)return true;return false;},querySelector(){return null;}};
+      dom={parent,open:false,focus(){document.activeElement=this;},contains(other:any){for(let at=other;at;at=at.parent)if(at===this)return true;return false;},querySelector(selector:string){const found=walk(node.props.children,child=>child.type===selector);return found?domNodes.get(found):null;}};
       if(node.props.ref&&typeof node.props.ref==='object'){
         const ref=node.props.ref;live.add(ref);dom=refs.get(ref)??dom;dom.parent=parent;refs.set(ref,dom);ref.current=dom;
       }
@@ -132,8 +153,10 @@ function harness(initiallyLost=false){
     do{
       assert(++passes<30,'surface hook lifecycle must settle');dirty=false;pendingLayout=[];pendingPassive=[];current=root;hook=0;
       tree=mod.exports.HeadAtlasSurface(props);
+      if(!openingTree)openingTree=tree;
       const canvas=walk(tree,node=>node.type===Canvas);assert(canvas,'native surface retains its Canvas');
       if(!Object.is(canvas.key,canvasKey)){cleanup(observer);observer={slots:[],effects:new Map(),mounted:true};canvasKey=canvas.key;renderer=newRenderer();}
+      const orbit=walk(canvas.props.children,node=>node.type===OrbitControls);assert(orbit?.props.ref,'native camera retains its OrbitControls ref');orbit.props.ref.current=renderer.controls;
       const child=walk(canvas.props.children,node=>typeof node.type==='function'&&node.type!==Bounds&&node.type!==OrbitControls&&node.type.name!=='Surface'&&node.type.name!=='RegionalCourse');
       if(child){current=observer!;hook=0;child.type(child.props);}
       const live=commitRefs(tree);for(const [ref]of refs)if(!live.has(ref)){ref.current=null;refs.delete(ref);}
@@ -144,11 +167,16 @@ function harness(initiallyLost=false){
   function lose(){renderer.lost=true;const event=renderer.canvas.emit('webglcontextlost');flush();return event;}
   function restore(){renderer.lost=false;renderer.canvas.emit('webglcontextrestored');flush();}
   function replay(){for(const instance of [root,observer])if(instance)for(const item of instance.effects.values()){item.cleanup?.();const result=item.create();item.cleanup=typeof result==='function'?result:undefined;}flush();}
+  function speculative(next:Props){const savedSlots=[...root.slots],savedCurrent=current,savedHook=hook,savedLayout=pendingLayout,savedPassive=pendingPassive;
+    current=root;hook=0;pendingLayout=[];pendingPassive=[];const candidate=mod.exports.HeadAtlasSurface(next);
+    root.slots=savedSlots;current=savedCurrent;hook=savedHook;pendingLayout=savedLayout;pendingPassive=savedPassive;return candidate;}
   function dispose(){if(disposed)return;cleanup(observer);cleanup(root);disposed=true;for(const [ref]of refs)ref.current=null;if(oldDocument)Object.defineProperty(globalThis,'document',oldDocument);else delete (globalThis as any).document;}
   const alert=()=>walk(tree,node=>node.props.role==='alert');
   const retry=()=>walk(tree,node=>node.type==='button'&&node.props.children==='Retry 3D scan view');
   const surface=()=>walk(tree,node=>typeof node.type==='function'&&node.type.name==='Surface');
-  return {flush,lose,restore,replay,dispose,alert,retry,surface,renderers,document,dom:(node:Node)=>domNodes.get(node),get renderer(){return renderer!;},get tree(){return tree!;},get writesAfterDispose(){return writesAfterDispose;}};
+  const control=(label:string)=>walk(tree,node=>node.type==='button'&&node.props.children===label);
+  const disclosure=()=>walk(tree,node=>node.type==='details'&&node.props.className==='head-surface-navigation');
+  return {flush,lose,restore,replay,speculative,dispose,alert,retry,surface,control,disclosure,renderers,document,dom:(node:Node)=>domNodes.get(node),get openingTree(){return openingTree!;},get renderer(){return renderer!;},get tree(){return tree!;},get writesAfterDispose(){return writesAfterDispose;}};
 }
 
 function sample(id='synthetic-one'):Props {
@@ -201,4 +229,68 @@ test('restoration and retry return focus locally only when they displace notice 
       const group=walk(h.tree,node=>node.props.ref?.current===h.document.activeElement);assert(group,'focus returns to an existing local surface target');
     }finally{h.dispose();}
   }
+});
+
+test('native view controls are collapsed, typed, and usable only when the actual renderer is ready or restored',()=>{
+  const labels=['Rotate left','Rotate right','Tilt up','Tilt down','Zoom in','Zoom out','Fit selected structure'];
+  const h=harness();try{
+    const props=sample(),source=props.selected,geometry=new Uint8Array(source.positions.buffer).slice(),picks:number[][]=[];
+    props.onPick=point=>picks.push(point);h.flush(props);
+    const opening=walk(h.openingTree,node=>node.type==='details'&&node.props.className==='head-surface-navigation');assert(opening);
+    assert.equal(opening.props.open,undefined,'disclosure stays collapsed by default');
+    for(const label of labels){const button=walk(opening,node=>node.type==='button'&&node.props.children===label);assert(button);assert.equal(button.props.type,'button');assert.equal(button.props.disabled,true,'opening renderer cannot receive camera input');}
+    const current=h.disclosure();assert(current);assert.equal(walk(current,node=>node.type==='summary')?.props.children,'View controls');
+    for(const label of labels)assert.equal(h.control(label)?.props.disabled,false,`${label} is available on ready renderer`);
+    assert.equal(h.renderer.cameraCalls.length,0);
+    for(const label of labels.slice(0,6)){h.control(label)!.props.onClick();h.flush();}
+    assert.deepEqual(h.renderer.cameraCalls,['start','azimuth','end','start','azimuth','end','start','polar','end','start','polar','end','start','zoom-in','end','start','zoom-out','end']);
+    assert.deepEqual(picks,[],'camera actions do not pick or move the native image cursor');
+    assert.equal(h.surface()?.props.selected,source,'camera commands do not substitute anatomy');
+    assert.deepEqual(new Uint8Array(source.positions.buffer),geometry,'camera commands never mutate accepted geometry');
+    h.lose();for(const label of labels)assert.equal(h.control(label)?.props.disabled,true,`${label} is disabled on context loss`);
+    h.restore();for(const label of labels)assert.equal(h.control(label)?.props.disabled,false,`${label} returns only after context restoration`);
+  }finally{h.dispose();}
+});
+
+test('Fit uses the current selected geometry and stale selections cannot fit or command the new view',()=>{
+  const h=harness();try{
+    const first=sample(),second=sample('synthetic-second');h.flush(first);
+    const priorFit=h.control('Fit selected structure')!,priorRotate=h.control('Rotate left')!;
+    priorFit.props.onClick();assert.deepEqual(h.renderer.fitCalls,['refresh','clip','fit']);
+    h.flush(second);const fitCount=h.renderer.fitCalls.length,cameraCount=h.renderer.cameraCalls.length;
+    priorFit.props.onClick();priorRotate.props.onClick();
+    assert.equal(h.renderer.fitCalls.length,fitCount);assert.equal(h.renderer.cameraCalls.length,cameraCount,'prior selection callbacks are inert');
+    h.control('Fit selected structure')!.props.onClick();assert.deepEqual(h.renderer.fitCalls.slice(fitCount),['refresh','clip','fit']);
+    assert.equal(h.surface()?.props.selected,second.selected);
+  }finally{h.dispose();}
+});
+
+test('lost, retry, disabled, unmounted and speculative controls never dispatch camera commands',()=>{
+  const h=harness();try{
+    h.flush(sample());const prior=h.control('Rotate left')!,priorFit=h.control('Fit selected structure')!;
+    h.lose();const cameraCount=h.renderer.cameraCalls.length,fitCount=h.renderer.fitCalls.length;
+    prior.props.onClick();priorFit.props.onClick();h.control('Rotate right')!.props.onClick();
+    assert.equal(h.renderer.cameraCalls.length,cameraCount);assert.equal(h.renderer.fitCalls.length,fitCount);
+    h.restore();h.renderer.controls.enabled=false;h.control('Rotate right')!.props.onClick();assert.equal(h.renderer.cameraCalls.length,cameraCount,'disabled OrbitControls emit no start/end event');
+    h.renderer.controls.enabled=true;
+    const speculative=h.speculative(sample('discarded'));
+    const speculativeButton=walk(speculative,node=>node.type==='button'&&node.props.children==='Rotate left');assert(speculativeButton);
+    speculativeButton.props.onClick();assert.equal(h.renderer.cameraCalls.length,cameraCount,'discarded render has no committed command owner');
+    h.lose();const retired=h.control('Rotate right')!,retry=h.retry()!,old=h.renderer;
+    retry.props.onClick();h.flush();retired.props.onClick();prior.props.onClick();priorFit.props.onClick();
+    assert.equal(old.cameraCalls.length,cameraCount);assert.equal(old.fitCalls.length,fitCount);
+    const replacement=h.renderer;h.control('Rotate right')!.props.onClick();assert.deepEqual(replacement.cameraCalls,['start','azimuth','end']);
+    const after=h.control('Rotate right')!;h.dispose();after.props.onClick();assert.deepEqual(replacement.cameraCalls,['start','azimuth','end']);assert.equal(h.writesAfterDispose,0);
+  }finally{h.dispose();}
+});
+
+test('Escape closes view controls and returns summary focus while camera buttons preserve ordinary focus',()=>{
+  const h=harness();try{
+    h.flush(sample());const details=h.disclosure()!,summary=walk(details,node=>node.type==='summary')!,button=h.control('Tilt up')!;
+    const detailsDom=h.dom(details),summaryDom=h.dom(summary),buttonDom=h.dom(button);detailsDom.open=true;buttonDom.focus();
+    button.props.onClick();assert.equal(h.document.activeElement,buttonDom,'camera command leaves focus on its button');
+    let prevented=0,stopped=0;
+    details.props.onKeyDown({key:'Escape',currentTarget:detailsDom,preventDefault(){prevented++;},stopPropagation(){stopped++;}});
+    assert.equal(detailsDom.open,false);assert.equal(prevented,1);assert.equal(stopped,1);assert.equal(h.document.activeElement,summaryDom);
+  }finally{h.dispose();}
 });

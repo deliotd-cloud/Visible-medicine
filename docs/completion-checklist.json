@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 65,
+  "revision": 66,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -25,7 +25,7 @@
     "atlasTree": "36381d525f7c6886743bcec00fcee96931d65c58",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "5c559b77c0b50003b0bd1d16464388daff53bbafd0ee9779566374b3163f830c",
+    "reviewIntegration": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896",
     "reviewSourceFiles": 1538,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-19",
+      "revision": 66,
+      "change": "Native CT/MRI 3D scan surfaces gain compact collapsed View controls: keyboard-addressable Rotate/Tilt/Zoom and Fit selected structure, preserving source geometry, selection, native scan position and separate generic Atlas comparison. Camera commands are bound to the committed current renderer, selection and context; lost/opening/stale/retired controls cannot act. Escape closes controls and returns summary focus. Existing context-loss/retry and source geometry test bodies remain exact; new helper uses existing installed OSS controls only. Five actual native renderer/loader/style/context/camera source inputs join Review provenance without removing previous inputs. Normal binding/viewer verification refresh current delivery metadata; all71requirements/eight optional states and clinical nulls remain unchanged. Focused native/types/build and actual browser acceptance are separate gates; no new scan/asset/dependency, fee, model, entitlement, clinical approval or spatial registration. Installed semantic types caught the required OrbitControls event target; start/end dispatch now include the same live controls target without casts. Initial329native pass and failed type receipt remain separate from repaired-source acceptance."
+    },
     {
       "date": "2026-10-19",
       "revision": 65,

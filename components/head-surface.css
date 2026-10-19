@@ -1,6 +1,15 @@
 .head-surface-renderer{position:relative;width:100%;height:100%;min-height:0}
 .head-surface-renderer:focus-visible{outline:2px solid #ffe09a;outline-offset:-3px}
-.head-surface-interruption{position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;overflow:auto;padding:20px;background:rgba(11,20,19,.96);color:var(--imaging-ink);font-size:14px;line-height:1.5}
+.head-surface-navigation{position:absolute;top:8px;left:8px;z-index:1;width:240px;max-width:calc(100% - 16px);border:1px solid #59716b;border-radius:6px;background:#112423;color:var(--imaging-ink);font-size:13px;line-height:1.4}
+.head-surface-navigation:not([open]){width:auto}
+.head-surface-navigation summary{padding:7px 10px;cursor:pointer}
+.head-surface-navigation [role=group]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:0 8px 8px}
+.head-surface-navigation button{padding:6px;border:1px solid #59716b;border-radius:4px;background:#172e2b;color:inherit;font:inherit;cursor:pointer}
+.head-surface-navigation button:last-child{grid-column:1 / -1}
+.head-surface-navigation button:disabled{opacity:.5;cursor:default}
+.head-surface-navigation :is(summary,button):focus-visible{outline:2px solid #ffe09a;outline-offset:2px}
+.head-surface-navigation p{margin:0;padding:0 9px 9px;font-size:12px}
+.head-surface-interruption{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;overflow:auto;padding:20px;background:rgba(11,20,19,.96);color:var(--imaging-ink);font-size:14px;line-height:1.5}
 .head-surface-interruption h3,.head-surface-interruption p{margin:0}
 .head-surface-interruption h3{font-size:17px;font-weight:500}
 .head-surface-interruption button{padding:7px 12px;border:1px solid var(--imaging-teal);border-radius:5px;background:#172826;color:var(--imaging-ink);font:inherit;cursor:pointer}

@@ -2,12 +2,14 @@
 
 import {useCallback,useEffect,useLayoutEffect,useMemo,useRef,useState} from 'react';
 import {Canvas,useThree,type ThreeEvent} from '@react-three/fiber';
-import {Bounds,OrbitControls} from '@react-three/drei';
+import {Bounds,OrbitControls,useBounds} from '@react-three/drei';
+import type {OrbitControls as OrbitControlsImpl} from 'three-stdlib';
 import * as THREE from 'three';
 import {type LoadedEntry} from '../lib/head-atlas-import';
 import {type Vec3} from '../lib/head-atlas-geometry.mjs';
 import {headLabel} from '../lib/head-atlas-display';
 import {bindHeadSurfaceContext} from '../lib/head-surface-context';
+import {moveHeadSurfaceCamera,type HeadSurfaceCameraAction} from '../lib/head-surface-camera';
 import './head-surface.css';
 
 export type HeadAtlasSurfaceProps={selected:LoadedEntry;regionalCourse:boolean;onPick:(point:Vec3)=>void};
@@ -37,8 +39,15 @@ function RegionalCourse({points,color}:{points:number[][];color:number[]}){
   return <primitive object={line}/>;
 }
 
-function HeadSurfaceContextObserver({onState}:{onState:(lost:boolean)=>boolean}){
+type SurfaceFit={selected:LoadedEntry;fit:()=>void};
+function HeadSurfaceSceneControls({onState,selected,fitRef}:{onState:(lost:boolean)=>boolean;selected:LoadedEntry;fitRef:{current:SurfaceFit|null}}){
   const {gl,invalidate}=useThree();
+  const bounds=useBounds();
+  useLayoutEffect(()=>{
+    const action={selected,fit:()=>bounds.refresh().clip().fit()};
+    fitRef.current=action;
+    return()=>{if(fitRef.current===action)fitRef.current=null;};
+  },[bounds,selected,fitRef]);
   useEffect(()=>bindHeadSurfaceContext(gl.domElement,gl.getContext(),lost=>{
     if(onState(lost)&&!lost)invalidate();
   }),[gl,invalidate,onState]);
@@ -52,6 +61,12 @@ export function HeadAtlasSurface({selected,regionalCourse,onPick}:HeadAtlasSurfa
   const session=useMemo(()=>({valid:false,lost:false}),[attempt]);
   const active=useRef<typeof session|null>(null),restoreFocus=useRef(false);
   const view=useRef<HTMLDivElement>(null),notice=useRef<HTMLDivElement>(null);
+  const controls=useRef<OrbitControlsImpl|null>(null),fitRef=useRef<SurfaceFit|null>(null);
+  const commandOwner=useRef<object|null>(null),owner={};
+  useLayoutEffect(()=>{
+    commandOwner.current=owner;
+    return()=>{if(commandOwner.current===owner)commandOwner.current=null;};
+  });
   useLayoutEffect(()=>{
     session.valid=true;active.current=session;
     return()=>{session.valid=false;if(active.current===session)active.current=null;};
@@ -83,10 +98,35 @@ export function HeadAtlasSurface({selected,regionalCourse,onPick}:HeadAtlasSurfa
   const pick=(point:Vec3)=>{
     if(session.valid&&active.current===session&&!session.lost)onPick(point);
   };
+  const cameraReady=status==='ready'||status==='restored';
+  const currentCommand=()=>commandOwner.current===owner&&session.valid&&active.current===session&&!session.lost&&cameraReady;
+  const moveCamera=(action:HeadSurfaceCameraAction)=>{
+    const orbit=controls.current;
+    if(!currentCommand()||!orbit?.enabled)return;
+    // Match a pointer interaction so an in-progress Bounds fit cannot overwrite
+    // a deliberate button movement on its next animation frame.
+    orbit.dispatchEvent({type:'start',target:orbit});
+    moveHeadSurfaceCamera(orbit,action);
+    orbit.dispatchEvent({type:'end',target:orbit});
+  };
+  const fitCamera=()=>{
+    if(currentCommand()&&fitRef.current?.selected===selected)fitRef.current.fit();
+  };
+  const cameraActions:Array<[HeadSurfaceCameraAction,string]>=[['rotate-left','Rotate left'],['rotate-right','Rotate right'],['tilt-up','Tilt up'],['tilt-down','Tilt down'],['zoom-in','Zoom in'],['zoom-out','Zoom out']];
   return <div className="head-surface-renderer" ref={view} role="group" aria-label="Native 3D surface" tabIndex={-1} aria-busy={status==='opening'}>
     <Canvas key={attempt} camera={{position:[0,250,100],up:[0,0,1],fov:40}} aria-label={`Rotatable native ${headLabel(selected.entry)} surface or locator`}>
-      <HeadSurfaceContextObserver onState={onState}/><color attach="background" args={['#0b1413']}/><ambientLight intensity={1.2}/><directionalLight position={[100,200,150]} intensity={2}/><Bounds fit clip observe margin={1.4}><Surface key={selected.entry.id} selected={selected} onPick={pick}/>{regionalCourse&&selected.entry.supplementary_geometries?.map(part=><RegionalCourse key={part.part_id} points={part.sampled_path_ras_mm} color={selected.entry.color}/>)}</Bounds><OrbitControls makeDefault enableDamping dampingFactor={0.12}/>
+      <color attach="background" args={['#0b1413']}/><ambientLight intensity={1.2}/><directionalLight position={[100,200,150]} intensity={2}/><Bounds fit clip observe margin={1.4}><HeadSurfaceSceneControls onState={onState} selected={selected} fitRef={fitRef}/><Surface key={selected.entry.id} selected={selected} onPick={pick}/>{regionalCourse&&selected.entry.supplementary_geometries?.map(part=><RegionalCourse key={part.part_id} points={part.sampled_path_ras_mm} color={selected.entry.color}/>)}</Bounds><OrbitControls ref={controls} makeDefault enableDamping dampingFactor={0.12}/>
     </Canvas>
+    <details className="head-surface-navigation" onKeyDown={event=>{
+      if(event.key==='Escape'&&event.currentTarget.open){event.preventDefault();event.stopPropagation();event.currentTarget.open=false;event.currentTarget.querySelector('summary')?.focus();}
+    }}>
+      <summary>View controls</summary>
+      <div role="group" aria-label="3D surface view controls">
+        {cameraActions.map(([action,label])=><button key={action} type="button" disabled={!cameraReady} onClick={()=>moveCamera(action)}>{label}</button>)}
+        <button type="button" disabled={!cameraReady} onClick={fitCamera}>Fit selected structure</button>
+      </div>
+      <p>Rotate and zoom the view without dragging. These controls do not change the selected anatomy or scan position.</p>
+    </details>
     {status==='lost'&&<div ref={notice} className="head-surface-interruption" role="alert"><h3>3D scan view interrupted</h3><p>Your scan and slice controls are still available. The browser may restore the 3D view automatically, or you can retry it.</p><button type="button" onClick={retry}>Retry 3D scan view</button></div>}
     {status==='restored'&&<span className="head-slice-help" role="status">3D scan view restored.</span>}
   </div>;

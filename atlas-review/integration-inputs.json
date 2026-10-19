@@ -1,6 +1,6 @@
 {
   "sourceCommit": "f5052a1906bf9b87e5235bda57d367b1103729db",
-  "sha256": "5c559b77c0b50003b0bd1d16464388daff53bbafd0ee9779566374b3163f830c",
+  "sha256": "8f8c9c87b7fc8642bcdf57304820b86cd8c814bfa6394ef8b277e143351d1896",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -6291,6 +6291,10 @@
       "sha256": "3edd00db77c3259e85f08243fec6a2be8ac9eb40655782fd8464a6e1aa404a3a"
     },
     {
+      "path": "components/head-surface.css",
+      "sha256": "04df3e34770176551e0c2bc71849d94939df9db5320404ecba17d997f14b346b"
+    },
+    {
       "path": "components/head-tour-playback.css",
       "sha256": "52b498aac446590e30ac1ccf1c70684a1136908a3f51592ec124a8ba39c2852b"
     },
@@ -6337,6 +6341,14 @@
     {
       "path": "components/HeadAtlasReferenceTeaching.tsx",
       "sha256": "a61555e408c325cf19b0cb97d995d6cd6637738343b77811168d9670e3fd5a94"
+    },
+    {
+      "path": "components/HeadAtlasSurface.tsx",
+      "sha256": "67852e3d202dd6739b1269dcb2495c4bb8ef34d6032349dbbf7da2d2b3cdd8d7"
+    },
+    {
+      "path": "components/HeadAtlasSurfaceLoader.tsx",
+      "sha256": "8bd66074b230405df323883d73df65e23ce877c3e67d9067fce1a3373527ca4d"
     },
     {
       "path": "components/HeadAtlasTeaching.tsx",
@@ -6595,6 +6607,14 @@
       "sha256": "a17acf9b77a2e147bf60e219bfcba2d9f35b66570c075f71ec719544cebd79a1"
     },
     {
+      "path": "lib/head-surface-camera.ts",
+      "sha256": "691043192e491cee92e05784a712cb4dea1fabfe4513ad2a37c451de74fc872a"
+    },
+    {
+      "path": "lib/head-surface-context.ts",
+      "sha256": "b3de20e3ef76d8fd0277e4199c12a5d21ac827a0915721869168bbedfb47966d"
+    },
+    {
       "path": "lib/head-teaching-review-api.ts",
       "sha256": "e22d5cb4c77ef0117ec60d3bd17ca0b85dc005db1a4669e5c4d95e8c56c3f3a5"
     },
@@ -6648,7 +6668,7 @@
     },
     {
       "path": "scripts/bind-clinical-review.mjs",
-      "sha256": "4e2f8a07852a0ef08cc75b1bd70bebd1b342c3919e21ed80d3d27754bd715b01"
+      "sha256": "52310940637251e688ff714d690a81f741e45bd0af5580dfdfbc9404f288dd00"
     },
     {
       "path": "scripts/build-clinical-review-viewer.mjs",
