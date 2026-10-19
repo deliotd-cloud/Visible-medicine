@@ -94,6 +94,11 @@ test('shows explicit states and provenance without decision controls or unsuppor
   assert.equal((html.match(/<details/g) ?? []).length, view.targets.length + 3);
   assert.match(html, /Snapshot provenance/);
   assert.match(html, /Inventory snapshot SHA-256/);
+  assert.match(html, /The exact snapshot and its imported source dependencies are checked here/);
+  assert.match(html, /Source-only metadata inputs are verified by the separate source-inventory checker/);
+  assert.match(html, /original mesh bytes are not revalidated by this page/);
+  assert.doesNotMatch(html, /\b(?:141|142) imported source dependencies|\b(?:25|26) source-only metadata inputs/,
+    'provenance copy must not drift from independently verified dependency counts');
   assert.equal((html.match(/<button/g) ?? []).length, 1);
   assert.equal((html.match(/href=/g) ?? []).length, 1);
   assert.doesNotMatch(html, /<input|<textarea|method="post"|\/nerve-model/);

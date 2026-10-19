@@ -35,7 +35,7 @@ test('prior complete509b pin is immutable but cannot admit the new four-module a
 });
 
 test('register63 changes delivered source metadata, not the71 requirements, eight ideas or clinical gates',()=>{
- const current=validateChecklist(JSON.parse(read('docs/completion-checklist.json'))),pin=validateCurrentAtlasDelivery();
+ const current=validateChecklist(JSON.parse(frozen('completion-checklist-register63-before-head-entry.json.raw','1c5bcb85817eb1ae7b2b659a1468f21b509aedbb7abf6c4d5958c41f6a096edd'))),pin=JSON.parse(frozen('current-atlas-delivery-register63-before-head-entry.json.raw','8bc399f1d36a3ac23c9dd9aed32df73a8e64f2bb13ff3eaebe83da9c5e55db6f'));
  assert.equal(beforeRegister.revision,62);assert.equal(current.revision,63);
  for(const key of ['items','roots','rules','statusDefinitions'])assert.deepEqual(current[key],beforeRegister[key],key);
  assert.equal(current.items.length,71);assert.equal(current.items.filter(i=>i.scope==='optional').length,8);
@@ -49,4 +49,33 @@ test('register63 changes delivered source metadata, not the71 requirements, eigh
  for(const key of ['rootDraftPlacements','rootPendingPlacements','rootGeneratedIdentificationPlacements'])
   assert.equal(current.pendingAtlasSource[key],beforeRegister.pendingAtlasSource[key]);
  assert.match(current.pendingAtlasSource.note,/no approval, scan or registration/i);
+});
+
+// register64 continuation and original-source preservation guard
+test('original three-case orbital transition remains byte-exact apart from the historical register63 binding',()=>{
+ const sourceText=read('tests/orbital-mri-delivery-transition.test.mjs').toString('utf8');
+ const boundary='\n// register64 continuation and original-source preservation guard';assert.equal(sourceText.split(boundary).length,2);
+ let restored=sourceText.split(boundary)[0];
+ const replacement=" const current=validateChecklist(JSON.parse(frozen('completion-checklist-register63-before-head-entry.json.raw','1c5bcb85817eb1ae7b2b659a1468f21b509aedbb7abf6c4d5958c41f6a096edd'))),pin=JSON.parse(frozen('current-atlas-delivery-register63-before-head-entry.json.raw','8bc399f1d36a3ac23c9dd9aed32df73a8e64f2bb13ff3eaebe83da9c5e55db6f'));";
+ const original=" const current=validateChecklist(JSON.parse(read('docs/completion-checklist.json'))),pin=validateCurrentAtlasDelivery();";
+ assert.equal(restored.split(replacement).length,2);restored=restored.replace(replacement,original);
+ assert.deepEqual(Buffer.from(restored),frozen('orbital-mri-delivery-transition-before-head-entry.mjs.raw','53bdc6cd7920c9111ed7ddb77e4a1f2e2ef4969b909736c50b71e19e3251e2a3'));
+});
+
+test('current register64 continues genuine register63 without changing requirements or clinical gates',()=>{
+ const historical=validateChecklist(JSON.parse(frozen('completion-checklist-register63-before-head-entry.json.raw','1c5bcb85817eb1ae7b2b659a1468f21b509aedbb7abf6c4d5958c41f6a096edd')));
+ const historicalPin=JSON.parse(frozen('current-atlas-delivery-register63-before-head-entry.json.raw','8bc399f1d36a3ac23c9dd9aed32df73a8e64f2bb13ff3eaebe83da9c5e55db6f'));
+ const current=validateChecklist(JSON.parse(read('docs/completion-checklist.json'))),pin=validateCurrentAtlasDelivery();
+ assert.equal(historical.revision,63);assert.equal(historicalPin.source,source);assert.equal(historicalPin.sourceTree,tree);
+ assert.ok(current.revision>=64);assert.equal(current.changeLog[0].revision,current.revision);
+ const at63=current.changeLog.findIndex(row=>row.revision===63);assert.ok(at63>=0);
+ assert.deepEqual(current.changeLog.slice(at63),historical.changeLog);
+ for(const key of ['items','roots','rules','statusDefinitions','pendingAtlasSource'])assert.deepEqual(current[key],historical[key],key);
+ assert.equal(current.items.length,71);assert.equal(current.items.filter(i=>i.scope==='optional').length,8);
+ const withoutReview=b=>Object.fromEntries(Object.entries(b).filter(([k])=>k!=='reviewIntegration'));
+ assert.deepEqual(withoutReview(current.baseline),withoutReview(historical.baseline));
+ assert.equal(current.baseline.atlasCommit,pin.source);assert.equal(current.baseline.atlasTree,pin.sourceTree);
+ assert.equal(current.baseline.reviewIntegration,pin.reviewIntegration);assert.equal(current.baseline.reviewSourceFiles,pin.reviewSourceFiles);
+ assert.equal(current.baseline.privateClinicalDecisionCounts,null);assert.equal(current.baseline.publicReleaseApproval,null);
+ assert.notEqual(pin.reviewIntegration,historicalPin.reviewIntegration);
 });

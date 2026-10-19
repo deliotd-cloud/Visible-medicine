@@ -75,7 +75,7 @@ export function AnatomyCoverageReview({ view, region }: { view: CoverageView; re
     <details className="anatomy-coverage-review-snapshot anatomy-coverage-review-details">
       <summary>Snapshot provenance</summary>
       <p>Atlas source revision: <code>{view.sourceRevision}</code>. Inventory snapshot SHA-256: <code>{view.inventoryRevision}</code>. This read-only view contains no clinical decisions.</p>
-      <p>The exact snapshot and 141 imported source dependencies are checked here. The 25 source-only metadata inputs are verified by the separate source-inventory checker; original mesh bytes are not revalidated by this page.</p>
+      <p>The exact snapshot and its imported source dependencies are checked here. Source-only metadata inputs are verified by the separate source-inventory checker; original mesh bytes are not revalidated by this page.</p>
     </details>
   </main>;
 }

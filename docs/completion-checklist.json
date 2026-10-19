@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 63,
+  "revision": 64,
   "title": "Visible Medicine completion checklist",
   "updatedAt": "2026-10-19",
   "purpose": "Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.",
@@ -25,7 +25,7 @@
     "atlasTree": "36381d525f7c6886743bcec00fcee96931d65c58",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "websiteWorkingTree": "Intentionally dirty; complete source composition is separately hash-verified in local recovery.",
-    "reviewIntegration": "9d136a1b582ae10bbf35292ccf661ff049dedbdf78993a1fa2b542f68e6a49b2",
+    "reviewIntegration": "8bfe804162a38faf384cfb3a2722267e156e0ebe60b12870c7a099c11551ff81",
     "reviewSourceFiles": 1538,
     "rootRepresentations": 1104,
     "rootTopicPlacements": 9936,
@@ -1185,6 +1185,11 @@
     }
   ],
   "changeLog": [
+    {
+      "date": "2026-10-19",
+      "revision": 64,
+      "change": "Reproduced3D head-region picker client navigation leaving expected iframe about:blank, while direct document load works. Explicit valid3D head Go now uses its allowlisted document destination; selection alone, same/unknown values and every other modality retain prior behavior. Existing blank-only recovery, live model state, access and clinical gates stay unchanged. Coverage removes hard-coded dependency counts from explanatory copy while exact142/26 checks remain. Normal Review rebind/viewer verification updates exact currentdelivery metadata; original63 theorem remains immutable with separate currentregister continuation. All71 requirements/eight optional ideas and statuses remain exact. No anatomy, masks, scans, geometry, dependency, fee, access or approval change. Focused native/types/build and browser acceptance are independent."
+    },
     {
       "date": "2026-10-19",
       "revision": 63,

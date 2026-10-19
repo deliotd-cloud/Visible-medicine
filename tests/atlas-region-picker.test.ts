@@ -6,10 +6,12 @@ import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ts from 'typescript';
 import { atlasRegionLinks } from '../lib/atlas-navigation.ts';
+import type { AtlasModalityId } from '../lib/atlas-navigation.ts';
 
 const require = createRequire(import.meta.url);
 let pathname = '/atlas/3d';
 const destinations: string[] = [];
+const documentDestinations: string[] = [];
 
 function compile(path: string, mocks: Record<string, unknown>) {
   const source = readFileSync(new URL(`../${path}`, import.meta.url), 'utf8');
@@ -18,8 +20,9 @@ function compile(path: string, mocks: Record<string, unknown>) {
     target: ts.ScriptTarget.ES2022, esModuleInterop: true,
   } }).outputText;
   const loaded = { exports: {} as Record<string, unknown> };
-  new Function('require', 'module', 'exports', code)(
+  new Function('require', 'module', 'exports', 'window', code)(
     (name: string) => name in mocks ? mocks[name] : require(name), loaded, loaded.exports,
+    { location: { assign: (destination: string) => documentDestinations.push(destination) } },
   );
   return loaded.exports;
 }
@@ -31,7 +34,7 @@ const navigation = {
 const { AtlasRegionNavigation } = compile('components/AtlasRegionNavigation.tsx', {
   'next/navigation': navigation,
   '../lib/atlas-navigation': require('../lib/atlas-navigation.ts'),
-}) as { AtlasRegionNavigation: (props: { modality: '3d' | 'ct'; selected: string }) => React.ReactElement<{ children: React.ReactNode }> };
+}) as { AtlasRegionNavigation: (props: { modality: AtlasModalityId; selected: string }) => React.ReactElement<{ children: React.ReactNode }> };
 
 type SubmitEvent = { preventDefault: () => void; currentTarget: { elements: { namedItem: (name: string) => { value: string } | null } } };
 type RegionForm = React.ReactElement<{ children: React.ReactNode; onSubmit: (event: SubmitEvent) => void }>;
@@ -63,6 +66,7 @@ function submit(form: RegionForm, value: string | null) {
 
 test('native region picker keeps every ordered 3D destination and navigates only after submit', () => {
   destinations.length = 0;
+  documentDestinations.length = 0;
   const regions = atlasRegionLinks('3d');
   assert.equal(regions[0].id, 'whole-body');
   assert.equal(regions.length, 15);
@@ -77,6 +81,7 @@ test('native region picker keeps every ordered 3D destination and navigates only
     assert.equal(button.props.type, 'submit');
     assert.equal(button.props.children, 'Go');
     assert.equal(destinations.length, 0);
+    assert.equal(documentDestinations.length, 0);
     const html = renderToStaticMarkup(tree);
     assert.match(html, /<nav class="atlas-region-navigation" aria-label="3D anatomical regions">/);
     assert.match(html, /<form class="atlas-region-form"><label class="atlas-region-picker"><span>Region<\/span><select/);
@@ -87,7 +92,13 @@ test('native region picker keeps every ordered 3D destination and navigates only
   const start = picker(AtlasRegionNavigation({ modality: '3d', selected: regions[0].id })).form;
   for (const destination of regions.slice(1)) {
     submit(start, destination.id);
-    assert.equal(destinations.pop(), destination.href);
+    if (destination.id === 'head-neck') {
+      assert.equal(documentDestinations.pop(), destination.href);
+      assert.equal(destinations.length, 0, 'head entry does not use the client router');
+    } else {
+      assert.equal(destinations.pop(), destination.href);
+      assert.equal(documentDestinations.length, 0, 'other destinations retain client navigation');
+    }
   }
   const next = picker(AtlasRegionNavigation({ modality: '3d', selected: regions[1].id })).form;
   submit(next, regions[0].id);
@@ -96,6 +107,29 @@ test('native region picker keeps every ordered 3D destination and navigates only
   submit(start, 'not-a-region');
   submit(start, null);
   assert.equal(destinations.length, 0, 'same, unknown and missing selections do not navigate');
+  assert.equal(documentDestinations.length, 0);
+});
+
+test('only explicit valid3D head submission crosses the document boundary', () => {
+  destinations.length = 0;
+  documentDestinations.length = 0;
+  for (const current of atlasRegionLinks('3d').filter(region => region.id !== 'head-neck')) {
+    const { form, select } = picker(AtlasRegionNavigation({ modality: '3d', selected: current.id }));
+    assert.equal(select.props.onChange, undefined);
+    submit(form, 'head-neck');
+    assert.deepEqual(documentDestinations.splice(0), ['/atlas/head-neck-3d']);
+    assert.equal(destinations.length, 0);
+  }
+  const same = picker(AtlasRegionNavigation({ modality: '3d', selected: 'head-neck' })).form;
+  for (const value of ['head-neck', 'https://foreign.invalid', '//foreign.invalid', '/atlas/head-neck-3d', 'head-neck?unexpected=true', null]) submit(same, value);
+  assert.equal(documentDestinations.length, 0);
+  assert.equal(destinations.length, 0);
+  for (const modality of ['ct', 'mri', 'ultrasound', 'x-ray'] as const) {
+    const form = picker(AtlasRegionNavigation({ modality, selected: 'thorax' })).form;
+    submit(form, 'head-neck');
+    assert.equal(destinations.pop(), atlasRegionLinks(modality).find(region => region.id === 'head-neck')!.href);
+    assert.equal(documentDestinations.length, 0, 'imaging routes retain their own navigation');
+  }
 });
 
 test('planned imaging choices remain identified, while navigation stays modality scoped', () => {

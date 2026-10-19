@@ -263,3 +263,7 @@ tests/fixtures/current-source-checkout-representations-lacrimal.json -text
 # Exact closed pre-radial-EUS delivery51 evidence and checkout metadata.
 tests/fixtures/radial-eus-51/** -text
 tests/fixtures/current-source-checkout-representations-radial-eus.json -text
+# Exact source-only backup96c219 register63 transition evidence.
+tests/fixtures/orbital-mri-delivery-transition-before-head-entry.mjs.raw -text
+tests/fixtures/completion-checklist-register63-before-head-entry.json.raw -text
+tests/fixtures/current-atlas-delivery-register63-before-head-entry.json.raw -text

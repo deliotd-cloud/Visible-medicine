@@ -13,7 +13,15 @@ export function AtlasRegionNavigation({ modality, selected }: { modality: AtlasM
       event.preventDefault();
       const choice = event.currentTarget.elements.namedItem('atlas-region') as HTMLSelectElement | null;
       const destination = regions.find(region => region.id === choice?.value);
-      if (destination && destination.id !== selected) router.push(destination.href);
+      if (!destination || destination.id === selected) return;
+      // Mount the head model in a fresh document. A client-route transition can
+      // leave this embedded viewer at its initial empty about:blank document.
+      // Only the explicit Go action navigates; never remount a live model here.
+      if (modality === '3d' && destination.id === 'head-neck') {
+        window.location.assign(destination.href);
+        return;
+      }
+      router.push(destination.href);
     }}>
     <label className="atlas-region-picker">
       <span>Region</span>

@@ -1,6 +1,6 @@
 # Visible Medicine completion checklist
 
-Revision 63 · Updated 2026-10-19
+Revision 64 · Updated 2026-10-19
 
 Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
 
@@ -8,7 +8,7 @@ This is the persistent project checklist, not a claim that the whole website is 
 
 ## Current baseline
 
-Atlas source: `f5052a1906bf9b87e5235bda57d367b1103729db`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `9d136a1b582ae10bbf35292ccf661ff049dedbdf78993a1fa2b542f68e6a49b2`.
+Atlas source: `f5052a1906bf9b87e5235bda57d367b1103729db`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `8bfe804162a38faf384cfb3a2722267e156e0ebe60b12870c7a099c11551ff81`.
 
 1104 root-body representations have 9936 topic placements: 9334 editorial drafts, 563 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
 
@@ -441,6 +441,7 @@ I can inventory sources and gaps, research acceptable references/assets, write r
 
 ## Change log
 
+- 2026-10-19 · revision 64: Reproduced3D head-region picker client navigation leaving expected iframe about:blank, while direct document load works. Explicit valid3D head Go now uses its allowlisted document destination; selection alone, same/unknown values and every other modality retain prior behavior. Existing blank-only recovery, live model state, access and clinical gates stay unchanged. Coverage removes hard-coded dependency counts from explanatory copy while exact142/26 checks remain. Normal Review rebind/viewer verification updates exact currentdelivery metadata; original63 theorem remains immutable with separate currentregister continuation. All71 requirements/eight optional ideas and statuses remain exact. No anatomy, masks, scans, geometry, dependency, fee, access or approval change. Focused native/types/build and browser acceptance are independent.
 - 2026-10-19 · revision 63: Coherently import sourcef505/Review9d136a1b across four normal runtime exports and1538 Review source files. Four existing check-ligament MRI drafts gain original specialized-study evidence and limits (PMID9537133);9334draft/563pending/39generated totals and137model payloads remain unchanged. Correct the stale checklist Review file count from1531 to actual1538. All71 requirements/eight optional ideas, their statuses, acceptance, evidence, owner gates and private decision nulls remain exact. Previous509b delivery pin and test retained byte-exact; current pin must verify all12 normal delivery documents and unchanged model scope. Coverage metadata regenerated at the genuine f505 source; exact leaf differences are revision/readback provenance only. Normal Review rebind and viewer verification retain unchanged counts, holds and clinical limits; the initial7414 intermediate binding is retained in local recovery. No acquired images, masks, geometry, access, desktop PACS, clinical/spatial approval or public deployment change. Website native/type/build/browser acceptance and whole-regression work remain separate gates.
 - 2026-10-19 · revision 62: Normal import of clean Atlas509b01da with sticky desktop Review worksheet controls and readable system labels. No model, anatomy or teaching change; all71 requirements/eight optional ideas and statuses remain. Original feature assertions and old source evidence preserved; existing approval records are not migrated or invented.
 - 2026-10-19 · revision 61: Normal import of clean Atlas6a636fba with synchronized Review worksheet URLs and primary-region labels. No model, anatomy or teaching change; all71 requirements/eight optional ideas and statuses remain. Original feature assertions and old source evidence preserved; existing approval records are not migrated or invented.
