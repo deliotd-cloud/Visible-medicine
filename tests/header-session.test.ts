@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ts from 'typescript';
+import { isPublicFocusPath, shouldFocusPublicRoute } from '../lib/public-route-focus.ts';
 
 const require = createRequire(import.meta.url);
 let pathname = '/';
@@ -29,6 +30,7 @@ const { SiteHeader } = compile('components/SiteHeader.tsx', {
 const { SiteFrame } = compile('components/SiteFrame.tsx', {
   'next/link': Link, 'next/navigation': navigation,
   './SiteHeader': { SiteHeader }, './SiteFooter': { SiteFooter: () => null },
+  '../lib/public-route-focus': { isPublicFocusPath, shouldFocusPublicRoute },
   './workspace-navigation.css': {},
 }) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean }>> };
 type TreeNode = React.ReactElement<{ children: TreeNode[]; signedIn?: boolean }>;

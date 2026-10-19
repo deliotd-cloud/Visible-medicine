@@ -5,6 +5,7 @@ import { createRequire } from "node:module";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import ts from "typescript";
+import { isPublicFocusPath, shouldFocusPublicRoute } from "../lib/public-route-focus.ts";
 
 const require = createRequire(import.meta.url);
 let pathname = "/workspace";
@@ -26,6 +27,7 @@ const navMock = { usePathname: () => pathname };
 const { SiteFrame } = compile("components/SiteFrame.tsx", {
   "next/link": Link, "next/navigation": navMock, "./SiteHeader": { SiteHeader: () => null },
   "./SiteFooter": { SiteFooter: () => null }, "./workspace-navigation.css": {},
+  "../lib/public-route-focus": { isPublicFocusPath, shouldFocusPublicRoute },
 }) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean }>> };
 const { StudioNavigation } = compile("components/StudioNavigation.tsx", {
   "next/link": Link, "next/navigation": navMock,

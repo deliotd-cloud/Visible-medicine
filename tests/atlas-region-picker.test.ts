@@ -7,6 +7,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import ts from 'typescript';
 import { atlasRegionLinks } from '../lib/atlas-navigation.ts';
 import type { AtlasModalityId } from '../lib/atlas-navigation.ts';
+import { isPublicFocusPath, shouldFocusPublicRoute } from '../lib/public-route-focus.ts';
 
 const require = createRequire(import.meta.url);
 let pathname = '/atlas/3d';
@@ -309,6 +310,7 @@ test('every 3D wrapper has one persistent intended-use link; other Atlas pages k
     'next/link': ({ children, ...props }: React.PropsWithChildren<React.AnchorHTMLAttributes<HTMLAnchorElement>>) => React.createElement('a', props, children),
     './SiteHeader': { SiteHeader: () => null },
     './SiteFooter': { SiteFooter: () => null },
+    '../lib/public-route-focus': { isPublicFocusPath, shouldFocusPublicRoute },
     './workspace-navigation.css': {},
   }) as { SiteFrame: React.ComponentType<React.PropsWithChildren<{ signedIn: boolean }>> };
   pathname = '/atlas/3d';

@@ -5,6 +5,7 @@ import {createRequire} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import ts from 'typescript';
+import {isPublicFocusPath,shouldFocusPublicRoute} from '../lib/public-route-focus.ts';
 
 const require=createRequire(import.meta.url);
 const source=readFileSync(new URL('../components/SiteFrame.tsx',import.meta.url),'utf8');
@@ -12,7 +13,8 @@ const code=ts.transpileModule(source,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,m
 const module={exports:{}};
 const imports={'next/link':({children,...props})=>React.createElement('a',props,children),
   'next/navigation':{usePathname:()=>'/workspace'},'./SiteHeader':{SiteHeader:()=>null},
-  './SiteFooter':{SiteFooter:()=>null},'./workspace-navigation.css':{}};
+  './SiteFooter':{SiteFooter:()=>null},'./workspace-navigation.css':{},
+  '../lib/public-route-focus':{isPublicFocusPath,shouldFocusPublicRoute}};
 new Function('require','module','exports',code)(name=>Object.hasOwn(imports,name)?imports[name]:require(name),module,module.exports);
 function find(node,predicate){
   if(!node||typeof node!=='object')return null;

@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T19:31:46.744Z",
-  "sourceManifestSha256": "055ec7b902cbf3a07077ee08055a50e6fe1474713861b8e650222dac045c1ff3",
-  "parent": "d13b8c5db8e71655f6505a4dcac78c6c56b50983",
+  "at": "2026-10-19T20:35:30.560Z",
+  "sourceManifestSha256": "db8f36714bd065f751bb9d1db59a0d12fe7bcfa9feb20ce9c31e8698bf116689",
+  "parent": "95043e651e1164ce23f1ed4ef77bd2665fce7194",
   "atlasSource": "f5097af8493701d64a8e2a2b5797df380f3b348a",
   "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
   "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
@@ -27,6 +27,41 @@
       "path": "AGENTS.md",
       "bytes": 1647,
       "sha256": "3b89a77b3731cf0d43fa20b5dad1725d8d0796d3cf858b30038af27efeef9561"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 10691,
+      "sha256": "fe0a143ef9b37ea072888c6f12ef696cf9fdcfe260cd0e2f1bca09ab5e9003f5"
+    },
+    {
+      "path": "LICENSES/clinical-review/react-three-fiber-LICENSE.txt",
+      "bytes": 1072,
+      "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a"
+    },
+    {
+      "path": "LICENSES/geist-mono-OFL.txt",
+      "bytes": 4387,
+      "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
+    },
+    {
+      "path": "LICENSES/head-atlas-drei-LICENSE.txt",
+      "bytes": 1069,
+      "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8"
+    },
+    {
+      "path": "LICENSES/head-atlas-noble-hashes-LICENSE.txt",
+      "bytes": 1109,
+      "sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec"
+    },
+    {
+      "path": "LICENSES/head-atlas-three-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13986,
+      "sha256": "14b7f46e3dbd411dc518588f57095ba57b8b833715194a93628666d6422d9d78"
     },
     {
       "path": "app/acceptable-use/page.tsx",
@@ -424,14 +459,14 @@
       "sha256": "9c4e72d0d4623f03ceb4e98767150bc103c77136833558282b618ed3b2671264"
     },
     {
-      "path": "app/atlas/[slug]/page.tsx",
-      "bytes": 3789,
-      "sha256": "2391e6f7ac7553c1f862295ceec9b85dc4f814bc001d0bb2c8e1506d5d4a0326"
-    },
-    {
       "path": "app/atlas/3d/page.tsx",
       "bytes": 4840,
       "sha256": "b3ac1b8724b30e147679dc0aa6a6ab5f381adf8212f88da2e8a8aced21efc442"
+    },
+    {
+      "path": "app/atlas/[slug]/page.tsx",
+      "bytes": 3789,
+      "sha256": "2391e6f7ac7553c1f862295ceec9b85dc4f814bc001d0bb2c8e1506d5d4a0326"
     },
     {
       "path": "app/atlas/abdomen-3d/page.tsx",
@@ -947,6 +982,11 @@
       "path": "app/workspace/review-candidates/page.tsx",
       "bytes": 1751,
       "sha256": "17dd98219a50612eb73fb3ab91b34139cb99402f2499aaf5ac0663033f4e7d15"
+    },
+    {
+      "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 350786,
+      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
     },
     {
       "path": "atlas-review/app/abdominal-wall-study.tsx",
@@ -8389,11 +8429,6 @@
       "sha256": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1"
     },
     {
-      "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 350786,
-      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
-    },
-    {
       "path": "atlas-review/manifest.json",
       "bytes": 374766,
       "sha256": "136369307df387212583816d36ef76fc7fd28ddf49275fd869e032598c0e630c"
@@ -8669,29 +8704,9 @@
       "sha256": "dba5681f6662a7a72194383d875e2b2bb5922b37f79611fe05e5fa8b9844bc85"
     },
     {
-      "path": "components/anatomy-coverage-review.css",
-      "bytes": 4430,
-      "sha256": "0d06c28a09fda46aa8487ef8fae9358744de25ac5a225d298fbb17d9c964f38b"
-    },
-    {
       "path": "components/AnatomyCoverageReview.tsx",
       "bytes": 5788,
       "sha256": "ca3d86006cf52fee206670f7f33885a46c9f422fd2eda45adef8f8a24b219266"
-    },
-    {
-      "path": "components/atlas-runtime-frame.css",
-      "bytes": 1893,
-      "sha256": "f4ba294204a84b573b41baf9d64219a3b7814e8833b9ba4572003637ae62d1c8"
-    },
-    {
-      "path": "components/atlas-runtime-state.ts",
-      "bytes": 1664,
-      "sha256": "23e5004323f8d432c3b451dec0ed4b28ab46c620eec3c8ef59d2194a0ec8a8e5"
-    },
-    {
-      "path": "components/atlas-workspace-navigation.css",
-      "bytes": 2428,
-      "sha256": "48569f18bc743ff1abb17d11cca98f912fae25bc4329a70e9cc03450ce14d293"
     },
     {
       "path": "components/AtlasExplorer.tsx",
@@ -8734,24 +8749,9 @@
       "sha256": "b6065152d812f48701868d95477c48d3272eb0c5d5015f55753388d42d4a3ae0"
     },
     {
-      "path": "components/cinematic-film.module.css",
-      "bytes": 4238,
-      "sha256": "301ca4e826d51d00bea749934ca9446b01a056944f8f53734488cd6482328e43"
-    },
-    {
       "path": "components/CinematicFilm.tsx",
       "bytes": 8795,
       "sha256": "321e565fb3ed2c42b59f1d0ce78a7e53b3cb3f74bee028c92f57bbd1f0fc6cba"
-    },
-    {
-      "path": "components/clinical-review-areas.css",
-      "bytes": 1080,
-      "sha256": "3cdc97bf81f0527914299ca4ab9dfb108450e355f83b87673861db6c6618ce0a"
-    },
-    {
-      "path": "components/clinical-review-inbox.css",
-      "bytes": 7701,
-      "sha256": "8f4521e519198e5b2e27f37f1292dbfebe7f6b5822a05375912cffd66416317d"
     },
     {
       "path": "components/ClinicalReviewAreas.tsx",
@@ -8794,14 +8794,14 @@
       "sha256": "3d2a9f6409d03d18e19b352914233f3a9c3cb55ae286243006882c47b9b4ddf5"
     },
     {
-      "path": "components/EmbeddedLaunchRuntime.tsx",
-      "bytes": 2602,
-      "sha256": "afe64f8c5ea111f3f7815a2b0315411af50abe0f6c16853bfcbffbcacf94555c"
-    },
-    {
       "path": "components/EmbedOriginManager.tsx",
       "bytes": 2199,
       "sha256": "3c2986641132ab5da1247ae541439b7a54b6d5489301bb4b7f1a1b01186f47f8"
+    },
+    {
+      "path": "components/EmbeddedLaunchRuntime.tsx",
+      "bytes": 2602,
+      "sha256": "afe64f8c5ea111f3f7815a2b0315411af50abe0f6c16853bfcbffbcacf94555c"
     },
     {
       "path": "components/FractureCaseResponse.tsx",
@@ -8814,44 +8814,9 @@
       "sha256": "35f309cb2244a4fbd64dd498d9111c4d09cdd0a822d5807e8856b0f72816cb62"
     },
     {
-      "path": "components/frozen-candidate-comparison.css",
-      "bytes": 2606,
-      "sha256": "7d49bf71013887c32ce8e92c6e517cb48ad454ea67d611c1b6621254b704f26d"
-    },
-    {
       "path": "components/FrozenCandidateComparison.tsx",
       "bytes": 17294,
       "sha256": "2eda67c4cc36740d6bd61090c592e529103a4ae23e69f641e164ec7dee6ac349"
-    },
-    {
-      "path": "components/head-atlas.css",
-      "bytes": 24960,
-      "sha256": "3edd00db77c3259e85f08243fec6a2be8ac9eb40655782fd8464a6e1aa404a3a"
-    },
-    {
-      "path": "components/head-learning-bookmark.css",
-      "bytes": 2231,
-      "sha256": "13c2c59ca3cc426c537aea755a71dcbed8082f251501e69e022522ac5c1db3bb"
-    },
-    {
-      "path": "components/head-structure-learning.css",
-      "bytes": 357,
-      "sha256": "0e28041ea844b3c2922b02cf0dc1d75ac3a46d84f69c707ae97a16c5782e9c90"
-    },
-    {
-      "path": "components/head-surface.css",
-      "bytes": 1756,
-      "sha256": "04df3e34770176551e0c2bc71849d94939df9db5320404ecba17d997f14b346b"
-    },
-    {
-      "path": "components/head-teaching-review-notes.css",
-      "bytes": 2301,
-      "sha256": "65db1d2b8babaf15cea74be8f9de0841912ef0394d0e1830a08b5681fc869f49"
-    },
-    {
-      "path": "components/head-tour-playback.css",
-      "bytes": 768,
-      "sha256": "52b498aac446590e30ac1ccf1c70684a1136908a3f51592ec124a8ba39c2852b"
     },
     {
       "path": "components/HeadAnatomyCheck.tsx",
@@ -9144,11 +9109,6 @@
       "sha256": "3aab21a01666c315abae738933966083f09f167e8861e86ce8e6b5c3f6d69034"
     },
     {
-      "path": "components/imaging-atlas-shell.css",
-      "bytes": 9070,
-      "sha256": "8fdc96de381e39ea6669fd97dc04cadd445f7cd85fc02952adf95d7b00fcc970"
-    },
-    {
       "path": "components/ImagingAtlasPage.tsx",
       "bytes": 2361,
       "sha256": "b0f439fbee8ee5acb8bbc2659a69427d240253d8124c9904208d083ce92fe059"
@@ -9174,11 +9134,6 @@
       "sha256": "8ce0f2fca08acaff635182cd27764615471711a2a7fb9137846ee889234e138c"
     },
     {
-      "path": "components/learner-portfolio-navigation.css",
-      "bytes": 481,
-      "sha256": "24e75d974d9839329ab8539c69e01c42e080664d75be24b64e04189955e6c896"
-    },
-    {
       "path": "components/LearnerOnboardingForm.tsx",
       "bytes": 5323,
       "sha256": "c28dd5dbcab9333f9a1f1c4efa32c266f26919e15b065bcea05d6e9ec8c342fb"
@@ -9189,19 +9144,9 @@
       "sha256": "31a2aef9ddf4454dd5a49c74c631b1fd40ab4ba24bca7328d5c1c8a3dd7aa348"
     },
     {
-      "path": "components/learning-resource-status.css",
-      "bytes": 1629,
-      "sha256": "7cb7a7a0a15b30bccb52ec7ed01b43e68515c1bc6ea98e5de0afba84ebbcd649"
-    },
-    {
       "path": "components/LearningResourceStatus.ts",
       "bytes": 1690,
       "sha256": "2a69bb9d5ae2822b301073f232210b8bbfbdc1549b4b5422fff24a8723ba69fa"
-    },
-    {
-      "path": "components/lecture-editor.css",
-      "bytes": 14418,
-      "sha256": "95e83298a41029cc2c288653b495ceeeab812edee022a77aef328b0f701edab0"
     },
     {
       "path": "components/LectureEditor.tsx",
@@ -9249,11 +9194,6 @@
       "sha256": "4eee1234a301e5011b2cbfd0c5f3d82d6c47e1a5ab46938811bdfe8166aaa857"
     },
     {
-      "path": "components/plexus-review.css",
-      "bytes": 4301,
-      "sha256": "c208b9a3ba12259a33bce68693397c333c67882487be1c524a3b7cff91642e70"
-    },
-    {
       "path": "components/PlexusReviewWorksheet.tsx",
       "bytes": 24547,
       "sha256": "f83b819e549abda67c87d636471d15936ac86e7e205e2d72ec40fd5b09f12651"
@@ -9262,31 +9202,6 @@
       "path": "components/PolicyShell.tsx",
       "bytes": 906,
       "sha256": "a8e8d08efb9ad11e7206f99373fcd2df40606403e93a570f00f4fbb9cf4b479e"
-    },
-    {
-      "path": "components/regional-guide-review-notes.css",
-      "bytes": 2024,
-      "sha256": "47b17ef24ef1fe06c030989dc2f605592c91c52d35f48cec183044ba9de4253e"
-    },
-    {
-      "path": "components/regional-learning-catalogue.css",
-      "bytes": 3451,
-      "sha256": "c8cf97be1330e278b076d44f5ce61ece2f6cfa661272df866789419b574d03c3"
-    },
-    {
-      "path": "components/regional-mri-review.css",
-      "bytes": 8618,
-      "sha256": "aec548b98a8e5b421c8e28aa2ac04dfce2bcd8dc403b2b61f9eb73dd24e8d903"
-    },
-    {
-      "path": "components/regional-reference-review-catalogue.css",
-      "bytes": 4125,
-      "sha256": "de603e02395831cc3218e3b256b97edd1c3f5489a611772b258dfdba90466b59"
-    },
-    {
-      "path": "components/regional-reference-review-notes.css",
-      "bytes": 2064,
-      "sha256": "377650204f3af06b60b67deb9953c2e74c987cb32cf530538ea26e73812ffbe2"
     },
     {
       "path": "components/RegionalGuideReviewNotes.tsx",
@@ -9344,19 +9259,9 @@
       "sha256": "23ef7bc40dad098911d188253b23361a69f8dace2ce63db88b957f6ed71e507a"
     },
     {
-      "path": "components/release-content-outline.css",
-      "bytes": 992,
-      "sha256": "ad951348d9d42dd1aaa1b464ad84e24caa5754440c4c731a22b553a6b341bcfd"
-    },
-    {
       "path": "components/ReleaseContentOutline.tsx",
       "bytes": 1618,
       "sha256": "3b571473bee642bd915fc8190708d8d60bd0db47554231810869b92c4aa5ed83"
-    },
-    {
-      "path": "components/review-ui-variants.css",
-      "bytes": 1524,
-      "sha256": "bf42eda18eed6d388e6f3204cab87df01270628f32e8e1e0cc7896e651a73ee7"
     },
     {
       "path": "components/SiteFooter.tsx",
@@ -9365,8 +9270,8 @@
     },
     {
       "path": "components/SiteFrame.tsx",
-      "bytes": 7013,
-      "sha256": "27420fa6469949444c36f0e7808983321e9b2cab10661d9c06742b52ffc82c5a"
+      "bytes": 11251,
+      "sha256": "a1d088003c532d60313dedc7475c9eb0420b0fa9735e27ecbfcfcf07cd98e913"
     },
     {
       "path": "components/SiteHeader.tsx",
@@ -9377,16 +9282,6 @@
       "path": "components/SplashScreen.tsx",
       "bytes": 5120,
       "sha256": "2d7f6f8243826954906792121c921f6e967ec3a6daaa21bc99d21f5af483a116"
-    },
-    {
-      "path": "components/studio-slide-preview.css",
-      "bytes": 4546,
-      "sha256": "41036d34a446ba4a125d0ab546c519cd77cbf6223d524fa5ff4bb497a4cdba50"
-    },
-    {
-      "path": "components/studio-workspace.css",
-      "bytes": 10204,
-      "sha256": "df1a14f0ef382837408a03a99d338749fb472103c2f14eb6326288a559547d30"
     },
     {
       "path": "components/StudioCourseEditor.tsx",
@@ -9419,6 +9314,161 @@
       "sha256": "35f34d3d0c1ba8b885f55a377863755f96b82754635e460d333ece32925c0ae7"
     },
     {
+      "path": "components/WorkbookCorrection.tsx",
+      "bytes": 10096,
+      "sha256": "ec66499425bffdd3d1cfa89a3eeb313dbe0cdbe63a14bda7b005f3b6a12c43df"
+    },
+    {
+      "path": "components/WorkbookCorrectionLineage.tsx",
+      "bytes": 5966,
+      "sha256": "a85a2eea323e72e55b3cd4be1119fcda034109b409be64ee7857f4344f59ecea"
+    },
+    {
+      "path": "components/WorkbookRetirement.tsx",
+      "bytes": 6866,
+      "sha256": "9ebdcf6a6da4850e5d809b5aaf65f5af2e56905eae3faa868252f8f6cbff1b13"
+    },
+    {
+      "path": "components/anatomy-coverage-review.css",
+      "bytes": 4430,
+      "sha256": "0d06c28a09fda46aa8487ef8fae9358744de25ac5a225d298fbb17d9c964f38b"
+    },
+    {
+      "path": "components/atlas-runtime-frame.css",
+      "bytes": 1893,
+      "sha256": "f4ba294204a84b573b41baf9d64219a3b7814e8833b9ba4572003637ae62d1c8"
+    },
+    {
+      "path": "components/atlas-runtime-state.ts",
+      "bytes": 1664,
+      "sha256": "23e5004323f8d432c3b451dec0ed4b28ab46c620eec3c8ef59d2194a0ec8a8e5"
+    },
+    {
+      "path": "components/atlas-workspace-navigation.css",
+      "bytes": 2428,
+      "sha256": "48569f18bc743ff1abb17d11cca98f912fae25bc4329a70e9cc03450ce14d293"
+    },
+    {
+      "path": "components/cinematic-film.module.css",
+      "bytes": 4238,
+      "sha256": "301ca4e826d51d00bea749934ca9446b01a056944f8f53734488cd6482328e43"
+    },
+    {
+      "path": "components/clinical-review-areas.css",
+      "bytes": 1080,
+      "sha256": "3cdc97bf81f0527914299ca4ab9dfb108450e355f83b87673861db6c6618ce0a"
+    },
+    {
+      "path": "components/clinical-review-inbox.css",
+      "bytes": 7701,
+      "sha256": "8f4521e519198e5b2e27f37f1292dbfebe7f6b5822a05375912cffd66416317d"
+    },
+    {
+      "path": "components/frozen-candidate-comparison.css",
+      "bytes": 2606,
+      "sha256": "7d49bf71013887c32ce8e92c6e517cb48ad454ea67d611c1b6621254b704f26d"
+    },
+    {
+      "path": "components/head-atlas.css",
+      "bytes": 24960,
+      "sha256": "3edd00db77c3259e85f08243fec6a2be8ac9eb40655782fd8464a6e1aa404a3a"
+    },
+    {
+      "path": "components/head-learning-bookmark.css",
+      "bytes": 2231,
+      "sha256": "13c2c59ca3cc426c537aea755a71dcbed8082f251501e69e022522ac5c1db3bb"
+    },
+    {
+      "path": "components/head-structure-learning.css",
+      "bytes": 357,
+      "sha256": "0e28041ea844b3c2922b02cf0dc1d75ac3a46d84f69c707ae97a16c5782e9c90"
+    },
+    {
+      "path": "components/head-surface.css",
+      "bytes": 1756,
+      "sha256": "04df3e34770176551e0c2bc71849d94939df9db5320404ecba17d997f14b346b"
+    },
+    {
+      "path": "components/head-teaching-review-notes.css",
+      "bytes": 2301,
+      "sha256": "65db1d2b8babaf15cea74be8f9de0841912ef0394d0e1830a08b5681fc869f49"
+    },
+    {
+      "path": "components/head-tour-playback.css",
+      "bytes": 768,
+      "sha256": "52b498aac446590e30ac1ccf1c70684a1136908a3f51592ec124a8ba39c2852b"
+    },
+    {
+      "path": "components/imaging-atlas-shell.css",
+      "bytes": 9070,
+      "sha256": "8fdc96de381e39ea6669fd97dc04cadd445f7cd85fc02952adf95d7b00fcc970"
+    },
+    {
+      "path": "components/learner-portfolio-navigation.css",
+      "bytes": 481,
+      "sha256": "24e75d974d9839329ab8539c69e01c42e080664d75be24b64e04189955e6c896"
+    },
+    {
+      "path": "components/learning-resource-status.css",
+      "bytes": 1629,
+      "sha256": "7cb7a7a0a15b30bccb52ec7ed01b43e68515c1bc6ea98e5de0afba84ebbcd649"
+    },
+    {
+      "path": "components/lecture-editor.css",
+      "bytes": 14418,
+      "sha256": "95e83298a41029cc2c288653b495ceeeab812edee022a77aef328b0f701edab0"
+    },
+    {
+      "path": "components/plexus-review.css",
+      "bytes": 4301,
+      "sha256": "c208b9a3ba12259a33bce68693397c333c67882487be1c524a3b7cff91642e70"
+    },
+    {
+      "path": "components/regional-guide-review-notes.css",
+      "bytes": 2024,
+      "sha256": "47b17ef24ef1fe06c030989dc2f605592c91c52d35f48cec183044ba9de4253e"
+    },
+    {
+      "path": "components/regional-learning-catalogue.css",
+      "bytes": 3451,
+      "sha256": "c8cf97be1330e278b076d44f5ce61ece2f6cfa661272df866789419b574d03c3"
+    },
+    {
+      "path": "components/regional-mri-review.css",
+      "bytes": 8618,
+      "sha256": "aec548b98a8e5b421c8e28aa2ac04dfce2bcd8dc403b2b61f9eb73dd24e8d903"
+    },
+    {
+      "path": "components/regional-reference-review-catalogue.css",
+      "bytes": 4125,
+      "sha256": "de603e02395831cc3218e3b256b97edd1c3f5489a611772b258dfdba90466b59"
+    },
+    {
+      "path": "components/regional-reference-review-notes.css",
+      "bytes": 2064,
+      "sha256": "377650204f3af06b60b67deb9953c2e74c987cb32cf530538ea26e73812ffbe2"
+    },
+    {
+      "path": "components/release-content-outline.css",
+      "bytes": 992,
+      "sha256": "ad951348d9d42dd1aaa1b464ad84e24caa5754440c4c731a22b553a6b341bcfd"
+    },
+    {
+      "path": "components/review-ui-variants.css",
+      "bytes": 1524,
+      "sha256": "bf42eda18eed6d388e6f3204cab87df01270628f32e8e1e0cc7896e651a73ee7"
+    },
+    {
+      "path": "components/studio-slide-preview.css",
+      "bytes": 4546,
+      "sha256": "41036d34a446ba4a125d0ab546c519cd77cbf6223d524fa5ff4bb497a4cdba50"
+    },
+    {
+      "path": "components/studio-workspace.css",
+      "bytes": 10204,
+      "sha256": "df1a14f0ef382837408a03a99d338749fb472103c2f14eb6326288a559547d30"
+    },
+    {
       "path": "components/useVerifiedFacialTeaching.ts",
       "bytes": 1333,
       "sha256": "e50f522103e8d77757ef679f2b69f3a83f0427e007560eb1ae615cba79e3b518"
@@ -9437,21 +9487,6 @@
       "path": "components/workbook-retirement.css",
       "bytes": 927,
       "sha256": "13728b74177798d4833c5a2e27ec8a1beb943f7c9f363fccfa1258826740b762"
-    },
-    {
-      "path": "components/WorkbookCorrection.tsx",
-      "bytes": 10096,
-      "sha256": "ec66499425bffdd3d1cfa89a3eeb313dbe0cdbe63a14bda7b005f3b6a12c43df"
-    },
-    {
-      "path": "components/WorkbookCorrectionLineage.tsx",
-      "bytes": 5966,
-      "sha256": "a85a2eea323e72e55b3cd4be1119fcda034109b409be64ee7857f4344f59ecea"
-    },
-    {
-      "path": "components/WorkbookRetirement.tsx",
-      "bytes": 6866,
-      "sha256": "9ebdcf6a6da4850e5d809b5aaf65f5af2e56905eae3faa868252f8f6cbff1b13"
     },
     {
       "path": "components/workspace-navigation.css",
@@ -9494,11 +9529,6 @@
       "sha256": "a1555877b2a89b3ca2b662ddba7369069add4305b50f7f4fce675047c5248dad"
     },
     {
-      "path": "docs/abdomen-atlas-pilot.md",
-      "bytes": 6581,
-      "sha256": "2db50fce5a9c0c1d89a9feb9ff2f71ce37b264a48aee68182b9427a572323e2f"
-    },
-    {
       "path": "docs/ABDOMINAL_CONNECTIVE_QUIZ_IMPORT.md",
       "bytes": 1270,
       "sha256": "9f4a065090bbd02d6369868f21779ba8f0719d803ba4d7b5008258f2aee47344"
@@ -9509,9 +9539,1274 @@
       "sha256": "81f828b74ae395d0662cee2a6bd8ee7e64c4dddcdb484d6eea9ff9ef392a5205"
     },
     {
+      "path": "docs/ARTERIAL_EVIDENCE_LIMITS_INTEGRATION.md",
+      "bytes": 2757,
+      "sha256": "f883a38b558d8ee47409fba5dc5f2346468fd8ea2eae687f0a468f0c50465336"
+    },
+    {
+      "path": "docs/ATLAS_GUIDED_DISCOVERY.md",
+      "bytes": 3742,
+      "sha256": "43778765e32a22012f74e47fceaa81a226c2fd36e5a7aaecdcaa08ec851cfd6a"
+    },
+    {
+      "path": "docs/ATLAS_REGIONAL_TEACHING_IMPORT_20261008.md",
+      "bytes": 3459,
+      "sha256": "253737e4748df43f32f9de895c74621f5e28c9452240312d63254cd5ed3ffce6"
+    },
+    {
+      "path": "docs/ATOMIC_RATE_LIMIT.md",
+      "bytes": 3824,
+      "sha256": "e43f33300edeebaa9bab9c00f68b791ef4cbbcd264a9d5f3c8082bbf8ee766b3"
+    },
+    {
+      "path": "docs/AUDIT_CHAIN_INTEGRITY.md",
+      "bytes": 2865,
+      "sha256": "4094f9dd152961aee713ec6c51b637b61f6246054e13510300f27b9ba9f63cfb"
+    },
+    {
+      "path": "docs/AUTHENTICATION_CONTRACT.md",
+      "bytes": 4646,
+      "sha256": "ff4dca971c393311ef243cea1ef037cf3bd7ab56ec276edfe6e82f57ac1140df"
+    },
+    {
+      "path": "docs/BODY_CHANNEL_WEBSITE_INTEGRATION.md",
+      "bytes": 3720,
+      "sha256": "b62659280071866bd46a77f79fc8abb0d21424f7cc8541006d4bd9aa90e625e6"
+    },
+    {
+      "path": "docs/CARDIAC_VENOUS_WEBSITE_IMPORT.md",
+      "bytes": 3009,
+      "sha256": "37fc2aa0b5cc010f0200d1494e6980aba17c1a4a96dc257384fc3dffac88a362"
+    },
+    {
+      "path": "docs/CEREBRAL_ARTERIAL_QUIZ_IMPORT.md",
+      "bytes": 1432,
+      "sha256": "f0152fc349d6d79e0c4aaf9a7f863a94836c8a51b4a99eabf6f644daff7a4646"
+    },
+    {
+      "path": "docs/CERVICAL_MRI_WEBSITE_20261006.md",
+      "bytes": 3805,
+      "sha256": "c7975abb64fece70476a9fbd869762ce38b7560c5d389b427602af7470dc2208"
+    },
+    {
+      "path": "docs/CHEST_WALL_WEBSITE_IMPORT.md",
+      "bytes": 2759,
+      "sha256": "35c0ce69b079227aa5d293c15072224b17130df603f7a21a20faf3979f366db5"
+    },
+    {
+      "path": "docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md",
+      "bytes": 2532,
+      "sha256": "0997c9ec6ba1741188da3e4eb171c0bb97d916c5f2459b42699147b4e48a9d50"
+    },
+    {
+      "path": "docs/COMPACT_GUIDED_CHOOSER_IMPORT.md",
+      "bytes": 1220,
+      "sha256": "b20deac64a2fbe1c3c3998337eac34ce5cd56a71ba1789a5442dbd15d3807bf9"
+    },
+    {
+      "path": "docs/COMPACT_HEAD_COMPARISON.md",
+      "bytes": 2029,
+      "sha256": "d899867a0fc68d14278512474f7dfc0482b805eecdf953962ae056dd32056fad"
+    },
+    {
+      "path": "docs/COURSE_ENROLMENT_READONLY_PREFLIGHT.md",
+      "bytes": 1807,
+      "sha256": "6558df6e745f1bedd3d5bd2743080291349badbba307e468b380dc6362743972"
+    },
+    {
+      "path": "docs/COURSE_INVITATION_HOLD.md",
+      "bytes": 4463,
+      "sha256": "815038b1d30221fc7178a24bd0baccfa38bb532025200fa0dbc7a893e4b46ec5"
+    },
+    {
+      "path": "docs/CRANIOFACIAL_BONE_QUIZ_IMPORT.md",
+      "bytes": 1670,
+      "sha256": "c85601f8a982578816f2a37e4d34902fe94a97d8f5a9167827cb399fee1933e5"
+    },
+    {
+      "path": "docs/CRANIOFACIAL_CT_DELIVERY_20261019.md",
+      "bytes": 3604,
+      "sha256": "a02d5ef46eddb0bdbefadcf54e2eeff33fb50ef7920ba111b3962fc11006b063"
+    },
+    {
+      "path": "docs/CT_BONE_LINKED_TOURS.md",
+      "bytes": 2469,
+      "sha256": "ec5f6a2973869d394a14c0a48ec42cfb4b31f19025cea7b18c2ccd34a468329a"
+    },
+    {
+      "path": "docs/CT_FACIAL_GUIDED_LEARNING.md",
+      "bytes": 3036,
+      "sha256": "c268f591ad710f4d3b56d7989d520645888717796b6f6cee35503772d27b158c"
+    },
+    {
+      "path": "docs/CURRENT_ATLAS_RELEASE_REPAIR.md",
+      "bytes": 2386,
+      "sha256": "64177a50a72c3c44162d13506fa506c4650a0a39b692e2010d791613aa2aeeb2"
+    },
+    {
+      "path": "docs/CURRENT_ATLAS_TEST_DELIVERY.md",
+      "bytes": 2710,
+      "sha256": "effcfc5b5f9fc67fb34d7544ba60ec0d195503fa1fd4de2e5790f46e11609f14"
+    },
+    {
+      "path": "docs/D1_MIGRATION_READINESS.md",
+      "bytes": 3131,
+      "sha256": "eccc5aab93b956fc5d5a4d898d59b9270d24106773c33c8102ddbad283b0ad42"
+    },
+    {
+      "path": "docs/D1_READONLY_CAPTURE.md",
+      "bytes": 4817,
+      "sha256": "47405eeb756aba3d08e79f7a677b8b87f8d46af2c1fbea68cb746b97a6b6387c"
+    },
+    {
+      "path": "docs/D1_SCHEMA_CONTRACT.md",
+      "bytes": 2935,
+      "sha256": "558ad0669886eaad8c4145824c2e55f0fa4ab19e66db8bc2ee304ed045132e01"
+    },
+    {
+      "path": "docs/D1_TARGET_ADMISSION_PREFLIGHT.md",
+      "bytes": 3151,
+      "sha256": "37567f8fa2cf00df3adf4f7cee330baf3695e45a20df9c6e113e156a811b31b6"
+    },
+    {
+      "path": "docs/DEEP_BRAIN_QUIZ_IMPORT.md",
+      "bytes": 1834,
+      "sha256": "f0d491a4b95a3bf787d95e6cfb0913c150e362a3ac412622b65609f89657a49b"
+    },
+    {
+      "path": "docs/DELIVERY_AUDIT_20261006.md",
+      "bytes": 16878,
+      "sha256": "d415f4ce65002d9b4b888214a31dc4541f977f6d89145cf05960199aadbaa008"
+    },
+    {
+      "path": "docs/DELIVERY_EPOCH_REPAIR.md",
+      "bytes": 3650,
+      "sha256": "935472a998c438f9e74796868dca2cd7c729cc0a374d6567e42dcc3656b96df3"
+    },
+    {
+      "path": "docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md",
+      "bytes": 2632,
+      "sha256": "69f43be716986e7ec87f7c68c88d76674161493625cbd62ef809adc37745a2ad"
+    },
+    {
+      "path": "docs/DESKTOP_REGION_PICKER_20261007.md",
+      "bytes": 3373,
+      "sha256": "1127dd73a33ac406abe2513b0a296549e1370b018e16b3e00728aee7a7a2c6d3"
+    },
+    {
+      "path": "docs/EDUCATION_MEDIA_DELIVERY_CONTRACT.md",
+      "bytes": 4876,
+      "sha256": "3ffd818fe59de650d0a69afaef97730f636c1a49588e5e37306353d0e777fa5b"
+    },
+    {
+      "path": "docs/EXTENSOR_GUIDED_INSPECTION.md",
+      "bytes": 4580,
+      "sha256": "55f1e47c9fbfb9e67ea60309b8b0d70d7f00d198c2f76ec8c6f170d9d41d3214"
+    },
+    {
+      "path": "docs/FOOT_ARTERIAL_XRAY_INTEGRATION.md",
+      "bytes": 3687,
+      "sha256": "1b6b8c765f93d08b5ccfc7b0b6d0b1beaec9c253a510d32e73d2a230d5f498db"
+    },
+    {
+      "path": "docs/FOOT_BONE_WEBSITE_IMPORT.md",
+      "bytes": 2785,
+      "sha256": "38f5f35bfb18c7fd886e77a2124778f07fb790c5c42764b888595834e3192676"
+    },
+    {
+      "path": "docs/FOOT_MUSCLE_QUIZ_IMPORT.md",
+      "bytes": 1690,
+      "sha256": "88556b6548d143b2a2ac6596df6278eb158922a9b3eac712479a1d54a7b8752c"
+    },
+    {
+      "path": "docs/FOREARM_ARTERIAL_TOUR_IMPORT.md",
+      "bytes": 1672,
+      "sha256": "17339cd7da3d65079b03a26af7b5158c0e534ee689294db9cf709fe1546da68e"
+    },
+    {
+      "path": "docs/FOREARM_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 2600,
+      "sha256": "aacd80c9b106d5b2386ad8e37dd0e6994b6744e8f6328f087e8e7636b90a1fd4"
+    },
+    {
+      "path": "docs/FOREARM_VENOUS_WEBSITE_IMPORT.md",
+      "bytes": 3022,
+      "sha256": "d0d75f763ee020c85d4bc32a0b245b05c051d863ac185e97177988a22630bb85"
+    },
+    {
+      "path": "docs/FOREARM_VESSEL_WEBSITE_IMPORT.md",
+      "bytes": 2669,
+      "sha256": "7b49cdfdc0c522936d3ad1c268a263ffff036d11fb38b30d9247f9e2304d9e49"
+    },
+    {
+      "path": "docs/FOREFOOT_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 2389,
+      "sha256": "aa6261db5969f519c6b96e02337f528da007c87a63144b8eb36021ad0b9f1f48"
+    },
+    {
+      "path": "docs/FOREGUT_VESSEL_QUIZ_IMPORT.md",
+      "bytes": 1384,
+      "sha256": "bf4970c897f6e798046846f3b9f1597ffa2f17024e2a3c414a6a5af7f7ad46ce"
+    },
+    {
+      "path": "docs/FREE_INSTITUTION_ATOMIC_ADMISSION.md",
+      "bytes": 3611,
+      "sha256": "65715622556d7742a6cb52117b03ec5544d39df96b2488cb848aa563dfe539e8"
+    },
+    {
+      "path": "docs/FROZEN_CANDIDATE_DECISIONS.md",
+      "bytes": 4419,
+      "sha256": "ffdeacc9bf44f63e6eae173fa6f7235220280455ee66d47cf20e8c735e7a1993"
+    },
+    {
+      "path": "docs/FROZEN_CLINICAL_INSPECTIONS.md",
+      "bytes": 4486,
+      "sha256": "a531eb06b1f705ab5e73a67f27e2d061a59382593c2d19c38f426b61e9779935"
+    },
+    {
+      "path": "docs/FROZEN_REVIEW_COMPARISON.md",
+      "bytes": 3209,
+      "sha256": "b00a3d37b9eb7988f061de90078272aa6bc65a8b381b3b23f6f799ed30f8de03"
+    },
+    {
+      "path": "docs/GUIDED_LECTURE_HANDOFF.md",
+      "bytes": 3620,
+      "sha256": "57ef531ef65ebf53fc9980fe87b7a6f93b53f6913b40e9e4fb70436b4f3d084f"
+    },
+    {
+      "path": "docs/GUIDED_LIBRARY_WEBSITE_IMPORT.md",
+      "bytes": 2699,
+      "sha256": "cf198c29b35fa2800d8c65196c6708cdb5d57e2d36c8b9c65a997201fd188d5b"
+    },
+    {
+      "path": "docs/GUIDED_LOAD_RECOVERY_IMPORT.md",
+      "bytes": 2470,
+      "sha256": "5811331925d68d43b0dfea5085e2384928fdf83ff02bf00d5c7f3daa6057330a"
+    },
+    {
+      "path": "docs/HAND_ARTERIAL_QUIZ_IMPORT.md",
+      "bytes": 1625,
+      "sha256": "45e868c9da12f1435fa8d3b940fbc798418b472649b4079ddbe06f9e506fc0e6"
+    },
+    {
+      "path": "docs/HAND_BONE_WEBSITE_IMPORT.md",
+      "bytes": 2673,
+      "sha256": "1767dd305d3aad2eca067ee095f3f3c39e37e056bbf777727de63f5f4a0f2cd7"
+    },
+    {
+      "path": "docs/HAND_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 2753,
+      "sha256": "9231b13088f547b87fe36707e854d2cb6c47e4a0d90dc1823279ee03566e5df0"
+    },
+    {
+      "path": "docs/HAND_VENOUS_QUIZ_IMPORT.md",
+      "bytes": 1619,
+      "sha256": "bceb3556d024862881ad1900dace7afe1d6174c6afae74b569f7082aa39b1280"
+    },
+    {
+      "path": "docs/HAND_VESSEL_XRAY_INTEGRATION.md",
+      "bytes": 3209,
+      "sha256": "77b7e892c190a3186ba8acecfe73256da1058bd8f190a88fa9194d0a519d276a"
+    },
+    {
+      "path": "docs/HAND_XRAY_WEBSITE_INTEGRATION.md",
+      "bytes": 2364,
+      "sha256": "407f65608e70f7b7de6ecc3267b1b8cf7d3997d7963b286ec187c6b3df6fdea7"
+    },
+    {
+      "path": "docs/HEAD_ANATOMY_CHECKS.md",
+      "bytes": 3935,
+      "sha256": "4edb245d0baf0947b0dba5039670695f676078c7ad2a252fbe5b0e3fa1e224b0"
+    },
+    {
+      "path": "docs/HEAD_CEREBELLAR_CLINICAL.md",
+      "bytes": 5902,
+      "sha256": "50e36b31e240c08fdbf4bf3ec603d8a755d22542d178c8858423f468d9a0af90"
+    },
+    {
+      "path": "docs/HEAD_CEREBRAL_LINKS.md",
+      "bytes": 3724,
+      "sha256": "0d39db2273a3361a472f3c06c39330d428c089a1a0463d89c515a5e7ef9f98ec"
+    },
+    {
+      "path": "docs/HEAD_CHANNEL_RECOVERY_IMPORT.md",
+      "bytes": 2630,
+      "sha256": "b2dec14dda26a6468dee9082c77b61a72cd63020e90432a0075c23ff49b10c6b"
+    },
+    {
+      "path": "docs/HEAD_COMPARISON_LAYOUT.md",
+      "bytes": 1923,
+      "sha256": "41109ab9bf4f8ae2485e6dc355a2f10fe9b4a041d6b9074c444202a6a2c0c665"
+    },
+    {
+      "path": "docs/HEAD_COMPARISON_RETRY.md",
+      "bytes": 2648,
+      "sha256": "cebd1c332e2202c69f4f86dd4307bb7455c6f5036c1be0724d6356e6adb9933c"
+    },
+    {
+      "path": "docs/HEAD_COMPARISON_TOUR_COMMIT.md",
+      "bytes": 2705,
+      "sha256": "bf0776379ea8c5fc9d4b45780a9f1c35a61fe04b02a2d965ae5fd6d4393ac74f"
+    },
+    {
+      "path": "docs/HEAD_COMPARISON_VALIDATION.md",
+      "bytes": 1922,
+      "sha256": "f5153aa7f2826e8ccc75d7a3178ac9361aeeac4871fa8f6017ebefaca2b9ce48"
+    },
+    {
+      "path": "docs/HEAD_CT_BONE_DECISIONS.md",
+      "bytes": 5190,
+      "sha256": "4ddde4c9689fa1729154d01f8b480bf3fa4875f37a996dce37b63bcec8997ca6"
+    },
+    {
+      "path": "docs/HEAD_CT_BONE_LINKS.md",
+      "bytes": 3281,
+      "sha256": "9e530376ba7dd8a4309c3c63cfaff160c3dd78e9a27714b759b822f700827ff9"
+    },
+    {
+      "path": "docs/HEAD_CT_BONE_REVIEW.md",
+      "bytes": 2196,
+      "sha256": "55669d303a31d335741b27750e47d0b4d29b290648d48f9926dfd8e0e3bf0d43"
+    },
+    {
+      "path": "docs/HEAD_CT_BONE_TEACHING.md",
+      "bytes": 2876,
+      "sha256": "2daba4e3be66a167e733fd95c16b5a3a09d0c1c543e1045630b638e09376e803"
+    },
+    {
+      "path": "docs/HEAD_CT_BONE_TEACHING_REVIEW.md",
+      "bytes": 3344,
+      "sha256": "5618743d79a124be1f3e99621239b119eca766ea50e3b5a31d7262910c2545c3"
+    },
+    {
+      "path": "docs/HEAD_CT_FACIAL_COMPARISONS.md",
+      "bytes": 3498,
+      "sha256": "8ee283cad40dcd5588238f72955ec5d87fd47bea2895d07bac070251e567c329"
+    },
+    {
+      "path": "docs/HEAD_DEEP_GREY_CLINICAL.md",
+      "bytes": 3433,
+      "sha256": "076bb77b0037d63ee1aa61dd38530e9ebc1827a033a7e7bcbcefcd011facb450"
+    },
+    {
+      "path": "docs/HEAD_ENTRY_RETRY.md",
+      "bytes": 2056,
+      "sha256": "c777a8b22d5fffe6140ede7e273656bd2611dca5fc0ea0b450f21a0dbc20db60"
+    },
+    {
+      "path": "docs/HEAD_FILTERED_PRACTICE.md",
+      "bytes": 2666,
+      "sha256": "1a3bd0f9346f760dd964a84f5cb266deefe2f216aa9bc9b04ef3adda1983c048"
+    },
+    {
+      "path": "docs/HEAD_FILTERED_PRACTICE_SIZE.md",
+      "bytes": 2311,
+      "sha256": "28f3d92ebdd3cbffa659618cd78b206bfb3ac11d1601395e8ef5c860f73e70fd"
+    },
+    {
+      "path": "docs/HEAD_FILTERED_PRACTICE_STYLE.md",
+      "bytes": 2038,
+      "sha256": "1037c3a0a7c62a54058d11115b47b30838c3dd32b26f459fabf647c97839db17"
+    },
+    {
+      "path": "docs/HEAD_FOLDER_SESSION.md",
+      "bytes": 3312,
+      "sha256": "881d1240d98a74d975e22efd13cb5f8eee4a9d94a069aa1fcffb311e3b435c00"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_DESKTOP_QA.md",
+      "bytes": 2652,
+      "sha256": "25ae0edad2401df8598f8ebf03a77b5800eee75e11c26094e3f1ac29b2f4de52"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_GAP_RETURN.md",
+      "bytes": 2153,
+      "sha256": "346e684d47c6de17910ab512be94352b790224b6b354c368e76eb3a7bf9e2e23"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_MODEL.md",
+      "bytes": 1523,
+      "sha256": "83808129c57400f9860eb720bd76e57093170d0a221cf876fee4767155f58250"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_MODEL_LIFECYCLE.md",
+      "bytes": 3566,
+      "sha256": "56fd08ff52faf905d25accb5ee01f639c287a2dc2189aa43e332d912f92354b2"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_PRACTICE_ORIGIN.md",
+      "bytes": 2200,
+      "sha256": "02dc6a5a116f931aab8c4b6d089ebc1e88787d1b93d68b4abf4b6338759519af"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_QUESTION_STYLE.md",
+      "bytes": 2455,
+      "sha256": "023458643c739a5f2c526c8b475d192e702f517299f1c8b183d25171d6fef93c"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_RECENTRE.md",
+      "bytes": 1374,
+      "sha256": "bb0780149c2c0da8fbb1d85a933a182fd3334aaa01224e1f8ea81df6225253c9"
+    },
+    {
+      "path": "docs/HEAD_GUIDED_REVISION_NOTICE.md",
+      "bytes": 1935,
+      "sha256": "80de6eec8bbd910881837ad5e0013ef570938658209d80365c8a0e3636fdba80"
+    },
+    {
+      "path": "docs/HEAD_HIPPOCAMPAL_CLINICAL.md",
+      "bytes": 3617,
+      "sha256": "c18a09a52853a7c687aed78a1db7e6f337b016db7d816040f8b74d507313db2d"
+    },
+    {
+      "path": "docs/HEAD_IMAGE_NAVIGATION.md",
+      "bytes": 12455,
+      "sha256": "8ffc3052868ae3bdcdcea642604a7b3f96556daf5d105efbb19655f78e6bf3fd"
+    },
+    {
+      "path": "docs/HEAD_IMAGE_TOOLS.md",
+      "bytes": 3059,
+      "sha256": "21cecdea6e23d22aecb08556d371fbda55208ab65638bf9ddac97801d3dd5f98"
+    },
+    {
+      "path": "docs/HEAD_IMAGING_HANDOFF.md",
+      "bytes": 10558,
+      "sha256": "a01a627648a612417b8c24cac1f3369f9b9d4fd6c88ef58afec3ea5eb363985f"
+    },
+    {
+      "path": "docs/HEAD_INDEX_DETAIL_FILTERS.md",
+      "bytes": 1737,
+      "sha256": "3bed56a5dd5644318343702b6cd84ea6adf59d4d1394209ff05ad85eb51dd2d3"
+    },
+    {
+      "path": "docs/HEAD_INDEX_KEYBOARD.md",
+      "bytes": 1353,
+      "sha256": "fce6bed76d1c36067680578f96d08b540868d7d16f9756e959d8216aec189fb6"
+    },
+    {
+      "path": "docs/HEAD_INLINE_FOCUS_RECONNECT.md",
+      "bytes": 2689,
+      "sha256": "315db4559fa7b66be7a2236a64c5bde76758b87149b381acb6d2cb3c9c01a40c"
+    },
+    {
+      "path": "docs/HEAD_INSULA_GUIDED_LEARNING.md",
+      "bytes": 2367,
+      "sha256": "8caf4229ac741ffdc592f345966edb36787c4a07f481aa8b285f741b949c4392"
+    },
+    {
+      "path": "docs/HEAD_INSULA_LINKS.md",
+      "bytes": 3829,
+      "sha256": "67d5baaaaa0e98c65ed97a5fb05e1e08e248a258b26ae0aa0d9bd9c897628496"
+    },
+    {
+      "path": "docs/HEAD_INSULA_TEACHING.md",
+      "bytes": 3038,
+      "sha256": "95d474f36c2be91d2dec9343fb8a01a2e3f65a4125bdd834874d6ee98f1b7a5a"
+    },
+    {
+      "path": "docs/HEAD_LEARNING_BOOKMARK.md",
+      "bytes": 2202,
+      "sha256": "468a679a7e4bea725fa3e094c1bbd9f0d68d99bb335681baace63d83317935b0"
+    },
+    {
+      "path": "docs/HEAD_LINKED_TOUR_PICKER.md",
+      "bytes": 1954,
+      "sha256": "51c7557047c0d9a701f4ecbf0a49148e6b9e37787b4435391402d01a443a1355"
+    },
+    {
+      "path": "docs/HEAD_LINK_REVISION_GUARD.md",
+      "bytes": 1470,
+      "sha256": "f6ba81647294779faab152e7e6450ab54f49c09e5ce3aa14a18dafdfd33df48c"
+    },
+    {
+      "path": "docs/HEAD_LIVE_SELECTION.md",
+      "bytes": 2185,
+      "sha256": "43ac40bdd93d26e6476982352c8dda5cce637f791f2a6e797b9a68889b03416b"
+    },
+    {
+      "path": "docs/HEAD_LOADING_RELIABILITY.md",
+      "bytes": 14131,
+      "sha256": "ee56f89ebcce3604dbbc57bd7d2c0e6a205bcbbd6600f9924a4e1c6457bde56d"
+    },
+    {
+      "path": "docs/HEAD_LOBAR_CLINICAL.md",
+      "bytes": 3606,
+      "sha256": "d8bf975378dfd9decd2bdc4306a7d55641b5d5dd9ae59f0583259fde4147f796"
+    },
+    {
+      "path": "docs/HEAD_MASK_FOCUS.md",
+      "bytes": 2454,
+      "sha256": "dde73bc1eef51cf9bf0eac245097bbddac4e775392065a2e412069870e825494"
+    },
+    {
+      "path": "docs/HEAD_MASK_LOADING.md",
+      "bytes": 2107,
+      "sha256": "ec1629c46eb90eb366d48637b11d845d12ee0900186c6f89903b67f8156d89a3"
+    },
+    {
+      "path": "docs/HEAD_MASK_NAVIGATION.md",
+      "bytes": 2802,
+      "sha256": "f90e3b671e9e69314232b37e253e704f08b76c6f69486d0f5b2eb8c1d4c3f50c"
+    },
+    {
+      "path": "docs/HEAD_MASK_PICKING.md",
+      "bytes": 2793,
+      "sha256": "9625ea6395979d87b1bd3da02173badc8260fa8dd7b2e9ea6eb93d154da141f5"
+    },
+    {
+      "path": "docs/HEAD_MASK_RESOURCE_BUDGET.md",
+      "bytes": 2042,
+      "sha256": "28f084f763337a93966abddc3764411b96cb3bff205a9f2819f17b0668989f95"
+    },
+    {
+      "path": "docs/HEAD_MODEL_DOCUMENT_ENTRY.md",
+      "bytes": 2177,
+      "sha256": "3a9937dbcf7b72aa1157f1de240deef91de7e055aa9f20bcc32797fb032f41af"
+    },
+    {
+      "path": "docs/HEAD_MRI_ANATOMY_CHECKS.md",
+      "bytes": 4458,
+      "sha256": "2018a829242fb4c62cebbe6a3a6b187fb6acbad06b4372f9f8429184cb3f25db"
+    },
+    {
+      "path": "docs/HEAD_MRI_COMPARISON_REVIEW.md",
+      "bytes": 3212,
+      "sha256": "47393fdafc529e0c26e5a415d96eedfd77b90fbd935cab7532a72260b4495cf4"
+    },
+    {
+      "path": "docs/HEAD_MRI_GUIDED_LEARNING.md",
+      "bytes": 3776,
+      "sha256": "089e9ea0ac48063d38d6cdfc648d2948e9ff67a86fd0a08659ad67a6f5166709"
+    },
+    {
+      "path": "docs/HEAD_MRI_ONLY_CLINICAL.md",
+      "bytes": 3374,
+      "sha256": "492e60f72ce5cbbe68a5e8dbacc06ac9a83da7143f7f37d8c305058ef84c8fd4"
+    },
+    {
+      "path": "docs/HEAD_MRI_ONLY_LINKS.md",
+      "bytes": 3499,
+      "sha256": "cd7b2fa0f4a2aa58de38c8faff527f667ea7d92fb1b8389247dce8660b2939c4"
+    },
+    {
+      "path": "docs/HEAD_MRI_ONLY_TEACHING.md",
+      "bytes": 4437,
+      "sha256": "4525ca6565a2c296e1f73a1899c2746e55fa76deaea57ce5a5ab8bfd578cb130"
+    },
+    {
+      "path": "docs/HEAD_MRI_REVIEW_DRAFTS.md",
+      "bytes": 6607,
+      "sha256": "06e5d2b20a1e45988bcd99efe0a96f5f166203e1935a8669ba330dde9b1407fc"
+    },
+    {
+      "path": "docs/HEAD_NECK_VESSEL_QUIZ_IMPORT.md",
+      "bytes": 1698,
+      "sha256": "a7807fca933ddc98b351db132bcb8ff7a224bca9d125ca3bf330d6300743f8ef"
+    },
+    {
+      "path": "docs/HEAD_OPENING_STATES.md",
+      "bytes": 2472,
+      "sha256": "0748a915240ba6829cc2550599613357dd2f976bbdb3abd07c027e5e77be0af3"
+    },
+    {
+      "path": "docs/HEAD_ORBITAL_GUIDED_LEARNING.md",
+      "bytes": 2243,
+      "sha256": "1723aee30c86d382e014432bd3e3f6864363583b1de83abf051eff9bdff46f15"
+    },
+    {
+      "path": "docs/HEAD_ORBITAL_LINKS.md",
+      "bytes": 4554,
+      "sha256": "231352e8a1d783262d6af2a1fd16ecba69ce97ee56f242b909f11471028d0a1a"
+    },
+    {
+      "path": "docs/HEAD_ORBITAL_TEACHING.md",
+      "bytes": 4355,
+      "sha256": "c0bfcd4f0de6f0dff15ae33091ed8781f99dea6221213dcd525b6a86be6e1ffc"
+    },
+    {
+      "path": "docs/HEAD_PAIRED_ANATOMY.md",
+      "bytes": 3242,
+      "sha256": "90430b483614f6e27860d205ac5057ba0e3a56cfd8f10161491fad6a579bb5e2"
+    },
+    {
+      "path": "docs/HEAD_PAIRED_DECISIONS.md",
+      "bytes": 4089,
+      "sha256": "aae7024e60062811a60c300fa3c9b3698d366592714892a2027f60f2aea6c471"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_FEEDBACK.md",
+      "bytes": 2412,
+      "sha256": "8d6e5d22078ce9c37b8f14fd1dee9ba35b0e1eddaa0aa81720c72cc18e209d66"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_FOLLOWUP.md",
+      "bytes": 2431,
+      "sha256": "0629ac70e4417d4a3f2f5b3cdb28f8682804004b2840853de39901f6c9015f18"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_GUIDED_HANDOFF.md",
+      "bytes": 1497,
+      "sha256": "a4af61572761efb39b0af3c2a7e0a5e8607cf0e0d597a91b065185667e73ec3b"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_ORIGINAL_RESULTS.md",
+      "bytes": 2684,
+      "sha256": "fa8f2111fce92cab5d3c81469ffd11732b50e3b75d732a8f2bc589a601d16eb7"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_PICK_NAVIGATION.md",
+      "bytes": 1666,
+      "sha256": "1b1512395a73a1a18b09fdaa9e6b18448eab2d561e3e4db83fa0bc10efc228ad"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_PLANE_NAVIGATION.md",
+      "bytes": 1701,
+      "sha256": "f2f76c3c9f2c279efb52b3dad0f770f0b238031df191915afaafa552be6bb36e"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_RESULTS_RETURN.md",
+      "bytes": 2598,
+      "sha256": "839f7dec7d6f62bd6c8e6b9c2cf795ea59fe2e260cd7d69c2412df39a90e6cad"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_SUMMARY.md",
+      "bytes": 2866,
+      "sha256": "f7d7bbf952f342041704b44b1f3c67c5658ee9dd616931d04f2d5572e5f7ddbc"
+    },
+    {
+      "path": "docs/HEAD_PRACTICE_SYSTEM_DEDUP.md",
+      "bytes": 1856,
+      "sha256": "77b6ff9b2236f6fa9577f5f241e94fa7bd9fc54e1c783e465f8c84c487cc4765"
+    },
+    {
+      "path": "docs/HEAD_QUESTION_RECOVERY.md",
+      "bytes": 1321,
+      "sha256": "df7d94cdd7c31533c1c12a2340f250b25151f93e39d90fc5dc4d5a4094a17c48"
+    },
+    {
+      "path": "docs/HEAD_REVIEW_WORKING_COPY.md",
+      "bytes": 4276,
+      "sha256": "eae3fd95dd7a92aca7e4389fb6da1376d24f95e4372e364f25891a0f6120c4be"
+    },
+    {
+      "path": "docs/HEAD_SELECTED_PRACTICE.md",
+      "bytes": 2209,
+      "sha256": "41a3a844edaa0d947f671d6c1ec9baa074550b2d574d7fb34d42fd073c38b40d"
+    },
+    {
+      "path": "docs/HEAD_SEQUENCE_PRACTICE.md",
+      "bytes": 3436,
+      "sha256": "b66863727d4612ac1fe028cfe69fee692033939b7bb3c7efcc1e85b8948cbbf8"
+    },
+    {
+      "path": "docs/HEAD_SLICE_NUMBER.md",
+      "bytes": 1854,
+      "sha256": "cd545bf0a26902052755080faad9892be882e245c7b5257576acc90f6c5ebdf3"
+    },
+    {
+      "path": "docs/HEAD_STRUCTURE_SEARCH.md",
+      "bytes": 2416,
+      "sha256": "25d18eaa6cc7d2b5ca8fcf6693405804bf0084afb3a6ac58e5489cac35468ee5"
+    },
+    {
+      "path": "docs/HEAD_STUDY_RETRY.md",
+      "bytes": 2212,
+      "sha256": "55099f7759936608a6321a85683a02388944631ddf6a1b296a983958ebb68dc9"
+    },
+    {
+      "path": "docs/HEAD_STUDY_SET.md",
+      "bytes": 2019,
+      "sha256": "e1e4776b1d13490e1ee75952df9b30c69a019b47e240eadd52130451215ad871"
+    },
+    {
+      "path": "docs/HEAD_SURFACE_LOADING.md",
+      "bytes": 3636,
+      "sha256": "0b2f3e3c7b088ef01fba0f4cb488f884e73a6a0bd502ffbc52c90d14971a8736"
+    },
+    {
+      "path": "docs/HEAD_SURFACE_RECOVERY.md",
+      "bytes": 2734,
+      "sha256": "0a929b75e1856a897f1822216659d3276f29891d2469ef2e54e67528340054ec"
+    },
+    {
+      "path": "docs/HEAD_TEACHING_DRAFT.md",
+      "bytes": 13931,
+      "sha256": "863477fa7acd103dd98e99ac823192ad341840fb37b1c575fb7f78bd44ab1591"
+    },
+    {
+      "path": "docs/HEAD_TEACHING_REVIEW_NAVIGATION.md",
+      "bytes": 2826,
+      "sha256": "44733b447818bb1bc509b70b23fb5744a77e199529c5dfd68ded7fda8e86d111"
+    },
+    {
+      "path": "docs/HEAD_TOUR_CHOICE.md",
+      "bytes": 1930,
+      "sha256": "9f8d33593eba2feb3c9f8b2eff1b4f00c26bedd6349f3c440a25f3677e707a89"
+    },
+    {
+      "path": "docs/HEAD_TOUR_MODALITY_ENTRY.md",
+      "bytes": 1568,
+      "sha256": "a7aa73a6592d59f835a07002d28aabd5cc68ac12767c7d3f543ea990586cdda1"
+    },
+    {
+      "path": "docs/HEAD_TOUR_STEP_NAVIGATION.md",
+      "bytes": 2913,
+      "sha256": "ae4b22bd383e1a9d0729ab158de62b778c092f82b43c7b1e26c0f142a94d0416"
+    },
+    {
+      "path": "docs/HEAD_UNLINKED_MODALITY.md",
+      "bytes": 1925,
+      "sha256": "9f97b9a07eca1557ba00ea116de765ffc20647d04c9e3b87ba666cb0dd2596c8"
+    },
+    {
+      "path": "docs/HEAD_VIEW_MEMORY.md",
+      "bytes": 1481,
+      "sha256": "a1f4961d5422f3da2d9bd06c0d60bc29cf8ba0700a878e4a88f5efd47474ea47"
+    },
+    {
+      "path": "docs/HEPATOBILIARY_WEBSITE_IMPORT.md",
+      "bytes": 3335,
+      "sha256": "022c172df177b28a159327d7acf60ce863f9123fc1e81e610b884b146f9d863b"
+    },
+    {
+      "path": "docs/ILIAC_VESSEL_QUIZ_IMPORT.md",
+      "bytes": 1326,
+      "sha256": "3f657b371614f29a08e71bb7bb72913dcf1bb19fae17b87d1a5a1f2073738abc"
+    },
+    {
+      "path": "docs/IMAGING_PANE_NAVIGATION.md",
+      "bytes": 1541,
+      "sha256": "f99b8079b8c1514cae1579eb54b47956095c842b78711abb65d3eca9c64c3505"
+    },
+    {
+      "path": "docs/INLINE_MODEL_RECOVERY.md",
+      "bytes": 2427,
+      "sha256": "643d0f2b372ef6c39833366dd1c70153a82a383fef53c6f5e0fc2f8ace237384"
+    },
+    {
+      "path": "docs/INTRACRANIAL_ULTRASOUND_INTEGRATION.md",
+      "bytes": 2427,
+      "sha256": "e6713e9dfdf42cfd79cd0b996201dea85fbe45494e1add338440b5cfdcfee989"
+    },
+    {
+      "path": "docs/LABEL_KEYBOARD_IMPORT.md",
+      "bytes": 1338,
+      "sha256": "1d605965775c7cb87b65eaf2c8c14b030bba52285ad682598f0fdd163cd7c4f1"
+    },
+    {
+      "path": "docs/LARYNGEAL_SUPPORT_WEBSITE_IMPORT.md",
+      "bytes": 2878,
+      "sha256": "d908942ee7259d4151417d86c05b1608c78d60585a21863610ddf648dc19441a"
+    },
+    {
+      "path": "docs/LEARNER_ROUTE_CONTRACT.md",
+      "bytes": 2383,
+      "sha256": "65c8a01f280c335084ea1b2e2444f2f5ef17e275e63822da530df2721dfad610"
+    },
+    {
+      "path": "docs/LECTURE_PPTX_INTAKE.md",
+      "bytes": 11472,
+      "sha256": "03d46e51f5500d9a6a799341840f6b75e2fd9467336927a19b780b20f73be6f1"
+    },
+    {
+      "path": "docs/LECTURE_REQUEST_SAFETY.md",
+      "bytes": 1870,
+      "sha256": "ce13d9b9f25ad0121f40234edf2560ec0d8af50a110de3405f356e881c2b12e6"
+    },
+    {
+      "path": "docs/LECTURE_SLIDE_LINKS.md",
+      "bytes": 4030,
+      "sha256": "427732fd42bd05e74f33d8fc0ddbcc965475744041c3c1d53935fc1cc1262bcd"
+    },
+    {
+      "path": "docs/LEG_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 1413,
+      "sha256": "ce0a0968fafea30f0fb7022b099b903473bca656b5fa46ede334fb2db5f18eca"
+    },
+    {
+      "path": "docs/LIMB_CONNECTIVE_CT_IMPORT.md",
+      "bytes": 1432,
+      "sha256": "49c34a67bd2d39ef14ff012be23a8db6c9ad358d87f2df36ce392d1ec6c1283a"
+    },
+    {
+      "path": "docs/LOCAL_HEAD_AUTOLOAD.md",
+      "bytes": 2079,
+      "sha256": "108eb6823ae7a38945a4b219cfe2ff4988acc1af48c075db597c24bd79f84cfd"
+    },
+    {
+      "path": "docs/LOCAL_MANUAL_RELOAD_PREVIEW.md",
+      "bytes": 3116,
+      "sha256": "001b06a6ba1037f2b23a3e96c881a7095ca0dc8d53fecca55340c60e3be497f6"
+    },
+    {
+      "path": "docs/LOCAL_PREVIEW_POST_STABILITY.md",
+      "bytes": 3456,
+      "sha256": "b26474fdff7837764e86b47dc9bf948d2fc6e659dd89cabc142b88d213dbdfd9"
+    },
+    {
+      "path": "docs/LOCAL_PREVIEW_RUNTIME.md",
+      "bytes": 5031,
+      "sha256": "f59baa9b787291e7e088f095a29f36f061669201d0f9b5849a0c6ce905cb8b9a"
+    },
+    {
+      "path": "docs/LOCAL_PREVIEW_RUNTIME_RECOVERY.md",
+      "bytes": 3147,
+      "sha256": "42aa3d3241a9fcc889b2a01d530ee5fb155de2a4fbadc6d1424f6a07bd88aaa3"
+    },
+    {
+      "path": "docs/LOWER_ARTERIAL_WEBSITE_IMPORT.md",
+      "bytes": 6587,
+      "sha256": "2c3b910cb808ec55952d8fd96b9fd7a059499993a080097e93790f5439a92b52"
+    },
+    {
+      "path": "docs/LOWER_CONNECTIVE_WEBSITE_IMPORT.md",
+      "bytes": 1668,
+      "sha256": "dcc8054f32210a83d37369c107f5a976e1a4e53fea6823bdaf6bff1a34087949"
+    },
+    {
+      "path": "docs/LOWER_LIMB_VESSEL_WEBSITE_IMPORT.md",
+      "bytes": 3116,
+      "sha256": "a243d2b6ae4b52643ff6d5ca6e2119dd9e4b248d79e5fba0cf283344a04d3d46"
+    },
+    {
+      "path": "docs/LOWER_NECK_TOUR_IMPORT.md",
+      "bytes": 1515,
+      "sha256": "56039003496418eb6417e6f8b81061011f357efa4c143aa7f811d4bb162814d5"
+    },
+    {
+      "path": "docs/MAJOR_LIMB_BONE_WEBSITE_IMPORT.md",
+      "bytes": 3254,
+      "sha256": "98fee5327008ff77ad909d6b790c60808d551cd2b31c724ee783e6d23a41a5ab"
+    },
+    {
+      "path": "docs/MENISCAL_GUIDED_INSPECTION.md",
+      "bytes": 3517,
+      "sha256": "a3a0ec1a09bd045a1743ead6e3193619e470bd16c057170cfa2bbd4250f62069"
+    },
+    {
+      "path": "docs/MESENTERIC_VESSEL_WEBSITE_20261007.md",
+      "bytes": 3470,
+      "sha256": "ac79206a9531bf97d073d391af7d0d93ff4622bba89fe8219a3337c6cd7f88fc"
+    },
+    {
+      "path": "docs/MESENTERIC_WEBSITE_IMPORT.md",
+      "bytes": 3304,
+      "sha256": "85358971686f65b12a87aa2578b4b34f57ed9dcc5c07a761d898b4c040163d31"
+    },
+    {
+      "path": "docs/MODEL_ACCESS_WEBSITE_IMPORT.md",
+      "bytes": 2874,
+      "sha256": "118a74d2234681c0ce99dd96fc0c71ac798a41be5bb9fa146ec5a2e499576c82"
+    },
+    {
+      "path": "docs/MRI_INDEPENDENT_REVIEW.md",
+      "bytes": 3327,
+      "sha256": "26a4d5277a6cd5968b75c8e1ba31ea0bbae21f3a4bebb13e4b2ccff54eb5dd2c"
+    },
+    {
+      "path": "docs/MUTATION_REQUEST_BOUNDARIES.md",
+      "bytes": 11843,
+      "sha256": "5949d41390ac93a10202cac264f6c1a6841bc6c1b52558cc3e3c5b070fcfb55b"
+    },
+    {
+      "path": "docs/NATIVE_GUIDE_REVIEW.md",
+      "bytes": 5122,
+      "sha256": "e3d15f29a518d1846d69f1a372a58e9960af144dc5eb74d694eb73e9b5cbb25b"
+    },
+    {
+      "path": "docs/NATIVE_MRI_ACTIVITY_CONTINUITY.md",
+      "bytes": 1903,
+      "sha256": "3a9e27e0199ecd742e8f1fd7063e00b52511b3f4e36f80e52d695333ff12111b"
+    },
+    {
+      "path": "docs/NATIVE_MRI_ANSWER_LEARNING.md",
+      "bytes": 3020,
+      "sha256": "8fb6ec3ec45a0cb1701ce6846cb97080fc462a6f908282da2bd323037a314ff9"
+    },
+    {
+      "path": "docs/NATIVE_MRI_BODY_HANDOFF.md",
+      "bytes": 4163,
+      "sha256": "33e03ebae73627df400893e29ac6590cbff1ed7bad19cd5ceba49ccdbbf93636"
+    },
+    {
+      "path": "docs/NATIVE_MRI_GUIDED_PLANE_FOCUS.md",
+      "bytes": 2184,
+      "sha256": "909b76f881edcff3e2c4993d3f9e0430e20df303369478ddbcbacb121e37f6d1"
+    },
+    {
+      "path": "docs/NATIVE_MRI_GUIDE_FOCUS.md",
+      "bytes": 1685,
+      "sha256": "b6dae92f27cafd437eac5f2371895cf9361edd6d1c9ad032a04a61404cb614b2"
+    },
+    {
+      "path": "docs/NATIVE_MRI_GUIDE_PRACTICE_RETURN.md",
+      "bytes": 2048,
+      "sha256": "1632bfe0f10cb1a8cc646910b67deb570c1db9aafc2a9dcd2832c1b43515363e"
+    },
+    {
+      "path": "docs/NATIVE_MRI_LOCATION_CHECK.md",
+      "bytes": 3459,
+      "sha256": "34d24fb5bef544d064127539baf31bc33be62314069d94981b142268859e809a"
+    },
+    {
+      "path": "docs/NATIVE_MRI_NEXT_PRACTICE.md",
+      "bytes": 2720,
+      "sha256": "f03e75bf781de487356790a67f1d5931a3f48bf27d5c20d8c74687e41a755647"
+    },
+    {
+      "path": "docs/NATIVE_MRI_POSTERIOR_GUIDE.md",
+      "bytes": 4088,
+      "sha256": "a7d1e6e190d556c77bc1ac0f9a90536298c0676281f6615ae0f8967b29d70ea0"
+    },
+    {
+      "path": "docs/NATIVE_MRI_PRACTICE_FOCUS.md",
+      "bytes": 2111,
+      "sha256": "1b6d2f69f2ecd7cac1d3cc08a7233950b4a48c286bce58fd73bb284e752ada50"
+    },
+    {
+      "path": "docs/NATIVE_MRI_REFERENCE_FEEDBACK.md",
+      "bytes": 2567,
+      "sha256": "506368e709d46812fb097761523eded371d7807936023bb21fd44cc04b5a999d"
+    },
+    {
+      "path": "docs/NATIVE_MRI_SPECIMEN_HANDOFF.md",
+      "bytes": 3663,
+      "sha256": "fbbdaf16968c5944533aa438df347887391e8e64524f5e077921620b85b5f627"
+    },
+    {
+      "path": "docs/NATIVE_MRI_STRUCTURE_CHECK.md",
+      "bytes": 4657,
+      "sha256": "6dafa267e63d3ab249a33306198e720e9a870fcd5fdc9f7648bd6d8bfb816df1"
+    },
+    {
+      "path": "docs/NECK_MUSCLE_QUIZ_IMPORT.md",
+      "bytes": 1535,
+      "sha256": "9337a663e04cb810b1cc9824fa6fc1874e9b94deb4d09ea40406b2fa11b20fa2"
+    },
+    {
+      "path": "docs/NESTED_SELECTION_WEBSITE_IMPORT.md",
+      "bytes": 2855,
+      "sha256": "c08ccf764e3f45e03111bb258f6b95f1d6e3156d30014994137ea661f1595c8c"
+    },
+    {
+      "path": "docs/NESTED_TOUR_LOAD_ERRORS_WEBSITE_20261007.md",
+      "bytes": 2036,
+      "sha256": "ebb18f2fd8d28e97ad1770000e3a0f79e7c2ff74a9295f7c3cd3b2f5be94e367"
+    },
+    {
+      "path": "docs/NONREGIONAL_RELEASE_REPLAY.md",
+      "bytes": 2605,
+      "sha256": "8001838062fb3ef817a1437610da002750ceb6192b49cfc74b3f157e967d5591"
+    },
+    {
+      "path": "docs/ORBITAL_INBOX_REGRESSION.md",
+      "bytes": 2142,
+      "sha256": "b6a4231178e5a2bc24d9964b39460fc06876b82eb4428d4e123a39ff5da2bbff"
+    },
+    {
+      "path": "docs/ORBITAL_MUSCLE_QUIZ_IMPORT.md",
+      "bytes": 2343,
+      "sha256": "cc60c101674d2f93c1abbea0226fdb9af92bee706b4675e0ae82305f12ff665a"
+    },
+    {
+      "path": "docs/ORBITAL_NERVE_QUIZ_IMPORT.md",
+      "bytes": 1003,
+      "sha256": "5663d537b1f8174fc59e30be9318e73feefe6a65835d6c32c6d2d5385d8c010c"
+    },
+    {
+      "path": "docs/ORBITAL_NERVE_TOUR_IMPORT.md",
+      "bytes": 1633,
+      "sha256": "6c0ac568e22fcf365fb272371847cb3c1268ea0797956b697b6b63396b792d91"
+    },
+    {
+      "path": "docs/PANCREATIC_VESSEL_WEBSITE_20261007.md",
+      "bytes": 2185,
+      "sha256": "2d087e1e8c0124d42f75a7276aa88958a1f1b63b8b73a8f3e9c7235b16089821"
+    },
+    {
+      "path": "docs/PELVIC_QUIZ_WEBSITE_IMPORT.md",
+      "bytes": 2516,
+      "sha256": "65c32c459f79df98b330af29709b6aea9782a3e418d81ecbe26e25dab6bffde7"
+    },
+    {
+      "path": "docs/PHARYNGEAL_MUSCLE_WEBSITE_20261007.md",
+      "bytes": 3133,
+      "sha256": "602bbe537c4deb1ca211cc81ecf924838d178f459949a2b1aee0b5aa95635f4b"
+    },
+    {
+      "path": "docs/PHARYNGEAL_WEBSITE_IMPORT.md",
+      "bytes": 2373,
+      "sha256": "226ab4c3f0569c7a3ebd8ee2b061e7493d23ca686cef023ab4228bd44762ccdf"
+    },
+    {
+      "path": "docs/PLATFORM_IMPROVEMENT_PLAN.md",
+      "bytes": 6129,
+      "sha256": "8eeb07a12e750f4e82f05e69e096984f5afa7f44b53fc63535372df5ff919e56"
+    },
+    {
+      "path": "docs/PLEXUS_PRESENTATION_REBIND_20261008.md",
+      "bytes": 3002,
+      "sha256": "a6964504fccc4c2af72b43bbcee30b5bf58a32f18e031862276312a22c1b60e9"
+    },
+    {
+      "path": "docs/PLEXUS_SCHEMATIC_REVIEW.md",
+      "bytes": 5536,
+      "sha256": "e929cb003bb4376bde3c3abbcd88ab808eb8cedbfeceee9d7d84c1f156802830"
+    },
+    {
+      "path": "docs/PORTAL_HEPATIC_WEBSITE_INTEGRATION.md",
+      "bytes": 3693,
+      "sha256": "b58da3e72bbebc70f3199b252fecb2437616026a1f2e79d5dc633bf343619eae"
+    },
+    {
+      "path": "docs/POSTERIOR_FOSSA_DELIVERY.md",
+      "bytes": 2262,
+      "sha256": "a0d89191ce00629ed004268b5605436d45085c31e54fddcf23a0976a12842845"
+    },
+    {
+      "path": "docs/PRACTICE_MASK_PLACEMENT.md",
+      "bytes": 1439,
+      "sha256": "69b08110f6561e41ccdd9f44c9b3d8b998bad1707ea4e1c713f3edbdc2bea9cc"
+    },
+    {
+      "path": "docs/PSOAS_WEBSITE_INTEGRATION.md",
+      "bytes": 4598,
+      "sha256": "b64ae9fcde78bade5ca228524504ebbe9a7bd24dec811d121520aa6dbdc767fa"
+    },
+    {
+      "path": "docs/PULMONARY_VENOUS_WEBSITE_20261007.md",
+      "bytes": 4471,
+      "sha256": "45f535142dfa0270971b6232079af5c79293bb30d05d6547389a2406c34171b1"
+    },
+    {
+      "path": "docs/QUIZ_DISCLOSURE_IMPORT.md",
+      "bytes": 1152,
+      "sha256": "1f5ea46053f1a43d2566a62b54696d54d84408f21d70b36472ea65cfefb3ec71"
+    },
+    {
+      "path": "docs/REGIONAL_MRI_PACKAGE.md",
+      "bytes": 40561,
+      "sha256": "16ce4231b04ec1ce7efa82406cebb3d84dc83132bdc65d2097311d7608d4147e"
+    },
+    {
+      "path": "docs/REGRESSION_EPOCHS.md",
+      "bytes": 2603,
+      "sha256": "a17f2dc7fd2e861700899ab9cd0904743625e8bda688448221d14bf7ed96ac6d"
+    },
+    {
+      "path": "docs/RELATED_ANATOMY_LECTURES.md",
+      "bytes": 4434,
+      "sha256": "bf7fff5f7c862791542b507191046945988069de3d0ba7588c9b182361c703d2"
+    },
+    {
+      "path": "docs/RENAL_ULTRASOUND_WEBSITE_20261007.md",
+      "bytes": 5846,
+      "sha256": "30411a2fa3f86b7bd396c6fbb9bb8611d5bdd6603f0af55b780b8decc54fa512"
+    },
+    {
+      "path": "docs/RENAL_XRAY_WEBSITE_20261007.md",
+      "bytes": 2841,
+      "sha256": "e7b36a77720cb8a7ee9acb9aa392a0d08ec78f9863cd83df9219e0124c67412b"
+    },
+    {
+      "path": "docs/REVIEW_CHECKLIST_LABELS_WEBSITE_20261007.md",
+      "bytes": 1859,
+      "sha256": "1c73ec3d2f367e3f02ecf9da02b62879a30786aab1ef4343e0db1f0db15c9c5e"
+    },
+    {
+      "path": "docs/REVIEW_REVISION_DOMAIN_DESIGN.md",
+      "bytes": 3111,
+      "sha256": "586ac24abda634afaa91c181b063aeed7b1b54312d2811e3ed3b7fe5f0810218"
+    },
+    {
+      "path": "docs/REVIEW_TEACHING_ALIGNMENT_20261008.md",
+      "bytes": 3731,
+      "sha256": "cd819f74c39f1f404182eb1f5ce8504e5568752f765a7a820c3280a8aac2c2f3"
+    },
+    {
+      "path": "docs/SALPINGOPHARYNGEUS_MRI_INTEGRATION.md",
+      "bytes": 2328,
+      "sha256": "2280479b14df9301e3791c6c3b31322f5cc3234273b710778e98be71b1d58974"
+    },
+    {
+      "path": "docs/SHOULDER_ACCESS_IMPORT.md",
+      "bytes": 1595,
+      "sha256": "9c2cc66396068364ac65ff091c75f05f2cb9c764637e53dd5ef38e5ad02933e1"
+    },
+    {
+      "path": "docs/SHOULDER_ARM_ARTERY_QUIZ_IMPORT.md",
+      "bytes": 1343,
+      "sha256": "80776e614e35b16984cda3e3bab8a5831e00e90d6ff0b412a6c01e2f202e0265"
+    },
+    {
+      "path": "docs/SHOULDER_ARM_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 3132,
+      "sha256": "1e7387ac2bc2f3351cec04bd97d3f0b109367630defc226970f287415f407eb2"
+    },
+    {
+      "path": "docs/SHOULDER_SEARCH_WEBSITE_20261007.md",
+      "bytes": 3823,
+      "sha256": "37d00d71953960b2d8dd1715bf71faeb58f15429e67d78272fd2b6912089f839"
+    },
+    {
+      "path": "docs/SPECIMEN_ACCESS_IMPORT.md",
+      "bytes": 1483,
+      "sha256": "21ae3142be9508b71a6cf5d4f7543f378cde620b53e0c1408d8e5ab2e1d7215b"
+    },
+    {
+      "path": "docs/SPINAL_BONE_WEBSITE_IMPORT.md",
+      "bytes": 2647,
+      "sha256": "2031dba48f93c76c209653aeabca6f85df42bc7e4b9b88b9b3cd5519460212e4"
+    },
+    {
+      "path": "docs/SPINAL_DISC_QUIZ_WEBSITE_20261007.md",
+      "bytes": 4490,
+      "sha256": "6e6eac5292815104e50735a1cfff910e03448f7da0f9af7ec8029477acb7e04c"
+    },
+    {
+      "path": "docs/SPINAL_MUSCLE_QUIZ_IMPORT.md",
+      "bytes": 1250,
+      "sha256": "bd7c7d674e32dc1c95a47ccec6dff1d5e140a356dabffe0a07ece888d72d18e0"
+    },
+    {
+      "path": "docs/SPINAL_MUSCLE_XRAY_INTEGRATION.md",
+      "bytes": 2333,
+      "sha256": "2b75b2345dd6bf47d7e17c384f41607897918b75d30dc9eaae95e2005a76ce43"
+    },
+    {
+      "path": "docs/SPINE_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 2898,
+      "sha256": "36b64618867a33f9eb8e13fcb3b1cdf0f32b725008440f5849a06f027921c194"
+    },
+    {
+      "path": "docs/STUDIO_CORRECTION_LINEAGE.md",
+      "bytes": 3969,
+      "sha256": "d8407d7f3f9f21154a0ef5f14b54aafb12412456aced8b695e7b19a8776f673b"
+    },
+    {
+      "path": "docs/STUDIO_COURSE_DRAFT_RECOVERY_NOTICE.md",
+      "bytes": 1588,
+      "sha256": "f5019fa8c0049a1266859c94bc60f16aadd8a08f01ffbbcb4e0c6aa2a54f7c19"
+    },
+    {
+      "path": "docs/STUDIO_COURSE_HISTORY.md",
+      "bytes": 2807,
+      "sha256": "89d2ed1543e6a7ed11573ce6565115436ed117c3f6337429317949c373a647cc"
+    },
+    {
+      "path": "docs/STUDIO_DRAFT_SAFETY.md",
+      "bytes": 3604,
+      "sha256": "8068ed8ca897af104e43befac599e432f82e425eb09470ec35692e4bf300a977"
+    },
+    {
+      "path": "docs/STUDIO_LARGE_PUBLICATION_LINEAGE.md",
+      "bytes": 2582,
+      "sha256": "7794e975f75ed7da7e9ffd09a39a8590d07f6d19e836d312892f247cf720cc6e"
+    },
+    {
+      "path": "docs/STUDIO_QUEUES.md",
+      "bytes": 1427,
+      "sha256": "d18ec0cd438b5e3df6b28481d7ee344211ee4abf858495ea894fb9b5cbd995dc"
+    },
+    {
+      "path": "docs/STUDIO_RELEASE_PREVIEW.md",
+      "bytes": 1496,
+      "sha256": "f12a00f38515b2d819ee4d88e5663ae9f643400d02387cb683db0be579288a1c"
+    },
+    {
+      "path": "docs/STUDIO_WORKBOOK_CORRECTIONS.md",
+      "bytes": 6922,
+      "sha256": "e2a095d4b72a376ea8285ccf9d5fc3ed0442894c8b5e00a69c115417e05f3b81"
+    },
+    {
+      "path": "docs/STUDIO_WORKBOOK_RETIREMENT.md",
+      "bytes": 3762,
+      "sha256": "745a0aa1675627367eee061274ec48639e4399a24c731bf1594730a8110094a1"
+    },
+    {
+      "path": "docs/SUPRASCAPULAR_CT_WEBSITE_IMPORT.md",
+      "bytes": 1858,
+      "sha256": "832f06492553c4b5d5174c35e806d4a5b663dd03a08191997df8c8fa47f4cd9c"
+    },
+    {
+      "path": "docs/THIGH_DEEP_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 2960,
+      "sha256": "8dd2b3563d25457c517361589f929b5a492271aaa20221d56accfb7fa5b30fc4"
+    },
+    {
+      "path": "docs/THIGH_MUSCLE_WEBSITE_IMPORT.md",
+      "bytes": 2277,
+      "sha256": "23e22a2fce4cf0b11c37740beebcb496b328c6d0fc7760cb9edee3c2d6e26d4e"
+    },
+    {
+      "path": "docs/THORACIC_MRI_WEBSITE_20261006.md",
+      "bytes": 3956,
+      "sha256": "0b9f96f480e2c58a8e52fb19ed9d18246a8234668bed5649acad2878ebb0612c"
+    },
+    {
+      "path": "docs/THORACIC_SMALL_VESSEL_MRI_IMPORT.md",
+      "bytes": 1360,
+      "sha256": "f60a9ab9f5b7860d142ac6adae6b4d888f3c458d2d18a5b548d7f52f06f65086"
+    },
+    {
+      "path": "docs/THORACIC_SYSTEMIC_WEBSITE_20261007.md",
+      "bytes": 4733,
+      "sha256": "1d35d9fc6fcb018b6e38b8253d4ff4634c43d0d6e9990ded901f3012aabed9d3"
+    },
+    {
+      "path": "docs/THORACIC_VESSEL_WEBSITE_IMPORT.md",
+      "bytes": 2745,
+      "sha256": "a306105221a9ae380d44d6216aadccd32e14c0de47561f532c02fb20c2c0a3bf"
+    },
+    {
+      "path": "docs/TOUR_LIBRARY_PAUSE_IMPORT.md",
+      "bytes": 1058,
+      "sha256": "412e9d5caecb86985a753c878a593ce44fad514823c9db73e537c30879867424"
+    },
+    {
+      "path": "docs/TOUR_READING_FOCUS_WEBSITE_IMPORT.md",
+      "bytes": 1762,
+      "sha256": "af7e78fdcda97be06824e1532039009276512aa1098dfc8aa217f376b98011fc"
+    },
+    {
+      "path": "docs/TRUNK_CORE_QUIZ_IMPORT.md",
+      "bytes": 1649,
+      "sha256": "5d393fe687159c4515675658453c65e75208c137e0dd218b437083d0ed0baabc"
+    },
+    {
+      "path": "docs/TRUNK_MUSCLE_QUIZ_IMPORT.md",
+      "bytes": 1222,
+      "sha256": "47d1690f08134bac8e28aa70966681120a0c67d079809849289f5ed8d61f368f"
+    },
+    {
+      "path": "docs/UPPER_VENOUS_WEBSITE_IMPORT.md",
+      "bytes": 2475,
+      "sha256": "45a4a91869b71b6a45222d05ed89c49eabaf1c21d9817d11cebcf6648346997d"
+    },
+    {
+      "path": "docs/VOCAL_TISSUE_WEBSITE_20261007.md",
+      "bytes": 3122,
+      "sha256": "a0f4f3418d99ffd08ddadfef9cc667d3a43fb94927ca9b26a1fb76ab3238b4a7"
+    },
+    {
+      "path": "docs/abdomen-atlas-pilot.md",
+      "bytes": 6581,
+      "sha256": "2db50fce5a9c0c1d89a9feb9ff2f71ce37b264a48aee68182b9427a572323e2f"
+    },
+    {
       "path": "docs/abdominal-quiz-delivery-20260928.md",
       "bytes": 2277,
       "sha256": "456e51e8016f0c90e7bb9f845484fc7d6a6132d8688c8c7314c7c0aa73d01121"
+    },
+    {
+      "path": "docs/anatomy-coverage/PRODUCERS.md",
+      "bytes": 4136,
+      "sha256": "6e77333bc2cb64084f94ab48b09254200c3584ebbcfee2b30050082f33c2352a"
+    },
+    {
+      "path": "docs/anatomy-coverage/README.md",
+      "bytes": 4852,
+      "sha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39"
     },
     {
       "path": "docs/anatomy-coverage/independent.json",
@@ -9529,16 +10824,6 @@
       "sha256": "31123d519504c7f157cb04b784e6d52ed86acc4f69f1fe91789efea631da12cd"
     },
     {
-      "path": "docs/anatomy-coverage/PRODUCERS.md",
-      "bytes": 4136,
-      "sha256": "6e77333bc2cb64084f94ab48b09254200c3584ebbcfee2b30050082f33c2352a"
-    },
-    {
-      "path": "docs/anatomy-coverage/README.md",
-      "bytes": 4852,
-      "sha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39"
-    },
-    {
       "path": "docs/anatomy-coverage/reference.json",
       "bytes": 154089,
       "sha256": "14ecd2d5a0ab5b170ad6413bda0825bbf8360908dd34f361d3d22696ceca8b29"
@@ -9552,21 +10837,6 @@
       "path": "docs/anatomy-zoom.md",
       "bytes": 4119,
       "sha256": "56aa59c36db69ef3451c85ce01dc7dbdd97f53fe25f2ac08c228264c157631f9"
-    },
-    {
-      "path": "docs/ARTERIAL_EVIDENCE_LIMITS_INTEGRATION.md",
-      "bytes": 2757,
-      "sha256": "f883a38b558d8ee47409fba5dc5f2346468fd8ea2eae687f0a468f0c50465336"
-    },
-    {
-      "path": "docs/ATLAS_GUIDED_DISCOVERY.md",
-      "bytes": 3742,
-      "sha256": "43778765e32a22012f74e47fceaa81a226c2fd36e5a7aaecdcaa08ec851cfd6a"
-    },
-    {
-      "path": "docs/ATLAS_REGIONAL_TEACHING_IMPORT_20261008.md",
-      "bytes": 3459,
-      "sha256": "253737e4748df43f32f9de895c74621f5e28c9452240312d63254cd5ed3ffce6"
     },
     {
       "path": "docs/atlas-camera-resize-20260925.md",
@@ -10069,34 +11339,9 @@
       "sha256": "6be915682056fdcfd84ba79352e35f08646aa7a1466f4512192724041a9f2bc4"
     },
     {
-      "path": "docs/ATOMIC_RATE_LIMIT.md",
-      "bytes": 3824,
-      "sha256": "e43f33300edeebaa9bab9c00f68b791ef4cbbcd264a9d5f3c8082bbf8ee766b3"
-    },
-    {
-      "path": "docs/AUDIT_CHAIN_INTEGRITY.md",
-      "bytes": 2865,
-      "sha256": "4094f9dd152961aee713ec6c51b637b61f6246054e13510300f27b9ba9f63cfb"
-    },
-    {
-      "path": "docs/AUTHENTICATION_CONTRACT.md",
-      "bytes": 4646,
-      "sha256": "ff4dca971c393311ef243cea1ef037cf3bd7ab56ec276edfe6e82f57ac1140df"
-    },
-    {
-      "path": "docs/BODY_CHANNEL_WEBSITE_INTEGRATION.md",
-      "bytes": 3720,
-      "sha256": "b62659280071866bd46a77f79fc8abb0d21424f7cc8541006d4bd9aa90e625e6"
-    },
-    {
       "path": "docs/brain-connections-quiz-delivery-20260929.md",
       "bytes": 3081,
       "sha256": "35ec2f52bcf675007772037411723f582d9c4263cea832b80b2e04525ec75f0b"
-    },
-    {
-      "path": "docs/CARDIAC_VENOUS_WEBSITE_IMPORT.md",
-      "bytes": 3009,
-      "sha256": "37fc2aa0b5cc010f0200d1494e6980aba17c1a4a96dc257384fc3dffac88a362"
     },
     {
       "path": "docs/cardiac-chamber-xray-delivery-20260929.md",
@@ -10119,19 +11364,9 @@
       "sha256": "4e6d23dee051dcd8d94a47d632114891dde92bca3765d4107da8a13d093d02a5"
     },
     {
-      "path": "docs/CEREBRAL_ARTERIAL_QUIZ_IMPORT.md",
-      "bytes": 1432,
-      "sha256": "f0152fc349d6d79e0c4aaf9a7f863a94836c8a51b4a99eabf6f644daff7a4646"
-    },
-    {
       "path": "docs/cerebral-lobar-imaging-delivery-20260929.md",
       "bytes": 1713,
       "sha256": "1c5b1db382582f7510dbcc01ba9bca824e27716589c72090ef627537e6bf5442"
-    },
-    {
-      "path": "docs/CERVICAL_MRI_WEBSITE_20261006.md",
-      "bytes": 3805,
-      "sha256": "c7975abb64fece70476a9fbd869762ce38b7560c5d389b427602af7470dc2208"
     },
     {
       "path": "docs/cervical-guided-learning-delivery-20260927.md",
@@ -10142,11 +11377,6 @@
       "path": "docs/cervical-quiz-delivery-20260928.md",
       "bytes": 2236,
       "sha256": "79c3bf229d1216c02b9d760aa39e72024a85dafff689592efe21012b1ef04ee5"
-    },
-    {
-      "path": "docs/CHEST_WALL_WEBSITE_IMPORT.md",
-      "bytes": 2759,
-      "sha256": "35c0ce69b079227aa5d293c15072224b17130df603f7a21a20faf3979f366db5"
     },
     {
       "path": "docs/chest-wall-tour-delivery-20260928.md",
@@ -10162,11 +11392,6 @@
       "path": "docs/cinematic-splash.md",
       "bytes": 6937,
       "sha256": "e9711b2b27ed354bd7004dd074eb2461ad86a30c97875bc6370156146c3da468"
-    },
-    {
-      "path": "docs/CLINICAL_REVIEW_QUEUE_NAVIGATION.md",
-      "bytes": 2532,
-      "sha256": "0997c9ec6ba1741188da3e4eb171c0bb97d916c5f2459b42699147b4e48a9d50"
     },
     {
       "path": "docs/clinical-review-calf-depth-20261005.md",
@@ -10244,16 +11469,6 @@
       "sha256": "262c8d2b4eec642e6bb486bd35bd66a7abcb47e42ad052a181ef0570396b69f2"
     },
     {
-      "path": "docs/COMPACT_GUIDED_CHOOSER_IMPORT.md",
-      "bytes": 1220,
-      "sha256": "b20deac64a2fbe1c3c3998337eac34ce5cd56a71ba1789a5442dbd15d3807bf9"
-    },
-    {
-      "path": "docs/COMPACT_HEAD_COMPARISON.md",
-      "bytes": 2029,
-      "sha256": "d899867a0fc68d14278512474f7dfc0482b805eecdf953962ae056dd32056fad"
-    },
-    {
       "path": "docs/completion-checklist.json",
       "bytes": 108297,
       "sha256": "50b1aa532e9146706d756b36910a4488b4d4e5aa530f76e831173909b58fc57f"
@@ -10269,26 +11484,6 @@
       "sha256": "dcd5ef63d42cf051527a35b7bfd69d72eb77715cf2d6e5c8d35b32add83b3dfa"
     },
     {
-      "path": "docs/COURSE_ENROLMENT_READONLY_PREFLIGHT.md",
-      "bytes": 1807,
-      "sha256": "6558df6e745f1bedd3d5bd2743080291349badbba307e468b380dc6362743972"
-    },
-    {
-      "path": "docs/COURSE_INVITATION_HOLD.md",
-      "bytes": 4463,
-      "sha256": "815038b1d30221fc7178a24bd0baccfa38bb532025200fa0dbc7a893e4b46ec5"
-    },
-    {
-      "path": "docs/CRANIOFACIAL_BONE_QUIZ_IMPORT.md",
-      "bytes": 1670,
-      "sha256": "c85601f8a982578816f2a37e4d34902fe94a97d8f5a9167827cb399fee1933e5"
-    },
-    {
-      "path": "docs/CRANIOFACIAL_CT_DELIVERY_20261019.md",
-      "bytes": 3604,
-      "sha256": "a02d5ef46eddb0bdbefadcf54e2eeff33fb50ef7920ba111b3962fc11006b063"
-    },
-    {
       "path": "docs/cricothyroid-imaging-browser-20260929.json",
       "bytes": 5697,
       "sha256": "85c2651d9b7c91811feee5d73b47feb6b6bda9fe5d39ad2801bceded1599df67"
@@ -10299,74 +11494,9 @@
       "sha256": "b45c6b0aa80e1542e80c6102b747bbdcf91b19eac43fecf851c2ecda27303b15"
     },
     {
-      "path": "docs/CT_BONE_LINKED_TOURS.md",
-      "bytes": 2469,
-      "sha256": "ec5f6a2973869d394a14c0a48ec42cfb4b31f19025cea7b18c2ccd34a468329a"
-    },
-    {
-      "path": "docs/CT_FACIAL_GUIDED_LEARNING.md",
-      "bytes": 3036,
-      "sha256": "c268f591ad710f4d3b56d7989d520645888717796b6f6cee35503772d27b158c"
-    },
-    {
-      "path": "docs/CURRENT_ATLAS_RELEASE_REPAIR.md",
-      "bytes": 2386,
-      "sha256": "64177a50a72c3c44162d13506fa506c4650a0a39b692e2010d791613aa2aeeb2"
-    },
-    {
-      "path": "docs/CURRENT_ATLAS_TEST_DELIVERY.md",
-      "bytes": 2710,
-      "sha256": "effcfc5b5f9fc67fb34d7544ba60ec0d195503fa1fd4de2e5790f46e11609f14"
-    },
-    {
-      "path": "docs/D1_MIGRATION_READINESS.md",
-      "bytes": 3131,
-      "sha256": "eccc5aab93b956fc5d5a4d898d59b9270d24106773c33c8102ddbad283b0ad42"
-    },
-    {
-      "path": "docs/D1_READONLY_CAPTURE.md",
-      "bytes": 4817,
-      "sha256": "47405eeb756aba3d08e79f7a677b8b87f8d46af2c1fbea68cb746b97a6b6387c"
-    },
-    {
-      "path": "docs/D1_SCHEMA_CONTRACT.md",
-      "bytes": 2935,
-      "sha256": "558ad0669886eaad8c4145824c2e55f0fa4ab19e66db8bc2ee304ed045132e01"
-    },
-    {
-      "path": "docs/D1_TARGET_ADMISSION_PREFLIGHT.md",
-      "bytes": 3151,
-      "sha256": "37567f8fa2cf00df3adf4f7cee330baf3695e45a20df9c6e113e156a811b31b6"
-    },
-    {
-      "path": "docs/DEEP_BRAIN_QUIZ_IMPORT.md",
-      "bytes": 1834,
-      "sha256": "f0d491a4b95a3bf787d95e6cfb0913c150e362a3ac412622b65609f89657a49b"
-    },
-    {
       "path": "docs/deep-brain-tour-delivery-20260929.md",
       "bytes": 2266,
       "sha256": "7cf460088bfcce8f5ade19d542733298c22540d4524b193ebf96552d9ae98a31"
-    },
-    {
-      "path": "docs/DELIVERY_AUDIT_20261006.md",
-      "bytes": 16878,
-      "sha256": "d415f4ce65002d9b4b888214a31dc4541f977f6d89145cf05960199aadbaa008"
-    },
-    {
-      "path": "docs/DELIVERY_EPOCH_REPAIR.md",
-      "bytes": 3650,
-      "sha256": "935472a998c438f9e74796868dca2cd7c729cc0a374d6567e42dcc3656b96df3"
-    },
-    {
-      "path": "docs/DESKTOP_IMAGE_FOCUS_REVIEW_RECOVERY.md",
-      "bytes": 2632,
-      "sha256": "69f43be716986e7ec87f7c68c88d76674161493625cbd62ef809adc37745a2ad"
-    },
-    {
-      "path": "docs/DESKTOP_REGION_PICKER_20261007.md",
-      "bytes": 3373,
-      "sha256": "1127dd73a33ac406abe2513b0a296549e1370b018e16b3e00728aee7a7a2c6d3"
     },
     {
       "path": "docs/desktop-explode-browser-20260930.json",
@@ -10382,11 +11512,6 @@
       "path": "docs/disc-source-comparison.md",
       "bytes": 3397,
       "sha256": "c82e3b815bced3bd88d144831c1e9643725ff9e03293254dc712c267a01c2e3c"
-    },
-    {
-      "path": "docs/EDUCATION_MEDIA_DELIVERY_CONTRACT.md",
-      "bytes": 4876,
-      "sha256": "3ffd818fe59de650d0a69afaef97730f636c1a49588e5e37306353d0e777fa5b"
     },
     {
       "path": "docs/education-geometry.md",
@@ -10414,11 +11539,6 @@
       "sha256": "5b232ed02049fdc0fbf254738e4af690b1d40fa7fc8add4df99b984e62349dd6"
     },
     {
-      "path": "docs/EXTENSOR_GUIDED_INSPECTION.md",
-      "bytes": 4580,
-      "sha256": "55f1e47c9fbfb9e67ea60309b8b0d70d7f00d198c2f76ec8c6f170d9d41d3214"
-    },
-    {
       "path": "docs/female-pelvis-atlas-pilot.md",
       "bytes": 6276,
       "sha256": "adf3ee3400d71db859f267679fd7154596bd04f4afe46401da9fe71d17b5e808"
@@ -10429,59 +11549,14 @@
       "sha256": "aa3d25c987ea78dc22ff892d1415370f5de2064c486bb8e6b89aab201943e92d"
     },
     {
-      "path": "docs/FOOT_ARTERIAL_XRAY_INTEGRATION.md",
-      "bytes": 3687,
-      "sha256": "1b6b8c765f93d08b5ccfc7b0b6d0b1beaec9c253a510d32e73d2a230d5f498db"
-    },
-    {
-      "path": "docs/FOOT_BONE_WEBSITE_IMPORT.md",
-      "bytes": 2785,
-      "sha256": "38f5f35bfb18c7fd886e77a2124778f07fb790c5c42764b888595834e3192676"
-    },
-    {
-      "path": "docs/FOOT_MUSCLE_QUIZ_IMPORT.md",
-      "bytes": 1690,
-      "sha256": "88556b6548d143b2a2ac6596df6278eb158922a9b3eac712479a1d54a7b8752c"
-    },
-    {
       "path": "docs/foot-arm-guided-learning-delivery-20260927.md",
       "bytes": 2440,
       "sha256": "d3b31531dd2fe1c6736642d27f2802a10c8155a19d99668b0cefc17ea19e6329"
     },
     {
-      "path": "docs/FOREARM_ARTERIAL_TOUR_IMPORT.md",
-      "bytes": 1672,
-      "sha256": "17339cd7da3d65079b03a26af7b5158c0e534ee689294db9cf709fe1546da68e"
-    },
-    {
-      "path": "docs/FOREARM_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 2600,
-      "sha256": "aacd80c9b106d5b2386ad8e37dd0e6994b6744e8f6328f087e8e7636b90a1fd4"
-    },
-    {
-      "path": "docs/FOREARM_VENOUS_WEBSITE_IMPORT.md",
-      "bytes": 3022,
-      "sha256": "d0d75f763ee020c85d4bc32a0b245b05c051d863ac185e97177988a22630bb85"
-    },
-    {
-      "path": "docs/FOREARM_VESSEL_WEBSITE_IMPORT.md",
-      "bytes": 2669,
-      "sha256": "7b49cdfdc0c522936d3ad1c268a263ffff036d11fb38b30d9247f9e2304d9e49"
-    },
-    {
       "path": "docs/forearm-guided-learning-delivery-20260927.md",
       "bytes": 2977,
       "sha256": "132231c4c1fa2a285e911ff77fe07a802a9cfd62a8e0ef6f66aebac2758a8aae"
-    },
-    {
-      "path": "docs/FOREFOOT_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 2389,
-      "sha256": "aa6261db5969f519c6b96e02337f528da007c87a63144b8eb36021ad0b9f1f48"
-    },
-    {
-      "path": "docs/FOREGUT_VESSEL_QUIZ_IMPORT.md",
-      "bytes": 1384,
-      "sha256": "bf4970c897f6e798046846f3b9f1597ffa2f17024e2a3c414a6a5af7f7ad46ce"
     },
     {
       "path": "docs/fracture-exams/CAST-EXCLUSION-CORRECTION-20261007.md",
@@ -10512,11 +11587,6 @@
       "path": "docs/fracture-exams/LICENCE-REVIEW-20260928.md",
       "bytes": 4325,
       "sha256": "e66065a592f269d2fa715051a99a74ac1fc8741d414775df5255aa7746a82dfd"
-    },
-    {
-      "path": "docs/fracture-exams/master-plan-entry.md",
-      "bytes": 1143,
-      "sha256": "d7544866af4c9911dc76da83d332446caec8cbfb783c1f8ab073317b5d32d99d"
     },
     {
       "path": "docs/fracture-exams/MIXED-250-REVIEW-20261007.md",
@@ -10559,39 +11629,9 @@
       "sha256": "db4e07692fa99602278a6b22367a4896d16c567cb04a979583a1552085112bcb"
     },
     {
-      "path": "docs/FREE_INSTITUTION_ATOMIC_ADMISSION.md",
-      "bytes": 3611,
-      "sha256": "65715622556d7742a6cb52117b03ec5544d39df96b2488cb848aa563dfe539e8"
-    },
-    {
-      "path": "docs/FROZEN_CANDIDATE_DECISIONS.md",
-      "bytes": 4419,
-      "sha256": "ffdeacc9bf44f63e6eae173fa6f7235220280455ee66d47cf20e8c735e7a1993"
-    },
-    {
-      "path": "docs/FROZEN_CLINICAL_INSPECTIONS.md",
-      "bytes": 4486,
-      "sha256": "a531eb06b1f705ab5e73a67f27e2d061a59382593c2d19c38f426b61e9779935"
-    },
-    {
-      "path": "docs/FROZEN_REVIEW_COMPARISON.md",
-      "bytes": 3209,
-      "sha256": "b00a3d37b9eb7988f061de90078272aa6bc65a8b381b3b23f6f799ed30f8de03"
-    },
-    {
-      "path": "docs/GUIDED_LECTURE_HANDOFF.md",
-      "bytes": 3620,
-      "sha256": "57ef531ef65ebf53fc9980fe87b7a6f93b53f6913b40e9e4fb70436b4f3d084f"
-    },
-    {
-      "path": "docs/GUIDED_LIBRARY_WEBSITE_IMPORT.md",
-      "bytes": 2699,
-      "sha256": "cf198c29b35fa2800d8c65196c6708cdb5d57e2d36c8b9c65a997201fd188d5b"
-    },
-    {
-      "path": "docs/GUIDED_LOAD_RECOVERY_IMPORT.md",
-      "bytes": 2470,
-      "sha256": "5811331925d68d43b0dfea5085e2384928fdf83ff02bf00d5c7f3daa6057330a"
+      "path": "docs/fracture-exams/master-plan-entry.md",
+      "bytes": 1143,
+      "sha256": "d7544866af4c9911dc76da83d332446caec8cbfb783c1f8ab073317b5d32d99d"
     },
     {
       "path": "docs/guided-learning-delivery-20260927.md",
@@ -10599,494 +11639,9 @@
       "sha256": "03067c5f7331de64d600dfe17bda19a8ede268ada46e6c17835b47160c428e07"
     },
     {
-      "path": "docs/HAND_ARTERIAL_QUIZ_IMPORT.md",
-      "bytes": 1625,
-      "sha256": "45e868c9da12f1435fa8d3b940fbc798418b472649b4079ddbe06f9e506fc0e6"
-    },
-    {
-      "path": "docs/HAND_BONE_WEBSITE_IMPORT.md",
-      "bytes": 2673,
-      "sha256": "1767dd305d3aad2eca067ee095f3f3c39e37e056bbf777727de63f5f4a0f2cd7"
-    },
-    {
-      "path": "docs/HAND_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 2753,
-      "sha256": "9231b13088f547b87fe36707e854d2cb6c47e4a0d90dc1823279ee03566e5df0"
-    },
-    {
-      "path": "docs/HAND_VENOUS_QUIZ_IMPORT.md",
-      "bytes": 1619,
-      "sha256": "bceb3556d024862881ad1900dace7afe1d6174c6afae74b569f7082aa39b1280"
-    },
-    {
-      "path": "docs/HAND_VESSEL_XRAY_INTEGRATION.md",
-      "bytes": 3209,
-      "sha256": "77b7e892c190a3186ba8acecfe73256da1058bd8f190a88fa9194d0a519d276a"
-    },
-    {
-      "path": "docs/HAND_XRAY_WEBSITE_INTEGRATION.md",
-      "bytes": 2364,
-      "sha256": "407f65608e70f7b7de6ecc3267b1b8cf7d3997d7963b286ec187c6b3df6fdea7"
-    },
-    {
-      "path": "docs/HEAD_ANATOMY_CHECKS.md",
-      "bytes": 3935,
-      "sha256": "4edb245d0baf0947b0dba5039670695f676078c7ad2a252fbe5b0e3fa1e224b0"
-    },
-    {
-      "path": "docs/HEAD_CEREBELLAR_CLINICAL.md",
-      "bytes": 5902,
-      "sha256": "50e36b31e240c08fdbf4bf3ec603d8a755d22542d178c8858423f468d9a0af90"
-    },
-    {
-      "path": "docs/HEAD_CEREBRAL_LINKS.md",
-      "bytes": 3724,
-      "sha256": "0d39db2273a3361a472f3c06c39330d428c089a1a0463d89c515a5e7ef9f98ec"
-    },
-    {
-      "path": "docs/HEAD_CHANNEL_RECOVERY_IMPORT.md",
-      "bytes": 2630,
-      "sha256": "b2dec14dda26a6468dee9082c77b61a72cd63020e90432a0075c23ff49b10c6b"
-    },
-    {
-      "path": "docs/HEAD_COMPARISON_LAYOUT.md",
-      "bytes": 1923,
-      "sha256": "41109ab9bf4f8ae2485e6dc355a2f10fe9b4a041d6b9074c444202a6a2c0c665"
-    },
-    {
-      "path": "docs/HEAD_COMPARISON_RETRY.md",
-      "bytes": 2648,
-      "sha256": "cebd1c332e2202c69f4f86dd4307bb7455c6f5036c1be0724d6356e6adb9933c"
-    },
-    {
-      "path": "docs/HEAD_COMPARISON_TOUR_COMMIT.md",
-      "bytes": 2705,
-      "sha256": "bf0776379ea8c5fc9d4b45780a9f1c35a61fe04b02a2d965ae5fd6d4393ac74f"
-    },
-    {
-      "path": "docs/HEAD_COMPARISON_VALIDATION.md",
-      "bytes": 1922,
-      "sha256": "f5153aa7f2826e8ccc75d7a3178ac9361aeeac4871fa8f6017ebefaca2b9ce48"
-    },
-    {
-      "path": "docs/HEAD_CT_BONE_DECISIONS.md",
-      "bytes": 5190,
-      "sha256": "4ddde4c9689fa1729154d01f8b480bf3fa4875f37a996dce37b63bcec8997ca6"
-    },
-    {
-      "path": "docs/HEAD_CT_BONE_LINKS.md",
-      "bytes": 3281,
-      "sha256": "9e530376ba7dd8a4309c3c63cfaff160c3dd78e9a27714b759b822f700827ff9"
-    },
-    {
-      "path": "docs/HEAD_CT_BONE_REVIEW.md",
-      "bytes": 2196,
-      "sha256": "55669d303a31d335741b27750e47d0b4d29b290648d48f9926dfd8e0e3bf0d43"
-    },
-    {
-      "path": "docs/HEAD_CT_BONE_TEACHING_REVIEW.md",
-      "bytes": 3344,
-      "sha256": "5618743d79a124be1f3e99621239b119eca766ea50e3b5a31d7262910c2545c3"
-    },
-    {
-      "path": "docs/HEAD_CT_BONE_TEACHING.md",
-      "bytes": 2876,
-      "sha256": "2daba4e3be66a167e733fd95c16b5a3a09d0c1c543e1045630b638e09376e803"
-    },
-    {
-      "path": "docs/HEAD_CT_FACIAL_COMPARISONS.md",
-      "bytes": 3498,
-      "sha256": "8ee283cad40dcd5588238f72955ec5d87fd47bea2895d07bac070251e567c329"
-    },
-    {
-      "path": "docs/HEAD_DEEP_GREY_CLINICAL.md",
-      "bytes": 3433,
-      "sha256": "076bb77b0037d63ee1aa61dd38530e9ebc1827a033a7e7bcbcefcd011facb450"
-    },
-    {
-      "path": "docs/HEAD_ENTRY_RETRY.md",
-      "bytes": 2056,
-      "sha256": "c777a8b22d5fffe6140ede7e273656bd2611dca5fc0ea0b450f21a0dbc20db60"
-    },
-    {
-      "path": "docs/HEAD_FILTERED_PRACTICE_SIZE.md",
-      "bytes": 2311,
-      "sha256": "28f3d92ebdd3cbffa659618cd78b206bfb3ac11d1601395e8ef5c860f73e70fd"
-    },
-    {
-      "path": "docs/HEAD_FILTERED_PRACTICE_STYLE.md",
-      "bytes": 2038,
-      "sha256": "1037c3a0a7c62a54058d11115b47b30838c3dd32b26f459fabf647c97839db17"
-    },
-    {
-      "path": "docs/HEAD_FILTERED_PRACTICE.md",
-      "bytes": 2666,
-      "sha256": "1a3bd0f9346f760dd964a84f5cb266deefe2f216aa9bc9b04ef3adda1983c048"
-    },
-    {
-      "path": "docs/HEAD_FOLDER_SESSION.md",
-      "bytes": 3312,
-      "sha256": "881d1240d98a74d975e22efd13cb5f8eee4a9d94a069aa1fcffb311e3b435c00"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_DESKTOP_QA.md",
-      "bytes": 2652,
-      "sha256": "25ae0edad2401df8598f8ebf03a77b5800eee75e11c26094e3f1ac29b2f4de52"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_GAP_RETURN.md",
-      "bytes": 2153,
-      "sha256": "346e684d47c6de17910ab512be94352b790224b6b354c368e76eb3a7bf9e2e23"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_MODEL_LIFECYCLE.md",
-      "bytes": 3566,
-      "sha256": "56fd08ff52faf905d25accb5ee01f639c287a2dc2189aa43e332d912f92354b2"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_MODEL.md",
-      "bytes": 1523,
-      "sha256": "83808129c57400f9860eb720bd76e57093170d0a221cf876fee4767155f58250"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_PRACTICE_ORIGIN.md",
-      "bytes": 2200,
-      "sha256": "02dc6a5a116f931aab8c4b6d089ebc1e88787d1b93d68b4abf4b6338759519af"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_QUESTION_STYLE.md",
-      "bytes": 2455,
-      "sha256": "023458643c739a5f2c526c8b475d192e702f517299f1c8b183d25171d6fef93c"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_RECENTRE.md",
-      "bytes": 1374,
-      "sha256": "bb0780149c2c0da8fbb1d85a933a182fd3334aaa01224e1f8ea81df6225253c9"
-    },
-    {
-      "path": "docs/HEAD_GUIDED_REVISION_NOTICE.md",
-      "bytes": 1935,
-      "sha256": "80de6eec8bbd910881837ad5e0013ef570938658209d80365c8a0e3636fdba80"
-    },
-    {
-      "path": "docs/HEAD_HIPPOCAMPAL_CLINICAL.md",
-      "bytes": 3617,
-      "sha256": "c18a09a52853a7c687aed78a1db7e6f337b016db7d816040f8b74d507313db2d"
-    },
-    {
-      "path": "docs/HEAD_IMAGE_NAVIGATION.md",
-      "bytes": 12455,
-      "sha256": "8ffc3052868ae3bdcdcea642604a7b3f96556daf5d105efbb19655f78e6bf3fd"
-    },
-    {
-      "path": "docs/HEAD_IMAGE_TOOLS.md",
-      "bytes": 3059,
-      "sha256": "21cecdea6e23d22aecb08556d371fbda55208ab65638bf9ddac97801d3dd5f98"
-    },
-    {
-      "path": "docs/HEAD_IMAGING_HANDOFF.md",
-      "bytes": 10558,
-      "sha256": "a01a627648a612417b8c24cac1f3369f9b9d4fd6c88ef58afec3ea5eb363985f"
-    },
-    {
-      "path": "docs/HEAD_INDEX_DETAIL_FILTERS.md",
-      "bytes": 1737,
-      "sha256": "3bed56a5dd5644318343702b6cd84ea6adf59d4d1394209ff05ad85eb51dd2d3"
-    },
-    {
-      "path": "docs/HEAD_INDEX_KEYBOARD.md",
-      "bytes": 1353,
-      "sha256": "fce6bed76d1c36067680578f96d08b540868d7d16f9756e959d8216aec189fb6"
-    },
-    {
-      "path": "docs/HEAD_INLINE_FOCUS_RECONNECT.md",
-      "bytes": 2689,
-      "sha256": "315db4559fa7b66be7a2236a64c5bde76758b87149b381acb6d2cb3c9c01a40c"
-    },
-    {
-      "path": "docs/HEAD_INSULA_GUIDED_LEARNING.md",
-      "bytes": 2367,
-      "sha256": "8caf4229ac741ffdc592f345966edb36787c4a07f481aa8b285f741b949c4392"
-    },
-    {
-      "path": "docs/HEAD_INSULA_LINKS.md",
-      "bytes": 3829,
-      "sha256": "67d5baaaaa0e98c65ed97a5fb05e1e08e248a258b26ae0aa0d9bd9c897628496"
-    },
-    {
-      "path": "docs/HEAD_INSULA_TEACHING.md",
-      "bytes": 3038,
-      "sha256": "95d474f36c2be91d2dec9343fb8a01a2e3f65a4125bdd834874d6ee98f1b7a5a"
-    },
-    {
-      "path": "docs/HEAD_LEARNING_BOOKMARK.md",
-      "bytes": 2202,
-      "sha256": "468a679a7e4bea725fa3e094c1bbd9f0d68d99bb335681baace63d83317935b0"
-    },
-    {
-      "path": "docs/HEAD_LINK_REVISION_GUARD.md",
-      "bytes": 1470,
-      "sha256": "f6ba81647294779faab152e7e6450ab54f49c09e5ce3aa14a18dafdfd33df48c"
-    },
-    {
-      "path": "docs/HEAD_LINKED_TOUR_PICKER.md",
-      "bytes": 1954,
-      "sha256": "51c7557047c0d9a701f4ecbf0a49148e6b9e37787b4435391402d01a443a1355"
-    },
-    {
-      "path": "docs/HEAD_LIVE_SELECTION.md",
-      "bytes": 2185,
-      "sha256": "43ac40bdd93d26e6476982352c8dda5cce637f791f2a6e797b9a68889b03416b"
-    },
-    {
-      "path": "docs/HEAD_LOADING_RELIABILITY.md",
-      "bytes": 14131,
-      "sha256": "ee56f89ebcce3604dbbc57bd7d2c0e6a205bcbbd6600f9924a4e1c6457bde56d"
-    },
-    {
-      "path": "docs/HEAD_LOBAR_CLINICAL.md",
-      "bytes": 3606,
-      "sha256": "d8bf975378dfd9decd2bdc4306a7d55641b5d5dd9ae59f0583259fde4147f796"
-    },
-    {
-      "path": "docs/HEAD_MASK_FOCUS.md",
-      "bytes": 2454,
-      "sha256": "dde73bc1eef51cf9bf0eac245097bbddac4e775392065a2e412069870e825494"
-    },
-    {
-      "path": "docs/HEAD_MASK_LOADING.md",
-      "bytes": 2107,
-      "sha256": "ec1629c46eb90eb366d48637b11d845d12ee0900186c6f89903b67f8156d89a3"
-    },
-    {
-      "path": "docs/HEAD_MASK_NAVIGATION.md",
-      "bytes": 2802,
-      "sha256": "f90e3b671e9e69314232b37e253e704f08b76c6f69486d0f5b2eb8c1d4c3f50c"
-    },
-    {
-      "path": "docs/HEAD_MASK_PICKING.md",
-      "bytes": 2793,
-      "sha256": "9625ea6395979d87b1bd3da02173badc8260fa8dd7b2e9ea6eb93d154da141f5"
-    },
-    {
-      "path": "docs/HEAD_MASK_RESOURCE_BUDGET.md",
-      "bytes": 2042,
-      "sha256": "28f084f763337a93966abddc3764411b96cb3bff205a9f2819f17b0668989f95"
-    },
-    {
-      "path": "docs/HEAD_MODEL_DOCUMENT_ENTRY.md",
-      "bytes": 2177,
-      "sha256": "3a9937dbcf7b72aa1157f1de240deef91de7e055aa9f20bcc32797fb032f41af"
-    },
-    {
-      "path": "docs/HEAD_MRI_ANATOMY_CHECKS.md",
-      "bytes": 4458,
-      "sha256": "2018a829242fb4c62cebbe6a3a6b187fb6acbad06b4372f9f8429184cb3f25db"
-    },
-    {
-      "path": "docs/HEAD_MRI_COMPARISON_REVIEW.md",
-      "bytes": 3212,
-      "sha256": "47393fdafc529e0c26e5a415d96eedfd77b90fbd935cab7532a72260b4495cf4"
-    },
-    {
-      "path": "docs/HEAD_MRI_GUIDED_LEARNING.md",
-      "bytes": 3776,
-      "sha256": "089e9ea0ac48063d38d6cdfc648d2948e9ff67a86fd0a08659ad67a6f5166709"
-    },
-    {
-      "path": "docs/HEAD_MRI_ONLY_CLINICAL.md",
-      "bytes": 3374,
-      "sha256": "492e60f72ce5cbbe68a5e8dbacc06ac9a83da7143f7f37d8c305058ef84c8fd4"
-    },
-    {
-      "path": "docs/HEAD_MRI_ONLY_LINKS.md",
-      "bytes": 3499,
-      "sha256": "cd7b2fa0f4a2aa58de38c8faff527f667ea7d92fb1b8389247dce8660b2939c4"
-    },
-    {
-      "path": "docs/HEAD_MRI_ONLY_TEACHING.md",
-      "bytes": 4437,
-      "sha256": "4525ca6565a2c296e1f73a1899c2746e55fa76deaea57ce5a5ab8bfd578cb130"
-    },
-    {
-      "path": "docs/HEAD_MRI_REVIEW_DRAFTS.md",
-      "bytes": 6607,
-      "sha256": "06e5d2b20a1e45988bcd99efe0a96f5f166203e1935a8669ba330dde9b1407fc"
-    },
-    {
-      "path": "docs/HEAD_NECK_VESSEL_QUIZ_IMPORT.md",
-      "bytes": 1698,
-      "sha256": "a7807fca933ddc98b351db132bcb8ff7a224bca9d125ca3bf330d6300743f8ef"
-    },
-    {
-      "path": "docs/HEAD_OPENING_STATES.md",
-      "bytes": 2472,
-      "sha256": "0748a915240ba6829cc2550599613357dd2f976bbdb3abd07c027e5e77be0af3"
-    },
-    {
-      "path": "docs/HEAD_ORBITAL_GUIDED_LEARNING.md",
-      "bytes": 2243,
-      "sha256": "1723aee30c86d382e014432bd3e3f6864363583b1de83abf051eff9bdff46f15"
-    },
-    {
-      "path": "docs/HEAD_ORBITAL_LINKS.md",
-      "bytes": 4554,
-      "sha256": "231352e8a1d783262d6af2a1fd16ecba69ce97ee56f242b909f11471028d0a1a"
-    },
-    {
-      "path": "docs/HEAD_ORBITAL_TEACHING.md",
-      "bytes": 4355,
-      "sha256": "c0bfcd4f0de6f0dff15ae33091ed8781f99dea6221213dcd525b6a86be6e1ffc"
-    },
-    {
-      "path": "docs/HEAD_PAIRED_ANATOMY.md",
-      "bytes": 3242,
-      "sha256": "90430b483614f6e27860d205ac5057ba0e3a56cfd8f10161491fad6a579bb5e2"
-    },
-    {
-      "path": "docs/HEAD_PAIRED_DECISIONS.md",
-      "bytes": 4089,
-      "sha256": "aae7024e60062811a60c300fa3c9b3698d366592714892a2027f60f2aea6c471"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_FEEDBACK.md",
-      "bytes": 2412,
-      "sha256": "8d6e5d22078ce9c37b8f14fd1dee9ba35b0e1eddaa0aa81720c72cc18e209d66"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_FOLLOWUP.md",
-      "bytes": 2431,
-      "sha256": "0629ac70e4417d4a3f2f5b3cdb28f8682804004b2840853de39901f6c9015f18"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_GUIDED_HANDOFF.md",
-      "bytes": 1497,
-      "sha256": "a4af61572761efb39b0af3c2a7e0a5e8607cf0e0d597a91b065185667e73ec3b"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_ORIGINAL_RESULTS.md",
-      "bytes": 2684,
-      "sha256": "fa8f2111fce92cab5d3c81469ffd11732b50e3b75d732a8f2bc589a601d16eb7"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_PICK_NAVIGATION.md",
-      "bytes": 1666,
-      "sha256": "1b1512395a73a1a18b09fdaa9e6b18448eab2d561e3e4db83fa0bc10efc228ad"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_PLANE_NAVIGATION.md",
-      "bytes": 1701,
-      "sha256": "f2f76c3c9f2c279efb52b3dad0f770f0b238031df191915afaafa552be6bb36e"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_RESULTS_RETURN.md",
-      "bytes": 2598,
-      "sha256": "839f7dec7d6f62bd6c8e6b9c2cf795ea59fe2e260cd7d69c2412df39a90e6cad"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_SUMMARY.md",
-      "bytes": 2866,
-      "sha256": "f7d7bbf952f342041704b44b1f3c67c5658ee9dd616931d04f2d5572e5f7ddbc"
-    },
-    {
-      "path": "docs/HEAD_PRACTICE_SYSTEM_DEDUP.md",
-      "bytes": 1856,
-      "sha256": "77b6ff9b2236f6fa9577f5f241e94fa7bd9fc54e1c783e465f8c84c487cc4765"
-    },
-    {
-      "path": "docs/HEAD_QUESTION_RECOVERY.md",
-      "bytes": 1321,
-      "sha256": "df7d94cdd7c31533c1c12a2340f250b25151f93e39d90fc5dc4d5a4094a17c48"
-    },
-    {
-      "path": "docs/HEAD_REVIEW_WORKING_COPY.md",
-      "bytes": 4276,
-      "sha256": "eae3fd95dd7a92aca7e4389fb6da1376d24f95e4372e364f25891a0f6120c4be"
-    },
-    {
-      "path": "docs/HEAD_SELECTED_PRACTICE.md",
-      "bytes": 2209,
-      "sha256": "41a3a844edaa0d947f671d6c1ec9baa074550b2d574d7fb34d42fd073c38b40d"
-    },
-    {
-      "path": "docs/HEAD_SEQUENCE_PRACTICE.md",
-      "bytes": 3436,
-      "sha256": "b66863727d4612ac1fe028cfe69fee692033939b7bb3c7efcc1e85b8948cbbf8"
-    },
-    {
-      "path": "docs/HEAD_SLICE_NUMBER.md",
-      "bytes": 1854,
-      "sha256": "cd545bf0a26902052755080faad9892be882e245c7b5257576acc90f6c5ebdf3"
-    },
-    {
-      "path": "docs/HEAD_STRUCTURE_SEARCH.md",
-      "bytes": 2416,
-      "sha256": "25d18eaa6cc7d2b5ca8fcf6693405804bf0084afb3a6ac58e5489cac35468ee5"
-    },
-    {
-      "path": "docs/HEAD_STUDY_RETRY.md",
-      "bytes": 2212,
-      "sha256": "55099f7759936608a6321a85683a02388944631ddf6a1b296a983958ebb68dc9"
-    },
-    {
-      "path": "docs/HEAD_STUDY_SET.md",
-      "bytes": 2019,
-      "sha256": "e1e4776b1d13490e1ee75952df9b30c69a019b47e240eadd52130451215ad871"
-    },
-    {
-      "path": "docs/HEAD_SURFACE_LOADING.md",
-      "bytes": 3636,
-      "sha256": "0b2f3e3c7b088ef01fba0f4cb488f884e73a6a0bd502ffbc52c90d14971a8736"
-    },
-    {
-      "path": "docs/HEAD_SURFACE_RECOVERY.md",
-      "bytes": 2734,
-      "sha256": "0a929b75e1856a897f1822216659d3276f29891d2469ef2e54e67528340054ec"
-    },
-    {
-      "path": "docs/HEAD_TEACHING_DRAFT.md",
-      "bytes": 13931,
-      "sha256": "863477fa7acd103dd98e99ac823192ad341840fb37b1c575fb7f78bd44ab1591"
-    },
-    {
-      "path": "docs/HEAD_TEACHING_REVIEW_NAVIGATION.md",
-      "bytes": 2826,
-      "sha256": "44733b447818bb1bc509b70b23fb5744a77e199529c5dfd68ded7fda8e86d111"
-    },
-    {
-      "path": "docs/HEAD_TOUR_CHOICE.md",
-      "bytes": 1930,
-      "sha256": "9f8d33593eba2feb3c9f8b2eff1b4f00c26bedd6349f3c440a25f3677e707a89"
-    },
-    {
-      "path": "docs/HEAD_TOUR_MODALITY_ENTRY.md",
-      "bytes": 1568,
-      "sha256": "a7aa73a6592d59f835a07002d28aabd5cc68ac12767c7d3f543ea990586cdda1"
-    },
-    {
-      "path": "docs/HEAD_TOUR_STEP_NAVIGATION.md",
-      "bytes": 2913,
-      "sha256": "ae4b22bd383e1a9d0729ab158de62b778c092f82b43c7b1e26c0f142a94d0416"
-    },
-    {
-      "path": "docs/HEAD_UNLINKED_MODALITY.md",
-      "bytes": 1925,
-      "sha256": "9f97b9a07eca1557ba00ea116de765ffc20647d04c9e3b87ba666cb0dd2596c8"
-    },
-    {
-      "path": "docs/HEAD_VIEW_MEMORY.md",
-      "bytes": 1481,
-      "sha256": "a1f4961d5422f3da2d9bd06c0d60bc29cf8ba0700a878e4a88f5efd47474ea47"
-    },
-    {
       "path": "docs/head-neck-atlas-pilot.md",
       "bytes": 3663,
       "sha256": "d40745add6e6a1fe6dc3924043e9c6e46d3d39eb1eef454241c7895abfc2b8d2"
-    },
-    {
-      "path": "docs/HEPATOBILIARY_WEBSITE_IMPORT.md",
-      "bytes": 3335,
-      "sha256": "022c172df177b28a159327d7acf60ce863f9123fc1e81e610b884b146f9d863b"
     },
     {
       "path": "docs/hippocampal-teaching-delivery-20260929.md",
@@ -11099,39 +11654,9 @@
       "sha256": "baebabc7e309808928c483be9c648a09f17ff0a75ad7f5162dc6b70960701ce2"
     },
     {
-      "path": "docs/ILIAC_VESSEL_QUIZ_IMPORT.md",
-      "bytes": 1326,
-      "sha256": "3f657b371614f29a08e71bb7bb72913dcf1bb19fae17b87d1a5a1f2073738abc"
-    },
-    {
-      "path": "docs/IMAGING_PANE_NAVIGATION.md",
-      "bytes": 1541,
-      "sha256": "f99b8079b8c1514cae1579eb54b47956095c842b78711abb65d3eca9c64c3505"
-    },
-    {
-      "path": "docs/INLINE_MODEL_RECOVERY.md",
-      "bytes": 2427,
-      "sha256": "643d0f2b372ef6c39833366dd1c70153a82a383fef53c6f5e0fc2f8ace237384"
-    },
-    {
-      "path": "docs/INTRACRANIAL_ULTRASOUND_INTEGRATION.md",
-      "bytes": 2427,
-      "sha256": "e6713e9dfdf42cfd79cd0b996201dea85fbe45494e1add338440b5cfdcfee989"
-    },
-    {
       "path": "docs/intrinsic-larynx-tour-delivery-20260928.md",
       "bytes": 2717,
       "sha256": "48208ccd0af15782bfa82227c0507a8f2c7281e61847b12158c686b38eef7f76"
-    },
-    {
-      "path": "docs/LABEL_KEYBOARD_IMPORT.md",
-      "bytes": 1338,
-      "sha256": "1d605965775c7cb87b65eaf2c8c14b030bba52285ad682598f0fdd163cd7c4f1"
-    },
-    {
-      "path": "docs/LARYNGEAL_SUPPORT_WEBSITE_IMPORT.md",
-      "bytes": 2878,
-      "sha256": "d908942ee7259d4151417d86c05b1608c78d60585a21863610ddf648dc19441a"
     },
     {
       "path": "docs/lazy-teaching-delivery-20260929.md",
@@ -11139,84 +11664,9 @@
       "sha256": "55d82c778d7bed87bc314200ae6873217addfb1dbb0ccc648463cac216183212"
     },
     {
-      "path": "docs/LEARNER_ROUTE_CONTRACT.md",
-      "bytes": 2383,
-      "sha256": "65c8a01f280c335084ea1b2e2444f2f5ef17e275e63822da530df2721dfad610"
-    },
-    {
-      "path": "docs/LECTURE_PPTX_INTAKE.md",
-      "bytes": 11472,
-      "sha256": "03d46e51f5500d9a6a799341840f6b75e2fd9467336927a19b780b20f73be6f1"
-    },
-    {
-      "path": "docs/LECTURE_REQUEST_SAFETY.md",
-      "bytes": 1870,
-      "sha256": "ce13d9b9f25ad0121f40234edf2560ec0d8af50a110de3405f356e881c2b12e6"
-    },
-    {
-      "path": "docs/LECTURE_SLIDE_LINKS.md",
-      "bytes": 4030,
-      "sha256": "427732fd42bd05e74f33d8fc0ddbcc965475744041c3c1d53935fc1cc1262bcd"
-    },
-    {
-      "path": "docs/LEG_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 1413,
-      "sha256": "ce0a0968fafea30f0fb7022b099b903473bca656b5fa46ede334fb2db5f18eca"
-    },
-    {
-      "path": "docs/LIMB_CONNECTIVE_CT_IMPORT.md",
-      "bytes": 1432,
-      "sha256": "49c34a67bd2d39ef14ff012be23a8db6c9ad358d87f2df36ce392d1ec6c1283a"
-    },
-    {
       "path": "docs/limb-guided-learning-delivery-20260927.md",
       "bytes": 1830,
       "sha256": "7a654c08e0153c9818e61a928e729ec8e055c3eece121b3376df81bb1ec2074e"
-    },
-    {
-      "path": "docs/LOCAL_HEAD_AUTOLOAD.md",
-      "bytes": 2079,
-      "sha256": "108eb6823ae7a38945a4b219cfe2ff4988acc1af48c075db597c24bd79f84cfd"
-    },
-    {
-      "path": "docs/LOCAL_MANUAL_RELOAD_PREVIEW.md",
-      "bytes": 3116,
-      "sha256": "001b06a6ba1037f2b23a3e96c881a7095ca0dc8d53fecca55340c60e3be497f6"
-    },
-    {
-      "path": "docs/LOCAL_PREVIEW_POST_STABILITY.md",
-      "bytes": 3456,
-      "sha256": "b26474fdff7837764e86b47dc9bf948d2fc6e659dd89cabc142b88d213dbdfd9"
-    },
-    {
-      "path": "docs/LOCAL_PREVIEW_RUNTIME_RECOVERY.md",
-      "bytes": 3147,
-      "sha256": "42aa3d3241a9fcc889b2a01d530ee5fb155de2a4fbadc6d1424f6a07bd88aaa3"
-    },
-    {
-      "path": "docs/LOCAL_PREVIEW_RUNTIME.md",
-      "bytes": 5031,
-      "sha256": "f59baa9b787291e7e088f095a29f36f061669201d0f9b5849a0c6ce905cb8b9a"
-    },
-    {
-      "path": "docs/LOWER_ARTERIAL_WEBSITE_IMPORT.md",
-      "bytes": 6587,
-      "sha256": "2c3b910cb808ec55952d8fd96b9fd7a059499993a080097e93790f5439a92b52"
-    },
-    {
-      "path": "docs/LOWER_CONNECTIVE_WEBSITE_IMPORT.md",
-      "bytes": 1668,
-      "sha256": "dcc8054f32210a83d37369c107f5a976e1a4e53fea6823bdaf6bff1a34087949"
-    },
-    {
-      "path": "docs/LOWER_LIMB_VESSEL_WEBSITE_IMPORT.md",
-      "bytes": 3116,
-      "sha256": "a243d2b6ae4b52643ff6d5ca6e2119dd9e4b248d79e5fba0cf283344a04d3d46"
-    },
-    {
-      "path": "docs/LOWER_NECK_TOUR_IMPORT.md",
-      "bytes": 1515,
-      "sha256": "56039003496418eb6417e6f8b81061011f357efa4c143aa7f811d4bb162814d5"
     },
     {
       "path": "docs/lower-limb-atlas-pilot.md",
@@ -11234,29 +11684,9 @@
       "sha256": "93f9ad8b94f52352c7338186dc2f485c8c5482a0413e8651341bded9a8ceaee7"
     },
     {
-      "path": "docs/MAJOR_LIMB_BONE_WEBSITE_IMPORT.md",
-      "bytes": 3254,
-      "sha256": "98fee5327008ff77ad909d6b790c60808d551cd2b31c724ee783e6d23a41a5ab"
-    },
-    {
       "path": "docs/male-duct-tour-delivery-20260928.md",
       "bytes": 2350,
       "sha256": "c6dee8ecc87edce87521dce7498024a8768a5551f1d2956a9aaf9c93f2759a59"
-    },
-    {
-      "path": "docs/MENISCAL_GUIDED_INSPECTION.md",
-      "bytes": 3517,
-      "sha256": "a3a0ec1a09bd045a1743ead6e3193619e470bd16c057170cfa2bbd4250f62069"
-    },
-    {
-      "path": "docs/MESENTERIC_VESSEL_WEBSITE_20261007.md",
-      "bytes": 3470,
-      "sha256": "ac79206a9531bf97d073d391af7d0d93ff4622bba89fe8219a3337c6cd7f88fc"
-    },
-    {
-      "path": "docs/MESENTERIC_WEBSITE_IMPORT.md",
-      "bytes": 3304,
-      "sha256": "85358971686f65b12a87aa2578b4b34f57ed9dcc5c07a761d898b4c040163d31"
     },
     {
       "path": "docs/mobile-anatomy-targets-delivery-20260929.md",
@@ -11264,114 +11694,14 @@
       "sha256": "8897fe1201e2c75b686004ff18d3a58af10421628ed5d6975bc93c40e6d8e505"
     },
     {
-      "path": "docs/MODEL_ACCESS_WEBSITE_IMPORT.md",
-      "bytes": 2874,
-      "sha256": "118a74d2234681c0ce99dd96fc0c71ac798a41be5bb9fa146ec5a2e499576c82"
-    },
-    {
-      "path": "docs/MRI_INDEPENDENT_REVIEW.md",
-      "bytes": 3327,
-      "sha256": "26a4d5277a6cd5968b75c8e1ba31ea0bbae21f3a4bebb13e4b2ccff54eb5dd2c"
-    },
-    {
-      "path": "docs/MUTATION_REQUEST_BOUNDARIES.md",
-      "bytes": 11843,
-      "sha256": "5949d41390ac93a10202cac264f6c1a6841bc6c1b52558cc3e3c5b070fcfb55b"
-    },
-    {
       "path": "docs/naming-options.md",
       "bytes": 2151,
       "sha256": "9d510049fc624d3cbdc64cf2affff7bf9aa1425685c18c760503e56b362daac5"
     },
     {
-      "path": "docs/NATIVE_GUIDE_REVIEW.md",
-      "bytes": 5122,
-      "sha256": "e3d15f29a518d1846d69f1a372a58e9960af144dc5eb74d694eb73e9b5cbb25b"
-    },
-    {
-      "path": "docs/NATIVE_MRI_ACTIVITY_CONTINUITY.md",
-      "bytes": 1903,
-      "sha256": "3a9e27e0199ecd742e8f1fd7063e00b52511b3f4e36f80e52d695333ff12111b"
-    },
-    {
-      "path": "docs/NATIVE_MRI_ANSWER_LEARNING.md",
-      "bytes": 3020,
-      "sha256": "8fb6ec3ec45a0cb1701ce6846cb97080fc462a6f908282da2bd323037a314ff9"
-    },
-    {
-      "path": "docs/NATIVE_MRI_BODY_HANDOFF.md",
-      "bytes": 4163,
-      "sha256": "33e03ebae73627df400893e29ac6590cbff1ed7bad19cd5ceba49ccdbbf93636"
-    },
-    {
-      "path": "docs/NATIVE_MRI_GUIDE_FOCUS.md",
-      "bytes": 1685,
-      "sha256": "b6dae92f27cafd437eac5f2371895cf9361edd6d1c9ad032a04a61404cb614b2"
-    },
-    {
-      "path": "docs/NATIVE_MRI_GUIDE_PRACTICE_RETURN.md",
-      "bytes": 2048,
-      "sha256": "1632bfe0f10cb1a8cc646910b67deb570c1db9aafc2a9dcd2832c1b43515363e"
-    },
-    {
-      "path": "docs/NATIVE_MRI_GUIDED_PLANE_FOCUS.md",
-      "bytes": 2184,
-      "sha256": "909b76f881edcff3e2c4993d3f9e0430e20df303369478ddbcbacb121e37f6d1"
-    },
-    {
-      "path": "docs/NATIVE_MRI_LOCATION_CHECK.md",
-      "bytes": 3459,
-      "sha256": "34d24fb5bef544d064127539baf31bc33be62314069d94981b142268859e809a"
-    },
-    {
-      "path": "docs/NATIVE_MRI_NEXT_PRACTICE.md",
-      "bytes": 2720,
-      "sha256": "f03e75bf781de487356790a67f1d5931a3f48bf27d5c20d8c74687e41a755647"
-    },
-    {
-      "path": "docs/NATIVE_MRI_POSTERIOR_GUIDE.md",
-      "bytes": 4088,
-      "sha256": "a7d1e6e190d556c77bc1ac0f9a90536298c0676281f6615ae0f8967b29d70ea0"
-    },
-    {
-      "path": "docs/NATIVE_MRI_PRACTICE_FOCUS.md",
-      "bytes": 2111,
-      "sha256": "1b6d2f69f2ecd7cac1d3cc08a7233950b4a48c286bce58fd73bb284e752ada50"
-    },
-    {
-      "path": "docs/NATIVE_MRI_REFERENCE_FEEDBACK.md",
-      "bytes": 2567,
-      "sha256": "506368e709d46812fb097761523eded371d7807936023bb21fd44cc04b5a999d"
-    },
-    {
-      "path": "docs/NATIVE_MRI_SPECIMEN_HANDOFF.md",
-      "bytes": 3663,
-      "sha256": "fbbdaf16968c5944533aa438df347887391e8e64524f5e077921620b85b5f627"
-    },
-    {
-      "path": "docs/NATIVE_MRI_STRUCTURE_CHECK.md",
-      "bytes": 4657,
-      "sha256": "6dafa267e63d3ab249a33306198e720e9a870fcd5fdc9f7648bd6d8bfb816df1"
-    },
-    {
-      "path": "docs/NECK_MUSCLE_QUIZ_IMPORT.md",
-      "bytes": 1535,
-      "sha256": "9337a663e04cb810b1cc9824fa6fc1874e9b94deb4d09ea40406b2fa11b20fa2"
-    },
-    {
       "path": "docs/neck-pelvis-guided-learning-delivery-20260927.md",
       "bytes": 1931,
       "sha256": "552bd7a26ba66f04e69f41236842a03bb6e593ea5471787e5f4caa0901325aba"
-    },
-    {
-      "path": "docs/NESTED_SELECTION_WEBSITE_IMPORT.md",
-      "bytes": 2855,
-      "sha256": "c08ccf764e3f45e03111bb258f6b95f1d6e3156d30014994137ea661f1595c8c"
-    },
-    {
-      "path": "docs/NESTED_TOUR_LOAD_ERRORS_WEBSITE_20261007.md",
-      "bytes": 2036,
-      "sha256": "ebb18f2fd8d28e97ad1770000e3a0f79e7c2ff74a9295f7c3cd3b2f5be94e367"
     },
     {
       "path": "docs/nested-education-delivery-20260929.md",
@@ -11394,49 +11724,14 @@
       "sha256": "44978ab69c4bdc1572d88527d03840e61669359edcd64c2facc8f82098652140"
     },
     {
-      "path": "docs/NONREGIONAL_RELEASE_REPLAY.md",
-      "bytes": 2605,
-      "sha256": "8001838062fb3ef817a1437610da002750ceb6192b49cfc74b3f157e967d5591"
-    },
-    {
       "path": "docs/optic-source-comparison.md",
       "bytes": 3183,
       "sha256": "4ec02ce7439e88958badcd4bfee18b5c1fdafb1f4fb35626787355f651498d22"
     },
     {
-      "path": "docs/ORBITAL_INBOX_REGRESSION.md",
-      "bytes": 2142,
-      "sha256": "b6a4231178e5a2bc24d9964b39460fc06876b82eb4428d4e123a39ff5da2bbff"
-    },
-    {
-      "path": "docs/ORBITAL_MUSCLE_QUIZ_IMPORT.md",
-      "bytes": 2343,
-      "sha256": "cc60c101674d2f93c1abbea0226fdb9af92bee706b4675e0ae82305f12ff665a"
-    },
-    {
-      "path": "docs/ORBITAL_NERVE_QUIZ_IMPORT.md",
-      "bytes": 1003,
-      "sha256": "5663d537b1f8174fc59e30be9318e73feefe6a65835d6c32c6d2d5385d8c010c"
-    },
-    {
-      "path": "docs/ORBITAL_NERVE_TOUR_IMPORT.md",
-      "bytes": 1633,
-      "sha256": "6c0ac568e22fcf365fb272371847cb3c1268ea0797956b697b6b63396b792d91"
-    },
-    {
       "path": "docs/orbital-tour-delivery-20260928.md",
       "bytes": 3020,
       "sha256": "d915a4568d04a1d5cd49963a438ec79e61253c5c7cc952a1bcc91adfe8f027b5"
-    },
-    {
-      "path": "docs/PANCREATIC_VESSEL_WEBSITE_20261007.md",
-      "bytes": 2185,
-      "sha256": "2d087e1e8c0124d42f75a7276aa88958a1f1b63b8b73a8f3e9c7235b16089821"
-    },
-    {
-      "path": "docs/PELVIC_QUIZ_WEBSITE_IMPORT.md",
-      "bytes": 2516,
-      "sha256": "65c32c459f79df98b330af29709b6aea9782a3e418d81ecbe26e25dab6bffde7"
     },
     {
       "path": "docs/pelvic-organ-quiz-delivery-20260928.md",
@@ -11449,54 +11744,14 @@
       "sha256": "fb2cfc26908b48860396736d817da70bcdbea42e0bebf93c7a15e28246c23838"
     },
     {
-      "path": "docs/PHARYNGEAL_MUSCLE_WEBSITE_20261007.md",
-      "bytes": 3133,
-      "sha256": "602bbe537c4deb1ca211cc81ecf924838d178f459949a2b1aee0b5aa95635f4b"
-    },
-    {
-      "path": "docs/PHARYNGEAL_WEBSITE_IMPORT.md",
-      "bytes": 2373,
-      "sha256": "226ab4c3f0569c7a3ebd8ee2b061e7493d23ca686cef023ab4228bd44762ccdf"
-    },
-    {
       "path": "docs/pilot-readiness.md",
       "bytes": 3410,
       "sha256": "60428357fe067cd03216823a32abac8d9402410e647dd69bd1a45cc72f43dab5"
     },
     {
-      "path": "docs/PLATFORM_IMPROVEMENT_PLAN.md",
-      "bytes": 6129,
-      "sha256": "8eeb07a12e750f4e82f05e69e096984f5afa7f44b53fc63535372df5ff919e56"
-    },
-    {
       "path": "docs/platform-architecture.md",
       "bytes": 5159,
       "sha256": "a182e174e9c28a21e7a5e98d48211ef3e6be32e729644daa974b49eb4bc08351"
-    },
-    {
-      "path": "docs/PLEXUS_PRESENTATION_REBIND_20261008.md",
-      "bytes": 3002,
-      "sha256": "a6964504fccc4c2af72b43bbcee30b5bf58a32f18e031862276312a22c1b60e9"
-    },
-    {
-      "path": "docs/PLEXUS_SCHEMATIC_REVIEW.md",
-      "bytes": 5536,
-      "sha256": "e929cb003bb4376bde3c3abbcd88ab808eb8cedbfeceee9d7d84c1f156802830"
-    },
-    {
-      "path": "docs/PORTAL_HEPATIC_WEBSITE_INTEGRATION.md",
-      "bytes": 3693,
-      "sha256": "b58da3e72bbebc70f3199b252fecb2437616026a1f2e79d5dc633bf343619eae"
-    },
-    {
-      "path": "docs/POSTERIOR_FOSSA_DELIVERY.md",
-      "bytes": 2262,
-      "sha256": "a0d89191ce00629ed004268b5605436d45085c31e54fddcf23a0976a12842845"
-    },
-    {
-      "path": "docs/PRACTICE_MASK_PLACEMENT.md",
-      "bytes": 1439,
-      "sha256": "69b08110f6561e41ccdd9f44c9b3d8b998bad1707ea4e1c713f3edbdc2bea9cc"
     },
     {
       "path": "docs/practice-setup-delivery-20260929.md",
@@ -11509,49 +11764,9 @@
       "sha256": "48c3c1dd772fd6a5b53f9597cc042b33e265d06c00fe5fff47cc2425c22ccef0"
     },
     {
-      "path": "docs/PSOAS_WEBSITE_INTEGRATION.md",
-      "bytes": 4598,
-      "sha256": "b64ae9fcde78bade5ca228524504ebbe9a7bd24dec811d121520aa6dbdc767fa"
-    },
-    {
-      "path": "docs/PULMONARY_VENOUS_WEBSITE_20261007.md",
-      "bytes": 4471,
-      "sha256": "45f535142dfa0270971b6232079af5c79293bb30d05d6547389a2406c34171b1"
-    },
-    {
-      "path": "docs/QUIZ_DISCLOSURE_IMPORT.md",
-      "bytes": 1152,
-      "sha256": "1f5ea46053f1a43d2566a62b54696d54d84408f21d70b36472ea65cfefb3ec71"
-    },
-    {
-      "path": "docs/REGIONAL_MRI_PACKAGE.md",
-      "bytes": 40561,
-      "sha256": "16ce4231b04ec1ce7efa82406cebb3d84dc83132bdc65d2097311d7608d4147e"
-    },
-    {
-      "path": "docs/REGRESSION_EPOCHS.md",
-      "bytes": 2603,
-      "sha256": "a17f2dc7fd2e861700899ab9cd0904743625e8bda688448221d14bf7ed96ac6d"
-    },
-    {
-      "path": "docs/RELATED_ANATOMY_LECTURES.md",
-      "bytes": 4434,
-      "sha256": "bf7fff5f7c862791542b507191046945988069de3d0ba7588c9b182361c703d2"
-    },
-    {
       "path": "docs/release-regression-checkpoints.md",
       "bytes": 8878,
       "sha256": "5956ea467ce53000d408db4e2c00132b236e4b76a8fe8e109b8e23c61e7412fb"
-    },
-    {
-      "path": "docs/RENAL_ULTRASOUND_WEBSITE_20261007.md",
-      "bytes": 5846,
-      "sha256": "30411a2fa3f86b7bd396c6fbb9bb8611d5bdd6603f0af55b780b8decc54fa512"
-    },
-    {
-      "path": "docs/RENAL_XRAY_WEBSITE_20261007.md",
-      "bytes": 2841,
-      "sha256": "e7b36a77720cb8a7ee9acb9aa392a0d08ec78f9863cd83df9219e0124c67412b"
     },
     {
       "path": "docs/renal-tour-browser-20260930.json",
@@ -11567,21 +11782,6 @@
       "path": "docs/responsive-atlas-labels.md",
       "bytes": 3331,
       "sha256": "c0afe71ca3cd7e1f2d08740b86d8bc15c4b2c752cdcc07456ba723a2ae33d7a1"
-    },
-    {
-      "path": "docs/REVIEW_CHECKLIST_LABELS_WEBSITE_20261007.md",
-      "bytes": 1859,
-      "sha256": "1c73ec3d2f367e3f02ecf9da02b62879a30786aab1ef4343e0db1f0db15c9c5e"
-    },
-    {
-      "path": "docs/REVIEW_REVISION_DOMAIN_DESIGN.md",
-      "bytes": 3111,
-      "sha256": "586ac24abda634afaa91c181b063aeed7b1b54312d2811e3ed3b7fe5f0810218"
-    },
-    {
-      "path": "docs/REVIEW_TEACHING_ALIGNMENT_20261008.md",
-      "bytes": 3731,
-      "sha256": "cd819f74c39f1f404182eb1f5ce8504e5568752f765a7a820c3280a8aac2c2f3"
     },
     {
       "path": "docs/review-navigation-browser-20260929.json",
@@ -11604,34 +11804,9 @@
       "sha256": "11ef09fd4709a581b88504b3d68af44648c55218663e4d15df2e00b31ff86e85"
     },
     {
-      "path": "docs/SALPINGOPHARYNGEUS_MRI_INTEGRATION.md",
-      "bytes": 2328,
-      "sha256": "2280479b14df9301e3791c6c3b31322f5cc3234273b710778e98be71b1d58974"
-    },
-    {
       "path": "docs/search-word-forms-delivery-20260929.md",
       "bytes": 1808,
       "sha256": "966f7b38f4243354d6b0af4f36a118381ad480d07ff7b01a9380dd0395d0b750"
-    },
-    {
-      "path": "docs/SHOULDER_ACCESS_IMPORT.md",
-      "bytes": 1595,
-      "sha256": "9c2cc66396068364ac65ff091c75f05f2cb9c764637e53dd5ef38e5ad02933e1"
-    },
-    {
-      "path": "docs/SHOULDER_ARM_ARTERY_QUIZ_IMPORT.md",
-      "bytes": 1343,
-      "sha256": "80776e614e35b16984cda3e3bab8a5831e00e90d6ff0b412a6c01e2f202e0265"
-    },
-    {
-      "path": "docs/SHOULDER_ARM_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 3132,
-      "sha256": "1e7387ac2bc2f3351cec04bd97d3f0b109367630defc226970f287415f407eb2"
-    },
-    {
-      "path": "docs/SHOULDER_SEARCH_WEBSITE_20261007.md",
-      "bytes": 3823,
-      "sha256": "37d00d71953960b2d8dd1715bf71faeb58f15429e67d78272fd2b6912089f839"
     },
     {
       "path": "docs/shoulder-arterial-ct-delivery-20260927.md",
@@ -11669,81 +11844,6 @@
       "sha256": "73247bd421ab716fdd65f5d240a06476c673c6158e869c70c66455177ae822e6"
     },
     {
-      "path": "docs/SPECIMEN_ACCESS_IMPORT.md",
-      "bytes": 1483,
-      "sha256": "21ae3142be9508b71a6cf5d4f7543f378cde620b53e0c1408d8e5ab2e1d7215b"
-    },
-    {
-      "path": "docs/SPINAL_BONE_WEBSITE_IMPORT.md",
-      "bytes": 2647,
-      "sha256": "2031dba48f93c76c209653aeabca6f85df42bc7e4b9b88b9b3cd5519460212e4"
-    },
-    {
-      "path": "docs/SPINAL_DISC_QUIZ_WEBSITE_20261007.md",
-      "bytes": 4490,
-      "sha256": "6e6eac5292815104e50735a1cfff910e03448f7da0f9af7ec8029477acb7e04c"
-    },
-    {
-      "path": "docs/SPINAL_MUSCLE_QUIZ_IMPORT.md",
-      "bytes": 1250,
-      "sha256": "bd7c7d674e32dc1c95a47ccec6dff1d5e140a356dabffe0a07ece888d72d18e0"
-    },
-    {
-      "path": "docs/SPINAL_MUSCLE_XRAY_INTEGRATION.md",
-      "bytes": 2333,
-      "sha256": "2b75b2345dd6bf47d7e17c384f41607897918b75d30dc9eaae95e2005a76ce43"
-    },
-    {
-      "path": "docs/SPINE_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 2898,
-      "sha256": "36b64618867a33f9eb8e13fcb3b1cdf0f32b725008440f5849a06f027921c194"
-    },
-    {
-      "path": "docs/STUDIO_CORRECTION_LINEAGE.md",
-      "bytes": 3969,
-      "sha256": "d8407d7f3f9f21154a0ef5f14b54aafb12412456aced8b695e7b19a8776f673b"
-    },
-    {
-      "path": "docs/STUDIO_COURSE_DRAFT_RECOVERY_NOTICE.md",
-      "bytes": 1588,
-      "sha256": "f5019fa8c0049a1266859c94bc60f16aadd8a08f01ffbbcb4e0c6aa2a54f7c19"
-    },
-    {
-      "path": "docs/STUDIO_COURSE_HISTORY.md",
-      "bytes": 2807,
-      "sha256": "89d2ed1543e6a7ed11573ce6565115436ed117c3f6337429317949c373a647cc"
-    },
-    {
-      "path": "docs/STUDIO_DRAFT_SAFETY.md",
-      "bytes": 3604,
-      "sha256": "8068ed8ca897af104e43befac599e432f82e425eb09470ec35692e4bf300a977"
-    },
-    {
-      "path": "docs/STUDIO_LARGE_PUBLICATION_LINEAGE.md",
-      "bytes": 2582,
-      "sha256": "7794e975f75ed7da7e9ffd09a39a8590d07f6d19e836d312892f247cf720cc6e"
-    },
-    {
-      "path": "docs/STUDIO_QUEUES.md",
-      "bytes": 1427,
-      "sha256": "d18ec0cd438b5e3df6b28481d7ee344211ee4abf858495ea894fb9b5cbd995dc"
-    },
-    {
-      "path": "docs/STUDIO_RELEASE_PREVIEW.md",
-      "bytes": 1496,
-      "sha256": "f12a00f38515b2d819ee4d88e5663ae9f643400d02387cb683db0be579288a1c"
-    },
-    {
-      "path": "docs/STUDIO_WORKBOOK_CORRECTIONS.md",
-      "bytes": 6922,
-      "sha256": "e2a095d4b72a376ea8285ccf9d5fc3ed0442894c8b5e00a69c115417e05f3b81"
-    },
-    {
-      "path": "docs/STUDIO_WORKBOOK_RETIREMENT.md",
-      "bytes": 3762,
-      "sha256": "745a0aa1675627367eee061274ec48639e4399a24c731bf1594730a8110094a1"
-    },
-    {
       "path": "docs/studio-simplification.md",
       "bytes": 13213,
       "sha256": "bde8fff524a31d0644c4791b3ebc1c928a67df8cd699fcff57d7a653ba152ac8"
@@ -11764,44 +11864,9 @@
       "sha256": "6bb92cae55f70e1299ab52d2c8512753b09d633dbc25fd4b8b8e332923ed33b0"
     },
     {
-      "path": "docs/SUPRASCAPULAR_CT_WEBSITE_IMPORT.md",
-      "bytes": 1858,
-      "sha256": "832f06492553c4b5d5174c35e806d4a5b663dd03a08191997df8c8fa47f4cd9c"
-    },
-    {
       "path": "docs/test-runner.md",
       "bytes": 2545,
       "sha256": "51c6db18ace8d80ba02830f051c097f8609c793ca7cfb7afe78952be2f12ed00"
-    },
-    {
-      "path": "docs/THIGH_DEEP_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 2960,
-      "sha256": "8dd2b3563d25457c517361589f929b5a492271aaa20221d56accfb7fa5b30fc4"
-    },
-    {
-      "path": "docs/THIGH_MUSCLE_WEBSITE_IMPORT.md",
-      "bytes": 2277,
-      "sha256": "23e22a2fce4cf0b11c37740beebcb496b328c6d0fc7760cb9edee3c2d6e26d4e"
-    },
-    {
-      "path": "docs/THORACIC_MRI_WEBSITE_20261006.md",
-      "bytes": 3956,
-      "sha256": "0b9f96f480e2c58a8e52fb19ed9d18246a8234668bed5649acad2878ebb0612c"
-    },
-    {
-      "path": "docs/THORACIC_SMALL_VESSEL_MRI_IMPORT.md",
-      "bytes": 1360,
-      "sha256": "f60a9ab9f5b7860d142ac6adae6b4d888f3c458d2d18a5b548d7f52f06f65086"
-    },
-    {
-      "path": "docs/THORACIC_SYSTEMIC_WEBSITE_20261007.md",
-      "bytes": 4733,
-      "sha256": "1d35d9fc6fcb018b6e38b8253d4ff4634c43d0d6e9990ded901f3012aabed9d3"
-    },
-    {
-      "path": "docs/THORACIC_VESSEL_WEBSITE_IMPORT.md",
-      "bytes": 2745,
-      "sha256": "a306105221a9ae380d44d6216aadccd32e14c0de47561f532c02fb20c2c0a3bf"
     },
     {
       "path": "docs/thorax-atlas-pilot.md",
@@ -11812,16 +11877,6 @@
       "path": "docs/thorax-tour-quick-check-delivery-20260927.md",
       "bytes": 2599,
       "sha256": "dc4f348ddb5758169e7d2beb1a7703f14dca46e0f701a3e09f998bc32429d505"
-    },
-    {
-      "path": "docs/TOUR_LIBRARY_PAUSE_IMPORT.md",
-      "bytes": 1058,
-      "sha256": "412e9d5caecb86985a753c878a593ce44fad514823c9db73e537c30879867424"
-    },
-    {
-      "path": "docs/TOUR_READING_FOCUS_WEBSITE_IMPORT.md",
-      "bytes": 1762,
-      "sha256": "af7e78fdcda97be06824e1532039009276512aa1098dfc8aa217f376b98011fc"
     },
     {
       "path": "docs/tour-imaging-notes-delivery-20260927.md",
@@ -11859,24 +11914,9 @@
       "sha256": "8be81d7a760f52e8a2e72b39e55b32c44990b1e33d9220ceea7f60d52d15a2ec"
     },
     {
-      "path": "docs/TRUNK_CORE_QUIZ_IMPORT.md",
-      "bytes": 1649,
-      "sha256": "5d393fe687159c4515675658453c65e75208c137e0dd218b437083d0ed0baabc"
-    },
-    {
-      "path": "docs/TRUNK_MUSCLE_QUIZ_IMPORT.md",
-      "bytes": 1222,
-      "sha256": "47d1690f08134bac8e28aa70966681120a0c67d079809849289f5ed8d61f368f"
-    },
-    {
       "path": "docs/um-ankle-imaging-delivery-20260927.md",
       "bytes": 2693,
       "sha256": "daf5206611361ccb9b5e0e579157c30c5ec1c58fa5dc2b07291c101e9b9604ab"
-    },
-    {
-      "path": "docs/UPPER_VENOUS_WEBSITE_IMPORT.md",
-      "bytes": 2475,
-      "sha256": "45a4a91869b71b6a45222d05ed89c49eabaf1c21d9817d11cebcf6648346997d"
     },
     {
       "path": "docs/upper-arm-reasoning-delivery-20260929.md",
@@ -11897,11 +11937,6 @@
       "path": "docs/visible-medicine-logo-system.md",
       "bytes": 1203,
       "sha256": "57467f2cb250e6abc3815bfa2be5b21bc82a4abbe26ad53403a68b8b2a0ae082"
-    },
-    {
-      "path": "docs/VOCAL_TISSUE_WEBSITE_20261007.md",
-      "bytes": 3122,
-      "sha256": "a0f4f3418d99ffd08ddadfef9cc667d3a43fb94927ca9b26a1fb76ab3238b4a7"
     },
     {
       "path": "docs/whole-body-atlas-pilot.md",
@@ -11974,11 +12009,6 @@
       "sha256": "cd4be83309318e46142eea200af8f7b09a46f019791468fabd503af2a89bca7b"
     },
     {
-      "path": "drizzle/meta/_journal.json",
-      "bytes": 1644,
-      "sha256": "2f4ec05393fa43a905679c488624560a916403852a172f50e89d5b4685582cb2"
-    },
-    {
       "path": "drizzle/meta/0000_snapshot.json",
       "bytes": 2065,
       "sha256": "57a15239236c23eb52ec2356b458664c969c4cf31c3a969e9d2cb9b11b0a5038"
@@ -12032,6 +12062,11 @@
       "path": "drizzle/meta/0010_snapshot.json",
       "bytes": 265951,
       "sha256": "7beb389def2a849032d3005f767fa54e287585e6ae42602701bf363d2643fb86"
+    },
+    {
+      "path": "drizzle/meta/_journal.json",
+      "bytes": 1644,
+      "sha256": "2f4ec05393fa43a905679c488624560a916403852a172f50e89d5b4685582cb2"
     },
     {
       "path": "env.d.ts",
@@ -13109,6 +13144,11 @@
       "sha256": "693b6975ee2149ce1fbc8983f2132d5c779c131d3054e9d4e79540ba2ef675de"
     },
     {
+      "path": "lib/public-route-focus.ts",
+      "bytes": 1228,
+      "sha256": "34cb0f8a958cb6c64de84a238709689d960f121ff62632f1aa615af32c976f26"
+    },
+    {
       "path": "lib/question-bank-repository.ts",
       "bytes": 6060,
       "sha256": "8ff824174b11269f9aee5793d51426026e8a071109579367707675642f9fa9c6"
@@ -13494,36 +13534,6 @@
       "sha256": "0a297e3abb9e4bf103bce05e3c69d6563ff00ce522d99512c1306820edc0e671"
     },
     {
-      "path": "LICENSES/clinical-review/react-three-fiber-LICENSE.txt",
-      "bytes": 1072,
-      "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a"
-    },
-    {
-      "path": "LICENSES/geist-mono-OFL.txt",
-      "bytes": 4387,
-      "sha256": "1781d2806a07d91c4edf4740b88449fab7d0eadad53f7c351b94cd4d4eb8c00f"
-    },
-    {
-      "path": "LICENSES/head-atlas-drei-LICENSE.txt",
-      "bytes": 1069,
-      "sha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8"
-    },
-    {
-      "path": "LICENSES/head-atlas-noble-hashes-LICENSE.txt",
-      "bytes": 1109,
-      "sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec"
-    },
-    {
-      "path": "LICENSES/head-atlas-three-LICENSE.txt",
-      "bytes": 1081,
-      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
-    },
-    {
-      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 10691,
-      "sha256": "fe0a143ef9b37ea072888c6f12ef696cf9fdcfe260cd0e2f1bca09ab5e9003f5"
-    },
-    {
       "path": "next.config.ts",
       "bytes": 109,
       "sha256": "fe6aa70bd863267445528ae46be876dcc9e2aceca5513862c1cf59599d84b599"
@@ -13537,6 +13547,11 @@
       "path": "package.json",
       "bytes": 2424,
       "sha256": "a565ae86769901977a232427dc1669936959bbe04ccf283e0b233f1865886cd0"
+    },
+    {
+      "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+      "bytes": 387283,
+      "sha256": "ac44710170787536e8e9c5707cdf2486f510caaf6834eccd6ace9a9228c98d14"
     },
     {
       "path": "public/atlas-review-viewer/assets/abdomen-BdPYB30z.js",
@@ -13769,34 +13784,9 @@
       "sha256": "9803fc470e4e2b2954edaf755173d25ec792698521aec205cd0d0cbcbdd76fad"
     },
     {
-      "path": "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
-      "bytes": 387283,
-      "sha256": "ac44710170787536e8e9c5707cdf2486f510caaf6834eccd6ace9a9228c98d14"
-    },
-    {
-      "path": "public/atlas-runtime/female-pelvis/assets/index-BZ74p3Ah.css",
-      "bytes": 237255,
-      "sha256": "c73be168bf68bcd751d1d8e117b3b25eccef6781196e6a8a95f6c09887a1191e"
-    },
-    {
-      "path": "public/atlas-runtime/female-pelvis/assets/index-Cpj14cyY.js",
-      "bytes": 2745300,
-      "sha256": "c342817d470337bed8dabffc436f31a495f9757d817e2919d008009c78ff47a8"
-    },
-    {
       "path": "public/atlas-runtime/female-pelvis/BUNDLED_NOTICES.txt",
       "bytes": 36869,
       "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
-    },
-    {
-      "path": "public/atlas-runtime/female-pelvis/bundled-dependencies.json",
-      "bytes": 1862,
-      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
-    },
-    {
-      "path": "public/atlas-runtime/female-pelvis/index.html",
-      "bytes": 486,
-      "sha256": "5a716cc5636bd22fc35f562a9977b57039dab9775ccec659d72bfce98ae5e269"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/LICENSE",
@@ -13814,14 +13804,29 @@
       "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
     },
     {
+      "path": "public/atlas-runtime/female-pelvis/assets/index-BZ74p3Ah.css",
+      "bytes": 237255,
+      "sha256": "c73be168bf68bcd751d1d8e117b3b25eccef6781196e6a8a95f6c09887a1191e"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/assets/index-Cpj14cyY.js",
+      "bytes": 2745300,
+      "sha256": "c342817d470337bed8dabffc436f31a495f9757d817e2919d008009c78ff47a8"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/bundled-dependencies.json",
+      "bytes": 1862,
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
+    },
+    {
+      "path": "public/atlas-runtime/female-pelvis/index.html",
+      "bytes": 486,
+      "sha256": "5a716cc5636bd22fc35f562a9977b57039dab9775ccec659d72bfce98ae5e269"
+    },
+    {
       "path": "public/atlas-runtime/female-pelvis/manifest.json",
       "bytes": 6208,
       "sha256": "d074cb541a4d09b65a02fb4c2ab53be49d98a200a73475f045c3e5d36d5238c8"
-    },
-    {
-      "path": "public/atlas-runtime/female-pelvis/models/hra-pelvis/catalog.json",
-      "bytes": 65210,
-      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/models/hra-pelvis/NOTICE.md",
@@ -13829,9 +13834,9 @@
       "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927"
     },
     {
-      "path": "public/atlas-runtime/female-pelvis/models/hra-renal/catalog.json",
-      "bytes": 135779,
-      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
+      "path": "public/atlas-runtime/female-pelvis/models/hra-pelvis/catalog.json",
+      "bytes": 65210,
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/models/hra-renal/NOTICE.md",
@@ -13839,9 +13844,59 @@
       "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78"
     },
     {
+      "path": "public/atlas-runtime/female-pelvis/models/hra-renal/catalog.json",
+      "bytes": 135779,
+      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
+    },
+    {
       "path": "public/atlas-runtime/female-pelvis/source-inputs.json",
       "bytes": 16681,
       "sha256": "8d30e8a28131377073bca658630f0a8875ee38a574a0c5aed8821abacaa47021"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/BUNDLED_NOTICES.txt",
+      "bytes": 36869,
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D.md",
+      "bytes": 2903,
+      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D_FULL_BODY.md",
+      "bytes": 20504,
+      "sha256": "5c958b307fa0d041561c99cabd4895045b81381de214ea571958a736ffedb25b"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 350786,
+      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/bodyparts3d-license-evidence.html",
+      "bytes": 14694,
+      "sha256": "90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/um-lower-limb-v1-2/dataverse.json",
+      "bytes": 12272,
+      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/LICENSES/um-lower-limb-v1-2/readme.txt",
+      "bytes": 7540,
+      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967"
     },
     {
       "path": "public/atlas-runtime/head-neck/assets/abdomen-BdPYB30z.js",
@@ -14024,14 +14079,14 @@
       "sha256": "bd72b50511e7cc374d60e2d6b36b6902db8e24450731b7e28cdb698d4cb6b522"
     },
     {
-      "path": "public/atlas-runtime/head-neck/assets/ventricles-CfdrTivY.css",
-      "bytes": 1203,
-      "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/assets/ventricles-CKX59doN.js",
       "bytes": 1315771,
       "sha256": "65c38884e9205fa68137b163f45c88247e8a85d8d787cb91fbbc490c50ac4bbe"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/assets/ventricles-CfdrTivY.css",
+      "bytes": 1203,
+      "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
     },
     {
       "path": "public/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png",
@@ -14044,11 +14099,6 @@
       "sha256": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42"
     },
     {
-      "path": "public/atlas-runtime/head-neck/BUNDLED_NOTICES.txt",
-      "bytes": 36869,
-      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/bundled-dependencies.json",
       "bytes": 1862,
       "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
@@ -14059,49 +14109,14 @@
       "sha256": "19f822b67db9f7a33f307303b69956d747bee0033236a41fa95bb7a2a6990f00"
     },
     {
-      "path": "public/atlas-runtime/head-neck/LICENSE",
-      "bytes": 1467,
-      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D_FULL_BODY.md",
-      "bytes": 20504,
-      "sha256": "5c958b307fa0d041561c99cabd4895045b81381de214ea571958a736ffedb25b"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/bodyparts3d-license-evidence.html",
-      "bytes": 14694,
-      "sha256": "90dea95329aea5015ce339e430d9f342090617c82ee48613e15dd2240f08b746"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/BODYPARTS3D.md",
-      "bytes": 2903,
-      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/CC-BY-4.0.txt",
-      "bytes": 18657,
-      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 350786,
-      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/um-lower-limb-v1-2/dataverse.json",
-      "bytes": 12272,
-      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375"
-    },
-    {
-      "path": "public/atlas-runtime/head-neck/LICENSES/um-lower-limb-v1-2/readme.txt",
-      "bytes": 7540,
-      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/manifest.json",
       "bytes": 627564,
       "sha256": "53b9a0c8d2bb925d321804e5c0d831016fad430c40bdfc68b7317cc1fea251fa"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/NOTICE.md",
+      "bytes": 2084,
+      "sha256": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0"
     },
     {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -14119,11 +14134,6 @@
       "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
     },
     {
-      "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/NOTICE.md",
-      "bytes": 2084,
-      "sha256": "da24e3c60a56b46d3d3c23933beee0752a5adac3fe3bf3967c9eac1a73ccc7f0"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/source-audit.json",
       "bytes": 98061,
       "sha256": "d805df5b5693a8ad5e9463cb04d31d002fb56c107c600718cf4886472de6dd87"
@@ -14137,6 +14147,11 @@
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/abdominal-wall/specimen-data.ts.txt",
       "bytes": 6057,
       "sha256": "06795f84c4440639f4b24ea31e10b5e0a37f0e8f494a261f512d12c8ea1687b7"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/back-layers/NOTICE.md",
+      "bytes": 2087,
+      "sha256": "41cdebcbf14c33d84bb3338db05015b9cf1c4a815b6909cb2db698fd2c6e884f"
     },
     {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/back-layers/catalog.json",
@@ -14154,11 +14169,6 @@
       "sha256": "d44c2a342063c22bb793a7ab5f9bbf3374f03f0d433f7530333f409d1fea42f9"
     },
     {
-      "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/back-layers/NOTICE.md",
-      "bytes": 2087,
-      "sha256": "41cdebcbf14c33d84bb3338db05015b9cf1c4a815b6909cb2db698fd2c6e884f"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d-v3/back-layers/source-audit.json",
       "bytes": 165771,
       "sha256": "9332271aa8fb112732af273747aba8ce3f1938f15399cbc8e35566333e0e4387"
@@ -14174,14 +14184,14 @@
       "sha256": "f11998c77ff5823e257f9c81b625532d952ded36fd9729e65fbace6d0090f62c"
     },
     {
-      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/celiac-display/display-correction.json",
-      "bytes": 6073,
-      "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d/celiac-display/README.md",
       "bytes": 1210,
       "sha256": "348ccc4db232320685b406e6356381432fa76d56ae4e3ed635a2125f262ed26a"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/bodyparts3d/celiac-display/display-correction.json",
+      "bytes": 6073,
+      "sha256": "d71a1bccdbd2c18e1d5a9f6537170e1acbb66c832fa6fbee68e25c7a0ad3ca82"
     },
     {
       "path": "public/atlas-runtime/head-neck/models/bodyparts3d/credits.html",
@@ -14194,14 +14204,14 @@
       "sha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7"
     },
     {
-      "path": "public/atlas-runtime/head-neck/models/hra-pelvis/catalog.json",
-      "bytes": 65210,
-      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/models/hra-pelvis/NOTICE.md",
       "bytes": 3098,
       "sha256": "898505e9c8837bd74e9f2535726676e13e9020e593ef15943b61a7845ff1c927"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/hra-pelvis/catalog.json",
+      "bytes": 65210,
+      "sha256": "a0e997a2eb4af64d25bf5f6f9901ea70616fb59443696f7630e0aea6bd53c619"
     },
     {
       "path": "public/atlas-runtime/head-neck/models/hra-pelvis/source-metadata.json",
@@ -14209,14 +14219,14 @@
       "sha256": "b9f137b1176c31419c68b78ac87f0926f874dad22f56d4dde7df3e2f15bab501"
     },
     {
-      "path": "public/atlas-runtime/head-neck/models/hra-renal/catalog.json",
-      "bytes": 135779,
-      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/models/hra-renal/NOTICE.md",
       "bytes": 2374,
       "sha256": "cb30b4dc59e4df19cf533753eab2299354d0f948e694d865042971a74cf2da78"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/hra-renal/catalog.json",
+      "bytes": 135779,
+      "sha256": "0bdc5a8ec478c58fbc977b2cf720543d9715d3654bf42b9b3bb5d2e1d49cecf5"
     },
     {
       "path": "public/atlas-runtime/head-neck/models/hra-renal/source-metadata.json",
@@ -14229,14 +14239,14 @@
       "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
     },
     {
-      "path": "public/atlas-runtime/head-neck/models/um-limb/catalog.json",
-      "bytes": 81420,
-      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
-    },
-    {
       "path": "public/atlas-runtime/head-neck/models/um-limb/MODEL_NOTICE.md",
       "bytes": 1903,
       "sha256": "283726a12527577a3f28343ace3ab37094c8726e31a6e7782ee208d14d79011e"
+    },
+    {
+      "path": "public/atlas-runtime/head-neck/models/um-limb/catalog.json",
+      "bytes": 81420,
+      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
     },
     {
       "path": "public/atlas-runtime/head-neck/selection-channel.json",
@@ -14249,29 +14259,9 @@
       "sha256": "83d34ca62d296b03565ca9a60f898a0969f430cfdde862f40de0cd1dffb9549c"
     },
     {
-      "path": "public/atlas-runtime/lower-limb/assets/index-DvAkAKSA.css",
-      "bytes": 237656,
-      "sha256": "2cd51d428c078ecfb25cfce64d8fcbb0327e367174ffb33f06a11ed6b2af5ca3"
-    },
-    {
-      "path": "public/atlas-runtime/lower-limb/assets/index-iBn3w-ix.js",
-      "bytes": 2525677,
-      "sha256": "a5e190e3436bdcd9a86766fe8eeee188dddbed21cb7b6012ecfe08b366cedf7e"
-    },
-    {
       "path": "public/atlas-runtime/lower-limb/BUNDLED_NOTICES.txt",
       "bytes": 36869,
       "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
-    },
-    {
-      "path": "public/atlas-runtime/lower-limb/bundled-dependencies.json",
-      "bytes": 1862,
-      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
-    },
-    {
-      "path": "public/atlas-runtime/lower-limb/index.html",
-      "bytes": 477,
-      "sha256": "2bd1af5db73eadb5fe458d2ef1a8e2adaef3c584b3df36a1d9d63983da385853"
     },
     {
       "path": "public/atlas-runtime/lower-limb/LICENSE",
@@ -14294,14 +14284,34 @@
       "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967"
     },
     {
-      "path": "public/atlas-runtime/lower-limb/manifest.json",
-      "bytes": 3436,
-      "sha256": "cec0d368eadf30c536f66404eff92fb1eb3b819e589885645511a64ed21ab81f"
-    },
-    {
       "path": "public/atlas-runtime/lower-limb/MODEL_NOTICE.md",
       "bytes": 1903,
       "sha256": "283726a12527577a3f28343ace3ab37094c8726e31a6e7782ee208d14d79011e"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/assets/index-DvAkAKSA.css",
+      "bytes": 237656,
+      "sha256": "2cd51d428c078ecfb25cfce64d8fcbb0327e367174ffb33f06a11ed6b2af5ca3"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/assets/index-iBn3w-ix.js",
+      "bytes": 2525677,
+      "sha256": "a5e190e3436bdcd9a86766fe8eeee188dddbed21cb7b6012ecfe08b366cedf7e"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/bundled-dependencies.json",
+      "bytes": 1862,
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/index.html",
+      "bytes": 477,
+      "sha256": "2bd1af5db73eadb5fe458d2ef1a8e2adaef3c584b3df36a1d9d63983da385853"
+    },
+    {
+      "path": "public/atlas-runtime/lower-limb/manifest.json",
+      "bytes": 3436,
+      "sha256": "cec0d368eadf30c536f66404eff92fb1eb3b819e589885645511a64ed21ab81f"
     },
     {
       "path": "public/atlas-runtime/lower-limb/models/um-knee/catalog.json",
@@ -14322,6 +14332,36 @@
       "path": "public/atlas-runtime/lower-limb/specimen-channel.json",
       "bytes": 72,
       "sha256": "2a131269cfcae5f93e22b95fe9f3f1c970f1f65b159b02435cc4ec260e1e3a99"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/BUNDLED_NOTICES.txt",
+      "bytes": 36869,
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/BODYPARTS3D.md",
+      "bytes": 2903,
+      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 350786,
+      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
+    },
+    {
+      "path": "public/atlas-runtime/shoulder/LICENSES/dependency-license-audit.json",
+      "bytes": 162634,
+      "sha256": "46202b5f237c1ac0202f3fde0e74647abd84da6f2fc1b430b44723faca88b58e"
     },
     {
       "path": "public/atlas-runtime/shoulder/assets/abdomen-BdPYB30z.js",
@@ -14404,11 +14444,6 @@
       "sha256": "0e0838fb37d99baef5d175c1afd13ce42ce443e1e617121bcc6389c54e0cd86f"
     },
     {
-      "path": "public/atlas-runtime/shoulder/BUNDLED_NOTICES.txt",
-      "bytes": 36869,
-      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
-    },
-    {
       "path": "public/atlas-runtime/shoulder/bundled-dependencies.json",
       "bytes": 1862,
       "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
@@ -14417,31 +14452,6 @@
       "path": "public/atlas-runtime/shoulder/index.html",
       "bytes": 504,
       "sha256": "d1d5e9df7a54a933ab1d7f23c44d6fedf33079846d1baabd2a499adc3aa6dbc7"
-    },
-    {
-      "path": "public/atlas-runtime/shoulder/LICENSE",
-      "bytes": 1467,
-      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
-    },
-    {
-      "path": "public/atlas-runtime/shoulder/LICENSES/BODYPARTS3D.md",
-      "bytes": 2903,
-      "sha256": "f38c70c390c721341f55b89515d0757941d4042a1b299419efc1f96d399957b6"
-    },
-    {
-      "path": "public/atlas-runtime/shoulder/LICENSES/CC-BY-4.0.txt",
-      "bytes": 18657,
-      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
-    },
-    {
-      "path": "public/atlas-runtime/shoulder/LICENSES/dependency-license-audit.json",
-      "bytes": 162634,
-      "sha256": "46202b5f237c1ac0202f3fde0e74647abd84da6f2fc1b430b44723faca88b58e"
-    },
-    {
-      "path": "public/atlas-runtime/shoulder/LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 350786,
-      "sha256": "89a4f8128c2567544ed0501c540e6c319b37319bc4d83920f530db962525c29e"
     },
     {
       "path": "public/atlas-runtime/shoulder/manifest.json",
@@ -14509,19 +14519,14 @@
       "sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec"
     },
     {
-      "path": "public/media/atlas/manifest.json",
-      "bytes": 927,
-      "sha256": "191e57f8ad31fd31d6f7e6c0f733a814a0e2a9ac9f5332b12d0614d308f7b937"
-    },
-    {
       "path": "public/media/atlas/NOTICES.md",
       "bytes": 3524,
       "sha256": "55f0d74ecb7d0a110c901f97e59a3522c9ed27c781f86e6cf65406a264a3c5bd"
     },
     {
-      "path": "README.md",
-      "bytes": 13986,
-      "sha256": "14b7f46e3dbd411dc518588f57095ba57b8b833715194a93628666d6422d9d78"
+      "path": "public/media/atlas/manifest.json",
+      "bytes": 927,
+      "sha256": "191e57f8ad31fd31d6f7e6c0f733a814a0e2a9ac9f5332b12d0614d308f7b937"
     },
     {
       "path": "scripts/anatomy-coverage/build-independent.mjs",
@@ -16010,8 +16015,8 @@
     },
     {
       "path": "tests/atlas-region-picker.test.ts",
-      "bytes": 16357,
-      "sha256": "509f4758b5f496c6a140e3f402ae3619fd7f158859fadb27bda007ba843831fa"
+      "bytes": 16527,
+      "sha256": "5ba45ca88c427c30d33b548f905a0fb01cd23aa131b85da37ffdcf65b44734b3"
     },
     {
       "path": "tests/atlas-regional-catchup.test.ts",
@@ -17880,13 +17885,13 @@
     },
     {
       "path": "tests/desktop-workspace-simplification.test.ts",
-      "bytes": 10229,
-      "sha256": "96cc515d5c8927e8737285bf4ebfb4c54b3a0c0ee40d28c70bbe8f8720247e9c"
+      "bytes": 10397,
+      "sha256": "3f81c7572d853ff917302dfcf7bbb702a372baabdb1f170563a4963b17203c6b"
     },
     {
       "path": "tests/disc-comparison.test.ts",
-      "bytes": 14707,
-      "sha256": "b0b6e0fbdd37e7dd06eb0a4b3deee363d5a3f63e3a00acf7efe705c496b4ad73"
+      "bytes": 14875,
+      "sha256": "fcd88b100d6de2ad8a615079a0f153631bb581900b2ee51706c7f30a06277504"
     },
     {
       "path": "tests/education-atlas-reference.test.ts",
@@ -17962,6 +17967,16 @@
       "path": "tests/female-pelvis-pilot.test.ts",
       "bytes": 6217,
       "sha256": "7ba522ca83bb358af6edfe4af32c757bac864e83b892971b2c2883470596b623"
+    },
+    {
+      "path": "tests/fixtures/HeadAtlasLearningLibrary.precompact.tsx.raw",
+      "bytes": 12787,
+      "sha256": "82d4c02c0253035c442ec758d1afdf9c82cb426ca886881bf05fcc25f0aa2cf7"
+    },
+    {
+      "path": "tests/fixtures/SiteFooter-original.tsx.raw",
+      "bytes": 1904,
+      "sha256": "43eb886b38c20a64b7a8e100282b1a45db0bc92e585c78b1241107b73364a571"
     },
     {
       "path": "tests/fixtures/abdomen-frame-migration/original.json",
@@ -18894,6 +18909,11 @@
       "sha256": "3aedc6660613d5913d7e033dbe8f1395c147a58dda633089cc3f650652343e15"
     },
     {
+      "path": "tests/fixtures/closed56-viewer/public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+      "bytes": 387283,
+      "sha256": "a4a0b308758f864c533e2795b7dd81b35a99c86fb95bfdbd8194fc8d647235b9"
+    },
+    {
       "path": "tests/fixtures/closed56-viewer/public/atlas-review-viewer/assets/abdomen-BdPYB30z.js",
       "bytes": 897248,
       "sha256": "119c0b18bbe6c8c6d169d4747926b4e4f4216313e772d1c33755e2b031441f77"
@@ -19119,11 +19139,6 @@
       "sha256": "a45216b569596ce2e51281db8dcbb1d6d722c1816294e7e7e178804792ae76c5"
     },
     {
-      "path": "tests/fixtures/closed56-viewer/public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
-      "bytes": 387283,
-      "sha256": "a4a0b308758f864c533e2795b7dd81b35a99c86fb95bfdbd8194fc8d647235b9"
-    },
-    {
       "path": "tests/fixtures/closed57-documents/atlas-review/integration-inputs.json",
       "bytes": 261504,
       "sha256": "ec7a5ed9873819b14239034b53abbc4e024c8ac4f38dc1fbebb8f8c069fef5bd"
@@ -19214,14 +19229,14 @@
       "sha256": "bada2a6e74703795305079207ce2209fba63ba02aa88628db48fcb4c95bbd1f5"
     },
     {
-      "path": "tests/fixtures/closed57-overrides/components/head-atlas.css",
-      "bytes": 24960,
-      "sha256": "3edd00db77c3259e85f08243fec6a2be8ac9eb40655782fd8464a6e1aa404a3a"
-    },
-    {
       "path": "tests/fixtures/closed57-overrides/components/HeadAtlasViewer.raw",
       "bytes": 107435,
       "sha256": "06b4c293f5931f5cd0e36471de46718c6bbf26ea3500ec24c57c4de15e476841"
+    },
+    {
+      "path": "tests/fixtures/closed57-overrides/components/head-atlas.css",
+      "bytes": 24960,
+      "sha256": "3edd00db77c3259e85f08243fec6a2be8ac9eb40655782fd8464a6e1aa404a3a"
     },
     {
       "path": "tests/fixtures/closed57-overrides/docs/completion-checklist.json",
@@ -19242,6 +19257,11 @@
       "path": "tests/fixtures/closed57-reader-originals/historical-current-atlas-delivery-56.mjs.raw",
       "bytes": 5932,
       "sha256": "e9aa187511184e512626534368b245a0e3987fc84c24054f0b277029c3207b11"
+    },
+    {
+      "path": "tests/fixtures/closed57-viewer/public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+      "bytes": 387283,
+      "sha256": "a4a0b308758f864c533e2795b7dd81b35a99c86fb95bfdbd8194fc8d647235b9"
     },
     {
       "path": "tests/fixtures/closed57-viewer/public/atlas-review-viewer/assets/abdomen-BdPYB30z.js",
@@ -19467,11 +19487,6 @@
       "path": "tests/fixtures/closed57-viewer/public/atlas-review-viewer/index.html",
       "bytes": 1245,
       "sha256": "233666414c9c89881a3a0d8860d445e9c618ba2c470414040eb441fd86d863d0"
-    },
-    {
-      "path": "tests/fixtures/closed57-viewer/public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
-      "bytes": 387283,
-      "sha256": "a4a0b308758f864c533e2795b7dd81b35a99c86fb95bfdbd8194fc8d647235b9"
     },
     {
       "path": "tests/fixtures/closed59-documents/atlas-review/integration-inputs.json",
@@ -20774,11 +20789,6 @@
       "sha256": "9c6a4d8208046b43180256fa009bc1b73538793b4fc3e85ea8d657bf0bee1a78"
     },
     {
-      "path": "tests/fixtures/HeadAtlasLearningLibrary.precompact.tsx.raw",
-      "bytes": 12787,
-      "sha256": "82d4c02c0253035c442ec758d1afdf9c82cb426ca886881bf05fcc25f0aa2cf7"
-    },
-    {
       "path": "tests/fixtures/historical-cardiac-chest-head-neck-manifest.json",
       "bytes": 627564,
       "sha256": "09189d13a033c9c251de2a21672b3d34fbc32fc743cdaf439bffa450e47ef34b"
@@ -21232,6 +21242,36 @@
       "path": "tests/fixtures/portal-admission-before-ui-teaching.txt",
       "bytes": 3011,
       "sha256": "2c32d0068ce42d8a0bcc33b259e608af81fa9fbdd37ec27d03638a04e379b383"
+    },
+    {
+      "path": "tests/fixtures/public-focus-before-20261019/atlas-region-picker.test.ts.raw",
+      "bytes": 16357,
+      "sha256": "509f4758b5f496c6a140e3f402ae3619fd7f158859fadb27bda007ba843831fa"
+    },
+    {
+      "path": "tests/fixtures/public-focus-before-20261019/desktop-workspace-simplification.test.ts.raw",
+      "bytes": 10229,
+      "sha256": "96cc515d5c8927e8737285bf4ebfb4c54b3a0c0ee40d28c70bbe8f8720247e9c"
+    },
+    {
+      "path": "tests/fixtures/public-focus-before-20261019/disc-comparison.test.ts.raw",
+      "bytes": 14707,
+      "sha256": "b0b6e0fbdd37e7dd06eb0a4b3deee363d5a3f63e3a00acf7efe705c496b4ad73"
+    },
+    {
+      "path": "tests/fixtures/public-focus-before-20261019/header-session.test.ts.raw",
+      "bytes": 17635,
+      "sha256": "7f81e39dbce1732fd8a8e0fdfb33b08b12aa62e73ee8e0ea5bd409eed01f43c4"
+    },
+    {
+      "path": "tests/fixtures/public-focus-before-20261019/manifest.json",
+      "bytes": 523,
+      "sha256": "07c90320a5df121a0854b3cac0af706740340cba7406ae32d2145dabcd6110da"
+    },
+    {
+      "path": "tests/fixtures/public-focus-before-20261019/workspace-utilities-dismissal.test.mjs.raw",
+      "bytes": 3982,
+      "sha256": "9a7ebf80a73f903873e6b9227f68aefaf1bf5c710360b3b8793aa4b77a1a6aea"
     },
     {
       "path": "tests/fixtures/radial-eus-51/.gitattributes.raw",
@@ -21774,11 +21814,6 @@
       "sha256": "c6e5c602d035fd6501242947c7dbaac79632d7885d09fa56a0516b9677dfb1b2"
     },
     {
-      "path": "tests/fixtures/SiteFooter-original.tsx.raw",
-      "bytes": 1904,
-      "sha256": "43eb886b38c20a64b7a8e100282b1a45db0bc92e585c78b1241107b73364a571"
-    },
-    {
       "path": "tests/fixtures/structure-learning-ui-8d32653e.txt",
       "bytes": 8345,
       "sha256": "1a2fc904f39b93cb68ed2590f6aa523f5db94f2c79b6aa9d1df1b0944c647c29"
@@ -21787,6 +21822,36 @@
       "path": "tests/fixtures/ui-teaching-current-delivery-c237.mjs.raw",
       "bytes": 12922,
       "sha256": "e0aed39045349b6ed6eecd95e08fde0df56b805d242f2e527301b0df2af0b884"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-colic-arterial-xray.test.ts.raw",
+      "bytes": 22211,
+      "sha256": "76efe78cb9e237ac51d961390c762be364bbcad4ad18c448482a4c4552e16d0b"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-hepatic-arterial-xray.test.ts.raw",
+      "bytes": 21549,
+      "sha256": "55b2f98bb5e9436419f2db2a4e8e46195d0b91cbf0478105cecf57df597c5a74"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-leg-arterial-xray.test.ts.raw",
+      "bytes": 25315,
+      "sha256": "4f27cdf19e4f59d930db25ee3cc00147582998a56ae8200d7fede807d6739286"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-leg-venous-xray.test.ts.raw",
+      "bytes": 22449,
+      "sha256": "cc554fa7ce6e3bd277a35ec2e45dea0ca50be52176589bba055f5c2325b9c5bf"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-pancreatic-arterial-xray.test.ts.raw",
+      "bytes": 25109,
+      "sha256": "69ee2b967c071aaad1562efed45476ba02e68588c71fd2895f189840eadeeb9b"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-visceral-arterial-xray.test.ts.raw",
+      "bytes": 23753,
+      "sha256": "881101a2d4b2df2d95c3f1a5a4b14ba50df821c973ea98717877619fba77a216"
     },
     {
       "path": "tests/fixtures/vite-cache-isolated-epoch.ts.raw",
@@ -22995,8 +23060,8 @@
     },
     {
       "path": "tests/header-session.test.ts",
-      "bytes": 17635,
-      "sha256": "7f81e39dbce1732fd8a8e0fdfb33b08b12aa62e73ee8e0ea5bd409eed01f43c4"
+      "bytes": 17803,
+      "sha256": "492dca5ede07569046d3a209a7becaf77682705f6b9dc5c9093457a50ce1dfd2"
     },
     {
       "path": "tests/header-workspace-destination.test.mjs",
@@ -23579,6 +23644,16 @@
       "sha256": "0bcd1b90a4799262f292fc249b9fee0918c4c4b4766f56bbbc38c6e3cd900063"
     },
     {
+      "path": "tests/public-focus-adapter-preservation.test.mjs",
+      "bytes": 4180,
+      "sha256": "f86dcce5d11a4eddc5563825d6747af9bee293f90a465cd6beb131131ac2e327"
+    },
+    {
+      "path": "tests/public-route-focus.test.mjs",
+      "bytes": 2052,
+      "sha256": "285ab98ad273609a86dabb0bf060e99d952299e4a4d9c53b165f5009b6da0d37"
+    },
+    {
       "path": "tests/radial-eus-current-transition.test.mjs",
       "bytes": 12920,
       "sha256": "04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847"
@@ -23984,6 +24059,11 @@
       "sha256": "093711dabd8c55a071a906f1d19b20f0f0e2c2f3f481d6823d940b8945c891ef"
     },
     {
+      "path": "tests/siteframe-focus-lifecycle.test.mjs",
+      "bytes": 10780,
+      "sha256": "0b5f77823ef38a38004256bb7fe7801cf217a753af6515fc3f1b881a1ef0831e"
+    },
+    {
       "path": "tests/slice-wheel.test.mjs",
       "bytes": 2596,
       "sha256": "6f42fcb4d71aacb3c66b6e590e51fd3436dd0a35f7677d57787d568dabffbb90"
@@ -24314,6 +24394,11 @@
       "sha256": "84b1363004059cc33f88e948edf4f35d1d81af8012feb40de9481ff1fe7c957f"
     },
     {
+      "path": "tests/vascular-live-admission-preservation.test.mjs",
+      "bytes": 3781,
+      "sha256": "59699ecd8d8173668aa7bef97132d96905e5d53e80766c95769ee1ab25959132"
+    },
+    {
       "path": "tests/verify-scoped-checkpoint.test.mjs",
       "bytes": 4555,
       "sha256": "a5670e02f920e437dd40f94b93e88fe0ad565f6f8fcd8d99f95a336f1bc61577"
@@ -24420,8 +24505,8 @@
     },
     {
       "path": "tests/workspace-utilities-dismissal.test.mjs",
-      "bytes": 3982,
-      "sha256": "9a7ebf80a73f903873e6b9227f68aefaf1bf5c710360b3b8793aa4b77a1a6aea"
+      "bytes": 4143,
+      "sha256": "e51e1c845ec7f64946cb860f154d9c5bda1d0063e3ac4d626e7150078b449202"
     },
     {
       "path": "tsconfig.json",
@@ -24442,41 +24527,6 @@
       "path": "worker/index.ts",
       "bytes": 10429,
       "sha256": "62945d47cd6b2ff831c8005dde19b52ff649d2c7c92c3385bb0661518b8c495e"
-    },
-    {
-      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-colic-arterial-xray.test.ts.raw",
-      "bytes": 22211,
-      "sha256": "76efe78cb9e237ac51d961390c762be364bbcad4ad18c448482a4c4552e16d0b"
-    },
-    {
-      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-hepatic-arterial-xray.test.ts.raw",
-      "bytes": 21549,
-      "sha256": "55b2f98bb5e9436419f2db2a4e8e46195d0b91cbf0478105cecf57df597c5a74"
-    },
-    {
-      "path": "tests/vascular-live-admission-preservation.test.mjs",
-      "bytes": 3781,
-      "sha256": "59699ecd8d8173668aa7bef97132d96905e5d53e80766c95769ee1ab25959132"
-    },
-    {
-      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-pancreatic-arterial-xray.test.ts.raw",
-      "bytes": 25109,
-      "sha256": "69ee2b967c071aaad1562efed45476ba02e68588c71fd2895f189840eadeeb9b"
-    },
-    {
-      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-leg-arterial-xray.test.ts.raw",
-      "bytes": 25315,
-      "sha256": "4f27cdf19e4f59d930db25ee3cc00147582998a56ae8200d7fede807d6739286"
-    },
-    {
-      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-leg-venous-xray.test.ts.raw",
-      "bytes": 22449,
-      "sha256": "cc554fa7ce6e3bd277a35ec2e45dea0ca50be52176589bba055f5c2325b9c5bf"
-    },
-    {
-      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-visceral-arterial-xray.test.ts.raw",
-      "bytes": 23753,
-      "sha256": "881101a2d4b2df2d95c3f1a5a4b14ba50df821c973ea98717877619fba77a216"
     }
   ],
   "heldDocuments": [
@@ -24492,9 +24542,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2384057,
-      "sha256": "02fda1190faec47c6fac0e3c0185cc9e6af045d8831a94c8cfbcbb269b7b177a"
+      "bytes": 2387882,
+      "sha256": "da08053f5547de2687741ce0fb4f44d019d9247fed6061aa693b781d2ec9eeb6"
     }
   ],
-  "scope": "Filtered source-only vascular regression batch. Four further current-admission roots (pancreatic arterial, leg arterial, leg venous, visceral arterial), four whole originals and extended six-root preservation suite. Complete immutable author/baseline/count/source/model/Review/emitted/security proofs retained outside five explicit seams.20 actual cases and semantic types pass at4897known inputs; first new harness literal mismatch retained and corrected without changing original assertions. No app/Atlas/Review/model/export/new dependency/media change, scan, private data, raw canonical ancestry, candidate geometry or three held operational-document contents. Public route-focus and history/corpus packages remain staged and excluded. Full71/eight/register67/clinical nulls retained. Not full-suite/browser/clinical/spatial/release approval, whole-project/private-data backup or public deployment."
+  "scope": "Filtered source-only public navigation improvement. Real page heading receives keyboard focus after ordinary new-path links, including streamed loading fallback; user controls/dialogs, initial/filter/hash/Back/Forward/viewer/workspace/authoring/auth behavior preserved. Bounded observer/timer/temporary-tabindex cleanup. Five whole-original assertion-preserving mock adapters with immutable raw fixtures and deletion-refusal proof.48actual canonical cases pass, exact source-matched semantic types/normal production build pass, and owned isolated desktop Chrome verifies streamed h1 focus/native Tab cleanup/native Back scroll restoration/Forward/1280px overflow. Original import/layout/browser first reds retained locally. No new dependency, font, model, texture, dataset, Atlas/Review/export, permission or fee changes. No scans, masks, private asset modules, D1/SQLite, patient IDs, credentials, raw canonical ancestry, candidate geometry or three held document contents uploaded. Existing main manual-reload preview and owner tabs not restarted/refreshed. Not full-suite, fullAT/mobile/real-role/clinical/spatial/release acceptance or whole-project/private-data backup; no website deployment. Full roadmap remains active."
 }

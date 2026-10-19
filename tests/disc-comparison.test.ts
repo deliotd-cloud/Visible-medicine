@@ -9,6 +9,7 @@ import {createRequire} from 'node:module';
 import React from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import ts from 'typescript';
+import {isPublicFocusPath,shouldFocusPublicRoute} from '../lib/public-route-focus.ts';
 import {Miniflare,Log,LogLevel,convertV4MiniflareOptions} from 'miniflare';
 import {deliverDiscComparison} from '../lib/disc-comparison-delivery.ts';
 const packet=JSON.parse(readFileSync('lib/disc-comparison-manifest.json','utf8'));
@@ -24,6 +25,7 @@ function renderedSiteFrame(pathname:string){
   id==='next/navigation'?{usePathname:()=>pathname}:
   id==='./SiteFooter'?{SiteFooter:()=>null}:
   id==='./SiteHeader'?{SiteHeader:()=>null}:
+  id==='../lib/public-route-focus'?{isPublicFocusPath,shouldFocusPublicRoute}:
   id.endsWith('.css')?{}:siteRequire(id),loaded,loaded.exports);
  return renderToStaticMarkup(React.createElement(loaded.exports.SiteFrame,{signedIn:true},React.createElement('main',null,'disc')));
 }
