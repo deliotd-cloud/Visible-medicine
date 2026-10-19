@@ -1,8 +1,8 @@
 {
   "schema": "visible-medicine.screened-source-backup/1",
-  "at": "2026-10-19T17:43:37.966Z",
-  "sourceManifestSha256": "2e0ec17d94ccb66d4600a1e7d85343eaaf5496b602f1d9b31934368fb0b06b32",
-  "parent": "b9af9488ef22120b4b29a848bd0faf70988570e7",
+  "at": "2026-10-19T19:15:52.475Z",
+  "sourceManifestSha256": "2a483c2465e78b4c6a9a8bab6e5ae73b064cb5e6f9d16937339d85d3c5ff4ab0",
+  "parent": "a63ab4928bec6fd22e632ddeeb70081a84ebb2d2",
   "atlasSource": "f5097af8493701d64a8e2a2b5797df380f3b348a",
   "atlasTree": "fba69dff6f83e7f092ccdab4c9a37f05c090c98b",
   "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8",
@@ -16690,8 +16690,8 @@
     },
     {
       "path": "tests/clinical-review-colic-arterial-xray.test.ts",
-      "bytes": 22211,
-      "sha256": "76efe78cb9e237ac51d961390c762be364bbcad4ad18c448482a4c4552e16d0b"
+      "bytes": 22688,
+      "sha256": "c2a079b5b83d4bb2ca4c822278a1f2fd1ad3bf1933f58658c8b2704b72704866"
     },
     {
       "path": "tests/clinical-review-collicular-teaching.test.ts",
@@ -16970,8 +16970,8 @@
     },
     {
       "path": "tests/clinical-review-hepatic-arterial-xray.test.ts",
-      "bytes": 21549,
-      "sha256": "55b2f98bb5e9436419f2db2a4e8e46195d0b91cbf0478105cecf57df597c5a74"
+      "bytes": 22026,
+      "sha256": "aeb17b3e875ac9df4dd9d0e415777dadf845babe7da4ca4999648b233d8de961"
     },
     {
       "path": "tests/clinical-review-hepatic-venous-xray.test.ts",
@@ -24442,6 +24442,21 @@
       "path": "worker/index.ts",
       "bytes": 10429,
       "sha256": "62945d47cd6b2ff831c8005dde19b52ff649d2c7c92c3385bb0661518b8c495e"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-colic-arterial-xray.test.ts.raw",
+      "bytes": 22211,
+      "sha256": "76efe78cb9e237ac51d961390c762be364bbcad4ad18c448482a4c4552e16d0b"
+    },
+    {
+      "path": "tests/fixtures/vascular-live-before-20261019/clinical-review-hepatic-arterial-xray.test.ts.raw",
+      "bytes": 21549,
+      "sha256": "55b2f98bb5e9436419f2db2a4e8e46195d0b91cbf0478105cecf57df597c5a74"
+    },
+    {
+      "path": "tests/vascular-live-admission-preservation.test.mjs",
+      "bytes": 3431,
+      "sha256": "6466730fa4b12c3e6e6dd12c67d804389c5670716e69a23cdc5ac34e5881bdda"
     }
   ],
   "heldDocuments": [
@@ -24457,9 +24472,9 @@
     },
     {
       "path": "docs/master-plan.md",
-      "bytes": 2371427,
-      "sha256": "45f4d7ba05a7a02f2e0f6975ef974e1f399669a42b428249e37b71a598f3eccc"
+      "bytes": 2381300,
+      "sha256": "daff95e408fd22c45d7871da45292ec6360b5520eb52ba5450727e03fceaa2d5"
     }
   ],
-  "scope": "Filtered source-only historical regression recovery.22 test/frozen-source-metadata deltas retain original whole proofs, historical counts, genuine Git author/parent transitions, exact current Review/learner bindings and negative cases.16 actual canonical body/preservation cases and semantic types pass; earlier production build belongs to unchanged application source, not a new all-suite build. Frozen historical source/metadata fixtures contain no scans or private clinical decisions. No new media/model/font/dependency/fee, patient identifier/private database, raw canonical ancestry or three held operational-document contents. Old native diagnostics including false axillary wrapper retained. Full post-foot replay/corpus X-ray teaching remain staged and are not included. All71 requirements/eight optional ideas/register67/clinical nulls and independent access remain. Not whole-project/private-data backup, clinical/spatial approval or public deployment."
+  "scope": "Filtered source-only vascular regression recovery. Two current-admission test roots retain complete immutable author/baseline teaching theorems, 9936-placement/1104-packet populations, exact current source/model/Review/emitted bindings and forged-decision storage refusal. Two whole-original fixtures and four permanent preservation/refusal cases are included. Eight actual canonical cases and semantic types pass at 4893 known inputs. No application, teaching, model, Review, export or dependency change; no new build needed for test-only deltas. Not a full-suite, browser, clinical, spatial or release approval. No scans, patient identifiers, private records, raw canonical ancestry, candidate geometry or three held operational-document contents. Full71/eight/register67/clinical nulls and independent access retained. Post-foot replay and corpus draft remain staged and excluded. Source-only, not whole-project/private-data backup or public deployment."
 }
