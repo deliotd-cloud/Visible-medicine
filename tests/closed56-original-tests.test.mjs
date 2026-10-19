@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
+import {readClosed56LiveCopy} from './closed56-live-preservation.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const cases=[
@@ -40,6 +41,6 @@ for(const [name,before,after] of [
 ])test(name+' live copy changes only its current Review expectation',()=>{
  const original=readFileSync(new URL('./fixtures/closed56-original-tests/'+name+'.txt',import.meta.url),'utf8');
  assert.equal(original.split(before).length,2);
- const live=readFileSync(new URL('./'+name,import.meta.url),'utf8');
+ const live=readClosed56LiveCopy(name);
  assert.equal(live,original.replace(before,after));
 });
