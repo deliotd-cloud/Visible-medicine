@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 // SHA-256 of LF bytes from `git show <revision>:<path>` in the Atlas checkout.
@@ -22,7 +23,8 @@ const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
 test('two exact dorsal hand ultrasound drafts reach learner and protected Review',async()=>{
  const review=json('atlas-review/manifest.json');
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes,learnerModules:['head-neck','shoulder']});
+ assert.equal(review.revision,currentRevision);
  const pins=json('atlas-review/content/hand-venous-imaging-pins.json');
  for(const [path,digest] of Object.entries(sourceHashes)){
   const record=review.files.find((file:{path:string})=>file.path===path);
@@ -35,7 +37,7 @@ test('two exact dorsal hand ultrasound drafts reach learner and protected Review
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json');
   const inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,currentRevision,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   for(const [path,digest] of Object.entries(sourceHashes)){
@@ -51,7 +53,7 @@ test('two exact dorsal hand ultrasound drafts reach learner and protected Review
  assert.equal(learner.regionalScopes.filter((scope:{region:string})=>scope.region==='hand').length,1);
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(viewer.sourceCommit,currentRevision);
  assert.equal(viewer.personalRecordsIncluded,false);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  const emitted=[emittedTeaching(learnerBase,learner.files,true),emittedTeaching(viewerBase,viewer.files,true)];

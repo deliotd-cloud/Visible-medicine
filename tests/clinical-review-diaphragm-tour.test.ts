@@ -3,8 +3,14 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
+const sourceHashes={
+ 'lib/diaphragm-tour.ts':'61af6ed913ccf3ea5f5bc282b23dbd824a431812d6e106c1baeeaf3e24892d3c',
+ 'content/diaphragm-tour-pins.json':'901cd21e2630c495892a32f29a16aab67b700477113494a0c31d014a19f101cf',
+ 'lib/regional-tours.ts':'88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97',
+} as const;
 const sha=(bytes:Uint8Array|string)=>createHash('sha256').update(bytes).digest('hex');
 const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
@@ -12,8 +18,9 @@ test('diaphragm learner and Review retain five source-pinned draft stops and ref
  const base='public/atlas-runtime/head-neck/';
  const learner=JSON.parse(readFileSync(base+'manifest.json','utf8'));
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(learner.sourceCommit,revision);
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes,learnerModules:['head-neck']});
+ assert.equal(learner.sourceCommit,currentRevision);
+ assert.equal(review.revision,currentRevision);
 
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
  for(const path of ['lib/diaphragm-tour.ts','content/diaphragm-tour-pins.json','lib/regional-tours.ts']){

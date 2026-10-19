@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 const sourcePaths={
@@ -21,12 +22,13 @@ const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
 test('digestive tract learner and Review retain six exact draft stops and reject altered packets',async()=>{
  const review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes:sourcePaths,learnerModules:['head-neck']});
+ assert.equal(review.revision,currentRevision);
  let learner:any;
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const base=`public/atlas-runtime/${module}/`;
   const manifest=JSON.parse(readFileSync(base+'manifest.json','utf8'));
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,currentRevision,module);
   const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
   for(const [path,expected] of Object.entries(sourcePaths)){
    const input=inputs.find((file:{path:string})=>file.path===path);

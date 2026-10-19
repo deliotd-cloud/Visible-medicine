@@ -19,7 +19,7 @@ export default async function BodyReviewPage({
       rows={bodyReviewSummaries}
       regions={bodyReviewRegions}
       initialId={selected?.id ?? null}
-      initialRegion={selected?.regions[0] ?? 'shoulder-arm'}
+      initialRegion={selected?.region ?? 'shoulder-arm'}
     />
   );
 }

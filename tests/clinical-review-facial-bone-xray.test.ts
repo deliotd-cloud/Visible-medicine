@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const revision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 const sourceHashes={
@@ -23,7 +24,8 @@ const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 test('four facial-bone X-ray drafts bind exact learner and protected Review material',async()=>{
  const review=json('atlas-review/manifest.json');
  const pins=json('atlas-review/content/cranial-bone-imaging-pins.json');
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes,learnerModules:['head-neck']});
+ assert.equal(review.revision,currentRevision);
  for(const [path,digest] of Object.entries(sourceHashes)){
   const record=review.files.find((file:{path:string})=>file.path===path);
   assert(record,path);
@@ -34,7 +36,7 @@ test('four facial-bone X-ray drafts bind exact learner and protected Review mate
  const learnerBase='public/atlas-runtime/head-neck/';
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const manifest=json(`public/atlas-runtime/${module}/manifest.json`);
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,currentRevision,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
  }
@@ -44,7 +46,7 @@ test('four facial-bone X-ray drafts bind exact learner and protected Review mate
   assert.equal(inputs.find((file:{path:string})=>file.path===path)?.sha256,digest,path);
  const viewerBase='public/atlas-review-viewer/';
  const viewer=json(viewerBase+'manifest.json');
- assert.equal(viewer.sourceCommit,revision);
+ assert.equal(viewer.sourceCommit,currentRevision);
  assert.equal(viewer.personalRecordsIncluded,false);
  assert.equal(viewer.websiteIntegrationSha256,review.websiteIntegrationSha256);
  const emitted=[emittedTeaching(learnerBase,learner.files,true),emittedTeaching(viewerBase,viewer.files,true)];

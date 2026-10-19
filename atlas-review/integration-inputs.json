@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "c237fa215f061147975e91b01fa830b3f44458c7",
-  "sha256": "cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984",
+  "sourceCommit": "6a636fba955e30819a768372c0434432025b0fce",
+  "sha256": "d9cd6b15cfb0969c59a2eb2a1867d7fa1f94bcf5b5367ce3b5f8e4550b83d156",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -424,11 +424,11 @@
     },
     {
       "path": "atlas-review/app/review/body/page.tsx",
-      "sha256": "f01419e944ed4670b0ece1239415cc4bf470693d7b725fb5f742141b7440b79d"
+      "sha256": "efa4e4a610cd14a08dd63df1ee824ada93013d88e5fac591aafef30e17462f57"
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "07c25765b8a2f606f1af8dfb63e4dad4e086eec562a83ec20fd3099e8f97adc9"
+      "sha256": "de1f3a5678ddd7f409ac5610a7d4d5e877fafe17d53194fac46b7e4e5ca33bef"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -3704,7 +3704,7 @@
     },
     {
       "path": "atlas-review/lib/body-review-material.ts",
-      "sha256": "75e927f73854fd44554a34e9d8e9a923a3b7a0108b39489132c85c0243ce303e"
+      "sha256": "b40b89e5eb4ffb30feee1ec7064be6e1d52f3add0ce6bc0b6e0bc319610968b5"
     },
     {
       "path": "atlas-review/lib/body-review-response.ts",
@@ -6424,11 +6424,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "8b2a1ab1afc665257875a4bfd0934206d9a01e7de368d9d9a66ddfd6f4901354"
+      "sha256": "82b0edabf0b1003f87c013b05e44f1d53eb5072426459fdcfb950adb91095846"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "feef784e69e758e1d11c84c8c68a9d92c690c6e124bb32cdfd9e83e6cca0d3dc"
+      "sha256": "b74c0bc042185d4859f4d5297a0fe77ec8f12bd4d5b326a961f7b90ceba2c970"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6668,7 +6668,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "af1cb4b999877e9595881cbb8e6c507f0e24f2aaf5ced74302a674a79741fe20"
+      "sha256": "f03fffe0493edb26a1333ed55614dd1cf5cf902f3b451e7d8a5f9842e188c7ff"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

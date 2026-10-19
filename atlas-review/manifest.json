@@ -1,5 +1,5 @@
 {
-  "revision": "c237fa215f061147975e91b01fa830b3f44458c7",
+  "revision": "6a636fba955e30819a768372c0434432025b0fce",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -53,8 +53,8 @@
     },
     {
       "path": "lib/body-review-material.ts",
-      "sourceSha256": "75e927f73854fd44554a34e9d8e9a923a3b7a0108b39489132c85c0243ce303e",
-      "importedSha256": "75e927f73854fd44554a34e9d8e9a923a3b7a0108b39489132c85c0243ce303e"
+      "sourceSha256": "b40b89e5eb4ffb30feee1ec7064be6e1d52f3add0ce6bc0b6e0bc319610968b5",
+      "importedSha256": "b40b89e5eb4ffb30feee1ec7064be6e1d52f3add0ce6bc0b6e0bc319610968b5"
     },
     {
       "path": "public/models/bodyparts3d/full-body/catalog.json",
@@ -5659,7 +5659,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "635ce4a51bf7faa200e3216c7ac1e7507d184ef4a92817de856677571a63548d",
-      "importedSha256": "61c1c817ca8c5526c073f0bfff95598aa928cf332623ab487f1ffcfaaa697b86"
+      "importedSha256": "f4200a8d8f47dc078d68730735916f1649b48975f4e7510283f6f4c1ac21e354"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -6044,7 +6044,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "b9e2425ca5048e7f36c3562239b0e18f907314648567b2da7eac6c0deff023e7"
+      "importedSha256": "613ed8c7f68113a51462b58f9f1698f3a4572656bef56cd1626a3de99ad2cf07"
     },
     {
       "path": "app/review/review.css",
@@ -6053,13 +6053,13 @@
     },
     {
       "path": "app/review/body/page.tsx",
-      "sourceSha256": "f01419e944ed4670b0ece1239415cc4bf470693d7b725fb5f742141b7440b79d",
-      "importedSha256": "f01419e944ed4670b0ece1239415cc4bf470693d7b725fb5f742141b7440b79d"
+      "sourceSha256": "efa4e4a610cd14a08dd63df1ee824ada93013d88e5fac591aafef30e17462f57",
+      "importedSha256": "efa4e4a610cd14a08dd63df1ee824ada93013d88e5fac591aafef30e17462f57"
     },
     {
       "path": "app/review/body/review-dashboard.tsx",
-      "sourceSha256": "5a6b9cb930e60e832fa24f57e533a1165eea8e0a0ffd2fdc670293c22af15998",
-      "importedSha256": "07c25765b8a2f606f1af8dfb63e4dad4e086eec562a83ec20fd3099e8f97adc9"
+      "sourceSha256": "e669364ea093bd18a0ba3b6b71e94b051b4ff7233276546551b7d9145738bab3",
+      "importedSha256": "de1f3a5678ddd7f409ac5610a7d4d5e877fafe17d53194fac46b7e4e5ca33bef"
     },
     {
       "path": "components/ui/alert-dialog.tsx",
@@ -7708,5 +7708,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984"
+  "websiteIntegrationSha256": "d9cd6b15cfb0969c59a2eb2a1867d7fa1f94bcf5b5367ce3b5f8e4550b83d156"
 }

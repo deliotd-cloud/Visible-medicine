@@ -3,6 +3,7 @@ import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import test from 'node:test';
 import {build} from 'esbuild';
+import {admitPreservedClinicalReview} from './clinical-review-current-admission.mjs';
 
 const sha=(bytes:Uint8Array|string)=>createHash('sha256').update(bytes).digest('hex');
 const json=(path:string)=>JSON.parse(readFileSync(path,'utf8'));
@@ -23,7 +24,8 @@ const sourceHashes:Record<string,string>={
 test('both foot venous arches retain exact CT/MRI/ultrasound source, learner and protected Review evidence',async()=>{
  const review=json('atlas-review/manifest.json');
  const pins=json('atlas-review/content/foot-venous-arch-imaging-pins.json');
- assert.equal(review.revision,revision);
+ const currentRevision=admitPreservedClinicalReview({revision,sourceHashes,learnerModules:['head-neck','shoulder']});
+ assert.equal(review.revision,currentRevision);
  assert.equal(pins.parentCommit,parent);
  assert.equal(pins.sourceVersion,'4.0');
  assert.equal(pins.license,'CC-BY-4.0');
@@ -60,7 +62,7 @@ test('both foot venous arches retain exact CT/MRI/ultrasound source, learner and
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json');
   const inputs=json(base+'source-inputs.json');
-  assert.equal(manifest.sourceCommit,revision,module);
+  assert.equal(manifest.sourceCommit,currentRevision,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
   for(const [path,expected] of Object.entries(sourceHashes)){

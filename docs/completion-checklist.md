@@ -1,6 +1,6 @@
 # Visible Medicine completion checklist
 
-Revision 60 · Updated 2026-10-19
+Revision 61 · Updated 2026-10-19
 
 Track the full website and Atlas roadmap, owner clinical inputs and optional product ideas without equating drafts or tests with clinical completion.
 
@@ -8,13 +8,13 @@ This is the persistent project checklist, not a claim that the whole website is 
 
 ## Current baseline
 
-Atlas source: `c237fa215f061147975e91b01fa830b3f44458c7`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984`.
+Atlas source: `6a636fba955e30819a768372c0434432025b0fce`. Website HEAD: `b953ff3f5f1891599cb6e91cb91311d9d6006270` with preserved unpublished changes. Review binding: `d9cd6b15cfb0969c59a2eb2a1867d7fa1f94bcf5b5367ce3b5f8e4550b83d156`.
 
 1104 root-body representations have 9936 topic placements: 9334 editorial drafts, 563 pending and 39 generated identification prompts. Separate scopes include 108 nested selections, 51 regional tours / 309 stops and 9 independent guides / 73 stops.
 
 Overlapping source representations and topic placements, not unique lessons, complete anatomy, acquired-image coverage, private approval counts or a completion percentage. Private clinical decisions were not read. Atlas resource registry counts do not measure the separate website's native CT/MRI integration.
 
-Integrated Atlas source: `c237fa215f061147975e91b01fa830b3f44458c7` (9334 draft / 563 pending / 39 generated topic placements). **Imported into the website baseline above.** Source-bound body Review leave dialog defaults to keeping edits, rejects stale destinations and preserves modified-link behavior. Two bilateral median antebrachial X-ray method-context drafts replace pending placements;9934 other topics and109 root source bundles remain unchanged. Existing private Review and four learner modules share the exact clean source. No routine plain-film visibility, acquired image, source-to-patient registration, clinical approval, paid access grant, new dependency or public deployment is asserted. Renderer revisions advance and require fresh scope-bound human review; no approvals migrate.
+Integrated Atlas source: `6a636fba955e30819a768372c0434432025b0fce` (9334 draft / 563 pending / 39 generated topic placements). **Imported into the website baseline above.** UI-only Review navigation update: accepted worksheet selection replaces only the structure query while keeping other URL state; cancellation and stale intent preserve notes and URL. Primary catalog region and readable region names replace overlapping-region order.26 interaction cases and9 source gates pass; renderer/display pins, model payloads and all teaching remain unchanged. This is not browser, clinical, spatial-registration, entitlement or public-release approval.
 
 Canonical Atlas summaries were refreshed and verified through their generator (BASE-02). Source-candidate evidence remains separate from the website baseline and from clinical, browser and release approval.
 
@@ -441,6 +441,7 @@ I can inventory sources and gaps, research acceptable references/assets, write r
 
 ## Change log
 
+- 2026-10-19 · revision 61: Normal import of clean Atlas6a636fba with synchronized Review worksheet URLs and primary-region labels. No model, anatomy or teaching change; all71 requirements/eight optional ideas and statuses remain. Original feature assertions and old source evidence preserved; existing approval records are not migrated or invented.
 - 2026-10-19 · revision 60: Normal import of clean Atlasc237fa21: nonblocking protected body Review navigation and two exact-source forearm X-ray draft notes. Full source transition and introduced-epoch replay preserve9934 other topics/1102 other packets and reject stale/forged/unattested writes before storage. Four learners and Review rebound; coverage differs only in source/package provenance. All71 items/eight optional ideas, geometry/holds and independent access boundaries remain. Previous59 pin/assertions retained as exact text; no clinical or public release approval.
 - 2026-10-19 · revision 59: Normal generated import of clean Atlas3dcdf94a and four source-bound CT orientation drafts;9932 other placements, geometry, source holds and all71/eight roadmap items retained. Derived regional snapshot refreshed, all four learners and protected Review rebound to this exact source. Coverage provenance regenerated without anatomy/target changes. Previous delivery58 and admission assertions preserved; no approvals migrated or public deployment.
 - 2026-10-18 · revision 58: Native CT/MRI structure retry synchronously hands focus to the existing visible package action with preventScroll, including Guided learning and Focus images. Accepted failures are consumed once; retired callbacks and non-current async failures cannot retry or move focus. No mode, URL, window, cursor, source mask, annotation mapping or entitlement changes. Only HeadAtlasViewer.tsx changes among1661 combined Review inputs; normal Review rebind11ddecf2 changes only the two generated revision records. CleanAtlas46c/tree837,1531 imports/four learners/models/teaching/notices unchanged. Two appended actual-component harness tests preserve every original assertion, pass against the candidate and fail against the authentic original; browser/physical AT acceptance remains separate. Portal-venous original packet/security test also passed in full before its minimal current-admission seam was installed, with all historical assertions preserved. All71/eight requirement scopes, statuses, owners and acceptance retained; no clinical approval migration, registration or public deployment.

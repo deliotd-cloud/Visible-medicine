@@ -12,9 +12,9 @@ import {
   validateCurrentAtlasDelivery,
 } from './current-atlas-delivery.mjs';
 
-const current = 'c237fa215f061147975e91b01fa830b3f44458c7';
-const tree = '29fb723e34279d3e586f52f380128b430cd07325';
-const reviewDigest = 'cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984';
+const introduced = 'c237fa215f061147975e91b01fa830b3f44458c7';
+const introducedTree = '29fb723e34279d3e586f52f380128b430cd07325';
+const introducedReviewDigest = 'cd20387aee9e0c5f03d02ba9f83c347a588df371c497efad5c7e337ad83df984';
 const baseline = '3dcdf94a46db44202e72641be9fbcf1274ce5364';
 const expected = [
   ['vm:anatomy:body:forearm:right:vessel:right-median-antebrachial-vein', 'FMA22968', 'right'],
@@ -40,9 +40,25 @@ const gitSource = (atlas, revision, path) => execFileSync('git', ['show', `${rev
 test('current delivery binds five exact Atlas sources, four runtimes, protected Review and private dialog source', () => {
   const delivery = validateCurrentAtlasDelivery();
   const atlas = currentAtlasDeliveryRoot();
+  const current = delivery.source;
+  const reviewDigest = delivery.reviewIntegration;
+  const gitOptions = { cwd: atlas, windowsHide: true, maxBuffer: 32e6,
+    env: { ...process.env, GIT_NO_REPLACE_OBJECTS: '1' } };
+  assert.equal(execFileSync('git', ['rev-parse', `${introduced}^{commit}`], gitOptions).toString().trim(), introduced);
+  assert.equal(execFileSync('git', ['rev-parse', `${introduced}^{tree}`], gitOptions).toString().trim(), introducedTree);
+  execFileSync('git', ['merge-base', '--is-ancestor', introduced, current], gitOptions);
+  const pin60Bytes = read('tests/fixtures/current-atlas-delivery-60.json');
+  assert.equal(sha(pin60Bytes), '9cb334e126d2ba4e71eb14225a07db54e33b807001d835eaa0ce28d383417c1c');
+  const pin60 = JSON.parse(pin60Bytes);
+  assert.equal(pin60.source, introduced);
+  assert.equal(pin60.sourceTree, introducedTree);
+  assert.equal(pin60.reviewIntegration, introducedReviewDigest);
+  const original = read('tests/fixtures/ui-teaching-current-delivery-c237.mjs.raw');
+  assert.equal(sha(original), 'e0aed39045349b6ed6eecd95e08fde0df56b805d242f2e527301b0df2af0b884');
+  assert(original.toString().includes(`const reviewDigest = '${introducedReviewDigest}';`));
   assert.equal(CURRENT_ATLAS_REVISION, current);
   assert.equal(delivery.source, current);
-  assert.equal(delivery.sourceTree, tree);
+  assert.equal(delivery.sourceTree, execFileSync('git', ['rev-parse', 'HEAD^{tree}'], gitOptions).toString().trim());
   assert.equal(delivery.reviewIntegration, reviewDigest);
   assert.equal(delivery.reviewSourceFiles, 1538);
   assert.equal(delivery.viewerFiles, 46);
@@ -53,6 +69,9 @@ test('current delivery binds five exact Atlas sources, four runtimes, protected 
   assert.equal(manifest.websiteIntegrationSha256, reviewDigest);
   assert.equal(inputs.inputs.length, 1668);
   assert.equal(sha(JSON.stringify(inputs.inputs)), reviewDigest);
+  for (const path of sourcePaths.slice(0, 4))
+    assert.equal(sha(gitSource(atlas, current, path)), sha(gitSource(atlas, introduced, path)),
+      `${path}: teaching bytes unchanged since the c237 introduction`);
   for (const path of sourcePaths) {
     const sourceBytes = gitSource(atlas, current, path);
     const imported = read(`atlas-review/${path}`);
@@ -90,6 +109,7 @@ test('current delivery binds five exact Atlas sources, four runtimes, protected 
 test('two exact median-antebrachial drafts reach emitted forearm teaching and reject stale or unattested Review writes',
   { timeout: 180000 }, async () => {
     const atlas = currentAtlasDeliveryRoot();
+    const current = validateCurrentAtlasDelivery().source;
     const pins = json('atlas-review/content/median-antebrachial-xray-pins.json');
     assert.equal(pins.baselineCommit, baseline);
     assert.deepEqual(pins.entries.map(({ identity }) => [identity.id, identity.fmaId, identity.laterality]), expected);
@@ -207,3 +227,30 @@ test('two exact median-antebrachial drafts reach emitted forearm teaching and re
     }
     assert.equal(storage.calls, 0, 'Every invalid submission refused before the synthetic store');
   });
+
+test('current Review UI import binds primary region and accepted worksheet URL navigation to exact Atlas source', () => {
+  const delivery = validateCurrentAtlasDelivery();
+  const atlas = currentAtlasDeliveryRoot();
+  const manifest = json('atlas-review/manifest.json');
+  const inputs = json('atlas-review/integration-inputs.json');
+  for (const path of ['app/review/body/page.tsx', 'lib/body-review-material.ts',
+    'app/review/body/review-dashboard.tsx']) {
+    const sourceBytes = gitSource(atlas, delivery.source, path);
+    const imported = read(`atlas-review/${path}`);
+    const row = manifest.files.find(file => file.path === path);
+    assert(row, `Missing Review UI source: ${path}`);
+    assert.equal(row.sourceSha256, sha(sourceBytes), `${path}: current committed source`);
+    assert.equal(row.importedSha256, sha(imported), `${path}: current protected import`);
+    assert.equal(inputs.inputs.find(file => file.path === `atlas-review/${path}`)?.sha256,
+      row.importedSha256, `${path}: current integration input`);
+  }
+  const page = read('atlas-review/app/review/body/page.tsx').toString();
+  const material = read('atlas-review/lib/body-review-material.ts').toString();
+  const dashboard = read('atlas-review/app/review/body/review-dashboard.tsx').toString();
+  assert(page.includes('initialRegion={selected?.region'));
+  assert(material.includes('region: s.region'));
+  for (const marker of ["url.searchParams.set('structure', id)",
+    "url.searchParams.delete('structure')", 'window.history.replaceState(',
+    "region === 'all' ? 'All regions'", 'regions.find((r) => r.id === region)?.name'])
+    assert(dashboard.includes(marker), `Current Review UI omitted ${marker}`);
+});
