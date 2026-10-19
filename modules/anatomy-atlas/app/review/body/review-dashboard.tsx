@@ -1,10 +1,20 @@
 'use client';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ReviewSignInLink } from '@/components/review-sign-in-link';
 import { Brand } from '../../brand';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from '@/components/ui/alert-dialog';
 import {
   Select,
   SelectTrigger,
@@ -39,6 +49,39 @@ const readiness = {
   'identity-only': 'Identity only',
   'generated-identification': 'Identification prompt only',
 };
+type LeaveIntent =
+  | { kind: 'structure'; id: string }
+  | { kind: 'query'; value: string }
+  | { kind: 'region'; value: string }
+  | { kind: 'system'; value: string }
+  | { kind: 'link'; anchor: HTMLAnchorElement; href: string };
+
+type LeaveContext = {
+  selected: string | null;
+  material: BodyReviewMaterial | null;
+  region: string;
+  system: string;
+  query: string;
+  queue: string;
+  rows: BodyReviewSummary[];
+  dirty: boolean;
+};
+
+type PendingLeave = { intent: LeaveIntent; context: LeaveContext };
+
+function sameLeaveContext(a: LeaveContext, b: LeaveContext) {
+  return (
+    a.selected === b.selected &&
+    a.material === b.material &&
+    a.region === b.region &&
+    a.system === b.system &&
+    a.query === b.query &&
+    a.queue === b.queue &&
+    a.rows === b.rows &&
+    a.dirty === b.dirty
+  );
+}
+
 export function BodyReviewDashboard({
   rows,
   regions,
@@ -61,23 +104,30 @@ export function BodyReviewDashboard({
     }),
     [selected, setSelected] = useState(initialId);
   const [dirty, setDirty] = useState(false);
+  const [pendingLeave, setPendingLeave] = useState<PendingLeave | null>(null);
+  const pendingLeaveRef = useRef<PendingLeave | null>(null);
+  const latestContextRef = useRef<LeaveContext | null>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+  const queryInputRef = useRef<HTMLInputElement | null>(null);
+  const cancelButtonRef = useRef<HTMLButtonElement | null>(null);
+  const focusTokenRef = useRef(0);
+  const bypassAnchorRef = useRef<HTMLAnchorElement | null>(null);
+  const allowUnloadRef = useRef(false);
+  useLayoutEffect(() => {
+    // A confirmed link may remain on this page. Every subsequent dirty draft
+    // restores native exit protection before its beforeunload listener runs.
+    if (dirty) allowUnloadRef.current = false;
+  }, [dirty]);
   useEffect(() => {
     if (!dirty) return;
     const guard = (event: BeforeUnloadEvent) => {
+      if (allowUnloadRef.current) return;
       event.preventDefault();
       event.returnValue = '';
     };
     window.addEventListener('beforeunload', guard);
     return () => window.removeEventListener('beforeunload', guard);
   }, [dirty]);
-  function canLeave() {
-    return (
-      !dirty ||
-      window.confirm(
-        'Leave this structure and discard unsaved review edits? Export or save them first if needed.',
-      )
-    );
-  }
   const [material, setMaterial] = useState<BodyReviewMaterial | null>(null),
     [error, setError] = useState(''),
     [loading, setLoading] = useState(false),
@@ -86,6 +136,106 @@ export function BodyReviewDashboard({
     () => bodyReviewQueue(rows, region, system, query),
     [rows, region, system, query],
   );
+  const context: LeaveContext = {
+    selected,
+    material,
+    region,
+    system,
+    query,
+    queue: matches.map((row) => row.id).join('\u0000'),
+    rows,
+    dirty,
+  };
+  useLayoutEffect(() => {
+    latestContextRef.current = context;
+  });
+  function resetSelection() {
+    setDirty(false);
+    setPage(0);
+    setSelected(null);
+    setMaterial(null);
+    setError('');
+  }
+  function performLeave(intent: LeaveIntent) {
+    switch (intent.kind) {
+      case 'structure': {
+        const index = matches.findIndex((row) => row.id === intent.id);
+        if (index < 0 || intent.id === selected) return;
+        setDirty(false);
+        setMaterial(null);
+        setError('');
+        setPage(Math.floor(index / 20));
+        setSelected(intent.id);
+        return;
+      }
+      case 'query':
+        setQuery(intent.value);
+        resetSelection();
+        return;
+      case 'region':
+        setRegion(intent.value);
+        resetSelection();
+        return;
+      case 'system':
+        setSystem(intent.value);
+        resetSelection();
+        return;
+      case 'link':
+        if (!intent.anchor.isConnected || intent.anchor.href !== intent.href) return;
+        resetSelection();
+        allowUnloadRef.current = true;
+        bypassAnchorRef.current = intent.anchor;
+        try {
+          intent.anchor.click();
+        } finally {
+          bypassAnchorRef.current = null;
+        }
+    }
+  }
+  function requestLeave(intent: LeaveIntent, focusTarget?: HTMLElement | null) {
+    // Keep the first requested destination while the dialog is open.
+    if (pendingLeaveRef.current) return;
+    if (!dirty) {
+      performLeave(intent);
+      return;
+    }
+    const pending = { intent, context };
+    pendingLeaveRef.current = pending;
+    focusTokenRef.current++;
+    returnFocusRef.current = focusTarget ??
+      (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    setPendingLeave(pending);
+  }
+  function cancelLeave(expected: PendingLeave | null) {
+    if (!expected || pendingLeaveRef.current !== expected) return;
+    pendingLeaveRef.current = null;
+    setPendingLeave(null);
+    const focusTarget = returnFocusRef.current;
+    returnFocusRef.current = null;
+    const focusToken = ++focusTokenRef.current;
+    // A delayed close cannot focus behind a newer dialog.
+    requestAnimationFrame(() => {
+      if (focusToken !== focusTokenRef.current || pendingLeaveRef.current) return;
+      if (focusTarget?.isConnected) focusTarget.focus({ preventScroll: true });
+      else if (queryInputRef.current?.isConnected) queryInputRef.current.focus({ preventScroll: true });
+    });
+  }
+  function confirmLeave() {
+    const pending = pendingLeaveRef.current;
+    if (!pending || pending !== pendingLeave) return;
+    const latest = latestContextRef.current;
+    if (!latest || !sameLeaveContext(pending.context, latest) ||
+        (pending.intent.kind === 'link' &&
+          (!pending.intent.anchor.isConnected || pending.intent.anchor.href !== pending.intent.href))) {
+      cancelLeave(pending);
+      return;
+    }
+    pendingLeaveRef.current = null; // Consume before dispatch, including link click re-entry.
+    focusTokenRef.current++;
+    setPendingLeave(null);
+    returnFocusRef.current = null;
+    performLeave(pending.intent);
+  }
   const currentPage = Math.min(
     page,
     Math.max(0, Math.ceil(matches.length / 20) - 1),
@@ -99,12 +249,8 @@ export function BodyReviewDashboard({
     // Clicking the current row must retain its editor and unsaved draft.
     if (id === selected) return;
     const index = matches.findIndex((s) => s.id === id);
-    if (index < 0 || !canLeave()) return;
-    setDirty(false);
-    setMaterial(null);
-    setError('');
-    setPage(Math.floor(index / 20));
-    setSelected(id);
+    if (index < 0) return;
+    requestLeave({ kind: 'structure', id });
   }
   useEffect(() => {
     const controller = new AbortController();
@@ -149,18 +295,16 @@ export function BodyReviewDashboard({
       controller.abort();
     };
   }, [selected, attempt]);
-  function resetSelection() {
-    setDirty(false);
-    setPage(0);
-    setSelected(null);
-    setMaterial(null);
-    setError('');
-  }
   return (
     <div
       className="body-review-app"
       onClickCapture={(event) => {
+        // New-tab/window/download gestures do not leave this dirty worksheet.
+        // Do not replay them as an unmodified same-tab anchor click.
+        if (event.defaultPrevented || (event.button !== undefined && event.button !== 0) ||
+            event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
         const anchor = (event.target as Element).closest('a');
+        if (anchor === bypassAnchorRef.current) return;
         if (
           !anchor ||
           anchor.target === '_blank' ||
@@ -168,9 +312,10 @@ export function BodyReviewDashboard({
           anchor.getAttribute('href')?.startsWith('/api/body-review')
         )
           return;
-        if (!canLeave()) {
+        if (dirty || pendingLeaveRef.current) {
           event.preventDefault();
           event.stopPropagation();
+          requestLeave({ kind: 'link', anchor, href: anchor.href }, anchor);
         }
       }}
     >
@@ -191,24 +336,20 @@ export function BodyReviewDashboard({
           <aside className="body-review-queue" aria-label="Body review queue">
             <label htmlFor="body-review-query">Find a structure</label>
             <Input
+              ref={queryInputRef}
               id="body-review-query"
               value={query}
               maxLength={256}
               placeholder="Name or anatomical ID"
               onChange={(e) => {
-                if (!canLeave()) return;
-                setQuery(e.target.value);
-                resetSelection();
+                requestLeave({ kind: 'query', value: e.target.value }, e.currentTarget);
               }}
             />
             <label id="body-review-region-label">Region</label>
             <Select
               value={region}
               onValueChange={(v) => {
-                if (v && canLeave()) {
-                  setRegion(v);
-                  resetSelection();
-                }
+                if (v && v !== region) requestLeave({ kind: 'region', value: v });
               }}
             >
               <SelectTrigger aria-labelledby="body-review-region-label">
@@ -227,10 +368,7 @@ export function BodyReviewDashboard({
             <Select
               value={system}
               onValueChange={(v) => {
-                if (v && canLeave()) {
-                  setSystem(v);
-                  resetSelection();
-                }
+                if (v && v !== system) requestLeave({ kind: 'system', value: v });
               }}
             >
               <SelectTrigger aria-labelledby="body-review-system-label">
@@ -364,6 +502,23 @@ export function BodyReviewDashboard({
           </section>
         </div>
       </main>
+      <AlertDialog
+        open={pendingLeave !== null}
+        onOpenChange={(open) => { if (!open) cancelLeave(pendingLeave); }}
+      >
+        <AlertDialogContent initialFocus={cancelButtonRef} finalFocus={false}>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Discard unsaved review edits?</AlertDialogTitle>
+            <AlertDialogDescription>
+              Leaving this structure will discard its unsaved review edits. Export or save them first if needed.
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel ref={cancelButtonRef} onClick={() => cancelLeave(pendingLeave)}>Keep editing</AlertDialogCancel>
+            <AlertDialogAction onClick={confirmLeave}>Discard edits and continue</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </div>
   );
 }
