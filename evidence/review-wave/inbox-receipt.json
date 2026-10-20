@@ -1,0 +1,24 @@
+{
+  "label": "INBOX_TRACK_ACTUAL_SOURCE_UPDATE",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-inbox-source-update.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-inbox-track-regression/INBOX_TRACK_ACTUAL_SOURCE_UPDATE.log",
+  "logSha256": "9c48da39076a27c53e0ea7e70983adc117d716cdb98aafe4cf3d8b27b97891b0",
+  "footer": [
+    "ℹ tests 2",
+    "ℹ pass 2",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

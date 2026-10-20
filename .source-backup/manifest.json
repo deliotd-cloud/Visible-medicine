@@ -1,0 +1,74 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T18:13:47.477Z",
+  "sourceIdentity": {
+    "kind": "Uninstalled five-file Review regression proposal",
+    "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "currentSourceDigest": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 10671,
+      "sha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a"
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-xray.test.ts",
+      "bytes": 22322,
+      "sha256": "f9078eadbc4e32a6f6f99e8e6ca0f8e8230bb9ceecc766210b50e45564256e7c"
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-xray.test.ts",
+      "bytes": 22032,
+      "sha256": "00cde16bc349a8e6921094f56db467f95c35694d7163c4fb47c21d8485f7f16f"
+    },
+    {
+      "path": "tests/clinical-review-hand-arterial-xray.test.ts",
+      "bytes": 21508,
+      "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
+    },
+    {
+      "path": "tests/clinical-review-inbox-source-update.test.ts",
+      "bytes": 9724,
+      "sha256": "2ef6e430a68dac8fe3a6b67b605c6d9b95e1812fb71d28a15f1aa466be34dae9"
+    },
+    {
+      "path": "evidence/review-wave/VERIFICATION.json",
+      "bytes": 3526,
+      "sha256": "fb2ac1bc08458bdacdb45dced31cf8a27448aaba497098d9f1a4ccf3145a438a"
+    },
+    {
+      "path": "evidence/review-wave/verify-review-wave-20261020.mjs",
+      "bytes": 4427,
+      "sha256": "25aaeb7943f9830b842f135c48dd4a30f0b93168dfa931dbe29d943685e811e4"
+    },
+    {
+      "path": "evidence/review-wave/desktop-receipt.json",
+      "bytes": 2607,
+      "sha256": "4574791fad35ed7bab6bb610a68e661de17cc170a245a87b9eef4d8128318b84"
+    },
+    {
+      "path": "evidence/review-wave/inbox-receipt.json",
+      "bytes": 644,
+      "sha256": "32e30d83853343fd7a6505992642aab84350c5afcc5a9b0b1fd478cb807dda8c"
+    }
+  ],
+  "removed": [],
+  "scope": "Nine selected source/evidence files only. Two actual repaired test modules pass9cases total (desktop CSS/controls6036history/current87ed; teaching-inbox source update/account separation). Three separate root-only test proposals retain full original byte inverses but await original modules and explicit closed56 preservation guards before admission. Not a full/standalone Website/private-data/historical-archive backup. ExactF historical source remains a local dependency. No product/access/anatomy/teaching/mask/asset/permission/approval/deployment changes or raw canonical ancestry.",
+  "proof": {
+    "actualModuleTestsPassed": 9,
+    "changedPaths": 5,
+    "rootOnlyPathsNotModuleVerified": 3,
+    "closed56GuardDependencyPending": true,
+    "canonicalInstalled": false,
+    "fullSuitePass": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

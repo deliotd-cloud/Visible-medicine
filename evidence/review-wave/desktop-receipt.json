@@ -1,0 +1,46 @@
+{
+  "schema": "vm-isolated-desktop-layout-test-repair/1",
+  "date": "2026-10-20",
+  "scope": "test-only; staged mirror; no frozen Website or Atlas source edits",
+  "testPath": "files/tests/clinical-review-desktop-layout.test.mjs",
+  "beforeSha256": "6694611b999fa994aede297093d129c93c66983e66db48accdcc86c6a955cf6f",
+  "afterSha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a",
+  "frozenWebsiteTestSha256": "6694611b999fa994aede297093d129c93c66983e66db48accdcc86c6a955cf6f",
+  "historicalSource": {
+    "root": "F:/VisibleMedicine/recovery/checkpoints/20261020-checkout-history-website-backup/remote-source-restored",
+    "receipt": "F:/VisibleMedicine/recovery/checkpoints/20261020-checkout-history-website-backup/github-backup.json",
+    "atlasRevision": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+    "atlasTree": "6da62962106cfab9419b09618547a9da5e3aafc6",
+    "pinSha256": "0ee28eaffe4fc13e32f124d7d48eea18e90b34f3cfaf1a55959fdabba90e573a",
+    "integrationInputsSha256": "db650d87553c6e5f7830c4a19ad503a2ebdc4d8013d8344221ae03517357d0f7",
+    "inputRows": 1685,
+    "originalChangedPaths": 10,
+    "preservedRows": 1675
+  },
+  "currentSource": {
+    "atlasRevision": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "atlasTree": "bfcfa898ace1d25083f21b681274c5bc816564d7",
+    "integrationInputsSha256": "acbad30ecf452317221384c708022b3f5f2d4c3e8042ca82e572f91507bb43d7",
+    "inputRows": 1696,
+    "atlasSourceRepo": "F:/VisibleMedicine/staging/20261020-inferior-thyroid-mra-source"
+  },
+  "isolatedMirror": {
+    "junctions": ["app", "components", "lib", "atlas-review", "public", "node_modules", "tests/fixtures"],
+    "unchangedHelperCopies": ["tests/current-atlas-delivery.mjs", "tests/atlas-source-repo.mjs"],
+    "packageType": "module"
+  },
+  "verification": {
+    "command": "node --max-old-space-size=1024 --test tests/clinical-review-desktop-layout.test.mjs",
+    "environment": "VM_ATLAS_SOURCE_REPO=F:/VisibleMedicine/staging/20261020-inferior-thyroid-mra-source",
+    "exitCode": 0,
+    "tests": 7,
+    "passed": 7,
+    "failed": 0,
+    "tapPath": "DESKTOP_LAYOUT_TEST.tap",
+    "tapSha256": "ba6950207fe516b7db51de48febb2744dbe6f47cf2ee2b79d8a5b289e33abdf2",
+    "nodeCheck": "passed",
+    "rawOriginalFourTestInverse": "passed in actual module; exact raw fixture assertion retained",
+    "completeBeforeSourceInverse": "passed after normalizing line endings; only declared historical and current seams removed"
+  },
+  "deferred": "Frozen full suite still running; no staged test admitted to frozen Website, no build/types/browser/publication/clinical claim."
+}

@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Nine selected source/evidence files only. Two actual repaired test modules pass9cases total (desktop CSS/controls6036history/current87ed; teaching-inbox source update/account separation). Three separate root-only test proposals retain full original byte inverses but await original modules and explicit closed56 preservation guards before admission. Not a full/standalone Website/private-data/historical-archive backup. ExactF historical source remains a local dependency. No product/access/anatomy/teaching/mask/asset/permission/approval/deployment changes or raw canonical ancestry.

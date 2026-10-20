@@ -1,0 +1,56 @@
+{
+  "schema": "vm-review-regression-wave-verification/1",
+  "at": "2026-10-20T18:12:47.874Z",
+  "site": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "files": [
+    {
+      "path": "tests/clinical-review-desktop-layout.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/desktop/files/tests/clinical-review-desktop-layout.test.mjs",
+      "beforeSha256": "6694611b999fa994aede297093d129c93c66983e66db48accdcc86c6a955cf6f",
+      "afterSha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a",
+      "scope": "actual7-case module passes"
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/files/tests/clinical-review-femoral-arterial-xray.test.ts",
+      "beforeSha256": "3ebc19d3097544f487171e329dc1ea104f8b34c47191cff2cbca004c31ecb2ee",
+      "afterSha256": "f9078eadbc4e32a6f6f99e8e6ca0f8e8230bb9ceecc766210b50e45564256e7c",
+      "scope": "path-only proposal; actual module/preservation companion guards pending"
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/files/tests/clinical-review-femoral-venous-xray.test.ts",
+      "beforeSha256": "a97bfa57eb9eaca66f0b5b19133d32988a08b931712fc105066b931921a316ef",
+      "afterSha256": "00cde16bc349a8e6921094f56db467f95c35694d7163c4fb47c21d8485f7f16f",
+      "scope": "path-only proposal; actual module/preservation companion guards pending"
+    },
+    {
+      "path": "tests/clinical-review-hand-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/files/tests/clinical-review-hand-arterial-xray.test.ts",
+      "beforeSha256": "f5b6ecb146c27d30e44c12324cbaa939f57112584f2a4392a7a1ab54dc895dd9",
+      "afterSha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a",
+      "scope": "path-only proposal; actual module/preservation companion guards pending"
+    },
+    {
+      "path": "tests/clinical-review-inbox-source-update.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-inbox-track-regression/files/tests/clinical-review-inbox-source-update.test.ts",
+      "beforeSha256": "9eeb2a0e0a3534bf8be14b484b4512c09510160c2fd5dc52faea3f39cfbd9b3a",
+      "afterSha256": "2ef6e430a68dac8fe3a6b67b605c6d9b95e1812fb71d28a15f1aa466be34dae9",
+      "scope": "actual2-case source-update/account-isolation module passes"
+    }
+  ],
+  "actualModuleTestsPassed": 9,
+  "desktopReceipt": "F:/VisibleMedicine/staging/20261020-review-regression-wave/desktop/DESKTOP_LAYOUT_RECEIPT.json",
+  "desktopLogSha256": "ba6950207fe516b7db51de48febb2744dbe6f47cf2ee2b79d8a5b289e33abdf2",
+  "inboxReceipt": "F:/VisibleMedicine/staging/20261020-inbox-track-regression/INBOX_TRACK_ACTUAL_SOURCE_UPDATE.json",
+  "inboxLogSha256": "9c48da39076a27c53e0ea7e70983adc117d716cdb98aafe4cf3d8b27b97891b0",
+  "originalRootAndInboxByteInverses": 4,
+  "desktopOriginalFourTestsReconstructedInActualModule": true,
+  "rootProposalsRequire": "Before admission, preserve closed56 femoral guard expectations explicitly and run original arterial/venous/hand modules; do not weaken original fixtures. These three root proposals are not whole-module verified.",
+  "unchangedInspectedRootFiles": 9,
+  "fullSuitePass": false,
+  "canonicalInstalled": false,
+  "ownerEditorRefreshed": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
