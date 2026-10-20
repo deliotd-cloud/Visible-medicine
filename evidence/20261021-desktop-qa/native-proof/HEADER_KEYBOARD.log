@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: source is still the expected exact input and proposal changes only the focus guard
+ok 1 - source is still the expected exact input and proposal changes only the focus guard
+  ---
+  duration_ms: 1.0057
+  type: 'test'
+  ...
+# Subtest: closed link/button focus stays closed; disclosure, hover and dismissals retain behavior
+ok 2 - closed link/button focus stays closed; disclosure, hover and dismissals retain behavior
+  ---
+  duration_ms: 59.0552
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 147.0922

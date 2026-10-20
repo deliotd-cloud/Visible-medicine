@@ -1,32 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T23:30:59.204Z",
+  "at": "2026-10-20T23:46:45.919Z",
   "sourceIdentity": {
-    "baseSource": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "worktreeDirty": true,
-    "proposalFiles": [
-      {
-        "path": "scripts/test-hip-quick-check-history.mjs",
-        "bytes": 4609,
-        "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
-      },
-      {
-        "path": "scripts/hip-quick-check-history-context.mjs",
-        "bytes": 9024,
-        "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
-      },
-      {
-        "path": "scripts/test-hip-history-entry-refusals.mjs",
-        "bytes": 6511,
-        "sha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950"
-      }
-    ],
-    "sourceCommitted": false,
-    "websiteImported": false,
-    "wrapperEndToEndPass": false
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "canonicalAtlas": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+    "candidateAtlas": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "proposalOnly": true,
+    "canonicalInstalled": false
   },
-  "parent": "22bd48d4da2d2f1f8755809f4f47e32f621d7bfd",
-  "gitParent": "22bd48d4da2d2f1f8755809f4f47e32f621d7bfd",
+  "parent": "65b525b956677649b9075a89585f49b15e116f8a",
+  "gitParent": "65b525b956677649b9075a89585f49b15e116f8a",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -442,6 +425,91 @@
       "path": "evidence/20261021-ct-delivery-history-repair/SOURCE_INPUTS_AFTER.json",
       "bytes": 868413,
       "sha256": "9901c70f1e6b148c5b6eae4bdccfb2f8a95051a458a75904b749e0f7234120ab"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/native-proof/COVERAGE_ARTERIAL_PURE.json",
+      "bytes": 602,
+      "sha256": "2b02f891e0f5c9ca212bb2c5e09a2caac1fbf709fc840bebd733f7137f133316"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/native-proof/COVERAGE_ARTERIAL_PURE.log",
+      "bytes": 549,
+      "sha256": "0b045fb8497eb0771ad17ec2a562614b1e613ff3f41141781014d8e4e86279dc"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/native-proof/HEADER_KEYBOARD.json",
+      "bytes": 637,
+      "sha256": "d3f85175296debf7aae9c5cdf3bde0b68f9daec82b1bec7a48691c253d6d3ed6"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/native-proof/HEADER_KEYBOARD.log",
+      "bytes": 594,
+      "sha256": "8fc31a14a07064686644f619bd760f37b2f4649360b578ccf1545fd5fd1b8891"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/FILES.json",
+      "bytes": 2255,
+      "sha256": "0eeff1d538edf582f4cdf68764711d8e34d99bb7a250d661804f52ce7bd17eb8"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/HANDOFF.md",
+      "bytes": 1803,
+      "sha256": "76cd87420fa30631e9b6124bcf1837a4447d0f75c22388f9127c22cf723b554b"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/originals/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 14371,
+      "sha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/originals/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/coverage-arterial/verify-inverse.mjs",
+      "bytes": 7538,
+      "sha256": "a84c8fc124eeed8424c330619c958982c881cc46df5166b4074f87630992688e"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/components/SiteHeader.tsx",
+      "bytes": 14418,
+      "sha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/FILES.json",
+      "bytes": 1437,
+      "sha256": "19e6bf9a0bd57683dbc00a80c4957b940f8fa5ce1175c6e7895e007a707a41a2"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/HANDOFF.md",
+      "bytes": 1402,
+      "sha256": "d152174f302520c0707835c4810028f52a353e06a9f069a5d57d9fde636030ea"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/originals/components/SiteHeader.tsx.raw",
+      "bytes": 14391,
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/TEST.log",
+      "bytes": 675,
+      "sha256": "a39b143d3020913a8079965cd0e2e0e798d936297de00ce0c4964d2ed4c573fa"
+    },
+    {
+      "path": "evidence/20261021-desktop-qa/proposals/header-keyboard/tests/header-keyboard.test.mjs",
+      "bytes": 8808,
+      "sha256": "522a2f8e40437bbb9a08bcb98e9c721fade9e92c621e9d5cc0a740d6c586ff91"
     },
     {
       "path": "evidence/20261021-hip-history-guard-proposal/HIP_WRAPPER_DEFAULT_GIT.json",
@@ -1540,14 +1608,13 @@
     }
   ],
   "removed": [],
-  "scope": "Selected uncommitted three-script test proposal and receipts on previously filtered ancestry only. No raw canonical ancestry, scans/models/masks/private modules/reviews/databases/secrets. Not complete/runnable/private-data backup; not an admitted application release.",
+  "scope": "Reviewed uninstalled header and two test-contract proposals, their original bytes and focused proof; previously filtered selected-source ancestry only. Browser observations/pixels remain F-local. No raw canonical ancestry, scans/masks/models/private modules/reviews/databases/secrets. Not full/runnable/private-data backup or application release.",
   "proof": {
-    "guardScriptPass": true,
-    "guardRefusals": 20,
-    "actualDefaultGitGuardPass": true,
-    "currentShoulderPrefixByteExact": true,
-    "wrapperEndToEndPass": false,
-    "limits": "Installed dependency contents are not lockfile-byte-attested; registered same-repo path confinement and selected regular files checked.20 guard refusals include synthetic protocol mutations; actual default Git/source checkout check passes. Old original whole test witness is not a pass of this launcher. Do not run the heavy child while the independent full Website suite is live."
+    "headerHandlerTests": 2,
+    "wholeOriginalHeaderInverse": true,
+    "contractPureProof": true,
+    "focusedContractModulesPass": false,
+    "newHeaderBrowserAccepted": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

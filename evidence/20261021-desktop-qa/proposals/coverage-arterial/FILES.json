@@ -1,0 +1,26 @@
+{
+  "schema": "visible-medicine.staged-test-contract-proposal/1",
+  "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "atlasHead": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "base": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "onlyProposedIntegrationPaths": [
+    "tests/anatomy-coverage-revision-admission.test.mjs",
+    "tests/atlas-arterial-evidence-limits.test.mjs"
+  ],
+  "files": [
+    {"path": "originals/tests/anatomy-coverage-revision-admission.test.mjs", "role": "exact frozen original", "bytes": 14371, "sha256": "3611dc20929cac9bb27c5ac4aac85c27498d4862b2feb5a5a716f3ed4f2b95a0"},
+    {"path": "tests/anatomy-coverage-revision-admission.test.mjs", "role": "proposed replacement", "bytes": 17502, "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"},
+    {"path": "originals/tests/atlas-arterial-evidence-limits.test.mjs", "role": "exact frozen original", "bytes": 17250, "sha256": "7b105f5146aab1653aedca9a7150a73733575f87e7e848063cb07e8faea9b843"},
+    {"path": "tests/atlas-arterial-evidence-limits.test.mjs", "role": "proposed replacement", "bytes": 17250, "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"},
+    {"path": "verify-inverse.mjs", "role": "proposal-only lightweight inverse and metadata proof", "bytes": 7538, "sha256": "a84c8fc124eeed8424c330619c958982c881cc46df5166b4074f87630992688e"}
+  ],
+  "frozenSourceSha256": {
+    "docs/anatomy-coverage/index.json": "9020eac8ed2fee77ef04b63357eabd23471f99e3e966d5b2c427010ee3478579",
+    "scripts/check-anatomy-coverage.mjs": "7111c89c35ea528818092e6118433c050f679f986910d4d9a6fe61f314c1bc8b",
+    "lib/anatomy-coverage-view.ts": "700e5b8ebd6f7aeafd98e858879da10d35b94aab977c564f80616d4c585e01e5",
+    "tests/clinical-review-desktop-layout.test.mjs": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf",
+    "tests/fixtures/current-delivery-before-inbox485/clinical-review-desktop-layout.test.mjs.raw": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a",
+    "tests/fixtures/current-atlas-delivery.json": "7f08673542eedf10d211b4668aad93efc65ab7854d6141ec409512edd3785eba"
+  },
+  "integrationState": "not installed; frozen candidate and Atlas source unchanged"
+}

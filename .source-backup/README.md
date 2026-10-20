@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected uncommitted three-script test proposal and receipts on previously filtered ancestry only. No raw canonical ancestry, scans/models/masks/private modules/reviews/databases/secrets. Not complete/runnable/private-data backup; not an admitted application release.
+Reviewed uninstalled header and two test-contract proposals, their original bytes and focused proof; previously filtered selected-source ancestry only. Browser observations/pixels remain F-local. No raw canonical ancestry, scans/masks/models/private modules/reviews/databases/secrets. Not full/runnable/private-data backup or application release.

@@ -1,0 +1,9 @@
+Command: node --test tests/header-keyboard.test.mjs
+Working directory: F:/VisibleMedicine/staging/20261021-header-keyboard-proposal
+Source: canonical and frozen candidate SiteHeader.tsx both SHA-256 ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec
+Result: 2 tests passed, 0 failed, duration 150.7543 ms
+
+✔ source is still the expected exact input and proposal changes only the focus guard
+✔ closed link/button focus stays closed; disclosure, hover and dismissals retain behavior
+
+The test uses esbuild and React from the existing 20261020 candidate node_modules. No dependency install, project build, typecheck, source import, or full suite run occurred.

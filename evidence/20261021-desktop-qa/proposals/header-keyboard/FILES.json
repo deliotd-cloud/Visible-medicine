@@ -1,0 +1,31 @@
+{
+  "proposal": "20261021-header-keyboard-proposal",
+  "baseline": {
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "canonicalSource": "F:/VisibleMedicine/website/components/SiteHeader.tsx",
+    "frozenCandidateSource": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/components/SiteHeader.tsx",
+    "expectedSha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+  },
+  "files": [
+    {
+      "path": "originals/components/SiteHeader.tsx.raw",
+      "sha256": "ab71e13765bb490f5f891d933f09b40987c9643f4e4bee1ba7c2471fa94feeec"
+    },
+    {
+      "path": "components/SiteHeader.tsx",
+      "sha256": "a4a85f4da9f956fe8d59024cd2c220266d385579d969799680a5dacaec65ca6b"
+    },
+    {
+      "path": "tests/header-keyboard.test.mjs",
+      "sha256": "522a2f8e40437bbb9a08bcb98e9c721fade9e92c621e9d5cc0a740d6c586ff91"
+    }
+  ],
+  "proof": {
+    "sourceGuard": "Test checks original and current canonical bytes against expected SHA-256 and reconstructs the original by reversing the single focus-guard change.",
+    "focusedCommand": "node --test tests/header-keyboard.test.mjs",
+    "focusedResult": "2 passed, 0 failed, 150.7543 ms",
+    "diff": "Only the primary-nav-group onFocus guard at SiteHeader.tsx:206 changes.",
+    "log": "TEST.log"
+  },
+  "limits": "Proposal only. No source import, whole-project gate, native keyboard or browser acceptance, commit, push or deployment."
+}

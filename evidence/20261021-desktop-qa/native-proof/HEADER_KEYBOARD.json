@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-20T23:46:43.352Z",
+  "finishedAt": "2026-10-20T23:46:43.586Z",
+  "command": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "--test",
+    "--test-reporter=tap",
+    "tests/header-keyboard.test.mjs"
+  ],
+  "cwd": "F:/VisibleMedicine/staging/20261021-header-keyboard-proposal",
+  "status": 0,
+  "signal": null,
+  "error": null,
+  "log": "F:/VisibleMedicine/staging/20261021-public-keyboard-browser-qa/HEADER_KEYBOARD.log",
+  "logSha256": "8fc31a14a07064686644f619bd760f37b2f4649360b578ccf1545fd5fd1b8891",
+  "scope": "Bounded standalone tests/pure proof only; not the full Website suite or native browser acceptance"
+}
