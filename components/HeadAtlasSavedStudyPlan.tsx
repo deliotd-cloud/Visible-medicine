@@ -12,6 +12,7 @@ export function HeadAtlasSavedStudyPlan(props:{plan:HeadStudyPlan|null;entries:H
   const latest=useRef(props);latest.current=props;
   const rawRef=useRef(raw);rawRef.current=raw;
   const mounted=useRef(false),pending=useRef(false);
+  const summary=useRef<HTMLElement|null>(null);
   const saved=parseHeadStudyPlan(raw),candidate=props.plan?parseHeadStudyPlan(JSON.stringify(props.plan)):null;
   const candidateKey=candidate?JSON.stringify(candidate):null;
   const identity=useRef({study:props.study,modality:props.modality,entries:props.entries,candidateKey,epoch:0});
@@ -71,15 +72,16 @@ export function HeadAtlasSavedStudyPlan(props:{plan:HeadStudyPlan|null;entries:H
       setBusy(false);
     }}
   }
-  function save(){void mutate('save');}
-  function restore(){if(pending.current||!saved||!count||!current())return;latest.current.onRestore(saved);setNotice(`${count} available concepts added. Existing entries stay; practice has not started.`);}
+  // These actions disable their own button; retain a stable keyboard position.
+  function save(){summary.current?.focus();void mutate('save');}
+  function restore(){if(pending.current||!saved||!count||!current())return;summary.current?.focus();latest.current.onRestore(saved);setNotice(`${count} available concepts added. Existing entries stay; practice has not started.`);}
   function remove(){void mutate('remove');}
   return <details className="head-saved-study-plan" onKeyDown={event=>{
     if(event.key!=='Escape'||!event.currentTarget.open)return;
     event.preventDefault();event.stopPropagation();event.currentTarget.open=false;
     event.currentTarget.querySelector('summary')?.focus();
   }}>
-    <summary>Save or restore a plan{saved?` · ${saved.conceptIds.length}`:''}</summary>
+    <summary ref={summary}>Save or restore a plan{saved?` · ${saved.conceptIds.length}`:''}</summary>
     <p>Optional: keep one mapped anatomy plan in this browser. Shared-device users can see it. No scans, filenames, scores or annotations are saved.</p>
     {props.entries.length>0&&<><button type="button" disabled={busy||!available||!candidate||same} onClick={save}>{same?'This mapped plan is saved':raw?'Replace saved plan':'Save mapped plan'}</button>
       <p>{candidate?.conceptIds.length??0} of {props.entries.length} study-set entries have a supported concept. Unmapped entries are not saved.</p></>}

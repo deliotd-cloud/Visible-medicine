@@ -34,6 +34,7 @@ function fixture(initial:string|null=null,blocked=false,options:{data?:Map<strin
  const flush=()=>{let guard=0;while(dirty||effects.length){assert(++guard<20);dirty=false;index=0;tree=module.exports.HeadAtlasSavedStudyPlan(props);effects.splice(0).forEach(fn=>fn());}return tree!;};flush();
  return {data,restores,get writes(){return writes;},get removed(){return removed;},get text(){return text(flush());},
  button(label:string){const match=nodes(flush()).find(n=>n.type==='button'&&text(n)===label);assert(match,label);return match;},
+  summary(){const match=nodes(flush()).find(n=>n.type==='summary');assert(match);return match;},
  update(next:Record<string,unknown>){props={...props,...next};dirty=true;flush();},deny(){deny=true;},retire(){usable=false;},
  storage(raw:string|null,event=true){if(raw===null)data.delete(key);else data.set(key,raw);if(event)listeners.forEach(fn=>fn({key}));flush();},
  async settle(){await new Promise(resolve=>setImmediate(resolve));flush();},
@@ -50,6 +51,40 @@ test('saving is opt-in, concept-only and persists across remount without automat
   resumed.button('Add saved concepts to this set (1)').props.onClick();assert.deepEqual(resumed.restores,[plan]);
   assert.match(resumed.text,/practice has not started/);
  }finally{resumed.close();}
+});
+
+test('save and restore retain summary focus before their triggering button becomes disabled',async()=>{
+ const saving=fixture();let focused=0;
+ try{
+  saving.summary().props.ref.current={focus(){focused++;assert.equal(saving.writes,0);}};
+  saving.button('Save mapped plan').props.onClick();assert.equal(focused,1);
+  await saving.settle();assert.equal(saving.writes,1);assert(saving.button('This mapped plan is saved').props.disabled);
+  assert.equal(focused,1);assert.deepEqual(saving.restores,[]);
+ }finally{saving.close();}
+ const restoring=fixture(JSON.stringify(plan));
+ try{
+  restoring.update({entries:[],plan:null});
+  restoring.summary().props.ref.current={focus(){focused++;assert.deepEqual(restoring.restores,[]);}};
+  restoring.button('Add saved concepts to this set (1)').props.onClick();
+  assert.equal(focused,2);assert.deepEqual(restoring.restores,[plan]);assert.equal(restoring.writes,0);
+  restoring.update({entries:[entry],plan});assert(restoring.button('Add saved concepts to this set (0)').props.disabled);
+ }finally{restoring.close();}
+});
+
+test('failed saves retain stable focus and stale restores never move it or restore concepts',async()=>{
+ const failed=fixture(null,false,{failSet:true});let focused=0;
+ try{
+  failed.summary().props.ref.current={focus(){focused++;}};
+  failed.button('Save mapped plan').props.onClick();await failed.settle();
+  assert.equal(focused,1);assert.equal(failed.writes,0);assert.match(failed.text,/could not be saved/);
+ }finally{failed.close();}
+ const stale=fixture(JSON.stringify(plan));
+ try{
+  stale.update({entries:[],plan:null});
+  stale.summary().props.ref.current={focus(){focused++;}};
+  const restore=stale.button('Add saved concepts to this set (1)');stale.retire();restore.props.onClick();
+  assert.equal(focused,1);assert.deepEqual(stale.restores,[]);assert.equal(stale.writes,0);
+ }finally{stale.close();}
 });
 test('invalid or stale saved data is not restored or rewritten and remains removable',async()=>{
  for(const raw of ['{bad',JSON.stringify({...plan,headRevision:'old'}),JSON.stringify({...plan,url:'https://evil.invalid'})]){

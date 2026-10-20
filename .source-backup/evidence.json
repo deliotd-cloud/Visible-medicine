@@ -1,73 +1,50 @@
 {
-  "schema": "vm-native-preview-routing-acceptance/1",
-  "at": "2026-10-20T04:40:57.512Z",
-  "sourceBase": "6d3362ccfd8d4bdb5ab68e06be6233a604d75544",
+  "schema": "vm-saved-plan-focus-checkpoint/1",
+  "at": "2026-10-20T04:56:15.484Z",
+  "sourceBase": "cfe1c2556e18e6663fc5275f0497c55d2bce04c6",
   "sourcePaths": 4960,
   "deltaPaths": [
-    "vite.config.ts",
-    "docs/LOCAL_ATLAS_PREVIEW_ROUTING.md",
-    "scripts/local-atlas-development-plugin.mjs",
-    "tests/local-atlas-development-plugin.test.mjs",
-    "tests/native-locate-composed.test.mjs"
+    "components/HeadAtlasSavedStudyPlan.tsx",
+    "tests/head-saved-study-plan-ui.test.ts",
+    "tests/shoulder-girdle-arterial-current-admission-contract.test.mjs"
   ],
   "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
-  "reviewAndAll1681InputsUnchanged": true,
-  "protectedModels": 137,
-  "registeredModelPaths": 144,
-  "sourceScopeReceiptSha256": "fa02177a9ef8a2165892681a0e0f4dea9ed259538b518bacd478beafc9528ef0",
-  "nativeCases": {
-    "routingAndOriginalProductionContracts": 14,
-    "composedSynthetic": 1,
-    "totalNewCandidateRun": 15,
+  "all1681ReviewInputsUnchanged": true,
+  "allOther5113CopiedFilesUnchanged": true,
+  "fix": "Save and valid Restore focus their stable disclosure summary before their own button disables. No storage/epoch/race/retirement gate, schema, source revision, clinical content or entitlement changed.",
+  "regressionRepair": "Shoulder contract now declares the exact pre-existing third Review read seam while preserving byte-exact frozen historical original/helper and current producer admission plus stale historical/source/review and tampered-seam refusals; no helper or fixture edits.",
+  "tests": {
+    "distinctFocusedCases": 68,
+    "savedPlanAndSchemaAndShoulder": 21,
+    "studySetOrderAndComparison": 33,
+    "modelRoutingAndProductionBoundary": 14,
+    "typesDiagnostics": 0,
+    "reviewVerification": true,
+    "policyVerification": true,
+    "productionBuild": true,
     "wholeSuite": false
   },
-  "independentSyntheticWorker": {
-    "path": "F:/VisibleMedicine/staging/20261020-native-locate-integration/HANDOFF.md",
-    "sha256": "b5f7e733ea090a69f103039a4cee71f7c8521087acc3ae0f3fabfbeb11250a70",
-    "existingCases": 33,
-    "newComposedTest": 1,
-    "nestedDelegation": false
-  },
-  "types": {
-    "diagnostics": 0,
-    "receiptSha256": "c54fc141e0f66897b212608e639ce627f89c1a7661de9372e133a139f9c80d38"
-  },
-  "productionBuild": {
-    "receiptSha256": "23508b99ab3167212801d605d6acda15343687919712a135f2204d6d637da4e7",
-    "commands": [
-      {
-        "label": "review",
-        "code": 0,
-        "logSha256": "22c93c1bf60a2ac98001e7c481618b449393cc0bf7531c0b5af13f3871e615c3"
-      },
-      {
-        "label": "policy",
-        "code": 0,
-        "logSha256": "b98f5e7fef04059e3832806b43776037d680e999a47285e0d86789b55c0ad388"
-      },
-      {
-        "label": "build",
-        "code": 0,
-        "logSha256": "e29ec41603b46c34fa7189cf9c4de3bdbc599dda5f1ab9dfdee664f2b948eb28"
-      }
-    ],
-    "workerFirst": true
-  },
-  "development": {
-    "requests": 321,
-    "receiptSha256": "92423dfac81ad6fea8f1684405e2df425e376747dfcf31cdc48836e275a5ceef"
-  },
-  "production": {
-    "requests": 511,
-    "receiptSha256": "799bc7f0a8b16e45f36de2a34a98c6be9701d7d26ee1eb19654c69d1596aa0d6"
-  },
   "browser": {
-    "receiptSha256": "636c87181e8f4c496dc34d7f4b1eba9e976f31be24be58fffc9033b279da4bab",
-    "scope": "Actual loaded approved CT/MRI: independently validated saved-mask point through rendered canvas and normal Check answer, both Correct1/1/no Try again/zero overflow and visible alert; automated untrusted pointer placement, not physical pointer/AT/GPU/clinical acceptance. Private buffers/coordinates/IDs/pixels never recorded or uploaded."
+    "receiptSha256": "2a523a12b2a386f3e24e1daafd981ffe799e4aa7ce723366544f55a1dcd77465",
+    "MRI": "Save/restore/remount/remove/Escape stable focus and opt-in concept-only persistence",
+    "CT": "Explicit mapped concept restore, no quiz starts, stable focus; removal updates other tab while preserving each active set",
+    "desktop": "1280x720, no horizontal overflow/visible alerts; existing approved local source loaded normally",
+    "privateSourcePixelsOrPathsRecorded": false,
+    "physicalHumanPointer": false
   },
-  "fixes": "Vite serve mode permits ordinary transformed JS/CSS behind a first pre-enforced exact-inventory model guard; raw model URLs rewrite to existing authorized API. Production build remains blanket Worker-first. No Worker, API, entitlements, masks, geometry, model inventory/policy, Atlas source or Review binding changed.",
-  "retainedFailures": "Actual baseline virtual browser404/CSS MIME errors and inactive native UI retained. Initial raw HTTP proof omitted a leading slash and received400; corrected valid path, original receipt retained. First composed worker expectation assumed the wrong native screen direction; corrected expectation via actual geometry, no product/test gate weakened. Browser reload observation timeout was not treated as terminal; same page loaded normally. Initial receipt metadata duplicate source key clarified; pre-clarification retained.",
-  "limits": "Only separate unpublished candidate, not canonical installation/public deployment, full suite, physical wheel/AT/200%-text/all structures, clinical/privacy/registration acceptance. Owner3000/open lecture untouched. Source-only backup excludes private data/context/runtime databases/model payloads/raw canonical history.",
+  "evidence": {
+    "SOURCE_SCOPE.json": "da2b86de3993a590617c1a97e886e6c9c64ac498027f90ff218674c48ec9da96",
+    "SAVED_PLAN_NATIVE.json": "35128d318d30deca9f6be2b3f1ca16574d394a8c182f8fa5cea5a00cefceb6bc",
+    "STUDY_SET_REGRESSION.json": "fe0619288843286fbf288dd5cc04f1852ff7339e75c14c7c645eb9b9c978dddd",
+    "ROUTING_REGRESSION.json": "007864c3f4f21727988c123d0e3838b0a9455413d06de858cfb265fb73e34ef7",
+    "TYPECHECK.json": "3e753f443e21437c8040465938f518db57c4b927a607249d2f15a45ea17f32c2",
+    "REVIEW.json": "9bcc36e7ed24a03ae95e957aed25f213d93cd384faf3d6933566f7db8c85c594",
+    "POLICY.json": "996fb7c36aee4e03e56a87d9aa94a92ca8767c8aef3145a7de193598b2794217",
+    "PRODUCTION_BUILD.json": "130d4617a9e914fdab0521e9685f8233793b9af2b692cd1a0660faa1525ed43e",
+    "BROWSER_ACCEPTANCE.json": "2a523a12b2a386f3e24e1daafd981ffe799e4aa7ce723366544f55a1dcd77465"
+  },
+  "retainedLimits": "Original actual Save/Restore lost focus to BODY. Initial broad hidden-control presence was not accepted as quiz-start evidence; active Practice aria-pressed and rendered state used instead. One guessed missing test path refused before spawn, then exact existing production-boundary entry ran. Full suite171 historical failures not all repaired. No canonical installation, public deployment, clinical/privacy approval, spatial registration, physical wheel/AT/all-structures/GPU/real-role acceptance.",
+  "ownerPreview": "3000 and unsaved lecture untouched; no further save question/navigation/refresh. Owned3003 previews/pages23/24 closed and exact child identities stopped.",
   "heldArchivePaths": [
     "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
     "tests/fixtures/head-pilot-9fba-epoch.json",
