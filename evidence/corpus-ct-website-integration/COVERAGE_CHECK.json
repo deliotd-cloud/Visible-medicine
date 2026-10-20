@@ -1,0 +1,14 @@
+{
+  "label": "COVERAGE_CHECK",
+  "args": [
+    "scripts/check-anatomy-coverage.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 11934,
+  "log": "F:/VisibleMedicine/staging/20261020-corpus-ct-website-integration/COVERAGE_CHECK.log",
+  "logSha256": "0a71c2a6ee5f89cac10b7d275858113080f649bfef19647b41e755f9fcb888bc",
+  "footer": [],
+  "canonicalInstalled": false
+}

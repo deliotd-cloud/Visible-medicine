@@ -1,0 +1,14 @@
+{
+  "label": "FULL_WEBSITE_BUILD",
+  "args": [
+    "node_modules/vinext/dist/cli.js",
+    "build"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 48242,
+  "log": "F:/VisibleMedicine/staging/20261020-corpus-ct-website-integration/FULL_WEBSITE_BUILD.log",
+  "logSha256": "6e82d14d7860a0c0c70425847a7cfc846c49663ccc9a88e2a5a93ce38f972fc2",
+  "footer": [],
+  "canonicalInstalled": false
+}

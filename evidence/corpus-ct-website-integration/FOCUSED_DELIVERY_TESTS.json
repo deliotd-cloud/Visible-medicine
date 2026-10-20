@@ -1,0 +1,26 @@
+{
+  "label": "FOCUSED_DELIVERY_TESTS",
+  "args": [
+    "--strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/corpus-ct-current-delivery.test.mjs",
+    "tests/anatomy-coverage-view.test.ts",
+    "tests/atlas-delivery-policy-preflight.test.mjs",
+    "tests/review-ui-bound-inputs.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 4431,
+  "log": "F:/VisibleMedicine/staging/20261020-corpus-ct-website-integration/FOCUSED_DELIVERY_TESTS.log",
+  "logSha256": "91fb23ab42687791352786f150fba23dd9d69a0f39505f1c126682bcde5fcc1e",
+  "footer": [
+    "ℹ tests 12",
+    "ℹ pass 12",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

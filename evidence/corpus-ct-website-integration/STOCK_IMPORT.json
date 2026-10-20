@@ -1,0 +1,42 @@
+{
+  "commands": [
+    {
+      "args": [
+        "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2/install-review-module-exports-20261020.mjs",
+        "F:/VisibleMedicine/staging/20261020-corpus-ct-website-integration"
+      ],
+      "code": 0,
+      "durationMs": 3813
+    },
+    {
+      "args": [
+        "scripts/atlas-model-inventory.mjs"
+      ],
+      "code": 0,
+      "durationMs": 452
+    },
+    {
+      "args": [
+        "scripts/import-clinical-review.mjs",
+        "F:/VisibleMedicine/staging/20261020-teaching-review-source"
+      ],
+      "code": 0,
+      "durationMs": 108608
+    }
+  ],
+  "preserved": [
+    {
+      "from": "F:\\VisibleMedicine\\staging\\20261020-combined-website-ui\\website\\atlas-review",
+      "to": "F:\\VisibleMedicine\\staging\\20261020-corpus-ct-website-integration\\generated-before\\atlas-review"
+    },
+    {
+      "from": "F:\\VisibleMedicine\\staging\\20261020-combined-website-ui\\website\\public\\atlas-review-viewer",
+      "to": "F:\\VisibleMedicine\\staging\\20261020-corpus-ct-website-integration\\generated-before\\public\\atlas-review-viewer"
+    }
+  ],
+  "source": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "log": "F:/VisibleMedicine/staging/20261020-corpus-ct-website-integration/STOCK_IMPORT.log",
+  "logSha256": "6e124a8e0328a6ab2918e3c9b0533862c4d482ea7b78a5843bacbb57df3ce521",
+  "modelsUnchanged": true,
+  "canonicalInstalled": false
+}

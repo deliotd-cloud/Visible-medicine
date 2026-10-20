@@ -1,0 +1,56 @@
+{
+  "at": "2026-10-20T22:27:17.143Z",
+  "source": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "changes": [
+    {
+      "path": "docs/anatomy-coverage/root.json",
+      "beforeSha256": "39c184f2ea1d585eb7bcf81e0ea451dca24ab2701f8aab617f421527a2ec5f98",
+      "afterSha256": "6594d53f395bc75d0a67d7e4bc2ba7cf3309c34e6dac40344af44a943a872895",
+      "proposal": "generated/root.json"
+    },
+    {
+      "path": "docs/anatomy-coverage/nested.json",
+      "beforeSha256": "caaa2b04d67cda638212992691adf7cc6774f0ad78b645982f7d059d01d4e882",
+      "afterSha256": "5e60e527a928349ebd98b57dde35fd910c47723b2a2d97af7b1725dda2b52569",
+      "proposal": "generated/nested.json"
+    },
+    {
+      "path": "docs/anatomy-coverage/independent.json",
+      "beforeSha256": "df797ad979f3cd67d9da086b3e3b781da8ffdc677f282c7f648b2e4d8a86a8f2",
+      "afterSha256": "f18c15996fe25d4ece4440f5c3016e011001177bac503baeeaba18c344074cd9",
+      "proposal": "generated/independent.json"
+    },
+    {
+      "path": "docs/anatomy-coverage/reference.json",
+      "beforeSha256": "5d20c3b4d1b6fde64eacab91cab941c803f0ec03815701b94fa8894ad9c4bbf1",
+      "afterSha256": "ccb49941ba9b27ba8c6dcc855c14971b1626af8ab9b74376099885231fbc618e",
+      "proposal": "generated/reference.json"
+    },
+    {
+      "path": "docs/anatomy-coverage/index.json",
+      "beforeSha256": "2f827877facf6d66fe7670a171d67f54dcb6cade0a5b0e457bc79cd63be0d8de",
+      "afterSha256": "0def73f72441e2d9b2569ce59be4be99d5d8def0ebc55e75f057e6c786b3b931",
+      "proposal": "generated/index.json"
+    },
+    {
+      "path": "scripts/check-anatomy-coverage.mjs",
+      "beforeSha256": "50def923f278a7efb1ef727bbf158b0216fdcb096afc2359ecccf144e1268e24",
+      "afterSha256": "0827e91d611d1ffefeb339a646bb60772e6bce89921df9d0b1fc6f954d8ad2bc",
+      "proposal": "check-anatomy-coverage.patch"
+    },
+    {
+      "path": "lib/anatomy-coverage-view.ts",
+      "beforeSha256": "521b5e7b1600147f1ce0fd3dfb48060638864a5deee46139f4a3082f84742e9c",
+      "afterSha256": "0503ca2492f5083fc9715e321e729d46b95be6387894a276d5880361d461a822",
+      "proposal": "anatomy-coverage-view.patch"
+    }
+  ],
+  "actualProducers": 4,
+  "coverageInputs": 168,
+  "importedInputs": 142,
+  "metadataOnlyInputs": 26,
+  "allCountsHoldsFramesAndApprovalsUnchanged": true,
+  "privatePolicyOnlyInventoryHashChanged": true,
+  "privateSchematicDependenciesAndAssetsUnchanged": true,
+  "canonicalInstalled": false
+}

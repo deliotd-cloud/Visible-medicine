@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-20T22:29:07.434Z",
+  "source": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "tree": "f17a39ff7f40d31aa5b0bd2176f923c95c1ea160",
+  "review": "3e6512f833ad5fe795d64eca2263ef5eef5ebd06f735d83423a5f3a0b05a3443",
+  "reviewImports": 1550,
+  "boundInputs": 1707,
+  "viewerFiles": 46,
+  "viewerPackages": 22,
+  "learnerInputs": 2866,
+  "distinctSourcePathsGitVerified": 1611,
+  "allImportedAndLearnerSourceHashesGitVerified": true,
+  "modelsUnchanged": 137,
+  "modelPathsUnchanged": 144,
+  "changedBoundInputs": [
+    "atlas-review/content/body-review-display-pins.json",
+    "atlas-review/content/corpus-imaging.ts",
+    "atlas-review/content/regional-teaching/pelvis.json",
+    "atlas-review/lib/corpus-imaging.ts",
+    "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
+    "docs/anatomy-coverage/index.json",
+    "lib/anatomy-coverage-view.ts",
+    "scripts/import-clinical-review.mjs"
+  ],
+  "fixtureSha256": "6ccf96e6f4d34a2d33143d25ad9b8fad050d6a81cc2b280b61992182ab5a1717",
+  "previousCompleteDeliveryRefused": true,
+  "oldHistoricalTestsUnmodified": true,
+  "canonicalInstalled": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

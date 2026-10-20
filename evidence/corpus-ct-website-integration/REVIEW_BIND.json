@@ -1,0 +1,13 @@
+{
+  "label": "REVIEW_BIND",
+  "command": "C:/Program Files/nodejs/node.exe",
+  "args": [
+    "scripts/bind-clinical-review.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-corpus-ct-website-integration/REVIEW_BIND.log",
+  "logSha256": "af36bb989cedae63be4e2dd568624fffbfe9ceeac3519848237eb1a4fac7c8fe",
+  "footer": [],
+  "canonicalInstalled": false
+}

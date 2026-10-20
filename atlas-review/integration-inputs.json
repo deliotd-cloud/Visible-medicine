@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
-  "sha256": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
+  "sourceCommit": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "sha256": "3e6512f833ad5fe795d64eca2263ef5eef5ebd06f735d83423a5f3a0b05a3443",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -960,7 +960,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "dd926d72567359de88bf526d36a611eb4e8dcd2ef73f5d662760132cd4e5c607"
+      "sha256": "2820e60659fa5287d3322db1bcc601b7987a2c18394f723811b4ec1f1a52d52f"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -1196,7 +1196,7 @@
     },
     {
       "path": "atlas-review/content/corpus-imaging.ts",
-      "sha256": "c6e45f351156738a2175bd3b759e38b948bd4d63c4719ace21a96cb8c027229b"
+      "sha256": "5d5e7afeb081d79b1f8559c90f6fd51cfd8cc79a6727844413a081c6e937f61e"
     },
     {
       "path": "atlas-review/content/corpus-spongiosum-xray-v2.ts",
@@ -2708,7 +2708,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/pelvis.json",
-      "sha256": "5eef430cbd99143ad46911b8bbbd6ad7d997ba19f66fd92d846f81fc269b517a"
+      "sha256": "176079df8d51596766de8855647c7c0c0972f959a314e6e7033df57e8538cbf7"
     },
     {
       "path": "atlas-review/content/regional-teaching/shoulder-arm.json",
@@ -4016,7 +4016,7 @@
     },
     {
       "path": "atlas-review/lib/corpus-imaging.ts",
-      "sha256": "c5f100e44a819ebe7f532d1960c90be3936c084dad7e1651a9af9e34af1acea9"
+      "sha256": "b6256fdf7a17d1a9694d6aad5ea92ed4dc15f8f7ef3b5ed1d1060c4c0b0f4bfc"
     },
     {
       "path": "atlas-review/lib/corpus-spongiosum-xray-v2.ts",
@@ -6104,7 +6104,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa"
+      "sha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -6528,11 +6528,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "2f827877facf6d66fe7670a171d67f54dcb6cade0a5b0e457bc79cd63be0d8de"
+      "sha256": "0def73f72441e2d9b2569ce59be4be99d5d8def0ebc55e75f057e6c786b3b931"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "521b5e7b1600147f1ce0fd3dfb48060638864a5deee46139f4a3082f84742e9c"
+      "sha256": "0503ca2492f5083fc9715e321e729d46b95be6387894a276d5880361d461a822"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6824,7 +6824,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "950b76b53389a7fb29be7fa665b51649b0a74506de7b3d6c52a25e8a9b6d5f05"
+      "sha256": "4a73e3f297ef98bac1d2b67331712837df52387d048b104ced7951faeae508bf"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",
