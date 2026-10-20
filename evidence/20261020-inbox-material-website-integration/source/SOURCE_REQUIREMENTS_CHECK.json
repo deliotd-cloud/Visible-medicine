@@ -1,0 +1,22 @@
+{
+  "label": "SOURCE_REQUIREMENTS_CHECK",
+  "args": [
+    "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+    "run",
+    "requirements:check"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 21068,
+  "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_REQUIREMENTS_CHECK.log",
+  "logSha256": "af7ccae61b722334854a66369bcd05c1ab2cbdd9147de64266012a22a36a634b",
+  "footer": [
+    "ℹ tests 11",
+    "ℹ pass 11",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

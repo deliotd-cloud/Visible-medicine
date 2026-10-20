@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
-  "sha256": "3e6512f833ad5fe795d64eca2263ef5eef5ebd06f735d83423a5f3a0b05a3443",
+  "sourceCommit": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "sha256": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -3928,7 +3928,7 @@
     },
     {
       "path": "atlas-review/lib/clinical-review-queue.ts",
-      "sha256": "8ce3997054e750c7427d694e67b9f08159d13f964cd277d81e089e124729b2cb"
+      "sha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda"
     },
     {
       "path": "atlas-review/lib/clinical-review-status.ts",
@@ -6528,11 +6528,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "0def73f72441e2d9b2569ce59be4be99d5d8def0ebc55e75f057e6c786b3b931"
+      "sha256": "9020eac8ed2fee77ef04b63357eabd23471f99e3e966d5b2c427010ee3478579"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "0503ca2492f5083fc9715e321e729d46b95be6387894a276d5880361d461a822"
+      "sha256": "700e5b8ebd6f7aeafd98e858879da10d35b94aab977c564f80616d4c585e01e5"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6824,7 +6824,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "4a73e3f297ef98bac1d2b67331712837df52387d048b104ced7951faeae508bf"
+      "sha256": "611df4c6735e84855cbb307c7c318438a9d791fb6e958717797bc93cdf409f38"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

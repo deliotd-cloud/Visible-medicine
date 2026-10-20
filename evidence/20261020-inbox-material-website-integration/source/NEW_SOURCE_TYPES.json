@@ -1,0 +1,18 @@
+{
+  "label": "NEW_SOURCE_TYPES",
+  "command": "C:/Program Files/nodejs/node.exe",
+  "args": [
+    "F:/VisibleMedicine/staging/20261020-inbox-material-source/node_modules/typescript/bin/tsc",
+    "--project",
+    "F:/VisibleMedicine/staging/20261020-inbox-material-source/tsconfig.json",
+    "--noEmit",
+    "--incremental",
+    "false"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-inbox-material-reuse/NEW_SOURCE_TYPES.log",
+  "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "footer": [],
+  "canonicalInstalled": false
+}

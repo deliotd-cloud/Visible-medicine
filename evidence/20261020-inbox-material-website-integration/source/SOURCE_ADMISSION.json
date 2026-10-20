@@ -1,0 +1,122 @@
+{
+  "at": "2026-10-20T22:48:37.805Z",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+  "parent": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "files": [
+    {
+      "path": "lib/clinical-review-queue.ts",
+      "bytes": 9087,
+      "sha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda"
+    },
+    {
+      "path": "scripts/test-clinical-review-revision-observer.mjs",
+      "bytes": 8129,
+      "sha256": "c10a9e761f46138ad2b2194a1b2db2b9fa97fefca2db28e340ae5f1da43a723a"
+    }
+  ],
+  "receipts": [
+    {
+      "label": "SOURCE_OBSERVER_TEST",
+      "args": [
+        "--strip-types",
+        "--test",
+        "scripts/test-clinical-review-revision-observer.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 1844,
+      "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_OBSERVER_TEST.log",
+      "logSha256": "272e83e18fe6b812af5615a5139a48be0f930df38dfbb6c727bf42a7b2ac9917",
+      "footer": [
+        "ℹ tests 4",
+        "ℹ pass 4",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SOURCE_REVIEW_REVISIONS",
+      "args": [
+        "scripts/review-revisions.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 12259,
+      "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_REVIEW_REVISIONS.log",
+      "logSha256": "2ab7b1f4dcfd3004f4061d681b250989eb9298f5962de099aa85b76e402f5d34",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SOURCE_RENDERER_REVISIONS",
+      "args": [
+        "scripts/body-renderer-revisions.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 2442,
+      "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_RENDERER_REVISIONS.log",
+      "logSha256": "b8112d6ca831f3360bb4b599a2dc9d447bd2185b8150d67f649773ce02b4fcea",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SOURCE_REQUIREMENTS_REFRESH",
+      "args": [
+        "scripts/audit-requirements.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 20381,
+      "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_REQUIREMENTS_REFRESH.log",
+      "logSha256": "0d17835949b9df1a1aeaecf5ba472982e086e088271fba8987f5574c78e8d128",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SOURCE_BUILD",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "build"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 85019,
+      "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_BUILD.log",
+      "logSha256": "1799f52b8f358c3407377035fabf94a00aff05e93bc6eaf85e537ed991b94f3a",
+      "footer": [],
+      "canonicalInstalled": false
+    },
+    {
+      "label": "SOURCE_REQUIREMENTS_CHECK",
+      "args": [
+        "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+        "run",
+        "requirements:check"
+      ],
+      "code": 0,
+      "signal": null,
+      "durationMs": 21068,
+      "log": "F:/VisibleMedicine/staging/20261020-inbox-material-reuse/SOURCE_REQUIREMENTS_CHECK.log",
+      "logSha256": "af7ccae61b722334854a66369bcd05c1ab2cbdd9147de64266012a22a36a634b",
+      "footer": [
+        "ℹ tests 11",
+        "ℹ pass 11",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "canonicalInstalled": false
+    }
+  ],
+  "teachingAndGeometryUnchanged": true,
+  "canonicalInstalled": false,
+  "websiteSourceImported": false,
+  "clinicalApproval": false
+}

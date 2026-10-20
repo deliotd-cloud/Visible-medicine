@@ -1,0 +1,28 @@
+{
+  "label": "FOCUSED_INBOX_TESTS",
+  "args": [
+    "--strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/clinical-review-inbox-material-reuse.test.mjs",
+    "tests/clinical-review-inbox.test.ts",
+    "tests/clinical-review-inbox-priority-server.test.ts",
+    "tests/review-ui-bound-inputs.test.mjs",
+    "tests/atlas-delivery-policy-preflight.test.mjs",
+    "tests/anatomy-coverage-view.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 72658,
+  "log": "F:/VisibleMedicine/staging/20261020-inbox-material-website-integration/FOCUSED_INBOX_TESTS.log",
+  "logSha256": "9a3fd062b160dbcbc2512f01e70c43c73e5fe79a69a2854c1adcba7f3c8e46c4",
+  "footer": [
+    "ℹ tests 26",
+    "ℹ pass 26",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

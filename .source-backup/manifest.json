@@ -1,21 +1,18 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T22:33:27.644Z",
+  "at": "2026-10-20T23:02:55.714Z",
   "sourceIdentity": {
-    "product": "Isolated Website with source-bound original corpus CT teaching draft",
-    "source": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
-    "tree": "f17a39ff7f40d31aa5b0bd2176f923c95c1ea160",
-    "review": "3e6512f833ad5fe795d64eca2263ef5eef5ebd06f735d83423a5f3a0b05a3443",
-    "namedInputs": 5046,
+    "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+    "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
+    "namedInputs": 5048,
     "reviewImports": 1550,
     "boundInputs": 1707,
     "viewerFiles": 46,
     "viewerPackages": 22,
     "modelsUnchanged": 137,
     "modelPathsUnchanged": 144,
-    "actualCoverageProducers": 4,
-    "coverageInputs": 168,
-    "focusedTests": 12,
+    "focusedTests": 26,
     "fullProjectTypes": true,
     "fullWebsiteProductionBuild": true,
     "canonicalInstalled": false,
@@ -25,8 +22,8 @@
     "publicDeployment": false,
     "fullSuitePass": false
   },
-  "parent": "5fc6f8e9c171a3e07d92a58ea167a87ce0aa0389",
-  "gitParent": "5fc6f8e9c171a3e07d92a58ea167a87ce0aa0389",
+  "parent": "46ee77f95337ee93fbce228317a4b3ee5f735c9b",
+  "gitParent": "46ee77f95337ee93fbce228317a4b3ee5f735c9b",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -71,7 +68,7 @@
     {
       "path": "atlas-review/content/body-renderer-revision.json",
       "bytes": 214575,
-      "sha256": "a53c6394066063f22c84f30edec234cc5cae4ddfb2521bfb8ac1413f71db4258"
+      "sha256": "baabeb1d7f3d99db10cd5348d390788d5fdb987a223fa16514626d5c5b48a341"
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
@@ -91,12 +88,17 @@
     {
       "path": "atlas-review/content/review-revisions.json",
       "bytes": 12713,
-      "sha256": "d0edaa7ad85be0a53d84e731e6083b3ad8297e2487b6219dcb3995a428502923"
+      "sha256": "4329473f0ce65b9a3878dafc22a609edaab80594fa6b272ded1be323b5baf262"
     },
     {
       "path": "atlas-review/integration-inputs.json",
       "bytes": 268507,
-      "sha256": "08747feee0c1963401d657948d0353a38bf909f5950c6b5a5412f483c17bf873"
+      "sha256": "44757c9c194681de4098fb3c509c2013ac20d2295a99af676f14a716f199a5a9"
+    },
+    {
+      "path": "atlas-review/lib/clinical-review-queue.ts",
+      "bytes": 9087,
+      "sha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda"
     },
     {
       "path": "atlas-review/lib/corpus-imaging.ts",
@@ -111,7 +113,7 @@
     {
       "path": "atlas-review/manifest.json",
       "bytes": 376958,
-      "sha256": "7444940ced3fc9bb47a307ebdf29a43c2f9d8b5c9737e90b353d92ad6a6b50d4"
+      "sha256": "0c1ba250ac09f31c4af43a55c008b1d64b29df824aa52d6b8110a2f1fa81fd3d"
     },
     {
       "path": "atlas-source/app/review/body/body-decision-editor.tsx",
@@ -154,9 +156,19 @@
       "sha256": "003b953b7ca9af8900f15476d265fd9d047b3bbd3cc183b04a6d203f18136173"
     },
     {
+      "path": "atlas-source/lib/clinical-review-queue.ts",
+      "bytes": 9087,
+      "sha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda"
+    },
+    {
       "path": "atlas-source/scripts/test-body-review-navigation.mjs",
       "bytes": 19296,
       "sha256": "a3bc6f4c55316a2349fd2532e25e12391835d2058a19932f69b496be109a97b5"
+    },
+    {
+      "path": "atlas-source/scripts/test-clinical-review-revision-observer.mjs",
+      "bytes": 8129,
+      "sha256": "c10a9e761f46138ad2b2194a1b2db2b9fa97fefca2db28e340ae5f1da43a723a"
     },
     {
       "path": "atlas-source/scripts/test-review-history-races.mjs",
@@ -251,27 +263,152 @@
     {
       "path": "docs/anatomy-coverage/independent.json",
       "bytes": 772439,
-      "sha256": "f18c15996fe25d4ece4440f5c3016e011001177bac503baeeaba18c344074cd9"
+      "sha256": "fa41d4c8cf5a91b2512ae5e585e6ee134220e8c944703ceeac8e1a1a66dd1ae6"
     },
     {
       "path": "docs/anatomy-coverage/index.json",
       "bytes": 154911,
-      "sha256": "0def73f72441e2d9b2569ce59be4be99d5d8def0ebc55e75f057e6c786b3b931"
+      "sha256": "9020eac8ed2fee77ef04b63357eabd23471f99e3e966d5b2c427010ee3478579"
     },
     {
       "path": "docs/anatomy-coverage/nested.json",
       "bytes": 789529,
-      "sha256": "5e60e527a928349ebd98b57dde35fd910c47723b2a2d97af7b1725dda2b52569"
+      "sha256": "6bee2b34ca9be16548680e24b85d0fa0dcb9a9529b24a503bd79564706c327a9"
     },
     {
       "path": "docs/anatomy-coverage/reference.json",
       "bytes": 154089,
-      "sha256": "ccb49941ba9b27ba8c6dcc855c14971b1626af8ab9b74376099885231fbc618e"
+      "sha256": "eeaa4def25b332a3f7817625008f0476ffd825905d5a6a1515dbbd3735970d71"
     },
     {
       "path": "docs/anatomy-coverage/root.json",
       "bytes": 1067871,
-      "sha256": "6594d53f395bc75d0a67d7e4bc2ba7cf3309c34e6dac40344af44a943a872895"
+      "sha256": "025f45fcb4cd83c5feddeb89e0583f348f3ac021f96f9b08fe0a4571458e527b"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/COVERAGE_CHECK.json",
+      "bytes": 391,
+      "sha256": "bfc0b9fd414b38c5d9d64c77cb41859113af4cd0d1f64f1a25d5631d382b13d9"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/COVERAGE_GENERATE.json",
+      "bytes": 674,
+      "sha256": "36372f905a1c84012db3273c2976e9d7094636812e8d800ac466e934d25e9b1b"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/CURRENT_DELIVERY.json",
+      "bytes": 957,
+      "sha256": "7c8adb58cd81c892f8288c47fa7eacf6f8c94520fe97f85119832c3e5306877b"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/FINAL_PRIVATE_POLICY.json",
+      "bytes": 391,
+      "sha256": "54e39823a5ac339a12c63a313fe2f256b5527a9954511ff57c6436e34344d028"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/FINAL_REVIEW_VERIFY.json",
+      "bytes": 384,
+      "sha256": "0b4316d384a71208fcdb06ce8be8c1d11bbfd42c2c19cb1ff0bde986acf17c51"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/FINAL_SOURCE.json",
+      "bytes": 5922,
+      "sha256": "f6d592c592149a4face8545abd2bc4c24a3c804f664ae26b460351429318a411"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/FOCUSED_INBOX_TESTS.json",
+      "bytes": 831,
+      "sha256": "d8e90adc50e7590cb878a5041641ae3ac701a75b5956051398a5e2df5461b4d2"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/FULL_PROJECT_TYPES.json",
+      "bytes": 464,
+      "sha256": "408896411e38571699747ca6587e73ee9a5700e76364bd0ebf3cd5e47f409de0"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/FULL_WEBSITE_BUILD.json",
+      "bytes": 394,
+      "sha256": "01b8352add4c0347c76826cd5e8f05790eef6ca36fa3e24548c2ab834233f665"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/IMPORTER_ADMISSION.json",
+      "bytes": 364,
+      "sha256": "5e16076b86510699452ac4f2110fed1af294da453dcad118704ef0015b454d5d"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/METADATA_PLAN.json",
+      "bytes": 2947,
+      "sha256": "ced276860d901ce6d3a10365b8478f00308ca8ad110f131bc70ebe7ece8cdbc5"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/MODULE_INSTALLATION.json",
+      "bytes": 1302,
+      "sha256": "93609bf570a78d0f62601c9d7bde6e4ad91784dfa766c854f494d2c9c3a5577d"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/PRIVATE_POLICY.json",
+      "bytes": 379,
+      "sha256": "d6ff3af88e663224dae5963cfc29bdb44f608017021219f021e045f96af6ac62"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/REVIEW_BIND.json",
+      "bytes": 397,
+      "sha256": "0a9866c1000485b9eb568006f71bf39a09d837d2e40548addbe379b3a3cdc8cc"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/REVIEW_VIEWER_BUILD.json",
+      "bytes": 421,
+      "sha256": "bd563526297b07a737e95e32da04067bc7ffc26b76e3f500d1b6981b6ec1ab31"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/SOURCE_INPUTS_AFTER.json",
+      "bytes": 868232,
+      "sha256": "afc93d3f332fb5faaa3295016805efe0c5b364d6680832b9b4a9a2ee2d0c201a"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/source/NEW_SOURCE_TYPES.json",
+      "bytes": 596,
+      "sha256": "baac47fb53c4218cf0a30ebf0100480408f78f3e9cfde5170e209d6b2461ab81"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/source/SOURCE_ADMISSION.json",
+      "bytes": 3773,
+      "sha256": "8a40d5ed98d7b8f97e2ecaa95262316dc80098451edb1f382aa4d60c8e284e2a"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/source/SOURCE_BUILD.json",
+      "bytes": 403,
+      "sha256": "a09d7738b2dac38da9c21f0a17a752b4a33147f39a977eef3d0ea747e92999d7"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/source/SOURCE_OBSERVER_TEST.json",
+      "bytes": 543,
+      "sha256": "b3914ac01246b2ec6ed21adf14a062488036f5290d4f581f4e507a12fdd5643a"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/source/SOURCE_REQUIREMENTS_CHECK.json",
+      "bytes": 563,
+      "sha256": "5f3a1d243ab9fc7eaa194731ba11102831d11bec38c23c82355c845654ebe966"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/source/STOCK_MODULE_EXPORTS_COMMITTED.json",
+      "bytes": 582,
+      "sha256": "b07b64f81b4193ebf358da7b2b5a0d40165277a6e5f34f91ebb9f90e01bc49ef"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/STOCK_IMPORT.json",
+      "bytes": 1467,
+      "sha256": "2e92f58b55698ca16385644ba9c5bd36e3575307da4a46c035470004cba33347"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/STOCK_REVIEW_VERIFY.json",
+      "bytes": 385,
+      "sha256": "e67860442977c55177fdb2445e01b230027f8dc628eabf67d8d24c18d5c5af15"
+    },
+    {
+      "path": "evidence/20261020-inbox-material-website-integration/VERIFICATION.json",
+      "bytes": 4331,
+      "sha256": "a69917d04d1e9f64a56eb9a78f1108f01d47d5fa7ee1b2b1f03e85c23d94cd58"
     },
     {
       "path": "evidence/archived-delivery-verification.json",
@@ -741,22 +878,27 @@
     {
       "path": "lib/anatomy-coverage-view.ts",
       "bytes": 5290,
-      "sha256": "0503ca2492f5083fc9715e321e729d46b95be6387894a276d5880361d461a822"
+      "sha256": "700e5b8ebd6f7aeafd98e858879da10d35b94aab977c564f80616d4c585e01e5"
     },
     {
       "path": "lib/atlas-delivery-policy.ts",
       "bytes": 493,
-      "sha256": "51d8deb7b804b821ad4cb652fe06ffbe53593478c065d05d51f33eaa8adb856d"
+      "sha256": "9b6f3f9f679ae60de34e8d24fefb7b500b6fa0f2ae985b4846549ea950c5fbec"
     },
     {
       "path": "lib/atlas-model-inventory.json",
       "bytes": 33492,
-      "sha256": "5681ea09ccefdc619e2859a33ef2cb5b026ad1fe6ac6b34fd0f62a68596caa7b"
+      "sha256": "5fe61d14688706a07349802cb30a5200461fd3385f5eaa680b5973f5b046836d"
     },
     {
       "path": "lib/clinical-review-fetch.ts",
       "bytes": 921,
       "sha256": "61f43dc7fdb4d8ac4b6ab2dc69d2901ee23f02e2e87801a2978719ccc8a8952c"
+    },
+    {
+      "path": "lib/clinical-review-inbox.ts",
+      "bytes": 9588,
+      "sha256": "060b4451447121dc91e616d40af6b68f0707ca83453936ecea4703cc26e7b365"
     },
     {
       "path": "lib/head-tour-playback.ts",
@@ -776,17 +918,17 @@
     {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
-      "sha256": "9e142564658bb5ac01e785538553cf596d512dac15c1d55a020bfcb4195f246b"
+      "sha256": "7475022481ae885593bb2e70f44477ad7215d6a826671005650505a35fca1b8f"
     },
     {
       "path": "public/atlas-review-viewer/manifest.json",
       "bytes": 9033,
-      "sha256": "c70634b127160a9df434162be1e3b148ef238836bf66129a9891898621b3c7ff"
+      "sha256": "31fcef7c1bb8acbdeb8d16e9a3de1681c79ff604e845e89cc231fe43775a7e19"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/manifest.json",
       "bytes": 6208,
-      "sha256": "2090cfdce0c7ae885855bec1874ddd962305d29426b83f051a3b4e2a4a90c70c"
+      "sha256": "b9cd61d99415ced432667125606e721cd9e6dfb0a194912968125923cb46f4fe"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/source-inputs.json",
@@ -796,7 +938,7 @@
     {
       "path": "public/atlas-runtime/head-neck/manifest.json",
       "bytes": 627564,
-      "sha256": "0561126b9496c6ff9d222b6220fb8ffff978dd412e4540783c7ebf47b0a28734"
+      "sha256": "7852d4f48d4768a7e63373f8fdc9bd88aa95d1677ebc84b3d4ea57bc83569014"
     },
     {
       "path": "public/atlas-runtime/head-neck/source-inputs.json",
@@ -806,7 +948,7 @@
     {
       "path": "public/atlas-runtime/lower-limb/manifest.json",
       "bytes": 3436,
-      "sha256": "b3200d6d4d0fd5ca3e938280cb5a93c92c4891a2198b5a18e5c1864d3d0e37a9"
+      "sha256": "5ae83144eea3ac9e40c6ff776b730f971d492fba846bac18c729375194ce8a39"
     },
     {
       "path": "public/atlas-runtime/lower-limb/source-inputs.json",
@@ -816,7 +958,7 @@
     {
       "path": "public/atlas-runtime/shoulder/manifest.json",
       "bytes": 4795,
-      "sha256": "68fe08f65306aabba7a6e2793a350710a3d5cb3b61676631cad909242a364c22"
+      "sha256": "8d0c46898eea3aaed5bd1ec2906511947057a2a2600696102b02c2cea33a4ed8"
     },
     {
       "path": "public/atlas-runtime/shoulder/source-inputs.json",
@@ -831,12 +973,12 @@
     {
       "path": "scripts/check-anatomy-coverage.mjs",
       "bytes": 4552,
-      "sha256": "0827e91d611d1ffefeb339a646bb60772e6bce89921df9d0b1fc6f954d8ad2bc"
+      "sha256": "7111c89c35ea528818092e6118433c050f679f986910d4d9a6fe61f314c1bc8b"
     },
     {
       "path": "scripts/import-clinical-review.mjs",
       "bytes": 6751,
-      "sha256": "4a73e3f297ef98bac1d2b67331712837df52387d048b104ced7951faeae508bf"
+      "sha256": "611df4c6735e84855cbb307c7c318438a9d791fb6e958717797bc93cdf409f38"
     },
     {
       "path": "scripts/import-plexus-review.mjs",
@@ -1009,6 +1151,11 @@
       "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
     },
     {
+      "path": "tests/clinical-review-inbox-material-reuse.test.mjs",
+      "bytes": 10555,
+      "sha256": "7c0eed64a7ced7f809024bd313783ea08a2699082ce562a90a0b5ec143f62458"
+    },
+    {
       "path": "tests/clinical-review-inbox-source-update.test.ts",
       "bytes": 9724,
       "sha256": "2ef6e430a68dac8fe3a6b67b605c6d9b95e1812fb71d28a15f1aa466be34dae9"
@@ -1091,12 +1238,17 @@
     {
       "path": "tests/fixtures/current-atlas-delivery.json",
       "bytes": 1777,
-      "sha256": "6ccf96e6f4d34a2d33143d25ad9b8fad050d6a81cc2b280b61992182ab5a1717"
+      "sha256": "7f08673542eedf10d211b4668aad93efc65ab7854d6141ec409512edd3785eba"
     },
     {
       "path": "tests/fixtures/gitattributes-delivery52.raw",
       "bytes": 17228,
       "sha256": "845dd13acf54b7e3b765b6ca1699273282c00ee376a1ce4a7f44a2569da8d95c"
+    },
+    {
+      "path": "tests/fixtures/inbox-material-reuse-before-97e75.ts.raw",
+      "bytes": 8249,
+      "sha256": "ecfac64ead278ec2e7798a523bc847ff15db9690d00b8d9fb7cc362b7923ef4c"
     },
     {
       "path": "tests/head-ct-bone-decision-form.test.ts",
@@ -1260,22 +1412,19 @@
     }
   ],
   "removed": [],
-  "scope": "Selected source and precise integration receipts inheriting only filtered Website source backup. Four stock exports and imported Review bind the same97e75 source;12 focused tests and full types/build pass. No raw canonical ancestry, scans, masks, model payloads, private asset modules, review decisions, databases or secrets. Not complete/runnable/full-project/private-data backup; no public deployment.",
+  "scope": "Selected source and exact checked candidate receipts, including the two Atlas observer files, inheriting only a previously filtered source backup. No raw canonical ancestry, scans/masks/models/private asset modules/review decisions/databases/secrets. Not a complete/runnable/full-project/private-data backup. Local unpublished candidate only; no fees or public deployment.",
   "proof": {
-    "product": "Isolated Website with source-bound original corpus CT teaching draft",
-    "source": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
-    "tree": "f17a39ff7f40d31aa5b0bd2176f923c95c1ea160",
-    "review": "3e6512f833ad5fe795d64eca2263ef5eef5ebd06f735d83423a5f3a0b05a3443",
-    "namedInputs": 5046,
+    "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+    "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
+    "namedInputs": 5048,
     "reviewImports": 1550,
     "boundInputs": 1707,
     "viewerFiles": 46,
     "viewerPackages": 22,
     "modelsUnchanged": 137,
     "modelPathsUnchanged": 144,
-    "actualCoverageProducers": 4,
-    "coverageInputs": 168,
-    "focusedTests": 12,
+    "focusedTests": 26,
     "fullProjectTypes": true,
     "fullWebsiteProductionBuild": true,
     "canonicalInstalled": false,
@@ -1284,14 +1433,10 @@
     "patientRegistration": false,
     "publicDeployment": false,
     "fullSuitePass": false,
+    "previousFilteredBackup": "46ee77f95337ee93fbce228317a4b3ee5f735c9b",
+    "stockExportsAndCoverage": true,
     "allOtherNativeSourcePreserved": true,
-    "sourceOnlyPreviousBackup": "5fc6f8e9c171a3e07d92a58ea167a87ce0aa0389",
-    "previousSourceOnlyBackup": "cb31ac964b708269f8e1e474e27adb1e8a11a3dd",
-    "oldCompleteDeliveryRefused": true,
-    "sourceAndLearnerHashReadbackPaths": 1611,
-    "learnerInputChecks": 2866,
-    "geometryOrPrivateDataChanged": false,
-    "limits": "Source/schema/build evidence, not new signed-in browser, full-suite, clinical, acquired-image or spatial acceptance. Existing unrelated hip-history short-ciliary failure remains recorded. Owner review queue/local preview remain98d7/b2bd unchanged."
+    "limits": "Focused source/integration software evidence, not whole-suite, new browser/acquired-image/clinical/spatial acceptance. No user data, decisions, entitlements or private asset payload changed. Request-local revision promises only; sampled54to27 material resolutions with response/query parity is not a wall-clock benchmark."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

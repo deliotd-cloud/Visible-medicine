@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-20T22:58:01.849Z",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
+  "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
+  "reviewImports": 1550,
+  "boundInputs": 1707,
+  "viewerFiles": 46,
+  "viewerPackages": 22,
+  "learnerInputs": 2866,
+  "distinctSourcePathsGitVerified": 1611,
+  "allImportedAndLearnerSourceHashesGitVerified": true,
+  "modelsUnchanged": 137,
+  "modelPathsUnchanged": 144,
+  "changedBoundInputs": [
+    "atlas-review/lib/clinical-review-queue.ts",
+    "docs/anatomy-coverage/index.json",
+    "lib/anatomy-coverage-view.ts",
+    "scripts/import-clinical-review.mjs"
+  ],
+  "fixtureSha256": "7f08673542eedf10d211b4668aad93efc65ab7854d6141ec409512edd3785eba",
+  "previousCompleteDeliveryRefused": true,
+  "oldHistoricalTestsUnmodified": true,
+  "canonicalInstalled": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

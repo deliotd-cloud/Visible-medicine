@@ -1,0 +1,14 @@
+{
+  "label": "COVERAGE_CHECK",
+  "args": [
+    "scripts/check-anatomy-coverage.mjs",
+    "--check"
+  ],
+  "code": 0,
+  "signal": null,
+  "durationMs": 13037,
+  "log": "F:/VisibleMedicine/staging/20261020-inbox-material-website-integration/COVERAGE_CHECK.log",
+  "logSha256": "486b3ea7ed82ba6e8c580d8fecbbcb92a34fc9fe8cb908ee0ccd957585cb0770",
+  "footer": [],
+  "canonicalInstalled": false
+}

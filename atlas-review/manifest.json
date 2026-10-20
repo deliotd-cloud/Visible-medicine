@@ -1,5 +1,5 @@
 {
-  "revision": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "revision": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -5704,7 +5704,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "sourceSha256": "34997a221ae705766d3010a7db6e9bca6f4880bf0939041b44d1276e8456a02f",
-      "importedSha256": "a53c6394066063f22c84f30edec234cc5cae4ddfb2521bfb8ac1413f71db4258"
+      "importedSha256": "baabeb1d7f3d99db10cd5348d390788d5fdb987a223fa16514626d5c5b48a341"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -6099,7 +6099,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "d0edaa7ad85be0a53d84e731e6083b3ad8297e2487b6219dcb3995a428502923"
+      "importedSha256": "4329473f0ce65b9a3878dafc22a609edaab80594fa6b272ded1be323b5baf262"
     },
     {
       "path": "lib/review-entry-track.ts",
@@ -7738,8 +7738,8 @@
     },
     {
       "path": "lib/clinical-review-queue.ts",
-      "sourceSha256": "8ce3997054e750c7427d694e67b9f08159d13f964cd277d81e089e124729b2cb",
-      "importedSha256": "8ce3997054e750c7427d694e67b9f08159d13f964cd277d81e089e124729b2cb"
+      "sourceSha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda",
+      "importedSha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda"
     },
     {
       "path": "lib/clinical-review-priority.ts",
@@ -7768,5 +7768,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "3e6512f833ad5fe795d64eca2263ef5eef5ebd06f735d83423a5f3a0b05a3443"
+  "websiteIntegrationSha256": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703"
 }

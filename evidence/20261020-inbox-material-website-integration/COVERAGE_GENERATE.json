@@ -1,0 +1,19 @@
+{
+  "label": "COVERAGE_GENERATE",
+  "command": "C:/Program Files/nodejs/node.exe",
+  "args": [
+    "scripts/generate-anatomy-coverage.mjs",
+    "--source-root",
+    "F:/VisibleMedicine/staging/20261020-inbox-material-source",
+    "--revision",
+    "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "--output-root",
+    "F:/VisibleMedicine/staging/20261020-inbox-material-website-integration/coverage"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-inbox-material-website-integration/COVERAGE_GENERATE.log",
+  "logSha256": "77478c62dea336ba1277aede07dba7beef539fab9e7f8d149d1ee8010a186f05",
+  "footer": [],
+  "canonicalInstalled": false
+}
