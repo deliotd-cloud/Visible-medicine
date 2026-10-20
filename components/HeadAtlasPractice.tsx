@@ -215,6 +215,7 @@ export function HeadAtlasPractice({practice:p,study,familyNames,onReturnToLearni
     {p.outcome&&<div className={`head-practice-feedback is-${p.outcome}`} role="status">
       <h3 ref={p.feedbackRef} tabIndex={-1}>{p.outcome==='correct'?'Correct':p.outcome==='incorrect'?'Not quite':'Answer revealed'}</h3>
       <p>{p.target?headLabel(p.target.entry):''}</p>
+      {p.outcome==='correct'&&p.target&&(p.outcomes[p.target.entry.id]==='incorrect'||p.outcomes[p.target.entry.id]==='revealed')&&<p className="head-practice-retry-note">Correct on retry. Your first-attempt score is unchanged.</p>}
       <p>{p.mode==='locate'?(p.outcome==='correct'?'Your chosen voxel is inside the saved mask.':'The saved mask is now shown. Only voxels inside this represented portion count.'):p.mode==='recall'?(p.outcome==='correct'?'You typed the matching structure name.':'The highlighted mask has this source label.'):p.outcome==='correct'?'You selected the matching anatomical label.':'The highlighted mask has this source label.'}</p>
       <button type="button" onClick={p.next}>{p.index+1===p.total?'See results':'Next question'}</button>
       <details className="head-practice-help"><summary>Source scope &amp; limitations</summary>

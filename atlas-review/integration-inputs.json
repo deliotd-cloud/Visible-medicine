@@ -1,6 +1,6 @@
 {
   "sourceCommit": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
-  "sha256": "b18997aea1fbc2ba1ccb8fec2405efcb43db1c9046ce5a7e7941d156ba14ba8f",
+  "sha256": "cc059623f79798b86764cebfa4d15ee8f2cce70c5bd31a77263092670e706ab0",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -44,7 +44,7 @@
     },
     {
       "path": "app/atlas/head-neck-3d/head-learning.css",
-      "sha256": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767"
+      "sha256": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83"
     },
     {
       "path": "app/workspace/atlas-review/anatomy-coverage/page.tsx",
@@ -6364,7 +6364,7 @@
     },
     {
       "path": "components/HeadAtlasInlineComparison.tsx",
-      "sha256": "e32fae7c28eba1dce955ae0b04c5e1223fc6527d06e63e518060bcc8fbe8074c"
+      "sha256": "c64692ad3594129be18cb739063536d6bfa2bcbac72a91fdb4970c5df1e1b105"
     },
     {
       "path": "components/HeadAtlasInlineComparisonLoader.tsx",
@@ -6377,6 +6377,14 @@
     {
       "path": "components/HeadAtlasLinkedModel.tsx",
       "sha256": "c90fd4b9a51a4fa67ef390fb6b79515825fd662160f83cabd127b7283b8d2fab"
+    },
+    {
+      "path": "components/HeadAtlasPractice.tsx",
+      "sha256": "23d641698cd63318da70c4b569f0662ca709678e1204d0890ba11280f77e96e2"
+    },
+    {
+      "path": "components/HeadAtlasPracticeReview.tsx",
+      "sha256": "cf08b63296f22bacf1d5114466e0f88728aab66964e3cf086919eea0d7295524"
     },
     {
       "path": "components/HeadAtlasReferenceTeaching.tsx",
@@ -6447,6 +6455,10 @@
       "sha256": "cdcd9ac2174316fc63544b81695cac0469ce126ffa73825a2cfb418982b2f909"
     },
     {
+      "path": "components/HeadPracticeSummaryDownload.tsx",
+      "sha256": "1a87ea9f003636791f53fb65ba684967110957bda04a78e6015a6b3bb598730b"
+    },
+    {
       "path": "components/HeadTeachingReviewNotes.tsx",
       "sha256": "3ded90730401d98844745cb4e26ebe4cb5fc9edeae04edb3a1579ce764b4cb8d"
     },
@@ -6511,6 +6523,14 @@
       "sha256": "7adb5c0d87ce3efa5a17c0ff1bddb9c9f6b7192e3789616b3abd6182ca948517"
     },
     {
+      "path": "lib/head-atlas-focus.ts",
+      "sha256": "ac3d7e6b95076a860e1c501b4641c6ec7e963e1ecf4ca1f0e2358fb3c3151eeb"
+    },
+    {
+      "path": "lib/head-atlas-geometry.mjs",
+      "sha256": "d50b8e57e81d90d9155149968ea259321879e2652f6862622bd5e628eb1d211a"
+    },
+    {
       "path": "lib/head-atlas-import.ts",
       "sha256": "9fcb349f19c69fee2a6221870a0db3de090c7cd2265b98f6a04d87c9d6098b57"
     },
@@ -6529,6 +6549,10 @@
     {
       "path": "lib/head-atlas-overlays.ts",
       "sha256": "4b98ec41c1285b6f5b79008d5053c607d48ac71dc38664e4d4f1832a81e583bc"
+    },
+    {
+      "path": "lib/head-atlas-practice.ts",
+      "sha256": "5a374e43d2a47fb6c0c34b745fc7b978575d38a1e5635d84abcb1a54a4be8396"
     },
     {
       "path": "lib/head-atlas-teaching.ts",
@@ -6647,8 +6671,24 @@
       "sha256": "0681effec96dd2f5f48648f486c2b2beabb9a231365e3b53af5f6a6d7be62c5d"
     },
     {
+      "path": "lib/head-practice-learning.ts",
+      "sha256": "150ac8373c373fc26aac6abb9173c87be071d2a67aa0ddfaa9b2ab3a9418382f"
+    },
+    {
+      "path": "lib/head-practice-review-filter.ts",
+      "sha256": "6aec22514959ecff840632002265a772d8cd800d5a8ec81ab9b7850f3ed99bdb"
+    },
+    {
+      "path": "lib/head-practice-summary.ts",
+      "sha256": "1d99c3903e70ca1a16acfe5f6458dcf7a10f25a2ac043fa4978c339336b68448"
+    },
+    {
       "path": "lib/head-review-working-copy.ts",
       "sha256": "a17acf9b77a2e147bf60e219bfcba2d9f35b66570c075f71ec719544cebd79a1"
+    },
+    {
+      "path": "lib/head-study-set.ts",
+      "sha256": "5363f11246b5b467be422ac118b87ae48031f5f3ee0ec7e424f7f858dddc71c4"
     },
     {
       "path": "lib/head-surface-camera.ts",
@@ -6712,7 +6752,7 @@
     },
     {
       "path": "scripts/bind-clinical-review.mjs",
-      "sha256": "0ead614d03c5f0d9c7f4589a6ad5767a0efc95a97206932a8bfd0d1dc150e0f3"
+      "sha256": "b99a1e205774d68c5d8c65cf70e6e0f93e82a06e620177ea345aaacd66092bad"
     },
     {
       "path": "scripts/build-clinical-review-viewer.mjs",

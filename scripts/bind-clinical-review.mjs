@@ -37,6 +37,8 @@ const adapterPaths = ['scripts/import-clinical-review.mjs','scripts/build-clinic
   'components/HeadAtlasLearningNavigation.tsx','lib/lecture-tour-context.ts','lib/lecture-related-links.ts',
   'lib/lecture-anatomy-reference.ts','lib/head-atlas-navigation.ts','lib/head-image-only-links.ts','lib/head-image-only-comparison-review.ts',
   'components/head-tour-playback.css','components/HeadAtlasGuidedModel.tsx','lib/head-guided-playback.ts','lib/head-guided-focus.ts','app/atlas/head-neck-3d/head-learning.css',
+  'components/HeadAtlasPractice.tsx','components/HeadAtlasPracticeReview.tsx','components/HeadPracticeSummaryDownload.tsx',
+  'lib/head-atlas-practice.ts','lib/head-practice-summary.ts','lib/head-practice-learning.ts','lib/head-practice-review-filter.ts','lib/head-study-set.ts','lib/head-atlas-focus.ts','lib/head-atlas-geometry.mjs',
   ...readdirSync('scripts/clinical-review-viewer').map(p=>'scripts/clinical-review-viewer/'+p),
   ...readdirSync('app/workspace/atlas-review',{recursive:true}).filter(p=>/\.(tsx|css)$/.test(p)).map(p=>'app/workspace/atlas-review/'+p.replaceAll('\\','/'))];
 const inputs = [...manifest.files.filter(f=>!revisionPaths.includes(f.path)).map(f=>({path:'atlas-review/'+f.path,sha256:sha(readFileSync('atlas-review/'+f.path))})),
