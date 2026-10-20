@@ -5,6 +5,7 @@ import {historicalRegionalCatalogue,historical408RegionalCatalogue,assertCurrent
 
 const api=await historical408RegionalCatalogue();
 const binding=api.binding,atlasBodyRegions=api.atlasBodyRegions;
+type AtlasBodyRegion={id:string;label:string;href:string};
 
 test('408 Website closure refuses altered bytes and undeclared dependencies',()=>{
   const path='lib/regional-learning-catalogue.ts';
@@ -79,7 +80,7 @@ test('regional discovery projects51 current tours and309 ordered stops without a
     assert.deepEqual(Object.keys(projected).sort(),['id','title','description','revision','regionId','regionLabel','href','limitations','steps'].sort());
     assert.equal(projected.title,original.title);assert.equal(projected.description,original.description);
     assert.equal(projected.revision,original.revision);assert.equal(projected.regionId,original.region);
-    assert.equal(projected.href,atlasBodyRegions.find(region=>region.id===original.region)?.href);
+    assert.equal(projected.href,atlasBodyRegions.find((region:AtlasBodyRegion)=>region.id===original.region)?.href);
     const names=new Map(api.regionalTourStructures(api.catalog,original).map((s:any)=>[s.id,s.name]));
     assert.deepEqual(projected.steps,original.steps.map((step:any)=>({title:step.title,structureName:names.get(step.selectedId)})));
     assert(projected.limitations.length>0);
@@ -90,7 +91,7 @@ test('regional discovery projects51 current tours and309 ordered stops without a
   const serialized=JSON.stringify(actual);
   for(const field of ['nodeName','sources','bounds','anchor','mask','positions_file','credential','reviewer'])
     assert(!serialized.includes('"'+field+'":'),field+' must not be transported');
-  assert.deepEqual(actual.regions,atlasBodyRegions.filter(region=>actual.tours.some((tour:any)=>tour.regionId===region.id)).map(region=>({id:region.id,label:region.label})));
+  assert.deepEqual(actual.regions,atlasBodyRegions.filter((region:AtlasBodyRegion)=>actual.tours.some((tour:any)=>tour.regionId===region.id)).map((region:AtlasBodyRegion)=>({id:region.id,label:region.label})));
 });
 
 test('stale or malformed learner/review/viewer bindings fail closed before discovery',()=>{

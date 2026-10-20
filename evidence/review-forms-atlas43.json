@@ -1,0 +1,29 @@
+{
+  "label": "ATLAS_REVIEW_FORMS",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/review-confirmation.test.mjs",
+    "tests/review-working-state.test.mjs",
+    "tests/review-confirmation-component.test.mjs",
+    "tests/review-autosave-component.test.mjs",
+    "tests/review-approved-leave.test.mjs",
+    "scripts/test-review-history-races.mjs",
+    "scripts/test-body-review-leave-dialog.mjs",
+    "scripts/test-body-review-navigation.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated\\atlas-check/ATLAS_REVIEW_FORMS.log",
+  "logSha256": "fa0e65238c13e05c56b83dd3ee66b984b2f0202b3c3fe74dd939a9aba5645333",
+  "footer": [
+    "ℹ tests 43",
+    "ℹ pass 43",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,14 @@
+{
+  "label": "FULL_WEBSITE_BUILD",
+  "command": "node",
+  "args": [
+    "node_modules/vinext/dist/cli.js",
+    "build"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/FULL_WEBSITE_BUILD.log",
+  "logSha256": "490320cadf7067219cb8d3088fc6b4d23c8bbb641013dbe9ebddd6bf7fd9ba5e",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,13 @@
+{
+  "label": "STOCK_REVIEW_VERIFY",
+  "command": "node",
+  "args": [
+    "scripts/verify-clinical-review.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/STOCK_REVIEW_VERIFY.log",
+  "logSha256": "8d4632950d76328796dcb104f5017eefe59cf084e2de57a9098d4c4f327c8e70",
+  "footer": [],
+  "canonicalInstalled": false
+}

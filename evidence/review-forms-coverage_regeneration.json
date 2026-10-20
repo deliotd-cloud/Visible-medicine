@@ -1,0 +1,19 @@
+{
+  "label": "COVERAGE_REGENERATION",
+  "command": "node",
+  "args": [
+    "scripts/generate-anatomy-coverage.mjs",
+    "--source-root",
+    "F:/VisibleMedicine/staging/20261020-atlas-review-streamline-proposal",
+    "--revision",
+    "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+    "--output-root",
+    "F:/VisibleMedicine/staging/20261020-review-forms-integrated/coverage"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/COVERAGE_REGENERATION.log",
+  "logSha256": "c73af8e3fbcb94deb006e4652cf5962de790dee7f2a55266097813e7a4740ff4",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,14 @@
+{
+  "label": "BEFORE_POLICY_REBIND",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "scripts/verify-atlas-delivery-policy.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/BEFORE_POLICY_REBIND.log",
+  "logSha256": "fb7845b8ebde14566559ab4a8f0589d97d6b8faa10038a3ebf384c364119556c",
+  "footer": [],
+  "canonicalInstalled": false
+}

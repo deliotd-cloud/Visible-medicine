@@ -1,49 +1,29 @@
 {
-  "at": "2026-10-20T19:52:20.152Z",
+  "at": "2026-10-20T20:45:40.065Z",
   "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
-  "canonicalAtlas": "f5097af8493701d64a8e2a2b5797df380f3b348a",
-  "canonicalWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
-  "candidateAtlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
-  "candidateReview": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-  "namedSourceInputs": 5031,
-  "sourceInputSha256": "7816715dd45686f9bc089700333b0ce76b45d6d87eaf4bd9b9eca4b2d9b8ac68",
-  "uniqueCumulativeTestSourcePaths": 63,
-  "newPaths": [
-    "tests/clinical-review-tour-imaging.test.ts",
-    "tests/shoulder-tour-guided-playback-inverse.mjs",
-    "tests/radial-eus-current-transition.test.mjs",
-    "tests/native-head-52-source.mjs",
-    "tests/fixtures/gitattributes-delivery52.raw",
-    "tests/clinical-review-elbow-arterial-tour.test.ts",
-    "tests/elbow-current-lifecycle-preservation.test.mjs",
-    "tests/clinical-review-quiz-disclosure.test.ts"
-  ],
-  "radialFullModule": {
-    "pass": 5,
-    "fail": 0
-  },
-  "originalCombined": {
-    "tests": 11,
-    "pass": 10,
-    "fail": 1,
-    "scope": "Retained real run. Sole remaining tour case selected wrong later51-tour epoch; not a green aggregate."
-  },
-  "correctedAffectedCases": {
-    "pass": 3,
-    "fail": 0,
-    "scope": "Actual saved9f branch/current87ed branch/exact lower-venous V2 50/304 case; remaining unchanged original passes retained."
-  },
-  "elbowDisclosureFullModules": {
-    "pass": 6,
-    "fail": 0
-  },
-  "preserved": "Original 604/564/1116/50/304 guided assertions, radial71/eight/four-only/9932 teaching and forged/stale/no-storage assertions remain. Original elbow fixture and complete prior-source inverse retained. Quiz exact two unchanged9f→87ed source features admitted with actual byte-mutation refusal. No frozen validator, original raw fixture, current attribute policy, Vite config, model or approval changed.",
-  "productionCodeChanged": false,
+  "source": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+  "sourceTree": "3c6834f1c017bd40a317bddcd341cba9139de479",
+  "review": "5efa35df9274100cf9f696db7e1f68816cd99af1dda62aac2242d56cc3728d00",
+  "inputs": 5043,
+  "sourceInputSha256": "3f1f651d2f02aa231d93ea530c723dd3dfbffa3a1706c95e81d2bd31f3fa68f9",
+  "reviewSourceFiles": 1550,
+  "boundInputs": 1700,
+  "models": 137,
+  "modelPaths": 144,
+  "modelBytes": 199072480,
+  "geometryAndAnatomyEvidenceUnchanged": true,
+  "websiteTests": 44,
+  "atlasTests": 43,
+  "fullTypes": true,
+  "fullProductionBuild": true,
+  "privatePolicyAudience": "administrator-review",
+  "permissionsExpanded": false,
+  "scope": "One explicit confirmation per independent review track with every original criterion retained, secure in-memory reviewer details and guarded draft-only autosave. Next actions where deterministic queue adapters exist. Regional guide remains manual-save; head packet next-item adapters remain future work. No actual review decision written.",
   "canonicalInstalled": false,
-  "ownerEditorRefreshed": false,
-  "fullSuitePass": false,
+  "ownerFormsRefreshed": false,
   "clinicalApproval": false,
   "patientRegistration": false,
   "publicDeployment": false,
+  "fullSuitePass": false,
   "fullGoalActive": true
 }

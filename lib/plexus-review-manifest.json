@@ -1,0 +1,948 @@
+{
+  "schemaVersion": 1,
+  "purpose": "private-original-plexus-schematic-review",
+  "admissions": 0,
+  "clinicalValidation": false,
+  "patientDataIncluded": false,
+  "context": {
+    "catalogScope": "independent-schematic",
+    "candidateId": "vm:schematic:brachial-plexus:right",
+    "candidateName": "Original brachial plexus schematic — right",
+    "sourceCommit": "de82626457fb60c3b92b4e4d87a0016b6c3c09ce",
+    "frame": {
+      "kind": "diagrammatic",
+      "units": "arbitrary",
+      "patientRegistration": false
+    },
+    "partCount": 35,
+    "connectionCount": 38,
+    "clinicalApproved": false,
+    "learnerCatalogAdmission": false,
+    "materialHash": "34a6c5f096d84897033fab883a4404c49f897ddc5c2ebaeedc7af10829b5cdd4",
+    "topologyHash": "6d0eb378fad8f9c522f488e7256b04002a0e62e9a2d6f124b3b669badab7f798",
+    "presentationHash": "5d9d82dcedd8bd6726e1e93ceabc0328a8b0e73c627eafdad168b49a60abe035",
+    "checklistVersion": "original-plexus-review-1",
+    "checklists": {
+      "topology": [
+        {
+          "id": "identity",
+          "label": "Review all 35 named parts, right laterality and typical C5–T1 scope."
+        },
+        {
+          "id": "connections",
+          "label": "Check all 38 named directed connections, including divisions, cords, median roots and collateral origins."
+        },
+        {
+          "id": "wording",
+          "label": "Check every structure summary and cited reference; distinguish usual anatomy from variants."
+        },
+        {
+          "id": "limits",
+          "label": "Confirm omissions and the distinction between named continuity and individual fibre/root distribution."
+        },
+        {
+          "id": "scope",
+          "label": "State the exact schematic topology reviewed. This is not a spatial nerve mesh or imaging registration."
+        }
+      ],
+      "presentation": [
+        {
+          "id": "views",
+          "label": "Inspect overview, oblique and posterior views, arbitrary diagram depth, crossings and joins."
+        },
+        {
+          "id": "interaction",
+          "label": "Check all named selections, search, collateral disclosure, labels, fading and named-connection highlighting."
+        },
+        {
+          "id": "spacing",
+          "label": "Check diagram spacing and reset/reassembly without implying physical nerve stretching or dissection."
+        },
+        {
+          "id": "camera",
+          "label": "Inspect smooth interruptible camera motion and reduced-motion behavior on the reviewed devices."
+        },
+        {
+          "id": "readability",
+          "label": "Check readability, label bounds, keyboard navigation and graphics-failure fallback at the reviewed sizes."
+        },
+        {
+          "id": "scope",
+          "label": "State the tested presentation/device scope. Approval here grants no learner admission, spatial validation or CT/MRI mapping."
+        }
+      ]
+    },
+    "revisions": {
+      "topology": "6d0eb378fad8f9c522f488e7256b04002a0e62e9a2d6f124b3b669badab7f798",
+      "presentation": "5d9d82dcedd8bd6726e1e93ceabc0328a8b0e73c627eafdad168b49a60abe035"
+    }
+  },
+  "study": {
+    "id": "vm:schematic:brachial-plexus:right",
+    "schemaVersion": 1,
+    "side": "right",
+    "frame": {
+      "kind": "diagrammatic",
+      "units": "arbitrary",
+      "patientRegistration": false
+    },
+    "geometryKind": "original-procedural-schematic",
+    "license": "MIT",
+    "clinicalApproved": false,
+    "learnerCatalogAdmission": false,
+    "parts": [
+      {
+        "key": "ramus.C5",
+        "id": "vm:schematic:brachial-plexus:right:ramus.C5",
+        "name": "C5 anterior ramus",
+        "stage": "ramus",
+        "summary": "One of five usual anterior spinal rami entering this plexus.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "ramus.C6",
+        "id": "vm:schematic:brachial-plexus:right:ramus.C6",
+        "name": "C6 anterior ramus",
+        "stage": "ramus",
+        "summary": "Joins C5 in the typical upper trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "ramus.C7",
+        "id": "vm:schematic:brachial-plexus:right:ramus.C7",
+        "name": "C7 anterior ramus",
+        "stage": "ramus",
+        "summary": "Continues as the typical middle trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "ramus.C8",
+        "id": "vm:schematic:brachial-plexus:right:ramus.C8",
+        "name": "C8 anterior ramus",
+        "stage": "ramus",
+        "summary": "Joins T1 in the typical lower trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "ramus.T1",
+        "id": "vm:schematic:brachial-plexus:right:ramus.T1",
+        "name": "T1 anterior ramus",
+        "stage": "ramus",
+        "summary": "Joins C8 in the typical lower trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "trunk.upper",
+        "id": "vm:schematic:brachial-plexus:right:trunk.upper",
+        "name": "Upper trunk",
+        "stage": "trunk",
+        "summary": "Usual union of the C5 and C6 anterior rami.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "trunk.middle",
+        "id": "vm:schematic:brachial-plexus:right:trunk.middle",
+        "name": "Middle trunk",
+        "stage": "trunk",
+        "summary": "Usual continuation of the C7 anterior ramus.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "trunk.lower",
+        "id": "vm:schematic:brachial-plexus:right:trunk.lower",
+        "name": "Lower trunk",
+        "stage": "trunk",
+        "summary": "Usual union of the C8 and T1 anterior rami.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "division.upper.anterior",
+        "id": "vm:schematic:brachial-plexus:right:division.upper.anterior",
+        "name": "Upper anterior division",
+        "stage": "division",
+        "summary": "Anterior division of the upper trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "division.upper.posterior",
+        "id": "vm:schematic:brachial-plexus:right:division.upper.posterior",
+        "name": "Upper posterior division",
+        "stage": "division",
+        "summary": "Posterior division of the upper trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "division.middle.anterior",
+        "id": "vm:schematic:brachial-plexus:right:division.middle.anterior",
+        "name": "Middle anterior division",
+        "stage": "division",
+        "summary": "Anterior division of the middle trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "division.middle.posterior",
+        "id": "vm:schematic:brachial-plexus:right:division.middle.posterior",
+        "name": "Middle posterior division",
+        "stage": "division",
+        "summary": "Posterior division of the middle trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "division.lower.anterior",
+        "id": "vm:schematic:brachial-plexus:right:division.lower.anterior",
+        "name": "Lower anterior division",
+        "stage": "division",
+        "summary": "Anterior division of the lower trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "division.lower.posterior",
+        "id": "vm:schematic:brachial-plexus:right:division.lower.posterior",
+        "name": "Lower posterior division",
+        "stage": "division",
+        "summary": "Posterior division of the lower trunk.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "cord.lateral",
+        "id": "vm:schematic:brachial-plexus:right:cord.lateral",
+        "name": "Lateral cord",
+        "stage": "cord",
+        "summary": "Formed by the upper and middle anterior divisions.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "cord.medial",
+        "id": "vm:schematic:brachial-plexus:right:cord.medial",
+        "name": "Medial cord",
+        "stage": "cord",
+        "summary": "Continuation of the lower anterior division.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "cord.posterior",
+        "id": "vm:schematic:brachial-plexus:right:cord.posterior",
+        "name": "Posterior cord",
+        "stage": "cord",
+        "summary": "Formed by all three posterior divisions.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "median_root.lateral",
+        "id": "vm:schematic:brachial-plexus:right:median_root.lateral",
+        "name": "Lateral root of median nerve",
+        "stage": "median-root",
+        "summary": "Contribution from the lateral cord to the median nerve.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "median_root.medial",
+        "id": "vm:schematic:brachial-plexus:right:median_root.medial",
+        "name": "Medial root of median nerve",
+        "stage": "median-root",
+        "summary": "Contribution from the medial cord to the median nerve.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "nerve.musculocutaneous",
+        "id": "vm:schematic:brachial-plexus:right:nerve.musculocutaneous",
+        "name": "Musculocutaneous nerve",
+        "stage": "nerve",
+        "summary": "A terminal branch of the lateral cord.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "nerve.median",
+        "id": "vm:schematic:brachial-plexus:right:nerve.median",
+        "name": "Median nerve",
+        "stage": "nerve",
+        "summary": "Usually formed by lateral and medial cord contributions.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "nerve.ulnar",
+        "id": "vm:schematic:brachial-plexus:right:nerve.ulnar",
+        "name": "Ulnar nerve",
+        "stage": "nerve",
+        "summary": "A terminal branch of the medial cord.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "nerve.axillary",
+        "id": "vm:schematic:brachial-plexus:right:nerve.axillary",
+        "name": "Axillary nerve",
+        "stage": "nerve",
+        "summary": "A terminal branch of the posterior cord.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "nerve.radial",
+        "id": "vm:schematic:brachial-plexus:right:nerve.radial",
+        "name": "Radial nerve",
+        "stage": "nerve",
+        "summary": "A terminal branch of the posterior cord.",
+        "referenceIds": [
+          "BP-TOPOLOGY",
+          "BP-OVERVIEW"
+        ]
+      },
+      {
+        "key": "nerve.dorsal_scapular",
+        "id": "vm:schematic:brachial-plexus:right:nerve.dorsal_scapular",
+        "name": "Dorsal scapular nerve",
+        "stage": "nerve",
+        "summary": "Usually arises from the C5 anterior ramus.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.long_thoracic",
+        "id": "vm:schematic:brachial-plexus:right:nerve.long_thoracic",
+        "name": "Long thoracic nerve",
+        "stage": "nerve",
+        "summary": "Usually receives branches from the C5, C6 and C7 anterior rami.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.suprascapular",
+        "id": "vm:schematic:brachial-plexus:right:nerve.suprascapular",
+        "name": "Suprascapular nerve",
+        "stage": "nerve",
+        "summary": "Usually branches from the upper trunk.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.to_subclavius",
+        "id": "vm:schematic:brachial-plexus:right:nerve.to_subclavius",
+        "name": "Nerve to subclavius",
+        "stage": "nerve",
+        "summary": "Usually branches from the upper trunk.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.lateral_pectoral",
+        "id": "vm:schematic:brachial-plexus:right:nerve.lateral_pectoral",
+        "name": "Lateral pectoral nerve",
+        "stage": "nerve",
+        "summary": "A collateral branch of the lateral cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.medial_pectoral",
+        "id": "vm:schematic:brachial-plexus:right:nerve.medial_pectoral",
+        "name": "Medial pectoral nerve",
+        "stage": "nerve",
+        "summary": "A collateral branch of the medial cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.upper_subscapular",
+        "id": "vm:schematic:brachial-plexus:right:nerve.upper_subscapular",
+        "name": "Upper subscapular nerve",
+        "stage": "nerve",
+        "summary": "A collateral branch of the posterior cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.lower_subscapular",
+        "id": "vm:schematic:brachial-plexus:right:nerve.lower_subscapular",
+        "name": "Lower subscapular nerve",
+        "stage": "nerve",
+        "summary": "A collateral branch of the posterior cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.thoracodorsal",
+        "id": "vm:schematic:brachial-plexus:right:nerve.thoracodorsal",
+        "name": "Thoracodorsal nerve",
+        "stage": "nerve",
+        "summary": "A collateral branch of the posterior cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.medial_cutaneous_arm",
+        "id": "vm:schematic:brachial-plexus:right:nerve.medial_cutaneous_arm",
+        "name": "Medial cutaneous nerve of arm",
+        "stage": "nerve",
+        "summary": "A cutaneous branch of the medial cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      },
+      {
+        "key": "nerve.medial_cutaneous_forearm",
+        "id": "vm:schematic:brachial-plexus:right:nerve.medial_cutaneous_forearm",
+        "name": "Medial cutaneous nerve of forearm",
+        "stage": "nerve",
+        "summary": "A cutaneous branch of the medial cord.",
+        "referenceIds": [
+          "BP-BRANCHES"
+        ]
+      }
+    ],
+    "connections": [
+      {
+        "from": "ramus.C5",
+        "to": "trunk.upper"
+      },
+      {
+        "from": "ramus.C6",
+        "to": "trunk.upper"
+      },
+      {
+        "from": "ramus.C7",
+        "to": "trunk.middle"
+      },
+      {
+        "from": "ramus.C8",
+        "to": "trunk.lower"
+      },
+      {
+        "from": "ramus.T1",
+        "to": "trunk.lower"
+      },
+      {
+        "from": "trunk.upper",
+        "to": "division.upper.anterior"
+      },
+      {
+        "from": "trunk.upper",
+        "to": "division.upper.posterior"
+      },
+      {
+        "from": "trunk.middle",
+        "to": "division.middle.anterior"
+      },
+      {
+        "from": "trunk.middle",
+        "to": "division.middle.posterior"
+      },
+      {
+        "from": "trunk.lower",
+        "to": "division.lower.anterior"
+      },
+      {
+        "from": "trunk.lower",
+        "to": "division.lower.posterior"
+      },
+      {
+        "from": "division.upper.anterior",
+        "to": "cord.lateral"
+      },
+      {
+        "from": "division.middle.anterior",
+        "to": "cord.lateral"
+      },
+      {
+        "from": "division.lower.anterior",
+        "to": "cord.medial"
+      },
+      {
+        "from": "division.upper.posterior",
+        "to": "cord.posterior"
+      },
+      {
+        "from": "division.middle.posterior",
+        "to": "cord.posterior"
+      },
+      {
+        "from": "division.lower.posterior",
+        "to": "cord.posterior"
+      },
+      {
+        "from": "cord.lateral",
+        "to": "median_root.lateral"
+      },
+      {
+        "from": "cord.medial",
+        "to": "median_root.medial"
+      },
+      {
+        "from": "median_root.lateral",
+        "to": "nerve.median"
+      },
+      {
+        "from": "median_root.medial",
+        "to": "nerve.median"
+      },
+      {
+        "from": "cord.lateral",
+        "to": "nerve.musculocutaneous"
+      },
+      {
+        "from": "cord.medial",
+        "to": "nerve.ulnar"
+      },
+      {
+        "from": "cord.posterior",
+        "to": "nerve.axillary"
+      },
+      {
+        "from": "cord.posterior",
+        "to": "nerve.radial"
+      },
+      {
+        "from": "ramus.C5",
+        "to": "nerve.dorsal_scapular"
+      },
+      {
+        "from": "ramus.C5",
+        "to": "nerve.long_thoracic"
+      },
+      {
+        "from": "ramus.C6",
+        "to": "nerve.long_thoracic"
+      },
+      {
+        "from": "ramus.C7",
+        "to": "nerve.long_thoracic"
+      },
+      {
+        "from": "trunk.upper",
+        "to": "nerve.suprascapular"
+      },
+      {
+        "from": "trunk.upper",
+        "to": "nerve.to_subclavius"
+      },
+      {
+        "from": "cord.lateral",
+        "to": "nerve.lateral_pectoral"
+      },
+      {
+        "from": "cord.medial",
+        "to": "nerve.medial_pectoral"
+      },
+      {
+        "from": "cord.medial",
+        "to": "nerve.medial_cutaneous_arm"
+      },
+      {
+        "from": "cord.medial",
+        "to": "nerve.medial_cutaneous_forearm"
+      },
+      {
+        "from": "cord.posterior",
+        "to": "nerve.upper_subscapular"
+      },
+      {
+        "from": "cord.posterior",
+        "to": "nerve.thoracodorsal"
+      },
+      {
+        "from": "cord.posterior",
+        "to": "nerve.lower_subscapular"
+      }
+    ],
+    "references": [
+      {
+        "id": "BP-TOPOLOGY",
+        "title": "Anatomical Variations of Brachial Plexus in Adult Cadavers; normal anatomy section",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4969373/"
+      },
+      {
+        "id": "BP-OVERVIEW",
+        "title": "Anatomy, Shoulder and Upper Limb, Brachial Plexus",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK500016/"
+      },
+      {
+        "id": "BP-BRANCHES",
+        "title": "Anatomy, Head and Neck: Brachial Plexus",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK531473/"
+      },
+      {
+        "id": "BP-VARIATION",
+        "title": "Clinically Relevant Anatomical Variations in the Brachial Plexus",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10001373/"
+      }
+    ],
+    "limitations": [
+      "Typical adult pattern only; individual branching and root contributions vary.",
+      "Schematic arrangement uses arbitrary units and contains no anatomical measurements.",
+      "No fascicle tracing, terminal nerve root-value assignment, or innervation territories are claimed.",
+      "Scalenes, clavicle, axillary artery and other neighbouring structures are not registered geometry.",
+      "No scan or patient registration; this is not a clinical or diagnostic model."
+    ]
+  },
+  "packages": [
+    {
+      "name": "@babel/runtime",
+      "version": "7.29.7",
+      "license": "MIT",
+      "licensePath": "node_modules/@babel/runtime/LICENSE",
+      "licenseSha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+      "packageSha256": "8c4bf20c55e3f3a93df034b12746bf72185cf2acb0ef52847a3465d6e67c61e7"
+    },
+    {
+      "name": "@react-three/drei",
+      "version": "10.7.8",
+      "license": "MIT",
+      "licensePath": "node_modules/@react-three/drei/LICENSE",
+      "licenseSha256": "2e36b208b403882158daf95cae207087bbb830db4d434a79ebafffca177244c8",
+      "packageSha256": "7e38b2dec648fc3841c20f4e545fa531417fcc594e1a03a9ebecd577dedf3f31"
+    },
+    {
+      "name": "@react-three/fiber",
+      "version": "9.7.0",
+      "license": "MIT",
+      "licensePath": "LICENSES/react-three-fiber-9.7.0-MIT.txt",
+      "licenseSha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+      "packageSha256": "55c4839a93229f0592357355c66db8dcfa50247a0d1c2201c4b316fa4515d62a"
+    },
+    {
+      "name": "camera-controls",
+      "version": "3.1.2",
+      "license": "MIT",
+      "licensePath": "node_modules/camera-controls/LICENSE",
+      "licenseSha256": "d175c34ca3b4fb17d0568627ef8fd9363ae6f63f9ffdc97d4da71f0d7f3473ee",
+      "packageSha256": "332b37e3043fa10328087fca8d8885c3c24c4b49047962d8c89719ae678133a7"
+    },
+    {
+      "name": "its-fine",
+      "version": "2.0.0",
+      "license": "MIT",
+      "licensePath": "node_modules/its-fine/LICENSE",
+      "licenseSha256": "506bca9e41227d2ae1fbea8342a1fcff853af8198e9e1f37693a635e86efc539",
+      "packageSha256": "b2c9f16411eb4bb7850bf33ebeeba7b058a3fb60c3318525286dc67d247f75e3"
+    },
+    {
+      "name": "react",
+      "version": "19.2.8",
+      "license": "MIT",
+      "licensePath": "node_modules/react/LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "packageSha256": "e40c3ed9b633c9ecf188e09a4be309780a1ea0a9c068278a30ff6a27e7b2dbb6"
+    },
+    {
+      "name": "react-dom",
+      "version": "19.2.8",
+      "license": "MIT",
+      "licensePath": "node_modules/react-dom/LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "packageSha256": "7c82f0967114d4b5d38b1f07e543af87c9919e8d3243f9604004819319cb2200"
+    },
+    {
+      "name": "react-use-measure",
+      "version": "2.1.7",
+      "license": "MIT",
+      "licensePath": "node_modules/react-use-measure/LICENSE",
+      "licenseSha256": "1f9038eff8dbd6505a26f9d6830cc6da2b87ab1a9305d1100884986e9c11a31a",
+      "packageSha256": "a333d0e78edb65ebc66e9ff5a44199dd446754f3ff0f18760b5b124233dbb852"
+    },
+    {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "licensePath": "node_modules/scheduler/LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "packageSha256": "393bb96b7e481bf50189a1a02c7e0e7f4d01acba5abc6fbe7d214638624462fc"
+    },
+    {
+      "name": "suspend-react",
+      "version": "0.1.3",
+      "license": "MIT",
+      "licensePath": "node_modules/suspend-react/LICENSE",
+      "licenseSha256": "997e79b828d8b85d6f18730c8dbf58074811360a199506bd84e1263e17c227a2",
+      "packageSha256": "69ae8a1a5bdc088a46a7dfbbb3162145b3cbc2f448815bbfcfcf94d23e1e6031"
+    },
+    {
+      "name": "three",
+      "version": "0.185.1",
+      "license": "MIT",
+      "licensePath": "node_modules/three/LICENSE",
+      "licenseSha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "packageSha256": "1d5c438acdc1fe5a52fb8ede2e417afd91fec91d22275c40f7b739591b24e4df"
+    },
+    {
+      "name": "three-stdlib",
+      "version": "2.36.1",
+      "license": "MIT",
+      "licensePath": "node_modules/three-stdlib/LICENSE",
+      "licenseSha256": "28eb7edf059a39094aa3d169db1fec46ac4a6279c921a90f965828d92ec86e79",
+      "packageSha256": "a9e0fc21ca2978776b273b04b6b6c82e3edb69a74452c1c6d03551c2ac63b364"
+    },
+    {
+      "name": "use-sync-external-store",
+      "version": "1.6.0",
+      "license": "MIT",
+      "licensePath": "node_modules/use-sync-external-store/LICENSE",
+      "licenseSha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "packageSha256": "dfdead719ce161e1c5edbf0fca0ce0e7d70ba87c8a8f249856c0afde81595f24"
+    },
+    {
+      "name": "zustand",
+      "version": "5.0.15",
+      "license": "MIT",
+      "licensePath": "node_modules/zustand/LICENSE",
+      "licenseSha256": "c1e6e266563517467b1bf874817d23e426f3149252bd7d42758cd697514b8417",
+      "packageSha256": "b53b4d5e7f6baeb1e832792390354f8af54edaefbd6fe23b490a4d2d2e37dff1"
+    }
+  ],
+  "topologyInputs": [
+    {
+      "kind": "atlas",
+      "path": "lib/original-plexus.ts",
+      "sha256": "c19bb58a53ec09d6680de3d41253b587603d42df1aeb3d74d30a37aa925b3588"
+    },
+    {
+      "kind": "website",
+      "path": "scripts/plexus-review-fingerprints.mjs",
+      "sha256": "499649237cf340062f87b85e11e239cae7320423b8d84fb23a8f06fda1093972"
+    },
+    {
+      "kind": "website",
+      "path": "lib/plexus-review-contract.ts",
+      "sha256": "712f1c222d1b840c93355a8dc55802acc7667dba9ac07df9e5ec322ffbe80272"
+    },
+    {
+      "kind": "website",
+      "path": "lib/plexus-review-decisions.ts",
+      "sha256": "089cbba7047ebd26b6f420d06e57504ebb6655552c6c5e9b5dd0edd77c45421c"
+    },
+    {
+      "kind": "website",
+      "path": "lib/plexus-review-api.ts",
+      "sha256": "7c65fc073293748b67beac4c483ba786aef70fd9558868e853594681b2120f4e"
+    },
+    {
+      "kind": "website",
+      "path": "lib/plexus-review-store.ts",
+      "sha256": "cd0c674e0d565b083c4dd292aa94b47dee196214ded743e93c4558d940a9d2b8"
+    },
+    {
+      "kind": "website",
+      "path": "app/api/atlas-review/plexus-review/route.ts",
+      "sha256": "0348dd731ba7e22b295b83e69f8caa03168620e2ed47e35f939995e8cd65bcc2"
+    },
+    {
+      "kind": "website",
+      "path": "lib/clinical-review-server.ts",
+      "sha256": "4be6354dc8999a72e1e27095e0002deba98a2e47111ac866b4e477b43387e7be"
+    },
+    {
+      "kind": "website",
+      "path": "lib/clinical-review-access.ts",
+      "sha256": "37f4f7a9c228dae469ce8b7b6b7cc2e8220c27a347d9f74c420b057a56780d7a"
+    },
+    {
+      "kind": "website",
+      "path": "app/chatgpt-auth.ts",
+      "sha256": "efdb9986e5542fc7c5a99246b6fccec5d5df4ec51ecc0f6ed111fff8ccc4580a"
+    },
+    {
+      "kind": "website",
+      "path": "atlas-review/lib/review-http.ts",
+      "sha256": "ca15e73dd39c39e4376f40f81373b6da5be5be64dc20a1521bcefb54654d7ad1"
+    },
+    {
+      "kind": "website",
+      "path": "atlas-review/lib/body-review-decisions.ts",
+      "sha256": "fc1a6f92ddb888d4e2dfd82a8b368f13b24c1b9fd1a89fc175e82ad28daf5f41"
+    }
+  ],
+  "presentationInputs": [
+    {
+      "kind": "atlas",
+      "path": "lib/original-plexus-presentation.ts",
+      "sha256": "cea0894b3afe4005999cc5bf425cfdf592cece028a167f2b78858cd449cbbbb8"
+    },
+    {
+      "kind": "atlas",
+      "path": "app/review/candidates/plexus/viewer.tsx",
+      "sha256": "49e96176925af8505cbd9539621e51e7477bd19f436910e6cf6d4ae774a55071"
+    },
+    {
+      "kind": "atlas",
+      "path": "app/review/candidates/plexus/viewer.css",
+      "sha256": "e8a7f93ea0c4c9bee2f29a11439f437c4612e9f9297cec5601fe75c4d238a1a6"
+    },
+    {
+      "kind": "website",
+      "path": "components/GroupedReviewConfirmation.tsx",
+      "sha256": "b5c844502c8f44591a776d7abc1468b174af6529108576e13c944f36bebd51f4"
+    },
+    {
+      "kind": "website",
+      "path": "lib/review-draft-autosave.ts",
+      "sha256": "9192c9af4dc0ad1c6bbe31eb762846dcf1d2af81753e9f6244fd4ea81c8249db"
+    },
+    {
+      "kind": "website",
+      "path": "scripts/import-plexus-review.mjs",
+      "sha256": "3c04c80a6be6ae27af8f9e34c2dca7e2c4215973366f135dae2ceb223700f98b"
+    },
+    {
+      "kind": "website",
+      "path": "scripts/verify-plexus-review.mjs",
+      "sha256": "e09073e3f23ddc6d103c7a932447dcbd8ec384ff356a26d6818b06f9244e5c48"
+    },
+    {
+      "kind": "website",
+      "path": "scripts/plexus-review-viewer/main.tsx",
+      "sha256": "047d507e0fa9460441bae4311a79f3d63c85c0eac1ffa1ab31a128a09604b59c"
+    },
+    {
+      "kind": "website",
+      "path": "scripts/plexus-review-viewer/frame.css",
+      "sha256": "5a31363efd11aed3fdaa7e0e4cd52113667d1d92612304401ed56dfafff48c7e"
+    },
+    {
+      "kind": "website",
+      "path": "components/PlexusReviewWorksheet.tsx",
+      "sha256": "9eb612a0a5a117eca2817072c644d17b805381933f4a06bdaa3d17ebaec99478"
+    },
+    {
+      "kind": "website",
+      "path": "components/plexus-review.css",
+      "sha256": "c208b9a3ba12259a33bce68693397c333c67882487be1c524a3b7cff91642e70"
+    },
+    {
+      "kind": "website",
+      "path": "lib/plexus-review-delivery.ts",
+      "sha256": "33cf9a61f2d16423387bdde42711603e407d2dfd67673c20c771761a6f4a1864"
+    },
+    {
+      "kind": "website",
+      "path": "lib/clinical-review-fetch.ts",
+      "sha256": "61f43dc7fdb4d8ac4b6ab2dc69d2901ee23f02e2e87801a2978719ccc8a8952c"
+    },
+    {
+      "kind": "website",
+      "path": "app/workspace/atlas-review/layout.tsx",
+      "sha256": "c8e4e4ad4f8743e643e2455e0b7b98086641faeebe6e8751d2f93fde4d099a70"
+    },
+    {
+      "kind": "website",
+      "path": "app/workspace/atlas-review/website-review.css",
+      "sha256": "acd14e1c9a23f62fe86de0778d07b74ac23c19b62d63941858906a941ac77c0b"
+    },
+    {
+      "kind": "website",
+      "path": "app/workspace/atlas-review/source-comparisons/plexus/page.tsx",
+      "sha256": "00082c1a18b8b130a743e1cfcd280e5d2ad3f7010055b11df639fc7c6d80d4b4"
+    },
+    {
+      "kind": "website",
+      "path": "app/api/atlas-review/source-comparisons/plexus/[asset]/route.ts",
+      "sha256": "5f86f82661a2ef55e75ef99cd37982b133a8cb25f16d17f3b35779d5fbf28fb5"
+    },
+    {
+      "kind": "website",
+      "path": "package-lock.json",
+      "sha256": "66a49e4531dc01079e16c74ed5034976de6250fa71ba024915087b9ea53327e5"
+    }
+  ],
+  "files": [
+    {
+      "name": "app.js",
+      "bytes": 1136893,
+      "sha256": "05b0d85a759b9a8f723cbad1a578e4c1ae682c1a68a3c1367506c584f60a2eb6"
+    },
+    {
+      "name": "app.css",
+      "bytes": 6458,
+      "sha256": "e146b276d86afee1b4734a025ee13fc6c2c87558c2f1f79b91194cec55d2f107"
+    },
+    {
+      "name": "study.json",
+      "bytes": 11370,
+      "sha256": "9a085f3266393e7e56dc70b1d6ac7ad8b7922e6cdbcd190707eaecdda14cf747"
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.txt",
+      "bytes": 17218,
+      "sha256": "587d39c31f2ce21510f01db6f21a363cb8973a8645490fdd3fa2dbff14135060"
+    },
+    {
+      "name": "index.html",
+      "bytes": 510,
+      "sha256": "0576c404bc206a42e2f1b5c4be3d3027460b26bc8855ce4b51e63d413982cf4a"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "label": "STOCK_REVIEW_IMPORT",
+  "command": "node",
+  "args": [
+    "scripts/import-clinical-review.mjs",
+    "F:/VisibleMedicine/staging/20261020-atlas-review-streamline-proposal"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/STOCK_REVIEW_IMPORT.log",
+  "logSha256": "c93c239151e69c1198a0491eb2d0be0fd6f8a3d57b20808bfa57ddab80f65df4",
+  "footer": [],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+  "region": "independent-right-lower-limb",
+  "structures": 67,
+  "scopes": 5,
+  "studies": 26,
+  "draftTeachingSelections": 67,
+  "clinicalDraftSelections": 65,
+  "patientDataIncluded": false,
+  "clinicalApproved": false,
+  "standaloneReviewConnection": false,
+  "imagingConnection": false,
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 477,
+      "sha256": "f4ac33c9c91a4e5596b4cc8b2c3c573e376bd9546c6be9b2006a4c6e05ff50a9"
+    },
+    {
+      "path": "BUNDLED_NOTICES.txt",
+      "bytes": 36869,
+      "sha256": "b90af1a3e16dc02257f591b59d2b272999803b72a806f837d7f57a124ab3e567"
+    },
+    {
+      "path": "bundled-dependencies.json",
+      "bytes": 1862,
+      "sha256": "8e45c58afb2e186197756b89be8dff8985d9ca9915865d4a7343c574ccd00841"
+    },
+    {
+      "path": "source-inputs.json",
+      "bytes": 15191,
+      "sha256": "17081ccde1c3ecf27f4eaff7eeecc80ebe439c398ef49b8ad0d958f796dff091"
+    },
+    {
+      "path": "specimen-channel.json",
+      "bytes": 72,
+      "sha256": "20e20f7882da6ab7e674ccc23edb03eeceb4e2d714389cd741a6b2fc39a6b54a"
+    },
+    {
+      "path": "assets/index-D0bXv6Nx.js",
+      "bytes": 2525677,
+      "sha256": "dd845618c650560477d0a16492708b7dfbeb0116eaf0eb0cbd97e01836b48f54"
+    },
+    {
+      "path": "assets/index-DvAkAKSA.css",
+      "bytes": 237656,
+      "sha256": "2cd51d428c078ecfb25cfce64d8fcbb0327e367174ffb33f06a11ed6b2af5ca3"
+    },
+    {
+      "path": "models/um-knee/knee.glb",
+      "bytes": 5298360,
+      "sha256": "cf61571a8c80f463805b1362bb81b3d9eec3c62a1780c7288355e4a20fa8515b"
+    },
+    {
+      "path": "models/um-limb/hip-thigh.glb",
+      "bytes": 11143104,
+      "sha256": "72470f8171fcfe7b7eb397ea86be47f2ec781a4c12b4c9755213d91e4f04f262"
+    },
+    {
+      "path": "models/um-limb/thigh.glb",
+      "bytes": 19648284,
+      "sha256": "3edb8b2d00673b08631070a682d34d56aba8d55d5aa6398874580afa3036d3d2"
+    },
+    {
+      "path": "models/um-limb/leg.glb",
+      "bytes": 9251564,
+      "sha256": "76698dfcc0ed1710b06227cfccc5eb574cd03534966a406c9252899a7337437c"
+    },
+    {
+      "path": "models/um-limb/foot.glb",
+      "bytes": 2676564,
+      "sha256": "dbd323ceaa7385977905b8aa9dfbfa2c03a9e7ca02c3084b5fd8d94e933a14d5"
+    },
+    {
+      "path": "models/um-knee/catalog.json",
+      "bytes": 19729,
+      "sha256": "946249f2b30bf29f4338e5c11cd324aec00b8616fcb02349376a258f93a6544e"
+    },
+    {
+      "path": "models/um-limb/catalog.json",
+      "bytes": 81420,
+      "sha256": "fc27b778fe8a0e13f773f272bd0bd9bdf9d22117029bd5a5b5d11f0dc39c83fb"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1494,
+      "sha256": "0f7e819ffbd6d06e35397175e1771535b8eeead5f9c66454ca31e1768e7d642e"
+    },
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 352840,
+      "sha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa"
+    },
+    {
+      "path": "LICENSES/um-lower-limb-v1-2/readme.txt",
+      "bytes": 7540,
+      "sha256": "deb6b13e74e499015a79a84c0bc5c4faa15cc8a763de43ebb8ec088824fc2967"
+    },
+    {
+      "path": "LICENSES/um-lower-limb-v1-2/dataverse.json",
+      "bytes": 12272,
+      "sha256": "a9d0957579f4c78975978e12f5627fc9e0be758da676dd11d16dd72a303e5375"
+    },
+    {
+      "path": "MODEL_NOTICE.md",
+      "bytes": 1903,
+      "sha256": "283726a12527577a3f28343ace3ab37094c8726e31a6e7782ee208d14d79011e"
+    }
+  ]
+}

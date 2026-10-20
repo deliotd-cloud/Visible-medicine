@@ -1,0 +1,13 @@
+{
+  "label": "STOCK_REVIEW_VIEWER",
+  "command": "node",
+  "args": [
+    "scripts/build-clinical-review-viewer.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/STOCK_REVIEW_VIEWER.log",
+  "logSha256": "f2a39c4431cd8b1516ac2866c76ab63a03d922fcc6e4241e49dd22847cc50b71",
+  "footer": [],
+  "canonicalInstalled": false
+}

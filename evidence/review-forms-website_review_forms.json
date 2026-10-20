@@ -1,0 +1,29 @@
+{
+  "label": "WEBSITE_REVIEW_FORMS",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/head-paired-decision-form.test.ts",
+    "tests/head-ct-bone-decision-form.test.ts",
+    "tests/head-ct-bone-teaching-decision-form.test.ts",
+    "tests/head-ct-facial-decision-form.test.ts",
+    "tests/head-mri-review-notes.test.ts",
+    "tests/head-teaching-review-notes.test.ts",
+    "tests/review-draft-autosave.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-forms-integrated/WEBSITE_REVIEW_FORMS.log",
+  "logSha256": "96fdd7a651d0e8e9f492a30daf87a4ab73799d4ad94cbfb67b7a91f602ba9814",
+  "footer": [
+    "ℹ tests 44",
+    "ℹ pass 44",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

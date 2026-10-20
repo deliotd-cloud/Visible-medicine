@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected source/test helpers and metadata evidence only; no raw canonical Git ancestry, scans, masks, acquired images, private decisions, model payloads or runtime data. Authenticated historical archives remain separate local prerequisites. Not a complete, standalone or runnable Website/Atlas/data backup.
+Selected UI/source/test patches and non-patient provenance receipts only. No scans, private reviews, original source references, model payloads, runtime databases, secrets or private generated assets. Not a full, runnable or private-data backup.
