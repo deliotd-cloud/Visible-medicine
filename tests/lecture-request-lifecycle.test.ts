@@ -7,6 +7,7 @@ import {readFileSync} from 'node:fs';
 import {createRequire} from 'node:module';
 import React from 'react';
 import ts from 'typescript';
+import {lectureSavePresentation} from '../components/lecture-save-presentation.ts';
 
 const lineageBoundary={WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol('synthetic-lineage'),finish(){},invalidate(){}})};
 const require=createRequire(import.meta.url);
@@ -30,7 +31,7 @@ function harness(view=initial) {
   };
  Object.assign(react,{useLayoutEffect:react.useEffect});
   const code=ts.transpileModule(readFileSync(new URL('../components/LectureEditor.tsx',import.meta.url),'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
-  new Function('require','module','exports',code)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
+  new Function('require','module','exports',code)((name:string)=>name==='react'?react:name==='./lecture-save-presentation'?{lectureSavePresentation}:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
   const props={initial:view,courseOutline:[{id:view.id,title:view.title}],expectedStudioContext};
   function flush(){assert(mounted);let passes=0;do{assert(++passes<15);cursor=0;changed=false;pending=[];tree=mod.exports.LectureEditor(props);for(const run of pending)run();}while(changed);return tree;}
   function find(predicate:(node:any)=>boolean){const node=nodes(tree).find(predicate);assert(node,'Expected component node');return node;}

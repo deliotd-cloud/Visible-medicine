@@ -5,11 +5,12 @@ import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
+import {lectureSavePresentation} from '../components/lecture-save-presentation.ts';
 const require=createRequire(import.meta.url),React=require('react'),ts=require('typescript');
 const read=path=>readFileSync(new URL('../'+path,import.meta.url),'utf8');
 function compileText(text,mocks={}){
  const code=ts.transpileModule(text,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,module={exports:{}};
- new Function('require','module','exports',code)(name=>Object.hasOwn(mocks,name)?mocks[name]:require(name),module,module.exports);
+ new Function('require','module','exports',code)(name=>name==='./lecture-save-presentation'?{lectureSavePresentation}:Object.hasOwn(mocks,name)?mocks[name]:require(name),module,module.exports);
  return module.exports;
 }
 const contract=compileText(read('lib/workbook-correction-lineage-contract.ts'),{'./workbook-correction-contract.ts':compileText(read('lib/workbook-correction-contract.ts'))});

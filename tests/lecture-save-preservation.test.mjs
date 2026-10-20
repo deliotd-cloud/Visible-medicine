@@ -11,6 +11,7 @@ test('whole lecture source preserves every mutation, validation and navigation s
  const original=read('./fixtures/lecture-save-original.tsx.raw');
  assert.equal(sha(original),'e6a8e3b1d4952e2930f9472e02c42d04c7542830791c86e936839e1fc3183c55');
  let actual=read('../components/LectureEditor.tsx').toString();
+ actual=replaceOnce(actual,'{savePresentation.label}{contextBlocked && dirty && <> · <span role="status">Unsaved changes</span></>}','{savePresentation.label}');
  actual=replaceOnce(actual,'import { lectureSavePresentation } from "./lecture-save-presentation";\n','');
  actual=replaceOnce(actual,"  const savePresentation = lectureSavePresentation({\n    busy,\n    contextReason: contextHold?.reason ?? (contextBlocked ? 'changed' : null),\n    uncertain: contextHold?.uncertain ?? false,\n    dirty,\n    readOnly,\n    validDraft,\n    savedVersion: view.version,\n  });\n",'');
  actual=replaceOnce(actual,'      <div className="lecture-save-state" data-save-state={savePresentation.state}><span role={contextBlocked ? undefined : "status"}>{savePresentation.label}</span><small id="lecture-save-detail">{savePresentation.detail}</small></div>\n','      <span role="status">{dirty ? "Unsaved changes" : `Saved version ${view.version}`}</span>\n');

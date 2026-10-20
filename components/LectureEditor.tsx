@@ -346,7 +346,7 @@ export function LectureEditor({ initial, courseOutline, authorityKey = "", expec
       context={lineageContext} disabled={busy} />
     <header className="lecture-editor-toolbar">
       <nav aria-label="Lecture editor panels">{(["content", "preview", "review"] as const).map((item) => <button type="button" key={item} aria-current={panel === item ? "page" : undefined} onClick={() => setPanel(item)}>{item[0].toUpperCase() + item.slice(1)}</button>)}</nav>
-      <div className="lecture-save-state" data-save-state={savePresentation.state}><span role={contextBlocked ? undefined : "status"}>{savePresentation.label}</span><small id="lecture-save-detail">{savePresentation.detail}</small></div>
+      <div className="lecture-save-state" data-save-state={savePresentation.state}><span role={contextBlocked ? undefined : "status"}>{savePresentation.label}{contextBlocked && dirty && <> · <span role="status">Unsaved changes</span></>}</span><small id="lecture-save-detail">{savePresentation.detail}</small></div>
       <button type="button" className="lecture-primary-action" aria-describedby="lecture-save-detail" disabled={busy || contextBlocked || readOnly || !dirty || !validDraft} title={!validDraft ? "Check the lecture title, text limits and source addresses before saving" : undefined} onClick={() => void post("save")}>{busy ? "Working…" : "Save"}</button>
     </header>
     <fieldset className="lecture-editor-busy" disabled={busy}>

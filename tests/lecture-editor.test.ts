@@ -12,6 +12,7 @@ import {createLectureAnatomyReference} from '../lib/lecture-anatomy-reference.ts
 import {headAtlasConceptOptions,headConceptById} from '../lib/head-atlas-links.ts';
 import {headImageHref,parseHeadImageNavigation} from '../lib/head-atlas-navigation.ts';
 import {parseWorkbookRetirementReceipt} from '../lib/workbook-retirement-contract.ts';
+import {lectureSavePresentation} from '../components/lecture-save-presentation.ts';
 
 const require = createRequire(import.meta.url);
 const lineageBoundary={WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol('synthetic-lineage'),finish(){},invalidate(){}})};
@@ -24,6 +25,7 @@ function compile(path: string, react: typeof React, mocks: Record<string, unknow
   const compiledModule = { exports: {} as Record<string, any> };
   new Function("require", "module", "exports", code)((name: string) => {
     if (name === "react") return react;
+    if (name === "./lecture-save-presentation") return {lectureSavePresentation};
     if (name.endsWith(".css")) { loadedStyles?.add(name); return {}; }
     if (name in mocks) return mocks[name];
     return require(name);

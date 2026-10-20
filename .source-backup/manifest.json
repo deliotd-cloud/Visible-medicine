@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T00:05:10.040Z",
+  "at": "2026-10-20T00:28:03.813Z",
   "sourceIdentity": {
-    "product": "Uninstalled virtual Website UI source candidates, not merged/built QA",
+    "product": "Uninstalled virtual Website v2 UI source, not merged/built QA",
     "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
     "unchangedReview": "6265f5468d7f63f113a158833d5fd5852673009785ce38319137dfabb5fefb40",
     "canonicalInstalled": false
   },
-  "parent": "79cfe3e0ee4c3ea006a1db67350f74af06cd4c89",
-  "gitParent": "79cfe3e0ee4c3ea006a1db67350f74af06cd4c89",
+  "parent": "82cc4472d76ff936675719037efb04157fbae5ba",
+  "gitParent": "82cc4472d76ff936675719037efb04157fbae5ba",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -9163,8 +9163,8 @@
     },
     {
       "path": "components/LectureEditor.tsx",
-      "bytes": 35396,
-      "sha256": "9bbd888d63e2b91c64f45c028e26fc9fb5e9b78c9e0a4a378d4df837d5da3d08"
+      "bytes": 35476,
+      "sha256": "b78b2bd2590a7a7f30f7ea9393d52ff4fa6d0993783d866ae0431ddb49f0173a"
     },
     {
       "path": "components/LectureLesson.tsx",
@@ -21102,6 +21102,26 @@
       "sha256": "66cf8cc07a7e22da5e09106797706f4d5ac90864599a9308a8849c81a1f0a5fe"
     },
     {
+      "path": "tests/fixtures/lecture-save-adapters-original/lecture-anatomy-matches-ui.test.ts.raw",
+      "bytes": 9730,
+      "sha256": "ece4c9a2b490a27ef5ceccd5b608fdf9d76c1f1f93d765b203584f677b5dd541"
+    },
+    {
+      "path": "tests/fixtures/lecture-save-adapters-original/lecture-editor.test.ts.raw",
+      "bytes": 33008,
+      "sha256": "0584c69c2ec38bf1afd682531e623539a0e0b24f16897288421980664f67a073"
+    },
+    {
+      "path": "tests/fixtures/lecture-save-adapters-original/lecture-request-lifecycle.test.ts.raw",
+      "bytes": 11196,
+      "sha256": "455ad3e3df7b5f7865762387b733c33e0d4af8035760bc4b29bd91efc2f4f396"
+    },
+    {
+      "path": "tests/fixtures/lecture-save-adapters-original/workbook-correction-lineage-editors.test.mjs.raw",
+      "bytes": 17687,
+      "sha256": "96adc3ebdba20f645e0237ecf2cc5afb9288b1e516955182e6d6942ae2c711bc"
+    },
+    {
       "path": "tests/fixtures/lecture-save-context-original.mjs.raw",
       "bytes": 13644,
       "sha256": "abfa40d8b128a278c3dfc7870d7fee700b2403990065f62755ec1b600c2accf8"
@@ -23433,8 +23453,8 @@
     },
     {
       "path": "tests/lecture-anatomy-matches-ui.test.ts",
-      "bytes": 9730,
-      "sha256": "ece4c9a2b490a27ef5ceccd5b608fdf9d76c1f1f93d765b203584f677b5dd541"
+      "bytes": 9877,
+      "sha256": "b1af2dd198b5cac4f560c93ea7729431c0331317b31b30e84c6ccb6a20f72b42"
     },
     {
       "path": "tests/lecture-anatomy-reference.test.ts",
@@ -23468,8 +23488,8 @@
     },
     {
       "path": "tests/lecture-editor.test.ts",
-      "bytes": 33008,
-      "sha256": "0584c69c2ec38bf1afd682531e623539a0e0b24f16897288421980664f67a073"
+      "bytes": 33174,
+      "sha256": "40f8b233064fbc3eb24da3a54c332de89cbec5e7edcc4636b05619264dc3f872"
     },
     {
       "path": "tests/lecture-manifest.test.ts",
@@ -23513,13 +23533,18 @@
     },
     {
       "path": "tests/lecture-request-lifecycle.test.ts",
-      "bytes": 11196,
-      "sha256": "455ad3e3df7b5f7865762387b733c33e0d4af8035760bc4b29bd91efc2f4f396"
+      "bytes": 11343,
+      "sha256": "f998bcf7afd75efb53c228164f21a228f731a9a466ec2fc267102e17fd07c640"
     },
     {
       "path": "tests/lecture-routing.test.ts",
       "bytes": 17191,
       "sha256": "2ce2af7febc029ad32486228a014422d390db939accfd5fac00f6535051ee61b"
+    },
+    {
+      "path": "tests/lecture-save-adapter-preservation.test.mjs",
+      "bytes": 5306,
+      "sha256": "11fe207d5bb9cda0a774e9f20c7a9d411dd10a91aa9636d60e12ff9ad7e815b1"
     },
     {
       "path": "tests/lecture-save-presentation.test.mjs",
@@ -23528,8 +23553,8 @@
     },
     {
       "path": "tests/lecture-save-preservation.test.mjs",
-      "bytes": 4518,
-      "sha256": "a5fd5b1d49e7847a5b3e3efc835c21c9ad944f1f7c85b6285ed4f58eb858a189"
+      "bytes": 4681,
+      "sha256": "b604d397372a35ee8fc2d8a7b5f98010ea220a240b246d822bb1ebfb4d94fbde"
     },
     {
       "path": "tests/lecture-slide-navigation.test.ts",
@@ -24603,8 +24628,8 @@
     },
     {
       "path": "tests/workbook-correction-lineage-editors.test.mjs",
-      "bytes": 17687,
-      "sha256": "96adc3ebdba20f645e0237ecf2cc5afb9288b1e516955182e6d6942ae2c711bc"
+      "bytes": 17834,
+      "sha256": "182b139fe1d3b2860ca2e1564f57491a20da3d3a52b977354d04b249b3342034"
     },
     {
       "path": "tests/workbook-correction-lineage-repository.test.mjs",
@@ -24698,80 +24723,88 @@
     }
   ],
   "removed": [],
-  "scope": "Source-only recovery of uninstalled save-state and review-disclosure accessibility candidates.4937selected source paths; exactly11hash-whitelisted source/test/fixture overrides with6new paths atop filtered source-only79cfe3e0. No QA or owner files modified, no binding inputs/assets/dependencies/fonts/geometry/images/masks/accounts/authority changed. Separate focused19+4native checks and synthetic layout are not a merged app/type/build/full-suite or clinical release result. Five opaque historical archives/three held operational documents/private modules/GLBs/runtime/scans and raw canonical ancestry remain excluded; originals local. This is neither deployment nor complete private-data/project backup.",
+  "scope": "Source-only recovery of uninstalled v2 save-state and review-disclosure accessibility candidates.4942selected source paths,20explicit hash-whitelisted overrides over actual4931path frozen QA;11deltas/5new versus filtered82cc4472 v1. Original old assertion/dirty-status behavior retained;101v2 focused native cases plus8portable proof checks and separate queue4pass, actual synthetic v2 layout. Not a merged app/type/build/full-suite, real account, clinical or release result. No QA/owner writes, binding inputs/assets/dependencies/fonts/geometry/images/masks/accounts/authority changes. Five opaque archives/three held operational docs/private modules/GLBs/runtime/scans and raw canonical ancestry remain excluded; originals local. Neither deployment nor complete private-data/project backup.",
   "proof": {
-    "checkpointSha256": "5f327d0a770731709e27fa9cb5029ce42b3acda2e54762e5d9f78fb3bdb0c83c",
+    "checkpointSha256": "7bf63e2cb6d7c7f29c3b7948eee6abbe86c55d4818b2c305a34cad275d299f5b",
     "date": "2026-10-20",
-    "state": "Virtual uninstalled Website source composition: unchanged verified parent QA plus exactly11 hash-whitelisted nonoverlapping UI/test/fixture overrides; not a combined built or full-suite-tested candidate",
+    "state": "Virtual uninstalled v2 Website source: unchanged verified actual QA baseline plus20 hash-whitelisted UI/test/fixture overrides;11delta/5new versus virtual v1. Not a combined built or full-suite-tested candidate",
     "sourceDelta": [
       {
-        "path": "components/ClinicalReviewInbox.tsx",
-        "bytes": 24298,
-        "sha256": "a88df86ee16728883c3251119d6facda4c734af280693a93fc03e59bdde16e2a"
-      },
-      {
         "path": "components/LectureEditor.tsx",
-        "bytes": 35396,
-        "sha256": "9bbd888d63e2b91c64f45c028e26fc9fb5e9b78c9e0a4a378d4df837d5da3d08"
+        "bytes": 35476,
+        "sha256": "b78b2bd2590a7a7f30f7ea9393d52ff4fa6d0993783d866ae0431ddb49f0173a"
       },
       {
-        "path": "components/lecture-editor.css",
-        "bytes": 14744,
-        "sha256": "84552e1e5da25dd0849c30c301ab7f4594d1d8e85e0d89fd88fef2f6cb9719d6"
+        "path": "tests/fixtures/lecture-save-adapters-original/lecture-anatomy-matches-ui.test.ts.raw",
+        "bytes": 9730,
+        "sha256": "ece4c9a2b490a27ef5ceccd5b608fdf9d76c1f1f93d765b203584f677b5dd541"
       },
       {
-        "path": "components/lecture-save-presentation.ts",
-        "bytes": 1637,
-        "sha256": "48d7b6f651f750f4830bfdd78ad003ac33e7f4693ca40fed713b69bd24f4edcb"
+        "path": "tests/fixtures/lecture-save-adapters-original/lecture-editor.test.ts.raw",
+        "bytes": 33008,
+        "sha256": "0584c69c2ec38bf1afd682531e623539a0e0b24f16897288421980664f67a073"
       },
       {
-        "path": "tests/clinical-review-inbox-workbench.test.mjs",
-        "bytes": 8962,
-        "sha256": "7b45fad50e57c85c9c91cc40fcaf2e560229e9de50088e0c5d9a8dcd902db55a"
+        "path": "tests/fixtures/lecture-save-adapters-original/lecture-request-lifecycle.test.ts.raw",
+        "bytes": 11196,
+        "sha256": "455ad3e3df7b5f7865762387b733c33e0d4af8035760bc4b29bd91efc2f4f396"
       },
       {
-        "path": "tests/fixtures/lecture-save-context-original.mjs.raw",
-        "bytes": 13644,
-        "sha256": "abfa40d8b128a278c3dfc7870d7fee700b2403990065f62755ec1b600c2accf8"
+        "path": "tests/fixtures/lecture-save-adapters-original/workbook-correction-lineage-editors.test.mjs.raw",
+        "bytes": 17687,
+        "sha256": "96adc3ebdba20f645e0237ecf2cc5afb9288b1e516955182e6d6942ae2c711bc"
       },
       {
-        "path": "tests/fixtures/lecture-save-original.css.raw",
-        "bytes": 14418,
-        "sha256": "95e83298a41029cc2c288653b495ceeeab812edee022a77aef328b0f701edab0"
+        "path": "tests/lecture-anatomy-matches-ui.test.ts",
+        "bytes": 9877,
+        "sha256": "b1af2dd198b5cac4f560c93ea7729431c0331317b31b30e84c6ccb6a20f72b42"
       },
       {
-        "path": "tests/fixtures/lecture-save-original.tsx.raw",
-        "bytes": 34875,
-        "sha256": "e6a8e3b1d4952e2930f9472e02c42d04c7542830791c86e936839e1fc3183c55"
+        "path": "tests/lecture-editor.test.ts",
+        "bytes": 33174,
+        "sha256": "40f8b233064fbc3eb24da3a54c332de89cbec5e7edcc4636b05619264dc3f872"
       },
       {
-        "path": "tests/lecture-context-editor.test.mjs",
-        "bytes": 14482,
-        "sha256": "25017f85db5eab1a95ff2e0d7cd00f36cb9bc3b497ecc75b72a4b4ca7078a6b3"
+        "path": "tests/lecture-request-lifecycle.test.ts",
+        "bytes": 11343,
+        "sha256": "f998bcf7afd75efb53c228164f21a228f731a9a466ec2fc267102e17fd07c640"
       },
       {
-        "path": "tests/lecture-save-presentation.test.mjs",
-        "bytes": 1876,
-        "sha256": "8802d2a8a62c1abd5b2eccb2eb4ef502cf66131985139220cc01537721507141"
+        "path": "tests/lecture-save-adapter-preservation.test.mjs",
+        "bytes": 5306,
+        "sha256": "11fe207d5bb9cda0a774e9f20c7a9d411dd10a91aa9636d60e12ff9ad7e815b1"
       },
       {
         "path": "tests/lecture-save-preservation.test.mjs",
-        "bytes": 4518,
-        "sha256": "a5fd5b1d49e7847a5b3e3efc835c21c9ad944f1f7c85b6285ed4f58eb858a189"
+        "bytes": 4681,
+        "sha256": "b604d397372a35ee8fc2d8a7b5f98010ea220a240b246d822bb1ebfb4d94fbde"
+      },
+      {
+        "path": "tests/workbook-correction-lineage-editors.test.mjs",
+        "bytes": 17834,
+        "sha256": "182b139fe1d3b2860ca2e1564f57491a20da3d3a52b977354d04b249b3342034"
       }
     ],
     "evidence": [
       {
-        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual/acceptance-checkpoint.json",
-        "sha256": "6c66f0ca74dee591a5e6dcd8460e6687bc1101290dd2166d5d638b89530598da"
+        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-regression/MAIN_V2_REVIEW.json",
+        "sha256": "7f96701c264c02444121c71e4775afa4901aec192cd4dd620a8caf4989392aad"
       },
       {
-        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual/native19.tap",
-        "sha256": "301c2d682ce2b2fce5442f8937607f8b5a061012494463061015947852f0d192"
+        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-regression/TEST.tap",
+        "sha256": "e74982b1c24c16ff595c3deff1411ed6d4ff444966e0846ce8dc6352c7eaefd8"
       },
       {
-        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual/browser-proof.json",
-        "sha256": "b67ee419d84677fc197593146135cce37ff60e2a62c0a38dd77fb4de8cfce0b7"
+        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual-v2/browser-proof.json",
+        "sha256": "278363c309bc1f32555a3829c00a2d3c3fff2835c462cc613b047cffc5f97c46"
+      },
+      {
+        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual-v2/render-proof.json",
+        "sha256": "62082d1f79e7fc7a553f2a6745f598951c4baf5c6e837a4b0a3d6438a46915e1"
+      },
+      {
+        "path": "F:/VisibleMedicine/staging/20261020-lecture-save-portable-proof/TEST.tap",
+        "sha256": "33b3303e61b4c3bde358cf1513e15366d2d352b8d8d8e28c310f0589b120c17a"
       },
       {
         "path": "F:/VisibleMedicine/staging/20261020-review-queue-navigation/MAIN_REVIEW.json",
@@ -24786,8 +24819,8 @@
         "sha256": "9dd145be83dd3acb8e0145005d0563456ad425f100e13176e5c1d0ebc137df69"
       }
     ],
-    "checks": "Actual current staged Save19pass plus queue4pass separately; whole originals preserved. Synthetic six-state1280/640/nativeTab/text-contrast checks, no live account/API/draft. Queue first2red retained then new-test alphabetic expectation/sparse fixture corrected without product/order/old assertion change.",
-    "missing": "QA/canonical integration, combined native run, semantic types, production build and real signed-in/assistive technology acceptance remain required. Do not infer those from source restore or from separate focused passes.",
+    "checks": "V1 original wider82case run80pass/2fail retained. V2 restores original independent Unsaved changes role alongside uncertainty, never changes old assertions; actual19+82=101v2 focused cases pass. New portable four-whole-original adapters/negative-refusal proof8pass; two other entries unchanged. Queue4pass separate. New v2 actual synthetic six-state1280/640,738px desktop pane/nativeTab/contrast checked, no live account/API/draft. V2 native tool midstream outputs truncated, native exit/footer counts observed; not full new TAP or whole-suite evidence.",
+    "missing": "QA/canonical integration, combined native run, semantic types, production build and real signed-in/assistive technology acceptance remain required. Source restore/separate focused checks do not confer these.",
     "qaFrozenUnchanged": true,
     "protectedBindingInputChanged": false,
     "canonicalInstalled": false,
