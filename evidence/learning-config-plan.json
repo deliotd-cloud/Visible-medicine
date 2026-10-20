@@ -1,0 +1,28 @@
+{
+  "schema": "vm-reviewed-test-repair-batch-1",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "runOutput": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+  "files": [
+    {
+      "path": "tests/regional-learning-catalogue-history.ts",
+      "beforeSha256": "335ebdfa5c9118d3bec6b4240d432d185cc833459c76d7f7d7564ad1abdfdda2",
+      "afterSha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
+    },
+    {
+      "path": "tests/regional-learning-catalogue.test.ts",
+      "beforeSha256": "7b981a547e76884fbf36859c7bdaafdddbeaac4c96491351bb63ce5537ad86fa",
+      "afterSha256": "f5af041cb20771770342ad7abbb3a3b93dddd504fa4adfae6a963bfc39ee3093"
+    },
+    {
+      "path": "tests/regional-mri-inline-inspection.test.ts",
+      "beforeSha256": "a8bf4d07138bbf0824330f1e98678b3f4cd2fa4108e3d043eb3edba277cb2474",
+      "afterSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
+    },
+    {
+      "path": "tests/vite-cache-rollback.test.mjs",
+      "beforeSha256": "6da5319a5f5b22b0df1e97aa458a1278577e87a10567e736f91d83aeb9865644",
+      "afterSha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
+    }
+  ],
+  "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-learning-config-applied"
+}

@@ -1,0 +1,24 @@
+{
+  "label": "ACTUAL_ORIGINAL_VITE_AND_RADIAL",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=2048",
+    "--test",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261020-vite-radial-reviewed/mirror/tests/vite-cache-rollback.test.mjs",
+    "F:/VisibleMedicine/staging/20261020-vite-radial-reviewed/mirror/tests/radial-eus-current-transition.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-vite-radial-reviewed/ACTUAL_ORIGINAL_VITE_AND_RADIAL.log",
+  "logSha256": "22a174b0a3c943817547a6c0a47c933703046a61ce7f0bedb6e1087d44b2fcd3",
+  "footer": [
+    "ℹ tests 7",
+    "ℹ pass 5",
+    "ℹ fail 2",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

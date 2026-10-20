@@ -1,0 +1,76 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261020-clinical-context-representatives",
+  "site": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inferior-thyroid-mra-source",
+  "sourceInputs": "F:/VisibleMedicine/staging/20261020-authenticated-old-delivery-reviewed/SOURCE_INPUTS_AFTER.json",
+  "sourceInputsSha256": "fb78c62a8109b1220c5e092017aea7211e6be01283627af40afed90cfdbc79f0",
+  "namedInputs": 5028,
+  "entries": [
+    "tests/clinical-review-elbow-arterial-tour.test.ts",
+    "tests/clinical-review-quiz-disclosure.test.ts",
+    "tests/clinical-review-tour-imaging.test.ts"
+  ],
+  "before": [
+    {
+      "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "sha256": "15bb108f73a9eb2719edca3708e7b4ea9844c8f555db4495c8045c83ede40f99",
+      "bytes": 24606
+    },
+    {
+      "path": "tests/clinical-review-quiz-disclosure.test.ts",
+      "sha256": "748385b9f2f78da970ce7ddebffbf96a721a2659e60d3f30f2313077f3fde7af",
+      "bytes": 3116
+    },
+    {
+      "path": "tests/clinical-review-tour-imaging.test.ts",
+      "sha256": "2cc1ca31e53854e75b992654ec2a77d70e095bb6baad29d8cee6b62b618c89a1",
+      "bytes": 23194
+    }
+  ],
+  "hashes": [
+    {
+      "path": "app/atlas-workspace.tsx",
+      "historicalSha256": "0785f499c3e9d6a6ee83eb0ccb396956ad8a61599563f8f17b373e59f5786520",
+      "currentSha256": "0785f499c3e9d6a6ee83eb0ccb396956ad8a61599563f8f17b373e59f5786520",
+      "unchanged": true
+    },
+    {
+      "path": "app/atlas-panel.css",
+      "historicalSha256": "384e9ac467389d9e55ab695e1f6899d6742ac03834ab5da1bdc7c7fd7e46e478",
+      "currentSha256": "384e9ac467389d9e55ab695e1f6899d6742ac03834ab5da1bdc7c7fd7e46e478",
+      "unchanged": true
+    },
+    {
+      "path": "app/tour-imaging-notes.tsx",
+      "historicalSha256": "f6ca24f0d0f00bc2b4fc002d5cc46297181ec8d8d1072aa9c768780f35e0f232",
+      "currentSha256": "f6ca24f0d0f00bc2b4fc002d5cc46297181ec8d8d1072aa9c768780f35e0f232",
+      "unchanged": true
+    },
+    {
+      "path": "app/tour-imaging-notes.css",
+      "historicalSha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c",
+      "currentSha256": "6f9a9de31b7866fb2a7382cdd811b0ebc3e618fa5d8b52f17d744859197a865c",
+      "unchanged": true
+    },
+    {
+      "path": "content/elbow-arterial-tour-pins.json",
+      "historicalSha256": "58bf7f4d248fb2caeb361d6a6b22aac3be7801e820a5e498770ca89681142ab2",
+      "currentSha256": "58bf7f4d248fb2caeb361d6a6b22aac3be7801e820a5e498770ca89681142ab2",
+      "unchanged": true
+    },
+    {
+      "path": "lib/elbow-arterial-tour.ts",
+      "historicalSha256": "b2b232bec61ea9f1b8ecc0266fea2c58f113868079f22928703ba4d80872e466",
+      "currentSha256": "b2b232bec61ea9f1b8ecc0266fea2c58f113868079f22928703ba4d80872e466",
+      "unchanged": true
+    },
+    {
+      "path": "lib/regional-tours.ts",
+      "historicalSha256": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97",
+      "currentSha256": "88f195fd9dbfcd4033a5012eeb760f358cca16da7f48cbca8671ef92c69bea97",
+      "unchanged": true
+    }
+  ],
+  "scope": "Actual current original representative clinical Review tests, before any proposed correction. No application/model/source changes, source-only immutable history comparisons, synthetic handler data only. Old full-run census is not used as a current failure claim."
+}

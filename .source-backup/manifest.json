@@ -1,61 +1,74 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T19:20:01.854Z",
+  "at": "2026-10-20T19:38:58.520Z",
   "sourceIdentity": {
-    "at": "2026-10-20T19:19:58.495Z",
+    "at": "2026-10-20T19:38:55.210Z",
+    "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
     "canonicalAtlas": "f5097af8493701d64a8e2a2b5797df380f3b348a",
     "canonicalWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "candidateAtlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
     "candidateReview": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-    "allNamedInputs": 5028,
-    "sourceInputSha256": "fb78c62a8109b1220c5e092017aea7211e6be01283627af40afed90cfdbc79f0",
-    "uniqueCumulativeTestSourcePaths": 51,
-    "addedDeliveryPathsThisTurn": 22,
-    "actualOriginalFocused": {
-      "tests": 48,
-      "pass": 45,
-      "fail": 3,
-      "skipped": 0
-    },
-    "subsequentChecks": {
-      "coverage": 4,
-      "clientHistory": 6,
-      "actualLastTwo": 2,
-      "lastTwoPreservation": 9,
-      "archivedOriginal": {
-        "tests": 80,
-        "pass": 79,
-        "fail": 1
+    "namedSourceInputs": 5028,
+    "sourceInputSha256": "367dccaeb2c8dc8bde4fd81ce1c07bca44c677b0ca1af7e51edd8f0ad4bd4b68",
+    "sourceChanges": [
+      {
+        "path": "tests/regional-learning-catalogue-history.ts",
+        "beforeSha256": "335ebdfa5c9118d3bec6b4240d432d185cc833459c76d7f7d7564ad1abdfdda2",
+        "afterSha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
       },
-      "composedAffectedPreservation": 22,
-      "realHistoricalDirtyRefusal": 3
+      {
+        "path": "tests/regional-learning-catalogue.test.ts",
+        "beforeSha256": "7b981a547e76884fbf36859c7bdaafdddbeaac4c96491351bb63ce5537ad86fa",
+        "afterSha256": "f5af041cb20771770342ad7abbb3a3b93dddd504fa4adfae6a963bfc39ee3093"
+      },
+      {
+        "path": "tests/regional-mri-inline-inspection.test.ts",
+        "beforeSha256": "a8bf4d07138bbf0824330f1e98678b3f4cd2fa4108e3d043eb3edba277cb2474",
+        "afterSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
+      },
+      {
+        "path": "tests/vite-cache-rollback.test.mjs",
+        "beforeSha256": "6da5319a5f5b22b0df1e97aa458a1278577e87a10567e736f91d83aeb9865644",
+        "afterSha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
+      }
+    ],
+    "uniqueCumulativeTestSourcePaths": 55,
+    "learningActual17": {
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "originalCases": 14,
+      "newCases": 3
     },
-    "oldWebsiteRootReceipt": "F:/VisibleMedicine/staging/20261020-authenticated-old-websites/ROOTS.json",
-    "oldWebsiteRootReceiptSha256": "0c2964b247c9a703f9ce6342576f4b774c0766ab2bd4a31aa49c553bedf4a78d",
-    "oldSourceFilesVerified": {
-      "website56": 4544,
-      "website57": 4639
+    "viteActual3": {
+      "pass": 3,
+      "scope": "All Vite cases inside retained combined7/5pass/2radialfail run; not an invented standalone all-green receipt."
     },
-    "modelPayloadsCopied": 0,
-    "modelPayloadsUploaded": 0,
-    "oldRootsStandaloneBackup": false,
-    "originalFullSuite": {
-      "tests": 5433,
-      "pass": 5070,
-      "fail": 360,
-      "skipped": 3
+    "radialActual7": {
+      "pass": 5,
+      "fail": 2,
+      "attrsCasesPassed": 2,
+      "newFixtureAdmitted": false,
+      "originalOld52MetadataAndApiPending": true
     },
-    "fullSuitePass": false,
+    "clinicalOriginal8": {
+      "pass": 1,
+      "fail": 7,
+      "sourceTextPathsUnchanged": 7,
+      "scope": "Actual unmodified representative witness, not a current remaining-failure total."
+    },
+    "casePreservation": "All14 original registered learning/MRI test bodies retained after one explicit historical-source call seam and added old/current refusal. Entire old Git replay body exact. This is not a whole-source inverse; original before-file copies preserved in application recovery.",
     "productionCodeChanged": false,
     "canonicalInstalled": false,
     "ownerEditorRefreshed": false,
+    "fullSuitePass": false,
     "clinicalApproval": false,
     "patientRegistration": false,
     "publicDeployment": false,
     "fullGoalActive": true
   },
-  "parent": "9527330047992d83094f59265e375e409e7b60cd",
-  "gitParent": "9527330047992d83094f59265e375e409e7b60cd",
+  "parent": "60d6ad36d79a98355bd65f7834c9ae765ed776d3",
+  "gitParent": "60d6ad36d79a98355bd65f7834c9ae765ed776d3",
   "files": [
     {
       "path": "evidence/archived-delivery-verification.json",
@@ -76,6 +89,16 @@
       "path": "evidence/client-history-6.json",
       "sha256": "83133d8330d509da35bc0797128e00725818ffa0fb2fbf073c722b0d30e7179f",
       "bytes": 646
+    },
+    {
+      "path": "evidence/clinical-original-witness8.json",
+      "sha256": "3f9c9610e42b4771caa1e96a349cbf0709b871b712c113125343f7b1338f0c0c",
+      "bytes": 775
+    },
+    {
+      "path": "evidence/clinical-representatives-preparation.json",
+      "sha256": "f41b29545a3d799045cc8d57d2e15fd049e95f2f1c2d548faf3c8297792c4512",
+      "bytes": 3449
     },
     {
       "path": "evidence/composed-preservation-22.json",
@@ -116,6 +139,31 @@
       "path": "evidence/last-two-preservation-9.json",
       "sha256": "ca3325f974bd4646608e51b9805b3f089faecedce11d89292e6c6391aa3ff2d4",
       "bytes": 754
+    },
+    {
+      "path": "evidence/learning-config-delivery.json",
+      "sha256": "f4c50692211ca775eb92cb8709437b16194c7a4ca1aa5fa71feb76ce582ef3c9",
+      "bytes": 1780
+    },
+    {
+      "path": "evidence/learning-config-plan.json",
+      "sha256": "80d1d30ac3d969d2ff4c7450355affd7e312a70215e6b75ffbea7d542c9ce58c",
+      "bytes": 1407
+    },
+    {
+      "path": "evidence/old408-case-body-preservation.json",
+      "sha256": "ce89dd621233d90d8c07eff3326269e6d37bdfd2d8511e8ae0a2bbfada1a9118",
+      "bytes": 726
+    },
+    {
+      "path": "evidence/old408-case-verifier.mjs",
+      "sha256": "bb5c9c7e7ae5d63f2f6f031a755283432ba4ef57d23f1447d4d61670586b3418",
+      "bytes": 4136
+    },
+    {
+      "path": "evidence/old408-current-actual17.json",
+      "sha256": "c5378bb7b1a2277edebaf815965970aa58fb8c439c28ac2e4740b00cf90031de",
+      "bytes": 687
     },
     {
       "path": "evidence/postrun/CHECKPOINT_EVIDENCE.json",
@@ -186,6 +234,11 @@
       "path": "evidence/remaining-original-failure-census.md",
       "sha256": "a41edf16bf8f520142767c9f03873fc29a46441b3fe8e3530f6f31c2a2875ecb",
       "bytes": 7616
+    },
+    {
+      "path": "evidence/vite-radial-actual7.json",
+      "sha256": "311aaa513f296c5b1954bef5119dfed479ad8bdc6f3f0bce69efc53d4ab07487",
+      "bytes": 771
     },
     {
       "path": "tests/anatomy-coverage-revision-admission.test.mjs",
@@ -438,61 +491,94 @@
       "bytes": 3534
     },
     {
+      "path": "tests/regional-learning-catalogue-history.ts",
+      "sha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9",
+      "bytes": 7595
+    },
+    {
+      "path": "tests/regional-learning-catalogue.test.ts",
+      "sha256": "f5af041cb20771770342ad7abbb3a3b93dddd504fa4adfae6a963bfc39ee3093",
+      "bytes": 9935
+    },
+    {
+      "path": "tests/regional-mri-inline-inspection.test.ts",
+      "sha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f",
+      "bytes": 20089
+    },
+    {
       "path": "tests/review-change-import-history.mjs",
       "sha256": "b7ad45d970973a535880a4fb03e4df7c554fca4bfe767c952cc6bf49f75a9877",
       "bytes": 2481
+    },
+    {
+      "path": "tests/vite-cache-rollback.test.mjs",
+      "sha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056",
+      "bytes": 8213
     }
   ],
   "removed": [],
-  "scope": "Selected test/helper source repairs and metadata evidence only, carried from prior filtered selected-source backup. No raw canonical ancestry, model payloads, scans, private patient data, clinical records or acquired images. Historical Git archives/model hardlinks are local dependencies and are NOT included; this is not a complete, runnable or independent Website/Atlas/data backup.",
+  "scope": "Selected test/helper source and metadata evidence only, retaining prior filtered sources without raw canonical ancestry, model payloads, scans, acquired images or private records. Historical archives are local dependencies not included. Not a standalone/runnable/full Website/Atlas/data backup.",
   "proof": {
-    "at": "2026-10-20T19:19:58.495Z",
+    "at": "2026-10-20T19:38:55.210Z",
+    "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
     "canonicalAtlas": "f5097af8493701d64a8e2a2b5797df380f3b348a",
     "canonicalWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "candidateAtlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
     "candidateReview": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-    "allNamedInputs": 5028,
-    "sourceInputSha256": "fb78c62a8109b1220c5e092017aea7211e6be01283627af40afed90cfdbc79f0",
-    "uniqueCumulativeTestSourcePaths": 51,
-    "addedDeliveryPathsThisTurn": 22,
-    "actualOriginalFocused": {
-      "tests": 48,
-      "pass": 45,
-      "fail": 3,
-      "skipped": 0
-    },
-    "subsequentChecks": {
-      "coverage": 4,
-      "clientHistory": 6,
-      "actualLastTwo": 2,
-      "lastTwoPreservation": 9,
-      "archivedOriginal": {
-        "tests": 80,
-        "pass": 79,
-        "fail": 1
+    "namedSourceInputs": 5028,
+    "sourceInputSha256": "367dccaeb2c8dc8bde4fd81ce1c07bca44c677b0ca1af7e51edd8f0ad4bd4b68",
+    "sourceChanges": [
+      {
+        "path": "tests/regional-learning-catalogue-history.ts",
+        "beforeSha256": "335ebdfa5c9118d3bec6b4240d432d185cc833459c76d7f7d7564ad1abdfdda2",
+        "afterSha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
       },
-      "composedAffectedPreservation": 22,
-      "realHistoricalDirtyRefusal": 3
+      {
+        "path": "tests/regional-learning-catalogue.test.ts",
+        "beforeSha256": "7b981a547e76884fbf36859c7bdaafdddbeaac4c96491351bb63ce5537ad86fa",
+        "afterSha256": "f5af041cb20771770342ad7abbb3a3b93dddd504fa4adfae6a963bfc39ee3093"
+      },
+      {
+        "path": "tests/regional-mri-inline-inspection.test.ts",
+        "beforeSha256": "a8bf4d07138bbf0824330f1e98678b3f4cd2fa4108e3d043eb3edba277cb2474",
+        "afterSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
+      },
+      {
+        "path": "tests/vite-cache-rollback.test.mjs",
+        "beforeSha256": "6da5319a5f5b22b0df1e97aa458a1278577e87a10567e736f91d83aeb9865644",
+        "afterSha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
+      }
+    ],
+    "uniqueCumulativeTestSourcePaths": 55,
+    "learningActual17": {
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "originalCases": 14,
+      "newCases": 3
     },
-    "oldWebsiteRootReceipt": "F:/VisibleMedicine/staging/20261020-authenticated-old-websites/ROOTS.json",
-    "oldWebsiteRootReceiptSha256": "0c2964b247c9a703f9ce6342576f4b774c0766ab2bd4a31aa49c553bedf4a78d",
-    "oldSourceFilesVerified": {
-      "website56": 4544,
-      "website57": 4639
+    "viteActual3": {
+      "pass": 3,
+      "scope": "All Vite cases inside retained combined7/5pass/2radialfail run; not an invented standalone all-green receipt."
     },
-    "modelPayloadsCopied": 0,
-    "modelPayloadsUploaded": 0,
-    "oldRootsStandaloneBackup": false,
-    "originalFullSuite": {
-      "tests": 5433,
-      "pass": 5070,
-      "fail": 360,
-      "skipped": 3
+    "radialActual7": {
+      "pass": 5,
+      "fail": 2,
+      "attrsCasesPassed": 2,
+      "newFixtureAdmitted": false,
+      "originalOld52MetadataAndApiPending": true
     },
-    "fullSuitePass": false,
+    "clinicalOriginal8": {
+      "pass": 1,
+      "fail": 7,
+      "sourceTextPathsUnchanged": 7,
+      "scope": "Actual unmodified representative witness, not a current remaining-failure total."
+    },
+    "casePreservation": "All14 original registered learning/MRI test bodies retained after one explicit historical-source call seam and added old/current refusal. Entire old Git replay body exact. This is not a whole-source inverse; original before-file copies preserved in application recovery.",
     "productionCodeChanged": false,
     "canonicalInstalled": false,
     "ownerEditorRefreshed": false,
+    "fullSuitePass": false,
     "clinicalApproval": false,
     "patientRegistration": false,
     "publicDeployment": false,

@@ -1,0 +1,26 @@
+{
+  "label": "ACTUAL_UNCHANGED_CLINICAL_REPRESENTATIVES",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-elbow-arterial-tour.test.ts",
+    "tests/clinical-review-quiz-disclosure.test.ts",
+    "tests/clinical-review-tour-imaging.test.ts"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-clinical-context-representatives/ACTUAL_UNCHANGED_CLINICAL_REPRESENTATIVES.log",
+  "logSha256": "89cdb3d466bd5b30f29928ddd7b845c038d46e47b700ec4ad750399e3a0ab51a",
+  "footer": [
+    "ℹ tests 8",
+    "ℹ pass 1",
+    "ℹ fail 7",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

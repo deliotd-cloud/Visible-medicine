@@ -1,0 +1,23 @@
+{
+  "at": "2026-10-20T19:36:31.959Z",
+  "verifierSha256": "bb5c9c7e7ae5d63f2f6f031a755283432ba4ef57d23f1447d4d61670586b3418",
+  "schema": "vm-old408-original-case-preservation/1",
+  "files": [
+    {
+      "name": "regional-learning-catalogue-history.ts",
+      "originalGitReplayBodyExact": true,
+      "historicalCurrentSeparated": true
+    },
+    {
+      "name": "regional-learning-catalogue.test.ts",
+      "originalCases": 7,
+      "newCases": 2
+    },
+    {
+      "name": "regional-mri-inline-inspection.test.ts",
+      "originalCases": 7,
+      "newCases": 1
+    }
+  ],
+  "scope": "Registered original case-body and legacy Git replay preservation, not a whole-source inverse, browser acceptance or clinical approval."
+}
