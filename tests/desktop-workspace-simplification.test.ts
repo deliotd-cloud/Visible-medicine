@@ -176,7 +176,7 @@ test("Studio keeps course and workbook tasks primary and role filters secondary 
   const examiner = renderToStaticMarkup(React.createElement(StudioNavigation, { educationRoles: ["examiner"] }));
   assert.match(examiner, /href="\/studio\/courses">Courses/);
   assert.match(examiner, /href="\/studio\/workbooks">Workbooks/);
-  assert.match(examiner, /<details class="studio-manage-navigation" open="">/);
+  assert.doesNotMatch(examiner, /<details class="studio-manage-navigation" open="">/);
   assert.match(examiner, /aria-current="page" href="\/studio\/publishing">Review &amp; publish/);
   assert.match(examiner, /href="\/studio\/analytics">Reports/);
   assert.doesNotMatch(examiner, /href="\/studio\/cohorts"/);

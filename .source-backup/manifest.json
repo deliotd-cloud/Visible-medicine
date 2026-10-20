@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T05:35:31.075Z",
+  "at": "2026-10-20T05:51:33.690Z",
   "sourceIdentity": {
-    "product": "Unpublished Website exact current-source portal/replay assurance",
+    "product": "Unpublished Website primary Studio publishing navigation",
     "websiteBaseHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
     "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
     "canonicalInstalled": false
   },
-  "parent": "14f4a71288dcc5b7daddf38969fb26796ab9e8bd",
-  "gitParent": "14f4a71288dcc5b7daddf38969fb26796ab9e8bd",
+  "parent": "0d5aabf932e474978f60f3f1213db20d5e3d85b5",
+  "gitParent": "0d5aabf932e474978f60f3f1213db20d5e3d85b5",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -9313,8 +9313,8 @@
     },
     {
       "path": "components/StudioNavigation.tsx",
-      "bytes": 1860,
-      "sha256": "b82005b5169ba8a6feb37692340facbed5a7d24ccad9c223da3d2b6e781e8754"
+      "bytes": 1781,
+      "sha256": "78ed4dffdfc51c15cb050ab9ba6d9aa20983d39e47e31ec6153a4beb8d634d59"
     },
     {
       "path": "components/StudioShell.tsx",
@@ -17973,8 +17973,8 @@
     },
     {
       "path": "tests/desktop-workspace-simplification.test.ts",
-      "bytes": 10397,
-      "sha256": "3f81c7572d853ff917302dfcf7bbb702a372baabdb1f170563a4963b17203c6b"
+      "bytes": 10404,
+      "sha256": "9a1f3e90e1a895c37d06f4ab61510ea2bd0296422b1448b916d9cea6d47f0036"
     },
     {
       "path": "tests/disc-comparison.test.ts",
@@ -24572,6 +24572,11 @@
       "sha256": "2056ecc8241f74a8ea693f7228ea265e0b81cdf4917faea79402fce976062e93"
     },
     {
+      "path": "tests/studio-publishing-navigation.test.mjs",
+      "bytes": 5136,
+      "sha256": "3fa36278a3c80ec7a74fd18cc537167c69ff4102b9c9928f1eda7c23631cbab1"
+    },
+    {
       "path": "tests/studio-queues.test.ts",
       "bytes": 10065,
       "sha256": "33884643db01d5d48c1192fc2adea4e8b1ab020617f07ee10a4a294f2317bf21"
@@ -24823,211 +24828,78 @@
     }
   ],
   "removed": [],
-  "scope": "4962 selected sources+4metadata over verified filtered14f parent. Five test-only deltas, no removals/new assets/deps.53focused cases including2real learner/Review/historical-current runtime, types0,Review/policy, independent source audit. All5113other baseline rows/1681Review inputs/12delivery documents/models/modules/licensing/permissions unchanged. No private context/data/scans/masks/model payloads/runtime DBs/deps/raw canonical ancestry; not standalone/full private-data backup.",
+  "scope": "4963selected sources+4metadata over verified filtered0d5parent. Three reviewed deltas/no removals/newassets/deps; visible primary publishing with role-scoped secondary administration.51focused/type0/Review/policy/production build; real signed-in desktop native mouse/Enter/administration workflow. Known destination focus gap explicitly open, not full keyboard/all-role/clinical/release acceptance. All5116other baseline rows/1681inputs/12docs/model/module/rights/access bytes unchanged. No private context/data/scans/masks/model payloads/runtime DBs/deps/raw canonical ancestry; not standalone/full private-data backup.",
   "proof": {
-    "schema": "vm-portal-current-source-assurance/1",
-    "at": "2026-10-20T05:35:17.784Z",
-    "sourceBase": "14f4a71288dcc5b7daddf38969fb26796ab9e8bd",
-    "selectedSources": 4962,
+    "schema": "vm-studio-primary-publishing-acceptance/1",
+    "at": "2026-10-20T05:51:27.461Z",
+    "sourceBase": "0d5aabf932e474978f60f3f1213db20d5e3d85b5",
+    "sourcePaths": 4963,
     "changedPaths": [
-      "tests/atlas-bound-live-history.mjs",
-      "tests/clinical-review-portal-venous-current-admission.test.mjs",
-      "tests/clinical-review-portal-venous-xray.test.ts",
-      "tests/ui-teaching-admission-contract.test.mjs"
+      "components/StudioNavigation.tsx",
+      "tests/desktop-workspace-simplification.test.ts"
     ],
     "addedPaths": [
-      "tests/atlas-bound-live-history-root.test.mjs"
+      "tests/studio-publishing-navigation.test.mjs"
     ],
-    "unchangedBaselineRows": 5113,
-    "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
+    "unchangedBaselineRows": 5116,
     "all1681ReviewInputsUnchanged": true,
     "all12DeliveryDocumentsUnchanged": true,
-    "progress": "Real portal learner and protected Review tests were reading canonical f509 despite configured current aaa8. Both actual runtime and replay adapter now use checked exact source root. Immutable source epochs/assertions preserved; current admission independently bound by existing closed delivery fixture, historical509b separately witnessed. No application, anatomy, geometry, masks, modules, source fixtures, licensing or permissions changed.",
+    "progress": "Studio Review & publish is now one visible primary destination beside Home/Courses/Workbooks, including an empty review queue. Administration retains existing role predicates and destinations, collapses on publishing, opens contextually on groups/reports and is omitted when empty. Same protected URLs/native links/auth/entitlements/unsaved-state and publication gates retained.",
     "checks": {
-      "distinctFocusedCases": 53,
-      "realRuntimeCases": 2,
-      "otherFocusedCases": 51,
-      "newFunctionalRefusalCases": 7,
+      "distinctFocusedCases": 51,
+      "newActualSsrCases": 5,
+      "existingNavigationRoleAndUnsavedCases": 46,
       "typeDiagnostics": 0,
       "reviewVerification": true,
       "policyVerification": true,
-      "productionBuildThisMilestone": false,
-      "browserThisMilestone": false,
-      "wholeSuite": false
+      "productionBuild": true,
+      "fullSuite": false
     },
-    "actualRuntime": "Four exact portal drafts reach existing learners and protected Review. At original admission epoch exactly4of9936 placements/4of1104 packets differ; all other9932/1100 unchanged. Current exact source/geometry/bindings and real stale/foreign/unreviewed refusals retained. No approval stored.",
-    "independentReview": {
-      "reviewSha256": "bcd11ff3a5a325d9ee32004092ea137d73d950767c1a254e23a88dff0010cfa7",
-      "addendumSha256": "1009ae779c45fd9fa1dac014618e67560c7579fd1c2058fb25adf64c98f45eae",
-      "review": {
-        "schema": "vm-portal-assurance-independent-final-review/1",
-        "date": "2026-10-20",
-        "website": "F:/VisibleMedicine/staging/20261020-saved-plan-focus/website",
-        "baseline": "F:/VisibleMedicine/staging/20261020-portal-assurance-integration/PREPARATION.json",
-        "scope": {
-          "baselineRows": 5117,
-          "unchangedRows": 5113,
-          "missingRows": 0,
-          "changedExistingPaths": [
-            {
-              "path": "tests/atlas-bound-live-history.mjs",
-              "before": "30671132fa1592ecb7e99af40aa99c099ced1f24ce25b2cd5b5d65b5fdd72c4f",
-              "after": "15a4d7f11d0192cb176a5ca758c24d2357627e3d0be94895db9b0ecc363caf38"
-            },
-            {
-              "path": "tests/clinical-review-portal-venous-xray.test.ts",
-              "before": "e33cf4d6dbf57037f31f3ae1fefc6aa4cfb6e004f6a7d3480be9d9e39bec1cef",
-              "after": "2dc7fe02eba3ed6cee38817b10138bba4ea14e874987db5e66213aea625bab8e"
-            },
-            {
-              "path": "tests/clinical-review-portal-venous-current-admission.test.mjs",
-              "before": "7e6410677f56b00497a2a7fcc1451f629ec09a6baba423a322219cd38e47b797",
-              "after": "87983dc5eb6e5cf6a02c60958b0c482495335ba39654c4a325e6c923858e068b"
-            },
-            {
-              "path": "tests/ui-teaching-admission-contract.test.mjs",
-              "before": "ba2a51877e55c4e74bbefc54789d3c1eacf7626d9b323b567b63f6ff43efd6f3",
-              "after": "5790094183df02cbcb377aaf19b95a2417300704e733e5e93a5efa2444695cf6"
-            }
-          ],
-          "additionalTestFiles": [
-            {
-              "path": "tests/atlas-bound-live-history-root.test.mjs",
-              "sha256": "7729def23a82117b8a80ed5138150f818984ce52acb567f63fdd01a5ac3999cb"
-            }
-          ],
-          "unchangedCategoriesFromBaselineRows": {
-            "app": 184,
-            "components": 160,
-            "lib": 293,
-            "atlasRuntime": 282,
-            "modelAssets": 144,
-            "reviewAndViewer": 1593,
-            "testFixtures": 807
-          }
-        },
-        "protectedReviewInputs": {
-          "count": 1681,
-          "uniquePaths": 1681,
-          "missing": 0,
-          "hashMismatches": 0,
-          "sha256ClaimedAndRecomputed": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b"
-        },
-        "centralDeliveryFixture": {
-          "sha256": "d0550d6202c5121489f16a1ce292226994d7f525c9c1d8da8b0822822ecb48d2",
-          "source": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
-          "sourceTree": "7c0b886d66d2adf64d6d29e44938f39d8cd61046",
-          "documentCount": 12,
-          "documentHashMismatches": 0,
-          "fixtureRowUnchanged": true
-        },
-        "helperDiffReview": {
-          "result": "Only imported checkedAtlasSourceRepo, removed hardcoded F:/VisibleMedicine/atlas, and resolved checkedAtlasSourceRepo(revision) inside boundLiveAtlasHistory. All original renderer, integration-input, source path, hash, source-history and path-traversal checks remain byte unchanged.",
-          "checkedPreimageSha256": "30671132fa1592ecb7e99af40aa99c099ced1f24ce25b2cd5b5d65b5fdd72c4f"
-        },
-        "sevenNegativeCasesReview": {
-          "cases": [
-            "invalid revision",
-            "wrong requested revision",
-            "repository subdirectory",
-            "modified imported renderer",
-            "forged integration inputs",
-            "duplicate inputs with coherent synthetic binding",
-            "traversal input with coherent synthetic binding"
-          ],
-          "scopedCleanup": "Each case uses mkdtemp under website/.local/atlas-history-root-assurance; finally restores cwd/environment, validates the fixture is one case-* child of the resolved base, and removes only that fixture. The checked .local and base paths are directories, not links.",
-          "finding": "The invalid-revision case asserts only ERR_ASSERTION. If the initial 40-hex format assertion were removed, checkedAtlasSourceRepo('HEAD') would still raise ERR_ASSERTION on head mismatch, so this case would pass without its named format gate. Tighten to the specific format assertion/message or otherwise prove source lookup was not reached. The other six cases have targeted root or renderer/input refusal conditions; the duplicate and traversal cases recompute synthetic bindings to reach those checks."
-        },
-        "testResultReceivedFromMainAtReviewTime": "GUARDS_AND_REFUSALS.json reports 13/13 pass for the guard/refusal suite. Real portal runtime historical/current result has not been received; RUNTIME_AFTER.log was empty when inspected.",
-        "conclusion": "Source scope and protected bytes match the stated five-test-file integration. One nonblocking specificity gap exists in a new negative case. No real runtime, build, clinical, deployment or backup pass is claimed."
+    "browser": {
+      "receiptSha256": "a9c58c5e38c21c87e5be0e5531906e18ed309e99b6aea1fcebd75737154133f8",
+      "viewport": {
+        "width": 1280,
+        "height": 720
       },
-      "addendum": {
-        "schema": "vm-portal-assurance-final-review-addendum/1",
-        "date": "2026-10-20",
-        "correctedNegativeCase": {
-          "file": "F:/VisibleMedicine/staging/20261020-saved-plan-focus/website/tests/atlas-bound-live-history-root.test.mjs",
-          "sha256": "2143046c12835cb418ad6813269c168173536a74597d10b276019435f0320a38",
-          "observedAssertion": "The invalid-revision rejection callback requires error.code ERR_ASSERTION, operator match, actual HEAD, and error.expected.source ^[a-f0-9]{40}$.",
-          "assessment": "This closes the earlier specificity finding. Removing the format assertion would reach checkedAtlasSourceRepo('HEAD'), which raises a source-head equality assertion rather than operator match with the specified regex and actual HEAD; the callback would fail. No test rerun was performed in this addendum."
-        },
-        "receipts": [
-          {
-            "name": "FINAL_NATIVE",
-            "path": "F:/VisibleMedicine/staging/20261020-portal-assurance-integration/FINAL_NATIVE.json",
-            "receiptSha256": "ff718dfd01e0473ce2dda39be8f4d80e9c0ee77a104bd7972ddd18ccb3ec60c2",
-            "exitCode": 0,
-            "pass": 51,
-            "fail": 0,
-            "logSha256ClaimedAndVerified": "93e8b22dbdbc5ac2cddf3754bffe27580aa9512f4ab5d98d62d704bf24e902cf"
-          },
-          {
-            "name": "RUNTIME_AFTER",
-            "path": "F:/VisibleMedicine/staging/20261020-portal-assurance-integration/RUNTIME_AFTER.json",
-            "receiptSha256": "452bc1200fbdd22154f96ef2d1d8c59d77f621b62b1b7b0129bbb0b0ce0eac67",
-            "exitCode": 0,
-            "pass": 2,
-            "fail": 0,
-            "logSha256ClaimedAndVerified": "4b9cd53ab6676e379d581c5766e736890bb86112e51cb092c3f6b527f41e40ba",
-            "observedCaseNames": [
-              "four exact portal venous Xray drafts reach body learner and protected Review",
-              "exact admission epoch changes only four of 9,936 placements and 1,104 packets; live targets remain bound"
-            ]
-          },
-          {
-            "name": "TYPECHECK",
-            "path": "F:/VisibleMedicine/staging/20261020-portal-assurance-integration/TYPECHECK.json",
-            "receiptSha256": "b8fb788689397ab0924dfef9ca4aad547842c0a44605d10a1afc9f7a25800726",
-            "exitCode": 0,
-            "diagnosticsInLog": 0,
-            "logSha256ClaimedAndVerified": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
-          },
-          {
-            "name": "REVIEW",
-            "path": "F:/VisibleMedicine/staging/20261020-portal-assurance-integration/REVIEW.json",
-            "receiptSha256": "e3d20f28178269172132a58fba03af8a129ef0ff8c80d0ba20d76083e08b7a68",
-            "exitCode": 0,
-            "logSha256ClaimedAndVerified": "22c93c1bf60a2ac98001e7c481618b449393cc0bf7531c0b5af13f3871e615c3"
-          },
-          {
-            "name": "POLICY",
-            "path": "F:/VisibleMedicine/staging/20261020-portal-assurance-integration/POLICY.json",
-            "receiptSha256": "1c7ba551b821927d13332ffc78ea77b94c5c89ab539d42cbf89de110f8be992d",
-            "exitCode": 0,
-            "logSha256ClaimedAndVerified": "b98f5e7fef04059e3832806b43776037d680e999a47285e0d86789b55c0ad388"
-          }
-        ],
-        "scopeRecheck": {
-          "baselineRows": 5117,
-          "unchangedRows": 5113,
-          "missingRows": 0,
-          "changedExistingPaths": [
-            "tests/atlas-bound-live-history.mjs",
-            "tests/clinical-review-portal-venous-current-admission.test.mjs",
-            "tests/clinical-review-portal-venous-xray.test.ts",
-            "tests/ui-teaching-admission-contract.test.mjs"
-          ],
-          "onlyAdditionalTopLevelTest": "tests/atlas-bound-live-history-root.test.mjs",
-          "otherSourceAndReviewRowsChanged": 0,
-          "note": "The 5,117 row source/Review/model byte scan matches the prior independent review. The corrected new test's hash changed as intended."
-        },
-        "limits": "These receipts establish the named focused native, real portal runtime, typecheck, Review and policy outcomes at this isolated source. They do not establish a full-suite, build, browser, clinical, deployment or backup result."
-      }
+      "existingSignedInNormalRoutes": true,
+      "visiblePublishingTop": 330.59375,
+      "mouseAndKeyboardEnterNavigate": true,
+      "administrationKeyboardOpenTabClose": true,
+      "onePublishingLink": true,
+      "noHorizontalOverflowOrVisibleAlerts": true,
+      "privateDataSaved": false,
+      "inlineScreenshotInspected": true,
+      "screenshotPersisted": false,
+      "fullKeyboardJourneyComplete": false
+    },
+    "openFocusFinding": {
+      "observed": "After the explicit keyboard Home-to-publishing navigation settled, document.activeElement was BODY. The primary link and route worked but destination focus did not reach the page heading.",
+      "status": "Open; not yet classified as introduced or pre-existing by a before/after browser witness. Full keyboard-navigation acceptance is not claimed.",
+      "next": "Prioritize narrowly scoped Studio primary-navigation destination focus. Preserve document unsaved-state cancellation, source/account checks, normal auth and explicit-link-only behavior; verify delayed streaming and no background focus stealing."
     },
     "evidence": {
-      "PREPARATION.json": "34af75990167ff540f5bac204cd15e1537b7ace098c763dc9875539f85e61a2b",
-      "SOURCE_SCOPE.json": "26382eb8903917f4ff9796fdb1361f14ae3f1e8879b06ab7db6f0d0931ba51bf",
-      "RUNTIME_BEFORE.json": "635b828117bd4abe13b98477cabee5bc330692d26bf72c382240d4cbde9d707a",
-      "GUARDS_AND_REFUSALS.json": "7d35796a7459b540d0ac615685f2436e00ad91115cccbfcdaf8fc7b06f01b6a2",
-      "RUNTIME_AFTER.json": "452bc1200fbdd22154f96ef2d1d8c59d77f621b62b1b7b0129bbb0b0ce0eac67",
-      "ACCEPTANCE_NATIVE.json": "1fc69c62992d70ff8e9fc4de4d4f99862ef1ae38dc4d137eeb5e4a31d0679cc1",
-      "FINAL_NATIVE.json": "ff718dfd01e0473ce2dda39be8f4d80e9c0ee77a104bd7972ddd18ccb3ec60c2",
-      "TYPECHECK.json": "b8fb788689397ab0924dfef9ca4aad547842c0a44605d10a1afc9f7a25800726",
-      "REVIEW.json": "e3d20f28178269172132a58fba03af8a129ef0ff8c80d0ba20d76083e08b7a68",
-      "POLICY.json": "1c7ba551b821927d13332ffc78ea77b94c5c89ab539d42cbf89de110f8be992d"
+      "PREPARATION.json": "9dd829fa25a37c2208958778f90dfc3e4cf5a74d0d9ede17f56dd74fa48f3d77",
+      "SOURCE_SCOPE.json": "6ce23da2097787638eb85bf4f06db8a1a0b30ccec0d46357825eb83553ec0ea9",
+      "BEFORE_NAV.json": "3025f3744428b4582c9d2e7774cd33693e9a0672b3111667420759a2db02e275",
+      "FOCUSED_NAV.json": "404a017afc34c0d4ae6f86604fe358c3ae9fab497047c915022c5490159d7135",
+      "NAVIGATION_GUARDS.json": "5cc49145258cb966365310c2536b647073658c4d119f186d10fc40e6d9d4d3ab",
+      "TYPECHECK.json": "7589fc0c351f13032719a90c29ab1781480d428bc5dfae95e1611be5b192c4ae",
+      "REVIEW.json": "3b55db21bfdc22742b0ffbe9e27401b7bbbe82f3d1cdbef5dafad59d945b6824",
+      "POLICY.json": "062b367f95dbed9ea4691303ef9e0b576c480d780c74b8195566bc1cf10d8c29",
+      "PRODUCTION_BUILD.json": "9fc9441a5ef7493b1805c1f3b44faa779b5378cb848a11f53491f139327ca539",
+      "BROWSER_ACCEPTANCE.json": "a9c58c5e38c21c87e5be0e5531906e18ed309e99b6aea1fcebd75737154133f8",
+      "preview/server.json": "6c2ea9856b6a2ab2267158f2b438a74b9eaeb5b41bfcc8f984a771d68831cdc0",
+      "preview/server-exit.json": "af242b63c498159d5b69e8619026d0a6d9859b550a9fe9212de797b38d1b564b",
+      "preview/stop-receipt.json": "3d888b7d8785ec25b8ea36c2d271eefb62e5e52b471d16a5f199888b815f2d47"
     },
-    "retainedLimits": "Baseline real runtime0/2 due f509-versus-aaa8 preserved. First new invalid-format negative case could pass on a later mismatch; independently found, tightened to actual match operator/HEAD/regex, final51pass. No full-suite rerun/exact remaining failure count, production rebuild or browser rerun: only tests/helpers changed and every application/1681Review input byte remains unchanged; previous production/browser proof retains its own exact source scope. No clinical/privacy/registration or release acceptance.",
-    "ownerPreview": "Owner localhost3000/PID210284 and open lecture untouched; save unconfirmed, no navigation/refresh/restart. No own preview started this milestone.",
-    "stagedAdvancement": "Existing isolated candidate advanced only after verified14f filtered backup, all5117 baseline rows verified, four preimages retained, no extra dependency/model copy.",
+    "independentReview": {
+      "path": "F:/VisibleMedicine/staging/20261020-desktop-workspace-gap/FINAL_REVIEW.json",
+      "sha256": "a0a548e71640bd9a35ed2dd2818d0fc4aa99c133c6b1257d61fb6b1ba9da25bd",
+      "result": "5118rows/twoexisting+oneadded,1681Review inputs/12docs unchanged, single intended original assertion update"
+    },
+    "retainedLimits": "Five new cases failed against original UI then pass after scoped change. Initial keyboard attempt occurred during normal streaming fallback and was not acceptance; successful settled retry retained. Actual keyboard Enter opens correct publishing route, but settled focus falls to BODY: prioritize protected explicit Studio-primary navigation heading focus next, preserve unsaved cancellation/normal auth, no whole keyboard/accessibility completion claim. One signed-in account, not all roles/physicalAT/200%-text/mobile/GPU/full-suite or clinical acceptance. Normal no-cookie HTTP remains307sign-in, browser used existing authorized session without permission changes. No form/action/publishing/approval was submitted.",
+    "preservation": "All5116other baseline rows/1681Review inputs/12delivery docs/Atlasaaa8/Reviewd703/models/assets/modules/licensing/dependencies/permissions unchanged. Owner3000/PID210284/open lecture untouched/save unconfirmed; ownpage26 and exact3003root232864/children216308,215804,239192 closed/stopped after fresh identity checks.",
+    "stagedAdvancement": "Existing isolated candidate advanced after verified0d5sourcebackup,5118baseline rows checked/two preimages, no extra deps/model copy. Prior mutable source paths require immutable hashes/remote restoration.",
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",

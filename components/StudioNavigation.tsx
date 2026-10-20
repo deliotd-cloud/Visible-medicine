@@ -7,6 +7,7 @@ const links = [
   ["Home", "/studio/workspace"],
   ["Courses", "/studio/courses"],
   ["Workbooks", "/studio/workbooks"],
+  ["Review & publish", "/studio/publishing"],
 ] as const;
 
 export function StudioNavigation({ educationRoles }: { educationRoles: readonly string[] }) {
@@ -21,12 +22,11 @@ export function StudioNavigation({ educationRoles }: { educationRoles: readonly 
     <div className="studio-primary-navigation">
       {links.map(([label, href]) => <Link aria-current={isActive(href) ? "page" : undefined} href={href} key={href}>{label}</Link>)}
     </div>
-    <details className="studio-manage-navigation" open={pathname.startsWith("/studio/publishing") || pathname.startsWith("/studio/cohorts") || pathname.startsWith("/studio/analytics")}>
-      <summary>Delivery &amp; administration</summary>
-      <Link aria-current={isActive("/studio/publishing") ? "page" : undefined} href="/studio/publishing">Review &amp; publish</Link>
+    {(canManageLearners || canViewReports || canManageOrganization) && <details className="studio-manage-navigation" open={pathname.startsWith("/studio/cohorts") || pathname.startsWith("/studio/analytics")}>
+      <summary>Administration</summary>
       {canManageLearners && <Link aria-current={isActive("/studio/cohorts") ? "page" : undefined} href="/studio/cohorts">Learner groups</Link>}
       {canViewReports && <Link aria-current={isActive("/studio/analytics") ? "page" : undefined} href="/studio/analytics">Reports</Link>}
       {canManageOrganization && <Link href="/workspace">Organisation</Link>}
-    </details>
+    </details>}
   </nav>;
 }
