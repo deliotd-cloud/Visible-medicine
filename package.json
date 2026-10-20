@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "inferior-thyroid-mra-evidence:test": "node scripts/test-inferior-thyroid-mra-evidence.mjs",
     "source-evidence-checkout:test": "node scripts/test-source-evidence-checkout.mjs",
     "tongue-palate-quiz:test": "node scripts/pin-tongue-palate-quiz.mjs --check && node scripts/test-tongue-palate-quiz.mjs",
     "ileocolic-artery-ultrasound:test": "node scripts/test-ileocolic-artery-ultrasound.mjs",
