@@ -590,6 +590,7 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "licenses:audit": "node scripts/audit-licenses.mjs",
+    "requirements:inputs:test": "node --test scripts/test-requirement-source-inputs.mjs",
     "requirements:audit": "node scripts/audit-requirements.mjs",
     "requirements:check": "node --test scripts/test-requirement-summary-current.mjs scripts/test-independent-teaching-summary.mjs && node scripts/audit-requirements.mjs --check",
     "content:export": "node scripts/export-content.mjs",

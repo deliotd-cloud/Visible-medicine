@@ -1,16 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T17:01:52.650Z",
+  "at": "2026-10-20T17:28:17.354Z",
   "sourceIdentity": {
-    "kind": "Isolated Atlas source candidate, not installed",
-    "parent": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
-    "source": "9296d0f940e25581162f8d8fe738a1aad40c72b8",
-    "tree": "c948253b3a80788d8a06e7ff90f2114402d6e986",
+    "kind": "Isolated Atlas candidate plus actual source-owned coverage provenance",
+    "parent": "9296d0f940e25581162f8d8fe738a1aad40c72b8",
+    "source": "531e3f71826bb854485d2bb810da740d73d788a9",
+    "tree": "10dbce6c80a83ec1092d4b79bb961175ce752ed4",
     "canonicalInstalled": false,
     "clinicalApproval": false
   },
-  "parent": null,
-  "gitParent": null,
+  "parent": "f6594859f3df1fdd781496433941f872d639b3bb",
+  "gitParent": "f6594859f3df1fdd781496433941f872d639b3bb",
   "files": [
     {
       "path": "content/corpus-imaging-ct.pins.json",
@@ -28,14 +28,29 @@
       "sha256": "5d5e7afeb081d79b1f8559c90f6fd51cfd8cc79a6727844413a081c6e937f61e"
     },
     {
+      "path": "docs/CURRENT_STATUS.md",
+      "bytes": 9872,
+      "sha256": "1d939a91e7141e09dd7e316fce35229c424ffd4d45c19c5f77015bb709b6a063"
+    },
+    {
+      "path": "docs/requirement-audit.json",
+      "bytes": 261364,
+      "sha256": "b0a7a1e8b58de8ef71100b666c0d0066c9ef5823d3e71dd5e42117373d450a79"
+    },
+    {
       "path": "lib/corpus-imaging.ts",
       "bytes": 1156,
       "sha256": "b6256fdf7a17d1a9694d6aad5ea92ed4dc15f8f7ef3b5ed1d1060c4c0b0f4bfc"
     },
     {
       "path": "package.json",
-      "bytes": 86455,
-      "sha256": "e4d8f5dbda98ecac1084ab756009ab611c52ebc918710a5ad7a455ea8f1206c7"
+      "bytes": 86545,
+      "sha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a"
+    },
+    {
+      "path": "scripts/audit-requirements.mjs",
+      "bytes": 90506,
+      "sha256": "1d3fb416eb31a84715f9a2b3dc04d213189001a8336e87c133e65268985f2915"
     },
     {
       "path": "scripts/content-contract-tools.mjs",
@@ -63,6 +78,11 @@
       "sha256": "b702d249657bc2a30036cda741fb43e39acc0348c6ffe59f4dcf6f915073cde6"
     },
     {
+      "path": "scripts/requirement-source-inputs.mjs",
+      "bytes": 2269,
+      "sha256": "95713ee02982dee22b8ee388c465ca8972e881df7a0a6c2b1bb72ec73d9eaf18"
+    },
+    {
       "path": "scripts/test-corpus-imaging-ct-history.mjs",
       "bytes": 19014,
       "sha256": "92c1cdbed5e62a4818387f131679f64bfa7361f52d132d0e1d29d67abffa74cb"
@@ -78,6 +98,11 @@
       "sha256": "624fa234c3579b43c5f78f71eee28ec9cd3c8d11f8ddff16082cb948bcf3e2de"
     },
     {
+      "path": "scripts/test-requirement-source-inputs.mjs",
+      "bytes": 4105,
+      "sha256": "5698309c0db6ee86f1d718711a6464d854c4d78600a66c408b8266928a144dc0"
+    },
+    {
       "path": "scripts/validate-corpus-imaging.mjs",
       "bytes": 7428,
       "sha256": "bd011302444a037516918e156434f7d25a92e6fe9b2c70538255cb5ce5354dc8"
@@ -89,21 +114,23 @@
     },
     {
       "path": "VERIFICATION.json",
-      "bytes": 6117,
-      "sha256": "3560ee1f68683f490838e76f258a3607bad6e51a4f4dd27de3db07925d412ebb"
+      "bytes": 38170,
+      "sha256": "a780cb78f582cbd07b0059685983441a93628a23cb40dcd245e4581d857f0e08"
     }
   ],
   "removed": [],
-  "scope": "Sixteen selected source/evidence paths only, with fourteen source changes against exact Atlas87ed plus LICENSE and verification metadata. Not a standalone/full Atlas, Website or private-data backup. Original CT teaching for existing FMA19617/FJ3133 bulb/shaft representation; no new geometry or images. Seven focused pure-source tests pass, including exact preservation and synthetic review refusal/draft readback. Original MRI/US, X-ray and MRA tests retain full-file inverses and immutable source contexts; complete historical-validator, renderer/export and coherent Website admission remain pending. No patient data, scans, masks, mesh binaries, private clinical records, raw canonical Git ancestry, source PDF/figure or public deployment.",
+  "scope": "Twenty-one selected source/evidence files only: nineteen cumulative source changes from Atlas87ed, LICENSE and current verification. Not a standalone/full Atlas/Website/private-data backup. Retains one CT teaching draft and adds actual compiled project-source fingerprints to the inventory, including typed JSON variants, while keeping installed-library classification separate. Current source inputs1529 are hash-checked; old769 remain. Seventeen inventory/scope tests and source-owned reproduction pass; eight separate test-delivery guards also pass locally, but that Website repair proposal is not included or installed. Original full history/content/renderer/export/Website and clinical/release gates remain. No scans, masks, patient images, mesh binaries, private records, raw canonical ancestry or deployment. Parent is the prior filtered source-only checkpoint, never canonical ancestry.",
   "proof": {
-    "verificationSha256": "3560ee1f68683f490838e76f258a3607bad6e51a4f4dd27de3db07925d412ebb",
-    "focusedSourceTests": 7,
-    "changedPlacements": 1,
-    "preservedPlacements": 9935,
-    "identityMutationRefusals": 56,
-    "reviewPacketsCompared": 1104,
-    "exactLegacyValidatorInverses": 3,
-    "fullHistoricalSuiteRun": false,
+    "verificationSha256": "a780cb78f582cbd07b0059685983441a93628a23cb40dcd245e4581d857f0e08",
+    "sourceInputsChecked": 1529,
+    "retainedRawFingerprints": 769,
+    "scopeTestsPassed": 17,
+    "sourceOwnedReproduction": true,
+    "rootDraftPlacements": 9347,
+    "pendingPlacements": 558,
+    "generatedIdentificationPlacements": 31,
+    "notUniqueLessons": true,
+    "fullHistoricalValidatorsRun": false,
     "canonicalInstalled": false,
     "clinicalApproval": false
   },
