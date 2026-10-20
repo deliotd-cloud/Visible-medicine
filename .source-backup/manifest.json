@@ -1,0 +1,441 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T12:29:06.468Z",
+  "sourceIdentity": {
+    "product": "Staged unintegrated Website patch packet",
+    "referenceFilteredBackup": "9ec38022b74bec871951be28e5d88b432ee4bfe8",
+    "atlas": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "files/components/HeadAtlasInlineComparison.tsx",
+      "bytes": 14110,
+      "sha256": "c64692ad3594129be18cb739063536d6bfa2bcbac72a91fdb4970c5df1e1b105"
+    },
+    {
+      "path": "before/components/HeadAtlasInlineComparison.tsx",
+      "bytes": 14016,
+      "sha256": "e32fae7c28eba1dce955ae0b04c5e1223fc6527d06e63e518060bcc8fbe8074c"
+    },
+    {
+      "path": "files/components/HeadAtlasPractice.tsx",
+      "bytes": 23691,
+      "sha256": "23d641698cd63318da70c4b569f0662ca709678e1204d0890ba11280f77e96e2"
+    },
+    {
+      "path": "before/components/HeadAtlasPractice.tsx",
+      "bytes": 23458,
+      "sha256": "dce7e8ef443732e279831826145292714680d63af94ce7cf6ee69f1acbc56105"
+    },
+    {
+      "path": "files/app/atlas/head-neck-3d/head-learning.css",
+      "bytes": 16135,
+      "sha256": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83"
+    },
+    {
+      "path": "before/app/atlas/head-neck-3d/head-learning.css",
+      "bytes": 12919,
+      "sha256": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767"
+    },
+    {
+      "path": "files/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 6710,
+      "sha256": "ebf5153c552d5ebbe5ae45f56a3ab4bc1ed47972695ffc683ca9c8833e3a0738"
+    },
+    {
+      "path": "before/tests/atlas-tour-library-pause.test.ts",
+      "bytes": 5072,
+      "sha256": "accce62e55ec40a98c9717c468d1cd52f5732738640f2fd62e25e7add3c38ac4"
+    },
+    {
+      "path": "files/tests/clinical-review-abdominal-detail-xray.test.ts",
+      "bytes": 17482,
+      "sha256": "64bfa1d4ffd9c1024902a322a42a273022066a911d5d0c79b6ace7a05523e819"
+    },
+    {
+      "path": "before/tests/clinical-review-abdominal-detail-xray.test.ts",
+      "bytes": 17411,
+      "sha256": "be9d2456220400d38646207463f77d58f3dc1baa66d91ae0d55f128b812848d4"
+    },
+    {
+      "path": "files/tests/clinical-review-abdominal-eus.test.ts",
+      "bytes": 13795,
+      "sha256": "6298f4b8ab73c65d8e54242eb828517a5351b34abbc6f8515fdeff081fce1bf2"
+    },
+    {
+      "path": "before/tests/clinical-review-abdominal-eus.test.ts",
+      "bytes": 12810,
+      "sha256": "270b6e9d0e229c52a73077c37a2447ab7099da9ca2fa8a6a760cc914e483190f"
+    },
+    {
+      "path": "files/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 56723,
+      "sha256": "44e3040697f129b5779b4acd0fae30feff9f7e223817ca96addbd23ec025992b"
+    },
+    {
+      "path": "before/tests/atlas-spinal-muscle-xray.test.mjs",
+      "bytes": 53311,
+      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865"
+    },
+    {
+      "path": "files/tests/tongue-palate-quiz-transition.mjs",
+      "bytes": 1493,
+      "sha256": "bc3067acd000ffe1f82936b231e829a77ac5201971a16e3a0e85217888075f84"
+    },
+    {
+      "path": "files/scripts/run-website-tests.mjs",
+      "bytes": 15917,
+      "sha256": "ae589270a984cb4a32a10528f162fb5e00c1968a1d26b91a53b865655f8b4d33"
+    },
+    {
+      "path": "before/scripts/run-website-tests.mjs",
+      "bytes": 15736,
+      "sha256": "9dc062a40d1a92c45c4d0d45ab02957b4f54a32af9d96f9e84ce06601d828a7a"
+    },
+    {
+      "path": "files/tests/run-website-tests-public-preview.test.mjs",
+      "bytes": 7860,
+      "sha256": "3b03097bfd51f8c11b865726d5cbfe9055e31abe2159c42feb7b342e96ebfbc7"
+    },
+    {
+      "path": "before/tests/run-website-tests-public-preview.test.mjs",
+      "bytes": 7816,
+      "sha256": "20cd097d13bb5310b5ffb14f7ec32a5d7aeb42c35a20ecbdf2660dd94b929bfd"
+    },
+    {
+      "path": "files/tests/website-test-history-preflight.test.mjs",
+      "bytes": 9834,
+      "sha256": "3fb371f5ecc2539163a8ad6808d4cfd8e503b63230551a3280b223e176a0ca5b"
+    },
+    {
+      "path": "before/tests/website-test-history-preflight.test.mjs",
+      "bytes": 8385,
+      "sha256": "0bdfe7c5ce5f942a3323fc757cd0ba5dac0867b6d760360eb084c919f8da0258"
+    },
+    {
+      "path": "files/scripts/website-test-local-archives-preflight.mjs",
+      "bytes": 2822,
+      "sha256": "372ea939fab6f7b2e88e0a3c62f4efef7303be56054b230e00a6f3e6b53efc7d"
+    },
+    {
+      "path": "files/tests/website-test-local-archives-preflight.test.mjs",
+      "bytes": 4044,
+      "sha256": "380ad2e8d042471811fc52470c426bcad9e91006f73bf1c2b2ea14c7e0f4cdcd"
+    },
+    {
+      "path": "files/tests/head-viewer-feedback.test.mjs",
+      "bytes": 9425,
+      "sha256": "247737083eebc05d8013bc2bb8750e6956798e7bb960263e6c9e9004208ef6ae"
+    },
+    {
+      "path": "files/tests/head-guided-desktop-layout.test.mjs",
+      "bytes": 2905,
+      "sha256": "a23e967bea8a3dc9094d4c3312a73217cb5f8055e312badcf4f006d006673ef9"
+    },
+    {
+      "path": "files/tests/clinical-review-lower-neck-tour.test.ts",
+      "bytes": 4367,
+      "sha256": "089300117020bb33ab70048b87580a303f2632dd0b783f7fd998baf883670bfb"
+    },
+    {
+      "path": "before/tests/clinical-review-lower-neck-tour.test.ts",
+      "bytes": 4318,
+      "sha256": "51e463d2b5995a8acab9f76c425ec3f106965af1d8ec8fcdc1ca7cf40d96241d"
+    },
+    {
+      "path": "files/tests/clinical-review-mesenteric-tour.test.ts",
+      "bytes": 4345,
+      "sha256": "f10a003342693fa6d8220a191d2c461bcbd4b199e398b4fc721549af9e3d564c"
+    },
+    {
+      "path": "before/tests/clinical-review-mesenteric-tour.test.ts",
+      "bytes": 4296,
+      "sha256": "37c49bfac887233f04bc2cb61c95fb0187897f98369d65e0206f52b4668e9653"
+    },
+    {
+      "path": "files/tests/clinical-review-orbital-nerve-tour.test.ts",
+      "bytes": 4580,
+      "sha256": "941bc94e922903174a15fa63158ccebc8d5ce8812e14ccfdabbf5c9787920081"
+    },
+    {
+      "path": "before/tests/clinical-review-orbital-nerve-tour.test.ts",
+      "bytes": 4531,
+      "sha256": "18f55b8d62e9e9c7fe6e3f8263bae8ca6413b7fce3fd6f4cecb6bd1e22550cf8"
+    },
+    {
+      "path": "files/tests/clinical-review-restore.test.ts",
+      "bytes": 2137,
+      "sha256": "0343926d58e360b09b229d03dca8e1f2649acab5cd8cbf5aa26e2f454e698ca8"
+    },
+    {
+      "path": "before/tests/clinical-review-restore.test.ts",
+      "bytes": 2088,
+      "sha256": "cfd039bf3bf6890c1007705a98d854a5a8449267044d43c0d43f617c6a138dec"
+    },
+    {
+      "path": "files/tests/clinical-review-search-word-forms.test.ts",
+      "bytes": 3534,
+      "sha256": "0c44c99e63c1ffdcb1a1dfa57f75c33866040b9add7e785234019832e5032012"
+    },
+    {
+      "path": "before/tests/clinical-review-search-word-forms.test.ts",
+      "bytes": 3485,
+      "sha256": "c2739726f07ac3e68176a745533c83eb22fd53ca78c38abaebaf3ecd5ad173f8"
+    },
+    {
+      "path": "files/tests/clinical-review-search.test.ts",
+      "bytes": 2071,
+      "sha256": "e9a545416819a3ac322281313ea4dfca2816209ca2ababf2612b152029d6b5ce"
+    },
+    {
+      "path": "before/tests/clinical-review-search.test.ts",
+      "bytes": 2022,
+      "sha256": "7ff4e5ce36b82ed7cc901abe0704f51d380f79f8d34c363f5737b3066a7b8415"
+    },
+    {
+      "path": "PATCH_MANIFEST.json",
+      "bytes": 12837,
+      "sha256": "192733f73b30e098b17e6c18e956b3d9390afd72a0140ff61ded2f5a52e27702"
+    },
+    {
+      "path": "README.md",
+      "bytes": 987,
+      "sha256": "f528b320f5ecf0d4df759390890774f281a70d189d6cc18356120cc7d2da8317"
+    }
+  ],
+  "removed": [],
+  "scope": "Source-only UNINTEGRATED patch packet. Not a runnable checkout, verified Website integration, full project backup or clinical/privacy release. No raw canonical Git ancestry, patient data or model payloads.",
+  "proof": {
+    "schema": "vm-staged-website-patch-backup/1",
+    "at": "2026-10-20T12:29:04.082Z",
+    "status": "UNINTEGRATED PATCH PACKET — not a runnable Website checkout or approved delivery",
+    "baseline": {
+      "verifiedFilteredCommit": "9ec38022b74bec871951be28e5d88b432ee4bfe8",
+      "verifiedFilteredTree": "024da8da46fad78af5d6c5ec56de470baf19ac8f",
+      "branch": "backup/website-checkout-history-20261020",
+      "atlas": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+      "review": "b18997aea1fbc2ba1ccb8fec2405efcb43db1c9046ce5a7e7941d156ba14ba8f",
+      "currentFixtureSha256": "0ee28eaffe4fc13e32f124d7d48eea18e90b34f3cfaf1a55959fdabba90e573a"
+    },
+    "codeFiles": 21,
+    "newFiles": 5,
+    "beforeFiles": 16,
+    "sources": [
+      {
+        "path": "components/HeadAtlasInlineComparison.tsx",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/components/HeadAtlasInlineComparison.tsx",
+        "afterSha256": "c64692ad3594129be18cb739063536d6bfa2bcbac72a91fdb4970c5df1e1b105",
+        "beforeSha256": "e32fae7c28eba1dce955ae0b04c5e1223fc6527d06e63e518060bcc8fbe8074c"
+      },
+      {
+        "path": "components/HeadAtlasPractice.tsx",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/components/HeadAtlasPractice.tsx",
+        "afterSha256": "23d641698cd63318da70c4b569f0662ca709678e1204d0890ba11280f77e96e2",
+        "beforeSha256": "dce7e8ef443732e279831826145292714680d63af94ce7cf6ee69f1acbc56105"
+      },
+      {
+        "path": "app/atlas/head-neck-3d/head-learning.css",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/app/atlas/head-neck-3d/head-learning.css",
+        "afterSha256": "70eb06e2246820bf4b752aa857a4ddeb67f105bfe31361469bd9cb81afd5db83",
+        "beforeSha256": "3a3117cdcb03a50c1bb42992d036139e22366fefd76d00283c5c57c7e46f9767"
+      },
+      {
+        "path": "tests/atlas-tour-library-pause.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/atlas-tour-library-pause.test.ts",
+        "afterSha256": "ebf5153c552d5ebbe5ae45f56a3ab4bc1ed47972695ffc683ca9c8833e3a0738",
+        "beforeSha256": "accce62e55ec40a98c9717c468d1cd52f5732738640f2fd62e25e7add3c38ac4"
+      },
+      {
+        "path": "tests/clinical-review-abdominal-detail-xray.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/clinical-review-abdominal-detail-xray.test.ts",
+        "afterSha256": "64bfa1d4ffd9c1024902a322a42a273022066a911d5d0c79b6ace7a05523e819",
+        "beforeSha256": "be9d2456220400d38646207463f77d58f3dc1baa66d91ae0d55f128b812848d4"
+      },
+      {
+        "path": "tests/clinical-review-abdominal-eus.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/clinical-review-abdominal-eus.test.ts",
+        "afterSha256": "6298f4b8ab73c65d8e54242eb828517a5351b34abbc6f8515fdeff081fce1bf2",
+        "beforeSha256": "270b6e9d0e229c52a73077c37a2447ab7099da9ca2fa8a6a760cc914e483190f"
+      },
+      {
+        "path": "tests/atlas-spinal-muscle-xray.test.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/atlas-spinal-muscle-xray.test.mjs",
+        "afterSha256": "44e3040697f129b5779b4acd0fae30feff9f7e223817ca96addbd23ec025992b",
+        "beforeSha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865"
+      },
+      {
+        "path": "tests/tongue-palate-quiz-transition.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/tongue-palate-quiz-transition.mjs",
+        "afterSha256": "bc3067acd000ffe1f82936b231e829a77ac5201971a16e3a0e85217888075f84",
+        "beforeSha256": null
+      },
+      {
+        "path": "scripts/run-website-tests.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/scripts/run-website-tests.mjs",
+        "afterSha256": "ae589270a984cb4a32a10528f162fb5e00c1968a1d26b91a53b865655f8b4d33",
+        "beforeSha256": "9dc062a40d1a92c45c4d0d45ab02957b4f54a32af9d96f9e84ce06601d828a7a"
+      },
+      {
+        "path": "tests/run-website-tests-public-preview.test.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/run-website-tests-public-preview.test.mjs",
+        "afterSha256": "3b03097bfd51f8c11b865726d5cbfe9055e31abe2159c42feb7b342e96ebfbc7",
+        "beforeSha256": "20cd097d13bb5310b5ffb14f7ec32a5d7aeb42c35a20ecbdf2660dd94b929bfd"
+      },
+      {
+        "path": "tests/website-test-history-preflight.test.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/website-test-history-preflight.test.mjs",
+        "afterSha256": "3fb371f5ecc2539163a8ad6808d4cfd8e503b63230551a3280b223e176a0ca5b",
+        "beforeSha256": "0bdfe7c5ce5f942a3323fc757cd0ba5dac0867b6d760360eb084c919f8da0258"
+      },
+      {
+        "path": "scripts/website-test-local-archives-preflight.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/scripts/website-test-local-archives-preflight.mjs",
+        "afterSha256": "372ea939fab6f7b2e88e0a3c62f4efef7303be56054b230e00a6f3e6b53efc7d",
+        "beforeSha256": null
+      },
+      {
+        "path": "tests/website-test-local-archives-preflight.test.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/website-test-local-archives-preflight.test.mjs",
+        "afterSha256": "380ad2e8d042471811fc52470c426bcad9e91006f73bf1c2b2ea14c7e0f4cdcd",
+        "beforeSha256": null
+      },
+      {
+        "path": "tests/head-viewer-feedback.test.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/head-viewer-feedback.test.mjs",
+        "afterSha256": "247737083eebc05d8013bc2bb8750e6956798e7bb960263e6c9e9004208ef6ae",
+        "beforeSha256": null
+      },
+      {
+        "path": "tests/head-guided-desktop-layout.test.mjs",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/files/tests/head-guided-desktop-layout.test.mjs",
+        "afterSha256": "a23e967bea8a3dc9094d4c3312a73217cb5f8055e312badcf4f006d006673ef9",
+        "beforeSha256": null
+      },
+      {
+        "path": "tests/clinical-review-lower-neck-tour.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/files/tests/clinical-review-lower-neck-tour.test.ts",
+        "afterSha256": "089300117020bb33ab70048b87580a303f2632dd0b783f7fd998baf883670bfb",
+        "beforeSha256": "51e463d2b5995a8acab9f76c425ec3f106965af1d8ec8fcdc1ca7cf40d96241d"
+      },
+      {
+        "path": "tests/clinical-review-mesenteric-tour.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/files/tests/clinical-review-mesenteric-tour.test.ts",
+        "afterSha256": "f10a003342693fa6d8220a191d2c461bcbd4b199e398b4fc721549af9e3d564c",
+        "beforeSha256": "37c49bfac887233f04bc2cb61c95fb0187897f98369d65e0206f52b4668e9653"
+      },
+      {
+        "path": "tests/clinical-review-orbital-nerve-tour.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/files/tests/clinical-review-orbital-nerve-tour.test.ts",
+        "afterSha256": "941bc94e922903174a15fa63158ccebc8d5ce8812e14ccfdabbf5c9787920081",
+        "beforeSha256": "18f55b8d62e9e9c7fe6e3f8263bae8ca6413b7fce3fd6f4cecb6bd1e22550cf8"
+      },
+      {
+        "path": "tests/clinical-review-restore.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/files/tests/clinical-review-restore.test.ts",
+        "afterSha256": "0343926d58e360b09b229d03dca8e1f2649acab5cd8cbf5aa26e2f454e698ca8",
+        "beforeSha256": "cfd039bf3bf6890c1007705a98d854a5a8449267044d43c0d43f617c6a138dec"
+      },
+      {
+        "path": "tests/clinical-review-search-word-forms.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/files/tests/clinical-review-search-word-forms.test.ts",
+        "afterSha256": "0c44c99e63c1ffdcb1a1dfa57f75c33866040b9add7e785234019832e5032012",
+        "beforeSha256": "c2739726f07ac3e68176a745533c83eb22fd53ca78c38abaebaf3ecd5ad173f8"
+      },
+      {
+        "path": "tests/clinical-review-search.test.ts",
+        "after": "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/files/tests/clinical-review-search.test.ts",
+        "afterSha256": "e9a545416819a3ac322281313ea4dfca2816209ca2ababf2612b152029d6b5ce",
+        "beforeSha256": "7ff4e5ce36b82ed7cc901abe0704f51d380f79f8d34c363f5737b3066a7b8415"
+      }
+    ],
+    "packetSha256": "00dfdbe2ee2008f0c63898fa694fb64447c4e0a0b5085a624d639297753b1d78",
+    "mainProofSha256": "7d8cd75ab6e09917100b263ecc21f316bd29c1903b78348662986d455cedf128",
+    "portableRegistrationSha256": "6ee3ac131a5b959ef176db9b7bd88f0e43f8d60b2ba932b60bb721cf2e0ca2d7",
+    "sixAdmissionSha256": "3c0c2279d93a53dc2d613b5fd5d7edc4cf22be493a0b6f0246eea92da659fd40",
+    "checks": {
+      "NEXT_BATCH_REGISTERED_UI_TESTS": {
+        "command": "node",
+        "args": [
+          "--test",
+          "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/verification/portable-ui/fixture/tests/head-viewer-feedback.test.mjs",
+          "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/verification/portable-ui/fixture/tests/head-guided-desktop-layout.test.mjs"
+        ],
+        "code": 0,
+        "footer": [
+          "ℹ tests 5",
+          "ℹ pass 5",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ],
+        "logSha256": "c18b27833ade789f1a4bb14a12ca0a61457fe6f0eeaef50e021a26f750239b96"
+      },
+      "NEXT_BATCH_COPIED_PROOFS": {
+        "command": "node",
+        "args": [
+          "--test",
+          "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/verification/source-context/candidate-proof.test.mjs",
+          "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/verification/spinal/tongue-palate-quiz-transition.test.mjs",
+          "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-integration/website-next-batch/verification/spinal/full-inverse.test.mjs"
+        ],
+        "code": 0,
+        "footer": [
+          "ℹ tests 8",
+          "ℹ pass 8",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ],
+        "logSha256": "baf91f58fa0a7048ca5226448e28ff00c7c4abd09f3ac109b29ca34880929e03"
+      },
+      "SIX_CURRENT_ADMISSION_PROOFS": {
+        "command": "node",
+        "args": [
+          "--test",
+          "F:/VisibleMedicine/staging/20261020-full-regression-6036/next-test-repairs/six-current-admission/candidate-proof.test.mjs"
+        ],
+        "code": 0,
+        "footer": [
+          "ℹ tests 8",
+          "ℹ pass 8",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ],
+        "logSha256": "6acf6ba5f3dee7ae3b1c9d13e23babfd609944404302737503c88ceab932435c"
+      }
+    },
+    "uiEvidence": "The preceding three-source packet has34distinct focused cases across recorded source-bound runs. Five portable cases and eight copied historical/inverse proofs passed. Six new pin adapters pass eight inverse/contract/syntax checks; actual six modules are not yet run.",
+    "omitted": [
+      "Four partial current-root candidates needing femoral admission review",
+      "Original local historical archive payloads",
+      "Full test output",
+      "Models and original OBJ/GLB geometry",
+      "Scans, masks, identifiers, patient derivatives and private references",
+      "Credentials/dependencies/runtime state/raw canonical Git ancestry"
+    ],
+    "admission": {
+      "applied": false,
+      "canonicalChanged": false,
+      "sourceAndReviewRebound": false,
+      "fullSuitePass": false,
+      "buildPassed": false,
+      "combinedBrowserAccepted": false,
+      "clinicalApproval": false,
+      "privacyRelease": false,
+      "publicDeployment": false
+    },
+    "restore": "Use the named verified filtered baseline, compare every before hash, then apply files/ paths to a new unpublished candidate. Restore local-only prerequisites separately. Rebind stock source/Review metadata and complete focused modules, integration/build/browser gates before use. Do not treat this packet as a serving/deployment artifact."
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
