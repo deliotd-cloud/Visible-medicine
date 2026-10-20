@@ -1,0 +1,23 @@
+{
+  "label": "CT_DELIVERY_HISTORY",
+  "command": "C:/Program Files/nodejs/node.exe",
+  "args": [
+    "--strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/corpus-ct-current-delivery.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-ct-delivery-history-repair/CT_DELIVERY_HISTORY.log",
+  "logSha256": "0d15b74359c4c633bde5f05e0dbf06791d5fb037445bb8838dff9b6c0b04a8ba",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 3",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

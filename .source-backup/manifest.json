@@ -1,29 +1,19 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T23:02:55.714Z",
+  "at": "2026-10-20T23:07:31.425Z",
   "sourceIdentity": {
     "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
     "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
     "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-    "namedInputs": 5048,
-    "reviewImports": 1550,
-    "boundInputs": 1707,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "modelsUnchanged": 137,
-    "modelPathsUnchanged": 144,
-    "focusedTests": 26,
-    "fullProjectTypes": true,
-    "fullWebsiteProductionBuild": true,
+    "namedInputs": 5049,
+    "originalAdmission": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+    "focusedTests": 3,
+    "runtimeUnchanged": true,
     "canonicalInstalled": false,
-    "ownerFormsRefreshed": false,
-    "clinicalApproval": false,
-    "patientRegistration": false,
-    "publicDeployment": false,
     "fullSuitePass": false
   },
-  "parent": "46ee77f95337ee93fbce228317a4b3ee5f735c9b",
-  "gitParent": "46ee77f95337ee93fbce228317a4b3ee5f735c9b",
+  "parent": "89a5e82bbab80d9d30b1f8b887bccdcdb588b311",
+  "gitParent": "89a5e82bbab80d9d30b1f8b887bccdcdb588b311",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -409,6 +399,21 @@
       "path": "evidence/20261020-inbox-material-website-integration/VERIFICATION.json",
       "bytes": 4331,
       "sha256": "a69917d04d1e9f64a56eb9a78f1108f01d47d5fa7ee1b2b1f03e85c23d94cd58"
+    },
+    {
+      "path": "evidence/20261021-ct-delivery-history-repair/CT_DELIVERY_HISTORY.json",
+      "bytes": 596,
+      "sha256": "9d787be01c9795ae4ebefb91cf1e58c5dbf0aae98cded15b5b5de4c1813520e6"
+    },
+    {
+      "path": "evidence/20261021-ct-delivery-history-repair/FINAL_SOURCE.json",
+      "bytes": 1360,
+      "sha256": "de2e8aa080e6921452313f4afe7db0b7401e8420386e8bd057ff2cdfc6e5f717"
+    },
+    {
+      "path": "evidence/20261021-ct-delivery-history-repair/SOURCE_INPUTS_AFTER.json",
+      "bytes": 868413,
+      "sha256": "9901c70f1e6b148c5b6eae4bdccfb2f8a95051a458a75904b749e0f7234120ab"
     },
     {
       "path": "evidence/archived-delivery-verification.json",
@@ -1212,8 +1217,8 @@
     },
     {
       "path": "tests/corpus-ct-current-delivery.test.mjs",
-      "bytes": 6359,
-      "sha256": "288450978d8c168a5e78ab85ebf05957eeafd5d0935c8b6160cf70c7506b4b00"
+      "bytes": 7682,
+      "sha256": "d067d7e8d0f0afde536278c2091836acc6f6ebc9a3fb675a344d1565daad5c0b"
     },
     {
       "path": "tests/current-atlas-delivery-56-closed.test.mjs",
@@ -1229,6 +1234,11 @@
       "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
       "bytes": 5923,
       "sha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105"
+    },
+    {
+      "path": "tests/fixtures/corpus-ct-delivery-original-97e75.mjs.raw",
+      "bytes": 6359,
+      "sha256": "288450978d8c168a5e78ab85ebf05957eeafd5d0935c8b6160cf70c7506b4b00"
     },
     {
       "path": "tests/fixtures/current-atlas-delivery-before-corpus-ct-98d7.json",
@@ -1412,31 +1422,18 @@
     }
   ],
   "removed": [],
-  "scope": "Selected source and exact checked candidate receipts, including the two Atlas observer files, inheriting only a previously filtered source backup. No raw canonical ancestry, scans/masks/models/private asset modules/review decisions/databases/secrets. Not a complete/runnable/full-project/private-data backup. Local unpublished candidate only; no fees or public deployment.",
+  "scope": "Selected source/test repair and exact receipts on previously filtered ancestry only. No raw canonical history, model/scans/masks/private modules/reviews/databases/secrets;not full/runnable/private-data backup.",
   "proof": {
     "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
     "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
     "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-    "namedInputs": 5048,
-    "reviewImports": 1550,
-    "boundInputs": 1707,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "modelsUnchanged": 137,
-    "modelPathsUnchanged": 144,
-    "focusedTests": 26,
-    "fullProjectTypes": true,
-    "fullWebsiteProductionBuild": true,
+    "namedInputs": 5049,
+    "originalAdmission": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+    "focusedTests": 3,
+    "runtimeUnchanged": true,
     "canonicalInstalled": false,
-    "ownerFormsRefreshed": false,
-    "clinicalApproval": false,
-    "patientRegistration": false,
-    "publicDeployment": false,
     "fullSuitePass": false,
-    "previousFilteredBackup": "46ee77f95337ee93fbce228317a4b3ee5f735c9b",
-    "stockExportsAndCoverage": true,
-    "allOtherNativeSourcePreserved": true,
-    "limits": "Focused source/integration software evidence, not whole-suite, new browser/acquired-image/clinical/spatial acceptance. No user data, decisions, entitlements or private asset payload changed. Request-local revision promises only; sampled54to27 material resolutions with response/query parity is not a wall-clock benchmark."
+    "limits": "Only test and byte-exact original test fixture change;5047previous named inputs, runtime/manifests/models/import/bindings remain byte exact. Prior26inbox/full types/production-build receipts retain their unchanged executable scope, not a newly rerun full suite. No new clinical/browser/spatial approval, owner form refresh, private-data upload or public deployment."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

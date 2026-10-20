@@ -11,6 +11,23 @@ const sha=b=>createHash('sha256').update(b).digest('hex'),hash=v=>sha(JSON.strin
 const json=p=>JSON.parse(readFileSync(p));
 const source='97e75c01f5b65f83a7edd607681cd6fdf50af7b6',tree='f17a39ff7f40d31aa5b0bd2176f923c95c1ea160';
 
+test('original CT admission test remains byte exact; current delivery is independently bound',()=>{
+ const bytes=readFileSync('tests/fixtures/corpus-ct-delivery-original-97e75.mjs.raw');
+ assert.equal(sha(bytes),'288450978d8c168a5e78ab85ebf05957eeafd5d0935c8b6160cf70c7506b4b00');
+ assert(bytes.toString().includes('assert.equal(delivery.source,source);assert.equal(delivery.sourceTree,tree);'));
+ const atlas=currentAtlasDeliveryRoot(),delivery=validateCurrentAtlasDelivery();
+ const git=(...args)=>execFileSync('git',args,{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+ assert.equal(git('rev-parse',source+'^{tree}').toString().trim(),tree);
+ git('merge-base','--is-ancestor',source,delivery.source);
+ // The immutable CT admission epoch is not the queue optimization's delivery
+ // epoch. Compare the actual CT semantics below; do not accept arbitrary files
+ // merely because the current manifest was regenerated.
+ for(const p of ['content/corpus-imaging-ct.pins.json','content/corpus-imaging-ct.transition.json','content/corpus-imaging.ts','lib/corpus-imaging.ts','content/regional-teaching/pelvis.json']){
+  const original=git('show',source+':'+p);
+  assert.deepEqual(git('show',delivery.source+':'+p),original,'CT source changed since original admission: '+p);
+ }
+});
+
 test('previous complete review-form delivery remains byte exact and cannot admit CT source',()=>{
  const bytes=readFileSync('tests/fixtures/current-atlas-delivery-before-corpus-ct-98d7.json');
  assert.equal(sha(bytes),'4f51407c1c206789aa00705bc60d1e7c291f0dfac6f5d9a2226164fe07e3bf36');
@@ -20,7 +37,8 @@ test('previous complete review-form delivery remains byte exact and cannot admit
 });
 
 test('CT draft reaches actual learner imports and protected Review with unchanged source extent',async()=>{
- const delivery=validateCurrentAtlasDelivery(),atlas=currentAtlasDeliveryRoot();assert.equal(delivery.source,source);assert.equal(delivery.sourceTree,tree);
+ const delivery=validateCurrentAtlasDelivery(),atlas=currentAtlasDeliveryRoot();
+ assert.equal(json('atlas-review/manifest.json').revision,delivery.source);
  const git=p=>execFileSync('git',['show',source+':'+p],{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
  const pins=JSON.parse(git('content/corpus-imaging-ct.pins.json')),transition=JSON.parse(git('content/corpus-imaging-ct.transition.json'));
  assert.equal(hash(pins),'cb70fd388c646a02074c0691dbf819ba2d3f28d08406ba0f0bcb99e0ad7a938d');
