@@ -7,6 +7,8 @@ const require=createRequire(new URL('../components/LectureEditor.tsx',import.met
 const React=require('react'),ts=require('typescript');
 const source=readFileSync(new URL('../components/LectureEditor.tsx',import.meta.url),'utf8');
 const code=ts.transpileModule(source,{fileName:'LectureEditor.tsx',compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText;
+const helperCode=ts.transpileModule(readFileSync(new URL('../components/lecture-save-presentation.ts',import.meta.url),'utf8'),{fileName:'lecture-save-presentation.ts',compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+const helperModule={exports:{}};new Function('module','exports',helperCode)(helperModule,helperModule.exports);
 const initial={id:'lecture:one',courseId:'course:one',courseTitle:'Course',title:'Original lecture',version:4,status:'draft',slides:[{id:'slide-one',title:'One',body:'Educational content.',referenceUrl:''}],reviews:[],published:null,canEdit:true,canReview:false,canPublish:false};
 const context={actorId:'edu:author',organizationId:'org:one'};
 const tick=()=>new Promise(resolve=>setImmediate(resolve));
@@ -27,7 +29,7 @@ function harness(){
   useEffect:(create,deps)=>{const i=cursor++,old=effects.get(i);if(!old||deps.length!==old.deps.length||deps.some((item,j)=>item!==old.deps[j]))pending.push(()=>{old?.cleanup?.();const cleanup=create();effects.set(i,{deps,create,cleanup});});},
  };react.useLayoutEffect=react.useEffect;
  const module={exports:{}};
- new Function('require','module','exports',code)((name)=>name==='react'?react:name==='../lib/studio-mutation-context.ts'?mock:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?{WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol(),finish(){},invalidate(){}})}:name.endsWith('.css')?{}:require(name),module,module.exports);
+ new Function('require','module','exports',code)((name)=>name==='react'?react:name==='../lib/studio-mutation-context.ts'?mock:name==='./lecture-save-presentation'?helperModule.exports:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?{WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol(),finish(){},invalidate(){}})}:name.endsWith('.css')?{}:require(name),module,module.exports);
  const props={initial,courseOutline:[],authorityKey:JSON.stringify(['author','org:one']),expectedStudioContext:context};
  const decisions=[];
  function flush(){assert(mounted);let pass=0;do{assert(++pass<16);cursor=0;changed=false;pending=[];tree=module.exports.LectureEditor(props);for(const effect of pending)effect();}while(changed);return tree;}
@@ -46,6 +48,8 @@ test('exact actor and organization accompany a save and are checked before and a
   assert.equal(h.checks.length,2);assert.deepEqual(h.checks, [context,context]);
   assert.equal(requests.length,1);assert.deepEqual(requests[0].expectedStudioContext,context);
   assert.match(h.text(),/Saved version 5/);
+  assert.match(h.text(),/Publishing is a separate action/);
+  assert.equal(h.button('Save').props['aria-describedby'],'lecture-save-detail');
  }finally{h.dispose();globalThis.fetch=previous;}
 });
 
@@ -54,6 +58,7 @@ test('unavailable precheck and changed postcheck hold unsent text and block dupl
  globalThis.fetch=async()=>{calls++;return Response.json({...initial,title:'Server result',version:5});};
  const h=harness();try{h.edit();h.decisions.push('unavailable');h.button('Save').props.onClick();await tick();h.flush();
   assert.equal(calls,0);assert(h.find(node=>node.type==='input'&&node.props.value==='Local unsent lecture'));assert.equal(h.button('Save').props.disabled,true);
+  assert.match(h.text(),/Studio context unavailable/);
   h.button('Retry context check').props.onClick();await tick();h.flush();assert.equal(h.button('Save').props.disabled,false);
   h.decisions.push(undefined,'changed');h.button('Save').props.onClick();await tick();h.flush();
   assert.equal(calls,1);assert(h.find(node=>node.type==='input'&&node.props.value==='Local unsent lecture'));assert.doesNotMatch(h.text(),/Saved version 5/);
@@ -97,6 +102,7 @@ test('successful but mismatched or malformed POST reply is uncertain and cannot 
   const h=harness();try{h.edit();h.button('Save').props.onClick();await tick();h.flush();
    assert.equal(calls,1);assert(h.find(node=>node.type==='input'&&node.props.value==='Local unsent lecture'));
    assert.equal(h.button('Save').props.disabled,true);assert.match(h.text(),/may have completed/);
+   assert.equal(words(h.find(node=>node.props['data-save-state']==='uncertain')).includes('Save not confirmed'),true);
    h.button('Save').props.onClick();assert.equal(calls,1);
   }finally{h.dispose();globalThis.fetch=previous;}
  }
@@ -110,6 +116,7 @@ test('explicit saved-lecture reconciliation rechecks context without auto-resubm
   h.button('I checked the saved lecture').props.onClick();await tick();h.flush();
   assert.equal(posts,1);assert(h.find(node=>node.type==='input'&&node.props.value==='Local unsent lecture'));
   assert.equal(h.button('Save').props.disabled,false);
+  assert.match(h.text(),/Unsaved changes/);assert.doesNotMatch(h.text(),/Saved version 5/);
  }finally{h.dispose();globalThis.fetch=previous;}
 });
 

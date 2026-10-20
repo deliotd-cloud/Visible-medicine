@@ -87,6 +87,22 @@ test('desktop workbench keeps controls and accessible results as separate panes'
   finish();
 });
 
+test('revision disclosures name their own row across keyboard pagination', async () => {
+  await begin();
+  const summaries = () => walk(view, n => n.type === 'ol' && n.props.className === 'clinical-review-inbox-list')
+    .flatMap(list => walk(list, n => n.type === 'summary' && words(n) === 'Exact worksheet revision'));
+  // Preserve the existing alphabetic queue order: Synthetic 10 precedes Synthetic 2.
+  const orderedTitles = Array.from({ length: 50 }, (_, i) => `Synthetic ${i}`).sort((a, b) => a.localeCompare(b));
+  assert.deepEqual(summaries().map(n => n.props['aria-label']),
+    orderedTitles.slice(0, 24).map(title => `Exact worksheet revision for ${title}, Body, Anatomy`));
+  const requestCount = calls.length;
+  button('Next').props.onClick(); render();
+  assert.deepEqual(summaries().map(n => n.props['aria-label']),
+    orderedTitles.slice(24, 48).map(title => `Exact worksheet revision for ${title}, Body, Anatomy`));
+  assert.equal(calls.length, requestCount, 'row naming does not request or change review data');
+  finish();
+});
+
 test('only committed explicit pagination resets the scrollable list', async () => {
   await begin(2);
   listNode.scrollTop = 180;

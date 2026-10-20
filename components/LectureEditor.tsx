@@ -12,6 +12,7 @@ import { LecturePlayer } from "./LecturePlayer";
 import { WorkbookRetirement } from "./WorkbookRetirement";
 import { WorkbookCorrection } from "./WorkbookCorrection";
 import { WorkbookCorrectionLineage, createWorkbookCorrectionLineageContext } from "./WorkbookCorrectionLineage";
+import { lectureSavePresentation } from "./lecture-save-presentation";
 import "./lecture-editor.css";
 
 type Panel = "content" | "preview" | "review";
@@ -330,14 +331,23 @@ export function LectureEditor({ initial, courseOutline, authorityKey = "", expec
   }
 
   const courseItems = useMemo(() => courseOutline, [courseOutline]);
+  const savePresentation = lectureSavePresentation({
+    busy,
+    contextReason: contextHold?.reason ?? (contextBlocked ? 'changed' : null),
+    uncertain: contextHold?.uncertain ?? false,
+    dirty,
+    readOnly,
+    validDraft,
+    savedVersion: view.version,
+  });
   return <section className="lecture-editor" data-editor-panel={panel}>
     <WorkbookCorrectionLineage id={view.id} version={view.version} mode="lecture" status={view.status} authorityKey={authorityKey}
       contextKey={JSON.stringify([view.courseId,view.canEdit,view.canReview,view.canPublish,view.canReopenAnatomy])}
       context={lineageContext} disabled={busy} />
     <header className="lecture-editor-toolbar">
       <nav aria-label="Lecture editor panels">{(["content", "preview", "review"] as const).map((item) => <button type="button" key={item} aria-current={panel === item ? "page" : undefined} onClick={() => setPanel(item)}>{item[0].toUpperCase() + item.slice(1)}</button>)}</nav>
-      <span role="status">{dirty ? "Unsaved changes" : `Saved version ${view.version}`}</span>
-      <button type="button" className="lecture-primary-action" disabled={busy || contextBlocked || readOnly || !dirty || !validDraft} title={!validDraft ? "Check the lecture title, text limits and source addresses before saving" : undefined} onClick={() => void post("save")}>{busy ? "Working…" : "Save"}</button>
+      <div className="lecture-save-state" data-save-state={savePresentation.state}><span role={contextBlocked ? undefined : "status"}>{savePresentation.label}</span><small id="lecture-save-detail">{savePresentation.detail}</small></div>
+      <button type="button" className="lecture-primary-action" aria-describedby="lecture-save-detail" disabled={busy || contextBlocked || readOnly || !dirty || !validDraft} title={!validDraft ? "Check the lecture title, text limits and source addresses before saving" : undefined} onClick={() => void post("save")}>{busy ? "Working…" : "Save"}</button>
     </header>
     <fieldset className="lecture-editor-busy" disabled={busy}>
       <div className="lecture-editor-grid">

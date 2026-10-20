@@ -1,72 +1,98 @@
 {
-  "checkpointSha256": "d0ddfeb622d9863ef94d07bef4d31afd6be34af210e38252c598f19a53371a37",
-  "checkpointType": "Test-only immutable-history read seam, no runtime or review-binding change",
-  "focused": {
-    "schema": "vm-focused-test-observation/1",
-    "date": "2026-10-20",
-    "cwd": "F:/VisibleMedicine/staging/20261019-public-focus-environment/website",
-    "args": [
-      "--test",
-      "--experimental-strip-types",
-      "--test-concurrency=1",
-      "--test-reporter=tap",
-      "tests/closed56-original-tests.test.mjs",
-      "tests/closed56-live-preservation.test.mjs",
-      "tests/current-atlas-delivery.test.mjs"
-    ],
-    "processOnlyOverrides": {
-      "VM_WEBSITE_ROOT": "F:/VisibleMedicine/staging/20261019-public-focus-environment/website",
-      "VM_ATLAS_SOURCE_REPO": "F:/VisibleMedicine/staging/20261019-atlas-history-integration"
-    },
-    "observedToolChunk": "2e5ab3",
-    "exitCode": 0,
-    "counts": {
-      "tests": 46,
-      "pass": 46,
-      "fail": 0,
-      "cancelled": 0,
-      "skipped": 0,
-      "todo": 0
-    },
-    "limitation": "Actual native tool output observation; no separate narrow TAP file was retained. The full frozen regression run separately includes these exact entries and retains native TAP/spec logs; not yet a complete-suite pass."
-  },
-  "originalRed": {
-    "handoff": "F:/VisibleMedicine/staging/20261020-release-next-entry/HANDOFF.json",
-    "sha256": "4b2f0a2d5e45722d86ce8e260f9839ba1f815da4daf4addb84c6999208d9adde",
-    "result": "4pass/1fail original closed56 whole-live-equality; raw TAP retained in worker staging"
-  },
-  "preservation": "Original closed56 entire test frozen byte-exact. Only one helper import and one live-read expression change. Helper proves exact four seams from complete46c to completef509, then exact three source/tree/count seams to completebd5 prefix plus byte-frozen later proof. Every old assertion/model/emitted-byte/refusal body is preserved; real current test still executes actual delivery. Tamper/foreign/extra-code evidence refuses.",
+  "checkpointSha256": "5f327d0a770731709e27fa9cb5029ce42b3acda2e54762e5d9f78fb3bdb0c83c",
+  "date": "2026-10-20",
+  "state": "Virtual uninstalled Website source composition: unchanged verified parent QA plus exactly11 hash-whitelisted nonoverlapping UI/test/fixture overrides; not a combined built or full-suite-tested candidate",
   "sourceDelta": [
     {
-      "path": "tests/closed56-live-preservation.mjs",
-      "bytes": 3582,
-      "sha256": "573ca775702fdca31cb22a03640a61e8510714b71bd60499244fa249148ea9e7"
+      "path": "components/ClinicalReviewInbox.tsx",
+      "bytes": 24298,
+      "sha256": "a88df86ee16728883c3251119d6facda4c734af280693a93fc03e59bdde16e2a"
     },
     {
-      "path": "tests/closed56-live-preservation.test.mjs",
-      "bytes": 4251,
-      "sha256": "f64cc09e90dbdfc11fd3b93022282aa259900baf24fc7365ee9685a2209f21af"
+      "path": "components/LectureEditor.tsx",
+      "bytes": 35396,
+      "sha256": "9bbd888d63e2b91c64f45c028e26fc9fb5e9b78c9e0a4a378d4df837d5da3d08"
     },
     {
-      "path": "tests/closed56-original-tests.test.mjs",
-      "bytes": 3748,
-      "sha256": "feb749010cc69684bf11a66783bea9a835352f6c68444843eda738ea9bbd7144"
+      "path": "components/lecture-editor.css",
+      "bytes": 14744,
+      "sha256": "84552e1e5da25dd0849c30c301ab7f4594d1d8e85e0d89fd88fef2f6cb9719d6"
     },
     {
-      "path": "tests/fixtures/closed56-live-bd5465.mjs.raw",
-      "bytes": 13011,
-      "sha256": "f90a64376bddb25461d92542aeb2bdc7f836c258b17b4e89490c7f7a6ac14bee"
+      "path": "components/lecture-save-presentation.ts",
+      "bytes": 1637,
+      "sha256": "48d7b6f651f750f4830bfdd78ad003ac33e7f4693ca40fed713b69bd24f4edcb"
     },
     {
-      "path": "tests/fixtures/closed56-preservation-original.mjs.raw",
-      "bytes": 3706,
-      "sha256": "f90bf7441a4fb5d4911dea056e587debd7c447110f6b4d55974bfbac6a838b30"
+      "path": "tests/clinical-review-inbox-workbench.test.mjs",
+      "bytes": 8962,
+      "sha256": "7b45fad50e57c85c9c91cc40fcaf2e560229e9de50088e0c5d9a8dcd902db55a"
+    },
+    {
+      "path": "tests/fixtures/lecture-save-context-original.mjs.raw",
+      "bytes": 13644,
+      "sha256": "abfa40d8b128a278c3dfc7870d7fee700b2403990065f62755ec1b600c2accf8"
+    },
+    {
+      "path": "tests/fixtures/lecture-save-original.css.raw",
+      "bytes": 14418,
+      "sha256": "95e83298a41029cc2c288653b495ceeeab812edee022a77aef328b0f701edab0"
+    },
+    {
+      "path": "tests/fixtures/lecture-save-original.tsx.raw",
+      "bytes": 34875,
+      "sha256": "e6a8e3b1d4952e2930f9472e02c42d04c7542830791c86e936839e1fc3183c55"
+    },
+    {
+      "path": "tests/lecture-context-editor.test.mjs",
+      "bytes": 14482,
+      "sha256": "25017f85db5eab1a95ff2e0d7cd00f36cb9bc3b497ecc75b72a4b4ca7078a6b3"
+    },
+    {
+      "path": "tests/lecture-save-presentation.test.mjs",
+      "bytes": 1876,
+      "sha256": "8802d2a8a62c1abd5b2eccb2eb4ef502cf66131985139220cc01537721507141"
+    },
+    {
+      "path": "tests/lecture-save-preservation.test.mjs",
+      "bytes": 4518,
+      "sha256": "a5fd5b1d49e7847a5b3e3efc835c21c9ad944f1f7c85b6285ed4f58eb858a189"
     }
   ],
-  "sourceStableOutsideDeclared": true,
-  "publicDeployment": false,
+  "evidence": [
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual/acceptance-checkpoint.json",
+      "sha256": "6c66f0ca74dee591a5e6dcd8460e6687bc1101290dd2166d5d638b89530598da"
+    },
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual/native19.tap",
+      "sha256": "301c2d682ce2b2fce5442f8937607f8b5a061012494463061015947852f0d192"
+    },
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-lecture-save-clarity/visual/browser-proof.json",
+      "sha256": "b67ee419d84677fc197593146135cce37ff60e2a62c0a38dd77fb4de8cfce0b7"
+    },
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-review-queue-navigation/MAIN_REVIEW.json",
+      "sha256": "e2cfc8ab477289951a9d5f8aa09d84edd61f8addb75eda11893edf157bb671e5"
+    },
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-review-queue-navigation/preservation-main.json",
+      "sha256": "36fc3d461ccd2671a1289048e6c0252eac3a5be5f756034d5b0663de17b61ecd"
+    },
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-review-queue-navigation/main-green.tap",
+      "sha256": "9dd145be83dd3acb8e0145005d0563456ad425f100e13176e5c1d0ebc137df69"
+    }
+  ],
+  "checks": "Actual current staged Save19pass plus queue4pass separately; whole originals preserved. Synthetic six-state1280/640/nativeTab/text-contrast checks, no live account/API/draft. Queue first2red retained then new-test alphabetic expectation/sparse fixture corrected without product/order/old assertion change.",
+  "missing": "QA/canonical integration, combined native run, semantic types, production build and real signed-in/assistive technology acceptance remain required. Do not infer those from source restore or from separate focused passes.",
+  "qaFrozenUnchanged": true,
+  "protectedBindingInputChanged": false,
+  "canonicalInstalled": false,
+  "fullSuitePass": false,
   "clinicalApproval": false,
-  "wholeSuitePass": false,
+  "publicDeployment": false,
   "heldArchivePaths": [
     "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
     "tests/fixtures/head-pilot-9fba-epoch.json",

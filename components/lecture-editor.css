@@ -4,7 +4,10 @@
 .lecture-editor-toolbar nav { display: flex; gap: 3px; }
 .lecture-editor-toolbar button, .lecture-editor-feedback button, .lecture-slide-outline header button, .lecture-editor-empty button, .lecture-review-actions > button, .lecture-review-actions form button { min-height: 40px; padding: 0 13px; border: 1px solid var(--line); border-radius: 6px; background: white; color: #385557; font-size: 14px; cursor: pointer; }
 .lecture-editor-toolbar nav button[aria-current="page"] { border-color: #9fc7bf; background: #eaf5f1; color: var(--teal); font-weight: 700; }
-.lecture-editor-toolbar > span { margin-left: auto; color: var(--muted); font-size: 12px; }
+.lecture-save-state { min-width: 0; max-width: 330px; margin-left: auto; display: grid; gap: 2px; color: #385557; font-size: 12px; line-height: 1.3; }
+.lecture-save-state > span { font-weight: 700; }
+.lecture-save-state > small { color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+.lecture-save-state[data-save-state="uncertain"], .lecture-save-state[data-save-state="context"] { color: #8d3939; }
 .lecture-editor-toolbar .lecture-primary-action, .lecture-review-actions > button, .lecture-review-actions form button { border-color: var(--teal); background: var(--teal); color: white; }
 .lecture-editor button:disabled { cursor: not-allowed; opacity: .5; }
 .lecture-editor-busy { margin: 0; padding: 0; border: 0; min-width: 0; }
@@ -114,7 +117,7 @@
   .lecture-editor-toolbar { padding: 6px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 6px; }
   .lecture-editor-toolbar nav { min-width: 0; }
   .lecture-editor-toolbar nav button { min-width: 0; flex: 1; padding: 0 6px; font-size: 13px; }
-  .lecture-editor-toolbar > span { grid-column: 1 / -1; grid-row: 2; margin: 0; padding: 1px 3px; }
+  .lecture-save-state { grid-column: 1 / -1; grid-row: 2; max-width: none; margin: 0; padding: 1px 3px; }
   .lecture-primary-action { grid-column: 2; grid-row: 1; }
   .lecture-editor-grid { min-height: 0; display: block; }
   .lecture-course-outline, .lecture-slide-outline { padding: 8px 10px; border-right: 0; border-bottom: 1px solid var(--line); }
