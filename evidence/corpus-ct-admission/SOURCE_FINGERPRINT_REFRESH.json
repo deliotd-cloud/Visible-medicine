@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-20T22:06:20.413Z",
+  "atlas": "F:/VisibleMedicine/staging/20261020-teaching-review-source",
+  "changedDisplayPins": [
+    {
+      "structureId": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+      "sha256": "8c23b23d4fa7a18619e4df713564e69ec28c486b88f9e30f57d5910bdeec0ed7"
+    }
+  ],
+  "unchangedDisplayPins": 1103,
+  "displayHeaderAndIdentitiesPreserved": true,
+  "sourceRendererChangedDependencies": [
+    "content/corpus-imaging.ts",
+    "lib/corpus-imaging.ts",
+    "package.json"
+  ],
+  "stockWriters": [
+    {
+      "script": "scripts/generate-body-review-display-pins.mjs",
+      "code": 0,
+      "log": "generate-body-review-display-pins.mjs.log",
+      "sha256": "74832a59cab58e8e46b9f8579c166d2776829be718abc5328457dd09c35b051a"
+    },
+    {
+      "script": "scripts/review-revisions.mjs",
+      "code": 0,
+      "log": "review-revisions.mjs.log",
+      "sha256": "2ab7b1f4dcfd3004f4061d681b250989eb9298f5962de099aa85b76e402f5d34"
+    },
+    {
+      "script": "scripts/body-renderer-revisions.mjs",
+      "code": 0,
+      "log": "body-renderer-revisions.mjs.log",
+      "sha256": "aed8ffce88141fb8f41f3ff6cf776028b6c8bb5c00714d3e9890366d828500ee"
+    }
+  ],
+  "generated": [
+    {
+      "path": "content/body-review-display-pins.json",
+      "beforeSha256": "dd926d72567359de88bf526d36a611eb4e8dcd2ef73f5d662760132cd4e5c607",
+      "afterSha256": "2820e60659fa5287d3322db1bcc601b7987a2c18394f723811b4ec1f1a52d52f"
+    },
+    {
+      "path": "content/review-revisions.json",
+      "beforeSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
+      "afterSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "beforeSha256": "b8e6d985cf4bd793135cbba2b188ef004c0a50759dcc4ee0e0557b1ddad67029",
+      "afterSha256": "ee73f2084de2bb13f6e60d4dfca5e5f89ec9b062ca0f9b4194c5948971a4e7c7"
+    }
+  ],
+  "originalStalePinRefusalRetained": "F:/VisibleMedicine/staging/20261020-teaching-admission-followup/SOURCE_FINGERPRINT_GENERATORS.json",
+  "clinicalApproval": false,
+  "canonicalInstalled": false
+}

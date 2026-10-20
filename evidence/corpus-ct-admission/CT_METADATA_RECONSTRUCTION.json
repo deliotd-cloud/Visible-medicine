@@ -1,0 +1,23 @@
+{
+  "label": "CT_METADATA_RECONSTRUCTION",
+  "command": "C:/Program Files/nodejs/node.exe",
+  "args": [
+    "--strip-types",
+    "--test",
+    "--test-name-pattern=original MRI/US artifacts",
+    "scripts/test-corpus-imaging-ct-history.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-teaching-admission-followup/CT_METADATA_RECONSTRUCTION.log",
+  "logSha256": "77f92cd62988a67b4f87a80b39a0fcbf67569b01a18d6f2c085b9cbf9b2ae582",
+  "footer": [
+    "ℹ tests 1",
+    "ℹ pass 1",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

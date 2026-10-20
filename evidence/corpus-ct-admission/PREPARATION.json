@@ -1,0 +1,25 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261020-teaching-admission-followup",
+  "site": "F:/VisibleMedicine/staging/20261020-teaching-review-source",
+  "atlas": "F:/VisibleMedicine/staging/20261020-teaching-review-source",
+  "baseHead": "b101f1fd71f894244868abb26123bd978799b666",
+  "baseTree": "f1b9718a22c544f4cfcc6a88fc1a6d06a39cfaeb",
+  "packet": "F:/VisibleMedicine/staging/20261020-corpus-source-admission-checks",
+  "files": [
+    {
+      "target": "scripts/post-foot-author-history.mjs",
+      "beforeSha256": "b702d249657bc2a30036cda741fb43e39acc0348c6ffe59f4dcf6f915073cde6",
+      "proposal": "post-foot-author-history.proposal.mjs",
+      "afterSha256": "742ebdb89c990d7ace8bb474ba87e8b0aa69a588afe5ae42e4c8dccebf059907"
+    },
+    {
+      "target": "scripts/test-corpus-spongiosum-xray-v2.mjs",
+      "beforeSha256": "64a848772fa2bcca456e78465612d3d91db57ef1f5f1ff366c3eb378c141f123",
+      "proposal": "test-corpus-spongiosum-xray-v2.proposal.mjs",
+      "afterSha256": "239cf104df8efda66a7a7035ccab2c59b9f0df6c5ffc29dca98cab52b2ceccae"
+    }
+  ],
+  "priorTurn": "progress: verified canonical/local review cutover and model storage recovery",
+  "canonicalInstalled": false,
+  "publicDeployment": false
+}

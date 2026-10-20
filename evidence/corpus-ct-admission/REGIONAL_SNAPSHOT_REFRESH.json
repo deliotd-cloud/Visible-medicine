@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-20T22:15:52.765Z",
+  "changes": [
+    "content/regional-teaching/pelvis.json"
+  ],
+  "exactCtPlacementOnly": true,
+  "otherRegionalBytesUnchanged": true,
+  "results": [
+    {
+      "script": "scripts/regional-teaching-snapshots.mjs",
+      "code": 0,
+      "log": "F:/VisibleMedicine/staging/20261020-teaching-admission-followup/REFRESH_REGIONAL_TEACHING_SNAPSHOTS_MJS.log",
+      "logSha256": "b8c2111c072fa2421556d1adde96a0738766741d1bff79882178cd0b2349f334"
+    },
+    {
+      "script": "scripts/review-revisions.mjs",
+      "code": 0,
+      "log": "F:/VisibleMedicine/staging/20261020-teaching-admission-followup/REFRESH_REVIEW_REVISIONS_MJS.log",
+      "logSha256": "2ab7b1f4dcfd3004f4061d681b250989eb9298f5962de099aa85b76e402f5d34"
+    },
+    {
+      "script": "scripts/body-renderer-revisions.mjs",
+      "code": 0,
+      "log": "F:/VisibleMedicine/staging/20261020-teaching-admission-followup/REFRESH_BODY_RENDERER_REVISIONS_MJS.log",
+      "logSha256": "b8112d6ca831f3360bb4b599a2dc9d447bd2185b8150d67f649773ce02b4fcea"
+    }
+  ],
+  "canonicalInstalled": false,
+  "clinicalApproval": false
+}

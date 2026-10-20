@@ -9,8 +9,8 @@ import {beforeCorpusSpongiosumXrayV2} from './corpus-spongiosum-xray-v2-history.
 import pins from '../content/corpus-spongiosum-xray-v2.pins.json' with {type:'json'};
 import transition from '../content/corpus-spongiosum-xray-v2.transition.json' with {type:'json'};
 const sha=b=>createHash('sha256').update(b).digest('hex'),hash=v=>sha(JSON.stringify(v));
-// Completed X-ray assertions replay their exact parent; the CT suite checks current source independently.
-const ctx=await contentContext(),api=await exactSourceHistoryApi('87ed7e343260c7df48a40d53503f25bbfd34cfa5','corpus-xray-v2-legacy'),catalog=api.bodyDisplayCatalog(ctx.catalog);
+// Completed X-ray assertions replay their exact author; the CT suite checks current source independently.
+const ctx=await contentContext(),api=await exactSourceHistoryApi('fa52f00de861addac64eda5842a352f3e332d28f','corpus-xray-v2-legacy'),catalog=api.bodyDisplayCatalog(ctx.catalog);
 const old=await exactSourceHistoryApi(pins.parentCommit,'display-review');
 const identity=pins.entries[0].identity,id=identity.id;
 const snapshot=a=>catalog.structures.map(s=>({id:s.id,sections:Object.fromEntries(api.contentTabs.map(tab=>[tab,a.bodyLesson(s,tab)]))}));

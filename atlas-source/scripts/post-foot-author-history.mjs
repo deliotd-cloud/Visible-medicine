@@ -11,13 +11,91 @@ import {preCoronaryArterialStudyProfiles} from './coronary-arterial-study-histor
 import {beforeDescendingAortaUltrasound} from './descending-aorta-ultrasound-history.mjs';
 import {beforeCorpusSpongiosumXrayV2} from './corpus-spongiosum-xray-v2-history.mjs';
 import {beforeCorpusImagingCt} from './corpus-imaging-ct-history.mjs';
+import {exactSourceHistoryApi} from './exact-source-history-api.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const recordRoot=root+'/content/post-foot-author-history';
 const hash=x=>createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const sourceHash=x=>createHash('sha256').update(x).digest('hex');
+const beforeMra=await exactSourceHistoryApi('6036a7a59dcc1fd75eee4a23af34ca2a568d86b6','inferior-thyroid-mra-legacy');
+const afterMra=await exactSourceHistoryApi('87ed7e343260c7df48a40d53503f25bbfd34cfa5','inferior-thyroid-mra-legacy');
+const beforeFootSource=await exactSourceHistoryApi('88cea927d48729769b96ad8fe680b0872b7e6687','display-review');
 const index=JSON.parse(readFileSync(recordRoot+'/combined-replay-index.json'));
 assert.equal(hash(index),'383131b17d7d49fb1464c46564bb7bebb7668a9407c32d6b12ce14c09f6e4bd0');
 assert.equal(index.live,'f5097af8493701d64a8e2a2b5797df380f3b348a');
 const key=(id,tab)=>JSON.stringify([id,tab]);
+function reverseInferiorThyroidMra(api,record,catalog){
+ assert.equal(sourceHash(readFileSync(root+'/content/arterial-evidence-limits.ts')),'b746ada70e8f96906cb30289cd2649530f380f942f69b34fbf5e370282c21c24','Exact MRA source changed');
+ assert.equal(typeof api.arterialEvidenceLimitLesson,'function','Exact MRA helper required');
+ const entries=record.pins.entries.filter(e=>e.previous?.mri);
+ assert.equal(entries.length,2,'Exact MRA sides changed');
+ const originals=new Map();
+ for(const entry of entries){
+  const identity=entry.identity,tab='mri',slot=key(identity.id,tab);
+  assert.deepEqual(api.bodyDisplayCatalog(catalog).structures.filter(s=>s.id===identity.id),[identity],'Exact MRA identity changed');
+  const current=afterMra.bodyLesson(identity,tab),prior=beforeMra.bodyLesson(identity,tab);
+  const transition=record.transition.entries.find(e=>e.id===identity.id&&e.tab===tab);
+  assert(transition,'Exact MRA transition missing');
+  assert.equal(hash(prior),transition.currentHash,'Historical MRA author lesson changed');
+  assert.deepEqual(api.bodyLesson(identity,tab),current,'Exact MRA current lesson changed');
+  assert.deepEqual(api.arterialEvidenceLimitLesson(identity,tab),current,'Exact MRA helper changed');
+  const {readiness:_,...shown}=current;
+  assert.deepEqual(api.bodyContent(identity,tab),shown,'Exact MRA displayed content changed');
+  originals.set(slot,{identity,prior});
+ }
+ const old=api;
+ const historical=(fn,identity,tab)=>{
+  const item=originals.get(key(identity?.id,tab));
+  if(!item)return fn(identity,tab);
+  assert.deepEqual(identity,item.identity,'Exact MRA source identity changed');
+  return structuredClone(item.prior);
+ };
+ return {...old,
+  bodyLesson(identity,tab){return historical(old.bodyLesson,identity,tab);},
+  arterialEvidenceLimitLesson(identity,tab){return historical(old.arterialEvidenceLimitLesson,identity,tab);},
+  bodyContent(identity,tab){
+   const item=originals.get(key(identity?.id,tab));
+   if(!item)return old.bodyContent(identity,tab);
+   assert.deepEqual(identity,item.identity,'Exact MRA source identity changed');
+   const {readiness:_,...shown}=item.prior;return structuredClone(shown);
+  },
+ };
+}
+function reversePostFootTeaching(api,catalog){
+ const pins=JSON.parse(readFileSync(root+'/content/tongue-palate-quiz-pins.json'));
+ assert.equal(hash(pins),'dc00bdd203f349805a83873590188a0a6155aba0ad22643e0ac39a0d8a522403','Tongue/palate pins changed');
+ assert.equal(pins.entries.length,8,'Tongue/palate scope changed');
+ const ileocolicId='vm:anatomy:body:abdomen:unspecified:vessel:ileocolic-artery';
+ const display=api.bodyDisplayCatalog(catalog);
+ const ileocolic=display.structures.find(s=>s.id===ileocolicId);
+ assert(ileocolic&&ileocolic.fmaId==='FMA14815','Ileocolic identity changed');
+ const targets=[...pins.entries.map(e=>({identity:e.identity,tab:'quiz'})),{identity:ileocolic,tab:'ultrasound'}];
+ assert.equal(targets.length,9,'Post-foot teaching scope changed');
+ const originals=new Map();
+ for(const {identity,tab} of targets){
+  assert.deepEqual(display.structures.filter(s=>s.id===identity.id),[identity],'Post-foot source identity changed');
+  const current=beforeMra.bodyLesson(identity,tab),prior=beforeFootSource.bodyLesson(identity,tab);
+  assert(current&&prior&&!isDeepStrictEqual(current,prior),'Post-foot epoch boundary changed');
+  assert.deepEqual(api.bodyLesson(identity,tab),current,'Post-foot current lesson changed');
+  const {readiness:_,...shown}=current;
+  assert.deepEqual(api.bodyContent(identity,tab),shown,'Post-foot displayed content changed');
+  originals.set(key(identity.id,tab),{identity,prior});
+ }
+ const old=api;
+ return {...old,
+  bodyLesson(identity,tab){
+   const item=originals.get(key(identity?.id,tab));
+   if(!item)return old.bodyLesson(identity,tab);
+   assert.deepEqual(identity,item.identity,'Post-foot exact source identity changed');
+   return structuredClone(item.prior);
+  },
+  bodyContent(identity,tab){
+   const item=originals.get(key(identity?.id,tab));
+   if(!item)return old.bodyContent(identity,tab);
+   assert.deepEqual(identity,item.identity,'Post-foot exact source identity changed');
+   const {readiness:_,...shown}=item.prior;return structuredClone(shown);
+  },
+ };
+}
 function verifyOriginalPins(record){
  if(!record.originalPinPath)return;
  const original=JSON.parse(readFileSync(root+'/'+record.originalPinPath));
@@ -70,7 +148,8 @@ export function beforePostFootAuthors(input,catalog){
   assert.equal(hash(source),item.sourceRecordHash);
   assert.equal(source.author,item.author);assert.equal(source.parent,item.parent);
   verifyOriginalPins(record);
+  if(record.name==='git-author-0ac11ca2')api=reverseInferiorThyroidMra(api,record,catalog);
   api=reverseHelperAware(api,record,catalog);
  }
- return api;
+ return reversePostFootTeaching(api,catalog);
 }

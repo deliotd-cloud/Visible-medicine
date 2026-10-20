@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-20T22:18:31.434Z",
+  "source": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
+  "tree": "f17a39ff7f40d31aa5b0bd2176f923c95c1ea160",
+  "parent": "b101f1fd71f894244868abb26123bd978799b666",
+  "files": [
+    {
+      "path": "LICENSES/THIRD_PARTY_NOTICES.md",
+      "bytes": 353618,
+      "sha256": "f14026081c5b4ab6b920752bacc47da75e3ce107e1f5128250f75aeadd5285f8"
+    },
+    {
+      "path": "content/body-renderer-revision.json",
+      "bytes": 214383,
+      "sha256": "34997a221ae705766d3010a7db6e9bca6f4880bf0939041b44d1276e8456a02f"
+    },
+    {
+      "path": "content/body-review-display-pins.json",
+      "bytes": 203217,
+      "sha256": "2820e60659fa5287d3322db1bcc601b7987a2c18394f723811b4ec1f1a52d52f"
+    },
+    {
+      "path": "content/regional-teaching/pelvis.json",
+      "bytes": 453011,
+      "sha256": "176079df8d51596766de8855647c7c0c0972f959a314e6e7033df57e8538cbf7"
+    },
+    {
+      "path": "docs/CORPUS_CT_BOUNDARY_TEACHING.md",
+      "bytes": 3365,
+      "sha256": "ca500e0d2d37f7f9dac705ad47f3c1efc1e997ca616e91b9b96be28f1f32ae02"
+    },
+    {
+      "path": "docs/CORPUS_IMAGING.md",
+      "bytes": 3901,
+      "sha256": "882df4e1ead60747206455ee3ae13fbd1debf4e4194a3017a69ded8c31851556"
+    },
+    {
+      "path": "docs/requirement-audit.json",
+      "bytes": 261364,
+      "sha256": "62658f15e170f2f9dc798fe2cb41cfff91ad7d190469e4a2a9897a239384fa70"
+    },
+    {
+      "path": "scripts/post-foot-author-history.mjs",
+      "bytes": 9802,
+      "sha256": "742ebdb89c990d7ace8bb474ba87e8b0aa69a588afe5ae42e4c8dccebf059907"
+    },
+    {
+      "path": "scripts/record-corpus-imaging-transition.mjs",
+      "bytes": 1567,
+      "sha256": "11f858163484798c08090b47316ba2e4dfdc22dbcb41e895a1d8f83075d27190"
+    },
+    {
+      "path": "scripts/test-corpus-imaging-ct-history.mjs",
+      "bytes": 20705,
+      "sha256": "e1da205810d5eed3e28d460a56106870ac3e2170adc92a1ee807543e8b4813ae"
+    },
+    {
+      "path": "scripts/test-corpus-spongiosum-xray-v2.mjs",
+      "bytes": 9842,
+      "sha256": "a31953c221af112c2c3a14cb1017188fcc0b79703f831688bf5788da705df780"
+    },
+    {
+      "path": "scripts/validate-corpus-imaging.mjs",
+      "bytes": 7821,
+      "sha256": "d7bb1f70ef19d2551e05866eaa91b384122abdbbf23d54e0c2b2abd308c405fe"
+    }
+  ],
+  "diffSha256": "13a5c9f3248becd1d93c7329048f99a2f2078b0d1eeedefcbb0689a3aeae52fb",
+  "originalPinsAndAssertionsPreserved": true,
+  "canonicalInstalled": false,
+  "websiteSourceImported": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
