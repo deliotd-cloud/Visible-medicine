@@ -7,8 +7,9 @@ import {existsSync,readFileSync} from 'node:fs';
 import {pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {build} from 'esbuild';
+import {currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 
-const atlas='F:/VisibleMedicine/atlas';
+const atlas=currentAtlasDeliveryRoot();
 const baseline='9e229803af93cdb12c711ba738771ce92ee51191';
 const catalogPath='public/models/bodyparts3d/full-body/catalog.json';
 const pinPaths=['content/abdominal-branch-imaging-pins.json','content/abdominal-connective-quiz-pins.json'];

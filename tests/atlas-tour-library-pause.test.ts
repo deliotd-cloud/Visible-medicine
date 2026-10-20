@@ -6,6 +6,20 @@ import {execFileSync} from 'node:child_process';
 import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 const featureRevision='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';
 const featureTree='1bd327fb20a52b35bec584675c457173c548e24b';
+const focusRevision='bd5465ee3b94c66c3d5701e7749099d07e8f40d3';
+const focusAddition=` onKeyDown={event=>{
+        const details=event.currentTarget;
+        if(event.key!=='Escape'||event.defaultPrevented||event.nativeEvent.isComposing||!details.open||!details.isConnected)return;
+        event.preventDefault();event.stopPropagation();details.open=false;
+        details.querySelector('summary')?.focus({preventScroll:true});
+      }}`;
+const withoutFocusAddition=(source:Buffer)=>{
+ const text=source.toString('utf8');
+ assert.equal(text.split(focusAddition).length,2,'one exact Escape focus addition');
+ return Buffer.from(text.replace(focusAddition,''));
+};
+const verifyHistoricalPause=(source:Buffer,historical:Buffer)=>
+ assert.deepEqual(withoutFocusAddition(source),historical,'complete historical pause source');
 const revision=CURRENT_ATLAS_REVISION;
 const sha=(bytes:string|Buffer)=>createHash('sha256').update(bytes).digest('hex');
 const read=(path:string)=>readFileSync(new URL('../'+path,import.meta.url));
@@ -15,6 +29,7 @@ test('learner and protected Review deliver the same source-bound library playbac
  const pin=validateCurrentAtlasDelivery(),sourceRoot=currentAtlasDeliveryRoot();
  assert.equal(pin.source,revision);
  assert.equal(execFileSync('git',['rev-parse',featureRevision+'^{tree}'],{cwd:sourceRoot,encoding:'utf8'}).trim(),featureTree);
+ execFileSync('git',['merge-base','--is-ancestor',featureRevision,revision],{cwd:sourceRoot});
  const prefix='public/atlas-runtime/head-neck/',learner=json(prefix+'manifest.json'),review=json('atlas-review/manifest.json');
  assert.equal(learner.sourceCommit,revision);assert.equal(review.revision,revision);
  const inputs=json(prefix+'source-inputs.json'),renderer=json('atlas-review/content/body-renderer-revision.json');
@@ -23,7 +38,15 @@ test('learner and protected Review deliver the same source-bound library playbac
   assert(input&&imported,path);assert.equal(imported.sourceSha256,input.sha256);
   const current=execFileSync('git',['show',revision+':'+path],{cwd:sourceRoot});
   const historical=execFileSync('git',['show',featureRevision+':'+path],{cwd:sourceRoot});
-  assert.deepEqual(current,historical,path+': immutable pause source held');
+  if(path==='app/whole-body-guided-learning.tsx'){
+   const focus=execFileSync('git',['show',focusRevision+':'+path],{cwd:sourceRoot});
+   assert.deepEqual(current,focus,path+': exact focus-commit source held');
+   assert.equal(Buffer.byteLength(focusAddition),350,'exact focus addition size');
+   verifyHistoricalPause(current,historical);
+   const changed=current.toString('utf8').replace('onFocusCapture={pauseForLibrary}','onFocusCapture={undefined}');
+   assert.notEqual(changed,current.toString('utf8'));
+   assert.throws(()=>verifyHistoricalPause(Buffer.from(changed),historical),/complete historical pause source/);
+  }else assert.deepEqual(current,historical,path+': immutable pause source held');
   assert.equal(input.sha256,sha(current),path+': exact committed source');
   assert.equal(renderer.dependencies.find((f:any)=>f.path===path)?.sha256,input.sha256);
   const bytes=read('atlas-review/'+path);assert.equal(sha(bytes),imported.importedSha256);
@@ -31,6 +54,7 @@ test('learner and protected Review deliver the same source-bound library playbac
  }
  const library=read('atlas-review/app/whole-body-guided-learning.tsx').toString();
  for(const text of ['onFocusCapture={pauseForLibrary}','onPointerDownCapture={pauseForLibrary}','if(event.currentTarget.open)pauseForLibrary()','pauseRequest={pauseRequest}','key={`${tour.id}:${tour.tour.revision}`'])assert(library.includes(text),text);
+ assert(library.includes(focusAddition),'Escape restores summary focus without scrolling');
  const player=read('atlas-review/app/regional-guided-learning.tsx').toString();
  for(const text of ['previousPauseRequest.current===pauseRequest','pausedImaging?.suspend();revokePlayback();','playbackEpoch.current++','setMotionPaused(true)','transitionPaused={motionPaused||!ready}'])assert(player.includes(text),text);
  const runtime=learner.files.filter((f:any)=>/\.js$/.test(f.path)).map((f:any)=>{

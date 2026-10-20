@@ -1,126 +1,63 @@
 {
-  "at": "2026-10-20T15:23:37.774Z",
+  "at": "2026-10-20T15:35:11.725Z",
   "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
   "review": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
   "fixtureSha256": "7b7dcd776d25f5768a78694b104229a84b4dcc74025694c6b63cd760f3f72d23",
-  "changedBaselinePaths": [
-    "tests/atlas-spinal-muscle-xray.test.mjs",
-    "tests/head-neck-pilot-current.test.mjs",
-    "tests/historical-head-pilot-read.mjs",
-    "tests/lecture-multi-anatomy-ui.test.ts",
-    "tests/posterior-fossa-integration-register.test.mjs"
-  ],
-  "newPaths": [
-    "tests/tongue-palate-quiz-transition.mjs",
-    "tests/ileocolic-ultrasound-transition.mjs",
-    "tests/fixtures/head-pilot-9fba-license.json"
-  ],
   "editedTestFiles": [
-    "tests/atlas-spinal-muscle-xray.test.mjs",
-    "tests/tongue-palate-quiz-transition.mjs",
-    "tests/ileocolic-ultrasound-transition.mjs",
-    "tests/head-neck-pilot-current.test.mjs",
-    "tests/lecture-multi-anatomy-ui.test.ts",
-    "tests/posterior-fossa-integration-register.test.mjs",
-    "tests/historical-head-pilot-read.mjs",
-    "tests/fixtures/head-pilot-9fba-license.json"
+    "tests/atlas-tour-library-pause.test.ts",
+    "tests/clinical-review-abdominal-detail-xray.test.ts",
+    "tests/clinical-review-abdominal-eus.test.ts",
+    "tests/clinical-review-lower-neck-tour.test.ts",
+    "tests/clinical-review-mesenteric-tour.test.ts",
+    "tests/clinical-review-orbital-nerve-tour.test.ts",
+    "tests/clinical-review-restore.test.ts",
+    "tests/clinical-review-search-word-forms.test.ts",
+    "tests/clinical-review-search.test.ts"
   ],
-  "productionCodeChanged": false,
+  "sourcePaths": 5025,
   "unchangedProductInputs": 1696,
+  "productionCodeChanged": false,
   "currentDeliveryValidated": true,
-  "historical47RefusedAsCurrent": true,
-  "distinctFocusedCasesPassed": 18,
-  "receipts": [
-    {
-      "label": "ACTUAL_SPINAL_MRA_V2",
-      "code": 0,
-      "logSha256": "d09b1692f4349379081f92cdc2ea6f9463a49d694d8a8571cb5a63d27bfd1f38",
-      "receiptSha256": "8799f69e5039e012e20d67485afc222959c18ccc7687095c8a53c3642a075c2e",
-      "footer": [
-        "ℹ tests 1",
-        "ℹ pass 1",
-        "ℹ fail 0",
-        "ℹ cancelled 0",
-        "ℹ skipped 0",
-        "ℹ todo 0"
-      ]
-    },
-    {
-      "label": "ACTUAL_REGISTER_LECTURE",
-      "code": 0,
-      "logSha256": "c744456dcc1a154bc28d9b4b07fb192257b19f75d20a671193def8207e3fd500",
-      "receiptSha256": "da79812d7a09a0b683a2bbf55f89762a131d6241fbc479cde80edda142559364",
-      "footer": [
-        "ℹ tests 10",
-        "ℹ pass 10",
-        "ℹ fail 0",
-        "ℹ cancelled 0",
-        "ℹ skipped 0",
-        "ℹ todo 0"
-      ]
-    },
-    {
-      "label": "ACTUAL_HEAD_PILOT",
-      "code": 0,
-      "logSha256": "f982b5aec91b6e151923ac62b5cb5da75c5c0233870aa9005e89b482a64ed842",
-      "receiptSha256": "65f7df9c298e992e93498f20c9c9e366f92cd023ee5fae8abd9cbb5dcce42974",
-      "footer": [
-        "ℹ tests 7",
-        "ℹ pass 7",
-        "ℹ fail 0",
-        "ℹ cancelled 0",
-        "ℹ skipped 0",
-        "ℹ todo 0"
-      ]
-    }
-  ],
-  "spinalCounters": {
-    "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
-    "sourceTree": "bfcfa898ace1d25083f21b681274c5bc816564d7",
-    "changed": 56,
-    "preserved": 9836,
-    "changedWorksheets": 56,
-    "handChanges": 36,
-    "handWorksheets": 36,
-    "usChanges": 8,
-    "usWorksheets": 8,
-    "currentPreserved": 9876,
-    "footChanges": 12,
-    "evidenceChanges": 4,
-    "mriChanges": 2,
-    "ctChanges": 4,
-    "medianChanges": 2,
-    "additionalUsChanges": 12,
-    "checkMriChanges": 4,
-    "archXrayChanges": 2,
-    "tonguePalateChanges": 8,
-    "ileocolicChanges": 1,
-    "corpusXrayChanges": 1,
-    "thyroidMraExpanded": 2,
-    "additionalUsCounts": {
-      "deep-plantar-ultrasound": 2,
-      "lacrimal-drainage-ultrasound": 4,
-      "abdominal-radial-eus": 4,
-      "superficial-medial-plantar-ultrasound": 2
-    },
-    "currentVsOldPreserved": 9784,
-    "families": 32,
-    "pins": 56,
-    "cervicalUnchanged": 6,
-    "runtimes": 4,
-    "reviewFiles": 1548,
-    "modelBundlesUnchanged": 86,
-    "clinicalApproval": false,
-    "patientRegistration": false
+  "protectedPriorTestsUnchanged": true,
+  "distinctFocusedCasesPassed": 11,
+  "focusedReceipt": {
+    "label": "ACTUAL_NINE_CONTEXT_MODULES",
+    "code": 0,
+    "receiptSha256": "8088ee8b18c7bd6b9e272c4a81367575917ba76938a04dbcb4c2cfa741be5f73",
+    "logSha256": "eee4c622b75ddcd7db52df5f7aba25391653eb49181508d11a252970b52fce63",
+    "footer": [
+      "ℹ tests 11",
+      "ℹ pass 11",
+      "ℹ fail 0",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ]
   },
-  "fullSuiteRerun": false,
-  "oldBroadBaseline": "5387tests/5216pass/168fail/3skip; some now addressed, not a fresh current failure count",
+  "sourceContext": "Six exact current-delivery admissions retain complete original-file inverses; exact source-owned 350-byte focus addition is separated from historical pause behavior; EUS uses only fixed LF Git blob or exact CRLF conversion; X-ray uses the validated current source root. Historical behavioral, identity, refusal and approval checks retained.",
+  "runnerAudit": {
+    "manifestSha256": "66aafc5c7f470a378aae1ea65db7a25b47f51085add30a389a3f1454e5966cf9",
+    "disposition": "REFUSE_SAVED_FIVE_PATH_PATCH_NO_CHANGE_REQUIRED_FOR_FULL_RUN",
+    "candidateFilesEdited": 0,
+    "archivePayloadsCopied": false
+  },
+  "fullSuite": {
+    "state": "STARTED_NOT_TERMINAL_AT_CHECKPOINT",
+    "output": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+    "entryCount": 1040,
+    "sourceSha256": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "entrySha256": "750d664035febfcd0d8dd781ca8338e3591c188f4aa3bce444098ec09bd298c5",
+    "runnerPid": 156072,
+    "testPid": 249656,
+    "sessionId": 19172,
+    "passingClaim": false
+  },
+  "previousBroadResult": "5387tests/5216pass/168fail/3skip is historical and partly repaired; not a current remaining-failure count.",
   "clinicalApproval": false,
   "patientRegistration": false,
   "canonicalInstalled": false,
   "publicDeployment": false,
   "fullGoalActive": true,
-  "externalHistoricalPrerequisite": "Register47 test uses exact hash-guarded preserved 20261017-posterior-fossa-website/candidate (or explicit VM_REGISTER47_WEBSITE_ROOT); all1649inputs validated. Historical archive is retained locally, not uploaded or inferred from current files.",
   "heldArchivePaths": [
     "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
     "tests/fixtures/head-pilot-9fba-epoch.json",

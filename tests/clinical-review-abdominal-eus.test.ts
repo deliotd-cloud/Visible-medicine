@@ -16,11 +16,24 @@ const sourceHashes:Record<string,string>={
  'content/abdominal-eus-orientation.ts':'39ee4a18431a9dd36112ee95ba17a9ec47a135404372f690b646fb19e7937c37',
  'lib/abdominal-eus-orientation.ts':'ea38de69991d94f258cc71824b2856cc72b3f2dc2e7c79c53290825ecea93b13',
 };
-// This existing pin file is CRLF in the clean Windows build checkout; Review
-// imports its LF Git blob. Both exact byte identities are retained, not repinned
-// to an arbitrary current manifest value.
-const learnerSourceHashes={...sourceHashes,
- 'content/abdominal-branch-imaging-pins.json':'735ff50192908a217378920c0f2875b83611ab2d579e41d9a75ea2b6fab370e1',
+// The committed/Review pin is LF; the historical Windows working copy is CRLF.
+// Both fixed identities remain admissible only when the exact Git blob proves
+// the selected working file is unchanged or differs solely by LF-to-CRLF.
+const branchPath='content/abdominal-branch-imaging-pins.json';
+const branchBlob='35eba372769ec78877238f070263bb4177717782';
+const branchCrlfHash='735ff50192908a217378920c0f2875b83611ab2d579e41d9a75ea2b6fab370e1';
+const git=(args:string[])=>execFileSync('git',args,{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+const checkedWorkingBranch=()=>{
+ const blob=git(['cat-file','blob',branchBlob]);
+ assert.equal(sha(blob),sourceHashes[branchPath],'exact LF Git blob');
+ for(const epoch of [revision,'b03ba458',CURRENT_ATLAS_REVISION])
+  assert.equal(git(['rev-parse',`${epoch}:${branchPath}`]).toString().trim(),branchBlob,`${epoch}: same pin blob`);
+ assert.equal(blob.includes(13),false,'committed pin has LF only');
+ const crlf=Buffer.from(blob.toString('utf8').replaceAll('\n','\r\n'));
+ assert.equal(sha(crlf),branchCrlfHash,'exact historical CRLF conversion');
+ const working=readFileSync(`${atlas}/${branchPath}`);
+ assert(working.equals(blob)||working.equals(crlf),'working pin must equal LF blob or exact CRLF conversion');
+ return sha(working);
 };
 const expected={
  FMA76574:{file:'FJ3432',side:'unspecified',id:'vm:anatomy:body:abdomen:unspecified:vessel:trunk-of-gastroduodenal-artery',bundle:'abdomen-vessels-visceral-detail',sha256:'520c5303adfa900e6eb905722207a127678ce0b60d3f763ed6e8be183519d6fd'},
@@ -51,17 +64,20 @@ test('three exact abdominal EUS drafts reach learner and protected Review bindin
   assert.equal(record.importedSha256,digest,path);
   assert.equal(sha(readFileSync('atlas-review/'+path)),digest,path);
  }
- assert.equal(sha(Buffer.from(readFileSync('atlas-review/content/abdominal-branch-imaging-pins.json','utf8').replaceAll('\n','\r\n'))),
-  learnerSourceHashes['content/abdominal-branch-imaging-pins.json']);
+ const workingBranchDigest=checkedWorkingBranch();
  for(const module of ['head-neck','female-pelvis','lower-limb','shoulder']){
   const base=`public/atlas-runtime/${module}/`;
   const manifest=json(base+'manifest.json'),inputs=json(base+'source-inputs.json');
   assert.equal(manifest.sourceCommit,CURRENT_ATLAS_REVISION,module);
   assert.equal(manifest.patientDataIncluded,false,module);
   assert.equal(manifest.clinicalApproved,false,module);
-  for(const [path,digest] of Object.entries(learnerSourceHashes)){
+  for(const [path,digest] of Object.entries(sourceHashes)){
    const found=inputs.find((file:{path:string})=>file.path===path);
-   if(module==='head-neck'||module==='shoulder')assert.equal(found?.sha256,digest,`${module}: ${path}`);
+   if(module==='head-neck'||module==='shoulder'){
+    const working=readFileSync(`${atlas}/${path}`);
+    assert.equal(sha(working),path===branchPath?workingBranchDigest:digest,`${path}: pinned working file`);
+    assert.equal(found?.sha256,sha(working),`${module}: ${path}`);
+   }
    else assert.equal(found,undefined,`${module}: unexpected EUS dependency ${path}`);
   }
  }

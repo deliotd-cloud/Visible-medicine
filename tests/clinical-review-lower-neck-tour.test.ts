@@ -1,3 +1,4 @@
+import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
@@ -8,7 +9,7 @@ const wire=<T>(value:T):T=>JSON.parse(JSON.stringify(value));
 
 test('lower-neck learner and Review share six exact draft stops without procedural or registration claims',async()=>{
  const base='public/atlas-runtime/head-neck/',learner=JSON.parse(readFileSync(base+'manifest.json','utf8')),review=JSON.parse(readFileSync('atlas-review/manifest.json','utf8'));
- assert.equal(learner.sourceCommit,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');assert.equal(review.revision,learner.sourceCommit);
+ assert.equal(learner.sourceCommit,CURRENT_ATLAS_REVISION);assert.equal(review.revision,learner.sourceCommit);
  const inputs=JSON.parse(readFileSync(base+'source-inputs.json','utf8'));
  for(const path of ['lib/lower-neck-tour.ts','content/lower-neck-tour-pins.json','lib/regional-tours.ts']){
   const input=inputs.find((f:{path:string})=>f.path===path),imported=review.files.find((f:{path:string})=>f.path===path);
