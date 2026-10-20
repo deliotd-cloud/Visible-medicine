@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T05:51:33.690Z",
+  "at": "2026-10-20T06:11:35.651Z",
   "sourceIdentity": {
-    "product": "Unpublished Website primary Studio publishing navigation",
+    "product": "Unpublished Website explicit Studio primary route focus repair",
     "websiteBaseHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
     "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
     "canonicalInstalled": false
   },
-  "parent": "0d5aabf932e474978f60f3f1213db20d5e3d85b5",
-  "gitParent": "0d5aabf932e474978f60f3f1213db20d5e3d85b5",
+  "parent": "3cb9f3fd43bbfab905b3234b11e7f9e8c543211a",
+  "gitParent": "3cb9f3fd43bbfab905b3234b11e7f9e8c543211a",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -9288,8 +9288,8 @@
     },
     {
       "path": "components/SiteFrame.tsx",
-      "bytes": 11251,
-      "sha256": "a1d088003c532d60313dedc7475c9eb0420b0fa9735e27ecbfcfcf07cd98e913"
+      "bytes": 11897,
+      "sha256": "a4c1922faa55df2b731363815e834d6cd8da59e9e2e7ae725d9038da553a8a30"
     },
     {
       "path": "components/SiteHeader.tsx",
@@ -13183,8 +13183,8 @@
     },
     {
       "path": "lib/public-route-focus.ts",
-      "bytes": 1228,
-      "sha256": "34cb0f8a958cb6c64de84a238709689d960f121ff62632f1aa615af32c976f26"
+      "bytes": 1754,
+      "sha256": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
     },
     {
       "path": "lib/question-bank-repository.ts",
@@ -23918,8 +23918,8 @@
     },
     {
       "path": "tests/public-focus-adapter-preservation.test.mjs",
-      "bytes": 4180,
-      "sha256": "f86dcce5d11a4eddc5563825d6747af9bee293f90a465cd6beb131131ac2e327"
+      "bytes": 6435,
+      "sha256": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3"
     },
     {
       "path": "tests/public-preview-preflight.test.mjs",
@@ -23928,8 +23928,8 @@
     },
     {
       "path": "tests/public-route-focus.test.mjs",
-      "bytes": 2052,
-      "sha256": "285ab98ad273609a86dabb0bf060e99d952299e4a4d9c53b165f5009b6da0d37"
+      "bytes": 4036,
+      "sha256": "dd65f29bc5d8b042fd0769721d51a41a28765c16c8483a518ba359dccedb9297"
     },
     {
       "path": "tests/radial-eus-current-transition.test.mjs",
@@ -24343,8 +24343,8 @@
     },
     {
       "path": "tests/siteframe-focus-lifecycle.test.mjs",
-      "bytes": 10780,
-      "sha256": "0b5f77823ef38a38004256bb7fe7801cf217a753af6515fc3f1b881a1ef0831e"
+      "bytes": 17468,
+      "sha256": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908"
     },
     {
       "path": "tests/slice-wheel.test.mjs",
@@ -24828,27 +24828,30 @@
     }
   ],
   "removed": [],
-  "scope": "4963selected sources+4metadata over verified filtered0d5parent. Three reviewed deltas/no removals/newassets/deps; visible primary publishing with role-scoped secondary administration.51focused/type0/Review/policy/production build; real signed-in desktop native mouse/Enter/administration workflow. Known destination focus gap explicitly open, not full keyboard/all-role/clinical/release acceptance. All5116other baseline rows/1681inputs/12docs/model/module/rights/access bytes unchanged. No private context/data/scans/masks/model payloads/runtime DBs/deps/raw canonical ancestry; not standalone/full private-data backup.",
+  "scope": "4963selected sources+4metadata over verified filtered3cbparent. Five reviewed focus/test/history deltas, no additions/removals/assets/deps.88focused/type0/Review-policy-production build; actual existing signed-in keyboard all4Studio destinations/stream fallback/H1/Tab cleanup. Public policy/original11behavioral tests/5114otherrows/1681Review inputs/12docs/models/modules/rights/access unchanged. No private context/data/scans/masks/model payloads/runtime DBs/deps/raw canonical ancestry. Not standalone/full private-data, browser Back/all-role/physicalAT/full-suite or clinical/release acceptance.",
   "proof": {
-    "schema": "vm-studio-primary-publishing-acceptance/1",
-    "at": "2026-10-20T05:51:27.461Z",
-    "sourceBase": "0d5aabf932e474978f60f3f1213db20d5e3d85b5",
+    "schema": "vm-studio-primary-route-focus-acceptance/1",
+    "at": "2026-10-20T06:11:28.295Z",
+    "sourceBase": "3cb9f3fd43bbfab905b3234b11e7f9e8c543211a",
     "sourcePaths": 4963,
     "changedPaths": [
-      "components/StudioNavigation.tsx",
-      "tests/desktop-workspace-simplification.test.ts"
+      "components/SiteFrame.tsx",
+      "lib/public-route-focus.ts",
+      "tests/public-focus-adapter-preservation.test.mjs",
+      "tests/public-route-focus.test.mjs",
+      "tests/siteframe-focus-lifecycle.test.mjs"
     ],
-    "addedPaths": [
-      "tests/studio-publishing-navigation.test.mjs"
-    ],
-    "unchangedBaselineRows": 5116,
+    "addedPaths": [],
+    "unchangedBaselineRows": 5114,
+    "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
     "all1681ReviewInputsUnchanged": true,
     "all12DeliveryDocumentsUnchanged": true,
-    "progress": "Studio Review & publish is now one visible primary destination beside Home/Courses/Workbooks, including an empty review queue. Administration retains existing role predicates and destinations, collapses on publishing, opens contextually on groups/reports and is omitted when empty. Same protected URLs/native links/auth/entitlements/unsaved-state and publication gates retained.",
+    "progress": "Actual Studio primary-route focus gap repaired. Only trusted explicit same-origin clicks on the four existing Studio primary links get a separate policy/heading handoff; cancelled document guards, nonprimary/private/viewer/auth routes, untrusted/modified/new-tab/download clicks and unlinked commits do not. Existing public policy and bounded streaming/user-focus/modal/cleanup logic preserved.",
     "checks": {
-      "distinctFocusedCases": 51,
-      "newActualSsrCases": 5,
-      "existingNavigationRoleAndUnsavedCases": 46,
+      "distinctFocusedCases": 88,
+      "focusLifecycleAndPolicyAndHistory": 39,
+      "existingFrameRoleAndStudioAdapters": 49,
+      "newCases": 13,
       "typeDiagnostics": 0,
       "reviewVerification": true,
       "policyVerification": true,
@@ -24856,50 +24859,103 @@
       "fullSuite": false
     },
     "browser": {
-      "receiptSha256": "a9c58c5e38c21c87e5be0e5531906e18ed309e99b6aea1fcebd75737154133f8",
+      "receiptSha256": "2663269af748afe9de975419ceef40056917d021412947d151da1826e299e9d9",
       "viewport": {
         "width": 1280,
         "height": 720
       },
-      "existingSignedInNormalRoutes": true,
-      "visiblePublishingTop": 330.59375,
-      "mouseAndKeyboardEnterNavigate": true,
-      "administrationKeyboardOpenTabClose": true,
-      "onePublishingLink": true,
-      "noHorizontalOverflowOrVisibleAlerts": true,
-      "privateDataSaved": false,
-      "inlineScreenshotInspected": true,
-      "screenshotPersisted": false,
-      "fullKeyboardJourneyComplete": false
+      "normalExistingSignedInSession": true,
+      "fourPrimaryRoutesHeadingFocused": true,
+      "streamFallbackThenHeadingObserved": true,
+      "publishingTabReachesStatusSelect": true,
+      "temporaryTabIndexRemovedOnBlur": true,
+      "noOverflowOrVisibleAlerts": true,
+      "scrollRemains0": true,
+      "noPrivateDataSaved": true,
+      "browserBackAcceptance": false,
+      "unsavedGuardBrowserEditing": false
     },
-    "openFocusFinding": {
-      "observed": "After the explicit keyboard Home-to-publishing navigation settled, document.activeElement was BODY. The primary link and route worked but destination focus did not reach the page heading.",
-      "status": "Open; not yet classified as introduced or pre-existing by a before/after browser witness. Full keyboard-navigation acceptance is not claimed.",
-      "next": "Prioritize narrowly scoped Studio primary-navigation destination focus. Preserve document unsaved-state cancellation, source/account checks, normal auth and explicit-link-only behavior; verify delayed streaming and no background focus stealing."
-    },
+    "assurance": "All9original lifecycle and2original public-policy whole test bodies unchanged. Real navigation-guard function participates in compiled lifecycle cancel/confirm tests. Historical public adapter retains immutable5fixtures/two dependency seams; only unique previously verified publishing disclosure assertion admitted, auth/removal/reversal/missing/duplicate mutations refused. Main rehashed1681Review inputs/12delivery docs; independent worker rehashed5119baseline rows and all changed/source-test assertions, not separate private Review inputs.",
     "evidence": {
-      "PREPARATION.json": "9dd829fa25a37c2208958778f90dfc3e4cf5a74d0d9ede17f56dd74fa48f3d77",
-      "SOURCE_SCOPE.json": "6ce23da2097787638eb85bf4f06db8a1a0b30ccec0d46357825eb83553ec0ea9",
-      "BEFORE_NAV.json": "3025f3744428b4582c9d2e7774cd33693e9a0672b3111667420759a2db02e275",
-      "FOCUSED_NAV.json": "404a017afc34c0d4ae6f86604fe358c3ae9fab497047c915022c5490159d7135",
-      "NAVIGATION_GUARDS.json": "5cc49145258cb966365310c2536b647073658c4d119f186d10fc40e6d9d4d3ab",
-      "TYPECHECK.json": "7589fc0c351f13032719a90c29ab1781480d428bc5dfae95e1611be5b192c4ae",
-      "REVIEW.json": "3b55db21bfdc22742b0ffbe9e27401b7bbbe82f3d1cdbef5dafad59d945b6824",
-      "POLICY.json": "062b367f95dbed9ea4691303ef9e0b576c480d780c74b8195566bc1cf10d8c29",
-      "PRODUCTION_BUILD.json": "9fc9441a5ef7493b1805c1f3b44faa779b5378cb848a11f53491f139327ca539",
-      "BROWSER_ACCEPTANCE.json": "a9c58c5e38c21c87e5be0e5531906e18ed309e99b6aea1fcebd75737154133f8",
-      "preview/server.json": "6c2ea9856b6a2ab2267158f2b438a74b9eaeb5b41bfcc8f984a771d68831cdc0",
-      "preview/server-exit.json": "af242b63c498159d5b69e8619026d0a6d9859b550a9fe9212de797b38d1b564b",
-      "preview/stop-receipt.json": "3d888b7d8785ec25b8ea36c2d271eefb62e5e52b471d16a5f199888b815f2d47"
+      "PREPARATION.json": "78fbd3ef0a45d67f82cfa68e38e0d30df93f2cda96dae38a20f0c2ba8034a257",
+      "SOURCE_SCOPE.json": "06bcdbcbaba873529477025a07f6770d30a967c43dec8d14477534b719ec4517",
+      "BEFORE_FOCUS.json": "6fcf70fcde1417d7b19d821cde8934a80b953748abcca2b48cd902b0ec2954c5",
+      "FOCUSED_FOCUS.json": "9777ea033019c6c2b4589c4f509572e0fdbcac9e23ca5eadf1056b293afff29a",
+      "FRAME_ADAPTERS.json": "486b4672d14b064d24ad28ae8d77ad2fb2e4379553fcf0a14bca73b1d32b5032",
+      "TYPECHECK.json": "b18e637019a540c810d03cdf3cef118844ae2b376fe3e06e4eca3b739df238df",
+      "REVIEW.json": "783035c7e7a577c9208d57addf5f04e18ba405d9b7344b8807e52bda86754746",
+      "POLICY.json": "9f6a63988e26152a8f2b3c951d2a3a3b95b791ead1345f7ee9483c64b891ef1b",
+      "PRODUCTION_BUILD.json": "8c833445d0eee1e290ee53dbccf6511f0030b4a19b9b29a76b4392f16410edaa",
+      "BROWSER_ACCEPTANCE.json": "2663269af748afe9de975419ceef40056917d021412947d151da1826e299e9d9",
+      "preview/server.json": "af9c3bdf5fbde7b6fedabb3bd51a7d43b527a2e767cae4428b34fbbe7cff99a4",
+      "preview/server-exit.json": "2451158dd96fd9654f04edfad6486a35d1516bd0f89e5eb5c75eeab85c4ab682",
+      "preview/stop-receipt.json": "ea939be861d0d52d173da3718391cbce1309793ad7b0723ef56e528259b3a00e"
     },
     "independentReview": {
-      "path": "F:/VisibleMedicine/staging/20261020-desktop-workspace-gap/FINAL_REVIEW.json",
-      "sha256": "a0a548e71640bd9a35ed2dd2818d0fc4aa99c133c6b1257d61fb6b1ba9da25bd",
-      "result": "5118rows/twoexisting+oneadded,1681Review inputs/12docs unchanged, single intended original assertion update"
+      "sha256": "985c9fc12730fd3c7a0fe59d24234eee8632e757cb20f309b8784feb4b1b849a",
+      "review": {
+        "result": "scoped-read-only-review-pass",
+        "source": "F:/VisibleMedicine/staging/20261020-saved-plan-focus/website",
+        "parent": "3cb9f3fd43bbfab905b3234b11e7f9e8c543211a",
+        "preparationSha256": "78fbd3ef0a45d67f82cfa68e38e0d30df93f2cda96dae38a20f0c2ba8034a257",
+        "baselineRows": 5119,
+        "unchangedBaselineRows": 5114,
+        "missingBaselineRows": 0,
+        "unexpectedChangedRows": 0,
+        "extraFilesUnderComponentsLibTests": 0,
+        "changed": {
+          "components/SiteFrame.tsx": {
+            "before": "a1d088003c532d60313dedc7475c9eb0420b0fa9735e27ecbfcfcf07cd98e913",
+            "now": "a4c1922faa55df2b731363815e834d6cd8da59e9e2e7ae725d9038da553a8a30"
+          },
+          "lib/public-route-focus.ts": {
+            "before": "34cb0f8a958cb6c64de84a238709689d960f121ff62632f1aa615af32c976f26",
+            "now": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
+          },
+          "tests/public-focus-adapter-preservation.test.mjs": {
+            "before": "f86dcce5d11a4eddc5563825d6747af9bee293f90a465cd6beb131131ac2e327",
+            "now": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3"
+          },
+          "tests/public-route-focus.test.mjs": {
+            "before": "285ab98ad273609a86dabb0bf060e99d952299e4a4d9c53b165f5009b6da0d37",
+            "now": "dd65f29bc5d8b042fd0769721d51a41a28765c16c8483a518ba359dccedb9297"
+          },
+          "tests/siteframe-focus-lifecycle.test.mjs": {
+            "before": "0b5f77823ef38a38004256bb7fe7801cf217a753af6515fc3f1b881a1ef0831e",
+            "now": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908"
+          }
+        },
+        "historicalAssertions": {
+          "siteframeOriginalNineExact": true,
+          "publicPolicyOriginalTwoExact": true,
+          "publicPolicyOriginalSourcePrefixExact": true,
+          "adapterCandidateExact": true
+        },
+        "focusReview": "No substantive guard, delayed-stream, modal, or user-focus issue found in this source review. New scope requires trusted unmodified same-origin click on a .studio-primary-navigation anchor and one of four exact destinations; document unsaved guard runs first; route/path/age/active focus checks and bounded cleanup remain.",
+        "receipts": {
+          "BEFORE_FOCUS": {
+            "passed": 12,
+            "failed": 5,
+            "logSha256": "3228ecb582500522b2eae8638320656c8247beee961dd988bbcb3060c6145dc2"
+          },
+          "FOCUSED_FOCUS": {
+            "passed": 39,
+            "failed": 0,
+            "logSha256": "aa58faaf60d2c77ae3dd05cf4c22f33bef6004e9cbb4780b503a2b0a6ecfdd3e"
+          },
+          "FRAME_ADAPTERS": {
+            "passed": 49,
+            "failed": 0,
+            "logSha256": "1c8a4a4ac9bbb7fce3bda141de10c84e92257a953202c67851a9a4d0062252ac"
+          }
+        },
+        "unchangedOtherScope": "All 485 website docs in the 5119-row manifest are unchanged, including the prior held delivery documents in that manifest. The prior 1681 Review-input preservation receipt is carried forward by the exact five-file website-only diff; separate private Review inputs were not reopened or rehashed in this bounded review.",
+        "limits": "No fresh browser, type, production build, whole suite, clinical approval, canonical installation, deployment, or backup verification by this reviewer."
+      }
     },
-    "retainedLimits": "Five new cases failed against original UI then pass after scoped change. Initial keyboard attempt occurred during normal streaming fallback and was not acceptance; successful settled retry retained. Actual keyboard Enter opens correct publishing route, but settled focus falls to BODY: prioritize protected explicit Studio-primary navigation heading focus next, preserve unsaved cancellation/normal auth, no whole keyboard/accessibility completion claim. One signed-in account, not all roles/physicalAT/200%-text/mobile/GPU/full-suite or clinical acceptance. Normal no-cookie HTTP remains307sign-in, browser used existing authorized session without permission changes. No form/action/publishing/approval was submitted.",
-    "preservation": "All5116other baseline rows/1681Review inputs/12delivery docs/Atlasaaa8/Reviewd703/models/assets/modules/licensing/dependencies/permissions unchanged. Owner3000/PID210284/open lecture untouched/save unconfirmed; ownpage26 and exact3003root232864/children216308,215804,239192 closed/stopped after fresh identity checks.",
-    "stagedAdvancement": "Existing isolated candidate advanced after verified0d5sourcebackup,5118baseline rows checked/two preimages, no extra deps/model copy. Prior mutable source paths require immutable hashes/remote restoration.",
+    "retainedLimits": "Pre-fix lifecycle12/17 with9original tests passing/five new focus failures preserved; previous actual3cb browser BODY witness retained. Current39+49pass. One browser selector-construction error before action corrected; Alt+ArrowLeft did not establish browser Back transition, so no browser Back/Forward pass. Unsaved-cancel/confirm/user-focus/modal/untrusted/auth/timeout cases use actual compiled component and real guard with synthetic DOM, no real draft edited. Not all-role/physicalAT/200%-text/mobile/GPU/whole-suite/clinical/privacy/registration/release completion. Original171whole-suite failures partly unresolved; no remaining count inferred.",
+    "preservation": "All5114other baseline rows/1681Review inputs/12docs/Atlasaaa8/Reviewd703/models/modules/licensing/deps/permissions unchanged. Owner3000/PID210284/open lecture untouched/save unconfirmed. Ownpage27 and fresh-checked3003root196124/children227284,230548,241680 stopped; no forms/decisions/publication/permissions modified.",
+    "stagedAdvancement": "Existing isolated candidate advanced after verified3cbfilteredbackup with5119rows/five preimages; no duplicate deps/model payloads. Prior mutable stage paths require immutable hashes/remote restoration.",
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",

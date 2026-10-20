@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
-const root=new URL('../',import.meta.url);
+// The override lets an isolated candidate verify the checked source without copying fixtures.
+const root=process.env.VM_PUBLIC_FOCUS_ROOT?new URL(process.env.VM_PUBLIC_FOCUS_ROOT):new URL('../',import.meta.url);
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const configurations={
  'header-session.test.ts':{
@@ -50,9 +51,36 @@ function expected(name){
  for(const[before,after]of cfg.seams){assert.equal(text.split(before).length,2,'Single declared import/mock seam required');text=text.replace(before,after);}
  return text;
 }
-for(const name of Object.keys(configurations))test(name+': every original assertion survives exactly outside two dependency seams',()=>{
+const publishingBefore='  assert.match(examiner, /<details class="studio-manage-navigation" open="">/);';
+const publishingNow='  assert.doesNotMatch(examiner, /<details class="studio-manage-navigation" open="">/);';
+function admitDesktop(current,historical=expected('desktop-workspace-simplification.test.ts')){
+ assert.equal(historical.split(publishingBefore).length,2,'Historical publishing assertion must be unique');
+ const admitted=historical.replace(publishingBefore,publishingNow);
+ assert.equal(admitted.split(publishingNow).length,2,'Current publishing assertion must be unique');
+ assert.deepEqual(Buffer.from(current),Buffer.from(admitted));
+}
+for(const name of Object.keys(configurations).filter(name=>name!=='desktop-workspace-simplification.test.ts'))test(name+': every original assertion survives exactly outside two dependency seams',()=>{
  const current=readFileSync(new URL('tests/'+name,root));
  assert.deepEqual(current,Buffer.from(expected(name)));
+});
+test('desktop-workspace-simplification.test.ts: only the verified publishing disclosure assertion changes after two dependency seams',()=>{
+ const current=readFileSync(new URL('tests/desktop-workspace-simplification.test.ts',root));
+ admitDesktop(current);
+});
+test('another role or authorization assertion cannot pass the publishing admission',()=>{
+ const current=readFileSync(new URL('tests/desktop-workspace-simplification.test.ts',root)).toString();
+ const guard='    assert.equal(reviewAuthorizationCalls, 1);';
+ assert.equal(current.split(guard).length,2);
+ assert.throws(()=>admitDesktop(current.replace(guard,'    assert.equal(reviewAuthorizationCalls, 0);')));
+});
+test('publishing admission refuses removal, reversal, and a missing unique historical assertion',()=>{
+ const current=readFileSync(new URL('tests/desktop-workspace-simplification.test.ts',root)).toString();
+ assert.equal(current.split(publishingNow).length,2);
+ assert.throws(()=>admitDesktop(current.replace(publishingNow,'')));
+ assert.throws(()=>admitDesktop(current.replace(publishingNow,publishingBefore)));
+ const historical=expected('desktop-workspace-simplification.test.ts');
+ assert.throws(()=>admitDesktop(current,historical.replace(publishingBefore,'')));
+ assert.throws(()=>admitDesktop(current,historical.replace(publishingBefore,publishingBefore+'\n'+publishingBefore)));
 });
 test('deleting an original behavioral assertion cannot pass the whole-file preservation proof',()=>{
  const name='workspace-utilities-dismissal.test.mjs',current=expected(name);

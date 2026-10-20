@@ -26,3 +26,11 @@ export function shouldFocusPublicRoute({ from, to, linkPath, ageMs, active }: Pu
     isPublicFocusPath(from) && isPublicFocusPath(to) &&
     (active === "body" || active === "origin");
 }
+
+/** Separate policy for explicit Studio primary navigation, never private links generally. */
+export function shouldFocusStudioPrimaryRoute({ from, to, linkPath, ageMs, active }: PublicFocusDecision): boolean {
+  const destinations = ["/studio/workspace", "/studio/courses", "/studio/workbooks", "/studio/publishing"];
+  return from !== null && from.startsWith("/studio/") && from !== to && linkPath === to &&
+    destinations.includes(to) && ageMs >= 0 && ageMs < 10_000 &&
+    (active === "body" || active === "origin");
+}

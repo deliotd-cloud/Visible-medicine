@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, type MouseEvent, type ReactNode } from "react";
 import { SiteFooter } from "./SiteFooter";
 import { SiteHeader } from "./SiteHeader";
-import { isPublicFocusPath, shouldFocusPublicRoute } from "../lib/public-route-focus";
+import { isPublicFocusPath, shouldFocusPublicRoute, shouldFocusStudioPrimaryRoute } from "../lib/public-route-focus";
 import "./workspace-navigation.css";
 
 const workspaceLinks = [
@@ -101,17 +101,23 @@ export function SiteFrame({ children, signedIn }: { children: ReactNode; signedI
   const pathname = usePathname();
   const frameRef = useRef<HTMLDivElement>(null);
   const previousPathRef = useRef(pathname);
-  const pendingLinkRef = useRef<{ from: string; linkPath: string; origin: HTMLAnchorElement; at: number } | null>(null);
+  const pendingLinkRef = useRef<{ from: string; linkPath: string; origin: HTMLAnchorElement; at: number; scope: "public" | "studio-primary" } | null>(null);
   const capturePublicLink = (event: MouseEvent<HTMLDivElement>) => {
     pendingLinkRef.current = null;
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.altKey || event.shiftKey) return;
     const anchor = event.target instanceof Element ? event.target.closest("a[href]") : null;
     if (!(anchor instanceof HTMLAnchorElement) || anchor.hasAttribute("download") ||
       (anchor.target && anchor.target !== "_self")) return;
     const url = new URL(anchor.href, window.location.href);
-    if (url.origin !== window.location.origin || url.pathname === pathname ||
-      !isPublicFocusPath(pathname) || !isPublicFocusPath(url.pathname)) return;
-    pendingLinkRef.current = { from: pathname, linkPath: url.pathname, origin: anchor, at: performance.now() };
+    if (url.origin !== window.location.origin || url.pathname === pathname) return;
+    // Studio is not public. Only a trusted primary-nav click receives this
+    // separate handoff; document-level unsaved guards have already run.
+    const scope = isPublicFocusPath(pathname) && isPublicFocusPath(url.pathname) ? "public"
+      : event.isTrusted && anchor.closest(".studio-primary-navigation") && shouldFocusStudioPrimaryRoute({
+        from: pathname, to: url.pathname, linkPath: url.pathname, ageMs: 0, active: "origin",
+      }) ? "studio-primary" : null;
+    if (!scope) return;
+    pendingLinkRef.current = { from: pathname, linkPath: url.pathname, origin: anchor, at: performance.now(), scope };
   };
 
   useEffect(() => {
@@ -134,7 +140,8 @@ export function SiteFrame({ children, signedIn }: { children: ReactNode; signedI
     const focusDestination = () => {
       frame = undefined;
       const active = document.activeElement;
-      if (!shouldFocusPublicRoute({ from, to: pathname, linkPath: pending.linkPath,
+      const shouldFocusRoute = pending.scope === "studio-primary" ? shouldFocusStudioPrimaryRoute : shouldFocusPublicRoute;
+      if (!shouldFocusRoute({ from, to: pathname, linkPath: pending.linkPath,
         ageMs: performance.now() - pending.at,
         active: active === document.body ? "body" : active === pending.origin || active === managedTarget ? "origin" : "elsewhere" })) {
         stopObserving(); return;
