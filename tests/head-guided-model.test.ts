@@ -205,7 +205,11 @@ test('guided model retains its iframe and unlocks only the current confirmed sel
     assert.equal(nav().position.conceptId,'brainstem-medulla');assert.equal(nav().comparisonReady,true);
     assert.equal(nav().recoveryLinks,false);
     deliver(selected('brainstem-pons',13));
-    assert.equal(nav().comparisonReady,false);assert.equal(nav().recoveryLinks,false,'different live selection is not a recovery failure');
+    assert.equal(nav().position.conceptId,'brainstem-medulla','divergent live selection preserves the authored step');
+    assert.equal(pathname+search,medulla,'divergent live selection preserves the source-pinned URL');
+    assert.equal(frame.props.src,originalSrc,'divergent live selection retains the model iframe');
+    assert.equal(status(),'The model selection differs from this tour step.');
+    assert.equal(nav().comparisonReady,false);assert.equal(nav().recoveryLinks,true,'a divergent live selection exposes authored-step recovery without claiming a confirmed comparison');
     deliver(selected('brainstem-medulla',14));
     assert.equal(nav().comparisonReady,true);assert.equal(nav().recoveryLinks,false);
     for(const effect of effects.values())effect.cleanup?.();disposed=true;

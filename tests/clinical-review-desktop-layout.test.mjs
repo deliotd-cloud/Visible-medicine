@@ -21,9 +21,15 @@ test('pre-layout delivery stays immutable; learner/model delivery is unchanged',
  assert.throws(()=>validateCurrentAtlasDelivery({pin:old}),'Old Review binding is not admitted as current');
 });
 
-test('exact inverse binding proves the CSS adapter is the sole changed Review input',()=>{
+test('exact inverse chain preserves the one-input desktop layout transition',()=>{
  const binding=JSON.parse(read('atlas-review/integration-inputs.json'));
  assert.equal(binding.inputs.length,1682);
+ // Rewind only the exact later authored-link host patch before the CSS-era proof.
+ const guided=binding.inputs.filter(row=>row.path==='components/HeadAtlasGuidedModel.tsx');
+ assert.equal(guided.length,1);assert.equal(guided[0].sha256,sha(read(guided[0].path)));
+ assert.equal(guided[0].sha256,'cfaf695e1e6bd418fe6f2a1416cc18094aab7d7509ecc61396d4f55a37d37499');
+ guided[0].sha256='d461124c39f2b837d37473c7951709a992f22e7482dc64ceef5ba145f12d30f1';
+ assert.equal(sha(JSON.stringify(binding.inputs)),'2800d098fc42723470c7a74e3c9aa481c7faf0734450f0b9c0f05eeb8842133f');
  const inverse=structuredClone(binding.inputs),row=inverse.filter(r=>r.path===adapter);
  assert.equal(row.length,1);assert.notEqual(row[0].sha256,oldCssSha);
  assert.equal(row[0].sha256,sha(read(adapter)));
