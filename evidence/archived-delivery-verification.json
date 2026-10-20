@@ -1,0 +1,57 @@
+{
+  "schema": "vm-authenticated-old-context-delivery/1",
+  "at": "2026-10-20T19:18:07.968Z",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "changedPaths": [
+    "tests/historical-current-atlas-delivery-56.mjs",
+    "tests/historical-current-atlas-delivery-57.mjs",
+    "tests/current-atlas-delivery-56-closed.test.mjs",
+    "tests/current-atlas-delivery-57-closed.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed57-original-tests.test.mjs",
+    "tests/historical-head-toolbar-css-extension.test.mjs",
+    "tests/closed56-femoral-epoch.test.mjs",
+    "tests/historical-website-root.mjs",
+    "tests/historical-website-root.test.mjs",
+    "tests/historical-old57-root-source-preservation.test.mjs",
+    "tests/closed56-live-preservation.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-live-context-repair-contract.test.mjs"
+  ],
+  "namedInputsVerified": 5028,
+  "sourceInputsSha256": "fb78c62a8109b1220c5e092017aea7211e6be01283627af40afed90cfdbc79f0",
+  "proofs": [
+    {
+      "label": "ACTUAL_ARCHIVED_DELIVERIES_AND_GUARDS",
+      "pass": 79,
+      "fail": 1,
+      "logSha256": "62642608a4b40bc7ea98ad84da74d3b7c233746a5c49fd70f6260430deb0f6ca"
+    },
+    {
+      "label": "ACTUAL_DIRTY_HISTORICAL_WEBSITE_REFUSAL",
+      "pass": 3,
+      "fail": 0,
+      "logSha256": "c0ad5ae08ac91195de6abaf77299757b31d8f8c024da41d690752716b4b709fb"
+    },
+    {
+      "label": "ACTUAL_COMPOSED_LIVE_COPY_PRESERVATION",
+      "pass": 22,
+      "fail": 0,
+      "logSha256": "9c1c52abbb0fcdf4ffe41a8076edbf3348fbfe49208bd47f75ddca77abdd23e2"
+    }
+  ],
+  "oldRootsReceipt": "F:/VisibleMedicine/staging/20261020-authenticated-old-websites/ROOTS.json",
+  "oldRootsReceiptSha256": "0c2964b247c9a703f9ce6342576f4b774c0766ab2bd4a31aa49c553bedf4a78d",
+  "mainRefinements": [
+    "tests/historical-old57-root-source-preservation.test.mjs",
+    "tests/historical-website-root.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-live-context-repair-contract.test.mjs"
+  ],
+  "scope": "The initial original80-case archive run had79passes and one genuine stale live-copy context failure. All22affected composed preservation/refusal/inverse cases subsequently pass; original79unchanged passes are not rerun just to recreate logs. Real dirty Website refusal3passes restores exact isolated source. Frozen original assertions, validators, input counts and raw fixtures remain. This is not a fresh complete Website-suite pass.",
+  "productionCodeChanged": false,
+  "canonicalInstalled": false,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "fullSuitePass": false
+}

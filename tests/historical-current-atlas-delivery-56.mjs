@@ -3,14 +3,12 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFileSync} from 'node:fs';
 import {join} from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {checkedHistoricalWebsiteRoot} from './historical-website-root.mjs';
 import {validateCurrentAtlasDelivery as validateDeliveryShape,currentAtlasDeliveryRoot as frozenAtlasRoot} from './fixtures/closed56-validator/tests/current-atlas-delivery.mjs';
 import {checkedAtlasHistoryRepo} from './fixtures/closed56-validator/tests/atlas-source-repo.mjs';
 
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const fixture=new URL('./fixtures/',import.meta.url);
-const site=new URL('../',import.meta.url);
-const liveRoot=process.env.VM_WEBSITE_ROOT??fileURLToPath(site);
 const fixed=(path,digest)=>{
  const bytes=readFileSync(new URL(path,fixture));
  assert.equal(sha(bytes),digest,'Closed56 fixture changed: '+path);
@@ -20,6 +18,7 @@ fixed('closed56-validator/tests/current-atlas-delivery.mjs','dfcce9763cba89e6d94
 fixed('closed56-validator/tests/atlas-source-repo.mjs','45be52da6f2a93fdff2276235b357d6e491385af8a84ab8e0193905f6d49f356');
 fixed('closed56-validator/tests/fixtures/current-atlas-delivery.json','3aedc6660613d5913d7e033dbe8f1395c147a58dda633089cc3f650652343e15');
 export const revision56=JSON.parse(fixed('current-atlas-delivery-56.json','3aedc6660613d5913d7e033dbe8f1395c147a58dda633089cc3f650652343e15'));
+export const oldWebsiteRoot=checkedHistoricalWebsiteRoot(56,revision56);
 assert.equal(revision56.source,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
 assert.equal(revision56.sourceTree,'83720d136f899876bd947323e6552c4d3e171210');
 assert.equal(revision56.reviewIntegration,'b4db62ff56037c1ca251e32256afd470f6e155ca3f563d1d1db86b6ec9c6d916');
@@ -66,7 +65,7 @@ const historicalReads=new Map([
  ['tests/fixtures/current-atlas-delivery-bc925194.txt','c3ff732333006762cecc4899bae379cb42f56ae28f6fe1e100d331f3384502fc'],
 ]);
 
-export function readRevision56(path,{readLive=p=>readFileSync(join(liveRoot,p))}={}){
+export function readRevision56(path,{readLive=p=>readFileSync(join(oldWebsiteRoot,p))}={}){
  assert(typeof path==='string'&&/^[A-Za-z0-9_./-]+$/.test(path)&&!path.split('/').some(part=>!part||part==='.'||part==='..'));
  if(documents.has(path))return fixed('closed56-documents/'+path,revision56.documents[path]);
  if(overrides.has(path))return fixed('closed56-overrides/'+path,overrides.get(path));
@@ -96,5 +95,14 @@ export function historicalAtlasGitRoot(){
 }
 export function currentAtlasDeliveryRoot(){
  validateCurrentAtlasDelivery();
- return frozenAtlasRoot();
+ // This closed delivery still validates a real clean historical HEAD/tree.
+ // Never pass the active current checkout off as the archived source.
+ const previous=process.env.VM_ATLAS_SOURCE_REPO;
+ try{
+  process.env.VM_ATLAS_SOURCE_REPO=process.env.VM_CLOSED_ATLAS_46C_SOURCE??'F:/VisibleMedicine/staging/20261020-closed46c-atlas-source';
+  return frozenAtlasRoot();
+ }finally{
+  if(previous===undefined)delete process.env.VM_ATLAS_SOURCE_REPO;
+  else process.env.VM_ATLAS_SOURCE_REPO=previous;
+ }
 }

@@ -1,0 +1,23 @@
+{
+  "label": "COVERAGE_DESKTOP_MAIN_REVIEWED",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "tests/anatomy-coverage-revision-admission.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-coverage-desktop-companion/COVERAGE_DESKTOP_MAIN_REVIEWED.log",
+  "logSha256": "9b3ac219a1ab7881b4a8850921c8e91ce275d2e5e76525bf8e625ef5650bdb9b",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

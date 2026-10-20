@@ -1,0 +1,25 @@
+{
+  "label": "ACTUAL_LAST_TWO_PRESERVATION_CONTRACTS",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "tests/clinical-review-cervical-disc-tour-preservation.test.mjs",
+    "tests/next-five-admission-contract.test.mjs",
+    "tests/cervical-current-history-context-contract.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-last-two-context-proposals/ACTUAL_LAST_TWO_PRESERVATION_CONTRACTS.log",
+  "logSha256": "f96c41322d021999ee1a358cdb3aab761659abcc5dfaf798c597c803149ba348",
+  "footer": [
+    "ℹ tests 9",
+    "ℹ pass 9",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

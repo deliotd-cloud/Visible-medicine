@@ -1,0 +1,33 @@
+{
+  "label": "ACTUAL_ARCHIVED_DELIVERIES_AND_GUARDS",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=2048",
+    "--test",
+    "--test-concurrency=1",
+    "tests/current-atlas-delivery-56-closed.test.mjs",
+    "tests/current-atlas-delivery-57-closed.test.mjs",
+    "tests/current-atlas-delivery-56-to-57-closed.test.mjs",
+    "tests/closed56-femoral-epoch.test.mjs",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed57-original-tests.test.mjs",
+    "tests/historical-head-toolbar-css-extension.test.mjs",
+    "tests/historical-head-toolbar-css-preservation-57-closed.test.mjs",
+    "tests/historical-old57-root-source-preservation.test.mjs",
+    "tests/historical-website-root.test.mjs",
+    "tests/closed57-renderer-read.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-authenticated-old-delivery-reviewed/ACTUAL_ARCHIVED_DELIVERIES_AND_GUARDS.log",
+  "logSha256": "62642608a4b40bc7ea98ad84da74d3b7c233746a5c49fd70f6260430deb0f6ca",
+  "footer": [
+    "ℹ tests 80",
+    "ℹ pass 79",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

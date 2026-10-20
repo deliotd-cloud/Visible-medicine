@@ -1,0 +1,25 @@
+{
+  "label": "ACTUAL_COMPOSED_LIVE_COPY_PRESERVATION",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "tests/closed56-original-tests.test.mjs",
+    "tests/closed56-live-preservation.test.mjs",
+    "tests/closed56-live-context-repair-contract.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-authenticated-old-delivery-reviewed/ACTUAL_COMPOSED_LIVE_COPY_PRESERVATION.log",
+  "logSha256": "9c1c52abbb0fcdf4ffe41a8076edbf3348fbfe49208bd47f75ddca77abdd23e2",
+  "footer": [
+    "ℹ tests 22",
+    "ℹ pass 22",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

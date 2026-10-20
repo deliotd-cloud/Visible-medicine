@@ -6,8 +6,8 @@ import {readFileSync} from 'node:fs';
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const cases=[
  ['current-atlas-delivery.test.mjs','7955fd210cb57b94667ae03b025987d196583e49cfbece5f056b44f80089c91c','current-atlas-delivery-57-closed.test.mjs',[
-  ["from './current-atlas-delivery.mjs';","from './historical-current-atlas-delivery-57.mjs';\nimport {readRevision57,revision57} from './historical-current-atlas-delivery-57.mjs';"],
-  ["const root=fileURLToPath(new URL('../',import.meta.url));","const root=process.env.VM_WEBSITE_ROOT??fileURLToPath(new URL('../',import.meta.url));"],
+  ["from './current-atlas-delivery.mjs';","from './historical-current-atlas-delivery-57.mjs';\nimport {readRevision57,revision57,oldWebsiteRoot} from './historical-current-atlas-delivery-57.mjs';"],
+  ["const root=fileURLToPath(new URL('../',import.meta.url));","const root=oldWebsiteRoot;"],
   ["const pin=JSON.parse(readFileSync(new URL('./fixtures/current-atlas-delivery.json',import.meta.url)));","const pin=revision57;"],
   ["const read=path=>readFileSync(root+'/'+path);","const read=path=>readRevision57(path);"],
  ]],
@@ -23,6 +23,7 @@ const cases=[
  ['closed56-femoral-epoch.test.mjs','09cc0dc099c4973e401c7672006ac3966a812f12cdcbedc5735f3b9e66a22463','closed56-femoral-epoch.test.mjs',[
   ["for(const name of ['current-atlas-delivery-56.json','closed56-documents','closed56-validator'])","for(const name of ['current-atlas-delivery-56.json','closed56-documents','closed56-validator','closed56-inputs'])"],
   [" assert.deepEqual(closed.validateCurrentAtlasDelivery(),revision56);"," assert.deepEqual(closed.validateCurrentAtlasDelivery(),revision56);\n assert.equal(sha(closed.readRevision56('components/HeadAtlasViewer.tsx',{readLive:()=>{throw Error('isolated reader reached live viewer');}})),'06b4c293f5931f5cd0e36471de46718c6bbf26ea3500ec24c57c4de15e476841');"],
+  ["  cpSync(new URL('./historical-current-atlas-delivery-56.mjs',import.meta.url),join(tests,'historical-current-atlas-delivery-56.mjs'));","  cpSync(new URL('./historical-current-atlas-delivery-56.mjs',import.meta.url),join(tests,'historical-current-atlas-delivery-56.mjs'));\n  cpSync(new URL('./historical-website-root.mjs',import.meta.url),join(tests,'historical-website-root.mjs'));"],
  ]],
 ];
 
@@ -66,6 +67,12 @@ for(const [name,digest,candidate,edits] of cases)test(name+' preserves every old
   for(const [before,after] of closed56CurrentEdits.toReversed()){assert.equal(inverse.split(after).length,2,after);inverse=inverse.replace(after,before);}
   assert.equal(inverse,previous,'Complete epoch migration inverse');
  }
- assert.equal(readFileSync(new URL('./'+candidate,import.meta.url),'utf8'),exact);
+ const actual=readFileSync(new URL('./'+candidate,import.meta.url),'utf8');
+ const difference=[...actual].findIndex((value,index)=>value!==exact[index]);
+ assert.equal(actual===exact,true,`${name} first difference ${difference}; lengths ${actual.length}/${exact.length}; actual=${JSON.stringify(actual.slice(difference,difference+80))}; expected=${JSON.stringify(exact.slice(difference,difference+80))}`);
+ let inverse=exact;
+ if(name==='closed56-femoral-epoch.test.mjs')for(const [before,after] of closed56CurrentEdits.toReversed()){assert.equal(inverse.split(after).length,2,after);inverse=inverse.replace(after,before);}
+ for(const [before,after] of edits.toReversed()){assert.equal(inverse.split(after).length,2,after);inverse=inverse.replace(after,before);}
+ assert.equal(inverse,original.toString('utf8'),'Complete closed57 original inverse');
  assert.notEqual(exact+'\n',exact);
 });

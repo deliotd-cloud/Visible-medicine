@@ -1,0 +1,26 @@
+{
+  "label": "ACTUAL_LAST_TWO_FAILED_CASES",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "--test-name-pattern=actual current Atlas HEAD and Review|four exact coronary arterial X-ray",
+    "tests/clinical-review-cervical-disc-tour.test.ts",
+    "tests/clinical-review-coronary-xray.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-last-two-context-proposals/ACTUAL_LAST_TWO_FAILED_CASES.log",
+  "logSha256": "72f85cf545bc82d11d984bc3a9a403054cb38fc441a0ed8c638e7910573e42eb",
+  "footer": [
+    "ℹ tests 2",
+    "ℹ pass 2",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

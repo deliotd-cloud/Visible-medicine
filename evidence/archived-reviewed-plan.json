@@ -1,0 +1,78 @@
+{
+  "schema": "vm-reviewed-test-repair-batch-1",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "runOutput": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+  "files": [
+    {
+      "path": "tests/historical-current-atlas-delivery-56.mjs",
+      "beforeSha256": "803cc6461fba09a0191d4966feee7eeba6795d7f3e94d81d4e88691a1b0bdee8",
+      "afterSha256": "e4039e73ac0c4ab1a249b222c026496a914837e918720f7a7dfecb6064e6f4be"
+    },
+    {
+      "path": "tests/historical-current-atlas-delivery-57.mjs",
+      "beforeSha256": "1f01aa5084580ee0a8b114d23662995b107a2034fa8697647dec88ce32f911e8",
+      "afterSha256": "7b6fb0895e0d9f13b631b52fe0d1966a5ac1c1b64b5bb121c15396be6bcd0153"
+    },
+    {
+      "path": "tests/current-atlas-delivery-56-closed.test.mjs",
+      "beforeSha256": "0084a518027317519a3bb4d741ad7afef701526d748667ce4b166903f648d719",
+      "afterSha256": "2f7e722f1dbac35ef77e400fe5146750179110fbd5d1d634320f5416f79408c3"
+    },
+    {
+      "path": "tests/current-atlas-delivery-57-closed.test.mjs",
+      "beforeSha256": "6dbb71c569580dc4626ef49ebf320a88ab2280ee4466138730f453f81561772c",
+      "afterSha256": "997ca83be7861779a6b7a4e95b1c02d36b856e391ebcb11c8821ce0fa8b80b9e"
+    },
+    {
+      "path": "tests/closed56-original-tests.test.mjs",
+      "beforeSha256": "feb749010cc69684bf11a66783bea9a835352f6c68444843eda738ea9bbd7144",
+      "afterSha256": "98b250943d8d0e671446601a94eee76cdb25a8cf9e0378b91e3d9b3b1f723552"
+    },
+    {
+      "path": "tests/closed57-original-tests.test.mjs",
+      "beforeSha256": "e47468ffb373a6e858761d2132e6047c4b32c9c663a0e68e1d5f12c187c53aaf",
+      "afterSha256": "926a8367daa7311ab955b25a5fc47b0ae1edae7845a3d4229bc2b9e0fed631da"
+    },
+    {
+      "path": "tests/historical-head-toolbar-css-extension.test.mjs",
+      "beforeSha256": "ce8999de765b6631f0a0df40298d6e4f000b12c8b85d433f8d7d912493ea86f1",
+      "afterSha256": "ed5e97efb13abf3df17bea0d4175bd61b58101b35a086909672ac7091373ce19"
+    },
+    {
+      "path": "tests/closed56-femoral-epoch.test.mjs",
+      "beforeSha256": "5ad472a41722200db66771ebbf2b990782f5b80b15565d90293c68f40da63992",
+      "afterSha256": "bb6a8d631f190915f55d5ac4b5cdceb214691079b6502086f0d07c168026f037"
+    },
+    {
+      "path": "tests/historical-website-root.mjs",
+      "beforeSha256": null,
+      "afterSha256": "260ceaa8f17465acb137620e639dc3f12933c1b31493afa83434fa64260fa1cc"
+    },
+    {
+      "path": "tests/historical-website-root.test.mjs",
+      "beforeSha256": null,
+      "afterSha256": "702750035b329415c4a425bece2a40aa40ed5ba18d77ea90bb7b7575b1cc18bb"
+    },
+    {
+      "path": "tests/historical-old57-root-source-preservation.test.mjs",
+      "beforeSha256": null,
+      "afterSha256": "274bae468f29bf37b5d1f82289935756b41d84437b59728045c1b5c1b07bfd91"
+    },
+    {
+      "path": "tests/closed56-live-preservation.mjs",
+      "beforeSha256": "573ca775702fdca31cb22a03640a61e8510714b71bd60499244fa249148ea9e7",
+      "afterSha256": "91db3ee295c49991dcd1943e97ddb0e40c5d943697e64854bc7dd34c0f2df242"
+    },
+    {
+      "path": "tests/closed56-live-preservation.test.mjs",
+      "beforeSha256": "f64cc09e90dbdfc11fd3b93022282aa259900baf24fc7365ee9685a2209f21af",
+      "afterSha256": "49bd6c57054d9e2788d41906b66415ddb5325c59c8a63f3321313a394ee935b7"
+    },
+    {
+      "path": "tests/closed56-live-context-repair-contract.test.mjs",
+      "beforeSha256": null,
+      "afterSha256": "e44381435701b71f17cf3144f2d7d017e03fede6b012a1e6b6f7473a3391bff5"
+    }
+  ],
+  "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-authenticated-old-contexts-applied"
+}

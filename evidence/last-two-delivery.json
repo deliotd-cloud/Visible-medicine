@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-20T19:13:14.603Z",
+  "actualPreviouslyFailedCases": 2,
+  "preservationCases": 9,
+  "namedPreviousInputsVerified": 5023,
+  "changedPaths": [
+    "tests/clinical-review-cervical-disc-tour.test.ts",
+    "tests/cervical-exact-history.mjs",
+    "tests/clinical-review-cervical-disc-tour-preservation.test.mjs",
+    "tests/clinical-review-coronary-xray.test.ts",
+    "tests/next-five-admission-contract.test.mjs",
+    "tests/cervical-current-history-context-contract.test.mjs"
+  ],
+  "allOtherNamedInputsUnchanged": true,
+  "originalHistoricalAssertionsRetained": true,
+  "productionCodeChanged": false,
+  "canonicalInstalled": false
+}

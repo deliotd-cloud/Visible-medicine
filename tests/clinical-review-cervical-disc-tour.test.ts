@@ -3,6 +3,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {existsSync,readFileSync} from 'node:fs';
 import {resolve} from 'node:path';
+import {pathToFileURL} from 'node:url';
 import {isDeepStrictEqual} from 'node:util';
 import test from 'node:test';
 import {build} from 'esbuild';
@@ -349,10 +350,11 @@ test('actual current Atlas HEAD and Review preserve the cervical tour and exact 
  assert.equal(oldRenderer.sha256,sha(JSON.stringify({source:oldSourceRenderer.sha256,website:beforeIntegration})));
  assert.notEqual(sourceRenderer.sha256,oldSourceRenderer.sha256);
  assert.deepEqual(readFileSync('atlas-review/'+catalogPath),git(deliveryRevision,catalogPath));
+ const currentHistory=(await import(pathToFileURL(resolve(atlas,'scripts/exact-source-history-api.mjs')).href)).exactSourceHistoryApi;
  const live=await imported(),introduced=await exactSourceHistoryApi(introduction,'regional-tour-review');
- const source=await exactSourceHistoryApi(deliveryRevision,'regional-tour-review');
- const sourceNested=await exactSourceHistoryApi(deliveryRevision,'nested-review-security');
- const sourceSpecimen=await exactCervicalHistory(deliveryRevision,'specimen');
+ const source=await currentHistory(deliveryRevision,'regional-tour-review');
+ const sourceNested=await currentHistory(deliveryRevision,'nested-review-security');
+ const sourceSpecimen=await exactCervicalHistory(deliveryRevision,'specimen',atlas);
  const catalog=live.bodyDisplayCatalog(json('atlas-review/'+catalogPath));
  assert.deepEqual(catalog,source.bodyDisplayCatalog(JSON.parse(git(deliveryRevision,catalogPath).toString())));
  const tour=live.regionalTours.find((item:ReviewPacket)=>item.id===tourId),

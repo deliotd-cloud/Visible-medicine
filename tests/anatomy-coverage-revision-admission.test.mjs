@@ -22,11 +22,41 @@ function restoreDeclarations(source,replacements){
  return restored;
 }
 
-test('all prior desktop assertions reconstruct through only two subsequent coverage-delta declarations',()=>{
+test('desktop source restores its exact pre-repair body, then its raw original through the two coverage declarations',()=>{
  const original=readFileSync(fixture+'clinical-review-desktop-layout.test.mjs.raw');
  assert.equal(sha(original),'c128f73394b93ba40b1580aa07c583aef14449eae3f14368ef7b77ac88b66fc3');
  const source=readFileSync('tests/clinical-review-desktop-layout.test.mjs','utf8');
- const restored=restoreDeclarations(source,[
+ assert.equal(sha(source),'400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a','exact repaired desktop source');
+ const inverseAddition=[
+  ' inverse("import {currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from \'./current-atlas-delivery.mjs\';",',
+  '  "import {validateCurrentAtlasDelivery} from \'./current-atlas-delivery.mjs\';");',
+  ' inverse("// Independently restored, source-only 6036 recovery; absence or byte drift fails closed.\\nconst historicalRoot=\'F:/VisibleMedicine/recovery/checkpoints/20261020-checkout-history-website-backup/remote-source-restored\';\\nconst readHistorical=p=>readFileSync(historicalRoot+\'/\'+p);\\n",\'\');',
+ ].join('\n')+'\n';
+ const currentProof=[
+  "test('current 87ed delivery remains separately bound to the clean Atlas source',()=>{",
+  ' const current=validateCurrentAtlasDelivery();',
+  " assert.equal(current.source,'87ed7e343260c7df48a40d53503f25bbfd34cfa5');",
+  " assert.equal(current.sourceTree,'bfcfa898ace1d25083f21b681274c5bc816564d7');",
+  " assert.equal(current.reviewIntegration,'b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5');",
+  ' assert.equal(current.reviewSourceFiles,1548);',
+  " const bindingBytes=read('atlas-review/integration-inputs.json');",
+  " assert.equal(sha(bindingBytes),'acbad30ecf452317221384c708022b3f5f2d4c3e8042ca82e572f91507bb43d7');",
+  ' assert.equal(JSON.parse(bindingBytes).inputs.length,1696);',
+  ' currentAtlasDeliveryRoot();',
+  '});',
+  '',
+ ].join('\n')+'\n';
+ const beforeRepair=restoreDeclarations(source,[
+  [inverseAddition,''],
+  ["import {currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';","import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';"],
+  ["// Independently restored, source-only 6036 recovery; absence or byte drift fails closed.\nconst historicalRoot='F:/VisibleMedicine/recovery/checkpoints/20261020-checkout-history-website-backup/remote-source-restored';\nconst readHistorical=p=>readFileSync(historicalRoot+'/'+p);\n",''],
+  [" const historicalPinBytes=readHistorical('tests/fixtures/current-atlas-delivery.json');\n assert.equal(sha(historicalPinBytes),'0ee28eaffe4fc13e32f124d7d48eea18e90b34f3cfaf1a55959fdabba90e573a');\n const current=validateCurrentAtlasDelivery({pin:JSON.parse(historicalPinBytes),root:historicalRoot,read:readHistorical});"," const current=validateCurrentAtlasDelivery();"],
+  [" const historicalBindingBytes=readHistorical('atlas-review/integration-inputs.json');\n assert.equal(sha(historicalBindingBytes),'db650d87553c6e5f7830c4a19ad503a2ebdc4d8013d8344221ae03517357d0f7');\n const binding=JSON.parse(historicalBindingBytes);"," const binding=JSON.parse(read('atlas-review/integration-inputs.json'));"],
+  [" for(const row of binding.inputs)assert.equal(row.sha256,sha(readHistorical(row.path)),row.path);"," for(const row of binding.inputs)assert.equal(row.sha256,sha(read(row.path)),row.path);"],
+  [currentProof,''],
+ ]);
+ assert.equal(sha(beforeRepair),'6694611b999fa994aede297093d129c93c66983e66db48accdcc86c6a955cf6f','exact pre-repair desktop source');
+ const restored=restoreDeclarations(beforeRepair,[
   ["  'docs/anatomy-coverage/index.json','lib/anatomy-coverage-view.ts',\n",''],
   ['assert.equal(before.inputs.length-changed.filter(row=>oldRows.has(row.path)).length,1675);','assert.equal(before.inputs.length-changed.filter(row=>oldRows.has(row.path)).length,1677);'],
  ]);

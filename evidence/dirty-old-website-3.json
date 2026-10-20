@@ -1,0 +1,23 @@
+{
+  "label": "ACTUAL_DIRTY_HISTORICAL_WEBSITE_REFUSAL",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "tests/historical-website-root.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-authenticated-old-delivery-reviewed/ACTUAL_DIRTY_HISTORICAL_WEBSITE_REFUSAL.log",
+  "logSha256": "c0ad5ae08ac91195de6abaf77299757b31d8f8c024da41d690752716b4b709fb",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 3",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

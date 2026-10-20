@@ -1,0 +1,24 @@
+{
+  "label": "HEAD_HISTORY_CLIENT_ACTUAL_ORIGINAL",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/head-view-history-client.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-head-client-keyboard-harness/HEAD_HISTORY_CLIENT_ACTUAL_ORIGINAL.log",
+  "logSha256": "ae242baedd139b04a3f45b049f96f6acc959a37c1e0eff906c7be52c5a84a387",
+  "footer": [
+    "ℹ tests 6",
+    "ℹ pass 6",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

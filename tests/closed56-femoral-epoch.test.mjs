@@ -73,6 +73,7 @@ test('closed56 shape is independent of live/default documents and rejects change
   const tests=join(root,'tests'),fixtures=join(tests,'fixtures');
   mkdirSync(fixtures,{recursive:true});
   cpSync(new URL('./historical-current-atlas-delivery-56.mjs',import.meta.url),join(tests,'historical-current-atlas-delivery-56.mjs'));
+  cpSync(new URL('./historical-website-root.mjs',import.meta.url),join(tests,'historical-website-root.mjs'));
   for(const name of ['current-atlas-delivery-56.json','closed56-documents','closed56-validator','closed56-inputs'])cpSync(new URL(name,fixture),join(fixtures,name),{recursive:true});
   writeFileSync(join(tests,'current-atlas-delivery.mjs'),"throw Error('live validator must not load');\n");
   writeFileSync(join(fixtures,'current-atlas-delivery.json'),'{"corrupt":true}\n');
