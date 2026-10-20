@@ -8,6 +8,7 @@ import { spinalMuscleXrayLesson } from '../lib/spinal-muscle-xray';
 import { handVesselXrayLesson } from '../lib/hand-vessel-xray';
 import { lowerLimbConnectiveXrayLesson } from '../lib/lower-limb-connective-xray';
 import { pectoralBranchUltrasoundLesson } from '../lib/pectoral-branch-ultrasound';
+import { ileocolicArteryUltrasoundLesson } from '../lib/ileocolic-artery-ultrasound';
 import { arterialEvidenceLimitLesson } from '../lib/arterial-evidence-limits';
 import { dorsalHandUltrasoundLesson } from '../lib/dorsal-hand-ultrasound';
 import { laryngealInletImagingLesson } from '../lib/laryngeal-inlet-imaging';
@@ -452,6 +453,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (commissuralQuiz) return commissuralQuiz;
   const pectoralUltrasound = pectoralBranchUltrasoundLesson(s, tab);
   if (pectoralUltrasound) return pectoralUltrasound;
+  const ileocolicUltrasound = ileocolicArteryUltrasoundLesson(s, tab);
+  if (ileocolicUltrasound) return ileocolicUltrasound;
   const orbitalSupportQuiz = orbitalSupportQuizLesson(s, tab);
   if (orbitalSupportQuiz) return orbitalSupportQuiz;
   const ocularSupportQuiz = ocularSupportQuizLesson(s, tab);

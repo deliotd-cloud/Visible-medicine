@@ -6,6 +6,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
+    "ileocolic-artery-ultrasound:test": "node scripts/test-ileocolic-artery-ultrasound.mjs",
     "corpus-spongiosum-xray-v2:test": "node --test scripts/test-corpus-spongiosum-xray-v2.mjs",
     "lacrimal-drainage-ultrasound:test": "node scripts/test-lacrimal-drainage-ultrasound.mjs",
     "abdominal-radial-eus:test": "node scripts/pin-abdominal-radial-eus.mjs --check && node scripts/test-abdominal-radial-eus-unit.mjs && node scripts/test-abdominal-radial-eus.mjs",

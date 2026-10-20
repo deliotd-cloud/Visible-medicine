@@ -1,13 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-19T22:39:30.344Z",
+  "at": "2026-10-20T03:46:34.117Z",
   "sourceIdentity": {
-    "product": "Atlas source delta only",
+    "product": "Atlas source delta with integrated ileocolic ultrasound draft",
     "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
-    "head": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-    "tree": "44ca83bf391164c09f43f4169d25dcacf4b2559d"
+    "prior": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "head": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+    "tree": "7c0b886d66d2adf64d6d29e44938f39d8cd61046",
+    "canonicalInstalled": false
   },
-  "parent": null,
+  "parent": "a1ffb9d1ce4bae6673c754dd26e2098c3a7833fd",
+  "gitParent": "a1ffb9d1ce4bae6673c754dd26e2098c3a7833fd",
   "files": [
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
@@ -16,8 +19,8 @@
     },
     {
       "path": "app/body-content.ts",
-      "bytes": 82089,
-      "sha256": "f83c1a6b70109ebf1871cb7314d57c13f6e508dc401075aeb0e5fc3b3d029e07"
+      "bytes": 82301,
+      "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
     },
     {
       "path": "app/whole-body-guided-learning.tsx",
@@ -26,13 +29,13 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "bytes": 213803,
-      "sha256": "9e5c5ee722237cb908f7a181973c54cfa675ec05d7e6ef2ec740aaa1d7fe2362"
+      "bytes": 213951,
+      "sha256": "7fc24eec7516952598c508c6213dea4ae010af432fa2f745ce2c6556712b632f"
     },
     {
       "path": "content/body-review-display-pins.json",
       "bytes": 203217,
-      "sha256": "351494d4a5076191c49cb596bfa6c1a287966e31e6992272e47f291dc7990678"
+      "sha256": "92b3debfbd966e4d49d7fe899763032baa4a87a373fbc8c5590f61f94efb9f4a"
     },
     {
       "path": "content/corpus-spongiosum-xray-v2.pins.json",
@@ -1505,6 +1508,11 @@
       "sha256": "75b04825b373da5b839d477d895b6acb0d7fa2df5fcd844efa25cb332f5388a6"
     },
     {
+      "path": "content/regional-teaching/abdomen.json",
+      "bytes": 916191,
+      "sha256": "19f318f4d3e342ee0f1b68c7232cbf9249e828fa9802d264a20f0aa6cd9eaff0"
+    },
+    {
       "path": "content/regional-teaching/pelvis.json",
       "bytes": 451191,
       "sha256": "5eef430cbd99143ad46911b8bbbd6ad7d997ba19f66fd92d846f81fc269b517a"
@@ -1515,14 +1523,24 @@
       "sha256": "aa860fb1a540e30e49041922f845ada795d59fe24af62139b8e28ecb2e525654"
     },
     {
+      "path": "docs/ILEOCOLIC_ARTERY_ULTRASOUND.md",
+      "bytes": 1923,
+      "sha256": "a64b052af8c1bdad5e7151facac9c1cc0fa42ee45afef27708fba296e520fa76"
+    },
+    {
       "path": "lib/corpus-spongiosum-xray-v2.ts",
       "bytes": 1346,
       "sha256": "0365d2590428e3b57f87d808fa9d252433fcaef56b1ddffb36de6390cc8ed54e"
     },
     {
+      "path": "lib/ileocolic-artery-ultrasound.ts",
+      "bytes": 3594,
+      "sha256": "76c9eb7266eb961d1363b1d6f19f4bf93634f3017455397bd3d683b81169a1df"
+    },
+    {
       "path": "package.json",
-      "bytes": 85920,
-      "sha256": "7d514e10242912ae63e9419fa7b02c23b600a42d30d44e77e09ca28bf76ee36b"
+      "bytes": 86013,
+      "sha256": "3fdd2cd598b0014ca2d3b67c6704313759190a5584253d25b7700369e42b89fe"
     },
     {
       "path": "scripts/celiac-display-epoch-bridge.mjs",
@@ -1595,6 +1613,11 @@
       "sha256": "b7be176ecf54862faa22391bd68d33782639b65ae34dbe92ba33e2a746dbd163"
     },
     {
+      "path": "scripts/test-ileocolic-artery-ultrasound.mjs",
+      "bytes": 11316,
+      "sha256": "e57b760c94bb380029887c7b9fa5f2ae7c9b719a3eaf6528c8e993168b4c5788"
+    },
+    {
       "path": "scripts/test-post-foot-history-context.mjs",
       "bytes": 1388,
       "sha256": "41cd28cf759a3766b1e8cec37badb792df238013d5ebb80e6130e2f2e2356854"
@@ -1616,214 +1639,73 @@
     }
   ],
   "removed": [],
-  "scope": "Exact321text-path Atlas delta from f5097af8 to bd5465ee, including source-era history repair, independently authored NCI/CC-BY4 WSES-AAST X-ray draft and tour-finder keyboard recovery. This is NOT a standalone full Atlas checkout; recover with the separately retained exact baseline f5097af8. No raw canonical Git ancestry, meshes, patient scans, identifiers, masks, database, private asset module or held EAU draft is included. Original source/attribution notices retained. Actual focused checks, semantic types, stock four-module/Review builds and35Website cases plus desktop keyboard check are evidence only for their stated scopes; no all-suite, fullAT, clinical, registration, copyright-release or public-deployment claim. Canonical source, owner preview and unsaved lecture remain untouched.",
+  "scope": "Source-only recovery delta from exactf5097af8 baseline, carrying the previously screened321text-path bd5465ee delta and this reviewed8-path teaching change. Not a standalone full Atlas checkout or patient/private-data backup. Recover with separately retained baseline and source models; normal source-bound Website ingestion/build and human review remain required. No raw canonical ancestry, scans, masks, new mesh/image/font/texture/dependency or private asset module. Draft only, no clinical, registration, release or public-deployment approval.",
   "proof": {
-    "readySha256": "43830ece45f091c7e1facec1b09b7ee3f2cf9a18e40a3abeb74c1a8214190165",
-    "screenSha256": "952587a6d786f4d4dc9963ad55ca43103d77f4a3354d26443a9a7a114ec47b15",
-    "classificationSha256": "a89470f89666271cb22896631396a4ed9c33c88098c46bfe2e82667c8916a437",
-    "mainCompleteIdEquality": true,
-    "mainClassification": [
-      {
-        "path": "content/body-review-display-pins.json",
-        "allStringOccurrences": 21,
-        "distinctCompleteIdentifiers": 21,
-        "everyCompleteValueEqualAdmittedBaseline": true
-      },
-      {
-        "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
-        "allStringOccurrences": 19,
-        "distinctCompleteIdentifiers": 19,
-        "everyCompleteValueEqualAdmittedBaseline": true
-      },
-      {
-        "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
-        "allStringOccurrences": 38,
-        "distinctCompleteIdentifiers": 19,
-        "everyCompleteValueEqualAdmittedBaseline": true
-      }
+    "schema": "vm-ileocolic-source-acceptance/1",
+    "at": "2026-10-20T03:46:31.754Z",
+    "baseline": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "head": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+    "tree": "7c0b886d66d2adf64d6d29e44938f39d8cd61046",
+    "transitionSha256": "194912abd24fbe7e79082d74e8158b79db2c3e1c3b5737440e2be17e30f2e76a",
+    "changedPaths": [
+      "app/body-content.ts",
+      "content/body-renderer-revision.json",
+      "content/body-review-display-pins.json",
+      "content/regional-teaching/abdomen.json",
+      "docs/ILEOCOLIC_ARTERY_ULTRASOUND.md",
+      "lib/ileocolic-artery-ultrasound.ts",
+      "package.json",
+      "scripts/test-ileocolic-artery-ultrasound.mjs"
     ],
-    "initialPreflightRefusal": "Main counted38 repeated historical string occurrences against the worker19 distinct semantic identifiers. Before any network/write, refused. Corrected metric to unique IDs while still independently checking EVERY full string against admitted baseline; original worker reports retained.",
-    "screen": {
-      "schema": "visible-medicine-source-egress-screen-v1",
-      "scope": "read-only immutable Atlas Git delta; this is not push authority, a whole-product copyright opinion, clinical approval, or release approval",
-      "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
-      "head": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-      "headSubject": "Restore keyboard focus when closing the guided tour finder",
-      "summary": {
-        "changedPaths": 321,
-        "changedBytes": 9200556,
-        "reviewedNoEgressBlocker": 318,
-        "hold": 3,
-        "binaryOrMediaBlobs": 0,
-        "patientOrDicomMarkerMatches": 0,
-        "commonCredentialMarkerMatches": 0,
-        "heldEauMarkerMatches": 0,
-        "genericSkPatternMatches": 3
-      },
-      "scan": {
-        "rowHash": "SHA-256 of sorted `path + space + immutable Git blob id` rows for the row's complete path set",
-        "methods": [
-          "immutable Git blob size and object-id inventory",
-          "UTF-8/text inspection and JSON schema/key inventory",
-          "redacted pattern screen for common cloud/API keys, private keys, patient/DICOM identifiers, and the held EAU source"
-        ],
-        "limitations": "Absence of these markers does not establish all-source rights, privacy, or commercial-release clearance. Historical teaching records are project snapshots, not a new licence grant."
-      },
-      "rows": [
-        {
-          "path": "content/post-foot-author-history/author-epochs/*.json except d77054e28f42b4fe99e6ad9519defde7603c7485.json",
-          "files": 142,
-          "bytes": 3510044,
-          "hash": "0509876bb9f9b536db91a5f7d8abcf085ad0754964b5e4d540dff31178e65ee1",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "JSON author-epoch snapshots contain commit/tree/catalog hashes, pin/transition records and changed/preserved teaching entries. No binary, patient/DICOM, common credential or EAU marker matched."
+    "sourcePaths": 325,
+    "focused": {
+      "baseline": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+      "changedTopics": 1,
+      "unchangedTopics": 9935,
+      "changedReviewPackets": 1,
+      "unchangedReviewPackets": 1103,
+      "validatedRecords": 1104,
+      "identityRefusals": 39,
+      "staleReviewRefused": true,
+      "tamperedReviewRefused": 3,
+      "serverRevisionRefusals": 3,
+      "actualNoteCallbackRenders": 1,
+      "totals": {
+        "before": {
+          "draft": 9337,
+          "pending": 560,
+          "generated-identification": 39
         },
-        {
-          "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
-          "files": 1,
-          "bytes": 47788,
-          "hash": "069eab4d3263de17ab739b601ec2ba44bb793bd993447a0b6b1bc668069ec85c",
-          "verdict": "HOLD",
-          "reason": "A generic secret-shaped string matched. Value is deliberately redacted; exclude or investigate before any egress."
-        },
-        {
-          "path": "content/post-foot-author-history/configs/*.json except git-author-d77054e2.json",
-          "files": 145,
-          "bytes": 3982871,
-          "hash": "6eca8bb026a56d0cc304f061bf94cf1d65987575a2487e50d3b0360908e7bbe3",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "JSON pin/transition configuration records; the same text and marker screen found no patient/DICOM, common credential, EAU or binary content."
-        },
-        {
-          "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
-          "files": 1,
-          "bytes": 56061,
-          "hash": "ff1c782c1ec8170f87036620475573358eb03d889347a530c36a99fc421ca509",
-          "verdict": "HOLD",
-          "reason": "Paired historical config has the same redacted generic secret-shaped match; exclude or investigate before egress."
-        },
-        {
-          "path": "content/post-foot-author-history/{combined-replay-index.json,helper-manifest.json}",
-          "files": 2,
-          "bytes": 112416,
-          "hash": "d7a22acd3ae49874dafa66d65659d0503d3db6657ac0dc48534a47c8ca89e6a4",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "Replay index/helper metadata only; no prohibited marker or non-text blob found."
-        },
-        {
-          "path": "scripts/* and tests/exact-short-ciliary-epoch-context.test.mjs",
-          "files": 18,
-          "bytes": 83391,
-          "hash": "d65e55988f37de7f3ddc6a08a74844622efe6757bf14c0f0bfea83738eb8f1aa",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "Project history/test tooling and the guided-tour Escape regression; text code only."
-        },
-        {
-          "path": "app/{body-content.ts,whole-body-guided-learning.tsx}, content/{body-renderer-revision.json,regional-teaching/pelvis.json}, package.json",
-          "files": 5,
-          "bytes": 840161,
-          "hash": "26049b54baad2c8bc9a3234d55fdf986446af45c5dead02ad9d032b92fe2d573",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "Project dispatcher/UI/revision metadata and package script changes; no raw geometry, media, private-reference or screened marker found."
-        },
-        {
-          "path": "content/body-review-display-pins.json",
-          "files": 1,
-          "bytes": 203217,
-          "hash": "71f929ff243a4f04340720945e566a1644e8dc32254d50962071d2b0b902e1e0",
-          "verdict": "HOLD",
-          "reason": "A generic secret-shaped string matched. Value is deliberately redacted; exclude or investigate before egress."
-        },
-        {
-          "path": "{content,docs,lib}/corpus-spongiosum-xray-v2*",
-          "files": 5,
-          "bytes": 12653,
-          "hash": "a1ba39672592a9f42b18e082eb56210113a5fafa8fe557dcd5e0559e44b26191",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "Independent original educational wording with NCI and CC-BY 4.0 WSES attribution/change/no-endorsement record; no EAU text, image, table, patient data or scan is present. Clinical review and publication remain separate."
-        },
-        {
-          "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-          "files": 1,
-          "bytes": 351954,
-          "hash": "fa793fb51489d33738fc7282c2269db3f5244d026866735061ff62e9312558bc",
-          "verdict": "REVIEWED_NO_EGRESS_BLOCKER",
-          "reason": "Attribution/notice text. This review does not certify every inherited dependency or source right."
+        "after": {
+          "draft": 9338,
+          "pending": 559,
+          "generated-identification": 39
         }
-      ],
-      "redactedHolds": [
-        "content/body-review-display-pins.json",
-        "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
-        "content/post-foot-author-history/configs/git-author-d77054e2.json"
-      ],
-      "recommendation": "Do not push this full head while the three holds remain. A later source-only checkpoint may use the 318 reviewed paths only after its own exact-path manifest/re-hash, or may resolve the holds without exposing their values."
+      },
+      "clinicalApproval": false,
+      "patientRegistration": false,
+      "imagesImported": false
     },
-    "classification": {
-      "schema": "visible-medicine-generic-pattern-classification-v1",
-      "scope": "read-only classification of the three redacted generic-pattern holds in immutable f509 -> bd5465ee3b94c66c3d5701e7749099d07e8f40d3 blobs; no values are recorded",
-      "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
-      "head": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-      "pattern": "sk-[A-Za-z0-9_-]{16,}",
-      "baselineSemanticSchema": {
-        "path": "content/body-review-display-pins.json",
-        "location": "$.pins[*].structureId",
-        "meaning": "already-admitted public anatomical structure identifier"
-      },
-      "rows": [
-        {
-          "path": "content/body-review-display-pins.json",
-          "location": "$.pins[*].structureId",
-          "matchedCount": 21,
-          "matchLengths": [
-            27,
-            28,
-            29,
-            30,
-            31,
-            32
-          ],
-          "shape": "lowercase hyphenated substring within an anatomical structure identifier",
-          "baselineEquality": "all 21 complete identifiers exactly equal f509 $.pins[*].structureId values",
-          "classification": "PUBLIC_ANATOMICAL_SLUG_FALSE_POSITIVE",
-          "verdict": "RESOLVED_NO_CREDENTIAL_INDICATOR"
-        },
-        {
-          "path": "content/post-foot-author-history/author-epochs/d77054e28f42b4fe99e6ad9519defde7603c7485.json",
-          "location": "$.entries[*].identity.id",
-          "matchedCount": 19,
-          "matchLengths": [
-            27,
-            28,
-            29,
-            30,
-            31,
-            32
-          ],
-          "shape": "historical snapshot reference to an anatomical structure identifier",
-          "baselineEquality": "all 19 complete identifiers exactly equal f509 $.pins[*].structureId values",
-          "classification": "PUBLIC_ANATOMICAL_SLUG_FALSE_POSITIVE",
-          "verdict": "RESOLVED_NO_CREDENTIAL_INDICATOR"
-        },
-        {
-          "path": "content/post-foot-author-history/configs/git-author-d77054e2.json",
-          "location": "$.pins.entries[*].identity.id",
-          "matchedCount": 19,
-          "matchLengths": [
-            27,
-            28,
-            29,
-            30,
-            31,
-            32
-          ],
-          "shape": "historical pin configuration reference to an anatomical structure identifier",
-          "baselineEquality": "all 19 complete identifiers exactly equal f509 $.pins[*].structureId values",
-          "classification": "PUBLIC_ANATOMICAL_SLUG_FALSE_POSITIVE",
-          "verdict": "RESOLVED_NO_CREDENTIAL_INDICATOR"
-        }
-      ],
-      "conclusion": "The detector matched a substring of public anatomical IDs rather than a credential. This resolves only the generic-pattern holds in atlas-delta.json; it does not alter that report, clear unrelated source rights, authorize egress, or establish clinical/privacy/release approval."
-    }
+    "nativeReceiptSha256": "4254fec47965ad9f73c185585c1c435221f984cccecbe1e7e9b7538593c511a0",
+    "regional": {
+      "cases": 21,
+      "pass": 21,
+      "fail": 0,
+      "receiptSha256": "9a640d3134382976b90d32e3b0ba8db4c5e4f1fa5742850f870b316fadfc850b",
+      "limits": "Other entries in this earlier batch failed before correction; its manifest is not an overall pass."
+    },
+    "types": {
+      "diagnostics": 0,
+      "receiptSha256": "2780f47183103f1621b0c9c6c656289a2c99a590f89bff0200e6d824f6aac9e1"
+    },
+    "preservation": "All9936placements compared; only1ultrasound topic and1of1104review packets/display pins change. All39source-leaf/shape holds and3actual in-process server revision refusals pass. Source catalogue/manifest bytes and all other regional snapshots remain exact. New renderer source identity72151b4d covers1473dependencies and requires its own review; no saved approval is transferred.",
+    "rights": "Original text and citations only; no article figure, scan, mask, table, abstract, dataset, dependency or new geometry/font/texture is included. Publication figures are not asserted commercially reusable.",
+    "retainedFailures": "New worktree CRLF conversion correctly failed byte-bound source checks; exact clean-baseline bytes restored for5733proved newline-only files without changing source pins or Git configuration. New dispatch inverse test normalized line endings. Stale display pins initially refused new teaching, then stock pins/snapshots/renderer generators ran. Initial new test incorrectly expected client materialHash recomputation; actual contract distinguishes pinned display from server recomputation. It now retains that transport distinction and proves three server-side409 refusals before any storage. Independent renderer witness initially expected display pins as a dependency; actual graph excludes them and separately verifies the1104display pins. Initial command parsed unquotedPowerShell HEAD^{tree}; commit succeeded and actual tree was read with Git argv, no retry commit.",
+    "limits": "Independent Atlas source candidate, not installed in canonical Atlas or Website, not a production/build/browser/GPU/clinical/release acceptance or full-suite pass. Owner preview3000 and open lecture untouched/save unconfirmed. Existing321source-delta parent is screened source-only; no raw canonical Git ancestry/private data is pushed.",
+    "canonicalInstalled": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "productionBuild": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
