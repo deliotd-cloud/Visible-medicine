@@ -1,0 +1,26 @@
+{
+  "label": "FULL_HAND_AND_FEMORAL_ORIGINAL_MODULES",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-femoral-arterial-xray.test.ts",
+    "tests/clinical-review-femoral-venous-xray.test.ts",
+    "tests/clinical-review-hand-arterial-xray.test.ts"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-hand-xray-focused/FULL_HAND_AND_FEMORAL_ORIGINAL_MODULES.log",
+  "logSha256": "cc1d6f677425e765bd97ba1d28acb6292e52fdf34f008722378eb42d62d9572a",
+  "footer": [
+    "ℹ tests 6",
+    "ℹ pass 4",
+    "ℹ fail 2",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

@@ -1,0 +1,160 @@
+{
+  "schema": "vm-shared-history-focused-verification/1",
+  "at": "2026-10-20T18:29:45.367Z",
+  "stage": "F:/VisibleMedicine/staging/20261020-shared-history-contexts",
+  "site": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inferior-thyroid-mra-source",
+  "files": [
+    {
+      "path": "tests/next-five-special-admission.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/sourceEol/files/tests/next-five-special-admission.mjs",
+      "before": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/sourceEol/before/tests/next-five-special-admission.mjs",
+      "beforeSha256": "058fa9101261ad4aec3fa3e7319f8be4c38944d38a19ce4f23dece52275af97f",
+      "sha256": "541fc0cfd3fa1a936d97c5b1e38e4576d000d4f396a381f68a8030fdb3360a13",
+      "bytes": 3534
+    },
+    {
+      "path": "tests/historical-current-atlas-delivery-56.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/files/tests/historical-current-atlas-delivery-56.mjs",
+      "before": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/before/tests/historical-current-atlas-delivery-56.mjs",
+      "beforeSha256": "504fcf39ef250b8eee65d74a1e67eb1c0a5e366697d74745ebf3b040b37b6b67",
+      "sha256": "803cc6461fba09a0191d4966feee7eeba6795d7f3e94d81d4e88691a1b0bdee8",
+      "bytes": 6597
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-admission-56-closed.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/files/tests/clinical-review-femoral-arterial-admission-56-closed.test.mjs",
+      "before": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/before/tests/clinical-review-femoral-arterial-admission-56-closed.test.mjs",
+      "beforeSha256": "9aeeb08afafe80891b26c7223816ee658a7ffd8d7566d43230e9f9d66f10b5c1",
+      "sha256": "e4b06a02ec8835c464af27b0d53238c7403907e3f31d2ef9ea5cc690ccc30aeb",
+      "bytes": 3055
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-admission-56-closed.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/files/tests/clinical-review-femoral-venous-admission-56-closed.test.mjs",
+      "before": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/before/tests/clinical-review-femoral-venous-admission-56-closed.test.mjs",
+      "beforeSha256": "bc55ea15d57fe8a9577173d82905a5278b1cd198823ef9bcd8ce87cc842da005",
+      "sha256": "ac23ebb3283399696a90ebff42892e5448e6a30756d302e978734f72c73710de",
+      "bytes": 3050
+    },
+    {
+      "path": "tests/closed56-femoral-epoch.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/files/tests/closed56-femoral-epoch.test.mjs",
+      "before": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/before/tests/closed56-femoral-epoch.test.mjs",
+      "beforeSha256": "92f3d0e4907dc0cefea5b6ac01a87cc57294e95c8e30df8c667915e86b6177ae",
+      "sha256": "5ad472a41722200db66771ebbf2b990782f5b80b15565d90293c68f40da63992",
+      "bytes": 8062
+    },
+    {
+      "path": "tests/closed57-original-tests.test.mjs",
+      "from": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/files/tests/closed57-original-tests.test.mjs",
+      "before": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/before/tests/closed57-original-tests.test.mjs",
+      "beforeSha256": "7c2de17a9dbda973af4a8e43f5d05405808eb63247ce139b0a48c41d0dbd8468",
+      "sha256": "e47468ffb373a6e858761d2132e6047c4b32c9c663a0e68e1d5f12c187c53aaf",
+      "bytes": 9125
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/files/tests/clinical-review-femoral-arterial-xray.test.ts",
+      "before": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/before/tests/clinical-review-femoral-arterial-xray.test.ts",
+      "beforeSha256": "3ebc19d3097544f487171e329dc1ea104f8b34c47191cff2cbca004c31ecb2ee",
+      "sha256": "f9078eadbc4e32a6f6f99e8e6ca0f8e8230bb9ceecc766210b50e45564256e7c",
+      "bytes": 22322,
+      "fullByteInverse": true,
+      "originalModulePassed": false
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/files/tests/clinical-review-femoral-venous-xray.test.ts",
+      "before": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/before/tests/clinical-review-femoral-venous-xray.test.ts",
+      "beforeSha256": "a97bfa57eb9eaca66f0b5b19133d32988a08b931712fc105066b931921a316ef",
+      "sha256": "00cde16bc349a8e6921094f56db467f95c35694d7163c4fb47c21d8485f7f16f",
+      "bytes": 22032,
+      "fullByteInverse": true,
+      "originalModulePassed": false
+    },
+    {
+      "path": "tests/clinical-review-hand-arterial-xray.test.ts",
+      "from": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/files/tests/clinical-review-hand-arterial-xray.test.ts",
+      "before": "F:/VisibleMedicine/staging/20261020-review-regression-wave/roots/before/tests/clinical-review-hand-arterial-xray.test.ts",
+      "beforeSha256": "f5b6ecb146c27d30e44c12324cbaa939f57112584f2a4392a7a1ab54dc895dd9",
+      "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a",
+      "bytes": 21508,
+      "fullByteInverse": true,
+      "originalModulePassed": false
+    }
+  ],
+  "checks": [
+    {
+      "receipt": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/sourceEol/SOURCE_EOL_ACTUAL_STRICT_V2.json",
+      "receiptSha256": "5eeba4883339829d1d65cab932cf8f9505541469acbb4e1a2c333f9410774b53",
+      "log": "F:\\VisibleMedicine\\staging\\20261020-shared-history-contexts\\sourceEol/SOURCE_EOL_ACTUAL_STRICT_V2.log",
+      "logSha256": "33be9cfa8a79040833a9ad93ba4c1bdb2b2aa228a5c661d0b8701cfd99a4faa6",
+      "cases": 11,
+      "scope": "Actual unmodified staged helper and strict current validators; synthetic read-result corruption, exact inverse"
+    },
+    {
+      "receipt": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/CLOSED56_ACTUAL_GUARDS_AND_EPOCH.json",
+      "receiptSha256": "fb41edcc130b5caa1acb2efaccb125527239e562fb4fd79d63dee976536dd8e9",
+      "log": "F:\\VisibleMedicine\\staging\\20261020-shared-history-contexts\\closed56/CLOSED56_ACTUAL_GUARDS_AND_EPOCH.log",
+      "logSha256": "25ad2171407d6630987f8e2f83d6d1af8852d51613c8461b978fd31fa707c3fc",
+      "cases": 10,
+      "scope": "Full two original closed femoral guards plus epoch module; independent closed reader and exact original-file inverses"
+    },
+    {
+      "receipt": "F:/VisibleMedicine/staging/20261020-shared-history-contexts/closed56/CLOSED57_ACTUAL_COMPANION.json",
+      "receiptSha256": "3bc087329b70a73b62ea84b6ff5dc584cc42d5475f378953eafc39ad8f1cf124",
+      "log": "F:\\VisibleMedicine\\staging\\20261020-shared-history-contexts\\closed56/CLOSED57_ACTUAL_COMPANION.log",
+      "logSha256": "23fc216e067784e56372a854f59e1fb94a3a3d4454f7153a7f1f89c8e064ec1f",
+      "cases": 4,
+      "scope": "Full original four-case closed57 preservation companion with exact later epoch seams"
+    },
+    {
+      "receipt": "F:/VisibleMedicine/staging/20261020-hand-xray-focused/HAND_XRAY_ACTUAL_CURRENT_SOURCE.json",
+      "receiptSha256": "98da33620ddf264105df344cb8ae625bfdaf1b53df13186830bf464d1842506a",
+      "log": "F:\\VisibleMedicine\\staging\\20261020-hand-xray-focused/HAND_XRAY_ACTUAL_CURRENT_SOURCE.log",
+      "logSha256": "ae72da51527c926a16f9a4351fd78f9f86951444abef49d8821a1ac6ee8a297b",
+      "cases": 1,
+      "scope": "Selected actual current hand source/Review/learner case, not full module"
+    },
+    {
+      "receipt": "F:/VisibleMedicine/staging/20261020-hand-xray-focused/FEMORAL_XRAY_ACTUAL_CURRENT_SOURCES.json",
+      "receiptSha256": "4efd079c55c97219412d13a5608f2dd6c2e09f359a1d49504d7e32900da82aff",
+      "log": "F:\\VisibleMedicine\\staging\\20261020-hand-xray-focused/FEMORAL_XRAY_ACTUAL_CURRENT_SOURCES.log",
+      "logSha256": "1a1790aa61538b3c6a12989248e0418846f7bd939b6a0a87037f764502739936",
+      "cases": 2,
+      "scope": "Selected actual current two femoral source/Review/learner cases, not full modules"
+    }
+  ],
+  "helperFullByteInverse": true,
+  "closed57CompanionFullByteInverse": true,
+  "guardFullByteInversesExecuted": true,
+  "epochFullByteInverse": {
+    "file": "tests/closed57-original-tests.test.mjs",
+    "beforeSha256": "7c2de17a9dbda973af4a8e43f5d05405808eb63247ce139b0a48c41d0dbd8468",
+    "epochBeforeSha256": "92f3d0e4907dc0cefea5b6ac01a87cc57294e95c8e30df8c667915e86b6177ae",
+    "epochAfterSha256": "5ad472a41722200db66771ebbf2b990782f5b80b15565d90293c68f40da63992",
+    "exactFullEpochInverse": true,
+    "explicitSeams": 6,
+    "scope": "Preserves all four original closed57 cases and raw fixture hashes; adds exact later epoch-source seams and reverse proof only."
+  },
+  "limitations": [
+    "SourceEol worker original probe stubbed strict root and is not strict-root evidence; superseded by actual V2 test.",
+    "Initial actual harness had3 failures because paths with doubled slash did not match synthetic probes. Only harness path canonicalization changed; original failure retained.",
+    "Original full content/history femoral/hand modules remain unrun.",
+    "Two other historical56 current-root callers and separate57 caller remain outside this patch; no blanket fallback added.",
+    "Current full-suite prefix is not a final result or remaining failure count.",
+    "No canonical runtime installation, owner editor refresh, mask, access, clinical or deployment changes."
+  ],
+  "fullSuite": {
+    "output": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+    "sourceInputsVerifiedUnchanged": 5019,
+    "sourceSha256": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "live": false,
+    "processes": [],
+    "terminalReceiptObserved": true,
+    "passingClaim": false
+  },
+  "canonicalInstalled": false,
+  "fullGoalActive": true
+}

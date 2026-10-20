@@ -1,0 +1,24 @@
+{
+  "label": "FULL_HEAD_IMAGE_HISTORY_ORIGINAL_MODULE",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/head-image-history.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-head-history-harness/FULL_HEAD_IMAGE_HISTORY_ORIGINAL_MODULE.log",
+  "logSha256": "7a1c5f8c1d567139c656107b25ae22f0f0abac3c7de482df5bb63daf3b13b74b",
+  "footer": [
+    "ℹ tests 187",
+    "ℹ pass 187",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

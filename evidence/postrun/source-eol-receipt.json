@@ -1,0 +1,23 @@
+{
+  "label": "SOURCE_EOL_ACTUAL_STRICT_V2",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261020-shared-history-contexts/sourceEol/source-eol-actual.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-shared-history-contexts\\sourceEol/SOURCE_EOL_ACTUAL_STRICT_V2.log",
+  "logSha256": "33be9cfa8a79040833a9ad93ba4c1bdb2b2aa228a5c661d0b8701cfd99a4faa6",
+  "footer": [
+    "ℹ tests 11",
+    "ℹ pass 11",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

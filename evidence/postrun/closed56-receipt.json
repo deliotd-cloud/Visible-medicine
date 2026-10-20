@@ -1,0 +1,25 @@
+{
+  "label": "CLOSED56_ACTUAL_GUARDS_AND_EPOCH",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "tests/clinical-review-femoral-arterial-admission-56-closed.test.mjs",
+    "tests/clinical-review-femoral-venous-admission-56-closed.test.mjs",
+    "tests/closed56-femoral-epoch.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-shared-history-contexts\\closed56/CLOSED56_ACTUAL_GUARDS_AND_EPOCH.log",
+  "logSha256": "25ad2171407d6630987f8e2f83d6d1af8852d51613c8461b978fd31fa707c3fc",
+  "footer": [
+    "ℹ tests 10",
+    "ℹ pass 10",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

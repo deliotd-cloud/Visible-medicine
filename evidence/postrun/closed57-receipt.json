@@ -1,0 +1,23 @@
+{
+  "label": "CLOSED57_ACTUAL_COMPANION",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=1024",
+    "--test",
+    "--test-concurrency=1",
+    "tests/closed57-original-tests.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-shared-history-contexts\\closed56/CLOSED57_ACTUAL_COMPANION.log",
+  "logSha256": "23fc216e067784e56372a854f59e1fb94a3a3d4454f7153a7f1f89c8e064ec1f",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

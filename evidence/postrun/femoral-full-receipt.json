@@ -1,0 +1,25 @@
+{
+  "label": "FULL_FEMORAL_ORIGINAL_MODULES_COMPLETE_MIRROR",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "tests/clinical-review-femoral-arterial-xray.test.ts",
+    "tests/clinical-review-femoral-venous-xray.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-hand-xray-focused/FULL_FEMORAL_ORIGINAL_MODULES_COMPLETE_MIRROR.log",
+  "logSha256": "e56ec8dff6ad69da7d3f9c1c7b3ffd29bd3117deb4f6833babd7aebf466748a0",
+  "footer": [
+    "ℹ tests 4",
+    "ℹ pass 4",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

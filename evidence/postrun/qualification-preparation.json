@@ -1,0 +1,46 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261020-postrun-repairs",
+  "site": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inferior-thyroid-mra-source",
+  "plans": [
+    {
+      "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-reviewed-regression-batch-applied",
+      "paths": 14
+    },
+    {
+      "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-postrun-repairs-applied",
+      "paths": 19
+    },
+    {
+      "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-head-history-harness-applied",
+      "paths": 1
+    }
+  ],
+  "changedPaths": 34,
+  "sourceInputs": 5023,
+  "sourceInputsSha256": "0f85562861573ecec5c8eb3b57d4b8173e3aeedf0c6cc5dd4c59e7036c4b2553",
+  "entries": [
+    "tests/anatomy-coverage-revision-admission.test.mjs",
+    "tests/arterial-history-preservation.test.mjs",
+    "tests/atlas-historical-manifest-prefetch.test.mjs",
+    "tests/atlas-central-airway-hepatic.test.ts",
+    "tests/atlas-circle-willis-tour.test.ts",
+    "tests/atlas-cubital-venous-ultrasound.test.ts",
+    "tests/atlas-femoral-clinical.test.ts",
+    "tests/atlas-hip-abductor-xray.test.ts",
+    "tests/atlas-scene-sizing.test.ts",
+    "tests/atlas-compact-study.test.ts",
+    "tests/atlas-coronary-arterial-study.test.ts",
+    "tests/atlas-hand-venous-imaging.test.ts",
+    "tests/atlas-glottic-muscle-imaging.test.ts",
+    "tests/clinical-review-cervical-disc-tour.test.ts",
+    "tests/clinical-review-change-notice.test.ts",
+    "tests/clinical-review-colic-arterial-xray.test.ts",
+    "tests/clinical-review-continuous-guided-playback.test.ts",
+    "tests/clinical-review-coronary-sinus-xray.test.ts",
+    "tests/atlas-thoracoabdominal-quiz.test.ts",
+    "tests/clinical-review-circle-willis.test.ts",
+    "tests/clinical-review-coronary-xray.test.ts"
+  ],
+  "scope": "Actual 21 remaining affected original test entries after explicit34test/helper-only repairs. Unchanged successful187head/6full hand-femoral/14guard/9desktop-inbox cases are not rerun merely for logs. Whole-suite acceptance, product installation and clinical/release gates remain separate."
+}

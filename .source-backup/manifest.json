@@ -1,0 +1,317 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T18:38:59.163Z",
+  "sourceIdentity": {
+    "kind": "Isolated test-only postrun qualification candidate",
+    "atlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "review": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 11243,
+      "sha256": "292f59623427e565b48c942ed582f5f06d4f73c0f1c01102aaa6650d7ee8a206"
+    },
+    {
+      "path": "tests/arterial-history-preservation.test.mjs",
+      "bytes": 2830,
+      "sha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225"
+    },
+    {
+      "path": "tests/atlas-central-airway-hepatic.test.ts",
+      "bytes": 9251,
+      "sha256": "597c847e25e77c447e506afe56bdbd418c3c274bdae31cdcb52da4050c8c3d21"
+    },
+    {
+      "path": "tests/atlas-circle-willis-tour.test.ts",
+      "bytes": 12019,
+      "sha256": "6cc74e988a067dfb7ea28b58c8223a224084ec60729990ae0ade9166f389828b"
+    },
+    {
+      "path": "tests/atlas-cubital-venous-ultrasound.test.ts",
+      "bytes": 11313,
+      "sha256": "ea91d5e9435ddba13d7190d63051b6bb00315023c6837dcd571791632410bd52"
+    },
+    {
+      "path": "tests/atlas-femoral-clinical.test.ts",
+      "bytes": 5684,
+      "sha256": "d83a22e1d3c428f0f4864df6eed7d9c69fe4eb42ae0349be30a8f420f3ddf5fd"
+    },
+    {
+      "path": "tests/atlas-hip-abductor-xray.test.ts",
+      "bytes": 4203,
+      "sha256": "a95b64567d4c5941c4fcceb27858559a2e74ba4bbf7b00677d3d464bdb771812"
+    },
+    {
+      "path": "tests/atlas-scene-sizing.test.ts",
+      "bytes": 4806,
+      "sha256": "1fb3b7344104b6dbe43e47dfda7eaf3c32164984f44dd7177cbd61bc534fd0fd"
+    },
+    {
+      "path": "tests/atlas-compact-study-checks.mjs",
+      "bytes": 15054,
+      "sha256": "959f23604a11f8563b623526cc1a616f9b5c21272956273484ae0b54cf84f9b3"
+    },
+    {
+      "path": "tests/atlas-coronary-arterial-study-checks.mjs",
+      "bytes": 13665,
+      "sha256": "6462dca774d2867a32364f44a6b981f4f09b2666c2c705ac681b2371b8fa8216"
+    },
+    {
+      "path": "tests/atlas-pre-hand-venous-tour-history.ts",
+      "bytes": 2631,
+      "sha256": "a43a92fb6c8f40947bdef3140713920a9cabcecf66a0488b5a1da8a656450fb0"
+    },
+    {
+      "path": "tests/atlas-pre-hand-venous-imaging-history.ts",
+      "bytes": 2636,
+      "sha256": "07b973835c6f58d82e7ce9e6c93813283946ed1dad89d9abba114beef2a69373"
+    },
+    {
+      "path": "tests/atlas-historical-manifest-prefetch.mjs",
+      "bytes": 3455,
+      "sha256": "d2cf3c57957e8cc9cf0cdcbc6478512f75faf1821bfbed5f51b5263c978767b4"
+    },
+    {
+      "path": "tests/atlas-historical-manifest-prefetch.test.mjs",
+      "bytes": 6444,
+      "sha256": "afa300f260e6dadb18cc9dcb12271e49481bcd7e52aae5f05a38d45ad2baf51c"
+    },
+    {
+      "path": "tests/clinical-review-cervical-disc-tour.test.ts",
+      "bytes": 33158,
+      "sha256": "29685d95de9a1efbaa107b739aa2cb4ddb345ba780448c389afac602d29ea37f"
+    },
+    {
+      "path": "tests/clinical-review-change-notice.test.ts",
+      "bytes": 21089,
+      "sha256": "9f23bb6243dfdd0d0c051e060a596d72519ad0c82051e19721d52dd3504e5009"
+    },
+    {
+      "path": "tests/clinical-review-coronary-sinus-xray.test.ts",
+      "bytes": 23556,
+      "sha256": "4be201ff8982d64de4e62c007da0dc797e5e819077b9fcb78be0b399988396f1"
+    },
+    {
+      "path": "tests/atlas-thoracoabdominal-quiz-checks.mjs",
+      "bytes": 19832,
+      "sha256": "0bb48b7d723c1d87262ccdf1eaa41e757c3d93f38c7fb1af8dce3bd6cc9ff6b7"
+    },
+    {
+      "path": "tests/clinical-review-colic-arterial-xray.test.ts",
+      "bytes": 23171,
+      "sha256": "00fab7867451c88eff388b6392d91c9225bdcfd141d6fdd1f7590c829e7a5bd7"
+    },
+    {
+      "path": "tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 19328,
+      "sha256": "26cabf16c9c2166c0415efcf23e29612586ca29dec039ea0985a62bfd3b1003c"
+    },
+    {
+      "path": "tests/colic-admission-import-history.mjs",
+      "bytes": 3158,
+      "sha256": "4a517f6671025a5e85086bdf7d076740b856cf9264b75311ae744111c7cf0d16"
+    },
+    {
+      "path": "tests/review-change-import-history.mjs",
+      "bytes": 2481,
+      "sha256": "b7ad45d970973a535880a4fb03e4df7c554fca4bfe767c952cc6bf49f75a9877"
+    },
+    {
+      "path": "tests/clinical-review-desktop-layout.test.mjs",
+      "bytes": 10671,
+      "sha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a"
+    },
+    {
+      "path": "tests/clinical-review-inbox-source-update.test.ts",
+      "bytes": 9724,
+      "sha256": "2ef6e430a68dac8fe3a6b67b605c6d9b95e1812fb71d28a15f1aa466be34dae9"
+    },
+    {
+      "path": "tests/next-five-special-admission.mjs",
+      "bytes": 3534,
+      "sha256": "541fc0cfd3fa1a936d97c5b1e38e4576d000d4f396a381f68a8030fdb3360a13"
+    },
+    {
+      "path": "tests/historical-current-atlas-delivery-56.mjs",
+      "bytes": 6597,
+      "sha256": "803cc6461fba09a0191d4966feee7eeba6795d7f3e94d81d4e88691a1b0bdee8"
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-admission-56-closed.test.mjs",
+      "bytes": 3055,
+      "sha256": "e4b06a02ec8835c464af27b0d53238c7403907e3f31d2ef9ea5cc690ccc30aeb"
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-admission-56-closed.test.mjs",
+      "bytes": 3050,
+      "sha256": "ac23ebb3283399696a90ebff42892e5448e6a30756d302e978734f72c73710de"
+    },
+    {
+      "path": "tests/closed56-femoral-epoch.test.mjs",
+      "bytes": 8062,
+      "sha256": "5ad472a41722200db66771ebbf2b990782f5b80b15565d90293c68f40da63992"
+    },
+    {
+      "path": "tests/closed57-original-tests.test.mjs",
+      "bytes": 9125,
+      "sha256": "e47468ffb373a6e858761d2132e6047c4b32c9c663a0e68e1d5f12c187c53aaf"
+    },
+    {
+      "path": "tests/clinical-review-femoral-arterial-xray.test.ts",
+      "bytes": 22322,
+      "sha256": "f9078eadbc4e32a6f6f99e8e6ca0f8e8230bb9ceecc766210b50e45564256e7c"
+    },
+    {
+      "path": "tests/clinical-review-femoral-venous-xray.test.ts",
+      "bytes": 22032,
+      "sha256": "00cde16bc349a8e6921094f56db467f95c35694d7163c4fb47c21d8485f7f16f"
+    },
+    {
+      "path": "tests/clinical-review-hand-arterial-xray.test.ts",
+      "bytes": 21508,
+      "sha256": "819ed7fdef7d3b1afc24768a3008b7f3403c5eb8a7581b682639c10526b1e19a"
+    },
+    {
+      "path": "tests/head-image-history.test.ts",
+      "bytes": 190073,
+      "sha256": "5282143cc7d182d6a5a71bda18afe269ea2d18a2b88a57b58693936c2c6dbabc"
+    },
+    {
+      "path": "evidence/postrun/CHECKPOINT_EVIDENCE.json",
+      "bytes": 2832,
+      "sha256": "6dc062185a7440f28109cd19c95a5d58388d51964a894ef4c2410dd4a3582bcb"
+    },
+    {
+      "path": "evidence/postrun/shared-verification.json",
+      "bytes": 10247,
+      "sha256": "a9a63c2afe5b57b90fa077129664ec0cbe6dac393fe62ceef7af34979c8bcb46"
+    },
+    {
+      "path": "evidence/postrun/source-eol-actual.test.mjs",
+      "bytes": 6299,
+      "sha256": "769225a684c5c952521a78a37f64a03aaa2c52a910548e8b530d8c8a5b45fd5a"
+    },
+    {
+      "path": "evidence/postrun/head-history-receipt.json",
+      "bytes": 643,
+      "sha256": "2674c45bc3a40b262857f10680a836c5fe8ec4084eff640b1be7c9dadbc8a32f"
+    },
+    {
+      "path": "evidence/postrun/femoral-full-receipt.json",
+      "bytes": 724,
+      "sha256": "008581535aa330845f7ad2d6b1bfdf7a275089bc5a72f9f11bcb79896eccc358"
+    },
+    {
+      "path": "evidence/postrun/hand-combined-receipt.json",
+      "bytes": 766,
+      "sha256": "ce2e1d4ee1dcaec3f9c33a5c30da1b0b1d063f486889c60777a86683a65f683b"
+    },
+    {
+      "path": "evidence/postrun/closed56-receipt.json",
+      "bytes": 759,
+      "sha256": "fb41edcc130b5caa1acb2efaccb125527239e562fb4fd79d63dee976536dd8e9"
+    },
+    {
+      "path": "evidence/postrun/closed57-receipt.json",
+      "bytes": 596,
+      "sha256": "3bc087329b70a73b62ea84b6ff5dc584cc42d5475f378953eafc39ad8f1cf124"
+    },
+    {
+      "path": "evidence/postrun/source-eol-receipt.json",
+      "bytes": 661,
+      "sha256": "5eeba4883339829d1d65cab932cf8f9505541469acbb4e1a2c333f9410774b53"
+    },
+    {
+      "path": "evidence/postrun/prepare-closed57-companion-20261020.mjs",
+      "bytes": 4052,
+      "sha256": "5d3c8088ecc8ac1f5e5a2a1c8c99e33c1298be8258726079425c48caceaa0a6b"
+    },
+    {
+      "path": "evidence/postrun/verify-shared-history-20261020.mjs",
+      "bytes": 8546,
+      "sha256": "84f003ec21b249d69261531683f83ca9720c3cf3e142b85b8222978b83f7a8a8"
+    },
+    {
+      "path": "evidence/postrun/prepare-head-history-check-20261020.mjs",
+      "bytes": 1652,
+      "sha256": "09ae59445b8de45b4a7eac3d86d58b5f5fccede774f5af3265a5e14eddfb5140"
+    },
+    {
+      "path": "evidence/postrun/qualification-preparation.json",
+      "bytes": 2160,
+      "sha256": "b637d2d2f7f56dc5f49a3088ebd04803389cb89a0d9251b0f45c3dca41f0bec4"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected34test/helper repair files plus13source/evidence records only, not a complete/runnable Website/Atlas, private-data or historical-archive backup. Original 187native head tests pass after exact harness helper wiring; full4femoral and2hand cases pass with exact original assertions. Closed historical/current boundaries and input EOL byte checks retained. Original whole-site5433/5070pass/360fail/3skip is terminal and NOT green; no current remaining-failure count claimed. Full original historical fixture archives remain separate exact F dependencies. No raw canonical Git ancestry, scans, masks, identifiers, model assets, runtime DBs, credentials, approvals or deployment.",
+  "proof": {
+    "schema": "vm-postrun-qualification-evidence/1",
+    "at": "2026-10-20T18:38:56.492Z",
+    "originalFullRun": {
+      "receipt": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd/receipt.json",
+      "receiptSha256": "120120c3602fff4bc95a343b957f8dd104784b820cc248a40714660b8ecc8fc4",
+      "counts": {
+        "tests": 5433,
+        "pass": 5070,
+        "fail": 360,
+        "cancelled": 0,
+        "skipped": 3,
+        "todo": 0
+      },
+      "sourceInputDrift": false,
+      "passingClaim": false
+    },
+    "changedTestOnlyPaths": 34,
+    "namedCurrentInputPaths": 5023,
+    "namedCurrentInputsSha256": "0f85562861573ecec5c8eb3b57d4b8173e3aeedf0c6cc5dd4c59e7036c4b2553",
+    "actualChecks": {
+      "nativeHeadHistory": {
+        "cases": 187,
+        "code": 0,
+        "logSha256": "7a1c5f8c1d567139c656107b25ae22f0f0abac3c7de482df5bb63daf3b13b74b",
+        "sourceSha256": "5282143cc7d182d6a5a71bda18afe269ea2d18a2b88a57b58693936c2c6dbabc",
+        "fullFileByteInverse": true,
+        "limitation": "Only missing real keyboard helper wiring repaired; no production/test-body/assertion changes."
+      },
+      "fullFemoralOriginalModules": {
+        "cases": 4,
+        "logSha256": "e56ec8dff6ad69da7d3f9c1c7b3ffd29bd3117deb4f6833babd7aebf466748a0"
+      },
+      "fullHandOriginalModule": {
+        "cases": 2,
+        "logSha256": "cc1d6f677425e765bd97ba1d28acb6292e52fdf34f008722378eb42d62d9572a",
+        "limitation": "Both actual hand cases passed in a combined run whose2femoral cases failed on missing mirror app inputs. Those2modules then passed4/4 after exact1696input mirror completion; no product patch."
+      },
+      "closedFemoralGuardsAndEpoch": {
+        "cases": 10,
+        "logSha256": "25ad2171407d6630987f8e2f83d6d1af8852d51613c8461b978fd31fa707c3fc"
+      },
+      "closed57Companion": {
+        "cases": 4,
+        "logSha256": "23fc216e067784e56372a854f59e1fb94a3a3d4454f7153a7f1f89c8e064ec1f"
+      },
+      "sourceEol": {
+        "cases": 11,
+        "logSha256": "33be9cfa8a79040833a9ad93ba4c1bdb2b2aa228a5c661d0b8701cfd99a4faa6",
+        "limitation": "Unmodified helper/strict validators; synthetic byte corruption tests. Original worker root-stub probe is not strict-root evidence."
+      }
+    },
+    "limitations": [
+      "Not a current whole-suite pass; no remaining-failure subtraction from the old360total.",
+      "Two other historical56 strict current-root callers and separate57 caller still need explicit treatment.",
+      "21remaining affected original entries are under focused qualification; no pass inferred from start.",
+      "All repairs applied only to isolated candidate tests/helpers, not canonical runtime or owner preview.",
+      "No scans, private notes, masks, new assets, changed permissions, invented approvals or public deployment."
+    ],
+    "fullGoalActive": true
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

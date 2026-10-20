@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Selected34test/helper repair files plus13source/evidence records only, not a complete/runnable Website/Atlas, private-data or historical-archive backup. Original 187native head tests pass after exact harness helper wiring; full4femoral and2hand cases pass with exact original assertions. Closed historical/current boundaries and input EOL byte checks retained. Original whole-site5433/5070pass/360fail/3skip is terminal and NOT green; no current remaining-failure count claimed. Full original historical fixture archives remain separate exact F dependencies. No raw canonical Git ancestry, scans, masks, identifiers, model assets, runtime DBs, credentials, approvals or deployment.
