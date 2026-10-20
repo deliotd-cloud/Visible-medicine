@@ -222,7 +222,7 @@
     "shoulder-website-review-link:test": "node --import tsx --test scripts/test-shoulder-website-review-link.mjs",
     "shoulder-soft-tissue-xray:test": "node --import tsx --test scripts/test-shoulder-soft-tissue-xray.mjs",
     "lower-limb-connective-xray:test": "node scripts/record-lower-limb-connective-xray.mjs --check && node scripts/test-lower-limb-connective-xray.mjs",
-    "clinical-review:test": "node scripts/test-clinical-review-index.mjs && node scripts/test-clinical-review-page.mjs && node scripts/test-clinical-review-queue.mjs && node scripts/test-clinical-review-results.mjs && node scripts/test-review-sign-in.mjs && node scripts/test-review-history-races.mjs",
+    "clinical-review:test": "node scripts/test-clinical-review-index.mjs && node scripts/test-clinical-review-page.mjs && node scripts/test-clinical-review-queue.mjs && node scripts/test-clinical-review-results.mjs && node scripts/test-review-sign-in.mjs && node scripts/test-review-history-races.mjs && node scripts/test-review-entry-track.mjs",
     "lateral-cricoarytenoid-us:test": "node scripts/validate-lateral-cricoarytenoid-us.mjs",
     "plantar-arterial-us:test": "node scripts/validate-plantar-arterial-us.mjs",
     "common-interosseous-us:test": "node scripts/validate-common-interosseous-us.mjs",

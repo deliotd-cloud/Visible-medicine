@@ -1,16 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T03:46:34.117Z",
+  "at": "2026-10-20T06:45:31.121Z",
   "sourceIdentity": {
-    "product": "Atlas source delta with integrated ileocolic ultrasound draft",
+    "product": "Atlas source delta: exact Teaching review entry",
     "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
-    "prior": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-    "head": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
-    "tree": "7c0b886d66d2adf64d6d29e44938f39d8cd61046",
+    "prior": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+    "head": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
+    "tree": "97957a35788028b319df4f5d60c68a95e71320d7",
     "canonicalInstalled": false
   },
-  "parent": "a1ffb9d1ce4bae6673c754dd26e2098c3a7833fd",
-  "gitParent": "a1ffb9d1ce4bae6673c754dd26e2098c3a7833fd",
+  "parent": "be02fde32eadef1c336a4709cdfad739b310d210",
+  "gitParent": "be02fde32eadef1c336a4709cdfad739b310d210",
   "files": [
     {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
@@ -23,6 +23,41 @@
       "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
     },
     {
+      "path": "app/review/body/body-decision-editor.tsx",
+      "bytes": 23839,
+      "sha256": "8fbd09d051202af4b66658287a6497864491064388da79b38a9be4a29b1c77a9"
+    },
+    {
+      "path": "app/review/body/page.tsx",
+      "bytes": 887,
+      "sha256": "a412ad8db0fbc3fa03b64e0d4d886a29c8b1cf73a9b06f1f312281af5b6f462b"
+    },
+    {
+      "path": "app/review/body/review-dashboard.tsx",
+      "bytes": 28585,
+      "sha256": "a3f5d6eae6b005362803518d55d00e7d6e7a17b767bbf83b2945773e30c23653"
+    },
+    {
+      "path": "app/review/page.tsx",
+      "bytes": 682,
+      "sha256": "cacb00e0c951b4c0f1623cfb47525f4f4ce33cd8b76c569ed8a2082de4d9a6a6"
+    },
+    {
+      "path": "app/review/review-dashboard.tsx",
+      "bytes": 41398,
+      "sha256": "eba2d4e529f14e856090e94036d49472ae7252b5fba2787bc5dbde1459b8a3b2"
+    },
+    {
+      "path": "app/review/specimens/page.tsx",
+      "bytes": 1635,
+      "sha256": "ed215574da6ee3497eaa3a773a310e1cb5bb4bc35674c431253180d49e4722ab"
+    },
+    {
+      "path": "app/review/specimens/workspace.tsx",
+      "bytes": 28288,
+      "sha256": "2c867ad462760b159919fc3dd56ccb76c2352896865b8caa6eeb00ddb5cb7ccf"
+    },
+    {
       "path": "app/whole-body-guided-learning.tsx",
       "bytes": 7158,
       "sha256": "684fffbf6ed7010a8bfc8a266a2c4866519f3c7dc580594c1e0da2dfb6e5d75c"
@@ -30,7 +65,7 @@
     {
       "path": "content/body-renderer-revision.json",
       "bytes": 213951,
-      "sha256": "7fc24eec7516952598c508c6213dea4ae010af432fa2f745ce2c6556712b632f"
+      "sha256": "7df1105f550d597fbc867df93e5a7725ade4de05263d1621fd6984dd459b9629"
     },
     {
       "path": "content/body-review-display-pins.json",
@@ -1528,6 +1563,11 @@
       "sha256": "a64b052af8c1bdad5e7151facac9c1cc0fa42ee45afef27708fba296e520fa76"
     },
     {
+      "path": "docs/first-release-review-pilot.json",
+      "bytes": 70288,
+      "sha256": "73ce3996c54ace7df6f4527495dfecc76938be76982e38381d3ec723541ec822"
+    },
+    {
       "path": "lib/corpus-spongiosum-xray-v2.ts",
       "bytes": 1346,
       "sha256": "0365d2590428e3b57f87d808fa9d252433fcaef56b1ddffb36de6390cc8ed54e"
@@ -1538,9 +1578,14 @@
       "sha256": "76c9eb7266eb961d1363b1d6f19f4bf93634f3017455397bd3d683b81169a1df"
     },
     {
+      "path": "lib/review-entry-track.ts",
+      "bytes": 217,
+      "sha256": "16e5d5bad9ae7d4c6777daffefd41c8656ea3677a88f6852ebd6d3b6b4a5cf36"
+    },
+    {
       "path": "package.json",
-      "bytes": 86013,
-      "sha256": "3fdd2cd598b0014ca2d3b67c6704313759190a5584253d25b7700369e42b89fe"
+      "bytes": 86057,
+      "sha256": "ce479161e3bab272c0694a111184a460c111a6940231e24bc6799841357d4c49"
     },
     {
       "path": "scripts/celiac-display-epoch-bridge.mjs",
@@ -1623,6 +1668,16 @@
       "sha256": "41cd28cf759a3766b1e8cec37badb792df238013d5ebb80e6130e2f2e2356854"
     },
     {
+      "path": "scripts/test-review-entry-track.mjs",
+      "bytes": 3918,
+      "sha256": "64365d493661fa1c3a2c08897a9cf479047ab323c68e3d2a176fa69b7cd4f4f2"
+    },
+    {
+      "path": "scripts/test-review-sign-in.mjs",
+      "bytes": 9468,
+      "sha256": "e29ce23cbda15773b8e39204d3c1a085592f2c084b86ed939fe38f54c3123d15"
+    },
+    {
       "path": "scripts/test-tour-discovery-escape.mjs",
       "bytes": 3252,
       "sha256": "79f57d3071762cf03aaa394fffa76b6135d32eb2a994f75bdcd365edb1b51819"
@@ -1639,73 +1694,54 @@
     }
   ],
   "removed": [],
-  "scope": "Source-only recovery delta from exactf5097af8 baseline, carrying the previously screened321text-path bd5465ee delta and this reviewed8-path teaching change. Not a standalone full Atlas checkout or patient/private-data backup. Recover with separately retained baseline and source models; normal source-bound Website ingestion/build and human review remain required. No raw canonical ancestry, scans, masks, new mesh/image/font/texture/dependency or private asset module. Draft only, no clinical, registration, release or public-deployment approval.",
+  "scope": "Selected screened Atlas text recovery delta carrying prior325paths and13review-entry/registered-test/derived-unsigned paths. No geometry/teaching/source identity/access/decision mutation. Stock revision and unsigned pointer regeneration requires fresh exact review, not approval transfer. Source-only, not standalone/full/private-data backup; no raw canonical Git ancestry/scans/masks/mesh payloads/deps/credentials/public deployment.",
   "proof": {
-    "schema": "vm-ileocolic-source-acceptance/1",
-    "at": "2026-10-20T03:46:31.754Z",
-    "baseline": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-    "head": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
-    "tree": "7c0b886d66d2adf64d6d29e44938f39d8cd61046",
-    "transitionSha256": "194912abd24fbe7e79082d74e8158b79db2c3e1c3b5737440e2be17e30f2e76a",
-    "changedPaths": [
-      "app/body-content.ts",
+    "schema": "vm-review-entry-atlas-source-acceptance/1",
+    "at": "2026-10-20T06:45:29.769Z",
+    "source": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
+    "sourceTree": "97957a35788028b319df4f5d60c68a95e71320d7",
+    "parentSource": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+    "paths": [
+      "app/review/body/body-decision-editor.tsx",
+      "app/review/body/page.tsx",
+      "app/review/body/review-dashboard.tsx",
+      "app/review/page.tsx",
+      "app/review/review-dashboard.tsx",
+      "app/review/specimens/page.tsx",
+      "app/review/specimens/workspace.tsx",
       "content/body-renderer-revision.json",
-      "content/body-review-display-pins.json",
-      "content/regional-teaching/abdomen.json",
-      "docs/ILEOCOLIC_ARTERY_ULTRASOUND.md",
-      "lib/ileocolic-artery-ultrasound.ts",
+      "docs/first-release-review-pilot.json",
+      "lib/review-entry-track.ts",
       "package.json",
-      "scripts/test-ileocolic-artery-ultrasound.mjs"
+      "scripts/test-review-entry-track.mjs",
+      "scripts/test-review-sign-in.mjs"
     ],
-    "sourcePaths": 325,
-    "focused": {
-      "baseline": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-      "changedTopics": 1,
-      "unchangedTopics": 9935,
-      "changedReviewPackets": 1,
-      "unchangedReviewPackets": 1103,
-      "validatedRecords": 1104,
-      "identityRefusals": 39,
-      "staleReviewRefused": true,
-      "tamperedReviewRefused": 3,
-      "serverRevisionRefusals": 3,
-      "actualNoteCallbackRenders": 1,
-      "totals": {
-        "before": {
-          "draft": 9337,
-          "pending": 560,
-          "generated-identification": 39
-        },
-        "after": {
-          "draft": 9338,
-          "pending": 559,
-          "generated-identification": 39
-        }
-      },
-      "clinicalApproval": false,
-      "patientRegistration": false,
-      "imagesImported": false
+    "sourcePaths": 336,
+    "commitReceiptSha256": "bbc0f20be4815f4779b9ea3722b5a41e121546b53d2792f4873216db3e568a78",
+    "progress": "Validated t=teaching initial navigation preference reaches source shoulder/body/specimen pages and initial component state; nested existing behavior retained. No-query/invalid/array remains geometry. Body forwarding and all existing guards/selection/decisions/fetch/source identity are otherwise unchanged. Test is registered in clinical-review alias.",
+    "checks": {
+      "clinicalReviewAlias": true,
+      "bodyReviewAndDirtyLeaveDialog": true,
+      "bodyDecisions": true,
+      "nestedReview": true,
+      "specimenReview": true,
+      "fullTypes": true,
+      "newCompiledPageComponentHarness": true,
+      "fullSuite": false
     },
-    "nativeReceiptSha256": "4254fec47965ad9f73c185585c1c435221f984cccecbe1e7e9b7538593c511a0",
-    "regional": {
-      "cases": 21,
-      "pass": 21,
-      "fail": 0,
-      "receiptSha256": "9a640d3134382976b90d32e3b0ba8db4c5e4f1fa5742850f870b316fadfc850b",
-      "limits": "Other entries in this earlier batch failed before correction; its manifest is not an overall pass."
+    "sourceRenderer": {
+      "sha256": "dab5eadb381b190323e7904c3158067407c75da790b80bcd9e2cf92c30bd5fb8",
+      "changedDependencies": [
+        "package.json"
+      ],
+      "geometryAndTeachingUnchanged": true,
+      "requiresFreshExactReview": true
     },
-    "types": {
-      "diagnostics": 0,
-      "receiptSha256": "2780f47183103f1621b0c9c6c656289a2c99a590f89bff0200e6d824f6aac9e1"
-    },
-    "preservation": "All9936placements compared; only1ultrasound topic and1of1104review packets/display pins change. All39source-leaf/shape holds and3actual in-process server revision refusals pass. Source catalogue/manifest bytes and all other regional snapshots remain exact. New renderer source identity72151b4d covers1473dependencies and requires its own review; no saved approval is transferred.",
-    "rights": "Original text and citations only; no article figure, scan, mask, table, abstract, dataset, dependency or new geometry/font/texture is included. Publication figures are not asserted commercially reusable.",
-    "retainedFailures": "New worktree CRLF conversion correctly failed byte-bound source checks; exact clean-baseline bytes restored for5733proved newline-only files without changing source pins or Git configuration. New dispatch inverse test normalized line endings. Stale display pins initially refused new teaching, then stock pins/snapshots/renderer generators ran. Initial new test incorrectly expected client materialHash recomputation; actual contract distinguishes pinned display from server recomputation. It now retains that transport distinction and proves three server-side409 refusals before any storage. Independent renderer witness initially expected display pins as a dependency; actual graph excludes them and separately verifies the1104display pins. Initial command parsed unquotedPowerShell HEAD^{tree}; commit succeeded and actual tree was read with Git argv, no retry commit.",
-    "limits": "Independent Atlas source candidate, not installed in canonical Atlas or Website, not a production/build/browser/GPU/clinical/release acceptance or full-suite pass. Owner preview3000 and open lecture untouched/save unconfirmed. Existing321source-delta parent is screened source-only; no raw canonical Git ancestry/private data is pushed.",
+    "retainedFailures": "First alias correctly refused stale unsigned pilot/body-renderer after package test registration. Stock generators refreshed unsigned pointers; no decisions read/written. Original sign-in test then exposed pre-existing missing useLayoutEffect shim and stale body error-slot7; exact old source already used layout effect/pending-leave. Added noop layout shim and injected the actual error slot8, preserving every assertion/other fixture; retained both failing logs and final clinical alias pass. Original new test image stub warning corrected only by omitting unoptimized from nativeimg.",
+    "limits": "Source only, not yet Website/browser/GPU/full-suite/clinical/privacy/registration/release acceptance. No raw canonical ancestry/private patient data/geometry payloads uploaded. Canonical Atlas and Website/owner preview3000 remain unchanged; source candidate separately versioned.",
     "canonicalInstalled": false,
     "clinicalApproval": false,
-    "publicDeployment": false,
-    "productionBuild": false
+    "publicDeployment": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

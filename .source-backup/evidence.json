@@ -1,67 +1,48 @@
 {
-  "schema": "vm-ileocolic-source-acceptance/1",
-  "at": "2026-10-20T03:46:31.754Z",
-  "baseline": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-  "head": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
-  "tree": "7c0b886d66d2adf64d6d29e44938f39d8cd61046",
-  "transitionSha256": "194912abd24fbe7e79082d74e8158b79db2c3e1c3b5737440e2be17e30f2e76a",
-  "changedPaths": [
-    "app/body-content.ts",
+  "schema": "vm-review-entry-atlas-source-acceptance/1",
+  "at": "2026-10-20T06:45:29.769Z",
+  "source": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
+  "sourceTree": "97957a35788028b319df4f5d60c68a95e71320d7",
+  "parentSource": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+  "paths": [
+    "app/review/body/body-decision-editor.tsx",
+    "app/review/body/page.tsx",
+    "app/review/body/review-dashboard.tsx",
+    "app/review/page.tsx",
+    "app/review/review-dashboard.tsx",
+    "app/review/specimens/page.tsx",
+    "app/review/specimens/workspace.tsx",
     "content/body-renderer-revision.json",
-    "content/body-review-display-pins.json",
-    "content/regional-teaching/abdomen.json",
-    "docs/ILEOCOLIC_ARTERY_ULTRASOUND.md",
-    "lib/ileocolic-artery-ultrasound.ts",
+    "docs/first-release-review-pilot.json",
+    "lib/review-entry-track.ts",
     "package.json",
-    "scripts/test-ileocolic-artery-ultrasound.mjs"
+    "scripts/test-review-entry-track.mjs",
+    "scripts/test-review-sign-in.mjs"
   ],
-  "sourcePaths": 325,
-  "focused": {
-    "baseline": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-    "changedTopics": 1,
-    "unchangedTopics": 9935,
-    "changedReviewPackets": 1,
-    "unchangedReviewPackets": 1103,
-    "validatedRecords": 1104,
-    "identityRefusals": 39,
-    "staleReviewRefused": true,
-    "tamperedReviewRefused": 3,
-    "serverRevisionRefusals": 3,
-    "actualNoteCallbackRenders": 1,
-    "totals": {
-      "before": {
-        "draft": 9337,
-        "pending": 560,
-        "generated-identification": 39
-      },
-      "after": {
-        "draft": 9338,
-        "pending": 559,
-        "generated-identification": 39
-      }
-    },
-    "clinicalApproval": false,
-    "patientRegistration": false,
-    "imagesImported": false
+  "sourcePaths": 336,
+  "commitReceiptSha256": "bbc0f20be4815f4779b9ea3722b5a41e121546b53d2792f4873216db3e568a78",
+  "progress": "Validated t=teaching initial navigation preference reaches source shoulder/body/specimen pages and initial component state; nested existing behavior retained. No-query/invalid/array remains geometry. Body forwarding and all existing guards/selection/decisions/fetch/source identity are otherwise unchanged. Test is registered in clinical-review alias.",
+  "checks": {
+    "clinicalReviewAlias": true,
+    "bodyReviewAndDirtyLeaveDialog": true,
+    "bodyDecisions": true,
+    "nestedReview": true,
+    "specimenReview": true,
+    "fullTypes": true,
+    "newCompiledPageComponentHarness": true,
+    "fullSuite": false
   },
-  "nativeReceiptSha256": "4254fec47965ad9f73c185585c1c435221f984cccecbe1e7e9b7538593c511a0",
-  "regional": {
-    "cases": 21,
-    "pass": 21,
-    "fail": 0,
-    "receiptSha256": "9a640d3134382976b90d32e3b0ba8db4c5e4f1fa5742850f870b316fadfc850b",
-    "limits": "Other entries in this earlier batch failed before correction; its manifest is not an overall pass."
+  "sourceRenderer": {
+    "sha256": "dab5eadb381b190323e7904c3158067407c75da790b80bcd9e2cf92c30bd5fb8",
+    "changedDependencies": [
+      "package.json"
+    ],
+    "geometryAndTeachingUnchanged": true,
+    "requiresFreshExactReview": true
   },
-  "types": {
-    "diagnostics": 0,
-    "receiptSha256": "2780f47183103f1621b0c9c6c656289a2c99a590f89bff0200e6d824f6aac9e1"
-  },
-  "preservation": "All9936placements compared; only1ultrasound topic and1of1104review packets/display pins change. All39source-leaf/shape holds and3actual in-process server revision refusals pass. Source catalogue/manifest bytes and all other regional snapshots remain exact. New renderer source identity72151b4d covers1473dependencies and requires its own review; no saved approval is transferred.",
-  "rights": "Original text and citations only; no article figure, scan, mask, table, abstract, dataset, dependency or new geometry/font/texture is included. Publication figures are not asserted commercially reusable.",
-  "retainedFailures": "New worktree CRLF conversion correctly failed byte-bound source checks; exact clean-baseline bytes restored for5733proved newline-only files without changing source pins or Git configuration. New dispatch inverse test normalized line endings. Stale display pins initially refused new teaching, then stock pins/snapshots/renderer generators ran. Initial new test incorrectly expected client materialHash recomputation; actual contract distinguishes pinned display from server recomputation. It now retains that transport distinction and proves three server-side409 refusals before any storage. Independent renderer witness initially expected display pins as a dependency; actual graph excludes them and separately verifies the1104display pins. Initial command parsed unquotedPowerShell HEAD^{tree}; commit succeeded and actual tree was read with Git argv, no retry commit.",
-  "limits": "Independent Atlas source candidate, not installed in canonical Atlas or Website, not a production/build/browser/GPU/clinical/release acceptance or full-suite pass. Owner preview3000 and open lecture untouched/save unconfirmed. Existing321source-delta parent is screened source-only; no raw canonical Git ancestry/private data is pushed.",
+  "retainedFailures": "First alias correctly refused stale unsigned pilot/body-renderer after package test registration. Stock generators refreshed unsigned pointers; no decisions read/written. Original sign-in test then exposed pre-existing missing useLayoutEffect shim and stale body error-slot7; exact old source already used layout effect/pending-leave. Added noop layout shim and injected the actual error slot8, preserving every assertion/other fixture; retained both failing logs and final clinical alias pass. Original new test image stub warning corrected only by omitting unoptimized from nativeimg.",
+  "limits": "Source only, not yet Website/browser/GPU/full-suite/clinical/privacy/registration/release acceptance. No raw canonical ancestry/private patient data/geometry payloads uploaded. Canonical Atlas and Website/owner preview3000 remain unchanged; source candidate separately versioned.",
   "canonicalInstalled": false,
   "clinicalApproval": false,
-  "publicDeployment": false,
-  "productionBuild": false
+  "publicDeployment": false
 }
