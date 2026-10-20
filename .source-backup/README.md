@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Three staged source/README fragments+three metadata files only, no runnable Website, binary images, models, dependencies, private data or raw ancestry. Five exact public-tile integrity/attribution checks with no clinical/privacy/rights/release approval. Worker6pass/1platform-skip; main one affected move-guard case and real CLI pass. Existing Website runner, --list, live full suite and source/history/receipt gates unchanged; future explicit --run before-spawn and final-drift integration and tests still required. Scoped source recovery, not a complete project/data backup or deployment.

@@ -1,0 +1,54 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T01:22:10.431Z",
+  "sourceIdentity": {
+    "product": "Unwired public preview integrity preflight source fragments",
+    "requiredWebsiteSource": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
+    "runnerWired": false,
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending-public-preview-preflight/PENDING_FRAGMENT_README.md",
+      "bytes": 1390,
+      "sha256": "54b2ef5a5c4220f5381c07fa649268895ec94f5af0c638bd40da966ee8660064"
+    },
+    {
+      "path": "pending-public-preview-preflight/scripts/public-preview-preflight.mjs",
+      "bytes": 6650,
+      "sha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89"
+    },
+    {
+      "path": "pending-public-preview-preflight/tests/public-preview-preflight.test.mjs",
+      "bytes": 7553,
+      "sha256": "061d41952fb863fa1b169fdf55adaa12679fe8555618bbd41bea2d3cb69c47f9"
+    }
+  ],
+  "removed": [],
+  "scope": "Three staged source/README fragments+three metadata files only, no runnable Website, binary images, models, dependencies, private data or raw ancestry. Five exact public-tile integrity/attribution checks with no clinical/privacy/rights/release approval. Worker6pass/1platform-skip; main one affected move-guard case and real CLI pass. Existing Website runner, --list, live full suite and source/history/receipt gates unchanged; future explicit --run before-spawn and final-drift integration and tests still required. Scoped source recovery, not a complete project/data backup or deployment.",
+  "proof": {
+    "schema": "vm-public-preview-preflight-review/1",
+    "date": "2026-10-20",
+    "status": "Reviewed candidate; not wired into the Website runner",
+    "moduleSha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89",
+    "testSha256": "061d41952fb863fa1b169fdf55adaa12679fe8555618bbd41bea2d3cb69c47f9",
+    "workerEvidence": "Actual complete test-run.log SHA3ac8bafa64dea1bae5949061453937c07bd1fcf5700b0754cb4d672f3a802e3b:6pass/0fail/1explicit platform skip among7cases. Real directory-junction refusal passed. Main read the actual module, tests, handoff and full log. File-symlink creation is EPERM on this host, not a passed refusal or waived permission.",
+    "mainCorrection": "Preserved worker's exact12aa0a89 test source as public-preview-preflight-before-move-guard.mjs.raw. Added only explicit regular-source/fresh-target/resolved containment checks before the fixture directory move; all prior assertion bodies retained. Main ran the one affected real junction case,1pass/0fail/skip, full main-move-guard-test.log SHA80edfe131ff3a816f429ffd2feccc7fa1889ab7c404e1d429e44d868120e48d7. Other worker cases were not rerun merely for logs.",
+    "actualCli": "Main ran actual CLI on the restored isolated Website (chunk63e793/exit0): exact5public tiles/5084469bytes plus927byte manifest and3524byte notice. No scan/model traversal, recovery/download, authentication, permissions or release approval. Corrected guidance explicitly distinguishes original/admitted asset backups from source-only backups that omit binaries.",
+    "next": "Before integrating, read actual Website runner lifecycle and test fixtures; add only --run pre-spawn and final asset-integrity checks, retaining --list and every existing source/history/TAP/receipt guard. Add actual early-refusal/no-spawn and final-drift integration tests. Do not wire while another test is attesting a frozen source. This is not the existing runner or full suite modified/verified.",
+    "canonicalInstalled": false,
+    "runnerWired": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "reviewSha256": "6344a04ea4575f1b16efd85f4f25703f2487b0c3e478468633f758d1d608fde9",
+    "workerHandoffSha256": "cfbe28e3fe1bf334057052dc78e279977aaaac56eb0467baeaf98cf4ea2cfa42",
+    "wholeWebsiteComposition": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
