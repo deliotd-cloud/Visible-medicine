@@ -1,8 +1,8 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T01:11:22.580Z",
+  "at": "2026-10-20T01:35:08.061Z",
   "sourceIdentity": {
-    "product": "Actual isolated Website source after normal bind, BEFORE required viewer rebuild",
+    "product": "Actual isolated Website source with public asset guard; viewer rebuild pending",
     "websiteBaseHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
     "reviewBinding": "322db172c7fc0ca7697ca6f6dd67547a1fb8892b107ce48f1fd1b5ae7341d65b",
@@ -10,8 +10,8 @@
     "protectedReviewVerified": false,
     "canonicalInstalled": false
   },
-  "parent": "21da0e82c2d74cf0e1a3d03260f20eeaed7135cb",
-  "gitParent": "21da0e82c2d74cf0e1a3d03260f20eeaed7135cb",
+  "parent": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
+  "gitParent": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -14859,6 +14859,11 @@
       "sha256": "83e758bdf53fd9a9cd133e538e20fad42948bb3ee3b0ec18b601235788b3dc4c"
     },
     {
+      "path": "scripts/public-preview-preflight.mjs",
+      "bytes": 6650,
+      "sha256": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89"
+    },
+    {
       "path": "scripts/qa/head-anatomy-check-fixture.tsx",
       "bytes": 1730,
       "sha256": "4468f3dbada654bd6920816bc5668eed97c36f376c3b3d430d01b61b7dc882eb"
@@ -14910,8 +14915,8 @@
     },
     {
       "path": "scripts/run-website-tests.mjs",
-      "bytes": 14134,
-      "sha256": "c1f8ed58f5e577f84cacaa7279e7ad7c59abc38f710bc044d86a3cb545c6c492"
+      "bytes": 15580,
+      "sha256": "aa4461d742d1e2e3470b7d801539a76441ad1e3d7e61244ddab246800876fa01"
     },
     {
       "path": "scripts/source-recovery.mjs",
@@ -23839,6 +23844,11 @@
       "sha256": "f86dcce5d11a4eddc5563825d6747af9bee293f90a465cd6beb131131ac2e327"
     },
     {
+      "path": "tests/public-preview-preflight.test.mjs",
+      "bytes": 7553,
+      "sha256": "061d41952fb863fa1b169fdf55adaa12679fe8555618bbd41bea2d3cb69c47f9"
+    },
+    {
       "path": "tests/public-route-focus.test.mjs",
       "bytes": 2052,
       "sha256": "285ab98ad273609a86dabb0bf060e99d952299e4a4d9c53b165f5009b6da0d37"
@@ -24192,6 +24202,11 @@
       "path": "tests/run-website-tests-eol-input.test.mjs",
       "bytes": 2315,
       "sha256": "c8632ae81862b3c8fe8050a2073a9752250cd981d1ef93f0c3865141b5dbb32d"
+    },
+    {
+      "path": "tests/run-website-tests-public-preview.test.mjs",
+      "bytes": 7779,
+      "sha256": "32260e68fdb075418be50118754587a618c1275143379cecee1481e98f30cbea"
     },
     {
       "path": "tests/run-website-tests-raw-input.test.mjs",
@@ -24725,41 +24740,45 @@
     }
   ],
   "removed": [],
-  "scope": "Actual separately assembled, uninstalled Website source checkpoint:4942selected paths+4metadata,11deltas over filtered UIv2 source21da/31source deltas versus actual frozen QA. Real stock Review bind executed; independent bound-only proof confirms exact1680inputs and protected source derivation. Viewer is deliberately still old and MUST be rebuilt/verified before coherent runnable Review; current fixture unchanged. Not merged/typed/built/full-suite/browser/clinical/release acceptance. Models and nine public image files locally restored/verified but NOT newly uploaded/read back here; historical asset metadata is a reference, not off-device payload proof. Three pre-existing own-brand PNG/font blobs are inherited byte-exact from21da, with the unchanged Geist Mono OFL notices retained. No raw canonical history, scans/masks/private modules/runtime dependencies/GLBs/NEW binary images/held archives/docs. Full Website/private-data/project backup not claimed. Palatal draft remains separate.",
+  "scope": "4945selected source paths+4metadata,4reviewed tooling deltas/3new versus filtered1e8 source. Public preview preflight and before-spawn/final-drift lifecycle wired in NEW candidate only; all original runner tests unchanged. Actual43pass/1explicit platform skip among44focused cases; final --list1016entries launches nothing. Source/UI/Review binding unchanged outside those4paths. Not rebuilt viewer, merged/typed/built/full-suite/browser/clinical/release acceptance. Only three existing brand/font binary blobs inherited; no NEW image/model payloads/dependencies/raw canonical history/private scans/masks/modules/held archives/docs uploaded. Existing asset metadata is not new off-device asset backup proof. Scoped selected-source recovery, not whole-project/private-data backup.",
   "proof": {
-    "schema": "vm-ui-coverage-bound-review/1",
+    "schema": "vm-public-preview-runner-integration/1",
     "date": "2026-10-20",
-    "phase": "bound-only",
-    "sourceAssembly": "ASSEMBLY.json SHA8388b3f22ad27219bd036c4b8e4e6b6f492a2d98377d396e184d92ecbb8ece45:4942verified selected files, exact27source deltas/11new versus frozen QA. All20UIv2 changes and7coverage paths assembled in a separate fresh Website copy; neither canonical nor the running full-suite QA was written.",
-    "actualStockBind": "Actual unchanged stock scripts/bind-clinical-review.mjs executed with native exit0/chunkec836a. New binding322db172c7fc0ca7697ca6f6dd67547a1fb8892b107ce48f1fd1b5ae7341d65b, bodyrenderer8ab35725f47c52201ab4ef47c70d433ba71e09fb40eea89fc56f75509c46a670,9shoulder structures. Only four generated Review metadata records change beyond the27source inputs; no generated shoulder module hand edit, saved-decision migration or approval widening.",
-    "independentBindingCheck": "Actual worker harness9158f8461fbdaec23be75a09102b55f25037a23005e10859bce9721fd6396147 run by main with explicit bound-only phase, exit0/chunkb4195c. Report staging/20261020-ui-coverage-derived-checks/bound-only-result.json SHA79672af141f7926ca78f705f9e976d52c1a4a0a2283de93ac0c0c389a3e2fba2. Independently recomputes1680bound rows from pinned producer definitions/actual bytes, exact two changed adapter inputs, original Atlas body/shoulder source identities and all1534+imported records. Four learner manifest/source-input pairs, model inventory/policy and historical assertions unchanged. Viewer and current test pin expressly remain old; no proposed pin emitted. Worker3pure CLI/phase cases pass, main read all relevant source and results without rerunning unchanged tests.",
-    "modelAdmission": "MODEL_ADMISSION.json SHA9190181b872e76e795673b7c0fdf12363f6b54bdbb347bfe43f8525defc2e353.144existing local GLBs separately copied/verified before+after,137unique model identities/199072480unique bytes unchanged. No network/new dataset/geometry transformation/symlink/shared file writes. Actual stock model-inventory --check and private policy verification pass native exit0/chunk84b4cf; inventory remains2dca7697 and audience administrator-review. No inventory/policy rewrite needed.",
-    "staticAdmission": "STATIC_ADMISSION.json SHAb1fc0c18ef99141561ff8c272199f80b97bd0ec9e3b8fb79fe1d0c54930dec27. Current full-suite uncovered missing local binary assets: five modality previews and four approved brand PNGs were intentionally absent from source-only recovery. Restored exact nine public files into NEW copy from canonical bytes and pinned historical Git blobs04d490de, compared to independently restored asset metadata. Existing credits/NOTICES unchanged; no source scans, new images, transforms or patient data. Did not alter the still-running frozen suite environment.",
-    "previewFocusedChecks": "Actual two complete original atlas-navigation AST test registrations executed on real candidate navigation/files. First new harness failed because its .mjs extension could not parse original TS non-null assertion; full first red retained. Corrected only the harness extension to .ts with byte-identical source, not an assertion change or image edit; native2pass/0fail/skip/cancel/todo chunk82b5ae and full restored-preview-green.log. Original test statements remain exact except explicit source-module-URL location seam. This is not the entire atlas-navigation/Website suite or browser acceptance.",
-    "backupPreflight": "New all-text assumption stopped before output creation at e6fd88. Actual existing selected source already contains exactly three admitted binary paths: two own-brand head-runtime PNGs and the pinned local Geist Mono woff2. Verified exact inherited21da hashes and kept both full OFL copies/THIRD_PARTY_NOTICES unchanged; no new font or asset selection. Corrected only the preflight to allow those three exact unchanged path+hash identities, not arbitrary binary files. Full first red retained. Nine restored root public brand/preview assets and model payloads remain excluded from the new source backup.",
-    "next": "Viewer production rebuild remains required, then stock verify-clinical-review, independent post-viewer harness, review the exact three-document current test-pin proposal, affected original/new native tests, semantic types/full Website build and real desktop acceptance. One heavy lane remains existing full-suite22796; do not stop/restart it on timeout or overlap a second Vite/type/build run. Separate dependency copies are preparatory only, not an install/change to originals. Preserve owner preview/open lecture and actual historical decisions.",
+    "state": "Wired in separate Website candidate only",
+    "inputs": {
+      "scripts/run-website-tests.mjs": "aa4461d742d1e2e3470b7d801539a76441ad1e3d7e61244ddab246800876fa01",
+      "scripts/public-preview-preflight.mjs": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89",
+      "tests/public-preview-preflight.test.mjs": "061d41952fb863fa1b169fdf55adaa12679fe8555618bbd41bea2d3cb69c47f9",
+      "tests/run-website-tests-public-preview.test.mjs": "32260e68fdb075418be50118754587a618c1275143379cecee1481e98f30cbea"
+    },
+    "implementation": "Actual Website root or inventoried Atlas producer/test requires five exact admitted public tile assets/manifest/attribution BEFORE output, glob probe or child spawn. Minimal generic roots retain native semantics with an explicit required:false/no public-asset claim. --list neither loads assets nor launches tests. Final asset verification independently blocks a passing claim/exit0 after binary drift; original text-source drift remains a separate honest field. Console summary exposes publicPreviewAssetDrift. No disable flag, download/recovery, arbitrary media traversal, authentication or clinical approval.",
+    "preservation": "Main inspected the entire diff. No original source inventory/privacy exclusion/raw text/mirror/glob/launch/reporter/signal/count logic removed or relaxed. All five original runner test files remain byte-identical to independently restored1e8 source. Prior original runner SHA c1f8ed58 saved in before-public-preflight/run-website-tests.mjs.raw. Only reviewed additive guard/receipt/claim conjunction and scope text changes.",
+    "verification": {
+      "native": "Actual7native entries,44cases:43pass/0fail/cancel/todo/1explicit EPERM file-symlink platform skip. Real junction refusal passes. Includes every original runner/mirror/diagnostic/raw/EOL test plus public module and9new lifecycle cases. Main tests actual default-root/no-producer and named-test-only required gates, actual CLI no output/no spawn, --list/generic compatibility, stable successful native/TAP/spec streams, binary drift despite successful child, and existing child failure propagation.",
+      "log": "PUBLIC_PREVIEW_FINAL_TEST.log",
+      "logSha256": "1b0ed51ef559cd7342df23bf53c8f52542dfd97cb2bac5e0ef3b772e0d122939",
+      "toolChunk": "bb5bfe",
+      "exitCode": 0,
+      "earlier": "Initial41pass/1platform-skip snapshot observed at f3c5a0; expanded43pass/1skip log PUBLIC_PREVIEW_INTEGRATED_TEST.log retained before final console-summary reason addition. Final rerun is after relevant source/interface changes, not to recreate missing logs.",
+      "realList": "Actual final --list completed at root with1016entries, no test launch/no public preview integrity or passing claim. Receipt .local/website-test-runs/2026-10-20T01-34-03-368Z-131e6d69-a8ec-4c73-9101-2c9f666c250a/receipt.json. No new full suite started."
+    },
+    "unchanged": "Protected Review binding322db172, old viewer6265/current fixture, four learner exports,137models/inventory/private delivery policy, font/image notices and UI component bytes unchanged.113UI source-specific passes remain historical evidence from exact1e8 tree, not a new whole-tree113pass claim after tooling changes. Original full-suite22796/QA and owner preview/open lecture untouched.",
     "viewerBuildPending": true,
-    "currentFixtureUnchanged": true,
     "protectedReviewVerified": false,
     "fullSuitePass": false,
     "canonicalInstalled": false,
     "clinicalApproval": false,
     "publicDeployment": false,
-    "reviewSha256": "b5d3e00f22cf1b67fff430c7daada66dfa4e02ec11d2a12cfe7a04a3a31f999d",
-    "independentBindingCheckSha256": "79672af141f7926ca78f705f9e976d52c1a4a0a2283de93ac0c0c389a3e2fba2",
-    "assemblySha256": "8388b3f22ad27219bd036c4b8e4e6b6f492a2d98377d396e184d92ecbb8ece45",
-    "actualSeparateCandidate": true,
-    "sourcePaths": 4942,
-    "sourceDeltasAgainstFilteredUiParent": 11,
-    "totalSourceDeltasAgainstFrozenQa": 31,
-    "newModelOrStaticImagePayloadsIncluded": false,
-    "unchangedInheritedBrandAndFontBlobs": {
-      "public/atlas-runtime/head-neck/brand/visible-medicine-lockup-dark.png": "360265d257a9eb3d8adf9535de686363c5d5cc6e0051bd6e5aa3ef5e664c2e98",
-      "public/atlas-runtime/head-neck/brand/visible-medicine-lockup-light.png": "b99ff216f299d62541cd7ecd73b0ad12cdba7d7e289069d3189a1dd75aa30c42",
-      "public/fonts/geist-mono-latin.woff2": "5f3d6ad60f29d6cb708414ec6887163d63bf197377ef5417d2483ff31ace6c3b"
-    },
-    "dependenciesIncluded": false,
-    "privateBuildModulesIncluded": false,
+    "reviewSha256": "c117d27cb45995a4938fe5222d0ec505cac794fe3a3eae36f2ef95cc961b9257",
+    "deltaPaths": [
+      "scripts/public-preview-preflight.mjs",
+      "scripts/run-website-tests.mjs",
+      "tests/public-preview-preflight.test.mjs",
+      "tests/run-website-tests-public-preview.test.mjs"
+    ],
+    "selectedSourcePaths": 4945,
+    "originalRunnerTestsUnchanged": true,
+    "priorSourceIdentity": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",

@@ -4,6 +4,7 @@ import { createWriteStream, existsSync, lstatSync, mkdirSync, readFileSync, read
 import { spawn } from 'node:child_process';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { verifyPublicPreviewAssets } from './public-preview-preflight.mjs';
 
 const scriptRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 // Effective text/code/metadata inputs only. No binary models, scans, masks, media,
@@ -178,6 +179,14 @@ export async function launch(root, output, { executable = process.execPath, onSp
 export async function main(argv = process.argv.slice(2)) {
   const { run, root } = parse(argv);
   const before = inventory(root);
+  // The exported runner also serves synthetic/generic test roots. Those do not
+  // acquire a Website-asset claim. The actual Website root or its inventoried
+  // Atlas producer/test always requires the admitted public tile set.
+  const publicPreviewAssetsRequired = run && (resolve(root) === scriptRoot ||
+    before.files.some(file => file.path === 'lib/atlas-navigation.ts') ||
+    before.entries.includes('tests/atlas-navigation.test.ts'));
+  const publicPreviewAssetsBefore = publicPreviewAssetsRequired ? verifyPublicPreviewAssets(root) : null;
+  // This must precede output creation, the Node glob probe and the test child.
   const output = outputDir(root);
   const execution = run ? await executionPlan(before, output) : {
     args: [...testArgs], executedRoots: [...before.entries], coveredByImport: [],
@@ -188,7 +197,8 @@ export async function main(argv = process.argv.slice(2)) {
     '--test-reporter=spec', '--test-reporter-destination=stdout',
     '--test-reporter=tap', `--test-reporter-destination=${join(output, 'child.tap')}`);
   const manifest = { schema: 'vm-complete-test-manifest-1', root, mode: run ? 'run' : 'list', createdAt: new Date().toISOString(), ...before,
-    entryCount: before.entries.length, entrySha256: sha(JSON.stringify(before.entries)), sourceSha256: sha(JSON.stringify(before.files)), execution };
+    entryCount: before.entries.length, entrySha256: sha(JSON.stringify(before.entries)), sourceSha256: sha(JSON.stringify(before.files)), execution,
+    publicPreviewAssets: run ? { required: publicPreviewAssetsRequired, before: publicPreviewAssetsBefore } : null };
   save(join(output, 'manifest.json'), manifest);
   const result = run ? await launch(root, output, {onSpawn(child) {
     child.once('spawn',()=>save(join(output,'started.json'),{
@@ -206,16 +216,23 @@ export async function main(argv = process.argv.slice(2)) {
         JSON.stringify(before.files) !== JSON.stringify(after.files);
     } catch (error) { drift = true; result.postRunInventoryError = String(error); }
   }
+  let publicPreviewAssetDrift = null;
+  if (publicPreviewAssetsRequired) {
+    try {
+      const after = verifyPublicPreviewAssets(root);
+      publicPreviewAssetDrift = JSON.stringify(after) !== JSON.stringify(publicPreviewAssetsBefore);
+    } catch (error) { publicPreviewAssetDrift = true; result.postRunPublicPreviewError = String(error); }
+  }
   const counts=run?testCounts(join(output,'child.log')):null;
-  const passingClaim=run&&result.exitCode===0&&drift===false;
+  const passingClaim=run&&result.exitCode===0&&drift===false&&publicPreviewAssetDrift!==true;
   const unskippedPassingClaim=passingClaim&&counts.tests>0&&counts.tests===counts.pass&&['fail','cancelled','skipped','todo'].every(key=>counts[key]===0);
   const receipt = { schema: 'vm-complete-test-receipt-1', mode: manifest.mode, output, entryCount: before.entries.length,
-    launched: run, child: result, testInputDrift: drift, passingClaim,
-    counts,unskippedPassingClaim,claimScope:'Child exit and stable named inputs only. Skipped/todo or unavailable-platform checks remain separate coverage limits; no clinical or release approval.',
+    launched: run, child: result, testInputDrift: drift, publicPreviewAssetDrift, publicPreviewAssets: manifest.publicPreviewAssets, passingClaim,
+    counts,unskippedPassingClaim,claimScope:'Child exit and stable named inputs only. Website runs also require the admitted public preview set; generic test roots do not acquire that asset claim. Skipped/todo or unavailable-platform checks remain separate coverage limits; no clinical or release approval.',
     finishedAt: new Date().toISOString() };
   save(join(output, 'receipt.json'), receipt);
-  console.log(JSON.stringify({ output, entryCount: receipt.entryCount, launched: run, childExitCode: result.exitCode, testInputDrift: drift, passingClaim: receipt.passingClaim,counts,unskippedPassingClaim }));
-  return run && drift ? 1 : result.exitCode;
+  console.log(JSON.stringify({ output, entryCount: receipt.entryCount, launched: run, childExitCode: result.exitCode, testInputDrift: drift, publicPreviewAssetDrift, passingClaim: receipt.passingClaim,counts,unskippedPassingClaim }));
+  return run && (drift || publicPreviewAssetDrift) ? 1 : result.exitCode;
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main().then(code => { process.exitCode = code; }, error => { console.error(String(error)); process.exitCode = 1; });
