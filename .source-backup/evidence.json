@@ -1,32 +1,67 @@
 {
-  "schema": "vm-website-asset-boundary-acceptance/1",
-  "at": "2026-10-20T02:56:30.114Z",
-  "sourceDeltas": {
-    "vite.config.ts": "57e270bcea5ab6fbed5f9371660cc98455bcf234aec9d475d1c9e724583e5712",
-    "worker/index.ts": "52ed1bdd1802a04cba8ecf6414812590ecd04a307a1c35e4c3216076e56569ce",
-    "components/atlas-runtime-state.ts": "e407402b94c41b03fdec57cf0cdafe20e4d47515ff3b8e2dd0a071dd0d542b49",
-    "tests/atlas-runtime-frame.test.mjs": "f4ebefd05a10639680e4c21c68c07a5ee31fbab380a3c4024c129d26872710b1",
-    "lib/atlas-static-boundary.ts": "4424c11f0fdf77aa0a989d326f1095efe53b773001eed083a1ea193b89c2cab1",
-    "tests/atlas-static-boundary.test.ts": "9703b1071ce8da302dce0a03eba3a704a2880b7f699f99091eea52335bf50e4e"
+  "schema": "vm-website-ui-followup-acceptance/1",
+  "at": "2026-10-20T03:14:39.203Z",
+  "sourceBase": "e440f6a05e3fd253597dec59c17daa71f7cdf1dd",
+  "reviewBinding": "4d19f9f2e465a772f5ea6da4a3605c09d9f0d540bde3f63735ff653d393c60ad",
+  "bodyRenderer": "3a6e341a3042e2566514eef91426d8aaeb48fb95b65278958eb516a5b74c3621",
+  "allowedSourceDeltas": {
+    "tests/female-pelvis-pilot.test.ts": "2ddfaa2f5ea872aefdd8041c1984ee0be23b2ca226981fafa7ebb34a6e7f8522",
+    "tests/lower-limb-pilot.test.ts": "9292665ba062c0b94c728e60300d34fbcb1cfd531f688d366f55ab28a8c184ca",
+    "tests/pelvis-spine-pilot.test.ts": "57f28b464e948d7d2a5463497d2f6134934c37ebea271314cc9c6ea2f44a8512",
+    "tests/shoulder-pilot.test.ts": "eb303fbece58b729d1de0de7248be774fe975a0b61fac9f081b557c462f82a8a",
+    "tests/thorax-pilot.test.ts": "3c11f51408afe0006f2a2a8c7fa77e9d690c57722770b0cc2cc8787ccd2acf05",
+    "tests/lower-limb-module-page.test.ts": "d24689e52f015a51a447f0c5de11ae80afc444f839bf460ae96dbd49cf0fb88a",
+    "tests/atlas-runtime-page-contract.ts": "ab6706b14adaa384e509a8aec48f833c8e80b2ea74beb99a7f96098d06a54524",
+    "tests/atlas-runtime-page-contract.test.ts": "7c712b3bbb23a21360ddbd998947fb3ab3f899264e1f5932792f66fc206c54b8",
+    "tests/studio-history-controller-migration.test.mjs": "71ccdedf73e0508619f27ecfddee7b8dac7cf5af487998d2df8b602c62ae088e",
+    "tests/ui-teaching-lifecycle-contract.test.mjs": "75d278ca520ad2e08aa05a120419fff7df89747c5f680ec527623d5f2b86d120",
+    "components/HeadAtlasSurfaceLoader.tsx": "03c01e9b7bee68600de7cd99bb6d0d59df152fa0d2e7c3b5d82b8e67c8cf77b5",
+    "components/StudioCourseEditor.tsx": "e6d0c653f7c18ea6e99afc98a2c8674de056757e7afea0a94a3edbb3fc3140e8",
+    "tests/head-surface-loading.test.ts": "14b3589e0667cfe0eb5a114e8ad1b617b0ff777f5d01e281a627779db57495e8",
+    "tests/head-surface-import-focus.test.mjs": "f50263771bf51c55f8d6198c834dd2dd7f8dddd17eb5a66e0bd4917a0bf9d5ec",
+    "tests/studio-course-outline-link-names.test.mjs": "572336fec79e46f0ab42bf908198b36547e2770b77ab4eeb555de7f50a5fe680",
+    "tests/ui-teaching-admission-contract.test.mjs": "20d92a8c8d4bf9e9f7c16ccaf12ebfcb629df0e7f4b34f53190a18a265c92f75",
+    "tests/fixtures/current-atlas-delivery-pre-bind-e440.json": "7554a31f1d43b3a99619e25e0a76ef9e131d92e2ad60d867a9edc741446f4246",
+    "tests/fixtures/current-atlas-delivery.json": "7f42de4aa82acf32c5cf7b89f02dfdf7d5c13cb360a10ad2bae8f0c1ad8a68ee",
+    "tests/studio-lineage-integration.test.mjs": "6b0d9cc89231e66e1ce8a38e74b4c9a6fabd3b0b5bbe786ef4fd66b58596f915",
+    "atlas-review/manifest.json": "3c594c4c7c479d9a7a7b69c58290cc9f272e95dba8266f9af267a693cd8b0e7c",
+    "atlas-review/integration-inputs.json": "c117db03b0340950f8c9be128a203f35f1375adaa54603d666107b0155fadcf7",
+    "atlas-review/content/body-renderer-revision.json": "7b90eaf57f43d0b40e846a925b6a46df223a783a49a8afd7a14625b65178a590",
+    "atlas-review/content/review-revisions.json": "8e601632eace4a5529c01b44983a6c9f740078041f3326b24359e7cf4c164c37"
   },
-  "reviewInputsUnchanged": 1680,
-  "originalFrameTestBytesPreserved": true,
-  "native": {
-    "tests": 32,
-    "pass": 32,
-    "logSha256": "409a9e610d688a12cbcc17472cb691911c06ee06b420ab4b10611c4e3ad52795",
-    "receiptSha256": "a5ec46e62156b9348d748e458554228d25fd047869208d0310739f0e65e3b0f6"
+  "sourcePaths": 4953,
+  "actualReviewDerivation": {
+    "reportSha256": "edb3dc3fe135f5ec2ac2c527213dd9bd25008dc283c1026abca1ca3e82480bf1",
+    "inputs": 1680,
+    "changed": 1,
+    "sourceFiles": 1543,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
+    "learnerModelsAndPolicyUnchanged": true,
+    "clinicalNullsPreserved": true
+  },
+  "focusedNative": {
+    "currentAndUI": 40,
+    "frameAndPage": 17,
+    "studioContracts": 5,
+    "totalDistinctCases": 62,
+    "artifacts": {
+      "current": "341151b457278bb0675a944294d4ba2363e56a453c7c421a40849cb50e392a0f",
+      "frame": "8306010151e6fee5dc3a4afb099f3ab66d1b138bee506fa0e7ffbcf148a3ca1c",
+      "studio": "3199d2ddd2a56321ad3ff1c90a119f60024bab36a72b66f2184b974639318a0a"
+    }
   },
   "types": {
     "diagnostics": 0,
-    "receiptSha256": "b69548d40e0bb06e86d6428197d89742c70c4e21749b6248356a9c8c064b86cb"
+    "receiptSha256": "631e42bf4332d0aaf25778256a6c245f256e6643f19cb713dcaa01019507507d"
   },
-  "build": {
+  "productionBuild": {
+    "receiptSha256": "be52d2bd47484531a4368e54cad64cf79984aa63eb0da24bdf62ba93c00e2b09",
     "commands": [
       {
         "label": "review",
         "code": 0,
-        "logSha256": "1fda006b2b23d4e7b24b25a89fb710cb3efa3d7150f1ddb17f9ed24ca072daf7"
+        "logSha256": "4860b09248614c6398d76006888a89b340b22ec6eec0d3198ac85cc50a87be39"
       },
       {
         "label": "policy",
@@ -36,22 +71,22 @@
       {
         "label": "build",
         "code": 0,
-        "logSha256": "a475410450549283e84a8470ff8624245de916d57a078d32d6d20b81aef50335"
+        "logSha256": "d80b2415634c3a8a84db5d638a61845cddee32b8b3999f2858137eb9db7fe29f"
       }
-    ],
-    "receiptSha256": "01c9e48f70253dfbe47f3bf574d768d6391d8cd774bf80d86318b288a77dd0ec"
+    ]
   },
   "runtime": {
     "requests": 511,
-    "receiptSha256": "a4872149cd20004d8da094a13d3710a26dd719f37caad2c957ca310011212531",
-    "scope": "Raw HTTP without auth headers: all144registered raw and144direct API model paths deny401/403; encoded/case/unregistered aliases deny; range/conditional requests cannot skip authorization; exact document redirect query preserved; every generated JS/CSS leaf and ordinary public page/image still serves."
+    "receiptSha256": "5f94d4d5118aa7cd351ed7f6892bb148c187b071067214806c35ca672753a410",
+    "scope": "New actual local Workers build; every registered raw/API model path and encoded/range/conditional refusals, generated CSS/JS/public resources and exact context redirect verified."
   },
   "browser": {
-    "receiptSha256": "5ca2e9ed8bca0cd8792fa7d9861b86e4b1a460a8288dabe25affdbc976e26f8d",
-    "scope": "Real1280x900 isolated unsigned Chrome: hydrated parent confirms exact index-to-folder navigation, compact closed Viewer help, no failed stylesheet or horizontal overflow. Sign-in-required model notice retained. Clinical Review guest route visibly denies; no authenticated rendering or reviewer acceptance claim."
+    "receiptSha256": "f7682aad7dffe8a60d96e5bf3617cb7b1d6961ac29e87ded67cd6d9fcb412d1e",
+    "scope": "Actual unsigned1280x900 MRI shell preserves brainstem-pons concept and has no failed stylesheet or horizontal overflow. No scan/canvas rendering, authorized reviewer, full AT or clinical claim. Existing component-level Chrome retry-focus proof is for exact03c source and controlled synthetic import seam."
   },
-  "retainedFailures": "Initial19/24new-harness run, Node cloudflare-scheme failure, baseline raw-model and encoded-alias bypass proofs retained locally. Initial197HEAD/GET narrow proof passed but missed missing framework CSS/JS and direct API404; actual browser caught nonhydration. Framework static routing and direct protected API dispatch corrected before final acceptance. Original source assertions unchanged.",
-  "limits": "Not canonical installation, authenticated model/Review acceptance, full-suite success, clinical validation or public release. Prior171full-suite failures remain separately tracked. Image optimizer only accepts image MIME types in the installed dependency; no claim of exhaustive security audit.",
+  "preservation": "Six original page-test bodies preserve declared wrapper-interface seams; real SSR component markup checked. Original loader test bytes reconstruct after one helper-export seam. Forty original lecture cases and every context/async assertion have exact inverse proofs, mutation refusals and genuine7b/509b/f509/e440 history; immutable e440 rejects new4dReview. No old assertion removed or fixture silently repinned.",
+  "retainedFailures": "Type helper JsxAttributeName.text diagnostic retained; fixed actual typed getText and component signature, no suppression. First current native39/40 correctly refused accidental default canonicalf509 context; correct existing bd5 environment yields40/40. Independent checker first filename mismatch retained and corrected only content-hash-name normalization while hashing all assets. Source portal runtime still names509b current; not fixed by these contracts.",
+  "limits": "Old full-suite171failures are not all resolved, no whole-suite pass. New source not canonical-installed, published, authenticated model/reviewer accepted or clinically signed off. No private data, new mesh/image/font/dependency, permission/entitlement or desktop clinical PACS changes.",
   "heldArchivePaths": [
     "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
     "tests/fixtures/head-pilot-9fba-epoch.json",

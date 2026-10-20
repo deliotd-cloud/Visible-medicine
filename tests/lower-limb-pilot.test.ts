@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { atlasModules } from '../lib/catalog.ts';
+import {assertRuntimeFramePage} from './atlas-runtime-page-contract.ts';
 const runtime = new URL('../public/atlas-runtime/lower-limb/',import.meta.url);
 const sha = (bytes:Uint8Array) => createHash('sha256').update(bytes).digest('hex');
 test('lower limb inventory binds 67 surfaces and all five original bundles',async()=>{
@@ -52,7 +53,7 @@ test('one compact lower-limb route declares actual scope and absent imaging',asy
   const entries=atlasModules.filter(m=>m.slug==='lower-limb-3d');
   assert.equal(entries.length,1); assert.equal(entries[0].images,0); assert.equal(entries[0].structures,67);
   const page=await readFile(new URL('../app/atlas/lower-limb-3d/page.tsx',import.meta.url),'utf8');
-  assert.equal((page.match(/<iframe\b/g)||[]).length,1);
+  assertRuntimeFramePage(page,'source');
   assert(page.includes('src={source}')&&page.includes('`/atlas-runtime/lower-limb/index.html${suffix}`'));
   assert(page.includes('not registered to the body atlas or a patient scan'));
   assert(page.includes('lecture access remains separate'));

@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {atlasModules} from '../lib/catalog.ts';
+import {assertRuntimeFramePage} from './atlas-runtime-page-contract.ts';
 test('pelvis and spine expose complete contained scopes without imaging or review approval',async()=>{
   const runtime=new URL('../public/atlas-runtime/head-neck/',import.meta.url);
   const manifest=JSON.parse(await readFile(new URL('manifest.json',runtime),'utf8'));
@@ -12,7 +13,7 @@ test('pelvis and spine expose complete contained scopes without imaging or revie
     assert.equal(new Set(scope.regionalIds).size,roots);assert.equal(scope.nestedTargets.length,nested);assert.equal(scope.independentSpecimens.length,specimens);
     for(const bundle of scope.bundles)assert(manifest.modelBundles.some((b:{url:string;sha256:string;bytes:number})=>b.url===bundle.url&&b.sha256===bundle.sha256&&b.bytes===bundle.bytes));
     const page=await readFile(new URL('../app/atlas/'+region+'-3d/page.tsx',import.meta.url),'utf8');
-    assert.equal((page.match(/<iframe\b/g)||[]).length,1);assert(page.includes('src="/atlas-runtime/head-neck/index.html?region='+region+'"'));
+    assertRuntimeFramePage(page,'/atlas-runtime/head-neck/index.html?region='+region);assert(page.includes('src="/atlas-runtime/head-neck/index.html?region='+region+'"'));
     assert(frame.includes("pathname === '/atlas/"+region+"-3d'"));
     for(const phrase of ['No scan or spatial registration is connected','lecture access remains separate','not registered to the main body'])assert(page.includes(phrase));
   }

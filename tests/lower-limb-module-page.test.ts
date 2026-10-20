@@ -7,6 +7,7 @@ import {atlasReferenceRevisionCurrent} from '../lib/atlas-reference-revision.ts'
 import {atlasStudySuffix} from '../lib/atlas-study-transport.ts';
 import {selectedBodyRegion} from '../lib/atlas-navigation.ts';
 import {build} from 'esbuild';
+import {assertRuntimeFramePage} from './atlas-runtime-page-contract.ts';
 
 const require=createRequire(import.meta.url);
 const lowerManifest=JSON.parse(readFileSync(new URL('../public/atlas-runtime/lower-limb/manifest.json',import.meta.url),'utf8'));
@@ -26,8 +27,13 @@ function page(path:string,imports:Record<string,unknown>){
   assert(exports.default);return exports.default;
 }
 const notFound=()=>{throw new Error('not-found');};
+for(const path of ['../app/atlas/lower-limb-3d/page.tsx','../app/atlas/3d/page.tsx'])
+  assertRuntimeFramePage(readFileSync(new URL(path,import.meta.url),'utf8'),'source');
+// The scoped loader represents the audited shared component's single emitted iframe.
 const shared={'next/link':{default:'test-link'},'next/navigation':{notFound,redirect:(href:string)=>{throw new Error('redirect:'+href);}},
-  '../../../components/AtlasRegionNavigation':{AtlasRegionNavigation:()=>null},'../../../components/AtlasWorkspaceNavigation':{AtlasWorkspaceNavigation:()=>null},'../shoulder-3d/shoulder-module.css':{},'react/jsx-runtime':require('react/jsx-runtime')};
+  '../../../components/AtlasRuntimeFrame':{AtlasRuntimeFrame:'iframe'},
+  '../../../components/HeadAtlasLinkedModel':{HeadAtlasLinkedModel:()=>null},
+  '../../../components/AtlasRegionNavigation':{AtlasRegionNavigation:()=>null},'../../../components/AtlasWorkspaceNavigation':{AtlasWorkspaceNavigation:()=>null},'../shoulder-3d/shoulder-module.css':{},'../head-neck-3d/head-learning.css':{},'react/jsx-runtime':require('react/jsx-runtime')};
 const lowerPage=page('../app/atlas/lower-limb-3d/page.tsx',{
   ...shared,'../../../lib/atlas-reference-revision':{atlasReferenceRevisionCurrent},
   '../../../lib/lower-limb-study-transport':{lowerLimbStudySuffix},

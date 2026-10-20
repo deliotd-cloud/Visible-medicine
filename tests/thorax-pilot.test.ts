@@ -3,11 +3,12 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {atlasModules} from '../lib/catalog.ts';
+import {assertRuntimeFramePage} from './atlas-runtime-page-contract.ts';
 test('thorax is discoverable as a 3D pilot, not a patient-imaging collection',async()=>{
   const entries=atlasModules.filter(m=>m.slug==='thorax-3d');assert.equal(entries.length,1);
   assert.equal(entries[0].structures,158);assert.equal(entries[0].images,0);assert.equal(entries[0].modality,'3D');
   const page=await readFile(new URL('../app/atlas/thorax-3d/page.tsx',import.meta.url),'utf8');
-  assert.equal((page.match(/<iframe\b/g)||[]).length,1);
+  assertRuntimeFramePage(page,'/atlas-runtime/head-neck/index.html?region=thorax');
   assert(page.includes('src="/atlas-runtime/head-neck/index.html?region=thorax"'));
   assert(page.includes('No scan or spatial registration is connected'));assert(page.includes('lecture access remains separate'));
   const frame=await readFile(new URL('../components/SiteFrame.tsx',import.meta.url),'utf8');assert(frame.includes("pathname === '/atlas/thorax-3d'"));

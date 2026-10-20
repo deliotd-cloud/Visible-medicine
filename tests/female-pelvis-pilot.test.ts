@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { atlasModules } from '../lib/catalog.ts';
+import {assertRuntimeFramePage} from './atlas-runtime-page-contract.ts';
 const runtime = new URL('../public/atlas-runtime/female-pelvis/',import.meta.url);
 const sha = (bytes:Uint8Array) => createHash('sha256').update(bytes).digest('hex');
 
@@ -77,7 +78,7 @@ test('catalogue has one pelvic module with clear coverage and no claimed scan co
   const entries = atlasModules.filter(m=>m.slug==='female-pelvis-3d');
   assert.equal(entries.length,1); assert.equal(entries[0].images,0); assert.equal(entries[0].structures,43);
   const page = await readFile(new URL('../app/atlas/female-pelvis-3d/page.tsx',import.meta.url),'utf8');
-  assert.equal((page.match(/<iframe\b/g)||[]).length,1);
+  assertRuntimeFramePage(page,'/atlas-runtime/female-pelvis/index.html');
   assert(page.includes('src="/atlas-runtime/female-pelvis/index.html"'));
   assert(page.includes('No scan or spatial registration is connected'));
   assert(page.includes('introductory draft teaching for all 43 selections'));

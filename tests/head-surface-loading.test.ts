@@ -58,6 +58,9 @@ const onPick=()=>{};
 const props={selected,regionalCourse:false,onPick};
 const surface=(received:Record<string,unknown>)=>({type:'synthetic-surface',props:received});
 
+// Shared only by complementary import-retry focus tests; original cases stay intact.
+export {harness,props,surface};
+
 test('3D renderer import begins after mount and receives the latest selected props',async()=>{
   const h=harness();try{
     assert.equal(h.imports.length,0,'evaluating loader module is safe for slice-only routes');

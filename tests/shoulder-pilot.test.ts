@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { atlasModules } from '../lib/catalog.ts';
+import {assertRuntimeFramePage} from './atlas-runtime-page-contract.ts';
 const runtime=new URL('../public/atlas-runtime/shoulder/',import.meta.url);
 
 test('shoulder module inventory is exact and contains no patient files',async()=>{
@@ -47,7 +48,7 @@ test('website uses one real shoulder and does not imply a scan connection',async
   const entries=atlasModules.filter(m=>m.slug==='shoulder-3d');
   assert.equal(entries.length,1); assert.equal(entries[0].images,0); assert.equal(entries[0].structures,9);
   const source=await readFile(new URL('../app/atlas/shoulder-3d/page.tsx',import.meta.url),'utf8');
-  assert.equal((source.match(/<iframe\b/g)||[]).length,1);
+  assertRuntimeFramePage(source,'moduleHref');
   assert(source.includes('src={moduleHref}'));
   assert(source.includes('No scan or spatial registration is connected'));
   assert(!source.includes('postMessage') && !source.includes('iframe src={'));
