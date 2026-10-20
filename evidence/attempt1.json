@@ -1,0 +1,6 @@
+{
+  "exitCode": 1,
+  "cause": "Raw cat-file batch exceeded64MB stdout buffer while reading tracked large binary assets. New local merge commit/worktree had already been created. No source bytes were edited by failed verification; no receipt/candidate acceptance claimed.",
+  "correction": "Resume same exact clean merge and compare streaming Git hash-object --no-filters output to every tracked tree blob instead of loading binary batches.",
+  "canonicalInstalled": false
+}

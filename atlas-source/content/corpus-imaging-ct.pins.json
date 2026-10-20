@@ -1,0 +1,121 @@
+{
+  "schema": "vm-corpus-imaging-ct-pins-1",
+  "parentCommit": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+  "parentTree": "bfcfa898ace1d25083f21b681274c5bc816564d7",
+  "sourcePath": "public/models/bodyparts3d/corpus-spongiosum/catalog.json",
+  "sourceCatalogSha256": "edfe15182492244336b7cbddad0762f80e2e282e871f710c88afd6246453ce23",
+  "rawCatalogSha256": "109ad372060f36fba1658a9968415884f279531eb5a3ecf047908bd6a6d6b0a7",
+  "sourceVersion": "4.0",
+  "license": "CC-BY-4.0",
+  "credit": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundle": {
+    "id": "corpus-spongiosum",
+    "url": "/models/bodyparts3d/corpus-spongiosum/corpus-spongiosum.glb?v=f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+    "bytes": 11856,
+    "sha256": "f704a79a0fe2c9b30a93380d36ab31cb241f1ca81f701b870ff288bfb616d826",
+    "structures": 1
+  },
+  "displayCatalogHash": "f5ec1f9e357d0687adb6edde9ea5a0e9e3d6b6b5251bf2d824f835fd5393a638",
+  "shoulderStructuresHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+  "recipesHash": "52419523174442b183fecdd6086bf93baec6855c001bcd10cace6180c751a9aa",
+  "allLessonsBeforeHash": "41c08e1011889f5506fb2cece9cb81b1ca878a3f27c0fc241af4fb95f69789ce",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+        "fmaId": "FMA19617",
+        "name": "Corpus spongiosum · bulb/shaft source",
+        "sourceName": "corpus spongiosum of penis",
+        "system": "organs",
+        "category": "organ",
+        "laterality": "midline",
+        "region": "pelvis",
+        "regions": [
+          "pelvis"
+        ],
+        "bundle": "corpus-spongiosum",
+        "nodeName": "FMA19617",
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ3133",
+            "sha256": "e90e440d57d2e6b0b85c622650c46bafe34c0886a6eed898062b914b5df1f14e"
+          }
+        ],
+        "bounds": {
+          "min": [
+            -0.11280299723148346,
+            -0.9105299711227417,
+            0.2501530051231384
+          ],
+          "max": [
+            0.09973979741334915,
+            -0.1976899951696396,
+            1.371359944343567
+          ]
+        },
+        "center": [
+          -0.006531599909067154,
+          -0.5541099831461906,
+          0.8107564747333527
+        ],
+        "anchor": [
+          -0.024211199954152107,
+          -0.35267001390457153,
+          0.7853400111198425
+        ],
+        "coverageNote": "Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "topics": [
+        "ct"
+      ],
+      "previous": {
+        "ct": {
+          "readiness": "pending",
+          "title": "Corpus spongiosum · bulb/shaft source · Review pending",
+          "body": "Structure-specific imaging teaching remains pending.",
+          "bullets": [],
+          "note": "No patient scan, diagnostic conclusion, intervention or registered imaging correspondence is supplied."
+        }
+      }
+    }
+  ]
+}

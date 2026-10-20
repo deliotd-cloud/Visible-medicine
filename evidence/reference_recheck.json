@@ -1,0 +1,26 @@
+{
+  "date":"2026-10-20",
+  "teachingPath":"content/corpus-imaging.ts",
+  "scope":"Primary-source recheck of the existing original CT teaching draft; not clinical approval or a new image licence clearance.",
+  "sources":[
+    {
+      "url":"https://doi.org/10.3390/app11031006",
+      "fullText":"https://mdpi-res.com/d_attachment/applsci/applsci-11-01006/article_deploy/applsci-11-01006.pdf",
+      "checked":"Primary article pages2,5,9: prospective abnormal-urethra cohort22; study-specific attenuation limitation for measuring surrounding scar. No extrapolated routine-CT boundary sensitivity or procedural advice.",
+      "copyright":"Authors2021, article declares CC-BY-4.0 on page1; no figure, image or full article bundled.",
+      "directHtmlFetch":"429; publisher-hosted PDF and indexed primary article read instead."
+    },
+    {
+      "url":"https://www.cancer.gov/publications/dictionaries/cancer-terms/def/corpus-spongiosum",
+      "checked":"NCI supports distinction between surrounding erectile tissue and urethral passage.",
+      "originalTeachingCitation":"https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html",
+      "bundledSourceAsset":false
+    }
+  ],
+  "sourceMeshBounds":"Existing exact bulb/shaft source pin, not whole-organ extent, acquired-image segmentation or patient-space registration.",
+  "newSourceImages":0,
+  "newDependencies":0,
+  "newFees":false,
+  "clinicalApproval":false,
+  "publicDeployment":false
+}

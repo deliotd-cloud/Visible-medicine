@@ -1,0 +1,293 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T21:15:10.351Z",
+  "sourceIdentity": {
+    "at": "2026-10-20T21:15:06.636Z",
+    "atlas": "F:/VisibleMedicine/staging/20261020-teaching-review-source",
+    "source": "b101f1fd71f894244868abb26123bd978799b666",
+    "tree": "f1b9718a22c544f4cfcc6a88fc1a6d06a39cfaeb",
+    "parents": {
+      "ui": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "teaching": "531e3f71826bb854485d2bb810da740d73d788a9"
+    },
+    "sourcePaths": 35,
+    "rawMergeTreeBlobsVerified": 6226,
+    "contentContractChecks": 33489,
+    "rendererRecoveryChecks": 822,
+    "fullAtlasTypes": true,
+    "requirementsReproduced": true,
+    "geometryChanged": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "websiteInstalled": false,
+    "canonicalInstalled": false,
+    "ownerFormsRefreshed": false,
+    "publicDeployment": false,
+    "wholeProjectBackup": false,
+    "privateDataBackup": false,
+    "verificationLimit": "Not final teaching admission. Original historical Xray/foot/post-foot replay failures retained by live bounded worker. Xray4/4 and strict post-foot helper refusal now pass in proposal;9 later quiz/ultrasound placements still require exact baseline inverses. No test/source pin or assertion weakened; correction not yet admitted. No full Atlas build/export or Website import performed.",
+    "website": "Verified Website UI candidate remains Atlas98d7/Reviewb2bd with5044named inputs; all source bytes rechecked unchanged. Canonicalf509/b953/Reviewa4db and owner3000 forms untouched. No patient images or private decision stores accessed.",
+    "activeWorker": "/root/corpus_source_admission_checks_1020 owns only F:/VisibleMedicine/staging/20261020-corpus-source-admission-checks, before/files proposals and logs; no nested delegation, source writes or commit. Main has no heavy job live.",
+    "next": "Review exact-history proposal and original affected tests; admit only source-bound full inverses, regenerate source metadata if needed, then actual coherent source build/export/Website import. Keep Website UI safe-switch gate independent; full saved roadmap active."
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "atlas-source/app/review/body/body-decision-editor.tsx",
+      "bytes": 27893,
+      "sha256": "9efe57afd21b937ef91ce58e4042f33a87c9b9d9a8bb61137570680a037f09a7"
+    },
+    {
+      "path": "atlas-source/app/review/body/review-dashboard.tsx",
+      "bytes": 29556,
+      "sha256": "233bfcc6adf9e1a59c11ed34dfaa06ce3d903e908b144d0532926b963f5fb9f1"
+    },
+    {
+      "path": "atlas-source/app/review/nested/workspace.tsx",
+      "bytes": 35598,
+      "sha256": "ba609473a17de1811b6bc927d26bafb75c7eb8fc6ee02b86b7a5cc9a5c496281"
+    },
+    {
+      "path": "atlas-source/app/review/review-confirmation.ts",
+      "bytes": 586,
+      "sha256": "caeee52aee3630813f17c24944a0e346ac6556a25ab0934bacc774e8e024637a"
+    },
+    {
+      "path": "atlas-source/app/review/review-dashboard.tsx",
+      "bytes": 45734,
+      "sha256": "ca4c944381926d212d4d1d8ad1bdb77994c0f98dd9c97912a3981aa9ba8fb513"
+    },
+    {
+      "path": "atlas-source/app/review/review-working-state.ts",
+      "bytes": 1523,
+      "sha256": "1fa5d8ff8d65b9abecb37aefdc76b4cca8a7ce3c06dcb612d8e1279a31b89e4f"
+    },
+    {
+      "path": "atlas-source/app/review/review.css",
+      "bytes": 6584,
+      "sha256": "ed4995c737c232f5beae57269d1218e0e24bcb6448101184081d4e0b360c2aff"
+    },
+    {
+      "path": "atlas-source/app/review/specimens/workspace.tsx",
+      "bytes": 33030,
+      "sha256": "003b953b7ca9af8900f15476d265fd9d047b3bbd3cc183b04a6d203f18136173"
+    },
+    {
+      "path": "atlas-source/content/corpus-imaging-ct.pins.json",
+      "bytes": 4053,
+      "sha256": "1a04b079ec527e4dce75c6c366576947fced6aff8a7f4ed83b3d35cb95d14c6e"
+    },
+    {
+      "path": "atlas-source/content/corpus-imaging-ct.transition.json",
+      "bytes": 3652,
+      "sha256": "b918d036891846846ac2db2a16a0b865667420638d634dea22b227d0410e5409"
+    },
+    {
+      "path": "atlas-source/content/corpus-imaging.ts",
+      "bytes": 3713,
+      "sha256": "5d5e7afeb081d79b1f8559c90f6fd51cfd8cc79a6727844413a081c6e937f61e"
+    },
+    {
+      "path": "atlas-source/docs/CURRENT_STATUS.md",
+      "bytes": 9872,
+      "sha256": "1d939a91e7141e09dd7e316fce35229c424ffd4d45c19c5f77015bb709b6a063"
+    },
+    {
+      "path": "atlas-source/docs/requirement-audit.json",
+      "bytes": 261364,
+      "sha256": "0ffdc500325f5c91c71c35718d5597e4738463fc959317c3597f109763544a03"
+    },
+    {
+      "path": "atlas-source/lib/corpus-imaging.ts",
+      "bytes": 1156,
+      "sha256": "b6256fdf7a17d1a9694d6aad5ea92ed4dc15f8f7ef3b5ed1d1060c4c0b0f4bfc"
+    },
+    {
+      "path": "atlas-source/package.json",
+      "bytes": 86545,
+      "sha256": "9786b30019f418881824a20026ee66c2d3e16d4a3231f6cea85975687cbe6d1a"
+    },
+    {
+      "path": "atlas-source/scripts/audit-requirements.mjs",
+      "bytes": 90506,
+      "sha256": "1d3fb416eb31a84715f9a2b3dc04d213189001a8336e87c133e65268985f2915"
+    },
+    {
+      "path": "atlas-source/scripts/content-contract-tools.mjs",
+      "bytes": 15395,
+      "sha256": "76865d1d804f9883fcf9778d3866177f2e4032df095a90daeac7f87aae8a978e"
+    },
+    {
+      "path": "atlas-source/scripts/corpus-imaging-ct-history.mjs",
+      "bytes": 2047,
+      "sha256": "c4e730778a542e454fc327c10bd46cd8141f1fecf4082a8fd6121f12af2cd2cd"
+    },
+    {
+      "path": "atlas-source/scripts/exact-source-history-api.mjs",
+      "bytes": 22677,
+      "sha256": "c7ed1ad8ad307354262bce31f94fca5596b6d200bc0b5e20edaea49709940683"
+    },
+    {
+      "path": "atlas-source/scripts/pin-corpus-imaging-ct.mjs",
+      "bytes": 4713,
+      "sha256": "e76e0aec2e90cd0d8f86e6e272f27c10480b6e9e84b098117a859da6f83c3d91"
+    },
+    {
+      "path": "atlas-source/scripts/post-foot-author-history.mjs",
+      "bytes": 4974,
+      "sha256": "b702d249657bc2a30036cda741fb43e39acc0348c6ffe59f4dcf6f915073cde6"
+    },
+    {
+      "path": "atlas-source/scripts/requirement-source-inputs.mjs",
+      "bytes": 2269,
+      "sha256": "95713ee02982dee22b8ee388c465ca8972e881df7a0a6c2b1bb72ec73d9eaf18"
+    },
+    {
+      "path": "atlas-source/scripts/test-body-review-navigation.mjs",
+      "bytes": 19296,
+      "sha256": "a3bc6f4c55316a2349fd2532e25e12391835d2058a19932f69b496be109a97b5"
+    },
+    {
+      "path": "atlas-source/scripts/test-corpus-imaging-ct-history.mjs",
+      "bytes": 19014,
+      "sha256": "92c1cdbed5e62a4818387f131679f64bfa7361f52d132d0e1d29d67abffa74cb"
+    },
+    {
+      "path": "atlas-source/scripts/test-corpus-spongiosum-xray-v2.mjs",
+      "bytes": 9842,
+      "sha256": "64a848772fa2bcca456e78465612d3d91db57ef1f5f1ff366c3eb378c141f123"
+    },
+    {
+      "path": "atlas-source/scripts/test-inferior-thyroid-mra-evidence.mjs",
+      "bytes": 10589,
+      "sha256": "624fa234c3579b43c5f78f71eee28ec9cd3c8d11f8ddff16082cb948bcf3e2de"
+    },
+    {
+      "path": "atlas-source/scripts/test-requirement-source-inputs.mjs",
+      "bytes": 4105,
+      "sha256": "5698309c0db6ee86f1d718711a6464d854c4d78600a66c408b8266928a144dc0"
+    },
+    {
+      "path": "atlas-source/scripts/test-review-history-races.mjs",
+      "bytes": 8895,
+      "sha256": "d5a56db3f7ba61cf79394dfdabfea2bf9aff33d2a52e2ad18f182d743f28e7cd"
+    },
+    {
+      "path": "atlas-source/scripts/validate-body-decisions.mjs",
+      "bytes": 14381,
+      "sha256": "9fac339bc627b9c3919242b6ac37f9077cce75ff0065969fecad4399654e55a6"
+    },
+    {
+      "path": "atlas-source/scripts/validate-corpus-imaging.mjs",
+      "bytes": 7428,
+      "sha256": "bd011302444a037516918e156434f7d25a92e6fe9b2c70538255cb5ce5354dc8"
+    },
+    {
+      "path": "atlas-source/tests/review-approved-leave.test.mjs",
+      "bytes": 5953,
+      "sha256": "e46a903b309d43179e8c5e6e9c5c7ef1eeda4d370265b550a611eaafb0b04e21"
+    },
+    {
+      "path": "atlas-source/tests/review-autosave-component.test.mjs",
+      "bytes": 5132,
+      "sha256": "bccfb799915adc089eb13bd6a119aa542bd988d1acf5b46c514da24ba3910b07"
+    },
+    {
+      "path": "atlas-source/tests/review-confirmation-component.test.mjs",
+      "bytes": 1596,
+      "sha256": "fe0ee52ff497fe060718921675c247360dc666cb1d6efa1f35acc26e9e673810"
+    },
+    {
+      "path": "atlas-source/tests/review-confirmation.test.mjs",
+      "bytes": 1218,
+      "sha256": "519d6e8a45555b66a29141a809f803b967650efe768421f590586281bdf10685"
+    },
+    {
+      "path": "atlas-source/tests/review-working-state.test.mjs",
+      "bytes": 1666,
+      "sha256": "31457a907a8677b526b143f3f84d14cf5e227bd894cd81e48031f8c7022de9c2"
+    },
+    {
+      "path": "evidence/attempt1.json",
+      "bytes": 474,
+      "sha256": "979448054b36624cc0973de17a35f1e06e115651e7394b50f2d650e0dec05823"
+    },
+    {
+      "path": "evidence/content_original.json",
+      "bytes": 381,
+      "sha256": "9c4f27e16d7067905aceb58f8e0d7a2d7e5ab93106d935ac43f7ac637956910f"
+    },
+    {
+      "path": "evidence/full_atlas_types.json",
+      "bytes": 458,
+      "sha256": "1fe3ed90844b9339170592e5af3f9475368b565b09b97239a6cdecd03f682422"
+    },
+    {
+      "path": "evidence/preparation.json",
+      "bytes": 2321,
+      "sha256": "7ed1ea6baaa44d1836c45506a06dc4cb7a49837820ca7f6093bafe49dab6879e"
+    },
+    {
+      "path": "evidence/reference_recheck.json",
+      "bytes": 1457,
+      "sha256": "3b4ff823ba31254197706f4b806d7301945de69986b800d3f444c4b5bfdae84c"
+    },
+    {
+      "path": "evidence/renderer_original.json",
+      "bytes": 381,
+      "sha256": "61d10dace4d0aad7c11a88a33cbfc80f29207792ff61fcb81beb2dc2a5dfbd69"
+    },
+    {
+      "path": "evidence/requirements_check.json",
+      "bytes": 393,
+      "sha256": "df36fd2f8d36a6d0502b44f1212f1e5953e0b93a18d80c6b2a80dab26874b44c"
+    },
+    {
+      "path": "evidence/requirements_regenerate.json",
+      "bytes": 388,
+      "sha256": "f743a6a3c8207b02f80260151677e882e535d825677bf50c82c64a42cfe4b336"
+    },
+    {
+      "path": "evidence/source_inventory.json",
+      "bytes": 712,
+      "sha256": "70a40ae0399aef8f997bcc588a90a06b3affba8d8387d47319ec0d43704cbef3"
+    }
+  ],
+  "removed": [],
+  "scope": "Selected source draft/UI changes and non-patient verification receipts only; candidate has unresolved historical replay gates and is not admitted. No scans, private reviews, model payloads, secrets, runtime assets/databases or raw canonical ancestry. Not a complete or runnable Atlas/Website/private-data backup.",
+  "proof": {
+    "at": "2026-10-20T21:15:06.636Z",
+    "atlas": "F:/VisibleMedicine/staging/20261020-teaching-review-source",
+    "source": "b101f1fd71f894244868abb26123bd978799b666",
+    "tree": "f1b9718a22c544f4cfcc6a88fc1a6d06a39cfaeb",
+    "parents": {
+      "ui": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
+      "teaching": "531e3f71826bb854485d2bb810da740d73d788a9"
+    },
+    "sourcePaths": 35,
+    "rawMergeTreeBlobsVerified": 6226,
+    "contentContractChecks": 33489,
+    "rendererRecoveryChecks": 822,
+    "fullAtlasTypes": true,
+    "requirementsReproduced": true,
+    "geometryChanged": false,
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "websiteInstalled": false,
+    "canonicalInstalled": false,
+    "ownerFormsRefreshed": false,
+    "publicDeployment": false,
+    "wholeProjectBackup": false,
+    "privateDataBackup": false,
+    "verificationLimit": "Not final teaching admission. Original historical Xray/foot/post-foot replay failures retained by live bounded worker. Xray4/4 and strict post-foot helper refusal now pass in proposal;9 later quiz/ultrasound placements still require exact baseline inverses. No test/source pin or assertion weakened; correction not yet admitted. No full Atlas build/export or Website import performed.",
+    "website": "Verified Website UI candidate remains Atlas98d7/Reviewb2bd with5044named inputs; all source bytes rechecked unchanged. Canonicalf509/b953/Reviewa4db and owner3000 forms untouched. No patient images or private decision stores accessed.",
+    "activeWorker": "/root/corpus_source_admission_checks_1020 owns only F:/VisibleMedicine/staging/20261020-corpus-source-admission-checks, before/files proposals and logs; no nested delegation, source writes or commit. Main has no heavy job live.",
+    "next": "Review exact-history proposal and original affected tests; admit only source-bound full inverses, regenerate source metadata if needed, then actual coherent source build/export/Website import. Keep Website UI safe-switch gate independent; full saved roadmap active."
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

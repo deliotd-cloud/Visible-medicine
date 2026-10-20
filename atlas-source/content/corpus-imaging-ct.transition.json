@@ -1,0 +1,44 @@
+{
+  "schema": "vm-corpus-imaging-ct-transition-1",
+  "parentCommit": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+  "sourcePinsHash": "cb70fd388c646a02074c0691dbf819ba2d3f28d08406ba0f0bcb99e0ad7a938d",
+  "allLessonsAfterHash": "641970463cd97764fd6721263eb820cfe627f8f0b318aa54d623af9c7115b31f",
+  "entries": [
+    {
+      "id": "vm:anatomy:body:pelvis:midline:organ:corpus-spongiosum-of-penis",
+      "fmaId": "FMA19617",
+      "tab": "ct",
+      "previousHash": "e0b06de982aa5b8284f78cc2d922205a90c53b2115d22369f284478c948f1855",
+      "currentHash": "9f0301b6fc752739bf87db078cb0ac83109bfdf73ebcbd7bd145cf549a572c21",
+      "current": {
+        "readiness": "draft",
+        "title": "Corpus spongiosum · bulb/shaft source · CT: urethral contrast is not the erectile-tissue boundary · draft",
+        "body": "The corpus spongiosum is tissue around the spongy urethra, not the urethral passage itself. Dedicated CT retrograde urethrography introduces contrast into that passage; its opacified route must not be mistaken for the complete outline of the surrounding corpus spongiosum.",
+        "bullets": [
+          "An original prospective CT-urethrography study included 22 men with urethral abnormalities. Its selected clinical cohort is not evidence that routine CT consistently resolves normal spongiosal boundaries.",
+          "The investigators did not measure surrounding spongiofibrosis thickness on CT, explaining that similar attenuation of scar and adjacent erectile tissue limited that assessment. This is a study-specific limitation, not a normal measurement or a treatment recommendation.",
+          "This source-labelled bulb/shaft surface supplies no glans, tunical layers or validated urethral lumen. It is not a CT segmentation; neither a smooth surface nor the separate urethral model establishes tissue integrity, patency or a measured fibrosis boundary.",
+          "Source limit: Original source-labelled bulb/shaft representation. The separately supplied glans and corporal surfaces are not added; this is not the complete corpus spongiosum or penis. The existing urethra is context, not a validated enclosed lumen. Original coordinates and faces retained; clinical review pending.",
+          "Reference: Berna-Mestre and colleagues (2021), prospective CT retrograde urethrography study, especially its stated tissue-assessment limits; NCI SEER, Penis. No acquisition, contrast-dose, instrumentation or treatment instructions supplied."
+        ],
+        "citations": [
+          "https://doi.org/10.3390/app11031006",
+          "https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html"
+        ],
+        "note": "Educational draft for revision-bound radiologist review, not a diagnostic test or procedure plan. No patient registration, scan or clinical approval is supplied. Atlas, imaging-case and paid-lecture access remain independent."
+      }
+    }
+  ],
+  "reviewBefore": {
+    "source": "18261ef690cc7ddd1cf1b0cdaa413fd38f6d00d19d0a2a291ba91d5144a680e4",
+    "teaching": "c6458dd139dbdfb8787e1966babbbf0bff424651c6d39f0f2afbb6cb91115e4e",
+    "checklist": "0c1a34aba9bf44c673988dbab79aa6d9d69911055fac1522c7f6000fa1a20554"
+  },
+  "reviewAfter": {
+    "source": "18261ef690cc7ddd1cf1b0cdaa413fd38f6d00d19d0a2a291ba91d5144a680e4",
+    "teaching": "d719f02243953decda299b52bf1ac1cbb75e33224c509af602f163d234304f3c",
+    "checklist": "0c1a34aba9bf44c673988dbab79aa6d9d69911055fac1522c7f6000fa1a20554"
+  },
+  "reviewBeforeMaterialHash": "f64fc6fbd744b3151d1ca2ffc6d586a2545e4d8fe6a89f58f1dc0525eb97a501",
+  "reviewAfterMaterialHash": "af471c095d043c7e35cbe2a23c086901806d3298c12b087f7f36420b83437e1e"
+}
