@@ -17,3 +17,22 @@
   --color-border:var(--border); --color-input:var(--input); --color-ring:var(--ring);
   --color-popover:var(--popover); --color-popover-foreground:var(--popover-foreground);
 }
+
+/* Keep the selected model and worksheet responsive to the paper's actual width. */
+.website-clinical-review :is(.body-review-paper,.review-paper) { container: clinical-review-paper / inline-size; }
+.website-clinical-review :is(.body-review-selected,.review-selected) { grid-template-columns:minmax(0,1fr); }
+@container clinical-review-paper (min-width:40rem) {
+  .website-clinical-review :is(.body-review-selected,.review-selected) {
+    grid-template-columns:minmax(16rem,1fr) minmax(20rem,1fr);
+    gap:1rem;
+  }
+}
+
+@media (min-width:1000px) and (max-width:1199px) {
+  .website-clinical-review :is(.body-review-shell,.review-shell) { padding:1rem; }
+  .website-clinical-review :is(.body-review-header,.review-header) { padding:.75rem 1rem; gap:.75rem 1rem; }
+  .website-clinical-review :is(.body-review-grid,.review-grid) { grid-template-columns:200px minmax(0,1fr); gap:1rem; }
+  .website-clinical-review :is(.body-review-paper,.review-paper) { padding:1rem; }
+  .website-clinical-review .review-metrics { margin:1rem 0 .75rem; }
+  .website-clinical-review .review-metrics div { padding:.75rem; }
+}
