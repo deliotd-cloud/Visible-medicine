@@ -1,6 +1,23 @@
 # Anatomy coverage and remaining work
 
-Current coordinated candidate: `70260f13b1878272c6b0797dd72395ed10bc4f29`.
+Current isolated coverage source: `6036a7a59dcc1fd75eee4a23af34ca2a568d86b6`.
+All four trusted producers were rerun into a fresh external staging directory,
+then their five exact JSON outputs and measured checker/view bindings were
+installed together. All factual inventory, source-frame, gap/hold and limitation
+content matches the previous snapshot. Of 168 recorded dependencies, only the
+source package metadata identity changed; 142 imported and 26 source-only rows
+remain separately verified. This repairs the private coverage view becoming
+unavailable after the Atlas teaching update; it does not admit new anatomy.
+
+`scripts/verify-clinical-review.mjs` now checks the actual current coverage
+projection as a production preflight. A future stale or forged snapshot must
+fail verification rather than silently leave the reviewer without the inventory.
+No decisions, clinical approvals, release permissions or patient transforms are
+created. The canonical website and the owner's open editor remain unchanged.
+
+## Historical coordination notes
+
+Earlier coordinated candidate: `70260f13b1878272c6b0797dd72395ed10bc4f29`.
 All four producers were rerun from clean source. Factual counts, source frames,
 target groups, holds and all 168 dependency identities remain unchanged; 142
 imported and 26 source-only rows still require exact byte checks. This inventories

@@ -1,26 +1,26 @@
 {
   "schema": "vm-anatomy-coverage-index-1",
-  "sourceRevision": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+  "sourceRevision": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
   "sourceArtifacts": [
     {
       "scope": "root",
       "path": "docs/anatomy-coverage/root.json",
-      "sha256": "1a6a46a3b6464ee874a48e17ead8dd629333fa9364b648d7925f75e023ee64e5"
+      "sha256": "a7772c4c8089ef476d8966988571d1ad66b887e7f2d89ca8996217dc35a9d34a"
     },
     {
       "scope": "nested",
       "path": "docs/anatomy-coverage/nested.json",
-      "sha256": "83b88ef2b6ce2312091f6803364050f0db186d11fa416ae29e36439e5d6fed41"
+      "sha256": "713490ca374e5733ac04dbb13f43a12b176eec8710f822af7a3853f7d8939687"
     },
     {
       "scope": "independent",
       "path": "docs/anatomy-coverage/independent.json",
-      "sha256": "9a5ce229d84e749252d03b6d90aacbdb6825e2ed7c747681b64de615cf4d243c"
+      "sha256": "1bfc349e55eef56ccb15b48e5b8e61276cd4e82d127a664bd1a36520f0b4437b"
     },
     {
       "scope": "reference",
       "path": "docs/anatomy-coverage/reference.json",
-      "sha256": "567b02c0e3557bba28815436b2efcdd3ed94d59e724ac146064bc2b2a5afc088"
+      "sha256": "c1bd3e7d1558568575f89c31d3c7e59dd673bb24f7313dc24c4bebc7c320ba41"
     }
   ],
   "evidence": {
@@ -134,7 +134,7 @@
       "lib/ventricles.ts": "46f8ae96624771fb1e3bfb73f26c4ddbe4467e201784374df6159e68834a630c",
       "lib/visual-pathway.ts": "d57ede3b0e06388b222377d5aba1418d1c770ed856f01ea7322de765107acc87",
       "lib/xray-teaching.ts": "7a38c62a92467401cf5192adef611efdf21ad9ceb213371a984ee44fd425a6d1",
-      "package.json": "3fdd2cd598b0014ca2d3b67c6704313759190a5584253d25b7700369e42b89fe",
+      "package.json": "0ebcc8dab3d453a869cf4f9c37515c1c190829c8c9a127e1a9e83aba41eeb091",
       "public/models/bodyparts3d-v3/abdominal-wall/catalog.json": "a2fa96e5203e8a2c0ce5898a0d190834523a34f0b61c4ebfbce502a933f6d03e",
       "public/models/bodyparts3d-v3/back-layers/catalog.json": "23ba69e7268a03c8ab722313326bb7ffc3ac13aa49c0036c043993b38e0e9242",
       "public/models/bodyparts3d/anterior-cardiac-vein/catalog.json": "930539839a9b2a1c4a83f13309277aff6b90018cc2554b76010f3c4d3c351e2d",

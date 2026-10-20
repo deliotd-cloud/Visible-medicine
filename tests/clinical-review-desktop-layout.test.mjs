@@ -84,9 +84,10 @@ test('6036 teaching upgrade keeps actual layout, worksheet and navigation inputs
   'atlas-review/content/regional-teaching/head-neck.json','atlas-review/content/tongue-palate-quiz-pins.json',
   'atlas-review/content/tongue-palate-quiz.ts','atlas-review/lib/tongue-palate-quiz.ts',
   'atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','scripts/import-clinical-review.mjs',
+  'docs/anatomy-coverage/index.json','lib/anatomy-coverage-view.ts',
  ].sort());
  assert.equal(changed.filter(row=>!oldRows.has(row.path)).length,3);
- assert.equal(before.inputs.length-changed.filter(row=>oldRows.has(row.path)).length,1677);
+ assert.equal(before.inputs.length-changed.filter(row=>oldRows.has(row.path)).length,1675);
  assert(before.inputs.every(row=>binding.inputs.some(now=>now.path===row.path)));
  for(const row of binding.inputs)assert.equal(row.sha256,sha(read(row.path)),row.path);
  assert.throws(()=>validateCurrentAtlasDelivery({pin:JSON.parse(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw'))}));
