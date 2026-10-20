@@ -1,0 +1,65 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T00:54:05.903Z",
+  "sourceIdentity": {
+    "product": "Atlas palatal Quiz draft fragments ONLY, not an app source composition",
+    "requiredAtlasBase": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "pendingSourceTransition": true,
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending-atlas-palatal-quiz/PENDING_FRAGMENT_README.md",
+      "bytes": 1720,
+      "sha256": "ad7bc758cbde7ad64b7a7671e3f06b8f27e96ce187c3bcf86ab003a794bf9e2d"
+    },
+    {
+      "path": "pending-atlas-palatal-quiz/app/body-content.ts",
+      "bytes": 82238,
+      "sha256": "f2760883bc05b85fff1336f734c553bcb07d689ebe06bfbde752000062dc3d85"
+    },
+    {
+      "path": "pending-atlas-palatal-quiz/lib/palatal-quiz-curriculum.ts",
+      "bytes": 4279,
+      "sha256": "da80c7b811ff1c48dc786a6fad7a089e3b969b6b7573d021160ccdf095528aae"
+    },
+    {
+      "path": "pending-atlas-palatal-quiz/scripts/test-palatal-quiz-curriculum.mjs",
+      "bytes": 2727,
+      "sha256": "e398a539f6ec83f2f8e89ad18be4169812687b6ed893d9cec858d4f84dece5eb"
+    }
+  ],
+  "removed": [],
+  "scope": "Four pending-atlas-palatal-quiz source fragment paths plus three metadata files, no raw ancestry or whole Atlas tree. Two original question families for four existing source-bound selections, source-backed draft only. Actual virtual comparison9936placements/only4Quizchanges/9932unchanged and76identity refusals; not an actual source commit/export/Review/history/production-browser/clinical approval. Full normal source admission and Website binding required. No source scans/masks/models/private records, copied reference images/tables or clinical approvals. Separate Website coverage staging excluded. Scoped draft recovery only, not a complete project/private-data backup or release.",
+  "proof": {
+    "schema": "vm-palatal-quiz-main-review/1",
+    "date": "2026-10-20",
+    "state": "Original source-backed draft, virtually integrated and tested, not installed",
+    "sourceRevision": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "sourceTree": "44ca83bf391164c09f43f4169d25dcacf4b2559d",
+    "worker": "Studio bounded gpt-6-sol/medium assignment; terminal297; no nested delegation or shared source writes",
+    "sourceReview": "Main read the complete candidate lesson, candidate test, source swallowing curriculum, source schema, dispatch and actual source builder. Independently opened Texas Tech Health Sciences Center's swallowing anatomy table, https://anatomy.ttuhscep.edu/schemes/swallowing_tables.html on2026-10-20. Its levator/tensor rows support the usual action/motor-supply distinction. This is a factual reference, not a commercially cleared image/dataset licence. All question/explanation wording is newly authored; no tables/images downloaded or copied, no StatPearls text adapted. Draft still requires radiologist review.",
+    "nativeEvidence": "MAIN_CANDIDATE_RESULT.json SHA05e283e38e68d4d7fbbf42b5ed2518a040e22c3e5923f4fd36030cab8937dc76, terminal toolsession39539/chunk15e3d6/exit0. Actual installed hermetic builder loaded original source versus two explicit staged module overlays, write:false.9936real root teaching placements compared: exactly4Quiz entries move from generated-identification to draft;9932other placements identical.76actual source-identity mutation refusals, detached arrays, both sides and held superficial-perineal exclusion verified. Original source clean and exact before/after. Not production build, exported Review binding, real learner UI or clinical acceptance.",
+    "integration": "Staged app/body-content.ts adds exactly one import and one guarded dispatch branch; main inverse-proved all remaining original source after CRLF normalization. Do not copy into the frozen source during the current Website full suite. Future admission needs normal Atlas source-pin/teaching-transition/Review history and source commit, derived regional teaching, all applicable actual checks, four exports/Review import/binding/inventory and Website verification. New question revision must not inherit a prior clinical approval. Keep this a separate future batch rather than making the current bd5 coverage stale before its admission.",
+    "artifacts": {
+      "lib/palatal-quiz-curriculum.ts": "da80c7b811ff1c48dc786a6fad7a089e3b969b6b7573d021160ccdf095528aae",
+      "app/body-content.ts": "f2760883bc05b85fff1336f734c553bcb07d689ebe06bfbde752000062dc3d85",
+      "scripts/test-palatal-quiz-curriculum.mjs": "e398a539f6ec83f2f8e89ad18be4169812687b6ed893d9cec858d4f84dece5eb"
+    },
+    "canonicalInstalled": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "resultSha256": "05e283e38e68d4d7fbbf42b5ed2518a040e22c3e5923f4fd36030cab8937dc76",
+    "reviewSha256": "2a9d45263b6a596418872c5c85b45cf7947f4d2049312723c6d1ac2390ed711d",
+    "wholeAtlasComposition": false,
+    "pendingSourceTransition": true,
+    "websiteCoverageIncluded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

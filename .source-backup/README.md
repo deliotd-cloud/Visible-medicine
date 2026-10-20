@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Four pending-atlas-palatal-quiz source fragment paths plus three metadata files, no raw ancestry or whole Atlas tree. Two original question families for four existing source-bound selections, source-backed draft only. Actual virtual comparison9936placements/only4Quizchanges/9932unchanged and76identity refusals; not an actual source commit/export/Review/history/production-browser/clinical approval. Full normal source admission and Website binding required. No source scans/masks/models/private records, copied reference images/tables or clinical approvals. Separate Website coverage staging excluded. Scoped draft recovery only, not a complete project/private-data backup or release.
