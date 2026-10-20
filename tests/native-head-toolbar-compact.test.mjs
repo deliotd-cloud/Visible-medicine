@@ -10,7 +10,7 @@ const ts=require('typescript');
 const originalBytes=readFileSync(new URL('./fixtures/native-head-toolbar-before.css.txt',import.meta.url));
 assert.equal(createHash('sha256').update(originalBytes).digest('hex'),'214fbad37e04a7ecd371c073ffb13c36cbcb5eccb208201a314bc6f0d0fdfb15');
 const original=originalBytes.toString('utf8');
-const candidate=readFileSync(new URL('../components/head-atlas.css',import.meta.url),'utf8');
+const candidate=readFileSync(new URL('./fixtures/head-css-before-filtered-layout.raw',import.meta.url),'utf8');
 const css=postcss.parse(candidate,{from:'components/head-atlas.css'});
 const desktop=css.nodes.filter(node=>node.type==='atrule'&&node.name==='media'&&node.params==='(min-width:1200px)');
 const selector='.imaging-workspace-grid:not(.has-reference-comparison) .imaging-workspace-toolbar:has(> .head-inline-launch > button:first-child:not(:disabled))';

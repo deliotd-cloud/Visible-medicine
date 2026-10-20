@@ -46,7 +46,7 @@ test('original arrow handler stays byte exact; only the pure Tab-stop helper is 
 test('whole live viewer changes only focus state, result Tab stops and keyboard help',()=>{
  const old=read('tests/fixtures/head-viewer-before-roving.tsx.raw');
  assert.equal(sha(old),'25eeb4ecb80f16d801aaf32ee7923d571928b2bd6476a3eac1a916b17cfdc6c1');
- let inverse=text('components/HeadAtlasViewer.tsx');
+ let inverse=text('tests/fixtures/head-viewer-before-filtered-layout.tsx.raw');
  const one=(from,to)=>{assert.equal(inverse.split(from).length,2,from);inverse=inverse.replace(from,to);};
  one("import {headIndexKey,headIndexTabStop}","import {headIndexKey}");
  one('  const [indexFocus,setIndexFocus]=useState<{study:LoadedStudy;id:string}|null>(null);\n','');
