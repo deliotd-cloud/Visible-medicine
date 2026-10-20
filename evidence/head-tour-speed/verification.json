@@ -1,0 +1,104 @@
+{
+  "schema": "vm-head-tour-speed-proposal/1",
+  "at": "2026-10-20T17:47:03.150Z",
+  "stage": "F:/VisibleMedicine/staging/20261020-head-tour-speed",
+  "sourceCandidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "files": [
+    {
+      "path": "lib/head-tour-playback.ts",
+      "bytes": 4587,
+      "sha256": "98a28b5d2d168e481b10d7c8461b721985eea32f9d1412546eab63afa8d6d294",
+      "beforeSha256": "e6153a3c32a749b79d49aba4f373c466cb518517c7474e407cd12db8d95a7346"
+    },
+    {
+      "path": "components/HeadTourPlayback.tsx",
+      "bytes": 4470,
+      "sha256": "20777219656e9d51aaaca559bb9fa946bff7012602cd92daf57f119958412588",
+      "beforeSha256": "3aab21a01666c315abae738933966083f09f167e8861e86ce8e6b5c3f6d69034"
+    },
+    {
+      "path": "tests/head-tour-playback.test.ts",
+      "bytes": 11632,
+      "sha256": "4d65959a7a324ca784e10e1da09b75a71583724aeb9078d35ba18016368a14f6",
+      "beforeSha256": "4808d9aeddedc2b4f87b91bc048e634db8216af3bb98aff76e0516b2b4b03901"
+    },
+    {
+      "path": "tests/head-tour-playback-ui.test.ts",
+      "bytes": 11137,
+      "sha256": "974e7f15682a49eecb33900445b2db5c605cbabc8a7bb882f7053adfbca1a44b",
+      "beforeSha256": "e48d0b0185b4fe365f94fde0fd433096479d0d22b88954428441ce5dfba46bf5"
+    }
+  ],
+  "tests": 31,
+  "beforeWitness": {
+    "pass": 26,
+    "fail": 4,
+    "receipt": "F:/VisibleMedicine/staging/20261020-head-tour-speed/SPEED_BASELINE_WITNESS.json"
+  },
+  "types": "Bounded real TypeScript program for two production and two test files; not full-project types/build",
+  "inverses": "verify-speed.mjs reconstructs complete original controller/component and original tests with only two explicit speed-list updates. CSS unchanged.",
+  "workerReview": {
+    "agent": "/root/head_tour_speed_review_1020",
+    "model": "gpt-6-sol",
+    "effort": "medium",
+    "scope": "read-only four-file diff/risk review",
+    "finding": "No substantive regression found; actual project integration and browser acceptance remain pending."
+  },
+  "verification": {
+    "tests": {
+      "label": "SPEED_FINAL",
+      "command": "node",
+      "args": [
+        "--max-old-space-size=1024",
+        "--test",
+        "--experimental-strip-types",
+        "--test-concurrency=1",
+        "tests/head-tour-playback.test.ts",
+        "tests/head-tour-playback-ui.test.ts"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261020-head-tour-speed/SPEED_FINAL.log",
+      "logSha256": "dc7b9051d6ea21f27a96a4458b784cdda709e6cb0c47b38f50ef7ba3f1837acc",
+      "footer": [
+        "ℹ tests 31",
+        "ℹ pass 31",
+        "ℹ fail 0",
+        "ℹ cancelled 0",
+        "ℹ skipped 0",
+        "ℹ todo 0"
+      ],
+      "canonicalInstalled": false
+    },
+    "types": {
+      "label": "SPEED_SCOPE_TYPES",
+      "command": "node",
+      "args": [
+        "--max-old-space-size=1024",
+        "F:/VisibleMedicine/staging/20261020-head-tour-speed/verify-speed.mjs"
+      ],
+      "code": 0,
+      "signal": null,
+      "log": "F:\\VisibleMedicine\\staging\\20261020-head-tour-speed/SPEED_SCOPE_TYPES.log",
+      "logSha256": "2ff9b470db4ca506b09ef073d0b5b07b0bf0c747fd4ef0493dee952846ab7298",
+      "footer": [],
+      "canonicalInstalled": false
+    }
+  },
+  "fullSuite": {
+    "output": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+    "sourceSha256": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "sourceInputsVerifiedUnchanged": 5019,
+    "live": true,
+    "terminalReceiptObserved": false,
+    "counts": null,
+    "passingClaim": false
+  },
+  "previousGoalTurnClassification": "Verified wait: status-request turn directly confirmed the same full-suite process and read the saved register; no implementation was claimed.",
+  "canonicalInstalled": false,
+  "browserAccepted": false,
+  "patientDataUploaded": false,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "next": "After same full-suite terminal, check/apply exact guarded14-file test batch first and execute affected original modules. Then admit this four-file speed proposal coherently with stock Review source rebind, full project types/build and signed-in CT/MRI playback acceptance. Owner preview/editor remains untouched."
+}

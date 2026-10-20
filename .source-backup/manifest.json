@@ -1,0 +1,83 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T17:47:03.725Z",
+  "sourceIdentity": {
+    "kind": "Uninstalled CT/MRI head tour speed proposal",
+    "frozenSourceDigest": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "files": [
+      {
+        "path": "lib/head-tour-playback.ts",
+        "bytes": 4587,
+        "sha256": "98a28b5d2d168e481b10d7c8461b721985eea32f9d1412546eab63afa8d6d294",
+        "beforeSha256": "e6153a3c32a749b79d49aba4f373c466cb518517c7474e407cd12db8d95a7346"
+      },
+      {
+        "path": "components/HeadTourPlayback.tsx",
+        "bytes": 4470,
+        "sha256": "20777219656e9d51aaaca559bb9fa946bff7012602cd92daf57f119958412588",
+        "beforeSha256": "3aab21a01666c315abae738933966083f09f167e8861e86ce8e6b5c3f6d69034"
+      },
+      {
+        "path": "tests/head-tour-playback.test.ts",
+        "bytes": 11632,
+        "sha256": "4d65959a7a324ca784e10e1da09b75a71583724aeb9078d35ba18016368a14f6",
+        "beforeSha256": "4808d9aeddedc2b4f87b91bc048e634db8216af3bb98aff76e0516b2b4b03901"
+      },
+      {
+        "path": "tests/head-tour-playback-ui.test.ts",
+        "bytes": 11137,
+        "sha256": "974e7f15682a49eecb33900445b2db5c605cbabc8a7bb882f7053adfbca1a44b",
+        "beforeSha256": "e48d0b0185b4fe365f94fde0fd433096479d0d22b88954428441ce5dfba46bf5"
+      }
+    ],
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "lib/head-tour-playback.ts",
+      "bytes": 4587,
+      "sha256": "98a28b5d2d168e481b10d7c8461b721985eea32f9d1412546eab63afa8d6d294"
+    },
+    {
+      "path": "components/HeadTourPlayback.tsx",
+      "bytes": 4470,
+      "sha256": "20777219656e9d51aaaca559bb9fa946bff7012602cd92daf57f119958412588"
+    },
+    {
+      "path": "tests/head-tour-playback.test.ts",
+      "bytes": 11632,
+      "sha256": "4d65959a7a324ca784e10e1da09b75a71583724aeb9078d35ba18016368a14f6"
+    },
+    {
+      "path": "tests/head-tour-playback-ui.test.ts",
+      "bytes": 11137,
+      "sha256": "974e7f15682a49eecb33900445b2db5c605cbabc8a7bb882f7053adfbca1a44b"
+    },
+    {
+      "path": "evidence/head-tour-speed/verify-speed.mjs",
+      "bytes": 4710,
+      "sha256": "8dad6b66f10a34b1ab22661a18199aedf38dd24ef538089e1560563ac3431ef1"
+    },
+    {
+      "path": "evidence/head-tour-speed/verification.json",
+      "bytes": 4353,
+      "sha256": "ce088d5ebabd184bd1df062e24b84e29aa51a88b9e86a50e60b54941d823017a"
+    }
+  ],
+  "removed": [],
+  "scope": "Six selected source/evidence files only; isolated four-file proposal, not a full or standalone Website backup. Adds3x alongside existing tour rates, with31pure tests, actual bounded TypeScript and exact full-file inverses. No dependencies, scans, images, masks, models, identifiers, private records, raw canonical Git ancestry, approval or deployment. Product installation and actual signed-in browser acceptance are pending.",
+  "proof": {
+    "tests": 31,
+    "boundedTypes": true,
+    "originalAssertionsRetained": true,
+    "canonicalInstalled": false,
+    "browserAccepted": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
