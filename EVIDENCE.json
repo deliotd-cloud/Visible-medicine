@@ -1,0 +1,19 @@
+{
+  "schema": "visible-medicine.original-teaching-proposal/1",
+  "date": "2026-10-20",
+  "baseSource": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+  "target": {"fmaId": "FMA19617", "sourceFile": "FJ3133", "topic": "ct", "representation": "Existing source-labelled bulb/shaft surface; not whole penis or patent urethral lumen"},
+  "primaryEvidence": [
+    {"doi": "10.3390/app11031006", "article": "A New Technique for Computed-Tomography Urethrography in Males: The Clamp Method", "year": 2021, "sourceUrl": "https://www.mdpi.com/2076-3417/11/3/1006", "publicAuthorInstitutionCopy": "https://sms.carm.es/ricsmur/bitstream/handle/123456789/20548/4582.pdf?isAllowed=y&sequence=1", "reviewed": "Author-institution PDF of the original paper: methods, cohort/results and discussion limitations, particularly page 9. Publisher endpoint rate-limited during this review; no paywall bypass.", "supports": "Selected 22-man urethral-disease cohort; dedicated contrast-filled lumen assessment; authors did not measure spongiofibrosis thickness on CT because of similar attenuation of scar and adjacent erectile tissue.", "doesNotSupport": "Routine normal-population tissue visibility, a whole spongiosal CT boundary, validated patient-space mapping, universal CT diagnostic performance or any procedural recommendation.", "sourceRights": "Paper declares CC BY 4.0. Only an original concise factual paraphrase and citation are proposed; no PDF, figure, table, patient data or protocol reproduced."},
+    {"sourceUrl": "https://training.seer.cancer.gov/anatomy/reproductive/male/penis.html", "publisher": "US National Cancer Institute SEER Training", "supports": "Corpus spongiosum surrounds the urethra; paired corpora cavernosa are separate erectile columns.", "reuse": "Original concise paraphrase and reading link; no artwork or source wording copied."}
+  ],
+  "sourceIdentityGuard": "Existing full sourceCanonical comparison and original corpus-imaging pins are retained byte-exact. CT is proposed only for that exact identity; existing MRI and ultrasound lessons must remain exact.",
+  "verificationScope": "Small pure source-resolver build with two explicit staged onLoad substitutions; no live source edits, runtime installation, UI acceptance or historical-suite pass implied.",
+  "readiness": "Draft pending actual radiologist sign-off, not an acquired-image asset or claim of routine visibility.",
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "newGeometry": false,
+  "acceptedMasksChanged": false,
+  "publicDeployment": false,
+  "canonicalInstalled": false
+}

@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Eight selected source/proposal evidence files only, not a standalone Atlas or Website backup. The original source remains clean87ed. Two staged files add one original CT teaching draft for existing FMA19617, preserving all9935other topic placements and originalMRI/US. Overlay verification is not normal source/history/review/export admission. Restore only into an isolated proposal against the pinned base, then complete normal validators before installation. No patient images, source scans, masks, binary assets, private clinical records, raw Git ancestry, PDF text or figures included. No clinical/release/public-deployment approval.

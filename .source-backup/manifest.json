@@ -1,0 +1,72 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T16:32:18.208Z",
+  "sourceIdentity": {
+    "kind": "Unintegrated source-only Atlas teaching proposal",
+    "baseAtlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "proposalResolverSha256": "6befef8bbd91be71b9320b138b26d60ee7417a7e77d540ac5423e222f1b8d45c",
+    "canonicalInstalled": false,
+    "clinicalApproval": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "proposal/content/corpus-imaging.ts",
+      "bytes": 3713,
+      "sha256": "5d5e7afeb081d79b1f8559c90f6fd51cfd8cc79a6727844413a081c6e937f61e"
+    },
+    {
+      "path": "before/content/corpus-imaging.ts",
+      "bytes": 2293,
+      "sha256": "c6e45f351156738a2175bd3b759e38b948bd4d63c4719ace21a96cb8c027229b"
+    },
+    {
+      "path": "proposal/lib/corpus-imaging.ts",
+      "bytes": 1156,
+      "sha256": "b6256fdf7a17d1a9694d6aad5ea92ed4dc15f8f7ef3b5ed1d1060c4c0b0f4bfc"
+    },
+    {
+      "path": "before/lib/corpus-imaging.ts",
+      "bytes": 1144,
+      "sha256": "c5f100e44a819ebe7f532d1960c90be3936c084dad7e1651a9af9e34af1acea9"
+    },
+    {
+      "path": "EVIDENCE.json",
+      "bytes": 2574,
+      "sha256": "ea1a4d2c993da2e35c7ae67e17d701d4e4d6f6a72a5faa100adadd61b784f421"
+    },
+    {
+      "path": "verify-proposal.mjs",
+      "bytes": 8292,
+      "sha256": "20ecbc9f6c429260b0653c9a548cfa612644852b57579edaf7fd19c80350d787"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 136430,
+      "sha256": "b34a46091a27d3d3a7bc07c7de0150acf917b38eedda52027a99690ba761d8ca"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight selected source/proposal evidence files only, not a standalone Atlas or Website backup. The original source remains clean87ed. Two staged files add one original CT teaching draft for existing FMA19617, preserving all9935other topic placements and originalMRI/US. Overlay verification is not normal source/history/review/export admission. Restore only into an isolated proposal against the pinned base, then complete normal validators before installation. No patient images, source scans, masks, binary assets, private clinical records, raw Git ancestry, PDF text or figures included. No clinical/release/public-deployment approval.",
+  "proof": {
+    "verificationSha256": "b34a46091a27d3d3a7bc07c7de0150acf917b38eedda52027a99690ba761d8ca",
+    "changedPlacements": 1,
+    "preservedPlacements": 9935,
+    "identityRefusals": 114,
+    "fullOriginalFileInverses": true,
+    "liveSourceUnchanged": true,
+    "notInstalled": true,
+    "fullHistorySuiteRun": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
