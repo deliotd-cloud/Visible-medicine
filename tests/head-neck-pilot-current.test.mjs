@@ -67,7 +67,6 @@ test('the historical pilot retains every original assertion',()=>{
   assert.equal(sha(bytes),original.sha256);
   assert.equal(bytes.toString('utf8'),original.text);
   let current=readFileSync(new URL('./head-neck-pilot.test.ts',import.meta.url),'utf8');
-  current=current.replaceAll('\r\n','\n');
   const undo=(before,after)=>{
     assert.equal(current.split(before).length,2,`Exactly one pilot migration: ${before}`);
     current=current.replace(before,after);
@@ -75,20 +74,21 @@ test('the historical pilot retains every original assertion',()=>{
   undo("import {readHeadPilotFile as readFile,listHeadPilotDirectory as readdir,historicalHeadPilotRuntime} from './historical-head-pilot-read.mjs';",
     "import {readFile,readdir} from 'node:fs/promises';");
   undo('const runtime=historicalHeadPilotRuntime;',"const runtime=new URL('../public/atlas-runtime/head-neck/',import.meta.url);");
-  assert.equal(current,original.text.replaceAll('\r\n','\n'));
+  assert.equal(current,original.text);
+  assert.equal(sha(Buffer.from(current,'utf8')),original.sha256);
 });
 
 test('current head-neck delivery keeps exact source, regional/model scope and licence boundaries',async()=>{
   const manifestBytes=await readFile(new URL('manifest.json',runtime));
-  assert.equal(sha(manifestBytes),'718741d72d13df55ea0ee584718c6156aadc0fc5a4b250c196bf01c94d87d534');
+  assert.equal(sha(manifestBytes),'d8d5b5aaf4a40252217da56cd5d42c80ade5b43abb090454fd4c616a8e1ee9d8');
   const manifest=JSON.parse(manifestBytes);
-  assert.equal(manifest.sourceCommit,'46c43ed8cf121aa046ef5bbaf6c7e67c08ae50cd');
+  assert.equal(manifest.sourceCommit,'87ed7e343260c7df48a40d53503f25bbfd34cfa5');
   assert.equal(manifest.schemaVersion,2);
   const inputBytes=await readFile(new URL('source-inputs.json',runtime));
-  assert.equal(sha(inputBytes),'01cce8a39fdf3b221a1a62064a54d65a2ad437ff8b17b1282cd34b52994cb34f');
+  assert.equal(sha(inputBytes),'04b7123d4a613ad8b3a62cd19fdba7a3ef9ac56327b67116a7ad615973deca38');
   const inputs=JSON.parse(inputBytes);
-  assert.equal(inputs.length,1493);
-  assert.equal(new Set(inputs.map(input=>input.path)).size,1493);
+  assert.equal(inputs.length,1508);
+  assert.equal(new Set(inputs.map(input=>input.path)).size,1508);
   assert.equal(manifest.files.length,216);
   assert.equal(new Set(manifest.files.map(file=>file.path)).size,216);
   assert.equal(manifest.modelBundles.length,136);

@@ -12,6 +12,10 @@ import {headImageHref} from '../lib/head-atlas-navigation.ts';
 
 const lineageBoundary={WorkbookCorrectionLineage:()=>null,createWorkbookCorrectionLineageContext:()=>({begin:()=>Symbol('synthetic-lineage'),finish(){},invalidate(){}})};
 const require=createRequire(import.meta.url),tick=()=>new Promise(resolve=>setImmediate(resolve));
+const savePresentationModule={exports:{} as any};
+const savePresentationSource=readFileSync(new URL('../components/lecture-save-presentation.ts',import.meta.url),'utf8');
+const savePresentationCompiled=ts.transpileModule(savePresentationSource,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+new Function('module','exports',savePresentationCompiled)(savePresentationModule,savePresentationModule.exports);
 const pin=(id:string)=>{const value=createLectureAnatomyReference(id);assert(value);return value;};
 const pons=pin('brainstem-pons'),vermis=pin('cerebellum-vermis');
 const label=(id:string)=>lectureAnatomyOptions().find(option=>option.conceptId===id)!.label;
@@ -30,7 +34,7 @@ function harness(view:any=initial,playerProps?:any){
  Object.assign(react,{useLayoutEffect:react.useEffect});
   const component=playerProps?'LecturePlayer':'LectureEditor';
   const compiled=ts.transpileModule(readFileSync(`components/${component}.tsx`,'utf8'),{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,mod={exports:{} as any};
-  new Function('require','module','exports',compiled)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name.endsWith('.css')?{}:require(name),mod,mod.exports);
+  new Function('require','module','exports',compiled)((name:string)=>name==='react'?react:name==='./LecturePlayer'?{LecturePlayer:()=>null}:name==='./WorkbookRetirement'?{WorkbookRetirement:()=>null}:name==='./WorkbookCorrection'?{WorkbookCorrection:()=>null}:name==='./WorkbookCorrectionLineage'?lineageBoundary:name==='./lecture-save-presentation'?savePresentationModule.exports:name.endsWith('.css')?{}:require(name),mod,mod.exports);
   const props=playerProps??{initial:view,courseOutline:[{id:view.id,title:view.title}],expectedStudioContext};
   const flush=()=>{let n=0;do{assert(++n<12);index=0;changed=false;pending=[];tree=mod.exports[component](props);for(const run of pending)run();}while(changed);return tree;};
   const find=(predicate:(node:any)=>boolean)=>{const found=nodes(tree).find(predicate);assert(found,'Expected real component node');return found;};

@@ -57,6 +57,28 @@ for(const [name,bytes]of frozen){
   assert.equal(sha(bytes),allowed.get(name).sha256,name);
 }
 
+const historicalSupport=new Map([
+ ['assets/forearm-B0UjTDla.js',new URL('./fixtures/closed57-viewer/public/atlas-review-viewer/assets/forearm-B0UjTDla.js',import.meta.url)],
+ ['assets/pelvis-D6ZvRxX9.js',new URL('./fixtures/closed57-viewer/public/atlas-review-viewer/assets/pelvis-D6ZvRxX9.js',import.meta.url)],
+]);
+const licenseFixture=readFileSync(new URL('./fixtures/head-pilot-9fba-license.json',import.meta.url));
+assert.equal(sha(licenseFixture),'a1e4d2cbbda02dd81faab486688568595d522d245e67a538319024fde0b78ae3');
+const licenseRow=JSON.parse(licenseFixture);
+const licenseName='LICENSES/bodyparts3d-license-evidence.html';
+assert.equal(licenseRow.path,licenseName);
+const license=decodeFrozenText(licenseRow,allowed.get(licenseName));
+const support=new Map([[licenseName,license]]);
+for(const [name,url] of historicalSupport){
+ assert(!frozen.has(name),'Support must not replace packed historical bytes: '+name);
+ const expected=allowed.get(name);
+ assert(expected,'Support is absent from historical manifest: '+name);
+ const bytes=readFileSync(url);
+ assert.equal(bytes.length,expected.bytes,'Historical support size: '+name);
+ assert.equal(sha(bytes),expected.sha256,'Historical support SHA: '+name);
+ support.set(name,bytes);
+}
+assert.equal(support.size,3);
+
 export function decodeFrozenText(file,expected){
   assert(file&&typeof file==='object'&&!Array.isArray(file),'Malformed historical text entry');
   assert.deepEqual(Object.keys(file),['path','bytes','sha256','compressedBytes','deflateRawBase64']);
@@ -120,7 +142,7 @@ export async function readHeadPilotFile(url,encoding){
   assertSafeHistoricName(name);
   const expected=allowed.get(name);
   assert(expected,`Historical pilot file is not declared: ${name}`);
-  const bytes=frozen.get(name)??await fsReadFile(url);
+  const bytes=frozen.get(name)??support.get(name)??await fsReadFile(url);
   assert.equal(bytes.length,expected.bytes,`Historical pilot file size changed: ${name}`);
   assert.equal(sha(bytes),expected.sha256,`Historical pilot file changed: ${name}`);
   return encoding?bytes.toString(encoding):Buffer.from(bytes);

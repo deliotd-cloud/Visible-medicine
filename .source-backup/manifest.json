@@ -1,16 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T15:05:51.419Z",
+  "at": "2026-10-20T15:23:51.470Z",
   "sourceIdentity": {
-    "product": "Unpublished CT/MRI compact filtered practice and usable results layout",
+    "product": "Test-only anatomy/spinal/MRA, historical head export/Register47 and real lecture helper regression repairs",
     "atlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
-    "atlasTree": "bfcfa898ace1d25083f21b681274c5bc816564d7",
     "reviewBinding": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-    "currentFixtureSha256": "7b7dcd776d25f5768a78694b104229a84b4dcc74025694c6b63cd760f3f72d23",
-    "canonicalInstalled": false
+    "currentFixtureSha256": "7b7dcd776d25f5768a78694b104229a84b4dcc74025694c6b63cd760f3f72d23"
   },
-  "parent": "a400c77a2bc63bb349304dafaa1517527eb499e5",
-  "gitParent": "a400c77a2bc63bb349304dafaa1517527eb499e5",
+  "parent": "fd581404a5620eeb1c2f9f65ccac289575a2b004",
+  "gitParent": "fd581404a5620eeb1c2f9f65ccac289575a2b004",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -16319,8 +16317,8 @@
     },
     {
       "path": "tests/atlas-spinal-muscle-xray.test.mjs",
-      "bytes": 53311,
-      "sha256": "3824e78ca19ff6f1a2745232142b9df53278393afdcf8a2e50cea82e0cd5b865"
+      "bytes": 70097,
+      "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
     },
     {
       "path": "tests/atlas-spinal-notice-epoch.test.ts",
@@ -21053,6 +21051,11 @@
       "sha256": "152308751708263280d5ae4d9e168b7743210e9260276e0048a4881e37e332c4"
     },
     {
+      "path": "tests/fixtures/head-pilot-9fba-license.json",
+      "bytes": 5330,
+      "sha256": "a1e4d2cbbda02dd81faab486688568595d522d245e67a538319024fde0b78ae3"
+    },
+    {
       "path": "tests/fixtures/head-practice-binding.before.mjs.raw",
       "bytes": 6989,
       "sha256": "0ead614d03c5f0d9c7f4589a6ad5767a0efc95a97206932a8bfd0d1dc150e0f3"
@@ -23204,8 +23207,8 @@
     },
     {
       "path": "tests/head-neck-pilot-current.test.mjs",
-      "bytes": 9787,
-      "sha256": "e17531dac91e8ffacf5c9d3e532e2ed407c473b92d9c3e79d60df2361f902fd9"
+      "bytes": 9786,
+      "sha256": "b179146bb530e15890f2351df27df47a6ec87f5d1577e7bc213137eed4d5bd58"
     },
     {
       "path": "tests/head-neck-pilot.test.ts",
@@ -23649,8 +23652,8 @@
     },
     {
       "path": "tests/historical-head-pilot-read.mjs",
-      "bytes": 7682,
-      "sha256": "7a032f0c970cff6b518834e5be89d9a6eb4fa82dc8d9dccdf65f64eb2de663d3"
+      "bytes": 8972,
+      "sha256": "f20ac1ff485bb2fefdb3b00b3a7b98d35faaf9d002351893cc65903ddbcadb66"
     },
     {
       "path": "tests/historical-head-toolbar-css-extension.test.mjs",
@@ -23701,6 +23704,11 @@
       "path": "tests/historical-reference-read.test.mjs",
       "bytes": 1046,
       "sha256": "65a2eaaa79599c3185a4a8a8bb0607a952d7e2229053f092cfe5d45a7b3d36f8"
+    },
+    {
+      "path": "tests/ileocolic-ultrasound-transition.mjs",
+      "bytes": 5145,
+      "sha256": "732efa4289c18ac232e9446f002c8ec1c2bfa92a9ea7e6183f4bd25dfd98a64d"
     },
     {
       "path": "tests/imaging-atlas-shell.test.ts",
@@ -23864,8 +23872,8 @@
     },
     {
       "path": "tests/lecture-multi-anatomy-ui.test.ts",
-      "bytes": 14900,
-      "sha256": "488ec98d066b235c9774ac60301169963db8790bb79a03859baec40240f41d8e"
+      "bytes": 15419,
+      "sha256": "fe6fc2dd695ab11f66a9f5e9fb1ed8a162e2d86e7429489a02612e6ec57d5ddc"
     },
     {
       "path": "tests/lecture-multi-anatomy-workerd.test.mjs",
@@ -24164,8 +24172,8 @@
     },
     {
       "path": "tests/posterior-fossa-integration-register.test.mjs",
-      "bytes": 10618,
-      "sha256": "7e6ae51b830125c716750dee10d0f518e1b631daad11278e644329de07a16a31"
+      "bytes": 11372,
+      "sha256": "5d32fe3e9628517ef9c5844fb50873d704a9e77813c76edd2484d7fcb2007f74"
     },
     {
       "path": "tests/progress-bootstrap-workerd.test.mjs",
@@ -24953,6 +24961,11 @@
       "sha256": "bf4528110979d7691f05701fb9113ee6e66214156214ef9478a40d763ce61145"
     },
     {
+      "path": "tests/tongue-palate-quiz-transition.mjs",
+      "bytes": 2697,
+      "sha256": "8d2fc1089424432104cb3128f77a99406075726a7355d507faadd6c29e25c1fa"
+    },
+    {
       "path": "tests/tour-discovery-current-delivery.test.mjs",
       "bytes": 2210,
       "sha256": "de76cd029107bb874bb6664c08568f7a8944e6fd96283870d6080cf73c331d82"
@@ -25123,84 +25136,49 @@
       "sha256": "52ed1bdd1802a04cba8ecf6414812590ecd04a307a1c35e4c3216076e56569ce"
     }
   ],
-  "removed": [
-    "public/atlas-review-viewer/assets/abdominal-wall-study-B-nmVVOD.js",
-    "public/atlas-review-viewer/assets/anatomy-scene-qqTCGmkR.js",
-    "public/atlas-review-viewer/assets/back-layers-study-BwfoiaAX.js",
-    "public/atlas-review-viewer/assets/body-content-KkdsGIKk.js",
-    "public/atlas-review-viewer/assets/body-scene-jVmhbIPO.js",
-    "public/atlas-review-viewer/assets/cutaway-controls-GIAT7SVK.js",
-    "public/atlas-review-viewer/assets/eye-layers-Rzo6GKf3.js",
-    "public/atlas-review-viewer/assets/hra-pelvis-study-DPtRsXjO.js",
-    "public/atlas-review-viewer/assets/hra-renal-study-BU-zws1-.js",
-    "public/atlas-review-viewer/assets/hra-renal-teaching-DBgVQmED.js",
-    "public/atlas-review-viewer/assets/independent-study-navigation-B_HgjM1i.js",
-    "public/atlas-review-viewer/assets/index-BZsnrI_g.css",
-    "public/atlas-review-viewer/assets/index-BjPmU1SQ.js",
-    "public/atlas-review-viewer/assets/scene-recovery-BHg03VgP.js",
-    "public/atlas-review-viewer/assets/shoulder-explorer-C_VrdpNd.js",
-    "public/atlas-review-viewer/assets/slider-CgIAXgoe.js",
-    "public/atlas-review-viewer/assets/um-knee-study-BvpwvxQU.js",
-    "public/atlas-review-viewer/assets/um-limb-study-CkPEzr0L.js",
-    "public/atlas-review-viewer/assets/ventricles-CGcglyfx.js"
-  ],
-  "scope": "Source-only filtered Website delta over verified filtered a400 parent. Existing filtered practice options progressively disclosed, minimum144px result list, bounded practice scroller and Escape-to-summary. Exact full component/CSS inverse preserves all practice eligibility, selection/masks/cursor/scoring, index keyboard, image toolbar, entitlements and source identities.78focused cases, types, stock Review build/verifier, normal production Website build and actual CT/MRI native browser acceptance. No scans/masks/private context/model payloads/new binary assets/raw canonical ancestry uploaded. No public deployment, clinical approval, patient registration or full-suite pass. Main3000/editor untouched; full roadmap active.",
+  "removed": [],
+  "scope": "Explicit5025selected Website source over verified filteredfd581 parent, not raw canonical history. Eight changed/new test paths only; all1696product inputs and local model/context rows byte-exact. Actual18focused cases pass including full source/Review/worksheet/runtime/model preservation and negative checks, all8lecture Editor/Player cases, exact Register47 and original head-pilot/current admission. Initial MRA stale-lesson failure and correction retained locally. Three old head-runtime rows get exact hash-guarded original bytes (existing2JSfixtures plus one compressed licence HTML); no arbitrary current fallthrough. No scans, masks, model/media payloads, private contexts, saved decisions, credentials, dependency copies, private historical archives or raw ancestry uploaded. Not full suite, standalone/full/private-data backup, clinical approval, registration or deployment. Main3000/editor untouched; complete roadmap active.",
   "proof": {
-    "at": "2026-10-20T14:58:06.759Z",
+    "at": "2026-10-20T15:23:37.774Z",
     "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
     "review": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-    "sourceRenderer": "2109ab9b80236747ecfa73d3c3b1e3839880763b87e499a641867df8ab8da6d0",
-    "boundRenderer": "ac5b612f7ff630bc61edd6ec4ecc6d2c63e550696d24f86f522d99733f6f70e6",
-    "imported": 1548,
-    "bound": 1696,
-    "previousInputsPreserved": 1694,
-    "changedBoundInputs": [
-      "components/HeadAtlasViewer.tsx",
-      "components/head-atlas.css"
-    ],
-    "addedBoundInput": null,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "changedDocuments": [
-      "atlas-review/integration-inputs.json",
-      "atlas-review/manifest.json",
-      "public/atlas-review-viewer/manifest.json"
-    ],
     "fixtureSha256": "7b7dcd776d25f5768a78694b104229a84b4dcc74025694c6b63cd760f3f72d23",
-    "modelsAndFourLearnerPackagesUnchanged": true,
-    "clinicalApproval": false,
-    "canonicalInstalled": false,
-    "publicDeployment": false,
-    "verification": [
+    "changedBaselinePaths": [
+      "tests/atlas-spinal-muscle-xray.test.mjs",
+      "tests/head-neck-pilot-current.test.mjs",
+      "tests/historical-head-pilot-read.mjs",
+      "tests/lecture-multi-anatomy-ui.test.ts",
+      "tests/posterior-fossa-integration-register.test.mjs"
+    ],
+    "newPaths": [
+      "tests/tongue-palate-quiz-transition.mjs",
+      "tests/ileocolic-ultrasound-transition.mjs",
+      "tests/fixtures/head-pilot-9fba-license.json"
+    ],
+    "editedTestFiles": [
+      "tests/atlas-spinal-muscle-xray.test.mjs",
+      "tests/tongue-palate-quiz-transition.mjs",
+      "tests/ileocolic-ultrasound-transition.mjs",
+      "tests/head-neck-pilot-current.test.mjs",
+      "tests/lecture-multi-anatomy-ui.test.ts",
+      "tests/posterior-fossa-integration-register.test.mjs",
+      "tests/historical-head-pilot-read.mjs",
+      "tests/fixtures/head-pilot-9fba-license.json"
+    ],
+    "productionCodeChanged": false,
+    "unchangedProductInputs": 1696,
+    "currentDeliveryValidated": true,
+    "historical47RefusedAsCurrent": true,
+    "distinctFocusedCasesPassed": 18,
+    "receipts": [
       {
-        "label": "LAYOUT_BIND",
+        "label": "ACTUAL_SPINAL_MRA_V2",
         "code": 0,
-        "logSha256": "4585eef27438f9ca196601795181183d7249e6b2c8cf30401fa073cdd67bcf98",
-        "receiptSha256": "ea81f6500be9468cb6e4c283895882c6bcbc28613b546b1ed1397ba99b0b8ba0",
-        "footer": []
-      },
-      {
-        "label": "LAYOUT_REVIEW_BUILD",
-        "code": 0,
-        "logSha256": "5026ffac964d52d5d2b19e20def5873da48cf251d5bcfb91e5b5f9f5e77e5c05",
-        "receiptSha256": "5a5ef9daa55a6bd4716714b5306305aa04498eb0fe97c2acc99840718f4c7763",
-        "footer": []
-      },
-      {
-        "label": "LAYOUT_REVIEW_VERIFY",
-        "code": 0,
-        "logSha256": "a429ac1a80803442772c69aeae9510261be301215c206cfcf8d1ff2b23cd11b7",
-        "receiptSha256": "70bb95b77aaaec8d904d2ee0be70cd4735aad27939bea74b8930ff7894afcfe2",
-        "footer": []
-      },
-      {
-        "label": "LAYOUT_TESTS",
-        "code": 0,
-        "logSha256": "3c7ca25fda88fd3cf652cd74fb9f69f7c3f1c2b1c8c8471482919292a914cd34",
-        "receiptSha256": "aa90ed92d7bc2e4df273625ee2ba6e8229c0c0c07a6369d6163b0dacd1fb8ba1",
+        "logSha256": "d09b1692f4349379081f92cdc2ea6f9463a49d694d8a8571cb5a63d27bfd1f38",
+        "receiptSha256": "8799f69e5039e012e20d67485afc222959c18ccc7687095c8a53c3642a075c2e",
         "footer": [
-          "ℹ tests 78",
-          "ℹ pass 78",
+          "ℹ tests 1",
+          "ℹ pass 1",
           "ℹ fail 0",
           "ℹ cancelled 0",
           "ℹ skipped 0",
@@ -25208,67 +25186,81 @@
         ]
       },
       {
-        "label": "LAYOUT_TYPES",
+        "label": "ACTUAL_REGISTER_LECTURE",
         "code": 0,
-        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "receiptSha256": "300012f4bb9b2a3e1baa2e864363ab803749a94f5b38637b0f8c1e98cebdfcc7",
-        "footer": []
+        "logSha256": "c744456dcc1a154bc28d9b4b07fb192257b19f75d20a671193def8207e3fd500",
+        "receiptSha256": "da79812d7a09a0b683a2bbf55f89762a131d6241fbc479cde80edda142559364",
+        "footer": [
+          "ℹ tests 10",
+          "ℹ pass 10",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ]
       },
       {
-        "label": "LAYOUT_WEBSITE_BUILD",
+        "label": "ACTUAL_HEAD_PILOT",
         "code": 0,
-        "logSha256": "0eb1821ba5b0e0d55c2f5c2d9c3f20783f8542e1bba639b83afbad370daa2fd1",
-        "receiptSha256": "88c9a086390ff7815cb4c26baf7abe5ac7befd456ab8d9f8106686487264c96f",
-        "footer": []
+        "logSha256": "f982b5aec91b6e151923ac62b5cb5da75c5c0233870aa9005e89b482a64ed842",
+        "receiptSha256": "65f7df9c298e992e93498f20c9c9e366f92cd023ee5fae8abd9cbb5dcce42974",
+        "footer": [
+          "ℹ tests 7",
+          "ℹ pass 7",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ]
       }
     ],
-    "previousSourceFiles": 5016,
-    "selectedSourceFiles": 5022,
-    "changedBaselinePaths": [
-      "atlas-review/content/body-renderer-revision.json",
-      "atlas-review/content/review-revisions.json",
-      "atlas-review/integration-inputs.json",
-      "atlas-review/manifest.json",
-      "components/HeadAtlasViewer.tsx",
-      "components/head-atlas.css",
-      "public/atlas-review-viewer/assets/abdominal-wall-study-B-nmVVOD.js",
-      "public/atlas-review-viewer/assets/anatomy-scene-qqTCGmkR.js",
-      "public/atlas-review-viewer/assets/back-layers-study-BwfoiaAX.js",
-      "public/atlas-review-viewer/assets/body-content-KkdsGIKk.js",
-      "public/atlas-review-viewer/assets/body-scene-jVmhbIPO.js",
-      "public/atlas-review-viewer/assets/cutaway-controls-GIAT7SVK.js",
-      "public/atlas-review-viewer/assets/eye-layers-Rzo6GKf3.js",
-      "public/atlas-review-viewer/assets/hra-pelvis-study-DPtRsXjO.js",
-      "public/atlas-review-viewer/assets/hra-renal-study-BU-zws1-.js",
-      "public/atlas-review-viewer/assets/hra-renal-teaching-DBgVQmED.js",
-      "public/atlas-review-viewer/assets/independent-study-navigation-B_HgjM1i.js",
-      "public/atlas-review-viewer/assets/index-BZsnrI_g.css",
-      "public/atlas-review-viewer/assets/index-BjPmU1SQ.js",
-      "public/atlas-review-viewer/assets/scene-recovery-BHg03VgP.js",
-      "public/atlas-review-viewer/assets/shoulder-explorer-C_VrdpNd.js",
-      "public/atlas-review-viewer/assets/slider-CgIAXgoe.js",
-      "public/atlas-review-viewer/assets/um-knee-study-BvpwvxQU.js",
-      "public/atlas-review-viewer/assets/um-limb-study-CkPEzr0L.js",
-      "public/atlas-review-viewer/assets/ventricles-CGcglyfx.js",
-      "public/atlas-review-viewer/index.html",
-      "public/atlas-review-viewer/manifest.json",
-      "tests/fixtures/current-atlas-delivery.json",
-      "tests/head-index-tab-stop.test.mjs",
-      "tests/native-head-toolbar-compact.test.mjs"
-    ],
-    "newTestsAndWitnesses": [
-      "tests/head-filtered-layout.test.mjs",
-      "tests/fixtures/head-viewer-before-filtered-layout.tsx.raw",
-      "tests/fixtures/head-css-before-filtered-layout.raw",
-      "tests/fixtures/head-roving-test-before-filtered-layout.mjs.raw",
-      "tests/fixtures/current-delivery-before-filtered-layout.json",
-      "tests/fixtures/head-toolbar-test-before-filtered-layout.mjs.raw"
-    ],
-    "browserEvidenceSha256": "bcf56b69c425cb6ba240528e4ec3e44a8536c25a6eacfd36f026cd96efb91375",
-    "wholeSuitePass": false,
-    "ownerLectureSaveConfirmed": false,
-    "ownerEditorRefreshNavigationRestart": false,
+    "spinalCounters": {
+      "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+      "sourceTree": "bfcfa898ace1d25083f21b681274c5bc816564d7",
+      "changed": 56,
+      "preserved": 9836,
+      "changedWorksheets": 56,
+      "handChanges": 36,
+      "handWorksheets": 36,
+      "usChanges": 8,
+      "usWorksheets": 8,
+      "currentPreserved": 9876,
+      "footChanges": 12,
+      "evidenceChanges": 4,
+      "mriChanges": 2,
+      "ctChanges": 4,
+      "medianChanges": 2,
+      "additionalUsChanges": 12,
+      "checkMriChanges": 4,
+      "archXrayChanges": 2,
+      "tonguePalateChanges": 8,
+      "ileocolicChanges": 1,
+      "corpusXrayChanges": 1,
+      "thyroidMraExpanded": 2,
+      "additionalUsCounts": {
+        "deep-plantar-ultrasound": 2,
+        "lacrimal-drainage-ultrasound": 4,
+        "abdominal-radial-eus": 4,
+        "superficial-medial-plantar-ultrasound": 2
+      },
+      "currentVsOldPreserved": 9784,
+      "families": 32,
+      "pins": 56,
+      "cervicalUnchanged": 6,
+      "runtimes": 4,
+      "reviewFiles": 1548,
+      "modelBundlesUnchanged": 86,
+      "clinicalApproval": false,
+      "patientRegistration": false
+    },
+    "fullSuiteRerun": false,
+    "oldBroadBaseline": "5387tests/5216pass/168fail/3skip; some now addressed, not a fresh current failure count",
+    "clinicalApproval": false,
+    "patientRegistration": false,
+    "canonicalInstalled": false,
+    "publicDeployment": false,
     "fullGoalActive": true,
+    "externalHistoricalPrerequisite": "Register47 test uses exact hash-guarded preserved 20261017-posterior-fossa-website/candidate (or explicit VM_REGISTER47_WEBSITE_ROOT); all1649inputs validated. Historical archive is retained locally, not uploaded or inferred from current files.",
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",

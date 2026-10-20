@@ -6,11 +6,17 @@ import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {build} from 'esbuild';
 import {historicalInline46Read} from './historical-inline-46-epoch.mjs';
-import {currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
+import {checkedAtlasHistoryRepo} from './atlas-source-repo.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
-const read=relative=>fs.readFileSync(path.join(root,relative));
+const archivedRoot=path.resolve(process.env.VM_REGISTER47_WEBSITE_ROOT??'F:/VisibleMedicine/staging/20261017-posterior-fossa-website/candidate');
+const read=relative=>{
+ assert.match(relative,/^[A-Za-z0-9_./-]+$/);
+ assert(!relative.split('/').some(part=>!part||part==='.'||part==='..'));
+ return fs.readFileSync(path.join(archivedRoot,relative));
+};
 const json=relative=>JSON.parse(read(relative));
 const oldJson=relative=>JSON.parse(historicalInline46Read(relative));
 const plain=value=>JSON.parse(JSON.stringify(value));
@@ -20,6 +26,9 @@ const review='245ca2015821a0715539428dbcf4e499d9807ab83a906e0ee3f03c042571bf37';
 const oldReview='90b0ca07cf68301d77ac390abbc922c8eb898d5f2f690fd71f20f8c5ee118620';
 const ids=['brainstem-midbrain','brainstem-pons','brainstem-medulla','brainstem-cerebellum'];
 const keys=['posteriorFossaNeonatalUS2024','posteriorFossaBrainstemMorphometry','posteriorFossaUltrasoundMRI'];
+assert.equal(sha(read('docs/completion-checklist.json')),'a3e61503ea5f3b16fe26eec2c738dc010256e5a65af06a9a269fbabbc3e256c2');
+assert.equal(sha(read('tests/fixtures/current-atlas-delivery.json')),'1a9a62e5ec6998ccc0f68c083dcd50ef03c6f89bc8cc46a7036e6c3ba39466cf');
+assert.equal(sha(read('atlas-review/integration-inputs.json')),'37ee961401e8d18bf6e595a7edf58acd49faeec8a47201fdc91747697b637104');
 
 test('Register47 retains every original46 requirement and keeps its delivery separate',()=>{
  const old=oldJson('docs/completion-checklist.json'),now=json('docs/completion-checklist.json');
@@ -41,7 +50,7 @@ test('Register47 retains every original46 requirement and keeps its delivery sep
  assert.equal(pin.source,source);assert.equal(pin.sourceTree,tree);
  assert.equal(pin.reviewIntegration,review);assert.equal(pin.reviewSourceFiles,1520);
  assert.equal(Object.keys(pin.documents).length,12);
- assert.deepEqual(validateCurrentAtlasDelivery(),pin);
+ assert.deepEqual(validateCurrentAtlasDelivery({pin,read}),pin);
  const inputs=json('atlas-review/integration-inputs.json');
  assert.equal(inputs.sourceCommit,source);assert.equal(inputs.sha256,review);
  assert.equal(sha(JSON.stringify(inputs.inputs)),review);assert.equal(inputs.inputs.length,1649);
@@ -65,11 +74,11 @@ test('Register47 retains every original46 requirement and keeps its delivery sep
 });
 
 async function nestedTeaching(historical){
- const entry=path.join(root,'atlas-review/content/nested-teaching.ts');
+ const entry=path.join(archivedRoot,'atlas-review/content/nested-teaching.ts');
  const plugins=historical?[{
   name:'closed-epoch46-review-source',setup(plugin){
    plugin.onLoad({filter:/\.(?:ts|tsx|json)$/},args=>{
-    const relative=path.relative(root,args.path).replaceAll('\\','/');
+    const relative=path.relative(archivedRoot,args.path).replaceAll('\\','/');
     if(!relative.startsWith('atlas-review/'))return undefined;
     return {contents:historicalInline46Read(relative),loader:path.extname(args.path).slice(1)};
    });
@@ -80,7 +89,7 @@ async function nestedTeaching(historical){
 }
 
 test('four scoped infant drafts reach imported Review and emitted head-neck viewer; 104 other selections retain exact inputs',async()=>{
- const sourceRoot=currentAtlasDeliveryRoot();
+ const sourceRoot=checkedAtlasHistoryRepo(source);
  for(const relative of ['content/nested-teaching.ts','content/posterior-fossa-ultrasound.ts']){
   const imported='atlas-review/'+relative;
   assert.deepEqual(read(imported),fs.readFileSync(path.join(sourceRoot,relative)),'Imported source mismatch: '+relative);

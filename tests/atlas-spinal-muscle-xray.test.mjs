@@ -7,6 +7,8 @@ import { resolve, relative } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { runInNewContext } from 'node:vm';
 import test from 'node:test';
+import {assertTonguePalateQuizTransition} from './tongue-palate-quiz-transition.mjs';
+import {assertIleocolicUltrasoundTransition,ileocolicIdentity} from './ileocolic-ultrasound-transition.mjs';
 import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot,validateCurrentAtlasDelivery} from './current-atlas-delivery.mjs';
 
 // Run with `node --test <this file>` from the imported candidate or canonical site.
@@ -37,6 +39,14 @@ const checkMriParent='509b01da5d72f33bd774e4a59d63e2406af1f2ff';
 const checkMriEpoch='f5052a1906bf9b87e5235bda57d367b1103729db';
 const archXrayParent=checkMriEpoch;
 const archXrayEpoch='f5097af8493701d64a8e2a2b5797df380f3b348a';
+const tonguePalateParent='a2475a37201bdd5fdd12f5849fc8ee043412d02f';
+const tonguePalateEpoch='6036a7a59dcc1fd75eee4a23af34ca2a568d86b6';
+const ileocolicParent='bd5465ee3b94c66c3d5701e7749099d07e8f40d3';
+const ileocolicEpoch='aaa8a6a428e74a2055310630f9dfee8731fe0eee';
+const corpusXrayParent='f5097af8493701d64a8e2a2b5797df380f3b348a';
+const corpusXrayEpoch='fa52f00de861addac64eda5842a352f3e332d28f';
+const thyroidMraParent='6036a7a59dcc1fd75eee4a23af34ca2a568d86b6';
+const thyroidMraEpoch='87ed7e343260c7df48a40d53503f25bbfd34cfa5';
 assert.match(source.source, /^[a-f0-9]{40}$/);
 assert.match(source.sourceTree, /^[a-f0-9]{40}$/);
 assert.equal(source.baseline, '4e9f53851cdc55b89ca8bfc1b6d07e19445fc2ad');
@@ -78,6 +88,22 @@ for (const epoch of [ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
   checkMriEpoch,archXrayEpoch]) {
   assert.equal(git('rev-parse', `${epoch}^{commit}`).toString().trim(),epoch);
 }
+assert.equal(git('rev-parse',`${tonguePalateEpoch}^`).toString().trim(),tonguePalateParent,
+  'tongue-palate quiz was introduced directly after a247');
+assert.equal(git('rev-parse',`${tonguePalateEpoch}^{tree}`).toString().trim(),
+  '6da62962106cfab9419b09618547a9da5e3aafc6','exact 6036 introduction tree');
+assert.equal(git('rev-parse',`${tonguePalateParent}^{tree}`).toString().trim(),
+  '97957a35788028b319df4f5d60c68a95e71320d7','exact a247 predecessor tree');
+assert.equal(git('merge-base',tonguePalateEpoch,source.source).toString().trim(),
+  tonguePalateEpoch,'quiz introduction precedes current delivery');
+assert.equal(git('rev-parse',`${ileocolicEpoch}^`).toString().trim(),ileocolicParent,
+  'ileocolic lesson has exact immediate parent');
+assert.equal(git('rev-parse',`${ileocolicEpoch}^{tree}`).toString().trim(),
+  '7c0b886d66d2adf64d6d29e44938f39d8cd61046','ileocolic introduction tree');
+assert.equal(git('rev-parse',`${ileocolicParent}^{tree}`).toString().trim(),
+  '44ca83bf391164c09f43f4169d25dcacf4b2559d','ileocolic predecessor tree');
+assert.equal(git('merge-base',ileocolicEpoch,source.source).toString().trim(),
+  ileocolicEpoch,'ileocolic introduction precedes current delivery');
 assert.equal(git('rev-parse',`${ctEpoch}^`).toString().trim(),ctParent);
 assert.equal(git('rev-parse',`${ctEpoch}^{tree}`).toString().trim(),
   '64776e3c967cbca29577b8db2bc01a129d31da3e');
@@ -100,7 +126,9 @@ for(const epoch of [ctEpoch,medianEpoch,deepPlantarEpoch,lacrimalEpoch,
   assert.equal(git('merge-base',epoch,source.source).toString().trim(),epoch);
 for(const [parent,epoch,expectedTree] of [
   [checkMriParent,checkMriEpoch,'36381d525f7c6886743bcec00fcee96931d65c58'],
-  [archXrayParent,archXrayEpoch,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b']]){
+  [archXrayParent,archXrayEpoch,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b'],
+  [corpusXrayParent,corpusXrayEpoch,'81346e47895a2fcd7dfc79852d81195abb8822a4'],
+  [thyroidMraParent,thyroidMraEpoch,'bfcfa898ace1d25083f21b681274c5bc816564d7']]){
   assert.equal(git('rev-parse',`${epoch}^`).toString().trim(),parent,
     `${epoch} genuine immediate predecessor`);
   assert.equal(git('rev-parse',`${epoch}^{tree}`).toString().trim(),expectedTree,
@@ -119,7 +147,9 @@ const treeByCommit = new Map([[source.source, currentTree], [source.baseline, pr
   ...[ultrasoundEpoch,footEpoch,evidenceEpoch,pharyngealEpoch,
     ctParent,ctEpoch,medianParent,medianEpoch,deepPlantarParent,deepPlantarEpoch,
     lacrimalEpoch,abdominalEusEpoch,superficialPlantarEpoch,
-    checkMriParent,checkMriEpoch,archXrayEpoch].map(epoch=>[epoch,tree(epoch)])]);
+    checkMriParent,checkMriEpoch,archXrayEpoch,corpusXrayEpoch,thyroidMraEpoch,tonguePalateEpoch,
+    ileocolicParent,ileocolicEpoch]
+    .map(epoch=>[epoch,tree(epoch)])]);
 function batch(commit, paths) {
   const ids = [...new Set(paths.map(path => {
     const id = treeByCommit.get(commit).get(path);
@@ -174,6 +204,9 @@ const apiEntry = [
   "export {superficialMedialPlantarUltrasoundLesson} from './lib/superficial-medial-plantar-ultrasound';",
   "export {orbitalSupportMriLesson} from './lib/orbital-support-mri';",
   "export {footVenousArchXrayLesson} from './lib/foot-venous-arch-xray';",
+  "export {tonguePalateQuizLesson} from './lib/tongue-palate-quiz';",
+  "export {ileocolicArteryUltrasoundLesson} from './lib/ileocolic-artery-ultrasound';",
+  "export {corpusSpongiosumXrayLesson} from './lib/corpus-spongiosum-xray-v2';",
   "export {bodyReviewMaterial} from './lib/body-review-material';",
   "export {bodyReviewContext} from './lib/body-review-context';",
   "export {parseBodyReviewResponse} from './lib/body-review-response';",
@@ -279,6 +312,15 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   const checkMriAtCommit=await sourceHistory.exactSourceHistoryApi(checkMriEpoch,'review-security');
   const archXrayBefore=await sourceHistory.exactSourceHistoryApi(archXrayParent,'review-security');
   const archXrayAtCommit=await sourceHistory.exactSourceHistoryApi(archXrayEpoch,'review-security');
+  const tonguePalateBefore=await sourceHistory.exactSourceHistoryApi(tonguePalateParent,'review-security');
+  const tonguePalateAtCommit=await sourceHistory.exactSourceHistoryApi(tonguePalateEpoch,'review-security');
+  const ileocolicBefore=await sourceHistory.exactSourceHistoryApi(ileocolicParent,'review-security');
+  const ileocolicAtCommit=await sourceHistory.exactSourceHistoryApi(ileocolicEpoch,'review-security');
+  const corpusXrayBefore=archXrayAtCommit;
+  const corpusXrayAtCommit=await sourceHistory.exactSourceHistoryApi(corpusXrayEpoch,'review-security');
+  assert.equal(thyroidMraParent,tonguePalateEpoch,'Exact6036 MRA predecessor API reused');
+  const thyroidMraBefore=tonguePalateAtCommit;
+  const thyroidMraAtCommit=await sourceHistory.exactSourceHistoryApi(thyroidMraEpoch,'review-security');
   const additionalUsEpochs=[
     {name:'deep-plantar-ultrasound',parent:deepPlantarParent,epoch:deepPlantarEpoch,
       count:2,resolver:api.deepPlantarUltrasoundLesson},
@@ -414,6 +456,89 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   const archXraySelected=new Map(archXrayPins.entries.map(row=>[row.identity.id,row]));
   assert.equal(archXraySelected.size,2,'two distinct dorsal-arch source identities');
   featureBytes(archXrayEpoch,['content/foot-venous-arch-xray.ts','lib/foot-venous-arch-xray.ts']);
+  featureBytes(tonguePalateEpoch,['content/tongue-palate-quiz-pins.json',
+    'content/tongue-palate-quiz.ts','lib/tongue-palate-quiz.ts']);
+  featureBytes(ileocolicEpoch,['lib/ileocolic-artery-ultrasound.ts']);
+  featureBytes(thyroidMraEpoch,['content/arterial-evidence-limits.ts','lib/arterial-evidence-limits.ts']);
+  const thyroidMraRows=Array.from(evidenceSelected.values()).filter(row=>row.family==='inferiorThyroidMri');
+  assert.equal(thyroidMraRows.length,2,'Only bilateral inferior thyroid MRI is revised within the four-cell evidence feature');
+  same(thyroidMraRows.map(row=>[row.identity.laterality,row.identity.fmaId,row.tab]).sort(),
+    [['left','FMA10680','mri'],['right','FMA10697','mri']],'Exact two MRA identities');
+  featureBytes(corpusXrayEpoch,['content/corpus-spongiosum-xray-v2.ts',
+    'lib/corpus-spongiosum-xray-v2.ts']);
+  const corpusPinsPath='content/corpus-spongiosum-xray-v2.pins.json';
+  const corpusTransitionPath='content/corpus-spongiosum-xray-v2.transition.json';
+  batch(corpusXrayEpoch,[corpusPinsPath,corpusTransitionPath,'app/body-content.ts']);
+  batch(source.source,[corpusPinsPath,corpusTransitionPath]);
+  batch(corpusXrayParent,['app/body-content.ts']);
+  same(blob(source.source,corpusPinsPath),blob(corpusXrayEpoch,corpusPinsPath),
+    'corpus admission pins remain exact in current Git');
+  same(blob(source.source,corpusTransitionPath),blob(corpusXrayEpoch,corpusTransitionPath),
+    'corpus transition remains exact in current Git');
+  const corpusPins=JSON.parse(blob(corpusXrayEpoch,corpusPinsPath));
+  const corpusTransition=JSON.parse(blob(corpusXrayEpoch,corpusTransitionPath));
+  assert.equal(corpusPins.parentCommit,corpusXrayParent);
+  assert.equal(corpusPins.entries.length,1);
+  assert.equal(corpusTransition.parentCommit,corpusXrayParent);
+  assert.equal(corpusTransition.pinsHash,sha(JSON.stringify(corpusPins)));
+  assert.equal(corpusTransition.totalPlacements,9936);
+  assert.equal(corpusTransition.changed.length,1);
+  assert.equal(corpusTransition.unchangedPlacements,9935);
+  assert.equal(corpusTransition.clinicalApproval,false);
+  assert.equal(corpusTransition.registration,false);
+  const corpusRow=corpusPins.entries[0];
+  const corpusId=corpusRow.identity.id;
+  same(corpusTransition.changed,[{id:corpusId,tab:'xray'}],
+    'single source-authored corpus X-ray cell');
+  same(corpusTransition.entries.map(row=>`${row.id}/${row.tab}`),[`${corpusId}/xray`]);
+  same(corpusRow.previous.xray,corpusXrayBefore.bodyLesson(corpusRow.identity,'xray'),
+    'complete pinned corpus predecessor');
+  const corpusImport="import { corpusSpongiosumXrayLesson } from '../lib/corpus-spongiosum-xray-v2';\n";
+  const corpusBranch='  const corpusSpongiosumXray = corpusSpongiosumXrayLesson(s, tab);\n  if (corpusSpongiosumXray) return corpusSpongiosumXray;\n';
+  const corpusParentDispatch=blob(corpusXrayParent,'app/body-content.ts').toString().replaceAll('\r\n','\n');
+  const corpusIntroducedDispatch=blob(corpusXrayEpoch,'app/body-content.ts').toString().replaceAll('\r\n','\n');
+  assert.equal(corpusIntroducedDispatch.split(corpusImport).length,2);
+  assert.equal(corpusIntroducedDispatch.split(corpusBranch).length,2);
+  assert.equal(corpusIntroducedDispatch.replace(corpusImport,'').replace(corpusBranch,''),
+    corpusParentDispatch,'complete prior corpus dispatch restored by exact inverse');
+  const currentCorpusDispatch=blob(source.source,'app/body-content.ts').toString().replaceAll('\r\n','\n');
+  assert.equal(currentCorpusDispatch.split(corpusImport).length,2);
+  assert.equal(currentCorpusDispatch.split(corpusBranch).length,2);
+  assert.equal(sha(blob(ileocolicEpoch,'lib/ileocolic-artery-ultrasound.ts')),
+    sha(blob(source.source,'lib/ileocolic-artery-ultrasound.ts')),
+    'original authored ileocolic bytes retained in current Atlas');
+  batch(ileocolicParent,['app/body-content.ts']);
+  batch(ileocolicEpoch,['app/body-content.ts']);
+  const ileocolicImport="import { ileocolicArteryUltrasoundLesson } from '../lib/ileocolic-artery-ultrasound';\n";
+  const ileocolicBranch='  const ileocolicUltrasound = ileocolicArteryUltrasoundLesson(s, tab);\n  if (ileocolicUltrasound) return ileocolicUltrasound;\n';
+  const parentDispatch=blob(ileocolicParent,'app/body-content.ts').toString().replaceAll('\r\n','\n');
+  const introducedDispatch=blob(ileocolicEpoch,'app/body-content.ts').toString().replaceAll('\r\n','\n');
+  assert.equal(introducedDispatch.split(ileocolicImport).length,2,'single authored import');
+  assert.equal(introducedDispatch.split(ileocolicBranch).length,2,'single authored branch');
+  assert.equal(introducedDispatch.replace(ileocolicImport,'').replace(ileocolicBranch,''),
+    parentDispatch,'complete prior dispatch restored by exact source inverse');
+  assert.ok(introducedDispatch.indexOf('if(arterialEvidenceLimit)return arterialEvidenceLimit;')<
+    introducedDispatch.indexOf(ileocolicBranch),'source evidence holds remain first');
+  const currentDispatch=blob(source.source,'app/body-content.ts').toString().replaceAll('\r\n','\n');
+  assert.equal(currentDispatch.split(ileocolicImport).length,2,'current dispatch retains import');
+  assert.equal(currentDispatch.split(ileocolicBranch).length,2,'current dispatch retains branch');
+  assert.ok(currentDispatch.indexOf('if(arterialEvidenceLimit)return arterialEvidenceLimit;')<
+    currentDispatch.indexOf(ileocolicBranch),'current source evidence holds remain first');
+  const tonguePalatePins=exactPins('content/tongue-palate-quiz-pins.json',tonguePalateEpoch);
+  assert.equal(sha(blob(tonguePalateEpoch,'content/tongue-palate-quiz-pins.json')),
+    '150fae10b5b29dd10659040a820de8ff0a9eeccd7012406b2d0ed0bd9200ab32',
+    'dedicated 6036 quiz pin bytes');
+  assert.equal(tonguePalatePins.parentCommit,tonguePalateParent);
+  assert.equal(tonguePalatePins.entries.length,8);
+  const tonguePalateSelected=new Map(tonguePalatePins.entries.map(row=>[row.identity.id,row]));
+  assert.equal(tonguePalateSelected.size,8,'eight distinct tongue and palate identities');
+  const ileocolicId=ileocolicIdentity.id;
+  const ileocolicMatches=catalog.structures.filter(row=>row.id===ileocolicId);
+  assert.equal(ileocolicMatches.length,1,'one named ileocolic source structure');
+  same(ileocolicMatches[0],ileocolicIdentity,'complete fixed ileocolic catalogue identity');
+  for(const row of tonguePalatePins.entries)
+    assert.equal(row.previous.readiness,'generated-identification',
+      `${row.identity.id} pinned generated-identification predecessor`);
   const archTransitionPath='content/foot-venous-arch-xray-transition.json';
   batch(archXrayEpoch,[archTransitionPath]);
   const archTransition=JSON.parse(blob(archXrayEpoch,archTransitionPath));
@@ -444,6 +569,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
     new Set(protectedCells).size+18,'introduced modality cells do not overlap protected cells');
   const laterSixCells=[...checkMriSelected.keys()].map(id=>`${id}/mri`)
     .concat([...archXraySelected.keys()].map(id=>`${id}/xray`));
+  const tonguePalateCells=[...tonguePalateSelected.keys()].map(id=>`${id}/quiz`);
+  const ileocolicCell=`${ileocolicId}/ultrasound`;
   assert.equal(new Set([...selected.keys(),...handSelected.keys(),...usSelected.keys(),
     ...footSelected.keys(),...evidenceSelected.keys(),...mriSelected.keys(),
     ...ctSelected.keys(),...medianSelected.keys(),...additionalUsSelected.keys(),
@@ -452,11 +579,20 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   assert.equal(new Set(laterSixCells).size,6,'four MRI updates and two X-ray introductions');
   assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells]).size,
     118+18+6,'the later six cells are disjoint from all earlier protected cells');
+  assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells,...tonguePalateCells]).size,
+    118+18+6+8,'the eight quiz cells do not overlap any other protected transition');
+  assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells,
+    ...tonguePalateCells,ileocolicCell]).size,118+18+6+8+1,
+    'the single ileocolic ultrasound cell is distinct');
+  assert.equal(new Set([...protectedCells,...introducedCells,...laterSixCells,
+    ...tonguePalateCells,ileocolicCell,`${corpusId}/xray`]).size,118+18+6+8+1+1,
+    'the corpus X-ray cell is distinct from all earlier protected cells');
   const spine = api.decodeRegionalTeachingSnapshot(json('atlas-review/content/regional-teaching/spine.json'), 'spine');
   let changed = 0, preserved = 0, changedWorksheets = 0, handChanges=0, handWorksheets=0;
   let usChanges=0,usWorksheets=0,currentPreserved=0,currentVsOldPreserved=0;
   let footChanges=0,evidenceChanges=0,mriChanges=0;
   let ctChanges=0,medianChanges=0,additionalUsChanges=0,checkMriChanges=0,archXrayChanges=0;
+  let tonguePalateChanges=0,ileocolicChanges=0,corpusXrayChanges=0,thyroidMraExpanded=0;
   const additionalUsCounts=new Map(additionalUsEpochs.map(group=>[group.name,0]));
   for (const structure of catalog.structures) {
     const oldWorksheet = await old.bodyReviewMaterial(structure.id);
@@ -481,6 +617,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
       const additionalUs=additionalUsSelected.get(structure.id);
       const checkMriRow=checkMriSelected.get(structure.id);
       const archXrayRow=archXraySelected.get(structure.id);
+      const tonguePalateRow=tonguePalateSelected.get(structure.id);
       if (!((selected.has(structure.id)||handSelected.has(structure.id))&&tab==='xray')&&
         !(usSelected.has(structure.id)&&tab==='ultrasound')) {
         same(historicalLesson,before,`${structure.id}/${tab} original 589 lesson preserved`);
@@ -519,11 +656,29 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
         const feature=evidenceAtCommit.bodyLesson(structure,tab);
         assert.equal(feature.readiness,'pending',`${structure.id} evidence remains pending`);
         assert.notDeepEqual(feature,evidenceRow.previous,`${structure.id} teaching changed`);
-        same(after,feature,`${structure.id} current exact arterial-limit lesson`);
+        if(evidenceRow.family==='inferiorThyroidMri'){
+          same(thyroidMraBefore.bodyLesson(structure,tab),feature,
+            `${structure.id} complete original lesson retained through6036`);
+          const expanded=thyroidMraAtCommit.bodyLesson(structure,tab);
+          assert.equal(expanded.readiness,'pending','MRA expansion is not readiness promotion');
+          assert.notDeepEqual(expanded,feature,'Actual later source-authored evidence expansion');
+          same(after,expanded,`${structure.id} exact87ed MRA lesson`);
+          same(after.citations,['https://doi.org/10.7727/wimj.2015.288','https://pubmed.ncbi.nlm.nih.gov/25770593/']);
+          assert.match(after.body,/selected cases do not establish routine visibility/);
+          assert.match(after.note,/revision-bound radiologist sign-off remain pending/);
+          same(topic,(await thyroidMraAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+            `${structure.id} full87ed MRA worksheet`);
+          assert.equal(await api.parseBodyReviewResponse(await thyroidMraBefore.bodyReviewMaterial(structure.id),structure.id),null,
+            'Pre-expansion source-bound worksheet cannot approve the new revision');
+          thyroidMraExpanded++;
+        }else same(after,feature,`${structure.id} current exact arterial-limit lesson`);
         same(after,api.arterialEvidenceLimitLesson(structure,tab),`${structure.id} current arterial-limit resolver`);
         same(topic,{tab,...after},`${structure.id} current arterial-limit worksheet`);
-        same(topic,(await evidenceAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
-          `${structure.id} exact arterial-limit feature worksheet`);
+        const originalFeatureTopic=(await evidenceAtCommit.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab);
+        if(evidenceRow.family==='inferiorThyroidMri'){
+          same((await thyroidMraBefore.bodyReviewMaterial(structure.id)).topics.find(item=>item.tab===tab),
+            originalFeatureTopic,`${structure.id} complete historical feature worksheet retained through6036`);
+        }else same(topic,originalFeatureTopic,`${structure.id} exact arterial-limit feature worksheet`);
         assert.notDeepEqual(topic,historicalTopic);
         evidenceChanges++;
       }else if(mriRow&&tab==='mri'){
@@ -638,6 +793,49 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
           `${structure.id} exact introduced X-ray worksheet`);
         assert.notDeepEqual(topic,priorCurrentTopic);
         archXrayChanges++;
+      }else if(tonguePalateRow&&tab==='quiz'){
+        const predecessor=tonguePalateBefore.bodyLesson(structure,tab);
+        const introduced=tonguePalateAtCommit.bodyLesson(structure,tab);
+        const predecessorTopic=(await tonguePalateBefore.bodyReviewMaterial(structure.id))
+          .topics.find(item=>item.tab===tab);
+        const introducedTopic=(await tonguePalateAtCommit.bodyReviewMaterial(structure.id))
+          .topics.find(item=>item.tab===tab);
+        assertTonguePalateQuizTransition({row:tonguePalateRow,structure,tab,priorLesson,
+          before,predecessor,predecessorTopic,after,introduced,topic,introducedTopic,
+          currentResolver:api.tonguePalateQuizLesson,worksheet});
+        assert.notDeepEqual(topic,priorCurrentTopic);
+        tonguePalateChanges++;
+      }else if(structure.id===ileocolicId&&tab==='ultrasound'){
+        const predecessor=ileocolicBefore.bodyLesson(structure,tab);
+        const introduced=ileocolicAtCommit.bodyLesson(structure,tab);
+        const predecessorTopic=(await ileocolicBefore.bodyReviewMaterial(structure.id))
+          .topics.find(item=>item.tab===tab);
+        const introducedTopic=(await ileocolicAtCommit.bodyReviewMaterial(structure.id))
+          .topics.find(item=>item.tab===tab);
+        assertIleocolicUltrasoundTransition({structure,tab,priorLesson,before,
+          predecessor,predecessorTopic,after,introduced,topic,introducedTopic,
+          currentResolver:api.ileocolicArteryUltrasoundLesson,worksheet});
+        assert.notDeepEqual(topic,priorCurrentTopic);
+        assert.notDeepEqual(topic,historicalTopic);
+        ileocolicChanges++;
+      }else if(structure.id===corpusId&&tab==='xray'){
+        same(structure,corpusRow.identity,`${corpusId} complete corpus source identity`);
+        const predecessor=corpusXrayBefore.bodyLesson(structure,tab);
+        const introduced=corpusXrayAtCommit.bodyLesson(structure,tab);
+        same(predecessor,corpusRow.previous.xray,`${corpusId} exact pending predecessor`);
+        same(priorLesson,predecessor,`${corpusId} f1 lesson preserved to introduction`);
+        assert.equal(predecessor.readiness,'pending');
+        assert.equal(introduced.readiness,'draft');
+        same(introduced,corpusTransition.entries[0].current,`${corpusId} authored transition`);
+        same(after,introduced,`${corpusId} exact current corpus lesson`);
+        same(after,api.corpusSpongiosumXrayLesson(structure,tab),`${corpusId} current resolver`);
+        same((await corpusXrayBefore.bodyReviewMaterial(corpusId)).topics.find(item=>item.tab===tab),
+          {tab,...predecessor},`${corpusId} complete predecessor worksheet`);
+        same(topic,(await corpusXrayAtCommit.bodyReviewMaterial(corpusId)).topics.find(item=>item.tab===tab),
+          `${corpusId} exact introduced worksheet`);
+        same(topic,{tab,...after},`${corpusId} current worksheet`);
+        assert.notDeepEqual(topic,priorCurrentTopic);
+        corpusXrayChanges++;
       }else{
         same(after,priorLesson,`${structure.id}/${tab} current lesson unchanged since f1`);
         same(topic,priorCurrentTopic,`${structure.id}/${tab} current worksheet unchanged since f1`);
@@ -680,7 +878,9 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
       } else if((usSelected.has(structure.id)&&tab==='ultrasound')||
         (footRow&&tab==='xray')||(evidenceRow&&tab===evidenceRow.tab)||(mriRow&&tab==='mri')||
         (ctRow&&tab==='ct')||(medianRow&&tab==='xray')||(additionalUs&&tab==='ultrasound')||
-        (checkMriRow&&tab==='mri')||(archXrayRow&&tab==='xray')) {
+        (checkMriRow&&tab==='mri')||(archXrayRow&&tab==='xray')||
+        (tonguePalateRow&&tab==='quiz')||(structure.id===ileocolicId&&tab==='ultrasound')||
+        (structure.id===corpusId&&tab==='xray')) {
         // Each exact feature transition and its worksheet were checked above.
       } else {
         same(after,before,`${structure.id}/${tab} current lesson preserved versus baseline`);
@@ -703,17 +903,21 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   assert.equal(additionalUsChanges,12);
   assert.equal(checkMriChanges,4);
   assert.equal(archXrayChanges,2);
+  assert.equal(tonguePalateChanges,8);
+  assert.equal(ileocolicChanges,1);
+  assert.equal(corpusXrayChanges,1);
+  assert.equal(thyroidMraExpanded,2,'Two expanded MRA cells already counted in the original four evidence changes');
   for(const group of additionalUsEpochs)assert.equal(additionalUsCounts.get(group.name),group.count,
     `${group.name} exact introduced cells visited`);
-  assert.equal(currentPreserved,9886);
+  assert.equal(currentPreserved,9876);
   assert.equal(currentPreserved+ctChanges+medianChanges+additionalUsChanges+
-    checkMriChanges+archXrayChanges,9910,
-    'original 9910 current-preservation cells partition into preserved plus eighteen prior and six later exact changes');
+    checkMriChanges+archXrayChanges+tonguePalateChanges+ileocolicChanges+corpusXrayChanges,9910,
+    '9910 current-preservation cells include exact ileocolic and corpus changes');
   assert.equal(preserved, 9836);
-  assert.equal(currentVsOldPreserved,9794);
+  assert.equal(currentVsOldPreserved,9784);
   assert.equal(currentVsOldPreserved+ctChanges+medianChanges+additionalUsChanges+
-    checkMriChanges+archXrayChanges,9818,
-    'original 9818 baseline-preservation cells partition into preserved plus eighteen prior and six later exact changes');
+    checkMriChanges+archXrayChanges+tonguePalateChanges+ileocolicChanges+corpusXrayChanges,9818,
+    '9818 baseline-preservation cells include exact ileocolic and corpus changes');
   assert.equal(changedWorksheets, 56);
   assert.equal(handWorksheets,36);
   assert.equal(usWorksheets,8);
@@ -742,6 +946,10 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
     [medianSelected,'xray',api.medianAntebrachialXrayLesson],
     [checkMriSelected,'mri',api.orbitalSupportMriLesson],
     [archXraySelected,'xray',api.footVenousArchXrayLesson],
+    [tonguePalateSelected,'quiz',api.tonguePalateQuizLesson],
+    [new Map([[ileocolicId,{identity:ileocolicIdentity}]]),'ultrasound',
+      api.ileocolicArteryUltrasoundLesson],
+    [new Map([[corpusId,corpusRow]]),'xray',api.corpusSpongiosumXrayLesson],
     ...additionalUsEpochs.map(group=>[group.rows,'ultrasound',group.resolver]),
   ])for(const row of selectedSet.values()){
     const id=row.identity.id;
@@ -752,6 +960,21 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
     const altered=structuredClone(packet);
     altered.topics.find(topic=>topic.tab===tab).body+=' altered';
     assert.equal(await api.parseBodyReviewResponse(altered,id),null,`${id} tampered teaching refused`);
+    if(id===ileocolicId||id===corpusId){
+      const stale=await (id===ileocolicId?ileocolicBefore:corpusXrayBefore).bodyReviewMaterial(id);
+      assert.equal(await api.parseBodyReviewResponse(stale,id),null,
+        'pre-introduction ileocolic worksheet cannot carry approval');
+      for(const mutate of [
+        topic=>{topic.citations[0]='https://invalid.example/';},
+        topic=>{topic.readiness='approved';},
+        topic=>{topic.extra='foreign';},
+      ]){
+        const changed=structuredClone(packet);
+        mutate(changed.topics.find(topic=>topic.tab===tab));
+        assert.equal(await api.parseBodyReviewResponse(changed,id),null,
+          'altered ileocolic Review material refused');
+      }
+    }
     assert.equal(resolver({id,name:row.identity.name,fmaId:row.identity.fmaId},tab),undefined,
       `${id} partial source identity refused`);
     const changedIdentity=structuredClone(row.identity);
@@ -776,6 +999,8 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
       path=>readFileSync(resolve(root,path))))];
   for(const [selectedSet,tab] of [[ctSelected,'ct'],[medianSelected,'xray'],
     [checkMriSelected,'mri'],[archXraySelected,'xray'],
+    [new Map([[ileocolicId,{identity:ileocolicIdentity}]]),'ultrasound'],
+    [new Map([[corpusId,corpusRow]]),'xray'],
     ...additionalUsEpochs.map(group=>[group.rows,'ultrasound'])])
     for(const row of selectedSet.values()){
       const lesson=api.bodyLesson(row.identity,tab);
@@ -803,7 +1028,7 @@ test('spinal X-ray source, Review, four runtime manifests and emitted teaching r
   console.log(JSON.stringify({ source: source.source, sourceTree: source.sourceTree, changed,
     preserved, changedWorksheets, handChanges, handWorksheets,usChanges,usWorksheets,currentPreserved,
     footChanges,evidenceChanges,mriChanges,ctChanges,medianChanges,additionalUsChanges,
-    checkMriChanges,archXrayChanges,
+    checkMriChanges,archXrayChanges,tonguePalateChanges,ileocolicChanges,corpusXrayChanges,thyroidMraExpanded,
     additionalUsCounts:Object.fromEntries(additionalUsCounts),currentVsOldPreserved,
     families: 32, pins: 56, cervicalUnchanged: 6,
     runtimes: regions.length, reviewFiles: review.files.length, modelBundlesUnchanged: 86,
