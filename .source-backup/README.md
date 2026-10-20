@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Twelve selected source/evidence files only: six existing test/helper repairs, two new immutable historical import readers, three proof scripts and verification. Not a full or standalone Website/private-data/recovery-archive backup. Exact historical snapshots remain localF dependencies, not included. Existing historical X-ray and Review assertions retained with separate current source checks. No app/access/teaching/model/mask/dependency changes, scans/images/private records/raw canonical ancestry/clinical approval/public deployment. Behavioral modules and installation pending.

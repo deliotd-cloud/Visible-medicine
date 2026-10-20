@@ -1,0 +1,91 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T18:03:18.657Z",
+  "sourceIdentity": {
+    "kind": "Uninstalled eight-file test-context proposal",
+    "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "currentFullRunDigest": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "tests/clinical-review-cervical-disc-tour.test.ts",
+      "bytes": 33158,
+      "sha256": "29685d95de9a1efbaa107b739aa2cb4ddb345ba780448c389afac602d29ea37f"
+    },
+    {
+      "path": "tests/clinical-review-change-notice.test.ts",
+      "bytes": 21089,
+      "sha256": "9f23bb6243dfdd0d0c051e060a596d72519ad0c82051e19721d52dd3504e5009"
+    },
+    {
+      "path": "tests/clinical-review-coronary-sinus-xray.test.ts",
+      "bytes": 23556,
+      "sha256": "4be201ff8982d64de4e62c007da0dc797e5e819077b9fcb78be0b399988396f1"
+    },
+    {
+      "path": "tests/atlas-thoracoabdominal-quiz-checks.mjs",
+      "bytes": 19832,
+      "sha256": "0bb48b7d723c1d87262ccdf1eaa41e757c3d93f38c7fb1af8dce3bd6cc9ff6b7"
+    },
+    {
+      "path": "tests/clinical-review-colic-arterial-xray.test.ts",
+      "bytes": 23171,
+      "sha256": "00fab7867451c88eff388b6392d91c9225bdcfd141d6fdd1f7590c829e7a5bd7"
+    },
+    {
+      "path": "tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 19328,
+      "sha256": "26cabf16c9c2166c0415efcf23e29612586ca29dec039ea0985a62bfd3b1003c"
+    },
+    {
+      "path": "tests/colic-admission-import-history.mjs",
+      "bytes": 3158,
+      "sha256": "4a517f6671025a5e85086bdf7d076740b856cf9264b75311ae744111c7cf0d16"
+    },
+    {
+      "path": "tests/review-change-import-history.mjs",
+      "bytes": 2481,
+      "sha256": "b7ad45d970973a535880a4fb03e4df7c554fca4bfe767c952cc6bf49f75a9877"
+    },
+    {
+      "path": "evidence/late-contexts/verify-colic-history.mjs",
+      "bytes": 3803,
+      "sha256": "c5bc508e1c9147de9815af68b83d0f5b20ce874f7b5b373af0d8beddb4ca247e"
+    },
+    {
+      "path": "evidence/late-contexts/verify-notice-history.mjs",
+      "bytes": 4905,
+      "sha256": "8dda2bb98c51be08284cf263bf6792ddceceaee5fc9d9b9c816cf1038c972c2e"
+    },
+    {
+      "path": "evidence/late-contexts/verify-late-root-contexts-20261020.mjs",
+      "bytes": 4920,
+      "sha256": "684cc59f56da88286557dbf9d3818b411e04746fc5dd29ba5befb53b8b1985d9"
+    },
+    {
+      "path": "evidence/late-contexts/VERIFICATION.json",
+      "bytes": 9024,
+      "sha256": "cefb0dfe116f5647452d895e41327a3896a090d6358ca1ad03561f6ba030e459"
+    }
+  ],
+  "removed": [],
+  "scope": "Twelve selected source/evidence files only: six existing test/helper repairs, two new immutable historical import readers, three proof scripts and verification. Not a full or standalone Website/private-data/recovery-archive backup. Exact historical snapshots remain localF dependencies, not included. Existing historical X-ray and Review assertions retained with separate current source checks. No app/access/teaching/model/mask/dependency changes, scans/images/private records/raw canonical ancestry/clinical approval/public deployment. Behavioral modules and installation pending.",
+  "proof": {
+    "rootProofTests": 7,
+    "originalColicTopicComparisons": 63,
+    "historicalImportsHashChecked": 1495,
+    "historicalNoticeFiles": 1499,
+    "historicalAddedPaths": 55,
+    "sourceImportPairs": 12,
+    "fullBehavioralModulesRun": false,
+    "canonicalInstalled": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

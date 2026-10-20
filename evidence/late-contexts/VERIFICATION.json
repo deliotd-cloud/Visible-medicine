@@ -1,0 +1,156 @@
+{
+  "schema": "vm-late-test-context-proposal/1",
+  "at": "2026-10-20T18:03:18.108Z",
+  "stage": "F:/VisibleMedicine/staging/20261020-late-regression-contexts",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "atlas": "F:/VisibleMedicine/staging/20261020-inferior-thyroid-mra-source",
+  "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+  "files": [
+    {
+      "path": "tests/clinical-review-cervical-disc-tour.test.ts",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/review/files/tests/clinical-review-cervical-disc-tour.test.ts",
+      "bytes": 33158,
+      "sha256": "29685d95de9a1efbaa107b739aa2cb4ddb345ba780448c389afac602d29ea37f",
+      "beforeSha256": "e5017957cb319b10e000dd9fb9a56a79e8e14089fd1bd0ffb4b58e445b1dbe12"
+    },
+    {
+      "path": "tests/clinical-review-change-notice.test.ts",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/review/files/tests/clinical-review-change-notice.test.ts",
+      "bytes": 21089,
+      "sha256": "9f23bb6243dfdd0d0c051e060a596d72519ad0c82051e19721d52dd3504e5009",
+      "beforeSha256": "fdc7a83788b9b729f77e44d247d953f055fa6fec1d477c568bb0fc7f194f0870"
+    },
+    {
+      "path": "tests/clinical-review-coronary-sinus-xray.test.ts",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/review/files/tests/clinical-review-coronary-sinus-xray.test.ts",
+      "bytes": 23556,
+      "sha256": "4be201ff8982d64de4e62c007da0dc797e5e819077b9fcb78be0b399988396f1",
+      "beforeSha256": "d57fb041284d07658aa0276c82c403c19805130eed09bae2c2d85307a7dcc5c1"
+    },
+    {
+      "path": "tests/atlas-thoracoabdominal-quiz-checks.mjs",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/guides/files/tests/atlas-thoracoabdominal-quiz-checks.mjs",
+      "bytes": 19832,
+      "sha256": "0bb48b7d723c1d87262ccdf1eaa41e757c3d93f38c7fb1af8dce3bd6cc9ff6b7",
+      "beforeSha256": "06352f5d29e34f612a626fa78c9295f2f923e5b9c596f34c904653f9e96e2a53"
+    },
+    {
+      "path": "tests/clinical-review-colic-arterial-xray.test.ts",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/guides/files/tests/clinical-review-colic-arterial-xray.test.ts",
+      "bytes": 23171,
+      "sha256": "00fab7867451c88eff388b6392d91c9225bdcfd141d6fdd1f7590c829e7a5bd7",
+      "beforeSha256": "c2a079b5b83d4bb2ca4c822278a1f2fd1ad3bf1933f58658c8b2704b72704866"
+    },
+    {
+      "path": "tests/clinical-review-continuous-guided-playback.test.ts",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/guides/files/tests/clinical-review-continuous-guided-playback.test.ts",
+      "bytes": 19328,
+      "sha256": "26cabf16c9c2166c0415efcf23e29612586ca29dec039ea0985a62bfd3b1003c",
+      "beforeSha256": "e05405920ed158962392bf2ac1eb0e0cf0620adc2d5c48a510e1a2fbb0a9f312"
+    },
+    {
+      "path": "tests/colic-admission-import-history.mjs",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/guides/files/tests/colic-admission-import-history.mjs",
+      "bytes": 3158,
+      "sha256": "4a517f6671025a5e85086bdf7d076740b856cf9264b75311ae744111c7cf0d16",
+      "beforeSha256": null
+    },
+    {
+      "path": "tests/review-change-import-history.mjs",
+      "source": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/review/files/tests/review-change-import-history.mjs",
+      "bytes": 2481,
+      "sha256": "b7ad45d970973a535880a4fb03e4df7c554fca4bfe767c952cc6bf49f75a9877",
+      "beforeSha256": null
+    }
+  ],
+  "supersedes": [
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/review/MANIFEST.json",
+      "sha256": "70ddf17382e043b4a46209f0cc518e118ac853a3cd18e3fc8bd4326b609e1deb",
+      "limitation": "Original worker root-only proposal; change-notice after hash and unresolved-seam note are superseded here."
+    },
+    {
+      "path": "F:/VisibleMedicine/staging/20261020-late-regression-contexts/guides/MANIFEST.json",
+      "sha256": "e1f5998714acc4b148ef8d8a64ce7a9a168dccee3154434f6600406f820a03bb",
+      "limitation": "Original worker root-only proposal; colic unchanged note is superseded by main historical-import fix here."
+    }
+  ],
+  "verification": {
+    "receipts": [
+      {
+        "label": "LATE_ROOT_INVERSES_AND_CURRENT_BINDING",
+        "command": "node",
+        "args": [
+          "--max-old-space-size=1024",
+          "--test",
+          "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2/verify-late-root-contexts-20261020.mjs"
+        ],
+        "code": 0,
+        "signal": null,
+        "log": "F:\\VisibleMedicine\\staging\\20261020-late-regression-contexts/LATE_ROOT_INVERSES_AND_CURRENT_BINDING.log",
+        "logSha256": "7ed3ba6229e632e1dd8b3bf8f903d39568d93f0b9b4b3935695106b635fb07fa",
+        "footer": [
+          "ℹ tests 7",
+          "ℹ pass 7",
+          "ℹ fail 0",
+          "ℹ cancelled 0",
+          "ℹ skipped 0",
+          "ℹ todo 0"
+        ],
+        "canonicalInstalled": false
+      },
+      {
+        "label": "COLIC_HISTORICAL_IMPORT_PROOF",
+        "command": "node",
+        "args": [
+          "--max-old-space-size=1024",
+          "F:/VisibleMedicine/staging/20261020-late-regression-contexts/verify-colic-history.mjs"
+        ],
+        "code": 0,
+        "signal": null,
+        "log": "F:\\VisibleMedicine\\staging\\20261020-late-regression-contexts/COLIC_HISTORICAL_IMPORT_PROOF.log",
+        "logSha256": "52ef6227cc8af740c21e905869a5ab3a623f08226b048445afa0005073e6f03e",
+        "footer": [],
+        "canonicalInstalled": false
+      },
+      {
+        "label": "NOTICE_HISTORICAL_AND_CURRENT_BINDING_FIXED",
+        "command": "node",
+        "args": [
+          "--max-old-space-size=1024",
+          "F:/VisibleMedicine/staging/20261020-late-regression-contexts/verify-notice-history.mjs"
+        ],
+        "code": 0,
+        "signal": null,
+        "log": "F:\\VisibleMedicine\\staging\\20261020-late-regression-contexts/NOTICE_HISTORICAL_AND_CURRENT_BINDING_FIXED.log",
+        "logSha256": "aa61f060125b3b02e5d14436211bbf810d22a444b7a253eda1b96125d0136d44",
+        "footer": [],
+        "canonicalInstalled": false
+      }
+    ],
+    "rootProofTests": 7,
+    "roots": "Four complete original byte inverses plus exact current delivery/tree/source and wrong-root refusal checks.",
+    "colic": "All1495historical imports hash-checked; hermetic old9f import actually compiled and63selected topic pairs equal original feature0587. Old ultrasound pending retained. New current comparison is separate; original9936/7delta/1104/forgery/access assertions remain. Full original assertion content inverse normalizes line endings, not byte proof.",
+    "notice": "Closed408manifest1499files/55added and source imports independently checked; current87ed1548file binding and six source/import pairs separately match Git. Complete original assertion content inverse normalizes line endings. No old counts rebased.",
+    "proofFailuresRetained": "Initial source-verifier Windows absolute ESM import error; then6/7because metadata-only validation does not inspect Git tree, corrected proof boundary explicitly. Initial wrapper missing stage preflight failed before launch; preparation corrected. Original notice inverse-script newline failure log retained; no production/assertion weakening.",
+    "review": "Independent read-only SolMedium reviews found no substantive weakening. Both helpers depend on exact existing F historical recovery and fail closed if absent. Original worker manifests preserved but explicitly superseded."
+  },
+  "fullSuite": {
+    "output": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+    "live": true,
+    "terminalReceiptObserved": false,
+    "sourceInputsVerifiedUnchanged": 5019,
+    "sourceSha256": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "counts": null,
+    "passingClaim": false
+  },
+  "next": "Wait for same actual full-run terminal, inspect full diagnostics/drift, apply exact existing14-file guarded batch first with exclusive ownership. Then preflight/apply this eight-file additional test/helper proposal without disturbing other source, and run the actual original modules; pure proofs are not their behavioral pass. Additional later failures require diagnosis, never assume these fix every case. Stock full verification and staged UI/speed/source531e integration remain. Preserve full goal/checklist68 and owner editor.",
+  "previousGoalTurnClassification": "Progress: isolated CT/MRI3x source implemented,31cases and bounded types passed, scopedF recovery and independently restored selected-source GitHub backup verified.",
+  "canonicalInstalled": false,
+  "fullBehavioralModulesRun": false,
+  "ownerEditorRefreshed": false,
+  "patientDataUploaded": false,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}
