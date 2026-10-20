@@ -1,7 +1,7 @@
 .clinical-review-inbox { max-width:1200px; margin:1.25rem auto 2rem; padding:1.4rem 1.5rem; border:1px solid #c4d4d1; border-radius:12px; background:#f8fbfa; color:#132c32; }
 .clinical-review-inbox-workbench { min-width:0; }
 .clinical-review-inbox-tools,.clinical-review-inbox-results-pane { min-width:0; }
-.clinical-review-inbox h2 { margin:.1rem 0 .45rem; font-size:1.55rem; }
+.clinical-review-inbox #clinical-review-inbox-title { margin:.1rem 0 .45rem; font-size:1.55rem; }
 .clinical-review-inbox header p { max-width:88ch; margin:.35rem 0; line-height:1.5; }
 .clinical-review-inbox .clinical-review-inbox-eyebrow { margin:0; color:#087b6c; font-size:.75rem; font-weight:750; letter-spacing:.08em; text-transform:uppercase; }
 .clinical-review-inbox-areas { display:flex; flex-wrap:wrap; gap:.3rem 1rem; margin:.65rem 0; }

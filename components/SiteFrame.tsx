@@ -23,11 +23,13 @@ const reviewLinks = [
   ["Review inbox", "/workspace/clinical-review-inbox"],
   ["All review selections", "/workspace/atlas-review"],
   ["Source comparisons", "/workspace/atlas-review/source-comparisons"],
+  ["Saved inspections", "/workspace/review-candidates"],
 ] as const;
 
 function isReviewRoute(pathname: string) {
   return pathname === "/workspace/clinical-review-inbox" || pathname.startsWith("/workspace/clinical-review-inbox/") ||
-    pathname === "/workspace/atlas-review" || pathname.startsWith("/workspace/atlas-review/");
+    pathname === "/workspace/atlas-review" || pathname.startsWith("/workspace/atlas-review/") ||
+    pathname === "/workspace/review-candidates" || pathname.startsWith("/workspace/review-candidates/");
 }
 
 function isStudioRoute(pathname: string) {

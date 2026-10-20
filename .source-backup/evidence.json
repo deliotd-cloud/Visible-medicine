@@ -1,26 +1,27 @@
 {
-  "schema": "vm-studio-primary-route-focus-acceptance/1",
-  "at": "2026-10-20T06:11:28.295Z",
-  "sourceBase": "3cb9f3fd43bbfab905b3234b11e7f9e8c543211a",
-  "sourcePaths": 4963,
+  "schema": "vm-clinical-review-wayfinding-acceptance/1",
+  "at": "2026-10-20T06:30:08.542Z",
+  "sourceBase": "47139c735fb94057d3602e475302a1fa940cd2df",
+  "sourcePaths": 4964,
   "changedPaths": [
+    "components/ClinicalReviewInbox.tsx",
     "components/SiteFrame.tsx",
-    "lib/public-route-focus.ts",
-    "tests/public-focus-adapter-preservation.test.mjs",
-    "tests/public-route-focus.test.mjs",
-    "tests/siteframe-focus-lifecycle.test.mjs"
+    "components/clinical-review-inbox.css"
   ],
-  "addedPaths": [],
-  "unchangedBaselineRows": 5114,
+  "addedPaths": [
+    "tests/clinical-review-wayfinding.test.mjs"
+  ],
+  "unchangedBaselineRows": 5116,
   "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
   "all1681ReviewInputsUnchanged": true,
   "all12DeliveryDocumentsUnchanged": true,
-  "progress": "Actual Studio primary-route focus gap repaired. Only trusted explicit same-origin clicks on the four existing Studio primary links get a separate policy/heading handoff; cancelled document guards, nonprimary/private/viewer/auth routes, untrusted/modified/new-tab/download clicks and unlinked commits do not. Existing public policy and bounded streaming/user-focus/modal/cleanup logic preserved.",
+  "allPriorTestFilesUnchanged": true,
+  "progress": "Saved inspections now remains in Clinical Review rather than Administration, with one clear active destination and direct Review inbox discovery on list/candidate descendants. Inbox page heading is H1 with the same compact style. Existing server gates, mutation rules, scope/revisions, new-tab worksheet links, queue loading/filter/focus/pagination and public/Studio/unsaved lifecycle are unchanged.",
   "checks": {
-    "distinctFocusedCases": 88,
-    "focusLifecycleAndPolicyAndHistory": 39,
-    "existingFrameRoleAndStudioAdapters": 49,
-    "newCases": 13,
+    "distinctFocusedCases": 106,
+    "reviewUiAndAccess": 45,
+    "frameRoleAndFocusSafety": 61,
+    "newCases": 6,
     "typeDiagnostics": 0,
     "reviewVerification": true,
     "policyVerification": true,
@@ -28,103 +29,46 @@
     "fullSuite": false
   },
   "browser": {
-    "receiptSha256": "2663269af748afe9de975419ceef40056917d021412947d151da1826e299e9d9",
-    "viewport": {
-      "width": 1280,
-      "height": 720
-    },
-    "normalExistingSignedInSession": true,
-    "fourPrimaryRoutesHeadingFocused": true,
-    "streamFallbackThenHeadingObserved": true,
-    "publishingTabReachesStatusSelect": true,
-    "temporaryTabIndexRemovedOnBlur": true,
-    "noOverflowOrVisibleAlerts": true,
-    "scrollRemains0": true,
-    "noPrivateDataSaved": true,
-    "browserBackAcceptance": false,
-    "unsavedGuardBrowserEditing": false
+    "receiptSha256": "5719caaaf69f8246e7403801443aa2ad60cff2416503b1f4dd3cc71e6033aa64",
+    "signedIn": false,
+    "normalAccessDeniedRoutes": true,
+    "desktop1280x800": true,
+    "desktop1024x768": true,
+    "reviewNavigationVisible": true,
+    "noOverflow": true,
+    "nativeEnterReturnToInbox": true,
+    "privateRowsRemainHidden": true,
+    "anonymousInboxApiStatus": 401,
+    "inlineScreenshotInspected": true,
+    "screenshotSaved": false,
+    "authorizedQueueWorksheetAcceptance": false
   },
-  "assurance": "All9original lifecycle and2original public-policy whole test bodies unchanged. Real navigation-guard function participates in compiled lifecycle cancel/confirm tests. Historical public adapter retains immutable5fixtures/two dependency seams; only unique previously verified publishing disclosure assertion admitted, auth/removal/reversal/missing/duplicate mutations refused. Main rehashed1681Review inputs/12delivery docs; independent worker rehashed5119baseline rows and all changed/source-test assertions, not separate private Review inputs.",
+  "assurance": "Original source baseline5119rows verified before writes/three exact preimages. Inverse diff proves only two nav changes/H1/stable CSS heading selector; all queue logic/focus/unsaved/auth and previous tests exact. Main rehashed1681Review inputs and12delivery documents. One bounded Sol Medium worker independently hashed5119rows, inspected new test and source diff; did not separately hash1681Review inputs/12docs or run browser/build.",
   "evidence": {
-    "PREPARATION.json": "78fbd3ef0a45d67f82cfa68e38e0d30df93f2cda96dae38a20f0c2ba8034a257",
-    "SOURCE_SCOPE.json": "06bcdbcbaba873529477025a07f6770d30a967c43dec8d14477534b719ec4517",
-    "BEFORE_FOCUS.json": "6fcf70fcde1417d7b19d821cde8934a80b953748abcca2b48cd902b0ec2954c5",
-    "FOCUSED_FOCUS.json": "9777ea033019c6c2b4589c4f509572e0fdbcac9e23ca5eadf1056b293afff29a",
-    "FRAME_ADAPTERS.json": "486b4672d14b064d24ad28ae8d77ad2fb2e4379553fcf0a14bca73b1d32b5032",
-    "TYPECHECK.json": "b18e637019a540c810d03cdf3cef118844ae2b376fe3e06e4eca3b739df238df",
-    "REVIEW.json": "783035c7e7a577c9208d57addf5f04e18ba405d9b7344b8807e52bda86754746",
-    "POLICY.json": "9f6a63988e26152a8f2b3c951d2a3a3b95b791ead1345f7ee9483c64b891ef1b",
-    "PRODUCTION_BUILD.json": "8c833445d0eee1e290ee53dbccf6511f0030b4a19b9b29a76b4392f16410edaa",
-    "BROWSER_ACCEPTANCE.json": "2663269af748afe9de975419ceef40056917d021412947d151da1826e299e9d9",
-    "preview/server.json": "af9c3bdf5fbde7b6fedabb3bd51a7d43b527a2e767cae4428b34fbbe7cff99a4",
-    "preview/server-exit.json": "2451158dd96fd9654f04edfad6486a35d1516bd0f89e5eb5c75eeab85c4ab682",
-    "preview/stop-receipt.json": "ea939be861d0d52d173da3718391cbce1309793ad7b0723ef56e528259b3a00e"
+    "PREPARATION.json": "6dbf3a2d6f14dd37ea6a01c3f200149c91e4763c33b8df13e07d515294ab1cbe",
+    "PLAN.json": "a46ae104a884ef51b26da232b13df251ca761adddee9db6af5ec028d17302c32",
+    "SOURCE_SCOPE.json": "6c8ef459e57df0bf6206e3c4503ec7d5978f6e05dc7bd2d5ac08400725bcd865",
+    "BEFORE_WAYFINDING.json": "2b0b785f801d0a6dc8c901e128e3f9007f057e7292010797636543b09753b7cf",
+    "REVIEW_UI.json": "b2815a701c2f17193c8d573750d59e6623f35160e607e124277034cf8541dc8a",
+    "FRAME_SAFETY.json": "ce980063e23d0fd367ee57a3d14b2d41b8b44b56d255641e04d7427508c18fb4",
+    "TYPECHECK.json": "1bae51042a0a8601dda4a36e770f6b837c304059b71e305e87f61b5bfa7d605d",
+    "REVIEW.json": "a8359eba79e9eeb3f52855d8431e7cbef09701a95978dc89276a2c64f7294a6d",
+    "POLICY.json": "fcb5a22fd3010aae138b1be789ef54db571f0fa82489946b30bba34af84bb4e3",
+    "PRODUCTION_BUILD.json": "bd350d777f6c4267dad4bc31d77553ef4fa3de3db4c8c02f3abf9cdc29f72648",
+    "BROWSER_ACCEPTANCE.json": "5719caaaf69f8246e7403801443aa2ad60cff2416503b1f4dd3cc71e6033aa64",
+    "preview/server.json": "423277d44cf691e4c7e21077fbc36b2f65dd6217ca90070414e98442918da61f",
+    "preview/server-exit.json": "9fd36edebb67aff657e5fd486cd6e795947f43df34c4809c9f9897ffa188010b",
+    "preview/stop-receipt.json": "d979dbd7f8a3d57e27b94c33b854b9b247211cb559a621c472b33c31714618e1",
+    "preview-candidate/server.json": "1036f3d51d3e5fc901b5cc7123cde486046ca64c5b342eafb059b36af8db4919",
+    "preview-candidate/server-exit.json": "7b6c9677906c0a76396fb29a2a11186c6261156fd11dd635b0e36b2288521acd",
+    "preview-candidate/stop-receipt.json": "f5181dfd288aea1a08df07494af75bf6249de073482cb6bfe91d6d957607786e"
   },
   "independentReview": {
-    "sha256": "985c9fc12730fd3c7a0fe59d24234eee8632e757cb20f309b8784feb4b1b849a",
-    "review": {
-      "result": "scoped-read-only-review-pass",
-      "source": "F:/VisibleMedicine/staging/20261020-saved-plan-focus/website",
-      "parent": "3cb9f3fd43bbfab905b3234b11e7f9e8c543211a",
-      "preparationSha256": "78fbd3ef0a45d67f82cfa68e38e0d30df93f2cda96dae38a20f0c2ba8034a257",
-      "baselineRows": 5119,
-      "unchangedBaselineRows": 5114,
-      "missingBaselineRows": 0,
-      "unexpectedChangedRows": 0,
-      "extraFilesUnderComponentsLibTests": 0,
-      "changed": {
-        "components/SiteFrame.tsx": {
-          "before": "a1d088003c532d60313dedc7475c9eb0420b0fa9735e27ecbfcfcf07cd98e913",
-          "now": "a4c1922faa55df2b731363815e834d6cd8da59e9e2e7ae725d9038da553a8a30"
-        },
-        "lib/public-route-focus.ts": {
-          "before": "34cb0f8a958cb6c64de84a238709689d960f121ff62632f1aa615af32c976f26",
-          "now": "613421b7982da287b87e1b670fb9dd2c1e1bc5f7d5bf0a55e2fb113957aa956b"
-        },
-        "tests/public-focus-adapter-preservation.test.mjs": {
-          "before": "f86dcce5d11a4eddc5563825d6747af9bee293f90a465cd6beb131131ac2e327",
-          "now": "122396ce4bc9a81b7990aacf9db30ef1c5a82c372ae7d74545da02b0641b17c3"
-        },
-        "tests/public-route-focus.test.mjs": {
-          "before": "285ab98ad273609a86dabb0bf060e99d952299e4a4d9c53b165f5009b6da0d37",
-          "now": "dd65f29bc5d8b042fd0769721d51a41a28765c16c8483a518ba359dccedb9297"
-        },
-        "tests/siteframe-focus-lifecycle.test.mjs": {
-          "before": "0b5f77823ef38a38004256bb7fe7801cf217a753af6515fc3f1b881a1ef0831e",
-          "now": "a4ce563e5e725d7b1e71906d5f1968dcb962fa78c85e24869187f80adb1dc908"
-        }
-      },
-      "historicalAssertions": {
-        "siteframeOriginalNineExact": true,
-        "publicPolicyOriginalTwoExact": true,
-        "publicPolicyOriginalSourcePrefixExact": true,
-        "adapterCandidateExact": true
-      },
-      "focusReview": "No substantive guard, delayed-stream, modal, or user-focus issue found in this source review. New scope requires trusted unmodified same-origin click on a .studio-primary-navigation anchor and one of four exact destinations; document unsaved guard runs first; route/path/age/active focus checks and bounded cleanup remain.",
-      "receipts": {
-        "BEFORE_FOCUS": {
-          "passed": 12,
-          "failed": 5,
-          "logSha256": "3228ecb582500522b2eae8638320656c8247beee961dd988bbcb3060c6145dc2"
-        },
-        "FOCUSED_FOCUS": {
-          "passed": 39,
-          "failed": 0,
-          "logSha256": "aa58faaf60d2c77ae3dd05cf4c22f33bef6004e9cbb4780b503a2b0a6ecfdd3e"
-        },
-        "FRAME_ADAPTERS": {
-          "passed": 49,
-          "failed": 0,
-          "logSha256": "1c8a4a4ac9bbb7fce3bda141de10c84e92257a953202c67851a9a4d0062252ac"
-        }
-      },
-      "unchangedOtherScope": "All 485 website docs in the 5119-row manifest are unchanged, including the prior held delivery documents in that manifest. The prior 1681 Review-input preservation receipt is carried forward by the exact five-file website-only diff; separate private Review inputs were not reopened or rehashed in this bounded review.",
-      "limits": "No fresh browser, type, production build, whole suite, clinical approval, canonical installation, deployment, or backup verification by this reviewer."
-    }
+    "handoffSha256": "f84e2d7a8acd65a2478fbaf668f851dca31c141b7d16aa953fe4c18cbf2e679b",
+    "finalReviewSha256": "cc319a6486d1dba5caf03201d0ac909bc419cebe6be0b425ac3c5dd09bde9c46"
   },
-  "retainedLimits": "Pre-fix lifecycle12/17 with9original tests passing/five new focus failures preserved; previous actual3cb browser BODY witness retained. Current39+49pass. One browser selector-construction error before action corrected; Alt+ArrowLeft did not establish browser Back transition, so no browser Back/Forward pass. Unsaved-cancel/confirm/user-focus/modal/untrusted/auth/timeout cases use actual compiled component and real guard with synthetic DOM, no real draft edited. Not all-role/physicalAT/200%-text/mobile/GPU/whole-suite/clinical/privacy/registration/release completion. Original171whole-suite failures partly unresolved; no remaining count inferred.",
-  "preservation": "All5114other baseline rows/1681Review inputs/12docs/Atlasaaa8/Reviewd703/models/modules/licensing/deps/permissions unchanged. Owner3000/PID210284/open lecture untouched/save unconfirmed. Ownpage27 and fresh-checked3003root196124/children227284,230548,241680 stopped; no forms/decisions/publication/permissions modified.",
-  "stagedAdvancement": "Existing isolated candidate advanced after verified3cbfilteredbackup with5119rows/five preimages; no duplicate deps/model payloads. Prior mutable stage paths require immutable hashes/remote restoration.",
+  "retainedLimits": "Normal browser session requires Clinical Review sign-in; no bypass or actual clinical decision was performed. Browser signed-out navigation/401 only; authorized heading and gates covered with actual compiled component/server-layout SSR tests. Not signed-in queue/worksheet, all-role browser, physical AT, mobile, full-suite, clinical, privacy, registration or release acceptance. Stable baseline preview served stale module after edit/reload; retained observations and restarted only owned3003 before candidate verification. All jobs terminal; ownpage28/verified preview processes stopped; owner3000/PID210284/draft untouched and save unconfirmed.",
+  "next": "Teaching inbox rows currently omit track context and source worksheets default to Anatomy: implement exact source-owned initial-track support and stock generated import/rebind, not DOM tricks or manual generated edits; test all four structure families/invalid query/unsaved/source revision. Then1024 combined model/worksheet desktop layout and full native imaging/existing3D/anatomy/teaching/rights roadmap. Authorized browser acceptance and safe canonical admission remain pending without global stall.",
   "heldArchivePaths": [
     "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
     "tests/fixtures/head-pilot-9fba-epoch.json",

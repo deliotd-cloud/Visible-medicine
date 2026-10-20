@@ -192,7 +192,7 @@ export function ClinicalReviewInbox() {
   };
 
   return <section className="clinical-review-inbox" aria-labelledby="clinical-review-inbox-title">
-    <header><div><p className="clinical-review-inbox-eyebrow">Private workspace</p><h2 id="clinical-review-inbox-title">Clinical Review</h2>
+    <header><div><p className="clinical-review-inbox-eyebrow">Private workspace</p><h1 id="clinical-review-inbox-title">Clinical Review</h1>
       <p>Review outstanding anatomy and teaching. Each decision applies only to its exact revision.</p></div></header>
     <div className="clinical-review-inbox-workbench">
     <div className="clinical-review-inbox-tools">
