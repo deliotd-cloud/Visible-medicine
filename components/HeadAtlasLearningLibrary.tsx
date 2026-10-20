@@ -72,13 +72,14 @@ function TourList({sequences,terms=[],modality='all'}:{sequences:Array<{id:strin
   })}</ol>;
 }
 
-export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false}:{initialView?:TourModality;initialQuery?:string;compact?:boolean}={}){
+export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',compact=false,fixedView=false,fixedQuery=false}:{initialView?:TourModality;initialQuery?:string;compact?:boolean;fixedView?:boolean;fixedQuery?:boolean}={}){
   const [query,setQuery]=useState(initialQuery),[modality,setModality]=useState<TourModality>(initialView),[page,setPage]=useState(0);
   const searchRef=useRef<HTMLInputElement>(null);
   const statusRef=useRef<{element:HTMLParagraphElement|null;pending:{page:number;origin:HTMLButtonElement}|null}>({element:null,pending:null});
   if(!headLinksCurrent()){statusRef.current.pending=null;return <section aria-label="CT and MRI linked tours"><p role="status">{HEAD_LINK_REVISION_NOTICE}</p></section>;}
   const terms=query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   const filtered=!!query||modality!=='all';
+  const canClear=(!fixedQuery&&!!query)||(!fixedView&&modality!=='all');
   const [base,mri,insula,orbital,bone,cerebellar,facial]=[headLearningSequences,headMriLearningSequences,headInsulaLearningSequences,headOrbitalLearningSequences,headCtBoneLearningSequences,headCerebellarLearningSequences,headCtFacialLearningSequences].map(sequences=>sequences.filter(sequence=>{
     const links=headLearningLinks({sequenceId:sequence.id,conceptId:sequence.concepts[0]});
     if(!links||(modality==='3D'&&!links.atlasHref)||(modality==='CT'&&!links.ctHref)||(modality==='MRI'&&!links.mriHref))return false;
@@ -115,9 +116,9 @@ export function HeadAtlasLearningLibrary({initialView='all',initialQuery='',comp
     <HeadLearningBookmark/>
     <p>Start at step 1 in the existing 3D Atlas, CT or MRI, or expand View steps to open a particular structure. Only mapped modalities are offered. Configured local previews load CT/MRI automatically; otherwise choose the approved atlas folder. Comparisons are between separate, unregistered subjects. These draft links do not track progress or imply completion or clinical approval.</p>
     <div className="head-linked-library-filters">
-      <label>Search linked tours<input ref={searchRef} type="search" value={query} onChange={event=>{statusRef.current.pending=null;setQuery(event.target.value);setPage(0);}} placeholder="Tour or structure, e.g. pons" autoComplete="off"/></label>
-      <label>Available view<select value={modality} onChange={event=>{const value=event.target.value;if(value==='all'||value==='3D'||value==='CT'||value==='MRI'){statusRef.current.pending=null;setModality(value);setPage(0);}}}><option value="all">All linked tours</option><option value="3D">3D Atlas</option><option value="CT">Available on CT</option><option value="MRI">Available on MRI</option></select></label>
-      {filtered&&<button type="button" onClick={()=>{statusRef.current.pending=null;setQuery('');setModality('all');setPage(0);searchRef.current?.focus();}}>Clear tour filters</button>}
+      {!fixedQuery&&<label>Search linked tours<input ref={searchRef} type="search" value={query} onChange={event=>{statusRef.current.pending=null;setQuery(event.target.value);setPage(0);}} placeholder="Tour or structure, e.g. pons" autoComplete="off"/></label>}
+      {!fixedView&&<label>Available view<select value={modality} onChange={event=>{const value=event.target.value;if(value==='all'||value==='3D'||value==='CT'||value==='MRI'){statusRef.current.pending=null;setModality(value);setPage(0);}}}><option value="all">All linked tours</option><option value="3D">3D Atlas</option><option value="CT">Available on CT</option><option value="MRI">Available on MRI</option></select></label>}
+      {canClear&&<button type="button" onClick={()=>{statusRef.current.pending=null;if(!fixedQuery)setQuery('');if(!fixedView)setModality('all');setPage(0);searchRef.current?.focus();}}>Clear tour filters</button>}
     </div>
     <p ref={compact?commitStatus:undefined} tabIndex={compact?-1:undefined} role="status" className="head-linked-library-results">{count?(compact?`Showing linked tours ${start+1}–${Math.min(start+6,count)} of ${count}`:`${count} linked ${count===1?'tour':'tours'} available`):'No linked tours match. Clear filters to see all available sequences.'}</p>
     {compact&&count>0&&<nav className="head-linked-library-pager" aria-label="Linked head tour pages">

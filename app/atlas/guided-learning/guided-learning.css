@@ -1,5 +1,15 @@
 .atlas-guided-hub { max-width:1100px; }
 .atlas-guided-hub .atlas-hub-heading > a { display:inline-flex; min-height:36px; align-items:center; }
+.atlas-guided-search { margin:18px 0 0; }
+.atlas-guided-search-row { display:flex; flex-wrap:wrap; gap:8px; align-items:flex-end; }
+.atlas-guided-search-row label { display:flex; flex:1 1 260px; flex-direction:column; gap:5px; max-width:520px; color:var(--green); font-size:.875rem; font-weight:600; }
+.atlas-guided-search-row input { width:100%; min-height:40px; padding:8px 11px; border:1px solid #9bbcaf; border-radius:7px; background:#fff; color:var(--green); font:inherit; font-weight:400; }
+.atlas-guided-search-row :is(button,a) { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:7px 14px; border:1px solid #9bbcaf; border-radius:7px; background:#fff; color:var(--green); cursor:pointer; font:inherit; text-decoration:none; }
+.atlas-guided-views { display:flex; flex-wrap:wrap; gap:6px; margin:16px 0 0; }
+.atlas-guided-views button { display:inline-flex; align-items:center; justify-content:center; min-height:40px; padding:7px 16px; border:1px solid #9bbcaf; border-radius:7px; color:var(--green); background:#fff; font:inherit; font-weight:600; cursor:pointer; }
+.atlas-guided-views button:hover { background:#e5f3ed; }
+.atlas-guided-views button[aria-current="page"] { background:var(--green); border-color:var(--green); color:#fff; }
+.atlas-guided-search :is(input,button,a):focus-visible { outline:2px solid #16c6b2; outline-offset:3px; }
 .atlas-guided-regions { margin:0 0 24px; padding:12px 16px; border:1px solid #b8cec6; border-radius:10px; background:#f4f9f6; }
 .atlas-guided-regions > summary { width:fit-content; max-width:100%; min-height:36px; padding:6px 0; cursor:pointer; color:var(--green); font-weight:600; }
 .atlas-guided-regions p { max-width:78ch; line-height:1.6; }

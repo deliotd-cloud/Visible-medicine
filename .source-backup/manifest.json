@@ -1,15 +1,15 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T04:56:30.978Z",
+  "at": "2026-10-20T05:15:38.739Z",
   "sourceIdentity": {
-    "product": "Separate unpublished Website saved-plan keyboard-focus repair",
+    "product": "Separate unpublished Website shared Guided learning search and view navigation",
     "websiteBaseHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
     "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
     "canonicalInstalled": false
   },
-  "parent": "cfe1c2556e18e6663fc5275f0497c55d2bce04c6",
-  "gitParent": "cfe1c2556e18e6663fc5275f0497c55d2bce04c6",
+  "parent": "158759663bdb49677364ffb7874b74958929281b",
+  "gitParent": "158759663bdb49677364ffb7874b74958929281b",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -488,13 +488,13 @@
     },
     {
       "path": "app/atlas/guided-learning/guided-learning.css",
-      "bytes": 2113,
-      "sha256": "92de015b20d9cbe9a5bba70490cbc44c73b79abd182986497e930cc30163aaad"
+      "bytes": 3506,
+      "sha256": "2a664c65a33c0b1839c3f5611428451f624285132e1db65f520293c887fcec87"
     },
     {
       "path": "app/atlas/guided-learning/page.tsx",
-      "bytes": 2724,
-      "sha256": "d4ed523178371cd4d25455192e7a3636db3d4e10ed2a365b73f408f8bd4108d7"
+      "bytes": 3719,
+      "sha256": "0d09991465dccad0e9be4987abc0289e8ef521657d0c74a09453e20bd69d1bee"
     },
     {
       "path": "app/atlas/head-neck-3d/head-learning.css",
@@ -8878,8 +8878,8 @@
     },
     {
       "path": "components/HeadAtlasLearningLibrary.tsx",
-      "bytes": 15201,
-      "sha256": "95464c533f5e9e2bb35bbfae389eb5108a27fd7e4a377dbe7a6a705ba97b4a3d"
+      "bytes": 15404,
+      "sha256": "17fc443258f693d0d86f281a5dc9acf06344cc94c3efe3e7c3764db6d6a1c53f"
     },
     {
       "path": "components/HeadAtlasLearningNavigation.tsx",
@@ -9228,8 +9228,8 @@
     },
     {
       "path": "components/RegionalLearningCatalogue.tsx",
-      "bytes": 5958,
-      "sha256": "2c9f031287ff6f9301f8a374ca8fb4db3a1325325750d407e0592874d12b53b9"
+      "bytes": 6211,
+      "sha256": "d637d96086e1b0e3706b7de86cd7cd12d8552949ca593031b6a783c1e8fc34d5"
     },
     {
       "path": "components/RegionalMriCorrectionPanel.tsx",
@@ -22192,6 +22192,11 @@
       "sha256": "10bdac44f661f732481ae7fa25370d809144465de21ab53cbf2ffd4d97654621"
     },
     {
+      "path": "tests/guided-learning-view-navigation.test.mjs",
+      "bytes": 15127,
+      "sha256": "a06d882bb0e3d11c482bac4264f6e458b99681c70b480f61ea9d48e16e1448db"
+    },
+    {
       "path": "tests/guided-lecture-ui.test.ts",
       "bytes": 7478,
       "sha256": "ea4ed23e8b436ad194264e82206e2416d69503c8ded5fcb3b4bc80191caa942f"
@@ -23738,8 +23743,8 @@
     },
     {
       "path": "tests/native-focus-review-binding.test.mjs",
-      "bytes": 1897,
-      "sha256": "3ac097caba2ad57106968c732e0ce84aedfcdbace18dc60cdb311c0467140cc7"
+      "bytes": 3356,
+      "sha256": "4f69c6db89d21be5b3d9ab936695b239af18b1b1be88bde22d9081b2cb49ac21"
     },
     {
       "path": "tests/native-head-toolbar-compact.test.mjs",
@@ -24813,54 +24818,75 @@
     }
   ],
   "removed": [],
-  "scope": "4960 selected sources plus4metadata over verified filtered cfe parent. Three reviewed deltas, no removals/new assets/dependencies; all1681Review inputs/137models144paths/four learners unchanged.68focused cases,types0,Review/policy/production build and bounded actual CT/MRI saved-plan desktop acceptance. Excludes private data/context, runtime databases, scans/masks, model payloads, dependencies and raw canonical ancestry; not standalone/full private-data backup.",
+  "scope": "4961 selected sources plus4metadata over verified filtered1587parent. Six reviewed deltas, no removals/new assets/deps. One shared Guided learning search with top All/3D/CT/MRI controls; exact current/historical focus assurance.41focused native cases, types0,Review/policy/production build, actual public desktop workflow and independent source review. All1681Review inputs/137models144paths/four learners unchanged. No private data/context/scans/masks/model payloads/runtime DBs/deps/raw canonical ancestry; not standalone/full private-data backup.",
   "proof": {
-    "schema": "vm-saved-plan-focus-checkpoint/1",
-    "at": "2026-10-20T04:56:15.484Z",
-    "sourceBase": "cfe1c2556e18e6663fc5275f0497c55d2bce04c6",
-    "sourcePaths": 4960,
-    "deltaPaths": [
-      "components/HeadAtlasSavedStudyPlan.tsx",
-      "tests/head-saved-study-plan-ui.test.ts",
-      "tests/shoulder-girdle-arterial-current-admission-contract.test.mjs"
+    "schema": "vm-guided-view-navigation-acceptance/1",
+    "at": "2026-10-20T05:15:23.929Z",
+    "sourceBase": "158759663bdb49677364ffb7874b74958929281b",
+    "sourcePaths": 4961,
+    "changedPaths": [
+      "app/atlas/guided-learning/guided-learning.css",
+      "app/atlas/guided-learning/page.tsx",
+      "components/HeadAtlasLearningLibrary.tsx",
+      "components/RegionalLearningCatalogue.tsx",
+      "tests/native-focus-review-binding.test.mjs"
+    ],
+    "addedPaths": [
+      "tests/guided-learning-view-navigation.test.mjs"
     ],
     "reviewBinding": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
     "all1681ReviewInputsUnchanged": true,
-    "allOther5113CopiedFilesUnchanged": true,
-    "fix": "Save and valid Restore focus their stable disclosure summary before their own button disables. No storage/epoch/race/retirement gate, schema, source revision, clinical content or entitlement changed.",
-    "regressionRepair": "Shoulder contract now declares the exact pre-existing third Review read seam while preserving byte-exact frozen historical original/helper and current producer admission plus stale historical/source/review and tampered-seam refusals; no helper or fixture edits.",
-    "tests": {
-      "distinctFocusedCases": 68,
-      "savedPlanAndSchemaAndShoulder": 21,
-      "studySetOrderAndComparison": 33,
-      "modelRoutingAndProductionBoundary": 14,
-      "typesDiagnostics": 0,
+    "allOther5111BaselineFilesUnchanged": true,
+    "feature": "Guided learning has one shared native GET search above both catalogues and four compact view submitters. Live typed query follows view changes; Enter stays in chosen view. Clear search preserves view; Clear region preserves search and focuses surviving selector. Lower duplicate filters hidden only in page-owned mode; default embedded filters unchanged.",
+    "assurance": "Native-focus admission now separately validates closed currentaaa8 producer/six exact input hashes and immutable before/after589 history with learner/model preservation and stale refusal. No fixture/source/Review/Atlas/model/licensing/dependency/permission changes.",
+    "checks": {
+      "distinctFocusedCases": 41,
+      "newNavigationCases": 9,
+      "oldCasesAndCurrentHistoricalFocus": 32,
+      "typeDiagnostics": 0,
       "reviewVerification": true,
       "policyVerification": true,
       "productionBuild": true,
       "wholeSuite": false
     },
     "browser": {
-      "receiptSha256": "2a523a12b2a386f3e24e1daafd981ffe799e4aa7ce723366544f55a1dcd77465",
-      "MRI": "Save/restore/remount/remove/Escape stable focus and opt-in concept-only persistence",
-      "CT": "Explicit mapped concept restore, no quiz starts, stable focus; removal updates other tab while preserving each active set",
-      "desktop": "1280x720, no horizontal overflow/visible alerts; existing approved local source loaded normally",
-      "privateSourcePixelsOrPathsRecorded": false,
+      "receiptSha256": "6924448b515f71328e81ebc2481ad46fe0754dbd57318117c263a34583fe1515",
+      "viewControlsTopAt1280x720": 386.1875,
+      "searchBoxes": 1,
+      "liveSearchSwitch": true,
+      "backRestoresQueryAndView": true,
+      "enterKeepsView": true,
+      "clearKeepsView": true,
+      "regionClearKeepsQueryAndFocus": true,
+      "regionalTours": 51,
+      "linkedHead3DTours": 12,
+      "noHorizontalOverflow": true,
+      "noPrivateRootOrScansLoaded": true,
+      "inlineScreenshotInspected": true,
+      "screenshotFileSaved": false,
       "physicalHumanPointer": false
     },
-    "evidence": {
-      "SOURCE_SCOPE.json": "da2b86de3993a590617c1a97e886e6c9c64ac498027f90ff218674c48ec9da96",
-      "SAVED_PLAN_NATIVE.json": "35128d318d30deca9f6be2b3f1ca16574d394a8c182f8fa5cea5a00cefceb6bc",
-      "STUDY_SET_REGRESSION.json": "fe0619288843286fbf288dd5cc04f1852ff7339e75c14c7c645eb9b9c978dddd",
-      "ROUTING_REGRESSION.json": "007864c3f4f21727988c123d0e3838b0a9455413d06de858cfb265fb73e34ef7",
-      "TYPECHECK.json": "3e753f443e21437c8040465938f518db57c4b927a607249d2f15a45ea17f32c2",
-      "REVIEW.json": "9bcc36e7ed24a03ae95e957aed25f213d93cd384faf3d6933566f7db8c85c594",
-      "POLICY.json": "996fb7c36aee4e03e56a87d9aa94a92ca8767c8aef3145a7de193598b2794217",
-      "PRODUCTION_BUILD.json": "130d4617a9e914fdab0521e9685f8233793b9af2b692cd1a0660faa1525ed43e",
-      "BROWSER_ACCEPTANCE.json": "2a523a12b2a386f3e24e1daafd981ffe799e4aa7ce723366544f55a1dcd77465"
+    "independentReview": {
+      "sha256": "27347061f7f3167549e521906888eec592991ce4408d258510cd5653395150b6",
+      "all5116BaselineRows": true,
+      "unchangedReviewInputs": 1681,
+      "blockingFindings": 0,
+      "typeReceiptCaveat": "Worker cited earlier FINAL_TYPECHECK; main separately verifies ACCEPTANCE_TYPECHECK terminal0 after final source edits."
     },
-    "retainedLimits": "Original actual Save/Restore lost focus to BODY. Initial broad hidden-control presence was not accepted as quiz-start evidence; active Practice aria-pressed and rendered state used instead. One guessed missing test path refused before spawn, then exact existing production-boundary entry ran. Full suite171 historical failures not all repaired. No canonical installation, public deployment, clinical/privacy approval, spatial registration, physical wheel/AT/all-structures/GPU/real-role acceptance.",
-    "ownerPreview": "3000 and unsaved lecture untouched; no further save question/navigation/refresh. Owned3003 previews/pages23/24 closed and exact child identities stopped.",
+    "evidence": {
+      "PREPARATION.json": "a99b9d32a123746f08990cc859591406a12ffebb8dbb96f15653b27c733ef67e",
+      "SCOPE_EXTENSION.json": "77134053276421098dab64424dda1839c5bb7c75edefdd84b038bdd1a62a7789",
+      "SOURCE_SCOPE.json": "41b1c865fae1577a512a330c509b6d0ad44d23cf5508b0c53c2ebd2b30f67c87",
+      "ACCEPTANCE_NATIVE.json": "85be501d6a10b6a5fd115025bf1ebf1b12e87773bc6829f54c7e0157171d06bf",
+      "ACCEPTANCE_TYPECHECK.json": "33920a15fac64e655984e43be9478722688fb15614e4dddeffb70615a48de36e",
+      "REVIEW.json": "5de168ffededc130137a9433daef29b7cfd0196d1fe861e53f55188f08a231d3",
+      "POLICY.json": "2d849ea8d9478db344ac16c5a53124824cd5ed9f614503f39094db62a8259cf8",
+      "PRODUCTION_BUILD.json": "ad145c4674903c26c2c88b054cc2a13173ee78a1ce207b178a9df70e36c5bab1",
+      "BROWSER_ACCEPTANCE.json": "6924448b515f71328e81ebc2481ad46fe0754dbd57318117c263a34583fe1515"
+    },
+    "retainedLimits": "Original switcher1730px below viewport. Initial link prototype lost live typing; replaced by shared native GET form before acceptance; original5case preimage retained, final9cases. Atomic duplicate-target apply_patch rejected with no source write; fixed patch structure. Two screenshot disk paths denied, used supported inline screenshot without file. First select interaction used value instead of observed label and refused, then Thorax label succeeded. Closed terminal handle re-poll missing did not trigger restart. Old171suite failures remain partly unresolved. Not canonical installation, deployment, clinical/privacy/registration, physicalAT/wheel/GPU/real-role/full-suite acceptance.",
+    "ownerPreview": "Owner3000/PID210284/open lecture unchanged/save unconfirmed. Own public-only page25 and exact3003preview children closed/stopped; no owner navigation/refresh.",
+    "stagedAdvancement": "Reused existing isolated candidate after verified filtered1587sourcebackup with five preimages; no duplicate model/dependency copy. Previous checkpoint source restores from4964verifiedremote blobs; source hashes, not current mutable staging path alone, identify every pass.",
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",
