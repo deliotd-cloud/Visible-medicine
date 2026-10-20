@@ -1,0 +1,15 @@
+{
+  "label": "HIP_WRAPPER_DEFAULT_GIT",
+  "command": "C:/Program Files/nodejs/node.exe",
+  "args": [
+    "--input-type=module",
+    "-e",
+    "const {resolveHipHistoryRoot}=await import('./scripts/hip-quick-check-history-context.mjs');const r=resolveHipHistoryRoot();console.log(JSON.stringify({source:r.commit,tree:r.tree,actualDefaultGitVerification:true}));"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-hip-history-repair/HIP_WRAPPER_DEFAULT_GIT.log",
+  "logSha256": "fc094b5697e030c26ace8cc38267cee1b704ee20ccbbb7112dbbed8eaa541398",
+  "footer": [],
+  "canonicalInstalled": false
+}

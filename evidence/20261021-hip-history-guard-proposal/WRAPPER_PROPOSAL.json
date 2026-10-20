@@ -1,0 +1,25 @@
+{
+  "status": "proposal_with_unit_validation; wrapper_end_to_end_pending",
+  "sourceRoot": "F:/VisibleMedicine/staging/20261021-hip-history-source",
+  "sourceHead": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "changedPaths": [
+    {"path": "scripts/test-hip-quick-check-history.mjs", "beforeSha256": "9A4BB88915F40C80CA77B6B40A665813C7AA56ADFE5B419D2F5F88C1A048DCD5", "afterSha256": "6B762920F9909E12D5F4322AB7C35087EAF9518D558804E5544034F106BA16D3", "change": "Current-source test entry replaced by a fail-closed launcher for the unchanged original author script"},
+    {"path": "scripts/hip-quick-check-history-context.mjs", "afterSha256": "597C7ECED9520888EEF4A61A5D13C369CBDE2945A712854A5EB447A5668047DE", "change": "New exact-root verification and child exit propagation"},
+    {"path": "scripts/test-hip-history-entry-refusals.mjs", "afterSha256": "856140B4663702EFAAB199E0691B01F9398BA62F0F764F3A705AAD0BBEFCD4A7", "change": "New lightweight verification and refusal tests"}
+  ],
+  "trustedOriginal": {
+    "commit": "6d7ff5c403bdaaf79a10a221a3f72e397d9b9b42",
+    "tree": "213d2736c9f70c506ab64382398849690e01777e",
+    "parent": "2ed773bed8f27257f729b8cf88f98c4c5223a0c9",
+    "scriptRawSha256": "9a4bb88915f40c80ca77b6b40a665813c7aa56adfe5b419d2f5f88c1a048dcd5",
+    "originalWholeTestWitness": "F:/VisibleMedicine/staging/20261021-hip-history-repair/ORIGINAL_AUTHOR_WITNESS.json"
+  },
+  "validation": [
+    {"command": "node scripts/test-hip-history-entry-refusals.mjs", "exitCode": 0, "result": "Existing author root verified; 11 refusal cases; simulated child exit 17 preserved; original child not launched"},
+    {"command": "node --check scripts/test-hip-quick-check-history.mjs; node --check scripts/hip-quick-check-history-context.mjs; node --check scripts/test-hip-history-entry-refusals.mjs", "exitCode": 0},
+    {"command": "git diff --check", "exitCode": 0}
+  ],
+  "checksEnforced": ["existing registered detached worktree", "same real Git common directory", "different from wrapper root", "exact commit, tree, parent", "clean tracked and nonignored untracked status", "no ignored source files in relevant roots", "regular .git pointer, script, manifest, lock, and catalog", "original script Git blob and raw SHA-256", "catalog Git blob", "node_modules resolves within a registered same-repository worktree", "TypeScript and esbuild files regular", "NODE_OPTIONS refused", "NODE_PATH cleared in child", "child exit code preserved"],
+  "limits": ["The wrapper end-to-end child run is pending until the independent Website suite finishes", "Installed dependency bytes are not cryptographically verified against the lockfile; only path confinement and selected file type are checked", "Original author test evidence is a prior witness, not a pass of this new launcher"],
+  "sourceDiff": "Inspect the three changed paths with git diff -- scripts/test-hip-quick-check-history.mjs and direct reads of the two new untracked scripts. No commit, build, full suite, or original child run was made."
+}

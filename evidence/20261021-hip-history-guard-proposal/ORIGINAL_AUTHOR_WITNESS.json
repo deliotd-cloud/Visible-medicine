@@ -1,0 +1,26 @@
+{
+  "source": "6d7ff5c403bdaaf79a10a221a3f72e397d9b9b42",
+  "tree": "213d2736c9f70c506ab64382398849690e01777e",
+  "parent": "2ed773bed8f27257f729b8cf88f98c4c5223a0c9",
+  "root": "F:/VisibleMedicine/staging/20261021-hip-quick-check-author-epoch",
+  "script": "scripts/test-hip-quick-check-history.mjs",
+  "scriptSha256": "9a4bb88915f40c80ca77b6b40a665813c7aa56adfe5b419d2f5f88c1a048dcd5",
+  "command": "node scripts/test-hip-quick-check-history.mjs",
+  "actualExecSession": 50500,
+  "observedTerminalCode": 0,
+  "observedResult": {
+    "shoulderStructures": 9,
+    "shoulderRefusals": 7,
+    "bodyKeyed": 11,
+    "bodyRefusals": 3,
+    "regionalWrapperEquivalent": true,
+    "bodyPreserved": 9120,
+    "hipHash": "ed556cb5a522f73d25ed5e0b25aa1f45f70138637ab1353f58030453c0d97d80",
+    "abdominalHash": "da4ea5fb3ca3c47c7d3b8a81478e9f30f7a57ffd88a32c03b8996ca77bc623ee",
+    "originalStructureHash": "6d9f371b62f556660bfe908d78262dd0941c62064cfc3419a59753190af9e7df",
+    "clinicalApproval": false
+  },
+  "currentSourceFixed": false,
+  "sourceWorktreeClean": true,
+  "scope": "Main's actual original whole-script run at immutable author epoch, not a replay synthesized from newer application APIs. Dedicated local read-only witness; no clinical/current-runtime/full-suite claim. Compiler dependencies read from verified base through a junction."
+}

@@ -1,17 +1,32 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T23:15:03.305Z",
+  "at": "2026-10-20T23:30:59.204Z",
   "sourceIdentity": {
-    "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-    "namedInputs": 5053,
-    "focusedTests": 56,
-    "runtimeUnchanged": true,
-    "canonicalInstalled": false,
-    "fullSuitePass": false
+    "baseSource": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+    "worktreeDirty": true,
+    "proposalFiles": [
+      {
+        "path": "scripts/test-hip-quick-check-history.mjs",
+        "bytes": 4609,
+        "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
+      },
+      {
+        "path": "scripts/hip-quick-check-history-context.mjs",
+        "bytes": 9024,
+        "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+      },
+      {
+        "path": "scripts/test-hip-history-entry-refusals.mjs",
+        "bytes": 6511,
+        "sha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950"
+      }
+    ],
+    "sourceCommitted": false,
+    "websiteImported": false,
+    "wrapperEndToEndPass": false
   },
-  "parent": "22a6b04a383e1c1e1cf56d9b035d79fbc0362366",
-  "gitParent": "22a6b04a383e1c1e1cf56d9b035d79fbc0362366",
+  "parent": "22bd48d4da2d2f1f8755809f4f47e32f621d7bfd",
+  "gitParent": "22bd48d4da2d2f1f8755809f4f47e32f621d7bfd",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -149,6 +164,11 @@
       "sha256": "84c6b330954575fb36fae87e6318d4379d7ed1e1d1573a686cc7478f8a0f0bda"
     },
     {
+      "path": "atlas-source/scripts/hip-quick-check-history-context.mjs",
+      "bytes": 9024,
+      "sha256": "4ed4716d867f6387f55b28740e9bfc9b72bda83bfc5d24e890f953c008e78ebe"
+    },
+    {
       "path": "atlas-source/scripts/test-body-review-navigation.mjs",
       "bytes": 19296,
       "sha256": "a3bc6f4c55316a2349fd2532e25e12391835d2058a19932f69b496be109a97b5"
@@ -157,6 +177,16 @@
       "path": "atlas-source/scripts/test-clinical-review-revision-observer.mjs",
       "bytes": 8129,
       "sha256": "c10a9e761f46138ad2b2194a1b2db2b9fa97fefca2db28e340ae5f1da43a723a"
+    },
+    {
+      "path": "atlas-source/scripts/test-hip-history-entry-refusals.mjs",
+      "bytes": 6511,
+      "sha256": "bbd826dace934ea5ad27f227242b741623889184518d1fd58f57f1984b762950"
+    },
+    {
+      "path": "atlas-source/scripts/test-hip-quick-check-history.mjs",
+      "bytes": 4609,
+      "sha256": "5f9dc8bfc9983457fd85391d9b767b3d94b8f6fb9b86c7b8d4ed592ec836911e"
     },
     {
       "path": "atlas-source/scripts/test-review-history-races.mjs",
@@ -412,6 +442,36 @@
       "path": "evidence/20261021-ct-delivery-history-repair/SOURCE_INPUTS_AFTER.json",
       "bytes": 868413,
       "sha256": "9901c70f1e6b148c5b6eae4bdccfb2f8a95051a458a75904b749e0f7234120ab"
+    },
+    {
+      "path": "evidence/20261021-hip-history-guard-proposal/HIP_WRAPPER_DEFAULT_GIT.json",
+      "bytes": 627,
+      "sha256": "360dcbdcabe3402a07c66887829861277d03fd82969b9a46e6000b9c0594eafb"
+    },
+    {
+      "path": "evidence/20261021-hip-history-guard-proposal/HIP_WRAPPER_FINAL_GUARDS.json",
+      "bytes": 418,
+      "sha256": "eee48ff03381c905076487402a5c87457da3ee17631474e0b40ba433ec1a9930"
+    },
+    {
+      "path": "evidence/20261021-hip-history-guard-proposal/HIP_WRAPPER_MAIN_GUARDS.json",
+      "bytes": 416,
+      "sha256": "998d1df942cdbb09dd1f927ce8ef2d3ce2c4c5529299c08cb984901308db1aff"
+    },
+    {
+      "path": "evidence/20261021-hip-history-guard-proposal/MAIN_REVIEW.json",
+      "bytes": 3649,
+      "sha256": "a24a3509b5e9ea498e96eb2d3e976b97f67b0357ec55300db28f9f03e7efb067"
+    },
+    {
+      "path": "evidence/20261021-hip-history-guard-proposal/ORIGINAL_AUTHOR_WITNESS.json",
+      "bytes": 1346,
+      "sha256": "e9b8e2b2501affec62af27fb7103cb10ae0dd50b76028fb28603d257469a095b"
+    },
+    {
+      "path": "evidence/20261021-hip-history-guard-proposal/WRAPPER_PROPOSAL.json",
+      "bytes": 3014,
+      "sha256": "de0c3c7c341310ea5d57b2e29d6052f47b76467623f8a9ec826e663c925a0766"
     },
     {
       "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
@@ -1480,16 +1540,14 @@
     }
   ],
   "removed": [],
-  "scope": "Selected source/test repairs and receipts on previously filtered ancestry only. No raw canonical history, model/scans/masks/private modules/reviews/databases/secrets;not full/runnable/private-data backup.",
+  "scope": "Selected uncommitted three-script test proposal and receipts on previously filtered ancestry only. No raw canonical ancestry, scans/models/masks/private modules/reviews/databases/secrets. Not complete/runnable/private-data backup; not an admitted application release.",
   "proof": {
-    "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-    "namedInputs": 5053,
-    "focusedTests": 56,
-    "runtimeUnchanged": true,
-    "canonicalInstalled": false,
-    "fullSuitePass": false,
-    "limits": "Current-admission test seams only; immutable original full tests and previous failure retained. Exact current source/import counts are verified by stock importer/binding, not relaxed. All historical, model, clinical/privacy flags, byte checks, negative and UI assertions preserved. No runtime/approval/publication change."
+    "guardScriptPass": true,
+    "guardRefusals": 20,
+    "actualDefaultGitGuardPass": true,
+    "currentShoulderPrefixByteExact": true,
+    "wrapperEndToEndPass": false,
+    "limits": "Installed dependency contents are not lockfile-byte-attested; registered same-repo path confinement and selected regular files checked.20 guard refusals include synthetic protocol mutations; actual default Git/source checkout check passes. Old original whole test witness is not a pass of this launcher. Do not run the heavy child while the independent full Website suite is live."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

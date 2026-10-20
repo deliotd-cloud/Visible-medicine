@@ -1,10 +1,8 @@
 {
-  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-  "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-  "namedInputs": 5053,
-  "focusedTests": 56,
-  "runtimeUnchanged": true,
-  "canonicalInstalled": false,
-  "fullSuitePass": false,
-  "limits": "Current-admission test seams only; immutable original full tests and previous failure retained. Exact current source/import counts are verified by stock importer/binding, not relaxed. All historical, model, clinical/privacy flags, byte checks, negative and UI assertions preserved. No runtime/approval/publication change."
+  "guardScriptPass": true,
+  "guardRefusals": 20,
+  "actualDefaultGitGuardPass": true,
+  "currentShoulderPrefixByteExact": true,
+  "wrapperEndToEndPass": false,
+  "limits": "Installed dependency contents are not lockfile-byte-attested; registered same-repo path confinement and selected regular files checked.20 guard refusals include synthetic protocol mutations; actual default Git/source checkout check passes. Old original whole test witness is not a pass of this launcher. Do not run the heavy child while the independent full Website suite is live."
 }
