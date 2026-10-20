@@ -1,0 +1,111 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T00:53:05.997Z",
+  "sourceIdentity": {
+    "product": "Website coverage draft fragments ONLY, not an app source composition",
+    "atlas": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "requiredFilteredWebsiteBase": "21da0e82c2d74cf0e1a3d03260f20eeaed7135cb",
+    "pendingReviewRebind": true,
+    "canonicalInstalled": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "pending-website-coverage/docs/anatomy-coverage/independent.json",
+      "bytes": 772439,
+      "sha256": "23457009920df8f0aafdbfcc8abd0df9ae3baded1d98f10d92186a858dcb1fac"
+    },
+    {
+      "path": "pending-website-coverage/docs/anatomy-coverage/index.json",
+      "bytes": 154911,
+      "sha256": "296e0ac69c4c00150020f47ee8c66671aa09dcd535c0ca1ca172592a710c9347"
+    },
+    {
+      "path": "pending-website-coverage/docs/anatomy-coverage/nested.json",
+      "bytes": 789529,
+      "sha256": "2982d1efcd70e46c3556bae2cebff963c3480ee199a37fa2a63f4c9c72e5c740"
+    },
+    {
+      "path": "pending-website-coverage/docs/anatomy-coverage/reference.json",
+      "bytes": 154089,
+      "sha256": "79e0f7bf2e3634a12c1e880dbf6bc6fad578d6a54427bb71b5776260be412197"
+    },
+    {
+      "path": "pending-website-coverage/docs/anatomy-coverage/root.json",
+      "bytes": 1067871,
+      "sha256": "67476bb3993d57e26b65889b2209293fb0afe24d3b82e5142ec5f4ee74cbbf21"
+    },
+    {
+      "path": "pending-website-coverage/lib/anatomy-coverage-view.ts",
+      "bytes": 5290,
+      "sha256": "71cc49d8e4c81d3a07d7ed069df6393da9f42c52396d867c0fb52ee6cffc91a3"
+    },
+    {
+      "path": "pending-website-coverage/README.md",
+      "bytes": 1665,
+      "sha256": "e80423807caad0c2184669f9f1ab1b1de69d8fc86a5ddbcd8539d4e95a288230"
+    },
+    {
+      "path": "pending-website-coverage/scripts/check-anatomy-coverage.mjs",
+      "bytes": 4552,
+      "sha256": "cbb145abdd7582ab670b24499786b2e270247da003e3c1cbdeade40a91aec546"
+    }
+  ],
+  "removed": [],
+  "scope": "Eight pending-website-coverage fragment paths plus three backup metadata files, no app tree or raw ancestry. Seven actual generated/reviewed source fragments and an explicit pending-rebind README. Applying them also requires the existing20UIv2 overrides onto exact QA base, a real stock protected Review rebind/viewer rebuild/verification, source/model/test-contract binding reconciliation and native/type/build/browser gates. Current isolated5metadata/projection and11comparison cases passed, not full application acceptance. No images/models/scans/masks/private records or approvals. Palatal quiz staging excluded. This deliberately cannot be represented as a coherent Website backup or a deployable release.",
+  "proof": {
+    "schema": "vm-current-coverage-review/2",
+    "date": "2026-10-20",
+    "sourceRevision": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
+    "sourceTree": "44ca83bf391164c09f43f4169d25dcacf4b2559d",
+    "producerResult": "All four pinned stock producers ran once to fresh external staging, with exact clean committed and working input verification and unchanged producer identities. Candidate-manifest.json SHA361949383695cacad3e7210aad48353158d54d08615765c52190fee3f4e8c392;168 source inputs. No model payload, patient data, network reference or private decisions read.",
+    "firstFailure": "GENERATION_FIRST_RESULT.json preserves the first exit1: generation passed, the new comparer wrongly required a nonexistent bytes manifest field. Fixed only the new comparer to require the actual exact three-field schema and every full payload hash, reporting observed size honestly. Preserved original comparer/test/wrapper. Did not rerun the generator or change a product/test oracle to hide semantic drift.",
+    "comparison": "semantic-bd5465-20261020T004456131Z.json SHA11b3b25c68a2748f012b6743e2352de23e076f03f8b59628f4a925f9d1a6df78. Complete recursive comparison: root/nested/independent/index semantics byte-value equal after explicitly named provenance removal. Reference reports two leaf changes, both inspected as provenance: evidence.commitReadback.revision and evidence.committedSourceInputs.package.json. Source union has exactly one changed dependency, package.json. Nothing silently normalized away. Reference remains current-metadata-reconciled,0recorded dependency mismatches/changed classifications/missing prior rows.",
+    "productCandidate": "install-candidate contains five freshly generated snapshots plus the exact original checker and projection with only eight identity constants updated. Original semantic/runtime code preserved under inverse proof (line endings normalized only). Imported source identity236d059c and142imported/26metadata-only/168total source closure unchanged. New snapshot JSON identityea12768266af90959989c9b47b6bf9b345c83039bd5a2eeb65b4f5e11bce8e26; current committed package7d514e10242912ae63e9419fa7b02c23b600a42d30d44e77e09ca28bf76ee36b. Every original snapshot/checker/projection also preserved locally.",
+    "tests": {
+      "comparison": "Actual11pure checks pass/0fail/skip/cancel/todo, full returned tool chunk4ca7c9. Includes old nine plus producer schema/hash/path/scope/extra-field refusals; not broad-suite evidence.",
+      "candidate": "Actual5native metadata/projection tests pass/0fail/skip/cancel/todo, full returned chunk190afa copied exactly to MAIN_REFRESH_TEST.log SHA3d88120759476160ed0365ca7efa5b34365bccc2faa30569b8745bebc52f3ae5. Actual checker independently verified all168 committed and working source bytes. Current Review projects counts and held targets; old epoch, forged package/source/import, changed target, missing input, dirty/stale source refuse. Whole original two modules inverse-proved outside reviewed constants.",
+      "limits": "Not an installed QA/canonical app, combined full-suite/types/build/browser acceptance, clinical signoff, full anatomy completion or release. Existing actual full suite22796 remains live/frozen and was not restarted. Original failing current-coverage assertions remain unchanged pending coherent candidate admission."
+    },
+    "sourceCounts": {
+      "rootRepresentations": 1104,
+      "nestedSelections": 108,
+      "independentViews": 9,
+      "independentMemberships": 356,
+      "independentSelections": 267,
+      "dedicatedShoulderSelections": 9,
+      "dedicatedShoulderPartBindings": 11,
+      "referenceFiles": 2234,
+      "referenceDifferences": 441,
+      "heldReferenceDifferences": 57
+    },
+    "bindingGate": "Actual backup composition preflight ccfe0e refused before creating local/remote output: lib/anatomy-coverage-view.ts and docs/anatomy-coverage/index.json are protected Website Review adapter inputs. This is a required normal rebind/rebuild transition, not merely seven independent file replacements. Main read current bind-clinical-review, verify-clinical-review and build-clinical-review-viewer scripts. No guard bypassed, binding restamp or generated-module hand edit. The isolated projection test proves only its pure function, not acceptance by the whole protected Review. Backup as explicitly uninstalled fragments only, never as a coherent runnable Website composition.",
+    "next": "Retain terminal full-suite receipt before source admission. Combine the seven reviewed coverage paths with ALL20 prepared UIv2 targets against actual unchanged QA preimages, then run stock Review bind + viewer build + verification, inspect derived model inventory/delivery and test-contract bindings before applicable tests/types/build/desktop acceptance. Preserve old Review revisions/decisions; do not migrate approvals. No owner-preview refresh or canonical install until the open lecture is safe. Palatal four-Quiz candidate stays a separate future Atlas batch: it requires its own real source commit/pins/Review/export transition, not pretending this bd5 coverage covers a future commit.",
+    "canonicalInstalled": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "goal": "active full scope",
+    "pendingReviewRebind": true,
+    "wholeWebsiteComposition": false,
+    "sourceFragmentPaths": [
+      "scripts/check-anatomy-coverage.mjs",
+      "lib/anatomy-coverage-view.ts",
+      "docs/anatomy-coverage/root.json",
+      "docs/anatomy-coverage/nested.json",
+      "docs/anatomy-coverage/independent.json",
+      "docs/anatomy-coverage/reference.json",
+      "docs/anatomy-coverage/index.json"
+    ],
+    "requiredWebsiteSourceBase": "21da0e82c2d74cf0e1a3d03260f20eeaed7135cb",
+    "reviewSha256": "73718c43e22d68b4084d28f591557dcbed862089ca4ba471545e01ccb446866c",
+    "candidateManifestSha256": "361949383695cacad3e7210aad48353158d54d08615765c52190fee3f4e8c392",
+    "semanticComparisonSha256": "11b3b25c68a2748f012b6743e2352de23e076f03f8b59628f4a925f9d1a6df78",
+    "palatalQuizIncluded": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

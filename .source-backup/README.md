@@ -1,0 +1,3 @@
+# Visible Medicine source-only recovery
+
+Eight pending-website-coverage fragment paths plus three backup metadata files, no app tree or raw ancestry. Seven actual generated/reviewed source fragments and an explicit pending-rebind README. Applying them also requires the existing20UIv2 overrides onto exact QA base, a real stock protected Review rebind/viewer rebuild/verification, source/model/test-contract binding reconciliation and native/type/build/browser gates. Current isolated5metadata/projection and11comparison cases passed, not full application acceptance. No images/models/scans/masks/private records or approvals. Palatal quiz staging excluded. This deliberately cannot be represented as a coherent Website backup or a deployable release.
