@@ -98,11 +98,17 @@ test('59, 509b and f509 witnesses remain historical while current admission uses
  const f509OriginalBytes=read('fixtures/current-atlas-delivery-f5097af8.txt');
  assert.equal(sha(f509OriginalBytes),'a7ce97681413483667399d7d8388231c842082dd87a2eb8648d13751cf30aafa');
 
- const pin=validateCurrentAtlasDelivery(),sourceRoot=currentAtlasDeliveryRoot();
- assert.equal(pin.source,CURRENT_ATLAS_REVISION);
+ const live=validateCurrentAtlasDelivery(),sourceRoot=currentAtlasDeliveryRoot();
+ assert.equal(live.source,CURRENT_ATLAS_REVISION);
+ assert.equal(live.source,'6036a7a59dcc1fd75eee4a23af34ca2a568d86b6');
+ assert.equal(live.sourceTree,'6da62962106cfab9419b09618547a9da5e3aafc6');
+ const priorBytes=read('fixtures/tongue-palate-a247/current-atlas-delivery.json.raw');
+ assert.equal(sha(priorBytes),'e5815a25fbf2c62e6f428dd25652f185cd3d16e2c56741686de12f3f13863939');
+ const pin=JSON.parse(priorBytes);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin}),'Prior delivery must not admit 6036');
  assert.equal(pin.source,'a2475a37201bdd5fdd12f5849fc8ee043412d02f');
  assert.equal(pin.sourceTree,'97957a35788028b319df4f5d60c68a95e71320d7');
- const prefix=admitDelivery(read('current-atlas-delivery.test.mjs').toString(),pin);
+ const prefix=admitDelivery(read('fixtures/tongue-palate-a247/current-atlas-delivery.test.mjs.raw').toString(),pin);
  let fromF509=f509OriginalBytes.toString();
  fromF509=exact(fromF509,f509.source,pin.source);
  fromF509=exact(fromF509,f509.sourceTree,pin.sourceTree);
@@ -115,11 +121,13 @@ test('59, 509b and f509 witnesses remain historical while current admission uses
  for(const witness of [portalPin,f509])assert.equal(git('rev-parse',witness.source+'^{tree}'),witness.sourceTree);
  execFileSync('git',['merge-base','--is-ancestor',portalPin.source,f509.source],{cwd:history,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
  execFileSync('git',['merge-base','--is-ancestor',f509.source,pin.source],{cwd:history,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
+ execFileSync('git',['merge-base','--is-ancestor',pin.source,live.source],{cwd:history,windowsHide:true,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
 });
 
 test('forged old assertions, appendix, portal and stale delivery pins are refused',()=>{
- const pin=validateCurrentAtlasDelivery();
- const delivery=read('current-atlas-delivery.test.mjs').toString();
+ const live=validateCurrentAtlasDelivery();
+ const pin=JSON.parse(read('fixtures/tongue-palate-a247/current-atlas-delivery.json.raw'));
+ const delivery=read('fixtures/tongue-palate-a247/current-atlas-delivery.test.mjs.raw').toString();
  const portalPin=JSON.parse(read('fixtures/current-atlas-delivery-before-check-mri.json.raw'));
  const portal=read('clinical-review-portal-venous-current-admission.test.mjs').toString();
  const forgedDelivery=exact(delivery,'assert.equal(sha(bytes),row.sha256,path);','assert(true);');
@@ -130,6 +138,6 @@ test('forged old assertions, appendix, portal and stale delivery pins are refuse
  assert.throws(()=>admitDelivery(forgedAaa8,pin));
  const forgedPortal=exact(portal,"assert.notEqual(pin.source,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');",'assert(true);');
  assert.throws(()=>admitPortalCurrent(forgedPortal,portalPin));
- assert.throws(()=>validateCurrentAtlasDelivery({pin:{...pin,reviewIntegration:'0'.repeat(64)}}));
- assert.throws(()=>validateCurrentAtlasDelivery({pin:{...pin,documents:{...pin.documents,'atlas-review/manifest.json':'0'.repeat(64)}}}));
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:{...live,reviewIntegration:'0'.repeat(64)}}));
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:{...live,documents:{...live.documents,'atlas-review/manifest.json':'0'.repeat(64)}}}));
 });

@@ -1,0 +1,548 @@
+{
+  "parentCommit": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
+  "sourceVersion": "4.0",
+  "coordinateSystem": {
+    "source": "mm, X left / Y posterior / Z superior",
+    "scene": "X left / Y superior / Z anterior",
+    "sourceCenter": [
+      0,
+      -50,
+      800
+    ],
+    "unitsPerMillimetre": 0.01,
+    "sourceToSceneColumnMajor": [
+      0.01,
+      0,
+      0,
+      0,
+      0,
+      6.123233995736766e-19,
+      -0.01,
+      0,
+      0,
+      0.01,
+      6.123233995736766e-19,
+      0,
+      0,
+      -8,
+      -0.5000000000000006,
+      1
+    ]
+  },
+  "bundles": [
+    {
+      "id": "head-neck-muscles",
+      "url": "/models/bodyparts3d/full-body/head-neck-muscles.glb",
+      "bytes": 8566352,
+      "sha256": "ad355b54f865461f5433bd1062bb206bde1967f6d4dc003840e7788800a69adb",
+      "structures": 72
+    }
+  ],
+  "previousAllLessonsAndRecipesSha256": "09c098e05a9bb4e28bbbf8e41d52dc095842d4f78ca15b48b77e0f07ea78e8f4",
+  "entries": [
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+        "fmaId": "FMA46702",
+        "name": "Left genioglossus",
+        "sourceName": "left genioglossus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46702",
+        "bounds": {
+          "min": [
+            -0.015063099563121796,
+            6.279699802398682,
+            0.6723600029945374
+          ],
+          "max": [
+            0.07271590083837509,
+            6.561800479888916,
+            1.1454600095748901
+          ]
+        },
+        "center": [
+          0.028826400637626648,
+          6.420750141143799,
+          0.9089100062847137
+        ],
+        "anchor": [
+          0.06383360177278519,
+          6.423199653625488,
+          0.9144099354743958
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2738",
+            "sha256": "01720dc4715ab927b4878ab787f6b9f99e70466417a3aa7525f35dae3d44abb2"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "genioglossus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left genioglossus on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+        "fmaId": "FMA46698",
+        "name": "Right genioglossus",
+        "sourceName": "right genioglossus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46698",
+        "bounds": {
+          "min": [
+            -0.08583609759807587,
+            6.279499530792236,
+            0.6724099516868591
+          ],
+          "max": [
+            -0.006507030222564936,
+            6.561800479888916,
+            1.1454100608825684
+          ]
+        },
+        "center": [
+          -0.0461715639103204,
+          6.420650005340576,
+          0.9089100062847137
+        ],
+        "anchor": [
+          -0.07716900110244751,
+          6.426300048828125,
+          0.9103500247001648
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2750",
+            "sha256": "68a3eb51f3fc48813b643b4b9d449730c55842291091cc573f3c0e0a3eb9bd07"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "genioglossus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right genioglossus on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+        "fmaId": "FMA46704",
+        "name": "Left hyoglossus",
+        "sourceName": "left hyoglossus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46704",
+        "bounds": {
+          "min": [
+            0.03788219764828682,
+            6.253499984741211,
+            0.7183899879455566
+          ],
+          "max": [
+            0.11698099970817566,
+            6.490899562835693,
+            1.0141299962997437
+          ]
+        },
+        "center": [
+          0.07743159867823124,
+          6.372199773788452,
+          0.8662599921226501
+        ],
+        "anchor": [
+          0.07896599918603897,
+          6.368800163269043,
+          0.8713600039482117
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2739",
+            "sha256": "3bdb38f42551b391c855b23593bd14ca02d7f7aa54f874fff52396db07dee2c0"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "hyoglossus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left hyoglossus on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+        "fmaId": "FMA46703",
+        "name": "Right hyoglossus",
+        "sourceName": "right hyoglossus",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46703",
+        "bounds": {
+          "min": [
+            -0.12969200313091278,
+            6.253599643707275,
+            0.7183200120925903
+          ],
+          "max": [
+            -0.05097139999270439,
+            6.490799427032471,
+            1.0141900777816772
+          ]
+        },
+        "center": [
+          -0.09033170156180859,
+          6.372199535369873,
+          0.8662550449371338
+        ],
+        "anchor": [
+          -0.09275040030479431,
+          6.367800235748291,
+          0.8697599768638611
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2751",
+            "sha256": "40ddd17c29df45a42b11f75fc6a89e1d85c10ca7850f9094c2b264da9385b998"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "hyoglossus",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right hyoglossus on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+        "fmaId": "FMA46729",
+        "name": "Left levator veli palatini",
+        "sourceName": "left levator veli palatini",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46729",
+        "bounds": {
+          "min": [
+            0.013861000537872314,
+            6.636800765991211,
+            0.3818049728870392
+          ],
+          "max": [
+            0.31355300545692444,
+            6.969799995422363,
+            0.6010600328445435
+          ]
+        },
+        "center": [
+          0.16370700299739838,
+          6.803300380706787,
+          0.4914325028657913
+        ],
+        "anchor": [
+          0.1433500051498413,
+          6.791200160980225,
+          0.5465400218963623
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2741",
+            "sha256": "a7d1e90a0757aa53530521cd25ee855da0cc1e774dbe2c6bcaf372ab9e654259"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left levator veli palatini on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+        "fmaId": "FMA46728",
+        "name": "Right levator veli palatini",
+        "sourceName": "right levator veli palatini",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46728",
+        "bounds": {
+          "min": [
+            -0.32665297389030457,
+            6.636899471282959,
+            0.38179701566696167
+          ],
+          "max": [
+            -0.025623299181461334,
+            6.969900131225586,
+            0.6010000109672546
+          ]
+        },
+        "center": [
+          -0.17613813653588295,
+          6.8033998012542725,
+          0.49139851331710815
+        ],
+        "anchor": [
+          -0.15637600421905518,
+          6.790500640869141,
+          0.5463899970054626
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2753",
+            "sha256": "84b856010832db82451e940a172f175d3a753c08e7284663bd40de6ef427fbcc"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "levator",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right levator veli palatini on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+        "fmaId": "FMA46732",
+        "name": "Left tensor veli palatini",
+        "sourceName": "left tensor veli palatini",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "left",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46732",
+        "bounds": {
+          "min": [
+            0.0076069701462984085,
+            6.610000133514404,
+            0.5009999871253967
+          ],
+          "max": [
+            0.16656900942325592,
+            7.03339958190918,
+            0.7049199938774109
+          ]
+        },
+        "center": [
+          0.08708798978477716,
+          6.821699857711792,
+          0.6029599905014038
+        ],
+        "anchor": [
+          0.0961017981171608,
+          6.822700023651123,
+          0.5939499735832214
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2748",
+            "sha256": "d6bca501cda0201b5221acbee58f2a58eff4784886825f72a0c40b1e1f7cbf97"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "tensor",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find left tensor veli palatini on the model."
+      }
+    },
+    {
+      "identity": {
+        "id": "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini",
+        "fmaId": "FMA46731",
+        "name": "Right tensor veli palatini",
+        "sourceName": "right tensor veli palatini",
+        "system": "muscles",
+        "category": "muscle",
+        "laterality": "right",
+        "region": "head-neck",
+        "regions": [
+          "head-neck"
+        ],
+        "bundle": "head-neck-muscles",
+        "nodeName": "FMA46731",
+        "bounds": {
+          "min": [
+            -0.17973800003528595,
+            6.609899997711182,
+            0.5009999871253967
+          ],
+          "max": [
+            -0.020690500736236572,
+            7.033499717712402,
+            0.7049500346183777
+          ]
+        },
+        "center": [
+          -0.10021425038576126,
+          6.821699857711792,
+          0.6029750108718872
+        ],
+        "anchor": [
+          -0.1098719984292984,
+          6.824200630187988,
+          0.5948200225830078
+        ],
+        "sourceTree": "isa",
+        "sources": [
+          {
+            "file": "FJ2760",
+            "sha256": "ceddb3e852a795354bf31e6151dd9d2feaacb9f4612e3f0376d980dc063fc33a"
+          }
+        ],
+        "coverageNote": null,
+        "provenance": {
+          "method": "licensed-source-mesh",
+          "license": "CC-BY-4.0",
+          "sourceVersion": "4.0",
+          "recovered": false
+        },
+        "validation": {
+          "status": "unvalidated",
+          "anatomicalReview": false
+        }
+      },
+      "group": "tensor",
+      "previous": {
+        "readiness": "generated-identification",
+        "title": "Identification practice",
+        "body": "Find right tensor veli palatini on the model."
+      }
+    }
+  ]
+}

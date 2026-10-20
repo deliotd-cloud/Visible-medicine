@@ -66,7 +66,7 @@
     },
     {
       "path": "app/body-content.ts",
-      "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
+      "sha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6"
     },
     {
       "path": "app/body-education-link.ts",
@@ -2434,7 +2434,7 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sha256": "fffb91e5ae98f38c28320d2f9d0a058f5b9e43ff14bfbb3e98f42b27871095d7"
+      "sha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -2971,6 +2971,14 @@
     {
       "path": "content/toe-bone-ultrasound.ts",
       "sha256": "e03d516c465c51f93b3016621f58d4f87eaa0611d7f022e28e9f5de37ceeff4c"
+    },
+    {
+      "path": "content/tongue-palate-quiz-pins.json",
+      "sha256": "150fae10b5b29dd10659040a820de8ff0a9eeccd7012406b2d0ed0bd9200ab32"
+    },
+    {
+      "path": "content/tongue-palate-quiz.ts",
+      "sha256": "41a5ceba9749ddfbfdfc471776cb863afaf073cfa5da321c582cc8fee3262da0"
     },
     {
       "path": "content/tract-plantar-imaging-pins.json",
@@ -5513,6 +5521,10 @@
       "sha256": "4248c9b9eb1f8151bddbddfa7821e54bad055d7cf114a6ec13e53fbc99ce22b1"
     },
     {
+      "path": "lib/tongue-palate-quiz.ts",
+      "sha256": "e997a3d091f36f16f3a7c61967dffc966333adcec942034d266c5047e08d5833"
+    },
+    {
       "path": "lib/tour-camera.ts",
       "sha256": "616b2e1ba047ec760129532922922a166baa02fcb53a253582d91a5982587467"
     },
@@ -5682,7 +5694,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "ce479161e3bab272c0694a111184a460c111a6940231e24bc6799841357d4c49"
+      "sha256": "0ebcc8dab3d453a869cf4f9c37515c1c190829c8c9a127e1a9e83aba41eeb091"
     },
     {
       "path": "public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -5905,7 +5917,7 @@
       "sha256": "7183c338ee9f0f2820097551f9690f9f5ea3e3ce86da86ffd89430c1b9df12a6"
     }
   ],
-  "sha256": "017c9e3cc3c030cc4f5829dc114eeab1adc9de5aa0233acf38939966a309ea8c",
-  "sourceRendererSha256": "dab5eadb381b190323e7904c3158067407c75da790b80bcd9e2cf92c30bd5fb8",
-  "websiteIntegrationSha256": "f7f084f5a089cf6fc7a7b772b64dd530bf3eaf47078ba46ab7545d36367172e5"
+  "sha256": "ee81a93e56b905a3aae8888c26ca3d293657fc09fcd6b4694a3ff87762542f0b",
+  "sourceRendererSha256": "c86541570a66e2fe94400fe81c34b28ac95cb5cc4f9e38c8e14b8c4092f1ae12",
+  "websiteIntegrationSha256": "d22214ca2ec44fdcbd86738b7e5486cd31f75bda2c16ca9a13585f27482d33c9"
 }

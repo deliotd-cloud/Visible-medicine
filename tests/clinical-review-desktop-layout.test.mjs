@@ -12,9 +12,10 @@ const marker='/* Keep the selected model and worksheet responsive to the paper\'
 const oldCssSha='bf42eda18eed6d388e6f3204cab87df01270628f32e8e1e0cc7896e651a73ee7';
 const old=JSON.parse(read('tests/fixtures/current-atlas-delivery-before-desktop-layout.json'));
 
-test('pre-layout delivery stays immutable; learner/model delivery is unchanged',()=>{
+test('pre-layout delivery stays immutable within the frozen a247 delivery epoch',()=>{
  assert.equal(sha(read('tests/fixtures/current-atlas-delivery-before-desktop-layout.json')),'1dc2a730c32e6ae8181ec5c1de99dd2b82522b5271273c09badfa69e39e679aa');
- const current=validateCurrentAtlasDelivery();
+ const current=JSON.parse(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw'));
+ assert.equal(sha(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw')),'e5815a25fbf2c62e6f428dd25652f185cd3d16e2c56741686de12f3f13863939');
  for(const key of ['schema','source','sourceTree','reviewSourceFiles','viewerFiles','viewerPackages'])assert.equal(current[key],old[key],key);
  const changed=['atlas-review/manifest.json','atlas-review/integration-inputs.json','public/atlas-review-viewer/manifest.json'];
  for(const [path,digest]of Object.entries(old.documents))if(!changed.includes(path))assert.equal(current.documents[path],digest,path);
@@ -22,7 +23,8 @@ test('pre-layout delivery stays immutable; learner/model delivery is unchanged',
 });
 
 test('exact inverse chain preserves the one-input desktop layout transition',()=>{
- const binding=JSON.parse(read('atlas-review/integration-inputs.json'));
+ const binding=JSON.parse(read('tests/fixtures/tongue-palate-a247/integration-inputs.json.raw'));
+ assert.equal(sha(read('tests/fixtures/tongue-palate-a247/integration-inputs.json.raw')),'fbfc46e133abdba14046174bc709770c3a0c938c85b5c00b6dd4126c6cd51df7');
  assert.equal(binding.inputs.length,1682);
  // Rewind only the exact later authored-link host patch before the CSS-era proof.
  const guided=binding.inputs.filter(row=>row.path==='components/HeadAtlasGuidedModel.tsx');
@@ -65,4 +67,44 @@ test('real source wrappers and preview retain worksheet context, minimum canvas 
  const css=read('atlas-review/app/review/review-model-preview.css').toString();
  assert(css.includes('clamp(420px, 65dvh, 760px)')||css.includes('clamp(420px,65dvh,760px)'));
  assert(css.includes('focus-visible'));
+});
+
+test('6036 teaching upgrade keeps actual layout, worksheet and navigation inputs unchanged',()=>{
+ const current=validateCurrentAtlasDelivery();
+ assert.equal(current.source,'6036a7a59dcc1fd75eee4a23af34ca2a568d86b6');
+ assert.equal(current.sourceTree,'6da62962106cfab9419b09618547a9da5e3aafc6');
+ assert.equal(current.reviewSourceFiles,1548);
+ const before=JSON.parse(read('tests/fixtures/tongue-palate-a247/integration-inputs.json.raw'));
+ const binding=JSON.parse(read('atlas-review/integration-inputs.json'));
+ assert.equal(binding.inputs.length,1685);
+ const oldRows=new Map(before.inputs.map(row=>[row.path,row]));
+ const changed=binding.inputs.filter(row=>oldRows.get(row.path)?.sha256!==row.sha256);
+ assert.deepEqual(changed.map(row=>row.path).sort(),[
+  'atlas-review/app/body-content.ts','atlas-review/content/body-review-display-pins.json',
+  'atlas-review/content/regional-teaching/head-neck.json','atlas-review/content/tongue-palate-quiz-pins.json',
+  'atlas-review/content/tongue-palate-quiz.ts','atlas-review/lib/tongue-palate-quiz.ts',
+  'atlas-review/LICENSES/THIRD_PARTY_NOTICES.md','scripts/import-clinical-review.mjs',
+ ].sort());
+ assert.equal(changed.filter(row=>!oldRows.has(row.path)).length,3);
+ assert.equal(before.inputs.length-changed.filter(row=>oldRows.has(row.path)).length,1677);
+ assert(before.inputs.every(row=>binding.inputs.some(now=>now.path===row.path)));
+ for(const row of binding.inputs)assert.equal(row.sha256,sha(read(row.path)),row.path);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:JSON.parse(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw'))}));
+});
+
+test('all four original layout assertions reconstruct exactly across the declared epoch boundary',()=>{
+ const raw=read('tests/fixtures/tongue-palate-a247/clinical-review-desktop-layout.test.mjs.raw');
+ assert.equal(sha(raw),'2c82f5fe68a43010f4bbe28281e668a9ed213b333f1e39746c3e95d0976377a5');
+ const source=read('tests/clinical-review-desktop-layout.test.mjs').toString();
+ const marker="\ntest('6036 teaching upgrade keeps actual layout, worksheet and navigation inputs unchanged'";
+ assert.equal(source.split(marker).length,2);
+ let original=source.slice(0,source.indexOf(marker));
+ const inverse=(from,to)=>{assert.equal(original.split(from).length,2);original=original.replace(from,to);};
+ inverse("test('pre-layout delivery stays immutable within the frozen a247 delivery epoch'",
+  "test('pre-layout delivery stays immutable; learner/model delivery is unchanged'");
+ inverse(" const current=JSON.parse(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw'));\n assert.equal(sha(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw')),'e5815a25fbf2c62e6f428dd25652f185cd3d16e2c56741686de12f3f13863939');\n",
+  ' const current=validateCurrentAtlasDelivery();\n');
+ inverse(" const binding=JSON.parse(read('tests/fixtures/tongue-palate-a247/integration-inputs.json.raw'));\n assert.equal(sha(read('tests/fixtures/tongue-palate-a247/integration-inputs.json.raw')),'fbfc46e133abdba14046174bc709770c3a0c938c85b5c00b6dd4126c6cd51df7');\n",
+  " const binding=JSON.parse(read('atlas-review/integration-inputs.json'));\n");
+ assert.equal(original,raw.toString(),'Original CSS, context, controls, inverse and refusal assertions retained');
 });

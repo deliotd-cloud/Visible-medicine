@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
-  "sha256": "f7f084f5a089cf6fc7a7b772b64dd530bf3eaf47078ba46ab7545d36367172e5",
+  "sourceCommit": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+  "sha256": "d22214ca2ec44fdcbd86738b7e5486cd31f75bda2c16ca9a13585f27482d33c9",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
+      "sha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -952,7 +952,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "92b3debfbd966e4d49d7fe899763032baa4a87a373fbc8c5590f61f94efb9f4a"
+      "sha256": "5f8997053fc497f6f6284fa56bfe6270ef802963534ee652b5923f11b4c66f03"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2692,7 +2692,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/head-neck.json",
-      "sha256": "fffb91e5ae98f38c28320d2f9d0a058f5b9e43ff14bfbb3e98f42b27871095d7"
+      "sha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b"
     },
     {
       "path": "atlas-review/content/regional-teaching/leg.json",
@@ -3225,6 +3225,14 @@
     {
       "path": "atlas-review/content/toe-bone-ultrasound.ts",
       "sha256": "e03d516c465c51f93b3016621f58d4f87eaa0611d7f022e28e9f5de37ceeff4c"
+    },
+    {
+      "path": "atlas-review/content/tongue-palate-quiz-pins.json",
+      "sha256": "150fae10b5b29dd10659040a820de8ff0a9eeccd7012406b2d0ed0bd9200ab32"
+    },
+    {
+      "path": "atlas-review/content/tongue-palate-quiz.ts",
+      "sha256": "41a5ceba9749ddfbfdfc471776cb863afaf073cfa5da321c582cc8fee3262da0"
     },
     {
       "path": "atlas-review/content/tract-plantar-imaging-pins.json",
@@ -5919,6 +5927,10 @@
       "sha256": "4248c9b9eb1f8151bddbddfa7821e54bad055d7cf114a6ec13e53fbc99ce22b1"
     },
     {
+      "path": "atlas-review/lib/tongue-palate-quiz.ts",
+      "sha256": "e997a3d091f36f16f3a7c61967dffc966333adcec942034d266c5047e08d5833"
+    },
+    {
       "path": "atlas-review/lib/tour-camera.ts",
       "sha256": "616b2e1ba047ec760129532922922a166baa02fcb53a253582d91a5982587467"
     },
@@ -6084,7 +6096,7 @@
     },
     {
       "path": "atlas-review/LICENSES/THIRD_PARTY_NOTICES.md",
-      "sha256": "e18835acc953f9d80705e42db7bb907415ea64050f266b2d930eed179e51c3d4"
+      "sha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa"
     },
     {
       "path": "atlas-review/public/models/bodyparts3d-v3/abdominal-wall/catalog.json",
@@ -6724,7 +6736,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "ec1e41a7624cf50f3169642c15d02b547e0bc7e66bfcf58e1207f997d12858cc"
+      "sha256": "02d943bee72493e39cb56ecff1da196f5289316a860e757fd3ea2ee5a4150056"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

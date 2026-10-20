@@ -29,7 +29,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
+    "sha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6"
   },
   {
     "path": "app/body-explorer.css",
@@ -241,11 +241,11 @@
   },
   {
     "path": "content/abdominal-branch-imaging-pins.json",
-    "sha256": "735ff50192908a217378920c0f2875b83611ab2d579e41d9a75ea2b6fab370e1"
+    "sha256": "5daaecd50fae68d64ef88d39237b6700b9f2bac3fa84f1a4792cbc05b3228d61"
   },
   {
     "path": "content/abdominal-branch-imaging.ts",
-    "sha256": "ec3c59407eb763814afa4a9bd749ea801a39931d0dc884fbe294a165fc083d67"
+    "sha256": "5976ad5d71b7aceedb81e4bff184ac40486c051cd0d69efb128d81c3124b6bff"
   },
   {
     "path": "content/abdominal-connective-imaging-pins.json",
@@ -529,11 +529,11 @@
   },
   {
     "path": "content/coronary-arterial-us-pins.json",
-    "sha256": "8fe899c4cc342ee61afa2b086d2920b4eb46cc62bb52ae3583ce9f9e35e74435"
+    "sha256": "9277caac4d2b97c75fced2f393b481f0c84800897a9faa9b28bd9c12e8854a18"
   },
   {
     "path": "content/coronary-arterial-us.ts",
-    "sha256": "4ba07709b49b9c72f5d9e42f12495bc2a8439cc3505a7a5132018ca0fa290307"
+    "sha256": "64598a6dcb26aa59123b20539911faa9e3eabebb2015ad7198e105d341865efb"
   },
   {
     "path": "content/coronary-arterial-xray.ts",
@@ -1821,7 +1821,7 @@
   },
   {
     "path": "content/regional-teaching/head-neck.json",
-    "sha256": "fffb91e5ae98f38c28320d2f9d0a058f5b9e43ff14bfbb3e98f42b27871095d7"
+    "sha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b"
   },
   {
     "path": "content/regional-teaching/leg.json",
@@ -2324,6 +2324,14 @@
     "sha256": "e03d516c465c51f93b3016621f58d4f87eaa0611d7f022e28e9f5de37ceeff4c"
   },
   {
+    "path": "content/tongue-palate-quiz-pins.json",
+    "sha256": "150fae10b5b29dd10659040a820de8ff0a9eeccd7012406b2d0ed0bd9200ab32"
+  },
+  {
+    "path": "content/tongue-palate-quiz.ts",
+    "sha256": "41a5ceba9749ddfbfdfc471776cb863afaf073cfa5da321c582cc8fee3262da0"
+  },
+  {
     "path": "content/tract-plantar-imaging-pins.json",
     "sha256": "9a9ebc2bcba1c77914492012642ec3046f365e7a407631b1ddb4ed4e7aa5f68b"
   },
@@ -2453,7 +2461,7 @@
   },
   {
     "path": "lib/abdominal-branch-imaging.ts",
-    "sha256": "c93f1b7ea40b7d2646b51d84632b3388b32b957351370ea78b948808a99631ae"
+    "sha256": "3d4c1a7604c3277cdc31b1db77adbcd15b55345848e3345b7f322a1be5eadcf3"
   },
   {
     "path": "lib/abdominal-connective-imaging.ts",
@@ -2769,7 +2777,7 @@
   },
   {
     "path": "lib/coronary-arterial-us.ts",
-    "sha256": "6ca30f92e3085c431325c681b2bcd17ab867da6e3dd8a935acb38470332bfe59"
+    "sha256": "fa2eae6fdab9639f5d971c146bae925342bd1caf4aca19d42076eb01cef4ed0b"
   },
   {
     "path": "lib/coronary-arterial-xray.ts",
@@ -2893,7 +2901,7 @@
   },
   {
     "path": "lib/didanix-atlas-adapter.ts",
-    "sha256": "54d3483448a4cebce88a15eefd9ad43782e9d4cc0fb2d41b971d2278d614c382"
+    "sha256": "a3035a986d57d6d261d61f9f2a4c28c1ae5b74869e016a97412bcf0ab6947b11"
   },
   {
     "path": "lib/dissection-workbench.ts",
@@ -3285,7 +3293,7 @@
   },
   {
     "path": "lib/imaging-sync.ts",
-    "sha256": "337351363197184239a62ff840bc9f6f1f260ce0d9fc61fa9adddf433f7b3331"
+    "sha256": "42696bac9b39e5761bd6e654996d6d6245bd51782b8387a8f946e9f42882b147"
   },
   {
     "path": "lib/inferior-epigastric-vessels.ts",
@@ -4202,6 +4210,10 @@
   {
     "path": "lib/toe-bone-ultrasound.ts",
     "sha256": "4248c9b9eb1f8151bddbddfa7821e54bad055d7cf114a6ec13e53fbc99ce22b1"
+  },
+  {
+    "path": "lib/tongue-palate-quiz.ts",
+    "sha256": "e997a3d091f36f16f3a7c61967dffc966333adcec942034d266c5047e08d5833"
   },
   {
     "path": "lib/tour-camera.ts",
