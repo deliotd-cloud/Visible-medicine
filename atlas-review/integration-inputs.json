@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
-  "sha256": "cc059623f79798b86764cebfa4d15ee8f2cce70c5bd31a77263092670e706ab0",
+  "sourceCommit": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+  "sha256": "4d6ea55ce4d915c724b645e04e75d422035c432a43a10a2313b0f3e9d01286ca",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -928,7 +928,7 @@
     },
     {
       "path": "atlas-review/content/arterial-evidence-limits.ts",
-      "sha256": "2298e936bd0110766118bc304909b77f4ad6ac22448cc5d3e2e387183bce8981"
+      "sha256": "b746ada70e8f96906cb30289cd2649530f380f942f69b34fbf5e370282c21c24"
     },
     {
       "path": "atlas-review/content/axillary-branch-xray.ts",
@@ -952,7 +952,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "5f8997053fc497f6f6284fa56bfe6270ef802963534ee652b5923f11b4c66f03"
+      "sha256": "dd926d72567359de88bf526d36a611eb4e8dcd2ef73f5d662760132cd4e5c607"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2692,7 +2692,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/head-neck.json",
-      "sha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b"
+      "sha256": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3"
     },
     {
       "path": "atlas-review/content/regional-teaching/leg.json",
@@ -6488,11 +6488,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "5247188c6f3cb601f424cd65625f59598f72df10e2e588a93d51500ae54f1d83"
+      "sha256": "05584476a05e96ed8c3ba93fabb3d93bb250d4d46b394ca487172b6a1d7a510f"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "6fbdd52cab62b5f28870d95eca988d03e16c7db735ccf2967e461b5179808c0c"
+      "sha256": "0b1e9712015f0935e8c12e031f747468c29c8a62c70c5d443bc5875bcaf71382"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6776,7 +6776,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "02d943bee72493e39cb56ecff1da196f5289316a860e757fd3ea2ee5a4150056"
+      "sha256": "0a0adace339dd6d80f6381e63a264bbb94baffd15455245fe1a9a2e0f1a34ec8"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

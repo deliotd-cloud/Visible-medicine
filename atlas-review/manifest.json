@@ -1,5 +1,5 @@
 {
-  "revision": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+  "revision": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
   "files": [
     {
       "path": "app/review/overview/page.tsx",
@@ -728,8 +728,8 @@
     },
     {
       "path": "content/arterial-evidence-limits.ts",
-      "sourceSha256": "2298e936bd0110766118bc304909b77f4ad6ac22448cc5d3e2e387183bce8981",
-      "importedSha256": "2298e936bd0110766118bc304909b77f4ad6ac22448cc5d3e2e387183bce8981"
+      "sourceSha256": "b746ada70e8f96906cb30289cd2649530f380f942f69b34fbf5e370282c21c24",
+      "importedSha256": "b746ada70e8f96906cb30289cd2649530f380f942f69b34fbf5e370282c21c24"
     },
     {
       "path": "lib/dorsal-hand-ultrasound.ts",
@@ -5703,8 +5703,8 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "sourceSha256": "03591c298af0a736c2c1b66dc10507806d36d9f88993eb285eb1a53b3a827a24",
-      "importedSha256": "c7af94b3e867aa1b57087088549f9046ef126cc15409d3d4d9a0fe9659440228"
+      "sourceSha256": "b8e6d985cf4bd793135cbba2b188ef004c0a50759dcc4ee0e0557b1ddad67029",
+      "importedSha256": "191995f1f55843c4fc8f0996939da2313d76dd5dd2bf7526ff93f0d6753323fc"
     },
     {
       "path": "lib/eye-layer-guide.ts",
@@ -6089,7 +6089,7 @@
     {
       "path": "content/review-revisions.json",
       "sourceSha256": "aceb082d0747fa97f38bb4153386ed4284347d1df2c911f8b36b6cf928cb9fba",
-      "importedSha256": "b9643488b677f98edaba84f47eb88d9b8279b9932812d2ebf7b70e3bb703d39f"
+      "importedSha256": "25b9e20fe175ab4b75d8482929bb93e62725c4537c19a1f195968cf94f3bc99e"
     },
     {
       "path": "lib/review-entry-track.ts",
@@ -6133,8 +6133,8 @@
     },
     {
       "path": "content/body-review-display-pins.json",
-      "sourceSha256": "5f8997053fc497f6f6284fa56bfe6270ef802963534ee652b5923f11b4c66f03",
-      "importedSha256": "5f8997053fc497f6f6284fa56bfe6270ef802963534ee652b5923f11b4c66f03"
+      "sourceSha256": "dd926d72567359de88bf526d36a611eb4e8dcd2ef73f5d662760132cd4e5c607",
+      "importedSha256": "dd926d72567359de88bf526d36a611eb4e8dcd2ef73f5d662760132cd4e5c607"
     },
     {
       "path": "lib/body-review-display-evidence.ts",
@@ -6383,8 +6383,8 @@
     },
     {
       "path": "content/regional-teaching/head-neck.json",
-      "sourceSha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b",
-      "importedSha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b"
+      "sourceSha256": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3",
+      "importedSha256": "8b85f64cfa63fe7e15ccf317c9d4efb544430c0175b8d329608a23d02665f3d3"
     },
     {
       "path": "content/regional-teaching/leg.json",
@@ -7758,5 +7758,5 @@
     "three-mesh-bvh",
     "three-stdlib"
   ],
-  "websiteIntegrationSha256": "cc059623f79798b86764cebfa4d15ee8f2cce70c5bd31a77263092670e706ab0"
+  "websiteIntegrationSha256": "4d6ea55ce4d915c724b645e04e75d422035c432a43a10a2313b0f3e9d01286ca"
 }

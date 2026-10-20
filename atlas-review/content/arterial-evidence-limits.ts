@@ -12,14 +12,15 @@ export const arterialEvidenceLimits = {
     note: 'Educational draft only; readiness and revision-bound radiologist sign-off remain pending. Atlas, case and lecture access remain independent.',
   },
   inferiorThyroidMri: {
-    title: 'Inferior thyroid artery: MRA is a distinct examination',
-    body: 'A 2015 case report described an aneurysmal inferior thyroid artery identified by neck MR angiography. Disease-related conspicuity does not establish normal-artery visibility on routine structural MRI.',
+    title: 'Inferior thyroid artery: distinguish MRA cases from routine MRI',
+    body: 'Two case reports describe neck MR angiography identifying an abnormal inferior thyroid artery: a right-sided course through thyroid tissue in one report and left-sided aneurysms in the other. These selected cases do not establish routine visibility of a normal artery on structural neck MRI.',
     bullets: [
-      'Learning prompt: which acquired sequence depicts the vessel, and can its origin and side be traced independently of this label?',
-      'Do not transfer the MRA case finding to routine structural MRI or infer a lesion from this static surface.',
-      'Needed: normal-vessel identification evidence for the intended MRI protocol. This source surface supplies no acquired scan, measured flow, patient registration or validated procedural corridor.',
+      'On an acquired neck MRA, check the actual acquisition and trace vessel identity, side and parent independently of the Atlas label. Neither report establishes normal-vessel detection rates or visibility across routine structural MRI sequences.',
+      'The right-sided variant and left-sided aneurysmal disease belong to separate published cases, not this generic model or the owner’s scans. Colour, calibre and position of this reference surface do not establish either finding.',
+      'Learning check: do the reports prove that a normal inferior thyroid artery is visible on every neck MRI? No. They describe individual MRA examinations, without a normal-vessel detection study or a registered MRI-to-Atlas comparison.',
+      'This source surface supplies no acquired scan, measured flow, patient registration, verified recurrent laryngeal nerve relationship or validated procedural corridor. Normal-vessel identification evidence remains needed for the intended MRI protocol.',
     ],
-    citations: ['https://www.ajemjournal.com/article/S0735-67571500051-0/fulltext'],
+    citations: ['https://doi.org/10.7727/wimj.2015.288', 'https://pubmed.ncbi.nlm.nih.gov/25770593/'],
     note: 'Educational draft only; readiness and revision-bound radiologist sign-off remain pending. Atlas, case and lecture access remain independent.',
   },
 } as const;

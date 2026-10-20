@@ -46,8 +46,8 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 });
 
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
- assert.equal(CURRENT_ATLAS_REVISION,'6036a7a59dcc1fd75eee4a23af34ca2a568d86b6');
- assert.equal(pin.sourceTree,'6da62962106cfab9419b09618547a9da5e3aafc6');
+ assert.equal(CURRENT_ATLAS_REVISION,'87ed7e343260c7df48a40d53503f25bbfd34cfa5');
+ assert.equal(pin.sourceTree,'bfcfa898ace1d25083f21b681274c5bc816564d7');
  assert.equal(pin.reviewIntegration,sha(JSON.stringify(JSON.parse(read('atlas-review/integration-inputs.json')).inputs)));
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
@@ -68,7 +68,7 @@ test('current fixture agrees with actual emitted bytes, notices, imported Review
  for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
  const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
  for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
- assert.equal(sourceFiles,1548);assert.equal(inputs,1685);assert(artifacts>100);
+ assert.equal(sourceFiles,1548);assert.equal(inputs,1695);assert(artifacts>100);
 });
 
 for(const [label,edit]of [
@@ -194,4 +194,26 @@ test('aaa8 delivery and its complete pre-entry contract remain historical and by
  back("'assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1682);'",
   "'assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1681);'",1);
  assert.equal(inverse,before.toString(),'Every earlier historical, auth, tamper and semantic assertion survives exact live seams');
+});
+
+test('6036 current-delivery contract is preserved by exact source/tree/count inverse',()=>{
+ const original=read('tests/fixtures/current-atlas-delivery.before-mra-6036.mjs.raw');
+ assert.equal(sha(original),'6233c1028f9478b2bb4d7733a5b48c5427e69990fec8e5bfed106d77b3f615a6');
+ const current=read('tests/current-atlas-delivery.test.mjs').toString();
+ const marker="\ntest('6036 current-delivery contract is preserved by exact source/tree/count inverse'";
+ assert.equal(current.split(marker).length,2);
+ let inverse=current.slice(0,current.indexOf(marker));
+ const one=(from,to)=>{assert.equal(inverse.split(from).length,2,`Exact admission seam: ${from}`);inverse=inverse.replace(from,to);};
+ one("assert.equal(CURRENT_ATLAS_REVISION,'87ed7e343260c7df48a40d53503f25bbfd34cfa5');",
+  "assert.equal(CURRENT_ATLAS_REVISION,'6036a7a59dcc1fd75eee4a23af34ca2a568d86b6');");
+ one("assert.equal(pin.sourceTree,'bfcfa898ace1d25083f21b681274c5bc816564d7');",
+  "assert.equal(pin.sourceTree,'6da62962106cfab9419b09618547a9da5e3aafc6');");
+ one('assert.equal(sourceFiles,1548);assert.equal(inputs,1695);assert(artifacts>100);',
+  'assert.equal(sourceFiles,1548);assert.equal(inputs,1685);assert(artifacts>100);');
+ assert.equal(inverse,original.toString(),'Every historical pin, tamper, source and approval refusal remains exact');
+ const stale=JSON.parse(read('tests/fixtures/current-atlas-delivery-before-mra-6036.json'));
+ assert.equal(sha(read('tests/fixtures/current-atlas-delivery-before-mra-6036.json')),'13a8fe34b87cdb3a4e14ab5146e6d42c3ca79e9180ecdae9938ab8f97c6b6ea6');
+ assert.equal(stale.source,'6036a7a59dcc1fd75eee4a23af34ca2a568d86b6');
+ assert.equal(stale.sourceTree,'6da62962106cfab9419b09618547a9da5e3aafc6');
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:stale}),'Stale prebind fixture cannot admit current source');
 });

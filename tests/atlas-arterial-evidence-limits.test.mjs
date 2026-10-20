@@ -79,7 +79,7 @@ test('closed source and four runtime exports import the exact committed evidence
   for(const path of newPaths){
     const row=review.files.find(file=>file.path===path);assert.ok(row,`Review source ${path}`);
     const committed=git(atlas,'show',`${CURRENT_ATLAS_REVISION}:${path}`);
-    same(committed,git(atlas,'show',`${source}:${path}`),`Feature source retained ${path}`);
+    same(git(atlas,'show',`6036a7a59dcc1fd75eee4a23af34ca2a568d86b6:${path}`),git(atlas,'show',`${source}:${path}`),`Feature source retained ${path}`);
     assert.equal(row.sourceSha256,sha(committed));
     assert.equal(row.importedSha256,sha(read(`atlas-review/${path}`)));
     assert.equal(row.importedSha256,row.sourceSha256,`Exact imported ${path}`);
@@ -236,4 +236,24 @@ test('source-pinned lesson text is reachable in emitted learner and production R
       for(const citation of topic.citations)assert.ok(contains(emitted,citation),`${family} reference in reachable output`);
     }
   }
+});
+
+test('original arterial Website contract survives the exact pre-MRA feature retention adapter',()=>{
+  const original=read('tests/fixtures/atlas-arterial-evidence-limits.before-mra-6036.mjs.raw');
+  assert.equal(sha(original),'d44aca96fd00b8b4ee926434acde3423ba2ca9d67197db3410f2e54908605627');
+  const current=read('tests/atlas-arterial-evidence-limits.test.mjs').toString();
+  const marker="\ntest('original arterial Website contract survives the exact pre-MRA feature retention adapter'";
+  assert.equal(current.split(marker).length,2);
+  const adapted=current.slice(0,current.indexOf(marker));
+  const replacement="    same(git(atlas,'show',`6036a7a59dcc1fd75eee4a23af34ca2a568d86b6:${path}`),git(atlas,'show',`${source}:${path}`),`Feature source retained ${path}`);";
+  const previous="    same(committed,git(atlas,'show',`${source}:${path}`),`Feature source retained ${path}`);";
+  assert.equal(adapted.split(replacement).length,2);
+  assert.equal(adapted.replace(replacement,previous),original.toString(),
+    'All original source, history, identity, packet, storage and emitted-output assertions remain exact');
+  const atlas=currentAtlasDeliveryRoot();
+  assert.equal(CURRENT_ATLAS_REVISION,'87ed7e343260c7df48a40d53503f25bbfd34cfa5');
+  assert.equal(git(atlas,'rev-parse','6036a7a59dcc1fd75eee4a23af34ca2a568d86b6^{commit}').toString().trim(),
+    '6036a7a59dcc1fd75eee4a23af34ca2a568d86b6');
+  assert.equal(git(atlas,'merge-base','6036a7a59dcc1fd75eee4a23af34ca2a568d86b6',CURRENT_ATLAS_REVISION).toString().trim(),
+    '6036a7a59dcc1fd75eee4a23af34ca2a568d86b6','Feature-retention witness is exact current-source ancestor');
 });
