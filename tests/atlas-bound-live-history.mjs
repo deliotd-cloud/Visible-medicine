@@ -5,11 +5,12 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {resolve,relative,isAbsolute} from 'node:path';
 import {pathToFileURL} from 'node:url';
-const atlas='F:/VisibleMedicine/atlas';
+import {checkedAtlasSourceRepo} from './atlas-source-repo.mjs';
 const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
 const json=path=>JSON.parse(readFileSync(path,'utf8'));
 export async function boundLiveAtlasHistory(revision,profile='review-security'){
  assert.match(revision,/^[a-f0-9]{40}$/);
+ const atlas=checkedAtlasSourceRepo(revision);
  const git=(...args)=>execFileSync('git',args,{cwd:atlas,windowsHide:true,maxBuffer:32e6,env:{...process.env,GIT_NO_REPLACE_OBJECTS:'1'}});
  assert.equal(git('rev-parse','HEAD').toString().trim(),revision);
  const manifest=json('atlas-review/manifest.json');assert.equal(manifest.revision,revision);

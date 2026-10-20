@@ -28,6 +28,21 @@ function portalFor509b(old){let text=frozen(rawPortal);
  text=exact(text,source59,old.source);text=exact(text,tree59,old.sourceTree);
  text=exact(text,'exact clean Atlas3dc','exact clean Atlas509b');
  return exact(text,'assert.equal(pin.reviewSourceFiles,1534);',`assert.equal(pin.reviewSourceFiles,${old.reviewSourceFiles});`);}
+function admitPortalCurrent(candidate,old){
+ const historical=portalFor509b(old);
+ assert.equal(sha(Buffer.from(historical)),'7e6410677f56b00497a2a7fcc1451f629ec09a6baba423a322219cd38e47b797','Exact reconstructed 509b portal witness');
+ const original=read('fixtures/clinical-review-portal-venous-original.ts.txt');
+ assert.equal(sha(original),'7f8fbab26fd147ccf9b2f26e9e6d085486e897ecbde71cc15623d1b16c6d043c','Exact original portal theorem');
+ const twoSeam=exact(exact(original.toString(),
+  "import {emittedTeaching} from './atlas-emitted-teaching.ts';",
+  "import {emittedTeaching} from './atlas-emitted-teaching.ts';\nimport {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';"),
+  "const liveCommit='9fba9a1e24b6669aafd48e945d55fc0939d50ab2';",
+  'const liveCommit=CURRENT_ATLAS_REVISION;');
+ assert.equal(sha(Buffer.from(twoSeam)),'e33cf4d6dbf57037f31f3ae1fefc6aa4cfb6e004f6a7d3480be9d9e39bec1cef','Exact earlier two-seam portal theorem');
+ assert.equal(sha(read('clinical-review-portal-venous-xray.test.ts')),'2dc7fe02eba3ed6cee38817b10138bba4ea14e874987db5e66213aea625bab8e','Exact current three-seam portal theorem');
+ assert.notEqual(candidate,historical,'Current portal admission must differ from 509b historical witness');
+ assert.equal(sha(Buffer.from(candidate)),'87983dc5eb6e5cf6a02c60958b0c482495335ba39654c4a325e6c923858e068b','Reviewed current portal admission source');
+}
 const suffixHash='c07e33a5cfca551adee42b309942e21aa2b82eeb06cdaca073995599bd0cde68';
 function admitDelivery(candidate,pin){
  const prefix=prefixFor(pin);
@@ -66,7 +81,7 @@ test('59, 509b and f509 witnesses remain historical while current admission uses
  assert.equal(portalPin.source,'509b01da5d72f33bd774e4a59d63e2406af1f2ff');
  assert.equal(portalPin.sourceTree,'a9a1581bd6a3220b7d4b2554644fe0c56b688430');
  assert.equal(portalPin.reviewSourceFiles,1538);
- assert.equal(read('clinical-review-portal-venous-current-admission.test.mjs').toString(),portalFor509b(portalPin));
+ admitPortalCurrent(read('clinical-review-portal-venous-current-admission.test.mjs').toString(),portalPin);
  assert.throws(()=>validateCurrentAtlasDelivery({pin:portalPin}));
 
  const f509Bytes=read('fixtures/current-atlas-delivery-f5097af8.json');
@@ -107,7 +122,8 @@ test('forged old assertions, appendix, portal and stale delivery pins are refuse
  assert.throws(()=>admitDelivery(forgedDelivery,pin));
  const forgedAppendix=exact(delivery,"assert.equal(old.reviewSourceFiles,1541);","assert.equal(old.reviewSourceFiles,1542);");
  assert.throws(()=>admitDelivery(forgedAppendix,pin));
- assert.notEqual(exact(portal,"assert.notEqual(pin.source,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');",'assert(true);'),portalFor509b(portalPin));
+ const forgedPortal=exact(portal,"assert.notEqual(pin.source,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');",'assert(true);');
+ assert.throws(()=>admitPortalCurrent(forgedPortal,portalPin));
  assert.throws(()=>validateCurrentAtlasDelivery({pin:{...pin,reviewIntegration:'0'.repeat(64)}}));
  assert.throws(()=>validateCurrentAtlasDelivery({pin:{...pin,documents:{...pin.documents,'atlas-review/manifest.json':'0'.repeat(64)}}}));
 });

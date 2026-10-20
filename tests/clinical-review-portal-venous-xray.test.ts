@@ -7,11 +7,11 @@ import {pathToFileURL} from 'node:url';
 import test from 'node:test';
 import {build} from 'esbuild';
 import {emittedTeaching} from './atlas-emitted-teaching.ts';
-import {CURRENT_ATLAS_REVISION} from './current-atlas-delivery.mjs';
+import {CURRENT_ATLAS_REVISION,currentAtlasDeliveryRoot} from './current-atlas-delivery.mjs';
 
 const atlasBaseline='8c644c4ebb59510da8bdb33930f615dcd441447e';
 const liveCommit=CURRENT_ATLAS_REVISION;
-const atlas='F:/VisibleMedicine/atlas';
+const atlas=currentAtlasDeliveryRoot();
 const pinsPaths=['content/central-vessel-imaging-pins.json','content/abdominal-branch-imaging-pins.json'];
 const teachingPaths=['content/portal-venous-xray.ts','lib/portal-venous-xray.ts'];
 const paths=[...pinsPaths,...teachingPaths];
