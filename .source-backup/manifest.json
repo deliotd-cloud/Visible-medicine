@@ -1,0 +1,115 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T17:01:52.650Z",
+  "sourceIdentity": {
+    "kind": "Isolated Atlas source candidate, not installed",
+    "parent": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "source": "9296d0f940e25581162f8d8fe738a1aad40c72b8",
+    "tree": "c948253b3a80788d8a06e7ff90f2114402d6e986",
+    "canonicalInstalled": false,
+    "clinicalApproval": false
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "content/corpus-imaging-ct.pins.json",
+      "bytes": 4053,
+      "sha256": "1a04b079ec527e4dce75c6c366576947fced6aff8a7f4ed83b3d35cb95d14c6e"
+    },
+    {
+      "path": "content/corpus-imaging-ct.transition.json",
+      "bytes": 3652,
+      "sha256": "b918d036891846846ac2db2a16a0b865667420638d634dea22b227d0410e5409"
+    },
+    {
+      "path": "content/corpus-imaging.ts",
+      "bytes": 3713,
+      "sha256": "5d5e7afeb081d79b1f8559c90f6fd51cfd8cc79a6727844413a081c6e937f61e"
+    },
+    {
+      "path": "lib/corpus-imaging.ts",
+      "bytes": 1156,
+      "sha256": "b6256fdf7a17d1a9694d6aad5ea92ed4dc15f8f7ef3b5ed1d1060c4c0b0f4bfc"
+    },
+    {
+      "path": "package.json",
+      "bytes": 86455,
+      "sha256": "e4d8f5dbda98ecac1084ab756009ab611c52ebc918710a5ad7a455ea8f1206c7"
+    },
+    {
+      "path": "scripts/content-contract-tools.mjs",
+      "bytes": 15395,
+      "sha256": "76865d1d804f9883fcf9778d3866177f2e4032df095a90daeac7f87aae8a978e"
+    },
+    {
+      "path": "scripts/corpus-imaging-ct-history.mjs",
+      "bytes": 2047,
+      "sha256": "c4e730778a542e454fc327c10bd46cd8141f1fecf4082a8fd6121f12af2cd2cd"
+    },
+    {
+      "path": "scripts/exact-source-history-api.mjs",
+      "bytes": 22677,
+      "sha256": "c7ed1ad8ad307354262bce31f94fca5596b6d200bc0b5e20edaea49709940683"
+    },
+    {
+      "path": "scripts/pin-corpus-imaging-ct.mjs",
+      "bytes": 4713,
+      "sha256": "e76e0aec2e90cd0d8f86e6e272f27c10480b6e9e84b098117a859da6f83c3d91"
+    },
+    {
+      "path": "scripts/post-foot-author-history.mjs",
+      "bytes": 4974,
+      "sha256": "b702d249657bc2a30036cda741fb43e39acc0348c6ffe59f4dcf6f915073cde6"
+    },
+    {
+      "path": "scripts/test-corpus-imaging-ct-history.mjs",
+      "bytes": 19014,
+      "sha256": "92c1cdbed5e62a4818387f131679f64bfa7361f52d132d0e1d29d67abffa74cb"
+    },
+    {
+      "path": "scripts/test-corpus-spongiosum-xray-v2.mjs",
+      "bytes": 9842,
+      "sha256": "64a848772fa2bcca456e78465612d3d91db57ef1f5f1ff366c3eb378c141f123"
+    },
+    {
+      "path": "scripts/test-inferior-thyroid-mra-evidence.mjs",
+      "bytes": 10589,
+      "sha256": "624fa234c3579b43c5f78f71eee28ec9cd3c8d11f8ddff16082cb948bcf3e2de"
+    },
+    {
+      "path": "scripts/validate-corpus-imaging.mjs",
+      "bytes": 7428,
+      "sha256": "bd011302444a037516918e156434f7d25a92e6fe9b2c70538255cb5ce5354dc8"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "VERIFICATION.json",
+      "bytes": 6117,
+      "sha256": "3560ee1f68683f490838e76f258a3607bad6e51a4f4dd27de3db07925d412ebb"
+    }
+  ],
+  "removed": [],
+  "scope": "Sixteen selected source/evidence paths only, with fourteen source changes against exact Atlas87ed plus LICENSE and verification metadata. Not a standalone/full Atlas, Website or private-data backup. Original CT teaching for existing FMA19617/FJ3133 bulb/shaft representation; no new geometry or images. Seven focused pure-source tests pass, including exact preservation and synthetic review refusal/draft readback. Original MRI/US, X-ray and MRA tests retain full-file inverses and immutable source contexts; complete historical-validator, renderer/export and coherent Website admission remain pending. No patient data, scans, masks, mesh binaries, private clinical records, raw canonical Git ancestry, source PDF/figure or public deployment.",
+  "proof": {
+    "verificationSha256": "3560ee1f68683f490838e76f258a3607bad6e51a4f4dd27de3db07925d412ebb",
+    "focusedSourceTests": 7,
+    "changedPlacements": 1,
+    "preservedPlacements": 9935,
+    "identityMutationRefusals": 56,
+    "reviewPacketsCompared": 1104,
+    "exactLegacyValidatorInverses": 3,
+    "fullHistoricalSuiteRun": false,
+    "canonicalInstalled": false,
+    "clinicalApproval": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}

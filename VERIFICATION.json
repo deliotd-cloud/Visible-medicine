@@ -1,0 +1,151 @@
+{
+  "schema": "visible-medicine.corpus-ct-source-verification/1",
+  "at": "2026-10-20T17:01:24.821Z",
+  "atlas": "F:/VisibleMedicine/staging/20261020-corpus-ct-source",
+  "parent": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+  "source": "9296d0f940e25581162f8d8fe738a1aad40c72b8",
+  "tree": "c948253b3a80788d8a06e7ff90f2114402d6e986",
+  "files": [
+    {
+      "path": "content/corpus-imaging-ct.pins.json",
+      "bytes": 4053,
+      "sha256": "1a04b079ec527e4dce75c6c366576947fced6aff8a7f4ed83b3d35cb95d14c6e"
+    },
+    {
+      "path": "content/corpus-imaging-ct.transition.json",
+      "bytes": 3652,
+      "sha256": "b918d036891846846ac2db2a16a0b865667420638d634dea22b227d0410e5409"
+    },
+    {
+      "path": "content/corpus-imaging.ts",
+      "bytes": 3713,
+      "sha256": "5d5e7afeb081d79b1f8559c90f6fd51cfd8cc79a6727844413a081c6e937f61e"
+    },
+    {
+      "path": "lib/corpus-imaging.ts",
+      "bytes": 1156,
+      "sha256": "b6256fdf7a17d1a9694d6aad5ea92ed4dc15f8f7ef3b5ed1d1060c4c0b0f4bfc"
+    },
+    {
+      "path": "package.json",
+      "bytes": 86455,
+      "sha256": "e4d8f5dbda98ecac1084ab756009ab611c52ebc918710a5ad7a455ea8f1206c7"
+    },
+    {
+      "path": "scripts/content-contract-tools.mjs",
+      "bytes": 15395,
+      "sha256": "76865d1d804f9883fcf9778d3866177f2e4032df095a90daeac7f87aae8a978e"
+    },
+    {
+      "path": "scripts/corpus-imaging-ct-history.mjs",
+      "bytes": 2047,
+      "sha256": "c4e730778a542e454fc327c10bd46cd8141f1fecf4082a8fd6121f12af2cd2cd"
+    },
+    {
+      "path": "scripts/exact-source-history-api.mjs",
+      "bytes": 22677,
+      "sha256": "c7ed1ad8ad307354262bce31f94fca5596b6d200bc0b5e20edaea49709940683"
+    },
+    {
+      "path": "scripts/pin-corpus-imaging-ct.mjs",
+      "bytes": 4713,
+      "sha256": "e76e0aec2e90cd0d8f86e6e272f27c10480b6e9e84b098117a859da6f83c3d91"
+    },
+    {
+      "path": "scripts/post-foot-author-history.mjs",
+      "bytes": 4974,
+      "sha256": "b702d249657bc2a30036cda741fb43e39acc0348c6ffe59f4dcf6f915073cde6"
+    },
+    {
+      "path": "scripts/test-corpus-imaging-ct-history.mjs",
+      "bytes": 19014,
+      "sha256": "92c1cdbed5e62a4818387f131679f64bfa7361f52d132d0e1d29d67abffa74cb"
+    },
+    {
+      "path": "scripts/test-corpus-spongiosum-xray-v2.mjs",
+      "bytes": 9842,
+      "sha256": "64a848772fa2bcca456e78465612d3d91db57ef1f5f1ff366c3eb378c141f123"
+    },
+    {
+      "path": "scripts/test-inferior-thyroid-mra-evidence.mjs",
+      "bytes": 10589,
+      "sha256": "624fa234c3579b43c5f78f71eee28ec9cd3c8d11f8ddff16082cb948bcf3e2de"
+    },
+    {
+      "path": "scripts/validate-corpus-imaging.mjs",
+      "bytes": 7428,
+      "sha256": "bd011302444a037516918e156434f7d25a92e6fe9b2c70538255cb5ce5354dc8"
+    }
+  ],
+  "sourceFocusedTests": {
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "receipt": "F:/VisibleMedicine/staging/20261020-corpus-ct-normal-verification/CT_SOURCE_FOCUSED_LF.json",
+    "logSha256": "1f85b54c7c00de92eb5883d5ae8a8a90d9e1a1f9afad3f146e496b869c462ae0"
+  },
+  "teaching": {
+    "changedPlacements": 1,
+    "preservedPlacements": 9935,
+    "changedExportRecords": 1,
+    "preservedExportRecords": 1103,
+    "reviewPacketsCompared": 1104,
+    "changedTeachingPackets": 1,
+    "identityMutationRefusals": 56,
+    "foreignRepresentationCtRefusals": 1103,
+    "originalMriUsPreserved": true,
+    "exactLegacyValidatorInverses": 3,
+    "syntheticDraftSaveReadback": true,
+    "realAccountsReadOrWritten": false,
+    "clinicalApproval": false
+  },
+  "pinsHash": "cb70fd388c646a02074c0691dbf819ba2d3f28d08406ba0f0bcb99e0ad7a938d",
+  "transitionHash": "2e36de68a529538e2fd74343fbd245dff0b673f059364cfac46ddbe596f658b3",
+  "checkout": {
+    "initialFailure": "Strict raw-byte preservation caught CRLF checkout conversion; 5 of 6 initial cases passed. Original failing receipt/log retained.",
+    "normalization": "F:/VisibleMedicine/staging/20261020-corpus-ct-normal-verification/CHECKOUT_NORMALIZATION.json",
+    "finalCommittedChanges": 14,
+    "unrelatedCommittedChanges": 0,
+    "workingTreeClean": true,
+    "gitConfigChanged": false
+  },
+  "prefetch": {
+    "stage": "F:/VisibleMedicine/staging/20261020-regression-prefetch-proposal",
+    "helperAndReaderPassed": 6,
+    "receipt": "F:/VisibleMedicine/staging/20261020-corpus-ct-normal-verification/PREFETCH_HASH_GUARDS.json",
+    "logSha256": "137b1b49f9725f3c86227be37fa142f1efe560523aca346b2e0d975478edd4b7",
+    "completeOriginalWrapperInverses": 2,
+    "sourceHashesChecked": true,
+    "atomicCacheOnFailure": true,
+    "installed": false,
+    "fullHistoricalWrappersRun": false,
+    "benchmarkRun": false,
+    "speedupClaim": false
+  },
+  "frozenWebsite": {
+    "source": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
+    "review": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
+    "productInputsUnchanged": 1696,
+    "fullRunInputsUnchanged": 5019,
+    "fullRunSourceSha256": "732f85205bfac18a268687a33f251681c1df90e12fa9c725c2f4d094b1f1ee5e",
+    "output": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+    "terminalReceiptObserved": false
+  },
+  "pending": [
+    "npm run corpus-imaging:test",
+    "node --test scripts/test-corpus-spongiosum-xray-v2.mjs",
+    "npm run inferior-thyroid-mra-evidence:test",
+    "node scripts/test-foot-surface-imaging-history.mjs",
+    "npm run content:test",
+    "source-owned requirement report regeneration",
+    "renderer/review/content exports and coherent Website import",
+    "actual signed-in browser/clinical/release acceptance"
+  ],
+  "limits": "Focused pure-source tests are not a full historical-suite, application build, renderer acceptance, Website installation, clinical approval, privacy clearance or patient-space registration. Full Website job remains untouched. No new assets, scans, masks, patient data, dependencies, access changes or public deployment.",
+  "canonicalInstalled": false,
+  "websiteCandidateEdited": false,
+  "ownerEditorRefreshed": false,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "fullGoalActive": true
+}
