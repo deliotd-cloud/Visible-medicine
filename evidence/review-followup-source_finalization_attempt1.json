@@ -1,0 +1,8 @@
+{
+  "command":"node finalize-review-followup-20261020.mjs",
+  "exitCode":1,
+  "cause":"Source inventory traversal tried to read retired content-addressed public/atlas-review-viewer/assets/abdominal-wall-study-RBBEkel_.js after the stock build. The rebuilt manifest has new content-addressed asset names.",
+  "partialWrite":"Exact current-atlas-delivery fixture was already rebound to verified stock binding and viewer manifests. No other source edited by the failed finalizer; no SOURCE_INPUTS_AFTER or BINDING_VERIFICATION receipt produced.",
+  "correction":"Account explicitly for retirement and addition only within the old and new stock viewer manifests, hash-check all46 new viewer files, reject any other missing source. Permit only original or exact derived fixture on resume.",
+  "canonicalInstalled":false
+}

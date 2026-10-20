@@ -1,0 +1,29 @@
+{
+  "label": "REVIEW_FOLLOWUP_TESTS",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/regional-guide-review-ui.test.ts",
+    "tests/regional-guide-review-contract.test.ts",
+    "tests/regional-guide-review-api.test.ts",
+    "tests/plexus-review-ui.test.ts",
+    "tests/regional-reference-draft-ui.test.ts",
+    "tests/review-draft-autosave.test.mjs",
+    "tests/review-ui-bound-inputs.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-form-followup/REVIEW_FOLLOWUP_TESTS.log",
+  "logSha256": "e964472911529f62e012022de7b0f5911f92e37e868995c85ceb876ea32a8c7d",
+  "footer": [
+    "ℹ tests 44",
+    "ℹ pass 44",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

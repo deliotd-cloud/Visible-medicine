@@ -1,0 +1,113 @@
+{
+  "at": "2026-10-20T20:56:24.216Z",
+  "namedInputsChecked": 5043,
+  "paths": [
+    {
+      "path": "components/RegionalGuideReviewNotes.tsx",
+      "before": {
+        "bytes": 19790,
+        "sha256": "657832636665157bfefc77491586b4ad81fc7f67fd962842b467635fce961ad7"
+      },
+      "after": {
+        "bytes": 21101,
+        "sha256": "b6a9afdf9534758e98f05754e79a982a0d0d7366c427e7a9ded4775b67181b48"
+      }
+    },
+    {
+      "path": "tests/regional-guide-review-ui.test.ts",
+      "before": {
+        "bytes": 17006,
+        "sha256": "de3aaf9f588ac7d6c315bfca7c64de245d97ac377df0493f089218eb1319028d"
+      },
+      "after": {
+        "bytes": 19904,
+        "sha256": "2706275af45beb11452f4a72a8adc7209af18f54c6964b38ad59b2406c3b40a3"
+      }
+    },
+    {
+      "path": "tests/plexus-review-ui.test.ts",
+      "before": {
+        "bytes": 5918,
+        "sha256": "b3ed10516170829396787d7e03f689b8cc12b222c311ca1ae54e25f5f2fa5c03"
+      },
+      "after": {
+        "bytes": 6231,
+        "sha256": "72de9539b837d3e0faf46cdf146ab29d49d4c3b764aa18dd42a7af2460bd22d9"
+      }
+    },
+    {
+      "path": "tests/regional-reference-draft-ui.test.ts",
+      "before": {
+        "bytes": 17017,
+        "sha256": "a7ec446f9eda00fc2986d172ae6ed0587d5fb19e4660d1bc6bc6a9e706cd2a50"
+      },
+      "after": {
+        "bytes": 19364,
+        "sha256": "60be257de429b63eb311458092417da29326f737c5b9a9779324b57c8bdcace1"
+      }
+    }
+  ],
+  "beforePaths": [
+    "components/RegionalGuideReviewNotes.tsx",
+    "tests/regional-guide-review-ui.test.ts",
+    "tests/plexus-review-ui.test.ts",
+    "tests/regional-reference-draft-ui.test.ts",
+    "scripts/bind-clinical-review.mjs",
+    "tests/fixtures/current-atlas-delivery.json",
+    "atlas-review/manifest.json",
+    "atlas-review/integration-inputs.json",
+    "atlas-review/content/body-renderer-revision.json",
+    "atlas-review/content/review-revisions.json",
+    "public/atlas-review-viewer/manifest.json",
+    "lib/atlas-model-inventory.json",
+    "lib/plexus-review-manifest.json",
+    "public/atlas-review-viewer/index.html",
+    "public/atlas-review-viewer/THIRD_PARTY_NOTICES.txt",
+    "public/atlas-review-viewer/assets/abdomen-BLibbjSs.js",
+    "public/atlas-review-viewer/assets/abdominal-wall-study-RBBEkel_.js",
+    "public/atlas-review-viewer/assets/anatomy-coordinates-C8_MAECW.js",
+    "public/atlas-review-viewer/assets/anatomy-scene-CJdZtBaz.js",
+    "public/atlas-review-viewer/assets/back-layers-study-gfiRxVaR.js",
+    "public/atlas-review-viewer/assets/body-content-zxEGY1zL.js",
+    "public/atlas-review-viewer/assets/body-scene-7L7hLyr5.js",
+    "public/atlas-review-viewer/assets/body-scene-IREBYFc0.css",
+    "public/atlas-review-viewer/assets/content-types-dy1iU5rk.js",
+    "public/atlas-review-viewer/assets/cutaway-controls-4N0ICIXO.css",
+    "public/atlas-review-viewer/assets/cutaway-controls-VUyol5YZ.js",
+    "public/atlas-review-viewer/assets/eye-layers-B_8TgiYY.css",
+    "public/atlas-review-viewer/assets/eye-layers-CA2MPqX8.js",
+    "public/atlas-review-viewer/assets/foot-B9LKOcHv.js",
+    "public/atlas-review-viewer/assets/forearm-B4nqLhdv.js",
+    "public/atlas-review-viewer/assets/hand-C2g4wVfN.js",
+    "public/atlas-review-viewer/assets/head-neck-DmtBeE0s.js",
+    "public/atlas-review-viewer/assets/hra-pelvis-study-BlVm5eNq.js",
+    "public/atlas-review-viewer/assets/hra-renal-study-BlcgrtQM.js",
+    "public/atlas-review-viewer/assets/hra-renal-teaching-CfWuIncl.js",
+    "public/atlas-review-viewer/assets/independent-study-navigation-B4G1ESaw.js",
+    "public/atlas-review-viewer/assets/index-BOn_uUTN.css",
+    "public/atlas-review-viewer/assets/index-D192krfC.js",
+    "public/atlas-review-viewer/assets/leg-C23bX7kx.js",
+    "public/atlas-review-viewer/assets/neuroanatomy-DKkDnLNH.js",
+    "public/atlas-review-viewer/assets/pelvis-C7bQUeIk.js",
+    "public/atlas-review-viewer/assets/rolldown-runtime-hePW80VL.js",
+    "public/atlas-review-viewer/assets/scene-recovery-BCIS1m0I.css",
+    "public/atlas-review-viewer/assets/scene-recovery-CZ9s0_NV.js",
+    "public/atlas-review-viewer/assets/shoulder-arm-8UqNlnEr.js",
+    "public/atlas-review-viewer/assets/shoulder-explorer-CrFyYdQD.css",
+    "public/atlas-review-viewer/assets/shoulder-explorer-FRpcwy8o.js",
+    "public/atlas-review-viewer/assets/slider-BhAhx-tO.js",
+    "public/atlas-review-viewer/assets/slider-C5fwuhub.css",
+    "public/atlas-review-viewer/assets/spine-e2QBQfxg.js",
+    "public/atlas-review-viewer/assets/study-views-DNc4S1Mx.js",
+    "public/atlas-review-viewer/assets/thigh-CNIgZcWe.js",
+    "public/atlas-review-viewer/assets/thorax-BFxTSfQ4.js",
+    "public/atlas-review-viewer/assets/um-knee-study-B7YAxL6W.js",
+    "public/atlas-review-viewer/assets/um-knee-study-D8QdNnSJ.css",
+    "public/atlas-review-viewer/assets/um-limb-study-CmThC9Ah.js",
+    "public/atlas-review-viewer/assets/um-proximal-topic-completion-g3GvGRe9.js",
+    "public/atlas-review-viewer/assets/ventricles-C4BPDGuT.js",
+    "public/atlas-review-viewer/assets/ventricles-CfdrTivY.css"
+  ],
+  "candidateOnly": true,
+  "clinicalDecisionsWritten": false
+}

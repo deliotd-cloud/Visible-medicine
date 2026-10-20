@@ -1,0 +1,13 @@
+{
+  "label": "STOCK_REVIEW_BIND",
+  "command": "node",
+  "args": [
+    "scripts/bind-clinical-review.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-review-form-followup/STOCK_REVIEW_BIND.log",
+  "logSha256": "69c2d0b550a4eca992f36959a4674565296893b82adaa0e275fe49643a2b699b",
+  "footer": [],
+  "canonicalInstalled": false
+}

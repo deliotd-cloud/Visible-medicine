@@ -6,6 +6,10 @@ const sha = value => createHash('sha256').update(value).digest('hex');
 const manifest = JSON.parse(readFileSync('atlas-review/manifest.json'));
 const revisionPaths = ['content/body-renderer-revision.json','content/review-revisions.json'];
 const adapterPaths = ['components/GroupedReviewConfirmation.tsx','lib/review-draft-autosave.ts','scripts/import-clinical-review.mjs','scripts/build-clinical-review-viewer.mjs','scripts/bind-clinical-review.mjs','lib/clinical-review-links.ts','lib/clinical-review-return.ts','lib/clinical-review-fetch.ts','components/review-ui-variants.css','components/ClinicalReviewAreas.tsx','components/clinical-review-areas.css','package-lock.json',
+  // Bind every native streamlined worksheet as well as the imported editors.
+  // Changes to review controls must invalidate the exact presentation revision.
+  'components/HeadCtBoneDecisionForm.tsx','components/HeadCtBoneTeachingDecisionForm.tsx','components/HeadMriReviewNotes.tsx','components/HeadPairedDecisionForm.tsx',
+  'components/PlexusReviewWorksheet.tsx','components/RegionalGuideReviewNotes.tsx','components/RegionalReferenceReviewNotes.tsx',
   'lib/anatomy-coverage-view.ts','components/AnatomyCoverageReview.tsx','components/anatomy-coverage-review.css','docs/anatomy-coverage/index.json',
   'lib/head-anatomy-checks.ts','lib/head-atlas-teaching.ts','lib/head-atlas-links.ts','lib/head-cerebellar-clinical.ts','components/HeadCerebellarClinicalReview.tsx',
   'lib/head-ct-facial-comparison-review.ts','lib/head-ct-bone-decision-contract.ts','components/HeadCtFacialComparisonReview.tsx',

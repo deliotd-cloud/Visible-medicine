@@ -1,0 +1,26 @@
+{
+  "scope": "Synthetic, image-free HeadPairedDecisionForm using actual candidate component, GroupedReviewConfirmation and CSS; isolated loopback browser context. No real account, scan, anatomy asset or review database loaded.",
+  "componentSha256": "a05c1a33515474ff79bd5a0180cbd2c4013364f8b31a5da59074e5e83a8198c4",
+  "groupedSha256": "b5c844502c8f44591a776d7abc1468b174af6529108576e13c944f36bebd51f4",
+  "checks": {
+    "initialUntouchedDraftHasNoCheckbox": true,
+    "editedDraftAutosavedAt2500ms": true,
+    "savedDraftAttested": false,
+    "acceptanceShowsExactlyOneInitiallyUncheckedConfirmation": true,
+    "expansionShowsAllFourOriginalCriteria": true,
+    "checkedAcceptanceDoesNotAutosave": true,
+    "editingAfterConfirmationClearsAttestation": true,
+    "keyboardTabFocusVisibleOnConfirmation": true,
+    "desktop1440NoHorizontalOverflow": true,
+    "desktop1280NoHorizontalOverflow": true,
+    "browserAlertErrors": 0,
+    "fixtureDraftPosts": 1,
+    "fixtureApprovalPosts": 0,
+    "realReviewDecisionsWritten": 0
+  },
+  "dimensions": [{"viewport":1440,"document":1425},{"viewport":1280,"document":1265}],
+  "evidence": "Actual Chrome accessibility snapshots, DOM/fixture metrics and inline screenshot visually inspected. Screenshot/output file saves were denied by the browser tool's path boundary; no saved image claimed.",
+  "limitations": "Not full signed-in website, acquired-scan, clinical, registration or end-to-end reviewer acceptance. Owner browser tabs and canonical preview untouched.",
+  "ownedPageClosed": true,
+  "ownedServerStopped": true
+}

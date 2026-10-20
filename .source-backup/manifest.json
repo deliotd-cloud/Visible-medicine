@@ -1,27 +1,25 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T20:45:44.395Z",
+  "at": "2026-10-20T21:00:06.603Z",
   "sourceIdentity": {
-    "at": "2026-10-20T20:45:40.065Z",
+    "at": "2026-10-20T21:00:02.738Z",
     "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
     "source": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
     "sourceTree": "3c6834f1c017bd40a317bddcd341cba9139de479",
-    "review": "5efa35df9274100cf9f696db7e1f68816cd99af1dda62aac2242d56cc3728d00",
-    "inputs": 5043,
-    "sourceInputSha256": "3f1f651d2f02aa231d93ea530c723dd3dfbffa3a1706c95e81d2bd31f3fa68f9",
+    "review": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
+    "sourceInputSha256": "c94cad5d71bea03aec67ceefdec636f4ac1deeb0c2f7c3511811f3e057aa6fcd",
+    "namedInputs": 5044,
     "reviewSourceFiles": 1550,
-    "boundInputs": 1700,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
+    "boundInputs": 1707,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
     "geometryAndAnatomyEvidenceUnchanged": true,
-    "websiteTests": 44,
-    "atlasTests": 43,
+    "followupTests": 44,
     "fullTypes": true,
     "fullProductionBuild": true,
-    "privatePolicyAudience": "administrator-review",
+    "privateAudience": "administrator-review",
     "permissionsExpanded": false,
-    "scope": "One explicit confirmation per independent review track with every original criterion retained, secure in-memory reviewer details and guarded draft-only autosave. Next actions where deterministic queue adapters exist. Regional guide remains manual-save; head packet next-item adapters remain future work. No actual review decision written.",
+    "scope": "Guided-review in-progress-only draft autosave; cancellation, exact-source and uncertainty guards. All nine native streamlined interfaces explicitly source-bound. Original review criteria retained. Synthetic desktop1440/1280 form QA: one draft-only write in memory, zero actual review decisions. Prior Atlas43/Website44 source-focused checks retained, not recombined as disjoint totals.",
     "canonicalInstalled": false,
     "ownerFormsRefreshed": false,
     "clinicalApproval": false,
@@ -30,8 +28,8 @@
     "fullSuitePass": false,
     "fullGoalActive": true
   },
-  "parent": "444a72b658739fba43d95c97049503b1e9a12936",
-  "gitParent": "444a72b658739fba43d95c97049503b1e9a12936",
+  "parent": "970efb6bc8fb1751c7f17fed0542b28e12532707",
+  "gitParent": "970efb6bc8fb1751c7f17fed0542b28e12532707",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -76,22 +74,22 @@
     {
       "path": "atlas-review/content/body-renderer-revision.json",
       "bytes": 214575,
-      "sha256": "55567558398eeaf5fa24ffe47bcb81b5c4e6763f77e70079b4ee664e3afb182b"
+      "sha256": "1f2713c39ea5f4fe8b7717188b8ae7dce852fe197b495db6414008218ff7d430"
     },
     {
       "path": "atlas-review/content/review-revisions.json",
       "bytes": 12713,
-      "sha256": "960ed186342c96896bf899468ec8b899902d9c76330045933ff7e9fcd508ad1c"
+      "sha256": "c23dc568d01c54ded87bc0e3ab69eadd2a35c56316a60051d852d8fe6e24f193"
     },
     {
       "path": "atlas-review/integration-inputs.json",
-      "bytes": 267439,
-      "sha256": "8bf5045d1117b1d2b2c0b8ed61a26010613802a21a718c1cc504557b9a61f8dd"
+      "bytes": 268507,
+      "sha256": "bde024719a91e52fb260d3aa1912978988a860a58be89b22ff6caa5393635d9d"
     },
     {
       "path": "atlas-review/manifest.json",
       "bytes": 376958,
-      "sha256": "54da5f36af8bf942d88329165f6013e00ea78a54931e7684ec730ee42b90fcdf"
+      "sha256": "560ce9c0d9f7bb88c6e1a37506fd1fe4d0f5346a2d5dc826ef10930bf44e0634"
     },
     {
       "path": "atlas-source/app/review/body/body-decision-editor.tsx",
@@ -220,8 +218,8 @@
     },
     {
       "path": "components/RegionalGuideReviewNotes.tsx",
-      "bytes": 19790,
-      "sha256": "657832636665157bfefc77491586b4ad81fc7f67fd962842b467635fce961ad7"
+      "bytes": 21101,
+      "sha256": "b6a9afdf9534758e98f05754e79a982a0d0d7366c427e7a9ded4775b67181b48"
     },
     {
       "path": "components/RegionalReferenceReviewNotes.tsx",
@@ -429,6 +427,71 @@
       "sha256": "a41edf16bf8f520142767c9f03873fc29a46441b3fe8e3530f6f31c2a2875ecb"
     },
     {
+      "path": "evidence/review-followup-admission.json",
+      "bytes": 5109,
+      "sha256": "6495d7c88005c16055582af0dae915def6dbf4fea1cd9c04dd383867bc1289d7"
+    },
+    {
+      "path": "evidence/review-followup-binding_verification.json",
+      "bytes": 4121,
+      "sha256": "98cae4a616a0f61d20518e1b9bbfbb75d8160adbc5f2476ec5e54e8b3d3600fc"
+    },
+    {
+      "path": "evidence/review-followup-browser-qa.json",
+      "bytes": 1571,
+      "sha256": "e07163a8c2c6a5deda4b9d7fb8f7b8a10e2db181d4b15ce10e1965161b13e0cc"
+    },
+    {
+      "path": "evidence/review-followup-browser-source.json",
+      "bytes": 505,
+      "sha256": "f8d5b11445086135fee4f8421558aadeb8e992029cfe1cb7ef77684a48d513d2"
+    },
+    {
+      "path": "evidence/review-followup-full_project_types.json",
+      "bytes": 451,
+      "sha256": "aa660d5dc12452641deee51bc8623ac6a4a2f5263b566dee1e732554fa4483c8"
+    },
+    {
+      "path": "evidence/review-followup-full_website_build.json",
+      "bytes": 381,
+      "sha256": "4c7b968182632cf89c6acf9e42ac6cf488b4bb20c16bdeb33e700833e0ac5d5d"
+    },
+    {
+      "path": "evidence/review-followup-private_policy_verified.json",
+      "bytes": 421,
+      "sha256": "f08cdee3d8403f99e39aab67960bb0137ccf48bd5b3dcdae1a49890eb8b2be5b"
+    },
+    {
+      "path": "evidence/review-followup-review_followup_tests.json",
+      "bytes": 853,
+      "sha256": "088228c1de4363aadd5b804144b570545d0eed13a716dcf622caf82544e9ae2f"
+    },
+    {
+      "path": "evidence/review-followup-source_finalization_attempt1.json",
+      "bytes": 817,
+      "sha256": "28e3295f595d4f2526a0547d2d6edb57d215d36323f72834d1220f01941f56bb"
+    },
+    {
+      "path": "evidence/review-followup-source_finalization.json",
+      "bytes": 463,
+      "sha256": "3cc5bfd80d22f08c404440485cefeb81d5400c414b2192014cf34f84197935a2"
+    },
+    {
+      "path": "evidence/review-followup-stock_review_bind.json",
+      "bytes": 367,
+      "sha256": "2ffef267a3592f50459e009ab9f4f2f207226850a287c4211a6db6a4b36872f1"
+    },
+    {
+      "path": "evidence/review-followup-stock_review_verify.json",
+      "bytes": 373,
+      "sha256": "5ff29284afc3224ab4a1de2d76f343c4b26931d6466cec8daa47f435f0821447"
+    },
+    {
+      "path": "evidence/review-followup-stock_review_viewer.json",
+      "bytes": 379,
+      "sha256": "551e67d9f671c3644e78c1bf943ad0c85590fa5a8de1278e27adcbe7d142b71d"
+    },
+    {
       "path": "evidence/review-forms-atlas43.json",
       "bytes": 878,
       "sha256": "d56b058e7861073c92d55eed682399ea806fac48d5c83cad128f12ab021a9a13"
@@ -574,9 +637,14 @@
       "sha256": "9192c9af4dc0ad1c6bbe31eb762846dcf1d2af81753e9f6244fd4ea81c8249db"
     },
     {
+      "path": "public/atlas-review-viewer/index.html",
+      "bytes": 1245,
+      "sha256": "1fa072be4aeeea163892d3a9df8f19477f22e3d7c9f4f88965e0f4d8d9365e90"
+    },
+    {
       "path": "public/atlas-review-viewer/manifest.json",
       "bytes": 9033,
-      "sha256": "59a23ba3f4604c5243a493a87fff3938ddd3780a5dd0b5a214616758a2cc040c"
+      "sha256": "ba6586d00813d69deb4f200d714f79515bbe02136fbf7ebdc9d5d69febac72df"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/manifest.json",
@@ -620,8 +688,8 @@
     },
     {
       "path": "scripts/bind-clinical-review.mjs",
-      "bytes": 7431,
-      "sha256": "b04105ce12bb5850451e8c41f491cba6ad45d643ef454eda91885632b33efa4e"
+      "bytes": 7887,
+      "sha256": "851a617f06c9b102447d03d64a94d1b411b3cedd4999f0e5376cce666eff49c1"
     },
     {
       "path": "scripts/import-clinical-review.mjs",
@@ -871,7 +939,7 @@
     {
       "path": "tests/fixtures/current-atlas-delivery.json",
       "bytes": 1777,
-      "sha256": "19f2c1136f221459f3c700c93118a572db2d970e2c7d42fc5b9acc9eb0d9e78a"
+      "sha256": "4f51407c1c206789aa00705bc60d1e7c291f0dfac6f5d9a2226164fe07e3bf36"
     },
     {
       "path": "tests/fixtures/gitattributes-delivery52.raw",
@@ -974,9 +1042,19 @@
       "sha256": "541fc0cfd3fa1a936d97c5b1e38e4576d000d4f396a381f68a8030fdb3360a13"
     },
     {
+      "path": "tests/plexus-review-ui.test.ts",
+      "bytes": 6231,
+      "sha256": "72de9539b837d3e0faf46cdf146ab29d49d4c3b764aa18dd42a7af2460bd22d9"
+    },
+    {
       "path": "tests/radial-eus-current-transition.test.mjs",
       "bytes": 16828,
       "sha256": "d289abe076590281411eb8df6fd8c3d36d72d08ae594e6ce61054cc9cbb584b4"
+    },
+    {
+      "path": "tests/regional-guide-review-ui.test.ts",
+      "bytes": 19904,
+      "sha256": "2706275af45beb11452f4a72a8adc7209af18f54c6964b38ad59b2406c3b40a3"
     },
     {
       "path": "tests/regional-learning-catalogue-history.ts",
@@ -994,6 +1072,11 @@
       "sha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
     },
     {
+      "path": "tests/regional-reference-draft-ui.test.ts",
+      "bytes": 19364,
+      "sha256": "60be257de429b63eb311458092417da29326f737c5b9a9779324b57c8bdcace1"
+    },
+    {
       "path": "tests/review-change-import-history.mjs",
       "bytes": 2481,
       "sha256": "b7ad45d970973a535880a4fb03e4df7c554fca4bfe767c952cc6bf49f75a9877"
@@ -1002,6 +1085,11 @@
       "path": "tests/review-draft-autosave.test.mjs",
       "bytes": 4466,
       "sha256": "da77e68913f3441c7861efacd504ebdd18779da531306ce3cb945ab61c097a56"
+    },
+    {
+      "path": "tests/review-ui-bound-inputs.test.mjs",
+      "bytes": 1350,
+      "sha256": "23e4040d4946cbb336d02317d07446b26f9189bd7b5da467ecaf4983a7d47c5f"
     },
     {
       "path": "tests/review-ui-harness.ts",
@@ -1020,28 +1108,26 @@
     }
   ],
   "removed": [],
-  "scope": "Selected UI/source/test patches and non-patient provenance receipts only. No scans, private reviews, original source references, model payloads, runtime databases, secrets or private generated assets. Not a full, runnable or private-data backup.",
+  "scope": "Selected source/UI/test patches and non-patient verification receipts only. No scan pixels, private reviews, model payloads, runtime databases, secrets or private generated assets. Not a complete, runnable or private-data backup.",
   "proof": {
-    "at": "2026-10-20T20:45:40.065Z",
+    "at": "2026-10-20T21:00:02.738Z",
     "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
     "source": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
     "sourceTree": "3c6834f1c017bd40a317bddcd341cba9139de479",
-    "review": "5efa35df9274100cf9f696db7e1f68816cd99af1dda62aac2242d56cc3728d00",
-    "inputs": 5043,
-    "sourceInputSha256": "3f1f651d2f02aa231d93ea530c723dd3dfbffa3a1706c95e81d2bd31f3fa68f9",
+    "review": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
+    "sourceInputSha256": "c94cad5d71bea03aec67ceefdec636f4ac1deeb0c2f7c3511811f3e057aa6fcd",
+    "namedInputs": 5044,
     "reviewSourceFiles": 1550,
-    "boundInputs": 1700,
-    "models": 137,
-    "modelPaths": 144,
-    "modelBytes": 199072480,
+    "boundInputs": 1707,
+    "viewerFiles": 46,
+    "viewerPackages": 22,
     "geometryAndAnatomyEvidenceUnchanged": true,
-    "websiteTests": 44,
-    "atlasTests": 43,
+    "followupTests": 44,
     "fullTypes": true,
     "fullProductionBuild": true,
-    "privatePolicyAudience": "administrator-review",
+    "privateAudience": "administrator-review",
     "permissionsExpanded": false,
-    "scope": "One explicit confirmation per independent review track with every original criterion retained, secure in-memory reviewer details and guarded draft-only autosave. Next actions where deterministic queue adapters exist. Regional guide remains manual-save; head packet next-item adapters remain future work. No actual review decision written.",
+    "scope": "Guided-review in-progress-only draft autosave; cancellation, exact-source and uncertainty guards. All nine native streamlined interfaces explicitly source-bound. Original review criteria retained. Synthetic desktop1440/1280 form QA: one draft-only write in memory, zero actual review decisions. Prior Atlas43/Website44 source-focused checks retained, not recombined as disjoint totals.",
     "canonicalInstalled": false,
     "ownerFormsRefreshed": false,
     "clinicalApproval": false,

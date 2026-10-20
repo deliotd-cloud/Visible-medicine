@@ -1,6 +1,6 @@
 {
   "sourceCommit": "98d7f17e2d120b031633e59e47fc50c82d44b2d0",
-  "sha256": "5efa35df9274100cf9f696db7e1f68816cd99af1dda62aac2242d56cc3728d00",
+  "sha256": "b2bd971b5bfefdd0760f8f3c8785e372276e15dac9cc293ac8fde4cdfb7dcb54",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -6427,6 +6427,14 @@
       "sha256": "436938101cddafcce4dcfe5d89d77941b8df03bd07d35ad176a97719d4c4d63f"
     },
     {
+      "path": "components/HeadCtBoneDecisionForm.tsx",
+      "sha256": "dbdee9dfea98c296385e78e76fa077903ec6b8766acbb10ccd40774a458f2b9b"
+    },
+    {
+      "path": "components/HeadCtBoneTeachingDecisionForm.tsx",
+      "sha256": "84b81b9782c1fce7f6dc864b52affc433fcbe40792c1045e93482efaa4e5be27"
+    },
+    {
       "path": "components/HeadCtFacialComparisonReview.tsx",
       "sha256": "c1388815385c5394794d772e6a40ca517ac14c2520a7754ebb8d0a519c0ffd98"
     },
@@ -6467,6 +6475,14 @@
       "sha256": "cdcd9ac2174316fc63544b81695cac0469ce126ffa73825a2cfb418982b2f909"
     },
     {
+      "path": "components/HeadMriReviewNotes.tsx",
+      "sha256": "1a23659f536b7d8f2c8dd4a3ae4983cbda49575011b1ea7a3ba7d3a3c07e510c"
+    },
+    {
+      "path": "components/HeadPairedDecisionForm.tsx",
+      "sha256": "a05c1a33515474ff79bd5a0180cbd2c4013364f8b31a5da59074e5e83a8198c4"
+    },
+    {
       "path": "components/HeadPracticeSummaryDownload.tsx",
       "sha256": "1a87ea9f003636791f53fb65ba684967110957bda04a78e6015a6b3bb598730b"
     },
@@ -6489,6 +6505,18 @@
     {
       "path": "components/ImagingPaneNavigation.tsx",
       "sha256": "8103bcbfd6df323f3d0600fb3820bdf3843ed5f8381d50a65f00347e1e2d40d8"
+    },
+    {
+      "path": "components/PlexusReviewWorksheet.tsx",
+      "sha256": "9eb612a0a5a117eca2817072c644d17b805381933f4a06bdaa3d17ebaec99478"
+    },
+    {
+      "path": "components/RegionalGuideReviewNotes.tsx",
+      "sha256": "b6a9afdf9534758e98f05754e79a982a0d0d7366c427e7a9ded4775b67181b48"
+    },
+    {
+      "path": "components/RegionalReferenceReviewNotes.tsx",
+      "sha256": "2f3fe5ed45b56c7c40ee2d21755967f05360bbf477ccccdf5114d76a8470f1a5"
     },
     {
       "path": "components/review-ui-variants.css",
@@ -6772,7 +6800,7 @@
     },
     {
       "path": "scripts/bind-clinical-review.mjs",
-      "sha256": "b04105ce12bb5850451e8c41f491cba6ad45d643ef454eda91885632b33efa4e"
+      "sha256": "851a617f06c9b102447d03d64a94d1b411b3cedd4999f0e5376cce666eff49c1"
     },
     {
       "path": "scripts/build-clinical-review-viewer.mjs",
