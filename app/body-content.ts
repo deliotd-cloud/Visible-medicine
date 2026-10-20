@@ -236,6 +236,7 @@ import { wristUltrasoundLesson } from '../lib/wrist-ultrasound';
 import { abdominalOrganQuizLesson } from '../lib/abdominal-organ-quiz';
 import { thoracoabdominalOrganQuizLesson } from '../lib/thoracoabdominal-organ-quiz';
 import { pelvicOrganQuizLesson } from '../lib/pelvic-organ-quiz';
+import { tonguePalateQuizLesson } from '../lib/tongue-palate-quiz';
 import { pelvicDuctQuizLesson } from '../lib/pelvic-duct-quiz';
 import { hepatobiliaryQuizLesson } from '../lib/hepatobiliary-quiz';
 import { chestWallQuizLesson } from '../lib/chest-wall-quiz';
@@ -536,6 +537,8 @@ export function bodyLesson(s: BodyStructure, tab: ContentTab): ContentLesson {
   if (brainConnectionsQuiz) return brainConnectionsQuiz;
   const pelvicOrganQuiz = pelvicOrganQuizLesson(s, tab);
   if (pelvicOrganQuiz) return pelvicOrganQuiz;
+  const tonguePalateQuiz = tonguePalateQuizLesson(s, tab);
+  if (tonguePalateQuiz) return tonguePalateQuiz;
   const pelvicDuctQuiz = pelvicDuctQuizLesson(s, tab);
   if (pelvicDuctQuiz) return pelvicDuctQuiz;
   const hepatobiliaryQuiz = hepatobiliaryQuizLesson(s, tab);

@@ -1,26 +1,46 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T06:45:31.121Z",
+  "at": "2026-10-20T08:16:33.613Z",
   "sourceIdentity": {
-    "product": "Atlas source delta: exact Teaching review entry",
+    "product": "Atlas source: tongue/palate draft quizzes and checkout evidence reliability",
     "baseline": "f5097af8493701d64a8e2a2b5797df380f3b348a",
-    "prior": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
-    "head": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
-    "tree": "97957a35788028b319df4f5d60c68a95e71320d7",
+    "prior": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
+    "head": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+    "tree": "6da62962106cfab9419b09618547a9da5e3aafc6",
     "canonicalInstalled": false
   },
-  "parent": "be02fde32eadef1c336a4709cdfad739b310d210",
-  "gitParent": "be02fde32eadef1c336a4709cdfad739b310d210",
+  "parent": "fdcb08a7ddbab8792a17af38fb668e6e5b48f233",
+  "gitParent": "fdcb08a7ddbab8792a17af38fb668e6e5b48f233",
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 4279,
+      "sha256": "863361695ed4abecebe980ed5ccc41db014703561b6eb25e27fc1bd7fda6f7fa"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1467,
+      "sha256": "aec337bb1ad6495fbc94035e7e00e7bef9c0b2b7419ed04b77f69de5920ec1ea"
+    },
+    {
+      "path": "LICENSES/BODYPARTS3D_FULL_BODY.md",
+      "bytes": 20504,
+      "sha256": "5c958b307fa0d041561c99cabd4895045b81381de214ea571958a736ffedb25b"
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
       "path": "LICENSES/THIRD_PARTY_NOTICES.md",
-      "bytes": 351954,
-      "sha256": "e18835acc953f9d80705e42db7bb907415ea64050f266b2d930eed179e51c3d4"
+      "bytes": 352840,
+      "sha256": "2bbe9e89d6709b37c68f2e934691916d2a687db8f1d7be8c373b7b39922c13fa"
     },
     {
       "path": "app/body-content.ts",
-      "bytes": 82301,
-      "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
+      "bytes": 82477,
+      "sha256": "e4485d4ac11ba1f83ed81a57e2570b0242326f62864d7bdc7681574fe5f5a8a6"
     },
     {
       "path": "app/review/body/body-decision-editor.tsx",
@@ -64,13 +84,13 @@
     },
     {
       "path": "content/body-renderer-revision.json",
-      "bytes": 213951,
-      "sha256": "7df1105f550d597fbc867df93e5a7725ade4de05263d1621fd6984dd459b9629"
+      "bytes": 214383,
+      "sha256": "03591c298af0a736c2c1b66dc10507806d36d9f88993eb285eb1a53b3a827a24"
     },
     {
       "path": "content/body-review-display-pins.json",
       "bytes": 203217,
-      "sha256": "92b3debfbd966e4d49d7fe899763032baa4a87a373fbc8c5590f61f94efb9f4a"
+      "sha256": "5f8997053fc497f6f6284fa56bfe6270ef802963534ee652b5923f11b4c66f03"
     },
     {
       "path": "content/corpus-spongiosum-xray-v2.pins.json",
@@ -1548,9 +1568,24 @@
       "sha256": "19f318f4d3e342ee0f1b68c7232cbf9249e828fa9802d264a20f0aa6cd9eaff0"
     },
     {
+      "path": "content/regional-teaching/head-neck.json",
+      "bytes": 2431462,
+      "sha256": "94992de62a724b2be250abffd347c14dafd8bcaf86ec4edde730e533ec292d2b"
+    },
+    {
       "path": "content/regional-teaching/pelvis.json",
       "bytes": 451191,
       "sha256": "5eef430cbd99143ad46911b8bbbd6ad7d997ba19f66fd92d846f81fc269b517a"
+    },
+    {
+      "path": "content/tongue-palate-quiz-pins.json",
+      "bytes": 14819,
+      "sha256": "150fae10b5b29dd10659040a820de8ff0a9eeccd7012406b2d0ed0bd9200ab32"
+    },
+    {
+      "path": "content/tongue-palate-quiz.ts",
+      "bytes": 1628,
+      "sha256": "41a5ceba9749ddfbfdfc471776cb863afaf073cfa5da321c582cc8fee3262da0"
     },
     {
       "path": "docs/CORPUS_SPONGIOSUM_XRAY_V2.md",
@@ -1563,9 +1598,19 @@
       "sha256": "a64b052af8c1bdad5e7151facac9c1cc0fa42ee45afef27708fba296e520fa76"
     },
     {
+      "path": "docs/SOURCE_EVIDENCE_CHECKOUT.md",
+      "bytes": 1142,
+      "sha256": "3647bbd72e665d0b2e7ecff9f76bcf5ebade68fdea4d3d24a6741a7b34e3652e"
+    },
+    {
+      "path": "docs/TONGUE_PALATE_QUIZ.md",
+      "bytes": 2673,
+      "sha256": "2cf3ed1f92bb5c9319576923601b032cf29230f8c110b446b0730766e8e88199"
+    },
+    {
       "path": "docs/first-release-review-pilot.json",
       "bytes": 70288,
-      "sha256": "73ce3996c54ace7df6f4527495dfecc76938be76982e38381d3ec723541ec822"
+      "sha256": "8d3ddcbedb4b44ae6fe1c9c1c852257a73f0a1893e5bf2ca1f7fa30393818e8d"
     },
     {
       "path": "lib/corpus-spongiosum-xray-v2.ts",
@@ -1583,9 +1628,14 @@
       "sha256": "16e5d5bad9ae7d4c6777daffefd41c8656ea3677a88f6852ebd6d3b6b4a5cf36"
     },
     {
+      "path": "lib/tongue-palate-quiz.ts",
+      "bytes": 1672,
+      "sha256": "e997a3d091f36f16f3a7c61967dffc966333adcec942034d266c5047e08d5833"
+    },
+    {
       "path": "package.json",
-      "bytes": 86057,
-      "sha256": "ce479161e3bab272c0694a111184a460c111a6940231e24bc6799841357d4c49"
+      "bytes": 86270,
+      "sha256": "0ebcc8dab3d453a869cf4f9c37515c1c190829c8c9a127e1a9e83aba41eeb091"
     },
     {
       "path": "scripts/celiac-display-epoch-bridge.mjs",
@@ -1621,6 +1671,11 @@
       "path": "scripts/pin-pica-clinical.mjs",
       "bytes": 3456,
       "sha256": "0e182ccd0a46a89aaee733f00e5970cd52af65e1fcf384e419d7ee7b721ab38c"
+    },
+    {
+      "path": "scripts/pin-tongue-palate-quiz.mjs",
+      "bytes": 2527,
+      "sha256": "8d1489f9255da64c36632383db6e7314af5390fabb9271437cf286d8543b3a99"
     },
     {
       "path": "scripts/post-foot-author-history.mjs",
@@ -1678,6 +1733,16 @@
       "sha256": "e29ce23cbda15773b8e39204d3c1a085592f2c084b86ed939fe38f54c3123d15"
     },
     {
+      "path": "scripts/test-source-evidence-checkout.mjs",
+      "bytes": 1737,
+      "sha256": "b901a5846b608ee5d06e9a6fd66e9ba1cec2f70d0eca46f6e864f44f32a61100"
+    },
+    {
+      "path": "scripts/test-tongue-palate-quiz.mjs",
+      "bytes": 17448,
+      "sha256": "9aa67a950d6f0bd4d7ba6f119361f6c69f810d801e3195ceeb14d07e6326d57d"
+    },
+    {
       "path": "scripts/test-tour-discovery-escape.mjs",
       "bytes": 3252,
       "sha256": "79f57d3071762cf03aaa394fffa76b6135d32eb2a994f75bdcd365edb1b51819"
@@ -1694,54 +1759,126 @@
     }
   ],
   "removed": [],
-  "scope": "Selected screened Atlas text recovery delta carrying prior325paths and13review-entry/registered-test/derived-unsigned paths. No geometry/teaching/source identity/access/decision mutation. Stock revision and unsigned pointer regeneration requires fresh exact review, not approval transfer. Source-only, not standalone/full/private-data backup; no raw canonical Git ancestry/scans/masks/mesh payloads/deps/credentials/public deployment.",
+  "scope": "Selected screened Atlas text recovery carrying prior336source paths plus this bounded teaching/test/checkout/unsigned-pointer batch and existing MIT/BodyParts3D credit/licence. No raw canonical Git ancestry, scans, masks, private patient data, model payloads, runtime databases, dependencies or credentials. Source-only, not standalone/full/private-data backup; no deployment or approval.",
   "proof": {
-    "schema": "vm-review-entry-atlas-source-acceptance/1",
-    "at": "2026-10-20T06:45:29.769Z",
-    "source": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
-    "sourceTree": "97957a35788028b319df4f5d60c68a95e71320d7",
-    "parentSource": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+    "schema": "vm-tongue-palate-source-acceptance/1",
+    "at": "2026-10-20T08:16:31.842Z",
+    "source": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+    "sourceTree": "6da62962106cfab9419b09618547a9da5e3aafc6",
+    "parentSource": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
     "paths": [
-      "app/review/body/body-decision-editor.tsx",
-      "app/review/body/page.tsx",
-      "app/review/body/review-dashboard.tsx",
-      "app/review/page.tsx",
-      "app/review/review-dashboard.tsx",
-      "app/review/specimens/page.tsx",
-      "app/review/specimens/workspace.tsx",
+      ".gitattributes",
+      "LICENSES/THIRD_PARTY_NOTICES.md",
+      "app/body-content.ts",
       "content/body-renderer-revision.json",
+      "content/body-review-display-pins.json",
+      "content/regional-teaching/head-neck.json",
+      "content/tongue-palate-quiz-pins.json",
+      "content/tongue-palate-quiz.ts",
+      "docs/SOURCE_EVIDENCE_CHECKOUT.md",
+      "docs/TONGUE_PALATE_QUIZ.md",
       "docs/first-release-review-pilot.json",
-      "lib/review-entry-track.ts",
+      "lib/tongue-palate-quiz.ts",
       "package.json",
-      "scripts/test-review-entry-track.mjs",
-      "scripts/test-review-sign-in.mjs"
+      "scripts/pin-tongue-palate-quiz.mjs",
+      "scripts/test-source-evidence-checkout.mjs",
+      "scripts/test-tongue-palate-quiz.mjs"
     ],
-    "sourcePaths": 336,
-    "commitReceiptSha256": "bbc0f20be4815f4779b9ea3722b5a41e121546b53d2792f4873216db3e568a78",
-    "progress": "Validated t=teaching initial navigation preference reaches source shoulder/body/specimen pages and initial component state; nested existing behavior retained. No-query/invalid/array remains geometry. Body forwarding and all existing guards/selection/decisions/fetch/source identity are otherwise unchanged. Test is registered in clinical-review alias.",
-    "checks": {
-      "clinicalReviewAlias": true,
-      "bodyReviewAndDirtyLeaveDialog": true,
-      "bodyDecisions": true,
-      "nestedReview": true,
-      "specimenReview": true,
-      "fullTypes": true,
-      "newCompiledPageComponentHarness": true,
-      "fullSuite": false
-    },
-    "sourceRenderer": {
-      "sha256": "dab5eadb381b190323e7904c3158067407c75da790b80bcd9e2cf92c30bd5fb8",
-      "changedDependencies": [
-        "package.json"
+    "selectedSourcePaths": 349,
+    "checks": [
+      {
+        "label": "PIN_CHECK",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/PIN_CHECK.json",
+        "sha256": "50b566d6f72519b9a26d7b3cecbd96b6e81e516a1b827a91ce832afbf053d903",
+        "logSha256": "5f1d8b41af7d52de4f04e63acbd70e09bf7cfe05aa8fe4360a02a91efe5355d3"
+      },
+      {
+        "label": "QUIZ_FINAL_CURRENT",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/QUIZ_FINAL_CURRENT.json",
+        "sha256": "042bb3847ce21f1a9df41c7a06b4853dc470e9c5a88deb70c1da4068c7c32fdf",
+        "logSha256": "2f410d1599a12a13bcb2a29895f12c0cf3024d4a9598a6bb1af086d32a17606f"
+      },
+      {
+        "label": "ATLAS_TYPES",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/ATLAS_TYPES.json",
+        "sha256": "d1e7cea849ae311404bdc4c1b7e11c1c9624a3c5504c0521a0a054c18f03241d",
+        "logSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "SOURCE_RENDERER_FINAL",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/SOURCE_RENDERER_FINAL.json",
+        "sha256": "f05edb3e28b10ad52d029ab3f2da18579dab96c8783945f1ff31ca52a1f098e0",
+        "logSha256": "d01dd845003fb9a9dfd415776bc0bf341d471e37247f732d926a386c1aaabb6d"
+      },
+      {
+        "label": "SOURCE_REVISIONS_FINAL",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/SOURCE_REVISIONS_FINAL.json",
+        "sha256": "58b3872c141c1eccd6861c87556bf5f9e07c6be6aeabc49ce1a6ea47070256d8",
+        "logSha256": "2ab7b1f4dcfd3004f4061d681b250989eb9298f5962de099aa85b76e402f5d34"
+      },
+      {
+        "label": "UNSIGNED_PILOT_FINAL",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/UNSIGNED_PILOT_FINAL.json",
+        "sha256": "1d4bc2310f11bb6f1dba29d39a0ab62eb1070645f253f68cfb7d59c7e36e4a0b",
+        "logSha256": "a9b6d9fb11b6d4ef7d638370d930fc60de71514ea931d6f284113a9013713b85"
+      },
+      {
+        "label": "REGISTERED_FINAL",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/REGISTERED_FINAL.json",
+        "sha256": "7e62f746112ee096859a907036b1e942c59df02086ba689b84de1b2f5b4f9f47",
+        "logSha256": "c7c7c34cf6dcfd46dcf8ef2bfbb66e9d9cbc3538660663fbe26fae628afbb3d5"
+      },
+      {
+        "label": "REGIONAL_CHECK",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/REGIONAL_CHECK.json",
+        "sha256": "c7068df4613438cbba125b3e32987610ef38dea68ee37bdf2a628ea90c1cd8a6",
+        "logSha256": "7ad9c6d59d2a609667b9c2ab4adf5b23dabcefde615dcd236c9128ae04e81e7d"
+      },
+      {
+        "label": "CHECKOUT_FILTERS",
+        "receipt": "F:/VisibleMedicine/staging/20261020-tongue-palate/CHECKOUT_FILTERS.json",
+        "sha256": "707f658f17e5e1a044238dcc319ef8d9cfd58642ee150a49b54dbb0b991f0da3",
+        "logSha256": "91ccf3dbb3a598d82398bcbfdf4de238779adf2db7c376109b5ad6c97191a5f6"
+      }
+    ],
+    "selectedRunManifest": "F:/VisibleMedicine/staging/20261020-tongue-palate-source/.local/test-logs/2026-10-20T08-12-51.258Z-232972-4dc45b5f.json",
+    "selectedRunManifestSha256": "e41dcfc154ee6a4369767f2ee541cb06a6649b8437dfa7bdc5fc3adbeb93efe1",
+    "quiz": {
+      "changed": 8,
+      "unchanged": 9928,
+      "rejected": 344,
+      "groups": [
+        "genioglossus",
+        "hyoglossus",
+        "levator",
+        "tensor"
       ],
-      "geometryAndTeachingUnchanged": true,
-      "requiresFreshExactReview": true
+      "bindingRejected": 56,
+      "rendered": 8,
+      "interacted": 8,
+      "examGuarded": 8,
+      "clinicalApproval": false
     },
-    "retainedFailures": "First alias correctly refused stale unsigned pilot/body-renderer after package test registration. Stock generators refreshed unsigned pointers; no decisions read/written. Original sign-in test then exposed pre-existing missing useLayoutEffect shim and stale body error-slot7; exact old source already used layout effect/pending-leave. Added noop layout shim and injected the actual error slot8, preserving every assertion/other fixture; retained both failing logs and final clinical alias pass. Original new test image stub warning corrected only by omitting unoptimized from nativeimg.",
-    "limits": "Source only, not yet Website/browser/GPU/full-suite/clinical/privacy/registration/release acceptance. No raw canonical ancestry/private patient data/geometry payloads uploaded. Canonical Atlas and Website/owner preview3000 remain unchanged; source candidate separately versioned.",
+    "changedReviewIds": [
+      "vm:anatomy:body:head-neck:left:muscle:left-genioglossus",
+      "vm:anatomy:body:head-neck:left:muscle:left-hyoglossus",
+      "vm:anatomy:body:head-neck:left:muscle:left-levator-veli-palatini",
+      "vm:anatomy:body:head-neck:left:muscle:left-tensor-veli-palatini",
+      "vm:anatomy:body:head-neck:right:muscle:right-genioglossus",
+      "vm:anatomy:body:head-neck:right:muscle:right-hyoglossus",
+      "vm:anatomy:body:head-neck:right:muscle:right-levator-veli-palatini",
+      "vm:anatomy:body:head-neck:right:muscle:right-tensor-veli-palatini"
+    ],
+    "progress": "Four original factual questions across eight exact left/right muscle placements replace generated identification. All other 9928 body placements, shoulder lessons, dissection recipes and geometry unchanged. Actual quick-check feedback/reset/exam paths and source binding/schema negatives verified. Review display pins updated for exactly those eight teaching revisions; unsigned renderer/pilot pointers regenerated.",
+    "checkoutRepair": "Pinned inventory and three audit reports retain exact parent SHA values under explicit -text rules; nested generated links retain LF. Seven-path checkout filter regression passes core.autocrlf=true,false,input; no expected source hash or hold policy changed.",
+    "licensing": "Original project text and factual citations only; copyrighted TTU table/media and current OpenStax NC text/art/assessments excluded. No new asset, model, dependency, font, service or fee. Existing source-model credit and licence retained; no all-assets legal certification.",
+    "retainedFailures": "Initial test fixture accidentally retained a mutated expected array; stored expectation cloned while preserving mutation checks. Component VM needed native structuredClone. Build gate correctly refused eight stale unsigned display pins; standard source generator refreshed only those. Fresh Windows checkout exposed CRLF mismatches in existing pinned evidence; expected committed hashes/policy unchanged, explicit checkout attributes and regression added. Original logs retained.",
+    "limits": "Source candidate only; Website integration/browser/GPU/full-suite/clinical/privacy/spatial-registration/release acceptance not claimed. Owner preview/editor and canonical repositories unchanged. Source-only screened recovery, not whole-project, standalone or private-data backup.",
     "canonicalInstalled": false,
     "clinicalApproval": false,
-    "publicDeployment": false
+    "publicDeployment": false,
+    "fullSuitePass": false,
+    "goal": "active full scope"
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected screened Atlas text recovery delta carrying prior325paths and13review-entry/registered-test/derived-unsigned paths. No geometry/teaching/source identity/access/decision mutation. Stock revision and unsigned pointer regeneration requires fresh exact review, not approval transfer. Source-only, not standalone/full/private-data backup; no raw canonical Git ancestry/scans/masks/mesh payloads/deps/credentials/public deployment.
+Selected screened Atlas text recovery carrying prior336source paths plus this bounded teaching/test/checkout/unsigned-pointer batch and existing MIT/BodyParts3D credit/licence. No raw canonical Git ancestry, scans, masks, private patient data, model payloads, runtime databases, dependencies or credentials. Source-only, not standalone/full/private-data backup; no deployment or approval.

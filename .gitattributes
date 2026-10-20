@@ -1,0 +1,80 @@
+# Retain the official dataset evidence byte-for-byte, including line endings.
+LICENSES/bodyparts3d-v4-index/*.txt -text
+# Source-hold evidence hashes the committed inventory bytes, not a CRLF variant.
+content/source-inventory.json -text
+docs/limbic-landmark-source-audit.json -text
+docs/pelvic-vein-source-audit.json -text
+docs/deep-leg-vein-source-audit.json -text
+# The generated nested-link verifier compares its canonical LF serialization.
+content/nested-review-bindings.json text eol=lf
+# Preserve original OBJ bytes/whitespace; do not normalize or render huge diffs.
+content/prototypes/cricothyroid/source/*.obj -text -diff
+content/prototypes/gingiva/source/*.obj -text -diff
+# Pinned independent-specimen evidence and original binary source surfaces.
+LICENSES/um-lower-limb-v1-2/* -text
+content/prototypes/um-knee/source/*.stl -text -diff
+content/sources/um-limb/*.stl -text -diff
+# Exact legacy source hashes and downloadable licence evidence survive checkouts.
+content/sources/bodyparts3d-v3-abdominal-wall/* -text
+content/sources/bodyparts3d-v3-abdominal-wall/*.obj -diff
+public/models/bodyparts3d-v3/abdominal-wall/* -text
+# Byte-pinned comparative-source metadata and original cross-tree audit evidence.
+content/reference-male-inventory.json -text
+content/prototypes/reference-cross-tree/*/*.obj -text -diff
+docs/reference-cross-tree-audit.json -text
+content/sources/collicular-brachia/*.obj -text -diff
+docs/collicular-brachia-source-audit.json -text
+content/sources/cubital-veins/*.obj -text -diff
+docs/cubital-vein-source-audit.json -text
+content/sources/genicular-arteries/*.obj -text -diff
+docs/genicular-artery-source-audit.json -text
+content/sources/inferior-thyroid-arteries/*.obj -text -diff
+docs/inferior-thyroid-source-audit.json -text
+content/prototypes/muscle-part-condition/*.obj -text -diff
+docs/muscle-part-condition-audit.json -text
+content/sources/deferent-ducts/*.obj -text -diff
+docs/deferent-duct-source-audit.json -text
+content/sources/hra-pelvis/*.json -text
+# Official crosswalk retains byte-exact CRLF and source whitespace.
+content/sources/hra-pelvis/*.csv -text -diff
+docs/hra-pelvic-source-audit.json -text
+# Original renal source metadata/crosswalk and byte-exact audit evidence.
+content/sources/hra-renal/*.json -text
+content/sources/hra-renal/*.csv -text -diff
+docs/hra-renal-source-audit.json -text
+content/sources/cranial-arteries/*/*.obj -text -diff
+docs/cranial-artery-source-audit.json -text
+content/sources/elbow-arteries/*.obj -text -diff
+docs/elbow-artery-source-audit.json -text
+content/prototypes/penile-source-condition/*.obj -text -diff
+content/sources/corpus-spongiosum/*.obj -text -diff
+content/sources/short-ciliary/*.obj -text -diff
+content/sources/anterior-cardiac-vein/*.obj -text -diff
+docs/anterior-cardiac-vein-source-audit.json -text
+docs/penile-source-audit.json -text
+# Immutable knee-source audit and admission disposition must survive checkout.
+docs/tibial-recurrent-source-audit.json -text
+docs/tibial-recurrent-source-disposition.json -text
+# Byte-pinned renal candidate audit and projection evidence.
+docs/renal-segmental-source-audit.json -text
+docs/reviews/renal-segmental-*.json -text
+# Exact dorsal penile candidate sources and reproducible review evidence.
+content/prototypes/dorsal-penile-source-condition/*.obj -text -diff
+content/prototypes/dorsal-penile-source-condition/*.json -text
+docs/dorsal-penile-source-audit.json -text
+docs/reviews/dorsal-penile-source.json -text
+# Exact pelvic-floor measurement and source projection evidence.
+docs/reviews/pelvic-floor/*.json -text
+docs/reviews/pelvic-floor-context/*.json -text
+# Byte-pinned source sections and reviewer-only skin candidate metadata.
+docs/skin-head-sections-20260926.json -text
+content/skin-review-candidate.json -text
+# Exact source pins and immutable CT teaching transition evidence.
+content/craniofacial-calcification-ct-pins.json -text
+content/craniofacial-calcification-ct.transition.json -text
+# Preserve the exact source-bound bilateral forearm teaching identities.
+content/median-antebrachial-xray-pins.json -text
+# Exact MRI enhancement bytes and immutable original theorem survive checkout.
+content/orbital-support-mri.ts -text
+lib/orbital-support-mri.ts -text
+scripts/fixtures/validate-orbital-support-mri-original.mjs -text
