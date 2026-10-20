@@ -100,15 +100,15 @@ test('6036 teaching upgrade keeps actual layout, worksheet and navigation inputs
  assert.throws(()=>validateCurrentAtlasDelivery({pin:JSON.parse(read('tests/fixtures/tongue-palate-a247/current-atlas-delivery.json.raw'))}));
 });
 
-test('current 87ed delivery remains separately bound to the clean Atlas source',()=>{
+test('current delivery remains separately bound to the clean Atlas source',()=>{
  const current=validateCurrentAtlasDelivery();
- assert.equal(current.source,'87ed7e343260c7df48a40d53503f25bbfd34cfa5');
- assert.equal(current.sourceTree,'bfcfa898ace1d25083f21b681274c5bc816564d7');
- assert.equal(current.reviewIntegration,'b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5');
- assert.equal(current.reviewSourceFiles,1548);
+ assert.equal(current.source,'485df97c2530e8e81a8d39a5ee61073ce76d93db');
+ assert.equal(current.sourceTree,'f5af5162af89bae05b9ece240f6f158401c5bd15');
+ assert.equal(current.reviewIntegration,'57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703');
+ assert.equal(current.reviewSourceFiles,1550);
  const bindingBytes=read('atlas-review/integration-inputs.json');
- assert.equal(sha(bindingBytes),'acbad30ecf452317221384c708022b3f5f2d4c3e8042ca82e572f91507bb43d7');
- assert.equal(JSON.parse(bindingBytes).inputs.length,1696);
+ assert.equal(sha(bindingBytes),'44757c9c194681de4098fb3c509c2013ac20d2295a99af676f14a716f199a5a9');
+ assert.equal(JSON.parse(bindingBytes).inputs.length,1707);
  currentAtlasDeliveryRoot();
 });
 

@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-20T23:14:59.797Z",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
+  "namedInputs": 5053,
+  "changedNative": [
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/clinical-review-desktop-layout.test.mjs"
+  ],
+  "addedTestEvidence": [
+    "tests/fixtures/current-delivery-before-inbox485/current-atlas-delivery.test.mjs.raw",
+    "tests/fixtures/current-delivery-before-inbox485/ui-teaching-current-delivery.test.mjs.raw",
+    "tests/fixtures/current-delivery-before-inbox485/clinical-review-desktop-layout.test.mjs.raw",
+    "tests/current-delivery-admission-485.test.mjs"
+  ],
+  "unchangedPriorInputs": 5046,
+  "originalsByteExact": true,
+  "onlyCurrentAdmissionSeamsChanged": true,
+  "focusedTests": 56,
+  "focusedPass": 56,
+  "failedOriginal": {
+    "label": "CURRENT_DELIVERY_AND_REVIEW_UI",
+    "command": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "--strip-types",
+      "--test",
+      "--test-concurrency=1",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/ui-teaching-current-delivery.test.mjs",
+      "tests/clinical-review-desktop-layout.test.mjs",
+      "tests/clinical-review-inbox-ui.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "log": "F:\\VisibleMedicine\\staging\\20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.log",
+    "logSha256": "d669105fc4c1b2f76642c8cb6b1049be54ce86cd9e7e473b9755d36d23208d97",
+    "footer": [
+      "ℹ tests 52",
+      "ℹ pass 48",
+      "ℹ fail 4",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "canonicalInstalled": false
+  },
+  "runtimeBuildAndTypesReused": "Exact unchanged executable inputs from 20261020-inbox-material-website-integration; not a new build or full-suite pass",
+  "canonicalInstalled": false,
+  "ownerFormsRefreshed": false,
+  "clinicalApproval": false,
+  "fullSuitePass": false
+}

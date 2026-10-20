@@ -1,0 +1,26 @@
+{
+  "label": "CURRENT_DELIVERY_AND_REVIEW_UI",
+  "command": "C:\\Program Files\\nodejs\\node.exe",
+  "args": [
+    "--strip-types",
+    "--test",
+    "--test-concurrency=1",
+    "tests/current-atlas-delivery.test.mjs",
+    "tests/ui-teaching-current-delivery.test.mjs",
+    "tests/clinical-review-desktop-layout.test.mjs",
+    "tests/clinical-review-inbox-ui.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.log",
+  "logSha256": "d669105fc4c1b2f76642c8cb6b1049be54ce86cd9e7e473b9755d36d23208d97",
+  "footer": [
+    "ℹ tests 52",
+    "ℹ pass 48",
+    "ℹ fail 4",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

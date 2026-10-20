@@ -1,0 +1,51 @@
+{
+  "originals": [
+    {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "fixture": "tests/fixtures/current-delivery-before-inbox485/current-atlas-delivery.test.mjs.raw",
+      "sha256": "e3eea7022e2154634b51f44d5d94a9dc9701ee9fb527f7c6f412f1aa7cdd169f"
+    },
+    {
+      "path": "tests/ui-teaching-current-delivery.test.mjs",
+      "fixture": "tests/fixtures/current-delivery-before-inbox485/ui-teaching-current-delivery.test.mjs.raw",
+      "sha256": "78919d9a82605a2c24bb4a490e0a5e5cc04549d15e2990107c3c7618dfec2189"
+    },
+    {
+      "path": "tests/clinical-review-desktop-layout.test.mjs",
+      "fixture": "tests/fixtures/current-delivery-before-inbox485/clinical-review-desktop-layout.test.mjs.raw",
+      "sha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a"
+    }
+  ],
+  "bindingFileSha256": "44757c9c194681de4098fb3c509c2013ac20d2295a99af676f14a716f199a5a9",
+  "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
+  "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
+  "reviewImports": 1550,
+  "boundInputs": 1707,
+  "originalFailure": {
+    "label": "CURRENT_DELIVERY_AND_REVIEW_UI",
+    "command": "C:\\Program Files\\nodejs\\node.exe",
+    "args": [
+      "--strip-types",
+      "--test",
+      "--test-concurrency=1",
+      "tests/current-atlas-delivery.test.mjs",
+      "tests/ui-teaching-current-delivery.test.mjs",
+      "tests/clinical-review-desktop-layout.test.mjs",
+      "tests/clinical-review-inbox-ui.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "log": "F:\\VisibleMedicine\\staging\\20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.log",
+    "logSha256": "d669105fc4c1b2f76642c8cb6b1049be54ce86cd9e7e473b9755d36d23208d97",
+    "footer": [
+      "ℹ tests 52",
+      "ℹ pass 48",
+      "ℹ fail 4",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "canonicalInstalled": false
+  },
+  "scope": "Current-admission seams only; every earlier epoch fixture/assertion remains unmodified. Original whole tests remain byte-exact."
+}

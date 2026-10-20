@@ -1,19 +1,17 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T23:07:31.425Z",
+  "at": "2026-10-20T23:15:03.305Z",
   "sourceIdentity": {
     "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
     "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-    "namedInputs": 5049,
-    "originalAdmission": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
-    "focusedTests": 3,
+    "namedInputs": 5053,
+    "focusedTests": 56,
     "runtimeUnchanged": true,
     "canonicalInstalled": false,
     "fullSuitePass": false
   },
-  "parent": "89a5e82bbab80d9d30b1f8b887bccdcdb588b311",
-  "gitParent": "89a5e82bbab80d9d30b1f8b887bccdcdb588b311",
+  "parent": "22a6b04a383e1c1e1cf56d9b035d79fbc0362366",
+  "gitParent": "22a6b04a383e1c1e1cf56d9b035d79fbc0362366",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -414,6 +412,36 @@
       "path": "evidence/20261021-ct-delivery-history-repair/SOURCE_INPUTS_AFTER.json",
       "bytes": 868413,
       "sha256": "9901c70f1e6b148c5b6eae4bdccfb2f8a95051a458a75904b749e0f7234120ab"
+    },
+    {
+      "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_AND_REVIEW_UI.json",
+      "bytes": 769,
+      "sha256": "2358d74b7d8558de66a2bd4a0740294b0bee0c1b507aaf795294d1701f954f9d"
+    },
+    {
+      "path": "evidence/20261021-release-current-contracts/CURRENT_DELIVERY_REPAIRED.json",
+      "bytes": 809,
+      "sha256": "01f8fa6b2584ad876dc12c1c319992bdc80bf3ef4b0704e18ac8383812cbc468"
+    },
+    {
+      "path": "evidence/20261021-release-current-contracts/FINAL_SOURCE.json",
+      "bytes": 2002,
+      "sha256": "5d48d90d29a122673703bdbc364c4cff7b2bf648121f4fce3316b010efbd41b0"
+    },
+    {
+      "path": "evidence/20261021-release-current-contracts/INPUT_STABILITY.json",
+      "bytes": 268,
+      "sha256": "9859b9ab2e9f7818d08f1822bf4046c3ac25c77387e039b364e5f2034bfdecd7"
+    },
+    {
+      "path": "evidence/20261021-release-current-contracts/ORIGINALS.json",
+      "bytes": 2075,
+      "sha256": "01e251c085b2b4f1ba7fde40f945630cb9f347ada26b1744795210eda9e30c3d"
+    },
+    {
+      "path": "evidence/20261021-release-current-contracts/SOURCE_INPUTS_AFTER.json",
+      "bytes": 869224,
+      "sha256": "5188a8f753997a07b7bd22883b3ee48b9f593c67b6c869b83889b228f08be40f"
     },
     {
       "path": "evidence/archived-delivery-verification.json",
@@ -1122,8 +1150,8 @@
     },
     {
       "path": "tests/clinical-review-desktop-layout.test.mjs",
-      "bytes": 10671,
-      "sha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a"
+      "bytes": 10666,
+      "sha256": "4d1ba4639ad5f71378a1ae84fec3d1224c86ff90cacf4b767212386390bf15bf"
     },
     {
       "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
@@ -1231,6 +1259,16 @@
       "sha256": "997ca83be7861779a6b7a4e95b1c02d36b856e391ebcb11c8821ce0fa8b80b9e"
     },
     {
+      "path": "tests/current-atlas-delivery.test.mjs",
+      "bytes": 17978,
+      "sha256": "82d6c024dca59dab2dbaf944bed6f3066bf7905f99871e96033d9bf02a4c5821"
+    },
+    {
+      "path": "tests/current-delivery-admission-485.test.mjs",
+      "bytes": 3554,
+      "sha256": "53d6a7029629a01f69107509cd04958f92301e51e6e9c3a49ee9bbf56dbba5ec"
+    },
+    {
       "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
       "bytes": 5923,
       "sha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105"
@@ -1249,6 +1287,21 @@
       "path": "tests/fixtures/current-atlas-delivery.json",
       "bytes": 1777,
       "sha256": "7f08673542eedf10d211b4668aad93efc65ab7854d6141ec409512edd3785eba"
+    },
+    {
+      "path": "tests/fixtures/current-delivery-before-inbox485/clinical-review-desktop-layout.test.mjs.raw",
+      "bytes": 10671,
+      "sha256": "400c50faf155feb09658c081f6db9ef35c598e7b83872f6d1e85f5847913891a"
+    },
+    {
+      "path": "tests/fixtures/current-delivery-before-inbox485/current-atlas-delivery.test.mjs.raw",
+      "bytes": 17978,
+      "sha256": "e3eea7022e2154634b51f44d5d94a9dc9701ee9fb527f7c6f412f1aa7cdd169f"
+    },
+    {
+      "path": "tests/fixtures/current-delivery-before-inbox485/ui-teaching-current-delivery.test.mjs.raw",
+      "bytes": 16195,
+      "sha256": "78919d9a82605a2c24bb4a490e0a5e5cc04549d15e2990107c3c7618dfec2189"
     },
     {
       "path": "tests/fixtures/gitattributes-delivery52.raw",
@@ -1416,24 +1469,27 @@
       "sha256": "b1e3a57fdb759e549300d941452c199510b2459b1abe73c977aef265cdc43e0d"
     },
     {
+      "path": "tests/ui-teaching-current-delivery.test.mjs",
+      "bytes": 16195,
+      "sha256": "afcfd94cb82c7289f525521f533839526cfdbad94d9686bf91251108c5cf5285"
+    },
+    {
       "path": "tests/vite-cache-rollback.test.mjs",
       "bytes": 8213,
       "sha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
     }
   ],
   "removed": [],
-  "scope": "Selected source/test repair and exact receipts on previously filtered ancestry only. No raw canonical history, model/scans/masks/private modules/reviews/databases/secrets;not full/runnable/private-data backup.",
+  "scope": "Selected source/test repairs and receipts on previously filtered ancestry only. No raw canonical history, model/scans/masks/private modules/reviews/databases/secrets;not full/runnable/private-data backup.",
   "proof": {
     "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-    "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
     "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-    "namedInputs": 5049,
-    "originalAdmission": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
-    "focusedTests": 3,
+    "namedInputs": 5053,
+    "focusedTests": 56,
     "runtimeUnchanged": true,
     "canonicalInstalled": false,
     "fullSuitePass": false,
-    "limits": "Only test and byte-exact original test fixture change;5047previous named inputs, runtime/manifests/models/import/bindings remain byte exact. Prior26inbox/full types/production-build receipts retain their unchanged executable scope, not a newly rerun full suite. No new clinical/browser/spatial approval, owner form refresh, private-data upload or public deployment."
+    "limits": "Current-admission test seams only; immutable original full tests and previous failure retained. Exact current source/import counts are verified by stock importer/binding, not relaxed. All historical, model, clinical/privacy flags, byte checks, negative and UI assertions preserved. No runtime/approval/publication change."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

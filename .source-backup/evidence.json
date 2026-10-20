@@ -1,12 +1,10 @@
 {
   "source": "485df97c2530e8e81a8d39a5ee61073ce76d93db",
-  "tree": "f5af5162af89bae05b9ece240f6f158401c5bd15",
   "review": "57663bdf62246dac62ef8a51e762432a711ab2f042d09b69ec1a34c23b8e4703",
-  "namedInputs": 5049,
-  "originalAdmission": "97e75c01f5b65f83a7edd607681cd6fdf50af7b6",
-  "focusedTests": 3,
+  "namedInputs": 5053,
+  "focusedTests": 56,
   "runtimeUnchanged": true,
   "canonicalInstalled": false,
   "fullSuitePass": false,
-  "limits": "Only test and byte-exact original test fixture change;5047previous named inputs, runtime/manifests/models/import/bindings remain byte exact. Prior26inbox/full types/production-build receipts retain their unchanged executable scope, not a newly rerun full suite. No new clinical/browser/spatial approval, owner form refresh, private-data upload or public deployment."
+  "limits": "Current-admission test seams only; immutable original full tests and previous failure retained. Exact current source/import counts are verified by stock importer/binding, not relaxed. All historical, model, clinical/privacy flags, byte checks, negative and UI assertions preserved. No runtime/approval/publication change."
 }
