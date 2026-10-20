@@ -3,6 +3,7 @@ import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } fr
 import handler from "vinext/server/app-router-entry";
 import { contentSecurityPolicy } from "../lib/content-security-policy";
 import { atlasDeliveryForwardUrl } from "../lib/atlas-model-delivery";
+import { isAtlasModelAssetRequest, isAtlasRuntimeStaticRequest, isFrameworkStaticRequest } from "../lib/atlas-static-boundary";
 
 interface Env {
   ASSETS: Fetcher;
@@ -196,7 +197,11 @@ const worker = {
 
     const modelDeliveryUrl = atlasDeliveryForwardUrl(url);
     const routedRequest = modelDeliveryUrl ? new Request(modelDeliveryUrl, request) : request;
-    const response = await handler.fetch(routedRequest, env, ctx);
+    const response = !modelDeliveryUrl && !url.pathname.startsWith('/api/atlas-delivery/') && isAtlasModelAssetRequest(url)
+      ? new Response(null, { status: 404, headers: { "Cache-Control": "private, no-store" } })
+      : !modelDeliveryUrl && (isAtlasRuntimeStaticRequest(url, request.method) || isFrameworkStaticRequest(url, request.method))
+        ? await env.ASSETS.fetch(request)
+        : await handler.fetch(routedRequest, env, ctx);
     // A WebSocket response carries a runtime-only socket handle. Cloning it
     // into a normal Response would detach that handle and break the upgrade.
     if (response.status === 101) return response;

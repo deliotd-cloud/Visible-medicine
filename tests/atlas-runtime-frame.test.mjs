@@ -400,3 +400,31 @@ test('help does not automatically retry, navigate, or replace the completed fram
     }
   } finally { h.dispose(); }
 });
+
+test('the exact static index document may canonicalize to its folder without losing context',()=>{
+ const source='/atlas-runtime/head-neck/index.html?region=thorax&study=x%2Fy&revision=17#selected';
+ assert.equal(sameAtlasDocument(source,'https://atlas.example/atlas-runtime/head-neck/?region=thorax&study=x%2Fy&revision=17#selected','https://atlas.example/atlas/3d'),true);
+ for(const actual of [
+  'https://atlas.example/atlas-runtime/head-neck/?region=thorax',
+  'https://atlas.example/atlas-runtime/head-neck/?region=thorax&study=x%2Fy&revision=18#selected',
+  'https://atlas.example/atlas-runtime/head-neck/?region=pelvis&study=x%2Fy&revision=17#selected',
+  'https://atlas.example/atlas-runtime/shoulder/?region=thorax&study=x%2Fy&revision=17#selected',
+  'https://elsewhere.example/atlas-runtime/head-neck/?region=thorax&study=x%2Fy&revision=17#selected',
+  'https://atlas.example/atlas-runtime/head-neck/?region=thorax&study=x%2Fy&revision=17',
+ ])assert.equal(sameAtlasDocument(source,actual,'https://atlas.example/atlas/3d'),false,actual);
+ assert.equal(sameAtlasDocument('/elsewhere/index.html','https://atlas.example/elsewhere/','https://atlas.example/'),false);
+});
+
+test('a late exact default-document redirect clears the soft timer without a model-readiness claim',()=>{
+ const h=harness(),[id,timer]=[...h.jobs.entries()][0];h.jobs.delete(id);timer();
+ assert.equal(h.attempt.loaded('https://atlas.example/atlas-runtime/head-neck/?region=thorax&study=x%2Fy&revision=17'),true);
+ assert.deepEqual(h.reports,['delayed','document']);assert.equal(h.jobs.size,0);
+ timer();assert.deepEqual(h.reports,['delayed','document']);h.attempt.retire();
+ assert.equal(h.attempt.loaded('https://atlas.example/atlas-runtime/head-neck/?region=thorax&study=x%2Fy&revision=17'),false);
+});
+
+test('the actual frame reconciles a canonical directory load and retains compact manual recovery',()=>{
+ const src='/atlas-runtime/head-neck/index.html?region=thorax&revision=17';
+ const h=componentHarness(src,'https://atlas.example/atlas-runtime/head-neck/?region=thorax&revision=17');
+ try{h.flush();const view=h.flush();assert.equal(h.timers.size,0);assert.equal(view.help.type,'details');assert.equal(view.help.props.open,undefined);assert.match(view.status.props.children[1].props.children,/model display are not confirmed/);assert.equal(view.iframe.props.src,src);}finally{h.dispose();}
+});

@@ -4,7 +4,14 @@ export function sameAtlasDocument(expectedSource: string, actualHref: string, ba
   try {
     const expected = new URL(expectedSource, baseHref);
     const actual = new URL(actualHref, baseHref);
-    return actual.href === expected.href && actual.protocol !== 'about:';
+    if (actual.href === expected.href && actual.protocol !== 'about:') return true;
+    if (!['http:', 'https:'].includes(expected.protocol)
+      || !expected.pathname.startsWith('/atlas-runtime/')
+      || !expected.pathname.endsWith('/index.html')) return false;
+    // Cloudflare canonicalizes this exact static default document to its folder.
+    // Query, revision, hash, origin and every other path component stay exact.
+    expected.pathname = expected.pathname.slice(0, -'index.html'.length);
+    return actual.href === expected.href;
   } catch {
     return false;
   }

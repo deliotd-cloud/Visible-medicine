@@ -1,17 +1,16 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T02:13:31.648Z",
+  "at": "2026-10-20T02:56:41.648Z",
   "sourceIdentity": {
-    "product": "Actual coherent local Website UI/coverage source with stock-built Review viewer and reviewed current test fixture",
+    "product": "Local coherent UI candidate with protected static-model delivery and exact default-document navigation",
     "websiteBaseHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
     "reviewBinding": "322db172c7fc0ca7697ca6f6dd67547a1fb8892b107ce48f1fd1b5ae7341d65b",
-    "stockReviewVerifierPassed": true,
     "canonicalInstalled": false,
     "fullSuitePass": false
   },
-  "parent": "e6695521509bc963da3d8769d750a45071505e7a",
-  "gitParent": "e6695521509bc963da3d8769d750a45071505e7a",
+  "parent": "386f0c094c7b990ab34f3e2f7d9304256f5f238c",
+  "gitParent": "386f0c094c7b990ab34f3e2f7d9304256f5f238c",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -9355,8 +9354,8 @@
     },
     {
       "path": "components/atlas-runtime-state.ts",
-      "bytes": 1664,
-      "sha256": "23e5004323f8d432c3b451dec0ed4b28ab46c620eec3c8ef59d2194a0ec8a8e5"
+      "bytes": 2134,
+      "sha256": "e407402b94c41b03fdec57cf0cdafe20e4d47515ff3b8e2dd0a071dd0d542b49"
     },
     {
       "path": "components/atlas-workspace-navigation.css",
@@ -12222,6 +12221,11 @@
       "path": "lib/atlas-reference-revision.ts",
       "bytes": 605,
       "sha256": "0edde483daa19b1e80d09892da3b1a45af6307cdf4bc04a80348bda7b2ec1ca4"
+    },
+    {
+      "path": "lib/atlas-static-boundary.ts",
+      "bytes": 1207,
+      "sha256": "4424c11f0fdf77aa0a989d326f1095efe53b773001eed083a1ea193b89c2cab1"
     },
     {
       "path": "lib/atlas-study-transport.ts",
@@ -16105,8 +16109,8 @@
     },
     {
       "path": "tests/atlas-runtime-frame.test.mjs",
-      "bytes": 19627,
-      "sha256": "1f706c1309171122a8883c5d8d38de60a63e5276499921ac0a12803520a76965"
+      "bytes": 22012,
+      "sha256": "f4ebefd05a10639680e4c21c68c07a5ee31fbab380a3c4024c129d26872710b1"
     },
     {
       "path": "tests/atlas-runtime-pages.test.mjs",
@@ -16277,6 +16281,11 @@
       "path": "tests/atlas-staging-registry.test.ts",
       "bytes": 9884,
       "sha256": "b516caceeb553c8c71dac8925c7271cb374cc23c5e926953c621c4c79d60eec4"
+    },
+    {
+      "path": "tests/atlas-static-boundary.test.ts",
+      "bytes": 8851,
+      "sha256": "9703b1071ce8da302dce0a03eba3a704a2880b7f699f99091eea52335bf50e4e"
     },
     {
       "path": "tests/atlas-study-mode-transition.test.ts",
@@ -24735,85 +24744,71 @@
     },
     {
       "path": "vite.config.ts",
-      "bytes": 3436,
-      "sha256": "df05a25d4b14fa3b9a290a0b485319c05c31341f96fd0faa37246399c2431d51"
+      "bytes": 3570,
+      "sha256": "57e270bcea5ab6fbed5f9371660cc98455bcf234aec9d475d1c9e724583e5712"
     },
     {
       "path": "worker/index.ts",
-      "bytes": 10429,
-      "sha256": "62945d47cd6b2ff831c8005dde19b52ff649d2c7c92c3385bb0661518b8c495e"
+      "bytes": 10942,
+      "sha256": "52ed1bdd1802a04cba8ecf6414812590ecd04a307a1c35e4c3216076e56569ce"
     }
   ],
-  "removed": [
-    "public/atlas-review-viewer/assets/abdominal-wall-study-Ctkd1CyX.js",
-    "public/atlas-review-viewer/assets/anatomy-scene-BJvFeZB5.js",
-    "public/atlas-review-viewer/assets/back-layers-study-BSOQDSKj.js",
-    "public/atlas-review-viewer/assets/body-content-D_mrFXS-.js",
-    "public/atlas-review-viewer/assets/body-scene-Be6Prt0I.js",
-    "public/atlas-review-viewer/assets/cutaway-controls-DN4hAEUN.js",
-    "public/atlas-review-viewer/assets/eye-layers-BqYMsLHK.js",
-    "public/atlas-review-viewer/assets/hra-pelvis-study-DUR1kx2a.js",
-    "public/atlas-review-viewer/assets/hra-renal-study-C6FMcxBT.js",
-    "public/atlas-review-viewer/assets/hra-renal-teaching-DpKjV9z0.js",
-    "public/atlas-review-viewer/assets/independent-study-navigation-DHoBLB9B.js",
-    "public/atlas-review-viewer/assets/index-CSevRyV8.js",
-    "public/atlas-review-viewer/assets/scene-recovery-D9PNA_sH.js",
-    "public/atlas-review-viewer/assets/shoulder-explorer-V3bwd72K.js",
-    "public/atlas-review-viewer/assets/slider-CagimcG_.js",
-    "public/atlas-review-viewer/assets/um-knee-study-B1z3hXlZ.js",
-    "public/atlas-review-viewer/assets/um-limb-study-Btan8Dun.js",
-    "public/atlas-review-viewer/assets/ventricles-BBViK-2h.js"
-  ],
-  "scope": "4946selected source paths plus four metadata. Real stock viewer rebuild and independent source derivation/current fixture match,85focused unchanged cases plus6integrated harness cases. Earlier full suite failed171cases; these remain tracked, no whole-suite/production-build/desktop/clinical/release claim. Only inherited three exact brand/font binaries; no private modules, scans/masks, source alias/Git metadata, new model/image/video payloads or dependencies/raw canonical history. Source-only checkpoint, not a complete project/private-data backup.",
+  "removed": [],
+  "scope": "4948selected source files plus4metadata; six reviewed transport/status/test deltas over filtered386f0c09.32focused cases, zero type diagnostics, normal Review/policy/production build and511raw local runtime requests pass, isolated guest desktop proof. Not full-suite, authenticated/clinical/release acceptance. Only three unchanged inherited own-brand/font binaries with notices. No private modules, scans/masks/model/image/video payloads, credentials/runtime state, source junctions, dependencies or raw canonical Git history uploaded. Source-only recovery, not complete private-data/project backup.",
   "proof": {
-    "schema": "vm-website-current-review-coherence/1",
-    "date": "2026-10-20",
-    "candidate": "F:/VisibleMedicine/staging/20261020-ui-coverage-integration/website",
-    "oldNative": "Original1011-entry run terminated normally at02:05:05Z:5272tests/5099pass/171fail/2skip/0cancel, exit1, source driftfalse/passingClaimfalse. Terminal receiptSHA df573489ae18be55fae85500fbf46ca131812587e9a83a04ae29e1d6ba94e12b. Frozen oldQA and all failed diagnostics retained, not a passing suite.",
-    "viewer": "Owned queue47281terminal0, no manual duplicate build. Actual stock production viewer rebuild completed, exact47old files preserved first. Stock verify-clinical-review passes sourcebd5465ee/Review322db172/1543Reviewfiles/46viewerfiles/22unchanged dependency packages. Private plexus verifier5files/14packages/admissions0 also passes; not clinical or role acceptance.",
-    "derivation": "Independent strict post-viewer report70ad69dd verifies real1680inputs, changed coverage index/view only, exact1543imported source records/derived revisions, all46viewer asset hashes/22packages, unchanged four learner/source pairs,137models/144paths/policy. Source cleanbd5465ee/tree44ca83bf. No clinical decisions read or approval transferred.",
-    "currentFixture": "Main reviewed and applied ONLY actual Review binding plus three derived document hashes in current-atlas-delivery.json; exact old fixture f2052f65 preserved. All other source/tree/count/model/learner values and all historical fixtures unchanged. Independent admitted-current-pin-result.json confirms currentPinState updated; no permissive wildcard or test expectation restamp without producer output.",
-    "focusedAcceptance": "Actual eight unchanged native entries85pass/0fail/cancel/skip/todo on the real candidate, source-root pinned to cleanbd5; full CURRENT_BINDING_NATIVE.tap SHAac9508be retained. Includes current delivery and forgery refusals, original coverage/source checks, historical cervical transition, UI/page and preview bytes. Does not establish all171prior failures resolved, whole-suite/type/build/browser/clinical acceptance.",
-    "headHarnessAdmission": "Main applied exactly staged fc657ede head comparison helper and68993149 history-preservation guard plus33d69dce complementary retry-focus test fragment. Actual plain native candidate run six cases6pass/0fail/cancel/skip/todo, full toolchunkffafb9. No source-loader overlay used for this integrated run. HeadAtlasViewer/history test source and every original native-anchor fixture unchanged; all old assertion bodies inverse-proved outside three real dependency seams and two exact additional tests. Four actual adverse cases reject changed old assertion, no-op helper, new-test fragment tampering and original-fixture tampering. First prepared assumption incorrectly claimed only two helper additions; strict proof refused before admission, and full actual diff was read before v2. No production component/mask/access changes.",
-    "typeContext": "First actual typecheck exited2 with7diagnostics: two omitted private modules and missing ordinary sibling Atlas source import with two resulting inference errors. Original failure retained. Exact existing disc3355c0fd/optic9a1f3ec4 modules copied locally with before/destination/after checks; no upload/new rights or clinical admission. A local directory junction exposes existing cleanbd5 Atlas at the expected sibling path for the original import, no source copying/move/merge or permissions change. Corrected-context typecheck has its own log/receipt; do not infer pass before terminal evidence.",
-    "remaining": "Main must finish corrected typecheck/production build and desktop gates, then explicitly repair remaining historical/current epoch and wrapper-interface failures from full171case triage without blanket repins. New scan import-focus03c01e9b and Studio link-namee6d0c653 candidates remain separate/uninstalled. Owner3000/open lecture untouched; no repeated save question. Clinical signoff is not a global development stall.",
-    "canonicalInstalled": false,
-    "stockReviewVerifierPassed": true,
-    "clinicalApproval": false,
-    "publicDeployment": false,
-    "fullSuitePass": false,
-    "reviewSha256": "c52efb9261bc1465731d422138f781a84d91c42958b1968d2447be0408ea99f2",
-    "nativeFocused": {
-      "schema": "vm-current-binding-focused-native/1",
-      "code": 0,
-      "signal": null,
-      "entries": 8,
-      "inputs": {
-        "tests/anatomy-coverage-index.test.mjs": "df3b794855f4f14e842f2c94637c265fc381f5ef980ff3aa8380336fc9823275",
-        "tests/anatomy-coverage-view.test.ts": "31aa011d789ef87b3ccea9583a83ca137095397696812615fe441b053db8166f",
-        "tests/anatomy-coverage-page.test.ts": "9d3597eda56791264870e46d505fc9993d167255b7091e352a459631b127c842",
-        "tests/anatomy-coverage-review-ui.test.ts": "1a3a97054a5f289549f574a8035252c0120bc84ce77cf627243c3408ab690ef4",
-        "tests/anatomy-coverage-producers.test.mjs": "01918fea631ab468f71f70d9c7716f073a40394676b4161f7b845882d1eb095d",
-        "tests/atlas-cervical-source-transition.test.mjs": "305fd9ec318359cf4049e88c01c08deba015c1386cee004f8dc479557c711003",
-        "tests/current-atlas-delivery.test.mjs": "f90a64376bddb25461d92542aeb2bdc7f836c258b17b4e89490c7f7a6ac14bee",
-        "tests/atlas-navigation.test.ts": "905143abf8e26172124de178d9525424bf27d5c7073f2bbfa309784fa1e44656"
-      },
-      "counts": {
-        "tests": 85,
-        "pass": 85,
-        "fail": 0,
-        "cancelled": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "log": "F:/VisibleMedicine/staging/20261020-ui-coverage-integration/CURRENT_BINDING_NATIVE.tap",
-      "logSha256": "ac9508beecf93787293f85376ddfefdf4eb8e910a2457cf5f843f5f7343ca384",
-      "testsUnchanged": true,
-      "canonicalInstalled": false,
-      "clinicalApproval": false
+    "schema": "vm-website-asset-boundary-acceptance/1",
+    "at": "2026-10-20T02:56:30.114Z",
+    "sourceDeltas": {
+      "vite.config.ts": "57e270bcea5ab6fbed5f9371660cc98455bcf234aec9d475d1c9e724583e5712",
+      "worker/index.ts": "52ed1bdd1802a04cba8ecf6414812590ecd04a307a1c35e4c3216076e56569ce",
+      "components/atlas-runtime-state.ts": "e407402b94c41b03fdec57cf0cdafe20e4d47515ff3b8e2dd0a071dd0d542b49",
+      "tests/atlas-runtime-frame.test.mjs": "f4ebefd05a10639680e4c21c68c07a5ee31fbab380a3c4024c129d26872710b1",
+      "lib/atlas-static-boundary.ts": "4424c11f0fdf77aa0a989d326f1095efe53b773001eed083a1ea193b89c2cab1",
+      "tests/atlas-static-boundary.test.ts": "9703b1071ce8da302dce0a03eba3a704a2880b7f699f99091eea52335bf50e4e"
     },
-    "postViewerReportSha256": "70ad69dd7b92d63b7439cd0c6ea0e08cdadcac871730135e6beeb88fed85add2",
-    "sourcePaths": 4946,
+    "reviewInputsUnchanged": 1680,
+    "originalFrameTestBytesPreserved": true,
+    "native": {
+      "tests": 32,
+      "pass": 32,
+      "logSha256": "409a9e610d688a12cbcc17472cb691911c06ee06b420ab4b10611c4e3ad52795",
+      "receiptSha256": "a5ec46e62156b9348d748e458554228d25fd047869208d0310739f0e65e3b0f6"
+    },
+    "types": {
+      "diagnostics": 0,
+      "receiptSha256": "b69548d40e0bb06e86d6428197d89742c70c4e21749b6248356a9c8c064b86cb"
+    },
+    "build": {
+      "commands": [
+        {
+          "label": "review",
+          "code": 0,
+          "logSha256": "1fda006b2b23d4e7b24b25a89fb710cb3efa3d7150f1ddb17f9ed24ca072daf7"
+        },
+        {
+          "label": "policy",
+          "code": 0,
+          "logSha256": "03daa69397bda31331ea0beb4d1a885855561d5dd1a873f2f9ee16155d2aa11d"
+        },
+        {
+          "label": "build",
+          "code": 0,
+          "logSha256": "a475410450549283e84a8470ff8624245de916d57a078d32d6d20b81aef50335"
+        }
+      ],
+      "receiptSha256": "01c9e48f70253dfbe47f3bf574d768d6391d8cd774bf80d86318b288a77dd0ec"
+    },
+    "runtime": {
+      "requests": 511,
+      "receiptSha256": "a4872149cd20004d8da094a13d3710a26dd719f37caad2c957ca310011212531",
+      "scope": "Raw HTTP without auth headers: all144registered raw and144direct API model paths deny401/403; encoded/case/unregistered aliases deny; range/conditional requests cannot skip authorization; exact document redirect query preserved; every generated JS/CSS leaf and ordinary public page/image still serves."
+    },
+    "browser": {
+      "receiptSha256": "5ca2e9ed8bca0cd8792fa7d9861b86e4b1a460a8288dabe25affdbc976e26f8d",
+      "scope": "Real1280x900 isolated unsigned Chrome: hydrated parent confirms exact index-to-folder navigation, compact closed Viewer help, no failed stylesheet or horizontal overflow. Sign-in-required model notice retained. Clinical Review guest route visibly denies; no authenticated rendering or reviewer acceptance claim."
+    },
+    "retainedFailures": "Initial19/24new-harness run, Node cloudflare-scheme failure, baseline raw-model and encoded-alias bypass proofs retained locally. Initial197HEAD/GET narrow proof passed but missed missing framework CSS/JS and direct API404; actual browser caught nonhydration. Framework static routing and direct protected API dispatch corrected before final acceptance. Original source assertions unchanged.",
+    "limits": "Not canonical installation, authenticated model/Review acceptance, full-suite success, clinical validation or public release. Prior171full-suite failures remain separately tracked. Image optimizer only accepts image MIME types in the installed dependency; no claim of exhaustive security audit.",
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",
@@ -24847,7 +24842,11 @@
       "docs/fracture-exams/CHECKPOINT-20260928.md",
       "docs/fracture-exams/README.md",
       "docs/master-plan.md"
-    ]
+    ],
+    "canonicalInstalled": false,
+    "publicDeployment": false,
+    "clinicalApproval": false,
+    "fullSuitePass": false
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,
