@@ -6,6 +6,8 @@ import { localHeadAtlasPlugin } from './scripts/local-head-atlas-plugin.mjs';
 import { headTransferDiagnosticsEnabled } from './scripts/head-transfer-diagnostics.mjs';
 import { localRegionalMriReviewPlugin } from './scripts/local-regional-mri-review-plugin.mjs';
 import { localPreviewServerOptions } from './scripts/local-preview-policy.mjs';
+import { atlasWorkerFirst, localAtlasDevelopmentPlugin } from './scripts/local-atlas-development-plugin.mjs';
+import atlasModelInventory from './lib/atlas-model-inventory.json' with { type: 'json' };
 import { resolve } from 'node:path';
 import { HEAD_MANIFEST_SHA256 } from './lib/head-atlas-import.ts';
 import hostingConfig from './.openai/hosting.json' with { type: 'json' };
@@ -67,6 +69,7 @@ export default defineConfig(async ({mode, command}) => {
     server: localPreviewServerOptions({command, stable: process.env.VM_LOCAL_PREVIEW_STABLE,
       seatbelt: isCodexSeatbeltSandbox}),
     plugins: [
+      localAtlasDevelopmentPlugin(atlasModelInventory.models.flatMap(model => model.paths)),
       localHeadAtlasPlugin({root: localHeadRoot, expectedHash: HEAD_MANIFEST_SHA256,
         diagnostics: headTransferDiagnosticsEnabled(command, process.env.VM_LOCAL_HEAD_DIAGNOSTICS)}),
       localRegionalMriReviewPlugin({configFile: resolve(process.cwd(), '.local/regional-mri-review-binding.json'),
@@ -75,7 +78,8 @@ export default defineConfig(async ({mode, command}) => {
       sites(),
       cloudflare({
         viteEnvironment: { name: 'rsc', childEnvironments: ['ssr'] },
-        config: localBindingConfig,
+        config: { ...localBindingConfig, assets: { ...localBindingConfig.assets,
+          run_worker_first: atlasWorkerFirst(command) } },
       }),
     ],
   };
