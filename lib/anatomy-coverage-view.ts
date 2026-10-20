@@ -1,7 +1,7 @@
-export const COVERAGE_SOURCE_REVISION='f5097af8493701d64a8e2a2b5797df380f3b348a';
-export const COVERAGE_SNAPSHOT_REVISION='c0d8eadfe688dc087c60917640875be038b33a29bccbccce93940dc63ac267e6';
+export const COVERAGE_SOURCE_REVISION='bd5465ee3b94c66c3d5701e7749099d07e8f40d3';
+export const COVERAGE_SNAPSHOT_REVISION='ea12768266af90959989c9b47b6bf9b345c83039bd5a2eeb65b4f5e11bce8e26';
 const coverageImportedRevision='236d059ce1e3c0442b4006abacf2ccd3f4de52bf2be92a3c644f62b8f49f30bf';
-const coveragePackageSha256='8aa6e8f23bc67a1097ddd3288c0f4d149c94ff701a54d2976d2a9f1d62849acb';
+const coveragePackageSha256='7d514e10242912ae63e9419fa7b02c23b600a42d30d44e77e09ca28bf76ee36b';
 export const coverageRegions={
  'head-neck':'Head and neck',spine:'Spine',thorax:'Thorax',abdomen:'Abdomen',pelvis:'Pelvis',
  'shoulder-arm':'Shoulder and arm',forearm:'Forearm',hand:'Hand',thigh:'Thigh',leg:'Leg',foot:'Foot',
