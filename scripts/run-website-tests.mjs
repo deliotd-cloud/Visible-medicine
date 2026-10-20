@@ -5,6 +5,7 @@ import { spawn } from 'node:child_process';
 import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { verifyPublicPreviewAssets } from './public-preview-preflight.mjs';
+import { assertWebsiteTestHistory } from './website-test-history-preflight.mjs';
 
 const scriptRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 // Effective text/code/metadata inputs only. No binary models, scans, masks, media,
@@ -186,6 +187,7 @@ export async function main(argv = process.argv.slice(2)) {
     before.files.some(file => file.path === 'lib/atlas-navigation.ts') ||
     before.entries.includes('tests/atlas-navigation.test.ts'));
   const publicPreviewAssetsBefore = publicPreviewAssetsRequired ? verifyPublicPreviewAssets(root) : null;
+  if (run && resolve(root) === scriptRoot) assertWebsiteTestHistory(root);
   // This must precede output creation, the Node glob probe and the test child.
   const output = outputDir(root);
   const execution = run ? await executionPlan(before, output) : {

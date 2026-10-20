@@ -1,87 +1,94 @@
 {
-  "schema": "vm-coverage-review-repair/1",
-  "at": "2026-10-20T09:10:34.287Z",
-  "source": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
-  "sourceTree": "6da62962106cfab9419b09618547a9da5e3aafc6",
+  "schema": "vm-checkout-history-context-repair/1",
+  "at": "2026-10-20T09:53:30.279Z",
   "canonical": {
     "atlas": "f5097af8493701d64a8e2a2b5797df380f3b348a",
     "website": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "review": "a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8"
   },
+  "source": "6036a7a59dcc1fd75eee4a23af34ca2a568d86b6",
+  "sourceTree": "6da62962106cfab9419b09618547a9da5e3aafc6",
+  "website": "F:/VisibleMedicine/staging/20261020-saved-plan-focus/website",
   "review": "b18997aea1fbc2ba1ccb8fec2405efcb43db1c9046ce5a7e7941d156ba14ba8f",
-  "sourcePaths": 4988,
-  "progress": "Repaired private Anatomy coverage and gaps returning unavailable after teaching source advanced. Actual four source producers regenerated five inventories from clean6036. All factual counts, seven gap groups, holds, frames and limitations unchanged;168dependencies/142imported/26metadata, only package identity changed. View/checker function bodies unchanged outside exact observed pins. Production verifier now invokes the actual projection and refuses stale/forged coverage before build. Original history/current layout assertions preserved through explicit2subsequent-input declarations.",
-  "checks": {
-    "focusedCases": 170,
-    "currentCoverageHistoryAccessAndDraftTeaching": 82,
-    "coverageUiProducerAndHeadLinks": 88,
-    "websiteTypes0": true,
-    "stockReviewBindBuildVerify": true,
-    "production": true,
-    "all1685BoundInputsVerified": true,
-    "allSourceAndGeneratedBytesScoped": true,
+  "currentFixtureSha256": "0ee28eaffe4fc13e32f124d7d48eea18e90b34f3cfaf1a55959fdabba90e573a",
+  "change": "Historical cerebral proof uses nine exact archived raw exports for its closed epoch and current manifest/Git/working-byte checks for live6036; original strict helper and policy unchanged. Complete prior test reconstructs through two declared adapters. Isolated index initialized from same HEAD without source reset/checkout. Complete runner now refuses missing immutable history or unindexed model paths before output/probe/child, after existing preview gate; generic roots/list unchanged. Existing preview fixture only copies new helper, with every assertion byte-preserved.",
+  "verification": {
+    "focusedCases": 61,
+    "cerebralCheckoutAndPreservation": 15,
+    "unchangedElbowAndGenicularMri": 2,
+    "launcherPreflightAndExistingContracts": 44,
+    "types0": true,
+    "realCliMissingHistoryAndIndexRefusedBeforeOutput": true,
+    "realCliListAndValidRun": true,
+    "allOldAssertionsRetained": true,
     "fullSuitePass": false,
     "browser": false,
     "clinicalApproval": false
   },
-  "delivery": {
-    "imported": 1548,
-    "boundInputs": 1685,
-    "changedBoundInputs": [
-      "docs/anatomy-coverage/index.json",
-      "lib/anatomy-coverage-view.ts"
+  "scope": {
+    "previousSelectedSourcePaths": 4988,
+    "sourcePaths": 5001,
+    "changedExisting": [
+      ".gitattributes",
+      "scripts/run-website-tests.mjs",
+      "tests/atlas-cerebral-lobar-imaging.test.ts",
+      "tests/run-website-tests-public-preview.test.mjs"
     ],
-    "unchangedBoundInputs": 1683,
-    "viewerFiles": 46,
-    "viewerPackages": 22,
-    "nineNonReviewDocumentsExact": true,
-    "currentFixtureSha256": "0ee28eaffe4fc13e32f124d7d48eea18e90b34f3cfaf1a55959fdabba90e573a"
-  },
-  "preservation": {
-    "baselineRows": 5138,
-    "unchanged": 5103,
-    "changedOrRemoved": 35,
-    "newSelectedSource": 26,
-    "removedSelectedSource": 18,
+    "newPaths": [
+      "scripts/website-test-history-preflight.mjs",
+      "tests/cerebral-checkout-epoch-preservation.test.mjs",
+      "tests/fixtures/atlas-cerebral-lobar-imaging.before-6036-checkout.test.ts.raw",
+      "tests/fixtures/closed59-raw-metadata/LICENSES/bodyparts3d-license-evidence.html.raw",
+      "tests/fixtures/closed59-raw-metadata/content/abdominal-branch-imaging-pins.json.raw",
+      "tests/fixtures/closed59-raw-metadata/content/abdominal-branch-imaging.ts.raw",
+      "tests/fixtures/closed59-raw-metadata/content/coronary-arterial-us-pins.json.raw",
+      "tests/fixtures/closed59-raw-metadata/content/coronary-arterial-us.ts.raw",
+      "tests/fixtures/closed59-raw-metadata/lib/abdominal-branch-imaging.ts.raw",
+      "tests/fixtures/closed59-raw-metadata/lib/coronary-arterial-us.ts.raw",
+      "tests/fixtures/closed59-raw-metadata/lib/didanix-atlas-adapter.ts.raw",
+      "tests/fixtures/closed59-raw-metadata/lib/imaging-sync.ts.raw",
+      "tests/website-test-history-preflight.test.mjs"
+    ],
+    "unchangedPreviousSelected": 4984,
+    "frozenSuiteRows": 4977,
+    "unchangedFrozenSuiteRows": 4973,
+    "boundInputs": 1685,
+    "allBoundInputsExact": true,
     "models": 137,
     "modelPaths": 144,
     "modelBytes": 199072480,
-    "fourLearnersInventoryPolicyRightsPrivateContextExact": true,
-    "viewerPackagesExact": true,
-    "privateRecordsNotReadOrChanged": true,
-    "ownerPreviewAndEditorUntouched": true,
-    "canonicalInstalled": false
+    "deployedPathBytes": 254443988,
+    "modelBytesMeaning": "Unique137 inventory objects; deployed144 paths repeat some bytes",
+    "allModelBytesExact": true,
+    "learnerReviewRightsAccessPolicyAndPrivateInputsUnchanged": true
   },
-  "regressionAttempt": {
-    "inventoryEntries": 1030,
-    "output": "Local ignored website-test-runs/2026-10-20T08-52-18-915Z-c9e866dc-a860-4c7a-8316-492d17d470fc",
-    "terminalCode": 4294967295,
-    "passingClaim": false,
-    "reason": "Stopped identity-checked owned test tree after confirmed missing Website Git context invalidated historical replay. Four coverage failures revealed actual unavailable protected inventory; historical Git failures do not establish UI/imaging/auth regressions. Partial evidence retained, inputs/public assets unchanged. Not an observation timeout or full-suite terminal pass.",
-    "localHistoryFix": "Separate local metadata with read-only canonical object-store alternate, b953HEAD, no remote, no source reset/checkout or history duplication. Historical source objects byte-compared; no raw ancestry included in filtered backup. Complete corrected-context suite still required."
-  },
-  "retainedFailures": "Full invalid-context partial failure log retained. New preflight before coverage repair fails both positive and mixed-source tests; refreshed real evidence and exact pins now pass. Stop helper initially refused a PowerShell parsed-date assumption and git.exe child type before any termination; guarded conversion/type checks corrected, actual identity-checked owned runner stopped and receipt retained. No suppressed assertions or weakened source/authority gates.",
   "evidence": {
-    "COVERAGE_PRODUCERS": "218fece53f92f9c845170b5406c9c8f881bfc075a8d4d3e2b15cbc7b35ab9528",
-    "COVERAGE_CURRENT": "ab0ec49dd111925f1cd87a1ea99137e7557042336beb673c9f26c8f4b3fc8731",
-    "REVIEW_BIND": "68c35d0838a709f6b1d2a648fc368d97714517984070ba556c76383a93c7f403",
-    "REVIEW_VIEWER": "1cf33eaecaca3acf3ef02d952a9703deb9280cbeed7a00f659f2337885dec744",
-    "REVIEW_VERIFY": "0608ffe1c835f985ff6d68af4861016474cc9f46af9bfd280e34cb3563294b78",
-    "FINAL_FOCUSED": "5ea7ad4617d75bce4f55f2a405df6a99b44be761ea74ddb531e168f535f4dc16",
-    "UI_AND_LINKS": "45e3920f46837dbf510d70108ad3efbb5bc7a5166df24d1664c594d9dfda827c",
-    "FINAL_TYPES": "fca2f81f092d68853ce48817efa9baa45ccc73eb7a74615b7feba0faaa58b0de",
-    "FINAL_PRODUCTION": "8532b57d34dbc9628356a259f7835007f7bfeabe97fa8a1e05a9219020f830a4",
-    "BEFORE_COVERAGE_GUARD": "35bc9e1ad27b30cbebc09104cfd6b9b80bb6f6970b1fdf8198f6b38db07aaf33",
-    "COMPLETE_WEBSITE": "9b62cad7c5f50f9d0e8636b3cf7c73a6b7ccca984deb78aaf6a0673bab5e7cb9",
-    "INVALID_CONTEXT_STOP": "9459380d8b201ede1aef8028b73a2e743439e9e594774e7ed92953345cbdde1d",
-    "WEBSITE_HISTORY_CONTEXT": "25a7da1a1e7d2d2ee6c36359c4223baa461b3545d8353bdae3d9b291bafa58dc",
-    "REPAIR_PREPARATION": "0c6075a62956e0132e837c40acc290616b0000af51241666e963a8945ada6edc",
-    "COVERAGE_INSTALLED": "1ed355a60e5659f70e2c14cf207f5ad3ca9c4fcabc09258d267f765d9c7c5dad",
-    "CURRENT_DELIVERY": "44e7d729e1c531aedf4d8640acb0267bc82b8da20cd68b5ecc76d2266ef06dcd",
-    "SOURCE_SCOPE": "26611248f45f2e10f7b96d4dd5d80041ea6a26a9fb0de2c3663e3357bb671a4f"
+    "CHECKOUT_FINAL_PRESERVATION": "3005672e25ce2e9bfab058c5a95b0b1fb962894875256af286ee41ef3c86cc5a",
+    "INDEX_ELBOW_GENICULAR_FOCUSED": "6e7b13d137abf4bac42989e7566119a070171edba130c14a827a4f1e615272ba",
+    "HISTORY_PREFLIGHT_FINAL": "8084ef61b6541695ab7ab521d74248d17e8bb04dd49f543977fb981219165378",
+    "CHECKOUT_CORRECTED_TYPES": "996de51307f7444fa4760847152dd25b9a49c203821a882e6333916a0f029ccd"
   },
-  "researchDisposition": "Bounded primary-source search supports only exceptional intraoperative LCA context, not routine named-branch ultrasound. No new US drafts/media/assets imported; unsupported branches remain pending. Full non-oral/native imaging/teaching roadmap retained.",
-  "next": "Rerun complete applicable Website suite now proper local historical context exists; triage actual remaining failures without suppressing tests. Continue missing anatomy, draft quality and native imaging/assessment/Studio/access roadmap; safe canonical admission follows saved owner editor. Source6036/coverage work does not approve clinical content or patient registration.",
+  "invalidFullAttempt": {
+    "output": "F:\\VisibleMedicine\\staging\\20261020-saved-plan-focus\\website\\.local\\website-test-runs\\2026-10-20T09-11-43-413Z-1717c378-428c-4c32-9b9c-1a04fc816e5d",
+    "terminalCode": 4294967295,
+    "inputDrift": false,
+    "publicAssetDrift": false,
+    "passingClaim": false,
+    "reason": "Identity-checked owned validation stopped after confirmed missing Git index repeatedly invalidated historical model diffs; not timeout-driven. Partial failures and terminal receipt retained locally, never a full passing run."
+  },
+  "historyContext": {
+    "isolatedOnly": true,
+    "head": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "indexSha256": "9bdf89d4340a900b542587c4e50fe7f79c90b2e352ec0272e9b9d535f8e827a2",
+    "readOnlyCanonicalObjectAlternate": true,
+    "remoteNames": [],
+    "sourceReset": false,
+    "sourceCheckout": false,
+    "rawAncestryMayBePushed": false,
+    "preflightCommitCount": 7,
+    "preflightModelPaths": 144,
+    "boundedNotAllHistoryCertificate": true
+  },
   "heldArchivePaths": [
     "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
     "tests/fixtures/head-pilot-9fba-epoch.json",
@@ -116,8 +123,11 @@
     "docs/fracture-exams/README.md",
     "docs/master-plan.md"
   ],
+  "ownerLectureSaveConfirmed": false,
+  "ownerEditorRefreshNavigationRestart": false,
   "canonicalInstalled": false,
   "clinicalApproval": false,
   "publicDeployment": false,
-  "fullGoalActive": true
+  "fullGoalActive": true,
+  "next": "Run complete serial Website suite against repaired indexed history and unchanged source6036; preserve exact identities, triage remaining genuine failures. Continue substantive full Website/Atlas roadmap independently; no clinical-approval or spatial-registration inference."
 }

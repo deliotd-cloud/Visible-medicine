@@ -40,7 +40,7 @@ test('the actual CLI fails usefully before spawn on source-only Website recovery
 
 test('the physical default Website root cannot evade the asset gate by omitting its Atlas producer',()=>{
  const root=fixture({previews:false,producer:false});mkdirSync(join(root,'scripts'));
- for(const file of ['run-website-tests.mjs','public-preview-preflight.mjs'])copyFileSync(join(site,'scripts',file),join(root,'scripts',file));
+ for(const file of ['run-website-tests.mjs','public-preview-preflight.mjs','website-test-history-preflight.mjs'])copyFileSync(join(site,'scripts',file),join(root,'scripts',file));
  const env={...process.env};delete env.NODE_TEST_CONTEXT;
  const result=spawnSync(process.execPath,[join(root,'scripts','run-website-tests.mjs'),'--run'],{cwd:root,env,encoding:'utf8',windowsHide:true,maxBuffer:1e6});
  assert.equal(result.status,1);assert.match(result.stderr,/Public Atlas preview preflight/);

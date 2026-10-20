@@ -267,3 +267,10 @@ tests/fixtures/current-source-checkout-representations-radial-eus.json -text
 tests/fixtures/orbital-mri-delivery-transition-before-head-entry.mjs.raw -text
 tests/fixtures/completion-checklist-register63-before-head-entry.json.raw -text
 tests/fixtures/current-atlas-delivery-register63-before-head-entry.json.raw -text
+
+# Exact closed59 raw metadata and the original executable proof survive all checkouts.
+tests/fixtures/closed59-raw-metadata/** -text
+tests/fixtures/atlas-cerebral-lobar-imaging.before-6036-checkout.test.ts.raw -text
+tests/cerebral-checkout-epoch-preservation.test.mjs text eol=lf
+scripts/website-test-history-preflight.mjs text eol=lf
+tests/website-test-history-preflight.test.mjs text eol=lf

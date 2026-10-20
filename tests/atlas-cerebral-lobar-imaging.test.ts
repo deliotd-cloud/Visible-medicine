@@ -96,14 +96,21 @@ test('paired cerebral CT/MRI drafts reach learner and exact review worksheets wi
   const closedInputs=JSON.parse(closedRead('public/atlas-runtime/head-neck/source-inputs.json').toString());
   for(const policy of checkout.records){
     const row=closedInputs.find((entry:any)=>entry.path===policy.path);assert(row);
-    verifyMetadataTextCheckout(row,sourceAt(closedSource,policy.path),readFileSync(atlas+'/'+policy.path),policy);
+    const closedExport=readFileSync(new URL('./fixtures/closed59-raw-metadata/'+policy.path+'.raw',import.meta.url));
+    verifyMetadataTextCheckout(row,sourceAt(closedSource,policy.path),closedExport,policy);
   }
   assert(!liveReview.files.some((entry:any)=>entry.path===licenseMetadataPath),'License evidence is metadata, not a rewritten Review import');
   for(const row of liveInputs){
     const policy=policies.get(row.path);
     if(policy){
       const committed=sourceObjects.get(row.path);assert(committed);
-      verifyMetadataTextCheckout(row,committed,readFileSync(atlas+'/'+row.path),policy);
+      const working=Buffer.from(readFileSync(atlas+'/'+row.path));
+      assert.equal(row.sha256,sha(working),`${row.path}: current learner export matches current working bytes`);
+      assert.equal(sha(committed),sourceHashes.get(row.path),`${row.path}: current committed source`);
+      const text=working.toString('utf8');
+      assert(Buffer.from(text,'utf8').equals(working),`${row.path}: current metadata is valid UTF-8`);
+      assert(!text.includes('\0')&&!text.replaceAll('\r\n','').includes('\r'),`${row.path}: current metadata has no bare CR or NUL`);
+      assert(Buffer.from(text.replaceAll('\r\n','\n'),'utf8').equals(committed),`${row.path}: current working representation matches committed source`);
       checkedRepresentations++;
     }else assert.equal(row.sha256,sourceHashes.get(row.path),`${row.path}: learner committed source`);
   }
