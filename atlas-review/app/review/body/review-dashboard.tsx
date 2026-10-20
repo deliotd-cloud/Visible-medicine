@@ -89,11 +89,13 @@ export function BodyReviewDashboard({
   regions,
   initialId,
   initialRegion,
+  initialTrack = 'geometry',
 }: {
   rows: BodyReviewSummary[];
   regions: { id: string; name: string }[];
   initialId: string | null;
   initialRegion: string;
+  initialTrack?: 'geometry' | 'teaching';
 }) {
   const [region, setRegion] = useState(initialRegion),
     [system, setSystem] = useState('all'),
@@ -509,6 +511,7 @@ export function BodyReviewDashboard({
                   key={`${material.structureId}-${material.materialHash}`}
                   id={material.structureId}
                   materialHash={material.materialHash}
+                  initialTrack={initialTrack}
                   onDirty={setDirty}
                 />
                 </div>

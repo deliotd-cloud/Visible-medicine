@@ -1,5 +1,6 @@
 import { structures } from '../anatomy-data';
 import { ReviewDashboard } from './review-dashboard';
+import { reviewEntryTrack } from '@/atlas-review/lib/review-entry-track';
 import './review.css';
 
 export const metadata = {
@@ -10,10 +11,10 @@ export const dynamic = 'force-dynamic';
 export default async function ReviewPage({
   searchParams,
 }: {
-  searchParams: Promise<{ structure?: string }>;
+  searchParams: Promise<{ structure?: string; t?: string | string[] }>;
 }) {
   const query = await searchParams;
   const initialId =
     structures.find((s) => s.id === query.structure)?.id ?? structures[0].id;
-  return <ReviewDashboard initialId={initialId} />;
+  return <ReviewDashboard initialId={initialId} initialTrack={reviewEntryTrack(query.t)} />;
 }

@@ -4,6 +4,7 @@ import {
   specimenReviewMaterial,
 } from "@/atlas-review/lib/specimen-review-material";
 import { SpecimenReviewWorkspace } from "./workspace";
+import { reviewEntryTrack } from '@/atlas-review/lib/review-entry-track';
 import "../body/body-review.css";
 import "./specimen-review.css";
 
@@ -12,7 +13,7 @@ export const metadata = { title: "Specimen Review | Visible Medicine" };
 export default async function SpecimenReviewPage({
   searchParams,
 }: {
-  searchParams: Promise<{ specimen?: string; structure?: string }>;
+  searchParams: Promise<{ specimen?: string; structure?: string; t?: string | string[] }>;
 }) {
   const p = await searchParams;
   const packet =
@@ -38,6 +39,7 @@ export default async function SpecimenReviewPage({
           rows={specimenReviewRows}
           packet={packet}
           invalid={!!(p.specimen || p.structure) && !packet}
+          initialTrack={reviewEntryTrack(p.t)}
         />
       </main>
     </div>

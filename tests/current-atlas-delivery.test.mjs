@@ -46,8 +46,8 @@ test('previous complete bc925 delivery and its contract stay exact but cannot ad
 });
 
 test('one current fixture binds exact source tree, four learners, protected Review and model registry',()=>{
- assert.equal(CURRENT_ATLAS_REVISION,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');
- assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');
+ assert.equal(CURRENT_ATLAS_REVISION,'a2475a37201bdd5fdd12f5849fc8ee043412d02f');
+ assert.equal(pin.sourceTree,'97957a35788028b319df4f5d60c68a95e71320d7');
  assert.equal(pin.reviewIntegration,sha(JSON.stringify(JSON.parse(read('atlas-review/integration-inputs.json')).inputs)));
  assert.equal(Object.keys(pin.documents).length,12);assert(currentAtlasDeliveryRoot());
  assert.deepEqual(validateCurrentAtlasDelivery(),pin);
@@ -68,7 +68,7 @@ test('current fixture agrees with actual emitted bytes, notices, imported Review
  for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
  const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
  for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
- assert.equal(sourceFiles,1544);assert.equal(inputs,1681);assert(artifacts>100);
+ assert.equal(sourceFiles,1545);assert.equal(inputs,1682);assert(artifacts>100);
 });
 
 for(const [label,edit]of [
@@ -149,9 +149,9 @@ test('complete f509 source and whole original contracts remain frozen outside ex
  const old=JSON.parse(bytes);assert.equal(old.source,'f5097af8493701d64a8e2a2b5797df380f3b348a');assert.equal(old.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');assert.equal(old.reviewIntegration,'a4dbbd06443804be3d16ae0f73313504ce6782e12cd98ca161b21b3052bc94d8');assert.equal(old.reviewSourceFiles,1541);assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));
  const original=read('tests/fixtures/current-atlas-delivery-f5097af8.txt');assert.equal(sha(original),'a7ce97681413483667399d7d8388231c842082dd87a2eb8648d13751cf30aafa');
  const text=original.toString(),current=read('tests/current-atlas-delivery.test.mjs').toString(),prefix=current.slice(0,current.indexOf("\ntest('complete f509"));
- assert.equal(prefix.replace("assert.equal(CURRENT_ATLAS_REVISION,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');","assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');").replace("assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');","assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');").replace('assert.equal(sourceFiles,1544);assert.equal(inputs,1681);assert(artifacts>100);','assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);'),text,'Every original source/model/Review/refusal assertion is preserved outside exact source/tree/observed-count seams');
+ assert.equal(prefix.replace("assert.equal(CURRENT_ATLAS_REVISION,'a2475a37201bdd5fdd12f5849fc8ee043412d02f');","assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');").replace("assert.equal(pin.sourceTree,'97957a35788028b319df4f5d60c68a95e71320d7');","assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');").replace('assert.equal(sourceFiles,1545);assert.equal(inputs,1682);assert(artifacts>100);','assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);'),text,'Every original source/model/Review/refusal assertion is preserved outside exact source/tree/observed-count seams');
  const ui=read('tests/fixtures/ui-teaching-current-delivery-f5097af8.mjs.raw');assert.equal(sha(ui),'137b8031035f8c15db0b0f8775abddef7819aad22af43ca7682903aee668b786');
- assert.equal(read('tests/ui-teaching-current-delivery.test.mjs').toString(),ui.toString().replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1544);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1681);'),'Only two observed current-count seams change; whole original behavioral bodies remain exact');
+ assert.equal(read('tests/ui-teaching-current-delivery.test.mjs').toString(),ui.toString().replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1545);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1682);'),'Only two observed current-count seams change; whole original behavioral bodies remain exact');
 });
 
 test('pre-ileocolic 4d19 delivery is immutable and refused by the new source epoch',()=>{
@@ -163,4 +163,35 @@ test('pre-ileocolic 4d19 delivery is immutable and refused by the new source epo
  assert.equal(old.reviewIntegration,'4d19f9f2e465a772f5ea6da4a3605c09d9f0d540bde3f63735ff653d393c60ad');
  assert.equal(old.reviewSourceFiles,1543);
  assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));
+});
+
+test('aaa8 delivery and its complete pre-entry contract remain historical and byte exact',()=>{
+ const pinBytes=read('tests/fixtures/current-atlas-delivery-aaa8a6a4.json');
+ assert.equal(sha(pinBytes),'d0550d6202c5121489f16a1ce292226994d7f525c9c1d8da8b0822822ecb48d2');
+ const old=JSON.parse(pinBytes);
+ assert.equal(old.source,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');
+ assert.equal(old.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');
+ assert.equal(old.reviewIntegration,'d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b');
+ assert.equal(old.reviewSourceFiles,1544);
+ assert.throws(()=>validateCurrentAtlasDelivery({pin:old}));
+ const before=read('tests/fixtures/current-atlas-delivery-before-review-entry.mjs.raw');
+ assert.equal(sha(before),'49dbe4d46facced8194ed35ebc8b1b50b927c5892c5b05fec665b69ce65c3a6f');
+ const current=read('tests/current-atlas-delivery.test.mjs').toString();
+ const start="\ntest('aaa8 delivery and its complete pre-entry contract remain historical and byte exact'";
+ const index=current.indexOf(start);
+ assert(index>0&&current.lastIndexOf(start)===index);
+ let inverse=current.slice(0,index);
+ const back=(from,to,count)=>{
+  assert.equal(inverse.split(from).length-1,count,`Exact current seam: ${from}`);
+  inverse=inverse.split(from).join(to);
+ };
+ back('a2475a37201bdd5fdd12f5849fc8ee043412d02f','aaa8a6a428e74a2055310630f9dfee8731fe0eee',2);
+ back('97957a35788028b319df4f5d60c68a95e71320d7','7c0b886d66d2adf64d6d29e44938f39d8cd61046',2);
+ back('assert.equal(sourceFiles,1545);assert.equal(inputs,1682);assert(artifacts>100);',
+  'assert.equal(sourceFiles,1544);assert.equal(inputs,1681);assert(artifacts>100);',2);
+ back("'assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1545);'",
+  "'assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1544);'",1);
+ back("'assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1682);'",
+  "'assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1681);'",1);
+ assert.equal(inverse,before.toString(),'Every earlier historical, auth, tamper and semantic assertion survives exact live seams');
 });

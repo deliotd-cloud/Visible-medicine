@@ -79,7 +79,11 @@ test('real catalogue keeps every 3D selection and both exact tracks, bounded pag
   const result=parseInboxBatch(await response.json(),page,start.catalogRevision),entries=findClinicalReviewEntries({page:page-1}).entries;
   assert.equal(result.items.length,entries.length*2);assert(result.items.length<=24);
   for(const [index,entry]of entries.entries())for(const [offset,track]of ['geometry','teaching'].entries()){
-   const row=result.items[index*2+offset];assert.equal(row.key,JSON.stringify([entry.key,track]));assert.equal(row.href,entry.href);assert.equal(row.title,entry.name);assert.match(row.revision!,/^[a-f0-9]{64}$/);assert.equal(row.status,'not-started');
+   const row=result.items[index*2+offset];assert.equal(row.key,JSON.stringify([entry.key,track]));assert.equal(row.href,track==='teaching'?entry.href+(entry.href.includes('?')?'&':'?')+'t=teaching':entry.href);assert.equal(row.title,entry.name);assert.match(row.revision!,/^[a-f0-9]{64}$/);assert.equal(row.status,'not-started');
+   const target=new URL(row.href,'https://review.invalid'),original=new URL(entry.href,'https://review.invalid');
+   assert.equal(target.pathname,original.pathname);assert.equal(target.hash,original.hash);assert.equal(row.trackLabel,track==='teaching'?'Teaching':'Anatomy');
+   if(track==='teaching'){assert.deepEqual(target.searchParams.getAll('t'),['teaching']);target.searchParams.delete('t');}
+   assert.deepEqual([...target.searchParams],[...original.searchParams],'track entry must preserve the exact structure, parent, study, source and specimen query');
   }
  }
  // Static index pagination itself is exhaustive: no missing or duplicate selection.

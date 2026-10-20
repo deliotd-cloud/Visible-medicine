@@ -56,7 +56,7 @@ export async function getClinicalReviewInbox(request:Request,binding:Pick<D1Data
   if(extra.length>64||new Set(extra.map(item=>item.key)).size!==extra.length)throw Error('Invalid additional review catalogue.');
   const bodyPages=findClinicalReviewEntries().pageCount,pageCount=bodyPages+1;
   if(page>pageCount)throw new ReviewHttpError(400,'Inbox page is outside the current catalogue.');
-  const catalogRevision=await digest({schema:'vm-clinical-inbox-catalog-1',changeReasonPolicy:'vm-clinical-priority-1',sourceCommit:manifest.revision,
+  const catalogRevision=await digest({schema:'vm-clinical-inbox-catalog-1',changeReasonPolicy:'vm-clinical-priority-1',entryTrackPolicy:'vm-clinical-entry-track-1',sourceCommit:manifest.revision,
    integration:manifest.websiteIntegrationSha256,renderer:renderer.sha256,shoulder:shoulderRevisions,
    selections:clinicalReviewEntries,extra});
   if(revision!==null&&revision!==catalogRevision)throw new ReviewHttpError(409,'Review material changed. Restart the status scan; no decisions have changed.');
@@ -90,7 +90,9 @@ export async function getClinicalReviewInbox(request:Request,binding:Pick<D1Data
      // reason for an unsupported family or silently remove injected metadata.
      if(entry.scope==='shoulder'&&reason!==null)throw Error('Unsupported review reason.');
      return {key:JSON.stringify([entry.key,track]),title:entry.name,area:'structures' as const,
-      scopeLabel:entry.context+' · '+entry.laterality,href:entry.href,
+      // A navigation preference only: retain the exact catalogue identity and
+      // source query; Anatomy keeps its existing default destination.
+      scopeLabel:entry.context+' · '+entry.laterality,href:track==='teaching'?entry.href+(entry.href.includes('?')?'&':'?')+'t=teaching':entry.href,
       trackLabel:track==='geometry'?'Anatomy':'Teaching',revision:valid?current:null,
       status:state,capability:'decision' as const,
       ...(valid&&state==='re-review'&&reason!==null?{changeReason:reason}:{})};

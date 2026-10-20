@@ -3,6 +3,7 @@ import {
   bodyReviewRegions,
 } from '../../../lib/body-review-material';
 import { BodyReviewDashboard } from './review-dashboard';
+import { reviewEntryTrack } from '@/atlas-review/lib/review-entry-track';
 import './body-review.css';
 
 export const metadata = { title: 'Body Review Worksheets | Visible Medicine' };
@@ -10,7 +11,7 @@ export const dynamic = 'force-dynamic';
 export default async function BodyReviewPage({
   searchParams,
 }: {
-  searchParams: Promise<{ structure?: string }>;
+  searchParams: Promise<{ structure?: string; t?: string | string[] }>;
 }) {
   const params = await searchParams;
   const selected = bodyReviewSummaries.find((s) => s.id === params.structure);
@@ -20,6 +21,7 @@ export default async function BodyReviewPage({
       regions={bodyReviewRegions}
       initialId={selected?.id ?? null}
       initialRegion={selected?.region ?? 'shoulder-arm'}
+      initialTrack={reviewEntryTrack(params.t)}
     />
   );
 }

@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
-  "sha256": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
+  "sourceCommit": "a2475a37201bdd5fdd12f5849fc8ee043412d02f",
+  "sha256": "9b8c30904b219de07b815e0c2e0d9e69fdfa48e4f66633e9c9f6a13ccc9e6fa4",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -416,7 +416,7 @@
     },
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
-      "sha256": "e6fa0f7a9c3416a9ff0cc4c1db7e1602e939b47cceb8768c3c63a1c0a753b4f8"
+      "sha256": "a95473abb0708afe0ec6ae959b992329b88defa61752ee90d54c08654a8de837"
     },
     {
       "path": "atlas-review/app/review/body/body-review.css",
@@ -424,11 +424,11 @@
     },
     {
       "path": "atlas-review/app/review/body/page.tsx",
-      "sha256": "efa4e4a610cd14a08dd63df1ee824ada93013d88e5fac591aafef30e17462f57"
+      "sha256": "b844b98c364693849eaa8a30ca277c62547bda500c732c02820e5155665615ff"
     },
     {
       "path": "atlas-review/app/review/body/review-dashboard.tsx",
-      "sha256": "9064261d9073f4f42f0847486c21f4188d7579a3ca863fd21efbea6a912d3721"
+      "sha256": "01eb465a152fa99b43017708b7d005a2427a93807fdb1627a5693ce92bdfe993"
     },
     {
       "path": "atlas-review/app/review/nested/nested-review.css",
@@ -456,7 +456,7 @@
     },
     {
       "path": "atlas-review/app/review/page.tsx",
-      "sha256": "1ad84853d878339ac6d90fbd12dff347f7c5de4f438d46e79b0142f7a4eeb2fb"
+      "sha256": "30f489d30f68c02671ac1a1154fcc86431508da0ff51d4a6c2e6b92cc5389ec2"
     },
     {
       "path": "atlas-review/app/review/review-change-notice.css",
@@ -468,7 +468,7 @@
     },
     {
       "path": "atlas-review/app/review/review-dashboard.tsx",
-      "sha256": "b96e6e92e4f7176ec4caefbef0bc1d899fd1c216fdbc551d3ca8acf77aa8d0a0"
+      "sha256": "6fca0ce5f6b9b4746583a4991836beb8cd6535e44bb87545edd6c7e645385c3e"
     },
     {
       "path": "atlas-review/app/review/review-model-preview.css",
@@ -484,7 +484,7 @@
     },
     {
       "path": "atlas-review/app/review/specimens/page.tsx",
-      "sha256": "32ec0da4c40ff41726a6858b068390ce667bddcddf3d10c34d2db490e9870905"
+      "sha256": "41a1a8b4c89ea7212d9adb02df6d3d11772b97797b39d102344fe74c47fa14f9"
     },
     {
       "path": "atlas-review/app/review/specimens/specimen-review.css",
@@ -492,7 +492,7 @@
     },
     {
       "path": "atlas-review/app/review/specimens/workspace.tsx",
-      "sha256": "048d30ffaf3c821378e561d2225892e3245f26756e5ee93352d8224384372099"
+      "sha256": "65a69459a6587ded0797bccdcc491efa9f9ae59b3fda36afea40bbaf5966f702"
     },
     {
       "path": "atlas-review/app/scene-label-layer.css",
@@ -5435,6 +5435,10 @@
       "sha256": "ff8daeb9cc9f836f2294f16c288c22a2f6935c0af393a6cb67ee3869c16495d6"
     },
     {
+      "path": "atlas-review/lib/review-entry-track.ts",
+      "sha256": "16e5d5bad9ae7d4c6777daffefd41c8656ea3677a88f6852ebd6d3b6b4a5cf36"
+    },
+    {
       "path": "atlas-review/lib/review-http.ts",
       "sha256": "ca15e73dd39c39e4376f40f81373b6da5be5be64dc20a1521bcefb54654d7ad1"
     },
@@ -6720,7 +6724,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "ee095a67061b4c6820fb5c85aeaecfb9a851e57183fe1e617ab41632dcf8224d"
+      "sha256": "ec1e41a7624cf50f3169642c15d02b547e0bc7e66bfcf58e1207f997d12858cc"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",

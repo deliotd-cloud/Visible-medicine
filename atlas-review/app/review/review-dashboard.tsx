@@ -70,9 +70,12 @@ async function api<T>(path: string, init?: RequestInit): Promise<T> {
     throw new Error('Unexpected review response. Please retry.');
   return data as T;
 }
-export function ReviewDashboard({ initialId }: { initialId: string }) {
+export function ReviewDashboard({ initialId, initialTrack = 'geometry' }: {
+  initialId: string;
+  initialTrack?: 'geometry' | 'teaching';
+}) {
   const [selectedId, setSelectedId] = useState(initialId),
-    [track, setTrack] = useState<ReviewTrack>('geometry');
+    [track, setTrack] = useState<ReviewTrack>(initialTrack);
   const [saved, setSaved] = useState<SavedReview[]>([]),
     [drafts, setDrafts] = useState<Record<string, Entry>>({});
   const [loaded, setLoaded] = useState(false),

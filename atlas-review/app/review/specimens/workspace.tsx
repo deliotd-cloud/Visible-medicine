@@ -59,15 +59,17 @@ export function SpecimenReviewWorkspace({
   rows,
   packet,
   invalid,
+  initialTrack = 'geometry',
 }: {
   rows: typeof specimenReviewRows;
   packet: SpecimenReviewMaterial | null;
   invalid: boolean;
+  initialTrack?: 'geometry' | 'teaching';
 }) {
   const [query, setQuery] = useState(""),
     [key, setKey] = useState(packet?.context.specimenKey ?? rows[0].key);
   const [dirty, setDirty] = useState(false),
-    [track, setTrack] = useState<SpecimenReviewTrack>("geometry");
+    [track, setTrack] = useState<SpecimenReviewTrack>(initialTrack);
   useEffect(() => {
     if (!dirty) return;
     const unload = (e: BeforeUnloadEvent) => {

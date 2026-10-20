@@ -23,7 +23,7 @@ function frozen([path,hash]){const bytes=read(path);assert.equal(sha(bytes),hash
 function prefixFor(pin){let text=frozen(rawDelivery);
  text=exact(text,source59,pin.source);text=exact(text,tree59,pin.sourceTree);
  return exact(text,'assert.equal(sourceFiles,1534);assert(artifacts>100&&inputs>1500);',
-  `assert.equal(sourceFiles,${pin.reviewSourceFiles});assert.equal(inputs,1681);assert(artifacts>100);`);}
+  `assert.equal(sourceFiles,${pin.reviewSourceFiles});assert.equal(inputs,1682);assert(artifacts>100);`);}
 function portalFor509b(old){let text=frozen(rawPortal);
  text=exact(text,source59,old.source);text=exact(text,tree59,old.sourceTree);
  text=exact(text,'exact clean Atlas3dc','exact clean Atlas509b');
@@ -56,15 +56,19 @@ function admitDelivery(candidate,pin){
   "const text=original.toString(),current=read('tests/current-atlas-delivery.test.mjs').toString(),prefix=current.slice(0,current.indexOf(\"\\ntest('complete f509\"));",
   "const text=original.toString(),prefix=read('tests/current-atlas-delivery.test.mjs').toString().slice(0,text.length);");
  appendix=exact(appendix,
-  "assert.equal(prefix.replace(\"assert.equal(CURRENT_ATLAS_REVISION,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');\",\"assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');\").replace(\"assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');\",\"assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');\").replace('assert.equal(sourceFiles,1544);assert.equal(inputs,1681);assert(artifacts>100);','assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);'",
+  "assert.equal(prefix.replace(\"assert.equal(CURRENT_ATLAS_REVISION,'a2475a37201bdd5fdd12f5849fc8ee043412d02f');\",\"assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');\").replace(\"assert.equal(pin.sourceTree,'97957a35788028b319df4f5d60c68a95e71320d7');\",\"assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');\").replace('assert.equal(sourceFiles,1545);assert.equal(inputs,1682);assert(artifacts>100);','assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);'",
   "assert.equal(prefix.replace(\"assert.equal(CURRENT_ATLAS_REVISION,'bd5465ee3b94c66c3d5701e7749099d07e8f40d3');\",\"assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');\").replace(\"assert.equal(pin.sourceTree,'44ca83bf391164c09f43f4169d25dcacf4b2559d');\",\"assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');\").replace('assert.equal(sourceFiles,1543);','assert.equal(sourceFiles,1541);'");
  appendix=exact(appendix,
-  "replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1544);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1681);')",
+  "replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1545);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1682);')",
   "replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1543);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1680);')");
  assert.equal(Buffer.byteLength(appendix),2067,'Exact inverse f509 historical appendix length');
  assert.equal(sha(Buffer.from(appendix)),suffixHash,'Exact inverse f509 historical appendix assertions');
  assert(appendix.startsWith("\ntest('complete f509 source and whole original contracts remain frozen"));
- assert.equal(sha(Buffer.from(suffix.slice(newIndex))),'952d06b4a21a63b1a502866f72afd808b86a596c20860722eb5671ac784ec98b','Exact new 4d19 historical refusal');
+ const nextStart="\ntest('aaa8 delivery and its complete pre-entry contract remain historical and byte exact'";
+ const nextIndex=suffix.indexOf(nextStart,newIndex+newStart.length);
+ assert(nextIndex>newIndex&&suffix.lastIndexOf(nextStart)===nextIndex,'One new aaa8 historical refusal and complete-contract witness');
+ assert.equal(sha(Buffer.from(suffix.slice(newIndex,nextIndex))),'952d06b4a21a63b1a502866f72afd808b86a596c20860722eb5671ac784ec98b','Exact original 4d19 historical refusal');
+ assert.equal(sha(Buffer.from(suffix.slice(nextIndex))),'5c32493827a53dd662aed636020891f7455010c0d0df4cb402b994951f0c2c87','Reviewed aaa8 historical refusal and complete-contract witness');
  return prefix;
 }
 
@@ -96,13 +100,13 @@ test('59, 509b and f509 witnesses remain historical while current admission uses
 
  const pin=validateCurrentAtlasDelivery(),sourceRoot=currentAtlasDeliveryRoot();
  assert.equal(pin.source,CURRENT_ATLAS_REVISION);
- assert.equal(pin.source,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');
- assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');
+ assert.equal(pin.source,'a2475a37201bdd5fdd12f5849fc8ee043412d02f');
+ assert.equal(pin.sourceTree,'97957a35788028b319df4f5d60c68a95e71320d7');
  const prefix=admitDelivery(read('current-atlas-delivery.test.mjs').toString(),pin);
  let fromF509=f509OriginalBytes.toString();
  fromF509=exact(fromF509,f509.source,pin.source);
  fromF509=exact(fromF509,f509.sourceTree,pin.sourceTree);
- fromF509=exact(fromF509,'assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);',`assert.equal(sourceFiles,${pin.reviewSourceFiles});assert.equal(inputs,1681);assert(artifacts>100);`);
+ fromF509=exact(fromF509,'assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);',`assert.equal(sourceFiles,${pin.reviewSourceFiles});assert.equal(inputs,1682);assert(artifacts>100);`);
  assert.equal(prefix,fromF509,'The same original prefix reconstructs from f509 independently');
 
  const history=checkedAtlasHistoryRepo(portalPin.source);
@@ -122,6 +126,8 @@ test('forged old assertions, appendix, portal and stale delivery pins are refuse
  assert.throws(()=>admitDelivery(forgedDelivery,pin));
  const forgedAppendix=exact(delivery,"assert.equal(old.reviewSourceFiles,1541);","assert.equal(old.reviewSourceFiles,1542);");
  assert.throws(()=>admitDelivery(forgedAppendix,pin));
+ const forgedAaa8=exact(delivery,"assert.equal(old.reviewSourceFiles,1544);","assert.equal(old.reviewSourceFiles,1543);");
+ assert.throws(()=>admitDelivery(forgedAaa8,pin));
  const forgedPortal=exact(portal,"assert.notEqual(pin.source,'9fba9a1e24b6669aafd48e945d55fc0939d50ab2');",'assert(true);');
  assert.throws(()=>admitPortalCurrent(forgedPortal,portalPin));
  assert.throws(()=>validateCurrentAtlasDelivery({pin:{...pin,reviewIntegration:'0'.repeat(64)}}));

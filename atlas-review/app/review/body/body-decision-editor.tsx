@@ -62,17 +62,19 @@ function download(value: unknown, filename: string) {
 export function BodyDecisionEditor({
   id,
   materialHash,
+  initialTrack = 'geometry',
   onDirty,
 }: {
   id: string;
   materialHash: string;
+  initialTrack?: 'geometry' | 'teaching';
   onDirty: (dirty: boolean) => void;
 }) {
   const [page, setPage] = useState<BodyDecisionPage | null>(null);
   const [drafts, setDrafts] = useState<ReturnType<
     typeof bodyDraftsFromPage
   > | null>(null);
-  const [track, setTrack] = useState<BodyReviewTrack>('geometry');
+  const [track, setTrack] = useState<BodyReviewTrack>(initialTrack);
   const [dirty, setDirty] = useState(false),
     [busy, setBusy] = useState(false),
     [reconcile, setReconcile] = useState(false);
