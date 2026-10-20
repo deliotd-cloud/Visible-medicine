@@ -1,0 +1,30 @@
+{
+  "schema": "vm-keyboard-followup-review/1",
+  "date": "2026-10-20",
+  "scope": "Two independent staged accessibility fixes, not installed into the frozen Website candidate",
+  "head": {
+    "preimage": "8bd66074b230405df323883d73df65e23ce877c3e67d9067fce1a3373527ca4d",
+    "candidate": "03c01e9b7bee68600de7cd99bb6d0d59df152fa0d2e7c3b5d82b8e67c8cf77b5",
+    "change": "One stable full-size focus group plus synchronous conditional focus before removing its import-retry button. Entire render-error boundary, dynamic import lifecycle and latest child props unchanged. No selection, geometry, masks, frame, scroll, storage, source identity or parent navigation changes. No asynchronous focus stealing.",
+    "preparationSha256": "fba13916d7dc0a7d181dbda26c3201ce00800f6708834f7bff440915fb8e3b5e",
+    "originalTests": "Exact529ffaf6 original preserved, inverse-proved across dependency and source-path seams plus helper export. No original assertion or lifecycle body changed.",
+    "nativeReceiptSha256": "98dba62ffa21f162f05d2fecdc7190704c590ed6bd49a399a37f8f9e7ebe3c2a",
+    "native": "Actual old source6pass/2fail; new source8pass/0fail/cancel/skip/todo. Complete native before.tapSHAabcdae3f and after.tapSHAc6eae0cc retained. Three new focus cases plus all five existing lifecycle/render-error tests.",
+    "browserReceiptSha256": "e8c129d92a4968c0a4bbb48626c9002a450fe65cd7bab0401a06f89a2b8c131b",
+    "browser": "Actual isolated Chrome155 own pages12/13/14, native Tab/Enter. Old exact source loses focus to BODY on retry; candidate focuses stable group and retains it through success. Native Tab reaches Anatomy index; repeated failure, unfocused programmatic retry and later success do not steal that focus. Synthetic controlled dynamic-import promise seam only, no actual image/WebGL/auth/API. Full-size panel866x420. Own pages closed and server236484/58736 explicitly stopped; owner preview unchanged.",
+    "admission": "Protected Review input. Must later rebind/rebuild using stock producers and reconcile actual derived revisions/test pins. Do not replace any currently frozen source. Real integrated rendering/role/AT/type/build checks remain separate."
+  },
+  "studio": {
+    "stage": "F:/VisibleMedicine/staging/20261020-studio-keyboard-followup",
+    "handoffSha256": "fc36c553c1f5a91b3d7b19d770e3a3f149487169375f28b3542bfd9a13d81dfe",
+    "preimage": "58a8e419bacf356f44d8ed8727c5455ee9689bf4c467d7b5ed8ccc801b17d6f5",
+    "candidate": "e6d0c653f7c18ea6e99afc98a2c8674de056757e7afea0a94a3edbb3fc3140e8",
+    "review": "Main read full test and actual diff. One aria-label is the ONLY component difference; URL encoding, handlers, outline order, visible text and layout unchanged. Worker confirmed real old-source target assertion failure then1pass; first wrong Link mock red explicitly retained separately. No old tests edited. Real desktop/AT/type/build integration still pending."
+  },
+  "canonicalInstalled": false,
+  "protectedReviewVerified": false,
+  "clinicalApproval": false,
+  "publicDeployment": false,
+  "reviewSha256": "cc41d1c4d24af4419cc96d6617ad163a4cccfbec5236ca3d938dfb0f133cc727",
+  "wholeWebsiteComposition": false
+}

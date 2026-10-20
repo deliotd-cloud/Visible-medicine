@@ -1,0 +1,106 @@
+{
+  "schema": "vm-source-only-checkpoint/2",
+  "at": "2026-10-20T01:56:16.411Z",
+  "sourceIdentity": {
+    "product": "Pending head 3D import-retry focus and Studio workbook-specific link names",
+    "requiredWebsiteSource": "e6695521509bc963da3d8769d750a45071505e7a",
+    "canonicalInstalled": false,
+    "protectedReviewRebuildRequired": true
+  },
+  "parent": null,
+  "gitParent": null,
+  "files": [
+    {
+      "path": "PENDING_FRAGMENT_README.md",
+      "bytes": 1853,
+      "sha256": "9366ce0a1574435a7ab169ada88a372eea7be8581af8ede64e5e71639ff5e520"
+    },
+    {
+      "path": "pending-head-import-focus/browser-entry.tsx",
+      "bytes": 1182,
+      "sha256": "8de579e5e092ef40526389ebf6771a3b6e4da8d36ab1743395687ce6abd14f47"
+    },
+    {
+      "path": "pending-head-import-focus/components/HeadAtlasSurfaceLoader.tsx",
+      "bytes": 2707,
+      "sha256": "03c01e9b7bee68600de7cd99bb6d0d59df152fa0d2e7c3b5d82b8e67c8cf77b5"
+    },
+    {
+      "path": "pending-head-import-focus/package.json",
+      "bytes": 69,
+      "sha256": "b6cd55b28e7d37c0e9039c78ff91039a96e2d7fe130d0efe9d9f87515fa077d9"
+    },
+    {
+      "path": "pending-head-import-focus/prepare.mjs",
+      "bytes": 3831,
+      "sha256": "f52a6de8e6a7737de48752f46de5d48d68c01232d769d63016e76302e07fbad9"
+    },
+    {
+      "path": "pending-head-import-focus/run-native.mjs",
+      "bytes": 1983,
+      "sha256": "7937e86783ac9aeef1af8f250941c7b7afceff4669f4be508ef05e351dbacf92"
+    },
+    {
+      "path": "pending-head-import-focus/serve.mjs",
+      "bytes": 1088,
+      "sha256": "ac34272ee6432da43b05d18913914bc0ea76608f44210a66ce5cbbae0d16cfcc"
+    },
+    {
+      "path": "pending-head-import-focus/tests/head-import-focus.test.mjs",
+      "bytes": 3437,
+      "sha256": "6fb495b215d6bac3d9348602f3ea4d954eeb6b191db436e581fa93034cd48a91"
+    },
+    {
+      "path": "pending-head-import-focus/tests/original-head-surface-loading.raw",
+      "bytes": 11686,
+      "sha256": "529ffaf68b41607660180671bab17c7c02a005c87f6149958a32a79201e6b07e"
+    },
+    {
+      "path": "pending-studio-link-names/components/StudioCourseEditor.tsx",
+      "bytes": 11072,
+      "sha256": "e6d0c653f7c18ea6e99afc98a2c8674de056757e7afea0a94a3edbb3fc3140e8"
+    },
+    {
+      "path": "pending-studio-link-names/tests/studio-course-outline-link-names.test.mjs",
+      "bytes": 2922,
+      "sha256": "572336fec79e46f0ab42bf908198b36547e2770b77ab4eeb555de7f50a5fe680"
+    }
+  ],
+  "removed": [],
+  "scope": "Eleven selected pending source/README fragments plus three metadata files only. Actual head old-source6pass/2fail and candidate8pass plus native Chrome155 focus checks; Studio exact one-attribute change with real1fail-before/1pass-after. Not a composed runnable Website, protected Review admission, build/AT/clinical/release/full private-data backup. No generated bundles, dependencies, private data/modules, masks, models or raw ancestry uploaded.",
+  "proof": {
+    "schema": "vm-keyboard-followup-review/1",
+    "date": "2026-10-20",
+    "scope": "Two independent staged accessibility fixes, not installed into the frozen Website candidate",
+    "head": {
+      "preimage": "8bd66074b230405df323883d73df65e23ce877c3e67d9067fce1a3373527ca4d",
+      "candidate": "03c01e9b7bee68600de7cd99bb6d0d59df152fa0d2e7c3b5d82b8e67c8cf77b5",
+      "change": "One stable full-size focus group plus synchronous conditional focus before removing its import-retry button. Entire render-error boundary, dynamic import lifecycle and latest child props unchanged. No selection, geometry, masks, frame, scroll, storage, source identity or parent navigation changes. No asynchronous focus stealing.",
+      "preparationSha256": "fba13916d7dc0a7d181dbda26c3201ce00800f6708834f7bff440915fb8e3b5e",
+      "originalTests": "Exact529ffaf6 original preserved, inverse-proved across dependency and source-path seams plus helper export. No original assertion or lifecycle body changed.",
+      "nativeReceiptSha256": "98dba62ffa21f162f05d2fecdc7190704c590ed6bd49a399a37f8f9e7ebe3c2a",
+      "native": "Actual old source6pass/2fail; new source8pass/0fail/cancel/skip/todo. Complete native before.tapSHAabcdae3f and after.tapSHAc6eae0cc retained. Three new focus cases plus all five existing lifecycle/render-error tests.",
+      "browserReceiptSha256": "e8c129d92a4968c0a4bbb48626c9002a450fe65cd7bab0401a06f89a2b8c131b",
+      "browser": "Actual isolated Chrome155 own pages12/13/14, native Tab/Enter. Old exact source loses focus to BODY on retry; candidate focuses stable group and retains it through success. Native Tab reaches Anatomy index; repeated failure, unfocused programmatic retry and later success do not steal that focus. Synthetic controlled dynamic-import promise seam only, no actual image/WebGL/auth/API. Full-size panel866x420. Own pages closed and server236484/58736 explicitly stopped; owner preview unchanged.",
+      "admission": "Protected Review input. Must later rebind/rebuild using stock producers and reconcile actual derived revisions/test pins. Do not replace any currently frozen source. Real integrated rendering/role/AT/type/build checks remain separate."
+    },
+    "studio": {
+      "stage": "F:/VisibleMedicine/staging/20261020-studio-keyboard-followup",
+      "handoffSha256": "fc36c553c1f5a91b3d7b19d770e3a3f149487169375f28b3542bfd9a13d81dfe",
+      "preimage": "58a8e419bacf356f44d8ed8727c5455ee9689bf4c467d7b5ed8ccc801b17d6f5",
+      "candidate": "e6d0c653f7c18ea6e99afc98a2c8674de056757e7afea0a94a3edbb3fc3140e8",
+      "review": "Main read full test and actual diff. One aria-label is the ONLY component difference; URL encoding, handlers, outline order, visible text and layout unchanged. Worker confirmed real old-source target assertion failure then1pass; first wrong Link mock red explicitly retained separately. No old tests edited. Real desktop/AT/type/build integration still pending."
+    },
+    "canonicalInstalled": false,
+    "protectedReviewVerified": false,
+    "clinicalApproval": false,
+    "publicDeployment": false,
+    "reviewSha256": "cc41d1c4d24af4419cc96d6617ad163a4cccfbec5236ca3d938dfb0f133cc727",
+    "wholeWebsiteComposition": false
+  },
+  "wholeProjectBackup": false,
+  "privateDataBackup": false,
+  "rawCanonicalAncestry": false,
+  "clinicalApproval": false,
+  "publicDeployment": false
+}
