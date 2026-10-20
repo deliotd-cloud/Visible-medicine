@@ -72,7 +72,7 @@ test('all 40 original lecture test bodies and frozen source bytes survive exact 
  assert.equal(cases,40);assert.equal(changed,19);
 });
 
-test('historical 7b and pre-bind e440 witnesses stay distinct from validated current bd5 delivery',()=>{
+test('historical 7b and pre-bind e440 witnesses stay distinct from validated current aaa8 delivery',()=>{
  const oldBytes=read('tests/fixtures/current-atlas-delivery-7b3e678a.json');
  assert.equal(sha(oldBytes),'1a9a62e5ec6998ccc0f68c083dcd50ef03c6f89bc8cc46a7036e6c3ba39466cf');
  const old=JSON.parse(oldBytes);
@@ -94,9 +94,9 @@ test('historical 7b and pre-bind e440 witnesses stay distinct from validated cur
  assert.deepEqual(JSON.parse(pinBytes),pin,'Current fixture is the validated actual producer binding');
  assert.notEqual(sha(pinBytes),sha(preBindBytes),'Rebound fixture is distinct from the historical pre-bind snapshot');
  assert.equal(pin.source,CURRENT_ATLAS_REVISION);
- assert.equal(pin.source,'bd5465ee3b94c66c3d5701e7749099d07e8f40d3');
- assert.equal(pin.sourceTree,'44ca83bf391164c09f43f4169d25dcacf4b2559d');
- assert.equal(pin.reviewSourceFiles,1543);
+ assert.equal(pin.source,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');
+ assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');
+ assert.equal(pin.reviewSourceFiles,1544);
  const inputsBytes=read('atlas-review/integration-inputs.json');
  const reviewBytes=read('atlas-review/manifest.json');
  assert.equal(sha(inputsBytes),pin.documents['atlas-review/integration-inputs.json']);

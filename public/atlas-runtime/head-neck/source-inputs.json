@@ -81,7 +81,7 @@
   },
   {
     "path": "app/body-content.ts",
-    "sha256": "f83c1a6b70109ebf1871cb7314d57c13f6e508dc401075aeb0e5fc3b3d029e07"
+    "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
   },
   {
     "path": "app/body-education-link.ts",
@@ -2429,7 +2429,7 @@
   },
   {
     "path": "content/regional-teaching/abdomen.json",
-    "sha256": "d71c2f0a0895190b7661e632062a64487c14cb3ba1a8ecaf2614e51d4655f6a1"
+    "sha256": "19f318f4d3e342ee0f1b68c7232cbf9249e828fa9802d264a20f0aa6cd9eaff0"
   },
   {
     "path": "content/regional-teaching/foot.json",
@@ -4374,6 +4374,10 @@
   {
     "path": "lib/hyoid-epiglottis-ultrasound.ts",
     "sha256": "fc00e46a62afbdbd93e9cfb4f757c5274b3360054086cc8f96bde7b0f39b65e0"
+  },
+  {
+    "path": "lib/ileocolic-artery-ultrasound.ts",
+    "sha256": "76c9eb7266eb961d1363b1d6f19f4bf93634f3017455397bd3d683b81169a1df"
   },
   {
     "path": "lib/iliac-arterial-imaging.ts",

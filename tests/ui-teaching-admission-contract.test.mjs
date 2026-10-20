@@ -22,7 +22,8 @@ const rawPortal=['fixtures/portal-admission-before-ui-teaching.txt','2c32d0068ce
 function frozen([path,hash]){const bytes=read(path);assert.equal(sha(bytes),hash,`Exact historical bytes: ${path}`);return bytes.toString();}
 function prefixFor(pin){let text=frozen(rawDelivery);
  text=exact(text,source59,pin.source);text=exact(text,tree59,pin.sourceTree);
- return exact(text,'assert.equal(sourceFiles,1534);',`assert.equal(sourceFiles,${pin.reviewSourceFiles});`);}
+ return exact(text,'assert.equal(sourceFiles,1534);assert(artifacts>100&&inputs>1500);',
+  `assert.equal(sourceFiles,${pin.reviewSourceFiles});assert.equal(inputs,1681);assert(artifacts>100);`);}
 function portalFor509b(old){let text=frozen(rawPortal);
  text=exact(text,source59,old.source);text=exact(text,tree59,old.sourceTree);
  text=exact(text,'exact clean Atlas3dc','exact clean Atlas509b');
@@ -32,9 +33,23 @@ function admitDelivery(candidate,pin){
  const prefix=prefixFor(pin);
  assert(candidate.startsWith(prefix),'Whole original delivery assertions must retain only declared current seams');
  const suffix=candidate.slice(prefix.length);
- assert.equal(Buffer.byteLength(suffix),2067,'Exact f509 historical appendix length');
- assert.equal(sha(Buffer.from(suffix)),suffixHash,'Exact f509 historical appendix assertions');
- assert(suffix.startsWith("\ntest('complete f509 source and whole original contracts remain frozen"));
+ const newStart="\ntest('pre-ileocolic 4d19 delivery is immutable and refused by the new source epoch'";
+ const newIndex=suffix.indexOf(newStart);
+ assert(newIndex>0&&suffix.lastIndexOf(newStart)===newIndex,'One new historical refusal');
+ let appendix=suffix.slice(0,newIndex);
+ appendix=exact(appendix,
+  "const text=original.toString(),current=read('tests/current-atlas-delivery.test.mjs').toString(),prefix=current.slice(0,current.indexOf(\"\\ntest('complete f509\"));",
+  "const text=original.toString(),prefix=read('tests/current-atlas-delivery.test.mjs').toString().slice(0,text.length);");
+ appendix=exact(appendix,
+  "assert.equal(prefix.replace(\"assert.equal(CURRENT_ATLAS_REVISION,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');\",\"assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');\").replace(\"assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');\",\"assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');\").replace('assert.equal(sourceFiles,1544);assert.equal(inputs,1681);assert(artifacts>100);','assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);'",
+  "assert.equal(prefix.replace(\"assert.equal(CURRENT_ATLAS_REVISION,'bd5465ee3b94c66c3d5701e7749099d07e8f40d3');\",\"assert.equal(CURRENT_ATLAS_REVISION,'f5097af8493701d64a8e2a2b5797df380f3b348a');\").replace(\"assert.equal(pin.sourceTree,'44ca83bf391164c09f43f4169d25dcacf4b2559d');\",\"assert.equal(pin.sourceTree,'fba69dff6f83e7f092ccdab4c9a37f05c090c98b');\").replace('assert.equal(sourceFiles,1543);','assert.equal(sourceFiles,1541);'");
+ appendix=exact(appendix,
+  "replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1544);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1681);')",
+  "replace('assert.equal(delivery.reviewSourceFiles, 1538);','assert.equal(delivery.reviewSourceFiles, 1543);').replace('assert.equal(inputs.inputs.length, 1668);','assert.equal(inputs.inputs.length, 1680);')");
+ assert.equal(Buffer.byteLength(appendix),2067,'Exact inverse f509 historical appendix length');
+ assert.equal(sha(Buffer.from(appendix)),suffixHash,'Exact inverse f509 historical appendix assertions');
+ assert(appendix.startsWith("\ntest('complete f509 source and whole original contracts remain frozen"));
+ assert.equal(sha(Buffer.from(suffix.slice(newIndex))),'952d06b4a21a63b1a502866f72afd808b86a596c20860722eb5671ac784ec98b','Exact new 4d19 historical refusal');
  return prefix;
 }
 
@@ -66,13 +81,13 @@ test('59, 509b and f509 witnesses remain historical while current admission uses
 
  const pin=validateCurrentAtlasDelivery(),sourceRoot=currentAtlasDeliveryRoot();
  assert.equal(pin.source,CURRENT_ATLAS_REVISION);
- assert.equal(pin.source,'bd5465ee3b94c66c3d5701e7749099d07e8f40d3');
- assert.equal(pin.sourceTree,'44ca83bf391164c09f43f4169d25dcacf4b2559d');
+ assert.equal(pin.source,'aaa8a6a428e74a2055310630f9dfee8731fe0eee');
+ assert.equal(pin.sourceTree,'7c0b886d66d2adf64d6d29e44938f39d8cd61046');
  const prefix=admitDelivery(read('current-atlas-delivery.test.mjs').toString(),pin);
  let fromF509=f509OriginalBytes.toString();
  fromF509=exact(fromF509,f509.source,pin.source);
  fromF509=exact(fromF509,f509.sourceTree,pin.sourceTree);
- fromF509=exact(fromF509,'assert.equal(sourceFiles,1541);',`assert.equal(sourceFiles,${pin.reviewSourceFiles});`);
+ fromF509=exact(fromF509,'assert.equal(sourceFiles,1541);assert(artifacts>100&&inputs>1500);',`assert.equal(sourceFiles,${pin.reviewSourceFiles});assert.equal(inputs,1681);assert(artifacts>100);`);
  assert.equal(prefix,fromF509,'The same original prefix reconstructs from f509 independently');
 
  const history=checkedAtlasHistoryRepo(portalPin.source);

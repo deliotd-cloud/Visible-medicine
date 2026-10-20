@@ -10,7 +10,7 @@ const rawUrl = join(root, 'tests/fixtures/ui-teaching-current-delivery-c237.mjs.
 const candidateUrl = join(root, 'tests/ui-teaching-current-delivery.test.mjs');
 const sha = bytes => createHash('sha256').update(bytes).digest('hex');
 const rawSha = 'e0aed39045349b6ed6eecd95e08fde0df56b805d242f2e527301b0df2af0b884';
-const candidateSha = '4ef60d3e4cd35a1cadaa924790191a50d40995b01eb74a385644949dee8c32fa';
+const candidateSha = '286d0a8e371cbffc27cf7d81f57c14ef0fca0675c9f7a283c2fcd15fc6c0c276';
 
 function replaceOnce(text, from, to) {
   assert(text.includes(from), `Missing declared seam: ${from.slice(0, 70)}`);
@@ -30,10 +30,10 @@ function reconstruct(candidateBytes) {
   let reconstructed = candidateBytes.toString('utf8');
   // Exact later current-delivery admission counts; inverse them before replaying c237.
   reconstructed = replaceOnce(reconstructed,
-    '  assert.equal(delivery.reviewSourceFiles, 1543);\n',
+    '  assert.equal(delivery.reviewSourceFiles, 1544);\n',
     '  assert.equal(delivery.reviewSourceFiles, 1538);\n');
   reconstructed = replaceOnce(reconstructed,
-    '  assert.equal(inputs.inputs.length, 1680);\n',
+    '  assert.equal(inputs.inputs.length, 1681);\n',
     '  assert.equal(inputs.inputs.length, 1668);\n');
   reconstructed = replaceOnce(reconstructed,
     "const introduced = 'c237fa215f061147975e91b01fa830b3f44458c7';\n" +
@@ -83,7 +83,7 @@ test('altered old refusal and admission proof are both rejected', () => {
     '  assert.equal(pin60.reviewIntegration, introducedReviewDigest);',
     '  assert.equal(pin60.reviewIntegration, reviewDigest);');
   assert.throws(() => admit(Buffer.from(admission), rawBytes));
-  const count = replaceOnce(current, '  assert.equal(inputs.inputs.length, 1680);',
+  const count = replaceOnce(current, '  assert.equal(inputs.inputs.length, 1681);',
     '  assert.equal(inputs.inputs.length, 1679);');
   assert.throws(() => admit(Buffer.from(count), rawBytes));
 });

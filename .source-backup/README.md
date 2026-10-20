@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-4953selected sources+4metadata; real reviewed focus/Studio changes and stock-bound4dReview/viewer,62distinct focused cases, zero type diagnostics, production build and511actual runtime checks. Not full-suite/authenticated/clinical/release acceptance. Only unchanged inherited brand/font binaries/notices, no private modules/scans/masks/source junctions/new assets or dependencies/raw canonical history. Source-only recovery, not whole private-data/project backup.
+Filtered source-only recovery over verified b1e parent; new original source-backed US draft and actual regenerated module metadata/JS/CSS/Review, 71focused cases, zero type diagnostics, production build and511local Worker checks. Existing licensed assets/notices unchanged. No new binaries/scans/masks/private modules/runtime DBs/dependencies/source junction/raw canonical history; not standalone whole-project/private-data/clinical backup.

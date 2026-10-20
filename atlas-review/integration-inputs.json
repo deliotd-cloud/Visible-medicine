@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
-  "sha256": "4d19f9f2e465a772f5ea6da4a3605c09d9f0d540bde3f63735ff653d393c60ad",
+  "sourceCommit": "aaa8a6a428e74a2055310630f9dfee8731fe0eee",
+  "sha256": "d7036f8da6dae70ead5f54469c8e8a9511a94aecfc8da3833d26f20476012e1b",
   "inputs": [
     {
       "path": "app/api/atlas-review/head-brainstem-clinical/route.ts",
@@ -204,7 +204,7 @@
     },
     {
       "path": "atlas-review/app/body-content.ts",
-      "sha256": "f83c1a6b70109ebf1871cb7314d57c13f6e508dc401075aeb0e5fc3b3d029e07"
+      "sha256": "b3c22b5dc06cb274e760fcdf0b0a0cc737e90029e70ca0ee9433d996cebc4bb4"
     },
     {
       "path": "atlas-review/app/body-education-link.ts",
@@ -952,7 +952,7 @@
     },
     {
       "path": "atlas-review/content/body-review-display-pins.json",
-      "sha256": "351494d4a5076191c49cb596bfa6c1a287966e31e6992272e47f291dc7990678"
+      "sha256": "92b3debfbd966e4d49d7fe899763032baa4a87a373fbc8c5590f61f94efb9f4a"
     },
     {
       "path": "atlas-review/content/bowel-component-pins.json",
@@ -2676,7 +2676,7 @@
     },
     {
       "path": "atlas-review/content/regional-teaching/abdomen.json",
-      "sha256": "d71c2f0a0895190b7661e632062a64487c14cb3ba1a8ecaf2614e51d4655f6a1"
+      "sha256": "19f318f4d3e342ee0f1b68c7232cbf9249e828fa9802d264a20f0aa6cd9eaff0"
     },
     {
       "path": "atlas-review/content/regional-teaching/foot.json",
@@ -4619,6 +4619,10 @@
       "sha256": "fc00e46a62afbdbd93e9cfb4f757c5274b3360054086cc8f96bde7b0f39b65e0"
     },
     {
+      "path": "atlas-review/lib/ileocolic-artery-ultrasound.ts",
+      "sha256": "76c9eb7266eb961d1363b1d6f19f4bf93634f3017455397bd3d683b81169a1df"
+    },
+    {
       "path": "atlas-review/lib/iliac-arterial-imaging.ts",
       "sha256": "88f5f3395a81f9712cbccc5dfdf5c111a03013012ecca26597383ac6662ec17d"
     },
@@ -6456,11 +6460,11 @@
     },
     {
       "path": "docs/anatomy-coverage/index.json",
-      "sha256": "296e0ac69c4c00150020f47ee8c66671aa09dcd535c0ca1ca172592a710c9347"
+      "sha256": "e7eae41738e3887eda3e84c11faab53fd4ac75cab1713b04c21f4b08c24bad8f"
     },
     {
       "path": "lib/anatomy-coverage-view.ts",
-      "sha256": "71cc49d8e4c81d3a07d7ed069df6393da9f42c52396d867c0fb52ee6cffc91a3"
+      "sha256": "4a3d424146bf91f954a3db1c75fa1ce1179ef505f58327b197461dfd4c519770"
     },
     {
       "path": "lib/clinical-review-extra-inbox.ts",
@@ -6716,7 +6720,7 @@
     },
     {
       "path": "scripts/import-clinical-review.mjs",
-      "sha256": "43578c3bab6d4797e95f625e07db4e17b9b6b03e210eda3fe6504f7f2d3e5321"
+      "sha256": "ee095a67061b4c6820fb5c85aeaecfb9a851e57183fe1e617ab41632dcf8224d"
     },
     {
       "path": "scripts/rebind-plexus-review-dependency.mjs",
