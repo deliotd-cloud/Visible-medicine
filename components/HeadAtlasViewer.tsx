@@ -38,7 +38,7 @@ import {parseHeadImageNavigation,headImageHref,type HeadImageNavigation} from '.
 import {indexHeadAnatomy,filterHeadAnatomyIndex} from '../lib/head-atlas-index';
 import {headPairedEntry} from '../lib/head-atlas-pairs';
 import {focusHeadLearningContent} from '../lib/head-atlas-focus';
-import {headIndexKey} from '../lib/head-index-keyboard';
+import {headIndexKey,headIndexTabStop} from '../lib/head-index-keyboard';
 import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard';
 import {headMaskHits} from '../lib/head-mask-picking';
 import {headSliceKey,headSliceNumber} from '../lib/head-atlas-slice-controls';
@@ -296,6 +296,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   const [entryLoadAttempt,setEntryLoadAttempt]=useState(0),[failedEntryId,setFailedEntryId]=useState<string|null>(null);
   const selectionFocusRef=useRef(false),structureHeadingRef=useRef<HTMLHeadingElement>(null);
   const [pkg,setPackage]=useState<LocalHeadPackage|null>(()=>folderSession?.read(HEAD_MANIFEST_SHA256)??null),[study,setStudy]=useState<LoadedStudy|null>(null),[selected,setSelected]=useState<LoadedEntry|null>(null);
+  const [indexFocus,setIndexFocus]=useState<{study:LoadedStudy;id:string}|null>(null);
   const [inlineComparison,setInlineComparison]=useState<{pkg:LocalHeadPackage;study:LoadedStudy;modality:Modality}|null>(null);
   const [tourPlaying,setTourPlaying]=useState(false);
   const [modelTourStatus,setModelTourStatus]=useState<{scope:typeof inlineComparison;value:HeadInlinePlaybackStatus}|null>(null);
@@ -902,6 +903,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
   // Keep the token stable for browsing, but replace it for every loaded study.
   const imageFocusIdentity=useMemo(()=>study?{}:null,[study]);
   const count=modality==='CT'?355:117;
+  const indexTabStop=headIndexTabStop(entries.map(row=>row.entry.id),indexFocus&&indexFocus.study===study?indexFocus.id:undefined,activeId);
   const sidebar=quizActive?<div className="head-atlas-sidebar head-index-paused"><h2>Practice in progress</h2><p>The anatomy index is hidden during questions so it cannot reveal the answer.</p><p>You can change slices, planes and display windows. The right panel contains your question and feedback.</p><button type="button" onClick={practice.finish}>End practice set</button></div>:<div className="head-atlas-sidebar" onKeyDown={headIndexKey}>
     <div className="head-index-heading"><h2>Structure index</h2><span>{study?.definition.entries.length??count}</span></div>
     {study&&<HeadAtlasStudySet entries={studySetEntries} filteredAdd={filtersActive?{count:filteredStudyAddCount,total:newFilteredStudyEntries.length,onAdd:addFilteredStudyEntries}:undefined} comparisons={headStudyComparisons(studySet,study,HEAD_MANIFEST_SHA256,modality)} onSelect={entry=>{
@@ -909,8 +911,8 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
       chooseStructure(entry);showLearningEntry(entry);selectionFocusRef.current=true;
     }} onRemove={entry=>{if(studySetEntries.includes(entry))toggleStudyEntry(entry);}} onMove={moveStudyEntry} onClear={()=>{if(canUseStudySet())setStudySet(null);}} onPractice={practiseStudySet}
       savedPlan={<HeadAtlasSavedStudyPlan plan={createHeadStudyPlan(studySet,study,HEAD_MANIFEST_SHA256,modality)} entries={studySetEntries} study={study} modality={modality} canUse={canUseStudySet} onRestore={restoreStudyPlan}/>}/>}
-    <label>Find a structure<input ref={indexSearchRef} data-head-index-search aria-describedby="head-index-keyboard-help" type="search" value={query} disabled={!study} onChange={event=>setQuery(event.target.value)} placeholder="Name, side or anatomical ID"/></label>
-    <p id="head-index-keyboard-help" className="sr-only">From search, Down or Up enters the results. In results, arrow keys browse, Home and End reach the first and last result, Enter or Space selects, and Escape returns to search. Tab moves normally. Browsing alone does not select a structure.</p>
+    <label>Find a structure<input ref={indexSearchRef} data-head-index-search aria-controls="head-index-list" aria-describedby="head-index-keyboard-help" type="search" value={query} disabled={!study} onChange={event=>setQuery(event.target.value)} placeholder="Name, side or anatomical ID"/></label>
+    <p id="head-index-keyboard-help" className="sr-only">The results use one Tab stop; Tab then continues to the image tools. From search, Down or Up enters the results. In results, arrow keys browse, Home and End reach the first and last result, Enter or Space selects, and Escape returns to search. Browsing alone does not select a structure.</p>
     <label>System<select disabled={!study} value={family} onChange={event=>setFamily(event.target.value)}>{families.map(name=><option key={name} value={name}>{familyNames[name]??name}</option>)}</select></label>
     <label className="head-linked-filter" title="Exact source-matched concepts in the existing 3D Atlas, not spatial registration"><input type="checkbox" checked={linkedOnly} disabled={!study||!linkedCount} onChange={event=>setLinkedOnly(event.target.checked)} aria-describedby={linkedOnly?'head-linked-scope':undefined}/><span>3D Atlas-linked only</span><small>{study?linkedCount:'—'}</small></label>
     {linkedOnly&&<p id="head-linked-scope">Concept comparison, not spatial registration. Other annotations remain available.</p>}
@@ -926,7 +928,7 @@ export function HeadAtlasViewer({modality}:{modality:Modality}){
       <label>Filtered set size<select value={filteredSetSize} disabled={!filteredPracticeEntries.length} onChange={event=>{const size=event.target.value;if(size==='1'||size==='5'||size==='10'||size==='all')setFilteredSetSize(size);}}><option value="1">1 question</option><option value="5">Up to 5 questions</option><option value="10">Up to 10 questions</option><option value="all">All results</option></select></label>
       <button type="button" disabled={!filteredQuestionCount} onClick={practiseFilteredStructures} title="Starts a new set from these results, randomly sampled when a smaller size is chosen. Only distinct saved masks are eligible; points and shared-geometry aliases are excluded.">{`${filteredQuestionMode==='locate'?'Find':filteredQuestionMode==='recall'?'Name':'Label'} filtered masks (${filteredQuestionCount}${filteredQuestionCount<filteredPracticeEntries.length?` of ${filteredPracticeEntries.length}`:''})`}</button>
     </>}
-    <div className="head-structure-list" data-head-index-list>{entries.map(({entry,concept})=><button data-head-index-entry aria-describedby="head-index-keyboard-help" key={entry.id} type="button" aria-pressed={activeId===entry.id} onClick={()=>chooseStructure(entry)}><i style={{background:`rgb(${entry.color.map(v=>Math.round(v*255)).join(',')})`}}/><span>{headLabel(entry)}<small>{familyNames[entry.family]??entry.family}{entry.laterality?` · ${headSideLabel(entry.laterality)}`:''}{concept&&<em className="head-link-badge" title="Exact concept link to the existing 3D Atlas; not spatial registration"> · 3D Atlas link</em>}</small></span></button>)}{study&&!entries.length&&<p>No structures match these filters.</p>}</div>
+    <div id="head-index-list" className="head-structure-list" role="group" aria-label="Structure results" data-head-index-list>{entries.map(({entry,concept})=><button data-head-index-entry aria-describedby="head-index-keyboard-help" key={entry.id} type="button" tabIndex={entry.id===indexTabStop?0:-1} onFocus={()=>{if(study)setIndexFocus({study,id:entry.id});}} aria-pressed={activeId===entry.id} onClick={()=>chooseStructure(entry)}><i style={{background:`rgb(${entry.color.map(v=>Math.round(v*255)).join(',')})`}}/><span>{headLabel(entry)}<small>{familyNames[entry.family]??entry.family}{entry.laterality?` · ${headSideLabel(entry.laterality)}`:''}{concept&&<em className="head-link-badge" title="Exact concept link to the existing 3D Atlas; not spatial registration"> · 3D Atlas link</em>}</small></span></button>)}{study&&!entries.length&&<p>No structures match these filters.</p>}</div>
   </div>;
   const structureInfo=<div className="head-selected-summary">
     <p className="head-panel-kicker">Selected structure</p>

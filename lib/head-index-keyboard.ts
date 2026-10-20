@@ -33,3 +33,10 @@ export function headIndexKey(event:IndexKeyEvent):void {
   if(item.top<top)list.scrollTop+=item.top-top;
   else if(item.bottom>bottom)list.scrollTop+=Math.min(item.bottom-bottom,item.top-top);
 }
+
+/** One Tab stop in the current filtered results, without selecting anatomy.
+ * The caller discards focused IDs from a different loaded study.
+ */
+export function headIndexTabStop(ids:readonly string[],focusedId?:string|null,selectedId?:string|null):string|undefined{
+  return ids.find(id=>id===focusedId)??ids.find(id=>id===selectedId)??ids[0];
+}

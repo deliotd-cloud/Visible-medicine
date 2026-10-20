@@ -57,7 +57,7 @@ test('nested Escape is consumed by inner details only; parent and unrelated targ
 
 test('whole QA component is preserved outside the one import and eight declared details-tag seams',()=>{
  const original=readFileSync(new URL('./fixtures/head-atlas-viewer-before-disclosure.txt',import.meta.url),'utf8');
- const candidate=readFileSync(new URL('../components/HeadAtlasViewer.tsx',import.meta.url),'utf8');
+ const candidate=readFileSync(new URL('./fixtures/head-viewer-before-roving.tsx.raw',import.meta.url),'utf8');
  const imported="import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard';\n";
  assert.equal(candidate.split(imported).length-1,1);
  const tags=[

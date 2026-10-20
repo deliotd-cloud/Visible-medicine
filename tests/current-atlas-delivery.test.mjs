@@ -68,7 +68,7 @@ test('current fixture agrees with actual emitted bytes, notices, imported Review
  for(const row of binding.inputs){safe(row.path);assert.equal(sha(read(row.path)),row.sha256,row.path);inputs++;}
  const viewer=JSON.parse(read('public/atlas-review-viewer/manifest.json'));
  for(const row of viewer.files){safe(row.path);assert.equal(sha(read('public/atlas-review-viewer/'+row.path)),row.sha256,row.path);artifacts++;}
- assert.equal(sourceFiles,1548);assert.equal(inputs,1695);assert(artifacts>100);
+ assert.equal(sourceFiles,1548);assert.equal(inputs,1696);assert(artifacts>100);
 });
 
 for(const [label,edit]of [
@@ -199,7 +199,7 @@ test('aaa8 delivery and its complete pre-entry contract remain historical and by
 test('6036 current-delivery contract is preserved by exact source/tree/count inverse',()=>{
  const original=read('tests/fixtures/current-atlas-delivery.before-mra-6036.mjs.raw');
  assert.equal(sha(original),'6233c1028f9478b2bb4d7733a5b48c5427e69990fec8e5bfed106d77b3f615a6');
- const current=read('tests/current-atlas-delivery.test.mjs').toString();
+ const current=read('tests/fixtures/current-delivery-test-before-roving.mjs.raw').toString();
  const marker="\ntest('6036 current-delivery contract is preserved by exact source/tree/count inverse'";
  assert.equal(current.split(marker).length,2);
  let inverse=current.slice(0,current.indexOf(marker));

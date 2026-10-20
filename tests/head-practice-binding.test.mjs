@@ -9,11 +9,14 @@ const root=fileURLToPath(new URL('../',import.meta.url));
 const before=readFileSync(new URL('./fixtures/head-practice-binding.before.mjs.raw',import.meta.url),'utf8');
 const candidate=readFileSync(join(root,'scripts/bind-clinical-review.mjs'),'utf8');
 const added="  'components/HeadAtlasPractice.tsx','components/HeadAtlasPracticeReview.tsx','components/HeadPracticeSummaryDownload.tsx',\n  'lib/head-atlas-practice.ts','lib/head-practice-summary.ts','lib/head-practice-learning.ts','lib/head-practice-review-filter.ts','lib/head-study-set.ts','lib/head-atlas-focus.ts','lib/head-atlas-geometry.mjs',\n";
+const keyboardAdded="  'lib/head-index-keyboard.ts',\n";
+const fullAdded=added+keyboardAdded;
 const paths=[
   'components/HeadAtlasPractice.tsx','components/HeadAtlasPracticeReview.tsx','components/HeadPracticeSummaryDownload.tsx',
   'lib/head-atlas-practice.ts','lib/head-practice-summary.ts','lib/head-practice-learning.ts',
   'lib/head-practice-review-filter.ts','lib/head-study-set.ts','lib/head-atlas-focus.ts','lib/head-atlas-geometry.mjs',
 ];
+paths.push('lib/head-index-keyboard.ts');
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const immutableFiles=new Map();
 const originalFile=file=>{
@@ -62,8 +65,8 @@ function exactCoverage(result){
 
 test('practice binding retains the original binder and covers every new source and mutation',()=>{
   assert.equal(hash(before),'0ead614d03c5f0d9c7f4589a6ad5767a0efc95a97206932a8bfd0d1dc150e0f3');
-  assert.equal(candidate.split(added).length,2);
-  assert.equal(candidate.replace(added,''),before,'Complete original binder byte inverse');
+  assert.equal(candidate.split(fullAdded).length,2);
+  assert.equal(candidate.replace(fullAdded,''),before,'Complete original binder byte inverse');
   const baseline=run(before),bound=run(candidate);
   exactCoverage(bound);
   assert.notEqual(bound.inputs.sha256,baseline.inputs.sha256);
@@ -87,4 +90,39 @@ test('practice binding retains the original binder and covers every new source a
     assert.throws(()=>exactCoverage(run(candidate.replace(quoted,''))),/Missing or duplicate bound input/);
     assert.throws(()=>exactCoverage(run(candidate.replace(quoted,quoted+quoted))),/Missing or duplicate bound input/);
   }
+});
+
+// Keyboard binding extension inverse proof
+test('extended test preserves the complete executable ten-input test',()=>{
+  const oldTest=readFileSync(new URL('./fixtures/head-practice-binding.test.before-keyboard.mjs.raw',import.meta.url),'utf8');
+  assert.equal(hash(oldTest),'9f0eacd8f13c2845c239ba73fbd2bd4ad6216587eba11f1f2f6fb227557bb069');
+  const liveTest=readFileSync(fileURLToPath(import.meta.url),'utf8');
+  const proofMarker='\n// Keyboard binding extension inverse proof\n';
+  assert.equal(liveTest.split(proofMarker).length,2,'One appended inverse proof');
+  let inverse=liveTest.split(proofMarker)[0];
+  for(const [withKeyboard,original] of [
+    ["const keyboardAdded=\"  'lib/head-index-keyboard.ts',\\n\";\nconst fullAdded=added+keyboardAdded;\n",''],
+    ["paths.push('lib/head-index-keyboard.ts');\n",''],
+    ['candidate.split(fullAdded)','candidate.split(added)'],
+    ["candidate.replace(fullAdded,'')","candidate.replace(added,'')"],
+  ]){
+    assert.equal(inverse.split(withKeyboard).length,2,`One test extension seam: ${withKeyboard}`);
+    inverse=inverse.replace(withKeyboard,original);
+  }
+  assert.equal(inverse,oldTest,'Complete old test byte inverse; its assertions still execute above');
+  assert.equal(candidate.split(keyboardAdded).length,2,'One new keyboard binding line');
+  const oldBinding=run(candidate.replace(keyboardAdded,''));
+  const newBinding=run(candidate);
+  assert.equal(oldBinding.inputs.inputs.length,1695,'All previously bound inputs');
+  assert.equal(newBinding.inputs.inputs.length,1696,'Exactly one additional keyboard input');
+  const newInputs=new Map(newBinding.inputs.inputs.map(input=>[input.path,input.sha256]));
+  for(const input of oldBinding.inputs.inputs){
+    assert.equal(newInputs.get(input.path),input.sha256,`Previous input retained: ${input.path}`);
+  }
+  assert.equal(newInputs.size,1696,'No duplicate bound paths');
+  for(const input of newBinding.inputs.inputs){
+    assert.equal(input.sha256,hash(originalFile(input.path)),`Current file bytes bound: ${input.path}`);
+  }
+  assert.equal(newInputs.get('scripts/bind-clinical-review.mjs'),hash(candidate));
+  assert.notEqual(hash(candidate),hash(candidate.replace(keyboardAdded,'')),'Binder source changed for new input');
 });
