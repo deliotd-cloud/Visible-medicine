@@ -1,17 +1,17 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T01:35:08.061Z",
+  "at": "2026-10-20T02:13:31.648Z",
   "sourceIdentity": {
-    "product": "Actual isolated Website source with public asset guard; viewer rebuild pending",
+    "product": "Actual coherent local Website UI/coverage source with stock-built Review viewer and reviewed current test fixture",
     "websiteBaseHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "atlas": "bd5465ee3b94c66c3d5701e7749099d07e8f40d3",
     "reviewBinding": "322db172c7fc0ca7697ca6f6dd67547a1fb8892b107ce48f1fd1b5ae7341d65b",
-    "viewerBuildPending": true,
-    "protectedReviewVerified": false,
-    "canonicalInstalled": false
+    "stockReviewVerifierPassed": true,
+    "canonicalInstalled": false,
+    "fullSuitePass": false
   },
-  "parent": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
-  "gitParent": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
+  "parent": "e6695521509bc963da3d8769d750a45071505e7a",
+  "gitParent": "e6695521509bc963da3d8769d750a45071505e7a",
   "files": [
     {
       "path": ".codex/config.toml",
@@ -13589,9 +13589,9 @@
       "sha256": "119c0b18bbe6c8c6d169d4747926b4e4f4216313e772d1c33755e2b031441f77"
     },
     {
-      "path": "public/atlas-review-viewer/assets/abdominal-wall-study-Ctkd1CyX.js",
+      "path": "public/atlas-review-viewer/assets/abdominal-wall-study-DD8jS561.js",
       "bytes": 61397,
-      "sha256": "3e9c3705aa81ed4bb33d9d6a65996300ff0e0535b15113faacb0e441c2993821"
+      "sha256": "a01d75b40797a2336b603e93661c9fa8076288a605e090d934def96dd5e7ba5b"
     },
     {
       "path": "public/atlas-review-viewer/assets/anatomy-coordinates-C8_MAECW.js",
@@ -13599,24 +13599,24 @@
       "sha256": "b1d0c078e637580a20b7347e5e9e018585129023299f94c591e1b566f8fb81fc"
     },
     {
-      "path": "public/atlas-review-viewer/assets/anatomy-scene-BJvFeZB5.js",
+      "path": "public/atlas-review-viewer/assets/anatomy-scene-Dcf9xek-.js",
       "bytes": 9655,
-      "sha256": "e875e262cc4e12f082f55b07bd6751528fa3953972c25a20eabc635f08456af3"
+      "sha256": "b62608b08418d3e39456f074f702635ca336e79a2df26cd096a83b838eeda151"
     },
     {
-      "path": "public/atlas-review-viewer/assets/back-layers-study-BSOQDSKj.js",
+      "path": "public/atlas-review-viewer/assets/back-layers-study-BeuXdXWX.js",
       "bytes": 90387,
-      "sha256": "b815dd8bd533dde9f51c22a457d026e680c697fe12137e84a5453de02f893fe3"
+      "sha256": "dacc2d24037dc289cacc8267ccf5159a61a907760b5b4e681a43beb8ff0ba99f"
     },
     {
-      "path": "public/atlas-review-viewer/assets/body-content-D_mrFXS-.js",
+      "path": "public/atlas-review-viewer/assets/body-content-B4ccNDlK.js",
       "bytes": 6525165,
-      "sha256": "4b9362305bd2899842d44fff3a49465bbc04cf8f26690151d0aa58214d6429d1"
+      "sha256": "652d48916e788cd42e8b843140cae448b23a9108d65271daf96c7d9b40362ed3"
     },
     {
-      "path": "public/atlas-review-viewer/assets/body-scene-Be6Prt0I.js",
+      "path": "public/atlas-review-viewer/assets/body-scene-DjbuP3jC.js",
       "bytes": 53122,
-      "sha256": "21e505012edd93ce708c07c3102b75b87992c27677a93c3fd088f4d0a03cd03d"
+      "sha256": "b22929fbeadc314fe59cb5b4e6f2d6f7a5e3105beaaf69de5f49b93a6763e492"
     },
     {
       "path": "public/atlas-review-viewer/assets/body-scene-IREBYFc0.css",
@@ -13634,9 +13634,9 @@
       "sha256": "87c31bfe8303461a8afbde6251bb48df5a77645f774c8ef3ac48c292a30ec5c8"
     },
     {
-      "path": "public/atlas-review-viewer/assets/cutaway-controls-DN4hAEUN.js",
+      "path": "public/atlas-review-viewer/assets/cutaway-controls-Be9sdQuy.js",
       "bytes": 122109,
-      "sha256": "fecde022bad4b49e90cc244dad88d489df2107e1515b9507f7cacec387c45ab7"
+      "sha256": "42c15ad917ab9a1147e31ab75d019110a57dfcaaee919703bdbd29d0102cf91c"
     },
     {
       "path": "public/atlas-review-viewer/assets/eye-layers-B_8TgiYY.css",
@@ -13644,9 +13644,9 @@
       "sha256": "e09a511156e9ad563605198e8533c5d22c7051d15cf1a5c017dc3b146e1e35d5"
     },
     {
-      "path": "public/atlas-review-viewer/assets/eye-layers-BqYMsLHK.js",
+      "path": "public/atlas-review-viewer/assets/eye-layers-CMGPzjKv.js",
       "bytes": 17453,
-      "sha256": "135489d30c129332ee6666caf033efd24e8ac51ec683ccb3b06f33b3f132744d"
+      "sha256": "d2253754e8ada95214aeb7db484af38f67b51c704a5dc655823f00db0eb71ded"
     },
     {
       "path": "public/atlas-review-viewer/assets/foot-B9LKOcHv.js",
@@ -13669,29 +13669,29 @@
       "sha256": "5d33319678baf875c69ed5a878b2ee7f293126b1818803b0805f62797dffefd2"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-pelvis-study-DUR1kx2a.js",
+      "path": "public/atlas-review-viewer/assets/hra-pelvis-study-BedFQ2Qs.js",
       "bytes": 105632,
-      "sha256": "1269d26617d2830d32a85373e306774385df78e6cef31b84612d5f4d225f416e"
+      "sha256": "1a4d7e37584735dc1ab12ba08b2a84147fd2add6179e701a4385d5a3108dee4a"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-renal-study-C6FMcxBT.js",
+      "path": "public/atlas-review-viewer/assets/hra-renal-study-COOPiwke.js",
       "bytes": 7522,
-      "sha256": "64454582e086b15353a93472f6aef22c7f7432c4efb6e1ced86e7a6af31a667d"
+      "sha256": "86692cf06fbd3d89a09d41d3359c2c75c030fc6dad8f04766ce9c42068f366a0"
     },
     {
-      "path": "public/atlas-review-viewer/assets/hra-renal-teaching-DpKjV9z0.js",
+      "path": "public/atlas-review-viewer/assets/hra-renal-teaching-D9JtIRNF.js",
       "bytes": 118009,
-      "sha256": "4792e2ba43fdc91b3450e8bdd3254fb4778a1081e6c9e0a67c79aeebbd03dbe2"
+      "sha256": "02fe0c473d52bb72cbe3b5a7abfd83fccc4c76d092aef099557cfb81c9bea86a"
     },
     {
-      "path": "public/atlas-review-viewer/assets/independent-study-navigation-DHoBLB9B.js",
+      "path": "public/atlas-review-viewer/assets/independent-study-navigation-ByE-U-u3.js",
       "bytes": 2638,
-      "sha256": "1f14e5ab9e1b6f80cb99e03ff3dd491cad1a9647357dc23365f55767e9db8105"
+      "sha256": "a789751de1b08afccb8498e54977e5171d1992009cdba19d64ab8f61113df7d1"
     },
     {
-      "path": "public/atlas-review-viewer/assets/index-CSevRyV8.js",
+      "path": "public/atlas-review-viewer/assets/index-C5tfs9NQ.js",
       "bytes": 3066559,
-      "sha256": "7a7aa1c041c2b100858d61c1b3e3597cf80ca43c4605d90b1bce3ff88998b0d2"
+      "sha256": "31717a1576d79f909bbc61bdbb0eb011dec4a0e17bcee744313535936b1cd9ef"
     },
     {
       "path": "public/atlas-review-viewer/assets/index-IR4xJSh3.css",
@@ -13719,14 +13719,14 @@
       "sha256": "580ad8c58061a4dde99bde0a56905e382f0568516ee2f5b84dbfb52085709021"
     },
     {
+      "path": "public/atlas-review-viewer/assets/scene-recovery-9kNJxu_a.js",
+      "bytes": 1065422,
+      "sha256": "067f141cf1c4cf04aa593c3ef4594c56bb69519eec8deee7f0aec668c126caa4"
+    },
+    {
       "path": "public/atlas-review-viewer/assets/scene-recovery-BCIS1m0I.css",
       "bytes": 3191,
       "sha256": "f807a845348564e3edd9b8bf5047a3b5f50337dd6727a92369ebaa2ddd5ceea1"
-    },
-    {
-      "path": "public/atlas-review-viewer/assets/scene-recovery-D9PNA_sH.js",
-      "bytes": 1065422,
-      "sha256": "994ebcc0752e9ee6e5bf1b2ae33b61214e822052bd62f7536eeba269517653eb"
     },
     {
       "path": "public/atlas-review-viewer/assets/shoulder-arm-8UqNlnEr.js",
@@ -13734,14 +13734,14 @@
       "sha256": "5747a962459501773da533c0ffbc1f25ed19a04504b7cc3feb98d3573f2ae4da"
     },
     {
+      "path": "public/atlas-review-viewer/assets/shoulder-explorer-BMJcI-O1.js",
+      "bytes": 104199,
+      "sha256": "a6ce394d76992b6a305d774844c532b9fc55d59002fba6af5d3b715958add426"
+    },
+    {
       "path": "public/atlas-review-viewer/assets/shoulder-explorer-CrFyYdQD.css",
       "bytes": 10027,
       "sha256": "dbdabe13e4b87259cf4dbe1464bafc2979535510ec4f0cd3bdcd0668591d5764"
-    },
-    {
-      "path": "public/atlas-review-viewer/assets/shoulder-explorer-V3bwd72K.js",
-      "bytes": 104199,
-      "sha256": "c92fe1972bcb4388a6558051e9dd15f5dd9c01783bd42b81434083abfbd6b3ad"
     },
     {
       "path": "public/atlas-review-viewer/assets/slider-C5fwuhub.css",
@@ -13749,9 +13749,9 @@
       "sha256": "aff4d7e55cc7ed3394e5727429807c9321dde09c67dce444bbafa78cb9256a3e"
     },
     {
-      "path": "public/atlas-review-viewer/assets/slider-CagimcG_.js",
+      "path": "public/atlas-review-viewer/assets/slider-CidVyZEJ.js",
       "bytes": 878791,
-      "sha256": "d5e35b8e54a4203d00eadfcec050a44f46a868736dbff27ce328d74cb90a8363"
+      "sha256": "3fa69f238a79505b3afd4f734c18d4dde302f12f00a14e7adf90e4fb3bce2783"
     },
     {
       "path": "public/atlas-review-viewer/assets/spine-e2QBQfxg.js",
@@ -13774,19 +13774,19 @@
       "sha256": "0e0838fb37d99baef5d175c1afd13ce42ce443e1e617121bcc6389c54e0cd86f"
     },
     {
-      "path": "public/atlas-review-viewer/assets/um-knee-study-B1z3hXlZ.js",
-      "bytes": 682911,
-      "sha256": "71a7574c96ea8d69317d283fcfc6d18eb996cf5eab13975906170a849f579117"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/um-knee-study-D8QdNnSJ.css",
       "bytes": 4461,
       "sha256": "4ac2474920228edd0025fb319edfe9a83e8b52507ab2f910278af28ff3437f20"
     },
     {
-      "path": "public/atlas-review-viewer/assets/um-limb-study-Btan8Dun.js",
+      "path": "public/atlas-review-viewer/assets/um-knee-study-DSKhZKuE.js",
+      "bytes": 682911,
+      "sha256": "bd9a75cb40c64b905b50ee84337bc91b98bbf7e3d71fd1df77fd704e7e66bd5e"
+    },
+    {
+      "path": "public/atlas-review-viewer/assets/um-limb-study-CQXn08tD.js",
       "bytes": 2596,
-      "sha256": "17b2ce87ddba92fac0e6e8ea10aa64e12697ae3837df9a6ffbfb6949b6fd9461"
+      "sha256": "4841a0591a2b06443680e24245dc146f242ca758dc18f7bb77d4b075220ffd3f"
     },
     {
       "path": "public/atlas-review-viewer/assets/um-proximal-topic-completion-g3GvGRe9.js",
@@ -13794,24 +13794,24 @@
       "sha256": "bd72b50511e7cc374d60e2d6b36b6902db8e24450731b7e28cdb698d4cb6b522"
     },
     {
-      "path": "public/atlas-review-viewer/assets/ventricles-BBViK-2h.js",
-      "bytes": 1315803,
-      "sha256": "bbcff5b01dea2b613cd6bc6bb112083faed9a33f2a98e237987f6308133ef1e0"
-    },
-    {
       "path": "public/atlas-review-viewer/assets/ventricles-CfdrTivY.css",
       "bytes": 1203,
       "sha256": "3afed59416d5b658434fa6dd284a3af3ff3868bdf2412b57c6f882f616e0b385"
     },
     {
+      "path": "public/atlas-review-viewer/assets/ventricles-dEgFkIFc.js",
+      "bytes": 1315803,
+      "sha256": "a58ba4183d3cb2338b5b74390576e69accb715afc9d71759e11d446412766fe1"
+    },
+    {
       "path": "public/atlas-review-viewer/index.html",
       "bytes": 1245,
-      "sha256": "9d73bbe93fa61982f0e49284976332f9c0c349d8fc3b0f5283c8fec20a5859ad"
+      "sha256": "8efa4f8ed0b27ba532762c55fc9dd0f01809b0640a39491b0075b0b8d25c1e32"
     },
     {
       "path": "public/atlas-review-viewer/manifest.json",
       "bytes": 9033,
-      "sha256": "0783e2a3263fc029205beaa7aa4a68c06075334f8320651b979a7973067f41fd"
+      "sha256": "9acd0c7bd7e939f69b603bd03802ac2cb8d04b7be3d50706379e434499fe82d7"
     },
     {
       "path": "public/atlas-runtime/female-pelvis/BUNDLED_NOTICES.txt",
@@ -19991,7 +19991,7 @@
     {
       "path": "tests/fixtures/current-atlas-delivery.json",
       "bytes": 1777,
-      "sha256": "f2052f653421d9ba8d8ffe348e6d7a8d9e38446b6cd11d8ffddfce47b3b3e802"
+      "sha256": "7554a31f1d43b3a99619e25e0a76ef9e131d92e2ad60d867a9edc741446f4246"
     },
     {
       "path": "tests/fixtures/current-history-wave2-before-20261016/anatomy-coverage-view.test.ts.txt",
@@ -20532,6 +20532,11 @@
       "path": "tests/fixtures/head-image-history-native-anchor.json",
       "bytes": 43375,
       "sha256": "a1d64eceb4e62a95d1f9e0ec1556075b5c6d177f8742f3c480fb88b47c5402af"
+    },
+    {
+      "path": "tests/fixtures/head-image-history-retry-focus.tests.raw",
+      "bytes": 4838,
+      "sha256": "33d69dce7feb403fb84dfbb7c408c0f9bc407d60a80be52099ffb001eb8f8d94"
     },
     {
       "path": "tests/fixtures/head-manual-recovery-53/epoch.json",
@@ -22295,8 +22300,8 @@
     },
     {
       "path": "tests/head-comparison-active-identity.test.ts",
-      "bytes": 6892,
-      "sha256": "4d65de29f135f9866f7ec089d69d8d9ce8c98d37e7dc7cc16597f64000824335"
+      "bytes": 7012,
+      "sha256": "fc657ede570acaed1729aa9d47cc89b9bb23388701f4ac9a706fae94f7395aac"
     },
     {
       "path": "tests/head-comparison-compact-ui.test.mjs",
@@ -22555,8 +22560,8 @@
     },
     {
       "path": "tests/head-image-history-anchor-harness.test.mjs",
-      "bytes": 1165,
-      "sha256": "5696b5746417531116bc973f73735c109c66dde4624f13e9fe898b97fe652003"
+      "bytes": 2304,
+      "sha256": "68993149a955247fa018931ccdd3c868d38a537c74c85a49d14c82adbdc85317"
     },
     {
       "path": "tests/head-image-history.test.ts",
@@ -24739,46 +24744,76 @@
       "sha256": "62945d47cd6b2ff831c8005dde19b52ff649d2c7c92c3385bb0661518b8c495e"
     }
   ],
-  "removed": [],
-  "scope": "4945selected source paths+4metadata,4reviewed tooling deltas/3new versus filtered1e8 source. Public preview preflight and before-spawn/final-drift lifecycle wired in NEW candidate only; all original runner tests unchanged. Actual43pass/1explicit platform skip among44focused cases; final --list1016entries launches nothing. Source/UI/Review binding unchanged outside those4paths. Not rebuilt viewer, merged/typed/built/full-suite/browser/clinical/release acceptance. Only three existing brand/font binary blobs inherited; no NEW image/model payloads/dependencies/raw canonical history/private scans/masks/modules/held archives/docs uploaded. Existing asset metadata is not new off-device asset backup proof. Scoped selected-source recovery, not whole-project/private-data backup.",
+  "removed": [
+    "public/atlas-review-viewer/assets/abdominal-wall-study-Ctkd1CyX.js",
+    "public/atlas-review-viewer/assets/anatomy-scene-BJvFeZB5.js",
+    "public/atlas-review-viewer/assets/back-layers-study-BSOQDSKj.js",
+    "public/atlas-review-viewer/assets/body-content-D_mrFXS-.js",
+    "public/atlas-review-viewer/assets/body-scene-Be6Prt0I.js",
+    "public/atlas-review-viewer/assets/cutaway-controls-DN4hAEUN.js",
+    "public/atlas-review-viewer/assets/eye-layers-BqYMsLHK.js",
+    "public/atlas-review-viewer/assets/hra-pelvis-study-DUR1kx2a.js",
+    "public/atlas-review-viewer/assets/hra-renal-study-C6FMcxBT.js",
+    "public/atlas-review-viewer/assets/hra-renal-teaching-DpKjV9z0.js",
+    "public/atlas-review-viewer/assets/independent-study-navigation-DHoBLB9B.js",
+    "public/atlas-review-viewer/assets/index-CSevRyV8.js",
+    "public/atlas-review-viewer/assets/scene-recovery-D9PNA_sH.js",
+    "public/atlas-review-viewer/assets/shoulder-explorer-V3bwd72K.js",
+    "public/atlas-review-viewer/assets/slider-CagimcG_.js",
+    "public/atlas-review-viewer/assets/um-knee-study-B1z3hXlZ.js",
+    "public/atlas-review-viewer/assets/um-limb-study-Btan8Dun.js",
+    "public/atlas-review-viewer/assets/ventricles-BBViK-2h.js"
+  ],
+  "scope": "4946selected source paths plus four metadata. Real stock viewer rebuild and independent source derivation/current fixture match,85focused unchanged cases plus6integrated harness cases. Earlier full suite failed171cases; these remain tracked, no whole-suite/production-build/desktop/clinical/release claim. Only inherited three exact brand/font binaries; no private modules, scans/masks, source alias/Git metadata, new model/image/video payloads or dependencies/raw canonical history. Source-only checkpoint, not a complete project/private-data backup.",
   "proof": {
-    "schema": "vm-public-preview-runner-integration/1",
+    "schema": "vm-website-current-review-coherence/1",
     "date": "2026-10-20",
-    "state": "Wired in separate Website candidate only",
-    "inputs": {
-      "scripts/run-website-tests.mjs": "aa4461d742d1e2e3470b7d801539a76441ad1e3d7e61244ddab246800876fa01",
-      "scripts/public-preview-preflight.mjs": "e6303ff76a530320d1d204c449929efcc94c9e115d961d556e81bcb604ca7b89",
-      "tests/public-preview-preflight.test.mjs": "061d41952fb863fa1b169fdf55adaa12679fe8555618bbd41bea2d3cb69c47f9",
-      "tests/run-website-tests-public-preview.test.mjs": "32260e68fdb075418be50118754587a618c1275143379cecee1481e98f30cbea"
-    },
-    "implementation": "Actual Website root or inventoried Atlas producer/test requires five exact admitted public tile assets/manifest/attribution BEFORE output, glob probe or child spawn. Minimal generic roots retain native semantics with an explicit required:false/no public-asset claim. --list neither loads assets nor launches tests. Final asset verification independently blocks a passing claim/exit0 after binary drift; original text-source drift remains a separate honest field. Console summary exposes publicPreviewAssetDrift. No disable flag, download/recovery, arbitrary media traversal, authentication or clinical approval.",
-    "preservation": "Main inspected the entire diff. No original source inventory/privacy exclusion/raw text/mirror/glob/launch/reporter/signal/count logic removed or relaxed. All five original runner test files remain byte-identical to independently restored1e8 source. Prior original runner SHA c1f8ed58 saved in before-public-preflight/run-website-tests.mjs.raw. Only reviewed additive guard/receipt/claim conjunction and scope text changes.",
-    "verification": {
-      "native": "Actual7native entries,44cases:43pass/0fail/cancel/todo/1explicit EPERM file-symlink platform skip. Real junction refusal passes. Includes every original runner/mirror/diagnostic/raw/EOL test plus public module and9new lifecycle cases. Main tests actual default-root/no-producer and named-test-only required gates, actual CLI no output/no spawn, --list/generic compatibility, stable successful native/TAP/spec streams, binary drift despite successful child, and existing child failure propagation.",
-      "log": "PUBLIC_PREVIEW_FINAL_TEST.log",
-      "logSha256": "1b0ed51ef559cd7342df23bf53c8f52542dfd97cb2bac5e0ef3b772e0d122939",
-      "toolChunk": "bb5bfe",
-      "exitCode": 0,
-      "earlier": "Initial41pass/1platform-skip snapshot observed at f3c5a0; expanded43pass/1skip log PUBLIC_PREVIEW_INTEGRATED_TEST.log retained before final console-summary reason addition. Final rerun is after relevant source/interface changes, not to recreate missing logs.",
-      "realList": "Actual final --list completed at root with1016entries, no test launch/no public preview integrity or passing claim. Receipt .local/website-test-runs/2026-10-20T01-34-03-368Z-131e6d69-a8ec-4c73-9101-2c9f666c250a/receipt.json. No new full suite started."
-    },
-    "unchanged": "Protected Review binding322db172, old viewer6265/current fixture, four learner exports,137models/inventory/private delivery policy, font/image notices and UI component bytes unchanged.113UI source-specific passes remain historical evidence from exact1e8 tree, not a new whole-tree113pass claim after tooling changes. Original full-suite22796/QA and owner preview/open lecture untouched.",
-    "viewerBuildPending": true,
-    "protectedReviewVerified": false,
-    "fullSuitePass": false,
+    "candidate": "F:/VisibleMedicine/staging/20261020-ui-coverage-integration/website",
+    "oldNative": "Original1011-entry run terminated normally at02:05:05Z:5272tests/5099pass/171fail/2skip/0cancel, exit1, source driftfalse/passingClaimfalse. Terminal receiptSHA df573489ae18be55fae85500fbf46ca131812587e9a83a04ae29e1d6ba94e12b. Frozen oldQA and all failed diagnostics retained, not a passing suite.",
+    "viewer": "Owned queue47281terminal0, no manual duplicate build. Actual stock production viewer rebuild completed, exact47old files preserved first. Stock verify-clinical-review passes sourcebd5465ee/Review322db172/1543Reviewfiles/46viewerfiles/22unchanged dependency packages. Private plexus verifier5files/14packages/admissions0 also passes; not clinical or role acceptance.",
+    "derivation": "Independent strict post-viewer report70ad69dd verifies real1680inputs, changed coverage index/view only, exact1543imported source records/derived revisions, all46viewer asset hashes/22packages, unchanged four learner/source pairs,137models/144paths/policy. Source cleanbd5465ee/tree44ca83bf. No clinical decisions read or approval transferred.",
+    "currentFixture": "Main reviewed and applied ONLY actual Review binding plus three derived document hashes in current-atlas-delivery.json; exact old fixture f2052f65 preserved. All other source/tree/count/model/learner values and all historical fixtures unchanged. Independent admitted-current-pin-result.json confirms currentPinState updated; no permissive wildcard or test expectation restamp without producer output.",
+    "focusedAcceptance": "Actual eight unchanged native entries85pass/0fail/cancel/skip/todo on the real candidate, source-root pinned to cleanbd5; full CURRENT_BINDING_NATIVE.tap SHAac9508be retained. Includes current delivery and forgery refusals, original coverage/source checks, historical cervical transition, UI/page and preview bytes. Does not establish all171prior failures resolved, whole-suite/type/build/browser/clinical acceptance.",
+    "headHarnessAdmission": "Main applied exactly staged fc657ede head comparison helper and68993149 history-preservation guard plus33d69dce complementary retry-focus test fragment. Actual plain native candidate run six cases6pass/0fail/cancel/skip/todo, full toolchunkffafb9. No source-loader overlay used for this integrated run. HeadAtlasViewer/history test source and every original native-anchor fixture unchanged; all old assertion bodies inverse-proved outside three real dependency seams and two exact additional tests. Four actual adverse cases reject changed old assertion, no-op helper, new-test fragment tampering and original-fixture tampering. First prepared assumption incorrectly claimed only two helper additions; strict proof refused before admission, and full actual diff was read before v2. No production component/mask/access changes.",
+    "typeContext": "First actual typecheck exited2 with7diagnostics: two omitted private modules and missing ordinary sibling Atlas source import with two resulting inference errors. Original failure retained. Exact existing disc3355c0fd/optic9a1f3ec4 modules copied locally with before/destination/after checks; no upload/new rights or clinical admission. A local directory junction exposes existing cleanbd5 Atlas at the expected sibling path for the original import, no source copying/move/merge or permissions change. Corrected-context typecheck has its own log/receipt; do not infer pass before terminal evidence.",
+    "remaining": "Main must finish corrected typecheck/production build and desktop gates, then explicitly repair remaining historical/current epoch and wrapper-interface failures from full171case triage without blanket repins. New scan import-focus03c01e9b and Studio link-namee6d0c653 candidates remain separate/uninstalled. Owner3000/open lecture untouched; no repeated save question. Clinical signoff is not a global development stall.",
     "canonicalInstalled": false,
+    "stockReviewVerifierPassed": true,
     "clinicalApproval": false,
     "publicDeployment": false,
-    "reviewSha256": "c117d27cb45995a4938fe5222d0ec505cac794fe3a3eae36f2ef95cc961b9257",
-    "deltaPaths": [
-      "scripts/public-preview-preflight.mjs",
-      "scripts/run-website-tests.mjs",
-      "tests/public-preview-preflight.test.mjs",
-      "tests/run-website-tests-public-preview.test.mjs"
-    ],
-    "selectedSourcePaths": 4945,
-    "originalRunnerTestsUnchanged": true,
-    "priorSourceIdentity": "1e8db07ae56292a21d7f94a81942a998b5ac5e61",
+    "fullSuitePass": false,
+    "reviewSha256": "c52efb9261bc1465731d422138f781a84d91c42958b1968d2447be0408ea99f2",
+    "nativeFocused": {
+      "schema": "vm-current-binding-focused-native/1",
+      "code": 0,
+      "signal": null,
+      "entries": 8,
+      "inputs": {
+        "tests/anatomy-coverage-index.test.mjs": "df3b794855f4f14e842f2c94637c265fc381f5ef980ff3aa8380336fc9823275",
+        "tests/anatomy-coverage-view.test.ts": "31aa011d789ef87b3ccea9583a83ca137095397696812615fe441b053db8166f",
+        "tests/anatomy-coverage-page.test.ts": "9d3597eda56791264870e46d505fc9993d167255b7091e352a459631b127c842",
+        "tests/anatomy-coverage-review-ui.test.ts": "1a3a97054a5f289549f574a8035252c0120bc84ce77cf627243c3408ab690ef4",
+        "tests/anatomy-coverage-producers.test.mjs": "01918fea631ab468f71f70d9c7716f073a40394676b4161f7b845882d1eb095d",
+        "tests/atlas-cervical-source-transition.test.mjs": "305fd9ec318359cf4049e88c01c08deba015c1386cee004f8dc479557c711003",
+        "tests/current-atlas-delivery.test.mjs": "f90a64376bddb25461d92542aeb2bdc7f836c258b17b4e89490c7f7a6ac14bee",
+        "tests/atlas-navigation.test.ts": "905143abf8e26172124de178d9525424bf27d5c7073f2bbfa309784fa1e44656"
+      },
+      "counts": {
+        "tests": 85,
+        "pass": 85,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "log": "F:/VisibleMedicine/staging/20261020-ui-coverage-integration/CURRENT_BINDING_NATIVE.tap",
+      "logSha256": "ac9508beecf93787293f85376ddfefdf4eb8e910a2457cf5f843f5f7343ca384",
+      "testsUnchanged": true,
+      "canonicalInstalled": false,
+      "clinicalApproval": false
+    },
+    "postViewerReportSha256": "70ad69dd7b92d63b7439cd0c6ea0e08cdadcac871730135e6beeb88fed85add2",
+    "sourcePaths": 4946,
     "heldArchivePaths": [
       "tests/fixtures/hand-vessel-xray-589-delivery-archive-v3.json",
       "tests/fixtures/head-pilot-9fba-epoch.json",

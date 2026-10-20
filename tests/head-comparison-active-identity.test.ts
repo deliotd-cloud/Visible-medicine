@@ -9,6 +9,7 @@ import {HEAD_MANIFEST_SHA256,type HeadEntry} from '../lib/head-atlas-import.ts';
 import {HEAD_LINK_REVISION} from '../lib/head-atlas-links.ts';
 import {headImageConcept as headAtlasConcept} from '../lib/head-image-only-links.ts';
 import {headImageHref} from '../lib/head-atlas-navigation.ts';
+import {headDisclosureKeyDown} from '../lib/head-disclosure-keyboard.ts';
 
 // Execute the component's real derived values and its comparison JSX during the
 // render that precedes the passive effect which clears an old selection.
@@ -29,7 +30,7 @@ const program=`${names.map(name=>`const ${declarations.get(name)!.getText(tree)}
   const comparisonView=(${comparison.getText(tree)});
   return {activeEntry,concept,html:renderToStaticMarkup(comparisonView)};`;
 const compiled=ts.transpileModule(program,{compilerOptions:{jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS}});
-const evaluate=new Function('exports','study','activeId','selected','quizActive','modality','HEAD_LINK_REVISION','HEAD_MANIFEST_SHA256','headAtlasConcept','headImageHref','Link','LearningResourceStatus','renderToStaticMarkup','require','pkg','inlineComparison','toggleInlineComparison',compiled.outputText) as (...args:any[])=>{activeEntry:HeadEntry|undefined;concept:ReturnType<typeof headAtlasConcept>|null;html:string};
+const evaluate=new Function('exports','study','activeId','selected','quizActive','modality','HEAD_LINK_REVISION','HEAD_MANIFEST_SHA256','headAtlasConcept','headImageHref','Link','LearningResourceStatus','renderToStaticMarkup','require','pkg','inlineComparison','toggleInlineComparison','headDisclosureKeyDown',compiled.outputText) as (...args:any[])=>{activeEntry:HeadEntry|undefined;concept:ReturnType<typeof headAtlasConcept>|null;html:string};
 const pons:HeadEntry={id:'cth.bst.pons',label:'Pons — regional mask',laterality:'midline_or_unpaired',representation:'partial-mask',family:'Brainstem',color:[1,0,0],opacity:{fill:0.3,outline:1}};
 const thalamus:HeadEntry={id:'cth.dgm.thalamus.left',label:'Left thalamus — regional mask',laterality:'left',representation:'mask',family:'Deep gray',color:[0,1,0],opacity:{fill:0.3,outline:1}};
 const study={definition:{entries:[pons,thalamus]}};
@@ -38,7 +39,7 @@ function render(activeId:string,selection:ReturnType<typeof selected>|null,activ
   return evaluate({},activeStudy,activeId,selection,practice,'CT',HEAD_LINK_REVISION,revision,headAtlasConcept,headImageHref,
     ({children,prefetch:_,...props}:React.PropsWithChildren<{href:string;prefetch?:boolean}>)=>React.createElement('a',props,children),
     ({status}:{status:string})=>React.createElement('span',{'data-resource-status':status}),
-    renderToStaticMarkup,(id:string)=>id==='react/jsx-runtime'?jsxRuntime:null,pkg,null,()=>{});
+    renderToStaticMarkup,(id:string)=>id==='react/jsx-runtime'?jsxRuntime:null,pkg,null,()=>{},headDisclosureKeyDown);
 }
 
 test('old selected anatomy cannot offer comparison while a newly active mask loads or fails',()=>{
