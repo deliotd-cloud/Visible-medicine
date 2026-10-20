@@ -1,0 +1,26 @@
+{
+  "label": "ACTUAL_ORIGINAL_ELBOW_AND_DISCLOSURE",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261020-elbow-disclosure-reviewed/mirror/tests/clinical-review-elbow-arterial-tour.test.ts",
+    "F:/VisibleMedicine/staging/20261020-elbow-disclosure-reviewed/mirror/tests/elbow-current-lifecycle-preservation.test.mjs",
+    "F:/VisibleMedicine/staging/20261020-elbow-disclosure-reviewed/mirror/tests/clinical-review-quiz-disclosure.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-elbow-disclosure-reviewed/ACTUAL_ORIGINAL_ELBOW_AND_DISCLOSURE.log",
+  "logSha256": "fa91577e679e5cf3c5cf4abfd1316e4da188b5e586cebf91ddbc57de944ea2be",
+  "footer": [
+    "ℹ tests 6",
+    "ℹ pass 6",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

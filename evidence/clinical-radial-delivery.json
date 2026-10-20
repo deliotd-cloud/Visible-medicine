@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-20T19:52:11.689Z",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "paths": [
+    "tests/clinical-review-tour-imaging.test.ts",
+    "tests/shoulder-tour-guided-playback-inverse.mjs",
+    "tests/radial-eus-current-transition.test.mjs",
+    "tests/native-head-52-source.mjs",
+    "tests/fixtures/gitattributes-delivery52.raw"
+  ],
+  "namedSourceInputs": 5031,
+  "sourceInputSha256": "dc73fff970901e90cd7214a226f127a669a0bb0e62697dee81916a7e83477eaa",
+  "actualOriginalModules": {
+    "label": "ACTUAL_ORIGINAL_TOUR_AND_RADIAL",
+    "command": "node",
+    "args": [
+      "--max-old-space-size=4096",
+      "--test",
+      "--experimental-strip-types",
+      "--test-concurrency=1",
+      "F:/VisibleMedicine/staging/20261020-clinical-radial-reviewed/mirror/tests/clinical-review-tour-imaging.test.ts",
+      "F:/VisibleMedicine/staging/20261020-clinical-radial-reviewed/mirror/tests/radial-eus-current-transition.test.mjs"
+    ],
+    "code": 1,
+    "signal": null,
+    "log": "F:\\VisibleMedicine\\staging\\20261020-clinical-radial-reviewed/ACTUAL_ORIGINAL_TOUR_AND_RADIAL.log",
+    "logSha256": "42a2f305a33a4fad8965e6fd24a284d318dcea9b168254c4cf5252cd73b4496d",
+    "footer": [
+      "ℹ tests 11",
+      "ℹ pass 10",
+      "ℹ fail 1",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "canonicalInstalled": false
+  },
+  "actualAffectedEpochCorrection": {
+    "label": "ACTUAL_TOUR_50_EPOCH_CORRECTION",
+    "command": "node",
+    "args": [
+      "--max-old-space-size=4096",
+      "--test",
+      "--experimental-strip-types",
+      "--test-concurrency=1",
+      "--test-name-pattern=guided imaging notes reach|current 87ed imported notes|live right-elbow arterial pairs",
+      "F:/VisibleMedicine/staging/20261020-clinical-radial-reviewed/mirror/tests/clinical-review-tour-imaging.test.ts"
+    ],
+    "code": 0,
+    "signal": null,
+    "log": "F:\\VisibleMedicine\\staging\\20261020-clinical-radial-reviewed/ACTUAL_TOUR_50_EPOCH_CORRECTION.log",
+    "logSha256": "43eed2c14ef6c50f7ac62d9f4c4258caac51698292f95e8bac1dc45cfcc278e0",
+    "footer": [
+      "ℹ tests 3",
+      "ℹ pass 3",
+      "ℹ fail 0",
+      "ℹ cancelled 0",
+      "ℹ skipped 0",
+      "ℹ todo 0"
+    ],
+    "canonicalInstalled": false
+  },
+  "preservation": "Original historical tour counts604/564/1116/50/304 and radial71/eight/4changed/9932preserved plus forgery/stale/no-storage assertions executed against their authenticated original source/Review epochs. Distinct current87ed cases also executed. Main adds an explicit mutation-exercised check to the shoulder inverse. No old count repinned or assertion waived.",
+  "fixture": "Exact old52 attribute source text from an independently pinned prior checkpoint. Current .gitattributes and Vite configuration untouched. New fixture is create-only and outside the general flat-test transaction.",
+  "productionCodeChanged": false,
+  "canonicalInstalled": false,
+  "ownerEditorRefreshed": false,
+  "fullSuitePass": false,
+  "clinicalApproval": false,
+  "patientRegistration": false,
+  "publicDeployment": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "vm-reviewed-test-repair-batch-1",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "runOutput": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+  "files": [
+    {
+      "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "beforeSha256": "15bb108f73a9eb2719edca3708e7b4ea9844c8f555db4495c8045c83ede40f99",
+      "afterSha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72"
+    },
+    {
+      "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
+      "beforeSha256": "b6770af07fef2912b1561ed344cbfae36f69104b613b686d87e85a6f43fed80f",
+      "afterSha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105"
+    },
+    {
+      "path": "tests/clinical-review-quiz-disclosure.test.ts",
+      "beforeSha256": "748385b9f2f78da970ce7ddebffbf96a721a2659e60d3f30f2313077f3fde7af",
+      "afterSha256": "5b74d78eb8080e18231b17bef7a0fd3cee7db237dcb6afef58aa862c7d044a0b"
+    }
+  ],
+  "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-elbow-disclosure-applied"
+}

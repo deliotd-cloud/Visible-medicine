@@ -1,0 +1,25 @@
+{
+  "label": "ACTUAL_ORIGINAL_TOUR_AND_RADIAL",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261020-clinical-radial-reviewed/mirror/tests/clinical-review-tour-imaging.test.ts",
+    "F:/VisibleMedicine/staging/20261020-clinical-radial-reviewed/mirror/tests/radial-eus-current-transition.test.mjs"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-clinical-radial-reviewed/ACTUAL_ORIGINAL_TOUR_AND_RADIAL.log",
+  "logSha256": "42a2f305a33a4fad8965e6fd24a284d318dcea9b168254c4cf5252cd73b4496d",
+  "footer": [
+    "ℹ tests 11",
+    "ℹ pass 10",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

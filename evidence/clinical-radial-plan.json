@@ -1,0 +1,33 @@
+{
+  "schema": "vm-reviewed-test-repair-batch-1",
+  "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
+  "runOutput": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website/.local/website-test-runs/2026-10-20T15-33-34-089Z-a0219b57-000e-43ab-ae31-06f67f26fcbd",
+  "files": [
+    {
+      "path": "tests/clinical-review-tour-imaging.test.ts",
+      "beforeSha256": "2cc1ca31e53854e75b992654ec2a77d70e095bb6baad29d8cee6b62b618c89a1",
+      "afterSha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b"
+    },
+    {
+      "path": "tests/shoulder-tour-guided-playback-inverse.mjs",
+      "beforeSha256": null,
+      "afterSha256": "b1e3a57fdb759e549300d941452c199510b2459b1abe73c977aef265cdc43e0d"
+    },
+    {
+      "path": "tests/radial-eus-current-transition.test.mjs",
+      "beforeSha256": "04362adbf0d1ef51063e3943fc60b8d9693d7613a29349af2183ab1440670847",
+      "afterSha256": "d289abe076590281411eb8df6fd8c3d36d72d08ae594e6ce61054cc9cbb584b4"
+    },
+    {
+      "path": "tests/native-head-52-source.mjs",
+      "beforeSha256": null,
+      "afterSha256": "e6cf37c783ca11b76f70b513c140443032deee8de0fa8aebb32442523b605dcc"
+    }
+  ],
+  "recovery": "F:/VisibleMedicine/recovery/checkpoints/20261020-clinical-radial-applied",
+  "fixture": {
+    "path": "tests/fixtures/gitattributes-delivery52.raw",
+    "sha256": "845dd13acf54b7e3b765b6ca1699273282c00ee376a1ce4a7f44a2569da8d95c",
+    "independentManifest": "F:/VisibleMedicine/recovery/checkpoints/20261018-head-native-history-installed/website-final-source-manifest.json"
+  }
+}

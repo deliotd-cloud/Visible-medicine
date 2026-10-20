@@ -1,63 +1,46 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-20T19:38:58.520Z",
+  "at": "2026-10-20T19:52:23.228Z",
   "sourceIdentity": {
-    "at": "2026-10-20T19:38:55.210Z",
+    "at": "2026-10-20T19:52:20.152Z",
     "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
     "canonicalAtlas": "f5097af8493701d64a8e2a2b5797df380f3b348a",
     "canonicalWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "candidateAtlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
     "candidateReview": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-    "namedSourceInputs": 5028,
-    "sourceInputSha256": "367dccaeb2c8dc8bde4fd81ce1c07bca44c677b0ca1af7e51edd8f0ad4bd4b68",
-    "sourceChanges": [
-      {
-        "path": "tests/regional-learning-catalogue-history.ts",
-        "beforeSha256": "335ebdfa5c9118d3bec6b4240d432d185cc833459c76d7f7d7564ad1abdfdda2",
-        "afterSha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
-      },
-      {
-        "path": "tests/regional-learning-catalogue.test.ts",
-        "beforeSha256": "7b981a547e76884fbf36859c7bdaafdddbeaac4c96491351bb63ce5537ad86fa",
-        "afterSha256": "f5af041cb20771770342ad7abbb3a3b93dddd504fa4adfae6a963bfc39ee3093"
-      },
-      {
-        "path": "tests/regional-mri-inline-inspection.test.ts",
-        "beforeSha256": "a8bf4d07138bbf0824330f1e98678b3f4cd2fa4108e3d043eb3edba277cb2474",
-        "afterSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
-      },
-      {
-        "path": "tests/vite-cache-rollback.test.mjs",
-        "beforeSha256": "6da5319a5f5b22b0df1e97aa458a1278577e87a10567e736f91d83aeb9865644",
-        "afterSha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
-      }
+    "namedSourceInputs": 5031,
+    "sourceInputSha256": "7816715dd45686f9bc089700333b0ce76b45d6d87eaf4bd9b9eca4b2d9b8ac68",
+    "uniqueCumulativeTestSourcePaths": 63,
+    "newPaths": [
+      "tests/clinical-review-tour-imaging.test.ts",
+      "tests/shoulder-tour-guided-playback-inverse.mjs",
+      "tests/radial-eus-current-transition.test.mjs",
+      "tests/native-head-52-source.mjs",
+      "tests/fixtures/gitattributes-delivery52.raw",
+      "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "tests/elbow-current-lifecycle-preservation.test.mjs",
+      "tests/clinical-review-quiz-disclosure.test.ts"
     ],
-    "uniqueCumulativeTestSourcePaths": 55,
-    "learningActual17": {
-      "pass": 17,
-      "fail": 0,
-      "skipped": 0,
-      "originalCases": 14,
-      "newCases": 3
-    },
-    "viteActual3": {
-      "pass": 3,
-      "scope": "All Vite cases inside retained combined7/5pass/2radialfail run; not an invented standalone all-green receipt."
-    },
-    "radialActual7": {
+    "radialFullModule": {
       "pass": 5,
-      "fail": 2,
-      "attrsCasesPassed": 2,
-      "newFixtureAdmitted": false,
-      "originalOld52MetadataAndApiPending": true
+      "fail": 0
     },
-    "clinicalOriginal8": {
-      "pass": 1,
-      "fail": 7,
-      "sourceTextPathsUnchanged": 7,
-      "scope": "Actual unmodified representative witness, not a current remaining-failure total."
+    "originalCombined": {
+      "tests": 11,
+      "pass": 10,
+      "fail": 1,
+      "scope": "Retained real run. Sole remaining tour case selected wrong later51-tour epoch; not a green aggregate."
     },
-    "casePreservation": "All14 original registered learning/MRI test bodies retained after one explicit historical-source call seam and added old/current refusal. Entire old Git replay body exact. This is not a whole-source inverse; original before-file copies preserved in application recovery.",
+    "correctedAffectedCases": {
+      "pass": 3,
+      "fail": 0,
+      "scope": "Actual saved9f branch/current87ed branch/exact lower-venous V2 50/304 case; remaining unchanged original passes retained."
+    },
+    "elbowDisclosureFullModules": {
+      "pass": 6,
+      "fail": 0
+    },
+    "preserved": "Original 604/564/1116/50/304 guided assertions, radial71/eight/four-only/9932 teaching and forged/stale/no-storage assertions remain. Original elbow fixture and complete prior-source inverse retained. Quiz exact two unchanged9f→87ed source features admitted with actual byte-mutation refusal. No frozen validator, original raw fixture, current attribute policy, Vite config, model or approval changed.",
     "productionCodeChanged": false,
     "canonicalInstalled": false,
     "ownerEditorRefreshed": false,
@@ -67,8 +50,8 @@
     "publicDeployment": false,
     "fullGoalActive": true
   },
-  "parent": "60d6ad36d79a98355bd65f7834c9ae765ed776d3",
-  "gitParent": "60d6ad36d79a98355bd65f7834c9ae765ed776d3",
+  "parent": "cece0ca0949266389b648c067f92ca8094bee48d",
+  "gitParent": "cece0ca0949266389b648c067f92ca8094bee48d",
   "files": [
     {
       "path": "evidence/archived-delivery-verification.json",
@@ -96,9 +79,29 @@
       "bytes": 775
     },
     {
+      "path": "evidence/clinical-radial-delivery.json",
+      "sha256": "d895eab99dcb0d9aa6d980055c6d49e678ce338de9eede2cc4b7b42b5c4abd93",
+      "bytes": 3133
+    },
+    {
+      "path": "evidence/clinical-radial-original11.json",
+      "sha256": "3a62cf8c242491eb1aca411db46a48106e9edf61b28f2f48552dcc93104c392f",
+      "bytes": 827
+    },
+    {
+      "path": "evidence/clinical-radial-plan.json",
+      "sha256": "57a46dc7e416dd4a76b8fecd384a330825f45ce6ca26fa90466c4a46f7454988",
+      "bytes": 1588
+    },
+    {
       "path": "evidence/clinical-representatives-preparation.json",
       "sha256": "f41b29545a3d799045cc8d57d2e15fd049e95f2f1c2d548faf3c8297792c4512",
       "bytes": 3449
+    },
+    {
+      "path": "evidence/clinical-tour-epoch-correction3.json",
+      "sha256": "0042c0e2fffcc75abe26f852a58784223e29e99976a42780a0012bdca45c9243",
+      "bytes": 819
     },
     {
       "path": "evidence/composed-preservation-22.json",
@@ -119,6 +122,21 @@
       "path": "evidence/dirty-old-website-3.json",
       "sha256": "7093cec185035e4d248e342ef86008c756387c4ee9687bed1ff43c794c9f89e4",
       "bytes": 626
+    },
+    {
+      "path": "evidence/elbow-disclosure-actual6.json",
+      "sha256": "6337de33bfa04cfc3d3bbfdd0356c7097ff94add43b211b1cc861cefdac22406",
+      "bytes": 974
+    },
+    {
+      "path": "evidence/elbow-disclosure-delivery.json",
+      "sha256": "8c46357055c883a35c60bc04b00bf670875de63fc32d6697399ecaffb2e18e81",
+      "bytes": 2106
+    },
+    {
+      "path": "evidence/elbow-disclosure-plan.json",
+      "sha256": "268fcc5983ad7ae3c20c299cdf60c7984fa24044262b9fcd339d46696a929ead",
+      "bytes": 1181
     },
     {
       "path": "evidence/focused-original-48.json",
@@ -366,6 +384,11 @@
       "bytes": 10671
     },
     {
+      "path": "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "sha256": "ecdaa555bffb332aab67d481c6873e0dc7ea28bc25cb3459ae1b4b8dd6e9df72",
+      "bytes": 24691
+    },
+    {
       "path": "tests/clinical-review-femoral-arterial-admission-56-closed.test.mjs",
       "sha256": "e4b06a02ec8835c464af27b0d53238c7403907e3f31d2ef9ea5cc690ccc30aeb",
       "bytes": 3055
@@ -394,6 +417,16 @@
       "path": "tests/clinical-review-inbox-source-update.test.ts",
       "sha256": "2ef6e430a68dac8fe3a6b67b605c6d9b95e1812fb71d28a15f1aa466be34dae9",
       "bytes": 9724
+    },
+    {
+      "path": "tests/clinical-review-quiz-disclosure.test.ts",
+      "sha256": "5b74d78eb8080e18231b17bef7a0fd3cee7db237dcb6afef58aa862c7d044a0b",
+      "bytes": 6367
+    },
+    {
+      "path": "tests/clinical-review-tour-imaging.test.ts",
+      "sha256": "15888039d3797597e933931bd58d0555e5fb3f2269078a64c37d22952575012b",
+      "bytes": 32447
     },
     {
       "path": "tests/closed56-femoral-epoch.test.mjs",
@@ -441,6 +474,16 @@
       "bytes": 10940
     },
     {
+      "path": "tests/elbow-current-lifecycle-preservation.test.mjs",
+      "sha256": "eb36672ecc994530ea64de148aaf72de9d02d6663d27f74abbba52a22dab8105",
+      "bytes": 5923
+    },
+    {
+      "path": "tests/fixtures/gitattributes-delivery52.raw",
+      "sha256": "845dd13acf54b7e3b765b6ca1699273282c00ee376a1ce4a7f44a2569da8d95c",
+      "bytes": 17228
+    },
+    {
       "path": "tests/head-image-history.test.ts",
       "sha256": "5282143cc7d182d6a5a71bda18afe269ea2d18a2b88a57b58693936c2c6dbabc",
       "bytes": 190073
@@ -481,6 +524,11 @@
       "bytes": 2613
     },
     {
+      "path": "tests/native-head-52-source.mjs",
+      "sha256": "e6cf37c783ca11b76f70b513c140443032deee8de0fa8aebb32442523b605dcc",
+      "bytes": 2831
+    },
+    {
       "path": "tests/next-five-admission-contract.test.mjs",
       "sha256": "370f887910a9a92bd25e1487ebd7533ee729d4d098c248122fa8f00f65ee90b9",
       "bytes": 5829
@@ -489,6 +537,11 @@
       "path": "tests/next-five-special-admission.mjs",
       "sha256": "541fc0cfd3fa1a936d97c5b1e38e4576d000d4f396a381f68a8030fdb3360a13",
       "bytes": 3534
+    },
+    {
+      "path": "tests/radial-eus-current-transition.test.mjs",
+      "sha256": "d289abe076590281411eb8df6fd8c3d36d72d08ae594e6ce61054cc9cbb584b4",
+      "bytes": 16828
     },
     {
       "path": "tests/regional-learning-catalogue-history.ts",
@@ -511,70 +564,58 @@
       "bytes": 2481
     },
     {
+      "path": "tests/shoulder-tour-guided-playback-inverse.mjs",
+      "sha256": "b1e3a57fdb759e549300d941452c199510b2459b1abe73c977aef265cdc43e0d",
+      "bytes": 1240
+    },
+    {
       "path": "tests/vite-cache-rollback.test.mjs",
       "sha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056",
       "bytes": 8213
     }
   ],
   "removed": [],
-  "scope": "Selected test/helper source and metadata evidence only, retaining prior filtered sources without raw canonical ancestry, model payloads, scans, acquired images or private records. Historical archives are local dependencies not included. Not a standalone/runnable/full Website/Atlas/data backup.",
+  "scope": "Selected source/test helpers and metadata evidence only; no raw canonical Git ancestry, scans, masks, acquired images, private decisions, model payloads or runtime data. Authenticated historical archives remain separate local prerequisites. Not a complete, standalone or runnable Website/Atlas/data backup.",
   "proof": {
-    "at": "2026-10-20T19:38:55.210Z",
+    "at": "2026-10-20T19:52:20.152Z",
     "candidate": "F:/VisibleMedicine/staging/20261020-combined-website-ui/website",
     "canonicalAtlas": "f5097af8493701d64a8e2a2b5797df380f3b348a",
     "canonicalWebsite": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
     "candidateAtlas": "87ed7e343260c7df48a40d53503f25bbfd34cfa5",
     "candidateReview": "b10311bfc3de1b628eb3d124d47c317ac4db2f7226e7ad1616e838d009af39d5",
-    "namedSourceInputs": 5028,
-    "sourceInputSha256": "367dccaeb2c8dc8bde4fd81ce1c07bca44c677b0ca1af7e51edd8f0ad4bd4b68",
-    "sourceChanges": [
-      {
-        "path": "tests/regional-learning-catalogue-history.ts",
-        "beforeSha256": "335ebdfa5c9118d3bec6b4240d432d185cc833459c76d7f7d7564ad1abdfdda2",
-        "afterSha256": "59e5289e64ee679867674bbf2263de2f8ff17b9c15add6f2ddd237aa1847ebd9"
-      },
-      {
-        "path": "tests/regional-learning-catalogue.test.ts",
-        "beforeSha256": "7b981a547e76884fbf36859c7bdaafdddbeaac4c96491351bb63ce5537ad86fa",
-        "afterSha256": "f5af041cb20771770342ad7abbb3a3b93dddd504fa4adfae6a963bfc39ee3093"
-      },
-      {
-        "path": "tests/regional-mri-inline-inspection.test.ts",
-        "beforeSha256": "a8bf4d07138bbf0824330f1e98678b3f4cd2fa4108e3d043eb3edba277cb2474",
-        "afterSha256": "732bff1b7b9ffae2b3f2f4cbc54d8b38b6cd3fd7631aa5f2918a007bf1b2865f"
-      },
-      {
-        "path": "tests/vite-cache-rollback.test.mjs",
-        "beforeSha256": "6da5319a5f5b22b0df1e97aa458a1278577e87a10567e736f91d83aeb9865644",
-        "afterSha256": "fc4f9270b64a0f52151c2f71654669005cd89cdc13084116d4acfd6323bb3056"
-      }
+    "namedSourceInputs": 5031,
+    "sourceInputSha256": "7816715dd45686f9bc089700333b0ce76b45d6d87eaf4bd9b9eca4b2d9b8ac68",
+    "uniqueCumulativeTestSourcePaths": 63,
+    "newPaths": [
+      "tests/clinical-review-tour-imaging.test.ts",
+      "tests/shoulder-tour-guided-playback-inverse.mjs",
+      "tests/radial-eus-current-transition.test.mjs",
+      "tests/native-head-52-source.mjs",
+      "tests/fixtures/gitattributes-delivery52.raw",
+      "tests/clinical-review-elbow-arterial-tour.test.ts",
+      "tests/elbow-current-lifecycle-preservation.test.mjs",
+      "tests/clinical-review-quiz-disclosure.test.ts"
     ],
-    "uniqueCumulativeTestSourcePaths": 55,
-    "learningActual17": {
-      "pass": 17,
-      "fail": 0,
-      "skipped": 0,
-      "originalCases": 14,
-      "newCases": 3
-    },
-    "viteActual3": {
-      "pass": 3,
-      "scope": "All Vite cases inside retained combined7/5pass/2radialfail run; not an invented standalone all-green receipt."
-    },
-    "radialActual7": {
+    "radialFullModule": {
       "pass": 5,
-      "fail": 2,
-      "attrsCasesPassed": 2,
-      "newFixtureAdmitted": false,
-      "originalOld52MetadataAndApiPending": true
+      "fail": 0
     },
-    "clinicalOriginal8": {
-      "pass": 1,
-      "fail": 7,
-      "sourceTextPathsUnchanged": 7,
-      "scope": "Actual unmodified representative witness, not a current remaining-failure total."
+    "originalCombined": {
+      "tests": 11,
+      "pass": 10,
+      "fail": 1,
+      "scope": "Retained real run. Sole remaining tour case selected wrong later51-tour epoch; not a green aggregate."
     },
-    "casePreservation": "All14 original registered learning/MRI test bodies retained after one explicit historical-source call seam and added old/current refusal. Entire old Git replay body exact. This is not a whole-source inverse; original before-file copies preserved in application recovery.",
+    "correctedAffectedCases": {
+      "pass": 3,
+      "fail": 0,
+      "scope": "Actual saved9f branch/current87ed branch/exact lower-venous V2 50/304 case; remaining unchanged original passes retained."
+    },
+    "elbowDisclosureFullModules": {
+      "pass": 6,
+      "fail": 0
+    },
+    "preserved": "Original 604/564/1116/50/304 guided assertions, radial71/eight/four-only/9932 teaching and forged/stale/no-storage assertions remain. Original elbow fixture and complete prior-source inverse retained. Quiz exact two unchanged9f→87ed source features admitted with actual byte-mutation refusal. No frozen validator, original raw fixture, current attribute policy, Vite config, model or approval changed.",
     "productionCodeChanged": false,
     "canonicalInstalled": false,
     "ownerEditorRefreshed": false,

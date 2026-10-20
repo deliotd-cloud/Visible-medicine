@@ -1,3 +1,3 @@
 # Visible Medicine source-only recovery
 
-Selected test/helper source and metadata evidence only, retaining prior filtered sources without raw canonical ancestry, model payloads, scans, acquired images or private records. Historical archives are local dependencies not included. Not a standalone/runnable/full Website/Atlas/data backup.
+Selected source/test helpers and metadata evidence only; no raw canonical Git ancestry, scans, masks, acquired images, private decisions, model payloads or runtime data. Authenticated historical archives remain separate local prerequisites. Not a complete, standalone or runnable Website/Atlas/data backup.

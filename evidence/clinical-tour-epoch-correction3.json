@@ -1,0 +1,25 @@
+{
+  "label": "ACTUAL_TOUR_50_EPOCH_CORRECTION",
+  "command": "node",
+  "args": [
+    "--max-old-space-size=4096",
+    "--test",
+    "--experimental-strip-types",
+    "--test-concurrency=1",
+    "--test-name-pattern=guided imaging notes reach|current 87ed imported notes|live right-elbow arterial pairs",
+    "F:/VisibleMedicine/staging/20261020-clinical-radial-reviewed/mirror/tests/clinical-review-tour-imaging.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261020-clinical-radial-reviewed/ACTUAL_TOUR_50_EPOCH_CORRECTION.log",
+  "logSha256": "43eed2c14ef6c50f7ac62d9f4c4258caac51698292f95e8bac1dc45cfcc278e0",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 3",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}
