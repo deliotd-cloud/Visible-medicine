@@ -1,0 +1,23 @@
+{
+  "label": "COVERAGE_NATIVE_EPOCHS",
+  "command": "node",
+  "args": [
+    "--test",
+    "--test-concurrency=1",
+    "tests/anatomy-coverage-revision-admission.test.mjs",
+    "tests/current-190-coverage.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-coverage-epoch-proposal\\native-check/COVERAGE_NATIVE_EPOCHS.log",
+  "logSha256": "b160faa266a44cdbfba22bac0a8e88d9454a34050c401d3bc50d3a662050d2c2",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 3",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

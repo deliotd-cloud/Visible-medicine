@@ -1,0 +1,21 @@
+{
+  "label": "ARTERIAL190_WHOLE_HISTORY",
+  "command": "node",
+  "args": [
+    "--test",
+    "tests/arterial-history-preservation.test.mjs"
+  ],
+  "code": 0,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-coverage-epoch-proposal\\native-check/ARTERIAL190_WHOLE_HISTORY.log",
+  "logSha256": "c55c6838f8c3f9f0223c1008ee09f95759d5c377607d17cbde24ac709f8503c5",
+  "footer": [
+    "ℹ tests 1",
+    "ℹ pass 1",
+    "ℹ fail 0",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

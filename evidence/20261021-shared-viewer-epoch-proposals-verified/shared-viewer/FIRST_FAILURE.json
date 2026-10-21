@@ -1,0 +1,22 @@
+{
+  "label": "SHARED_VIEWER_KEYBOARD_EPOCH",
+  "command": "node",
+  "args": [
+    "--experimental-strip-types",
+    "--test",
+    "F:/VisibleMedicine/staging/20261021-coverage-epoch-proposal/native-check/tests/atlas-shared-viewer-accessibility.test.ts"
+  ],
+  "code": 1,
+  "signal": null,
+  "log": "F:\\VisibleMedicine\\staging\\20261021-shared-viewer-keyboard-epoch-proposal/SHARED_VIEWER_KEYBOARD_EPOCH.log",
+  "logSha256": "05b8385e9c299eb2bdb6b56da75b165b491f5c84c2aeeb28bbe58b18d18c5150",
+  "footer": [
+    "ℹ tests 3",
+    "ℹ pass 2",
+    "ℹ fail 1",
+    "ℹ cancelled 0",
+    "ℹ skipped 0",
+    "ℹ todo 0"
+  ],
+  "canonicalInstalled": false
+}

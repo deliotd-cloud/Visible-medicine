@@ -1,0 +1,20 @@
+{
+  "stage": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2",
+  "site": "F:/VisibleMedicine/staging/20261021-source190-website/website",
+  "atlas": "F:/VisibleMedicine/staging/20261021-atlas-combined-source",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "path": "tests/atlas-shared-viewer-accessibility.test.ts",
+  "beforeSha256": "4819f71d184b9651507ffbab10cb3bff42076333eb1375807e669c2524ce3141",
+  "sha256": "bf37a2e16233e47cde10ce15cc03c52ecf8a6033047dfdba09f73703f86ca5e6",
+  "bytes": 7307,
+  "originalWholeSourceExactlyReconstructed": true,
+  "oldEmittedAssertionsRetainedAt": "f2f7adbb34af7d7a3bb9affa3ada082fe423ecf6",
+  "oldSceneSha256": "7b13aed459e0b0b48ed873341cd0ba18941318afe37f5202853a60b9115bca2a",
+  "newNegativeCase": true,
+  "canonicalInstalled": false,
+  "candidateChanged": false,
+  "firstFailure": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/SHARED_VIEWER_KEYBOARD_EPOCH.json",
+  "firstFailureLogSha256": "05b8385e9c299eb2bdb6b56da75b165b491f5c84c2aeeb28bbe58b18d18c5150",
+  "fix": "New exact historical scene read exceeds the default1MiB buffer; allow32MB bounded output like existing Git source readers. No assertions removed or child process skipped.",
+  "inverseControllerSha256": "74301185fb4d6ce59e519008c2aa45b4aeebe58ec267a9eba3f61c0c45d5e4e5"
+}

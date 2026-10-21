@@ -1,14 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T06:53:33.279Z",
+  "at": "2026-10-21T07:14:24.975Z",
   "sourceIdentity": {
     "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
     "websiteInputCount": 5107,
     "proposalOnly": true
   },
-  "parent": "dedae72693175b5fda9c01d87642392a736730be",
-  "gitParent": "dedae72693175b5fda9c01d87642392a736730be",
+  "parent": "391000d530ec38aa17cea3e5502048215952934b",
+  "gitParent": "391000d530ec38aa17cea3e5502048215952934b",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -4116,6 +4116,191 @@
       "sha256": "361e49778b2faa89c6bd911fa92d1471d6b9e53c3ae2c0e179a8e99d5fa45e9c"
     },
     {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/cutover/SUMMARY.json",
+      "bytes": 1768,
+      "sha256": "b839b3883c66753657b29390ebb5ff30e29a1cbce4657c6c0cddc1d7c105ec43"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/cutover/V4_TEST_OVERLAY.json",
+      "bytes": 2532,
+      "sha256": "539809cdf78b4e9736b4dc3d2ae4056d2d6f8de9a36ceedd602305e7ce8cc3c7"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/ARTERIAL190_GRAPH_WITNESS.json",
+      "bytes": 583,
+      "sha256": "054f5995b4b728774272c57ddfc93f8838c34eca9973a3b0b709815b51a4cec9"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/ARTERIAL190_WHOLE_HISTORY.json",
+      "bytes": 545,
+      "sha256": "7acd27dd4f9537ff0eaabbf4cad0fcdb1c26792a54922d34aee3eb246e344a3f"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/BATCH.json",
+      "bytes": 8876,
+      "sha256": "ed335291e5cf7ac4f2e7bec30c4cf49a37ba212d59118cc19ed5450adde7521d"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/CAMERA_LEGACY_CURRENT_ZOOM.json",
+      "bytes": 601,
+      "sha256": "9d7f74250cd6a22411c4e2a2c836361fa5473e44b4a37d0ebeac3ba963d9c7f2"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/COVERAGE_NATIVE_EPOCHS.json",
+      "bytes": 616,
+      "sha256": "db4d80f53707053b71130bd40c66503f1d50a6ce9293d660b9dfd8f268d809db"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/KEYBOARD_CURRENT_HISTORY_V2.json",
+      "bytes": 756,
+      "sha256": "7fb3814bc2d4c1dbe3122e911839147ec868c77b29669e38fd2cfcf178d5fceb"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/PROOF.json",
+      "bytes": 2024,
+      "sha256": "3605c172155dda806315067eed8f35889d3bb63fe125761072b1f253e6b08756"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/evidence/SHARED_VIEWER_KEYBOARD_EPOCH_V2.json",
+      "bytes": 671,
+      "sha256": "de94975eef713e429c10d3ab656f56f70c5cb2d09530eb1abc3ee78e9cae141f"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/arterial-history-preservation.test.mjs",
+      "bytes": 2830,
+      "sha256": "5333cc9866b6d7bbf84d3c3790d8012cd9189f1639030f6812e62c9f56225225"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "840d4ecb8bef4c4bf725f1cecd39fa6e53dfa9a7c4d2922a750851509806451a"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/atlas-guided-camera.test.ts",
+      "bytes": 8483,
+      "sha256": "a16d5b0ff30905c035a327752e9a4829449fab0eb6c470d308cfd74a8f501221"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 4740,
+      "sha256": "c51ddcb68911a77154846e14459e666b1c2199dc466feda3d4c497b4fbf3275c"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/atlas-label-keyboard.test.ts",
+      "bytes": 4979,
+      "sha256": "17aaee37c397e5660a77842f881a773651c239aa0025be9740feee2d4618c2a5"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/preimages/tests/atlas-shared-viewer-accessibility.test.ts",
+      "bytes": 5312,
+      "sha256": "4819f71d184b9651507ffbab10cb3bff42076333eb1375807e669c2524ce3141"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/anatomy-coverage-revision-admission.test.mjs",
+      "bytes": 4090,
+      "sha256": "7484378b8c4e8dc91d2d4a3c7f5d58b772c90e8d9b2b2aeaf8f8ebe4ae9dc8da"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/arterial-history-preservation.test.mjs",
+      "bytes": 3838,
+      "sha256": "d0633109f51a2b18e1c6400f45d96253c2d2e842ad8d4deff012aabe57bce596"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/atlas-arterial-evidence-limits.test.mjs",
+      "bytes": 17250,
+      "sha256": "f2c10d8ced49d7049860487cc202c12ed3725b96863cdea1e3b74745588aede6"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/atlas-guided-camera.test.ts",
+      "bytes": 9477,
+      "sha256": "31ca6f0b7bc7aa2fd079ac3ad50617de491e4fd2723cc20560d65395d156506c"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/atlas-keyboard-modules.test.ts",
+      "bytes": 7003,
+      "sha256": "6988cd068f47729143dffa7ff33f16db9293d78c098a54ca9961821485e9fa70"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/atlas-label-keyboard.test.ts",
+      "bytes": 5368,
+      "sha256": "3c96b803580556775d34863291a0043f233c1e663be93dcc4d65a50230269f19"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/atlas-shared-viewer-accessibility.test.ts",
+      "bytes": 7307,
+      "sha256": "bf37a2e16233e47cde10ce15cc03c52ecf8a6033047dfdba09f73703f86ca5e6"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/current-190-coverage.test.mjs",
+      "bytes": 4633,
+      "sha256": "5ec7577052250b5e6cc7a772b2e4b7fdedc04bf0091a85317dcbb96253718234"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/proposed-website/tests/fixtures/closed485-original/anatomy-coverage-revision-admission.test.mjs.raw",
+      "bytes": 17502,
+      "sha256": "8ee56ade2e3b70c5e5b50ee6a629d411635da3c5ff5b89a5670181a47b80edb1"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/admit-revision-guard-batch-20261021.mjs",
+      "bytes": 3446,
+      "sha256": "50e02cd3c78d4e0f898a4173c6f9d602b300f070c45c496b1442a50b8fe42c39"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/checkpoint-owned-proposal-batch.mjs",
+      "bytes": 6352,
+      "sha256": "41b2f712d60ba7edca7ca2976f63a55c55b45bbc10e57b7b96a4c513ce99549c"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/emit-coordination-checkpoint.mjs",
+      "bytes": 3942,
+      "sha256": "ddb548274a072f5c06c06b8fc5cf2cccd37462731eeadd670efa6ed13eb8eec2"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/plan-source190-recoverable-cutover-20261021.mjs",
+      "bytes": 8292,
+      "sha256": "297e00c901440fb4f8ed36ce500cf1479f45d266ddbda815964f8cda9f7f2996"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/prepare-revision-guard-batch-v4-20261021.mjs",
+      "bytes": 4781,
+      "sha256": "7a3275d3fd9916394389e03a40dc3cc998f1f9bff15b943bc68c73df575731fd"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/prepare-shared-viewer-keyboard-epoch-20261021.mjs",
+      "bytes": 4826,
+      "sha256": "74301185fb4d6ce59e519008c2aa45b4aeebe58ec267a9eba3f61c0c45d5e4e5"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/prepare-shared-viewer-keyboard-epoch-v2-20261021.mjs",
+      "bytes": 2498,
+      "sha256": "e064b6259163cedabb67bb6e77c83f569968197fe9e8efe1d44a9e4a87f56dec"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/scripts/shared-viewer-proposal-checkpoint-20261021.json",
+      "bytes": 4135,
+      "sha256": "f5f63f90969c3fc66461f3e71d12de0571e470769377ca9c894baf951eed726f"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/shared-viewer/FIRST_FAILURE.json",
+      "bytes": 661,
+      "sha256": "0dbc57ff4450af3d4dd8b2a17a5d93ecbd4fdba165d3affe06d901e17db0995b"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/shared-viewer/ORIGINAL_PROPOSAL.json",
+      "bytes": 844,
+      "sha256": "7449b5fb207f5b34fedeb1212d6f2d3ed2af736631723e234fe843b114163791"
+    },
+    {
+      "path": "evidence/20261021-shared-viewer-epoch-proposals-verified/shared-viewer/V2_PREPARATION.json",
+      "bytes": 1351,
+      "sha256": "fcd26d98f3e9b92ba0c3ed03bf0414a5c5bcea8e67da34948fe38487dd10f7e3"
+    },
+    {
       "path": "evidence/20261021-source-credits-notices/audit/MAIN_FINDINGS.json",
       "bytes": 8301,
       "sha256": "0a17af73ae4896b1f5eefad40796be7fd3657a31aa28fe8f813a61088dee286e"
@@ -5937,46 +6122,36 @@
     }
   ],
   "removed": [],
-  "scope": "Two additional owned test-source proposals and exact preimages, source190 prose merge preserving all canonical historical text, eight-path batch proof, native test receipts and small explicit controls/read-only cost audit on previously filtered ancestry. NOT installed. No private records/DB/env/scans/masks, model geometry/full runtimes/private modules/full manifests, raw canonical ancestry, dependencies, browser media or DOM. Harness junctions are never packaged. Not a complete runnable/private backup, public release or clinical/spatial approval.",
+  "scope": "Explicit owned test-source proposals/exact preimages, small receipts, read-only cutover summary and controls on previously filtered ancestry. NOT installed or a full-suite pass. No raw canonical history, full private modules/manifests, model geometry/full runtimes, private DB/records/identities/decisions/env, scans/masks, dependencies or browser media/DOM. No test harness junctions packaged. Not a complete runnable/private backup, release or clinical/spatial approval.",
   "proof": {
-    "at": "2026-10-21T06:53:27.877Z",
-    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
-    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "namedInputs": 5107,
-    "proposedNamedInputs": 5109,
-    "reviewInputs": 1710,
-    "testOnlyPaths": 8,
-    "existingTestChanges": 6,
-    "newCurrentTestOrOriginalFixturePaths": 2,
-    "boundedNativeRegistrationsPassed": 15,
-    "originalHistoricalChildTestsPassed": 4,
-    "countingNote": "Fifteen outer native registrations across five separate successful runs; one wrapper additionally proves four unchanged historical children. Not a single post-fix whole-suite result. First six-case keyboard proposal failed4/passed2 and is retained.",
-    "completeOriginalKeyboardSourcesReconstructed": true,
-    "proseMerge": {
-      "proposalOnly": true,
-      "exactCanonicalHistoricalTextRetained": true,
-      "preimageSha256": "8bf1991b55e0d306eba9beb7168882a08a296f0679c1a739970b7784e3b98f39",
-      "proposedSha256": "4a9578c06d6a6733a3b07cc2d61562357548c45fb5008bc3ca4c711c9d2775ef",
-      "required": "Apply only as part of source190 runtime/Review/coverage cutover, not before"
-    },
-    "nativeEfficiency": {
-      "readOnlyAuditOnly": true,
-      "benchmarkPerformed": false,
-      "speedupClaim": false,
-      "proposal": "Measure repeated per-file historical/current bundle transforms before adopting in-process byte reuse; preserve fresh module state and all assertions."
-    },
-    "originalFullFailureBaseline": 144,
-    "fullSuiteRunningAtObservation": true,
+    "summary": "V4 nine-path proposal batch retains every original historical/current theorem and all complete source inverses. Three shared-viewer native cases pass, including exact original emitted assertions and two missing-emission refusals, added to prior15 separate bounded passes. Original ENOBUFS retained; explicit bounded historical Git read fixes capacity, not assertions.",
+    "countingNote": "Eighteen outer native registrations across six separate runs; coverage wrapper separately verifies four original historical children. Not one full-suite or production/GPU acceptance result.",
+    "cutoverReadiness": "Read-only virtual plan:210 changed,4892 identical,7 preserved named paths out of projected5109. Six generated directory scopes, no unexpected files; all144 generated GLB paths hash-match current canonical and137 known model objects. Canonical Atlas clean fast-forward possible; private plexus code unchanged. No install or preview stop; all actual gates still required.",
+    "sourceAndModelsUnchanged": true,
+    "freshTypesStillRequired": true,
     "fullSuiteSession": 37113,
     "runnerPid": 263984,
     "testPid": 271752,
     "ownerPreviewPid": 260328,
-    "candidateChanged": false,
+    "all71ItemsAndEightIdeasPreserved": true,
+    "at": "2026-10-21T07:14:20.005Z",
+    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+    "currentNamedInputs": 5107,
+    "proposedNamedInputs": 5109,
+    "reviewInputs": 1710,
+    "testOnlyPaths": 9,
+    "existingTestChanges": 7,
+    "newCurrentTestOrOriginalFixturePaths": 2,
+    "boundedNativeRegistrationsPassed": 18,
+    "boundedNativeRuns": 6,
+    "originalHistoricalChildTestsPassed": 4,
     "canonicalInstalled": false,
+    "candidateChanged": false,
     "ownerPagesTouched": false,
-    "freshTypesRequired": true,
+    "fullSuiteRunningAtObservation": true,
     "fullSuitePassingClaim": false,
-    "unchangedModelObjects": 137,
+    "originalFullFailureBaseline": 144,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,

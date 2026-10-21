@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-21T07:12:22.912Z",
+  "baseSummary": "F:/VisibleMedicine/staging/20261021-source190-virtual-cutover-plan/SUMMARY.json",
+  "baseSummarySha256": "b839b3883c66753657b29390ebb5ff30e29a1cbce4657c6c0cddc1d7c105ec43",
+  "basePlanSha256": "8bf1d12c261b6398b405e3fe42905b18b23ae81a06717813371998eedb244376",
+  "batch": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v4/PREPARATION.json",
+  "batchSha256": "ed335291e5cf7ac4f2e7bec30c4cf49a37ba212d59118cc19ed5450adde7521d",
+  "sourceRevision": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "virtualNamedInputs": 5109,
+  "changedNamedPaths": 210,
+  "unchangedNamedPaths": 4892,
+  "preservedNamedPaths": 7,
+  "replacedVirtualTestRow": {
+    "path": "tests/atlas-shared-viewer-accessibility.test.ts",
+    "from": "F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2/tests/atlas-shared-viewer-accessibility.test.ts",
+    "beforeSha256": "4819f71d184b9651507ffbab10cb3bff42076333eb1375807e669c2524ce3141",
+    "sha256": "bf37a2e16233e47cde10ce15cc03c52ecf8a6033047dfdba09f73703f86ca5e6",
+    "bytes": 7307,
+    "canonicalBeforeSha256": "4819f71d184b9651507ffbab10cb3bff42076333eb1375807e669c2524ce3141"
+  },
+  "generatedScopesUnchanged": 6,
+  "generatedInventoryRerun": false,
+  "unresolvedGeneratedPaths": 0,
+  "modelsUnchanged": 137,
+  "sourceAndCanonicalChanged": false,
+  "privateDataCopied": false,
+  "ownerPreviewStopped": false,
+  "requiredGates": [
+    "Genuine complete-suite terminal receipt with no frozen source drift",
+    "Guarded V3 admission and exact5109 inputs/1710Review bindings",
+    "Focused actual-site test checks and fresh TypeScript",
+    "Revalidate specialist state, every canonical preimage and any open unsaved drafts before preview switch",
+    "Preserve environment, native identity/permissions, private decisions, databases and all unlisted work",
+    "Before any directory move, resolve and verify exact absolute paths beneath canonical and create-only recovery roots; never recurse through a junction",
+    "Source190 coverage prose only accompanies coherent runtime/Review/coverage replacement",
+    "Restart only the exact confirmed owner-preview process and its verified children; no other processes"
+  ],
+  "note": "V4 supersedes the V3 virtual test row only; generated runtime/Review/model identities remain unchanged and no overlay is installed. Preserve and revalidate current coordinator snapshots at actual cutover."
+}

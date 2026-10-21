@@ -1,0 +1,38 @@
+{
+  "batch": "F:/VisibleMedicine/staging/20261021-revision-guard-batch-v4",
+  "checkpointRoot": "F:/VisibleMedicine/recovery/checkpoints/20261021-shared-viewer-epoch-proposals-verified",
+  "parentRoot": "F:/VisibleMedicine/recovery/checkpoints/20261021-keyboard-epoch-proposals-verified-backup",
+  "parentHead": "391000d530ec38aa17cea3e5502048215952934b",
+  "prefix": "evidence/20261021-shared-viewer-epoch-proposals-verified",
+  "backupRepo": "F:/VisibleMedicine/history/website-work/github-shared-viewer-epoch-proposals-20261021.git",
+  "branch": "backup/shared-viewer-epoch-proposals-20261021",
+  "expectedBoundedPasses": 18,
+  "files": [
+    {"from":"F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/PREPARATION.json","path":"shared-viewer/ORIGINAL_PROPOSAL.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/SHARED_VIEWER_KEYBOARD_EPOCH.json","path":"shared-viewer/FIRST_FAILURE.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-shared-viewer-keyboard-epoch-proposal/v2/PREPARATION.json","path":"shared-viewer/V2_PREPARATION.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-source190-virtual-cutover-plan/SUMMARY.json","path":"cutover/SUMMARY.json"},
+    {"from":"F:/VisibleMedicine/staging/20261021-source190-virtual-cutover-plan/V4_TEST_OVERLAY.json","path":"cutover/V4_TEST_OVERLAY.json"},
+    {"from":"prepare-shared-viewer-keyboard-epoch-20261021.mjs","path":"scripts/prepare-shared-viewer-keyboard-epoch-20261021.mjs"},
+    {"from":"prepare-shared-viewer-keyboard-epoch-v2-20261021.mjs","path":"scripts/prepare-shared-viewer-keyboard-epoch-v2-20261021.mjs"},
+    {"from":"prepare-revision-guard-batch-v4-20261021.mjs","path":"scripts/prepare-revision-guard-batch-v4-20261021.mjs"},
+    {"from":"plan-source190-recoverable-cutover-20261021.mjs","path":"scripts/plan-source190-recoverable-cutover-20261021.mjs"},
+    {"from":"admit-revision-guard-batch-20261021.mjs","path":"scripts/admit-revision-guard-batch-20261021.mjs"},
+    {"from":"checkpoint-owned-proposal-batch.mjs","path":"scripts/checkpoint-owned-proposal-batch.mjs"},
+    {"from":"shared-viewer-proposal-checkpoint-20261021.json","path":"scripts/shared-viewer-proposal-checkpoint-20261021.json"},
+    {"from":"emit-coordination-checkpoint.mjs","path":"scripts/emit-coordination-checkpoint.mjs"}
+  ],
+  "proof": {
+    "summary":"V4 nine-path proposal batch retains every original historical/current theorem and all complete source inverses. Three shared-viewer native cases pass, including exact original emitted assertions and two missing-emission refusals, added to prior15 separate bounded passes. Original ENOBUFS retained; explicit bounded historical Git read fixes capacity, not assertions.",
+    "countingNote":"Eighteen outer native registrations across six separate runs; coverage wrapper separately verifies four original historical children. Not one full-suite or production/GPU acceptance result.",
+    "cutoverReadiness":"Read-only virtual plan:210 changed,4892 identical,7 preserved named paths out of projected5109. Six generated directory scopes, no unexpected files; all144 generated GLB paths hash-match current canonical and137 known model objects. Canonical Atlas clean fast-forward possible; private plexus code unchanged. No install or preview stop; all actual gates still required.",
+    "sourceAndModelsUnchanged":true,
+    "freshTypesStillRequired":true,
+    "fullSuiteSession":37113,
+    "runnerPid":263984,
+    "testPid":271752,
+    "ownerPreviewPid":260328,
+    "all71ItemsAndEightIdeasPreserved":true
+  },
+  "next":"Keep full suite37113 running at frozen5107inputs/1710bindings; inspect genuine terminal/native receipt and all failures. V4 nine-path batch supersedesV3/V2/V1. After terminal, guarded apply_patch admission, exact5109 snapshot, focused actual-site gates and fresh TypeScript precede coherent local cutover; preserve current coordinator/preimages and open drafts. No second heavy run, forced restart, public/clinical/spatial release or full/private-backup claim. Advance independent useful work without waiting for clinical sign-off."
+}
