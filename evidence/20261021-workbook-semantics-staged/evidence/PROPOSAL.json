@@ -1,0 +1,112 @@
+{
+  "schema": "visible-medicine.workbook-table-semantics-proposal/1",
+  "websiteHeadAtObservation": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+  "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
+  "reviewManifestSource": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+  "integrationInputs": {
+    "path": "atlas-review/integration-inputs.json",
+    "sha256": "69092b905e27e50b748a73344214a050e35cd4eb345bcebe19887b6867b8b82d",
+    "count": 1710,
+    "proposedProductPathsPresent": []
+  },
+  "proposedPaths": [
+    {
+      "path": "components/StudioWorkbookTable.tsx",
+      "preimageSha256": "35f34d3d0c1ba8b885f55a377863755f96b82754635e460d333ece32925c0ae7",
+      "preimageBytes": 4039,
+      "candidateSha256": "0590ce326ab95b76b74bd6f424256408950cf11d188e482dfc52e215b60cc992",
+      "candidateBytes": 4365
+    },
+    {
+      "path": "components/studio-workspace.css",
+      "preimageSha256": "df1a14f0ef382837408a03a99d338749fb472103c2f14eb6326288a559547d30",
+      "preimageBytes": 10204,
+      "candidateSha256": "69c66ca710a1ca9f08f42c617210e8396942d1facbc73530ef05f06868a9a93f",
+      "candidateBytes": 10456
+    },
+    {
+      "path": "tests/studio-workbook-empty-state.test.mjs",
+      "preimageSha256": "7a8232adcee3f13b36df179b56b674ac92d3334a502fe017de9fab5b786a115a",
+      "preimageBytes": 5046,
+      "candidateSha256": "293d2d7e1352993d9d712020439d305edd2b58765c29c7de1036499baff3ced3",
+      "candidateBytes": 5057
+    },
+    {
+      "path": "tests/studio-workbook-table-semantics.test.mjs",
+      "preimageSha256": null,
+      "preimageBytes": null,
+      "candidateSha256": "8ae672c8308683a7abf99e8b8fc52107fe0a9ebae9292a92ba1bab6e0e75c00f",
+      "candidateBytes": 9909
+    }
+  ],
+  "emptyStateWholeFileOnlyDeclaredLiteral": true,
+  "unchangedConsumers": [
+    {
+      "path": "tests/studio-workbook-filter-accessibility.test.mjs",
+      "sha256": "5c3f19c2eb3ad7eb54a05d4cbdb3e6ea46663c3a253132497e4fed52ffc9c2f3",
+      "bytes": 6311
+    },
+    {
+      "path": "tests/studio-workspace.test.ts",
+      "sha256": "abc7361a2a86767dbb37e1d4d3102b26b3b2721460c498ec8db28e1e7961d49e",
+      "bytes": 5991
+    },
+    {
+      "path": "tests/studio-queues.test.ts",
+      "sha256": "33884643db01d5d48c1192fc2adea4e8b1ab020617f07ee10a4a294f2317bf21",
+      "bytes": 10065
+    },
+    {
+      "path": "app/globals.css",
+      "sha256": "ad24e5cd1b961faf18a324ab69018a4f9cfcff53ffc6ccca48505925b1d3cc3c",
+      "bytes": 171206
+    }
+  ],
+  "canonicalInstalled": false,
+  "ownerDelivered": false,
+  "scope": "Four assigned staged paths only. Explicit static table roles on established CSS grid, existing filter/reset/link/live-status behavior retained.",
+  "changes": [
+    "Name static table from existing Find a workbook heading; six columnheaders, one rowheader and five cells per workbook.",
+    "Preserve Details/Edit/Open native link roles, accessible names and encoded targets; action link receives a wrapper cell.",
+    "Retain header-only table for filtered-empty results with the original message/reset adjacent outside it; true-empty branch stays unchanged.",
+    "Keep six-column desktop and two-column narrow geometry; move end/mobile-span alignment onto action-cell wrapper.",
+    "At680px keep header in accessibility tree via clipped1px styling: higher-specificity header[role=row], explicit display:grid, min-height0,padding0,border0. Shared app/globals.css display:none stays untouched.",
+    "Only one exact existing empty-state assertion literal changes: <header> to <header role=\"row\">. Complete source inverse proves every other byte/assertion is unchanged.",
+    "Add five actual React SSR/element/CSS tests covering semantics, encoded/named links, all filters, empty branches, single polite result status, no interactive-grid/tab stops, three structural mutation refusals and narrow header/action rules."
+  ],
+  "commands": [
+    {
+      "cwd": "C:/Users/delio/Documents/Codex/2026-09-05/referenced-chatgpt-conversation-this-is-an-2",
+      "command": "$env:VM_WEBSITE_ROOT='F:/VisibleMedicine/website'; $env:VM_WEBSITE_PACKAGE='F:/VisibleMedicine/website/package.json'; $env:VM_STUDIO_COMPONENT='F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal/candidate/components/StudioWorkbookTable.tsx'; $env:VM_STUDIO_CSS='F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal/candidate/components/studio-workspace.css'; node --test F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal/candidate/tests/studio-workbook-table-semantics.test.mjs F:/VisibleMedicine/website/tests/studio-workbook-filter-accessibility.test.mjs",
+      "result": {
+        "exitCode": 0,
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "skip": 0,
+        "cancel": 0
+      },
+      "scope": "Actual cheap pure render/source cases only, five new + two unchanged accessibility cases.",
+      "toolChunk": "51aadb",
+      "log": "PURE_VERIFICATION.log"
+    }
+  ],
+  "sourceAudit": "SOURCE_AUDIT.json",
+  "limits": [
+    "No source was installed into canonical or owner3000 preview. No owner tabs/forms refreshed or inspected.",
+    "No full native consumer suites, existing staged empty-state execution, TypeScript, build, browser accessibility tree, screen-reader, physical layout,200%text or mobile acceptance run by worker. Main owns those checks with its overlay.",
+    "The new source test confirms the intended CSS declarations/specificity; it cannot establish computed layout or actual assistive-technology behavior.",
+    "No Review rebind or dependency/model/clinical/auth change. Both product paths are absent from current1710 Review input entries."
+  ],
+  "consumersInspected": [
+    "app/studio/workbooks/page.tsx",
+    "components/StudioShell.tsx",
+    "tests/studio-workbook-empty-state.test.mjs",
+    "tests/studio-workbook-filter-accessibility.test.mjs",
+    "tests/studio-workspace.test.ts",
+    "tests/studio-queues.test.ts",
+    "app/globals.css"
+  ],
+  "mainNext": "Review exact four-path proposal and recheck preimages. Keep product staged while owner preview is protected; run actual consumer overlay checks/types/build serially as appropriate. Do not infer owner delivery or UX-02 completion from pure passes."
+}

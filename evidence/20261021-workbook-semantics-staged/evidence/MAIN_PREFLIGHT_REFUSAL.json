@@ -1,0 +1,9 @@
+{
+  "toolChunk":"d73b89",
+  "stage":"before source context copy or native launch",
+  "reason":"Main inverse checker used a whitespace-spaced literal, but the authentic test assertion has no space after the comma. Exact whole-source equality correctly refused. Main corrected only its checker literal; proposal and canonical bytes were not changed.",
+  "nativeTestFailure":false,
+  "candidateChanged":false,
+  "canonicalChanged":false,
+  "fullRawToolOutputRetained":false
+}

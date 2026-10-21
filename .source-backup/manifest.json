@@ -1,15 +1,14 @@
 {
   "schema": "vm-source-only-checkpoint/2",
-  "at": "2026-10-21T16:42:20.686Z",
+  "at": "2026-10-21T16:53:08.836Z",
   "sourceIdentity": {
-    "atlas": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
+    "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalNamedInputs": 5274,
-    "canonicalInstalled": true,
-    "reviewCopyPreviewBuildPending": true
+    "canonicalInstalled": false,
+    "stagedMilestone": "workbook-table-semantics"
   },
-  "parent": "bcdb588b011c273476357318ecb8a2bda1bf2f44",
-  "gitParent": "bcdb588b011c273476357318ecb8a2bda1bf2f44",
+  "parent": "f1eaca607187f4a557ce11ed2df2c5fd74438ec2",
+  "gitParent": "f1eaca607187f4a557ce11ed2df2c5fd74438ec2",
   "files": [
     {
       "path": "atlas-review/app/review/body/body-decision-editor.tsx",
@@ -10282,6 +10281,96 @@
       "sha256": "af693d2d1d351ef98ef763ea950fd7450a781ac69172648d908591fb7fa0bb13"
     },
     {
+      "path": "evidence/20261021-workbook-semantics-staged/candidate/components/studio-workspace.css",
+      "bytes": 10456,
+      "sha256": "69c66ca710a1ca9f08f42c617210e8396942d1facbc73530ef05f06868a9a93f"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/candidate/components/StudioWorkbookTable.tsx",
+      "bytes": 4365,
+      "sha256": "0590ce326ab95b76b74bd6f424256408950cf11d188e482dfc52e215b60cc992"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/candidate/tests/studio-workbook-empty-state.test.mjs",
+      "bytes": 5057,
+      "sha256": "293d2d7e1352993d9d712020439d305edd2b58765c29c7de1036499baff3ced3"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/candidate/tests/studio-workbook-table-semantics.test.mjs",
+      "bytes": 9909,
+      "sha256": "8ae672c8308683a7abf99e8b8fc52107fe0a9ebae9292a92ba1bab6e0e75c00f"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/controls/checkpoint-workbook-semantics-20261021.mjs",
+      "bytes": 6897,
+      "sha256": "082ced7b5d11cb8e0755553533d7d4c6e673e5b94e879e1f6a93c0036b791f85"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/controls/verify-workbook-semantics-20261021.mjs",
+      "bytes": 7166,
+      "sha256": "963a252314f3298c8b154a49e3e8f2dab1191bbaca88df9be220993a3716850e"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/controls/verify-workbook-semantics-types-20261021.mjs",
+      "bytes": 4656,
+      "sha256": "f62a5c218a89189c1a14161ea22150d038d52375bd6a98013294588e34085d46"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/controls/workbook-semantics-read-overlay-20261021.cjs",
+      "bytes": 1328,
+      "sha256": "985b65c7112f0fd2ab35a29895aae719a35c493aad8c55be9d673ff0ce81678f"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/MAIN_NATIVE.json",
+      "bytes": 1137,
+      "sha256": "3c0e259df84aff956d90beeaab8fc9dda126fa83a1fd2eec847f0082e8653aea"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/MAIN_PREFLIGHT_REFUSAL.json",
+      "bytes": 473,
+      "sha256": "ed5fb697f7559487827b666701437c0a2ea501adfb77fe9e6a2e577d945ef04e"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/MAIN_TYPES-v2.json",
+      "bytes": 853,
+      "sha256": "e3cd14e76c8b1043ff043ec2ed5526ab8ad6b899453afb9fe34a9fced359eb74"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/MAIN_TYPES.json",
+      "bytes": 423,
+      "sha256": "d25ca715d85ea957540380a25574d8b76bc98dcb5f07edf45e501d271091b7a7"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/MAIN_VERIFIED.json",
+      "bytes": 1760,
+      "sha256": "492440ff598aeeaff23be495930d2385cb3b069e575d251543e1e67db665bc0f"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/PROOF.json",
+      "bytes": 1515,
+      "sha256": "7e9d3684f4ad033d374125d336a7a8e5a10ffcccfd93910dc3c14db6a8507aff"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/evidence/PROPOSAL.json",
+      "bytes": 6290,
+      "sha256": "85928f807f559201872e1592688019494aee5de826a4c150b16a86530227bb99"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/preimages/components/studio-workspace.css",
+      "bytes": 10204,
+      "sha256": "df1a14f0ef382837408a03a99d338749fb472103c2f14eb6326288a559547d30"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/preimages/components/StudioWorkbookTable.tsx",
+      "bytes": 4039,
+      "sha256": "35f34d3d0c1ba8b885f55a377863755f96b82754635e460d333ece32925c0ae7"
+    },
+    {
+      "path": "evidence/20261021-workbook-semantics-staged/preimages/tests/studio-workbook-empty-state.test.mjs",
+      "bytes": 5046,
+      "sha256": "7a8232adcee3f13b36df179b56b674ac92d3334a502fe017de9fab5b786a115a"
+    },
+    {
       "path": "evidence/archived-delivery-verification.json",
       "bytes": 2669,
       "sha256": "4691ce21e58d3de2762bca5a0ec525a5b2c271e49ab1748d69cc36955f25fe7b"
@@ -11318,71 +11407,44 @@
     }
   ],
   "removed": [],
-  "scope": "Five head-pilot test/helper/raw paths plus four public-focus test/witness paths, complete preimages, compact actual native receipts, bounded routing and reviewed controls. New filtered backup inherits the latest independently verified candidate source-only ancestry, keeping canonical and isolated candidate evidence separate. No217file emitted historical archive is included. Prior filtered source ancestry only. No scans/masks, private reports/coordinates/identifiers/notes/decisions/env, dependencies, model assets, raw TAP/browser DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or whole-suite/clinical/spatial/public-release approval.",
+  "scope": "Four exact unpublished workbook semantic-table source/test paths, three authentic preimages, compact actual native/types receipts and reviewed controls. Prior filtered source ancestry retained. No scans, masks, geometry, private modules/references/identifiers/notes/decisions, env, database, dependencies, raw TAP/DOM/media or raw canonical ancestry. Partial selected-source recovery, not whole/private/runnable backup or release/clinical approval.",
   "proof": {
-    "at": "2026-10-21T16:42:09.317Z",
+    "at": "2026-10-21T16:53:01.529Z",
     "source": "190a63238eadcf906abe89dcbb6a67c88afe70b9",
     "review": "34c11463b3ae1ff1d603f3cf48dd86fa3f29f3bd34663d7200612d2fccb4e78f",
-    "canonicalInstalled": true,
-    "installation": {
-      "file": "F:/VisibleMedicine/recovery/local-cutover/20261021-source190-prepared/INSTALLATION.json",
-      "sha256": "8c4b9daab58698ebd8d7d71934235ab8beb61dbc3470a1135f4925919dca54af"
-    },
-    "currentNamedInputs": 5274,
-    "controlledSourceInputs": 5267,
-    "preservedSourcePaths": [
-      ".gitignore",
-      "docs/completion-checklist.json",
-      "docs/completion-checklist.md",
-      "public/atlas-runtime/female-pelvis/LICENSE",
-      "public/atlas-runtime/head-neck/LICENSE",
-      "public/atlas-runtime/lower-limb/LICENSE",
-      "public/atlas-runtime/shoulder/LICENSE"
-    ],
-    "sourceSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/SOURCE_INPUTS_AFTER.json",
-    "sourceSnapshotSha256": "69d3b09da020e2b9f42a9ff95824698afc160ba83349d2c37915d042ed1d8877",
-    "preservedSnapshot": "F:/VisibleMedicine/staging/20261021-head-pilot-delivery-application/PRESERVED_SOURCE_AFTER.json",
-    "preservedSnapshotSha256": "39404921112ea882c5e9a8526bb9267b512d494eb85a1a19b3d4bf635e306c1d",
-    "reviewInputs": 1710,
-    "canonicalDeveloperToolingInstalled": true,
-    "installedTestOnlyPaths": 5,
-    "existingEditedTestPaths": 1,
-    "actualNativeCode": 0,
-    "actualNativeCounts": {
-      "tests": 41,
-      "pass": 41,
+    "websiteHead": "b953ff3f5f1891599cb6e91cb91311d9d6006270",
+    "canonicalInstalled": false,
+    "ownerDelivered": false,
+    "productPathsChanged": 2,
+    "stagedPaths": 4,
+    "exactPreimagesPreserved": true,
+    "nativeCounts": {
+      "tests": 20,
+      "pass": 20,
       "fail": 0,
       "cancelled": 0,
       "skipped": 0,
       "todo": 0
     },
-    "actualNativeFailures": [],
-    "originalFullFailureBaseline": 136,
-    "originalFullSkips": 3,
-    "earlierDifferentSourceBaseline": 144,
-    "subset289_202_87Retained": true,
-    "allOtherSourceInputsAndBindingsUnchanged": true,
-    "all1553AtlasWorkingSourceBytesExact": true,
-    "all71ItemsAndEightIdeasUnchanged": true,
-    "wholeAuditBaselineUnchanged": true,
-    "milestone": "Two separately verified test-only batches installed9exact paths. Head-pilot four-root41/41 and public desktop seven-root85/85 pass, both zero-skip/cancel; counts are separate runs with overlapping delivery coverage, not126unique tests. The complete historical87 runtime/source/model/licence proof is preserved independently of complete current190 proof; its217file local historical archive remains an explicit F-only dependency, not off-device recovered. Public historical whole-source obligations and actual current UI behavior remain separate, all five consumer files unchanged. Routing retains all87original rows:61exact-title scoped passes,9title-incomparable root passes,17unexercised, not17remaining failures or whole-suite green. No product, anatomy asset, Review binding or owner-form changes. The separate nine-form navigation UI candidate retains131focused/fulltypes/fullbuild proof and source recovery, but browser acceptance remains partial; no canonical UI cutover.",
-    "fullSuitePassingClaim": false,
-    "rawNativeLogExcludedFromBackup": true,
-    "ownerPreviewPid": 266712,
-    "ownerPreviewSession": 32652,
+    "fullProjectTypesOverlayPassed": true,
+    "fullBuildPassed": false,
+    "browserAcceptancePassed": false,
+    "allCanonicalInputsUnchanged": true,
+    "controlledInputs": 5267,
+    "preservedInputs": 7,
+    "reviewBindingsUnchanged": 1710,
+    "singleStrongerHeaderRoleAssertionOnly": true,
+    "allOtherExistingEmptyStateAssertionsByteExact": true,
     "ownerFormsRefreshed": false,
-    "ownerDecisionsChanged": false,
-    "previewBuildOrRestartRan": false,
-    "reviewCopyPreviewBuildPending": true,
-    "productSourceChangedByThisRepair": false,
-    "unresolvedBrowserErrorKinds": 1,
+    "ownerPreviewPid": 266712,
+    "fullGoalActive": true,
     "clinicalApproval": false,
     "spatialRegistration": false,
     "publicDeployment": false,
     "privateDataUploaded": false,
     "wholeProjectBackup": false,
     "privateDataBackup": false,
-    "fullGoalActive": true
+    "limits": "Source-ready unpublished candidate only. Actual five-root20/20zero-skip native checks used a read-only two-file product overlay and one exact unchanged queue context file; complete project types used a read-only compiler-host overlay. Not an installed Website build, browser/screen-reader/layout/200percent acceptance, whole-suite pass or completed UX-02. No owner refresh or Review rebind."
   },
   "wholeProjectBackup": false,
   "privateDataBackup": false,

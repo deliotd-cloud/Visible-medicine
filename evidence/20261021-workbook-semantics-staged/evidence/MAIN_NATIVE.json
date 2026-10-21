@@ -1,0 +1,31 @@
+{
+  "at": "2026-10-21T16:49:56.407Z",
+  "args": [
+    "--require",
+    "C:\\Users\\delio\\Documents\\Codex\\2026-09-05\\referenced-chatgpt-conversation-this-is-an-2\\workbook-semantics-read-overlay-20261021.cjs",
+    "--test",
+    "--experimental-strip-types",
+    "--test-reporter=tap",
+    "--test-concurrency=1",
+    "F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal/candidate/tests/studio-workbook-table-semantics.test.mjs",
+    "F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal/candidate/tests/studio-workbook-empty-state.test.mjs",
+    "tests/studio-workbook-filter-accessibility.test.mjs",
+    "tests/studio-workspace.test.ts",
+    "tests/studio-queues.test.ts"
+  ],
+  "code": 0,
+  "signal": null,
+  "error": null,
+  "counts": {
+    "tests": 20,
+    "pass": 20,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "log": "F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal/MAIN_NATIVE.tap",
+  "logSha256": "f33df82d65b3b9cb37c485417980cdabcb1c41b4fe236427e5be16763163e3e9",
+  "readOnlyTwoProductFileOverlay": true,
+  "canonicalInstalled": false
+}

@@ -1,0 +1,27 @@
+// Types-only retry: preserve the actual20/20native run and initial332diagnostics.
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import {read,json,sha,runGit} from './source-only-backup-20261019.mjs';
+const site='F:/VisibleMedicine/website',stage='F:/VisibleMedicine/staging/20261021-workbook-table-semantics-proposal';
+const m=json(stage+'/PROPOSAL.json'),p=json('CURRENT_CHECKPOINT.json'),n=json(stage+'/MAIN_NATIVE.json');
+assert.equal(sha(read(stage+'/PROPOSAL.json')),'85928f807f559201872e1592688019494aee5de826a4c150b16a86530227bb99');
+assert.equal(n.code,0);assert.deepEqual(n.counts,{tests:20,pass:20,fail:0,cancelled:0,skipped:0,todo:0});assert.equal(sha(read(n.log)),n.logSha256);
+const earlier=json(stage+'/MAIN_TYPES.json');assert.equal(earlier.diagnostics,332);assert.equal(sha(read(earlier.log)),earlier.logSha256);
+const preserved=p.activeWork.preservedSourcePaths.map(path=>({path,sha256:sha(read(site+'/'+path))}));
+const guard=()=>{for(const r of [...json(p.activeWork.sourceSnapshot),...preserved])assert.equal(sha(read(site+'/'+r.path)),r.sha256,r.path);for(const r of m.proposedPaths)assert.equal(sha(read(stage+'/candidate/'+r.path)),r.candidateSha256);assert.equal(runGit(['-C','F:/VisibleMedicine/atlas','rev-parse','HEAD']).toString().trim(),m.source);assert.equal(json(site+'/atlas-review/integration-inputs.json').sha256,m.review);process.kill(266712,0);};
+guard();
+const ts=createRequire(site+'/package.json')('typescript'),configFile=site+'/tsconfig.json',config=ts.readConfigFile(configFile,ts.sys.readFile);assert(!config.error);
+const parsed=ts.parseJsonConfigFileContent(config.config,ts.sys,site,{},configFile);assert.equal(parsed.errors.length,0);
+const options={...parsed.options,noEmit:true,incremental:false,tsBuildInfoFile:undefined},host=ts.createCompilerHost(options),baseRead=host.readFile;
+host.getCurrentDirectory=()=>site;
+const target=path.resolve(site+'/components/StudioWorkbookTable.tsx').toLowerCase(),reads=[];
+host.readFile=file=>{if(path.resolve(file).toLowerCase()===target){reads.push(file);return read(stage+'/candidate/components/StudioWorkbookTable.tsx').toString();}return baseRead(file);};
+const program=ts.createProgram(parsed.fileNames,options,host),diagnostics=ts.getPreEmitDiagnostics(program);
+const log=stage+'/MAIN_TYPES-v2.txt';fs.writeFileSync(log,ts.formatDiagnosticsWithColorAndContext(diagnostics,{getCanonicalFileName:p=>p,getCurrentDirectory:()=>site,getNewLine:()=> '\n'}),{flag:'wx'});
+const save=(name,value)=>fs.writeFileSync(stage+'/'+name,JSON.stringify(value,null,2)+'\n',{flag:'wx'});
+save('MAIN_TYPES-v2.json',{at:new Date().toISOString(),diagnostics:diagnostics.length,sourceFiles:program.getSourceFiles().length,stagedComponentActuallyRead:reads.length,noEmit:true,incremental:false,fullProjectReadOnlyCompilerHostOverlay:true,canonicalProjectDirectoryExplicit:true,configFile,log,logSha256:sha(read(log)),initialDiagnosticsPreserved:332,initialContextReason:'Original compiler host inherited the coordinator cwd instead of Website directory, failing Node/Cloudflare type-library resolution. Explicit canonical config filename and host cwd now match the project. No test rerun, diagnostic filtering or source change.',canonicalInstalled:false});
+guard();assert(reads.length>0);assert.equal(diagnostics.length,0);
+save('MAIN_VERIFIED.json',{at:new Date().toISOString(),proposalSha256:sha(read(stage+'/PROPOSAL.json')),source:m.source,review:m.review,sourceSnapshot:p.activeWork.sourceSnapshot,sourceSnapshotSha256:p.activeWork.sourceSnapshotSha256,controlledInputs:5267,preservedInputs:7,allCanonicalInputsUnchanged:true,all1710ReviewInputsUnchanged:true,nativeCounts:n.counts,nativeReceipt:stage+'/MAIN_NATIVE.json',nativeReceiptSha256:sha(read(stage+'/MAIN_NATIVE.json')),fullProjectTypesOverlayPassed:true,typesReceipt:stage+'/MAIN_TYPES-v2.json',typesReceiptSha256:sha(read(stage+'/MAIN_TYPES-v2.json')),fullBuildPassed:false,browserAcceptancePassed:false,canonicalInstalled:false,ownerDelivered:false,ownerFormsRefreshed:false,clinicalApproval:false,publicDeployment:false,initialTypeContextFailureRetained:true,limitation:'Five actual native roots executed against exact staged product bytes using a read-only two-file FS overlay and one exact unchanged queue context copy. Full project types used an explicit-project read-only compiler-host overlay. Not an installed build, browser, screen-reader, layout or complete UX acceptance.'});
+console.log(JSON.stringify({verified:stage+'/MAIN_VERIFIED.json',native:n.counts,types:diagnostics.length,canonicalInstalled:false}));
